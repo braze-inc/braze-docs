@@ -215,7 +215,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> es el número total de correos electrónicos entregados que fueron marcados como "spam". Braze cancela automáticamente la suscripción de los usuarios que hayan marcado un correo electrónico como no deseado, y esos usuarios no recibirán futuros correos electrónicos.
+<i>Spam</i> es el número total de correos electrónicos entregados que fueron marcados como "spam" por el destinatario. Aunque Braze no cambia el estado de suscripción de estos usuarios, estos usuarios serán excluidos automáticamente en futuros correos electrónicos, a menos que estés enviando un correo electrónico transaccional, que esté configurado para "enviar a todos los usuarios, incluida la cancelación suscripción".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}

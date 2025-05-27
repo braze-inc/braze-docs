@@ -23,7 +23,7 @@ Con los bloques de contenido, puede:
 
 ## Crear un bloque de contenido
 
-Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y gestionar tus bloques de contenido [a través de la API][5].
+Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y administrar tus bloques de contenido [utilizando la API][5].
 
 {% tabs %}
 {% tab Arrastrar y soltar %}
@@ -44,13 +44,13 @@ Existen dos tipos de editores para crear un bloque de contenido: el clásico y e
 |---|---|
 | Apellidos | Campo obligatorio con un máximo de 100 caracteres. No se puede cambiar el nombre después de guardar el bloque de contenido. Además, no puede asignar a un nuevo Bloque de contenido el mismo nombre que a un Bloque de contenido anterior, aunque el anterior se haya archivado. |
 | Descripción | (opcional) Máximo 250 caracteres. Describa el Bloque de contenido para que otros usuarios de Braze sepan para qué sirve y dónde se utiliza. |
-| Tamaño del contenido | Máximo de 50kB (kilobyte). |
+| Tamaño del contenido | Máximo de 50 KB. |
 | Colocación | Los bloques de contenido no pueden utilizarse en el pie de página de un correo electrónico. |
 | Creación | Editor HTML o editor de arrastrar y soltar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Al crear bloques de contenido, a veces resulta útil visualizar HTML y Liquid añadiendo saltos de línea. Si se dejan estos saltos de línea durante el envío, se corre el riesgo de tener espacios extraños que pueden afectar a la representación del bloque. Para evitarlo, utiliza la etiqueta **Capturar** en tu bloque junto con el filtro ** de banda |**.
+Al crear bloques de contenido, puede ser beneficioso visualizar HTML y Liquid añadiendo saltos de línea. Si se dejan estos saltos de línea durante el envío, se corre el riesgo de tener espacios extraños que pueden afectar a la representación del bloque. Para evitarlo, utiliza la etiqueta **Capturar** en tu bloque junto con el filtro ** de banda |**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ Después de crear tu Bloque de Contenido, puedes insertarlo en tus mensajes sigu
 1. Copie la **etiqueta Liquid del bloque de contenido** de la sección **Detalles del bloque de contenido**.
 2. Inserta la etiqueta de Liquid del bloque de contenido en el mensaje. También puede empezar a escribir el Líquido y hacer que la etiqueta se rellene automáticamente.
 
-{% alert note %}
-Las propiedades del evento Canvas sólo se admiten en un Canvas. Si haces referencia a un bloque de contenido con propiedades de entrada de Canvas en una campaña, no se rellenará.
-{% endalert %}
+### Lo que hay que saber
+
+- El uso de bloques de contenido HTML en correos electrónicos de arrastrar y soltar **o de** bloques de contenido de arrastrar y soltar en correos electrónicos HTML puede provocar problemas de representación inesperados. Esto se debe a que el editor de arrastrar y soltar genera HTML y CSS que representan dinámicamente el contenido, mientras que el editor HTML es más estático.
+- Las propiedades del evento Canvas sólo se admiten en un Canvas. Si haces referencia a un bloque de contenido con propiedades de entrada de Canvas en una campaña, no se rellenará.
 
 ### Actualizar y copiar bloques de contenido
 

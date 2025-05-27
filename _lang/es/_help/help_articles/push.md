@@ -12,13 +12,16 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Mensajes de error push comunes
-    link: /docs/help/help_articles/push/push_error_codes/
+    link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+    image: /assets/img/braze_icons/alert-circle.svg
+  - name: Los clics push se abren inesperadamente en la aplicación
+    link: /docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/
     image: /assets/img/braze_icons/alert-circle.svg
   - name: Definición de la habilitación push
     link: /docs/help/help_articles/push/defining_push_enablement/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Faltan notificaciones push
-    link: /docs/help/help_articles/push/no_push_notification_was_received/
+    link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migración de tokens de notificaciones push
     link: /docs/help/help_articles/push/push_token_migration/

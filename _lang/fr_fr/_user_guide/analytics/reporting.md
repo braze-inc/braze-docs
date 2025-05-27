@@ -24,6 +24,9 @@ guide_featured_list:
   - name: Générateur de rapports
     link: /docs/user_guide/analytics/reporting/report_builder/
     image: /assets/img/braze_icons/tool-01.svg
+  - name: Générateur de tableaux de bord
+    link: /docs/user_guide/analytics/reporting/dashboard_builder/
+    image: /assets/img/braze_icons/tool-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

@@ -450,11 +450,11 @@ If a report times out or runs into errors even after retrying, contact [Support]
 
 ## Data and results
 
-Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, you can use tools such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or the [export API endpoint]({{site.baseurl}}/api/endpoints/export).
+Results and exports of results are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, you can use tools such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or the [export API endpoint]({{site.baseurl}}/api/endpoints/export).
 
 ## Monitoring your Query Builder usage
 
-Each Braze workspace has 5 Snowflake credits available per month. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
+Each company has 5 Snowflake credits available per month, shared across all workspaces. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
 
 {% alert note %}
 Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.

@@ -24,10 +24,6 @@ Pour accéder au profil d'un utilisateur, accédez à la page **Recherche d'util
 - Jeton de notification push
 - Alias d'utilisateur au format « [alias_utilisateur]:[nom_alias] », par exemple « amplitude_id:utilisateur_123 »
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), la **recherche d'utilisateurs** est la **recherche d'utilisateurs** et se trouve sous **Utilisateurs**.
-{% endalert %}
-
 Si une correspondance est trouvée, vous pouvez consulter les informations que vous avez enregistrées pour cet utilisateur avec le SDK de Braze. Sinon, si votre recherche d'utilisateurs renvoie plusieurs profils utilisateurs, vous pouvez fusionner chaque profil individuellement ou effectuer une fusion en bloc. Pour accéder à une présentation complète, voir [Utilisateurs en double]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Résultats de recherche avec une bannière disant « Plusieurs utilisateurs correspondent à vos critères de recherche » et deux boutons libellés Previous (Précédent) et Next (Suivant).][1]
@@ -128,10 +124,6 @@ Les événements d’interruption ne sont pas disponibles actuellement pour les 
 ##### Événements de limite de fréquence
 
 Un événement de limitation de fréquence se produit lorsqu'un utilisateur est qualifié pour recevoir un message, mais ne le reçoit pas en raison des paramètres de [limitation de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Vous pouvez personnaliser les paramètres de limitation de fréquence à partir de **Paramètres** > **Règles de limitation de fréquence**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez gérer la limite de fréquence à partir de **Engagement** > Paramètres généraux messages **.**
-{% endalert %}
 
 ##### Destinations vides
 

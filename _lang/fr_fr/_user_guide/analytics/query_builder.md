@@ -18,18 +18,12 @@ Le générateur de requêtes permettant d'accéder directement à certaines donn
 Pour exécuter un rapport du générateur de rapports :
 
 1. Sélectionnez **Analyse** > **Générateur de requêtes**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **générateur de requêtes** sous **Données**.
-{% endalert %}
-
-{:start="2"}
-2\. Sélectionnez **Créer une requête SQL**. Si vous avez besoin d'inspiration ou d'aide pour rédiger votre requête, sélectionnez **Modèle de requête** et choisissez un modèle dans la liste. Sinon, sélectionnez **SQL Editor** pour accéder directement à l'éditeur.
-3\. Votre rapport reçoit automatiquement un nom avec la date et l’heure actuelles. Survolez le nom et sélectionnez <i class="fas fa-pencil" alt="Edit"></i> pour donner un nom pertinent à votre requête SQL.
-4\. Rédigez votre requête SQL dans l'éditeur ou [demandez l'aide de l'intelligence artificielle](#ai-query-builder) à partir de l'onglet **AI Query Builder.** Si vous écrivez votre propre code SQL, consultez la section [Écrire des requêtes SQL personnalisées](#custom-sql) pour connaître les conditions requises et les ressources.
-5\. Sélectionnez **Exécuter la requête**.
-6\. Enregistrez votre requête.
-7\. Pour télécharger un fichier CSV de votre rapport, sélectionnez **Exporter.**
+2. Sélectionnez **Créer une requête SQL**. Si vous avez besoin d'inspiration ou d'aide pour rédiger votre requête, sélectionnez **Modèle de requête** et choisissez un modèle dans la liste. Sinon, sélectionnez **SQL Editor** pour accéder directement à l'éditeur.
+3. Votre rapport reçoit automatiquement un nom avec la date et l’heure actuelles. Survolez le nom et sélectionnez <i class="fas fa-pencil" alt="Edit"></i> pour donner un nom pertinent à votre requête SQL.
+4. Rédigez votre requête SQL dans l'éditeur ou [demandez l'aide de l'intelligence artificielle](#ai-query-builder) à partir de l'onglet **AI Query Builder.**  Si vous écrivez votre propre code SQL, consultez la section [Écrire des requêtes SQL personnalisées](#custom-sql) pour connaître les conditions requises et les ressources.
+5. Sélectionnez **Exécuter la requête**.
+6. Enregistrez votre requête.
+7. Pour télécharger un fichier CSV de votre rapport, sélectionnez **Exporter.**
 
 ![Générateur de requêtes affichant les résultats de la requête modélisée « Engagement de canal et chiffre d’affaires au cours des 30 derniers jours ».]({% image_buster /assets/img_archive/query_builder.png %})
 
@@ -429,7 +423,7 @@ Si un rapport n'aboutit pas ou génère des erreurs même après une nouvelle te
 
 ## Données et résultats
 
-Les résultats et les exportations de résultats sont des tableaux qui peuvent contenir jusqu'à 1 000 lignes. Pour les rapports qui nécessitent de plus grandes quantités de données, utilisez un autre outil tel que [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) ou les [API d'exportation de]({{site.baseurl}}/api/endpoints/export) Braze.
+Les résultats et les exportations de résultats sont des tableaux qui peuvent contenir jusqu'à 1 000 lignes. Pour les rapports qui nécessitent de plus grandes quantités de données, vous pouvez utiliser des outils tels que [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) ou l'[endpoint API d'exportation.]({{site.baseurl}}/api/endpoints/export)
 
 ## Contrôle de l'utilisation du générateur de requêtes
 

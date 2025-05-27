@@ -36,7 +36,7 @@ El contenido completo de los mensajes dentro de la aplicación se muestra en un 
 
 ### Mensajes dentro de la aplicación (desencadenados)
 
-La siguiente documentación se refiere al producto `In-App Messaging` de Braze, también conocido como "mensajes dentro de la aplicación desencadenados", que se marcan como se destaca a continuación en el desplegable "Crear campaña":
+La siguiente documentación se refiere al producto Braze `In-App Messaging`, también conocido como "mensajes dentro de la aplicación desencadenados", que se marcan como se resalta a continuación en el desplegable "Crear campaña":
 
 ![Creador de mensajes dentro de la aplicación][in_app_message_13]
 

@@ -48,6 +48,9 @@ guide_featured_list:
 - name: "Práticas recomendadas do WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: "Domínios personalizados"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
+  image: /assets/img/braze_icons/link-03.svg
 - name: "Perguntas frequentes sobre o WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

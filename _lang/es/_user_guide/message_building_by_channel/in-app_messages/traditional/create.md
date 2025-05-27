@@ -22,15 +22,9 @@ search_rank: 4.8
 {% tab Campaña %}
 
 1. Vaya a **Mensajería** > **Campañas** y seleccione **Crear campaña**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Campañas** en **Interacción**.
-{% endalert %}
-
-{:start="2"}
-2\. Seleccione **Mensaje en la aplicación**. Tenga en cuenta que los mensajes in-app no están disponibles en las campañas multicanal.
-3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+2. Seleccione **Mensaje en la aplicación**. Tenga en cuenta que los mensajes in-app no están disponibles en las campañas multicanal.
+3. Ponle a tu campaña un nombre claro y significativo.
+4. Añada [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
    * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -210,7 +204,7 @@ Algunos tipos de mensaje no necesitan cabeceras y, por tanto, no las solicitan.
 
 ##### Crear mensajes de derecha a izquierda
 
-¿Necesitas ayuda para crear mensajes de derecha a izquierda en idiomas como el árabe y el hebreo? Consulta [Crear mensajes de derecha a]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) izquierda para conocer las mejores prácticas.
+¿Necesitas ayuda para crear mensajes de derecha a izquierda en idiomas como el árabe y el hebreo? Consulta [Crear mensajes de derecha a]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) izquierda para conocer las mejores prácticas.
 
 ### Texto del botón {#buttons}
 
@@ -273,7 +267,7 @@ El contenido de la pestaña **Estilo** varía en función de las opciones de men
 
 | Formato | Entrada de datos | Descripción |
 |---|---|---|
-|Perfil del color | Aplícalo desde la galería de plantillas de mensajes de la aplicación. | Haga clic en **Aplicar plantilla** y seleccione de la galería. A continuación, haga clic en **Guardar**. |
+|[Perfil del color]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Aplícalo desde la galería de plantillas de mensajes de la aplicación. | Selecciona **Aplicar plantilla** y elige de la galería. A continuación, selecciona **Guardar**. |
 |Alineación de texto | Izquierda, centro o derecha.  | Sólo disponible para las nuevas versiones de Braze SDK. |
 |Encabezado | Código de color HEX. | Aparecerá el color HEX que desee. También podrás elegir la opacidad del color.  |
 |Texto | Código de color HEX. | Aparecerá el color HEX que desee. También podrás elegir la opacidad del color. |
@@ -324,7 +318,7 @@ La entrega de mensajes en la aplicación se basa totalmente en los siguientes de
 
 Debes seleccionar una fecha y hora de inicio; sin embargo, la fecha de finalización es opcional. Una fecha de finalización impedirá que ese mensaje in-app específico aparezca en los dispositivos después de la fecha/hora especificada.
 
-Consulte nuestra documentación para desarrolladores sobre [la activación de eventos en el servidor]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) y la [entrega local de mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Consulte nuestra documentación para desarrolladores sobre [la activación de eventos en el servidor]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) y la [entrega local de mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### Activación en línea o fuera de línea
 
@@ -374,7 +368,7 @@ No utilice esta opción para mensajes que puedan activarse mientras un usuario e
 
 #### Elegir eventos de conversión
 
-Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
+Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
 
 {% endtab %}
 {% tab Canvas %}

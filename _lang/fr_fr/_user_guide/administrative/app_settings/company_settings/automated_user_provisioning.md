@@ -14,15 +14,11 @@ alias: /scim/automated_user_provisioning/
 
 Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'administration** > **Provisionnement SCIM.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), sélectionnez le menu déroulant de votre compte et allez dans **Paramètres de l'entreprise** > **Provisionnement automatisé des utilisateurs**.
-{% endalert %}
-
 ## Comment obtenir votre jeton SCIM ?
 
 Vous devrez fournir les informations suivantes pour obtenir votre jeton SCIM :
 
-1. Sélectionnez un espace de travail par défaut auquel seront ajoutés les nouveaux développeurs de tableaux de bord. Si vous ne spécifiez pas d'espace de travail dans l'[appel API SCIM de création d'utilisateurs](/docs/post_create_user_account/), ils seront ajoutés ici.
+1. Sélectionnez un espace de travail par défaut auquel seront ajoutés les nouveaux développeurs de tableaux de bord. Si vous ne spécifiez pas d'espace de travail dans l'[appel API SCIM de création d'utilisateurs]({{site.baseurl}}/post_create_user_account/), ils seront ajoutés ici.
 2. Fournir une origine de service. L’origine du service est la façon dont Braze identifie l’origine de la demande.
 3. Vous pouvez éventuellement fournir une liste séparée par des virgules ou une plage d’adresses IP autorisées pour les demandes SCIM. Les en-têtes `X-Origin-Request` dans chaque demande seront utilisés pour vérifier l’adresse IP par rapport à la liste des autorisations.<br><br>
 

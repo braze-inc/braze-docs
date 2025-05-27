@@ -146,7 +146,7 @@ After you've confirmed that you're only targeting the users you want to receive 
 
 ##### Step 2: Send a test campaign
 
-To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown in the following image.
+To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Audiences** step, select your test segment as shown in the following image.
 
 ![Test Segment]({% image_buster /assets/img_archive/test_segment.png %})
 
@@ -222,7 +222,7 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [17]: {% image_buster /assets/img_archive/testeventproperties-target.png %}
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}

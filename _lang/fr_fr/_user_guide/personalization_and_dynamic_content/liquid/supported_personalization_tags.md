@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Résumé des étiquettes prises en charge
 
-Un résumé des balises de personnalisation prises en charge est fourni. Pour des précisions sur chaque type de balise et les meilleures pratiques, continuez à lire.
+Un résumé des balises de personnalisation prises en charge est fourni. Pour plus de détails sur chaque type d'étiquette et sur les meilleures pratiques, poursuivez votre lecture.
 
 {% raw %}
 
@@ -29,18 +29,18 @@ Un résumé des balises de personnalisation prises en charge est fourni. Pour de
 | Attributs de la carte | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Événements de géorepérage | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Propriétés d’événement <br> (Ceux-ci sont personnalisés en fonction de votre espace de travail).| `{{event_properties.${your_custom_event_property}}}` |
-| Propriétés d’entrées de canvas| `{{canvas_entry_properties}}` |
+| Variables de contexte Canvas | `{{context}}` |
 | Attributs personnalisés <br> (Ceux-ci sont personnalisés en fonction de votre espace de travail). | `{{custom_attribute.${your_custom_attribute}}}` |
 | [Propriétés du déclencheur API][75] |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-Consultez cet article d'aide pour en savoir plus sur [la manière dont certains de ces attributs diffèrent d'une source à l'autre dans Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+### Attributs pris en charge
 
-{% alert important %}
 Les attributs Campaign, Card et Canvas ne sont pris en charge que dans les modèles d'envoi de messages correspondants (par exemple, `dispatch_id` n'est pas disponible dans les campagnes de messages in-app).
-{% endalert %}
+
+Consultez cet article d'aide pour en savoir plus sur [la manière dont certains de ces attributs diffèrent d'une source à l'autre dans Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
 
 ### Différences entre les balises de Campagne et de Canvas 
 
@@ -52,14 +52,14 @@ Le comportement des balises suivantes diffère entre Canvas et campagnes :
 
 ## Informations sur les appareils les plus récemment utilisées
 
-Vous pouvez modéliser les attributs suivants pour l’appareil le plus récent de l’utilisateur sur toutes les plateformes. Si un utilisateur n'a pas utilisé votre application (par exemple, vous avez importé l'utilisateur via l'API REST), ces valeurs seront toutes `null`.
+Vous pouvez modéliser les attributs suivants pour l'appareil le plus récent de l'utilisateur sur toutes les plateformes. Si un utilisateur n'a pas utilisé votre application (par exemple, vous avez importé l'utilisateur via l'API REST), ces valeurs seront toutes `null`.
 
 {% raw %}
 
 |Balise | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | Le navigateur le plus récemment utilisé sur l’appareil de l’utilisateur. Par exemple, « Chrome » et « Safari ». |
-|`{{most_recently_used_device.${id}}}` | L'identifiant de l'appareil de Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d’autres plateformes, il s’agit d’un UUID généré aléatoirement. |
+|`{{most_recently_used_device.${id}}}` | L'identifiant de l'appareil de Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d'autres plateformes, il s'agit d'un UUID généré de manière aléatoire. |
 | `{{most_recently_used_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Si le traçage de publicité est activé ou non sur l’appareil. Il s’agit d’une valeur booléenne (`true` ou `false`). |
 | `{{most_recently_used_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l'identifiant publicitaire (IDFA) si votre application est configurée avec notre [collecte d’IDFA facultative][40]. Pour les appareils non iOS, cette valeur sera nulle. |
@@ -70,7 +70,7 @@ Vous pouvez modéliser les attributs suivants pour l’appareil le plus récent 
 | `{{most_recently_used_device.${platform}}}` | La plate-forme de l’appareil, si disponible. Si cette valeur est définie, la valeur va correspondre à `ios`, `android`, `kindle`, `android_china`, `web` ou `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Étant donné qu’il existe une large gamme de supports de dispositifs, de noms de modèles et de systèmes d’exploitation, nous vous conseillons de tester minutieusement tout Liquid qui dépend de manière conditionnelle de l’une de ces valeurs. Ces valeurs seront `null` si elles ne sont pas disponibles sur un appareil particulier.
+En raison de la grande diversité des supports d'appareils, des noms de modèles et des systèmes d'exploitation, nous vous conseillons de tester minutieusement tout liquide dépendant conditionnellement de l'une de ces valeurs. Ces valeurs seront `null` si elles ne sont pas disponibles sur un appareil particulier.
 
 ## Informations ciblées de l'application
 
@@ -95,11 +95,11 @@ User is in list of apps
 
 ## Informations sur les dispositifs ciblés
 
-Pour les canaux de notification push et les Messages in-app, vous pouvez modéliser les attributs suivants pour l’appareil auquel un message est envoyé. C’est-à-dire, une notification push ou un message in-app peut inclure des attributs d'appareil de l’appareil sur lequel le message est lu. Notez que ces attributs ne fonctionnent pas pour les cartes de contenu. 
+Pour les notifications push et les canaux de messages in-app, vous pouvez insérer dans le modèle les attributs suivants pour l'appareil auquel un message est envoyé. C’est-à-dire, une notification push ou un message in-app peut inclure des attributs d'appareil de l’appareil sur lequel le message est lu. Notez que ces attributs ne fonctionnent pas pour les cartes de contenu. 
 
 |Balise | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Ceci est l'identifiant de l'appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d’autres plateformes, il s’agit d’un UUID généré aléatoirement. |
+| `{{targeted_device.${id}}}` | Ceci est l'identifiant de l'appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d'autres plateformes, il s'agit d'un UUID généré de manière aléatoire. |
 | `{{targeted_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{targeted_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l'identifiant publicitaire (IDFA) si votre application est configurée avec notre [collecte d’IDFA facultative][40]. Pour les appareils non iOS, cette valeur sera nulle. |
 | `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l'identifiant publicitaire Google Play si votre application est configurée avec notre [collecte facultative d'identifiant publicitaire Google Play]. Pour les appareils non Android, cette valeur sera nulle. |
@@ -112,7 +112,7 @@ Pour les canaux de notification push et les Messages in-app, vous pouvez modéli
 
 {% endraw %}
 
-Étant donné qu’il existe une large gamme de supports de dispositifs, de noms de modèles et de systèmes d’exploitation, nous vous conseillons de tester minutieusement toute logique qui dépend de manière conditionnelle de l’une de ces valeurs. Ces valeurs seront `null` si elles ne sont pas disponibles sur un appareil particulier. 
+En raison de la diversité des supports d'appareils, des noms de modèles et des systèmes d'exploitation, nous vous conseillons de tester minutieusement toute logique conditionnelle dépendant de l'une de ces valeurs. Ces valeurs seront `null` si elles ne sont pas disponibles sur un appareil particulier. 
 
 En outre, pour les notifications push, il est possible que Braze ne soit pas en mesure de discerner l'appareil lié à la notification push dans certaines circonstances, par exemple si le jeton push a été importé via l'API, ce qui entraîne l'envoi de valeurs à `null` pour ces messages.
 
@@ -160,16 +160,16 @@ Dans ce cas d'utilisation, un utilisateur dont le prénom est vide ou nul recevr
 
 ## Balises variables
 
-Vous pouvez utiliser la balise `assign` pour créer une variable dans le compositeur de message. Après avoir créé une variable, vous pouvez y faire référence dans votre logique d'envoi de messages ou dans votre message.
+Vous pouvez utiliser la balise `assign` pour créer une variable dans le compositeur de message. Nous vous recommandons d'utiliser un nom unique pour votre variable. Si vous créez une variable dont le nom est similaire à celui des étiquettes de personnalisation prises en charge (telles que `language`), cela peut affecter votre logique d'envoi de messages.
 
-Cette étiquette est utile lorsque vous souhaitez reformater le contenu renvoyé par notre fonctionnalité [Connected Content][4] ]. Vous pouvez en savoir plus dans la documentation de Shopify sur les [balises variables][31].
+Après avoir créé une variable, vous pouvez y faire référence dans votre logique d'envoi de messages ou dans votre message. Cette étiquette est utile lorsque vous souhaitez reformater le contenu renvoyé par notre fonctionnalité [Connected Content][4] ]. Vous pouvez en savoir plus dans la documentation de Shopify sur les [balises variables][31].
 
 {% alert tip %}
 Vous envoyez les mêmes variables dans chaque message ? Au lieu d’écrire la balise `assign` sans arrêt vous pouvez enregistrer cette balise comme un bloc de contenu et la placer en haut de votre message.
 
 1. [Créez un bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
 2. Donnez un nom à votre bloc de contenu (aucun espace ni caractère spécial).
-3. Cliquez sur **Modifier** en bas de la page.
+3. Sélectionnez **Modifier** en bas de la page.
 4. Saisissez vos balises `assign`.
 
 Tant que le bloc de contenu est en haut de votre message, chaque fois que la variable est insérée dans votre message comme objet, elle se rapporte à l’attribut personnalisé que vous avez choisi !
@@ -242,11 +242,11 @@ Cette clé ne sera ajoutée automatiquement à l’objet Contenu connecté que s
 
 ## Envoi de messages en fonction de la langue, des paramètres régionaux les plus récents et du fuseau horaire
 
-Dans certains cas, vous pouvez envoyer des messages spécifiques à des paramètres régionaux particuliers. Par exemple, le portugais brésilien est généralement différent du portugais européen.
+Dans certaines situations, vous pouvez souhaiter envoyer des messages spécifiques à certaines localités. Par exemple, le portugais brésilien est généralement différent du portugais européen.
 
 ### Cas d’utilisation : Localiser en fonction des paramètres locaux récents
 
-Voici un exemple d'utilisation des paramètres régionaux les plus récents pour localiser davantage un message internationalisé.
+Voici un exemple de la façon dont vous pouvez utiliser les paramètres régionaux les plus récents pour localiser davantage un message internationalisé.
 
 {% raw %}
 

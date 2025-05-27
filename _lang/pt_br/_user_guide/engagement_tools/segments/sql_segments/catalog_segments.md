@@ -98,7 +98,7 @@ Sim. Da mesma forma que as extensões de segmento do SQL contam para sua cota de
 
 ### Tenho um caso de uso de segmento de catálogo que o modelo atual não atende. Como devo configurar isso?
 
-Entre em contato com seu gerente de suporte ao cliente ou com o [suporte da Braze]({{site.baseurl}}/help/support/) para obter orientação adicional.
+Entre em contato com seu gerente de suporte ao cliente ou com o [suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obter orientação adicional.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

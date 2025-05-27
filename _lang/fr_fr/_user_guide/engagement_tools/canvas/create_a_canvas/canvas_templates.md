@@ -59,7 +59,7 @@ Lorsque vous avez fini de personnaliser votre modèle, cliquez sur le bouton **E
 
 Il existe deux façons d'utiliser votre modèle lors de la composition d'un canvas :
 
-- **À partir de la messagerie** : Allez dans **Messagerie** > **Canvas.** Sélectionnez le bouton **Créer un canvas** et **utilisez un modèle de canvas**.
+- **De l'envoi de messages**: Allez dans **Messagerie** > **Canvas.** Sélectionnez le bouton **Créer un canvas** et **utilisez un modèle de canvas**.
 - **À partir de modèles** : Allez dans **Modèles** > **Modèles de canvas** et trouvez le modèle de votre choix. Ensuite, sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i> suivi de **Appliquer le modèle.** Cela vous amènera à un nouveau Canvas avec le modèle appliqué dans le compositeur de Canvas.
 
 ### Modèles de Braze disponibles

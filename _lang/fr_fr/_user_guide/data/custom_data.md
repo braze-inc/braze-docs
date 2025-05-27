@@ -29,4 +29,7 @@ guide_featured_list:
   - name: Gestion des données personnalisées
     link: /docs/user_guide/data/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg
+  - name: Événements recommandés
+    link: /docs/recommended_events/
+    image: /assets/img/braze_icons/hearts.svg
 ---

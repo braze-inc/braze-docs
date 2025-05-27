@@ -11,10 +11,6 @@ description: "Este artículo de ayuda te explica cómo cambiar el tipo de datos 
 
 Para cambiar el tipo de datos de un atributo o evento personalizado, desde el panel de Braze, ve a **Configuración de datos** y selecciona **Atributos personalizados** o **Eventos personalizados**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), las páginas **Eventos personalizados** y **Atributos personalizados** se encuentran en **Administrar configuración**.
-{% endalert %}
-
 ![Pestaña Atributos personalizados para editar atributos o tipos de datos][1]
 
 Si debes cambiar el tipo de datos de un atributo personalizado o de un evento (por ejemplo, cambiar `time` por `string`), ten en cuenta lo siguiente:

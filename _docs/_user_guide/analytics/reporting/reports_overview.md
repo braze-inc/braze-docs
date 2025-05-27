@@ -183,7 +183,7 @@ More questions you can answer with this report:
 {% tab Segment Data %}
 **Segment Data**
 
-If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
+If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
 
 Check out this page for these statistics:
 

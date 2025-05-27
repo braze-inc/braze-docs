@@ -10,17 +10,23 @@ channel: push
 
 # Migración de tokens de notificaciones push
 
-Un [token de notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) es un identificador anónimo único que especifica dónde enviar las notificaciones de una aplicación. Braze se conecta con proveedores de servicios push como Firebase Cloud Messaging Service (FCM) para Android y Apple Push Notification Service (APN) para iOS, y esos proveedores envían tokens de dispositivos únicos que identifican tu aplicación. Si enviabas notificaciones push antes de integrar Braze, por tu cuenta o a través de otro proveedor, la migración de token de notificaciones push te permite seguir enviando notificaciones push a tus usuarios con tokens de notificaciones push registrados.
+> Un [token de notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) es un identificador anónimo único que especifica dónde enviar las notificaciones de una aplicación. Braze se conecta con proveedores de servicios push como Firebase Cloud Messaging Service (FCM) para Android y Apple Push Notification Service (APN) para iOS, y esos proveedores envían tokens de dispositivos únicos que identifican tu aplicación. Si enviabas notificaciones push antes de integrar Braze, por tu cuenta o a través de otro proveedor, la migración de token de notificaciones push te permite seguir enviando notificaciones push a tus usuarios con tokens de notificaciones push registrados.
 
 ## Migración automática mediante SDK
 
-El SDK de Braze migrará automáticamente el token de notificaciones push de un usuario que haya optado previamente por tus notificaciones push la primera vez que inicie sesión en tu aplicación o sitio integrado en Braze. Si integras los SDK de Braze, no necesitarás migrar tokens de notificaciones push utilizando la API.
+Después de [integrar el SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/), los tokens de notificaciones push de tus usuarios con adhesión voluntaria se migrarán automáticamente la próxima vez que abran tu aplicación. Hasta entonces, no podrás enviar a esos usuarios notificaciones push a través de Braze.
 
-Sin embargo, como los tokens de notificaciones push migran cuando un usuario inicia sesión por primera vez en tu aplicación, ten en cuenta que Braze no podrá enviar notificaciones push a usuarios que no hayan iniciado sesión después de tu integración de SDK. Puede que aún desees migrar manualmente los tokens de notificaciones push de Android e iOS como forma de reactivación de la interacción con estos usuarios.
+También puedes [migrar tus tokens de notificaciones push manualmente](#manual-migration-via-api), lo que te permitirá reactivar a tus usuarios más rápidamente.
 
-{% alert note %}
-Debido a la naturaleza de los tokens de notificaciones push web, cada ~60 días el token caduca y se restablece. Cualquiera que no tenga una sesión dentro de ese periodo de tiempo no tendrá un token de notificaciones push web activo. Braze no migrará tokens de notificaciones push web caducados. Habrá que reactivar a estos usuarios mediante [primers push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages).
-{% endalert %}
+### Consideraciones sobre los tokens Web
+
+Debido a la naturaleza de los tokens de notificaciones push web, asegúrate de tener en cuenta lo siguiente cuando implementes las notificaciones push web:
+
+|Consideración|Detalles|
+|----------------------|------------|
+| **Prestadores de servicios**  | Por defecto, el SDK de la Web buscará un prestador de servicios en `./service-worker` a menos que se especifique otra opción, como `manageServiceWorkerExternally` o `serviceWorkerLocation`. Si tu prestador de servicios no está configurado correctamente, pueden caducar los tokens de notificaciones push de tus usuarios. |
+| **Tokens caducados**   | Si un usuario no ha iniciado una sesión Web en 60 días, su token de notificaciones push caducará. Como Braze no puede migrar tokens de notificaciones push caducados, tendrás que enviar un [primer push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) para reactivarlos. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Migración manual mediante API
 
@@ -39,7 +45,8 @@ No es posible migrar tokens de notificaciones push web a través de la API. Esto
 Como alternativa a la migración de API, te recomendamos que integres el SDK y permitas que tu base de tokens se repoble de forma natural.
 {% endalert %}
 
-### Migración si hay ID externo
+{% tabs local %}
+{% tab ID externo presente %}
 Para usuarios identificados, establece el indicador `push_token_import` en `false` (u omite el parámetro) y especifica los valores `external_id`, `app_id` y `token` en el objeto de usuario `attributes`. 
 
 Por ejemplo:
@@ -63,8 +70,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
   ]
 }'
 ```
+{% endtab %}
 
-### Migración si el ID externo no está presente
+{% tab Falta el ID externo %}
 Al importar tokens de notificaciones push de otros sistemas, no siempre se dispone de una dirección `external_id`. En este caso, configura tu flag `push_token_import` como `true` y especifica los valores `app_id` y `token`. Braze creará un perfil de usuario anónimo temporal para cada token para habilitarte a seguir enviando mensajes a estas personas. Si el token ya existe en Braze, se ignora la solicitud.
 
 Por ejemplo:
@@ -104,6 +112,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 Tras la importación, cuando el usuario anónimo inicie la versión habilitada para Braze de tu aplicación, Braze moverá automáticamente su token de notificaciones push importado a su perfil de usuario Braze y limpiará el perfil temporal.
 
 Braze comprobará una vez al mes si hay algún perfil anónimo con la bandera `push_token_import` que no tenga un token de notificaciones push. Si el perfil anónimo ya no tiene un token de notificaciones push, eliminaremos el perfil. Sin embargo, si el perfil anónimo aún tiene un token de notificaciones push, lo que sugiere que el usuario real aún no ha iniciado sesión en el dispositivo con dicho token de notificaciones push, no haremos nada.
+{% endtab %}
+{% endtabs %}
 
 ## Importar tokens de notificaciones push de Android
 

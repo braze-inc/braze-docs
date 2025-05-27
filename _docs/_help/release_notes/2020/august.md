@@ -23,7 +23,7 @@ Within certain Currents message engagement events, the tracking properties `canv
 
 ## Amazon Personalize partnership
 
-Amazon Personalize uses machine learning to help create high-quality recommendations for your website and applications. Amazon personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations, and targeted marketing promotions. For more information, check out our [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/) documentation.
+Amazon Personalize uses machine learning to help create high-quality recommendations for your website and applications. Amazon personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations, and targeted marketing promotions. For more information, check out our [Amazon Personalize]({{site.baseurl}}/partners/amazon_personalize/) documentation.
 
 ## Vizbee partnership
 

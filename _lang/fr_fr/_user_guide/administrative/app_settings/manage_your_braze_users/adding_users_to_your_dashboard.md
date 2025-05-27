@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment gérer les utilisateur
 > Apprenez à gérer les utilisateurs dans le compte de votre entreprise, y compris l'ajout, la suspension et la suppression d'utilisateurs.
 
 {% alert note %}
-Plusieurs sections de cette page renvoient à la page **Utilisateurs de l'entreprise**. Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), la rubrique **Utilisateurs de l'entreprise** s'appelle **Gérer les utilisateurs** et se trouve sous l'icône de votre compte.
+Plusieurs sections de cette page renvoient à la page **Utilisateurs de l'entreprise**. Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), la rubrique **Utilisateurs de l'entreprise** s'appelle **Gérer les utilisateurs** et se trouve sous l'icône de votre compte.
 {% endalert %}
 
 ## Ajouter des utilisateurs à Braze
@@ -61,7 +61,7 @@ Les administrateurs peuvent également suspendre un utilisateur en sélectionnan
 
 ## Attribution de l'accès et des responsabilités des utilisateurs
 
-{% multi_lang_include permissions.md content="Différences" %}
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## Suppression d'utilisateurs de Braze
 
@@ -84,6 +84,19 @@ Braze conservera les données de compte suivantes :
 
 - Attributs personnalisés ou données de test associés à leur compte
 - Les campagnes ou les toiles qu'ils ont créées (mais le nom de l'utilisateur n'y apparaîtra pas, par exemple dans la colonne **Dernière modification par** ).
+
+## Résolution des problèmes
+
+### "L'e-mail est déjà pris" lors de l'ajout d'un utilisateur
+
+Si vous essayez d'ajouter un nouvel utilisateur et que vous recevez un message d'erreur indiquant que l'e-mail est déjà pris, mais que vous ne le trouvez pas dans votre liste d'utilisateurs, il est fort probable que cet utilisateur existe dans une autre instance du même groupe de tableaux de bord de Braze.
+
+Pour créer ce nouvel utilisateur, vous pouvez effectuer l'une des opérations suivantes :
+
+1. Supprimez l'utilisateur de l'autre instance avant de pouvoir le créer dans la nouvelle, ou
+2. Créez l'utilisateur avec une chaîne de caractères d'e-mail différente (telle que `testing+01@braze.com`) ou un autre alias d'utilisateur. 
+
+Si vous ne recevez pas l'activation du message dans votre boîte de réception lorsque vous utilisez `testing+01@braze.com`, vérifiez auprès de votre équipe informatique que vous pouvez accepter des messages provenant de ce type d'adresse e-mail. Certains administrateurs filtrent les messages envoyés à des adresses e-mail comportant un `+`.
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

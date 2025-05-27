@@ -9,11 +9,11 @@ description: "이 문서에는 2021년 1월의 릴리스 노트가 포함되어 
 
 ## 캔버스 보고서 빌더
 
-보고서 빌더를 사용하면 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교할 수 있으므로 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 쉽게 확인할 수 있습니다. [캔버스 보고서 빌더에]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 대해 자세히 알아보세요.
+보고서 빌더를 사용하면 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교할 수 있으므로 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 쉽게 확인할 수 있습니다. [캔버스 보고서 빌더에]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) 대해 자세히 알아보세요.
 
 ## 인앱 메시지 iOS 구현 가이드
 
-이 상세 가이드에서는 서브클래싱을 활용하여 사용자 지정 슬라이드업 인앱 메시지, 사용자 지정 모달 인앱 메시지, 사용자 지정 전체 인앱 메시지를 만들어 Braze 캠페인과 캔버스에 추가하는 방법에 대해 설명합니다. 여기에는 필요한 코드 고려사항, Braze 팀이 구축한 자세한 사용 사례, 함께 제공되는 코드 스니펫이 포함되어 있습니다. 자세한 내용은 [여기에서]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) 설명서를 참조하세요. 
+이 상세 가이드에서는 서브클래싱을 활용하여 사용자 지정 슬라이드업 인앱 메시지, 사용자 지정 모달 인앱 메시지, 사용자 지정 전체 인앱 메시지를 만들어 Braze 캠페인과 캔버스에 추가하는 방법에 대해 설명합니다. 여기에는 필요한 코드 고려사항, Braze 팀이 구축한 자세한 사용 사례, 함께 제공되는 코드 스니펫이 포함되어 있습니다. 자세한 내용은 [여기에서]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/) 설명서를 참조하세요. 
 
 ## SMS 맞춤 키워드 카테고리 및 리타겟팅 옵션
 

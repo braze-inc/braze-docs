@@ -24,7 +24,6 @@ Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 - **Conformité :** Respectez toutes les documentations de Braze et de Meta, ainsi que toutes les [politiques de Méta](https://www.whatsapp.com/legal/?lang=en) applicables.
 - **Limites de conversation de 24 heures :** Lorsqu’une entreprise envoie le message modélisé d’origine ou qu’un utilisateur envoie un message, une période de 24 heures s’ouvre au cours de laquelle les deux participants peuvent converser. 
 - **Débuter une conversion :** Les utilisateurs peuvent débuter une conversation à tout moment. Une entreprise peut débuter une conversation uniquement à l’aide d’un modèle de message approuvé.
-- **Limitations de compte :** Chaque espace de travail Braze peut contenir un compte WhatsApp Business, un groupe d'abonnement et un numéro de téléphone. En outre, chaque compte WhatsApp Business ne peut contenir qu'[une seule intégration de tiers](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). Un compte WhatsApp Business ne peut exister que dans un seul espace de travail et ne peut pas être partagé entre plusieurs espaces de travail.
 <br><br>
 
 | Condition| Description|
@@ -39,10 +38,6 @@ Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 ### Étape 1 : Connecter WhatsApp Messenger à Braze
 
 Dans Braze, allez dans **Intégrations partenaires** > **Partenaires technologiques** et recherchez **WhatsApp**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **partenaires technologiques** sous la rubrique **Intégrations.**
-{% endalert %}
 
 Sur la page partenaire de WhatsApp, sélectionnez **Commencer l'intégration**.
 

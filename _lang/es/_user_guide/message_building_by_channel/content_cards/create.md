@@ -24,14 +24,9 @@ search_rank: 3.9
 {% tab Campaña %}
 
 1. Vaya a **Mensajería** > **Campañas** y seleccione **Crear campaña**.
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Campañas** en **Interacción**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecciona **Tarjetas de contenido** o, para campañas dirigidas a varios canales, selecciona **Multicanal**.
-3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+2. Selecciona **Tarjetas de contenido** o, para campañas dirigidas a varios canales, selecciona **Multicanal**.
+3. Ponle a tu campaña un nombre claro y significativo.
+4. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
    * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puedes filtrar por las etiquetas correspondientes.
 5. Añade y nombra tantas variantes como quieras para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre las variantes, consulta [Pruebas multivariantes y A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -83,7 +78,7 @@ Selecciona **Añadir idiomas** para añadir los idiomas que desees de la lista p
 
 ##### Crear mensajes de derecha a izquierda
 
-El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Título y mensaje
 
@@ -158,7 +153,7 @@ A continuación, [dirígete a los usuarios]({{site.baseurl}}/user_guide/engageme
 
 #### Elegir eventos de conversión
 
-Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
+Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
 
 {% endtab %}
 
@@ -213,7 +208,7 @@ Puede especificar varios eventos personalizados y compras que deben eliminar una
 
 ### Actualización de las tarjetas lanzadas
 
-Las tarjetas de contenido no se pueden editar una vez enviadas. Si necesitas hacer cambios en tarjetas que ya han sido enviadas, considera la posibilidad de [volver a ser elegible para la campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/), como se muestra en las siguientes opciones.
+Las tarjetas de contenido no se pueden editar una vez enviadas. Si necesitas hacer cambios en tarjetas que ya han sido enviadas, considera la posibilidad de [volver a ser elegible para la campaña]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/), como se muestra en las siguientes opciones.
 
 {% alert note %}
 Cuando una tarjeta de contenido vuelve a ser elegible, puede enviarse de nuevo cuando la tarjeta original aún está en la aplicación de un usuario. Para evitar la duplicación de tarjetas en la aplicación de un usuario, puedes desactivar la reelegibilidad o ampliar la ventana de reelegibilidad para que no se envíe a los usuarios una nueva tarjeta hasta que la original haya caducado.

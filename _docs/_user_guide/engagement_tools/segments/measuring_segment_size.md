@@ -1,7 +1,7 @@
 ---
 nav_title: Measuring Segment Size
 article_title: Measuring Segment Size
-page_order: 9
+page_order: 5
 page_type: reference
 tool: 
 - Segments

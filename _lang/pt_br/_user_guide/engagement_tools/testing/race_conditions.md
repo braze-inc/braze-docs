@@ -39,9 +39,11 @@ Entretanto, em alguns casos, o segundo evento será disparado primeiro. Isso sig
 
 #### Introduzir postergações
 
-Depois que um novo usuário é criado, é possível adicionar uma postergação antes de enviar qualquer campanha de direcionamento ou Canvas. Essa postergação permite que o perfil do usuário seja criado e que quaisquer atribuições relevantes sejam atualizadas, o que pode determinar sua elegibilidade para receber a mensagem. 
+Depois que um novo usuário é criado, é possível adicionar uma postergação antes de enviar qualquer campanha de direcionamento ou Canvas. Essa postergação permite que o perfil do usuário seja criado e que quaisquer atribuições relevantes sejam atualizadas, o que pode determinar sua elegibilidade para receber a mensagem.
 
 Por exemplo, depois que um usuário se registra no seu app, você pode enviar uma oferta promocional após 24 horas. Ou, se estiver criando um usuário ou registrando um atributo personalizado, poderá adicionar uma postergação de um minuto antes de prosseguir com o processo para evitar essa condição de corrida.
+
+Também é possível adicionar essa postergação no [SDK do Braze]({{site.baseurl}}/developer_guide/sdk_integration) para o evento personalizado específico que dispara a entrada de um novo usuário em um Canva. 
 
 ## Cenário 2: Uso de vários endpoints de API
 

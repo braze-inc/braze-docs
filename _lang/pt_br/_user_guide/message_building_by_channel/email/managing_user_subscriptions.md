@@ -16,7 +16,7 @@ Este documento é apenas para fins informativos. Ele não se destina a fornecer,
 
 ## Estados de inscrição {#subscription-states}
 
-A Braze tem três estados de inscrição global para usuários de e-mail (listados na tabela a seguir), que são o guardião final entre suas mensagens e seus usuários. Por exemplo, os usuários considerados `unsubscribed` não receberão mensagens direcionadas ao estado de inscrição global de `subscribed` ou `opted-in`.
+O Braze possui três estados globais de inscrição para usuários de e-mail (listados na tabela a seguir), que são os guardiões finais entre suas mensagens e seus usuários. Por exemplo, os usuários considerados `unsubscribed` não receberão mensagens direcionadas ao estado de inscrição global de `subscribed` ou `opted-in`.
 
 | Status | Definição |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ A Braze não conta as alterações de estado da inscrição em relação aos seu
 
 O Braze cancelará automaticamente a inscrição de qualquer usuário que tenha cancelado manualmente o envio de seu e-mail por meio de um [rodapé personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Se o usuário atualizar seu endereço de e-mail e a opção **Resubscribe users when they update their email** estiver ativada nas definições **de Sending Configuration**, o envio normal de e-mail será retomado.
 
-Se um usuário tiver marcado um ou mais de seus e-mails como spam, o Braze só enviará e-mails de transação para esse usuário. Nesse caso, os e-mails de transação referem-se à opção **Send to all users including unsubscribed users (Enviar para todos os usuários, inclusive usuários com inscrição cancelada** ) selecionada na etapa **Target Audience (Público-alvo** ).
+Se um usuário tiver marcado um ou mais de seus e-mails como spam, o Braze só enviará e-mails de transação para esse usuário. Neste caso, e-mails transacionais referem-se à opção selecionada **Enviar para todos os usuários, incluindo usuários não inscritos** na etapa **Público-alvo**.
 
 {% alert tip %}
 Consulte nossas práticas recomendadas [de aquecimento de IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) para obter orientação sobre como reengajar seus usuários de forma eficaz.
@@ -90,15 +90,9 @@ Use os [endpoints de grupo de Inscrições]({{site.baseurl}}/api/endpoints/subsc
 ### Criação de um grupo de inscrições
 
 1. Acesse **Público** > **Inscrições**.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta página está localizada em **Usuários** > **Grupos de Inscrição**.
-{% endalert %}
-
-{: start="2"}
-2\. Selecione **Criar grupo de inscrições para e-mail**.
-3\. Dê um nome e uma descrição ao seu grupo de inscrições.
-4\. Selecione **Salvar**. 
+2. Selecione **Criar grupo de inscrições para e-mail**. 
+3. Dê um nome e uma descrição ao seu grupo de inscrições.
+4. Selecione **Salvar**. 
 
 Todos os grupos de inscrições são adicionados automaticamente à sua Central de Preferências.
 

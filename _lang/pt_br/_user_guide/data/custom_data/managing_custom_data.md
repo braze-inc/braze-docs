@@ -18,10 +18,6 @@ Para preencher previamente eventos e atributos personalizados, faça o seguinte:
 
 1. Acesse **Configurações de dados** > **Eventos personalizados** ou **Atributos personalizados** ou **Produtos**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essas páginas em **Gerenciar configurações**.
-{% endalert %}
-
 ![Navegue até Atributos personalizados, Eventos personalizados ou Produtos.][21]{: style="max-width:90%;" }
 
 {: start="2"}
@@ -46,9 +42,15 @@ Todos os dados do perfil do usuário (eventos personalizados, atributos personal
 
 ## Lista de bloqueio de dados personalizados
 
-Ocasionalmente, é possível identificar atributos personalizados, eventos personalizados ou eventos de compra que consomem muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. Para impedir que esses dados sejam enviados ao Braze, você pode colocar um objeto de dados personalizado em uma lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site.
+Ocasionalmente, é possível identificar atributos personalizados, eventos personalizados ou eventos de compra que consomem muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. 
 
-A lista de bloqueio impede que um determinado objeto de dados personalizado seja registrado pelo Braze no futuro, o que significa que ele não será exibido ao pesquisar um usuário específico. Os dados incluídos na lista de bloqueio não serão enviados pelo SDK, e o dashboard da Braze não processará dados incluídos na lista de bloqueio de outras fontes (por exemplo, a API). No entanto, a lista de bloqueio não remove dados dos perfis de usuários nem diminui retroativamente a quantidade de pontos de dados incorridos para esse objeto de dados personalizado.
+Para impedir que esses dados sejam enviados ao Braze, você pode colocar um objeto de dados personalizado em uma lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site. A lista de bloqueio impede que um determinado objeto de dados personalizado seja registrado pelo Braze no futuro, o que significa que ele não será exibido ao pesquisar um usuário específico.
+
+{% alert important %}
+Para colocar dados personalizados em listas de bloqueio, é necessário ter [permissões de usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) para acessar e editar campanhas, Canvas e segmentos.
+{% endalert %}
+
+Os dados incluídos na lista de bloqueio não serão enviados pelo SDK, e o dashboard da Braze não processará dados incluídos na lista de bloqueio de outras fontes (por exemplo, a API). No entanto, a lista de bloqueio não remove dados dos perfis de usuários nem diminui retroativamente a quantidade de pontos de dados incorridos para esse objeto de dados personalizado.
 
 ### Lista de bloqueio de atributos personalizados, eventos personalizados e produtos
 
@@ -84,10 +86,6 @@ Até 300 itens são enviados ao SDK para inclusão na lista de bloqueio. Se voc�
 
 ## Exclusão de dados personalizados
 
-{% alert important %}
-A exclusão de dados personalizados está atualmente em acesso antecipado. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar do acesso antecipado. Para obter mais ajuda com a exclusão de dados personalizados, entre em contato com o gerente de sucesso do cliente ou com a equipe de Suporte.
-{% endalert %}
-
 À medida que você cria campanhas e segmentos direcionados, pode descobrir que não precisa mais de um evento personalizado ou atributo personalizado. Por exemplo, se você usou um atributo personalizado específico como parte de uma campanha única, poderá excluir esses dados depois de [colocá-los na lista de bloqueio](#blocklisting-custom-attributes-custom-events-and-products) e remover suas referências do app. Você pode excluir qualquer tipo de dados (como strings, números e atributos personalizados aninhados).
 
 {% alert important %}
@@ -119,6 +117,7 @@ Ao excluir dados personalizados, lembre-se dos seguintes detalhes:
 * Os dados são removidos da plataforma Braze e dos perfis dos usuários.
 * Você pode "reutilizar" o nome do atributo personalizado ou o nome do evento personalizado após a exclusão. Isso significa que se você notar que os dados personalizados "reaparecem" no Braze após a exclusão, isso pode ser causado por uma integração que não foi interrompida e está enviando dados com o mesmo nome de dados personalizados.
 * Talvez seja necessário colocar um item na lista de bloqueio novamente se a exclusão resultar no reaparecimento de dados personalizados. O status da lista de bloqueio não é preservado porque os dados personalizados são excluídos.
+* A exclusão de dados personalizados não consome nenhum [ponto de dados]({{site.baseurl}}/user_guide/data/data_points) e também não gera novos pontos de dados para uso.
 
 ## Forçar comparações de tipos de dados
 

@@ -28,16 +28,10 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 **Etapas:**
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecione **Webhook** ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
-3\. Dê à sua campanha um nome claro e significativo.
-4\. (Opcional) Adicione uma descrição para descrever como essa campanha será usada.
-4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+2. Selecione **Webhook** ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
+3. Dê à sua campanha um nome claro e significativo.
+4. (Opcional) Adicione uma descrição para descrever como essa campanha será usada.
+4. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher modelos diferentes de webhook para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -79,7 +73,7 @@ A [internacionalização][16] é compatível com o URL e o corpo da solicitaçã
 
 Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para ver a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### URL do webhook
 
@@ -182,7 +176,7 @@ Em seguida, é necessário direcionar os [usuários]({{site.baseurl}}/user_guide
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
 
 {% endtab %}
 
@@ -237,51 +231,7 @@ O Braze enviará webhooks dos seguintes IPs. Os IPs listados são automática e 
 Se estiver criando um webhook Braze-para-Braze e usando a lista de permissões, deverá colocar na lista de permissões todos os seguintes IPs, incluindo `127.0.0.1`.
 {% endalert %}
 
-| Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, e `US-07`: |
-|---|
-| `127.0.0.1`
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| Para as instâncias `EU-01` e `EU-02`: |
-|---|
-| `127.0.0.1`
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88` 
-
-| Por exemplo, `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Uso de webhooks com parceiros do Braze {#utilizing-webhooks}
 

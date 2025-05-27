@@ -76,11 +76,10 @@ La section **Utilisation des messages** indique les segments, les campagnes et l
 ![Dans Utilisation des messages, vous pouvez voir les campagnes qui utilisent votre segment.][4]
 
 ### Adhésion historique
-La section **Historique de l'adhésion** montre comment la taille de votre segmentation a évolué dans le temps. Utilisez la liste déroulante pour filtrer l’appartenance au segment par plage de dates. 
 
-Le nombre historique de membres du segment est une estimation, de la même manière que la taille du segment est une estimation avant que vous ne cliquiez sur **Calculer les statistiques exactes.** Braze estime le nombre de membres en interrogeant les utilisateurs dans un compartiment aléatoire. Cela signifie qu'un jour, le nombre de membres peut être basé sur des utilisateurs dont le numéro de compartiment aléatoire est compris entre 111 et 120, et un autre jour, sur des utilisateurs dont le numéro de compartiment aléatoire est compris entre 8 452 et 8 455. Par conséquent, le graphique peut présenter de légères fluctuations à chaque date en raison des différents nombres d'utilisateurs atterrissant dans les compartiments aléatoires.
+La section **Historique de l'adhésion** montre comment la taille de votre segmentation a évolué dans le temps. Utilisez la liste déroulante pour filtrer l’appartenance au segment par plage de dates.
 
-![Utilisez la liste déroulante Historique des inscriptions pour filtrer l’appartenance au segment par plage de dates.][10]
+Pour en savoir plus sur le suivi de la composition et de la taille de votre segmentation, reportez-vous à la section [Mesurer la taille d'un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### Aperçu de l’utilisateur
 
@@ -145,5 +144,4 @@ Si votre entreprise a activé cette fonctionnalité le 2 octobre et a activé le
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}

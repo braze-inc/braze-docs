@@ -114,7 +114,7 @@ Au-delà de cela, vous pouvez décider des segments supplémentaires qui vous se
 
 ## Étape 6 : Événements de conversion
 
-Braze suggère des paramètres par défaut pour les conversions, mais vous voudrez peut-être configurer des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) autour des amorces push.
+Braze suggère des paramètres par défaut pour les conversions, mais vous voudrez peut-être configurer des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) autour des amorces push.
 
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/

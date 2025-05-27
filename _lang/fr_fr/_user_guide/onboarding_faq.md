@@ -47,10 +47,6 @@ Pour importer des utilisateurs que vous avez déjà identifiés, vous pouvez cha
 
 Vous pouvez télécharger et mettre à jour les profils utilisateurs via des fichiers CSV à partir de **Audience** > Importer des **utilisateurs.** Lors de l’importation des données client, vous devez spécifier l’identifiant unique de chaque client, également appelé `external_id`.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), ceci se trouve sous **Utilisateurs** > **Importation d'utilisateurs**.
-{% endalert %}
-
 Avant de commencer votre importation CSV, il est important de voir avec votre équipe d’ingénierie comment les utilisateurs seront identifiés dans Braze. Ce sera généralement avec un ID d’une base de données interne. Cela devrait s'aligner sur la façon dont les utilisateurs seront identifiés par le SDK de Braze sur les mobiles et le web, de sorte que chaque client aura un profil utilisateur unique dans Braze sur l'ensemble de ses appareils. Découvrez plus d’informations sur le [cycle de vie du profil utilisateur]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) Braze.
 
 Lorsque vous indiquez un `external_id` dans votre importation, Braze mettra à jour un utilisateur existant avec le même `external_id`, ou créera un utilisateur nouvellement identifié avec cet `external_id` défini si Braze ne le trouve pas.
@@ -440,7 +436,7 @@ Arrêter un Canvas ne fera pas sortir les utilisateurs qui attendent dans une é
 Canvas
 {% endapitags %}
 
-Les [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) ne se déclenchent que lorsque l'utilisateur attend de recevoir le composant Canvas auquel il est associé. Si un utilisateur effectue une action à l’avance, l’événement d’exception ne sera pas déclenché.
+Les événements d'exception ne se déclenchent que lorsque l'utilisateur attend de recevoir le composant Canvas auquel il est associé. Si un utilisateur effectue une action à l’avance, l’événement d’exception ne sera pas déclenché.
 
 Si vous souhaitez exclure les utilisateurs qui ont effectué un certain événement à l'avance, utilisez plutôt des [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -573,13 +569,13 @@ Pour planifier un rapport d’engagement récurrent, faites ce qui suit :
 
 1. Dans votre compte tableau de bord, accédez à **Rapports d'engagement**, sous **Données**.
 2. Cliquez sur **\+ Créer un nouveau rapport**.
-3. Ajoutez les [campagnes et les messages Canvas]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individuellement ou [par étiquette]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
-4. [Ajoutez des statistiques]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) à votre rapport.
+3. Ajoutez les [campagnes et les messages Canvas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individuellement ou [par étiquette]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
+4. [Ajoutez des statistiques]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) à votre rapport.
 5. Sélectionnez la compression et le délimiteur pour votre rapport.
 6. Entrez les adresses e-mail des utilisateurs de Braze qui recevront ce rapport.
-7. Sélectionnez la [période]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) à partir de laquelle vous souhaitez que votre rapport exécute des données.
-8. Sélectionnez les [intervalles (quotidiens, hebdomadaires, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display) auxquels vous souhaitez voir la ventilation de vos données.
-9. Indiquez si le rapport doit être [envoyé immédiatement]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou à une [date future spécifiée]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
+7. Sélectionnez la [période]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) à partir de laquelle vous souhaitez que votre rapport exécute des données.
+8. Sélectionnez les [intervalles (quotidiens, hebdomadaires, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) auxquels vous souhaitez voir la ventilation de vos données.
+9. Indiquez si le rapport doit être [envoyé immédiatement]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou à une [date future spécifiée]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
 10. Exécutez le rapport, puis ouvrez-le dans votre e-mail quand il arrive !
 
 {% endapi %}

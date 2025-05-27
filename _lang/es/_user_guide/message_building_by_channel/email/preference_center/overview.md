@@ -13,10 +13,6 @@ channel:
 
 En el panel de control de Braze, vaya a **Audiencia** > **Suscripciones** > **Centro de preferencias de correo electrónico**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Usuarios** > **Grupos de suscripción** > **Centro de preferencias de correo electrónico**.
-{% endalert %}
-
 Aquí es donde puede gestionar y ver cada grupo de suscripción. Cada grupo de suscripción que se crea se añade a esta lista del centro de preferencias. Puede crear varios centros de preferencias.
 
 {% alert important %}
@@ -38,10 +34,6 @@ El uso de Liquid le permite recuperar los nombres de sus grupos de suscripción 
 | Usuario válido | Un usuario con una dirección de correo electrónico y un identificador externo. |
 | Clave API generada con permisos del centro de preferencias | En el panel de control de Braze, vaya a **Configuración** > **Claves de** API para confirmar que tiene acceso a una clave de API con permisos del centro de preferencias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), puede crear una clave de API desde **Consola de desarrollador** > **Configuración de API**.
-{% endalert %}
 
 ### Paso 1: Utiliza el punto final Crear centro de preferencias
 
@@ -125,3 +117,26 @@ Este enfoque no requiere pares de valores de cadena de consulta incrustados en l
 Se utiliza para mostrar el centro de preferencias cuando se utiliza la versión Liquid {%raw%}`${preference_center_url}`{%endraw%}, lo que significa que los pasos en Canvas o las plantillas que hagan referencia a {%raw%}`${preference_center_url}` o `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} no funcionarán. Esto también se aplica a los mensajes enviados anteriormente que incluían el legado Liquid o "PreferenceCenterBrazeDefault" como parte del mensaje. 
 
 Si vuelves a hacer referencia a {%raw%}`${preference_center_url}`{%endraw%} en un mensaje nuevo, se creará de nuevo un centro de preferencias denominado "PreferenceCenterBrazeDefault".
+
+### ¿Los centros de preferencias admiten varias lenguas?
+
+No. Sin embargo, puedes aprovechar Liquid para escribir el HTML de las páginas personalizadas de adhesión voluntaria y exclusión voluntaria. Si utilizas enlaces dinámicos para administrar las cancelaciones de suscripción, éste es un enlace único. 
+
+Por ejemplo, si estás haciendo un seguimiento de la tasa de cancelación de suscripciones de los usuarios hispanohablantes, tendrías que utilizar campañas separadas o aprovechar los análisis en torno a Currents (como ver cuándo se da de baja un usuario y comprobar el idioma preferido de ese usuario).
+
+Como otro ejemplo, para el seguimiento de las tasas de cancelar suscripción de los usuarios hispanohablantes, podrías añadir una cadena de parámetro de consulta como `?Spanish=true` a la URL de cancelar suscripción si el idioma de los usuarios es el alemán y utilizar un enlace de cancelar suscripción normal si no lo es:
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+Luego, a través de Currents, podrías identificar qué usuarios hablan español y cuántos clics hubo para ese enlace de cancelar suscripción.
+
+### ¿Son necesarios para el envío tanto los enlaces para cancelar suscripción como los centros de preferencias de correo electrónico?
+
+No. Si ves el mensaje "El cuerpo de tu correo electrónico no incluye un enlace para cancelar suscripción" al redactar una campaña de correo electrónico, esta advertencia es de esperar si tu enlace para cancelar suscripción está en un bloque de contenido.

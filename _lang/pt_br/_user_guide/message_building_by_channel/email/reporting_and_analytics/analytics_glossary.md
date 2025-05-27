@@ -177,7 +177,9 @@ Contagem
 Contagem
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} Se um e-mail receber um soft bounce, normalmente tentaremos novamente dentro de 72 horas, mas o número de tentativas de nova tentativa varia de receptor para receptor.
+{% multi_lang_include metrics.md metric='Soft Bounce' %} Se um e-mail receber um soft bounce, normalmente tentaremos novamente dentro de 72 horas, mas o número de tentativas de nova tentativa varia de receptor para receptor. 
+
+Embora os soft bounces não sejam rastreados na análise de dados da sua campanha, é possível monitorar os soft bounces no [registro de atividades de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) ou excluir esses usuários do seu envio com o [filtro de segmento Soft Bounced]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). No registro de atividades de mensagens, você também pode ver o motivo dos soft bounces e entender possíveis discrepâncias entre os "envios" e as "entregas" de suas campanhas de e-mail.
 
 <span class="calculation-line">Cálculo: Contagem </span>
 

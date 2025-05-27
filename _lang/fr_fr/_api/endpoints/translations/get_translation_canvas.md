@@ -36,6 +36,7 @@ Cet endpoint a une limitation du débit de 250 000 requêtes par jour.
 |`step_id`| Requis | Chaîne de caractères | L'ID de votre étape du canvas. |
 |`message_variation_id`| Requis | Chaîne de caractères | L'ID de la variation de votre message. |
 |`locale_id`| Requis | Chaîne de caractères | L'ID de la locale. |
+|`workflow_id` | Requis | Chaîne de caractères | L'ID de la toile. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Notez que tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans les paramètres de **prise en charge multilingue** ou dans la réponse à la demande.

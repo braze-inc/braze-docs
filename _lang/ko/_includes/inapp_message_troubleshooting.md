@@ -50,15 +50,15 @@
 
 1. 트리거는 세션 시작 시 기기와 동기화하는 데 시간이 걸리므로 사용자가 세션 시작 직후 구매 또는 이벤트를 기록하면 경합 조건이 발생할 수 있습니다. 한 가지 가능한 해결 방법은 세션 시작 시 트리거하도록 캠페인을 변경한 다음, 의도한 이벤트 또는 구매를 세분화하는 것입니다. 이렇게 하면 이벤트가 발생한 후 다음 세션이 시작될 때 인앱 메시지가 전달됩니다.
 
-2. 캠페인이 세션 시작 또는 사용자 지정 이벤트에 의해 트리거되는 경우, 이 이벤트 또는 세션이 메시지를 트리거할 수 있을 만큼 자주 발생하는지 확인해야 합니다. 이 데이터는 [개요][1] (세션 데이터의 경우) 또는 [사용자 지정 이벤트][2] 페이지에서 확인할 수 있습니다:
+2. 캠페인이 세션 시작 또는 사용자 지정 이벤트에 의해 트리거되는 경우, 이 이벤트 또는 세션이 메시지를 트리거할 수 있을 만큼 자주 발생하는지 확인해야 합니다. 이 데이터는 [개요]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (세션 데이터의 경우) 또는 [사용자 지정 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) 페이지에서 확인할 수 있습니다:
 
-![한 달 동안 즐겨찾기에 추가된 커스텀 이벤트가 발생한 횟수를 그래프로 보여주는 커스텀 이벤트 페이지][14]
+![한 달 동안 즐겨찾기에 추가된 사용자 지정 이벤트가 발생한 횟수를 그래프로 보여주는 사용자 지정 이벤트 페이지]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### 노출 수가 이전보다 감소했습니다.
 
 1. 론칭 이후 세그먼트나 캠페인을 의도치 않게 변경한 사람이 없는지 확인하세요. 세그먼트 및 캠페인 변경 로그를 통해 변경된 사항, 변경을 수행한 사람, 변경이 발생한 시점에 대한 인사이트를 얻을 수 있습니다.
 
-![사용자가 마지막으로 캠페인을 본 이후 7가지 변경 사항이 포함된 캠페인 세부 정보 페이지의 변경 로그 보기 링크][10]
+![사용자가 캠페인을 마지막으로 본 이후 7가지 변경 사항이 포함된 캠페인 세부 정보 페이지의 변경 로그 보기 링크]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. 우선순위가 더 높은 별도의 인앱 메시지 캠페인에서 트리거 이벤트를 재사용하지 않았는지 확인하세요.
 
@@ -126,7 +126,3 @@ SDK는 세션 시작 시 Braze 서버에 인앱 메시지를 요청합니다. �
 {% endcase %}
 7. 인앱 메시지가 세션 시작 시 트리거되고 연장 세션 시간 제한을 설정한 경우 메시지를 표시할 수 있는 속도에 영향을 미칩니다. 예를 들어 세션 시간 제한이 300초로 설정된 경우 이 시간 내에 앱을 닫았다가 다시 열면 세션이 새로 고쳐지지 않으므로 세션 시작 시 트리거되는 인앱 메시지가 표시되지 않습니다.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}
