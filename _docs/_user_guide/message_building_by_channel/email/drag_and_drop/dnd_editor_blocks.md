@@ -109,8 +109,8 @@ Refer to the following table for details on the `Button` editor block.
 |---|---|
 |`Link Type`| Determines the action when clicking the button and sets the appropriate link protocol. |
 |`URL`| Dynamic based on the selected `Link Type`.|
-|`Button options`| Sets options such as Font, Width, Color, etc...|
-|`Button Hover`| Allows you to add style changes—such as background color, font color, and border styles—that activate when a mouse moves over a button on desktop devices.|
+|`Button options`| Sets various button options, such as font, width, color, etc.|
+|`Button Hover`| The style of the button when a user hovers over it using a mouse or trackpad. This includes the button's background color, font color, and border styles.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Divider
@@ -140,14 +140,14 @@ Refer to the following table for details on the `Image` editor block. For dynami
 
 | properties | description |
 |---|---|
-|`Auto Width`| Modifies the pixels of the image. |
-|`Align`| Moves the image to be either left, center or right-oriented. |
-|`Image with Liquid`| Dynamic URLs let you use Liquid in your image source attribute.|
-|`URL`| The hosted address for your image. |
-|`Alternate text`| The written copy that appears in place of an image when the image fails to load. |
-|`Image with Rounded Corners`| Easily add rounded corners to images|
-|`Action`| Define what action should happen when the button is clicked.|
-|`Block Options`| Padding options for the Button. |
+|`Action`| Triggers an action when the user clicks the image.|
+|`URL`| Set an image using the address to where it's hosted. |
+|`Image with Liquid`| Use Liquid logic to dynamically set different images within the same block of content. |
+|`Alternate text`| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessability or when the image fails to load. |
+|`Auto Width`| Modifies the width of the image in pixels. |
+|`Align`| Orients the image to either the left, center or right of the block. |
+|`Block Options`| Sets padding around the image block. |
+|`Image with Rounded Corners`| Render the image with rounded corners. By default, images are rendered with squared corners. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}

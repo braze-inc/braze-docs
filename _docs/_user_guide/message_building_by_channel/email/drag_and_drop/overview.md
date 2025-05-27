@@ -69,7 +69,7 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 #### Cards Style
 
-**Cards Style** is a Row Property that adds spacing between columns and rounds their corners, helping users create more polished, visually engaging layouts. By using card-style formatting, users can highlight key content like product features, testimonials, special offers, or news in a clean, structured way. This improves the clarity and appeal of messages across emails, pages, and popups—making important information stand out and elevating the overall design experience.
+**Cards Style** is a row property that let's you add spacing between columns and round their corners. With card-style formatting, you can create more visually-engaging layouts to help highlight your most important content, such as new product features, testimonials, special offers, news updates, and more.
 
 ## Using the drag-and-drop editor
 
