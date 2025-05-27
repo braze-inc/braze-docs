@@ -9,15 +9,11 @@ search_tag: Partner
 
 # Mention Me
 
-<!-- In most cases, the ARTICLE_TITLE will be your company name. If your tool requires several separate pages on Braze Docs, you can add a relevant page descriptor to your title, such as "MyCompany Analytics." -->
-
-<!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a concise overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
 > Together, [Mention Me](https://www.mention-me.com/) and Braze is your gateway to attracting premium customers and fostering unwavering brand loyalty. 
 By seamlessly integrating first-party referral data into Braze, you can deliver highly personalised omnichannel experiences targeted at your brand fans.
 
 _This integration is maintained by Mention Me._
 
-<!-- Most partner integrations will require the following prerequisites. However, you may add additional prerequisites as needed. -->
 ## Prerequisites
 
 Before you start, you'll need the following:
@@ -29,15 +25,12 @@ Before you start, you'll need the following:
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-<!-- An optional section you can use to outline the typical or atypical use cases for your integration. -->
 ## Use cases
 
 * Send contact data and opt-ins from Mention Me referred customers to Braze in real time
 * Use referral data to create coupon email reminders
 * Enhance the performance of other marketing channels by using referral data to segment and target high value customers
 
-
-<!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum necessary steps. -->
 ## Integrating Mention Me
 
 Connecting Mention Me to Braze takes just a few minutes, just follow these simple steps to get connected. 
