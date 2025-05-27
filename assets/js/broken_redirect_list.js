@@ -2614,4 +2614,7 @@ validurls['/docs/developer_guides/android/content_cards/logging_analytics/'] = '
 validurls['/docs/developer_guide/platform_integration_guides/android/android_11/'] = '/docs/developer_guide/platforms/android/android_13/';
 validurls['/docs/developer_guide/platform_integration_guides/android/android_12/'] = '/docs/developer_guide/platforms/android/android_13/';
 
+validurls['/docs/shopify_features#shopify-data'] = '/docs/partners/ecommerce/shopify/shopify_data_features';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending';
+
 // validurls['OLD'] = 'NEW';
