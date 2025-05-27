@@ -15,9 +15,7 @@ channel:
 
 ## Prerequisites
 
-These are the minimum SDK versions to start using Banners:
-
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
 
 ## Creating a Banner campaign
 
