@@ -13,7 +13,7 @@ description: "Learn how to set up back-in-stock notifications using your catalog
 
 You can set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We suggest you include a catalog name, but this isn't required. You'll also provide the name of an inventory quantity field, which must be a number-data type. 
 
-Note that a catalog item's stock must be at zero for a user to subscribe to it successfully. When an item has an inventory quantity that meets your inventory rule, we'll look up all your users who subscribed to that item and send a Braze custom event that you can use to trigger a campaign or Canvas.
+Note that a catalog item's stock must be at zero for a user to subscribe to it successfully. When an item has an inventory quantity greater than zero, Braze will look up all users subscribed to that item and send a custom event that you can use to trigger a campaign or Canvas.
 
 The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends.
 
