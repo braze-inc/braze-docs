@@ -106,10 +106,10 @@ This filter should always be used when personalizing a string in a JSON dictiona
 ### Output
 
 ```liquid
-{% for thing in my_data %}
-Thing ID: {{ thing.id }}
-Thing Name: {{ thing.store_name }}
-Thing Shopify: {{ thing.shopify_product_id }}
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+Item Shopify: {{ item.shopify_product_id }}
 ---
 {% endfor %}
 ```
@@ -123,6 +123,8 @@ Thing Shopify: {{ thing.shopify_product_id }}
 
 {% raw %}
 ```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store","shopify_product_id":"1234567890123"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
 {% assign json_string = my_data | as_json_string %}
 ```
 
