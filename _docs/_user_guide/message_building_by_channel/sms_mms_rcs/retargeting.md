@@ -30,7 +30,7 @@ When building audiences with user retargeting, you may wish to include or exclud
 
 ### Filter users by SMS, MMS, and RCS
 
-Users can be filtered by when they last received an SMS, MMS, or RCS or if they have received an SMS, MMS, or RCS from a specific campaign. Filters can be set in the **Target Users** step of the campaign builder. 
+Users can be filtered by when they last received an SMS, MMS, or RCS or if they have received an SMS, MMS, or RCS from a specific campaign. Filters can be set in the **Target Audiences** step of the campaign builder. 
 
 **Filter by last received SMS/MMS/RCS**<br>
 ![Segmentation filter Last Received SMS after December 8, 2020.][2]

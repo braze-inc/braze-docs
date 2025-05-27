@@ -2,6 +2,7 @@
 page_order: 1
 nav_title: Terms to Know
 article_title: SMS Terms to Know
+alias: /sms_terms_to_know/
 
 layout: glossary_page
 glossary_top_header: "Terms to Know"

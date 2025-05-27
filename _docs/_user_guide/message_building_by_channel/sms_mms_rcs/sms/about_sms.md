@@ -42,5 +42,5 @@ Before you start sending SMS, there are some things you need. Refer to the follo
 For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/terms/).
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+[1]: {{site.baseurl}}/sms_mms_rcs_reporting/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy
