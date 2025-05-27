@@ -40,6 +40,7 @@ Table | Description
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a campaign
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue within the primary conversion period
+[USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | When a user progresses to a Canvas step
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | When a user converts for a Canvas conversion event
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | When a user enters a Canvas
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | When a user exits a Canvas because they match audience exit criteria
@@ -479,6 +480,31 @@ Field | Type | Description
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Canvas
+
+### USERS_CANVASSTEP_PROGRESSION_SHARED {#USERS_CANVASSTEP_PROGRESSION_SHARED}
+
+| Field                                  | Type                     | Description                                                                                                     |
+| -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                                                               |
+| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                                                                   |
+| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                                                              |
+| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous                                            |
+| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                                                                   |
+| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                                                                    |
+| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
+| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                                                     |
+| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to        |         
+| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                                                            |
+| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                                                                 |
+| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received                                                  |
+| `progression_type`            | `string`,&nbsp;`null`       | Type of step progression event |
+| `is_canvas_entry`                               | `boolean`,&nbsp;`null`    | Whether this is entry into a first step in a Canvas        |
+| `exit_reason`                              | `string`,&nbsp;`null`    | If this is an exit, the reason a user exited the canvas during the step                  |
+| `canvas_entry_id`                             | `string`,&nbsp;`null`    | Unique identifier for this instance of a user in a Canvas  |
+| `next_step_id`                             | `string`,&nbsp;`null`    | BSON ID of the next step in the canvas |
+| `next_step_api_id`                             | `string`,&nbsp;`null`    | API ID of the next step in the Canvas |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
