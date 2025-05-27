@@ -1,6 +1,6 @@
 ---
 nav_title: Mention Me
-article_title: Mention Me
+article_title: Integrating Mention Me with Braze
 description: Mention Me Integration Setup Guide
 alias: /partners/mention-me/
 page_type: partner
@@ -9,8 +9,7 @@ search_tag: Partner
 
 # Mention Me
 
-> Together, [Mention Me](https://www.mention-me.com/) and Braze is your gateway to attracting premium customers and fostering unwavering brand loyalty. 
-By seamlessly integrating first-party referral data into Braze, you can deliver highly personalised omnichannel experiences targeted at your brand fans.
+> Together, [Mention Me](https://www.mention-me.com/) and Braze can be your gateway to attracting premium customers and fostering unwavering brand loyalty. By seamlessly integrating first-party referral data into Braze, you can deliver highly-personalized omnichannel experiences targeted at your brand fans.
 
 _This integration is maintained by Mention Me._
 
@@ -31,23 +30,23 @@ Before you start, you'll need the following:
 * Use referral data to create coupon email reminders
 * Enhance the performance of other marketing channels by using referral data to segment and target high value customers
 
+## What data is sent from Mention Me to Braze?
+
+When you set up this integration, Mention Me will automatically create your customer attributes and events&#8212;so no need to do this beforehand.
+
+Your customer's email addresses in Braze will be used to link relevant events and custom attributes. Mention Me will send events and contact profile attributes for any prospect or existing customer who triggers this event via Mention Me, regardless of their opt-in status.
+
+For more details, refer to [Contact profile attributes and events](https://help.mention-me.com/hc/en-gb/articles/26677937177501-What-Mention-Me-data-is-sent-to-Braze).
+
 ## Integrating Mention Me
 
-Connecting Mention Me to Braze takes just a few minutes, just follow these simple steps to get connected. 
+{% alert tip %}
+For a full step-by-step walkthrough, refer to [Mention Me's Braze setup documentation](https://help.mention-me.com/hc/en-gb/articles/26151773368221-How-to-setup-Braze-with-Mention-Me).
+{% endalert %}
 
-### Connect Mention Me to Braze
+To integrate Mention Me with Braze:
 
-1. Create a Braze API Key with `users.track` and `templates.email.create` permissions.
-2. On the [Mention Me Braze Integration Page](https://mention-me.com/merchant/~/integrations/braze), click **Connect**
-3. Enter the API Key and select your Braze Instance
-4. Select the countries you want to sync with
-
-More details on the setup process can be found [here](https://help.mention-me.com/hc/en-gb/articles/26151773368221-How-to-setup-Braze-with-Mention-Me)
-
-### What data is sent from Mention Me to Braze
-
-During the setup of the Braze integration, Mention Me will take care of creating the customer attributes and events, so you won't need to do this beforehand.
-
-The events and custom attributes linked to customers in Braze are based on their email addresses. Mention Me will send events and contact profile attributes for any prospect or existing customer (regardless of their opt-in status) who has triggered an event via Mention Me.
-
-More details on the different contact profle attributes and events can be found [here](https://help.mention-me.com/hc/en-gb/articles/26677937177501-What-Mention-Me-data-is-sent-to-Braze)
+1. In Mention Me, go to the [Braze integration](https://mention-me.com/merchant/~/integrations/braze) page, then select **Connect**.
+2. Select **Create New Authorization**, then add the [API key you previously created](#prerequisites) and select your Braze instance.
+3. Choose one or more countries you'd like to sync with.
+4. When you're finished, select **Connect**.
