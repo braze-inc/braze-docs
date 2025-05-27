@@ -82,13 +82,13 @@ To manage the following company-level permissions for a user, check or uncheck t
 
 ### Workspace
 
-You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually select or assign a permission set [you previously created](#creating-a-permission-set).
+You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually to select or assign a permission set [you previously created](#creating-a-permission-set).
 
 If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}
 {% tab select manually %}
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions** choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
 
 When you're finished, select **Update user**.
 
@@ -106,7 +106,7 @@ When you're finished, select **Update user**.
 
 ## Exporting user permissions
 
-To download list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
+To download a list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
 ![The "Company Users" page in Braze with the "Export Users" option in focus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
@@ -122,7 +122,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Company|Create and delete workspaces|Allows users to create and delete workspaces.|
 |Company|Manage company settings|Allows users to modify any company setting.|
 |Workspace|Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers|Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and view global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content.|
-|Workspace|Access Dev Console|Allows full access to the following settings and logs:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li><li><a href='/docs/user_guide/data_and_analytics/cloud_ingestion/'>Manage Cloud Data Ingestion</a></li></ul>{:/}|
+|Workspace|Access Dev Console|Allows full access to the following settings and logs:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li></ul>{:/}|
 |Workspace|Approve and Deny Campaigns|Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access.|
 |Workspace|Approve and Deny Canvases|Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply.|
 |Workspace|Edit Currents Integrations|Allows users to modify a Currents connection, including credentials. By default, users assigned the "External Integrations" permission are also assigned this permission.|
@@ -136,7 +136,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).|
 |Workspace|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Workspace|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**.|
-|Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
+|Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/docs/user_guide/data_and_analytics/cloud_ingestion/).|
 |Workspace|Manage Feature Flags|Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Workspace|Manage Media Library Assets|Allows users to add, edit, and delete media library assets.|
 |Workspace|Manage Subscription Groups|Allows users to create and manage subscription groups.|
@@ -158,4 +158,10 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Canvas Templates|Allows users to view Canvas templates.|
 |Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
 |Workspace|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
+|Workspace|Publish Landing Pages|Allows users to publish [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
+|Workspace|Create Landing Page Drafts|Allows users to create and save landing page drafts.|
+|Workspace|Access Landing Pages|Allows users to access the **Landing Pages** page.|
+|Workspace|Create and Edit Landing Page Templates|Allows users to create and edit landing page templates.|
+|Workspace|View Landing Page Templates|Allows users to view landing page templates.|
+|Workspace|Archive Landing Page Templates|Allows users to archive landing page templates.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

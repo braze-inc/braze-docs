@@ -399,7 +399,7 @@ page_order: 3
 {% tab Shopify events %}
 {% subtabs global %}
 {% subtab Product viewed %}
-**Event**: `ecommerce.v1.product_viewed`<br>
+**Event**: `ecommerce.product_viewed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer views a product page<br>
 **Use Case**: Browse abandonment
@@ -423,7 +423,7 @@ page_order: 3
 
 {% endsubtab %}
 {% subtab Cart updated %}
-**Event**: `ecommerce.v1.cart_updated`<br>
+**Event**: `ecommerce.cart_updated`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Cart abandonment
@@ -463,7 +463,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 
 {% endsubtab %}
 {% subtab Checkout started %}
-**Event**: `ecommerce.v1.checkout_started`<br>
+**Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
@@ -500,7 +500,7 @@ Then you can add the following Liquid tags into your message to reference the pr
 
 {% endsubtab %}
 {% subtab Order placed %}
-**Event**: `ecommerce.v1.order_placed`<br>
+**Event**: `ecommerce.order_placed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a user successfully completes the checkout process and places an order<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
@@ -812,7 +812,11 @@ For more information on what data is collected by the Braze SDKs, see [SDK data 
 
 ## Historical backfill
 
-During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. 
+During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we will assign the `external_id` type that you chose in your configuration settings.
+
+{% alert note %}
+If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you will be required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the historical backfill. 
+{% endalert %}
 
 ### Setting up Shopify historical backfill
 

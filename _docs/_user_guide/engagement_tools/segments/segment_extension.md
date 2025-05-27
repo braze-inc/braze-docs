@@ -1,7 +1,7 @@
 ---
 nav_title: Segment Extensions
 article_title: Segment Extensions
-page_order: 3.1
+page_order: 6
 page_type: reference
 description: "This how-to article will walk you through how to set up and use a Segment Extension to enhance your segmentation capabilities."
 tool: Segments

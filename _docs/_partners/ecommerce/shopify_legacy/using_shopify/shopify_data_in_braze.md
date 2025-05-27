@@ -432,11 +432,6 @@ After the app installation is complete, Braze automatically creates your webhook
  "name": "shopify_abandoned_checkout",
  "time": "2020-09-10T18:53:37-04:00",
  "properties": {
-   "applied_discount": {
-     "amount": "30.00",
-     "title": "XYZPromotion",
-     "description": "Promotionalitemforblackfriday."
-   },
    "discount_code": "30_DOLLARS_OFF",
    "total_price": "398.00",
    "line_items": [

@@ -88,7 +88,7 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 | [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Send rich HTML messages by building your email using the rich-text editor, our drag-and-drop editor, or by uploading one of your existing HTML templates. |
 | [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Send unobtrusive in-app notifications using the Braze custom-built native user interface. |
 | [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Automatically trigger push notifications from messaging campaigns or news items using the Apple Push Notification Service (APNs) for iOS or Firebase Cloud Messaging (FCM) for Android. |
-| [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)* | Use SMS/MMS to send transactional notifications, share promotions, send reminders, and more. |
+| [SMS/MMS]({{site.baseurl}}/user_guide/about_sms/)* | Use SMS/MMS to send transactional notifications, share promotions, send reminders, and more. |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Send web browser notifications, even if your users aren't currently active on your site. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Use webhooks to trigger non-app actions, providing other systems and applications with real-time data. |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)* | Directly connect with your users and customers by leveraging the popular peer-to-peer messaging platform: WhatsApp. |

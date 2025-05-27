@@ -59,6 +59,25 @@ braze.subscribeToContentCardsUpdates(function(updates) {
 });
 
 braze.automaticallyShowInAppMessages();
+
+try {
+  if (window.localStorage.getItem('braze_developer_data')) {
+    const developerData = JSON.parse(window.localStorage.getItem('braze_developer_data'));
+    if (developerData.user_id) {
+      braze.changeUser(developerData.id);
+      braze.getUser().setCustomUserAttribute('department', developerData.department);
+      braze.getUser().setCustomUserAttribute('companyId', developerData.company_id);
+      braze.getUser().setCustomUserAttribute('companyName', developerData.company_name);
+      braze.getUser().setCustomUserAttribute('username', developerData.username);
+      braze.getUser().setEmail(developerData.email);
+    }
+    window.localStorage.removeItem('braze_developer_data');
+  }
+} catch (e) {
+  console.error('Error setting user ID:', e);
+}
+
+
 braze.openSession();
 if (braze.getCachedContentCards()?.cards?.length > 0) {
   $('#cc_prompt').show();
