@@ -347,6 +347,16 @@ For more information on getting started with segments, check out [About Braze se
 eCommerce events are based on [recommended events]({{site.baseurl}}/recommended_events/).
 Because recommended events are more opinionated custom events, you can search for the recommended eCommerce event names by selecting any [custom event filter]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#segmentation-filters).
 
+### eCommerce filters
+
+Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter.
+
+![Segment filters dropdown with "Ecommerce" filters.][7]{: style="max-width:80%"}
+
+{% alert important %}
+The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
+{% endalert %}
+
 ## Nested event properties
 
 To segment by nested event properties, you can leverage [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#why-use-segment-extensions). For example, you can use Segment Extensions to find who has bought the product “SKU-123” in the last 90 days.
@@ -368,3 +378,4 @@ For more advanced reporting use cases, you can use the Braze [Query Builder]({{s
 [4]: {% image_buster /assets/img_archive/abandoned_cart.png %}
 [5]: {% image_buster /assets/img_archive/abandoned_checkout.png %}
 [6]: {% image_buster /assets/img_archive/order_confirmation_feedback.png %}
+[7]: {% image_buster /assets/img_archive/ecommerce_filters.png %}

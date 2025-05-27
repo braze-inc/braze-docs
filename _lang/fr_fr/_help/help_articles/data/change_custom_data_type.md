@@ -11,10 +11,6 @@ description: "Cet article d’aide vous explique comment modifier le type de don
 
 Pour modifier le type de données d'un attribut ou d'un événement personnalisé, à partir du tableau de bord de Braze, naviguez vers **Paramètres des données** et sélectionnez **Attributs personnalisés** ou **Événements personnalisés**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), les pages **Événements personnalisés** et **Attributs personnalisés** sont situées sous **Gérer les paramètres.**
-{% endalert %}
-
 ![Onglet Attributs personnalisés pour modifier l’attribut ou le type de données][1]
 
 Si vous devez modifier le type de données d'un attribut ou d'un événement personnalisé (par exemple, remplacer `time` par `string`), tenez compte des éléments suivants :

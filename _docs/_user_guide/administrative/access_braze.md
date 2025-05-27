@@ -11,7 +11,7 @@ description: "This landing page is home to articles on accessing your Braze acco
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Navigation
+- name: Navigating Braze
   link: /docs/user_guide/administrative/access_braze/navigation/
   image: /assets/img/braze_icons/list.svg
 - name: Searching Your Dashboard
@@ -31,6 +31,9 @@ guide_featured_list:
   image: /assets/img/braze_icons/log-in-01.svg
 - name: Product Portal
   link: /docs/user_guide/administrative/access_braze/portal/
+  image: /assets/img/braze_icons/target-05.svg
+- name: Troubleshooting
+  link: /docs/user_guide/administrative/access_braze/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
 - name: Braze Support
   link: /docs/user_guide/administrative/access_braze/support/

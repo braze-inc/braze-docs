@@ -19,10 +19,6 @@ Vous pouvez définir des géorepérages sur le tableau de bord de Braze et les u
 
 Gérez les géorepérages à partir de **Audience** > **Localisations**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **Emplacements** sous **Engagement.**
-{% endalert %}
-
 Les géorepérages sont organisées en ensembles. Un ensemble est un groupe de géorepérages qui peut être utilisé pour segmenter ou contacter des utilisateurs sur toute la plateforme. Chaque ensemble de géorepérages peut contenir un maximum de 10 000 géorepérages.
 
 Vous pouvez créer ou télécharger une quantité illimitée de géorepérages dans le tableau de bord, ce qui permet à votre équipe marketing de configurer des campagnes et des ensembles de géorepérages sans avoir à calculer le nombre de géorepérages. Braze synchronisera de façon dynamique les géorepérages qu’il suit pour chaque utilisateur, en veillant à ce que les géorepérages les plus pertinentes soient toujours disponibles.

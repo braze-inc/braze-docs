@@ -41,7 +41,7 @@ Antes de empezar con los detalles más sutiles de la [configuración de Canvas](
   {% endtab %}
 
   {% tab Pasos %}
-  Un paso en Canvas es un punto de decisión de marketing: "si esto, entonces aquello". Aproveche los [componentes de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) para construir los pasos de un recorrido de usuario.<br><br> ![Ejemplo de añadir un paso en Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> Cuando un usuario entra en un Canvas, empieza por el primer paso. Cada paso tiene unas condiciones que determinan si un usuario puede pasar al siguiente. En un paso, puedes desencadenar o programar la entrega, afinar la orientación añadiendo filtros o marcando [eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), y especificar diferentes canales como notificaciones push o eventos webhook. En Canvas, los pasos se producen en una secuencia, lo que significa que el primer paso se produce antes de que pueda producirse el segundo. Supongamos que tenemos un Canvas con los siguientes pasos: Retrasa el paso A con un retraso de 24 horas, Mensajea el paso A con un mensaje push y Mensajea el paso B con un mensaje dentro de la aplicación. El usuario A es retenido en un retraso de 24 horas, después de 24 horas, recibirá un mensaje push y, a continuación, un mensaje dentro de la aplicación.
+  Un paso en Canvas es un punto de decisión de marketing: "si esto, entonces aquello". Aproveche los [componentes de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) para construir los pasos de un recorrido de usuario.<br><br> ![Ejemplo de añadir un paso en Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> Cuando un usuario entra en un Canvas, empieza por el primer paso. Cada paso tiene unas condiciones que determinan si un usuario puede pasar al siguiente. En un paso, puedes desencadenar o programar la entrega, afinar la orientación añadiendo filtros o marcando eventos de excepción, y especificar diferentes canales como notificaciones push o eventos webhook. En Canvas, los pasos se producen en una secuencia, lo que significa que el primer paso se produce antes de que pueda producirse el segundo. Supongamos que tenemos un Canvas con los siguientes pasos: Retrasa el paso A con un retraso de 24 horas, Mensajea el paso A con un mensaje push y Mensajea el paso B con un mensaje dentro de la aplicación. El usuario A es retenido en un retraso de 24 horas, después de 24 horas, recibirá un mensaje push y, a continuación, un mensaje dentro de la aplicación.
 
   {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ Puede añadir etiquetas y nombrar los pasos y variantes en un Lienzo. Para obten
 
 Siempre es importante tener un objetivo definido en mente y Canvas te ayuda a entender cómo te estás desempeñando con respecto a los KPI, como la participación en la sesión, las compras y los eventos personalizados.
 
-La selección de al menos un [evento de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) le permitirá comprender cómo optimizar el rendimiento dentro del Canvas. Y si su Canvas tiene múltiples variantes o un grupo de control, Braze utilizará el evento de conversión para determinar la mejor variación para alcanzar este objetivo.
+La selección de al menos un [evento de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) le permitirá comprender cómo optimizar el rendimiento dentro del Canvas. Y si su Canvas tiene múltiples variantes o un grupo de control, Braze utilizará el evento de conversión para determinar la mejor variación para alcanzar este objetivo.
 
 * **Inicia sesión**: Quiero que mis usuarios vuelvan y se interesen por la aplicación.
 * **Hace una compra**: Quiero que mis usuarios compren.
@@ -78,7 +78,7 @@ La selección de al menos un [evento de conversión]({{site.baseurl}}/user_guide
 Su respuesta determinará los detalles de cuándo y cómo se entregará su lienzo a su cliente. Los usuarios pueden entrar en tu Canvas de dos maneras: activadores programados o basados en acciones.
 
 {% alert tip %}
-Consulte [Funcionalidades basadas en el tiempo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/) para Canvas para obtener más estrategias y respuestas a preguntas comunes.
+Consulte [Funcionalidades basadas en el tiempo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/delivery_types/) para Canvas para obtener más estrategias y respuestas a preguntas comunes.
 {% endalert %}
 
 La entrega programada le permite enviar un Canvas inmediatamente a su público objetivo. También puede enviarla periódicamente o programarla para un momento determinado en el futuro. Los lienzos basados en acciones responden a comportamientos específicos de los clientes a medida que se producen. Por ejemplo, un activador basado en una acción puede incluir la apertura de una aplicación, la realización de una compra, la interacción con otra campaña o la activación de cualquier evento personalizado. En el momento en que se produce la acción, puede hacer que el Canvas se envíe a sus usuarios.

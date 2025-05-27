@@ -25,6 +25,14 @@ Les campagnes déclenchées par l'API dédupliqueront ou enverront des messages 
 - **Scénario 2 : E-mails dupliqués dans différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs `External_user_IDs` référencés par l'objet `recipients`, l'e-mail sera envoyé deux fois.
 - **Scénario 3 : E-mails dupliqués en raison d'identifiants utilisateur en double dans l'objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
 
+### Comment vérifier si une adresse e-mail est déjà associée à un utilisateur ?
+
+Avant de créer un utilisateur via l'API ou le SDK, appelez le point de terminaison [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) et spécifiez l'adresse `email_address` de l'utilisateur. S'il renvoie un profil utilisateur, cela signifie que l'utilisateur de Braze est déjà associé à cette adresse e-mail.
+
+Nous vous recommandons vivement de rechercher des adresses e-mail uniques lors de la création de nouveaux utilisateurs et d'éviter de transmettre ou d'importer des utilisateurs ayant la même adresse e-mail. Dans le cas contraire, vous risquez d'avoir des conséquences imprévues sur l'envoi de messages, le ciblage, la création de rapports et d'autres fonctionnalités.
+
+Par exemple, supposons que vous ayez des profils en double, mais que certains événements et attributs personnalisés ne se trouvent que sur un seul profil. Lorsque vous essayez de déclencher des campagnes ou des Canvases avec plusieurs critères, Braze ne peut pas identifier l'utilisateur comme éligible parce qu'il y a deux profils utilisateur. Par ailleurs, si une campagne cible une adresse e-mail partagée par deux utilisateurs, la page **Recherche d'utilisateurs** indiquera que les deux profils utilisateurs ont reçu la campagne.
+
 ### Les mises à jour de mes paramètres de messagerie sortante s'appliqueront-elles rétroactivement ?
 
 Non. Les mises à jour des paramètres de messagerie sortante n'affectent pas rétroactivement les envois existants. Par exemple, changer votre nom d'affichage par défaut dans les paramètres de messagerie ne remplacera pas automatiquement le nom d'affichage par défaut existant dans vos campagnes actives ou vos Canvases. 
@@ -59,6 +67,12 @@ Vous pourriez constater plus de clics que d’ouvertures pour une des raisons su
 - Les utilisateurs effectuent plusieurs clics sur le corps de l’e-mail pour une seule ouverture.
 - Les utilisateurs cliquent sur certains liens de l’e-mail dans le panneau de prévisualisation sur leur téléphone. Dans ce cas, Braze enregistre que cet e-mail a été cliqué et pas ouvert.
 - Les utilisateurs ouvrent à nouveau un e-mail qu’ils ont prévisualisé auparavant.
+
+### Pourquoi le nombre d'ouvertures et de clics sur les e-mails est-il nul ?
+
+Il se peut que vous ne voyiez aucun e-mail ouvert ou cliqué si votre domaine de suivi est mal configuré. Cela peut être dû à l'une des raisons suivantes :
+- Il y a un problème SSL où les URL de suivi sont `http` au lieu de `https`.
+- Il y a un problème avec votre réseau de diffusion contenu dans la chaîne de caractères de l'agent utilisateur sur les événements d'ouverture, les événements de clic, ou les deux, ne sont pas remplis.
 
 ### Quels sont les risques potentiels de déclencher des clics sur le serveur ?
 

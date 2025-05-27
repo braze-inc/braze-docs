@@ -239,7 +239,7 @@ There are many ways to use webhooks, and with our technology partners (Alloys), 
 
 Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
-* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
+* [Remerge]({{site.baseurl}}/partners/remerge/)
 * [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
 * And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 

@@ -108,7 +108,7 @@ Para más ideas sobre cómo mejorar la capacidad de entrega, lee [Fallas de la c
 Si Microsoft es tu principal proveedor de buzones de correo, puedes utilizar esta integración para acceder a tus datos de reputación de Microsoft y verlos. De este modo, puede supervisar la salud de sus IP para determinar cómo se reciben sus mensajes de correo electrónico.
 
 {% alert important %}
-Si no ve sus datos en el Centro de entregabilidad, póngase en contacto con [el servicio de asistencia]({{site.baseurl}}/help/support/) con una lista de sus direcciones IP.
+Si no ve sus datos en el Centro de entregabilidad, póngase en contacto con [el servicio de asistencia]({{site.baseurl}}/user_guide/administrative/access_braze/support/) con una lista de sus direcciones IP.
 {% endalert %}
 
 ![][8]

@@ -17,7 +17,7 @@ description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braz
 > Use esse endpoint para registrar eventos e compras personalizados e atualizar as atribuições do perfil do usuário.
 
 {% alert note %}
-O processo de Braze trata os dados passados pela API como estão, e os clientes devem passar apenas deltas (dados em mudança) para minimizar o consumo desnecessário de pontos de dados. Para saber mais, consulte [Pontos de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+O processo de Braze trata os dados passados pela API como estão, e os clientes devem passar apenas deltas (dados em mudança) para minimizar o consumo desnecessário de pontos de dados. Para saber mais, consulte [Pontos de dados]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -297,10 +297,10 @@ Cada objeto de evento no vetor de eventos representa uma única ocorrência de u
 ## Usuários Ativos Mensais CY 24-25
 Para os clientes que adquiriram Usuários Ativos Mensais - CY 24-25, a Braze gerencia diferentes limites de taxa em seu endpoint `/users/track`:
 - Os limites de taxa horária são definidos de acordo com a atividade esperada de ingestão de dados em sua conta, que pode corresponder ao número de usuários ativos mensais que você adquiriu, setor, sazonalidade ou outros fatores.
-- Além do limite de solicitações por hora, Braze também impõe um limite de explosão no número de solicitações permitidas por segundo.
+- Além do limite horário, o Braze impõe um limite de explosão no número de solicitações que podem ser enviadas a cada três segundos.
 - Cada solicitação pode agrupar até 50 atualizações combinadas entre objetos de atributo, evento ou compra.
 
-Os limites atuais com base na ingestão esperada podem ser encontrados no dashboard em **Configurações** > **APIs e Identificadores** > **Limites de API**. Podemos modificar os limites de taxa para proteger a estabilidade do sistema ou permitir um aumento na taxa de transferência de dados em sua conta. Por favor, entre em contato com o suporte da Braze ou com o gerente de sucesso do cliente para perguntas ou preocupações relacionadas ao limite de solicitações por hora ou por segundo e às necessidades do seu negócio.
+Os limites atuais com base na ingestão esperada podem ser encontrados no dashboard em **Configurações** > **APIs e Identificadores** > **Dashboard de Uso da API**. Podemos modificar os limites de taxa para proteger a estabilidade do sistema ou permitir um aumento na taxa de transferência de dados em sua conta. Por favor, entre em contato com o suporte da Braze ou com o gerente de sucesso do cliente para perguntas ou preocupações relacionadas ao limite de solicitações por hora ou por segundo e às necessidades do seu negócio.
 
 
 

@@ -121,7 +121,7 @@ Las tablas siguientes proporcionan ejemplos de enlaces en el cuerpo de un correo
 En la pestaña **Gestión de enlaces**, seleccione los alias que desea que se "rastreen" a efectos de segmentación y que estén presentes en los filtros de segmentación. Tenga en cuenta que los alias rastreados son sólo para fines de segmentación y no tendrán ningún impacto en el seguimiento de su enlace a efectos de informes.
 
 {% alert tip %}
-Para realizar un seguimiento de las métricas de compromiso del enlace, asegúrese de que su enlace precede con HTTP o HTTPS.
+Para realizar un seguimiento de las métricas de compromiso del enlace, asegúrese de que su enlace precede con HTTP o HTTPS. Para desactivar el seguimiento de clics de enlaces específicos, consulta [Enlaces universales y Enlaces de aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis).
 {% endalert %}
 
 Braze le permite seleccionar un número ilimitado de enlaces a los que realizar el seguimiento, aunque sólo podrá reorientar a los usuarios a los enlaces más recientes que hayan abierto. Los perfiles de los usuarios incluyen los 100 enlaces en los que se ha hecho clic más recientemente. Por ejemplo, si realiza un seguimiento de 500 enlaces y un usuario hace clic en los 500, puede volver a segmentar o crear segmentos basados en los 100 enlaces en los que se ha hecho clic más recientemente.
@@ -145,7 +145,7 @@ Braze sólo rastrea hasta los últimos 100 alias de enlaces en los que se ha hec
 
 ### Filtros basados en acciones
  
-Puede crear mensajes basados en acciones dirigidos a cualquier enlace (con seguimiento o sin él) o volver a dirigirse a los usuarios en función de si han hecho clic en un alias en cualquier campaña de correo electrónico o componente de Canvas.
+Puedes crear mensajes basados en acciones dirigidos a cualquier enlace (con o sin seguimiento) o reorientar a los usuarios en función de si han hecho clic en un alias a través de cualquier campaña de correo electrónico o componente de Canvas.
 
 ![Opciones basadas en acciones para dirigirse a usuarios que han hecho clic en un alias de un componente Canvas o han interactuado con una campaña.][6]
 
@@ -153,11 +153,11 @@ Puede crear mensajes basados en acciones dirigidos a cualquier enlace (con segui
 
 En Braze, si tienes un alias de enlace en tu correo electrónico y un usuario hace clic en él, el evento se registra en el perfil del usuario con el alias.
 
-Si utilizas el filtro de segmentación "Alias de clic en cualquier campaña o paso en Canvas" y más tarde decides cambiar el nombre de este alias de enlace, los datos de clic anteriores del perfil de usuario **no** se actualizarán, lo que significa que seguirá mostrándose como el alias de enlace anterior. Por lo tanto, si se dirige a los usuarios basándose en el nuevo alias de enlace, no incluirá los datos del alias de enlace anterior.
+Si utilizas el filtro de segmentación "Alias de clic en cualquier campaña o paso en Canvas" y más tarde decides cambiar el nombre de este alias de enlace, los datos de clic anteriores del perfil de usuario **no** se actualizarán, lo que significa que seguirá mostrándose como el alias de enlace anterior. Por tanto, si te diriges a los usuarios basándote en el nuevo alias de enlace, no incluirá los datos del alias de enlace anterior.
 
 Si utilizas el filtro de segmentación "Alias clicado en campaña" o "Alias clicado en Canvas", filtrarás a tus usuarios en función de si han hecho clic en un alias específico en una campaña o Canvas concretos. Si varios usuarios comparten la misma dirección de correo electrónico y se hace clic en el enlace alias, todos los demás usuarios que compartan la dirección de correo electrónico verán actualizados sus perfiles de usuario. 
 
-Los siguientes filtros de segmentación se aplican a los eventos de clic que son objeto de seguimiento en el momento en que se procesa el evento. Esto significa que la supresión del seguimiento de enlaces no eliminará los datos existentes y que el seguimiento de un enlace no rellenará los datos. Para más detalles, consulta [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Los siguientes filtros de segmentación se aplican a los eventos de clic que son objeto de seguimiento en el momento en que se procesa el evento. Esto significa que los enlaces sin seguimiento no eliminarán los datos existentes y que el seguimiento de un enlace no rellenará los datos. Para más detalles, consulta [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 #### Enlaces no rastreables
 
@@ -220,11 +220,11 @@ Para los Bloques de contenido, Braze recomienda crear copias de los Bloques de c
 
 ## aliasing de enlaces para URL generadas por Liquid
 
-Para las URL generadas por una declaración `assign` en el HTML o en un bloque de contenido, debes añadir un signo de interrogación (`?`) a la etiqueta de anclaje. Esto permite a Braze añadir parámetros de consulta (`lid = somevalue`) para que el aliasing de enlaces funcione correctamente. Sin identificar dónde añadir los parámetros de consulta, el aliasing de enlaces no reconocerá estas URL y no se aplicarán las plantillas de enlaces.
+Para las URL generadas por Liquid, como las declaraciones `assign` en el HTML o desde un bloque de contenido, debes añadir un signo de interrogación (`?`) a la etiqueta de Liquid. Esto permite a Braze añadir parámetros de consulta (`lid = somevalue`) para que el aliasing de enlaces funcione correctamente. Sin identificar dónde añadir los parámetros de consulta, el aliasing de enlaces no reconocerá estas URL y no se aplicarán las plantillas de enlaces.
 
 ### Ejemplo
 
-Consulte este ejemplo de alias de enlaces para ver el formato recomendado de la etiqueta de anclaje:
+Consulta este ejemplo de aliasing de enlaces para ver el formato recomendado del enlace:
 
 {% raw %}
 ```liquid

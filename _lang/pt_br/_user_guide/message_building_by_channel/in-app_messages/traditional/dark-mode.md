@@ -36,10 +36,6 @@ Você ainda pode usar esse recurso mesmo que seu app não ofereça seu próprio 
 
 Para usar o modo escuro em todas as mensagens no app, acesse **Modelos** > **Modelos de mensagens no app**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar esta página em **Modelos e mídias.**
-{% endalert %}
-
 A partir daí, selecione [Create Color Profile (Criar perfil de cores][2] ) no menu suspenso. Crie um perfil de cores que se alinhe ao tema do modo escuro. Então, sempre que criar uma versão em modo escuro de uma mensagem no app, você poderá selecionar esse perfil de cor e manter a aparência das mensagens no app consistente.
 
 ## Compatibilidade

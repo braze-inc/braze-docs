@@ -19,10 +19,6 @@ Les informations sur les segments vous montrent comment un segment se comporte p
 
 Accédez à la page **Segment Insights** de votre tableau de bord, sous **Analytics**, et cliquez sur <i class="fas fa-plus"></i> **Ajouter un segment** pour voir jusqu'à quatre segments différents comparés à une référence.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page à **Engagement** > **Segments** > **Informations sur les segments**.
-{% endalert %}
-
 ![Tableau de bord de Segment Insights.][1]
 
 Le segment de référence peut être un segment de votre choix ou un segment contenant tous vos utilisateurs. Segment Insights vous permet de comparer les statistiques suivantes :

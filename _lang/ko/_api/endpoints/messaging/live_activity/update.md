@@ -15,7 +15,7 @@ description: "이 문서에서는 실시간 활동 업데이트 엔드포인트�
 /messages/live_activity/update
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 iOS 앱에 표시되는 [실시간 활동을]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) 업데이트하고 종료할 수 있습니다. 이 엔드포인트에는 추가 설정이 필요합니다.
+> 이 엔드포인트를 사용하여 iOS 앱에 표시되는 [실시간 활동을]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) 업데이트하고 종료할 수 있습니다. 이 엔드포인트에는 추가 설정이 필요합니다.
 
 라이브 활동을 등록한 후 JSON 페이로드를 전달하여 Apple 푸시 알림 서비스(APN)를 업데이트할 수 있습니다. 자세한 내용은 [푸시 알림 페이로드로 실시간 활동을 업데이트하는](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) 방법에 대한 Apple 설명서를 참조하세요.
 
@@ -26,7 +26,7 @@ description: "이 문서에서는 실시간 활동 업데이트 엔드포인트�
 이 엔드포인트를 사용하려면 다음을 완료해야 합니다:
 
 - `messages.live_activity.update` 권한을 사용하여 API 키를 생성합니다.
-- 브레이즈 스위프트 SDK를 사용하여 [원격]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) 또는 [로컬로]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) 라이브 활동을 등록하세요.
+- 브레이즈 스위프트 SDK를 사용하여 [원격]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) 또는 [로컬로]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) 라이브 활동을 등록하세요.
 
 ## 사용량 제한
 

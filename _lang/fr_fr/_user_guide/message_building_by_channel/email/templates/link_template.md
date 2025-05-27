@@ -33,15 +33,9 @@ Vous pouvez créer un nombre illimité de modèles de liens pour répondre à vo
 
 1. Allez dans **Modèles** > **Modèles de liens d'e-mail.** 
 2. Sélectionnez **Créer un modèle de lien d'e-mail**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve à l'emplacement/localisation **Engagement** > **Modèles et médias** > **Modèles de liens**.
-{% endalert %}
-
-{:start="3"}
-3\. Donnez un nom à votre modèle de lien.
-4) (facultatif) Ajoutez une description, une équipe ou une étiquette pour ajouter des détails sur le modèle de lien.
-5\. (facultatif) Basculer pour ajouter automatiquement le modèle de lien aux liens dans les campagnes d'e-mail et les canevas. Ceci s'applique à l'ajout d'un nouveau lien à tout e-mail nouveau ou existant.
+3. Donnez un nom à votre modèle de lien.
+4. (facultatif) Ajoutez une description, une équipe ou une étiquette pour ajouter des détails sur le modèle de lien.
+5. (facultatif) Cochez la bascule pour ajouter automatiquement le modèle de lien aux liens dans les campagnes d'e-mail et les Canevas. Ceci s'applique à l'ajout d'un nouveau lien à tout e-mail nouveau ou existant.
 
 Il existe deux types de modèles de liens que vous pouvez créer :
 
@@ -58,7 +52,7 @@ Pour ajouter une chaîne de caractères ou une URL avant les liens dans votre me
 2. Définissez la **position du modèle** sur **Avant l'URL.** 
 3. Saisissez une chaîne de caractères qui sera toujours ajoutée à votre URL. 
 
-Une section d’aperçu est fournie pour vous donner un exemple de processus d’insertion.
+L'**aperçu du** modèle est fourni pour vous donner un exemple de la façon dont le modèle de lien sera inséré avant une URL.
 
 ![Champs Position du modèle, Ajout avant l’URL et Aperçu du modèle pour le processus d’insertion du modèle de lien avant une URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 

@@ -15,7 +15,7 @@ description: "Cet article présente les détails de l'endpoint Démarrer une lig
 /messages/live_activity/start
 {% endapimethod %}
 
-> Utilisez cet endpoint pour démarrer à distance les [activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) affichées dans votre app iOS. Cet endpoint nécessite une configuration supplémentaire.
+> Utilisez cet endpoint pour démarrer à distance les [activités en direct]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) affichées dans votre app iOS. Cet endpoint nécessite une configuration supplémentaire.
 
 Après avoir créé une activité en direct, vous pouvez effectuer une requête POST pour démarrer à distance votre activité pour n'importe quel segment/instantané. Pour en savoir plus sur les activités en direct d'Apple, consultez [Démarrage et mise à jour des activités en direct avec les notifications push d'ActivityKit.](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)
 
@@ -26,7 +26,7 @@ Après avoir créé une activité en direct, vous pouvez effectuer une requête 
 Pour utiliser cet endpoint, vous devrez effectuer les opérations suivantes :
 
 - Générez une clé API avec l’autorisation `messages.live_activity.start`.
-- [Créez une activité en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity) à l’aide du SDK Braze Swift.
+- [Créez une activité en direct]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity) à l’aide du SDK Braze Swift.
 
 ## Limite de débit
 

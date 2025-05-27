@@ -16,7 +16,7 @@ tool: Canvas
 
 Com a atualização de usuário, as atualizações não contam para o limite de frequência de `/users/track` solicitações por minuto. Em vez disso, essas atualizações são agrupadas para que o Braze possa processá-las com mais eficiência do que um webhook de Braze para Braze. Note que esse componente não consome [pontos de dados]({{site.baseurl}}/user_guide/data/data_points/) quando está sendo usado para atualizar pontos de dados não faturáveis (como grupos de inscrições).
 
-Os usuários só avançarão para as próximas etapas do Canva depois que as atualizações relevantes do usuário tiverem sido concluídas. Se o envio de mensagens subsequentes depender das atualizações do usuário que você está fazendo, é possível garantir que essas atualizações tenham sido concluídas antes do envio das mensagens.
+Os usuários só avançarão para as próximas etapas do Canva depois que as atualizações relevantes do usuário tiverem sido concluídas. Isso significa que qualquer envio de mensagens subsequente que dependa dessas atualizações do usuário estará atualizado quando a próxima etapa for executada.
 
 ## Criação de uma atualização de usuário
 

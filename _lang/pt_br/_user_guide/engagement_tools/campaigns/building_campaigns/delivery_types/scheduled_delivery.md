@@ -20,7 +20,7 @@ Se você optar por enviar uma mensagem assim que ela for lançada, sua mensagem 
 
 Esse tipo de programação foi criado para campanhas únicas que você deseja enviar imediatamente, como mensagens sobre um evento atual. Um app de esportes, por exemplo, pode programar notificações por push sobre atualizações de pontuação usando essa opção. Além disso, ao enviar mensagens de teste destinadas apenas a você ou à sua equipe, essa opção permite que você as entregue imediatamente. 
 
-Se planeja editar a campanha e reenviá-la depois de visualizar o teste, certifique-se de marcar a caixa que torna os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) para receber a campanha. Por padrão, o Braze envia uma campanha para um usuário apenas uma vez, a menos que essa caixa esteja marcada.
+Se planeja editar a campanha e reenviá-la depois de visualizar o teste, certifique-se de marcar a caixa que torna os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) para receber a campanha. Por padrão, o Braze envia uma campanha para um usuário apenas uma vez, a menos que essa caixa esteja marcada.
 
 ## Opção 2: Enviar em um horário determinado
 

@@ -19,7 +19,7 @@ Pida a los usuarios que envíen un mensaje de texto con las palabras "START", "U
 
 ## Opción 2: Adhesión voluntaria de los usuarios a través de un mensaje dentro de la aplicación
 
-Para permitir que los usuarios opten por los SMS desde un mensaje de la aplicación, utiliza el [formulario de captura de números de teléfono]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) proporcionado por Braze para crear un formulario de marca que te permita recopilar números de teléfono y hacer crecer tu lista de SMS.
+Para permitir que los usuarios opten por los SMS desde un mensaje de la aplicación, utiliza el [formulario de captura de números de teléfono]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) proporcionado por Braze para crear un formulario de marca que te permita recopilar números de teléfono y hacer crecer tu lista de SMS.
 
 ![][3]{: style="max-width:30%;"}
 

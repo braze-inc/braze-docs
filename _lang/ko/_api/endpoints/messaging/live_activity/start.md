@@ -15,7 +15,7 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 /messages/live_activity/start
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 iOS 앱에 표시되는 [실시간 활동을]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) 원격으로 시작할 수 있습니다. 이 엔드포인트에는 추가 설정이 필요합니다.
+> 이 엔드포인트를 사용하여 iOS 앱에 표시되는 [실시간 활동을]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) 원격으로 시작할 수 있습니다. 이 엔드포인트에는 추가 설정이 필요합니다.
 
 라이브 활동을 만든 후에는 특정 세그먼트에 대해 원격으로 활동을 시작하도록 POST 요청을 할 수 있습니다. Apple의 실시간 활동에 대한 자세한 내용은 [ActivityKit 푸시 알림으로 실시간 활동 시작 및 업데이트](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)를 참조하세요.
 
@@ -26,7 +26,7 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 이 엔드포인트를 사용하려면 다음을 완료해야 합니다:
 
 - `messages.live_activity.start` 권한을 사용하여 API 키를 생성합니다.
-- 브레이즈 스위프트 SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity).
+- 브레이즈 스위프트 SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity).
 
 ## 사용량 제한
 

@@ -2,7 +2,7 @@
 nav_title: Sobre as recomendações de itens
 article_title: Sobre as recomendações de itens
 description: "Este artigo de referência descreve diferentes casos de uso para recomendar itens aos clientes usando a Braze."
-page_order: 1
+page_order: 10
 ---
 
 # Sobre as recomendações de itens
@@ -225,7 +225,7 @@ Destaque os itens que ganharam atenção em sua base de usuários por meio de vi
 
 Esse cenário não depende diretamente das ações do usuário, mas sim dos dados do catálogo. É possível filtrar novos itens com base na data de adição ao catálogo e promovê-los por meio de campanhas direcionadas ou Canvas sem a necessidade de treinar um modelo de recomendação.
 
-Por exemplo, uma plataforma de comércio eletrônico de tecnologia poderia alertar os entusiastas da tecnologia sobre os mais recentes gadgets ou as próximas pré-encomendas, usando filtros para direcionamento de itens que foram adicionados recentemente ao catálogo.
+Por exemplo, uma plataforma de comércio eletrônico de tecnologia poderia alertar os entusiastas da tecnologia sobre os últimos gadgets ou as próximas pré-encomendas, usando filtros para direcionamento de itens que foram adicionados recentemente ao catálogo.
 
 {% details Requisitos %}
 

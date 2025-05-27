@@ -17,10 +17,6 @@ Outre cet article, nous vous recommandons également de consulter notre cours d'
 
 Pour accéder au journal, sélectionnez **Paramètres** > **Journal des événements utilisateurs**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez le **journal des événements utilisateurs** sous **Paramètres** > **Console de développement.**
-{% endalert %}
-
 Pour trouver facilement vos journaux, vous pouvez filtrer en fonction de :
 
 * SDK ou API

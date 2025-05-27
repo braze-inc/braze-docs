@@ -13,10 +13,6 @@ description: "Esta página de referência divide os componentes do calendário d
 
 Você pode analisar dados de envio de mensagens, bem como visualizar e gerenciar suas campanhas agendadas. Para abrir o calendário, selecione **envio de mensagens** > **Calendário de Conteúdo**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), selecione **engajamento** > **Campanhas** > **Calendário**.
-{% endalert %}
-
 ## análise de dados de envio de mensagens
 
 A seção de análise de dados de envio de mensagens contém dois relatórios para suas campanhas agendadas recentes e futuras:

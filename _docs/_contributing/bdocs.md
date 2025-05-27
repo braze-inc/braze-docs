@@ -35,6 +35,7 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
+  mredirects     Make redirects for all renamed files in this branch
   fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
   syntax         Print all unique Markdown syntax supported by Braze Docs
@@ -212,20 +213,61 @@ Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github
 
 It should not be used to redirect URLs on an existing Braze Docs page to another existing Braze Docs page. Instead, these URLs should be updated with the newest possible link. We want to avoid cases in which someone reading an existing Braze Docs page clicks a link and is redirected from one page, to another page, to another page, and so on. `ulinks` helps solves this issue, improving the end-user experience.
 
-### `fblinks`
+### `mredirects`
 
-`fblinks` (short for "find broken links") checks each file in the `_docs` directory for links that lead to a 404 page. Each broken link is written to a `.csv` file that you can import to Google Sheets.
+`mredirects` (short for "make redirects") checks for renamed files committed in the current branch, then creates [URL redirects]({{site.baseurl}}/contributing/content_management/redirecting_urls/) in `assets/js/broken_redirect_list.js` for each renamed file.
 
-{% alert important %}
-To use `fblinks`, you'll need to install the dependencies using `yarn`. In the docs repository, run `brew install yarn && yarn install`. This only needs to be done a single time.
-{% endalert %}
+Because it relies on `git diff` to check for renamed files, redirects are only created for committed files in the following scenarios:
+
+|Scenario|Example|
+|--------|-------|
+|The file was renamed.|Renaming `developer_guide.md` to `dev_references.md`|
+|A directory in a file's path was renamed.| Renaming `_docs/developer_guide/home.md` to `_docs/dev_reference/home.md`|
+|The file was moved to a new directory.|Moving `_docs/developer_guide/home.md` into `_docs/developer_guide/getting_started/`|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% tabs local %}
 {% tab usage example %}
 #### Example command
 
 ```bash
-$ braze-docs git:(404s) ✓ ./bdocs fblinks                           
+$ ./bdocs mredirects                           
+Redirects created successfully!
+```
+
+#### Example redirect file
+
+```js
+validurls['/docs/partners/message_personalization/dynamic_content/niftyimages'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages';
+validurls['/docs/partners/message_personalization/dynamic_content/movable_ink'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink';
+validurls['/docs/partners/message_personalization/dynamic_content/offerfit'] = '/docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit';
+validurls['/docs/partners/message_personalization/dynamic_content/stylitics'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit'] = '/docs/partners/additional_channels_and_extensions/extensions/surveys/jebbit';
+validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
+```
+{% endtab %}
+{% endtabs %}
+
+### `fblinks`
+
+`fblinks` (short for "find broken links") checks each file in the `_docs` directory for links that lead to a 404 page. Each broken link is written to a `.csv` file that you can import to Google Sheets.
+
+#### Requirements
+
+To use `fblinks`, you'll need to install the dependencies using `yarn`. This only needs to be done a single time. To install dependencies, run:
+
+```bash
+cd ~/braze-docs
+brew install node yarn
+yarn install
+```
+
+{% tabs local %}
+{% tab usage example %}
+#### Example command
+
+```bash
+$ ./bdocs fblinks                           
 59 broken links were found. The full list can be found at:
   /Users/Alex.Lee/braze-docs/scripts/temp/broken-links.csv
 ```

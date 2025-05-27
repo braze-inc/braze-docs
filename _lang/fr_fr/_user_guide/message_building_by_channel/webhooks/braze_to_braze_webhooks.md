@@ -59,10 +59,6 @@ Braze nécessite pour l’autorisation un en-tête HTTP qui comprend votre clé 
 
 Remplacez `YOUR_API_KEY` par une clé API REST Braze avec des autorisations `users.track`. Vous pouvez créer une clé API dans le tableau de bord de Braze sous **Paramètres** > **Clés API.**
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
-{% endalert %}
-
 ![L'onglet "Settings" avec les en-têtes de requête pour le webhook.][1]
 
 #### Corps de la demande
@@ -114,10 +110,6 @@ Braze nécessite pour l’autorisation un en-tête HTTP qui comprend votre clé 
 - **Méthode HTTP :** POST
 
 Remplacez `YOUR_API_KEY` par une clé API REST Braze avec des autorisations `canvas.trigger.send`. Vous pouvez créer une clé API dans le tableau de bord de Braze sous **Paramètres** > **Clés API.**
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
-{% endalert %}
 
 ![L'onglet "Settings" avec les en-têtes de requête pour le webhook.][1]
 

@@ -37,9 +37,9 @@ Para más información sobre la reactivación de la interacción de los usuarios
 
 Antes de poder crear y enviar mensajes push con Braze, debe trabajar con sus desarrolladores para integrar la función push en su sitio web o aplicación. Para conocer los pasos detallados, consulta nuestras guías de integración para cada plataforma:
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)
+- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/)
+- [Web]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
 
 ## Normativa sobre mensajes push
 

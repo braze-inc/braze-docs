@@ -135,7 +135,7 @@ C'est ici que votre message doit « en jeter », en arborant le style caracté
 
 - Pour obtenir une liste des blocs éditeurs disponibles et de leurs propriétés, reportez-vous à la section [Blocs éditeurs.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)
 - Pour vous aider à personnaliser l'aspect et la convivialité de votre message, consultez la rubrique [Paramètres de style]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
-- Pour connaître les meilleures pratiques en matière de création d'envois de messages de droite à gauche, reportez-vous à la section [Création d'envois de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- Pour connaître les meilleures pratiques en matière de création d'envois de messages de droite à gauche, reportez-vous à la section [Création d'envois de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Étape 5 : Tester votre message in-app
 

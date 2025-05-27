@@ -22,15 +22,9 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 {% tab Campanha %}
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecione **Mensagem no app**. Observe que as mensagens no app não estão disponíveis em campanhas de vários canais.
-3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+2. Selecione **Mensagem no app**. Observe que as mensagens no app não estão disponíveis em campanhas de vários canais.
+3. Dê à sua campanha um nome claro e significativo.
+4. Adicione [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -210,7 +204,7 @@ Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copy
 
 ##### Criação de mensagens da direita para a esquerda
 
-Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como árabe e hebraico? Consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) para conhecer as práticas recomendadas.
+Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como árabe e hebraico? Consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) para conhecer as práticas recomendadas.
 
 ### Texto do botão {#buttons}
 
@@ -273,7 +267,7 @@ O conteúdo da guia **Style (Estilo** ) varia de acordo com as opções de mensa
 
 | Formatação | Entrada | Descrição |
 |---|---|---|
-|Perfil de cores | Aplique a partir da galeria de modelos de mensagens no app. | Clique em **Apply Template (Aplicar modelo** ) e selecione na galeria. Em seguida, clique em **Salvar**. |
+|[Perfil de cores]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Aplique a partir da galeria de modelos de mensagens no app. | Selecione **Apply Template (Aplicar modelo** ) e escolha na galeria. Em seguida, selecione **Salvar**. |
 |Alinhamento de texto | Esquerda, Centro ou Direita.  | Disponível apenas para as versões mais recentes do SDK da Braze. |
 |Cabeçalho | Código de cores HEX. | A cor HEX desejada será exibida. Você também poderá escolher a opacidade da cor.  |
 |Texto | Código de cores HEX. | A cor HEX desejada será exibida. Você também poderá escolher a opacidade da cor. |
@@ -324,7 +318,7 @@ A entrega de mensagens no app é totalmente baseada nos seguintes disparos de a�
 
 Uma data e hora de início devem ser selecionadas; no entanto, uma data de término é opcional. Uma data final impedirá que essa mensagem no app específica seja exibida nos dispositivos após a data/hora especificada.
 
-Consulte nossa documentação para desenvolvedores sobre [disparo de eventos no lado do servidor]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) e [envio local de mensagens no app]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Consulte nossa documentação para desenvolvedores sobre [disparo de eventos no lado do servidor]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) e [envio local de mensagens no app]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### Disparos on-line e off-line
 
@@ -374,7 +368,7 @@ Não use essa opção para mensagens que possam ser disparadas enquanto o usuár
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
 
 {% endtab %}
 {% tab Canvas %}

@@ -2,185 +2,108 @@
 nav_title: Criador de relatórios
 article_title: Criador de relatórios
 alias: /report_builder/
-page_order: 4
 page_type: reference
-description: "Esta página aborda como executar um relatório usando o criador de relatórios, incluindo campanha e canvas, criando relatórios de comparação e criando relatórios e gráficos."
-tool: 
-  - Reports
-
+description: "Este artigo de referência descreve o recurso Report Builder."
+tool:
+    - Reports
+page_order: 6.2
 ---
 
 # Criador de relatórios
 
-> O Construtor de Relatórios permite que você compare os resultados de várias campanhas ou canvas em uma única visualização, para que você possa determinar facilmente quais estratégias de engajamento mais impactaram suas métricas principais. Tanto para campanhas quanto para Canvas, você pode exportar seus dados e salvar seu relatório para visualização futura.<br><br>Para obter uma lista descritiva das métricas que você encontrará em seus relatórios, consulte o [Glossário de métricas de relatórios][16].
+> Esta página aborda como usar o Report Builder para criar e visualizar relatórios granulares usando dados do Braze e como adicionar relatórios aos dashboards.
 
-![Exemplo de comparação de campanhas][5]{: style="max-width:80%;"}
+## Uso de um modelo de relatório
 
-Use esse relatório para responder às principais perguntas de engajamento, por exemplo:
+1. Acesse **Análise de dados** > **Criador de relatórios (novo)**.
+2. Selecione a seta **Mais opções** ao lado do botão **Criar novo relatório** e, em seguida, selecione **Usar um modelo de relatório**.<br><br>![Botão suspenso "Criar novo relatório" com opções para criar um relatório personalizado ou usar um modelo.][9]{: style="max-width:40%;"}<br><br>
+3. Selecione um dos modelos de relatório da biblioteca de modelos do Braze.
+    - Use os **itens de linha** e o menu suspenso **Tags** para encontrar relatórios relevantes para seus casos de uso.<br><br>![Janela "Braze report templates" (modelos de relatório Braze) com uma lista de modelos Braze para seleção.][8]{: style="max-width:90%;"}<br><br>
+4. Siga a etapa 3 e seguintes em [Criar um relatório](#creating-a-report) para personalizar ainda mais o relatório de acordo com seu caso de uso.
 
-- Quais foram as campanhas ou Canvas com melhor performance para uma tag ou canal específico?
-- Quais variantes de campanhas multivariantes tiveram o maior aumento em relação ao controle?  
-- Qual campanha de promoção sazonal levou a uma taxa de compra mais alta: a liquidação de verão, a liquidação de outono ou a liquidação de inverno?
-- Quais notificações por push nesse Canva tiveram as taxas de abertura mais altas?
-- Quais etapas desse grupo de telas tiveram o maior número de conversões?
-- A versão 1 de um e-mail de boas-vindas ou a versão 2 de um e-mail de boas-vindas levou a um maior engajamento e conversão? As mudanças funcionaram?
-- Como os diferentes métodos de entrega (por exemplo, 3 pushes programados, 3 pushes baseados em ação e 3 pushes disparados por API) afetam suas taxas de abertura, taxas de conversão ou taxas de compra?
-- Os aprimoramentos contínuos no envio de mensagens de usuários com atraso tiveram um impacto positivo nos seus KPIs ao longo do tempo?
+## Criação de um relatório
+
+1. Acesse **Análise de dados** > **Criador de relatórios (novo)**.
+2. Selecione **Criar novo relatório**.
+3. No menu suspenso **Linhas**, selecione uma das seguintes opções para criar um relatório:
+    - Campanhas
+    - Canvas
+    - Campanhas e canvas
+    - Canais
+    - Tags
+
+![A seção "Rows and columns" (Linhas e colunas) contém campos para selecionar as linhas e os agrupamentos do seu relatório.][1]{: style="width:90%;"}
+
+{: start="4"}
+4\. (Opcional) Selecione **Adicionar detalhamento** para dividir seus dados em exibições mais granulares:
+    \- Canais
+    \- Data
+        \- Use isso para dividir seus dados em intervalos de tempo menores. Por exemplo, se estiver interessado em saber como foi a performance de suas campanhas por dia, selecione a seguinte configuração:
+            - **Fileiras**: Campanhas
+            - **Agrupamento:** Data
+            - **Intervalo:** dias
+    \- Variantes
+    \- Campanhas e telas
 
 {% alert tip %}
-Tente usar os mesmos eventos de conversão para a conversão A, B e assim por diante em todas as campanhas e canvas que deseja comparar, para que possa alinhar essas conversões nos relatórios do Report Builder.
+Experimente diferentes configurações de opções de drilldown para explorar as diversas maneiras de detalhar seus dados.
 {% endalert %}
 
-## Execução de um relatório
+{: start="5"}
+5\. Na seção **Colunas**, selecione **Personalizar métricas**.
 
-### Etapa 1: Criar um novo relatório
+![A seção "Customize Metrics" (Personalizar métricas) com opções para selecionar várias métricas.][2]{: style="width:90%;"}
 
-No dashboard, acesse **Análise de dados**  > **Criador de relatórios**.
+{: start="6"}
+6\. Procure métricas por categoria e marque a caixa de seleção correspondente para adicionar uma métrica ao seu relatório.
+    \- Reorganize as métricas e colunas arrastando o ícone pontilhado para cima ou para baixo.
+7\. Em **Conteúdo do relatório**, configure o intervalo de datas para o qual você gostaria de incluir dados em seu relatório.
+8\. Em seguida, dependendo de suas seleções na etapa 3, escolha adicionar manual ou automaticamente campanhas, Canvas ou ambos ao seu relatório.
+    - **Adicionar manualmente:** Escolha cada campanha ou Canvas a ser incluído no relatório usando os filtros para datas e tags ou canais de **Último envio** ou pesquisando o nome da campanha ou do Canvas.<br><br>![A seção "Manually add campaigns and canvas" (Adicionar campanhas e telas manualmente) com uma lista de campanhas a serem selecionadas.][3]{: style="width:90%;"}<br><br>
+    - **Adicionar automaticamente:** Defina regras para quais campanhas ou telas devem ser incluídas no relatório. Você só precisa selecionar um campo nesta página.
+        \- Note que, à medida que campanhas ou Canvas adicionais satisfizerem as condições definidas nessa tela, elas serão automaticamente adicionadas a futuras execuções do relatório.<br><br>![A seção "Automatically add campaigns and canvases" (Adicionar campanhas e telas automaticamente) com campos para definir regras para quais campanhas e telas devem ser adicionadas ao relatório.][4]{: style="width:90%;"}<br><br>
+9\. Execute o relatório selecionando **Save & Run**.
 
 {% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Criador de relatórios** em **Dados**.
+O relatório pode levar alguns minutos para ser executado, dependendo do intervalo de datas e do número de campanhas ou Canvas que você selecionou na fase de configuração.
 {% endalert %}
 
-Selecione **Criar novo relatório** e selecione um relatório de comparação de campanhas ou um relatório de comparação do Canva.
+## Visualização de um relatório
 
-Se você optar por executar um relatório sobre campanhas, poderá selecionar entre um relatório **manual** ou **automatizado**. Os relatórios podem conter campanhas ou canvas, mas não os dois juntos. Todas as campanhas e Canvas que tenham enviado mensagens pela última vez nos últimos 12 meses serão elegíveis para um relatório.
+Depois de executar o relatório, você pode visualizar os resultados em formato de tabela na página do relatório. 
 
-![Painel de controle da campanha][6]{: style="max-width:80%;"}
+![Uma tabela dos dados do relatório para as métricas de cada campanha.][5]{: style="width:90%;"}
 
-Veja a seguir as diferenças entre essas duas opções:
+### Criação de um gráfico de relatório
 
-| **Ação** | **Manual** | **Automatizado** |
-| ---- | ---------- | ------------- |
-| **Geração de relatórios** | Você poderá restringir sua lista de campanhas usando filtros e, em seguida, marcar campanhas específicas. | Você criará seu relatório usando as opções de filtro para restringir sua lista de campanhas. |
-| **Salvando e visualizando relatórios** | Você pode salvar seu relatório. Na próxima vez que a visualizar, você poderá ver a mesma campanha que adicionou anteriormente, pois essas campanhas ainda se enquadram no filtro "Last Sent" (último envio). | Você pode salvar seu relatório. Na próxima vez que você o visualizar, o relatório será atualizado automaticamente para incluir todas as campanhas que correspondem atualmente aos seus filtros. |
-| **Edição de relatórios** | Você pode selecionar **Editar relatório** para adicionar ou excluir campanhas do seu relatório | Você pode editar seu relatório ajustando os critérios de filtragem. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+Na parte inferior da página, você pode criar um gráfico de seus dados selecionando um **tipo de gráfico** e configurando as métricas do gráfico. Por padrão, você verá a primeira métrica.
+
+![Um gráfico dos dados do relatório com opções para configurar o eixo x, o eixo y, o tipo de gráfico e muito mais.][6]{: style="max-width:90%;"}
 
 {% alert note %}
-Tanto os relatórios **manuais** quanto os **automatizados** podem incluir um máximo de 250 campanhas em um relatório.
+Para criar um gráfico de linhas, selecione **Date (Data** ) como uma opção de pesquisa ao configurar o relatório. Isso exibirá as tendências ao longo do tempo.
 {% endalert %}
 
-Os relatórios do Canva funcionam de forma semelhante a um relatório de campanha manual, pois as seleções do Canvas e as atualizações de relatórios também devem ser feitas manualmente. Você pode incluir no máximo cinco Canvas em um relatório.
+#### Baixando um gráfico de relatório
 
-### Etapa 2: Escolha suas métricas
+Para baixar uma imagem do gráfico do relatório, selecione o ícone pontilhado e escolha uma opção de download.
 
-Depois de criar o relatório, você encontrará uma tabela em branco com campanhas em cada linha. A tabela será preenchida depois que você selecionar **Edit Columns (Editar colunas** ) e escolher as métricas que deseja adicionar.
+![Um menu com opções de download para diferentes formatos de arquivo.][7]{: style="max-width:30%;"}
 
-![Opções de campanha][15]{: style="max-width:80%;"}
+## Adição de um relatório a um dashboard
 
-Sua tabela será preenchida com as métricas que você escolher. Para obter as definições dessas métricas, consulte o [Glossário de métricas do relatório][16]. Algumas métricas estão disponíveis apenas para relatórios de comparação de campanhas.
+1. Selecione o ícone pontilhado na parte superior da tabela de relatórios.
+2. Selecione **Adicionar ao dashboard**.
+3. Selecione se deseja criar um novo dashboard ou adicionar a um dashboard existente.<br><br>![Janela com opções para selecionar se deseja adicionar o relatório a um dashboard novo ou existente.][10]{: style="width:90%;"}<br><br>
+4. Siga as etapas do [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) para saber mais sobre a criação de um dashboard.
 
-Você também pode alternar os cálculos da **média** de qualquer taxa ou métrica numérica e do **total** de qualquer métrica numérica.
-
-### Etapa 3: Escolha um período de tempo
-
-Você pode selecionar um período de tempo específico para visualizar os dados do seu relatório. Se uma determinada campanha, tela, variante de tela ou componente de tela não tiver dados para o período de tempo selecionado, os resultados dessa linha ficarão em branco. 
-
-![Métrica numérica da campanha][4]{: style="max-width:60%;"}
-
-### Etapa 4: Dê um nome e salve seu relatório
-
-Dê um nome ao seu relatório antes de salvá-lo. Se um relatório for salvo sem ser nomeado, o Braze aplicará um nome padrão de "Relatório de comparação de campanhas".
-
-![Nota da campanha][7]{: style="max-width:60%;"}
-
-Quando estiver pronto, selecione **Salvar**. Os relatórios salvos podem ser visualizados posteriormente na página **do Report Builder**.
-
-## Relatório de comparação de campanhas com campanhas multivariantes
-
-Para quaisquer campanhas multivariantes, é possível visualizar essas métricas divididas por suas variantes e grupo de controle clicando na seta ao lado do nome da campanha. As linhas que contêm suas variantes incluirão resultados de performance para essa variante, e a linha que contém seu controle incluirá apenas os resultados dos seus eventos de conversão. 
-
-![Nota da campanha][3]{: style="float:right;max-width:15%;margin-left:15px;"}
-
-As métricas que preenchem a linha da sua campanha geral refletirão o desempenho de suas variantes, mas não incluirão o desempenho do controle. Por exemplo, o Evento de Conversão Primária A da sua campanha geral será a soma do Evento de Conversão Primária A das suas variantes, e isso não incluirá o Evento de Conversão Primária A do seu controle.
-
-{% alert important %}
-Se você excluir uma variante de uma campanha multivariante, os dados dessa variante não estarão disponíveis para uso em um relatório futuro.
-{% endalert %}
-
-## Detalhamento do relatório de comparação de telas
-
-Em um relatório do Canvas, você pode visualizar seus Canvas divididos por variante, etapas ou mensagem.
-
-### Variante
-
-A seleção do **detalhamento por variante** permite visualizar as estatísticas de alto nível de suas Canvas gerais, bem como as estatísticas de cada variante, que podem ser expandidas selecionando a seta ao lado do nome da Canvas.
-
-![Variantes][12]{: style="max-width:90%;"}
-
-### Etapas 
-
-A seleção do **detalhamento por etapas** permite visualizar as métricas em nível de etapa, com cada linha do relatório contendo a linha de uma etapa.
-
-![Etapas][13]{: style="max-width:90%;"}
-
-### Mensagem
-
-Semelhante a um detalhamento em nível de etapa, a seleção do **detalhamento por mensagem** mostra o nome das etapas em cada linha. No entanto, nas **colunas de edição**, você terá acesso a métricas no nível da mensagem, como estatísticas específicas do canal, como cliques em e-mails e aberturas de push.
-
-![Relatório][14]{: style="max-width:90%;"}
-
-Note que, no dashboard da Braze, é possível ver as primeiras 50 linhas do seu relatório do canva. Você pode acessar o relatório completo ao exportar um CSV.
-
-## Acesso a relatórios salvos
-
-Ao acessar um **Relatório manual** salvo, você pode visualizar as mesmas campanhas adicionadas anteriormente, já que essas campanhas ainda se enquadram no filtro "Last Sent" (Último envio).
-
-Ao acessar um **Relatório automático** salvo, o relatório será atualizado automaticamente para incluir todas as campanhas que correspondem aos seus filtros no momento. Por exemplo, se o seu relatório filtrou campanhas com a tag "Promoção", cada vez que você visualizar esse relatório, poderá ver todas as campanhas com a tag "Promoção", mesmo que essas campanhas tenham sido criadas depois que você fez esse relatório.
-
-## Edição de relatórios
-
-Em um **relatório manual**, você pode editar um relatório selecionando **Editar**. A partir daí, você pode selecionar ou desmarcar campanhas para incluir em seu relatório.
-
-Em um **relatório automático**, basta alternar seus filtros para restringir os resultados em seu relatório.
-
-## Exportação de relatórios
-
-Você também pode selecionar **Exportar** para baixar o relatório em CSV.
-
-Se o relatório contiver campanhas multivariantes, sua exportação incluirá dois arquivos CSV: 
-
-- Um arquivo contendo apenas as métricas de nível superior para cada campanha
-- Um arquivo que contém métricas em nível de variante
-
-O nome do arquivo que contém métricas de variantes começará com `variant_`. Na primeira vez que exportar um relatório automatizado, você receberá uma janela pop-up solicitando permissão para baixar vários arquivos - clique em **Permitir**.
-
-![Baixar a campanha][8]{: style="max-width:60%;"}
-
-### Exportação de relatórios de comparação de telas
-
-Sua exportação de CSV refletirá a visualização de detalhamento em que você estava quando selecionou **Exportar**. Por exemplo, se você estiver na exibição de detalhamento em nível de etapa, sua exportação conterá dados sobre as métricas da etapa. Para exportar dados de um detalhamento diferente, você precisará navegar primeiro para esse detalhamento e selecionar **Exportar** a partir daí.
-
-Se baixar um relatório do Canva de detalhamento de variantes, você receberá dois arquivos CSV:
-
-- Um arquivo contendo apenas métricas de nível superior para cada Canva
-- Um arquivo que contém métricas em nível de variante
-
-## Gráficos de construção 
-
-Use gráficos para visualizar uma métrica selecionada em seu relatório. Os gráficos estão disponíveis para relatórios que apresentam campanhas e têm pelo menos uma métrica adicionada às suas colunas.
-
-![Gráfico de performance da campanha com a métrica Mensagem enviada selecionada][17]
-
-Por padrão, o gráfico em cada relatório exibirá a métrica na primeira coluna do relatório. Para selecionar uma métrica diferente para o gráfico, escolha sua métrica no menu suspenso. Qualquer métrica em sua tabela de relatório estará disponível para exibição em seu gráfico.
-
-Você pode representar graficamente no máximo três métricas. As unidades de todas as métricas devem ser as mesmas - por exemplo, se você escolher uma taxa no primeiro menu suspenso, somente as taxas estarão disponíveis para seleção no segundo menu suspenso.
-
-Se o seu gráfico contiver apenas uma métrica, ele exibirá até 30 campanhas em ordem decrescente com base na métrica que você selecionou. Por exemplo, se a métrica do seu gráfico for cliques em e-mails, ele exibirá as 30 campanhas de e-mail com mais cliques, ordenadas do maior para o menor número de cliques. Se seu relatório contiver mais de 30 campanhas, somente as 30 primeiras serão exibidas no gráfico. Se você selecionar mais de uma métrica, seu gráfico exibirá apenas as cinco principais campanhas com base na primeira métrica selecionada.
-
-No momento, os gráficos não são salvos quando você salva o relatório.
-
-
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
-
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+[1]: {% image_buster /assets/img/report_builder_2/rows_and_columns.png %}
+[2]: {% image_buster /assets/img/report_builder_2/customize_metrics.png %}
+[3]: {% image_buster /assets/img/report_builder_2/manually_add.png %}
+[4]: {% image_buster /assets/img/report_builder_2/automatically_add.png %}
+[5]: {% image_buster /assets/img/report_builder_2/report_table.png %}
+[6]: {% image_buster /assets/img/report_builder_2/visualize_table.png %}
+[7]: {% image_buster /assets/img/report_builder_2/download_options.png %}
+[8]: {% image_buster /assets/img/report_builder_2/report_templates.png %}
+[9]: {% image_buster /assets/img/report_builder_2/create_new_report.png %}
+[10]: {% image_buster /assets/img/report_builder_2/add_to_dashboard.png %} 

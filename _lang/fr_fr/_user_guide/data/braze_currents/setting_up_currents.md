@@ -48,10 +48,6 @@ Avant de commencer votre intégration, il est préférable de décider quelle in
 
 Pour commencer, sélectionnez **Intégrations partenaires** > **Exportation de données**. Vous serez dirigé vers la page de gestion des Intégrations Currents.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Intégrations** > **Currents**.
-{% endalert %}
-
 ![Page actuelle du tableau de bord de Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### Étape 3 : Ajoutez votre partenaire
@@ -73,7 +69,7 @@ Si nécessaire, vous pouvez en savoir plus sur nos événements dans notre artic
 Vous pouvez utiliser les transformations de champs Currents pour supprimer ou hacher un champ de chaînes de caractères.
 
 - **supprimer :** Remplace la chaîne de caractères par `[REDACTED]`. Ceci est utile si votre partenaire rejette les événements dont les champs sont manquants ou vides.
-- **Hash :** Applique un algorithme de hachage SHA-256 au champ chaîne de caractères.
+- **Hash :** Applique un algorithme de hachage SHA-256 à la chaîne de caractères.
 
 La sélection d'un champ pour l'une de ces transformations appliquera cette transformation à tous les événements dans lesquels ce champ apparaît. Par exemple, si vous sélectionnez `email_address` pour le hachage, le champ `email_address` sera haché dans les champs Envoi d'e-mail, Ouverture d'e-mail, Rebond d'e-mail et Changement d'état du groupe d'abonnement.
 
@@ -106,61 +102,4 @@ Pour mettre à niveau votre connecteur test Currents, modifiez l'intégration da
 
 Braze enverra les données Currents à partir des adresses IP répertoriées :
 
-| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, et `US-07` |
-|---|
-| `127.0.0.1` |
-| `23.21.118.191` |
-| `34.206.23.173` |
-| `50.16.249.9` |
-| `52.4.160.214` |
-| `54.87.8.34` |
-| `54.156.35.251` |
-| `52.54.89.238` |
-| `18.205.178.15` |
-{: .reset-td-br-1 role="presentation"}
-
-| Par instance `US-08` |
-|---|
-| `52.151.246.51` |
-| `52.170.163.182` |
-| `40.76.166.157` |
-| `40.76.166.170` |
-| `40.76.166.167` |
-| `40.76.166.161` |
-| `40.76.166.156` |
-| `40.76.166.166` |
-| `40.76.166.160` |
-| `40.88.51.74` |
-| `52.154.67.17` |
-| `40.76.166.80` |
-| `40.76.166.84` |
-| `40.76.166.85` |
-| `40.76.166.81` |
-| `40.76.166.71` |
-| `40.76.166.144` |
-| `40.76.166.145` |
-{: .reset-td-br-1 role="presentation"}
-
-| Pour les instances `EU-01` et `EU-02` |
-|---|
-| `127.0.0.1` |
-| `52.58.142.242` |
-| `52.29.193.121` |
-| `35.158.29.228` |
-| `18.157.135.97` |
-| `3.123.166.46` |
-| `3.64.27.36` |
-| `3.65.88.25` |
-| `3.68.144.188` |
-| `3.70.107.88` |
-{: .reset-td-br-1 role="presentation"}
-
-| Par instance `AU-01` |
-|---|
-| `13.210.1.145` |
-| `13.211.70.159` |
-| `13.238.45.54` |
-| `52.65.73.167` |
-| `54.153.242.239` |
-| `54.206.45.213` |
-{: .reset-td-br-1 role="presentation"}
+{% multi_lang_include data_centers.md datacenters='ips' %}
