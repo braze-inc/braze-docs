@@ -25,7 +25,7 @@ Before you start, you'll need the following:
 | Prerequisite          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | A Mention Me account   | A [Mention Me](https://mention-me.com/login) account is required to take advantage of this partnership.                                                                     |
-| A Braze REST API key  | A Braze REST API key with `users.track` and `campaignstemplates.email.create` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| A Braze REST API key  | A Braze REST API key with `users.track` and `templates.email.create` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -44,7 +44,7 @@ Connecting Mention Me to Braze takes just a few minutes, just follow these simpl
 
 ### Connect Mention Me to Braze
 
-1. Create a Braze API Key with `users.track` and `campaignstemplates.email.create` permissions.
+1. Create a Braze API Key with `users.track` and `templates.email.create` permissions.
 2. On the [Mention Me Braze Integration Page](https://mention-me.com/merchant/~/integrations/braze), click **Connect**
 3. Enter the API Key and select your Braze Instance
 4. Select the countries you want to sync with
