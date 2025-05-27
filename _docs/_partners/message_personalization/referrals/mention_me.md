@@ -2,7 +2,7 @@
 nav_title: Mention Me
 article_title: Integrating Mention Me with Braze
 description: Mention Me Integration Setup Guide
-alias: /partners/mention-me/
+alias: /partners/mention_me/
 page_type: partner
 search_tag: Partner
 ---
