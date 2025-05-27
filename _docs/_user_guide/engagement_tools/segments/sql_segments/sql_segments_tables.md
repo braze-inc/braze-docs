@@ -497,13 +497,14 @@ Field | Type | Description
 | `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                                                            |
 | `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                                                                 |
 | `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received                                                  |
-| `progression_type`                                       | `string`,&nbsp;`null`    | Type of step progression event |
-| `is_canvas_entry`                                         | `boolean`,&nbsp;`null` | Whether this is entry into a first step in a Canvas        |
-| `exit_reason`                                                 | `string`,&nbsp;`null`    | If this is an exit, the reason a user exited the canvas during the step                  |
-| `canvas_entry_id`                                         | `string`,&nbsp;`null`    | Unique identifier for this instance of a user in a Canvas  |
-| `next_step_id`                                               | `string`,&nbsp;`null`    | BSON ID of the next step in the canvas |
-| `next_step_api_id`                                        | `string`,&nbsp;`null`    | API ID of the next step in the Canvas |
-| `sf_created_at`                                              | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
+| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received                                                  |
+| `progression_type`                     | `string`,&nbsp;`null`    | Type of step progression event |
+| `is_canvas_entry`                      | `boolean`,&nbsp;`null`   | Whether this is entry into a first step in a Canvas        |
+| `exit_reason`                          | `string`,&nbsp;`null`    | If this is an exit, the reason a user exited the canvas during the step                  |
+| `canvas_entry_id`                      | `string`,&nbsp;`null`    | Unique identifier for this instance of a user in a Canvas  |
+| `next_step_id`                         | `string`,&nbsp;`null`    | BSON ID of the next step in the canvas |
+| `next_step_api_id`                     | `string`,&nbsp;`null`    | API ID of the next step in the Canvas |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
