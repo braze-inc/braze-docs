@@ -63,11 +63,11 @@ braze.automaticallyShowInAppMessages();
 try {
   if (window.localStorage.getItem('braze_developer_data')) {
     const developerData = JSON.parse(window.localStorage.getItem('braze_developer_data'));
-    if (developerData.user_id) {
+    if (developerData.id) {
       braze.changeUser(developerData.id);
       braze.getUser().setCustomUserAttribute('department', developerData.department);
-      braze.getUser().setCustomUserAttribute('companyId', developerData.company_id);
-      braze.getUser().setCustomUserAttribute('companyName', developerData.company_name);
+      braze.getUser().setCustomUserAttribute('companyId', developerData.companyId);
+      braze.getUser().setCustomUserAttribute('companyName', developerData.companyName);
       braze.getUser().setCustomUserAttribute('username', developerData.username);
       braze.getUser().setEmail(developerData.email);
     }
