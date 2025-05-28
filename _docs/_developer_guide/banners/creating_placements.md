@@ -316,11 +316,6 @@ You can create Banners in your Android views layout by including this XML:
 
 {% endtab %}
 {% tab Kotlin %}
-To get the Banner in Kotlin, use:
-```kotlin
-val banner = Braze.getInstance(context).getBanner("global_banner")
-```
-
 If you're using Android Views, use this XML:
 
 ```xml
@@ -337,6 +332,10 @@ If you're using Jetpack Compose, you can use this:
 Banner(placementId = "global_banner")
 ```
 
+To get the Banner in Kotlin, use:
+```kotlin
+val banner = Braze.getInstance(context).getBanner("global_banner")
+```
 {% endtab %}
 {% tab React Native %}
 
@@ -352,19 +351,18 @@ If you're using [React Native's New Architecture](https://reactnative.dev/archit
 }
 #endif
 ```
-
-To get the Banner's data model in React Native, use:
-
-```javascript
-const banner = await Braze.getBanner("global_banner");
-```
-
-You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following JavaScript XML (JSX) snippet into your view hierarchy, providing just the placement ID.
+For the simplest integration, add the following JavaScript XML (JSX) snippet into your view hierarchy, providing just the placement ID.
 
 ```javascript
 <Braze.BrazeBannerView
   placementID='global_banner'
 />
+```
+
+To get the Banner's data model in React Native, or to check for the presence of that placement in your user's cache. use:
+
+```javascript
+const banner = await Braze.getBanner("global_banner");
 ```
 
 {% endtab %}
@@ -380,7 +378,16 @@ This feature is not currently supported on Cordova.
 ```
 {% endtab %}
 {% tab Flutter %}
+For the simplest integration, add the following widget into your view hierarchy, providing just the placement ID.
+
+```dart
+BrazeBannerView(
+  placementId: "global_banner",
+),
 To get the Banner's data model in Flutter, use:
+```
+
+You can use the `getBanner` method to check for the presence of that placement in your user's cache.
 
 ```dart
 braze.getBanner("global_banner").then((banner) {
@@ -390,14 +397,6 @@ braze.getBanner("global_banner").then((banner) {
     print(banner.toString());
   }
 });
-```
-
-You may use the `getBanner` method to check for the presence of that placement in your user's cache. However, for the simplest integration, add the following widget into your view hierarchy, providing just the placement ID.
-
-```dart
-BrazeBannerView(
-  placementId: "global_banner",
-),
 ```
 {% endtab %}
 
