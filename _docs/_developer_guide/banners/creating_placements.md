@@ -359,7 +359,7 @@ For the simplest integration, add the following JavaScript XML (JSX) snippet int
 />
 ```
 
-To get the Banner's data model in React Native, or to check for the presence of that placement in your user's cache. use:
+To get the Banner's data model in React Native, or to check for the presence of that placement in your user's cache, use:
 
 ```javascript
 const banner = await Braze.getBanner("global_banner");
