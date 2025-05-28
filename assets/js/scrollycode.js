@@ -51,59 +51,94 @@ document.addEventListener("DOMContentLoaded", () => {
       codeElem.innerHTML = "";
       codeElem.appendChild(fragment);
       updateHighlightOverlay();
+      scrollCodeToHighlight();
+    }
+
+    function scrollCodeToHighlight() {
+      const activePre = getActiveCodeBlock();
+      if (!activePre) return;
+
+      // Find the first highlighted line
+      const firstHl = activePre.querySelector(
+        '.code-line[data-highlight="true"]'
+      );
+      if (!firstHl) return;
+
+      // Compute its offset *inside* the pre
+      const hlOffset = firstHl.offsetTop;
+      const hlHeight = firstHl.clientHeight;
+      const containerHt = activePre.clientHeight;
+
+      // Target so that the highlighted line sits vertically centered
+      const scrollTo = hlOffset - containerHt / 2 + hlHeight / 2;
+
+      activePre.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
     }
 
     // Create or update overlays for highlighted lines.
     function updateHighlightOverlay() {
       const activePre = getActiveCodeBlock();
       if (!activePre) return;
-      const codeElem = activePre.querySelector("code");
-      if (!codeElem) return;
-      // Remove any existing overlays.
+
+      // ensure <pre> is positioning context
+      if (getComputedStyle(activePre).position === "static") {
+        activePre.style.position = "relative";
+      }
+
+      // clear old overlays…
       activePre
         .querySelectorAll(".highlight-overlay")
         .forEach((el) => el.remove());
-      const highlightedLines = Array.from(
-        codeElem.querySelectorAll(".code-line[data-highlight='true']")
-      );
-      if (highlightedLines.length === 0) return;
 
-      const containerRect = activePre.getBoundingClientRect();
-      // Group contiguous highlighted lines.
-      let groups = [];
-      let currentGroup = [highlightedLines[0]];
-      for (let i = 1; i < highlightedLines.length; i++) {
-        const prevRect = highlightedLines[i - 1].getBoundingClientRect();
-        const currRect = highlightedLines[i].getBoundingClientRect();
-        if (Math.abs(currRect.top - prevRect.bottom) < 2) {
-          currentGroup.push(highlightedLines[i]);
+      const codeElem = activePre.querySelector("code");
+      if (!codeElem) return;
+
+      // pull out all the highlighted code-line spans
+      const highlighted = Array.from(
+        codeElem.querySelectorAll('.code-line[data-highlight="true"]')
+      );
+      if (!highlighted.length) return;
+
+      // group contiguous runs…
+      const groups = [];
+      let run = [highlighted[0]];
+      for (let i = 1; i < highlighted.length; i++) {
+        const prev = highlighted[i - 1],
+          curr = highlighted[i];
+        if (
+          Math.abs(curr.offsetTop - (prev.offsetTop + prev.offsetHeight)) < 2
+        ) {
+          run.push(curr);
         } else {
-          groups.push(currentGroup);
-          currentGroup = [highlightedLines[i]];
+          groups.push(run);
+          run = [curr];
         }
       }
-      groups.push(currentGroup);
+      groups.push(run);
 
+      // compute the pre's top padding:
+      const preStyle = getComputedStyle(activePre);
+      const prePaddingTop = parseFloat(preStyle.paddingTop) || 0;
+
+      // for each group, position one overlay
       groups.forEach((group) => {
-        let groupTop = Infinity,
-          groupBottom = -Infinity;
-        group.forEach((line) => {
-          const rect = line.getBoundingClientRect();
-          const relTop = rect.top - containerRect.top;
-          const relBottom = rect.bottom - containerRect.top;
-          if (relTop < groupTop) groupTop = relTop;
-          if (relBottom > groupBottom) groupBottom = relBottom;
-        });
-        const newHeight = groupBottom - groupTop;
+        const first = group[0];
+        const last = group[group.length - 1];
+
+        // original offsetTop is relative to the code element;
+        // now we add the pre's top padding so it aligns under the spans
+        const top = first.offsetTop + prePaddingTop;
+        const height = last.offsetTop + last.offsetHeight - first.offsetTop;
+
         const overlay = document.createElement("div");
         overlay.className = "highlight-overlay";
-        overlay.style.top = groupTop + "px";
-        overlay.style.height = newHeight + "px";
-        overlay.style.opacity = "0";
+        overlay.style.top = `${top}px`;
+        overlay.style.height = `${height}px`;
+        // width:100% from CSS
         activePre.appendChild(overlay);
-        requestAnimationFrame(() => {
-          overlay.style.opacity = "1";
-        });
       });
     }
 
@@ -165,8 +200,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         stepsContainer.scrollTop >
         stepsContainer.scrollHeight - stepsContainer.clientHeight - 5
-      )
-        return steps.length - 1;
+      ) {
+        // -2 so we skip the buffer/rating prompt step
+        return steps.length - 2;
+      }
       const style = getComputedStyle(stepsContainer);
       const paddingBottom = parseFloat(style.paddingBottom) || 0;
       const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
@@ -174,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
+        if (i === steps.length - 1) return;
         // Use offsetTop relative to the scroll container.
         const mid = step.offsetTop + step.offsetHeight / 2;
         const distance = Math.abs(mid - centerY);
@@ -198,6 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clicking on a narrative step activates it.
     steps.forEach((step, i) => {
       step.addEventListener("click", () => {
+        if (step.classList.contains("rating-step")) return;
         step.scrollIntoView({ behavior: "smooth", block: "center" });
         activateStep(i);
       });
@@ -218,6 +257,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    const codeContainer = block.querySelector(".scrolly-code .code-animate");
+    codeContainer.addEventListener("scroll", updateHighlightOverlay);
+
     // IntersectionObserver to handle blocks that are initially hidden.
     const observer = new IntersectionObserver(
       (entries) => {
@@ -231,6 +273,53 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0.1 }
     );
     observer.observe(block);
+
+    // === rating prompt handler ===
+    const ratingStep = block.querySelector(".rating-step");
+    const stars = Array.from(ratingStep.querySelectorAll(".star"));
+    stars.forEach((star, idx) => {
+      star.addEventListener("click", () => {
+        const rating = 5 - idx;
+
+        // 1) Log to Braze
+        if (window.braze?.logCustomEvent) {
+          braze.logCustomEvent('Tutorial Rating', {
+            tutorial: feedback_site,
+            rating
+          });
+          braze.requestImmediateDataFlush();
+        }
+
+        // 2) Send to feedback.js's network request
+        var submit_data = {
+          'Helpful': rating === 5 ? 'Very Helpful' : 
+                    rating === 4 ? 'Helpful' :
+                    rating === 3 ? 'Somewhat Helpful' :
+                    rating === 2 ? 'Unhelpful' : 'Very Unhelpful',
+          'URL': feedback_site,
+          'Article Title': feedback_article_title,
+          'Nav Title': feedback_nav_title,
+          'Params': window.location.search,
+          "Language": page_language
+        };
+        console.log('Sending feedback data:', submit_data);
+        $.ajax({
+          url: 'https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback',
+          method: "GET",
+          dataType: "json",
+          data: submit_data
+        });
+
+        // 3) Update UI
+        stars.forEach((s, i) => {
+          s.classList.toggle("selected", i < rating);
+        });
+        ratingStep.classList.add("rated");
+
+        // 4) disable further clicks
+        stars.forEach((s) => (s.style.pointerEvents = "none"));
+      });
+    });
 
     // Initialize this block after a short delay.
     setTimeout(() => {
