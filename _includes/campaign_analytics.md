@@ -1,6 +1,6 @@
 ## Viewing analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "banner" %}Banner {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page.{% if include.channel != "banner" %} For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "banner" %}Banner {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).{% endif %}
 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
@@ -751,11 +751,11 @@ Inbound messages are truncated past 1,600 characters.
 
 ## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign{% if include.channel != "banner" %} or Canvas{% endif %}. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Funnel report
 
-Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
+Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign{% if include.channel != "banner" %} or Canvas{% endif %}. If your campaign {% if include.channel != "banner" %}or Canvas {% endif %}uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
 For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
