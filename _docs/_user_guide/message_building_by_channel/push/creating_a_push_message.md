@@ -85,15 +85,15 @@ There are a few different ways to do this depending on your previous selections:
 
 ## Step 3: Select notification type (iOS and Android)
 
-If you're creating a quick push campaign, the notification type is automatically set to Standard Push and cannot be changed.
+If you're creating a quick push campaign, the notification type is automatically set to **Standard push** and cannot be changed.
 
 ![Notification Type with Standard Push selected as an example.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Otherwise, for iOS and Android, select your notification type:
 
-- Standard Push
-- [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
-- Inline Image (Android only)
+- Standard push
+- [Push stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
+- Inline image (Android only)
 
 If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) or [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/).
 
