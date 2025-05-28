@@ -1,3 +1,275 @@
+## Relationship diagram
+
+```mermaid
+---
+config:
+  layout: elk
+  elk:
+    mergeEdges: true
+    nodePlacementStrategy: LINEAR_SEGMENTS
+---
+erDiagram
+    {% multi_lang_include snowflake_mermaid/pushnotification.md %}
+
+    CHANGELOGS_CANVAS_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string api_id
+        string name
+        string conversion_behaviors
+        string variations
+    }
+    SNAPSHOTS_CANVAS_FLOW_STEP_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string type
+        string api_step_id
+        string experiment_splits
+        string conversion_behaviors
+        string name
+    }
+    SNAPSHOTS_CANVAS_STEP_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string api_id
+        string name
+        string actions
+    }
+    SNAPSHOTS_CANVAS_VARIATION_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string api_id
+        string name
+    }
+    SNAPSHOTS_EXPERIMENT_STEP_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string type
+        string api_step_id
+        string experiment_splits
+        string conversion_behaviors
+        string name
+    }
+
+    CHANGELOGS_CAMPAIGN_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string api_id
+        string name
+        string conversion_behaviors
+        string actions
+    }
+    SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED {
+        string Id FK
+        string time
+        string app_group_id
+        string api_id
+        string name
+    }
+
+    CAMPAIGN_ENROLLMENT_EVENT {
+        string id PK
+        string campaign_id FK
+        string campaign_updated_at FK
+        string user_id FK
+        string external_user_id
+        string message_variation_id
+        string send_id
+        string time
+        string timezone
+    }
+    CAMPAIGN_CONVERSION_EVENT {
+        string id PK
+        string campaign_id FK
+        string campaign_updated_at FK
+        string conversion_behavior_index FK
+        string message_variation_id FK
+        string user_id FK
+        string event_type
+        string app_id
+        string external_user_id
+        string send_id
+        string time
+        string timezone
+    }
+
+    CANVAS_VARIATION {
+        string id PK
+        string name PK
+        string canvas_id FK
+        string canvas_updated_at FK
+    }
+    CANVAS_STEP {
+        string id PK
+        string canvas_id FK
+        string canvas_updated_at FK
+        string canvas_step_name
+        string channel_android_push
+        string channel_content_cards
+        string channel_email
+        string channel_ios_push
+        string channel_in_app_message
+        string channel_sms
+        string channel_web_push
+        string channel_webhook
+    }
+
+    CANVAS_ENTRY_EVENT {
+        string id PK
+        string canvas_id FK
+        string canvas_updated_at FK
+        string canvas_step_id FK
+        string canvas_step_updated_at FK
+        string canvas_variation_id FK
+        string user_id FK
+        string event_type
+        string external_user_id
+        string in_control_group
+        string time
+        string timezone
+    }
+    CANVAS_EXPERIMENT_STEP_ENTRY_EVENT {
+        string id PK
+        string canvas_id FK
+        string canvas_updated_at FK
+        string canvas_step_id FK
+        string canvas_step_updated_at FK
+        string canvas_variation_id FK
+        string user_id FK
+        string event_type
+        string experiment_split_id
+        string experiment_split_name
+        string experiment_step_id
+        string external_user_id
+        string in_control_group
+        string time
+    }
+    CANVAS_EXIT_EVENT {
+        string id PK
+        string canvas_id FK
+        string canvas_updated_at FK
+        string canvas_step_id FK
+        string canvas_step_updated_at FK
+        string canvas_variation_id FK
+        string user_id FK
+        string app_group_id
+        string event_type
+        string time
+    }
+
+    CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT {
+        string id PK
+        string canvas_id FK
+        string canvas_updated_at FK
+        string canvas_step_id FK
+        string canvas_step_updated_at FK
+        string canvas_conversion_behaviour_id FK
+        string canvas_variation_id FK
+        string user_id FK
+        string app_id
+        string event_type
+        string experiment_step_id
+        string experiment_split_id
+        string experiment_split_name
+        string time
+    }
+    CANVAS_CONVERSION_EVENT {
+        string id PK
+        string canvas_id FK
+        string canvas_updated_at FK
+        string canvas_step_id FK
+        string canvas_conversion_behaviour_id FK
+        string canvas_variation_id FK
+        string user_id FK
+        string event_type
+        string app_id
+        string external_user_id
+        string time
+        string timezone
+    }
+
+    %% Relationships for Group Labels
+    GROUP_1["Campaign Snapshots and Log"] { }
+    CHANGELOGS_CAMPAIGN_SHARED ||--o{ GROUP_1 : joins
+    SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED ||--o{ GROUP_1 : joins
+    GROUP_1 ||--o{ EVENT : joins
+
+    GROUP_2["Campaign Events"] { }
+    CAMPAIGN_ENROLLMENT_EVENT ||--o{ GROUP_2 : joins
+    CAMPAIGN_CONVERSION_EVENT ||--o{ GROUP_2 : joins
+    GROUP_2 ||--o{ EVENT : joins
+
+    GROUP_3["Canvas Events"] { }
+    CANVAS_ENTRY_EVENT ||--o{ GROUP_3 : joins
+    CANVAS_EXPERIMENT_STEP_ENTRY_EVENT ||--o{ GROUP_3 : joins
+    CANVAS_EXIT_EVENT ||--o{ GROUP_3 : joins
+    GROUP_3 ||--o{ EVENT : joins
+
+    GROUP_4["Canvas Steps"] { }
+    CANVAS_VARIATION ||--o{ GROUP_4 : joins
+    CANVAS_STEP ||--o{ GROUP_4 : joins
+    GROUP_4 ||--o{ EVENT : joins
+
+    GROUP_5["Canvas Experiments"] { }
+    CANVAS_EXPERIMENT_STEP_CONVERSION_EVENT ||--o{ GROUP_5 : joins
+    CANVAS_CONVERSION_EVENT ||--o{ GROUP_5 : joins
+    GROUP_5 ||--o{ EVENT : joins
+
+    GROUP_6["Canvas Snapshots and Log"] { }
+    CHANGELOGS_CANVAS_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_CANVAS_FLOW_STEP_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_CANVAS_STEP_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_CANVAS_VARIATION_SHARED ||--o{ GROUP_6 : joins
+    SNAPSHOTS_EXPERIMENT_STEP_SHARED ||--o{ GROUP_6 : joins
+    GROUP_6 ||--o{ EVENT : joins
+```
+
+- `PK` = primary key
+- `FK` = foreign key
+
+## Relationship tables
+
+### `TOKENSTATECHANGE_SHARED`
+
+```json
+// USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED
+// Push Notification Token State Change Events.
+
+{
+    "primary_key": {
+        "ID": "Globally unique ID for this event"
+    },
+    "foreign_keys": {
+        "USER_ID": "Braze user ID of the user who performed this event",
+        "EXTERNAL_USER_ID": "[PII] External ID of the user",
+        "APP_GROUP_ID": "BSON ID of the app group this user belongs to",
+        "PUSH_TOKEN_DEVICE_ID": "Device id of the push token"
+    },
+    "native_keys": {
+        "TIME": "UNIX timestamp at which the event happened",
+        "SDK_VERSION": "Version of the Braze SDK in use during the event",
+        "PLATFORM": "Platform of the device",
+        "PUSH_TOKEN": "Push token of the event",
+        "PUSH_TOKEN_CREATED_AT": "UNIX timestamp at which the push token was created",
+        "PUSH_TOKEN_UPDATED_AT": "UNIX timestamp at which the push token was last updated",
+        "PUSH_TOKEN_FOREGROUND_PUSH_DISABLED": "Foreground push disabled flag of the push token",
+        "PUSH_TOKEN_PROVISIONALLY_OPTED_IN": "Provisionally opted in flag of the push token",
+        "IOS_PUSH_TOKEN_APNS_GATEWAY": "APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
+        "WEB_PUSH_TOKEN_PUBLIC_KEY": "Public key of the push token, only applies to web push tokens",
+        "WEB_PUSH_TOKEN_USER_AUTH": "User auth of the push token, only applies to web push tokens",
+        "WEB_PUSH_TOKEN_VAPID_PUBLIC_KEY": "VAPID public key of the push token, only applies to web push tokens",
+        "PUSH_TOKEN_STATE_CHANGE_TYPE": "A description of the push token state change type",
+        "SF_CREATED_AT": "when this event was picked up by the Snowpipe"
+    }
+}
+```
+
 ### `ABORT_SHARED`
 
 ```json
@@ -68,7 +340,7 @@
         "CANVAS_STEP_MESSAGE_VARIATION_API_ID": "API ID of the Canvas step message variation this user received"
     },
     "native_keys": {
-        "PUSH_TOKEN": "Push token that we made a delivery attempt to",
+        "PUSH_TOKEN": "Push token of the event",
         "TIME": "UNIX timestamp at which the event happened",
         "GENDER": "[PII] Gender of the user",
         "COUNTRY": "[PII] Country of the user",
@@ -214,7 +486,7 @@
         "CANVAS_STEP_MESSAGE_VARIATION_API_ID": "API ID of the Canvas step message variation this user received"
     },
     "native_keys": {
-        "PUSH_TOKEN": "Push token that we made a delivery attempt to",
+        "PUSH_TOKEN": "Push token of the event",
         "TIME": "UNIX timestamp at which the event happened",
         "GENDER": "[PII] Gender of the user",
         "COUNTRY": "[PII] Country of the user",
@@ -231,4 +503,3 @@
     }
 }
 ```
-

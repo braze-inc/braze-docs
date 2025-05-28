@@ -1,7 +1,7 @@
 ---
 nav_title: Creating a Segment
 article_title: Creating a Segment
-page_order: 1
+page_order: 0
 page_type: tutorial
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
 tool: Segments
@@ -49,9 +49,7 @@ Filters are organized into filter groups. Every filter must be part of a filter 
 
 ![Filter group with an editing icon next to its name.][14]
 
-Select the icons next to each filter to collapse the filter editor, duplicate the filter, or remove the filter. After duplicating a filter, you can adjust its values within each dropdown.
-
-You can also use the icon within each filter group to duplicate that filter group and the filters within it, or delete that filter group from your segment.
+Select the icons next to each filter to collapse the filter editor or duplicate individual filters. After duplicating a filter, you can adjust its values within each dropdown.
 
 #### Segmentation logic using AND and OR
 

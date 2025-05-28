@@ -74,7 +74,7 @@ The following requests have a rate limit of 250,000 requests per hour, shared be
 - [`/content_blocks/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)
 - [`/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/)
 - [`/email/blacklist`]({{site.baseurl}}/api/endpoints/email/post_blacklist/)
-- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/bounce/remove)
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces/)
 - [`/email/hard_bounces`]({{site.baseurl}}/api/endpoints/email/get_list_hard_bounces/)
 - [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam/)
 - [`/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/)

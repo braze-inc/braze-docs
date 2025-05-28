@@ -34,7 +34,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
     image: /assets/img/braze_icons/message-circle-01.svg
   - name: "SMS FAQ"
-    link: /docs/user_guide/message_building_by_channel/sms/faqs/
+    link: /docs/sms_faq/
     image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: "WhatsApp FAQ"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/

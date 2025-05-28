@@ -25,7 +25,7 @@ For more personalized user targeting, you can now use "Last Received In-App Mess
 It's now easier for you to see what is happening in your SDK integration with our upgraded [event user logs][20].
 
 
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [21]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [22]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports

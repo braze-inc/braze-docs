@@ -82,7 +82,7 @@ In addition to the minimum integration data, the following attributes are automa
 | User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
+To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/storage/?tab=android), [iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
 
 ## Data not collected by default
 

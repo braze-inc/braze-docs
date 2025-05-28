@@ -1,7 +1,7 @@
 ---
 nav_title: "Regular Expressions"
 article_title: Regular Expressions
-page_order: 6
+page_order: 10
 
 description: "This reference article covers what regular expressions (regex) are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
 page_type: reference
