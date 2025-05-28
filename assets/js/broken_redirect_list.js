@@ -2550,6 +2550,7 @@ validurls['/docs/partners/message_personalization/dynamic_content/amazon_persona
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/'] = '/docs/partners/mparticle_for_currents';
 validurls['/docs/partners/message_orchestration/additional_channels/retargeting/remerge/'] = '/docs/partners/remerge';
 
+validurls['/docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/'] = '/docs/user_guide/message_building_by_channel/push/ios/notification_options/';
 validurls['/docs/user_guide/message_building_by_channel/sms/best_practices/know_before_send'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/best_practices/know_before_send';
 validurls['/docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/best_practices/opt-ins';
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/geographic_permissions';
@@ -2613,5 +2614,8 @@ validurls['/docs/developer_guides/content_cards/analytics/'] = '/docs/user_guide
 validurls['/docs/developer_guides/android/content_cards/logging_analytics/'] = '/docs/developer_guide/content_cards/logging_analytics/';
 validurls['/docs/developer_guide/platform_integration_guides/android/android_11/'] = '/docs/developer_guide/platforms/android/android_13/';
 validurls['/docs/developer_guide/platform_integration_guides/android/android_12/'] = '/docs/developer_guide/platforms/android/android_13/';
+
+validurls['/docs/shopify_features#shopify-data'] = '/docs/partners/ecommerce/shopify/shopify_data_features';
+validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending';
 
 // validurls['OLD'] = 'NEW';
