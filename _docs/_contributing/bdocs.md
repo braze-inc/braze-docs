@@ -190,7 +190,7 @@ Total replacements made: 1
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guides/android/content_cards/logging_analytics/) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards.
 ```
 {% endraw %}
 
@@ -198,7 +198,7 @@ Learn how to [log analytics]({{site.baseurl}}/developer_guides/android/content_c
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guides/content_cards/analytics/) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) for your custom Content Cards.
 ```
 {% endraw %}
 {% endtab %}

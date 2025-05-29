@@ -13,7 +13,7 @@ channel:
 
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/).
+> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
 
 ## Recommended format
 
@@ -65,7 +65,7 @@ You can also include or exclude any users with invalid phone numbers when [creat
 
 ## Adding users to SMS and RCS subscription groups
 
-For a user to receive an SMS or RCS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS or RCS program you are running (make sure you follow the [legal requirements for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS and RCS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/).
+For a user to receive an SMS or RCS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS or RCS program you are running (make sure you follow the [legal requirements for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS and RCS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/).
 
 ## Third-party sourcing and verification
 
