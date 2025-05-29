@@ -1,4 +1,4 @@
-name: Add Deploy Label After Merge # This name is displayed in PR UI
+name: Add Deploy Label # This name is displayed in PR UI
 
 on:
   pull_request:
