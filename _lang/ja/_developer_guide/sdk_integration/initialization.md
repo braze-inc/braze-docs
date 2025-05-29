@@ -20,14 +20,14 @@ description: "Runtime の初期化、遅延初期化、Google Tag Manager など
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/sdk_initialization.md %}
+guide/swift/sdk_initialization.md developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/sdk_initialization.md %}
+guide/web/sdk_initialization.md developer_ %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/sdk_initialization.md %}
+guide/unreal_engine/sdk_initialization.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
