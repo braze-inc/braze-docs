@@ -39,7 +39,7 @@ Follow the steps in [Stripe's webhooks documentation](https://docs.stripe.com/de
 Add your Data Transformation webhook URL as the **Destination URL** and select the event types you’d like to send to Braze. A full list of event types can be found [here] (https://docs.stripe.com/api/events/types)
 
 
-
+![Stripe Webhook Configuration] ({% image_buster /assets/img/images/stripe_webhook_configuration.png %})
 
 
 Send a test event to your Data Transformation. 
@@ -55,6 +55,7 @@ In this step, you will transform the webhook payload that will be sent from Stri
 4. Save and activate your Data Transformation.
 
 
+![Stripe Data Transformation] ({% image_buster /assets/img/images/stripe_data_transformation.png %})
 
 
 #### Request body format
@@ -315,6 +316,8 @@ return brazecall;
 After you have written your data transformation, click **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation.
 
 Once activated, custom event data will be logged to a user's profile when they complete the event.
+
+![Stripe Braze Profile Custom Event] ({% image_buster /assets/img/images/stripe_braze_profile_event.png %})
 
 
 
