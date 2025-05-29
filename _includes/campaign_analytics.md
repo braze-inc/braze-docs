@@ -5,13 +5,13 @@ Once you've launched your campaign, you can return to the details page for that 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
   {% if include.channel == "email" %}[Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "banner" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Banners
-  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Content Cards
-  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by in-app message
-  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Push
-  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by SMS/MMS and RCS
-  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by WhatsApp
-  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Webhook{% endif %}.
+  {% elsif include.channel == "banner" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Banners.
+  {% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Content Cards.
+  {% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by in-app message.
+  {% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Push.
+  {% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by SMS/MMS and RCS.
+  {% elsif include.channel == "whatsapp" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by WhatsApp.
+  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by Webhook.{% endif %}
 {% endalert %}
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
