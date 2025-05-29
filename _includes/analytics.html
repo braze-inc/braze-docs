@@ -65,11 +65,14 @@ try {
     const developerData = JSON.parse(window.localStorage.getItem('braze_developer_data'));
     if (developerData.id) {
       braze.changeUser(developerData.id);
-      braze.getUser().setCustomUserAttribute('department', developerData.department);
-      braze.getUser().setCustomUserAttribute('companyId', developerData.companyId);
-      braze.getUser().setCustomUserAttribute('companyName', developerData.companyName);
-      braze.getUser().setCustomUserAttribute('username', developerData.username);
-      braze.getUser().setEmail(developerData.email);
+      if (developerData.email) {
+        braze.getUser().setEmail(developerData.email);
+      }
+      ['department', 'companyId', 'companyName', 'username', 'env', 'industry', 'locale', 'dashboard', 'appGroupId'].forEach(attribute => {
+        if (developerData[attribute]) {
+          braze.getUser().setCustomUserAttribute(attribute, developerData[attribute]);
+        }
+      });
     }
     window.localStorage.removeItem('braze_developer_data');
   }
@@ -87,7 +90,7 @@ if (braze.getCachedContentCards()?.cards?.length > 0) {
 
 var [, base, ...paths] = window.location.pathname.split('/');
 if (base === 'docs'){
-  braze.logCustomEvent( base + '_page', {
+  braze.logCustomEvent( 'docs_page', {
     url: window.location.href,
     section: paths.join('/'),
     hash: window.location.hash,
