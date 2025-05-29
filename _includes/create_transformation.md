@@ -26,6 +26,10 @@ After creating your transformation, you'll see the detailed view of the transfor
 
 ![]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
+{% elsif include.location == "stripe" %}
+
+![]({% image_buster /assets/img/images/stripe_data_transformation.png %})
+
 Capture your **Webhook URL** for use in the next step.
 
 {% endif %}
