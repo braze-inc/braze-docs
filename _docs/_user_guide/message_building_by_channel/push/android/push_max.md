@@ -15,7 +15,6 @@ channel:
 
 > Learn about Push Max and how you can use this feature to potentially improve the deliverability of Android push notifications to [Chinese OEM devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
-
 ## What is Push Max?
 
 Push Max amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it.
