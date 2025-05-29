@@ -44,7 +44,7 @@ The following rules apply to keywords and keyword responses:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
+Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) for more information.
 {% endalert %}
 {% endtab %}
 
@@ -106,7 +106,7 @@ To create a custom keyword category, do the following:
 2. Select **Add custom keyword**. ![][13]{: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
+After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
@@ -133,7 +133,7 @@ This can be done by creating an SMS, MMS, or RCS campaign with a message like "S
 ![]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
-Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
+Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) for more information.
 {% endalert %}
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
