@@ -575,6 +575,10 @@ By default, dismissing the modal using an outside tap is set to `false`. Setting
 BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
+### Predictive Back Animations
+
+Beginning in version x.x.x, predictive back animations can be enabled by adding `android:enableOnBackInvokedCallback="true"` to the `application` section of your `AndroidManifest.xml`. This will enable predictive back animations to full view in-app messages on gesture navigation modes on API 34+, and 3-button navigation modes on API 36+.
+
 ## Customizing the orientation
 
 To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
