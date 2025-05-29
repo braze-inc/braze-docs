@@ -1,16 +1,18 @@
-name: Add Deploy Label
+name: Add Deploy Label After Merge # This name is displayed in PR UI
 
 on:
   pull_request:
-    branches:
-      - master
+    types: [closed]  # Triggers when the PR is closed (whether it's merged or not)
 
 jobs:
   add-deploy-label:
-    if: github.event.pull_request.base.ref == 'master' && github.event.pull_request.head.ref == 'develop'
+    # Only run if the PR is merged, and the base branch == 'master' and head branch == 'develop'
+    if: github.event.pull_request.merged == true &&
+        github.event.pull_request.base.ref == 'master' &&
+        github.event.pull_request.head.ref == 'develop'
     runs-on: ubuntu-latest
     steps:
-      - name: Adding "Deploy" label
+      - name: Adding "Deploy" label # This name is displayed in GH UI
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
