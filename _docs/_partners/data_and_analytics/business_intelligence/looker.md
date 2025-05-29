@@ -54,7 +54,7 @@ Be aware of different naming conventions! Custom names can cause incongruities i
 
 | Block | Description |
 |---|---|
-| Message engagement analytics block | This block includes data around push, email, in-app messages, webhook, News Feed, conversion, Canvas entry, and campaign control group enrollment events. <br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [GitHub code](https://github.com/llooker/braze_message_engagement_block). |
+| Message engagement analytics block | This block includes data around push, email, in-app messages, webhook, conversion, Canvas entry, and campaign control group enrollment events. <br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [GitHub code](https://github.com/llooker/braze_message_engagement_block). |
 | User behavior analytics block | This block includes data around custom events, purchases, sessions, location events, and uninstalls.<br><br>Learn more about this [Looker Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), or check out the [GitHub code](https://github.com/llooker/braze_retention_block). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

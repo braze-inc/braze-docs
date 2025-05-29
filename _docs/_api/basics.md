@@ -195,18 +195,6 @@ API key permissions are permissions you can assign a user or group to limit thei
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab News Feed %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| Permission | Endpoint | Description |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | Query for a list of News Feed cards. |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | Query for News Feed analytics over a time range. |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | Query for details of a specific News Feed. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
 {% tab Sessions %}
 
 | Permission | Endpoint | Description |

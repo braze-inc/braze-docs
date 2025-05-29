@@ -52,7 +52,7 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 
 | Pros |
 | ---- |
-| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled for some short codes**<br>Some short codes can support MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled for some short codes**<br>Some short codes can support MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Cons |
@@ -78,7 +78,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Pros |
 | ---- |
-| **Can be used immediately to send messages (for certain countries)**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process for some countries. (For other countries, it takes as long as or longer than a short code.). Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled for certain countries**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Can be used immediately to send messages (for certain countries)**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process for some countries. (For other countries, it takes as long as or longer than a short code.). Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled for certain countries**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Cons |
@@ -107,7 +107,7 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 | Pros |
 | ---- |
-| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Cons |
@@ -170,7 +170,7 @@ If throughput is exceeded, some messages may fail.
 Besides these differences, know that a brand will usually have one short code, but multiple, back-up long codes, depending on how many recipients they plan to send SMS.
 
 {% alert important %}
-Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our [SMS FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/). 
+Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our [SMS FAQ]({{site.baseurl}}/sms_faq/). 
 {% endalert %}
 
 ## SMS sending phone numbers
@@ -185,7 +185,7 @@ Going through the short code application process can be a long process. However,
 
 While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you reach out to Braze. 
 
-Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/)) that you want for the following situations.
+Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)) that you want for the following situations.
 
 | Flow Needed | Type | Example |
 | ----------- | ---- | ------- |
@@ -207,7 +207,7 @@ If you have your own short code, reach out to your Customer Success Manager duri
 
 A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, improving overall message deliverability, allowing brands to send messages at scale including links and calls to action, and helping further protect consumers from unwanted messages. 
 
-All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC. This application process takes 4-6 weeks. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
+All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC. This application process takes 4-6 weeks. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
 
 ## Frequently asked questions
 
