@@ -1,5 +1,5 @@
 ---
-nav_title: BrazeAI
+nav_title: AI Tools
 article_title: BrazeAI
 page_order: 6.5
 layout: dev_guide
