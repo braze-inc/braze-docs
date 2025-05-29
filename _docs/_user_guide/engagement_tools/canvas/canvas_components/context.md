@@ -94,22 +94,20 @@ Context variables have the same expected formats for data types as [custom event
 
 ## Using context variables {#using-context-variables}
 
-For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to members of the Rewards Club or passengers who purchased a first-class ticket. Whereas membership status is something you'd track on the user profile, a first-class ticket purchase is more temporary. A context variable is a flexible way to track this information.
+For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
 
-Users will enter the Canvas when they check in for their flight. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
+Users will enter the Canvas when they purchase a plane ticket. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
 
-![Context variable set up to track if a passenger qualifies for VIP lounge access.][2]{: style="max-width:90%"}
+![Context variable set up to track if a passenger qualifies for VIP lounge access.][5]{: style="max-width:90%"}
 
-In this Context step, we'll use decision logic to set `lounge_access_granted` to `true` if either:
+In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is first class.
 
-- The user is a Rewards Club member (checked against their user profile attribute)
-- The user has purchased a first-class ticket (determined from the Canvas entry event data)
+Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
 
-Next, we'll create an audience group to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. Then, we'll set up a Message step for this audience to create a push notification that includes personalized lounge information. 
+- First-class ticket passengers will receive: "Enjoy exclusive VIP lounge access!"
+- Business and economy ticket passengers will receive: "Upgrade your flight for exclusive VIP lounge access."
 
-Based on this context variable, eligible passengers will receive information about accessing the exclusive VIP lounge before their flight.
-
-![An Audience Paths step with lounge_access_granted set to true.][3]{: style="max-width:90%"}
+![A Message step with different messages to send, depending on the type of plane ticket purchased.][4]{: style="max-width:90%"}
 
 {% alert tip %}
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
@@ -175,3 +173,5 @@ Context variables use their most recent value throughout the Canvas, with each u
 [1]: {% image_buster /assets/img/context_step3.png %}
 [2]: {% image_buster /assets/img/context_example1.png %}
 [3]: {% image_buster /assets/img/context_example2.png %}
+[4]: {% image_buster /assets/img/context_example3.png %}
+[5]: {% image_buster /assets/img/context_example4.png %}

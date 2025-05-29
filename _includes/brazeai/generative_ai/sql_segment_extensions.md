@@ -4,6 +4,10 @@
 >
 > Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
 
+## Prerequisites
+
+Because it's possible to access PII data through this feature, you must have PII permissions to run SQL segment queries.
+
 ## Creating a Segment Extension
 
 ### Step 1: Choose an editor
@@ -112,6 +116,11 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
    1. Write a query to select users who have the event MORE than X times.
    2. When referencing your Segment Extension in your segment, select `doesn't include` to invert the result.
 
+#### Additional rules
+
+Additionally, your standard SQL query must adhere to the following rules:
+
+- You cannot use `DECLARE` statements.
 {% endtab %}
 {% tab Incremental SQL Editor %}
 
@@ -132,20 +141,30 @@ In the following example, the resulting segment would contain users that perform
 
 ![SQL preview of an incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
-#### Additional rules
-
-Your incremental refresh query must additionally adhere to the following rules:
-
-- Write a single SQL statement. Do not include any semicolons.
-- Your incremental SQL segment would be able to refer to just one single event. Your dropdowns for date and count are in reference to your chosen event.
-- Your SQL must have the following columns: `user_id`, `$start_date`, and an aggregation function (such as `COUNT`). Any SQL saved without these three fields will result in an error.
-
 {% alert tip %}
 Incremental refresh segments take into account late events, which are events that occurred more than 2 days ago (for example, SDK events that weren’t sent at the time they were captured).
 {% endalert %}
 
+#### Additional rules
+
+Additionally, your incremental refresh query must adhere to the following rules:
+
+- Write a single SQL statement. Do not include any semicolons.
+- Your incremental SQL segment would be able to refer to just one single event. Your dropdowns for date and count are in reference to your chosen event.
+- Your SQL must have the following columns: `user_id`, `$start_date`, and an aggregation function (such as `COUNT`). Any SQL saved without these three fields will result in an error.
+- You cannot use `DECLARE` statements.
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a catalog ID. For example:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
 
 ### Step 3: Preview the query
 

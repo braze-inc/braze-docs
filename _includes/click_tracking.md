@@ -26,7 +26,7 @@ Yes. Both static and dynamic parameters can be added.
 
 ### How long do shortened URLs remain valid?
 
-Dynamic URLs are valid for two months from the time of URL registration.
+Personalized URLs are valid for two months from the time of URL registration.
 
 ### Does the Braze SDK need to be installed in order to shorten links?
 

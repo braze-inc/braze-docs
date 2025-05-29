@@ -265,7 +265,7 @@ Then, make sure your app is set up to handle the custom path properly. Refer to 
 
 ### Turning off click-tracking on a link-to-link basis
 
-You can turn off click tracking for specific links by adding HTML code to your email message in the HTML editor or to components in the drag-and-drop editor.
+You can turn off click tracking for specific links by adding HTML code to your email message for the HTML editor or to an HTML block for the drag-and-drop editor.
 
 #### SendGrid
 
@@ -281,6 +281,14 @@ If your email service provider is SparkPost, use the HTML code `data-msys-clickt
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+If your email service provider is Amazon SES, use the HTML code `ses:no-track` like this:
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### Drag-and-drop editor

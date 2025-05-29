@@ -118,7 +118,7 @@ All queries surface data from the last 60 days. When you export your results, it
 
 ## Snowflake credits
 
-Each Braze workspace has 5 Snowflake credits available per month. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
+Each company has 5 Snowflake credits available per month, shared across all workspaces. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
 
 {% alert note %}
 Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.

@@ -103,7 +103,7 @@ valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
 - name: Certona
-  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona
+  url: /docs/partners/certona/
 - name: Playable
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
@@ -344,6 +344,12 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Mention Me
+  url: /docs/partners/mention_me/
 - name: Just Words
   url: /docs/partners/just_words/
+- name: Eagle Eye
+  url: /docs/partners/eagle_eye/
+- name: Eppo
+  url: /docs/partners/eppo/
 ---
