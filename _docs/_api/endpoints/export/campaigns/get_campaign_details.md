@@ -81,7 +81,8 @@ The `messages` response will contain information about each message. The followi
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
