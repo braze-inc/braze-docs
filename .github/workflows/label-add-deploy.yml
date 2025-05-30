@@ -1,4 +1,5 @@
-name: Add Deploy Label # This name is displayed in PR UI
+# Adds the 'Deploy' label to deployment PRs
+name: Add Deploy Label
 
 on:
   pull_request:
@@ -12,7 +13,7 @@ jobs:
         github.event.pull_request.head.ref == 'develop'
     runs-on: ubuntu-latest
     steps:
-      - name: Adding "Deploy" label # This name is displayed in GH UI
+      - name: Adding "Deploy" label
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

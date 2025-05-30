@@ -1,0 +1,19 @@
+# Blocks merging for PRs if the 'status: do not merge' label is present.
+name: Block "Do Not Merge" PRs
+
+on:
+  pull_request:
+
+jobs:
+  check-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if "status: do not merge" label is present
+        run: |
+          LABELS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "${{ github.event.pull_request.issue_url }}/labels" | jq -r '.[].name')
+
+          if echo "$LABELS" | grep -q "^status: do not merge$"; then
+            echo "Merging is blocked. Remove the 'status: do not merge' label to unblock."
+            exit 1
+          fi
