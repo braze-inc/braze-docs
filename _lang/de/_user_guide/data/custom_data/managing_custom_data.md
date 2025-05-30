@@ -18,10 +18,6 @@ Um angepasste Events und Attribute vorzubelegen, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Dateneinstellungen** > Angepasste Events oder Angepasste Attribute oder Produkte.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seiten unter **Einstellungen verwalten**.
-{% endalert %}
-
 ![Navigieren Sie zu Angepasste Attribute oder Angepasste Events oder Produkte.][21]{: style="max-width:90%;" }
 
 {: start="2"}
@@ -46,9 +42,15 @@ Alle Nutzerprofildaten (angepasste Events, angepasste Attribute, angepasste Date
 
 ## Blocklisting angepasster Daten
 
-Es kann vorkommen, dass Sie angepasste Attribute, angepasste Events oder Kaufereignisse identifizieren, die entweder zu viele Datenpunkte verbrauchen, für Ihre Marketingstrategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie ein angepasstes Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen.
+Es kann vorkommen, dass Sie angepasste Attribute, angepasste Events oder Kaufereignisse identifizieren, die entweder zu viele Datenpunkte verbrauchen, für Ihre Marketingstrategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. 
 
-Die Blockliste verhindert, dass ein bestimmtes Objekt mit angepassten Daten von Braze aufgezeichnet wird, d.h. es wird bei der Suche nach einem bestimmten Nutzer:in nicht mehr angezeigt. Daten auf der Blockliste werden nicht vom SDK gesendet, und das Braze-Dashboard verarbeitet keine Daten auf der Blockliste aus anderen Quellen (z.B. der API). Durch die Sperrung werden jedoch keine Daten aus Nutzerprofilen entfernt oder die Anzahl der Datenpunkte, die für dieses angepasste Datenobjekt anfallen, rückwirkend verringert.
+Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie ein angepasstes Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen. Die Blockliste verhindert, dass ein bestimmtes Objekt mit angepassten Daten von Braze aufgezeichnet wird, d.h. es wird bei der Suche nach einem bestimmten Nutzer:in nicht mehr angezeigt.
+
+{% alert important %}
+Um angepasste Daten zu blockieren, benötigen Sie die [Nutzer:innen die Berechtigung]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions), auf Kampagnen, Canvase und Segmente zuzugreifen und diese zu bearbeiten.
+{% endalert %}
+
+Daten auf der Blockliste werden nicht vom SDK gesendet, und das Braze-Dashboard verarbeitet keine Daten auf der Blockliste aus anderen Quellen (z.B. der API). Durch die Sperrung werden jedoch keine Daten aus Nutzerprofilen entfernt oder die Anzahl der Datenpunkte, die für dieses angepasste Datenobjekt anfallen, rückwirkend verringert.
 
 ### Blocklisting angepasster Attribute, angepasster Events und Produkte
 
@@ -84,10 +86,6 @@ Bis zu 300 Artikel werden an das SDK für die Blocklistung gesendet. Wenn Sie me
 
 ## Anpassen von Daten löschen
 
-{% alert important %}
-Die Löschung angepasster Daten befindet sich derzeit im Early Access-Status. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren. Wenn Sie weitere Hilfe beim Löschen von benutzerdefinierten Daten benötigen, wenden Sie sich an Ihren Kundenbetreuer oder das Support-Team.
-{% endalert %}
-
 Wenn Sie zielgerichtete Kampagnen und Segmente erstellen, werden Sie vielleicht feststellen, dass Sie kein angepasstes Event oder angepasstes Attribut mehr benötigen. Wenn Sie z.B. ein bestimmtes angepasstes Attribut als Teil einer einmaligen Kampagne verwendet haben, können Sie diese Daten nach der [Blocklistung](#blocklisting-custom-attributes-custom-events-and-products) löschen und ihre Referenzen aus Ihrer App entfernen. Sie können beliebige Datentypen löschen (z.B. Strings, Zahlen und verschachtelte angepasste Attribute).
 
 {% alert important %}
@@ -119,6 +117,7 @@ Wenn Sie angepasste Daten löschen, sollten Sie die folgenden Details beachten:
 * Die Daten werden von der Braze-Plattform und aus den Nutzer:innen-Profilen entfernt.
 * Sie können den Namen des angepassten Attributs oder den Namen des angepassten Events nach dem Löschen "wiederverwenden". Wenn Sie also feststellen, dass angepasste Daten nach dem Löschen in Braze "wieder auftauchen", kann dies durch eine Integration verursacht werden, die nicht gestoppt wurde und Daten mit demselben Namen für angepasste Daten sendet.
 * Möglicherweise müssen Sie einen Artikel erneut auf die Sperrliste setzen, wenn Ihre Löschung dazu führt, dass angepasste Daten wieder auftauchen. Der Status der Sperrliste bleibt nicht erhalten, da die angepassten Daten gelöscht werden.
+* Das Löschen angepasster Daten verbraucht keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points) und erzeugt auch keine neuen Datenpunkte zur Verwendung.
 
 ## Erzwingen von Datentypvergleichen
 

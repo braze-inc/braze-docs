@@ -16,10 +16,6 @@ search_rank: 3
 
 Sélectionnez **Audience** > **Segments**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **segments** sous **Engagement.**
-{% endalert %}
-
 ## Étape 2 : Nommez votre segment
 
 Sélectionnez **Créer un segment** pour commencer à créer votre segment. Nommez votre segment en décrivant le type d’utilisateur que vous souhaitez cibler. Cela vous aidera à identifier le segment lorsque vous voudrez le cibler pour vos campagnes ou Canevas. Les titres vagues des segments peuvent prêter à confusion.
@@ -124,43 +120,13 @@ Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans 
 
 Braze propose des filtres de test pour cibler des utilisateurs spécifiques en fonction de leur ID utilisateur ou de leur adresse e-mail.
 
-### Étape 5 : Enregistrez votre segment
+## Étape 5 : Enregistrez votre segment
 
 Sélectionnez **Enregistrer**. Vous êtes maintenant prêt à envoyer des messages à vos utilisateurs !
 
-## Calcul d’appartenance à un segment {#segment-membership-calculation}
+## Mesurer la taille des segments
 
-Braze met à jour l’appartenance des utilisateurs à un segment au fur et à mesure que nos serveurs reçoivent et traitent les données, ce qui se produit généralement de manière instantanée. L’appartenance d’un utilisateur à un segment donné ne changera pas tant que cette session n’a pas été traitée. Par exemple, un utilisateur faisant partie d’un segment d’utilisateurs inactifs au début d’une session sera immédiatement sorti du segment d’utilisateurs inactifs une fois la session traitée.
-
-### Calcul du nombre total d’utilisateurs pouvant être atteints
-
-Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce segment. Lorsque vous filtrez pour les **Utilisateurs de toutes les apps**, il affiche également tous les différents canaux disponibles pour communiquer avec ces utilisateurs, tels que le push web ou l'e-mail. Il est possible que le nombre total d’utilisateurs diffère du nombre d’utilisateurs pouvant être atteints par chaque canal.
-
-![Tableau affichant le nombre total d'utilisateurs atteignables, réparti entre les utilisateurs atteignables par e-mail, notification push iOS, notification push Android, notification push Web, notification push Kindle et notification push Android Chine.][10]
-
-Pour qu’un utilisateur soit indiqué comme pouvant être atteint par un canal donné, il doit avoir à la fois :
-* Une adresse e-mail valide ou un jeton de poussée associé à leur profil ; et
-* Être abonné ou inscrit à votre application.
-
-Un utilisateur donné peut appartenir à plusieurs groupes d’utilisateurs atteignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push associé. La différence entre le nombre total d’utilisateurs pouvant être atteints et la somme des différents canaux est le nombre d’utilisateurs qualifiés pour le segment mais ne pouvant pas être atteints par ces canaux de communication.
-
-### Statistiques sur la taille des segments
-
-Braze fournit les statistiques suivantes sur la taille des segments. Toutes les statistiques estimées sont à 1% près supérieures ou inférieures à la valeur réelle, et l'appartenance exacte à un segment sera toujours calculée avant qu'un segment ne soit affecté par un message envoyé dans une campagne ou un Canvas.
-
-#### Statistiques sur les filtres
-
-Pour chaque groupe de filtres, vous pouvez afficher le nombre estimé d'utilisateurs joignables. Sélectionnez **Développer les statistiques d’entonnoir supplémentaires** pour afficher la répartition entre les différents canaux.
-
-![Un groupe de filtres avec un filtre pour un sexe qui n'est pas inconnu.][4]{: style="max-width:80%;"}
-
-#### Statistiques de segment
-
-Pour l'ensemble d'un segment, vous pouvez voir, au bas de la page, une estimation des utilisateurs atteignables, ainsi qu’une estimation du nombre d’utilisateurs pour chaque canal. Vous pouvez également obtenir le nombre exact d'utilisateurs joignables (pour l'ensemble du segment et pour chaque canal) en sélectionnant **Calculer les statistiques exactes.**
-
-Remarques :
-- Le calcul de statistiques exactes peut prendre quelques minutes. Cette fonction ne calcule les statistiques exactes qu'au niveau du segment, et non au niveau du filtre ou du groupe de filtres.
-- Pour les segments de grande taille, il est normal de constater de légères variations, même en calculant des statistiques exactes. La précision de cette fonctionnalité devrait être égale ou supérieure à 99,999 %.
+Pour en savoir plus sur le suivi de la composition et de la taille de votre segmentation, reportez-vous à la section [Mesurer la taille d'un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Archivage des segments
 
@@ -197,13 +163,11 @@ Vous pouvez spécifier qu'une seule notification push est envoyée à chaque uti
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
 [9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}

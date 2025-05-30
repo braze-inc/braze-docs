@@ -18,11 +18,24 @@ Comme pour tout canvas, un seul utilisateur peut modifier un brouillon à la foi
 
 ![Un exemple d’ébauche Canvas avec une bannière indiquant à l’utilisateur qu’il édite une ébauche Canvas avec l’option d’afficher le Canvas actif. Le pied de page dispose d’options pour revenir à l’affichage analytique, enregistrer en tant qu’ébauche ou lancer l’ébauche.][1]
 
-Pour créer un brouillon, allez sur un Canvas actif et sélectionnez le bouton **Enregistrer comme brouillon** dans le pied de page du Canvas. Prenez en compte le fait que vous ne pouvez pas modifier le Canvas actif tant qu’une ébauche existe pour un Canvas. Vous pouvez mettre à jour le Canvas pour appliquer les modifications ou abandonner le brouillon.
+## Création d'un projet
+
+Pour créer un brouillon :
+
+1. Accédez à un canvas actif.
+2. Sélectionnez le bouton **Enregistrer comme brouillon** dans le pied de page du canvas. 
+
+Prenez en compte le fait que vous ne pouvez pas modifier le Canvas actif tant qu’une ébauche existe pour un Canvas. Vous pouvez mettre à jour le Canvas pour appliquer les modifications ou abandonner le brouillon.
+
+## Référence au projet actif
 
 Pour référencer le Canvas actif, sélectionnez **Afficher le Canvas actif** dans le pied de page depuis la vue analytique ou l'en-tête du Canvas depuis le brouillon. Pour revenir à un Canvas actif, sélectionnez **Modifier le brouillon** depuis la vue analytique ou la vue Canvas active.
 
 Vous ne pouvez faire référence qu'à des étapes qui ont déjà été lancées avant la création du projet. Cela signifie que si vous avez créé une étape ou un canal **après la** création du projet, il ne peut pas être référencé dans votre projet.
+
+{% alert note %}
+Si un bloc de contenu est référencé dans un projet Canvas, le Canvas est listé dans le décompte d'inclusion du bloc de contenu. Toutefois, si le bloc de contenu est référencé dans un brouillon d'un canvas **actif**, ce dernier ne sera pas pris en compte dans le décompte des inclusions de blocs de contenu.
+{% endalert %}
 
 ### Priorisation des messages dans l'application
 

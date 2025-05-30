@@ -19,10 +19,6 @@ search_rank: 1
 
 Gehen Sie zu **Vorlagen** > **E-Mail-Vorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Vorlagen & Medien** > **E-Mail-Vorlagen**.
-{% endalert %}
-
 ## Schritt 2: Wählen Sie Ihre Bearbeitungserfahrung 
 
 Wählen Sie zwischen dem **Drag-and-Drop-Editor** oder dem **HTML-Editor** für Ihre Bearbeitung. 

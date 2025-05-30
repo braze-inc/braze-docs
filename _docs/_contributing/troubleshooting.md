@@ -4,6 +4,7 @@ article: Troubleshooting
 description: "Troubleshooting steps for common issues you may experience while contributing to Braze Docs."
 page_order: 9
 noindex: true
+toc_headers: h2
 ---
 
 # Troubleshooting
@@ -13,6 +14,83 @@ noindex: true
 ## Redirect isn't working
 
 {% multi_lang_include contributing/troubleshooting/redirects.md %}
+
+## Preview deployment returns a 404
+
+If your [GitHub preview deployment]({{site.baseurl}}/contributing/generating_a_preview/) builds successfully but returns a 404 response, there may be an issue with an image or Liquid tag in your Markdown file.
+
+!["Example error 404 response after opening a preview deployment in GitHub."]({% image_buster /assets/img/contributing/github/build_preview_404.png %}){: style="max-width:55%;"}
+
+To fix this issue, review each image and Liquid tag in your file.
+
+{% tabs local %}
+{% tab Image references %}
+Verify that each image reference follows our [image reference syntax]({{site.baseurl}}/contributing/content_management/images/). For example:
+
+{% raw %}
+```markdown
+![Braze Docs on GitHub.]({% image_buster /assets/img/contributing/github_homepage.png %})
+```
+{% endraw %}
+
+Each image reference must use the exact path and filename for that image. For example:
+
+```bash
+braze-docs
+└── assets
+    └── img
+        └── contributing 
+            └── github_homepage.png
+```
+
+{% endtab %}
+
+{% tab Opening and closing tags %}
+Check that there's no mismatch between your opening and closing tags. For example, {% raw %}`{% tab %}`{% endraw %} tags need the same number of opening and closing tags:
+
+{% raw %}
+```plaintext
+{% tabs %}                # Opening tag for tab group.
+{% tab Tab One %}         # Opening tag for tab one.
+Content for tab one.
+{% endtab %}              # Closing tag for tab one.
+
+{% tab Tab Two %}         # Opening tag for tab two.
+Content for tab two.
+{% endtab %}              # Closing tag for tab two.
+{% endtabs %}             # Closing tag for tab group.
+```
+{% endraw %}
+
+{% alert tip %}
+For more Liquid tag examples, see [Styling examples]({{site.baseurl}}/contributing/styling_examples).
+{% endalert %}
+{% endtab %}
+
+{% tab Raw tags %}
+If you're documenting actual Liquid code in your Markdown file, ensure each codeblock is surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw).
+
+{% subtabs local %}
+{% subtab Raw tag %}
+<code>
+&#123;% raw %} &#123;% endraw %}
+</code>
+{% endsubtab %}
+
+{% subtab Example usage %}
+<code>
+&#123;% raw %}<br>
+&#96;``<br>
+&#123;% alert note %}<br>
+Looking for sample code? Check out [our apps](&#123;&#123;site.baseurl}}/developer_guide/samples/)!<br>
+&#123;% endalert %}<br>
+&#96;``<br>
+&#123;% endraw %}<br>
+</code>
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Cross-reference link returns a 404
 
@@ -125,3 +203,35 @@ permalink: /docs/developer_guide/second_best_sdk
 ```
 {% endtab %}
 {% endtabs %}
+
+## Can't choose `braze-inc/braze-docs` as a base repository {#missing-base-repository}
+
+If `braze-inc/braze-docs` is missing from the list of available base branches when [making a change in GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change), there may be an issue with the origin of your forked repository.
+
+![The 'Choose a Base Repository' dropdown in GitHub after selecting 'compare across forks'.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %}){: style="max-width:85%;"}
+
+### Step 1: Verify the fork's origin
+
+Go to [your forked repository]({{site.baseurl}}/contributing/home/#step-3-fork-the-repository) and verify it was forked from `braze-inc/braze-docs`. If it isn't, you'll need to delete this fork and create a new one.
+
+![An example forked repository, correctly showing "fork from braze-inc/braze-docs".]({% image_buster /assets/img/contributing/github/correct_forked_from.png %}){: style="max-width:85%;"}
+
+### Step 2: Delete the old fork
+
+{% alert warning %}
+Deleted forks cannot be restored. Be sure to back up the work that's only accessible through your old fork.
+{% endalert %}
+
+In your old fork, go to **Settings** > **General**. Under **Danger Zone**, select **Delete this repository** and follow the on-screen instructions.
+
+![The list of options found in a GitHub repository's "Danger Zone".]({% image_buster /assets/img/contributing/github/delete_repository.png %}){: style="max-width:65%;"}
+
+### Step 3: Create a new fork
+
+Go back to the official [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork** to create a new fork.
+
+![The Braze Docs GitHub repository showing "Fork".]({% image_buster /assets/img/contributing/github/fork_the_repository.png %}){: style="max-width:75%;"}
+
+Keep the default settings, then select **Create fork**. Now you'll be able to choose `braze-inc/braze-docs` as the base repository when [making changes in GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change).
+
+![The Braze Docs GitHub repository showing "Create fork".]({% image_buster /assets/img/contributing/github/create_a_new_fork.png %}){: style="max-width:75%;"}

@@ -29,7 +29,7 @@ The BrazeAI<sup>TM</sup> Liquid Assistant is designed to help you write effectiv
 
 To launch the BrazeAI<sup>TM</sup> Liquid assistant, select the AI assistant icon in the message composer.
 
-![Message composer with the AI assistant.][1]{: style="max-width:50%;"}
+![Message composer with the AI assistant.][1]{: style="max-width:60%;"}
 
 You can choose a [provided prompt](#provided-prompts) or enter your own into the textbox. To generate your Liquid code, select **Update composer**.
 
@@ -65,7 +65,7 @@ This prompt appears when there is content in your message composer. Select it wh
 
 ![Example output of the "Improve my Liquid" prompt.][6]{: style="max-width:45%;"}
 
-## Supported attributes in beta
+## Supported attributes
 
 | Criterion | Knowledge type | 
 | - | - | 

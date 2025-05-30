@@ -37,10 +37,6 @@ Der wahre Wert von Predictive Events liegt in der Verwendung der Vorhersageergeb
 
 Die Seite **Prognosen** befindet sich im Bereich **Analysen**. Für einen vollständigen Zugang wenden Sie sich bitte an Ihren Kundenbetreuer.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Vorhersagen** unter **Engagement**.
-{% endalert %}
-
 Bevor Sie dieses Feature kaufen, ist es in der Vorschau verfügbar. Dies erlaubt es Ihnen, eine Demo-Prognose mit synthetischen Daten zu sehen und jeweils eine Vorschau eines Prognosemodells zu erstellen. Diese Vorhersage wird auf der Grundlage Ihrer tatsächlichen Nutzerdaten erstellt, ermöglicht es Ihnen jedoch nicht, Nutzer entsprechend ihrer Wahrscheinlichkeitsbewertung für Nachrichten anzusprechen. Es wird auch nicht regelmäßig nach der Erstellung aktualisiert.
 
 Mit der Vorschau können Sie auch diese eine Vorhersage bearbeiten und neu erstellen oder sie archivieren und weitere erstellen, um die erwartete [Vorhersagequalität]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#prediction_quality) für [verschiedene Zielgruppen]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#audience) zu testen und sich mit den Analysen vertraut zu machen.

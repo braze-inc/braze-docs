@@ -13,10 +13,6 @@ channel:
 
 Dans le tableau de bord de Braze, allez dans **Audience** > **Abonnements** > **Centre de préférences e-mail.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), cette page est située dans **Utilisateurs** > **Groupes d'abonnement** > **Centre de préférences e-mail.**
-{% endalert %}
-
 C'est ici que vous pouvez gérer et visualiser chaque groupe d'abonnements. Chaque groupe d'abonnement que vous créez est ajouté à cette liste de centres de préférences. Vous pouvez créer plusieurs centres de préférence.
 
 {% alert important %}
@@ -38,10 +34,6 @@ L'utilisation de Liquid vous permet de retrouver les noms de vos groupes d'abonn
 | Utilisateur valide | Un utilisateur avec une adresse e-mail et un ID externe. |
 | Clé API générale avec des permissions de centre de préférence | Dans le tableau de bord de Braze, allez dans **Paramètres** > **Clés API** pour confirmer que vous avez accès à une clé API avec des autorisations de centre de préférences. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez créer une clé API à partir de la **console de développement** > **Paramètres API.**
-{% endalert %}
 
 ### Étape 1 : Utilisez l'endpoint Créer un centre de préférences
 
@@ -125,3 +117,26 @@ Cette approche ne nécessite pas de paires de valeur de chaîne de requête inco
 Il est utilisé pour afficher le centre de préférences lorsque l'ancien Liquid {%raw%}`${preference_center_url}`{%endraw%} est utilisé, ce qui signifie que les étapes du canvas ou les modèles qui font référence à {%raw%}`${preference_center_url}` ou `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} ne fonctionneront pas. Ceci s'applique également aux messages envoyés précédemment qui comprenaient l'ancien Liquid ou "PreferenceCenterBrazeDefault" dans le message. 
 
 Si vous faites à nouveau référence à {%raw%}`${preference_center_url}`{%endraw%} dans un nouveau message, un centre de préférences nommé "PreferenceCenterBrazeDefault" sera à nouveau créé.
+
+### Les centres de préférences prennent-ils en charge plusieurs langues ?
+
+Non. Cependant, vous pouvez utiliser Liquid lorsque vous écrivez le code HTML pour les pages personnalisées d'abonnement et de désabonnement. Si vous utilisez des liens dynamiques pour gérer les désabonnements, il s'agit d'un lien unique. 
+
+Par exemple, si vous suivez le taux de désabonnement des utilisateurs hispanophones, vous devrez soit utiliser des campagnes distinctes, soit exploiter l'analyse/analytique autour de Currents (par exemple en regardant quand un utilisateur se désabonne et en vérifiant la langue préférée de cet utilisateur).
+
+Autre exemple, pour suivre les taux de désabonnement des utilisateurs hispanophones, vous pourriez ajouter une chaîne de caractères de paramètre de requête telle que `?Spanish=true` à l'URL de désabonnement si la langue des utilisateurs est l'allemand et utiliser un lien de désabonnement ordinaire dans le cas contraire :
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+Ensuite, grâce à Currents, vous pourriez identifier les utilisateurs qui parlent espagnol et le nombre d'événements de clics pour ce lien de désinscription.
+
+### L'envoi de liens de désinscription et de centres de préférences pour les e-mails est-il obligatoire ?
+
+Non. Si le message "Le corps de votre e-mail ne contient pas de lien de désabonnement" s'affiche lors de la composition d'une campagne e-mail, cet avertissement est attendu si votre lien de désabonnement se trouve dans un bloc de contenu.

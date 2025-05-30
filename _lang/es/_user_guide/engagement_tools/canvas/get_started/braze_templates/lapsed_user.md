@@ -42,7 +42,7 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 ### Paso 2: Asigna tus eventos de conversión
 
-Actualiza el **Evento de conversión primaria - A** para que se dirija a los usuarios de nuestra aplicación (MovieCanon), y deja el **Evento de conversión primaria - B** como predeterminado para realizar cualquier compra.
+Actualiza el **evento de conversión primaria** **\- A** para que se dirija a los usuarios de nuestra aplicación (MovieCanon), y deja el **evento de conversión primaria - B** como predeterminado para realizar cualquier compra.
 
 ![Sección "Asignar eventos de conversión" con un evento de conversión primaria de un usuario que inicia una sesión en una aplicación concreta.][2]
 

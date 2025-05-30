@@ -18,10 +18,6 @@ description: "このリファレンス記事では、Brazeプラットフォー�
 
 Braze ダッシュボードで、[**テンプレート**] > [**Webhook テンプレート**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは [**エンゲージメント**] > [**テンプレートとメディア**] > [**Webhook テンプレート**] の下にあります。
-{% endalert %}
-
 ![事前に設計され、保存済みの Webhook テンプレートが表示されている「Webhook テンプレート」ページ。]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## ステップ2:テンプレートを選ぶ

@@ -59,7 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|선택 사항|문자열|HTML을 포함할 수 있는 이메일 템플릿 본문입니다.|
 |`plaintext_body`|선택 사항|문자열|이메일 템플릿 본문의 일반 텍스트 버전입니다.|
 |`preheader`|선택 사항|문자열|일부 클라이언트에서 미리보기를 생성하는 데 사용되는 이메일 프리헤더입니다.|
-|`tags`|선택 사항|문자열|[태그가]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 이미 존재해야 합니다.|
+|`tags`|선택 사항|문자열|[태그가]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 이미 존재해야 합니다.|
 |`should_inline_css`|선택 사항|부울|템플릿별로 `inline_css` 기능을 사용하거나 사용하지 않도록 설정합니다. 제공하지 않으면 Braze는 앱그룹에 대한 기본 설정을 사용합니다. `true` 또는 `false` 중 하나가 예상됩니다.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

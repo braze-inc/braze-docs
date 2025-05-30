@@ -47,10 +47,6 @@ Para importar usuarios previamente identificados, puede cargar un CSV en Braze o
 
 Puede cargar y actualizar perfiles de usuario mediante archivos CSV desde **Audiencia** > **Importar usuarios**. Al importar los datos de sus clientes, deberá especificar el identificador único de cada cliente, también conocido como `external_id`.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), se encuentra en **Usuarios** > **Importación de usuarios**.
-{% endalert %}
-
 Antes de iniciar la importación de CSV, es importante que su equipo de ingeniería sepa cómo se identificarán los usuarios en Braze. Normalmente se trata de un ID de base de datos utilizado internamente. Esto debería alinearse con la forma en que los usuarios serán identificados por el SDK Braze en móviles y web, de modo que cada cliente tendrá un único perfil de usuario dentro de Braze en todos sus dispositivos. Más información sobre el [ciclo de vida del perfil de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) Braze.
 
 Cuando proporcione un `external_id` en su importación, Braze actualizará cualquier usuario existente con el mismo `external_id` o creará un nuevo usuario identificado con ese conjunto `external_id` si no se encuentra ninguno.
@@ -440,7 +436,7 @@ Al detener un Canvas no saldrán los usuarios que estén esperando en un paso. S
 Canvas
 {% endapitags %}
 
-[Los eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) sólo se activan mientras el usuario está esperando recibir el componente Canvas al que está asociado. Si un usuario realiza una acción por adelantado, el evento de excepción no se desencadenará.
+Los eventos de excepción sólo se desencadenan mientras el usuario está esperando recibir el componente Canvas al que está asociado. Si un usuario realiza una acción por adelantado, el evento de excepción no se desencadenará.
 
 Si desea exceptuar a los usuarios que han realizado un determinado evento con antelación, utilice [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) en su lugar.
 
@@ -573,13 +569,13 @@ Para programar un informe de compromiso recurrente, haga lo siguiente:
 
 1. En tu cuenta del panel, ve a **Informes de interacción**, en **Datos**.
 2. Haga clic en **\+ Crear nuevo informe**.
-3. Añada las [campañas y los mensajes Canvas]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente o [por etiqueta]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que desee compilar en su informe.
-4. [Añade estadísticas]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) a tu informe.
+3. Añada las [campañas y los mensajes Canvas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individualmente o [por etiqueta]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que desee compilar en su informe.
+4. [Añade estadísticas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) a tu informe.
 5. Seleccione la compresión y el eliminador para su informe.
 6. Introduzca las direcciones de correo electrónico de los usuarios de Braze que deben recibir este informe.
-7. Seleccione el [intervalo de tiempo]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir del cual desea que su informe ejecute los datos.
-8. Seleccione los [intervalos (diario, semanal, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display) en los que desea ver el desglose de sus datos.
-9. Programe su informe para que [se envíe inmediatamente]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) o en un [momento futuro especificado]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
+7. Seleccione el [intervalo de tiempo]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) a partir del cual desea que su informe ejecute los datos.
+8. Seleccione los [intervalos (diario, semanal, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) en los que desea ver el desglose de sus datos.
+9. Programe su informe para que [se envíe inmediatamente]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) o en un [momento futuro especificado]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
 10. Ejecute el informe y ábralo en su correo electrónico cuando le llegue.
 
 {% endapi %}

@@ -16,7 +16,7 @@ Filtramos los datos de nuestras campañas de correo electrónico y push en una h
 
 ## Paso 1: Datos de entrada y de eventos agregados
 
-Después de lanzar campañas utilizando cualquiera de nuestras herramientas de participación (como campañas o Canvas), realizamos un seguimiento de los datos del evento utilizando nuestro propio sistema, así como algunos de nuestros socios de correo electrónico. Algunos de estos datos se agregan y se muestran en el cuadro de mandos, pero a nosotros nos interesaba profundizar en ellos.
+Después de lanzar campañas utilizando cualquiera de nuestras herramientas de interacción (como campañas o Canvas), hacemos un seguimiento de los datos del evento utilizando nuestro propio sistema, así como algunos de nuestros socios de correo electrónico. Algunos de estos datos se agregan y se muestran en el cuadro de mandos, pero a nosotros nos interesaba profundizar en ellos.
 
 ## Paso 2: Enviar datos de eventos a un socio de almacenamiento de datos
 

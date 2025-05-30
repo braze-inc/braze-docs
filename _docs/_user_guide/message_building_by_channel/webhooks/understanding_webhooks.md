@@ -30,16 +30,14 @@ Some more specific use cases include the following:
 
 - If a user unsubscribes from email, you could have a webhook update your analytics database or CRM with that same information, ensuring a holistic view of that user's behavior.
 - Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger or Line.
-- Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
+- Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/).
 - If a gamer reaches a certain level or accrues a certain number of points, use webhooks and your existing API setup to send a character upgrade or coins directly to their account. If you send the webhook as part of a multichannel messaging campaign, you can send a push or other message to let the gamer know about the reward at the same time.
 - If you're an airline, you can use webhooks and your existing API setup to credit a customer's account with a discount after they've booked a certain number of flights.
 - Endless "If This Then That" ([IFTTT](https://ifttt.com/about)) recipes—for instance, if a customer signs into the app via email, then that address can automatically be configured into Salesforce.
 
 ## Anatomy of a webhook
 
-A webhook consists of the following three parts:
-
-![Example webhook broken out into HTTP method, HTTP URL, and request body. See the following table for details.][2]
+A webhook consists of the following parts.
 
 | Part of Webhook | Description |
 | --- | --- |
@@ -47,6 +45,8 @@ A webhook consists of the following three parts:
 | HTTP URL | The URL address of your webhook endpoint. The endpoint is the place where you'll be sending the information that you're capturing in the webhook. |
 | Request body | This part of the webhook contains the information that you're communicating to the endpoint. The request body can be JSON key-value pairs or raw text. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Example webhook with an HTTP method, HTTP URL, and request body.][2]
 
 ### HTTP methods {#methods}
 
@@ -92,6 +92,19 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 
 {% endtab %}
 {% endtabs %}
+
+## Webhook error handling and rate limiting
+
+When Braze receives an error response from a webhook call, we automatically adjust that webhook's sending behavior based on these response headers:
+
+- `Retry-After`
+- `X-Rate-Limit-Limit`
+- `X-Rate-Limit-Remaining`
+- `X-Rate-Limit-Reset`
+
+These headers help us interpret rate limits and adjust sending speed accordingly to avoid further errors. We also implement an exponential backoff strategy for retries, which helps reduce the risk of overwhelming your servers by spacing out retry attempts over time.
+
+If we detect that the majority of webhook requests to a specific host are failing, we will temporarily defer all send attempts to that host. Then, we will resume sending after a defined cooldown period, allowing your system to recover.
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/

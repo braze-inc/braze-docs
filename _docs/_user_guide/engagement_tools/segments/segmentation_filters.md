@@ -1,5 +1,5 @@
 ---
-page_order: 1.2
+page_order: 2
 nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
@@ -180,14 +180,6 @@ glossaries:
       - Retargeting
   - name: Last Received WhatsApp
     description: Segments your users by the last time that they received a WhatsApp message. This is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Retargeting
-  - name: Last Viewed News Feed
-    description: Segments your users by the last time they viewed News Feed.
-    tags:
-      - Retargeting
-  - name: News Feed View Count
-    description: Segments your users by how many times they viewed News Feed.
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign

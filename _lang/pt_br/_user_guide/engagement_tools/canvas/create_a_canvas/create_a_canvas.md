@@ -12,17 +12,13 @@ search_rank: 1
 
 > Este artigo de referência aborda as etapas necessárias para criar, manter e testar um canva. Siga este guia ou confira nosso [curso do Braze Learning sobre canvas](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% alert important %}
-A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar Canvas usando a experiência original do Canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow. É uma experiência de edição aprimorada para melhor construir e gerenciar canvas. Saiba mais sobre a [clonagem de canvas no Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Editor de tela original %}
+Não é mais possível criar ou duplicar Canvas usando a experiência original do Canvas. A Braze recomenda a [clonagem de suas telas para o Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% enddetails %}
 
 ## Etapa 1: Criar uma nova tela 
 
 Acesse **Envio** **de mensagens** > **Canvas** e selecione **Criar Canvas**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Canva** em **Engajamento**.
-{% endalert %}
 
 ## Etapa 2: Configure seu Canvas
 
@@ -81,11 +77,11 @@ Aqui, você nomeará seu Canvas, atribuirá [equipes]({{site.baseurl}}/user_guid
 Coloque tags em suas telas para que seja fácil encontrá-las e criar relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 {% endalert %}
 
-![A página de detalhes do Canvas, com campos para o nome, a descrição, o local e as tags do Canvas.][53]
+![A página de detalhes do Canvas, com campos para o nome, a descrição, o local e as tags do Canvas.][53]{: style="max-width:70%;"}
 
 #### Selecionar eventos de conversão
 
-Escolha o tipo de evento de conversão e, em seguida, selecione as conversões a serem registradas. Esses [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) medirão a eficiência de seu Canva. 
+Escolha o tipo de evento de conversão e, em seguida, selecione as conversões a serem registradas. Esses [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) medirão a eficiência de seu Canva. 
 
 ![Evento de conversão primária A com o tipo de evento de conversão Makes Purchase para registrar conversas de usuários que fazem qualquer compra dentro de um prazo de conversão de três dias.][52]
 
@@ -101,7 +97,7 @@ Você pode escolher uma das três maneiras pelas quais os usuários podem entrar
   {% tab Entrega programada %}
     Com a entrega programada, os usuários entrarão em uma programação de tempo, da mesma forma que você programaria uma campanha. É possível inscrever usuários em um Canva assim que ele for lançado, inseri-los em sua jornada em algum momento no futuro ou de forma recorrente (diária, semanal ou mensal). 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -110,7 +106,7 @@ Você pode escolher uma das três maneiras pelas quais os usuários podem entrar
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab Entrega disparada por API %}
@@ -148,15 +144,19 @@ Evite configurar uma campanha baseada em ação ou o Canva com o mesmo disparo d
 
 Depois de adicionar segmentos e filtros ao seu público-alvo, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se ele corresponde aos critérios do público.
 
-![O campo "User Lookup", que permite pesquisar por ID de usuário externo ou ID do Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
+![O campo "User Lookup", que permite pesquisar por ID de usuário externo ou ID do Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### Seleção de controles de entrada
 
-Os controles de entrada determinam se os usuários têm permissão para entrar novamente em um Canva. Você também pode limitar o número de pessoas que potencialmente entrariam nessa tela. Por exemplo, se você definir o campo **Máximo de usuários com potencial para entrar neste Canvas** como 1.000 usuários e marcar a caixa de seleção **Limitar toda vez que o Canvas for agendado**, o Canvas será enviado para 1.000 usuários por dia.
+Os controles de entrada determinam se os usuários têm permissão para entrar novamente em um Canva. Você também pode limitar o número de pessoas que potencialmente entrariam nesse Canva por uma cadência selecionada (diariamente, durante toda a vida do Canvas ou sempre que o Canvas for programado). 
 
-![A página "Entry Controls" (Controles de entrada) exibe caixas de seleção para "Allow users to re-enter Canvas" (Permitir que os usuários entrem novamente no Canvas) e "Limit the number of people who will potentially enter this Canvas" (Limitar o número de pessoas que potencialmente entrarão neste Canvas). O último permite que você defina o máximo de usuários e se deseja limitar toda vez que o Canva for agendado.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+Por exemplo, se você selecionar **Limite de volume de** **envios** e definir o campo **Máximo de entradas** como 5.000 usuários com **Diário** como a cadência limite, o Canva só enviará para 5.000 usuários por dia.
 
-A Braze não recomenda o uso do recurso **Limite de cada vez que o Canva é agendado** para aquecimento de IP, pois isso pode levar a um aumento no volume de envios.
+![A página "Entry Controls" (Controles de entrada) exibe caixas de seleção para "Allow users to re-enter Canva" (Permitir que os usuários entrem novamente no Canvas) e "Limit entrance volume" (Limitar volume de envios). O último permite que você defina o máximo de entradas e se deseja limitar diariamente, durante toda a vida do Canvas ou toda vez que o Canvas for agendado.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
+Braze não recomenda o uso do recurso **Toda vez que o Canva for programado** para aquecimento de IP, pois isso pode levar a um aumento nos volumes de envio.
+{% endalert %}
 
 #### Definição de critérios de saída
 
@@ -205,7 +205,7 @@ Economize tempo e agilize sua criação de telas usando os [modelos do Braze Can
 
 ### Adição de uma variante
 
-![Um gif que mostra um usuário selecionando "Add Variant" e, em seguida, selecionando "Add Variant" novamente no menu de contexto.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![O botão "Add Variant" (Adicionar variante) foi selecionado para mostrar um menu de contexto com a opção "Add Variant" (Adicionar variante).][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Selecione **Add Variant (Adicionar variante**) e adicione uma nova variante ao seu Canva. As variantes representam uma jornada que seus usuários farão e podem conter várias etapas e ramificações.
 
@@ -235,7 +235,7 @@ Você pode adicionar mais etapas ao seu fluxo de trabalho do Canva arrastando e 
 À medida que você começa a adicionar mais etapas, pode aumentar o nível de zoom para se concentrar nos detalhes ou observar toda a jornada do usuário. Aumente o zoom com <kbd>Shift</kbd> + <kbd>+</kbd> ou diminua o zoom com <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
-![A janela de pesquisa de componentes adiciona uma etapa do canva do Braze.]({% image_buster /assets/img_archive/add_components_flow.png %})
+![A janela de pesquisa de componentes adiciona uma etapa do canva do Braze.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Um canva criado com o Canvas Flow pode conter até 200 etapas. Se seu canva exceder 200 etapas, ocorrerão problemas de carregamento.
@@ -277,11 +277,9 @@ Selecione **Concluído** depois de terminar de configurar o componente Canva.
 {% tabs local %}
 {% tab Propriedades de entrada da tela %}
 
-O `canvas_entry_properties` é configurado na etapa do Cronograma de entrada da criação de um canva e indica o disparo que insere um usuário em um canva. Essas propriedades também podem acessar as propriedades de cargas úteis de entrada em canvas disparados por API. Note que o objeto `canvas_entry_properties` tem um limite máximo de tamanho de 50 KB. 
+O `canvas_entry_properties` é configurado na etapa do Cronograma de entrada da criação de um canva e indica o disparo que insere um usuário em um canva. Essas propriedades também podem acessar as propriedades de cargas úteis de entrada em canvas disparados por API. Note que o objeto `canvas_entry_properties` pode ter até 50 KB. 
 
-No Canvas Flow, as propriedades de entrada podem ser usadas no Liquid em qualquer etapa do Message. Use o seguinte Liquid ao fazer referência a essas propriedades de entrada: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
-
-Use o seguinte Liquid ao fazer referência a essas propriedades de entrada: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note que os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
+Use o seguinte Liquid ao fazer referência a essas propriedades de entrada: {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %}. Note que os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
 
 {% raw %}
 Por exemplo, considere a seguinte solicitação: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Você pode adicionar a palavra "sapatos" a uma mensagem com este Liquid ``{{canvas_entry_properties.${product_name}}}``.

@@ -13,7 +13,7 @@ platform:
 
 # Crear feature flags
 
-> Las banderas de características te permiten habilitar o deshabilitar a distancia la funcionalidad para una selección de usuarios. Crea una nueva bandera de característica dentro del panel de Braze. Proporciona un nombre y un `ID`, una audiencia objetivo y un porcentaje de usuarios para los que habilitar esta característica. Luego, utilizando ese mismo `ID` en el código de tu aplicación o sitio web, puedes ejecutar condicionalmente determinadas partes de tu lógica empresarial. Para saber más sobre los indicadores de características y cómo puedes utilizarlos en Braze, consulta [Acerca de los indicadores de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).
+> Las banderas de características te permiten habilitar o deshabilitar a distancia la funcionalidad para una selección de usuarios. Crea una nueva bandera de característica dentro del panel de Braze. Proporciona un nombre y un `ID`, una audiencia objetivo y un porcentaje de usuarios para los que habilitar esta característica. Luego, utilizando ese mismo `ID` en el código de tu aplicación o sitio web, puedes ejecutar condicionalmente determinadas partes de tu lógica empresarial. Para saber más sobre los indicadores de características y cómo puedes utilizarlos en Braze, consulta [Acerca de los indicadores de características]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Requisitos previos
 
@@ -71,7 +71,7 @@ En el siguiente ejemplo, la bandera de característica muestra un banner de agot
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-No hay límite en el número de propiedades que puedes añadir. Sin embargo, las propiedades de una bandera de característica están limitadas a un total de 10kB. Tanto los valores de propiedad como las claves tienen una longitud máxima de 255 caracteres.
+No hay límite en el número de propiedades que puedes añadir. Sin embargo, las propiedades de una bandera de característica están limitadas a un total de 10 KB. Tanto los valores de propiedad como las claves tienen una longitud máxima de 255 caracteres.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

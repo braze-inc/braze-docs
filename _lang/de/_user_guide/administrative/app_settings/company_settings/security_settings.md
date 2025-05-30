@@ -13,10 +13,6 @@ description: "Dieser Referenzartikel behandelt allgemeine unternehmensübergreif
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Konto-Dropdown und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**.
-{% endalert %}
-
 ## Regeln für die Authentifizierung
 
 ### Passwortlänge
@@ -31,7 +27,7 @@ Wählen Sie **Komplexe Passwörter erzwingen**, um zu verlangen, dass die Passw�
 - Zahl
 - Sonderzeichen
 
-### Passwortwiederverwendung
+### Wiederverwendbarkeit von Passwörtern
 
 Legt die Mindestanzahl neuer Kennwörter fest, die festgelegt werden müssen, bevor ein Benutzer ein Kennwort erneut verwenden kann. Die Standardeinstellung ist drei.
 
@@ -213,7 +209,7 @@ Sie sind für die Festlegung der richtigen Einstellungen für Ihren Workspace ve
 | Nachricht senden | message_extras | Mehrere Event-Typen enthalten ein message_extras-Feld. Die Einstellung gilt für alle Event-Typen zum Senden von Nachrichten, die message_extras unterstützen, einschließlich der in Zukunft hinzukommenden Event-Typen. |
 
 {% alert warning %}
-**Die Löschung ist dauerhaft!** Wenn Sie sich dafür entscheiden, Felder für gelöschte Nutzer aus Snowflake zu entfernen, gilt diese Einstellung für alle historischen Daten in Ihren Workspaces und alle Ereignisse für Nutzer:innen, die in Zukunft gelöscht werden. Nachdem Braze den Prozess zur Anwendung der Einstellungen auf historische Ereignisdaten für gelöschte Nutzer:innen ausgeführt hat, **können** die Daten **nicht wiederhergestellt werden**.
+**Die Löschung ist dauerhaft!** Wenn Sie sich dafür entscheiden, Felder für gelöschte Nutzer aus Snowflake zu entfernen, gilt diese Einstellung für alle historischen Daten in Ihren Workspaces und alle Ereignisse für Nutzer:innen, die in Zukunft gelöscht werden. Nachdem Braze den Prozess zur Anwendung der Einstellungen auf historische Ereignisdaten für gelöschte Nutzer:innen ausgeführt hat, können die Daten **nicht wiederhergestellt werden**.
 {% endalert %}
 
 ### Einstellungen konfigurieren

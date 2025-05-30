@@ -59,10 +59,6 @@ Braze requiere un encabezado HTTP para la autorización que incluya tu clave API
 
 Sustituye `YOUR_API_KEY` por una clave de API Braze con permisos `users.track`. Puede crear una clave de API en el panel de control de Braze en **Configuración** > **Claves de API**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), puede crear una clave de API desde **Consola de desarrollador** > **Configuración de API**.
-{% endalert %}
-
 ![La pestaña "Configuración" con los encabezados de solicitud para el webhook.][1]
 
 #### Cuerpo de la solicitud
@@ -114,10 +110,6 @@ Braze requiere un encabezado HTTP para la autorización que incluya tu clave API
 - **Método HTTP:** POST
 
 Sustituye `YOUR_API_KEY` por una clave de API Braze con permisos `canvas.trigger.send`. Puede crear una clave de API en el panel de control de Braze en **Configuración** > **Claves de API**.
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), puede crear una clave de API desde **Consola de desarrollador** > **Configuración de API**.
-{% endalert %}
 
 ![La pestaña "Configuración" con los encabezados de solicitud para el webhook.][1]
 

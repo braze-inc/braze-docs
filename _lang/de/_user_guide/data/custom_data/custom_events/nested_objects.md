@@ -39,7 +39,7 @@ Wenn in Zukunft neue Eigenschaften gesendet werden, sind sie erst dann im Schema
 
 ## Schritt 2: Verwenden Sie das verschachtelte Objekt
 
-Nachdem Sie ein Schema erstellt haben, können Sie die verschachtelten Daten bei der Segmentierung und Personalisierung referenzieren. Beispiele für die Verwendung finden Sie in den folgenden Abschnitten:
+Sie können die verschachtelten Daten bei der Segmentierung und Personalisierung referenzieren. Beachten Sie, dass ein Schema nicht erforderlich ist. Beispiele für die Verwendung finden Sie in den folgenden Abschnitten:
 
 - [Körper der API-Anfrage](#api-request-body)
 - [Liquid-Templates](#liquid-templating)

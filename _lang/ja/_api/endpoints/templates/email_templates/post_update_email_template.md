@@ -59,7 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|オプション|文字列|HTMLを含む可能性のあるメールテンプレート本文。|
 |`plaintext_body`|オプション|文字列|メールテンプレート本文のプレーンテキストバージョン。|
 |`preheader`|オプション|文字列|一部のクライアントでプレビューを生成するために使用されるメールプレヘッダー。|
-|`tags`|オプション|文字列|[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)はすでに存している必要があります。|
+|`tags`|オプション|文字列|[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)はすでに存している必要があります。|
 |`should_inline_css`|オプション|ブール値|テンプレートごとに`inline_css` 機能を有効または無効にする。提供されない場合、BrazeはAppGroupのデフォルト設定を使用する。`true` か`false` のどちらかが予想される。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

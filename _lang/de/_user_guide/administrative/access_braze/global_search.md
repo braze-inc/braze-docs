@@ -10,7 +10,7 @@ description: "Erfahren Sie mehr über die globale Suche in Braze."
 
 Sie können die Suchleiste verwenden, um Ihre Arbeit und andere Informationen in Ihrem Braze-Dashboard zu finden. Die Suchleiste befindet sich oben auf Ihrem Braze Dashboard. Klicken Sie auf die Suchleiste oder drücken Sie <kbd>Strg</kbd> + <kbd>K</kbd> unter Windows oder <kbd>⌘</kbd> + <kbd>K</kbd> auf dem Mac, um direkt zur Suchleiste zu gelangen.
 
-![][3]
+![Suchergebnisse für das Schlüsselwort "promo", zeigt Kampagnen und Artikel, die den Begriff promo enthalten, einschließlich der Seite Promotion Codes.][1]
 
 ## Wonach können Sie suchen?
 
@@ -66,11 +66,13 @@ Jedes Suchergebnis ist mit Tags versehen, die den Inhaltstyp (Seite, Kampagne, C
 
 Über das Suchmenü können Sie die zuletzt aufgerufenen Inhalte erneut aufrufen. Die Suchoberfläche zeigt Ihre zuletzt geöffneten Ergebnisse unterhalb der Suchleiste an, einschließlich der Elemente, mit denen Sie auf der gesamten Braze-Plattform interagiert haben. So können Sie zu zuvor angezeigten Seiten, Kampagnen, Canvases, Segmenten oder E-Mail-Vorlagen zurückkehren und mit weniger Klicks genau dort weitermachen, wo Sie aufgehört haben.
 
-![][1]
+![Die Suche wurde erweitert und zeigt die zuletzt geöffneten Seiten und Braze-Inhalte für den Nutzer:innen an.][2]
 
 ### Seiten finden, die umbenannt wurden
 
-Die Suche versteht Synonyme für Seiten, die in unserer [aktualisierten Navigation]({{site.baseurl}}/navigation) umbenannt worden sind. Zum Beispiel wird „Datenexport“ gefunden, wenn Sie nach „Currents“ suchen, da diese Seite umbenannt wurde.
+Die Suche versteht Synonyme für Seiten, die in unserer [aktualisierten Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) umbenannt worden sind. Zum Beispiel wird „Datenexport“ gefunden, wenn Sie nach „Currents“ suchen, da diese Seite umbenannt wurde.
+
+![Suchergebnisse für "Datenexport", wenn der Nutzer:innen nach "Currents" gesucht hat.][3]
 
 <!---
 
@@ -78,7 +80,7 @@ Die Suche versteht Synonyme für Seiten, die in unserer [aktualisierten Navigati
 
 Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
 
-![][2]
+![][X]
 
 --->
 
@@ -92,8 +94,9 @@ Sie können aktiven Content und Entwürfe in Ihre Suchergebnisse einbeziehen, in
 
 Verwenden Sie Emojis, wenn Sie Ihre Arbeit in Braze benennen? Suchen Sie nach ihnen! Sie können Emojis als Suchanfragen verwenden. 😎
 
+[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
+[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
+[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
+[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
-[1]: {% image_buster /assets/img/global_search/global_search.png %}
-[2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
-[3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}
+

@@ -14,16 +14,16 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Externe IDs umbenen
 /users/external_ids/rename
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die externen IDs Ihrer Benutzer umzubenennen. 
+> Verwenden Sie diesen Endpunkt, um die externen IDs Ihrer Nutzer:innen umzubenennen. 
 
 Sie können bis zu 50 Umbenennungsobjekte pro Anfrage senden. 
 
-Dieser Endpunkt legt eine neue (primäre) `external_id` für den Benutzer fest und verwirft seine bestehende `external_id`. Das bedeutet, dass der Benutzer über einen der beiden `external_id` identifiziert werden kann, bis die veraltete Version entfernt wird. Mehrere externe IDs ermöglichen eine Migrationsphase, so dass ältere Versionen Ihrer Anwendungen, die das vorherige Namensschema für externe IDs verwenden, nicht beschädigt werden. 
+Dieser Endpunkt legt eine neue (primäre) `external_id` für den Nutzer:innen fest und veraltet seine bestehende `external_id`. Das bedeutet, dass der Nutzer:innen durch einen der beiden `external_id` identifiziert werden kann, bis der veraltete Bezeichner entfernt wird. Mehrere externe IDs sind für eine Migration zulässig, so dass ältere Versionen Ihrer Apps, die das vorherige Namensschema für externe IDs verwenden, nicht beschädigt werden. 
 
-Nachdem Ihr altes Benennungsschema nicht mehr verwendet wird, empfehlen wir Ihnen dringend, veraltete externe IDs mit dem [Endpunkt`/users/external_ids/remove` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) zu entfernen.
+Nachdem Ihr altes Namensschema nicht mehr verwendet wird, empfehlen wir dringend, veraltete externe IDs über den [Endpunkt `/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) zu entfernen.
 
 {% alert warning %}
-Stellen Sie sicher, dass Sie veraltete externe IDs mit dem Endpunkt `/users/external_ids/remove` anstelle von `/users/delete` entfernen. Wenn Sie eine Anfrage an `/users/delete` mit der veralteten externen ID senden, wird das Benutzerprofil vollständig gelöscht und kann nicht rückgängig gemacht werden.
+Stellen Sie sicher, dass Sie veraltete externe IDs mit dem Endpunkt `/users/external_ids/remove` anstelle von `/users/delete` entfernen. Wenn Sie eine Anfrage an `/users/delete` mit der veralteten externen ID senden, wird das Nutzerprofil vollständig gelöscht und kann nicht rückgängig gemacht werden.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
@@ -32,11 +32,11 @@ Stellen Sie sicher, dass Sie veraltete externe IDs mit dem Endpunkt `/users/exte
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.external_ids.rename`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -49,20 +49,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-| `external_id_renames` | Erforderlich | Array mit Objekten zur Umbenennung externer Bezeichner | Sehen Sie sich das Anfragebeispiel und die folgenden Einschränkungen für die Struktur des Objekts Externer Bezeichner umbenennen an. |
+| `external_id_renames` | Erforderlich | Array mit externen Bezeichnern Objekte umbenennen | Sehen Sie sich das Beispiel der Anfrage und die folgenden Einschränkungen für die Struktur des Objekts "Externer Bezeichner umbenennen" an. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Beachten Sie das Folgende:
 
-- Die `current_external_id` muss die primäre ID des Benutzers sein und darf keine veraltete ID sein.
-- Die `new_external_id` darf nicht bereits als primäre ID oder veraltete ID verwendet werden.
+- Die `current_external_id` muss die primäre ID des Nutzers:innen sein und darf keine veraltete ID sein.
+- Die `new_external_id` darf nicht bereits als primäre ID oder als veraltete ID verwendet werden.
 - Die `current_external_id` und `new_external_id` können nicht dasselbe sein.
 
-## Beispiel anfordern
+## Beispiel für eine Anfrage
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/rename' \
 --header 'Content-Type: application/json' \
@@ -79,7 +79,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 
 ## Antwort
 
-In der Antwort werden alle erfolgreichen Umbenennungen sowie die nicht erfolgreichen Umbenennungen mit den dazugehörigen Fehlern bestätigt. Fehlermeldungen im Feld `rename_errors` verweisen auf den Index des Objekts im Array der ursprünglichen Anfrage.
+Die Antwort bestätigt alle erfolgreichen Umbenennungen sowie erfolglose Umbenennungen mit den entsprechenden Fehlern. Fehlermeldungen im Feld `rename_errors` referenzieren den Index des Objekts im Array der ursprünglichen Anfrage.
 
 ```
 {
@@ -94,23 +94,23 @@ Das Feld `message` gibt `success` für jede gültige Anfrage zurück. Spezifisch
 - Ungültiger API-Schlüssel
 - Leeres `external_id_renames` Array
 - `external_id_renames` Array mit mehr als 50 Objekten
-- Ratenlimit erreicht (mehr als 1.000 Anfragen pro Minute)
+- Erreichen des Rate-Limits (mehr als 1.000 Anfragen pro Minute)
 
 ## Häufig gestellte Fragen
 
-### Hat dies Auswirkungen auf die MAU?
-Nein, da die Anzahl der Nutzer gleich bleibt, wird es nur eine neue `external_id` geben.
+### Hat dies Auswirkungen auf MAU?
+Nein, da die Anzahl der Nutzer:innen gleich bleibt, werden sie einfach eine neue `external_id` haben.
 
-### Hat sich das Benutzerverhalten im Laufe der Zeit verändert?
-Nein, denn der Benutzer ist immer noch derselbe, und sein gesamtes historisches Verhalten ist immer noch mit ihm verbunden.
+### Hat sich das Verhalten der Nutzer:innen im Laufe der Zeit verändert?
+Nein, denn die Nutzer:innen sind immer noch dieselben, und ihr gesamtes historisches Verhalten ist immer noch mit ihnen verbunden.
 
-### Kann es auf Entwicklungs- oder Staging-Workspaces ausgeführt werden?
-Ja. Wir empfehlen Ihnen, die Migration in einem Staging- oder Entwicklungsarbeitsbereich zu testen und sicherzustellen, dass alles reibungslos funktioniert, bevor Sie die Migration mit Produktionsdaten durchführen.
+### Kann es in Entwickler:in oder Staging Workspaces ausgeführt werden?
+Ja Wir empfehlen dringend, die Migration in einem Staging- oder Entwicklungs-Workspace zu testen und sicherzustellen, dass alles reibungslos funktioniert, bevor Sie die Migration mit den Produktionsdaten durchführen.
 
-### Werden dadurch Datenpunkte verbraucht?
-Diese Funktion kostet keine Datenpunkte.
+### Werden dabei Datenpunkte verbraucht?
+Dieses Feature kostet keine Datenpunkte.
 
 ### Welcher Zeitraum wird für die Abschreibung empfohlen?
-Es gibt keine feste Grenze dafür, wie lange Sie veraltete externe IDs beibehalten können, aber wir empfehlen dringend, sie zu entfernen, wenn keine Notwendigkeit mehr besteht, Benutzer über die veraltete ID zu referenzieren.
+Es gibt keine feste Grenze, wie lange Sie veraltete externe IDs beibehalten können, aber wir empfehlen dringend, sie zu entfernen, wenn es nicht mehr notwendig ist, Nutzer:innen mit der veralteten ID zu referenzieren.
 
 {% endapi %}

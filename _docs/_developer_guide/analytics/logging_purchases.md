@@ -136,7 +136,7 @@ UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 {% endtabs %}
 
 {% alert warning %}
-`productID` can only have a maximum of 255 characters. Addtionally, if the product identifier is empty, the purchase will not be logged to Braze.
+`productID` can only have a maximum of 255 characters. Additionally, if the product identifier is empty, the purchase will not be logged to Braze.
 {% endalert %}
 
 ### Adding properties
@@ -198,11 +198,11 @@ For a standard Web SDK implementation, you can use the following method:
 braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
 ```
 
-If your site logs purchases using the standard [ecommerce event](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+If your site logs purchases using the standard [eCommerce event](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
 
 You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
 
-For example, given the following ecommerce payload:
+For example, given the following eCommerce payload:
 
 ```
 items: [{
@@ -277,7 +277,7 @@ UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quanti
 
 ### Adding quantity
 
-By default, `quantity` is set to `1`. However, you can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. To add a quantity, pass an `Int` value to `quantity` that's within the range of `[0, 100]`.
+By default, `quantity` is set to `1`. However, you can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. To add a quantity, pass an `Int` value to `quantity`.
 
 ### Using the REST API
 

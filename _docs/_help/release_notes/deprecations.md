@@ -88,7 +88,7 @@ If you are currently using [Apptimize with Braze]({{site.baseurl}}/help/release_
 ### Original in-app messages
 
 **Support withdrawn:** February 2019<br>
-**Replaced by**: [In-App Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**Replaced by**: [In-App Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 Braze has improved the look and feel of in-app messages to adhere to the latest UX and UI best practices and no longer supports the original in-app messages.
 

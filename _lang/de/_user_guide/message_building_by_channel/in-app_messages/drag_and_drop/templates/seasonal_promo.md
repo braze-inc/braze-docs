@@ -26,7 +26,7 @@ Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie **Saison
 
 ### Schritt 3: Passen Sie Ihre Button-Komponente an
 
-Um mit der Erstellung Ihrer saisonalen Aktion zu beginnen, wählen Sie die Button-Komponente im Editor aus. Verwenden Sie dann das Seitenmenü, um auszuwählen, wohin die Nutzer:innen geführt werden, wenn sie den Button auswählen. Standardmäßig schließt das Template die Nachricht, aber Sie können auch zu einer bestimmten Seite in Ihrer App navigieren (z.B. zu dem Produkt, das Sie bewerben).
+Um mit der Erstellung Ihrer saisonalen Aktion zu beginnen, wählen Sie die Button-Komponente im Editor aus. Verwenden Sie dann das Seitenmenü, um auszuwählen, wohin die Nutzer:innen geführt werden, wenn sie den Button auswählen. Standardmäßig schließt das Template die Nachricht, aber Sie können wählen, ob Sie zu einer bestimmten Seite in Ihrer App navigieren möchten (z.B. zu dem Produkt, das Sie bewerben).
 
 ![Der In-App-Nachricht-Editor mit einem Seitenmenü zur Anpassung des Button-Elements.][img2]
 

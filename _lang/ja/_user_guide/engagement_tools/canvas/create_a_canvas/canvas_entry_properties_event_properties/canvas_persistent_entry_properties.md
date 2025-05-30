@@ -17,6 +17,7 @@ page_order: 5
 ## エントリプロパティを使用する
 
 エントリプロパティは、アクションベースおよび API トリガーのキャンバスで使用できます。これらのエントリプロパティは、キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされた時点で定義されます。詳細については、次の記事を参照してください。
+
 - [キャンバスエントリのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [イベントのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)
 - [購入対象]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)

@@ -52,6 +52,9 @@ guide_menu_list:
   - name: 抑制リスト
     link: /docs/user_guide/engagement_tools/segments/suppression_lists/
     image: /assets/img/braze_icons/list.svg 
+  - name: 測定セグメントサイズ
+    link: /docs/user_guide/engagement_tools/segments/measuring_segment_size/
+    image: /assets/img/braze_icons/pie-chart-02.svg
   - name: トラブルシューティング
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg

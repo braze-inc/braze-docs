@@ -84,15 +84,15 @@ The media library acts as your dashboard's centralized location for assets, as a
 You can generate images for your media library using [DALL·E 3](https://openai.com/index/dall-e-3/), an AI system from OpenAI, a Braze third-party provider. This system can create realistic images and art from a description in natural language. Each request generates four variations of your prompt, and your company can generate images 10 times per day. This total applies to all users in your company.
 
 1. From the media library, select <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator**.
-2. Enter a description of the image you want to generate, up to 300 characters. The more detailed the description, the better your result.
+2. Enter a description of the image you want to generate, up to 300 characters. The more detailed the description, the better your result. This feature only supports text input—uploading an image as a reference isn’t available.
 3. Select **Generate Images**. It can take about a minute for images to generate.
 4. Select <i class="fas fa-download" title="Add image to Media Library"></i> on the images you would like to add to your media library.
 
 ![AI image generator modal in the media library.][6]{: style="max-width:75%"}
 
-Between you and Braze, any images generated using DALL·E 3 are your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images. 
+Between you and Braze, any images generated using DALL·E 3 are your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images.
 
-In order to generate images, Braze will send your query to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and its [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content. 
+To generate images, Braze will send your query to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and its [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content. 
 
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}

@@ -1,18 +1,27 @@
 ---
 nav_title: コネクテッドコンテンツの再試行
 article_title: コネクテッドコンテンツの再試行
-page_order: 3
+page_order: 5
 description: "この記事では、コネクテッドコンテンツの再試行に対処する方法を説明します。"
 
 ---
 
-# コネクテッドコンテンツの再試行
+# コネクテッドコンテンツにリトライロジックを使用する
 
-> コネクテッドコンテンツは API からのデータ受信に依存するため、Braze が呼び出しを処理する間、API が断続的に利用できなくなる可能性があります。その場合、Braze は指数バックオフを使用してリクエストを再試行する、再試行ロジックをサポートしています。<br><br> このページでは、コネクテッドコンテンツの呼び出しに再試行を追加する方法について説明します。
+> このページでは、コネクテッドコンテンツの呼び出しに再試行を追加する方法について説明します。
 
-## 再試行を有効にする方法
+## リトライの仕組み 
 
-再試行を有効にするには、次のコードスニペットにあるように、コネクテッドコンテンツ呼び出しに `:retry` を追加します。
+コネクテッドコンテンツはAPIからのデータ受信に依存しているため、Brazeが電話をかけている間、APIが断続的に利用できなくなる可能性がある。その場合、Braze は指数バックオフを使用してリクエストを再試行する、再試行ロジックをサポートしています。
+
+{% alert note %}
+コネクテッドコンテンツ `:retry` は、アプリ内メッセージでは利用できません。
+{% endalert %}
+
+## リトライ・ロジックを使う
+
+再試行ロジックを使用するには、以下のコードに示すように、コネクテッドコンテンツ呼び出しに`:retry` タグを追加する：
+
 {% raw %}
 ```
 {% connected_content https://yourwebsite.com/api/endpoint :retry %}
@@ -20,21 +29,16 @@ description: "この記事では、コネクテッドコンテンツの再試行
 ```
 {% endraw %}
 
-## 再試行の結果
+コネクテッドコンテンツの呼び出しに`:retry` タグが含まれている場合、Brazeは最大5回まで再試行を試みる。
 
-### API  コールが失敗し、再試行が有効になっている場合
+### 再試行の結果
 
-APIコールが失敗し、これが有効になっている場合、Brazeは、各再送に設定した[レート制限を][47]尊重しながら、コールを再試行する。Brazeは、失敗したメッセージをキューの最後尾に移動させ、必要であれば、メッセージ送信にかかる総時間をさらに数分追加する。
+#### 再試行が成功した場合
 
-### 再試行が成功した場合
+再試行が成功した場合、そのメッセージは送信され、以後そのメッセージの再試行は行われない。
 
-再試行が成功した場合、そのメッセージは送信され、以後そのメッセージの再試行は行われない。コネクテッドコンテンツ呼び出しが 5 回エラーになった場合、メッセージは、[メッセージ中止タグ][1]がトリガーされた場合と同様に中止されます。
+#### API  コールが失敗し、再試行が有効になっている場合
 
-{% alert note %}
-コネクテッドコンテンツ `:retry` は、アプリ内メッセージでは利用できません。
-{% endalert %}
+APIコールが失敗し、これが有効になっている場合、Brazeは、各再送に設定した[レート制限を]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting)尊重しながら、コールを再試行する。Brazeは、失敗したメッセージをキューの最後尾に移動させ、必要であれば、メッセージ送信にかかる総時間をさらに数分追加する。
 
-
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[16]: [success@braze.com](mailto:success@braze.com)
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
+コネクテッドコンテンツの呼び出しが5回以上エラーになると、メッセージは中止される。これは、[中止メッセージタグが]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/)トリガーされるのと同様である。

@@ -34,7 +34,6 @@ Braze provides the following filters in order to help you limit the rate at whic
 - Last Received Push Campaign
 - Last Received Email Campaign
 - Last Received SMS
-- Last Viewed News Feed
 
 #### Implementing filters
 
@@ -48,7 +47,7 @@ Appending this filter to all segments targeted by campaigns would cause your use
 
 #### Setting a maximum user cap
 
-In the **Target Users** step of your campaign composition, you can also limit the total number of users that will receive your message. This serves as a check that's independent of your campaign filters, allowing you to freely segment users without worrying about over-spamming.
+In the **Target Audiences** step of your campaign composition, you can also limit the total number of users that will receive your message. This serves as a check that's independent of your campaign filters, allowing you to freely segment users without worrying about over-spamming.
 
 ![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.][2]
 
@@ -150,7 +149,7 @@ By default, frequency capping is toggled on when new campaigns are created. From
 - How many times each user should receive a campaign or Canvas component sends from a channel within a certain time frame.
 - How many times each user should receive a campaign or Canvas component sends by [tag](#frequency-capping-by-tag) within a certain time frame.
 
-This time frame can be measured in minutes, days, weeks (seven days), or months, with a maximum duration of 30 days.
+This time frame can be measured in minutes, days, or weeks (seven days), with a maximum duration of 30 days.
 
 Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per workspace. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 

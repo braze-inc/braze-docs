@@ -1,18 +1,18 @@
 ---
-nav_title: "GET: Liste Integrationen"
-article_title: "GET: Liste Integrationen"
+nav_title: "GET: Listen-Integrationen"
+article_title: "GET: Listen-Integrationen"
 search_tag: Endpoint
 page_order: 1
 alias: /api/cdi/get_integration_list/
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Details zum Braze-Endpunkt für Listenintegrationen."
+description: "Dieser Artikel enthält Einzelheiten über den Endpunkt List integrations Braze."
 
 ---
 {% api %}
 # Integrationen auflisten
 {% apimethod get %}
-/cdi/integrations
+/cdi/integrationen
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine Liste der vorhandenen Integrationen zurückzugeben.
@@ -22,15 +22,15 @@ description: "Dieser Artikel enthält Details zum Braze-Endpunkt für Listeninte
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `cdi.integration_list` erstellen.
 {% endalert %}
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='cdi list integrations' %}
+{% multi_lang_include rate_limits.md endpunkt='cdi list integrationen' %}
 
-## Parameter abfragen
+## Abfrageparameter
 
-Jeder Aufruf dieses Endpunkts gibt 10 Einträge zurück. Bei einer Liste mit mehr als 10 Integrationen verwenden Sie die Kopfzeile `Link`, um die Daten auf der nächsten Seite abzurufen, wie in der Beispielantwort gezeigt.
+Jeder Aufruf dieses Endpunkts gibt 10 Artikel zurück. Bei einer Liste mit mehr als 10 Integrationen verwenden Sie die Kopfzeile `Link`, um die Daten auf der nächsten Seite abzurufen, wie in der Beispielantwort gezeigt.
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `cursor` | Optional | String | Bestimmt die Paginierung der Integrationsliste. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -57,10 +57,10 @@ curl --location --request GET 'https://rest.iad-03.braze.com/cdi/integrations?cu
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `200` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `200` könnte den folgenden Antwortkörper zurückgeben.
 
 {% alert note %}
-Die Kopfzeile `Link` existiert nicht, wenn es insgesamt weniger als oder gleich 10 Integrationen gibt. Bei Anrufen ohne Cursor wird `prev` nicht angezeigt. Wenn Sie sich die letzte Seite der Artikel ansehen, wird `next` nicht angezeigt.
+Die Kopfzeile `Link` gibt es nicht, wenn es insgesamt weniger als oder gleich 10 Integrationen gibt. Bei Anrufen ohne Cursor wird `prev` nicht angezeigt. Wenn Sie sich die letzte Seite der Artikel ansehen, wird `next` nicht angezeigt.
 {% endalert %}
 
 ```
@@ -97,6 +97,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `400 Invalid cursor` | Prüfen Sie, ob Ihre `cursor` gültig ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Fehlermeldungen finden Sie unter [Schwerwiegende Fehler und Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler und Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% endapi %}

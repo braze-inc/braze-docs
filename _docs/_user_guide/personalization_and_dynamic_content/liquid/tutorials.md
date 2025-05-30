@@ -15,7 +15,7 @@ When you’re finished with these tutorials, you’ll be able to:
 - Write Liquid code for common use cases
 - String together Liquid conditional logic to personalize messages based on user data
 - Use variables and filters to write equations that use the values of attributes
-- Recongize basic commands in Liquid code and form a general understanding about what the code is doing
+- Recognize basic commands in Liquid code and form a general understanding about what the code is doing
 
 | Tutorial | Learning objectives |
 | --- | --- |

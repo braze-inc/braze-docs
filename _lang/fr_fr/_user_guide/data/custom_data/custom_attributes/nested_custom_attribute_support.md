@@ -40,6 +40,7 @@ Les objets d'attribut personnalisé peuvent contenir des [types de données][1],
 - Les objets ont une taille maximale de 100 Ko.
 - Les noms clés et les valeurs de chaîne de caractères ont une limite de taille de 255 caractères.
 - Les noms de clé ne peuvent pas contenir d’espaces.
+- Les points (`.`) et les signes de dollar (`$`) ne sont pas des caractères pris en charge dans une charge utile API si vous tentez d'envoyer un attribut personnalisé imbriqué à un profil utilisateur.
 - Tous les partenaires Braze ne prennent pas en charge les attributs personnalisés imbriqués. Reportez-vous à la [documentation du partenaire]({{site.baseurl}}/partners/home) pour savoir si les intégrations spécifiques du partenaire prennent en charge cette fonctionnalité.
 - Les attributs personnalisés imbriqués ne peuvent pas être utilisés comme filtre lors d'un appel à l'API Connected Audience.
 
@@ -357,10 +358,6 @@ Dans cet exemple, supposons que nous avons `accounts` un tableau d’objets que 
 ```
 
 Dans le tableau de bord de Braze, accédez à **Paramètres des données** > **Attributs personnalisés**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **attributs personnalisés** sous **Gérer les paramètres.**
-{% endalert %}
 
 Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Nom de l'attribut**, sélectionnez **Générer un schéma.**
 

@@ -16,9 +16,6 @@ description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Excluir 
 {% endapimethod %}
 
 > Use esse ponto de extremidade para excluir um campo de catálogo.
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
-{% endalert %}
 
 ## Pré-requisitos
 

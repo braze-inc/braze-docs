@@ -27,7 +27,7 @@ If you're entering users according to their local time zone using a scheduled en
 You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
 {% endalert %}
 
-![][1]
+![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.][1]{: style="max-width:75%;"}
 
 ### Consider using regular expressions for audience filters
 

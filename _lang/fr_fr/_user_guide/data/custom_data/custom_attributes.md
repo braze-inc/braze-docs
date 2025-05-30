@@ -17,10 +17,6 @@ Lorsqu'ils sont stockés dans Braze, les attributs personnalisés peuvent être 
 
 Pour créer et gérer des attributs personnalisés dans le tableau de bord, sélectionnez **Paramètres des données** > **Attributs personnalisés**. 
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **attributs personnalisés** sous **Gérer les paramètres.**
-{% endalert %}
-
 ![Quatre attributs personnalisés qui sont des booléens.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 La colonne **Dernière mise à jour** indique la dernière fois que l'attribut personnalisé a été modifié, par exemple lorsqu'il a été défini comme liste de blocage ou actif pour la dernière fois.
@@ -70,13 +66,13 @@ La liste suivante énumère les méthodes utilisées pour définir des attributs
 
 {% details Développer la documentation par plateforme %}
 
-- [Android et FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
+- [Android et FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

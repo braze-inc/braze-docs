@@ -27,10 +27,6 @@ Una aplicación puede tener activado el seguimiento de hasta 25 segmentos. Braze
 
 Vaya a **Análisis** > **Informe de ingresos** para ver los datos sobre [ingresos y compras a lo largo del tiempo para este segmento][14].
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Ingresos** en **Datos**.
-{% endalert %}
-
 ![Datos de ingresos por segmento][17]
 
 Para comparar visualmente los datos de los segmentos de cualquier intervalo de tiempo personalizado, añada o elimine segmentos del gráfico. Seleccione **Por segmento** en el desplegable **Desglose** y, a continuación, seleccione sus segmentos en **Valores de desglose**.
@@ -42,10 +38,6 @@ Seleccione cualquier nombre de segmento encima del gráfico para activar o desac
 ## Sesiones a lo largo del tiempo
 
 Del mismo modo, puede encontrar datos sobre [las sesiones a lo largo del tiempo para este segmento en particular][13] en la página **de inicio**.
-
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), ésta es su página de **descripción general**.
-{% endalert %}
 
 ![Datos de la sesión por segmento][18]
 

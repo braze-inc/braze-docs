@@ -10,7 +10,7 @@ description: "Este artigo contém notas de versão para julho de 2021."
 
 ## Pesquisa simples em mensagem no app
 
-Use o [modelo de mensagem no app de pesquisa simples]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) para coletar atribuições, insights e preferências do usuário que impulsionam sua estratégia de campanha. Por exemplo, você pode perguntar aos usuários como eles gostariam de usar seu app, saber mais sobre suas preferências pessoais ou até mesmo perguntar sobre sua satisfação com um determinado recurso. Esse modelo de pesquisa é compatível tanto com apps móveis quanto com navegadores da Web.
+Use o [modelo de mensagem no app de pesquisa simples]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/) para coletar atribuições, insights e preferências do usuário que impulsionam sua estratégia de campanha. Por exemplo, você pode perguntar aos usuários como eles gostariam de usar seu app, saber mais sobre suas preferências pessoais ou até mesmo perguntar sobre sua satisfação com um determinado recurso. Esse modelo de pesquisa é compatível tanto com apps móveis quanto com navegadores da Web.
 
 ## Biblioteca de casos de uso Liquid
 
@@ -18,11 +18,11 @@ Está se perguntando como fazer isso com o Liquid? Está apenas buscando inspira
 
 ## Rastreamento de e-mail
 
-O rastreamento de pixel de abertura e o rastreamento de cliques agora podem ser desativados por perfil de usuário. Essa flexibilidade ajuda os clientes a apoiar as leis de privacidade regionais, em que um perfil de usuário individual pode indicar que não deseja mais ser rastreado. Consulte nosso artigo sobre [rastreamento de e-mail]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) para saber mais.
+O rastreamento de pixel de abertura e o rastreamento de cliques agora podem ser desativados por perfil de usuário. Essa flexibilidade ajuda os clientes a apoiar as leis de privacidade regionais, em que um perfil de usuário individual pode indicar que não deseja mais ser rastreado. Consulte nosso artigo sobre [rastreamento de e-mail]({{site.baseurl}}/user_guide/analytics/tracking/email_tracking/) para saber mais.
 
 ## Opções de coleta de dados do SDK
 
-Saiba mais sobre como o SDK da Braze pode ser integrado para permitir a coleta flexível de dados em nossa nova documentação sobre as [opções de coleta de dados do SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+Saiba mais sobre como o SDK da Braze pode ser integrado para permitir a coleta flexível de dados em nossa nova documentação sobre as [opções de coleta de dados do SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
 
 ## Visão geral do SSL
 

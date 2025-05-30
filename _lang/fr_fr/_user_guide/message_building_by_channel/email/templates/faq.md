@@ -51,7 +51,7 @@ Oui, vous pouvez insérer autant de modèles que vous le souhaitez dans vos e-ma
 
 ### Comment puis-je prévisualiser mes liens avec toutes les balises appliquées ?
 
-Plusieurs manières de prévisualiser vos liens existent. Après avoir appliqué le [modèle de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), vous pouvez envoyer un [e-mail de test]({{site.baseurl}}/developer_guide/sending_test_messages/) à vous-même pour voir tous les liens. 
+Plusieurs manières de prévisualiser vos liens existent. Après avoir appliqué le [modèle de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), vous pouvez envoyer un [e-mail de test]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) à vous-même pour voir tous les liens. 
 
 Vous pouvez ouvrir les liens depuis le volet d’aperçu dans un nouvel onglet pour les afficher. Vous pouvez également survoler les liens dans le volet d'aperçu et les voir en bas de votre navigateur.
 

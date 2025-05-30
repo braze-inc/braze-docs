@@ -9,7 +9,7 @@ description: "Diese Landing Page listet die Endpunkte des Braze-Einstellungszent
 page_type: landing
 
 guide_top_header: "Präferenz-Center Endpunkte"
-guide_top_text: "Verwenden Sie die Endpunkte in diesem Abschnitt, um ein Einstellungscenter zu erstellen. Dabei handelt es sich um eine von Braze gehostete Website, die den Abonnementstatus und den Status der Abonnementgruppen Ihrer Benutzer anzeigen kann. Mithilfe von HTML und CSS kann Ihr Entwicklerteam Ihr Einstellungszentrum so gestalten, dass das Styling der Seite Ihren Markenrichtlinien entspricht.<br><br>Weitere Informationen zum Erstellen und Anpassen Ihres <a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>Präferenzzentrums</a> finden Sie unter <a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>Übersicht über das Präferenzzentrum</a>."
+guide_top_text: "Verwenden Sie die Endpunkte in diesem Abschnitt, um ein Einstellungscenter zu erstellen. Dabei handelt es sich um eine von Braze gehostete Website, die den Abonnementstatus und den Status der Abonnementgruppen Ihrer Benutzer anzeigen kann. Mithilfe von HTML und CSS kann Ihr Entwicklerteam Ihr Einstellungszentrum so gestalten, dass das Styling der Seite Ihren Markenrichtlinien entspricht.<br><br>Weitere Informationen zum Erstellen und Anpassen Ihres Präferenzzentrums finden Sie unter <a href='/docs/user_guide/message_building_by_channel/email/preference_center/overview/'>Übersicht über das Präferenzzentrum</a>."
 
 guide_featured_list:
   - name: "GET: URL des Präferenzzentrums erstellen"

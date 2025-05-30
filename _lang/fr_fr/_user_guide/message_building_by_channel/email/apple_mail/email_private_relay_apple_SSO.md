@@ -21,27 +21,12 @@ Si un utilisateur décide de désactiver le transfert par e-mail vers l’e-mail
 
 Si vous utilisez SendGrid comme fournisseur de messagerie, vous pouvez envoyer des e-mails à Apple sans modifier le DNS. 
 
-1. Allez sur la page de votre **certificat Apple** et autorisez l'adresse e-mail que vous souhaitez utiliser pour l'envoi via le service de relais e-mail d'Apple (l'adresse "From" que vous souhaitez).
-- L'adresse doit être formatée comme suit : `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(par exemple : `bounces+1234567@braze.online.docs.com`). 
+1. Connectez-vous au [portail des développeurs Apple](https://developer.apple.com/)
+2. Accédez à la page **Certificats, identifiants et profils.** 
+3. Sélectionnez **Services** > **Se connecter avec Apple pour la communication par e-mail**.
+4. Dans la section **Sources d'e-mail**, ajoutez les domaines et sous-domaines.
 
-![Option permettant d’autoriser des adresses e-mail individuelles sur la page du certificat Apple.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
-
-{:start="2"}
-2\. Une fois l'adresse ajoutée à votre page de certificat Apple, les e-mails de ce domaine seront délivrés via le système Apple Private Relay.
-
-{% alert important %}
 Si l’adresse d’expédition souhaitée est une adresse `abmail`, y compris dans votre sous-domaine. Par exemple, utilisez `abmail.docs.braze.com` au lieu de `docs.braze.com`.
-{% endalert %}
-
-### À partir des valeurs d’adresse
-
-Reportez-vous à ce tableau pour les composants utilisés lors de l’ajout d’adresses e-mail avec le relais privé Apple.
-
-| Valeur | Description |
-|---|---|
-| UID | Cette valeur est indiquée dans vos enregistrements DNS fournis par Braze (à partir de SendGrid). N’incluez pas la lettre « u » dans votre UID dans l’adresse e-mail. Par exemple, si votre UID est présenté dans SendGrid comme `u1234567.wl134.sendgrid.net`, alors `1234567` est la valeur UID. <br><br> Si vous n’avez pas accès à vos dossiers DNS, contactez votre gestionnaire du succès des clients Braze pour fournir votre UID. |
-| Sous-domaine et domaine marqué comme Whitelabel | Le domaine et sous-domaine initiaux que vous avez saisis dans SendGrid. Vous pouvez également utiliser la **valeur HOST** dans vos enregistrements DNS dans Sendgrid. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Envoi d’e-mails pour SparkPost
 
@@ -49,11 +34,7 @@ Pour configurer le relais privé Apple pour SparkPost, procédez comme suit :
 
 1. Connectez-vous avec Apple.
 2. Suivez la [documentation d'Apple](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) pour enregistrer les domaines d'e-mail.
-3. Apple vérifiera automatiquement les domaines et montrera ceux qui sont vérifiés, et fournira la possibilité de revérifier ou de supprimer les domaines.
-
-{% alert important %}
-Veillez à effectuer cette opération dans les deux ou trois jours suivant la création des fichiers de vérification, faute de quoi ils expireront. Apple ne divulgue pas leur durée de validité.
-{% endalert %}
+3. Apple vérifiera automatiquement les domaines, indiquera ceux qui sont vérifiés et offrira la possibilité de les modifier ou de les supprimer.
 
 ### Considérations
 
@@ -68,7 +49,7 @@ Si un domaine d'envoi est également utilisé comme domaine de rebond, vous ne p
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-Pour éviter les échecs SPF, vous devez créer les enregistrements MX et TXT et les propager dans le DNS **avant de** supprimer l'enregistrement CNAME.
+Pour éviter les échecs SPF, vous devez créer les enregistrements MX et TXT et les faire propager dans le DNS **avant de** supprimer l'enregistrement CNAME.
 {% endalert %}
 
 {:start="2"}

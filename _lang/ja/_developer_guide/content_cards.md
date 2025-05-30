@@ -1,8 +1,7 @@
 ---
+page_order: 2.2
 nav_title: コンテンツカード
-article_title: コンテンツカードのカスタマイズ
-layout: dev_guide
-page_order: 5
+article_title: Braze SDKのコンテンツカード
 channel:
   - content cards
 platform:
@@ -10,26 +9,46 @@ platform:
   - FireOS
   - Swift
   - Web
-
-guide_top_header: "コンテンツカードのカスタマイズ"
-guide_top_text: "コンテンツカードは、インタラクティブで視覚的に魅力的な要素であり、パーソナライズされた訴求力の高いコンテンツをユーザーに配信するために使用できます。コンテンツカードとコンテンツカードが置かれているフィードのカスタマイズは、オンボーディング時に行うか、Braze を使用して発展しながら行うことができます。また、完全にカスタム化された新しいコンテンツカードタイプとログ分析を作成して、Braze ダッシュボードが新しいタイプのカードの成功度を追跡できるようにすることもできます。"
-description: "このランディングページは、Braze SDK コンテンツカードを複数のプラットフォーム向けにカスタマイズするためのさまざまな方法のリンクを掲載しています。"
-
-guide_featured_title: "セクションの記事"
-guide_featured_list:
-  - name: コンテンツカードスタイルのカスタマイズ
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_styles
-    image: /assets/img/braze_icons/brush-02.svg
-  - name: コンテンツカードの動作のカスタマイズ
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
-    image: /assets/img/braze_icons/settings-01.svg
-  - name: デフォルトのコンテンツカードフィードのカスタマイズ
-    link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
-    image: /assets/img/braze_icons/book-closed.svg
-  - name: 分析のロギング 
-    link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
-    image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: カスタムコンテンツカードの作成
-    link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
-    image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---
+
+# コンテンツカード
+
+> アプリケーションで使用できるさまざまなデータモデルやカード固有のプロパティなど、Braze SDK のコンテンツカードについて説明します。
+
+{% sdktabs %}
+{% sdktab android %}
+{% multi_lang_include developer_guide/android/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab swift %}
+{% multi_lang_include developer_guide/swift/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab cordova %}
+{% multi_lang_include developer_guide/cordova/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab tvos %}
+{% multi_lang_include developer_guide/tvos/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab unity %}
+{% multi_lang_include developer_guide/unity/content_cards.md %}
+{% endsdktab %}
+
+{% sdktab xamarin %}
+{% multi_lang_include developer_guide/xamarin/content_cards.md %}
+{% endsdktab %}
+{% endsdktabs %}

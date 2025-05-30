@@ -12,13 +12,16 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Messages d’erreur « Push » courants
-    link: /docs/help/help_articles/push/push_error_codes/
+    link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+    image: /assets/img/braze_icons/alert-circle.svg
+  - name: "Les clics push s'ouvrent de manière inattendue dans l'application"
+    link: /docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/
     image: /assets/img/braze_icons/alert-circle.svg
   - name: Définition de l’activation Push
     link: /docs/help/help_articles/push/defining_push_enablement/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Notifications push manquantes
-    link: /docs/help/help_articles/push/no_push_notification_was_received/
+    link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migration des jetons Push
     link: /docs/help/help_articles/push/push_token_migration/

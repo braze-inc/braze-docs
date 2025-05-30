@@ -1,7 +1,7 @@
 ---
 nav_title: Measuring Segment Size
 article_title: Measuring Segment Size
-page_order: 9
+page_order: 5
 page_type: reference
 tool: 
 - Segments
@@ -40,7 +40,7 @@ Braze provides the following statistics on segment size.
 
 For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
 
-![A filter group with a filter for a gender that isn't unknown.][2]{: style="max-width:80%;"}
+![A filter group with a filter for users who had exactly one session count.][2]{: style="max-width:80%;"}
 
 ### Segment statistics
 

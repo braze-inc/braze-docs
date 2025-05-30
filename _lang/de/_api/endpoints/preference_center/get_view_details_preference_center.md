@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details über den Endpunkt Ansichtsdetails für das Einstellungszentrum Braze."
+description: "Dieser Artikel beschreibt die Details der Ansicht Details für den Endpunkt des Einstellungszentrums Braze."
 
 ---
 {% api %}
 # Details für Präferenzzentrum anzeigen
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalID}
+/Präferenz_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die Details zu Ihren Präferenzzentren einzusehen, einschließlich des Zeitpunkts der Erstellung und Aktualisierung.
+> Verwenden Sie diesen Endpunkt, um die Details zu Ihren Einstellungszentren einzusehen, einschließlich des Zeitpunkts, zu dem sie erstellt und aktualisiert wurden.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
@@ -22,20 +22,20 @@ description: "Dieser Artikel beschreibt Details über den Endpunkt Ansichtsdetai
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `preference_center.get`.
 
-## Preisgrenze
+## Rate-Limit
 
-Dieser Endpunkt hat ein Ratenlimit von 1.000 Anfragen pro Minute und Arbeitsbereich.
+Für diesen Endpunkt gilt ein Rate-Limits von 1.000 Anfragen pro Minute und Workspace.
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Erforderlich | String | Die ID für Ihr Präferenzzentrum. |
 {: role="presentation" }
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-Für diesen Endpunkt gibt es keine Anfrageparameter.
+Für diesen Endpunkt gibt es keine Anfrage-Parameter.
 
 ## Beispiel Anfrage
 

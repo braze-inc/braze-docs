@@ -18,7 +18,7 @@ Content-QA mit KI bietet die folgenden wichtigen Features zur Verbesserung der Q
 - **Rechtschreib- und Grammatikprüfung:** Prüft automatisch auf Rechtschreib- und Grammatikfehler in Ihrer Nachricht. Es schlägt Korrekturen vor und gibt Empfehlungen zur Verbesserung der Gesamtgenauigkeit des Inhalts.
 - **Ton-Analyse:** Bewertet den Ton der Nachricht, um mögliche Probleme zu erkennen. So können Sie sicherstellen, dass der beabsichtigte Ton mit dem gewünschten Kommunikationsstil übereinstimmt und Missverständnisse oder unbeabsichtigte Beleidigungen vermieden werden.
 - **Erkennung anstößiger Sprache:** Scannt Ihre Nachricht auf potenziell beleidigende oder unangemessene Sprache. So können Sie Ihren Inhalt überarbeiten und eine respektvolle Kommunikation aufrechterhalten.
-- **Versehentliche Inhaltskontrolle:** Erkennt alle Einfügungen von Code, Markup-Sprache oder Test Nachrichten, die möglicherweise unbeabsichtigt hinzugefügt wurden.
+- **Versehentliche Inhaltskontrolle:** Erkennt alle Einfügungen von Code, Markup-Sprache oder Nachrichten, die möglicherweise unbeabsichtigt hinzugefügt wurden, einschließlich Liquid-Code, der für einen Testnutzer:in nicht gerendert wurde.
 
 ## Zugriff auf Content-QA mit KI
 

@@ -55,7 +55,7 @@ When using **Most recent** or **AI Personalized**, users with insufficient data 
 
 To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
 
-!["Define your recommendation" step with "Most popular" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
+!["Define your recommendation" step with "AI Personalized" as the type and the "Do not recommend items users have previously interacted with" option selected.][2-3]
 
 This setting prevents messages from reusing the items a user has already bought or interacted with, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
@@ -302,7 +302,7 @@ You can view analytics for your recommendation to see which items users were rec
 
 At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
-![Recommendation audience metrics showing precision (21.1%), coverage (83.0%), and recommendation types split between personalized and most popular items.][5]
+![Recommendation audience metrics showing precision (25.3%), coverage (54.3%), and recommendation types split between personalized and most popular items.][5]
 
 These metrics are defined in the following table. 
 
@@ -322,7 +322,7 @@ The next section shows a breakdown of items in the catalog, split into two possi
 
 The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
-![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:45%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.][7]{: style="max-width:50%" }
 
 ## Using recommendations in messaging
 

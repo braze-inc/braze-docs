@@ -100,7 +100,7 @@ Sie können vorformatierte Variablen mit Standardwerten über das Modal **Person
 
 Das Modal fügt Liquid mit dem von Ihnen angegebenen Standardwert an der Stelle ein, an der sich Ihr Cursor befand. Die Einfügemarke wird auch durch das Vorschau-Feld angegeben, das den Text vor und nach dem Einfügen enthält. Wenn ein Textblock hervorgehoben ist, wird der hervorgehobene Text ersetzt.
 
-![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Benutzer "Mitreisender" als Standardwert einträgt und wie das Modal den hervorgehobenen Text "Name" im Composer durch das Liquid-Snippet ersetzt.][45]
+![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Liquid Snippet ersetzt.][45]
 
 {% endraw %}
 

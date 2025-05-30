@@ -67,6 +67,10 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 **Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
+#### Cards Style
+
+**Cards Style** is a row property that let's you add spacing between columns and round their corners. With card-style formatting, you can create more visually-engaging layouts to help highlight your most important content, such as new product features, testimonials, special offers, news updates, and more.
+
 ## Using the drag-and-drop editor
 
 Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
@@ -158,6 +162,10 @@ Under the **Preview as a User** tab, you can select the following user types to 
 {% alert note %}
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
+
+You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
+
+![Email preview with a button to "Copy preview link" and copy the generated link.][15]
 
 #### Use Inbox Vision
 
@@ -254,7 +262,7 @@ Another common use case is to flag specific links as universal links. Universal 
 
 To set up universal links, refer to [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
-Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
+Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 
 [1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
 [2]: {% image_buster /assets/img/dnd/dnd1.png %}
@@ -270,3 +278,4 @@ Alternatively, you can integrate with one of our attribution partners, such as [
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
 [14]: {% image_buster /assets/img/rtl_button.png %}
+[15]: {% image_buster /assets/img/dnd_email_link_preview.png %}

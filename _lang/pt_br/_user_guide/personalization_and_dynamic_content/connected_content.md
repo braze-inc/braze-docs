@@ -10,27 +10,30 @@ description: "Esta landing page é o lar de todos os assuntos relacionados ao Co
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-- name: Como fazer uma chamada à API
+- name: Como fazer uma chamada para a API Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Variáveis de conteúdo local conectado
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/server-01.svg
+- name: Armazenamento em cache de respostas de conteúdo conectado
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Abortar conteúdo conectado
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
   image: /assets/img/braze_icons/stop-circle.svg
-- name: Novas tentativas de conteúdo conectado
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  image: /assets/img/braze_icons/refresh-ccw-01.svg
-- name: APIs públicas
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
-  image: /assets/img/braze_icons/target-05.svg
 - name: Puxando Dados do Perfil do Usuário
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
   image: /assets/img/braze_icons/users-01.svg
+- name: Novas tentativas de conteúdo conectado
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Solução de problemas de solicitações de conteúdo conectado 
   link: /docs/help/help_articles/api/webhook_connected_content_errors/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: Uso de APIs públicas
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
+  image: /assets/img/braze_icons/target-05.svg
 ---
 
 <br><br>

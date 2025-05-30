@@ -85,7 +85,7 @@ Mantendremos la configuración predeterminada de la suscripción, para que sólo
 Ahora, construiremos nuestro Canvas personalizando los pasos de la plantilla:
 
 1. Selecciona el paso Rutas de acción y, a continuación, el nombre del grupo de acción **Compras realizadas**.
-2. Para **Hacer una compra**, selecciona **Hacer una compra específica** y elige **Plato de papel enorme** para el producto. De forma similar a la criera de salida, los usuarios que compren este producto saldrán del Canvas.
+2. Para **Hacer una compra**, selecciona **Hacer una compra específica** y elige **Plato de papel enorme** para el producto. De forma similar a los criterios de salida, los usuarios que compren este producto saldrán del Canvas.
 
 ![Grupo de acción "Hecho compra" que saldrá del Canvas si el usuario compra el enorme plato de papel.][5]
 

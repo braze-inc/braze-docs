@@ -19,6 +19,8 @@ Braze le permite controlar la presión del marketing limitando la tasa de sus ca
 1. [**Limitación de velocidad centrada en el usuario:**](#user-centric-rate-limiting) Se centra en proporcionar la mejor experiencia al usuario.
 2. [**Limitación de la tasa de velocidad de entrega:**](#delivery-speed-rate-limiting) Tiene en cuenta el ancho de banda de tus servidores.
 
+Braze intentará distribuir uniformemente los envíos de mensajes a lo largo del minuto, pero no puede garantizarlo. Por ejemplo, si tienes una campaña con un límite de velocidad de 5.000 mensajes por minuto, intentaremos distribuir las 5.000 solicitudes uniformemente a lo largo del minuto (unos 84 mensajes por segundo), pero puede haber alguna variación en la tasa por segundo.
+
 ### Limitación de tarifas centrada en el usuario
 
 A medida que cree más segmentos, habrá casos en los que los miembros de esos segmentos se solapen. Si envías campañas a esos segmentos, debes asegurarte de no enviar mensajes a tus usuarios con demasiada frecuencia. Si un usuario recibe demasiados mensajes en poco tiempo, se sentirá agobiado y desactivará las notificaciones push o desinstalará la aplicación.
@@ -115,9 +117,9 @@ Al enviar un Canvas con un límite de velocidad, el límite de tasa se comparte 
 
 #### Limitación de velocidad y reintentos de contenido conectado
 
-Cuando está activada la característica [Reintento de contenido conectado][19] ], Braze reintentará los fallos de llamada respetando el límite de velocidad que establezcas para cada reenvío. Consideremos el caso de 75.000 mensajes con un límite de velocidad de 10.000 por minuto. En el primer minuto, la llamada falla o es lenta y sólo envía 4.000 mensajes.
+Cuando la opción [Reintentar contenido conectado][19] está activada, Braze reintentará las llamadas fallidas respetando el límite de velocidad que hayas configurado para cada reenvío. Consideremos el caso de enviar 75.000 mensajes con un límite de velocidad de 10.000 por minuto. Imagina que en el primer minuto, la llamada falla o es lenta y sólo envía 4.000 mensajes.
 
-En lugar de intentar compensar el retraso y enviar los 4.000 mensajes restantes en el segundo minuto o añadirlos a los 10.000 que ya está configurado para enviar, Braze moverá esos 6.000 mensajes fallidos al "final de la cola" y añadirá un minuto adicional, si es necesario, al total de minutos que tardaría en enviar tu mensaje.
+En lugar de intentar compensar el retraso y enviar los 6.000 mensajes restantes en el segundo minuto o añadirlos a los 10.000 que ya están configurados para enviar, Braze moverá esos 6.000 mensajes al "final de la cola" y añadirá un minuto, si es necesario, al total de minutos que tardaría en enviar tu mensaje.
 
 | Minuto | Ningún fallo | 6.000 Fallos en el minuto 1 |
 |--------|------------|---------------------------|
@@ -132,6 +134,8 @@ En lugar de intentar compensar el retraso y enviar los 4.000 mensajes restantes 
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+Las solicitudes de contenido conectado no están limitadas por la tasa de forma independiente y seguirán el límite de velocidad del webhook. Esto significa que si hay una llamada de Contenido conectado a un punto final único por webhook, esperarías 5.000 webhooks y también 5.000 llamadas de Contenido conectado por minuto. Ten en cuenta que el almacenamiento en caché puede afectar a esto y reducir el número de llamadas a Contenido conectado. Además, los reintentos pueden aumentar las llamadas de Contenido Conectado, por lo que recomendamos comprobar que el punto final de Contenido Conectado puede soportar cierta fluctuación aquí.
+
 ## Sobre la limitación de frecuencia
 
 A medida que su base de usuarios crece y su mensajería se amplía para incluir campañas de ciclo de vida, activadas, transaccionales y de conversión, es importante evitar que sus notificaciones parezcan "spam" o molestas. Al proporcionar un mayor control sobre la experiencia de sus usuarios, la limitación de la frecuencia le permite crear las campañas que desea sin abrumar a su audiencia.
@@ -139,10 +143,6 @@ A medida que su base de usuarios crece y su mensajería se amplía para incluir 
 ### Resumen de características {#freq-cap-feat-over}
 
 La limitación de frecuencia se aplica a nivel de campaña o de envío de componentes de Canvas y puede configurarse para cada área de trabajo desde **Configuración** > **Reglas de limitación de frecuencia**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se llama **Configuración de mensajes globales** y se encuentra en **Interacción**.
-{% endalert %}
 
 Por defecto, el límite de frecuencia se activa cuando se crean nuevas campañas. Desde aquí, puedes elegir lo siguiente:
 
@@ -155,6 +155,10 @@ Este plazo puede medirse en minutos, días, semanas (siete días) o meses, con u
 Cada línea de tapas de frecuencia se conectará utilizando el operador `AND`, y puede añadir hasta 10 reglas por espacio de trabajo. Además, puedes incluir varios límites para los mismos tipos de mensajes. Por ejemplo, puedes limitar a los usuarios a no más de un push al día y no más de tres push a la semana.
 
 ![Sección de limitación de frecuencia con listas de campañas y Lienzos a los que se aplicarán las normas y a los que no.][14]
+
+#### Comportamiento cuando los usuarios tienen limitación de frecuencia en un paso en Canvas
+
+Si un usuario de Canvas tiene limitación de frecuencia debido a la configuración global de limitación de frecuencia, el usuario avanzará inmediatamente al siguiente paso en Canvas. El usuario no saldrá del Canvas debido al límite de frecuencia.
 
 ### Normas de entrega
 

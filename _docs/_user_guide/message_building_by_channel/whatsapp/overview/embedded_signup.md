@@ -14,12 +14,16 @@ channel:
 
 The WhatsApp embedded signup workflow is accessed when you first [integrate WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) into your Braze workspace, and when you [add a WhatsApp Business account]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/multiple_subscription_groups/) to an existing WhatsApp integration.
 
+{% alert note %}
+You can add [multiple WhatsApp Business Accounts](({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/multiple_subscription_groups/)) to a Braze workspace. However, each specific WhatsApp Business Account can be added to only one Braze workspace.
+{% endalert %}
+
 ## Accessing the workflow
 
 Go to **Partner Integrations** > **Technology Partners**, then search for and select **WhatsApp**. Your next selection depends on your use case:
 
-- If you're integrating WhatsApp into your workspace, select **Begin Integration**. <br><br>![][10]{: style="max-width:80%;"}<br><br>
-- If you're adding a WhatsApp Business account to an existing WhatsApp integration, select **Add WhatsApp Business Account**. <br><br>![][11]{: style="max-width:80%;"}
+- If you're integrating WhatsApp into your workspace, select **Begin Integration**. <br><br>![WhatsApp partner page with a button to begin the integration.][10]{: style="max-width:80%;"}<br><br>
+- If you're adding a WhatsApp Business account to an existing WhatsApp integration, select **Add WhatsApp Business Account**. <br><br>!["WhatsApp Messaging Integration" with options to add a WhatsApp Business Account or a subscription group and number.][11]{: style="max-width:80%;"}
 
 The workflow from here is the same for both use cases.
 

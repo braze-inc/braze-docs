@@ -150,3 +150,36 @@ Pour les webhooks, Braze relance automatiquement les requêtes HTTP qui ont ét�
 Pour le contenu connecté, si les requêtes vers l'hôte cible sont interrompues par le détecteur d'hôte malsain, Braze continuera à rendre les messages et à suivre votre logique Liquid comme s'il avait reçu un code de réponse d'erreur. Si vous voulez vous assurer que ces demandes de contenu connecté sont relancées lorsqu'elles sont interrompues par le détecteur d'hôte malsain, utilisez l'option `:retry`. Pour plus d'informations sur l'option `:retry`, reportez-vous à la section [Tentatives de contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 Si vous pensez que la détection des hôtes malsains peut être à l'origine de problèmes, contactez l'[assistance de Braze]({{site.baseurl}}/support_contact/).
+
+## E-mails automatisés et entrées dans le journal d'activité des messages
+
+### Mise en place d'e-mails automatisés
+
+Si vous rencontrez plus de 100 000 erreurs de webhook ou d'endpoint de contenu connecté (y compris les tentatives) dans un espace de travail au cours d'une période de 24 heures, vous recevrez un e-mail contenant les informations suivantes sur la manière de résoudre les erreurs. 
+
+- Nom de l'espace de travail
+- Un lien vers le canvas ou la campagne
+- URL de l'endpoint
+- code d'erreur
+- Heure à laquelle l'erreur a été observée pour la dernière fois
+- Liens vers le journal d'activité des messages et la documentation connexe
+
+{% alert note %}
+Vous pouvez configurer le seuil d'erreur par espace de travail. Pour ajuster ce seuil, contactez le [service d'assistance de Braze]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+Les erreurs d'endpoint sont les suivantes :
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+Ces e-mails ne sont envoyés qu'une fois par jour au niveau de l'espace de travail. Si aucun utilisateur ne s'inscrit pour recevoir ces e-mails, tous les administrateurs de l'entreprise en seront informés.
+
+Pour vous inscrire à la réception de ces e-mails, procédez comme suit :
+
+1. Allez dans **Réglages** > **Réglages administratifs** > **Préférences de notification.**
+2. Sélectionnez les **erreurs de contenu connecté** et les **erreurs de webhook** dans la **section Canvas et campagnes.** 
+
+### Entrées du journal d'activité des messages
+
+Il y aura au moins une entrée dans le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) liée à l'erreur qui a déclenché l'e-mail automatisé.

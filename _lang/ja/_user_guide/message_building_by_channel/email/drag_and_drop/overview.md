@@ -87,10 +87,6 @@ tool:
 
 また、**「テンプレート」**セクションからすべてのテンプレートにアクセスすることもできる。
 
-{% alert note %}
-[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、テンプレートは「**テンプレート＆メディア**」の下にある。
-{% endalert %}
-
 テンプレートを選択すると、[**メールのバリアント**] の下に送信情報とメール本文を含むメールの概要が表示されます。 
 
 [**メール本文を編集**] を選択して、ドラッグ＆ドロップエディターでメール構造のデザインを開始します。 
@@ -238,7 +234,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 ![ドラッグ＆ドロップでテキストの配置を右から左、または左から右に切り替えるボタンが付いたメールエディタメニュー。][1]{: style="max-width:50%;"}
 
-右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)を参照してください。
+右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 ### リンクにHTML属性を追加する
 
@@ -256,7 +252,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 * **SendGrid:** `universal = "true"`
 * **SparkPost：** `data-msys-sublink = "open-in-app"` ([カスタムサブパスを](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths)設定する必要がある)
 
-ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/help/help_articles/email/universal_links/)を参照してください。
+ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)を参照してください。
 
 あるいは、[Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) や[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) などのアトリビューションパートナーのいずれかと連携して、ユニバーサルリンクを管理することもできます。
 

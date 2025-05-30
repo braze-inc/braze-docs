@@ -28,7 +28,7 @@ Standardmäßig setzt Braze die Push TTL für jeden Push Messaging Dienst auf da
 | Huawei (HMS) | 15 Tage |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Diese Einstellungen gelten global für alle Push-Kampagnen, es sei denn, für eine bestimmte Nachricht wurde eine andere TTL festgelegt. Um die TTL einer Nachricht anzupassen, siehe Erweiterte Kampagnen-Einstellungen.
+Diese Einstellungen gelten global für alle Push-Kampagnen, es sei denn, für eine bestimmte Nachricht wurde eine andere TTL festgelegt. Um die TTL einer Nachricht anzupassen, siehe [Erweiterte Kampagnen-Einstellungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#ttl).
 
 Um einen anderen Standard einzustellen Push TTL:
 

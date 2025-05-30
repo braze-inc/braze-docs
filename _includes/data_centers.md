@@ -13,6 +13,13 @@
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
+{% if include.datacenters == "ID" %}
+| Dashboard URL | REST endpoint | SDK endpoint |
+| --- | --- | --- |
+| `https://dashboard.id-01.braze.com` | `https://rest.id-01.braze.com` | `sdk.id-01.braze.com` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{% endif %}
+
 {% if include.datacenters == "US" %}
 | Dashboard URL | REST endpoint | SDK endpoint |
 | --- | --- | --- |
@@ -24,7 +31,7 @@
 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-| `https://dashboard-10.braze.com` | `https://rest.iad-10.braze.com` | `sdk.iad-10.braze.com` |
+| `https://dashboard-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
@@ -39,10 +46,11 @@
 |US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 |US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|US-10| `https://dashboard-10.braze.com` | `https://rest.iad-10.braze.com` | `sdk.iad-10.braze.com` |
+|US-10| `https://dashboard-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
 |AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
+|ID-01| `https://dashboard.id-01.braze.com`| `https://rest.id-01.braze.com` | `sdk.id-01.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 {% endif %}
 
@@ -89,7 +97,6 @@ For instance `US-10`, these are the relevant IP addresses:
 - `35.172.3.129`
 - `50.19.162.19`
 {% endsubtab %}
-
 {% subtab European Union (EU) %}
 For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 - `52.58.142.242`
@@ -110,6 +117,15 @@ For instance `AU-01`, these are the relevant IP addresses:
 - `52.65.73.167`
 - `54.153.242.239`
 - `54.206.45.213`
+{% endsubtab %}
+{% subtab Indonesia (ID) %}
+For instance `ID-01`, these are the relevant IP addresses:
+- `108.136.157.246`
+- `108.137.30.207`
+- `16.78.128.71`
+- `16.78.14.134`
+- `16.78.162.208`
+- `43.218.73.35`
 {% endsubtab %}
 {% endsubtabs %}
 {% endif %}

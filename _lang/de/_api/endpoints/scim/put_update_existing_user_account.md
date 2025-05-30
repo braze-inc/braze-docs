@@ -1,12 +1,12 @@
 ---
-nav_title: "PUT: Dashboard-Benutzerkonto aktualisieren"
-article_title: "PUT: Dashboard-Benutzerkonto aktualisieren"
+nav_title: "PUT: Dashboard Benutzerkonto aktualisieren"
+article_title: "PUT: Dashboard Benutzerkonto aktualisieren"
 alias: /post_update_existing_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Vorhandenes Dashboard-Benutzerkonto aktualisieren."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Update existing dashboard Nutzer:innen-Konto Braze."
 ---
 
 {% api %}
@@ -15,30 +15,30 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Vorhande
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard-Benutzerkonto zu aktualisieren, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) Methode zurückgegeben wird.
+> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard-Benutzerkonto zu aktualisieren, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird.
 
-Es ermöglicht Ihnen die Aktualisierung von Vor- und Nachnamen, Berechtigungen (zum Festlegen von Berechtigungen auf Unternehmens-, Arbeitsbereichs- und Teamebene) und Abteilung.
+Es ermöglicht Ihnen das Update von Vor- und Nachnamen, Berechtigungen (zum Festlegen von Berechtigungen auf Unternehmens-, Workspace- und Teamebene) und Abteilungen.
 
-Aus Sicherheitsgründen kann `userName` (E-Mail Adresse) nicht über diesen Endpunkt aktualisiert werden. Wenn Sie die `userName` (E-Mail-Adresse) für einen Benutzer ändern möchten, wenden Sie sich an den [Support]({{site.baseurl}}/support_contact/).
+Aus Sicherheitsgründen kann `userName` (E-Mail Adresse) nicht über diesen Endpunkt aktualisiert werden. Wenn Sie die `userName` (E-Mail-Adresse) eines Nutzers:innen ändern möchten, wenden Sie sich an den [Support]({{site.baseurl}}/support_contact/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 
 ## Voraussetzungen
 
-Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden den Ursprung Ihres Dienstes als `X-Request-Origin` Kopfzeile. Weitere Informationen finden Sie unter [Automatisierte Benutzerbereitstellung]({{site.baseurl}}/scim/automated_user_provisioning/).
+Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden die Herkunft Ihres Dienstes in der Kopfzeile `X-Request-Origin`. Weitere Informationen finden Sie unter [Automatisierte Bereitstellung von Nutzer:innen]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
+{% multi_lang_include rate_limits.md endpunkt='update dashboard nutzer:innen' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `id` | Erforderlich | String | Die Ressourcen-ID des Benutzers. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
+| `id` | Erforderlich | String | Die ID des Nutzers:innen. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Körper der Anfrage
+## Anfragetext
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
@@ -86,14 +86,14 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | Erforderlich | Array von Zeichenketten | Erwarteter SCIM 2.0 Schemaname für Benutzerobjekt. |
-| `name` | Erforderlich | JSON-Objekt | Dieses Objekt enthält den Vornamen und den Nachnamen des Benutzers. |
-| `department` | Erforderlich | String | Gültige Abteilungszeichenfolge aus der [Dokumentation der Abteilungszeichenfolge]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | Erforderlich | JSON-Objekt | Berechtigungsobjekt wie in der [Dokumentation des Berechtigungsobjekts]({{site.baseurl}}/scim_api_appendix/#permissions-object) beschrieben. |
+| `schemas` | Erforderlich | String-Array | Erwarteter SCIM 2.0 Schemaname für Nutzer:in. |
+| `name` | Erforderlich | JSON-Objekt | Dieses Objekt enthält den Vornamen und den Nachnamen des Nutzers:innen. |
+| `department` | Erforderlich | String | Gültiger String für die Abteilung aus der [Dokumentation für die Abteilung]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Erforderlich | JSON-Objekt | Berechtigungsobjekt wie in der [Dokumentation zum Berechtigungsobjekt]({{site.baseurl}}/scim_api_appendix/#permissions-object) beschrieben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -206,7 +206,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ```
 
 ### Fehlerzustände
-Wenn ein Benutzer mit dieser ID nicht in Braze existiert, antwortet der Endpunkt mit:
+Wenn ein Nutzer:innen mit dieser ID nicht in Braze existiert, antwortet der Endpunkt mit:
 
 ```json
 HTTP/1.1 404 Not Found

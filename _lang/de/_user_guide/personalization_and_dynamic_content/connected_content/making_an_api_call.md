@@ -1,12 +1,12 @@
 ---
-nav_title: Einen API-Aufruf tätigen
+nav_title: Connected-Content-Aufrufe tätigen
 article_title: Aufruf einer Connected-Content-API
 page_order: 0
 description: "In diesem Referenzartikel erfahren Sie, wie Sie einen Connected-Content-API-Aufruf durchführen. Zudem erhalten Sie hier hilfreiche Beispiele und fortgeschrittene Anwendungsfälle für Connected Content."
 search_rank: 2
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Einen API-Aufruf durchführen
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Aufruf einer Connected-Content API
 
 > Verwenden Sie Connected-Content, um alle über APIs zugänglichen Informationen direkt in Nachrichten einzufügen, die Sie an Nutzer:innen senden. Sie können Inhalte entweder direkt von Ihrem Webserver oder von öffentlich zugänglichen APIs beziehen.<br><br>Auf dieser Seite erfahren Sie, wie Sie Connected-Content API-Aufrufe tätigen, fortgeschrittene Connected-Content-Anwendungsfälle, Fehlerbehandlung und mehr.
 
@@ -80,10 +80,6 @@ Braze-Systeme können denselben Connected-Content-API-Aufruf mehr als einmal pro
 
 Wenn die URL eine grundlegende Authentifizierung erfordert, kann Braze für Sie Zugangsdaten zur grundlegenden Authentifizierung generieren, die Sie in Ihrem API-Aufruf verwenden können. Unter **Einstellungen** > **Verbundene Inhalte** können Sie vorhandene Anmeldedaten für die Basisauthentifizierung verwalten und neue hinzufügen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Connected-Content** unter **Einstellungen verwalten**.
-{% endalert %}
-
 ![Die Einstellungen für 'Verbundene Inhalte' im Braze Dashboard.][34]
 
 Um eine neue Zugangsdaten hinzuzufügen, wählen Sie **Zugangsdaten hinzufügen**. Geben Sie Ihren Zugangsdaten einen Namen und geben Sie den Nutzernamen und das Passwort ein.
@@ -148,7 +144,7 @@ Das folgende Beispiel veranschaulicht das Abrufen und Speichern eines Zugriffsto
 
 #### Schritt 2: Autorisieren Sie die API mit dem abgerufenen Zugriffstoken
 
-Jetzt, wo das Token gespeichert ist, kann es als dynamisches Template in den nachfolgenden Connected-Content-Aufruf eingefügt werden, um die Anfrage zu autorisieren:
+Nachdem das Token gespeichert wurde, kann es als dynamisches Template in den nachfolgenden Connected-Content-Aufruf eingefügt werden, um die Anfrage zu autorisieren:
 
 {% raw %}
 ```
@@ -172,49 +168,7 @@ Braze sendet Anfragen zu Connected Content von den folgenden IP-Bereichen. Die a
 
 Braze verfügt über einen reservierten Satz von IPs, die für alle Dienste verwendet werden, von denen nicht alle zu einem bestimmten Zeitpunkt aktiv sind. So kann Braze bei Bedarf von einem anderen Rechenzentrum aus senden oder Wartungsarbeiten durchführen, ohne die Kunden zu beeinträchtigen. Braze kann eine, eine Teilmenge oder alle der folgenden IPs verwenden, wenn Sie Connected-Content-Anfragen stellen.
 
-| Für die Instanzen `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`: |
-|---|
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| Für die Instanzen `EU-01` und `EU-02`: |
-|---|
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88`
-
-| Zur Instanz `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ## Fehlersuche
 
@@ -224,6 +178,24 @@ Verwenden Sie [Webhook.site](https://webhook.site/), um Fehlerbehebungen für Ih
 2. Testen Sie Ihre Kampagne oder Ihren Canvas-Schritt in der Vorschau, um zu sehen, wie die Anfragen auf dieser Website ankommen.
 
 Mit diesem Tool können Sie Probleme mit den Anfrage-Headern, dem Anfragetext und anderen Informationen, die beim Aufruf gesendet werden, diagnostizieren.
+
+## Häufig gestellte Fragen
+
+### Warum gibt es mehr Connected-Content-Aufrufe als Nutzer:innen oder Sendungen? 
+
+Es kann sein, dass Braze denselben Connected-Content-API-Aufruf mehr als einmal pro Empfänger:in tätigt, da wir möglicherweise einen Connected-Content-API-Aufruf tätigen müssen, um eine Nachricht zu rendern. Nachrichten können für Validierung, Wiederholungslogik oder andere interne Zwecke mehrmals pro Empfänger:in gerendert werden.
+
+Es wird erwartet, dass ein Connected-Content API-Aufruf mehr als einmal pro Empfänger:in erfolgen kann, auch wenn die Wiederholungslogik nicht in dem Aufruf verwendet wird. Wir empfehlen, das Rate-Limits für Nachrichten mit Connected-Content einzustellen oder Ihre Server so zu konfigurieren, dass sie das erwartete Volumen besser bewältigen können.
+
+### Wie funktioniert das Rate-Limiting bei Connected-Content?
+
+Connected-Content hat kein eigenes Rate-Limit. Stattdessen basiert das Rate-Limit auf der Rate, mit der Nachrichten versendet werden. Wir empfehlen, das Rate-Limits für Messaging unter das von Ihnen beabsichtigte Rate-Limits für Connected-Content zu setzen, wenn mehr Connected-Content-Anrufe als Nachrichten gesendet werden.  
+
+### Was ist Caching-Verhalten?
+
+Standardmäßig werden POST-Anfragen nicht zwischengespeichert. Sie können jedoch den Parameter `:cache_max_age` hinzufügen, um den POST-Aufruf in den Cache zu zwingen.
+Caching kann dazu beitragen, doppelte Connected-Content-Aufrufe zu vermeiden. Es ist jedoch nicht garantiert, dass dies immer zu einem einzigen Connected-Content-Aufruf pro Nutzer:in führt.
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

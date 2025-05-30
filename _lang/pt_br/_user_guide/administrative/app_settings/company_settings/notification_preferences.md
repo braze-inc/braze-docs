@@ -17,10 +17,6 @@ A página **Preferências de Notificação** é onde você pode configurar quem 
 
 Para acessar esta página, acessar **Configurações** > **Configurações de Admin** > **Preferências de Notificação**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), selecione o menu suspenso da sua conta e acessar **Configurações da Empresa** > **Preferências de Notificação**.
-{% endalert %}
-
 ## Notificações disponíveis
 
 A tabela a seguir lista as notificações disponíveis:
@@ -39,15 +35,12 @@ A tabela a seguir lista as notificações disponíveis:
 | Limite de campanha agendada atingido | Notifica os destinatários quando o limite de uma campanha agendada recorrente é atingido. | e-mail, Webhook |
 | Campanha agendada concluiu os envios | Notifica os destinatários quando uma campanha agendada conclui os envios. | e-mail, Webhook |
 | Relatório semanal de análise de dados | Toda segunda, envia para os destinatários um resumo das atividades da semana anterior ocorridas no espaço de trabalho. Os destinatários recebem um resumo de todos os espaços de trabalho dos quais fazem parte. | E-mail |
+| Limites de volume de envios diários de canvas/campanha | Envia notificações sempre que um limite de envio é atingido. | E-mail |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Relatório semanal de análise de dados
 
 Braze opcionalmente envia um relatório semanal via e-mail para as pessoas que você designar dentro da sua empresa toda segunda-feira às 5h EST. Você pode selecionar os eventos personalizados a serem incluídos no relatório semanal em **Configurações de Dados** > **Eventos Personalizados**.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta página está localizada em **Gerenciar Configurações** > **Eventos Personalizados**.
-{% endalert %}
 
 Você pode selecionar até FIVE eventos para serem incluídos em seu relatório semanal:
 

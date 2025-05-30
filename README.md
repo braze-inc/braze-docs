@@ -1,4 +1,12 @@
-# Welcome to Braze Docs!
+<img src="assets/Braze_Primary_Icon_PURPLE.png" width="65" height="65" alt="Braze icon" align="left"/>
+
+Welcome to Braze Docs!
+===
+
+[![GitHub Release](https://img.shields.io/github/v/release/braze-inc/braze-docs)](https://github.com/braze-inc/braze-docs/releases)
+[![GitHub branch status](https://img.shields.io/github/checks-status/braze-inc/braze-docs/develop)](https://github.com/braze-inc/braze-docs/deployments)
+[![Static Badge](https://img.shields.io/badge/License-Creative_Commons-lightgrey)](/LICENSE.md)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/braze)](https://x.com/braze)
 
 This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
 
@@ -10,7 +18,8 @@ If you'd like to help improve the docs, you can:
 
 ## Quick start
 
-> **Note:** For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
+> [!TIP]
+> For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
 
 To build the docs locally, you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
 
@@ -54,7 +63,8 @@ PARTNER_API=true rake
 MARKDOWN_API=true PARTNER_API=true rake
 ```
 
-> **Note:** Prepending `MARKDOWN_API=true` to your rake command let's you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` let's you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
+> [!NOTE]
+> Prepending `MARKDOWN_API=true` to your rake command lets you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` lets you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
 
 ## About `bdocs` wrapper
 

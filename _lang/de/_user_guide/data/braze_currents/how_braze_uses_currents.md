@@ -16,7 +16,7 @@ Wir filtern unsere Daten aus unseren E-Mail- und Push-Kampagnen in ein Business 
 
 ## Schritt 1: Event-Daten eingeben und aggregieren
 
-Nachdem wir Kampagnen mit einem unserer EngagementTools (wie Kampagnen oder Canvas) eingeführt haben, verfolgen wir die Daten der Ereignisse mit unserem eigenen System sowie mit dem unserer E-Mail Partner. Einige dieser Daten werden im Dashboard zusammengefasst und angezeigt, aber wir sind daran interessiert, tiefer einzutauchen!
+Nachdem wir Kampagnen mit einem unserer Engagement-Tools (wie Kampagnen oder Canvas) eingeführt haben, verfolgen wir die Daten der Ereignisse mit unserem eigenen System sowie mit dem unserer E-Mail Partner. Einige dieser Daten werden im Dashboard zusammengefasst und angezeigt, aber wir sind daran interessiert, tiefer einzutauchen!
 
 ## Schritt 2: Event-Daten an einen Partner für die Datenspeicherung senden
 
