@@ -1,7 +1,9 @@
-name: Add Deploy Label # This name is displayed in PR UI
+# Adds labels to pull requests based on certain conditions, such as adding the 'Deploy' label.
+name: Add Label
 
 on:
   pull_request:
+    # add more types if needed, but only the minimum required for each job in the workflow. 
     types: [closed]  # Triggers when the PR is closed (whether it's merged or not)
 
 jobs:
@@ -12,7 +14,7 @@ jobs:
         github.event.pull_request.head.ref == 'develop'
     runs-on: ubuntu-latest
     steps:
-      - name: Adding "Deploy" label # This name is displayed in GH UI
+      - name: "Adding 'Deploy' label"
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

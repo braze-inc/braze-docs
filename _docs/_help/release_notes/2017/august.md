@@ -41,7 +41,7 @@ We've added a new feature, geofences, that allows you to trigger messages in rea
 
 ## Update to email editor
 
-We've added dynamic autocompleting to our new email editor, so you can now autocomplete with your customers' actual custom attributes and events when using Liquid, making your life easier. Learn more about email best practices in [Academy][63].
+We've added dynamic autocompleting to our new email editor, so you can now autocomplete with your customers' actual custom attributes and events when using Liquid, making your life easier. Learn more about [email best practices][67].
 
 ## Update to date filters
 
@@ -70,11 +70,10 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 [60]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters
-[63]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
 [64]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/
 [65]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [66]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[67]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
+[67]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices
 [68]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [69]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [70]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_action_buttons/#how-to-use-action-buttons

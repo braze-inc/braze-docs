@@ -98,7 +98,7 @@ If you enable the override option, Braze will update the global subscription sta
 
 #### Collect SMS subscribers
 
-To collect SMS subscribers from Shopify, you must create [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) as part of your [SMS setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup). 
+To collect SMS subscribers from Shopify, you must create [SMS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/) as part of your [SMS setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/). 
 
 When you are ready to collect your Shopify SMS subscribers, enable SMS subscriber collection by turning it on within the Shopify setup page. You must select at least one SMS subscription group so that you can appropriately target and send SMS messages. 
 

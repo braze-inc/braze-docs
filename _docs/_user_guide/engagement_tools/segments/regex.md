@@ -194,7 +194,7 @@ For example, if you're trying to target users who live in cities that start with
 
 #### How do I filter for specific phone numbers?
 
-Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/).
 
 Assuming you're searching for US phone numbers, use the regex format `1?\d\d\d\d\d\d\d\d\d\d`, where each repetition of `\d` is a digit you want to specify. The first three digits are the area code.
 

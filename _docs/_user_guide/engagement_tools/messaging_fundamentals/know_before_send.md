@@ -60,15 +60,15 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 ## SMS
 
 #### Things to check
-- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, and similar) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) to confirm you have enough throughput to send in your desired time.
+- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, and similar) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/) to confirm you have enough throughput to send in your desired time.
 - **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/sms_faq/).
-- **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) to confirm that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
+- **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) to confirm that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
 
 #### Things to know
 - **SMS message defaulting**: SMS messages are normally defaulted to be sent from the short code in the sender pool.
 - **Alphanumeric sender ID**: Two-way messaging will no longer work if you use an alphanumeric sender ID; these are now one-way only.
 - **Updated throughput in the US**: Throughput has changed in the US with US [A2P 10DLC registration](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US). Note that we do not commit to any sending speed SLAs contractually due to multiple factors such as traffic congestion and carrier issues that may impact the actual delivery rates.
-- **Subscription group**: To launch an SMS campaign through Braze, a subscription group must be selected. As well, to adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/), Braze will never send SMS to users that have not [subscribed to the selected subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#how-to-check-a-users-sms-subscription-group).
+- **Subscription group**: To launch an SMS campaign through Braze, a subscription group must be selected. As well, to adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/), Braze will never send SMS to users that have not [subscribed to the selected subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#how-to-check-a-users-sms-subscription-group).
 
 ## WhatsApp
 

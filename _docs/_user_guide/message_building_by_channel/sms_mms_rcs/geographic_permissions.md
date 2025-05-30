@@ -16,7 +16,7 @@ alias: /geographic_permissions/
 
 > Geographic Permissions enhance security and protect against fraudulent SMS, MMS, and RCS traffic by enforcing controls on the countries to which you can send messages. You can specify an allowlist of countries to make sure that SMS, MMS, and RCS messages are only sent to approved regions. Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
 
-If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS, MMS, or RCS subscription group. The allowlist is under **Geographic Permissions**.
+If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS, MMS, or RCS subscription group. The allowlist is under **Geographic Permissions**.
 
 ![The editable SMS Geographic Permissions section for an admin with several countries selected in the "Country allowlist".][1]{: style="max-width:80%;"}
 
