@@ -3,7 +3,7 @@ name: Add Label
 
 on:
   pull_request:
-    # add more types if needed, but the minimum required for each job in the workflow. 
+    # add more types if needed, but only the minimum required for each job in the workflow. 
     types: [closed]  # Triggers when the PR is closed (whether it's merged or not)
 
 jobs:
