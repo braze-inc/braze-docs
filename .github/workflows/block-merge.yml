@@ -8,7 +8,7 @@ on:
 
 jobs:
   block-do-not-merge-label:
-    name: "Check for lable: 'status: do not merge'"
+    name: "Check for label: 'status: do not merge'"
     runs-on: ubuntu-latest
     steps:
       - name: "Fail if label is present"
