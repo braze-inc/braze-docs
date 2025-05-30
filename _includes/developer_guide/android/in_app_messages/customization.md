@@ -577,7 +577,7 @@ BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessa
 
 ### Predictive Back Animations
 
-Beginning in version x.x.x, predictive back animations can be enabled by adding `android:enableOnBackInvokedCallback="true"` to the `application` section of your `AndroidManifest.xml`. This will enable predictive back animations to full view in-app messages on gesture navigation modes on API 34+, and 3-button navigation modes on API 36+.
+Beginning in version x.x.x, [predictive back animations](https://developer.android.com/guide/navigation/custom-back/predictive-back-gesture) can be enabled by adding `android:enableOnBackInvokedCallback="true"` to the `application` section of your `AndroidManifest.xml`. This will enable predictive back animations to full view in-app messages on gesture navigation modes on API 34+, and 3-button navigation modes on API 36+.
 
 ## Customizing the orientation
 
