@@ -3,7 +3,7 @@ nav_title: カード作成
 article_title: カード作成
 alias: /card_creation/
 description: "この記事では、キャンペーン開始時やキャンバスステップエントリー時と最初のインプレッション発生時のコンテンツカード作成の違いについて説明する。"
-page_order: 1
+page_order: 0
 tool: Campaigns
 channel:
   - content cards

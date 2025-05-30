@@ -25,17 +25,17 @@ We do not recommend sending nested JSON values as key-value pairs. Instead, flat
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Key-value pairs are stored on <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> to access these values.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Key-value pairs are stored on <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> to access these values.
 
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Key-value pairs are stored on <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> objects as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
 
@@ -82,7 +82,7 @@ Badges are small icons that are ideal for getting a user's attention. Using badg
 You can display the number of unread Content Cards your user has as a badge on your app's icon. 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 You can request the number of unread cards at any time by calling:
 
@@ -107,7 +107,7 @@ You can then use this information to display a badge signifying how many unread 
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. After the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
@@ -147,7 +147,7 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 You can request the number of unread cards at any time by calling:
 

@@ -16,6 +16,7 @@ search_rank: 2
 ## 사용 사례
 
 몇 가지 일반적인 사용자 지정 이벤트 사용 사례는 다음과 같습니다:
+
 - [액션 기반 전달을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) 사용하여 사용자 지정 이벤트를 기반으로 캠페인 또는 캔버스 트리거하기
 - 사용자 지정 이벤트를 수행한 횟수, 마지막으로 이벤트가 발생한 시간 등을 기준으로 사용자를 세분화합니다.
 - 대시보드 [사용자 지정 이벤트 분석을]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) 사용하여 각 이벤트의 발생 빈도에 대한 집계 보기
@@ -36,7 +37,7 @@ search_rank: 2
 
 ### 차단 목록에 추가 중
 
-작업 메뉴를 통해 개별 사용자 지정 이벤트를 차단하거나 최대 10개의 이벤트를 일괄적으로 선택하여 차단 목록에 추가할 수 있습니다. 
+You can blocklist individual custom events through the actions menu, or select and blocklist up to 100 events in bulk. 
 
 사용자 지정 이벤트를 차단하는 경우
 
@@ -58,15 +59,11 @@ search_rank: 2
 
 사용량 보고서에는 특정 커스텀 이벤트를 사용하는 모든 캔버스, 캠페인 및 세그먼트가 나열됩니다. 이 목록에는 Liquid의 사용법이 포함되어 있지 않습니다. 
 
-여러 사용자 지정 이벤트의 확인란을 선택한 다음 **사용량 보고서 보기를** 선택하면 한 번에 최대 10개의 사용량 보고서를 볼 수 있습니다.
+You can view up to 100 usage reports at a time by selecting the checkboxes for multiple custom events and then selecting **View usage report**.
 
 ## 데이터 내보내기
 
 사용자 지정 이벤트 목록을 CSV 파일로 내보내려면 페이지 상단의 **모두 내보내기** 버튼을 선택합니다. CSV 파일이 생성되고 다운로드 링크가 이메일로 전송됩니다.
-
-{% alert important %}
-이 기능은 현재 초기 액세스 중입니다. 이 얼리 액세스에 참여하려면 고객 성공 매니저에게 문의하세요.
-{% endalert %}
 
 ## 사용자 지정 이벤트 로깅
 
@@ -74,13 +71,13 @@ search_rank: 2
 
 {% details 플랫폼별 설명서 확장 %}
 
-- [Android 및 FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
-- [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
 
 {% enddetails %}
 
@@ -167,7 +164,7 @@ Braze는 사용자 지정 이벤트가 발생한 횟수와 세분화를 위해 �
 
 #### 트리거 메시지
 
-사용자 지정 이벤트 속성을 사용하여 특정 캠페인 또는 캔버스의 대상 범위를 더욱 좁힐 수 있습니다. 예를 들어, 전자상거래 애플리케이션이 있고 사용자가 장바구니를 이탈할 때 메시지를 보내려는 경우 사용자 지정 이벤트 속성 `cart value` 을 추가하여 타겟 고객을 개선하고 캠페인 개인화를 강화할 수 있습니다.
+사용자 지정 이벤트 속성을 사용하여 특정 캠페인 또는 캔버스의 대상 범위를 더욱 좁힐 수 있습니다. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
 
 ![버려진 카드에 대한 사용자 지정 이벤트 속성 필터. 두 개의 필터를 AND 연산자와 결합하여 장바구니 금액이 100~200달러인 카드를 포기한 사용자에게 이 캠페인을 보냅니다.][16]
 
@@ -208,11 +205,16 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 
 이벤트 속성 세분화를 사용하여 발생한 사용자 지정 이벤트 및 해당 이벤트와 관련된 속성을 기반으로 사용자를 타겟팅합니다. 이렇게 하면 구매 및 사용자 지정 이벤트별로 세분화할 때 필터링 옵션이 늘어납니다.
 
-사용자 지정 이벤트의 이벤트 속성은 해당 이벤트를 사용하는 모든 세그먼트에 대해 실시간으로 업데이트됩니다. **데이터 설정** > **사용자 지정 이벤트로** 이동하여 연결된 사용자 지정 이벤트의 **속성 관리를** 선택하여 속성을 관리할 수 있습니다. 특정 세그먼트 필터에 사용되는 커스텀 이벤트 속성정보에는 최대 30일의 과거 조회 기록이 있습니다.
+사용자 지정 이벤트의 이벤트 속성은 해당 이벤트를 사용하는 모든 세그먼트에 대해 실시간으로 업데이트됩니다. You can manage properties by going to **Data Settings** > **Custom Events** and selecting **Manage properties** for the associated custom event. 특정 세그먼트 필터에 사용되는 커스텀 이벤트 속성정보에는 최대 30일의 과거 조회 기록이 있습니다.
 
-{% alert note %}
-이벤트 속성 최근성 및 빈도를 기준으로 세그먼트를 만들려면 고객 성공 관리자에게 문의하여 특정 사용자 지정 이벤트 속성에 대한 세그먼테이션을 사용 설정하세요. 활성화하면 세분화할 때 추가 필터링 옵션에 액세스할 수 있습니다.
-{% endalert %}
+##### Adding event properties for segmentation
+
+You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+To add event properties for segmentation, do the following:
+
+1. Go to your custom event and select **Manage properties**.
+2. Select the **Enable segmentation** toggle to add the event property for segmentation. You can access additional filtering options when segmenting.
 
 이벤트 속성 세분화 필터에는 다음이 포함됩니다:
 

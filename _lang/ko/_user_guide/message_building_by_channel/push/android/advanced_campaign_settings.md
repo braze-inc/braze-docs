@@ -24,11 +24,33 @@ tool:
 
 ![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
 
-## Time-to-live (TTL) {#ttl}
+## Time to live (TTL) {#ttl}
 
-The time-to-live(TTL) 필드를 사용하면 푸시 메시징 서비스로 메시지를 저장할 커스텀 시간을 설정할 수 있습니다. Firebase Cloud Messaging(FCM)의 기본값 TTL은 4주이고 Amazon Device Messaging (ADM)의 기본값은 31일입니다.
+The **Time to Live** field allows you to set a custom length of time to store messages with the push messaging service. If the device remains offline beyond the TTL, the message will expire and not be delivered.
 
-예를 들어, 앱이 게임이고 사용자가 매일 게임을 플레이하는 연속 기록을 유지하면 인게임 화폐 보너스를 제공한다고 가정해 보겠습니다. 사용자가 특정 일수를 초과한 경우 연속 기록이 깨질 위험이 있음을 경고하는 푸시를 보낼 수 있습니다. 그러나 사용자가 4주 후에 기기를 게임 앱에 다시 연결하고 TTL을 기본값으로 설정하면, 메시징 서비스에서 해당 메시지가 이미 만료되어 전달되지 않습니다.
+To edit the time to live for your Android push, go to the composer and select the **Settings** tab. Find the **Time to Live** field and enter a value in days, hours, or seconds.
+
+The default values for time to live are defined by your admin on the [Push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
+
+For example, let's say your app hosts a weekly trivia contest. You send a push notification an hour before it starts. By setting the TTL to 1 hour, you make sure that users who open the app after the contest starts won’t receive a notification about an event that has already begun.
+
+{% details Best practices %}
+
+#### When to use shorter TTL
+
+Shorter TTLs make sure users receive timely notifications for events or promotions that quickly lose relevance. For example:
+
+- **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1–2 hours)
+- **Food delivery:** Notifying users when their order is nearby (TTL: 10–15 minutes)
+- **Transportation apps:** Sharing ride arrival updates (TTL: a few minutes)
+- **Event reminders:** Notifying users when a webinar is starting soon (TTL: under 1 hour)
+
+#### When to avoid shorter TTL
+
+- If your campaign’s message remains relevant for several days or weeks, such as subscription renewal reminders or ongoing promotions.
+- When maximizing reach is more important than urgency, like with app update announcements or feature promotions.
+
+{% enddetails %}
 
 ## Firebase 메시징 전달 우선순위 {#fcm-priority}
 

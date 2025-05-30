@@ -34,6 +34,6 @@ channel: email
 
 ## 가져오기 방법
 
-이메일 목록이 준비되면 Braze REST API 또는 CSV 파일 등 여러 가지 방법으로 사용자를 Braze로 가져올 수 있습니다. 자세한 내용은 [사용자 가져오기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) 전용 문서를 참조하세요.
+이메일 목록이 준비되면 Braze REST API 또는 CSV 파일 등 여러 가지 방법으로 사용자를 Braze로 가져올 수 있습니다. Read more at our dedicated [User Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/) article.
 
 [60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

@@ -16,7 +16,7 @@ To contact the Braze Support team, navigate to the Braze dashboard. In the dashb
 
 ![The "Support" dropdown with the option to get help.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Depending on your Braze permissions, and if you're a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
+Depending on your Braze permissions and if you're a designated support contact (premium), you will either be taken to the Braze support portal, where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
 
 ## Submitting a support case
 
@@ -61,6 +61,8 @@ Consider attaching a screenshot to illustrate the problem. Providing these image
 
 If..., then attach the following logs from your web browser.
 
+Share a sampling of users rather than the entire affected segment. Providing a smaller number of users helps us narrow our scope and speed up our investigations.
+
 #### Step 4.1: Access the developer tools
 
 {% tabs %}
@@ -83,10 +85,14 @@ If..., then attach the following logs from your web browser.
 
 #### Step 4.2: Get console logs
 
+Network logs (also known as HAR logs) contain a history of network requests made between your browser and the Braze server, which helps us troubleshoot the individual components on the page causing issues.
+
+If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will display the network requests between the browser and the server for the individual components of a webpage, as well as the Braze dashboard the user is trying to open.
+
 {% tabs %}
 {% tab Chrome %}
 1. From your developer tools, select the **Console** tab.
-2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Chrome browser.]()
+2. Take a screenshot of all messages in the log.<br><br>![The "Fetch/XHR" tab in a Chrome browser.][1]{: style="max-width:60%;"}
 {% endtab %}  
   
 {% tab Firefox %}
@@ -97,27 +103,6 @@ If..., then attach the following logs from your web browser.
 {% tab Safari %}
 1. From your developer tools, select the **Console** tab.
 2. Take a screenshot of all messages in the log.<br><br>![The "Console" tab in a Safari browser.]()
-{% endtab %}
-{% endtabs %}
-
-#### Step 4.3: Get network logs
-
-Network logs (also known as HAR logs) contain a history of network requests made between your browser and the Braze server, which helps us troubleshoot the individual components on the page causing issues.
-
-{% tabs %}
-{% tab Chrome %}
-1. From your developer tools, select **Network** > **Fetch/XHR**.
-2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "Fetch/XHR" tab in a Chrome browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
-{% endtab %}  
-  
-{% tab Firefox %}
-1. From your developer tools, select **Network** > **XHR**.
-2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "XHR" tab in a Firefox browser.]()
-{% endtab %}
-
-{% tab Safari %}
-1. From your developer tools, select **Network**, then select the filter dropdown and choose **Fetch/XHR**.
-2. Take a screenshot that includes the **Name**, **Status**, **Size**, and **Time**.<br><br>![The "Fetch/XHR" tab in a Safari browser.]()
 {% endtab %}
 {% endtabs %}
 
@@ -155,3 +140,10 @@ To make yourself a designated support contact:
 ![ALT_TEXT.]()
 {% endtab %}
 {% endtabs %}
+
+{% alert note %}
+Marking an issue as "Critical" means your production instance is down, and all work within Braze has stopped.
+{% endalert %}
+
+[1]: {% image_buster /assets/img/network_xhr.png %}
+

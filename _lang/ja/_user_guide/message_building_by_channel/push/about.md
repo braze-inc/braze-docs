@@ -13,7 +13,7 @@ channel:
 
 > プッシュ通知は、時間的な制約のあるアクションの呼びかけや、しばらくアプリを使用していないユーザーの再獲得において、非常に優れています。プッシュ通知のキャンペーンが成功すると、ユーザーを直接コンテンツに移動し、アプリケーションの価値を提示します。
 
-ユーザーがお客様のメッセージを受信するには、プッシュ通知にオプトインする必要があることに留意してください。つまり、アプリ内メッセージを使用して、お客様がプッシュ通知を送信する理由や、プッシュを有効にすることで得られるメリットを顧客に説明することをお勧めします。このプロセスは、[プッシュプライミング]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/)と呼ばれます。
+ユーザーがお客様のメッセージを受信するには、プッシュ通知にオプトインする必要があることに留意してください。つまり、アプリ内メッセージを使用して、お客様がプッシュ通知を送信する理由や、プッシュを有効にすることで得られるメリットを顧客に説明することをお勧めします。このプロセスは、[プッシュプライミング]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)と呼ばれます。
 
 ![複数の Apple 製品にわたるプッシュ通知メッセージの例。][1]{: height="400px"} ![iPhoneのホーム画面に表示されるStopwatchのプッシュメッセージの例:「こんにちは。これは iOS プッシュ通知です。」][2]{: height="400px"}
 
@@ -37,9 +37,9 @@ channel:
 
 Braze を使用してプッシュ通知メッセージの作成および送信を行うには、開発者と協力してプッシュ通知を Web サイトまたはアプリに統合する必要があります。詳細なステップについては、プラットフォームごとのインテグレーションガイドを参照してください。
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
+- [Web]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)
 
 ## プッシュメッセージ規定
 

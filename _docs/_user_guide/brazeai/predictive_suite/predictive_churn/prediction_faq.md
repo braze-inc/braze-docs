@@ -24,11 +24,11 @@ While Predictive Churn is turned on at a company level, some workspaces may not 
 
 ### Problems with prediction audience size
 
-![][3]{: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
-
 When building out your prediction audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your prediction audience has too few users: 
 
-"Not enough past churners available from the selected prediction audience in the past 7 days to reliably build the prediction."
+"Not enough past non-churners to reliably build the Prediction"
+
+![Prediction data requirements showing 31 past churners (meets requirement) and 0 past non-churners (below minimum). A warning message indicates not enough non-churners to build the prediction.][3]
 
 If your prediction audience definition is too strict, you might not have a large enough pool of both historic and active users to work with. To fix this, you will need to either change the number of days and type of attributes used in this definition, switch up the actions that define churn, or both. 
 

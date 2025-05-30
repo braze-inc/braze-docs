@@ -4,7 +4,7 @@ article_title: クリエイティブの詳細
 page_order: 4
 layout: dev_guide
 guide_top_header: "クリエイティブの詳細"
-guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>メッセージをテストする</a>ことをお勧めする。<br><br> 以下のメッセージタイプのクリエイティブ・スペック、またはグローバル・クリエイティブ・ディテールの記事をチェックしてほしい。"
+guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>メッセージをテストする</a>ことをお勧めする。"
 description: "このランディングハブでは、モーダル、スライドアップ、フルスクリーンの3種類のアプリ内メッセージのデザインとコンテンツの要件をカバーしている。"
 
 channel:
@@ -91,10 +91,10 @@ guide_featured_list:
 
 ### GIFとビデオ
 
-Braze は現在、アプリ内メッセージングで GIF をサポートしており、Web (標準装備)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/)、およびの iOS (標準装備) に対応しています。ただし、目的のプラットフォームの連携時に有効にしておく必要があります。アプリ内メッセージの動画については、[カスタマイズのドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)を参照してください。
+Braze は現在、アプリ内メッセージングで GIF をサポートしており、Web (標準装備)、[Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android)、およびの iOS (標準装備) に対応しています。ただし、目的のプラットフォームの連携時に有効にしておく必要があります。アプリ内メッセージの動画については、[カスタマイズのドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)を参照してください。
 
 ## その他の考慮事項
 
-Brazeのアプリ内メッセージには、グローバル仕様と個別クリエイティブ仕様がある。アプリ内メッセージのフルカスタマイズの詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/)のページを参照してください。
+Brazeのアプリ内メッセージには、グローバル仕様と個別クリエイティブ仕様がある。アプリ内メッセージのフルカスタマイズの詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)のページを参照してください。
 
 <br>

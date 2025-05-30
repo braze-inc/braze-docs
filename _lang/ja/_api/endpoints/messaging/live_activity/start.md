@@ -15,7 +15,7 @@ description: "この記事では、「ライブアクティビティを開始」
 /messages/live_activity/start
 {% endapimethod %}
 
-> このエンドポイントを使用して、iOSアプリに表示される[Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/)をリモートで開始します。このエンドポイントは追加のセットアップが必要です。
+> このエンドポイントを使用して、iOSアプリに表示される[Live Activities]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)をリモートで開始します。このエンドポイントは追加のセットアップが必要です。
 
 ライブアクティビティを作成した後、任意のセグメントのアクティビティをリモートで開始するためにPOSTリクエストを送信できます。詳細については、Appleのライブアクティビティについては、[ActivityKitプッシュ通知でライブアクティビティを開始および更新する](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)を参照してください。
 
@@ -26,7 +26,7 @@ description: "この記事では、「ライブアクティビティを開始」
 このエンドポイントを使用するには、次の手順を完了する必要があります:
 
 - `messages.live_activity.start` の権限を持つ API キーを生成します。
-- 「[ライブアクティビティを作成]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity)」Braze SWIFT SDK を使用します。
+- 「[ライブアクティビティを作成]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity)」Braze SWIFT SDK を使用します。
 
 ## レート制限
 

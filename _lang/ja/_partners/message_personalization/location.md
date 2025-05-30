@@ -15,8 +15,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
-- name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+- name: インフィリオン
+  url: /docs/partners/message_personalization/location/infillion/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot

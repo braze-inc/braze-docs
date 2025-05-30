@@ -40,7 +40,9 @@ Adding an email address in this section allows you to select it as a reply-to ad
 {% endtab %}
 {% tab BCC Address %}
 
-This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
+This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
+
+Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
 {% alert important %} 
 Appending a BCC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
@@ -48,7 +50,7 @@ Appending a BCC address to your campaign or Canvas will result in doubling your 
 
 ![BCC Address section of the Email Settings tab.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
-Once you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. To override this at the message level, you can select **No BCC** when setting up your message.
+After you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. To override this at the message level, you can select **No BCC** when setting up your message.
 
 If you require that all email messages sent from Braze have a BCC address included, you can select the **Require a BCC address for all your email campaigns** toggle. This will require you to select a default address which will be automatically selected on new email campaigns or Canvas steps. The default address will also be automatically added to all messages triggered through our REST API. There is no need to change the existing API request to include the address.
 
@@ -121,9 +123,9 @@ If the header is in the raw version of the email but is not displayed, the mailb
 
 ### Email unsubscribe header in workspaces
 
-![]({% image_buster /assets/img/email_settings/email_unsub_header_workspaces.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
+![Selecting the "users who are subscribed or opted in" for which users to send to.]({% image_buster /assets/img/email_settings/email_unsub_header_workspaces.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
-When the email unsubscribe header feature is turned on, this setting applies to the entire workspace, not the company-level. It’s added to campaigns and Canvases that are set up to send to users who are subscribed or opted-in, or opted-in users in the **Target Audiences** step of the campaign and Canvas builders.
+When the email unsubscribe header feature is turned on, this setting applies to the entire workspace, not the company-level. It’s added to campaigns and Canvases that are set up to send to users who are subscribed or opted-in, or opted-in users in the **Target Audience** step of the campaign and Canvas builders.
 
 When using the "workspace default," Braze doesn't add the one-click unsubscribe header for campaigns that are considered transactional, which are configured to "send to all users including unsubscribed users". To override this and add the one-click unsubscribe header when sending to unsubscribed users, you can select **Unsubscribe globally from all emails** in the message-level one-click list-unsubscribe settings.
 
@@ -135,7 +137,7 @@ Gmail intends for senders to implement the one-click unsubscribe for all their o
 
 To use the Braze unsubscribe feature to process unsubscribes directly, select **Include a one-click list-unsubscribe (mailto and HTTP) email header for emails sent to subscribed or opted-in users** and select **Braze default** as the standard Braze URl and mail-to. 
 
-![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:80%;"}
+![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %})
 
 Braze supports the following versions of the list-unsubscribe header:
 

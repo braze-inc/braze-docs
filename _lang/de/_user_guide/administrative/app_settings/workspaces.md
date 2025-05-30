@@ -25,9 +25,9 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie mit Ihrem Team und Ihrem Braze 
 
 Sie können über das Dropdown-Menü Arbeitsbereich in der globalen Kopfzeile neue Arbeitsbereiche erstellen oder zwischen bestehenden Arbeitsbereichen wechseln.
 
-1. Wählen Sie die Dropdown-Liste Workspace aus und klicken Sie auf <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Workspace erstellen**.
+1. Wählen Sie das Dropdown-Menü Workspace und dann <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Workspace erstellen**.
 
-![][1]
+![Das Workspace-Dropdown mit dem Button "Workspace erstellen".][1]{: style="max-width:60%;"}
 
 {:start="2"}
 2\. Geben Sie Ihrem Arbeitsbereich einen Namen.
@@ -39,29 +39,29 @@ Vielleicht möchten Sie eine Namenskonvention festlegen, damit andere in Ihrem U
 {:start="3"}
 3\. Wählen Sie **Erstellen**. Es kann ein paar Sekunden dauern, bis Braze Ihren Arbeitsbereich erstellt hat.
 
-![][2]
+![Modal "Workspace erstellen" mit dem Namen "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
 
 Sie werden zur Seite **App-Einstellungen** weitergeleitet, auf der Sie Ihre App-Instanzen hinzufügen können. Sie können diese Seite jederzeit über **Einstellungen** > **App-Einstellungen** aufrufen.
 
-![][3]
+![Seite "App-Einstellungen" für den Upon Voyage US - Staging Workspace mit einem Button zum Hinzufügen einer App.][3]
 
 ### Schritt 3: Fügen Sie Ihre App-Instanzen hinzu
 
 Wir bezeichnen die verschiedenen Websites und Apps, die innerhalb eines Workspace gesammelt werden, als "App-Instanzen".
 
-1. Klicken Sie auf der Seite **App-Einstellungen** auf **\+ App hinzufügen**.
+1. Wählen Sie auf der Seite mit **den App-Einstellungen** **\+ App hinzufügen**.
 2. Geben Sie Ihrer App-Instanz einen Namen und wählen Sie aus, auf welcher Plattform oder welchen Plattformen diese App-Instanz läuft. Wenn Sie mehrere Plattformen auswählen, wird Braze eine App-Instanz für jede Plattform erstellen.
 
-![][4]{: style="max-width:60%" }
+![Modal "Neue App zu Upon Voyage US - Staging hinzufügen" mit Optionen zum Auswählen der App-Details.][4]{: style="max-width:60%" }
 
 {:start="3"}
-3\. Klicken Sie zur Bestätigung auf **App hinzufügen**.
+3\. Wählen Sie zur Bestätigung **App hinzufügen**.
 
 #### App API-Schlüssel
 
 Nachdem Sie Ihre App-Instanz hinzugefügt haben, haben Sie Zugang zu ihrem API-Schlüssel. Der API-Schlüssel wird verwendet, wenn Sie Anfragen zwischen Ihrer App-Instanz und der Braze API stellen. Der API-Schlüssel ist auch wichtig für die Integration des Braze SDK mit Ihrer App oder Website.
 
-![][5]
+![Einstellungsseite für die Upon Voyage iOS App mit Feldern für den API-Schlüssel und den SDK-Endpunkt.][5]
 
 {% alert note %}
 Sie müssen für jede Version Ihrer App auf jeder Plattform separate App-Instanzen erstellen. Wenn Sie zum Beispiel eine kostenlose und eine Pro-Version Ihrer App für iOS und Android haben, erstellen Sie vier App-Instanzen in Ihrem Arbeitsbereich (kostenlose iOS-App, kostenlose Android-App, Pro-iOS-App und Pro-Android-App). So erhalten Sie vier API-Schlüssel, die Sie verwenden können, einen für jede App-Instanz.
@@ -73,7 +73,7 @@ Die Live-SDK-Version, die auf der Seite App-Einstellungen für eine bestimmte Ap
 
 Dieses Feld erscheint, nachdem Sie das Braze SDK in Ihre App oder Website integriert haben. Wenn eine neuere Version des Braze SDK für Ihre Plattform verfügbar ist, wird dies hier mit dem Tag "Neuere Version verfügbar" vermerkt.
 
-![][6]
+![Abschnitt "Live SDK Version" mit dem Feldwert "5.4.0" und einem Symbol, das besagt, dass eine neue Version verfügbar ist.][6]
 
 ### Schritt 4: Wiederholen Sie den Vorgang nach Bedarf
 
@@ -89,7 +89,7 @@ Wiederholen Sie die Schritte 2 und 3, um so viele Workspaces einzurichten, wie I
 
 Sie können bevorzugte Workspaces hinzufügen, um noch schneller auf die Workspaces zuzugreifen, die Sie am häufigsten verwenden.
 
-![][7]
+![Workspace-Dropdown mit dem Tab für "Favorisierte Workspaces".][7]{: style="max-width:50%;"}
 
 So fügen Sie bevorzugte Arbeitsbereiche hinzu:
 
@@ -108,21 +108,22 @@ So benennen Sie Ihren Arbeitsbereich um:
 2. Bewegen Sie den Mauszeiger über den Namen Ihres Arbeitsbereichs und wählen Sie <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Geben Sie Ihrem Arbeitsbereich einen neuen Namen und wählen Sie dann <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Speichern**.
 
-![][8]
+![Das Bleistiftsymbol neben dem Namen des Workspaces.][8]{: style="max-width:50%;"}
 
-### Löschen von Arbeitsbereichen
+### Löschen von Workspaces und App-Instanzen
 
-
-So löschen Sie Ihren Arbeitsbereich:
+So löschen Sie Ihren Workspace oder Ihre App-Instanz:
 
 1. Gehen Sie zu **Einstellungen** > **App-Einstellungen**.
-2. Wählen Sie **Arbeitsbereich löschen**.
+2. Wählen Sie **Workspace löschen**, um den jeweiligen Workspace zu löschen, oder wählen Sie das Mülleimer-Symbol neben der jeweiligen App-Instanz.
+
+Sie können keine App-Instanzen oder Workspaces löschen, die derzeit für das Targeting von Nutzern:innen verwendet werden oder die mehr als 1.000 Nutzer:innen haben. Wenn Sie dies versuchen, erhalten Sie eine Fehlermeldung. Um fortzufahren und sie zu löschen, [erstellen Sie einen Support-Fall]({{site.baseurl}}/user_guide/administrative/access_braze/support/), der einen Dashboard-Link und den Namen der zu löschenden App-Instanz oder des Workspace enthält.
 
 {% alert warning %}
 Seien Sie vorsichtig beim Löschen von Arbeitsbereichen! Nachdem ein Workspace gelöscht wurde, kann er nicht wiederhergestellt werden.
 {% endalert %}
 
-![][9]
+![Die Seite App-Einstellungen mit einem Button zum Löschen eines Workspace und einem Mülleimer-Symbol zum Löschen einer App.][9]
 
 ## Häufig gestellte Fragen
 
@@ -148,7 +149,7 @@ Standardmäßig zielt ein Segment auf alle Apps und Websites im Workspace ab. So
 2. Für **gezielte Apps und Websites** wählen Sie **Benutzer aus bestimmten Apps**.
 3. Wählen Sie in der Dropdown-Liste **Spezifische Apps** Ihre App oder Website aus.
 
-![][10]{: style="max-width:75%" }
+![Segmente, die Nutzer:innen aus bestimmten Apps zusammenstellen.][10]
 
 Sie können dieses Segment dann zu Ihrer Nachricht hinzufügen und Ihre Zielgruppe bei Bedarf mit zusätzlichen Segmenten und Filtern weiter verfeinern.
 

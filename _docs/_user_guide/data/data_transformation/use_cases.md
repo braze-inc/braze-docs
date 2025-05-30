@@ -25,7 +25,7 @@ When customers open customer service tickets on a platform like Zendesk, you can
 
 ## Integrating with Braze
 
-Braze has an integration with [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/), a customer insights and survey platform. With Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
+Braze has an integration with [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/), a customer insights and survey platform. With Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
 
 ## Example transformation code
 

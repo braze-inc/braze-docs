@@ -50,7 +50,7 @@ alias: "/sms_geographic_permissions/"
 
 ## 차단된 전송의 가시성
 
-허용 목록에 없는 국가로의 전송 시도는 중단됩니다. 중단된 메시지는 [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) 및 [SMS 중단 메시지 인게이지먼트 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)에 기록됩니다. 
+허용 목록에 없는 국가로의 전송 시도는 중단됩니다. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). 
 
 차단된 전송으로 인해 중단된 메시지는 `Abort_Type = "blocked_recipient_country"`로 표시되며 중단 로그에는 차단된 국가가 자세히 나옵니다.
 

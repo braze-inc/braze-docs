@@ -68,7 +68,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 3: Set up a postback from Kochava
 
-[Add a postback][18] in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in Braze's dashboard.
+[Add a postback][18] in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in the Braze dashboard.
 
 ### Step 4: Confirm the integration
 
@@ -117,7 +117,7 @@ If you currently do not use any device identifiers - such as the IDFV or GAID - 
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
+[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
 [4]: {% image_buster /assets/img/attribution/kochava.png %}

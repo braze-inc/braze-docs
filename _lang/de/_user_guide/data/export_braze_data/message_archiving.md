@@ -28,13 +28,17 @@ Die Aktivierung dieses Features wirkt sich auf die Geschwindigkeit der Zustellun
 
 Das JSON wird in Ihrem Bucket mit der folgenden Schlüsselstruktur gespeichert:
 
-`sent_messages/channel/(one of: md5, e164 phone number, email, or push token)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
+`sent_messages/{channel, one of: email, push, sms}/{MD5 digest of downcased: email address, push token, or E.164 phone number}/{campaign or Canvas step API ID}/{dispatch ID}.json.gz`
 
 Eine Beispieldatei könnte wie folgt aussehen:
 
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert note %}
+Der MD5-Digest kann nur mit einer bekannten, heruntergeladenen E-Mail Adresse, einem Push-Token oder einer E.164 Telefonnummer berechnet werden. Ein bekannter MD5-Digest kann nicht umgekehrt werden, um die heruntergeladene E-Mail Adresse, das Push-Token oder die E.164 Telefonnummer zu erhalten.
+{% endalert %}
+
+{% alert tip %}
 **Haben Sie Probleme, Ihre Push-Token in Ihren Buckets zu finden?**<br>
 Braze verkleinert Ihre Push-Token, bevor wir sie hashen. Dies führt dazu, dass der Push-Token `Test_Push_Token12345` im Schlüsselpfad mit dem Hashwert `32b802170652af2b5624b695f34de089` auf `test_push_token12345` herabgestuft wird.
 {% endalert %}
@@ -136,7 +140,7 @@ Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Sch
   "version" : 1, //numerical version of the json structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
-  "platform": ios/android/web/kindle,
+  "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
   "app_id": ApiKeyOfApp,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,

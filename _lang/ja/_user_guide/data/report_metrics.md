@@ -24,7 +24,7 @@ tool: Reports
 メール
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='AMPクリック' %}
+{% multi_lang_include metrics.md metric='AMP Clicks' %}
 
 {% endapi %}
 
@@ -122,7 +122,7 @@ iOSプッシュ、Androidプッシュ
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='ボタン1クリック' %}
+{% multi_lang_include metrics.md metric='Button 1 Clicks' %}
 
 <span class="calculation-line">計算式: (ボタン 1 のクリック数) / (インプレッション数)</span>
 
@@ -136,9 +136,21 @@ iOSプッシュ、Androidプッシュ
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='ボタン2クリック' %}
+{% multi_lang_include metrics.md metric='Button 2 Clicks' %}
 
 <span class="calculation-line">計算式: (ボタン 2 のクリック数) / (インプレッション数)</span>
+
+{% endapi %}
+
+{% api %}
+
+### キャンペーン分析
+
+{% apitags %}
+フィーチャーフラグ
+{% endapitags %}
+
+さまざまなチャネルにわたるメッセージのパフォーマンス。表示されるメトリックは、選択したメッセージングチャネルによって異なり、[Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) が多変量検定であるかどうかによって異なります。
 
 {% endapi %}
 
@@ -178,7 +190,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Confirmed Deliveries' %} Braze を利用する顧客の場合、配信数は SMS 割り当てに対して請求されます。 
 
-<span class="calculation-line">計算式: カウント</span>
+{::nomarkdown}
+<span class="calculation-line">
+    計算式: 
+    <ul>
+        <li><i>確認済み配信数</i>:カウント</li>
+        <li><i>確認済み配信率 (%)</i>(確認済み配信)/(送信)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -260,7 +280,7 @@ SMS
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='メッセージを閉じる' %}
+{% multi_lang_include metrics.md metric='Close Message' %}
 
 {% endapi %}
 
@@ -344,6 +364,22 @@ SMS
 
 {% api %}
 
+### 配信失敗率
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
+
+<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+
+<span class="calculation-line">計算式: (配信失敗)/(送信)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### 直接開封数
 
 {% apitags %}
@@ -405,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} 失敗は<i>Sends</i>カウントに含まれますが、<i>Deliveries</i>カウントには含まれません。</td>
 
 <span class="calculation-line">計算(<i>故障率</i>):(失敗数) / (送信数)</span>
+
+{% endapi %}
+
+{% api %}
+
+### 特徴フラグ実験性能
+
+{% apitags %}
+フィーチャーフラグ
+{% endapitags %}
+
+Feature Flag 実験でのメッセージのパフォーマンスメトリクス。表示される特定のメトリクスは、メッセージングチャネル、および実験が多変量検定であるかどうかによって異なります。
 
 {% endapi %}
 
@@ -480,7 +528,7 @@ iOSプッシュ、Androidプッシュ
 コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='平均日次収益' %}
+{% multi_lang_include metrics.md metric='Average Daily Revenue' %}
 
 {% endapi %}
 
@@ -504,7 +552,7 @@ iOSプッシュ、Androidプッシュ
 コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='ユーザーあたりの日次収益' %}
+{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
 
 {% endapi %}
 
@@ -598,7 +646,21 @@ SMS
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='読み取り' %}
+{% multi_lang_include metrics.md metric='Reads' %}
+
+{% endapi %}
+
+{% api %}
+
+### 読み取り率
+
+{% apitags %}
+WhatsApp
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Read Rate' %}
+
+<span class="calculation-line">計算式: (既読通知付きで読む) / (送信)</span>
 
 {% endapi %}
 
@@ -631,7 +693,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Rejections' %}Braze を利用する顧客の場合、拒否数は SMS 割り当てに対して請求されます。
 
-<span class="calculation-line">計算式: カウント</span>
+{::nomarkdown}
+<span class="calculation-line">
+    計算式: 
+    <ul>
+        <li><i>拒否数</i>:カウント</li>
+        <li><i>拒否率</i>:(拒否)/(送信)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -643,7 +713,7 @@ SMS
 メール
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='収益' %}
+{% multi_lang_include metrics.md metric='Revenue' %}
 
 {% endapi %}
 
@@ -713,7 +783,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
-<span class="calculation-line">計算式: カウント</span>
+{::nomarkdown}
+<span class="calculation-line">
+    計算式: 
+    <ul>
+        <li><i>キャリアへ送信</i>:カウント</li>
+        <li><i>キャリアレートへ送信</i>:(キャリアへ送信)/(送信)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -726,6 +804,8 @@ SMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側ごとに異なります。
+
+ソフトバウンスはキャンペーンアナリティクスでは追跡されませんが、[Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) でソフトバウンスをモニタリングできます。また、これらのユーザーを送信から除外したり、[Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) で過去30 日間のソフトバウンスの量を振り返ったりすることもできます。メッセージアクティビティログでは、ソフトバウンスの理由を確認し、メールキャンペーンの「送信」と「配信」の間に発生する可能性のある不一致を理解することもできます。
 
 {% endapi %}
 
@@ -783,7 +863,7 @@ SMS
 Eメール、コンテンツカード、SMS、LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} LINE の場合、1 日あたり20 メッセージの最小しきい値に達した後、これが追跡されます。AMP メールの場合、これはHTML およびプレーンテキストバージョンのクリックの合計です。
+{% multi_lang_include metrics.md metric='Total Clicks' %} LINE の場合、1 日あたり20 メッセージの最小しきい値に達した後、これが追跡されます。AMPの電子メールには、HTMLとプレーンテキストの両方のバージョンで記録されたクリックが含まれます。この数字は、スパム対策ツールによって人為的に膨らませる可能性があります。 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -806,9 +886,17 @@ Eメール、コンテンツカード、SMS、LINE
 コンテンツカード
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %} ユーザが同じキャンペーンから2 つの異なるカードを受け取り、両方を却下すると、このカウントは2 つ増加します。再適格性により、ユーザーがカードを受け取るたびに_却下数の合計_を増やすことができます。各カードは異なるメッセージです。
 
-<span class="calculation-line">計算式: カウント</span>
+{::nomarkdown}
+<span class="calculation-line">
+    計算式: 
+    <ul>
+        <li><i>却下数の合計</i>カウント</li>
+        <li><i>却下率の合計</i>却下数の合計/インプレッション数の合計</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -871,7 +959,7 @@ Eメール、コンテンツカード、SMS、LINE
 メール, コンテンツカード, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} メールの場合、これは7日間にわたって追跡されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。LINE の場合、1 日 20 通の最小しきい値に達した後、これが追跡されます。
+{% multi_lang_include metrics.md metric='Unique Clicks' %} これには、Braze が提供する登録解除リンクのクリックが含まれます。メールの場合、これは7日間にわたって追跡されます。LINE の場合、1 日 20 通の最小しきい値に達した後、これが追跡されます。
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -908,7 +996,7 @@ Eメール、コンテンツカード、SMS、LINE
 アプリ内メッセージ、コンテンツカード
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} アプリ内メッセージのユニークインプレッション数は、再適格性が有効で、かつユーザーがトリガーアクションを実行した場合、24時間後に再び加算できます。再適格性が有効になっている場合は、<i>ユニークインプレッション数</i> = <i>ユニーク受信者数</i>です。<br><br>コンテンツカードの場合、ユーザーがコンテンツカードを2回目に表示したときには、カウントは増加しません。 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} アプリ内メッセージのユニークインプレッション数は、再適格性が有効で、かつユーザーがトリガーアクションを実行した場合、24時間後に再び加算できます。再適格性がオンの場合、<i>固有印象</i>=<i>固有受信者</i>。<br><br>コンテンツカードの場合、ユーザーがコンテンツカードを2回目に表示したときには、カウントは増加しません。 
 
 <span class="calculation-line">計算式: カウント</span>
 

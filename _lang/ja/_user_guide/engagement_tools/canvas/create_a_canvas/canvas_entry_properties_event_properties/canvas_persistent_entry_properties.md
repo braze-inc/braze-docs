@@ -17,13 +17,14 @@ page_order: 5
 ## エントリプロパティを使用する
 
 エントリプロパティは、アクションベースおよび API トリガーのキャンバスで使用できます。これらのエントリプロパティは、キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされた時点で定義されます。詳細については、次の記事を参照してください。
+
 - [キャンバスエントリのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [イベントのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)
 - [購入対象]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 これらのオブジェクトから渡されるプロパティは、Liquid タグ `canvas_entry_properties` を使用して参照できます。例えば、`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` を使ったリクエストの場合、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} という Liquid を追加して、メッセージに「shoes」という単語を追加できます。
 
-キャンバスに Liquid タグ `canvas_entry_properties` を持つメッセージが含まれている場合、これらのプロパティに関連付けられている値は、ユーザーのジャーニーの間保持され、ユーザーがキャンバスを退出したときに削除されます。キャンバスエントリのプロパティは、Liquid で参照用にのみ使用できる点に注意してください。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)を使用します。
+キャンバスに Liquid タグ `canvas_entry_properties` を持つメッセージが含まれている場合、これらのプロパティに関連付けられている値は、ユーザーのジャーニーの間保持され、ユーザーがキャンバスを退出したときに削除されます。キャンバスエントリのプロパティは、Liquid で参照用にのみ使用できる点に注意してください。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)を使用します。
 
 {% alert note %}
 キャンバスエントリのプロパティオブジェクトの最大サイズは 50 KB に制限されています。

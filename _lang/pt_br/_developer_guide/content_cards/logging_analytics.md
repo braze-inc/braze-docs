@@ -1,7 +1,7 @@
 ---
 nav_title: Análise de dados de registro  
 article_title: Análise de dados de registro 
-page_order: 4
+page_order: 1
 description: "Este artigo aborda como registrar manualmente cliques, eventos e análises de dados para seus cartões de conteúdo personalizados."
 toc_headers: "h2"
 
@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # Análise de dados de registro 
 
-> Se quiser exibir os cartões de conteúdo de uma maneira totalmente personalizada, você poderá implementar sua própria interface de apresentação de cartões de conteúdo. No entanto, dados como impressões, cliques e descartes só são tratados automaticamente quando modelos de cartão padrão são utilizados. Ao implementar uma interface totalmente personalizada, você precisará lidar com esses dados manualmente. Para fazer isso, preencha sua interface do usuário personalizada com dados dos modelos de dados do Braze e registre manualmente análises de dados, como impressões e cliques. Depois de entender como registrar a análise de dados, você poderá ver as maneiras comuns pelas quais os clientes do Braze [criam cartões de conteúdo personalizados]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards). 
+> Se quiser exibir os cartões de conteúdo de uma maneira totalmente personalizada, você poderá implementar sua própria interface de apresentação de cartões de conteúdo. No entanto, dados como impressões, cliques e descartes só são tratados automaticamente quando modelos de cartão padrão são utilizados. Ao implementar uma interface totalmente personalizada, você precisará lidar com esses dados manualmente. Para fazer isso, preencha sua interface do usuário personalizada com dados dos modelos de dados do Braze e registre manualmente análises de dados, como impressões e cliques. Depois de entender como registrar a análise de dados, você poderá ver as maneiras comuns pelas quais os clientes do Braze [criam cartões de conteúdo personalizados]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
 
 ## Ouvindo as atualizações do cartão
 
@@ -20,7 +20,7 @@ Para obter os modelos de dados do cartão de conteúdo, inscreva-se para receber
 * **`id`**: Representa a string de ID do cartão de conteúdo. Esse é o identificador exclusivo usado para registrar análises de dados de cartões de conteúdo personalizados.
 * **`extras`**: Engloba todos os pares de valores-chave do dashboard do Braze. 
 
-Todas as propriedades fora de `id` e `extras` são opcionais para análise de cartões de conteúdo personalizados. Para saber mais sobre o modelo de dados, consulte o artigo de integração de cada plataforma: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/).
+Todas as propriedades fora de `id` e `extras` são opcionais para análise de cartões de conteúdo personalizados. Para saber mais sobre o modelo de dados, consulte o artigo de integração de cada plataforma: [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web).
 
 
 {% tabs %}
@@ -182,7 +182,7 @@ braze.openSession();
 ```
 
 {% alert note %}
-Os cartões de conteúdo somente serão atualizados no início da sessão se uma solicitação de inscrição for chamada antes de `openSession()`. Você também pode optar por [atualizar manualmente o feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed).
+Os cartões de conteúdo somente serão atualizados no início da sessão se uma solicitação de inscrição for chamada antes de `openSession()`. Você também pode optar por [atualizar manualmente o feed]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/).
 {% endalert %}
 
 {% endtab %}

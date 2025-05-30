@@ -15,8 +15,10 @@ description: "이 참고 문서에서는 Braze 사용자 프로필 수명주기�
 
 이러한 매개 변수에는 다음이 포함됩니다:
 
-* `braze_id`
+* `braze_id` (assigned by Braze)
 * `external_id`
+* `email`
+* `phone`
 * 설정한 커스텀 사용자 별칭 수에 제한 없음
 
 ## 익명 사용자 프로필
@@ -27,7 +29,7 @@ description: "이 참고 문서에서는 Braze 사용자 프로필 수명주기�
 
 ## 식별된 사용자 프로필
 
-앱에서 사용자를 인식할 수 있게 되면(사용자 ID 또는 이메일 주소를 제공함으로써) `changeUser` 방법을 사용하여 해당 사용자의 프로필에 `external_id` 을 할당하는 것이 좋습니다[(웹](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). `external_id`를 사용하면 여러 기기에서 동일한 고객 프로필을 식별할 수 있습니다. 
+앱에서 사용자를 인식할 수 있게 되면(사용자 ID 또는 이메일 주소를 제공함으로써) `changeUser` 방법을 사용하여 해당 사용자의 프로필에 `external_id` 을 할당하는 것이 좋습니다[(웹](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html)). `external_id`를 사용하면 여러 기기에서 동일한 고객 프로필을 식별할 수 있습니다.
 
 `external_id` 사용의 추가 혜택은 다음과 같습니다: 
 
@@ -36,11 +38,20 @@ description: "이 참고 문서에서는 Braze 사용자 프로필 수명주기�
 - [사용자 데이터 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/) 사용하여 앱 외부의 소스에서 사용자 데이터를 가져오고 [메시징 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging/) 사용하여 트랜잭션 메시지로 사용자를 타겟팅할 수 있습니다.
 - 세그먼트 내에서 '테스트' [필터를]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) 사용하여 개별 사용자를 검색하고, 세그먼트 내의 [**사용자 검색**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) 페이지에서 검색합니다.
 
+### Considerations for external IDs
+
 {% alert warning %}
 사용자 프로필에 `external_id` 을 할당하지 말고 고유하게 식별할 수 있도록 하세요. 사용자를 식별한 후에는 익명으로 되돌릴 수 없습니다.
 <br><br>
 또한 `external_id`는 고객 프로필에 대해 설정된 후에는 변경할 수 없습니다. 사용자 세션 중에 다른 `external_id`를 설정하려고 하면 새 `external_id`가 연결된 새 고객 프로필이 만들어집니다. 두 프로필 간에 데이터가 전달되지 않습니다.
 {% endalert %} 
+
+#### Risk of using an email or hashed email as an external ID
+
+Using an email address or a hashed email address as your Braze external ID can simplify identity management across your data sources; however, it's important to consider the potential risks to user privacy and data security.
+
+- **Guessable information:** Email addresses are easily guessable, making them vulnerable to attacks.
+- **Risk of exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
 
 ### 익명 사용자를 식별하면 어떻게 되나요?
 
@@ -73,7 +84,7 @@ Braze 이외의 식별자로 사용자를 지칭하려면 `external_id`, 사용�
 
 ### 익명 사용자 태그 지정
 
-사용자 별칭을 사용하면 익명 사용자에게 식별자를 태그할 수도 있습니다. 예를 들어 사용자가 전자상거래 사이트에 이메일 주소를 제공했지만 아직 가입하지 않은 경우 해당 이메일 주소를 해당 익명 사용자의 별칭으로 사용할 수 있습니다. 그런 다음 이러한 사용자는 별칭을 사용하여 내보내거나 API에서 참조할 수 있습니다.
+사용자 별칭을 사용하면 익명 사용자에게 식별자를 태그할 수도 있습니다. For example, if a user provides your eCommerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. 그런 다음 이러한 사용자는 별칭을 사용하여 내보내거나 API에서 참조할 수 있습니다.
 
 ### 익명 사용자 프로필에서 별칭의 동작
 

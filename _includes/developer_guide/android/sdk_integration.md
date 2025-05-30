@@ -1,6 +1,42 @@
 ## Integrating the Android SDK
 
-### Step 1: Configure `braze.xml`
+### Step 1: Update your `build.gradle`
+
+In your `build.gradle`, add [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) to your list of repositories.
+
+```kotlin
+repositories {
+  mavenCentral()
+}
+```
+
+Next, add Braze to your dependencies.
+
+{% tabs local %}
+{% tab base only %}
+If you don't plan on using Braze UI components, add the following code to your `build.gradle`. Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+
+```kotlin
+dependencies {
+    implementation 'com.braze:android-sdk-base:SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
+    implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endtab %}
+
+{% tab with ui components %}
+If you plan on using Braze UI components later, add the following code to your `build.gradle`.  Replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+
+```kotlin
+dependencies {
+    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
+    implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Configure your `braze.xml`
 
 {% alert note %}
 As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
@@ -18,7 +54,7 @@ The contents of that file should resemble the following code snippet. Make sure 
 </resources>
 ```
 
-### Step 2: Add permissions to `AndroidManifest.xml`
+### Step 3: Add permissions to `AndroidManifest.xml`
 
 Next, add the following permissions to your `AndroidManifest.xml`:
 
@@ -31,11 +67,11 @@ Next, add the following permissions to your `AndroidManifest.xml`:
 With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
 {% endalert %}
 
-### Step 3: Enable user session tracking
+### Step 4: Enable user session tracking
 
-Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration are optionally handled automatically.
+When you enable user session tracking, calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration can be handled automatically.
 
-To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class:
+To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class. 
 
 {% tabs local %}
 {% tab JAVA %}
@@ -62,24 +98,12 @@ class MyApplication : Application() {
 }
 ```
 
+For the list of available parameters, see [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
+
 {% endtab %}
 {% endtabs %}
 
-See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
-
-### Step 4: Enable location tracking
-
-To enable Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and ensure its value is set to `true`:
-
-```xml
-<bool name="com_braze_enable_location_collection">true</bool>
-```
-
-{% alert important %}
-Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
-{% endalert %}
-
-### Step 5: Test session tracking (optional)
+## Testing session tracking
 
 {% alert tip %}
 You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
@@ -145,6 +169,19 @@ suspend fun fetchAndSetAdvertisingId(
 
 {% alert important %}
 Google requires the Advertising ID to be collected on a non-UI thread.
+{% endalert %}
+
+
+### Location tracking
+
+To enable Braze location collection, set `com_braze_enable_location_collection` to `true` in your `braze.xml` file:
+
+```xml
+<bool name="com_braze_enable_location_collection">true</bool>
+```
+
+{% alert important %}
+Starting with Braze Android SDK version 3.6.0, Braze location collection is disabled by default.
 {% endalert %}
 
 ### Logging
@@ -245,7 +282,7 @@ To verify that your logs are set to `VERBOSE`, check if `V/Braze` occurs somewhe
 
 #### Suppressing logs
 
-The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your application's `onCreate()` method _before_ any other methods.
+To suppress all logs for the Braze Android SDK, set the log level to `BrazeLogger.SUPPRESS` in your application's `onCreate()` method _before_ any other methods.
 
 {% tabs local %}
 {% tab JAVA %}
@@ -265,7 +302,7 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 
 The most common use case for multiple API keys is separating API keys for debug and release build variants.
 
-To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant](https://developer.android.com/studio/build/build-variants.html). A build variant is a combination of build type and product flavor. By default, new Android projects are configured with [`debug` and `release` build types](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types) and no product flavors.
+To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant](https://developer.android.com/studio/build/build-variants.html). A build variant is a combination of build type and product flavor. By default, new Android projects are configured with [`debug` and `release` build types](https://developer.android.com/reference/tools/gradle-api/8.3/null/com/android/build/api/dsl/BuildType) and no product flavors.
 
 For each relevant build variant, create a new `braze.xml` in the `src/<build variant name>/res/values/` directory. When the build variant is compiled, it will use the new API key.
 
@@ -280,7 +317,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 To learn how to set up the API key in your code, see [Runtime configuration]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 {% endalert %}
 
-### Enable exclusive in-app message TalkBack
+### Exclusive in-app message TalkBack
 
 In adherence to the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility), the Braze Android SDK offers Android Talkback by default. To ensure that only the contents of in-app messages are read out loud—without including other screen elements like the app title bar or navigation—you can enable exclusive mode for TalkBack.
 

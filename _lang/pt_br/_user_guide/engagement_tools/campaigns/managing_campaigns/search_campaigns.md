@@ -32,7 +32,7 @@ Por exemplo, se você quiser auditar os rascunhos da campanha, selecione **Statu
 
 ### Pesquisa por tags
 
-A pesquisa de suas campanhas por [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) pode restringir ainda mais seus resultados. Por exemplo, se estiver tentando encontrar todas as campanhas criadas para direcionamento a novos clientes, compradores frequentes e clientes antigos, poderá pesquisar essas campanhas pela tag compartilhada **Direcionamento por tipo de cliente**.
+A pesquisa de suas campanhas por [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) pode restringir ainda mais seus resultados. Por exemplo, se estiver tentando encontrar todas as campanhas criadas para direcionamento a novos clientes, compradores frequentes e clientes antigos, poderá pesquisar essas campanhas pela tag compartilhada **Direcionamento por tipo de cliente**.
 
 ### Ajuste de filtros
 

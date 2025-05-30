@@ -2,16 +2,20 @@
 nav_title: Aktionscodes
 article_title: Aktionscodes
 page_order: 5
+toc_headers: h2
 alias: "/promotion_codes/"
 description: "In diesem Referenzartikel erfahren Sie, wie Sie Aktionscode-Listen erstellen und sie zu Ihren Kampagnen und Canvases hinzufügen."
-
 ---
 
 # Aktionscodes
 
-> Promotion-Codes - auch Promo-Codes genannt - sind eine großartige Möglichkeit, Nutzer zu binden, indem sie zu Interaktionen anregen, wobei der Schwerpunkt auf Käufen liegt.
+> Auf dieser Seite erfahren Sie, wie Sie Listen mit Aktionscodes erstellen und diese zu Ihren Kampagnen und Canvase hinzufügen können.
 
-Mit der Braze Liquid-Funktionalität bieten wir Ihnen eine Möglichkeit, die Verwendung von Promotion-Codes zu einem Kinderspiel zu machen, indem Nachrichten automatisch und intuitiv aus der von Ihnen bereitgestellten Promotion-Liste gezogen werden können. Das Feature für Aktionscodes bietet Abläufe von bis zu sechs Monaten und Unterstützung für bis zu 20MM individuelle Codes pro Liste.
+## Funktionsweise
+
+Promotion-Codes - auch Promo-Codes genannt - sind eine großartige Möglichkeit, Nutzer zu binden, indem sie zu Interaktionen anregen, wobei der Schwerpunkt auf Käufen liegt. Sie können Nachrichten erstellen, die aus Ihrer Liste von Aktionscodes stammen. 
+
+Jeder Aktionscode hat eine Gültigkeitsdauer von bis zu sechs Monaten. Sie können bis zu 20 Millionen Codes pro Liste speichern und verwalten. Durch die Verwaltung und Analyse der Performance Ihrer Aktionscodes können Sie gezielte Entscheidungen für Ihre Strategien und Nachrichten treffen.
 
 {% alert important %}
 Aktionscodes können nicht in In-App-Nachrichten versendet werden.
@@ -19,66 +23,63 @@ Aktionscodes können nicht in In-App-Nachrichten versendet werden.
 
 ## Erstellen einer Liste von Aktionscodes
 
-### Schritt 1: Zum Abschnitt „Aktionscode“ navigieren
+### Schritt 1: Gehen Sie zum Abschnitt Aktionscode
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Button zum Erstellen eines Aktionscodes.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Gehen Sie auf dem Dashboard zu **Dateneinstellungen** > **Promotion Codes** und wählen Sie dann **Promotion Code Liste erstellen**.
+1. Gehen Sie auf dem Dashboard zu **Dateneinstellungen** > **Aktionscodes**.
+2. Wählen Sie **Aktionscode-Liste erstellen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Promotion Codes** unter **Integrationen**.
-{% endalert %}
+### Schritt 2: Nennen Sie den Aktionscode
 
-### Schritt 2: Aktionscodes benennen und erstellen
+1. Benennen Sie Ihre Aktionscode-Liste und fügen Sie eine optionale Beschreibung hinzu.
+2. Als nächstes erstellen Sie ein Snippet für den Code der Aktion. 
 
-Benennen Sie Ihre Aktionscode-Liste und fügen Sie eine optionale Beschreibung hinzu.
+Hier finden Sie einige Details, die Sie bei der Erstellung eines Code Snippets beachten sollten:
 
-![][2]{: style="max-width:90%"}
+- Einmal gespeichert, können Code Snippets nicht mehr bearbeitet werden.
+- Bei Snippets wird zwischen Groß- und Kleinschreibung unterschieden. Zum Beispiel werden "Birthday_promo" und "birthday_promo" als zwei verschiedene Snippets erkannt.
+- Verwenden Sie den Snippet-Namen in Liquid, um diese Reihe von Aktionscodes zu referenzieren.
+- Stellen Sie sicher, dass das Code Snippet nicht bereits in einer anderen Liste verwendet wird.
 
-Als nächstes erstellen Sie ein Snippet für den Code der Aktion. Auf dieses Code-Snippet werden Sie in Liquid verweisen, um diesen spezifischen Satz von Aktionscodes anzuzeigen. Stellen Sie sicher, dass es sich um einen Code-Snippet handelt, der nicht bereits in einer anderen Liste verwendet wird.
+![Eine Liste von Aktionscodes mit dem Namen "SpringSale2025" und dem Code Snippet "spring25".][3]{: style="max-width:80%"}
 
-{% alert important %}
-Bei Snippets wird zwischen Groß- und Kleinschreibung unterschieden. Zum Beispiel werden "Birthday_promo" und "birthday_promo" als zwei verschiedene Snippets erkannt.
-{% endalert %}
+### Schritt 3: Wählen Sie die Optionen für den Aktionscode
 
-![][3]{: style="max-width:90%"}
+Jede Liste mit Aktionscodes hat ein entsprechendes Ablaufdatum und eine entsprechende Uhrzeit, die bei der Erstellung festgelegt werden. Die maximale Gültigkeitsdauer beträgt sechs Monate in der Zukunft ab dem Tag, an dem Sie Ihre Liste erstellen oder bearbeiten. 
 
-{% alert warning %}
-Sie können den Code Snippet nach dem Speichern nicht mehr ändern!
-{% endalert %}
+Innerhalb dieser Zeit können Sie das Ablaufdatum wiederholt ändern und aktualisieren. Dieses Ablaufdatum gilt für alle Codes, die zu dieser Liste hinzugefügt werden. Nach Ablauf der Frist werden die Codes aus dem Braze-System gelöscht und alle Nachrichten, die den Codeausschnitt dieser Liste aufrufen, werden nicht gesendet.
 
-### Schritt 3: Optionen für Aktionscodes
-
-Jede Liste mit Aktionscodes hat ein entsprechendes Ablaufdatum und eine entsprechende Uhrzeit, die bei der Erstellung festgelegt werden. Die maximale Gültigkeitsdauer beträgt sechs Monate in der Zukunft ab dem Tag, an dem Sie Ihre Liste erstellen oder bearbeiten. Innerhalb dieser Zeit können Sie das Ablaufdatum wiederholt ändern und aktualisieren. Dieses Ablaufdatum gilt für alle Codes, die zu dieser Liste hinzugefügt werden. Nach Ablauf der Frist werden die Codes aus dem Braze-System gelöscht und alle Nachrichten, die den Codeausschnitt dieser Liste aufrufen, werden nicht gesendet.
-
-![][4]{: style="max-width:90%"}
+![Die Ablaufeinstellungen der Liste besagen, dass alle verbleibenden Codes am 30\. April 2025 um 12 Uhr ablaufen werden.][4]{: style="max-width:80%"}
 
 Sie haben auch die Möglichkeit, optionale und angepasste Schwellenwertwarnungen einzurichten. Wenn Sie diese Benachrichtigungen einrichten, wird der angegebene Empfänger per E-Mail benachrichtigt, wenn die Liste der verfügbaren Aktionscodes in dieser Liste zur Neige geht oder wenn Ihre Aktionscode-Liste bald abläuft. Der Empfänger wird einmal pro Tag benachrichtigt.
 
-![][5]
+![Ein Beispiel für einen Schwellenwertalarm, der "marketing@abc.com" benachrichtigt, wenn die Liste der Aktionscodes in 5 Tagen abläuft.][5]{: style="max-width:80%"}
 
-### Schritt 4: Aktionscode hochladen
+### Schritt 4: Aktionscodes hochladen
 
-Braze verwaltet weder die Erstellung noch die Einlösung von Codes, d.h. Sie müssen Ihre Promotion-Codes in einer CSV-Datei generieren und diese in Braze hochladen. Stellen Sie sicher, dass die CSV-Datei diesen Richtlinien entspricht:
+Braze verwaltet weder die Erstellung noch die Einlösung von Codes, d.h. Sie müssen Ihre Aktionscodes in einer CSV-Datei generieren und diese in Braze hochladen. 
+
+Stellen Sie sicher, dass Ihre CSV-Datei diesen Richtlinien entspricht:
 
 - Enthält eine Spalte für Aktionscodes.
 - Hat einen Aktionscode pro Zeile.
 
 Sie können unsere integrierte Integration mit [Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) oder [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) verwenden, um Aktionscodes zu erstellen und zu exportieren.
 
-{% alert note %}
+{% alert important %}
 Die maximale Dateigröße beträgt 100 MB und die maximale Listengröße beträgt 20 MM unbenutzte Codes. Wenn Sie feststellen, dass eine falsche Datei hochgeladen wurde, laden Sie eine neue Datei hoch, und die vorherige wird ersetzt.
 {% endalert %}
 
-![][6]
+1. Nachdem der Upload abgeschlossen ist, wählen Sie **Liste speichern**, um alle Details und Codes zu speichern, die Sie gerade eingegeben haben.
 
-Nachdem der Upload abgeschlossen ist, wählen Sie **Liste speichern**, um alle Details und Codes zu speichern, die Sie gerade eingegeben haben.
+![CSV-Datei mit dem Namen "springsale", die erfolgreich hochgeladen wurde.][7]
 
-![][7]
+{:start="2"}
+2\. Nachdem Sie „Speichern“ ausgewählt haben, erscheint eine neue Zeile im **Verlauf des Imports**.
+3\. Um die Tabelle zu aktualisieren und zu sehen, ob Ihr Import abgeschlossen ist, wählen Sie <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** oben in der Tabelle.
 
-Nachdem Sie „Speichern“ ausgewählt haben, erscheint eine neue Zeile im **Verlauf des Imports**. Um die Tabelle zu aktualisieren und zu sehen, ob Ihr Import abgeschlossen ist, wählen Sie <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** oben in der Tabelle.
-
-![][8]
+![Aktionscodes, die gerade hochgeladen werden.][8]
 
 {% alert note %}
 Der Import größerer Dateien kann einige Minuten dauern. Während Sie warten, können Sie die Seite verlassen und an etwas anderem arbeiten, während der Importvorgang läuft. Wenn der Import abgeschlossen ist, ändert sich der Status in der Tabelle auf **Vollständig**.
@@ -92,19 +93,24 @@ Alle Codes in der Liste haben das gleiche Ablaufdatum, unabhängig vom Datum des
 
 ### Schritt 5: Aktionscodes verwenden
 
-Um Promotion-Codes in Nachrichten zu versenden, wählen Sie **Snippet kopieren**, um das Code-Snippet zu kopieren, das Sie beim Erstellen Ihrer Promotion-Code-Liste festgelegt haben.
+So versenden Sie Aktionscodes in Nachrichten:
 
-![][9]{: style="max-width:70%"}
+1. Wählen Sie **Snippet kopieren**, um den Code-Snippet zu kopieren, den Sie bei der Erstellung Ihrer Liste mit Aktionscodes festgelegt haben.
 
-Von dort aus können Sie diesen Code in eine Nachricht auf dem Dashboard einfügen.
+![Eine Option zum Kopieren des Snippets zum Einfügen in Ihre Nachricht.][9]{: style="max-width:70%"}
 
-![][10]{: style="max-width:70%"}
+{:start="2"}
+2\. Von dort aus können Sie diesen Code in eine Nachricht auf dem Dashboard einfügen.
 
-Mit [Liquid][11] können Sie einen der eindeutigen Aktionscodes aus der hochgeladenen CSV-Datei in eine Nachricht einfügen. Dieser Code wird im Braze-Backend als gesendet markiert, um sicherzustellen, dass keine andere Nachricht denselben Code sendet. 
+![Eine Beispielnachricht "Gönnen Sie sich diesen Frühling etwas Schönes mit unserem exklusiven Angebot", gefolgt von dem Code Snippet.][10]{: style="max-width:70%"}
+
+Mit [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) können Sie einen der eindeutigen Aktionscodes aus der hochgeladenen CSV-Datei in eine Nachricht einfügen. Dieser Code wird im Braze-Backend als gesendet markiert, um sicherzustellen, dass keine andere Nachricht denselben Code sendet.
+
+#### Senden von Aktionscodes an Nutzer:innen
 
 Wenn ein Code-Snippet in einer Multichannel-Kampagne oder einem Canvas-Schritt verwendet wird, erhält jeder Benutzer immer einen eindeutigen Code. Für verschiedene Schritte in einem Canvas erhält jeder Benutzer mehrere Aktionscodes.
 
-Wenn ein bestimmter Benutzer berechtigt ist, einen Code über mehr als einen Kanal zu erhalten, erhält dieser Benutzer denselben Code über jeden Kanal. Wenn ein Nutzer:innen zum Beispiel zwei Nachrichten über zwei Kanäle erhält, bekommt er nur einen Code. Dasselbe gilt für die Berichterstattung: Es wird ein Code gesendet, und der Benutzer erhält diesen Code über die beiden Kanäle. Bei einem Canvas-Schritt mit mehreren Kanälen würde der Nutzer:innen zum Beispiel nur einen Code verwenden.
+Wenn ein Nutzer:innen über mehr als einen Kanal einen Code erhalten kann, erhält er über jeden Kanal denselben Code. Wenn ein Nutzer:innen zum Beispiel zwei Nachrichten über zwei Kanäle erhält, bekommt er nur einen Code. Dasselbe gilt für die Berichterstattung: Es wird ein Code gesendet, und der Benutzer erhält diesen Code über die beiden Kanäle. Bei einem Canvas-Schritt mit mehreren Kanälen würde der Nutzer:innen zum Beispiel nur einen Code verwenden.
 
 {% alert important %}
 Wenn beim Versenden von Test- oder Live-Nachrichten aus einer Kampagne, die Aktionscodes einbezieht, keine Aktionscodes mehr verfügbar sind, wird die Nachricht nicht versendet.
@@ -118,11 +124,11 @@ Bei Test- und Startgruppen-E-Mails werden Aktionscodes verwendet, sofern nicht a
 
 Die Anzahl der verbleibenden Codes finden Sie in der Spalte **Verbleibend** in der Liste der Aktionscodes auf der Seite **Aktionscodes**.
 
-![][12]{: style="max-width:90%"}
+![Ein Beispiel für einen Aktionscode mit unbenutzten Codes.][12]
 
-Die Anzahl der Codes finden Sie auch, wenn Sie eine bereits existierende Seite mit Aktionscodes aufrufen. 
+Die Anzahl der Codes finden Sie auch, wenn Sie eine bereits existierende Seite mit Aktionscodes aufrufen. Sie können nicht verwendete Codes auch als CSV-Datei exportieren. 
 
-![][13]{: style="max-width:50%"}
+![Ein Aktionscode namens "Black Friday Sale" mit 992 verbleibenden Codes.][13]{: style="max-width:70%"}
 
 ## Mehrkanalige und einkanalige Sendungen
 
@@ -175,7 +181,9 @@ Für alle Instanzen des Liquid-Snippets in Ihrer Nachricht wird derselbe Promoti
 
 ### Was passiert, wenn eine Aktionscode-Liste abgelaufen oder leer ist?
 
-Wenn die Nachricht einen Aktionscode aus einer leeren oder abgelaufenen Liste enthalten sollte, wird die Nachricht storniert.
+Abgelaufene Codes werden nach sechs Monaten gelöscht.
+
+Wenn die Nachricht einen Aktionscode aus einer leeren oder abgelaufenen Liste enthalten sollte, wird die Nachricht storniert. 
 
 Wenn die Nachricht eine Liquid-Logik enthält, die bedingt einen Aktionscode einfügt, wird die Nachricht nur dann storniert, wenn sie einen Aktionscode hätte enthalten sollen. Wenn die Nachricht keinen Aktionscode enthalten sollte, wird die Nachricht normal gesendet.
 
@@ -184,15 +192,12 @@ Wenn die Nachricht eine Liquid-Logik enthält, die bedingt einen Aktionscode ein
 Um denselben Aktionscode in späteren Nachrichten zu verwenden, muss der Code als benutzerdefiniertes Attribut im Benutzerprofil gespeichert werden. Dies ist möglich, indem Sie einen [Braze-to-Braze-Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) an dieselbe Kampagne oder denselben Canvas Message-Schritt anhängen.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
 [4]:{% image_buster /assets/img/promocodes/promocode4.png %}
 [5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[6]:{% image_buster /assets/img/promocodes/promocode6.png %}
 [7]:{% image_buster /assets/img/promocodes/promocode7.png %}
 [8]:{% image_buster /assets/img/promocodes/promocode8.png %}
 [9]:{% image_buster /assets/img/promocodes/promocode9.png %}
 [10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [12]: {% image_buster /assets/img/promocodes/promocode11.png %}
 [13]: {% image_buster /assets/img/promocodes/promocode12.png %}

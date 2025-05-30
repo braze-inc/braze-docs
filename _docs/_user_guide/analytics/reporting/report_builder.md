@@ -38,7 +38,7 @@ page_order: 6.2
 4. (Optional) Select **Add drilldown** to break down your data into more granular views:
     - Channels
     - Date
-        - Use this to split your data into smaller timeranges. For example, if you're interested in how your campaigns performed by day, select the following configuration:
+        - Use this to split your data into smaller time ranges. For example, if you're interested in how your campaigns performed by day, select the following configuration:
             - **Rows**: Campaigns
             - **Grouping:** Date
             - **Interval:** Days

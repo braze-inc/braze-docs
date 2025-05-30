@@ -12,7 +12,7 @@ description: "Cette page d'atterrissage répertorie les sujets liés aux paramè
 guide_featured_title: "Configuration et essais"
 guide_featured_list:
   - name: "Gestion de l'espace de travail"
-    link: /docs/user_guide/administrative/app_settings/app_group_management/
+    link: /docs/user_guide/administrative/app_settings/workspaces/
     image: /assets/img/braze_icons/briefcase-01.svg
   - name: Clés API
     link: /docs/user_guide/administrative/app_settings/api_settings_tab/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
   - name: Cryptage au niveau du champ de l’identifiant
-    link: /docs/user_guide/data_and_analytics/field_level_encryption/
+    link: /docs/user_guide/analytics/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
@@ -44,6 +44,9 @@ guide_menu_list:
   - name: Paramètres multilingues
     link: /docs/multi_language_support/
     image: /assets/img/braze_icons/list.svg
+  - name: Directives de marque
+    link: /docs/user_guide/administrative/app_settings/brand_guidelines/
+    image: /assets/img/braze_icons/edit-05.svg
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:
@@ -60,7 +63,10 @@ guide_menu_list2:
 guide_menu_title3: "Data settings"
 guide_menu_list3:
   - name: Données personnalisées
-    link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
+    link: /docs/user_guide/data/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/database-01.svg
+  - name: Exporter les journaux
+    link: /docs/user_guide/administrative/app_settings/exports_log/
+    image: /assets/img/braze_icons/file-download-02.svg
 
 ---

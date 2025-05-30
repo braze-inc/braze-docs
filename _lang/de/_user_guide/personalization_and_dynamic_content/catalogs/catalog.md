@@ -8,9 +8,9 @@ description: "In diesem Artikel erfahren Sie, wie Sie Kataloge erstellen, die ü
 
 # Einen Katalog erstellen
 
-> Um einen Katalog zu erstellen, importieren Sie eine CSV-Datei mit benutzerfremden Daten in Braze. Anschließend können Sie auf diese Informationen zugreifen, um Ihre Nachrichten zu ergänzen. Sie können jede Art von Daten in einen Katalog einbringen. Bei diesen Daten handelt es sich in der Regel um Metadaten Ihres Unternehmens wie Produktinformationen eines Onlinehändlers oder Kursdaten eines Bildungsträger.
+> Um einen Katalog zu erstellen, importieren Sie eine CSV-Datei mit benutzerfremden Daten in Braze. Anschließend können Sie auf diese Informationen zugreifen, um Ihre Nachrichten zu ergänzen. Sie können jede Art von Daten in einen Katalog einbringen. Bei diesen Daten handelt es sich in der Regel um eine Art von Metadaten Ihres Unternehmens, z. B. Produktinformationen für ein E-Commerce-Unternehmen oder Kursinformationen für einen Bildungsanbieter.<br><br>Auf dieser Seite erfahren Sie, wie Sie eine CSV-Datei vorbereiten und hochladen, um einen Katalog zu erstellen, wie Sie Kataloge verwalten und vieles mehr.
 
-Einige häufige Anwendungsfälle für Kataloge sind:
+Anwendungsfälle für Commons-Kataloge sind unter anderem:
 
 - Produkte
 - Dienste
@@ -19,7 +19,7 @@ Einige häufige Anwendungsfälle für Kataloge sind:
 - Musik
 - Pakete
 
-Wenn Sie diese Informationen importiert haben, können Sie in den Nachrichten auf sie zugreifen– so wie auf benutzerdefinierte Attribute und benutzerdefinierte Ereigniseigenschaften über Liquid.
+Nachdem diese Informationen importiert wurden, können Sie in Nachrichten darauf zugreifen, ähnlich wie auf angepasste Attribute oder Event-Eigenschaften über Liquid.
 
 ## Vorbereiten Ihrer CSV-Datei
 
@@ -46,15 +46,11 @@ Wir empfehlen außerdem, den gesamten Text Ihrer CSV-Dateien in Kleinbuchstaben 
 
 Um einen Katalog zu erstellen, gehen Sie zu **Dateneinstellungen** > **Kataloge**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kataloge** unter **Daten**.
-{% endalert %}
-
 Wählen Sie **Neuen Katalog erstellen** und wählen Sie dann entweder **CSV hochladen** oder **Im Browser erstellen**.
 
 ### Methode 1: CSV hochladen
 
-1. Ziehen Sie Ihre Datei per Drag & Drop in die Upload-Zone oder klicken Sie auf **CSV hochladen** und wählen Sie Ihre Datei aus. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Ziehen Sie Ihre Datei per Drag-and-Drop in die Upload-Zone, oder wählen Sie **CSV hochladen** und wählen Sie Ihre Datei aus. <br>![][1]{: style="max-width:80%;"} <br><br>
 2. Wählen Sie für jede Spalte einen der folgenden Datentypen: Boolescher Wert, Zahl, String oder Zeit.
 <br> ![][9]{: style="max-width:80%;"} <br><br>
 3. Geben Sie Ihrem Katalog einen Namen. Beachten Sie die folgenden Anforderungen an einen Katalognamen:
@@ -62,7 +58,7 @@ Wählen Sie **Neuen Katalog erstellen** und wählen Sie dann entweder **CSV hoch
 - Maximal 250 Zeichen
 - Darf nur Zahlen, Buchstaben, Bindestriche und Unterstriche enthalten<br><br>
 4. (optional) Fügen Sie eine Beschreibung für den Katalog hinzu.
-5. Klicken Sie auf **Katalog verarbeiten**, um den Katalog zu erstellen.
+5. Wählen Sie **Prozesskatalog**, um den Katalog zu erstellen.
 
 {% alert note %}
 Dieser Datentyp kann nicht mehr bearbeitet werden, nachdem Sie Ihren Katalog eingerichtet haben. Auch ein `NULL`-Wert wird beim CSV-Upload nicht unterstützt und wird als String behandelt.
@@ -82,9 +78,11 @@ Sie können auch Vorlagen in einem Katalognamen verwenden. Sie können zum Beisp
 Ihre CSV-Datei kann abgelehnt werden, wenn Sie Ihre [Tarifstufe](#tiers) überschreiten.
 {% endalert %}
 
-Sie können die CSV-Datei auch aktualisieren, wenn Sie einen Katalog im Browser erstellen. Klicken Sie auf **Katalog aktualisieren > CSV hochladen** und wählen Sie dann, ob Sie Artikel in Ihrem Katalog aktualisieren, hinzufügen oder löschen möchten.
+Sie können die CSV-Datei auch aktualisieren, wenn Sie einen Katalog im Browser erstellen. Wählen Sie **Katalog aktualisieren > CSV hochladen** und wählen Sie dann aus, ob Sie Artikel in Ihrem Katalog aktualisieren, hinzufügen oder löschen möchten.
 
 ### Methode 2: Im Browser erstellen
+
+Um Kataloge im Browser zu bearbeiten oder zu erstellen, benötigen Sie die Berechtigung "Kataloge verwalten Dashboard".
 
 1. Geben Sie einen Namen für Ihren Katalog ein. Beachten Sie die folgenden Anforderungen für Ihren Katalognamen:
 - Muss einzigartig sein
@@ -143,7 +141,7 @@ Dieser Datentyp kann nicht mehr bearbeitet werden, nachdem Sie Ihren Katalog ein
 
 ![Vier Katalogspaltennamen: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
 
-Als Nächstes geben wir diesem Katalog den Namen "games_catalog" und klicken auf die Schaltfläche **Katalog verarbeiten**. Dann prüft Braze den Katalog vor der Katalogerstellung auf eventuelle Fehler.
+Als nächstes geben wir diesem Katalog den Namen "games_catalog" und wählen den Button **Katalog verarbeiten**. Dann prüft Braze den Katalog vor der Katalogerstellung auf eventuelle Fehler.
 
 ![Ein Katalog namens "games_catalog".][11]{: style="max-width:85%;"}
 
@@ -163,15 +161,7 @@ Wenn Sie zum Beispiel einen einzelnen Katalogartikel bearbeiten möchten, könne
 
 ## Katalogebenen {#tiers}
 
-Die folgende Tabelle listet die Unterschiede zwischen Katalogen in der Gratis- und in der Pro-Version auf:
-
-| Bereich                                  | Kostenlose Version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Größe der CSV-Datei                         | Bis zu 100 MB für alle CSV-Dateien in Ihrem Unternehmen zusammen                                                                                        | Bis zu 2 GB für eine einzelne CSV-Datei                                                                                                                   |
-| Zeichenlimit Artikelwert       | Bis zu 5.000 Zeichen in einem Wert. Wenn z. B. ein Feld die Bezeichnung `description` trägt, ist die Zeichenanzahl in diesem Feld auf 5.000 begrenzt. | Bis zu 5.000 Zeichen in einem Wert. Wenn z. B. ein Feld die Bezeichnung `description` trägt, ist die Zeichenanzahl in diesem Feld auf 5.000 begrenzt. |
-| Zeichenbegrenzung Artikelspaltenname | Bis zu 250 Zeichen                                                                                                                                    | Bis zu 250 Zeichen                                                                                                                                    |
-| Auswahlen                            | Bis zu 30 Auswahlen pro Katalog                                                                                                                         | Bis zu 30 Auswahlen pro Katalog                                                                                                                         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+Die kostenlose Version von Catalogs unterstützt CSV-Dateien mit einer Größe von bis zu 100 MB für alle CSV-Dateien in Ihrem Unternehmen, während die Pro-Version von Catalogs CSV-Dateien mit einer Größe von bis zu 2 GB für eine einzelne CSV-Datei unterstützt.
 
 ### Katalogspeicher
 

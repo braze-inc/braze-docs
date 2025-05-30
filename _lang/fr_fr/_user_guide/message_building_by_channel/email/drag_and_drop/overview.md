@@ -87,10 +87,6 @@ Pour utiliser un modèle HTML personnalisé existant ou des modèles créés par
 
 Vous pouvez également accéder à tous les modèles depuis la section **Modèles**.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), les modèles se trouvent sous **Modèles et médias.**
-{% endalert %}
-
 Après avoir sélectionné votre modèle, vous verrez un aperçu de votre e-mail sous **Variantes d'e-mails** qui inclut les informations d'envoi et le corps de l'e-mail. 
 
 Ensuite, sélectionnez **Modifier le corps de l'e-mail** pour commencer à concevoir la structure de l'e-mail dans l'éditeur par glisser-déposer. 
@@ -115,7 +111,7 @@ Consultez la rubrique [Autres personnalisations](#other-customizations) pour dé
 Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre communication par e-mail recherchera vos groupes d’utilisateurs. Cela vérifiera que votre contenu est réactif et vous pourrez apporter les ajustements nécessaires en cours de route.
 
 {% alert tip %}
-Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
+Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
 ![Bouton de rédaction, situé dans le panneau Contenu à côté des paramètres de style dans l’éditeur par glisser-déposer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -232,6 +228,14 @@ La personnalisation liquide n'est pas prise en charge pour les blocs d'images et
 
 Vous pouvez choisir d'insérer des images dynamiques dans vos e-mails en incluant du code Liquid dans l'attribut source de votre image. Par exemple, au lieu d'une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL de l'image pour inclure le prénom d'un utilisateur dans l'image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
 
+### Changer le sens du texte
+
+Lors de la rédaction de votre message, vous pouvez basculer la direction du texte de gauche à droite ou de droite à gauche en sélectionnant le bouton correspondant à la **direction du texte**. Vous pouvez utiliser cette option pour créer des messages dans des langues telles que l'arabe et l'hébreu.
+
+![Menu de l'éditeur glisser-déposer de l'e-mail avec bouton permettant de basculer l'alignement du texte entre la droite et la gauche et la gauche et la droite.][1]{: style="max-width:50%;"}
+
+L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)
+
 ### Ajouter des attributs HTML aux liens
 
 ![La section "Attributs" avec l'attribut "clicktracking" désactivé pour un lien.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -248,7 +252,7 @@ Un autre cas d’utilisation courant consiste à marquer des liens spécifiques 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (un [sub-chemin personnalisé](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) doit être configuré)
 
-Pour configurer des liens universels, consultez [Liens universels et liens d'application]({{site.baseurl}}/help/help_articles/email/universal_links/).
+Pour configurer des liens universels, consultez [Liens universels et liens d'application]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
 Vous pouvez également vous intégrer à l'un de nos partenaires d'attribution, tels que [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) ou [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), pour gérer les liens universels.
 
@@ -265,3 +269,4 @@ Vous pouvez également vous intégrer à l'un de nos partenaires d'attribution, 
 [11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
+[14]: {% image_buster /assets/img/rtl_button.png %}

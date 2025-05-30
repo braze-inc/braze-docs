@@ -26,16 +26,12 @@ Há dois estados de inscrição para usuários do WhatsApp: `subscribed` e `unsu
 ### Configuração dos grupos de inscrições do WhatsApp dos usuários
 
 - **API de descanso:** Os perfis de usuário podem ser definidos programaticamente pelo endpoint [`/subscription/status/set`][4] usando a Braze REST API.
-- **SDK da Web:** Os usuários podem ser adicionados a um grupo de inscrições para e-mail, SMS ou WhatsApp usando o método `addToSubscriptionGroup` para [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou [Web][11].
+- **SDK da Web:** Os usuários podem ser adicionados a um grupo de inscrições para e-mail, SMS ou WhatsApp usando o método `addToSubscriptionGroup` para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) ou [Web][11].
 - **Importação de usuário**: Os usuários podem ser adicionados a grupos de inscrições para e-mail ou SMS por meio da **importação de usuários**. Ao atualizar o status do grupo de inscrições, você deve ter estas duas colunas em seu CSV: `subscription_group_id` e `subscription_state`. Para saber mais, consulte [Importação de usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status).
 
 ### Verificação do grupo de inscrições do WhatsApp de um usuário
 
 - **Perfil do usuário:** Os perfis de usuários individuais podem ser acessados no dashboard do Braze em **Público** > **Pesquisar usuários**. Aqui, é possível procurar perfis de usuários por endereço de e-mail, número de telefone ou ID de usuário externo. Quando estiver dentro de um perfil de usuário, na guia **Engajamento**, você poderá ver o grupo de inscrições do WhatsApp de um usuário e seu status.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Usuários** > **Pesquisa de usuários**.
-{% endalert %}
 
 - **API de descanso:** O grupo de inscrições de perfis de usuários individuais pode ser visualizado pelo [endpoint Listar grupos de inscrições do usuário][9] ou [endpoint Listar status de grupos de inscrições do usuário][8] usando a REST API da Braze. 
 

@@ -15,7 +15,7 @@ permalink: /line/reporting/
 > Après avoir lancé votre campagne ou Canvas, vous pouvez consulter les indicateurs clés sur la page des détails de la campagne ou des analyses de Canvas. Cet article explique où vous pouvez trouver ces indicateurs et ce qu'ils représentent.
 
 {% alert tip %}
-Vous cherchez des définitions pour les termes et les indicateurs de votre rapport ? Reportez-vous au [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Vous cherchez des définitions pour les termes et les indicateurs de votre rapport ? Reportez-vous au [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## Analyse de campagne
@@ -34,7 +34,7 @@ Examinez ce panneau pour voir les indicateurs globaux tels que le nombre de mess
 
 #### Groupes de contrôles
 
-Pour mesurer l'impact d'un message LINE individuel, vous pouvez ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
+Pour mesurer l'impact d'un message LINE individuel, vous pouvez ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
 
 ### Performance de la ligne
 
@@ -46,7 +46,7 @@ Si vous souhaitez simplifier votre vue, sélectionnez **\+ Ajouter/Supprimer des
 
 #### Indicateurs LINE
 
-Voici quelques indicateurs clés de LINE que vous pouvez voir dans vos analyses/analytiques. Pour connaître les définitions de tous les indicateurs LINE utilisés dans Braze, consultez le [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Voici quelques indicateurs clés de LINE que vous pouvez voir dans vos analyses/analytiques. Pour connaître les définitions de tous les indicateurs LINE utilisés dans Braze, consultez le [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Terme | Définition |
 | --- | --- |

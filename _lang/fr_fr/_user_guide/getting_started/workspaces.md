@@ -188,24 +188,24 @@ Le tableau suivant décrit les avantages et les inconvénients de ces deux appro
         <td>La limite de fréquence s'applique à toutes les campagnes, et non à chaque application, ce qui rend plus difficile la prévention de l'envoi excessif de messages aux clients.</td>
     </tr>
     <tr>
-        <td>Statut d’abonnement</td>
-        <td>L'état de l'abonnement pour chaque profil utilisateur est unique pour chaque instance d'application.</td>
+        <td>Statut de l'abonnement pour les profils utilisateurs</td>
+        <td>L'état de l'abonnement de chaque profil utilisateur est unique pour chaque instance d'application.</td>
         <td>S.O.</td>
         <td>S.O.</td>
-        <td>Les statuts d'abonnement des différentes instances de l'application sont combinés pour un profil utilisateur.<br><br><b>Conseil :</b> Vous pouvez utiliser des attributs personnalisés pour gérer les abonnements.</td>
+        <td>Les statuts d'abonnement d'un profil utilisateur sont combinés entre les instances de l'application.<br><br><b>Conseil :</b> Vous pouvez utiliser des <a href='/docs/user_guide/data/custom_data/custom_attributes'>attributs personnalisés</a> pour gérer les abonnements de vos utilisateurs.</td>
     </tr>
     <tr>
-        <td>Autorisations utilisateur</td>
+        <td>Autorisations pour les utilisateurs de Braze</td>
         <td>S.O.</td>
-        <td>La mise à jour des autorisations d'un utilisateur de tableau de bord doit être effectuée séparément pour chaque espace de travail auquel l'utilisateur doit avoir accès.</td>
-        <td>Les autorisations de l'utilisateur peuvent être définies une seule fois pour un utilisateur du tableau de bord et il disposera des mêmes autorisations pour toutes les instances d'applications dans l'espace de travail.</td>
+        <td>La mise à jour des <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>autorisations d'</a> un utilisateur de tableau de bord doit être effectuée séparément pour chaque espace de travail auquel l'utilisateur doit avoir accès.</td>
+        <td>Les <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>autorisations de l'</a> utilisateur peuvent être définies une seule fois pour un utilisateur du tableau de bord, et il disposera des mêmes autorisations pour toutes les instances d'applications dans l'espace de travail.</td>
         <td>S.O.</td>
     </tr>
     <tr>
         <td>Duplication de contenu</td>
         <td>S.O.</td>
-        <td>Impossible de dupliquer des segments, des campagnes ou des canevas dans les espaces de travail.</td>
-        <td>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
+        <td>Vous ne pouvez pas dupliquer des segments, des campagnes de cartes de contenu ou de push, ou des canevas dans les espaces de travail.</td>
+        <td>Vous pouvez [dupliquer des campagnes dans les espaces de travail]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
         <td>S.O.</td>
     </tr>
     <tr>

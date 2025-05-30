@@ -6,6 +6,10 @@ Before you start, verify your environment is supported by the [latest Braze Cord
 
 ### Step 1: Add the SDK to your project
 
+{% alert warning %}
+Only add the Braze Cordova SDK using the methods below. Do not attempt to install using other methods as it could lead to a security breach.
+{% endalert %}
+
 If you're on Cordova 6 or later, you can add the SDK directly from GitHub. Alternatively, you can download a ZIP of the [GitHub repository](https://github.com/braze-inc/braze-cordova-sdk) and add the SDK manually.
 
 {% tabs local %}
@@ -148,7 +152,7 @@ You can add any of the following preferences to the `platform` element in your p
 | `ios_api_endpoint`                                | Sets the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                                                                                                                                 |
 | `ios_disable_automatic_push_registration`         | Sets whether automatic push registration should be disabled.                                                                                                                                                                                          |
 | `ios_disable_automatic_push_handling`             | Sets whether automatic push handling should be disabled.                                                                                                                                                                                              |
-| `ios_enable_idfa_automatic_collection`            | Sets whether the Braze SDK should automatically collect the IDFA information. For more information, see [Braze's IDFA method documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/). |
+| `ios_enable_idfa_automatic_collection`            | Sets whether the Braze SDK should automatically collect the IDFA information. For more information, see [the Braze IDFA method documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/). |
 | `enable_location_collection`                      | Sets whether the automatic location collection is enabled (if the user permits). The `geofence-branch`                                                                                                                                                |
 | `geofences_enabled`                               | Sets whether geofences are enabled.                                                                                                                                                                                                                   |
 | `ios_session_timeout`                             | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds.                                                                                                                                                               |

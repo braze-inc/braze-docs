@@ -10,20 +10,33 @@ channel: push
 
 # 푸시 TTL 설정
 
-> Braze 대시보드에서 푸시 TTL 설정 페이지에 대해 알아보세요.
+> Learn about the Push Time to Live settings page in the Braze dashboard.
 
-**푸시 TTL(Time-To-Live)** 페이지에서는 오프라인 디바이스에 대한 배달 시도 기간을 제어할 수 있습니다. 즉, 캠페인이 전송될 때 사용자의 디바이스가 오프라인 상태인 경우 Braze는 설정한 시간까지 메시지를 전달하려고 시도합니다.
+## What is Push TTL?
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정** > **설정 관리** > **푸시 TTL 설정에서** 이 페이지를 찾을 수 있습니다.
-{% endalert %}
+Push Time to Live (TTL) controls how long Braze will attempt to deliver a push notification to devices that are offline at the time the campaign is sent. If a device reconnects after the TTL expires, the message won’t be delivered. This setting will not remove a notification if it has already been received by the user's device—it only controls how long the push provider attempts to deliver a notification.
 
-이 기능은 사용자의 기기에서 이미 수신된 알림은 제거하지 않으며, 푸시 제공업체가 알림을 전달하려고 시도하는 시간만 제어합니다.
+## Setting default Push TTL values
+
+By default, Braze sets the Push TTL to the maximum for each push messaging service. 
+
+| Push messaging service | Maximum TTL |
+| --- | --- |
+| Web (through FCM or Web Push services) | 28 days |
+| Firebase Cloud Messaging (FCM) | 28 days |
+| Kindle (ADM) | 31 days |
+| Huawei (HMS) | 15 days |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+These settings apply globally to all push campaigns unless a different TTL is set for a specific message. To adjust a message's TTL, see [Advanced campaign settings]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#ttl).
+
+To set a different default Push TTL:
+
+1. Go to **Settings** > **Manage Settings** > **Push TTL Settings**.
+2. For each Android platform, define a default time to live value. You can set smaller increments like hours or seconds for more precise control.
+3. Select **Save** to apply your changes.
 
 ![설정 관리에서 푸시 TTL 설정 탭을 누릅니다.][1]
 
-{% alert tip %}
-페이지에서 나가기 전에 **저장을** 클릭하는 것을 잊지 마세요!
-{% endalert %}
 
 [1]: {% image_buster /assets/img/push_ttl.png %}

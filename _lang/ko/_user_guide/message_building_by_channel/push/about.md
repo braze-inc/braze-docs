@@ -13,7 +13,7 @@ channel:
 
 > 푸시 알림은 시간에 민감한 클릭 유도 문안과 한동안 앱에 접속하지 않았던 사용자의 재참여를 유도하는 데 유용합니다. 성공적인 푸시 캠페인은 사용자를 콘텐츠로 직접 유도하고 앱의 가치를 입증합니다.
 
-사용자가 메시지를 받으려면 푸시 수신에 동의해야 하므로 인앱 메시지를 사용하여 고객에게 푸시 알림을 보내려는 이유와 푸시를 사용 설정하면 어떤 이점이 있는지 설명하는 것이 좋습니다. 이 프로세스를 [푸시 프라이밍이라고]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/) 합니다.
+사용자가 메시지를 받으려면 푸시 수신에 동의해야 하므로 인앱 메시지를 사용하여 고객에게 푸시 알림을 보내려는 이유와 푸시를 사용 설정하면 어떤 이점이 있는지 설명하는 것이 좋습니다. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 ![Apple 제품에서 푸시 메시지 예시.][1]{: height="400px"}  ![iPhone 홈 화면의 스톱워치에서 푸시 메시지 예시는 다음과 같습니다: "안녕하세요! iOS 푸시입니다."][2]{: height="400px"}
 
@@ -37,9 +37,9 @@ channel:
 
 Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트 또는 앱에 푸시를 통합해야 합니다. 자세한 단계는 각 플랫폼별 통합 가이드를 참조하세요:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
-- [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android)
+- [Web]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/)
 
 ## 푸시 메시지 규정
 

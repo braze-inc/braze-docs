@@ -13,10 +13,6 @@ description: "このリファレンス記事では、認証ルール、IP の許
 
 このページにアクセスするには、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントのドロップダウンを選択し、[**会社の設定**] > [**セキュリティ設定**] に移動します。
-{% endalert %}
-
 ## 認証ルール
 
 ### パスワードの文字数
@@ -31,7 +27,7 @@ description: "このリファレンス記事では、認証ルール、IP の許
 - 数値
 - 特殊文字
 
-### パスワードの再利用可能性
+### パスワードの再利用性
 
 ユーザーがあるパスワードを再利用できるようになるまでに、設定しなければならない新しいパスワードの最小の個数を指定します。デフォルトは 3 個です。
 
@@ -103,63 +99,63 @@ Elevated Accessは、Brazeダッシュボードで機密性の高いアクショ
 
 {% details 報告されるセキュリティイベント %}
 ### ログインとアカウント 
-- REMOVED_DEVELOPER_EVENT
-- ADDED_DEVELOPER_EVENT
-- SIGNED_IN_EVENT
-- FAILED_LOGIN_EVENT
-- TWO_FACTOR_AUTH_SETUP_COMPLETED
-- TWO_FACTOR_AUTH_RESET_COMPLETED
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- DEVELOPER_SUSPENDED_EVENT
-- DEVELOPER_UNSUSPENDED_EVENT
+- 削除された開発者
+- 開発者の追加
+- サインイン
+- ログインに失敗
+- 二要素認証の設定が完了した
+- 二要素認証のリセットが完了した
+- 開発者2FAをクリアした
+- 開発者が謹慎処分を受けた
+- 開発者が謹慎処分解除
 
 ### Elevated アクセス
-- ELEVATED_ACCESS_FLOW_STARTED_EVENT
-- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
-- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
+- Elevated アクセスフローを開始
+- Elevated アクセスフローが完了
+- 昇格アクセスで2FA認証に失敗した
 
 ### Campaign
-- ADDED_CAMPAIGN_EVENT
-- EDITED_CAMPAIGN_EVENT
+- キャンペーン追加
+- 編集されたキャンペーン
 
 ### キャンバス
-- ADDED_WORKFLOW_EVENT
-- EDITED_WORKFLOW_EVENT
+- 追加されたジャーニー
+- 編集されたジャーニー
 
 ### Segment
-- ADDED_SEGMENT_EVENT
-- EDITED_SEGMENT_EVENT
-- EXPORTED_SEGMENT_TO_CSV
-- EXPORTED_SEGMENT_VIA_API
+- 追加されたセグメンテーション
+- 編集されたセグメント
+- CSV にエクスポートされたデータ
+- API 経由でセグメントをエクスポートした
 
 ### REST APIキー
-- ADDED_REST_API_KEY
-- REMOVED_REST_API_KEY
+- REST APIキーの追加
+- REST API キーを削除した。
 
 ### 基本認証情報
-- ADDED_BASIC_AUTH_CREDENTIAL
-- UPDATED_BASIC_AUTH_CREDENTIAL
-- REMOVED_BASIC_AUTH_CREDENTIAL
+- ベーシック認証情報の追加
+- ベーシック認証情報を更新した
+- ベーシック認証情報を削除した
 
 ### 許可
-- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
-- UPDATED_DEVELOPER_PERMISSION_EVENT
+- 開発者2FAをクリアした
+- アカウント権限の更新
 
 ### 会社設定
-- ADDED_APP_GROUP
-- ADDED_APP_EVENT
+- アプリグループの追加
+- アプリ追加
 
 ### メールテンプレート
-- ADDED_EMAIL_TEMPLATE
-- UPDATED_EMAIL_TEMPLATE
+- メールテンプレート追加
+- 更新メールテンプレート
 
 ### 認証情報をプッシュする
-- UPDATED_PUSH_CREDENTIAL
-- REMOVED_PUSH_CREDENTIAL
+- プッシュ認証情報の更新
+- 削除されたプッシュ認証情報
 
 ### SDK デバッガー
-- STARTED_SDK_DEBUGGER_SESSION。
-- EXPORTED_SDK_DEBUGGER_LOGS
+- SDKデバッガセッション開始
+- エクスポートされたSDKデバッガログ
 {% enddetails %}
 
 ## PII (個人を特定できる情報) の表示{#view-pii}

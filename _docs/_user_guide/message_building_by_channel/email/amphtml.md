@@ -15,7 +15,7 @@ channel:
 
 ## Requirements
 
-Braze is not responsible for users registering with Google or meeting the necessary security requirements.
+Braze is not responsible for users registering with Google or meeting the necessary security requirements. AMP for email is available for SparkPost and SendGrid only.
 
 | Requirement   | Description |
 | --------------| ----------- |

@@ -38,7 +38,7 @@ iOS 푸시 메시지에서 액션 버튼을 사용하려면 다음과 같이 하
 ![iOS 알림 카테고리 드롭다운 메뉴]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-iOS의 버튼 처리 방식으로 인해 푸시 실행 버튼을 설정할 때 추가 통합 단계를 수행해야 하며, 이는 [개발자 설명서]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/)에 설명되어 있습니다. 특히 iOS 카테고리를 구성하거나 특정 기본 버튼 옵션 중에서 선택해야 합니다. Android 통합의 경우 이러한 버튼은 자동으로 작동합니다.
+Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/). 특히 iOS 카테고리를 구성하거나 특정 기본 버튼 옵션 중에서 선택해야 합니다. Android 통합의 경우 이러한 버튼은 자동으로 작동합니다.
 {% endalert %}
 
 ### Android {#android}

@@ -2,7 +2,7 @@
 nav_title: Informationen zu Artikelempfehlungen
 article_title: Informationen zu Artikelempfehlungen
 description: "Dieser Referenzartikel beschreibt verschiedene Anwendungsfälle für die Empfehlung von Artikeln an Kunden mit Braze."
-page_order: 1
+page_order: 10
 ---
 
 # Informationen zu Artikelempfehlungen
@@ -225,7 +225,7 @@ Heben Sie Artikel hervor, die in Ihrer Nutzerbasis durch Aufrufe Aufmerksamkeit 
 
 Dieses Szenario basiert nicht direkt auf Nutzeraktionen, sondern vielmehr auf Katalogdaten. Sie können nach neuen Artikeln auf der Grundlage des Datums ihrer Aufnahme in den Katalog filtern und diese durch gezielte Kampagnen oder Canvase bewerben, ohne dass Sie ein Empfehlungsmodell trainieren müssen.
 
-Eine E-Commerce-Plattform für Technik könnte beispielsweise Technikbegeisterte über die neuesten Gadgets oder anstehende Vorbestellungen informieren und mit Hilfe von Filtern gezielt nach Artikeln suchen, die kürzlich in den Katalog aufgenommen wurden.
+Eine E-Commerce-Plattform für Technik könnte zum Beispiel Technikbegeisterte über die neuesten Gadgets oder anstehende Vorbestellungen informieren und dabei Filter verwenden, um Artikel zu finden, die kürzlich in den Katalog aufgenommen wurden.
 
 {% details Anforderungen %}
 
@@ -346,7 +346,7 @@ Bewerben Sie Artikel, mit denen Nutzer:innen kürzlich interagiert haben, z. B.
 
 ### Trending von gekauften Artikeln
 
-Heben Sie Artikel hervor, die Ihre Nutzer in letzter Zeit besonders häufig gekauft haben. Ein E-Commerce-Unternehmen könnte beispielsweise saisonale Artikel empfehlen, mit denen sich die Nutzer bei ihren Vorbereitungen für die nächste Saison eindecken wollen. 
+Heben Sie Artikel hervor, die Ihre Nutzer in letzter Zeit besonders häufig gekauft haben. Ein E-Commerce-Unternehmen könnte zum Beispiel saisonale Artikel empfehlen, die Nutzer:innen bei ihren Vorbereitungen für die nächste Saison auf Vorrat kaufen wollen. 
 
 {% details Anforderungen %}
 

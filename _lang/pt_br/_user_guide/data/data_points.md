@@ -25,10 +25,6 @@ Consulte a seção [Contagem de consumo](#consumption-count) deste artigo para e
 
 Para visualizar o uso de seus pontos de dados, acesse **Configurações** > **Faturamento** e selecione a guia **Uso total de pontos de dados**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página selecionando o ícone da sua conta > **Inscrições e uso** > **Uso** **total de pontos de dados**.
-{% endalert %}
-
 Para saber mais sobre os componentes do dashboard de pontos de dados, consulte [Faturamento]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}
@@ -74,6 +70,10 @@ Os atributos personalizados feitos upload por meio da importação de CSV contam
 Além disso, como as alterações no estado da inscrição não consomem pontos de dados, a atualização dos campos `email_subscribe`, `push_subscribe`, `subscription_group_id` ou `subscription_state` em seu arquivo CSV não incorrerá em cobranças.
 
 ## Pontos de dados
+
+{% alert note %}
+As tabelas a seguir têm caráter ilustrativo. Para conhecer as convenções exatas de nomenclatura, capitalização e valores aceitos para determinados campos, consulte a documentação relevante do seu método de ingestão.
+{% endalert %}
 
 {% tabs %}
 {% tab Não faturável %}
@@ -166,3 +166,4 @@ table td {
 
 {% endtab %}
 {% endtabs %}
+

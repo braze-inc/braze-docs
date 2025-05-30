@@ -32,7 +32,7 @@ Par exemple, si vous souhaitez vérifier les brouillons de vos campagnes, sélec
 
 ### Recherche par étiquettes
 
-La recherche de vos campagnes par [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) permet d'affiner davantage vos résultats. Par exemple, si vous essayez de trouver toutes les campagnes que vous avez créées pour cibler les nouveaux clients, les acheteurs fréquents, les clients déchus, vous pouvez rechercher ces campagnes par leur étiquette partagée **Ciblage par type de client**.
+La recherche de vos campagnes par [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) permet d'affiner davantage vos résultats. Par exemple, si vous essayez de trouver toutes les campagnes que vous avez créées pour cibler les nouveaux clients, les acheteurs fréquents, les clients déchus, vous pouvez rechercher ces campagnes par leur étiquette partagée **Ciblage par type de client**.
 
 ### Adjusting filters
 

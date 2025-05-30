@@ -24,6 +24,36 @@ Es gibt einige Details zu beachten, wenn Sie einen Delay in Ihrer Canvas-Journey
 - Die Frist beträgt 30 Tage.
 - Eine Delay-Komponente kann nur mit einem nächsten Schritt verbunden werden.
 
+### Personalisierte Verzögerungen
+
+{% alert important %}
+Personalisierte Verzögerungen und erweiterte Verzögerungen sind bereits verfügbar. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.
+{% endalert %}
+
+Wählen Sie die Option **Verzögerung personalisieren** aus, um eine personalisierte Verzögerung für Ihre Nutzer:innen einzurichten. Sie können dies mit einem [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) verwenden, um die Kontextvariable auszuwählen, um die Sie verzögern möchten.
+
+Braze beendet einen Nutzer:innen bei diesem Schritt, wenn:
+
+- Die Kontextvariable kehrt zu keinem Wert zurück.
+- Ein eingebetteter Connected-Content-Aufruf schlägt fehl.
+- Die Typen der Kontextvariablen stimmen nicht überein.
+
+Nehmen wir an, wir möchten unsere Kund:innen daran erinnern, in 30 Tagen Zahnpasta zu kaufen. Mit einer Kombination aus einem Kontextschritt und einem Verzögerungsschritt können wir diese Kontextvariable auswählen, um die wir verzögern wollen. In diesem Fall würde unser Schritt Context die folgenden Felder enthalten:
+
+- **Name der Kontextvariablen:** product_reminder_interval
+- **Daten-Typ:** Uhrzeit
+- **Wert:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+
+![Das "product_reminder_interval" und sein Wert.][2]
+
+Da wir unsere Kund:in in 30 Tagen erinnern möchten, wählen wir als nächstes **Bis zu einem bestimmten Tag** als Verzögerungsoption aus und wählen **Verzögerung personalisieren**, um die Informationen aus unserem Schritt Kontext zu verwenden. Das bedeutet, dass unsere Nutzer:in so lange verzögert werden, bis die gewählte Kontextvariable ausgewählt ist.
+
+![Beispiel für die Verwendung von Kontextvariablen mit einem Verzögerungsschritt, um Nutzer:innen auf der Grundlage des "product_reminder_interval" zu verzögern.][3]
+
+#### Erweiterte Verzögerungen
+
+Sie können jetzt Verzögerungsstufen bis zu zwei Jahre verlängern. Wenn Sie z.B. neue Nutzer:innen für Ihre App onboarding, können Sie eine längere Verzögerung von zwei Monaten einfügen, bevor Sie eine Nachricht senden, um die Nutzer:innen, die noch keine Sitzung begonnen haben, anzustupsen.
+
 ### Optionen für die Zeitverzögerung
 
 Sie können die Art der Verzögerung vor der nächsten Nachricht in Ihrem Canvas auswählen. Sie können entweder eine Verzögerung für Ihre Benutzer festlegen, die bis nach einer bestimmten Zeitspanne andauert, oder Ihre Benutzer bis zu einem bestimmten Datum und einer bestimmten Uhrzeit warten lassen.
@@ -85,3 +115,5 @@ Für Verzögerungen gibt es drei Statistiken, die in der Analyseansicht eines ak
 Zeitreihen für diese Analysen sind in der erweiterten Komponentenansicht verfügbar.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
+[2]: {% image_buster /assets/img/context_step1.png %}
+[3]: {% image_buster /assets/img/context_step2.png %}

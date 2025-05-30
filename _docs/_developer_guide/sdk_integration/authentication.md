@@ -99,7 +99,7 @@ braze.initialize("YOUR-API-KEY-HERE", {
 ```
 {% endtab %}
 {% tab Java %}
-When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
+When configuring the Braze instance, call `setIsSdkAuthenticationEnabled` to `true`.
 ```java
 BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true);
@@ -109,7 +109,7 @@ Braze.configure(this, brazeConfigBuilder.build());
 Alternatively, you can add `<bool name="com_braze_sdk_authentication_enabled">true</bool>` to your braze.xml.
 {% endtab %}
 {% tab KOTLIN %}
-When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
+When configuring the Braze instance, call `setIsSdkAuthenticationEnabled` to `true`.
 ```kotlin
 BrazeConfig.Builder brazeConfigBuilder = BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true)
@@ -175,7 +175,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 {% endtab %}
 {% tab Java %}
 
-Supply the JWT Token when calling [`appboy.changeUser`](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
+Supply the JWT Token when calling [`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html):
 
 ```java
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
@@ -189,7 +189,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab KOTLIN %}
 
-Supply the JWT Token when calling [`appboy.changeUser`](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
+Supply the JWT Token when calling [`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html):
 
 ```kotlin
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")

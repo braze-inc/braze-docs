@@ -41,6 +41,15 @@ Dies bedeutet Folgendes:
 
 > Holen Sie sich Tales für nur 7.49!
 
+## Kataloge exportieren
+
+Es gibt zwei Möglichkeiten, wie Sie Kataloge aus dem Dashboard exportieren können: 
+
+- Bewegen Sie den Mauszeiger über die Katalogzeile im Bereich **Kataloge**. Wählen Sie dann den Button **Katalog exportieren** aus.
+- Wählen Sie Ihren Katalog aus. Wählen Sie dann den Button **Katalog exportieren** auf dem Tab **Vorschau** des Katalogs aus.
+
+Sie erhalten eine E-Mail zum Herunterladen der CSV-Datei, nachdem Sie den Export gestartet haben. Sie haben bis zu vier Stunden Zeit, diese Datei abzurufen.
+
 ## Zusätzliche Anwendungsfälle
 
 ### Mehrere Artikel
@@ -62,7 +71,7 @@ Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
 
 Das Ergebnis sieht folgendermaßen aus:
 
-> Holen Sie sich das ultimative Trio Tales, Teslagrad und Acaratus noch heute!
+```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
 Schauen Sie sich die [Auswahlmöglichkeiten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) an, um Datengruppen für personalisierte Nachrichten zu erstellen!
@@ -72,24 +81,7 @@ Schauen Sie sich die [Auswahlmöglichkeiten]({{site.baseurl}}/user_guide/persona
 
 Sie können Katalogartikel verwenden, um bedingte Anweisungen zu erstellen. Sie können zum Beispiel eine bestimmte Nachricht triggern, die angezeigt wird, wenn ein bestimmter Artikel in Ihrer Kampagne ausgewählt wird.
 
-Dazu verwenden Sie eine Liquid `if` -Anweisung in einem Format wie diesem:
-
-{% raw %}
-```liquid
-{% catalog_items Test-list %}
-{% if {{items[0].first-item}} == true %}
-Do this
-{% else %}
-Do that
-{% endif %}
-```
-{% endraw %}
-
-Beachten Sie, dass Sie die Katalogliste deklarieren müssen, bevor Sie die `if` Anweisungen verwenden. In dem obigen Beispiel ist `Test-list` die Katalogliste.
-
-#### Anwendungsfall: Liquid `if` Snippet
-
-In diesem Szenario werden unterschiedliche Meldungen angezeigt, wenn das benutzerdefinierte Attribut `venue_name` mehr als 10 Zeichen oder weniger als 10 Zeichen hat. Wenn `venue_name` auf `blank` steht, wird nichts angezeigt.
+Dazu verwenden Sie eine Liquid `if` Anweisung, wie in diesem Beispiel:
 
 {% raw %}
 ```liquid
@@ -103,6 +95,10 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+In diesem Beispiel werden unterschiedliche Nachrichten angezeigt, wenn das angepasste Attribut `venue_name` mehr als 10 Zeichen oder weniger als 10 Zeichen hat. Wenn `venue_name` auf `blank` steht, wird nichts angezeigt. 
+
+Beachten Sie, dass Sie die Katalogliste und ggf. die Auswahl deklarieren müssen, bevor Sie `if` Anweisungen verwenden. Im Beispiel ist `item-list` die Katalogliste und `selections` ist der Name der Auswahl.
 
 ### Bilder verwenden {#using-images}
 
@@ -138,6 +134,10 @@ Sie können auch Templates verwenden, um Katalogartikel auf der Grundlage angepa
     ]
 }
 ```
+
+{% alert note %}
+JSON-Objekte in Katalogen werden nur über die API aufgenommen. Sie können ein JSON-Objekt nicht mit einer CSV-Datei hochladen.
+{% endalert %}
 
 Mit Liquid-Templates können Sie die IDs der Wunschlisten dynamisch herausziehen und sie dann in Ihrer Nachricht verwenden. Dazu [weisen Sie Ihrem benutzerdefinierten Attribut eine Variable][10] zu und verwenden dann das Modal **Personalisierung hinzufügen**, um ein bestimmtes Element aus dem Array zu ziehen.
 

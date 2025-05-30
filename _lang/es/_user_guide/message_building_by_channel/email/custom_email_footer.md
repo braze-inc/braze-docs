@@ -23,15 +23,9 @@ Es su responsabilidad asegurarse de que su pie de página personalizado cumple l
 Para crear o editar su pie de página personalizado, haga lo siguiente:
 
 1. Vaya a **Configuración** > **Preferencias de correo electrónico**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se llama **Configuración de correo electrónico** y se encuentra en **Administrar configuración**.
-{% endalert %}
-
-{: start="2"}
-2\. Vaya a la sección **Pie de página** personalizado y active los pies de página personalizados.
-3\. Edita tu pie de página en la sección **Redactar**.
-4\. Envía un mensaje de prueba. 
+2. Vaya a la sección **Pie de página** personalizado y active los pies de página personalizados.
+3. Edita tu pie de página en la sección **Redactar**.
+4. Envía un mensaje de prueba. 
 
 ![Un ejemplo de pie de página personalizado.][20]
 

@@ -2,7 +2,7 @@
 nav_title: Quick Push Messages
 article_title: Quick Push Messages
 alias: "/quick_push/"
-description: "This article describes things to know when creating a push campaign or Cavnas using the quick push editing experience."
+description: "This article describes things to know when creating a push campaign or Canvas using the quick push editing experience."
 ---
 
 # Quick push messages

@@ -29,7 +29,7 @@ tool:
 
 사용자 여정에서 다음 중 어느 것이든 삭제할 수 있습니다.
 
-- [캔버스 단계]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)
+- [Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - 캔버스 변형 
 - 캔버스 단계 간의 연결
 

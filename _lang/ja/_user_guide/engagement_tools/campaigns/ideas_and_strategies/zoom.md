@@ -59,7 +59,7 @@ URL のパラメーターを使用してユーザーデータを渡し、ペー�
 	Zoom エンドポイントへの Webhook 呼び出しの例。<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",
@@ -95,7 +95,7 @@ URL のパラメーターを使用してユーザーデータを渡し、ペー�
 	Zoom エンドポイントへの Webhook 呼び出しの例。<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",

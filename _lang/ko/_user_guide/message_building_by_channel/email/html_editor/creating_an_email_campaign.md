@@ -38,8 +38,8 @@ search_rank: 1
 {:start=“2"}
 2\. **이메일을** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
 3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) 추가하세요.
-   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. 예를 들어 [보고서 빌더]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)를 사용할 때 특정 태그를 기준으로 필터링할 수 있습니다.
+4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+   * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
 {% alert tip %}
@@ -61,7 +61,7 @@ search_rank: 1
 
 Braze는 이메일 캠페인을 만들 때 [드래그 앤 드롭 편집기와]({{site.baseurl}}/dnd/) 표준 HTML 편집기 등 두 가지 편집 환경을 제공합니다. 원하는 편집 환경에 적합한 타일을 선택합니다. 
 
-![이메일 편집 환경을 위해 드래그 앤 드롭 편집기 또는 HTML 편집기 중에서 선택합니다.][3]{: style="max-width:75%" }
+![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.][3]{: style="max-width:75%" }
 
 그런 다음 기존 [이메일 템플릿][10], 파일에서 템플릿 업로드][18]를 선택하거나(HTML 편집기만 해당) 빈 템플릿을 사용할 수 있습니다. 
 
@@ -71,7 +71,11 @@ Braze는 이메일 캠페인을 만들 때 [드래그 앤 드롭 편집기와]({
 
 ## 3단계: 이메일 작성
 
-템플릿을 선택하면 전체 화면 편집기로 바로 이동하여 이메일 초안을 작성하고, 전송 정보를 변경하고, 전달 가능성 또는 법규 준수에 대한 경고를 확인할 수 있는 이메일 개요가 표시됩니다. 
+템플릿을 선택하면 전체 화면 편집기로 바로 이동하여 이메일 초안을 작성하고, 전송 정보를 변경하고, 전달 가능성 또는 법규 준수에 대한 경고를 확인할 수 있는 이메일 개요가 표시됩니다. You can switch among HTML, classic, plaintext, and [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) tabs while you compose. 
+
+![The "Regenerate from HTML" button.][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
 
 {% alert tip %}
 대부분의 받은편지함에서 JavaScript를 지원하지 않으므로 이메일에 정확한 미리보기로 모션을 추가하려면 자바스크립트가 필요한 요소 대신 GIF를 사용하세요.
@@ -84,10 +88,12 @@ Braze는 어트리뷰트로 참조된 HTML 이벤트 핸들러를 자동으로 �
 {% endalert %}
 
 {% alert tip %}
-멋진 카피를 만드는 데 도움이 필요하신가요? [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/) 사용해 보세요. 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![이메일 작성기의 본문 탭에 있는 AI 카피라이터 실행 버튼을 누릅니다.(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
 
 ### 3a단계: 전송 정보 추가
 
@@ -271,6 +277,7 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 
 이메일 캠페인의 결과에 액세스하는 방법을 알아보려면 [이메일 보고를]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) 확인하세요.
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

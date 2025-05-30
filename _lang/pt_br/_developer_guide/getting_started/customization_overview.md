@@ -3,7 +3,9 @@ nav_title: Visão geral da personalização
 article_title: Visão geral da personalização
 page_order: 10
 description: "Este artigo de referência aborda os conceitos essenciais de personalização e extensão dos canais de envio de mensagens do SDK."
-  
+hidden: true
+layout: redirect
+redirect_to: /docs/developer_guide/getting_started/
 ---
 
 # Visão geral da personalização
@@ -126,7 +128,7 @@ Os profissionais de marketing ainda mantêm o controle do público, do conteúdo
 
 Com a abordagem Correr, os desenvolvedores assumem o controle total da experiência do usuário. O código personalizado determina a aparência das mensagens, como elas se comportam e como interagem com outros canais de envio de mensagens (por exemplo, disparando um Content Card com base em uma notificação por push).
 
-Quando você cria conteúdo personalizado completamente novo, como novos tipos de cartões de conteúdo ou mensagens no app com interface de usuário personalizada, o SDK do Braze não rastreará automaticamente [as análises de dados]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/). Você deve lidar com a análise de dados de forma programática para que os profissionais de marketing continuem a ter acesso a métricas como impressões, cliques e demissões no dashboard do Braze. Chame os métodos de análise de dados do Braze SDK para que ele retorne esses dados para a Braze. Cada canal de envio de mensagens tem um artigo de análise de dados para ajudar a facilitar isso.
+Quando você cria conteúdo personalizado completamente novo, como novos tipos de cartões de conteúdo ou mensagens no app com interface de usuário personalizada, o SDK do Braze não rastreará automaticamente as [análises de dados]({{site.baseurl}}/developer_guide/analytics/). Você deve lidar com a análise de dados de forma programática para que os profissionais de marketing continuem a ter acesso a métricas como impressões, cliques e demissões no dashboard do Braze. Chame os métodos de análise de dados do Braze SDK para que ele retorne esses dados para a Braze. Cada canal de envio de mensagens tem um artigo de análise de dados para ajudar a facilitar isso.
 
 <table>
 <thead>

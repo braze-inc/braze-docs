@@ -172,7 +172,7 @@ Here is an example payload to `/users/track` that updates a user profile by the 
 
 ## Step 5: Merge profiles (optional)
 
-As described above, there's a possibilty for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
+As described above, there's a possibility for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
 
 Here's an example payload to `/users/merge` that targets an unidentified user profile by user alias `line_id`:
 
@@ -318,7 +318,7 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 This method allows users to link their LINE account to your app’s user account. You can then use Liquid in Braze, such as {% raw %}`{{line_id}}`{% endraw %}, to create a personalized URL for the user that passes the user's LINE ID back to your website or app, which can then be associated with a known user.
 
-1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![][9]
+1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![Canvas that triggers when a user subscribes to the LINE channel.][9]
 2. Create a message incentivizing users to log into your website or app, passing the user's LINE ID as a query parameter (through Liquid), such as:
 
 ```
@@ -327,7 +327,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3. Create a follow-up message that delivers the coupon code.
-4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![][10]
+4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![Action-based campaign that triggers when the LINE user is identified.][10]
 
 #### How it works
 

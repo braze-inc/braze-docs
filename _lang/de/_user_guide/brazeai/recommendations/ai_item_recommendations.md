@@ -36,7 +36,7 @@ Sie können auch eine Empfehlung direkt aus einem einzelnen Katalog erstellen. W
 
 Geben Sie Ihrer Empfehlung einen Namen und eine optionale Beschreibung.
 
-![][1]
+![Schritt "Empfehlungsdetails" mit den Feldern Name und Beschreibung.][1]
 
 ### Schritt 2: Definieren Sie Ihre Empfehlung {#recommendation-type}
 
@@ -55,7 +55,7 @@ Wenn Sie die Option **Neueste** oder **KI personalisiert** verwenden, erhalten B
 
 Um zu vermeiden, dass Artikel vorgeschlagen werden, die ein Benutzer bereits gekauft oder mit denen er interagiert hat, wählen Sie **Keine Artikel empfehlen, mit denen Benutzer zuvor interagiert** haben. Diese Option ist nur verfügbar, wenn der **Empfehlungstyp** auf **AI personalisiert** eingestellt ist.
 
-![][2-3]
+![Schritt "Definieren Sie Ihre Empfehlung" mit dem Typ "Beliebteste" und der ausgewählten Option "Keine Artikel empfehlen, mit denen Nutzer:innen zuvor interagiert haben".][2-3]
 
 Diese Einstellung verhindert, dass Nachrichten die Artikel wiederverwenden, die ein Benutzer bereits gekauft oder mit denen er interagiert hat, vorausgesetzt, die Empfehlung wurde kürzlich aktualisiert. Artikel, die Sie zwischen den Empfehlungsaktualisierungen gekauft haben oder mit denen Sie interagiert haben, können weiterhin angezeigt werden. Für die kostenlose Version der Artikel-Empfehlungen werden wöchentlich Aktualisierungen vorgenommen. In der Pro-Version erfolgt die Aktualisierung der KI-Artikelempfehlungen alle 24 Stunden.
 
@@ -69,7 +69,7 @@ Falls er noch nicht eingetragen ist, wählen Sie den [Katalog][Katalog] aus, aus
 
 Wenn Sie mehr Kontrolle über Ihre Empfehlung wünschen, wählen Sie eine [Auswahl]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), um benutzerdefinierte Filter anzuwenden. Mit Auswahlen können Empfehlungen nach bestimmten Spalten im Katalog wie Marke, Größe oder Standort gefiltert werden. Auswahlen, die Liquid enthalten, können nicht in Ihrer Empfehlung verwendet werden.
 
-![][2-2]
+![Ein Beispiel für die Auswahl "vorrätig", die für die Empfehlung ausgewählt wurde.][2-2]
 
 {% alert tip %}
 Wenn Sie keine Auswahl finden können, vergewissern Sie sich zunächst, dass sie im Katalog eingerichtet ist.
@@ -87,7 +87,7 @@ Möglich sind:
 
 Unter **Benutzerdefiniertes Ereignis** können Sie ein Ereignis aus der Liste auswählen.
 
-![][3]
+![Das angepasste Event "Abgeschlossener Kauf" ausgewählt, wie Events derzeit getrackt werden.][3]
 
 ### Schritt 4: Wählen Sie den entsprechenden Eigenschaftsnamen {#property-name}
 
@@ -97,7 +97,7 @@ Wählen Sie dieses Feld für den **Eigenschaftsnamen**.
 
 Das Feld **Eigenschaftsname** wird mit einer Liste von Feldern vorausgefüllt, die über das SDK an Braze gesendet werden. Wenn genügend Daten zur Verfügung gestellt werden, werden diese Eigenschaften auch in der Reihenfolge der Wahrscheinlichkeit, dass es sich um die richtige Eigenschaft handelt, eingeordnet. Wählen Sie daraus das aus, das zu dem Katalogfeld `id` passt.
 
-![][4]
+![Die Eigenschaft "purchase_item" wurde ausgewählt, die den IDs der Artikel im Katalog entspricht.][4]
 
 #### Anforderungen {#requirements}
 
@@ -302,7 +302,7 @@ Sie können die Analysen für Ihre Empfehlungen einsehen, um zu sehen, welche Ar
 
 Oben auf der Seite finden Sie Statistiken zu Ihrer Empfehlung, z. B. zur Genauigkeit und Reichweite.
 
-![][5]
+![Metriken für die Zielgruppe der Empfehlungen zeigen die Genauigkeit (21,1%), die Abdeckung (83,0%) und die Empfehlungsarten, die sich in personalisierte und beliebteste Artikel aufteilen.][5]
 
 Diese Metriken sind in der folgenden Tabelle definiert. 
 
@@ -318,15 +318,15 @@ Der nächste Abschnitt enthält eine Aufteilung der Katalogartikel in zwei mögl
 - **Personalisierte Artikel** oder **Neueste Artikel:** Diese Spalte listet jeden Artikel im Katalog in absteigender Reihenfolge der am häufigsten empfohlenen Artikel auf. In dieser Spalte sehen Sie auch, wie viele Benutzer den einzelnen Artikeln durch das Modell zugeordnet wurden.
 - **Beliebteste Artikel:** Diese Spalte listet jeden Artikel im Katalog in absteigender Reihenfolge seiner Beliebtheit auf. Beliebtheit bezieht sich hier auf die Objekte im Katalog, mit denen Benutzer im gesamten Arbeitsbereich am häufigsten interagieren. Beliebteste wird als Ausweichlösung verwendet, wenn für einen einzelnen Benutzer keine personalisierte oder neueste Version berechnet werden kann.
 
-![][6]
+![Nebeneinander angeordnete Tabellen mit den den Nutzer:innen zugewiesenen Artikeln, getrennt nach personalisierten Empfehlungen und beliebtesten Empfehlungen.][6]
 
 Die **Empfehlungsübersicht** zeigt eine Zusammenfassung der von Ihnen gewählten Empfehlungskonfiguration, einschließlich des Zeitpunkts, zu dem die Empfehlung zuletzt aktualisiert wurde.
 
-![][7]{: style="max-width:45%" }
+![Übersichtstabelle für Empfehlungen, die den Typ, den Katalog, den Ereignistyp, den Namen des angepassten Events, den Namen der Eigenschaft und das Datum des letzten Updates anzeigt.][7]{: style="max-width:45%" }
 
 ## Empfehlungen in der Nachrichtenübermittlung verwenden
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+![Modal "Personalisierung hinzufügen" mit Artikel-Empfehlung als Personalisierungstyp.][10]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Wenn die Empfehlung trainiert worden ist, können Sie Ihre Nachrichten mit Liquid personalisieren, um die beliebtesten Produkte aus dem Katalog einzufügen. Das Liquid kann über das Personalisierungsfenster in den Nachrichtenkompilern für Sie erstellt werden:
 
@@ -361,6 +361,10 @@ Dies geschieht unter einigen besonderen Bedingungen:
 - Das Modell findet weniger als 30 Artikel, die Ihren Kriterien entsprechen.
 - Die entsprechenden Artikel sind nicht mehr verfügbar oder auf Lager.
 - Die Artikel entsprechen nicht den aktuellen Auswahlkriterien, z.B. weil sich der Bestand oder die Präferenzen des Benutzers geändert haben.
+
+### Werden bestehende Empfehlungen nach dem Upgrade auf Item Recommendations Pro wöchentlich trainiert?
+
+Ja, aber erst nach ihrem nächsten geplanten Update. Bestehende Empfehlungen schalten beim Upgrade auf Artikel-Empfehlungen Pro nicht sofort auf wöchentliches Training und tägliche Prognosen um. Sie werden den neuen Zeitplan jedoch automatisch bei ihrem nächsten Umschulungszyklus übernehmen. Wenn eine Empfehlung zum Beispiel zuletzt am 1\. Februar trainiert wurde und so eingestellt ist, dass sie alle 30 Tage neu trainiert wird, übernimmt sie den neuen wöchentlichen Zeitplan nach dem nächsten Update am 2\. März.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}

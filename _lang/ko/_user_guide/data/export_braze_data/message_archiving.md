@@ -28,13 +28,17 @@ description: "이 참조 문서는 메시지 보관, 사용자가 보낸 메시�
 
 JSON은 다음 키 구조를 사용하여 스토리지 버킷에 저장됩니다:
 
-`sent_messages/channel/(one of: md5, e164 phone number, email, or push token)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
+`sent_messages/{channel, one of: email, push, sms}/{MD5 digest of downcased: email address, push token, or E.164 phone number}/{campaign or Canvas step API ID}/{dispatch ID}.json.gz`
 
 예시 파일은 다음과 같이 보일 수 있습니다:
 
 `sent_messages/email/819baa08d8d7e77e19d4666f5fc6050b/ee965cb2-8934-4b0a-acf1-91c899c2f915/651fd10b282850b39e1169c13975234b.json.gz`
 
 {% alert note %}
+The MD5 digest can only be calculated using a known downcased email address, push token, or E.164 phone number. A known MD5 digest can't be reversed to obtain the downcased email address, push token, or E.164 phone number.
+{% endalert %}
+
+{% alert tip %}
 **푸시 토큰을 버킷에서 찾는 데 문제가 있습니까?**<br>
 Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이로 인해 키 경로에서 해시 `32b802170652af2b5624b695f34de089`와 함께 푸시 토큰 `Test_Push_Token12345`가 `test_push_token12345`으로 소문자로 변환됩니다.
 {% endalert %}
@@ -136,7 +140,7 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
   "version" : 1, //numerical version of the json structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
-  "platform": ios/android/web/kindle,
+  "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
   "app_id": ApiKeyOfApp,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,

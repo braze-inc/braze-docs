@@ -40,7 +40,7 @@ Die Änderungen werden wirksam, nachdem Sie **Speichern** ausgewählt haben. Wen
 
 In bestimmten Ländern besteht ein höheres Risiko, dass der SMS-Verkehr gepumpt wird. Diese Länder sind in der Dropdown-Liste mit einem **hohen Risiko** gekennzeichnet.
 
-![Das Land Aserbaidschan ist mit einem „hohen Risiko“ eingestuft.][4]{: style="max-width:80%;"}
+![Das Länder-Dropdown mit Aserbaidschan mit dem Tag "Hohes Risiko".][4]{: style="max-width:80%;"}
 
 Wenn Sie den Versand in diese Länder zulassen, müssen Sie zunächst das damit verbundene Risiko anerkennen, bevor das Land in Ihre Zulassungsliste aufgenommen wird.
 
@@ -50,7 +50,7 @@ Beschränken Sie die Länder auf Ihrer Allowlist auf die Länder, die Sie für I
 
 ## Sichtbarkeit von blockierten Sendungen
 
-Sendeversuche an Länder, die nicht auf Ihrer Allowlist stehen, werden abgebrochen. Abgebrochene Nachrichten werden im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) und im [Nachrichten-Engagement-Event „SMS-Abbruch“]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) protokolliert. 
+Sendeversuche an Länder, die nicht auf Ihrer Allowlist stehen, werden abgebrochen. Abgebrochene Nachrichten werden im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) und im [Nachrichten-Engagement-Event „SMS-Abbruch“]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) protokolliert. 
 
 Abgebrochene Nachrichten, die durch blockierte Sendungen verursacht wurden, werden als `Abort_Type = "blocked_recipient_country"` mit dem Abbruchprotokoll angezeigt, in dem das blockierte Land aufgeführt ist.
 

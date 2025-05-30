@@ -21,7 +21,7 @@ channel: push
 これを解決するには、[AutoStarter](https://github.com/judemanutd/AutoStarter) などのライブラリーをアプリケーションに統合します。AutoStarter は複数のメーカーをサポートしており、さまざまなデバイスで起動権限マネージャーを簡単に呼び出すことができます。AutoStarter を統合したら、`AutoStartPermissionHelper.getInstance().getAutoStartPermission(context)` を呼び出して、エンドユーザーのデバイスに起動権限マネージャーを表示します。このアクションを、エンドユーザーにアプリの「自動起動」を有効にするよう促すプロンプトと組み合わせる。マーケティングチームがこのメッセージを作成します。次のセクションを確認してください。
 
 ## マーケティング担当者のためのステップ
-ユーザーがプッシュ通知の受信をオプトインした後、これらのデバイスへのメッセージ配信を改善するために、ユーザー側でできる追加ステップがある。[プッシュプライマーメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)の後に、中国 OEM デバイスのユーザーを対象として、次の追加ステップを含むアプリ内メッセージを付け加えることをお勧めします。
+ユーザーがプッシュ通知の受信をオプトインした後、これらのデバイスへのメッセージ配信を改善するために、ユーザー側でできる追加ステップがある。[プッシュプライマーメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)の後に、中国 OEM デバイスのユーザーを対象として、次の追加ステップを含むアプリ内メッセージを付け加えることをお勧めします。
 
 - アプリの「自動起動」を有効にする
 - アプリのバッテリー最適化を無効にする

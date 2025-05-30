@@ -15,7 +15,7 @@ tool: Canvas
 2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。この記事は、元のエディターでユーザーがキャンバスコンポーネントをどのように進むかを理解するための参考にしてください。<br><br>キャンバスフローのコンポーネントの場合、**昇進動作**は、[オーディエンスをすぐに昇進させる] か、[**オーディエンスをすぐに昇進させる**] に設定されます。これは[切断されたステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/)にも適用されます。
 {% endalert %}
 
-> **ユーザー昇進の動作**機能を使用すると、[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/)を進ませる基準を選択できます。 
+> **ユーザー昇進の動作**機能を使用すると、[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を進ませる基準を選択できます。 
 
 ![オーディエンスをメッセージの送信時に進めるか、すぐに進めるかの 2 つのオプションを持つ「昇進動作」の設定。][1]
 

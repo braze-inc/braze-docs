@@ -15,10 +15,6 @@ search_rank: 5
 
 [**請求**] ページに移動するには、[**設定**] > [**請求**] を選択します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、アカウントアイコンを選択し、**Subscriptions and Usage**を選択することで、このページを見つけることができます。
-{% endalert %}
-
 [**請求**] ページには次のタブが含まれています。
 
 - [サブスクリプションと使用法](#subscriptions-and-usage)

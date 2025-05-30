@@ -4,7 +4,7 @@ article_title: 캔버스의 인앱 메시지
 alias: "/canvas_in-app_messages/"
 page_order: 2
 page_type: reference
-description: "이 참고 문서에서는 캔버스에 추가하여 서식 있는 메시징을 표시할 수 있는 캔버스 인앱 메시지에 대한 기능과 뉘앙스에 대해 설명합니다."
+description: "This reference article describes features and nuances specific to in-app messages that you can add to your Canvas to show rich messaging."
 tool: Canvas
 channel: in-app messages
 
@@ -12,19 +12,28 @@ channel: in-app messages
 
 # 캔버스의 인앱 메시지
 
-> 캔버스 여정의 일부로 인앱 메시지를 추가하여 고객이 앱에 참여할 때 서식 있는 메시징을 표시할 수 있습니다. 이 문서에서는 캔버스 인앱 메시지와 관련된 기능 및 뉘앙스에 대해 설명합니다.
+> You can add in-app messages as part of your Canvas journey to show rich messaging when your customer engages with your app.
 
-계속하기 전에 이미 [캔버스를 생성하고]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) 지연 및 오디언스 옵션을 설정했어야 합니다. 
 
-이제 캔버스에 인앱 메시지를 추가할 수 있습니다. [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) 추가 단계를 추가하고 **메시징 채널**에 대한 **인앱 메시지**를 선택합니다. 지연 시간이 지나고 오디언스 옵션을 선택하면 인앱 메시지가 실시간으로 설정되고 사용자가 앱을 열면 이를 볼 수 있습니다. 캔버스의 인앱 메시지는 `start session` 트리거 이벤트에 의해서만 트리거될 수 있으며, 캔버스 구성 요소의 커스텀 이벤트에 의해 트리거될 수 없습니다.
+## How it works
+
+Before you can use in-app messages in your Canvas, be sure to have a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) set up with delay and audience options.
+
+After any delays pass and the audience options are checked, the in-app message will be set live, and users will see it if they open the app. In-app messages in Canvas can only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
 
 동작 트리거 항목이 있는 캔버스 단계의 경우 사용자는 세션 중간에 캔버스에 들어갈 수 있습니다. 그러나 위에서 언급했듯이 인앱 메시지는 다음 세션이 시작될 때까지 트리거되지 않으므로 이러한 사용자는 세션이 시작되기 전에 캔버스에 입장할 자격이 없으므로 초기 인앱 메시지를 놓칠 수 있습니다.
 
-[메시지가 만료되는 시기와 메시지에](#in-app-message-expiration) 어떤 [진행 동작을](#advancement-behavior-options) 적용할지 사용자 지정할 수 있습니다.
+## Adding an in-app message to your user journey
 
-## 인앱 메시지 만료
+To add an in-app message to your Canvas, do the following:
 
-인앱 메시지 작성기에서 인앱 메시지가 만료되는 시기를 선택할 수 있습니다. 이 기간 동안 인앱 메시지는 만료 날짜에 도달할 때까지 표시되지 않고 대기합니다. 인앱 메시지가 전송된 후에는 한 번만 볼 수 있습니다.
+1. Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step to your user journey.
+2. Select **In-App Message** for your **Messaging Channel**. 
+3. Determine [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
+
+### 인앱 메시지 만료
+
+In the in-app message editor, you can choose when the in-app message will expire. During this time, the in-app message will "sit" and wait to be viewed until it has reached the expiry date. 인앱 메시지가 전송된 후에는 한 번만 볼 수 있습니다.
 
 ![][1]
 
@@ -34,9 +43,9 @@ channel: in-app messages
 | 지정된 날짜에 메시지가 만료됩니다. | 두 번째 옵션에서는 인앱 메시지를 더 이상 사용할 수 없는 특정 날짜와 시간을 선택할 수 있습니다. | 예를 들어 특정 날짜 및 시간에 종료되는 세일이 있는 경우 이 옵션을 선택하면 세일이 종료될 때 사용자에게 관련 인앱 메시지가 더 이상 표시되지 않도록 할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### 사용 사례
+## 사용 사례
 
-이 기능은 언제 사용해야 하나요? Braze는 프로모션 및 온보딩 캔버스에 이 기능을 사용하는 것을 적극 권장합니다.
+You can use in-app messages in your promotional and onboarding Canvases.
 
 {% tabs %}
   {% tab 프로모션 %}
@@ -146,16 +155,14 @@ channel: in-app messages
   {% endtab %}
 {% endtabs %}
 
-## 고급 행동 옵션
+### Advancement behavior options
 
-### 캔버스 플로우
+In Canvas, Message steps automatically advance all users who enter the step. To use the **Advance when message sent** option, add a separate [Audience Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
 
-캔버스 흐름에서 메시지 구성 요소는 단계에 진입하는 모든 사용자를 자동으로 진행시킵니다. 메시지 진행 동작을 지정할 필요가 없으므로 전체 단계를 더 간단하게 구성할 수 있습니다. **메시지 전송 시 미리 알림** 옵션을 구현하려면 별도의 [대상 경로를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) 추가하여 이전 단계를 받지 못한 사용자를 필터링하세요.
-
-### 오리지널 캔버스 편집기
+{% details Original Canvas editor behavior %}
 
 {% alert important %}
-2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 섹션은 인앱 메시지가 있는 단계의 진행 동작이 어떻게 작동하는지 이해할 때 참조할 수 있습니다.
+You can no longer create or duplicate Canvases using the original editor. 이 섹션은 인앱 메시지가 있는 단계의 진행 동작이 어떻게 작동하는지 이해할 때 참조할 수 있습니다.
 {% endalert %}
 
 원본 편집기에서 만든 캔버스는 캔버스 구성 요소를 통해 발전하는 기준인 진행 동작을 지정해야 합니다. [인앱 메시지만 있는 단계](#steps-iam-only)는 [여러 메시지 유형](#steps-multiple-channels)(푸시, 이메일 등)이 있는 단계와 다른 진행 옵션이 있습니다. 캔버스 플로우 워크플로우의 인앱 메시지의 경우, 이 옵션은 항상 오디언스에게 즉시 전달되도록 설정됩니다.
@@ -190,13 +197,15 @@ channel: in-app messages
 **전체 오디언스**를 선택하면 사용자가 다음 단계로 이동한 경우에도 인앱 메시지가 만료될 때까지 사용할 수 있습니다. 캔버스의 다음 단계가 전달될 때 인앱 메시지가 실시간으로 표시되지 않도록 하려면 만료 시간을 후속 단계의 지연 시간보다 짧게 설정하세요.
 {% endalert %}
 
+{% enddetails %}
+
 ## 인앱 메시지 우선순위 지정
 
 고객은 캔버스 내에서 동시에 두 개의 인앱 메시지를 트리거할 수 있습니다. 이 경우 Braze는 다음과 같은 우선 순위에 따라 표시되는 인앱 메시지를 결정합니다. 여러 캔버스 단계를 드래그하여 우선 순위를 변경할 수 있습니다. 기본적으로 캔버스 배리언트의 이전 단계는 이후 단계보다 먼저 표시하도록 설정되어 있습니다.
 
 ![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
-캔버스의 **발송 설정** 섹션으로 이동하여 다른 캔버스 및 캠페인의 인앱 메시지보다 캔버스의 인앱 메시지의 우선순위를 지정할 수 있습니다.
+Go to the **Send Settings** of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
 
 ![]({% image_buster /assets/img_archive/canvas_send_settings.png %})
 
@@ -210,7 +219,9 @@ channel: in-app messages
 
 ## 캔버스의 사용자 지정 이벤트 속성
 
-인앱 메시지가 있는 캔버스 단계에서는 실행 기반 전달을 사용할 수 없으므로 이러한 단계에도 마찬가지로 커스텀 이벤트 속성정보를 사용할 수 없습니다. 캔버스에서 이벤트 속성정보를 템플릿으로 만들려면 첫 번째 캔버스 단계에서 이벤트 속성정보를 커스텀 속성으로 저장한 다음 두 번째 단계에서 커스텀 속성으로 인앱 메시지를 개인화하는 것이 좋습니다.
+Action-based delivery isn't available for Canvas steps with in-app messages. This means you also can't use custom event properties for these steps. 
+
+To template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step and personalizing your in-app message with the custom attributes in the second step.
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"

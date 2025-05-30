@@ -1,16 +1,16 @@
 ---
-nav_title: Como fazer uma chamada à API
+nav_title: Como fazer uma chamada de conteúdo conectado
 article_title: Como fazer uma chamada para a API Connected Content
 page_order: 0
 description: "Este artigo de referência aborda como fazer uma chamada à API Connected Content, bem como exemplos úteis e casos de uso avançados da conteúdo conectado."
 search_rank: 2
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/connected-content) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazer uma chamada API
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/connected-content) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazer uma chamada da API de conteúdo conectado
 
-> Use o Connected Content para inserir qualquer informação acessível via API diretamente nas mensagens enviadas aos usuários. Você pode extrair conteúdo diretamente de seu servidor da Web ou de APIs acessíveis publicamente.
+> Use o Connected Content para inserir qualquer informação acessível pela API diretamente nas mensagens enviadas aos usuários. Você pode extrair conteúdo diretamente de seu servidor da Web ou de APIs acessíveis publicamente.<br><br>Esta página aborda como fazer chamadas à Connected Content API, casos de uso avançados da Connected Content, tratamento de erros e muito mais.
 
-## Tag de conteúdo conectado
+## Envio de uma chamada de Connected Content
 
 {% raw %}
 
@@ -61,16 +61,16 @@ Se achar que a detecção de host não saudável pode estar causando problemas, 
 Visite [Solução de problemas de solicitações de webhook e Connected Content]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) para saber mais sobre como solucionar problemas de códigos de erro comuns.
 {% endalert %}
 
-## Performance
+## Permitindo uma performance eficiente
 
-Como o Braze entrega mensagens em uma velocidade muito rápida, certifique-se de que seu servidor possa lidar com milhares de conexões simultâneas para que os servidores não fiquem sobrecarregados ao baixar o conteúdo. Ao usar APIs públicas, confira se o seu uso não violará nenhum limite de frequência que o provedor de API possa empregar. A Braze exige que o tempo de resposta do servidor seja inferior a 2 segundos por motivos de performance; se o servidor demorar mais de 2 segundos para responder, o conteúdo não será inserido.
+Como o Braze entrega mensagens em uma velocidade muito rápida, certifique-se de que seu servidor possa lidar com milhares de conexões simultâneas para que os servidores não fiquem sobrecarregados ao baixar o conteúdo. Ao usar APIs públicas, confirme que seu uso não violará nenhum limite de frequência que o provedor de API possa empregar. O Braze exige que o tempo de resposta do servidor seja inferior a dois segundos por motivos de performance; se o servidor demorar mais de dois segundos para responder, o conteúdo não será inserido.
 
 Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de uma vez por destinatário. Isso se deve ao fato de que a Braze pode precisar fazer uma chamada à API Connected Content para renderizar uma carga útil de mensagem, e as cargas úteis de mensagem podem ser renderizadas várias vezes por destinatário para validação, lógica de nova tentativa ou outros fins internos. Seus sistemas devem ser capazes de tolerar que a mesma chamada da conteúdo conectado seja feita mais de uma vez por destinatário.
 
 ## Coisas para saber
 
 * A Braze não cobra pelas chamadas de API e não será contabilizada em sua cota de dados.
-* Há um limite de 1 MB para as respostas do conteúdo conectado.
+* Há um limite de um MB para as respostas do Connected Content.
 * As chamadas do Connected Content ocorrerão quando a mensagem for enviada, exceto no caso de mensagens no app, que farão essa chamada quando a mensagem for visualizada.
 * As chamadas de Connected Content não seguem redirecionamentos.
 
@@ -80,13 +80,9 @@ Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de u
 
 Se o URL exigir autenticação básica, a Braze poderá gerar uma credencial de autenticação básica para você usar em sua chamada de API. Você pode gerenciar as credenciais de autenticação básica existentes e adicionar novas credenciais em **Settings** > **Connected Content**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Connected Content** em **Manage Settings (Gerenciar configurações**).
-{% endalert %}
-
 ![As configurações de "Connected Content" no dashboard do Braze.][34]
 
-Para adicionar uma nova credencial, clique em **Add Credential (Adicionar credencial**). Dê um nome à sua credencial e digite o nome de usuário e a senha.
+Para adicionar uma nova credencial, selecione **Adicionar credencial**. Dê um nome à sua credencial e digite o nome de usuário e a senha.
 
 ![A janela "Create New Credential" (Criar nova credencial) com a opção de inserir um nome, nome de usuário e senha.][35]{: style="max-width:30%" }
 
@@ -115,7 +111,7 @@ Ao usar o conteúdo conectado na Braze, você poderá descobrir que certas APIs 
      :headers {
        "X-App-Id": "YOUR-APP-ID",
        "X-App-Token": "YOUR-APP-TOKEN"
-  }
+     }
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -127,7 +123,7 @@ Ao usar o conteúdo conectado na Braze, você poderá descobrir que certas APIs 
 
 Algumas configurações de API exigem a recuperação de um token de acesso que pode ser usado para autenticar o endpoint da API que você deseja acessar.
 
-#### Recuperar o token de acesso
+#### Etapa 1: Recuperar o token de acesso
 
 O exemplo a seguir ilustra a recuperação e o salvamento de um token de acesso em uma variável de localização que pode ser usada para autenticar a chamada subsequente à API. Um parâmetro `:cache_max_age` pode ser adicionado para corresponder ao tempo de validade do token de acesso e reduzir o número de chamadas de saída do conteúdo conectado. Para saber mais, consulte [Cache configurável][36] ].
 
@@ -139,16 +135,16 @@ O exemplo a seguir ilustra a recuperação e o salvamento de um token de acesso 
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
-  }
+     }
      :cache_max_age 900
      :save token_response
 %}
 ```
 {% endraw %}
 
-#### Autorizar a API usando o token de acesso recuperado
+#### Etapa 2: Autorizar a API usando o token de acesso recuperado
 
-Agora que o token está salvo, ele pode ser modelado dinamicamente na chamada subsequente do conteúdo conectado para autorizar a solicitação:
+Depois que o token é salvo, ele pode ser modelado dinamicamente na chamada subsequente do Connected Content para autorizar a solicitação:
 
 {% raw %}
 ```
@@ -157,7 +153,7 @@ Agora que o token está salvo, ele pode ser modelado dinamicamente na chamada su
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "{{token_response}}"
-  }
+     }
      :body key1=value1&key2=value2
      :save response
 %}
@@ -172,49 +168,7 @@ A Braze enviará solicitações de conteúdo conectado dos seguintes intervalos 
 
 A Braze tem um conjunto reservado de IPs usados para todos os serviços, sendo que nem todos estão ativos em um determinado momento. Isso foi projetado para que a Braze envie de um data center diferente ou faça manutenção, se necessário, sem afetar os clientes. A Braze poderá usar um, um subconjunto ou todos os seguintes IPs listados ao fazer solicitações de conteúdo conectado.
 
-| Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`: |
-|---|
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| Para as instâncias `EU-01` e `EU-02`: |
-|---|
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88`
-
-| Por exemplo, `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ## Solução de problemas
 
@@ -224,6 +178,24 @@ Use [Webhook.site](https://webhook.site/) para solucionar problemas em suas cham
 2. Faça uma prévia e teste sua campanha ou etapa do canva para ver as solicitações que chegam a este site.
 
 Usando essa ferramenta, você pode diagnosticar problemas com os cabeçalhos de solicitação, o corpo da solicitação e outras informações que estão sendo enviadas na chamada.
+
+## Perguntas frequentes
+
+### Por que há mais chamadas de Connected Content do que usuários ou envios? 
+
+O Braze pode fazer a mesma chamada à Connected Content API mais de uma vez por destinatário porque talvez seja necessário fazer uma chamada à Connected Content API para renderizar uma carga útil de mensagem. As cargas úteis de mensagens podem ser processadas várias vezes por destinatário para validação, lógica de nova tentativa ou outros fins internos.
+
+Espera-se que uma chamada à Connected Content API possa ser feita mais de uma vez por destinatário, mesmo que a lógica de repetição não seja usada na chamada. Recomendamos definir o limite de frequência de qualquer mensagem que contenha Conteúdo Conectado ou configurar seus servidores para que sejam mais capazes de lidar com o volume esperado.
+
+### Como funciona o limite de frequência com o Connected Content?
+
+O Connected Content não tem seu próprio limite de frequência. Em vez disso, o limite de frequência é baseado na taxa de envio de mensagens. Recomendamos definir o limite de frequência de envio de mensagens abaixo do limite de frequência de Connected Content pretendido se houver mais chamadas de Connected Content do que mensagens enviadas.  
+
+### O que é comportamento de cache?
+
+Por padrão, as solicitações POST não são armazenadas em cache. No entanto, você pode adicionar o parâmetro `:cache_max_age` para forçar a chamada POST para o cache.
+O armazenamento em cache pode ajudar a reduzir as chamadas duplicadas do Connected Content. No entanto, não é garantido que isso sempre resulte em uma única chamada de Connected Content por usuário.
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

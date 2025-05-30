@@ -32,9 +32,9 @@ tool: Segments
 | 가변 필드 | 설명 |
 | --- | --- |
 | `Catalog` | 사용자를 타깃팅하는 데 사용하는 카탈로그의 이름입니다. |
-| `Catalog field`| 카탈로그에서 `Custom event property` 과 동일한 값을 포함하는 필드입니다. 이것은 종종 ID의 한 유형입니다. 이커머스 사용 사례에서는 `shopify_id` 이 됩니다. |
-| `Custom event` | `Catalog field` 과 일치하는 값을 가진 속성을 포함하는 동일한 이벤트인 사용자 지정 이벤트의 이름입니다. 이커머스 사용 사례에서는 `Made Order` 이 됩니다. |
-| `Custom event property` | `Catalog field` 와 값을 일치시키는 사용자 지정 이벤트 속성의 이름입니다. 이커머스 사용 사례 예시에서는 `Shopify_ID.`와 같습니다|
+| `Catalog field`| 카탈로그에서 `Custom event property` 과 동일한 값을 포함하는 필드입니다. 이것은 종종 ID의 한 유형입니다. In the eCommerce use case, this would be `shopify_id`. |
+| `Custom event` | `Catalog field` 과 일치하는 값을 가진 속성을 포함하는 동일한 이벤트인 사용자 지정 이벤트의 이름입니다. In the eCommerce use case, this would be `Made Order`. |
+| `Custom event property` | `Catalog field` 와 값을 일치시키는 사용자 지정 이벤트 속성의 이름입니다. In the eCommerce example use case, this would be `Shopify_ID.`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="4"}

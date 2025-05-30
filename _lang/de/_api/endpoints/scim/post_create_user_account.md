@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Neues Dashboard-Benutzerkonto erstellen."
+description: "Dieser Artikel beschreibt den Endpunkt Neues Dashboard Nutzer:innen-Konto erstellen Braze."
 
 ---
 
@@ -16,19 +16,19 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Neues Da
 /scim/v2/Users
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein neues Dashboard-Benutzerkonto zu erstellen, indem Sie E-Mail, Vor- und Nachnamen sowie Berechtigungen (zum Festlegen von Berechtigungen auf Unternehmens-, Arbeitsbereichs- und Teamebene) angeben.
+> Verwenden Sie diesen Endpunkt, um ein neues Dashboard-Benutzerkonto zu erstellen, indem Sie E-Mail, Vor- und Nachnamen sowie Berechtigungen (für die Festlegung von Berechtigungen auf Unternehmens-, Workspace- und Teamebene) angeben.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#768a3c9d-ce1d-44fc-a0e4-d556b09f7aa3 {% endapiref %}
 
 ## Voraussetzungen
 
-Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden den Ursprung Ihres Dienstes als `X-Request-Origin` Kopfzeile. Weitere Informationen finden Sie unter [Automatisierte Benutzerbereitstellung]({{site.baseurl}}/scim/automated_user_provisioning/).
+Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden die Herkunft Ihres Dienstes in der Kopfzeile `X-Request-Origin`. Weitere Informationen finden Sie unter [Automatisierte Bereitstellung von Nutzer:innen]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
+{% multi_lang_include rate_limits.md endpunkt='Dashboard Nutzer:innen erstellen' %}
 
-## Körper der Anfrage
+## Anfragetext
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
@@ -77,15 +77,15 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | Erforderlich | Array von Zeichenketten | Erwarteter SCIM 2.0 Schemaname für das Benutzerobjekt. |
-| `userName` | Erforderlich | String | Die E-Mail-Adresse des Benutzers. |
-| `name` | Erforderlich | JSON-Objekt | Dieses Objekt enthält den Vornamen und den Nachnamen des Benutzers. |
-| `department` | Erforderlich | String | Gültige Abteilungszeichenfolge aus der [Dokumentation der Abteilungszeichenfolge]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | Optional | JSON-Objekt | Berechtigungsobjekt wie in der [Dokumentation des Berechtigungsobjekts]({{site.baseurl}}/scim_api_appendix/#permissions-object) beschrieben. |
+| `schemas` | Erforderlich | String-Array | Erwarteter SCIM 2.0 Schemaname für das Nutzer:in Objekt. |
+| `userName` | Erforderlich | String | Die E-Mail Adresse des Nutzers:innen. |
+| `name` | Erforderlich | JSON-Objekt | Dieses Objekt enthält den Vornamen und den Nachnamen des Nutzers:innen. |
+| `department` | Erforderlich | String | Gültiger String für die Abteilung aus der [Dokumentation für die Abteilung]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Optional | JSON-Objekt | Berechtigungsobjekt wie in der [Dokumentation zum Berechtigungsobjekt]({{site.baseurl}}/scim_api_appendix/#permissions-object) beschrieben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -209,18 +209,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 | Parameter | Datentyp | Beschreibung |
 | --------- | --------- | ----------- |
-| `schemas` | Array von Zeichenketten | Erwarteter SCIM 2.0 Schemaname für das Benutzerobjekt. |
-| `userName` | String | Die E-Mail-Adresse des Benutzers. |
-| `name` | JSON-Objekt | Dieses Objekt enthält den Vornamen und den Nachnamen des Benutzers. |
-| `department` | String | Gültige Abteilungszeichenfolge aus der [Dokumentation der Abteilungszeichenfolge]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | JSON-Objekt | Berechtigungsobjekt wie in der [Dokumentation des Berechtigungsobjekts]({{site.baseurl}}/scim_api_appendix/#permissions-object) beschrieben. |
-| `id` | String | Von Braze generierte ID, die für die Suche und Verwaltung von Benutzerkonten verwendet wird. |
+| `schemas` | String-Array | Erwarteter SCIM 2.0 Schemaname für das Nutzer:in Objekt. |
+| `userName` | String | Die E-Mail Adresse des Nutzers:innen. |
+| `name` | JSON-Objekt | Dieses Objekt enthält den Vor- und Nachnamen des Nutzers:innen. |
+| `department` | String | Gültiger String für die Abteilung aus der [Dokumentation für die Abteilung]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | JSON-Objekt | Berechtigungsobjekt wie in der [Dokumentation zum Berechtigungsobjekt]({{site.baseurl}}/scim_api_appendix/#permissions-object) beschrieben. |
+| `id` | String | Von Braze generierte ID, die für die Suche und Verwaltung von Nutzer:innen-Konten verwendet wird. |
 | `lastSignInAt` | String | Datum der letzten erfolgreichen Anmeldung in UTC-Zeit. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Fehlerzustände
 
-Wenn ein Benutzer mit dieser `userName` oder E-Mail-Adresse bereits in Braze existiert, wird der Endpunkt mit antworten:
+Wenn ein Nutzer:in mit dieser `userName` oder E-Mail Adresse bereits in Braze existiert, antwortet der Endpunkt mit:
 
 ```json
 HTTP/1.1 409 Conflict

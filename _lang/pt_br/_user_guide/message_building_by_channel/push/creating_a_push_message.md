@@ -25,7 +25,7 @@ Não tem certeza se deve usar uma campanha ou um Canva? As campanhas são melhor
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 2. Para campanhas com direcionamento para vários canais, selecione **Multicanal**. Caso contrário, selecione **Notificações por push**. Se ainda não tiver certeza, consulte a seção **Decidir entre uma campanha push regular ou multicanal** abaixo.
 3. Dê à sua campanha um nome claro e significativo.
-4. Adicione [Equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário. **Dica:** As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+4. Adicione [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário. **Dica:** As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Decidir entre uma campanha push regular ou multicanal %}
@@ -101,11 +101,13 @@ O conteúdo da guia **Criador** varia de acordo com o tipo de notificação esco
 
 #### Canal ou grupo de notificações (iOS e Android)
 
-Para saber mais sobre as opções de notificação específicas da plataforma, consulte [Opções de notificação do iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) ou [Opções de notificação do Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+Para saber mais sobre as opções de notificação específicas da plataforma, consulte [Opções de notificação do iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) ou [Opções de notificação do Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_options/).
 
 #### Idioma
 
 Adicione textos em vários idiomas usando o botão **Adicionar idiomas**. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para obter a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados][18].
+
+Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Título e corpo
 
@@ -122,13 +124,13 @@ Comece a digitar na caixa de mensagem e veja uma prévia na caixa de visualizaç
 Para tornar seu push personalizado e direcionado, você pode incluir o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert important %}
-**Não é possível** enviar uma mensagem push do Android sem um título; no entanto, você pode inserir um único espaço. Lembre-se de que, se sua mensagem contiver apenas um espaço, ela será enviada como uma notificação por push silenciosa. Para saber mais, consulte [Notificações por push silenciosas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/).
+**Não é possível** enviar uma mensagem push do Android sem um título; no entanto, você pode inserir um único espaço. Lembre-se de que, se sua mensagem contiver apenas um espaço, ela será enviada como uma notificação por push silenciosa. Para saber mais, consulte [Notificações por push silenciosas]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Inicie o botão AI Copywriter, localizado no campo "Corpo" do criador do push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -218,7 +220,7 @@ Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usu�
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você tem a opção de permitir um período de até 30 dias durante o qual uma conversão será contada se o usuário realizar a ação especificada.
 
 {% endtab %}
 

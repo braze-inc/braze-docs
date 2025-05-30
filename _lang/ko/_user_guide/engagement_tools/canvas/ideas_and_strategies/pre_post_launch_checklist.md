@@ -39,7 +39,13 @@ tool: Canvas
 
 ### 항목 설정 및 경합 조건 식별
 
-경합 조건은 **입장 일정** 및 **대상 오디언스** 설정에서 동일한 입장 기준을 사용한 경우 발생할 수 있습니다. 실행 기반 항목을 사용하는 경우 대상 오디언스에서와 동일한 트리거 동작을 사용하지 않았는지 확인하세요. 경합 조건이 발생할 수 있으며, 사용자가 트리거 이벤트를 수행할 때 오디언스에 속하지 않으면 캔버스에 들어가지 못하게 됩니다.
+경합 조건은 **입장 일정** 및 **대상 오디언스** 설정에서 동일한 입장 기준을 사용한 경우 발생할 수 있습니다. 
+
+실행 기반 항목을 사용하는 경우 대상 오디언스에서와 동일한 트리거 동작을 사용하지 않았는지 확인하세요. 경합 조건이 발생할 수 있으며, 사용자가 트리거 이벤트를 수행할 때 오디언스에 속하지 않으면 캔버스에 들어가지 못하게 됩니다.
+
+{% alert tip %}
+Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) for avoiding this race condition when setting up an action-based Canvas with the same trigger as the audience filter.
+{% endalert %}
 
 ### 캔버스 항목 속성과 이벤트 속성을 확인하십시오
 
@@ -97,7 +103,7 @@ tool: Canvas
 - 방해금지 시간
 - 전달 검증
 
-일반적으로 캔버스에 대해 Intelligent Timing 또는 방해금지 시간 중 하나를 선택하고 둘 다 선택하지 마세요. 동일한 제안은 Intelligent Timing 또는 [사용량 제한조치]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) 중 하나만 사용하고 둘 다 사용하지 않는 것입니다. Intelligence Suite를 최적으로 사용하는 방법에 대한 자세한 내용은 [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/)를 읽어보세요.
+일반적으로 캔버스에 대해 Intelligent Timing 또는 방해금지 시간 중 하나를 선택하고 둘 다 선택하지 마세요. 동일한 제안은 Intelligent Timing 또는 [사용량 제한조치]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) 중 하나만 사용하고 둘 다 사용하지 않는 것입니다. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
 
 ### 경로 간의 의심스러운 전송량
 

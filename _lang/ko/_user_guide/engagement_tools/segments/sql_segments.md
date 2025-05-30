@@ -89,7 +89,7 @@ AI SQL 생성기를 사용하려면 다음과 같이 하세요:
 - 지난 1년간 구매 횟수가 5회 미만인 사용자
 
 ### 팁
-- 사용 가능한 [Snowflake 데이터 테이블]({{site.baseurl}}/sql_segments_tables/)에 익숙해집니다. 이러한 테이블에 존재하지 않는 데이터를 요청하면 ChatGPT가 가짜 테이블을 구성하게 될 수 있습니다.
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). 이러한 테이블에 존재하지 않는 데이터를 요청하면 ChatGPT가 가짜 테이블을 구성하게 될 수 있습니다.
 - 이 기능에 대한 [SQL 작성 규칙을]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) 숙지하세요. 이러한 규칙을 따르지 않으면 오류가 발생합니다. 예를 들어 SQL 코드에서 `user_id` 열을 선택해야 합니다. "사용자 누구"로 프롬프트를 시작하면 도움이 될 수 있습니다.
 - AI SQL 생성기를 사용하면 분당 최대 20개의 프롬프트를 보낼 수 있습니다.
 
@@ -107,7 +107,7 @@ SQL을 생성하기 위해 Braze는 사용자의 프롬프트를 OpenAI의 API �
 
 ## SQL 작성
 
-SQL 쿼리는 [Snowflake 구문](https://docs.snowflake.com/en/sql-reference.html)을 사용하여 작성해야 합니다. 쿼리할 수 있는 테이블 및 열의 전체 목록은 [테이블 참조]({{site.baseurl}}/sql_segments_tables/)를 참조하세요.
+SQL 쿼리는 [Snowflake 구문](https://docs.snowflake.com/en/sql-reference.html)을 사용하여 작성해야 합니다. Consult the [table reference]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
 {% alert important %}
 쿼리할 수 있는 테이블에는 이벤트 데이터만 포함되어 있다는 점에 유의하세요. 사용자 속성을 쿼리하려면 SQL 세그먼트와 [기존 세그멘터]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)의 커스텀 속성 필터를 결합해야 합니다.

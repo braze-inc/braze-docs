@@ -17,7 +17,7 @@ A partir de dezembro de 2021, as seguintes alterações entrarão em vigor para 
 
 ## Novas propriedades para eventos de engajamento com mensagens do Currents
 
-Novas propriedades foram adicionadas para [eventos selecionados de engajamento com mensagens]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). Essa atualização se aplica aos seguintes eventos de engajamento com mensagens do Currents e a todos os parceiros que os utilizam:
+Novas propriedades foram adicionadas para [eventos selecionados de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). Essa atualização se aplica aos seguintes eventos de engajamento com mensagens do Currents e a todos os parceiros que os utilizam:
 
 - Adicione `LINK_ID`, `LINK_ALIAS` a:
   - Clique no e-mail (todos os destinos)

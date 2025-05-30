@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: Feature Flags
 article_title: Feature Flags para o SDK do Braze
-page_order: 1
 description: "Este artigo de referência aborda uma visão geral dos feature flags, incluindo pré-requisitos e casos de uso."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > Os Feature Flags permitem ativar ou desativar remotamente a capacitação de uma seleção específica ou aleatória de usuários. É importante ressaltar que eles permitem ativar e desativar um recurso na produção sem implementação adicional de código ou atualizações na App Store. Isso permite que você implemente novos recursos com segurança e confiança.
 
 {% alert tip %}
-Quando estiver pronto para criar seus próprios sinalizadores de recursos, consulte [Criação de sinalizadores de recursos]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+Quando estiver pronto para criar seus próprios sinalizadores de recursos, consulte [Criação de sinalizadores de recursos]({{site.baseurl}}/developer_guide/feature_flags/create/).
 {% endalert %}
 
 ## Pré-requisitos
@@ -51,7 +51,7 @@ Com os feature flags da Braze, podemos implementar gradualmente o recurso e miti
 * Ativaremos esse novo recurso para apenas 10% dos usuários para determinar se estamos com a equipe adequada.
 * Se houver algum erro, podemos desativar rapidamente o recurso em vez de nos apressarmos em enviar uma nova versão.
 
-Para implementar gradualmente esse recurso, podemos [criar um sinalizador de recurso]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) chamado "Live Chat Widget".
+Para implementar gradualmente esse recurso, podemos [criar um sinalizador de recurso]({{site.baseurl}}/developer_guide/feature_flags/create/) chamado "Live Chat Widget".
 
 ![Detalhes do Feature Flag para um exemplo chamado Live Chat Widget. A ID é enable_live_chat. A descrição desse sinalizador de recurso indica que o widget de bate-papo ao vivo será exibido na página de suporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -161,7 +161,7 @@ if (featureFlag?.enabled) {
 }
 ```
 
-Configuraremos nosso teste A/B em um [Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+Configuraremos nosso teste A/B em um [Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
 Agora, 50% dos usuários verão a experiência antiga, enquanto os outros 50% verão a nova experiência. Em seguida, podemos analisar as duas variantes para determinar qual fluxo de checkout resultou em uma taxa de conversão mais alta. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
@@ -188,7 +188,7 @@ Essas são as limitações do Feature Flag para planos gratuitos e pagos.
 | Recurso                                                                                                   | Versão gratuita     | Versão paga      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Feature Flags ativos](#active-feature-flags)                                                                     | 10 por espaço de trabalho | 110 por espaço de trabalho |
-| [Experimentos de campanha ativos]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 por espaço de trabalho  | 100 por espaço de trabalho |
+| [Experimentos de campanha ativos]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 1 por espaço de trabalho  | 100 por espaço de trabalho |
 | [Etapas do canva do Feature Flag]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Ilimitado        | Ilimitado         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -46,6 +46,33 @@ Cualquier cambio en las ID o localizaciones del archivo CSV no se actualizará a
 
 En la sección **Vista previa y prueba**, selecciona **Usuario multilingüe** para comprobar si tu mensaje se traduce como esperabas.
 
+## Administrador de traducciones
+
+### Edición de traducciones para campañas lanzadas y Lonas
+
+Después de lanzar una campaña o un Canvas, puedes seguir modificando las traducciones cuando estés en modo borrador. Esto se aplica tanto si estás editando traducciones directamente en el compositor, mediante carga CSV o a través de la API. 
+
+Antes de realizar cualquier actualización de la traducción, la campaña o el Canvas deben guardarse primero como borrador.
+
+1. Selecciona **Editar campaña/Canvas** y luego haz tus ediciones en el compositor.
+2. Selecciona **Guardar como borrador** y, a continuación, selecciona **Sí** en el modal.
+3. Ve al paso **Resumen de revisión** y selecciona **Actualizar campaña/Canvas**.
+4. Selecciona **Actualizar campaña/Canvas** en el modal.
+
+Para más detalles sobre la gestión de campañas y Canvas después del lanzamiento, consulta [Editar campañas lanzadas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) y [borradores de Canvas y edición posterior al lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+
+### Duplicar pasos en Canvas o campañas, y traducciones
+
+Al duplicar un paso en Canvas o una campaña, ya sea en el modo borrador tras el lanzamiento o durante la creación inicial, las traducciones asociadas a ese paso no se transferirán. Hay que añadir las traducciones necesarias al nuevo paso o campaña. Asegúrate de revisar y actualizar las traducciones en consecuencia cuando realices modificaciones en tu Canvas o campaña.
+
+### Utilizar la API multilingüe con Lienzos
+
+Para utilizar [la API multilingüe con los Lienzos]({{site.baseurl}}/api/endpoints/translations/), debes incluir las direcciones `workflow_id`, `step_id`, y `message_variation_id` en la lista de parámetros.
+
+#### Pasos en Canvas añadidos a los borradores posteriores al lanzamiento
+
+Cuando utilices la API multilingüe con pasos en Canvas creados después de haber lanzado el Canvas, el `message_variation_id` que pases a la API estará vacío o en blanco.
+
 ## Preguntas más frecuentes
 
 #### Quiero hacer un cambio en la copia traducida en una de mis configuraciones regionales. ¿Cómo puedo hacerlo?
@@ -71,3 +98,5 @@ Sí. Sin embargo, asegúrate de que el estilo HTML no se traduce con el contenid
 | El archivo de traducción incluye bloques de texto que no existen en el mensaje actual (como el borrador actual en el momento de cargar las traducciones). | Los bloques de texto que no existan en el mensaje actual no se guardarán del archivo de traducción a Braze. |
 | Eliminar una configuración regional del mensaje después de que esa configuración ya se haya cargado en el mensaje como parte del archivo de traducción.                           | Al eliminar la configuración regional, se eliminarán todas las traducciones asociadas a dicha configuración en tu mensaje.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% multi_lang_include locales.md section="Preguntas frecuentes" %}

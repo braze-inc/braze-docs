@@ -79,6 +79,6 @@ If there are no conversion events selected during campaign creation, the time de
 
 Additionally, for multivariate messages, you can see the number of conversions and conversion percentages for your control group and each variant.
 
-![Four conversion events that track conversions based on when a purchase was made within three hours, made a purchase within two hours, started a session within 30 minutes, and started a session iwthin 25 minutes.]({% image_buster /assets/img_archive/conversion_event_details.png %})
+![Four conversion events that track conversions based on when a purchase was made within three hours, made a purchase within two hours, started a session within 30 minutes, and started a session within 25 minutes.]({% image_buster /assets/img_archive/conversion_event_details.png %})
 
 

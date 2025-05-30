@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Infillion](https://infillion.com/) enables you to perfect your marketing relevance using location data. Their location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
 
-Combine your beacon or geofence support with Braze's targeting and messaging features to learn more about your user's physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
+Combine your beacon or geofence support with Braze targeting and messaging features to learn more about your user's physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
 
 - **Marketing:** Send contextually relevant messaging and build experiential consumer journeys.
 - **Competitive Analysis:** Set up triggers around competitive locations to understand consumer trends and patterns.
@@ -49,6 +49,6 @@ If you anticipate creating more than 50 places, we recommend creating a generic 
 [3]: https://docs.gimbal.com/
 [4]: https://docs.gimbal.com/rest.html
 [5]: https://manager.gimbal.com/apps
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/Custom_Data/custom_events/
+[6]: {{site.baseurl}}/user_guide/data/custom_data/custom_attributes/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration/#gimbal-beacons
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/#gimbal-beacons

@@ -76,4 +76,23 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
+## Exemplo de resposta
+
+```json
+{
+  "success": true,
+  "subscription_groups": [
+    {
+      "subscription_group_id": "group_id_1",
+      "subscription_status": "subscribed"
+    },
+    {
+      "subscription_group_id": "group_id_2",
+      "subscription_status": "unsubscribed"
+    }
+  ]
+}
+```
+
 {% endapi %}

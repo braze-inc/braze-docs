@@ -42,11 +42,11 @@ glossary_tags:
   - name: Email List
   - name: Email Templates
   - name: KPI
-  - name: News Feed
   - name: Purchases
   - name: Preference Center
   - name: Schedule Messages
   - name: SCIM
+  - name: SDK Authentication
   - name: Segments
   - name: Send Messages
   - name: SMS
@@ -314,18 +314,6 @@ glossaries:
     description: Retrieve a daily series of the total number of uninstalls on each date.
     tags:
       - KPI
-  - name: <a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>
-    description: Retrieve a daily series of engagement stats for a card over time.
-    tags:
-      - News Feed
-  - name: <a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>
-    description: Retrieve relevant information on a card.
-    tags:
-      - News Feed
-  - name: <a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>
-    description: Export a list of News Feed cards, each of which will include its name and card API identifier.
-    tags:
-      - News Feed
   - name: <a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>
     description: Remove "invalid" phone numbers from the invalid list in Braze. This can be used to re-validate phone numbers after they have been marked as invalid.
     tags:
@@ -466,4 +454,20 @@ glossaries:
     description: Return a list of sync statuses.
     tags:
       - Cloud Data Ingestion
+  - name: <a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>
+    description: Create a new SDK Authentication key for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>
+    description: List SDK Authentication keys for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>
+    description: Set an SDK Authentication key as the primary key for your app.
+    tags:
+      - SDK Authentication
+  - name: <a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>
+    description: Delete an SDK Authentication key for your app.
+    tags:
+      - SDK Authentication  
 ---

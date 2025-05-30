@@ -13,11 +13,11 @@ tool:
 
 > The **Home** page on the dashboard provides key metrics for you to track and understand the performance of your app or website, and gives you an at-a-glance high-level understanding of your userbase.
 
-![Home dashboard in Braze.][1]
-
 The **Home** page has two main sections:
 - [Pick up where you left off](#pick-up-where-you-left-off)
 - [Performance overview](#peformance-overview)
+
+![Home dashboard in Braze.][1]
 
 ## Pick up where you left off
 
@@ -27,7 +27,7 @@ You can revisit recently edited or created campaigns, Canvases, and segments. Ea
 
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.][6]
 
-## Peformance overview
+## Performance overview
 
 By default, the **Performance overview** section shows the last 30 days of data for all apps and sites. Your metrics are all calculated based on the selected date range.
 

@@ -20,10 +20,10 @@ Catalog segments use SQL to join data from catalogs and data from custom events 
 
 ## Creating a catalog segment
 
-1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select the template **Catalog segment**. <br>![Modal with "Catalog segment" selected as the template to create.][1]{: style="max-width:70%" }
+1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select a template. <br>![Modal with the option to create a catalog segment for events or purchases.][1]{: style="max-width:80%" }
 
 {: start="2"}
-2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.][2]{: style="max-width:70%" }<br>This template joins user event data with catalog data to segment users who engaged with certain catalog items.
+2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.][2]{: style="max-width:80%" }<br>This template joins user event data with catalog data to segment users who engaged with certain catalog items.
 
 3. Use the **Variables** tab to provide the necessary fields for your template before generating your segment. <br>For Braze to identify users based on their engagement with catalog items, you need to do the following: <br> - Select a catalog that contains a catalog field <br> - Select a custom event that contains an event property <br> - Match your catalog field and event property values
 
@@ -43,6 +43,16 @@ Here are guidelines to select the variables:
 - `Value`: A specific value within that field or column <br><br> Using the health app as an example, let’s say that within the catalog for each doctor you could book, there’s a field called `specialty` that contains a value such as `vision` or `dental`. To segment users who have visited any doctors with the value `dental`, you can select `specialty` as the `Catalog field`, and select `dental` as the `Value`.
 
 5. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), managing [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), and more, check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+
+{% alert note %}
+If you're creating a SQL segment that uses the table `CATALOGS_ITEMS_SHARED`, you must specify a catalog ID. For example:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
 
 ## Use cases
 

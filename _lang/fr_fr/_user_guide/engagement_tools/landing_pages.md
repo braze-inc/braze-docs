@@ -1,29 +1,49 @@
 ---
 nav_title: Pages d’accueil
 article_title: Pages d’accueil
-layout: dev_guide
-page_type: landing
 page_order: 31
 guide_top_header: "Pages d’accueil"
-guide_top_text: "Les pages de destination Braze sont des pages web autonomes qui peuvent stimuler votre stratégie d'acquisition et d'engagement des utilisateurs."
 description: "Cet article contient des ressources sur la création et la personnalisation des pages d’accueil Braze."
 alias: /landing_pages/
-
-guide_featured_title: "Section Articles"
-guide_featured_list:
-  - name: Editeur par glisser-déposer
-    link: /docs/user_guide/engagement_tools/landing_pages/drag_and_drop/
-    image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: Connecter un sous-domaine
-    link: /docs/user_guide/engagement_tools/landing_pages/connect_subdomain/
-    image: /assets/img/braze_icons/refresh-cw-02.svg
-  - name: Suivi des données
-    link: /docs/user_guide/engagement_tools/landing_pages/data_tracking/
-    image: /assets/img/braze_icons/data.svg
 ---
 
-{% alert important %}
-Les pages d'accueil sont actuellement en version bêta. Si vous souhaitez participer à cette version bêta, contactez votre gestionnaire de compte Braze.
-{% endalert %}
+# À propos des pages d'atterrissage
 
-<br><br><br>
+> Les pages de destination Braze sont des pages web autonomes qui peuvent stimuler votre stratégie d'acquisition et d'engagement des utilisateurs.
+
+## Conditions préalables
+
+Avant de pouvoir accéder aux pages d'atterrissage, les créer et les publier, vous devez disposer d'autorisations d'administrateur ou de toutes les autorisations suivantes :
+
+- Accéder aux pages d’accueil
+- Créer des ébauches de page d’accueil
+- Publier les pages d’accueil
+
+## Paliers de régime
+
+Le nombre de pages de destination publiées et de domaines personnalisés que vous pouvez utiliser dépend de votre type de plan : gratuit ou payant (incrémental).
+
+| Fonctionnalité                                                                                                   | Tiercé libre     | Niveau payant (incrémental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Pages d'atterrissage publiées                                                                 | Cinq par entreprise | 20 supplémentaires |
+| Domaines personnalisés          | Un par entreprise | Cinq autres |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+## Foire aux questions
+
+### Quelle est la taille maximale des pages d'atterrissage ?
+
+La taille du corps de la page d'accueil peut aller jusqu'à 1 Mo.
+
+### Y a-t-il des exigences techniques pour publier une page d'accueil ?
+
+Non, il n'y a pas d'exigences techniques.
+
+### Existe-t-il un éditeur HTML pour les pages d'atterrissage ?
+
+Vous pouvez modifier le code HTML d'une page de destination à l'aide du bloc Code personnalisé.
+
+### Puis-je créer un webhook à l'intérieur d'une page d'atterrissage ?
+
+Non, cela n'est pas possible actuellement.
+

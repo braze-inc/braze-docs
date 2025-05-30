@@ -12,7 +12,7 @@ description: "In diesem Artikel wird die Nutzerverwaltung in Ihrem Firmenkonto e
 > Hier erfahren Sie, wie die Nutzerverwaltung in Ihrem Firmenkonto einschließlich Hinzufügen, Sperren und Löschen von Personen funktioniert.
 
 {% alert note %}
-Mehrere Abschnitte auf dieser Seite verweisen auf die Seite **Benutzer des Unternehmens**. Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, heißt **Company Users** **Benutzer verwalten** und befindet sich unter Ihrem Kontosymbol.
+Mehrere Abschnitte auf dieser Seite verweisen auf die Seite **Benutzer des Unternehmens**. Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) verwenden, heißt **Company Users** **Benutzer verwalten** und befindet sich unter Ihrem Kontosymbol.
 {% endalert %}
 
 ## Hinzufügen von Braze-Benutzern
@@ -45,7 +45,7 @@ Wenn Ihr Team Google Mail verwendet und Sie Probleme beim Hinzufügen einer E-Ma
 
 ### Kann ich die E-Mail-Adresse für mein Braze-Konto ändern?
 
-Aus Sicherheitsgründen können Benutzer die mit ihrem Braze-Konto verknüpfte E-Mail-Adresse nicht ändern. Wenn ein Benutzer seine E-Mail-Adresse aktualisieren möchte, sollte ein Administrator für ihn [ein neues Konto](#adding-braze-users) mit seiner bevorzugten E-Mail-Adresse [erstellen](#adding-braze-users).
+Aus Sicherheitsgründen können Benutzer die mit ihrem Braze-Konto verknüpfte E-Mail-Adresse nicht ändern. Wenn ein Benutzer seine E-Mail-Adresse aktualisieren möchte, sollte ein Administrator für ihn [ein neues Konto](#adding-braze-users) mit seiner bevorzugten E-Mail-Adresse erstellen.
 
 ## Personen in Braze sperren
 
@@ -58,6 +58,10 @@ Um einen Benutzer zu sperren, gehen Sie zu **Einstellungen** > **Firmenbenutzer*
 Administratoren können einen Benutzer auch sperren, indem sie seinen Namen in der Liste auswählen und in der Fußzeile auf **Benutzer sperren** klicken.
 
 ![Personen bei Bearbeitung der Nutzerdaten sperren.][5]
+
+## Zuweisung von Nutzer:innen und Verantwortlichkeiten
+
+{% multi_lang_include permissions.md content="Unterschiede" %}
 
 ## Löschung von Braze-Benutzern
 
@@ -80,6 +84,19 @@ Braze speichert die folgenden Kontodaten:
 
 - Benutzerdefinierte Attribute oder Testdaten, die mit ihrem Konto verbunden sind
 - Kampagnen oder Canvases, die sie erstellt haben (der Name des Benutzers erscheint jedoch nicht darin, z. B. in der Spalte **Zuletzt bearbeitet von** )
+
+## Fehlersuche
+
+### "E-Mail ist bereits vergeben", wenn Sie versuchen, eine Nutzer:in hinzuzufügen
+
+Wenn Sie versuchen, einen neuen Nutzer hinzuzufügen und die Fehlermeldung erhalten, dass die E-Mail bereits vergeben ist, Sie den Nutzer:innen aber nicht in Ihrer E-Mail-Liste finden können, existiert dieser Nutzer:innen höchstwahrscheinlich in einer anderen Instanz desselben Braze-Dashboard-Clusters.
+
+Um diesen neuen Nutzer:innen zu erstellen, können Sie einen der folgenden Schritte ausführen:
+
+1. Löschen Sie den Nutzer:innen aus der anderen Instanz, bevor Sie ihn in der neuen Instanz anlegen können, oder
+2. Erstellen Sie den Nutzer:in mit einem anderen E-Mail String (z.B. `testing+01@braze.com`) oder einem anderen Nutzer-Alias. 
+
+Wenn Sie die Aktivierung der Nachrichten im Posteingang nicht erhalten, wenn Sie `testing+01@braze.com` verwenden, bestätigen Sie Ihrem IT Team, dass Sie Nachrichten von dieser Art von E-Mail Adresse annehmen können. Einige Administratoren filtern Nachrichten, die an E-Mail-Adressen mit einem `+` gesendet werden.
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

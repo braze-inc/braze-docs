@@ -12,10 +12,6 @@ description: "Este artigo aborda como criar uma previsão de evento no dashboard
 
 Na Braze, acesse **Análises** de dados > **Eventos preditivos**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **as previsões** em **Engajamento**.
-{% endalert %}
-
 Nessa página, você verá uma lista das previsões de eventos ativos atuais e algumas informações básicas sobre eles. Aqui, você pode renomear, arquivar e criar novas previsões. As previsões arquivadas são inativas e não atualizam as pontuações dos usuários.
 
 ## Etapa 1: Criar uma nova previsão
@@ -36,7 +32,7 @@ Há um limite de cinco previsões ativas ao mesmo tempo. Antes de comprar evento
 
 ## Etapa 2: Especificar o rastreamento de eventos {#event-tracking}
 
-Especifique se os eventos de seus usuários são armazenados no Braze como [eventos de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) ou [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/).
+Especifique se os eventos de seus usuários são armazenados no Braze como [eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) ou [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
 Aqui, você verá se o método selecionado fornece dados suficientes para que a Braze crie um modelo de machine learning. Se o requisito não for atendido, tente selecionar o outro método de registro se ele também for usado pelo seu aplicativo. Infelizmente, se não for, o Braze não conseguirá criar uma previsão com a quantidade de dados disponíveis. Se achar que está vendo esse erro incorretamente, entre em contato com seu gerente de sucesso do cliente.
 

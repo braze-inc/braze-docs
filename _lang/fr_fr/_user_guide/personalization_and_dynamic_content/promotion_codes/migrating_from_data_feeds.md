@@ -11,7 +11,7 @@ description: "Cet article de référence fournit des conseils sur la migration d
 Les flux de données sont en cours de suppression. Braze recommande à ses clients qui utilisent les flux de données de passer aux listes de codes de promotion.
 {% endalert %}
 
-> La migration des flux de données vers les codes de promotion est un processus simple. Cela implique de créer manuellement des listes de codes de promotion avec les informations de vos flux de données et de mettre à jour les références de vos messages en conséquence.
+> Cette page vous guide dans la migration des flux de données vers les codes de promotion. Il s'agit d'un processus simple qui implique la création manuelle de listes de codes de promotion avec les informations provenant de vos flux de données et la mise à jour des références de vos messages en conséquence.
 
 ## Caractéristiques et fonctionnalités
 

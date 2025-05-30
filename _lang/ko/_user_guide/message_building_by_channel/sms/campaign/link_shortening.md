@@ -19,7 +19,7 @@ channel:
 
 URL의 길이는 켜져 있는 추적 유형에 따라 결정됩니다:
 - **기본 추적**은 캠페인 수준의 클릭 추적을 가능하게 합니다. 정적 URL의 길이는 20자, 동적 URL의 길이는 25자입니다.
-- **고급 추적을** 통해 캠페인 수준 및 사용자 수준의 클릭 추적이 가능합니다. 클릭은 또한 Currents를 통해 전송되는 [SMS 클릭 이벤트를]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) 생성합니다. 고급 추적 기능이 있는 정적 URL의 길이는 27~28자로, URL을 클릭한 사용자 세그먼트를 생성할 수 있습니다. 동적 URL의 경우 32~33자의 길이를 갖습니다.
+- **고급 추적을** 통해 캠페인 수준 및 사용자 수준의 클릭 추적이 가능합니다. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. 고급 추적 기능이 있는 정적 URL의 길이는 27~28자로, URL을 클릭한 사용자 세그먼트를 생성할 수 있습니다. 동적 URL의 경우 32~33자의 길이를 갖습니다.
 
 링크는 공유 쇼트 도메인(`brz.ai`)을 사용하여 단축됩니다. 예시 URL은 `https://brz.ai/8jshX`(기본, 정적) 또는 `https://brz.ai/8jshX/2dj8d`(고급, 동적)와 같이 보일 수 있습니다. 자세한 내용은 [테스트](#testing)를 참조하세요.
 

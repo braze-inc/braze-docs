@@ -1,6 +1,7 @@
 ---
 nav_title: 메시지 참여 이벤트
 layout: message_engagement_events_glossary
+alias: /message_events_glossary/
 page_order: 5
 excerpt_separator: ""
 page_type: glossary
@@ -3089,7 +3090,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
 - `message_extras`를 사용하면 연결된 콘텐츠의 동적 데이터, 커스텀 속성(예: 언어, 국가) 및 캔버스 항목 속성을 사용하여 보내기 이벤트에 주석을 달 수 있습니다. 자세한 내용은 [메시지 추가]({{site.baseurl}}/message_extras_tag/) 정보를 참조하세요.
   {% endapi %}
@@ -3317,7 +3318,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
   {% api %}
@@ -3486,7 +3487,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
   {% api %}
@@ -5470,6 +5471,10 @@ WhatsApp, 인바운드 수신
 
 이 이벤트는 사용자가 인앱 메시지를 볼 때 발생합니다.
 
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -5695,7 +5700,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -5708,6 +5713,10 @@ WhatsApp, 인바운드 수신
 {% endapitags %}
 
 이 이벤트는 사용자가 인앱 메시지를 클릭할 때 발생합니다.
+
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}
@@ -5930,7 +5939,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -6134,6 +6143,10 @@ WhatsApp, 인바운드 수신
 
 이 이벤트는 콘텐츠 카드가 사용자에게 전송될 때 발생합니다.
 
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6328,6 +6341,10 @@ WhatsApp, 인바운드 수신
 
 이 이벤트는 사용자가 콘텐츠 카드를 볼 때 발생합니다.
 
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6544,7 +6561,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -6557,6 +6574,10 @@ WhatsApp, 인바운드 수신
 
 이 이벤트는 사용자가 콘텐츠 카드를 클릭할 때 발생합니다.
 
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -6773,7 +6794,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -6787,6 +6808,10 @@ WhatsApp, 인바운드 수신
 
 이 이벤트는 사용자가 콘텐츠 카드를 해지할 때 발생합니다.
 
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -7003,7 +7028,7 @@ WhatsApp, 인바운드 수신
 
 #### 부동산 세부 정보
 
-- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) 및 [Android용]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id) 설정에 대해 자세히 알아보세요.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled` 의 경우 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - Kafka를 사용하여 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우 고객 성공 관리자에게 문의하여 `ad_id` 으로 전송을 활성화하세요.
   {% endapi %}
 
@@ -8643,6 +8668,10 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
 전환 이벤트는 `conversion_behavior` 필드에 인코딩되며, 여기에는 전환 이벤트 유형, 기간(기간) 및 전환 이벤트 유형에 따른 추가 정보가 포함됩니다. `conversion_behavior_index` 필드는 어떤 전환 이벤트(예: 0 = A, 1 = B, 2 = C, 3 = D)를 나타내는 필드입니다.
 {% endalert %}
 
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
 {% tabs %}
 {% tab Mixpanel %}
 ```json
@@ -9308,6 +9337,10 @@ Braze가 인바운드 SMS를 수신하면 해당 전화번호를 공유하는 �
 {% endapitags %}
 
 이 이벤트는 사용자가 멀티 배리언트 캠페인에 설정된 컨트롤 배리언트에 등록될 때 발생합니다. 이 사용자에 대한 채널 보내기 이벤트가 없으므로 이 이벤트가 생성됩니다.
+
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
 
 {% tabs %}
 {% tab Mixpanel %}

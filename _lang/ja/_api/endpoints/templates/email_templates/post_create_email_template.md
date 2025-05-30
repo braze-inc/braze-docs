@@ -15,9 +15,7 @@ description: "この記事では、BrazeのEメールテンプレート作成エ
 
 > BrazeダッシュボードでEメールテンプレートを作成するには、このエンドポイントを使用する。
 
-これらのテンプレートは、**「テンプレート＆メディア**」ページで利用できるようになる。このエンドポイントからのレスポンスには、`email_template_id` のフィールドが含まれ、以降のAPIコールでテンプレートを更新するために使用できる。
-
-ユーザーのメールサブスクリプションステータスは、RESTful APIを使ってBrazeで更新・取得できる。APIを使用して、Brazeと他のメールシステムまたは独自のデータベースとの双方向同期を設定できる。すべてのAPIリクエストはHTTPSで行われる。
+これらのテンプレートは、**「テンプレート＆メディア**」ページで利用できるようになる。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -51,12 +49,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`template_name`|必須|文字列|メールテンプレートの名前|
+|`template_name`|required|文字列|メールテンプレートの名前|
 |`subject`|必須|文字列|メールテンプレートの件名|
 |`body`|必須|文字列|HTMLを含む可能性のあるメールテンプレート本文。|
 |`plaintext_body`|オプション|文字列|メールテンプレート本文のプレーンテキストバージョン。|
 |`preheader`|オプション|文字列|一部のクライアントでプレビューを生成するために使用されるメールプレヘッダー。|
-|`tags`|オプション|文字列|[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)はすでに存している必要があります。|
+|`tags`|オプション|文字列|[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)はすでに存している必要があります。|
 |`should_inline_css`|オプション|ブール値|テンプレートごとに`inline_css` 機能を有効または無効にする。提供されない場合、Brazeはアプリグループのデフォルト設定を使用する。`true` か`false` のどちらかが予想される。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -76,7 +74,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-## 考えられるエラー
+## 回答例
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
+  "message": "success"
+}
+```
+
+## トラブルシューティング
 
 以下の表は、返される可能性のあるエラーと、該当する場合、それに関連するトラブルシューティングの手順を示している。
 

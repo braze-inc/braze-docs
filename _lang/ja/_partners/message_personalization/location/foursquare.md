@@ -14,6 +14,8 @@ search_tag: Partner
 
 > [Foursquare](https://foursquare.com/) は、Braze キャンペーンに位置情報データターゲティング機能を提供する位置情報データプラットフォームです。iOSとAndroidアプリでFoursquareのPilgrim SDKを使用して、位置情報に基づいたリアルタイムのイベントトリガーを提供し、Foursquareの強力なジオターゲティング機能を利用して、Brazeで関連性の高いパーソナライズされたメッセージを送信できる。
 
+_この統合はFoursquare によって維持されます。_
+
 ## 前提条件
 
 | 必要条件 | 説明 |
@@ -59,6 +61,7 @@ Pilgrim SDK を使用するには、位置情報サービスを有効にする�
 ![ターゲットユーザーのステップで、"last_location "が "Pizza Place "と等しいことを示すアクションベースのキャンペーン。]({% image_buster /assets/img_archive/last-location-segment.png %})
 
 また Braze で、特定のタイプの会場を訪問したユーザーを、特定の期間内の Foursquare の `primaryCategoryId` に基づいてセグメント化することもできます。このデータポイントをリターゲティングのユースケースに利用するには、オーディエンスのセグメンテーションプロセスでイベントプロパティとして `primaryCategoryId` をログに記録します。Foursquare API と Pilgrim SDK で使用されるユーザーとプロパティを確認するには、[Foursquare の開発者サイトを](https://developer.foursquare.com/)参照のこと。
+
 
 [1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}

@@ -5,18 +5,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Sende-IDs erstellen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Sende-IDs erstellen von Braze."
 
 ---
 {% api %}
-# Sende-IDs erstellen
+# IDs zum Senden erstellen
 {% apimethod post %}
 /sends/id/create
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Sende-IDs zu erstellen, die zum programmgesteuerten Versenden von Nachrichten und zur Verfolgung der Nachrichtenleistung verwendet werden können, ohne dass für jede Sendung eine Kampagne erstellt werden muss.
+> Verwenden Sie diesen Endpunkt, um Sende-IDs zu erstellen, die zum programmgesteuerten Senden von Nachrichten und zum Tracking der Nachrichten-Performance verwendet werden können, ohne dass für jeden Sendevorgang eine Kampagne erstellt werden muss.
 
-Die Verwendung der Sendekennung zum Verfolgen und Versenden von Nachrichten ist nützlich, wenn Sie planen, Inhalte programmgesteuert zu erstellen und zu versenden.
+Die Verwendung des Bezeichners zum Tracking und Versenden von Nachrichten ist nützlich, wenn Sie planen, Inhalte programmatisch zu erstellen und zu versenden.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
@@ -24,11 +24,11 @@ Die Verwendung der Sendekennung zum Verfolgen und Versenden von Nachrichten ist 
 
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `sends.id.create` erstellen.
 
-## Preisgrenze
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='sends id create' %}
+{% multi_lang_include rate_limits.md endpunkt='sends id create' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -42,12 +42,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | Erforderlich | String | Siehe [Kennung der Kampagne]({{site.baseurl}}/api/identifier_types/). |
-|`send_id`| Optional | String | Siehe [Kennung senden]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Erforderlich | String | Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/). |
+|`send_id`| Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

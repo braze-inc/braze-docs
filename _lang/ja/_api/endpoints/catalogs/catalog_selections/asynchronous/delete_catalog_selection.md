@@ -16,9 +16,6 @@ description: "この記事では、「カタログ選択を削除」Braze エン
 {% endapimethod %}
 
 > カタログの選択を削除するには、このエンドポイントを使用する。
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
 
 ## 前提条件
 
@@ -32,7 +29,7 @@ description: "この記事では、「カタログ選択を削除」Braze エン
 
 | パラメータ        | required | データ型 | 説明                    |
 | ---------------- | -------- | --------- | ------------------------------ |
-| `catalog_name`   | 必須 | 文字列    | カタログ名。           |
+| `catalog_name`   | required | 文字列    | カタログ名。           |
 | `selection_name` | 必須 | 文字列    | カタログセレクションの名前。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

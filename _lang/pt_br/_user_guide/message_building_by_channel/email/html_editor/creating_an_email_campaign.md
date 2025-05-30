@@ -30,16 +30,10 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 {% tab Campanha %}
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Campaigns** em **Engagement (Engajamento)**.
-{% endalert %}
-
-{:start=“2"}
-2\. Selecione **e-mail**, ou, para campanhas de direcionamento para múltiplos canais, selecione **Multichannel**.
-3\. Dê à sua campanha um nome claro e significativo.
-4\. Adicione [times]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) conforme necessário.
-   * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+2. Selecione **e-mail**, ou, para campanhas de direcionamento para múltiplos canais, selecione **Multichannel**.
+3. Dê à sua campanha um nome claro e significativo.
+4. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
+   * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -61,7 +55,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 
 O Braze oferece duas experiências de edição ao criar uma campanha de e-mail: nosso [editor de arrastar e soltar]({{site.baseurl}}/dnd/) e nosso editor de HTML padrão. Escolha o tile apropriado para a experiência de edição que você prefere. 
 
-![Escolha entre o editor de arrastar e soltar ou o editor de HTML para sua experiência de edição de e-mail.][3]{: style="max-width:75%" }
+![Escolhendo entre o editor de arrastar e soltar, editor de HTML ou modelos para sua experiência de edição de e-mail.][3]{: style="max-width:75%" }
 
 Em seguida, você pode selecionar um [modelo de e-mail][10] existente], [fazer upload de um modelo][18] de um arquivo (somente no editor de HTML) ou usar um modelo em branco. 
 
@@ -71,7 +65,11 @@ Recomendamos selecionar uma experiência de edição por campanha de e-mail. Por
 
 ## Etapa 3: Crie seu e-mail
 
-Depois de selecionar o modelo, você verá uma visão geral do e-mail, onde poderá ir diretamente para o editor de tela cheia para redigir o e-mail, alterar as informações de envio e visualizar avisos sobre entregabilidade ou conformidade com a lei. 
+Depois de selecionar o modelo, você verá uma visão geral do e-mail, onde poderá ir diretamente para o editor de tela cheia para redigir o e-mail, alterar as informações de envio e visualizar avisos sobre entregabilidade ou conformidade com a lei. Você pode alternar entre as guias HTML, clássica, texto simples e [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) enquanto compõe. 
+
+![O botão "Regenerar a partir do HTML".][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+
+A versão em texto simples do seu e-mail será sempre atualizada automaticamente a partir da versão em HTML até que uma edição na versão em texto simples seja detectada. Quando uma edição é detectada, a Braze não atualizará mais o texto simples, pois assumimos que você fez alterações intencionais que não devem ser sobrescritas. Você pode reverter para a sincronização automática na guia **Texto simples** selecionando o ícone **Regenerar a partir do HTML**, que só aparece se o texto simples não estiver sincronizando.
 
 {% alert tip %}
 Para adicionar movimento em um e-mail com uma prévia precisa, use GIFs em vez de elementos que exijam JavaScript, pois a maioria das caixas de entrada não oferece suporte a JavaScript.
@@ -84,10 +82,12 @@ O Braze removerá automaticamente os manipuladores de eventos HTML referenciados
 {% endalert %}
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Inicie o botão AI Copywriter, localizado no campo "Corpo" do criador de e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
+
+Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como árabe e hebraico? Consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) para conhecer as práticas recomendadas.
 
 ### Etapa 3a: Adicione suas informações de envio
 
@@ -163,7 +163,7 @@ Os extras de e-mail permitem o envio de dados adicionais para outros prestadores
 Para adicionar extras de e-mail, Acessar as **Informações de Envio** e selecionar **Adicionar Novo Extra**.
 
 {% alert warning %}
-O total de pares de valores-chave adicionados não deve exceder 1 kB. Caso contrário, as mensagens serão abortadas.
+O total de pares chave-valor adicionados não deve exceder 1 KB. Caso contrário, as mensagens serão abortadas.
 {% endalert %}
 
 Os valores extras de e-mail não são publicados no Currents ou no Snowflake. Se estiver procurando enviar metadados adicionais ou valores dinâmicos para Currents ou Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) em vez disso.
@@ -250,7 +250,7 @@ Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usu�
 
 #### Selecionar eventos de conversão
 
-O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), após receberem uma campanha. Você pode especificar qualquer uma das seguintes ações como um evento de conversão:
+O Braze permite rastrear a frequência com que os usuários realizam ações específicas, [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), após receberem uma campanha. Você pode especificar qualquer uma das seguintes ações como um evento de conversão:
 
 - Abre o aplicativo
 - Faz uma compra (pode ser uma compra genérica ou um item específico)
@@ -271,6 +271,7 @@ A seção final fornecerá um resumo da campanha que você acabou de criar. Conf
 
 Para aprender como você pode acessar os resultados de suas campanhas de e-mail, confira [Relatório de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
+[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

@@ -21,6 +21,9 @@ Before you can track user data in the experiment, your app needs to record when 
 
 To learn more about logging feature flag impressions, see [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions).
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,36 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Creating a feature flag experiment
 
@@ -56,7 +87,7 @@ To edit, add, or remove additional default properties, edit the feature flag its
 
 ### Step 4: Choose users to target
 
-Use one of your segments or filters to choose your [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
+Use one of your segments or filters to choose your [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
 
 ![The 'Target' page in a feature flag experiment with 'Received Feature Flag Variant' highlighted in the filter group search bar.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
@@ -70,7 +101,7 @@ Choose the percentage distribution for your experiment. As a best practice, you 
 
 ### Step 6: Assign conversions
 
-Braze lets you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze lets you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 ### Step 7: Review and launch
 

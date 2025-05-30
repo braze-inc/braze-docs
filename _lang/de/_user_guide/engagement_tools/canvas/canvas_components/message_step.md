@@ -61,7 +61,7 @@ Verwenden Sie das folgende Liquid, wenn Sie auf diese Entry-Eigenschaften verwei
 Nehmen wir zum Beispiel die folgende Anfrage: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Sie können einer Nachricht mit dem Liquid `{{canvas_entry_properties.${product_name}}}` das Wort „Schuhe“ hinzufügen.
 {% endraw %}
 
-Sie können auch [persistente Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) in jedem Nachrichten-Schritt nutzen, um Ihre Nutzer:innen durch personalisierte Schritte in Ihrem Canvas-Workflow zu führen.
+Sie können auch [persistente Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) in jedem Nachrichten-Schritt nutzen, um Ihre Nutzer:innen durch personalisierte Schritte in Ihrem Canvas-Workflow zu führen.
 
 #### Ursprünglicher Workflow
 

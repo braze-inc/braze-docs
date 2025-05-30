@@ -19,10 +19,6 @@ Segment Insights zeigt Ihnen, wie sich ein Segment im Vergleich zu einem anderen
 
 Gehen Sie auf die Seite **Segment Insights** in Ihrem Dashboard unter **Analytics** und klicken Sie auf <i class="fas fa-plus"></i> **Segment hinzufügen**, um bis zu vier verschiedene Segmente im Vergleich zu einer Baseline anzuzeigen.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Segmente** > **Segmenteinblicke**.
-{% endalert %}
-
 ![Segment Insights Dashboard.][1]
 
 Das Basissegment kann entweder ein bestimmtes Segment sein, das Sie auswählen, oder ein Segment, das alle Ihre Nutzer enthält. Sie können die folgenden Statistiken mit Segment Insights vergleichen:
@@ -68,7 +64,7 @@ Um die Konversionsrate bei Sprechern anderer Sprachen als Englisch zu verbessern
 
 ### Indikatoren für höhere Einnahmen verstehen
 
-Es kann schwierig sein, Nutzer:innen zu Käufern und Käuferinnen umzuwandeln, und der Versuch, neue, inaktive oder uninteressierte Nutzer:innen direkt zum Kauf zu drängen, kann dazu führen, dass sie Ihre App deinstallieren. Segment-Insights können Ihnen helfen, Aktionen zu entdecken, die Nutzer:innen weiter in den Funnel führen, ohne dass sie gleich kaufen müssen, z. B. das Hinzufügen von Artikeln zu ihrer Wunschliste, das Teilen in Social Media oder das Favorisieren von Content. So können Sie zum Beispiel die Auswirkungen verschiedener Verhaltensweisen auf Käufe innerhalb einer E-Commerce-App aufzeigen.
+Es kann schwierig sein, Nutzer:innen zu Käufern und Käuferinnen umzuwandeln, und der Versuch, neue, inaktive oder uninteressierte Nutzer:innen direkt zum Kauf zu drängen, kann dazu führen, dass sie Ihre App deinstallieren. Segment-Insights können Ihnen helfen, Aktionen zu entdecken, die Nutzer:innen weiter in den Funnel führen, ohne dass sie gleich kaufen müssen, z. B. das Hinzufügen von Artikeln zu ihrer Wunschliste, das Teilen in Social Media oder das Favorisieren von Content. So können Sie zum Beispiel die Auswirkungen verschiedener Verhaltensweisen innerhalb einer E-Commerce App auf die Käufe in einem Chart darstellen.
 
 ![][7]
 

@@ -3,7 +3,7 @@ nav_title: Brand Guidelines
 article_title: Brand Guidelines
 page_order: 1
 page_type: reference
-description: "This reference article describes how to create, manage, and use brand buidelines that can be applied to your messages through the AI copywriting assistant."
+description: "This reference article describes how to create, manage, and use brand guidelines that can be applied to your messages through the AI copywriting assistant."
 ---
 
 # Brand guidelines

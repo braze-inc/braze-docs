@@ -13,10 +13,6 @@ channel:
 
 Gehen Sie im Braze-Dashboard zu **Audience** > **Abonnements** > **E-Mail Preference Center**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Benutzer** > **Abonnementgruppen** > **E-Mail-Präferenzcenter**.
-{% endalert %}
-
 Hier können Sie jede Abonnementgruppe verwalten und einsehen. Jede Abo-Gruppe, die Sie erstellen, wird zu dieser Liste der Präferenzzentren hinzugefügt. Sie können mehrere Präferenzzentren erstellen.
 
 {% alert important %}
@@ -38,10 +34,6 @@ Mit Liquid können Sie die Namen Ihrer Abonnementgruppen und den Status der einz
 | Gültiger Benutzer | Ein Benutzer mit einer E-Mail-Adresse und einer externen ID. |
 | Erstellter API-Schlüssel mit Berechtigungen für das Einstellungszentrum | Gehen Sie im Braze-Dashboard zu **Einstellungen** > **API-Schlüssel**, um zu bestätigen, dass Sie Zugriff auf einen API-Schlüssel mit Berechtigungen für das Einstellungszentrum haben. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie einen API-Schlüssel unter **Entwicklerkonsole** > **API-Einstellungen** erstellen.
-{% endalert %}
 
 ### Schritt 1: Verwenden Sie den Endpunkt „Präferenzzentrum erstellen“
 
@@ -85,7 +77,7 @@ Um Ihre Präferenzzentren zu identifizieren, verwenden Sie den [Endpunkt „Deta
 
 ## Anpassung
 
-Braze verwaltet die Updates des Abo-Status vom Präferenzzentrum aus, wodurch das Präferenzzentrum synchronisiert wird. Sie können jedoch auch Ihr eigenes Einstellungszentrum erstellen und hosten, indem Sie die [APIs für Abonnementgruppen]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) mit den folgenden Optionen verwenden.
+Braze verwaltet die Updates des Abo-Status vom Präferenzzentrum aus, wodurch das Präferenzzentrum synchronisiert wird. Sie können jedoch auch Ihr eigenes Einstellungszentrum erstellen und hosten, indem Sie die [APIs für Abonnementgruppen]({{site.baseurl}}/api/endpoints/subscription_groups/) mit den folgenden Optionen verwenden.
 
 ### Option 1: Link mit String-Abfrageparametern
 
@@ -125,3 +117,26 @@ Bei diesem Ansatz sind keine in die URL eingebetteten Abfrage-String-Wert-Paare 
 Dies wird verwendet, um das Einstellungscenter zu rendern, wenn das alte Liquid {%raw%}`${preference_center_url}`{%endraw%} verwendet wird. Das bedeutet, dass Canvas-Schritte oder Vorlagen, die entweder auf {%raw%}`${preference_center_url}` oder `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} verweisen, nicht funktionieren. Dies gilt auch für zuvor gesendete Nachrichten, die das Legacy Liquid oder "PreferenceCenterBrazeDefault" als Teil der Nachricht enthielten. 
 
 Wenn Sie in einer neuen Nachricht erneut auf {%raw%}`${preference_center_url}`{%endraw%} verweisen, wird erneut ein Einstellungscenter mit dem Namen "PreferenceCenterBrazeDefault" erstellt.
+
+### Unterstützen die Präferenzzentren mehrere Sprachen?
+
+Nein. Sie können jedoch Liquid nutzen, wenn Sie das HTML für angepasste Opt-in und Opt-out Seiten schreiben. Wenn Sie dynamische Links verwenden, um Abmeldungen zu verwalten, ist dies ein einzelner Link. 
+
+Wenn Sie z.B. die Abmelderate für spanischsprachige Nutzer:innen tracken möchten, müssen Sie entweder separate Kampagnen verwenden oder Analytics rund um Currents nutzen (z.B. nachsehen, wann sich ein Nutzer:innen abmeldet und die bevorzugte Sprache dieses Nutzers überprüfen).
+
+Ein weiteres Beispiel: Um die Abmelderaten spanischsprachiger Nutzer zu tracken, könnten Sie der Abmelde-URL einen Query-Parameter-String wie `?Spanish=true` hinzufügen, wenn die Sprache der Nutzer:innen Deutsch ist, und einen regulären Abmeldelink verwenden, wenn dies nicht der Fall ist:
+
+{% raw %}
+```liquid
+{% if ${language} == 'spanish' %} "${unsubscribe_url}?spanish=true"
+{% else %}
+${unsubscribe_url}
+{% endif %}
+```
+{% endraw %}
+
+Dann könnten Sie über Currents herausfinden, welche Nutzer:innen Spanisch sprechen und wie viele Klicks auf den Abmeldelink erfolgten.
+
+### Sind sowohl Abmelde-Links als auch E-Mail-Präferenzzentren für den Versand erforderlich?
+
+Nein. Wenn Sie beim Verfassen einer E-Mail-Kampagne die Nachricht "Ihr E-Mail-Text enthält keinen Abmeldelink" sehen, wird diese Warnung erwartet, wenn sich Ihr Abmeldelink in einem Content-Block befindet.

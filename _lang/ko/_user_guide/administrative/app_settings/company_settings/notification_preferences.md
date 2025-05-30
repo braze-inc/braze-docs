@@ -27,10 +27,11 @@ description: "이 참고 문서에서는 회사 계정의 메시징 및 활동�
 
 | 알림 | 설명 | 사용 가능한 알림 채널 |
 |--------------|-------------|-----------------|
-| AWS 자격증명정보 오류 | Braze가 데이터 내보내기를 위해 Amazon Web Services 자격증명정보를 사용하는 중에 오류 메시지를 받을 때 수신자에게 알립니다. 여기에는 Google Cloud Services 및 Azure(Microsoft 클라우드 서비스)에 대한 자격 증명 오류 알림도 포함됩니다. | 이메일, 웹훅 |
+| AWS 자격증명정보 오류 | Braze가 데이터 내보내기를 위해 Amazon Web Services 자격증명정보를 사용하는 중에 오류 메시지를 받을 때 수신자에게 알립니다. This includes credential error notifications for Google Cloud Services and Azure (Microsoft Cloud Services). | 이메일, 웹훅 |
 | 캠페인 자동 중단 | Braze가 캠페인을 중단했을 때 수신자에게 알립니다. | 이메일 |
 | 캠페인 상호작용 만료 | 캠페인 상호작용 데이터 만기가 다가온 캠페인, 리타겟팅 필터에서 참조하고 30일 이내에 메시지 발송에 활용된 세그먼트, 캠페인, 캔버스에 대한 정보를 수신자에게 알립니다. | 이메일 |
-| 캠페인/캔버스 업데이트됨 | 활성 캠페인/캔버스가 업데이트되거나 비활성화될 때, 비활성 캠페인/캔버스가 다시 활성화되거나 초안이 시작될 때 수신자에게 알림을 보냅니다. | 이메일 |
+| 캠페인/캔버스 업데이트됨 | Notifies recipients when an active campaign or Canvas is updated or deactivated, as well as when an inactive campaign or Canvas is reactivated or drafts are launched. | 이메일 |
+| Campaign/Canvas Volume Limit Met | Notifies recipients when a campaign or Canvas meets its volume limit. | 이메일 | 
 | 캔버스 상호작용 만료 | 캔버스 상호작용 데이터 만기가 다가온 캔버스, 리타겟팅 필터에서 참조하고 30일 이내에 메시지 발송에 활용된 세그먼트, 캠페인, 캔버스에 대한 정보를 수신자에게 알립니다. | 이메일 |
 | 뉴스 피드 카드 게시/라이브 | 뉴스피드 카드가 예약되거나 게시될 때 수신자에게 알립니다. | 이메일, 웹훅 |
 | 푸시 자격증명정보 오류 | 앱의 푸시 인증정보가 유효하지 않은 경우와 앱의 푸시 인증정보가 곧 만료되는 경우 수신자에게 알림을 보냅니다. | 이메일, 웹훅 |

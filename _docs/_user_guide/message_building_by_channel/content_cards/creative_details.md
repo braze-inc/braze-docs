@@ -46,11 +46,11 @@ The Captioned Image card is a great way to show off and attract attention to imp
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Banner %}
+{% tab Image-only %}
 
-If you want fancy, the banner card is for you. This is completely customized to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want more creative control, the image-only card is for you. Create your image using any tooling you like and upload the image to this card type.
 
-![Image of a banner with recommended details and a banner example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Image of an image-only Content Card with recommended details and an image-only example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -83,7 +83,7 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|
-| The Android SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | The Swift SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to the [GIF support tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | GIF support is included by default in the Web SDK integration. |
+| The Android SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to [GIFs]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android). | The Swift SDK does not provide animated GIF support by default. For more details on activating GIF support, refer to the [GIF support tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | GIF support is included by default in the Web SDK integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>

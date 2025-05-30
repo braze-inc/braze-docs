@@ -32,7 +32,7 @@ Braze でのリードスコアリングワークフローの作成には、次�
 1. **エントリ スケジュール**ステップに進み、**Action-Based**エントリ スケジュールを選択します。これにより、ユーザーが特定のアクションを実行すると、キャンバスにユーザーが入ります。
 
 2. **アクション ベースのオプション** で、次の2 つのアクションs を追加します。
-    - [**カスタム属性値を変更**] でリードスコアリング属性の名前 (`lead score`など) を使用して、カスタム属性値を変更します。リードスコアリング属性をまだ作成していない場合は、[カスタム属性s]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)のステップに従います。これにより、ユーザーのリードスコアが変化するたびに、キャンバスにユーザーが入ります。
+    - [**カスタム属性値を変更**] でリードスコアリング属性の名前 (`lead score`など) を使用して、カスタム属性値を変更します。リードスコアリング属性をまだ作成していない場合は、[カスタム属性s]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)のステップに従います。これにより、ユーザーのリードスコアが変化するたびに、キャンバスにユーザーが入ります。
     - **メールアドレスの追加**
 
 ![カスタム属性の「リードスコア」を変更し、メールの住所を追加する「アクションベース」およびアクションベースの選択肢をエントリ スケジュールとしたキャンバスの作成手順2。][2]{: style="max-width:80%;"}
@@ -83,7 +83,7 @@ Braze でのリードスコアリングワークフローの作成には、次�
 - **グループ 3:**1 ポイントの減分としてカウントされるすべてのイベント。
 - **その他のユーザー:**アクションパスを使用すると、待機ウィンドウを定義し、ユーザーがアクションを受け取るかどうかを確認してから、それらを「他のすべてのユーザー」グループにドロップできます。リードスコアリングの場合、これは「非アクティブ」のスコアを減分する機会です。
 
-![1 ポイント、5 ポイント、および 10 ポイントを加算するアクショングループ、1 ポイントと 10 ポイントを減算するアクショングループ、および「その他のユーザー」のアクショングループを含むアクションパス。][7]
+![1 ポイント、5 ポイント、および10 ポイントを追加するアクショングループ、1 ポイントと10 ポイントを減算するアクショングループ、および「Everyone Else」を含むアクションパス。][7]
 
 #### ステップ 4c: 関連するイベントを含めるように各グループを設定する
 
@@ -132,13 +132,13 @@ Brazeは、リードスコアリングモデルを含む内部データモデル
 
 例えば、メッセージングエンゲージメントデータ (メールの開封やクリック、ランディングページのエンゲージメントなど) でリードのエンゲージメントレベルを判定できます。このデータをクラウドデータウェアハウスに渡し、Brazeストリーミングエクスポートデータソリューションs を使用してリードスコアリングモデルの入力として使用できるようにすることができます。
 
-- [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)
+- [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 - [Snowflake セキュアデータ共有]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab 送信先としてのBraze %}
 
-内部チームがリードスコアリングモデルを作成して実行したら、そのデータをBraze にプルバックして、関連するメッセージングのリードをより適切にSegmentし、対象にすることができます。これは、[ Braze クラウドデータ取り込み]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/)で実行できます。 
+内部チームがリードスコアリングモデルを作成して実行したら、そのデータをBraze にプルバックして、関連するメッセージングのリードをより適切にSegmentし、対象にすることができます。これは、[ Braze クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/)で実行できます。 
 
 クラウドデータ取り込みの場合、社内チームがユーザー識別子、最新のリードスコア、およびスコアが更新されたときのタイムスタンプを含む新しいテーブルまたはビューを作成します。Braze はテーブルまたはビューを選択し、リードスコアをユーザープロファイルs に追加します。
 
@@ -182,7 +182,7 @@ Braze のリードステータスを使用して営業チームのリードレ�
 
 | ヘッダー | コンテンツ |
 | --- | --- |
-| 許可 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>トークンを取得するには、OAuth 2.0 クライアント認証情報フローの[接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)を設定してから、コネクテッドコンテンツを使用して営業チームからベアラーを取得します。<br><br>{% raw %}<code>{% connected_content <mem_a8279fc7-4858-44ec-944d-1c7c2eb01fa5/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 許可 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>トークンを取得するには、OAuth 2.0 クライアント認証情報フローの[接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)を設定してから、コネクテッドコンテンツを使用して営業チームからベアラーを取得します。<br><br>{% raw %}<code>{% connected_content <mem_2f2181c6-53fe-47ab-92c1-966c2898bb12/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

@@ -26,7 +26,7 @@ Quando um usuário final insere seu endereço de e-mail nesse formulário, o end
     - Endereços de e-mail válidos: 
         - `example@gmail.com`
         - `example@gnail.com` (com um erro de digitação)
-    - Para saber mais sobre a validação de e-mails na Braze, consulte as [diretrizes e notas técnicas de e-mail]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
+    - Para saber mais sobre a validação de e-mails na Braze, consulte as [diretrizes e notas técnicas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 {% details Mais informações sobre usuários identificados e anônimos %}
 
@@ -36,7 +36,7 @@ Se um usuário anônimo inserir seu e-mail no formulário e enviá-lo, o Braze a
 
 Se `changeUser` for chamado com um `external_id` existente, o perfil de usuário anônimo ficará órfão e os [campos de dados de usuários específicos]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) que ainda não existem no usuário identificado serão mesclados, mas os campos que já existem serão perdidos, inclusive o endereço de e-mail.
 
-Para saber mais, consulte o [Ciclo de vida do perfil do usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Para saber mais, consulte o [Ciclo de vida do perfil do usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 {% enddetails %}
 

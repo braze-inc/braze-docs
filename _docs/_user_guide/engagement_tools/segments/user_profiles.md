@@ -1,7 +1,7 @@
 ---
 nav_title: User Profiles
 article_title: User Profiles
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -26,7 +26,7 @@ To access a user's profile, go to the **Search Users** page and search for a use
 
 If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]{: style="max-width:60%;"}
 
 ## Use cases
 
@@ -68,7 +68,7 @@ The **Engagement** tab contains information about a user's interactions with the
 
 | Engagement category | Contains |
 | --- | --- |
-| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
+| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
 | Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |

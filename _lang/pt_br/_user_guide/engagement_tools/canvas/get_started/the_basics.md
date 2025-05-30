@@ -20,28 +20,28 @@ Antes de começarmos com os detalhes da [configuração do Canvas]({{site.baseur
   {% tab Canvas %}
   O Canva é uma interface unificada na qual os profissionais de marketing criam campanhas com várias mensagens. É um pouco como uma ferramenta de programação visual, que lhe permite criar uma jornada de usuário coesa a partir de uma série de etapas.
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![Um exemplo de um Canva com uma etapa de divisão de decisão em duas jornadas de usuário diferentes, dependendo da capacitação do usuário.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab Jornada %}
 
-  Uma jornada, ou comumente chamada de jornada do usuário, é a experiência de um usuário individual dentro do Canva.<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  Uma jornada, ou comumente chamada de jornada do usuário, é a experiência de um usuário individual dentro do Canva.<br><br> ![Um gráfico com a jornada do cliente para um novo usuário. Um usuário anônimo instala um aplicativo, Kat cria uma conta, Kat não abre o aplicativo por uma semana, uma notificação por push traz Kat de volta ao aplicativo e, em seguida, Kat usa o aplicativo regularmente.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Criador de canvas %}
-  O construtor do Canvas mapeia as etapas a serem seguidas ao criar seu Canvas. Isso inclui noções básicas, como nomear o Canva e adicionar equipes. Essencialmente, o criador de canvas é a configuração crucial necessária antes de começar a criar seu canva. Aqui, é possível controlar a forma como os usuários iniciam e concluem a jornada do cliente com opções para editar o [cronograma de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [o público-alvo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) e [as configurações de envio]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  O construtor do Canvas mapeia as etapas a serem seguidas ao criar seu Canvas. Isso inclui noções básicas, como nomear o Canva e adicionar equipes. Essencialmente, o criador de canvas é a configuração crucial necessária antes de começar a criar seu canva. Aqui, é possível controlar a forma como os usuários iniciam e concluem a jornada do cliente com opções para editar o [cronograma de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [o público-alvo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) e [as configurações de envio]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![O construtor do Canvas na seção Noções básicas para um Canvas chamado "Novo canva".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variantes %}
-  Uma variante é a jornada que cada cliente segue em sua jornada. O Canva suporta até oito variantes com um grupo de controle. Você controla qual segmento do seu público seguirá cada variante.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  Uma variante é a jornada que cada cliente segue em sua jornada. O Canva suporta até oito variantes com um grupo de controle. Você controla qual segmento do seu público seguirá cada variante.<br><br> ![Selecionando o botão "Adicionar variante".]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab Etapas %}
-  Uma etapa do canva é um ponto de decisão de marketing: "se isso, então aquilo". Aproveite [os componentes do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) para criar as etapas de uma jornada do usuário.<br>Em uma etapa, você pode definir disparadores ou programar a entrega, refinar o direcionamento adicionando filtros ou marcando [eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) e especificar diferentes canais, como notificações por push ou eventos de webhook.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  Uma etapa do canva é um ponto de decisão de marketing: "se isso, então aquilo". Aproveite [os componentes do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) para criar as etapas de uma jornada do usuário.<br><br> ![Exemplo de adição de uma etapa do canva.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> Quando um usuário entra em um Canva, ele começa na primeira etapa. Cada etapa tem condições que determinam se um usuário pode passar para a próxima etapa. Em uma etapa, você pode definir disparadores ou programar a entrega, refinar o direcionamento adicionando filtros ou marcando eventos de exceção e especificar diferentes canais, como notificações por push ou eventos de webhook. No Canva, as etapas ocorrem em uma sequência, o que significa que a primeira etapa ocorre antes que a segunda possa ocorrer. Digamos que tenhamos um Canvas com as seguintes etapas: Atrasar a etapa A com uma postergação de 24 horas, enviar a etapa A com uma mensagem push e enviar a etapa B com uma mensagem no app. O usuário A é mantido em uma postergação de 24 horas e, depois de 24 horas, receberá uma mensagem push e, em seguida, uma mensagem no app.
 
   {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ Você pode adicionar tags e nomear as etapas e variantes em um Canvas. Para sabe
 
 É sempre importante ter uma meta definida em mente, e o Canva ajuda a entender como está o seu desempenho em relação aos KPIs, como engajamento em sessões, compras e eventos personalizados.
 
-A seleção de pelo menos um [evento de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) lhe dará a capacidade de entender como otimizar a performance dentro do Canva. E se a sua tela tiver várias variantes ou um grupo de controle, o Braze usará o evento de conversão para determinar a melhor variação para atingir essa meta.
+A seleção de pelo menos um [evento de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) lhe dará a capacidade de entender como otimizar a performance dentro do Canva. E se a sua tela tiver várias variantes ou um grupo de controle, o Braze usará o evento de conversão para determinar a melhor variação para atingir essa meta.
 
 * **Iniciar sessão**: Quero que meus usuários voltem e se engajem com o app.
 * **Fazer compra**: Quero que meus usuários comprem.
@@ -78,7 +78,7 @@ A seleção de pelo menos um [evento de conversão]({{site.baseurl}}/user_guide/
 Sua resposta determinará os detalhes de quando e como o Canva será entregue ao cliente. Os usuários podem entrar no seu Canva de duas maneiras: disparos programados ou baseados em ações.
 
 {% alert tip %}
-Dê uma olhada em [Funcionalidades baseadas em tempo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/) para o Canva para obter mais estratégias e respostas a perguntas comuns.
+Dê uma olhada em [Funcionalidades baseadas em tempo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/delivery_types/) para o Canva para obter mais estratégias e respostas a perguntas comuns.
 {% endalert %}
 
 A entrega programada permite que você envie um Canva imediatamente para seu público-alvo. Você também pode enviá-la regularmente ou programá-la para um momento específico no futuro. As telas baseadas em ações respondem a comportamentos específicos do cliente à medida que eles ocorrem. Por exemplo, um gatilho baseado em ação pode incluir a abertura de um app, a realização de uma compra, a interação com outra campanha ou o disparo de qualquer evento personalizado. No momento em que a ação ocorre, você pode fazer com que o Canva seja enviado aos seus usuários.

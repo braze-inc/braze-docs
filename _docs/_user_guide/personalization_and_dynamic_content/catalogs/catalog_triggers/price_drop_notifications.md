@@ -18,12 +18,12 @@ When a user triggers a custom event for an item, we'll automatically subscribe t
 
 You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We recommend including a catalog name, but this isn't required. You'll also provide the name of a price field, which must be a number data type. 
 
-You can create a price drop subscription for a user and a catalog item it occurred for when the following occurs:
+You can create a price drop subscription for a user and a catalog item when the following occurs:
 
 - A selected custom event is performed by a user
 - The custom event has a `type` property that includes `price_drop` (`type` must be an array)
 
-To set both price-drop and back-in-stock notifications in the same event, you can use the `type` property that must be an array. When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas. 
+To set both price-drop and back-in-stock notifications in the same event, you can use the `type` property, which must be an array. When an item has a price change that meets your price rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas. 
 
 The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends.
 
@@ -74,7 +74,7 @@ Here's an example custom event:
     - **Set notification limits:** Notify a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item's price goes back up. Your notification rate cannot exceed notifying 10,000 users per minute.<br>
 
 2. Set the **Price field in catalog**. This is the catalog field that will be used to determine the item's price. It must be a number type.
-3. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or how much value the price field has changed by.
+3. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or by the change in value for the price field.
 4. Select **Save settings**.
 
 ![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.][1]
@@ -83,9 +83,9 @@ Here's an example custom event:
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
 {% endalert %}
 
-## Using price drop notifications in Canvas
+## Using price drop notifications in a Canvas
 
-After setting up the price drop notifications in a catalog, follow these steps to use these notifications in a Canvas.
+After setting up the price drop notifications in a catalog, follow these steps to use these notifications for a Canvas.
 
 1. Set up an action-based Canvas.
 2. Select **Perform Price Drop Event** as the trigger.
@@ -98,7 +98,7 @@ Now, your customers will be notified when an item's price drops.
 
 To template in details about the catalog item that has dropped in price, you can use the `canvas_entry_properties` Liquid tag to access the `item_id`. 
 
-Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item prior to the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
+Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item before the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
 
 Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
 
@@ -106,7 +106,7 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - Users are subscribed for 90 days. If an item does not drop in price in 90 days, the user is removed from the subscription.
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
-- Braze will process up to 10 item updates per minute. This means if you update 11 items in one minute, only the first 10 items can trigger a price drop notification.
+- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request.
 
 [1]: {% image_buster /assets/img/price_drop_notifications.png %}
 [2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

@@ -69,7 +69,7 @@ If needed, you can learn more about our events in our [event delivery semantics]
 You can use Currents field transformations to remove or hash a string field.
 
 - **Remove:** Replaces the string field with `[REDACTED]`. This is helpful if your partner rejects events with missing or empty fields.
-- **Hash:** Applys an SHA-256 hashing algorithm to the string field.
+- **Hash:** Applies an SHA-256 hashing algorithm to the string field.
 
 Selecting a field for one of these transformations will apply that transformation to all events in which that field appears. For example, selecting `email_address` for hashing will hash the `email_address` field in Email Send, Email Open, Email Bounce, and Subscription Group State Change events.
 
@@ -77,11 +77,17 @@ Selecting a field for one of these transformations will apply that transformatio
 
 ### Step 6: Test your integration
 
-You may test your integration or take a look at the sample Currents data in our Currents examples [GitHub repository](https://github.com/Appboy/currents-examples).
-
 {% alert important %}
 Currents will drop events with excessively large payloads of greater than 900&nbsp;KB. 
 {% endalert %}
+
+Before you test, consider checking out our [sample Currents data in GitHub](https://github.com/Appboy/currents-examples). When you're ready to test, you choose an option below:
+
+#### Sending test events
+
+To test your integration, you can select **Send Test Events** to send one event from each of your selected event types to this Current. For detailed information about each event type, refer to our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
+
+![The "Currents Test" page in the Braze dashboard.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Testing Currents connectors
 
@@ -92,7 +98,7 @@ Test Currents connectors are free versions of our existing connectors that can b
 
 After your Test Currents connectors reach the sending limit, your connector will not send events until the next seven-day period.
 
-To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
+To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 
 ## Updating Currents
 

@@ -67,7 +67,7 @@ If you're interested in only the minimum integration, and you integrate with mPa
 
 In addition to the minimum integration data, the following attributes are automatically captured by Braze when you initialize the SDK integration. You can [opt-out]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection) of collecting these attributes to allow for a minimum integration.
 
-| Attribute               | Platform          | Description                                                                        | Why it's Collected                                                                                                                                                      |
+| Attribute               | Platform          | Description                                                                        | Why it's collected                                                                                                                                                      |
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Browser name            | Web               | Name of the browser                                                                | This attribute is used to only send messages to compatible browsers. It can also be used for browser-based segmentation.                                     |
 | Device locale           | Android, iOS      | The default locale of the device                                                   | This attribute is used to translate messages to a user's preferred language.                                                                                            |
@@ -82,19 +82,23 @@ In addition to the minimum integration data, the following attributes are automa
 | User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
+To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/storage/?tab=android), [iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
 
 ## Data not collected by default
 
 By default, the following attributes aren't collected. Each attribute needs to be manually integrated.
 
-| Attribute                  | Platform     | Description                                                                                                                                                                                                                                                                                                               | Why it's Not Collected                                                                                                                                                                                                                                                                 |
+| Attribute                  | Platform     | Description                                                                                                                                                                                                                                                                                                               | Why it's not collected                                                                                                                                                                                                                                                                 |
 |----------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Device Ad Tracking Enabled | Android, iOS | On iOS:<br>[`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:))<br><br>On Android:<br>[`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) | This property requires additional app-level permissions, which must be granted by the integrator.                                                                                                                                                                                      |
 | Device IDFA                | iOS          | Device identifier for advertisers                                                                                                                                                                                                                                                                                         | This requires the Ad Tracking Transparency framework, which will trigger additional privacy review from the App Store. For more details, see [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)) |
 | Google Advertising ID      | Android      | Identifier for advertising within Google Play apps                                                                                                                                                                                                                                                                        | This requires the app to retrieve the GAID and pass it to Braze. For more details, refer to [Optional Google Advertising ID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id).                                         |
 | Most recent location | Android, iOS | This is the last known GPS location of the user's device. This is updated on session start and is stored on the user’s profile. | This requires the user to grant location permission to your app. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+The Braze SDK doesn't store any IP addresses locally.
+{% endalert %}
 
 ## Personalized integration
 
@@ -107,4 +111,4 @@ Braze will ban or block users with over 5,000,000 sessions ("dummy users") and w
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android device-level fields"
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html

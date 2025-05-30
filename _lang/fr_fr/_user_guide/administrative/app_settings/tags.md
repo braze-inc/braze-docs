@@ -48,7 +48,7 @@ Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous s
 
 Les balises peuvent être un outil organisationnel utile pour suivre les tactiques d’engagement. Vous pouvez lier des segments et des campagnes à des objectifs commerciaux, à des étapes d’entonnoir et autres.
 
-Voici un exemple d'étiquettes qu'une application de commerce électronique pourrait trouver utiles :
+Voici un exemple de balises que l’application Ecommerce peut trouver utile :
 
 <style>
 table td {
@@ -81,10 +81,6 @@ table td {
 </table>
 
 Vous pouvez utiliser les mêmes balises sur les campagnes, les Canvas et les segments. Pour renommer, supprimer ou ajouter des tags de manière efficace dans votre tableau de bord, accédez à **Paramètres** > **Gestion des tags**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne version de navigation]({{site.baseurl}}/navigation), cette page se trouve dans **Paramètres** > **Gérer les paramètres** > **Étiquettes**.
-{% endalert %}
 
 ![Onglet Balises de la page Gérer les paramètres][8]
 

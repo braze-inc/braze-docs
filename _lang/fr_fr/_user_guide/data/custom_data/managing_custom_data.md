@@ -18,10 +18,6 @@ Pour pré-remplir les événements et attributs personnalisés, procédez comme 
 
 1. Allez dans **Paramètres des données** > **Événements personnalisés** ou **Attributs personnalisés** ou **Produits**.
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez ces pages sous **Gérer les paramètres.**
-{% endalert %}
-
 ![Naviguez jusqu'à Attributs personnalisés ou Événements personnalisés ou Produits.][21]{: style="max-width:90%;" }
 
 {: start="2"}
@@ -46,9 +42,15 @@ Toutes les données des profils utilisateurs (événements personnalisés, attri
 
 ## Ajout à la liste de blocage des données personnalisées
 
-Vous pouvez occasionnellement identifier des attributs personnalisés, des événements personnalisés ou des événements d'achat qui soit consomment trop de points de données, soit ne sont plus utiles à votre stratégie de marketing, soit ont été enregistrés par erreur. Pour empêcher l’envoi de ces données à Braze, vous pouvez bloquer un objet Données personnalisées pendant que votre équipe d’ingénierie travaille à le supprimer du backend de votre application ou de votre site Web.
+Vous pouvez occasionnellement identifier des attributs personnalisés, des événements personnalisés ou des événements d'achat qui soit consomment trop de points de données, soit ne sont plus utiles à votre stratégie de marketing, soit ont été enregistrés par erreur. 
 
-La mise en liste bloquée empêche un objet de données personnalisé particulier d'être enregistré par Braze à l'avenir, ce qui signifie qu'il n'apparaîtra pas lors de la recherche d'un utilisateur spécifique. Les données en liste de blocage ne seront pas envoyées par le SDK et le tableau de bord de Braze ne traitera pas les données en liste de blocage provenant d'autres sources (par exemple, l'API). Cependant, le blocage ne supprime pas les données des profils utilisateurs et ne diminue pas rétroactivement le nombre de points de données encourus pour cet objet personnalisé.
+Pour empêcher l’envoi de ces données à Braze, vous pouvez bloquer un objet Données personnalisées pendant que votre équipe d’ingénierie travaille à le supprimer du backend de votre application ou de votre site Web. La mise en liste bloquée empêche un objet de données personnalisé particulier d'être enregistré par Braze à l'avenir, ce qui signifie qu'il n'apparaîtra pas lors de la recherche d'un utilisateur spécifique.
+
+{% alert important %}
+Pour mettre en liste de blocage des données personnalisées, vous devez disposer des [autorisations du client]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) pour accéder et modifier les campagnes, les Canvases et les segments.
+{% endalert %}
+
+Les données en liste de blocage ne seront pas envoyées par le SDK et le tableau de bord de Braze ne traitera pas les données en liste de blocage provenant d'autres sources (par exemple, l'API). Cependant, le blocage ne supprime pas les données des profils utilisateurs et ne diminue pas rétroactivement le nombre de points de données encourus pour cet objet personnalisé.
 
 ### Bloquer des attributs personnalisés, des événements personnalisés et des produits
 
@@ -59,7 +61,7 @@ Lorsqu'un événement ou un attribut est mis sur liste de blocage, tout segment,
 Pour arrêter le suivi d'un attribut personnalisé, d'un événement ou d'un produit spécifique, procédez comme suit :
 
 1. Recherchez-la dans les pages **Attributs personnalisés**, **Événements personnalisés** ou **Produits**.
-2. Sélectionnez l'attribut personnalisé, l'événement ou le produit. Pour les attributs et les événements personnalisés, vous pouvez en sélectionner jusqu'à 10 à la fois à insérer dans la liste de blocage.
+2. Sélectionnez l'attribut personnalisé, l'événement ou le produit. Pour les attributs et les events personnalisés, vous pouvez en sélectionner jusqu'à 100 à la fois.
 3. Sélectionnez **Liste de blocage**.
 
 ![Plusieurs attributs personnalisés sélectionnés qui sont mis en liste de blocage sur la page Attributs personnalisés.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
@@ -78,13 +80,17 @@ Pour ce faire, Braze envoie les informations de blocage à chaque appareil. Ceci
 
 ### Considérations relatives à l'inscription sur la liste de blocage
 
-Il est possible de bloquer un grand nombre d'événements et d'attributs, mais ce n'est pas conseillé. En effet, chaque fois qu’un événement est exécuté ou qu’un attribut est (potentiellement) envoyé à Braze, cet événement ou cet attribut doit être vérifié par rapport à l’ensemble de la liste de blocage. S’il apparaît sur la liste, il ne sera pas envoyé. Cette opération prend du temps, et si la liste est vraiment trop longue, votre application peut commencer à ralentir. Si vous n’avez pas besoin d’utiliser l’événement ou l’attribut à l’avenir, il doit être supprimé de votre code d’application lors de votre prochaine version.
+Il est possible de bloquer un grand nombre d'événements et d'attributs, mais ce n'est pas conseillé. En effet, chaque fois qu’un événement est exécuté ou qu’un attribut est (potentiellement) envoyé à Braze, cet événement ou cet attribut doit être vérifié par rapport à l’ensemble de la liste de blocage.
 
-Les modifications apportées à la liste de blocage peuvent prendre quelques minutes pour se propager. Vous pouvez réactiver n'importe quel événement ou attribut de la liste de blocage à tout moment.
+Jusqu'à 300 éléments sont envoyés au SDK pour la mise en liste de blocage. Si vous mettez en liste de blocage plus de 300 éléments, ces données seront envoyées par le SDK. Si vous n'avez pas besoin d'utiliser l'événement ou l'attribut à l'avenir, envisagez de le supprimer du code de votre application lors de votre prochaine mise à jour. Les modifications apportées à la liste de blocage peuvent prendre quelques minutes pour se propager. Vous pouvez réactiver n'importe quel événement ou attribut de la liste de blocage à tout moment.
 
 ## Suppression de données personnalisées
 
 Au fur et à mesure que vous créez des campagnes et des segments ciblés, vous constaterez peut-être que vous n'avez plus besoin d'un événement personnalisé ou d'un attribut personnalisé. Par exemple, si vous avez utilisé un attribut personnalisé spécifique dans le cadre d'une campagne ponctuelle, vous pouvez supprimer cette donnée après l'avoir [mise en liste bloquée](#blocklisting-custom-attributes-custom-events-and-products) et supprimer ses références de votre application. Vous pouvez supprimer tous les types de données (tels que les chaînes de caractères, les nombres et les attributs personnalisés imbriqués).
+
+{% alert important %}
+Vous devez être un [administrateur de Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) pour supprimer des données personnalisées.
+{% endalert %}
 
 Pour supprimer un événement personnalisé et un attribut personnalisé, procédez comme suit :
 
@@ -99,7 +105,7 @@ Lorsque vous supprimez des données personnalisées, le phénomène suivant se p
 - **Pour les attributs personnalisés :** Supprime définitivement les données d'attributs du profil de chaque utilisateur.
 - **Pour les événements personnalisés :** Supprime définitivement les métadonnées de l'événement du profil de chaque utilisateur.
 
-Lorsqu'un attribut ou un événement est sélectionné pour être supprimé, son statut passe à la **corbeille**. Pendant les sept jours suivants, il est possible de restaurer l'attribut ou l'événement. Si vous ne procédez pas à une restauration au bout de sept jours, les données seront définitivement supprimées. Si vous restaurez l'attribut ou l'événement, il reviendra à l'état de liste bloquée.
+Lorsqu'un attribut ou un événement est sélectionné pour être supprimé, son statut passe à la **corbeille**. Pendant les sept jours suivants, il est possible de restaurer l'attribut ou l'événement. Si vous ne le restaurez pas au bout de sept jours, les données seront définitivement supprimées. Si vous restaurez l'attribut ou l'événement, il reviendra à l'état de liste bloquée.
 
 La suppression n'empêche pas l'enregistrement des objets de données personnalisées sur les profils d'utilisateurs. Assurez-vous donc que les données personnalisées ne sont plus enregistrées avant de supprimer les événements et les attributs.
 
@@ -111,6 +117,7 @@ Lorsque vous supprimez des données personnalisées, gardez à l'esprit les dét
 * Les données sont supprimées de la plateforme Braze et des profils utilisateurs.
 * Vous pouvez "réutiliser" le nom de l'attribut personnalisé ou de l'événement personnalisé après sa suppression. Cela signifie que si vous remarquez que des données personnalisées "réapparaissent" dans Braze après avoir été supprimées, cela peut être dû à une intégration qui n'a pas été arrêtée et qui envoie des données avec le même nom de données personnalisées.
 * Il se peut que vous deviez à nouveau placer un élément sur liste de blocage si votre suppression entraîne la réapparition de données personnalisées. Le statut de liste de blocage n'est pas préservé car les données personnalisées sont supprimées.
+* La suppression de données personnalisées ne consomme aucun [point de données]({{site.baseurl}}/user_guide/data/data_points) et ne génère pas non plus de nouveaux points de données à utiliser.
 
 ## Forcer les comparaisons de type de données
 
@@ -123,7 +130,7 @@ Forcer les types de données ne s’applique pas aux propriétés de l’événe
 ![Liste déroulante du type de données des attributs personnalisés][75]
 
 {% alert warning %}
-Si vous choisissez de forcer le type de données d’un attribut, toute donnée entrante qui n’est pas du type spécifié sera ignorée.
+Si vous choisissez de forcer le type de données d'un attribut, toute donnée entrante qui n'est pas du type spécifié sera contrainte dans ce type. Si une telle coercition est impossible (par exemple, une chaîne de caractères transformée en un nombre), les données seront ignorées. Toutes les données ingérées avant le changement de type continueront d'être stockées sous l'ancien type (et ne pourront donc pas être segmentées), et un avertissement apparaîtra à côté de l'attribut sur les profils des utilisateurs concernés.
 {% endalert %}
 
 ### Contrainte de type de données
@@ -135,7 +142,7 @@ Si vous choisissez de forcer le type de données d’un attribut, toute donnée 
 | Nombre | Les nombres entiers ou flottants (tels que `1`, `1.5`) seront stockés en tant que nombres. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Pour plus d'informations sur les options de filtrage spécifiques exposées par les différentes comparaisons de types de données, consultez [Configuration de reporting][43]. Pour plus d'informations sur les différents types de données disponibles, reportez-vous à [Types de données des attributs personnalisés][44].
+Pour plus d'informations sur les options de filtrage spécifiques exposées par les différentes comparaisons de types de données, consultez [Configuration de reporting][43]. Pour plus d'informations sur les différents types de données disponibles, reportez-vous à [Types de données d'attribut personnalisé][44].
 
 {% alert note %}
 Les données envoyées à Braze sont immuables et ne peuvent être supprimées ou modifiées après leur réception. Cependant, vous pouvez recourir à l’une des méthodes énumérées dans les sections précédentes pour exercer un contrôle sur ce que vous suivez dans votre tableau de bord.

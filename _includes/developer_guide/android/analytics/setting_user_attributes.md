@@ -138,31 +138,6 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 {% tab Floating-points %}
-To set a custom attribute with a `boolean` value:
-
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
-  @Override
-  public void onSuccess(BrazeUser brazeUser) {
-    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
-  }
-});
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).getCurrentUser { brazeUser ->
-  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
-}
-```
-
-{% endsubtab %}
-{% endsubtabs %}
 To set a custom attribute with a `float` value:
 
 {% subtabs global %}
@@ -209,6 +184,34 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 ```kotlin
 Braze.getInstance(context).getCurrentUser { brazeUser ->
   brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE)
+}
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab Boolean %}
+To set a custom attribute with a `boolean` value:
+
+{% subtabs global %}
+{% subtab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
+  }
+});
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
 }
 ```
 

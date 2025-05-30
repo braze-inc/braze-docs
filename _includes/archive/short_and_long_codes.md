@@ -1,14 +1,43 @@
 
-# Sending Phone Numbers
+# SMS and RCS senders
 
-Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
+> This article will walk you through important concepts involved in sending phone numbers with Braze.
 
-## Types of sending numbers
+## Types of SMS and RCS senders
 
 {% tabs %}
-{% tab Short Codes %}
+{% tab RCS-Verified Sender %}
 
-#### Short codes
+#### RCS-verified sender
+
+An RCS-verified sender is a visual representation of your brand that includes a brand name, logo, optional caption, and verified badge. This provides the RCS-verified sender a significant advantage over SMS codes in terms of establishing user trust.  
+
+![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
+
+##### Details
+
+| Visual components | Access | Throughput | MMS enabled | 1-way vs. 2-way |
+| --- | --- | --- | --- | --- |
+| - Brand name<br>- logo<br>- optional caption<br> - verified badge | 4—6 weeks for an application (can vary) | Approximately 100 messages per sender per second. Actual throughput rates can vary based on vendor, network conditions, and specific implementation details. | No | 2-way |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+##### Pros and cons
+
+| Pros |
+| ---- |
+| **Establishing trust**<br> RCS-verified senders are far more effective at establishing user trust than SMS codes given their highly visual nature as well as their explicit verification by the carrier. 
+<br><br>**Rich messaging features**<br>RCS-verified senders enable messages to be sent with richer messaging capabilities than SMS, including rich media, like image files and interactive buttons. |
+{: .reset-td-br-1}
+
+| Cons |
+| ---- |
+| **Novelty and dynamic nature of the market**<br> RCS is a relatively new protocol, meaning that carrier coverage, deliverability, and pricing are evolving at different rates in different regions. However, Apple’s recent agreement to support RCS means that the vast majority of smartphone users are now reachable by this protocol. <br><br>**Higher cost of rich messaging**<br> RCS messages that use a lot of rich messaging capabilities tend to cost more per message than SMS messages. This isn’t surprising given the benefits of rich features, but can be important to note for your marketing budget. |
+{: .reset-td-br-1}
+
+{% endtab %}
+{% tab SMS Short Codes %}
+
+#### SMS short codes
 
 A short code is a memorable 5-6 digit sequence that allows senders to send messages at higher rates than long codes. This makes short codes perfect for high-volume time-sensitive sending.
 
@@ -23,7 +52,7 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 
 | Pros |
 | ---- |
-| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled for some short codes**<br>Some short codes can support MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled for some short codes**<br>Some short codes can support MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Cons |
@@ -32,9 +61,9 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Long Codes %}
+{% tab SMS Long Codes %}
 
-#### Long codes
+#### SMS long codes
 
 A long code is a standard phone number used to send and receive voice calls and SMS messages. Phone numbers are typically called “long codes” (10-digit numbers in many countries) when comparing them with SMS short codes (5-6 digit numbers).
 
@@ -49,7 +78,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Pros |
 | ---- |
-| **Can be used immediately to send messages (for certain countries)**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process for some countries. (For other countries, it takes as long as or longer than a short code.). Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled for certain countries**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Can be used immediately to send messages (for certain countries)**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process for some countries. (For other countries, it takes as long as or longer than a short code.). Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled for certain countries**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Cons |
@@ -58,9 +87,9 @@ A long code is a standard phone number used to send and receive voice calls and 
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Vanity Short Code %}
+{% tab SMS Vanity Short Code %}
 
-#### Vanity short codes
+#### SMS vanity short codes
 
 A vanity short code is a 5-6 digit phone number that is specifically selected by a brand. Vanity short codes are branded and easier for consumers to remember, though are typically more expensive. For example:
 - The NYC health department has a vanity short code of `692-692` which spells out NYC-NYC on a telephone keypad.
@@ -78,7 +107,7 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 | Pros |
 | ---- |
-| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Speed and scalability**<br> Short codes offer speed and scalability with sending rates of 100 segments per second, 6,000 segments per minute, 360 thousand segments per hour, and 1 million segments per 2 hours. Short codes can reach such high rates due to the vetting that is required during the short code application process.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Cons |
@@ -87,9 +116,9 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Alphanumeric Sender ID %}
+{% tab SMS Alphanumeric Sender ID %}
 
-#### Alphanumeric sender ID
+#### SMS alphanumeric sender ID
 
 Sender IDs are the short or long codes that appear at the top of an SMS message that denotes who the message was sent from. If a user is unfamiliar with a Sender ID, they may opt to ignore these messages altogether. Through the use of alphanumeric sender IDs, users are able to quickly identify who they are receiving messages from, increasing open rates. 
 
@@ -111,7 +140,7 @@ Alphanumeric Sender IDs allow you to set your company name or brand (such as "Ki
 
 For more information on Alphanumeric Sender ID, please reach out to your customer success manager. 
 {% endtab %}
-{% tab Toll-Free Number %}
+{% tab SMS Toll-Free Number %}
 
 #### SMS-enabled toll-free number
 
@@ -141,10 +170,14 @@ If throughput is exceeded, some messages may fail.
 Besides these differences, know that a brand will usually have one short code, but multiple, back-up long codes, depending on how many recipients they plan to send SMS.
 
 {% alert important %}
-Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our [SMS FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/). 
+Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our [SMS FAQ]({{site.baseurl}}/sms_faq/). 
 {% endalert %}
 
-## How do I get a short code?
+## SMS sending phone numbers
+
+Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
+
+## How do I get an SMS short code?
 
 Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you—they'll ask for some basic information that will help you qualify. Then, all there is to do is wait!
 
@@ -152,7 +185,7 @@ Going through the short code application process can be a long process. However,
 
 While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you reach out to Braze. 
 
-Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/)) that you want for the following situations.
+Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)) that you want for the following situations.
 
 | Flow Needed | Type | Example |
 | ----------- | ---- | ------- |
@@ -170,11 +203,29 @@ You also must inform us, regardless of which number you use, of how many message
 If you have your own short code, reach out to your Customer Success Manager during the onboarding process to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
 {% endalert %}
 
-## Application-to-Person 10-Digit Long Codes (A2P 10DLC)
+## SMS Application-to-Person 10-Digit Long Codes (A2P 10DLC)
 
 A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, improving overall message deliverability, allowing brands to send messages at scale including links and calls to action, and helping further protect consumers from unwanted messages. 
 
-All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC. This application process takes 4-6 weeks. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
+All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC. This application process takes 4-6 weeks. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
+
+## Frequently asked questions
+
+### How does RCS message throughput compare to SMS message throughput?
+
+RCS message throughput is not as strictly defined or carrier-controlled as it is with SMS. Because RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS, RCS doesn't rely on fixed network-imposed limits like SMS does. 
+
+### Do RCS-verified senders support high message throughput like a short code?
+
+No. RCS-verified senders don't have the option of a separate high message throughput.
+
+### Can an RCS-verified sender be shared across multiple subscription groups? 
+
+No. Similar to an SMS sender, an RCS-verified sender can only be used with a single subscription group.
+
+### Can an SMS fallback sender be shared across SMS subscription groups?
+
+No. SMS fallback senders can only be used with a single subscription group.
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

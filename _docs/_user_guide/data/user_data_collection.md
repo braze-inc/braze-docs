@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: Anonymous Users
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: User Language Codes
     link: /docs/user_guide/data/user_data_collection/language_codes/

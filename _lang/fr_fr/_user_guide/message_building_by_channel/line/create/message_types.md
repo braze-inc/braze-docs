@@ -1,7 +1,7 @@
 ---
 nav_title: Types de messages
 article_title: Types de messages LINE
-page_order: 1
+page_order: 0
 description: "Cet article présente les différents types d'envois de messages LINE."
 page_type: reference
 tool:

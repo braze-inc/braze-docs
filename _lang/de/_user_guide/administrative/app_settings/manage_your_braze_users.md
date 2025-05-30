@@ -24,18 +24,4 @@ guide_featured_list:
 
 ## Was sind die Unterschiede zwischen Teams, Berechtigungen und Rollen? 
 
-Sie können Teams, Berechtigungssätze und Nutzerrollen verwenden, um den Zugriff und die Verantwortlichkeiten von Dashboard-Nutzer:innen in Braze zu verwalten. Jede Funktion umfasst eine andere Sammlung von Berechtigungen und Zugriffskontrollen.
-
-### Wesentliche Unterschiede
-
-Auf einer hohen Ebene hat jede Funktion einen anderen Umfang:
-- Berechtigungssätze steuern, was Dashboard-Benutzer in allen Arbeitsbereichen tun können.
-- Rollen steuern, was Dashboard-Benutzer in bestimmten Arbeitsbereichen tun können.
-- Teams kontrollieren die Zielgruppen, denen Dashboard-Benutzer Nachrichten senden können.
-
-| Merkmal | Was Sie tun können |
-| - | - |
-| [Berechtigungssätze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-permission-set) | Bündeln Sie Berechtigungen, die sich auf bestimmte Themenbereiche oder Aktionen beziehen (z. B. für „Entwickler:innen“ und „Marketer“), und wenden Sie diese dann auf Dashboard-Nutzer:innen an, die die gleichen Berechtigungen in verschiedenen Workspaces benötigen. |
-| [Rollen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) | Bündeln Sie individuelle benutzerdefinierte Berechtigungen und Kontrollen für den Arbeitsbereich-Zugriff in vordefinierten Rollen (z.B. "Vermarkter - Modemarken" und "Vermarkter - Hautpflegemarken") und weisen Sie dann Dashboard-Benutzern eine Rolle zu, um ihnen direkt den zugehörigen Arbeitsbereich-Zugriff und die Berechtigungen zu gewähren. |
-| [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) | Beschränken Sie den Zugriff von Dashboard-Benutzern auf Ressourcen auf der Grundlage der Zielgruppe (z. B. Standort des Kundenstamms, Sprache und benutzerdefinierte Attribute). |
-{: .reset-td-br-1 .reset-td-br-2 }
+{% multi_lang_include permissions.md content="Unterschiede" %}

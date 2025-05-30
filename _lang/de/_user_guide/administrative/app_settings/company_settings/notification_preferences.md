@@ -17,20 +17,17 @@ Auf der Seite **Benachrichtigungseinstellungen** können Sie festlegen, wer (wen
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Benachrichtigungseinstellungen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie das Dropdown-Menü Ihres Kontos und gehen Sie zu **Unternehmenseinstellungen** > **Benachrichtigungspräferenzen**.
-{% endalert %}
-
 ## Verfügbare Benachrichtigungen
 
 In der folgenden Tabelle sind die verfügbaren Benachrichtigungen aufgeführt:
 
 | Benachrichtigung | Beschreibung | Verfügbare Benachrichtigungskanäle |
 |--------------|-------------|-----------------|
-| AWS-Zugangsdaten fehlerhaft | Benachrichtigt die Empfänger:innen, wenn Braze bei der Verwendung Ihrer Amazon Web Services-Zugangsdaten für einen Datenexport einen Fehler erhält. Dies umfasst auch Benachrichtigungen über Fehler bei den Zugangsdaten für Google Cloud Services und Azure (Microsoft Cloud Services). | E-Mail, Webhook |
+| AWS-Zugangsdaten fehlerhaft | Benachrichtigt die Empfänger:innen, wenn Braze bei der Verwendung Ihrer Amazon Web Services-Zugangsdaten für einen Datenexport einen Fehler erhält. Dazu gehören auch Benachrichtigungen über Zugangsdaten-Fehler für Google Cloud Serviceleistungen; Dienste und Azure (Microsoft Cloud Serviceleistungen; Dienste). | E-Mail, Webhook |
 | Kampagne automatisch angehalten | Benachrichtigt die Empfänger:innen, wenn Braze eine Kampagne angehalten hat. | E-Mail |
 | Ablauf der Kampagnen-Interaktion | Benachrichtigt die Empfänger über alle Kampagnen, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvases, die in einem Retargeting-Filter darauf verweisen und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
-| Kampagne/Canvas aktualisiert | Benachrichtigt Empfänger, wenn eine aktive Kampagne/Leinwand aktualisiert oder deaktiviert wird, sowie wenn eine inaktive Kampagne/Leinwand reaktiviert wird oder wenn Entwürfe gestartet werden. | E-Mail |
+| Kampagne/Canvas aktualisiert | Benachrichtigt Empfänger:in, wenn eine aktive Kampagne oder ein Canvas aktualisiert oder deaktiviert wird, sowie wenn eine inaktive Kampagne oder ein Canvas reaktiviert wird oder Entwürfe gestartet werden. | E-Mail |
+| Kampagne/Canvas Volumengrenze erreicht | Benachrichtigt Empfänger:in, wenn eine Kampagne oder ein Canvas seine Volumengrenze erreicht. | E-Mail | 
 | Ablauf der Canvas-Interaktion | Benachrichtigt Empfänger über alle Canvas, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvases, die in einem Retargeting-Filter darauf verweisen und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
 | News Feed Karte Veröffentlicht/Live | Benachrichtigt die Empfänger, wenn News Feed-Karten geplant oder veröffentlicht werden. | E-Mail, Webhook |
 | Fehler bei Push-Zugangsdaten | Benachrichtigt Empfänger, wenn die Push-Anmeldeinformationen einer App ungültig sind und wenn die Push-Anmeldeinformationen einer App bald ablaufen. | E-Mail, Webhook |
@@ -38,15 +35,12 @@ In der folgenden Tabelle sind die verfügbaren Benachrichtigungen aufgeführt:
 | Limit von geplanter Kampagne erreicht | Benachrichtigt die Empfänger:innen, wenn das Limit für eine wiederkehrende geplante Kampagne erreicht wurde. | E-Mail, Webhook |
 | Versand von geplanter Kampagne beendet | Benachrichtigt die Empfänger:innen, wenn der Versand einer geplanten Kampagne beendet ist. | E-Mail, Webhook |
 | Analytics-Wochenbericht | Sendet jeden Montag eine Zusammenfassung der Arbeitsbereichsaktivitäten der vergangenen Woche an die Empfänger. Empfänger:innen erhalten für jeden Workspace, dem sie angehören, eine Zusammenfassung. | E-Mail |
+| Tägliches Canvas/Kampagneneingang Volumenlimits | Sendet jedes Mal eine Benachrichtigung, wenn ein Sendelimit erreicht wird. | E-Mail |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Wöchentliche analytische Berichte
 
 Braze sendet optional jeden Montag um 5 Uhr EST einen wöchentlichen Bericht per E-Mail an die von Ihnen benannten Personen in Ihrem Unternehmen. Sie können die benutzerdefinierten Ereignisse, die in den Wochenbericht aufgenommen werden sollen, unter **Dateneinstellungen** > **Benutzerdefinierte Ereignisse** auswählen.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Einstellungen verwalten** > **Benutzerdefinierte Ereignisse**.
-{% endalert %}
 
 Sie können bis zu fünf Events auswählen, die in Ihren Wochenbericht aufgenommen werden sollen:
 

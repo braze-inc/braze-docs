@@ -85,7 +85,7 @@ Wir behalten die Standardeinstellungen für das Abonnement bei, d.h. wir senden 
 Jetzt bauen wir unser Canvas auf, indem wir die in der Vorlage enthaltenen Schritte anpassen:
 
 1. Wählen Sie den Schritt „Aktionspfade“ und dann den Namen der Aktionsgruppe **Kauf erfolgt** aus.
-2. Wählen Sie für **Kauf tätigen** die Option **Einen bestimmten Kauf tätigen** und wählen Sie als Produkt **Enormes Pappteller**. Ähnlich wie bei der Ausstiegskritik werden Nutzer:innen, die dieses Produkt kaufen, den Canvas verlassen.
+2. Wählen Sie für **Kauf tätigen** die Option **Einen bestimmten Kauf tätigen** und wählen Sie als Produkt **Enormes Pappteller**. Ähnlich wie bei den Ausstiegskriterien werden Nutzer:innen, die dieses Produkt kaufen, den Canvas verlassen.
 
 ![Aktionsgruppe "Gekauft", die das Canvas verlässt, wenn der Nutzer:innen den riesigen Pappteller kauft.][5]
 

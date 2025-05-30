@@ -69,7 +69,7 @@ Al igual que las conversiones, los ingresos se rastrean técnicamente en el nive
 Por ejemplo, si un usuario completa dos pasos y luego realiza una compra, ese ingreso se atribuye al segundo componente, y a la variante que introdujo. Si entran en el Canvas pero realizan una compra antes de recibir el primer componente del Canvas, esos ingresos se atribuyen a la variante en la que entraron, pero no a ningún componente.
 {% endalert %}
 
-Además, puede ver un desglose más explícito de los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), entre los que se incluyen los siguientes:
+Además, puede ver un desglose más explícito de los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), entre los que se incluyen los siguientes:
 
 - Totales y tasas de conversión para cada evento de conversión
 - Elevación frente a la variante de control

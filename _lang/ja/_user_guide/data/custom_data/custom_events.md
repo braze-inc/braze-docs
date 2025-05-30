@@ -16,27 +16,24 @@ search_rank: 2
 ## ユースケース
 
 一般的なカスタムイベントのユースケースをいくつか示します。
+
 - [アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) を使用したカスタムイベントに基づくキャンペーンまたはキャンバスのトリガ
 - ユーザがカスタムイベントを実行した回数、イベントが最後に発生した時刻、および同様の方法でユーザをセグメント化する
 - ダッシュボード[カスタムイベント分析]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) を使用して、各イベントが発生した頻度の集計を表示する
 - [ファンネル]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) および[retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) レポートを使用した追加の分析の検索
 - [永続的なエントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)を活用し、キャンバスステップで顧客イベントのメタデータをパーソナライゼーションに使用します。
 - [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) を使用してより高度な分析を行う
-- キャンバスの次のステップに進まない場合を定義するためのキャンバス[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events)の設定
+- ユーザーがキャンバスから退出するタイミングを定義する[退出基準の]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria)設定
 
 ## カスタムイベントの管理
 
 ダッシュボードでカスタムイベントを管理、作成、またはブロックリストするには、**データ設定** > **カスタムイベント**と移動します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、**カスタムイベント**は**設定の管理**にあります。
-{% endalert %}
-
 次のアクションのカスタムイベントの横にあるメニューを選択します。
 
 ### ブロックリスト
 
-アクションメニューを使用して個別のカスタムイベントをブロックリストすることも、一括で最大10 個のイベントを選択してブロックリストすることもできます。 
+アクションメニューから個々のカスタムイベントをブロックリストにすることも、最大100のイベントを一括で選択してブロックリストにすることもできる。 
 
 カスタムイベントをブロックする場合:
 
@@ -58,15 +55,11 @@ search_rank: 2
 
 使用状況レポートには、特定のカスタムイベントを使用しているすべてのキャンバス、キャンペーン、およびセグメントが一覧表示されます。このリストには、Liquid の使用状況は含まれていません。 
 
-複数のカスタムイベントのチェックボックスを選択し、**使用状況レポートの表示**を選択することで、一度に最大10件の使用状況レポートを表示できます。
+複数のカスタムイベントのチェックボックスを選択し、**使用状況レポートの表示**を選択することで、一度に最大100件の使用状況レポートを表示できます。
 
 ## データのエクスポート
 
 カスタムイベントのリストをCSV ファイルとしてエクスポートするには、ページ上部の**Export all** ボタンを選択します。CSVファイルが生成され、ダウンロードリンクがEメールで送信される。
-
-{% alert important %}
-この機能は現在早期アクセス段階です。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
 
 ## カスタムイベントのログ記録
 
@@ -74,13 +67,13 @@ search_rank: 2
 
 {% details プラットフォーム別のドキュメントの拡張 %}
 
-- [Android と FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
+- [Android と FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -109,10 +102,6 @@ search_rank: 2
 ## 分析
 
 Braze はセグメンテーション用として、カスタムイベントが発生した回数と、各ユーザーの最終実行時刻を記録します。**Analytics**> **カスタムイベントレポート**に移動して、これらの分析を表示します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**カスタムイベント**レポートの下に**データ**があります。
-{% endalert %}
 
 ダッシュボードの**Custom Events Report** ページで、各カスタムイベントの発生頻度を集約して表示できます。時系列にオーバーレイされた灰色の線は、キャンペーンが最後に送信された時刻を示します。これは、キャンペーンがカスタムイベントアクティビティにどのような影響を与えたかを表示するのに役立ちます。
 
@@ -167,7 +156,7 @@ Braze はセグメンテーション用として、カスタムイベントが�
 
 #### トリガーメッセージ
 
-カスタムイベントプロパティを使用して、特定のキャンペーンまたはキャンバスの対象をさらに絞り込むことができます。たとえば、eコマースアプリケーションがあり、ユーザがカートを放棄したときにユーザにメッセージを送信する場合は、`cart value` というカスタムイベントプロパティを追加して、ターゲットオーディエンスを向上させ、キャンペーンのパーソナライゼーションを増やすことができます。
+カスタムイベントプロパティを使用して、特定のキャンペーンまたはキャンバスの対象をさらに絞り込むことができます。例えば、eコマース・アプリケーションを持っていて、ユーザーがカートを放棄したときにメッセージを送りたい場合、`cart value` のカスタムイベントプロパティを追加することで、ターゲットオーディエンスを改善し、キャンペーンのパーソナライゼーションを高めることができる。
 
 ![放置カードのカスタムイベントプロパティフィルタ。2つのフィルターをAND演算子で組み合わせ、カート金額が100ドルから200ドルの間にあるカードを放棄したユーザーにこのキャンペーンを送信する。][16]
 
@@ -208,11 +197,18 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 
 イベントプロパティセグメンテーションを使用して、取得されたカスタムイベントと、それらのイベントに関連付けられたプロパティに基づいて、ターゲットユーザを対象にします。これにより、購入イベントとカスタムイベントでセグメンテーションを行うときのフィルタリングオプションが増えます。
 
-カスタムイベントのイベントプロパティは、それを使用するすべてのセグメントでリアルタイムに更新されます。プロパティを管理するには、**Data Settings** > **Custom Events**に移動し、関連付けられたカスタムイベントに対して**Manage Properties**を選択します。特定のセグメントフィルターで使用されるカスタムイベントプロパティの最大遡及履歴は 30 日間です。
+カスタムイベントのイベントプロパティは、それを使用するすべてのセグメントでリアルタイムに更新されます。プロパティの管理は、「**データ設定**」＞「**カスタムイベント**」と進み、関連するカスタムイベントの**「プロパティの管理**」を選択することで行える。特定のセグメントフィルターで使用されるカスタムイベントプロパティの最大遡及履歴は 30 日間です。
 
-{% alert note %}
-イベントプロパティの新近性と頻度に基づいてセグメントを作成したい場合は、特定のカスタムイベントプロパティのセグメンテーションを有効にするように、カスタマーサクセスマネージャーに依頼してください。有効にすると、セグメンテーション時に追加のフィルターオプションにアクセスできます。
-{% endalert %}
+##### セグメンテーションのためにイベントプロパティを追加する。
+
+イベントプロパティの再帰性と頻度に基づいてセグメンテーションを作成するには、「カスタムイベントプロパティのセグメンテーションを管理する」[ユーザー権限が]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage)必要です。
+
+デフォルトでは、1つのワークスペースにつき20のセグメンテーション可能なイベント・プロパティを持つことができる。この制限を増やすには、Brazeアカウントマネージャーに連絡する。
+
+セグメンテーションのためにイベントプロパティを追加するには、以下のようにする：
+
+1. カスタムイベントに移動し、[**プロパティを管理**] を選択します。
+2. [**セグメンテーションを有効にする]** トグルを選択して、セグメンテーションのイベントプロパティを追加します。セグメンテーションの際に、追加のフィルターオプションにアクセスできる。
 
 イベントプロパティセグメンテーションフィルターには次のようなものがあります。
 

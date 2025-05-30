@@ -23,7 +23,7 @@ The following lists methods across various platforms that are used to log purcha
 - [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
@@ -192,7 +192,7 @@ Event property segmentation allows you to target users based on not just custom 
 These segmentation filters include:
 - Has done the custom event with property Y with value V X times in the last Y days
 - Has made any purchases with property Y with value V X times in the last Y days
-- Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days
+- Adds 1-30 day segmentation on all purchases, events, and properties within purchases and events
 
 Unlike with [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
 
@@ -200,46 +200,7 @@ When approved, additional properties can be added in the dashboard under **Data 
 
 ### Canvas entry properties and event properties
 
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when using `canvas_entry_properties` and `event_properties` for the original Canvas workflow.
-{% endalert %}
-
-You can use `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
-
-{% alert important %}
-You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-{% endalert %}
-
-{% tabs local %}
-{% tab Canvas Entry Properties %}
-
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
-
-{% alert important %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
-{% endalert %}
-
-For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
-
-{% raw %}
-For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
-{% endraw %}
-
-For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
-
-{% endtab %}
-
-{% tab Event Properties %}
-Event properties refer to the properties you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery and Canvases.
-
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
-
-For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
-
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### Log purchases at the order level
 

@@ -144,6 +144,18 @@ In-App-Nachricht
 
 {% api %}
 
+### Kampagnen-Analysen
+
+{% apitags %}
+Feature-Flags
+{% endapitags %}
+
+Die Performance der Nachricht über verschiedene Kanäle. Die angezeigten Metriken hängen vom ausgewählten Messaging-Kanal ab und davon, ob das [Feature-Flag-Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) ein multivariater Test ist.
+
+{% endapi %}
+
+{% api %}
+
 ### Eingereichte Auswahlen
 
 {% apitags %}
@@ -176,9 +188,17 @@ E-Mail
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.mdmetric='Confirmed Deliveries' %} Als Kund:in von Braze werden die Zustellungen auf Ihr SMS-Kontingent angerechnet. 
+{% multi_lang_include metrics.md metric='Confirmed Deliveries' %} Als Kund:in von Braze werden die Zustellungen auf Ihr SMS-Kontingent angerechnet. 
 
-<span class="calculation-line">Kalkulation: Anzahl</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Kalkulation:
+    <ul>
+        <li><i>Bestätigte Zustellungen</i>: Anzahl</li>
+        <li><i>Bestätigte Zustellungsrate</i>: (Bestätigte Zustellungen) / (Sendungen)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -344,6 +364,22 @@ Wenden Sie sich an den <a href="/docs/braze_support/">Braze Support</a>, um die 
 
 {% api %}
 
+### Zustellfehlerrate
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
+
+Wenden Sie sich an den <a href="/docs/braze_support/">Braze Support</a>, um die Gründe für die fehlgeschlagene Zustellung zu erfahren.
+
+<span class="calculation-line">Kalkulation: (Zustellungsausfälle) / (Sendungen)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Direkte Öffnungen
 
 {% apitags %}
@@ -405,6 +441,18 @@ WhatsApp
 {% multi_lang_include metrics.md metric='Failures' %} Ausfälle sind in der Anzahl der <i>Sendungen</i>, aber nicht in der Anzahl der <i>Zustellungen</i> enthalten.</td>
 
 <span class="calculation-line">Kalkulation<i>(Misserfolgsrate</i>): (Misserfolge) / (Sendungen)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Feature-Flag Experiment Performance
+
+{% apitags %}
+Feature-Flags
+{% endapitags %}
+
+Performance-Metriken für die Nachricht in einem Feature-Flag-Experiment. Die angezeigten Metriken variieren je nach Messaging-Kanal und je nachdem, ob es sich bei dem Experiment um einen multivariaten Test handelt oder nicht.
 
 {% endapi %}
 
@@ -604,6 +652,20 @@ WhatsApp
 
 {% api %}
 
+### Leserate
+
+{% apitags %}
+WhatsApp
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Read Rate' %}
+
+<span class="calculation-line">Kalkulation: (Liest mit Lesebestätigungen) / (Sendet)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### Empfangen
 
 {% apitags %}
@@ -631,7 +693,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Rejections' %} Als Kund:in von Braze werden Ablehnungen auf Ihr SMS-Kontingent angerechnet.
 
-<span class="calculation-line">Kalkulation: Anzahl</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Kalkulation:
+    <ul>
+        <li><i>Ablehnungen</i>: Anzahl</li>
+        <li><i>Ablehnungsquote</i>: (Ablehnungen) / (Sendungen)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -713,7 +783,15 @@ SMS
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
 
-<span class="calculation-line">Kalkulation: Anzahl</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Kalkulation:
+    <ul>
+        <li><i>Sendet an Carrier</i>: Anzahl</li>
+        <li><i>Sendet an Carrier Rate</i>: (Sendet an Carrier) / (Sendet)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -726,6 +804,8 @@ E-Mail
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Wenn eine E-Mail einen Soft Bounce erhält, versuchen wir es in der Regel innerhalb von 72 Stunden erneut, aber die Anzahl der Wiederholungsversuche variiert von Empfänger zu Empfänger.
+
+Soft Bounces werden zwar nicht in den Analytics Ihrer Kampagne getrackt, aber Sie können die Soft Bounces im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) überwachen. Sie können diese Nutzer:innen auch von der Versendung ausschließen oder sich die Anzahl der Soft Bounces der letzten 30 Tage mit dem [Filter Soft Bounced Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) ansehen. Im Nachrichten-Aktivitätsprotokoll können Sie auch den Grund für die Soft Bounces sehen und mögliche Diskrepanzen zwischen den "Sendungen" und "Zustellungen" Ihrer Kampagnen nachvollziehen.
 
 {% endapi %}
 
@@ -783,7 +863,7 @@ In-App-Nachricht
 E-Mail, Content-Cards, SMS, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} Bei LINE wird dies getrackt, nachdem eine Mindestschwelle von 20 Nachrichten pro Tag erreicht wurde. Bei AMP-E-Mails ist dies die Gesamtzahl der Klicks in der HTML- und der Klartextversion.
+{% multi_lang_include metrics.md metric='Total Clicks' %} Bei LINE wird dies getrackt, nachdem eine Mindestschwelle von 20 Nachrichten pro Tag erreicht wurde. AMP E-Mails enthalten Klicks, die sowohl in der HTML- als auch in der Klartextversion aufgezeichnet werden. Diese Zahl kann durch Anti-Spam-Tools künstlich aufgebläht werden. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -806,9 +886,17 @@ E-Mail, Content-Cards, SMS, LINE
 Content-Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Dismissals' %}
+{% multi_lang_include metrics.md metric='Total Dismissals' %} Wenn ein Nutzer:innen zwei verschiedene Karten aus der gleichen Kampagne erhält und beide ablehnt, erhöht sich diese Zahl um zwei. Die Wiederholbarkeit erlaubt es Ihnen, die _Gesamtzahl der Karten-Ausblendungen_ jedes Mal zu erhöhen, wenn ein Nutzer:innen eine Karte erhält; jede Karte ist eine andere Nachricht.
 
-<span class="calculation-line">Kalkulation: Anzahl</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Kalkulation:
+    <ul>
+        <li><i>Entlassungen insgesamt:</i> Anzahl</li>
+        <li><i>Gesamtentlassungsrate:</i> Entlassungen insgesamt / Impressionen insgesamt</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -871,7 +959,7 @@ Content-Cards, E-Mail, In-App-Messaging, Web-Push, iOS-Push, Android-Push, Webho
 E-Mail, Content-Cards, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} Dies wird über einen Zeitraum von sieben Tagen für E-Mails getrackt. Dazu gehören auch Klicks auf die von Braze zur Verfügung gestellten Abmeldelinks. Bei LINE wird dies getrackt, nachdem eine Mindestschwelle von 20 Nachrichten pro Tag erreicht wurde.
+{% multi_lang_include metrics.md metric='Unique Clicks' %} Dies beinhaltet Klicks auf von Braze bereitgestellte Links zum Abmelden. Bei E-Mails wird dies über einen Zeitraum von sieben Tagen getrackt. Bei LINE wird dies getrackt, nachdem eine Mindestschwelle von 20 Nachrichten pro Tag erreicht wurde.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -908,7 +996,7 @@ Content-Cards
 In-App-Nachricht, Content-Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} Für In-App-Nachrichten können die eindeutigen Impressionen nach 24 Stunden wieder erhöht werden, wenn die Wiederzulassung aktiviert ist und ein:e Nutzer:in die Aktion triggert. Wenn die Wiedererkennbarkeit eingeschaltet ist, sind <i>Eindeutige Impressionen</i> = <i>Eindeutige Empfänger:innen</i>. <br><br>Bei Content-Cards sollte die Anzahl nicht erhöht werden, wenn ein Nutzer:innen eine Karte zum zweiten Mal ansieht. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} Für In-App-Nachrichten können die eindeutigen Impressionen nach 24 Stunden wieder erhöht werden, wenn die Wiederzulassung aktiviert ist und ein:e Nutzer:in die Aktion triggert. Wenn die Wiederwählbarkeit eingeschaltet ist, sind <i>Eindeutige Impressionen</i> = <i>Eindeutige Empfänger:innen</i>. <br><br>Bei Content-Cards sollte die Anzahl nicht erhöht werden, wenn ein Nutzer:innen eine Karte zum zweiten Mal ansieht. 
 
 <span class="calculation-line">Kalkulation: Anzahl</span>
 

@@ -61,7 +61,7 @@ You can customize in-app message handling by implementing this delegate method a
 | Objective-C: `ABKDiscardInAppMessage`<br>Swift: `discardInAppMessage`| The message will be discarded and will not be displayed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely.
+You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt out of the Braze in-app message display logic and UI entirely.
 
 Check out our [sample application](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) for an implementation example.
 

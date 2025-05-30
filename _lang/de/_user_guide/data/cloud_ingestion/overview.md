@@ -34,7 +34,7 @@ Cloud Data Ingestion kann Daten aus den folgenden Quellen mit Braze synchronisie
 ## Unterstützte Datentypen 
 
 Cloud Data Ingestion unterstützt die folgenden Datentypen: 
-- Nutzer:innen-Attribute, einschließlich: 
+- Nutzer:innen-Attribute, einschließlich:
    - Verschachtelte angepasste Attribute
    - Arrays von Objekten
    - Abo-Status
@@ -386,10 +386,10 @@ Da Anfrage 1 zuerst auftritt, werden die Attribute des Nutzers:innen wie folgt a
 - Größe: "Groß"
 
 Bei Anfrage 2 beginnt Braze jedoch mit den ursprünglichen Attributwerten ("Grün" und "Groß") und aktualisiert dann die Attribute des Nutzers:innen wie folgt:
-- Farbe: "Grün"
+- Farbe: "Rot"
 - Größe: "Mittel"
 
-Wenn die Anfragen abgeschlossen sind, überschreibt Anfrage 2 das Update von Anfrage 1. Aus diesem Grund sollten Sie Ihre Updates zeitlich staffeln, um zu verhindern, dass Anfragen überschrieben werden.
+Wenn die Anfragen abgeschlossen sind, überschreibt Anfrage 2 das Update von Anfrage 1\. Daher ist es am besten, wenn Sie Ihre Updates zeitlich staffeln, um zu verhindern, dass Anfragen überschrieben werden.
 
 ### Erstellen eines JSON-Strings aus einer anderen Tabelle
 
@@ -552,6 +552,9 @@ Sie können verschachtelte angepasste Attribute in die Payload-Spalte für eine 
 {% endtab %}
 {% tab Event %}
 Um Ereignisse zu synchronisieren, ist ein Ereignisname erforderlich. Das Feld `time` sollte als ISO 8601 String oder im Format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formatiert sein. Wenn das Feld `time` nicht vorhanden ist, wird der Wert in Spalte `UPDATED_AT` als Ereigniszeitpunkt verwendet. Andere Felder wie `app_id` und `properties` sind optional. 
+
+Beachten Sie, dass Sie nur ein Ereignis pro Zeile synchronisieren können.
+
 ```json
 {
     "app_id" : "your-app-id",
@@ -566,7 +569,9 @@ Um Ereignisse zu synchronisieren, ist ein Ereignisname erforderlich. Das Feld `t
 
 {% endtab %}
 {% tab Käufe %}
-Für die Synchronisierung von Kauf-Events sind der Ereignisname, `product_id`, `currency` und `price` erforderlich. Das Feld `time`, das optional ist, sollte als ISO 8601 String oder im Format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formatiert sein. Wenn das Feld `time` nicht vorhanden ist, wird der Wert in Spalte `UPDATED_AT` als Ereigniszeitpunkt verwendet. Andere Felder, einschließlich `app_id`, `quantity` und `properties` sind optional. 
+Um Kauf-Events zu synchronisieren, sind `product_id`, `currency` und `price` erforderlich. Das Feld `time`, das optional ist, sollte als ISO 8601 String oder im Format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formatiert sein. Wenn das Feld `time` nicht vorhanden ist, wird der Wert in Spalte `UPDATED_AT` als Ereigniszeitpunkt verwendet. Andere Felder, einschließlich `app_id`, `quantity` und `properties` sind optional.
+
+Beachten Sie, dass Sie nur ein Kauf-Ereignis pro Zeile synchronisieren können.
 
 ```json
 {

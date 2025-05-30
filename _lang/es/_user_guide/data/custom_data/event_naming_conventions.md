@@ -31,3 +31,12 @@ La estructura de nombres más común es `group_noun_action`. Los eventos deben i
 ### Propiedades
 
 Etiquete un evento y luego identifique las diferencias mediante el uso de propiedades. Esto es útil para eventos que son intrínsecamente iguales pero tienen pequeñas diferencias, como los canales de una campaña. También podemos ver fácilmente cómo fluyen los usuarios a través de los eventos. Consulte el [objeto de propiedades de eventos]({{site.baseurl}}/api/objects_filters/event_object/#event-properties-object) para ver un ejemplo y contexto adicional.
+
+## Ejemplos
+
+Supongamos que formas parte de una empresa de comercio electrónico y te interesa hacer un seguimiento de cuándo los clientes se han registrado en tu aplicación y cuándo se han suscrito a tu boletín de noticias. Aquí tienes ejemplos de nombres de eventos eficaces:
+
+- `user_signup`
+- `newsletter_sunscribed`
+
+Estos dos nombres de evento indican claramente el evento que están siguiendo. A medida que crees más eventos personalizados, asegúrate de que tus convenciones de nomenclatura sean comprensibles. Por ejemplo, evita utilizar nombres de eventos como `signup_event_1`, ya que carece de claridad y no transmite lo que el evento está siguiendo, en comparación con `user_signup`.

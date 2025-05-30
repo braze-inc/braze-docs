@@ -16,7 +16,7 @@ table td {
 
 # SQL テーブルリファレンス
 
-このページは、[クエリビルダや]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) [SQL セグメントエクステンションの]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)生成時に照会可能なテーブルと列の参照です。 
+このページは、[クエリビルダや]({{site.baseurl}}/user_guide/analytics/query_builder/) [SQL セグメントエクステンションの]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)生成時に照会可能なテーブルと列の参照です。 
 
 ## 目次
 
