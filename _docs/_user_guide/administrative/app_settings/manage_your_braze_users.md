@@ -4,10 +4,10 @@ article_title: Company Users
 page_order: 23
 layout: dev_guide
 guide_top_header: "Company Users"
-guide_top_text: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case-by-case basis. Braze can help you do that by creating teams and managing user permissions and company-wide settings."
+guide_top_text: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case-by-case basis. Braze can help you do that by creating Teams and managing user permissions and company-wide settings."
 
 page_type: landing
-description: "This landing page lists articles on managing your Braze users, such as adding and deleting users, setting user permissions, creating teams, and managing company settings."
+description: "This landing page lists articles on managing your Braze users, such as adding and deleting users, setting user permissions, creating Teams, and managing company settings."
 
 guide_featured_title: "Section articles"
 guide_featured_list:
@@ -22,6 +22,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 ---
 
-## What are the differences among teams, permission sets, and roles? 
+## What are the differences among Teams, permission sets, and roles? 
 
 {% multi_lang_include permissions.md content="Differences" %}

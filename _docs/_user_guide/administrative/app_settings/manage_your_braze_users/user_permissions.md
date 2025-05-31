@@ -42,7 +42,7 @@ Roles allow for more structure by bundling together your individual custom permi
 {% endtab %}
 {% endtabs %}
 
-## How do permission sets and roles differ from teams?
+## How do permission sets and roles differ from Teams?
 
 {% multi_lang_include permissions.md content="Differences" %}
 
