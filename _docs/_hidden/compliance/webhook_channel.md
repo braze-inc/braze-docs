@@ -30,3 +30,7 @@ Braze disclaims all liability with regards to Customer’s use of webhooks to tr
 ## General terms
 
 Without limiting the generality of any Customer obligations under the Agreement, and solely for the avoidance of doubt, Customer shall be solely responsible for obtaining all necessary rights, consents, and authorizations and providing legally adequate privacy notices in connection with its use of this Channel and obtaining all legally required consents and authorizations for sending, or receiving as applicable, Messages through this Channel.
+
+{% alert note %}
+This page has been prepared and is incorporated into the customer’s agreement in the English language, which shall govern in all respects. Any translations of this page are for convenience and reference purposes only.
+{% endalert %}
