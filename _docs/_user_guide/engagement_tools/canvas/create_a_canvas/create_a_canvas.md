@@ -69,7 +69,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
   {% endtab %}
 {% endtabs %}
 
-### Step 2a: Start with your Canvas basics
+### Step 2.1: Start with your Canvas basics
 
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). You can also assign conversion events for the Canvas.
 
@@ -87,7 +87,7 @@ Choose your conversion event type, then select the conversions to record. These 
 
 If your Canvas has multiple variants or a control group, Braze will use this conversion event to determine the best variation for achieving this conversion goal. Using the same logic, you can create multiple conversion events.
 
-### Step 2b: Determine your Canvas entry schedule
+### Step 2.2: Determine your Canvas entry schedule
 
 You can choose one of three ways in which users can enter your Canvas. 
 
@@ -130,7 +130,7 @@ Should the window of re-eligibility be less than the maximum duration of the Can
 If a user re-enters the Canvas, reaches the same component as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
 {% enddetails %}
 
-### Step 2c: Set your target entry audience
+### Step 2.3: Set your target entry audience
 
 You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
 
@@ -175,7 +175,7 @@ To view additional statistics, such as the average lifetime revenue for targeted
 
 ![Target Population breakdown with option to calculate exact statistics.][2]
 
-### Step 2d: Select your send settings
+### Step 2.4: Select your send settings
 
 Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
@@ -197,7 +197,7 @@ If desired, specify Quiet Hours (the time during which your messages will not be
 
 ![The "Quiet Hours" page displaying a checkbox for enabling quiet hours. If enabled, the start time, end time, and fallback behavior can be set.][50]
 
-## Step 3: Build your Canvas
+## Step 2.5: Build your Canvas
 
 {% alert tip %}
 Save time and streamline your Canvas creation by using [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs.
@@ -336,7 +336,6 @@ You can also save your Canvas as a draft if you need to come back to it.
 {% alert tip %}
 Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
-
 
 [1]: {% image_buster /assets/img_archive/canvas_dropdown.png %}
 [2]: {% image_buster /assets/img_archive/canvas_exact_stats.png %}
