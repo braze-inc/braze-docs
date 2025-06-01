@@ -1,5 +1,5 @@
 # Blocks merging of pull requests based on certain conditions, such as a 'status: do not merge' label.
-name: "Block Merging"
+name: "Block Merge"
 
 on:
   pull_request:    
