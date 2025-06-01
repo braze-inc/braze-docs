@@ -6,7 +6,7 @@
 
 The use of both runtime configuration and `braze.xml` configuration is still possible. Runtime configured values will always take precedence over the same value in the `braze.xml`. If the Braze SDK can find all values in the runtime configuration, then the `braze.xml` is no longer needed and can be removed. 
 
-### Example configuration
+### Example
 
 The following configuration uses a [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) that is then built and passed to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). The following example uses a subset of the runtime configuration options available, see our [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) for a complete list of options.
 
@@ -42,6 +42,146 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 Another example can be found in our [Hello Braze sample app](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java).
+
+## Using delayed initialization
+
+{% alert note %}
+While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass data to the Braze servers.
+{% endalert %}
+
+### Prerequisites
+
+To use this feature, [Android Braze SDK version XXXX](LINK) or later is required.
+
+### Step 1: Enable in your project
+
+Delayed initialization is disabled by default. To enable, use one of the following options:
+
+{% tabs %}
+{% tab Braze XML file %}
+In your project's `braze.xml` file, set `com_braze_enable_delayed_initialization` to `true`.
+
+```xml
+<bool name="com_braze_enable_delayed_initialization">true</bool>
+```
+{% endtab %}
+
+{% tab At runtime %}
+To enable delayed initialization at runtime, use the following method.
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Configure push analytics (optional)
+
+When delayed initialization is enabled, push analytics are queued by default. However, you can choose to explicitly queue or drop push analytics instead.
+
+#### Explicitly queue
+
+To explicitly queue push analytics, choose one of the following options:
+
+{% tabs %}
+{% tab Braze XML file %}
+In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavior` to `QUEUE`:
+
+```xml
+<string name="com_braze_delayed_initialization_analytics_behavior">QUEUE</string>
+```
+{% endtab %}
+
+{% tab At runtime %}
+Add `QUEUE` to your [`Braze.enableDelayedInitialization()`](LINK) method:
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### Drop
+
+To drop push analytics, choose one of the following options:
+
+{% tabs %}
+{% tab Braze XML file %}
+In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavior` to `DROP`: 
+
+```xml
+<string name="com_braze_delayed_initialization_analytics_behavior">DROP</string>
+```
+{% endtab %}
+
+{% tab At runtime %}
+Add `DROP` to [`Braze.enableDelayedInitialization()`](LINK) method:
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+### Step 3: Initialize the SDK
+
+After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](LINK) method to initialize the SDK.
+
+{% tabs local %}
+{% tab JAVA %}
+
+```java
+Braze.disableDelayedInitialization(context);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.disableDelayedInitialization(context)
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Using Google Tag Manager
 
