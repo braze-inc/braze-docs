@@ -23,6 +23,7 @@ The following table describes how you can use each editor block type.
 | Title | Enters a title text into the message. |
 | Paragraph | Enters a paragraph text into the message. |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
+| Radio Button | Adds a list of options from which users can select one. When submitted, the user profile logs the associated custom attribute. |
 | Image | Inserts an image from the media library. |
 | Link | Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | Spacer | Adds space or padding between other blocks. |

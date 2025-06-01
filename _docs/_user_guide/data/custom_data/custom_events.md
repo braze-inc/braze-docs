@@ -142,7 +142,6 @@ Property values can be any of the following data types:
 | Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
-| Objects | Objects will be ingested as strings. |
 | Nested objects | Objects that are inside of other objects. For more, see the section in this article on [Nested objects](#nested-objects).
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

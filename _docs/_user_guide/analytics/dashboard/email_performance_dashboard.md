@@ -97,7 +97,7 @@ To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the SMS performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+The calculations for different metrics in the SMS performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 

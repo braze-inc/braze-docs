@@ -11,7 +11,7 @@ description: "This landing page explains and lists the Braze export endpoints."
 page_type: landing
 
 guide_top_header: "Export Endpoints"
-guide_top_text: "With this collection of endpoints, you can access and export various levels of details on your KPIs, News Feed cards, app sessions, users, segments, campaigns, and Canvases. <br> <br> Make sure you know your <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze instance</a>, <a href='/docs/api/api_key/' target='_blank'>API key</a>, and <a href='/docs/api/identifier_types/' target='_blank'>API identifier</a> when building out your parameters and request bodies."
+guide_top_text: "With this collection of endpoints, you can access and export various levels of details on your KPIs, app sessions, users, segments, campaigns, and Canvases. <br> <br> Make sure you know your <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze instance</a>, <a href='/docs/api/api_key/' target='_blank'>API key</a>, and <a href='/docs/api/identifier_types/' target='_blank'>API identifier</a> when building out your parameters and request bodies."
 
 guide_featured_title: "Export campaign endpoints"
 guide_featured_list:
@@ -69,18 +69,6 @@ guide_menu_list3:
   - name: "GET: KPIs for Uninstalls by Date"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     image: /assets/img/braze_icons/target-04.svg
-
-guide_menu_title4: "Export News Feed endpoints"
-guide_menu_list4:
-  - name: "GET: News Feed Card Engagement Stats"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET: News Feed Card Details"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET: News Feed Card List"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:

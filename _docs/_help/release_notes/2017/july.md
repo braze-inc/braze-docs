@@ -47,6 +47,6 @@ We updated the [Android preview][51] to reflect more recent versions of Android 
 [54]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [56]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[57]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
+[57]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices
 [58]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

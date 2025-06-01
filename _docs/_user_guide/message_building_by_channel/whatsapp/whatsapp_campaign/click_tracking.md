@@ -101,7 +101,7 @@ If a draft is created within an active Canvas, a shortened URL won’t be genera
 
 ## Reporting
 
-When click tracking is turned on or used with supported templates, the WhatsApp performance table includes the column **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on WhatsApp metrics, refer to [WhatsApp message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics#message-performance).
+When click tracking is turned on or used with supported templates, the WhatsApp performance table includes the column **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on WhatsApp metrics, refer to [WhatsApp message performance]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 ![WhatsApp Message Canvas step.][6]{: style="max-width:30%;"}
 

@@ -19,7 +19,7 @@ channel:
 > In addition to changing the user's subscription state and sending auto-responses based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter actions based on users who have been sent or have responded to SMS, MMS, and RCS campaigns, or further engage with users who have clicked shorted URLs.
 
 {% alert tip %}
-To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
+To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/) article.
 {% endalert %}  
 
 ## Retargeting options
@@ -30,7 +30,7 @@ When building audiences with user retargeting, you may wish to include or exclud
 
 ### Filter users by SMS, MMS, and RCS
 
-Users can be filtered by when they last received an SMS, MMS, or RCS or if they have received an SMS, MMS, or RCS from a specific campaign. Filters can be set in the **Target Users** step of the campaign builder. 
+Users can be filtered by when they last received an SMS, MMS, or RCS or if they have received an SMS, MMS, or RCS from a specific campaign. Filters can be set in the **Target Audiences** step of the campaign builder. 
 
 **Filter by last received SMS/MMS/RCS**<br>
 ![Segmentation filter Last Received SMS after December 8, 2020.][2]
@@ -47,7 +47,7 @@ To trigger messages as users receive SMS, MMS, or RCS messages from a specific c
 
 ### Filter by advanced tracking links
 
-Retarget users who have clicked campaigns with [advanced tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/).
+Retarget users who have clicked campaigns with [advanced tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/).
 Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
 
 **Retarget users who have clicked a specific SMS, MMS, or RCS Campaign**

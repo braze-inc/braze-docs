@@ -3,6 +3,7 @@ nav_title: "Best Practices"
 article_title: Best Practices for SMS, MMS, and RCS 
 page_order: 15
 description: "This reference article covers best practices for SMS/MMS."
+alias: /sms_mms_rcs_best_practices/
 page_type: reference
 channel:
   - SMS
@@ -22,11 +23,11 @@ Complying with recipient requests to opt-out of communications is required by la
 Under their subscription agreements with us, our customers are solely responsible  for their compliance with applicable law in their use of our services. Accordingly, we strongly recommend that customers pay close attention to correctly configuring their SMS set-up, and that they test those set-ups thoroughly, take measures to monitor opt-out compliance, and act promptly should they identify instances of non-compliance with opt-out requests.
 
 When setting up SMS and MMS in Braze to manage opt-ins and opt-outs, refer to the following list of resources:
-* [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/): Subscription groups and opt-in/out methods and statuses.
+* [SMS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/): Subscription groups and opt-in/out methods and statuses.
 * [Subscription Group REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups): How to process opt-ins and outs they receive from a source other than a direct response to a message.
-* [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords): Explanations for how Braze approaches keyword processing and management.
-* [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/): Requires users to explicitly confirm their opt-in intent before they can receive SMS messages. SMS double opt-in is a requirement for some countries, so Braze recommends configuring this.
-* [SMS message sending]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
+* [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/): Explanations for how Braze approaches keyword processing and management.
+* [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/): Requires users to explicitly confirm their opt-in intent before they can receive SMS messages. SMS double opt-in is a requirement for some countries, so Braze recommends configuring this.
+* [SMS message sending]({{site.baseurl}}/sending_phone_numbers/): Fundamentals of SMS sending at Braze, including the importance of subscription groups, requirements for SMS segments and message bodies, and more.
 
 ### Considerations
 

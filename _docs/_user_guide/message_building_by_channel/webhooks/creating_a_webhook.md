@@ -65,7 +65,7 @@ The **Compose** tab consists of the following fields:
 - HTTP method
 - Request body
 
-![The "Compose" tab with an example Facebook Messenger webhook template.]({% image_buster /assets/img_archive/webhook_compose.png %})
+![The "Compose" tab with an example webhook template.]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### Language {#internationalization}
 

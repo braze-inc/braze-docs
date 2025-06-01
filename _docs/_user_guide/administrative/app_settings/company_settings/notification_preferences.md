@@ -29,7 +29,6 @@ The following table describes available notifications and which channels are use
 | Campaign/Canvas Updated | Notifies recipients when an active campaign or Canvas is updated or deactivated, as well as when an inactive campaign or Canvas is reactivated or drafts are launched. | Email |
 | Campaign/Canvas Volume Limit Met | Notifies recipients when a campaign or Canvas meets its volume limit. | Email | 
 | Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
-| News Feed Card Published/Live | Notifies recipients when News Feed cards are scheduled or published. | Email, Webhook |
 | Push Credential Errors | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Email, Webhook |
 | Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempt to send but have no eligible users to send to. | Email, Webhook |
 | Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |

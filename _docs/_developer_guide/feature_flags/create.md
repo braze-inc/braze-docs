@@ -277,7 +277,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 To access the properties of a feature flag, use one of the following methods depending on the type you defined in the dashboard.
 
-If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
+If a property you referenced does not exist, these methods will return `null`.
 
 {% tabs %}
 {% tab JavaScript %}
@@ -825,7 +825,7 @@ To view a feature flag's changelog, open a feature flag and select **Changelog**
 
 ![A feature flag's "Edit" page, with the "Changelog" button highlighted.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
-Here, you can review when a changed happened, who made the change, which category it belongs to, and more.
+Here, you can review when a change happened, who made the change, which category it belongs to, and more.
 
 ![The changelog of the selected feature flag.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 

@@ -90,7 +90,6 @@ Didn't find what you were looking for? Check out these additional best practices
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/
 [4]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/
-
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
 [8]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification

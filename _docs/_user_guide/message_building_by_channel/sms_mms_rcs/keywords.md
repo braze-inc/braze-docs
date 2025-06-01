@@ -12,19 +12,19 @@ description: "This landing page includes articles relating to SMS keyword proces
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Default Opt-In/Opt-Out
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/
   image: /assets/img/braze_icons/message-dots-circle.svg
 - name: Double Opt-In
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Custom Keyword Handing
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Handling Unknown Phone Numbers
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/unknown_phone_numbers/
   image: /assets/img/braze_icons/phone.svg
 - name: Fuzzy Opt-Out
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/keywords/fuzzy_opt_out/
   image: /assets/img/braze_icons/hand.svg
 
 ---

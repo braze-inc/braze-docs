@@ -4,7 +4,7 @@ article_title: SAML & Single Sign-On
 page_order: 5
 layout: dev_guide
 guide_top_header: "SAML and Single Sign-On"
-guide_top_text: "Single Sign-On (SSO) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be used to access different applications, including Braze. <br> <br> Braze supports SAML SSO, which supports the latest Security Assertion Markup Language (SAML 2.0) industry standards, and also supports Azure Active Directory, Okta, and OneLogin."
+guide_top_text: "Single Sign-On (SSO) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be used to access different applications, including Braze. <br> <br> Braze supports SAML SSO, which supports the latest Security Assertion Markup Language (SAML 2.0) industry standards, and also supports Microsoft Entra ID (formerly Azure Active Directory), Okta, and OneLogin."
 
 page_type: landing
 description: "This landing page is home to articles on single sign-on (SSO). Here, you can find help setting up supported identity providers, or performing a custom setup."
