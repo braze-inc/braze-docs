@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "'do not merge' label was found. Merging is blocked until it's removed."
+          echo "'do not merge' label found. Merging is blocked until removed."
           exit 1
