@@ -9,6 +9,8 @@ description: "Learn how to..."
 
 > Learn how to integrate OfferFit into Braze, so you can work with OfferFit's AI Expert Services team to [build uses cases]({{site.baseurl}}/developer_guide/offerfit/building_use_cases), so you can leverage AI to make 1:1 decisions that maximize any business metric.
 
+{% multi_lang_include offerfit/alert_multi_platform_support.md %}
+
 ## Prerequisites
 
 Before you can integrate OfferFit by Braze, you'll need an active OfferFit license. Interested in learning more? [Book a call](https://offerfit.ai/book-now)

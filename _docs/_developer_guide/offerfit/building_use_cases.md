@@ -9,6 +9,8 @@ description: "Learn how to..."
 
 > Learn how to build an OfferFit use case, so you can automate personalized experimentation and optimize outcomes like conversions, retention, or revenue&#8212;without manual A/B testing.
 
+{% multi_lang_include offerfit/alert_multi_platform_support.md %}
+
 ## About use cases
 
 A use case is a custom configuration for OfferFit’s AI decisioning engine that's tailor-made to meet a specific business goal.
@@ -43,8 +45,6 @@ You'll complete the following steps together to build a custom use case that's r
 
 ### Step 2: Design your use case
 
-<!-- Content in this step largely unedited. Will be tackled monday. -->
-
 Alongside OfferFit's AI Expert Services team, you'll define:
 
 - a target audience, 
@@ -54,15 +54,19 @@ Alongside OfferFit's AI Expert Services team, you'll define:
 
 With the design in hand, the team will work with you to identify and complete any additional integration requirements.
 
-### Step 3: Configure your delivery platform
+### Step 3: Set up your delivery platform
 
-<!-- Content in this step largely unedited. Will be tackled monday. -->
+Next, the AI Expert Service team will help you set up your marketing automation platform. While OfferFit works best with Braze, a variety of other platforms are supported&#8212;contact your AI Expert Service team for additional resources.
 
-Next, you'll create an API-triggered Braze campaign or Canvas and create campaign assets (for example, HTML templates, images).
+{% tabs local %}
+{% tab Braze %}
+To set up Braze:
 
-1. Create a [campaign]({{site.baseurl}}//user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=api-triggered%20delivery#step-2b-determine-your-canvas-entry-schedule) in Braze. OfferFit will use this campaign or Canvas to send 1:1 personalized activation events to the right users from your defined audience. 
-2. Do not include a Braze [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group) in your campaign or Canvas. This allows the OfferFit control group to be the only active one.
-3. Depending on your dimensions, you can configure Liquid tags in your creative content to dynamically populate your campaign or Canvas with OfferFit recommendations. OfferFit will pass customer-specific content to the Liquid tags in your templates via the Braze API.
+1. Create a [campaign]({{site.baseurl}}//user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=api-triggered%20delivery#step-2b-determine-your-canvas-entry-schedule). OfferFit will use this delivery method to send 1:1 personalized activation events to the users in your defined audience.
+2. Be sure you don't include a Braze [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group), so OfferFit can be the dedicated control group instead.
+3. Depending on your dimensions, you can configure Liquid tags in your creative content to dynamically populate your messaging with OfferFit recommendations. OfferFit will pass customer-specific content to the Liquid tags in your templates using the Braze API.
+{% endtab %}
+{% endtabs %}
 
 ### Step 4: Launch and monitor
 
