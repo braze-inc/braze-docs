@@ -36,6 +36,16 @@ Building a good use case is consists of:
 - Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Selecting the options for each dimension, such as email vs. SMS or daily vs. weekly frequency.
 
+## About API key permissions
+
+During your OfferFit integration, you'll create a Braze API key with specific permissions that will define your integration's capabilities. Refer to the following table to learn more about each permission.
+
+{% alert tip %}
+This information can also be found on the [OfferFit integration]({{site.baseurl}}/developer_guide/offerfit/integration) page.
+{% endalert %}
+
+{% multi_lang_include offerfit/api-key-permissions.md %}
+
 ## Next steps
 
 Now that you know more about OfferFit by Braze, you're ready for next steps:
