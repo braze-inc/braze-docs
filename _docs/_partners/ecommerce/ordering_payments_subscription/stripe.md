@@ -64,6 +64,14 @@ This return value must adhere to Braze’s `/users/track` request body format:
     - Subscription group updates
     - Email address as an identifier
 
+### Step 4: Publish your Stripe webhook
+
+After writing your Data Transformation, select **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation.
+
+After activating, custom event data will be logged to a user's profile when they complete the event.
+
+![A Stripe custom event "Charge Succeeded" in a Braze user profile.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
+
 ## Example Stripe webhook payload {#example}
 
 ```json
@@ -298,15 +306,6 @@ return brazecall;
 
 {% endtab %}
 {% endtabs %}
-
-
-### Step 4: Publish your Stripe webhook
-
-After writing your Data Transformation, select **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation.
-
-After activating, custom event data will be logged to a user's profile when they complete the event.
-
-![A Stripe custom event "Charge Succeeded" in a Braze user profile.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
 
 ## Monitoring and troubleshooting
 
