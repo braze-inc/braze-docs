@@ -174,8 +174,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/wyng/
-- name: OfferFit
-  url: /docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
