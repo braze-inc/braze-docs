@@ -92,7 +92,7 @@ For a full list of request parameters, go to [request parameters]({{site.baseurl
 
 Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
 
-This preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
+This preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) will also update to reflect the rendered personalization and the shortened URL. 
 
 Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that will be dispatched in your message. If the campaign or Canvas isn't saved before a test send, the test send will include a placeholder URL.
 
@@ -124,7 +124,7 @@ For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/mes
 
 ### Do I know which individual users are clicking on a URL?
 
-Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
+Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
 {% alert note %}
 At this time, RCS Click events are not available through Currents.

@@ -20,9 +20,9 @@ You can include any link in any SMS campaign you would like. However, there are 
 
 - Links may take up much of the 160 character limit for SMS. If you include a link and text, it may result in two SMS messages instead of just one.
 - Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block or deny the message, as they may be suspicious of the link redirect.
-- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) would be the most reliable number type for including links.
+- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/) would be the most reliable number type for including links.
 
-Braze also has its own link-shortening feature that will shorten links and provide click-through analytics automatically. Refer to [Link Shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
+Braze also has its own link-shortening feature that will shorten links and provide click-through analytics automatically. Refer to [Link Shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) for more information.
 
 ### Do test text messages count toward limits?
 
@@ -51,7 +51,7 @@ While we can't promise that you won't occasionally have an overage, you could fo
 2. Ensure you (the brand) have a relationship with the customer.
 3. Make sure the content is relevant to the relationship and what the user has opted-in to receive.
 
-For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
+For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/).
 
 ### How do you create logic for selective opt-ins to SMS so users are in the right subscription group?
 
@@ -127,4 +127,4 @@ In other countries:
 
 ### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
 
-If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling), they will not receive the response for that keyword. 
+If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), they will not receive the response for that keyword. 
