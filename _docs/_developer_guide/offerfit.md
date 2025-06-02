@@ -2,7 +2,7 @@
 page_order: 2.5
 nav_title: OfferFit by Braze
 article_title: OfferFit by Braze
-description: "Learn how you can leverage OfferFit with Braze..."
+description: "Get started with OfferFit by Braze to make 1:1 AI decisions that maximize any business metric!"
 ---
 
 # Getting Started with OfferFit by Braze
