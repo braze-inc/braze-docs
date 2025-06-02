@@ -27,6 +27,8 @@ Our AI Expert Services team will tailor OfferFit to the specific needs of your b
 
 ## About use cases
 
+### How it works
+
 A use case is a custom configuration for OfferFit’s AI decisioning engine that's tailor-made to meet a specific business goal.
 
 For example, you could build a repeat purchase use case to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while OfferFit runs daily experiments, automatically testing different combinations of product offers, message timing, and frequency for each customer. Over time, OfferFit learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
@@ -37,6 +39,12 @@ Building a good use case is consists of:
 - Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Selecting the options for each dimension, such as email vs. SMS or daily vs. weekly frequency.
 
+### Sample use cases
+
+SENTENCE
+
+{% multi_lang_include offerfit/sample_use_cases.md %}
+
 ## About API key permissions
 
 During your OfferFit integration, you'll create a Braze API key with specific permissions that will define your integration's capabilities. Refer to the following table to learn more about each permission.
@@ -45,7 +53,7 @@ During your OfferFit integration, you'll create a Braze API key with specific pe
 This information can also be found on the [OfferFit integration]({{site.baseurl}}/developer_guide/offerfit/integration) page.
 {% endalert %}
 
-{% multi_lang_include offerfit/api-key-permissions.md %}
+{% multi_lang_include offerfit/api_key_permissions.md %}
 
 ## Next steps
 

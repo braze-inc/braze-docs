@@ -23,7 +23,7 @@ You'll need to get the endpoint URL associated with your specific Braze instance
 
 In Braze, go to **Settings** > **API Keys**, then create a new key with the following permissions:
 
-{% multi_lang_include offerfit/api-key-permissions.md %}
+{% multi_lang_include offerfit/api_key_permissions.md %}
 
 ### Step 3: Contact OfferFit
 
