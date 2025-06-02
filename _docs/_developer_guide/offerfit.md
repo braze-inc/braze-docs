@@ -19,7 +19,7 @@ Our AI Expert Services team will tailor OfferFit to the specific needs of your b
 
 ## Key features
 
-- **Keep your tech stack, but add in a brain:** OfferFit plugs in as a decisioning layer between your data systems and your marketing automation platform.
+- **Keep your tech stack, but add a brain:** OfferFit plugs in as a decisioning layer between your data systems and your marketing automation platform.
 - **Pick winners for people, not segments:** Use all your first-party data to make the optimal 1:1 decision for each individual.
 - **Personalize everything:** AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer
 - **Maximize any metric:** Clicks aren’t dollars. Use OfferFit to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
