@@ -14,13 +14,13 @@ To build a good use case, you'll:
 
 - Choose a success metric for OfferFit to optimize for, such as revenue, conversions, or ARPU.
 - Define which dimensions to test, such as offer, subject line, creative, channel, or send time.
-- Select the options for each dimension, such as email vs. SMS or daily vs. weekly frequency.
+- Select the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
 ![Example diagram of an OfferFit use case for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Sample use cases
 
-Here's some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
+Here are some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
 {% multi_lang_include offerfit/sample_use_cases.md %}
 

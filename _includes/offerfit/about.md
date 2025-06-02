@@ -26,15 +26,15 @@ A use case is a custom configuration for OfferFit’s AI decisioning engine that
 
 For example, you could build a repeat purchase use case to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while OfferFit runs daily experiments, automatically testing different combinations of product offers, message timing, and frequency for each customer. Over time, OfferFit learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
 
-Building a good use case is consists of:
+Building a good use case consists of:
 
 - Choosing a success metric for OfferFit to optimize for, such as revenue, conversions, or ARPU.
 - Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
-- Selecting the options for each dimension, such as email vs. SMS or daily vs. weekly frequency.
+- Selecting the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
 ### Sample use cases
 
-Here's some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
+Here are some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
 {% multi_lang_include offerfit/sample_use_cases.md %}
 
@@ -50,7 +50,7 @@ This information can also be found on the [OfferFit integration]({{site.baseurl}
 
 ## Next steps
 
-Now that you know more about OfferFit by Braze, you're ready for next steps:
+Now that you know more about OfferFit by Braze, you're ready for the next steps:
 
 1. [Integrating OfferFit]({{site.baseurl}}/developer_guide/offerfit/integration)
 2. [Building a use case]({{site.baseurl}}/developer_guide/offerfit/building_use_cases)
