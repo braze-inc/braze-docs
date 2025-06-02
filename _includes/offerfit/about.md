@@ -1,6 +1,6 @@
 # OfferFit by Braze
 
-> Get started with OfferFit by Braze to make 1:1 AI decisions that maximize any business metric!
+> Get started with OfferFit by Braze to make 1:1 AI decisions that maximize your business metrics!
 
 ## What's OfferFit by Braze?
 
