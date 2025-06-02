@@ -25,7 +25,7 @@ To build a good use case, you'll:
 
 ## Sample use cases
 
-The OfferFit AI will learn from every customer interaction and apply those insights to the next day's recommendations.
+OfferFit's AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
 {% multi_lang_include offerfit/sample_use_cases.md %}
 
@@ -37,15 +37,24 @@ Before you can build a use case, you'll need to [integrate OfferFit by Braze]({{
 
 ### Step 1: Contact OfferFit
 
-You'll work with the OfferFit team to build your use case. If you haven't already, reach out to your customer success manager to get started. They'll walk you through the following steps to help build a custom use case that's right for you.
+OfferFit's AI Expert Services team will work closely with you to scope, design, and build your OfferFit use case. If you haven't already, [reach out](https://offerfit.ai/book-now) to get started.
 
-### Step 2: Define a target audience
+You'll complete the following steps together to build a custom use case that's right for you.
+
+### Step 2: Design your use case
 
 <!-- Content in this step largely unedited. Will be tackled monday. -->
 
-Define your target audience by creating at least one segment in Braze. This segment will be used to send your campaign or Canvas to the right users.
+Alongside OfferFit's AI Expert Services team, you'll define:
 
-### Step 3: Set up API-triggered delivery
+- a target audience, 
+- the business metric to optimize, 
+- the actions for OfferFit's AI decisioning agent, and 
+- any first-party customer data the agent should leverage to drive your business outcomes. 
+
+With the design in hand, the team will work with you to identify and complete any additional integration requirements.
+
+### Step 3: Configure your delivery platform
 
 <!-- Content in this step largely unedited. Will be tackled monday. -->
 
@@ -55,6 +64,6 @@ Next, you'll create an API-triggered Braze campaign or Canvas and create campaig
 2. Do not include a Braze [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group) in your campaign or Canvas. This allows the OfferFit control group to be the only active one.
 3. Depending on your dimensions, you can configure Liquid tags in your creative content to dynamically populate your campaign or Canvas with OfferFit recommendations. OfferFit will pass customer-specific content to the Liquid tags in your templates via the Braze API.
 
-### Step 4: Orchestrate activation events
+### Step 4: Launch and monitor
 
-You can leverage the OfferFit native activation integration with Braze to orchestrate and schedule 1:1 personalized recommendations for your target audience.
+After launching your use case, your AI Expert Services team will continue to monitor and tune it to your agreed-upon design. They'll also help you make any adjustments, expansions, or modifications to the use case, if needed.

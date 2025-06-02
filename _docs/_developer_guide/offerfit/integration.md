@@ -7,7 +7,7 @@ description: "Learn how to..."
 
 # Integrating OfferFit by Braze
 
-> Learn how to integrate OfferFit into Braze, so you can work with the OfferFit team to [build uses cases]({{site.baseurl}}/developer_guide/offerfit/building_use_cases), so you can leverage AI to make 1:1 decisions that maximize any business metric.
+> Learn how to integrate OfferFit into Braze, so you can work with OfferFit's AI Expert Services team to [build uses cases]({{site.baseurl}}/developer_guide/offerfit/building_use_cases), so you can leverage AI to make 1:1 decisions that maximize any business metric.
 
 ## Prerequisites
 
