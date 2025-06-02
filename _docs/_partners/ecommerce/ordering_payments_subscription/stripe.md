@@ -54,12 +54,12 @@ Next, you'll transform the webhook payload that will be sent from Stripe to a Ja
 
 #### Request body format
 
-This return value must adhere to Braze’s `/users/track` request body format:
+This return value must adhere to the `/users/track` endpoint request body format:
 
 - Transformation code is accepted in the JavaScript programming language. Any standard JavaScript control flow, such as if/else logic, is supported.
 - Transformation code accesses the webhook request body via the payload variable. This variable is an object populated by parsing the request body JSON.
 - Any feature supported in our `/users/track` endpoint is supported, including:
-    - User attributes objects, event objects, and purchase objects
+    - User attribute objects, event objects, and purchase objects
     - Nested attributes and nested custom event properties
     - Subscription group updates
     - Email address as an identifier
