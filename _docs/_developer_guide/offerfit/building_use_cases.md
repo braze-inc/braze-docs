@@ -21,7 +21,7 @@ To build a good use case, you'll:
 - Define which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Select the options for each dimension, such as email vs. SMS or daily vs. weekly frequency.
 
-![of_use_case_example]({% image_buster /assets/img/offerfit/of_use_case_example.png %})
+![Example diagram of an OfferFit use case for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Sample use cases
 
