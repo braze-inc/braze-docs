@@ -7,13 +7,13 @@ description: "Learn how you can leverage OfferFit with Braze..."
 
 # Getting Started with OfferFit by Braze
 
-> Get started with OfferFit by Braze and replace your manual A/B testing with AI-powered testing, helping you make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes!
+> Get started with OfferFit by Braze to make 1:1 AI decisions that maximize any business metric!
 
 ## What's OfferFit by Braze?
 
-[OfferFit](https://www.offerfit.ai/) helps you replace manual A/B testing with AI-powered testing, so you can make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes.
+[OfferFit](https://www.offerfit.ai/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks&#8212;with OfferFit, you can optimize any business KPI.
 
-The OfferFit and Braze integration allows you to automatically discover the right message, channel, and timing for every customer based on your customer data. You can optimize your campaigns to existing identified customers, with business goals such as cross-sell, upsell, repurchase, retention, renewal, referral, and winback.
+OfferFit's AI decisioning agents automatically discover the optimal action for every customer. Using your first-party data, OfferFit can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
 After OfferFit is configured, the automated experimentation platform will automatically send 1:1 personalized activation events to Braze for each user in your target audience. These activation events will be triggered through the Braze campaigns or Canvases you configured.
 
