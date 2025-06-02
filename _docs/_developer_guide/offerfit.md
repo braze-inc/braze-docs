@@ -15,14 +15,15 @@ description: "Learn how you can leverage OfferFit with Braze..."
 
 OfferFit's AI decisioning agents automatically discover the optimal action for every customer. Using your first-party data, OfferFit can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
-After OfferFit is configured, the automated experimentation platform will automatically send 1:1 personalized activation events to Braze for each user in your target audience. These activation events will be triggered through the Braze campaigns or Canvases you configured.
+Our AI Expert Services team will tailor OfferFit to the specific needs of your business. While OfferFit works best with Braze, we support integrations with a variety of platforms. If you'd like to learn more, [book a call with our team](https://offerfit.ai/book-now).
 
 ## Key features
 
-- Orchestrate activation events in Braze.
-- Data integration capabilities that allow you to retrieve customer profile (non-PII) and engagement data from Braze through the available API endpoints.
-- Analytics data available in Braze.
-- In OfferFit: comprehensive reporting layer that allows marketers to explore the customer insights discovered by OfferFit through its self-learning AI capabilities.
+- **Keep your tech stack, but add in a brain:** OfferFit plugs in as a decisioning layer between your data systems and your marketing automation platform.
+- **Pick winners for people, not segments:** Use all your first-party data to make the optimal 1:1 decision for each individual.
+- **Personalize everything:** AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer
+- **Maximize any metric:** Clicks aren’t dollars. Use OfferFit to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
+- **Open the black box:** See how AI decisioning agents personalize for deep insights into the drivers of customer behavior
 
 ## About use cases
 
