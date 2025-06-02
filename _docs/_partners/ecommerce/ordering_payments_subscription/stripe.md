@@ -43,7 +43,7 @@ Then, send a test event to your Data Transformation.
 
 ### Step 3: Write transformation code to accept your chosen Stripe events
 
-In this step, you'll transform the webhook payload that will be sent from Stripe to a JavaScript object return value.
+Next, you'll transform the webhook payload that will be sent from Stripe to a JavaScript object return value.
 
 1. Refresh your Data Transformation and make sure you can see the Stripe test payload in the **Webhook details** section.
 2. Update your Data Transformation code to support your chosen Stripe events.
