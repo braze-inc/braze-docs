@@ -13,8 +13,6 @@ partner_top_header: "Message Orchestration"
 valid_partner_list:
 - name: Jacquard
   url: /docs/partners/jacquard/
-- name: Offerfit
-  url: /docs/partners/offerfit/
 - name: Adjust
   url: /docs/partners/adjust/
 - name: Airbridge

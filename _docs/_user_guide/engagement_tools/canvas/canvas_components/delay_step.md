@@ -32,12 +32,6 @@ Personalized delays and extended delays are in early access. Contact your Braze 
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
 
-Braze will exit a user at the step if:
-
-- The context variable doesn't return to any value.
-- An embedded Connected Content call fails.
-- The context variable types don't match.
-
 Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
 
 - **Context variable name:** product_reminder_interval
@@ -79,7 +73,11 @@ The **Until a specific date** option allows you to hold users in the step until 
 
 ##### Users won't receive past-dated steps or messages
 
-If the selected date and time have already passed by the time users proceed to the Delay step, users will exit the Canvas. There can be a maximum of 31 days between the start of the Canvas and the dates chosen for "Wait until Exact Date" steps.
+If the selected date and time have already passed by the time users proceed to the Delay step, users will exit the Canvas. There can be up to 31 days between the start of the Canvas and the dates chosen for "Wait until Exact Date" steps. 
+
+{% alert important %}
+If you're participating in the [Context step early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), you can set delays of up to 2 years.
+{% endalert %}
 
 For example, users won't receive steps or messages in these scenarios:
 - A message is scheduled to send on May 3rd at 9 pm, but the Delay step expires on May 3rd at 9 am. 
@@ -133,6 +131,12 @@ Delays have three statistics available in the analytics view of an active or pre
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Time series for these analytics are available in the expanded component view.
+
+## Troubleshooting
+
+### Personalization failed errors
+
+If users aren't triggering a personalized delay, it could be because the Context step you set to qualify them for the Delay step is not working as you expected. When a [context variable is invalid]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#troubleshooting), a user will continue through your Canvas without having their context set by the Context step. This can cause them to not qualify for steps later in your Canvas, such as personalized delays.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}
 [2]: {% image_buster /assets/img/context_step1.png %}

@@ -18,7 +18,7 @@ Promotion codes—also called promo codes—are a great way to keep users engage
 Each promotion code has an expiration date of up to six months. You can store and manage up to 20 million codes per list. By managing and analyzing the performance of your promotion codes, you can make targeted decisions for your promotional strategies and messaging.
 
 {% alert important %}
-Promotion codes can't be sent in in-app messages.
+Promotion codes can't be sent in in-app messages in Canvas. If you're participarting in the [early access](#promotion-codes-iam-campaigns), promotion codes can be sent in in-app message campaigns.
 {% endalert %}
 
 ## Creating a promotion code list
@@ -129,6 +129,16 @@ You can find the remaining code count in the **Remaining** column of the promoti
 This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
 
 ![A promotion code named "Black Friday Sale" with 992 remaining codes.][13]{: style="max-width:70%"}
+
+### Using promotion codes in in-app message campaigns {#promotion-codes-iam-campaigns}
+
+{% alert important %}
+Using promotion codes in in-app message campaigns is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
+After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. 
+
+Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
 
 ## Multichannel and single-channel sends
 

@@ -12,6 +12,8 @@ page_order: 3
 
 > Braze will receive signals from your Shopify customers through their on-site behaviors and by listening to Shopify webhooks that you configured as part of your integration. For non-headless Shopify sites, Braze will assist with reconciling users from the checkout page. For headless Shopify sites, refer to our integration guidance on how to [reconcile users from checkout]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#headless-checkout).
 
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
+
 ## Capturing information for user profiles 
 
 ### Shopify user tracking
@@ -96,7 +98,7 @@ If you enable the override option, Braze will update the global subscription sta
 
 #### Collect SMS subscribers
 
-To collect SMS subscribers from Shopify, you must create [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) as part of your [SMS setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup). 
+To collect SMS subscribers from Shopify, you must create [SMS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/) as part of your [SMS setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/). 
 
 When you are ready to collect your Shopify SMS subscribers, enable SMS subscriber collection by turning it on within the Shopify setup page. You must select at least one SMS subscription group so that you can appropriately target and send SMS messages. 
 

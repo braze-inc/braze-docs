@@ -15,8 +15,8 @@ description: "This reference article covers how to implement open pixel and clic
 
 When either importing or updating a user profile via [API][api_doc] or [CSV][csv_doc], two fields are available for you to modify:
 
-- `email_open_tracking_disabled`: Accepts `true` or `false`. Set to `false` to add the open tracking pixel to all future emails sent to this user.
-- `email_click_tracking_disabled`: Accepts `true` or `false`. Set to `false` to add click tracking to all links within a future email, sent to this user.
+- `email_open_tracking_disabled`: Accepts `true` or `false`. Set to `false` to add the open tracking pixel to all future emails sent to this user. Available for SparkPost and SendGrid only.
+- `email_click_tracking_disabled`: Accepts `true` or `false`. Set to `false` to add click tracking to all links within a future email, sent to this user. Available for SparkPost and SendGrid only.
 
 For reference, this information is reflected on the user profile in the email **Contact Settings**, located in the **Engagement** tab.
 

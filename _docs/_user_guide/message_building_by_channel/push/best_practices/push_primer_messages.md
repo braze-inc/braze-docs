@@ -89,14 +89,14 @@ For best practices and additional resources, refer to [Creating custom opt-in pr
 
 ## Step 3: Specify button behavior {#button-actions}
 
-To add buttons to your in-app message, add text to the **Button 1** and **Button 2** text fields, which are the secondary and primary buttons in your in-app message respectively. We recommend "Allow notifications" and "Not now" as starter buttons, but there are many different button prompts you could assign.
+To add buttons to your in-app message, drag two **Button** blocks into your message, which will act as the primary and secondary buttons in your in-app message. You can also drag a row into your message, and then drag the buttons into the row, so that the buttons are on the same horizontal row (as opposed to stacked on top of each other). We recommend "Allow notifications" and "Not now" as starter buttons, but there are many different button prompts you could assign.
 
 After you've added button copy, specify the on-click behavior for each button:
 
 - **Button 1:** Set this to "Close Message". This is your secondary button, or the "Not now" option.
 - **Button 2:** Set this to "Request Push Permission". This is your primary button, or the "Allow notifications" option.
 
-![][4]
+![In-app message composer with two buttons: "Allow notifications" and "Not now".][4]
 
 ## Step 4: Schedule delivery
 
@@ -104,7 +104,7 @@ To set your push primer to send at a relevant time, you must schedule your in-ap
 
 While the ideal time will vary, Braze suggests waiting until a user completes some sort of [high-value action](https://www.braze.com/resources/videos/mapping-high-value-actions), indicating that they're starting to see value in your app or site, or when there's a compelling need that push notifications can address (such as after they've placed an order and you want to offer them shipping tracking information). This way, the prompt is beneficial to the customer rather than only to your brand.
 
-![][5]
+![Action-based delivery settings to send to users who performed the custom event of "Add to Watch List".][5]
 
 ## Step 5: Target users
 

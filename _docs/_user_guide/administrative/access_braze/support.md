@@ -15,7 +15,7 @@ To contact the Braze Support team, navigate to the Braze dashboard. In the dashb
 
 ![The "Support" dropdown with the option to get help.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Depending on your Braze permissions, and if you're a designated support contact (premium), you will either be taken to the Braze support portal where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
+Depending on your Braze permissions and if you're a designated support contact (premium), you will either be taken to the Braze support portal, where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
 
 ## Adding designated support contacts
 
@@ -60,19 +60,19 @@ The more insights you can offer, the better. Include specifics like the workspac
 
 ### Provide a sample of users
 
-Share a sampling of users rather than the entire affected segment. Providing a smaller amount of users helps us narrow our scope and speed up our investigations.
+Share a sampling of users rather than the entire affected segment. Providing a smaller number of users helps us narrow our scope and speed up our investigations.
 
 ### Attach network logs (HAR logs)
 
-If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will show the network requests between the browser and the server, for the individual components of a webpage, and the Braze dashboard the user is trying to open.
+If you contact Support, it'll be useful to have the impacted user collect network logs (HAR logs) from their browser while the issue occurs. This will display the network requests between the browser and the server for the individual components of a webpage, as well as the Braze dashboard the user is trying to open.
 
 Have the affected user do the following:
 
-1. Open their developer tools. If using Chrome, this can be be done using the keyboard shortcut `option` + `⌘` + `J` (on macOS). If using Windows or Linux, this can be done using the shortcut `shift` + `CTRL` + `J`.
+1. Open their developer tools. If using Chrome, this can be done using the keyboard shortcut `option` + `⌘` + `J` (on macOS). If using Windows or Linux, this can be done using the shortcut `shift` + `CTRL` + `J`.
 2. Select **Network** > **Fetch/XHR** or **XHR**.
 3. Capture a screen recording or screenshot showing the **Name**, **Status**, **Size**, and **Time** for the elements.<br><br>![The "Fetch/XHR" tab in a Chrome browser.][1]{: style="max-width:60%;"}
 
-Then attach the user's recording or screenshot to the Support ticket. This information can help Support's investigation.
+Then, attach the user's recording or screenshot to the Support ticket. This information can help Support's investigation.
 
 ### Clarify expected versus actual behavior
 
@@ -87,7 +87,7 @@ Consider attaching a screenshot to illustrate the problem. Providing these image
 Select the appropriate severity level to help us assign the right resources to address the problem. 
 
 {% alert important %}
-Marking an an issue as "Critical" means your production instance is down and all work within Braze has stopped.
+Marking an issue as "Critical" means your production instance is down, and all work within Braze has stopped.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/network_xhr.png %}

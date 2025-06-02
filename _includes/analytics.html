@@ -59,6 +59,28 @@ braze.subscribeToContentCardsUpdates(function(updates) {
 });
 
 braze.automaticallyShowInAppMessages();
+
+try {
+  if (window.localStorage.getItem('braze_developer_data')) {
+    const developerData = JSON.parse(window.localStorage.getItem('braze_developer_data'));
+    if (developerData.id) {
+      braze.changeUser(developerData.id);
+      if (developerData.email) {
+        braze.getUser().setEmail(developerData.email);
+      }
+      ['department', 'companyId', 'companyName', 'username', 'env', 'industry', 'locale', 'dashboard', 'appGroupId'].forEach(attribute => {
+        if (developerData[attribute]) {
+          braze.getUser().setCustomUserAttribute(attribute, developerData[attribute]);
+        }
+      });
+    }
+    window.localStorage.removeItem('braze_developer_data');
+  }
+} catch (e) {
+  console.error('Error setting user ID:', e);
+}
+
+
 braze.openSession();
 if (braze.getCachedContentCards()?.cards?.length > 0) {
   $('#cc_prompt').show();
@@ -68,7 +90,7 @@ if (braze.getCachedContentCards()?.cards?.length > 0) {
 
 var [, base, ...paths] = window.location.pathname.split('/');
 if (base === 'docs'){
-  braze.logCustomEvent( base + '_page', {
+  braze.logCustomEvent( 'docs_page', {
     url: window.location.href,
     section: paths.join('/'),
     hash: window.location.hash,

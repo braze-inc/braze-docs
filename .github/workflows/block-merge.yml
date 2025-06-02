@@ -1,0 +1,18 @@
+# Blocks merging of pull requests based on certain conditions, such as a 'status: do not merge' label.
+name: "Block Merge"
+
+on:
+  pull_request:    
+    # add more types if needed, but only the minimum required for each job in the workflow.
+    types: [labeled, unlabeled, opened, ready_for_review, converted_to_draft]
+
+jobs:
+  block-do-not-merge-label:
+    # This job will only run if the PR includes the 'status: do not merge' label.
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'do not merge') }}
+    name: "Check for 'do not merge' label"
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "'do not merge' label found. Merging is blocked until removed."
+          exit 1
