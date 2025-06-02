@@ -15,7 +15,7 @@ description: "Learn how you can leverage OfferFit with Braze..."
 
 OfferFit's AI decisioning agents automatically discover the optimal action for every customer. Using your first-party data, OfferFit can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
-Our AI Expert Services team will tailor OfferFit to the specific needs of your business. While OfferFit works best with Braze, we support integrations with a variety of platforms. If you'd like to learn more, [book a call with our team](https://offerfit.ai/book-now).
+Our AI Expert Services team will tailor OfferFit to the specific needs of your business. While OfferFit works best with Braze, a variety of other platforms are already supported. To learn more, [book a call](https://offerfit.ai/book-now) with OfferFit.
 
 ## Key features
 
@@ -41,7 +41,7 @@ Building a good use case is consists of:
 
 ### Sample use cases
 
-SENTENCE
+Here's some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
 {% multi_lang_include offerfit/sample_use_cases.md %}
 

@@ -27,7 +27,7 @@ To build a good use case, you'll:
 
 ## Sample use cases
 
-OfferFit's AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
+Here's some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
 {% multi_lang_include offerfit/sample_use_cases.md %}
 
