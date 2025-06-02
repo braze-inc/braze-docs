@@ -2637,4 +2637,6 @@ validurls['/docs/developer_guide/platform_integration_guides/android/android_12/
 validurls['/docs/shopify_features#shopify-data'] = '/docs/partners/ecommerce/shopify/shopify_data_features';
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending';
 
+validurls['/docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit'] = '/docs/user_guide/offerfit/';
+
 // validurls['OLD'] = 'NEW';

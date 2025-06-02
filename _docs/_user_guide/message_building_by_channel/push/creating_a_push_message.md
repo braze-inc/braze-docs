@@ -173,9 +173,7 @@ For iOS, you can further limit messaging by only sending push notifications to i
 
 ## Step 5: Preview and test your message (optional)
 
-![Test push message][7]{: style="float:right;max-width:30%;margin-left:15px;"}
-
-Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
+Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab to choose from options on how to test your push message. In **Test Recipients**, you can select a content test group or individual users. You can also use **Preview message as user** to get a sense of how your message may view on mobile for a random user, existing user, custom user, or multi-language user.
 
 ## Step 6: Build the remainder of your campaign or Canvas
 
