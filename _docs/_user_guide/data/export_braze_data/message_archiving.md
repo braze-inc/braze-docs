@@ -186,7 +186,7 @@ If your cloud storage credentials become invalid at any point, Braze won't be ab
 
 The rendered copy is uploaded immediately before sending the message to the user. Because of cloud storage upload times, there may be a delay of a few seconds between the `sent_at` timestamp in the rendered copy versus the actual time the send occurs.
 
-### Can I create a new bucket specifically for Message Archiving while keeping their current bucket used for Currents data?
+### Can I create a new bucket specifically for message archiving while keeping the current bucket used for Currents data?
 
 No. If you're interested in creating these specific buckets, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
