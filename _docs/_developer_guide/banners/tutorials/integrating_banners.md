@@ -9,91 +9,122 @@ description: "A tutorial on how to integrate and refresh banner placements"
 
 # Displaying a Banner by its Placement ID
 
-{% tabs %}
-{% tab Web %}
+{% sdktabs %}
+{% sdktab android %}
 {% scrolly %}
 
-```js file=index.js
-import * as braze from "@braze/web-sdk";
+```kotlin file=MainApplication.kt
+import android.app.Application
+import android.util.Log
+import com.braze.Braze
+import com.braze.configuration.BrazeConfig
+import com.braze.support.BrazeLogger
 
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
+public class MainApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
 
-braze.subscribeToBannersUpdates((banners) => {
-  // Get this placement's banner. If it's `null`, the user did not qualify for any banners.
-  const globalBanner = braze.getBanner("global_banner");
-  if (!globalBanner) {
-    return;
-  }
+        // Turn on verbose Braze logging
+        BrazeLogger.logLevel = Log.VERBOSE
 
-  const container = document.getElementById("global-banner-container");
+        // Configure Braze with your SDK key and endpoint
+        val config = BrazeConfig.Builder()
+            .setApiKey("YOUR-API-KEY")
+            .setCustomEndpoint("YOUR-ENDPOINT")
+            .build()
+        Braze.configure(this, config)
 
-  braze.insertBanner(globalBanner, container);
-
-  if (globalBanner.isControl) {
-    // Hide or collapse the container
-    container.style.display = "none";
-  }
-});
-
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+        // Subscribe to Banner updates
+        Braze.getInstance(this)
+            .subscribeToBannersUpdates { update ->
+                for (banner in update.banners) {
+                    Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
+                    // And any custom banner logic you'd like
+                }
+            }
+    }
+}
 ```
 
-```html file=main.html
-<!-- your html -->
+```kotlin file=MainActivity.kt
+import android.os.Bundle
+import androidx.activity.ComponentActivity
 
-<div id="global-banner-container" style="width: 100%; height: 450px;"></div>
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // Inflate the XML layout
+        setContentView(R.layout.banners)
+        
+        // Refresh placements
+        Braze.getInstance(this)
+            .requestBannersRefresh(
+                listOf("top-1")
+            )
+    }
+}
+```
 
-<!-- ...the rest of your html -->
+```xml file=banners.xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Banner placement -->
+        <com.braze.ui.banners.BannerView
+            android:id="@+id/banner_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:placementId="top-1" />
+
+        <!-- ...the rest of your activity layout -->
+
+    </LinearLayout>
+</ScrollView>
 ```
 
 !!step
-lines-index.js=5
+lines-MainApplication.kt=12
 
 #### 1. Enable debugging (optional)
 
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-index.js=8-24
+lines-MainApplication.kt=21-28
 
 #### 2. Subscribe to banner updates
 
-Use `subscribeToBannersUpdates(callback)` to register a handler that will run any time banners are refreshed.
-
-Within the callback, get the banner for your placement using `braze.getBanner("global_banner")`.
+Use `subscribeToBannersUpdates()` to listen for and react to incoming banner refresh results from the server.
 
 !!step
-lines-index.js=15-22
+lines-MainApplication.kt=30-34
 
-#### 3. Insert the banner and handle control groups
+#### 3. Refresh placements
 
-If a banner is returned, insert it into your page with `braze.insertBanner(banner, container)`.
-
-If the returned banner is a control group (i.e. `isControl` is true), hide or collapse the banner's container so your layout stays clean.
+Invoke `requestBannersRefresh()` to fetch the latest banner content from Braze for the specified placement ID(s).
 
 !!step
-lines-index.js=25
+lines-banners.xml=15-19
 
-#### 4. Request banners refresh
+#### 4. Define the BannerView in banners.xml
 
-Call `requestBannersRefresh(["global_banner", ...])` after initializing to ensure your banners are fetched from Braze.
-Call this whenever you want to refresh the banners for any placement(s).
-
-!!step
-lines-main.html=3
-
-#### 5. Add a container for your banner
-
-Add a div in your HTML (e.g. `<div id="global-banner-container"></div>`) where Braze will insert the banner content.
+Specify a `<com.braze.ui.banners.BannerView>` element with `app:placementId="<placement-id>"` so that Braze knows where to render the banner content in your UI.
 
 {% endscrolly %}
-{% endtab %}
-{% tab iOS %}
-{% subtabs %}
-{% subtab UIKit %}
+{% endsdktab %}
+{% sdktab swift %}
+{% tabs %}
+{% tab UIKit %}
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -242,8 +273,8 @@ Anchor your main content to the top. Place the banner view directly below, pinni
 Set up a height constraint for the banner view (starting at 0), which will be updated when banner content loads.
 
 {% endscrolly %}
-{% endsubtab %}
-{% subtab SwiftUI %}
+{% endtab %}
+{% tab SwiftUI %}
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -393,119 +424,88 @@ lines-BannerSwiftUIView.swift=34
 Apply a `.frame(height: min(contentHeight, 80))` modifier to ensure your banner never exceeds a maximum height (e.g., 80 points), keeping the UI visually balanced regardless of content.
 
 {% endscrolly %}
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
-{% tab Android %}
+{% endtabs %}
+{% endsdktab %}
+{% sdktab web %}
 {% scrolly %}
 
-```kotlin file=MainApplication.kt
-import android.app.Application
-import android.util.Log
-import com.braze.Braze
-import com.braze.configuration.BrazeConfig
-import com.braze.support.BrazeLogger
+```js file=index.js
+import * as braze from "@braze/web-sdk";
 
-public class MainApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
 
-        // Turn on verbose Braze logging
-        BrazeLogger.logLevel = Log.VERBOSE
+braze.subscribeToBannersUpdates((banners) => {
+  // Get this placement's banner. If it's `null`, the user did not qualify for any banners.
+  const globalBanner = braze.getBanner("global_banner");
+  if (!globalBanner) {
+    return;
+  }
 
-        // Configure Braze with your SDK key and endpoint
-        val config = BrazeConfig.Builder()
-            .setApiKey("YOUR-API-KEY")
-            .setCustomEndpoint("YOUR-ENDPOINT")
-            .build()
-        Braze.configure(this, config)
+  const container = document.getElementById("global-banner-container");
 
-        // Subscribe to Banner updates
-        Braze.getInstance(this)
-            .subscribeToBannersUpdates { update ->
-                for (banner in update.banners) {
-                    Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
-                    // And any custom banner logic you'd like
-                }
-            }
-    }
-}
+  braze.insertBanner(globalBanner, container);
+
+  if (globalBanner.isControl) {
+    // Hide or collapse the container
+    container.style.display = "none";
+  }
+});
+
+braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
-```kotlin file=MainActivity.kt
-import android.os.Bundle
-import androidx.activity.ComponentActivity
+```html file=main.html
+<!-- your html -->
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Inflate the XML layout
-        setContentView(R.layout.banners)
-        
-        // Refresh placements
-        Braze.getInstance(this)
-            .requestBannersRefresh(
-                listOf("top-1")
-            )
-    }
-}
-```
+<div id="global-banner-container" style="width: 100%; height: 450px;"></div>
 
-```xml file=banners.xml
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <!-- Banner placement -->
-        <com.braze.ui.banners.BannerView
-            android:id="@+id/banner_view_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:placementId="top-1" />
-
-        <!-- ...the rest of your activity layout -->
-
-    </LinearLayout>
-</ScrollView>
+<!-- ...the rest of your html -->
 ```
 
 !!step
-lines-MainApplication.kt=12
+lines-index.js=5
 
 #### 1. Enable debugging (optional)
 
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-MainApplication.kt=21-28
+lines-index.js=8-24
 
 #### 2. Subscribe to banner updates
 
-Use `subscribeToBannersUpdates()` to listen for and react to incoming banner refresh results from the server.
+Use `subscribeToBannersUpdates(callback)` to register a handler that will run any time banners are refreshed.
+
+Within the callback, get the banner for your placement using `braze.getBanner("global_banner")`.
 
 !!step
-lines-MainApplication.kt=30-34
+lines-index.js=15-22
 
-#### 3. Refresh placements
+#### 3. Insert the banner and handle control groups
 
-Invoke `requestBannersRefresh()` to fetch the latest banner content from Braze for the specified placement ID(s).
+If a banner is returned, insert it into your page with `braze.insertBanner(banner, container)`.
+
+If the returned banner is a control group (i.e. `isControl` is true), hide or collapse the banner's container so your layout stays clean.
 
 !!step
-lines-banners.xml=15-19
+lines-index.js=25
 
-#### 4. Define the BannerView in banners.xml
+#### 4. Request banners refresh
 
-Specify a `<com.braze.ui.banners.BannerView>` element with `app:placementId="<placement-id>"` so that Braze knows where to render the banner content in your UI.
+Call `requestBannersRefresh(["global_banner", ...])` after initializing to ensure your banners are fetched from Braze.
+Call this whenever you want to refresh the banners for any placement(s).
+
+!!step
+lines-main.html=3
+
+#### 5. Add a container for your banner
+
+Add a div in your HTML (e.g. `<div id="global-banner-container"></div>`) where Braze will insert the banner content.
 
 {% endscrolly %}
-{% endtab %}
-{% endtabs %}
+{% endsdktab %}
+{% endsdktabs %}
