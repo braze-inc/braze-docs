@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const codeBlocks = [...block.querySelectorAll(".code-blocks pre")];
 
     let currentIndex = 0; // active narrative step index for this block
+    let isProgrammaticScroll = false;
 
     // Helper: Return the currently active <pre> element.
     function getActiveCodeBlock() {
@@ -226,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const stepsContainer = block.querySelector(".scrolly-text");
     // Attach scroll event to the steps container instead of the window.
     stepsContainer.addEventListener("scroll", () => {
+      if (isProgrammaticScroll) return;
       const idx = getClosestStep();
       if (idx !== currentIndex) {
         activateStep(idx);
@@ -236,6 +238,8 @@ document.addEventListener("DOMContentLoaded", () => {
     steps.forEach((step, i) => {
       step.addEventListener("click", () => {
         if (step.classList.contains("rating-step")) return;
+
+        isProgrammaticScroll = true;
 
         // compute how to center “step” inside the scrolly-text container
         const offsetTop = step.offsetTop;
@@ -249,6 +253,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         activateStep(i);
+
+        setTimeout(() => {
+          isProgrammaticScroll = false;
+        }, 400);
       });
     });
 
