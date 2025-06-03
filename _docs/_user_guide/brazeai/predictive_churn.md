@@ -1,7 +1,7 @@
 ---
-nav_title: Churn
+nav_title: Predictive Churn
 article_title: Predictive Churn
-page_order: 6.4
+page_order: 2.0
 layout: dev_guide
 alias: /predictive_churn/
 search_rank: 2

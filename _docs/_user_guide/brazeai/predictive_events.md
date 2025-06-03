@@ -1,7 +1,7 @@
 ---
-nav_title: Events
+nav_title: Predictive Events
 article_title: Predictive Events
-page_order: 6.4
+page_order: 2.1
 layout: featured
 alias: /predictive_purchases/
 search_rank: 1
