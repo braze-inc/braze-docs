@@ -9,7 +9,7 @@ description: "This article covers how to get your Braze account, how to log in a
 
 # Accessing your account
 
-> This article covers how to get your Braze account, how to log in after granted access, and how to troubleshoot your dashboard access and dashboard performance.
+> This article covers how to get your Braze account, how to log in after being granted access, and how to troubleshoot your dashboard access and dashboard performance.
 
 If you are your company's first Braze user and logging in for the first time, you will receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in on the first day of your contract.
 
