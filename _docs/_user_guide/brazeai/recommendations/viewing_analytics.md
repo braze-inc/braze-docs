@@ -1,5 +1,5 @@
 ---
-nav_title: Recommendation analytics
+nav_title: Analytics
 article_title: "Item recommendation analytics"
 description: "Learn about item recommendation analytics and how to view them in Braze."
 page_order: 1.3

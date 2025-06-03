@@ -1,30 +1,31 @@
 ---
 nav_title: Analytics
-article_title: Prediction Analytics
+article_title: Predictive Churn Analytics
 description: "This reference article covers the different components included in the Churn Prediction Analytics page and how they can be used to make insightful, driven decisions."
-page_order: 2
+page_order: 1.5
 
 ---
 
-# Prediction analytics
+# Predictive churn analytics
 
 > After your prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their _Churn Risk Score_ or category. 
 
+## About predictive churn analytics
+
 As soon as the prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
-**Analytics Components**<br>
-&#45; [Churn Score and Category](#churn_score)<br>
-&#45; [Prediction Quality](#prediction_quality)<br>
-&#45; [Estimated Results](#estimated_results)<br>
-&#45; [Churn Correlation Table](#correlation_table)
+These are the components that make up predictive churn analytics:
 
-## Overview
+- [Churn Score and Category](#churn_score)
+- [Prediction Quality](#prediction_quality)
+- [Estimated Accuracy](#estimated_results)
+- [Churn Correlation Table](#correlation_table)
 
 The distribution of the scores for the entire prediction audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of _Churn Risk Score_ or category.
 
-![]({% image_buster /assets/img/churn/churnTargeting.gif %})
-
 As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire prediction audience would be targeted.
+
+![]({% image_buster /assets/img/churn/churnTargeting.gif %})
 
 ## Churn score and category {#churn_score}
 
@@ -34,23 +35,9 @@ Users in the prediction audience will be assigned a _Churn Risk Score_ between 0
 
 The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with churn scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this prediction.
 
-## Targeting users to reduce churn
+## Prediction quality {#prediction_quality}
 
-### Prediction quality {#prediction_quality}
-
-To measure the accuracy of your model, the _Prediction Quality_ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Refer to [Prediction Quality]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) to learn more about the metric.
-
-Here's what we recommend for various ranges of _Prediction Quality_:
-
-| Prediction Quality Range (%) | Recommendation |
-| ---------------------- | -------------- |
-| 60 - 100 | Excellent. Top tier accuracy. Changing the audience definitions is unlikely to provide additional benefit. |
-| 40 - 60 | Good. This model will produce accurate predictions, but trying different audience settings may achieve even better results. |
-| 20 - 40| Fair. This model can provide accuracy and value, but consider trying different audience definitions to see if they increase performance. |
-| 0 - 20 | Poor. We recommend you change your audience definitions and try again. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-The prediction will be trained again every two weeks and updated alongside the prediction quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the predictions list page as well as on your prediction's analytics page.
+{% multi_lang_include brazeai/intelligent_suite/prediction_quality.md %}
 
 ## Estimated accuracy {#estimated_results}
 
@@ -60,7 +47,6 @@ In the right half of the panel beneath the chart, we show estimates of the expec
 
 - How many selected users are expected to churn
 - How many selected users are expected **not** to churn
-
 
 Using this information, we encourage you to decide how many of the churners you want to capture and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
 
@@ -81,4 +67,3 @@ This table is updated only when the prediction retrains and not when user _Churn
 {% alert note %}
 Correlation data for preview predictions will be partially hidden. A purchase is required to reveal this information. Contact your account manager for more information.
 {% endalert %}
-

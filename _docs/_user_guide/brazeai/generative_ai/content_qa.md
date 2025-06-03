@@ -5,7 +5,7 @@ page_order: 4
 description: "This reference article covers how to perform quality assurance on your message content with AI directly from the message composer."
 ---
 
-# Content QA with AI
+# Content QA with BrazeAI<sup>TM</sup>
 
 > Learn how to QA your content with BrazeAI<sup>TM</sup>, so you can catch spelling errors, grammar issues, inappropriate tone, or offensive language&#8212;before hitting send.
 
@@ -22,7 +22,7 @@ The following features are supported to help improve the quality of your content
 | Multi-language support     | Although not officially supported by OpenAI, GPT can understand [multiple languages](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages). Keep in mind that Braze doesn't pass any information about the language or locale of your copy when it's sent to OpenAI, so your results may vary depending on the language you're writing in. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Using AI to QA content
+## Using BrazeAI<sup>TM</sup> to QA content
 
 {% alert note %}
 This feature is only available for the push and SMS channels at this time.
@@ -32,7 +32,7 @@ This feature is only available for the push and SMS channels at this time.
 2. Locate the **Content QA with AI** section.
 3. Click **Test Content**.
 
-![Content QA with AI section of the Test tab.]({% image_buster /assets/img/content_qa_ai.png %}){: style="max-width:60%"}
+![Content QA with AI section of the Test tab.]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Best practices
 
