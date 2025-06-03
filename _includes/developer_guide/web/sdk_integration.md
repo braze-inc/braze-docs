@@ -55,7 +55,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Initialize the SDK (optional)
+### Step 2: Initialize the SDK
 
 If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 
@@ -64,7 +64,9 @@ Otherwise, after the Braze Web SDK is added to your website, initialize the libr
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
-    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE",
+    enableLogging: false, // set to `true` for debugging
+    allowUserSuppliedJavascript: false, // set to `true` to support cusotm HTML messages
 });
 
 // optionally show all in-app messages without custom handling

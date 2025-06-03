@@ -55,7 +55,8 @@ $(document).ready(function(){
           'Article Title': feedback_config['article_title'],
           'Nav Title': feedback_config['nav_title'],
           'Params':window.location.search,
-          "Language": page_language
+          "Language": page_language,
+          "UserId": window.localStorage.getItem("braze_external_id") || ''
         };
         var jqxhr = $.ajax({
           url: feedback_config['dest'],
