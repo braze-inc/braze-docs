@@ -134,6 +134,16 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 LIMIT 100
 ```
 
+### Automatically populate the campaign variant name
+
+If you want the campaign variant name to automatically populate, include the column name `MESSAGE_VARIATION_API_ID` in your query, such as in this example:
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID, MESSAGE_VARIATION_API_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
+```
+
 ### Troubleshooting
 
 Your query may fail for any of the following reasons:
