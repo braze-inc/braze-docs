@@ -1,7 +1,7 @@
 ---
-nav_title: Timing
+nav_title: Intelligent Timing
 article_title: Intelligent Timing
-page_order: 2
+page_order: 1.3
 description: "This article provides an overview of Intelligent Timing (previously Intelligent Delivery) and how you can leverage this feature in your campaigns and Canvases."
 
 ---
@@ -10,13 +10,7 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 > Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to check that you're messaging your users at their preferred time, which can lead to higher engagement.
 
-## Use cases
-
-- Send recurring campaigns that aren't time sensitive
-- Automate campaigns with users from multiple time zones
-- When messaging your most engaged users (they'll have the most engagement data)
-
-## How it works
+## About Intelligent Timing
 
 Braze calculates the optimal send time based on a statistical analysis of your user's past interactions with your app, and their interactions with each messaging channel. The following interaction data is used: 
 
@@ -29,6 +23,12 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
 
 If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a [fallback time](#fallback-time).
+
+## Use cases
+
+- Send recurring campaigns that aren't time sensitive
+- Automate campaigns with users from multiple time zones
+- When messaging your most engaged users (they'll have the most engagement data)
 
 ## Using Intelligent Timing
 

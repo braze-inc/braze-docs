@@ -25,7 +25,7 @@ Here's what we recommend for various ranges of _Prediction Quality_:
 
 The prediction will be trained again every two weeks and updated alongside the _Prediction Quality_ metric to keep your predictions updated on the most recent user behavior patterns. Additionally, each time this occurs, the last two weeks of predictions will be tested against actual user outcomes. The _Prediction Quality_ will then be calculated based on these real outcomes (rather than estimates). This is an automatic backtest (that is, testing a predictive model on historical data) to ensure the prediction is accurate in real-world scenarios. The last time this retraining and backtesting occurred will be displayed on the **Predictions** page and an individual prediction's analytics page. Even a preview prediction will perform this backtest once after its creation. This way, you can be sure of the accuracy of your customized prediction even with the free version of the feature.
 
-{% details Prediction Quality details %}
+{% details Prediction quality example %}
 
 For example, if 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you'd expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.
 

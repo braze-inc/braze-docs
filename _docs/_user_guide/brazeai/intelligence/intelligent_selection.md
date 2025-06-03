@@ -1,7 +1,7 @@
 ---
-nav_title: Selection
+nav_title: Intelligent Selection
 article_title: Intelligent Selection
-page_order: 1
+page_order: 1.0
 description: "This article covers Intelligent Selection, a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant."
 search_rank: 10
 toc_headers: h2
@@ -11,7 +11,7 @@ toc_headers: h2
 
 > Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. 
 
-## How it works
+## About Intelligent Selection
 
 A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm](https://en.wikipedia.org/wiki/Multi-armed_bandit) that makes sure we are adjusting for real performance differences and not just random chance.
 

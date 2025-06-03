@@ -1,15 +1,15 @@
 ---
 nav_title: BrazeAI
 article_title: BrazeAI
+description: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy."
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
-guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy. With BrazeAI<sup>TM</sup> capabilities, you can have a trusted advisor to help guide your creativity, make better decisions, and optimize the user experience for your customers."
-description: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy."
-
 Tool:
   - Dashboard
+
+guide_top_header: "BrazeAI<sup>TM</sup>"
+guide_top_text: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy. With BrazeAI<sup>TM</sup> capabilities, you can have a trusted advisor to help guide your creativity, make better decisions, and optimize the user experience for your customers."
 
 guide_featured_title: "Features"
 guide_featured_list:
@@ -38,6 +38,5 @@ guide_featured_list:
   link: /docs/user_guide/brazeai/recommendations/
   image: /assets/img/braze_icons/hearts.svg
 ---
-
 
 <br>
