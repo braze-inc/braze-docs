@@ -15,11 +15,12 @@ $font-family_1: monospace;
   display: flex;
 }
 .scrolly-text {
+  background: #f9f9f9;
   flex: 1;
   max-height: 80vh;
   overflow-y: auto;
   scroll-margin-top: 10vh;
-  padding-bottom: 200px;
+  padding-bottom: 500px;
 }
 .scrolly-step {
   background: #f9f9f9;
@@ -149,6 +150,10 @@ pre {
 
 .rating-step {
   cursor: auto;
+  // min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .rating-step {

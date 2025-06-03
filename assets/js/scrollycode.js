@@ -204,10 +204,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // -2 so we skip the buffer/rating prompt step
         return steps.length - 2;
       }
-      const style = getComputedStyle(stepsContainer);
-      const paddingBottom = parseFloat(style.paddingBottom) || 0;
-      const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
-      const centerY = stepsContainer.scrollTop + effectiveHeight * 0.5;
+      // Ignore padding-bottom when figuring out the “vertical midpoint”:
+      const centerY =
+        stepsContainer.scrollTop + stepsContainer.clientHeight * 0.5;
       let closestIdx = currentIndex;
       let minDistance = Infinity;
       steps.forEach((step, i) => {
@@ -237,7 +236,18 @@ document.addEventListener("DOMContentLoaded", () => {
     steps.forEach((step, i) => {
       step.addEventListener("click", () => {
         if (step.classList.contains("rating-step")) return;
-        step.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // compute how to center “step” inside the scrolly-text container
+        const offsetTop = step.offsetTop;
+        const stepHeight = step.clientHeight;
+        const contHeight = stepsContainer.clientHeight;
+        const centerOffset = contHeight / 2 - stepHeight / 2;
+
+        stepsContainer.scrollTo({
+          top: offsetTop - centerOffset,
+          behavior: "smooth",
+        });
+
         activateStep(i);
       });
     });
@@ -283,31 +293,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 1) Log to Braze
         if (window.braze?.logCustomEvent) {
-          braze.logCustomEvent('Tutorial Rating', {
+          braze.logCustomEvent("Tutorial Rating", {
             tutorial: feedback_site,
-            rating
+            rating,
           });
           braze.requestImmediateDataFlush();
         }
 
         // 2) Send to feedback.js's network request
         var submit_data = {
-          'Helpful': rating === 5 ? 'Very Helpful' : 
-                    rating === 4 ? 'Helpful' :
-                    rating === 3 ? 'Somewhat Helpful' :
-                    rating === 2 ? 'Unhelpful' : 'Very Unhelpful',
-          'URL': feedback_site,
-          'Article Title': feedback_article_title,
-          'Nav Title': feedback_nav_title,
-          'Params': window.location.search,
-          "Language": page_language
+          Helpful:
+            rating === 5
+              ? "Very Helpful"
+              : rating === 4
+              ? "Helpful"
+              : rating === 3
+              ? "Somewhat Helpful"
+              : rating === 2
+              ? "Unhelpful"
+              : "Very Unhelpful",
+          URL: feedback_site,
+          "Article Title": feedback_article_title,
+          "Nav Title": feedback_nav_title,
+          Params: window.location.search,
+          Language: page_language,
         };
-        console.log('Sending feedback data:', submit_data);
+        console.log("Sending feedback data:", submit_data);
         $.ajax({
-          url: 'https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback',
+          url: "https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback",
           method: "GET",
           dataType: "json",
-          data: submit_data
+          data: submit_data,
         });
 
         // 3) Update UI
