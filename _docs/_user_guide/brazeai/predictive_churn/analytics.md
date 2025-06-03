@@ -37,7 +37,7 @@ The scores and the corresponding categories will be updated according to the sch
 
 ## Prediction quality {#prediction_quality}
 
-{% multi_lang_include brazeai/intelligent_suite/prediction_quality.md %}
+{% multi_lang_include brazeai/predictive_suite/prediction_quality.md %}
 
 ## Estimated accuracy {#estimated_results}
 

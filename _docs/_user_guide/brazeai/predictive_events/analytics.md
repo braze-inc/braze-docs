@@ -61,7 +61,7 @@ Using this information, we encourage you to decide how many of the true positive
 
 ## Prediction quality {#prediction_quality}
 
-{% multi_lang_include brazeai/intelligent_suite/prediction_quality.md %}
+{% multi_lang_include brazeai/predictive_suite/prediction_quality.md %}
 
 ## Event correlation table {#correlation_table}
 
