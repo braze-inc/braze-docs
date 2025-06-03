@@ -25,9 +25,6 @@ guide_featured_list:
 - name: Generative AI
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
-
-guide_menu_title: "Other"
-guide_menu_list:
 - name: Winning Variant and Personalized Variant
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg
