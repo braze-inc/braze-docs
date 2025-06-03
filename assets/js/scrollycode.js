@@ -193,33 +193,38 @@ document.addEventListener("DOMContentLoaded", () => {
       highlightLines(highlightList);
     }
 
+    const PREFERRED_TOP_OFFSET = 100;
     // Determine the closest narrative step based on scroll position.
     function getClosestStep() {
-      // workaround to make sure the first step is selected while scrolling back up
-      if (stepsContainer.scrollTop < 5) return 0;
-      // workaround to make sure the last step is selected while scrolling down
-      if (
-        stepsContainer.scrollTop >
-        stepsContainer.scrollHeight - stepsContainer.clientHeight - 5
-      ) {
-        // -2 so we skip the buffer/rating prompt step
-        return steps.length - 2;
+      // 1) If we’re within 1px of the bottom, immediately return the last real step
+      const scrollBottom =
+        stepsContainer.scrollTop + stepsContainer.clientHeight;
+      if (scrollBottom >= stepsContainer.scrollHeight - 1) {
+        // find the index of the last *non-rating* step
+        const normalSteps = steps.filter(
+          (s) => !s.classList.contains("rating-step")
+        );
+        return steps.indexOf(normalSteps[normalSteps.length - 1]);
       }
-      // Ignore padding-bottom when figuring out the “vertical midpoint”:
-      const centerY =
-        stepsContainer.scrollTop + stepsContainer.clientHeight * 0.5;
+
+      // 2) Otherwise, fall back to your existing “20px from top” midpoint logic:
+      const containerRect = stepsContainer.getBoundingClientRect();
+      const referenceY = containerRect.top + PREFERRED_TOP_OFFSET;
+
       let closestIdx = currentIndex;
       let minDistance = Infinity;
+
       steps.forEach((step, i) => {
-        if (i === steps.length - 1) return;
-        // Use offsetTop relative to the scroll container.
-        const mid = step.offsetTop + step.offsetHeight / 2;
-        const distance = Math.abs(mid - centerY);
+        if (step.classList.contains("rating-step")) return;
+        const stepRect = step.getBoundingClientRect();
+        const stepMidY = stepRect.top + stepRect.height / 2;
+        const distance = Math.abs(stepMidY - referenceY);
         if (distance < minDistance) {
           minDistance = distance;
           closestIdx = i;
         }
       });
+
       return closestIdx;
     }
 
@@ -234,26 +239,62 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Clicking on a narrative step activates it.
+    const normalSteps = steps.filter(
+      (s) => !s.classList.contains("rating-step")
+    );
+    const lastStep = normalSteps[normalSteps.length - 1];
+    const ratingStep = block.querySelector(".rating-step");
+
+    // Compute & apply the adaptive bottom buffer:
+    function updateBottomBuffer() {
+      const containerH = stepsContainer.clientHeight;
+      const ratingH = ratingStep.clientHeight;
+      const lastStepH = lastStep.clientHeight;
+
+      const buffer = Math.max(
+        0,
+        containerH - ratingH - lastStepH - PREFERRED_TOP_OFFSET
+      );
+      stepsContainer.style.paddingBottom = `${buffer}px`;
+    }
+
+    updateBottomBuffer();
+    window.addEventListener("resize", updateBottomBuffer);
+
     steps.forEach((step, i) => {
       step.addEventListener("click", () => {
         if (step.classList.contains("rating-step")) return;
 
         isProgrammaticScroll = true;
 
-        // compute how to center “step” inside the scrolly-text container
-        const offsetTop = step.offsetTop;
-        const stepHeight = step.clientHeight;
-        const contHeight = stepsContainer.clientHeight;
-        const centerOffset = contHeight / 2 - stepHeight / 2;
+        // ─── Compute “rawTarget” via bounding rectangles ───
+        // 1) Where is the container on screen?
+        const containerRect = stepsContainer.getBoundingClientRect();
+        // 2) Where is this step on screen?
+        const stepRect = step.getBoundingClientRect();
+        // 3) How many pixels between step.top and container.top?
+        const distanceToContainerTop = stepRect.top - containerRect.top;
+        // 4) Subtract PREFERRED_TOP_OFFSET so the step ends up that many px down
+        const rawTarget =
+          stepsContainer.scrollTop +
+          distanceToContainerTop -
+          PREFERRED_TOP_OFFSET;
 
+        // ─── Clamp to [0, maxScroll] ───
+        const maxScroll =
+          stepsContainer.scrollHeight - stepsContainer.clientHeight;
+        const targetScroll = Math.max(0, Math.min(rawTarget, maxScroll));
+
+        // ─── Smooth-scroll the container ───
         stepsContainer.scrollTo({
-          top: offsetTop - centerOffset,
+          top: targetScroll,
           behavior: "smooth",
         });
 
+        // ─── Immediately activate/highlight this step ───
         activateStep(i);
 
+        // ─── Re-enable normal scroll logic after the animation ───
         setTimeout(() => {
           isProgrammaticScroll = false;
         }, 400);
@@ -284,6 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // When the block becomes visible, re-activate its current step.
+            updateBottomBuffer();
             activateStep(currentIndex);
           }
         });
@@ -293,7 +335,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(block);
 
     // === rating prompt handler ===
-    const ratingStep = block.querySelector(".rating-step");
     const stars = Array.from(ratingStep.querySelectorAll(".star"));
     stars.forEach((star, idx) => {
       star.addEventListener("click", () => {
