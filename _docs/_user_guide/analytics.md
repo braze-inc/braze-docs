@@ -13,9 +13,6 @@ guide_featured_list:
   - name: Tracking
     link: /docs/user_guide/analytics/tracking/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: Data Transformation
-    link: /docs/user_guide/data/data_transformation/
-    image: /assets/img/braze_icons/database-01.svg
   - name: Your Analytics Dashboard
     link: /docs/user_guide/analytics/dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
