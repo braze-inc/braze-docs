@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         // Inflate the XML layout
         setContentView(R.layout.banners)
-        
+
         // Refresh placements
         Braze.getInstance(this)
             .requestBannersRefresh(
@@ -107,7 +107,7 @@ lines-MainApplication.kt=21-28
 Use `subscribeToBannersUpdates()` to listen for and react to incoming banner refresh results from the server.
 
 !!step
-lines-MainApplication.kt=30-34
+lines-MainActivity.kt=10-14
 
 #### 3. Refresh placements
 
@@ -233,14 +233,14 @@ final class BannerViewController: UIViewController {
 ```
 
 !!step
-lines-AppDelegate.swift=15
+lines-AppDelegate.swift=14
 
 #### 1. Enable debugging (optional)
 
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-AppDelegate.swift=21
+lines-AppDelegate.swift=20
 
 #### 2. Trigger a banners refresh
 
@@ -248,7 +248,7 @@ Call `requestBannersRefresh` for your placement ID after initializing Braze.
 This proactively fetches the latest banner data, ensuring your app can display new content quickly after launch.
 
 !!step
-lines-BannerViewController.swift=18-32
+lines-BannerViewController.swift=19-37
 
 #### 3. Initialize the Braze banner view with a processContentUpdates callback
 
@@ -257,14 +257,14 @@ The `processContentUpdates` callback will fire whenever the banner height change
 Inside the callback, unhide the banner and update its height constraint using the provided content height (capped at 80pt for this example).
 
 !!step
-lines-BannerViewController.swift=34-36
+lines-BannerViewController.swift=38-40
 
 #### 4. Hide banner by default, enable Auto Layout
 
 Hide the banner view until content loads and disable autoresizing mask translation to use Auto Layout constraints.
 
 !!step
-lines-BannerViewController.swift=43-57
+lines-BannerViewController.swift=43-58
 
 #### 5. Pin views with Auto Layout constraints and set up height constraint
 
@@ -368,14 +368,14 @@ struct BannerSwiftUIView: View {
 ```
 
 !!step
-lines-AppDelegate.swift=15
+lines-AppDelegate.swift=13
 
 #### 1. Enable debugging (optional)
 
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-AppDelegate.swift=21
+lines-AppDelegate.swift=19
 
 #### 2. Trigger a banners refresh
 
@@ -471,7 +471,7 @@ lines-index.js=5
 Enable debugging while developing to make troubleshooting easier!
 
 !!step
-lines-index.js=8-24
+lines-index.js=8-23
 
 #### 2. Subscribe to banner updates
 
