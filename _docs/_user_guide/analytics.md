@@ -22,9 +22,6 @@ guide_featured_list:
   - name: Your Reports
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/bar-chart-01.svg
-  - name: Catalogs
-    link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
-    image: /assets/img/braze_icons/list.svg
   - name: Query Builder
     link: /docs/user_guide/analytics/query_builder/
     image: /assets/img/braze_icons/code-02.svg
