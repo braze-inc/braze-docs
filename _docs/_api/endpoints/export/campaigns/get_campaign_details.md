@@ -33,7 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Required | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page and the **Campaign Details** page within your dashboard; or you can use the [Export campaigns list endpoint](#campaign-list-endpoint). |
-| `post_launch_draft_version` | Optional | Boolean | For messages that have a Post-Launch Draft version, setting this to true will show any draft changes available.  Defaults to False|
+| `post_launch_draft_version` | Optional | Boolean | For messages that have a post-launch draft, setting this to `true` will show any draft changes available. Defaults to `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
     "enabled": (boolean) whether this campaign is active or not,
-    "has_post_launch_draft": (boolean) whether this campaign has a Post-Launch Draft version,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,

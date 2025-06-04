@@ -31,7 +31,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Optional | Boolean | For Canvases that have a Post-Launch Draft version, setting this to true will show any draft changes available.  Defaults to False|
+| `post_launch_draft_version` | Optional | Boolean | For Canvases that have a post-launch draft, setting this to `true` will show any draft changes available. Defaults to `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
   "enabled": (boolean) whether this Canvas is active or not,
-  "has_post_launch_draft": (boolean) whether this Canvas has a Post-Launch Draft version,
+  "has_post_launch_draft": (boolean) whether this Canvas has a post-launch draft,
   "schedule_type": (string) the type of scheduling action,
   "first_entry": (string) the date of first entry as ISO 8601 date,
   "last_entry": (string) the date of last entry as ISO 8601 date,
