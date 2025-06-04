@@ -1420,7 +1420,7 @@ validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_set
 validurls['/docs/developer_guide/platform_integration_guides/cordova/other_integrations/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
 
 validurls['/docs/user_guide/data_and_analytics'] = '/docs/user_guide/analytics';
-validurls['/docs/user_guide/data_and_analytics/catalogs'] = '/docs/user_guide/analytics/catalogs';
+validurls['/docs/user_guide/data_and_analytics/catalogs'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs';
 validurls['/docs/user_guide/data_and_analytics/data_centers'] = '/docs/user_guide/data/data_centers/';
 validurls['/docs/data_centers/'] = '/docs/user_guide/data/data_centers/';
 
@@ -1430,7 +1430,7 @@ validurls['/docs/user_guide/data_and_analytics/analytics/conversions_dashboard']
 validurls['/docs/user_guide/data_and_analytics/analytics/deliverability_center'] = '/docs/user_guide/analytics/dashboard/deliverability_center';
 validurls['/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard'] = '/docs/user_guide/analytics/dashboard/email_performance_dashboard';
 validurls['/docs/user_guide/data_and_analytics/analytics/home_dashboard'] = '/docs/user_guide/analytics/dashboard/home_dashboard';
-validurls['/docs/user_guide/data_and_analytics/field_level_encryption'] = '/docs/user_guide/analytics/field_level_encryption';
+validurls['/docs/user_guide/data_and_analytics/field_level_encryption'] = '/docs/user_guide/data/field_level_encryption';
 validurls['/docs/user_guide/data_and_analytics/query_builder'] = '/docs/user_guide/analytics/query_builder';
 validurls['/docs/user_guide/data_and_analytics/query_builder/query_templates'] = '/docs/user_guide/analytics/query_builder/query_templates';
 validurls['/docs/user_guide/data_and_analytics/reporting'] = '/docs/user_guide/analytics/reporting';
@@ -2638,5 +2638,7 @@ validurls['/docs/shopify_features#shopify-data'] = '/docs/partners/ecommerce/sho
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending';
 
 validurls['/docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit'] = '/docs/user_guide/offerfit/';
+
+validurls['/docs/user_guide/analytics/field_level_encryption'] = '/docs/user_guide/data/field_level_encryption';
 
 // validurls['OLD'] = 'NEW';
