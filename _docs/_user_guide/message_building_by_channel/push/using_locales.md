@@ -11,6 +11,10 @@ description: "This article provides steps on how to use locales in your push not
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
+{% alert important %}
+Multi-language support and locales in messages are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
 ## Using locales
 
 To use locales in your messaging, compose a push campaign or Canvas, then complete the following:
