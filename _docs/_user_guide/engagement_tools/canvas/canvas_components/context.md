@@ -41,7 +41,7 @@ Each context variable includes:
 When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
 For example,
-{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user’s scheduled flight time.
+{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
 
