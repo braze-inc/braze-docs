@@ -133,13 +133,12 @@ import BrazeKit
 import BrazeUI
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var braze: Braze!
+    static var braze: Braze? = nil
 
     func application(
       _ application: UIApplication,
       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-
         // Braze configuration with your SDK API key and endpoint
         let configuration = Braze.Configuration(apiKey: "YOUR-API-TOKEN", endpoint: "YOUR-ENDPOINT")
         configuration.logger.level = .debug
@@ -148,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.braze = Braze(configuration: configuration)
 
         // Request a banners refresh
-        AppDelegate.braze.banners.requestBannersRefresh(placementIds: ["top-1"])
+        AppDelegate.braze?.banners.requestBannersRefresh(placementIds: ["top-1"])
 
         return true
     }
@@ -278,18 +277,16 @@ Set up a height constraint for the banner view (starting at 0), which will be up
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
-import UIKit
 import BrazeKit
 import BrazeUI
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var braze: Braze!
+    static var braze: Braze? = nil
 
     func application(
       _ application: UIApplication,
       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-
         // Braze configuration with your SDK API key and endpoint
         let configuration = Braze.Configuration(apiKey: "YOUR-API-TOKEN", endpoint: "YOUR-ENDPOINT")
         configuration.logger.level = .debug
@@ -298,7 +295,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.braze = Braze(configuration: configuration)
 
         // Request a banners refresh
-        AppDelegate.braze.banners.requestBannersRefresh(placementIds: ["top-1"])
+        AppDelegate.braze?.banners.requestBannersRefresh(placementIds: ["top-1"])
 
         return true
     }
@@ -380,7 +377,7 @@ Enable debugging while developing to make troubleshooting easier!
 !!step
 lines-AppDelegate.swift=21
 
-#### 2. Trigger a banners refresh (optional)
+#### 2. Trigger a banners refresh
 
 Call `requestBannersRefresh` for your placement ID after initializing Braze.
 This proactively fetches the latest banner data, ensuring your app can display new content quickly after launch.
