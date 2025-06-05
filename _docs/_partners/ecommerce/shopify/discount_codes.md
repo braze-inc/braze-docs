@@ -18,7 +18,7 @@ This is a community-submitted integration and isn’t directly supported by Braz
 
 | Requirement | Description |
 | --- | --- |
-| Set up a Shopify store | Be sure that you've already [set up a Shopify store with Braze]({{site.baseurl}}/shopify_overview/). |
+| Set up a Shopify store | Confirm you've already [set up a Shopify store with Braze]({{site.baseurl}}/shopify_overview/). |
 | Install the Bulk Discount Code Bot app | Download the [Bulk Discount Code Bot](https://apps.shopify.com/bulk-discount-generator) app in the Shopify app store. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -30,9 +30,9 @@ Use the Bulk Discount Code Bot to configure your discount codes based on the num
 
 ![The configuration options for a discount set.][1]
 
-## Step 2: Export your codes
+### Step 2: Export your codes
 
-Find your discount set in the Bulk Discount Code Bot's search bar, then select **Export Codes** > **Download Codes** to download a CSV file to your downloads folder.
+Find your discount set in the Bulk Discount Code Bot's search bar, then select **Export Codes** > **Download Codes** to download a CSV file to your Downloads folder.
 
 ![Search bar with a dropdown displaying the discount set and a row of buttons to select from.][2]{: style="max-width:70%;"}
 
@@ -40,7 +40,7 @@ In the CSV file, delete row 1 to remove the column header “Promo”. This will
 
 ![A flowchart showing the removal of the row header "Promo" in a CSV file.][3]{: style="max-width:60%;"}
 
-## Step 3: Add your discount codes to Braze
+### Step 3: Add your discount codes to Braze
 
 In Braze, go to **Data Settings** > **Promotion Codes** > **Create Promotion Code List** and [configure your discount codes list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#creating-a-promotion-code-list). Make sure you match the expiration date that was configured by the Bulk Discounts Code Bot.
 
@@ -50,7 +50,7 @@ Then, upload your CSV file and select **Save List**.
 
 {% details Multichannel campaign or Canvas step %}
 
-When a discount code snippet is used in a multichannel campaign or Canvas step, users always receive a unique code. If a user is eligible to receive a code through more than one channel, they'll receive the same code through each channel. In other words, an elgible user would only receive one code across all the messages sent by that campaign or Canvas step.
+When a discount code snippet is used in a multichannel campaign or Canvas step, users always receive a unique code. If a user is eligible to receive a code through more than one channel, they'll receive the same code through each channel. In other words, an eligible user would only receive one code across all the messages sent by that campaign or Canvas step.
 
 {% enddetails %}
 
@@ -60,9 +60,9 @@ When a discount code is referenced by multiple steps in the same Canvas or by se
 
 {% enddetails %}
 
-## Step 4: Add your discount codes to a Braze campaign or Canvas step
+### Step 4: Add your discount codes to a Braze campaign or Canvas step
 
-If you want to use your unique discount codes in a single-send campaign or you don't mind users receiving multiple unique codes across different campaigns or Canvas steps, copy the code's Liquid snippet from the promotion codes List you saved.
+If you want to use your unique discount codes in a single-send campaign, or you don't mind users receiving multiple unique codes across different campaigns or Canvas steps, copy the code's Liquid snippet from the promotion codes list you saved.
 
 ![A Liquid code snipppet with a button copy it.][4]{: style="max-width:60%;"}
 
@@ -72,17 +72,18 @@ Paste the Liquid snippet into a campaign or Canvas step.
 
 If you want users to recieve a single unique discount code no matter how many times the discount code is referenced in campaigns or Canvases, create a [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) step directly before the first Message step that assigns the discount code to a custom attribute, like "Promo Code".
 
-{% alert note %}
+{% alert tip %}
 You can also [create a custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) by going to **Data Settings** > **Custom Attributes**.
 {% endalert %}
 
-- **Attribute Name:** "Promo Code"
-- **Action:** "Update"
-- **Key Value:** Paste in the Liquid code snippet
+In the User Update step, do the following for each field:
+- **Attribute Name:** Select **Promo Code**.
+- **Action:** Select **Update**.
+- **Key Value:** Paste the Liquid code snippet.
 
 ![A User Update step that updates a "Promo Code" attribute with the Liquid snippet.][6]
 
-Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message and the discount code will be templated in.
+Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message, and the discount code will be templated in.
 
 [1]: {% image_buster /assets/img/Shopify/configure_discount_codes.png %}
 [2]: {% image_buster /assets/img/Shopify/export_discount_codes.png %}
