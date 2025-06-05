@@ -1,13 +1,14 @@
 ---
-nav_title: Integrating Banners
-guide_top_header: Integrating Banners
-article_title: Integrating Banners
-page_order: 1
+nav_title: "Tutorial: Displaying Banners"
+article_title: "Tutorial: Displaying Banners"
+description: "New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID!"
+page_order: 10
 layout: scrolly
-description: "A tutorial on how to integrate and refresh banner placements"
 ---
 
-# Displaying a Banner by its Placement ID
+# Tutorial: Displaying a Banner by its Placement ID
+
+> New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID! For more general information, see [Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% sdktabs %}
 {% sdktab android %}
