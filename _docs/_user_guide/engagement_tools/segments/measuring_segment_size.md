@@ -50,21 +50,25 @@ You can view an entire segment's estimated reachable users, including estimated 
 
 ### Considerations for estimate counts
 
-Braze measures the number of estimated users by querying a subset of your users, and then extrapolating those results to your entire audience. Because the subset of users that Braze queries may differ each time we calculate this estimate, the estimate may also change in cases where your audience membership technically should have stayed the same. For example, if you re-order your filters or re-check the same segment at a different time, it’s possible that the estimated count changes (even though **Calculate exact stats** would reveal the same results if your segment didn't change).
+Braze measures the number of estimated users by querying a subset of your users, and then extrapolates those results to your entire audience. Because the subset of users that Braze queries may differ each time we calculate this estimate, the estimate may also change in cases where your audience membership technically should have stayed the same. For example, if you re-order your filters or re-check the same segment at a different time, it’s possible that the estimated count changes (even though **Calculate exact stats** would reveal the same results if your segment didn't change).
 
 If you have a large user population in your workspace, you may see more variation between your estimated counts compared to your exact calculation counts, especially in cases where your segment is a very small percentage of your overall workspace population. This is because Braze measures the estimate by querying a subset of your users and extrapolating the results to your entire user base. For larger user bases, larger differences between estimated and exact counts are to be expected.
 
-Very small segments will have an estimated range that includes 0, and the percentage of total users may round to 0. In these cases, **Calculate exact stats** will help you see an accurate count of your segment size, which may not actually be 0.
+Very small segments will have an estimated range that includes 0, meaning the percentage of total users may round to 0. In these cases, **Calculate exact stats** will help you see an accurate count of your segment size, which may not actually be 0.
 
 ![The "Reachable users" side panel.][4]
 
 ### Reachable users by channel
 
-Select **Show breakdown** in the **Reachable users** panel to view the number of users that are reachable for each message channel. This breakdown displays some of the most frequently used messaging channels (such as web push or email) and the number of reachable users for those specific channels. 
+To view the number of users that are reachable for each message channel, select **Show breakdown** in the **Reachable users** panel. This displays some of the most frequently used messaging channels (such as web push or email) and the number of reachable users for those specific channels. 
 
-The *Total* metric in the first row represents unique users. For example, if a user has both Android push and iOS push, they will get counted for both of those rows, but will only count for one user in the _Total_ row. It's possible that the number of total users is different than the sum of users reachable by each channel. As mentioned previously, a single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. 
+The _Total_ metric represents unique users. For example, if a user has both Android push and iOS push, they will get counted for both of those rows, but will only count as 1 user in the _Total_ row.
 
-Also, not all channels are listed in the **Reachable users** table (such as Content Cards, webhooks, and WhatsApp). If you have users only reachable through Whatsapp, they will be reflected in the _Total_ but not in any of the channel-specific rows. This means that the total reachable users count can be different from the sum of the users for each displayed channel. In cases where the _Total_ is higher than the sum of the channels, the gap represents the number of users who qualified for the segment but aren't reachable through those communication channels.
+However, it's possible that the number of total users is different than the sum of users reachable by each channel, as a single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. 
+
+Keep in mind, not all channels are listed in the **Reachable users** table (such as Content Cards, webhooks, and WhatsApp). For example, if you have users only reachable through Whatsapp, they will be reflected in the _Total_ but not in any of the channel-specific rows. This means that the total reachable users count can be different from the sum of the users for each displayed channel.
+
+In cases where the _Total_ is higher than the sum of the channels, the gap represents the number of users who qualified for the segment but aren't reachable through those communication channels.
 
 For a user to be listed as reachable through a certain channel, the user must have:
 - A valid email address or push token associated with their profile, and
@@ -72,7 +76,11 @@ For a user to be listed as reachable through a certain channel, the user must ha
 
 ## Calculating exact statistics 
 
-Select **Calculate exact stats** in the **Reachable users** panel to view an accurate count of the number of users in your segment. If you’ve previously run the calculation for this segment, you can see when that calculation was last run, and you can select **Refresh exact statistics** for the most updated stats. The accuracy with this calculation is 99.999% or greater; for large segments, it's normal to see slight variation even when calculating exact statistic.
+To view an accurate count of the number of users in your segment, select **Calculate exact stats** in the **Reachable users** pane.
+
+To update the stats for a calculation you've previously run, select **Refresh exact statistics**. The date this calculation was last ran will automatically be updated.
+
+Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior.
 
 ![The "Reachable users" panel with an option to show the breakdown.][5]
 
