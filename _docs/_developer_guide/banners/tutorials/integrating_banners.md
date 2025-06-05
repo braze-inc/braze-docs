@@ -39,7 +39,7 @@ public class MainApplication : Application() {
             .subscribeToBannersUpdates { update ->
                 for (banner in update.banners) {
                     Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
-                    // And any custom banner logic you'd like
+                    // Add any custom banner logic you'd like
                 }
             }
     }
@@ -178,7 +178,7 @@ import BrazeUI
 final class BannerViewController: UIViewController {
 
   static let bannerPlacementID = "top-1"
-  var bannerHeightConstraint: NSLayoutConstraint?
+  var bannerHeightConstraints: NSLayoutConstraint?
 
   lazy var contentView: UILabel = {
     let contentView = UILabel()
