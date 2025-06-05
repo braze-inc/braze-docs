@@ -1,5 +1,3 @@
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
 ## Prerequisites
 
 Before you can start this tutorial, verify that your Braze SDK meets the minimum version requirements:
@@ -7,6 +5,8 @@ Before you can start this tutorial, verify that your Braze SDK meets the minimum
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
 ## Displaying banners
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
 {% scrolly %}
 
