@@ -38,15 +38,6 @@ Here are some examples of use cases that you can build with OfferFit. Your AI de
 
 {% multi_lang_include offerfit/sample_use_cases.md %}
 
-## About API key permissions
-
-During your OfferFit integration, you'll create a Braze API key with specific permissions that will define your integration's capabilities. Refer to the following table to learn more about each permission.
-
-{% alert tip %}
-This information can also be found on the [OfferFit integration]({{site.baseurl}}/developer_guide/offerfit/integration) page.
-{% endalert %}
-
-{% multi_lang_include offerfit/api_key_permissions.md %}
 
 ## Next steps
 
