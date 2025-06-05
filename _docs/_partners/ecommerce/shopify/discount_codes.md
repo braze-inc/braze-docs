@@ -46,20 +46,6 @@ In Braze, go to **Data Settings** > **Promotion Codes** > **Create Promotion Cod
 
 Then, upload your CSV file and select **Save List**.
 
-### Discount code behavior
-
-{% details Multichannel campaign or Canvas step %}
-
-When a discount code snippet is used in a multichannel campaign or Canvas step, users always receive a unique code. If a user is eligible to receive a code through more than one channel, they'll receive the same code through each channel. In other words, an eligible user would only receive one code across all the messages sent by that campaign or Canvas step.
-
-{% enddetails %}
-
-{% details Different Canvas steps or separate campaigns %}
-
-When a discount code is referenced by multiple steps in the same Canvas or by separate campaigns, an eligible user will receive multiple unique promotion codes (one code for each Canvas step or campaign).
-
-{% enddetails %}
-
 ### Step 4: Add your discount codes to a Braze campaign or Canvas step
 
 If you want to use your unique discount codes in a single-send campaign, or you don't mind users receiving multiple unique codes across different campaigns or Canvas steps, copy the code's Liquid snippet from the promotion codes list you saved.
@@ -84,6 +70,20 @@ In the User Update step, do the following for each field:
 ![A User Update step that updates a "Promo Code" attribute with the Liquid snippet.][6]
 
 Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message, and the discount code will be templated in.
+
+## Discount code behavior
+
+{% details Multichannel campaign or Canvas step %}
+
+When a discount code snippet is used in a multichannel campaign or Canvas step, users always receive a unique code. If a user is eligible to receive a code through more than one channel, they'll receive the same code through each channel. In other words, an eligible user would only receive one code across all the messages sent by that campaign or Canvas step.
+
+{% enddetails %}
+
+{% details Different Canvas steps or separate campaigns %}
+
+When a discount code is referenced by multiple steps in the same Canvas or by separate campaigns, an eligible user will receive multiple unique promotion codes (one code for each Canvas step or campaign).
+
+{% enddetails %}
 
 [1]: {% image_buster /assets/img/Shopify/configure_discount_codes.png %}
 [2]: {% image_buster /assets/img/Shopify/export_discount_codes.png %}
