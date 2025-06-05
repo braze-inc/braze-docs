@@ -94,27 +94,27 @@ lines-MainApplication.kt=12
 
 #### 1. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-MainApplication.kt=21-28
 
-#### 2. Subscribe to banner updates
+#### 2. Subscribe to Banner updates
 
-Use `subscribeToBannersUpdates()` to listen for and react to incoming banner refresh results from the server.
+Use `subscribeToBannersUpdates()` to register a handler that runs whenever a Banner is updated.
 
 !!step
 lines-MainActivity.kt=10-14
 
-#### 3. Refresh placements
+#### 3. Refresh your placements
 
-Invoke `requestBannersRefresh()` to fetch the latest banner content from Braze for the specified placement ID(s).
+After initializing the Braze SDK, call `requestBannersRefresh(["PLACEMENT_ID"])`  to fetch the latest Banner content for that placement.
 
 !!step
 lines-banners.xml=15-19
 
-#### 4. Define the BannerView in banners.xml
+#### 4. Define `BannerView` in your `banners.xml`
 
-Specify a `<com.braze.ui.banners.BannerView>` element with `app:placementId="<placement-id>"` so that Braze knows where to render the banner content in your UI.
+In `banners.xml`, declare a `<com.braze.ui.banners.BannerView>` element with `app:placementId="PLACEMENT_ID"`. Braze will use this element to insert your Banner into your UI.
 
 {% endscrolly %}

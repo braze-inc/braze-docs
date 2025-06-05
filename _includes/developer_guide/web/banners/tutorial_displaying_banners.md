@@ -51,39 +51,36 @@ lines-index.js=5
 
 #### 1. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-index.js=8-23
 
-#### 2. Subscribe to banner updates
+#### 2. Subscribe to Banner updates
 
-Use `subscribeToBannersUpdates(callback)` to register a handler that will run any time banners are refreshed.
-
-Within the callback, get the banner for your placement using `braze.getBanner("global_banner")`.
+Use `subscribeToBannersUpdates()` to register a handler that runs whenever a Banner is updated. Inside the handler, call `braze.getBanner("global_banner")` to get the latest placement.
 
 !!step
 lines-index.js=15-22
 
-#### 3. Insert the banner and handle control groups
+#### 3. Insert the Banner and handle control groups
 
-If a banner is returned, insert it into your page with `braze.insertBanner(banner, container)`.
-
-If the returned banner is a control group (i.e. `isControl` is true), hide or collapse the banner's container so your layout stays clean.
+Use `braze.insertBanner(banner, container)` to insert a Banner when it's returned. To ensure keep your layout clean, hide or collapse Banners that are apart of a control group (for example, when `isControl` is `true`).
 
 !!step
 lines-index.js=25
 
-#### 4. Request banners refresh
+#### 4. Refresh your Banners
 
-Call `requestBannersRefresh(["global_banner", ...])` after initializing to ensure your banners are fetched from Braze.
-Call this whenever you want to refresh the banners for any placement(s).
+After initializing the SDK, call `requestBannersRefresh(["global_banner", ...])` to ensure that Banners are refreshed at the start of each session.
+
+You can also call this function at any time to refresh Banner placements later.
 
 !!step
 lines-main.html=3
 
-#### 5. Add a container for your banner
+#### 5. Add a container for your Banner
 
-Add a div in your HTML (e.g. `<div id="global-banner-container"></div>`) where Braze will insert the banner content.
+In your HTML, add a new `<div>` element and give it a short, Banner-related `id`, such as `global-banner-container`. Braze will use this `<div>` to insert your Banner into the page.
 
 {% endscrolly %}
