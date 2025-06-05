@@ -36,6 +36,7 @@ description: "This reference article explains the different components of the Br
 ```
 
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
+  - Any valid `app_id` from an app configured in your workspace will work for all users in your workspace, regardless of whether the user has the specific app on their profile or not.
 - For more information and best practices on preheaders, see our help article on [email body styling][46].
 
 {% alert warning %}
@@ -46,7 +47,7 @@ Valid attachment types include: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`,
 
 An `email_template_id` can be retrieved from the bottom of any email template created with the HTML editor. The following shows an example of what this ID looks like:
 
-![API Identifier section of an HTML email template][31]
+![API Identifier section of an HTML email template.][31]{: style="max-width:70%;"} 
 
 ## Example email object with attachment
 
