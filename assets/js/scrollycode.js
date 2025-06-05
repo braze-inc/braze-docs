@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.className = "highlight-overlay";
         overlay.style.top = `${top}px`;
         overlay.style.height = `${height}px`;
-        // width:100% from CSS
+        overlay.style.width = codeElem.scrollWidth + "px";
         activePre.appendChild(overlay);
       });
     }
