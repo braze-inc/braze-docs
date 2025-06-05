@@ -1,14 +1,14 @@
 ---
 nav_title: "Tutorial: Displaying Banners"
 article_title: "Tutorial: Displaying a Banner by Placement ID"
-description: "New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID!"
+description: "New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID."
 page_order: 10
 layout: scrolly
 ---
 
 # Tutorial: Displaying a Banner by Placement ID
 
-> New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID! For more general information, see [Banners]({{site.baseurl}}/developer_guide/banners/).
+> New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID. For more general information, see [Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% sdktabs %}
 {% sdktab android %}
