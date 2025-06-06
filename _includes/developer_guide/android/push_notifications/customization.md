@@ -224,9 +224,9 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## Rendering multiplier text
+## Rendering multicolor text
 
-In Braze SDK version 3.1.1, HTML can be sent to a device to render multiplier text in push notifications.
+In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor text in push notifications.
 
 ![An Android push message "Multicolor Push test message" where the letters are different colors, italicized and given a background color.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
