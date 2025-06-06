@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can integrate OfferFit by Braze, you'll need an active OfferFit license. Interested in learning more? [Book a call](https://offerfit.ai/book-now)
+Before you can integrate OfferFit by Braze, you'll need an active OfferFit subscription. Interested in learning more? [Book a call](https://offerfit.ai/book-now) with our team.
 
 ## Integrating OfferFit
 
