@@ -35,7 +35,7 @@ Refer to the following table for common geofence terms and their descriptions.
 | Cooldown | Users receive geofence-triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Creating a geofence
+## Manually create geofences
 
 ### Step 1: Create a geofence set
 
@@ -59,6 +59,51 @@ We recommend creating geofences with a radius of at least 200 meters for optimal
 {% endalert %}
 
 ![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.][3]
+
+## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
+
+Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key, and an optional `name` key for each geofence. 
+
+To upload your GeoJSON, select **More** > **Upload GeoJSON**. Then, select your file.
+
+When creating your geofences, consider the following details:
+
+- The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
+- The maximum geofence radius that may be uploaded is 10,000 meters (about 100 kilometers or 62 miles).
+
+### Example
+
+The following example represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
+
+```
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.992473, 40.755669]
+      },
+      "properties": {
+        "radius": 200,
+        "name": "Braze HQ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.044468, 40.689225]
+       },
+      "properties": {
+        "radius": 100,
+        "name": "Statue of Liberty"
+      }
+    }
+  ]
+}
+```
 
 ## Using geofence events
 
