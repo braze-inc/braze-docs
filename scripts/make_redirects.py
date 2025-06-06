@@ -13,7 +13,7 @@ import subprocess
 # Global variables
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
 REDIRECT_FILE = os.environ.get('REDIRECT_FILE')
-
+LOG_PATH = os.path.join(PROJECT_ROOT, "scripts", "temp", "mredirect_logs")
 
 # Uses Git to return a list of renamed files and directories in this format:
 #   files:       rename _docs/_contributing/{bdocs.md => test.md} (100%)
@@ -30,12 +30,10 @@ def get_renamed_files():
     return changed_files
 
 
-# Writes unmatched lines to ./scripts/temp/mredirect_logs without printing.
+# Adds unmatched lines to ./scripts/temp/mredirect_logs.
 def log_unmatched(line):
-    log_dir = os.path.join(PROJECT_ROOT, "scripts", "temp")
-    os.makedirs(log_dir, exist_ok=True)
-    log_path = os.path.join(log_dir, "mredirect_logs")
-    with open(log_path, "a") as log_file:
+    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+    with open(LOG_PATH, "a") as log_file:
         log_file.write(line + "\n")
 
 
@@ -88,11 +86,11 @@ def remove_duplicates(lines):
 
 
 def main():
-    # Clear the log file on each run
-    os.makedirs("./scripts/temp", exist_ok=True)
-    with open("./scripts/temp/mredirect_logs", "w") as log_file:
-        pass  # This just truncates the file
-    
+    # Reset the log file each run
+    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+    with open(LOG_PATH, "w"):
+        pass
+
     changed_files = get_renamed_files()
     redirects_created = False
 
@@ -122,6 +120,10 @@ def main():
 
     if redirects_created:
         print("Redirects created successfully!")
+        if os.path.getsize(LOG_PATH) > 0:
+            with open(LOG_PATH) as log_file:
+                print("\nHowever, some redirects will need to be created manually:\n")
+                print(log_file.read().rstrip())
 
 
 if __name__ == "__main__":
