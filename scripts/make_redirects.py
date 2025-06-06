@@ -94,40 +94,43 @@ def main():
     changed_files = get_renamed_files()
     if not changed_files:
         return
-    
+
+    placeholder_comment = "// validurls['OLD'] = 'NEW';"
     redirects_created = False
 
-    with open(REDIRECT_FILE, 'r+') as f:
-        lines = f.readlines()
+    with open(REDIRECT_FILE, "r+") as f:
+        original_lines = f.readlines()
+        lines = [l for l in original_lines if l.strip() != placeholder_comment]
 
-        # Remove any existing placeholder comment
-        lines = [l for l in lines if l.strip() != "// validurls['OLD'] = 'NEW';"]
-
-        # Append any new redirects
+        # Build redirects, skip duplicates
         for line in changed_files:
             redirect_line = create_redirect(line)
-            if redirect_line:
+            if redirect_line and (redirect_line + "\n") not in lines:
                 lines.append(redirect_line + "\n")
                 redirects_created = True
 
-        if redirects_created:
-            # Re-add placeholder comment
-            lines.append("\n// validurls['OLD'] = 'NEW';\n")
-            
-            # Remove duplicates
-            unique_lines = remove_duplicates(lines)
-            
-            # Rewrite file
+        if not redirects_created:
+            print(
+                "Error: Git can't find any renamed files committed in this branch.\n"
+                "Note that redirects are only created for renamed files if they're "
+                "'committed', not just 'added' to the branch."
+            )
+            return
+
+        # Add placeholder and tidy file
+        lines.append(f"\n{placeholder_comment}\n")
+        unique_lines = remove_duplicates(lines)
+
+        # Only write if content actually changed
+        if unique_lines != original_lines:
             f.seek(0)
             f.truncate()
             f.writelines(unique_lines)
-
-    if redirects_created:
-        print("Redirects created successfully!")
-        if os.path.getsize(LOG_PATH) > 0:
-            with open(LOG_PATH) as log_file:
-                print("\nHowever, some redirects will need to be created manually:\n")
-                print(log_file.read().rstrip())
+            print("Redirects created successfully!")
+            if os.path.getsize(LOG_PATH) > 0:
+                with open(LOG_PATH) as log_file:
+                    print("\nHowever, some redirects will need to be created manually:\n")
+                    print(log_file.read().rstrip())
 
 
 if __name__ == "__main__":
