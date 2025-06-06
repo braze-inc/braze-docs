@@ -72,7 +72,7 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Limitations
 
-Currently, Banner messages don't support the following features:
+A single workspace can only have a maximum of 100 active Banner campaigns. Additionally, Banner messages do not support the following features:
 
 - Canvas integration
 - API-triggered and action-based campaigns
