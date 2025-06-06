@@ -2643,4 +2643,6 @@ validurls['/docs/user_guide/analytics/field_level_encryption'] = '/docs/user_gui
 
 validurls['/docs/user_guide/message_building_by_channel/sms'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs';
 
+validurls['/docs/_user_guide/engagement_tools/locations_and_geofences/creating_geofences/#creating-geofence-sets-via-bulk-upload'] = '/docs/_user_guide/engagement_tools/locations_and_geofences/creating_geofences';
+
 // validurls['OLD'] = 'NEW';
