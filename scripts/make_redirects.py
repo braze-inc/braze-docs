@@ -92,6 +92,9 @@ def main():
         pass
 
     changed_files = get_renamed_files()
+    if not changed_files:
+        return
+    
     redirects_created = False
 
     with open(REDIRECT_FILE, 'r+') as f:
@@ -107,16 +110,17 @@ def main():
                 lines.append(redirect_line + "\n")
                 redirects_created = True
 
-        # Re-add placeholder comment
-        lines.append("\n// validurls['OLD'] = 'NEW';\n")
-
-        # Remove duplicates
-        unique_lines = remove_duplicates(lines)
-
-        # Rewrite file
-        f.seek(0)
-        f.truncate()
-        f.writelines(unique_lines)
+        if redirects_created:
+            # Re-add placeholder comment
+            lines.append("\n// validurls['OLD'] = 'NEW';\n")
+            
+            # Remove duplicates
+            unique_lines = remove_duplicates(lines)
+            
+            # Rewrite file
+            f.seek(0)
+            f.truncate()
+            f.writelines(unique_lines)
 
     if redirects_created:
         print("Redirects created successfully!")
