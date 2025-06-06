@@ -82,6 +82,8 @@ Currently, Banner messages don't support the following features:
 - User-controlled dismissals
 - `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid)
 
+Additionally, each workspace can have a maximum of **100 active Banner campaigns** at any given time.
+
 {% alert tip %}
 Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
 {% endalert %}
