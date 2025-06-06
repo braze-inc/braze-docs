@@ -8,7 +8,7 @@
 
 OfferFit's AI decisioning agents automatically discover the optimal action for every customer. Using your first-party data, OfferFit can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
-The AI Expert Services team will tailor OfferFit to the specific needs of your business. While OfferFit works best with Braze, a variety of other platforms are already supported. To learn more, [book a call](https://offerfit.ai/book-now) with OfferFit.
+Our AI Expert Services team will tailor OfferFit to the specific needs of your business. While OfferFit works best with Braze, a variety of other platforms are already supported. To learn more, [book a call](https://offerfit.ai/book-now) with OfferFit.
 
 ## Key features
 
@@ -24,24 +24,30 @@ The AI Expert Services team will tailor OfferFit to the specific needs of your b
 
 A use case is a custom configuration for OfferFit’s AI decisioning engine that's tailor-made to meet a specific business goal.
 
-For example, you could build a repeat purchase use case to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while OfferFit runs daily experiments, automatically testing different combinations of product offers, message timing, and frequency for each customer. Over time, OfferFit learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
+For example, you could build a repeat purchase use case to increase follow-up conversions after an initial sale. Working with our AI Expert Services team, you will define the exact metric you want to drive, the dimensions you want the AI to explore along, and what the range of actions it is allowed to take. 
 
-Building a good use case consists of:
+In this hypothetical repeat purchase use case, for instance, OfferFit could continuously experiment with a combination of product offers, message timing, send frequency, and message channel. Over time, OfferFit learns what works best for each individual customer and orchestrates the most effective actions to maximize repeat purchases in your audience.
 
-- Choosing a success metric for OfferFit to optimize for, such as revenue, conversions, or ARPU.
-- Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
-- Selecting the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
+### What makes a good use case?
 
-### Sample use cases
+Our AI Expert Services team will work with you to craft a use case that most effectively drives the business outcomes that matter to you. Together, we will work to define:
 
-Here are some examples of use cases that you can build with OfferFit. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
+- An audience that you plan to target with OfferFit
+- A success metric that aligns with your business goals, such as net revenue, conversions, or ARPU.
+- A wide range of dimensions to test along, such as offer, subject line, creative, channel, and frequency.
+- The range of options the AI can combine, such as the type and value of offers, subject lines and creatives, available channels (e.g. email, SMS, and/or Push), and weekly send frequency.
 
-{% multi_lang_include offerfit/sample_use_cases.md %}
+In general, an effective use case is defined by a rich set of experimentation options that allow the AI the greatest possible action space to personalize and find the best option for every user.
 
+### Additional use case examples
+
+Please refer to the [Building a use case]({{site.baseurl}}/developer_guide/offerfit/building_use_cases) page for more examples of potential OfferFit use cases.
+
+{% multi_lang_include offerfit/offerfit_faq.md %}
 
 ## Next steps
 
-Now that you know more about OfferFit by Braze, you're ready for the next steps:
+Now that you know more about OfferFit by Braze, you're ready for next steps:
 
-1. [Integrating OfferFit]({{site.baseurl}}/developer_guide/offerfit/integration)
+1. [Setting up OfferFit]({{site.baseurl}}/developer_guide/offerfit/set_up)
 2. [Building a use case]({{site.baseurl}}/developer_guide/offerfit/building_use_cases)
