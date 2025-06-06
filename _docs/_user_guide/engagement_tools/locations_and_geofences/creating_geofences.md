@@ -25,7 +25,7 @@ You may create or upload an unlimited number of geofences on the dashboard, allo
 
 - Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app.
 - iOS devices may monitor up to 20 geofences at a time per app. Braze will monitor up to 20 locations if space is available. 
-- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start/silent push refresh
+- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start.
 - For geofences to work correctly, you should ensure that your app is not using all available geofence spots.
 
 ## Creating geofence sets
@@ -38,11 +38,50 @@ From the **Locations** page, click **+ Create Geofence Set**.
 
 Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
 
+### Creating sets via bulk upload {#creating-geofence-sets-via-bulk-upload}
+
+Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence. To upload your GeoJSON, click **+ Create Geofence Set** followed by **Upload GeoJSON**.
+
+The following sample represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan. We recommend uploading geofences with a radius of at least 100 meters for optimal functionality.
+
+```
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.992473, 40.755669]
+      },
+      "properties": {
+        "radius": 200,
+        "name": "Braze HQ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.044468, 40.689225]
+       },
+      "properties": {
+        "radius": 100,
+        "name": "Statue of Liberty"
+      }
+    }
+  ]
+}
+```
+
+When creating your geofences, keep the following points in mind:
+
+- The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
+- The maximum geofence radius that may be uploaded is 10,000 meters (about 100 kilometers or 62 miles).
+
 ## Updating geofence sets
 
 For active users, the Braze SDK will only request geofences once per day on session start. That means if changes are made to the geofence sets after session start, you'll need to wait 24 hours from the time the sets are first pulled down to receive the updated set.
-
-For inactive users, if the user is background push enabled, Braze will also send a silent push once every 24 hours to pull down the latest locations to the device.
 
 {% alert note %}
 If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
