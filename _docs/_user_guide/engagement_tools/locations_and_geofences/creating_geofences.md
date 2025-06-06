@@ -128,8 +128,6 @@ To use geofence data to personalize a message, you can use the following Liquid 
 
 For active users, the Braze SDK will only request geofences once per day on session start. That means if changes are made to the geofence sets after session start, you'll need to wait 24 hours from the time the sets are first pulled down to receive the updated set.
 
-For inactive users, if the user is background push enabled, Braze will also send a silent push once every 24 hours to pull down the latest locations to the device.
-
 {% alert note %}
 If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
 {% endalert %}
