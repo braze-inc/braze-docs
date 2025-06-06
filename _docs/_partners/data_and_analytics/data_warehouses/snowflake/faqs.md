@@ -27,4 +27,10 @@ You might have used the wrong Snowflake account ID when creating your data share
 
 If your share is cross region, the data might not be immediately available. Depending on your data volume, it could take a few hours for data to sync to your region.
 
+### Why am I getting a HIPAA compliance error when creating a datashare?
+If you receive the error "By default, data sharing is not allowed from this cluster to a HIPAA non-compliant account. The specified account is either not HIPAA-compliant or on Snowflake editions lower than BUSINESS CRITICAL. Please upgrade your account to Business Critical, or contact your CSM or Braze Support," this means your Snowflake account needs to be upgraded to Business Critical edition to be HIPAA-compliant for data sharing. Contact your Customer Success Manager or Braze Support for assistance with upgrading your account.
+
+### Why can't I recreate a datashare after deleting one?
+If you receive the error "Unable to recreate datashare because the system is deprovisioning a datashare from this workspace with the same destination Snowflake region and target account ID. Please wait a few minutes and try again after deprovisioning is complete," this means the system is still processing the deletion of your previous datashare. Wait a few minutes for the deprovisioning process to complete, then try creating the new datashare again.
+
 
