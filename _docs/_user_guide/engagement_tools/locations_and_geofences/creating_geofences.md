@@ -39,6 +39,8 @@ Refer to the following table for common geofence terms and their descriptions.
 
 ### Step 1: Create a geofence set
 
+To create a geofence, you'll need to create a geofence set first.
+
 1. Go to **Audience** > **Locations** in the Braze dashboard.
 2. Select **Create Geofence Set**.
 3. For **Set name**, enter a name for your geofence set.
@@ -46,9 +48,15 @@ Refer to the following table for common geofence terms and their descriptions.
 
 ### Step 2: Add the geofences
 
+Next, you can add geofences to your geofence set.
+
 1. Select **Draw Geofence** to click and drag the circle on the map. Repeat to add more geofences to your set as needed.
 2. (optional) You can select **Edit** and replace the geofence description with a name.
 3. Select **Save Geofence Set** to save.
+
+{% alert tip %}
+We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Mobile integrations](#mobile-integrations).
+{% endalert %}
 
 ![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.][3]
 
