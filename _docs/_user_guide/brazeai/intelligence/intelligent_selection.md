@@ -25,11 +25,30 @@ Intelligent Selection will:
 
 Intelligent Selection works best for campaigns that send more than once. It needs early performance data to start optimizing, so single-send campaigns won’t benefit. For those campaigns, we recommend using a traditional [A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) instead.
 
+## Prerequisites
+
+{% tabs %}
+{% tab Campaign %}
+Before adding Intelligent Selection to your campaign, make sure you’ve set things up correctly:
+
+- Your campaign sends on a recurring schedule. Single-send campaigns aren’t supported.
+- You’ve added at least two message variants.
+- You’ve defined a conversion event to measure performance across variants.
+- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. To learn more, refer to [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
+{% endtab %}
+
+{% tab Canvas %}
+To use Intelligent Selection in a Canvas, confirm the following:
+- Your Canvas includes at least two message variants in a Message step.
+- You’ve added at least one conversion event.
+{% endtab %}
+{% endtabs %}
+
 ## Adding Intelligent Selection
 
 You can add Intelligent Selection to your campaigns and Canvases.
 
-{% tabs local %}
+{% tabs %}
 {% tab Campaign %}
 Intelligent Selection can be added to any multi-send campaign in the **Target Audiences** step of the Braze campaign composer. Campaigns that send only once are unable to leverage this feature.
 
