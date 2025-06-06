@@ -13,9 +13,9 @@ search_rank: 9
 
 > At the core of our real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.
 
-## Overview
+## How it works
 
-You can define geofences from **Audience** > **Locations** in the Braze dashboard. Geofences can be used to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
+Geofences can be used to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
 
 Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
 
@@ -35,19 +35,22 @@ Refer to the following table for common geofence terms and their descriptions.
 | Cooldown | Users receive geofence-triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Updating geofence sets
+## Creating a geofence
 
-For active users, the Braze SDK will only request geofences once per day on session start. That means if changes are made to the geofence sets after session start, you'll need to wait 24 hours from the time the sets are first pulled down to receive the updated set.
+### Step 1: Create a geofence set
 
-For inactive users, if the user is background push enabled, Braze will also send a silent push once every 24 hours to pull down the latest locations to the device.
+1. Go to **Audience** > **Locations** in the Braze dashboard.
+2. Select **Create Geofence Set**.
+3. For **Set name**, enter a name for your geofence set.
+4. (optional) Add tags to filter your set.
 
-{% alert note %}
-If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
-{% endalert %}
+### Step 2: Add the geofences
 
-## Updating geofences for users
+1. Select **Draw Geofence** to click and drag the circle on the map. Repeat to add more geofences to your set as needed.
+2. (optional) You can select **Edit** and replace the geofence description with a name.
+3. Select **Save Geofence Set** to save.
 
-Updating geofences for individual users may be helpful when testing. To update geofence sets, go to the **Locations** page and select **Re-sync Geofences**. You'll then be prompted to enter the external ID and email of the users you would like to update.
+![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.][3]
 
 ## Using geofence events
 
@@ -67,6 +70,20 @@ To use geofence data to personalize a message, you can use the following Liquid 
 * `{{event_properties.${geofence_name}}}`
 * `{{event_properties.${geofence_set_name}}}`
 {% endraw %}
+
+## Updating geofence sets
+
+For active users, the Braze SDK will only request geofences once per day on session start. That means if changes are made to the geofence sets after session start, you'll need to wait 24 hours from the time the sets are first pulled down to receive the updated set.
+
+For inactive users, if the user is background push enabled, Braze will also send a silent push once every 24 hours to pull down the latest locations to the device.
+
+{% alert note %}
+If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
+{% endalert %}
+
+## Updating geofences for users
+
+Updating geofences for individual users may be helpful when testing. To update geofence sets, go to the **Locations** page and select **Re-sync Geofences**. You'll then be prompted to enter the external ID and email of the users you would like to update.
 
 ## Mobile integrations {#mobile-integrations}
 
@@ -125,3 +142,4 @@ As a best practice, avoid setting up geofences inside each other as this may cau
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
 [2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
+[3]: {% image_buster /assets/img/geofence_example.png %}
