@@ -12,6 +12,10 @@ In a single user session, you can request a maximum of 10 placements. For each o
 
 For more information, see [Placement requests]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 
+## How many Banner campaigns can be active simultaneously?
+
+Each workspace supports a maximum of **100 active Banner campaigns** at any one time. If you reach this limit, you'll need to archive or deactivate older campaigns before creating new ones.
+
 ## For campaigns sharing a placement, which Banner is displayed first?
 
 If a user qualifies for multiple Banner campaigns that share the same placement, the Banner with the highest priority will be displayed. For more information, see [Banner priority]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
