@@ -3,6 +3,7 @@ nav_title: Creating Geofences
 article_title: Creating Geofences
 page_order: 1
 page_type: reference
+toc_headers: h2
 description: "This reference article covers what geofences are, and how to create and configure geofence events."
 tool: 
   - Location
