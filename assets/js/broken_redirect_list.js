@@ -2643,4 +2643,9 @@ validurls['/docs/user_guide/analytics/field_level_encryption'] = '/docs/user_gui
 
 validurls['/docs/user_guide/message_building_by_channel/sms'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs';
 
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs'] = '/docs/user_guide/engagement_tools/locations_and_geofences';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#location-tracking'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences';
+
 // validurls['OLD'] = 'NEW';

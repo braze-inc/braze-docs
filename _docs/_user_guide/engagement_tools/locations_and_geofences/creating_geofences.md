@@ -13,71 +13,27 @@ search_rank: 9
 
 > At the core of our real-time location offering is the concept of a geofence. A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position. Geofences can vary from the size of a building to the size of an entire city.
 
-You can define geofences on the Braze dashboard and use them to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
-
 ## Overview
 
-Manage geofences from **Audience** > **Locations**.
+You can define geofences from **Audience** > **Locations** in the Braze dashboard. Geofences can be used to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
 
 Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
 
-You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+You can create or upload an unlimited number of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
 
 - Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app.
 - iOS devices may monitor up to 20 geofences at a time per app. Braze will monitor up to 20 locations if space is available. 
-- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start/silent push refresh
+- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start.
 - For geofences to work correctly, you should ensure that your app is not using all available geofence spots.
 
-## Creating geofence sets
+Refer to the following table for common geofence terms and their descriptions.
 
-### Creating sets manually
-
-From the **Locations** page, click **+ Create Geofence Set**.
-
-![Geofence set of German airports with a user drawing a radius of two thousand meters on the map for Hamburg Airport.][1]
-
-Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/).
-
-### Creating sets via bulk upload {#creating-geofence-sets-via-bulk-upload}
-
-Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence. To upload your GeoJSON, click **+ Create Geofence Set** followed by **Upload GeoJSON**.
-
-The following sample represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan. We recommend uploading geofences with a radius of at least 100 meters for optimal functionality.
-
-```
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
-      },
-      "properties": {
-        "radius": 200,
-        "name": "Braze HQ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-74.044468, 40.689225]
-       },
-      "properties": {
-        "radius": 100,
-        "name": "Statue of Liberty"
-      }
-    }
-  ]
-}
-```
-
-When creating your geofences, keep the following points in mind:
-
-- The `coordinates` value in the GeoJSON is formatted as [Longitude, Latitude].
-- The maximum geofence radius that may be uploaded is 10,0000 meters (about 100 kilometers or 62 miles).
+| Term | Description |
+|---|---|
+| Latitude and longitude | The geographic center of the geofence. |
+| Radius | The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 100–150 meters for all geofences. |
+| Cooldown | Users receive geofence-triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Updating geofence sets
 
@@ -89,21 +45,21 @@ For inactive users, if the user is background push enabled, Braze will also send
 If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
 {% endalert %}
 
-### Update for individual users
+## Updating geofences for users
 
-Updating geofences for individual users may be helpful when testing. To update geofence sets, navigate to the bottom of the **Locations** page and click **Re-sync Geofences**. You will then be prompted to enter `external_id` or `email` of the users you would like to update
+Updating geofences for individual users may be helpful when testing. To update geofence sets, go to the **Locations** page and select **Re-sync Geofences**. You'll then be prompted to enter the external ID and email of the users you would like to update.
 
 ## Using geofence events
 
 Once geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
 
-### Triggering
+### Triggering campaigns and Canvases
 
 To use geofence data as part of campaign and Canvas triggers, choose **Action-Based Delivery** for the delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
 
-![][2]
+![An action-based campaign with a geofence that will trigger when a user enters German airports.][2]
 
-### Personalization
+### Personalizing messages
 
 To use geofence data to personalize a message, you can use the following Liquid personalization syntax:
 
@@ -112,11 +68,60 @@ To use geofence data to personalize a message, you can use the following Liquid 
 * `{{event_properties.${geofence_set_name}}}`
 {% endraw %}
 
+## Mobile integrations {#mobile-integrations}
+
+### Cross-platform requirements
+
+Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:
+
+1. Your integration must support background push notifications.
+2. Braze geofences or location collection must be enabled.
+3. For devices on iOS version 11 and up, the user must allow location access always for geofencing to work.
+
+{% alert important %}
+Starting with Braze SDK version 3.6.0, Braze location collection is disabled by default. To verify that it's enabled on Android, confirm that `com_braze_enable_location_collection` is set to `true` in your `braze.xml`.
+{% endalert %}
+
+Refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) or [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) documentation for more guidance based on your platform.
+
+{% alert tip %}
+You can also leverage geofences with our Technology Partners, such as [Radar]({{site.baseurl}}/partners/data_augmentation/contextual_location/radar/) and [Foursquare]({{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/)
+{% endalert %}
+
 ## Frequently asked questions
 
-Visit [Geofence FAQ][3] for answers to frequently asked questions about geofences.
+### What's the difference between geofences and location tracking?
+
+In Braze, a geofence is a different concept from location tracking. Geofences are used as triggers for certain actions. A geofence is a virtual boundary set up around a geographical location. When a user enters or exits this boundary, it can trigger a specific action, such as sending a message.
+
+Location tracking is used to collect and store a user's most recent location data. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the `Most Recent Location` filter to target a specific region of your audience, such as sending a message to users located in New York.
+
+### How accurate are Braze geofences?
+
+Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wi-Fi, GPS, and cellular towers.
+
+Typical accuracy is in 20–50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+
+For more information on the accuracy of geofences, refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) and [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1) documentation.
+
+### How do geofences affect battery life?
+
+Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, ensuring best in class battery life and improvements in performance as the underlying service improves.
+
+### When are geofences active?
+
+Braze geofences work at all hours of the day, even when your app is closed. They become active as soon as they are defined and uploaded to the Braze dashboard. However, geofences can't function if a user has disabled location tracking.
+
+For geofences to work, users must have location services enabled on their device and must have granted your app permission to access their location. If a user has disabled location tracking, your app won't be able to detect when they enter or exit a geofence.
+
+### Is geofence data stored in user profiles?
+
+No, Braze doesn't store geofence data on user profiles. Geofences are monitored by Apple and Google location services, and Braze only gets notified when a user triggers a geofence. At that point, we process any associated trigger campaigns.
+
+### Can I set up a geofence within a geofence?
+
+As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
 
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
 [2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences
