@@ -48,7 +48,7 @@ For example, if a user has several mobile devices, their mobile engagement rate 
 
 ## Individual channels
 
-Rather than let Braze choose the single best channel for a user, you may also want to simply filter users based on whether or not they're likely to open a message on a specific channel you choose. For that you can use the Message Open Likelihood filter in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Rather than let Braze choose the single best channel for a user, you may also want to simply filter users based on whether or not they're likely to open a message on a specific channel you choose. For that you can use the Message Open Likelihood filter in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood).
 
 ## Best practices and effective use strategy
 

@@ -1,6 +1,6 @@
 ---
 nav_title: "Tutorial: Quick service restaurant"
-article_title: Intelligence suite tutorial
+article_title: Intelligence Suite tutorial
 page_order: 10
 search_rank: 12
 description: "New to the Braze intelligence suite? Start with this tutorial."
