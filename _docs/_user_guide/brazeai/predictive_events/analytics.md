@@ -1,5 +1,5 @@
 ---
-nav_title: Analytics
+nav_title: Event Analytics
 article_title: Predictive Event Analytics
 description: "This reference article covers the different components included in the Predictive Events Analytics page and how they can be used to make insightful driven decisions."
 page_order: 1.3

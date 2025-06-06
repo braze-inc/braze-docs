@@ -80,7 +80,7 @@ In most cases, Intelligent Selection will choose one of the variants as the Winn
 It's possible for Intelligent Selection to stop optimizing without picking a single clear winner. Intelligent Selection stops optimizing when it has a 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its present rate.
 {% endalert %}
 
-## Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ) {#faq}
 
 ### Why is re-eligibility in less than 24 hours not available when combined with Intelligent Selection?
 

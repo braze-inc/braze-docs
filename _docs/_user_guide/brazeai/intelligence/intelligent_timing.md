@@ -170,7 +170,7 @@ Your Intelligent Timing campaign might be sending past the scheduled date if you
 
 If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the Winning Variant to send for 2 days after the initial test instead of 1 day.
 
-## Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ) {#faq}
 
 ### General
 
