@@ -9,7 +9,11 @@ search_rank: 2
 
 # Predictive Churn
 
-> With Predictive Churn, you can define what churn means for your business ([churn definition]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)), and the users you'd like to prevent from churning ([prediction audience]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). When you create a prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition.
+> With Predictive Churn, you can define what churn means for your business and identify the users you want to retain. When you create a prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to recognize at-risk users by analyzing patterns from past behavior—both from users who churned and those who didn’t.
+
+To learn more about how this works, see:
+- [Churn definition]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn))
+- [Prediction audience]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience))
 
 ## About Predictive Churn
 

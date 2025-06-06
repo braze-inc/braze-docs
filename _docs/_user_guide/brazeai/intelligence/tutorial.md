@@ -8,9 +8,9 @@ tool:
   - Dashboard
 ---
 
-# Intelligence suite tutorial
+# Intelligence Suite tutorial
 
-> New to the Braze intelligence suite? Start with this tutorial! For more general information, see [Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence/).
+> New to the Braze Intelligence Suite? Start with this tutorial! For more general information, see [Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence/).
 
 ## Tutorial: Quick service restaurant
 

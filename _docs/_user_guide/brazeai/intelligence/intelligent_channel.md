@@ -8,7 +8,7 @@ search_rank: 11
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
 
-> The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
+> The `Intelligent Channel` filter (previously `Most Engaged`) selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
 
 ## About the Channel Filter
 

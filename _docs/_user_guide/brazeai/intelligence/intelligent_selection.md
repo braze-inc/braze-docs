@@ -13,7 +13,7 @@ toc_headers: h2
 
 ## About Intelligent Selection
 
-A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm](https://en.wikipedia.org/wiki/Multi-armed_bandit) that makes sure we are adjusting for real performance differences and not just random chance.
+A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm](https://en.wikipedia.org/wiki/Multi-armed_bandit) that makes sure Braze is adjusting for real performance differences and not just random chance.
 
 ![A/B Testing section of a campaign with Intelligent Selection enabled.]({% image_buster /assets/img/intelligent_selection1.png %})
 
@@ -23,7 +23,7 @@ Intelligent Selection will:
 - Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/).
 - Test more frequently and with greater confidence that your users will see your best message. 
 
-Intelligent Selection is ideal for campaigns that are scheduled to send multiple times. Initial results are needed to begin adjusting your campaign; therefore, a campaign that sends only once will not benefit. For those campaigns, an [A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) would be more effective.
+Intelligent Selection works best for campaigns that send more than once. It needs early performance data to start optimizing, so single-send campaigns won’t benefit. For those campaigns, we recommend using a traditional [A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) instead.
 
 ## Adding Intelligent Selection
 
