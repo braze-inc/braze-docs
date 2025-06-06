@@ -16,7 +16,7 @@ Our AI Expert Services team will tailor OfferFit to the specific needs of your b
 - **Pick winners for people, not segments:** Use all your first-party data to make the optimal 1:1 decision for each individual.
 - **Personalize everything:** AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer
 - **Maximize any metric:** Clicks aren’t dollars. Use OfferFit to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
-- **Open the black box:** See how AI decisioning agents personalize for deep insights into the drivers of customer behavior
+- **Open the black box:** See how AI decisioning agents personalize for deep insights into the drivers of customer behavior.
 
 ## About use cases
 
