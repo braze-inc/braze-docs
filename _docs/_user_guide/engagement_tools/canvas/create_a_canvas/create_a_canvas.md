@@ -175,6 +175,10 @@ To view additional statistics, such as the average lifetime revenue for targeted
 
 ![Target Population breakdown with option to calculate exact statistics.][2]
 
+##### Why the target audience count could differ from the reachable users count
+
+{% multi_lang_include segments.md section='Differing audience size' %}
+
 #### Step 1.4: Select your send settings
 
 Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.

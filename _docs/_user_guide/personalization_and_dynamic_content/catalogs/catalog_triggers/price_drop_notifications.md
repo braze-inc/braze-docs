@@ -106,7 +106,7 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - Users are subscribed for 90 days. If an item does not drop in price in 90 days, the user is removed from the subscription.
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
-- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request.
+- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications
 
 [1]: {% image_buster /assets/img/price_drop_notifications.png %}
 [2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

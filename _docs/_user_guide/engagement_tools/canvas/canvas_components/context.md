@@ -41,7 +41,7 @@ Each context variable includes:
 When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
 For example,
-{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user’s scheduled flight time.
+{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
 
@@ -100,7 +100,7 @@ Users will enter the Canvas when they purchase a plane ticket. To determine loun
 
 ![Context variable set up to track if a passenger qualifies for VIP lounge access.][5]{: style="max-width:90%"}
 
-In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is first class.
+In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is `first_class`.
 
 Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
 
