@@ -64,7 +64,7 @@ We recommend creating geofences with a radius of at least 200 meters for optimal
 
 Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key, and an optional `name` key for each geofence. 
 
-To upload your GeoJSON, select **More** > **Upload GeoJSON**. Then, select your file.
+To upload your GeoJSON, select **More** > **Upload GeoJSON**.
 
 When creating your geofences, consider the following details:
 
