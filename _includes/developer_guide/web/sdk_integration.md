@@ -66,7 +66,7 @@ Otherwise, after the Braze Web SDK is added to your website, initialize the libr
 braze.initialize('YOUR-API-KEY-HERE', {
     baseUrl: "YOUR-SDK-ENDPOINT-HERE",
     enableLogging: false, // set to `true` for debugging
-    allowUserSuppliedJavascript: false, // set to `true` to support cusotm HTML messages
+    allowUserSuppliedJavascript: false, // set to `true` to support custom HTML messages
 });
 
 // optionally show all in-app messages without custom handling
