@@ -36,11 +36,11 @@ Unlike third-party messaging applications, RCS leverages the native messaging en
 
 | Requirement | Description |
 | --- | --- |
-| Message credits | Contact your Braze customer success manager to confirm you’ve purchased Message Credits in your contract. Message Credits is a flexible contract item that allows you to purchase and allocate messaging volume across various channels, such as SMS, MMS, RCS, and WhatsApp. |
+| Message credits | Contact your Braze account manager to confirm you’ve purchased Message Credits in your contract. Message Credits is a flexible contract item that allows you to purchase and allocate messaging volume across various channels, such as SMS, MMS, RCS, and WhatsApp. |
 | Eligible country | Make sure that you are sending RCS to users in one of Braze’s supported countries: United States, United Kingdom, Germany, Mexico, Sweden, Spain, Singapore, Brazil, France, Italy, Colombia |
 | RCS verified sender | The sender that the recipient sees on their device to identify where the message is coming from. An RCS-Verified Sender consists of a company name, visual branding, and a verified badge. <br><br> Braze will help you apply and register for an RCS-verified sender in eligible regions. You’ll need to provide your Braze representative with some basic information. |
 | List of users with phone numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience. Users and phone numbers can be added to Braze through several different methods. Phone numbers must be formatted as a 10-digit number, as well as a country area code. To learn more, refer to [User phone numbers]({{site.baseurl}}/user_phone_numbers/). |
-| Keywords and responses | All base keywords must have responses attributed to it before you can begin messaging. Braze will process opt-in, opt-out, and help keywords automatically. Customization options and additional keyword-response configurations are available. To learn more, refer to [Opt-in and opt-out keywords]({{site.baseurl}}/optin_optout/). |
+| Keywords and responses | All base keywords must have responses attributed to them before you can begin messaging. Braze will process opt-in, opt-out, and help keywords automatically. Customization options and additional keyword-response configurations are available. To learn more, refer to [Opt-in and opt-out keywords]({{site.baseurl}}/optin_optout/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Terms to know

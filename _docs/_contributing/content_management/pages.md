@@ -33,13 +33,16 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 
 Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
-#### Basic template
+{% tabs local %}
+{% tab Basic template %}
 
 {% multi_lang_include contributing/templates/basic.md %}
+{% endtab %}
 
-#### Technology partner template
-
+{% tab Technology partner template %}
 {% multi_lang_include contributing/templates/technology_partner.md %}
+{% endtab %}
+{% endtabs %}
 
 ## Writing content
 

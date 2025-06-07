@@ -21,11 +21,11 @@ Manage geofences from **Audience** > **Locations**.
 
 Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
 
-You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+You may create or upload an unlimited number of geofences on the dashboard, allowing your marketing team to set up geofence sets and campaigns without needing to calculate the number of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
 
 - Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app.
 - iOS devices may monitor up to 20 geofences at a time per app. Braze will monitor up to 20 locations if space is available. 
-- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start/silent push refresh
+- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start.
 - For geofences to work correctly, you should ensure that your app is not using all available geofence spots.
 
 ## Creating geofence sets
@@ -76,14 +76,12 @@ The following sample represents the correct GeoJSON for specifying two geofences
 
 When creating your geofences, keep the following points in mind:
 
-- The `coordinates` value in the GeoJSON is formatted as [Longitude, Latitude].
-- The maximum geofence radius that may be uploaded is 10,0000 meters (about 100 kilometers or 62 miles).
+- The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
+- The maximum geofence radius that may be uploaded is 10,000 meters (about 100 kilometers or 62 miles).
 
 ## Updating geofence sets
 
 For active users, the Braze SDK will only request geofences once per day on session start. That means if changes are made to the geofence sets after session start, you'll need to wait 24 hours from the time the sets are first pulled down to receive the updated set.
-
-For inactive users, if the user is background push enabled, Braze will also send a silent push once every 24 hours to pull down the latest locations to the device.
 
 {% alert note %}
 If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.

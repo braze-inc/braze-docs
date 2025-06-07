@@ -69,7 +69,7 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 #### Cards Style
 
-**Cards Style** is a row property that let's you add spacing between columns and round their corners. With card-style formatting, you can create more visually-engaging layouts to help highlight your most important content, such as new product features, testimonials, special offers, news updates, and more.
+**Cards Style** is a row property that lets you add spacing between columns and round their corners. With card-style formatting, you can create more visually engaging layouts to help highlight your most important content, such as new product features, testimonials, special offers, news updates, and more.
 
 ## Using the drag-and-drop editor
 
@@ -105,7 +105,7 @@ When you're ready, use the drag-and-drop content blocks to build your email.
 
 1. Select the **Rows** panel. Drag and drop the row configurations into the main editor. This will map the layout of your email content.
 - Note that new configurations must be dragged to the top or bottom of an existing section.
-- When you select a row configuration, the **Row Properties** settings appear for further customization for row background colors, images, and custom column sizes.
+- When you select a row configuration, the **Row Properties** settings appear for further customization of row background colors, images, and custom column sizes.
 2. Select the **Content** panel. Drag and drop your desired content tiles to the row components.
 - You can also drag any of the **Content** tiles into the main editor. This creates a row for the tile.
 - You can further refine the tile by selecting the tile and adjusting the fields in **Content Properties** and **Block Options**. This includes editing letter spacing, padding, line height, and more.
@@ -115,7 +115,7 @@ Check out [Other customizations](#other-customizations) for other ways to furthe
 As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will check that your content is responsive, and you can make any necessary adjustments along the way.
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -156,14 +156,16 @@ Because you can view three different versions of the same email in the actual ed
 Under the **Preview as a User** tab, you can select the following user types to preview your message.
 
 - **Random User:** Braze will randomly select a user from the database and preview the email based on their attributes or event information.
-- **Select User:** You can select a specific user based on their email address or external ID. The email will preview based on that user's attributes and event information
+- **Select User:** You can select a specific user based on their email address or external ID. The email will be previewed based on that user's attributes and event information
 - **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 
 {% alert note %}
 The random user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 
-You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
+You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated. 
+
+Note that any edits made to an email template won't reflect in a previously generated link. You'll need to generate a new link preview to see any edits.
 
 ![Email preview with a button to "Copy preview link" and copy the generated link.][15]
 
@@ -185,7 +187,7 @@ Our average exported HTML data footprint size has been reduced, leading to faste
 HTML rendering has improved based on the following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded.
 - Migration from a `<div>` element-based design to a standard `<table>` formatted codebase
 - [Editor blocks][7] have been re-coded for conciseness
-- Final HTML code is compressed to remove whitespace between tags
+- The final HTML code is compressed to remove whitespace between tags
 - Transparent dividers are automatically converted into content padding
 {% enddetails %}
 
@@ -228,7 +230,7 @@ Basic Liquid is supported in the drag-and-drop email editor. To add personalizat
 1. Select **Personalization** under the **Content** section. 
 2. Select the personalization type. This includes default (standard) attributes, device attributes, custom attributes, and more. 
 3. Search for the attribute to be added.
-4. Copy your generated Liquid snippet and paste it into a  in your email body.
+4. Copy your generated Liquid snippet and paste it in your email body.
 
 Liquid personalization is not supported for image blocks and button link type fields. 
 
