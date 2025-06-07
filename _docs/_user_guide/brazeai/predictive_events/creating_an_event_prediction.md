@@ -8,7 +8,7 @@ description: "This article covers how to create an event prediction within the B
 
 # Creating an event prediction
 
-> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events).
+> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 
 In Braze, go to **Analytics** > **Predictive Events**.
 

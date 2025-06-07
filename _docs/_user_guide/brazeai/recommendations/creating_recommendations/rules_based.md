@@ -14,7 +14,7 @@ page_order: 2
 A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) and either Braze [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to dynamically personalize content based on user behavior and attributes.
 
 {% alert important %}
-Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/).
+Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
 {% endalert %}
 
 ## Recommendation engine options
@@ -185,7 +185,7 @@ To create your recommendation engine using Connected Content, first create a new
 |------|-----------|
 |**Convert a spreadsheet**|Convert a spreadsheet into a JSON API endpoint by using a service like SheetDP, and take note of the API URL this generates.|
 |**Create a custom endpoint**|Build, host, and maintain a custom-built in-house endpoint.|
-|**Use a third-party engine** |Use a third-party recommendation engine, such as one of our [Alloy partners]({{site.baseurl}}/partners/message_personalization/), including [Amazon Personalise]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/certona/), [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/), and others.|
+|**Use a third-party engine** |Use a third-party recommendation engine, such as one of our [Alloy partners]({{site.baseurl}}/partners/message_personalization/), including [Amazon Personalise]({{site.baseurl}}/partners/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/personalized_recommendations/certona/), [Dynamic Yield]({{site.baseurl}}/partners/dynamic_yield/), and others.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Next, use Liquid in your message that calls your endpoint to match a custom attribute value with a user’s profile and pull the corresponding recommendation.

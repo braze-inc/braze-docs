@@ -20,10 +20,10 @@ A variant that appears to be performing better than others will get sent to more
 Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward Winning Variants gradually.
 - Check that more users receive your best-performing variant without sacrificing statistical confidence.
-- Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/).
+- Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 - Test more frequently and with greater confidence that your users will see your best message. 
 
-Intelligent Selection works best for campaigns that send more than once. It needs early performance data to start optimizing, so single-send campaigns won’t benefit. For those campaigns, we recommend using a traditional [A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) instead.
+Intelligent Selection works best for campaigns that send more than once. It needs early performance data to start optimizing, so single-send campaigns won’t benefit. For those campaigns, we recommend using a traditional [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) instead.
 
 ## Prerequisites
 
