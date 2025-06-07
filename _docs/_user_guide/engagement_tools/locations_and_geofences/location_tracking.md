@@ -64,7 +64,24 @@ Combining existing beacon or geofence support with our targeting and messaging f
 
 ## Frequently asked questions
 
-Check out our [Locations FAQ][11] for answers to frequently asked questions about locations.
+### When does Braze collect location data?
+
+Braze only collects location when the application is open in the foreground. As a result, our `Most Recent Location` filter targets users based upon where they last opened the application (also referred to as session start).
+
+You should also keep the following nuances in mind:
+
+- If location is disabled, the `Most Recent Location` filter will show the last location recorded.
+- If a user has ever had a location stored on their profile, they will qualify for the `Location Available` filter, even if they've opted out of location tracking since then.
+
+### What's the difference between the Most Recent Device Locale and Most Recent Location filters?
+
+The `Most Recent Device Locale` comes from the user's device settings. For example, this appears for iPhone users in their device at **Settings** > **General** > **Language & Region**. This filter is used to capture language and regional formatting, such as dates and addresses, and is independent of the `Most Recent Location` filter.
+
+The `Most Recent Location` is the last known GPS location of the device. This is updated on session start and is stored on the user's profile.
+
+### If a user opts out of location tracking, will their old location data be removed from Braze?
+
+No. If a user has ever had a location stored on their profile, that data will not be automatically removed if they later opt out of location tracking.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
