@@ -59,8 +59,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```json
 {
    "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of string) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of string) User phone numbers to identify,
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
    "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
 }
 ```
