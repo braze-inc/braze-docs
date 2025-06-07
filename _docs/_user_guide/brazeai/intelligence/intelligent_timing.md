@@ -22,7 +22,7 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
 
-If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a [fallback time](#fallback-time).
+If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a fallback time.
 
 ## Use cases
 
@@ -206,7 +206,7 @@ Intelligent Timing schedules messages during each user’s “most engaged hour�
 
 #### What are the fallback calculations if there is not enough data?
 
-If there are fewer than five relevant events for a user, Intelligent Timing uses the [fallback time]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing#fallback-time) in your message settings. 
+If there are fewer than five relevant events for a user, Intelligent Timing uses the [fallback time]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing) in your message settings. 
 
 ### Campaigns
 

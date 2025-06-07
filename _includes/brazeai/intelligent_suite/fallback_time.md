@@ -5,7 +5,7 @@ You can choose one of the following options:
 
 {% subtabs local %}
 {% subtab most popular %}
-The most popular app time is determined by the average session start time for your workspace (in local time). This time is displayed in red on the [preview chart](#preview-delivery-times) (campaigns only).
+The most popular app time is determined by the average session start time for your workspace (in local time). This time is displayed in red on the preview chart.
 
 In the unlikely event that your app doesn't have enough session data to calculate when the app is most used (a completely new app with no data), the message will send at 5 pm in the user's local time zone. If the user's local time is unknown, it will send at 5 pm in your company time zone.
 
