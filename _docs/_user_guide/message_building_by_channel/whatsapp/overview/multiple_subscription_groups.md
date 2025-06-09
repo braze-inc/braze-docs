@@ -18,6 +18,8 @@ Having multiple WhatsApp Business accounts is useful if you want to send WhatsAp
 
 Business accounts that are nested within the same Meta Business Manager will also share user access permission management and catalogs (not yet supported on Braze).
 
+![Diagram of the Braze and WhatsApp ecosystem, showing how workspaces and WhatsApp Business accounts connect to each other.][2]
+
 ### Adding a WhatsApp Business account
 
 You can add up to 10 WhatsApp Business accounts per workspace. To add an account:
@@ -60,3 +62,4 @@ You can add up to 20 subscription groups (and sending phone numbers) per WhatsAp
 2. Go to your Meta Business manager and delete the phone number.
 
 [1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 
+[2]: {% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %} 
