@@ -2,6 +2,7 @@
 nav_title: Security Settings
 article_title: Security Settings
 page_order: 2
+toc_headers: h2
 page_type: reference
 description: "This reference article covers generic cross-company security settings, including authentication rules, IP allowlisting, PII, and two-factor authentication (2FA)."
 
@@ -61,7 +62,6 @@ When two-factor authentication is turned on:
 Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 Be sure to save your changes before leaving the page!
-
 
 ### Remember this account for 30 days {#remember-me}
 
@@ -171,9 +171,9 @@ This report only contains the most recent 10,000 security events for your accoun
 
 ## Viewing personally identifiable information (PII) {#view-pii}
 
-The **View PII** permission is only accessible to a few select Braze users. For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+The **View PII** permission is only accessible to a few select Braze users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see the following standard and custom attributes throughout the dashboard. When this permission is turned off for users, those users won't be able to see this information.
 
-By default, all admins have their **View PII** permission turned on in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). This means they can see the following standard and custom attributes throughout the dashboard. When this permission is turned off for users, those users won't be able to see this information.
+For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
 ### Defining PII
 
@@ -217,7 +217,7 @@ You are responsible for determining the correct preferences for your workspace. 
 | -------------------- | ------ | ----- |
 | Custom event | properties |  |
 | Purchase event | properties |  |
-| Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
+| Message send | message_extras | Several event types contain a `message_extras` field. The preference applies to all message send event types that support `message_extras`, including event types added in the future. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
