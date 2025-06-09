@@ -14,23 +14,10 @@ hide_toc: true
 
     <div id="feedback_answer_star">
       <div class="rating-list">
-
         <div class="feedback-star">
-          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1">
-          <label for="rating_5" class="star-label" tabindex="0" aria-label="Very Helpful">
-            <i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very Useful
-          </label>
-        </div>
-        <div class="feedback-star">
-          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1">
-          <label for="rating_4" class="star-label" tabindex="0" aria-label="Helpful">
-            <i class="fas fa-star" data-value="Helpful" title="Helpful"></i><br />4<br />
-          </label>
-        </div>
-        <div class="feedback-star">
-          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1">
-          <label for="rating_3" class="star-label" tabindex="0" aria-label="Somewhat helpful">
-            <i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat Useful</label>
+          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1">
+          <label for="rating_1" class="star-label" tabindex="0" aria-label="Very Unhelpful">
+            <i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not Useful</label>
         </div>
         <div class="feedback-star">
           <input type="radio" id="rating_2" name="feedback_rating" value="Unhelpful" tabindex="-1">
@@ -39,9 +26,23 @@ hide_toc: true
           </label>
         </div>
         <div class="feedback-star">
-          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1">
-          <label for="rating_1" class="star-label" tabindex="0" aria-label="Very Unhelpful">
-            <i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not Useful</label>
+          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1">
+          <label for="rating_3" class="star-label" tabindex="0" aria-label="Somewhat helpful">
+            <i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat Useful</label>
+        </div>
+
+        <div class="feedback-star">
+          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1">
+          <label for="rating_4" class="star-label" tabindex="0" aria-label="Helpful">
+            <i class="fas fa-star" data-value="Helpful" title="Helpful"></i><br />4<br />
+          </label>
+        </div>
+
+        <div class="feedback-star">
+          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1">
+          <label for="rating_5" class="star-label" tabindex="0" aria-label="Very Helpful">
+            <i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very Useful
+          </label>
         </div>
 
       </div>
@@ -62,7 +63,7 @@ hide_toc: true
 
   Braze Docs is an open source project that everyone is welcome to contribute to. Join 288+ contributors and submit your first pull request today. <br /><br />
 
-  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn">Start Contributing</button>
+  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn btn-white">Start Contributing</button>
 
 </div>
 </fieldset>
@@ -79,6 +80,7 @@ hide_toc: true
   list-style: none !important;
   margin: 0 !important;
   line-height: 1;
+  flex-direction: row;
 }
 #feedback_answer_star .feedback-star {
   position: relative;
@@ -103,8 +105,7 @@ hide_toc: true
   cursor: pointer;
   margin: 0;
 }
-#feedback_answer_star .feedback-star:hover .star-label,
-#feedback_answer_star .feedback-star:hover ~ .feedback-star .star-label {
+#feedback_answer_star .feedback-star.hover-active .star-label {
   color: #000000 !important;
 }
 #feedback_answer_star .feedback-star input[type="radio"]:checked ~ .star-label,
@@ -139,7 +140,19 @@ hide_toc: true
   padding: 1rem 2rem;
   border: 1px solid black !important;
 }
-
+#feedback button.btn-white {
+  font-family: "Aribau Grotesk Bold", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  border: 1px solid black !important;
+  background-color: #ffffff;
+  color: #202024;
+}
+#feedback button.btn-white:hover {
+  background-color: #202024 !important;
+  color: #ffffff !important;
+}
 #feedback button[type=submit]:focus, #feedback button[type=submit]:hover {
   color: #000000;
   background-color: #FFFFFF;
@@ -169,6 +182,21 @@ hide_toc: true
           $(this).addClass('active');
         }
       });
+  });
+
+  // Handle hover effect from left to right
+  $('.feedback-star').on('mouseenter', function() {
+    var hoveredIndex = $(this).index();
+    $('.feedback-star').removeClass('hover-active');
+    $('.feedback-star').each(function(index) {
+      if (index <= hoveredIndex) {
+        $(this).addClass('hover-active');
+      }
+    });
+  });
+
+  $('.rating-list').on('mouseleave', function() {
+    $('.feedback-star').removeClass('hover-active');
   });
 
   // Handle keyboard interaction for accessibility
