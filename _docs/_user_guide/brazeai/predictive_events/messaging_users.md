@@ -2,7 +2,7 @@
 nav_title: Messaging Users
 article_title: Targeting Users for Predictive Events
 description: "This reference article covers potential next steps after you have created an event prediction, such as filter implementation and strategic considerations."
-page_order: 3
+page_order: 1.2
 
 ---
 
@@ -20,7 +20,7 @@ From the individual **Predictions** page, after you've decided what range of lik
 
 You can also use the filters "Event Likelihood Score" and "Event Likelihood Category" in campaigns, Canvas, or segments to target user according to their likelihood score or category, just like you use any other filter in Braze.
 
-![Filters available when defining an audience include Likelihood Category and Likelihood Score.][5]
+![Filters available when defining an audience include Likelihood Category and Likelihood Score.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 ## Strategic considerations {#strategy}
 
@@ -44,4 +44,3 @@ There are a couple of paths you can test out for low-likelihood users. Think you
 
 Drop these users into a more passive campaign or Canvas as a resource-light way to keep your brand top-of-my mind. This could be a persona-specific weekly newsletter, a series of relevant customer case studies, or a monthly round-up of new tips and tricks.
 
-[5]: {% image_buster /assets/img_archive/predictive_event_filters.png %}

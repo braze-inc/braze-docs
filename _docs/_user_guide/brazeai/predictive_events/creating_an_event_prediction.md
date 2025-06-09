@@ -1,14 +1,14 @@
 ---
 nav_title: Creating an Event Prediction
 article_title: Creating an Event Prediction
-page_order: 1
+page_order: 1.1
 description: "This article covers how to create an event prediction within the Braze dashboard."
 
 ---
 
 # Creating an event prediction
 
-> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events).
+> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 
 In Braze, go to **Analytics** > **Predictive Events**.
 
@@ -25,7 +25,7 @@ There is a limit of five concurrently active predictions. Before purchasing Pred
 {: start="2"}
 2. Give your prediction a unique name. You can also provide a description to save any relevant notes.
 
-![][1]
+![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
 
 {: start="3"}
 3. Click **Forward** to move to the next step. <br><br>Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. Also, you can return to any step later by clicking it in the top bar.
@@ -82,5 +82,4 @@ The prediction will be automatically rebuilt ("retrained") every **two weeks** t
 
 Archived predictions will stop updating user scores. Any archived prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived predictions are never deleted and remain in the list.
 
-[1]: {% image_buster /assets/img/purchasePrediction/purchases_step1.png %}
 
