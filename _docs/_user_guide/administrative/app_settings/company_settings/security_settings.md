@@ -44,7 +44,7 @@ Use this field to define how long Braze will keep your session active. After Bra
 
 You can restrict your users from logging in using a password or SSO.
 
-For [SAML SSO][15], customers need to set up their SAML settings prior to enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
+For [SAML SSO][15], customers need to set up their SAML settings before enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
 ## Dashboard IP allowlisting
 
@@ -106,15 +106,18 @@ This report only contains the most recent 10,000 security events for your accoun
 {% details Reported security events %}
 
 ### Login and account 
-- Removed Developer
-- Added Additional Developer
 - Signed In
 - Failed Login
 - Two-Factor Auth Setup Completed
 - Two-Factor Auth Reset Completed
 - Cleared Developer 2FA
+- Added Additional Developer
 - Developer Suspended
 - Developer Unsuspended
+- Developer Updated
+- Removed Developer
+- User Subscription Status Updated
+- User Updated
 
 ### Elevated access
 - Started Elevated Access Flow
@@ -151,6 +154,7 @@ This report only contains the most recent 10,000 security events for your accoun
 ### Company settings
 - Added App Group
 - Added App
+- Company Settings Changed
 
 ### Email template
 - Added Email Template
@@ -184,7 +188,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 
 ### Limited areas
 
-The following assumes that all fields are set as PII and the users mentioned are those who use the Braze platform.
+The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
@@ -203,7 +207,7 @@ When previewing a message, the **View PII** permission isn't applied, so users c
 
 You can use this setting to set preferences for whether certain fields should be deleted during the user delete process for events. These preferences only impact data for users who have been deleted from Braze. 
 
-When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
+When a user is deleted, Braze removes all PII from event data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
 
 You are responsible for determining the correct preferences for your workspace. The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
 
@@ -213,7 +217,7 @@ You are responsible for determining the correct preferences for your workspace. 
 | -------------------- | ------ | ----- |
 | Custom event | properties |  |
 | Purchase event | properties |  |
-| Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
+| Message send | message_extras | Several event types contain a `message_extras` field. The preference applies to all message send event types that support `message_extras`, including event types added in the future. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
