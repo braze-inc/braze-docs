@@ -8,6 +8,7 @@ channel:
 tool:
   - Campaigns
 search_rank: 4.8
+toc_headers: h2
 ---
 
 # Creating an in-app message
