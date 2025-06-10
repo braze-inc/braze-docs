@@ -1,16 +1,16 @@
 ---
-nav_title: "GET: View Translation for a Canvas"
-article_title: "GET: View Translation for a Canvas"
+nav_title: "GET: View Translation for a Canvas by Locale"
+article_title: "GET: View Translation for a Canvas by Locale"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the View translation for a Canvas endpoint."
+description: "This article outlines details about Translations for a Canvas, by Locale."
 ---
 
 {% api %}
-# View translation for a Canvas
+# View translation for a Canvas by Locale
 {% apimethod get %}
 /canvas/translations/?locale_id={locale_id}
 {% endapimethod %}
