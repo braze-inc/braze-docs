@@ -19,10 +19,6 @@ Click tracking lets you measure when someone taps a link in your WhatsApp messag
 
 You can turn on click tracking in both response and template messages. It works with links in buttons and body text, and supports personalized URLs and custom domains. After it's turned on, you'll see click data in your WhatsApp performance reports and be able to segment users based on who clicked what.
 
-{% alert important %}
-Click tracking for WhatsApp is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## How it works
 
 ### Response messages 
