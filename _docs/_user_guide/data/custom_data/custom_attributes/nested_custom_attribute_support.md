@@ -469,4 +469,3 @@ Any key that is sent consumes a data point. For example, this object initialized
 Updating a custom attribute object to `null` also consumes a data point.
 {% endalert %}
 
-[9]:{% image_buster /assets/img_archive/nca_personalization.png %}

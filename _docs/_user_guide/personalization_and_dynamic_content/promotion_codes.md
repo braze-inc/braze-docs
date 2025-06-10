@@ -201,11 +201,3 @@ If the message contains Liquid logic that conditionally inserts a promotion code
 
 To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done by attaching a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) to the same campaign or Canvas Message step.
 
-[1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[3]:{% image_buster /assets/img/promocodes/promocode3.png %}
-[4]:{% image_buster /assets/img/promocodes/promocode4.png %}
-[5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[7]:{% image_buster /assets/img/promocodes/promocode7.png %}
-[8]:{% image_buster /assets/img/promocodes/promocode8.png %}
-[9]:{% image_buster /assets/img/promocodes/promocode9.png %}
-[10]:{% image_buster /assets/img/promocodes/promocode10.png %}

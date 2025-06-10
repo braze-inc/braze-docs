@@ -26,5 +26,3 @@ You can set a default on or off state globally from **Settings** > **Email Prefe
 
 ![Inline CSS on new emails by default option located in email settings.]({% image_buster /assets/img_archive/css-inline1.png %})
 
-[1]:{% image_buster /assets/img_archive/css-inline1.png %}
-[2]:{% image_buster /assets/img_archive/css-inline2.png %}

@@ -74,9 +74,3 @@ In your funnel report, you can directly compare the control group alongside the 
 
 **For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count toward multiple different variants if they received multiple variants during the time window for the funnel.
 
-[1]:{% image_buster /assets/img/funnel_report/funnel_report1.jpg %}
-[2]:{% image_buster /assets/img/funnel_report/funnel_report2.png %}
-[3]:{% image_buster /assets/img/funnel_report/funnel_report3.png %}
-[4]:{% image_buster /assets/img/funnel_report/funnel_report4.jpg %}
-[5]:{% image_buster /assets/img/funnel_report/canvas_campaign.png %}
-[6]:{% image_buster /assets/img/funnel_report/funnel_report5.png %}

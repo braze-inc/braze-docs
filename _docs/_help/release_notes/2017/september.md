@@ -33,4 +33,3 @@ We've added a new [API endpoint]({{site.baseurl}}/developer_guide/rest_api/api_n
 
 
 
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

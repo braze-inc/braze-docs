@@ -341,10 +341,3 @@ You can also save your Canvas as a draft if you need to come back to it.
 Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
 
-[11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
-[12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
-[13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
-[14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
-[15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
-[17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}

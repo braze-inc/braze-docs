@@ -77,10 +77,5 @@ When setting up your webhook, use the following settings and provide your Braze 
 
 Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with WordPress data by using Liquid formatting to display the information in your messages.
 
-[4]:{% image_buster /assets/img/zapier.png %}
-[5]:{% image_buster /assets/img_archive/zapier1.png %}
-[6]:{% image_buster /assets/img_archive/zapier2.png %}
-[7]:{% image_buster /assets/img_archive/zapier3.png %}
-[8]:{% image_buster /assets/img_archive/zapier4.png %}
-[10]:{% image_buster /assets/img_archive/zapier5.png %}
-[12]:{% image_buster /assets/img_archive/zapier6.png %}
+[5]: {% image_buster /assets/img_archive/zapier1.png %}
+[6]: {% image_buster /assets/img_archive/zapier2.png %}

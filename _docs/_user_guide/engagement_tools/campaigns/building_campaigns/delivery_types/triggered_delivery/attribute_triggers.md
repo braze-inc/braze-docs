@@ -91,6 +91,3 @@ For example, target users when their loyalty tier changes to the best tier. For 
 - The custom attribute values change trigger also applies for new users created. 
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

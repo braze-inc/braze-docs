@@ -41,4 +41,3 @@ We added the [Segment Membership filter]({{site.baseurl}}/user_guide/engagement_
 We updated the [Android preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#step-5-preview-message) to reflect more recent versions of Android since Android N.
 
 
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

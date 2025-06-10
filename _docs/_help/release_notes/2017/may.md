@@ -45,4 +45,3 @@ We now have an alert to let you know when you've reached your quota depending on
 Canvas and campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports).
 
 
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

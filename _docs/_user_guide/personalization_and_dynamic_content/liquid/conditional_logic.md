@@ -281,4 +281,3 @@ A time stamp of when an event took place. [Time]({{site.baseurl}}/user_guide/dat
 {% endraw %}
 
 
-[36]:{% image_buster /assets/img/value_null.png %}

@@ -26,4 +26,3 @@ Companies can use Okta to control Braze access and allow or force their fellow B
 
 The limit to [email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) is now 100kb. This update is in line with email best practices, as emails with bodies of larger than 400kb are more likely to land in spam.
 
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

@@ -59,4 +59,3 @@ Braze has a specific category of Segmentation Filters called "X in Y Filters". T
 
 
 
-[1]:{% image_buster /assets/img/campaign-schuedule-example.png %}

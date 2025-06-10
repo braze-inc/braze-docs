@@ -44,4 +44,3 @@ We've added a new "Performed Conversion" event and an "In Canvas Control" filter
 
 
 
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

@@ -66,4 +66,3 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 > As noted in our [September 2017 release notes]({{site.baseurl}}/help/release_notes/2017/september/), you can now aggregate data from a specific period of time as well as schedule exports to run on a recurring basis.
 
 
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules
