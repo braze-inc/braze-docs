@@ -175,7 +175,7 @@ For more information on the accuracy of geofences, refer to [Android](https://de
 
 ### How do geofences affect battery life?
 
-Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, ensuring best in class battery life and improvements in performance as the underlying service improves.
+Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, saving battery life and improving performance as the underlying service improves.
 
 ### When are geofences active?
 
