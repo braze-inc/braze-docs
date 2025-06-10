@@ -32,6 +32,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Canvas Context Variables | `{{context}}` |
 | Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
 | [API trigger Properties][75] |`{{api_trigger_properties}}` |
+| Canvas Entry Properties | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
