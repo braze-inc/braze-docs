@@ -108,7 +108,7 @@ The following example represents the correct GeoJSON for specifying two geofence
 
 ## Using geofence events
 
-Once geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
+After geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
 
 ### Triggering campaigns and Canvases
 
