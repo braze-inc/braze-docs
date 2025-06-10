@@ -82,7 +82,7 @@ After the integration process completes, Braze will automatically pull that chan
 1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
    - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
       - Braze will automatically change this to a different URL when integrating, based on your dashboard cluster.
-   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".][1]{: style="max-width:70%;"}
+   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Take note of the following information in the **Providers** tab:
 
 | Information type | Location |
@@ -99,7 +99,7 @@ After the integration process completes, Braze will automatically pull that chan
    - Turn off **Auto-response messages**. All triggered messaging should be through Braze. This won't prevent you from sending directly from the LINE console.
    - Turn on **Webhooks**.
 
-![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
+![Response settings page with toggles for how your account will handle chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### Step 2.2: Generate LINE subscription groups in Braze
 
@@ -113,12 +113,12 @@ After the integration process completes, Braze will automatically pull that chan
 During integration, be sure to check that your channel secret is correct. If it's incorrect, there may be inconsistencies in the subscription status.
 {% endalert %}
 
-![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
+![LINE messaging integration page with LINE integration section.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze.
 
-![LINE subscription groups section displaying one subscription group for the "LINE" channel.][4]{: style="max-width:80%;"}
+![LINE subscription groups section displaying one subscription group for the "LINE" channel.]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Step 3: Reconcile user IDs
 
@@ -318,7 +318,7 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 This method allows users to link their LINE account to your app’s user account. You can then use Liquid in Braze, such as {% raw %}`{{line_id}}`{% endraw %}, to create a personalized URL for the user that passes the user's LINE ID back to your website or app, which can then be associated with a known user.
 
-1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![Canvas that triggers when a user subscribes to the LINE channel.][9]
+1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![Canvas that triggers when a user subscribes to the LINE channel.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Create a message incentivizing users to log into your website or app, passing the user's LINE ID as a query parameter (through Liquid), such as:
 
 ```
@@ -327,7 +327,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3. Create a follow-up message that delivers the coupon code.
-4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![Action-based campaign that triggers when the LINE user is identified.][10]
+4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![Action-based campaign that triggers when the LINE user is identified.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### How it works
 
@@ -373,7 +373,7 @@ if (user && isLoggedIn && lineUserId) {
 
 You can test your LINE channel before setting up [user reconciliation](#user-id-reconciliation) by creating a "Who am I" Canvas or campaign.
 
-1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.][7]{: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.][8]{: style="max-width:40%;"}<br><br>
+1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. In Braze, you can use the Braze ID to search for specific users and modify them as needed.
 
@@ -382,13 +382,3 @@ Make sure the Canvas doesn't have global control or control groups preventing se
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/line/webhook_settings.png %}
-[2]: {% image_buster /assets/img/line/response_settings.png %}
-[3]: {% image_buster /assets/img/line/integration.png %}
-[4]: {% image_buster /assets/img/line/line_subscription_groups.png %}
-[5]: {% image_buster /assets/img/line/filter_group.png %}
-[6]: {% image_buster /assets/img/line/csv_export_user_data.png %}
-[7]: {% image_buster /assets/img/line/trigger.png %}
-[8]: {% image_buster /assets/img/line/message.png %}
-[9]: {% image_buster /assets/img/line/account_link_1.png %}
-[10]: {% image_buster /assets/img/line/account_link_2.png %}

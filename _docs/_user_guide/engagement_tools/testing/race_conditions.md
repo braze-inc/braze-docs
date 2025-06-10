@@ -118,7 +118,3 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

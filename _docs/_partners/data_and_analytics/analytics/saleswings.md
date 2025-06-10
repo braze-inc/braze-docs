@@ -10,7 +10,7 @@ search_tag: Partner
 
 # SalesWings
 
-> [SalesWings][1] is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.
+> [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.
 
 _This integration is maintained by SalesWings._
 
@@ -22,9 +22,9 @@ SalesWings allows marketing teams and marketing operations managers to qualify l
  
 | Requirement | Description |
 | ----------- | ----------- |
-| SalesWings account | A [SalesWings][1] account is required to take advantage of this partnership. |
+| SalesWings account | A [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.export.ids` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Segment.com account (optional) | If you are a Segment.com user, you can send all lead engagement and profile data and identify events via Segment.com for lead profiling. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,41 +80,41 @@ _Example dashboard linked to Braze email & marketing engagement within Salesforc
 
 ### Step 1: SalesWings account and configuration
 
-[Schedule a demo][4] with the friendly SalesWings team to learn more about SalesWings.
+[Schedule a demo](https://www.saleswingsapp.com/schedule-a-demo?utm_source=braze&utm_campaign=technicaldocs) with the friendly SalesWings team to learn more about SalesWings.
 
 ### Step 2: Installing behavioral tracking on your website or app
 
 There are several ways for you to collect behavioral data in SalesWings for lead and account scoring, identifying buyer intent and sales insights:
-* [Deploy the SalesWings tracking JavaScript][5] on the websites and apps where you want to track and identify leads
+* [Deploy the SalesWings tracking JavaScript](https://support.saleswingsapp.com/en/collections/3285135-1-implementing-saleswings-tracking-script) on the websites and apps where you want to track and identify leads
 * Ingest Braze events along with event properties into SalesWings via Braze Currents
-* Send behavioral lead activity data (and lead profile data) via [SalesWings integration with Segment][13]
-* Send data straight to the SalesWings [API][14] from a third-party solution
+* Send behavioral lead activity data (and lead profile data) via [SalesWings integration with Segment](https://support.saleswingsapp.com/en/articles/9258905-segment-com-integration)
+* Send data straight to the SalesWings [API](https://support.saleswingsapp.com/en/articles/6930889-using-saleswings-open-api-to-send-events-to-saleswings) from a third-party solution
 
 ### Step 3: Connecting SalesWings to Braze
 
-Go to the [**SalesWings Integrations** page][6] and expand the **Braze Integration** section.
+Go to the [**SalesWings Integrations** page](https://helium.saleswings.pro/integrations) and expand the **Braze Integration** section.
 
-![The Braze Integration section of the SalesWings Settings page.][7]
+![The Braze Integration section of the SalesWings Settings page.]({% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_integration_settings.png %})
 
 Copy the value of the **Identifier** column for the newly created key and paste it into the **Braze API key** field of the SalesWings **Braze Integration** section.
 
-Add your Braze API endpoint as described in [API and SDK endpoints article][8], and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
+Add your Braze API endpoint as described in [API and SDK endpoints article]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints), and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
 
 Then, select **Save**.
 
 ### Step 4: Set up a custom Currents export to SalesWings (optional)
 
-If you want to use [user behavior][10] and [message engagement][11] events for behavioral intelligence, lead and account scoring, produce sales insights, or generate reports in your CRM, go to the [**SalesWings Integrations** page][6] and expand the **Braze Integration** section.
+If you want to use [user behavior]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events) and [message engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events) events for behavioral intelligence, lead and account scoring, produce sales insights, or generate reports in your CRM, go to the [**SalesWings Integrations** page](https://helium.saleswings.pro/integrations) and expand the **Braze Integration** section.
 
 Select **Generate** under **Generate an API token to setup a Custom Currents Export**.
 
-Then, [create a new Current][9] and select **Custom Currents Export** as the Current type.
+Then, [create a new Current]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents) and select **Custom Currents Export** as the Current type.
 
-In the **Credentials** section of the Current creation form, enter the API token you have generated on the [**SalesWings Integrations** page][6] for **Bearer Token**, and `https://helium.saleswings.pro/api/braze/currents/events` for **Endpoint**.
+In the **Credentials** section of the Current creation form, enter the API token you have generated on the [**SalesWings Integrations** page](https://helium.saleswings.pro/integrations) for **Bearer Token**, and `https://helium.saleswings.pro/api/braze/currents/events` for **Endpoint**.
 
 ### Step 5: Configuring SalesWings lead and account scoring for Braze, CRM integration, and more
 
-Consult the SalesWings services team for full onboarding support via the [website][1].
+Consult the SalesWings services team for full onboarding support via the [website](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs).
 
 ## Using this integration 
 
@@ -167,23 +167,9 @@ The following table shows the Braze event types supported by SalesWings and thei
 | Subscriptions | Subscription Group State Change | `[Subscription status change] $subscription_status to/from $campaign_name` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-You can then configure **Custom Event** > **Event Name** and **Custom Event** > **Event Property** conditions for SalesWings tags and scores against the SalesWings event names from the table above. The list of event properties available for conditions is prefilled with some of the commonly used entries, and you can always add new ones in the **Event Property** section of the [Rule Engine configuration page][12].
+You can then configure **Custom Event** > **Event Name** and **Custom Event** > **Event Property** conditions for SalesWings tags and scores against the SalesWings event names from the table above. The list of event properties available for conditions is prefilled with some of the commonly used entries, and you can always add new ones in the **Event Property** section of the [Rule Engine configuration page](https://helium.saleswings.pro/falcon).
 
 ![Example of an Event Name condition.]({% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_custom_event_condition.png %})
 
-For configuration and further troubleshooting, contact the [SalesWings services team][1] for onboarding support.
+For configuration and further troubleshooting, contact the [SalesWings services team](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) for onboarding support.
 
-[1]: https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[3]: https://www.saleswingsapp.com/braze-lead-scoring-and-sales-insights?utm_source=braze&utm_campaign=technicaldocs
-[4]: https://www.saleswingsapp.com/schedule-a-demo?utm_source=braze&utm_campaign=technicaldocs
-[5]: https://support.saleswingsapp.com/en/collections/3285135-1-implementing-saleswings-tracking-script
-[6]: https://helium.saleswings.pro/integrations
-[7]: {% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_integration_settings.png %}
-[8]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
-[9]: {{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents
-[10]: {{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events
-[11]: {{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events
-[12]: https://helium.saleswings.pro/falcon
-[13]: https://support.saleswingsapp.com/en/articles/9258905-segment-com-integration
-[14]: https://support.saleswingsapp.com/en/articles/6930889-using-saleswings-open-api-to-send-events-to-saleswings

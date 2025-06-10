@@ -95,7 +95,7 @@ After selecting your template, you’ll see an overview of your email under **Em
 
 Then, select **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 
 
-![The "Email Variants" section with an example email body.][8]
+![The "Email Variants" section with an example email body.]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
 
 ### Step 2: Build your email
 
@@ -167,7 +167,7 @@ You can also select **Copy preview link** to generate and copy a shareable previ
 
 Note that any edits made to an email template won't reflect in a previously generated link. You'll need to generate a new link preview to see any edits.
 
-![Email preview with a button to "Copy preview link" and copy the generated link.][15]
+![Email preview with a button to "Copy preview link" and copy the generated link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### Use Inbox Vision
 
@@ -177,7 +177,7 @@ Inbox Vision allows you to view your email campaigns from the perspective of ema
 Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
 {% endalert %}
 
-After using the drag-and-drop editor to design and create your email message, continue to [build][12] the remainder of your campaign or Canvas.
+After using the drag-and-drop editor to design and create your email message, continue to [build]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
 
 {% details About the updated HTML engine %}
 The underlying engine that produces HTML from the drag-and-drop editor has been optimized and updated, resulting in benefits related to HTML file compression and rendering.
@@ -186,7 +186,7 @@ Our average exported HTML data footprint size has been reduced, leading to faste
 
 HTML rendering has improved based on the following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded.
 - Migration from a `<div>` element-based design to a standard `<table>` formatted codebase
-- [Editor blocks][7] have been re-coded for conciseness
+- [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) have been re-coded for conciseness
 - The final HTML code is compressed to remove whitespace between tags
 - Transparent dividers are automatically converted into content padding
 {% enddetails %}
@@ -203,17 +203,17 @@ You can create a custom theme for your drag-and-drop editor using [global style 
 
 Images added to your email will automatically be set to **Auto width**. To adjust this setting, toggle off **Auto width** and adjust the width percentage as needed.
 
-![Auto width option in the Content tab of the drag-and-drop editor.][2]
+![Auto width option in the Content tab of the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd1.png %})
 
 ### Color layering
 
 Using color layering, you can change the color of the email background, content area, and different content components. The color ordering from front to back is: content component color, content area background color, and background color.
 
-![Example of the color layering in the drag-and-drop editor.][3]
+![Example of the color layering in the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd2.png %})
 
 ### Content padding
 
-![Block Options for the drag-and-drop editor.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Block Options for the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to **Block Options** and select **More Options**. You can fine-tune your padding to get your email looking just right.
 
@@ -223,7 +223,7 @@ You can add a background image to your row configuration, allowing you to incorp
 
 ### Add personalization
 
-![Options for adding personalization for the drag-and-drop editor.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Options for adding personalization for the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 Basic Liquid is supported in the drag-and-drop email editor. To add personalization to your email:
 
@@ -242,13 +242,13 @@ You can choose to include dynamic images in your email messaging by including Li
 
 When composing your message, you can toggle the text direction between left-to-right to right-to-left by selecting the respective **Text direction** button. You might use this option when creating messages in languages like Arabic and Hebrew.
 
-![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.][1]{: style="max-width:50%;"}
+![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ### Add HTML attributes to links
 
-![The "Attributes" section with the attribute "clicktracking" turned off for a link.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+![The "Attributes" section with the attribute "clicktracking" turned off for a link.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 When using links, buttons, images, and videos in the drag-and-drop editor, select **Add new attribute** under **Attributes** in the **Content** section to append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling.
 
@@ -266,18 +266,3 @@ To set up universal links, refer to [Universal links and App Links]({{site.baseu
 
 Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 
-[1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
-[2]: {% image_buster /assets/img/dnd/dnd1.png %}
-[3]: {% image_buster /assets/img/dnd/dnd2.png %}
-[4]: {% image_buster /assets/img/dnd/dnd3.png %}
-[5]: {% image_buster /assets/img/dnd/dnd4.png %}
-[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
-[8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
-[9]: {% image_buster /assets/img/dnd/dnd_content.png %}
-[10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
-[11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
-[14]: {% image_buster /assets/img/rtl_button.png %}
-[15]: {% image_buster /assets/img/dnd_email_link_preview.png %}

@@ -21,7 +21,7 @@ Multi-language support is currently in early access. Contact your Braze account 
 ## Add a locale
 
 1. Go to **Settings** > **Multi-Language Support** under **Workspace Settings**.
-2. Select **Add locale**, and then select **Default locale** or **Custom Attributes**.<br><br>![The "Add locale" dropdown with options to select the default locale or custom attributes.][1]{: style="max-width:40%;"}
+2. Select **Add locale**, and then select **Default locale** or **Custom Attributes**.<br><br>![The "Add locale" dropdown with options to select the default locale or custom attributes.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Enter a name for the locale.
 4. Select the respective user attributes for your chosen locale option.
 
@@ -71,4 +71,3 @@ Translation files are stored at a campaign level, meaning each message variant m
 
 No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.
 
-[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

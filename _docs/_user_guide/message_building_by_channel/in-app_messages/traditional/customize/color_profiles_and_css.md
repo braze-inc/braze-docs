@@ -24,7 +24,7 @@ Click **Save Color Profile** when you're finished.
 
 ### Managing color profiles
 
-You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## CSS template {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ As you can see, you can edit everything from the background color to font size a
 
 ### Managing CSS templates
 
-You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal with CSS (web only) {#web-modal-css}
 
@@ -93,6 +93,3 @@ If you choose to use a web-only Web Modal with CSS message, you can apply your o
 If you choose to apply your own template, click **Apply Template** and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) using the CSS Template builder.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

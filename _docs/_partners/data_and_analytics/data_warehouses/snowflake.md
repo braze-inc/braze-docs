@@ -80,7 +80,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Map raw event or user data to a CRM (like Salesforce)
 - And more
 
-[Download the raw table schemas here.][schemas]
+[Download the raw table schemas here.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### User ID schema
 
@@ -137,8 +137,5 @@ Nearly every event record Braze stores includes a few fields representing users'
 
 The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
-> For a set of example queries to reference when setting up snowflake, check out our [sample queries][SQ] and [ETL event pipeline setup][ETL] examples.
+> For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) examples.
 
-[SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
-[ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
-[schemas]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}

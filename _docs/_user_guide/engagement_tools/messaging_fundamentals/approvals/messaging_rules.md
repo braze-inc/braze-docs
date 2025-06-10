@@ -54,7 +54,7 @@ You can create up to five messaging rules.
 5. Enter a number for **Maximum reachable users**. For more information, refer to [Audience statistics]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics).
 6. Select **Save**.
 
-![An example messaging rule "Rule 1" for campaigns with 100,000 users as the maximum. There is one user who can approve the Canvas and campaign to launch.][1]{: style="max-width:90%;"}
+![An example messaging rule "Rule 1" for campaigns with 100,000 users as the maximum. There is one user who can approve the Canvas and campaign to launch.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
 
 ### Step 2: Determine launching with approval (optional)
 
@@ -65,7 +65,7 @@ Note the following details on launching messages with approval:
 - If the maximum is met and an approver is selected, the Braze user with the approval permission will be able to select **Approved** from the **Target Audience** approval dropdown.
 - If the maximum is met an an approve is not selected, the Canvas or campaign will be prevented from launching.
 
-![The "Summary" step of the Canvas workflow that shows you need an approval to launch.][2]{: style="max-width:90%;"}
+![The "Summary" step of the Canvas workflow that shows you need an approval to launch.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## Frequently asked questions
 
@@ -81,5 +81,3 @@ Messaging rules don't take into account details such as triggering events. For e
 
 No. After this feature is turned on, you must manually enter the maximum number of users and select approvers to use the feature.
 
-[1]: {% image_buster /assets/img/target_population_approval_example.png %}
-[2]: {% image_buster /assets/img/non_approver_banner.png %}
