@@ -131,7 +131,7 @@ Finally, let's talk about the finer details—the things that help users not jus
 
 - **Clearly label links and buttons:** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
 - **Go easy on symbols and emojis:** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don't replace clear, descriptive text.
-- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and your audience, since it prevents your content from reaching them.
 
 ### Buttons
 
@@ -194,9 +194,6 @@ Make sure your buttons (and links) are big enough and spaced far enough apart fo
 ### Links
 
 Use links for navigation, like directing users to an external page.
-
-- Write descriptive link text
-- Avoid styling links like buttons
 
 #### Write descriptive link text
 

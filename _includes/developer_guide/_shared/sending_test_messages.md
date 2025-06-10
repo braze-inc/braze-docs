@@ -43,7 +43,7 @@ You can send a message using the Braze dashboard or the command line.
 {% tab Using the dashboard %}
 {% subtabs %}
 {% subtab push or in-app message %}
-To send test push notifications or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment from the dropdown menu.
+To send test push notifications or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Audiences** step, select your test segment from the dropdown menu.
 
 ![A Braze test campaign displaying the segments available in the targeting step.]({% image_buster /assets/img_archive/test_segment.png %})
 

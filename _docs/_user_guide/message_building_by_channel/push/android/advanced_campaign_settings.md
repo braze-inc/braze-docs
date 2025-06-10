@@ -22,7 +22,7 @@ A notification ID is a unique identifier for a message category of your choosing
 
 To assign a notification ID, navigate to the composition page of the push you'd like to add the ID to select the **Settings** tab. Enter an integer in the **Notification ID** section. To update this notification after you've issued it, send another notification with the same ID that you used previously.
 
-![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
+![Notification ID field.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## Time to live (TTL) {#ttl}
 
@@ -74,17 +74,17 @@ For more detailed information on message handling and deprioritization, see [FCM
 
 The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display under the body of the message in the expanded view. It also serves as a caption for notifications with images.
 
-![][9]
+![Example of summary text in an expanded push notification.][9]{: style="max-width:60%;"}
 
 For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the following animation for an example of this behavior.
 
-![Summary Text Behavior][15]
+![GIF showing summary text behavior.][15]{: style="max-width:60%;"}
 
 ## Custom URIs
 
-The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer.
+The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or in the **Compose** tab of the the push composer.
 
-![Custom URI][12]
+![Custom URI field.][12]{: style="max-width:60%;"}
 
 ## Notification display priority
 
@@ -117,7 +117,7 @@ For more information, refer to Google's documentation on [Android notifications]
 
 Android push notifications provide the option to specify if your notification falls into a predefined category. The Android system UI may use this category to make ranking or filtering decisions about where to place the notification in the user's notification tray.
 
-![Settings tab with the Category set to None, which is the default setting.][52]
+![Settings tab with the Category set to None, which is the default setting.][52]{: style="max-width:60%;"}
 
 | Category | Description |
 |---|-------|
@@ -152,7 +152,7 @@ Android push notifications provide an optional field to determine how a notifica
 
 Additionally, Android users can override how push notifications appear on their lock screen by changing the notification privacy setting on their device. This setting will override the visibility from the push notification.
 
-![Dashboard push priority location with Set Visibility enabled and set to Private.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![Dashboard push priority location with Set Visibility enabled and set to Private.][53]{: style="float:right;max-width:50%;margin-left:15px;"}
 
 Regardless of the visibility, all notifications will be shown on the user's lock screen if the notification privacy setting on their device is **Show all content** (default setting). Likewise, notifications will not be shown on their lock screen if their notification privacy is set to **Do not show notifications**. The visibility only has an effect if their notification privacy is set to **Hide sensitive content**.
 
@@ -168,7 +168,7 @@ For devices running versions of Android before Android O, Braze allows you to se
 
 Selecting **Default** in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer.
 
-![][11]
+![The "Sound" field.][11]{: style="float:right;max-width:50%;margin-left:15px;"}
 
 Next, enter the full sound resource URI (for example, `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 

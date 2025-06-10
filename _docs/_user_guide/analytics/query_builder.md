@@ -2,7 +2,6 @@
 nav_title: Query Builder
 article_title: Query Builder
 page_order: 15
-page_type: reference
 description: "This reference article describes how to build reports using Braze data from Snowflake in the Query Builder."
 tool: Reports
 ---
@@ -280,208 +279,23 @@ For selecting Canvas steps that belong to chosen Canvases. It must be used with 
 
 - **Replacement value:** Canvas steps API IDs
 - **Usage example:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-
-#### Products
-
-For selecting a list of product names.
-
-- **Replacement value:** Product names are surrounded by single quotes and separated by commas, such as in `product1, product2`
-- **Usage example:** {% raw %}`product_id IN ({{products.${product name (optional)}}})`{% endraw %}
-
-#### Custom events
-
-For selecting a list of custom events.
-
-- **Replacement value:** Custom event property names are separated by commas such as in `event1, event2`
-- **Usage example:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
-
-#### Custom event properties
-
-For selecting a list of custom event property names. It must be used with the custom events variable.
-
-- **Replacement value:** Custom event property names are separated by commas such as in `property1, property2`
-- **Usage example:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
-
-#### Workspace
-
-For selecting a workspace.
-
-- **Replacement value:** Workspace BSON ID
-- **Usage example:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
-
-#### Catalogs
-
-For selecting catalogs.
-
-- **Replacement value:** Catalog BSON IDs
-- **Usage example:** {% raw %}`catalog_id = ‘{{catalogs.${catalog}}}’`{% endraw %}
-
-#### Catalog Fields
-
-For selecting catalog fields. It must be used with the catalogs variable.
-
-- **Replacement value:** Catalog field names
-- **Usage example:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
-
-#### Options {#options}
-
-For selecting from a list of options.
-
-- **Replacement value:** The value of the selected options
-- **Usage example:**
-    - For select dropdown: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select` allows specifying whether the end user can select more than one option
-    - For radio button: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-
-#### Segments
-
-For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) turned on.
-
-- **Replacement value:** The segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
-- **Usage example:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
-
-#### String
-
-For changing repetitive string values between report runs. Use this variable to avoid hardcoding a value multiple times in your SQL.
-
-- **Replacement value:** The string as is without any surrounding quotes
-- **Usage example:** {% raw %}`{{string.${some name}}}`{% endraw %}
-
-#### Tags
-
-For selecting tags for campaigns and Canvases.
-
-- **Replacement value:** Campaigns and Canvases with single-quoted comma-separated BSON IDs that are associated with the selected tags
-- **Usage example:** {% raw %}`{{tags.${some tags}}}`{% endraw %}
-
-### Variable metadata
-
-Metadata can be attached to a variable to change its behavior by appending the metadata with a pipe ( &#124; ) character following the variable name. The ordering of the metadata doesn’t matter and you can append any number of them. Additionally, all types of metadata can be used for any variable, except for special metadata that is specific to certain variables (this will be indicated in those cases). The usage of all metadata is optional and is used to change the default’s variable behavior.
-
-**Usage example:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
-
-#### Visible
-
-For whether variables are visible. All variables are visible by default in the **Variables** tab, where you can input values.
-
-There are several special variables whose value is dependent on another variable, such as whether another variable has a value. These special variables are marked as not visible so they don't show in the **Variables** tab.
-
-**Usage example:** `visible: ‘false’`
-
-#### Required
-
-For whether variables are required by default. An empty value for a variable usually leads to an incorrect query.
-
-**Usage example:** `required: ‘false’`
-
-#### Order
-
-For selecting the position of the variable in the **Variables** tab.
-
-**Usage example:** `order: ‘1’`
-
-#### Include single quotes
-
-For surrounding the values of a variable with single quotes.
-
-**Usage example:** `include_quotes: ‘true’`
-
-#### Include double quotes
-
-For surrounding the values of a variable with double quotes.
-
-**Usage example:** `include_double_quotes: ‘true’`
-
-#### Multi-select
-
-For whether the select dropdown allows a single or multi-select. For now, you can include this metadata only if you use the [Options](#options) variable.
-
-**Usage example:** `is_multi_select: ‘true’`
-
-![][7]{: style="max-width:50%;"}
-
-#### Radio button
-
-For showing options as radio buttons instead of a select dropdown in the **Variables** tab. You can include this metadata only if you use the [Options](#options) variable.
-
-**Usage example:** `is_radio_button: ‘true’`
-
-![][6]{: style="max-width:50%;"}
-
-#### Options 
-
-For providing the list of selectable options in the form of a label and value. The label is what gets shown and the value is what the variable gets replaced with when the option is selected. You can include this metadata only if you use the [Options](#options) variable.
-
-**Usage example:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
-
-#### Placeholder
-
-For specifying the placeholder text shown in the variable’s input field.
-
-**Usage example:** `placeholder: ‘enter some value’`
-
-#### Description
-
-For specifying the description text shown under the variable’s input field.
-
-**Usage example:** `description: ‘some description’`
-
-#### Default value
-
-For specifying the default value for the variable when no value is specified.
-
-**Usage example:** `default_value: ‘5’`
-
-#### Hide label
-
-For hiding the variable's name label. The variable's name is used as a default label.
-
-**Usage example:** `hide_label: ‘true’`
-
-### Special variables
-
-The following variables can be used with other variables:
-
-#### Presence or absence of another variable’s value
-
-For knowing whether a variable’s value is filled. This is useful for optional variables where you want to short-circuit a condition if a variable’s value is not filled.
-
-- **Replacement value:** `true` or `false` depending on the other variable’s value
-- **Usage example:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
-
-`type` and `name` refer to the referenced variable. For example, to short-circuit the following optional variable: {% raw %}`{{campaigns.${messaging}}`, you can use the following:
-`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
-
-## Report timeout
-
-Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
-
-If a report times out or runs into errors even after retrying, contact [Support]({{site.baseurl}}/help/support#braze-support).
-
-## Data and results
-
-Results and exports of results are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, you can use tools such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or the [export API endpoint]({{site.baseurl}}/api/endpoints/export).
-
-## Monitoring your Query Builder usage
-
-Each company has 5 Snowflake credits available per month, shared across all workspaces. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
-
-{% alert note %}
-Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.
-{% endalert %}
-
-Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
-
-Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
-
-![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
-
-When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
-
-[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
-[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
-[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
-[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
-[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
-[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
-[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}
+=======
+layout: dev_guide
+page_type: landing
+
+guide_top_header: "Query Builder"
+guide_top_text: "The Query Builder generates reports using Braze data in Snowflake. It comes with pre-built SQL query templates to get you started, or you can write your own custom SQL queries to unlock even more insights."
+
+guide_featured_title: "Section articles"
+guide_featured_list:
+  - name: Using the Query Builder
+    link: /docs/user_guide/analytics/query_builder/building_queries/
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Query Templates
+    link: /docs/user_guide/analytics/query_builder/query_templates/
+    image: /assets/img/braze_icons/refresh-ccw-01.svg
+  - name: SQL Variables
+    link: /docs/user_guide/analytics/query_builder/sql_variables/
+    image: /assets/img/braze_icons/target-05.svg
+
+---

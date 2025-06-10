@@ -2,6 +2,7 @@
 nav_title: Security Settings
 article_title: Security Settings
 page_order: 2
+toc_headers: h2
 page_type: reference
 description: "This reference article covers generic cross-company security settings, including authentication rules, IP allowlisting, PII, and two-factor authentication (2FA)."
 
@@ -37,13 +38,13 @@ Use this field to set when you want your Braze account users to reset their pass
 
 ### Session duration rules
 
-Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to one week) if two-factor authentication is enforced for your company, otherwise the maximum session duration will be 1,440 minutes (equal to 24 hours).
+Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to one week) if two-factor authentication is enforced for your company, otherwise, the maximum session duration will be 1,440 minutes (equal to 24 hours).
 
 ### Single sign-on (SSO) authentication
 
 You can restrict your users from logging in using a password or SSO.
 
-For [SAML SSO][15], customers need to set up their SAML settings prior to enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
+For [SAML SSO][15], customers need to set up their SAML settings before enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
 ## Dashboard IP allowlisting
 
@@ -61,7 +62,6 @@ When two-factor authentication is turned on:
 Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 Be sure to save your changes before leaving the page!
-
 
 ### Remember this account for 30 days {#remember-me}
 
@@ -106,15 +106,18 @@ This report only contains the most recent 10,000 security events for your accoun
 {% details Reported security events %}
 
 ### Login and account 
-- Removed Developer
-- Added Additional Developer
 - Signed In
 - Failed Login
 - Two-Factor Auth Setup Completed
 - Two-Factor Auth Reset Completed
 - Cleared Developer 2FA
+- Added Additional Developer
 - Developer Suspended
 - Developer Unsuspended
+- Developer Updated
+- Removed Developer
+- User Subscription Status Updated
+- User Updated
 
 ### Elevated access
 - Started Elevated Access Flow
@@ -151,6 +154,7 @@ This report only contains the most recent 10,000 security events for your accoun
 ### Company settings
 - Added App Group
 - Added App
+- Company Settings Changed
 
 ### Email template
 - Added Email Template
@@ -167,9 +171,9 @@ This report only contains the most recent 10,000 security events for your accoun
 
 ## Viewing personally identifiable information (PII) {#view-pii}
 
-The **View PII** permission is only accessible to a few select Braze users. For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+The **View PII** permission is only accessible to a few select Braze users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see the following standard and custom attributes throughout the dashboard. When this permission is turned off for users, those users won't be able to see this information.
 
-By default, all admins have their **View PII** permission turned on in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). This means they can see the following standard and custom attributes throughout the dashboard. When this permission is turned off for users, those users won't be able to see this information.
+For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
 ### Defining PII
 
@@ -184,7 +188,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 
 ### Limited areas
 
-The following assumes that all fields are set as PII and the users mentioned are those that use the Braze platform.
+The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
@@ -201,9 +205,9 @@ When previewing a message, the **View PII** permission isn't applied, so users c
 
 ## Data deletion preferences 
 
-You can use this setting to set preferences for whether certain fields should be deleted during the user delete process for events. These preferences only impact data for users that have been deleted from Braze. 
+You can use this setting to set preferences for whether certain fields should be deleted during the user delete process for events. These preferences only impact data for users who have been deleted from Braze. 
 
-When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
+When a user is deleted, Braze removes all PII from event data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
 
 You are responsible for determining the correct preferences for your workspace. The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
 
@@ -213,7 +217,7 @@ You are responsible for determining the correct preferences for your workspace. 
 | -------------------- | ------ | ----- |
 | Custom event | properties |  |
 | Purchase event | properties |  |
-| Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
+| Message send | message_extras | Several event types contain a `message_extras` field. The preference applies to all message send event types that support `message_extras`, including event types added in the future. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
@@ -224,7 +228,7 @@ You are responsible for determining the correct preferences for your workspace. 
 
 Set default preferences by checking boxes for any fields that should be removed if a user is deleted. Select any of the fields that contain PII. This preference will apply to all current and future workspaces unless workspaces are explicitly added to a preference group.
 
-To customize preference by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
+To customize preferences by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
 
 ![Data Deletion Preferences section with turned on toggle for customizing data deletion preferences by workspace.]({% image_buster /assets/img/deletion_preferences_1.png %})
 

@@ -182,14 +182,6 @@ glossaries:
     description: Segments your users by the last time that they received a WhatsApp message. This is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
-  - name: Last Viewed News Feed
-    description: Segments your users by the last time they viewed News Feed.
-    tags:
-      - Retargeting
-  - name: News Feed View Count
-    description: Segments your users by how many times they viewed News Feed.
-    tags:
-      - Retargeting
   - name: Clicked/Opened Campaign
     description: Filter by interaction with a specific campaign. For email messaging, the open event includes both machine opens and non-machine opens.<br><br> For email, this also includes the option to filter by "opened any email (machine opens)" and "opened any email (other opens)". If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.<br><br>For SMS, an interaction is defined as:<br>- The user last sent a reply SMS matching a given keyword category. This is attributed to the most recent campaign received by all users with this phone number. The campaign must have been received in the last four hours.<br>- The user last selected any shortened link in an SMS message that has user click tracking turned on, from a given campaign.
     tags:
@@ -303,7 +295,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Background Push Enabled
-    description: Segments your users on whether they have enabled background push or not.
+    description: Segments your users on whether they have enabled background push or not.<br><br>Background Push Enabled does not include users who have unsubscribed.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date

@@ -354,7 +354,7 @@ Segment your users with eCommerce filters, like **Ecommerce Source** and **Total
 ![Segment filters dropdown with "Ecommerce" filters.][7]{: style="max-width:80%"}
 
 {% alert important %}
-The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
+The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
 {% endalert %}
 
 ## Nested event properties

@@ -14,6 +14,10 @@ description: "This article provides an overview of multi-language settings in th
 
 To edit and manage multi-language support, you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
 
+{% alert important %}
+Multi-language support is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
 ## Add a locale
 
 1. Go to **Settings** > **Multi-Language Support** under **Workspace Settings**.

@@ -25,7 +25,7 @@ If you want to categorize your messages and group them in your user's notificati
 
 First, create your Android push campaign, then look to the top of the **Compose** tab for the **Notification Channel** dropdown.
 
-![][28]{: style="max-width:60%;" }
+![][28]{: style="max-width:60%;"}
 
 Select your Notification Channel from the dropdown. You must also select a fallback channel in the event that your Notification Channel settings malfunction.
 

@@ -62,6 +62,7 @@ You can use these blocks to add content and customize the layout of your landing
 | Title       | A text block for adding a heading or title to your content. Useful for structuring sections and improving readability. |
 | Paragraph   | A text block for longer descriptions or additional context. Supports rich text formatting. |
 | Button      | A clickable element that directs users to a specified action, such as opening a link or submitting a form. |
+| Radio Button | Adds a list of options from which users can select one. When submitted, the user profile logs the associated custom attribute. |
 | Image       | A block for displaying images. You can upload an image or provide a URL to reference an external source. |
 | Link        | A hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | Spacer      | An invisible block that adds vertical spacing between elements for improved layout and readability. |
