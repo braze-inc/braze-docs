@@ -153,7 +153,7 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-There will be a delay in reporting for users synced and error metrics due to internal processing.
+There will be a delay in reporting for users synced and users errored metrics due to internal processing.
 {% endalert %}
 
 ## Frequently asked questions
