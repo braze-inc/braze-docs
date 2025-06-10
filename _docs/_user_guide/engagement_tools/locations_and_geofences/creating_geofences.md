@@ -59,7 +59,7 @@ Next, you can add geofences to your geofence set.
 We recommend creating geofences with a radius of at least 200 meters for optimal functionality. For more information on configurable options, refer to [Mobile integrations](#mobile-integrations).
 {% endalert %}
 
-![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.][3]
+![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
 
@@ -114,7 +114,7 @@ After geofences have been configured, you can use them to enhance and enrich how
 
 To use geofence data as part of campaign and Canvas triggers, choose **Action-Based Delivery** for the delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
 
-![An action-based campaign with a geofence that will trigger when a user enters German airports.][2]
+![An action-based campaign with a geofence that will trigger when a user enters German airports.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### Personalizing messages
 
@@ -191,6 +191,3 @@ No, Braze doesn't store geofence data on user profiles. Geofences are monitored 
 
 As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
 
-[1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
-[2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
-[3]: {% image_buster /assets/img/geofence_example.png %}

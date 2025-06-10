@@ -26,7 +26,7 @@ Email list cleaning services can do this for you by determining if the email add
 
 In order to identify your most engaged users, first remove deeply lapsed users. It's a best practice to not email users who have not engaged with an email in over six months as this can damage your email sender reputation. When importing your email list, make sure to only include users who have opened an email from you within the last six months.
 
-In the long term, you should also consider implementing a [sunset policy][60].
+In the long term, you should also consider implementing a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### Avoid suppression lists
 
@@ -36,4 +36,3 @@ If you are transitioning off an existing email provider, make certain that you d
 
 Once you have your email list prepared, there are several ways to import users into Braze, such as via the Braze REST API or CSV files. Read more at our dedicated [User Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/) article.
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

@@ -180,13 +180,13 @@ If Braze detects that you don't have a close or dismissal button included in you
 
 The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-![An example brand's in-app message to welcome new customers and prompt them to set up a user profile.][24]{: style="max-width:85%" }
+![An example brand's in-app message to welcome new customers and prompt them to set up a user profile.]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 The content of the **Compose** tab varies based on your chosen message options in the previous step, but may include any of the following options:
 
 ### Language
 
-Select **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Select **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 ### Image
 
@@ -294,7 +294,7 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ### Key-value pairs
 
-You can add [key-value pairs][19] to send extra custom fields to user devices.
+You can add [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) to send extra custom fields to user devices.
 
 ## Step 7: Build the remainder of your campaign or Canvas
 
@@ -407,11 +407,3 @@ You can have up to 200 active, action-based in-app message campaigns per workspa
 The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
 
 
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img_archive/iam_compose.png %}
-[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

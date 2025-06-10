@@ -14,7 +14,7 @@ search_rank: 2
 
 {% raw %}
 
-To send a Connected Content call, use the `{% connected_content %}` tag. With this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2].
+To send a Connected Content call, use the `{% connected_content %}` tag. With this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview).
 
 For example, the following message body will access the URL `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
 
@@ -45,7 +45,7 @@ Connected Content requests support GET and POST requests only.
 
 If the URL is unavailable and reaches a 404 page, Braze will render an empty string in its place. If the URL reaches an HTTP 500 or 502 page, the URL will fail on retry logic.
 
-If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/). Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 
 ### Unhealthy host detection
 
@@ -80,11 +80,11 @@ Braze systems may make the same Connected Content API call more than once per re
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones from **Settings** > **Connected Content**.
 
-![The 'Connected Content' settings in the Braze dashboard.][34]
+![The 'Connected Content' settings in the Braze dashboard.]({% image_buster /assets/img_archive/basic_auth_mgmt.png %})
 
 To add a new credential, select **Add Credential**. Give your credential a name and enter the username and password.
 
-![The 'Create New Credential' window with the option to enter a name, username, and password.][35]{: style="max-width:30%" }
+![The 'Create New Credential' window with the option to enter a name, username, and password.]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:30%" }
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
@@ -125,7 +125,7 @@ Some API configurations require retrieval of an access token that can then be us
 
 #### Step 1: Retrieve the access token
 
-The following example illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
+The following example illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching) for more information.
 
 {% raw %}
 ```
@@ -197,9 +197,4 @@ By default, POST requests do not cache. However, you can add the `:cache_max_age
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
-[36]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching

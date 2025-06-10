@@ -44,15 +44,15 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, select **Connect TikTok**.
 
-![TikTok technology page in Braze includes an Overview section and TikTok Audience Sync section with the Connected TikTok button.][1]{: style="max-width:75%;"}
+![TikTok technology page in Braze includes an Overview section and TikTok Audience Sync section with the Connected TikTok button.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
 
 You'll then be redirected to the TikTok OAuth page to authorize Braze for ad account management and Audience Management. After you have selected **Confirm**, you'll be redirected back into Braze to select which TikTok ad accounts you wish to sync to. 
 
-![][2]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/tiktok/tiktok2.png %}){: style="max-width:75%;"}
 
 Once successfully connected, you will return to the partner page. Here, you can view which accounts are connected and disconnect existing accounts.
 
-![][3]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/tiktok/tiktok3.png %}){: style="max-width:75%;"}
 
 Your TikTok connection will be applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
 
@@ -60,7 +60,7 @@ Your TikTok connection will be applied at the Braze app-group level. If your Tik
 
 Add a component in your Canvas and select **Audience Sync**. 
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Step 3: Sync setup
 
@@ -68,11 +68,11 @@ Click on the **Custom Audience** button to open the component editor.
 
 Select **TikTok** as the desired Audience Sync partner.
 
-![][19]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 Then select the desired TikTok ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
-![][11]
+![]({% image_buster /assets/img/tiktok/tiktok11.png %})
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -104,7 +104,7 @@ Once you have configured your TikTok Audience component, simply launch the Canva
 
 You can view the audience in TikTok by entering your **Ads Manager Account** and selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
 
-![TikTok page listing the following metrics for the given audience.][5]
+![TikTok page listing the following metrics for the given audience.]({% image_buster /assets/img/tiktok/tiktok5.png %})
 
 ## User syncing and rate limit considerations
 
@@ -160,20 +160,3 @@ This is because in TikTok, one ID may be associated with multiple TikTok users. 
 Additionally, TikTok also counts Pangle users as matched users, which in some cases can result in an elevated match rate. However, when you use the audience for ad delivery, the actual deliverable audience size may not be as high as the matched user size as it depends on placement and other influencing factors.
 
 
-[1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
-[2]: {% image_buster /assets/img/tiktok/tiktok2.png %}
-[3]: {% image_buster /assets/img/tiktok/tiktok3.png %}
-[4]: {% image_buster /assets/img/tiktok/tiktok4.png %}
-[5]: {% image_buster /assets/img/tiktok/tiktok5.png %}
-[6]: {% image_buster /assets/img/tiktok/tiktok6.png %}
-[7]: {% image_buster /assets/img/tiktok/tiktok7.png %}
-[8]: {% image_buster /assets/img/tiktok/tiktok8.png %}
-[11]: {% image_buster /assets/img/tiktok/tiktok11.png %}
-[12]: {% image_buster /assets/img/tiktok/tiktok12.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[14]: {% image_buster /assets/img/tiktok/tiktok14.png %}
-[15]: {% image_buster /assets/img/tiktok/tiktok15.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

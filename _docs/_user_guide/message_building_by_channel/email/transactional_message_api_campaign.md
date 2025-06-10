@@ -37,7 +37,7 @@ Transactional emails differ from transactional campaigns, which can be used to t
 
 To create a new transactional email campaign, create a campaign and select **Transactional Email** as your messaging channel.
 
-![Create Campaign dropdown with the highlighted option for transactional email.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Create Campaign dropdown with the highlighted option for transactional email.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Now, you can move on to configuring your transactional email campaign.
 
@@ -51,7 +51,7 @@ As a result, you'll notice several settings you may be familiar with from other 
 - The **Target Audiences** step has been removed. As transactional emails enroll your entire user base as eligible (including unsubscribed users), there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
 - The **Conversions** step has been removed. Transactional emails do not support conversion event tracking at this time.
 
-![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.][2]{: style="max-width:80%;"}
+![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 To configure your transactional email campaign, follow these steps:
 
@@ -73,5 +73,3 @@ Using the `Connected Content` tag requires Braze to make an outbound API request
 As a result, we do not support including `Connected Content` or `Promotion Code` tags within any field of your transactional email campaign.
 
 
-[1]: {% image_buster /assets/img/transactional_email_campaign.png %} 
-[2]: {% image_buster /assets/img/transactional_campaign_compose.png %}

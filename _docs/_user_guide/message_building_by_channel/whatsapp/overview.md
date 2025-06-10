@@ -41,11 +41,11 @@ In Braze, go to **Partner Integrations** > **Technology Partners** and search fo
 
 On the WhatsApp partner page, select **Begin Integration**.
 
-![WhatsApp partner page with a button to begin the integration.][1]{: style="max-width:70%;"}
+![WhatsApp partner page with a button to begin the integration.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 In the open window, select **Next** until the **Begin Integration** button appears. Select the button to begin the integration process.
 
-![Instructions for connecting Braze to WhatsApp.][7]{: style="max-width:50%;"}
+![Instructions for connecting Braze to WhatsApp.]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
 ### Step 2: WhatsApp setup
 
@@ -64,16 +64,16 @@ Only approved WhatsApp message templates can be used to initiate conversations w
 
 1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
-Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
+Next, select **Create Templates**.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
 In the new message template composer, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
 	The available message template categories include the following:
 	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement
 	- Utility: Send account updates, order updates, alerts, and more to share important information
 	- Authentication: Send codes that allow your customers to access their accounts<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Edit template**<br>
-Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![][5]{: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
+Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
 
 #### Template approval time
 
@@ -104,10 +104,3 @@ We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide
 
 Braze supports WhatsApp’s [Cloud API Local Storage](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5). To have this enabled, contact your Braze customer support manager.
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %} 
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %} 
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %} 
-[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

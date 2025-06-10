@@ -59,14 +59,12 @@ You can also have the abort message log something to your Message Activity Log b
 ```
 {% endraw %}
 
-![Message error log in the Developer Console with an abort message of "language was nil".][26]
+![Message error log in the Developer Console with an abort message of "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Query for abort messages
 
 You can use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or your own data warehouse, if it's connected to Braze, to query for specific abort messages that are triggered when Liquid logic causes a message to abort.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}

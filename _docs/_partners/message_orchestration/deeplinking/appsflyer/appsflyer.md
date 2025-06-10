@@ -99,7 +99,7 @@ AppsFlyer.setAdditionalData(customData);
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **AppsFlyer**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.][4]{: style="max-width:70%;"}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/appsflyer.png %}){: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
 
@@ -108,7 +108,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 3. Provide the data import key and REST endpoint that you found in the Braze dashboard. 
 4. Toggle **Advanced Privacy** off and save your configuration.
 
-Additional information on these instructions is available in [AppsFlyer's documentation][16].
+Additional information on these instructions is available in [AppsFlyer's documentation](https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration).
 
 ### Step 4: Confirm the integration
 
@@ -132,7 +132,7 @@ Assuming you configure your integration as suggested, Braze will map all non-org
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
-![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". Beside the listed filters, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
+![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". Beside the listed filters, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.]({% image_buster /assets/img/braze_attribution.png %})
 
 Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
@@ -384,9 +384,3 @@ idfv={{most_recently_used_device.${id}}}
 
 
 
-[1]: {% image_buster /assets/img/braze_integration.png %}
-[2]: {% image_buster /assets/img/braze_attribution.png %}
-[3]: https://support.appsflyer.com/hc/en-us/articles/360001294118
-[16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration
-[31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration
-[4]: {% image_buster /assets/img/attribution/appsflyer.png %}

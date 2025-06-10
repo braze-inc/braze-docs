@@ -43,6 +43,5 @@ When viewing a user profile in the Braze dashboard, you can see whether it has t
 
 If the `native_line_id` has been set, it will under **LINE User ID**. Otherwise, it won't appear.
 
-![Line Contact Settings in the Engagment tab.][1]{: style="max-width:50%;"}
+![Line Contact Settings in the Engagment tab.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

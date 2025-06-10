@@ -17,7 +17,7 @@ Braze provides support for retargeting users based on messages they have receive
 
 Each of these retargeting filters provides you with several options after you add them. For more on targeting users, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup!
 
-![Segment Details section with the dropdown menu for the available filters.][1]{: style="max-width:80%;"}
+![Segment Details section with the dropdown menu for the available filters.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## Retargeting filters
 
@@ -33,7 +33,7 @@ Use this filter to find users who have or have not:
 - Opened an email
 - Viewed an in-app message
 
-![][3]
+![]({% image_buster /assets/img_archive/clickedopened.png %})
 
 This can be further specified by selecting which campaign you want to retarget.
 
@@ -47,7 +47,7 @@ Use this filter to find users who have or have not interacted with campaigns or 
 - Opened an email
 - Viewed an in-app message
 
-![][16]
+![]({% image_buster /assets/img_archive/retarget_tag_filter.png %})
 
 ### Converted From Campaign 
 
@@ -55,7 +55,7 @@ Use this filter to find users who have or have not converted (based on the prima
 
 For recurring campaigns, this filter refers to whether users have converted on the most recent message from the campaign.
 
-![][12]
+![]({% image_buster /assets/img_archive/converted_from_campaign.png %})
 
 ### Converted From Canvas 
 
@@ -63,43 +63,43 @@ Use this filter to find users who have or have not converted (based on the prima
 
 For recurring Canvases this filter refers to whether users have ever converted anytime they've gone through the Canvas.
 
-![][18]
+![]({% image_buster /assets/img_archive/converted_from_canvas.png %})
 
 ### In Campaign Control Group 
 
 Use this filter to find users who are or are not in the control group of your target campaign.
 
-![][13]
+![]({% image_buster /assets/img_archive/campaign_control_group.png %})
 
 ### In Canvas Control Group 
 
 Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the dropdown.
 
-![][19]
+![]({% image_buster /assets/img_archive/canvas_control_group.png %})
 
 ### Last received message from specific campaign 
 
 Use this filter to find users who last received a specific campaign before or after a specified date or number of days. This filter doesn't consider when users received other campaigns.
 
-![][14]
+![]({% image_buster /assets/img_archive/last_received_specific_campaign.png %})
 
 ### Last received message from specific campaign or Canvas with tag 
 
 Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days. This filter doesn't consider when users received other campaigns or Canvases.
 
-![][17]
+![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
 
 ### Received message from campaign 
 
 Use this filter to find users who have or have not received your target campaign.
 
-![][4]
+![]({% image_buster /assets/img_archive/receivedcamp.png %})
 
 ### Received message from campaign or Canvas with tag 
 
 Use this filter to find users who have or have not received a campaign or Canvas that has your target tag.
 
-![][15]
+![]({% image_buster /assets/img_archive/received_campaign_with_tag.png %})
 
 ## Advantages with retargeting campaigns
 
@@ -120,15 +120,3 @@ After examining those stats, we can make a segment of users who clicked the card
 
 We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done with a messaging campaign. A multichannel approach allows you to reach users where they're most likely to respond, thus increasing the effectiveness of your campaigns.
 
-[1]: {% image_buster /assets/img_archive/retarget.png %}
-[2]: {% image_buster /assets/img_archive/clickedcard.png %}
-[3]: {% image_buster /assets/img_archive/clickedopened.png %}
-[4]: {% image_buster /assets/img_archive/receivedcamp.png %}
-[12]: {% image_buster /assets/img_archive/converted_from_campaign.png %}
-[13]: {% image_buster /assets/img_archive/campaign_control_group.png %}
-[14]: {% image_buster /assets/img_archive/last_received_specific_campaign.png %}
-[15]: {% image_buster /assets/img_archive/received_campaign_with_tag.png %}
-[16]: {% image_buster /assets/img_archive/retarget_tag_filter.png %}
-[17]: {% image_buster /assets/img_archive/last_received_campaign_with_tag.png %}
-[18]: {% image_buster /assets/img_archive/converted_from_canvas.png %}
-[19]: {% image_buster /assets/img_archive/canvas_control_group.png %}

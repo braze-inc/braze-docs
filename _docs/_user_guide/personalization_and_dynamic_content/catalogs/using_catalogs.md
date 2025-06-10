@@ -13,7 +13,7 @@ description: "This reference article covers how to use catalogs to reference non
 
 In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
 
-![][1]
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 We can immediately see the following Liquid preview:
 
@@ -58,7 +58,7 @@ You aren't limited to just one item in a single message. You can use the **Add P
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
-![][2]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 We can further personalize our message by adding some text around our Liquid:
 
@@ -114,11 +114,11 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 ```
 {% endraw %}
 
-![Content Card composer with catalog Liquid tag used in the image field.][3]
+![Content Card composer with catalog Liquid tag used in the image field.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Here's what this looks like when the Liquid is rendered:
 
-![Example Content Card with catalog Liquid tags rendered.][4]{: style="max-width:50%" }
+![Example Content Card with catalog Liquid tags rendered.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### Templating catalog items
 
@@ -139,7 +139,7 @@ You can also use templating to dynamically pull catalog items based on custom at
 JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
 {% endalert %}
 
-Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
 
 {% alert tip %}
 Remember, arrays start at `0`, not `1`.
@@ -211,6 +211,3 @@ Catalog Liquid tags can't be used recursively inside catalogs.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
-[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
-[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
