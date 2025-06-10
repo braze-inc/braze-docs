@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: View Translation for a Campaign"
-article_title: "GET: View Translation for a Campaign"
+nav_title: "GET: View Translation for a Campaign by Locale"
+article_title: "GET: View Translation for a Campaign by Locale"
 search_tag: Endpoint
 page_order: 1
 
