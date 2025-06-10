@@ -7,10 +7,18 @@ layout: scrolly
 description: "A tutorial on how to style in-app messages with custom properties"
 ---
 
-# Custom Styling With Key-Value Pairs
+# Tutorial: Custom Styling With Key-Value Pairs
+
+> DESCRIPTION
 
 {% sdktabs %}
 {% sdktab Android %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
@@ -145,6 +153,12 @@ Use `IInAppMessageViewFactory` to create a custom view factory class that will c
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab Swift %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -254,6 +268,12 @@ lines-AppDelegate.swift=38-46
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab Web %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```js file=index.js

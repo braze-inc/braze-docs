@@ -7,10 +7,18 @@ layout: scrolly
 description: "A tutorial on how to conditionally control whether or not to show a triggered in-app message"
 ---
 
-# Conditionally Display In-App Messages
+# Tutorial: Conditionally Display In-App Messages
+
+> DESCRIPTION
 
 {% sdktabs %}
 {% sdktab Android %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
@@ -102,6 +110,12 @@ Return `InAppMessageOperation.DISPLAY_NOW` to show the message using Braze's UI,
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab Swift %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -190,6 +204,12 @@ Override [`BrazeInAppMessageUIDelegate .inAppMessage(_:displayChoiceForMessage:)
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab Web %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```js file=index.js

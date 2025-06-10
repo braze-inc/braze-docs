@@ -7,10 +7,18 @@ layout: scrolly
 description: "A tutorial on how to defer a triggered in-app message for a subsequent page"
 ---
 
-# Defer and Restore Triggered Messages
+# Tutorial: Defer and Restore Triggered Messages
+
+> DESCRIPTION
 
 {% sdktabs %}
 {% sdktab Android %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
@@ -161,6 +169,12 @@ Restoring the message elsewhere in your app, in this case an activity with a tri
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab Swift %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -295,6 +309,12 @@ Here, our UI is restoring the method from a button-click.
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab Web %}
+## Prerequisites
+
+PREREQUISITES.
+
+## HEADING
+
 {% scrolly %}
 
 ```js file=index.js
