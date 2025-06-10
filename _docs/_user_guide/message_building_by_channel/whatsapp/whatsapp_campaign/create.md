@@ -186,12 +186,12 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Footer text | Strings and variable parameters are supported. | — | — |
 | CTA links | Various call-to-action (CTA) types are supported. For more details, see [Call-to-action types](#ctas). | — | — |
 | Images | Images can be embedded within the body text. They must be 8-bit and use either an RGB or RGBA color model. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
-| Documents* | Documents can embedded within body text. Files must be hosted through URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| Videos* | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
-| Audio* | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
+| Documents | Documents can embedded within body text. Files must be hosted through URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
+| Videos | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
+| Audio | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-<sup>_*Currently in early access. Contact your Braze account manager if you're interested in participating._</sup>
+
 
 ### Inbound messages
 
