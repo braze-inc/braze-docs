@@ -21,7 +21,7 @@ Ask users to text "START", "UNSTOP", "YES", or a custom opt-in keyword to your n
 
 To allow users to opt into SMS from an in-app message, use the [phone number capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) provided by Braze to create a branded form that allows you to collect phone numbers and grow your SMS list.
 
-![In-app message composer with a template for phone number capture.][3]{: style="max-width:80%;"}
+![In-app message composer with a template for phone number capture.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Braze recommends that you also use the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) feature. This feature automatically works with the in-app message phone number capture form, prompting users to confirm their intent after submitting their phone number via the form.
 
@@ -60,6 +60,3 @@ Unknown macro: { "external_id" }
 }
 ```
 
-[1]: {% image_buster /assets/img/sms/opt-in1.png %}
-[2]: {% image_buster /assets/img/sms/opt-in2.png %}
-[3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}

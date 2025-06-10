@@ -41,15 +41,15 @@ You must make sure that you have the following items created, completed, or acce
 
 In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. In the **LinkedIn Audience Sync** section, select **Connect LinkedIn**.
 
-![LinkedIn technology page in Braze includes an Overview section and LinkedIn Audience Sync section with the Connected LinkedIn button.][3]{: style="max-width:75%;"}
+![LinkedIn technology page in Braze includes an Overview section and LinkedIn Audience Sync section with the Connected LinkedIn button.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
 
 You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration. After you have selected **Confirm**, you’ll be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
 
-!["Braze Self Service" is selected as the ad account to connect.][7]{: style="max-width:75%;"}
+!["Braze Self Service" is selected as the ad account to connect.]({% image_buster /assets/img/linkedin/linkedin7.png %}){: style="max-width:75%;"}
 
 Once you have successfully connected, you will be returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![A successfully connected LinkedIn account.][6]{: style="max-width:75%;"}
+![A successfully connected LinkedIn account.]({% image_buster /assets/img/linkedin/linkedin6.png %}){: style="max-width:75%;"}
 
 Your LinkedIn connection will be applied at the Braze workspace level. If your LinkedIn admin removes you from your LinkedIn ad account, Braze will detect an invalid token. As a result, your active Canvases using LinkedIn will show errors, and Braze will not be able to sync users.
 
@@ -59,11 +59,11 @@ When building audiences for Ad Tracking, you may wish to include or exclude cert
 
 If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
-![An entry audience with the filter "Ad Tracking Enabled is true".][5]{: style="max-width:75%;"}
+![An entry audience with the filter "Ad Tracking Enabled is true".]({% image_buster /assets/img/linkedin/linkedin5.png %}){: style="max-width:75%;"}
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".][4]{: style="max-width:75%;"}
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -71,17 +71,17 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 Add a component in your Canvas and select Audience Sync. Click on the **Custom Audience** button to open the component editor.
 
-![The Canvas editor with the list of available components.][2]{: style="max-width:35%;"} ![The selected Audience Sync component.][1]{: style="max-width:29%;"}
+![The Canvas editor with the list of available components.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![The selected Audience Sync component.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
 
 ### Step 4: Sync setup
 
 Select **LinkedIn** as the desired Audience Sync partner.
 
-![The "Set up Audience Sync" details with the multiple partners to choose from.][9]{: style="max-width:70%;"}
+![The "Set up Audience Sync" details with the multiple partners to choose from.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
 
 Then select the desired LinkedIn ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
-![Audience Sync to LinkedIn with Braze selected as the ad account.][11]
+![Audience Sync to LinkedIn with Braze selected as the ad account.]({% image_buster /assets/img/linkedin/linkedin20.png %})
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -119,7 +119,7 @@ Once you have configured your Audience Sync to LinkedIn, simply launch the Canva
 
 You can view the audience on LinkedIn by going into your ad account and selecting **Audiences** under the **Assets** section of the navigation. From the **Audiences** page, you can see each audience's size after reaching more than 300 members.
 
-![LinkedIn page listing the following metrics for the given audience.][8]
+![LinkedIn page listing the following metrics for the given audience.]({% image_buster /assets/img/linkedin/linkedin8.png %})
 
 ## User syncing and rate limit considerations
 
@@ -185,13 +185,3 @@ Currently, there is no limit on the number of audiences in your LinkedIn ad acco
 A segment is considered unused and set to ARCHIVED after it is not continuously used for 30 days in a draft or active campaign. Because of this, a segment may appear "stuck" in BUILDING when updates are streamed to an ARCHIVED segment, thus pushing it into the BUILDING state, and right before it is archived again, new updates are streamed to the unused segment.
 
 
-[1]: {% image_buster /assets/img/linkedin/linkedin1.png %}
-[2]: {% image_buster /assets/img/linkedin/linkedin2.png %}
-[3]: {% image_buster /assets/img/linkedin/linkedin3.png %}
-[4]: {% image_buster /assets/img/linkedin/linkedin4.png %}
-[5]: {% image_buster /assets/img/linkedin/linkedin5.png %}
-[6]: {% image_buster /assets/img/linkedin/linkedin6.png %}
-[7]: {% image_buster /assets/img/linkedin/linkedin7.png %}
-[8]: {% image_buster /assets/img/linkedin/linkedin8.png %}
-[9]: {% image_buster /assets/img/linkedin/linkedin.png %}
-[11]: {% image_buster /assets/img/linkedin/linkedin20.png %}

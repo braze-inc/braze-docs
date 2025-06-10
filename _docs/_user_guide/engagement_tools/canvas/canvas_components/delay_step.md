@@ -13,7 +13,7 @@ tool: Canvas
 
 > Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. 
 
-Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![A Delay step with a 1-day delay as the first step of a Canvas.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![A Delay step with a 1-day delay as the first step of a Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Creating a delay
 
@@ -38,11 +38,11 @@ Let's say we want to remind our customers to purchase toothpaste 30 days from no
 - **Data type:** Time
 - **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-![The "product_reminder_interval" and its value.][2]
+![The "product_reminder_interval" and its value.]({% image_buster /assets/img/context_step1.png %})
 
 Next, because we want to remind our customers 30 days from now, we'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from our Context step. This means our users will be delayed until the selected Context variable.
 
-![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".][3]
+![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".]({% image_buster /assets/img/context_step2.png %})
 
 #### Extended delays
 
@@ -138,6 +138,3 @@ Time series for these analytics are available in the expanded component view.
 
 If users aren't triggering a personalized delay, it could be because the Context step you set to qualify them for the Delay step is not working as you expected. When a [context variable is invalid]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#troubleshooting), a user will continue through your Canvas without having their context set by the Context step. This can cause them to not qualify for steps later in your Canvas, such as personalized delays.
 
-[1]: {% image_buster /assets/img/canvas_delay.png %}
-[2]: {% image_buster /assets/img/context_step1.png %}
-[3]: {% image_buster /assets/img/context_step2.png %}

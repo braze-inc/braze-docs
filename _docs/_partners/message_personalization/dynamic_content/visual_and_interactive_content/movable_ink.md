@@ -51,7 +51,7 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 | Apps | Countdown Timer | ✔* | ✔ | * Supported but not recommended because push notifications are cached upon receipt and do not refresh |
 || Polling | ✗ | ✔* | * After voting, will leave the app to be a mobile landing page |
 || Scratch Off | ✔* | ✔* | * On click, will leave the app for the Scratch Off experience |
-|| Video | ✔* | ✔* | * Animated GIFs only, <br>For Android, Braze requires [GIF support][GIFsupport] in implementation |
+|| Video | ✔* | ✔* | * Animated GIFs only, <br>For Android, Braze requires [GIF support]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) in implementation |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration
@@ -96,7 +96,7 @@ Movable Ink has an easy editor for you to drag and drop elements like text, imag
 
 Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look upon view. When complete, a dynamic URL will generate that can then be inserted into Braze!
 
-For more information on how to use the Movable Ink Platform, visit the [Movable Ink support center][support]
+For more information on how to use the Movable Ink Platform, visit the [Movable Ink support center](https://support.movableink.com/)
 
 ### Step 3: Obtain Movable Ink content URL
 
@@ -170,14 +170,11 @@ This template will take the current time (in seconds), append it to the end of t
 - **Image not loading**: Be sure to replace any "merge tags" with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
 ### Having trouble showing GIFs on Android?
-- Android requires GIF support in implementation. Follow the Android [in-app message customization][GIFsupport] article if you do not have this setup.
+- Android requires GIF support in implementation. Follow the Android [in-app message customization]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) article if you do not have this setup.
 
 
 [1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-[support]: https://support.movableink.com/
-[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-[Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/#step-4-braze-experience
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})

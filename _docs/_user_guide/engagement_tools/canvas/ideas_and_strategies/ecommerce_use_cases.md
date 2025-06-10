@@ -11,8 +11,8 @@ toc_headers: h2
 
 > Braze Canvas offers several pre-built templates tailored specifically for eCommerce marketers, making it easier to implement essential strategies. This page offers some key templates you can use to enhance your customer journeys.
 
-{% alert note %}
-Braze recognizes that data planning takes time. We encourage our customers to familiarize their development teams and begin sending eCommerce events now. While some features may not be available immediately with the eCommerce recommended events, you can look forward to the introduction of new products throughout 2025 that will enhance your eCommerce capabilities.
+{% alert important %}
+[eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you’re using the new Shopify connector, eCommerce recommended events will automatically be available through the integration.
 {% endalert %}
 
 ## Using a Canvas template
@@ -21,7 +21,7 @@ To use a Canvas template:
 1. Go to **Messaging** > **Canvas**.
 2. Select **Create Canvas** > **Use a Canvas Template**.
 3. Browse the **Braze templates** tab for the template you want to use. You can preview a template by selecting its name.
-4. Select **Apply Template** for the template you want to use.<br><br>!["Canvas templates" page opened to the "Braze templates" tab and showing a list of recently used templates and selectable Braze templates.][2]{: style="max-width:80%;"}
+4. Select **Apply Template** for the template you want to use.<br><br>!["Canvas templates" page opened to the "Braze templates" tab and showing a list of recently used templates and selectable Braze templates.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## eCommerce templates
 
@@ -34,7 +34,7 @@ To use a Canvas template:
 
 Use the **Abandoned browse** template to engage users who have browsed products but did not add them to their cart or place an order.
 
-![An applied "Abandoned Browse" Canvas template with expanded "Entry Rules".][3]
+![An applied "Abandoned Browse" Canvas template with expanded "Entry Rules".]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### Setup
 
@@ -97,7 +97,7 @@ Here is an example of how you would add an HTML product block for your Abandoned
 
 Use the **Abandoned cart** template to cover potential lost sales from customers who added products to their cart but did not continue to checkout or place an order. 
 
-![An applied "Abandoned Cart" Canvas template with expanded "Entry Rules".][4]
+![An applied "Abandoned Cart" Canvas template with expanded "Entry Rules".]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### Setup
 
@@ -184,7 +184,7 @@ If you use Shopify, create your cart URL by using this Liquid template:
 
 Use the **Abandoned checkout** template to target customers who started the checkout process but left before placing their order. 
 
-![An applied "Abandoned Checkout" Canvas template with expanded "Entry Rules".][5]
+![An applied "Abandoned Checkout" Canvas template with expanded "Entry Rules".]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### Setup
 
@@ -257,7 +257,7 @@ Here is an example of how you would add an HTML block with your `shopping_cart` 
 
 Use the **Order confirmation & feedback survey** template to confirm successful orders and enhance customer satisfaction.
 
-![An applied "Order confirmation" Canvas template with expanded "Entry Rules".][6]
+![An applied "Order confirmation" Canvas template with expanded "Entry Rules".]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### Setup
 
@@ -351,7 +351,7 @@ Because recommended events are more opinionated custom events, you can search fo
 
 Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter.
 
-![Segment filters dropdown with "Ecommerce" filters.][7]{: style="max-width:80%"}
+![Segment filters dropdown with "Ecommerce" filters.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
 
 {% alert important %}
 The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
@@ -373,9 +373,3 @@ To gain insights into the trends related to orders placed from your launched Can
 
 For more advanced reporting use cases, you can use the Braze [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate custom reports. 
 
-[2]: {% image_buster /assets/img_archive/apply_template.png %}
-[3]: {% image_buster /assets/img_archive/abandoned_browse.png %}
-[4]: {% image_buster /assets/img_archive/abandoned_cart.png %}
-[5]: {% image_buster /assets/img_archive/abandoned_checkout.png %}
-[6]: {% image_buster /assets/img_archive/order_confirmation_feedback.png %}
-[7]: {% image_buster /assets/img_archive/ecommerce_filters.png %}

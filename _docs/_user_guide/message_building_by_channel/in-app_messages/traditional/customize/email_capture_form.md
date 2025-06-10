@@ -59,7 +59,7 @@ Next, customize your form as needed. You can customize the following features fo
 - Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
-![Composer for email capture form.][5]
+![Composer for email capture form.]({% image_buster /assets/img/email_capture.png %})
 
 If you need to make further customization, choose **Custom Code** for your **Message Type**. You can use this [email capture modal template](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) from the [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub repository as your starter code.
 
@@ -80,4 +80,3 @@ After you've launched the email capture form and collected email addresses from 
 2. From the dropdown, select `clicked in-app message button 1`
 3. Select your email capture form campaign.
 
-[5]: {% image_buster /assets/img/email_capture.png %}

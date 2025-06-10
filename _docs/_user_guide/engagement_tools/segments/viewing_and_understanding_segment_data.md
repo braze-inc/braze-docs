@@ -16,15 +16,15 @@ tool:
 
 ## Accessing data about your segments and membership
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment][3].
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
 
-![Segments page][1]
+![Segments page]({% image_buster /assets/img_archive/segments.png %})
 
 After selecting the name of a segment, you can view segment statistics and filters, and edit the segment by adding or deleting filters. Be sure to save any changes!
 
-When you turn on [analytics tracking for a segment][9], you can view sessions, custom events, and revenue over time for this segment.
+When you turn on [analytics tracking for a segment]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/), you can view sessions, custom events, and revenue over time for this segment.
 
-![Analytics tracking toggle for a segment][16]
+![Analytics tracking toggle for a segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 ### Segment statistics
 
@@ -88,7 +88,7 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 Note that in cases where your segment is very small relative to your workspace size, it's possible for the User Preview to return zero users. This doesn't necessarily mean that there are zero users in your segment; run [Calculate Exact Stats]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/#statistics-for-segment-size) to determine your segment's exact size.
 
-![User Preview][8]
+![User Preview]({% image_buster /assets/img_archive/user_preview.png %})
 
 ## Viewing performance data by segment
 
@@ -132,13 +132,3 @@ You can't access data from time periods prior to when this feature is turned on 
 If your company turned on this feature on October 2, and turned on analytics tracking for Segment B on October 3, then you can only see data for Segment B for the campaigns and Canvases that recorded metrics after October 3.
 
 
-[1]: {% image_buster /assets/img_archive/segments.png %}
-[2]: {% image_buster /assets/img_archive/A_Tracking.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
-[6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[7]: {% image_buster /assets/img_archive/preview_users.png %}
-[8]: {% image_buster /assets/img_archive/user_preview.png %}
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[11]:{% image_buster /assets/img_archive/variables_panel.png %}
-[16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}

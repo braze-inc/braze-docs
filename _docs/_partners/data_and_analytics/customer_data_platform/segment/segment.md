@@ -13,7 +13,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
-> [Segment][5] is a customer data platform that helps you collect, clean, and activate your customer data. 
+> [Segment](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. 
 
 The Braze and Segment integration allows you to track your users and route data to various user analytics providers. Segment allows you to:
 
@@ -41,7 +41,7 @@ After successfully setting up your sources, you'll need to configure Braze as a 
 
 In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **Select your Source** > **Setup**.
 
-![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
+![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".]({% image_buster /assets/img/segment/setup.png %})
 
 You can integrate Segment's web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side (device-mode) integration or a server-to-server (cloud-mode) integration.
 
@@ -390,13 +390,13 @@ This event type can be used as a trigger in the Web Mode Actions and Cloud Actio
 
 ### Step 5: Test your integration
 
-When using the side-by-side (device-mode) integration, your [overview][27] metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) can be used to ensure that Braze is receiving data from Segment.
+When using the side-by-side (device-mode) integration, your [overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) can be used to ensure that Braze is receiving data from Segment.
 
-You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics when using a server-to-server (cloud mode) integration.
+You can view your data in the [custom events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data) or [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) pages, or by [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment). The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you will not be able to use [formulas]({{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula) that include MAU and DAU statistics when using a server-to-server (cloud mode) integration.
 
-If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue][28] page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
+If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
 
-[Creating a segment][26] allows you to filter your users based on the custom event and attribute data.
+[Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) allows you to filter your users based on the custom event and attribute data.
 
 {% alert important %}
 If you use a server-to-server integration (cloud-mode), filters related to automatically collected session data (such as "first used app" and "last used app") will not work. Use a side-by-side integration (device-mode) if you want to use these in your Segment and Braze integration.
@@ -481,26 +481,3 @@ When passing user attribute data, check that you only pass values for attributes
 {% enddetails %}
 
 
-[5]: https://segment.com
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[18]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[19]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
-[23]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
-[25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
-[26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[36]: https://segment.com/docs/sources/#server
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[41]: https://segment.com/docs/spec/identify/#user-id
-[42]: {% image_buster /assets/img/segment/setup.png %}
-[43]: {% image_buster /assets/img/segment/website.png %}
-[44]: {% image_buster /assets/img/segment/ios.png %}
-[45]: {% image_buster /assets/img/segment/android.png %}
