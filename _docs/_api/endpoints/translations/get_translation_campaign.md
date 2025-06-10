@@ -6,16 +6,16 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the View Translation for a campaign endpoint."
+description: "This article outlines details about Translations for a campaign endpoint, by Locale."
 ---
 
 {% api %}
-# View translation for a campaign
+# View translations for a campaign by Locale
 {% apimethod get %}
 /campaigns/translations/?locale_id={locale_id}
 {% endapimethod %}
 
-> Use this endpoint to preview a translated message for a campaign.
+> Use this endpoint to preview a translated message for a campaign by Locale.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
