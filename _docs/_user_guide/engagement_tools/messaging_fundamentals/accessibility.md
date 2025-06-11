@@ -1,5 +1,5 @@
 ---
-nav_title: Accessability
+nav_title: Accessibility
 article_title: Building Accessible Messages in Braze
 page_order: 10.1
 page_type: reference
