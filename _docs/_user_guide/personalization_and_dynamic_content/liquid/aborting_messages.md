@@ -8,7 +8,7 @@ description: "This reference article covers aborting Liquid messages and some ex
 
 # Aborting messages
 
-> Optionally, you can use the `abort_message()` Liquid messgae tag within conditionals to prevent sending a message to a user. This reference article lists some examples of how this feature can be used in marketing campaigns.
+> Optionally, you can use the `abort_message("optional reason for aborting")` Liquid message tag within conditionals to prevent sending a message to a user. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
 {% alert note %}
 If a message step is aborted in a Canvas, the user **will not** exit the Canvas and **will** proceed to the next step.
