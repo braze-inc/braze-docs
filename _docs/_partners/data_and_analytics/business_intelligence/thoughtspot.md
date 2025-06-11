@@ -40,4 +40,3 @@ Import the zipped file for the worksheets and liveboards in Thoughtspot and veri
 
 Once imported, you can start searching and customizing the liveboards. 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -18,7 +18,7 @@ When a user logs out of a device or website, they will remain reachable by push 
 
 When a push token is reassigned, the change is reflected in the user profile's **Push Changelog**. You can find this by going to the **Engagement** tab in the user profile.
 
-![The "Push Changelog" in the "Contact Settings" section.][1]{: style="max-width:50%;"}
+![The "Push Changelog" in the "Contact Settings" section.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### Why doesn't an opted-in user have a push token?
 
@@ -34,4 +34,3 @@ If you want the push token reassigned to the original user:
 1. Have the original user log into the profile with the missing push token.
 2. Trigger a new push send. This will move the token back to the account if they still have push enabled on the device level.
 
-[1]: {% image_buster /assets/img/push_changelog_faq.png %}

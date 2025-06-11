@@ -35,11 +35,11 @@ Have you read Ulysses?
 
 ## REST API
 
-Use the [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
+Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to record custom events, user attributes, and purchases for users.
 
 ## Cloud Data Ingestion
 
-Use Braze [Cloud Data Ingestion][14] to import and maintain user attributes. 
+Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/) to import and maintain user attributes. 
 
 ## CSV import
 
@@ -91,8 +91,8 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 | `dob` | String | Must be passed in the format "YYYY-MM-DD" (for example, `1980-12-21`). This will import your user's Date of Birth and enable you to target users whose birthday is "today". | No |
 | `gender` | String | "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (for example, `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). <br>Refer to our [list of accepted languages][1]. | No |
-| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). <br>Refer to our [list of accepted languages]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/). | No |
+| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). <br> Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/) for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user. Available for SparkPost and SendGrid only. | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user. Available for SparkPost and SendGrid only. | No |
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
@@ -114,7 +114,7 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 
 To import your CSV file, go to **Audiences** > **User Import**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
-![The 'Import Users' page in the Braze dashboard.][3]
+![The 'Import Users' page in the Braze dashboard.]({% image_buster /assets/img/importcsv5.png %})
 
 Select **Browse Files** and your file. Braze will upload your file and check the column headers and the data types of each column.
 
@@ -136,7 +136,7 @@ Examine the full CSV file before upload, as Braze doesn't scan every row of the 
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to the [Troubleshooting](#troubleshooting) section.
 
-![CSV upload completed with errors involving mixed data types in a single column][4]{: style="max-width:70%"}
+![CSV upload completed with errors involving mixed data types in a single column]({% image_buster /assets/img/importcsv2.png %}){: style="max-width:70%"}
 
 {% alert warning %}
 Errors are based solely on data type and file structure. For example, a poorly formatted email address would still be imported as it can still be parsed as a string.
@@ -150,11 +150,11 @@ If the import process runs into an error, a yellow warning icon will display nex
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier (`external_id`). Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically, this is an internal database ID. This should align with how users will be identified by the Braze SDK on mobile and web and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier (`external_id`). Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically, this is an internal database ID. This should align with how users will be identified by the Braze SDK on mobile and web and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
-**Download:** [CSV Import Template][template]
+**Download:** [CSV Import Template]({% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %})
 
 ### Importing with user alias
 
@@ -177,7 +177,7 @@ When you provide both a `user_alias_name` and `user_alias_label` in your import,
 You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/).
 {% endalert %}
 
-**Download:** [CSV Alias Import Template][template_alias]
+**Download:** [CSV Alias Import Template]({% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %})
 
 ### Importing with Braze ID
 
@@ -277,7 +277,7 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 
 User import can be used to turn the CSV file into a retargeting filter by selecting **Import users in this CSV and make it possible to retarget this specific batch of users as a group**. To filter by the file in a segment or wherever filtering is an option, select the **Updated/Imported from CSV** filter and then search for the file's exact name.
 
-![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".][5]
+![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]({% image_buster /assets/img/csvfilter.png %})
 
 ## Creating segments from a user import
 
@@ -358,17 +358,4 @@ There are several reasons the **Select CSV File** button may not work:
 - **Outdated browser:** Make sure your browser is up to date; if not, update it to the latest version.
 - **Background processes:** Close every browser instance, then restart your computer.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-[3]: {% image_buster /assets/img/importcsv5.png %}
-[4]: {% image_buster /assets/img/importcsv2.png %}
-[5]: {% image_buster /assets/img/csvfilter.png %}
-[7]: {% image_buster /assets/img/segment-imported-users.png %}
-[8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
-[9]: {% image_buster /assets/img/subscription_group_import.png %}
-[12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
 [errors]:#common-errors
-[template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
-[template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}

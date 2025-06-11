@@ -30,7 +30,7 @@ To test your email message in Inbox Vision, do the following:
 4. Select **Run Inbox Vision**. This may take between two to ten minutes to complete.
 5. Next, select a tile to view the preview in more detail. These previews are grouped into these sections: **Web Clients**, **Application Clients**, and **Mobile Clients**.
 
-![Overview of Inbox Vision for the HTML editor.][1]
+![Overview of Inbox Vision for the HTML editor.]({% image_buster /assets/img_archive/inboxvision1.png %})
 
 {: start="6"}
 6. Make changes to a template, if necessary.
@@ -48,7 +48,7 @@ Code analysis is a way for Braze to highlight issues that may exist with your HT
 
 This information can be found on the **Inbox Vision** tab by selecting <i class="fas fa-list"></i> **List view**. This list view is available for HTML email templates only. If you're using drag-and-drop email templates, check the previews to resolve any possible issues instead.
 
-![Example code analysis on the Inbox Vision preview.][2]
+![Example code analysis on the Inbox Vision preview.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
 {% alert note %} 
 Sometimes the code analysis will display faster than the preview for a particular email client. This is because Braze waits until the email arrives in the inbox before taking the screenshot. 
@@ -64,7 +64,7 @@ To check your spam test results, do the following:
 
 1. Select the **Spam Testing** tab in the **Inbox Vision** section. The **Spam Test Result** table lists the spam filter name, status, and type.
 
-![Spam Test Result table with three columns: Name, Status, and Type. There is a list of spam filters and ISP filters that have passed spam testing, indicating that the email campaign will not land in the spam folder.][4]
+![Spam Test Result table with three columns: Name, Status, and Type. There is a list of spam filters and ISP filters that have passed spam testing, indicating that the email campaign will not land in the spam folder.]({% image_buster /assets/img_archive/email_spam_testing.png %})
 
 {: start="2"}
 2. Review these results and making any adjustments to your email campaign.
@@ -74,7 +74,3 @@ To check your spam test results, do the following:
 
 All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
-[1]: {% image_buster /assets/img_archive/inboxvision1.png %}
-[2]: {% image_buster /assets/img_archive/inboxvision2.png %}
-[3]: {% image_buster /assets/img_archive/inboxvision4.png %}
-[4]: {% image_buster /assets/img_archive/email_spam_testing.png %}

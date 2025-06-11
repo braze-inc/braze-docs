@@ -33,7 +33,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
 
 1. Go to your catalog and select the **Settings** tab.
 2. Select the **Price Drop** toggle.
-3. If the global catalog settings have not been configured, you'll be prompted to set up the custom events and properties that will be used to trigger notifications. <br><br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
+3. If the global catalog settings have not been configured, you'll be prompted to set up the custom events and properties that will be used to trigger notifications. <br><br> ![Catalog settings drawer.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
 
 | Field | Description |
 | --- | --- |
@@ -77,7 +77,7 @@ Here's an example custom event:
 3. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or by the change in value for the price field.
 4. Select **Save settings**.
 
-![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.][1]
+![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
@@ -108,5 +108,3 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
 - Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications
 
-[1]: {% image_buster /assets/img/price_drop_notifications.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}
