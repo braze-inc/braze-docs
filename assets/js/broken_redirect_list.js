@@ -2670,4 +2670,9 @@ validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs'] = '/
 validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#location-tracking'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking';
 validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences';
 
+validurls['/docs/home/templates/reference/'] = '/docs/contributing/content_types/#references';
+validurls['/docs/home/templates/reference_video/'] = '/docs/contributing/content_types/#references';
+validurls['/docs/user_guide/brazeai/recommendations/types_and_use_cases/'] = '/docs/user_guide/brazeai/recommendations/';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_images/'] = '/docs/user_guide/brazeai/generative_ai/images/';
+
 // validurls['OLD'] = 'NEW';
