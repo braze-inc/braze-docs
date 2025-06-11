@@ -31,7 +31,7 @@ The Braze and Nift integration allows you to automatically trigger "thank-yous" 
 
 ### Step 1: Connect to Braze in Nift
 
-Visit your [Nift dashboard][2], navigate to **Accounts** > **Integrations** > **Braze**, and click **Connect**.
+Visit your [Nift dashboard](https://www.gonift.com/users/sign_in), navigate to **Accounts** > **Integrations** > **Braze**, and click **Connect**.
 
 ### Step 2: Add Braze credentials
 
@@ -41,7 +41,7 @@ You can change the customer ID parameter name in the referral link sent to your 
 
 Click **Link Account**.
 
-!["Nift service integration page prompting the user for the Braze API key and Braze dashboard URL.][5]
+!["Nift service integration page prompting the user for the Braze API key and Braze dashboard URL.]({% image_buster /assets/img/nift/link_your_braze_account.png %})
 
 ## Using the integration
 
@@ -54,7 +54,3 @@ After integrating with Braze, Nift will automatically push events to the existin
 
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://www.gonift.com/users/sign_in
-[5]: {% image_buster /assets/img/nift/link_your_braze_account.png %}
-[6]: {% image_buster /assets/img/nift/braze_account_linked.png %}
