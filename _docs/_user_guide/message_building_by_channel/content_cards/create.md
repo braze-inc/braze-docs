@@ -66,15 +66,15 @@ To learn more about the expected behavior and look of each type, refer to [Creat
 
 You can edit all aspects of your message's content and behavior in the **Compose** tab of the message editor.
 
-![Sample Content Card details in the Compose tab of the message editor.][24]
+![Sample Content Card details in the Compose tab of the message editor.]({% image_buster /assets/img/content_card_compose.png %})
 
 The content here varies based on the **Card Type** chosen in the previous step, but may include any of the following options:
 
 #### Language
 
-Select **Add Languages** to add your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported][18].
+Select **Add Languages** to add your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-![A window with English, Spanish, and French selected for the languages, and title, description, and link text selected for fields to internationalize.][2]{: style="max-width:70%;"}
+![A window with English, Spanish, and French selected for the languages, and title, description, and link text selected for fields to internationalize.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
 ##### Creating right-to-left messages
 
@@ -92,7 +92,7 @@ Add an image to your Content Card by selecting **Add Image** or providing an ima
 
 A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you can't retroactively update its pinned option. Changing this option after a campaign has been sent will only affect future sends.
 
-![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][1]{:style="border:none"}
+![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### On-click behavior
 
@@ -114,7 +114,7 @@ The **Log Custom Event** and **Log Custom Attribute** options require the follow
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.
+You can use [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.
 
 To add key-value pairs to your message, go to the **Settings** tab and select **Add New Pair**.
 
@@ -188,7 +188,7 @@ If you need to remove old cards, you must first stop the campaign. To stop a cam
 
 If you want to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
-![Dialog for confirming Content Card deactivation][25]{: style="max-width:75%" }
+![Dialog for confirming Content Card deactivation]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
 Do you want your Content Cards to seem like they're lasting longer than the 30-day max? One way to accomplish this is to do the following:<br><br>
@@ -270,9 +270,3 @@ We recommend using this option for unique messages in a notification center or m
 
 If desired, you could keep an active Content Card campaign in users' feeds and not remove it. When the live campaign is edited, the previous unedited version of the campaign card will still be live, and only users who meet the criteria after the edits will see the new version. However, users already exposed to the campaign may see two versions of the card.
 
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/content_card_compose.png %}
-[25]: {% image_buster /assets/img/cc_remove.png %}
-[1]: {% image_buster /assets/img/cc_pin_to_top.png %}
-[2]: {% image_buster /assets/img/add_languages.png %}

@@ -42,7 +42,7 @@ For a full list of supported email clients, refer to [AMP documentation](https:/
 
 Go to your Gmail settings, and select **Enable Dynamic Email** under **General**.
 
-![An example of Gmail settings with the "Enable dynamic email" checkbox selected.][1]
+![An example of Gmail settings with the "Enable dynamic email" checkbox selected.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API usage
 
@@ -252,4 +252,3 @@ If none of these conditions are causing the error, reach out to [Support]({{site
 We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If a user can't see the AMP version, it will default back to HTML. 
 
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}

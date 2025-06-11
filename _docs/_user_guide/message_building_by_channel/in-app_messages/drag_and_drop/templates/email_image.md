@@ -18,7 +18,7 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 When creating a drag-and-drop in-app message, select **Email sign-up with background image** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
-![The in-app message editor with the template for an email sign-up form with a background image.][img1]
+![The in-app message editor with the template for an email sign-up form with a background image.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
 
 ### Step 2: Set up your message styles
 
@@ -30,7 +30,7 @@ To get started building your email sign-up form, select the email capture elemen
 
 You can customize the placeholder text and label text of the email capture element.
 
-![The in-app message editor with a side menu for customizing the email capture element.][img2]
+![The in-app message editor with a side menu for customizing the email capture element.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
 
 #### Email validation
 
@@ -42,7 +42,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 ### Step 5: Style your message
 
-Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components][3]. Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
+Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components). Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
 
 ## Analyzing the results
 
@@ -53,8 +53,5 @@ Customize the look and feel of your sign-up form using the drag-and-drop [in-app
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %} 
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %} 
 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

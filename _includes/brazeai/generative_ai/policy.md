@@ -1,0 +1,5 @@
+## How is my data used and sent to OpenAI? {#ai-policy} 
+<!-- Braze Legal must approve any changes to this content. -->
+<!-- Note: Keep these comments under this H2 heading to avoid breaking how headings on certain pages are rendered. -->
+
+In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI (“Output”), Braze will send your prompt, such as message content, brand guidelines, past campaign data, or any other input, as applicable (“Input”) to OpenAI. Input sent to OpenAI from Braze does not identify you or your Users unless you choose to include uniquely identifiable information in your Input. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models and will be deleted after 30 days by OpenAI from their systems. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.

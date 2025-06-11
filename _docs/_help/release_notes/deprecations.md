@@ -145,4 +145,3 @@ The Delay While Idle parameter was previously a part of the [GCM push options](h
 Removal of Custom Endpoints. If you have a custom endpoint, you can continue to use it, but Braze no longer gives them out.
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

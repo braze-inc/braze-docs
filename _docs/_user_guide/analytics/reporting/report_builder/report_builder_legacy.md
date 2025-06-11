@@ -12,9 +12,9 @@ tool:
 
 # Report Builder (Legacy)
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary][16].
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
-![Campaign Comparison Example][5]{: style="max-width:80%;"}
+![Campaign Comparison Example]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 Use this report to answer key engagement questions, for example:
 
@@ -41,7 +41,7 @@ Select **Create New Report** and select either a campaign comparison report or a
 
 If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
 
-![Campaign dashboard][6]{: style="max-width:80%;"}
+![Campaign dashboard]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 The following are the differences between these two options:
 
@@ -62,9 +62,9 @@ Canvas reports work similarly to a manual campaign report in that Canvas selecti
 
 After you've created your report, you'll find a blank table containing campaigns in each row. The table will populate after you select **Edit Columns** and choose the metrics you'd like to add.
 
-![Campaign Options][15]{: style="max-width:80%;"}
+![Campaign Options]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
-Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary][16]. Some metrics are only available for campaign comparison reports.
+Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/). Some metrics are only available for campaign comparison reports.
 
 You can also toggle calculations for the **Average** of any rate or numerical metric and **Total** for any numerical metric.
 
@@ -72,13 +72,13 @@ You can also toggle calculations for the **Average** of any rate or numerical me
 
 You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas component doesn't have any data for your selected time period, the results for that row will be blank. 
 
-![Campaign numerical metric][4]{: style="max-width:60%;"}
+![Campaign numerical metric]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### Step 4: Name and save your report
 
 Name your report before saving it. If a report is saved without being named, Braze will apply a default name of "Campaign Comparison Report".
 
-![Campaign Note][7]{: style="max-width:60%;"}
+![Campaign Note]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
 
 When you're ready, select **Save**. Saved reports can be viewed at a later point on the **Report Builder** page.
 
@@ -86,7 +86,7 @@ When you're ready, select **Save**. Saved reports can be viewed at a later point
 
 For any multivariate campaigns, you can view these metrics broken down by your variants and control group by clicking the arrow next to the campaign name. The rows containing your variants will include performance results for that variant, and the row containing your control will include just the results for your conversion events. 
 
-![Campaign Note][3]{: style="float:right;max-width:15%;margin-left:15px;"}
+![Campaign Note]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 The metrics populating the row for your overall campaign will reflect the performance of its variants, but won't include the performance of the control. For example, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this won't include the Primary Conversion Event A for your control.
 
@@ -102,19 +102,19 @@ Within a Canvas report, you can view your Canvases broken down by variant, steps
 
 Selecting **breakdown by variant** allows you to view the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by selecting the arrow next to the Canvas name.
 
-![Variants][12]{: style="max-width:90%;"}
+![Variants]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
 
 ### Steps 
 
 Selecting **breakdown by steps** allows you to view step-level metrics, with each row of the report containing the row of a step.
 
-![Steps][13]{: style="max-width:90%;"}
+![Steps]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
 
 ### Message
 
 Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. However, within **edit columns**, you'll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
 
-![Report][14]{: style="max-width:90%;"}
+![Report]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
 
 Note that within the Braze dashboard, you can preview the first 50 rows of your Canvas report. You can access the full report when you export a CSV.
 
@@ -141,7 +141,7 @@ If your report contains any multivariant campaigns, your export will include two
 
 The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you'll receive a pop-up asking you to grant permission for downloading multiple files—click **Allow**.
 
-![Campaign Download][8]{: style="max-width:60%;"}
+![Campaign Download]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### Exporting Canvas comparison reports
 
@@ -156,7 +156,7 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
 Use charts to visualize a selected metric in your report. Charts are available for reports that feature campaigns and have at least one metric added to its columns.
 
-![Campaign Performance chart with metric Message Sent selected][17]
+![Campaign Performance chart with metric Message Sent selected]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 By default, the chart on each report will display the metric in the first column of the report. To select a different metric to graph, choose your metric from the dropdown. Any metric in your report table will be available to display in your chart.
 
@@ -167,16 +167,4 @@ If your chart contains only one metric, then it will display up to 30 campaigns 
 Charts are currently not saved when you save your report.
 
 
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

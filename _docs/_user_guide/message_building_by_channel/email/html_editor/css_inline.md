@@ -18,13 +18,11 @@ For some email clients, CSS inlining can improve the way that emails render and 
 
 You can control whether CSS inlining is turned on or off for any email message using the **Enable inline CSS** toggle in the **Sending Info** tab of the HTML editor.
 
-![Checkbox to manage CSS inlining in HTML composer.][2]{: style="max-width:40%;"}
+![Checkbox to manage CSS inlining in HTML composer.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
 
 ### Default inlining state
 
 You can set a default on or off state globally from **Settings** > **Email Preferences**. Locate the setting for **CSS Inlining**. This setting determines the desired default value that all new email messages start with. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
 
-![Inline CSS on new emails by default option located in email settings.][1]
+![Inline CSS on new emails by default option located in email settings.]({% image_buster /assets/img_archive/css-inline1.png %})
 
-[1]:{% image_buster /assets/img_archive/css-inline1.png %}
-[2]:{% image_buster /assets/img_archive/css-inline2.png %}

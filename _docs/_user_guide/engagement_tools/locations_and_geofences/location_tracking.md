@@ -16,9 +16,9 @@ search_rank: 2
 
 To enable location collection on your app, refer to the developer guide for the platform you're using:
 
-- [iOS][2]
-- [Android][3]
-- [Web][4]
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's location. All of these platforms will require users to opt-in to location tracking. The accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their devices. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
 
@@ -34,11 +34,11 @@ Now, Braze will use the IP address to set the country value on user profiles cre
 
 Using location tracking data and segments, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users who live in a particular region or exclude users in a region that has stricter regulations.
 
-Refer to [Location targeting][1] for more information on creating a location segment.
+Refer to [Location targeting]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/) for more information on creating a location segment.
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track` endpoint][8] in our API to update the [`current_location`][9] standard attribute. An example is:
+You can also use the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) in our API to update the [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/) standard attribute. An example is:
 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -58,21 +58,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Combining existing beacon or geofence support with our targeting and messaging features gives you more information about your users' physical actions so you can message them accordingly. You can leverage location tracking with some of our partners: 
 
-- [Radar][6]
-- [Infillion][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/data_augmentation/contextual_location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/)
 
 ## Frequently asked questions
 
-Check out our [Locations FAQ][11] for answers to frequently asked questions about locations.
+### When does Braze collect location data?
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
-[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations
+Braze only collects location when the application is open in the foreground. As a result, our `Most Recent Location` filter targets users based upon where they last opened the application (also referred to as session start).
+
+You should also keep the following nuances in mind:
+
+- If location is disabled, the `Most Recent Location` filter will show the last location recorded.
+- If a user has ever had a location stored on their profile, they will qualify for the `Location Available` filter, even if they've opted out of location tracking since then.
+
+### What's the difference between the Most Recent Device Locale and Most Recent Location filters?
+
+The `Most Recent Device Locale` comes from the user's device settings. For example, this appears for iPhone users in their device at **Settings** > **General** > **Language & Region**. This filter is used to capture language and regional formatting, such as dates and addresses, and is independent of the `Most Recent Location` filter.
+
+The `Most Recent Location` is the last known GPS location of the device. This is updated on session start and is stored on the user's profile.
+
+### If a user opts out of location tracking, will their old location data be removed from Braze?
+
+No. If a user has ever had a location stored on their profile, that data will not be automatically removed if they later opt out of location tracking.
+

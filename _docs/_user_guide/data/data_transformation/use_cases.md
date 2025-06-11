@@ -31,7 +31,7 @@ Braze has an integration with [Iterate]({{site.baseurl}}/partners/additional_cha
 
 Consider this sample payload from Typeform, a survey platform, which sends whenever a survey response is received.
 
-![][1]
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab Basic transformation %}

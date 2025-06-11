@@ -21,13 +21,13 @@ If you want to categorize your messages and group them in your user's notificati
 
 Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
 
-![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".][26]{: style="max-width:50%;" }
+![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the workspace.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 
-![Window to manage iOS push notification groups.][27]{: style="max-width:70%;" }
+![Window to manage iOS push notification groups.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
@@ -140,7 +140,7 @@ Apps can now specify what level of interruption a notification should include, b
 
 To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
 
-![Dropdown for selecting the interruption level.][28]{: style="max-width:50%"}
+![Dropdown for selecting the interruption level.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
@@ -168,7 +168,7 @@ All notifications will still be accessible in the user's notification center.
 
 To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
-![Relevance score of "0.5".][29]{: style="max-width:80%;"}
+![Relevance score of "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
@@ -177,7 +177,3 @@ For more information on maximum message lengths for different message types, ref
 - [Image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption_level.png %}
-[29]: {% image_buster /assets/img/ios/relevance-score.png %}
