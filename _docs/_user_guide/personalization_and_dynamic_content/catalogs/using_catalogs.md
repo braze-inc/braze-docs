@@ -139,7 +139,7 @@ You can also use templating to dynamically pull catalog items based on custom at
 JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
 {% endalert %}
 
-Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as `{{ wishlist[0] }}`.
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as `{{result}}`.
 
 {% alert tip %}
 Remember, arrays start at `0`, not `1`.
