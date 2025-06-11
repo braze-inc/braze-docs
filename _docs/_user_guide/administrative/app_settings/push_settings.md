@@ -36,7 +36,7 @@ To set a different default Push TTL:
 2. For each Android platform, define a default time to live value. You can set smaller increments like hours or seconds for more precise control.
 3. Select **Save** to apply your changes.
 
-![Push TTL settings for Firebase, Web, Kindle, and Huawei devices.][1]
+![Push TTL settings for Firebase, Web, Kindle, and Huawei devices.]({% image_buster /assets/img/push_ttl.png %})
 
 ## Default FCM Priority for Android Campaigns
 
@@ -56,7 +56,7 @@ To set the default FCM priority:
 2. In the FCM Priority section, select either "Normal" or "High" as the default setting.
 3. Select **Save** to apply your changes.
 
-![Android delivery priority settings.][2]
+![Android delivery priority settings.]({% image_buster /assets/img/push_fcm_priority_settings.png %})
 
 This setting applies globally to all new Android push campaigns unless a different priority is selected when creating a specific campaign. 
 
@@ -66,5 +66,3 @@ If FCM detects that your app frequently sends high-priority messages that don't 
 
 For more detailed information about FCM priority levels and deprioritization, see [Advanced campaign settings]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#fcm-priority).
 
-[1]: {% image_buster /assets/img/push_ttl.png %}
-[2]: {% image_buster /assets/img/push_fcm_priority_settings.png %}

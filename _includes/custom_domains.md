@@ -34,18 +34,18 @@ To delegate your domain to Braze, do the following:
 
 After they're configured, custom domains can be assigned to one or multiple WhatsApp and SMS subscription groups. 
 
-![Subscription groups settings that allow you to select a link-shortening domain.][7]
+![Subscription groups settings that allow you to select a link-shortening domain.]({% image_buster /assets/img/custom_domain.png %})
 
 {% if include.channel == 'WhatsApp' %}
 Campaigns sent with click tracking turned on or built within WhatsApp template messages will use the assigned domain associated with your subscription groups.
 
-![WhatsApp message composer preview with a shortened link domain that is different from the domain in the "Message" box.][6]
+![WhatsApp message composer preview with a shortened link domain that is different from the domain in the "Message" box.]({% image_buster /assets/img/custom_domain_whatsapp_composer.png %})
 {% endif %}
 
 {% if include.channel == 'SMS' %}
 Campaigns sent with link shortening turned on will use the assigned domain associated with your SMS subscription group.
 
-![SMS message composer preview with a shortened link domain that is different from the domain in the "Message" box.][8]
+![SMS message composer preview with a shortened link domain that is different from the domain in the "Message" box.]({% image_buster /assets/img/custom_domain2.png %})
 {% endif %}
 
 ## Frequently asked questions
@@ -58,6 +58,3 @@ Yes. A single domain can be used with multiple subscription groups. To do so, se
 
 Yes. Domains can be associated with subscription groups in multiple workspaces, assuming the workspaces are contained within the same company.
 
-[6]: {% image_buster /assets/img/custom_domain_whatsapp_composer.png %} 
-[7]: {% image_buster /assets/img/custom_domain.png %} 
-[8]: {% image_buster /assets/img/custom_domain2.png %}

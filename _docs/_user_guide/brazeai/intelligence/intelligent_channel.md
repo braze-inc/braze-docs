@@ -1,16 +1,18 @@
 ---
-nav_title: Intelligent Channel Filter
+nav_title: Channel Filter
 article_title: Intelligent Channel Filter
-page_order: 0
+page_order: 1.5
 description: "This article cover the The Intelligent Channel filter, a filter that selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
 search_rank: 11
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
 
-> The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
+> The `Intelligent Channel` filter (previously `Most Engaged`) selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
 
-![The Intelligent Channel filter with a dropdown for the different channels that can be selected.][1]{: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+## About the Channel Filter
+
+![The Intelligent Channel filter with a dropdown for the different channels that can be selected.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, SMS, WhatsApp, web push, or mobile push (including any available mobile OS or device) as a channel.
 
@@ -32,7 +34,7 @@ If users haven't received enough messages across the channels, those users will 
 
 For example, let's say you want users who prefer push messages to receive a push and users who don't have enough data to receive the same push message. In that case, you could set the Intelligent Channel filter to **Mobile push** and use **OR** to add a second Intelligent Channel filter set to **Not Enough Data**. A separate campaign with the Intelligent Channel filter set to email could address users who prefer email.
 
-![Intelligent Channel filters for mobile push or not enough data.][2]{:style="border:none"}
+![Intelligent Channel filters for mobile push or not enough data.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements.
@@ -46,7 +48,7 @@ For example, if a user has several mobile devices, their mobile engagement rate 
 
 ## Individual channels
 
-Rather than let Braze choose the single best channel for a user, you may also want to simply filter users based on whether or not they're likely to open a message on a specific channel you choose. For that you can use the Message Open Likelihood filter in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Rather than let Braze choose the single best channel for a user, you may also want to simply filter users based on whether or not they're likely to open a message on a specific channel you choose. For that you can use the Message Open Likelihood filter in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood).
 
 ## Best practices and effective use strategy
 
@@ -63,5 +65,3 @@ When the user has sufficient data for a ranking to be determined but becomes unr
 Intelligent Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel.
 
 
-[1]: {% image_buster /assets/img/intelligent_channel_filter.png %}
-[2]: {% image_buster /assets/img/intelligent_example.png %}

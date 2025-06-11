@@ -24,23 +24,23 @@ Because this functionality comes default from Braze, your developers are freed u
 
 To incorporate an SDK into your app or site, someone will need to add the SDK's code to the larger overall code base powering that application. This means your Engineering team will be involved, essentially tying our apps together so that information and actions flow between them. But although your developers are involved, the SDK is designed to be lightweight and user-friendly to integrate. 
 
-For the sake of saving you time and ensuring a smooth integration, we recommend you and your Engineering team set up your custom events, custom attributes, and the SDK at the same time. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article][4]. 
+For the sake of saving you time and ensuring a smooth integration, we recommend you and your Engineering team set up your custom events, custom attributes, and the SDK at the same time. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article]({{site.baseurl}}/user_guide/getting_started/integration/). 
 
 ## Data aggregation
 
-The Braze SDK automatically captures immense amounts of data at the user level, making it easy to see key metrics for your app and user base. You will group similar apps into a single workspace on your dashboard. For example, you will group the iOS and Android versions of your app into the same workspace, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Home page][3] for more information.
+The Braze SDK automatically captures immense amounts of data at the user level, making it easy to see key metrics for your app and user base. You will group similar apps into a single workspace on your dashboard. For example, you will group the iOS and Android versions of your app into the same workspace, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Home page]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for more information.
 
 ## In-app messaging
 
-The SDK makes it easy to compose and send in-app messages to engage with users directly. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
+The SDK makes it easy to compose and send in-app messages to engage with users directly. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
-![Push displayed on a web browser][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Push displayed on a web browser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Push notifications
 
-Push notifications are another great option to engage with your users and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' devices, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
+Push notifications are another great option to engage with your users and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' devices, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/).
 
-Users of your website or app need to opt-in to receive push notifications. See [push priming][13] for more details. 
+Users of your website or app need to opt-in to receive push notifications. See [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) for more details. 
 
 ## Segmentation and delivery rules
 
@@ -48,7 +48,7 @@ By default, a campaign containing in-app messages will be sent to all versions o
 
 You can create a segment of your web users by setting **Apps and websites targeted** to **Users from specific apps**, then select only your website for the **Specific Apps**.
 
-![Segment Details page with web app in focus][10]{:style="max-width:60%"}
+![Segment Details page with web app in focus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you'd create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would uncheck your website's icon in your segment.
 
@@ -81,11 +81,3 @@ All integrations   | &nbsp;  |  &nbsp;
 [![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin) 
 [![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine)
 
-[3]: {{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/
-[4]: {{site.baseurl}}/user_guide/getting_started/integration/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[7]: {% image_buster /assets/img_archive/app_group_list.png %}
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/
-[10]: {% image_buster /assets/img_archive/web-users-segment.png %}
-[11]: {% image_buster /assets/img_archive/web_push_macbook.png %}
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
