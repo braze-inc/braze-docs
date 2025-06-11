@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 When you compose a LINE message, you can drag-and-drop message types into the composer and then customize them.
 
-![Message types panel with message types to drag into the composer editor, including text, image, rich message, and card-based message.][5]{: style="max-width:40%;"}
+![Message types panel with message types to drag into the composer editor, including text, image, rich message, and card-based message.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## Text
 
@@ -28,7 +28,7 @@ Use cases include:
 - Send personalized birthday greetings with unique promotion cards
 - Share quick updates about upcoming events
 
-![A text message reminding the user not to forget about a Black Friday party and the potential to save up to 80% before midnight.][1]{: style="max-width:40%;"}
+![A text message reminding the user not to forget about a Black Friday party and the potential to save up to 80% before midnight.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Image
 
@@ -39,7 +39,7 @@ Use cases include:
 - Highlight end-of-season promotions to encourage users to stock up on next year's winter clothes with great deals
 - Start a visual countdown to a storewide annual sale
 
-![An image message promoting a toaster sale.][2]{: style="max-width:40%;"}
+![An image message promoting a toaster sale.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### URL image
 
@@ -64,7 +64,7 @@ Use cases include:
 - Present an interactive menu that starts an combo order by selecting an item
 - Lay out multiple promotions for users to choose by selecting a grid square
 
-![A six-square rich message with a photo of a black-and-white grid that users can tap to receive a random offer.][3]
+![A six-square rich message with a photo of a black-and-white grid that users can tap to receive a random offer.]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### Image map 
 
@@ -97,7 +97,7 @@ Use cases include:
 - Highlight this season's best-selling jackets
 - Present a sampling of cooking tools and gadgets that are included in a kit
 
-![A card-based message with at least two cards that promote sandwiches in the composer editor.][4]
+![A card-based message with at least two cards that promote sandwiches in the composer editor.]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### Message
 
@@ -129,8 +129,3 @@ Use cases include:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
-[1]: {% image_buster /assets/img/line/line_text_message.png %}
-[2]: {% image_buster /assets/img/line/line_image_message.png %}
-[3]: {% image_buster /assets/img/line/line_rich_message.png %}
-[4]: {% image_buster /assets/img/line/line_card_message.png %}
-[5]: {% image_buster /assets/img/line/line_message_types.png %}

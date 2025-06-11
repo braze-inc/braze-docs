@@ -59,7 +59,7 @@ You can also have the abort message log something to your Message Activity Log b
 ```
 {% endraw %}
 
-![Message error log in the Developer Console with an abort message of "language was nil".][26]
+![Message error log in the Developer Console with an abort message of "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Query for abort messages
 
@@ -68,10 +68,3 @@ You can use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/
 ## Considerations
 
 The `abort_message()` Liquid message tag prevents messages from sending to users, meaning the message won't display on user profiles, and won't count toward deliveries or frequency capping.
-
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:#accounting-for-null-attribute-values

@@ -228,4 +228,3 @@ No. Similar to an SMS sender, an RCS-verified sender can only be used with a sin
 No. SMS fallback senders can only be used with a single subscription group.
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

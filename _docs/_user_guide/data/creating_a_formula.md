@@ -25,9 +25,9 @@ The following are some examples of the kinds of behavior patterns that can be de
 
 ## Creating formulas
 
-Formulas can be accessed in the statistics panels on the [Home][9], [Revenue Report][10], and [Custom Events Report][11] pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
+Formulas can be accessed in the statistics panels on the [Home]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/), [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/), and [Custom Events Report]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
 
-![View statistics for KPI formulas in the Braze dashboard][16]
+![View statistics for KPI formulas in the Braze dashboard]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 To create a new formula:
 
@@ -84,11 +84,6 @@ table td {
 | --- | --- |
 | Custom event count | MAU |
 |  | DAU |
-|  | Segment size (only segments that have [analytics tracking][17] enabled can be used) |
+|  | Segment size (only segments that have [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) enabled can be used) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[16]: {% image_buster /assets/img_archive/kpi_forms.png %}
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
