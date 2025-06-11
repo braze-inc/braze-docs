@@ -47,3 +47,8 @@ After creating action groups for the custom filter phrases, add another action g
 
 For this message, you should send a LINE message informing the user that this channel is not monitored by a human and, if needed, guide them to a support channel.
 
+## Troubleshooting
+
+### `request_timeout` error
+
+You may receive the `request_timeout` error if it takes more than two seconds for LINE to receive a response from the bot server that connects Braze to LINE. However, the request itself may have reached Braze without any problems.
