@@ -386,7 +386,7 @@ Because Request 1 occurs first, the user's attributes are updated to the followi
 - Size: "Large"
 
 However, when Request 2 occurs, Braze starts with the original attribute values ("Green" and "Large"), then updates the user's attributes to the following:
-- Color: "Red"
+- Color: "Green"
 - Size: "Medium"
 
 When the requests are finished, Request 2 will overwrite the update from Request 1, so it's best to stagger your updates so you can prevent requests from being overwritten.
