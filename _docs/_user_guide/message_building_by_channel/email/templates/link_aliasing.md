@@ -161,9 +161,9 @@ The following segmentation filters apply to click events that are tracked at the
 
 #### Untracking links
 
-Untracking a link won't reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it’s replaced by newer data.
+Untracking a link won't reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it’s replaced by newer data. 
 
-For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
+Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
 ![Campaign Analytics tab that displays three link aliases and their total clicks.]({% image_buster /assets/img/link_aliasing_click_table.png %})
 
