@@ -69,6 +69,22 @@ You can use these blocks to add content and customize the layout of your landing
 | Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+##### Span text
+
+To apply specific styling to text blocks without custom code, highlight the text you want to style and then select **Wrap with span for style**. 
+
+![Text box with different stylized text sections, such as different font sizes and colors, and a highlighted section that displays a toolbar with the option to "Wrap with span for style".]({% image_buster /assets/img/landing_pages/wrap_with_span.png %}){: style="max-width:50%;"}
+
+Adjust the span properties to update your text styling, which includes:
+
+- Font family, weight, size
+- Line height 
+- Letter spacing
+- Text alignment and color
+- Block padding
+
+![Span properties panel with different options to update.]({% image_buster /assets/img/landing_pages/span_properties.png %}){: style="max-width:35%;"}
+
 #### Form blocks
 
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
