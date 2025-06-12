@@ -1,8 +1,8 @@
 ---
-nav_title: Data Protection Technical Assistance
-article_title: Data Protection Technical Assistance
+nav_title: Data Protection Technical Assistance 
+article_title: Data Protection Technical Assistance in the Braze Services
 page_order: 1
-description: "This page provides technical instructions to enable you to manage, through the Braze Platform, requests from individuals in relation to their personal data rights."
+description: "This page provides technical instructions to enable you to manage, through the Braze Services, requests from individuals in relation to their personal data rights."
 alias: /help/dp-technical-assistance/
 permalink: /dp-technical-assistance/
 hide_toc: true
@@ -12,11 +12,11 @@ hide_toc: true
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Data Protection Technical Assistance
+# Data Protection Technical Assistance in the Braze Services
 
 There are a range of data protection laws that regulate what organizations can do with personal data (“Data Protection Laws”), including the EU and UK General Data Protection Regulation (“GDPR”), the California Consumer Privacy Act (“CCPA”) and the Health Insurance Portability and Accountability Act (“HIPAA”). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
 
-These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze platform can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up to you to determine which Data Protection Laws apply to your business, and to act in compliance with them.
+These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze Services can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up to you to determine which Data Protection Laws apply to your business, and to act in compliance with them.
 
 ## Legal Disclaimer
 
@@ -34,11 +34,11 @@ Most privacy laws define three primary stakeholders who are involved in the proc
 - A data controller is an entity that determines the purposes and means of the processing of Personal Data
 - A data processor is an entity that processes Personal Data on behalf and on the instructions of the data controller
 
-In relation to the Braze platform:
+In relation to the Braze Services:
 
-- The data subjects are, for example, the end users of your customer application (e.g., your customers/clients) or your employees who are dashboard users in your instance of the Braze platform.
-- You, the Braze customer, are the data controller who decides how and why the Personal Data of the data subjects will be collected and processed within the Braze platform.
-- Braze is a data processor who processes Personal Data in the Braze platform on your behalf and in accordance with the instructions that we receive from you.
+- The data subjects are, for example, the end users of your customer application (e.g., your customers/clients) or your employees who are dashboard users in your instance of the Braze Services.
+- You, the Braze customer, are the data controller who decides how and why the Personal Data of the data subjects will be collected and processed within the Braze Services.
+- Braze is a data processor who processes Personal Data in the Braze Services on your behalf and in accordance with the instructions that we receive from you.
 
 The above are GDPR terms, but for example, comparable terms under the CCPA are:
 
@@ -46,7 +46,7 @@ The above are GDPR terms, but for example, comparable terms under the CCPA are:
 - “businesses” for data controllers.
 - “service providers” for data processors.
 
-You will find below relevant information on the most common privacy rights requests from data subjects, including how you can respond to them through the Braze platform’s technical features.
+You will find below relevant information on the most common privacy rights requests from data subjects, including how you can respond to them through the Braze Service's technical features.
 
 ## The Right to Be Informed
 
@@ -84,10 +84,10 @@ The right to erasure is also known as 'the right to be forgotten' or 'right to b
 
 #### Standard Deletion 
 
-Once you have halted data collection, you can use [Braze’s User Deletion REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) to delete an end user, which will remove all records of such end user from the Braze’s Services:
+Once you have halted data collection, you can use [Braze’s User Deletion REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) to delete an end user, which will remove all records of such end user from the Braze Services:
 
-- For end users who have an external_id within the Services, you can use that ID to delete that end user’s data.
-- For anonymous end users who do not have an external_id within the Services, you can retrieve that end user’s device identifier using the Braze SDK and can use the device identifier to find the end user profile associated with that device. You can then use the User Deletion API to delete the profile associated with that end user.
+- For end users who have an external_id within the Braze Services, you can use that ID to delete that end user’s data.
+- For anonymous end users who do not have an external_id within the Braze Services, you can retrieve that end user’s device identifier using the Braze SDK and can use the device identifier to find the end user profile associated with that device. You can then use the User Deletion API to delete the profile associated with that end user.
 
 Deleting an end user from the Braze Services will permanently delete Braze’s centralized User Profile for that end user as defined by the `external_id` provided. This includes structured profile information that Braze collected by default or that you configured the Braze Services to collect, such as device information, country, language, and email address.
 
@@ -176,7 +176,7 @@ Some Data Protection Laws prevent, or allow data subjects to opt out of, automat
 
 ### Braze Recommendation
 
-Braze does not perform any automated profiling or decision-making actions with legal or equivalent ramifications for data subjects. If you believe that your own usage of the Braze Platform will have legal or equivalent impacts and you have received an objection to this, you may choose to delete the User Profile in the same manner as under the “Right to Erasure.”
+Braze does not perform any automated profiling or decision-making actions with legal or equivalent ramifications for data subjects. If you believe that your own usage of the Braze Services will have legal or equivalent impacts and you have received an objection to this, you may choose to delete the User Profile in the same manner as under the “Right to Erasure.”
 
 ## Targeting Advertising
 
