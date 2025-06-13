@@ -74,3 +74,59 @@ To check your spam test results, do the following:
 
 All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
+## Accessibility testing
+
+Accessibility Testing highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements & below. WCAG are internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
+
+{% alert important %}
+The Accessibility Testing may be used to support Customer’s compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer’s compliance obligations, and disclaims all liability in relation thereto.
+{% endalert %}
+
+### Viewing accessibility testing results
+
+Accessibility Testing will generate results for each rule as passed, failed, or needs review under a new tab, Accessibility Testing. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
+
+{% alert note %}
+Accessibility Testing is part of the Inbox Vision preview experience, meaning it runs on the rendered message. Inbox Vision itself simulates the in-inbox rendering environment.
+{% endalert %}
+
+#### POUR categories
+
+Issues are categorized under the four foundational [POUR principles](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility): Perceivable, Operable, Understandable, and Robust. Each principle addresses a different aspect of accessible design.
+
+| Principle | Definition |
+| --- | --- |
+| Perceivable | Information and user interface components must be presentable to users in ways they can perceive.<br><br>Users must be able to perceive the information being presented (it can't be invisible to all of their senses). |
+| Operable | User interface components and navigation must be operable.<br><br>Users must be able to operate the interface (the interface cannot require interaction that a user cannot perform). |
+| Understandable | Information and the operation of the user interface must be understandable.<br><br>Users must be able to understand the information as well as the operation of the user interface (the content or operation cannot be beyond their understanding). |
+| Robust | Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.<br><br>Users must be able to access the content as technologies advance (as technologies and user agents evolve, the content should remain accessible). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Severity levels
+
+Inbox Vision classifies accessibility issues by severity to help you prioritize remediation efforts.
+
+| Status | Definition |
+| --- | --- |
+| Critical |Issues that can block access to content or functionality for users with disabilities. |
+| Serious | Issues that can cause significant barriers but may not completely block access. |
+| Moderate | Issues that may cause some difficulty for users with disabilities, but are less likely to block access entirely. |
+| Minor | Issues that have a relatively low impact on accessibility and may cause only minor inconvenience. |
+| Needs review | Unable to detect if there might be an issue or not. This can occur when we are unable to determine the contrast ratio as the text is placed on a background image. This will need to be manually reviewed because it cannot be automatically determined. |
+| Passed | Passed WCAG A, AA, or accessibility best practice. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Next steps for flagged issues
+
+
+
+### Best practices and additional guidance
+
+- All automated tools have limitations where certain requirements cannot be automatically detected, such as 2.4.3 Focus Order (logical keyboard navigation flow) and 2.1.1 Keyboard (full operability without a mouse). Other issues (such as the quality of alt text, clarity of instructions, and keyboard navigation) will require human judgement or manual testing for non-automatable criteria.
+- Accessibility is not just about compliance but about ensuring all users can engage with your content. Regularly test with users with different access needs when possible. Refer to [Accessibility at Braze]({{site.baseurl}}/help/accessibility#accessibility-at-braze) to learn more about how you can build accessible messages using Braze.
+
+By using Accessibility Testing, you can proactively identify and resolve barriers, making your email campaigns more inclusive and effective for every recipient.
+
+### Frequently asked questions
+
+
