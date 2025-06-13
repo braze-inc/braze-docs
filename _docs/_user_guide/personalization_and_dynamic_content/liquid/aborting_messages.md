@@ -8,7 +8,7 @@ description: "This reference article covers aborting Liquid messages and some ex
 
 # Aborting messages
 
-> Optionally, you can abort Liquid messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
+> Optionally, you can use the `abort_message("optional reason for aborting")` Liquid message tag within conditionals to prevent sending a message to a user. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
 {% alert note %}
 If a message step is aborted in a Canvas, the user **will not** exit the Canvas and **will** proceed to the next step.
@@ -65,6 +65,6 @@ You can also have the abort message log something to your Message Activity Log b
 
 You can use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or your own data warehouse, if it's connected to Braze, to query for specific abort messages that are triggered when Liquid logic causes a message to abort.
 
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[37]:#accounting-for-null-attribute-values
+## Considerations
+
+The `abort_message()` Liquid message tag prevents messages from sending to users, meaning the message won't display on user profiles, and won't count toward deliveries or frequency capping.

@@ -176,7 +176,7 @@ These two files must be updated in coordination with each other for proper funct
 |Tag Type|Use Case|
 |--------|--------|
 | **Initialization tag:** | The initialization tag can be used for [initializing the Web Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/initialization/?sdktabs=web).|
-| **Action tag:** | The action tag can be used for [managing Content Cards]({{site.baseurl}}/docs/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) and [logging analytics]({{site.baseurl}}/docs/developer_guide/analytics/).|
+| **Action tag:** | The action tag can be used for [managing Content Cards]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) and [logging analytics]({{site.baseurl}}/developer_guide/analytics/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Both tags can be added to your workspace from [Google's community gallery](https://tagmanager.google.com/gallery/#/?filter=braze) or by searching for Braze when adding a new tag from the Community Templates.

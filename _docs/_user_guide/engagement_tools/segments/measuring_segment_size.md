@@ -32,7 +32,7 @@ A single user may belong to different reachable user groups. For example, a user
 
 ## Statistics for segment size
 
-Estimated statistics are approximated by sampling only a portion of your segment, so you should expect to see estimated sizes that are larger or smaller than the actual value, with larger workspaces seeing potentially larger margins of error. To get an accurate count of users in your segment, select **Calculate Exact Statistics**. The exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
+Estimated statistics are approximated by sampling only a portion of your segment, so you should expect to see estimated sizes that are larger or smaller than the actual value, with larger workspaces seeing potentially larger margins of error. To get an accurate count of users in your segment, select **Calculate Exact Statistics**. The exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas. 
 
 Braze provides the following statistics on segment size. 
 
@@ -44,7 +44,8 @@ For each filter group, you can view estimated reachable users. Select **Expand e
 
 ## Reachable users estimate
 
-You can view an entire segment's estimated reachable users, including estimated user counts for each channel, in the **Reachable users** side panel. This **estimation** shows you an approximate range for your segment size, and an estimate of what percentage of your overall user base falls into this segment. You can also view an exact count of reachable users (for both the segment overall and per channel) by selecting **Calculate exact statistics**. 
+You can view an entire segment's estimated reachable users, including estimated user counts for each channel, in the **Reachable users** side panel. This **estimation** shows you an approximate range for your segment size, and an estimate of what percentage of your overall user base falls into this segment. Note that estimated statistics are cached for 15 minutes unless you make edits to your segment, in which case estimated statistics will automatically update. You can also view an exact count of reachable users (for both the segment overall and per channel) by selecting **Calculate exact statistics**. 
+
 
 ![The "Reachable users" panel stating there are 2.3M—2.4M estimated users.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
 
@@ -80,7 +81,7 @@ To view an accurate count of the number of users in your segment, select **Calcu
 
 To update the stats for a calculation you've previously run, select **Refresh exact statistics**. The date this calculation was last ran will automatically be updated.
 
-Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior.
+Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior. In addition, exact statistics results are cached for 24 hours unless you make edits to your segment, in which case you can re-calculate the exact statistics.
 
 ![The "Reachable users" panel with an option to show the breakdown.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
@@ -121,4 +122,3 @@ The membership count may significantly change for a number of reasons, such as t
 | A partner integration synced with Braze | A third party sent data to Braze that significantly influenced segment membership. |
 | Dormant users are archived | A significant number of inactive profiles were archived. For example, a large number of CSV-imported users never log activity and get archived at the same time. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
