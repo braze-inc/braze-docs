@@ -31,7 +31,7 @@
 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-| `https://dashboard-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
+| `https://dashboard.us-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
