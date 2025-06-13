@@ -12,7 +12,6 @@ $(document).ready(function(){
       postdate: null,
       ID: null
     };
-    var external_id = window.localStorage.getItem("braze_external_id") || '';
 
     $('#feedback_answer li.inline-star i').on('click', function(e){
       e.preventDefault();
@@ -48,8 +47,8 @@ $(document).ready(function(){
               "Language": page_language
             }
           )
-          external_id = window.braze.getUser().getUserId() ? window.braze.getUser().getUserId() : external_id;
         }
+        var external_id = window.braze ? window.braze.getUser().getUserId() : '';
 
         var submit_data = {
           'Helpful': helpful,
@@ -108,8 +107,8 @@ $(document).ready(function(){
             "Comment": $('#feedback_comment').val()
           }
         );
-        external_id = window.braze.getUser().getUserId() ? window.braze.getUser().getUserId() : external_id;
       }
+      var external_id = window.braze ? window.braze.getUser().getUserId() : '';
 
       var submit_data = {
         'Helpful': feedback_config['helpful'],

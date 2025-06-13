@@ -101,7 +101,6 @@ hide_toc: true
   var feedback_article_title = '{{page.article_title}}';
   var feedback_nav_title = '{{page.nav_title}}';
   var feedback_helpful = '';
-
   $('#feedback_answer_star li').on('click', function(e){
       e.preventDefault();
       var li = $(this);
@@ -127,10 +126,10 @@ hide_toc: true
 
 
   $('#feedback_submit').on('click',function(e){
+    var external_id = window.braze ? window.braze.getUser().getUserId() : '';
     var title = 'Documentations Feedback';
     var comment = $('#feedback_comment').val().trim();
     var feedback_div = $('#feedback_msg');
-    var external_id = window.localStorage.getItem("braze_external_id") || '';
     var submit_data = {
       'Helpful': feedback_helpful,
       'URL': feedback_site,
@@ -161,7 +160,6 @@ hide_toc: true
           "Comment": comment
         }
       );
-      submit_data['ExternalId'] = window.braze.getUser().getUserId() ? window.braze.getUser().getUserId() : external_id;
     }
 
     var jqxhr = $.ajax({
