@@ -130,6 +130,7 @@ hide_toc: true
     var title = 'Documentations Feedback';
     var comment = $('#feedback_comment').val().trim();
     var feedback_div = $('#feedback_msg');
+    var external_id = window.localStorage.getItem("braze_external_id") || '';
     var submit_data = {
       'Helpful': feedback_helpful,
       'URL': feedback_site,
@@ -137,7 +138,8 @@ hide_toc: true
       'Nav Title': title,
       'Params': window.location.search,
       "Language": page_language,
-      'Feedback': comment
+      'Feedback': comment,
+      'ExternalId': external_id,
     };
     if (!feedback_helpful || !comment){
       feedback_div.fadeIn();
@@ -148,8 +150,8 @@ hide_toc: true
     }
     $('#feedback_submit').hide();
 
-    if (typeof (appboy) !== 'undefined') {
-      appboy.logCustomEvent(
+    if (window.braze) {
+      window.braze.logCustomEvent(
         "Documentations Feedback Comment", {
           "Feedback": feedback_helpful,
           "Article Title": title,
@@ -159,6 +161,7 @@ hide_toc: true
           "Comment": comment
         }
       );
+      submit_data['ExternalId'] = window.braze.getUser().getUserId() ? window.braze.getUser().getUserId() : external_id;
     }
 
     var jqxhr = $.ajax({
