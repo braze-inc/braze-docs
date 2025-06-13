@@ -70,7 +70,7 @@ Braze systems may make the same Connected Content API call more than once per re
 ## Things to know
 
 * Braze does not charge for API calls and will not count toward your given data point allotment.
-* There is a limit of one MB for Connected Content responses.
+* There is a 1 MB limit for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
 
@@ -166,7 +166,7 @@ When a message using Connected Content is sent from Braze, the Braze servers aut
 
 Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for allowlisting. 
 
-Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
+Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary, without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
