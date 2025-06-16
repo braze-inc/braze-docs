@@ -76,11 +76,19 @@ All of our tests are run through actual email clients. Braze works hard to check
 
 ## Accessibility testing
 
-Accessibility Testing highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements & below. WCAG are internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
+Accessibility Testing highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements below. WCAG are internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
 
 {% alert important %}
 The Accessibility Testing may be used to support Customer’s compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer’s compliance obligations, and disclaims all liability in relation thereto.
 {% endalert %}
+
+### What is tested?
+
+Here are several examples of what Accessibility Testing can identify in your email:
+
+- Missing `<img>` elements with alt attributes, title attributes, or a role of none or presentation
+- Empty HTML document titles
+- The contrast ratio of the text placed on a background image
 
 ### Viewing accessibility testing results
 
@@ -108,8 +116,8 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 
 | Status | Definition |
 | --- | --- |
-| Critical |Issues that can block access to content or functionality for users with disabilities. |
-| Serious | Issues that can cause significant barriers but may not completely block access. |
+| Critical | Issues that can block access to content or functionality for users with disabilities. These are the most severe and should be prioritized for fixing. |
+| Serious | Issues that can cause significant barriers but may not completely block access. These should be addressed promptly. |
 | Moderate | Issues that may cause some difficulty for users with disabilities, but are less likely to block access entirely. |
 | Minor | Issues that have a relatively low impact on accessibility and may cause only minor inconvenience. |
 | Needs review | Unable to detect if there might be an issue or not. This can occur when we are unable to determine the contrast ratio as the text is placed on a background image. This will need to be manually reviewed because it cannot be automatically determined. |
@@ -126,7 +134,3 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 - Accessibility is not just about compliance but about ensuring all users can engage with your content. Regularly test with users with different access needs when possible. Refer to [Accessibility at Braze]({{site.baseurl}}/help/accessibility#accessibility-at-braze) to learn more about how you can build accessible messages using Braze.
 
 By using Accessibility Testing, you can proactively identify and resolve barriers, making your email campaigns more inclusive and effective for every recipient.
-
-### Frequently asked questions
-
-
