@@ -189,7 +189,7 @@ High contrast helps buttons remain readable and clickable for everyone, includin
 
 #### Make buttons easy to tap
 
-Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded tap targets can be frustrating or impossible for users with motor disabilities to interact with.  
+Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded [touch targets](#touch-targets) can be frustrating or impossible for users with motor disabilities to interact with.  
 
 ### Links
 
@@ -233,6 +233,20 @@ Use the right element for the action:
 ```
 
 {% endraw %}
+
+### Touch targets
+
+Touch targets are any part of your message that users tap to take action—like buttons, links, or icons. These elements need to be large enough and spaced far enough apart for people to tap them easily, especially on mobile devices.
+
+When touch targets are too small or too close together, it can be frustrating or impossible for users with mobility or dexterity challenges to interact with your message. Improving this can help reduce errors and create a smoother experience for everyone.
+
+Here’s what to keep in mind:
+- **Make it easy to tap.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines ([Success Criteria 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)) and common mobile usability standards.
+- **Give each target breathing room.** If tap targets are too close together—like stacked links or tightly grouped buttons—it can be easy to miss or tap the wrong one. Add spacing or padding between elements to prevent that.
+- **Don’t rely on visuals alone.** Even small icons can be made more usable with extra padding, so they meet minimum size requirements without changing the layout.
+- **Preview on mobile.** Test your message on different screen sizes and make sure interactive elements are easy to use.
+
+Improving touch targets is one of the most effective ways to make your message more accessible on mobile—and it’s good UX for everyone.
 
 ### Images
 
