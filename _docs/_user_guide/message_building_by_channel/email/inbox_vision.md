@@ -153,4 +153,4 @@ For tips and practical examples, check out [Accessibility at Braze]({{site.baseu
 - [Color contrast]({{site.baseurl}}/help/accessibility/#color-contrast)
 - [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)
 
-By combining automated testing with thoughtful manual review, you'll catch more potential issues—and create more inclusive, usable campaigns for every recipient.
+By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.
