@@ -42,7 +42,7 @@ Braze updates existing user profiles or creates new ones for leads, sign-ups, an
 
 Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number. 
 
-To prevent duplicate user profiles, it is critical you review the user reconciliation for Shopify Forms instructions for the method you used to [implement the Web SDK on your Shopify website]().
+To prevent duplicate user profiles, it is critical you review the user reconciliation for Shopify Forms instructions for the method you used to [implement the Web SDK on your Shopify website]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#implement-web-sdk).
 
 ## User profile merging 
 
