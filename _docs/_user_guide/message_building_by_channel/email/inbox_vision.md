@@ -15,7 +15,7 @@ channel:
 > Inbox Vision allows you to view your emails from the perspective of various email clients and mobile devices. For example, you can use Inbox Vision to test for differences across dark and light modes to confirm you've got your emails just right.
 
 {% alert important %} 
-In general, your email won't work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates in an empty user when we send emails using this feature.
+In general, your email won't work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates in an empty user when we send emails using this feature.<br><br>Make sure you've added default values to any Liquid in your email message. If no default values are provided, you may receive a false positive or the test may fail to run.
 {% endalert %}
 
 ## Testing your email in Inbox Vision
@@ -85,10 +85,6 @@ Accessibility testing in Inbox Vision highlights accessibility issues that may e
 {% alert important %}
 Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
 {% endalert %}
-
-### Before you begin
-
-Before using accessibility testing, make sure you've added default values to any Liquid in your email message. If no default values are provided, you may receive a false positive or the test may fail to run.
 
 ### What is tested?
 
