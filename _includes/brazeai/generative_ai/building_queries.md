@@ -10,13 +10,13 @@ You'll need ["View PII" permissions]({{site.baseurl}}/user_guide/administrative/
 
 To create a new query, go to **Analytics** > **Query Builder**, then select **Create SQL Query**.
 
-![The 'Query Template' and 'SQL Editor' options found within the 'Create SQL Query' dropdown.]()
+![The "Query Template" and "SQL Editor" options found within the "Create SQL Query" dropdown.]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
 
 If you need inspiration or help in crafting your query, choose **Query Template** and select a [pre-made template]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/). To start with a blank query, select **SQL Editor**.
 
 Your report is automatically given a name with the current date and time. Hover over the name and select <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 
-![The 'Report Name' field being edited for a new query.]()
+![An example report name "Channel engagement for May 2025".]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
 
 ### Step 2: Build your query
 
@@ -110,7 +110,7 @@ Each report can only generate results once per day. If you run the same report m
 
 Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
-If your report continues to time out after multiple attempts, please [contact support]({{site.baseurl}}/help/support#braze-support).
+If your report continues to time out after multiple attempts, [contact Support]({{site.baseurl}}/help/support#braze-support).
 
 ## Data and results
 
