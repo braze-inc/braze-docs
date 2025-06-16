@@ -86,14 +86,6 @@ Accessibility testing in Inbox Vision highlights accessibility issues that may e
 Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
 {% endalert %}
 
-### What is tested?
-
-Here are several examples of what accessibility testing can identify in your email:
-
-- Missing `<img>` elements with alt attributes, title attributes, or a role of none or presentation
-- Empty HTML document titles
-- The contrast ratio of the text placed on a background image
-
 ### Viewing accessibility testing results
 
 Accessibility testing will generate results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
