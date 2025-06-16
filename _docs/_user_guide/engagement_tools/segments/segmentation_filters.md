@@ -295,7 +295,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Background Push Enabled
-    description: Segments your users on whether they have enabled background push or not.<br><br>Background Push Enabled does not include users who have unsubscribed.
+    description: Segments by whether users have a push token and haven't unsubscribed.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date
