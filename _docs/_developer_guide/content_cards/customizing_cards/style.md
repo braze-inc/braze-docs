@@ -80,7 +80,7 @@ To customize your Content Card styling, override this default style. To override
 
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience.
 
-You can apply styling in one of two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`, like in the following example:
+You can apply styling in one of two ways. The first is to pass a [`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) and [`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) to [`ContentCardsList()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html), like in the following example:
 
 ```kotlin
 ContentCardsList(
@@ -98,7 +98,7 @@ ContentCardsList(
 )
 ```
 
-The second is to use BrazeStyle to create a global styling for Braze components, like in the following example:
+The second is to use [`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) to create a global styling for Braze components, like in the following example:
 
 ```kotlin
 BrazeStyle(
@@ -238,9 +238,9 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab Jetpack Compose %}
-To change the default font programmatically, you can set the `titleTextStyle` of `ContentCardStyling`.
+To change the default font programmatically, you can set the [`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) of `ContentCardStyling`.
 
-You can also set `titleTextStyle` for a specific card type by setting it on `BrazeShortNewsContentCardStyling` and passing it to the `shortNewsContentCardStyle` of `ContentCardStyling`.
+You can also set `titleTextStyle` for a specific card type by setting it on [`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html) and passing it to the [`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721) of `ContentCardStyling`.
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -320,7 +320,7 @@ To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style.
 {% endtab %}
 {% tab Jetpack Compose %}
 
-To change the default pinned icon, you can set the `pinnedResourceId` of `ContentCardStyling`.  For example:
+To change the default pinned icon, you can set the [`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721) of `ContentCardStyling`.  For example:
 
 ```kotlin
 ContentCardStyling(
@@ -329,7 +329,7 @@ ContentCardStyling(
 )
 ```
 
-You can also specify a Composable in `pinnedComposable` of `ContentCardStyling`. If `pinnedComposable` is specified, it will override the `pinnedResourceId` value.
+You can also specify a Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) of `ContentCardStyling`. If `pinnedComposable` is specified, it will override the `pinnedResourceId` value.
 
 ```kotlin
 ContentCardStyling(
@@ -430,7 +430,7 @@ Change the color of the unread indicator bar by altering the value in `com_braze
 {% endtab %}
 {% tab Jetpack Compose %}
 
-To change the color of the unread indicator bar, modify the value of `unreadIndicatorColor` in `ContentCardStyling`:
+To change the color of the unread indicator bar, modify the value of [`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) in `ContentCardStyling`:
 
 ```kotlin
 ContentCardStyling(
