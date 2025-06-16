@@ -71,7 +71,7 @@ glossaries:
     tags:
       - Custom events
   - name: Last Did Custom Event 
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+    description: Determines the latest time that a user has performed a specially recorded event. This filter supports decimals, such as 0.25 hours. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom events
   - name: X Custom Event In Y Days
