@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Quikly
 
-> [Quikly][1], an urgency marketing platform, leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
+> [Quikly](https://www.quikly.com), an urgency marketing platform, leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
 
 _This integration is maintained by Quikly._
 
@@ -22,9 +22,9 @@ The Braze and Quikly partnership allows you to accelerate conversions on events 
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Quikly account | A [Quikly][1] brand partner account is required to take advantage of this partnership. |
+| Quikly account | A [Quikly](https://www.quikly.com) brand partner account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track`, `subscription.status.set`, `users.export.ids`, and `subscription.status.get` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Quikly API key (optional) | A Quikly API key provided by your client success manager (webhook only). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -33,8 +33,8 @@ The Braze and Quikly partnership allows you to accelerate conversions on events 
 Quikly allows brands to accelerate email or SMS acquisition and motivates subscribers to provide first-party data directly within Braze. You can also use Braze to target lapsed customers with a Quikly activation that will reactivate and retain that audience. Additionally, marketers can use this integration to incentivize specific customer journey events with unique reward structures. 
 
 For example:
- - Build anticipation and engagement over days as consumers opt-in for a chance to claim exciting rewards with [Quikly Hype][3]. First-party data is automatically pushed to Braze.
- - Accelerate acquisition of new email and SMS subscribers using unique, real-time offers based on a consumer's speed of response, rank against others, randomly, or before time or quantities run out with [Quikly Swap][4].
+ - Build anticipation and engagement over days as consumers opt-in for a chance to claim exciting rewards with [Quikly Hype](https://www.quikly.com/urgency-marketing/platform/product-overview/hype). First-party data is automatically pushed to Braze.
+ - Accelerate acquisition of new email and SMS subscribers using unique, real-time offers based on a consumer's speed of response, rank against others, randomly, or before time or quantities run out with [Quikly Swap](https://www.quikly.com/urgency-marketing/platform/product-overview/swap).
  - Motivate specific steps in the customer journey with unique reward structures using webhooks.
  - Apply custom attributes or events to the user's profile upon participating in a Quikly activation.
 
@@ -97,7 +97,7 @@ Here is the complete workflow when a customer provides their mobile number and c
 2. Quikly performs a user lookup using the [Export user profile by identifier endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) to see if a user profile exists with a given `email_address`. If no user exists, create an alias-only profile via the Braze [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), setting the user's email as the user alias to reference that user in the future (as the user won't have an external ID).
 3. Update the subscription status using the [Update user's subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
-To support existing double opt-in SMS subscription workflows, Quikly can send a custom event to Braze rather than the workflow above. In that case, rather than updating the subscription status directly, the [custom event triggers the double opt-in process]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) and the subscription status is periodically monitored to verify the user has fully opted-in before crediting them in the Quikly activation.
+To support existing double opt-in SMS subscription workflows, Quikly can send a custom event to Braze rather than the workflow above. In that case, rather than updating the subscription status directly, the [custom event triggers the double opt-in process]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) and the subscription status is periodically monitored to verify the user has fully opted-in before crediting them in the Quikly activation.
 
 {% alert important %}
 Braze advises that when creating new users via the `/users/track` endpoint, there should be a delay of about 2 minutes before adding users to the relevant subscription group to allow Braze time to fully create the user profile.
@@ -178,7 +178,3 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 Reach out to your client success manager at Quikly with any questions.
 
 
-[1]: https://www.quikly.com
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[3]: https://www.quikly.com/urgency-marketing/platform/product-overview/hype
-[4]: https://www.quikly.com/urgency-marketing/platform/product-overview/swap

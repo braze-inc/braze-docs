@@ -21,7 +21,7 @@ By comparing the behaviors of users that receive messaging to those that don't, 
 
 With the Global Control Group, you can set a percentage of all users as a control group. When saved, users in the group will not receive any campaigns or Canvases. 
 
-Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of [API campaigns]({{site.baseurl}}/api/api_campaigns#api-campaigns) and News Feed Cards (deprecating). Users in your control group will still receive API campaigns and News Feed Cards. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
+Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of [API campaigns]({{site.baseurl}}/api/api_campaigns#api-campaigns). Users in your control group will still receive API campaigns. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
 
 ### Assign users randomly to the Global Control Group
 
@@ -53,7 +53,7 @@ The number of users in your Global Control Group automatically updates after its
 
 For percentage guidelines, refer to [Testing best practices](#percentage-guidelines).
 
-![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
+![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".]({% image_buster /assets/img/control_group/control_group4.png %})
 
 ### Step 3: Assign exclusion settings
 
@@ -63,7 +63,7 @@ Use tags to add exclusion settings to your Global Control Group. Any campaigns o
 You may want to add exclusion settings if you have transactional messages that should send to every user.
 {% endalert %}
 
-![The section to add or edit exclusion settings for your Global Control Group.][5]
+![The section to add or edit exclusion settings for your Global Control Group.]({% image_buster /assets/img/control_group/control_group5.png %})
 
 ### Step 4: Save your control group
 
@@ -79,7 +79,7 @@ Before disabling your Control Group, we recommend [exporting](#export-group-memb
 
 After disabling your Control Group, you can save a new one. When you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
-![A dialog box titled "You are making changes to Global Messaging Settings" with text warning that once your Global Control Group is disabled, it will no longer be excluded from any new or active campaigns or Canvases.][2]{: style="max-width:60%" }
+![A dialog box titled "You are making changes to Global Messaging Settings" with text warning that once your Global Control Group is disabled, it will no longer be excluded from any new or active campaigns or Canvases.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:60%" }
 
 ## Export your control group members {#export-group-members}
 
@@ -95,7 +95,7 @@ Historical control groups are not preserved, so you can only export the members 
 
 You can view Global Control Group membership by going to the **Miscellaneous** section in the **Engagement** tab of an individual user's profile.
 
-![A "Miscellaneous" section reporting that the user has a random bucket number of 6356 and is not in the Global Control Group.][1]{: style="max-width:50%;"}
+![A "Miscellaneous" section reporting that the user has a random bucket number of 6356 and is not in the Global Control Group.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
 
 ## Reporting
 
@@ -173,8 +173,3 @@ You should decide how long to run your experiment before beginning it, and then 
 
 Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. After you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
-[1]: {% image_buster /assets/img/control_group/control_group1.png %}
-[2]: {% image_buster /assets/img/control_group/control_group2.png %}
-[4]: {% image_buster /assets/img/control_group/control_group4.png %}
-[5]: {% image_buster /assets/img/control_group/control_group5.png %}
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

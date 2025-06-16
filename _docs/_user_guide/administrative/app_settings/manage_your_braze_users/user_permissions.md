@@ -42,7 +42,7 @@ Roles allow for more structure by bundling together your individual custom permi
 {% endtab %}
 {% endtabs %}
 
-## How do permission sets and roles differ from teams?
+## How do permission sets and roles differ from Teams?
 
 {% multi_lang_include permissions.md content="Differences" %}
 
@@ -54,9 +54,7 @@ To edit a user's current [admin](#admin), [company](#company), or [workspace](#w
 
 ### Admin
 
-Admins have access to all features and the ability to modify any company setting. There are also a few things that only admins can do in Braze. 
-
-Only admins can:
+Admins have access to all features and the ability to modify any company setting. They can:
 
 - Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
 - Add, edit, delete, suspend, or unsuspend other [Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)
@@ -82,13 +80,13 @@ To manage the following company-level permissions for a user, check or uncheck t
 
 ### Workspace
 
-You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually select or assign a permission set [you previously created](#creating-a-permission-set).
+You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually to select or assign a permission set [you previously created](#creating-a-permission-set).
 
 If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}
 {% tab select manually %}
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions** choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
 
 When you're finished, select **Update user**.
 
@@ -106,7 +104,7 @@ When you're finished, select **Update user**.
 
 ## Exporting user permissions
 
-To download list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
+To download a list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
 ![The "Company Users" page in Braze with the "Export Users" option in focus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
@@ -121,8 +119,8 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Admin|Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
 |Company|Create and delete workspaces|Allows users to create and delete workspaces.|
 |Company|Manage company settings|Allows users to modify any company setting.|
-|Workspace|Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers|Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and view global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content.|
-|Workspace|Access Dev Console|Allows full access to the following settings and logs:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li><li><a href='/docs/user_guide/data_and_analytics/cloud_ingestion/'>Manage Cloud Data Ingestion</a></li></ul>{:/}|
+|Workspace|Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers|Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and view global message settings in the dashboard. However, users with this permission cannot pause or edit existing live content.|
+|Workspace|Access Dev Console|Allows full access to the following settings and logs:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li></ul>{:/}|
 |Workspace|Approve and Deny Campaigns|Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access.|
 |Workspace|Approve and Deny Canvases|Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply.|
 |Workspace|Edit Currents Integrations|Allows users to modify a Currents connection, including credentials. By default, users assigned the "External Integrations" permission are also assigned this permission.|
@@ -136,19 +134,18 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).|
 |Workspace|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Workspace|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**.|
-|Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
+|Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).|
 |Workspace|Manage Feature Flags|Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Workspace|Manage Media Library Assets|Allows users to add, edit, and delete media library assets.|
 |Workspace|Manage Subscription Groups|Allows users to create and manage subscription groups.|
 |Workspace|Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
 |Workspace|Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
 |Workspace|Manage Transformations|Allows users to create and manage Data Transformations.|
-|Workspace|Publish Cards|This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards. Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both "Publish Cards" and "Launch Content Blocks" permissions.|
 |Workspace|Send Campaigns, Canvases|Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. |
 |Workspace|View Billing Details|Allows users to view subscriptions and billing.|
 |Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission are also assigned this permission.|
 |Workspace|View Custom Attributes Marked as PII|Allows non-admin users to view custom attributes that contain sensitive information and are marked as personally identifiable information (PII).|
-|Workspace|View PII|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. Users can also view PII fields in the **Preview as a User** tab of message previews.|
+|Workspace|View PII|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. Users can also view PII fields in the **Preview as a User** tab of message previews.<br><br>You need this permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), because it allows direct access to some customer data.|
 |Workspace|View User Profiles PII Compliant|Allows users to view user profiles that contain fields your company has defined as personally identifiable information (PII), but redacts the PII fields. |
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
@@ -158,4 +155,10 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Canvas Templates|Allows users to view Canvas templates.|
 |Workspace|Archive Canvas Templates|Allows users to archive Canvas templates.|
 |Workspace|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
+|Workspace|Publish Landing Pages|Allows users to publish [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
+|Workspace|Create Landing Page Drafts|Allows users to create and save landing page drafts.|
+|Workspace|Access Landing Pages|Allows users to access the **Landing Pages** page.|
+|Workspace|Create and Edit Landing Page Templates|Allows users to create and edit landing page templates.|
+|Workspace|View Landing Page Templates|Allows users to view landing page templates.|
+|Workspace|Archive Landing Page Templates|Allows users to archive landing page templates.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

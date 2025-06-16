@@ -44,7 +44,7 @@ The following rules apply to keywords and keyword responses:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
+Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) for more information.
 {% endalert %}
 {% endtab %}
 
@@ -76,7 +76,7 @@ If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, y
 ## Multi-language support
 
 When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. 
-![][16]{: style="float:right;max-width:40%;margin-left:10px;"}
+![]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 
 ### Creating language-specific keywords
 
@@ -88,7 +88,7 @@ Non-English languages do not come with preset keywords and responses, so senders
 
 If you need to delete a language, select the **Delete Language** button at the bottom right.
 
-![Global Keywords page with the "French" tab selected. Additional tabs exist for each added language.][5]
+![Global Keywords page with the "French" tab selected. Additional tabs exist for each added language.]({% image_buster /assets/img/sms/multi-language2.png %})
 
 ## Custom keyword categories
 
@@ -96,17 +96,17 @@ In addition to the three default keyword categories (Opt-in, Opt-out, and Help),
 
 These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) of your user's lifecycle. 
 
-![Keywords for a "Doubleoptin" category. If a user texts "Y", they receive the message "Thank you for confirming your enrollment in Hair Cuttery SMS."][12]
+![Keywords for a "Doubleoptin" category. If a user texts "Y", they receive the message "Thank you for confirming your enrollment in Hair Cuttery SMS."]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
 
 ### Creating a custom category
 
 To create a custom keyword category, do the following:
 
 1. Edit the appropriate subscription group.
-2. Select **Add custom keyword**. ![][13]{: style="max-width:90%;"}
+2. Select **Add custom keyword**. ![]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
+After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
@@ -118,11 +118,11 @@ This trigger supports filtering on the specific inbound message using is or is n
 
 #### Canvas
 
-![Action-based Canvas step with the trigger Send inbound SMS to subscription group "Messaging Service" within keyword category "Other" where the message body matches the regular expression "caret symbol skip."][14]{: style="max-width:90%;"}
+![Action-based Canvas step with the trigger Send inbound SMS to subscription group "Messaging Service" within keyword category "Other" where the message body matches the regular expression "caret symbol skip."]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
 
 #### Campaign
 
-![Action-based campaign with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body is "Keyword1" or is "Keyword2" or is not "Keyword A".][15]{: style="max-width:90%;"}
+![Action-based campaign with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body is "Keyword1" or is "Keyword2" or is not "Keyword A".]({% image_buster /assets/img/sms/campaign_trigger.png %}){: style="max-width:90%;"}
 
 ### Dealing with unknown keywords
 
@@ -133,18 +133,6 @@ This can be done by creating an SMS, MMS, or RCS campaign with a message like "S
 ![]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
-Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
+Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) for more information.
 {% endalert %}
 
-[oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
-[1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
-[2]: {% image_buster /assets/img/sms/keyword_home.png %}
-[unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-[endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
-[IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %}
-[5]: {% image_buster /assets/img/sms/multi-language2.png %}
-[12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %}
-[13]: {% image_buster /assets/img/sms/sms_custom_step.png %}
-[14]: {% image_buster /assets/img/sms/canvas_trigger.png %}
-[15]: {% image_buster /assets/img/sms/campaign_trigger.png %}
-[16]: {% image_buster /assets/img/sms/multi-language.png %}

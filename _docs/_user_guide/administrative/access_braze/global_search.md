@@ -10,7 +10,7 @@ description: "Learn about global search in Braze."
 
 You can use the search bar to find your work and other information within your Braze dashboard. The search bar is at the top of your Braze dashboard. Click the search bar, or press <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on Windows or <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on a Mac to jump directly to the search bar.
 
-![Search results for the keyword "promo", showing campaigns and items that include the term promo, including the page Promotion Codes.][1]
+![Search results for the keyword "promo", showing campaigns and items that include the term promo, including the page Promotion Codes.]({% image_buster /assets/img/navigation/global_search_new.png %})
 
 ## What can you search for?
 
@@ -66,13 +66,13 @@ Each search result is paired with tags that indicate the result's content type (
 
 You can revisit recently accessed content from the search menu. The search interface displays your recently opened results below the search bar, including items interacted with throughout the entire Braze platform. This lets you return to previously viewed pages, campaigns, Canvases, segments, or email templates so you can pick up right where you left off with fewer clicks.
 
-![Search expanded, showing recently opened pages and Braze content for the user.][2]
+![Search expanded, showing recently opened pages and Braze content for the user.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
 ### Find pages that have been renamed
 
 The search understands synonyms for pages that have been renamed in our [updated navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). For example, it will find "Data Export" when you search for "Currents", as that page has been renamed.
 
-![Search results for "Data Export" where the user has searched for "Currents."][3]
+![Search results for "Data Export" where the user has searched for "Currents."]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 <!---
 
@@ -88,15 +88,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 You can include active and draft content in your search results by selecting **Show active and draft only**. By default, the toggle is on, and all content, including archived, is shown.
 
-![The "Show active and draft only" toggle.][4]
+![The "Show active and draft only" toggle.]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
 
 ### Search for emojis
 
 Do you use emojis when naming your work in Braze? Search for them! You can use emojis as search queries. 😎
 
-[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
-[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
-[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
-[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
 

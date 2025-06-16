@@ -37,9 +37,9 @@ $(document).ready(function(){
 
         $('#feedback_answer').fadeOut("slow");
 
-        if (typeof (appboy) !== 'undefined') {
-          appboy.logCustomEvent(
-            "Documentations Feedback", {
+        if (window.braze) {
+          braze.logCustomEvent(
+            "Documentation Feedback", {
               "Feedback": helpful,
               "Article Title": feedback_config['article_title'],
               "Nav Title": feedback_config['nav_title'],
@@ -55,7 +55,8 @@ $(document).ready(function(){
           'Article Title': feedback_config['article_title'],
           'Nav Title': feedback_config['nav_title'],
           'Params':window.location.search,
-          "Language": page_language
+          "Language": page_language,
+          "UserId": window.localStorage.getItem("braze_external_id") || ''
         };
         var jqxhr = $.ajax({
           url: feedback_config['dest'],
@@ -104,9 +105,9 @@ $(document).ready(function(){
         "Language": page_language,
         'Feedback':$('#feedback_comment').val()
       };
-      if (typeof (appboy) !== 'undefined') {
-        appboy.logCustomEvent(
-          "Documentations Feedback Comment", {
+      if (window.braze) {
+        braze.logCustomEvent(
+          "Documentation Feedback Comment", {
             "Feedback": feedback_config['helpful'],
             "Article Title": feedback_config['article_title'],
             "Nav Title": feedback_config['nav_title'],

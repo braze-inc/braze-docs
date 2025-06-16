@@ -174,8 +174,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/wyng/
-- name: OfferFit
-  url: /docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
@@ -344,10 +342,14 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Mention Me
+  url: /docs/partners/mention_me/
 - name: Just Words
   url: /docs/partners/just_words/
 - name: Eagle Eye
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Stripe
+  url: /docs/partners/stripe/
 ---

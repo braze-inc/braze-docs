@@ -13,7 +13,7 @@ tool: Canvas
 
 > Message steps allow you to add a standalone message where you want in your Canvas Flow.
 
-![A Message step named "Lunch promo" using the push channel.][1]{: style="float:right;max-width:25%;margin-left:15px;"}
+![A Message step named "Lunch promo" using the push channel.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Creating a message
 
@@ -31,7 +31,7 @@ You can select from the following messaging channels:
 - Webhook
 - WhatsApp
 
-![A list of available messaging channels to select for the Message step.][2]
+![A list of available messaging channels to select for the Message step.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### Step 2: Edit delivery settings
 
@@ -47,7 +47,7 @@ Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you 
 
 Delivery validations provide an additional check to confirm your audience meets the delivery criteria at message send. This setting is recommended if Quiet Hours, Intelligent Timing, or rate limiting are activated. You can add a segment or additional filters to validate at the time of the message being sent. If a user doesn't meet the set delivery validations for a Message step, they will exit the Canvas at the step.
 
-![The Delivery Settings tab for Message component settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time. Delivery Validations are enabled to validate the audience at message send.][4]{: style="max-width:90%;"}
+![The Delivery Settings tab for Message component settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time. Delivery Validations are enabled to validate the audience at message send.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## How users advance
 
@@ -121,6 +121,3 @@ Refer to the following table for definitions of Message component metrics:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
-[1]: {% image_buster /assets/img/canvas_components/message_step1.png %}
-[2]: {% image_buster /assets/img/canvas_components/message_step2.png %}
-[4]: {% image_buster /assets/img/canvas_components/message_step4.png %}

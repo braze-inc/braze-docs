@@ -36,11 +36,11 @@ Features for Banners include:
 
 ### Placement IDs {#placement-id}
 
-Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/creating_placements/) that designate where Banners are allowed to appear.
+Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/creating_placements/) that designate where Banners can appear.
 
 Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
 
-Additionally, Banner placements are unique to each workspace and can only be used across 10 campaigns within a single workspace. Placements within each workspace must be given a unique ID, which you'll do when creating a placement in Braze.
+Additionally, Banner placements are unique to each workspace and can only be used across 10 campaigns within a single workspace. Placements within each workspace must be given a unique ID, which you'll assign when creating a placement in Braze.
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
@@ -52,11 +52,15 @@ When multiple campaigns reference the same placement ID, Banners are displayed i
 
 If multiple Banners are set to the same priority, the newest Banner that user is eligible for is displayed first.
 
+### Placement requests {#requests}
+
+{% multi_lang_include banners/placement_requests.md %}
+
 ### Message delivery
 
 Banner messages are delivered to your app or website as HTML content, typically rendered inside an iframe. This ensures that your Banners will render consistently across devices, and helps you keep their styles and scripts separate from the rest of your code.
 
-Additionally, iframes allow for dynamic and personalized content updates that don't require changes to your codebase. Each iframe retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
+iframes allow for dynamic and personalized content updates that don't require changes to your codebase. Each iframe retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
 
 ### Dimensions and sizing
 
@@ -68,7 +72,9 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Limitations
 
-Currently, Banner messages don't support the following features:
+Each workspace can support up to 100 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) an existing campaign before creating a new one.
+
+Additionally, Banner messages do not support the following features:
 
 - Canvas integration
 - API-triggered and action-based campaigns

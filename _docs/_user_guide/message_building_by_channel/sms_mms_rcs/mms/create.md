@@ -14,7 +14,7 @@ search_rank: 1
 
 # Creating an MMS campaign
 
-> This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/).
+> This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/).
 
 ## MMS sending basics
 
@@ -32,7 +32,7 @@ MMS are billed at a different rate versus text-only SMS, and not all carriers ca
 
 ### Use contact cards
 
-Contact cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. These cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze media library or created through our built-in [contact card generator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
+Contact cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. These cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze media library or created through our built-in [contact card generator]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/).
 
 ## Creating an MMS message
 

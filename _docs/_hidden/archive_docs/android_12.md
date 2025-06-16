@@ -19,7 +19,7 @@ For a full Android 12 migration guide, see the [Android developer documentation]
 
 ## Braze SDK compatibility
 
-If you target Android 12, you must use [Braze Android SDK v13.1.2+][1]. If you do not target Android 12 yet, upgrading is still recommended.
+If you target Android 12, you must use [Braze Android SDK v13.1.2+](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312). If you do not target Android 12 yet, upgrading is still recommended.
 
 **What happens if I don't upgrade my Braze Android SDK?**
 
@@ -27,4 +27,3 @@ If you target Android 12, you must use [Braze Android SDK v13.1.2+][1]. If you d
 * Changes in [component exports](https://developer.android.com/about/versions/12/behavior-changes-12#exported), [pending intents](https://developer.android.com/about/versions/12/behavior-changes-12#pending-intent-mutability), and [notification trampolines](https://developer.android.com/about/versions/12/behavior-changes-12#notification-trampolines) may impact your ability to compile your app or may prevent the Braze SDK from initializing. This behavior occurs only for apps targeting Android 12.
 * Changes in [custom push notifications](https://developer.android.com/about/versions/12/behavior-changes-12#custom-notifications) have changed the layout for our new [Android inline image push]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_sending-inline-images) feature. This behavior occurs only for apps targeting Android 12.
 
-[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312

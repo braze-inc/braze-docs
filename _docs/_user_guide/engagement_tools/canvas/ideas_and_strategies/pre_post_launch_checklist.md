@@ -27,7 +27,7 @@ If you're entering users according to their local time zone using a scheduled en
 You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
 {% endalert %}
 
-![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.][1]{: style="max-width:75%;"}
+![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Consider using regular expressions for audience filters
 
@@ -109,4 +109,3 @@ In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not
 
 When the volume of sends between two or more paths (either Audience Paths or Action Paths) isn't what you expect, this can be an opportunity to check your segments, filters, or trigger actions. Also, be sure to identify and remove any overlapping filters.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}
