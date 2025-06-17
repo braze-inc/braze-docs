@@ -51,7 +51,7 @@ After your domain is verified, your custom domains will appear in the table on t
 
 ![List of custom domains and statuses.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:50%;"}
 
-Live monitoring will alert you if any of your active domains has an issue, so that your custom links remain usable.
+Live monitoring will alert you if any of your active domains have an issue, so that your custom links remain usable.
 
 ## Using custom domains
 
