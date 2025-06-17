@@ -10,6 +10,9 @@ description: "This landing page covers Braze messaging channels. Messaging chann
 
 guide_featured_title: "Available channels"
 guide_featured_list:
+- name: Banners
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS & MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: SMS, MMS, and RCS
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## Accessibility resources
+
+You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation. If you’d like additional guidance, we recommend:
+
+- [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
+- [Building Accessible Messages]({{site.baseurl}}/help/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+
+{% multi_lang_include accessibility/feedback.md %}
 
 ## Choosing a message channel
 

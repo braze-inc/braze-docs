@@ -2,7 +2,7 @@ In the Braze dashboard, go to **Data Settings** > **Data Transformation**.
 
 Select **Create Transformation** to name your transformation, then choose your editing experience.
 
-![Transformation details with the option to choose "Use a template" or "Start from scratch" for your editing experience.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
+![Transformation details with the option to choose "Use a template" or "Start from scratch" for your editing experience.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Select **Use a template** to browse through a template library, including Data Transformation use cases. Or, select **Start from scratch** to load a default code template. 
 
@@ -24,8 +24,8 @@ After creating your transformation, you'll see the detailed view of the transfor
 
 {% if include.location == "typeform" %}
 
-![]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
-
-Capture your **Webhook URL** for use in the next step.
+![An example of webhook details and transformation code.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
 {% endif %}
+
+Capture your **Webhook URL** for use in the next step.

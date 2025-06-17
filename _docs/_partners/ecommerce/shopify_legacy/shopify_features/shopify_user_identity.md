@@ -42,7 +42,7 @@ Braze updates existing user profiles or creates new ones for leads, sign-ups, an
 
 Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number. 
 
-To prevent duplicate user profiles, it is critical you review the user reconciliation for Shopify Forms instructions for the method you used to [implement the Web SDK on your Shopify website]().
+To prevent duplicate user profiles, it is critical you review the user reconciliation for Shopify Forms instructions for the method you used to [implement the Web SDK on your Shopify website]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#implement-web-sdk).
 
 ## User profile merging 
 
@@ -98,7 +98,7 @@ If you enable the override option, Braze will update the global subscription sta
 
 #### Collect SMS subscribers
 
-To collect SMS subscribers from Shopify, you must create [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) as part of your [SMS setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup). 
+To collect SMS subscribers from Shopify, you must create [SMS subscription groups]({{site.baseurl}}/sms_rcs_subscription_groups/) as part of your [SMS setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/). 
 
 When you are ready to collect your Shopify SMS subscribers, enable SMS subscriber collection by turning it on within the Shopify setup page. You must select at least one SMS subscription group so that you can appropriately target and send SMS messages. 
 

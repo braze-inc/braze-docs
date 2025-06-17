@@ -71,7 +71,7 @@ glossaries:
     tags:
       - Custom events
   - name: Last Did Custom Event 
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+    description: Determines the latest time that a user has performed a specially recorded event. This filter supports decimals, such as 0.25 hours. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom events
   - name: X Custom Event In Y Days
@@ -180,14 +180,6 @@ glossaries:
       - Retargeting
   - name: Last Received WhatsApp
     description: Segments your users by the last time that they received a WhatsApp message. This is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
-    tags:
-      - Retargeting
-  - name: Last Viewed News Feed
-    description: Segments your users by the last time they viewed News Feed.
-    tags:
-      - Retargeting
-  - name: News Feed View Count
-    description: Segments your users by how many times they viewed News Feed.
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign
@@ -303,7 +295,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Background Push Enabled
-    description: Segments your users on whether they have enabled background push or not.
+    description: Segments by whether users have a push token and haven't unsubscribed.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date

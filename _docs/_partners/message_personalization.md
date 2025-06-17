@@ -15,8 +15,6 @@ valid_partner_list:
   url: /docs/partners/jacquard/
 - name: Notify
   url: /docs/partners/notify/
-- name: Offerfit
-  url: /docs/partners/offerfit/
 - name: Trustpilot
   url: /docs/partners/trustpilot/
 - name: Amazon Personalize
@@ -97,4 +95,6 @@ valid_partner_list:
   url: /docs/partners/friendbuy/
 - name: ViralSweep
   url: /docs/partners/viralsweep/
+- name: Mention Me
+  url: /docs/partners/mention_me/
 ---

@@ -75,6 +75,28 @@ module Jekyll
         steps << { "file" => file_key, "range" => range_value, "narrative" => narrative_html }
       end
 
+      # --- 3.5) Auto-generate rating prompt buffer step ---
+      page       = context.registers[:page]
+      title      = page['title'] || File.basename(page['path'], '.*')
+      page_slug  = Jekyll::Utils.slugify(title)
+
+      parent_dir = File.dirname(page['path'])
+      parent_name = File.basename(parent_dir)
+      parent_slug = Jekyll::Utils.slugify(parent_name)
+
+      # Combined slug: parent-page
+      slug = "#{parent_slug}-#{page_slug}"
+      rating_html = <<~HTML
+        <p>Please rate this tutorial:</p>
+        <div class="rating-stars">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+      HTML
+
       # --- 4) Build the final HTML structure ---
       html = []
       html << "<div id=\"#{unique_id}\" class=\"scrolly-code-block\">"
@@ -88,6 +110,10 @@ module Jekyll
         html << "        <div class=\"scrolly-narrative\">#{step['narrative']}</div>"
         html << "      </div>"
       end
+      # Manual buffer/rating prompt step
+      html << "      <div class=\"scrolly-step rating-step\" id=\"tutorial-rating-#{slug}\" data-index=\"#{steps.size}\">"
+      html << "        <div class=\"scrolly-narrative\">#{rating_html}</div>"
+      html << "      </div>"
       html << "    </div>"
 
       # Right side: Code tabs and panels.

@@ -25,7 +25,7 @@ Tealium AudienceStreams and EventStreams offer both batch and non-batch connecto
 | ---- | ----------- |
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with server-side access is required. We recommend also using the client-side integrations to take advantage of this partnership. |
 | REST API key | A Braze REST API key with `users.track`, `users.delete`, and `subscription.status.set` permissions.<br><br>This can be created within **Braze dashboard > Developer Console > REST API Key > Create New API Key**|
-| [Braze REST endpoint][6] | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
+| [Braze REST endpoint]({{site.baseurl}}/api/basics/#endpoints) | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -48,7 +48,7 @@ The first step in using AudienceStream is to create attributes. Attributes allow
 - Birthdate (Date)
 - Purchases Brands (Tally)
 
-Visit [Tealium][1] for a full list of available data types.
+Visit [Tealium](https://docs.tealium.com/server-side/attributes/about/) for a full list of available data types.
 
 ##### Attribute enrichment
 
@@ -211,7 +211,7 @@ After your connector is up and running, you should test it to ensure it's workin
 4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.
 5. Look for the action you want to validate and view the log status. 
 
-Refer to Tealium's [Trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
+Refer to Tealium's [Trace documentation](https://docs.tealium.com/server-side/connectors/trace/about/) for more detailed instructions on implementing Tealium's Trace tool.
 
 ## Integration demo
 
@@ -235,8 +235,3 @@ If you have multiple EventStreams that target the same event feed, **all actions
 Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
 **Solution**: <br>Set up [load rules](https://docs.tealium.com/iq-tag-management/load-rules/about/) to determine exactly when and where a tag loads on your site.
 
-[1]: https://docs.tealium.com/server-side/attributes/about/
-[15]: {% image_buster /assets/img/tealium/create_configuration.png %}
-[6]: {{site.baseurl}}/api/basics/#endpoints
-[21]: https://docs.tealium.com/server-side/connectors/trace/about/
-[17]: {% image_buster /assets/img/tealium/save_publish.png %}

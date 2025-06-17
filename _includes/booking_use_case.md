@@ -42,7 +42,7 @@ When a user creates a booking, use the following structure for the array of obje
 
 The nested custom attribute “trips” will display in the user profile like so.
 
-![Two nested custom attributes for a London trip and Sydney trip.][1]{: style="max-width:70%;"}
+![Two nested custom attributes for a London trip and Sydney trip.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### Update booking
 When a user updates a booking, use the following structure for the array of objects to send the data to Braze through the `/users/track` endpoint.
@@ -132,7 +132,7 @@ Create a target audience to receive reminders using multi-criteria segmentation.
 - A start date **in more than 1 days** and
 - A start date **in less than 2 days** 
 
-![A nested custom attribute "trips" with criteria for a start date that is more than one day and less than two days.][3]
+![A nested custom attribute "trips" with criteria for a start date that is more than one day and less than two days.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### Step 2b: Create your message
 
@@ -280,5 +280,3 @@ If the user in this use case cancelled their Syndey trip, you’d send the follo
 
 After these calls are sent and the user profile is updated, the booking reminder messages will reflect the latest data about the user’s booking dates.
 
-[1]: {% image_buster /assets/img/use_cases/2_nested_attributes.png %}
-[3]: {% image_buster /assets/img/use_cases/custom_nested_attribute.png %}
