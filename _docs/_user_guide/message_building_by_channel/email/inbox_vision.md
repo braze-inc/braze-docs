@@ -15,7 +15,7 @@ channel:
 > Inbox Vision allows you to view your emails from the perspective of various email clients and mobile devices. For example, you can use Inbox Vision to test for differences across dark and light modes to confirm you've got your emails just right.
 
 {% alert important %} 
-In general, your email won't work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates in an empty user when we send emails using this feature.
+In general, your email won't work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates in an empty user when we send emails using this feature.<br><br>Make sure you've added default values to any Liquid in your email message. If no default values are provided, you may receive a false positive or the test may fail to run.
 {% endalert %}
 
 ## Testing your email in Inbox Vision
@@ -36,9 +36,13 @@ To test your email message in Inbox Vision, do the following:
 6. Make changes to a template, if necessary.
 7. Select **Re-run Test** to see the updated previews.
 
+{% alert note %}
+Inbox Vision isn't supported if your email message includes [abort logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages) as these emails are rendered as static content.
+{% endalert %}
+
 ### Previewing as a user
 
-When you preview the email as a random user, any specific settings or attributes associated with a user, such as their name or preferences, aren't saved for current or future previews. When you select a custom user, the preview shown in Inbox Vision may differ from the message preview elsewhere since this option uses specific user data to create the preview.
+When you preview the email as a random user, any specific settings or attributes associated with a user, such as their name or preferences, aren't saved for current or future previews. When you select a custom user, the preview shown in Inbox Vision may differ from the message preview elsewhere since this option uses specific user data to create the preview
 
 ## Code analysis
 
@@ -74,3 +78,75 @@ To check your spam test results, do the following:
 
 All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
+## Accessibility testing
+
+Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements below. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
+
+{% alert important %}
+Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
+{% endalert %}
+
+### Viewing accessibility testing results
+
+Accessibility testing will generate results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
+
+#### POUR categories
+
+Issues are categorized under the four foundational [POUR principles](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility): Perceivable, Operable, Understandable, and Robust. Each principle addresses a different aspect of accessible design.
+
+| Principle | Definition |
+| --- | --- |
+| Perceivable | Information and user interface components must be presentable to users in ways they can perceive.<br><br>Users must be able to perceive the information being presented (it can't be invisible to all of their senses). |
+| Operable | User interface components and navigation must be operable.<br><br>Users must be able to operate the interface (the interface cannot require interaction that a user cannot perform). |
+| Understandable | Information and the operation of the user interface must be understandable.<br><br>Users must be able to understand the information as well as the operation of the user interface (the content or operation cannot be beyond their understanding). |
+| Robust | Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.<br><br>Users must be able to access the content as technologies advance (as technologies and user agents evolve, the content should remain accessible). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Severity levels
+
+Inbox Vision classifies accessibility issues by severity to help you prioritize remediation efforts.
+
+| Status | Definition |
+| --- | --- |
+| Critical | Issues that can block access to content or functionality for users with disabilities. These are the most severe and should be prioritized for fixing. |
+| Serious | Issues that can cause significant barriers but may not completely block access. These should be addressed promptly. |
+| Moderate | Issues that may cause some difficulty for users with disabilities, but are less likely to block access entirely. |
+| Minor | Issues that have a relatively low impact on accessibility and may cause only minor inconvenience. |
+| Needs review | Unable to detect if there might be an issue or not. This can occur when we are unable to determine the contrast ratio as the text is placed on a background image. This will need to be manually reviewed because it cannot be automatically determined. |
+| Passed | Passed WCAG A, AA, or accessibility best practice. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Understanding automated accessibility testing
+
+Automated accessibility testing is a great starting point—but it can't catch everything. Some issues need a human touch to evaluate properly, especially when context or visual design plays a role in how users experience your email.
+
+You may see some issues marked as **Needs review**. These are cases where the checker can't tell for sure if something is a problem for accessibility. When that happens, we recommend reviewing it manually.
+
+Some examples of what automated tools can't reliably detect include:
+
+- If focus order of interactive elements follows a logical sequence
+- If content is fully operable with a keyboard, without requiring a mouse
+- If alt text meaningfully describes an image
+- If headings are used properly to organize content
+- If links and buttons are clearly labeled and easy to understand
+- If touch targets are large enough and spaced appropriately
+- If text on background images meets color contrast requirements
+- If instructions or labels are clear and helpful to all users
+
+These limitations aren't unique to Braze&#8212;they're common to all automated accessibility tools. Inbox Vision renders your message in a simulated inbox environment, but it can't mimic every assistive technology, screen reader, or user need. That's why accessibility isn't a one-time checkbox&#8212;it's a continuous practice.
+
+To help ensure your messages are usable by more people:
+
+- Review flagged issues carefully, especially those labeled as **Needs review**.
+- Test manually where possible, especially for layout and interaction patterns.
+- Use tools like screen readers, keyboard-only navigation, and browser zoom to simulate different access needs.
+
+For tips and practical examples, check out [Accessibility at Braze]({{site.baseurl}}/help/accessibility), where you'll find guidance on:
+
+- [Headings and structure]({{site.baseurl}}/help/accessibility/#content)
+- [Images and alt text]({{site.baseurl}}/help/accessibility/#images) 
+- [Links]({{site.baseurl}}/help/accessibility/#links) and [buttons]({{site.baseurl}}/help/accessibility/#buttons)
+- [Color contrast]({{site.baseurl}}/help/accessibility/#color-contrast)
+- [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)
+
+By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.
