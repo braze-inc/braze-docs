@@ -115,8 +115,8 @@ The following table lists possible returned errors and their associated troubles
 | `INVALID_MESSAGE_VARIATION_ID`          | Confirm your message ID is correct.                                                |
 | `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email campaigns or Canvas messages with emails can be translated.             |
-| `UNSUPPORTED_CHANNEL`                   | Only messages in email campaigns or Canvas messages with emails can be translated. |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
+| `UNSUPPORTED_CHANNEL`                   | Only email, push, or in-app-message campaigns or Canvas messages can be translated. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
