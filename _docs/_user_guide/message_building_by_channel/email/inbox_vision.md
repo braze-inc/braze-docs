@@ -37,7 +37,7 @@ To test your email message in Inbox Vision, do the following:
 7. Select **Re-run Test** to see the updated previews.
 
 {% alert note %}
-Inbox Vision isn't supported if your email message includes [abort logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages).
+Inbox Vision isn't supported if your email message includes [abort logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages) as these emails are rendered as static content.
 {% endalert %}
 
 ### Previewing as a user
@@ -80,7 +80,7 @@ All of our tests are run through actual email clients. Braze works hard to check
 
 ## Accessibility testing
 
-Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements below. WCAG are internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
+Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements below. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
 
 {% alert important %}
 Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
@@ -89,10 +89,6 @@ Accessibility Testing may be used to support Customer's compliance efforts of re
 ### Viewing accessibility testing results
 
 Accessibility testing will generate results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
-
-{% alert note %}
-Accessibility testing is part of the Inbox Vision preview experience, meaning it runs on the rendered message. Inbox Vision itself simulates the in-inbox rendering environment.
-{% endalert %}
 
 #### POUR categories
 
