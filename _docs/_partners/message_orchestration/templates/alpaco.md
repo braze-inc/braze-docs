@@ -9,11 +9,7 @@ search_tag: Partner
 
 # Alpaco
 
-> [Alpaco](https://alpaco.email/) is an online creative management tool that offers a drag-and-drop editor for building reusable, brand-safe content for Braze. The Alpaco and Braze integration allows you to export:  
->
-> - **Email Templates**  
-> - **Content Blocks**  
-> - **In-App Message Templates**
+> [Alpaco](https://alpaco.email/) is an online creative management tool that offers a drag-and-drop editor for building reusable, brand-safe content for Braze. The Alpaco and Braze integration allows you to export Content Blocks, Email Templates, and In-App Message Templates.
 
 _This integration is maintained by Alpaco._
 
@@ -46,25 +42,25 @@ Provide your Braze REST API key and cluster instance to the Alpaco customer succ
 This is a one-time setup and any exports in the future will automatically use this API key.
 {% endalert %}
 
-## Exporting Alpaco Emails to Braze
+## Exporting Alpaco messages to Braze
 
-### Step 1: Create a Template or Content Block in Alpaco
+### Step 1: Create a template in Alpaco
 
-In the Alpaco platform, use the different settings and options to create a template that expresses your brand identity. Select **Save** when you're happy with your template.
+In Alpaco, create a template or content block to express your brand identity. When you're ready, select **Save**.
 
 ![Alpaco Create template]({% image_buster /assets/img/alpaco/alpaco_1.png %})
 
-### Step 2: Create an Email or Message
+### Step 2: Draft a message using the template
 
-After the template is created, navigate to the lobby and use it to create an email, content block or In-App Message. Select **Review** to make sure everything looks right.
+Next, go to the Alpaco lobby and use your template to create an email, in-app message, or content block. To double-check your message before exporting, select **Review**.
 
 ![Alpaco Create email]({% image_buster /assets/img/alpaco/alpaco_2.png %})
 
-### Step 3: Review and Export to Braze
+### Step 3: Export your message to Braze
 
-Select **Export**, choose the Braze integration, and specify whether you're exporting an Email Template or a Content Block.
+Select **Export**, then choose the Braze integration and specify whether you're exporting an email template or a content block.
 
-If you make changes after export, simply re-export the content from Alpaco to update it in Braze.
+If you make changes after export, you can re-export the content from Alpaco to update it in Braze.
 
 ![Alpaco Export email]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
