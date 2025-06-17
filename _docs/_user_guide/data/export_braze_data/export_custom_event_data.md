@@ -14,7 +14,7 @@ tool: Reports
 
 You can find the **Custom Events Report** under **Analytics**.
 
-![Custom events][14]
+![Custom events]({% image_buster /assets/img_archive/Export_events.png %})
 
 You can export the following CSVs:
 
@@ -31,4 +31,3 @@ You can export the following CSVs:
 For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[14]: {% image_buster /assets/img_archive/Export_events.png %}

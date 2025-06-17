@@ -13,7 +13,7 @@ local_redirect: #optimizations
 
 > You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
 
-![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.][2]{: style="max-width:25%;float:right;margin-left:15px;" }
+![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## Step 1: Create your campaign
 
@@ -26,11 +26,11 @@ You can create up to eight variants of your message, differentiating between tit
 
 For some ideas on how to get started differentiating your variants, refer to [Tips for different channels](#tips-different-channels).
 
-![Selecting "Add Variant" for a campaign.][3]
+![Selecting "Add Variant" for a campaign.]({% image_buster /assets/img/ab_create_2.png %})
 
 ## Step 3: Schedule your campaign
 
-Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
+Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) are available.
 
 Once a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze will consider the experiment compromised and will immediately disable the experiment.
 
@@ -50,7 +50,7 @@ You can reserve a percentage of your target audience for a randomized control gr
 
 When viewing your results, you can compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare both the effects of your variants and the effects of your variants against the conversion rate that would result if you didn't send a message at all.
 
-![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.][5]
+![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.]({% image_buster /assets/img/ab_create_4.png %})
 
 {% alert important %}
 Using a control group when determining a winner by _Opens_ or _Clicks_ is not recommended. Because the control group won't receive the message, those users cannot perform any opens or clicks. Therefore, that group's conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
@@ -62,7 +62,7 @@ When using rate limiting with an A/B test, the rate limit isn't applied to the c
 
 #### Control groups with Intelligent Selection
 
-The size of the control group for a campaign with [Intelligent Selection][1] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20%, and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
+The size of the control group for a campaign with [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20%, and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
 ## Step 5: Designate a conversion event (optional)
 
@@ -89,7 +89,7 @@ Depending on which channel you select, you can test different components of your
 | ---------------------| --------------- | ------------- |
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (for example, "triple" versus "increase by 200%")  <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (for example, "triple" versus "increase by 200%") <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
-| In-app message | Aspects listed for "push" <br> [Message format][7] | Click <br> Conversion Rate |
+| In-app message | Aspects listed for "push" <br> [Message format]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -100,7 +100,7 @@ In addition, the ideal length of your test may also vary depending on the channe
 
 For instance, if you're testing a push, you may achieve significant results faster than when testing email since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
 
-If you're unsure how long your test should run for, the [Intelligent Selection][6] feature can be useful for finding a Winning Variant efficiently.
+If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
 
 ### Choosing a segment {#choosing-a-segment}
 
@@ -130,10 +130,3 @@ For example, if you send a push message to a wide audience with a control, the t
 If you manually use random bucket numbers for control groups, check out [things to watch for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[2]: {% image_buster /assets/img/ab_create_1.png %}
-[3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

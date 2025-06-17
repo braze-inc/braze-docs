@@ -68,25 +68,25 @@ In Canvas, you'll see in-app message performance mapped onto the Canvas you've c
 
 #### Control groups {#cc-control-group}
 
-To measure the impact of an individual Content Card, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
+To measure the impact of an individual Content Card, you can add a [control group]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% elsif include.channel == "SMS" %}
 
 #### Control groups {#sms-control-group}
 
-To measure the impact of an individual SMS, MMS, or RCS message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
+To measure the impact of an individual SMS, MMS, or RCS message, you can add a [control group]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% elsif include.channel == "whatsapp" %}
 
 #### Control groups {#whatsapp-control-group}
 
-To measure the impact of an individual WhatsApp message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
+To measure the impact of an individual WhatsApp message, you can add a [control group]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% elsif include.channel == "webhook" %}
 
 #### Control groups {#webhook-control-group}
 
-To measure the impact of an individual webhook message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
+To measure the impact of an individual webhook message, you can add a [control group]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% endif %}
 
@@ -179,7 +179,7 @@ We suggest enabling CORS for your image URLs to help prevent images from breakin
 
 #### Content Card metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1] and filter by Content Cards.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all Content Cards metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards.
 
 <style>
     .no-split {
@@ -253,7 +253,7 @@ Your _Messages Sent_ refers to Content Cards available to be seen, while _Unique
 
 These are the key metrics to track while reviewing your Banner campaign performance. Clicks and impressions for Banners are tracked automatically with the SDK. 
 
-For the full definitions of all Banners metrics, refer to the [Report Metrics Glossary][1] and filter by Banners.
+For the full definitions of all Banners metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Banners.
 
 <style>
     .no-split {
@@ -419,7 +419,7 @@ Estimated Real Open Rate is only available in campaigns, and is not reported in 
 
 #### In-app message metrics
 
-Here are some key in-app message metrics you may see in your analytics. To see the full definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary][1].
+Here are some key in-app message metrics you may see in your analytics. To see the full definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 <style>
     .no-split {
@@ -478,7 +478,7 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 
 #### Push metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all push metrics, refer to the [Report Metrics Glossary][1] and filter by push.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all push metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by push.
 
 <style>
     .no-split {
@@ -558,7 +558,7 @@ Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 
 #### SMS, MMS, and RCS metrics
 
-Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all SMS, MMS, and RCS metrics, refer to the [Report Metrics Glossary][1] and filter by SMS/MMS and RCS.
+Here is a breakdown of some key metrics you may see while reviewing your message performance. For the full definitions of all SMS, MMS, and RCS metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS/MMS and RCS.
 
 <style>
     .no-split {
@@ -609,7 +609,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 #### Webhook metrics
 
-Here are some key webhook metrics you may see in your analytics. To see th full definitions of all webhook metrics used in Braze, refer to our [Report Metrics Glossary][1].
+Here are some key webhook metrics you may see in your analytics. To see th full definitions of all webhook metrics used in Braze, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 <style>
     .no-split {
@@ -644,7 +644,7 @@ Here are some key webhook metrics you may see in your analytics. To see th full 
 
 #### WhatsApp metrics
 
-Here are some key WhatsApp metrics you may see in your analytics. To see the full definitions of all WhatsApp metrics used in Braze, refer to our [Report Metrics Glossary][1].
+Here are some key WhatsApp metrics you may see in your analytics. To see the full definitions of all WhatsApp metrics used in Braze, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 <style>
     .no-split {
@@ -761,5 +761,3 @@ For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/anal
 
 {% endif %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants

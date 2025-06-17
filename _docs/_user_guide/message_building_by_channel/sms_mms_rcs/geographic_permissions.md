@@ -18,13 +18,13 @@ alias: /geographic_permissions/
 
 If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS, MMS, or RCS subscription group. The allowlist is under **Geographic Permissions**.
 
-![The editable SMS Geographic Permissions section for an admin with several countries selected in the "Country allowlist".][1]{: style="max-width:80%;"}
+![The editable SMS Geographic Permissions section for an admin with several countries selected in the "Country allowlist".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Selecting countries
 
 Add countries to the allowlist with the dropdown. The most common SMS and RCS countries are shown at the top, with others shown below. You can also search for countries by typing in the text field.
 
-![The "Country allowlist" dropdown with the most common countries displaying at the top.][2]{: style="max-width:80%;"}
+![The "Country allowlist" dropdown with the most common countries displaying at the top.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 Remove previously selected countries by clearing the respective boxes next to them.
 
@@ -32,13 +32,13 @@ Remove previously selected countries by clearing the respective boxes next to th
 
 Changes will take effect after you select **Save**. Removing countries from your allowlist will prevent all SMS, MMS, and RCS messages from sending to numbers in those countries.
 
-![Warning modal confirming the countries that will be deleted from the allowlist.][3]{: style="max-width:70%;"}
+![Warning modal confirming the countries that will be deleted from the allowlist.]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
 
 ## High-risk countries
 
 Certain countries have a higher risk of SMS and RCS traffic pumping. These countries are indicated by a **High Risk** tag in the country dropdown.
 
-![The country dropdown with Azerbaijan having a "High Risk" tag.][4]{: style="max-width:80%;"}
+![The country dropdown with Azerbaijan having a "High Risk" tag.]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
 
 If you allow sending in these countries, you must first acknowledge the risk of doing so before the country is added to your allowlist.
 
@@ -52,11 +52,5 @@ Attempted sends to countries that aren't on your allowlist will be aborted. Abor
 
 Aborted messages caused by blocked sends show as **Aborted Message Errors** and have the message "The recipient's phone number is in a blocked country".
 
-![Abort log showing several SMS sendds that were blocked because the phone number is in a blocked country.][5]{: style="max-width:80%;"}
+![Abort log showing several SMS sendds that were blocked because the phone number is in a blocked country.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
 
-[1]: {% image_buster /assets/img/sms/sms_geographic_permissions.png %}
-[2]: {% image_buster /assets/img/sms/allowlist_dropdown.png %}
-[3]: {% image_buster /assets/img/sms/delete_allowlist_warning.png %}
-[4]: {% image_buster /assets/img/sms/high_risk.png %}
-[5]: {% image_buster /assets/img/sms/abort_log.png %}
-[6]: {% image_buster /assets/img/sms/sms_geographic_permissions_read_only.png %}

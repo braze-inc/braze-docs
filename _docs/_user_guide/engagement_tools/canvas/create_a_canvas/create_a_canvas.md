@@ -77,13 +77,13 @@ Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/admini
 Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![The Canvas details page, with fields for the Canvas name, description, location, and tags.][53]{: style="max-width:70%;"}
+![The Canvas details page, with fields for the Canvas name, description, location, and tags.]({% image_buster /assets/img/canvas_details.png %}){: style="max-width:70%;"}
 
 ##### Choose conversion events
 
 Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
 
-![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]
+![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.]({% image_buster /assets/img/add_canvas_conversions.png %})
 
 If your Canvas has multiple variants or a control group, Braze will use this conversion event to determine the best variation for achieving this conversion goal. Using the same logic, you can create multiple conversion events.
 
@@ -173,7 +173,7 @@ Note that:
 
 To view additional statistics, such as the average lifetime revenue for targeted users, select **Show Additional Statistics**.
 
-![Target Population breakdown with option to calculate exact statistics.][2]
+![Target Population breakdown with option to calculate exact statistics.]({% image_buster /assets/img_archive/canvas_exact_stats.png %})
 
 ##### Why the target audience count could differ from the reachable users count
 
@@ -181,7 +181,7 @@ To view additional statistics, such as the average lifetime revenue for targeted
 
 #### Step 1.4: Select your send settings
 
-Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components) or [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -199,7 +199,7 @@ With this configuration, don't include any filters in the **Target Audience** st
 
 If desired, specify Quiet Hours (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
-![The "Quiet Hours" page displaying a checkbox for enabling quiet hours. If enabled, the start time, end time, and fallback behavior can be set.][50]
+![The "Quiet Hours" page displaying a checkbox for enabling quiet hours. If enabled, the start time, end time, and fallback behavior can be set.]({% image_buster /assets/img/quiet_hours.png %})
 
 ### Step 2: Build your Canvas
 
@@ -209,13 +209,13 @@ Save time and streamline your Canvas creation by using [Braze Canvas templates](
 
 #### Step 2.1: Add a variant
 
-![The "Add Variant" button selected to show a context menu with the option to "Add Variant".][11]{: style="float:right;max-width:40%;margin-left:15px;"}
+![The "Add Variant" button selected to show a context menu with the option to "Add Variant".]({% image_buster /assets/img_archive/canvas_add_variant.gif %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Select **Add Variant**, then add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
 
 You can add additional variants by selecting the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
-![Two example variants in a Braze Canvas.][12]
+![Two example variants in a Braze Canvas.]({% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %})
 
 {% alert tip %}
 By default, the Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
@@ -319,11 +319,11 @@ In this example, we have our Canvas divided into two variants. Variant 1 has 70%
 
 #### Intelligent Selection for Canvas
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
+Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 
-![The "Intelligent Selection" option is enabled in the "Edit Variant Distribution" page. As it analyzes and optimizes the Canvas, it displays a horizontal bar across the page that's split into several sections, each varying in color and size. This is only a visual representation and does not correlate to any specific analytics.][18b]
+![The "Intelligent Selection" option is enabled in the "Edit Variant Distribution" page. As it analyzes and optimizes the Canvas, it displays a horizontal bar across the page that's split into several sections, each varying in color and size. This is only a visual representation and does not correlate to any specific analytics.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants, it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
 
@@ -335,26 +335,9 @@ After you're done creating your Canvas, select **Launch Canvas** to save and lau
 
 You can also save your Canvas as a draft if you need to come back to it.
 
-![An example Canvas in Braze.][19]
+![An example Canvas in Braze.]({% image_buster /assets/img_archive/Canvas_Analytics.png %})
 
 {% alert tip %}
 Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/canvas_dropdown.png %}
-[2]: {% image_buster /assets/img_archive/canvas_exact_stats.png %}
-[3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
-[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
-[11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
-[12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
-[13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
-[14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
-[15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
-[17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
-[19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
-[50]: {% image_buster /assets/img/quiet_hours.png %}
-[52]: {% image_buster /assets/img/add_canvas_conversions.png %}
-[53]: {% image_buster /assets/img/canvas_details.png %}

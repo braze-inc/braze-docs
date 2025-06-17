@@ -34,7 +34,7 @@ The following is an overview of terms you may see in the Braze REST API document
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the REST endpoint.
@@ -53,7 +53,7 @@ For most APIs, Braze has a default rate limit of 250,000 requests per hour. Howe
 - **External user ID**: The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 - **Braze user ID**: `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
 
-For more information, refer to the following articles based on your platform: [iOS][9], [Android][10], and [Web][13].
+For more information, refer to the following articles based on your platform: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## About REST API keys
 
@@ -63,7 +63,7 @@ Workspaces and API keys go hand in hand at Braze. Workspaces are designed to hou
 
 We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
-![REST API keys panel on the API Keys tab.][27]
+![REST API keys panel on the API Keys tab.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 In addition to REST API keys, there also exists a type of key called Identifier keys that can be used to reference specific things like apps, templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
@@ -324,11 +324,11 @@ The **API Keys** tab includes the following information for each key:
 
 To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
-![The list of API key permissions in the Braze dashboard.][30]
+![The list of API key permissions in the Braze dashboard.]({% image_buster /assets/img_archive/view-api-key.png %})
 
 Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.][29]{: style="max-width:30%;"}
+![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### REST API key security
 
@@ -342,13 +342,13 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API keys allow access to potentially sensitive REST API endpoints, make sure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket][support].
+If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ### API IP allowlisting
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API key:
 
-![Option to allowlist IPs when creating an API key.][26]
+![Option to allowlist IPs when creating an API key.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 If you don't specify any, requests can be sent from any IP address.
 
@@ -368,18 +368,3 @@ The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpo
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[support]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}
