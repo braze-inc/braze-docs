@@ -1,5 +1,83 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
+## How it works {#push-lifecycle-flowchart}
+
+{% details Show Android Push Lifecycle Flowchart %}
+```mermaid
+---
+config:
+  theme: mc
+---
+flowchart TD
+
+%% Permission Flow
+subgraph Permission[Push Permission Granting]
+    B{Android Version?}
+    B -->|Android 13+| C["requestPushPermissionPrompt() called"]
+    B -->|Android 12 and earlier| D[No permissions required]
+    
+    C --> E{User Grants Permission?}
+    E -->|Yes| F[POST_NOTIFICATIONS Permission Granted]
+    E -->|No| G[POST_NOTIFICATIONS Permission Denied]
+end
+
+%% Token Generation Flow
+subgraph Token[Push Token Generation]
+    H["Braze SDK Initialized"] --> Q{FCM auto registration is enabled?}
+    Q -->|Yes| L{Has Required Configuration?}
+    Q -->|No| M[No FCM Token Generated]
+    L -->|Yes| I[Generate FCM Token]
+    L -->|No| M
+    I --> K[Register Token with Braze]
+
+    %% Configuration Requirements
+    subgraph Config[Required Configuration]
+        N[google-services.json file]
+        O[com.google.firebase:firebase-messaging in gradle]
+        P['com.google.gms.google-services' plugin in gradle]
+    end
+
+    %% Connect Config to Check
+    N -.-> L
+    O -.-> L
+    P -.-> L
+end
+
+subgraph Display[Push Display]
+    %% Push Delivery Flow
+    W[Push Sent to FCM Servers] --> X{FCM/Google Play Services Gets Push}
+    X -->|App is Killed| Y[FCM may not forward the push to the app]
+    X -->|Conditions OK| X1[App Receives Push from FCM/Google Play Services]
+    X1 --> X2[Braze SDK Receives Push]
+    X2 --> R[Push Type?]
+
+    %% Push Display Flow
+    R -->|User Visible| S{Is push permission required?}
+    R -->|Silent Push| T[Silent Push is Processed]
+    S -->|Yes| S1{Has push permission?}
+    S -->|No| V[User Sees Notification]
+    S1 -->|Yes| V
+    S1 -->|No| U[User Does Not See Notification]
+end
+
+%% Styling
+classDef permissionClass fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+classDef tokenClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+classDef sdkClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
+classDef configClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+classDef displayClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+classDef deliveryClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+
+class A,B,C,E,F,G permissionClass
+class H,I tokenClass
+class J,K sdkClass
+class N,O,P configClass
+class R,S,S1,T,U,V displayClass
+class W,X,X1,X2,Y,Z deliveryClass
+
+```
+{% enddetails %}
+
 ## Using a callback for push events {#push-callback}
 
 Braze provides a [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.
