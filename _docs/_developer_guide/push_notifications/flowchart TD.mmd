@@ -1,12 +1,17 @@
 flowchart TD
+%% Push Delivery Flow
+W[Push Sent to FCM Servers] --> X{Push Delivery Conditions}
+X -->|App is Killed| Y[FCM may not forward the push to the app]
+X -->|Valid Delivery| R[Push Type?]
+
 %% Permission Flow
 A[App Installation] -->|push permissions| B{Android Version?}
 B -->|Android 13+| C["requestPushPermissionPrompt() called"]
 B -->|Android 12 and earlier| D[No permissions required]
     
 C --> E{User Grants Permission?}
-E -->|Yes| F[Create Notification Channel]
-E -->|No| G[Background Push Only]
+E -->|Yes| F[POST_NOTIFICATIONS Permission Granted]
+E -->|No| G[POST_NOTIFICATIONS Permission Denied]
 
 %% Token Generation Flow
 H["Firebase Cloud Messaging(FCM)"] --> I[Generate FCM Token]
@@ -16,6 +21,14 @@ L -->|No| M[No FCM Token Generated]
 J --> Q{FCM auto registration is enabled?}
 Q -->|Yes| K[Register Token with Braze]
 Q -->|No| M
+
+%% Push Display Flow
+R -->|User Visible| S{Is push permission required?}
+R -->|Silent Push| T[Background Push is Processed]
+S -->|Yes| S1{Has push permission?}
+S -->|No| V[User Sees Notification]
+S1 -->|Yes| V
+S1 -->|No| U[User Does Not See Notification]
 
 %% Configuration Requirements
 subgraph Config[Required Configuration]
@@ -37,8 +50,12 @@ classDef permissionClass fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
 classDef tokenClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 classDef sdkClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
 classDef configClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+classDef displayClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+classDef deliveryClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
     
 class A,B,C,E,F,G permissionClass
 class H,I tokenClass
 class J,K sdkClass
 class N,O,P configClass
+class R,S,S1,T,U,V displayClass
+class W,X,Y,Z deliveryClass
