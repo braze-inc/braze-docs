@@ -32,8 +32,8 @@ subgraph Token[Push Token Generation]
 
     %% Configuration Requirements
     subgraph Config[Required Configuration]
-        N[google-services.json file]
-        O[com.google.firebase:firebase-messaging in gradle]
+        N['google-services.json' file is present]
+        O['com.google.firebase:firebase-messaging' in gradle]
         P['com.google.gms.google-services' plugin in gradle]
     end
 
