@@ -120,6 +120,11 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 
 Automated accessibility testing is a great starting point—but it can't catch everything. Some issues need a human touch to evaluate properly, especially when context or visual design plays a role in how users experience your email.
 
+{% alert important %}
+The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner will always fail this check.<br><br>
+We're tracking this limitation for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize the most impactful fixes.
+{% endalert %}
+
 You may see some issues marked as **Needs review**. These are cases where the checker can't tell for sure if something is a problem for accessibility. When that happens, we recommend reviewing it manually.
 
 Some examples of what automated tools can't reliably detect include:
@@ -150,3 +155,4 @@ For tips and practical examples, check out [Accessibility at Braze]({{site.baseu
 - [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)
 
 By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.
+
