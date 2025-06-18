@@ -13,7 +13,7 @@ page_order: 1
 
 When you [connect your domain to Braze](#connecting-your-domain-to-braze), it will be used as the default domain for all landing pages. For example, if you connect the subdomain `forms.example.com`, your landing page URLs would now be `forms.example.com/holiday-sale`.
 
-Be sure to review our [plan tiers]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers) to see how many custom domains you are allowed to connect to your Braze account.
+The number of custom domains you can connect to your Braze account depends on your [plan tier]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). To increase your limit, contact your Braze account manager.
 
 ## Connecting your domain to Braze
 
