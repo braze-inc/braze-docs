@@ -295,7 +295,7 @@ This event has a property of `"sku": "ADI-RD-8"`, which maps to the second item 
 
 When you're ready, select **Create Recommendation**. This process can take anywhere from 10 minutes to 36 hours to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
-You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every month.
+You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every week (paid) or month (free).
 
 ## Plan-specific features
 
@@ -304,7 +304,7 @@ The following table describes the differences between the free and pro version o
 | Area                   | Free version                          | Pro version            |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
 | User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
-| Model retraining frequency  | Monthly                               | Monthly                                   |
+| Model retraining frequency  | Monthly                               | Weekly                                   |
 | Maximum recommendation models | 1 model per type<sup>2</sup> | 100 models per type<sup>2</sup> |
 
 <sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup><br>

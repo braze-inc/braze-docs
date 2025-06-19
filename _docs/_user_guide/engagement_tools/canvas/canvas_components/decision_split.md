@@ -13,7 +13,7 @@ tool: Canvas
 
 > The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users.
 
-![A Decision Split step named "Push enabled?" for users who aren't push enabled and users who are push enabled.][1]{: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![A Decision Split step named "Push enabled?" for users who aren't push enabled and users who are push enabled.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 This component can be used to create Canvas branches based on whether a user matches a query.
 
@@ -23,9 +23,9 @@ To create a decision split in your workflow, add a step to your Canvas. Then, dr
 
 ### Define your split
 
-How do you want to split your users? You can use [segments][5] and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
+How do you want to split your users? You can use [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
 
-![A Decision Split step with the filter "Push Enabled is true" selected.][2]{: style="max-width:90%;"}
+![A Decision Split step with the filter "Push Enabled is true" selected.]({% image_buster /assets/img/define-split-2.png %}){: style="max-width:90%;"}
 
 {% alert note %} 
 By default, segments and filters for a Decision Split step are checked right after receiving a previous step, unless you add a delay. 
@@ -39,7 +39,7 @@ Let's say that you're creating an onboarding flow. You might start with a welcom
 
 If there is no step following one of the paths, users who go down that path will exit the Canvas. 
 
-![A Decision Split step named "Push enabled?" for users who aren't push enabled and those who are. For users who aren't push enabled, they'll experience a 3-day delay then receive an email message. For users who are push enabled, they will experience a 1-day delay, receive a push notification followed by a 2-day delay, then they'll receive the same email message as the users who aren't push enabled.][3]{: style="max-width:60%"}
+![A Decision Split step named "Push enabled?" for users who aren't push enabled and those who are. For users who aren't push enabled, they'll experience a 3-day delay then receive an email message. For users who are push enabled, they will experience a 1-day delay, receive a push notification followed by a 2-day delay, then they'll receive the same email message as the users who aren't push enabled.]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
 
 ## Analytics
 
@@ -52,7 +52,3 @@ Refer to the following table for descriptions of analytics for this step:
 | _No_ | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[1]: {% image_buster /assets/img/decision-split-1.png %}
-[2]: {% image_buster /assets/img/define-split-2.png %}
-[3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/

@@ -20,7 +20,7 @@ After launching campaigns using any of our engagement tools (like campaigns or C
 
 ## Step 2: Send event data to a data storage partner
 
-We set up Currents to send Braze event data to Amazon S3 for storage and extraction. Now, we do know that you can use [Athena][2] to sit on top of S3 and run queries. It's a great short-term solution. But we wanted a long-term solution using a Relational Database and a Business Intelligence/Analytics tool. (We recommend that same for you.)
+We set up Currents to send Braze event data to Amazon S3 for storage and extraction. Now, we do know that you can use [Athena](https://aws.amazon.com/athena/) to sit on top of S3 and run queries. It's a great short-term solution. But we wanted a long-term solution using a Relational Database and a Business Intelligence/Analytics tool. (We recommend that same for you.)
 
 We think of S3 as our keys to the castle! It opens up the door to so many possibilities for moving, pivoting, and analyzing our data by transferring it where we need it to go. However, we are careful not to transform our data in S3, as we have a very specific structure for it.
 
@@ -48,4 +48,3 @@ Feeling inspired to do the same? Check out the following docs to get more inform
 - [User Behavior Block](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 - [Message Engagement Block](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 
-[2]: https://aws.amazon.com/athena/

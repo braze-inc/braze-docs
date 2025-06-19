@@ -43,7 +43,7 @@ Add the campaigns and Canvas messages that you would like to compile in your rep
 - Manually select campaigns and Canvases
 - Automatically select campaigns and Canvases based on specific rules
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### Manually select campaigns or Canvases
 
@@ -57,7 +57,7 @@ This option lets you automatically include all messages that include a specific 
 
 The **Add Stats** step shows you statistics for the types of campaigns or Canvases you have selected. For example, if you selected email messages, you can only view relevant email statistics. If you picked a combination of email and push, you can view the statistics for those two channels.
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | Channel | Available statistics |
 | ------| --------------|
@@ -94,7 +94,7 @@ By default, the data range shown is based on your company's time zone and will g
 
 By default, the data displayed in the engagement reports is daily (one day). To view this data across different intervals, choose an explicit number of days or weeks to aggregate the data for the report. So instead of seeing daily metrics, you can view your engagement by week, month, quarter, or similar. Should a time-centric aggregation not suffice, you can also elect to export data at the campaign or Canvas level.
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### Schedule your report
 
@@ -103,7 +103,7 @@ There are two options when scheduling your report:
 - **Send immediately:** After the report is launched, Braze will send this report immediately.
 - **Send at a designated time:** This option gives you the flexibility to choose how frequently you receive this report. You can choose to send this report every set number of days, weeks or months. You can also define when to stop sending the report.
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### Step 5: Review and launch
 
@@ -116,7 +116,3 @@ You will receive an email with links to your reports at your chosen time or sche
 The report contains all statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

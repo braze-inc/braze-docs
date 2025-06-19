@@ -26,15 +26,15 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 ## Connecting an additional store
 After you install the Braze app to your Shopify store and install your first store, select **+ Connect New Store**.
 
-![The "+ Connect New Store" button on the Shopify integration page.][1]{: style="max-width:80%;"}
+![The "+ Connect New Store" button on the Shopify integration page.]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
 
 For your additional Shopify regional store, select **Begin setup**.
 
-![The "Integration settings" section with a button to "Begin setup".][2]{: style="max-width:80%;"}
+![The "Integration settings" section with a button to "Begin setup".]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
 
 Like your first Shopify store integration, you can choose either between a standard or custom setup.
 
-!["Enable the Braze SDKs" section with options to implement the Braze Web SDK with the standard or custom setup.][3]{: style="max-width:80%;"}
+!["Enable the Braze SDKs" section with options to implement the Braze Web SDK with the standard or custom setup.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
 
 Choose the option that best fits your needs:
 
@@ -42,7 +42,7 @@ Choose the option that best fits your needs:
 
 To view each store integration and configure advanced settings, select a store in the dropdown menu.
 
-!["Integration settings" with a dropdown menu to select a Shopify store.][4]
+!["Integration settings" with a dropdown menu to select a Shopify store.]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %})
 
 ## Syncing users across stores
 
@@ -123,7 +123,7 @@ When you connect more than one store, the following attributes will be synced wi
 
 When you connect multiple stores, incoming eCommerce recommended events will include a source event property. This property identifies which storefront URL the event originated from, allowing you to use this information for segmentation or triggering specific use cases.
 
-![An action-based Canvas with a trigger to enter users who perform the `ecommerce.order_placed` custom event.][5]{: style="max-width:80%;"}
+![An action-based Canvas with a trigger to enter users who perform the `ecommerce.order_placed` custom event.]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
 
 The supported eCommerce recommended events within the Shopify integration are:
 
@@ -138,7 +138,7 @@ The supported eCommerce recommended events within the Shopify integration are:
 
 Incoming Shopify custom events include an event property called `shopify_storefront`. This property indicates which storefront URL the event came from, allowing you to leverage it for segmentation or triggering use cases.
 
-![An action-based Canvas with a trigger to enter users who perform the `shopify_paid_order` custom event.][6]{: style="max-width:80%;"}
+![An action-based Canvas with a trigger to enter users who perform the `shopify_paid_order` custom event.]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
 
 Supported Shopify custom events include:
 
@@ -155,12 +155,5 @@ When you connect and configure each Shopify store in Braze, you can optionally e
 
 If you activate the product sync for each store, Braze will include the name of your Shopify store in the catalog name. This helps you distinguish products from different stores.
 
-![Shopify catalogs with their Shopify store in their name.][7]
+![Shopify catalogs with their Shopify store in their name.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
 
-[1]: {% image_buster /assets/img/Shopify/begin_setup_button.png %}
-[2]: {% image_buster /assets/img/Shopify/multiple_stores.png %}
-[3]: {% image_buster /assets/img/Shopify/standard_or_custom.png %}
-[4]: {% image_buster /assets/img/Shopify/store_dropdown_menu.png %}
-[5]: {% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}
-[6]: {% image_buster /assets/img/Shopify/shopify_paid_order.png %}
-[7]: {% image_buster /assets/img/Shopify/catalog_store_name.png %}

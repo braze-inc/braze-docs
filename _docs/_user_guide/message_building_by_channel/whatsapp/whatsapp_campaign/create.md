@@ -71,7 +71,7 @@ If an action-based Canvas is triggered by an inbound WhatsApp message, you can r
 
 Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window.
 
-![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
+![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 #### Template messages
 
@@ -84,7 +84,7 @@ Disabled text fields (highlighted gray) cannot be edited as they are part of the
 
 Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
 
-![List of templates including previews of their messages, their assigned languages, and their approved status.][8]{: style="max-width:80%;"}
+![List of templates including previews of their messages, their assigned languages, and their approved status.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -100,7 +100,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
-![The Add Personalization tool with the attribute "first_name" and the default value "you".][2]{: style="max-width:80%;"}
+![The Add Personalization tool with the attribute "first_name" and the default value "you".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 #### Dynamic links 
 
@@ -117,19 +117,19 @@ There are five response message layouts you can use:
 - Call-to-action Button
 - List Message
 
-![The response message composer for a Reply Message that welcomes new users with a discount code.][6]{: style="max-width:80%;"}
+![The response message composer for a Reply Message that welcomes new users with a discount code.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 ### Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![A preview message for a custom user named Max.][3]{: style="max-width:80%;"}
+![A preview message for a custom user named Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 A conversation window is required to send response messages, including test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
 {% endalert %}
 
-![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 217-582-9414. Then, send your response message to the test user."][7]{: style="max-width:70%;"}
+![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 217-582-9414. Then, send your response message to the test user."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### Step 4: Build the remainder of your campaign or Canvas
 
@@ -186,12 +186,10 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Footer text | Strings and variable parameters are supported. | — | — |
 | CTA links | Various call-to-action (CTA) types are supported. For more details, see [Call-to-action types](#ctas). | — | — |
 | Images | Images can be embedded within the body text. They must be 8-bit and use either an RGB or RGBA color model. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
-| Documents* | Documents can embedded within body text. Files must be hosted through URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| Videos* | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
-| Audio* | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
+| Documents | Documents can embedded within body text. Files must be hosted through URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
+| Videos | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
+| Audio | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
-
-<sup>_*Currently in early access. Contact your Braze account manager if you're interested in participating._</sup>
 
 ### Inbound messages
 
@@ -222,11 +220,3 @@ The following call-to-action types are supported for WhatsApp messages you send 
 | [List response messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | Create a response message that includes a list of up to 10 options for users to pick from. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}

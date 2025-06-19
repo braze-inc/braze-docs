@@ -679,7 +679,7 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -850,7 +850,7 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1146,7 +1146,7 @@ Field | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1252,7 +1252,7 @@ Field | Type | Description
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1332,7 +1332,7 @@ Field | Type | Description
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `string` | Platform of the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1530,7 +1530,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `subscription_group_api_id` | `null,`&nbsp;`string` | External ID of the subscription group
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1756,7 +1756,7 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1809,7 +1809,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

@@ -50,9 +50,9 @@ Select **Create New Catalog**, then choose to either **Upload CSV** or **Create 
 
 ### Method 1: Upload CSV
 
-1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. Select one of the following data types for each column: boolean, number, string, or time.
-<br> ![][9]{: style="max-width:80%;"} <br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. Give your catalog a name. Keep in mind the following requirements for a catalog name:
 - Must be unique
 - Maximum of 250 characters
@@ -87,11 +87,11 @@ To edit or create catalogs in the browser, you'll need "Manage Catalogs Dashboar
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Up to 250 characters
-- Can only include numbers, letters, hyphens, and underscores <br> ![A catalog named "my_catalog".][14]{: style="max-width:80%;"} <br><br>
+- Can only include numbers, letters, hyphens, and underscores <br> ![A catalog named "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
 2. (optional) Type a description for your catalog.
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
-4. Select **Update Catalog** > **Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![Two example fields "rating" and "name".][12]{: style="max-width:50%;"}<br><br>
-5. Select **Update Catalog** > **Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, select **Save Item** or **Save and Add Another** to continue adding your items. <br> ![Add a catalog item.][13]{: style="max-width:50%;"}
+4. Select **Update Catalog** > **Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![Two example fields "rating" and "name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. Select **Update Catalog** > **Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, select **Save Item** or **Save and Add Another** to continue adding your items. <br> ![Add a catalog item.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 You can also upload a CSV file after selecting to create a catalog in the browser.
 
@@ -139,11 +139,11 @@ We'll create the catalog by uploading a CSV file. The data types for `id`, `titl
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-![Four catalog column names: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
+![Four catalog column names: "id", "title", "price", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Next, we'll name this catalog "games_catalog" and select the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
 
-![A catalog named "games_catalog".][11]{: style="max-width:85%;"}
+![A catalog named "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
@@ -177,11 +177,3 @@ The storage size for the free version of catalogs is up to 100&nbsp;MB. You can 
 
 At a company level, the maximum storage for Catalogs Pro is based on the size of catalog data. The storage size options are: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
 
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
-[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
-[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
-[12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
-[13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
-[14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}

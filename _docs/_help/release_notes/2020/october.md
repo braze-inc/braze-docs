@@ -10,7 +10,7 @@ description: "This article contains release notes for October 2020."
 
 ## Report Builder
 
-![Campaign Comparison Example][5]{: style="max-width:80%;"}
+![Campaign Comparison Example]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 The [Report Builder]({{site.baseurl}}/report_builder) allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
 
@@ -38,4 +38,3 @@ New documentation has been added describing the expected behavior of [exception 
 
 Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

@@ -111,4 +111,3 @@ Braze will ban or block users with over 5,000,000 sessions ("dummy users") and w
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html
