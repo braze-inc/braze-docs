@@ -8,7 +8,7 @@ layout: scrolly
 
 # Tutorial: Deferring and restoring triggered messages
 
-> A tutorial on how to defer a triggered in-app message for a subsequent page.
+> Follow along with the sample code in this tutorial to defer and restore triggered in-app messages using the Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}

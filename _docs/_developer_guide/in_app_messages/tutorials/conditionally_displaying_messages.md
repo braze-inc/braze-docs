@@ -8,7 +8,7 @@ layout: scrolly
 
 # Tutorial: Conditionally displaying in-app messages
 
-> A tutorial on how to conditionally control whether or not to show a triggered in-app message.
+> Follow along with the sample code in this tutorial to conditionally display in-app messages using the Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}

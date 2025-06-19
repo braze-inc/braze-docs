@@ -6,15 +6,15 @@ page_order: 1
 layout: scrolly
 ---
 
-# Tutorial: Customizing styling using key-value pairs
+# Tutorial: Customizing message styling using key-value pairs
 
-> A tutorial on how to style in-app messages with custom properties.
+> Follow along with the sample code in this tutorial to customize your in-app message styling using key-value pairs in the Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [enable in-app messages for Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
-## Customizing styling using key-value pairs for Android
+## Customizing message styling using key-value pairs for Android
 
 {% scrolly %}
 
@@ -152,7 +152,7 @@ Use `IInAppMessageViewFactory` to create a custom view factory class that will c
 {% sdktab swift %}
 {% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to [enable in-app messages for Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-## Customizing styling using key-value pairs for Swift
+## Customizing message styling using key-value pairs for Swift
 
 {% scrolly %}
 
@@ -265,7 +265,7 @@ lines-AppDelegate.swift=38-46
 {% sdktab web %}
 {% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
-## Customizing styling using key-value pairs for Web
+## Customizing message styling using key-value pairs for Web
 
 {% scrolly %}
 
