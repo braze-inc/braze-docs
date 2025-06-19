@@ -2,20 +2,26 @@
 nav_title: Tutorials
 article_title: Tutorials
 page_order: 1.9
-hide_toc: true
 layout: dev_guide
-guide_top_header: "Tutorials for Common Braze Integrations"
+guide_top_header: "Tutorials for the Braze SDK"
+guide_top_text: "> Each Braze SDK tutorial offers step-by-step instructions along with full sample code. Choose a tutorial below to get started!"
 
-guide_featured_title: "In-App Messages"
+guide_featured_title: "Banners"
 guide_featured_list:
-  - name: Custom Styling
-    link: /docs/developer_guide/in_app_messages/tutorials/custom_styling
+  - name: Displaying Banners
+    link: /docs/developer_guide/banners/tutorial_displaying_banners
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Conditionally Display
-    link: /docs/developer_guide/in_app_messages/tutorials/conditionally_display
+
+guide_menu_title: "In-App Messages"
+guide_menu_list:
+  - name: Customizing Message Styling
+    link: /docs/developer_guide/in_app_messages/tutorials/customizing_message_styling
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: Conditionally Displaying Messages
+    link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
-  - name: Defer and Restore a Triggered In App Message
-    link: /docs/developer_guide/in_app_messages/tutorials/defer_and_restore_triggered_message
+  - name: Deferring Triggered Messages
+    link: /docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---
 

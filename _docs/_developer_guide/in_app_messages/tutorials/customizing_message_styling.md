@@ -1,23 +1,20 @@
 ---
-nav_title: Custom Styling
-guide_top_header: Custom Styling With Key-Value Pairs
-article_title: Custom Styling With Key-Value Pairs
+nav_title: Customizing Message Styling
+article_title: "Tutorial: Customizing styling using key-value pairs"
+description: ""
 page_order: 1
 layout: scrolly
-description: "A tutorial on how to style in-app messages with custom properties"
 ---
 
-# Tutorial: Custom Styling With Key-Value Pairs
+# Tutorial: Customizing styling using key-value pairs
 
-> DESCRIPTION
+> A tutorial on how to style in-app messages with custom properties.
 
 {% sdktabs %}
-{% sdktab Android %}
-## Prerequisites
+{% sdktab android %}
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [enable in-app messages for Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
-PREREQUISITES.
-
-## HEADING
+## Customizing styling using key-value pairs for Android
 
 {% scrolly %}
 
@@ -152,12 +149,10 @@ Use `IInAppMessageViewFactory` to create a custom view factory class that will c
 
 {% endscrolly %}
 {% endsdktab %}
-{% sdktab Swift %}
-## Prerequisites
+{% sdktab swift %}
+{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to [enable in-app messages for Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-PREREQUISITES.
-
-## HEADING
+## Customizing styling using key-value pairs for Swift
 
 {% scrolly %}
 
@@ -267,12 +262,10 @@ lines-AppDelegate.swift=38-46
 
 {% endscrolly %}
 {% endsdktab %}
-{% sdktab Web %}
-## Prerequisites
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
-PREREQUISITES.
-
-## HEADING
+## Customizing styling using key-value pairs for Web
 
 {% scrolly %}
 

@@ -1,23 +1,20 @@
 ---
-nav_title: Conditionally Display In-App Messages
-guide_top_header: Conditionally Display In-App Messages
-article_title: Conditionally Display In-App Messages
+nav_title: Conditionally Displaying Messages
+article_title: "Tutorial: Conditionally displaying in-app messages"
+description: ""
 page_order: 1
 layout: scrolly
-description: "A tutorial on how to conditionally control whether or not to show a triggered in-app message"
 ---
 
-# Tutorial: Conditionally Display In-App Messages
+# Tutorial: Conditionally displaying in-app messages
 
-> DESCRIPTION
+> A tutorial on how to conditionally control whether or not to show a triggered in-app message.
 
 {% sdktabs %}
-{% sdktab Android %}
-## Prerequisites
+{% sdktab android %}
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [enable in-app messages for Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
-PREREQUISITES.
-
-## HEADING
+## Conditionally displaying in-app messages for Android
 
 {% scrolly %}
 
@@ -109,12 +106,10 @@ Return `InAppMessageOperation.DISPLAY_NOW` to show the message using Braze's UI,
 
 {% endscrolly %}
 {% endsdktab %}
-{% sdktab Swift %}
-## Prerequisites
+{% sdktab swift %}
+{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to [enable in-app messages for Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-PREREQUISITES.
-
-## HEADING
+## Conditionally displaying in-app messages for Swift
 
 {% scrolly %}
 
@@ -203,12 +198,10 @@ Override [`BrazeInAppMessageUIDelegate .inAppMessage(_:displayChoiceForMessage:)
 
 {% endscrolly %}
 {% endsdktab %}
-{% sdktab Web %}
-## Prerequisites
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
-PREREQUISITES.
-
-## HEADING
+## Conditionally displaying in-app messages for Web
 
 {% scrolly %}
 

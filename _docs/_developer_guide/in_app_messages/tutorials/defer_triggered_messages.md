@@ -1,23 +1,20 @@
 ---
-nav_title: Defer and Restore Triggered Messages
-article_title: Defer and Restore a Triggered In-App Message
-guide_top_header: Defer and Restore a Triggered In-App Message
+nav_title: Deferring Triggered Messages
+article_title: "Tutorial: Deferring and restoring triggered messages"
+description: ""
 page_order: 1
 layout: scrolly
-description: "A tutorial on how to defer a triggered in-app message for a subsequent page"
 ---
 
-# Tutorial: Defer and Restore Triggered Messages
+# Tutorial: Deferring and restoring triggered messages
 
-> DESCRIPTION
+> A tutorial on how to defer a triggered in-app message for a subsequent page.
 
 {% sdktabs %}
-{% sdktab Android %}
-## Prerequisites
+{% sdktab android %}
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [enable in-app messages for Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
-PREREQUISITES.
-
-## HEADING
+## Deferring and restoring triggered messages for Android
 
 {% scrolly %}
 
@@ -168,12 +165,10 @@ Restoring the message elsewhere in your app, in this case an activity with a tri
 
 {% endscrolly %}
 {% endsdktab %}
-{% sdktab Swift %}
-## Prerequisites
+{% sdktab swift %}
+{% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to [enable in-app messages for Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-PREREQUISITES.
-
-## HEADING
+## Deferring and restoring triggered messages for Swift
 
 {% scrolly %}
 
@@ -308,12 +303,10 @@ Here, our UI is restoring the method from a button-click.
 
 {% endscrolly %}
 {% endsdktab %}
-{% sdktab Web %}
-## Prerequisites
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
-PREREQUISITES.
-
-## HEADING
+## Deferring and restoring triggered messages for Web
 
 {% scrolly %}
 
