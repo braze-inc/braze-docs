@@ -93,7 +93,7 @@ Refer to our [IP warming schedule](#ip-warming-schedules) to spread your send ac
 
 ### Clean your email lists
 
-Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant]({{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/) is ideal.
+Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) is ideal.
 
 ### Monitor your sender reputation
 

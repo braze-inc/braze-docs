@@ -154,7 +154,7 @@ Starting with Braze SDK version 3.6.0, Braze location collection is disabled by 
 Refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) or [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) documentation for more guidance based on your platform.
 
 {% alert tip %}
-You can also leverage geofences with our Technology Partners, such as [Radar]({{site.baseurl}}/partners/data_augmentation/contextual_location/radar/) and [Foursquare]({{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/)
+You can also leverage geofences with our Technology Partners, such as [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) and [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 {% endalert %}
 
 ## Frequently asked questions
