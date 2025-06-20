@@ -1,7 +1,7 @@
 ---
 nav_title: Creating a WhatsApp Message
 article_title: Creating a WhatsApp Message
-page_order: 0
+page_order: 4
 description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
 page_type: reference
 tool:
