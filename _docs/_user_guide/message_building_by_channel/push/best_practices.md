@@ -85,4 +85,3 @@ Didn't find what you were looking for? Check out these additional best practices
 - [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
 - [Deliverability for Chinese Android devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
 - [Know before you send: channels]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/)
-
