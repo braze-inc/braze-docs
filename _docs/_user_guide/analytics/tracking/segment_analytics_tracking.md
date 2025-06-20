@@ -25,7 +25,7 @@ An app can have tracking turned on for up to 25 segments. Braze recommends track
 
 ## Viewing revenue and purchases over time
 
-Go to **Analytics** > **Revenue Report** to view data on [revenue and purchases over time for this segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/).
+Go to **Analytics** > **Revenue Report** to view data on [revenue and purchases over time for this segment]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/).
 
 ![Revenue data by segment]({% image_buster /assets/img_archive/Revenue.png %})
 

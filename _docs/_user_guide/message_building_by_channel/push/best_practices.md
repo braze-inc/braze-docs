@@ -30,7 +30,7 @@ You can create a settings page in your app that lets users tell you which notifi
 
 When the news app wants to create a campaign targeting only users interested in Politics, they add the `Subscribes to Politics` attribute filter to the segment. When set to true, only users who subscribe to notifications will receive them.
 
-For more information on setting custom attributes, refer to the following articles for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes), or [REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification).
+For more information on setting custom attributes, refer to the following articles for [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes), or [REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification).
 
 ## Increase opt-ins and relevance
 
@@ -71,9 +71,9 @@ Although you may be reluctant to stop sending pushes to users who originally opt
 
 ## Set conversion events for app opens
 
-When assigning [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) to a push campaign, you can track app opens for a certain period after the campaign is received. Setting a conversion event for app opens provides different insight from the results statistics you normally receive after a push campaign.
+When assigning [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) to a push campaign, you can track app opens for a certain period after the campaign is received. Setting a conversion event for app opens provides different insight from the results statistics you normally receive after a push campaign.
 
-While all push campaign results break down a message's direct opens and opens (which includes both direct and [influenced opens]({{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens)), conversion tracking will track any type of open, whether direct or influenced.
+While all push campaign results break down a message's direct opens and opens (which includes both direct and [influenced opens]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/)), conversion tracking will track any type of open, whether direct or influenced.
 
 In addition, by using the conversion event "opens app," you are tracking app opens that occur before that conversion deadline (for instance, three days). This differs from an influenced open in that the time a user has to register an influenced open can vary from person to person, depending on each user's past engagement behavior.
 
@@ -84,4 +84,4 @@ Didn't find what you were looking for? Check out these additional best practices
 - [Push message and image formats]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)
 - [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
 - [Deliverability for Chinese Android devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
-- [Know before you send: channels]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/)
+- [Know before you send: channels]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/know_before_send/)

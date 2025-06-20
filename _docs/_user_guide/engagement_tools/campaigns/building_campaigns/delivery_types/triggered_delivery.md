@@ -55,7 +55,7 @@ Select a trigger event. This can include any of the following:
 - Sending an SMS inbound message
 - Sending a WhatsApp inbound message
 
-You can also further filter trigger events through Braze [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
+You can also further filter trigger events through Braze [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 
 For example, let's say we have a campaign with an abandoned cart custom event that is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts. 
 
