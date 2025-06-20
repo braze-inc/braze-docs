@@ -64,8 +64,20 @@ Multi-product message templates currently have a header display bug. Meta is wor
 ## Setting up product messages
 
 1. In the [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#), follow [Meta's instructions](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) to create your Meta catalog. Make sure you’re in the same Meta Business Portfolio where your Braze-connected WhatsApp Business Accont resides.
-2. Follow Meta's instructions to [connect your Meta catalog](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) to your Braze-connected WhatsApp Business Account by assigning the "Manage Catalog" permission in Meta Business Manager. Make sure to use the Braze Business Manager ID, `332231937299182`, as the partner business ID.
+2. Follow Meta's instructions to [connect your Meta catalog](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) to your Braze-connected WhatsApp Business Account by assigning the "Manage Catalog" permission in Meta Business Manager. 
+
+![Meta "Catalogs" page with an arrow pointing at the "Assign partner" button for the catalog called "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:80%;"}
+
+Make sure to use the Braze Business Manager ID, `332231937299182`, as the partner business ID.
+
+![Window to share a catalog with a partner that contains fields to enter a partner business ID and assign the permission "Manage catalog".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:60%;"}
+
+{: start="3"}
 3. Select your Meta catalog settings. You must select “Show catalog icon in chat header” to send catalog messages.
+
+![WhatsApp Manager settings page for the "Catalog_products" catalog.]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:80%;"}
+
+{: start="4"}
 4. In Braze, go through the [embedded signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) process to provide permissions. This will unlock the Braze integrated product selector.
 
 {% alert tip %}
