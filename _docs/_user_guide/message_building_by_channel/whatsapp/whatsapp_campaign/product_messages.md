@@ -93,6 +93,10 @@ For best practices to follow when creating Meta catalogs, refer to [Tips for bui
 5. Select **WhatsApp Template Message**. (Product and catalog messages aren't available yet in response messages.)
 6. Select the template you’d like to use.
     - If you select a multi-product template, provide the section title and content IDs for the products to highlight.
+
+![Item list with fields to enter your section titles and content ID.]({% image_buster /assets/img/whatsapp/multi_product_template.png %}){: style="max-width:60%;"}
+
+{: start="7"}
 7. Continue building your message.
 
 ## Managing products
@@ -146,6 +150,10 @@ You can find additional Braze cart event information in [Types of eCommerce reco
 
 1. Create a custom event trigger for `ecommerce.cart_updated`.
 2. Add a property filter for `source = "whats_app"`.
+
+![Canvas step for an `ecommerce.cart_updated` custom event trigger with the basic property of "source" equaling `whats_app`.]({% image_buster /assets/img/whatsapp/product_message_canvas_step.png %})
+
+{: start="3"}
 3. Configure follow-up actions based on cart data.
 
 ### Recommended checkout implementations 
