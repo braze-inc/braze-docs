@@ -1,7 +1,7 @@
 ---
 nav_title: Click Tracking
 article_title: Click Tracking
-page_order: 5
+page_order: 2
 description: "This reference article covers how to turn on click tracking in your WhatsApp messages, test shortened links, use your custom domain in tracked links, and more."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
