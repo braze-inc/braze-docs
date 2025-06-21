@@ -20,7 +20,7 @@ Geofences can be used to trigger campaigns in real-time as users enter and exit 
 
 Geofences are organized into geofence sets—a group of geofences that can be used to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences.
 
-You can create or upload an unlimited number of geofences. Braze will dynamically re-synchronize the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+You can create or upload an unlimited number of geofences.
 
 - Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app.
 - iOS devices may monitor up to 20 geofences at a time per app. Braze will monitor up to 20 locations if space is available. 
@@ -132,10 +132,6 @@ For active users, the Braze SDK will only request geofences once per day on sess
 {% alert note %}
 If the geofences aren't loaded onto the device locally, the user can't trigger the geofence even if they enter the area.
 {% endalert %}
-
-## Updating geofences for users
-
-Updating geofences for individual users may be helpful when testing. To update geofence sets, go to the **Locations** page and select **Re-sync Geofences**. You'll then be prompted to enter the external ID and email of the users you would like to update.
 
 ## Mobile integrations {#mobile-integrations}
 
