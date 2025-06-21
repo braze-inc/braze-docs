@@ -182,11 +182,15 @@ Select a SQL Segment Extension to view where the extension is being used, archiv
 
 ## Refreshing segment membership
 
-To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**. Only incremental refresh SQL Segment Extensions can automatically regenerate (if selected).
+To refresh the segment membership of any Segment Extension created using SQL, open the Segment Extension and select **Refresh**.
 
 {% alert tip %}
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
 {% endalert %}
+
+### Designating refresh settings
+
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## Snowflake credits
 
