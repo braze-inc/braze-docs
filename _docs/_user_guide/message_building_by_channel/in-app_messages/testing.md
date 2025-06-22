@@ -49,3 +49,23 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
+## Accessibility Scanner
+
+### Overview
+To support accessibility best practices, Braze offers an Accessibility Scanner that automatically reviews the HTML content of Custom HTML messages. This tool is designed to assist with identifying common accessibility issues, making it easier to work toward compliance with modern standards.
+
+### How It Works
+When a Custom HTML message is created, the Accessibility Scanner analyzes the message body and checks it against a set of accessibility rules derived from the WCAG 2.1 Level AA guidelines. It highlights known issues and provides:
+
+- The HTML element(s) violated
+- A description of the rule violation
+- Link to learn more about the violation, potentially includuing guidance on how to address the issue
+
+### Important Notes
+- Not Comprehensive: The Accessibility Scanner is intended as a helpful diagnostic tool, not a complete accessibility audit. It may not catch every possible issue.
+- For Informational Use: Results should be used as a starting point. We recommend validating your messages with full accessibility audits using tools like axe DevTools or engaging with accessibility specialists as needed.
+- Best for HTML Messages: This scanner currently only runs on Custom HTML message bodies and does not evaluate content generated through drag-and-drop or WYSIWYG editors.
+
+
+
+
