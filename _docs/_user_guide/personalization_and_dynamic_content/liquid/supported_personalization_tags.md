@@ -63,7 +63,7 @@ You can template the following attributes for the user's most recent device acro
 |`{{most_recently_used_device.${id}}}` | The Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms, it's a randomly generated UUID. |
 | `{{most_recently_used_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`). |
-| `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/). For non-iOS devices, this value will be null. |
+| `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). For non-iOS devices, this value will be null. |
 | `{{most_recently_used_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with our optional Google Play Advertising ID collection. For non-Android devices, this value will be null. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null. |
 | `{{most_recently_used_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
@@ -102,7 +102,7 @@ For push notifications and in-app message channels, you can template in the foll
 |------------------|---|
 | `{{targeted_device.${id}}}` | This is the Braze device identifier. On iOS, this can be the Apple Identifier for Vendor (IDFV) or a UUID. For Android and other platforms, it is a randomly generated UUID. For example, if a user has five devices, a send attempt occurs for all five devices, each using the corresponding device identifier. If a message is configured to send to a user's most recently used device, only one send attempt will occur to the most recently used device identified through Braze. |
 | `{{targeted_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
-| `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/). For non-iOS devices, this value will be null. |
+| `{{targeted_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with our [optional IDFA collection]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). For non-iOS devices, this value will be null. |
 | `{{targeted_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with our [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
 | `{{targeted_device.${roku_ad_id}}}` | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null. |
 | `{{targeted_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
@@ -227,7 +227,7 @@ With [whitespace control](https://shopify.github.io/liquid/basics/whitespace/), 
 
 ## HTTP status codes {#http-personalization}
 
-You can utilize the HTTP status from a [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
+You can utilize the HTTP status from a [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}

@@ -115,7 +115,7 @@ Check out [Other customizations](#other-customizations) for other ways to furthe
 As you build your email, you can toggle between a desktop and mobile view to preview how your email messaging will look for your user groups. This will check that your content is responsive, and you can make any necessary adjustments along the way.
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}

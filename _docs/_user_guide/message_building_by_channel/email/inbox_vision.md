@@ -14,7 +14,7 @@ channel:
 
 > Inbox Vision allows you to view your emails from the perspective of various email clients and mobile devices. For example, you can use Inbox Vision to test for differences across dark and light modes to confirm you've got your emails just right.
 
-{% alert important %} 
+{% alert important %}
 In general, your email won't work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates in an empty user when we send emails using this feature.<br><br>Make sure you've added default values to any Liquid in your email message. If no default values are provided, you may receive a false positive or the test may fail to run.
 {% endalert %}
 
@@ -26,7 +26,7 @@ To test your email message in Inbox Vision, do the following:
 
 1. Go to your drag-and-drop editor or HTML email editor.
 2. In your editor, select **Preview & Test**.
-3. Select **Inbox Vision**. 
+3. Select **Inbox Vision**.
 4. Select **Run Inbox Vision**. This may take between two to ten minutes to complete.
 5. Next, select a tile to view the preview in more detail. These previews are grouped into these sections: **Web Clients**, **Application Clients**, and **Mobile Clients**.
 
@@ -46,7 +46,7 @@ When you preview the email as a random user, any specific settings or attributes
 
 ## Code analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. 
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported.
 
 ### Viewing code analysis information
 
@@ -54,8 +54,8 @@ This information can be found on the **Inbox Vision** tab by selecting <i class=
 
 ![Example code analysis on the Inbox Vision preview.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
-{% alert note %} 
-Sometimes the code analysis will display faster than the preview for a particular email client. This is because Braze waits until the email arrives in the inbox before taking the screenshot. 
+{% alert note %}
+Sometimes the code analysis will display faster than the preview for a particular email client. This is because Braze waits until the email arrives in the inbox before taking the screenshot.
 {% endalert %}
 
 ## Spam testing
@@ -120,6 +120,11 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 
 Automated accessibility testing is a great starting point—but it can't catch everything. Some issues need a human touch to evaluate properly, especially when context or visual design plays a role in how users experience your email.
 
+{% alert important %}
+The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner will always fail this check.<br><br>
+We're tracking this limitation for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize the most impactful fixes.
+{% endalert %}
+
 You may see some issues marked as **Needs review**. These are cases where the checker can't tell for sure if something is a problem for accessibility. When that happens, we recommend reviewing it manually.
 
 Some examples of what automated tools can't reliably detect include:
@@ -144,7 +149,7 @@ To help ensure your messages are usable by more people:
 For tips and practical examples, check out [Accessibility at Braze]({{site.baseurl}}/help/accessibility), where you'll find guidance on:
 
 - [Headings and structure]({{site.baseurl}}/help/accessibility/#content)
-- [Images and alt text]({{site.baseurl}}/help/accessibility/#images) 
+- [Images and alt text]({{site.baseurl}}/help/accessibility/#images)
 - [Links]({{site.baseurl}}/help/accessibility/#links) and [buttons]({{site.baseurl}}/help/accessibility/#buttons)
 - [Color contrast]({{site.baseurl}}/help/accessibility/#color-contrast)
 - [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)

@@ -22,7 +22,7 @@ The **Segments** page of your Braze dashboard contains a summary of all of your 
 
 After selecting the name of a segment, you can view segment statistics and filters, and edit the segment by adding or deleting filters. Be sure to save any changes!
 
-When you turn on [analytics tracking for a segment]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/), you can view sessions, custom events, and revenue over time for this segment.
+When you turn on [analytics tracking for a segment]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/), you can view sessions, custom events, and revenue over time for this segment.
 
 ![Analytics tracking toggle for a segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 

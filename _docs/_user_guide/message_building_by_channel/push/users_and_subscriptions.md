@@ -79,7 +79,7 @@ You can update a user's subscription state with the Braze REST API using the [`/
 
 There are two ways you can check a user's push subscription state with Braze:
 
-1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
+1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
 <br><br>
 2. **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
@@ -87,7 +87,7 @@ There are two ways you can check a user's push subscription state with Braze:
 
 All push-enabled platforms - iOS, Web, and Android - require explicit opt-in via an OS-level system prompt, with some slight differences described below.
 
-Because a user's decision is final and you can't ask again after they decline, using [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) in-app messages is an important strategy for increasing your opt-in rates.
+Because a user's decision is final and you can't ask again after they decline, using [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) in-app messages is an important strategy for increasing your opt-in rates.
 
 **Native OS push permission prompts**
 
@@ -102,7 +102,7 @@ Because a user's decision is final and you can't ask again after they decline, u
 
 Before Android 13, permission was not needed to send push notifications. On Android 12 and below, all users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.
 
-Starting with [Android 13]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/), push permission must be asked of and granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically when your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
+Starting with [Android 13]({{site.baseurl}}/developer_guide/platforms/android/android_13/), push permission must be asked of and granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically when your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
 
 ### iOS
 
