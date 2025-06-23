@@ -57,7 +57,7 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 To support accessibility best practices, Braze offers an Accessibility Scanner that automatically reviews the content of an IAM messages, when created using the traditional HTML editor . This tool is designed to assist with identifying common accessibility issues, making it easier to work toward compliance with modern standards.
 
 ### How It Works
-When a Custom HTML message is created, the Accessibility Scanner analyzes the message body and checks it against a set of accessibility rules derived from the WCAG 2.1 Level AA guidelines. It highlights known issues and provides:
+When a Custom HTML message is created, the Accessibility Scanner analyzes the message body and checks it against the entire set of WCAG 2.1 Level AA guidelines. It highlights known issues and provides:
 
 - The HTML element(s) violated
 - A description of the rule violation
