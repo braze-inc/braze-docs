@@ -16,9 +16,41 @@ subgraph Permission[Push Permission Granting]
     B -->|Android 13+| C["requestPushPermissionPrompt() called"]
     B -->|Android 12 and earlier| D[No permissions required]
     
+    %% Connect Android 12 path to Braze state
+    D --> H3[Braze: User Subscription State]
+    H3 --> J3[Defaults to 'Subscribed' when user profile created]
+    
     C --> E{User Grants Permission?}
     E -->|Yes| F[POST_NOTIFICATIONS Permission Granted]
     E -->|No| G[POST_NOTIFICATIONS Permission Denied]
+    
+    %% Braze Subscription State Updates
+    F --> H1[Braze: User Subscription State]
+    G --> H2[Braze: User Subscription State]
+    
+    H1 --> I1{Opt-in When Push Authorized?}
+    I1 -->|true| J1[Set to 'Opted-In']
+    I1 -->|false| J2[Remains 'Subscribed']
+    
+    H2 --> K1[Remains 'Subscribed'<br/>or 'Unsubscribed']
+    
+    %% Subscription State Legend
+    subgraph BrazeStates[Braze Subscription States]
+        L1['Subscribed' - Default state<br/>when user profile created]
+        L2['Opted-In' - User explicitly<br/>wants push notifications]
+        L3['Unsubscribed' - User explicitly<br/>opted out of push]
+    end
+    
+    %% Note about user-level states
+    note1[Note: These states are user-level<br/>and apply across all user devices]
+    
+    %% Connect states to legend
+    J1 -.-> L2
+    J2 -.-> L1
+    J3 -.-> L1
+    %% K1 -.-> L1
+    K1 -.-> L3
+    note1 -.-> BrazeStates
 end
 
 %% Token Generation Flow
@@ -67,6 +99,7 @@ classDef sdkClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
 classDef configClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
 classDef displayClass fill:#ffebee,stroke:#c62828,stroke-width:2px
 classDef deliveryClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+classDef brazeClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px
 
 class A,B,C,E,F,G permissionClass
 class H,I tokenClass
@@ -74,7 +107,7 @@ class J,K sdkClass
 class N,O,P configClass
 class R,S,S1,T,U,V displayClass
 class W,X,X1,X2,Y,Z deliveryClass
-
+class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
 ```
 {% enddetails %}
 
