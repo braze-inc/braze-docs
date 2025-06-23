@@ -52,7 +52,7 @@ hide_toc: true
       <textarea id="feedback_comment" placeholder="&quot;I couldn’t find any information about this error message&quot;"></textarea><br />
         Have questions? Contact our support team for assistance.
     </div>
-    <button type="submit" name="submit_feedback" value="Submit Feedback" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Submit Feedback </button>
+    <button type="submit" name="submit_feedback" value="Submit feedback" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Submit feedback </button>
   </div>
   <div id="feedback_msg">
   </div>
@@ -63,7 +63,7 @@ hide_toc: true
 
   Braze Docs is an open source project that everyone is welcome to contribute to. Join 288+ contributors and submit your first pull request today. <br /><br />
 
-  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn btn-white">Start Contributing</button>
+  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn btn-white">Start contributing</button>
 
 </div>
 </fieldset>
