@@ -167,7 +167,6 @@ hide_toc: true
   var feedback_nav_title = '{{page.nav_title}}';
   var feedback_helpful = '';
 
-
   $('input[name="feedback_rating"]').on('change', function(e){
       feedback_helpful = $(this).val();
 
