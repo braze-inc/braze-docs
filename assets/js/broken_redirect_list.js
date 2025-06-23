@@ -226,7 +226,7 @@ validurls['/docs/user_guide/onboarding_with_braze/sms_setup'] = '/docs/user_guid
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/#sending-best-practices/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/about_sms/'] = '/docs/user_guide/message_building_by_channel/sms/about_sms/';
-validurls['/docs/user_guide/onboarding_with_braze/sms_setup/next_steps/'] = '/docs/user_guide/message_building_by_channel/sms/';
+validurls['/docs/user_guide/onboarding_with_braze/sms_setup/next_steps/'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/';
 
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/'] = '/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/';
@@ -1420,7 +1420,7 @@ validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_set
 validurls['/docs/developer_guide/platform_integration_guides/cordova/other_integrations/'] = '/docs/developer_guide/platform_integration_guides/cordova/sdk_integration/';
 
 validurls['/docs/user_guide/data_and_analytics'] = '/docs/user_guide/analytics';
-validurls['/docs/user_guide/data_and_analytics/catalogs'] = '/docs/user_guide/analytics/catalogs';
+validurls['/docs/user_guide/data_and_analytics/catalogs'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs';
 validurls['/docs/user_guide/data_and_analytics/data_centers'] = '/docs/user_guide/data/data_centers/';
 validurls['/docs/data_centers/'] = '/docs/user_guide/data/data_centers/';
 
@@ -1430,7 +1430,7 @@ validurls['/docs/user_guide/data_and_analytics/analytics/conversions_dashboard']
 validurls['/docs/user_guide/data_and_analytics/analytics/deliverability_center'] = '/docs/user_guide/analytics/dashboard/deliverability_center';
 validurls['/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard'] = '/docs/user_guide/analytics/dashboard/email_performance_dashboard';
 validurls['/docs/user_guide/data_and_analytics/analytics/home_dashboard'] = '/docs/user_guide/analytics/dashboard/home_dashboard';
-validurls['/docs/user_guide/data_and_analytics/field_level_encryption'] = '/docs/user_guide/analytics/field_level_encryption';
+validurls['/docs/user_guide/data_and_analytics/field_level_encryption'] = '/docs/user_guide/data/field_level_encryption';
 validurls['/docs/user_guide/data_and_analytics/query_builder'] = '/docs/user_guide/analytics/query_builder';
 validurls['/docs/user_guide/data_and_analytics/query_builder/query_templates'] = '/docs/user_guide/analytics/query_builder/query_templates';
 validurls['/docs/user_guide/data_and_analytics/reporting'] = '/docs/user_guide/analytics/reporting';
@@ -2638,5 +2638,41 @@ validurls['/docs/shopify_features#shopify-data'] = '/docs/partners/ecommerce/sho
 validurls['/docs/user_guide/message_building_by_channel/sms/sms_setup'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending';
 
 validurls['/docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit'] = '/docs/user_guide/offerfit/';
+
+validurls['/docs/user_guide/data/field_level_encryption'] = '/docs/user_guide/analytics/field_level_encryption';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines'] = '/docs/user_guide/brazeai/generative_ai/brand_guidelines';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics'] = '/docs/user_guide/brazeai/predictive_churn/analytics';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction'] = '/docs/user_guide/brazeai/predictive_churn/creating_a_churn_prediction';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users'] = '/docs/user_guide/brazeai/predictive_churn/messaging_users';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_faq'] = '/docs/user_guide/brazeai/predictive_churn/troubleshooting';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events'] = '/docs/user_guide/brazeai/predictive_events';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics'] = '/docs/user_guide/brazeai/predictive_events/analytics';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction'] = '/docs/user_guide/brazeai/predictive_events/creating_an_event_prediction';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_events/messaging_users'] = '/docs/user_guide/brazeai/predictive_events/messaging_users';
+validurls['/docs/user_guide/brazeai/recommendations/ai_item_recommendations'] = '/docs/user_guide/brazeai/recommendations/creating_recommendations/ai';
+validurls['/docs/user_guide/brazeai/recommendations/rules_based_recommendations'] = '/docs/user_guide/brazeai/recommendations/creating_recommendations/rules_based';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_content_qa'] = '/docs/user_guide/brazeai/generative_ai/content_qa/';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_copywriting'] = '/docs/user_guide/brazeai/generative_ai/copywriting/';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_liquid'] = '/docs/user_guide/brazeai/generative_ai/liquid/';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_liquid/ai_liquid_prompts'] = '/docs/user_guide/brazeai/generative_ai/liquid/';
+validurls['/docs/user_guide/brazeai/intelligence/faqs/#intelligent-selection'] = '/docs/user_guide/brazeai/intelligence/intelligent_selection/#faq';
+validurls['/docs/user_guide/brazeai/intelligence/faqs/#intelligent-timing'] = '/docs/user_guide/brazeai/intelligence/intelligent_timing/#faq';
+validurls['/docs/user_guide/brazeai/predictive_suite'] = '/docs/user_guide/brazeai';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn'] = '/docs/user_guide/brazeai/predictive_churn';
+validurls['/docs/user_guide/brazeai/recommendations/about_item_recommendations'] = '/docs/user_guide/brazeai/recommendations/';
+validurls['/docs/user_guide/analytics/field_level_encryption'] = '/docs/user_guide/data/field_level_encryption';
+validurls['/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/';
+
+validurls['/docs/user_guide/message_building_by_channel/sms'] = '/docs/user_guide/message_building_by_channel/sms_mms_rcs';
+
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs'] = '/docs/user_guide/engagement_tools/locations_and_geofences';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#location-tracking'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking';
+validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences';
+
+validurls['/docs/home/templates/reference/'] = '/docs/contributing/content_types/#references';
+validurls['/docs/home/templates/reference_video/'] = '/docs/contributing/content_types/#references';
+validurls['/docs/user_guide/brazeai/recommendations/types_and_use_cases/'] = '/docs/user_guide/brazeai/recommendations/';
+validurls['/docs/user_guide/brazeai/generative_ai/ai_images/'] = '/docs/user_guide/brazeai/generative_ai/images/';
 
 // validurls['OLD'] = 'NEW';

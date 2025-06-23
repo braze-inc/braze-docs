@@ -131,7 +131,7 @@ Finally, let's talk about the finer details—the things that help users not jus
 
 - **Clearly label links and buttons:** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
 - **Go easy on symbols and emojis:** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don't replace clear, descriptive text.
-- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and your audience, since it prevents your content from reaching them.
 
 ### Buttons
 
@@ -189,14 +189,11 @@ High contrast helps buttons remain readable and clickable for everyone, includin
 
 #### Make buttons easy to tap
 
-Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded tap targets can be frustrating or impossible for users with motor disabilities to interact with.  
+Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded [touch targets](#touch-targets) can be frustrating or impossible for users with motor disabilities to interact with.  
 
 ### Links
 
 Use links for navigation, like directing users to an external page.
-
-- Write descriptive link text
-- Avoid styling links like buttons
 
 #### Write descriptive link text
 
@@ -236,6 +233,20 @@ Use the right element for the action:
 ```
 
 {% endraw %}
+
+### Touch targets
+
+Touch targets are any part of your message that users tap to take action, like buttons, links, or icons. These elements need to be large enough and spaced far enough apart for people to tap them easily, especially on mobile devices.
+
+When touch targets are too small or too close together, it can be frustrating or impossible for users with mobility or dexterity challenges to interact with your message. Improving this can help reduce errors and create a smoother experience for everyone.
+
+Here’s what to keep in mind:
+- **Make it easy to tap.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines for [touch targets](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) and common mobile usability standards.
+- **Give each target breathing room.** If tap targets are too close together—like stacked links or tightly grouped buttons—it can be easy to miss or tap the wrong one. Add spacing or padding between elements to prevent that.
+- **Don’t rely on visuals alone.** Even small icons can be made more usable with extra padding, allowing them to meet minimum size requirements without altering the layout.
+- **Preview on mobile.** Test your message on different screen sizes and make sure interactive elements are easy to use.
+
+Improving touch targets is one of the most effective ways to make your message more accessible on mobile—and it’s good UX for everyone.
 
 ### Images
 

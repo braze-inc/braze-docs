@@ -32,13 +32,13 @@ The `message_extras` tag is supported for all message types with a send event, a
 
 1. In the message body for the channel, enter the `message_extras` Liquid tag. Or, you can use the **Add Personalization** modal and select **Message Extras** for the personalization type. 
 
-![The Add Personalization modal with Message Extras selected as the personalization type.][1]{: style="max-width:35%;"}
+![The Add Personalization modal with Message Extras selected as the personalization type.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
 
 {: start="2"}
 
 2. Enter the [key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) for each `message_extras` tag. 
 
-![An example of key-value pairs for the message extras tag. The title field reads "Your New Favorites." The message reads key-value pairs for the message extras tag and the following sentence: "We're excited to bring you a side selection of fresh and exciting products that are sure to become your new go-to favorites"][2]{: style="max-width:70%;"}
+![An example of key-value pairs for the message extras tag. The title field reads "Your New Favorites." The message reads key-value pairs for the message extras tag and the following sentence: "We're excited to bring you a side selection of fresh and exciting products that are sure to become your new go-to favorites"]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 
@@ -74,5 +74,3 @@ Yes, you can use `message_extras` in your in-app messages as long as your users'
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}

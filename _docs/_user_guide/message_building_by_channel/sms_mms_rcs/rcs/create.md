@@ -175,7 +175,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 ### Generating AI copy
 
-Need help creating engaging copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating engaging copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Message composer with an icon to open the AI copywriting assistant.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 

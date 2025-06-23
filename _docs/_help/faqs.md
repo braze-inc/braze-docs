@@ -24,9 +24,6 @@ guide_featured_list:
   - name: "In-App Messages FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     image: /assets/img/braze_icons/channel-in-app-messages.svg
-  - name: "Locations and Geofences FAQ"
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "Media Library FAQ"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     image: /assets/img/braze_icons/image-01.svg

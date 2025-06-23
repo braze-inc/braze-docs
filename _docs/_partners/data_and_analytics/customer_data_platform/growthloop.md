@@ -24,7 +24,7 @@ The Braze and GrowthLoop integration allows you to segment customer data directl
 | ----------- | ----------- |
 | GrowthLoop growth or enterprise account | A GrowthLoop account is required to take advantage of this partnership. |
 | Braze Rest API key | A Braze REST API key with all permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2].|
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Use cases
@@ -67,4 +67,3 @@ When you create a campaign in Braze, you can select customers in that GrowthLoop
 Contact the GrowthLoop team at solutions@growthloop.com for additional information or support.
 
 
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

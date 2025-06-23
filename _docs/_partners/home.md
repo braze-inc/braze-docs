@@ -350,4 +350,6 @@ valid_partner_list:
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Stripe
+  url: /docs/partners/stripe/
 ---

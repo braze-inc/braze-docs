@@ -167,6 +167,7 @@ hide_toc: true
   var feedback_nav_title = '{{page.nav_title}}';
   var feedback_helpful = '';
 
+
   $('input[name="feedback_rating"]').on('change', function(e){
       feedback_helpful = $(this).val();
 
@@ -216,6 +217,7 @@ hide_toc: true
 
 
   $('#feedback_submit').on('click',function(e){
+    var external_id = window.braze ? window.braze.getUser().getUserId() : '';
     var title = 'Documentations Feedback';
     var comment = $('#feedback_comment').val().trim();
     var feedback_div = $('#feedback_msg');
@@ -226,7 +228,8 @@ hide_toc: true
       'Nav Title': title,
       'Params': window.location.search,
       "Language": page_language,
-      'Feedback': comment
+      'Feedback': comment,
+      'ExternalId': external_id,
     };
     if (!feedback_helpful || !comment){
       feedback_div.fadeIn();
@@ -237,8 +240,8 @@ hide_toc: true
     }
     $('#feedback_submit').hide();
 
-    if (typeof (appboy) !== 'undefined') {
-      appboy.logCustomEvent(
+    if (window.braze) {
+      window.braze.logCustomEvent(
         "Documentations Feedback Comment", {
           "Feedback": feedback_helpful,
           "Article Title": title,

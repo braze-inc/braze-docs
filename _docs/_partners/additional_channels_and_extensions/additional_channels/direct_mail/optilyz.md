@@ -10,7 +10,7 @@ search_tag: Partner
 
 # optilyz
 
-> [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. 
+> [optilyz](https://optilyz.com) is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. 
 
 _This integration is maintained by optilyz._
 
@@ -36,7 +36,7 @@ Running direct mail like a digital channel means moving away from mass mailings 
 
 ## Integration
 
-To integrate with optilyz, use the [optilyz API][2] to send recipient data to the Braze webhook.
+To integrate with optilyz, use the [optilyz API](https://www.optilyz.com/doc/api/) to send recipient data to the Braze webhook.
 
 ### Step 1: Create your Braze webhook template
 
@@ -57,11 +57,11 @@ optilyz also requires an HTTP Header for authorization and an HTTP method. The f
   - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![The request headers and HTTP method shown in the Braze webhook builder.][6]{: style="max-width:50%"}
+![The request headers and HTTP method shown in the Braze webhook builder.]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
 
 #### Request body
 
-In the following request body, you can use any Liquid personalization tags and build a custom request template according to optilyz' [API documentation][2].
+In the following request body, you can use any Liquid personalization tags and build a custom request template according to optilyz' [API documentation](https://www.optilyz.com/doc/api/).
 
 The `variation` field is optional and can define which design inside the automation should be used. If a variation is omitted, optilyz will assign one of the defined variations randomly.
 
@@ -84,23 +84,16 @@ The `variation` field is optional and can define which design inside the automat
 ```
 {% endraw %}
 
-![An image of the request body code and webhook URL shown in the Braze webhook builder compose tab.][5]
+![An image of the request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
 
 ### Step 2: Preview your request
 
 Next, preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
-![Different testing fields available in the test tab of the Braze webhook builder.][7]
+![Different testing fields available in the test tab of the Braze webhook builder.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 
-[1]: https://optilyz.com
-[2]: https://www.optilyz.com/doc/api/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/
-[5]: {% image_buster /assets/img/optilyz/optilyz_compose.png %}
-[6]: {% image_buster /assets/img/optilyz/optilyz_settings.png %}
-[7]: {% image_buster /assets/img/optilyz/optilyz_testing.png %}
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/

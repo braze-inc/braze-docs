@@ -57,9 +57,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Choose the appropriate tile for the editing experience you'd prefer. 
 
-![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
+Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
 We recommend selecting one editing experience per email campaign. For example, choose either the **HTML Classic** or **Block editor** in a single email campaign rather than switching between editors.
@@ -69,7 +69,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. You can switch among HTML, classic, plaintext, and [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) tabs while you compose. 
 
-![The "Regenerate from HTML" button.][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+![The "Regenerate from HTML" button.]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
 
@@ -77,14 +77,14 @@ The plaintext version of your email will always update automatically from the HT
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
 {% endalert %}
 
-![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
+![Email Variants panel for composing your email.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 Braze will automatically remove HTML event handlers referenced as attributes. This will modify the HTML, so it is recommended to re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
@@ -186,7 +186,7 @@ Curious about what your email looks like for dark mode users? Select the **Dark 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![Test Send option and example email preview when composing your email.][15]
+![Test Send option and example email preview when composing your email.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 If you see any issues with your email, or want to make any changes, select **Edit Email** to return to the editor.
 
@@ -209,7 +209,7 @@ The editor will call out any problems it catches with your message before you se
 - Invalid **From** and **Reply-To** addresses
 - Duplicate **Header** keys
 - Liquid syntax problems
-- Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb][16])
+- Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size))
 - Emails with a blank **Body** or **Subject**
 - Emails without an unsubscribe link
 - Email you're sending from is not allowlisted (sends will be highly limited to ensure deliverability)
@@ -275,17 +275,3 @@ The final section will give you a summary of the campaign you've just designed. 
 
 To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
-[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
-[3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
-[5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
-[6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[14]: {% image_buster /assets/img/email.png %}
-[15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
-[19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
-[20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

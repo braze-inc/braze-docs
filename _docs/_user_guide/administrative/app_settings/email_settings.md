@@ -71,7 +71,7 @@ The default behavior in Braze is to append the tracking pixel to the bottom of y
 
 Braze currently supports overriding the ESP's default open tracking pixel location (the last tag in the `<body>` of an email) to move it to the first tag in the `<body>`.
   
-![][13]{: style="max-width:80%;" }
+![]({% image_buster /assets/img/open_pixel.png %}){: style="max-width:80%;" }
 
 To change the location:
 
@@ -207,7 +207,7 @@ Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subj
 
 CSS inlining is a technique that automatically inlines CSS styles for your emails and new emails. For some email clients, this can improve the way that your emails render.
 
-Changing this setting will not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining][10].
+Changing this setting will not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/css_inline/).
 
 ## Resubscribe users when their email changes
 
@@ -307,11 +307,3 @@ No, we don't check or validate any links in the Braze dashboard. Be sure to prop
 {% enddetails %}
 
 
-[0]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
-[1]: {% image_buster /assets/img/email_settings/outbound_email.png %}
-[2]: {% image_buster /assets/img/email_settings/switch.gif %}
-[6]: https://learning.braze.com/email-open-tracking-pixel
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
-[13]: {% image_buster /assets/img/open_pixel.png %}

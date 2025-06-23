@@ -54,9 +54,7 @@ To edit a user's current [admin](#admin), [company](#company), or [workspace](#w
 
 ### Admin
 
-Admins have access to all features and the ability to modify any company setting. There are also a few things that only admins can do in Braze. 
-
-Only admins can:
+Admins have access to all features and the ability to modify any company setting. They can:
 
 - Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
 - Add, edit, delete, suspend, or unsuspend other [Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)
@@ -136,7 +134,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).|
 |Workspace|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Workspace|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**.|
-|Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/docs/user_guide/data_and_analytics/cloud_ingestion/).|
+|Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
 |Workspace|Manage Feature Flags|Allows users to create or edit [feature flags]({{site.baseurl}}/developer_guide/feature_flags/).|
 |Workspace|Manage Media Library Assets|Allows users to add, edit, and delete media library assets.|
 |Workspace|Manage Subscription Groups|Allows users to create and manage subscription groups.|
@@ -147,7 +145,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Billing Details|Allows users to view subscriptions and billing.|
 |Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission are also assigned this permission.|
 |Workspace|View Custom Attributes Marked as PII|Allows non-admin users to view custom attributes that contain sensitive information and are marked as personally identifiable information (PII).|
-|Workspace|View PII|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. Users can also view PII fields in the **Preview as a User** tab of message previews.|
+|Workspace|View PII|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. Users can also view PII fields in the **Preview as a User** tab of message previews.<br><br>You need this permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), because it allows direct access to some customer data.|
 |Workspace|View User Profiles PII Compliant|Allows users to view user profiles that contain fields your company has defined as personally identifiable information (PII), but redacts the PII fields. |
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
