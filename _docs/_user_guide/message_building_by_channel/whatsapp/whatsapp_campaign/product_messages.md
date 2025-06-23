@@ -187,6 +187,8 @@ Use Liquid to build cart URLs directly in your response message. This is best if
 2. Create a subsequent message with the cart URL.
 3. Build your cart URL with Liquid. If you use Shopify, you can [create a cart permalink](https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks) with the prior example Liquid.
 
+![Diagram showing the checkout experience workflow for a Liquid-generated cart: Meta sends an order received message to Braze, which triggers an action-based trigger then creates a message with a cart link, which then sends a WhatsApp message.]({% image_buster /assets/img/whatsapp/liquid_generated_cart_link_checkout.png %})
+
 {% endtab %}
 {% tab Connected Content %}
 
@@ -196,6 +198,8 @@ Make an API call to your eCommerce system to generate a personalized checkout UR
 
 1. Create a webhook campaign or Canvas step triggered by the [`ecommerce.cart_update`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated) eCommerce event, which will send the cart data to your eCommerce system.
 2. Create a WhatsApp campaign or Canvas Message step triggered by the same eCommerce event to send a WhatsApp response message with the cart URL to the user. Follow the direction in the subsequent response message to use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content).
+
+![Diagram showing the checkout experience workflow for a Connected Content call: Meta sends an order received message to Braze, which has back-and-forth calls with an eCommerce platform, then sends a WhatsApp message.]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 
 {% endtab %}
 {% tab Webhook and custom events %}
@@ -209,6 +213,8 @@ Create a webhook campaign or Canvas step triggered by the `ecommerce.cart_update
 2. Create a cart in your system
 3. Generate the checkout URL
 4. Send a `checkout_started` event to Braze, triggering your WhatsApp message to send with the checkout link
+
+![Diagram showing the checkout experience workflow for webhooks and custom events: Meta sends an order received message to Braze, which has back-and-forth calls with an eCommerce platform, then sends a WhatsApp message with the cart URL.]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
 
 {% endtab %}
 {% endtabs %}
