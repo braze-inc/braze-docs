@@ -13,32 +13,57 @@ hide_toc: true
     <b>How useful do you find Braze docs, on average?</b><br />
 
     <div id="feedback_answer_star">
-      <ul class="list-inline rating-list">
-        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very useful</li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat useful</li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
-        <li class="inline-star feedback-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not useful</li>
-      </ul>
+      <div class="rating-list">
+        <div class="feedback-star">
+          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1">
+          <label for="rating_1" class="star-label" tabindex="0" aria-label="Very Unhelpful">
+            <i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not Useful</label>
+        </div>
+        <div class="feedback-star">
+          <input type="radio" id="rating_2" name="feedback_rating" value="Unhelpful" tabindex="-1">
+          <label for="rating_2" class="star-label" tabindex="0" aria-label="Unhelpful">
+            <i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i><br />2<br />
+          </label>
+        </div>
+        <div class="feedback-star">
+          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1">
+          <label for="rating_3" class="star-label" tabindex="0" aria-label="Somewhat helpful">
+            <i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat Useful</label>
+        </div>
+
+        <div class="feedback-star">
+          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1">
+          <label for="rating_4" class="star-label" tabindex="0" aria-label="Helpful">
+            <i class="fas fa-star" data-value="Helpful" title="Helpful"></i><br />4<br />
+          </label>
+        </div>
+
+        <div class="feedback-star">
+          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1">
+          <label for="rating_5" class="star-label" tabindex="0" aria-label="Very Helpful">
+            <i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very Useful
+          </label>
+        </div>
+
+      </div>
     </div>
     <div style="margin-top: 15px;">
       <b>Share your feedback</b> <br />
       <textarea id="feedback_comment" placeholder="&quot;I couldn’t find any information about this error message&quot;"></textarea><br />
         Have questions? Contact our support team for assistance.
     </div>
-    <button type="submit" name="submit_feedback" value="SUBMIT FEEDBACK" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> SUBMIT FEEDBACK </button>
+    <button type="submit" name="submit_feedback" value="Submit feedback" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Submit feedback </button>
   </div>
   <div id="feedback_msg">
   </div>
 
-  <hr style="border: 1px solid grey;margin-top:30px;"/>
+  <hr style="border: 1px solid #CDCDCF;margin-top:48px;"/>
 
   <h3> Help us make these docs great</h3>
 
   Braze Docs is an open source project that everyone is welcome to contribute to. Join 288+ contributors and submit your first pull request today. <br /><br />
 
-
-  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn">Start Contributing</button>
+  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn btn-white">Start contributing</button>
 
 </div>
 </fieldset>
@@ -50,27 +75,46 @@ hide_toc: true
 #feedback_answer_star {
   display: inline-block;
 }
-#feedback_answer_star > ul {
+#feedback_answer_star .rating-list {
   display: flex;
   list-style: none !important;
   margin: 0 !important;
   line-height: 1;
+  flex-direction: row;
 }
-#feedback_answer_star > ul > li {
-  list-style: none;
+#feedback_answer_star .feedback-star {
+  position: relative;
   padding: 10px 5px;
   width: 65px;
+}
+#feedback_answer_star .feedback-star input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+#feedback_answer_star .feedback-star .star-label {
+  display: block;
   color: #999999 !important;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 5px;
+  line-height: 1.5em;
+  cursor: pointer;
+  margin: 0;
 }
-#feedback_answer_star > ul > li:hover,
-#feedback_answer_star .rating-list li:hover~li {
+#feedback_answer_star .feedback-star.hover-active .star-label {
   color: #000000 !important;
 }
-#feedback_answer_star > ul > li.active {
+#feedback_answer_star .feedback-star input[type="radio"]:checked ~ .star-label,
+#feedback_answer_star .feedback-star.active .star-label {
   color: #000000 !important;
 }
-#feedback_answer_star > ul > li > i {
+#feedback_answer_star .feedback-star .star-label > i {
   font-size: 35px;
+  margin-bottom: 15px;
 }
 
 #feedback_comment {
@@ -89,11 +133,32 @@ hide_toc: true
   color: red;
   font-weight: bold;
 }
-.feedback-star {
-  font-size: 14px;
-  text-align: center;
-  padding-top: 5px;
-  line-height: 1em;
+#feedback button[type=submit] {
+  font-family: "Aribau Grotesk Bold", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  border: 1px solid black !important;
+}
+#feedback button.btn-white {
+  font-family: "Aribau Grotesk Bold", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  border: 1px solid black !important;
+  background-color: #ffffff;
+  color: #202024;
+}
+#feedback button.btn-white:hover {
+  background-color: #202024 !important;
+  color: #ffffff !important;
+}
+#feedback button[type=submit]:focus, #feedback button[type=submit]:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+#main_content h3 {
+  margin-top: 48px;
 }
 </style>
 <script type="text/javascript">
@@ -101,28 +166,54 @@ hide_toc: true
   var feedback_article_title = '{{page.article_title}}';
   var feedback_nav_title = '{{page.nav_title}}';
   var feedback_helpful = '';
-  $('#feedback_answer_star li').on('click', function(e){
-      e.preventDefault();
-      var li = $(this);
-      var ul = li.parent();
-      var i = li.children('i');
-      feedback_helpful = i.attr('data-value') || '';
-      var lis = ul.children('li');
-      var is_sel = false;
-      lis.each(function (f,c){
-        var el = $(this)
-        var star = el.children('i');
-        if (star.attr('data-value') == feedback_helpful){
-          is_sel = true;
+
+
+  $('input[name="feedback_rating"]').on('change', function(e){
+      feedback_helpful = $(this).val();
+
+      // Update visual state for all stars
+      $('.feedback-star').removeClass('active');
+      var selectedStar = $(this).closest('.feedback-star');
+      var selectedValue = $(this).val();
+
+      // Mark selected star and all previous stars as active
+      $('.feedback-star').each(function() {
+        var starValue = $(this).find('input').val();
+        if (starValue === selectedValue || shouldHighlightStar(starValue, selectedValue)) {
+          $(this).addClass('active');
         }
-        if (is_sel){
-          el.addClass('active');
-        }
-        else {
-          el.removeClass('active');
-        }
-      })
+      });
   });
+
+  // Handle hover effect from left to right
+  $('.feedback-star').on('mouseenter', function() {
+    var hoveredIndex = $(this).index();
+    $('.feedback-star').removeClass('hover-active');
+    $('.feedback-star').each(function(index) {
+      if (index <= hoveredIndex) {
+        $(this).addClass('hover-active');
+      }
+    });
+  });
+
+  $('.rating-list').on('mouseleave', function() {
+    $('.feedback-star').removeClass('hover-active');
+  });
+
+  // Handle keyboard interaction for accessibility
+  $('.star-label').on('keydown', function(e) {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      $(this).prev('input[type="radio"]').prop('checked', true).trigger('change');
+    }
+  });
+
+  function shouldHighlightStar(starValue, selectedValue) {
+    var ratings = ['Very Unhelpful', 'Unhelpful', 'Somewhat Helpful', 'Helpful', 'Very Helpful' ];
+    var starIndex = ratings.indexOf(starValue);
+    var selectedIndex = ratings.indexOf(selectedValue);
+    return starIndex <= selectedIndex;
+  }
 
 
   $('#feedback_submit').on('click',function(e){
@@ -133,7 +224,7 @@ hide_toc: true
     var submit_data = {
       'Helpful': feedback_helpful,
       'URL': feedback_site,
-      'Article Title':  title,
+      'Article Title': title,
       'Nav Title': title,
       'Params': window.location.search,
       "Language": page_language,
