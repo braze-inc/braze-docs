@@ -121,7 +121,7 @@ If you add a Delay component to your Canvas and there are no subsequent steps, a
 
 ## Delay analytics
 
-Delay components have three statistics available in the analytics view of an active or previously active Canvas.
+Delay components have the following statistics available in the analytics view of an active or previously active Canvas.
 
 | Metric | Description |
 |---|---|
