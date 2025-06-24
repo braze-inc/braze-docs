@@ -58,7 +58,7 @@ To support accessibility best practices, Braze automatically scans the content o
 
 This check only applies to custom HTML IAMs—it does not currently support messages built with the drag-and-drop editor.
 
-### How It Works
+### How it works
 The scanner runs automatically and evaluates your full HTML message against the full [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.1 AA rule set. For each flagged issue, it shows:
 
 - The specific HTML element involved
