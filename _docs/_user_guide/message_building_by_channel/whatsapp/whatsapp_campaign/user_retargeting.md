@@ -6,8 +6,6 @@ description: "This reference article covers how users can retarget their message
 page_type: reference
 channel:
   - WhatsApp
-page_order: 4.1
-
 ---
 
 # User retargeting 
