@@ -99,7 +99,7 @@ This filter should always be used when personalizing a string in a JSON dictiona
 
 {% raw %}
 ```liquid
-{% assign my_data_string = '[{"id":"1","store_name":"demo-store","shopify_product_id":"1234567890123"}]'  %}
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
 {% assign my_data = my_data_string | json_parse %}
 ```
 
@@ -109,8 +109,6 @@ This filter should always be used when personalizing a string in a JSON dictiona
 {% for item in my_data %}
 Item ID: {{ item.id }}
 Item Name: {{ item.store_name }}
-Item Shopify: {{ item.shopify_product_id }}
----
 {% endfor %}
 ```
 {% endraw %}
@@ -123,7 +121,7 @@ Item Shopify: {{ item.shopify_product_id }}
 
 {% raw %}
 ```liquid
-{% assign my_data_string = '[{"id":"1","store_name":"demo-store","shopify_product_id":"1234567890123"}]'  %}
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
 {% assign my_data = my_data_string | json_parse %}
 {% assign json_string = my_data | as_json_string %}
 ```
