@@ -128,7 +128,7 @@ lines-MainApplication.kt=25
 
 #### 2. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-MainApplication.kt=34-36
@@ -270,7 +270,7 @@ lines-AppDelegate.swift=19
 
 #### 2. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-AppDelegate.swift=25-27
@@ -355,7 +355,7 @@ lines-index.js=6
 
 #### 2. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-index.js=9-16

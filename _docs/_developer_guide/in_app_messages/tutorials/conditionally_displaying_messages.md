@@ -74,37 +74,35 @@ lines-MainApplication.kt=17
 
 #### 1. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-MainApplication.kt=26-28
 
 #### 2. Register activity lifecycle callbacks
 
-Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
+Register Braze’s default listener to handle the in-app message lifecycle.
 
 !!step
 lines-MainApplication.kt=30-44
 
-#### 3. Set up the in-app message listener
+#### 3. Set up an in-app message listener
 
-Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
+Use `BrazeInAppMessageManager` to set a custom listener that intercepts messages before they're displayed.
 
 !!step
 lines-MainApplication.kt=34-42
 
-#### 4. Check for any display condition
+#### 4. Create conditional logic
 
-Apply your custom logic to control whether or not the message should be displayed.
-
-In this example, we're checking if the `should_display_message` extra is set to "true".
+Use custom logic to control message display timing. In this example, the custom logic checks if the `should_display_message` extra is set to `"true"`.
 
 !!step
 lines-MainApplication.kt=38,41
 
-#### 5. Return the appropriate operation
+#### 5. Return or discard the message
 
-Return `InAppMessageOperation.DISPLAY_NOW` to show the message using Braze's UI, or `InAppMessageOperation.DISCARD` to prevent the message from being displayed.
+Return an `InAppMessageOperation` with `DISPLAY_NOW` to display the message, or with `DISCARD` to suppress it.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -172,33 +170,30 @@ struct SampleApp: App {
 !!step
 lines-AppDelegate.swift=5
 
-#### 1. Implement `BrazeInAppMessageUIDelegate`
+#### 1. Implement the `BrazeInAppMessageUIDelegate`
 
-In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate). This will allow you to override its `inAppMessage` method later on.
+In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate) so you can override its `inAppMessage` method later.
 
 !!step
 lines-AppDelegate.swift=12
 
 #### 2. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-AppDelegate.swift=19-21
 
-#### 3. Set up Braze In-App Message UI and delegate
+#### 3. Set up your Braze UI and delegate
 
-`BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting its delegate to your `BrazeInAppMessageUIDelegate` implementation (in this case, `self`), it'll ensure its methods are called before any IAMs are invoked.
+`BrazeInAppMessageUI()` renders in-app messages by default. By assigning `self` as its delegate, you can intercept and handle messages before they're displayed.
 
 !!step
 lines-AppDelegate.swift=26-33
 
-#### 4. Override `DisplayChoice` with your logic
+#### 4. Override `DisplayChoice` with conditional logic
 
-Override [`BrazeInAppMessageUIDelegate .inAppMessage(_:displayChoiceForMessage:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb>) with the checks you'd like to perform. There are 2 enumeration types we will use in this case:
-
-- `.now` will return the message as normal (now).
-- `.discard` will throw the message away.
+Override [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) to decide whether a message should be shown. Return `.now` to display the message or `.discard` to suppress it.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -237,43 +232,36 @@ lines-index.js=2
 
 #### 1. Remove calls to `automaticallyShowInAppMessages()`
 
-Be sure to remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages).
-
-This method will show your messages regardless of any customized code you add later on.
+Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages), as they'll override any custom logic you implement later.
 
 !!step
 lines-index.js=6
 
 #### 2. Enable debugging (optional)
 
-Enable debugging while developing to make troubleshooting easier!
+To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-index.js=9-18
 
-#### 3. Subscribe to the in-app message callback handler
+#### 3. Subscribe to in-app message updates
 
-Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage).
-
-This method will be called whenever an in-app message has been triggered, with a `message` argument.
+Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a `message` any time an in-app message is triggered.
 
 !!step
 lines-index.js=10-13
 
-#### 4. Check for any display condition
+#### 4. Create conditional logic
 
-Apply your custom logic to control whether or not the message should be displayed.
-
-In this example, we're checking if the URL contains "checkout" or if a `#checkout` element exists on the page.
+Create custom logic to control when messages are displayed. In this example, the logic checks if the URL contains `"checkout"` or if a `#checkout` element exists on the page.
 
 !!step
 lines-index.js=16
 
-#### 5. Conditionally call the `showInAppMessage` method
+#### 5. Display messages with `showInAppMessage`
 
-If you want to display the message, call the [`showInAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) method on the provided `message`
+To display the message, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). If omitted, the message will be skipped.
 
-If you do not want to display the message, don't call `showInAppMessage`
 {% endscrolly %}
 {% endsdktab %}
 {% endsdktabs %}
