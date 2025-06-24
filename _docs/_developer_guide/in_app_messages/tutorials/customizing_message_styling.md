@@ -119,35 +119,35 @@ lines-MainApplication.kt=28-30
 
 #### 2. Register activity lifecycle callbacks
 
-Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
+Register Braze’s default listener to handle the in-app message lifecycle.
 
 !!step
 lines-CustomInAppMessageViewFactory.kt=8
 
 #### 3. Create your custom view factory class
 
-Make sure that your class conforms to [IInAppMessageViewFactory](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html); this will allow us to create a custom view factory class that will construct and render the message views.
+Ensure your class conforms to [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html) so it can construct and return custom message views.
 
 !!step
 lines-CustomInAppMessageViewFactory.kt=15-20
 
-#### 4. Delegate first to Braze’s default factory
+#### 4. Delegate to Braze’s default factory
 
-In this use case, we're simply overlaying our own conditional styling, so we want to make sure the IAM's built-in styling is preserved.
+Delegate to the default factory to retain Braze’s built-in styling before applying your own conditional changes.
 
 !!step
 lines-CustomInAppMessageViewFactory.kt=30-32,35-41
 
-#### 5. Get key-value pairs, and apply your styling
+#### 5. Access key-value pairs from `inAppMessage.extras`
 
-Inspect `inAppMessage.extras` for the keys of your choice (set via the dashboard). Apply any overrides (e.g. call view.setBackgroundColor(...)) before returning that view.
+Use `inAppMessage.extras` to access customization types, styling attributes, or any other values defined in the dashboard. Apply styling overrides before returning the view.
 
 !!step
 lines-MainApplication.kt=33-34
 
-#### 6. Set your custom [IInAppMessageViewFactory](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html)
+#### 6. Implement a custom `IInAppMessageViewFactory`
 
-Use `IInAppMessageViewFactory` to create a custom view factory class that will construct and render the message views.
+Implement [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html) in your custom class to construct and render in-app message views.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -234,7 +234,7 @@ lines-AppDelegate.swift=5
 
 #### 1. Implement `BrazeInAppMessageUIDelegate`
 
-Have your AppDelegate conform to `BrazeInAppMessageUIDelegate`, which lets you intercept and customize handling in-app messages.
+In your `AppDelegate` class, implement [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate) so you can override its `inAppMessage` method later.
 
 !!step
 lines-AppDelegate.swift=17
@@ -248,21 +248,21 @@ lines-AppDelegate.swift=30-50
 
 #### 3. Prepare messages before they're displayed
 
-The Braze SDK will call this function whenever a message is being prepared for presentation. You can choose to intercept it, render it differently, or grab key-value pairs.
+Braze calls `inAppMessage(_:prepareWith:)` during message preparation. Use it to customize styling or apply logic based on key-value pairs.
 
 !!step
 lines-AppDelegate.swift=34
 
-#### 4. Access key-value pairs from message.extras
+#### 4. Access key-value pairs from `message.extras`
 
-Use the extras dictionary to retrieve values like customization types, or attributes, or really any dashboard-defined properties.
+Use `message.extras` to access customization types, styling attributes, or any other values defined in the dashboard.
 
 !!step
 lines-AppDelegate.swift=38-46
 
 #### 5. Update the message's styling attributes
 
-[BrazeInAppMessageUIDelegate inAppMessage(\_:prepareWith:)](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog>) surfaces `PresentationContext`, which allows direct modification of the message's styling attributes. Each type of in-app message has different attributes available.
+Use [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to access the `PresentationContext` so you can modify styling attributes directly. Each in-app message type exposes different attributes.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -304,9 +304,7 @@ lines-index.js=2
 
 #### 1. Remove calls to `automaticallyShowInAppMessages()`
 
-Be sure to remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages).
-
-This method will show your messages regardless of any customized code you add later on.
+Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) , as they’ll override any custom logic you implement later.
 
 !!step
 lines-index.js=6
@@ -320,27 +318,22 @@ lines-index.js=9-21
 
 #### 3. Subscribe to the in-app message callback handler
 
-Register a callback using [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage).
-
-This method will be called whenever an in-app message has been triggered, with a `message` argument.
+Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a message any time an in-app message is triggered.
 
 !!step
 lines-index.js=10-13
 
 #### 4. Access the `message.extras` property
 
-Key-value pairs you have defined in the Braze dashboard will be available using the `extras` message property.
-
-All values supplied will be typed as a string
+Use `message.extras` to access customization types, styling attributes, or any other values defined in the dashboard. All values are returned as strings.
 
 !!step
 lines-index.js=19
 
-#### 5. Conditionally call the `showInAppMessage` method
+#### 5. Conditionally call `showInAppMessage`
 
-If you want Braze to display the message, call the [`showInAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) method on the provided `message`.
+To display the message, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Otherwise, use any custom properties as needed.
 
-Otherwise you can use the custom properties as you wish!
 {% endscrolly %}
 {% endsdktab %}
 {% endsdktabs %}
