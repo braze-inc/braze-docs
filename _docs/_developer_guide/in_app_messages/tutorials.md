@@ -9,13 +9,13 @@ guide_top_header: "In-App Message Tutorials"
 guide_featured_title: "In this section:"
 guide_featured_list:
   - name: Custom Styling
-    link: /docs/developer_guide/in_app_messages/tutorials/custom_styling
+    link: /docs/developer_guide/in_app_messages/tutorials/customizing_message_styling
     image: /assets/img/braze_icons/brush-02.svg
   - name: Conditionally Display
-    link: /docs/developer_guide/in_app_messages/tutorials/conditionally_display
+    link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
   - name: Defer and Restore a Triggered In App Message
-    link: /docs/developer_guide/in_app_messages/tutorials/defer_and_restore_triggered_message
+    link: /docs/developer_guide/in_app_messages/tutorials/defer_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---
 
