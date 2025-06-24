@@ -25,7 +25,7 @@ You can edit your Canvases after launch by:
 Control variant distribution may only be decreased after launch.
 {% endalert %}
 
-Keep in mind the following permissible post-launch Canvas edits depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you'll need to clone to Canvas Flow first in order to perform post-launch edits.
+Keep in mind the following permissible post-launch Canvas edits, depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you'll need to clone to Canvas Flow first in order to perform post-launch edits.
 
 You can delete any of the following in your user journey:
 
@@ -51,17 +51,18 @@ See the [Best practices](#best-practices) section for specific editing use cases
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It’s an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
-You can't edit or delete existing connections, and can't insert a step between existing connected steps. If you want to edit or add more steps to your Canvas user journey, the following details will apply:
+You can't edit or delete existing connections, and you can't insert a step between existing connected steps. If you want to edit or add more steps to your Canvas user journey, the following details will apply:
 
 - Users who haven't entered the Canvas yet are eligible for any newly created steps. 
 - If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
 - Users who are currently in a launched Canvas, but haven't reached the newly added steps in the user journey, are eligible to receive those newly added steps.
-
-If you update the **Delay** or **Window** settings for a Canvas step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay. If a Delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
+- If a Delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps.
 
 {% alert note %}
-Stopping a Canvas will not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+If you update the **Delay** or **Window** settings for a Canvas step, users currently in that step at the time of the update will adhere to the delay time that was assigned when they originally entered it. Only new users entering the Canvas and those who haven't been queued for that step yet will receive the message at the updated time.
 {% endalert %}
+
+Stopping a Canvas will not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 
 {% enddetails %}
 
