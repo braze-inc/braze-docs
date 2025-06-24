@@ -16,6 +16,8 @@ layout: scrolly
 
 ## Deferring and restoring triggered messages for Android
 
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
@@ -170,6 +172,8 @@ Restoring the message elsewhere in your app, in this case an activity with a tri
 
 ## Deferring and restoring triggered messages for Swift
 
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -307,6 +311,8 @@ Here, our UI is restoring the method from a button-click.
 {% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
 ## Deferring and restoring triggered messages for Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
 {% scrolly %}
 

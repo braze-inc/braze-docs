@@ -16,6 +16,8 @@ layout: scrolly
 
 ## Customizing message styling using key-value pairs for Android
 
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
@@ -154,6 +156,8 @@ Use `IInAppMessageViewFactory` to create a custom view factory class that will c
 
 ## Customizing message styling using key-value pairs for Swift
 
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -266,6 +270,8 @@ lines-AppDelegate.swift=38-46
 {% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
 ## Customizing message styling using key-value pairs for Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
 {% scrolly %}
 

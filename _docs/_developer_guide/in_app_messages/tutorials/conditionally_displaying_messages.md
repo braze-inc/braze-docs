@@ -16,6 +16,8 @@ layout: scrolly
 
 ## Conditionally displaying in-app messages for Android
 
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+
 {% scrolly %}
 
 ```kotlin file=MainApplication.kt
@@ -111,6 +113,8 @@ Return `InAppMessageOperation.DISPLAY_NOW` to show the message using Braze's UI,
 
 ## Conditionally displaying in-app messages for Swift
 
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+
 {% scrolly %}
 
 ```swift file=AppDelegate.swift
@@ -202,6 +206,8 @@ Override [`BrazeInAppMessageUIDelegate .inAppMessage(_:displayChoiceForMessage:)
 {% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
 ## Conditionally displaying in-app messages for Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
 {% scrolly %}
 
