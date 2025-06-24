@@ -58,7 +58,16 @@ guide_featured_list:
 
 ### OfferFit by Braze
 
-[OfferFit](https://www.offerfit.ai/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks—with OfferFit, you can optimize any business KPI. Refer to our dedicated section [OfferFit by Braze]({{site.baseurl}}/user_guide/offerfit) for sample use cases and key features. 
+[OfferFit](https://www.offerfit.ai/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks—with OfferFit, you can optimize any business KPI. Refer to our dedicated section [OfferFit by Braze]({{site.baseurl}}/user_guide/offerfit) for sample use cases and key features.
+
+### New SDK tutorials
+
+Each Braze SDK tutorial offers step-by-step instructions along with full sample code. Choose a tutorial below to get started:
+
+- [Displaying Banners]({{site.baseurl}}/docs/developer_guide/banners/tutorial_displaying_banners)
+- [Customizing in-app message styling]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling)
+- [Conditionally displaying in-app messages]({{site.baseurl}}/docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages)
+- [Deferring triggered in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages)
 
 ### Data flexibility
 
