@@ -1,9 +1,9 @@
 ---
 nav_title: Tutorials
-article_title: Tutorials
+article_title: Braze SDK Tutorials
 page_order: 1.9
 layout: dev_guide
-guide_top_header: "Tutorials for the Braze SDK"
+guide_top_header: "Braze SDK Tutorials"
 guide_top_text: "> Each Braze SDK tutorial includes step-by-step, scrollable code to help you implement new features in your app. Choose a tutorial below to get started!"
 
 guide_featured_title: "Banners"

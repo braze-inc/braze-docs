@@ -5,8 +5,9 @@ page_order: 40
 hide_toc: true
 layout: dev_guide
 guide_top_header: "In-App Message Tutorials"
+guide_top_text: "> These are in-app message tutorials for the Braze SDK that include step-by-step, scrollable code. For the complete list, see [Braze SDK Tutorials]({{site.baseurl}}/developer_guide/tutorials)."
 
-guide_featured_title: "In this section:"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/in_app_messages/tutorials/customizing_message_styling
