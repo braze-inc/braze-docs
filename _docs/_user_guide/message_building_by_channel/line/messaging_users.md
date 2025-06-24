@@ -51,4 +51,4 @@ For this message, you should send a LINE message informing the user that this ch
 
 ### `request_timeout` error
 
-You may receive the `request_timeout` error if it takes more than two seconds for LINE to receive a response from Braze. However, the request itself may have reached Braze without any problems.
+You may receive the `request_timeout` error if it takes more than two seconds for LINE to receive a response from Braze. However, the request itself may have reached Braze without any problems. If you frequently receive the `request_timeout` error, contact [Support]({{site.baseurl}}/braze_support/) to investigate.
