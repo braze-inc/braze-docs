@@ -119,9 +119,9 @@ fun ContentView() {
 !!step
 lines-MainApplication.kt=13-16
 
-#### 1. Set up a singleton instance
+#### 1. Create a singleton `Application` instance
 
-Create a companion object to provide access to the Application instance.
+Use a companion object to expose your `Application` class as a singleton so it can be accessed later in your code.
 
 !!step
 lines-MainApplication.kt=25
@@ -135,35 +135,35 @@ lines-MainApplication.kt=34-36
 
 #### 3. Register activity lifecycle callbacks
 
-Register Braze's default activity lifecycle callback listener to handle the lifecycle of in-app messages.
+Register Braze’s default listener to handle the in-app message lifecycle.
 
 !!step
 lines-MainApplication.kt=39-49
 
-#### 4. Set up the in-app message listener
+#### 4. Set up an in-app message listener
 
-Use `BrazeInAppMessageManager` to set a custom listener that will intercept messages before they're displayed.
+Use `BrazeInAppMessageManager` to set a custom listener that intercepts messages before they’re displayed.
 
 !!step
 lines-MainApplication.kt=43,46
 
-#### 5. Control message display with `showMessage`
+#### 5. Create conditional logic
 
-Use the `showMessage` flag to determine whether to show the message now or later.
+Use the `showMessage` flag to control timing&#8212;return `DISPLAY_NOW` to display the message now or `DISPLAY_LATER` to defer it.
 
 !!step
 lines-MainApplication.kt=52-55
 
-#### 6. Create a method to show deferred messages
+#### 6. Create a method for displaying deferred messages
 
-`showDeferredMessage` will present the next IAM (the IAM at the top of the stack), and setting `showMessage` to true will make our listener return `DISPLAY_NOW`.
+Use `showDeferredMessage` to trigger the next in-app message. When `showMessage` is `true`, the listener will return `DISPLAY_NOW`.
 
 !!step
 lines-MainActivity.kt=29
 
 #### 7. Trigger the method from your UI
 
-Restoring the message elsewhere in your app, in this case an activity with a trigger button.
+To display the previously-deferred message, call `showDeferredMessage(true)` from your UI, such as a button or tap.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -261,9 +261,9 @@ struct ContentView: View {
 !!step
 lines-AppDelegate.swift=5
 
-#### 1. Have you AppDelegate class conform to `BrazeInAppMessageUIDelegate`
+#### 1. Implement the `BrazeInAppMessageUIDelegate`
 
-Have your `AppDelegate` conform to [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). This will allow you to override its `inAppMessage` method later on.
+In your `AppDelegate` class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) so you can override its `inAppMessage` method later.
 
 !!step
 lines-AppDelegate.swift=19
@@ -275,35 +275,30 @@ To make troubleshooting easier while developing, consider enabling debugging.
 !!step
 lines-AppDelegate.swift=25-27
 
-#### 3. Set up Braze In-App Message UI and its delegate
+#### 3. Set up your Braze UI and delegate
 
-`BrazeInAppMessageUI()` is the default UI renderer for IAMs. By setting its delegate to your `BrazeInAppMessageUIDelegate` implementation (in this case, `self`), it'll ensure its methods are called before any IAMs are invoked.
-
-Save `inAppMessageUI`; you will need it later when restoring the message.
+`BrazeInAppMessageUI()` renders in-app messages by default. By assigning `self` as its delegate, you can intercept and handle messages before they're displayed. Be sure to save the instance, as you'll need it later to restore deferred messages.
 
 !!step
 lines-AppDelegate.swift=32-41
 
-#### 4. Override `DisplayChoice` with your logic
+#### 4. Override `DisplayChoice` with conditional logic
 
-Override [`BrazeInAppMessageUIDelegate .inAppMessage(_:displayChoiceForMessage:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb>) with the checks you'd like to perform. There are 2 enumeration types we will use in this case:
-
-- `.now` will return the message as normal (now).
-- `.reenqueue` will place the message back on the top of the stack of IAM messages.
+Override [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) to determine when a message should be displayed. Return `.now` to show it immediately, or `.reenqueue` to defer it for later.
 
 !!step
 lines-AppDelegate.swift=43-46
 
 #### 5. Create a method to show deferred messages
 
-`showDeferredMessage` will present the next IAM (the IAM at the top of the stack), and setting `self.showMessage` to true will make our DisplayChoice return `.now`
+Create a method that calls `showDeferredMessage(true)` to display the next deferred message in the stack. When called, `showMessage` is set to `true`, making the delegate return `.now`.
 
 !!step
 lines-ContentView.swift=1-14
 
-#### 5. Trigger the method elsewhere in your code
+#### 5. Trigger the method from your UI
 
-Here, our UI is restoring the method from a button-click.
+To display the previously-deferred message, call `showDeferredMessage(true)` from your UI, such as a button or tap.
 
 {% endscrolly %}
 {% endsdktab %}
@@ -348,7 +343,7 @@ lines-index.js=2
 
 #### 1. Remove calls to `automaticallyShowInAppMessages()`
 
-Be sure to remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages). This method will show your messages regardless of any customized code you add later on.
+Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) , as they’ll override any custom logic you implement later.
 
 !!step
 lines-index.js=6
@@ -362,37 +357,35 @@ lines-index.js=9-16
 
 #### 3. Subscribe to the in-app message callback handler
 
-This method will be called whenever an in-app message has been triggered.
+Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a message any time an in-app message is triggered.
 
 !!step
 lines-index.js=11-12
 
 #### 4. Defer the `message` instance
 
-Use the [`deferInAppMessage(message)](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage) method to defer the message for later display.
-
-This method automatically serializes and stores the `message` allow you to retrieve it on a subsequent pageload.
+To defer the message, call [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). Braze will serialize and save this message so you can display it on a future page load.
 
 !!step
 lines-index.js=18-24
 
 #### 5. Retrieve a previously deferred message
 
-At some point later, use the [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage) method to retrieve any deferred messages.
+To retrieve any previously-deferred messages, call [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
 
 !!step
 lines-index.js=21-23
 
-#### 6. Show the deferred in-app message
+#### 6. Display the deferred message
 
-Use the [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) method to display the message at the new appropriate time.
+After retrieving a deferred message, display it by passing it to [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
 
 !!step
 lines-index.js=13-15
 
-#### 7. Show the in-app message in other cases
+#### 7. Display a message immediately
 
-In other cases where you don't want to defer the immediate display of the message, continue calling [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) in your message listener.
+To show a message instead of deferring it, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) directly in your `subscribeToInAppMessage` callback.
 {% endscrolly %}
 {% endsdktab %}
 {% endsdktabs %}
