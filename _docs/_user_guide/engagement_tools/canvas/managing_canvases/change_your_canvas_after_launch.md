@@ -58,7 +58,7 @@ You can't edit or delete existing connections, and you can't insert a step betwe
 - Users who are currently in a launched Canvas, but haven't reached the newly added steps in the user journey, are eligible to receive those newly added steps.
 - If a Delay step is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps.
 
-{% alert note %}
+{% alert important %}
 If you update the **Delay** or **Window** settings for a Canvas step, users currently in that step at the time of the update will adhere to the delay time that was assigned when they originally entered it. Only new users entering the Canvas and those who haven't been queued for that step yet will receive the message at the updated time.
 {% endalert %}
 
