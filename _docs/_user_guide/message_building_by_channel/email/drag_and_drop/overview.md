@@ -270,7 +270,7 @@ Lastly, predefined attributes are available to help make your message accessible
 
 ### Setting a language for email
 
-You can set the language attribute by going to the **Settings** column and selecting the desired language. You can also target the user attribute {%raw%}`{{${language}}}`(%endraw%} if the message is intended for users with dynamic language values.
+You can set the language attribute by going to the **Settings** column and selecting the desired language. You can also target the user attribute {%raw%} `{{${language}}}` {%endraw%} if the message is intended for users with dynamic language values.
 
 ![Setting the "Language" value for an email.]({% image_buster /assets/img/dnd/language_setting_dnd.png %})
 
