@@ -123,18 +123,8 @@ We're tracking this limitation for future improvements. If this affects your wor
 
 ### Understanding automated accessibility testing
 
-<<<<<<< Accessibilty_Scanner_IAM
 {% multi_lang_include accessibility/automated_testing.md %}
 
 ## Test accuracy
 
 All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
-=======
-- [Headings and structure]({{site.baseurl}}/help/accessibility/#content)
-- [Images and alt text]({{site.baseurl}}/help/accessibility/#images)
-- [Links]({{site.baseurl}}/help/accessibility/#links) and [buttons]({{site.baseurl}}/help/accessibility/#buttons)
-- [Color contrast]({{site.baseurl}}/help/accessibility/#color-contrast)
-- [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)
-
-By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.
->>>>>>> develop
