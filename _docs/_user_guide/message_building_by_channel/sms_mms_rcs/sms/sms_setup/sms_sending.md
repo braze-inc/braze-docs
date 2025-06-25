@@ -42,9 +42,9 @@ Want to learn how to create an SMS campaign? Check out our step-by-step guide on
 
 Some brands may wish to send to a group of users that have phone numbers from different countries. In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, short codes can only send SMS to phone numbers from the same country the short code was created in. 
 
-To overcome this limitation, during the subscription groups [setup process][5], groups can be set up to hold long and short codes from multiple different countries. When completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas component to target relevant users.
+To overcome this limitation, during the subscription groups [setup process]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process), groups can be set up to hold long and short codes from multiple different countries. When completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas component to target relevant users.
 
-![SMS payloads are sent using the same country code as the target user's phone number][2]
+![SMS payloads are sent using the same country code as the target user's phone number]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
 
 #### Best practices
 
@@ -61,5 +61,3 @@ Plan on doing some high-volume sending? We have some best practices for you to e
 - Adjust the delivery speed rate limiting for your campaign/canvases as needed, based on target audience size. This will ensure that you reach the send volume that you need and that Braze sends the messages at the rate that Twilio is expecting and can handle.
 - Ensure you stick to the 160 character limit, and be aware of special characters double-counting (for example, forward-slashes `\`, carets `^`, and tildes `~`). 
 
-[2]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

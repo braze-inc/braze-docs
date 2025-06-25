@@ -54,6 +54,83 @@ guide_featured_list:
 
 > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.<br><br>For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
 
+## June 24, 2025 release
+
+### OfferFit by Braze
+
+[OfferFit](https://www.offerfit.ai/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks—with OfferFit, you can optimize any business KPI. Refer to our dedicated section [OfferFit by Braze]({{site.baseurl}}/user_guide/offerfit) for sample use cases and key features.
+
+### New SDK tutorials
+
+Each Braze SDK tutorial offers step-by-step instructions along with full sample code. Choose a tutorial below to get started:
+
+- [Displaying Banners]({{site.baseurl}}/docs/developer_guide/banners/tutorial_displaying_banners)
+- [Customizing in-app message styling]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling)
+- [Conditionally displaying in-app messages]({{site.baseurl}}/docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages)
+- [Deferring triggered in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages)
+
+### Data flexibility
+
+#### SAML just-in-time provisioning
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+Use [SAML just-in-time provisioning]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit) to allow new dashboard users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new dashboard user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
+
+#### Filters per selection
+
+You can now add up to 10 filters per [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections).
+
+#### Catalog storage
+
+The storage size for the free version of [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#catalog-storage) is up to 100&nbsp;MB. You can have unlimited items as long as they're under 100&nbsp;MB.
+
+#### Number of rows synced with Cloud Data Ingestion
+
+By default, for Cloud Data Ingestion, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows will be stopped.
+
+Refer to [Cloud Data Ingestion product limitations]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/#product-limitations) for more details.
+
+### Robust channels
+
+#### Accessibility testing in Inbox Vision
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+Use [Accessibility testing]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) in Inbox Vision to highlight accessibility issues that may exist with your email. 
+
+Accessibility testing analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements. This can provide insights into which elements aren't meeting accessibility standards.
+
+#### Click tracking for WhatsApp
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can turn on [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking) in both response and template messages to see click data in your WhatsApp performance reports and be able to segment users based on who clicked what.
+
+#### Videos for WhatsApp
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can [embed videos]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#supported-whatsapp-features) within the body text for outbound WhatsApp messages. These files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library).
+
+### New Braze partnerships
+
+#### Stripe - eCommerce
+
+The Braze and [Stripe]({{site.baseurl}}/partners/stripe) intergation allows you to trigger messaging in Braze based on Stripe events such as trial started, subscription activated, subscription cancellation, and more.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [React Native SDK 15.0.1](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
+- [Flutter SDK 14.0.1-14.0.2](https://pub.dev/packages/braze_plugin/changelog)
+- [Cordova SDK 12.0.0](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md#1200)
+    - Updated the native Android bridge [from Braze Android SDK 35.0.0 to 36.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v35.0.0...v36.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+    - Updated the native iOS bridge [from Braze Swift SDK 11.6.1 to 12.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/11.6.1...12.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+- [Segment Kotlin 4.0.0-4.0.1](https://github.com/braze-inc/braze-segment-kotlin/blob/4.0.0/CHANGELOG.md#400)
+    - Updated Braze Android SDK [from 35.0.0 to 36.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v35.0.0...v36.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+
 ## May 27, 2025 release
 
 ### Data flexibility
@@ -829,68 +906,3 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Updates the native iOS bridge [from Braze Swift SDK 10.3.1 to 11.3.0](https://github.com/braze-inc/braze-swift-sdk/compare/10.3.1...11.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
     - Updates the native Android bridge [from Braze Android SDK 32.1.0 to 33.1.0](https://github.com/braze-inc/braze-android-sdk/compare/v32.1.0...v33.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
 - [Swift SDK 11.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/11.0.1/CHANGELOG.md)
-
-## November 12, 2024 release
- 
-### Data flexibility
- 
-#### Speed limit for `/users/track`
-
-The speed limit for the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) has been updated to 3,000 per 3 seconds.
- 
-### Unlocking creativity
-
-#### Canvas Use Cases
-
-We've put together some use cases showcasing the different ways you can leverage a Braze Canvas. If you're looking for inspiration, choose a use case below to get started.
-
-- [Abandoned Cart]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart/)
-- [Back In Stock]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock/)
-- [Feature Adoption]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption/)
-- [Lapsed User]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user/)
-- [Onboarding]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding/)
-- [Post-Purchase Feedback]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback/)
-
-### Robust channels
-
-#### LINE
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Braze's LINE integration is now generally available! LINE  is the most popular messaging app in Japan, with over 95 million monthly active users. In addition to messaging, LINE offers its users an “all-in-one” platform for social media, gaming, shopping, and payments.
-
-To get started, see our [LINE documentation]({{site.baseurl}}/user_guide/message_building_by_channel/line/).
- 
-#### LinkedIn Audience Sync
-
-{% multi_lang_include release_type.md release="Beta" %}
-
-You can now use LinkedIn with [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/), a tool that helps you extend the reach of your campaigns to many of the top social and advertising technologies. To join the beta, reach out to your Braze Success Manager.
- 
-### Improving the developer guide
- 
-We're in the process of making major improvements to the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home/). As a first step, we simplified the navigation and reduced the number of nested sections. 
-
-|Before|After|
-|------|-----|
-|!["The old navigation for the Braze Developer Guide."]({% image_buster /assets/img/release_notes/developer_guide_improvements/old_navigation.png %})|!["The new navigation for the Braze Developer Guide."]({% image_buster /assets/img/release_notes/developer_guide_improvements/new_navigation.png %})|
-
-### New Braze partnerships
- 
-#### MyPostcard
-
-[MyPostcard](https://www.mypostcard.com/), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. To get started, see [Integrating MyPostcard with Braze]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/mypostcard/).
- 
-### SDK updates
- 
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
- 
-- [Expo Plugin 3.0.0](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-    - This version requires 13.1.0 of the Braze React Native SDK.
-    - Replaces the iOS BrazeAppDelegate method call of BrazeReactUtils.populateInitialUrl with BrazeReactUtils.populateInitialPayload.
-        - This update resolves an issue where push opened events would not be triggered when clicking on a notification while the application is in a terminated state.
-        - To fully leverage this update, replace all calls of Braze.getInitialURL with Braze.getInitialPushPayload in your JavaScript code. The initial URL can now be accessed via the url property of the initial push payload.
-- [Braze Segment Swift Plugin 5.0.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md)
-    - Updates the Braze Swift SDK bindings to require releases from the 11.1.1+ SemVer denomination.
-    - This allows compatibility with any version of the Braze SDK from 11.1.1 up to, but not including, 12.0.0.
-    - Refer to the changelog entry for 11.1.1 for more information on potential breaking changes.

@@ -17,7 +17,7 @@ This Canvas component replaces the need to create excessive audience-based full 
 
 ## How it works
 
-![An Audience Path with two groups: engaged users and everyone else.][1]{: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![An Audience Path with two groups: engaged users and everyone else.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 Audience Paths are similar to sorting funnels with ranking criteria. Users are evaluated for each criterion in priority order and sent down the path of the highest-ranking criteria they qualify. This reduces ambiguity of where users will go and what messages they will receive. Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
@@ -31,7 +31,7 @@ With Audience Paths, you can:
 
 ### Allowing time for user evaluations
 
-![Canvas showing a 24-hour delay after a Message step, followed by an Audience Path.][5]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Canvas showing a 24-hour delay after a Message step, followed by an Audience Path.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Users are evaluated as soon as they reach the Audience Path step. After they have been evaluated, they will immediately progress to the next step. This makes it important to allow an appropriate time window to lapse if the Audience Path is determined by a user action.
 
@@ -54,11 +54,11 @@ The following screenshot shows the layout of an expanded Audience Paths step. He
 
 For example, if you wanted to target onboarding messaging to a group of users, you might select retargeting filters, such as "Has clicked email" and "Has clicked in-app message".
 
-![An expanded Audience Path with groups for "Loves Asian Cuisine”, “Loves Latin Cuisine”, “Loves European Cuisine”, and "Everyone Else".][3]
+![An expanded Audience Path with groups for "Loves Asian Cuisine”, “Loves Latin Cuisine”, “Loves European Cuisine”, and "Everyone Else".]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
 
-![Two Audience Paths with different groups based on engagement.][4]{: style="max-width:50%"}
+![Two Audience Paths with different groups based on engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Testing audience groups
 
@@ -72,7 +72,7 @@ The true power of Audience Paths lies in the ability to assign priority. While t
 
 By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria—all in a single Canvas step.
 
-![An Audience Path with groups for “Likes Big Brand Shoes”, “Likes Big Brand”, and "Everyone Else".][2]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![An Audience Path with groups for “Likes Big Brand Shoes”, “Likes Big Brand”, and "Everyone Else".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 For example, let's say you wanted to send a group of users ads for new products. You'd start by ranking filters that fall under those products high on the Audience Path. If you were creating a marketing campaign for the company "Big Brand" and a new retail brand had just released, you might select filters like "Likes Big Brand Shoes" or "Likes Big Brand Bags", and send different email messages based on what filtered group they fall into. 
 
@@ -98,8 +98,3 @@ For example, in an Audience Paths step, you can create three audiences: Email, M
 Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for examples on how you can customize these pre-built templates to your advantage.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/audience_path/audience_path.png %}
-[2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
-[3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
-[4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
-[5]: {% image_buster /assets/img/audience_path/audience_path5.png %}

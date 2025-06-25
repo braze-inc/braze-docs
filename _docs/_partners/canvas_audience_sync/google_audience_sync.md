@@ -113,14 +113,14 @@ If you have multiple apps in a single workspace, you can input any of your app I
 
 Add a component in your Canvas, then select **Audience Sync**.
 
-![The menu to select a Canvas component in the editor.][18]{: style="max-width:35%;"} ![The Audience Sync step added to the user journey.][20]{: style="max-width:28%;"}
+![The menu to select a Canvas component in the editor.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![The Audience Sync step added to the user journey.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Step 3: Sync setup
 
 1. Select **Custom Audience** to open the component editor.
 2. Select **Google** as the Audience Sync partner.
 
-![The Audience Sync step settings with the option to select a partner to start the sync.][19]{: style="max-width:80%;"}
+![The Audience Sync step settings with the option to select a partner to start the sync.]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 {: start="3"}
 3. Select the desired Google ad account. 
@@ -215,17 +215,3 @@ Check that your audiences contain at least 5,000 users so that ads can start ser
 If you're syncing audiences to Google, this error will trigger if you have selected to sync mobile identifiers as part of your syncs but deleted your mobile app IDs from the Google partner page. To resolve this issue, make sure you've added the appropriate mobile app IDs for iOS and Android to the Google partner page.
 
 
-[1]: {% image_buster /assets/img/google_sync/google_sync1.png %}
-[2]: {% image_buster /assets/img/google_sync/google_sync2.png %}
-[3]: {% image_buster /assets/img/google_sync/google_sync3.png %}
-[4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
-[6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
-[8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
-[21]: {% image_buster /assets/img/audience_sync/g_sync.png %}
-[22]: {% image_buster /assets/img/audience_sync/g_sync2.png %}
-[23]: {% image_buster /assets/img/audience_sync/g_sync3.png %}

@@ -70,7 +70,7 @@ Have the affected user do the following:
 
 1. Open their developer tools. If using Chrome, this can be done using the keyboard shortcut `option` + `⌘` + `J` (on macOS). If using Windows or Linux, this can be done using the shortcut `shift` + `CTRL` + `J`.
 2. Select **Network** > **Fetch/XHR** or **XHR**.
-3. Capture a screen recording or screenshot showing the **Name**, **Status**, **Size**, and **Time** for the elements.<br><br>![The "Fetch/XHR" tab in a Chrome browser.][1]{: style="max-width:60%;"}
+3. Capture a screen recording or screenshot showing the **Name**, **Status**, **Size**, and **Time** for the elements.<br><br>![The "Fetch/XHR" tab in a Chrome browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 Then, attach the user's recording or screenshot to the Support ticket. This information can help Support's investigation.
 
@@ -90,4 +90,3 @@ Select the appropriate severity level to help us assign the right resources to a
 Marking an issue as "Critical" means your production instance is down, and all work within Braze has stopped.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}

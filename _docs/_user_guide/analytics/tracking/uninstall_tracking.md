@@ -33,7 +33,7 @@ When uninstall tracking is turned on for an app, background push messages will b
 
 ### Configuration
 
-To configure uninstall tracking for your iOS application, use a [utility method][iOS docs]. For your Android application, use [`isUninstallTrackingPush()`][8]. When Braze detects an uninstall, whether from uninstall tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute and can be used to define a segment of users for win-back campaigns.
+To configure uninstall tracking for your iOS application, use a [utility method]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift). For your Android application, use [`isUninstallTrackingPush()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html). When Braze detects an uninstall, whether from uninstall tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute and can be used to define a segment of users for win-back campaigns.
 
 ## Filtering segments by uninstalls
 
@@ -41,7 +41,7 @@ The **Uninstalled** filter selects users who uninstalled your app within a time 
 
 Daily statistics on uninstalls are on the **Home** page. 
 
-![Uninstall segment.][5]
+![Uninstall segment.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
 The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then, scroll down to the **Performance Over Time** graph and do the following:
 
@@ -59,7 +59,7 @@ Campaign uninstall tracking shows the number of users who received a specific ca
 
 Uninstall statistics for campaigns are located on a specific campaign's **Campaign Analytics** page. For multichannel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
 
-![Uninstall at the campaign-level.][6]
+![Uninstall at the campaign-level.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### How it works
 
@@ -71,7 +71,7 @@ Braze tracks uninstalls by observing when push messages sent to users' devices r
 
 Uninstall tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tell us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, uninstall tracking should be used to detect directional trends as opposed to precise statistics.
 
-For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations][7].
+For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## Troubleshooting
 
@@ -85,11 +85,3 @@ The difference is expected.
 
 Apple uses a randomized schedule to delay reporting when a push token becomes invalid, meaning that even after a user uninstalls an app, APNs may continue to return successful responses to push notifications for a period of time. This delay is intentional and designed to protect user privacy. No bounce or failure will be reported until APNs returns a `410` status for an invalid token.
 
-[1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Uninstall Tracking Checkbox"
-[2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection"
-[4]: {% image_buster /assets/img_archive/User_Profile.png %} "Uninstall Attribute"
-[5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment"
-[6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
-[7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[iOS docs]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html

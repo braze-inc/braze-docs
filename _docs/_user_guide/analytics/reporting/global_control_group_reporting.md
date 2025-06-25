@@ -18,7 +18,7 @@ To view a report for your [Global Control Group]({{site.baseurl}}/user_guide/eng
 
 Next, select the parameter you wish to run your report with (sessions or a particular custom event) and select **Run Report**.
 
-![][6]
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## Configuring your report
 
@@ -49,4 +49,3 @@ Each workspace has a maximum of one Global Control Group and one treatment sampl
 | Events Per User | The estimated average number of times users in each group completed your conversion events during the selected time period. | Total events ÷ estimated group size. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

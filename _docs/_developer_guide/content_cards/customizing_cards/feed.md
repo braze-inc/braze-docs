@@ -360,7 +360,7 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/).
 {% endsubtab %}
 {% subtab Jetpack Compose %}
-To customize the "empty feed" error message with Jetpack Compose, you can pass in an `emptyString` to `ContentCardsList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
+To customize the "empty feed" error message with Jetpack Compose, you can pass in an `emptyString` to [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). You can also pass in [`emptyTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html#1193499348%2FProperties%2F-1725759721) to `ContentCardListStyling` to further customize this message.
 
 ```kotlin
 ContentCardsList(
@@ -371,7 +371,7 @@ ContentCardsList(
 )
 ```
 
-If you have a Composable you would like to display instead, you can pass in `emptyComposable` to `ContentCardsList`. If `emptyComposable` is specified, the `emptyString` will not be used.
+If you have a Composable you would like to display instead, you can pass in `emptyComposable` to [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). If `emptyComposable` is specified, the `emptyString` will not be used.
 
 ```kotlin
 ContentCardsList(
@@ -437,7 +437,7 @@ Once key-value pairs have been assigned, create a feed with logic that will disp
 {% subtabs %}
 {% subtab android view system %}
 
-By default, the Content Card feed is displayed in a [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) and `IContentCardsUpdateHandler` returns a list of cards to display after receiving a [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) from the Braze SDK. However, it only sorts cards and doesn't handle any filtering directly.
+By default, the Content Card feed is displayed in a [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) and [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) returns a list of cards to display after receiving a [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) from the Braze SDK. However, it only sorts cards and doesn't handle any filtering directly.
 
 #### Step 2.1: Create a custom handler
 
@@ -524,7 +524,7 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
 
 #### Step 2.2: Add it to a fragment
 
-After you've created a `IContentCardsUpdateHandler`, create a `ContentCardsFragment` that uses it. This custom feed can be used like any other `ContentCardsFragment`. In the different parts of your app, display different Content Card feeds based on the key provided on the dashboard. Each `ContentCardsFragment` feed will have a unique set of cards displayed thanks to the custom `IContentCardsUpdateHandler` on each fragment.
+After you've created a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html), create a [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) that uses it. This custom feed can be used like any other `ContentCardsFragment`. In the different parts of your app, display different Content Card feeds based on the key provided on the dashboard. Each `ContentCardsFragment` feed will have a unique set of cards displayed thanks to the custom `IContentCardsUpdateHandler` on each fragment.
 
 {% details Show Java example %}
 ```java

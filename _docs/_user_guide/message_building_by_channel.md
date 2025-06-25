@@ -25,8 +25,8 @@ guide_featured_list:
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS & MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: SMS, MMS, and RCS
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/

@@ -27,6 +27,9 @@ guide_featured_list:
 - name: Multiple Store Support
   link: /docs/shopify_connecting_multiple_stores/
   image: /assets/img/braze_icons/shopping-bag-01.svg
+- name: Unique Discount Codes
+  link: /docs/shopify_discount_codes/
+  image: /assets/img/braze_icons/tag-01.svg
 
 guide_menu_title: "Other articles"
 guide_menu_list:

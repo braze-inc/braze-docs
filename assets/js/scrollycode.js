@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const codeBlocks = [...block.querySelectorAll(".code-blocks pre")];
 
     let currentIndex = 0; // active narrative step index for this block
+    let isProgrammaticScroll = false;
 
     // Helper: Return the currently active <pre> element.
     function getActiveCodeBlock() {
@@ -51,59 +52,94 @@ document.addEventListener("DOMContentLoaded", () => {
       codeElem.innerHTML = "";
       codeElem.appendChild(fragment);
       updateHighlightOverlay();
+      scrollCodeToHighlight();
+    }
+
+    function scrollCodeToHighlight() {
+      const activePre = getActiveCodeBlock();
+      if (!activePre) return;
+
+      // Find the first highlighted line
+      const firstHl = activePre.querySelector(
+        '.code-line[data-highlight="true"]'
+      );
+      if (!firstHl) return;
+
+      // Compute its offset *inside* the pre
+      const hlOffset = firstHl.offsetTop;
+      const hlHeight = firstHl.clientHeight;
+      const containerHt = activePre.clientHeight;
+
+      // Target so that the highlighted line sits vertically centered
+      const scrollTo = hlOffset - containerHt / 2 + hlHeight / 2;
+
+      activePre.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
     }
 
     // Create or update overlays for highlighted lines.
     function updateHighlightOverlay() {
       const activePre = getActiveCodeBlock();
       if (!activePre) return;
-      const codeElem = activePre.querySelector("code");
-      if (!codeElem) return;
-      // Remove any existing overlays.
+
+      // ensure <pre> is positioning context
+      if (getComputedStyle(activePre).position === "static") {
+        activePre.style.position = "relative";
+      }
+
+      // clear old overlays…
       activePre
         .querySelectorAll(".highlight-overlay")
         .forEach((el) => el.remove());
-      const highlightedLines = Array.from(
-        codeElem.querySelectorAll(".code-line[data-highlight='true']")
-      );
-      if (highlightedLines.length === 0) return;
 
-      const containerRect = activePre.getBoundingClientRect();
-      // Group contiguous highlighted lines.
-      let groups = [];
-      let currentGroup = [highlightedLines[0]];
-      for (let i = 1; i < highlightedLines.length; i++) {
-        const prevRect = highlightedLines[i - 1].getBoundingClientRect();
-        const currRect = highlightedLines[i].getBoundingClientRect();
-        if (Math.abs(currRect.top - prevRect.bottom) < 2) {
-          currentGroup.push(highlightedLines[i]);
+      const codeElem = activePre.querySelector("code");
+      if (!codeElem) return;
+
+      // pull out all the highlighted code-line spans
+      const highlighted = Array.from(
+        codeElem.querySelectorAll('.code-line[data-highlight="true"]')
+      );
+      if (!highlighted.length) return;
+
+      // group contiguous runs…
+      const groups = [];
+      let run = [highlighted[0]];
+      for (let i = 1; i < highlighted.length; i++) {
+        const prev = highlighted[i - 1],
+          curr = highlighted[i];
+        if (
+          Math.abs(curr.offsetTop - (prev.offsetTop + prev.offsetHeight)) < 2
+        ) {
+          run.push(curr);
         } else {
-          groups.push(currentGroup);
-          currentGroup = [highlightedLines[i]];
+          groups.push(run);
+          run = [curr];
         }
       }
-      groups.push(currentGroup);
+      groups.push(run);
 
+      // compute the pre's top padding:
+      const preStyle = getComputedStyle(activePre);
+      const prePaddingTop = parseFloat(preStyle.paddingTop) || 0;
+
+      // for each group, position one overlay
       groups.forEach((group) => {
-        let groupTop = Infinity,
-          groupBottom = -Infinity;
-        group.forEach((line) => {
-          const rect = line.getBoundingClientRect();
-          const relTop = rect.top - containerRect.top;
-          const relBottom = rect.bottom - containerRect.top;
-          if (relTop < groupTop) groupTop = relTop;
-          if (relBottom > groupBottom) groupBottom = relBottom;
-        });
-        const newHeight = groupBottom - groupTop;
+        const first = group[0];
+        const last = group[group.length - 1];
+
+        // original offsetTop is relative to the code element;
+        // now we add the pre's top padding so it aligns under the spans
+        const top = first.offsetTop + prePaddingTop;
+        const height = last.offsetTop + last.offsetHeight - first.offsetTop;
+
         const overlay = document.createElement("div");
         overlay.className = "highlight-overlay";
-        overlay.style.top = groupTop + "px";
-        overlay.style.height = newHeight + "px";
-        overlay.style.opacity = "0";
+        overlay.style.top = `${top}px`;
+        overlay.style.height = `${height}px`;
+        overlay.style.width = codeElem.scrollWidth + "px";
         activePre.appendChild(overlay);
-        requestAnimationFrame(() => {
-          overlay.style.opacity = "1";
-        });
       });
     }
 
@@ -157,31 +193,38 @@ document.addEventListener("DOMContentLoaded", () => {
       highlightLines(highlightList);
     }
 
+    const PREFERRED_TOP_OFFSET = 100;
     // Determine the closest narrative step based on scroll position.
     function getClosestStep() {
-      // workaround to make sure the first step is selected while scrolling back up
-      if (stepsContainer.scrollTop < 5) return 0;
-      // workaround to make sure the last step is selected while scrolling down
-      if (
-        stepsContainer.scrollTop >
-        stepsContainer.scrollHeight - stepsContainer.clientHeight - 5
-      )
-        return steps.length - 1;
-      const style = getComputedStyle(stepsContainer);
-      const paddingBottom = parseFloat(style.paddingBottom) || 0;
-      const effectiveHeight = stepsContainer.clientHeight + paddingBottom;
-      const centerY = stepsContainer.scrollTop + effectiveHeight * 0.5;
+      // 1) If we’re within 1px of the bottom, immediately return the last real step
+      const scrollBottom =
+        stepsContainer.scrollTop + stepsContainer.clientHeight;
+      if (scrollBottom >= stepsContainer.scrollHeight - 1) {
+        // find the index of the last *non-rating* step
+        const normalSteps = steps.filter(
+          (s) => !s.classList.contains("rating-step")
+        );
+        return steps.indexOf(normalSteps[normalSteps.length - 1]);
+      }
+
+      // 2) Otherwise, fall back to your existing “20px from top” midpoint logic:
+      const containerRect = stepsContainer.getBoundingClientRect();
+      const referenceY = containerRect.top + PREFERRED_TOP_OFFSET;
+
       let closestIdx = currentIndex;
       let minDistance = Infinity;
+
       steps.forEach((step, i) => {
-        // Use offsetTop relative to the scroll container.
-        const mid = step.offsetTop + step.offsetHeight / 2;
-        const distance = Math.abs(mid - centerY);
+        if (step.classList.contains("rating-step")) return;
+        const stepRect = step.getBoundingClientRect();
+        const stepMidY = stepRect.top + stepRect.height / 2;
+        const distance = Math.abs(stepMidY - referenceY);
         if (distance < minDistance) {
           minDistance = distance;
           closestIdx = i;
         }
       });
+
       return closestIdx;
     }
 
@@ -189,17 +232,72 @@ document.addEventListener("DOMContentLoaded", () => {
     const stepsContainer = block.querySelector(".scrolly-text");
     // Attach scroll event to the steps container instead of the window.
     stepsContainer.addEventListener("scroll", () => {
+      if (isProgrammaticScroll) return;
       const idx = getClosestStep();
       if (idx !== currentIndex) {
         activateStep(idx);
       }
     });
 
-    // Clicking on a narrative step activates it.
+    const normalSteps = steps.filter(
+      (s) => !s.classList.contains("rating-step")
+    );
+    const lastStep = normalSteps[normalSteps.length - 1];
+    const ratingStep = block.querySelector(".rating-step");
+
+    // Compute & apply the adaptive bottom buffer:
+    function updateBottomBuffer() {
+      const containerH = stepsContainer.clientHeight;
+      const ratingH = ratingStep.clientHeight;
+      const lastStepH = lastStep.clientHeight;
+
+      const buffer = Math.max(
+        0,
+        containerH - ratingH - lastStepH - PREFERRED_TOP_OFFSET
+      );
+      stepsContainer.style.paddingBottom = `${buffer}px`;
+    }
+
+    updateBottomBuffer();
+    window.addEventListener("resize", updateBottomBuffer);
+
     steps.forEach((step, i) => {
       step.addEventListener("click", () => {
-        step.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (step.classList.contains("rating-step")) return;
+
+        isProgrammaticScroll = true;
+
+        // ─── Compute “rawTarget” via bounding rectangles ───
+        // 1) Where is the container on screen?
+        const containerRect = stepsContainer.getBoundingClientRect();
+        // 2) Where is this step on screen?
+        const stepRect = step.getBoundingClientRect();
+        // 3) How many pixels between step.top and container.top?
+        const distanceToContainerTop = stepRect.top - containerRect.top;
+        // 4) Subtract PREFERRED_TOP_OFFSET so the step ends up that many px down
+        const rawTarget =
+          stepsContainer.scrollTop +
+          distanceToContainerTop -
+          PREFERRED_TOP_OFFSET;
+
+        // ─── Clamp to [0, maxScroll] ───
+        const maxScroll =
+          stepsContainer.scrollHeight - stepsContainer.clientHeight;
+        const targetScroll = Math.max(0, Math.min(rawTarget, maxScroll));
+
+        // ─── Smooth-scroll the container ───
+        stepsContainer.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+
+        // ─── Immediately activate/highlight this step ───
         activateStep(i);
+
+        // ─── Re-enable normal scroll logic after the animation ───
+        setTimeout(() => {
+          isProgrammaticScroll = false;
+        }, 400);
       });
     });
 
@@ -218,12 +316,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    const codeContainer = block.querySelector(".scrolly-code .code-animate");
+    codeContainer.addEventListener("scroll", updateHighlightOverlay);
+
     // IntersectionObserver to handle blocks that are initially hidden.
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // When the block becomes visible, re-activate its current step.
+            updateBottomBuffer();
             activateStep(currentIndex);
           }
         });
@@ -231,6 +333,58 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0.1 }
     );
     observer.observe(block);
+
+    // === rating prompt handler ===
+    const stars = Array.from(ratingStep.querySelectorAll(".star"));
+    stars.forEach((star, idx) => {
+      star.addEventListener("click", () => {
+        const rating = 5 - idx;
+
+        // 1) Log to Braze
+        if (window.braze?.logCustomEvent) {
+          braze.logCustomEvent("Tutorial Rating", {
+            tutorial: feedback_site,
+            rating,
+          });
+          braze.requestImmediateDataFlush();
+        }
+
+        // 2) Send to feedback.js's network request
+        var submit_data = {
+          Helpful:
+            rating === 5
+              ? "Very Helpful"
+              : rating === 4
+              ? "Helpful"
+              : rating === 3
+              ? "Somewhat Helpful"
+              : rating === 2
+              ? "Unhelpful"
+              : "Very Unhelpful",
+          URL: feedback_site,
+          "Article Title": feedback_article_title,
+          "Nav Title": feedback_nav_title,
+          Params: window.location.search,
+          Language: page_language,
+        };
+        console.log("Sending feedback data:", submit_data);
+        $.ajax({
+          url: "https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/feedback",
+          method: "GET",
+          dataType: "json",
+          data: submit_data,
+        });
+
+        // 3) Update UI
+        stars.forEach((s, i) => {
+          s.classList.toggle("selected", i < rating);
+        });
+        ratingStep.classList.add("rated");
+
+        // 4) disable further clicks
+        stars.forEach((s) => (s.style.pointerEvents = "none"));
+      });
+    });
 
     // Initialize this block after a short delay.
     setTimeout(() => {

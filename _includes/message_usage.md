@@ -25,7 +25,7 @@ If you purchased WhatsApp but aren't on a message credits contract, you'll still
 
 The **Message Credits Usage over Contract** graph shows your usage over the selected period of time. The granularity of this chart depends on your selected time frame. Export export options by selecting the menu in the top right corner of the chart.
 
-![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.][1]{: style="max-width:70%;"}
+![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
 ## SMS, MMS, and RCS
 
@@ -33,7 +33,7 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 Filters are available allowing you to filter by **Country** or SMS and RCS type.
 
-![SMS/MSS/RCS Credits Usage with tiles for high-level data and a section for consumption by account.][2]{: style="max-width:70%;"}
+![SMS/MSS/RCS Credits Usage with tiles for high-level data and a section for consumption by account.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 Unlike the **Message Credits Usage Overview**, this section contains historical data from prior contract periods. 
 
@@ -41,7 +41,7 @@ Unlike the **Message Credits Usage Overview**, this section contains historical 
 It’s possible to select a date range that contains both non-credits and message credits usage. In this case, the consumption that occurred outside of message credits will display `—` (null) in the **Credit ratio** and **Credits** columns.
 {% endalert %}
 
-![SMS/MMS/RCS Credits Usage table with null values.][3]{: style="max-width:70%;"}
+![SMS/MMS/RCS Credits Usage table with null values.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -56,7 +56,7 @@ You can filter your data by:
 - Conversation category type
 - Region
 
-![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.][4]{: style="max-width:70%;"}
+![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
 
 ## Things to know
 
@@ -67,7 +67,3 @@ The data shown in the **Message Usage** dashboard is at the contract level and i
 - The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. 
 - Braze follows standard rounding methodology: numbers are rounded up to the nearest tenth.
 
-[1]: {% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}
-[2]: {% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}
-[3]: {% image_buster /assets/img/app_settings/sms_table_null3.png %}
-[4]: {% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}
