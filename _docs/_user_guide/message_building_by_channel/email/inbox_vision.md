@@ -74,13 +74,13 @@ To check your spam test results, do the following:
 2. Review these results and making any adjustments to your email campaign.
 3. Select **Re-run Test** to reload your spam test results.
 
-## Test accuracy
-
-All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
-
 ## Accessibility testing
 
-Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.2 AA requirements below. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. The tool automatically checks for common accessibility issues, such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes.
+Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)). WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. 
+
+### How it works
+
+When you run an Inbox Vision test, the tool automatically checks for common email accessibility issues in the [WCAG 2.2 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa), such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes. 
 
 {% alert important %}
 Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
@@ -116,43 +116,15 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 | Passed | Passed WCAG A, AA, or accessibility best practice. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Understanding automated accessibility testing
-
-Automated accessibility testing is a great starting point—but it can't catch everything. Some issues need a human touch to evaluate properly, especially when context or visual design plays a role in how users experience your email.
-
 {% alert important %}
 The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner will always fail this check.<br><br>
 We're tracking this limitation for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize the most impactful fixes.
 {% endalert %}
 
-You may see some issues marked as **Needs review**. These are cases where the checker can't tell for sure if something is a problem for accessibility. When that happens, we recommend reviewing it manually.
+### Understanding automated accessibility testing
 
-Some examples of what automated tools can't reliably detect include:
+{% multi_lang_include accessibility/automated_testing.md %}
 
-- If focus order of interactive elements follows a logical sequence
-- If content is fully operable with a keyboard, without requiring a mouse
-- If alt text meaningfully describes an image
-- If headings are used properly to organize content
-- If links and buttons are clearly labeled and easy to understand
-- If touch targets are large enough and spaced appropriately
-- If text on background images meets color contrast requirements
-- If instructions or labels are clear and helpful to all users
+## Test accuracy
 
-These limitations aren't unique to Braze&#8212;they're common to all automated accessibility tools. Inbox Vision renders your message in a simulated inbox environment, but it can't mimic every assistive technology, screen reader, or user need. That's why accessibility isn't a one-time checkbox&#8212;it's a continuous practice.
-
-To help ensure your messages are usable by more people:
-
-- Review flagged issues carefully, especially those labeled as **Needs review**.
-- Test manually where possible, especially for layout and interaction patterns.
-- Use tools like screen readers, keyboard-only navigation, and browser zoom to simulate different access needs.
-
-For tips and practical examples, check out [Accessibility at Braze]({{site.baseurl}}/help/accessibility), where you'll find guidance on:
-
-- [Headings and structure]({{site.baseurl}}/help/accessibility/#content)
-- [Images and alt text]({{site.baseurl}}/help/accessibility/#images) 
-- [Links]({{site.baseurl}}/help/accessibility/#links) and [buttons]({{site.baseurl}}/help/accessibility/#buttons)
-- [Color contrast]({{site.baseurl}}/help/accessibility/#color-contrast)
-- [Touch targets]({{site.baseurl}}/help/accessibility/#touch-targets)
-
-By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.
-
+All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).

@@ -588,3 +588,43 @@ Emails created in the email drag-and-drop editor have presentational elements au
 <div aria-live="polite">Your preferences have been saved.</div>
 ```
 {% endraw %}
+
+## Automated accessibility testing
+
+To help you identify and fix accessibility issues early, Braze offers automated accessibility testing in the following areas:
+
+- [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) for emails
+- [Accessibility scanner]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) for in-app messages (custom HTML only)
+
+These tests check your message against the Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standard—a set of internationally recognized technical standards for accessible content. Any issues that can be detected automatically are flagged and categorized by severity to help you prioritize.
+
+{% alert note %}
+Inbox Vision works for both HTML and drag-and-drop emails. The in-app message scanner only runs on messages built with the custom HTML editor.
+{% endalert %}
+
+### What automated testing can and can't catch
+
+Automated accessibility testing is a great starting point—but it can't catch everything. Some issues need a human touch to evaluate properly, especially when context or visual design plays a role in how users experience your email.
+
+You may see some issues marked as **Needs review**. These are cases where the checker can't tell for sure if something is a problem for accessibility. When that happens, we recommend reviewing it manually.
+
+Some examples of what automated tools can't reliably detect include:
+
+- If focus order of interactive elements follows a logical sequence
+- If content is fully operable with a keyboard, without requiring a mouse
+- If alt text meaningfully describes an image
+- If headings are used properly to organize content
+- If links and buttons are clearly labeled and easy to understand
+- If touch targets are large enough and spaced appropriately
+- If text on background images meets color contrast requirements
+- If instructions or labels are clear and helpful to all users
+
+These limitations aren't unique to Braze&#8212;they're common to all automated accessibility tools. Automated checks can't mimic every assistive technology, screen reader, or user need. That's why accessibility isn't a one-time check&#8212;it's a continuous practice.
+
+Even if your message passes every automated check, it’s still important to:
+
+- Review flagged issues carefully, especially those labeled as **Needs review**.
+- Test manually where possible, especially for layout and interaction patterns.
+- Use tools like screen readers, keyboard-only navigation, and browser zoom to simulate different access needs.
+
+By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.

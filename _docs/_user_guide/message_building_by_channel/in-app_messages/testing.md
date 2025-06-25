@@ -49,26 +49,28 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
-## Accessibility Scanner
+## Accessibility scanner
+
+To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standards. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities.
 
 ![Accessibility scan results]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
 
-### Overview
-To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet [WCAG 2.1 AA standards](https://www.w3.org/WAI/standards-guidelines/wcag/), the internationally recognized guidelines for making web content more inclusive for people with disabilities.
-
-This check only applies to custom HTML IAMs—it does not currently support messages built with the drag-and-drop editor.
+{% alert note %}
+The in-app message accessibility scanner only runs on messages built with custom HTML. 
+{% endalert %}
 
 ### How it works
-The scanner runs automatically and evaluates your full HTML message against the full [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) 2.1 AA rule set. For each flagged issue, it shows:
+
+The scanner runs automatically on custom HTML messages and evaluates your entire HTML message against the full [WCAG 2.1 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). For each flagged issue, it shows:
 
 - The specific HTML element involved
 - A description of the accessibility issue
 - A link to additional context or remediation guidance
 
-### Important Notes
-- Not Comprehensive: The Accessibility Scanner is intended as a helpful diagnostic tool, not a complete accessibility audit. It may not catch every possible issue.
-- For Informational Use: Results should be used as a starting point. We recommend validating your messages with full accessibility audits using tools like axe DevTools or engaging with accessibility specialists as needed.
-- Best for HTML Messages: This scanner currently only runs on Custom HTML message bodies and does not evaluate content generated through drag-and-drop or WYSIWYG editors.
+### Understanding automated accessibility testing
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
 
 
 
