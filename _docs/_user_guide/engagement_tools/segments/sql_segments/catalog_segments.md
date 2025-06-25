@@ -54,6 +54,18 @@ LIMIT 10
 ```
 {% endalert %}
 
+## Refreshing segment membership
+
+To refresh the segment membership of any catalog segment, open the catalog segment and select **Actions** > **Refresh** > **Yes, Refresh**.
+
+{% alert tip %}
+If you created a segment where you expect users to enter and exit regularly, manually refresh the catalog segment it uses before targeting that segment in a campaign or Canvas.
+{% endalert %}
+
+### Designating refresh settings
+
+{% multi_lang_include segments.md section='Refresh settings' %}
+
 ## Use cases
 
 ### Health app

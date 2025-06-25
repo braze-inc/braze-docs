@@ -11,7 +11,7 @@ description: "Learn how to generate images for your media library using DALL·E 
 
 ## About the media library
 
-The media library allows you to manage your assets in a single, centralized location. To access your Braze media library, go to THIS > **Templates**. For more detailed information, see [Media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
+The media library allows you to manage your assets in a single, centralized location. To access your Braze media library, go to **Templates** > **Media Library**. For more detailed information, see [Media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
 
 ## Generating an image
 
