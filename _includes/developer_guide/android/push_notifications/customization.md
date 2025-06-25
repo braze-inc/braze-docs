@@ -11,86 +11,85 @@ config:
 ---
 flowchart TD
 
-%% Permission Flow
-subgraph Permission[Push Permission Granting]
-    B{Android Version?}
+%% Permission flow
+subgraph Permission[Push permission granting]
+    B{Android version of the device?}
     B -->|Android 13+| C["requestPushPermissionPrompt() called"]
     B -->|Android 12 and earlier| D[No permissions required]
     
     %% Connect Android 12 path to Braze state
-    D --> H3[Braze: User Subscription State]
-    H3 --> J3[Defaults to 'Subscribed' when user profile created]
+    D --> H3[Braze: user subscription state]
+    H3 --> J3[Defaults to 'subscribed' when user profile created]
     
-    C --> E{User Grants Permission?}
-    E -->|Yes| F[POST_NOTIFICATIONS Permission Granted]
-    E -->|No| G[POST_NOTIFICATIONS Permission Denied]
+    C --> E{Did the user grant push permission?}
+    E -->|Yes| F[POST_NOTIFICATIONS permission granted]
+    E -->|No| G[POST_NOTIFICATIONS permission denied]
     
-    %% Braze Subscription State Updates
-    F --> H1[Braze: User Subscription State]
-    G --> H2[Braze: User Subscription State]
+    %% Braze subscription state updates
+    F --> H1[Braze: user subscription state]
+    G --> H2[Braze: user subscription state]
     
-    H1 --> I1{Opt-in When Push Authorized?}
-    I1 -->|true| J1[Set to 'Opted-In']
-    I1 -->|false| J2[Remains 'Subscribed']
+    H1 --> I1{Automatically opt in after permission granted?}
+    I1 -->|true| J1[Set to 'opted-in']
+    I1 -->|false| J2[Remains 'subscribed']
     
-    H2 --> K1[Remains 'Subscribed'<br/>or 'Unsubscribed']
+    H2 --> K1[Remains 'subscribed'<br/>or 'unsubscribed']
     
-    %% Subscription State Legend
-    subgraph BrazeStates[Braze Subscription States]
-        L1['Subscribed' - Default state<br/>when user profile created]
-        L2['Opted-In' - User explicitly<br/>wants push notifications]
-        L3['Unsubscribed' - User explicitly<br/>opted out of push]
+    %% Subscription state legend
+    subgraph BrazeStates[Braze subscription states]
+        L1['Subscribed' - default state<br/>when user profile created]
+        L2['Opted-in' - user explicitly<br/>wants push notifications]
+        L3['Unsubscribed' - user explicitly<br/>opted out of push]
     end
     
     %% Note about user-level states
-    note1[Note: These states are user-level<br/>and apply across all user devices]
+    note1[Note: These states are user-level<br/>and apply across all devices for the user]
     
     %% Connect states to legend
     J1 -.-> L2
     J2 -.-> L1
     J3 -.-> L1
-    %% K1 -.-> L1
     K1 -.-> L3
     note1 -.-> BrazeStates
 end
 
-%% Token Generation Flow
-subgraph Token[Push Token Generation]
-    H["Braze SDK Initialized"] --> Q{FCM auto registration is enabled?}
-    Q -->|Yes| L{Has Required Configuration?}
-    Q -->|No| M[No FCM Token Generated]
-    L -->|Yes| I[Generate FCM Token]
+%% Token generation flow
+subgraph Token[Push token generation]
+    H["Braze SDK initialized"] --> Q{Is FCM auto-registration enabled?}
+    Q -->|Yes| L{Is required configuration present?}
+    Q -->|No| M[No FCM token generated]
+    L -->|Yes| I[Generate FCM token]
     L -->|No| M
-    I --> K[Register Token with Braze]
+    I --> K[Register token with Braze]
 
-    %% Configuration Requirements
-    subgraph Config[Required Configuration]
+    %% Configuration requirements
+    subgraph Config[Required configuration]
         N['google-services.json' file is present]
         O['com.google.firebase:firebase-messaging' in gradle]
         P['com.google.gms.google-services' plugin in gradle]
     end
 
-    %% Connect Config to Check
+    %% Connect config to check
     N -.-> L
     O -.-> L
     P -.-> L
 end
 
-subgraph Display[Push Display]
-    %% Push Delivery Flow
-    W[Push Sent to FCM Servers] --> X{FCM/Google Play Services Gets Push}
-    X -->|App is Killed| Y[FCM may not forward the push to the app]
-    X -->|Conditions OK| X1[App Receives Push from FCM/Google Play Services]
-    X1 --> X2[Braze SDK Receives Push]
-    X2 --> R[Push Type?]
+subgraph Display[Push display]
+    %% Push delivery flow
+    W[Push sent to FCM servers] --> X{Did FCM receives push?}
+    X -->|App is terminated| Y[FCM cannot deliver push to the app]
+    X -->|Delivery conditions met| X1[App receives push from FCM]
+    X1 --> X2[Braze SDK receives push]
+    X2 --> R[Push type?]
 
     %% Push Display Flow
-    R -->|User Visible| S{Is push permission required?}
-    R -->|Silent Push| T[Silent Push is Processed]
-    S -->|Yes| S1{Has push permission?}
-    S -->|No| V[User Sees Notification]
+    R -->|Standard push| S{Is push permission required?}
+    R -->|Silent push| T[Braze SDK processes silent push]
+    S -->|Yes| S1{Did the user grant push permission?}
+    S -->|No| V[Notification is shown to the user]
     S1 -->|Yes| V
-    S1 -->|No| U[User Does Not See Notification]
+    S1 -->|No| U[Notification is not shown to the user]
 end
 
 %% Styling
