@@ -1,12 +1,13 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
-## How it works {#push-lifecycle-flowchart}
+## About the push notification lifecycle {#push-notification-lifecycle}
 
-{% details Show Android Push Lifecycle Flowchart %}
+The following Android push notification lifecycle flowchart shows how Braze handles permission prompts, token generation, and message delivery.
+
 ```mermaid
 ---
 config:
-  theme: mc
+  theme: neutral
 ---
 flowchart TD
 
@@ -109,7 +110,6 @@ class R,S,S1,T,U,V displayClass
 class W,X,X1,X2,Y,Z deliveryClass
 class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
 ```
-{% enddetails %}
 
 ## Using a callback for push events {#push-callback}
 
