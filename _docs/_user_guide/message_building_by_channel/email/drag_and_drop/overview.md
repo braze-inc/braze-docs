@@ -266,3 +266,10 @@ To set up universal links, refer to [Universal links and App Links]({{site.baseu
 
 Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 
+Lastly, pre-defined attributes are available to ensure your message is Accessible.  Learn more about how to [Build Accessible Messages at Braze]({{site.base.url}}/docs/help/accessibility).
+
+### Setting Language for an Email
+
+Braze allows setting the language attribute.  To set the language, go to the Settings column and select the desired language or target the user attribute 'language' if the message is targeting users with dynamic language values.
+![Setting the Language Value for an Email]({% image_buster /assets/img/dnd/language_setting_dnd.png %})
+
