@@ -59,7 +59,7 @@ After launching a Content Cards step in Canvas you can begin to analyze several 
 
 ![Analytics for a Message step with the Content Card message performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
-For more information on the available metrics and their definitions, see our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+For more information on the available metrics and their definitions, see our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 ## Use cases
 

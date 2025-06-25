@@ -109,7 +109,7 @@ To successfully configure this, you will also need to select what happens if the
 
 Let's say that it's June 10. On June 11, you'd like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17 at 3 pm local time. At 3 pm local time on June 17, you want to send users a reminder message about the promotion.
 
-The sequence Canvas steps could look like the following:
+The sequence of Canvas steps could look like the following:
 
 1. Start by adding a Message step that sends immediately after users enter the Canvas on June 11.
 2. Create a Delay step that holds users until 1 pm local time on June 17.
@@ -117,17 +117,18 @@ The sequence Canvas steps could look like the following:
 
 ### Delay components at the end of a Canvas {#delay-as-last-step}
 
-If you add a Delay component to your Canvas, but there are no more steps after the delay component, any user that reaches the last step is automatically advanced out of the Canvas. This is true even if the time of the Delay step hasn't been reached yet. This means that, for users that have already reached the Delay step, they will not receive any messages you add after the Delay step. However, if a user has not reached the Delay step and a message is added, then they would receive that message.
+If you add a Delay component to your Canvas and there are no subsequent steps, any user who reaches the last step will be automatically advanced out of the Canvas. This is true even if the time of the Delay step hasn't been reached yet. This means that users who have already reached the Delay step will not receive any messages you add after this step. However, if a user has not reached the Delay step and a message is added, then they would receive that message.
 
 ## Delay analytics
 
-Delays have three statistics available in the analytics view of an active or previously active Canvas.
+Delay components have the following metrics available in the analytics view of an active or previously active Canvas.
 
 | Metric | Description |
 |---|---|
 | _Entered_ | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Delay step twice, two entries will be recorded. |
 | _Proceeded to Next Step_ | Reflects the number of entries that proceeded to the next step in the Canvas. |
 | _Exited Canvas_ | Reflects the number of entries that exited the Canvas and did not proceed to the next step. |
+| _Personalization Failed_ | Reflects the number of times a personalized message or content intended for a user couldn't be delivered due to the following:<br> {::nomarkdown}<ul><li>Delay value is in the past</li><li>Delay value is over 2 years into the future</li><li><b>After a duration</b> value isn't a number</li><li><b>Until a specific day</b> value isn't a date or date-formatted string</li></ul>{:/} <br>See [Personalization failed errors](#personaliztion-failed-errors) for more details. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Time series for these analytics are available in the expanded component view.

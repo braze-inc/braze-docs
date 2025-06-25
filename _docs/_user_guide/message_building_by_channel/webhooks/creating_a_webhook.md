@@ -85,7 +85,7 @@ Braze only allows URLs that communicate over standard ports `80` (HTTP) and `443
 
 ##### Using Liquid
 
-You can personalize your webhook URLs using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/). At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. When using Liquid, make sure to include a [default value]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) for each piece of user-specific information that you use in your URL.
+You can personalize your webhook URLs using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/). At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. When using Liquid, make sure to include a [default value]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) for each piece of user-specific information that you use in your URL.
 
 #### HTTP method
 
@@ -101,7 +101,7 @@ JSON key-value pairs allow you to easily write a request for an endpoint that ex
 
 ![Request body set to JSON key-value pairs.]({% image_buster /assets/img/webhook_json_1.png %})
 
-You can personalize your key-value pairs using Liquid, such as including any user attribute, [custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices), or [event property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in your request. For example, you can include a customer's first name and email in your request. Be sure to include a [default value]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) for each attribute.
+You can personalize your key-value pairs using Liquid, such as including any user attribute, [custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices), or [event property]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in your request. For example, you can include a customer's first name and email in your request. Be sure to include a [default value]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) for each attribute.
 
 ##### Raw text
 
@@ -195,7 +195,7 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/).
+Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
 
 This description contains the time the error occurred, the app name, and the error message:
 

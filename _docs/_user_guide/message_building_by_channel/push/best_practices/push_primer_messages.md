@@ -69,7 +69,7 @@ android.permission.POST_NOTIFICATIONS
 
 ## Step 1: Create an in-app message
 
-[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) as you usually would.
+[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) as you usually would.
 
 Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a fullscreen in-app message, an image is required. 
 
@@ -85,7 +85,7 @@ While a streaming app might use the following:
 
 > Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
 
-For best practices and additional resources, refer to [Creating custom opt-in prompts]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/).
+For best practices and additional resources, refer to [Creating custom opt-in prompts]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 ## Step 3: Specify button behavior {#button-actions}
 
