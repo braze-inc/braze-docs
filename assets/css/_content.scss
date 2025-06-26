@@ -1140,21 +1140,24 @@ blockquote {
 }
 
 svg[id^="mermaid"] {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	font-size: 18px;
+  height: auto;
+  max-height: 800px;
+  width: 100%;
+  display: block;
+  font-size: 1rem;
 }
-  
+
 .language-mermaid {
-	overflow-x: auto;
-	overflow-y: auto;
-	padding: 1rem 0;
-	min-height: 600px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 1rem 0;
+  min-height: 600px;
+  max-height: 1000px;
 }
 
 .language-mermaid svg {
-	min-width: 800px; // adjust as needed
-	min-height: 600px; // adjust as needed
-	font-size: 18px !important;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  font-size: 1rem !important;
 }
