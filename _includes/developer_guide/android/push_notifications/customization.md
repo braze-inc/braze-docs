@@ -380,7 +380,6 @@ The summary text will display under the body of the message in the expanded view
 
 For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. 
 
-testing23
 ### Custom URIs {#custom-uri}
 
 The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app and direct users to resources that exist outside of your app. This can be specified via the [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or our dashboard under **Advanced Settings** in the push composer as pictured:
