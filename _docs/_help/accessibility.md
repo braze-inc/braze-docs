@@ -512,6 +512,10 @@ If you use any custom HTML in your messaging:
 ```
 {% endraw %}
 
+{% alert note %}
+When using the email drag-and-drop editor, the language value for the email can be set by going to the **Settings** tab and selecting the appropriate language value.
+{% endalert %}
+
 - Use [ARIA attributes](#aria-attributes) to give extra context. These attributes provide additional information to assistive technologies, helping to clarify the role, state, or properties of UI elements that may otherwise be unclear. 
 
 ### ARIA attributes
