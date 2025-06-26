@@ -5,7 +5,8 @@
 # Usage: ./bdocs deploy
 
 main() {
-    TEMP_FILE=$(mktemp)
+    TEMP_FILE="$PROJECT_ROOT/scripts/temp/deploy_output"
+
 
     # Gets the latest commit hash from origin/$PRIMARY_BRANCH that is not in origin/develop.
     LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/$PRIMARY_BRANCH ^origin/develop)
@@ -24,14 +25,25 @@ main() {
 
     # Parses the commit logs, formats them, then writes them to the temp file.
     echo "$COMMIT_LOGS" | while IFS=»¦« read -r title body; do
+        # 1. Old-style merge commits
         if [[ $title =~ Merge\ pull\ request\ \#([0-9]+) ]]; then
             PR_NUMBER=${BASH_REMATCH[1]}
             PR_TITLE=${body//¦«/}
-            # If applicable, removes the Jira ticket number from the PR title.
             PR_TITLE=$(echo "$PR_TITLE" | sed -E 's/^BD-[0-9]+[:| ]*//')
-            echo "- [#$PR_NUMBER](https://github.com/braze-inc/braze-docs/pull/$PR_NUMBER) - $PR_TITLE" >> "$TEMP_FILE"
+
+        # 2. Squash-merge commits like “Something (#1234)”
+        elif [[ $title =~ \(\#([0-9]+)\)$ ]]; then
+            PR_NUMBER=${BASH_REMATCH[1]}
+            PR_TITLE=$(echo "$title" \
+                        | sed -E 's/[[:space:]]*\(#([0-9]+)\)$//' \
+                        | sed -E 's/^BD-[0-9]+[:| ]*//')
+        else
+            continue   # skip everything else (e.g., Co-authored-by lines)
         fi
+
+        echo "- [#$PR_NUMBER](https://github.com/braze-inc/braze-docs/pull/$PR_NUMBER) - $PR_TITLE" >> "$TEMP_FILE"
     done
+
 
     # Returns the results in reverse order and clean up files.
     if command -v tac &> /dev/null
@@ -40,7 +52,7 @@ main() {
     else
         tail -r "$TEMP_FILE" # 'tail -r' is used if tac isn't available
     fi
-    rm "$TEMP_FILE"
+    #rm "$TEMP_FILE"
 }
 
 main "$1" "$2"
