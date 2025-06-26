@@ -49,7 +49,6 @@ Display your entire product catalog in an interactive format.
 You don't need to make additional product selections in Braze, as the catalog connection is managed by Meta and thus is inherited into your product catalog.
 {% endalert %}
 
-![Opened catalog message showing a list of catalog items.]({% image_buster /assets/img/whatsapp/catalog_experience.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% tab Multi-product messages %}
@@ -60,7 +59,6 @@ Highlight specific products from your catalog, with up to 30 highlighted items p
 Multi-product message templates currently have a header display bug. Meta is working on a fix.
 {% endalert %}
 
-![Opened multi-product message showing a list of catalog items.]({% image_buster /assets/img/whatsapp/multi-product_catalog_opening.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% endtabs %}
