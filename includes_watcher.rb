@@ -1,55 +1,37 @@
 #!/usr/bin/env ruby
 
-require 'find'
+require 'filewatcher'
 require 'fileutils'
 
+# This class is used to watch for changes in the _includes folder and trigger a rebuild of the parent files.
 class IncludesWatcher
-  def initialize(includes_path = '_includes')
-    @includes_path = includes_path
-    @initial_files = {}
+  def initialize()
     @running = false
   end
 
   def start
-    puts "Starting file watcher for #{@includes_path}..."
+    puts "Starting file watcher..."
     
     # Set up signal handlers for clean shutdown
     setup_signal_handlers
     
-    # Get initial list of files with modification times
-    update_initial_files
-    puts "Watching #{@initial_files.length} files in #{@includes_path}..."
-    
     @running = true
-    
-    # Watch for changes
-    loop do
-      break unless @running
-      
-      current_files = {}
-      Find.find(@includes_path) do |path|
-        if File.file?(path)
-          current_files[path] = File.mtime(path)
-        end
+
+    filewatcher = Filewatcher.new(["./_includes/"])
+    filewatcher.watch do |changes|
+      puts "\n\nchanges: #{changes}"
+      if !@running
+        puts "File watcher stopped."
+        filewatcher.stop
+        return
       end
-      
-      # Check for new, modified, or deleted files
-      new_files = current_files.keys - @initial_files.keys
-      modified_files = current_files.select { |path, mtime| @initial_files[path] && @initial_files[path] != mtime }.keys
-      deleted_files = @initial_files.keys - current_files.keys
-      
-      if !new_files.empty? || !modified_files.empty? || !deleted_files.empty?
-        changed_files = (new_files + modified_files + deleted_files).uniq
-        puts "Detected changes in _includes folder: #{changed_files.join(', ')}"
-        on_file_change(changed_files)
-        @initial_files = current_files
+
+      changes.each do |filename, event|
+        on_file_change([filename])
       end
-      
-      # Use a shorter sleep and check running status more frequently
-      sleep 0.5
     end
-    
-    puts "File watcher stopped."
+  rescue Interrupt
+    puts "File watcher interrupted, shutting down..."
   rescue => e
     puts "File watcher error: #{e.message}"
   ensure
@@ -76,24 +58,11 @@ class IncludesWatcher
 
   def cleanup
     puts "Cleaning up file watcher..."
-  end
-
-  def update_initial_files
-    @initial_files = {}
-    Find.find(@includes_path) do |path|
-      if File.file?(path)
-        @initial_files[path] = File.mtime(path)
-      end
-    end
+    stop()
   end
 
   def on_file_change(changed_files)
-    # Remove .jekyll-metadata to force rebuild
-    if File.exist?('.jekyll-metadata')
-      FileUtils.rm('.jekyll-metadata')
-      puts "Removed .jekyll-metadata to force Jekyll rebuild"
-    end
-    
+    puts "on_file_change #{changed_files}"
     # Find and trigger regeneration of parent files that include the changed files
     changed_files.each do |changed_file|
       trigger_parent_regeneration(changed_file)
@@ -102,10 +71,21 @@ class IncludesWatcher
 
   def trigger_parent_regeneration(changed_file)
     # Convert the changed file path to the include path format
-    include_path = changed_file.sub(@includes_path + '/', '')
+    # Handle both absolute and relative paths
+    if changed_file.start_with?('/')
+      # Absolute path - convert to relative path from _includes
+      include_path = changed_file.sub(/.*\/_includes\//, '')
+    else
+      # Relative path - remove _includes prefix
+      include_path = changed_file.sub(@includes_path + '/', '')
+    end
+    
+    puts "Looking for includes of: #{include_path}"
     
     # Find all markdown files in _docs that might include this file
     parent_files = find_parent_files_with_include(include_path)
+
+    puts "found parent files: #{parent_files}"
     
     parent_files.each do |parent_file|
       puts "Triggering regeneration of parent file: #{parent_file}"
@@ -117,16 +97,14 @@ class IncludesWatcher
     parent_files = []
     
     # Search in _docs directory for files that include the changed file
-    Find.find('_docs') do |path|
-      if File.file?(path) && path.end_with?('.md')
-        content = File.read(path)
-        # Look for multi_lang_include or regular include statements
-        if content.include?("multi_lang_include #{include_path}") || 
-           content.include?("include #{include_path}") ||
-           content.include?("{% multi_lang_include #{include_path} %}") ||
-           content.include?("{% include #{include_path} %}")
-          parent_files << path
-        end
+    Dir.glob('_docs/**/*.md').each do |path|
+      content = File.read(path)
+      # Look for multi_lang_include or regular include statements
+      if content.include?("multi_lang_include #{include_path}") || 
+         content.include?("include #{include_path}") ||
+         content.include?("{% multi_lang_include #{include_path} %}") ||
+         content.include?("{% include #{include_path} %}")
+        parent_files << path
       end
     end
     
@@ -156,9 +134,3 @@ class IncludesWatcher
     puts "  ✗ Error regenerating #{file_path}: #{e.message}"
   end
 end
-
-# Allow running directly
-if __FILE__ == $0
-  watcher = IncludesWatcher.new
-  watcher.start
-end 
