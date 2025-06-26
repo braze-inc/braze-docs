@@ -25,13 +25,13 @@ main() {
 
     # Parses the commit logs, formats them, then writes them to the temp file.
     echo "$COMMIT_LOGS" | while IFS=»¦« read -r title body; do
-        # 1. Old-style merge commits
+        # Parse merge commit format
         if [[ $title =~ Merge\ pull\ request\ \#([0-9]+) ]]; then
             PR_NUMBER=${BASH_REMATCH[1]}
             PR_TITLE=${body//¦«/}
             PR_TITLE=$(echo "$PR_TITLE" | sed -E 's/^BD-[0-9]+[:| ]*//')
 
-        # 2. Squash-merge commits like “Something (#1234)”
+        # Parse squash merge format
         elif [[ $title =~ \(\#([0-9]+)\)$ ]]; then
             PR_NUMBER=${BASH_REMATCH[1]}
             PR_TITLE=$(echo "$title" \
