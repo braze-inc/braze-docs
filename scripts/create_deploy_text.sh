@@ -6,7 +6,7 @@
 
 main() {
     TEMP_FILE="$PROJECT_ROOT/scripts/temp/deploy_output"
-
+    rm -f "$TEMP_FILE" # Clear contents from any previous runs
 
     # Gets the latest commit hash from origin/$PRIMARY_BRANCH that is not in origin/develop.
     LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/$PRIMARY_BRANCH ^origin/develop)
@@ -52,7 +52,6 @@ main() {
     else
         tail -r "$TEMP_FILE" # 'tail -r' is used if tac isn't available
     fi
-    #rm "$TEMP_FILE"
 }
 
 main "$1" "$2"
