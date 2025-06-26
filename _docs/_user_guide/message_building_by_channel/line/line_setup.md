@@ -109,6 +109,8 @@ After the integration process completes, Braze will automatically pull that chan
    - Channel secret
    - Channel access token
 
+If you want to add IP whitelisting in your LINE account, add all of the IP addresses listed for your cluster in [IP allowlisting]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) to your allowlist.
+
 {% alert important %}
 During integration, be sure to check that your channel secret is correct. If it's incorrect, there may be inconsistencies in the subscription status.
 {% endalert %}
