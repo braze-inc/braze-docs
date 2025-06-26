@@ -77,7 +77,7 @@ class IncludesWatcher
       include_path = changed_file.sub(/.*\/_includes\//, '')
     else
       # Relative path - remove _includes prefix
-      include_path = changed_file.sub(@includes_path + '/', '')
+      include_path = changed_file.sub('_includes/', '')
     end
     
     puts "Looking for includes of: #{include_path}"
@@ -87,9 +87,9 @@ class IncludesWatcher
 
     puts "found parent files: #{parent_files}"
     
-    parent_files.each do |parent_file|
-      puts "Triggering regeneration of parent file: #{parent_file}"
-      temporarily_modify_file(parent_file)
+    # Batch process all parent files
+    if !parent_files.empty?
+      temporarily_modify_files_batch(parent_files)
     end
   end
 
@@ -111,26 +111,37 @@ class IncludesWatcher
     parent_files
   end
 
-  def temporarily_modify_file(file_path)
-    return unless File.exist?(file_path)
+  def temporarily_modify_files_batch(file_paths)
+    return if file_paths.empty?
     
-    # Read the original content
-    original_content = File.read(file_path)
+    puts "Triggering regeneration of #{file_paths.length} parent files..."
     
-    # Add a temporary comment to trigger regeneration
-    temp_content = original_content + "\n<!-- TEMP_REGENERATE_TRIGGER -->\n"
+    # Store original contents
+    original_contents = {}
+    file_paths.each do |file_path|
+      next unless File.exist?(file_path)
+      original_contents[file_path] = File.read(file_path)
+    end
     
-    # Write the modified content
-    File.write(file_path, temp_content)
+    # Modify all files at once
+    file_paths.each do |file_path|
+      next unless File.exist?(file_path)
+      temp_content = original_contents[file_path] + "\n<!-- TEMP_REGENERATE_TRIGGER -->\n"
+      File.write(file_path, temp_content)
+    end
     
-    # Wait a moment for Jekyll to detect the change
+    # Wait once for Jekyll to detect all changes
     sleep 0.1
     
-    # Restore the original content
-    File.write(file_path, original_content)
+    # Restore all files at once
+    file_paths.each do |file_path|
+      next unless File.exist?(file_path)
+      File.write(file_path, original_contents[file_path])
+      puts "  ✓ Regenerated: #{file_path}"
+    end
     
-    puts "  ✓ Regenerated: #{file_path}"
+    puts "Completed regeneration of #{file_paths.length} files"
   rescue => e
-    puts "  ✗ Error regenerating #{file_path}: #{e.message}"
+    puts "  ✗ Error in batch regeneration: #{e.message}"
   end
 end
