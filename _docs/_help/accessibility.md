@@ -594,7 +594,7 @@ Emails created in the email drag-and-drop editor have presentational elements au
 To help you identify and fix accessibility issues early, Braze offers automated accessibility testing in the following areas:
 
 - [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) for emails
-- [Accessibility scanner]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) for messages created using our HTML editor (For example, when creating HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), or [email preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center).
+- [Accessibility scanner]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) for messages created using our HTML editor (for example, HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [email opt-in pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/opt_in_pages), and [email unsubscribe pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/unsubscribe_pages)).
 
 These tests check your message against the Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standard—a set of internationally recognized technical standards for accessible content. Any issues that can be detected automatically are flagged and categorized by severity to help you prioritize.
 
