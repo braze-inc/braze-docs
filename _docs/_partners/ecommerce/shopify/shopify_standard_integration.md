@@ -218,6 +218,10 @@ Web push currently isn't supported for the Shopify integration. If you want to s
 
 If you wish to see this supported in the future, submit a product request through the Braze [product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
+#### In-browser messages
+
+Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+
 ## Step 7: Finish setup
 
 1. After you configure your setup, select **Finish Setup**.
@@ -228,4 +232,3 @@ If you wish to see this supported in the future, submit a product request throug
 {: start="3"}
 3. After you enable the app embed, your setup is complete!
 Confirm you can view your integration settings, the status of initial data sync, and your active Shopify events. <br><br>![Shopify partner page displaying the integration settings.]({% image_buster /assets/img/Shopify/install_complete.png %})
-
