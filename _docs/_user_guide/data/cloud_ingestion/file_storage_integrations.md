@@ -20,7 +20,7 @@ Cloud Data Ingestion supports the following:
 - JSON files
 - CSV files
 - Parquet files
-- Attribute, custom event event, purchase, user delete, and catalog data
+- Attribute, custom event, purchase event, user delete, and catalog data
 
 ## Prerequisites
 
