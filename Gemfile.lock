@@ -50,6 +50,8 @@ GEM
     execjs (2.10.0)
     ffi (1.17.2)
     filesize (0.2.0)
+    filewatcher (2.1.0)
+      module_methods (~> 0.1.0)
     forwardable-extended (2.6.0)
     google-protobuf (4.31.1)
       bigdecimal
@@ -94,6 +96,7 @@ GEM
     logger (1.7.0)
     mercenary (0.4.0)
     mini_portile2 (2.8.9)
+    module_methods (0.1.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.2.0)
@@ -159,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   algolia_html_extractor!
   csv (~> 3.3)
+  filewatcher
   jekyll (~> 4.3.3)
   jekyll-algolia (~> 1.0)!
   jekyll_asset_pipeline
