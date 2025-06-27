@@ -46,7 +46,7 @@ This is a one-time setup and any exports in the future will automatically use th
 
 ### Step 1: Create a template in Alpaco
 
-In Alpaco, create a template or content block to express your brand identity. When you're ready, select **Save**.
+In Alpaco, create a template that expresses your brand identity. When you're ready, select **Save**.
 
 ![Alpaco Create template]({% image_buster /assets/img/alpaco/alpaco_1.png %})
 
