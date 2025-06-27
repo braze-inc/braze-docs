@@ -103,6 +103,10 @@ For the list of available parameters, see [`BrazeActivityLifecycleCallbackListen
 {% endtab %}
 {% endtabs %}
 
+{% alert warning %}
+If your app requires additional setup before SDK initialization, such as fetching configuration data from a server or waiting for user consent, see [Enabling delayed initialization]({{site.baseurl}}/developer_guide/sdk_integration/initialization/?sdktab=android#android_using-delayed-initialization).
+{% endalert %}
+
 ## Testing session tracking
 
 {% alert tip %}
