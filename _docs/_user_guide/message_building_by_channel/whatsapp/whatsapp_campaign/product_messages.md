@@ -43,7 +43,7 @@ When users add items to their cart through catalog messages, Braze receives webh
 {% tabs %}
 {% tab Catalog messages %}
 
-Display your entire product catalog in an interactive format.
+Catalog messages display your entire product catalog in an interactive format.
 
 {% alert note %}
 You don't need to make additional product selections in Braze, as the catalog connection is managed by Meta and thus is inherited into your product catalog.
@@ -53,10 +53,10 @@ You don't need to make additional product selections in Braze, as the catalog co
 {% endtab %}
 {% tab Multi-product messages %}
 
-Highlight specific products from your catalog, with up to 30 highlighted items per message. Currently, there isn't an integrated product selector, so you must manually reference your Meta catalog to obtain product SKUs.
+Multi-product messages highlight specific products from your catalog, with up to 30 highlighted items per message. Currently, there isn't an integrated product selector, so you must manually reference your Meta catalog to obtain product SKUs.
 
 {% alert important %}
-Multi-product message templates currently have a header display bug. Meta is working on a fix.
+There’s a known header display issue with multi-product message templates on Meta. Meta is aware of the issue and working on a fix.
 {% endalert %}
 
 
@@ -75,7 +75,7 @@ Make sure to use the Braze Business Manager ID, `332231937299182`, as the partne
 ![Window to share a catalog with a partner that contains fields to enter a partner business ID and assign the permission "Manage catalog".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:60%;"}
 
 {: start="3"}
-3. Select your Meta catalog settings. You must select “Show catalog icon in chat header” to send catalog messages.
+3. Select your Meta catalog settings. You must select **Show catalog icon in chat header** to send catalog messages.
 
 ![WhatsApp Manager settings page for the "Catalog_products" catalog.]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:80%;"}
 
