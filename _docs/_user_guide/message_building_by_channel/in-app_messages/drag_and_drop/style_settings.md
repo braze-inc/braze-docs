@@ -46,6 +46,14 @@ The message-level font will only apply to the current message and any duplicated
 
 The drag-and-drop editor uses two key components for composing in-app messages: **rows** and **blocks**. All blocks must be placed in a row.
 
+### Close X Button Customization
+
+You can customize the placement of the Close X button in the top right corner of your message. This feature is available for both Modal and Fullscreen in-app messages.
+
+Customization options include button size, fill color, background color, border style, and border radius.
+
+![Options to customize the close x button in in-app messages including button size, fill color, background color, border style, and border radius.]({ image_buster /assets/img_archive/CloseXIAM.png %}{: style="max-width:40%"}
+
 ### Rows
 
 Rows are structural units that define the horizontal composition of a section of the message by using cells.
