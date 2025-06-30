@@ -37,7 +37,7 @@ All users who submit a form through this landing page form will either be messag
 ![Landing page trigger action in messaging.]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 {% alert note %}
-The action-based delivery option for landing pages isn't available for in-app messages. To target the in-app message to users who have submitted a form on a landing page, use the **Submitted Form on Landing Page** filter under **Targeting Options** for your campaign.
+The action-based delivery option for landing pages isn't available for in-app messages. To target users who have submitted a form on a landing page with an in-app message, select the **Submitted Form on Landing Page** filter in the **Targeting Options** of your campaign.
 {% endalert %}
 
 {% endtab %}
