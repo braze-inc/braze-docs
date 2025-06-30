@@ -274,7 +274,7 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 ```
 {% endtab %}
 {% tab CSV Catalogs  %}
-``` csv  
+```csv  
 ID,PAYLOAD
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
