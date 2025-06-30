@@ -17,25 +17,25 @@ Segment Insights shows you how one segment is performing compared to another acr
 
 ## Viewing Segment Insights
 
-Go to the **Segment Insights** page of your dashboard, under **Analytics**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline.
+Go to the **Segment Insights** page of your dashboard, under **Analytics**, and to view up to 10 different segments compared against a baseline.
 
-![Segment Insights dashboard.]({% image_buster /assets/img_archive/segment_insights.png %})
+![Segment Insights dashboard comparing three segments, "UK Users", "FR Users", and "CA Users" against a baseline segment, "All Users".]({% image_buster /assets/img_archive/segment_insights.png %})
 
 The baseline segment can either be a specific segment you select, or a segment containing all of your users. You can compare the following statistics using Segment Insights:
 
 | Measurement | Description | Formula |
 | --------------------- | ------------- | ------------- |
-| Session Frequency | Average number of segment users' sessions per day | (total # of sessions) / (# days since first session) |
-| Time Since First Session | Average time between segment users' first session and now | today – date of first session |
-| Time Since Last Session | Average time between segment users' last session and now | today – date of last session |
-| Lifetime Revenue | Average lifetime revenue for segment users | user lifetime spend |
-| Time to First Purchase | Average time between segment users' first session and first purchase | date of first purchase – date of first session |
-| Time Since Last Purchase | Average time between segment users' last purchase and now | today – date of last purchase |
+| Sessions per day | Average number of segment users' sessions per day | (total # of sessions) / (# days since first session) |
+| Days since first session | Average number of days between segment users' first session and now | today – date of first session |
+| Days since last session | Average number of days between segment users' last session and now | today – date of last session |
+| Lifetime revenue in dollars | Average lifetime revenue in dollars for segment users | user lifetime spend |
+| Days since first purchase | Average number of days between segment users' first session and first purchase | date of first purchase – date of first session |
+| Days since last purchase | Average number of days between segment users' last purchase and now | today – date of last purchase |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-You can easily share specific comparisons with your teammates using the page's unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between workspaces.
+You can easily share specific comparisons with your teammates using the page's unique URL, and you can also select the eye icon next to each segment to reveal more information about that segment. These comparisons will reset when you switch between workspaces.
 
-![]({% image_buster /assets/img_archive/Segment_Insights_Info.png %})
+![Details for the "Premium Users (iOS VideoApp)" segment with a graph displaying historical membership and a chart that breaks down the estimated size for various messaging channels.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %})
 
 ## Segment Details page
 
