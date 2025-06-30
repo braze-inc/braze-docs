@@ -38,7 +38,7 @@ class MyCustomNotificationFactory : IBrazeNotificationFactory {
         val context = payload.context ?: return null
 
         if (notificationBuilder == null) {
-            brazelog { "Notification could not be built. Returning null as created notification" }
+            brazelog { "Notification could not be built. Returning null as created notification." }
             return null
         }
         notificationBuilder.setContentTitle("Android Live Updates").setContentText("Ongoing updates below")
