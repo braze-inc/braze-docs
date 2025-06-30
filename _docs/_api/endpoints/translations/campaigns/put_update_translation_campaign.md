@@ -51,12 +51,13 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
+
 {
     "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab", // CAMPAIGNS ONLY
     "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
-       "id_3": "Ein Absatz ohne Formatierung"
+        "id_3": "Ein Absatz ohne Formatierung"
     }
 }
 ```

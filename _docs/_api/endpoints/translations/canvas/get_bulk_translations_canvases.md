@@ -59,34 +59,35 @@ The status code `200` could return the following response header and body.
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
+
 {
-	"translations": [
-		{
-			"translation_map": {
-				"id_0": "¡Hola!",
-				"id_1": "Me llamo Jacky",
-				"id_2": "¿Dónde está la biblioteca?"
-			},
-			"locale": {
-				"uuid": "a1b2c3d4-e5f6-g7h8-123a-a1234bn5678d",
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			}
-		},
-		{
-			"translation_map": {
-				"id_0": "你好",
-				"id_1": "我的名字是 Jacky",
-				"id_2": "圖書館在哪裡?"
-			},
-			"locale": {
- 				"name": "zh-HK",
- 				"country": "Hong Kong",
- 				"language": "Chinese (Traditional)",
-			}
-		}
-	]
+    "translations": [
+        {
+            "translation_map": {
+                "id_0": "¡Hola!",
+                "id_1": "Me llamo Jacky",
+                "id_2": "¿Dónde está la biblioteca?"
+            },
+            "locale": {
+                "uuid": "a1b2c3d4-e5f6-g7h8-123a-a1234bn5678d",
+                "name": "es-MX",
+                "country": "Mexico",
+                "language": "Spanish"
+            }
+        },
+        {
+            "translation_map": {
+                "id_0": "你好",
+                "id_1": "我的名字是 Jacky",
+                "id_2": "圖書館在哪裡?"
+            },
+            "locale": {
+                "name": "zh-HK",
+                "country": "Hong Kong",
+                "language": "Chinese (Traditional)"
+            }
+        }
+    ]
 }
 ```
 

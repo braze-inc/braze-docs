@@ -58,37 +58,38 @@ The status code `200` could return the following response header and body.
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
+
 {
-	"translations": [
-		{
+    "translations": [
+        {
             "locale": {
                 "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
                 "name": "es-MX",
                 "country": "MX",
                 "language": "es",
                 "locale_key": "es-mx"
-			},
-			"translation_map": {
-				"id_0": "¡Hola!",
-				"id_1": "Me llamo Jacky",
-				"id_2": "¿Dónde está la biblioteca?"
-			}
-		},
-		{
-			"locale": {
-				"uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
-				"name": "zh-HK",
-				"country": "Hong Kong",
-				"language": "Chinese (Traditional)",
-				"locale_key": "zh-hk"
-			},
-			"translation_map": {
-				"id_0": "你好",
-				"id_1": "我的名字是 Jacky",
-				"id_2": "圖書館在哪裡?"
-			}
-		}
-	]
+            },
+            "translation_map": {
+                "id_0": "¡Hola!",
+                "id_1": "Me llamo Jacky",
+                "id_2": "¿Dónde está la biblioteca?"
+            }
+        },
+        {
+            "locale": {
+                "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
+                "name": "zh-HK",
+                "country": "Hong Kong",
+                "language": "Chinese (Traditional)",
+                "locale_key": "zh-hk"
+            },
+            "translation_map": {
+                "id_0": "你好",
+                "id_1": "我的名字是 Jacky",
+                "id_2": "圖書館在哪裡?"
+            }
+        }
+    ]
 }
 ```
 
