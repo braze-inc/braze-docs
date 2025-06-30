@@ -2675,4 +2675,11 @@ validurls['/docs/home/templates/reference_video/'] = '/docs/contributing/content
 validurls['/docs/user_guide/brazeai/recommendations/types_and_use_cases/'] = '/docs/user_guide/brazeai/recommendations/';
 validurls['/docs/user_guide/brazeai/generative_ai/ai_images/'] = '/docs/user_guide/brazeai/generative_ai/images/';
 
+validurls['/docs/api/endpoints/translations/get_bulk_translations_campaigns'] = '/docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns';
+validurls['/docs/api/endpoints/translations/get_translation_campaign'] = '/docs/api/endpoints/translations/campaigns/get_translation_campaign';
+validurls['/docs/api/endpoints/translations/put_update_translation_campaign'] = '/docs/api/endpoints/translations/campaigns/put_update_translation_campaign';
+validurls['/docs/api/endpoints/translations/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases';
+validurls['/docs/api/endpoints/translations/get_translation_canvas'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
+validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/docs/api/endpoints/translations/canvas/put_update_translation_canvas';
+
 // validurls['OLD'] = 'NEW';
