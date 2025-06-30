@@ -59,8 +59,8 @@ The status code `200` could return the following response header and body.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-	"translations": [
-		{
+    "translations": [
+        {
             "locale": {
                 "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
                 "name": "es-MX",
@@ -68,13 +68,13 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "language": "es",
                 "locale_key": "es-mx"
             },
-			"translation_map": {
-				"id_0": "¡Hola!",
-				"id_1": "Me llamo Jacky",
-				"id_2": "¿Dónde está la biblioteca?"
-			}
-		}
-	]
+            "translation_map": {
+                "id_0": "¡Hola!",
+                "id_1": "Me llamo Jacky",
+                "id_2": "¿Dónde está la biblioteca?"
+            }
+        }
+    ]
 }
 ```
 

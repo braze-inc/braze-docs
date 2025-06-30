@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "country": "MX",
                 "language": "es",
                 "locale_key": "es-mx"
-            },
+			},
 			"translation_map": {
 				"id_0": "¡Hola!",
 				"id_1": "Me llamo Jacky",
@@ -75,13 +75,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 			}
 		},
 		{
-            "locale": {
-                "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
-                "name": "zh-HK",
-                "country": "Hong Kong",
-                "language": "Chinese (Traditional)",
-                "locale_key": "zh-hk"
-            },
+			"locale": {
+				"uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
+				"name": "zh-HK",
+				"country": "Hong Kong",
+				"language": "Chinese (Traditional)",
+				"locale_key": "zh-hk"
+			},
 			"translation_map": {
 				"id_0": "你好",
 				"id_1": "我的名字是 Jacky",

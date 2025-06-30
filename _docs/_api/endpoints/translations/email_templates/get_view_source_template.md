@@ -59,13 +59,13 @@ The status code `200` could return the following response header and body.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-   "translations": {
-       "translation_map": {
-           "id_0": "Here's a limited time offer for your membership tier!",
-           "id_1": "Welcome to a new fashion-forward season!"
-       }
-   },
-   "message": "success"
+    "translations": {
+        "translation_map": {
+            "id_0": "Here's a limited time offer for your membership tier!",
+            "id_1": "Welcome to a new fashion-forward season!"
+        }
+    },
+    "message": "success"
 }
 ```
 
