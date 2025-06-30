@@ -61,15 +61,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
 		{
-			"locale": {
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			},
+            "locale": {
+                "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
+                "name": "es-MX",
+                "country": "MX",
+                "language": "es",
+                "locale_key": "es-mx"
+            },
 			"translation_map": {
-				"id_0": "Hello",
-				"id_1": "My name is Jacky",
-				"id_2": "Where is the library?"
+				"id_0": "¡Hola!",
+				"id_1": "Me llamo Jacky",
+				"id_2": "¿Dónde está la biblioteca?"
 			}
 		}
 	]
@@ -99,7 +101,7 @@ The following table lists possible returned errors and their associated troubles
 | `INVALID_LOCALE_ID`                     | Confirm your locale ID exists in your message translation.                         |
 | `LOCALE_NOT_FOUND`                      | Confirm the locale exists in your multi-language settings.                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email templates and email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

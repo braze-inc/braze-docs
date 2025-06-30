@@ -33,7 +33,6 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter     | Required | Data Type | Description                     |
 |---------------|----------|-----------|---------------------------------|
-| `campaign_id` | Required | String    | The ID of your campaign.        |
 | `template_id` | Required | String    | The ID for your email template. |
 | `locale_id`   | Required | String    | The ID of the locale.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -62,12 +61,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
 	"translations": [
 		{
-			"locale": {
-				"uuid": "a1fd354b-te48-4182-1234-5fbf24e9b23p",
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			},
+            "locale": {
+                "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
+                "name": "es-MX",
+                "country": "MX",
+                "language": "es",
+                "locale_key": "es-mx"
+            },
 			"translation_map": {
 				"id_0": "¡Hola!",
 				"id_1": "Me llamo Jacky",
@@ -75,11 +75,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 			}
 		},
 		{
-			"locale": {
- 				"name": "zh-HK",
- 				"country": "Hong Kong",
- 				"language": "Chinese (Traditional)",
-			},
+            "locale": {
+                "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
+                "name": "zh-HK",
+                "country": "Hong Kong",
+                "language": "Chinese (Traditional)",
+                "locale_key": "zh-hk"
+            },
 			"translation_map": {
 				"id_0": "你好",
 				"id_1": "我的名字是 Jacky",
@@ -113,7 +115,7 @@ The following table lists possible returned errors and their associated troubles
 | `INVALID_LOCALE_ID`                     | Confirm your locale ID exists in your message translation.                         |
 | `LOCALE_NOT_FOUND`                      | Confirm the locale exists in your multi-language settings.                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email templates and email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
