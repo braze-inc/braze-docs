@@ -266,7 +266,7 @@ Every line in your source file must contain valid JSON, or the file will be skip
 
 {% endtab %}
 {% tab CSV Attributes %}
-``` csv  
+```plaintext  
 external_id,payload
 s3-qa-load-0-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""SNXIM"", ""age"": 54, ""subscriber"": true, ""retention"": {""previous_purchases"": 19, ""vip"": true}, ""last_visit"": ""2023-08-08T16:03:26.598806""}"
 s3-qa-load-1-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""0J747"", ""age"": 73, ""subscriber"": false, ""retention"": {""previous_purchases"": 22, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598816""}"
@@ -274,7 +274,7 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 ```
 {% endtab %}
 {% tab CSV Catalogs  %}
-```csv  
+```plaintext  
 ID,PAYLOAD
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
