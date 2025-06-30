@@ -2,7 +2,7 @@
 nav_title: "GET: View Specific Translation and Locale for Email Template"
 article_title: "GET: View Specific Translation and Locale for Email Template"
 search_tag: Endpoint
-page_order: 1
+page_order: 2
 
 layout: api_page
 page_type: reference
