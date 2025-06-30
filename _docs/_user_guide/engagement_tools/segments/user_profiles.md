@@ -43,6 +43,7 @@ There are four main sections of a user's profile.
 - **Overview:** Basic information about the user, session data, custom attributes, custom events, purchases, and the most recent device that the user logged into.
 - **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, and random bucket number.
 - **Messaging History:** Recent messaging-related events for this user from the past 30 days.
+- **Feature Flags Eligibility:** Validate which feature flags a user is currently eligibile for, across rollouts, canvas steps, and experiments. 
 
 ### Overview tab {#overview-tab}
 
