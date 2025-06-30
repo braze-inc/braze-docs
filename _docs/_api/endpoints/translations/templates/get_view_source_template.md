@@ -57,7 +57,7 @@ The status code `200` could return the following response header and body.
 
 ```json
 Content-Type: application/json
-Response
+Authorization: Bearer YOUR-REST-API-KEY
 {
    "translations": {
        "translation_map": {
