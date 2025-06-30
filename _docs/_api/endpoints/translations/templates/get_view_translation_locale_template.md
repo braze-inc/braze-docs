@@ -66,11 +66,11 @@ Authorization: Bearer YOUR-REST-API-KEY
  				"country": "Mexico",
  				"language": "Spanish",
 			},
-            "translation_map": {
-                "id_0": "¡Hola!",
-                "id_1": "Me llamo Jacky",
-                "id_2": "¿Dónde está la biblioteca?"
-            }
+			"translation_map": {
+				"id_0": "Hello",
+				"id_1": "My name is Jacky",
+				"id_2": "Where is the library?"
+			}
 		}
 	]
 }
