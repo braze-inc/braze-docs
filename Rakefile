@@ -1,5 +1,17 @@
-def thread_pool
-  @thread_pool ||= ThreadPool.new options.thread_pool_size
+require 'fileutils'
+require 'find'
+require 'thread'
+
+# File watching functionality
+def watch_includes_folder
+  puts "Starting file watcher for _includes folder..."
+  load 'includes_watcher.rb'
+  watcher = IncludesWatcher.new
+  watcher.start
+rescue Interrupt
+  puts "File watcher interrupted, shutting down..."
+rescue => e
+  puts "File watcher error: #{e.message}"
 end
 
 def pipe(command)
@@ -33,7 +45,32 @@ def jekyll_serve(config_file = '_config.yml')
   else
     # Force a clean build of the site and the pipeline assets
     puts `rm .jekyll-metadata`
-    pipe "bundle exec jekyll s --port 5006 --incremental --config #{config_file},_incremental_config.yml"
+    
+    # Start file watcher in a separate thread
+    watcher_thread = Thread.new do
+      watch_includes_folder
+    end
+    
+    # Set up signal handlers to stop the watcher thread
+    Signal.trap('INT') do
+      puts "\nStopping Jekyll serve and file watcher..."
+      watcher_thread.raise Interrupt
+      exit 0
+    end
+    
+    Signal.trap('TERM') do
+      puts "\nStopping Jekyll serve and file watcher..."
+      watcher_thread.raise Interrupt
+      exit 0
+    end
+    
+    begin
+      pipe "bundle exec jekyll s --port 5006 --incremental --config #{config_file},_incremental_config.yml"
+    ensure
+      # Ensure the watcher thread is stopped when Jekyll exits
+      watcher_thread.raise Interrupt if watcher_thread.alive?
+      watcher_thread.join(2) # Wait up to 2 seconds for clean shutdown
+    end
   end
 end
 
@@ -48,6 +85,9 @@ namespace :docs_en do
       jekyll_build(config_file, 'en')
   end
   task :serve do
+    jekyll_serve(config_file)
+  end
+  task :serve_with_watch do
     jekyll_serve(config_file)
   end
   task :proxy_serve do
@@ -66,6 +106,9 @@ namespace :lang do
     jekyll_build("./_config.yml,./_lang/_config_#{args[:lang]}.yml", args[:lang])
   end
   task :serve, [:lang] do |t, args|
+    jekyll_serve("./_config.yml,./_lang/_config_#{args[:lang]}.yml")
+  end
+  task :serve_with_watch, [:lang] do |t, args|
     jekyll_serve("./_config.yml,./_lang/_config_#{args[:lang]}.yml")
   end
   task :proxy_serve, [:lang] do |t, args|
@@ -132,10 +175,6 @@ task :ko_build do
   Rake::Task["lang:build"].invoke('ko')
 end
 
-task :ko_build do
-  Rake::Task["lang:build"].invoke('ko')
-end
-
 task :pt_br_build do
   Rake::Task["lang:build"].invoke('pt-br')
 end
@@ -147,3 +186,23 @@ end
 task :de_build do
   Rake::Task["lang:build"].invoke('de')
 end
+
+# Convenience tasks for file watching
+task :serve_with_test_watch do
+  Rake::Task["docs_en:serve_with_watch"].invoke
+end
+
+task :serve_with_lint_watch do
+  Rake::Task["docs_en:serve_with_watch"].invoke
+end
+
+task :serve_with_build_watch do
+  Rake::Task["docs_en:serve_with_watch"].invoke
+end
+
+# Usage examples:
+# rake serve_with_test_watch          # Serve with file watching (same as serve_with_watch)
+# rake serve_with_lint_watch          # Serve with file watching (same as serve_with_watch)
+# rake serve_with_build_watch         # Serve with file watching (same as serve_with_watch)
+# rake docs_en:serve_with_watch       # Serve English docs with file watching
+# rake "lang:serve_with_watch[fr]"    # Serve French docs with file watching

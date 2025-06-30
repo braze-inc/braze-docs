@@ -25,10 +25,10 @@ The following features are supported to help improve the quality of your content
 ## Using BrazeAI<sup>TM</sup> to QA content
 
 {% alert note %}
-This feature is only available for the push and SMS channels at this time.
+This feature is only available for SMS, Android push, and iOS push channels at this time.
 {% endalert %}
 
-1. After composing a push or SMS message, navigate to the **Test** tab.
+1. After composing a mobile push or SMS message, navigate to the **Test** tab.
 2. Locate the **Content QA with AI** section.
 3. Click **Test Content**.
 
