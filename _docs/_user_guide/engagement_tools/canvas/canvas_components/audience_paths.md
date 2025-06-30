@@ -39,6 +39,8 @@ For example, if users are sent Message A and the next step is an Audience Path t
 
 To give users time to interact with a sent message, a delay needs to be between the Message step and Audience Path. For example, a 24-hour delay would give users 24 hours after the message sends to interact with Message A before being evaluation.
 
+Users advance to the next step based on the first action they performed after entering the Audience Path step within the evaluation window. This means if a user performs a second event, they wouldn't switch audience groups.
+
 ## Creating an Audience Path
 
 To add an Audience Paths step, do the following: 
@@ -97,4 +99,3 @@ For example, in an Audience Paths step, you can create three audiences: Email, M
 {% alert tip %}
 Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for examples on how you can customize these pre-built templates to your advantage.
 {% endalert %}
-
