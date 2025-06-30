@@ -54,7 +54,6 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
-
 {
     "workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad", // CANVAS ONLY
     "step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY

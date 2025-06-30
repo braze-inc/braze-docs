@@ -49,7 +49,6 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
-
 {
     "template_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
