@@ -39,7 +39,7 @@ For example, if users are sent Message A and the next step is an Audience Path t
 
 To give users time to interact with a sent message, a delay needs to be between the Message step and Audience Path. For example, a 24-hour delay would give users 24 hours after the message sends to interact with Message A before being evaluation.
 
-Users advance to the next step based on the first action they performed after entering the Audience Path step within the evaluation window. This means if a user performs a second event, they wouldn't switch audience groups.
+Note that users advance to the next step based on the first action they performed after entering the Audience Path step within the evaluation window. This means if a user performs a second custom event, they wouldn't switch audience groups.
 
 ## Creating an Audience Path
 
