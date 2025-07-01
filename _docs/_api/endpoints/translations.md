@@ -58,7 +58,7 @@ The Braze translation endpoints are currently in early access. Contact your Braz
 
 ## How our translation endpoints work
 
-Braze Translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
+Our translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
 
 ### Prerequisites
 
