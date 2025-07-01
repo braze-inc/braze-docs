@@ -83,7 +83,6 @@ Authorization: Bearer YOUR-REST-API-KEY
     "description": "",
     "archived": false,
     "draft": true,
-    "enabled": false,
     "schedule_type": "time_based",
     "first_entry": null,
     "last_entry": null,
