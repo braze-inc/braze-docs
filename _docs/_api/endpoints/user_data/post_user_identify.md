@@ -35,6 +35,46 @@ If there isn't a user with that `external_id`, the `external_id` will be added t
 To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user information is already present.
 {% endalert %}
 
+### Merging behavior
+
+By default, this endpoint will merge the following list of fields found **exclusively** on the anonymous user to the identified user.
+
+{% details List of fields that are merged %}
+- First name
+- Last name
+- Email
+- Gender
+- Date of birth
+- Phone number
+- Time zone
+- Home city
+- Country
+- Language
+- Session count (the sum of sessions from both profiles)
+- Date of first session (Braze will pick the earlier date of the two dates)
+- Date of last session (Braze will pick the later date of the two dates)
+- Custom attributes
+- Custom event and purchase event data
+- Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
+- Segmentable custom events summary
+  - Event count (the sum from both profiles)
+  - Event first occurred (Braze will pick the earlier date of the two dates)
+  - Event last occurred (Braze will pick the later date of the two dates)
+- In-app purchase total in cents (the sum from both profiles)
+- Total number of purchases (the sum from both profiles)
+- Date of first purchase (Braze will pick the earlier date of the two dates)
+- Date of last purchase (Braze will pick the later date of the two dates)
+- App summaries
+- Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
+- Campaign summaries (Braze will pick the most recent date fields)
+- Workflow summaries (Braze will pick the most recent date fields)
+- Message and message engagement history
+- Custom event and purchase event count and first date and last date timestamps 
+  - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+- Session data if the app exists on both user profiles
+  - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
+{% enddetails %}
+
 ## Prerequisites
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.identify` permission.
