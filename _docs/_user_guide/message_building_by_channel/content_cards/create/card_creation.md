@@ -89,7 +89,7 @@ This section describes the main differences between card creation at campaign la
   <tr>
     <td class="leftHeader">Audience</td>
     <td class="tg-0pky">Braze evaluates audience membership when the campaign sends.<br><br>New or anonymous users will not be evaluated for eligibility if they try to view the card after the campaign sends. For recurring campaigns, this will be at the next recurrence interval.</td>
-    <td class="tg-0pky">Braze evaluates membership when the user next opens your app (starts a session, <a href="#campaign_note">campaigns only*</a>).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibility when they try to view the card. Additionally, rate limiting (limiting the number of people who will receive the campaign) is not applicable when set to at first impression (<a href="#campaign_note">campaigns only*</a>).</td>
+    <td class="tg-0pky">Braze evaluates membership when the user next opens your app (starts a session, <a href="#campaign_note">campaigns only*</a>).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibility when they try to view the card. <br><br>Additionally, rate limiting (limiting the number of people who will receive the campaign) is not applicable when set to at first impression (<a href="#campaign_note">campaigns only*</a>).</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalization</td>
@@ -127,3 +127,6 @@ When cards are created at first impression, it may take 1–2 seconds for the ca
 
 If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the next Content Card sync.
 
+[1]: {% image_buster /assets/img_archive/card_creation.png %}
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/
+[3]: https://www.braze.com/resources/articles/whats-an-app-session-anyway
