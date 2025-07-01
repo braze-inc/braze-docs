@@ -1,7 +1,7 @@
 ---
 nav_title: Measuring Segment Size
 article_title: Measuring Segment Size
-page_order: 9
+page_order: 5
 page_type: reference
 tool: 
 - Segments
@@ -22,7 +22,7 @@ Each segment displays the total number of users that are members of that segment
 
 It is possible that the number of total users is different than the number of users reachable by each channel. In addition, not all channels are listed in the reachable users table. For example, Content Cards, webhooks, and WhatsApp aren't shown in the breakdown. This means that the total reachable users count could be greater than the sum of the users for each displayed channel.
 
-![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][3]
+![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, and Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 For a user to be listed as reachable through a certain channel, the user must have both:
 * A valid email address or push token associated with their profile; and
@@ -32,7 +32,7 @@ A single user may belong to different reachable user groups. For example, a user
 
 ## Statistics for segment size
 
-Estimated statistics are approximated by sampling only a portion of your segment, so you should expect to see estimated sizes that are larger or smaller than the actual value, with larger workspaces seeing potentially larger margins of error. To get an accurate count of users in your segment, select **Calculate Exact Statistics**. The exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
+Estimated statistics are approximated by sampling only a portion of your segment, so you should expect to see estimated sizes that are larger or smaller than the actual value, with larger workspaces seeing potentially larger margins of error. To get an accurate count of users in your segment, select **Calculate Exact Statistics**. The exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas. 
 
 Braze provides the following statistics on segment size. 
 
@@ -40,21 +40,66 @@ Braze provides the following statistics on segment size.
 
 For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
 
-![A filter group with a filter for users who had exactly one session count.][2]{: style="max-width:80%;"}
+![A filter group with a filter for users who had exactly one session count.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
 
-### Segment statistics
+## Reachable users estimate
 
-For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by selecting **Calculate exact statistics**.
+You can view an entire segment's estimated reachable users, including estimated user counts for each channel, in the **Reachable users** side panel. This **estimation** shows you an approximate range for your segment size, and an estimate of what percentage of your overall user base falls into this segment. Note that estimated statistics are cached for 15 minutes unless you make edits to your segment, in which case estimated statistics will automatically update. You can also view an exact count of reachable users (for both the segment overall and per channel) by selecting **Calculate exact statistics**. 
 
-Note that:
-- Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
-- For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
+
+![The "Reachable users" panel stating there are 2.3M—2.4M estimated users.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
+
+### Considerations for estimate counts
+
+Braze measures the number of estimated users by querying a subset of your users, and then extrapolates those results to your entire audience. Because the subset of users that Braze queries may differ each time we calculate this estimate, the estimate may also change in cases where your audience membership technically should have stayed the same. For example, if you re-order your filters or re-check the same segment at a different time, it’s possible that the estimated count changes (even though **Calculate exact stats** would reveal the same results if your segment didn't change).
+
+If you have a large user population in your workspace, you may see more variation between your estimated counts compared to your exact calculation counts, especially in cases where your segment is a very small percentage of your overall workspace population. This is because Braze measures the estimate by querying a subset of your users and extrapolating the results to your entire user base. For larger user bases, larger differences between estimated and exact counts are to be expected.
+
+Very small segments will have an estimated range that includes 0, meaning the percentage of total users may round to 0. In these cases, **Calculate exact stats** will help you see an accurate count of your segment size, which may not actually be 0.
+
+![The "Reachable users" side panel.]({% image_buster /assets/img_archive/reachable_users_panel.png %})
+
+### Reachable users by channel
+
+To view the number of users that are reachable for each message channel, select **Show breakdown** in the **Reachable users** panel. This displays some of the most frequently used messaging channels (such as web push or email) and the number of reachable users for those specific channels. 
+
+The _Total_ metric represents unique users. For example, if a user has both Android push and iOS push, they will get counted for both of those rows, but will only count as 1 user in the _Total_ row.
+
+However, it's possible that the number of total users is different than the sum of users reachable by each channel, as a single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. 
+
+Keep in mind, not all channels are listed in the **Reachable users** table (such as Content Cards, webhooks, and WhatsApp). For example, if you have users only reachable through Whatsapp, they will be reflected in the _Total_ but not in any of the channel-specific rows. This means that the total reachable users count can be different from the sum of the users for each displayed channel.
+
+In cases where the _Total_ is higher than the sum of the channels, the gap represents the number of users who qualified for the segment but aren't reachable through those communication channels.
+
+For a user to be listed as reachable through a certain channel, the user must have:
+- A valid email address or push token associated with their profile, and
+- Opted-in or subscribed to your app.
+
+## Calculating exact statistics 
+
+To view an accurate count of the number of users in your segment, select **Calculate exact stats** in the **Reachable users** pane.
+
+To update the stats for a calculation you've previously run, select **Refresh exact statistics**. The date this calculation was last ran will automatically be updated.
+
+Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior. In addition, exact statistics results are cached for 24 hours unless you make edits to your segment, in which case you can re-calculate the exact statistics.
+
+![The "Reachable users" panel with an option to show the breakdown.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
+
+The statistics on a per-filter level will always be estimated, even if you calculate exact stats. **Calculate exact stats** only calculates the exact statistics at the segment level, not at the filter or filter group level. This calculation may take a few minutes to run. Larger workspaces in particular may require longer periods to complete calculations. You can track your progress on the progress bar in the **Reachable users** panel. When a calculation is expected to run more than five minutes, Braze will email you the results. 
+
+Braze prioritizes one calculation at a time per workspace, so running multiple calculations at once will cause delays. You can select **View calculation queue** to see what segments are ahead of yours, their progress, and their initiator, and get an idea of when your calculation may be prioritized.
+
+![A calculation queue with one calculation.]({% image_buster /assets/img_archive/calculation_queue.png %})
+
+You can cancel an exact statistics calculation by selecting **Cancel**. This can be beneficial if there are multiple calculations in the queue and you want to prioritize another calculation first. 
+
+![An active calculation with the option to cancel]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:25%"}
 
 ## Viewing historical segment membership size
 
 For all segments, you can view a historical membership chart that shows the estimated segment membership for each day. This chart shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range.
 
-![Use the Historical Membership dropdown to filter segment membership by date range.][1]
+![Use the Historical Membership dropdown to filter segment membership by date range.]({% image_buster /assets/img_archive/historical_membership2.png %})
 
 Because the goal of this chart is to give you a sense of overall segment membership trends, the daily count is an estimate, similar to how the segment size is an estimate before you select **Calculate Exact Statistics**. And because this graph shows estimates, it's possible that your segment’s size appears as "0" in this chart, even though its actual size (which can be determined after selecting **Calculate Exact Stats**) is not "0". It is especially likely for the chart to show an estimate of "0" if your segment is very small relative to the size of your workspace population.
 
@@ -77,7 +122,3 @@ The membership count may significantly change for a number of reasons, such as t
 | A partner integration synced with Braze | A third party sent data to Braze that significantly influenced segment membership. |
 | Dormant users are archived | A significant number of inactive profiles were archived. For example, a large number of CSV-imported users never log activity and get archived at the same time. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-[1]: {% image_buster /assets/img_archive/historical_membership2.png %}
-[2]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
-[3]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}

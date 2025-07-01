@@ -88,7 +88,7 @@ Select **+ Add New Header** for each of the following request headers.
 {: start="4" }
 4. Select **Save Template**.
 
-![A filled-out webhook template to create a lead.][6]{: style="max-width:70%;"}
+![A filled-out webhook template to create a lead.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Updating a lead in Salesforce Sales Cloud {#updating-lead}
 
@@ -141,7 +141,7 @@ Select **+ Add New Header** for each of the following request headers.
 {: start="4"}
 4. Select **Save Template**.
 
-![A filled-out webhook template to update a lead.][7]{: style="max-width:70%;"}
+![A filled-out webhook template to update a lead.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Using these webhooks in an operational workflow
 
@@ -154,7 +154,7 @@ You can quickly add your templates to your operational workflows in Braze, such 
 
 To create a lead in Salesforce when a user provides their email address, you can create a campaign that uses the “Update Lead” webhook template and triggers when a user adds their email address (for example, fills out a web form).
 
-![Step 2 of creating a campaign that is action-based and has the trigger action of “Add an Email Address”.][1]{: style="max-width:70%;"}
+![Step 2 of creating a campaign that is action-based and has the trigger action of “Add an Email Address”.]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Lead scoring Canvas for crossing the Marketing Qualified Lead (MQL) threshold {#lead-scoring}
 
@@ -167,21 +167,21 @@ Add a subsequent step to your user update to check if a user has crossed your de
 1. Add an **Audience Path** step with two groups: “MQL Threshold” and “Everyone Else”.
 2. In the “MQL Threshold” group, look for any users who currently don’t have a status of “MQL” (for example, `lead_stage` equals “Lead”), but have a lead score that is over your defined threshold (for example, `lead_score` greater than 50). If so, they move forward to the next step, if not, they exit.
 
-![The “MQL Threshold” Audience Path group with filters for a `lead_stage` equalling “Lead” and a `lead_score` being more than “50”.][2]{: style="max-width:70%;"}
+![The “MQL Threshold” Audience Path group with filters for a `lead_stage` equalling “Lead” and a `lead_score` being more than “50”.]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3. Add a **User Update** step that updates the user’s `lead_stage` attribute value to “MQL”.
 
-![The “Update to MQL” User Update step that updates the `lead_stage` attribute to have a value of “MQL”.][3]{: style="max-width:70%;"}
+![The “Update to MQL” User Update step that updates the `lead_stage` attribute to have a value of “MQL”.]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4. Add a webhook step that updates Salesforce with the new MQL stage.
 
-![The “Update Salesforce” webhook step with completed details.][4]{: style="max-width:70%;"}
+![The “Update Salesforce” webhook step with completed details.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 Now your Canvas flow will update users who’ve crossed your MQL threshold!
 
-![A Canvas user update step that checks if a user crosses the MQL threshold and, if the user does pass, updates Salesforce.][5]{: style="max-width:50%;"}
+![A Canvas user update step that checks if a user crosses the MQL threshold and, if the user does pass, updates Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Troubleshooting
 
@@ -189,13 +189,5 @@ These workflows have limited debugging capability within Salesforce, so we recom
 
 For example, an error caused by an invalid URL used for oAuth token retrieval would display as `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 
-![An error response body stating that the URL isn't a valid URL.][8]
+![An error response body stating that the URL isn't a valid URL.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
-[1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
-[2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
-[3]: {% image_buster /assets/img/b2b/salesforce_update_mql.png %}
-[4]: {% image_buster /assets/img/b2b/salesforce_webhook.png %}
-[5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
-[6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
-[7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
-[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}

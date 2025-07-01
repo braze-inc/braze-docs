@@ -183,7 +183,7 @@ More questions you can answer with this report:
 {% tab Segment Data %}
 **Segment Data**
 
-If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
+If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
 
 Check out this page for these statistics:
 
@@ -289,7 +289,7 @@ More questions you can answer with this report:
 {% tab Predictive Churn %}
 **Predictive Churn**
 
-[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/). Use Predictive Churn to define and generate predictions, providing a proactive approach toward minimizing future churn.
+[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/). Use Predictive Churn to define and generate predictions, providing a proactive approach toward minimizing future churn.
 
 Since every business defines churn and retention differently, you can simply input your definitions into Predictive Churn, and Braze will do the rest. You can also create campaigns or Canvases to act off the predictions or build segments for further analysis.
 

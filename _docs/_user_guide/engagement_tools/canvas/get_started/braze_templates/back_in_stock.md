@@ -41,13 +41,13 @@ Let’s adjust the Canvas details to reflect our goal.
 3. Update the description to explain that this Canvas contains personalized messaging.
 4. Add the tag **Back in Stock**, which is nested under the tag **Promotional**, so that we can filter for it on the Canvas home page. 
 
-!["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.][1]
+!["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
 
 ### Step 2: Assign conversion events
 
 Change the **Primary Conversion Event - A** to **Make a specific purchase** and select **Classic Straight Leg** for the product name.
 
-!["Assign Conversion Events" section for the conversion event type of purchasing the Classic Straight Leg product with a conversion deadline of 7 days.][2]
+!["Assign Conversion Events" section for the conversion event type of purchasing the Classic Straight Leg product with a conversion deadline of 7 days.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
 
 ### Step 3: Tailor the entry schedule
 
@@ -57,12 +57,12 @@ We’ll make two adjustments to this step:
 
 1. Select the catalog that includes information about our Classic Straight Leg jeans, which we’ve named “Straight Leg Pants”. 
 
-!["Entry Schedule" step for an action-based Canvas.][3]
+!["Entry Schedule" step for an action-based Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
 
 {: start="2"}
 2. Set the **Start Time (Required)** to our desired start date and time.
 
-!["Entry Window" section with a start time of January 2, 2025 at 12 am.][4]
+!["Entry Window" section with a start time of January 2, 2025 at 12 am.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
 
 ### Step 4: Select the target audience
 
@@ -71,23 +71,23 @@ We’ll define our target audience as users who we think are more likely to purc
 1. Select our target segment, “Favorited - Classic Straight Leg Jeans”, which consists of users who’ve favorited our Classic Straight Leg jeans on our app or website.
 2. Select a filter to include users who have purchased “Jeans” more than “0” times.
 
-!["Target Audience" step with the segment of "Favorited - Classic Straight Leg Jeans".][5]
+!["Target Audience" step with the segment of "Favorited - Classic Straight Leg Jeans".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
 
 {: start="3"}
 3. Adjust the entry controls to allow users to re-enter the Canvas after the Canvas’s maximum duration, to prevent the likelihood of users triggering the same step concurrently.
 
-!["Entry Controls" section with a checkbox for allowing users to re-enter this Canvas with a maximum duration of the Canvas.][6]
+!["Entry Controls" section with a checkbox for allowing users to re-enter this Canvas with a maximum duration of the Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4. Adjust the exit criteria to remove users who performed the custom event of unfavoriting the Classic Straight Leg jeans.
 
-!["Exit Criteria" section with a exception for users that perform the custom event of "Unfavorited".][7]
+!["Exit Criteria" section with a exception for users that perform the custom event of "Unfavorited".]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
 
 ### Step 5: Select your send settings
 
 We’ll keep the default subscription settings, so we only send to users who have subscribed or opted into receiving messages or notifications, and skip the other settings (frequency capping, quiet hours, and seed groups).
 
-!["Send Settings" step targeting users who are subscribed or opted in.][8]
+!["Send Settings" step targeting users who are subscribed or opted in.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
 
 ### Step 6: Customize your Canvas
 
@@ -106,7 +106,7 @@ We’ll begin our customization by going through each Message step to update the
     - The “Push+Email Alert” messages that send to users who haven’t made a purchase
 4. Update the Action Paths step by selecting the **Purchase** action group. Then, select **Make a specific purchase** and choose Classic Straight Leg jeans for the product.
 
-![Mobile Push Canvas step with a message notifying users that a product is back in stock.][9]
+![Mobile Push Canvas step with a message notifying users that a product is back in stock.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
 
 ### Step 7: Test and launch your Canvas
 
@@ -116,12 +116,3 @@ After testing and reviewing our Canvas to make sure it works as expected, we’l
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/back_in_stock_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/back_in_stock_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/back_in_stock_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/back_in_stock_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/back_in_stock_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/back_in_stock_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/back_in_stock_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/back_in_stock_8.png %}
-[9]: {% image_buster /assets/img/canvas_templates/back_in_stock_9.png %}

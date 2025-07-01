@@ -48,15 +48,15 @@ table td {
 
 To use Audience Sync to Google or Facebook, connect your ad account by searching for the partner on the **Technology Partners** page.
 
-![Facebook technology partner.][3]{: style="max-width:35%;"} ![Google Ads technology partner.][4]{: style="max-width:35%;"}
+![Facebook technology partner.]({% image_buster /assets/img/audience_sync/facebook_partner.png %}){: style="max-width:35%;"} ![Google Ads technology partner.]({% image_buster /assets/img/audience_sync/google_ads_partner.png %}){: style="max-width:35%;"}
 
 After connecting your ad account, you can create a Canvas with an Audience Sync step.
 
-![Canvas component menu to add the Audience Sync step to the user journey.][22]{: style="max-width:75%;"}
+![Canvas component menu to add the Audience Sync step to the user journey.]({% image_buster /assets/img/audience_sync/audience_sync7.png %}){: style="max-width:75%;"}
 
 Next, select the partner to sync audiences.
 
-![Option to select your audience sync partner in the Audience Sync step.][19]{: style="max-width:85%;"}
+![Option to select your audience sync partner in the Audience Sync step.]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:85%;"}
 
 For each partner, you’ll need to configure the following as part of your Audience Sync step: 
 
@@ -73,17 +73,17 @@ For each Audience Sync destination, the partner may have different requirements 
 
 To use an Audience Sync Pro partner including TikTok, Pinterest, Snapchat, or Criteo, you’ll be able to select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
 
-![Audience Sync Pro with no partners selected yet.][5]{: style="max-width:75%;"}
+![Audience Sync Pro with no partners selected yet.]({% image_buster /assets/img/audience_sync/audience_sync_pro1.png %}){: style="max-width:75%;"}
 
 First, select the partners you intend to use by selecting Select Partners. Each purchase of Audience Sync Pro will provide you 3 allotted Audience Sync Pro destinations, which will be available within each of your workspaces within your dashboard.
 
-![Option to select up to three partners to connect to Braze.][6]{: style="max-width:65%;"}
+![Option to select up to three partners to connect to Braze.]({% image_buster /assets/img/audience_sync/audience_sync_pro2.png %}){: style="max-width:65%;"}
 
 After selecting your Audience Sync Pro destinations, connect your selected partner ad account by clicking on the partner tile.
 
-![An example of Snapchat and TikTok selected as partners for Audience Sync.][7]{: style="max-width:70%;"}
+![An example of Snapchat and TikTok selected as partners for Audience Sync.]({% image_buster /assets/img/audience_sync/audience_sync_pro3a.png %}){: style="max-width:70%;"}
 
-![Snapchat Audience Sync settings with the message: "You successfully connected 1 Snapchat account".][9]{: style="max-width:70%;"}
+![Snapchat Audience Sync settings with the message: "You successfully connected 1 Snapchat account".]({% image_buster /assets/img/audience_sync/audience_sync_pro4.png %}){: style="max-width:70%;"}
 
 Lastly, create your Audience Sync step in Canvas using this Audience Sync Pro destination.
 
@@ -105,11 +105,11 @@ When building audiences for Ad Tracking, you may wish to include or exclude cert
 
 If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the "Ads Tracking Enabled" filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in.
 
-![A Canvas with an entry audience of "Ad Tracking Enabled is true".][2]
+![A Canvas with an entry audience of "Ad Tracking Enabled is true".]({% image_buster /assets/img/audience_sync/audience_sync2.png %})
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![A Canvas with an entry audience of "opted_in_marketing equals true".][1]
+![A Canvas with an entry audience of "opted_in_marketing equals true".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -122,17 +122,3 @@ To send ads to your users, you must comply with all applicable laws and regulati
 To keep your audience lists in these ad platforms up-to-date and remove users who have revoked their consent, set up a Canvas to remove users from these existing audience lists using an Audience Sync step.
 
 
-[1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
-[2]: {% image_buster /assets/img/audience_sync/audience_sync2.png %}
-[3]: {% image_buster /assets/img/audience_sync/facebook_partner.png %}
-[4]: {% image_buster /assets/img/audience_sync/google_ads_partner.png %}
-[5]: {% image_buster /assets/img/audience_sync/audience_sync_pro1.png %}
-[6]: {% image_buster /assets/img/audience_sync/audience_sync_pro2.png %}
-[7]: {% image_buster /assets/img/audience_sync/audience_sync_pro3a.png %}
-[8]: {% image_buster /assets/img/audience_sync/audience_sync_pro3b.png %}
-[9]: {% image_buster /assets/img/audience_sync/audience_sync_pro4.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
-[21]: {% image_buster /assets/img/audience_sync/audience_sync6.png %}
-[22]: {% image_buster /assets/img/audience_sync/audience_sync7.png %}

@@ -13,6 +13,8 @@ page_order: 1
 
 When you [connect your domain to Braze](#connecting-your-domain-to-braze), it will be used as the default domain for all landing pages. For example, if you connect the subdomain `forms.example.com`, your landing page URLs would now be `forms.example.com/holiday-sale`.
 
+The number of custom domains you can connect to your Braze account depends on your [plan tier]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). To increase your limit, contact your Braze account manager.
+
 ## Connecting your domain to Braze
 
 To connect a domain to your Braze account, have an administrator follow the steps below.
@@ -22,7 +24,7 @@ To connect a domain to your Braze account, have an administrator follow the step
 3. Copy and paste the **TXT** and **CNAME** records into the DNS settings of your domain provider.
 4. Return to the Braze dashboard to verify the connection.
 
-![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.][1]
+![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll start using your custom domain for your landing pages in the Braze dashboard.
@@ -71,4 +73,3 @@ No, you currently can only connect one subdomain to a workspace.
 
 No, you can't use subdomains that are already in use. While these subdomains are valid, they can't be used for landing pages if they are already assigned to other purposes or have DNS records that conflict with the required CNAME records.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}

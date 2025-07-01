@@ -24,6 +24,12 @@ guide_featured_list:
 - name: Shopify Product Sync
   link: /docs/shopify_catalogs/
   image: /assets/img/braze_icons/list.svg
+- name: Multiple Store Support
+  link: /docs/shopify_connecting_multiple_stores/
+  image: /assets/img/braze_icons/shopping-bag-01.svg
+- name: Unique Discount Codes
+  link: /docs/shopify_discount_codes/
+  image: /assets/img/braze_icons/tag-01.svg
 
 guide_menu_title: "Other articles"
 guide_menu_list:

@@ -59,8 +59,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```json
 {
    "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of string) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of string) User phone numbers to identify,
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
    "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
 }
 ```
@@ -121,9 +121,11 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge the fol
   - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
 {% enddetails %}
 
-### Identifying users by email
+### Identifying users by email addresses and phone numbers
 
-If an `email` is specified as an identifier, you must also include `prioritization` in the identifier. The `prioritization` must be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
+If an email address or phone number is specified as an identifier, you must also include `prioritization` in the identifier.
+
+The `prioritization` must be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
 
 The allowed values for the array are:
 
@@ -140,6 +142,7 @@ Only one of the following options may exist in the prioritization array at a tim
 If you specify `identified` in the array, this would mean the user **must** have an `external_id` to be entered into the Canvas. If you want users with email addresses to enter the message, regardless of whether they're identified or not, only use the `most_recently_updated` or `least_recently_updated` parameter instead.
 
 ## Request example
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \

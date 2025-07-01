@@ -1,7 +1,7 @@
 ---
 nav_title: "Regular Expressions"
 article_title: Regular Expressions
-page_order: 6
+page_order: 10
 
 description: "This reference article covers what regular expressions (regex) are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
 page_type: reference
@@ -16,13 +16,13 @@ tool:
 
 > Regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.<br><br>This page covers regular expressions (regex), how to use them, frequently asked questions, and provides a regex debugger to test regular expressions.
 
-In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101][regex]. We also offer an [in-house regex tester](#regex-debugger), a helpful reference page, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
+In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101](https://regex101.com/). We also offer an [in-house regex tester](#regex-debugger), a helpful reference page, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
 
 ## Resources
 
 - [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
 - [Regex Cheat Sheet]({{site.baseurl}}/regex_cheat_sheet/)
-- [Sample Data RTF][dummydata]
+- [Sample Data RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## Regex debugger
 
@@ -194,7 +194,7 @@ For example, if you're trying to target users who live in cities that start with
 
 #### How do I filter for specific phone numbers?
 
-Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/).
 
 Assuming you're searching for US phone numbers, use the regex format `1?\d\d\d\d\d\d\d\d\d\d`, where each repetition of `\d` is a digit you want to specify. The first three digits are the area code.
 
@@ -209,5 +209,3 @@ For example, let's say you wanted to filter users by phone number for a specific
 ![Filter for a phone number that matches regex of "^1?718\d\d\d\d\d\d\d".]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
-[regex]: https://regex101.com/
-[dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

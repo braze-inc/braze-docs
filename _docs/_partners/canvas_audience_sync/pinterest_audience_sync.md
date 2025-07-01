@@ -44,17 +44,17 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, select **Connect Pinterest**.
 
-![Pinterest technology page in Braze that includes an Overview section and Pinterest Audience Sync section with the Connected Pinterest button.][1]{: style="max-width:80%;"}
+![Pinterest technology page in Braze that includes an Overview section and Pinterest Audience Sync section with the Connected Pinterest button.]({% image_buster /assets/img/pinterest/pinterest1.png %}){: style="max-width:80%;"}
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.
 
 After selecting **Confirm**, you'll be redirected back into Braze to select which Pinterest ad accounts you wish to sync. 
 
-![A list of available ad accounts you can connect to Pinterest.][2]{: style="max-width:80%;"}
+![A list of available ad accounts you can connect to Pinterest.]({% image_buster /assets/img/pinterest/pinterest2.png %}){: style="max-width:80%;"}
 
 When successfully connected, you'll return to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.][3]{: style="max-width:80%;"}
+![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/pinterest/pinterest3.png %}){: style="max-width:80%;"}
 
 Your Pinterest connection will be applied at the Braze workspace level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
 
@@ -62,7 +62,7 @@ Your Pinterest connection will be applied at the Braze workspace level. If your 
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Step 3: Sync setup
 
@@ -70,7 +70,7 @@ Click on the **Custom Audience** button to open the component editor.
 
 Select **Pinterest** as the desired Audience Sync partner.
 
-![][19]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 Then select your desired Pinterest ad account. Under the **Choose a New or Existing Audience dropdown**, type in the name of a new or existing audience.
 
@@ -103,7 +103,7 @@ Once you have configured your Audience Sync to Pinterest, launch the Canvas! The
 
 You can view the audience on Pinterest by entering your ads manager account and selecting Audiences from the Ads dropdown. From the Audience page, you can see the size of each audience after it reaches ~100.
 
-![Audience details for a given Pinterest audience that includes audience name, audience ID, audience type, audience size.][11]
+![Audience details for a given Pinterest audience that includes audience name, audience ID, audience type, audience size.]({% image_buster /assets/img/pinterest/pinterest11.png %})
 
 ## User syncing and rate limit considerations
 
@@ -152,19 +152,3 @@ Ensure your Pinterest account successfully connects to Braze on the Pinterest pa
 
 Check that your token was generated with the correct account permissions. Note that if you have too many audiences in your Pinterest ad account, the dropdown to select your ad account may timeout. In this case, we recommend reducing the amount of audiences in your ad account.
 
-[1]: {% image_buster /assets/img/pinterest/pinterest1.png %}
-[2]: {% image_buster /assets/img/pinterest/pinterest2.png %}
-[3]: {% image_buster /assets/img/pinterest/pinterest3.png %}
-[4]: {% image_buster /assets/img/pinterest/pinterest4.png %}
-[5]: {% image_buster /assets/img/pinterest/pinterest5.png %}
-[6]: {% image_buster /assets/img/pinterest/pinterest6.png %}
-[7]: {% image_buster /assets/img/pinterest/pinterest7.png %}
-[8]: {% image_buster /assets/img/pinterest/pinterest8.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[9]: {% image_buster /assets/img/pinterest/pinterest9.png %}
-[10]: {% image_buster /assets/img/pinterest/pinterest10.png %}
-[11]: {% image_buster /assets/img/pinterest/pinterest11.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

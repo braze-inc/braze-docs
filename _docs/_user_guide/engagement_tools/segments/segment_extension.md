@@ -1,7 +1,7 @@
 ---
 nav_title: Segment Extensions
 article_title: Segment Extensions
-page_order: 3.1
+page_order: 6
 page_type: reference
 description: "This how-to article will walk you through how to set up and use a Segment Extension to enhance your segmentation capabilities."
 tool: Segments
@@ -39,7 +39,7 @@ Best for when you don't want to use SQL.
 - **Incremental refresh:** Write a Snowflake SQL segment that automatically refreshes the last 2 days of data or manually refresh as needed. Best for balancing accuracy and cost-efficiency.
 - **Full refresh:** Write a Snowflake SQL segment that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
 
-![Table with different Segment Extension creation experiences to select from.][20]{: style="max-width:50%"}
+![Table with different Segment Extension creation experiences to select from.]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
 If you select an experience that uses SQL, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) for further information.
 
@@ -49,7 +49,7 @@ If you select **Simple extension**, continue to the steps below.
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
-![Segment Extension named "Online Shoppers Extension - 90 Days".][2]
+![Segment Extension named "Online Shoppers Extension - 90 Days".]({% image_buster /assets/img/segment/segment_extension2.png %})
 
 ### Step 3: Choose your criteria
 
@@ -57,7 +57,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range to select the past X number of days, a start date, an end date, or an exact date range (date A to date B).
 
-![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.][3]
+![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.]({% image_buster /assets/img/segment/segment_extension1.png %})
 
 #### Event property segmentation
 
@@ -65,17 +65,17 @@ To increase targeting precision, select the **Add Property Filters** checkbox. T
 
 For string properties, you can enter in multiple values at once. In the example below, this filter looks for users with a status equal to any of the following: gold, silver, or bronze.
 
-![Segmenting based on string properties.][13.5]
+![Segmenting based on string properties.]({% image_buster /assets/img/segment/property5.png %})
 
-![Segmenting based on numeric properties.][13]
+![Segmenting based on numeric properties.]({% image_buster /assets/img/segment/property2.png %})
 
-![Segmenting based on boolean properties.][14]
+![Segmenting based on boolean properties.]({% image_buster /assets/img/segment/property3.png %})
 
-![Segmenting based on datetime objects.][15]
+![Segmenting based on datetime objects.]({% image_buster /assets/img/segment/property4.png %})
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
-![Segmenting based on nested event properties.][18]
+![Segmenting based on nested event properties.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years. Using event properties within Segment Extensions does not impact data point usage.
 
@@ -93,7 +93,7 @@ After you select **Save**, your extension will begin processing. The length of t
 
 While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
 
-!["Segment Extensions" page with two active extensions.][5]
+!["Segment Extensions" page with two active extensions.]({% image_buster /assets/img/segment/segment_extension5.png %})
 
 When a Segment Extension is processing, Braze will continue to use the version history of the segment from before the processing began for audience segmentation purposes. Processing takes place each time a save or refresh occurs, and involves querying and updating user profiles - in other words, your segment's membership does not update instantaneously. This means that unless a user's action is performed before the refresh begins processing, we can't guarantee that the user will be included in the Segment Extension once that particular refresh is complete. Conversely, users who were in the Segment Extension before the refresh that  no longer meet the criteria will continue to match your segment until the refresh process is complete and updates are applied.
 
@@ -101,17 +101,17 @@ When a Segment Extension is processing, Braze will continue to use the version h
 
 After you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
-!["Filters" section with a filter dropdown showing "Braze Segment Extensions".][6]
+!["Filters" section with a filter dropdown showing "Braze Segment Extensions".]({% image_buster /assets/img/segment/segment_extension7.png %})
 
 From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
 
-![A "Braze Segment Extensions" filter that includes a segment "1 email click in the last 56 days".][7]
+![A "Braze Segment Extensions" filter that includes a segment "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension6.png %})
 
 To view the extension criteria, select **View Extension Details** to show the details in a new window.
 
-![Extension for "1 email click in the last 56 days".][8]{: style="max-width:70%;"}
+![Extension for "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
-Now you can proceed as usual with [creating your segment][11].
+Now you can proceed as usual with [creating your segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 ## Frequently asked questions
 
@@ -137,22 +137,3 @@ When Segment Extensions calculates the relative time period ("last X days"), the
 
 However, you can specify the time zones by using SQL segments to identify users who performed the custom event 10 days ago based on midnight in company time, or users who performed the event 10 days ago based on the current time.
 
-[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13.5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}

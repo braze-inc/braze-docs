@@ -103,7 +103,7 @@ valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
 - name: Certona
-  url: /docs/partners/message_personalization/dynamic_content/certona/
+  url: /docs/partners/certona/
 - name: Playable
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
@@ -151,13 +151,13 @@ valid_partner_list:
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Judo
-  url: /docs/partners/message_personalization/dynamic_content/judo/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
-  url: /docs/partners/message_personalization/dynamic_content/worthy/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/worthy/
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Zeotap
@@ -173,13 +173,11 @@ valid_partner_list:
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
-  url: /docs/partners/message_personalization/dynamic_content/wyng/
-- name: OfferFit
-  url: /docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/wyng/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
-  url: /docs/partners/message_personalization/dynamic_content/personalize/
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/personalize
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
@@ -193,7 +191,7 @@ valid_partner_list:
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
 - name: Quikly
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+  url: /docs/partners/message_orchestration/retargeting/quikly/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
 - name: IAM Studio (NNT)
@@ -259,7 +257,7 @@ valid_partner_list:
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
-  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/  
 - name: Simon Data
@@ -287,7 +285,7 @@ valid_partner_list:
 - name: Alpaco
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
 - name: NiftyImages
-  url: /docs/partners/message_personalization/dynamic_content/niftyimages
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
@@ -344,6 +342,14 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Mention Me
+  url: /docs/partners/mention_me/
 - name: Just Words
   url: /docs/partners/just_words/
+- name: Eagle Eye
+  url: /docs/partners/eagle_eye/
+- name: Eppo
+  url: /docs/partners/eppo/
+- name: Stripe
+  url: /docs/partners/stripe/
 ---

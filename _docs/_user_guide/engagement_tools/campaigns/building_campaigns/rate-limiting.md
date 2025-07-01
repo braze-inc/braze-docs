@@ -34,7 +34,6 @@ Braze provides the following filters in order to help you limit the rate at whic
 - Last Received Push Campaign
 - Last Received Email Campaign
 - Last Received SMS
-- Last Viewed News Feed
 
 #### Implementing filters
 
@@ -42,15 +41,15 @@ Let's say we've created a segment named "Retargeting Filter Showcase" with a fil
 
 If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push Campaign" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this segment for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
 
-![Segment Details section with the "Last Received Any Message" segment filter highlighted.][1]
+![Segment Details section with the "Last Received Any Message" segment filter highlighted.]({% image_buster /assets/img_archive/rate_limit_daily.png %})
 
 Appending this filter to all segments targeted by campaigns would cause your users to receive a maximum of one push every 24 hours. You could then prioritize your messaging by ensuring that your most important messages are delivered before less important messages.
 
 #### Setting a maximum user cap
 
-In the **Target Users** step of your campaign composition, you can also limit the total number of users that will receive your message. This serves as a check that's independent of your campaign filters, allowing you to freely segment users without worrying about over-spamming.
+In the **Target Audiences** step of your campaign composer, you can also limit the total number of users that will receive your message. This serves as a check that's independent of your campaign filters, allowing you to freely segment users without worrying about over-spamming.
 
-![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.][2]
+![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.]({% image_buster /assets/img_archive/total_limit.png %})
 
 By selecting the maximum user limit, you can limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
@@ -76,22 +75,22 @@ When using rate limiting with an A/B test, the rate limit isn't applied to the c
 
 ### Delivery speed rate limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages—this means Braze will send no more than your rate-limited setting within a minute.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages, which means Braze will send no more than your rate-limited setting within a minute.
 
-When targeting users during campaign creation, you can navigate to **Target Audiences** (for campaigns) or **Send Settings** (for Canvas) to select a rate limit (in various increments from as low as 10 to as high as 500,000 messages per minute). 
+When targeting users during campaign creation, you can navigate to **Target Audiences** (for campaigns) or **Send Settings** (for Canvas) to select a rate limit (in various increments from as low as 10 to as high as 500,000 messages per minute).
 
 Note that non-rate-limited campaigns may exceed these delivery limits. However, be aware that messages will be aborted if they’re delayed 72 hours or more due to a low rate limit. If the rate limit is too low, the creator of the campaign will receive alerts in the dashboard and by email.
 
-![Audience Summary with a selected checkbox for limiting the rate at which the campaign will end, and rate being 500,000 per minute.][3]
+![Audience Summary with a selected checkbox for limiting the rate at which the campaign will end, and rate being 500,000 per minute.]({% image_buster /assets/img_archive/per_minute_rate_limit.png %})
 
-As another example, if you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute. 
+As another example, if you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute.
 
 Note that rate-limited messages may not be sent evenly over the course of each minute. Using the example of a 10,000-per-minute rate limit, this means Braze makes sure no more than 10,000 messages are sent per minute. This could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute. 
 
 Also, note that the rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
 
 {% alert important %}
-Be wary of delaying time-sensitive messages with this form of rate limiting. If the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
+Be wary of delaying time-sensitive messages with this form of rate limiting in relation to the total number of users in a segment. For example, if the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
 {% endalert %}
 
 #### Single-channel campaigns
@@ -117,7 +116,7 @@ When sending a Canvas with a speed rate limit, the rate limit is shared between 
 
 #### Rate limiting and Connected Content retries
 
-When the [Connected Content retry][19] is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
+When the [Connected Content retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
 
 Instead of trying to make up for the delay and send the remaining 6,000 messages in the second minute or add them to the 10,000 that are already set to send, Braze will move those 6,000 messages to the “back of the queue” and add a minute, if necessary, to the total minutes it would take to send your message.
 
@@ -154,7 +153,7 @@ This time frame can be measured in minutes, days, or weeks (seven days), with a 
 
 Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per workspace. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 
-![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.][14]
+![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %})
 
 #### Behavior when users are frequency capped on a Canvas step
 
@@ -166,7 +165,7 @@ There may be some campaigns, like transactional messages, that you want to alway
 
 If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling **Frequency Capping** to **OFF**. 
 
-After this, you will be asked if you still want this campaign to count toward your frequency cap. Messages that count toward frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules [within the API request][16] by setting `override_messaging_limits` to `true`.
+After this, you will be asked if you still want this campaign to count toward your frequency cap. Messages that count toward frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules [within the API request]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns) by setting `override_messaging_limits` to `true`.
 
 By default, new campaigns and Canvases that do not obey frequency caps will also not count toward them. This is configurable for each campaign and Canvas.
 
@@ -174,7 +173,7 @@ By default, new campaigns and Canvases that do not obey frequency caps will also
 This behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas. The changes are backward compatible and do not impact messages that are currently live.
 {% endalert %}
 
-![Delivery Controls section with Frequency Capping turned on.][18]
+![Delivery Controls section with Frequency Capping turned on.]({% image_buster /assets/img_archive/frequencycappingupdate.png %})
 
 Different channels within a multichannel campaign will individually count  the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push will count toward one push campaign and the email message will count toward one email message campaign. The campaign will also count toward one "campaign of any type." If users are capped to one push and one email campaign per day and a user receives this multichannel campaign, then they will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
 
@@ -224,7 +223,7 @@ You can also combine regular frequency capping with frequency capping by tags. C
 1. No more than three push notification campaigns or Canvas components per week from all campaign and Canvas steps. <br>**AND**
 2. No more than two push notification campaign or Canvas components per week with the tag `promotional`.
 
-![Frequency Capping section with two rules limiting how many push notification campaigns/Canvases can be sent to a user every 1 week.][12]
+![Frequency Capping section with two rules limiting how many push notification campaigns/Canvases can be sent to a user every 1 week.]({% image_buster /assets/img/tag_rule_fnfn.png %} "rules")
 
 As a result, your users will receive no more than three campaign sends per week over all campaigns and Canvas steps and no more than two push notification campaigns or Canvas components with the tag `promotional`.
 
@@ -239,7 +238,7 @@ When rules conflict, the most restrictive, applicable frequency capping rule wil
 1. No more than one push notification campaign or Canvas component per week from all campaign and Canvas components. <br>**AND**
 2. No more than three push notification campaigns or Canvas components per week with the tag `promotional`.
 
-![Frequency Capping section with conflicting rules to limit how many push notification campaigns/Canvas steps are sent to a user every 1 week.][11]
+![Frequency Capping section with conflicting rules to limit how many push notification campaigns/Canvas steps are sent to a user every 1 week.]({% image_buster /assets/img/global_rules.png %} "global rules")
 
 In this example, your user will not receive more than one push notification campaign or Canvas components with the tag "promotional" in a given week, because you've specified that users should not receive more than one push notification campaign or Canvas component from all campaigns and Canvas components. In other words, the most restrictive applicable frequency rule is the rule that will be applied to a given user.
 
@@ -284,14 +283,3 @@ For example, you might set up the following rule:
 
 This rule will ensure that no users receive more than 100 emails per week because, at most, users will receive three emails per week from campaigns or Canvas components with frequency capping turned on.
 
-[11]: {% image_buster /assets/img/global_rules.png %} "global rules"
-[12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "rules"
-[13]: {% image_buster /assets/img/standard_rules_fnfn.png %} "rules standard"
-[1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
-[2]: {% image_buster /assets/img_archive/total_limit.png %}
-[3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
-[14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
-[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
-[18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/

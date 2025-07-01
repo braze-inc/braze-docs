@@ -10,17 +10,17 @@ description: "This article covers how to create a Braze-to-Braze webhook for key
 
 # Creating a Braze-to-Braze webhook
 
-> You can use webhooks to communicate with the Braze [REST API][2], essentially doing anything that our API allows you to do. We refer to this as a Braze-to-Braze webhook—a webhook that is communicating from Braze to Braze. The use cases on this page assume that you're familiar with [how webhooks work][4] and how to [create a webhook][5] in Braze.
+> You can use webhooks to communicate with the Braze [REST API]({{site.baseurl}}/api/basics/), essentially doing anything that our API allows you to do. We refer to this as a Braze-to-Braze webhook—a webhook that is communicating from Braze to Braze. The use cases on this page assume that you're familiar with [how webhooks work]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) and how to [create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) in Braze.
 
 ## Prerequisites
 
-To create a Braze-to-Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach.
+To create a Braze-to-Braze webhook, you'll need an [API key]({{site.baseurl}}/api/api_key/) with permissions for the endpoint you want to reach.
 
 ## Setting up your Braze-to-Braze webhook
 
 While the specifics of your webhook request will vary from use case to use case, the general workflow for creating a Braze-to-Braze webhook stays the same.
 
-1. [Create a webhook][5] as a campaign or Canvas component. 
+1. [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) as a campaign or Canvas component. 
 2. Choose **Blank Template**.
 3. In the **Compose** tab, specify the **Webhook URL** and **Request Body** as noted for your use case.
 4. In the **Settings** tab, specify your **HTTP Method** and **Request Headers** as noted for your use case.
@@ -45,7 +45,7 @@ For example, you might want to count how many times a user has seen an active in
 
 Follow the general steps for creating a Braze-to-Braze webhook, and refer to the following when configuring your webhook:
 
-- **Webhook URL:** Your [REST endpoint URL][7] followed by `/users/track`. For example, for the `US-06` instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
+- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) followed by `/users/track`. For example, for the `US-06` instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
 - **Request Body:** Raw Text
 
 #### Request headers and method
@@ -59,11 +59,11 @@ Braze requires an HTTP header for authorization that includes your API key and a
 
 Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
-![The "Settings" tab with the request headers for the webhook.][1]
+![The request headers for the webhook.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 
-Add your user track request in the request body and the Liquid to assign a counter variable. For more details, refer to the [`/users/track` endpoint][8].
+Add your user track request in the request body and the Liquid to assign a counter variable. For more details, refer to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 The following is an example of both the required Liquid and request body for this endpoint, where `your_attribute_count` is the attribute you're using to count how many times a user has seen a message:
 
@@ -97,7 +97,7 @@ For this use case, you'll create two Canvases and use a webhook to trigger the s
 
 Refer to the following when configuring your webhook:
 
-- **Webhook URL:** Your [REST endpoint URL][7] followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
 - **Request Body:** Raw Text
 
 #### Request headers and method
@@ -111,11 +111,11 @@ Braze requires an HTTP header for authorization that includes your API key and a
 
 Replace `YOUR_API_KEY` with a Braze API key with `canvas.trigger.send` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
 
-![The "Settings" tab with the request headers for the webhook.][1]
+![The request headers for the webhook.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 
-Add your `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered delivery][9]. The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: 
+Add your `canvas/trigger/send` request in the text field. For more details, refer to [Sending Canvas messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). The following is an example of the request body for this endpoint, where `your_canvas_id` is the Canvas ID from your second Canvas: 
 
 {% raw %}
 ```json
@@ -139,12 +139,3 @@ Add your `canvas/trigger/send` request in the text field. For more details, refe
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 
-[1]: {% image_buster /assets/img_archive/webhook_settings.png %}
-[2]: {{site.baseurl}}/api/basics/
-[3]: {{site.baseurl}}/api/api_key/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-[7]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/

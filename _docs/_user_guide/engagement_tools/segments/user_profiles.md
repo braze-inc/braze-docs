@@ -1,7 +1,7 @@
 ---
 nav_title: User Profiles
 article_title: User Profiles
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -26,13 +26,13 @@ To access a user's profile, go to the **Search Users** page and search for a use
 
 If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]{: style="max-width:60%;"}
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Use cases
 
 User profiles are a great resource for troubleshooting and testing because you can easily access information about a user's engagement history, segment membership, device, and operating system.
 
-For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign][13] that didn't behave as expected.
+For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) that didn't behave as expected.
 
 You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
@@ -58,9 +58,9 @@ The **Overview** tab contains basic information about a user and their interacti
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on this data, see [User Data Collection][12].
+For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/).
 
-![The Overview tab of a user profile.][2]
+![The Overview tab of a user profile.]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### Engagement tab {#engagement-tab}
 
@@ -68,17 +68,17 @@ The **Engagement** tab contains information about a user's interactions with the
 
 | Engagement category | Contains |
 | --- | --- |
-| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
+| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
 | Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user has last received messages from you from each channel. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
+| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![The Engagement tab of a user profile displaying their contact settings and communication statistics.][3]
+![The Engagement tab of a user profile displaying their contact settings and communication statistics.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### Messaging History tab
 
@@ -88,7 +88,7 @@ The **Message History** tab of the user profile shows recent messaging-related e
 If you have feedback on this table or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
-![The Messaging History tab showing which campaigns and Canvases a user has received.][5]
+![The Messaging History tab showing which campaigns and Canvases a user has received.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### Viewing and understanding events
 
@@ -138,9 +138,3 @@ Email open tracking is error-prone in any tool, including Braze. With a variety 
 While email open statistics can be useful in aggregate, for example, to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
