@@ -225,7 +225,7 @@ You can use the order placed event to trigger when a customer successfully compl
 | `total_discounts` | No | Float | Total amount of discounts applied to the order. | 
 | `discounts`| No | Array of objects | Detailed list of discounts applied to the order. |
 | `products` | Yes | Array of objects |  |
-| `product_id` | Yes | String | A unique identifier for the product that was viewed. This value be can be the product ID or SKU. <br>If a partial refund is issued and there is no `product_id` assigned to the refund (for example, an order-level refund), provide a generalized `product_id`. |
+| `product_id` | Yes | String | A unique identifier for the product that was viewed. This value be can be the product ID or SKU. |
 | `product_name` | Yes | String | The name of the product that was viewed. |
 | `variant_id` | Yes | String | A unique identifier for the product variant. An example is `shirt_medium_blue` |
 | `image_url` | No | String | URL of the product image. |
@@ -300,7 +300,7 @@ You can use the order refunded event to trigger when an order is partially or en
 | `total_discounts`     | No       | Float     | Total amount of discounts applied to the order.   |
 | `discounts`           | No       | Array of objects     | Detailed list of discounts applied to the order. |
 | `products`            | Yes      | Array of objects     |  |
-| `product_id`       | Yes      | String    | A unique identifier for the product that was viewed. This value can be the product ID, SKU, or similar.             |
+| `product_id`       | Yes      | String    | A unique identifier for the product that was viewed. This value can be the product ID, SKU, or similar. <br>If a partial refund is issued and there is no `product_id` assigned to the refund (for example, an order-level refund), provide a generalized `product_id`.             |
 | `product_name`     | Yes      | String    | The name of the product that was viewed.                                                                      |
 | `variant_id`       | Yes      | String    | A unique identifier for the product variant (such as `shirt_medium_blue`).                                         |
 | `image_url`        | No       | String    | URL of the product image.     |
