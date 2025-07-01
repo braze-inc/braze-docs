@@ -465,7 +465,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "timezone" : "(optional, string) Time zone of the user"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
