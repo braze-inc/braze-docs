@@ -68,9 +68,11 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "id_2": "¿Dónde está la biblioteca?"
             },
             "locale": {
+                "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
                 "name": "es-MX",
-                "country": "Mexico",
-                "language": "Spanish"
+                "country": "MX",
+                "language": "es",
+                "locale_key": "es-mx"
             }
         }
     ]

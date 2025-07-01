@@ -68,10 +68,11 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "id_2": "¿Dónde está la biblioteca?"
             },
             "locale": {
-                "uuid": "a1b2c3d4-e5f6-g7h8-123a-a1234bn5678d",
+                "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
                 "name": "es-MX",
-                "country": "Mexico",
-                "language": "Spanish"
+                "country": "MX",
+                "language": "es",
+                "locale_key": "es-mx"
             }
         },
         {
@@ -81,9 +82,11 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "id_2": "圖書館在哪裡?"
             },
             "locale": {
+                "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
                 "name": "zh-HK",
-                "country": "Hong Kong",
-                "language": "Chinese (Traditional)"
+                "country": "HK",
+                "language": "zh",
+                "locale_key": "zh-hk"
             }
         }
     ]

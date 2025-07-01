@@ -78,8 +78,8 @@ Authorization: Bearer YOUR-REST-API-KEY
             "locale": {
                 "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
                 "name": "zh-HK",
-                "country": "Hong Kong",
-                "language": "Chinese (Traditional)",
+                "country": "HK",
+                "language": "zh",
                 "locale_key": "zh-hk"
             },
             "translation_map": {
