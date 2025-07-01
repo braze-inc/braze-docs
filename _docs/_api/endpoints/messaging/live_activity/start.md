@@ -28,6 +28,10 @@ To use this endpoint, you'll need to complete the following:
 - Generate an API key with the `messages.live_activity.start` permission.
 - [Create a Live Activity]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity) using the Braze Swift SDK.
 
+{% alert important %}
+If the final rendered payload is larger than the corresponding service's maximum allowed size, the send won't be successful.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
