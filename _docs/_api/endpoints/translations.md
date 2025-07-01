@@ -20,7 +20,7 @@ guide_featured_list:
     link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Campaign"
-    link: /docs/api/endpoints/translations/canvas/put_update_translation_campaign/
+    link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title: "Canvas endpoints"
@@ -29,7 +29,7 @@ guide_menu_list:
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: View All Translations for a Canvas"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_canvases/
+    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Canvas"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
