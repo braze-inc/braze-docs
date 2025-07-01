@@ -19,7 +19,7 @@ The Braze Audience Sync to Google integration enables brands to extend the reach
 
 {% alert note %}
 The Braze Audience Sync to Google integration is supported for Google Ads, not Google Ads Manager.
-{% end alert %}
+{% endalert %}
 
 Google Ads no longer generates similar audiences, also known as "lookalike audiences," for targeting and reporting. Refer to [Google Ads documentation](https://support.google.com/google-ads/answer/12463119?) to learn more.
 
