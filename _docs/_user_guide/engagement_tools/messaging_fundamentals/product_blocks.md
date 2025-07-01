@@ -14,44 +14,42 @@ alias: /dnd_product_blocks/
 > The drag-and-drop editor empowers you to quickly add and configure product blocks to your messages for seamless product showcases—without the need to create custom Liquid code. 
 
 {% alert important %}
-Currently, the drag-and-drop product block feature is only available for email. If you would like this feature for other channels, submit a [product request]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+The drag-and-drop product block feature is in early access and is currently only available for email. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Requirements 
 
 | Requirement | Description |
 | --- | --- |
-| eCommerce recommended events | [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) provide standardized data schemas for key behavioral events that occur before and after an order is placed. These events will eventually replace the legacy Braze purchase event and will become the standard for tracking commerce-related behavior. <br><br> eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. |
-| eCommerce Canvas Templates | The new eCommerce recommended events will support pre-built templates, including eCommerce Canvas templates designed for essential use cases such as abandoned browsing, abandoned carts, and order confirmations. <br><br>If you plan to implement any of these essential eCommerce use cases using the [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/), you must use or follow the provided Canvas template. |
-| Braze catalog | You need to create a Braze catalog that includes the following fields, which will be used in your product block configuration:{::nomarkdown}<ul><li>product_image_url</li><li>product_title</li><li>product_url</li><li>variant_image_url</li><li>variant_title</li><li>variant_url</li></ul>{:/} |
+| eCommerce recommended events | [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) provide standardized data schemas for key behavioral events that occur before and after an order is placed. These events will eventually replace the legacy Braze purchase event and will become the standard for tracking commerce-related behavior. <br><br> eCommerce recommended events are required for dynamic product blocks.<br><br> eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. |
+| eCommerce Canvas Templates | The new eCommerce recommended events will support pre-built templates, including eCommerce Canvas templates designed for essential use cases such as abandoned browsing, abandoned carts, and order confirmations. <br><br> eCommerce Canvas templates are required for dynamic product blocks.<br><br>If you plan to implement any of these essential eCommerce use cases using the [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/), you must use or follow the provided Canvas template. |
+| Braze catalog | You need to create a Braze catalog that includes the following fields, which will be used in your product block configuration:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## Types of drag-and-drop product blocks
 
 | Product Block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
-| Dynamic | Personalize products using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | Only available in Canvas. |
-| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | Perfect for showcasing new product launches or category-specific offerings. | Available in both Canvas, campaigns, and templates. |
+| Dynamic | Personalize products using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
+| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Product block content configuration
 
 In the **Product Fields** section, select your product block type, then toggle on the fields you’d like to include for each product. Each field is pulled from different sources based on the type of product block you select.
 
-{% tabs %}
-{% tab Dynamic product block %}
+### Dynamic product block
 
 | Product field | Source |
-| --- | --- | --- |
+| --- | --- | 
 | Variant image | Catalogs | 
 | Product title | Catalogs | 
-| Button for product URL | Catalogs ||
+| Button for product URL | Catalogs |
 | Price | eCommerce Recommended event property|
 | Quantity | eCommerce Recommended event property| 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
+{: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-{% endtab %}
-{% tab Static product block %}
+### Static product block
 
 | Product field | Source |
 | --- | --- | --- |
@@ -60,9 +58,6 @@ In the **Product Fields** section, select your product block type, then toggle o
 | Button for product URL | Catalogs |
 | Price | Catalogs |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
-
-{% endtab %}
-{% endtabs %}
 
 ### Layout options
 
@@ -89,7 +84,7 @@ Existing styles for paragraphs and buttons will automatically apply to the text 
 ### Catalog setup 
 
 {% alert important %}
-If you’re using the Braze and Shopify integration for [product syncing]({{site.baseurl}}/shopify_catalogs/), you don’t need to take any additional steps to use drag-and-drop product blocks. If you don’t have product variant information, you need to duplicate their top-level product information in both the product and the product variant fields within the event payloads and catalogs. This means you need to provide the same product details for both identifiers to maintain consistency for the product block to work properly.
+If you’re using the Braze and Shopify integration for [product syncing]({{site.baseurl}}/shopify_catalogs/), you don’t need to take any additional steps to use drag-and-drop product blocks.<br><br> If you don’t have product variant information, you need to duplicate their top-level product information in both the product and the product variant fields within the event payloads and catalogs. This means you need to provide the same product details for both identifiers to maintain consistency for the product block to work properly.
 {% endalert %}
 
 To use drag-and-drop product blocks, you need to set up a Braze catalog that includes specific field values. These fields will be used in your product block configuration. Make sure your catalog includes the following fields:
@@ -100,6 +95,8 @@ To use drag-and-drop product blocks, you need to set up a Braze catalog that inc
 | `product_title` | The title of the product.|
 |`product_url` | The URL where customers can view or purchase the product. |
 |`variant_image_url` | The URL for the variant image. |
+
+![A sample CSV file with the required fields in addition to others.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
 
 Get a jumpstart by working off of the sample Product Catalog, which includes the required fields. 
 
@@ -119,8 +116,7 @@ A static product block personalizes your emails using data from Braze Catalogs o
 
 ### Step 1: Create an email campaign or email Canvas step
 
-{% tabs %}
-{% tab Dynamic product block %}
+#### Dynamic product block
 
 Create a new Canvas that uses one of the available Braze templates for your specific use case:
 - Abandoned Browse
@@ -130,13 +126,9 @@ Create a new Canvas that uses one of the available Braze templates for your spec
 
 For detailed instructions on creating your eCommerce Canvases, refer to [eCommerce use cases]({{site.baseurl}}/ecommerce_use_cases/).
 
-{% endtab %}
-{% tab Static product block %}
+#### Static product block
 
 Create a drag-and-drop email campaign or create an action-based Canvas that has a drag-and-drop email Message step. 
-
-{% endtab %}
-{% endtabs %}
 
 ### Step 2: Add a product block
 
