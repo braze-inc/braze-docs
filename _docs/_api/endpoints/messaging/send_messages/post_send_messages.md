@@ -18,9 +18,7 @@ description: "This article outlines details about the Send messages immediately 
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
-{% alert important %}
-If the final rendered payload is larger than the corresponding service's maximum allowed size, the send won't be successful.
-{% endalert %}
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
