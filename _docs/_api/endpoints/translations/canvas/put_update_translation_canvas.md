@@ -1,23 +1,23 @@
 ---
-nav_title: "PUT: Update Translation in a Campaign"
-article_title: "PUT: Update Translation in a Campaign"
+nav_title: "PUT: Update Translation in a Canvas"
+article_title: "PUT: Update Translation in a Canvas"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update translation in a campaign endpoint."
+description: "This article outlines details about the Update translation in a Canvas endpoint."
 ---
 
 {% api %}
-# Update translation in a campaign
+# Update translation in a Canvas
 {% apimethod put %}
-/campaigns/translations
+/canvas/translations
 {% endapimethod %}
 
-> Use this endpoint to update multiple translations for a campaign.
+> Use this endpoint to update multiple translations for a Canvas.
 
-If you want to update translations after a campaign has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) first.
+If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -25,7 +25,7 @@ This endpoint is currently in early access. Contact your Braze account manager i
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `campaigns.translations.update` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.translations.update` permission.
 
 ## Rate limit
 
@@ -39,12 +39,15 @@ There are no path parameters for this endpoint.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | Required | String | The ID of your campaign. |
-| `message_variation_id` | Required | String | The ID of your message variation. |
-| `locale_name` | Required | String | The name of the locale. |
+|`step_id`| Required | String | The ID of your Canvas step. |
+|`message_variation_id`| Required | String | The ID of your message variation. |
+|`locale_name`| Required | String | The name of the locale. |
+|`workflow_id` | Required | String | The ID of the Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
+{% alert note %}
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+{% endalert %}
 
 ## Example request
 
@@ -52,11 +55,12 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab", // CAMPAIGNS ONLY
+    "workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad", // CANVAS ONLY
+    "step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
     "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
-       "id_3": "Ein Absatz ohne Formatierung"
+        "id_3": "Ein Absatz ohne Formatierung"
     }
 }
 ```
@@ -86,7 +90,6 @@ The status code `400` could return the following response body. Refer to [Troubl
 	]
 }
 ```
-
 
 ## Troubleshooting
 
