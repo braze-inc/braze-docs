@@ -66,7 +66,7 @@ To stop tracking a specific custom attribute, event, or product, follow these st
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection).
+You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). It's important to note that until they are deleted, custom attributes or custom events in the "Trashed" state count towards the blocklisting limit of 300 custom attributes and 300 custom events.
 
 When a custom event or attribute is blocklisted, the following applies:
 
