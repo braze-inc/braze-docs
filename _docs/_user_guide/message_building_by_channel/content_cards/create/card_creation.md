@@ -126,3 +126,4 @@ When cards are created at first impression, it may take 1–2 seconds for the ca
 ### Previous SDK versions
 
 If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the next Content Card sync.
+
