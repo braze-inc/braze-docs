@@ -64,9 +64,9 @@ guide_featured_list:
 
 Each Braze SDK tutorial offers step-by-step instructions along with full sample code. Choose a tutorial below to get started:
 
-- [Displaying Banners]({{site.baseurl}}/docs/developer_guide/banners/tutorial_displaying_banners)
+- [Displaying Banners]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
 - [Customizing in-app message styling]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling)
-- [Conditionally displaying in-app messages]({{site.baseurl}}/docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages)
+- [Conditionally displaying in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages)
 - [Deferring triggered in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages)
 
 ### Data flexibility

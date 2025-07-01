@@ -1,21 +1,21 @@
 ---
-nav_title: "GET: View Translation for a Canvas"
-article_title: "GET: View Translation for a Canvas"
+nav_title: "GET: View Translation for a Campaign"
+article_title: "GET: View Translation for a Campaign"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the View translation for a Canvas endpoint."
+description: "This article outlines details about the View Translation for a campaign endpoint."
 ---
 
 {% api %}
-# View translation for a Canvas
+# View translation for a campaign
 {% apimethod get %}
-/canvas/translations/?locale_id={locale_id}
+/campaigns/translations/?locale_id={locale_id}
 {% endapimethod %}
 
-> Use this endpoint to preview a translated message for a Canvas.
+> Use this endpoint to preview a translated message for a campaign.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -23,7 +23,7 @@ This endpoint is currently in early access. Contact your Braze account manager i
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.translations.get` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `campaigns.translations.get` permission.
 
 ## Rate limit
 
@@ -33,8 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter              | Required | Data Type | Description                        |
 |------------------------|----------|-----------|------------------------------------|
-| `workflow_id`          | Required | String    | The ID of the Canvas.              |
-| `step_id`              | Required | String    | The ID of your Canvas step.        |
+| `campaign_id`          | Required | String    | The ID of your campaign.           |
 | `message_variation_id` | Required | String    | The ID for your message variation. |
 | `locale_id`            | Required | String    | The ID of the locale.              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -44,7 +43,7 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?locale_id={locale_uuid}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations/?locale_id={locale_uuid}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -61,20 +60,22 @@ The status code `200` could return the following response header and body.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-	"translations": [
-		{
-			"translation_map": {
-				"id_0": "¡Hola!",
-				"id_1": "Me llamo Jacky",
-				"id_2": "¿Dónde está la biblioteca?"
-			},
-			"locale": {
- 				"name": "es-MX",
- 				"country": "Mexico",
- 				"language": "Spanish",
-			}
-		}
-	]
+    "translations": [
+        {
+            "translation_map": {
+                "id_0": "¡Hola!",
+                "id_1": "Me llamo Jacky",
+                "id_2": "¿Dónde está la biblioteca?"
+            },
+            "locale": {
+                "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
+                "name": "es-MX",
+                "country": "MX",
+                "language": "es",
+                "locale_key": "es-mx"
+            }
+        }
+    ]
 }
 ```
 

@@ -1,23 +1,21 @@
 ---
-nav_title: "PUT: Update Translation in a Canvas"
-article_title: "PUT: Update Translation in a Canvas"
+nav_title: "PUT: Update Translations for an Email Template"
+article_title: "PUT: Update Translations for an Email Template"
 search_tag: Endpoint
-page_order: 1
+page_order: 4
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update translation in a Canvas endpoint."
+description: "This article outlines details about the Update translations for an email template endpoint."
 ---
 
 {% api %}
-# Update translation in a Canvas
+# Update translations for an email template
 {% apimethod put %}
-/canvas/translations
+/templates/email/translations/
 {% endapimethod %}
 
-> Use this endpoint to update multiple translations for a Canvas.
-
-If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
+> Use this endpoint to update translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -25,7 +23,7 @@ This endpoint is currently in early access. Contact your Braze account manager i
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.translations.update` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `templates.translations.update` permission.
 
 ## Rate limit
 
@@ -39,15 +37,12 @@ There are no path parameters for this endpoint.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`step_id`| Required | String | The ID of your Canvas step. |
-|`message_variation_id`| Required | String | The ID of your message variation. |
-|`locale_name`| Required | String | The name of the locale. |
-|`workflow_id` | Required | String | The ID of the Canvas. |
+| `template_id` | Required | String | The ID of your email template. |
+| `locale_id` | Required | String | The ID of the locale. |
+| `translations` | Required | String | The map of the translations for your email template. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
-{% endalert %}
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
 
 ## Example request
 
@@ -55,13 +50,17 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-	"workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad", // CANVAS ONLY
-	"step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
-    "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
+    "template_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
-    "translation_map": {
-       "id_3": "Ein Absatz ohne Formatierung"
-    }
+    "translations": [
+        {
+            "translation_map": {
+                "id_0": "¡Hola!",
+                "id_1": "Me llamo Jacky",
+                "id_2": "¿Dónde está la biblioteca?"
+            }
+        }
+    ]
 }
 ```
 
@@ -73,7 +72,7 @@ There are four status code responses for this endpoint: `200`, `400`, `404`, and
 
 ```json
 {
-	"message": "success"
+    "message": "success"
 }
 ```
 
@@ -85,11 +84,13 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
 	"errors": [
 		{
-			"message": "The provided locale code does not exist."
+			"id": "1234567-abc-123-012345678",
+			"message": "The provided translations yielded errors when parsing. Please contact Braze for more information."
 		}
 	]
 }
 ```
+
 
 ## Troubleshooting
 
