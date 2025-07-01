@@ -54,6 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
