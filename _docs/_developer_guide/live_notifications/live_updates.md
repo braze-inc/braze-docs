@@ -20,7 +20,7 @@ You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-
 
 In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Updates in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
 
-![An example Live Update from Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:65%;"}
+![An example Live Update from Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
