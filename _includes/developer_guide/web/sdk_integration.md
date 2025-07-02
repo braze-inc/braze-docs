@@ -6,20 +6,25 @@ The Web Braze SDK lets you collect analytics and display rich in-app messages, p
 
 ## Integrating the Web SDK
 
-{% alert tip %}
-Not sure if the standard integration method is right for you? Check out our [other integration methods](#web_other-integration-methods) before continuing.
-{% endalert %}
+You can integrate the Web Braze SDK using any of the following methods:
 
-### Step 1: Install the Braze library
-
-You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [Content security policy headers guide]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) before installing the library.
-
-{% alert important %}
-While most ad blockers will not block the Braze Web SDK, some more restrictive ad blockers are known to cause issues.
-{% endalert %}
+- **Technical:** DESCRIPTION
+- **Google Tag Manger:** The Web Braze SDK is automatically integrated into your site when you add the Braze Initialization Tag to your Google Tag Manager (GTM).
+- **Other:** Not sure if the standard integration method is right for you? Check out our [other integration methods](#web_other-integration-methods).
 
 {% tabs local %}
-{% tab package manager %}
+{% tab technical %}
+<!-- The name of this tab is just a placeholder for now -->
+### Step 1: Install the Braze library
+
+You can install the Braze library using one of the following methods. However, if your website uses a `Content-Security-Policy`, review the [Content Security Policy]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) before continuing.
+
+{% alert important %}
+While most ad blockers will not block the Braze Web SDK, some more-restrictive ad blockers are known to cause issues.
+{% endalert %}
+
+{% subtabs %}
+{% subtab package manager %}
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
 
 Typescript definitions are now included as of v3.0.0. For notes on upgrading from 2.x to 3.x, see our [changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md).
@@ -37,29 +42,18 @@ import * as braze from "@braze/web-sdk";
 // or, using `require`
 const braze = require("@braze/web-sdk");
 ```
-{% endtab %}
+{% endsubtab %}
 
-{% tab google tag manager %}
-The Braze Web SDK can be installed from the Google Tag Manager Template Library. Two tags are supported:
-
-1. Initialization tag: loads the Web SDK onto your website and optionally sets the External User ID.
-2. Actions tag: used to trigger custom events, purchases, change user IDs, or toggle SDK tracking.
-
-Visit the [Google Tag Manager integration guide]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web#web_google-tag-manager) for more information.
-{% endtab %}
-
-{% tab braze cdn %}
+{% subtab braze cdn %}
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 ### Step 2: Initialize the SDK
 
-If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
-
-Otherwise, after the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 ```javascript
 // initialize the SDK
@@ -90,6 +84,60 @@ braze.openSession();
 {% alert important %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
+{% endtab %}
+
+{% tab Google Tag Manager %}
+### Prerequisites
+
+Before you can use this integration method, you'll need to create an account and install Google Tag Manager. For more information, see [Google: Get started with Tag Manager](https://support.google.com/tagmanager/answer/14842164).
+
+### Step 1: Open the tag template gallery
+
+In [Google Tag Manager](https://tagmanager.google.com/), choose your workspace, then select **Templates** > **Search Gallery**.
+
+![The templates page for an example workspace in Google Tag Manager.]()
+
+### Step 2: Add the initialization tag template
+
+In the template gallery, search for `braze-inc`, then select **Braze Initialization Tag**.
+
+![The template gallery showing the various 'braze-inc' templates.]()
+
+Select **Add to workspace** > **Add**.
+
+![The 'Braze Initialization Tag' page in Google Tag Manager.]()
+
+### Step 3: Configure the tag
+
+From the **Templates** section, select your newly added template.
+
+![The "Templates" page in Google Tag Manager showing the Braze Initialization Tag template.]()
+
+Select the pencil icon to open the **Tag Configuration** dropdown.
+
+![The Tag Configuration tile with the 'pencil' icon shown.]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
+
+Enter the minimum required information:
+
+| Field         | Description |
+| ------------- | ----------- |
+| **API Key**   | Your [Braze API Key]({{site.baseurl}}/api/basics/#about-rest-api-keys), found in the Braze dashboard under **Settings > API Keys**. |
+| **API Endpoint** | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
+| **SDK Version**  | The most recent `MAJOR.MINOR` version of the Web Braze SDK listed in the [changelog]({{site.baseurl}}/developer_guide/changelogs/?sdktab=web). For example, if the latest version is `4.1.2`, enter `4.1`. For more information, see [About SDK version management]({{site.baseurl}}/developer_guide/sdk_integration/version_management/). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+For additional initialization settings, select **Braze Initialization Options** and choose any options you need.
+
+![The list of Braze Initialization Options in under 'Tag Configuration'.]()
+
+### Step 5: Verify your integration
+
+You can verify your integration using either of the following options:
+
+- **Option 1:** Using Google Tag Manager's [debugging tool](https://support.google.com/tagmanager/answer/6107056?hl=en), you can check if the Braze Initialization Tag is triggering correctly on your configured pages or events.
+- **Option 2:** Check for any network requests made to Braze from your web page. Additionally, the global `window.braze` library should now be defined.
+{% endtab %}
+{% endtabs %}
 
 ## Optional configurations
 
