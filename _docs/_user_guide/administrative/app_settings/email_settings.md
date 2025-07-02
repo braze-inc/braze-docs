@@ -119,7 +119,7 @@ Displaying the header is ultimately determined by the mailbox provider. To check
 1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
 2. Search for "List-Unsubscribe".
 
-If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
+If the header is in the raw version of the email but is not displayed, the mailbox provider has determined not to show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
 
 ### Email unsubscribe header in workspaces
 
@@ -164,7 +164,7 @@ The message-level one-click list-unsubscribe setting will override the email uns
 - Omit one-click unsubscribe on this message
 
 {% alert note %}
-The message-level one-click list-unsubscribe setting is only available when using the updated HTML editor. If you're using the previous HTML editor, switch to the updated HTML editor to use this feature.
+The message-level one-click list-unsubscribe setting is only available when using the drag-and-drop editor and the updated HTML editor. If you're using the previous HTML editor, switch to the updated HTML editor to use this feature.
 {% endalert %}
 
 In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
@@ -263,13 +263,12 @@ No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo a
 A preference center is not considered an unsubscribe link. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
 {% enddetails %}
 
-
 {% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
-If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.
+If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per-message level, you'll need to update prior campaigns and Canvas steps with the email accordingly.
 {% enddetails %}
 
 {% details I can see the list-unsubscribe and one-click unsubscribe header in the original message or raw data, but why don't I see the Unsubscribe button in Gmail or Yahoo? %}
-Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button to not display. 
+Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button not to display. 
 {% enddetails %}
 
 {% details Does the custom one-click unsubscribe header support Liquid? %}
@@ -291,7 +290,7 @@ For a campaign with A/B testing, Braze will randomly send a user one of the vari
 {% enddetails %}
 
 {% details The email unsubscribe header setting is turned off in Email Preferences, but in my campaign's sending info, the one-click list-unsubscribe setting is set to "Use workspace default". Is this a bug? %}
-No. If the workspace setting is turned off and the message setting is set to **Use workspace default**, then Braze will follow what's configured in **Email Preferences**. This means, we will not add the one-click unsubscribe header for the campaign.
+No. If the workspace setting is turned off and the message setting is set to **Use workspace default**, then Braze will follow what's configured in **Email Preferences**. This means we will not add the one-click unsubscribe header for the campaign.
 {% enddetails %}
 
 {% details What happens if a subscription group is archived? Will this break the one-click unsubscribe on emails sent? %}
