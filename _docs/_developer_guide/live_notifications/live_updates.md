@@ -30,7 +30,6 @@ In your application, create a new file named `MyCustomNotificationFactory.kt` th
 
 In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the next step, you'll create a new method called `getTeamInfo` to map a team's data to the activity.
 
-{% details Show the sample code %}
 ```kotlin
 class MyCustomNotificationFactory : IBrazeNotificationFactory {
     override fun createNotification(payload: BrazeNotificationPayload): Notification? {
@@ -68,7 +67,6 @@ class MyCustomNotificationFactory : IBrazeNotificationFactory {
     }
 }
 ```
-{% enddetails %}
 
 ### Step 2: Map custom data
 
