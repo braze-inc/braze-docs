@@ -136,6 +136,24 @@ Make sure to include entry criteria in your campaign or Canvas that includes bot
 
 If you're using a third-party platform or Shopify plugin for your sign-up forms, you need to work with your developers to integrate Braze SDK code to capture the email address and global email subscription status from form submissions. To learn more, review [Shopify standard integration setup]({{site.baseurl}}/shopify_standard_integration/) and [Shopify custom integration setup]({{site.baseurl}}/shopify_custom_integration/).
 
+#### Supporting additional SDK channels
+
+The Braze SDKs enable various messaging channels, including Content Cards.
+
+##### Content Cards and Feature Flags
+
+To add content cards or feature flags, you will need to collaborate with your developers to insert the necessary SDK code directly into your `theme.liquid` file. For detailed instructions, refer to [Integrating the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/). 
+
+##### Web push notifications
+
+Web push currently isn't supported for the Shopify integration. If you want to see this supported in the future, submit a product request through the [Braze product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+If you wish to see this supported in the future, submit a product request through the Braze [product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+##### In-browser messages
+
+Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+
 ### Product syncing 
 
 Braze supports the ability to sync your Shopify store’s products into a Braze catalog. For more details refer to [Shopify product syncs]({{site.baseurl}}/shopify_catalogs/).
