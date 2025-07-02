@@ -21,9 +21,9 @@ By comparing the behaviors of users that receive messaging to those that don't, 
 
 With the Global Control Group, you can set a percentage of all users as a control group. When saved, users in the group will not receive any campaigns or Canvases. 
 
-Your Global Control Group applies to all channels, campaigns, and Canvases, except for [API campaigns]({{site.baseurl}}/api/api_campaigns#api-campaigns). This means that users in your control group will still receive API campaigns.
-
-However, this API-Triggered exception does not apply to Content Cards. If you are using an API-Triggered Content Card campaign, users in your control group will not receive them.
+{% alert important %}
+Your Global Control Group applies to all channels, campaigns, and Canvases, except for [API campaigns]({{site.baseurl}}/api/api_campaigns). This means users in your control group will still receive API campaigns. However, this exception doesn't apply to Content Cards. If you're using an API-triggered Content Card campaign, users in your control group won't receive them.
+{% endalert %}
 
 ### Assign users randomly to the Global Control Group
 
