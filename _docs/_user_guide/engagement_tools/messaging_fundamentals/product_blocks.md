@@ -22,7 +22,7 @@ The drag-and-drop product block feature is in early access and is currently only
 | Requirement | Description |
 | --- | --- |
 | eCommerce recommended events | [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) provide standardized data schemas for key behavioral events that occur before and after an order is placed. These events will eventually replace the legacy Braze purchase event and will become the standard for tracking commerce-related behavior. <br><br> eCommerce recommended events are required for dynamic product blocks.<br><br> eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. |
-| eCommerce Canvas Templates | The new eCommerce recommended events will support pre-built templates, including eCommerce Canvas templates designed for essential use cases such as abandoned browsing, abandoned carts, and order confirmations. <br><br> eCommerce Canvas templates are required for dynamic product blocks.<br><br>If you plan to implement any of these essential eCommerce use cases using the [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/), you must use or follow the provided Canvas template. |
+| eCommerce Canvas Templates | The new eCommerce recommended events will support pre-built templates, including eCommerce Canvas templates designed for essential use cases such as abandoned browsing, abandoned carts, and order confirmations. <br><br>If you plan to implement any of these essential eCommerce use cases using the [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/), you must use or follow the provided Canvas template. |
 | Braze catalog | You need to create a Braze catalog that includes the following fields, which will be used in your product block configuration:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
@@ -31,7 +31,7 @@ The drag-and-drop product block feature is in early access and is currently only
 | Product Block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
 | Dynamic | Personalize products using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
-| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
+| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Product block content configuration
@@ -49,6 +49,12 @@ In the **Product Fields** section, select your product block type, then toggle o
 | Quantity | eCommerce Recommended event property| 
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
+![Product fields for a dynamic product block, which are divided into catalog data and event data]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+
+You can also customize the text before your Liquid tags. For example, you can prepend a dollar sign ($) for an item's price or update the term for quantity to "amount" or another preferred label.
+
+![Product block with a dollar side prepended to the item's price.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+
 ### Static product block
 
 | Product field | Source |
@@ -58,6 +64,8 @@ In the **Product Fields** section, select your product block type, then toggle o
 | Button for product URL | Catalogs |
 | Price | Catalogs |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
+
+![Product fields for a static product block, which are all categorized as catalog data.]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
 
 ### Layout options
 
@@ -70,6 +78,8 @@ Use layout options to customize how your products display within your product bl
 | Max products per row | Display up to three products per row, up to 12 products total for static product blocks, and up to 24 products total for dynamic product blocks. |
 | Product spacing | Set the spacing between products. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
+
+![Layout options for product orientation, alignment, max products per row, and product spacing.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
 
 ### Global email style settings 
 
@@ -149,16 +159,20 @@ Select the catalog you want to use for your product block. If your catalog has a
 {% endtab %}
 {% endtabs %}
 
+![The "Content" tab containing editor blocks, such as product blocks.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+
 ### Step 3: Configure product fields
 
 Select which [product fields](#product-block-content-field) should be shown in the product block. Select **Apply Settings** after each change to see updates in the editor. 
 
 ### Step 4: Configure layout settings
 
-Change the [layout options](#layout-options) to update how products display within your product block.
+Change the [layout options](#layout-options) to update how products display within your product block, and make sure to select **Apply settings** after each change.
 
 ### Step 5: Preview and test your message
 
 1. In the **Preview & Test** section, preview the message as a custom user.
 2. Specify how many items you want to render in the preview.
 3. Confirm that the correct number of items appears and that your layout options are applied correctly. Note that the items that appear are randomly selected.
+
+!["Preview as a User" tab with a dropdown section "Dynamic product block" that specifies to show 4 items.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
