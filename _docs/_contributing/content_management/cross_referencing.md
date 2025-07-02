@@ -40,7 +40,7 @@ Your in-line link should be similar to the following:
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/dev_guide/auth).
+Before continuing, [create your SSH token]({{site.baseurl}}/contributing/local_environment/#step-2-create-an-ssh-key).
 ```
 {% endraw %}
 {% endtab %}
