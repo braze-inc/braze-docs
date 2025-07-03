@@ -26,22 +26,35 @@ Contact your Braze account manager if you're interested in getting started with 
   - You can also use unique subdomains, such as `sms.braze.com`.
 - We recommend choosing a domain with as few characters as possible to minimize the length of your URLs.
 
-### Delegating your custom domain
+## Delegating your custom domain
 
 When you delegate your domain to Braze, we automatically handle the certificate renewal to prevent a lapse in service. 
 
 To delegate your domain to Braze, do the following: 
 
-1. Bring a domain that meets the above requirements to your customer success manager. Braze will then check the existing DNS configuration for the domain and confirm that:
+### Step 1: Select a domain
 
-- No CAA records exist OR
-- CAA records **do** exist but have a record for {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} or {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
+1. Choose a domain or subdomain (such as `sms.yourbrand.com`) that meets the above requirements.
+2. Confirm you have access to the domain’s DNS settings.
+3. Contact your Braze customer success manager to begin the setup process.
 
-2. Create four new A records, one for each IP, and confirm that they are the only A records that exist for the domain link host:
-- `151.101.130.133`
-- `151.101.194.133`
-- `151.101.2.133`
-- `151.101.66.133`
+### Step 2: Verify DNS configuration
+
+Your Braze customer success manager will check the domain’s DNS configuration and work with you to update the DNS settings.
+
+### Step 3: Wait for the Braze configuration
+
+{% alert important %}
+Do not update your DNS A records until instructed by your Braze customer success manager.
+{% endalert %}
+
+### Step 4: Update DNS A records
+
+After receiving confirmation from your customer success manager, update your DNS settings with the A records provided to you for your custom domain. For example, for `sms.yourbrand.com`, you'd create A records pointing to the IPs. Confirm these are the only A records for the domain. 
+
+### Step 5: Verify setup
+
+Your Braze customer success manager will verify the A records. After they're verified, your custom domain will be ready to be assigned to one or more SMS subscription groups.
 
 ## Using custom domains
 
