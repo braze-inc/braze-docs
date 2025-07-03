@@ -145,7 +145,7 @@ By creating or editing disconnected steps, you can make changes to these indepen
 
 ### Experiment Path step
 
-If your Canvas has an active or in progress Experiment Path step and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will restart. To avoid your users from re-entering the experiment path, you can duplicate and create a new Canvas instead of updating the Canvas.
+If your Canvas has an active or in progress experiment and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will end. To restart the experiment period, you can duplicate and create a new Canvas instead of updating the Canvas.
 
 ### Time delays
 
