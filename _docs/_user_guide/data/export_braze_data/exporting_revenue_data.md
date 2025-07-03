@@ -51,7 +51,7 @@ Revenue reports cannot be exported through API. For help with CSV exports, refer
 
 ## Direct revenue
 
-You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/):
+You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/):
 
 - [Total Direct Revenue]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
 - [Total Direct Purchases]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)

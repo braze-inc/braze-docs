@@ -16,9 +16,9 @@ search_rank: 2
 
 To enable location collection on your app, refer to the developer guide for the platform you're using:
 
-- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=web)
 
 In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's location. All of these platforms will require users to opt-in to location tracking. The accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their devices. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
 
@@ -58,9 +58,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Combining existing beacon or geofence support with our targeting and messaging features gives you more information about your users' physical actions so you can message them accordingly. You can leverage location tracking with some of our partners: 
 
-- [Radar]({{site.baseurl}}/partners/data_augmentation/contextual_location/radar/)
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
 - [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
-- [Foursquare]({{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 ## Frequently asked questions
 

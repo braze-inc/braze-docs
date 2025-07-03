@@ -57,7 +57,7 @@ The following settings are pre-configured in your Canvas:
     - Entry controls
         - Users are eligible to re-enter this Canvas after the full duration of the Canvas is complete
     - Exit criteria 
-        - Performs `ecommerce.cart_updated`, `ecommerce.checkout started`, or `ecommerce.order_placed`<br><br>![Entry controls and exit criteria for the Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Performs `ecommerce.cart_updated`, `ecommerce.checkout_started`, or `ecommerce.order_placed`<br><br>![Entry controls and exit criteria for the Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Send settings 
     - Users who are subscribed or opted in 
 - Delay step

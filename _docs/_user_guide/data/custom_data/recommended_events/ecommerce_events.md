@@ -164,7 +164,7 @@ Similar to the `ecommerce.cart_updated` event, this event allows you to leverage
 | `cart_id` | No | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping.. | 
 | `total_value` | Yes | Float | Total monetary value of the cart. |
 | `currency` | Yes | String | Currency in which the cart is valued. |
-| `products` | Yes | Array |  |
+| `products` | Yes | Array of objects |  |
 | `product_id` | Yes | String | A unique identifier for the product that was viewed. For example, this value could be the product ID or SKU. |
 | `product_name` | Yes | String | The name of the product that was viewed.  |
 | `variant_id` | Yes | String | A unique identifier for the product variant. An example is `shirt_medium_blue` |
@@ -223,9 +223,9 @@ You can use the order placed event to trigger when a customer successfully compl
 | `total_value` | Yes | Float | Total monetary value of the cart. | 
 | `currency` | Yes | String | Currency in which the cart is valued. |
 | `total_discounts` | No | Float | Total amount of discounts applied to the order. | 
-| `discounts`| No | Array | Detailed list of discounts applied to the order. |
-| `products` | Yes | Array |  |
-| `product_id` | Yes | String | A unique identifier for the product that was viewed. <br> This value be can be the product ID or SKU. |
+| `discounts`| No | Array of objects | Detailed list of discounts applied to the order. |
+| `products` | Yes | Array of objects |  |
+| `product_id` | Yes | String | A unique identifier for the product that was viewed. This value be can be the product ID or SKU. |
 | `product_name` | Yes | String | The name of the product that was viewed. |
 | `variant_id` | Yes | String | A unique identifier for the product variant. An example is `shirt_medium_blue` |
 | `image_url` | No | String | URL of the product image. |
@@ -298,9 +298,9 @@ You can use the order refunded event to trigger when an order is partially or en
 | `total_value`         | Yes      | Float     | Total monetary value of the cart.    |
 | `currency`            | Yes      | String    | Currency in which the cart is valued.    |
 | `total_discounts`     | No       | Float     | Total amount of discounts applied to the order.   |
-| `discounts`           | No       | Array     | Detailed list of discounts applied to the order. |
-| `products`            | Yes      | Array     |   |
-| `product_id`       | Yes      | String    | A unique identifier for the product that was viewed. This value can be the product ID, SKU, or similar.             |
+| `discounts`           | No       | Array of objects     | Detailed list of discounts applied to the order. |
+| `products`            | Yes      | Array of objects     |  |
+| `product_id`       | Yes      | String    | A unique identifier for the product that was viewed. This value can be the product ID, SKU, or similar. <br>If a partial refund is issued and there is no `product_id` assigned to the refund (for example, an order-level refund), provide a generalized `product_id`.             |
 | `product_name`     | Yes      | String    | The name of the product that was viewed.                                                                      |
 | `variant_id`       | Yes      | String    | A unique identifier for the product variant (such as `shirt_medium_blue`).                                         |
 | `image_url`        | No       | String    | URL of the product image.     |
@@ -368,8 +368,8 @@ You can use the order cancelled event to trigger when a customer cancels an orde
 | `total_value`         | Yes      | Float     | Total monetary value of the cart.         |
 | `currency`            | Yes      | String    | Currency in which the cart is valued.           |
 | `total_discounts`     | No       | Float     | Total amount of discounts applied to the order.     |
-| `discounts`           | No       | Array     | Detailed list of discounts applied to the order.             |
-| `products`            | Yes      | Array     |        |
+| `discounts`           | No       | Array of objects     | Detailed list of discounts applied to the order.             |
+| `products`            | Yes      | Array of objects     |         |
 | `product_id`          | Yes      | String    | A unique identifier for the product that was viewed. This value can be the product ID, SKU, or similar.             |
 | `product_name`        | Yes      | String    | The name of the product that was viewed.          |
 | `variant_id`          | Yes      | String    | A unique identifier for the product variant (such as `shirt_medium_blue`).        |
@@ -446,5 +446,5 @@ These user field calculations are also included on the **Transactions** tab of u
 ![The "Transactions" tab with user calcuated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
 
 {% alert important %}
-The purchase event will be deprecated in late 2025 and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/). This means that new eCommerce events will not power pre-existing purchase event features, like LTV or revenue reporting in Canvases or campaigns. Refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events) for a full list of purchase events.
+The plans to phase out the purchase event will be announced in late 2025. In the long run, the purchase event will be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. However, the new eCommerce events will not support existing features related to the purchase event, such as Lifetime Value (LTV) or revenue reporting in Canvases or campaigns. For a complete list of features related to purchase events, please refer to the section on [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}

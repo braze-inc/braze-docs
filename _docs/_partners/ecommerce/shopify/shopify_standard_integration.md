@@ -204,6 +204,10 @@ You can enable in-app messages without using a developer by configuring them in 
 
 ![Setup step to activate channels, with the available option being in-browser messaging.]({% image_buster /assets/img/Shopify/activate_channels_standard.png %})
 
+{% alert note %}
+Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+{% endalert %}
+
 ### Supporting additional SDK channels
 
 The Braze SDKs enable various messaging channels, including Content Cards.
@@ -228,4 +232,3 @@ If you wish to see this supported in the future, submit a product request throug
 {: start="3"}
 3. After you enable the app embed, your setup is complete!
 Confirm you can view your integration settings, the status of initial data sync, and your active Shopify events. <br><br>![Shopify partner page displaying the integration settings.]({% image_buster /assets/img/Shopify/install_complete.png %})
-
