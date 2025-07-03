@@ -30,7 +30,7 @@ The drag-and-drop product block feature is in early access and is currently only
 
 | Product Block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
-| Dynamic | Personalize products using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
+| Dynamic | Personalize your messaging with a showcase of products based on customer interactions by using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
 | Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
@@ -110,23 +110,17 @@ To use drag-and-drop product blocks, you need to set up a Braze catalog that inc
 
 Get a jumpstart by working off of the sample Product Catalog, which includes the required fields. 
 
-## Create product blocks
+## Creating product blocks
 
-### Dynamic product block
-
-The dynamic product block personalizes your messaging by showcasing products based on customer interactions. This guide will walk you through the steps to create, test, and ensure the functionality of a dynamic product block using our email drag-and-drop editor.
-
-{% alert note %}
-Dynamic product blocks require [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and can only be used within [Canvases]({{site.baseurl}}/ecommerce_use_cases). For Braze Shopify users, these events are automatically included as part of the integration. For non-Shopify users, you need to work with your developers to pass these events into Braze and ensure that the primary product identifier within the events is added as the catalog item ID. 
-{% endalert %}
-
-### Static product block
-
-A static product block personalizes your emails using data from Braze Catalogs or Catalog Selections. This guide will walk you through the steps to create, test, and ensure the functionality of a static product block using our email drag-and-drop editor.
+This guide will walk you through the steps to create, test, and ensure the functionality of a dynamic or static product block using our email drag-and-drop editor.
 
 ### Step 1: Create an email campaign or email Canvas step
 
 #### Dynamic product block
+
+{% alert note %}
+Dynamic product blocks require [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and can only be used within [Canvases]({{site.baseurl}}/ecommerce_use_cases). For Braze Shopify users, these events are automatically included as part of the integration. For non-Shopify users, you need to work with your developers to pass these events into Braze and ensure that the primary product identifier within the events is added as the catalog item ID. 
+{% endalert %}
 
 Create a new Canvas that uses one of the available Braze templates for your specific use case:
 - Abandoned Browse
