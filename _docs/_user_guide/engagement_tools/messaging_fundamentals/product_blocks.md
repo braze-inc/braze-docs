@@ -36,9 +36,13 @@ The drag-and-drop product block feature is in early access and is currently only
 
 ## Product block content configuration
 
+Each block type has different content configurations. 
+
+### Product fields
+
 In the **Product Fields** section, select your product block type, then toggle on the fields you’d like to include for each product. Each field is pulled from different sources based on the type of product block you select.
 
-### Dynamic product block
+#### Dynamic product block
 
 | Product field | Source |
 | --- | --- | 
@@ -55,7 +59,7 @@ You can also customize the text before your Liquid tags. For example, you can pr
 
 ![Product block with a dollar side prepended to the item's price.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
 
-### Static product block
+#### Static product block
 
 | Product field | Source |
 | --- | --- | --- |
@@ -148,7 +152,7 @@ Select the product catalog you want to use for personalization. Make sure it ali
 {% tab Static product block %}
 
 Drag a product block into your email message and select the static block type. 
-Select the catalog you want to use for your product block. If your catalog has a selection, you can select it to further narrow the products that display in your product block.
+Select the catalog you want to use for your product block. If your catalog has a selection, you must select it to further narrow the products that display in your product block.
 
 {% endtab %}
 {% endtabs %}
