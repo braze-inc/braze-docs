@@ -50,7 +50,7 @@ Do not update your DNS A records until instructed by your Braze customer success
 
 ### Step 4: Update DNS A records
 
-After receiving confirmation from your customer success manager, update your DNS settings with the A records provided to you for your custom domain. Ensure these are the only A records for the domain.
+After receiving confirmation from your customer success manager, update your DNS settings with the A records provided to you for your custom domain. For example, for `sms.yourbrand.com`, you'd create four A records pointing to the IPs. Ensure these are the only A records for the domain. 
 
 ### Step 5: Verify setup
 
