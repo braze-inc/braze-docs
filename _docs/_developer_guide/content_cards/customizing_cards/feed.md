@@ -105,7 +105,7 @@ function refresh() {
 {% endtabs %}
 
 {% alert important %}
-The rate limit for successive calls to `requestContentCardsRefresh()` is 5&#8212;which is also shared with calls to `openSession()`. When the limit is reached, each new call will be available after every 180 seconds. The system will hold up to five calls for you to use at any time.
+The rate limit for successive calls to `requestContentCardsRefresh()` is five calls per device. This limit is shared with all users on that device, as well as calls to `openSession()`. When the limit is reached, each new call becomes available after 180 seconds. The system will hold up to five calls for you to use at any time.
 {% endalert %}
 
 ## Customizing displayed card order
