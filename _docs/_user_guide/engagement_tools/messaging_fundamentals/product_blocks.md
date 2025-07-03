@@ -105,8 +105,7 @@ To use drag-and-drop product blocks, you need to set up a Braze catalog that inc
 
 | Field | Description |
 | --- | --- |
-|`product_image_url` | The URL for the main product image. |
-| `product_title` | The title of the product.|
+|`product_title` | The title of the product.|
 |`product_url` | The URL where customers can view or purchase the product. |
 |`variant_image_url` | The URL for the variant image. |
 
