@@ -31,7 +31,8 @@ The drag-and-drop product block feature is in early access and is currently only
 | Product Block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
 | Dynamic | Personalize your messaging with a showcase of products based on customer interactions by using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
-| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | |
+| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | Perfect for showcasing new product launches or category-specific offerings.
+ | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvases, campaigns, and templates. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Product block content configuration
@@ -54,10 +55,6 @@ In the **Product Fields** section, select your product block type, then toggle o
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ![Product fields for a dynamic product block, which are divided into catalog data and event data]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
-
-You can also customize the text before your Liquid tags. For example, you can prepend a dollar sign ($) for an item's price or update the term for quantity to "amount" or another preferred label.
-
-![Product block with a dollar side prepended to the item's price.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
 
 #### Static product block
 
@@ -161,6 +158,10 @@ Select the catalog you want to use for your product block. If your catalog has a
 ### Step 3: Configure product fields
 
 Select which [product fields](#product-block-content-field) should be shown in the product block. Select **Apply Settings** after each change to see updates in the editor. 
+
+You can also customize the text before your Liquid tags. For example, you can prepend a dollar sign ($) for an item's price or update the term for quantity to "amount" or another preferred label.
+
+![Product block with a dollar side prepended to the item's price.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
 
 ### Step 4: Configure layout settings
 
