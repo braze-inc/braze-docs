@@ -132,7 +132,7 @@ For detailed instructions on creating your eCommerce Canvases, refer to [eCommer
 
 #### Static product block
 
-Create a drag-and-drop email campaign or create an action-based Canvas that has a drag-and-drop email Message step. 
+Create a drag-and-drop email campaign, action-based Canvas, or template that has a drag-and-drop email Message step.
 
 ### Step 2: Add a product block
 
@@ -157,7 +157,7 @@ Select the catalog you want to use for your product block. If your catalog has a
 
 ### Step 3: Configure product fields
 
-Select which [product fields](#product-block-content-field) should be shown in the product block. Select **Apply Settings** after each change to see updates in the editor. 
+Select which [product fields](#product-fields) should be shown in the product block. Select **Apply Settings** after each change to see updates in the editor. 
 
 You can also customize the text before your Liquid tags. For example, you can prepend a dollar sign ($) for an item's price or update the term for quantity to "amount" or another preferred label.
 
