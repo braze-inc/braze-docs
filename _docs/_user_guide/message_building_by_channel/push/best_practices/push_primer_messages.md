@@ -27,7 +27,7 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 #### Android
 
 - **Android 12 and under:** Implementing push primers is not recommended because push is opted-in by default.
-- **Android 13 and above:** If you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again.
+- **Android 13 and above:** If you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again. If a user denies push permissions more than once, this is considered a permanant denial the user will need to manually update the push permission in device settings. Due to this, the Braze push primer in-app message will no longer display once a user denies push permission two times.
 
 #### iOS
 
