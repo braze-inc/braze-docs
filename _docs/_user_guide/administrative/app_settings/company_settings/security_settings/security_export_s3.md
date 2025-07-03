@@ -60,7 +60,7 @@ To retrieve your secret access key and access key ID, you’ll need to create an
 
 ### Step 4: Attach policy
 
-1. After creating a new policy, go to **Users** select your specific user. 
+1. After creating a new policy, go to **Users** and select your specific user. 
 2. In the **Permissions** tab, select **Add Permissions**, directly attach the policy, and then select that policy. 
 
 Now, you’re ready to link your AWS credentials to your Braze account!
