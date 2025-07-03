@@ -1,6 +1,7 @@
 ---
 nav_title: Security Events Export with S3
 article_title: Security Settings Export with S3
+page_order: 1
 page_type: reference
 description: "This reference article covers how to automatically export security events every day at midnight UTC to Amazon S3."
 ---
@@ -90,13 +91,13 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 
 ### Step 1: Create policy
 
-1. Sign into the AWS management console as an account administrator. 
+1. Sign in to the AWS management console as an account administrator. 
 2. In the AWS console, go to the **IAM** section > **Policies**, and then select **Create Policy**.
 
 ![A page with a list of policies and button to "Create policy".]({% image_buster /assets/img/security_export/policies.png %})
 
 {: start="3"}
-3. Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Be sure to replace INSERTBUCKETNAME with your bucket name. 
+3. Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. 
 
 ```json
   {
@@ -130,7 +131,7 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 
 1. In Braze, go to **Settings** > **Company Settings** > **Admin Settings** > **Security Settings** and scroll to the **Security Event Download** section. 
 2. Select **AWS Role ARN**. 
-3. Take note of the identifiers, Braze account ID and Braze external ID, needed to create your role.
+3. Take note of the identifiers, Braze account ID, and Braze external ID needed to create your role.
 
 ![The "Security Event Download" page with populated Braze account and Braze external IDs.]({% image_buster /assets/img/security_export/security_event_download2.png %})
 
@@ -171,6 +172,6 @@ Your newly created role will appear in the list!
 4. Select **Test Credentials** to confirm your credentials work properly.
 5. Select **Save Changes**. 
 
-!["Save changes" button.]({% image_buster /assets/img/security_export/save_changes_button.png %}){: style="max-width:50%;"}
+!["Save changes" button.]({% image_buster /assets/img/security_export/save_changes_button.png %}){: style="max-width:40%;"}
 
 You’ve integrated AWS S3 into your Braze account!
