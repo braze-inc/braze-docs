@@ -72,7 +72,7 @@ To see an estimate of how many users will receive the message in each hour of th
 2. In the section **Preview Delivery Times for** (which appears in both the Target Audiences and Schedule Delivery steps), select your channel.
 3. Click **Refresh Data**.
 
-![]({% image_buster /assets/img/intel-timing-preview.png %})
+![Delivery preview chart for Android Push showing peak engagement time between 12 to 2 PM, and the most popular app time being 2 PM.]({% image_buster /assets/img/intel-timing-preview.png %})
 
 ### Step 2: Choose a send date
 
