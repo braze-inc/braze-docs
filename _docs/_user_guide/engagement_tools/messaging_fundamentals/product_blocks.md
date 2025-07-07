@@ -106,9 +106,9 @@ To use drag-and-drop product blocks, you need to set up a Braze catalog that inc
 |`product_url` | The URL where customers can view or purchase the product. |
 |`variant_image_url` | The URL for the variant image. |
 
-![A sample CSV file with the required fields in addition to others.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+Get a jumpstart by working off this [sample Product Catalog]({{site.baseurl}}/assets/download_file/ecommerce_product _catalog_sample.csv), which includes the required fields. 
 
-Get a jumpstart by working off of the sample Product Catalog, which includes the required fields. 
+![A sample CSV file with the required fields in addition to others.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
 
 ## Creating product blocks
 
@@ -169,8 +169,23 @@ Change the [layout options](#layout-options) to update how products display with
 
 ### Step 5: Preview and test your message
 
+{% tabs %}
+{% tab Dynamic product block %}
+
 1. In the **Preview & Test** section, preview the message as a custom user.
 2. Specify how many items you want to render in the preview.
 3. Confirm that the correct number of items appears and that your layout options are applied correctly. Note that the items that appear are randomly selected.
 
 !["Preview as a User" tab with a dropdown section "Dynamic product block" that specifies to show 4 items.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+
+{% endtab %}
+{% tab Static product block %}
+
+A preview will generate within the drag-and-drop composer when you apply changes to your product block. 
+
+![Email drag-and-drop composer showing a generate product block with different item tiles.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+
+{% endtab %}
+{% endtabs %}
+
+After you're done creating your message and confirming it looks like expected, you're ready to send!
