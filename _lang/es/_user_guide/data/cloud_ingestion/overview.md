@@ -47,7 +47,7 @@ Los datos de usuario pueden actualizarse por ID externo, alias de usuario, ID Br
 
 ## Qué se sincroniza
 
-Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Cualquier fila en la que `UPDATED_AT` sea posterior a la última fila sincronizada se seleccionará y se introducirá en Braze.
+Cada vez que se ejecuta una sincronización, Braze busca filas que no se hayan sincronizado previamente. Lo comprobamos utilizando la columna `UPDATED_AT` de su tabla o vista. Cualquier fila en la que `UPDATED_AT` sea igual o posterior al último timestamp UPDATED_AT del último trabajo de sincronización exitoso se seleccionará y se introducirá en Braze.
 
 En tu almacén de datos, añade los siguientes usuarios y atributos a tu tabla, ajustando la hora `UPDATED_AT` a la hora en que añadas estos datos:
 
@@ -57,7 +57,7 @@ En tu almacén de datos, añade los siguientes usuarios y atributos a tu tabla, 
 | `2022-07-19 09:07:23` | `customer_3456` | {<br>    "attribute_1": "abcdefg",<br>    "attribute_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00",<br>    "attribute_5": "testing"<br>} |
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1": "abcdefg",<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
 
-Durante la siguiente sincronización programada, todas las filas con una marca de tiempo `UPDATED_AT` posterior a la marca de tiempo más reciente se sincronizarán con los perfiles de usuario Braze. Los campos se actualizarán o añadirán, por lo que no es necesario sincronizar el perfil de usuario completo cada vez. Tras la sincronización, los usuarios reflejarán las nuevas actualizaciones:
+Durante la siguiente sincronización programada, todas las filas con una marca de tiempo `UPDATED_AT` igual o posterior a la marca de tiempo más reciente se sincronizarán con los perfiles de usuario Braze. Los campos se actualizarán o añadirán, por lo que no es necesario sincronizar el perfil de usuario completo cada vez. Tras la sincronización, los usuarios reflejarán las nuevas actualizaciones:
 
 ```json
 {

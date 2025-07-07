@@ -142,7 +142,7 @@ CDI utilise `UPDATED_AT` pour décider quelles données sont nouvelles. Après q
 
 ## Pourquoi le nombre de « lignes synchronisées » ne correspond-il pas à celui de mon entrepôt ?
 
-CDI utilise `UPDATED_AT` pour décider quels enregistrements récupérer lors d'une synchronisation. Regardez [cette illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) pour voir comment cela fonctionne. Au début d'une exécution de synchronisation, CDI interroge votre entrepôt pour obtenir tous les enregistrements avec `UPDATED_AT` plus tard que la valeur précédemment traitée. Tout enregistrement récupéré au moment de l'exécution de la requête sera synchronisé dans Braze. Voici les cas courants où un enregistrement pourrait ne pas être synchronisé :
+CDI utilise `UPDATED_AT` pour décider quels enregistrements récupérer lors d'une synchronisation. Regardez [cette illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) pour voir comment cela fonctionne. Au début d'une exécution de synchronisation, CDI interroge votre entrepôt pour obtenir tous les enregistrements avec `UPDATED_AT` égal ou postérieur au timestamp UPDATED_AT précédemment traité. Tout enregistrement récupéré au moment de l'exécution de la requête sera synchronisé dans Braze. Voici les cas courants où un enregistrement pourrait ne pas être synchronisé :
 
 - Vous ajoutez des enregistrements au tableau avec une valeur `UPDATED_AT` qui a déjà été traitée.
 - Vous mettez à jour les valeurs des enregistrements après qu'elles ont été traitées par une synchronisation, mais vous laissez `UPDATED_AT` inchangé. 

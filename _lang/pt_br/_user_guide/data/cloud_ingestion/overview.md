@@ -47,7 +47,7 @@ Os dados de usuários podem ser atualizados por ID externo, alias de usuário, I
 
 ## O que é sincronizado
 
-Cada vez que uma sincronização é executada, a Braze procura linhas que não foram sincronizadas anteriormente. Verificamos isso usando a coluna `UPDATED_AT` na sua tabela ou visualização. Qualquer linha onde `UPDATED_AT` seja posterior à última linha sincronizada será selecionada e puxada para o Braze.
+Cada vez que uma sincronização é executada, a Braze procura linhas que não foram sincronizadas anteriormente. Verificamos isso usando a coluna `UPDATED_AT` na sua tabela ou visualização. Qualquer linha onde `UPDATED_AT` seja igual ou posterior ao último timestamp UPDATED_AT do último trabalho de sincronização bem-sucedido será selecionada e puxada para o Braze.
 
 No seu data warehouse, adicione os seguintes usuários e atributos à sua tabela, definindo o `UPDATED_AT` horário para o momento em que você adicionar esses dados:
 
@@ -57,7 +57,7 @@ No seu data warehouse, adicione os seguintes usuários e atributos à sua tabela
 | `2022-07-19 09:07:23` | `customer_3456` | {<br>    "attribute_1":"abcdefg"<br>    "attribute_2":42,<br>    "attribute_3":"2019-07-16T19:20:30+1:00"<br>    "attribute_5":"testando"<br>} |
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>    "attribute_1":"abcdefg"<br>    "attribute_4":true,<br>    "attribute_5":"testing_123"<br>} |
 
-Durante a próxima sincronização agendada, todas as linhas com um `UPDATED_AT` carimbo de data/hora posterior ao carimbo de data/hora mais recente serão sincronizadas com os perfis de usuário do Braze. Os campos serão atualizados ou adicionados, então você não precisa sincronizar o perfil completo do usuário a cada vez. Após a sincronização, os usuários refletirão as novas atualizações:
+Durante a próxima sincronização agendada, todas as linhas com um `UPDATED_AT` carimbo de data/hora igual ou posterior ao carimbo de data/hora mais recente serão sincronizadas com os perfis de usuário do Braze. Os campos serão atualizados ou adicionados, então você não precisa sincronizar o perfil completo do usuário a cada vez. Após a sincronização, os usuários refletirão as novas atualizações:
 
 ```json
 {
