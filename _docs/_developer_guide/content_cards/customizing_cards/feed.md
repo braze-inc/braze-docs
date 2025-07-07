@@ -108,16 +108,16 @@ function refresh() {
 {% endtab %}
 {% endtabs %}
 
-### Rate limiting
+### Rate limit
 
-Braze uses a token bucket algorithm to enforce rate limits to ensure platform stability:
-- Up to **5 refresh calls** per device, shared across users and calls to `openSession()`
-- After reaching the limit, a new call becomes available every **180 seconds** (3 minutes)
+Braze uses a token bucket algorithm to enforce the following rate limits:
+- Up to 5 refresh calls per device, shared across users and calls to `openSession()`
+- After reaching the limit, a new call becomes available every 180 seconds (3 minutes)
 - The system will hold up to five calls for you to use at any time
 - `subscribeToContentCards()` will still return cached cards even when rate-limited
 
 {% alert important %}
-If your app makes many simultaneous requests (e.g., in a QA or test loop), you might also hit the Global SDK network limit (30 requests per 30 seconds).
+The global SDK network limit is 30 requests within 30 seconds.  Keep this in mind while performing manual QA or running automated tests.
 {% endalert %}
 
 ## Customizing displayed card order
