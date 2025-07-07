@@ -20,6 +20,8 @@ platform:
 
 ## Refreshing the feed
 
+### Automatic refresh
+
 By default, the Content Card feed will automatically refresh when:
 
 - A new session is started
@@ -29,7 +31,7 @@ By default, the Content Card feed will automatically refresh when:
 To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed when they are available.
 {% endalert %}
 
-### Manually refresh
+### Manual refresh
 
 To manually refresh the feed at a specific time:
 
