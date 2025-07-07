@@ -142,7 +142,7 @@ CDI utiliza `UPDATED_AT` para decidir qué datos son nuevos. Después de sincron
 
 ## ¿Por qué "Filas sincronizadas" no coincide con el número de mi almacén?
 
-CDI utiliza `UPDATED_AT` para decidir qué registros recoger durante una sincronización. Mira [esta ilustración]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) para ver cómo funciona. Al comienzo de una ejecución de sincronización, CDI consulta su almacén para obtener todos los registros con `UPDATED_AT` igual o posterior al timestamp UPDATED_AT procesado previamente. Cualquier registro recogido en el momento en que se ejecute la consulta se sincronizará en Braze. Estos son los casos habituales en los que un registro puede no estar sincronizado:
+CDI utiliza `UPDATED_AT` para decidir qué registros recoger durante una sincronización. Mira [esta ilustración]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) para ver cómo funciona. Al comienzo de una ejecución de sincronización, CDI consulta su almacén para obtener todos los registros con `UPDATED_AT` posterior al valor procesado previamente. Cualquier registro recogido en el momento en que se ejecute la consulta se sincronizará en Braze. Estos son los casos habituales en los que un registro puede no estar sincronizado:
 
 - Está añadiendo registros a la tabla con un valor `UPDATED_AT` que ya ha sido procesado.
 - Está actualizando los valores de los registros después de que hayan sido procesados por una sincronización, pero dejando `UPDATED_AT` sin cambios. 
