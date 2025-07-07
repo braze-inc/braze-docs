@@ -494,11 +494,8 @@ Field | Type | Description
 | `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
 | `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                                                     |
 | `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to        |         
-| `canvas_variation_id` | `string`,&nbsp;`null` | ID of the Canvas variation this event belongs to |
 | `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                                                            |
-| `canvas_step_id` | `string`,&nbsp;`null` | ID of the Canvas step this event belongs to |
 | `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                                                                 |
-| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received                                                  |
 | `progression_type`                     | `string`,&nbsp;`null`    | Type of step progression event |
 | `is_canvas_entry`                      | `boolean`,&nbsp;`null`   | Whether this is entry into a first step in a Canvas        |
 | `exit_reason`                          | `string`,&nbsp;`null`    | If this is an exit, the reason a user exited the canvas during the step                  |
