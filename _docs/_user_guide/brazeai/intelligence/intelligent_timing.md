@@ -298,8 +298,5 @@ Yes, machine opens are filtered out by Intelligent Timing, so they do not influe
 
 Intelligent Timing uses each user’s individual history of message engagement at whatever times they received messages. Before using Intelligent Timing, make sure that you have sent users messages at different times of the day. That way, you can “sample” when might be the best time for each user. Inadequately sampling different times of day may result in Intelligent Timing picking a suboptimal time of send for a user.
 
-[1]: {% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %}
-[2]: {% image_buster /assets/img/intelligent_timing/quiet_hours.png %}
-[3]: {% image_buster /assets/img/intel-timing-preview.png %}
-[4]: {% image_buster /assets/img/intelligent_timing/first_used_app.png %}
-[5]: {% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %}
+
+
