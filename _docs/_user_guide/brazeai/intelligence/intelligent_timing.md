@@ -41,11 +41,11 @@ This section describes how to configure Intelligent Timing for your campaigns an
 1. Create a campaign and compose your message.
 2. Select the **Scheduled Delivery** as your delivery type.
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
-4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [campaign nuances](#campaign-nuances) for more guidance.
+4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [campaign nuances](#limitations) for more guidance.
 5. Optionally, configure [Quiet Hours](#quiet-hours).
 6. Specify a [fallback time](#fallback-time). This is when the message will send if a user's profile doesn't have enough data to calculate an optimal time.
 
-![Campaign scheduling screen showing Intelligent Timing with fallback time and Quiet Hours settings][1]
+![Campaign scheduling screen showing Intelligent Timing with fallback time and Quiet Hours settings]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
 #### Quiet Hours {#quiet-hours}
 
@@ -58,7 +58,7 @@ As of April xx, 2025, Quiet Hours reverse the old “Only send within specific h
 1. Select **Enable Quiet Hours**.
 2. Select the start and end time when **not** to send messages.
 
-![Quiet Hours toggle turned on with start and end time set to block message delivery overnight][2]
+![Quiet Hours toggle turned on with start and end time set to block message delivery overnight]({% image_buster /assets/img/intelligent_timing/quiet_hours.png %})
 
 When Quiet Hours are turned on, Braze won't send messages during the quiet period—even if that time matches a user's optimal send time. If a user's optimal time falls within the quiet window, the message will be sent instead at the nearest edge of the window.
 
@@ -72,7 +72,7 @@ To see an estimate of how many users will receive the message in each hour of th
 2. In the section **Preview Delivery Times for** (which appears in both the Target Audiences and Schedule Delivery steps), select your channel.
 3. Click **Refresh Data**.
 
-![][3]
+![]({% image_buster /assets/img/intel-timing-preview.png %})
 
 ### Step 2: Choose a send date
 
@@ -90,7 +90,7 @@ If a campaign is launched and a user's optimal time is less than an hour in the 
 
 If you're targeting an audience that has performed an action in a certain period of time, allow for at least a 3-day window in your segment filters. For example, instead of `First used app more than 1 day ago` and `First used app less than 3 days ago`, use 1 day and 4 days.
 
-![Filters for the target audience where the campaign targets users who first used app between 1 and 4 days ago.][4]
+![Filters for the target audience where the campaign targets users who first used app between 1 and 4 days ago.]({% image_buster /assets/img/intelligent_timing/first_used_app.png %})
 
 This is also because of time zones—selecting a period of less than 3 days may cause some users to fall out of the segment before their optimal send time is reached.
 
@@ -102,7 +102,7 @@ If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_g
 
 When using Intelligent Timing, we recommend scheduling the Winning Variant send time at least **2 days after** the A/B test begins. For example, if your A/B test starts on April 16 at 4:00 PM, schedule the Winning Variant to send no sooner than April 18 at 4:00 PM. This gives Braze enough time to evaluate user behavior and send messages at the optimal time.
 
-![A/B testing sections showing A/B test with Winning Variant selected, with winning criteria, send date, and local send time selected][5]
+![A/B testing sections showing A/B test with Winning Variant selected, with winning criteria, send date, and local send time selected]({% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %})
 
 ### Step 3: Choose a delivery window (optional)
 
