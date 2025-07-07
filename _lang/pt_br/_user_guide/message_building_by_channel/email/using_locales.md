@@ -46,6 +46,33 @@ Quaisquer alterações nas IDs ou localizações no arquivo CSV não serão atua
 
 Na seção **Prévia e teste**, selecione **Usuário multilíngue** para verificar se a mensagem foi traduzida conforme o esperado.
 
+## Gerenciamento de traduções
+
+### Edição de traduções para campanhas e telas lançadas
+
+Depois que uma campanha ou uma tela for lançada, você ainda poderá modificar as traduções quando estiver no modo de rascunho. Isso se aplica se estiver editando traduções diretamente no criador, fazendo upload de CSV ou por meio da API. 
+
+Antes de fazer qualquer atualização de tradução, a campanha ou o Canva deve primeiro ser salvo como rascunho.
+
+1. Selecione **Edit campaign/Canva (Editar campanha/Canvas** ) e, em seguida, faça suas edições no criador.
+2. Selecione **Salvar como rascunho** e, em seguida, selecione **Sim** na janela modal.
+3. Acesse a etapa **Review Summary (Resumo da revisão** ) e selecione **Update campaign/Canva (Atualizar campanha/Canva**).
+4. Selecione **Atualizar campanha/Canva** no modal.
+
+Para obter mais detalhes sobre o gerenciamento de campanhas e Canvas após o lançamento, consulte [Edição de campanhas lançadas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) e [rascunhos do Canvas e edição pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+
+### Duplicação de etapas ou campanhas do Canva e traduções
+
+Ao duplicar uma etapa do Canva ou uma campanha, seja no modo de rascunho após o lançamento ou durante a criação inicial, as traduções associadas a essa etapa não serão transferidas. Todas as traduções necessárias precisam ser adicionadas à nova etapa ou campanha. Certifique-se de revisar e atualizar as traduções adequadamente ao fazer modificações em seu Canva ou campanha.
+
+### Usando a API multilíngue com o Canvas
+
+Para usar a [API multilíngue com o Canvas]({{site.baseurl}}/api/endpoints/translations/), você deve incluir `workflow_id`, `step_id` e `message_variation_id` na lista de parâmetros.
+
+#### Etapas do canva adicionadas aos rascunhos pós-lançamento
+
+Ao usar a API multilíngue com etapas do Canva que foram criadas após o lançamento do Canvas, o endereço `message_variation_id` que você passar para a API estará vazio ou em branco.
+
 ## Perguntas frequentes
 
 #### Quero fazer uma alteração no texto traduzido em uma de minhas localizações. Como posso fazer isso?
@@ -71,3 +98,5 @@ Sim. No entanto, confira se o estilo HTML não está traduzido com o conteúdo.
 | O arquivo de tradução inclui blocos de texto que não existem na mensagem atual (como o rascunho atual no momento em que as traduções são feitas upload). | Os blocos de texto que não existirem em sua mensagem atual não serão salvos do arquivo de tradução para o Braze. |
 | Remoção de uma localização da mensagem depois que essa localização já tiver sido carregada para a mensagem como parte do arquivo de tradução.                           | A remoção da localidade removerá todas as traduções associadas à localidade em sua mensagem.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% multi_lang_include locales.md section="Frequently Asked Questions" %}

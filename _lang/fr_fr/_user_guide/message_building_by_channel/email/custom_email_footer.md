@@ -23,15 +23,9 @@ Il est de votre responsabilité de vous assurer que votre pied de page personnal
 Pour créer ou modifier votre pied de page personnalisé, procédez comme suit :
 
 1. Allez dans **Paramètres** > **Préférences e-mail.**
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), cette page s'appelle **Paramètres d'e-mail** et se trouve sous **Gérer les paramètres.**
-{% endalert %}
-
-{: start="2"}
-2\. Allez dans la section **Pied de page personnalisé** et activez les pieds de page personnalisés.
-3\. Modifiez votre pied de page dans la section **Composer**.
-4\. Envoyez un message test. 
+2. Allez dans la section **Pied de page personnalisé** et activez les pieds de page personnalisés.
+3. Modifiez votre pied de page dans la section **Composer**.
+4. Envoyez un message test. 
 
 ![Un exemple de pied de page personnalisé.][20]
 

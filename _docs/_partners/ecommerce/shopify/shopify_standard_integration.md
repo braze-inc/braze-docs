@@ -21,24 +21,24 @@ If you’re using the older navigation, you can find **Technology Partners** und
 {% endalert %}
 
 {: start="2"}
-2. On the Shopify partner page, select **Begin setup** to start the integration process.<br><br>![Shopify integration page with button to begin setup.][1]<br><br> 
-3. In the Shopify app store, install the Braze application.<br><br>![The Braze app store page with a button to install the application.][5]{: style="max-width:70%;"}
+2. On the Shopify partner page, select **Begin setup** to start the integration process.<br><br>![Shopify integration page with button to begin setup.]({% image_buster /assets/img/Shopify/begin_setup.png %})<br><br> 
+3. In the Shopify app store, install the Braze application.<br><br>![The Braze app store page with a button to install the application.]({% image_buster /assets/img/Shopify/shopify_log_in.png %}){: style="max-width:70%;"}
 
 {% alert note %}
 If your Shopify account is associated with more than one store, you can change the store you’re logged into by selecting the store icon at the top-right of the page and selecting **Switch stores**.
 {% endalert %}
 
 {: start="4"}
-4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace.<br><br>![A window asking you to confirm that you’re in the right workspace.][2]{: style="max-width:70%;"}
+4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace.<br><br>![A window asking you to confirm that you’re in the right workspace.]({% image_buster /assets/img/Shopify/confirm_workspace1.png %}){: style="max-width:70%;"}
 
 {: start="5"}
-5. Select **Begin setup**.<br><br>!["Integration settings" with field to enter domain and a button to begin setup.][9]
+5. Select **Begin setup**.<br><br>!["Integration settings" with field to enter domain and a button to begin setup.]({% image_buster /assets/img/Shopify/choose_account.png %})
 
 ## Step 2: Enable Braze Web SDKs
 
 For Shopify online stores, you can select the standard setup to automatically implement the Braze Web SDK and JavaScript SDK.
 
-![“Enable Web SDK” step with options to implement through a standard setup or custom setup.][3]
+![“Enable Web SDK” step with options to implement through a standard setup or custom setup.]({% image_buster /assets/img/Shopify/sdk_setup.png %})
 
 After you select the standard setup onboarding path, you’ll need to choose when Braze should initialize and load the SDKs from one of the following options: 
 - Upon site visit, such as session start
@@ -53,7 +53,7 @@ After you select the standard setup onboarding path, you’ll need to choose whe
 
 Now you’ll select the Shopify data you want to track.
 
-![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.][6]
+![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.]({% image_buster /assets/img/Shopify/tracking_shopify_data.png %})
 
 The following events will be enabled by default in the standard integration.
 
@@ -68,7 +68,7 @@ For more information on the data tracked through the integration, refer to [Shop
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
 
-![Historical data backfill toggle.][4]
+![Historical data backfill toggle.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 This table contains the data that will be initially loaded through the backfill.
 
@@ -80,7 +80,7 @@ This table contains the data that will be initially loaded through the backfill.
 As your Shopify customer records are loaded into Braze, the Shopify customer ID will be used as the Braze external ID. 
 
 {% alert note %}
-If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify data features]({{site.baseurl}}/shopify_data_features/#historical-backfill) for more details. 
+If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify data features]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) for more details. 
 {% endalert %}
 
 ### (Advanced) Custom data tracking setup
@@ -141,9 +141,9 @@ The SDK must be initialized (listening for activity) on a user's device to log e
 
 ## Step 4: Configure how you manage users
 
-First, select your `external_id` from the dropdown. 
+Select your `external_id` type from the dropdown. 
 
-![“Collect subscribers” section.][10]
+![“Collect subscribers” section.]({% image_buster /assets/img/Shopify/external_id_standard.png %})
 
 {% alert important %}
 Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
@@ -152,11 +152,39 @@ Using an email address or a hashed email address as your Braze external ID can h
 - **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
 {% endalert %}
 
-Second, you have the option to collect your email or SMS marketing opt-ins from Shopify. 
+If you selected a custom external ID type, proceed to steps 4.1 and 4.2. Otherwise, continue to step 4.3.
+
+### Step 4.1: Create a custom `external_id`
+
+First, go to Shopify and create the `braze.external_id` metafield. We recommend following the steps in [Creating custom metafield descriptions](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). For **Namespace and key**, enter `braze.external_id`. For **Type**, we recommend you choose an ID type.
+
+After creating the metafield, listen to [`customer/create` webhooks](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) so that you can write the metafield when a new customer is created. Then, use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to backfill all of your previously created customers with this metafield.
+
+### Step 4.2: Create an endpoint
+
+You need a public GET endpoint to retrieve your external ID. If Shopify can't provide the metafield, Braze will call that endpoint to retrieve the external ID.
+
+An example endpoint is: `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+
+#### Response
+
+Braze expects a `200` status code. Any other code is considered an endpoint failure. The response should be:
+
+{% raw %}
+```json
+{ "external_id": "my_external_id" }
+```
+{% endraw %}
+
+Validate the `shopify_customer_id` and email address by using the Admin API or Customer API to confirm that the parameter values match the customer values in Shopify. After validating, you could also use the APIs to retrieve the `braze.external_id` metafield and return the external ID value.
+
+### Step 4.3: Collect your email or SMS opt-ins from Shopify (optional)
+
+You have the option to collect your email or SMS marketing opt-ins from Shopify. 
 
 If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
 
-![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.][13]
+![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.]({% image_buster /assets/img/Shopify/collect_email_subscribers.png %})
 
 {% alert note %}
 As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
@@ -166,19 +194,23 @@ As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you w
 
 ## Step 5: Sync products (optional)
 
-You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog always reflects the latest product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/).
+You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog always reflects the latest product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
 
-![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][11]{: style="max-width:80%;"}
+![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:80%;"}
 
 ## Step 6: Activate Channels (optional)
 
 You can enable in-app messages without using a developer by configuring them in your setup.
 
-![Setup step to activate channels, with the available option being in-browser messaging.][13]
+![Setup step to activate channels, with the available option being in-browser messaging.]({% image_buster /assets/img/Shopify/activate_channels_standard.png %})
+
+{% alert note %}
+Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+{% endalert %}
 
 ### Supporting additional SDK channels
 
-The Braze SDKs enable various messaging channels, including in-app messages and Content Cards.
+The Braze SDKs enable various messaging channels, including Content Cards.
 
 #### Content Cards and Feature Flags
 
@@ -195,22 +227,8 @@ If you wish to see this supported in the future, submit a product request throug
 1. After you configure your setup, select **Finish Setup**.
 2. Enable the Braze app embed within your Shopify theme settings. Select **Open Shopify** to be redirected to your Shopify account to enable the app embed within your store’s theme settings. 
 
-![Banner that says you need to active the Braze app embed in Shopify and contains a button to open Shopify.][7]
+![Banner that says you need to active the Braze app embed in Shopify and contains a button to open Shopify.]({% image_buster /assets/img/Shopify/open_shopify.png %})
 
 {: start="3"}
 3. After you enable the app embed, your setup is complete!
-Confirm you can view your integration settings, the status of initial data sync, and your active Shopify events. <br><br>![Shopify partner page displaying the integration settings.][8]
-
-[1]: {% image_buster /assets/img/Shopify/begin_setup.png %}
-[2]: {% image_buster /assets/img/Shopify/confirm_workspace1.png %}
-[3]: {% image_buster /assets/img/Shopify/sdk_setup.png %}
-[4]: {% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %}
-[5]: {% image_buster /assets/img/Shopify/shopify_log_in.png %}
-[6]: {% image_buster /assets/img/Shopify/tracking_shopify_data.png %}
-[7]: {% image_buster /assets/img/Shopify/open_shopify.png %}
-[8]: {% image_buster /assets/img/Shopify/install_complete.png %}
-[9]: {% image_buster /assets/img/Shopify/choose_account.png %}
-[10]: {% image_buster /assets/img/Shopify/collect_email_subscribers.png %}
-[11]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}
-[12]: {% image_buster /assets/img/Shopify/configure_settings.png %}
-[13]: {% image_buster /assets/img/Shopify/collect_email_subscribers_2.png %}
+Confirm you can view your integration settings, the status of initial data sync, and your active Shopify events. <br><br>![Shopify partner page displaying the integration settings.]({% image_buster /assets/img/Shopify/install_complete.png %})

@@ -15,7 +15,7 @@ description: "この記事では、既存のダッシュボードのユーザー
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを更新します。
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを更新します。
 
 これにより、姓名、権限 (会社、ワークスペース、チームレベルでの権限設定)、および部門を更新できます。
 

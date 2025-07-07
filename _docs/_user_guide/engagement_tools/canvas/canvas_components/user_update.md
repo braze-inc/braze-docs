@@ -10,11 +10,13 @@ tool: Canvas
 
 # User Update 
 
-![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
-
 > The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
-With User Update, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
+## How this component works
+
+![A User Update step named "Update loyalty" that updates an attribute "Is Premium Member" to "true".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+
+When using this component in your Canvas, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
 
 Users will only advance to the next Canvas steps after the relevant user updates have been completed. This means any subsequent messaging that relies on these user updates will be up-to-date when the next step is run.
 
@@ -32,13 +34,13 @@ You can also test the changes made with this component by searching for a user a
 
 To add or update a custom attribute, select an attribute name from your list of attributes and enter the key value.
 
-![][4]{: style="max-width:90%;"}
+![User Update step that updates the two attributes "Loyalty Member" and "Loyalty Program" to "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### Removing custom attributes
 
 To remove a custom attribute, select an attribute name using the dropdown. You can switch to the [advanced JSON composer](#advanced-json-composer) to further edit. 
 
-![][5]{: style="max-width:90%;"}
+![User Update step that removes an attribute "Loyalty Member".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Increasing and decreasing values
 
@@ -48,7 +50,7 @@ The user update step can increase or decrease an attribute value. Select the att
 
 By incrementing a custom attribute that tracks an event, you can track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
 
-![][7]{: style="max-width:90%;"}
+![User Update step that increments the attribute "class_count" by one.]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### Updating an array of objects
 
@@ -60,7 +62,7 @@ The User Update step can add or remove attributes to this array of objects. To u
 
 Adding or removing an item to an array updates the user's wishlist.
 
-![][9]{: style="max-width:90%;"}
+![User Update step that adds an item "sunblock" to the attribute "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### Use case: Calculating the shopping cart total
 
@@ -122,7 +124,7 @@ The `shopping_cart` attribute carries the total of many custom events: the total
 
 You can use the user update step to persist a `canvas_entry_property`. Let’s say you have an event that triggers when an item is added to a cart. You can store the ID of the most recent item added to cart and use that for a remarketing campaign. Use the personalization feature to retrieve a Canvas entry property and store it in an attribute.
 
-![][8]{: style="max-width:90%;"}
+![User Update step that updates the attribute "most_recent_cart_item" with an item ID.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### Personalization
 
@@ -141,11 +143,11 @@ We recommend careful use of Connected Content Liquid personalization in User Upd
 
 Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON composer. A user's [global subscription]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) and [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) state can also be set.
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
 Using the advanced composer, you can also preview and test that the user profile is updated with the changes with the **Preview and test** tab. You can either select a random user or search for a specific user. Then, after sending a test to a user, view the user profile using the generated link.
 
-![][6]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### Considerations
 
@@ -243,12 +245,3 @@ You can also update subscription groups using this Canvas step. The following ex
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %} 
-[2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %} 
-[3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %} 
-[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %} 
-[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %} 
-[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %} 
-[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %} 
-[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %} 
-[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 

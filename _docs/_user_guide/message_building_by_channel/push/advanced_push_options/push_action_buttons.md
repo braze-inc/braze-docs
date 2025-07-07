@@ -11,23 +11,24 @@ channel:
 
 # Push action buttons
 
-![An iOS push notification with two push action buttons: Accept and Decline.][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![An iOS push notification with two push action buttons: Accept and Decline.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Push action buttons allow you to set content and actions for buttons when using Braze iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience.
 
 ## Creating action buttons
 
-Each interactive button can link to a web page or a deep link or open the app. You can specify your push action buttons in the **On-Click Behavior** section of the push message composer in the dashboard.
+Each interactive button can link to a web page or a deep link or open the app. 
 
-{% alert important %}
-If you want to target both iOS and Android in a single campaign, create a multichannel campaign. Push action buttons are not supported when targeting both iOS and Android using [quick push campaigns]({{site.baseurl}}/quick_push).
-{% endalert %}
+- For standard push campaigns, you can specify your push action buttons in the **On-Click Behavior** section of the push message composer in the dashboard.
+- For [quick push campaigns]({{site.baseurl}}/quick_push), action buttons can be configured separately for each platform under the **Settings** tab.
 
+{% tabs %}
+{% tab iOS %}
 ### iOS {#ios}
 
 To use action buttons in your iOS push messages, do the following:
 
-1. Create an iOS [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable action buttons in the **Compose** tab.
+1. Turn on action buttons in the **Compose** tab for a standard campaign or in the **Settings** tab for quick push.
 2. Select your **iOS Notification Category** from the following available button combinations:
  - Accept / Decline
  - Yes / No
@@ -40,12 +41,13 @@ To use action buttons in your iOS push messages, do the following:
 {% alert note %}
 Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). In particular, you need to either configure iOS Categories or select from certain default button options. For Android integrations, these buttons will work automatically.
 {% endalert %}
-
+{% endtab %}
+{% tab Android %}
 ### Android {#android}
 
 To use action buttons in your Android push messages, do the following:
 
-1. Create an Android [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable notification buttons in the **Compose** tab.
+1. Turn on action buttons in the **Compose** tab for a standard campaign or in the **Settings** tab for quick push.
 2. Select <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
   - Open App
   - Redirect to Web URL
@@ -69,6 +71,6 @@ The following table outlines how many characters you can add before your button 
 | 2 | 20 characters |
 | 3 | 11 characters |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% endtab %}
+{% endtabs %}
 
-
-[1]: {% image_buster /assets/img_archive/push_action_example.png %}

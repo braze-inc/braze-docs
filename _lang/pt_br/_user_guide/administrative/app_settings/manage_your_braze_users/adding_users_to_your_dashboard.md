@@ -12,7 +12,7 @@ description: "Este artigo de referência cobre como gerenciar usuários na conta
 > Aprenda a gerenciar usuários na conta da sua empresa, incluindo adicionar, suspender e excluir usuários.
 
 {% alert note %}
-Várias seções nesta página referem-se à página **Usuários da Empresa**. Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Usuários da Empresa** é chamado de **Gerenciar Usuários** e está localizado sob o ícone da sua conta.
+Várias seções nesta página referem-se à página **Usuários da Empresa**. Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), **Usuários da Empresa** é chamado de **Gerenciar Usuários** e está localizado sob o ícone da sua conta.
 {% endalert %}
 
 ## Adicionando usuários Braze
@@ -84,6 +84,19 @@ Braze manterá os seguintes dados da conta:
 
 - Atributos personalizados ou dados de teste associados à sua conta
 - Campanhas ou Canvases que criaram (mas o nome do usuário não aparecerá nelas, como aparece na **Última edição por** coluna)
+
+## Solução de problemas
+
+### "O e-mail já está em uso" ao tentar adicionar um usuário
+
+Se você tentar adicionar um novo usuário e receber um erro dizendo que o e-mail já está em uso, mas não conseguir encontrá-lo na sua lista de usuários, esse usuário provavelmente existe em uma instância diferente do mesmo cluster de dashboard do Braze.
+
+Para criar este novo usuário, você pode fazer uma das seguintes opções:
+
+1. Excluir o usuário da outra instância antes de poder criá-lo na nova, ou
+2. Criar o usuário com uma string de e-mail diferente (como `testing+01@braze.com`) ou outro alias de e-mail. 
+
+Se você não receber a ativação da mensagem na sua caixa de entrada ao usar `testing+01@braze.com`, confirme com sua equipe de TI que você pode aceitar mensagens desse tipo de endereço de e-mail. Alguns administradores filtram mensagens enviadas para endereços de e-mail com um `+`.
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

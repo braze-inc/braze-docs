@@ -305,7 +305,7 @@ Wenn Ihre CSV-Datei leere Zeilen enthält und weniger Zeilen importiert werden, 
 
 Braze hat ungültige verschlüsselte E-Mail-Adressen entdeckt. Vergewissern Sie sich, dass alle E-Mail-Adressen ordnungsgemäß verschlüsselt sind, bevor Sie sie in Braze importieren.
 
-- **Wenn Sie [eine E-Mail-Adresse]({{site.baseurl}}/user_guide/analytics/field_level_encryption/#step-3-import-and-update-users)** in Braze ** [aktualisieren oder importieren]({{site.baseurl}}/user_guide/analytics/field_level_encryption/#step-3-import-and-update-users)**, verwenden Sie den gehashten E-Mail-Wert, wenn eine E-Mail enthalten ist. Diese Hash-E-Mail-Werte werden von Ihrem internen Team bereitgestellt. 
+- **Wenn Sie eine [E-Mail-Adresse in Braze aktualisieren oder importieren]({{site.baseurl}}/user_guide/analytics/field_level_encryption/#step-3-import-and-update-users)**, verwenden Sie den gehashten E-Mail-Wert, wenn eine E-Mail enthalten ist. Diese Hash-E-Mail-Werte werden von Ihrem internen Team bereitgestellt. 
 - **Wenn Sie einen neuen Nutzer:innen anlegen**, müssen Sie `email_encrypted` mit dem verschlüsselten E-Mail-Wert des Nutzers hinzufügen. Andernfalls wird der Nutzer:in nicht erstellt. Ähnlich verhält es sich, wenn Sie einem Nutzer:innen, der noch keine E-Mail hat, eine E-Mail-Adresse hinzufügen, müssen Sie `email_encrypted` hinzufügen. Andernfalls wird der Nutzer:innen nicht aktualisiert.
 
 ### Fehlende Zeilen

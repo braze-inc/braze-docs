@@ -17,7 +17,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 > The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
-![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.][1]
+![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.]({% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior")
 
 Users must meet the step's criteria in order to be advanced through the step. With [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps, you can turn on delivery validations to check that your audience meets your delivery criteria at message send. This will count toward the step's criteria when using Canvas Flow. So, if a user doesn't meet the delivery validation criteria, they will exit from the Canvas.
 
@@ -41,7 +41,7 @@ When **Immediately Advance Audience** is selected, users will be advanced to the
 
 ### Scheduled steps
 
-For a scheduled component, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
+For a scheduled component, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events), users who perform the exception event will not be advanced through the step.
 
 When sending a multichannel component with [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), we may send or attempt to send messages at different times for different channels. Braze will auto-advance users at the time that the first message in a component attempts to send.
 
@@ -77,4 +77,3 @@ Braze customers who did participate in the first round of the Canvas in-app mess
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior"

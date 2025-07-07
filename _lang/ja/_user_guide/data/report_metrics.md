@@ -805,6 +805,8 @@ SMS
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側ごとに異なります。
 
+ソフトバウンスはキャンペーンアナリティクスでは追跡されませんが、[Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) でソフトバウンスをモニタリングできます。また、これらのユーザーを送信から除外したり、[Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) で過去30 日間のソフトバウンスの量を振り返ったりすることもできます。メッセージアクティビティログでは、ソフトバウンスの理由を確認し、メールキャンペーンの「送信」と「配信」の間に発生する可能性のある不一致を理解することもできます。
+
 {% endapi %}
 
 {% api %}
@@ -994,7 +996,7 @@ Eメール、コンテンツカード、SMS、LINE
 アプリ内メッセージ、コンテンツカード
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} アプリ内メッセージのユニークインプレッション数は、再適格性が有効で、かつユーザーがトリガーアクションを実行した場合、24時間後に再び加算できます。再適格性が有効になっている場合は、<i>ユニークインプレッション数</i> = <i>ユニーク受信者数</i>です。<br><br>コンテンツカードの場合、ユーザーがコンテンツカードを2回目に表示したときには、カウントは増加しません。 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} アプリ内メッセージのユニークインプレッション数は、再適格性が有効で、かつユーザーがトリガーアクションを実行した場合、24時間後に再び加算できます。再適格性がオンの場合、<i>固有印象</i>=<i>固有受信者</i>。<br><br>コンテンツカードの場合、ユーザーがコンテンツカードを2回目に表示したときには、カウントは増加しません。 
 
 <span class="calculation-line">計算式: カウント</span>
 

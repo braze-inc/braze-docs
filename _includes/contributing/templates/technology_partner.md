@@ -1,4 +1,4 @@
-You can use this template to create technology partner documentation. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/).
+You can use this template to create technology partner documentation. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/scuba/).
 
 {% details Show template %}
 {% raw %}
@@ -17,6 +17,10 @@ search_tag: Partner
 
 <!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a concise overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
 > DESCRIPTION.
+
+*This integration is maintained by PARTNER_NAME.*
+
+## Overview
 
 ADDITIONAL_INFORMATION.
 

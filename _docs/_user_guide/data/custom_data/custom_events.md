@@ -105,11 +105,11 @@ Braze notes the number of times custom events have occurred and the last time th
 
 On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlayed on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
 
-![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event][8]
+![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 You can also use **Filters** to break down your custom events by hour, monthly average users (MAU), segments, or KPI formulas. 
 
-![Custom event graph filters][9]{: style="max-width:40%;"}
+![Custom event graph filters]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 [Increment custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) to keep a counter on a user action similar to a custom event. However, you can't view custom attribute data in a time series. User actions that don't need to be analyzed in a time series should be recorded using this method.
@@ -142,7 +142,6 @@ Property values can be any of the following data types:
 | Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
-| Objects | Objects will be ingested as strings. |
 | Nested objects | Objects that are inside of other objects. For more, see the section in this article on [Nested objects](#nested-objects).
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -156,19 +155,19 @@ Custom event properties can be used to qualify campaign triggers, track conversi
 
 #### Trigger messages
 
-Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
+Use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `item price` to improve your target audience and allow for increased campaign personalization.
 
-![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
+![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a item price between 100 and 200 dollars]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-Nested custom event properties are also supported in [action-based delivery][19].
+Nested custom event properties are also supported in [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
-![Custom event property filters for an abandoned card. One filter is selected if any items in the cart have a price more than 100 dollars.][20]
+![Custom event property filters for an abandoned card. One filter is selected if any items in the cart have a price more than 100 dollars.]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### Personalize messages
 
-You can also use custom event properties for personalization within the messaging template. Any campaign using [action-based delivery][19] with a trigger event can use custom event properties from that event for messaging personalization.
+You can also use custom event properties for personalization within the messaging template. Any campaign using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) with a trigger event can use custom event properties from that event for messaging personalization.
 
-For example, if you have a gaming app and want to send a message to users who completed a level, you could further personalize your message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called `time_spent` can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+For example, if you have a gaming app and want to send a message to users who completed a level, you could further personalize your message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). The custom event property called `time_spent` can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
@@ -216,7 +215,7 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1 to 30 days.
 
-![A filter group that "has 'Abandoned Cart' with property 'number of itmes' and value '2' 'more than' 1'1 time in the last '30' calendar days.][3]
+![A filter group that has 'Abandoned Cart' with property 'number of itmes' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
 
 Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
 
@@ -229,69 +228,7 @@ In regards to subscription usage, custom event properties enabled for segmentati
 
 ### Canvas entry properties and event properties
 
-You can use `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Refer to [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
-
-{% tabs local %}
-{% tab Canvas Entry Properties %}
-
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
-
-{% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
-{% endalert %}
-
-For Canvas Flow messaging, `canvas_entry_properties` can be used in any Message step with this Liquid format: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
-
-#### Use case
-
-{% raw %}
-Let's say a retail store, RetailApp, has the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. RetailApp can pull the product name (shoes) into a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
-{% endraw %}
-
-RetailApp can also trigger specific messages to send for different `product_name` properties in a Canvas that targets users after they've triggered a purchase event. For example, they can send different messages to users who purchased shoes and users who purchased something else by adding the following Liquid into a Message step.
-
-{% raw %}
-```markdown
-{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
-  Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
-{% else %}
-  Your order will be on its way shortly. If you missed something, you have until the end of the week to add more items to your cart for the same discounts.
-{% endif %}
-
-```
-{% endraw %}
-
-{% details Expand for original Canvas editor %}
-
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
-
-For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
-
-{% enddetails %}
-{% endtab %}
-
-{% tab Event Properties %}
-
-{% alert important %}
-You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-{% endalert %}
-
-Event properties refer to the properties you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery and Canvases.
-
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
-
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (and didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
-
-{% details Expand for original Canvas editor %}
-
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
-
-For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
-
-{% enddetails %}
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### Nested objects {#nested-objects}
 
@@ -310,15 +247,3 @@ You can segment based on the values of event properties in two ways:
 
 Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.
 
-[1]: {% image_buster /assets/img/nested_object1.png %}
-[2]: {% image_buster /assets/img/nested_object2.png %}
-[3]: {% image_buster /assets/img/nested_object3.png %}
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
-[16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

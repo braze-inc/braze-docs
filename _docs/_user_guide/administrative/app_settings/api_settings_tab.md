@@ -21,7 +21,7 @@ This section provides your workspace REST API keys, the unique identifiers that 
 
 For additional security, you can specify a list of IP addresses and subnets allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
 
-![API IP Whitelisting section of creating a new API key][26]
+![API IP Whitelisting section of creating a new API key]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 If you don't specify any, requests can be sent from any IP address.
 
@@ -35,13 +35,7 @@ This section includes a list of identifiers used to reference specific apps in r
 
 ### Other identifiers
 
-To integrate with our API, you can search for the identifiers related to any segments, campaigns, Content Cards, and more that you want to access from the Braze external API. All messages should follow [UTF-8][12] encoding. After you've selected any of them, the identifier will be displayed underneath the dropdown menu.
+To integrate with our API, you can search for the identifiers related to any segments, campaigns, Content Cards, and more that you want to access from the Braze external API. All messages should follow [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding. After you've selected any of them, the identifier will be displayed underneath the dropdown menu.
 
 For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipedia: UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

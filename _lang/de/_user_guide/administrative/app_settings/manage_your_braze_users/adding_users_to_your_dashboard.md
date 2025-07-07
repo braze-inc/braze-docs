@@ -45,7 +45,7 @@ Wenn Ihr Team Google Mail verwendet und Sie Probleme beim Hinzufügen einer E-Ma
 
 ### Kann ich die E-Mail-Adresse für mein Braze-Konto ändern?
 
-Aus Sicherheitsgründen können Benutzer die mit ihrem Braze-Konto verknüpfte E-Mail-Adresse nicht ändern. Wenn ein Benutzer seine E-Mail-Adresse aktualisieren möchte, sollte ein Administrator für ihn [ein neues Konto](#adding-braze-users) mit seiner bevorzugten E-Mail-Adresse [erstellen](#adding-braze-users).
+Aus Sicherheitsgründen können Benutzer die mit ihrem Braze-Konto verknüpfte E-Mail-Adresse nicht ändern. Wenn ein Benutzer seine E-Mail-Adresse aktualisieren möchte, sollte ein Administrator für ihn [ein neues Konto](#adding-braze-users) mit seiner bevorzugten E-Mail-Adresse erstellen.
 
 ## Personen in Braze sperren
 

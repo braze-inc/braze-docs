@@ -18,10 +18,6 @@ description: "Cet article pratique vous explique comment configurer le ciblage d
 
 Accédez à la page **Segments**, sous **Audience**, pour afficher tous vos segments d'utilisateurs actuels. Sur cette page, vous pouvez créer et nommer de nouveaux segments. Pour commencer, cliquez sur **Créer un segment** et donnez un nom à votre segment.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), **les segments se** trouvent sous **Engagement.**
-{% endalert %}
-
 ![][1]{: style="max-width:70%;"}
 
 ## Étape 2 : Personnalisez votre emplacement

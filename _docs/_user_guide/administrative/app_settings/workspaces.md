@@ -19,7 +19,7 @@ Everything you do in Braze happens within a workspace. Workspaces are a shared e
 
 ### Step 1: Have a plan
 
-Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces][link] guide.
+Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces/) guide.
 
 ### Step 2: Add your workspace
 
@@ -27,7 +27,7 @@ You can create new workspaces or switch between existing workspaces from the wor
 
 1. Select the workspace dropdown, then select <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
 
-![The workspace dropdown with the "Create workspace" button.][1]{: style="max-width:60%;"}
+![The workspace dropdown with the "Create workspace" button.]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2. Give your workspace a name.
@@ -39,11 +39,11 @@ You might want to adopt a naming convention so that others in your company can e
 {:start="3"}
 3. Select **Create**. It may take a few seconds for Braze to create your workspace.
 
-!["Create Workspace" modal with the name "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
+!["Create Workspace" modal with the name "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
 
 You will be taken to the **App Settings** page to begin adding your app instances. You can access this page at any time from **Settings** > **App Settings**.
 
-!["App Settings" page for the Upon Voyage US - Staging workspace with a button for adding an app.][3]
+!["App Settings" page for the Upon Voyage US - Staging workspace with a button for adding an app.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
 ### Step 3: Add your app instances
 
@@ -52,7 +52,7 @@ We refer to the different sites and apps that are collected within a workspace a
 1. From the **App Settings** page, select **+ Add app**.
 2. Give your app instance a name and select what platform or platforms this app instance is on. If you select multiple platforms, Braze will create one app instance for each platform.
 
-!["Add New App to Upon Voyage US - Staging" modal with options to select app details.][4]{: style="max-width:60%" }
+!["Add New App to Upon Voyage US - Staging" modal with options to select app details.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
 
 {:start="3"}
 3. Select **Add app** to confirm.
@@ -61,7 +61,7 @@ We refer to the different sites and apps that are collected within a workspace a
 
 After adding your app instance, you will have access to its API key. The API key is used when making requests between your app instance and the Braze API. The API key is also important for integrating the Braze SDK with your app or website.
 
-![Settings page for the Upon Voyage iOS app with fields for the API Key and SDK Endpoint.][5]
+![Settings page for the Upon Voyage iOS app with fields for the API Key and SDK Endpoint.]({% image_buster /assets/img/workspaces/app_api_key.png %})
 
 {% alert note %}
 You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android, create four app instances within your workspace (Free iOS app, free Android app, pro iOS app, and pro Android app). This will give you four API keys to use, one for each app instance.
@@ -73,7 +73,7 @@ The live SDK version displayed on the App Settings page for a specific app is th
 
 This field appears after you have integrated the Braze SDK with your app or website. If a newer version of the Braze SDK is available for your platform, it will be noted here with the tag "Newer Version Available."
 
-!["Live SDK Version" section with a field value of "5.4.0" and an icon that says a new version is available.][6]
+!["Live SDK Version" section with a field value of "5.4.0" and an icon that says a new version is available.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### Step 4: Repeat as needed
 
@@ -89,7 +89,7 @@ Repeat steps 2 and 3 to set up as many workspaces as your plan requires. As a be
 
 You can add favorite workspaces to access the workspaces you use the most even faster.
 
-![Workspace dropdown with the tab for "Favorite workspaces".][7]{: style="max-width:50%;"}
+![Workspace dropdown with the tab for "Favorite workspaces".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 To add favorite workspaces:
 
@@ -108,7 +108,7 @@ To rename your workspace:
 2. Hover over your workspace’s name and select <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
-![The pencil icon appearing next to the workspace name.][8]{: style="max-width:50%;"}
+![The pencil icon appearing next to the workspace name.]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
 
 ### Deleting workspaces and app instances
 
@@ -123,7 +123,7 @@ You cannot delete app instances or workspaces that are currently being used for 
 Be careful when deleting workspaces! After a workspace is deleted, it can’t be restored. 
 {% endalert %}
 
-![The App Settings page with a button to delete a workspace and a trash can icon to delete an app.][9]
+![The App Settings page with a button to delete a workspace and a trash can icon to delete an app.]({% image_buster /assets/img/workspaces/workspace_delete.png %})
 
 ## Frequently asked questions
 
@@ -149,36 +149,25 @@ By default, a segment targets all apps and websites in the workspace. To set up 
 2. For **Apps and websites targeted**, select **Users from specific apps**.
 3. In the **Specific apps** dropdown, select your app or site.
 
-![Segment that is targeting users from specific apps.][10]
+![Segment that is targeting users from specific apps.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 You can then add this segment to your message and begin further refining your audience with additional segments and filters if needed.
 
 #### Campaigns
 
-For campaigns, add your segment to the **Target Users** step of the composer.
+For campaigns, add your segment to the **Target Audiences** step of the composer.
 
-#### Canvas Flow
+#### Canvas
 
-In Canvas Flow, add your segment to your Message steps, in the **Delivery Validations** section. Delivery validations double-check that your audience meets your delivery criteria at message send. Remember to specify delivery validations for each Message step to make sure it will be delivered to the correct app. There's no need to segment at the entry level.
+In Canvas, add your segment to your Message steps, in the **Delivery Validations** section. Delivery validations double-check that your audience meets your delivery criteria at message send. Remember to specify delivery validations for each Message step to make sure it will be delivered to the correct app. There's no need to segment at the entry level.
 
 {% details Expand for steps in the original Canvas workflow %}
 
 {% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This content is available for reference to understand segments and targeting in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This content is available for reference to understand segments and targeting in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience clone their Canvases to the updated editor to better build and manage Canvases. Learn more about [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 In the original Canvas workflow, add your segment to the Canvas component level in the **Audience** section. There's no need to segment at the entry level.
 {% enddetails %}
 
 
-[1]: {% image_buster /assets/img/workspaces/workspace_create.png %}
-[2]: {% image_buster /assets/img/workspaces/workspace_name.png %}
-[3]: {% image_buster /assets/img/workspaces/workspace_empty_state.png %}
-[4]: {% image_buster /assets/img/workspaces/workspace_add_app.png %}
-[5]: {% image_buster /assets/img/workspaces/app_api_key.png %}
-[6]: {% image_buster /assets/img/workspaces/app_live_sdk_version.png %}
-[7]: {% image_buster /assets/img/workspaces/workspace_favorites.png %}
-[8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
-[9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
-[10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}
-[link]: {{site.baseurl}}/user_guide/getting_started/workspaces/

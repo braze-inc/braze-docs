@@ -22,4 +22,4 @@ Die API ID für einen Content-Block wird jetzt auf der ausgewählten Content-Blo
 
 ## Erstellung und Identifizierung von Nutzer:innen mit einem Alias über die API
 
-Sie können jetzt [eine API-Anfrage]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification) mit beliebigen Feldern im Attribute-Objekt [verwenden]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification), um ein Attribut dieses Namens mit dem angegebenen Wert im angegebenen Nutzerprofil zu erstellen oder zu aktualisieren.
+Sie können jetzt [eine API-Anfrage]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification) mit beliebigen Feldern im Attribute-Objekt verwenden, um ein Attribut dieses Namens mit dem angegebenen Wert im angegebenen Nutzerprofil zu erstellen oder zu aktualisieren.

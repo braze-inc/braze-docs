@@ -30,9 +30,6 @@ Por ejemplo, "Stpo" o "Please stopppp" se considerarán aproximados, y se enviar
 Para configurar la exclusión difusa, vaya a la página de gestión de palabras clave del grupo de suscripción.
 
 1. Vaya a **Audiencia** > **Suscripciones** y seleccione un grupo de suscripción SMS.
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), encontrará **los Grupos de suscripción** en **Usuarios**.
-{% endalert %}
 
 {:start="2"}
 2\. En **Palabras clave globales de SMS**, busque la categoría de **exclusión** y seleccione el icono del lápiz.

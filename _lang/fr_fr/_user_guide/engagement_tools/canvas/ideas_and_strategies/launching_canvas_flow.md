@@ -86,9 +86,20 @@ Après avoir passé en revue les détails de votre Canvas, consultez la rubrique
 ## Résolution des problèmes
 
 {% details Pourquoi mes utilisateurs ne reçoivent-ils pas mes messages Canvas ? %}
-- Vérifiez que leur statut d’abonnement aux notifications push est « abonné » ou « inscrit » **et** que leur statut **Notifications push activées** est défini sur « vrai ». Si vous avez ajouté ces règles d’entrées Canvas, il est possible que les utilisateurs aient été désinscrits entre le moment de leur accession au Canvas et l’étape de réception du message.
-- Si la limite de fréquence globale est activée pour votre Canvas, selon vos règles spécifiques, le nombre de fois où un utilisateur devrait recevoir un message d’un canal donné peut être limité. 
-- Si les heures calmes sont activées, cela peut avoir un impact sur l'heure d'envoi de votre message, ce qui signifie que votre message peut être envoyé à la prochaine heure disponible (à la fin des heures calmes) ou annuler complètement le message.
+**Vérifier la disponibilité des utilisateurs**
+- Assurez-vous qu'ils répondent à vos critères de segmentation.
+- Confirmez que leur état d'abonnement à Push est "abonné" ou "abonné" **et que** leur état " **Push Enabled** " est défini sur "true". Si vous avez ajouté ces règles d’entrées Canvas, il est possible que les utilisateurs aient été désinscrits entre le moment de leur accession au Canvas et l’étape de réception du message.
+- Confirmez qu'ils correspondent à vos paramètres d'envoi de Canvas. (Si les utilisateurs sont "abonnés" mais que les paramètres sont "Abonnés", les utilisateurs ne seront pas activés pour le canal).
+- Si la limite de fréquence globale est activée pour votre Canvas, vérifiez si vos règles limitent le nombre de fois où chaque utilisateur peut recevoir un message provenant d'un canal spécifique. 
+- Si les heures calmes sont activées, l'heure d'envoi de votre message peut être affectée, ce qui signifie que votre message peut être envoyé à la prochaine heure disponible (à la fin des heures calmes) ou être entièrement annulé.
+
+**Vérifiez la disponibilité des utilisateurs pour des filtres supplémentaires dans votre étape du canvas**
+- Confirmez qu'ils ont effectué l'événement personnalisé ou l'achat préalable.
+- Vérifiez s'il existe une [condition de concurrence]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), qui a une incidence sur les messages que les utilisateurs reçoivent s'ils déclenchent plusieurs actions en même temps.
+- Assurez-vous qu'il n'y a pas de filtres spécifiques dans l'étape qui auraient pu empêcher les utilisateurs de recevoir le message.
+- Recherchez les conflits entre les différentes étapes d'un même Canvas. Par exemple, les utilisateurs qui n'ont pas reçu le message peuvent être arrêtés par un filtre qui exige la réalisation d'une autre étape sur une autre branche.
+- Confirmez que les utilisateurs satisfont à des règles de validation supplémentaires.
+- Confirmez que l'étape du canvas était connectée à l'étape précédente au moment de l'envoi.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

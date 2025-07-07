@@ -10,6 +10,175 @@ The following features are built into the Braze Android SDK. To use any other pu
 |Push Primers|Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+## About the push notification lifecycle {#push-notification-lifecycle}
+
+The following flowchart shows how Braze handles the push notification lifecycle, such as permission prompts, token generation, and message delivery.
+
+{% tabs local %}
+{% tab Granting permissions %}
+```mermaid
+---
+config:
+  theme: neutral
+---
+flowchart TD
+
+%% Permission flow
+subgraph Permission[Push Permissions]
+    B{Android version of the device?}
+    B -->|Android 13+| C["requestPushPermissionPrompt() called"]
+    B -->|Android 12 and earlier| D[No permissions required]
+    
+    %% Connect Android 12 path to Braze state
+    D --> H3[Braze: user subscription state]
+    H3 --> J3[Defaults to 'subscribed' when user profile created]
+    
+    C --> E{Did the user grant push permission?}
+    E -->|Yes| F[POST_NOTIFICATIONS permission granted]
+    E -->|No| G[POST_NOTIFICATIONS permission denied]
+    
+    %% Braze subscription state updates
+    F --> H1[Braze: user subscription state]
+    G --> H2[Braze: user subscription state]
+    
+    H1 --> I1{Automatically opt in after permission granted?}
+    I1 -->|true| J1[Set to 'opted-in']
+    I1 -->|false| J2[Remains 'subscribed']
+    
+    H2 --> K1[Remains 'subscribed'<br/>or 'unsubscribed']
+    
+    %% Subscription state legend
+    subgraph BrazeStates[Braze subscription states]
+        L1['Subscribed' - default state<br/>when user profile created]
+        L2['Opted-in' - user explicitly<br/>wants push notifications]
+        L3['Unsubscribed' - user explicitly<br/>opted out of push]
+    end
+    
+    %% Note about user-level states
+    note1[Note: These states are user-level<br/>and apply across all devices for the user]
+    
+    %% Connect states to legend
+    J1 -.-> L2
+    J2 -.-> L1
+    J3 -.-> L1
+    K1 -.-> L3
+    note1 -.-> BrazeStates
+end
+
+%% Styling
+classDef permissionClass fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+classDef tokenClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+classDef sdkClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
+classDef configClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+classDef displayClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+classDef deliveryClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+classDef brazeClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px
+
+class A,B,C,E,F,G permissionClass
+class H,I tokenClass
+class J,K sdkClass
+class N,O,P configClass
+class R,S,S1,T,U,V displayClass
+class W,X,X1,X2,Y,Z deliveryClass
+class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
+```
+{% endtab %}
+
+{% tab Generating push tokens %}
+```mermaid
+---
+config:
+  theme: neutral
+---
+flowchart TD
+
+%% Token generation flow
+subgraph Token[Token Generation]
+    H["Braze SDK initialized"] --> Q{Is FCM auto-registration enabled?}
+    Q -->|Yes| L{Is required configuration present?}
+    Q -->|No| M[No FCM token generated]
+    L -->|Yes| I[Generate FCM token]
+    L -->|No| M
+    I --> K[Register token with Braze]
+
+    %% Configuration requirements
+    subgraph Config[Required configuration]
+        N['google-services.json' file is present]
+        O['com.google.firebase:firebase-messaging' in gradle]
+        P['com.google.gms.google-services' plugin in gradle]
+    end
+
+    %% Connect config to check
+    N -.-> L
+    O -.-> L
+    P -.-> L
+end
+
+%% Styling
+classDef permissionClass fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+classDef tokenClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+classDef sdkClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
+classDef configClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+classDef displayClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+classDef deliveryClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+classDef brazeClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px
+
+class A,B,C,E,F,G permissionClass
+class H,I tokenClass
+class J,K sdkClass
+class N,O,P configClass
+class R,S,S1,T,U,V displayClass
+class W,X,X1,X2,Y,Z deliveryClass
+class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
+```
+{% endtab %}
+
+{% tab Displaying notifications %}
+```mermaid
+---
+config:
+  theme: neutral
+  fontSize: 10
+---
+flowchart TD
+
+subgraph Display[Push Display]
+    %% Push delivery flow
+    W[Push sent to FCM servers] --> X{Did FCM receive push?}
+    X -->|App is terminated| Y[FCM cannot deliver push to the app]
+    X -->|Delivery conditions met| X1[App receives push from FCM]
+    X1 --> X2[Braze SDK receives push]
+    X2 --> R[Push type?]
+
+    %% Push Display Flow
+    R -->|Standard push| S{Is push permission required?}
+    R -->|Silent push| T[Braze SDK processes silent push]
+    S -->|Yes| S1{Did the user grant push permission?}
+    S -->|No| V[Notification is shown to the user]
+    S1 -->|Yes| V
+    S1 -->|No| U[Notification is not shown to the user]
+end
+
+%% Styling
+classDef permissionClass fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+classDef tokenClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+classDef sdkClass fill:#fff3e0,stroke:#e65100,stroke-width:2px
+classDef configClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+classDef displayClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+classDef deliveryClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+classDef brazeClass fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px
+
+class A,B,C,E,F,G permissionClass
+class H,I tokenClass
+class J,K sdkClass
+class N,O,P configClass
+class R,S,S1,T,U,V displayClass
+class W,X,X1,X2,Y,Z deliveryClass
+class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
+```
+{% endtab %}
+{% endtabs %}
+
 ## Setting up push notifications
 
 {% alert tip %}
@@ -214,7 +383,7 @@ Braze includes a service to handle push receipt and open intents. Our `BrazeFire
 </service>
 ```
 
-Our notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` to function correctly. Also, remember that Braze prefixes notifications from our system with a unique key so that we only render notifications sent from our systems. You may register additional services separately to render notifications sent from other FCM services. See [`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml") in the Firebase push sample app.
+Our notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` to function correctly. Also, remember that Braze prefixes notifications from our system with a unique key so that we only render notifications sent from our systems. You may register additional services separately to render notifications sent from other FCM services. See [`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml) in the Firebase push sample app.
 
 {% alert important %}
 Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
@@ -390,7 +559,7 @@ If you want to custom handle deep links, you will need to create a push callback
 
 #### Creating custom deep links
 
-Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation") on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
+Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html) on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 #### Adding deep links
 

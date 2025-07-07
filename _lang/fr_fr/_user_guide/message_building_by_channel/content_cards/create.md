@@ -24,14 +24,9 @@ Vous ne savez pas si votre message doit être envoyé par le biais d'une campagn
 {% tab Campagne %}
 
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **campagnes** sous **Engagement**.
-{% endalert %}
-
-{:start="2"}
-2\. Sélectionnez **Cartes de contenu** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
-3\. Donnez un nom clair et significatif à votre campagne.
-4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
+2. Sélectionnez **Cartes de contenu** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
+3. Donnez un nom clair et significatif à votre campagne.
+4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer par les étiquettes pertinentes.
 5. Ajoutez et nommez autant de variantes que vous le souhaitez pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour en savoir plus sur les variantes, reportez-vous au [test multivarié et au test A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -83,7 +78,7 @@ Sélectionnez **Ajouter des langues** pour ajouter les langues de votre choix da
 
 ##### Création d'envois de messages de droite à gauche
 
-L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/)
+L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)
 
 #### Titre et message
 
@@ -158,7 +153,7 @@ Ensuite, [ciblez les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/
 
 #### Sélectionner des événements de conversion
 
-Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), après avoir reçu une campagne. Vous avez la possibilité d’autoriser une fenêtre allant jusqu’à 30 jours pendant laquelle une conversion sera comptée si l’utilisateur entreprend l’action spécifiée.
+Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), après avoir reçu une campagne. Vous avez la possibilité d’autoriser une fenêtre allant jusqu’à 30 jours pendant laquelle une conversion sera comptée si l’utilisateur entreprend l’action spécifiée.
 
 {% endtab %}
 
@@ -213,7 +208,7 @@ Vous pouvez spécifier plusieurs événements personnalisés ou achats avant qu�
 
 ### Mise à jour des cartes lancées
 
-Les cartes de contenu ne peuvent pas être modifiées après leur envoi. Si vous constatez que vous devez apporter des modifications à des cartes déjà envoyées, envisagez de recourir à la [réadmissibilité de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/), comme indiqué dans les options suivantes.
+Les cartes de contenu ne peuvent pas être modifiées après leur envoi. Si vous constatez que vous devez apporter des modifications à des cartes déjà envoyées, envisagez de recourir à la [réadmissibilité de la campagne]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/), comme indiqué dans les options suivantes.
 
 {% alert note %}
 Lorsqu'une carte de contenu devient rééligible, elle peut être envoyée à nouveau lorsque la carte originale se trouve encore dans l'appli d'un utilisateur. Pour éviter les cartes en double dans l'application d'un utilisateur, vous pouvez désactiver la rééligibilité ou prolonger la fenêtre de rééligibilité de sorte que les utilisateurs ne reçoivent pas de nouvelle carte tant que la première n'a pas expiré.

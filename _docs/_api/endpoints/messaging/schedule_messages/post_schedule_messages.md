@@ -76,15 +76,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to `false`. <br><br> If `broadcast` is set to `true`, a recipients list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
 | `external_user_ids` | Optional | Array of strings | See [external user identifier]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Optional | Array of user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Optional|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
-| `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
+| `override_messaging_limits` | Optional | Boolean | Ignore frequency capping for campaigns, defaults to false |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Optional | Messaging object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

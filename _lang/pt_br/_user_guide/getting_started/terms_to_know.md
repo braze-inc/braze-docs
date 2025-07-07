@@ -51,7 +51,7 @@ glossaries:
   - name: Endpoint
     description: "Um canal de comunicação, também conhecido como <a href=\"https://www.braze.com/docs/api/endpoints/\">endpoint</a> de API, é usado na API de envio de mensagens da Braze para enviar e agendar mensagens."
   - name: Eventos de exceção
-    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/\">Os eventos de gatilho</a> ocorrem quando um usuário atinge a meta desejada e não recebe uma mensagem disparada. Dessa forma, a mensagem disparada ainda é relevante para o usuário."
+    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events\">Os eventos de gatilho</a> ocorrem quando um usuário atinge a meta desejada e não recebe uma mensagem disparada. Dessa forma, a mensagem disparada ainda é relevante para o usuário."
   - name: Limite de frequência
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping\">O limite de frequência</a> permite que você gerencie a comunicação sem sobrecarregar seu público. Trata-se de um limite automatizado de mensagens para evitar que os usuários recebam muitas comunicações em um curto período de tempo."
   - name: HIPAA

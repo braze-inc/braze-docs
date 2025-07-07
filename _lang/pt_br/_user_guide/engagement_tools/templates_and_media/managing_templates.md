@@ -42,10 +42,6 @@ Modelos duplicados podem ser encontrados classificando a coluna **Última Ediç�
 
 ## Arquivando modelos
 
-{% alert note %}
-Se você estiver usando a [navegação antiga]({{site.baseurl}}/navigation), **modelos** é **Modelos e mídias**.
-{% endalert %}
-
 ![Menu suspenso de configurações expandido mostrando três opções: Editar, Arquivar e Duplicar, com a opção Arquivar destacada.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 Para arquivar um modelo individual, selecione o ícone de configurações na tela de grade do modelo e selecione **Arquivar**. Quando um modelo é arquivado, note os seguintes cenários diferentes:

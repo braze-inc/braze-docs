@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [AccuWeather](https://www.accuweather.com/) は、世界中で気象予報サービスを提供するメディア企業です。AccuWeather を使用すると、マーケティングキャンペーンを強化、パーソナライズし、Braze [コネクテッドコンテンツ][60]]を使用して翻訳を自動化できます。 
 
+_この統合はAccuWeatherによって維持されている。_
+
 ## 前提条件
 
 | 必要条件 | 説明 |
@@ -201,6 +203,7 @@ API 呼び出しが `{{local_weather[0].WeatherText}}` で応答し、`Rain` を
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} 「コネクテッドコンテンツのプッシュの使用例」

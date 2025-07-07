@@ -25,10 +25,6 @@ search_rank: 6
 
 データポイント使用量を確認するには、[**設定**] > [**請求**] に移動し、[**データポイント使用量の合計**] タブを選択します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[アカウント] アイコン > [**サブスクリプションと使用法**] > [**データポイント使用量の合計**] を選択すると、このページが表示されます。
-{% endalert %}
-
 データポイントダッシュボードコンポーネントの詳細については、「[請求]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/)」を参照してください。
 
 {% alert tip %}

@@ -19,10 +19,6 @@ description: "Cet article de référence contient des informations importantes p
 
 Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'administration** > **Informations de contact**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), sélectionnez le menu déroulant de votre compte et allez dans **Paramètres de l'entreprise** > **Informations de contact**.
-{% endalert %}
-
 Cette page est l'endroit où vous pouvez gérer les informations de contact de votre entreprise et le fuseau horaire. Assurez-vous de cliquer sur **Enregistrer** avant de quitter la page !
 
 ### Conséquences du changement de fuseau horaire

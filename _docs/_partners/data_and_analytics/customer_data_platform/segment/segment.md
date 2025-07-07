@@ -13,13 +13,13 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="RfOHfZ34hYM" align="right" %}
 
-> [Segment][5] is a customer data platform that helps you collect, clean, and activate your customer data. 
+> [Segment](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. 
 
 The Braze and Segment integration allows you to track your users and route data to various user analytics providers. Segment allows you to:
 
-- Sync [Segment Engage]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
+- Sync [Segment Engage]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_engage/) to Braze for use in Braze campaign and Canvas segmentation.
 - [Import data across the two platforms](#integration-options). We offer a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for syncing your data to the Braze REST APIs
-- [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). 
+- [Connect data to Segment through Currents]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/). 
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ After successfully setting up your sources, you'll need to configure Braze as a 
 
 In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **Select your Source** > **Setup**.
 
-![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".][42]
+![The source setup page. This page includes settings to set the destination framework as either "actions" or "classic" and set the connection mode as either "cloud mode" or "device mode".]({% image_buster /assets/img/segment/setup.png %})
 
 You can integrate Segment's web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side (device-mode) integration or a server-to-server (cloud-mode) integration.
 
@@ -188,7 +188,6 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Content security nonce | If you provide a value for this option, the Braze SDK will add the nonce to any `<script>` and `<style>` elements created by the SDK. This permits the Braze SDK to work with your website's content security policy. In addition to setting this nonce, you may also need to allow FontAwesome to load, which you can do by adding `use.fontawesome.com` to your Content Security Policy allowlist or by using the `doNotLoadFontAwesome` option and loading it manually. |
 | Allow crawler activity | By default, the Braze Web SDK ignores activity from known spiders or web crawlers, such as Google, based on the user agent string. This saves data points, makes analytics more accurate, and may improve page rank. However, if you want Braze to log activity from these crawlers instead, you may set this option to `TRUE`. |
 | Enable logging | Set to `TRUE` to enable logging by default. Note that this will cause Braze to log to the JavaScript console, which is visible to all users. Before you release your page to production, you should remove this or provide an alternate logger with `setLogger`. |
-| Open News Feed cards in a new tab (open cards in new tab) | By default, links from Card objects load in the current tab or window. Set this option to `TRUE` to make links from cards open in a new tab or window. <br><br>**Note:** News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more. |
 | Allow user-supplied JavaScript | By default, the Braze Web SDK does not allow user-supplied JavaScript click actions, as it allows Braze dashboard users to run JavaScript on your site. To indicate that you trust the Braze dashboard users to write non-malicious JavaScript click actions, set this property to `TRUE`. If `enableHtmlInAppMessages` is `TRUE`, this option will also be set to `TRUE`. |
 | App version| If you provide a value for this option, user events sent to Braze will be associated with the given version, which can be used for user segmentation. |
 | Session timeout in seconds | Defaults to 30.<br>By default, sessions time out after 30 minutes of inactivity. Provide a value for this configuration option to override that default with a value of your own. | 
@@ -391,13 +390,13 @@ This event type can be used as a trigger in the Web Mode Actions and Cloud Actio
 
 ### Step 5: Test your integration
 
-When using the side-by-side (device-mode) integration, your [overview][27] metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) can be used to ensure that Braze is receiving data from Segment.
+When using the side-by-side (device-mode) integration, your [overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) can be used to ensure that Braze is receiving data from Segment.
 
-You can view your data in the [custom events][22] or [revenue][28] pages, or by [creating a segment][23]. The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics when using a server-to-server (cloud mode) integration.
+You can view your data in the [custom events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data) or [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) pages, or by [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment). The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you will not be able to use [formulas]({{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula) that include MAU and DAU statistics when using a server-to-server (cloud mode) integration.
 
-If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue][28] page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
+If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
 
-[Creating a segment][26] allows you to filter your users based on the custom event and attribute data.
+[Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) allows you to filter your users based on the custom event and attribute data.
 
 {% alert important %}
 If you use a server-to-server integration (cloud-mode), filters related to automatically collected session data (such as "first used app" and "last used app") will not work. Use a side-by-side integration (device-mode) if you want to use these in your Segment and Braze integration.
@@ -482,26 +481,3 @@ When passing user attribute data, check that you only pass values for attributes
 {% enddetails %}
 
 
-[5]: https://segment.com
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[18]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[19]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
-[23]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
-[25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
-[26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[36]: https://segment.com/docs/sources/#server
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[41]: https://segment.com/docs/spec/identify/#user-id
-[42]: {% image_buster /assets/img/segment/setup.png %}
-[43]: {% image_buster /assets/img/segment/website.png %}
-[44]: {% image_buster /assets/img/segment/ios.png %}
-[45]: {% image_buster /assets/img/segment/android.png %}

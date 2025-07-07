@@ -99,7 +99,7 @@ Die Segmentierungsfilter wurden aktualisiert, um Änderungen an zwei Filtern fü
 
 #### Angepasste Daten löschen
 
-Wenn Sie zielgerichtete Kampagnen und Segmente erstellen, werden Sie vielleicht feststellen, dass Sie kein angepasstes Event oder angepasstes Attribut mehr benötigen. Sie können [diese angepassten Daten]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data#deleting-custom-data) jetzt [löschen]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data#deleting-custom-data) und ihre Referenzen aus Ihrer App entfernen.
+Wenn Sie zielgerichtete Kampagnen und Segmente erstellen, werden Sie vielleicht feststellen, dass Sie kein angepasstes Event oder angepasstes Attribut mehr benötigen. Jetzt können Sie [diese angepassten Daten löschen]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data#deleting-custom-data) und ihre Referenzen aus Ihrer App entfernen.
 
 #### Nutzer:innen mit E-Mail-Adressen und Telefonnummern importieren
 
@@ -147,7 +147,7 @@ Sie können jetzt einen [Auslöser für Ihre In-App-Nachrichten]({{site.baseurl}
 
 #### Eingangsvolumen für Canvas begrenzen
 
-Sie können die Anzahl der Personen, die dieses Canvas betreten können, durch eine ausgewählte Kadenz begrenzen (täglich, Lifetime des Canvas oder jedes Mal, wenn das Canvas geplant ist). Sie können zum Beispiel [die Eingangskontrollen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas?tab=action-based%20delivery#step-2c-set-your-target-entry-audience) so [einstellen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas?tab=action-based%20delivery#step-2c-set-your-target-entry-audience), dass der Canvas nur an 5.000 Nutzer:innen pro Tag senden darf.
+Sie können die Anzahl der Personen, die dieses Canvas betreten können, durch eine ausgewählte Kadenz begrenzen (täglich, Lifetime des Canvas oder jedes Mal, wenn das Canvas geplant ist). Sie können zum Beispiel [die Eingangskontrollen so einstellen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas?tab=action-based%20delivery#step-2c-set-your-target-entry-audience), dass der Canvas nur an 5.000 Nutzer:innen pro Tag senden darf.
 
 #### Neuer Anwendungsfall: Buchungserinnerung per E-Mail
 
@@ -155,7 +155,7 @@ Erfahren Sie, wie Sie die Features von Braze nutzen können, um [einen E-Mail Me
 
 #### Tracking von Klicks für bestimmte Links
 
-Sie können [das Tracking von Klicks]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links#turning-off-click-tracking-on-a-link-to-link-basis) für bestimmte Links [deaktivieren]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links#turning-off-click-tracking-on-a-link-to-link-basis), indem Sie Ihrer E-Mail Nachricht im HTML-Editor oder den Komponenten im Drag-and-Drop-Editor HTML-Code hinzufügen.
+Sie können [das Tracking von Klicks für bestimmte Links deaktivieren]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links#turning-off-click-tracking-on-a-link-to-link-basis), indem Sie Ihrer E-Mail Nachricht im HTML-Editor oder den Komponenten im Drag-and-Drop-Editor HTML-Code hinzufügen.
 
 #### Dynamischer Apple Push-Benachrichtigungsdienst - Gateway-Verwaltung
 
@@ -392,7 +392,7 @@ Sie können jetzt einen Empfänger:in per E-Mail angeben, um Ihre [Kampagnen]({{
 Sie können jetzt zusätzlich zu einem Alias und einer E-Mail Adresse eine Telefonnummer verwenden, um einen Nutzer:innen über den [Endpunkt der`/users/identify` API]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) zu identifizieren.
 
 #### Abrufen einer SAML-Ablaufverfolgung
-Wir haben [Schritte]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up#obtaining-a-saml-trace) hinzugefügt, wie [Sie einen SAML-Trace erhalten]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up#obtaining-a-saml-trace), der Ihnen hilft, Probleme mit SAML SSO mit dem Support effizienter zu lösen.
+Wir haben Schritte hinzugefügt, wie [Sie einen SAML-Trace erhalten]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up#obtaining-a-saml-trace), der Ihnen hilft, Probleme mit SAML SSO mit dem Support effizienter zu lösen.
  
 #### Regionale Datenzentren
 Da Braze wächst und neue Bereiche bedient, haben wir einen [Artikel über die Datenzentren von Braze]({{site.baseurl}}/user_guide/data/data_centers) hinzugefügt, um unseren operativen Ansatz zu erläutern.
@@ -403,7 +403,7 @@ Da Braze wächst und neue Bereiche bedient, haben wir einen [Artikel über die D
 
 {% multi_lang_include release_type.md release="Allgemeine Verfügbarkeit" %}
 
-Sie können jetzt Kunden:in benachrichtigen, wenn ein Artikel wieder vorrätig ist, indem Sie über ein Canvas und einen Katalog eine [Benachrichtigung einrichten, wenn ein]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) Artikel wieder [vorrätig]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) ist.
+Sie können jetzt Kunden:in benachrichtigen, wenn ein Artikel wieder vorrätig ist, indem Sie über ein Canvas und einen Katalog eine [Benachrichtigung]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) einrichten, wenn ein Artikel wieder vorrätig ist.
 
 Sie können auch [Preissenkungsbenachrichtigungen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications) erstellen, um Kund:in zu benachrichtigen, wenn der Preis eines Artikels gesunken ist, indem Sie Preissenkungsbenachrichtigungen in einem Katalog und Canvas einrichten.
 
@@ -411,7 +411,7 @@ Sie können auch [Preissenkungsbenachrichtigungen]({{site.baseurl}}/user_guide/p
 
 {% multi_lang_include release_type.md release="Allgemeine Verfügbarkeit" %}
 
-Nachdem Sie eine Auswahl erstellt haben, können Sie [sehen, was eine Auswahl]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#test-and-preview) für einen zufälligen Nutzer:innen oder einen bestimmten Nutzer: [innen ergeben würde]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#test-and-preview).
+Nachdem Sie eine Auswahl erstellt haben, können Sie sehen, was eine [Auswahl]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#test-and-preview) für einen zufälligen Nutzer:innen oder einen bestimmten Nutzer:innen ergeben würde.
 
 #### Template für Katalogartikel einschließlich Liquid 
 
@@ -472,7 +472,7 @@ Meta hat kürzlich seine [Einwilligungsrichtlinie](https://developers.facebook.c
 
 #### Breitenwerkzeug für Content-Blöcke im E-Mail Drag-and-Drop-Editor
 
-Sie können [die Breite]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/#using-the-editor-to-add-a-content-block) Ihres Content-Blocks im Drag-and-Drop-Editor für E-Mails [anpassen]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/#using-the-editor-to-add-a-content-block). Die Standardbreite ist 100 %.
+Im Drag-and-Drop-Editor für E-Mails können Sie für Ihren Content-Block [die Breite anpassen]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/#using-the-editor-to-add-a-content-block). Die Standardbreite ist 100 %.
 
 ### Flexibilität der Daten
 
@@ -518,7 +518,7 @@ Ab dem 26\. November 2024 wird Braze die Standorte der Nutzer:innen anhand der I
 
 ### Erlaubnis zur Einsichtnahme in persönlich identifizierbare Informationen (PII)
 
-Als Administrator können Sie [Nutzern:innen erlauben, die]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) von Ihrem Unternehmen im Dashboard definierten [PII]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) in der Vorschau von Nachrichten [anzuzeigen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions), die Liquid-Variablen für den Zugriff auf die Eigenschaften der Nutzer:innen verwenden. 
+Als Administrator können Sie [Nutzern:innen erlauben]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions), die von Ihrem Unternehmen im Dashboard definierten PII in der Vorschau von Nachrichten anzuzeigen, die Liquid-Variablen für den Zugriff auf die Eigenschaften der Nutzer:innen verwenden. 
 
 Für Workspaces können Sie Nutzern:innen erlauben, die von Ihrem Unternehmen definierten PII im Dashboard anzuzeigen, oder Nutzerprofile anzeigen, aber Felder, die Ihr Unternehmen als PII identifiziert hat, schwärzen.
 
@@ -533,7 +533,7 @@ Die folgenden Schemata wurden zu den Rohtabellenschemata hinzugefügt:
 
 #### Kontobasierte Segmentierung
 
-Je nachdem, wie Sie Ihr [B2B-Datenmodell]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/account_based_segmentation/) einrichten, können Sie eine [kontenbasierte Segmentierung]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/account_based_segmentation/) auf zwei Arten vornehmen:
+Je nachdem, wie Sie Ihr [B2B-Datenmodell einrichten]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/account_based_segmentation/), können Sie eine kontenbasierte Segmentierung auf zwei Arten vornehmen:
 
 - Wenn Sie Kataloge für Ihre Geschäftsobjekte verwenden
 - Wenn Sie verbundene Quellen für Ihre Geschäftsobjekte verwenden

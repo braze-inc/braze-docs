@@ -28,7 +28,7 @@ Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., ar
 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) file in the Braze SDK distribution:
 
@@ -80,7 +80,7 @@ To customize your Content Card styling, override this default style. To override
 
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience.
 
-You can apply styling in one of two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`, like in the following example:
+You can apply styling in one of two ways. The first is to pass a [`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) and [`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) to [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html), like in the following example:
 
 ```kotlin
 ContentCardsList(
@@ -98,7 +98,7 @@ ContentCardsList(
 )
 ```
 
-The second is to use BrazeStyle to create a global styling for Braze components, like in the following example:
+The second is to use [`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) to create a global styling for Braze components, like in the following example:
 
 ```kotlin
 BrazeStyle(
@@ -118,7 +118,7 @@ BrazeStyle(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is an easy option, allowing you to launch your Content Cards UI with minimal setup. 
 
@@ -198,7 +198,7 @@ Customizing Content Cards through `Attributes` is not supported with Objective-C
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Braze’s default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800 px wide:
 
@@ -218,7 +218,7 @@ body .ab-feed {
 Customizing the font used in your Content Cards allows you to maintain your brand identity and create a visually appealing experience for your users. Use these recipes to set the font for all Content Cards programmatically. 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 To change the default font programmatically, set a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -238,9 +238,9 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab Jetpack Compose %}
-To change the default font programmatically, you can set the `titleTextStyle` of `ContentCardStyling`.
+To change the default font programmatically, you can set the [`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) of `ContentCardStyling`.
 
-You can also set `titleTextStyle` for a specific card type by setting it on `BrazeShortNewsContentCardStyling` and passing it to the `shortNewsContentCardStyle` of `ContentCardStyling`.
+You can also set `titleTextStyle` for a specific card type by setting it on [`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html) and passing it to the [`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721) of `ContentCardStyling`.
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -254,7 +254,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -279,7 +279,7 @@ Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
 
@@ -300,7 +300,7 @@ When creating a Content Card, marketers have the option of pinning the card. A p
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element. For example:
 
@@ -320,7 +320,7 @@ To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style.
 {% endtab %}
 {% tab Jetpack Compose %}
 
-To change the default pinned icon, you can set the `pinnedResourceId` of `ContentCardStyling`.  For example:
+To change the default pinned icon, you can set the [`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721) of `ContentCardStyling`.  For example:
 
 ```kotlin
 ContentCardStyling(
@@ -329,7 +329,7 @@ ContentCardStyling(
 )
 ```
 
-You can also specify a Composable in `pinnedComposable` of `ContentCardStyling`. If `pinnedComposable` is specified, it will override the `pinnedResourceId` value.
+You can also specify a Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) of `ContentCardStyling`. If `pinnedComposable` is specified, it will override the `pinnedResourceId` value.
 
 ```kotlin
 ContentCardStyling(
@@ -346,7 +346,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -377,7 +377,7 @@ Customization of the pin indicator via `Attributes` is not supported in Objectiv
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 The structure of the Content Card pinned icon is:
 
@@ -415,7 +415,7 @@ Content Cards contain a blue line at the bottom of the card which indicates whet
 ![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Change the color of the unread indicator bar by altering the value in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
 
@@ -430,7 +430,7 @@ Change the color of the unread indicator bar by altering the value in `com_braze
 {% endtab %}
 {% tab Jetpack Compose %}
 
-To change the color of the unread indicator bar, modify the value of `unreadIndicatorColor` in `ContentCardStyling`:
+To change the color of the unread indicator bar, modify the value of [`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) in `ContentCardStyling`:
 
 ```kotlin
 ContentCardStyling(
@@ -439,7 +439,7 @@ ContentCardStyling(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 {% subtabs %}
 {% subtab Swift %}
@@ -479,7 +479,7 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, to set the color of the unviewed indicator to green:
 
@@ -493,7 +493,7 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 ### Disabling unread indicator
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) on `ContentCardViewHolder` to `false`. 
 
@@ -503,7 +503,7 @@ Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-i
 Disabling the unread indicator is not supported in Jetpack Compose.
 {% endtab %}
 
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -517,7 +517,7 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Hide the unread indicator bar by adding the following style to your `css`:
 

@@ -18,10 +18,6 @@ description: "Este artículo de referencia explica cómo crear y personalizar pl
 
 En el panel de Braze, ve a **Plantillas** > **Plantillas webhook**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar esta página en **Interacción** > **plantillas y medios** > **plantillas de webhook**.
-{% endalert %}
-
 ![La página "Plantillas Webhook" con plantillas webhook prediseñadas y guardadas.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Paso 2: Elige tu plantilla

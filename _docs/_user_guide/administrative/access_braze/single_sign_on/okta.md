@@ -9,10 +9,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 # Okta 
 
-![Braze dashboard login with Okta SSO enabled.][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
-
 > Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, your IT team can manage any employee's access to any application or device.
-<br>
 
 ## Requirements
 
@@ -30,13 +27,13 @@ description: "This article will walk you through how to configure Braze to use O
 
 After your account manager has enabled SAML SSO for your account, go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
 
-![Okta SAML SSO enabled on the Security Settings page.][1]
+![Okta SAML SSO enabled on the Security Settings page.]({% image_buster/assets/img/Okta/okta1.png %})
 
 ### Step 1b: Edit SAML SSO settings
 
 From your Okta Admin dashboard, you will be provided a target URL (login URL) and `x.509` certificate, which you must input into your Braze account's **Security Settings** page.
 
-![][7]{: style="max-width:75%"}
+![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
 
 | Requirement | Details |
 |---|---|
@@ -53,7 +50,7 @@ In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**.
 
 Next, enter the RelayState API key with `sso.saml.login` permission in the **Default Relay State** field. 
 
-![Okta Default RelayState in the Sign On tab.][2]{: style="max-width:75%"}
+![Okta Default RelayState in the Sign On tab.]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
 
 Make sure to save these new settings.
 
@@ -65,9 +62,5 @@ If you want your Braze account users to only sign in with SAML SSO, you can [res
 
 You should now be able to log in to Braze using Okta!
 
-[1]: {% image_buster/assets/img/Okta/okta1.png %}
-[2]: {% image_buster /assets/img/Okta/okta2.png %}
-[4]: {% image_buster /assets/img/Okta/okta4.png %}
-[7]: {% image_buster /assets/img/Okta/okta5.png %}
-[5]: {% image_buster /assets/img/sso2.png %}
-[6]: {% image_buster /assets/img/samlsso.gif %}
+![Braze dashboard login with Okta SSO enabled.]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
+

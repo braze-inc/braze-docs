@@ -50,7 +50,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `app_id` | Erforderlich | String | [Bezeichner der]({{site.baseurl}}/api/identifier_types/#the-app-identifier) App [API]({{site.baseurl}}/api/identifier_types/#the-app-identifier), der von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird.  |
+| `app_id` | Erforderlich | String | [API-Bezeichner]({{site.baseurl}}/api/identifier_types/#the-app-identifier) der App, der von der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) abgerufen wird.  |
 | `activity_id` | Erforderlich | String | Wenn Sie Ihre Live-Aktivität mit [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class)registrieren, verwenden Sie den Parameter `pushTokenTag`, um das Push-Token der Aktivität mit einem angepassten String zu benennen.<br><br>Setzen Sie `activity_id` auf diesen angepassten String, um festzulegen, welche Live-Aktivität Sie aktualisieren möchten. |
 | `content_state` | Erforderlich | Objekt | Sie definieren die `ContentState` Parameter, wenn Sie Ihre Live-Aktivität erstellen. Übergeben Sie die aktualisierten Werte für Ihr `ContentState` mit diesem Objekt.<br><br>Das Format dieser Anfrage muss mit der Form übereinstimmen, die Sie ursprünglich definiert haben. |
 | `end_activity` | Optional | Boolesch | Wenn `true`, beendet diese Anfrage die Live-Aktivität. |

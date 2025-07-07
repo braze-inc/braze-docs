@@ -17,7 +17,7 @@ Braze is proud to announce that we have made improvements to the look and feel o
 - Improved responsive behavior for all message types to better fit viewports
 - Button borders to create custom contrasts between buttons
 
-Our [new in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/) will take your interactions with your user from good to app-mazing!
+Our [new in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) will take your interactions with your user from good to app-mazing!
 
 ![Full Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
@@ -37,4 +37,4 @@ You can now use [Inkit]({{site.baseurl}}/partners/inkit/) as a predesigned webho
 
 ## Google Cloud Storage
 
-[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/) is no longer in beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to **Technology Partners** in your Braze account and search for Google Cloud Storage.
+[Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) is no longer in beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to **Technology Partners** in your Braze account and search for Google Cloud Storage.

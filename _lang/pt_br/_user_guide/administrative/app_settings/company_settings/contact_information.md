@@ -19,10 +19,6 @@ description: "Este artigo de referência aborda informações importantes para a
 
 Para acessar essa página, acesse **Configurações** > **Configurações administrativas** > **Informações de contato**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), selecione o menu suspenso da sua conta e acesse **Company Settings** > **Contact Information (** **Configurações da empresa** > **Informações de contato**).
-{% endalert %}
-
 É nessa página que você pode gerenciar as informações de contato e o fuso horário da sua empresa. Não se esqueça de clicar em **Salvar** antes de sair da página!
 
 ### Consequências da mudança de fuso horário

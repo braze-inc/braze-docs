@@ -28,6 +28,8 @@ To use this endpoint, you'll need to complete the following:
 - Generate an API key with the `messages.live_activity.update` permission.
 - Register a Live Activity [remotely]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) or [locally]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) using the Braze Swift SDK.
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

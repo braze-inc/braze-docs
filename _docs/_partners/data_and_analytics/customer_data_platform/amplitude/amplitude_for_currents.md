@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-The Braze and Amplitude bi-directional integration allows you to [sync your Amplitude Cohorts]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/), user traits, and events into Braze as well as leverage Braze Currents to [export your Braze events to Amplitude](#data-export-integration) to perform deeper analytics of your product and marketing data.
+The Braze and Amplitude bi-directional integration allows you to [sync your Amplitude Cohorts]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_audiences/), user traits, and events into Braze as well as leverage Braze Currents to [export your Braze events to Amplitude](#data-export-integration) to perform deeper analytics of your product and marketing data.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ You can export two types of events to Amplitude: [Message Engagement Events](#su
 
 All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "TEST_COHORT" with the `cohort_id` "abcd1234" will be titled `[Amplitude] TEST_COHORT: abcd1234` in Braze filters.
 
-Contact your account manager or open a [support ticket][support] if you need access to additional event entitlements.
+Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements.
 
 ### Step 1: Configure Amplitude Integration in Braze 
 
@@ -141,4 +141,3 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
   
-[support]: {{site.baseurl}}/braze_support/

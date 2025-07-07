@@ -18,7 +18,7 @@ Ein neues Jahr begrüßt die Einführung neuer Produkte bei Kitchenerie, einer E
 * Perlenporzellan
 * Rosa Schimmer
 
-Um diese Produkte aus seinem Katalog zu entfernen, kann Kitchener den [Endpunkt`/catalogs/{catalog_name}/items` ]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) verwenden, um die IDs der Artikel zu übergeben.
+Um diese Produkte aus seinem Katalog zu entfernen, kann Kitchener den [Endpunkt `/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) verwenden, um die IDs der Artikel zu übergeben.
 
 Hier ist die Beispielanfrage:
 
@@ -82,7 +82,7 @@ Siege Valley Health ist ein Krankenhaussystem, zu dem 10 Betreiber von Krankenh�
 
 Sehen wir uns an, wie Siege Valley Health diese beiden Aufgaben mit einer Kombination von Endpunkten erfüllen kann, anstatt über das Braze-Dashboard zu filtern.
 
-Für die erste Aufgabe der Prüfung von Canvase verwenden Sie den [Endpunkt`/canvas/list` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/), um eine Liste der Canvase zu exportieren, die den Namen und die Tags enthält. Hier ein Beispiel für eine Anfrage:
+Für die erste Aufgabe der Prüfung von Canvase verwenden Sie den [Endpunkt `/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/), um eine Liste der Canvase zu exportieren, die den Namen und die Tags enthält. Hier ein Beispiel für eine Anfrage:
 
 {% details Hier ist die Antwort, die das Marketing Team von Siege Valley Health erhalten würde. %}
 ```json
@@ -113,7 +113,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% enddetails %}
 
-Lassen Sie uns als nächstes die Analytics-Zusammenfassung für den ersten Canvas aus der Liste der Canvase von Siege Valley Health anzeigen. Dazu verwenden wir den [Endpunkt`/canvas/data_summary` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) mit den folgenden Anfrage-Parametern:
+Lassen Sie uns als nächstes die Analytics-Zusammenfassung für den ersten Canvas aus der Liste der Canvase von Siege Valley Health anzeigen. Dazu verwenden wir den [Endpunkt `/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) mit den folgenden Anfrage-Parametern:
 
 * `canvas_id`: "canvas_identifier_2"
 * `ending_at`: 2023-07-10T23:59:59
@@ -128,7 +128,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Prüfen der anstehenden geplanten Kampagnen und Canvase
 
-Die geschäftigste Zeit des Jahres steht Flash & Thread bevor, einer Einzelhandelsmarke, die Kleidung und Schönheitsprodukte online und in Shops verkauft. Sein Marketing Team möchte die anstehenden Kampagnen und Canvase vor dem 31\. März 2024 um 12 Uhr auf dem Braze-Dashboard überprüfen. Dies kann über den [Endpunkt`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) erfolgen. 
+Die geschäftigste Zeit des Jahres steht Flash & Thread bevor, einer Einzelhandelsmarke, die Kleidung und Schönheitsprodukte online und in Shops verkauft. Sein Marketing Team möchte die anstehenden Kampagnen und Canvase vor dem 31\. März 2024 um 12 Uhr auf dem Braze-Dashboard überprüfen. Dies kann über den [Endpunkt `/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/) erfolgen. 
 
 Hier ist die Beispielanfrage:
 
@@ -143,7 +143,7 @@ Dieser Endpunkt gibt die Liste der kommenden Kampagnen und Canvase zurück. Von 
 
 PoliterWeekly ist eine digitale Zeitschrift, deren Abonnent:innen per E-Mail erreichbar sind. Um die Nutzer:innen seiner Abonnent:innen besser zu verstehen, möchte das Marketing Team die Details des Präferenzzentrums von PoliterWeekly überprüfen, um festzustellen, wann es erstellt und zuletzt aktualisiert wurde.
 
-Bei Verwendung des [Endpunkts`/preference_center/v1/{preferenceCenterExternalID}` ]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) muss das Marketing Team lediglich die externe ID des Einstellungszentrums als Pfadparameter einfügen, was wie folgt aussehen würde:
+Bei Verwendung des [Endpunkts `/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) muss das Marketing Team lediglich die externe ID des Einstellungszentrums als Pfadparameter einfügen, was wie folgt aussehen würde:
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/politer_weekly_preference_center_api_id \
@@ -182,7 +182,7 @@ Das Hauptziel von CashBlastr ist es, die Art und Weise, wie Menschen schnelle Za
 - 14235662245
 - 14324567892
 
-Um eine Anfrage mit dem [Endpunkt`/sms/invalid_phone_numbers/remove` ]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) zu senden, müssen die Telefonnummern in einem String-Array im [Formate.164 ](https://en.wikipedia.org/wiki/E.164) vorliegen, mit bis zu 50 Telefonnummern pro Anfrage. Da die Liste nicht mehr als 50 Telefonnummern umfasst, hier ein Beispiel für den Text der Anfrage, die das Entwickler:in Team von CashBlastr senden würde:
+Um eine Anfrage mit dem [Endpunkt `/sms/invalid_phone_numbers/remove`]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) zu senden, müssen die Telefonnummern in einem String-Array im [Format e.164](https://en.wikipedia.org/wiki/E.164) vorliegen, mit bis zu 50 Telefonnummern pro Anfrage. Da die Liste nicht mehr als 50 Telefonnummern umfasst, hier ein Beispiel für den Text der Anfrage, die das Entwickler:in Team von CashBlastr senden würde:
 
 ```json
 Content-Type: application/json
@@ -202,7 +202,7 @@ Nach dem Senden dieser Nutzlast bestätigt die folgende Antwort, dass die ungül
 
 ## Anzeigen des Abo-Gruppenstatus eines Nutzers:innen
 
-SandwichEmperor ist eine Schnellrestaurantkette in den Vereinigten Staaten, deren Marketing Team die Abo-Gruppenstatus für eine zufällige Liste ihrer Nutzer:innen per SMS überprüfen möchte. Mit dem [Endpunkt`/subscription/status/get` ]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) kann SandwichEmperor diese Aufgabe für einen einzelnen Nutzer:innen mit der folgenden Beispielanfrage erfüllen:
+SandwichEmperor ist eine Schnellrestaurantkette in den Vereinigten Staaten, deren Marketing Team die Abo-Gruppenstatus für eine zufällige Liste ihrer Nutzer:innen per SMS überprüfen möchte. Mit dem [Endpunkt `/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) kann SandwichEmperor diese Aufgabe für einen einzelnen Nutzer:innen mit der folgenden Beispielanfrage erfüllen:
 
 {% raw %}
 ```
@@ -239,4 +239,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-Nach Überprüfung dieser Template-Informationen kann WorkFriends auch den [Endpunkt`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) verwenden, um das E-Mail Template über die API zu aktualisieren. Die E-Mail-Vorlage im Braze-Dashboard wird diese Änderungen widerspiegeln.
+Nach Überprüfung dieser Template-Informationen kann WorkFriends auch den [Endpunkt `/templates/email/update`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) verwenden, um das E-Mail Template über die API zu aktualisieren. Die E-Mail-Vorlage im Braze-Dashboard wird diese Änderungen widerspiegeln.

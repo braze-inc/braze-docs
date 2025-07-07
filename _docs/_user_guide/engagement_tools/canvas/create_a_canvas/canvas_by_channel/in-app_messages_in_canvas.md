@@ -38,9 +38,9 @@ For Canvas steps that have action-triggered entry, users can enter the Canvas mi
 
 ## In-app message expiration
 
-In the in-app message composer, you can choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. After the in-app message is sent, it can be viewed one time.
+You can choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. After the in-app message is sent, it can be viewed one time.
 
-![]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:85%"}
+![The Message Controls section of a Message step for an in-app message. The in-app message will expire three days after the step is available.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Option | Description | Example |
 |---|---|---|
@@ -167,7 +167,7 @@ A user can trigger two in-app messages within your Canvas at the same time. When
 
 Select **Set exact priority** and drag different Canvas steps to reorder their priority for the Canvas. By default, steps earlier in a Canvas variant will display before later steps. After your steps are in your preferred order of prioritization, select **Apply sort**.
 
-![The priority sorter with two steps "First IAM" and "Another IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![The priority sorter with two steps "Welcome IAM" and "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
 ### Making changes to drafts of active Canvases
 
@@ -221,7 +221,7 @@ You can choose from the following trigger actions to target your users:
 
 A user has to enter the Canvas step, start a session, and then perform the trigger to receive an in-app message. This means mid-session updates aren't supported. For example, if the trigger is to start a session, the user only needs to enter the Canvas step and start a session to receive the in-app message. If the trigger is not to start a session, the user has to enter the Canvas step, start a session, and then perform the trigger to receive the in-app message.
 
-!["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
+!["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 The following Canvas features aren't available with in-app messages, so they won't be applied to your in-app messages even if they're turned on.
 

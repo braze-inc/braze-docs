@@ -1,4 +1,4 @@
-{% multi_lang_include Entwickler_guide/prerequisites/unreal_engine.md %}
+{% multi_lang_include developer_guide/prerequisites/unreal_engine.md %}
 
 ## Push-Benachrichtigungen einrichten
 
@@ -10,7 +10,7 @@ Fügen Sie zunächst Firebase zu Ihrem Android-Projekt hinzu. Eine schrittweise 
 {% endtab %}
 
 {% tab iOS %}
-{% multi_lang_include Entwickler_guide/swift/apns_token.md %}
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 {% endtab %}
 {% endtabs %}
 

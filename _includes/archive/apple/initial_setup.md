@@ -1,12 +1,12 @@
 Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app messages with which you can engage your users{% endif %}.
 
-The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
+The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods](http://cocoapods.org/), a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
 ## {{include.platform}} SDK CocoaPods integration
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the {{include.platform}} [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, check that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Note that knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the SDK via the {{include.platform}} [CocoaPods](http://cocoapods.org/) automates the majority of the installation process for you. Before beginning this process, check that you are using [Ruby version 2.0.0](https://www.ruby-lang.org/en/installation/) or greater. Note that knowledge of Ruby syntax isn't necessary to install this SDK.
 
 Simply run the following command to get started:
 
@@ -14,9 +14,9 @@ Simply run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-**Note**: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
+**Note**: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org](http://guides.cocoapods.org/using/getting-started.html) for further details.
 
-**Note**: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
+**Note**: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Step 2: Constructing the podfile
 
@@ -43,7 +43,7 @@ pod install
 
 At this point you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
 
-![New Workspace][apple_initial_setup_15]
+![New Workspace]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ### Step 4: Updating your app delegate
 
@@ -173,25 +173,10 @@ This method is called with the following parameters:
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze
 
-See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
+See [Appboy.h](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
 Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
-[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_8]: #manual-sdk-integration
-[apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
-[apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
-[apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[apple_initial_setup_32]: {{ site.baseurl }}/support_contact/

@@ -31,11 +31,11 @@ Before creating your first CDI Segment, set up a new Connected Source with your 
 
 First, create a new [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), then select **Full refresh**.
 
-![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 For your data source, choose **CDI Data Tables**.
 
-![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 As part of your CDI setup, you can select from different connections to use in CDI segments. Each connection has a specific set of data tables. Your development team can configure your connections and data tables during CDI setup.
 

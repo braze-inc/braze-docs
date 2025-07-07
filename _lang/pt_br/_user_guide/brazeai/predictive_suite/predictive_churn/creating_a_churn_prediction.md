@@ -14,10 +14,6 @@ page_order: 1
 
 No Braze, acesse **Análises de dados** > **Predictive Churn**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **as previsões** em **Engajamento**.
-{% endalert %}
-
 Uma previsão é uma instância de um modelo de machine learning treinado e todos os parâmetros e dados que ele usa. Nessa página, você verá uma lista das previsões ativas atuais, juntamente com algumas informações básicas sobre elas. Aqui, você pode renomear, arquivar e criar novas previsões. As previsões arquivadas são inativas e não atualizam as pontuações dos usuários. 
 
 Para criar uma nova previsão, escolha **Criar previsão** e selecione uma nova **previsão de churn**.

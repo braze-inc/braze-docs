@@ -1,7 +1,7 @@
 ---
 nav_title: Email
 article_title: Email
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "Email"
 guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."
@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Identifier Field-Level Encryption
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Gmail Promotion Tool
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/

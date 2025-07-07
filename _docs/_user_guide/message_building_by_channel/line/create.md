@@ -64,7 +64,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Write your message using personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be any of the available messages layouts: text, image, rich, or card-based.
 
-![LINE composer with a message displayed in the preview.][1]
+![LINE composer with a message displayed in the preview.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Tips
 
@@ -80,7 +80,7 @@ The final appearance of right-to-left messages depends largely on how service pr
 
 Switch to the **Test** tab to send a test LINE message to content test groups or individual users, or preview the message as a user directly in Braze.
 
-![The "Tests" tab displaying a preview of a test message.][2]
+![The "Tests" tab displaying a preview of a test message.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Step 4: Build the remainder of your campaign or Canvas
 
@@ -97,7 +97,7 @@ You can specify delivery controls, such as allowing users to become [re-eligible
 
 ### Choose users to target
 
-[Target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
+[Target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
 
 Select the larger audience from your segments, and optionally narrow that segment further with our [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
@@ -127,5 +127,3 @@ After you’ve finished building the last of your campaign or Canvas, review its
 Next, check out [LINE reporting]({{site.baseurl}}/line/reporting/) to learn how you can access the results of your LINE campaigns.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

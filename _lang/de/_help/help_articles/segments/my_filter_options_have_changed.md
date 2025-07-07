@@ -10,7 +10,7 @@ tool: Segments
 
 # Filteroptionen geändert
 
-Ihre Filteroptionen hängen mit dem Format (Datentyp) zusammen, das Sie für Ihr angepasstes Attribut an Braze übergeben. Um den Datentyp zu überprüfen, den Braze für Ihre angepassten Attribute erkennt, navigieren Sie zu **Dateneinstellungen** > Angepasste Attribute.
+Ihre Filteroptionen hängen mit dem Format (Datentyp) zusammen, das Sie für Ihr angepasstes Attribut an Braze übergeben. Um den Datentyp zu überprüfen, den Braze für Ihre angepassten Attribute erkennt, navigieren Sie zu **Dateneinstellungen** > **Angepasste Attribute**.
 
 Wenn sich Ihre Filteroptionen geändert haben, ist dies ein Hinweis darauf, dass Ihre Daten in einem anderen Format (Datentyp) an Braze übergeben werden als zuvor. Ausführliche Beschreibungen der verschiedenen Datentypen und ihrer Filteroptionen finden Sie unter [Angepasste Attribut-Datentypen][36].
 

@@ -17,7 +17,7 @@ The Braze SDK will provide you with an API to report information to be used in a
 
 ## Step 1: Install the SDK via the NuGet package manager
 
-The Windows Universal SDK is installed via the [NuGet Package Manager][14]. To install the Braze Windows SDK via NuGet:
+The Windows Universal SDK is installed via the [NuGet Package Manager](http://www.nuget.org/). To install the Braze Windows SDK via NuGet:
 
 1. Right-click on the project file
 2. Click on "Manage NuGet Packages"
@@ -48,7 +48,7 @@ Once you've added that snippet, be sure to modify the following file properties 
 ## Step 3: Configuring package.appxmanifest
 
 Within the "Capabilities tab, ensure `Internet (Client)` is checked.
-![][18]
+![]({% image_buster /assets/img_archive/internet_client.png %})
 
 ## Step 4: Editing your app class
 
@@ -74,9 +74,7 @@ Appboy.SharedInstance.CloseSession();
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application. See the following articles on how to log [attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases) to our SDK and how to instrument push messaging.
+Braze should now be collecting data from your application. See the following articles on how to log [attributes]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/), [events]({{site.baseurl}}/developer_guide/analytics/logging_events/), and [purchases]({{site.baseurl}}/developer_guide/analytics/logging_purchases/) to our SDK and how to instrument push messaging.
 
 >  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as "AppboyPlatform.Universal.Appboy"
 
-[14]: http://www.nuget.org/
-[18]: {% image_buster /assets/img_archive/internet_client.png %}

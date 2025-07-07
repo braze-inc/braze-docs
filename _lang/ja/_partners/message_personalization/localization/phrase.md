@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) はローカライゼーション管理のためのクラウドベースのソフトウェアです。句は自動化された翻訳ワークフローを有効にし、アジャイルチームの継続的なローカライゼーションをサポートします。
 
+_この統合はPhraseによって維持されている。_
+
+## 統合について
+
 Phrase と Braze の統合により、Braze インターフェイスを離れることなく、メールテンプレートとコンテンツブロックを翻訳できます。Braze 向け Phrase TMS 統合により、シームレスなローカライゼーションでカスタマーエンゲージメントを高め、新しい市場への拡大を促進できます。
 
 ## 前提条件
@@ -80,5 +84,6 @@ Phraseで、**[Settings] > [Integrations] > [Connectors] > [New]** の順に進�
 3. 選択されているコンテンツアイテムは、APC の初回実行時にインポートされます。
 
 [Connector API](https://cloud.memsource.com/web/docs/api#) は、ステップを自動化できます。それ以外の場合は、UI を使用して手動で実行します。[webhook](https://support.phrase.com/hc/en-us/articles/5709693398812) を使用して、Phrase TMS が特定のイベント (ジョブのステータス変更など) についてサードパーティのシステムに通知するようにできます。
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

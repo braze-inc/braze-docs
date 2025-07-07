@@ -11,7 +11,7 @@ tool: Canvas
 
 # Context
 
-> Use Context steps to create or update a set of variables that represent the context of a user (or insights into that user's behavior) as they move through a Canvas. Each context variable includes a name, data type, and a value that can include Liquid. By setting context as part of your user journey, you can do things like delay messages or filter users based on context variables.
+> Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
 {% alert important %}
 Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
@@ -19,49 +19,103 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ## How it works
 
-Each Context step is composed of a variable name and associated data type, or context variables (previously referred to as Canvas entry properties). These variables will follow a user through a Canvas and can be be accessed using the Liquid `context`.
+![A Context step as the first step of a Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Context steps allows you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
-There are two ways to set context variables:
+Within this framework, each Context step can define multiple context variables&mdash;temporary pieces of data that enable you to personalize delays, segment users dynamically, and enrich messaging without permanently altering a user's profile information.
 
-- **At Canvas entry:** Variables of events or API calls that trigger a user's entry into a Canvas are stored as context variable.
-- **Using a Context step:** You can create or update context variables in the step editor.
+For example, if you're managing flight bookings, you could create a context variable for each user's scheduled flight time. You could then set delays relative to each user’s flight time and send personalized reminders from the same Canvas.
 
-Note that any variables included in the context variable aren't automatically stored in the user profile.
+You can set context variables in two ways:
+
+- **At Canvas entry:** When users enter a Canvas, data from the event or API trigger can automatically populate context variables.
+- **In a Context step:** You can define or update context variables manually inside the Canvas by adding a Context step.
+
+Each context variable includes:
+
+- A name (such as `flight_time` or `subscription_renewal_date`)
+- A [data type](#context-variable-types) (such as number, string, time, or array)
+- A value you assign using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or through the **Add Personalization** tool.
+
+When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
+
+For example,
+{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
+
+Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
 
 ## Creating a Context step
 
-To create a Context step, add a step to your Canvas. Then, drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Context**.
+### Step 1: Add a step
 
-### Defining context variables
+Add a step to your Canvas, then drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button and select **Context**.
 
-1. Give your Context variable a name.
-2. Select a data type.
-3. Enter a Liquid expression or select the **Add Personalization** button. This generates a Liquid snippet to use in your Liquid expression.
-4. Select **Preview** to view the context variable.
-5. Select **Done** to save the step.
+### Step 2: Define the variables
 
-You can use Context variables anywhere you can use Liquid, such as in Message and User Update steps, with the **Add Personalization** button.
+{% alert note %}
+You can define up to 10 context variables for each Context step.
+{% endalert %}
 
-## Context variable types
+To define a context variable:
 
-Canvas Context variables that are created or updated in the step can be assigned types. Note that if the Liquid expression at runtime returns a value that doesn’t match the type, the context variable won’t be updated.
+1. Give your context variable a **name**.
+2. Select a [data type](#context-variable-types).
+3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
+4. Select **Preview** to check the value of your context variable.
+5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
+6. When you're finished, select **Done**.
 
-For example, if the context variable data type is set to **Date** but the value isn’t a date, then the variable won’t be updated. This means the following will occur:
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
 
-- The user will either advance to the next step or exit the Canvas if it’s the last step in the Canvas.
-- In your Canvas step analytics, this will be counted as *Not Updated*.
+### Step 3: Test user paths (optional)
 
-Braze will exit a user at the step if:
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience. Look out for common scenarios that create [invalid context variables](#troubleshooting).
 
-- The context variable doesn't return any value.
-- A call to an embedded Connected Content fails.
-- The context variable types don't match.
+For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
 
-### JSON types and Connected Content responses
+## Context variable data types {#context-variable-types}
 
-Braze evaluates context variables that are expected to be JSON (or Object)-type from Connected Content responses into strings. To prevent context variables from being evaluated as strings, enter these results into this Liquid filter: `as_json_string`. An example is:
+Context variables that are created or updated in the step can be assigned the following data types.
+
+{% alert note %}
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format), but context variables do not support nested objects.
+{% endalert %}
+
+| Data type | Example variable name | Example value |
+|---|---|---|
+|Boolean| loyalty_program |{% raw %}<code>true</code>{% endraw %}| 
+|Number| credit_score |{% raw %}<code>740{% endraw %}|
+|String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
+|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
+|Time| last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
+|Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Using context variables {#using-context-variables}
+
+For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
+
+Users will enter the Canvas when they purchase a plane ticket. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
+
+![Context variable set up to track if a passenger qualifies for VIP lounge access.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
+
+In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is `first_class`.
+
+Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
+
+- First-class ticket passengers will receive: "Enjoy exclusive VIP lounge access!"
+- Business and economy ticket passengers will receive: "Upgrade your flight for exclusive VIP lounge access."
+
+![A Message step with different messages to send, depending on the type of plane ticket purchased.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
+
+{% alert tip %}
+You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
+{% endalert %}
+
+## Converting Connected Content strings to JSON
+
+When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call will be evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
 
 {%raw%}
 ```liquid
@@ -70,8 +124,49 @@ Braze evaluates context variables that are expected to be JSON (or Object)-type 
 ```
 {%endraw%}
 
-## Using context variables with Delay steps
+## Troubleshooting {#troubleshooting}
 
-You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
+### Invalid context variables
 
-[1]: {% image_buster /assets/img/context_step3.png %}
+A context variable is considered invalid when:
+- A call to an embedded Connected Content fails.
+- The Liquid expression at runtime returns a value that doesn't match the data type or is empty (null).
+
+For example, if the context variable data type is **Number** but the Liquid expression returns a string, it is invalid.
+
+In these circumstances: 
+- The user will advance to the next step. 
+- The Canvas step analytics will count this as _Not Updated_.
+
+When troubleshooting, monitor the _Not Updated_ metric to check that your context variable is updating correctly. If the context variable is invalid, your users can continue in your Canvas past the Context step, but may not qualify for later steps.
+
+Refer to [Context variable data types](#context-variable-types) for the example setups for each data type.
+
+## Frequently asked questions
+
+### How do context variables differ from Canvas entry properties?
+
+If you're participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+
+### Can variables reference each other in a singular Context step?
+
+Yes. All variables in a Context step are evaluated in a sequence, meaning you could have the following context variables setup:
+
+| Context variable | Value | Description |
+|---|---|---|
+|`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | A user's favorite type of cuisine. |
+|`promo_code`| {% raw %}`EATFRESH`{% endraw %} | The available discount code for a user. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_cuisine}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user.
+
+This also applies across multiple Context steps. For example, imagine this sequence:
+1. An initial Context step creates a variable called `JobInfo` with the value `job_title`.
+2. A Message step references {% raw %}`{{context.${JobInfo}}}`{% endraw %} and displays `job_title` to the user.
+3. Later, a Context step updates the context variable, changing the value of `JobInfo` to `job_description`.
+4. All subsequent steps that reference `JobInfo` will now use the updated value `job_description`.
+
+Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
+
+

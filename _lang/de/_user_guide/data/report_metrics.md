@@ -996,7 +996,7 @@ Content-Cards
 In-App-Nachricht, Content-Cards
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} Für In-App-Nachrichten können die eindeutigen Impressionen nach 24 Stunden wieder erhöht werden, wenn die Wiederzulassung aktiviert ist und ein:e Nutzer:in die Aktion triggert. Wenn die Wiederwählbarkeit eingeschaltet ist, sind <i>Eindeutige Impressionen</i> = <i>Eindeutige Empfänger</i>: <i>innen</i>. <br><br>Bei Content-Cards sollte die Anzahl nicht erhöht werden, wenn ein Nutzer:innen eine Karte zum zweiten Mal ansieht. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} Für In-App-Nachrichten können die eindeutigen Impressionen nach 24 Stunden wieder erhöht werden, wenn die Wiederzulassung aktiviert ist und ein:e Nutzer:in die Aktion triggert. Wenn die Wiederwählbarkeit eingeschaltet ist, sind <i>Eindeutige Impressionen</i> = <i>Eindeutige Empfänger:innen</i>. <br><br>Bei Content-Cards sollte die Anzahl nicht erhöht werden, wenn ein Nutzer:innen eine Karte zum zweiten Mal ansieht. 
 
 <span class="calculation-line">Kalkulation: Anzahl</span>
 

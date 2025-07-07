@@ -10,11 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。Brazeの業界をリードするエンゲージメント プラットフォームとRadarの業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い商品・サービス体験を通じて収益とロイヤルティを牽引することができます。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
+> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。Braze業界をリードするエンゲージメントプラットフォームと、レーダー業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い製品やサービス体験を通じて、収益とロイヤルティを推進することができます。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
+
+_この統合はレーダーによって維持されます。_
+
+## 統合について
 
 BrazeとRadarの統合により、高度なロケーションベースのキャンペーン トリガーと、豊富なファーストパーティロケーションデータを使用したユーザープロファイルエンリッチメントにアクセスできます。Radar のジオフェンスまたは移動追跡イベントが生成されると、カスタムイベントとユーザー属性がリアルタイムで Braze に送信されます。これらの事象および属性sは、次いで、位置に基づくキャンペーンsをトリガーし、ラストマイルのピックアップおよび配送オペレーションを駆動し、フリートおよび配送物流を監視し、または位置パターンに基づいてユーザー Segmentsを構築するために使用することができる。 
 
-さらに、Radar Geo API を活用して、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/)を介してマーケティングキャンペーンを強化・パーソナライズできます。 
+さらに、Radar Geo API を活用して、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)を介してマーケティングキャンペーンを強化・パーソナライズできます。 
 
 ## 前提条件
 
@@ -178,5 +182,6 @@ near you!
 {% alert tip %}
 接続コンテンツで活用できるすべてのRadar API の[Radar ドキュメント](https://radar.io/documentation/api) を参照してください。
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/radar_example.png %}

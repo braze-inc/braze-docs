@@ -14,10 +14,6 @@ page_order: 1
 
 En Braze, ve a **Análisis** > **Predictive Churn**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **las predicciones** en **Interacción**.
-{% endalert %}
-
 Una predicción es una instancia de un modelo de aprendizaje automático entrenado y todos los parámetros y datos que utiliza. En esta página, verás una lista de las predicciones activas actuales junto con información básica sobre ellas. Aquí puedes renombrar, archivar y crear nuevas predicciones. Las predicciones archivadas están inactivas y no actualizan las puntuaciones de los usuarios. 
 
 Para crear una nueva predicción, elige **Crear predicción** y selecciona una nueva **Predicción de abandono**.

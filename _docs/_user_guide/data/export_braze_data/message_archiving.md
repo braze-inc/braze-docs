@@ -16,14 +16,14 @@ Message archiving is available as an add-on feature. To get started with message
 
 ## How it works
 
-When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS, or push). 
+When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS/MMS, or push). 
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
 If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
 
 {% alert important %}
-Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message send to maintain accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message is sent to maintain accuracy. The latency introduced by message archiving will depend on the cloud storage provider and the throughput and size of the saved documents.
 {% endalert %}
 
 The JSON will be saved in your storage bucket using the following key structure:
@@ -49,7 +49,7 @@ This section guides you through setting up message archiving for your workspace.
 
 ### Step 1: Connect a cloud storage bucket
 
-If you haven't done so already, connect a cloud storage bucket to Braze. For steps, refer to our partner documentation on [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/).
+If you haven't done so already, connect a cloud storage bucket to Braze. For steps, refer to our partner documentation on [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 ### Step 2: Select channels for message archiving
 
@@ -61,7 +61,7 @@ To select channels:
 2. Select your channels.
 3. Select **Save changes**.
 
-![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
+![The Message Archiving page has three channels to select: Email, Push, and SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 If you don't see **Message Archiving** in **Settings**, confirm that your company has purchased and turned on message archiving.
@@ -107,7 +107,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab SMS %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -116,7 +116,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
   "provider": StringOfProviderName,
-  "media_urls": ArrayOfString,
+  "media_urls": ArrayOfString, // indicates a message is MMS
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiId, // may not be available
@@ -168,7 +168,7 @@ Modifications done after the message leaves Braze won't be reflected in the file
 
 ### What are messages under the "unassociated" value in the campaign path?
 
-When a message is sent outside of a campaign or Canvas, the campaign ID in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS auto-responses, or when messages sent through the API do not specify a campaign ID.
+When a message is sent outside of a campaign or Canvas, the campaign ID in the file name will be "unassociated". This will happen when you send test messages from the dashboard, when Braze sends SMS/MMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### How do I find more information about this send?
 
@@ -186,4 +186,11 @@ If your cloud storage credentials become invalid at any point, Braze won't be ab
 
 The rendered copy is uploaded immediately before sending the message to the user. Because of cloud storage upload times, there may be a delay of a few seconds between the `sent_at` timestamp in the rendered copy versus the actual time the send occurs.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}
+### Can I create a new bucket specifically for message archiving while keeping the current bucket used for Currents data?
+
+No. If you're interested in creating these specific buckets, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+### Is archived data written to a dedicated folder in an existing bucket, similar to how Currents data exports are structured?
+
+The data is written to a `sent_messages` section of the bucket. Refer to [How it works](#how-it-works) for more details.
+

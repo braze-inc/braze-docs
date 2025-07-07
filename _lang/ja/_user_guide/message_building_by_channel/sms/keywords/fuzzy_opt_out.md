@@ -30,9 +30,6 @@ page_order: 1
 ファジィオプトアウトを設定するには、サブスクリプショングループ キーワードマネジメントページに移動します。
 
 1. [**オーディエンス**] > [**購読**] に移動して、SMS 購読グループを選択します。
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、**Subscription Groups** は**Users** にあります。
-{% endalert %}
 
 {:start="2"}
 2\.**SMS Global Keywords**で、**opt-out**カテゴリを見つけ、鉛筆アイコンを選択します。

@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: 피처 플래그
 article_title: Braze SDK의 기능 플래그
-page_order: 1
 description: "이 참조 문서에서는 전제 조건 및 사용 사례를 포함한 기능 플래그에 대한 개요를 다룹니다."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > 기능 플래그를 사용하면 특정 사용자나 무작위로 선택한 사용자에 대해 원격으로 기능을 활성화 또는 비활성화할 수 있습니다. 중요한 점은 추가 코드 배포나 앱 스토어 업데이트 없이 프로덕션 환경에서 기능을 켜고 끌 수 있다는 점입니다. 이를 통해 새로운 기능을 안심하고 안전하게 롤아웃할 수 있습니다.
 
 {% alert tip %}
-나만의 기능 플래그를 만들 준비가 되었다면 [기능 플래그 만들기를]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) 참조하세요.
+나만의 기능 플래그를 만들 준비가 되었다면 [기능 플래그 만들기를]({{site.baseurl}}/developer_guide/feature_flags/create/) 참조하세요.
 {% endalert %}
 
 ## 필수 조건
@@ -51,7 +51,7 @@ Braze 기능 플래그를 사용하면 대신 점진적으로 기능을 롤아�
 * 적절한 인력 배치 여부를 판단할 수 있도록 이 새로운 기능은 10%의 사용자만 사용할 수 있도록 설정합니다.
 * 버그가 발견되면 서둘러 새 버전을 출시하는 대신 해당 기능을 신속하게 비활성화할 수 있습니다.
 
-이 기능을 점진적으로 출시하려면 "실시간 채팅 위젯"이라는 [기능 플래그를 만들면]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) 됩니다.
+이 기능을 점진적으로 출시하려면 "실시간 채팅 위젯"이라는 [기능 플래그를 만들면]({{site.baseurl}}/developer_guide/feature_flags/create/) 됩니다.
 
 ![실시간 채팅 위젯이라는 예제에서 기능 플래그 세부 정보. ID는 enable_live_chat입니다. 이 기능 플래그 설명에 따르면 실시간 채팅 위젯이 지원 페이지에 표시됩니다.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -143,7 +143,7 @@ return (<>
 
 [A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)는 여러 버전의 변수에 대한 사용자 응답을 비교할 수 있는 강력한 툴입니다.
 
-이 예제에서는 이커머스 앱의 새로운 결제 흐름을 빌드했습니다. 사용자 경험을 개선한다는 확신은 있지만, 앱 매출에 미치는 영향을 측정하기 위해 A/B 테스트를 실행하려고 합니다.
+이 예제에서는 이커머스 앱의 새로운 결제 플로우를 구축했습니다. 사용자 경험을 개선한다는 확신은 있지만, 앱 매출에 미치는 영향을 측정하기 위해 A/B 테스트를 실행하려고 합니다.
 
 먼저 `enable_checkout_v2` 라는 새 기능 플래그를 만들겠습니다. 대상 또는 출시 비율을 추가하지 않습니다. 대신 기능 플래그 실험을 사용하여 트래픽을 분할하고 기능을 활성화한 다음 결과를 측정해 보겠습니다.
 
@@ -161,9 +161,9 @@ if (featureFlag?.enabled) {
 }
 ```
 
-[기능 플래그 실험에서]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/) A/B 테스트를 설정하겠습니다.
+[기능 플래그 실험에서]({{site.baseurl}}/developer_guide/feature_flags/experiments/) A/B 테스트를 설정하겠습니다.
 
-이제 50%의 사용자에게는 이전 환경이 표시되고 나머지 50%에게는 새로운 환경이 표시됩니다. 그런 다음 두 가지 변형을 분석하여 어떤 결제 흐름이 더 높은 전환율을 가져왔는지 확인할 수 있습니다. {% multi_lang_include metrics.md metric='전환율' %}
+이제 50%의 사용자에게는 이전 환경이 표시되고 나머지 50%에게는 새로운 환경이 표시됩니다. 그런 다음 두 가지 변형을 분석하여 어떤 결제 흐름이 더 높은 전환율을 가져왔는지 확인할 수 있습니다. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![트래픽을 두 개의 50% 그룹으로 분할하는 기능 플래그 실험.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -188,7 +188,7 @@ if (featureFlag?.enabled) {
 | 기능                                                                                                   | 무료 버전     | 유료 버전      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [활성 기능 플래그](#active-feature-flags)                                                                     | 워크스페이스당 10개 | 워크스페이스당 110개 |
-| [활발한 캠페인 실험]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 워크스페이스당 1개  | 워크스페이스당 100개 |
+| [활발한 캠페인 실험]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 워크스페이스당 1개  | 워크스페이스당 100개 |
 | [기능 플래그 캔버스 단계]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | 무제한        | 무제한         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

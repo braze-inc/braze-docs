@@ -28,7 +28,7 @@ El contenido de video solo está disponible cuando el dispositivo tiene una velo
 
 ## Consideraciones sobre Android
 
-Para incrustar vídeo y otros contenidos HTML5 en mensajes HTML in-app en Android, es necesario activar la aceleración por hardware en la Actividad en la que se muestra el mensaje in-app. Para más información, consulta la [guía del desarrollador de Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
+Para incrustar vídeo y otros contenidos HTML5 en mensajes HTML in-app en Android, es necesario activar la aceleración por hardware en la Actividad en la que se muestra el mensaje in-app. Para más información, consulta la [guía del desarrollador de Android]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## Consideraciones sobre iOS
 

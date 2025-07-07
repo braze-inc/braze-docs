@@ -33,10 +33,10 @@ The Braze and Adjust integration lets you import non-organic install attribution
 
 #### Android
 
-If you have an Android app, you must pass a unique Braze device ID to Adjust. This ID can be set in the Adjust SDK's `addSessionPartnerParameter()` method. The following code snippet must be included before initializing the SDK on `Adjust.onCreate.`
+If you have an Android app, you must pass a unique Braze device ID to Adjust. This ID can be set in the Adjust SDK's `addGlobalPartnerParameter()` method. The following code snippet must be included before initializing the SDK on `Adjust.initSdk.`
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
@@ -74,7 +74,7 @@ If you are planning to send post-install events from Adjust into Braze, you will
 
 In Braze, navigate to **Integrations** > **Technology Partners** and select **Adjust**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.][1]{: style="max-width:90%;"}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Step 3: Configure Braze in Adjust
 
@@ -141,5 +141,3 @@ If you currently do not use any device identifiers-such as the IDFV or GAID-in y
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}

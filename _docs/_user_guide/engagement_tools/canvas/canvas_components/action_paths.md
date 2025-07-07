@@ -12,14 +12,14 @@ tool: Canvas
 
 > Action Paths in Canvas allow you to sort your users based on their actions. 
 
-Using Action Paths, you can:
+![An Action Paths step  in a Canvas user journey.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![An Action Paths step as the first step in a Canvas user journey.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Using Action Paths, you can:
 
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
-## Create an action path
+## Creating an action path
 
 To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
 
@@ -29,7 +29,7 @@ In the **Action Settings**, set the **Evaluation Window** to determine how long 
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
-![The Action Settings with an evaluation window of 1 day.][4]
+![The Action Settings with an evaluation window of 1 day.]({% image_buster /assets/img/actionpath_settings.png %})
 
 By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they will immediately advance through the relevant action group. If a user doesn't perform a trigger event, then they will advance through the default **Everyone Else** group at the end of the evaluation period.
 
@@ -63,7 +63,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 - Trigger a geofence
 - Send an SMS or WhatsApp inbound message
 
-![An action group named "Group 1" for users who make any purchase.][3]
+![An action group named "Group 1" for users who make any purchase.]({% image_buster /assets/img/actionpath_group.png %})
 
 In each action group setting, you also have the option to select the checkbox **I want this group to exit the Canvas**, meaning that the users within this group will exit the Canvas at the end of the evaluation period.
 
@@ -80,6 +80,3 @@ If users enter an action path multiple times and have multiple entries in the ac
 Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %} 
-[3]: {% image_buster /assets/img/actionpath_group.png %} 
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 

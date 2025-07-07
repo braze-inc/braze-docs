@@ -12,7 +12,7 @@ tool:
 
 # Creating a push message
 
-> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app. To see examples of push notifications, check out our [case studies][8].
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app. To see examples of push notifications, check out our [case studies](https://www.braze.com/customers).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-push}
 
@@ -22,10 +22,16 @@ Not sure whether to use a campaign or a Canvas? Campaigns are better for simple,
 
 {% tabs %}
 {% tab Campaign %}
-1. Go to **Messaging** > **Campaigns**, then select **Create Campaign**.
-2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push Notification**. If you're still not sure, refer to **Deciding between regular or multichannel push campaign** below.
+1. Go to **Messaging** > **Campaigns**, then select **Create campaign**.
+2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push notification**. If you're still not sure, refer to **Deciding between regular or multichannel push campaign** below.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. **Tip:** Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. 
+
+{% alert tip %} 
+Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+{% endalert %}
+
+{: start="5"}
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Deciding between regular or multichannel push campaign %}
@@ -44,7 +50,7 @@ If you select **Push Notification** and choose to target multiple devices and pl
 - Display priority
 - Sounds
 
-See [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what’s different in this editing experience before you continue.
+Before continuing, refer to [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what's different for this editing experience.
 
 {% enddetails %}
 
@@ -64,9 +70,9 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Specify delivery platforms
+## Step 2: Select push platforms
 
-Start by choosing which device and platform combination should receive the push. Use this selection to limit the delivery of a push notification to a specific set of apps.
+Next, choose which platform and mobile device combination should receive the push. Use this selection to limit the delivery of a push notification to a specific set of apps.
 
 There are a few different ways to do this depending on your previous selections:
 
@@ -79,15 +85,15 @@ There are a few different ways to do this depending on your previous selections:
 
 ## Step 3: Select notification type (iOS and Android)
 
-If you're creating a quick push campaign, the notification type is automatically set to Standard Push and cannot be changed.
+If you're creating a quick push campaign, the notification type is automatically set to **Standard push** and cannot be changed.
 
-![Notification Type with Standard Push selected as an example.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Notification Type with Standard Push selected as an example.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Otherwise, for iOS and Android, select your notification type:
 
-- Standard Push
-- [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
-- Inline Image (Android only)
+- Standard push
+- [Push stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
+- Inline image (Android only)
 
 If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) or [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/).
 
@@ -105,7 +111,7 @@ For more information on platform-specific notification options, see [iOS Notific
 
 #### Language
 
-Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported][18].
+Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -130,7 +136,7 @@ You **cannot** send an Android push message without a title&#8212;however, you c
 {% endtabs %}
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body field of the push composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -155,21 +161,19 @@ Here, you can also set up button prompts within your push notification, such as:
 - Confirm/Cancel
 - More 
 
-#### Device options
+#### Sending options
 
-If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Only send this push to the user's most recently used device**.
+If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Most recently used device**.
 
-![Device options checkbox to only send this push to the user's most recently used device.][9]{: style="max-width:70%;" }
+![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
-There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they will receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
+There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 
 ## Step 5: Preview and test your message (optional)
 
-![Test push message][7]{: style="float:right;max-width:30%;margin-left:15px;"}
-
-Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
+Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab to choose from options on how to test your push message. In **Test Recipients**, you can select a content test group or individual users. You can also use **Preview message as user** to get a sense of how your message may view on mobile for a random user, existing user, custom user, or multi-language user.
 
 ## Step 6: Build the remainder of your campaign or Canvas
 
@@ -188,7 +192,7 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
 
 {% details Why does my Total Reachable Users metric not match the sum of all channels? %}
 
@@ -215,7 +219,7 @@ For multichannel campaigns targeting both email and push channels, you may want 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Audiences** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Choose conversion events
@@ -237,16 +241,3 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 Next, check out [Push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
 
-[1]: {% image_buster /assets/img_archive/new_campaign_push.png %}
-[2]: {% image_buster /assets/img_archive/push_1.png %}
-[3]: {% image_buster /assets/img_archive/push_2.png %}
-[4]: {% image_buster /assets/img_archive/schedule.png %}
-[5]: {% image_buster /assets/img_archive/confirmation_page.png %}
-[6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/push_3.png %}
-[8]: https://www.braze.com/customers
-[9]: {% image_buster /assets/img_archive/push_recent_device.png %}
-[15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
-[25]: {% image_buster /assets/img_archive/target_segmenter.png %} 

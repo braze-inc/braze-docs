@@ -13,7 +13,7 @@ tool: Currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
 
-The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/mixpanel/) to create Braze segments that can be used to target users in future Braze campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Mixpanel](#data-export-integration) to drive deeper analytics into conversions, retention, and product usage. 
+The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into Braze]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/mixpanel_cohort_import/) to create Braze segments that can be used to target users in future Braze campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Mixpanel](#data-export-integration) to drive deeper analytics into conversions, retention, and product usage. 
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ A full list of the events that can be exported from Braze to Mixpanel can be fou
 
 You can export two types of events to Mixpanel: [Message Engagement Events](#supported-currents-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#supported-currents-events) including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
-Contact your account manager or open a [support ticket][support] if you need access to additional event entitlements.
+Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements.
 
 ### Step 1: Get Mixpanel credentials
 
@@ -124,8 +124,3 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
   
-[support]: {{site.baseurl}}/braze_support/
-[1]: {% image_buster /assets/img_archive/mixpanel1.png %}
-[2]: {% image_buster /assets/img_archive/mixpanel2.png %}
-[3]: {% image_buster /assets/img_archive/mixpanel3.png %}
-[4]: {% image_buster /assets/img_archive/mixpanel4.png %}

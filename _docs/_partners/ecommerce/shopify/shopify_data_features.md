@@ -321,82 +321,67 @@ page_order: 3
 {% subtab Order cancelled %}
 ```json
 {
- "name": "shopify_cancelled_order",
- "time": "2022-05-23T14:40:52-04:00",
- "properties": {
-   "order_id": 4444596371647,
-   "line_items": [
-     {
-       "quantity": 1,
-       "product_id": 6143033344191,
-       "sku": null,
-       "title": "LED High Tops",
-       "variant_id": 40094740549876,
-       "variant_title": "",
-       "vendor": "partners-demo",
-       "name": "LED High Tops",
-       "properties": [],
-       "price": "80.00",
-       "fulfillment_status": null
-     }
-   ],
-   "shipping": [
-     {
-       "title": "Standard",
-       "price": "0.00"
-     }
-   ],
-   "total_price": "141.54",
-   "confirmed": true,
-   "total_discounts": "0.00",
-   "discount_codes": [],
-   "order_number": 1092,
-   "order_status_url": "https://test-store.myshopify.com/",
-   "cancelled_at": "2022-05-23T14:40:52-04:00",
-   "tags": "",
-   "closed_at": "2022-05-23T14:40:51-04:00",
-   "fulfillment_status": null,
-   "fulfillments": []
- },
- "braze_id": "123abc123abc"
+    "name": "ecommerce.order_cancelled",
+    "time": "2022-05-23T13:52:38-04:00",
+    "properties": {
+        "order_id": "820982911946154508",
+        "cancel_reason": "no longer necessary",
+        "total_value": 421.88,
+        "currency": "USD",
+        "total_discounts": 5,
+        "discounts": [],
+        "products": [
+            {
+                "product_id": "632910392",
+                "product_name": "IPod Nano - 8GB",
+                "variant_id": "808950810",
+                "quantity": 1,
+                "price": 199,
+                "metadata": {
+                    "sku": "IPOD2008PINK"
+                }
+            }
+        ],
+        "source": "braze-mock-storefront.myshopify.com",
+        "metadata": {
+            "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
+            "order_number": 1234,
+            "tags": [
+                "heavy",
+                "heavy2"
+            ]
+        }
+    }
 }
 ```
 {% endsubtab %}
 {% subtab Order refunded %}
 ```json
 {
- "name": "shopify_created_refund",
- "time": "2022-05-23T14:40:50-04:00",
- "properties": {
-   "order_id": 4444596371647,
-   "note": null,
-   "line_items": [
-     {
-       "quantity": 1,
-       "product_id": 6143033344191,
-       "sku": null,
-       "title": "LED High Tops",
-       "variant_id": 40094740549876,
-       "variant_title": "",
-       "vendor": "partners-demo",
-       "properties": [],
-       "price": "80.00"
-     },
-     {
-       "quantity": 1,
-       "product_id": 6143032852671,
-       "sku": null,
-       "title": "Chequered Red Shirt",
-       "variant_id": 40094796619876,
-       "variant_title": "",
-       "vendor": "partners-demo",
-       "properties": [],
-       "price": "50.00"
-     }
-   ]
- },
- "braze_id": "abc123abc123"
-}
+    "name": "ecommerce.order_refunded",
+    "time": "2022-05-23T13:52:38-04:00",
+    "properties": {
+        "order_id": "820982911946154508",
+        "total_value": 421.88,
+        "currency": "USD",
+        "products": [
+            {
+                "product_id": "632910392",
+                "product_name": "IPod Nano - 8GB",
+                "variant_id": "808950810",
+                "quantity": 1,
+                "price": 199,
+                "metadata": {
+                    "sku": "IPOD2008PINK"
+                }
+            }
+        ],
+        "source": "braze-mock-storefront.myshopify.com",
+        "metadata": {
+		"order_note": "item was broken"
+        }
+    }
+} 
 ```
 {% endsubtab %}
 {% subtab Account login %}
@@ -414,7 +399,7 @@ page_order: 3
 {% tab Shopify events %}
 {% subtabs global %}
 {% subtab Product viewed %}
-**Event**: `ecommerce.v1.product_viewed`<br>
+**Event**: `ecommerce.product_viewed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer views a product page<br>
 **Use Case**: Browse abandonment
@@ -438,7 +423,7 @@ page_order: 3
 
 {% endsubtab %}
 {% subtab Cart updated %}
-**Event**: `ecommerce.v1.cart_updated`<br>
+**Event**: `ecommerce.cart_updated`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Cart abandonment
@@ -478,7 +463,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 
 {% endsubtab %}
 {% subtab Checkout started %}
-**Event**: `ecommerce.v1.checkout_started`<br>
+**Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
@@ -515,7 +500,7 @@ Then you can add the following Liquid tags into your message to reference the pr
 
 {% endsubtab %}
 {% subtab Order placed %}
-**Event**: `ecommerce.v1.order_placed`<br>
+**Event**: `ecommerce.order_placed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a user successfully completes the checkout process and places an order<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
@@ -548,7 +533,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endsubtab %}
 {% subtab Fulfilled order %}
 **Event**: `shopify_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is fulfilled and ready for shipping<br>
 **Use Case**: (Transactional) Fulfillment update 
 
@@ -598,7 +583,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endsubtab %}
 {% subtab Partially fulfilled order %}
 **Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When part of a user’s order is fulfilled and ready for shipping<br> 
 **Use Case**: (Transactional) Fulfillment update 
 
@@ -648,7 +633,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endsubtab %}
 {% subtab Paid order %}
 **Event**: `shopify_paid_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is marked as paid within Shopify<br>  
 **Use Case**: (Transactional) Payment confirmation
 
@@ -681,7 +666,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endsubtab %}
 {% subtab Order cancelled %}
 **Event**: `shopify_cancelled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is cancelled<br> 
 **Use Case**: (Transactional) Order cancellation confirmation
 
@@ -716,7 +701,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endsubtab %}
 {% subtab Order refunded %}
 **Event**: `shopify_order_refunded`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is refunded<br>
 **Use Case**: (Transactional) Refund confirmation
 
@@ -742,7 +727,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% subtab Account login %}
 
 **Event**: `shopify_account_login`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events)<br>
+**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user logs into their account<br>
 **Use Case**: Welcome series
 
@@ -823,11 +808,15 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 ## SDK data collection 
 
-For more information on what data is collected by the Braze SDKs, see [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
+For more information on what data is collected by the Braze SDKs, see [SDK data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). 
 
 ## Historical backfill
 
-During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. 
+During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we will assign the `external_id` type that you chose in your configuration settings.
+
+{% alert note %}
+If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you will be required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the historical backfill. 
+{% endalert %}
 
 ### Setting up Shopify historical backfill
 

@@ -29,13 +29,13 @@ To add a new user:
 The department listed in a user's profile determines what types of communications they receive from Braze. This is so everyone only receives the communications and alerts that are relevant to how they use Braze.
 {% endalert %}
 
-![][2]
+![User details fields.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. For users that aren't administrators, select the company-level and workspace-level [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) you want this user to have.
 
-![][3]
+![Workspace-level permissions with a section for custom permissions fields.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Email address requirements
 
@@ -53,11 +53,11 @@ Suspending a user puts their account into an inactive state, where the user can 
 
 To suspend a user, go to **Settings** > **Company Users**, find their username and select <i class="fa-solid fa-user-lock"></i> **Suspend**.
 
-![Suspend a user][4]
+![Option to suspend a user.]({% image_buster /assets/img_archive/suspend_user.png %})
 
 Administrators can also suspend a user by selecting their name from the list and clicking **Suspend user** in the footer.
 
-![Suspend a user when editing the user details.][5]
+![Suspend a user when editing the user details.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Assigning user access and responsibilities
 
@@ -67,7 +67,7 @@ Administrators can also suspend a user by selecting their name from the list and
 
 To delete a user, go to **Settings** > **Company Users**, find their username and select <i class="fa fa-trash-can"></i> **Delete user**.
 
-![Delete a user][34]
+![Delete a user]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 After a user is deleted, Braze does not keep any of the following account data:
 
@@ -98,10 +98,3 @@ To create this new user, you can do either of the following:
 
 If you don't receive the message activation on your inbox when using `testing+01@braze.com`, confirm with your IT team that you can accept messages from that kind of email address. Some administrators filter messages sent to email addresses with a `+`.
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-[27]: {% image_buster /assets/img/add-user.gif %} "Add a New User Process"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}

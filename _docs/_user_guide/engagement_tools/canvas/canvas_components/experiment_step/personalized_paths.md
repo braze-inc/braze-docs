@@ -23,7 +23,7 @@ When Personalized Paths is turned on in an Experiment Path step, the behavior is
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Personalized Paths**.
 
-![][1]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### Step 2: Configure Personalized Paths settings
 
@@ -31,7 +31,7 @@ Specify the conversion event that should determine the winner. If there are no c
 
 Then set the **Experiment Window**. The **Experiment Window** determines how long users will be sent down all paths before choosing the best path for each user in the delay group. The window begins when the first user enters the step.
 
-![][2]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### Step 3: Determine fallback
 
@@ -39,11 +39,11 @@ By default, if the results of the test aren't enough to determine a statisticall
 
 Alternatively, you can select **Continue sending all future users the mix of paths**.
 
-![][3]
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
-![][4]
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### Step 4: Add your paths and launch the Canvas
 
@@ -145,9 +145,3 @@ We don't recommend using local time delivery in Canvases with Personalized Paths
 
 Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the Canvas and trigger the experiment to start, but plenty of time remains in the experiment window. Users in later time zones will still have enough time to enter the Canvas and the Experiment Step with Personalized Paths and possibly convert before the experiment window expires.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_personalized_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}

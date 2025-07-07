@@ -20,9 +20,9 @@ Naming conventions for events that flow for one partner from Braze may not match
 [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 Data warehouse storage offers a collection source for all the information streamed from Currents. These partners can either act as warehouses (for flat file storage) or be used to power business intelligence tools and machine learning algorithms, get insights on marketing performance, and more.
 
-* [Amazon S3][1]
-* [Google Cloud Storage][2]
-* [Microsoft Azure Blob Storage][3]
+* [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)
+* [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/)
+* [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/)
 
 We're so confident in the power of Currents and data warehouses together, [we use it ourselves]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/)!
 
@@ -30,36 +30,23 @@ We're so confident in the power of Currents and data warehouses together, [we us
 
 These customer data platforms collect and route information from multiple sources to a variety of other locations to empower you to utilize Braze data in the best ways possible.
 
-* [mParticle][6]
-* [Segment][7]
-* [Tealium][8]
-* [Treasure Data][10]
-* [RudderStack][9]
-* [Adobe][12]
-* [Amperity][13]
+* [mParticle]({{site.baseurl}}/partners/mparticle_for_currents/)
+* [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/)
+* [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents)
+* [Treasure Data]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/treasure_data/treasure_data_for_currents/)
+* [RudderStack]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack_for_currents/)
+* [Adobe]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/adobe/adobe_for_currents/)
+* [Amperity]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/#using-amperity-with-braze-currents)
 
 ## Behavioral analytics
 
 These partners specialize in product analytics and business intelligence and can help you interact with your users based on their actions.
 
-* [Amplitude][4]
+* [Amplitude]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_for_currents/)
 
-* [Mixpanel][5]
+* [Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/)
 
-* [Heap][11]
+* [Heap]({{site.baseurl}}/partners/data_and_analytics/analytics/heap/heap_cohort_import/)
 
 
 
-[1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/
-[2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
-[3]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
-[4]: {{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
-[5]: {{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/
-[6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
-[7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
-[8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents
-[9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/
-[10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
-[11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/
-[12]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
-[13]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/#using-amperity-with-braze-currents

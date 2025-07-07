@@ -32,6 +32,12 @@ Les délais personnalisés et les délais prolongés sont en accès anticipé. C
 
 Sélectionnez la bascule **Personnaliser** le délai pour définir un délai personnalisé pour vos utilisateurs. Vous pouvez l'utiliser avec une [étape Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) pour sélectionner la variable contextuelle à retarder.
 
+Braze sortira un utilisateur à l'étape si :
+
+- La variable contextuelle ne renvoie à aucune valeur.
+- Un appel de contenu connecté intégré échoue.
+- Les types de variables contextuelles ne correspondent pas.
+
 Imaginons que nous souhaitions rappeler à nos clients d'acheter du dentifrice dans 30 jours. En combinant une étape Contexte et une étape Délai, nous pouvons sélectionner la variable contextuelle à retarder. Dans ce cas, notre étape Contexte comporterait les champs suivants :
 
 - **Nom de la variable contextuelle :** product_reminder_interval

@@ -22,7 +22,7 @@ Consider the [race conditions]({{site.baseurl}}/user_guide/engagement_tools/test
 
 To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
-![][1]{: style="max-width:75%;"}
+![An Action-Based Canvas that enters users when they make any purchase during a user's local time from April 30, 2025 at 12 pm to May 7, 2025 at 12 pm.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Note that users who qualify for your entry audience after the Canvas launches will not enter the Canvas.
 
@@ -102,4 +102,3 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 - Confirm that the Canvas step was connected to the preceding step at the time of send.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

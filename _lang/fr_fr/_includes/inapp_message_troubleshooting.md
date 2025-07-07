@@ -50,15 +50,15 @@ Si vous avez défini un délégué de message in-app pour gérer manuellement l'
 
 1. Les déclencheurs mettent du temps à se synchroniser avec l’appareil au démarrage de la session, il peut donc y avoir une condition de concurrence si les utilisateurs enregistrent un événement ou achètent juste après avoir démarré une session. Une possible solution pourrait être de changer la campagne pour qu’elle se déclenche au démarrage de la session, puis de segmenter l’événement ou l’achat prévu. Notez que cela enverrait le message in-app à l’application au prochain démarrage de la session après que l’événement se soit produit.
 
-2. Si la campagne est déclenchée par un début de session ou un événement personnalisé, vous devez vous assurer que cet événement ou cette session est suffisamment fréquent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu][1] (pour les données de session) ou [Événements personnalisés][2]:
+2. Si la campagne est déclenchée par un début de session ou un événement personnalisé, vous devez vous assurer que cet événement ou cette session est suffisamment fréquent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (pour les données de session) ou [Événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![Page Événements personnalisés affichant un graphique pour le nombre de fois que l’événement personnalisé Added to Favorites (Ajouté aux favoris) s’est produit sur une période d’un mois][14]
+![La page des événements personnalisés affiche un graphique indiquant le nombre de fois où l'événement personnalisé Ajouté aux favoris s'est produit sur une période d'un mois.]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### Les impressions sont plus faibles qu'auparavant
 
 1. Assurez-vous que personne n'a modifié involontairement le segment ou la campagne depuis le lancement. Nos Journaux de modifications des segments et des campagnes vous informeront sur les changements, qui les a faits et quand.
 
-![Lien pour afficher les modifications sur la page Détails de la campagne avec sept changements depuis que l’utilisateur a vu la campagne pour la dernière fois][10]
+![Lien pour afficher le journal des modifications sur la page des détails de la campagne avec sept modifications depuis que l'utilisateur a consulté la campagne pour la dernière fois]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. Assurez-vous que vous n'avez pas réutilisé votre événement déclencheur dans une campagne de messages in-app distincte avec une priorité plus élevée.
 
@@ -126,7 +126,3 @@ Si votre application demande et reçoit avec succès des messages in-app, mais q
 {% endcase %}
 7. Si votre message in-app est déclenché par le démarrage de la session et que vous avez défini un délai d'attente prolongé, cela aura une incidence sur la vitesse à laquelle vous pouvez afficher les messages. Par exemple, si le délai d'expiration de votre session est fixé à 300 secondes, le fait de fermer et de rouvrir l'application en moins de temps que cela n'actualisera pas la session, de sorte qu'un message in-app déclenché par le démarrage d'une session ne s'affichera pas.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}

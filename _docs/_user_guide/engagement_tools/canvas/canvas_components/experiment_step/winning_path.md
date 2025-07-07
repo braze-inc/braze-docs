@@ -14,11 +14,11 @@ When Winning Path is turned on in an Experiment Path step, after a specified per
 
 ## Using Winning Path
 
-### Step 1: Add an Experiment Path
+### Step 1: Add an Experiment Path step
 
 Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
 
-![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.][1]
+![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### Step 2: Configure Winning Path settings
 
@@ -26,19 +26,15 @@ Specify the conversion event that should determine the winner. If there are no c
 
 Next, set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
 
-![][2]
+![Winning Path Settings with the conversion event "Clicks" selected for a 12-hour experiment window.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
 ### Step 3: Determine fallback {#statistical-significance}
 
 By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path.
 
-Alternatively, you can select **Continue sending all future users the mix of paths**.
+Alternatively, you can select **Continue sending all future users the mix of paths**. This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
-![][6]
-
-This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
-
-![Percentages specified in the experiment distribution][3]
+!["Continue sending all future users the mix of paths" selected as what will happen to users if the test result isn't statistically significant.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 A Delay Group will only appear in your path distribution if your Canvas is set up for one-time entry and your Experiment step has three paths or fewer. Recurring and triggered Canvases will not have a Delay Group when Winning Path is turned on.
@@ -65,11 +61,11 @@ If Winning Path was turned on, your analytics view is separated into two tabs: *
 
 When using Winning Paths in a Canvas where users are allowed to enter only once, a Delay Group is automatically included. During the duration of the experiment, a percentage of users will be held in the Delay Group while the remaining users enter your Experiment Paths.
 
-![Experiment Step with a Delay Group for Winning Path][4]{: style="max-width:75%"}
+![Experiment Step with a Delay Group for Winning Path]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 When the test is complete and a Winning Path is determined, the users assigned to the Delay Group will be directed to the chosen path, and continue through the Canvas.
 
-![Experiment Step with a Delay Group sent down the Winning Path][5]{: style="max-width:75%"}
+![Experiment Step with a Delay Group sent down the Winning Path]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### Local time delivery
 
@@ -77,9 +73,3 @@ We don't recommend using local time delivery in Canvases with Winning Paths. Thi
 
 Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the Canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_winning_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}

@@ -29,7 +29,7 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 2. Go to **Apps** > **Add Apps** in the top navigation bar. Search for "Braze" and select the Braze app.![Search results for Braze in OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Save the Braze app to your Company.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. When saved, go to **Configuration** and add your **Braze Domain** and **RelayState** API key.![OneLogin Configuration tab for the Braze app.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze expects the SAML assertions in a [specific format][1]. Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.![Braze SAML parameters in OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+5. Braze expects the SAML assertions in a [specific format]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.![Braze SAML parameters in OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
 6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.![Certificates to copy from the Braze app SSO tab in OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Step 2: Configure OneLogin within Braze
@@ -47,10 +47,9 @@ On this page, input the following:
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your OneLogin. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Opening Security Settings in Braze and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})
+![SAML SSO settings with the toggle selected.]({% image_buster /assets/img/samlsso.png %})
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider

@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) は、モバイル属性、インクリメンタルリスト測定、マーケティングミックスモデリングを通じて、真の成長の源泉を発見できる統一モバイル測定プラットフォームです。
 
+_この統合はAirbridgeによって維持されます。_
+
+## 統合について
+
 BrazeとAirbridgeの統合により、パーソナライズされたマーケティングキャンペーンを構築するために、AirbridgeからBrazeにオーガニックインストール以外のアトリビューションデータを渡すことができる。
 
 ## 前提条件
@@ -190,10 +194,6 @@ AirbridgeUnity.StartTracking()
 
 Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] に移動し、[**Airbridge**] を選択します。
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**テクノロジーパートナー**] は [**統合**] にあります。
-{% endalert %}
-
 ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Airbridge のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。
 
 ![][1]
@@ -201,7 +201,7 @@ Brazeで [**パートナー連携**] >[**テクノロジーパートナー**] �
 ### ステップ3:Airbridge のダッシュボードで Braze を設定する
 
 1. Airbridgeで、左サイドバーの **[Integrations] > [Third-party Integrations]** に移動し、[**Braze**] を選択します。
-2. Brazeのダッシュボードで見つけたデータインポートキーとRESTエンドポイントを提供する。
+2. Braze ダッシュボードで見つけたデータインポートキーとREST エンドポイントを指定します。
 3. イベントタイプ ([Install Event] または [Install & Deeplink Open Event]) を選択し、保存します。
 
 {% alert note %}
@@ -272,6 +272,7 @@ idfv={{most_recently_used_device.${id}}}
 **この推奨事項の適用は完全に任意です。**<br>
 現在、クリックトラッキングリンクで IDFV やGAID などのデバイス識別子を使用していない場合、または今後使用する予定がない場合でも、Airbridge は確率的モデリングによってこれらのクリックを紐づけることができます。
 {% endalert %}
+
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
 [2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

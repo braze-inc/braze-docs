@@ -5,7 +5,7 @@ alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "This article covers best practices to avoid race conditions from affecting your messaging campaigns."
-
+toc_headers: h2
 ---
 
 # Race conditions
@@ -72,7 +72,7 @@ Instead of using multiple endpoints, you can include the [user attributes]({{sit
 
 When these objects are included with the trigger, the attributes will be processed first, before the message is triggered, eliminating potential race conditions. Note that trigger properties don't update the user profile, but are used in the context of the message only.
 
-#### Use the POST: Track users (bulk) endpoint
+#### Use the POST: Track users (sync) endpoint
 
 Use the [`/users/track/sync/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
 
@@ -118,7 +118,3 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
