@@ -196,4 +196,4 @@ To increase transparency into webhook-related issues, Braze streams detailed web
 Connected Content requests are not included in these webhook failure events.
 {% endalert %}
 
-For more information, -> point to Currents/snowflake docs
+For more information, refer to the [Message engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
