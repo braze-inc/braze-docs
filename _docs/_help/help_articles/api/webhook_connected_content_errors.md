@@ -187,3 +187,19 @@ To sign up to receive these emails, do the following:
 ### Message Activity Log entries
 
 There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.
+
+### Additional failure insights in Braze Currents
+
+to-do:
+get table names
+double-check exactly that is going in 
+
+To increase transparency into webhook-related issues, Braze now streams detailed webhook failure events to Currents. These events include both failed webhook requests and system-triggered deferrals (e.g., due to unhealthy host detection), providing more observability into how webhook issues may impact message delivery.
+
+These events are available tbd.
+
+{% alert note %}
+Connected Content requests are not included in these webhook failure events.
+{% endalert %}
+
+For more information, -> point to Currents/snowflake docs
