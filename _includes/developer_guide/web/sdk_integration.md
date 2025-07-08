@@ -6,15 +6,13 @@ The Web Braze SDK lets you collect analytics and display rich in-app messages, p
 
 ## Integrating the Web SDK
 
-You can integrate the Web Braze SDK using any of the following methods:
+You can integrate the Web Braze SDK using the following methods. For additional options, see [other integration methods](#web_other-integration-methods).
 
-- **Technical:** DESCRIPTION
-- **Google Tag Manger:** The Web Braze SDK is automatically integrated into your site when you add the Braze Initialization Tag to your Google Tag Manager (GTM).
-- **Other:** Not sure if the standard integration method is right for you? Check out our [other integration methods](#web_other-integration-methods).
+- **Code-Based Integration:** Integrate the Web Braze SDK directly in your codebase using your preferred package manager or the Braze CDN. This will give you full control over how the SDK is loaded and configured.
+- **Google Tag Manger:** A no-code solution that let's you integrate the Web Braze SDK without modifying your site’s code. Recommended for less-technical users.
 
 {% tabs local %}
-{% tab technical %}
-<!-- The name of this tab is just a placeholder for now -->
+{% tab code-based integration %}
 ### Step 1: Install the Braze library
 
 You can install the Braze library using one of the following methods. However, if your website uses a `Content-Security-Policy`, review the [Content Security Policy]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) before continuing.
@@ -87,31 +85,43 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 {% endtab %}
 
 {% tab Google Tag Manager %}
-### Prerequisites
+### About Google Tag Manager {#google-tag-manager}
+
+[Google Tag Manager (GTM)](https://support.google.com/tagmanager/answer/6103696) lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources. Braze offers the following GTM templates:
+
+|Tag Type|Use Case|
+|--------|--------|
+| Initialization tag | This tag lets you install and initialize the Web Braze SDK.|
+| Action tag | This tag lets you [manage Content Cards]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) and [log analytics]({{site.baseurl}}/developer_guide/analytics/).|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+### Using the initialization tag
+
+#### Prerequisites
 
 Before you can use this integration method, you'll need to create an account and install Google Tag Manager. For more information, see [Google: Get started with Tag Manager](https://support.google.com/tagmanager/answer/14842164).
 
-### Step 1: Open the tag template gallery
+#### Step 1: Open the tag template gallery
 
 In [Google Tag Manager](https://tagmanager.google.com/), choose your workspace, then select **Templates** > **Search Gallery**.
 
-![The templates page for an example workspace in Google Tag Manager.]()
+![The templates page for an example workspace in Google Tag Manager.]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %})
 
-### Step 2: Add the initialization tag template
+#### Step 2: Add the initialization tag template
 
 In the template gallery, search for `braze-inc`, then select **Braze Initialization Tag**.
 
-![The template gallery showing the various 'braze-inc' templates.]()
+![The template gallery showing the various 'braze-inc' templates.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %})
 
 Select **Add to workspace** > **Add**.
 
-![The 'Braze Initialization Tag' page in Google Tag Manager.]()
+![The 'Braze Initialization Tag' page in Google Tag Manager.]({% image_buster /assets/img/web-gtm/add_to_workspace.png %})
 
-### Step 3: Configure the tag
+#### Step 3: Configure the tag
 
 From the **Templates** section, select your newly added template.
 
-![The "Templates" page in Google Tag Manager showing the Braze Initialization Tag template.]()
+![The "Templates" page in Google Tag Manager showing the Braze Initialization Tag template.]({% image_buster /assets/img/web-gtm/select_tag_template.png %})
 
 Select the pencil icon to open the **Tag Configuration** dropdown.
 
@@ -128,14 +138,35 @@ Enter the minimum required information:
 
 For additional initialization settings, select **Braze Initialization Options** and choose any options you need.
 
-![The list of Braze Initialization Options in under 'Tag Configuration'.]()
+![The list of Braze Initialization Options in under 'Tag Configuration'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %})
 
-### Step 5: Verify your integration
+#### Step 5: Verify your integration
 
 You can verify your integration using either of the following options:
 
 - **Option 1:** Using Google Tag Manager's [debugging tool](https://support.google.com/tagmanager/answer/6107056?hl=en), you can check if the Braze Initialization Tag is triggering correctly on your configured pages or events.
 - **Option 2:** Check for any network requests made to Braze from your web page. Additionally, the global `window.braze` library should now be defined.
+
+### Google's updated EU User Consent Policy
+
+{% alert important %}
+Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
+{% endalert %}
+
+As part of Google's EU User Consent Policy, the following boolean custom attributes need to be logged to user profiles:
+
+- `$google_ad_user_data`
+- `$google_ad_personalization`
+
+If setting these via the GTM integration, custom attributes require creating a custom HTML tag. The following is an example of how to log these values as boolean data types (not as strings):
+
+```js
+<script>
+window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true);
+</script>
+```
+
+For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 {% endtab %}
 {% endtabs %}
 
@@ -216,41 +247,6 @@ You can keep up-to-date with our latest release [following our release feed](htt
 - If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file.
 
 These two files must be updated in coordination with each other for proper functionality.
-
-## Google Tag Manager {#google-tag-manager}
-
-[Google Tag Manager (GTM)](https://support.google.com/tagmanager/answer/6103696) lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources. Braze offers the following GTM templates:
-
-|Tag Type|Use Case|
-|--------|--------|
-| **Initialization tag:** | The initialization tag can be used for [initializing the Web Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/initialization/?sdktabs=web).|
-| **Action tag:** | The action tag can be used for [managing Content Cards]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) and [logging analytics]({{site.baseurl}}/developer_guide/analytics/).|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-Both tags can be added to your workspace from [Google's community gallery](https://tagmanager.google.com/gallery/#/?filter=braze) or by searching for Braze when adding a new tag from the Community Templates.
-
-![image of gallery search]({% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %})
-
-### Google's updated EU User Consent Policy
-
-{% alert important %}
-Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
-{% endalert %}
-
-As part of Google's EU User Consent Policy, the following boolean custom attributes need to be logged to user profiles:
-
-- `$google_ad_user_data`
-- `$google_ad_personalization`
-
-If setting these via the GTM integration, custom attributes require creating a custom HTML tag. The following is an example of how to log these values as boolean data types (not as strings):
-
-```js
-<script>
-window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true);
-</script>
-```
-
-For more information, refer to [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 
 ## Other integration methods
 
