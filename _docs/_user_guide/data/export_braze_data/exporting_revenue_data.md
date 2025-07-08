@@ -35,7 +35,7 @@ The following data can be viewed in the **Performance Over Time** graph:
     - (Optional) Revenue per Hour By Segment
 - Revenue per User
 
-![Revenue graph][9]
+![Revenue graph]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## Total revenue
 
@@ -51,12 +51,12 @@ Revenue reports cannot be exported through API. For help with CSV exports, refer
 
 ## Direct revenue
 
-You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder][1]:
+You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/):
 
-- [Total Direct Revenue][2]
-- [Total Direct Purchases][3]
-- [Unique Direct Purchases][4]
-- [Revenue per Recipient][5]
+- [Total Direct Revenue]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
+- [Total Direct Purchases]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)
+- [Unique Direct Purchases]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases)
+- [Revenue per Recipient]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient)
 
 These metrics are based on last-click attribution, which means that revenue will be attributed to a campaign if that campaign:
 
@@ -66,12 +66,6 @@ These metrics are based on last-click attribution, which means that revenue will
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}

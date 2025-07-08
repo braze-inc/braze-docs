@@ -24,11 +24,11 @@ In **Preview**, the view of your message might not be identical to its actual re
 
 Preview what your message will look like to a random user, a specific user, or a customized user—the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
 
-![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.][1]
+![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.]({%image_buster /assets/img/in-app-message-preview.png %})
 
 Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
 
-![Switching between generations when previewing an in-app message.][2]{: height="50%" width="50%"}
+![Switching between generations when previewing an in-app message.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## Test
 
@@ -40,7 +40,7 @@ To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/admin
 
 You can also preview messages from the **Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
 
-![Test tab when building an in-app message. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.][3]
+![Test tab when building an in-app message. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.]({% image_buster /assets/img/iam-user-preview.png %})
 
 ### Test checklist
 
@@ -49,6 +49,29 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## Accessibility scanner
+
+To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standards. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities.
+
+![Accessibility scan results]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+The in-app message accessibility scanner only runs on messages built with custom HTML. 
+{% endalert %}
+
+### How it works
+
+The scanner runs automatically on custom HTML messages and evaluates your entire HTML message against the full [WCAG 2.1 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). For each flagged issue, it shows:
+
+- The specific HTML element involved
+- A description of the accessibility issue
+- A link to additional context or remediation guidance
+
+### Understanding automated accessibility testing
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
+
+
+
+

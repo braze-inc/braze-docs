@@ -23,7 +23,7 @@ Let's say you want to define a custom attribute on the user profile called `favo
 
 This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
-Custom attribute objects can contain [data types][1], such as:
+Custom attribute objects can contain [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types), such as:
 
 - Numbers
 - Strings
@@ -249,7 +249,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 To capture dates as object properties, you must use the `$time` key. In the following example, an "Important Dates" object is used to capture the set of object properties, `birthday` and `wedding_anniversary`. The value for these dates is an object with a `$time` key, which cannot be a null value.
 
 {% alert note %}
-If you haven't captured dates as object properties initially, we recommend resending this data using the `$time` key for all users. Otherwise, this may result in incomplete segments when using the `$time` attribute.
+If you haven't captured dates as object properties initially, we recommend resending this data using the `$time` key for all users. Otherwise, this may result in incomplete segments when using the `$time` attribute. However, if the value for `$time` in a nested custom attribute isn't formatted correctly, the entire nested custom attribute won't be updated.
 {% endalert %}
 
 ```json
@@ -282,7 +282,7 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
-![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
+![Using Liquid to template a song name and the number of times a listener has played that song into a message]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentation
 
@@ -290,15 +290,15 @@ You can build segments based on nested custom attributes to further target your 
 
 After adding a path to your property, select **Validate** to verify that the value in the path field is valid.
 
-![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
+![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 To segment with nested custom attributes, select the **Nested Custom Attributes** filter to expose a dropdown from which you can select a specific nested custom attribute.
 
-![][17]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
 When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, because `play_analytics.count` is a number, you can select a comparator under the **Number** category.
 
-![A user choosing an operator based on the data type for the nested custom attribute][7]
+![A user choosing an operator based on the data type for the nested custom attribute]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### Filtering for Time data types
 
@@ -312,7 +312,7 @@ Use **Multi-Criteria Segmentation** to create a segment that matches multiple cr
 
 You can also use the **Copy Liquid for segment** feature to generate Liquid code for this segment and use that in a message. For example, let's say you have an array of account objects and a segment that targets customers with active taxable accounts. To get customers to contribute to the account goal associated with one of their active and taxable account, you'll want to create a message to nudge them. 
 
-![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
+![An example segment with the selected checkbox for Multi-Criteria Segmentation.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 When you select **Copy Liquid for segment**, Braze will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
 
@@ -361,7 +361,7 @@ In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.
 
 Search for your object or object array. In the **Attribute Name** column, select **Generate Schema**.
 
-![][8]
+![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
 {% alert tip %}
 It may take a few minutes for your schema to generate depending on how much data you've sent us.
@@ -377,7 +377,7 @@ For our `accounts` object array, you can see that within the object array, there
 - A number type with a key of `balance` (balance amount in the account)
 - A string type with a key of `type` (non-taxable or taxable account)
 
-![][10]{: style="max-width:50%" }
+![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
 Now that we've analyzed and built a representation of the data, let's build a segment.
 
@@ -387,15 +387,15 @@ Let's target customers who have a balance of less than 100 so that we can send t
 
 Create a segment and add the filter `Nested Custom Attribute`, then search for and select your object or object array. Here we've added the `accounts` object array. 
 
-![][11]
+![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
 Select the <i class="fas fa-plus"></i> plus button in the path field. This will bring up a representation of your object or object array. You can select any of the listed items and Braze will insert them into the path field for you. In this example, we need to get the balance. Select the balance and the path (in this case, `[].balance`) is automatically populated in the path field.
 
-![][12]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
 You can select **Validate** to verify that the contents of the path field is valid, then build the rest of the filter as needed. Here we've specified that the balance should be less than 100.
 
-![][13]
+![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
 That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. The nested object explorer in Braze generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
@@ -403,11 +403,11 @@ That's it! You just created a segment using a nested custom attribute, all witho
 
 You can trigger when a nested custom attribute object changes. This option isn't available for changes to object arrays. If you don't see an option to view the path explorer, check that you've generated a schema. 
 
-![][16]
+![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
 For example, in the following action-based campaign, you can add a new trigger action for **Change Custom Attribute Value** to target users who have changed their neighborhood office preferences. 
 
-![][15]
+![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### Personalization
 
@@ -415,7 +415,7 @@ Using the **Add Personalization** modal, you can also insert nested custom attri
 
 For example, in the personalization modal below, this inserts the nested custom attribute of a local neighborhood office based on a user's preferences.
 
-![][9]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
 Check that a schema has been generated if you don't see the option to insert nested custom attributes.
@@ -469,18 +469,3 @@ Any key that is sent consumes a data point. For example, this object initialized
 Updating a custom attribute object to `null` also consumes a data point.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
-[5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
-[6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
-[7]: {% image_buster /assets/img_archive/nca_comparator.png %}
-[8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
-[9]:{% image_buster /assets/img_archive/nca_personalization.png %}
-[10]: {% image_buster /assets/img_archive/nca_schema.png %}
-[11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
-[12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
-[13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
-[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
-[15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
-[16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
-[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}

@@ -42,7 +42,7 @@ Check out these additional resources to learn more about campaigns at Braze:
 
 Rather than sending out sporadic messages over multiple campaigns, Canvases create an ongoing fluid conversation with users. This is because a user's journey through a Canvas can split into different paths depending on their actions (or inaction) with your brand, allowing you to automatically advance users through a specific flow in real time.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 In this way, Canvases are great for casting a net to capture users who fall off the path to conversion and placing them in the most effective outreach initiatives.
 
@@ -60,7 +60,7 @@ Check out these additional resources to learn more about Canvas Flow:
 
 Messaging channels are the various communication channels through which you can engage with your customers and deliver targeted messages. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 The following table outlines our supported channels.
 
@@ -70,7 +70,7 @@ The following table outlines our supported channels.
 | [Mobile push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | Deliver messages directly to users' mobile devices as notifications.                                                                                   |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Deliver notifications to users' web browsers, even when they are not actively on your website.                                                         |
 | [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Display messages within your mobile app while users are actively using it.                                                                             |
-| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | Send text messages to users' mobile phones.                                                                                                            |
+| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/)*                   | Send text messages to users' mobile phones.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
 | [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)*       | Embed messages directly in your app or website. |
 | [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
@@ -85,5 +85,3 @@ The following table outlines our supported channels.
 For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/getting_started/channels.png %}
-[2]: {% image_buster /assets/img/getting_started/canvas_flow.png %}

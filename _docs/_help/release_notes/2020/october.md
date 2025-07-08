@@ -10,7 +10,7 @@ description: "This article contains release notes for October 2020."
 
 ## Report Builder
 
-![Campaign Comparison Example][5]{: style="max-width:80%;"}
+![Campaign Comparison Example]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 The [Report Builder]({{site.baseurl}}/report_builder) allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
 
@@ -20,7 +20,7 @@ The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 an
 
 ## Android 11 upgrade guide
 
-The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML in-app messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML in-app messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platforms/android/android_13/) to read more.
 
 ## Attribution partners - Click tracking guide
 
@@ -38,4 +38,3 @@ New documentation has been added describing the expected behavior of [exception 
 
 Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

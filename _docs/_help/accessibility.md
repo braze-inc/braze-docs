@@ -131,7 +131,7 @@ Finally, let's talk about the finer details—the things that help users not jus
 
 - **Clearly label links and buttons:** Make sure your [link](#links) and [button](#buttons) text clearly explains what happens next. It helps people using screen readers or navigating with a keyboard know what to expect.
 - **Go easy on symbols and emojis:** Special characters and emojis can make your content playful, but they can be confusing when read by screen readers. Use them sparingly, and make sure they don't replace clear, descriptive text.
-- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and the user, since it prevents your content from reaching your users.
+- **Test for truncation:** Always test your copy by [sending a test message]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to a device to make sure your text isn't truncated. If your message is being cut off, this hurts both you and your audience, since it prevents your content from reaching them.
 
 ### Buttons
 
@@ -189,14 +189,11 @@ High contrast helps buttons remain readable and clickable for everyone, includin
 
 #### Make buttons easy to tap
 
-Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded tap targets can be frustrating or impossible for users with motor disabilities to interact with.  
+Make sure your buttons (and links) are big enough and spaced far enough apart for users on mobile devices. Small or crowded [touch targets](#touch-targets) can be frustrating or impossible for users with motor disabilities to interact with.  
 
 ### Links
 
 Use links for navigation, like directing users to an external page.
-
-- Write descriptive link text
-- Avoid styling links like buttons
 
 #### Write descriptive link text
 
@@ -236,6 +233,20 @@ Use the right element for the action:
 ```
 
 {% endraw %}
+
+### Touch targets
+
+Touch targets are any part of your message that users tap to take action, like buttons, links, or icons. These elements need to be large enough and spaced far enough apart for people to tap them easily, especially on mobile devices.
+
+When touch targets are too small or too close together, it can be frustrating or impossible for users with mobility or dexterity challenges to interact with your message. Improving this can help reduce errors and create a smoother experience for everyone.
+
+Here’s what to keep in mind:
+- **Make it easy to tap.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines for [touch targets](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) and common mobile usability standards.
+- **Give each target breathing room.** If tap targets are too close together—like stacked links or tightly grouped buttons—it can be easy to miss or tap the wrong one. Add spacing or padding between elements to prevent that.
+- **Don’t rely on visuals alone.** Even small icons can be made more usable with extra padding, allowing them to meet minimum size requirements without altering the layout.
+- **Preview on mobile.** Test your message on different screen sizes and make sure interactive elements are easy to use.
+
+Improving touch targets is one of the most effective ways to make your message more accessible on mobile—and it’s good UX for everyone.
 
 ### Images
 
@@ -501,6 +512,10 @@ If you use any custom HTML in your messaging:
 ```
 {% endraw %}
 
+{% alert note %}
+When using the email drag-and-drop editor, the language value for the email can be set by going to the **Settings** tab and selecting the appropriate language value.
+{% endalert %}
+
 - Use [ARIA attributes](#aria-attributes) to give extra context. These attributes provide additional information to assistive technologies, helping to clarify the role, state, or properties of UI elements that may otherwise be unclear. 
 
 ### ARIA attributes
@@ -577,3 +592,43 @@ Emails created in the email drag-and-drop editor have presentational elements au
 <div aria-live="polite">Your preferences have been saved.</div>
 ```
 {% endraw %}
+
+## Automated accessibility testing
+
+To help you identify and fix accessibility issues early, Braze offers automated accessibility testing in the following areas:
+
+- [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) for emails
+- [Accessibility scanner]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) for messages created using our HTML editor (for example, HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [email opt-in pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page), and [email unsubscribe pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
+
+These tests check your message against the Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standard—a set of internationally recognized technical standards for accessible content. Any issues that can be detected automatically are flagged and categorized by severity to help you prioritize.
+
+{% alert note %}
+Inbox Vision works for both HTML and drag-and-drop emails. The scanner only runs on content built with the HTML editor.
+{% endalert %}
+
+### What automated testing can and can't catch
+
+Automated accessibility testing is a great starting point—but it can't catch everything. Some issues need a human touch to evaluate properly, especially when context or visual design plays a role in how users experience your email.
+
+You may see some issues marked as **Needs review**. These are cases where the checker can't tell for sure if something is a problem for accessibility. When that happens, we recommend reviewing it manually.
+
+Some examples of what automated tools can't reliably detect include:
+
+- If focus order of interactive elements follows a logical sequence
+- If content is fully operable with a keyboard, without requiring a mouse
+- If alt text meaningfully describes an image
+- If headings are used properly to organize content
+- If links and buttons are clearly labeled and easy to understand
+- If touch targets are large enough and spaced appropriately
+- If text on background images meets color contrast requirements
+- If instructions or labels are clear and helpful to all users
+
+These limitations aren't unique to Braze&#8212;they're common to all automated accessibility tools. Automated checks can't mimic every assistive technology, screen reader, or user need. That's why accessibility isn't a one-time check&#8212;it's a continuous practice.
+
+Even if your message passes every automated check, it’s still important to:
+
+- Review flagged issues carefully, especially those labeled as **Needs review**.
+- Test manually where possible, especially for layout and interaction patterns.
+- Use tools like screen readers, keyboard-only navigation, and browser zoom to simulate different access needs.
+
+By combining automated testing with thoughtful manual review, you'll catch more potential issues and create more inclusive, usable campaigns for every recipient.

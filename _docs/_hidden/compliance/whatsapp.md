@@ -16,7 +16,7 @@ _(Effective as of the Revision Date; subject to change)_
 The following additional terms apply in relation to Customer’s use of the WhatsApp Channel: 
 
 ## Applicable Third-Party Provider Terms
-Customer shall comply with any prerequisites, terms, and policies applicable to the WhatsApp Channel, including any terms required by WhatsApp, LLC and its group affiliates, as described in the Braze [WhatsApp setup][1] page.
+Customer shall comply with any prerequisites, terms, and policies applicable to the WhatsApp Channel, including any terms required by WhatsApp, LLC and its group affiliates, as described in the Braze [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) page.
 
 ## Webhook Use Exception Terms
 Customer may not use webhooks to trigger the sending of messages via the WhatsApp Channel unless it is for customer support purposes, such as human-assisted chat use cases and/or chatbot use cases. 
@@ -27,6 +27,3 @@ Without limiting the generality of any Customer obligations under the Agreement,
 {% alert note %}
 This page has been prepared and is incorporated into the customer’s agreement in the English language, which shall govern in all respects. Any translations of this page are for convenience and reference purposes only.
 {% endalert %}
-
-
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/

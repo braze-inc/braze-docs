@@ -32,7 +32,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 - **SMS and RCS variant testing**: Braze allows you to include both SMS and RCS variants within a single campaign, allowing you to compare the performance of each. You can add SMS and RCS variants during the first step of the message composition.
 
 {: start="6"} 
-6. Select an RCS-enabled [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
+6. Select an RCS-enabled [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/). When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
 - **SMS fallback**: Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your message will still deliver to your user and that you never miss that opportunity to connect with them.   
 
 {: start="7"}
@@ -49,7 +49,7 @@ If all of the messages in your campaign are going to be similar or have the same
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add an **SMS/MMS/RCS** Message step in the Canvas builder. 
 3. Name your step something clear and meaningful.
-4. Select an RCS-enabled [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to target users.
+4. Select an RCS-enabled [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/). When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to target users.
 - **SMS fallback**: Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your message will still deliver to your user and that you never miss that opportunity to connect with them.
 
 {: start="5"}
@@ -175,7 +175,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 ### Generating AI copy
 
-Need help creating engaging copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating engaging copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Message composer with an icon to open the AI copywriting assistant.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 

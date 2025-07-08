@@ -19,7 +19,7 @@ tool:
 
 ### Individual template
 
-![Dropdown menu with duplicate option.][8]{: style="float:right;max-width:15%;margin-left:15px;"}
+![Dropdown menu with duplicate option.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 To duplicate an individual template, select the <i class="fas fa-cog"></i> cog icon for the individual template and select **Duplicate** from the dropdown menu.
 <br><br>
@@ -38,11 +38,11 @@ Duplicated templates can be found by sorting the **Last Edited** column. By defa
 
 {% endraw %}
 
-![Three templates sorted by the time the templates were last edited, with a copied template at the top of the list.][9]
+![Three templates sorted by the time the templates were last edited, with a copied template at the top of the list.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## Archiving templates
 
-![Expanded settings dropdown menu that shows three options: "Archive", "Duplicate", and "Copy to workspace" with the "Archive" option highlighted.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
+![Expanded settings dropdown menu that shows three options: "Archive", "Duplicate", and "Copy to workspace" with the "Archive" option highlighted.]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 To archive an individual template, select the settings icon on the template grid screen and select **Archive**. When a template is archived, note the following different scenarios:
 
@@ -52,13 +52,9 @@ To archive an individual template, select the settings icon on the template grid
 
 To archive multiple templates, select the checkbox next to each template that you want to archive. After you've selected multiple templates, select **Archive**. You can find your archived templates by selecting **Archived** under **Show** in the template grid.
 
-![Saved Drop & Drop Email Templates section that shows two selected templates and toolbar with the option to archive.][11]{: style="max-width:60%;"}
+![Saved Drop & Drop Email Templates section that shows two selected templates and toolbar with the option to archive.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 Archiving is not currently available for [link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-[10]: {% image_buster /assets/img/template_archive_cog.png %}
-[11]: {% image_buster /assets/img/archive_multiple_template.png %}
-[8]: {% image_buster /assets/img/template_duplicate_cog.png %}
-[9]: {% image_buster /assets/img/duplicate_multiple_template.gif %}

@@ -60,15 +60,15 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 ## SMS
 
 #### Things to check
-- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, and similar) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) to confirm you have enough throughput to send in your desired time.
-- **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/#how-can-i-avoid-overages).
-- **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) to confirm that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
+- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, and similar) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/) to confirm you have enough throughput to send in your desired time.
+- **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/sms_faq/).
+- **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) to confirm that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
 
 #### Things to know
 - **SMS message defaulting**: SMS messages are normally defaulted to be sent from the short code in the sender pool.
 - **Alphanumeric sender ID**: Two-way messaging will no longer work if you use an alphanumeric sender ID; these are now one-way only.
 - **Updated throughput in the US**: Throughput has changed in the US with US [A2P 10DLC registration](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US). Note that we do not commit to any sending speed SLAs contractually due to multiple factors such as traffic congestion and carrier issues that may impact the actual delivery rates.
-- **Subscription group**: To launch an SMS campaign through Braze, a subscription group must be selected. As well, to adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/), Braze will never send SMS to users that have not [subscribed to the selected subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#how-to-check-a-users-sms-subscription-group).
+- **Subscription group**: To launch an SMS campaign through Braze, a subscription group must be selected. As well, to adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/), Braze will never send SMS to users that have not [subscribed to the selected subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#how-to-check-a-users-sms-subscription-group).
 
 ## WhatsApp
 
@@ -83,13 +83,14 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - **Priority:** If you’re launching multiple Banners, you can manually set the priority for how each banner is displayed.
 
 #### Things to know
-**Liquid personalization:** Liquid personalization refreshes at every session start.
-**Placement and Banner ratio:** Each Banner placement can be used in up to 10 campaigns in a workspace.  
-**Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
-**Limitations:**  Currently, the following features aren't supported: Canvas integration, API-triggered and action-based campaigns, Currents, Connected Content, promotion codes, user-controlled dismissals, and `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
-**Testing:** To display the test Banner, the device you’re using must be able to receive foreground push notifications.
-**Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) to log clicks when using custom HTML to define click actions, like links and buttons. Click actions are only logged automatically when using the pre-built components in the drag-and-drop editor.
-**Requesting Placements:** Up to 10 placements can be returned to the SDK per session. Each placement will include the highest priority Banner a user is eligible for.
+- **Liquid personalization:** Liquid personalization refreshes at every session start.
+- **Placement and Banner ratio:** Each Banner placement can be used in up to 10 campaigns in a workspace.  
+- **Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
+- **Limitations:**  Currently, the following features aren't supported: Canvas integration, API-triggered and action-based campaigns, Currents, Connected Content, promotion codes, user-controlled dismissals, and `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+- **Testing:** To display the test Banner, the device you’re using must be able to receive foreground push notifications.
+- **Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) to log clicks when using custom HTML to define click actions, like links and buttons. Click actions are only logged automatically when using the pre-built components in the drag-and-drop editor.
+- **Requesting Placements:** Up to 10 placements can be returned to the SDK per session. Each placement will include the highest priority Banner a user is eligible for.
+
 ## Content Cards
 
 #### Things to check

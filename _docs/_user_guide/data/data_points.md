@@ -104,11 +104,11 @@ The following tables are intended to be illustrative. For exact naming conventio
 | Install attribution | Ad |
 | Miscellaneous | Random bucket number |
 | Canvas messages received | Canvas messages received |
+| Message engagement | All engagement events (such as opens, clicks, impressions, and dismissals) |
 | Twitter | Followers |
 | Twitter | Following |
 | Twitter | Number of tweets |
 | Facebook | Likes |
-
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}

@@ -18,7 +18,7 @@ description: "This page covers how to welcome new users, guide them through bene
 
 When creating a drag-and-drop in-app message, select **Onboarding flow** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
-![The in-app message editor with the onboarding flow template.][img1]
+![The in-app message editor with the onboarding flow template.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### Step 2: Set up your message styles
 
@@ -32,12 +32,10 @@ Check that your messages are connected in sequential order so that users move th
 
 ### Step 4: Style your message
 
-Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components][3].
+Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analyzing the results
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

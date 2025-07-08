@@ -38,13 +38,13 @@ Let’s adjust the Canvas details to reflect our goal.
 3. Update the description to explain that this Canvas contains perks and promotions.
 4. Add the tag **Lapsing/Retention** so that we can filter for this Canvas on the Canvas home page.
 
-!["Set Up Canvas Details" step with Canvas name of "Lapsed User - Visit App" and a brief Canvas description][1]
+!["Set Up Canvas Details" step with Canvas name of "Lapsed User - Visit App" and a brief Canvas description]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### Step 2: Assign your conversion events
 
 Update **Primary Conversion Event - A** to target users from our app (MovieCanon), and leave **Primary Conversion Event - B** as the default of making any purchase.
 
-!["Assign Conversion Events" section with a primary conversion even of a user starting a session in a specific app.][2]
+!["Assign Conversion Events" section with a primary conversion even of a user starting a session in a specific app.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### Step 3: Tailor the entry schedule
 
@@ -55,13 +55,13 @@ We’ll make two adjustments to this step:
 1. Select a start date and time.
 2. Select ending parameters of **On a specific date** and a date two months out. Let’s say we have another lapsing user Canvas we want to start after this one.
 
-!["Entry Schedule" step for a scheduled Canvas that enters users at a designated time.][3]
+!["Entry Schedule" step for a scheduled Canvas that enters users at a designated time.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### Step 4: Select our target audience
 
 We’ll keep the default settings for the entry audience, which is set to users who haven’t used our app in over 30 days. We’ll also keep the default entry controls so that users can re-enter the Canvas after four weeks. This means every time a user doesn’t visit our app for over 30 days straight, they’ll be entered into the Canvas.
 
-!["Target Audience" step targeting users who last used the apps in 30 days.][4]
+!["Target Audience" step targeting users who last used the apps in 30 days.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### Step 5: Select your send settings
 
@@ -73,7 +73,7 @@ We’ll keep most of the default subscription settings:
 
 The only setting we’ll change is what to do when a message triggers during quiet hours. Instead of cancelling the message, select **Send at next available time** so that our users don’t miss out on any promotions.
 
-!["Quiet Hours" section with a start time of 12 am and end time of 8 am.][5]
+!["Quiet Hours" section with a start time of 12 am and end time of 8 am.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### Step 6: Customize your Canvas
 
@@ -81,12 +81,12 @@ Now, we’ll build our Canvas by customizing the templated steps:
 
 1. Customize the first email that will send to all users who haven’t visited our app in over 30 days. For our use case, we’ll customize an email that tells users they’ll unlock new perks when they visit our app today. 
 
-![Canvas Message step for an email that tells users to unlock new perks when they visit today.][6]
+![Canvas Message step for an email that tells users to unlock new perks when they visit today.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2. Customize the action path component called “Start Session?” by selecting our app for the **Started Session** path. 
 
-![Action path for sessions that are started in a specific app.][7]
+![Action path for sessions that are started in a specific app.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3. Keep the default for the Decision Split step called “Sessions?”, which defines the “>1 Session” group as users who’ve used our app more than once in the last calendar day.
@@ -95,7 +95,7 @@ Now, we’ll build our Canvas by customizing the templated steps:
 6. Keep the default for the [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) component called “A/B Test”. This will randomly send one of two promotions (that we will customize in the next step) to users who’ve had fewer than two sessions.
 7. Customize the two promotions that will send to users as part of the Experiment Path. In our use case, we’ll make one a 20% promotion for a three-month subscription and the other a 10% promotion for a one-month subscription.
 
-![Canvas steps with branching paths based on how many sessions a user had.][8]{: style="max-width:70%;"}
+![Canvas steps with branching paths based on how many sessions a user had.]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
 
 ### Step 7: Test and launch the Canvas
 
@@ -105,11 +105,3 @@ After testing and reviewing our Canvas to make sure it works as expected, we’l
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/lapsing_user_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/lapsing_user_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/lapsing_user_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/lapsing_user_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/lapsing_user_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}

@@ -38,7 +38,7 @@ The sending of additional custom attributes will increase your data point usage.
 
 From the Adobe **Settings** page, select **Destinations** under **Collections**. From there, locate the **Braze** tile and select **Configure**. 
 
-![][1]
+![]({% image_buster /assets/img/adobe/braze-destination-configure.png %})
 
 {% alert note %}
 If a connection with Braze already exists, you'll see an **Activate** button on the destination card. For more information about the difference between activate and configure, refer to the catalog section of the Adobe destination workspace [documentation](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destinations-interface/destinations-workspace.html?lang=en#catalog).
@@ -48,7 +48,7 @@ If a connection with Braze already exists, you'll see an **Activate** button on 
 
 In the **Account** step, provide your Braze API key and select **Connect to destination**.
 
-![][3]{: style="max-width:60%"}
+![]({% image_buster /assets/img/adobe/braze-destination-account.png %}){: style="max-width:60%"}
 
 ### Step 3: Authentication
 
@@ -58,7 +58,7 @@ Next, in the  **Authentication** step, enter your Braze connection details:
 - **Endpoint instance**: Enter your Braze endpoint instance.
 - **Marketing use case**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or create your own marketing use case. To read more about Adobe marketing use cases, visit [Data governance in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en#destinations).
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 
 ### Step 4: Create destination
 Select **Create destination**. Your destination has been created. You can select **Save & Exit** to activate segments later or **Next** to continue the workflow and select segments to activate. 
@@ -78,12 +78,12 @@ The following list highlights the general steps required to activate a segment. 
 
 To correctly send your audience data from the Adobe Experience Platform to Braze, you must complete the field mapping step. Mapping creates a link between the Adobe Experience data model fields and the corresponding Braze platform fields.
 
-1. In the mapping step, select **Add new mapping**.<br>![][5]{: style="max-width:50%;"}<br><br>
-2. In the source field section, select the arrow button next to the empty field to open the select source field window.<br>![][6]<br><br>
-3. In the window, select Adobe attributes to map to your Braze attributes. <br>![][7]{: style="max-width:70%;"}<br><br>Next, select the identity namespace. This option is used to map a platform identity namespace to a Braze namespace.<br>![][8]{: style="max-width:80%;"}<br> Choose your source fields, then select **Select**.<br><br>
-4. In the target field section, select the mapping icon beside the field.<br>![][9]{: style="max-width:90%;"} <br><br>
-5. In the select target field window, you can choose between three categories of target fields:<br><br>• **Select identity namespace**: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• **Select custom attributes**: Use this option to map Adobe XDM attributes to custom Braze attributes that you defined in your Braze account. <br><br>![][10]{: style="max-width:60%;"}<br><br>**You can also use this option to rename existing XDM attributes into Braze.** For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, then select **Select**.<br><br>
-6. Your field mapping should appear in the list.<br>![][11]<br><br>
+1. In the mapping step, select **Add new mapping**.<br>![]({% image_buster /assets/img/adobe/braze-destination-mapping.png %}){: style="max-width:50%;"}<br><br>
+2. In the source field section, select the arrow button next to the empty field to open the select source field window.<br>![]({% image_buster /assets/img/adobe/braze-destination-mapping-source.png %})<br><br>
+3. In the window, select Adobe attributes to map to your Braze attributes. <br>![]({% image_buster /assets/img/adobe/braze-destination-mapping-attributes.png %}){: style="max-width:70%;"}<br><br>Next, select the identity namespace. This option is used to map a platform identity namespace to a Braze namespace.<br>![]({% image_buster /assets/img/adobe/braze-destination-mapping-namespaces.png %}){: style="max-width:80%;"}<br> Choose your source fields, then select **Select**.<br><br>
+4. In the target field section, select the mapping icon beside the field.<br>![]({% image_buster /assets/img/adobe/braze-destination-mapping-target.png %}){: style="max-width:90%;"} <br><br>
+5. In the select target field window, you can choose between three categories of target fields:<br><br>• **Select identity namespace**: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• **Select custom attributes**: Use this option to map Adobe XDM attributes to custom Braze attributes that you defined in your Braze account. <br><br>![]({% image_buster /assets/img/adobe/braze-destination-mapping-target-fields.png %}){: style="max-width:60%;"}<br><br>**You can also use this option to rename existing XDM attributes into Braze.** For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, then select **Select**.<br><br>
+6. Your field mapping should appear in the list.<br>![]({% image_buster /assets/img/adobe/braze-destination-mapping-complete.png %})<br><br>
 7. To add more mappings, repeat steps 1 through 6, as necessary. 
 
 ## Use case
@@ -98,7 +98,7 @@ Let's say your XDM profile schema and your Braze instance contains the following
 
 The correct mapping would look like this:
 
-![Destination mappings: IdentityMap:IDFA mapped to IdentityMap:external_id, IdentityMap:GAID mapped to IdentityMap:external_id, IdentityMap:Email mapped to IdentityMap:external_id, xdm:mobilePhone.number mapped to CustomAttribute:PhoneNumber, xdm:person.name.lastName mapped to CustomAtrribute:LastName, xdm:person.name.firstName mapped to CustomAttribute:FirstName][12]
+![Destination mappings: IdentityMap:IDFA mapped to IdentityMap:external_id, IdentityMap:GAID mapped to IdentityMap:external_id, IdentityMap:Email mapped to IdentityMap:external_id, xdm:mobilePhone.number mapped to CustomAttribute:PhoneNumber, xdm:person.name.lastName mapped to CustomAtrribute:LastName, xdm:person.name.firstName mapped to CustomAttribute:FirstName]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
 
 ## Exported data
 To verify if data has been exported successfully to Braze, check your Braze account. Adobe Experience Platform segments are exported to Braze under the `AdobeExperiencePlatformSegments` attribute.
@@ -106,14 +106,3 @@ To verify if data has been exported successfully to Braze, check your Braze acco
 ## Data usage and governance
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. See [Data governance in real-time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en) for detailed information on how the Adobe Experience Platform enforces data governance. 
 
-[1]: {% image_buster /assets/img/adobe/braze-destination-configure.png %} 
-[3]: {% image_buster /assets/img/adobe/braze-destination-account.png %}
-[4]: {% image_buster /assets/img/adobe/braze-destination-authentication.png %}
-[5]: {% image_buster /assets/img/adobe/braze-destination-mapping.png %} 
-[6]: {% image_buster /assets/img/adobe/braze-destination-mapping-source.png %} 
-[7]: {% image_buster /assets/img/adobe/braze-destination-mapping-attributes.png %} 
-[8]: {% image_buster /assets/img/adobe/braze-destination-mapping-namespaces.png %} 
-[9]: {% image_buster /assets/img/adobe/braze-destination-mapping-target.png %} 
-[10]: {% image_buster /assets/img/adobe/braze-destination-mapping-target-fields.png %} 
-[11]: {% image_buster /assets/img/adobe/braze-destination-mapping-complete.png %} 
-[12]: {% image_buster /assets/img/adobe/braze-destination-mapping-example.png %} 
