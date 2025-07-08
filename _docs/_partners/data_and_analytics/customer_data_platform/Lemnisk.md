@@ -16,7 +16,7 @@ _This integration is maintained by Lemnisk._
 
 ## About the integration
 
-Lemnisk and Braze integration will allow brands and enterprises unlock the full potential of Braze by acting as a CDP-led intelligence layer that unifies user data across platforms in real time, and sending the user's information and behviours collected to Braze in real-time. Lemnisk delivers enriched customer profiles—blending behavioral signals and personal attributes—directly into Braze, enabling brands to personalize messaging from Braze with deeper context.
+Lemnisk and Braze integration will allow brands and enterprises unlock the full potential of Braze by acting as a CDP-led intelligence layer that unifies user data across platforms in real time, and sending the user's information and behaviours collected to Braze in real-time. Lemnisk delivers enriched customer profiles—blending behavioral signals and personal attributes—directly into Braze, enabling brands to personalize messaging from Braze with deeper context.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ Lemnisk and Braze integration will allow brands and enterprises unlock the full 
 1. Once the configuration is saved successfully, you'll be taken to the 'Test API' Section.
 2. Give test values of the API parameters in the JSON tree view, and click on 'Test Configuration'.
 3. You'll see a success response from Braze if the credentials and API definitions are correct.<br><br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Test%20Ext%20API.png" alt="img1" width="80%"><br><br>
-4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from Test API trigger.<br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Braze%20COV.png" alt="img1" width="80%">
+4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from the Test API trigger.<br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Braze%20COV.png" alt="img1" width="80%">
 
 ### Step 3: Creating Engagements to trigger User Events to Braze
 
@@ -50,7 +50,7 @@ Having verified the configuration to with Braze, we're almost done. All we have 
 1. Create a Segment on Lemnisk. Say for example, as soon as users submit a lead form, send that information to Braze.
 2. On that Segment, navigate to External API > 'Add Engagement'.
 3. In the Engagement Creation screen, provide the basic details, and select our recently set up configuration (Braze Track Users) as the API.
-4. In 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagment level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. <br><br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20create%20an%20Engagement.png" alt="img1" width="80%">
+4. In the 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagement level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. <br><br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20create%20an%20Engagement.png" alt="img1" width="80%">
 5. Provide appropriate personalisation variables to those inputs (variables to populate the lead form values) and click on 'Save'.
 6. Activate the Engagement.
 
