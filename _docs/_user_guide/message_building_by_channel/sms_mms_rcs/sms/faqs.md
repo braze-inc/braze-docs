@@ -85,7 +85,7 @@ Before sending SMS messages containing URLs to users in certain countries (for e
 
 ### What happens if multiple users have the same phone number?
 
-When multiple user profiles that share one phone number (enabled for SMS) are eligible for an action-based campaign or Canvas component at the same time, triggered by the event of an inbound SMS, Braze will de-dupe users on the Canvas component level. This will prevent users from receiving more than one SMS text for a Canvas component, even if multiple users share the same phone number. 
+When multiple user profiles that share one phone number (enabled for SMS) are eligible for an action-based campaign or Canvas component at the same time, triggered by the event of an inbound SMS, Braze will dedupe users on the Canvas component level. This will prevent users from receiving more than one SMS text for a Canvas component, even if multiple users share the same phone number. 
 
 {% alert note %} 
 Braze doesn't dedupe by phone number for scheduled Canvases.
