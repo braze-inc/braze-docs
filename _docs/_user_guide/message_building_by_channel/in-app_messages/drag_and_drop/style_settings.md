@@ -15,9 +15,7 @@ page_order: 3
 
 You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. For example, you may want to customize the font of all the text or the color of all links in your message.
 
-The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width.
-
-If both page level and message level styles are attempted to be applied, the page level style will override the message level styling options.
+The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width. If you try to apply both page-level and message-level styles, the page-level style will override the message-level style.
 
 For an easier design experience, we recommend setting up message-level styles before you customize styles at the block level.
 
