@@ -51,7 +51,7 @@ Having verified the configuration to with Braze, we're almost done. All we have 
 2. On that Segment, navigate to External API > 'Add Engagement'.
 3. In the Engagement Creation screen, provide the basic details, and select our recently set up configuration (Braze Track Users) as the API.
 4. In 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagment level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. <br><br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20create%20an%20Engagement.png" alt="img1" width="80%">
-5. Provide appropriate personalisation variables to those inputs (variables to populate the lead form values) and click on 'Save Engagement'.
+5. Provide appropriate personalisation variables to those inputs (variables to populate the lead form values) and click on 'Save'.
 6. Activate the Engagement.
 
 <div style="border: 1px solid #4CAF50; background-color: #e8f5e9; padding: 10px; border-radius: 6px; color: #2e7d32;">
