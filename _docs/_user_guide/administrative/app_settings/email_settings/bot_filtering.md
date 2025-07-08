@@ -18,9 +18,9 @@ Starting July 9, 2025, all new workspaces created will have the bot filtering se
 
 ## About bot clicks
 
-Braze has a proprietary detection system that employs multiple inputs to identify suspected bot clicks, also referred to as non-human interactions (NHI). Bot clicks can distort your email engagement metrics by artificially inflating click rates. This approach allows us to differentiate between genuine human interactions and suspected bot activity to maintain the integrity of click engagement metrics and insights.
+Braze has a detection system that employs multiple inputs to identify suspected bot clicks, also referred to as non-human interactions (NHI). Bot clicks can distort your email engagement metrics by artificially inflating click rates. This approach allows us to differentiate between genuine human interactions and suspected bot activity to maintain the integrity of click engagement metrics and insights.
 
-### Metrics affected by bot clicks
+## Metrics affected by bot clicks
 
 The following Braze metrics can be affected by bot clicks:
 
@@ -31,7 +31,7 @@ The following Braze metrics can be affected by bot clicks:
 - Heatmap
 - Certain segment filters
 
-[Braze Intelligence features]({{site.baseurl}}/user_guide/brazeai/intelligence) leveraging click data on top of our proprietary models may be impacted. Turning on the setting has the potential to disrupt our models temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
+[Braze Intelligence features]({{site.baseurl}}/user_guide/brazeai/intelligence) that leverage click data on top of our detection systems may be impacted. Turning on the setting has the potential to disrupt our detection systems temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
 
 - Intelligent Selection
 - Intelligent Channel
@@ -75,7 +75,7 @@ If you turn this setting on and later turn it off, Braze can't restore any previ
 Braze will send the fields `is_suspected_bot_click` and `suspected_bot_click_reason` in Currents and Snowflake for an Email Click event.
 
 | Field | Data type | Description |
-| `is_suspected_bot_click` | Boolean | Indicates that this is a suspected bot click. This will send as null values until you turn on the Bot Filtering workspace setting. This approach allows you to programmatically understand when the filtering of suspected bot clicks has started in your workspace so you can accurately compare that against the data in Currents and Snowflake. |
+| `is_suspected_bot_click` | Boolean | Indicates that this is a suspected bot click. This will send as null values until you turn on the **Remove bots clicks** workspace setting. This approach allows you to programmatically understand when the filtering of suspected bot clicks has started in your workspace so you can accurately compare that against the data in Currents and Snowflake. |
 | `suspected_bot_click_reason` | Array | Indicates the reason why this is a suspected bot click. This will populate with values, such as `user_agent` and `ip_address`, even if the bot filtering workspace setting is disabled. This field can provide insight into the potential impact of turning on this setting by comparing the number of clicks deriving from suspected bot clicks to human interactions. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
