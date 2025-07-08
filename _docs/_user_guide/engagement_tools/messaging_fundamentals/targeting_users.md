@@ -44,14 +44,13 @@ You can also target users of one or more previously created segments that also f
 
 You can deliver a campaign message or Canvas step to specific apps, such as sending an in-app message or push notification to only Android or iOS apps.
 
-However, remember that it’s possible for one user to use multiple apps. The “Has app” filter identifies all users who have the selected app, but doesn't control which apps receive messages. For example, if you apply a segment filter where “Has app” is set to Android, any of those users who also have the iOS app will can also receive the message on their iOS app.
+However, remember that it’s possible for one user to use multiple apps. The “Has app” filter identifies all users who have the selected app, but doesn't control which apps receive messages. For example, if you apply a segment filter where “Has app” is set to Android, any users who also have the iOS app will also receive the message on their iOS app.
 
 ![A filter for users who have the app "Hello, World (Android)".]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
 
 Let's say you want to send an in-app message only to Android apps.
 
-1. Create a segment and set **Apps and websites targeted** to **Users from specific apps**, then select 
-your Android app.
+1. Create a segment and set **Apps and websites targeted** to **Users from specific apps**, then select your Android app.
 
 ![A segment targeting users from a specific app, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
 
