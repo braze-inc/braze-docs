@@ -190,7 +190,7 @@ There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/
 
 ### Additional failure insights in Braze Currents
 
-To increase transparency into webhook-related issues, Braze now streams detailed webhook failure events to Currents and Snowflake Data Sharing. These events include failed webhook requests (e.g., HTTP 4xx/5xx responses), providing more observability into how webhook issues may impact message delivery.
+To increase transparency into webhook-related issues, Braze streams detailed webhook failure events to Currents and Snowflake Data Sharing. These events include failed webhook requests (such as HTTP `4xx` or `5xx` responses), providing more observability into how webhook issues may impact message delivery.
 
 {% alert note %}
 Connected Content requests are not included in these webhook failure events.
