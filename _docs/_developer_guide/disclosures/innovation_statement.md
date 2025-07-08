@@ -13,9 +13,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Innovation Statement
 
-{% alert note %}
-This page has been prepared and is incorporated into the customer’s agreement in the English language, which shall govern in all respects. Any translations of this page are for convenience and reference purposes only.
-{% endalert %}
+{% multi_lang_include braze_legal/english_language_governance.md %}
 
 {% tabs %}
 {% tab English %}
