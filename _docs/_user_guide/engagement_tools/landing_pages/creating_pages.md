@@ -69,6 +69,10 @@ You can use these blocks to add content and customize the layout of your landing
 | Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+##### Span text
+
+{% multi_lang_include span_text.md %}
+
 #### Form blocks
 
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
