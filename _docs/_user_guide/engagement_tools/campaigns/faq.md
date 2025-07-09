@@ -167,7 +167,7 @@ Action-based delivery campaigns or event-triggered campaigns are very effective 
 
 API-triggered and server-triggered campaigns are ideal for handling more advanced transactions, allowing you to trigger the delivery of campaign content from your own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real time.
 
-| Pros | Cons | 
+| Benefits | Considerations | 
 | ---- | ---- |
 | • Does not consume data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
