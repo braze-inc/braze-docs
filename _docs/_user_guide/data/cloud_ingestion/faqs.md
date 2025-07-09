@@ -142,7 +142,7 @@ CDI uses `UPDATED_AT` to decide what data is new. After a future `UPDATED_AT` is
 
 ## Why doesn't "Rows Synced" match the number in my warehouse?
 
-CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check out [this illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) to see how it works. At the beginning of a sync run, CDI queries your warehouse to get all records with `UPDATED_AT` later than the previously processed value. Any record picked up at the time when the query executes will be synced into Braze. Here are common cases when a record might not be synced:
+CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check out [this illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) to see how it works. At the beginning of a sync run, CDI queries your warehouse to get all records with `UPDATED_AT` equal to or later than the previously processed UPDATED_AT timestamp. Any record picked up at the time when the query executes will be synced into Braze. Here are common cases when a record might not be synced:
 
 - You're adding records to the table with an `UPDATED_AT` value that has already been processed.
 - You're updating record values after they have been processed by a sync, but leaving `UPDATED_AT` unchanged. 

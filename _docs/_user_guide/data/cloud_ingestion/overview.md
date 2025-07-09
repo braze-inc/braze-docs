@@ -47,7 +47,7 @@ User data can be updated by external ID, user alias, Braze ID, email, or phone n
 
 ## What gets synced
 
-Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is later than the last synced row will be selected and pulled into Braze.
+Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last UPDATED_AT timestamp from the last successful sync job will be selected and pulled into Braze.
 
 In your data warehouse, add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
 
@@ -57,7 +57,7 @@ In your data warehouse, add the following users and attributes to your table, se
 | `2022-07-19 09:07:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
 
-During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later than the most recent timestamp will be synced to the Braze user profiles. Fields will be updated or added, so you do not need to sync the full user profile each time. After the sync, users will reflect the new updates:
+During the next scheduled sync, all rows with a `UPDATED_AT` timestamp equal to or later than the most recent timestamp will be synced to the Braze user profiles. Fields will be updated or added, so you do not need to sync the full user profile each time. After the sync, users will reflect the new updates:
 
 ```json
 {
@@ -349,7 +349,7 @@ Braze Cloud Data Ingestion counts toward the available rate limit, so if you're 
 
 ### Only write new or updated attributes to minimize consumption
 
-Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is later than the last synced row will be selected and pulled into Braze, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
+Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last UPDATED_AT timestamp from the last successful sync job will be selected and pulled into Braze, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
 Data point consumption is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables.
 
@@ -359,7 +359,7 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 
 ### Make sure the `UPDATED_AT` time isn't the same time as your sync
 
-Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as your previous sync time. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
+Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as the last UPDATED_AT timestamp of the previous successful sync job. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
 
 ### Separate `EXTERNAL_ID` from `PAYLOAD` column
 
