@@ -10,7 +10,7 @@ channel: push
 
 # Push primer in-app messages
 
-![Push primer in-app message for streaming app. The notification reads "Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Push primer in-app message for streaming app. The notification reads "Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > You only get one chance to ask users for push permission, so optimizing your push registration is crucial to maximize the reach of your push messages. To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
 
@@ -18,60 +18,67 @@ To create a push primer in-app message in Braze, you can use the button on-click
 
 ## Prerequisites
 
-This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions. Note that some of these SDKs may not be released yet. Visit the following links to check the current version:
+This feature requires [button on-click behavior](#button-actions), which is supported in the following minimum versions or later:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-### Notes for development teams
+Additionally, note the following platform-specific details:
 
-#### Android
+{% tabs local %}
+{% tab android %}
+|OS version|Additional information|
+|----------|----------------------|
+| **Android 12 and earlier** | Implementing push primers is not recommended because push is opted-in by default. |
+| **Android 13+** | If a user denies your push permission prompt twice, Android blocks further prompts—including Braze push primer messages. To grant permission after this, users must manually enable push for your app in their device settings. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
 
-- **Android 12 and under:** Implementing push primers is not recommended because push is opted-in by default.
-- **Android 13 and above:** If you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again.
+{% tab swift %}
+### General information
 
-#### iOS
-
-- The iOS prompt can be displayed only once per install, enforced by the operating system.
+- The push prompt can be displayed only once per install, enforced by the operating system.
 - The prompt will not display if the app's push setting is explicitly on or off, it will only display for users with [provisional authorization](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
-  - If we find the app's push setting is on, Braze does not show the in-app message as the user is already opted-in.
-  - If the app's push setting is off, you should forward the user to the app's notification settings in the settings app.
+  - **App's push setting is on:** Braze will not show the in-app message, as the user has already opted-in.
+  - **App's push setting is off:** You'll need to redirect the user to your app's push notification settings within the device settings.
 
-##### Manual code removal
+### Manual code removal
 
 The in-app message that you set up using this tutorial will call the native push prompt code automatically when a user clicks on the in-app message button. To avoid requesting push notification permission twice, or at the wrong time, a developer should modify any existing push notification integration they implemented to make sure that your in-app message is the first push notification primer your users see.
 
-The developer should review their implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, look for and remove references to the following code:
+Your development team should review your implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, you would remove references to the following code:
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
 ```objc
 requestAuthorizationWithOptions
 ```
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 ```swift
 requestAuthorization
 ```
-{% endtab %}
-{% tab JavaScript %}
+{% endsubtab %}
+{% subtab JavaScript %}
 ```javascript
 braze.requestPushPermission()
 // or
 appboy.registerAppboyPushMessages()
 ```
-{% endtab %}
-{% tab Java %}
+{% endsubtab %}
+{% subtab Java %}
 ```java
 android.permission.POST_NOTIFICATIONS
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
 ## Step 1: Create an in-app message
 
-[Create an in-app message][2] as you usually would.
+First, [create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), then select your message type and layout.
 
-Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a fullscreen in-app message, an image is required. 
+To ensure you have enough space for both your message and buttons, use a fullscreen or modal message layout. If you choose fullscreen, note that an image is required.
 
 ## Step 2: Build your message
 
@@ -79,13 +86,17 @@ Now it's time to add your copy! Remember that a push primer is supposed to prime
 
 For example, a news app might use the following push primer:
 
-> Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
+```plaintext
+Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
+```
 
 While a streaming app might use the following:
 
-> Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
+```plaintext
+Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
+```
 
-For best practices and additional resources, refer to [Creating custom opt-in prompts][3].
+For best practices and additional resources, refer to [Creating custom opt-in prompts]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 ## Step 3: Specify button behavior {#button-actions}
 
@@ -96,7 +107,7 @@ After you've added button copy, specify the on-click behavior for each button:
 - **Button 1:** Set this to "Close Message". This is your secondary button, or the "Not now" option.
 - **Button 2:** Set this to "Request Push Permission". This is your primary button, or the "Allow notifications" option.
 
-![In-app message composer with two buttons: "Allow notifications" and "Not now".][4]
+![In-app message composer with two buttons: "Allow notifications" and "Not now".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## Step 4: Schedule delivery
 
@@ -104,7 +115,7 @@ To set your push primer to send at a relevant time, you must schedule your in-ap
 
 While the ideal time will vary, Braze suggests waiting until a user completes some sort of [high-value action](https://www.braze.com/resources/videos/mapping-high-value-actions), indicating that they're starting to see value in your app or site, or when there's a compelling need that push notifications can address (such as after they've placed an order and you want to offer them shipping tracking information). This way, the prompt is beneficial to the customer rather than only to your brand.
 
-![Action-based delivery settings to send to users who performed the custom event of "Add to Watch List".][5]
+![Action-based delivery settings to send to users who performed the custom event of "Add to Watch List".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## Step 5: Target users
 
@@ -116,8 +127,3 @@ Beyond that, you can decide what additional segments you feel are most appropria
 
 Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) surrounding push primers.
 
-[1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[4]: {% image_buster /assets/img_archive/push_primer_button_behavior.png %}
-[5]: {% image_buster /assets/img_archive/push_primer_trigger.png %}

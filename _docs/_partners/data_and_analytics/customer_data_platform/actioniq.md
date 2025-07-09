@@ -9,7 +9,7 @@ search_tag: ActionIQ
 
 # ActionIQ
 
-> [ActionIQ][2] is a customer data platform for enterprise brands that gives marketers easy and secure ways to activate data anywhere in the customer experience. ActionIQ’s unique composable architecture means data can stay securely where it lives, and marketing teams only use the tools they need.
+> [ActionIQ](https://www.actioniq.com/) is a customer data platform for enterprise brands that gives marketers easy and secure ways to activate data anywhere in the customer experience. ActionIQ’s unique composable architecture means data can stay securely where it lives, and marketing teams only use the tools they need.
 
 _This integration is maintained by ActionIQ._
 
@@ -27,7 +27,7 @@ The Braze and ActionIQ integration allow brands to sync and map their ActionIQ d
 | ----------- | ----------- |
 | ActionIQ account | An ActionIQ account is required to take advantage of this integration. |
 | Braze REST API key | A Braze REST API key with the required permissions for the respective integration. See the respective Requirements section for more details. <br><br>This key can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integrations
@@ -86,5 +86,3 @@ The following values must be sent in your ActionIQ export to Braze:
 - Campaign ID
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://www.actioniq.com/

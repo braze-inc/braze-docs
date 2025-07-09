@@ -24,11 +24,11 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 1. Go to your catalog and select the **Settings** tab.
 2. Select the **Back in stock** toggle.
 3. If the global back-in-stock settings have not been configured, you will be prompted to set up the custom events and properties that will be used to trigger back-in-stock notifications:
-    <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
+    <br> ![Catalog settings drawer.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
     - **Fallback Catalog** This is the catalog that will be used for the back-in-stock subscription, if there is no `catalog_name` property present on the custom event.
     - **Custom event for subscriptions** is the Braze custom event that will be used to subscribe a user for back-in-stock notifications. When this event occurs, the user that performed the event will be subscribed.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
-    - **Item ID event property** is the property on the above custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an Item ID, that is present in a catalog. The custom event should also contain a `catalog_name` property, to specify which catalog this item is in.
+    - **Item ID event property** is the property on the above custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an item ID (`id`) that is present in a catalog. The item ID must be sent as a string so that it matches the `id` data type stored in the target catalog. The custom event should also contain a `catalog_name` property, to specify which catalog this item is in.
     
     - A sample custom event would look like
     ```json
@@ -59,7 +59,7 @@ Back-in-stock and price-drop triggers use the same event to subscribe the user t
 6. Set the **Inventory field in catalog**. This catalog field will be used to determine if the item is out of stock. The field must be number type.
 7. Select **Save settings**.
 
-![Catalog settings that show the back-in-stock feature turned on. The notification rules are to notify a thousand users every ten minutes.][1]
+![Catalog settings that show the back-in-stock feature turned on. The notification rules are to notify a thousand users every ten minutes.]({% image_buster /assets/img/back_in_stock_settings.png %})
 
 {% alert important %}
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
@@ -90,5 +90,3 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 over 10 minutes.
 - Braze will process at most 10 item updates over one minute. If you update 11 items in one minute, only the first 10 can trigger a back-in-stock notification.
 
-[1]: {% image_buster /assets/img/back_in_stock_settings.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

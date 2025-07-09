@@ -58,7 +58,7 @@ After you create your internal group, you can add test users as members of that 
 Similar to sending a preview test of a message, the Content Test Group saves you time and allows you to launch tests to a pre-defined list of Braze users simultaneously. This is available for push, in-app messages, SMS, email, and Content Cards in Braze. Only groups tagged as Content Test Groups will be available in the preview section of a message.
 
 {% alert note %}
-[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) test messages can only be sent to valid phone numbers in the database.
+[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) test messages can only be sent to valid phone numbers in the database.
 {% endalert %}
 
 You can select individual Braze users or as many internal groups to send the message to. If your message includes any Liquid or other dynamic personalization, Braze will use the attributes available for each user to personalize the message contents. For users who have no attributes, Braze will use the default value set.

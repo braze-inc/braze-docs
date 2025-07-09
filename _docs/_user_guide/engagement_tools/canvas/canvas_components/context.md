@@ -19,7 +19,7 @@ Context steps are currently in early access. Contact your Braze account manager 
 
 ## How it works
 
-![A Context step as the first step of a Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![A Context step as the first step of a Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Context steps allows you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
@@ -98,7 +98,7 @@ For example, let's say you want to notify passengers about their VIP lounge acce
 
 Users will enter the Canvas when they purchase a plane ticket. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
 
-![Context variable set up to track if a passenger qualifies for VIP lounge access.][5]{: style="max-width:90%"}
+![Context variable set up to track if a passenger qualifies for VIP lounge access.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
 
 In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is `first_class`.
 
@@ -107,7 +107,7 @@ Next, we'll create a Message step to target users where {% raw %}`{{context.${lo
 - First-class ticket passengers will receive: "Enjoy exclusive VIP lounge access!"
 - Business and economy ticket passengers will receive: "Upgrade your flight for exclusive VIP lounge access."
 
-![A Message step with different messages to send, depending on the type of plane ticket purchased.][4]{: style="max-width:90%"}
+![A Message step with different messages to send, depending on the type of plane ticket purchased.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
@@ -170,8 +170,3 @@ This also applies across multiple Context steps. For example, imagine this seque
 Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
 
 
-[1]: {% image_buster /assets/img/context_step3.png %}
-[2]: {% image_buster /assets/img/context_example1.png %}
-[3]: {% image_buster /assets/img/context_example2.png %}
-[4]: {% image_buster /assets/img/context_example3.png %}
-[5]: {% image_buster /assets/img/context_example4.png %}

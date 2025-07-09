@@ -15,7 +15,7 @@ page_order: 3
 
 You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. For example, you may want to customize the font of all the text or the color of all links in your message.
 
-The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width.
+The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width. If you try to apply both page-level and message-level styles, the page-level style will override the message-level style.
 
 For an easier design experience, we recommend setting up message-level styles before you customize styles at the block level.
 
@@ -74,6 +74,10 @@ Every block has its settings, such as granular control on padding. The right-sid
 
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way.
 
+#### Span text
+
+{% multi_lang_include span_text.md %}
+
 ## Creative details
 
 ### Fullscreen on larger screens {#fullscreen}
@@ -104,7 +108,7 @@ Next, take your generated Liquid snippet and insert it into your message. After 
 
 ### Using the AI copywriter
 
-When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
 
 {% alert tip %}
 You can save a few clicks by highlighting text inside the block before clicking the icon. The highlighted text will be added to the tool, and copy will be generated immediately.

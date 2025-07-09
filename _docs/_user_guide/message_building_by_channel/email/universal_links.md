@@ -311,7 +311,7 @@ Select the following for the custom attribute:
 - **Name:** `data-msys-clicktrack`
 - **Value:** `0`
 
-![A custom attribute for a text link.][2]{: style="max-width:60%;"}
+![A custom attribute for a text link.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Custom attribute for a button or image
 
@@ -331,7 +331,7 @@ Select the following for the custom attribute:
 - **Value:** `0`
 - **Type:** Link
 
-![A custom attribute for a button.][1]{: style="max-width:60%;"}
+![A custom attribute for a button.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Troubleshooting universal links with click-tracking
 
@@ -353,5 +353,3 @@ Make sure you have the correct definitions for domains your app is allowed to op
 - **iOS:** Review the Associated Domains set up in Xcode for your app ([step 1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c)). Check that the click-tracking domain is included in that list.
 - **Android:** Open the app info page (long press the app icon and click ⓘ). Within the app info menu, locate **Open by default** and tap that. This should show a screen with all verified links the app is allowed to open. Check that the click-tracking domain is included in that list.
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

@@ -61,7 +61,7 @@ To select channels:
 2. Select your channels.
 3. Select **Save changes**.
 
-![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
+![The Message Archiving page has three channels to select: Email, Push, and SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 If you don't see **Message Archiving** in **Settings**, confirm that your company has purchased and turned on message archiving.
@@ -194,4 +194,3 @@ No. If you're interested in creating these specific buckets, submit [product fee
 
 The data is written to a `sent_messages` section of the bucket. Refer to [How it works](#how-it-works) for more details.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}

@@ -29,7 +29,7 @@ description: "This reference article explains the different components of the Br
   "extras": (optional, valid Key-Value Hash) extra hash - for SendGrid users, this will be passed to SendGrid as Unique Arguments,
   "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost, SendGrid, or Amazon SES),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
-  "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url" (available for SparkPost and SendGrid only),
+  "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
     "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
 }
@@ -37,7 +37,7 @@ description: "This reference article explains the different components of the Br
 
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
   - Any valid `app_id` from an app configured in your workspace will work for all users in your workspace, regardless of whether the user has the specific app on their profile or not.
-- For more information and best practices on preheaders, see our help article on [email body styling][46].
+- For more information and best practices on preheaders, see our help article on [email body styling]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling).
 
 {% alert warning %}
 Braze recommends that you avoid using Google Drive links for your attachment's `url`, as this can block our servers' calls to get the file and result in the email message not sending.
@@ -47,7 +47,7 @@ Valid attachment types include: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`,
 
 An `email_template_id` can be retrieved from the bottom of any email template created with the HTML editor. The following shows an example of what this ID looks like:
 
-![API Identifier section of an HTML email template.][31]{: style="max-width:70%;"} 
+![API Identifier section of an HTML email template.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"} 
 
 ## Example email object with attachment
 
@@ -95,5 +95,3 @@ Authentication for email file attachments in this endpoint is currently in early
 }
 ```
 
-[31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling

@@ -21,7 +21,7 @@ Dashboard Builder empowers you to compose and visualize custom analytic dashboar
 2. Select **Create Dashboard**.
 3. Select which data source will power your reports:
 - **Reports** that were built in Report Builder
-- **Custom Queries** that were created in Query Builder<br><br>![Window to select your data source for your dashboard.][4]<br><br>
+- **Custom Queries** that were created in Query Builder<br><br>![Window to select your data source for your dashboard.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Now, follow the respective steps for your data source:
 
@@ -88,7 +88,7 @@ Braze provides pre-built dashboard templates for frequent use cases such as anal
 
 The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
 
-Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SMS Delivery_, _WhatsApp Read_, and _Webhook Send_.
+Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
 
 | Metrics | Definition |
 | --- | --- |
@@ -121,7 +121,3 @@ Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SM
 
 Select the **Send feedback** button or contact your customer success manager to share your feedback with us.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}
-[4]: {% image_buster /assets/img/select_data_source.png %}

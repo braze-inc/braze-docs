@@ -44,7 +44,7 @@ Use this field to define how long Braze will keep your session active. After Bra
 
 You can restrict your users from logging in using a password or SSO.
 
-For [SAML SSO][15], customers need to set up their SAML settings before enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
+For [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/), customers need to set up their SAML settings before enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
 ## Dashboard IP allowlisting
 
@@ -69,7 +69,7 @@ This feature is available when two-factor authentication is turned on.
 
 When you select **Remember this account for 30 days**, a cookie is stored on your device, only requiring you to log in with two-factor authentication once over the course of 30 days. 
 
-![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:50%;margin-left:15px;"}
+![Remember this account for 30 days checkbox]({% image_buster /assets/img/remember_me.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Customers with multiple accounts under a dashboard company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
 
@@ -89,7 +89,7 @@ Elevated Access adds an extra layer of security for sensitive actions in your Br
 
 If a user can’t re-verify, they’ll be redirected to where they left off and won’t be able to continue with the sensitive action. After they successfully re-verify, they won’t need to do so again for the next hour—unless they log out first.
 
-![Elevated Access toggle.][5]
+![Elevated Access toggle.]({% image_buster /assets/img/elevated_access.png %})
 
 ## Downloading a security event report
 
@@ -233,9 +233,3 @@ To customize preferences by workspace, you may add preference groups with differ
 ![Data Deletion Preferences section with turned on toggle for customizing data deletion preferences by workspace.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
-[1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
-[2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
-[3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "user profile obfuscated3"
-[5]: {% image_buster /assets/img/elevated_access.png %}
-[04]: {% image_buster /assets/img/remember_me.png %}
-[15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

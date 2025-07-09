@@ -49,7 +49,7 @@ If your Braze dashboard says you have an unexpected error and your browser conso
 
 To reset your password, select the **Forgot your password?** link on the dashboard login page. You'll be prompted to input your email to receive a link to reset your password.
 
-![Dashboard login with "Forgot your password?" prompt.][1]{: style="max-width:60%"}
+![Dashboard login with "Forgot your password?" prompt.]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
 
 ### Clearing your browser cache and cookies
 
@@ -79,4 +79,3 @@ The editor may experience loading issues due to the following:
 If you're still experiencing issues, [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Before doing so, check that your IT administrator has confirmed that `*.bz-rndr.com` is allowlisted on your end.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/enable_reset.png %}

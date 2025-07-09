@@ -52,8 +52,8 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 | `android_priority` | This parameter will accept values either `normal` or `high` to specify the FCM sender priority. By default, messages are sent with the default FCM priority configured in the [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/#default-fcm-priority-for-android-campaigns) page.<br><br> For more information on how different values impact delivery, see [Android message priority](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
 | `collapse_key` | FCM can simultaneously store only up to four collapse keys per device. If you use more than four collapse keys, FCM does not make any guarantees as to which ones will be kept. Braze uses one of these by default for campaigns, so make sure to specify only up to three additional collapse keys for Android messages. |
 | `push_icon_image_url` | The value for the large icon parameter should be a URL that links to where your image is hosted. <br> <br> Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. |
-| `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more, see [Notification channels][44] and refer to the steps for [defining notification channels][43] during integration. |
-| `send_to_sync` | For more information on `send_to_sync` messages, see [silent Android notifications][28]. |
+| `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) channel ID. For more, see [Notification channels]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/) and refer to the steps for [defining notification channels]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels) during integration. |
+| `send_to_sync` | For more information on `send_to_sync` messages, see [silent Android notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Android push action button object
@@ -71,7 +71,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 
 {% sdk_min_versions android:15.0.0 %}
 
-The concepts in this message correspond to those in the [Android People and Conversations][46] push documentation.
+The concepts in this message correspond to those in the [Android People and Conversations](https://developer.android.com/guide/topics/ui/conversations) push documentation.
 
 ```json
 {
@@ -101,8 +101,3 @@ The concepts in this message correspond to those in the [Android People and Conv
 }
 ```
 
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications
-[44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
-[43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
-[45]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel
-[46]: https://developer.android.com/guide/topics/ui/conversations

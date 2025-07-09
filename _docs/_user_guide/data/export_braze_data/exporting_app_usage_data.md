@@ -18,13 +18,13 @@ To export CSVs of data from this page:
 
 1. Set the time frame and apps you want to view data for. By default, the dashboard shows the last 30 days of data for all apps.
 
-![Time period and app fields on the Home dashboard.][1]{: style="max-width:60%;"}
+![Time period and app fields on the Home dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2. Scroll down to the **Performance Over Time** graph.
 3. Select the data you'd like to export in the **Statistics For** field. See the [available data](#available-data) for you to export.
 
-![Performance Over Time graph on the Home dashboard.][2]
+![Performance Over Time graph on the Home dashboard.]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4. Select <i class="fas fa-bars" title="Chart context menu"></i> and then select your export option.
@@ -65,5 +65,3 @@ You can export CSVs with the following data:
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}
