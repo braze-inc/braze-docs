@@ -22,7 +22,7 @@ Business accounts that are nested within the same Meta Business Manager will als
 
 ### Adding a WhatsApp Business account
 
-You can add up to 10 WhatsApp Business accounts per workspace. To add an account:
+You can add up to 10 WhatsApp Business accounts per workspace. The business accounts can be nested in different Meta Business Managers. To add an account:
 
 1. Go **Technology Partners** > **WhatsApp** and select **Add WhatsApp Business Account**. 
 
