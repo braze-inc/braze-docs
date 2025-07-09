@@ -22,8 +22,4 @@ description: "Learn how to initialize the Braze SDK using methods like runtime i
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/sdk_initialization.md %}
 {% endsdktab %}
-
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/sdk_initialization.md %}
-{% endsdktab %}
 {% endsdktabs %}
