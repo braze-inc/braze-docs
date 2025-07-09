@@ -69,7 +69,7 @@ send_date_sydney;
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
 
-![][2]{: style="max-width:60%;" }
+![The SQL AI query builder.]({% image_buster /assets/img_archive/ai_query_generator.png %}){: style="max-width:60%;" }
 
 To generate SQL with the AI Query Builder:
 
@@ -156,8 +156,6 @@ Your query may fail for any of the following reasons:
 
 Use variables to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use {% raw %}`{{campaign.${My campaign}}}`{% endraw %} to directly select a campaign from a dropdown in the **Variables** tab.
 
-![][3]
-
 After a variable is created, it will appear in the **Variables** tab of your Query Builder report. Benefits of using SQL variables include:
 
 - Save time by creating a campaign variable to select from a list when creating your report, instead of pasting in campaign IDs.
@@ -195,8 +193,6 @@ The following variable types are accepted:
 
 #### Date range
 
-![][4]{: style="max-width:50%;"}
-
 If using both `start_date` and `end_date`, they must have the same name so you can use them as a date range.
 
 ##### Example values
@@ -221,8 +217,6 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 #### Messaging
 
 All messaging variables must share the same identifier when you want to tie together their state in one group.
-
-![][5]{: style="max-width:50%;"}
 
 ##### Canvas
 
@@ -266,36 +260,16 @@ For selecting Canvas variants that belong to a chosen Canvas. It must be used wi
 - **Replacement value:** Canvas variants API IDs, strings delimited by commas such as in `api-id1, api-id2`.
 - **Usage example:** {% raw %}`canvas_variation_api_id IN ({{canvas_variants.${some name}}})`{% endraw %}
 
-##### Canvas Step
+##### Canvas step
 
 For selecting a Canvas step that belongs to a chosen Canvas. It must be used with a Canvas variable.
 
 - **Replacement value:** Canvas step API ID
 - **Usage example:** {% raw %}`canvas_step_api_id = ‘{{canvas_step.${some name}}}’`{% endraw %}
 
-##### Canvas Steps
+##### Canvas steps
 
 For selecting Canvas steps that belong to chosen Canvases. It must be used with a Canvas or Canvases variable.
 
 - **Replacement value:** Canvas steps API IDs
 - **Usage example:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-=======
-layout: dev_guide
-page_type: landing
-
-guide_top_header: "Query Builder"
-guide_top_text: "The Query Builder generates reports using Braze data in Snowflake. It comes with pre-built SQL query templates to get you started, or you can write your own custom SQL queries to unlock even more insights."
-
-guide_featured_title: "Section articles"
-guide_featured_list:
-  - name: Using the Query Builder
-    link: /docs/user_guide/analytics/query_builder/building_queries/
-    image: /assets/img/braze_icons/users-01.svg
-  - name: Query Templates
-    link: /docs/user_guide/analytics/query_builder/query_templates/
-    image: /assets/img/braze_icons/refresh-ccw-01.svg
-  - name: SQL Variables
-    link: /docs/user_guide/analytics/query_builder/sql_variables/
-    image: /assets/img/braze_icons/target-05.svg
-
----
