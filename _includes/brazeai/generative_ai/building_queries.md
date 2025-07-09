@@ -10,13 +10,13 @@ You'll need ["View PII" permissions]({{site.baseurl}}/user_guide/administrative/
 
 To create a new query, go to **Analytics** > **Query Builder**, then select **Create SQL Query**.
 
-![The 'Query Template' and 'SQL Editor' options found within the 'Create SQL Query' dropdown.]()
+![The 'Query Template' and 'SQL Editor' options found within the 'Create SQL Query' dropdown.]({% image_buster /assets/img_archive/create_sql_query.png %}){: style="max-width:50%;" }
 
 If you need inspiration or help in crafting your query, choose **Query Template** and select a [pre-made template]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/). To start with a blank query, select **SQL Editor**.
 
 Your report is automatically given a name with the current date and time. Hover over the name and select <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 
-![The 'Report Name' field being edited for a new query.]()
+![The 'Report Name' field being edited for a new query.]({% image_buster /assets/img_archive/report_name_field.png %}){: style="max-width:60%;" }
 
 ### Step 2: Build your query
 
@@ -30,7 +30,7 @@ The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenA
 2. Type in your prompt or select a sample prompt and select **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then select **Insert into Editor**.
 
-![]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 #### Tips
 

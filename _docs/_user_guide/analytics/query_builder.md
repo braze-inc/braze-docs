@@ -69,7 +69,7 @@ send_date_sydney;
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
 
-![The SQL AI query builder.]({% image_buster /assets/img_archive/ai_query_generator.png %}){: style="max-width:60%;" }
+![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 To generate SQL with the AI Query Builder:
 
