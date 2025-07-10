@@ -51,7 +51,7 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 ## Push
 
 #### Things to check
-- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): For users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platforms/android/android_13/) will continue to update as new Android 13 beta versions are released.
+- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): For users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Foreground Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platforms/android/android_13/) will continue to update as new Android 13 beta versions are released.
 
 #### Things to know
 - **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/message_building_by_channel/push/web), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).

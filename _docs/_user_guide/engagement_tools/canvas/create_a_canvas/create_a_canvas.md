@@ -194,7 +194,7 @@ To do so, set the **Subscription Settings** to send this Canvas to "opted-in use
 These subscription settings are applied on a per-step basis, meaning that there is no effect on the entry audience. So, this setting is used to evaluate a user's eligibility to receive each Canvas step.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Audience** step that limits the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Audience** step that limits the audience to a single channel (for example, `Foreground Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 If desired, specify Quiet Hours (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.

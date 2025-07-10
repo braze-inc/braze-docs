@@ -61,7 +61,7 @@ You can view the following segment statistics, which update in real-time as you 
             <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
         </tr>
         <tr>
-            <td class="no-split">Push Enabled (Opted-In)</td>
+            <td class="no-split">Foreground Push Enabled (Opted-In)</td>
             <td class="no-split">Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. "Opted In" refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes.</td>
         </tr>
     </tbody>

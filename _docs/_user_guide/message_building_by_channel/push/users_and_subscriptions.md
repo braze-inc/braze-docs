@@ -33,7 +33,7 @@ By default, for your user to receive your messages through push, their push subs
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Braze does not automatically change a user's push subscription state to `Unsubscribed`. Remember that if a user's push subscription state is `Unsubscribed`, then the user's `Push Enabled` filter in segmentation will be `false`.
+Braze does not automatically change a user's push subscription state to `Unsubscribed`. Remember that if a user's push subscription state is `Unsubscribed`, then the user's `Foreground Push Enabled` filter in segmentation will be `false`.
 {% endalert %}
 
 ### Updating push subscription states {#update-push-subscription-state}
@@ -135,10 +135,10 @@ There are two ways a [push token]({{site.baseurl}}/user_guide/message_building_b
 1. **Foreground push** provides the ability to send regular visible push notifications to the foreground of a user's device.
 2. **Background push** is available regardless of whether a particular device has opted-in to receive push notifications from that brand. Background push allows brands to send silent push notifications - notifications that intentionally aren't displayed - to devices to support key functionalities like [uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
-When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Push Enabled for App,` to help identify these users.
+When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Foreground Push Enabled for App,` to help identify these users.
 
 {% alert note %}
-The `Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic [`Push Enabled`](#push-enabled) filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+The `Foreground Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic [`Foreground Push Enabled`](#foreground-push-enabled) filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 {% endalert %}
 
 ### Multiple users on one device
@@ -157,11 +157,11 @@ Because there isn't a way for push providers (APNs/FCM) to distinguish between m
 
 The push subscription state is user-based and is not specific to any individual app. The state of the push subscription is the value that was last set. So if a user has opted-in to push notifications, their push subscription state is `Opted-in` across all eligible devices. If a user later explicitly unsubscribes from push notifications through your application or other methods your brand provides, their push subscription state is updated to `Unsubscribed` and no push-registered devices can receive push notifications.
 
-## Push Enabled filter {#push-enabled}
+## Foreground Push Enabled filter {#foreground-push-enabled}
 
-`Push Enabled` is a segmentation filter in Braze that allows marketers to easily identify users that allow Braze to send push notifications and users that haven't expressed preferences to not receive push notifications. 
+`Foreground Push Enabled` is a segmentation filter in Braze that allows marketers to easily identify users that allow Braze to send push notifications and users that haven't expressed preferences to not receive push notifications. 
 
-The `Push Enabled` filter takes into account the following:
+The `Foreground Push Enabled` filter takes into account the following:
 - The ability for Braze to send a push notification (foreground push token)
 - The user's overall preference to receive push on any of their devices (push subscription state)
 
@@ -180,9 +180,9 @@ For information on how to check push registration state, visit [push registratio
 
 If a foreground push enabled user disables push in their OS settings, then at the start of the next session:
 - Braze marks them as foreground push disabled and no longer attempts to send them push messages.
-- The `Push Enabled for App (Android)` filter and the `Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
+- The `Foreground Push Enabled for App (Android)` filter and the `Foreground Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
 
-In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
+In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background or Foreground Push Enabled = true`.
 
 For Android, Braze will consider a user push disabled if:
 
@@ -202,9 +202,9 @@ If a user declines to receive push notifications on an OS-level, their push subs
 
 In the scenario that a user, who initially opted-in on the OS level disables push notifications in their OS settings, at the next session start, the following will occur:
 - Braze marks them as foreground push disabled and no longer attempts to send push messages.
-- The `Push Enabled for App (iOS)` filter and the `Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
+- The `Foreground Push Enabled for App (iOS)` filter and the `Foreground Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
 
-In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
+In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background or Foreground Push Enabled = true`.
 
 {% endtab %}
 {% tab Web %}
@@ -213,7 +213,7 @@ When a user accepts the native push permission prompt, their subscription status
 
 To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
 
-If a user disables notifications within their browser, the next push notification sent to that user will bounce, and Braze will update the user's push token accordingly. This is used to manage eligibility for the push-enabled filters (`Background Push Enabled`, `Push Enabled` and `Push Enabled for App`). The subscription status set on the user's profile is a user-level setting and doesn't change when a push bounces.
+If a user disables notifications within their browser, the next push notification sent to that user will bounce, and Braze will update the user's push token accordingly. This is used to manage eligibility for the push-enabled filters (`Background or Foreground Push Enabled`, `Foreground Push Enabled` and `Foreground Push Enabled for App`). The subscription status set on the user's profile is a user-level setting and doesn't change when a push bounces.
 
 {% alert note %}
 Web platforms do not allow background or silent push.

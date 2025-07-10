@@ -36,7 +36,7 @@ Push tokens are used to send both foreground and background push notifications.
 When a user opts-in to push notifications for your app, they'll be considered "push registered", meaning they can now be targeted using the `Push enabled for App` segmentation filter in Braze.
 
 {% alert note %}
-This is different from the `Push Enabled` segmentation filter, which is used to identify users who have opted-in to at least one of your apps&#8212;not one specific app. For more information, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#push-enabled).
+This is different from the `Foreground Push Enabled` segmentation filter, which is used to identify users who have opted-in to at least one of your apps—not one specific app. For more information, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#foreground-push-enabled).
 {% endalert %}
 
 ### Multiple users on a device
