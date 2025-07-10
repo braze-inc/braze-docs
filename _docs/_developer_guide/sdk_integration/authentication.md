@@ -16,7 +16,7 @@ platform:
 
 ## How it works
 
-After you enable this feature in your app, you can configure the Braze dashboard to reject any requests with an invalid or missing JSON Web Token (JWT) signature, which includes:
+After you enable this feature in your app, you can configure the Braze dashboard to reject any requests with an invalid or missing JSON Web Token (JWT), which includes:
 
 - Sending custom events, attributes, purchases, and session data
 - Creating new users in your Braze workspace
@@ -153,7 +153,7 @@ Whenever your app calls the Braze `changeUser` method, also supply the JWT that 
 You can also configure the token to refresh mid-session for the current user.
 
 {% alert note %}
-Keep in mind that `changeUser` should only be called when the User ID has _actually changed_. You should not use this method as a way to update the authentication signature (JWT) if the user ID has not changed.
+Keep in mind that `changeUser` should only be called when the User ID has _actually changed_. You should not use this method as a way to update the authentication token (JWT) if the user ID has not changed.
 {% endalert %}
 
 {% tabs %}
@@ -251,7 +251,7 @@ When this feature is set as [Required](#enforcement-options), the following scen
 - JWT was empty or missing
 - JWT failed to verify for the public keys you uploaded to the Braze dashboard
 
-You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`](#error-codes), `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication signature (JWT) that caused the error. 
+You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`](#error-codes), `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication token (JWT) that caused the error. 
 
 Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply the Braze SDK with this new valid token.
 
@@ -302,8 +302,8 @@ AppDelegate.braze = braze;
 - (void)braze:(Braze *)braze sdkAuthenticationFailedWithError:(BRZSDKAuthenticationError *)error {
   // TODO: Optionally log to your error-reporting service
   // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
-  NSLog(@"Invalid SDK Authentication signature.");
-  NSString *newSignature = getNewSignatureSomehow(error);
+  NSLog(@"Invalid SDK Authentication Token.");
+  NSString *newSignature = getNewTokenSomehow(error);
   [AppDelegate.braze setSDKAuthenticationSignature:newSignature];
 }
 ```
@@ -319,8 +319,8 @@ AppDelegate.braze = braze
 func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuthenticationError) {
   // TODO: Optionally log to your error-reporting service
   // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
-  print("Invalid SDK Authentication signature.")
-  let newSignature = getNewSignatureSomehow(error)
+  print("Invalid SDK Authentication Token.")
+  let newSignature = getNewTokenSomehow(error)
   AppDelegate.braze?.set(sdkAuthenticationSignature: newSignature)
 }
 ```
@@ -330,8 +330,8 @@ func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuth
 braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
   // TODO: Optionally log to your error-reporting service
   // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
-  print("Invalid SDK Authentication signature.")
-  let newSignature = getNewSignatureSomehow(error)
+  print("Invalid SDK Authentication Token.")
+  let newSignature = getNewTokenSomehow(error)
   braze.setSdkAuthenticationSignature(newSignature);
 });
 ```
@@ -361,7 +361,7 @@ In the dashboard **Manage Settings** page, each app has three SDK Authentication
 
 The **Optional** setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
-Invalid JWT signatures will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request new signatures.
+Invalid JWT will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request new JWTs.
 
 ## Managing public keys {#key-management}
 
@@ -448,7 +448,7 @@ Instead, we use public/private keys so that not even Braze Employees (let alone 
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 
-When a request is rejected because of an authentication error, the SDK will invoke your callback used to refresh the user's JWT signature. 
+When a request is rejected because of an authentication error, the SDK will invoke your callback used to refresh the user's JWT. 
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
