@@ -49,6 +49,10 @@ For this message, you should send a LINE message informing the user that this ch
 
 ## Troubleshooting
 
-### `request_timeout` error
+### 500 Internal Server Error or `request_timeout` error
 
-You may receive the `request_timeout` error if it takes more than two seconds for LINE to receive a response from Braze. However, the request itself may have reached Braze without any problems. If you frequently receive the `request_timeout` error, contact [Support]({{site.baseurl}}/braze_support/) to investigate.
+You may receive a 500 Internal Server Error or `request_timeout` error if it takes more than two seconds for LINE to receive a response from Braze. However, the request itself may have reached Braze without any problems, meaning the user may receive a duplicate message if you send the request again. 
+
+To avoid duplicates, use a [retry key](https://developers.line.biz/en/docs/messaging-api/retrying-api-request/) (`X-Line-Retry-Key`) to prevent the request from executing after it's successful. Note that this doesn't guarantee delivery. For example, if the request is successful but the user blocked your LINE account, the request won't be retried.
+
+If you frequently receive the `request_timeout` error, contact [Support]({{site.baseurl}}/braze_support/) to investigate.
