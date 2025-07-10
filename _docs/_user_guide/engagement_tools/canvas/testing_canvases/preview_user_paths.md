@@ -19,7 +19,7 @@ Follow these steps to preview your user journey:
 1. Go to your Canvas builder. Save any unsaved changes and resolve any errors.
 2. Select **Test Canvas** in the footer.
 3. Select a test user.
-4. (optional) Select a recipient for the test.
+4. (Optional) Select a recipient for the test.
 5. Select **Run Test**.
 
 You can run a preview if you don't have permission to edit a Canvas, but this preview will run with unsaved changes if there are any.
