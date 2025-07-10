@@ -4,6 +4,7 @@ article_title: Query Builder
 page_order: 15
 description: "This reference article describes how to build reports using Braze data from Snowflake in the Query Builder."
 tool: Reports
+alias: /query_builder/
 ---
 
 # Query Builder
