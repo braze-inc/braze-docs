@@ -1,8 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Using Google Tag Manager
-
-The Braze Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
+## Using Google Tag Manager for Swift
 
 In the following example, a music streaming app wants to log different events as users listen to songs. Using Google Tag Manager for iOS, they can control which of the Braze third-party vendors receive this event and create tags specific to Braze.
 
