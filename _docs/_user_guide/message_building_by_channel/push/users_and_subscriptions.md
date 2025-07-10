@@ -23,7 +23,7 @@ A user's push subscription state applies to their entire user profile, which inc
 
 There are three push subscription state options: `Subscribed`, `Opted-In`, and `Unsubscribed`.
 
-By default, for your user to receive your messages through push, their push subscription state must be either `Subscribed` or `Opted-In`, and they must be [push enabled](#push-enabled). You can override this setting if needed when composing a message.
+By default, for your user to receive your messages through push, their push subscription state must be either `Subscribed` or `Opted-In`, and they must be [push enabled](#foreground-push-enabled). You can override this setting if needed when composing a message.
 
 |Opt-in State|Description|
 |---|---|
