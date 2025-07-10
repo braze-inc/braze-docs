@@ -107,6 +107,7 @@ The following message engagement events are available for email, SMS, push, in-a
 | In-app message | Click<br>Impression |
 | Content Cards | Click<br>Dismiss<br>Impression<br>Send |
 | Webhooks | Send |
+| WhatsApp | Abort<br>Delivery<br>Failure<br>Frequency capped<br>Inbound receive<br>Read<br>Send |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### Message abort events
