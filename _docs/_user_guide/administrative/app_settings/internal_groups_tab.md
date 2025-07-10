@@ -12,7 +12,7 @@ description: "This reference article covers internal groups, a great way to get 
 > Internal groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs and are useful when testing your SDK integration. You can create an unlimited number of custom internal groups with up to 1,000 users.
 
 {% alert tip %}
-We also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
+We also recommend checking out our [Testing and Troubleshooting](https://learning.braze.com/path/developer/testing-and-troubleshooting) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 {% endalert %}
 
 ## Prerequisites
