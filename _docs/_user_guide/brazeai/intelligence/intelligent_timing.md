@@ -52,7 +52,7 @@ This section describes how to configure Intelligent Timing for your campaigns an
 Use Quiet Hours to prevent messages from sending during specific hours. This is helpful when you want to avoid sending messages during early morning hours or overnight, while still allowing Intelligent Timing to determine the best delivery window.
 
 {% alert note %}
-Quiet Hours now reverse the old “Only send within specific hours” setting. Instead of choosing when a message can send, you now specify when it shouldn’t. For example, if you want messages to send from 4 PM to 6 PM, you should set Quiet Hours for 6 PM to 4 PM.
+Quiet Hours has replaced the “Only send within specific hours” setting. Instead of choosing when messages can send, you now choose when they shouldn’t send. For example, to send messages between 4 PM and 6 PM, set Quiet Hours from 6 PM to 4 PM the next day.
 {% endalert %}
 
 1. Select **Enable Quiet Hours**.
