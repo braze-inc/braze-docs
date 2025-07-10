@@ -1,10 +1,6 @@
 ### Prerequisites
 
-Before you can use this integration method, you'll need to create an account and install Google Tag Manager. For more information, see [Google: Get started with Tag Manager](https://support.google.com/tagmanager/answer/14842164).
-
-{% alert tip %}
-For more information about Google Tag Manager for Braze, see [Google Tag Manager]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
-{% endalert %}
+Before you can use this integration method, you'll need to [create an account and container for Google Tag Manager](https://support.google.com/tagmanager/answer/14842164).
 
 ### Step 1: Open the tag template gallery
 
