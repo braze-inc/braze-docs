@@ -56,9 +56,8 @@ or phone number.
 {% tab external id %}
 When importing your customer data, you can use an `external_id` to serve as each customer’s unique identifier. When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
-Download: [CSV Attributes Import Template \- External ID]({{site.baseurl}}/assets/download_file/braze-user-import-template-csv.xlsx?3aafd0c03634ac03f248b3055fbc3126)
-
-Download: [CSV Events Import Template](https://braze.com/unlisted_docs/assets/download_file/braze-csv-events-import-template.csv?3b64ea284baa9a21cfe0a7ab4b46fce4) \- External ID
+- Download: [CSV Attributes Import Template: External ID]({{site.baseurl}}/assets/download_file/braze-user-import-template-csv.xlsx?3aafd0c03634ac03f248b3055fbc3126)
+- Download: [CSV Events Import Template: External ID](https://braze.com/unlisted_docs/assets/download_file/braze-csv-events-import-template.csv?3b64ea284baa9a21cfe0a7ab4b46fce4)
 
 {% alert note %} 
 If you’re uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can’t contain both `external_ids` and user aliases.
@@ -86,7 +85,7 @@ When you provide both a `user_alias_name` and `user_alias_label` in your import,
 You can’t use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/).
 {% endalert %}
 
-Download: [CSV Attributes Import Template]({{site.baseurl}}/assets/download_file/braze-user-import-alias-template-csv.xlsx?c0ce6c0aa1e901395161d87c5ba17747) \- User Alias
+Download: [CSV Attributes Import Template: User Alias]({{site.baseurl}}/assets/download_file/braze-user-import-alias-template-csv.xlsx?c0ce6c0aa1e901395161d87c5ba17747)
 {% endtab %}
 
 <!-- TAB -->
@@ -110,8 +109,10 @@ You can omit an external ID or user alias and use either an email address or pho
 
 - Verify that you don’t have any external IDs or user aliases for these profiles in your CSV file. If you do, Braze will prioritize using the external ID or user alias before the email address to identify profiles.  
 - Confirm that your CSV file is formatted properly.  
-  note:  
-  If you include both email addresses and phone numbers in your CSV file, the email address is prioritized over the phone number when looking up profiles.
+
+{% alert note %}
+If you include both email addresses and phone numbers in your CSV file, the email address is prioritized over the phone number when looking up profiles.
+{% endalert %}
 
 If an existing profile has that email address or phone number, that profile will be updated, and Braze will not create a new profile. If there are multiple profiles with that same email address, Braze will use the same logic as the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) where the most recently updated profile will be updated.
 
@@ -194,6 +195,25 @@ While `external_id` itself is not mandatory, you must include one of these field
   - `email`  
     - \- OR \-  
     - `phone`
+
+#### Updating subscription group status
+
+You can add users to email or SMS subscription groups through user import. This is particularly useful for SMS, because a user must be enrolled into an SMS subscription group to be messaged with the SMS channel. For more information, refer to [SMS subscription groups](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
+
+If you are updating subscription group statuses, you must have the following two columns in your CSV:
+
+- `subscription_group_id`: The `id` of the [subscription group](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).  
+- `subscription_state`: Available values are `unsubscribed` (not in the subscription group) or `subscribed` (in the subscription group).
+
+| external\_id | first\_name | subscription\_group\_id | subscription\_state |
+| :---- | :---- | :---- | :---- |
+| A8i3mkd99 | Colby | 6ff593d7-cf69-448b-aca9-abf7d7b8c273 | subscribed |
+| k2LNhj8Ks | Tom | aea02307-a91e-4bc0-abad-1c0bee817dfa | subscribed |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+{% alert note %}
+Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you’ll need to do multiple imports.
+{% endalert %}
 {% endtab %}
 
 <!-- TAB -->
@@ -220,19 +240,6 @@ For example, the custom event `trip_booked` may have the properties `destination
 | `time` | String | The time of the event. May be passed in one of the following ISO-8601 formats: "YYYY-MM-DD" "YYYY-MM-DDTHH:MM:SS+00:00" "YYYY-MM-DDTHH:MM:SSZ" "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) | Yes |
 | `<event name>.properties.<property name>` | Multiple | An event property associated with a custom event. An example is `trip_booked.properties.destination` | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
-
-note:  
-While `external_id` itself is not mandatory, you must include one of these fields to serve as your identifier:
-
-- `external_id`: A unique user identifier for your customer  
-  \- OR \-  
-- `braze_id`: A unique user identifier pulled for existing Braze users  
-  \- OR \-  
-- `user_alias_name` : A unique user identifier for an anonymous user. This requires the additional use of the `user_alias_label` field.  
-- \- OR \-  
-  - `email`  
-    - \- OR \-  
-    - `phone`
 {% endtab %}
 {% endtabs %}
 
@@ -266,52 +273,3 @@ When the import is completed, the status will change to Complete and the number 
 {% alert note %}
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 {% endalert %}
-
-## Updating subscription group status
-
-You can add users to email or SMS subscription groups through user import. This is particularly useful for SMS, because a user must be enrolled into an SMS subscription group to be messaged with the SMS channel. For more information, refer to [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
-
-If you are updating subscription group statuses, you must have the following two columns in your CSV:
-
-- `subscription_group_id`: The `id` of the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).
-- `subscription_state`: Available values are `unsubscribed` (not in the subscription group) or `subscribed` (in the subscription group).
-
-<style type="text/css">
-.tg td{word-break:normal;}
-.tg th{word-break:normal;font-size: 14px; font-weight: bold; background-color: #f4f4f7; text-transform: lowercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top;word-break:normal}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky">external_id</th>
-    <th class="tg-0pky">first_name</th>
-    <th class="tg-0pky">subscription_group_id</th>
-    <th class="tg-0pky">subscription_state</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">A8i3mkd99</td>
-    <td class="tg-0pky">Colby</td>
-    <td class="tg-0pky">6ff593d7-cf69-448b-aca9-abf7d7b8c273</td>
-    <td class="tg-0pky">subscribed</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">k2LNhj8Ks</td>
-    <td class="tg-0pky">Tom</td>
-    <td class="tg-0pky">aea02307-a91e-4bc0-abad-1c0bee817dfa</td>
-    <td class="tg-0pky">subscribed</td>
-  </tr>
-</tbody>
-</table>
-
-{% alert important %}
-Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you'll need to do multiple imports.
-{% endalert %}
-
-## Lambda user CSV import
-
-You can use our serverless S3 Lambda CSV import script to upload user attributes to Braze. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
-
-Estimated execution times for a file with 1,000,000 rows should be around five minutes. See [User attribute CSV to Braze import](https://www.braze.com/docs/user_guide/data/cloud_ingestion/) for more information.

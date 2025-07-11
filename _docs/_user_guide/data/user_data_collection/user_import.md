@@ -45,7 +45,7 @@ Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_
 
 Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) to import and maintain user attributes. 
 
-### CSV import
+### Braze CSV import
 
 You can upload and update user profiles though CSV files from **Audience** > **Import Users**.
 
@@ -54,6 +54,12 @@ CSV import supports recording and updating user attributes such as first name an
 {% alert note %}
 If you're uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.
 {% endalert %}
+
+### Lambda user CSV import
+
+You can use our serverless S3 Lambda CSV import script to upload user attributes to Braze. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
+
+Estimated execution times for a file with 1,000,000 rows should be around five minutes. See [User attribute CSV to Braze import](https://www.braze.com/docs/user_guide/data/cloud_ingestion/) for more information.
 
 ## Creating a retargeting filter from a user import
 
