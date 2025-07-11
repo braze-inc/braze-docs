@@ -221,7 +221,7 @@ When a new user signs up, Punchh sends Braze a `user/guest` event that creates t
 To set up the Braze welcome campaign, follow these steps:
 
 1. In Braze, create an action-based campaign.
-2. For the trigger, select **Change Custom Attribute Value** with the custom attribute `signup_channel` set to **any new value**.
+2. For the trigger, select **Change Custom Attribute Value** with the custom attribute `signup_channel` set to **Any new value**.
 3. Continue creating your campaign, then send when ready!
 
 {% endtab %}
