@@ -24,10 +24,12 @@ You can use CSV import to record and update both user attributes and custom even
 
 Each piece of customer data imported from a CSV file will overwrite the existing value on user profiles and count as a data point, except for external IDs and blank values.
 
-- External IDs uploaded from a CSV file will not consume data points. If you are uploading a CSV to segment existing Braze users by uploading only external IDs, this can be done without consuming data points. If you were to add additional data like user emails or phone numbers in your import, that would overwrite existing user data, consuming your data points.  
-  - CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not consume data points.  
-- Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes or custom events in your CSV file.  
-- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count toward data point consumption.
+| Consideration | Details |
+|---|---|
+| **External IDs** | Uploading a CSV with only `external_id` will not consume data points. This allows you to segment existing Braze users without impacting data limits. However, including fields like `email` or `phone` will overwrite existing user data and **will** consume data points. <br><br>CSV imports used only for segmentation do not consume data points, such as those containing just `external_id`, `braze_id`, or `user_alias_name`. |
+| **Blank values** | Blank values in your CSV won't overwrite existing user profile data. You don't need to include all user attributes or custom events when importing. |
+| **Subscription states** | Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` does **not** count toward data point usage. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
 Setting `language` or `country` on a user through CSV import or API will prevent Braze from automatically capturing this information through the SDK.
@@ -73,10 +75,10 @@ If you are uploading or updating user profiles that are alias only, you must hav
 - `user_alias_name`: A unique user identifier; an alternative to the `external_id`  
 - `user_alias_label`: A common label by which to group user aliases
 
-| user\_alias\_name | user\_alias\_label | last\_name | email | sample\_attribute |
+| `user_alias_name` | `user_alias_label` | `last_name` | `email` | sample_attribute |
 | :---- | :---- | :---- | :---- | :---- |
-| 182736485 | my\_alt\_identifier | Smith | smith@user.com | TRUE |
-| 182736486 | my\_alt\_identifier | Nguyen | nguyen@user.com | FALSE |
+| 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
+| 182736486 | my_alt_identifier | Nguyen | nguyen@user.com | FALSE |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` and `user_alias_label`. If a user isn’t found, Braze will create a newly identified user with that `user_alias_name` set.
@@ -159,7 +161,7 @@ To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseur
 When importing default attributes, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will detect these as custom attributes instead.
 {% endalert %}
 
-| USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
+| User Profile Field | Data Type | Description | Required? |
 | :---- | :---- | :---- | :---- |
 | `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
 | `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
@@ -184,17 +186,12 @@ When importing default attributes, the column headers you use must exactly match
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 note:  
-While `external_id` itself is not mandatory, you must include one of these fields to serve as your identifier:
-
-- `external_id`: A unique user identifier for your customer  
-  \- OR \-  
-- `braze_id`: A unique user identifier pulled for existing Braze users  
-  \- OR \-  
-- `user_alias_name` : A unique user identifier for an anonymous user. This requires the additional use of the `user_alias_label` field.  
-- \- OR \-  
-  - `email`  
-    - \- OR \-  
-    - `phone`
+- While `external_id` is not required, you **must** include **one** of the following identifiers in your request:
+  - `external_id`: A unique user identifier for your customer
+  - `braze_id`: A unique user identifier pulled for existing Braze users
+  - `user_alias_name` **and** `user_alias_label`: Used together to identify anonymous users
+  - `email`
+  - `phone`
 
 #### Updating subscription group status
 
@@ -205,7 +202,7 @@ If you are updating subscription group statuses, you must have the following two
 - `subscription_group_id`: The `id` of the [subscription group](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).  
 - `subscription_state`: Available values are `unsubscribed` (not in the subscription group) or `subscribed` (in the subscription group).
 
-| external\_id | first\_name | subscription\_group\_id | subscription\_state |
+| external_id | first_name | subscription_group_id | subscription_state |
 | :---- | :---- | :---- | :---- |
 | A8i3mkd99 | Colby | 6ff593d7-cf69-448b-aca9-abf7d7b8c273 | subscribed |
 | k2LNhj8Ks | Tom | aea02307-a91e-4bc0-abad-1c0bee817dfa | subscribed |
@@ -232,7 +229,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 | :---- | :---- | :---- | :---- |
 | `external_id` | String | A unique user identifier for your user. | Yes, see the following note |
 | `braze_id` | String | A Braze assigned identifier for your user. | Yes, one of `external_id`, `braze_id`, or `user_alias_name` and `user_alias_label` is required. |
-| `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the external\_id. | No, see the following note |
+| `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the external_id. | No, see the following note |
 | `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias_name` is used |
 | `email` | String | The email of your users as they have indicated (for example, `jane.doe@braze.com`). | No, and can only be used in the absence of other identifiers. See the following note. |
 | `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/) for formatting guidance. | No, and can only be used in the absence of other identifiers. See the following note. |
@@ -273,3 +270,6 @@ When the import is completed, the status will change to Complete and the number 
 {% alert note %}
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 {% endalert %}
+
+## Troubleshooting
+
