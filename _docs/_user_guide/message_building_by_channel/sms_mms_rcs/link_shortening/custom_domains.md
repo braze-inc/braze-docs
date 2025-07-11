@@ -15,11 +15,8 @@ channel:
 
 > This page covers how to set up your own custom domains in the Braze dashboard. Custom domains allow you to use a branded shortened link that reflects your brand’s identity instead of a generic shortened link or the Braze domain (`brz.ai`)—improving user trust and campaign engagement with SMS links.
 
-{% alert important %}
-Self-serve custom domains are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
-Self-serve custom domains empower you to configure and manage your own custom domains for SMS, RCS, and WhatsApp—directly from your Braze dashboard. You can easily add, monitor, and manage up to 10 custom domains in one place.
+Self-serve custom domains empower you to configure and manage your own custom domains for SMS, RCS, and WhatsApp directly from your Braze dashboard. You can easily add, monitor, and manage up to 10 custom domains in one place.
 
 ## Benefits of self-serve custom domains
 
@@ -37,7 +34,7 @@ Self-serve custom domains empower you to configure and manage your own custom do
 
 ## Delegating your custom domain
 
-We require you to delegate your custom domain to Braze so that we can faciliate proper routing and infrastructure compatibility with our link shortening and click tracking services. When you delegate your domain to Braze, we automatically handle the certificate renewal to prevent a lapse in service. 
+We require you to delegate your custom domain to Braze so that we can facilitate proper routing and infrastructure compatibility with our link shortening and click tracking services. When you delegate your domain to Braze, we automatically handle the certificate renewal to prevent a lapse in service. 
 
 ## Adding a custom domain
 
@@ -96,7 +93,7 @@ You can add up to 10 custom domains per dashboard.
 
 ### What happens if I don’t update my DNS records within 45 days?
 
-Though your Cloudflare DNS record details will expire after 45 days, you can restart the setup process with the same domain and Braze will generate a set of new DNS records to extend your setup window.
+Though your Cloudflare DNS record details will expire after 45 days, you can restart the setup process with the same domain, and Braze will generate a set of new DNS records to extend your setup window.
 
 ### Will I be notified if there is an error during the DNS update process?
 
