@@ -286,16 +286,16 @@ glossaries:
     description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
       - Channel subscription behavior
-  - name: Push Enabled
-    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your workspace. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+  - name: Foreground Push Enabled
+    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who are foreground push enabled and whose push subscription status is not unsubscribed, for any of your apps. For these users, this count includes only foreground push.<br><br>Foreground Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - Channel subscription behavior
-  - name: Push Enabled For App
-    description: Segments by whether users have push enabled for your app on their device. These users are reachable via push but might not be opted in. This count includes users who have provisionally authorized foreground and background push tokens.
+  - name: Foreground Push Enabled for App
+    description: Segments by whether users have push enabled for your app on their device. Users who are foreground push enabled for an app. This does not take push subscription status into account. This count includes users who have provisionally authorized foreground and background push tokens.
     tags:
       - Channel subscription behavior
-  - name: Background Push Enabled
-    description: Segments by whether users have a push token and haven't unsubscribed.
+  - name: Background or Foreground Push Enabled
+    description: Segments by whether users have a push token and haven't unsubscribed. Users who are background or foreground push enabled for any of your apps.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date
