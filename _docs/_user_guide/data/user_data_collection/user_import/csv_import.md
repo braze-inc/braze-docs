@@ -35,7 +35,7 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 
 ## Using CSV import
 
-### Step 1: Open CSV import
+### Step 1: Download a CSV template
 
 To open CSV import, go to **Audiences** > **User Import**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
