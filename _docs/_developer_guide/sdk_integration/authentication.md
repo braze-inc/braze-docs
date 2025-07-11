@@ -361,7 +361,7 @@ In the dashboard **Manage Settings** page, each app has three SDK Authentication
 
 The **Optional** setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
-Invalid JWT will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request new JWTs.
+An invalid JWT will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request a new JWT.
 
 ## Managing public keys {#key-management}
 
@@ -426,7 +426,7 @@ When you begin to enforce this feature, requests made by older app versions will
 
 If possible, you should push users to upgrade as you would for any other mandatory upgrade. Alternatively, you can keep the feature [Optional](#enforcement-options) until you see that an acceptable percentage of users have upgraded.
 
-#### What expiration should I use when generating JWTs? {#faq-expiration}
+#### What expiration should I use when generating a JWT? {#faq-expiration}
 
 We recommend using the higher value of average session duration, session cookie/token expiration, or the frequency at which your application would otherwise refresh the current user's profile.
 
@@ -436,7 +436,7 @@ Should a user's token expire mid-session, the SDK has a [callback function](#sdk
 
 #### What happens if my server-side integration breaks and I can no longer create a JWT? {#faq-server-downtime}
 
-If your server is not able to provide JWTs or you notice some integration issue, you can always disable the feature in the Braze dashboard.
+If your server is not able to provide a JWT or you notice some integration issue, you can always disable the feature in the Braze dashboard.
 
 Once disabled, any pending failed SDK requests will eventually be retried by the SDK and accepted by Braze.
 
