@@ -72,6 +72,12 @@ The report may take up to a few minutes to run, depending on the date range and 
 
 Your selection for **Rows** affects the metrics you can select.
 
+{% alert tip %}
+If you want to report on Canvas variants or steps, select **Canvases** for rows and either nothing or **Date** as the drilldown. This creates a **Canvas View** dropdown to view metrics for the Canvas only, or group metrics by variant, step, or message. 
+
+![The opened "Canvas View" dropdown.]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
+{% endalert %}
+
 | Metric | Description |
 | --- | --- |
 | Conversion metrics | Available for Campaigns, Canvases, Campaigns and Canvases. |
