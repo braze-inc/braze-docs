@@ -46,14 +46,14 @@ To copy a Canvas to a different workspace:
 2. Select **Copy to workspace**. 
 3. After copying, review and test your Canvas to confirm that all fields work properly.
 
-When copying a Canvas with Audience Sync steps, the settings will not be copied over to the destination workspace, but the step in the journey will be.
+When copying a Canvas with Audience Sync steps, the settings will not be copied over to the destination workspace, but the steps in the journey will be.
 
 {% endtab %}
 {% endtabs %}
 
 ## What's copied across workspaces
 
-Note the following is not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign and Canvas details and test to confirm your message works as expected.
+Note that the following is not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign and Canvas details and test to confirm your message works as expected.
 
 ### Details
 
@@ -92,7 +92,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 {% endtab %}
 {% endtabs %}
 
-### Conversion beheaviors
+### Conversion behaviors
 
 {% tabs local %}
 {% tab campaigns %}
@@ -186,6 +186,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Title |  BCC | 
 | Subject |  Link template | 
 |  |  Link aliasing |
+|  | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -198,6 +199,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Title |  BCC | 
 | Subject |  Link template | 
 |  |  Link aliasing |
+|  | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -211,7 +213,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Copied | Omitted |
 |---|---|
 | Plain text | Link aliasing |
-| HTML and drag-and-drop content |  | 
+| HTML and drag-and-drop content | Translations | 
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
@@ -223,7 +225,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Copied | Omitted |
 |---|---|
 | Plain text | Link aliasing |
-| HTML and drag-and-drop content |  | 
+| HTML and drag-and-drop content | Translations | 
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
@@ -243,6 +245,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
+| | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -254,6 +257,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
+| | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
