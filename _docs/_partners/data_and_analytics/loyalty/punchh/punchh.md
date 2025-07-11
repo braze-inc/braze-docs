@@ -212,6 +212,11 @@ Considerations:
 
 ![A user segment is configured in punch, and guests sign up for a loyalty program. After this, the guest event, if triggered, and the Braze messaging campaign is triggered. Next, the Punchh sign-up gifting campaign is triggered after 10 minutes, triggering the reward event and optional follow-up message.]({% image_buster /assets/img/punchh/usecase3.png %})
 
+#### Braze Welcome Campaign:
+
+When a new user signs up, Punchh will send Braze a user/guest event which will create the user and also send a custom attribute `signup_channel` which you can use to trigger the Braze welcome campaign. In Braze, select `Action-Based` trigger and select `Change Custom Attribute Value` with custom attribute `signup_channel` to `any new value`. 
+
+
 {% endtab %}
 {% tab Mass offer %}
 #### Mass offer campaign
