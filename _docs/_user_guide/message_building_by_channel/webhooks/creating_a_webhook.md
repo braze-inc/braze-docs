@@ -225,9 +225,8 @@ Braze retries the above status codes up to five times within 30 minutes using ex
 {% endalert %}
 
 #### Troubleshooting and additional error details
-For detailed explanations, troubleshooting steps, and guidance on resolving specific webhook errors, please refer to the [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/) help article.
 
-The help article covers commons webhook errors, explains Braze's unhealthy host detection system, and describes how Braze provides error notifications through automated emails and additional logging in Braze Currents.
+For detailed explanations, troubleshooting steps, and guidance on resolving specific webhook errors, refer to [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/). You'll also find more explanations on how our unhealthy host detection system works and how Braze provides error notifications through automated emails and additional logging in Braze Currents.
 
 ### IP allowlisting {#ip-allowlisting}
 
