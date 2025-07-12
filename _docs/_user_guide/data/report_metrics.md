@@ -845,6 +845,10 @@ Email
 
 {% multi_lang_include metrics.md metric='Spam' %}
 
+{% alert note %}
+Spam complaints are handled directly by email service providers and then relayed to Braze through a feedback loop. Most feedback loops only report a portion of the actual complaints, so the _Spam_ metric often represents a fraction of the actual total. Only email service providers can view the true volume of spam complaints, which means _Spam_ should be viewed as an indicative, not exhaustive, metric.
+{% endalert %}
+
 {::nomarkdown}
 <span class="calculation-line">
     Calculation:
