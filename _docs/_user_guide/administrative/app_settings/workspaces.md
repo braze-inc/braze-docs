@@ -129,15 +129,17 @@ Be careful when deleting workspaces! After a workspace is deleted, it can’t be
 
 ### Should I create a new workspace when I'm releasing an updated app?
 
-If users only need to update their app and you’re not releasing an entirely new app to the app store, you should not create a new workspace unless you don't plan to message users on the older version anymore.
+This depends on if you're updating your app or creating an entirely new one.
 
-By creating a new workspace, all historical data and user profiles from the older app version won’t exist in this new workspace. So, after existing users upgrade to the new app version, they’ll have a new profile created without any of the behavioral data from the old app.
+#### Updating your app
 
-Additionally, your users would exist in two places: the old workspace and the new workspace. They can also potentially have the same push token. This may lead to users receiving a marketing message intended for only old workspace users, even if they’ve already upgraded.
+If you're updating your app, you should separate the old and new version by creating a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
-#### What should I do instead?
+If you create a new workspace, your users would exist in two places: the old workspace and the new workspace. They would also potentially have the same push token. This could lead to users receiving a marketing message intended for only old workspace users, even if they’ve already upgraded.
 
-To separate old and new apps, create a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
+#### Releasing a new app
+
+If you're releasing an entirely new app to the app store, you should create a new workspace. By creating a new workspace, all historical data and user profiles from the older app version won’t exist in this new workspace. So, after existing users upgrade to the new app version, they’ll have a new profile created without any of the behavioral data from the old app.
 
 ### I have multiple app instances in one workspace—how can I make sure to only target a single app with my message? {#singular-app}
 
