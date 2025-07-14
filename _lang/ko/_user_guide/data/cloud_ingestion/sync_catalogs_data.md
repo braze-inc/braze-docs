@@ -187,7 +187,7 @@ GO
 
 {:start="2"}
 
-2. 부교장을 설정하고 적절한 권한을 부여하세요. 기존 동기화의 자격 증명이 이미 있는 경우 이를 재사용할 수 있으며, 카탈로그 소스 테이블에 대한 액세스 권한을 확장하기만 하면 됩니다. 새 서비스 계정 및 자격 증명을 만드는 방법에 대해 자세히 알아보려면 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) 페이지를 참조하세요. 
+2. 서비스 주체를 설정하고 적절한 권한을 부여하세요. 기존 동기화의 자격 증명이 이미 있는 경우 이를 재사용할 수 있으며, 카탈로그 소스 테이블에 대한 액세스 권한을 확장하기만 하면 됩니다. 새 서비스 계정 및 자격 증명을 만드는 방법에 대해 자세히 알아보려면 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) 페이지를 참조하세요. 
 
 {:start="3"}
 3\. 네트워크 정책이 설정되어 있는 경우 Braze 네트워크에 Microsoft 패브릭 인스턴스에 대한 액세스 권한을 부여해야 합니다. IP 목록은 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)을 참조하세요.
