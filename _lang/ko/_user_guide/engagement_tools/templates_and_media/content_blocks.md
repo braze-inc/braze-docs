@@ -23,7 +23,7 @@ tool:
 
 ## 콘텐츠 블록 만들기
 
-콘텐츠 블록을 생성하는 데 사용되는 편집기에는 클래식과 드래그 앤 드롭의 두 가지 유형이 있습니다. 이 두 가지 유형의 편집기는 콘텐츠 블록 유형에 해당합니다: HTML 및 드래그 앤 드롭. [API를 통해][5] 콘텐츠 블록을 생성하고 관리할 수도 있습니다.
+콘텐츠 블록을 생성하는 데 사용되는 편집기에는 클래식과 드래그 앤 드롭의 두 가지 유형이 있습니다. 이 두 가지 유형의 편집기는 콘텐츠 블록 유형에 해당합니다: HTML 및 드래그 앤 드롭. API를 사용하여 콘텐츠 블록을 생성하고 관리할 수도 있습니다[][5].
 
 {% tabs %}
 {% tab 드래그 앤 드롭 %}
@@ -44,13 +44,13 @@ tool:
 |---|---|
 | 이름 | 최대 100자까지 입력 가능한 필수 필드입니다. 콘텐츠 블록이 저장된 후에는 이름을 변경할 수 없습니다. 또한, 이전 콘텐츠 블록이 보관되었더라도 새 콘텐츠 블록에 이전 콘텐츠 블록과 동일한 이름을 지정할 수 없습니다. |
 | 설명 | (선택 사항) 최대 250자. 콘텐츠 블록을 설명하여 다른 Braze 사용자가 그것이 무엇을 위한 것이며 어디에 사용되는지 알 수 있도록 하세요. |
-| 콘텐츠 크기 | 최대 50kB(킬로바이트). |
+| 콘텐츠 크기 | 최대 50KB. |
 | 배치 | 콘텐츠 블록은 이메일 바닥글 내에서 사용할 수 없습니다. |
 | 생성 | HTML 편집기 또는 드래그 앤 드롭 편집기. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-콘텐츠 블록을 만들 때 줄 바꿈을 추가하여 HTML 및 Liquid를 시각화하는 것이 도움이 될 때가 있습니다. 이 줄 바꿈이 전송 중에 남아 있으면 블록이 렌더링되는 방식에 영향을 줄 수 있는 불필요한 공백이 생길 위험이 있습니다. 이를 피하려면 블록에 **Capture** 태그를 사용하고 **| strip** 필터를 함께 사용하십시오.
+콘텐츠 블록을 만들 때 줄 바꿈을 추가하여 HTML과 Liquid를 시각화하면 도움이 될 수 있습니다. 이 줄 바꿈이 전송 중에 남아 있으면 블록이 렌더링되는 방식에 영향을 줄 수 있는 불필요한 공백이 생길 위험이 있습니다. 이를 피하려면 블록에 **Capture** 태그를 사용하고 **| strip** 필터를 함께 사용하십시오.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -67,9 +67,10 @@ tool:
 1. **콘텐츠 블록 Liquid 태그**를 **콘텐츠 블록 세부 정보** 섹션에서 복사합니다.
 2. 메시지에 콘텐츠 블록 Liquid 태그를 삽입합니다. Liquid 및 태그를 자동으로 채우기 위해 입력을 시작할 수도 있습니다.
 
-{% alert note %}
-Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
-{% endalert %}
+### 알아두어야 할 사항
+
+- 끌어서 놓기 이메일에 HTML 콘텐츠 블록을 **사용하거나** HTML 이메일에 콘텐츠 블록을 끌어서 놓으면 예기치 않은 렌더링 문제가 발생할 수 있습니다. 드래그 앤 드롭 편집기는 콘텐츠를 동적으로 렌더링하는 HTML 및 CSS를 생성하는 반면 HTML 편집기는 정적이기 때문입니다.
+- Canvas event properties are only supported in a Canvas. If you reference a Content Block with Canvas entry properties in a campaign, it won’t populate.
 
 ### 콘텐츠 블록 업데이트 및 복사
 
