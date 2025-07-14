@@ -98,7 +98,7 @@ Si un utilisateur fait partie d'une liste de suppression, il pourra toujours ent
 
 Pour qu'un segment ne **soit** pas saisi dans un canvas, vous pouvez configurer les paramètres de ciblage de ce canvas de manière à exclure ce segment en suivant les étapes suivantes :
 
-1. Créez un segment en utilisant les mêmes filtres et critères que votre liste de suppression.
+1. Créez une segmentation en utilisant les mêmes filtres et critères que votre liste de supression.
 2. À l'étape **Cible**, utilisez le filtre **Adhésion au segment** pour cibler les utilisateurs qui ne sont pas inclus dans votre segment.
 
 Par exemple, supposons que vous ayez un canvas avec une liste de suppression appliquée. Le canvas comporte une étape de mise à jour de l'utilisateur suivie d'une étape d'envoi de messages. Dans ce scénario, les utilisateurs de la liste de suppression entrent dans le canvas, passent par l'étape de mise à jour de l'utilisateur (où l'utilisateur peut être mis à jour, en fonction de la configuration de cette étape), puis sortent à l'étape du message (à ce moment-là, l'utilisateur est inclus dans les indicateurs "Sorti"). 
