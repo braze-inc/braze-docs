@@ -28,7 +28,7 @@ channel:
 
 ## Android 고려 사항
 
-Android에서 HTML 인앱 메시지에 동영상 및 기타 HTML5 콘텐츠를 포함하려면 인앱 메시지가 표시되는 활동에서 하드웨어 가속을 사용하도록 설정해야 합니다. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
+Android에서 HTML 인앱 메시지에 동영상 및 기타 HTML5 콘텐츠를 포함하려면 인앱 메시지가 표시되는 활동에서 하드웨어 가속을 사용하도록 설정해야 합니다. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## iOS 고려 사항
 
