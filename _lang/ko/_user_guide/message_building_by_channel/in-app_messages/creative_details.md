@@ -4,7 +4,7 @@ article_title: 창의적인 세부 사항
 page_order: 4
 layout: dev_guide
 guide_top_header: "창의적인 세부 사항"
-guide_top_text: "창의적인 인앱 메시지를 작성하기 전에 몇 가지 지침을 알아두어야 합니다. 모든 인앱 메시지 템플릿은 최신 기기에서 다양한 길이의 텍스트와 크기의 이미지를 표시하도록 설계되었습니다. 모든 휴대폰, 태블릿 및 컴퓨터에서 메시지가 잘 표시되도록 하려면 이러한 지침을 따르고 항상 <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>메시지</a>를 테스트하는 것이 좋습니다. <br><br> 다음 메시지 유형 크리에이티브 사양 또는 글로벌 크리에이티브 세부 정보 기사를 확인하세요."
+guide_top_text: "창의적인 인앱 메시지를 작성하기 전에 몇 가지 지침을 알아두어야 합니다. 모든 인앱 메시지 템플릿은 최신 기기에서 다양한 길이의 텍스트와 크기의 이미지를 표시하도록 설계되었습니다. 모든 휴대폰, 태블릿 및 컴퓨터에서 메시지가 잘 표시되도록 하려면 이러한 지침을 따르고 항상 <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>메시지</a>를 테스트하는 것이 좋습니다."
 description: "이 랜딩 허브는 세 가지 유형의 인앱 메시지, 모달, 슬라이드업 및 전체 화면에 대한 디자인 및 콘텐츠 요구 사항을 다룹니다."
 
 channel:
@@ -91,7 +91,7 @@ guide_featured_list:
 
 ### GIF 및 비디오
 
-Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/gif/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. 인앱 메시지의 비디오에 대한 자세한 내용은 [맞춤 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)를 참조하세요.
+Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. 인앱 메시지의 비디오에 대한 자세한 내용은 [맞춤 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)를 참조하세요.
 
 ## 추가 고려 사항
 
