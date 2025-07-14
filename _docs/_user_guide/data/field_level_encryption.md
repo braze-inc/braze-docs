@@ -103,7 +103,7 @@ Plaintext email addresses are supported in test sending. To see how an email loo
 {%raw%}
 ### What happens if I add this email address Liquid `{{${email_address}}}` in Braze?
 
-Braze will render the plaintext email address when sending the email. In previews, we’ll display the encrypted version of the email. We recommend using the user's external ID if you’re referencing a user in a custom one-click URL.
+Braze will render the plaintext email address when sending the email. In previews, we’ll display the hashed version of the email. We recommend using the user's external ID if you’re referencing a user in a custom one-click URL.
 
 `{{${email_address}}}` is not currently supported in the preference center and unsubscribe pages.
 {%endraw%}
