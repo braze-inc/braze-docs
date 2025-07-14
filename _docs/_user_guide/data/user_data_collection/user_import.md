@@ -59,22 +59,20 @@ Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_
 
 ### Cloud Data Ingestion
 
-Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) to import and maintain user attributes. 
+Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) to import and maintain user attributes.
 
-## Creating a retargeting filter from a user import
+## Targeting preferences
 
-User import can be used to turn the CSV file into a retargeting filter by selecting **Import users in this CSV and make it possible to retarget this specific batch of users as a group**. To filter by the file in a segment or wherever filtering is an option, select the **Updated/Imported from CSV** filter and then search for the file's exact name.
+During [CSV import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import/#using-csv-import), you can optionally choose from the following targeting preferences to further improve your segmentation and audience targeting.
 
-![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]({% image_buster /assets/img/csvfilter.png %})
+| Option | Description |
+|---|---|
+| Targeting filter | To convert your CSV file into a retargeting option when building user segments, choose your file from the **Updated/Imported from CSV** dropdown, then select **Create targeting filter**. |
+| New segments | To also create a new segment from your new targeting filter, select **Create targeting filter and add to new segment** . |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Creating segments from a user import
+![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]()
 
-User import can also be used to create segments by selecting **Import users in this CSV and make it possible to retarget this specific batch of users as a group** and checking **Automatically generate a segment from the users who are imported from this CSV** before starting the import.
-
-You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment after the import has been completed.
-
-The filter used to create the segment selects users who were created or updated in a selected import and is available with all other filters in the edit segment page.
-
-## About legally required transactional emails
+## Legally required transactional emails
 
 {% multi_lang_include email-via-sms-warning.md %}
