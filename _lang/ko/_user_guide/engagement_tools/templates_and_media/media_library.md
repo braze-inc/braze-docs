@@ -14,14 +14,11 @@ tool: Media
 
 **미디어 라이브러리**를 **템플릿**에서 찾을 수 있습니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 이 페이지는 **템플릿 및 미디어** 아래에 있습니다.
-{% endalert %}
-
 **미디어 라이브러리**를 사용할 수 있습니다:
 
 * 한 번에 여러 이미지를 업로드
 * 가상 연락처 파일(.vcf) 업로드
+* WhatsApp 메시지에 사용할 동영상 파일 업로드
 * 이미지가 포함된 폴더를 업로드하세요(최대 50개 이미지)
 * [AI를 사용하여 이미지를 생성](#generate-ai)하고 미디어 라이브러리에 저장
 * 기존 이미지를 자르고 메시지에 맞는 비율을 만드세요
@@ -36,7 +33,7 @@ tool: Media
 
 ## 이미지 세부 정보
 
-미디어 라이브러리 내에서 이미지 유형, 크기, 치수, URL 및 라이브러리에 추가된 날짜를 볼 수 있습니다.
+미디어 라이브러리에서 자산 유형, 크기, 치수, URL, 라이브러리에 추가된 날짜 및 기타 정보를 볼 수 있습니다. 
 
 ### 미디어 라이브러리를 사용하는 것과 CDN을 사용하는 것
 
@@ -44,7 +41,7 @@ tool: Media
 
 ## 이미지 사양
 
-모든 이미지는 미디어 라이브러리에 업로드된 5MB 미만이어야 합니다. 지원되는 파일 형식은 PNG, JPEG 및 GIF입니다. 메시징 채널별 특정 이미지 추천은 다음 섹션을 참조하십시오.
+모든 이미지는 미디어 라이브러리에 업로드된 5MB 미만이어야 합니다. 지원되는 파일 형식은 PNG, JPEG, GIF 및 SVG입니다. 메시징 채널별 특정 이미지 추천은 다음 섹션을 참조하십시오.
 
 ### 콘텐츠 카드
 
@@ -68,6 +65,14 @@ tool: Media
 
 - [푸시 이미지 및 텍스트 사양]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 
+### 동영상
+
+미디어 라이브러리에 업로드된 동영상은 현재 WhatsApp 메시지에서만 사용할 수 있습니다. 자세한 내용은 [Whatsapp 메시지 만들기를]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages) 참조하세요.
+
+{% alert important %}
+WhatsApp 메시지에 동영상 추가 기능은 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
 ## 메시지 작성기에서 미디어 라이브러리에 접근하기
 
 미디어 라이브러리는 모든 이미지가 직접 업로드되는 대시보드의 중앙 위치로 작동합니다. 이렇게 하면 여러 메시지에서 이미지를 재사용할 수 있습니다.
@@ -79,15 +84,15 @@ tool: Media
 Braze 타사 제공업체인 OpenAI의 AI 시스템인 [DALL-E 3를](https://openai.com/index/dall-e-3/) 사용하여 미디어 라이브러리용 이미지를 생성할 수 있습니다. 이 시스템은 자연어로 된 설명에서 현실적인 이미지와 예술을 만들 수 있습니다. 각 요청은 프롬프트의 네 가지 배리언트를 생성하며, 회사는 하루에 10번 이미지를 생성할 수 있습니다. 이 총계는 귀하의 회사의 모든 사용자에게 적용됩니다.
 
 1. 미디어 라이브러리에서 <i class="fas fa-wand-magic-sparkles"></i> **AI 이미지 생성기**를 선택합니다.
-2. 생성하려는 이미지에 대한 설명을 300자 이내로 입력하세요. 설명이 자세할수록 결과가 더 좋습니다.
+2. 생성하려는 이미지에 대한 설명을 300자 이내로 입력하세요. 설명이 자세할수록 결과가 더 좋습니다. 이 기능은 텍스트 입력만 지원하므로 참조용으로 이미지를 업로드할 수 없습니다.
 3. **이미지 생성**을 선택하십시오. 이미지를 생성하는 데 약 1분이 걸릴 수 있습니다.
 4. 선택 <i class="fas fa-download" title="미디어 라이브러리에 이미지 추가"></i> 를 선택하여 미디어 라이브러리에 추가하려는 이미지를 클릭합니다.
 
 ![모달 미디어 라이브러리의 AI 이미지 생성기.][6]{: style="max-width:75%"}
 
-귀하와 Braze 사이에서 DALL-E 3를 사용하여 생성된 모든 이미지는 귀하의 지적 재산입니다. Braze는 그러한 이미지에 대해 어떠한 저작권의 권리를 주장하지 않으며, AI로 생성된 콘텐츠 또는 이미지에 대해 어떠한 유형의 보증도 하지 않습니다. 
+귀하와 Braze 사이에서 DALL-E 3를 사용하여 생성된 모든 이미지는 귀하의 지적 재산입니다. Braze는 그러한 이미지에 대해 어떠한 저작권의 권리를 주장하지 않으며, AI로 생성된 콘텐츠 또는 이미지에 대해 어떠한 유형의 보증도 하지 않습니다.
 
-이미지를 생성하기 위해 Braze는 쿼리를 OpenAI의 API 플랫폼으로 보낼 것입니다. Braze에서 OpenAI로 전송되는 모든 쿼리는 익명으로 처리되므로, 사용자가 제공하는 입력에 고유 식별 정보를 포함하지 않는 한 OpenAI는 해당 쿼리가 누구로부터 전송되었는지 확인할 수 없습니다. [OpenAI의 API 플랫폼](https://openai.com/policies/api-data-usage-policies) 약관에 명시된 바와 같이, Braze를 통해 OpenAI의 API로 전송된 데이터는 모델을 학습하거나 개선하는 데 사용되지 않으며 30일 후에 삭제됩니다. OpenAI의 [사용 정책](https://openai.com/policies/usage-policies) 및 [공유 및 출판 정책](https://openai.com/policies/sharing-publication-policy)을 포함하여 관련 정책을 준수해야 합니다. Braze는 AI가 생성한 콘텐츠와 관련하여 어떠한 종류의 보증도 하지 않습니다. 
+이미지를 생성하기 위해 Braze는 사용자의 쿼리를 OpenAI의 API 플랫폼으로 전송합니다. Braze에서 OpenAI로 전송되는 모든 쿼리는 익명으로 처리되므로, 사용자가 제공하는 입력에 고유 식별 정보를 포함하지 않는 한 OpenAI는 해당 쿼리가 누구로부터 전송되었는지 확인할 수 없습니다. [OpenAI의 API 플랫폼](https://openai.com/policies/api-data-usage-policies) 약관에 명시된 바와 같이, Braze를 통해 OpenAI의 API로 전송된 데이터는 모델을 학습하거나 개선하는 데 사용되지 않으며 30일 후에 삭제됩니다. OpenAI의 [사용 정책](https://openai.com/policies/usage-policies) 및 [공유 및 출판 정책](https://openai.com/policies/sharing-publication-policy)을 포함하여 관련 정책을 준수해야 합니다. Braze는 AI가 생성한 콘텐츠와 관련하여 어떠한 종류의 보증도 하지 않습니다. 
 
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
