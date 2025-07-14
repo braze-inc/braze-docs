@@ -2,7 +2,7 @@
 nav_title: Quick Push Messages
 article_title: Quick Push Messages
 alias: "/quick_push/"
-description: "This article describes things to know when creating a push campaign or Cavnas using the quick push editing experience."
+description: "이 문서에서는 빠른 푸시 편집 환경을 사용하여 푸시 캠페인 또는 캔버스를 만들 때 알아야 할 사항에 대해 설명합니다."
 ---
 
 # Quick push messages
@@ -62,9 +62,9 @@ iOS 및 Android와 같은 모바일 플랫폼에 대해 여러 디바이스를 �
 
 ### 기기별 설정
 
-편집기에서 플랫폼별 설정을 편집할 수 있습니다. 여기에는 [푸시 실행 버튼]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), 알림 채널 및 그룹, TTL, 디스플레이 우선순위, 소리 등의 설정이 포함됩니다.
+편집기에서 플랫폼별 설정을 편집할 수 있습니다. 여기에는 [푸시 실행 버튼]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), 알림 채널 및 그룹, TTL, 디스플레이 우선순위, 소리 등의 설정이 포함됩니다. 
 
-기기별 설정에 대한 자세한 내용은 다음 문서 모음을 참조하세요.
+퀵 푸시 캠페인을 사용하여 iOS와 안드로이드를 모두 타겟팅하는 경우 푸시 액션 버튼은 지원되지 않습니다. 기기별 설정에 대한 자세한 내용은 다음 문서 모음을 참조하세요.
 
 - [iOS 옵션][6]
 - [안드로이드 옵션][7]
