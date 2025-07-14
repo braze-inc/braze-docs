@@ -1,12 +1,12 @@
 ---
-nav_title: API 호출하기
+nav_title: 커넥티드 콘텐츠 통화하기
 article_title: 커넥티드 콘텐츠 API 호출 만들기
 page_order: 0
 description: "이 참조 문서에서는 연결된 콘텐츠 API를 호출하는 방법과 유용한 예제 및 고급 연결된 콘텐츠 사용 사례를 다룹니다."
 search_rank: 2
 ---
 
-# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}API 호출하기
+# [![Braze 학습 과정]](https://learning.braze.com/connected-content) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}커넥티드 콘텐츠 API 호출 만들기
 
 > Use Connected Content to insert any information accessible by API directly into messages you send to users. 웹 서버에서 직접 콘텐츠를 가져오거나 공개적으로 액세스할 수 있는 API에서 콘텐츠를 가져올 수 있습니다.<br><br>This page covers how to make Connected Content API calls, advanced Connected Content use cases, error handling, and more.
 
@@ -80,10 +80,6 @@ Braze 시스템은 수신자당 동일한 연결된 콘텐츠 API를 두 번 이
 
 URL에 기본 인증이 필요한 경우, Braze는 API 호출에 사용할 수 있도록 기본 인증 자격 증명을 생성할 수 있습니다. **설정** > **연결된 콘텐츠**에서 기존의 기본 인증 자격 증명을 관리하고 새 인증 자격 증명을 추가할 수 있습니다.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Connected Content** under **Manage Settings**.
-{% endalert %}
-
 ![Braze 대시보드의 '연결된 콘텐츠' 설정.][34]
 
 To add a new credential, select **Add Credential**. 자격 증명에 이름을 지정하고 사용자 아이디와 비밀번호를 입력합니다.
@@ -148,7 +144,7 @@ Braze 연결된 콘텐츠를 사용할 때 특정 API에 사용자 아이디와 
 
 #### Step 2: 검색된 액세스 토큰을 사용하여 API를 승인합니다.
 
-이제 토큰이 저장되었으므로 후속 연결된 콘텐츠 호출에 토큰을 동적으로 템플릿화하여 요청을 승인할 수 있습니다:
+토큰이 저장된 후에는 후속 커넥티드 콘텐츠 호출에 토큰을 동적으로 템플릿화하여 요청을 승인할 수 있습니다:
 
 {% raw %}
 ```
@@ -172,49 +168,7 @@ Braze는 다음 IP 범위에서 커넥티드 콘텐츠 요청을 보냅니다. �
 
 Braze에는 모든 서비스에 사용되는 예약된 IP 집합이 있으며, 모든 IP가 특정 시간에 활성화되는 것은 아닙니다. 이는 고객에게 영향을 주지 않고 필요한 경우 Braze가 다른 데이터 센터에서 전송하거나 유지보수를 수행할 수 있도록 설계되었습니다. Braze는 연결된 콘텐츠를 요청할 때 다음 IP 중 하나, 일부 또는 전부를 사용할 수 있습니다.
 
-| `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` 인스턴스의 경우: |
-|---|
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| 인스턴스 `EU-01` 및 `EU-02`의 경우: |
-|---|
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88`
-
-| `US-08` 인스턴스의 경우: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ## 문제 해결
 
@@ -224,6 +178,24 @@ Braze에는 모든 서비스에 사용되는 예약된 IP 집합이 있으며, �
 2. 캠페인 또는 캔버스 단계를 미리 보고 테스트하여 이 웹사이트로 들어오는 요청을 확인합니다.
 
 이 도구를 사용하면 요청 헤더, 요청 본문 및 통화에서 전송되는 기타 정보와 관련된 문제를 진단할 수 있습니다.
+
+## Frequently asked questions
+
+### 커넥티드 콘텐츠 호출이 사용자 또는 전송 수보다 많은 이유는 무엇인가요? 
+
+메시지 페이로드를 렌더링하기 위해 커넥티드 콘텐츠 API 호출을 해야 할 수 있기 때문에 Braze는 수신자당 동일한 커넥티드 콘텐츠 API 호출을 두 번 이상 수행할 수 있습니다. 메시지 페이로드는 유효성 검사, 재시도 로직 또는 기타 내부 목적을 위해 수신자별로 여러 번 렌더링할 수 있습니다.
+
+재시도 로직이 호출에 사용되지 않더라도 수신자당 커넥티드 콘텐츠 API 호출을 두 번 이상 수행할 수 있을 것으로 예상됩니다. 연결된 콘텐츠가 포함된 메시지의 전송 속도 제한을 설정하거나 예상되는 볼륨을 더 잘 처리할 수 있도록 서버를 구성하는 것이 좋습니다.
+
+### 커넥티드 콘텐츠에서 속도 제한은 어떻게 작동하나요?
+
+커넥티드 콘텐츠에는 자체 요금 제한이 없습니다. 대신 속도 제한은 메시지 전송 속도를 기준으로 합니다. 전송되는 메시지 수보다 연결된 콘텐츠 호출 수가 많은 경우 메시징 속도 제한을 의도한 커넥티드 콘텐츠 속도 제한보다 낮게 설정하는 것이 좋습니다.  
+
+### 캐싱 동작이란 무엇인가요?
+
+기본적으로 POST 요청은 캐시되지 않습니다. 그러나 `:cache_max_age` 매개 변수를 추가하여 POST 호출을 강제로 캐시하도록 할 수 있습니다.
+캐싱은 중복된 커넥티드 콘텐츠 호출을 줄이는 데 도움이 됩니다. 그러나 사용자당 항상 하나의 커넥티드 콘텐츠 호출이 발생한다는 보장은 없습니다.
+
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
