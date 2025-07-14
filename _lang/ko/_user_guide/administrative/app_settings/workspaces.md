@@ -117,7 +117,7 @@ To delete your workspace or app instance:
 1. **설정** > **앱 설정으로** 이동합니다.
 2. Select **Delete workspace** to delete the respective workspace, or select the trash can icon next to the respective app instance.
 
-You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/help/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
+You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case]({{site.baseurl}}/user_guide/administrative/access_braze/support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
 
 {% alert warning %}
 작업 공간을 삭제할 때는 주의하세요! 워크스페이스가 삭제된 후에는 복원할 수 없습니다.
@@ -149,7 +149,7 @@ You cannot delete app instances or workspaces that are currently being used for 
 2. **타겟팅하는 앱 및 웹사이트**의 경우 **특정 앱의 사용자**를 선택합니다.
 3. **특정 앱** 드롭다운에서 앱 또는 사이트를 선택합니다.
 
-![Segment that is targetting users from specific apps.][10]
+![특정 앱의 사용자를 타겟팅하는 세그먼트입니다.][10]
 
 그런 다음 이 세그먼트를 메시지에 추가하고 필요한 경우 추가 세그먼트 및 필터를 사용하여 오디언스를 더욱 세분화할 수 있습니다.
 
