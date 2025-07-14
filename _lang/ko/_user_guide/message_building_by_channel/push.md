@@ -50,5 +50,17 @@ guide_menu_list:
 - name: 모범 사례
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: 메시징의 로캘
+  link: /docs/user_guide/message_building_by_channel/push/using_locales/
+  image: /assets/img/braze_icons/translate-01.svg
+- name: 일반적인 푸시 오류 메시지
+  link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+  image: /assets/img/braze_icons/alert-triangle.svg
+- name: 문제 해결
+  link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
+  image: /assets/img/braze_icons/annotation-question.svg
+- name: 자주 묻는 질문
+  link: /docs/user_guide/message_building_by_channel/push/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>
