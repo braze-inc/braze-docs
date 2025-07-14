@@ -42,6 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "canvas_id": (required, string) see Canvas identifier,
   "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
