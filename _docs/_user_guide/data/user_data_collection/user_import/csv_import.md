@@ -128,7 +128,7 @@ You can upload either of the following data in a single CSV file. Upload additio
 {% tab user attributes %}
 #### Required identifiers {#required-identifiers-attributes}
 
-While `external_id` is not required, you **must** include **one** of the following identifiers in your request:
+While `external_id` is not required, you **must** include **one** of the following identifiers as a header in your CSV file:
 
 - `external_id`
 - `braze_id`
@@ -155,6 +155,10 @@ Arrays, push tokens, and custom event data types aren’t supported in user impo
 
 #### Default attributes
 
+{% alert important %}
+When importing default attributes, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will detect these as [custom attributes](#custom-attributes) instead.
+{% endalert %}
+
 | User Profile Field | Data Type | Description | Required? |
 | :---- | :---- | :---- | :---- |
 | `external_id` | String | A unique user identifier for your customer. | Conditionally. See [Required Identifiers](#required-identifiers-attributes). |
@@ -178,10 +182,6 @@ Arrays, push tokens, and custom event data types aren’t supported in user impo
 | `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
 | `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
-
-{% alert important %}
-When importing default attributes, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will detect these as [custom attributes](#custom-attributes) instead.
-{% endalert %}
 
 #### Updating subscription group status (optional)
 
@@ -207,7 +207,7 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 {% tab custom events %}
 #### Required identifiers {#required-identifiers-custom-events}
 
-While `external_id` is not required, you **must** include **one** of the following identifiers in your request:
+While `external_id` is not required, you **must** include **one** of the following identifiers as a header in your CSV file:
 
 - `external_id`
 - `braze_id`
