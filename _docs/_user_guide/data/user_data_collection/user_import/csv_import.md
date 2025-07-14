@@ -43,7 +43,7 @@ To open CSV import, go to **Audiences** > **Import Users**. Here, you'll find a 
 
 To get you started with your CSV, download a template for attributes or events.
 
-![The 'Import Users' page in the Braze dashboard.]({% image_buster /assets/img/importcsv5.png %})
+![The 'Import Users' page in the Braze dashboard.]({% image_buster /assets/img/csv_import/import_users_page.png %})
 
 ### Step 2: Choose an identifier {#choose-an-identifier}
 
@@ -245,7 +245,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 Before Braze processes your CSV, it will generate a preview of the first few rows so you can check for any issues. To generate your preview, choose **Attributes** or **Events**, then select **Browse Files**, and upload your CSV. 
 
 <!-- old image -->
-![CSV upload completed with errors involving mixed data types in a single column]({% image_buster /assets/img/importcsv2.png %}){: style="max-width:70%"}
+![CSV upload completed with errors involving mixed data types in a single column]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
 
 {% alert important %}
 User Import preview doesn’t scan every row of the input file. Errors after the top few rows may not be caught, so consider examining the CSV file in full.
@@ -261,7 +261,7 @@ You can also choose from the following targeting preferences. If you don't need 
 | New segments | To also create a new segment from your new targeting filter, select **Create targeting filter and add to new segment** . |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]()
+![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
 
 ### Step 6: Start your CSV import
 
