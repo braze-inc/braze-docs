@@ -364,7 +364,7 @@ Braze의 추천 엔진이 목록을 큐레이트할 때, 먼저 선택한 특정
 
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
-No, existing recommendations won’t automatically update to train weekly or predict daily after upgrading. You can check the next training and prediction times in the **Recommendation** section by selecting a recommendation. For updated schedules, we suggest recreating your recommendations.
+예, 하지만 다음 예정된 업데이트 이후에만 가능합니다. 기존 추천은 Item Recommendations Pro로 업그레이드할 때 즉시 주간 훈련 및 일일 예측으로 전환되지 않습니다. 그러나 다음 재훈련 주기에서 새로운 일정이 자동으로 적용됩니다. 예를 들어, 추천이 2월 1일에 마지막으로 훈련되었고 30일마다 재훈련되도록 설정된 경우, 3월 2일 다음 업데이트 후 새로운 주간 일정이 적용됩니다.
 
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
