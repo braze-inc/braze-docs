@@ -1,7 +1,7 @@
 ---
 nav_title: 문제 해결
 article_title: 문제 해결 세그먼트
-page_order: 9
+page_order: 10
 page_type: reference
 tool: 
   - Segments
