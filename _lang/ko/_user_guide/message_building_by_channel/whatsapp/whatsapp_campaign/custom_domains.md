@@ -11,4 +11,4 @@ channel:
   - WhatsApp
 ---
 
-{% multi_lang_include 커스텀_도메인.md section='WhatsApp' %}
+{% multi_lang_include custom_domains.md section='WhatsApp' %}
