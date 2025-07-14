@@ -28,7 +28,7 @@ You can do a manual full refresh on all SQL Segments created in either SQL edito
 To create a full refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
-2. Click **Create New Extension** and select **Full refresh**.<br><br>
+2. Select **Create New Extension**, then select **Full refresh**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
@@ -40,13 +40,13 @@ To create a full refresh SQL Segment Extension:
 The Incremental refresh SQL editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
-{% alert note %}
 
+{% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), you can find this page at **Engagement** > **Segments** > **Segment Extensions**.
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New Extension** and select **Incremental refresh**.<br><br>
+2. Select **Create New Extension** and select **Incremental refresh**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example incremental SQL Segment Extension.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
@@ -69,8 +69,8 @@ The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenA
 
 To use the AI SQL generator, do the following:
 
-1. Click **Launch AI SQL Generator** after creating a [SQL segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) using either full or incremental refresh.
-2. Type in your prompt and click **Generate** to translate your prompt into SQL.
+1. Select **Launch AI SQL Generator** after creating a [SQL segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) using either full or incremental refresh.
+2. Type your prompt and select **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then save your segment.
 
 #### Example prompts
@@ -172,13 +172,17 @@ Before saving, you can run a preview of your query. Query previews are automatic
 
 For incremental SQL Segment Extensions, the preview will not include the additional criteria from your operator, number of times, and time period fields.
 
-## Managing your Segment Extensions
+### Step 4: Determine if you need to invert SQL
 
-On the **Segment Extensions** page, segments generated using SQL are denoted with <i class="fas fa-code" alt="SQL Segment Extension"></i> next to their name.
+Next, determine if you need to invert SQL. While it's not possible to directly query for users with zero events, you can use **Invert SQL** to target these users. 
 
-Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
+For example, to target users who have fewer than three purchases, first write a query to select users who have three or more purchases. Then, select the **Invert SQL** to target users with fewer than three purchases (including those with zero purchases).
 
-![Messaging Use section of the SQL editor showing where the SQL segment is being used.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
+![Segment Extension named "Clicked 1-4 emails in the last 30 days" with the option to invert SQL selected.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
+
+{% alert important %}
+Unless you're specifically aiming to target users with zero events, you won't need to invert SQL. If **Invert SQL** is selected, confirm that the feature is needed and that the segment matches your desired audience. For example, if a query targets users with at least one event, it will only target users with zero events when inverted.
+{% endalert %}
 
 ## Refreshing segment membership
 
@@ -187,6 +191,14 @@ To refresh the segment membership of any Segment Extension created using SQL, op
 {% alert tip %}
 If you created a segment where you expect users to enter and exit regularly, manually refresh the Segment Extension it uses before targeting that segment in a campaign or Canvas.
 {% endalert %}
+
+## Managing your Segment Extensions
+
+On the **Segment Extensions** page, segments generated using SQL are denoted with <i class="fas fa-code" alt="SQL Segment Extension"></i> next to their name.
+
+Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
+
+![Messaging Use section of the SQL editor showing where the SQL segment is being used.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
 ### Designating refresh settings
 

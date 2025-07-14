@@ -54,6 +54,18 @@ LIMIT 10
 ```
 {% endalert %}
 
+### Determining if you need to invert SQL
+
+While it's not possible to directly query for users with zero events, you can use **Invert SQL** to target these users.
+
+For example, to target users who have fewer than three purchases, first write a query to select users who have three or more purchases. Then, select the **Invert SQL** to target users with fewer than three purchases (including those with zero purchases).
+
+![Segment Extension named "Clicked 1-4 emails in the last 30 days" with the option to invert SQL selected.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
+
+{% alert important %}
+Unless you're specifically aiming to target users with zero events, you won't need to invert SQL. If **Invert SQL** is selected, confirm that the feature is needed and that the segment matches your desired audience. For example, if a query targets users with at least one event, it will only target users with zero events when inverted.
+{% endalert %}
+
 ## Refreshing segment membership
 
 To refresh the segment membership of any catalog segment, open the catalog segment and select **Actions** > **Refresh** > **Yes, Refresh**.
