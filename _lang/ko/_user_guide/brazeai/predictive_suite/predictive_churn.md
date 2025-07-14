@@ -40,10 +40,6 @@ guide_featured_list:
 
 **예측** 페이지는 **분석** 섹션에 위치해 있습니다. 전체 액세스를 위해 계정 매니저에게 문의하세요.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **예측**을 **인게이지먼트** 아래에서 찾을 수 있습니다.
-{% endalert %}
-
 이 기능을 구매하기 전에 미리보기 모드에서 사용할 수 있습니다. 이것은 데모 고객이탈 예측을 합성 데이터로 보고, 한 번에 사용자 데이터에 기반한 고객이탈 예측 모델을 만들 수 있게 해줍니다. 이 미리보기는 고객이탈 위험에 따라 메시징을 위해 사용자를 타겟팅할 수 없으며 생성 후 정기적으로 업데이트되지 않습니다.
 
 미리보기를 통해 하나의 예측을 편집하고 다시 빌드하거나 보관하여 다른 [정의]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)의 예상 [예측 품질]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/)을 테스트하기 위해 다른 것을 만들 수 있습니다.
