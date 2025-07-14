@@ -3,7 +3,7 @@ nav_title: Directrices de marca
 article_title: Directrices de marca
 page_order: 1
 page_type: reference
-description: "Este artículo de referencia describe cómo crear, administrar y utilizar directrices de marca que pueden aplicarse a tus mensajes a través del asistente de redacción de IA."
+description: "Este artículo de referencia describe cómo crear, administrar y utilizar las directrices de marca que pueden aplicarse a tus mensajes a través del asistente de redacción de IA."
 ---
 
 # Directrices de marca
