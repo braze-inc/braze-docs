@@ -17,7 +17,7 @@ channel:
 
 ## 무음 알림
 
-[푸시 알림 메시지를 작성할]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message) 때 제목이 없는 Android 푸시 메시지는 보낼 **수** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) 참조하세요.
+[푸시 알림 메시지를 작성할]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message) 때 제목이 없는 Android 푸시 메시지는 보낼 **수** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) 참조하세요.
 
 ## 알림 그룹
 
