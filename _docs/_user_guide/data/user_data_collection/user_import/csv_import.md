@@ -39,13 +39,15 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 
 ### Step 1: Download a CSV template
 
-To open CSV import, go to **Audiences** > **Import Users**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
+To open CSV import, go to **Audiences** > **Import Users**. Here, you'll find a table that lists details about the most recent imports, such as the upload date, uploader's name, file name, targeting availability, number of imported rows, and status of the import.
+
+To get you started with your CSV, download a template for attributes or events.
 
 ![The 'Import Users' page in the Braze dashboard.]({% image_buster /assets/img/importcsv5.png %})
 
-### Step 2: Choose an identifier
+### Step 2: Choose an identifier {#choose-an-identifier}
 
-To import your CSV, you'll need to choose a user identifier for identifying which user profile each row will update. You can use the following identifiers:
+The CSV you import will need a dedicated identifier. You can choose from the following:
 
 {% tabs local %}
 <!-- TAB -->
@@ -116,19 +118,21 @@ If a profile with that email address or phone number doesn’t exist, Braze will
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Choose which data to import
+### Step 3: Build your CSV file
 
-You can upload either of the following data in a single CSV file. Upload additional CSV files to import multiple data types.
+You can upload either of the following data types as a single CSV file. To upload more than one data types, upload multiple CSV files.
 
 - **User Attributes:** This includes both default and custom user attributes. Default user attributes are reserved keys in Braze (such as `first_name` or `email`) and custom attributes are user attributes unique to your business (such as `last_destination_searched`).  
 - **Custom Events:** These are unique to your business and reflect actions a user has taken, such as `trip_booked` for a travel booking app.
+
+When you're ready to start building your CSV file, refer to the following information:
 
 {% tabs local %}
 <!-- TAB -->
 {% tab user attributes %}
 #### Required identifiers {#required-identifiers-attributes}
 
-While `external_id` is not required, you **must** include **one** of the following identifiers as a header in your CSV file:
+While `external_id` is not required, you **must** include **one** of the following identifiers as a header in your CSV file. For details about each one, review [Choose an identifier](#choose-an-identifier).
 
 - `external_id`
 - `braze_id`
@@ -207,7 +211,7 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 {% tab custom events %}
 #### Required identifiers {#required-identifiers-custom-events}
 
-While `external_id` is not required, you **must** include **one** of the following identifiers as a header in your CSV file:
+While `external_id` is not required, you **must** include **one** of the following identifiers as a header in your CSV file. For details about each one, review [Choose an identifier](#choose-an-identifier).
 
 - `external_id`
 - `braze_id`
@@ -215,7 +219,7 @@ While `external_id` is not required, you **must** include **one** of the followi
 - `email`
 - `phone`
 
-### Custom event fields
+#### Custom event fields
 
 In addition to the following, your CSV may also contain additional column headers for event properties. These properties should have a column header of `<event_name>.properties.<property name>.`
 
@@ -236,7 +240,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Review the upload preview
+### Step 4: Upload and preview your data
 
 Before Braze processes your CSV, it will generate a preview of the first few rows so you can check for any issues. To generate your preview, choose **Attributes** or **Events**, then select **Browse Files**, and upload your CSV. 
 
@@ -249,7 +253,7 @@ User Import preview doesn’t scan every row of the input file. Errors after the
 
 ### Step 5: Choose targeting preferences
 
-Before you start your import, you can also choose from the following targeting preferences. If you don't need to create a new targeting filter or segment from your import, select **Do not make this list available as a targeting filter**.
+You can also choose from the following targeting preferences. If you don't need to create a new targeting filter or segment from your import, select **Do not make this list available as a targeting filter**.
 
 | Option | Description |
 |---|---|
@@ -259,7 +263,7 @@ Before you start your import, you can also choose from the following targeting p
 
 ![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]()
 
-### Step 6: Upload your CSV
+### Step 6: Start your CSV import
 
 When you're ready, select **Start import**. You can track the current progress on the **User Import** page, which automatically refreshes every five seconds.
 

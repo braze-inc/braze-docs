@@ -61,18 +61,6 @@ Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_
 
 Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) to import and maintain user attributes.
 
-## Targeting preferences
-
-During [CSV import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import/#using-csv-import), you can optionally choose from the following targeting preferences to further improve your segmentation and audience targeting.
-
-| Option | Description |
-|---|---|
-| Targeting filter | To convert your CSV file into a retargeting option when building user segments, choose your file from the **Updated/Imported from CSV** dropdown, then select **Create targeting filter**. |
-| New segments | To also create a new segment from your new targeting filter, select **Create targeting filter and add to new segment** . |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]()
-
 ## Legally required transactional emails
 
 {% multi_lang_include email-via-sms-warning.md %}
