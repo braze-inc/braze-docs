@@ -83,7 +83,7 @@ tool: Media
 
 | Android용 콘텐츠 카드 | iOS용 콘텐츠 카드 | 웹용 콘텐츠 카드 |
 | --- | --- |---|
-| Android SDK는 기본적으로 애니메이션 GIF를 지원하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/)를 참조하세요. | Swift SDK는 기본적으로 애니메이션 GIF 지원을 제공하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF 지원 튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)을 참조하세요. | GIF 지원은 웹 SDK 통합에 기본적으로 포함되어 있습니다. |
+| Android SDK는 기본적으로 애니메이션 GIF를 지원하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android)를 참조하세요. | Swift SDK는 기본적으로 애니메이션 GIF 지원을 제공하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF 지원 튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)을 참조하세요. | GIF 지원은 웹 SDK 통합에 기본적으로 포함되어 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>
