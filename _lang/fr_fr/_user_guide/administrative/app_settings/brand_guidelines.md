@@ -3,7 +3,7 @@ nav_title: Directives de marque
 article_title: Directives de marque
 page_order: 1
 page_type: reference
-description: "Cet article de référence explique comment créer, gérer et utiliser des directives de marque qui peuvent être appliquées à vos messages grâce à l'assistant de rédaction de l'intelligence artificielle."
+description: "Cet article de référence décrit comment créer, gérer et utiliser des lignes directrices de marque qui peuvent être appliquées à vos messages par l'intermédiaire de l'assistant de rédaction de l'intelligence artificielle."
 ---
 
 # Lignes directrices de la marque
