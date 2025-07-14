@@ -26,9 +26,9 @@ Each piece of customer data imported from a CSV file will overwrite the existing
 
 | Consideration | Details |
 |---|---|
-| **External IDs** | Uploading a CSV with only `external_id` will not consume data points. This allows you to segment existing Braze users without impacting data limits. However, including fields like `email` or `phone` will overwrite existing user data and **will** consume data points. <br><br>CSV imports used only for segmentation do not consume data points, such as those containing just `external_id`, `braze_id`, or `user_alias_name`. |
-| **Blank values** | Blank values in your CSV won't overwrite existing user profile data. You don't need to include all user attributes or custom events when importing. |
-| **Subscription states** | Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` does **not** count toward data point usage. |
+| External IDs | Uploading a CSV with only `external_id` will not consume data points. This allows you to segment existing Braze users without impacting data limits. However, including fields like `email` or `phone` will overwrite existing user data and **will** consume data points. <br><br>CSV imports used only for segmentation do not consume data points, such as those containing just `external_id`, `braze_id`, or `user_alias_name`. |
+| Blank values | Blank values in your CSV won't overwrite existing user profile data. You don't need to include all user attributes or custom events when importing. |
+| Subscription states | Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` does **not** count toward data point usage. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
@@ -273,3 +273,79 @@ You can import more than one CSV at the same time. CSV imports run concurrently,
 
 ## Troubleshooting
 
+If you’re having trouble with user import, start with these troubleshooting steps. If you're still having trouble, reach out to [support@braze.com](mailto:support@braze.com).
+
+### File formatting issues
+
+#### Malformed row
+
+If your upload completed with errors, there may be a malformed row in your CSV file. 
+
+To properly import data, there must be a header row. Each row must have the same number of cells as the header row. Rows with a length of more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error. Additionally, all data must be UTF-8 encoded.
+
+If your CSV file has blank rows and imports less rows than the total lines in the CSV file, this may not indicate a problem with the import since the blank rows wouldn't need to be imported. Check the number of lines that were correctly imported and make sure it matches the number of users you're attempting to import.
+
+#### Missing row
+
+There are a few reasons why the number of users imported might not match the total rows in your CSV file:
+
+| Issue | Resolution |
+|---|---|
+| Duplicate external IDs, user aliases, Braze IDs, email addresses, or phone numbers | If there are duplicate external ID columns, this may cause malformed or unimported rows even if the rows are correctly formatted. In some cases, this may not report a specific error. Check for duplicates and remove them before re-uploading. |
+| Accented characters | Your CSV may include names or attributes with accents. Ensure the file is UTF-8 encoded to prevent import issues. |
+| Braze ID belongs to an orphaned user | If a user was merged into another and Braze cannot associate the Braze ID with the remaining profile, the row won't be imported. |
+| Empty row | Blank rows in the CSV can cause malformed data errors. Check using a plain text editor, not Excel or Sheets. |
+| Including double quotation marks (`"` ) | This character is invalid and will cause a malformed row. Use single quotation marks (`'`) instead. |
+| Inconsistent line breaks | Mixed line breaks (e.g., `\n` and `\r\n`) may cause the first row of data to be treated as part of the header. Use a hex or advanced text editor to inspect and fix. |
+| Incorrectly encoded file | Even if accents are allowed, the file must be UTF-8 encoded. Other encodings may work partially but are not fully supported. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+#### String quotation
+
+Values encapsulated in single (`''`) or double (`""`) quotation marks will be read as strings on import.
+
+#### Incorrectly formatted dates
+
+Dates not in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format won't be read as `datetimes` on import.
+
+### Data structure issues
+
+#### Invalid email addresses
+
+If your upload completed with errors, there may be one or more invalid encrypted email addresses. Confirm that all email addresses are encrypted properly before importing them into Braze.
+
+- **When [updating or importing email address]({{site.baseurl}}/user_guide/analytics/field_level_encryption/#step-3-import-and-update-users)** in Braze, use the hashed email value wherever an email is included. These hash email values are provided by your internal team. 
+- **When creating a new user**, you must add `email_encrypted` with the user’s encrypted email value. Otherwise, the user will not be created. Similarly, if you’re adding an email address to an existing user who doesn’t have an email, you must add `email_encrypted`. Otherwise, the user won't be updated.
+
+#### Data imported as custom attribute
+
+If a piece of default user data (such as `email` or `first_name`) is imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
+
+#### Multiple data types
+
+Braze expects each value in a column to be of the same data type. Values that don't match their attribute's data type will cause errors in segmenting.
+
+Additionally, beginning a number attribute with zero will cause issues because numbers starting with zeros are considered strings. When Braze converts that string, it may be treated like an octal value (which uses digits from zero to seven), meaning it will be converted to its corresponding decimal value. For example, if the value in the CSV file is 0130, the Braze profile will show 88. To prevent this issue, use attributes with string datatypes. However, this data type isn't available in the segmentation number comparison.
+
+#### Default attribute types
+
+Some default attributes may only accept certain values as valid for user updates. For guidance, refer to [Constructing your CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
+
+Trailing spaces and differences in capitalization can cause a value to be interpreted as invalid. For example, in the following CSV file, only the user in the first row (`brazetest1`) will have their email and push statuses updated successfully because the accepted values are `unsubscribed`, `subscribed`, and `opted_in`. 
+
+```plaintext
+external_id,email,email_subscribe,push_subscribe
+brazetest1,test1@braze.com,unsubscribed,unsubscribed
+brazetest2,test2@braze.com,Unsubscribed,Unsubscribed
+```
+
+### "Select CSV File" is not working
+
+There are several reasons the **Select CSV File** button may not work:
+
+| Issue | Resolution |
+|---|---|
+| Pop-up blocker | This may prevent the page from displaying. Confirm that your browser is allowing pop-ups on the Braze dashboard website. |
+| Outdated browser | Make sure your browser is up to date; if not, update it to the latest version. |
+| Background processes | Close every browser instance, then restart your computer. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
