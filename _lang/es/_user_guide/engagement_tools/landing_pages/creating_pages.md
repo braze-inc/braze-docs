@@ -71,7 +71,7 @@ Puedes utilizar estos bloques para crear un formulario que vincule los datos env
 | Tipo de bloque     | Descripción |
 |---------------|-------------|
 | Captura de correo electrónico | Un campo de formulario para direcciones de correo electrónico. Cuando se envía, la dirección de correo electrónico se añade al perfil de ese usuario en Braze. |
-| Captura telefónica | Un campo de formulario para números de teléfono. Cuando se envía, el usuario queda suscrito a tu grupo de suscripción de SMS o WhatsApp. |
+| Captura telefónica | Un campo de formulario para números de teléfono. Cuando se envía, el usuario queda suscrito a tu grupo de suscripción de SMS o Whatsapp. |
 | Campo de entrada de datos   | Un campo de formulario que admite atributos estándar (como nombre y apellidos) o una cadena de atributos personalizada de tu elección. |
 | Desplegable      | Los usuarios pueden seleccionar un elemento de una lista predefinida. Puedes añadir a la lista cualquier cadena de atributos personalizada. |
 | Casilla de verificación      | Si un usuario marca la casilla, el atributo del bloque se establece en `true`. Si se deja sin marcar, su atributo se establece en `false`. |
@@ -83,7 +83,7 @@ Después de crear una página de destino con un formulario, asegúrate de incrus
 
 #### Estilos de contenedor de página
 
-Puedes configurar los estilos que se aplicarán a todos los bloques de componentes relevantes de tu página de destino desde la pestaña **Contenedor de página**. Estos estilos se utilizarán en todas las partes de su página excepto cuando los anule con un bloque específico.
+En la pestaña **Contenedor de página** puede definir los estilos que se aplicarán a todos los bloques de componentes relevantes de su página de destino. Estos estilos se utilizarán en todas las partes de su página excepto cuando los anule con un bloque específico.
 
 Se recomienda configurar los estilos a nivel de contenedor de página antes de personalizar los estilos a nivel de bloque. También puede añadir una imagen de fondo para toda la página.
 
