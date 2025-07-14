@@ -59,7 +59,7 @@ URL의 매개변수를 사용하여 사용자 데이터를 전달하고, 페이�
 	Zoom 엔드포인트에 대한 웹훅 호출 예시.<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",
@@ -95,7 +95,7 @@ URL의 매개변수를 사용하여 사용자 데이터를 전달하고, 페이�
 	Zoom 엔드포인트에 대한 웹훅 호출 예시.<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",
