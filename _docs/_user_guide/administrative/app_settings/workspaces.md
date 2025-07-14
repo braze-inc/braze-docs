@@ -129,13 +129,13 @@ Be careful when deleting workspaces! After a workspace is deleted, it can’t be
 
 ### Should I create a new workspace when I'm releasing an updated app?
 
-This depends on if you're updating your app or creating an entirely new one.
+This depends on whether you're updating your app or creating an entirely new one.
 
 #### Updating your app
 
-If you're updating your app, you should separate the old and new version by creating a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
+If you're updating your app, you should separate the old and new versions by creating a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
-If you create a new workspace, your users would exist in two places: the old workspace and the new workspace. They would also potentially have the same push token. This could lead to users receiving a marketing message intended for only old workspace users, even if they’ve already upgraded.
+If you create a new workspace, your users will exist in two places: the old workspace and the new workspace. They could also potentially have the same push token. This can lead to users receiving a marketing message intended for only old workspace users, even if they’ve already upgraded.
 
 #### Releasing a new app
 
