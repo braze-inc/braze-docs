@@ -819,6 +819,19 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
+## Testing feature flag eligibility
+To check which feature flags a user is currently eligible for in Braze, follow these steps:
+
+1. Navigate to Audience > User Search and search for the specific user.
+2. Click on the Feature Flags Eligibility tab.
+
+In this section, you can filter the results by platform, application, and device to see the specific flags for which the user is eligible.
+
+The table displays a detailed breakdown, including the name of each flag and its type (Rollout, Canvas Step, or Experiment). Additionally, you can preview the payload returned to the user from each flag by clicking the eye icon.
+
+![An image showing the table of feature flags a user is eligible for.](% image_buster /assets/img/feature_flags/ffelig1.png %}){: style="max-width:65%;"}
+
+
 ## Viewing the changelog
 
 To view a feature flag's changelog, open a feature flag and select **Changelog**.
