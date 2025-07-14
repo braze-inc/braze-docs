@@ -20,10 +20,10 @@ When you copy a campaign or Canvas to a different workspace, the copy will remai
 {% tab campaigns %}
 
 {% alert important %}
-Copying campaigns across workspaces is generally available. Channel support for push and Content Cards isn't currently available.
+Copying campaigns across workspaces is generally available. Channel support for Content Cards isn't currently available.
 {% endalert %}
 
-You can copy campaigns across workspaces for these supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Note that multi-channel campaigns with unsupported channels can't be copied over to a different workspace.
+You can copy campaigns across workspaces for these supported channels: SMS, in-app messages, push notifications, email, and webhooks. You can also copy across email templates, feature flags, and Content Blocks. Note that multi-channel campaigns with unsupported channels can't be copied over to a different workspace.
 
 To copy a campaign to a different workspace:
 
