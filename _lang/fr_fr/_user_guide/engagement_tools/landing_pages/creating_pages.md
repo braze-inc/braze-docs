@@ -71,7 +71,7 @@ Vous pouvez utiliser ces blocs pour créer un formulaire qui relie les données 
 | Type de bloc     | Description |
 |---------------|-------------|
 | Capture d’adresses e-mail | Un champ de formulaire pour les adresses e-mail. Une fois soumise, l'adresse e-mail est ajoutée au profil de l'utilisateur dans Braze. |
-| Capture de numéros de téléphone | Un champ de formulaire pour les numéros de téléphone. Une fois soumis, l'utilisateur est abonné à votre groupe d'abonnement SMS ou WhatsApp. |
+| Capture de numéros de téléphone | Un champ de formulaire pour les numéros de téléphone. Une fois soumis, l'utilisateur est abonné à votre groupe d'abonnement SMS ou Whatsapp. |
 | Champ de saisie   | Un champ de formulaire qui prend en charge les attributs standard (tels que le prénom et le nom) ou une chaîne de caractères personnalisée de votre choix. |
 | Liste déroulante      | Les utilisateurs peuvent sélectionner un élément dans une liste prédéfinie. Vous pouvez ajouter à la liste des chaînes d'attributs personnalisés. |
 | Case à cocher      | Si l'utilisateur coche la case, l'attribut du bloc est fixé à `true`. S'il n'est pas coché, son attribut est fixé à `false`. |
@@ -83,7 +83,7 @@ Après avoir créé une page d'atterrissage avec un formulaire, veillez à inté
 
 #### Styles de conteneur de page
 
-Vous pouvez définir des styles à appliquer à tous les blocs de composants pertinents de votre page d'atterrissage à partir de l'onglet **Conteneur de page**. Ces styles seront utilisés partout sur votre page, sauf si vous les remplacez par un bloc spécifique.
+Vous pouvez définir des styles à appliquer à tous les blocs de composants pertinents de votre page d'atterrissage à partir de l'onglet **Conteneur de page.**  Ces styles seront utilisés partout sur votre page, sauf si vous les remplacez par un bloc spécifique.
 
 Nous vous recommandons de définir les styles au niveau du conteneur de la page avant de personnaliser les styles au niveau du bloc. Vous pouvez également ajouter une image de fond pour l'ensemble de la page.
 
