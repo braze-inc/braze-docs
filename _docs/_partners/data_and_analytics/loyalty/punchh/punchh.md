@@ -216,7 +216,7 @@ Considerations:
 {% tab Braze welcome %}
 #### Braze welcome campaign
 
-When a new user signs up, Punchh sends Braze a `user/guest` event that creates the user and sends a custom attribute `signup_channel`, which you can use to trigger the Braze welcome campaign.
+When a new user signs up, Punchh sends Braze a `guest` event that creates the user and sends a custom attribute `signup_channel`, which you can use to trigger the Braze welcome campaign.
 
 To set up the Braze welcome campaign, follow these steps:
 
