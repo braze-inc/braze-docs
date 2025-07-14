@@ -36,10 +36,6 @@ The new Dark Mode option, located in the Style tab when [creating an in-app mess
 
 모든 인앱 메시지에 다크 모드를 사용하려면 **템플릿** > **인앱 메시지 템플릿으로** 이동하세요.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **템플릿 및 미디어에서** 이 페이지를 찾을 수 있습니다.
-{% endalert %}
-
 드롭다운에서 [색상 프로필 만들기][2]를 선택합니다. 다크 모드 테마에 맞는 색상 프로필을 만듭니다. 그런 다음 인앱 메시지의 다크 모드 버전을 만들 때마다 해당 색상 프로필을 선택하여 인앱 메시지의 모양을 일관되게 유지할 수 있습니다.
 
 ## 호환성
