@@ -22,7 +22,7 @@ page_order: 1
 3. **TXT** 및 **CNAME** 레코드를 복사하여 도메인 공급업체의 DNS 설정에 붙여넣습니다.
 4. Braze 대시보드로 돌아와 연결을 확인합니다.
 
-![랜딩 페이지 설정 페이지에는 각각의 이름과 값이 나열된 TXT 및 두 개의 CNAME 레코드가 있습니다.][1]
+![TXT 하나와 CNAME 두 개의 레코드가 각각의 이름과 값과 함께 나열된 랜딩 페이지 설정 페이지입니다.][1]
 
 {% alert note %}
 도메인 제공업체에 따라 연결하는 데 최대 48시간이 걸릴 수 있습니다. 프로세스가 완료되면 Braze 대시보드에서 랜딩 페이지에 대해 사용자 정의 도메인을 사용하기 시작합니다.
@@ -49,7 +49,7 @@ Braze 관리자라면 다음 단계를 완료하여 이전에 구성된 도메�
 | 도메인 제공업체 | 리소스 |
 | --- | --- |
 | Bluehost | [DNS 레코드 설명](https://my.bluehost.com/hosting/help/508)<br> [DNS 관리 추가, 편집 또는 DNS 항목 삭제](https://my.bluehost.com/hosting/help/559) |
-| Dreamhost | [사용자 정의 DNS 레코드를 추가하려면 어떻게 해야 하나요?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
+| Dreamhost | [사용자 정의 DNS 레코드를 추가하려면 어떻게 하나요?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
 | GoDaddy | [CNAM 기록 추가](https://www.godaddy.com/help/add-a-cname-record-19236?) |
 | 클라우드플레어 | [DNS 레코드 관리](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
 | 스퀘어스페이스 | [커스텀 DNS 설정 추가](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
