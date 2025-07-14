@@ -1,17 +1,17 @@
 ---
 nav_title: CSV Import
-article_title: "ARTICLE_TITLE"
-description: "SHORT_DESCRIPTION."
+article_title: "CSV Import"
+description: "Learn how to record and update user attributes and custom events using CSV import."
 page_order: 1.2
 ---
 
 # CSV import
 
-> Learn how to...
+> Learn how to record and update user attributes and custom events using CSV import.
 
 ## About CSV import
 
-You can use CSV import to record and update both user attributes and custom events.
+You can use CSV import to record and update the following user attributes and custom events.
 
 |Type|Definition|Example|Maximum file size|
 |---|---|---|---|
@@ -39,7 +39,7 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 
 ### Step 1: Download a CSV template
 
-To open CSV import, go to **Audiences** > **User Import**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
+To open CSV import, go to **Audiences** > **Import Users**. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
 ![The 'Import Users' page in the Braze dashboard.]({% image_buster /assets/img/importcsv5.png %})
 
@@ -242,9 +242,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 
 ### Step 4: Review the upload preview
 
-Select Attributes or Events, then select Browse Files and upload your file. Braze will upload your file and preview the top few rows for potential issues.
-
-Note that although a file can be imported with errors, processed rows cannot be undone. it can’t be canceled or undone. As such, review the preview and consider canceling the import and modifying your file if there are issues.
+Before Braze processes your CSV, it will generate a preview of the first few rows so you can check for any issues. To generate your preview, choose **Attributes** or **Events**, then select **Browse Files**, and upload your CSV. 
 
 <!-- old image -->
 ![CSV upload completed with errors involving mixed data types in a single column]({% image_buster /assets/img/importcsv2.png %}){: style="max-width:70%"}
@@ -253,19 +251,23 @@ Note that although a file can be imported with errors, processed rows cannot be 
 User Import preview doesn’t scan every row of the input file. Errors after the top few rows may not be caught, so consider examining the CSV file in full.
 {% endalert %}
 
-### Step 5: Upload your CSV
+### Step 5: Choose targeting preferences
 
-When you’re satisfied with the upload, start the import and select targeting preferences. You can track its progress on the User Import page, which will refresh every five seconds, or at the press of the refresh button in the Recent Imports box.
+Before you start your import, you can also choose from the following targeting preferences. If you don't need to create a new targeting filter or segment from your import, select **Do not make this list available as a targeting filter**.
 
-{% details More on targeting preferences %}
-Choosing “Create targeting filter” turns the CSV file into a retargeting option when building user segments. To filter all users from the CSV in a segment or wherever filtering is an option, select the Updated/Imported from CSV filter and then search for the file’s exact name.
+| Option | Description |
+|---|---|
+| Targeting filter | To convert your CSV file into a retargeting option when building user segments, choose your file from the **Updated/Imported from CSV** dropdown, then select **Create targeting filter**. |
+| New segments | To also create a new segment from your new targeting filter, select **Create targeting filter and add to new segment** . |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ![A filter group with the "Updated/Imported from CSV" filter including a CSV file titled "Halloween season fun".]()
 
-Choosing “Create targeting filter and add to new segment” builds on this by automatically creating a new segment containing all users imported from your CSV file.
-{% enddetails %}
+### Step 6: Upload your CSV
 
-When the import is completed, the status will change to Complete and the number of rows processed is displayed. All data from processed rows will either be added to existing profiles or to newly created profiles.
+When you're ready, select **Start import**. You can track the current progress on the **User Import** page, which automatically refreshes every five seconds.
+
+When your import is finished, the status will show **Complete** and the number of rows processed will be displayed. All data from processed rows will either be added to existing profiles or to newly created profiles.
 
 {% alert note %}
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
@@ -273,7 +275,7 @@ You can import more than one CSV at the same time. CSV imports run concurrently,
 
 ## Troubleshooting
 
-If you’re having trouble with user import, start with these troubleshooting steps. If you're still having trouble, reach out to [support@braze.com](mailto:support@braze.com).
+Review these common issues if you’re having trouble with CSV import. Still need help? Reach out to [support@braze.com](mailto:support@braze.com).
 
 ### File formatting issues
 

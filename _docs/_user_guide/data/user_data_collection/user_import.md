@@ -2,13 +2,12 @@
 nav_title: User Import
 article_title: User Import
 page_order: 4
-page_type: reference
-description: "This reference article covers how to import users into your Braze dashboard using the REST API, Cloud Data Ingestion, CSV, and importing best practices."
+description: "Learn about Braze's various user import options, like CSV import, REST API, Cloud Data Ingestion, and more."
 
 ---
 # User import
 
-> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, Cloud Data Ingestion, technology partner integrations, and CSV files.
+> Learn about Braze's various user import options, like CSV import, REST API, Cloud Data Ingestion, and more.
 
 ## About HTML validation
 
