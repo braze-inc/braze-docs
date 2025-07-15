@@ -18,7 +18,7 @@ From the **Campaign Analytics** tab, you can view your reports in a series of pa
 
 ### Time range
 
-The **Campaign Analytics** tab has a default time range of 90 days prior to the present moment. If the campaign was launched more than 90 days ago, the displayed analytics will render as "0" for the given time range. To view all analytics for older campaigns, adjust the reporting time range.
+By default, the time range for **Campaign Analytics** will display the last 90 days from the current time. This means that if the campaign was launched more than 90 days ago, the analytics will display as "0" for the given time range. To view all analytics for older campaigns, adjust the reporting time range.
 
 ### Campaign details
 
