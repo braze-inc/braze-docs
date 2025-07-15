@@ -2,7 +2,7 @@
 nav_title: "Ads That Click to WhatsApp"
 article_title: Ads That Click to WhatsApp
 page_order: 1
-description: "This reference article provides a step-by-step guide for setting up and using Ads That Click to WhatsApp cases."
+description: "This reference article provides a step-by-step guide for setting up and using Ads That Click to WhatsApp."
 page_type: reference
 alias: /whatsapp_use_cases/
 channel:
@@ -11,15 +11,15 @@ channel:
 
 # Ads That Click to WhatsApp
 
-> This page provides a step-by-step guide for setting up and using Ads That Click to WhatsApp cases, so you and your team can elevate your WhatsApp program.
+> This page provides a step-by-step guide for setting up and using Ads That Click to WhatsApp, so you and your team can elevate your WhatsApp program.
 
-Ads That Click to WhatsApp are an efficient way to bring both new and existing customers from Meta ads on Facebook, Instagram, or other platform. Use these ads to promote your products and services while making users aware of your WhatsApp presence.
+Ads That Click to WhatsApp are an efficient way to bring both new and existing customers from Meta ads on Facebook, Instagram, or other platforms. Use these ads to promote your products and services while making users aware of your WhatsApp presence.
 
 ![A Facebook ad from Calorie Rocket that advertises free delivery, and the respective WhatsApp conversation that occurs when a user selects the ad's button.]({% image_buster /assets/img/whatsapp/ads_that_click_whatsapp.png %}){: style="max-width:70%;"}
 
 ## Setting up Ads That Click to WhatsApp
 
-1. In the Meta Ads Manager, create an ad on Facebook, Instagram, or other platform by following the step-by-step guide [How to create Ads That Click to WhatsApp](https://business.whatsapp.com/products/create-ads-that-click-to-whatsapp). **Do not** set up automated responses; you will set up responses in Braze instead.
+1. In the Meta Ads Manager, create an ad on Facebook, Instagram, or other platforms by following the step-by-step guide [How to create Ads That Click to WhatsApp](https://business.whatsapp.com/products/create-ads-that-click-to-whatsapp). **Do not** set up automated responses; you will set up responses in Braze instead.
 
 ![Ads Manager with a composer to create an engagment ad.]({% image_buster /assets/img/whatsapp/meta_ads_composer.png %})
 
@@ -62,6 +62,6 @@ Don’t forget to also provide any discount code, offer, or other information pr
 
 Conversations that start from an Ad That Clicks to WhatsApp are free of charge if the following conditions are met:
 
-- If a user messages you through a [Free Entry Point](https://developers.facebook.com/docs/whatsapp/pricing#free-entry-point-conversations), such as an Ads That Click to WhatsApp, a 24-hour [customer service window](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages#customer-service-windows) opens in which you can send that user any type of message.
+- If a user messages you through a [Free Entry Point](https://developers.facebook.com/docs/whatsapp/pricing#free-entry-point-conversations), such as an Ad That Clicks to WhatsApp, a 24-hour [customer service window](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages#customer-service-windows) opens in which you can send that user any type of message.
 - If you respond within the customer service window (within 24 hours), a free entry point opens for 72 hours, and all messages within the 72-hour window will be free of charge.
 - Response messaging is free of charge.
