@@ -83,6 +83,17 @@ If you're having issues logging in with two-factor authentication, contact your 
 
 A reset can solve common authentication issues such as trouble with authenticator apps, email verification not sending, login failure due to SMS outages or user error, and more.
 
+## Setting up two-factor authentication (2FA) when it isn't enforced
+
+To manually activate two-factor authentication (2FA) on your Braze account when it isn't enforced, follow these steps:
+
+1. Download an 2FA app like Authy, Google Authenticator, Okta Verify, or similar from the App Store (iOS), Google Play Store (Android), or the web. Or, if you prefer to set up 2FA with email or SMS, skip to step 2.
+2. In Braze, go to Manage Account, scroll to the **Two-Factor Authentication** section, then select **Start Setup**.
+3. Enter your password into the login modal, then select **Check Password**.
+4. In the **Two-Factor Authentication Setup** modal, enter your phone number, then select **Enable**.
+5. Copy the generated seven-digit code from your 2FA app, email, or SMS message, then go back to Braze and paste it into the **Two-Factor Authentication Setup** modal. Select **Verify**.
+6. (Optional) To avoid entering 2FA for the next 30 days, enable the **Remember this account for 30 days** option.
+
 ## Elevated Access
 
 Elevated Access adds an extra layer of security for sensitive actions in your Braze dashboard. When active, users need to re-verify their account before exporting a segment or viewing an API key. To use Elevated Access, go to **Settings** > **Admin Settings** > **Security Settings** and toggle it on. 
@@ -232,4 +243,13 @@ To customize preferences by workspace, you may add preference groups with differ
 
 ![Data Deletion Preferences section with turned on toggle for customizing data deletion preferences by workspace.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
+## Troubleshooting 2FA setup loop issues
 
+If you find yourself caught in a loop after successfully entering your phone number for Two-Factor Authentication (2FA) and are redirected back to the login page, this is likely due to failing to verify on the first attempt. To resolve this issue, follow these steps:
+
+1. Turn off any ad-blockers.
+2. Enable cookies in your browser settings.
+3. Restart your PC or laptop.
+4. Attempt to set up 2FA again.
+
+If the problem persists after these steps, contact [Support]({{site.baseurl}}/braze_support/) for assistance.

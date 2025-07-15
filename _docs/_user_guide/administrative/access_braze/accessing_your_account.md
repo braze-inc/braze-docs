@@ -33,6 +33,34 @@ You can either log in from the [Braze.com](https://www.braze.com) home site, or 
 After you log into Braze with SSO, you can no longer use your password to log into the dashboard. 
 {% endalert %}
 
+## Accessing multiple Braze dashboards
+
+Braze doesn't allow you to register the same email address to multiple dashboard users in the same cluster (for example, if you have two dashboards on US-01). You can use the same email to create accounts on different clusters (for example, if you have one dashboard on US-01 and one on US-05). If you need to access multiple Braze dashboards in the same cluster, you can do the following:
+
+### Use email aliases
+
+If your email provider is gmail, you can create aliases by adding a "+" sign followed by any text to your email address. For example:
+- Original email: rocky@gmail.com
+- Alias: rocky+1@gmail.com
+
+Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you login.
+
+### Create separate aliases with other providers
+
+If your email provider doesn't support "+" aliasing, you can still create separate aliases, such as rocky@braze.com aliasing for rocky.lotito@braze.com. This allows multiple addresses to funnel to the same inbox while being recognized as different emails by Braze.
+
+### Use multi-company developers
+
+The multi-company developers feature allows sharing of a single user account across multiple companies. Users can toggle between different company dashboards from their user profile menu.
+
+If you have SSO and want to set up multi-company developers, you need to enable a SAML Custom Entity ID by setting up a custom SAML SSO integration. Follow the steps in [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), but apply these changes:
+- Change **Entity ID** to `braze_dashboard_<companyID>` for each dashboard integration.
+- Reach out to your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
+
+### Considerations for Single Sign-On (SSO)
+
+If you use Single Sign-On (SSO), be aware that having multiple different email addresses could lead to complications. Confirm that your SSO settings are configured correctly to avoid access issues.
+
 ## Supported browsers
 
 The Braze dashboard supports the following browsers:

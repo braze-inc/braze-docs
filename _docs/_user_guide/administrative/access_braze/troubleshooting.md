@@ -61,4 +61,7 @@ If the issue occurs on all browsers, try the following:
 
 If you've solved the prior issues and your dashboard still won't load or work as expected, contact [Support]({{site.baseurl}}/braze_support/).
 
+## The user belongs to no workspace
+
+Verify this by going to **Settings** > **Company Users** and checking the user's workspace-level permissions. Add the necessary workspaces to **Workspaces**.
 
