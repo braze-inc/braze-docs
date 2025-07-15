@@ -36,7 +36,7 @@ You can no longer create or duplicate Canvases using the original editor. This a
 
 **Entry properties:**
 - Can reference `event_properties` in any full step that uses action-based delivery in a Canvas.
-- Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), the behavior follows the the current Canvas workflow rules for `event_properties`.
+- Cannot be used in scheduled full steps other than the first full step of an action-based Canvas. However, if a user is using a [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), the behavior follows the current Canvas workflow rules for `event_properties`.
 
 **Event properties:**
 - Cannot use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
