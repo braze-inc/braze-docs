@@ -2682,4 +2682,7 @@ validurls['/docs/api/endpoints/translations/get_bulk_translations_canvases'] = '
 validurls['/docs/api/endpoints/translations/get_translation_canvas'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/docs/api/endpoints/translations/canvas/put_update_translation_canvas';
 
+validurls['/docs/auto_advance/'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
+
 // validurls['OLD'] = 'NEW';

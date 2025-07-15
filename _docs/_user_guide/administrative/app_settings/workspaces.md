@@ -165,11 +165,8 @@ In Canvas, add your segment to your Message steps, in the **Delivery Validations
 
 {% details Expand for steps in the original Canvas workflow %}
 
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This content is available for reference to understand segments and targeting in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience clone their Canvases to the updated editor to better build and manage Canvases. Learn more about [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 In the original Canvas workflow, add your segment to the Canvas component level in the **Audience** section. There's no need to segment at the entry level.
+
 {% enddetails %}
 
 

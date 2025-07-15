@@ -78,7 +78,7 @@ Before building out your Canvas, you must accept the following Facebook terms of
 
 Refer to the [FAQ section](#terms) for more details on auditing your Facebook account when integrating.
 
-### Step 3: Add a Facebook Audience component in Canvas Flow
+### Step 3: Add a Facebook Audience component in Canvas
 
 Add a component in your Canvas and select **Facebook Audience**.
 

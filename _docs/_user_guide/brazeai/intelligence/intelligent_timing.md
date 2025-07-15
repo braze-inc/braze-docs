@@ -141,9 +141,6 @@ The chart shows users who had enough data to calculate an optimal time in blue a
 {% endtab %}
 
 {% tab Canvas %}
-{% alert important %}
-As of February 28, 2023, Canvases using original editor can no longer be created or duplicated. To learn how to move over to the new Canvas Flow, refer to [Cloning Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Step 1: Add Intelligent Timing
 

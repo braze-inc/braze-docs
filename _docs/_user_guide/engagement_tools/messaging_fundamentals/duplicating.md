@@ -37,12 +37,5 @@ To duplicate a Canvas:
 2. Hover over the Canvas row and select <i class="fas fa-ellipsis-vertical"></i> **More actions**.
 3. Select **Duplicate**.
 
-{% details Original Canvas editor %}
-
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. 
-
-Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-
-{% enddetails %}
 {% endtab %}
 {% endtabs %}

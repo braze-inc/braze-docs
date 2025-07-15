@@ -56,7 +56,7 @@ Once successfully connected, you will return to the partner page. Here, you can 
 
 Your TikTok connection will be applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
 
-### Step 2: Add a TikTok Audience component in Canvas Flow
+### Step 2: Add a TikTok Audience component in Canvas
 
 Add a component in your Canvas and select **Audience Sync**. 
 
