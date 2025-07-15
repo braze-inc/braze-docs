@@ -4,6 +4,7 @@ article_title: WhatsApp Use Cases
 page_order: 7
 description: "This reference article covers WhatsApp use cases to follow or take inspiration from for your messages."
 page_type: reference
+alias: /whatsapp_use_cases/
 channel:
   - WhatsApp
 ---
