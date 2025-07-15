@@ -318,6 +318,14 @@ When a Live Activity is active, it is shown on both a user's lock screen and Dyn
 
 See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) article for full details.
 
+## Tracking Live Activities
+Live Activity events are available in Currents. These Currents events enable you to better understand and monitor the lifecycle of your Live Activities, track token availability, and independently diagnose issues or verify delivery statuses. Here are the events that are available in Currents:
+
+- **PushToStartTokenChange:** Captures when a push-to-start (PTS) token is added or updated in Braze, enabling you to track token registrations and availability per user.
+- **UpdateTokenChange:** Tracks the addition, update, or removal of Live Activity Update (LAU) tokens.
+- **Send:** Logs each time a Live Activity is started, updated, or ended by Braze.
+- **Outcome:** Indicates the final delivery status to Apple Push Notification service (APNs) for every Live Activity sent from Braze.
+
 ## Frequently Asked Questions (FAQ) {#faq}
 
 ### Functionality and support
