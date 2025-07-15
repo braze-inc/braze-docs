@@ -37,9 +37,3 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
-
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
-<br>
