@@ -16,6 +16,10 @@ Looking for definitions for the terms and metrics listed in your report? Refer t
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
 
+### Time range
+
+The **Campaign Analytics** tab has a default time range of 90 days prior to the present moment. If the campaign was launched more than 90 days ago, the displayed analytics will render as "0" for the given time range. To view all analytics for older campaigns, adjust the reporting time range.
+
 ### Campaign details
 
 The **Campaign Details** panel shows a high-level overview of the entire performance for your
