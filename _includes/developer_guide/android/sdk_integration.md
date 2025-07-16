@@ -119,6 +119,47 @@ If you experience issues while testing, enable [verbose logging](#android_enabli
 
 ## Optional configurations
 
+### Runtime configuration
+
+To set your Braze options in code rather than your `braze.xml` file, use [runtime configuration](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). If a value exists in both places, the runtime value will be used instead. After all required settings are supplied at runtime, you can delete your `braze.xml` file.
+
+In the following example, a [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) is created and then passed to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Note that only some of the available runtime options are shown&#8212;refer to our [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) for the full list.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+        .setApiKey("api-key-here")
+        .setCustomEndpoint("YOUR_CUSTOM_ENDPOINT_OR_CLUSTER")
+        .setSessionTimeout(60)
+        .setHandlePushDeepLinksAutomatically(true)
+        .setGreatNetworkDataFlushInterval(10)
+        .build();
+Braze.configure(this, brazeConfig);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+        .setApiKey("api-key-here")
+        .setCustomEndpoint("YOUR_CUSTOM_ENDPOINT_OR_CLUSTER")
+        .setSessionTimeout(60)
+        .setHandlePushDeepLinksAutomatically(true)
+        .setGreatNetworkDataFlushInterval(10)
+        .build()
+Braze.configure(this, brazeConfig)
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+Looking for another example? Check out our [Hello Braze sample app](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java).
+{% endalert %}
+
 ### Google Advertising ID
 
 The [Google Advertising ID (GAID)](https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en) is an optional user-specific, anonymous, unique, and resettable ID for advertising, provided by Google Play services. GAID gives users the power to reset their identifier, opt-out of interest-based ads within Google Play apps, and provides developers with a simple, standard system to continue to monetize their apps.

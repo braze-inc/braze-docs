@@ -174,12 +174,12 @@ For a standard integration of the Content Card feed, you can use a **Custom HTML
 {% tab manual %}
 For more freedom over customizing the appearance of Content Cards and their feed, you can directly integrate Content Cards into your native website. There are two approaches you can take with this: using the standard feed UI or creating a custom feed UI.
 
-#### Standard feed
-
+{% subtabs local %}
+{% subtab standard feed %}
 When implementing the [standard feed UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#standard-feed-ui), Braze methods must have `window.` added to the start of the method. For example, `braze.showContentCards` should instead be `window.braze.showContentCards`.
+{% endsubtab %}
 
-#### Custom feed UI
-
+{% subtab custom feed %}
 For [custom feed]({{site.baseurl}}/developer_guide/content_cards/creating_cards/) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
 
 {% raw %}
@@ -189,6 +189,8 @@ body .ab-feed {
 }
 ```
 {% endraw %}
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
