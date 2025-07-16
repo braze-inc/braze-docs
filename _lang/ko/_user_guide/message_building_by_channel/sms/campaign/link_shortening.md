@@ -43,7 +43,7 @@ Braze는 `http://` 또는 `https://` 로 시작하는 URL만 인식합니다. UR
 
 ### UTM 매개변수 추가
 
-{% multi_lang_include click_tracking.md section='UTM 매개변수' %}
+{% multi_lang_include click_tracking.md section='UTM parameters' %}
 
 ## URL의 유동적 개인화
 
@@ -116,9 +116,9 @@ Liquid에서 렌더링하는 URL은 API 트리거 프로퍼티에 포함된 URL�
 
 리타겟팅에 대한 안내는 [SMS 리타겟팅을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links) 참조하세요.
 
-{% multi_lang_include click_tracking.md 섹션='사용자 정의 도메인' %}
+{% multi_lang_include click_tracking.md section='Custom Domains' %}
 
-{% multi_lang_include click_tracking.md section='자주 묻는 질문' %}
+{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
 
 ### 어떤 개별 사용자가 URL을 클릭하는지 알 수 있나요?
 

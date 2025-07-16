@@ -624,7 +624,7 @@ SMS
 콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, Android 푸시, 웹훅, SMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric=Primary Conversions (A) or Primary Conversion Event' %} 이메일, 푸시, 웹훅의 경우 최초 전송 이후 전환 추적을 시작합니다. 콘텐츠 카드 및 인앱 메시지의 경우, 이 수치는 사용자가 콘텐츠 카드 또는 메시지를 처음 볼 때 시작됩니다.
+{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 이메일, 푸시, 웹훅의 경우 최초 전송 이후 전환 추적을 시작합니다. 콘텐츠 카드 및 인앱 메시지의 경우, 이 수치는 사용자가 콘텐츠 카드 또는 메시지를 처음 볼 때 시작됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">
