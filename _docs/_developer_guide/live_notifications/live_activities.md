@@ -319,7 +319,7 @@ When a Live Activity is active, it is shown on both a user's lock screen and Dyn
 See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) article for full details.
 
 ## Tracking Live Activities
-Live Activity events are available in Currents. These Currents events enable you to better understand and monitor the lifecycle of your Live Activities, track token availability, and independently diagnose issues or verify delivery statuses. Here are the events that are available in Currents:
+Live Activity events are available in Currents, Snowflake Data Sharing, and Query Builder. The following Currents events can help you understand and monitor the lifecycle of your Live Activities, track token availability, and independently diagnose issues or verify delivery statuses.
 
 - [Live Activity Push To Start Token Change]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events): Captures when a push-to-start (PTS) token is added or updated in Braze, enabling you to track token registrations and availability per user.
 - [Live Activity Update Token Change]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events): Tracks the addition, update, or removal of Live Activity Update (LAU) tokens.
