@@ -421,6 +421,12 @@ Estimated Real Open Rate is only available in campaigns, and is not reported in 
 
 Here are some key in-app message metrics you may see in your analytics. To see the full definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
+{% alert note %}
+Reporting for _Button 1 Clicks_ and _Button 2 Clicks_ only works when you specify the **Identifier for Reporting** as "0" and "1" respectively in the in-app message.
+
+![The "Identifier for Reporting" field with a value of "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;

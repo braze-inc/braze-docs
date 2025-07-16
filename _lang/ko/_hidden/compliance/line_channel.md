@@ -4,29 +4,11 @@ article: Compliance Documentation for LINE Services
 permalink: /compliance_documentation_line/
 description: "LINE 채널 관련 규정 준수 문서."
 page_order: 5
+layout: redirect
+redirect_to: https://www.braze.com/docs/compliance_documentation_line
 noindex: true
 ---
 
-# LINE 서비스('LINE 채널')에 대한 규정 준수 문서
-
-_수정 날짜: 2024년 10월 23일_
-
-_(개정일 기준, 변경될 수 있음)_
-
-고객의 LINE 채널 이용과 관련하여 다음과 같은 추가 약관이 적용됩니다:
-
-## 사전 요구 사항
-
-LINE 채널을 통해 메시지를 전송하기 위해서는 LINE이 재량에 따라 승인하고 부여하는 'LINE 인증 공식 계정'을 취득해야 합니다. 고객은 라인 채널 이용을 위해 Braze 메시지 크레딧을 구매하기 전에 반드시 라인으로부터 공식 계정을 인증받아야 합니다. 
-
-## 적용 가능한 타사 제공업체 약관
-
-고객은 라인 채널을 이용함으로써 라인 공식 계정 이용약관, 공식 계정 API 이용약관, 라인 공식 계정 가이드라인 라인 이용자 데이터 정책 및 이에 참조하여 통합된 모든 정책, 약관, 가이드라인 및 문서(이하 통칭하여 "라인 약관"이라 함)를 포함하되 이에 국한되지 않는 LY Corporation 및 그 계열사(이하 통칭하여 "라인")가 요구하는 모든 약관 및 정책을 준수하고 그에 구속되는 것에 동의합니다. 명확히 하기 위해, 고객은 다음과 같은 책임을 집니다: (i) 라인과 관련하여 처리되는 모든 데이터가 해당되는 경우 라인 약관에 따라 처리되도록 하는 것, (ii) 라인 채널과 관련하여 라인 서비스 이용과 관련하여 라인에 지불해야 하는 모든 수수료 또는 지불금에 대한 책임이 있습니다.
-
-본 약관의 상반되는 규정에도 불구하고, 고객은 LINE 서비스 이용에 대한 일차적인 책임을 부담합니다. 
-
-## 일반 약관
-
-본 계약에 따른 고객 의무의 일반성을 제한하지 않고 의심을 피하기 위해 고객은 본 채널 사용과 관련하여 필요한 모든 권리, 동의 및 승인을 얻고, 본 채널을 통해 메시지를 보내거나 받는 데 필요한 모든 법적 동의 및 승인을 얻고, 법적으로 적절한 개인정보 고지를 제공할 책임이 전적으로 있습니다.
-
-
+<!--
+This redirect page exists only to funnel users to the English version of this statement. It should exist only in English and Japanese.
+-->

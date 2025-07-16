@@ -75,7 +75,7 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
+![Workflow of the previous steps to add a Criteo Audience component in Canvas.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow of the previous steps to add a Criteo Audience component in Canvas.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 

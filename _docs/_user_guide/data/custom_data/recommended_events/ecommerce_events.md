@@ -344,7 +344,7 @@ You can use the order refunded event to trigger when an order is partially or en
         "source": "braze-mock-storefront.myshopify.com",
         "metadata": {
             "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
-			"order_note": "item was broken"
+			"order_note": "item was broken",
             "order_number": 1234,
             "tags": [
                 "heavy",

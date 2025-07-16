@@ -2684,4 +2684,7 @@ validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/
 
 validurls['/docs/developer_guide/sdk_integration/initialization/?sdktab=web'] = '/docs/developer_guide/sdk_integration/?tab=google%20tag%20manager&sdktab=web#web_integrating-the-web-sdk';
 
+validurls['/docs/auto_advance/'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
+
 // validurls['OLD'] = 'NEW';

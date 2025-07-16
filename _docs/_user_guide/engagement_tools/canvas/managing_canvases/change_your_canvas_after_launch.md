@@ -45,11 +45,7 @@ Note that when you launch a Canvas initially, Braze enqueues the users for the M
 
 See the [Best practices](#best-practices) section for specific editing use cases. In general, it's best practice to avoid editing live Canvases as there may be unexpected behavior.
 
-{% details Original Canvas editor %}
-
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It’s an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Expand for original Canvas editor details %}
 
 You can't edit or delete existing connections, and you can't insert a step between existing connected steps. If you want to edit or add more steps to your Canvas user journey, the following details will apply:
 

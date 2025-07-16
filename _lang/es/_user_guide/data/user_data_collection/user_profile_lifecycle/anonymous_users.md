@@ -23,11 +23,11 @@ Puedes hacer lo siguiente con los usuarios anónimos capturados:
 
 ## Cómo funciona
 
-{% multi_lang_include anonymous_users/about_anonymous_users.md section='user_guide' %}
+{% multi_lang_include anonymous_users/about_anonymous_users.md section='guia_del_usuario' %}
 
 ## Asignar alias de usuario
 
-{% multi_lang_include anonymous_users/about_user_aliases.md section='user_guide' %}
+{% multi_lang_include anonymous_users/about_user_aliases.md section='guia_del_usuario' %}
 
 ## Fusionar usuarios anónimos  
 

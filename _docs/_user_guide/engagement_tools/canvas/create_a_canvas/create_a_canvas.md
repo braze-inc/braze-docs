@@ -13,7 +13,7 @@ search_rank: 1
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
 {% details Original Canvas editor %}
-You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) to the most current editor.
 {% enddetails %}
 
 ## Creating a Canvas
@@ -241,8 +241,8 @@ As you begin to add more steps, you can switch up the zoom level to focus in on 
 
 ![The component search window adding a delay step to the Braze Canvas.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
-{% alert warning %}
-A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
+{% alert important %}
+You can add up to 200 steps in a Canvas. If your Canvas exceeds 200 steps, loading issues may occur.
 {% endalert %}
 
 ##### Maximum duration
@@ -253,7 +253,7 @@ As your Canvas journey increases in steps, the maximum duration is the longest p
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
 
-You can edit any step in your Canvas Flow workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
 ![An example "Delay" step with the delay set to "Until a specific day."]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
@@ -294,7 +294,7 @@ For example, consider the following request: `\"canvas_entry_properties\" : {\"p
 {% tab Event Properties %}
 Event properties are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+In Canvas, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step
 

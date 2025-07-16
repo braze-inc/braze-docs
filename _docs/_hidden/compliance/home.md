@@ -44,3 +44,5 @@ guide_menu_list:
   link: /docs/compliance_documentation_message_archiving_field_level_encryption/
   image: /assets/img/braze_icons/clock-rewind.svg
 ---
+
+{% multi_lang_include braze_legal/english_language_governance.md %}
