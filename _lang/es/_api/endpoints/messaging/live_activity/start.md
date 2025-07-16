@@ -45,7 +45,7 @@ Para utilizar este punto final, tendrás que completar lo siguiente:
   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
   "notification": "(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Should include `notification.alert.title` and `notification.alert.body`",
   // One of the following:
-  "external_user_ids": "(optional, array of strings) see external user identifier, maximum 50",
+  "external_user_ids": "(optional, array of strings) see external user identifier",
   "custom_audience": "(optional, connected audience object) see connected audience",
   "segment_id": "(optional, string) see segment identifier"
 }
@@ -63,7 +63,7 @@ Para utilizar este punto final, tendrás que completar lo siguiente:
 | `dismissal_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro define el tiempo para eliminar la Actividad en vivo de la IU del usuario. |
 | `stale_date` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parámetro indica al sistema cuándo el contenido de la Actividad en Directo se marca como obsoleto en la interfaz de usuario. |
 | `notification` | Obligatoria | Objeto | Incluya un objeto [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) para definir una notificación push. El comportamiento de esta notificación push depende de si el usuario está activo o si está utilizando un dispositivo proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> y el usuario está activo en su iPhone cuando se envía la actualización, la interfaz de usuario actualizada de Live Activity se deslizará hacia abajo y se mostrará como una notificación push.</li><li>Si un <code>notification</code> se incluye y el usuario no está activo en su iPhone, su pantalla se iluminará para mostrar la IU de Actividad en Directo actualizada en su pantalla de bloqueo.</li><li>La <code>notification alert</code> no se mostrará como una notificación push estándar. Además, si un usuario tiene un dispositivo proxy, como un Apple Watch, la <code>alert</code> se mostrará allí.</li></ul>{:/} |
-| `external_user_ids` | Opcional si se proporciona `segment_id` o `audience`  | Matriz de cadenas | Ver [ID de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). Máximo 50 ID de usuario externos.  |
+| `external_user_ids` | Opcional si se proporciona `segment_id` o `audience`  | Matriz de cadenas | Ver [ID de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Opcional si se proporciona `external_user_ids` o `audience`  | Cadena    | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Opcional si se proporciona `external_user_ids` o `segment_id`  | Objeto de audiencia conectado  | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

@@ -45,7 +45,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
   "notification": "(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Should include `notification.alert.title` and `notification.alert.body`",
   // One of the following:
-  "external_user_ids": "(optional, array of strings) see external user identifier, maximum 50",
+  "external_user_ids": "(optional, array of strings) see external user identifier",
   "custom_audience": "(optional, connected audience object) see connected audience",
   "segment_id": "(optional, string) see segment identifier"
 }
@@ -63,7 +63,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
 | `dismissal_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Dieser Parameter legt die Zeit fest, nach der die Live-Aktivität aus dem UI des Nutzers:innen entfernt wird. |
 | `stale_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Dieser Parameter teilt dem System mit, wenn der Inhalt der Live-Aktivität in der UI des Nutzers:in als veraltet markiert wird. |
 | `notification` | Erforderlich | Objekt | Fügen Sie ein [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) Objekt ein, um eine Push-Benachrichtigung zu definieren. Das Verhalten dieser Push-Benachrichtigung hängt davon ab, ob der Nutzer:innen aktiv ist oder ob er ein Proxy-Gerät verwendet. {::nomarkdown}<ul><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone aktiv ist, wenn das Update zugestellt wird, wird die aktualisierte Live Activity UI nach unten geschoben und wie eine Push-Benachrichtigung angezeigt.</li><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone nicht aktiv ist, leuchtet sein Bildschirm auf und zeigt das aktualisierte Live Activity UI auf seinem Sperrbildschirm an.</li><li>Die <code>notification alert</code> wird nicht als normale Push-Benachrichtigung angezeigt. Wenn ein Nutzer:innen ein Proxy-Gerät, wie eine Apple Watch, besitzt, kann die <code>alert</code> wird dort angezeigt.</li></ul>{:/} |
-| `external_user_ids` | Optional, wenn `segment_id` oder `audience` bereitgestellt wird. | String-Array | Siehe [externe Nutzer:in ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). Maximal 50 externe Nutzer-IDs.  |
+| `external_user_ids` | Optional, wenn `segment_id` oder `audience` bereitgestellt wird. | String-Array | Siehe [externe Nutzer:in ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
 | `segment_id `  | Optional, wenn `external_user_ids` oder `audience` bereitgestellt wird. | String    | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Optional, wenn `external_user_ids` oder `segment_id` bereitgestellt wird. | Verbundenes Objekt der Zielgruppe  | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

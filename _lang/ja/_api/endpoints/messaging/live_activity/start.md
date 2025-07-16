@@ -45,7 +45,7 @@ description: "この記事では、「ライブアクティビティを開始」
   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
   "notification": "(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Should include `notification.alert.title` and `notification.alert.body`",
   // One of the following:
-  "external_user_ids": "(optional, array of strings) see external user identifier, maximum 50",
+  "external_user_ids": "(optional, array of strings) see external user identifier",
   "custom_audience": "(optional, connected audience object) see connected audience",
   "segment_id": "(optional, string) see segment identifier"
 }
@@ -63,7 +63,7 @@ description: "この記事では、「ライブアクティビティを開始」
 | `dismissal_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ユーザーのUIからライブアクティビティを削除する時間を定義します。 |
 | `stale_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ライブアクティビティのコンテンツがユーザーの UI で古いものとしてマークされたときに、システムに通知します。 |
 | `notification` | 必須 | オブジェクト | プッシュ通知を定義する[`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含めます。このプッシュ通知の動作は、ユーザーがアクティブであるか、ユーザーがプロキシデバイスを使用しているかによって異なります。{::nomarkdown}<ul><li>もし  <code>notification</code> 含まれており、更新が配信されたときにユーザーがiPhoneでアクティブである場合、更新されたライブアクティビティUIがスライドダウンしてプッシュ通知のように表示されます。</li><li>もし  <code>notification</code> が含まれており、ユーザーがiPhoneでアクティブでない場合、ロック画面に更新されたライブアクティビティUIを表示するために画面が点灯します。</li><li>この  <code>notification alert</code> は、標準のプッシュ通知として表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合、 <code>alert</code> そこに表示されます。</li></ul>{:/} |
-| `external_user_ids` | `segment_id`または`audience`が提供されている場合は任意 | 文字列の配列 | [外部ユーザーID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照してください。最大50の外部ユーザーID。  |
+| `external_user_ids` | `segment_id`または`audience`が提供されている場合は任意 | 文字列の配列 | [外部ユーザーID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)を参照してください。  |
 | `segment_id `  | `external_user_ids`または`audience`が提供されている場合は任意 | 文字列    | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `custom_audience` | `external_user_ids`または`segment_id`が提供されている場合は任意 | 接続されたオーディエンスオブジェクト  | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
