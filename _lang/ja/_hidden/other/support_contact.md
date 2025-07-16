@@ -6,9 +6,9 @@ layout: basic
 hide_toc: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
- 
+
 <style type="text/css">
- 
+
 #main-container {
   margin-top: 20px;
   margin-bottom: 50px;
@@ -18,11 +18,11 @@ hide_toc: true
   font-weight: bold;
   font-size: 18px;
 }
- 
+
 .container {
   margin-top: 40px;
 }
- 
+
 .popover{
   max-width: 65%;
   min-width: 350px;
@@ -36,18 +36,18 @@ hide_toc: true
 .container-fluid {
   max-width: 1280px;
 }
- 
+
 .header {
   margin-top: 20px;
   margin-bottom: 20px;
 }
- 
+
 .header .navbar-brand img {
     max-width: none;
     width: 112px;
     height: 51px;
 }
- 
+
 #ticket_resources {
   border-left: solid 1px #c9c9c9;
   padding-left: 40px;
@@ -59,15 +59,15 @@ hide_toc: true
     border: none;
   }
 }
- 
+
 .algolia-autocomplete-listbox-2 {
     display: inline !important;
 }
- 
+
 #algolia-autocomplete-listbox-2 {
   position: relative !important;
 }
- 
+
 .algolia-autocomplete {
   line-height: normal;
   display: inline !important;
@@ -76,7 +76,7 @@ hide_toc: true
     padding: 0 0 20px;
     position: relative;
 }
- 
+
 #search-input input[type="text"] {
     padding: .5em 0 .5em 0;
     outline: 0;
@@ -90,48 +90,48 @@ hide_toc: true
     background-size: 14px 14px;
     background-repeat: no-repeat;
 }
- 
+
 #search-input .fa-search {
   line-height: normal;
   position: relative;
   top: 15px;
   left: 5px;
 }
- 
+
 .aa-suggestion {
   margin-top: 5px;
   line-height: 25px;
 }
- 
+
 #ticket_search div.aa-suggestion {
   color: #6d6d70;
   cursor: pointer;
   display: inline;
   border-bottom-width: 0px;
 }
- 
+
 #ticket_search aa-suggestions:hover div {
   text-decoration: none;
   color: #6d6d70;
   border-bottom-width: 2px;
   border-color: #3accdd;
 }
- 
- 
+
+
 #ticket_search aa-suggestion--highlight{
- 
+
 }
- 
+
 #ticket_search .algolia-docsearch-footer {
   padding-top: 5px;
 }
- 
+
 .gradient-line {
   background: linear-gradient(90deg, rgba(201,196,255,1) 30%, rgba(128,30,215,1) 60%, rgba(255,165,36,1) 90%);
   height: 3px;
   width: 108px;
 }
- 
+
 a {
   font-family: "Aribau Grotesk Regular", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
   display: inline;
@@ -148,24 +148,24 @@ a {
   border-bottom-style: solid;
   line-height: 2.5;
 }
- 
+
 a:hover {
   background-color: rgb(128, 30, 215);
   text-decoration: none;
- 
+
 }
- 
+
 #ticket_mainform {
   margin-top: 20px;
 }
 #ticket_leftmain {
   padding-right: 40px;
- 
+
 }
 #ticket_reference {
   line-height: normal;
 }
- 
+
 #ticket_footer {
   margin-left: auto;
   margin-right: auto;
@@ -175,7 +175,7 @@ a:hover {
   padding-top: 10px;
   color: #6e6e70;
 }
- 
+
 #ticket_footer a {
   text-decoration: none;
   color: #6e6e70;
@@ -183,21 +183,21 @@ a:hover {
 #ticket_footer li {
   display: inline;
   margin: 8px;
- 
+
 }
 .h1, h1  {
   font-size: 44px;
 }
- 
+
 .h2, h2 {
   font-size: 20px;
 }
- 
- 
+
+
 #ticket_submit_option {
   margin-top: 20px;
 }
- 
+
 #ticket_form button[type=submit] {
   display: inline-block;
   vertical-align: middle;
@@ -223,13 +223,13 @@ a:hover {
   transition: color .3s cubic-bezier(.5, 0, .1, 1), border-color .3s cubic-bezier(.5, 0, .1, 1);
   will-change: color, border-color
 }
- 
+
 @media (min-width:36em) {
   #ticket_form button[type=submit] {
     padding: 1.64286rem 3.92857rem
   }
 }
- 
+
 #ticket_form button[type=submit]:before {
   content: "";
   position: absolute;
@@ -244,23 +244,23 @@ a:hover {
   transition: transform .3s cubic-bezier(.5, 0, .1, 1);
   will-change: transform
 }
- 
+
 #ticket_form button[type=submit]:focus, #ticket_form button[type=submit]:hover {
   color: #fff
 }
- 
+
 #ticket_form button[type=submit]:focus:before, #ticket_form button[type=submit]:hover:before {
   transform: translateZ(0)
 }
- 
+
 #ticket_form button[type=submit] {
   color: #fff
 }
- 
+
 #ticket_form button[type=submit]:before {
   background-color: #fff
 }
- 
+
 #ticket_form button[type=submit]:after {
   content: "";
   position: absolute;
@@ -271,11 +271,11 @@ a:hover {
   width: 100%;
   background-color: #212123;
 }
- 
+
 #ticket_form button[type=submit]:focus, #ticket_form button[type=submit]:hover {
   color: #212123
 }
- 
+
 #firefox_warning {
   width: 100%;
   text-align: center;
@@ -318,14 +318,14 @@ a:hover {
   padding-top: 10px;
 }
 </style>
- 
- 
+
+
 <script type="text/javascript">
 function support_doc_submit(){
   window.location = base_url + '/search/?query=' + encodeURIComponent($('#support-search-form .aa-Form .aa-Input').val());
   return false;
 }
- 
+
 String.prototype.mapReplace = function(map) {
   var mstr = this;
   for (var wd in map) {
@@ -336,7 +336,7 @@ String.prototype.mapReplace = function(map) {
   }
   return mstr;
 };
- 
+
 var wordmap = {
   'REST' : 'REST',
   'API' : 'API',
@@ -348,7 +348,7 @@ var wordmap = {
   'FAQS' : 'FAQs',
   'Android' : 'Android'
 }
- 
+
 var ticket_lookuptable = {
     'SelectText': 'どのようなご用件でしょうか?',
     'Label': '* どのようなご用件でしょうか?',
@@ -356,7 +356,8 @@ var ticket_lookuptable = {
     'LinksTitle': ['マーケター向けドキュメント', '開発者向けドキュメント', 'マーケター向けトラブルシューティング ガイド', 'よくある質問'],
     'Links': ['{{site.baseurl}}/user_guide/introduction/', '{{site.baseurl}}/developer_guide/platform_wide/platform_features/', '{{site.baseurl}}/help/home/', '{{site.baseurl}}/help/faqs/'],
     'SelectOption': {
-        '技術的な問題': {
+        'Technical Issue': {
+            'SelText': '技術的な問題',
             'Label': '* カテゴリー',
             'SelectDefault': 'カテゴリーを選択してください...',
             'LinksTitle': ['プラットフォーム機能'],
@@ -414,17 +415,17 @@ var ticket_lookuptable = {
                                 },
                                 'Web': {
                                     'ShowSubmit': true,
- 
- 
- 
- 
- 
+
+
+
+
+
                   'LinksTitle': ['Web: アプリ内メッセージのインテグレーション','Web: アプリ内メッセージのカスタマイズ','Web: アプリ内メッセージのトラブルシューティング','Web: エラーログ'],
                   'リンク': ['{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/customization','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#error-logging']
- 
- 
- 
- 
+
+
+
+
                 },
                                 'その他': {
                                     'ShowSubmit': true,
@@ -499,11 +500,11 @@ var ticket_lookuptable = {
                         'データのインポート': {
                             'ShowSubmit': true,
               'LinksTitle': ['ユーザーのインポート', 'REST API: ユーザーデータエンドポイント'],
- 
- 
+
+
               'Links' : ['{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','{{site.baseurl}}/api/endpoints/user_data']
- 
- 
+
+
             },
                         'データのエクスポート': {
                             'ShowSubmit': true,
@@ -547,19 +548,19 @@ var ticket_lookuptable = {
               'ShowSubmit': true,
               'LinksTitle': ['メールドラッグアンドドロップエディター', 'メール HTML エディター', 'ドラッグアンドドロップエディターに関するよくある質問'],
               'リンク' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor','{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/faq/']
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
             },
                         '配信性': {
                             'ShowSubmit': true,
               'LinksTitle': ['配信性の落とし穴とスパムトラップ','IP ウォーミング', 'Braze 学習コース: 高いメール配信性の実現'],
- 
- 
- 
+
+
+
                             'リンク': ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps#deliverability-pitfalls-and-spam-traps', '{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming', 'https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
                         },
                         'ユーザーサブスクリプション': {
@@ -634,18 +635,18 @@ var ticket_lookuptable = {
                     'SelectDefault': 'タイプを選択してください...',
                     'Label': '質問の内容は... *',
                     'LinksTitle': ['キャンペーンに関するよくある質問',' Canvas に関するよくある質問'],
- 
- 
+
+
           'リンク' : ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/','{{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/'],
- 
- 
+
+
                     'SelectOption': {
                         'メッセージングのパーソナライゼーション': {
               'ShowSubmit': true,
               'LinksTitle': ['パーソナライゼーションと動的コンテンツ','Liquid タグを使用したパーソナライゼーション','Liquid ユースケースライブラリ','接続されたコンテンツ'],
- 
- 
- 
+
+
+
                             'リンク': ['{{site.baseurl}}/user_guide/personalization_and_dynamic_content', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content']
                         },
                         'ターゲティングとセグメンテーション': {
@@ -734,7 +735,7 @@ var ticket_lookuptable = {
                     'SelectOption': {
                         'メッセージのパーソナライズ': {
                             'ShowSubmit': true,  'LinksTitle': ['メッセージのパーソナライズパートナー'],
- 
+
                             'Links': ['{{site.baseurl}}/partners/message_personalization']
                         },
                         'メッセージのオーケストレーション': {
@@ -770,7 +771,8 @@ var ticket_lookuptable = {
                 }
             }
         },
-        '戦略支援': {
+        'Strategy Assistance': {
+            'SelText': '戦略支援',
             'Label': '* カテゴリー',
             'SelectDefault': 'カテゴリーを選択してください...',
             'LinksTitle': ['キャンペーンのアイデアと戦略', 'Canvas のアイデアと戦略', 'Braze でアクセス可能なメッセージを作成する', 'Braze 学習コース: Canvas Flow でカスタマージャーニーを作成する'],
@@ -780,16 +782,16 @@ var ticket_lookuptable = {
                     'ShowSubmit': true,
           'LinksTitle': ['キャンペーンのアイデアと戦略', 'Canvas のアイデアと戦略','Braze 学習コース: 顧客エンゲージメントツールとユースケース'],
           'リンク':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/','{{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies','https://learning.braze.com/braze-customer-engagement-tools-use-cases']
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
                 },
                 'ベストプラクティスとよくある質問': {
                     'ShowSubmit': true,  'LinksTitle': ['ベストプラクティスとよくある質問'],
- 
+
                     'リンク': ['{{site.baseurl}}/help/faqs']
                 },
                 'その他': {
@@ -799,8 +801,9 @@ var ticket_lookuptable = {
                 }
             }
         },
- 
-        'アカウント管理': {
+
+        'Account Administration' : {
+            'SelText': 'アカウント管理',
             'Label': '* カテゴリー',
             'SelectDefault': 'カテゴリーを選択してください...',
             'Links': [],
@@ -826,10 +829,10 @@ var ticket_lookuptable = {
         }
     }
 }
- 
+
 var ticket_options = ticket_lookuptable['SelectOption'];
 $( document ).ready(function() {
- 
+
   $.urlParam = function(name){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){
@@ -839,7 +842,7 @@ $( document ).ready(function() {
       return decodeURIComponent(results[1]) || 0;
     }
   }
- 
+
   var autofilllist = {
     'name': '#ticket_name',
     'email': '#ticket_email'
@@ -850,16 +853,16 @@ $( document ).ready(function() {
     'companyid': '00NVP0000002y6X',
     'developerid': '00NVP0000004UvZ',
   };
- 
+
   $.each(autofilllist, function(k,v){
     if ($.urlParam(k) ){
       $(v).val($.urlParam(k));
     };
   });
- 
+
   var droplist = ['ticket_topic','ticket_category','ticket_subcategory','ticket_type'];
   var result_div = 'ticket_result';
- 
+
   function reset_page(ind = 1){
     for(var i = ind; i < droplist.length;i++){
         $('#' + droplist[i]).empty();
@@ -907,13 +910,13 @@ $( document ).ready(function() {
       var linkstitle = curquestion['LinksTitle'];
       var resdiv = $('#ticket_reference');
       var resmsg = $('#ticket_message');
- 
+
       var resstr = '';
       if ('ReferenceText' in curquestion){
         resstr += curquestion['ReferenceText'] + '<br />'
       }
       if (notEmpty(linklist) && (linklist.length > 0)){
-        resmsg.html('Have you tried...')
+        resmsg.html('試してみましたか...')
         for (var i = 0 ; i < linklist.length; i++ ) {
           var title = '';
           if ((typeof linkstitle !== 'undefined') && (i in linkstitle) && linkstitle[i]) {
@@ -923,8 +926,8 @@ $( document ).ready(function() {
             var linkparts =  linklist[i].split('#');
             var linkurl = removeleadingslash(linkparts[0]);
             var urlpart = linkurl.split('/')
- 
- 
+
+
             if (urlpart.length > 1) {
               title += ' ' + urlpart[urlpart.length-1].replace(/\_/g,' ').replace(/\-/g,' ');;
             }
@@ -983,7 +986,7 @@ $( document ).ready(function() {
           resdiv.hide();
         }
       }
- 
+
       /*if ('ShowSubmit' in curquestion) {
         if (curquestion['ShowSubmit']) {
           if (!$("#submit_ticket").prop("checked")) {
@@ -994,30 +997,30 @@ $( document ).ready(function() {
       }*/
     }
   }
- 
+
   function subtype_change(e){
     var topic_selected =  $('#ticket_topic option:selected').val();
     var category_selected =  $('#ticket_category option:selected').val();
     var type_selected =  $('#ticket_subcategory option:selected').val();
- 
+
     var subtype_selected =  $('#ticket_type option:selected').val();
     var subtype_links = ticket_options[topic_selected]['SelectOption'][category_selected]['SelectOption'][type_selected]['SelectOption'][subtype_selected];
     showlinks(subtype_links)
- 
+
   }
- 
+
   function type_change(e) {
     reset_page(3);
     var topic_selected =  $('#ticket_topic option:selected').val();
     var category_selected =  $('#ticket_category option:selected').val();
     var type_selected =  $('#ticket_subcategory option:selected').val();
     var subtype_selected = this.value;
- 
+
     var subtype_options = ticket_options[topic_selected]['SelectOption'][category_selected]['SelectOption'][type_selected];
     if (subtype_options && ('Label' in subtype_options)){
       $('#ticket_type_label').html(subtype_options['Label']);
     }
- 
+
     if (subtype_selected && 'SelectOption' in subtype_options) {
       hide_page(4);
       if ('SelectDefault' in subtype_options) {
@@ -1026,25 +1029,24 @@ $( document ).ready(function() {
       else {
         subtype_menu.append($('<option>',{value: ''}).html('Select a type...'));
       }
-      $.each(subtype_options['SelectOption'],function(subtype)  {
-        subtype_menu.append($('<option>',{value: subtype}).html(subtype));
+      $.each(subtype_options['SelectOption'],function(subtype, val)  {
+        subtype_menu.append($('<option>',{value: subtype}).html(val.SelText || subtype));
       });
     }
     else {
       hide_page(3);
-      //showlinks(subtype_options);
     }
     showlinks(subtype_options);
   }
- 
+
   function category_change(e) {
     reset_page(2);
- 
+
     var topic_selected =  $('#ticket_topic option:selected').val();
     var type_selected = this.value;
     var type_options = ticket_options[topic_selected]['SelectOption'][type_selected];
     //type_menu.empty();
- 
+
     if (type_selected && 'SelectOption' in type_options) {
       hide_page(3);
       if ('SelectDefault' in type_options) {
@@ -1053,17 +1055,17 @@ $( document ).ready(function() {
       else {
         type_menu.append($('<option>',{value: ''}).html('Select a subcategory...'));
       }
-      $.each(type_options['SelectOption'],function(type)  {
-        type_menu.append($('<option>',{value: type}).html(type));
+      $.each(type_options['SelectOption'],function(type, val)  {
+        type_menu.append($('<option>',{value: type}).html(val.SelText || type));
       });
- 
+
     }
     else {
       hide_page(2);
     }
     showlinks(type_options);
   }
- 
+
   function topic_change(e) {
     reset_page(1);
     var topic_selected = this.value;
@@ -1076,28 +1078,27 @@ $( document ).ready(function() {
       else {
         category_menu.append($('<option>',{value: ''}).html('Select a category...'));
       }
-      $.each(category_options['SelectOption'],function(category) {
-        category_menu.append($('<option>',{value: category}).html(category));
+      $.each(category_options['SelectOption'],function(category, val) {
+        category_menu.append($('<option>',{value: category}).html(val.SelText || category));
       });
-      // showlinks(category_options);
     }
     else {
       hide_page(1);
     }
     showlinks(category_options);
   }
- 
- 
+
+
   var tmenu = $('#ticket_menu');
   var topic_menu = $('#ticket_topic');
   var subtype_menu = $('#ticket_type');
   var type_menu = $('#ticket_subcategory');
   var category_menu = $('#ticket_category');
- 
+
   function settopic(){
     reset_page(0);
     hide_page(1);
- 
+
     //topic_menu.empty();
     if ('SelectDefault' in ticket_lookuptable) {
       topic_menu.append($('<option>',{value: ''}).html(ticket_lookuptable['SelectDefault']));
@@ -1106,19 +1107,19 @@ $( document ).ready(function() {
       topic_menu.append($('<option>',{value: ''}).html('Select a topic...'));
     }
     /* Generate Initial Menu */
-    $.each(ticket_options,function(topic)  {
-      topic_menu.append($('<option>',{value: topic}).html(topic));
+    $.each(ticket_options,function(topic, val)  {
+      topic_menu.append($('<option>',{value: topic}).html(val.SelText || topic));
     });
- 
+
   };
   settopic();
- 
+
   /* if menu changes, dynamically create new menu */
   category_menu.on('change',category_change);
   type_menu.on('change',type_change);
   topic_menu.on('change',topic_change);
   subtype_menu.on('change',subtype_change);
- 
+
   $('#ticket_submit_option').hide();
   /* $('#submit_ticket').on('change',function(e){
     if(this.checked){
@@ -1133,7 +1134,7 @@ $( document ).ready(function() {
       var object = this;
       object.time = new Date().getTime();
       object.form = $('<form action="'+url+'" target="iframe'+object.time+'" method="post" style="display:none;" id="form'+object.time+'" name="form'+object.time+'"></form>');
- 
+
       object.addParameter = function(parameter,value) {
           $("<input type='text' />")
            .attr("name", parameter)
@@ -1154,7 +1155,7 @@ $( document ).ready(function() {
           iframe.on('load',function(){  $('#form'+$(this).data('time')).remove();  $(this).remove();   });
       }
   }
- 
+
   $('#ticket_form').submit(function(e){
     e.preventDefault();
     var mform = $(this);
@@ -1162,13 +1163,13 @@ $( document ).ready(function() {
     var user_name = $('#ticket_name').val();
     var user_email = $('#ticket_email').val();
     var user_ccemail = $('#ticket_ccemail').val();
- 
+
     var user_subject = $('#ticket_subject').val();
- 
+
     var user_issue = $('#ticket_issue').val();
- 
+
     var sf_submit = new iframeform('https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8');
- 
+
     sf_submit.addParameter('orgid','00Dd0000000e3l4');
     sf_submit.addParameter('retURL','https://braze.com');
     sf_submit.addParameter('name',user_name);
@@ -1190,10 +1191,10 @@ $( document ).ready(function() {
         sf_submit.addParameter(v,$.urlParam(k));
       };
     });
- 
+
     sf_submit.addParameter('external','1');
     sf_submit.send();
- 
+
     var gs_submit = new iframeform('https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/support_request');
     gs_submit.addParameter('Name', user_name);
     gs_submit.addParameter('Email', user_email);
@@ -1209,7 +1210,7 @@ $( document ).ready(function() {
       "00N0V000009G0MQ" : "Type", // Type
       "priority" : "Priority", // Priority
     }
- 
+
     $.each(sels,function(k,v){
       var selopt = $(this);
       var selval = selopt.find(':selected');
@@ -1225,9 +1226,9 @@ $( document ).ready(function() {
       };
     });
     gs_submit.send();
- 
+
     $('#ticket_mainform').hide();
- 
+
     $('#ticket_thankyou').fadeIn("slow");
     $('#ticket_thankyou_msg').html('<h3>ご提出いただきありがとうございます。</h3>弊社のサポートチームのメンバーがすぐにチケットに返信します。<br />確認メールが届かない場合は、ブラウザーのアドオン、コンテンツ/プライバシー設定、メールのスパムフォルダーを確認してください。<br />それ以外の場合は、サクセスマネージャーに (または <a href="mailto:support@braze.com">support@braze.com</a> 宛にメールで) お問い合わせいただき、チケットが送信されたことを確認してください。');
     $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -1237,10 +1238,10 @@ $( document ).ready(function() {
   $('#ticket_priority_info').popover({
     html: true
   });
- 
+
   $("#submit_ticket").trigger("change");
- 
- 
+
+
   function string_to_slug(str) {
     if (str) {
       str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
@@ -1307,7 +1308,7 @@ $( document ).ready(function() {
                  },
                })
           },
- 
+
           item({ item, createElement }) {
             var content = "";
             var title = "";
@@ -1316,7 +1317,7 @@ $( document ).ready(function() {
             var platform = "";
             var subname = "";
             var heading = "";
- 
+
             if ("nav_title" in item) {
               title = item.nav_title.replaceUnder();
             } else {
@@ -1328,7 +1329,7 @@ $( document ).ready(function() {
             if ("category" in item) {
               category = item.category.replaceUnder();
             }
- 
+
             if ("platform" in item) {
               if (Array.isArray(item.platform)){
                 platform = item.platform.join(',').replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
@@ -1342,7 +1343,7 @@ $( document ).ready(function() {
                 heading = item["headings"][item["headings"].length - 1];
               }
             }
- 
+
             var url = item.url;
             if (heading) {
               url += "#" + string_to_slug(heading);
@@ -1362,7 +1363,7 @@ $( document ).ready(function() {
       }];
     }
   });
- 
+
  if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
    var ff_div = $('#firefox_warning').detach();
    ff_div.insertBefore($('#basic_page')).show();
@@ -1370,7 +1371,7 @@ $( document ).ready(function() {
 });
 </script>
 <div id="firefox_warning" style="display:none;">Firefox ユーザーの場合は、このサイトを許可リストに追加するか、<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">トラッキング保護設定</a>を確認してください。さもなければチケットが送信されない可能性があります。</div>
- 
+
 <div class="container-fluid" id="main-container">
       <div class="row">
           <div class="col" >
@@ -1381,14 +1382,14 @@ $( document ).ready(function() {
         <div id="ticket_mainform" class="row">
         <div class="col-sm-7" id="ticket_leftmain">
           <form id="ticket_form">
- 
- 
+
+
                 <div class="row">
                     <div class="col">
                         <div class="form-group" id="ticket_topic_div">
                           <label for="ticket_topic" id="ticket_topic_label">どのようなご用件でしょうか？ *</label>
                           <select id="ticket_topic" name="00N0V000009G0MG"  class="form-control" ></select>
- 
+
                         </div>
                         <div class="form-group" id="ticket_category_div">
                           <label for="ticket_category" id="ticket_category_label">カテゴリー *</label>
@@ -1407,19 +1408,19 @@ $( document ).ready(function() {
                           <div id="ticket_reference"></div>
                         </div>
                     </div>
- 
+
                 </div>
                 <!-- div class="row">
                   <div class="col">
                     <label for="submit_ticket" class="checkbox-inline">
- 
+
                     <input type="checkbox" value="submit_ticket" name="submit_ticket" id="submit_ticket"  />
                     チケットを送信します。</label>
                   </div>
                 </div -->
- 
+
                 <div class="row">
- 
+
                   <div class="col">
                     <div id="ticket_submit_option">
                       <h2>必要なものが見つかりませんか? サポートチームにお問い合わせください。</h2>
@@ -1428,7 +1429,7 @@ $( document ).ready(function() {
                           <input type="text" name="Name" id="ticket_name"  maxlength="80" required="required" value="" placeholder="名前を入力してください" class="form-control" />
                       </div>
                       <div class="form-group" >
- 
+
                         <label for="ticket_email" id="ticket_email_label"> メールアドレス *</label>
                         <div class="input-group">
                           <div class="input-group-prepend">
@@ -1448,7 +1449,7 @@ $( document ).ready(function() {
                           <label for="ticket_subject" id="ticket_subject_label"> 主題 *</label>
                           <input type="text" class="form-control" id="ticket_subject"  maxlength="80" name="Subject" placeholder="どのようなご質問ですか?" required="required" value="" />
                       </div>
- 
+
                       <div class="form-group" id="ticket_priority_div">
                         <label for="ticket_priority" id="ticket_priority_label">問題の重大度 *</label>
                         <a id="ticket_priority_info" title="問題の重大度の説明"
@@ -1464,11 +1465,11 @@ $( document ).ready(function() {
                           <option value="Low" selected="selected">低: Braze の機能や分析に関する質問</option>
                         </select>
                       </div>
- 
+
                       <div class="form-group" >
- 
+
                           <label for="ticket_issue" id="ticket_issue_label">質問 *</label>
- 
+
                           <textarea name="ticket_issue" class="form-control" id="ticket_issue"  required="required" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="プラットフォーム、SDK バージョン、REST API エンドポイント、セグメントまたはキャンペーンへのリンク、関連するユーザー ID、問題を再現する手順など、調査とトラブルシューティングに役立つ情報を含めてください。 "
                           placeholder="調査やトラブルシューティングに役立つ情報を含めてください。たとえば、次の情報です:
@@ -1480,9 +1481,9 @@ $( document ).ready(function() {
 - 問題を再現する手順 " rows="7"></textarea>
                       </div>
                       <!-- div class="form-group" >
- 
+
                           <label for="ticket_comment"  id="ticket_comment_label">  追加コメントとスクリーンショット </label>
- 
+
                           <textarea name="Issue_Steps" class="form-control" id="ticket_comment" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="その他のコメントを追加し、関連するスクリーンショットまたはスクリーンキャストへのリンクを追加します。"
                           placeholder="その他のコメントを追加し、関連するスクリーンショットまたはスクリーンキャストへのリンクを追加します。" rows="7"></textarea>
@@ -1504,11 +1505,11 @@ $( document ).ready(function() {
         <div class="col-sm-5" id="ticket_resources">
         <div id="support-search-div">
          </div>
- 
+
            <div id="support-search-panel"></div>
- 
+
             <legend>役立つリソース</legend>
- 
+
             <div id="ticket_usefulresources">
             <a target="" href="{{site.baseurl}}/user_guide/introduction/">ユーザーガイド</a><br />
             <a target="" href="{{site.baseurl}}/developer_guide/platform_wide/platform_features/">開発者ガイド</a><br />
@@ -1517,7 +1518,7 @@ $( document ).ready(function() {
             <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
             <a target="" href="https://dashboard.braze.com/">Braze ダッシュボード</a><br />
             </div>
- 
+
         </div>
     </div>
     <div id="ticket_thankyou" style="display:none;"><div class="row"><div class="col" id="ticket_thankyou_msg"></div></div></div>
