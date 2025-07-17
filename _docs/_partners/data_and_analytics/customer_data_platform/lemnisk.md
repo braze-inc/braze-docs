@@ -33,7 +33,7 @@ Lemnisk and Braze integration will allow brands and enterprises unlock the full 
 
 1. In Lemnisk, navigate to the External API channel. Click on 'Add New External API'. We'll now set up the [Track Users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) endpoint as an External API.
 
-![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze Open External API.png)
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk_braze_open_external_api.png)
 
 2. Give Basic Details to the configuration as shown in the image below.
 
@@ -41,7 +41,7 @@ Lemnisk and Braze integration will allow brands and enterprises unlock the full 
 
 Enter the API details of the Track User endpoint as shown below. Define as many fields as you like at Engagement-level using {{}} so that you can provide different values to them for different campaigns
 
-![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze Ext. API - Ext. API Details.png)
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk_braze_ext_api_ext_api_details.png)
 
 3. Click on Save to set up your Track Users configuration.
 
@@ -51,7 +51,7 @@ Enter the API details of the Track User endpoint as shown below. Define as many 
 2. Give test values of the API parameters in the JSON tree view, and click on 'Test Configuration'.
 3. You'll see a success response from Braze if the credentials and API definitions are correct.
 
-![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze Test Ext API.png)
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/aassets/img/lemnisk/lemnisk_braze_test_ext_api.png)
 
 4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from the Test API trigger.
 
