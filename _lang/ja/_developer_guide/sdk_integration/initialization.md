@@ -16,7 +16,7 @@ description: "Runtime の初期化、遅延初期化、Google Tag Manager など
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/sdk_initialization.md %}
+{% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
