@@ -19,40 +19,41 @@ page_order: 2.0
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/swift/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/cordova/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/flutter/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/react_native/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/roku/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/unity/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
+
 {% endsdktabs %}
 
 {% alert note %}
