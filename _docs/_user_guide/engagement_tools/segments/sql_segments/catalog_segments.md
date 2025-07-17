@@ -58,7 +58,7 @@ LIMIT 10
 
 While it's not possible to directly query for users with zero events, you can use **Invert SQL** to target these users.
 
-For example, to target users who have fewer than three purchases, first write a query to select users who have three or more purchases. Then, select the **Invert SQL** to target users with fewer than three purchases (including those with zero purchases).
+For example, to target users who have fewer than three purchases, first write a query to select users who have three or more purchases. Then, select **Invert SQL** to target users with fewer than three purchases (including those with zero purchases).
 
 ![Segment Extension named "Clicked 1-4 emails in the last 30 days" with the option to invert SQL selected.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
 
