@@ -80,6 +80,9 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 - **Character limit per segment**
     - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) has a 160 character limit for a single SMS segment. For messages with more than 160 characters, all messages will be segmented with a 153 character limit.
     - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) has a 70 character limit per message segment. For messages with more than 70 characters, all messages will be segmented with a 67 character limit.<br><br>
+- **Character encoding considerations**
+    - Some GSM-7 characters have UCS-2 equivalents, which can make it difficult to realize if a UCS-2 character is included. This has the potential to greatly increase the number of message segments a message uses, so it is recommended that marketers pay close attention to the estimated segment count before they launch their campaign.
+    - Our segment calculator below highlights individual characters to show which are GSM-7 (green) and which are UCS-2 (red), helping you identify characters that may cause your message to switch to UCS-2 encoding.<br><br>
 - **Segment limit per message**
     - There is a maximum amount of segments you can send due to the medium's limitations. No more than **10 segments** of messages may be sent in a single Braze SMS message.
     - Those 10 segments will be limited to 1530 characters (GSM-7 encoding) or 670 characters (UCS-2 encoding).<br><br>
@@ -129,6 +132,32 @@ If you'd like to see how many segments your message will dispatch, enter your co
   .segment_color_3 {
     background-color: #27368f30;
   }
+  .ucs2_char {
+    background-color: #ffcccc !important;
+    border: 1px solid #ff6666;
+    border-radius: 2px;
+  }
+  .gsm_char {
+    background-color: #ccffcc !important;
+    border: 1px solid #66ff66;
+    border-radius: 2px;
+  }
+  .encoding_legend {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .encoding_legend .legend_item {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .encoding_legend .legend_color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 2px;
+    vertical-align: middle;
+  }
 </style>
 <form id="sms_split">
   <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
@@ -138,6 +167,16 @@ If you'd like to see how many segments your message will dispatch, enter your co
   <br />
   Message Length: <span id="sms_length" style="padding-left: 5px;">0</span> characters.<br />
   SMS Segments Count: <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
+  <div class="encoding_legend" id="encoding_legend" style="display: none;">
+    <div class="legend_item">
+      <span class="legend_color" style="background-color: #ccffcc; border: 1px solid #66ff66;"></span>
+      GSM-7 characters
+    </div>
+    <div class="legend_item">
+      <span class="legend_color" style="background-color: #ffcccc; border: 1px solid #ff6666;"></span>
+      UCS-2 characters
+    </div>
+  </div>
   Message Output: <span id="sms_output" style="padding-left: 5px;"></span><br />
   <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Display Segments: </label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
@@ -415,13 +454,35 @@ function updateSMSSplit(){
     var unicodeinput = smsutil.unicodeCharacters(sms_text);
     var encodedChars = encoder[sms_type](sms_text);
     var smsSegments = segmenter[sms_type](unicodeinput);
+    
     $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
+    
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
     const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
-    const messageOutput = smsSegments.map((segment,segment_index) =>  segment.text.map((ch, i) => `<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""));
+    
+    // Enhanced message output with character-level encoding indicators
+    const messageOutput = smsSegments.map((segment,segment_index) =>  
+        segment.text.map((ch, i) => {
+            // Check if character is GSM-7 encoded
+            const charCode = ch.charCodeAt(0);
+            const isGsm = charCode in unicodeToGsm;
+            const encodingClass = isGsm ? 'gsm_char' : 'ucs2_char';
+            const charDisplay = ch !== " " ? ch : "&nbsp;";
+            return `<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)} ${encodingClass}' title='${isGsm ? "GSM-7" : "UCS-2"} character: ${charDisplay === "&nbsp;" ? "space" : ch}'>${charDisplay}</div>`;
+        }).join("")
+    );
+    
     $('#sms_output').html(messageOutput);
     $('#sms_segments_data').html(segmentsHtml);
+    
+    // Show/hide encoding legend based on content
+    if (sms_text.length > 0) {
+        $('#encoding_legend').show();
+    } else {
+        $('#encoding_legend').hide();
+    }
+    
     $('#segment_section').click(function() {
       if($(this).is(":checked")) {
         $("#sms_segments_data").show();
