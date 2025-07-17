@@ -22,7 +22,7 @@ Fügen Sie einen [Experimentierpfad]({{site.baseurl}}/user_guide/engagement_tool
 
 ### Schritt 2: Konfigurieren Sie die Einstellungen für den Gewinnweg
 
-Geben Sie das Umwandlungsereignis an, das den Gewinner bestimmen soll. Wenn keine Konversions-Events verfügbar sind, kehren Sie zum ersten Schritt der Canvas-Einrichtung zurück und [weisen Konversions-Events zu]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Beachten Sie, dass, wenn Sie den Gewinner mit Öffnungen und Klicks ermitteln, nur die erste Nachricht im Pfad, die Öffnungen oder Klicks erzeugt, zur Ermittlung des Gewinners beiträgt.
+Geben Sie das Umwandlungsereignis an, das den Gewinner bestimmen soll. Wenn keine Konversions-Events verfügbar sind, kehren Sie zum ersten Schritt der Canvas-Einrichtung zurück und [weisen Konversions-Events zu]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Beachten Sie, dass, wenn Sie den Gewinner mit Öffnungen und Klicks ermitteln, der erste Schritt im Pfad ein Nachrichtenschritt sein muss, und nur die erste Nachricht im Pfad, die Öffnungen oder Klicks erzeugt, zur Ermittlung des Gewinners beiträgt.
 
 Legen Sie als nächstes das **Experimentierfenster** fest. Das **Experiment-Fenster** gibt an, wie lange das Experiment läuft, bevor der Gewinnerpfad ermittelt wird und alle nachfolgenden Benutzer diesen Pfad entlang geschickt werden. Das Fenster beginnt, wenn der erste Nutzer:innen den Schritt betritt.
 

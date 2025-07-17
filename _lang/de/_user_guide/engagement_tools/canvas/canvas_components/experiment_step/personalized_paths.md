@@ -27,7 +27,7 @@ Fügen Sie einen [Experimentierpfad]({{site.baseurl}}/user_guide/engagement_tool
 
 ### Schritt 2: Konfigurieren Sie die Einstellungen für personalisierte Pfade
 
-Geben Sie das Umwandlungsereignis an, das den Gewinner bestimmen soll. Wenn keine Konversions-Events verfügbar sind, kehren Sie zum ersten Schritt der Canvas-Einrichtung zurück und [weisen Konversions-Events zu]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Wenn Sie ein Conversion-Ereignis mit Öffnungen oder Klicks wählen, um den Gewinner zu ermitteln, dann trägt nur der erste Nachrichtenschritt im Pfad, der Öffnungen oder Klicks erzeugt, zur Ermittlung des Gewinners bei. Nachfolgende Schritte auf dem Pfad werden nicht berücksichtigt.
+Geben Sie das Umwandlungsereignis an, das den Gewinner bestimmen soll. Wenn keine Konversions-Events verfügbar sind, kehren Sie zum ersten Schritt der Canvas-Einrichtung zurück und [weisen Konversions-Events zu]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Wenn Sie ein Conversion-Ereignis mit Öffnungen oder Klicks wählen, um den Gewinner zu ermitteln, dann muss der erste Schritt im Pfad ein Nachrichtenschritt sein, und nur der erste Nachrichtenschritt im Pfad, der Öffnungen oder Klicks erzeugt, trägt zur Ermittlung des Gewinners bei. Nachfolgende Schritte auf dem Pfad werden nicht berücksichtigt.
 
 Legen Sie dann das **Experimentierfenster** fest. Das **Experimentierfenster** bestimmt, wie lange die Benutzer über alle Pfade geschickt werden, bevor der beste Pfad für jeden Benutzer in der Verzögerungsgruppe ausgewählt wird. Das Fenster beginnt, wenn der erste Nutzer:innen den Schritt betritt.
 
