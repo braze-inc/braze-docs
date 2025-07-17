@@ -31,26 +31,43 @@ Lemnisk and Braze integration will allow brands and enterprises unlock the full 
 
 ### Step 1: Creating a Braze External API
 
-1. In Lemnisk, navigate to the External API channel. Click on 'Add New External API'. We'll now set up the [Track Users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) endpoint as an External API. <br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Open%20External%20API.png" alt="img1" width="80%">
-2. Give Basic Details to the configuration as shown in the image below.<br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Ext.%20API%20Basic%20Details.png" alt="img1" width="80%"><br><br>Enter the API details of the Track User endpoint as shown below. Define as many fields as you like at Engagement-level using {{}} so that you can provide different values to them for different campaigns<br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Ext.%20API%20-%20Ext.%20API%20Details.png" alt="img1" width="80%">
+1. In Lemnisk, navigate to the External API channel. Click on 'Add New External API'. We'll now set up the [Track Users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) endpoint as an External API.
+
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze Open External API.png)
+
+2. Give Basic Details to the configuration as shown in the image below.
+
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk_braze_ext_api_basic_details.png)
+
+Enter the API details of the Track User endpoint as shown below. Define as many fields as you like at Engagement-level using {{}} so that you can provide different values to them for different campaigns
+
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze Ext. API - Ext. API Details.png)
 
 3. Click on Save to set up your Track Users configuration.
-
 
 ### Step 2: Test and verify the Configuration
 
 1. Once the configuration is saved successfully, you'll be taken to the 'Test API' Section.
 2. Give test values of the API parameters in the JSON tree view, and click on 'Test Configuration'.
-3. You'll see a success response from Braze if the credentials and API definitions are correct.<br><br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Test%20Ext%20API.png" alt="img1" width="80%"><br><br>
-4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from the Test API trigger.<br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20Braze%20COV.png" alt="img1" width="80%">
+3. You'll see a success response from Braze if the credentials and API definitions are correct.
+
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze Test Ext API.png)
+
+4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from the Test API trigger.
+
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/ assets/img/lemnisk/lemnisk_braze_braze_cov.png)
 
 ### Step 3: Creating Engagements to trigger User Events to Braze
 
 Having verified the configuration to with Braze, we're almost done. All we have to do is start sending users to braze based on your use case. 
+
 1. Create a Segment on Lemnisk. Say for example, as soon as users submit a lead form, send that information to Braze.
 2. On that Segment, navigate to External API > 'Add Engagement'.
 3. In the Engagement Creation screen, provide the basic details, and select our recently set up configuration (Braze Track Users) as the API.
-4. In the 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagement level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. <br><br><img src="https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk-braze%20create%20an%20Engagement.png" alt="img1" width="80%">
+4. In the 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagement level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. 
+
+![img1](https://raw.githubusercontent.com/karansingh-lemnisk/braze_lemnisk-docs/develop/assets/img/lemnisk/lemnisk_braze_create_an_engagement.png)
+
 5. Provide appropriate personalisation variables to those inputs (variables to populate the lead form values) and click on 'Save'.
 6. Activate the Engagement.
 
