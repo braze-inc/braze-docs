@@ -1,7 +1,7 @@
 ---
 nav_title: Initialisation
 article_title: Initialisation du SDK de Braze
-platform: 
+platform:
   - Android
   - FireOS
   - Swift
@@ -16,7 +16,7 @@ description: "Découvrez comment initialiser le SDK Braze à l'aide de méthodes
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/sdk_initialization.md %}
+{% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
