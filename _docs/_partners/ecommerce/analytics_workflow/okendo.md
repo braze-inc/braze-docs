@@ -9,7 +9,7 @@ alias: /partners/okendo/
 
 # Okendo
 
-[Okendo](https://okendo.io/), a unified customer marketing platform, makes it easy to cultivate advocacy, scale word-of-mouth, and maximize lifetime value to mobilize your customers for faster and more efficient growth.
+> [Okendo](https://okendo.io/), a unified customer marketing platform, makes it easy to cultivate advocacy, scale word-of-mouth, and maximize lifetime value to mobilize your customers for faster and more efficient growth.
 
 *This integration is maintained by Okendo.*
 
