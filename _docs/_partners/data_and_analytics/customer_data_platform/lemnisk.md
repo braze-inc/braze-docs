@@ -10,69 +10,60 @@ search_tag: Partner
 
 # Lemnisk
 
-> [Lemnisk](https://www.lemnisk.co/), is an AI-powered Customer Data Platform (CDP) and Marketing Automation solution that enables real-time capture, unification, and activation of customer data from diverse, siloed sources. It seamlessly delivers this unified data across various martech and business platforms, while offering robust, real-time analytics to track every stage of the customer data lifecycle. 
+> [Lemnisk](https://www.lemnisk.co/), is an AI-powered Customer Data Platform (CDP) and marketing automation solution that enables real-time capture, unification, and activation of customer data from diverse, siloed sources. It seamlessly delivers this unified data across various MarTech and business platforms, while offering robust, real-time analytics to track every stage of the customer data lifecycle. 
 
 _This integration is maintained by Lemnisk._
 
 ## About the integration
 
-Lemnisk and Braze integration will allow brands and enterprises unlock the full potential of Braze by acting as a CDP-led intelligence layer that unifies user data across platforms in real time, and sending the user's information and behaviours collected to Braze in real-time. Lemnisk delivers enriched customer profiles—blending behavioral signals and personal attributes—directly into Braze, enabling brands to personalize messaging from Braze with deeper context.
+The Lemnisk and Braze integration allows brands and enterprises to unlock the full potential of Braze by acting as a CDP-led intelligence layer that unifies user data across platforms in real time, and sending the user's information and behaviors collected to Braze in real-time. Lemnisk delivers enriched customer profiles directly into Braze by blending behavioral signals and personal attributes that let's you personalize your messaging with deeper context.
 
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
-| Lemnisk and Braze Accounts | An existing user of [Lemnisk](https://www.lemnisk.co/) and [Braze](https://www.braze.com/) can take advantage of this partnership. |
+| Lemnisk accounts | A [Lemnisk](https://www.lemnisk.co/) account is required to take advantage of this partnership. |
+| External API in Lemnisk | Contact your Leminsk CSM to get get **External API** enabled for your account. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your account]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints#api-and-sdk-endpoints). |
-| External API in Lemnisk | You will have to get **External API** enabled for your Lemnisk account, with help from your CSM. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Integration
+## Integrating Lemnisk
 
-### Step 1: Creating a Braze External API
+### Step 1: Create a Braze External API {#create-a-braze-external-api}
 
-1. In Lemnisk, navigate to the External API channel. Click on 'Add New External API'. We'll now set up the [Track Users]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint as an External API.
+In Lemnisk, go to the External API channel. Select **Add New External API**. We'll now set up the [Track Users]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint as an External API.
 
 ![ALT_TEXT]({% image_buster /assets/img/lemnisk/open_external_api.png %})
 
-2. Give Basic Details to the configuration as shown in the image below.
+Under **Basic Details**, enter a name, description, channel, and channel identifier.
 
 ![ALT_TEXT]({% image_buster /assets/img/lemnisk/ext_api_basic_details.png %})
 
-Enter the API details of the Track User endpoint as shown below. Define as many fields as you like at Engagement-level using {% raw %}`{{}}`{% endraw %} so that you can provide different values to them for different campaigns
+Under **External API details**, enter the relevant details for your `users.track` endpoint. You can define multiple engagement-level fields using {% raw %}`{{}}`{% endraw %}, which lets you set different values for different campaigns.
 
 ![ALT_TEXT]({% image_buster /assets/img/lemnisk/ext_api_ext_api_details.png %})
 
-3. Click on Save to set up your Track Users configuration.
+To finish setting up your Track Users configuration, select **Save**. You'll automatically be redirected to the **Test API** page.
 
-### Step 2: Test and verify the Configuration
+### Step 2: Test the configuration
 
-1. Once the configuration is saved successfully, you'll be taken to the 'Test API' Section.
-2. Give test values of the API parameters in the JSON tree view, and click on 'Test Configuration'.
-3. You'll see a success response from Braze if the credentials and API definitions are correct.
+On the **Test API** page, enter some test values for the API parameters in your JSON tree view, then select **Test Configuration**.
+
+If your credentials and API definitions are correct, Braze will return a success response.
 
 ![ALT_TEXT]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
 
-4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from the Test API trigger.
+Next, you'll verify that your events are being sent to Braze successfully. In the Braze dashboard, go to **Audience** > **Search Users**, then enter one of the identifiers from your External API configuration (such as a user email address). If everything is working correctly, the profile that received your test API trigger will be listed.
 
 ![ALT_TEXT]({% image_buster /assets/img/lemnisk/braze_cov.png %})
 
-### Step 3: Creating Engagements to trigger User Events to Braze
+### Step 3: Trigger user events in Braze
 
-Having verified the configuration to with Braze, we're almost done. All we have to do is start sending users to braze based on your use case. 
-
-1. Create a Segment on Lemnisk. Say for example, as soon as users submit a lead form, send that information to Braze.
-2. On that Segment, navigate to External API > 'Add Engagement'.
-3. In the Engagement Creation screen, provide the basic details, and select our recently set up configuration (Braze Track Users) as the API.
-4. In the 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagement level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. 
-
-![ALT_TEXT]({% image_buster /assets/img/lemnisk/create_an_engagement.png %})
-
-5. Provide appropriate personalisation variables to those inputs (variables to populate the lead form values) and click on 'Save'.
-6. Activate the Engagement.
-
-<div style="border: 1px solid #4CAF50; background-color: #e8f5e9; padding: 10px; border-radius: 6px; color: #2e7d32;">
-  🎉 <strong>Congratulations!</strong><br>
-  You've successfully set up events streaming to Braze via Lemnisk.
-</div>
+1. On Lemnisk, create a new segment. For example, you could create a segment that sends information to Braze as soon as users submit a lead form.
+2. In your new segment, go to **External API** > **Add Engagement**.
+3. Under **Engagement Creation**, enter the basic details and select the configuration [you created previously](#create-a-braze-external-api).
+4. Under **Configure Parameters**, you'll find the inputs for the Braze parameters you chose to expose at engagement level. In the following example, it shows _Name of the User_, _Product ID_, and _Event Time_.
+    ![ALT_TEXT]({% image_buster /assets/img/lemnisk/create_an_engagement.png %})
+5. Enter the relevant personalization variables for our chosen parameters, then select **Save**.
+6. When you're finished, activate the Engagement.
