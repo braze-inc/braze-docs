@@ -47,3 +47,11 @@ After creating action groups for the custom filter phrases, add another action g
 
 For this message, you should send a LINE message informing the user that this channel is not monitored by a human and, if needed, guide them to a support channel.
 
+## Troubleshooting
+
+### 500 Internal Server Error or `request_timeout` error
+
+You may receive a 500 Internal Server Error or `request_timeout` error if it takes more than two seconds for LINE to receive a response from Braze. However, the request itself may have reached Braze without any problems, meaning the user may receive a duplicate message if you send the request again. 
+
+
+If you frequently receive the `request_timeout` error, contact [Support]({{site.baseurl}}/braze_support/) to investigate.
