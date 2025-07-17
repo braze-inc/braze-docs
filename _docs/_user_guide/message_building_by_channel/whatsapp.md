@@ -53,10 +53,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/link-03.svg
 - name: "WhatsApp Use Cases"
   link: /docs/whatsapp_use_cases/
-  image: /assets/img/braze_icons/link-03.svg
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  image: /assets/img/braze_icons/phone-02.svg
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>
