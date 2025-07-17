@@ -92,4 +92,4 @@ Marking an issue as "Critical" means your production instance is down, and all w
 
 ## Troubleshooting access
 
-If you receive an error when logging into the Braze Support Portal, such as `Check your entry`, make sure you followed the link in your welcome email to set a password for the portal. If you've done that or you were previously able to log into the portal, create a Support ticket.
+If you receive an error when logging into the Braze Support Portal, such as `Check your entry`, make sure you followed the link in your welcome email to set a password for the portal. If you've done that or were previously able to log into the portal, create a Support ticket.
