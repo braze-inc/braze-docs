@@ -49,15 +49,15 @@ Braze doesn't allow you to register the same email address to multiple dashboard
 
 ### Use email aliases
 
-If your email provider is gmail, you can create aliases by adding a "+" sign followed by any text to your email address. For example:
-- Original email: rocky@gmail.com
-- Alias: rocky+1@gmail.com
+If your email provider is Gmail, you can create aliases by adding a `+` sign followed by any text to your email address. For example:
+- **Original email:** `rocky@gmail.com`
+- **Alias email:** `rocky+1@gmail.com`
 
-Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you login.
+Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you log in.
 
 ### Create separate aliases with other providers
 
-If your email provider doesn't support "+" aliasing, you can still create separate aliases, such as rocky@braze.com aliasing for rocky.lotito@braze.com. This allows multiple addresses to funnel to the same inbox while being recognized as different emails by Braze.
+If your email provider doesn't support `+` aliasing, you can still create separate aliases, such as setting up `rocky@braze.com` to forward to `rocky.lotito@braze.com`. This allows multiple addresses to funnel to the same inbox while being recognized as different emails by Braze.
 
 ### Use multi-company developers
 

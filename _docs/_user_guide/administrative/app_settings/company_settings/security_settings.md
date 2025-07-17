@@ -111,14 +111,14 @@ If 2FA is enforced at the company level, users who don't set it up on their own 
 
 If you encounter issues during the setup process and are redirected to the Braze homepage or login screen, try the following:
 
-- Use the icognito or private browsing mode: Attempt setup again with an incognito or private browsing window. This can bypass issues caused by browser extensions or plugins.
+- Use incognito or private browsing mode: Attempt setup again with an incognito or private browsing window. This can bypass issues caused by browser extensions or plugins.
 - Try a different browser profile: If the problem persists, consider using a different browser profile to eliminate conflicts with installed plugins.
 
 ### Setting up 2FA when it isn't enforced
 
 To manually activate two-factor authentication (2FA) on your Braze account when it isn't enforced, follow these steps:
 
-1. Download an 2FA app like Authy, Google Authenticator, Okta Verify, or similar from the App Store (iOS), Google Play Store (Android), or the web. Or, if you prefer to set up 2FA with email or SMS, skip to step 2.
+1. Download a 2FA app like Authy, Google Authenticator, Okta Verify, or similar from the App Store (iOS), Google Play Store (Android), or the web. Or, if you prefer to set up 2FA with email or SMS, skip to step 2.
 2. In Braze, go to Manage Account, scroll to the **Two-Factor Authentication** section, then select **Start Setup**.
 3. Enter your password into the login modal, then select **Check Password**.
 4. In the **Two-Factor Authentication Setup** modal, enter your phone number, then select **Enable**.
