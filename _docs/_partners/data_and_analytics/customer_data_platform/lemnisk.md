@@ -24,24 +24,25 @@ Lemnisk and Braze integration will allow brands and enterprises unlock the full 
 | --- | --- |
 | Lemnisk and Braze Accounts | An existing user of [Lemnisk](https://www.lemnisk.co/) and [Braze](https://www.braze.com/) can take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your account](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints#api-and-sdk-endpoints). |
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your account]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints#api-and-sdk-endpoints). |
 | External API in Lemnisk | You will have to get **External API** enabled for your Lemnisk account, with help from your CSM. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Integration
 
 ### Step 1: Creating a Braze External API
 
-1. In Lemnisk, navigate to the External API channel. Click on 'Add New External API'. We'll now set up the [Track Users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) endpoint as an External API.
+1. In Lemnisk, navigate to the External API channel. Click on 'Add New External API'. We'll now set up the [Track Users]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint as an External API.
 
-![ALT_TEXT]({% image_buster /assets/open_external_api.png %})
+![ALT_TEXT]({% image_buster /assets/img/lemnisk/open_external_api.png %})
 
 2. Give Basic Details to the configuration as shown in the image below.
 
-![ALT_TEXT]({% image_buster /assets/ext_api_basic_details.png %})
+![ALT_TEXT]({% image_buster /assets/img/lemnisk/ext_api_basic_details.png %})
 
-Enter the API details of the Track User endpoint as shown below. Define as many fields as you like at Engagement-level using {{}} so that you can provide different values to them for different campaigns
+Enter the API details of the Track User endpoint as shown below. Define as many fields as you like at Engagement-level using {% raw %}`{{}}`{% endraw %} so that you can provide different values to them for different campaigns
 
-![ALT_TEXT]({% image_buster /assets/ext_api_ext_api_details.png %})
+![ALT_TEXT]({% image_buster /assets/img/lemnisk/ext_api_ext_api_details.png %})
 
 3. Click on Save to set up your Track Users configuration.
 
@@ -51,11 +52,11 @@ Enter the API details of the Track User endpoint as shown below. Define as many 
 2. Give test values of the API parameters in the JSON tree view, and click on 'Test Configuration'.
 3. You'll see a success response from Braze if the credentials and API definitions are correct.
 
-![ALT_TEXT]({% image_buster /assets/test_ext_api.png %})
+![ALT_TEXT]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
 
 4. To verify if the events are getting registered with Braze correctly, let's verify this test user on Braze Audience. Go to your Braze Dashboard > Audience (on the left navigation bar) > Search Users. Search for the email (or any other Identifier that you saved in the External API configuration). You should see the profile of the user that you sent to Braze from the Test API trigger.
 
-![ALT_TEXT]({% image_buster / assets/img/lemnisk/lemnisk_braze_braze_cov.png %})
+![ALT_TEXT]({% image_buster /assets/img/lemnisk/braze_cov.png %})
 
 ### Step 3: Creating Engagements to trigger User Events to Braze
 
@@ -66,7 +67,7 @@ Having verified the configuration to with Braze, we're almost done. All we have 
 3. In the Engagement Creation screen, provide the basic details, and select our recently set up configuration (Braze Track Users) as the API.
 4. In the 'Configure Parameters' section, you'll find the inputs for the Braze' parameters you chose to expose at engagement level - in this example below, we have _Name of the User_, _Product ID_ and _Event Time_. 
 
-![ALT_TEXT]({% image_buster /assets/create_an_engagement.png %})
+![ALT_TEXT]({% image_buster /assets/img/lemnisk/create_an_engagement.png %})
 
 5. Provide appropriate personalisation variables to those inputs (variables to populate the lead form values) and click on 'Save'.
 6. Activate the Engagement.
