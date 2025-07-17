@@ -113,7 +113,7 @@ If you plan to export iOS IDFA or Google Advertising IDs in your audience sync, 
 
 If you have multiple apps in a single workspace, you can input any of your app IDs in the setup because mobile ad IDs for your users will be the same across multiple apps. This is because both the Android GAID and iOS IDFA are universal ad identifiers on the device and are not app-specific. To sync mobile ad IDs for users from a specific app, you can use segment filters ("Last Used Specific App" or Most Recent App Version") to target these users.
 
-### Step 2: Add a Google Audience step in Canvas Flow
+### Step 2: Add a Google Audience step in Canvas
 
 Add a component in your Canvas, then select **Audience Sync**.
 

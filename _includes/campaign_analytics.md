@@ -16,6 +16,10 @@ Looking for definitions for the terms and metrics listed in your report? Refer t
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
 
+### Time range
+
+By default, the time range for **Campaign Analytics** will display the last 90 days from the current time. This means that if the campaign was launched more than 90 days ago, the analytics will display as "0" for the given time range. To view all analytics for older campaigns, adjust the reporting time range.
+
 ### Campaign details
 
 The **Campaign Details** panel shows a high-level overview of the entire performance for your
@@ -420,6 +424,12 @@ Estimated Real Open Rate is only available in campaigns, and is not reported in 
 #### In-app message metrics
 
 Here are some key in-app message metrics you may see in your analytics. To see the full definitions of all in-app message metrics used in Braze, refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+
+{% alert note %}
+Reporting for _Button 1 Clicks_ and _Button 2 Clicks_ only works when you specify the **Identifier for Reporting** as "0" and "1" respectively in the in-app message.
+
+![The "Identifier for Reporting" field with a value of "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+{% endalert %}
 
 <style>
     .no-split {

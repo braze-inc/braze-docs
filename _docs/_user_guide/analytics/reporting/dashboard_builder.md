@@ -41,7 +41,7 @@ Now, follow the respective steps for your data source:
 4. Select **+ Add Tile** and then choose a query you’ve run in Query Builder.
 5. To edit how the query results display in the tile, select the pencil icon to change the title and chart type.
     - You can toggle between different chart types below the default visualization. Current options include tables, bar charts (horizontal or vertical), and line charts.<br><br>![Toggles for different chart types.]({% image_buster /assets/img/query_builder_types.png %})<br><br>
-        - If you choose one of the chart options, use the **X-axis** dropdown to select a single column from your query results to use as your x axis.
+        - If you choose one of the chart options, use the **X-axis** dropdown to select a single column from your query results to use as your x-axis.
         - Use the **Y-axis** dropdown to select which metrics to include in your visualization. By default, all columns from your query results will display, so de-select the columns you’re not interested in viewing.<br><br>![Toggles for different chart types.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
         - (Optional) You can use the **Grouping** dropdown to group together your query results. For example, if you have campaign ID as a column result and you want to add together all the rows with that value, use the **Grouping** dropdown.  
         - (Optional) To edit the data being displayed, select the query that is attached to the visual and make your edits in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/). 
@@ -72,7 +72,7 @@ Make a copy of your tile by selecting **Duplicate Tile** at the bottom of the ti
 
 ### Adjust tile size and position
 
-Adjust the tile size by dragging the bottom right corner of the tile, and adjust the tile position on the dashboard by dragging the handle at the top right corner of the tile.
+Adjust the tile size by dragging the bottom-right corner of the tile, and adjust the tile position on the dashboard by dragging the handle at the top right corner of the tile.
 
 ## Running a dashboard template
 
@@ -88,9 +88,9 @@ Braze provides pre-built dashboard templates for frequent use cases such as anal
 
 The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
 
-Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
+Touches include _Email Click_ (link click), _Content Card Click_, _In-App Message Click_ (excluding close buttons), _Push Opens_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
 
-| Metrics | Definition |
+| Metric | Definition |
 | --- | --- |
 | Total Last Touch Revenue | A sum of all campaign and Canvas revenue events with a last-touch event within the selected date range and attribution window. |
 | Total Purchase Conversions | A count of all campaign and Canvas revenue events with a qualifying last-touch event. |
@@ -109,7 +109,7 @@ Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SM
 
 #### Devices and carriers
 
-| Metrics | Definition |
+| Metric | Definition |
 | --- | --- |
 | Device Carriers | Count of users in the selected date range who opened a push notification, grouped by device carrier. |
 | Device Model | Count of users in the selected date range who opened a push notification, grouped by device model. |

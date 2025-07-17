@@ -50,7 +50,7 @@ Essa abordagem separa os modelos em diferentes localidades de envio. Após o env
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 ### Uma viagem para todos
 
 Nessa abordagem, a localização é tratada no [Canva Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) e no Liquid para definir o envio de mensagens para cada usuário. 

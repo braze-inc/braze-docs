@@ -118,7 +118,7 @@ In-App Message
 In-App Message
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Button 1 Clicks' %}
+{% multi_lang_include metrics.md metric='Button 1 Clicks' %} Reporting for _Button 1 Clicks_ only works when you specify the **Identifier for Reporting** as "0" in the in-app message.
 
 <span class="calculation-line">Calculation: (Button 1 Clicks) / (Impressions)</span>
 
@@ -132,7 +132,7 @@ In-App Message
 In-App Message
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Button 2 Clicks' %}
+{% multi_lang_include metrics.md metric='Button 2 Clicks' %} Reporting for _Button 2 Clicks_ only works when you specify the **Identifier for Reporting** as "1" in the in-app message.
 
 <span class="calculation-line">Calculation: (Button 2 Clicks) / (Impressions)</span>
 
@@ -844,6 +844,10 @@ Email
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Spam' %}
+
+{% alert note %}
+Spam complaints are handled directly by email service providers and then relayed to Braze through a feedback loop. Most feedback loops only report a portion of the actual complaints, so the _Spam_ metric often represents a fraction of the actual total. Only email service providers can view the true volume of spam complaints, which means _Spam_ should be viewed as an indicative, not exhaustive, metric.
+{% endalert %}
 
 {::nomarkdown}
 <span class="calculation-line">

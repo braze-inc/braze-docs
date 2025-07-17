@@ -11,7 +11,7 @@ tool: Canvas
 
 # Message 
 
-> Message steps allow you to add a standalone message where you want in your Canvas Flow.
+> Message steps allow you to add a standalone message where you want in your Canvas.
 
 ![A Message step named "Lunch promo" using the push channel.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -98,7 +98,7 @@ You can't use `event_properties` in the lead Message step. Instead, you must use
 
 {% details Expand for original Canvas editor %}
 
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
+You can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
 
 - `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
 - `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
