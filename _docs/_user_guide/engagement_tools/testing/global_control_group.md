@@ -41,6 +41,10 @@ Your treatment group will be similar in size as your Global Control Group, but i
 
 You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
 
+### Exclude users from the Global Control Group
+
+You can't remove specific users from the Global Control Group, but you can add [exclusion settings]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings) so that campaigns and Canvases with specified tags **don't** use the Global Control Group. You can also disable and re-enable your Global Control Group to shuffle membership. The ideal duration for shuffling users varies based on the type of test that you're running, but we encourage you to shuffle no more than once a month.
+
 ## Create a Global Control Group
 
 ### Step 1: Navigate to the Global Control Group Settings
