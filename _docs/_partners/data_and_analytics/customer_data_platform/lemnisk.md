@@ -34,15 +34,15 @@ The Lemnisk and Braze integration allows brands and enterprises to unlock the fu
 
 In Lemnisk, go to the External API channel. Select **Add New External API**. We'll now set up the [Track Users]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint as an External API.
 
-![ALT_TEXT]({% image_buster /assets/img/lemnisk/open_external_api.png %})
+![Starting the External API creation process in Lemnisk]({% image_buster /assets/img/lemnisk/open_external_api.png %})
 
 Under **Basic Details**, enter a name, description, channel, and channel identifier.
 
-![ALT_TEXT]({% image_buster /assets/img/lemnisk/ext_api_basic_details.png %})
+![Entering basic configuration details for a new External API in Lemnisk]({% image_buster /assets/img/lemnisk/ext_api_basic_details.png %})
 
 Under **External API details**, enter the relevant details for your `users.track` endpoint. You can define multiple engagement-level fields using {% raw %}`{{}}`{% endraw %}, which lets you set different values for different campaigns.
 
-![ALT_TEXT]({% image_buster /assets/img/lemnisk/ext_api_ext_api_details.png %})
+![Filling out the External API endpoint and payload details]({% image_buster /assets/img/lemnisk/ext_api_ext_api_details.png %})
 
 To finish setting up your Track Users configuration, select **Save**. You'll automatically be redirected to the **Test API** page.
 
@@ -52,11 +52,11 @@ On the **Test API** page, enter some test values for the API parameters in your 
 
 If your credentials and API definitions are correct, Braze will return a success response.
 
-![ALT_TEXT]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
+![Testing an External API configuration with a sample payload and success response]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
 
 Next, you'll verify that your events are being sent to Braze successfully. In the Braze dashboard, go to **Audience** > **Search Users**, then enter one of the identifiers from your External API configuration (such as a user email address). If everything is working correctly, the profile that received your test API trigger will be listed.
 
-![ALT_TEXT]({% image_buster /assets/img/lemnisk/braze_cov.png %})
+![Viewing a user's profile and activity overview in Braze]({% image_buster /assets/img/lemnisk/braze_cov.png %})
 
 ### Step 3: Trigger user events in Braze
 
@@ -64,6 +64,6 @@ Next, you'll verify that your events are being sent to Braze successfully. In th
 2. In your new segment, go to **External API** > **Add Engagement**.
 3. Under **Engagement Creation**, enter the basic details and select the configuration [you created previously](#create-a-braze-external-api).
 4. Under **Configure Parameters**, you'll find the inputs for the Braze parameters you chose to expose at engagement level. In the following example, it shows _Name of the User_, _Product ID_, and _Event Time_.
-    ![ALT_TEXT]({% image_buster /assets/img/lemnisk/create_an_engagement.png %})
+    ![Creating an engagement to send user data to Braze]({% image_buster /assets/img/lemnisk/create_an_engagement.png %})
 5. Enter the relevant personalization variables for our chosen parameters, then select **Save**.
 6. When you're finished, activate the Engagement.
