@@ -1,7 +1,7 @@
 ---
 nav_title: Lemnisk
 article_title: Integrating Lemnisk with Braze
-description: "This reference article details the partnership between Braze and Lemnisk, a AI-enabled customer data platform-led Marketing Automation platform, allowing you to stream user data collected at Lemnisk from various sources, into Braze to activate them across various channel and destinations using Braze's tools."
+description: "This reference article details the partnership between Braze and Lemnisk, an AI-enabled customer data platform-led Marketing Automation platform, allowing you to stream user data collected at Lemnisk from various sources, into Braze to activate them across various channels and destinations using Braze's tools."
 alias: /partners/lemnisk/
 page_type: partner
 search_tag: Partner
@@ -16,14 +16,14 @@ _This integration is maintained by Lemnisk._
 
 ## About the integration
 
-The Lemnisk and Braze integration allows brands and enterprises to unlock the full potential of Braze by acting as a CDP-led intelligence layer that unifies user data across platforms in real time, and sending the user's information and behaviors collected to Braze in real-time. Lemnisk delivers enriched customer profiles directly into Braze by blending behavioral signals and personal attributes that let's you personalize your messaging with deeper context.
+The Lemnisk and Braze integration allows brands and enterprises to unlock the full potential of Braze by acting as a CDP-led intelligence layer that unifies user data across platforms in real time, and sending the user's information and behaviors collected to Braze in real-time. Lemnisk delivers enriched customer profiles directly into Braze by blending behavioral signals and personal attributes that let you personalize your messaging with deeper context.
 
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
 | Lemnisk accounts | A [Lemnisk](https://www.lemnisk.co/) account is required to take advantage of this partnership. |
-| External API in Lemnisk | Contact your Leminsk CSM to get get **External API** enabled for your account. |
+| External API in Lemnisk | Contact your Lemnisk CSM to get **External API** enabled for your account. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your account]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints#api-and-sdk-endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
