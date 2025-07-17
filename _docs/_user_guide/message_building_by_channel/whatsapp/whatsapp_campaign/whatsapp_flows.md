@@ -38,7 +38,7 @@ channel:
 ![WhatsApp message composer using a WhastApp Flow template.]()
 
 {% alert important %}
-Flow preview is not yet available in the Braze Early Access program, but you can preview the Flow by sending yourself a test message with the flow button. 
+Flow preview is not yet available in the early access, but you can preview the Flow by sending yourself a test message with the flow button. 
 {% endalert %}
 
 ### Saving the Flow response
@@ -50,7 +50,7 @@ You can save the user's full response or specific parts of the Flow response.
 Create an [Action Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) with **Send a WhatsApp inbound message** trigger to process the Flow information.
 
 {% alert note %}
-You'll be able to specify the flow when additional features are released during the early access program. 
+You'll be able to specify the flow when additional features are released during the early access. 
 {% endalert %}
 
 #### Step 2: Create an inbound Flow response
