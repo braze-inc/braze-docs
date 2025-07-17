@@ -28,8 +28,8 @@ This tutorial walks through how Lina:
 
 ### Step 1: Create a push campaign with Personalized Variant optimization
 
-1. Lina creates a new [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
-2. She adds two variants and generates content for them using the AI copywriting assistant and her team's default [brand guidelines]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines):
+1. Lina creates a new [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/).
+2. She adds two variants and generates content for them using the AI copywriting assistant and her team's default [brand guidelines]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines/):
    - **Variant 1:** Routine-focused tone  
      - Title: Your skincare routine, simplified  
      - Message: Cleanse, treat, and moisturize with dermatologist-backed essentials—no guesswork needed.  
@@ -99,7 +99,7 @@ This tutorial walks through how Arjun:
    - **Variant A:** CTA reads “Enter the Marketplace”
    - **Variant B:** CTA reads “Browse Items”
 
-![Two email variants with different CTA copy.]({% image_buster /assets/img/ai_use_cases/cta_testing_variants.png %})
+![Two email variants with different CTA copy.]({% image_buster /assets/img/ai_use_cases/cta_testing_variants.png %}){:style="border:none"}
 
 3. In the Target Audiences step, Arjun sets the **Optimization** method to **Winning Variant**.
 4. They choose **Unique Clicks** as the success metric—because their goal is to get users to click through to the marketplace.
@@ -123,4 +123,4 @@ After the campaign wraps, Arjun checks performance in the campaign’s A/B Test 
 
 They see that “Enter the Marketplace” drove a 22% higher *Unique Click Rate* than “Browse Items,” with a confidence score of 97%. This gives Arjun a clear signal: action-oriented language outperformed softer phrasing in this context.
 
-While only the Winning Variant was scaled, both provided insight into what resonates with users. Arjun uses this data to update his messaging guidelines and plans to reuse the stronger CTA in future promotions. Next, they plan to use [funnel reporting]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports) to explore how clicks translate into purchases in the marketplace.
+While only the Winning Variant was scaled, both provided insight into what resonates with users. Arjun uses this data to update his messaging guidelines and plans to reuse the stronger CTA in future promotions. Next, they plan to use [funnel reporting]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) to explore how clicks translate into purchases in the marketplace.
