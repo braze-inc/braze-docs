@@ -29,6 +29,17 @@ Conversion events allow you to attribute user action back to a point of engageme
 - If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, then the conversion will register on both.
 - A user will count as converted if they performed the specific conversion event in the window even if they did not open or click the message.
 
+#### Canvas conversion tracking with delays
+
+For Canvases with delays between message steps, conversion tracking works based on the **final conversion deadline**, not individual message timing. This means conversions can be counted even during delay periods between messages.
+
+**Example scenario:**
+- Conversion window: 2 days
+- Canvas flow: Email #1 → Delay 4 days → Email #2
+- If a user converts on day 3 (during the delay period), the conversion **will be counted** and attributed to the last message step (Email #1) because it occurs within the final conversion deadline.
+
+The conversion deadline begins when the user enters the Canvas and continues until the specified deadline is reached, regardless of delays between individual message steps within the Canvas flow.
+
 ### Primary conversion event
 
 The primary conversion event is the first event added during the campaign or Canvas creation. This event has the most bearing on your engagement and reporting. Your primary conversion event is used to:
