@@ -363,7 +363,8 @@ var ticket_lookuptable = {
             'LinksTitle': ['プラットフォーム機能'],
             'Links': ['{{site.baseurl}}/developer_guide/platform_wide/platform_features/'],
             'SelectOption': {
-                'SDKインテグレーション': {
+                'SDK Integrations': {
+                    'SelText': 'SDKインテグレーション',
                     'Label': '質問の内容は... *',
                     'SelectDefault': 'タイプを選択してください...',
                     'LinksTitle': ['iOS: 初期 SDK セットアップ', 'Android: 初期 SDK セットアップ', 'Web: 初期 SDK セットアップ', 'テストメッセージの送信', 'Braze 学習コース: 技術的インテグレーションチェックリストとツールキット'],
@@ -390,14 +391,16 @@ var ticket_lookuptable = {
                                     'LinksTitle': ['Web: プッシュインテグレーション', 'Web: エラーログ'],
                                     'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#error-logging']
                                 },
-                                'その他': {
+                                'Other': {
+                                    'SelText': 'その他',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['Braze 開発者ガイド', 'SDK 変更ログ', 'テストメッセージの送信', 'Braze 学習コース: 技術的インテグレーションチェックリストとツールキット'],
                                     'Links': ['{{site.baseurl}}/developer_guide/home', '{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs', '{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/', 'https://learning.braze.com/technical-integration-checklists-and-toolkits']
                                 }
                             }
                         },
-                        'アプリ内メッセージ': {
+                        'In-App Messages': {
+                            'SelText': 'アプリ内メッセージ',
                             'LinksTitle': [''],
                             'Links': [''],
                             'Label': 'プラットフォーム *',
@@ -411,7 +414,7 @@ var ticket_lookuptable = {
                                 'iOS': {
                                     'ShowSubmit': true,
                                     'LinksTitle': ['iOS: アプリ内メッセージのインテグレーション', 'iOS: アプリ内メッセージのカスタマイズ', 'iOS:アプリ内メッセージのトラブルシューティング'],
-                                    'リンク': ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/troubleshooting/']
+                                    'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/troubleshooting/']
                                 },
                                 'Web': {
                                     'ShowSubmit': true,
@@ -421,20 +424,22 @@ var ticket_lookuptable = {
 
 
                   'LinksTitle': ['Web: アプリ内メッセージのインテグレーション','Web: アプリ内メッセージのカスタマイズ','Web: アプリ内メッセージのトラブルシューティング','Web: エラーログ'],
-                  'リンク': ['{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/customization','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#error-logging']
+                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/customization','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#error-logging']
 
 
 
 
                 },
-                                'その他': {
+                                'Other': {
+                                    'SelText': 'その他',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['Braze 開発者ガイド', 'SDK 変更ログ', 'テストメッセージの送信', 'Braze 学習コース: 技術的インテグレーションチェックリストとツールキット'],
                                     'Links': ['{{site.baseurl}}/developer_guide/home', '{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs', '{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/', 'https://learning.braze.com/technical-integration-checklists-and-toolkits']
                                 }
                             }
                         },
-                        'コンテンツカード': {
+                        'Content Cards': {
+                            'SelText': 'コンテンツカード',
                             'LinksTitle': [''],
                             'Label': 'プラットフォーム *',
                             'SelectDefault': 'データタイプを選択...',
@@ -454,35 +459,40 @@ var ticket_lookuptable = {
                                     'LinksTitle': ['Web: コンテンツカードのインテグレーション', 'Web: コンテンツカードのカスタマイズ', 'Web: エラーログ'],
                                     'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#error-logging']
                                 },
-                                'その他' : {
+                                'Other': {
+                                    'SelText': 'その他',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['Braze 開発者ガイド', 'SDK 変更ログ', 'テストメッセージの送信', 'Braze 学習コース: 技術的インテグレーションチェックリストとツールキット'],
-                                    'リンク' : ['{{site.baseurl}}/developer_guide/home', '{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs', '{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/', 'https://learning.braze.com/technical-integration-checklists-and-toolkits']
+                                    'Links' : ['{{site.baseurl}}/developer_guide/home', '{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs', '{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/', 'https://learning.braze.com/technical-integration-checklists-and-toolkits']
                                 }
                             }
                         },
-                        'ユーザーデータ': {
+                        'User Data': {
+                            'SelText': 'ユーザーデータ',
                             'ShowSubmit': false,
                             'Label': 'カテゴリー *',
                             'LinksTitle': ['自動的に収集されるデータ', 'イベント命名規則', 'ユーザープロファイルライフサイクル'],
-                            'リンク': ['{{site.baseurl}}/developer_guide/platform_wide/analytics_overview#automatically-collected-data', '{{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/', '{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle'],
+                            'Links': ['{{site.baseurl}}/developer_guide/platform_wide/analytics_overview#automatically-collected-data', '{{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/', '{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle'],
                             'SelectOption': {
-                                'カスタムイベント、購入イベント、およびプロパティ': {
+                                'Custom Events, Purchase Event, and Properties': {
+                                    'SelText': 'カスタムイベント、購入イベント、およびプロパティ',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['カスタム イベント', '購入イベント', 'Android: カスタムイベントの追跡', 'iOS: カスタムイベントの追跡', 'Web: カスタムイベントの追跡'],
-                                    'リンク': ['{{site.baseurl}}/user_guide/data_and_analytics/custom_data/events/', '{{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/', '{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events']
+                                    'Links': ['{{site.baseurl}}/user_guide/data_and_analytics/custom_data/events/', '{{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/', '{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events']
                                 },
-                                'カスタム属性': {
+                                'Custom Attributes': {
+                                  'SelText': 'カスタム属性',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['カスタム属性', 'Android: カスタム属性の設定', 'iOS: カスタム属性の設定', 'Web: カスタム属性の設定'],
-                                    'リンク': ['{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes', '{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/']
+                                    'Links': ['{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes', '{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/', '{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/', '{{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/']
                                 }
                             }
                         },
-                        'その他': {
+                        'Other': {
+                            'SelText': 'その他',
                             'ShowSubmit': true,
                             'LinksTitle': [''],
-                            'リンク': ['']
+                            'Links': ['']
                         }
                     }
                 },
@@ -497,7 +507,8 @@ var ticket_lookuptable = {
                             'LinksTitle': ['API エラーと応答'],
                             'Links': ['{{site.baseurl}}/api/errors/']
                         },
-                        'データのインポート': {
+                        'Importing Data': {
+                            'SelText': 'データのインポート',
                             'ShowSubmit': true,
               'LinksTitle': ['ユーザーのインポート', 'REST API: ユーザーデータエンドポイント'],
 
@@ -506,48 +517,56 @@ var ticket_lookuptable = {
 
 
             },
-                        'データのエクスポート': {
+                        'Exporting Data': {
+                            'SelText': 'データのエクスポート',
                             'ShowSubmit': true,
                             'LinksTitle': ['Braze データのエクスポート', 'REST API: エンドポイントのエクスポート', 'エクスポートに関するよくある質問'],
                             'Links': ['{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data', '{{site.baseurl}}/api/endpoints/export', '{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/faqs/']
                         },
-                        'API キャンペーン': {
+                        'API Campaigns': {
+                            'SelText': 'API キャンペーン',
                             'ShowSubmit': true,
                             'LinksTitle': ['API キャンペーンの概要', 'REST API: API トリガーキャンペーンエンドポイントの送信', 'REST API: API トリガーキャンペーンエンドポイントのスケジュール'],
                             'Links': ['{{site.baseurl}}/api/api_campaigns/', '{{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/', '{{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/']
                         },
-                        'レート制限': {
+                        'Rate Limits': {
+                            'SelText': 'レート制限',
                             'ShowSubmit': true,
                             'LinksTitle': ['API レート制限'],
-                            'リンク': ['{{site.baseurl}}/api/api_limits/']
+                            'Links': ['{{site.baseurl}}/api/api_limits/']
                         },
-                        'その他': {
+                        'Other': {
+                            'SelText': 'その他',
                             'ShowSubmit': true,
                             'LinksTitle': ['API の基本', 'API 接続の問題', 'Postman とサンプル リクエスト'],
-                            'リンク': ['{{site.baseurl}}/api/basics/', '{{site.baseurl}}/api/network_connectivity_issues', '{{site.baseurl}}/api/postman_collection/']
+                            'Links': ['{{site.baseurl}}/api/basics/', '{{site.baseurl}}/api/network_connectivity_issues', '{{site.baseurl}}/api/postman_collection/']
                         }
                     }
                 },
-                'メール': {
+                'Email': {
+                    'SelText': 'メール',
                     'SelectDefault': 'タイプを選択してください...',
                     'ラベル': '質問の内容は... *',
                     'LinksTitle': ['メールのベストプラクティス', 'メールに関するよくある質問'],
-                    'リンク': ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/', '{{site.baseurl}}/user_guide/message_building_by_channel/email/faq/'],
+                    'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/', '{{site.baseurl}}/user_guide/message_building_by_channel/email/faq/'],
                     'SelectOption': {
-                        'セットアップ (ホワイトラベル IP, DNS レコード)': {
+                        'Setup (whitelabeled IPs, DNS records)': {
+                            'SelText': 'セットアップ (ホワイトラベル IP, DNS レコード)',
                             'ShowSubmit': true,
                             'LinksTitle': ['メールオンボーディングリソース', 'IP とドメインの設定', 'IP ウォーミング'],
                             'Links': ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup', '{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/', '{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup#ip-warming']
                         },
-                        'レポートと分析': {
+                        'Reporting and Analytics': {
+                            'SelText': 'レポートと分析',
                             'ShowSubmit': true,
                             'LinksTitle': ['メールレポートと分析'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/']
                         },
-            'メールエディター' : {
+            'Email Editors': {
+              'SelText': 'メールエディター',
               'ShowSubmit': true,
               'LinksTitle': ['メールドラッグアンドドロップエディター', 'メール HTML エディター', 'ドラッグアンドドロップエディターに関するよくある質問'],
-              'リンク' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor','{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/faq/']
+              'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor','{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/faq/']
 
 
 
@@ -555,20 +574,23 @@ var ticket_lookuptable = {
 
 
             },
-                        '配信性': {
+                        'Deliverability': {
+                            'SelText': '配信性',
                             'ShowSubmit': true,
               'LinksTitle': ['配信性の落とし穴とスパムトラップ','IP ウォーミング', 'Braze 学習コース: 高いメール配信性の実現'],
 
 
 
-                            'リンク': ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps#deliverability-pitfalls-and-spam-traps', '{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming', 'https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+                            'Links': ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps#deliverability-pitfalls-and-spam-traps', '{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming', 'https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
                         },
-                        'ユーザーサブスクリプション': {
+                        'User Subscriptions': {
+                            'SelText': 'ユーザーサブスクリプション',
                             'ShowSubmit': true,
                             'LinksTitle': ['ユーザーサブスクリプションの管理'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/']
                         },
-                        'メールテンプレート': {
+                        'Email Templates': {
+                            'SelText': 'メールテンプレート',
                             'ShowSubmit': true,
                             'LinksTitle': ['メールテンプレートの作成', 'メールテンプレートに関するよくある質問'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template#step-3-customize-your-template', '{{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/']
@@ -580,28 +602,33 @@ var ticket_lookuptable = {
                         }
                     }
                 },
-                'SMS と MMS': {
+                'SMS and MMS' : {
+                    'SelText': 'SMS と MMS',
                     'SelectDefault': 'タイプを選択してください...',
                     'Label': '質問の内容は... *',
                     'LinksTitle': ['SMS のベストプラクティス', 'SMS に関するよくある質問', 'MMS に関するよくある質問', 'Braze 学習コース: SMS の基礎'],
-                    'リンク': ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/best_practices', '{{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/', '{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/faqs/', 'https://learning.braze.com/sms-fundamentals'],
+                    'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/best_practices', '{{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/', '{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/faqs/', 'https://learning.braze.com/sms-fundamentals'],
                     'SelectOption': {
-                        'セットアップ': {
+                        'Setup': {
+                            'SelText': 'セットアップ',
                             'ShowSubmit': true,
                             'LinksTitle': ['SMS オンボーディングリソース'],
-                            'リンク': ['{{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup']
+                            'Links': ['{{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup']
                         },
-                        'サブスクリプショングループ': {
+                        'Subscription Groups': {
+                            'SelText': 'サブスクリプショングループ',
                             'ShowSubmit': true,
                             'LinksTitle': ['SMS サブスクリプショングループ'],
                             'Links': ['{{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/']
                         },
-                        'ショートコードとロングコード': {
+                        'Short and Long Codes': {
+                            'SelText': 'ショートコードとロングコード',
                             'ShowSubmit': true,
                             'LinksTitle': ['ショートコードとロングコード'],
                             'Links': ['{{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/']
                         },
-                        'ユーザーリターゲティング': {
+                        'User Retargeting': {
+                            'SelText': 'ユーザーリターゲティング',
                             'ShowSubmit': true,
                             'LinksTitle': ['SMS ユーザーリターゲティング'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/']
@@ -619,42 +646,48 @@ var ticket_lookuptable = {
                             'LinksTitle': ['WhatsApp セットアップの概要'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/']
                         },
-                        'サブスクリプショングループ': {
+                        'Subscription Groups': {
+                            'SelText': 'サブスクリプショングループ',
                             'ShowSubmit': true,
                             'LinksTitle': ['WhatsApp ユーザーサブスクリプション'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/']
                         },
-                        'ユーザーの電話番号': {
+                        'User Phone Numbers': {
+                            'SelText': 'ユーザーの電話番号',
                             'ShowSubmit': true,
                             'LinksTitle': ['WhatsApp ユーザーの電話番号'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/']
                         }
                     }
                 },
-                'キャンペーンとキャンバス': {
+                'Campaigns and Canvas': {
+                    'SelText': 'キャンペーンとキャンバス',
                     'SelectDefault': 'タイプを選択してください...',
                     'Label': '質問の内容は... *',
                     'LinksTitle': ['キャンペーンに関するよくある質問',' Canvas に関するよくある質問'],
 
 
-          'リンク' : ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/','{{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/'],
+          'Links' : ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/','{{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/'],
 
 
                     'SelectOption': {
-                        'メッセージングのパーソナライゼーション': {
+                        'Messaging Personalization': {
+                            'SelText': 'メッセージングのパーソナライゼーション',
               'ShowSubmit': true,
               'LinksTitle': ['パーソナライゼーションと動的コンテンツ','Liquid タグを使用したパーソナライゼーション','Liquid ユースケースライブラリ','接続されたコンテンツ'],
 
 
 
-                            'リンク': ['{{site.baseurl}}/user_guide/personalization_and_dynamic_content', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content']
+                            'Links': ['{{site.baseurl}}/user_guide/personalization_and_dynamic_content', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases', '{{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content']
                         },
-                        'ターゲティングとセグメンテーション': {
+                        'Targeting and Segmentation': {
+                            'SelText': 'ターゲティングとセグメンテーション',
                             'ShowSubmit': true,
                             'LinksTitle': ['セグメンテーション', 'セグメント インサイト', 'Braze 学習コース: セグメンテーション', ''],
                             'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments', '{{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/', 'https://learning.braze.com/segmentation-course']
                         },
-                        'チャネル別のメッセージ構成': {
+                        'Message Composition by Channel': {
+                            'SelText': 'チャネル別のメッセージ構成',
                             'LinksTitle': ['利用可能なチャネル', '送信前に知っておくべきこと: チャネル'],
                             'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel', '{{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/'],
                             'Label': 'チャネル *',
@@ -670,22 +703,25 @@ var ticket_lookuptable = {
                                     'LinksTitle': ['プッシュキャンペーンを作成する', 'Braze 学習コース: プッシュ'],
                                     'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#creating-a-push-message', 'https://learning.braze.com/messaging-channels-push']
                                 },
-                                'アプリ内メッセージ': {
+                                'In-App Messages': {
+                                    'SelText': 'アプリ内メッセージ',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['アプリ内メッセージ ドラッグアンドドロップエディターキャンペーン', 'アプリ内メッセージ 従来型エディターキャンペーン', 'Braze 学習コース: アプリ内およびブラウザ内メッセージ'],
-                                    'リンク': ['{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/', '{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/', 'https://learning.braze.com/messaging-channels-in-app-in-browser']
+                                    'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/', '{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/', 'https://learning.braze.com/messaging-channels-in-app-in-browser']
                                 },
-                                'コンテンツカード': {
+                                'Content Cards': {
+                                    'SelText': 'コンテンツカード',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['コンテンツカードキャンペーンの作成', 'Braze 学習コース: コンテンツカード'],
-                                    'リンク': ['{{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/', 'https://learning.braze.com/messaging-channels-content-cards']
+                                    'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/', 'https://learning.braze.com/messaging-channels-content-cards']
                                 },
                                 'Webhooks': {
                                     'ShowSubmit': true,
                                     'LinksTitle': ['Webhook キャンペーンの作成'],
                                     'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/']
                                 },
-                                'SMS と MMS': {
+                                'SMS and MMS': {
+                                    'SelText': 'SMS と MMS',
                                     'ShowSubmit': true,
                                     'LinksTitle': ['SMS キャンペーンの作成', 'MMS キャンペーンとしての作成'],
                                     'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/', '{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/']
@@ -693,76 +729,88 @@ var ticket_lookuptable = {
                                 'WhatsApp': {
                                     'ShowSubmit': true,
                                     'LinksTitle': ['WhatsApp キャンペーンの作成'],
-                                    'リンク': ['{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/']
+                                    'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/']
                                 }
                             }
                         }
                     }
                 },
-                'ログインの問題': {
+                'Login Issues': {
+                    'SelText': 'ログインの問題',
                     'SelectDefault': 'タイプを選択してください...',
                     'ラベル': '質問の内容は... *',
                     'LinksTitle': [''],
-                    'リンク': [''],
+                    'Links': [''],
                     'SelectOption': {
-                        'パスワードエラー': {
+                        'Password Error': {
+                            'SelText': 'パスワードエラー',
                             'ShowSubmit': true,
                             'LinksTitle': ['アカウントがロックされました'],
-                            'リンク': ['{{site.baseurl}}/help/help_articles/account/locked_out/#password-error']
+                            'Links': ['{{site.baseurl}}/help/help_articles/account/locked_out/#password-error']
                         },
-                        'インスタンスエラー': {
+                        'Instance Error' : {
+                            'SelText': 'インスタンスエラー',
                             'ShowSubmit': true,
                             'LinksTitle': ['インスタンスエラー'],
                             'Links': ['{{site.baseurl}}/help/help_articles/account/locked_out/#instance-error']
                         },
-                        'SAML とシングルサインオン': {
+                        'SAML and Single Sign On': {
+                            'SelText': 'SAML とシングルサインオン',
                             'ShowSubmit': true,
                             'LinksTitle': ['SAML とシングルサインオン'],
                             'Links': ['{{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on']
                         },
-                        'その他': {
+                        'Other': {
+                            'SelText': 'その他',
                             'ShowSubmit': true,
                             'LinksTitle': ['アカウントログインの問題'],
                             'Links': ['{{site.baseurl}}/help/help_articles/account/locked_out/']
                         }
                     }
                 },
-                'テクノロジーパートナー': {
+                'Technology Partners': {
+                    'SelText': 'テクノロジーパートナー',
                     'SelectDefault': 'タイプを選択してください...',
                     'Label': '質問の内容は... *',
                     'LinksTitle': [''],
                     'Links': [''],
                     'SelectOption': {
-                        'メッセージのパーソナライズ': {
+                        'Message Personalization': {
+                            'SelText': 'メッセージのパーソナライズ',
                             'ShowSubmit': true,  'LinksTitle': ['メッセージのパーソナライズパートナー'],
 
                             'Links': ['{{site.baseurl}}/partners/message_personalization']
                         },
-                        'メッセージのオーケストレーション': {
+                        'Message Orchestration': {
+                            'SelText': 'メッセージのオーケストレーション',
                             'ShowSubmit': true,
                             'LinksTitle': ['メッセージオーケストレーションパートナー'],
-                            'リンク': ['{{site.baseurl}}/partners/message_orchestration']
+                            'Links': ['{{site.baseurl}}/partners/message_orchestration']
                         },
-                        'データインフラストラクチャとアジリティ': {
+                        'Data Infrastructure and Agility': {
+                            'SelText': 'データインフラストラクチャとアジリティ',
                             'ShowSubmit': true,
                             'LinksTitle': ['データおよびインフラストラクチャアジリティパートナー'],
-                            'リンク': ['{{site.baseurl}}/partners/data_and_infrastructure_agility']
+                            'Links': ['{{site.baseurl}}/partners/data_and_infrastructure_agility']
                         },
-                        'その他': {
+                        'Other': {
+                            'SelText': 'その他',
                             'ShowSubmit': true,
                             'LinksTitle': ['利用可能なパートナーインテグレーション'],
-                            'リンク': ['{{site.baseurl}}/partners/home']
+                            'Links': ['{{site.baseurl}}/partners/home']
                         }
                     }
                 },
-                'システムステータス': {
+                'System Status': {
+                    'SelText': 'システムステータス',
                     'SelectDefault': 'タイプを選択してください...',
                     'Label': '質問の内容は... *',
                     'LinksTitle': ['システムステータス'],
                     'ShowSubmit': true,
                     'Links': ['https://braze.statuspage.io/'],
                 },
-                'その他': {
+                'Other': {
+                    'SelText': 'その他',
                     'SelectDefault': 'タイプを選択してください...',
                     'Label': '質問の内容は... *',
                     'ShowSubmit': true,
@@ -778,10 +826,11 @@ var ticket_lookuptable = {
             'LinksTitle': ['キャンペーンのアイデアと戦略', 'Canvas のアイデアと戦略', 'Braze でアクセス可能なメッセージを作成する', 'Braze 学習コース: Canvas Flow でカスタマージャーニーを作成する'],
             'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/', '{{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies', '{{site.baseurl}}/help/accessibility/', 'https://learning.braze.com/create-customer-journeys-with-canvas-flow'],
             'SelectOption': {
-                'ツールとユース ケース': {
+                'Tools and Use Cases' : {
+                    'SelText': 'ツールとユース ケース',
                     'ShowSubmit': true,
           'LinksTitle': ['キャンペーンのアイデアと戦略', 'Canvas のアイデアと戦略','Braze 学習コース: 顧客エンゲージメントツールとユースケース'],
-          'リンク':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/','{{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies','https://learning.braze.com/braze-customer-engagement-tools-use-cases']
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/','{{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies','https://learning.braze.com/braze-customer-engagement-tools-use-cases']
 
 
 
@@ -789,12 +838,14 @@ var ticket_lookuptable = {
 
 
                 },
-                'ベストプラクティスとよくある質問': {
+                'Best Practices and Frequently Asked Questions': {
+                    'SelText': 'ベストプラクティスとよくある質問',
                     'ShowSubmit': true,  'LinksTitle': ['ベストプラクティスとよくある質問'],
 
-                    'リンク': ['{{site.baseurl}}/help/faqs']
+                    'Links': ['{{site.baseurl}}/help/faqs']
                 },
-                'その他': {
+                'Other': {
+                    'SelText': 'その他',
                     'ShowSubmit': true,
                     'LinksTitle': [''],
                     'Links': ['']
@@ -809,21 +860,24 @@ var ticket_lookuptable = {
             'Links': [],
             'ReferenceText': 'アカウントマネージャーは、請求や契約に関する質問に対する優れたリソースです。 ',
             'SelectOption': {
-                'データポイント': {
+                'Data Points': {
+                    'SelText': 'データポイント',
                     'ShowSubmit': true,
                     'LinksTitle': ['データポイント'],
-                    'リンク': ['{{site.baseurl}}/user_guide/data_and_analytics/data_points#data-points']
+                    'Links': ['{{site.baseurl}}/user_guide/data_and_analytics/data_points#data-points']
                 },
-                '請求': {
+                'Billing': {
+                    'SelText': '請求',
                     'ShowSubmit': true,
                     'LinksTitle': ['請求'],
-                    'リンク': ['{{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/']
+                    'Links': ['{{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/']
                 },
-                'その他': {
+                'Other': {
+                    'SelText': 'その他',
                     'ShowSubmit': true,
                     'ReferenceText': 'アカウントマネージャーは、請求や契約に関する質問に対する優れたリソースです。 ',
                     'LinksTitle': [''],
-                    'リンク': ['']
+                    'Links': ['']
                 }
             }
         }
