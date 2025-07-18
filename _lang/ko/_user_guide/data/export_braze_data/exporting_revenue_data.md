@@ -15,12 +15,8 @@ tool:
 
 **애널리틱스에서** **수익 보고서를** 찾을 수 있습니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **데이터에서** **매출**을 찾을 수 있습니다.
-{% endalert %}
-
 {% alert tip %}
-매출 데이터를 확보하는 더 많은 방법을 찾고 계신가요? 캠페인이나 캔버스에 제품 구매뿐만 아니라 구매 행동을 [전환 이벤트로]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 추가해 보세요.
+매출 데이터를 확보하는 더 많은 방법을 찾고 계신가요? 캠페인이나 캔버스에 제품 구매뿐만 아니라 구매 행동을 [전환 이벤트로]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) 추가해 보세요.
 {% endalert %}
 
 수익 데이터를 내보내려면 다음을 선택합니다. **시간 경과에 따른 실적** 그래프에서 <i class="fas fa-bars" title="차트 컨텍스트 메뉴"></i> 을 선택하고 내보내기 옵션을 선택합니다.
@@ -45,7 +41,7 @@ tool:
 
 [캠페인 분석]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) 또는 [캔버스 분석]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) 페이지에서 사례별로 수익 통계를 확인할 수 있습니다. 
 
-{% multi_lang_include metrics.md metric='총 수익' %}
+{% multi_lang_include metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
 수익 보고서는 API를 통해 내보낼 수 없습니다. CSV 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)을 참조하세요.

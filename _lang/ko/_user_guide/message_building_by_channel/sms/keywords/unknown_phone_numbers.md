@@ -14,7 +14,7 @@ channel:
 > Braze에서 SMS를 실행한 후 알 수 없는 사용자로부터 메시지를 받는 경우가 있을 수 있습니다. 다음 단계에서는 미확인 사용자 및 번호가 처리되는 방법에 대해 설명합니다.
 
 {% alert important %}
-현재 네이티브가 아닌 SMS 클라이언트를 사용 중이신가요? 그렇다면 알 수 없는 전화번호 처리 관련 [비네이티브 SMS 설명서](/docs/user_guide/message_building_by_channel/sms/non_native/)를 참조하세요.
+현재 네이티브가 아닌 SMS 클라이언트를 사용 중이신가요? 그렇다면 알 수 없는 전화번호 처리 관련 [비네이티브 SMS 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/)를 참조하세요.
 {% endalert %}
 
 ## 알 수 없는 번호에 대한 옵트인/아웃 및 사용자 지정 키워드 워크플로

@@ -1,7 +1,7 @@
 ---
 nav_title: 기능 인식 및 새 앱 버전
 article_title: 기능 인식 및 새 앱 버전
-page_order: 7
+page_order: 9
 page_type: reference
 description: "이 참고 문서에서는 새로운 기능이나 버전을 출시할 때 사용자가 이를 잘 알고 흥미를 가질 수 있도록 하는 방법에 대해 설명합니다."
 tool: Campaigns

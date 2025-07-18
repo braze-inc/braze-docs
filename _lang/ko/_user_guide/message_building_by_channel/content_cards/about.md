@@ -114,7 +114,7 @@ search_rank: 4
 - [캐러셀](#carousel)
 - [배너](#banner)
 
-이러한 배치의 로직과 구현은 Braze의 기본값이 아니므로 엔지니어링 팀에서 이러한 사용 사례를 달성하기 위한 작업을 제공하고 지원해야 합니다. 이러한 배치를 구현하는 방법에 대한 개요는 [사용자 지정 콘텐츠 카드 만들기를]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/) 참조하세요.
+이러한 배치의 로직과 구현은 Braze의 기본값이 아니므로 엔지니어링 팀에서 이러한 사용 사례를 달성하기 위한 작업을 제공하고 지원해야 합니다. 이러한 배치를 구현하는 방법에 대한 개요는 [사용자 지정 콘텐츠 카드 만들기를]({{site.baseurl}}/developer_guide/content_cards/creating_cards/) 참조하세요.
 
 ![메시지 받은 편지함, 캐러셀, 배너 등 다양한 배치 옵션을 보여주는 3개의 콘텐츠 카드 예시.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 

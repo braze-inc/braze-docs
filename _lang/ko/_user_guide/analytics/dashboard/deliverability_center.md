@@ -108,7 +108,7 @@ IP 평판에 대한 등급을 이해하는 데 도움이 되는 표를 참조하
 Microsoft가 기본 사서함 제공업체인 경우 이 통합 기능을 사용하여 Microsoft 평판 데이터에 액세스하고 볼 수 있습니다. 이렇게 하면 IP 상태를 모니터링하여 이메일이 어떻게 수신되는지 확인할 수 있습니다.
 
 {% alert important %}
-전달 가능성에 센터에 데이터가 표시되지 않으면 [지원팀]({{site.baseurl}}/help/support/)에 IP 주소 목록과 함께 문의하세요.
+전달 가능성에 센터에 데이터가 표시되지 않으면 [지원팀]({{site.baseurl}}/user_guide/administrative/access_braze/support/)에 IP 주소 목록과 함께 문의하세요.
 {% endalert %}
 
 ![][8]

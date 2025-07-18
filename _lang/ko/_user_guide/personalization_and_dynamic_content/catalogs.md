@@ -58,7 +58,7 @@ guide_featured_list:
 
 ## 카탈로그와 Liquid가 함께 작동하는 방식
 
-카탈로그는 데이터 저장 기능입니다. 여기에는 개인화를 위해 메시지에서 참조할 수 있는 대규모 데이터 세트가 포함되어 있습니다. 실제로 데이터를 참조하기 위해서는 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 템플릿 언어로 사용하게 됩니다. 즉, 카탈로그는 데이터가 저장되는 저장소이고 Liquid는 저장소에서 릴리스된 데이터를 가져오는 언어입니다.
+카탈로그는 데이터 저장 기능입니다. 여기에는 개인화를 위해 메시지에서 참조할 수 있는 대규모 데이터 세트가 포함되어 있습니다. 실제로 데이터를 참조하기 위해서는 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 템플릿 언어로 사용하게 됩니다. 즉, 카탈로그는 데이터가 저장된 저장소이고 Liquid는 저장소에서 관련 데이터를 가져오는 언어입니다.
 
 Liquid를 사용하여 카탈로그 정보를 가져오는 방법에 대한 예는 [카탈로그 만들기]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/)의 추가 사용 사례를 참조하세요.
 

@@ -36,6 +36,7 @@ Braze에서 한 파트너를 위해 흐르는 이벤트의 이름 지정 규칙�
 * [Treasure Data][10]
 * [RudderStack][9]
 * [Adobe][12]
+* [Amperity][13]
 
 ## 행동 분석
 
@@ -61,3 +62,4 @@ Braze에서 한 파트너를 위해 흐르는 이벤트의 이름 지정 규칙�
 [10]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
 [11]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/
 [12]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/adobe_for_currents/
+[13]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/#using-amperity-with-braze-currents

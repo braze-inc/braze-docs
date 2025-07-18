@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
   image: /assets/img/braze_icons/book-closed.svg
 - name: "테스트 메시지 보내기"
-  link: /docs/developer_guide/sending_test_messages/
+  link: /docs/developer_guide/in_app_messages/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg
 - name: "보내기 전에 알아두어야 할 사항"
   link: /docs/know_before_send/

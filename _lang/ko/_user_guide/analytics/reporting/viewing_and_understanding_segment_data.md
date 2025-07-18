@@ -76,11 +76,10 @@ Braze 대시보드의 **세그먼트** 페이지에는 모든 세그먼트에 �
 ![메시징 사용에서 세그먼트가 사용 중인 캠페인을 확인합니다.][4]
 
 ### 과거 멤버십
-**과거 멤버십** 섹션에서는 시간이 지남에 따라 세그먼트의 크기가 어떻게 변했는지 보여줍니다. 드롭다운을 사용하여 날짜 범위별로 멤버십을 필터링할 수 있습니다. 
 
-과거 세그먼트 멤버십 수는 **정확한 통계 계산**을 클릭하기 전에 세그먼트 크기가 추정치인 것과 유사하게 추정치입니다. Braze는 무작위 버킷 범위의 사용자를 쿼리하여 멤버십 수를 추정합니다. 즉, 어떤 날에는 임의의 버킷 번호 111-120을 가진 사용자를 기준으로 회원 수를 집계하고, 다른 날에는 임의의 버킷 번호 8,452-8,455를 가진 사용자를 기준으로 회원 수를 집계할 수 있습니다. 따라서 무작위 버킷 범위 내에 랜딩하는 사용자 수에 따라 날짜별로 그래프에 약간의 변동이 나타날 수 있습니다.
+**과거 멤버십** 섹션에서는 시간이 지남에 따라 세그먼트의 크기가 어떻게 변했는지 보여줍니다. 드롭다운을 사용하여 날짜 범위별로 멤버십을 필터링할 수 있습니다.
 
-![과거 멤버십 드롭다운을 사용하여 날짜 범위별로 멤버십을 세분화할 수 있습니다.][10]
+세그먼트의 멤버십 및 규모 모니터링에 대해 자세히 알아보려면 [세그먼트 규모 측정하기를]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) 참조하세요.
 
 ### 사용자 미리 보기
 
@@ -145,5 +144,4 @@ Braze 대시보드의 **세그먼트** 페이지에는 모든 세그먼트에 �
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}
