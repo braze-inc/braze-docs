@@ -14,16 +14,16 @@ page_order: 2.0
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/sdk_integration.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/sdk_integration.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
