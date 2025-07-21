@@ -819,7 +819,7 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
-## Checking user eligibility for feature flags
+## Checking user eligibility
 
 To check which feature flags a user is eligible for in Braze, go to **Audience** > **Search Users**, then search for and select a user.
 
