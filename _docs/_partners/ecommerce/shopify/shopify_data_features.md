@@ -14,7 +14,7 @@ page_order: 3
 
 ## Tracked Shopify events
 
-The Shopify integration leverages Braze's [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) to capture key shopping behaviors. For practical implementation examples and marketing strategies using these events, see our [eCommerce use cases]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
+The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) to capture key shopping behaviors. For implementation examples and marketing strategies using these events, refer to [eCommerce use cases]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
 
 {% tabs %}
 {% tab Example Payload %}
