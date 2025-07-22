@@ -64,8 +64,8 @@ Liquid를 사용하여 카탈로그 정보를 가져오는 방법에 대한 예�
 
 #### Data storage limitations
 
-Data storage for catalogs is limited based on the size of the catalog items, which may be different from the sizes of uploaded CSV files.
+Data storage for catalogs is limited based on the size of the catalog items and selections, which may be different from the sizes of uploaded CSV files.
 
-For the free version of catalogs, the amount of storage allowed is up to 100 MB. You can have unlimited items as long as the storage space does not exceed 100 MB.
+For the free version of catalogs, the amount of storage allowed is up to 100 MB. You can have unlimited items as long as the storage space does not exceed 100 MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
 
 For Catalogs Pro, The storage size options are: 5 GB, 10 GB, 15 GB or 50 GB. Note that the free version's storage (100 MB) is included in each of these plans.
