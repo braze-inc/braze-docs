@@ -4,25 +4,25 @@ Before you can use this integration method, you'll need to [create an account an
 
 ### Step 1: Open the tag template gallery
 
-In [Google Tag Manager](https://tagmanager.google.com/), choose your workspace, then select **Templates** > **Search Gallery**.
+In [Google Tag Manager](https://tagmanager.google.com/), choose your workspace, then select **Templates**. In the **Tag Template** pane, select **Search Gallery**.
 
-![The templates page for an example workspace in Google Tag Manager.]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %})
+![The templates page for an example workspace in Google Tag Manager.]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %}){: style="max-width:95%;"}
 
 ### Step 2: Add the initialization tag template
 
 In the template gallery, search for `braze-inc`, then select **Braze Initialization Tag**.
 
-![The template gallery showing the various 'braze-inc' templates.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %})
+![The template gallery showing the various 'braze-inc' templates.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
 
 Select **Add to workspace** > **Add**.
 
-![The 'Braze Initialization Tag' page in Google Tag Manager.]({% image_buster /assets/img/web-gtm/add_to_workspace.png %})
+![The 'Braze Initialization Tag' page in Google Tag Manager.]({% image_buster /assets/img/web-gtm/add_to_workspace.png %}){: style="max-width:70%;"}
 
 ### Step 3: Configure the tag
 
 From the **Templates** section, select your newly added template.
 
-![The "Templates" page in Google Tag Manager showing the Braze Initialization Tag template.]({% image_buster /assets/img/web-gtm/select_tag_template.png %})
+![The "Templates" page in Google Tag Manager showing the Braze Initialization Tag template.]({% image_buster /assets/img/web-gtm/select_tag_template.png %}){: style="max-width:95%;"}
 
 Select the pencil icon to open the **Tag Configuration** dropdown.
 
@@ -39,7 +39,7 @@ Enter the minimum required information:
 
 For additional initialization settings, select **Braze Initialization Options** and choose any options you need.
 
-![The list of Braze Initialization Options in under 'Tag Configuration'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %})
+![The list of Braze Initialization Options in under 'Tag Configuration'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
 
 ### Step 5: Verify your integration
 

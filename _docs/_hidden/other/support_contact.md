@@ -989,8 +989,8 @@ $( document ).ready(function() {
       else {
         subtype_menu.append($('<option>',{value: ''}).html('Select a type...'));
       }
-      $.each(subtype_options['SelectOption'],function(subtype)  {
-        subtype_menu.append($('<option>',{value: subtype}).html(subtype));
+      $.each(subtype_options['SelectOption'],function(subtype, val)  {
+        subtype_menu.append($('<option>',{value: subtype}).html(val.SelText || subtype));
       });
     }
     else {
@@ -1016,8 +1016,8 @@ $( document ).ready(function() {
       else {
         type_menu.append($('<option>',{value: ''}).html('Select a subcategory...'));
       }
-      $.each(type_options['SelectOption'],function(type)  {
-        type_menu.append($('<option>',{value: type}).html(type));
+      $.each(type_options['SelectOption'],function(type, val)  {
+        type_menu.append($('<option>',{value: type}).html(val.SelText || type));
       });
 
     }
@@ -1039,10 +1039,9 @@ $( document ).ready(function() {
       else {
         category_menu.append($('<option>',{value: ''}).html('Select a category...'));
       }
-      $.each(category_options['SelectOption'],function(category) {
-        category_menu.append($('<option>',{value: category}).html(category));
+      $.each(category_options['SelectOption'],function(category, val) {
+        category_menu.append($('<option>',{value: category}).html( val.SelText || category));
       });
-      // showlinks(category_options);
     }
     else {
       hide_page(1);
@@ -1069,8 +1068,8 @@ $( document ).ready(function() {
       topic_menu.append($('<option>',{value: ''}).html('Select a topic...'));
     }
     /* Generate Initial Menu */
-    $.each(ticket_options,function(topic)  {
-      topic_menu.append($('<option>',{value: topic}).html(topic));
+    $.each(ticket_options,function(topic, val)  {
+      topic_menu.append($('<option>',{value: topic}).html(val.SelText || topic));
     });
 
   };
