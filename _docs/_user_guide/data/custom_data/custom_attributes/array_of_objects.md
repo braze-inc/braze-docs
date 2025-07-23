@@ -168,12 +168,40 @@ The following example shows removing any object in the `pets` array that has an 
 {% endtab %}
 {% endtabs %}
 
+### About formatting
+
+When including fields like timestamps in an array of objects, format them as integers in Unix epoch seconds.
+
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user123",
+      "custom_attributes": {
+        "purchases": [
+          {
+            "item_name": "T-shirt",
+            "price": 19.99,
+            "purchase_time": 1690240800
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+See the [Nested Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support) page for more details.
+
 ## SDK example
 
 {% tabs local %}
+
 {% tab Android SDK %}
 
-**Create**
+{% subtabs %}
+{% subtab Create %}
+
 ```kotlin
 val json = JSONArray()
     .put(JSONObject()
@@ -193,10 +221,13 @@ braze.getCurrentUser { user ->
 }
 ```
 
-**Add**
+{% endsubtab %}
+
+{% subtab Add %}
+
 ```kotlin
 val json = JSONObject()
-    .put("\$add", JSONArray()
+    .put("$add", JSONArray()
         .put(JSONObject()
             .put("id", 3)
             .put("type", "dog")
@@ -220,21 +251,24 @@ braze.getCurrentUser { user ->
 }
 ```
 
-**Update**
+{% endsubtab %}
+
+{% subtab Update %}
+
 ```kotlin
 val json = JSONObject()
-    .put("\$update", JSONArray()
+    .put("$update", JSONArray()
         .put(JSONObject()
-            .put("\$identifier_key", "id")
-            .put("\$identifier_value", 4)
-            .put("\$new_object", JSONObject()
+            .put("$identifier_key", "id")
+            .put("$identifier_value", 4)
+            .put("$new_object", JSONObject()
                 .put("breed", "goldfish")
             )
         )
         .put(JSONObject()
-            .put("\$identifier_key", "id")
-            .put("\$identifier_value", 5)
-            .put("\$new_object", JSONObject()
+            .put("$identifier_key", "id")
+            .put("$identifier_value", 5)
+            .put("$new_object", JSONObject()
                 .put("name", "Annette")
             )
         )
@@ -245,21 +279,24 @@ braze.getCurrentUser { user ->
 }
 ```
 
-**Delete**
+{% endsubtab %}
+
+{% subtab Delete %}
+
 ```kotlin
 val json = JSONObject()
-    .put("\$remove", JSONArray()
+    .put("$remove", JSONArray()
         .put(JSONObject()
-            .put("\$identifier_key", "id")
-            .put("\$identifier_value", 1)
+            .put("$identifier_key", "id")
+            .put("$identifier_value", 1)
         )
         .put(JSONObject()
-            .put("\$identifier_key", "id")
-            .put("\$identifier_value", 2)
+            .put("$identifier_key", "id")
+            .put("$identifier_value", 2)
         )
         .put(JSONObject()
-            .put("\$identifier_key", "type")
-            .put("\$identifier_value", "dog")
+            .put("$identifier_key", "type")
+            .put("$identifier_value", "dog")
         )
     )
 
@@ -268,10 +305,16 @@ braze.getCurrentUser { user ->
 }
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
+
 {% endtab %}
+
 {% tab Swift SDK %}
 
-**Create**
+{% subtabs %}
+{% subtab Create %}
+
 ```swift
 let json: [[String: Any?]] = [
   [
@@ -291,7 +334,10 @@ let json: [[String: Any?]] = [
 braze.user.setCustomAttribute(key: "pets", array: json)
 ```
 
-**Add**
+{% endsubtab %}
+
+{% subtab Add %}
+
 ```swift
 let json: [String: Any?] = [
   "$add": [
@@ -319,7 +365,10 @@ let json: [String: Any?] = [
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 ```
 
-**Update**
+{% endsubtab %}
+
+{% subtab Update %}
+
 ```swift
 let json: [String: Any?] = [
   "$update": [
@@ -343,7 +392,10 @@ let json: [String: Any?] = [
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 ```
 
-**Delete**
+{% endsubtab %}
+
+{% subtab Delete %}
+
 ```swift
 let json: [String: Any?] = [
   "$remove": [
@@ -364,100 +416,13 @@ let json: [String: Any?] = [
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert important %}
 Nested custom attributes are not supported for AppboyKit.
 {% endalert %}
-
-{% endtab %}
-{% tab Web SDK %}
-
-**Create**
-```javascript
-import * as braze from "@braze/web-sdk";
-const json = [{
-  "id": 1,
-  "type": "dog",
-  "breed": "beagle",
-  "name": "Gus"
-}, {
-  "id": 2,
-  "type": "cat",
-  "breed": "calico",
-  "name": "Gerald"
-}];
-braze.getUser().setCustomUserAttribute("pets", json);
-```
-
-**Add**
-```javascript
-import * as braze from "@braze/web-sdk";
-const json = {
-  "$add": [{
-    "id":  3,
-    "type":  "dog",
-    "breed":  "corgi",
-    "name":  "Doug",
-  }, {
-    "id":  4,
-    "type":  "fish",
-    "breed":  "salmon",
-    "name":  "Larry",
-  }, {
-    "id":  5,
-    "type":  "bird",
-    "breed":  "parakeet",
-    "name":  "Mary",
-  }]
-};
-braze.getUser().setCustomUserAttribute("pets", json, true);
-```
-
-**Update**
-```javascript
-import * as braze from "@braze/web-sdk";
-const json = {
-  "$update": [
-    {
-      "$identifier_key": "id",
-      "$identifier_value": 4,
-      "$new_object": {
-        "breed": "goldfish"
-      }
-    },
-    {
-      "$identifier_key": "id",
-      "$identifier_value": 5,
-      "$new_object": {
-        "name": "Annette"
-      }
-    }
-  ]
-};
-braze.getUser().setCustomUserAttribute("pets", json, true);
-```
-
-**Delete**
-```javascript
-import * as braze from "@braze/web-sdk";
-const json = {
-  "$remove": [
-    {
-      "$identifier_key": "id",
-      "$identifier_value": 1,
-    },
-    {
-      "$identifier_key": "id",
-      "$identifier_value": 2,
-    },
-    {
-      "$identifier_key": "type",
-      "$identifier_value": "dog",
-    }
-  ]
-};
-braze.getUser().setCustomUserAttribute("pets", json, true);
-```
 
 {% endtab %}
 {% endtabs %}
