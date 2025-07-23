@@ -25,6 +25,8 @@ For more information on using arrays of objects for user attributes objects, ref
 
 ## API example
 
+### Arrays
+
 {% tabs local %}
 {% tab Create %}
 
@@ -167,7 +169,7 @@ The following example shows removing any object in the `pets` array that has an 
 {% endtab %}
 {% endtabs %}
 
-### About formatting
+### Timestamps
 
 When including fields like timestamps in an array of objects, format them as integers in Unix epoch seconds.
 
@@ -190,7 +192,9 @@ When including fields like timestamps in an array of objects, format them as int
 }
 ```
 
-See the [Nested Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support) page for more details.
+{% alert tip %}
+For more information, see [Nested Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+{% endalert %}
 
 ## SDK example
 
