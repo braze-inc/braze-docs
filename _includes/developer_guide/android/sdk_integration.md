@@ -103,29 +103,15 @@ For the list of available parameters, see [`BrazeActivityLifecycleCallbackListen
 {% endtab %}
 {% endtabs %}
 
-## Testing session tracking
-
-{% alert tip %}
-You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
-{% endalert %}
-
-If you experience issues while testing, enable [verbose logging](#android_enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
-
-1. In Braze, go to **Overview**, select your app, then in the **Display Data For** dropdown choose **Today**.
-    ![The "Overview" page in Braze, with the "Display Data For" field set to "Today".]({% image_buster /assets/img_archive/android_sessions.png %})
-2. Open your app, then refresh the Braze dashboard. Verify that your metrics have increased by 1.
-3. Navigate through your app and verify that only one session has been logged to Braze.
-4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
-
 ## Using delayed initialization
+
+To use delayed initialization, the minimum Braze SDK version is required:
+
+{% sdk_min_versions android:0.0.0 %}
 
 {% alert note %}
 While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass data to the Braze servers.
 {% endalert %}
-
-### Prerequisites
-
-To use this feature, [Android Braze SDK version XXXX](LINK) or later is required.
 
 ### Step 1: Enable in your project
 
@@ -256,6 +242,20 @@ Braze.disableDelayedInitialization(context)
 
 {% endtab %}
 {% endtabs %}
+
+## Testing session tracking
+
+{% alert tip %}
+You can also use the [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) to diagnose SDK issues.
+{% endalert %}
+
+If you experience issues while testing, enable [verbose logging](#android_enabling-logs), then use logcat to detect missing `openSession` and `closeSession` calls in your activities.
+
+1. In Braze, go to **Overview**, select your app, then in the **Display Data For** dropdown choose **Today**.
+    ![The "Overview" page in Braze, with the "Display Data For" field set to "Today".]({% image_buster /assets/img_archive/android_sessions.png %})
+2. Open your app, then refresh the Braze dashboard. Verify that your metrics have increased by 1.
+3. Navigate through your app and verify that only one session has been logged to Braze.
+4. Send the app to the background for at least 10 seconds, then bring it to the foreground. Verify that a new session was logged.
 
 ## Optional configurations
 
