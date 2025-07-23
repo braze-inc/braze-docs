@@ -162,6 +162,10 @@ Custom attributes can be unset by setting their value to `null`.
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 ```
 
+### Nested custom attributes
+
+Custom attributes can also contain nested attribute properties. For more information, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
 ### Using the REST API
 
 You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).

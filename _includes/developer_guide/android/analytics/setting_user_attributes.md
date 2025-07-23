@@ -28,6 +28,32 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
+To unset a user attribute, simply pass in `null` to the corresponding method:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
 Braze provides predefined methods for setting the following user attributes within the [BrazeUser class](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). For method specifications, refer to [our KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
 
 - First name
@@ -323,6 +349,10 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 {% endtab %}
 {% endtabs %}
+
+### Nested custom attributes
+
+Custom attributes can also contain nested attribute properties. For more information, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 ### Using the REST API
 

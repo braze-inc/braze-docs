@@ -2,7 +2,7 @@
 
 ## Default user attributes
 
-To set user attributes, you need to set the appropriate field on the shared `ABKUser` object. The following is an example of setting the first name attribute:
+To set user attributes, you need to set the appropriate field on the shared `Braze.User` object. The following is an example of setting the first name attribute:
 
 {% tabs %}
 {% tab swift %}
@@ -16,6 +16,22 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 
 ```objc
 [AppDelegate.braze.user setFirstName:@"Alex"];
+```
+
+To unset a user attribute, simply pass in `nil` to the corresponding method:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+AppDelegate.braze?.user.set(firstName: nil)
+```
+
+{% endtab %}
+{% tab objective-c %}
+
+```objc
+[AppDelegate.braze.user setFirstName:nil];
 ```
 
 {% endtab %}
@@ -208,6 +224,10 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 {% endtab %}
 {% endtabs %}
+
+### Nested custom attributes
+
+Custom attributes can also contain nested attribute properties. For more information, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 ### Using the REST API
 
