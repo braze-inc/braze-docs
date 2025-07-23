@@ -67,43 +67,7 @@ Next, add the following permissions to your `AndroidManifest.xml`:
 With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
 {% endalert %}
 
-### Step 4: Enable user session tracking
-
-When you enable user session tracking, calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration can be handled automatically.
-
-To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class. 
-
-{% tabs local %}
-{% tab JAVA %}
-
-```java
-public class MyApplication extends Application {
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
-  }
-}
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-class MyApplication : Application() {
-  override fun onCreate() {
-    super.onCreate()
-    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
-  }
-}
-```
-
-For the list of available parameters, see [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
-
-{% endtab %}
-{% endtabs %}
-
-## Using delayed initialization
+### Step 4: Enable delayed initialization (optional)
 
 To use delayed initialization, the minimum Braze SDK version is required:
 
@@ -113,7 +77,7 @@ To use delayed initialization, the minimum Braze SDK version is required:
 While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass data to the Braze servers.
 {% endalert %}
 
-### Step 1: Enable in your project
+#### Step 4.1: Update your `braze.xml`
 
 Delayed initialization is disabled by default. To enable, use one of the following options:
 
@@ -148,11 +112,11 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Configure push analytics (optional)
+#### Step 4.2: Configure push analytics (optional)
 
-When delayed initialization is enabled, push analytics are queued by default. However, you can choose to explicitly queue or drop push analytics instead.
+When delayed initialization is enabled, push analytics are queued by default. However, you can choose to [explicitly queue](#explicitly-queue-push-analytics) or [drop](#drop-push-analytics) push analytics instead.
 
-#### Explicitly queue
+##### Explicitly queue {#explicitly-queue-push-analytics}
 
 To explicitly queue push analytics, choose one of the following options:
 
@@ -187,7 +151,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 {% endtab %}
 {% endtabs %}
 
-#### Drop
+##### Drop {#drop-push-analytics}
 
 To drop push analytics, choose one of the following options:
 
@@ -222,9 +186,9 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Initialize the SDK
+#### Step 4.3: Manually initialize the SDK
 
-After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](LINK) method to initialize the SDK.
+After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](LINK) method to manually initialize the SDK.
 
 {% tabs local %}
 {% tab JAVA %}
@@ -239,6 +203,42 @@ Braze.disableDelayedInitialization(context);
 ```kotlin
 Braze.disableDelayedInitialization(context)
 ```
+
+{% endtab %}
+{% endtabs %}
+
+### Step 5: Enable user session tracking
+
+When you enable user session tracking, calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration can be handled automatically.
+
+To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class. 
+
+{% tabs local %}
+{% tab JAVA %}
+
+```java
+public class MyApplication extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class MyApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
+  }
+}
+```
+
+For the list of available parameters, see [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
 
 {% endtab %}
 {% endtabs %}
