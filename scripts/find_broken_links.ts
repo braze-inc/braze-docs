@@ -237,5 +237,5 @@ fs.writeFileSync(path.join(PROJECT_ROOT, '/scripts/temp/broken-links.csv'), [hea
 if (deduplicated.length === 0) {
   console.log('No broken links found.');
 } else {
-  console.log(`${deduplicated.length - 1} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, 'scripts/temp/broken-links.csv')}\n`);
+  console.log(`${deduplicated.length} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, 'scripts/temp/broken-links.csv')}\n`);
 }
