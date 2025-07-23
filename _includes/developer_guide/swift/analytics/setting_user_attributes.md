@@ -18,6 +18,9 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 [AppDelegate.braze.user setFirstName:@"Alex"];
 ```
 
+{% endtab %}
+{% endtabs %}
+
 To unset a user attribute, simply pass in `nil` to the corresponding method:
 
 {% tabs %}
