@@ -23,6 +23,27 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 ```
 {% endsubtab %}
 {% endsubtabs %}
+
+To unset a default attribute for a user, call the method for that attribute with a `null` value:
+
+{% subtabs local %}
+{% subtab First name %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endsubtab %}
+{% subtab Gender %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endsubtab %}
+{% subtab Date of birth %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endsubtab %}
+{% endsubtabs %}
+
 {% endtab %}
 
 {% tab google tag manager %}
