@@ -172,7 +172,7 @@ Braze has a reserved set of IPs used for all services, not all of which are acti
 
 ### `User-Agent` header
 
-Braze includes a `User-Agent` header in all Connected Content and webhook requests that's similar to the following:
+Braze includes a `User-Agent` header in all Connected Content and webhook requests that is similar to the following:
 
 ```text
 Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
