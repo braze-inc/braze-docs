@@ -19,10 +19,6 @@ search_rank: 1
 
 Vaya a **Plantillas** > **Plantillas de correo electrónico**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), esta página se encuentra en **Compromiso** > **Plantillas y medios** > **Plantillas de correo electrónico**.
-{% endalert %}
-
 ## Paso 2: Seleccione su experiencia de edición 
 
 Seleccione entre **el editor de arrastrar y soltar** o **el editor HTML** para su experiencia de edición. 

@@ -21,7 +21,7 @@ If you want to see examples or test this endpoint for **Email Subscription Group
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-If you want to see examples or test this endpoint for **SMS Subscription Groups**:
+If you want to see examples or test this endpoint for **SMS and RCS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -36,7 +36,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 ## Request body
 
 {% tabs %}
-{% tab SMS %}
+{% tab SMS and RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - one of external_id or phone is required
  }
 ```
-\* SMS subscription groups: Only `external_id` or `phone` is accepted.
+\* SMS and RCS subscription groups: Only `external_id` or `phone` is accepted.
 
 {% endtab %}
 {% tab Email %}
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### SMS
+### SMS and RCS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \

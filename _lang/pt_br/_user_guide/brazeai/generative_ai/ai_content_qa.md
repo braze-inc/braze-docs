@@ -18,7 +18,7 @@ O Controle de qualidade do conteúdo com IA oferece os seguintes recursos princi
 - **Verificação ortográfica e gramatical:** Verifica automaticamente se há erros de ortografia e gramática em sua mensagem. Ele sugere correções e fornece recomendações para melhorar a precisão geral do conteúdo.
 - **Análise de tom:** Avalia o tom da mensagem para identificar possíveis problemas. Isso ajuda a garantir que o tom pretendido se alinhe ao estilo de comunicação desejado e ajuda a evitar mal-entendidos ou ofensas não intencionais.
 - **Detecção de linguagem ofensiva:** Examina sua mensagem em busca de qualquer linguagem potencialmente ofensiva ou inadequada, permitindo que você revise seu conteúdo e mantenha uma comunicação respeitosa.
-- **Verificação acidental de conteúdo:** Detecta qualquer inclusão de código, linguagem de marcação ou mensagens de teste que possam ter sido adicionadas de forma não intencional.
+- **Verificação acidental de conteúdo:** Detecta qualquer inclusão de código, linguagem de marcação ou mensagens de teste que possam ter sido adicionadas de forma não intencional, incluindo qualquer código Liquid que não tenha sido renderizado para um usuário teste.
 
 ## Acessando o controle de qualidade do conteúdo com IA
 

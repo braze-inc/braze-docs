@@ -36,6 +36,7 @@ API를 통해 캔버스에 대한 번역된 메시지를 보는 기능은 현재
 |`step_id`| 필수 | 문자열 | 캔버스 단계의 ID입니다. |
 |`message_variation_id`| 필수 | 문자열 | 메시지 변형을 위한 ID입니다. |
 |`locale_id`| 필수 | 문자열 | 로캘의 ID입니다. |
+|`workflow_id` | 필수 | 문자열 | 캔버스의 ID입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 모든 번역 ID는 **다국어 지원** 설정이나 요청 응답에서 찾을 수 있는 UUID(범용 고유 식별자)로 간주된다는 점에 유의하세요.

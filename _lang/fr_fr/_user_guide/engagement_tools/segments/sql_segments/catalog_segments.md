@@ -98,7 +98,7 @@ Oui. De la même manière que les extensions de segment SQL comptent pour votre 
 
 ### J'ai un cas d'utilisation de segment de catalogue que le modèle actuel ne sert pas. Comment devrais-je configurer cela ?
 
-Contactez votre responsable du support client ou [Support Braze]({{site.baseurl}}/help/support/) pour des conseils supplémentaires.
+Contactez votre responsable du support client ou [Support Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) pour des conseils supplémentaires.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

@@ -805,6 +805,8 @@ E-mail
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Se um e-mail receber um soft bounce, normalmente tentaremos novamente dentro de 72 horas, mas o número de tentativas de nova tentativa varia de receptor para receptor.
 
+Embora os soft bounces não sejam rastreados na sua análise de dados da campanha, você pode monitorar os soft bounces no [Registro de Atividade da Mensagem]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Você também pode excluir esses usuários do seu envio ou olhar para a quantidade de soft bounces dos últimos 30 dias com o [filtro de segmento de Soft Bounced]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). No Registro de Atividade da Mensagem, você também pode ver o motivo dos soft bounces e entender possíveis discrepâncias entre os "envios" e "entregas" das suas campanhas de e-mail.
+
 {% endapi %}
 
 {% api %}
@@ -994,7 +996,7 @@ Cartões de conteúdo
 Mensagem no app, cartões de conteúdo
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} Para mensagens no app, as impressões exclusivas podem ser incrementadas novamente após 24 horas se a reelegibilidade estiver ativada e um usuário executar a ação-gatilho. Se a reelegibilidade estiver ativada, <i>impressões exclusivas</i> = <i>destinatários exclusivos</i>. <br><br>Para cartões de conteúdo, a contagem não deve ser incrementada na segunda vez que um usuário visualizar um cartão. 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} Para mensagens no app, as impressões exclusivas podem ser incrementadas novamente após 24 horas se a reelegibilidade estiver ativada e um usuário executar a ação-gatilho. Se a re-eligibilidade estiver ativada, <i>Impressões Únicas</i> = <i>Destinatários Únicos</i>. <br><br>Para cartões de conteúdo, a contagem não deve ser incrementada na segunda vez que um usuário visualizar um cartão. 
 
 <span class="calculation-line">Cálculo: Contagem</span>
 

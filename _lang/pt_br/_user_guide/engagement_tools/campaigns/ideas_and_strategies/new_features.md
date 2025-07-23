@@ -1,7 +1,7 @@
 ---
 nav_title: Conscientização sobre os recursos e a nova versão do app
 article_title: Conscientização sobre os recursos e a nova versão do app
-page_order: 7
+page_order: 9
 page_type: reference
 description: "Este artigo de referência discute como manter os usuários informados e entusiasmados com o lançamento de novos recursos ou versões."
 tool: Campaigns

@@ -13,10 +13,6 @@ description: "Cet article de référence explique comment accéder et utiliser l
 
 Le portail du produit se trouve à l'adresse suivante : **Communauté** > **Feuille de route du produit**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez la **feuille de route du produit** sous **Ressources.**
-{% endalert %}
-
 ## Qu’est-ce que le portail
 
 | Section | Description |

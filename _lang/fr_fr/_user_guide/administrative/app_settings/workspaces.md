@@ -117,7 +117,7 @@ Pour supprimer votre espace de travail ou votre instance d'application :
 1. Allez dans **Réglages** > **Réglages de l'application**.
 2. Sélectionnez **Supprimer l'** espace de travail pour supprimer l'espace de travail correspondant, ou sélectionnez l'icône de la corbeille à côté de l'instance de l'application concernée.
 
-Vous ne pouvez pas supprimer les instances d'app ou les espaces de travail qui sont actuellement utilisés pour le ciblage des utilisateurs ou qui comptent plus de 1 000 utilisateurs. Si vous essayez de le faire, vous recevrez un message d'erreur. Pour procéder et les supprimer, [créez un cas d'assistance]({{site.baseurl}}/help/support/) qui inclut un lien vers le tableau de bord et le nom de l'instance d'app ou de l'espace de travail à supprimer.
+Vous ne pouvez pas supprimer les instances d'app ou les espaces de travail qui sont actuellement utilisés pour le ciblage des utilisateurs ou qui comptent plus de 1 000 utilisateurs. Si vous essayez de le faire, vous recevrez un message d'erreur. Pour procéder et les supprimer, [créez un cas d'assistance]({{site.baseurl}}/user_guide/administrative/access_braze/support/) qui inclut un lien vers le tableau de bord et le nom de l'instance d'app ou de l'espace de travail à supprimer.
 
 {% alert warning %}
 Soyez prudent lorsque vous supprimez des espaces de travail ! Lorsqu'un espace de travail est supprimé, il ne peut plus être restauré.
@@ -149,7 +149,7 @@ Par défaut, un segment cible toutes les applications et tous les sites Web de l
 2. Pour les **Apps et sites web ciblés**, sélectionnez les **utilisateurs d'apps spécifiques.**
 3. Dans le menu déroulant **Applications spécifiques**, sélectionnez votre application ou votre site.
 
-![Segmentation qui consiste à cibler les utilisateurs d'apps spécifiques.][10]
+![Segmentation qui cible les utilisateurs d'applications spécifiques.][10]
 
 Vous pouvez ensuite ajouter ce segment à votre message et commencer à affiner votre audience avec d'autres segments et filtres si nécessaire.
 

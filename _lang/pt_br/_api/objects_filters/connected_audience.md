@@ -158,3 +158,6 @@ Esse filtro permite segmentar com base em quando foi a última vez que o usuári
 - **Comparações permitidas:** `after`, `before`
 - **Valores permitidos:** datetime (string ISO 8601)
 
+### Considerações
+
+Os públicos conectados não podem filtrar usuários por atributos padrão, eventos personalizados, segmentos ou eventos de engajamento com mensagens. Para usar esses filtros, recomendamos incorporá-los em um segmento de público e, em seguida, especificar esse segmento no filtro [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).

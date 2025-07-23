@@ -17,10 +17,6 @@ Cuando se almacenan en Braze, los atributos personalizados pueden utilizarse par
 
 Para crear y gestionar atributos personalizados en el panel de control, vaya a **Configuración de datos** > **Atributos personalizados**. 
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **los atributos personalizados** en **Administrar configuración**.
-{% endalert %}
-
 ![Cuatro atributos personalizados que son booleanos.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 La columna **Última actualización** muestra la última vez que se editó el atributo personalizado, como la última vez que se configuró como lista de bloqueo o activo.
@@ -70,13 +66,13 @@ A continuación se enumeran los métodos utilizados en varias plataformas para e
 
 {% details Ampliar para documentación por plataforma %}
 
-- [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
+- [Android y FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

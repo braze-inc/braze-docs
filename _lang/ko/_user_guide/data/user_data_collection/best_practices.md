@@ -65,7 +65,7 @@ description: "다음 문서에서는 신규 및 기존 사용자 데이터를 �
 
 ## 추가 자료
 - 자세한 내용은 Braze [사용자 프로필 수명주기]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)에 대한 도움말을 참조하세요.<br>
-- [Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) 및 [웹용]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_user_ids/) 사용자 ID 설정 및 `changeUser()` 메서드 호출에 대한 설명서를 참조하세요.
+- [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) 및 [웹용]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) 사용자 ID 설정 및 `changeUser()` 메서드 호출에 대한 설명서를 참조하세요.
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}

@@ -25,10 +25,6 @@ Consulte a seção [Contagem de consumo](#consumption-count) deste artigo para e
 
 Para visualizar o uso de seus pontos de dados, acesse **Configurações** > **Faturamento** e selecione a guia **Uso total de pontos de dados**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página selecionando o ícone da sua conta > **Inscrições e uso** > **Uso** **total de pontos de dados**.
-{% endalert %}
-
 Para saber mais sobre os componentes do dashboard de pontos de dados, consulte [Faturamento]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}

@@ -18,18 +18,12 @@ Dado que el Generador de consultas permite el acceso directo a algunos datos de 
 Para ejecutar un informe del Generador de consultas:
 
 1. Vaya a **Análisis** > **Generador de consultas**.
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará **el Generador de consultas** en **Datos**.
-{% endalert %}
-
-{:start="2"}
-2\. Seleccione **Crear consulta SQL**. Si necesita inspiración o ayuda para elaborar su consulta, seleccione **Plantilla de consulta** y elija una plantilla de la lista. De lo contrario, seleccione **Editor SQL** para ir directamente al editor.
-3\. Su informe recibe automáticamente un nombre con la fecha y hora actuales. Pase el ratón por encima del nombre y seleccione <i class="fas fa-pencil" alt="Edit"></i> para dar un nombre significativo a su consulta SQL.
-4\. Escribe tu consulta SQL en el editor u [obtén ayuda de AI](#ai-query-builder) en la pestaña **Generador de consultas AI**. Si escribe su propio SQL, consulte [Escribir consultas SQL personalizadas](#custom-sql) para conocer los requisitos y los recursos.
-5\. Seleccione **Ejecutar consulta**.
-6\. Guarda tu consulta.
-7\. Para descargar un CSV de su informe, seleccione **Exportar**.
+2. Seleccione **Crear consulta SQL**. Si necesita inspiración o ayuda para elaborar su consulta, seleccione **Plantilla de consulta** y elija una plantilla de la lista. De lo contrario, seleccione **Editor SQL** para ir directamente al editor.
+3. Su informe recibe automáticamente un nombre con la fecha y hora actuales. Pase el ratón por encima del nombre y seleccione <i class="fas fa-pencil" alt="Edit"></i> para dar un nombre significativo a su consulta SQL.
+4. Escribe tu consulta SQL en el editor u [obtén ayuda de AI](#ai-query-builder) en la pestaña **Generador de consultas AI**. Si escribe su propio SQL, consulte [Escribir consultas SQL personalizadas](#custom-sql) para conocer los requisitos y los recursos.
+5. Seleccione **Ejecutar consulta**.
+6. Guarda tu consulta.
+7. Para descargar un CSV de su informe, seleccione **Exportar**.
 
 ![Generador de consultas que muestra los resultados de la consulta con plantilla "Interacción e ingresos del canal en los últimos 30 días".]({% image_buster /assets/img_archive/query_builder.png %})
 
@@ -429,7 +423,7 @@ Si un informe se agota o presenta errores incluso después de reintentarlo, pón
 
 ## Datos y resultados
 
-Los resultados, y las exportaciones de resultados, son tablas que pueden contener hasta 1.000 filas. Para informes que requieran grandes cantidades de datos, utilice otra herramienta como [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) o [las API de exportación]({{site.baseurl}}/api/endpoints/export) de Braze.
+Los resultados, y las exportaciones de resultados, son tablas que pueden contener hasta 1.000 filas. Para los informes que requieren mayores cantidades de datos, puedes utilizar herramientas como [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) o el [punto final de la API de exportación]({{site.baseurl}}/api/endpoints/export).
 
 ## Control del uso del Generador de consultas
 

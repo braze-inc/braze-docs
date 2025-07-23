@@ -15,7 +15,7 @@ channel: content cards
 
 As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
 
-![Content Cards selected as the messaging channel for a Message step.][1]
+![Content Cards selected as the messaging channel for a Message step.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 Two options that will change how the Content Card step will interact with Canvas are its [expiration](#content-card-expiration) and [removal](#removal).
 
@@ -23,7 +23,7 @@ Two options that will change how the Content Card step will interact with Canvas
 
 When composing a new Content Card you can choose when it should expire from the user’s feed based on its send time. The countdown for a Content Card's expiration starts when the user reaches the Message step in the Canvas where the card is sent. The card will be active in the user's feed from this point until it expires. A card can exist in a user's feed for up to 30 days. 
 
-![Expiration settings for a Content Card for a Message step that will be removed after three hours in a user's feed.][2]
+![Expiration settings for a Content Card for a Message step that will be removed after three hours in a user's feed.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
 ### Types of expiration
 
@@ -51,15 +51,15 @@ After a Content Card expires, it will automatically be removed from the user's f
 
 Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Make Purchase**. Then, select **Add Event**.
 
-!["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who make a specific purchase for "Bracelet".][5]
+!["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who make a specific purchase for "Bracelet".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Reporting and analytics
 
 After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
 
-![Analytics for a Message step with the Content Card message performance.][4]
+![Analytics for a Message step with the Content Card message performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
-For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
+For more information on the available metrics and their definitions, see our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 ## Use cases
 
@@ -75,12 +75,6 @@ Using Canvas, you can add a component that sends both a Content Card and push no
 
 #### Multiple feeds based on categories
 
-You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guide for [Customizing Content Card feeds][7].
+You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guide for [Customizing Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 
 
-[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %}
-[4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[5]: {% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %}
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds

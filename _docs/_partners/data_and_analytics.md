@@ -159,4 +159,10 @@ valid_partner_list:
   url: /docs/partners/metarouter/
 - name: Nexla
   url: /docs/partners/nexla/
+- name: Eagle Eye
+  url: /docs/partners/eagle_eye/
+- name: Eppo
+  url: /docs/partners/eppo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
 ---

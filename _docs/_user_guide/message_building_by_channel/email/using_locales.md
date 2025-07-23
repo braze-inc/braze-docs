@@ -13,6 +13,10 @@ description: "This article provides steps on how to use locales in your messagin
 
 To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
 
+{% alert important %}
+Multi-language support and locales in messages are currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
+{% endalert %}
+
 ## Using locales
 
 To use locales in your messaging, compose an email campaign or Canvas. Select either the HTML editor or drag-and-drop editor, then follow the steps based on your editor.

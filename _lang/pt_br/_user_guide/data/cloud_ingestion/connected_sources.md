@@ -143,41 +143,7 @@ Ao conectar diferentes espaços de trabalho à mesma conta do Snowflake, é nece
 
 Dependendo da configuração de sua conta do Snowflake, talvez seja necessário permitir os seguintes endereços IP em sua política de rede do Snowflake. Para saber mais sobre como fazer isso, consulte a documentação relevante do Snowflake sobre a [modificação de uma política de rede](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-{% subtabs %}
-{% subtab United States (US) %}
-Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, esses são os endereços IP relevantes:
-- `23.21.118.191`
-- `34.206.23.173`
-- `50.16.249.9`
-- `52.4.160.214`
-- `54.87.8.34`
-- `54.156.35.251`
-- `52.54.89.238`
-- `18.205.178.15`
-{% endsubtab %}
-
-{% subtab European Union (EU) %}
-Para as instâncias `EU-01` e `EU-02`, esses são os endereços IP relevantes:
-- `52.58.142.242`
-- `52.29.193.121`
-- `35.158.29.228`
-- `18.157.135.97`
-- `3.123.166.46`
-- `3.64.27.36`
-- `3.65.88.25`
-- `3.68.144.188`
-- `3.70.107.88`
-{% endsubtab %}
-{% subtab Australia (AU) %}
-Por exemplo `AU-01`, estes são os endereços IP relevantes:
-- `13.210.1.145`
-- `13.211.70.159`
-- `13.238.45.54`
-- `52.65.73.167`
-- `54.153.242.239`
-- `54.206.45.213`
-{% endsubtab %}
-{% endsubtabs %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
 {% endtab %}
 
 {% tab Redshift %}
@@ -205,41 +171,8 @@ Também pode ser necessário alterar seus grupos de segurança para permitir que
 
 Se não quiser que o cluster do Redshift seja acessível publicamente, você pode configurar uma instância VPC e EC2 para usar um túnel ssh para acessar os dados do Redshift. Para saber mais, consulte a [AWS: Como posso acessar um cluster privado do Amazon Redshift a partir da minha máquina local?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 
-{% subtabs %}
-{% subtab United States (US) %}
-Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, esses são os endereços IP relevantes:
-- `23.21.118.191`
-- `34.206.23.173`
-- `50.16.249.9`
-- `52.4.160.214`
-- `54.87.8.34`
-- `54.156.35.251`
-- `52.54.89.238`
-- `18.205.178.15`
-{% endsubtab %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
-{% subtab European Union (EU) %}
-Para as instâncias `EU-01` e `EU-02`, esses são os endereços IP relevantes:
-- `52.58.142.242`
-- `52.29.193.121`
-- `35.158.29.228`
-- `18.157.135.97`
-- `3.123.166.46`
-- `3.64.27.36`
-- `3.65.88.25`
-- `3.68.144.188`
-- `3.70.107.88`
-{% endsubtab %}
-{% subtab Australia (AU) %}
-Por exemplo `AU-01`, estes são os endereços IP relevantes:
-- `13.210.1.145`
-- `13.211.70.159`
-- `13.238.45.54`
-- `52.65.73.167`
-- `54.153.242.239`
-- `54.206.45.213`
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab BigQuery %}
@@ -265,41 +198,8 @@ Depois de criar a conta de serviço e conceder permissões, gere uma chave JSON.
 
 Se você tiver políticas de rede em vigor, deverá conceder à Braze acesso de rede à sua instância do Big Query. Permita o acesso dos IPs abaixo correspondentes à região de seu Braze dashboard.  
 
-{% subtabs %}
-{% subtab United States (US) %}
-Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, esses são os endereços IP relevantes:
-- `23.21.118.191`
-- `34.206.23.173`
-- `50.16.249.9`
-- `52.4.160.214`
-- `54.87.8.34`
-- `54.156.35.251`
-- `52.54.89.238`
-- `18.205.178.15`
-{% endsubtab %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
-{% subtab European Union (EU) %}
-Para as instâncias `EU-01` e `EU-02`, esses são os endereços IP relevantes:
-- `52.58.142.242`
-- `52.29.193.121`
-- `35.158.29.228`
-- `18.157.135.97`
-- `3.123.166.46`
-- `3.64.27.36`
-- `3.65.88.25`
-- `3.68.144.188`
-- `3.70.107.88`
-{% endsubtab %}
-{% subtab Australia (AU) %}
-Por exemplo `AU-01`, estes são os endereços IP relevantes:
-- `13.210.1.145`
-- `13.211.70.159`
-- `13.238.45.54`
-- `52.65.73.167`
-- `54.153.242.239`
-- `54.206.45.213`
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab Databricks %}
@@ -326,41 +226,8 @@ Mantenha o token em um local seguro até que seja necessário inseri-lo no dashb
 
 Se você tiver políticas de rede em vigor, deverá conceder à Braze acesso de rede à sua instância do Databricks. Permita o acesso dos IPs abaixo correspondentes à região de seu Braze dashboard.  
 
-{% subtabs %}
-{% subtab United States (US) %}
-Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, esses são os endereços IP relevantes:
-- `23.21.118.191`
-- `34.206.23.173`
-- `50.16.249.9`
-- `52.4.160.214`
-- `54.87.8.34`
-- `54.156.35.251`
-- `52.54.89.238`
-- `18.205.178.15`
-{% endsubtab %}
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
-{% subtab European Union (EU) %}
-Para as instâncias `EU-01` e `EU-02`, esses são os endereços IP relevantes:
-- `52.58.142.242`
-- `52.29.193.121`
-- `35.158.29.228`
-- `18.157.135.97`
-- `3.123.166.46`
-- `3.64.27.36`
-- `3.65.88.25`
-- `3.68.144.188`
-- `3.70.107.88`
-{% endsubtab %}
-{% subtab Australia (AU) %}
-Por exemplo `AU-01`, estes são os endereços IP relevantes:
-- `13.210.1.145`
-- `13.211.70.159`
-- `13.238.45.54`
-- `52.65.73.167`
-- `54.153.242.239`
-- `54.206.45.213`
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab Microsoft Fabric %}
@@ -398,17 +265,7 @@ Você precisará do endpoint SQL do seu depósito para que o Braze possa se cone
 
 Dependendo da configuração de sua conta Microsoft Fabric, talvez seja necessário permitir os seguintes endereços IP em seu firewall para permitir o tráfego do Braze. Para saber mais sobre como ativar esse recurso, consulte a documentação relevante sobre o [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 
-| Para as instâncias `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | Para as instâncias `EU-01` e `EU-02` |
-|---|---|
-| `23.21.118.191`| `52.58.142.242`
-| `34.206.23.173`| `52.29.193.121`
-| `50.16.249.9`| `35.158.29.228`
-| `52.4.160.214`| `18.157.135.97`
-| `54.87.8.34`| `3.123.166.46`
-| `54.156.35.251`| `3.64.27.36`
-| `52.54.89.238`| `3.65.88.25`
-| `18.205.178.15`| `3.68.144.188`
-|   | `3.70.107.88`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 {% endtab %}
 

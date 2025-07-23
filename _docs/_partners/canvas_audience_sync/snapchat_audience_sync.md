@@ -45,17 +45,17 @@ You must ensure the following items are created, completed and/or accepted befor
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Snapchat**. Under Snapchat Audience Sync, select **Connect Snapchat**.
 
-![Snapchat technology page in Braze that includes an Overview section and Snapchat Audience Sync section with the Connected Snapchat button.][1]{: style="max-width:80%;"}
+![Snapchat technology page in Braze that includes an Overview section and Snapchat Audience Sync section with the Connected Snapchat button.]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
 
 You'll then be redirected to the Snapchat OAuth page to authorize Braze for the permissions related to your Audience Sync integration.
 
 Once you have selected confirm, you'll be redirected back into Braze to select which Snapchat ad accounts you wish to sync. 
 
-![A list of available ad accounts you can connect to Snapchat.][2]{: style="max-width:80%;"}
+![A list of available ad accounts you can connect to Snapchat.]({% image_buster /assets/img/snapchat/snapchat2.png %}){: style="max-width:80%;"}
 
 Once successfully connected, you will be returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![An updated version of the Snapchat technology partners page showing the ad accounts successfully connected.][3]{: style="max-width:80%;"}
+![An updated version of the Snapchat technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/snapchat/snapchat3.png %}){: style="max-width:80%;"}
 
 Your Snapchat connection will be applied at the Braze workspace level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
@@ -63,7 +63,7 @@ Your Snapchat connection will be applied at the Braze workspace level. If your S
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Step 3: Sync setup
 
@@ -71,7 +71,7 @@ Click on the **Custom Audience** button to open the component editor.
 
 Select **TikTok** as the desired Audience Sync partner.
 
-![][19]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 Then select your desired Snapchat ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
@@ -105,7 +105,7 @@ Once you have configured your Audience Sync to Snapchat, launch the Canvas! A ne
 
 You can view the audience in Snapchat by entering your ads manager account and selecting **Audiences** from the Assets section of the navigation. From the **Audiences** page, you can see the size of each audience after it reaches ~1,000.
 
-![Audience details for a given Snapchat audience that includes audience name, audience type, audience size, and audience retention in days.][9]
+![Audience details for a given Snapchat audience that includes audience name, audience type, audience size, and audience retention in days.]({% image_buster /assets/img/snapchat/snapchat7.png %})
 
 ## User syncing and rate limit considerations
 
@@ -153,17 +153,3 @@ You can disconnect and reconnect your Snapchat account on the Snapchat partner p
 Make sure your Snapchat ad account successfully connects to Braze on the Snapchat partner page. Check that you've selected an ad account, entered a name for the new audience, and selected fields to match.
 
 
-[1]: {% image_buster /assets/img/snapchat/snapchat1.png %}
-[2]: {% image_buster /assets/img/snapchat/snapchat2.png %}
-[3]: {% image_buster /assets/img/snapchat/snapchat3.png %}
-[6]: {% image_buster /assets/img/snapchat/snapchat4.png %}
-[7]: {% image_buster /assets/img/snapchat/snapchat5.png %}
-[8]: {% image_buster /assets/img/snapchat/snapchat6.png %}
-[9]: {% image_buster /assets/img/snapchat/snapchat7.png %}
-[4]: {% image_buster /assets/img/pinterest/pinterest4.png %}
-[5]: {% image_buster /assets/img/pinterest/pinterest5.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

@@ -41,7 +41,9 @@ Test Connection se ejecuta en su almacén de datos, por lo que aumentar la capac
 
 ### Error al conectar con la instancia Snowflake: Solicitud entrante con IP no autorizada para acceder a Snowflake
 
-Intenta añadir las IPs oficiales de Braze a tu lista de IPs permitidas. Para más información, consulta [Integración de almacenes de datos]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Intenta añadir las IPs oficiales de Braze a tu lista de IPs permitidas. veloperPara más información, consulta [Integraciones de almacenes de datos]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), o permite las IP correspondientes:
+
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Error al ejecutar SQL debido a la configuración del cliente: 002003 (42S02): Error de compilación SQL: no existe o no está autorizado
 
@@ -152,11 +154,11 @@ Para evitar estos comportamientos en el futuro, recomendamos utilizar valores `U
 
 ## Durante una sincronización, ¿se mantiene el orden si varios registros comparten el mismo ID?
 
-El orden de procesamiento no es 100% predecible. Por ejemplo, si hay varias filas con la misma `EXTERNAL_ID` en la tabla durante una sincronización, no podemos garantizar qué valor acabará en el perfil final. 
+El orden de procesamiento no es 100% predecible. Por ejemplo, si hay varias filas con la misma `EXTERNAL_ID` en la tabla durante una sincronización, no podemos garantizar qué valor acabará en el perfil final. Si estás actualizando el mismo `EXTERNAL_ID` con diferentes atributos en la columna de carga útil, todos los cambios se reflejarán cuando finalice la sincronización.
 
 ## ¿Cuáles son las medidas de seguridad del CDI?
 
-### Medidas de Braze
+### Nuestras medidas
 
 Braze cuenta con las siguientes medidas para la CDI:
 

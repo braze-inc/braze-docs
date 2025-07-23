@@ -24,7 +24,7 @@ Les attributs de campagne et de canvas sont également disponibles dans le [poin
 
 ### Currents
 
-Les attributs des campagnes et des canvas sont liés aux [événements d'engagement aux messages de]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) Currents. C’est important pour pouvoir déterminer la campagne ou le composant Canvas associé à l’envoi de notifications push ou l’ouverture d’e-mail.
+Les attributs des campagnes et des canvas sont liés aux [événements d'engagement aux messages de]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) Currents. C’est important pour pouvoir déterminer la campagne ou le composant Canvas associé à l’envoi de notifications push ou l’ouverture d’e-mail.
 
 ## Attributs de campagne 
 

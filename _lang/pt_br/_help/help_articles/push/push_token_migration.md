@@ -10,17 +10,23 @@ channel: push
 
 # Migração de tokens por push
 
-Um [token por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) é um identificador anônimo exclusivo que especifica para onde enviar as notificações de um app. A Braze se conecta a provedores de serviço por push, como o Firebase Cloud Messaging Service (FCMs) para Android e o Apple Push Notification Service (APNs) para iOS, e esses provedores enviam tokens de dispositivo exclusivos que identificam seu app. Se você estava enviando notificações por push antes de integrar o Braze, seja por conta própria ou por meio de outro provedor, a migração de token por push permite que você continue enviando notificações por push aos seus usuários com tokens por push registrados.
+> Um [token por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) é um identificador anônimo exclusivo que especifica para onde enviar as notificações de um app. A Braze se conecta a provedores de serviço por push, como o Firebase Cloud Messaging Service (FCMs) para Android e o Apple Push Notification Service (APNs) para iOS, e esses provedores enviam tokens de dispositivo exclusivos que identificam seu app. Se você estava enviando notificações por push antes de integrar o Braze, seja por conta própria ou por meio de outro provedor, a migração de token por push permite que você continue enviando notificações por push aos seus usuários com tokens por push registrados.
 
 ## Migração automática via SDK
 
-O Braze SDK migrará automaticamente o token por push de um usuário que tenha aceitado anteriormente suas notificações por push na primeira vez em que ele fizer login em seu aplicativo ou site integrado ao Braze. Se você integrar os SDKs da Braze, não precisará migrar os tokens por push usando a API.
+Após você [integrar o SDK do Braze]({{site.baseurl}}/developer_guide/sdk_integration/), os tokens por push dos seus usuários que optaram por receber serão migrados automaticamente na próxima vez que abrirem seu app. Até lá, você não poderá enviar notificações por push para esses usuários através do Braze.
 
-No entanto, como os tokens por push migram quando um usuário faz login pela primeira vez no seu app, note que o Braze não poderá enviar notificações por push para usuários que não tenham feito login após a integração do SDK. Talvez ainda queira migrar manualmente os tokens por push do Android e do iOS como uma forma de reengajamento com esses usuários.
+Alternativamente, você pode [migrar seus tokens por push manualmente](#manual-migration-via-api), permitindo que você reengaje seus usuários mais rapidamente.
 
-{% alert note %}
-Devido à natureza dos tokens por push da Web, a cada 60 dias o token expira e é redefinido. Qualquer pessoa que não tenha uma sessão dentro desse período de tempo não terá um token por push da Web ativo. O Braze não migrará tokens por push da Web expirados. Esses usuários precisarão ser engajados novamente por meio de [push primers]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages).
-{% endalert %}
+### Considerações sobre tokens da web
+
+Devido à natureza dos tokens por push da web, certifique-se de considerar o seguinte ao implementar push para a web:
+
+|Considerações|Informações|
+|----------------------|------------|
+| **Trabalhadores de serviço**  | Por padrão, o SDK da Web procurará um trabalhador de serviço em `./service-worker` a menos que outra opção seja especificada, como `manageServiceWorkerExternally` ou `serviceWorkerLocation`. Se o seu trabalhador de serviço não estiver configurado corretamente, isso pode levar a tokens por push expirados para seus usuários. |
+| **Tokens expirados**   | Se um usuário não iniciou uma sessão na web dentro de 60 dias, seu token por push expirará. Como o Braze não pode migrar tokens por push expirados, você precisará enviar um [primer por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) para reengajá-los. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Migração manual via API
 
@@ -39,7 +45,8 @@ Não é possível migrar tokens por push da web por meio da API. Isso ocorre por
 Como alternativa à migração da API, recomendamos que você integre o SDK e permita que sua base de tokens seja preenchida naturalmente.
 {% endalert %}
 
-### Migração se a ID externa estiver presente
+{% tabs local %}
+{% tab ID externo presente %}
 Para usuários identificados, defina o sinalizador `push_token_import` como `false` (ou omita o parâmetro) e especifique os valores `external_id`, `app_id` e `token` no objeto do usuário `attributes`. 
 
 Por exemplo:
@@ -63,8 +70,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
   ]
 }'
 ```
+{% endtab %}
 
-### Migração se a ID externa não estiver presente
+{% tab ID externo ausente %}
 Ao importar tokens por push de outros sistemas, um `external_id` nem sempre está disponível. Nessa circunstância, defina o sinalizador `push_token_import` como `true` e especifique os valores `app_id` e `token`. A Braze criará um perfil de usuário temporário e anônimo para cada token, a fim de ativar a possibilidade de continuar a enviar mensagens a essas pessoas. Se o token já existir na Braze, a solicitação será ignorada.
 
 Por exemplo:
@@ -104,6 +112,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 Após a importação, quando o usuário anônimo iniciar a versão do seu app habilitada para o Braze, o Braze moverá automaticamente o token por push importado para o perfil de usuário do Braze e limpará o perfil temporário.
 
 O Braze verificará uma vez por mês para encontrar qualquer perfil anônimo com o sinalizador `push_token_import` que não tenha um token por push. Se o perfil anônimo não tiver mais um token por push, nós o excluiremos. No entanto, se o perfil anônimo ainda tiver um token por push, o que sugere que o usuário real ainda não registrou o dispositivo com o referido token por push, não faremos nada.
+{% endtab %}
+{% endtabs %}
 
 ## Importação de tokens por push do Android
 

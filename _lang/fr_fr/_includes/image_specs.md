@@ -28,7 +28,7 @@ Les messages in-app modaux sont conçus pour s’adapter le mieux possible aux p
 
 Bien qu'il n'y ait pas de limite au nombre de caractères de texte que vous pouvez inclure dans un message in-app (ainsi que dans les boutons, le titre, le corps principal et autres), nous modérons le nombre de caractères de texte que vous utilisez. Un texte trop long obligera les utilisateurs à développer et à faire défiler le message.
 
-Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une taille d'image maximale de 5 Mo, et prennent en charge les types de fichiers PNG, JPG et GIF.
+Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une taille d'image maximale de 5 Mo, et prennent en charge les types de fichiers PNG, JPEG et GIF.
 
 {% tabs %}
 {% tab Portrait %}
@@ -103,7 +103,7 @@ table td {
     <td>2:1 (recommandé)</td>
     <td>1038 x 1038 px maximum</td>
     <td>5 MB</td>
-    <td>PNG, JPG, GIF</td>
+    <td>PNG, JPEG, GIF</td>
     <td>À compter du mois de janvier 2020, les notifications push enrichies pour iOS peuvent gérer des images de 1 038 x1 038 px tant que leur taille est inférieure à 10 Mo, mais nous recommandons d’utiliser des fichiers aussi petits que possible. En pratique, l’envoi de fichiers volumineux peut entraîner une surcharge inutile du réseau et rendre les échecs de téléchargement plus courants.<br><br>Pour plus d'informations, consultez la rubrique <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">Notifications enrichies pour iOS</a>.</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ table td {
     <td>1:1</td>
     <td>N/A</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td></td>
   </tr>
   <tr>
@@ -119,7 +119,7 @@ table td {
     <td>2:1</td>
     <td>Petites : 512 x 256 px<br>Intermédiaire : 1024 x 512 px<br>Grandes : 2048 x 1024 px</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Utilisé dans les <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">notifications riches d'Android</a>.</td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ table td {
     <td>3:2</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>Pour plus de détails, consultez la section <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Notifications push d’images insérées pour Android</a>.</td>
   </tr>
 </table>
@@ -147,7 +147,7 @@ table td {
 | --- | --- | 
 | Taille | 5 MB |
 | Largeur | En-tête : 600 px<br>Corps : 480 px |
-| Types de fichier | PNG, JPG, GIF |
+| Types de fichier | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Spécifications du texte | Propriétés maximales recommandées |

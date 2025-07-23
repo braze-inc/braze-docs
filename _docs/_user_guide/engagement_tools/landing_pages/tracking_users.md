@@ -7,11 +7,17 @@ page_order: 2
 
 # Tracking users through a form
 
-> Learn how to track users who submit a form through your landing page by adding a {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag to your  messages. This Liquid tag is supported across all Braze messaging channels, including email, SMS, in-app messages, and more. To learn more about tracking data, see [About landing page tracking data]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
+> Learn how to track users who submit a form through your landing page by adding a landing page Liquid tag to your  messages. This Liquid tag is supported across all Braze messaging channels, including email, SMS, in-app messages, and more. To learn more about tracking data, see [About landing page tracking data]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
 
 ## How it works
 
-You can add a landing page Liquid tag to any of your single or multi-channel messages in Braze. When a user visits that landing page and submits the form, Braze will automatically link that data to their existing profile, rather than create a new profile for that user.
+You can add a {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag to any of your single or multi-channel messages in Braze. When a user visits that landing page and submits the form, Braze will automatically link that data to their existing profile, rather than create a new profile for that user. In the following example, a the landing page Liquid tag is used to link customers to a survey:
+
+{% raw %}
+```html
+<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+```
+{% endraw %}
 
 {% alert tip %}
 You can also use landing pages for lead generation by embedding the page URL into your external channels. After you create a landing page, go to **Landing Page Details** to get the unique URL for your landing page.
@@ -53,10 +59,18 @@ Your snippet will be similar to the following:
 
 {% raw %}
 ```ruby
-{% landing_page_url my-custom-url-handle %}
+{% landing_page_url custom-url-handle %}
 ```
 {% endraw %}
 
 ### Step 3: Finalize and send your message
 
-Embed the Liquid snippet into your message, then finalize the rest of your message. When you're ready, you can send the message to start tracking users through your landing page.
+Embed the Liquid snippet into your message, then finalize the rest of your message. For example:
+
+{% raw %}
+```html
+<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+```
+{% endraw %}
+
+When you're ready, you can send the message to start tracking users through your landing page.

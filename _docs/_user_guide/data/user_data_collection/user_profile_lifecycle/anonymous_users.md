@@ -44,7 +44,7 @@ Let's say you assign the custom attribute "is_lead_profile" to each anonymous us
 - **External User ID is blank**
 - "is_lead_profile" **is true**
 
-![Segment filters for a blank external user ID and a true "is_lead_profile" custom attribute.][1]
+![Segment filters for a blank external user ID and a true "is_lead_profile" custom attribute.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Capture checkout data from an anonymous user
 
@@ -76,4 +76,3 @@ Here is an example payload that will generate when the web capture form is submi
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img/getting_started/anonymous_users.png %}

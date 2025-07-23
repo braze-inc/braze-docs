@@ -37,6 +37,6 @@ Tag one event and then identify differences by using properties. This is helpful
 Let's say you're part of an eCommerce company and interested in tracking when customers have signed up for your app and when they have subscribed to your newsletter. Here are examples of effective event names:
 
 - `user_signup`
-- `newsletter_sunscribed`
+- `newsletter_subscribed`
 
 These two event names clearly indicate the event they're tracking. As you create more custom events, be sure to keep your naming conventions understandable. For example, avoid using event names such as `signup_event_1` as that lacks clarity and doesn't convey what the event is tracking, compared to `user_signup`.

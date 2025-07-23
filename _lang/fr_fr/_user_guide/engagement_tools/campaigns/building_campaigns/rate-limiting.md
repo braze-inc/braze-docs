@@ -19,6 +19,8 @@ Braze vous permet de contrôler la pression marketing par taux limitant vos camp
 1. [**Limite de débit centrée sur l'utilisateur :**](#user-centric-rate-limiting) L'objectif est d'offrir la meilleure expérience possible à l'utilisateur.
 2. [**Limitation du débit de réception/distribution :**](#delivery-speed-rate-limiting) Prend en considération la bande passante de vos serveurs.
 
+Braze essaiera de répartir uniformément les envois de messages tout au long de la minute, mais ne peut le garantir. Par exemple, si vous avez une campagne avec une limite de débit de 5 000 messages par minute, nous essaierons de répartir les 5 000 demandes de manière égale tout au long de la minute (environ 84 messages par seconde), mais il peut y avoir une certaine variation dans le débit par seconde.
+
 ### Limite de débit centrée sur l'utilisateur
 
 À mesure que vous créez plus de segments, il y aura des cas où l’appartenance à ces segments se chevauche. Si vous envoyez des campagnes à ces segments, vous devez être sûr que vous n’envoyez pas des messages trop souvent à vos utilisateurs. Si un utilisateur reçoit trop de messages sur une courte période, il va se sentir surchargé et désactiver les notifications push ou désinstaller votre application.
@@ -115,9 +117,9 @@ Lors de l'envoi d'un Canvas avec une limite de débit, la limite de débit est p
 
 #### Limitation du taux et nouvelles tentatives de contenu connecté
 
-Lorsque la fonctionnalité [Connected Content Retry][19] ] est activée, Braze relance les échecs d'appel en respectant la limite de débit que vous avez définie pour chaque renvoi. Prenons le cas de 75 000 messages avec une limite de débit de 10 000 par minute. Dans la première minute, l’appel échoue ou est lent et envoie seulement 4 000 messages.
+Lorsque l'option [Connected Content retry][19] est activée, Braze relance les échecs d'appel en respectant la limite de débit que vous avez définie pour chaque renvoi. Prenons le cas d'un envoi de 75 000 messages avec une limite de débit de 10 000 par minute. Imaginez que dans la première minute, l'appel échoue ou est lent et n'envoie que 4 000 messages.
 
-Au lieu d'essayer de rattraper le retard et d'envoyer les 4 000 messages restants dans la deuxième minute ou de les ajouter aux 10 000 qu'il est déjà prévu d'envoyer, Braze déplacera ces 6 000 messages en échec à la "fin de la file d'attente" et ajoutera une minute supplémentaire, si nécessaire, au total des minutes nécessaires à l'envoi de votre message.
+Au lieu d'essayer de rattraper le retard et d'envoyer les 6 000 messages restants dans la deuxième minute ou de les ajouter aux 10 000 messages déjà prêts à être envoyés, Braze déplacera ces 6 000 messages en "fin de file d'attente" et ajoutera une minute, si nécessaire, au nombre total de minutes nécessaires à l'envoi de votre message.
 
 | Minute | Pas de défaillance | 6 000 échecs à la minute 1 |
 |--------|------------|---------------------------|
@@ -132,6 +134,8 @@ Au lieu d'essayer de rattraper le retard et d'envoyer les 4 000 messages restant
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+Les demandes de contenu connecté ne sont pas limitées au débit de manière indépendante et suivront la limite de débit du webhook. Cela signifie que s'il y a un appel de contenu connecté à un endpoint unique par webhook, vous devriez vous attendre à 5 000 webhooks et également à 5 000 appels de contenu connecté par minute. Notez que la mise en cache peut avoir une incidence sur ce point et réduire le nombre d'appels au contenu connecté. En outre, les tentatives peuvent augmenter le nombre d'appels au contenu connecté. Nous vous recommandons donc de vérifier que le point de terminaison du contenu connecté peut supporter une certaine fluctuation à ce niveau.
+
 ## À propos de la limite de fréquence
 
 Alors que votre base d'utilisateurs continue de croître et que votre envoi de messages s'étend pour inclure des campagnes sur le cycle de vie, des campagnes déclenchées, des campagnes transactionnelles et des campagnes de conversion, il est important d'éviter que vos messages ne paraissent "spammy" ou dérangeants. En offrant un meilleur contrôle sur l’expérience de vos utilisateurs, la limite de fréquence vous permet de créer les campagnes que vous souhaitez sans surcharger votre audience.
@@ -139,10 +143,6 @@ Alors que votre base d'utilisateurs continue de croître et que votre envoi de m
 ### Aperçu de la fonction User Search {#freq-cap-feat-over}
 
 La limite de fréquence est appliquée au niveau de l'envoi de la campagne ou du composant Canvas et peut être configurée pour chaque espace de travail à partir de **Paramètres** > **Règles de limite de fréquence**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), cette page s'appelle **Paramètres généraux des messages** et se trouve sous **Engagement**.
-{% endalert %}
 
 Par défaut, la limite de fréquence est activée lorsque de nouvelles campagnes sont créées. Vous pouvez choisir ce qui suit :
 
@@ -155,6 +155,10 @@ Cette période peut être mesurée en minutes, jours, semaines (sept jours) ou m
 Chaque ligne de limites de fréquence sera connectée à l'aide de l'opérateur `AND`, et vous pouvez ajouter jusqu'à 10 règles par espace de travail. De plus, vous pouvez inclure plusieurs plafonds pour les mêmes types de messages. Par exemple, vous pouvez plafonner les utilisateurs pour qu’ils ne dépassent pas une notification push unique par jour et trois par semaine.
 
 ![Section sur la limite de fréquence avec des listes de campagnes et de toiles auxquelles les règles s'appliqueront et ne s'appliqueront pas.][14]
+
+#### Comportement lorsque les utilisateurs sont limités en fréquence sur une étape du canvas
+
+Si un utilisateur de Canvas est limité en fréquence en raison des paramètres globaux de limitation de fréquence, il passera immédiatement à l'étape suivante de Canvas. L'utilisateur ne quittera pas le Canvas à cause de la limite de fréquence.
 
 ### Règles de livraison
 

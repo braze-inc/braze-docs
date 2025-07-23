@@ -12,10 +12,6 @@ description: "Este artículo explica cómo crear una predicción de eventos en e
 
 En Braze, ve a **Análisis** > **Eventos de predicción**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **las predicciones** en **Interacción**.
-{% endalert %}
-
 En esta página, verás una lista de predicciones de acontecimientos activos actuales y alguna información básica sobre ellos. Aquí puedes renombrar, archivar y crear nuevas predicciones. Las predicciones archivadas están inactivas y no actualizan las puntuaciones de los usuarios.
 
 ## Paso 1: Crear una nueva predicción

@@ -1,0 +1,44 @@
+---
+layout: documents
+hide_toc: true
+hide_feedback: true
+---
+
+{%- css_asset_tag -%}
+- /assets/css/scrollycode.scss
+- /assets/css/github-dark.scss
+{%- endcss_asset_tag -%}
+
+<style type="text/css">
+  @media (min-width: 1200px) {
+    #dev-main,
+    #featured_main {
+      max-width: unset;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .ab-tab-content,
+  .ab-sub_tab-content {
+    margin-bottom: unset !important;
+    padding: unset !important;
+  }
+
+  #main_content #article-main {
+    max-width: unset !important;
+  }
+</style>
+
+<script src="{{site.baseurl}}/assets/js/scrollycode.js"></script>
+<script src="{{site.baseurl}}/assets/js/scrolly-highlight.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+
+<script type="text/javascript">
+  var feedback_site = '{{site.baseurl}}{{page.url}}';
+  var feedback_article_title = '{{page.article_title}}';
+  var feedback_nav_title = '{{page.nav_title}}';
+</script>
+
+{{ content }}

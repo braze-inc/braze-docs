@@ -12,13 +12,16 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: 일반적인 푸시 오류 메시지
-    link: /docs/help/help_articles/push/push_error_codes/
+    link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+    image: /assets/img/braze_icons/alert-circle.svg
+  - name: 앱에서 예기치 않게 열리는 푸시 클릭
+    link: /docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/
     image: /assets/img/braze_icons/alert-circle.svg
   - name: 푸시 활성화 정의
     link: /docs/help/help_articles/push/defining_push_enablement/
     image: /assets/img/braze_icons/book-closed.svg
   - name: 누락된 푸시 알림
-    link: /docs/help/help_articles/push/no_push_notification_was_received/
+    link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: 푸시 토큰 마이그레이션
     link: /docs/help/help_articles/push/push_token_migration/

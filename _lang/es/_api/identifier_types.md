@@ -25,18 +25,11 @@ Hay dos maneras de localizar tu `app_id`:
 {% tabs local %}
 {% tab Identificadores de la aplicación %}
 Ve a **Configuración** > **API e identificadores** > **Identificadores de aplicación**. Tu clave de API para cada aplicación aparece en la columna **Identificador**.
-
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), **Identificadores de aplicación** se encuentra en **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
 {% endtab %}
 
 {% tab Configuración de la aplicación %}
 Ve a **Configuración** > **Configuración de la aplicación**. Su clave API aparece junto al campo **Clave API** en la sección de configuración.
 
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), la **configuración de la aplicación** se encuentra en **Administrar configuración** > **Configuración**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -82,9 +75,6 @@ Vaya a **Plantillas**, seleccione una página de plantilla y, a continuación, s
 {% tab Claves de API %}
 Ve a **Configuración** > **API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar identificadores de API en **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -103,9 +93,6 @@ Ten en cuenta que, si tienes un Canvas con variantes, existe un ID de Canvas gen
 
 Puedes encontrar tu Canvas ID en el panel de control. Vaya a **Mensajería** > **Lienzo** y seleccione un Lienzo preexistente. Si el lienzo que desea no existe todavía, cree uno y guárdelo. En la parte inferior de una página individual de Canvas, haga clic en **Analizar variantes**. Aparecerá una ventana con el identificador de la API Canvas situado en la parte inferior.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **Canvas** se encuentra en **Interacción**.
-{% endalert %}
 
 ### ¿Para qué sirve?
 
@@ -129,17 +116,11 @@ Puede encontrar el ID de su campaña de dos maneras:
 {% tab Campañas %}
 Vaya a **Mensajería** > **Campañas** y seleccione una campaña preexistente. Si la campaña que desea no existe todavía, cree una y guárdela. En la parte inferior de la página de campaña individual, podrá encontrar su **Identificador API de campaña**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **Campañas** está en **Interacción**.
-{% endalert %}
 {% endtab %}
 
 {% tab Claves de API %}
 Ve a **Configuración** > **API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), **las claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -164,17 +145,11 @@ Puedes encontrar tu ID de segmento de dos maneras:
 {% tab Segmentos %}
 Vaya a **Audiencia** > **Segmentos** y seleccione un segmento preexistente. Si el segmento que desea no existe todavía, cree uno y guárdelo. En la parte inferior de la página del segmento individual, podrá encontrar su identificador de segmento.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **Segmentos** está en **Interacción**.
-{% endalert %}
 {% endtab %}
 
 {% tab Claves de API %}
 Ve a **Configuración** > \*\***API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), las **claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -198,17 +173,11 @@ Puede encontrar su tarjeta de identificación de dos maneras:
 {% tab Canal de noticias %}
 Vaya a **Mensajería** > **Noticias** y seleccione una fuente de noticias preexistente. Si la fuente de noticias que deseas aún no existe, crea una y guárdala. En la parte inferior de la página de noticias individuales, podrá encontrar su identificador de tarjeta único.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), **la fuente de noticias** está en **Interacción**.
-{% endalert %}
 {% endtab %}
 
 {% tab Claves de API %}
 Ve a **Configuración** > **API e identificadores**. Aquí, Braze ofrece una búsqueda de **Identificadores de API adicionales** donde puede buscar identificadores específicos.
 
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), las **claves de API** se encuentran en **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 

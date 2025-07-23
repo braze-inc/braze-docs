@@ -18,6 +18,8 @@ description: "This page covers how to create an email sign-up form with the in-a
 
 When creating a drag-and-drop in-app message, select **Email sign-up** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
+![The in-app message editor with the template for an email capture form.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
+
 ### Step 2: Set up your message styles
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
@@ -27,6 +29,8 @@ When creating a drag-and-drop in-app message, select **Email sign-up** for your 
 To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
 You can customize the placeholder text and label text of the email capture element.
+
+![The in-app message editor with a side menu for customizing the email capture element.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
 
 #### Email validation
 
@@ -38,7 +42,7 @@ If the user enters an email address that includes any unaccepted special charact
 
 ### Step 5: Style your message
 
-Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components][3].
+Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analyzing the results
 
@@ -48,4 +52,3 @@ Customize the look and feel of your sign-up form using the drag-and-drop [in-app
 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

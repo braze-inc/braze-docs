@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Resumo das tags suportadas
 
-Por conveniência, é fornecido um resumo das tags de personalização compatíveis. Para saber mais sobre cada tipo de tag e práticas recomendadas, continue lendo.
+Por conveniência, é fornecido um resumo das tags de personalização compatíveis. Para obter mais detalhes sobre cada tipo de tag e práticas recomendadas, continue lendo.
 
 {% raw %}
 
@@ -29,24 +29,24 @@ Por conveniência, é fornecido um resumo das tags de personalização compatív
 | Atributos do cartão | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Eventos de geofencing | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Propriedades do evento <br> (Elas são personalizadas para seu espaço de trabalho).| `{{event_properties.${your_custom_event_property}}}` |
-| Propriedades de entrada do canva| `{{canvas_entry_properties}}` |
+| Variáveis de contexto do Canva | `{{context}}` |
 | Atributos personalizados <br> (Elas são personalizadas para seu espaço de trabalho). | `{{custom_attribute.${your_custom_attribute}}}` |
 | [Propriedades do disparador da API][75] |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-Consulte este artigo de ajuda para saber mais sobre [como algumas dessas atribuições diferem entre as origens na Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+### Atribuições suportadas
 
-{% alert important %}
 As atribuições Campaign, Card e Canva são compatíveis apenas com seus modelos de envio de mensagens correspondentes (por exemplo, `dispatch_id` não está disponível em campanhas de mensagens no app).
-{% endalert %}
+
+Consulte este artigo de ajuda para saber mais sobre [como algumas dessas atribuições diferem entre as origens na Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
 
 ### Diferenças na canva e na tag da campanha 
 
 O comportamento das seguintes tags difere entre o Canva e as campanhas:
 {% raw %}
-- O comportamento `dispatch_id` é diferente porque o Braze trata as etapas do Canva como eventos disparados, mesmo quando são "programadas" (exceto as etapas de entrada, que podem ser programadas). Para saber mais, consulte [Comportamento do Dispatch ID][50].
+- `dispatch_id` O comportamento é diferente porque o Braze trata as etapas do Canva como eventos disparados, mesmo quando são "programadas" (exceto as etapas de entrada, que podem ser programadas). Para saber mais, consulte [Comportamento do Dispatch ID][50].
 - O uso da tag `{{campaign.${name}}}` com o canvas exibirá o nome do componente do canvas. Ao usar essa tag com campanhas, ela exibirá o nome da campanha.
 {% endraw %}
 
@@ -95,7 +95,7 @@ User is in list of apps
 
 ## Informações sobre dispositivos direcionados
 
-Para os canais de envio de mensagens por push e no app, é possível modelar os seguintes atributos para o dispositivo para o qual a mensagem está sendo enviada. Ou seja, uma notificação por push ou uma mensagem no app pode incluir atribuições do dispositivo no qual a mensagem está sendo lida. Note que essas atribuições não funcionarão para cartões de conteúdo. 
+Para notificações por push e canais de envio de mensagens no app, é possível modelar os seguintes atributos para o dispositivo para o qual a mensagem está sendo enviada. Ou seja, uma notificação por push ou uma mensagem no app pode incluir atribuições do dispositivo no qual a mensagem está sendo lida. Note que essas atribuições não funcionarão para cartões de conteúdo. 
 
 |Tag | Descrição |
 |------------------|---|
@@ -160,16 +160,16 @@ Nesse caso de uso, um usuário com um nome em branco ou nulo receberá a mensage
 
 ## Tags de variáveis
 
-Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Depois de criar uma variável, você pode fazer referência a ela na lógica ou na mensagem de envio de mensagens.
+Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos o uso de um nome exclusivo para sua variável. Se você criar uma variável com um nome semelhante ao das tags de personalização compatíveis (como `language`), isso poderá afetar sua lógica de envio de mensagens.
 
-Essa tag é útil quando você deseja reformatar o conteúdo que é retornado pelo nosso recurso [conteúdo conectado][4]]. Você pode ler mais na documentação da Shopify sobre [tags variáveis][31].
+Depois de criar uma variável, você pode fazer referência a ela na lógica ou na mensagem de envio de mensagens. Essa tag é útil quando você deseja reformatar o conteúdo que é retornado pelo nosso recurso [conteúdo conectado][4]]. Você pode ler mais na documentação da Shopify sobre [tags variáveis][31].
 
 {% alert tip %}
 Está atribuindo as mesmas variáveis em todas as mensagens? Em vez de escrever a tag `assign` várias vezes, você pode salvar essa tag como um bloco de conteúdo e colocá-la na parte superior da mensagem.
 
 1. [Criar um bloco de conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
 2. Dê um nome ao seu bloco de conteúdo (sem espaços ou caracteres especiais).
-3. Clique em **Edit (Editar** ) na parte inferior da página.
+3. Selecione **Edit (Editar)** na parte inferior da página.
 4. Digite suas tags `assign`.
 
 Desde que o bloco de conteúdo esteja na parte superior da mensagem, toda vez que a variável for inserida na mensagem como um objeto, ela fará referência ao atributo personalizado escolhido!

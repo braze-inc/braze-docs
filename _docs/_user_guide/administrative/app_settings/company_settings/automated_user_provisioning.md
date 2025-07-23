@@ -29,15 +29,13 @@ Enter a comma-separated list or range of IP addresses to allow. The `X-Request-O
 This SCIM endpoint does not directly integrate with identity providers.
 {% endalert %}
 
-![SCIM Provisioning settings form with three fields: Default Workspace, Service Origin , and optional IP Allowlisting. The “Generate SCIM Token” button is disabled.][1]
+![SCIM Provisioning settings form with three fields: Default Workspace, Service Origin , and optional IP Allowlisting. The “Generate SCIM Token” button is disabled.]({% image_buster /assets/img/scim_unfilled.png %})
 
 ## Step 3: Get your SCIM token and endpoint
 
 After completing the required fields, press **Generate SCIM token** to generate a SCIM token and see your SCIM API endpoint. Make sure to copy the SCIM token before you navigate away. **This token will only be presented once.** 
 
-![SCIM API Endpoint and SCIM Token fields displayed with masked values and copy buttons. Below the token field is a “Reset Token” button.][2]
+![SCIM API Endpoint and SCIM Token fields displayed with masked values and copy buttons. Below the token field is a “Reset Token” button.]({% image_buster /assets/img/scim.png %})
 
 Braze expects all SCIM requests to contain the SCIM API bearer token attached via an HTTP `Authorization` header.
 
-[1]: {% image_buster /assets/img/scim_unfilled.png %}
-[2]: {% image_buster /assets/img/scim.png %}

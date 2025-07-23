@@ -57,6 +57,29 @@ CustomEndpoint= ; your endpoint
 For projects targeting Android SDK 31+ Unreal will generate builds that will fail during installation on Android 12+ devices with the INSTALL_PARSE_FAILED_MANIFEST_MALFORMED error. To fix this, locate the `UE4_Engine_AndroidSDK_31_Build_Fix.patch` git patch file in the root of this repository and apply it to your Unreal source build.
 {% endalert %}
 
+### Step 4: Manually initialize the SDK (optional)
+
+By default, the SDK initializes automatically at launch. If you'd like more control over initialization (such as waiting for user consent or setting the log level), you can disable `AutoInitialize` in your `DefaultEngine.ini` and initialize manually in C++ or Blueprint.
+
+{% tabs %}
+{% tab C++ %}
+In native C++, access the BrazeSubsystem and call `InitializeBraze()` optionally passing it a Config to override Engine.ini settings.
+
+```cpp
+UBrazeSubsystem* const BrazeSubsystem = GEngine->GetEngineSubsystem<UBrazeSubsystem>();
+UBraze* const BrazeInstance = BrazeSubsystem->InitializeBraze();
+```
+{% endtab %}
+
+{% tab Blueprint %}
+In Blueprint, the same functions are accessible as Blueprint nodes:  
+Use the `GetBrazeSubsystem` Node to call its `Initialize` node.  
+A BrazeConfig object can optionally be created in Blueprint and passed to `Initialize`
+
+![InitializeBraze]({% image_buster /assets/img/unreal_engine/InitializeBraze.png %})
+{% endtab %}
+{% endtabs %}
+
 ## Optional configurations
 
 ### Logging

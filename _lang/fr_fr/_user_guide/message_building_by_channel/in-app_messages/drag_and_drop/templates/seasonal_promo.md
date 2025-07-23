@@ -26,7 +26,7 @@ Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Prom
 
 ### Étape 3 : Personnalisez votre composant bouton
 
-Pour commencer à créer votre promotion saisonnière, sélectionnez le composant bouton dans l'éditeur. Ensuite, utilisez le menu latéral pour sélectionner l'endroit où les utilisateurs sont dirigés lorsqu'ils sélectionnent le bouton. Par défaut, le modèle ferme le message, mais vous pouvez choisir de naviguer vers une page spécifique de votre application (par exemple, le produit dont vous faites la promotion).
+Pour commencer à créer votre promotion saisonnière, sélectionnez le composant bouton dans l'éditeur. Ensuite, utilisez le menu latéral pour sélectionner l'endroit où les utilisateurs sont dirigés lorsqu'ils sélectionnent le bouton. Par défaut, le modèle ferme le message, mais vous pouvez choisir de naviguer vers une page spécifique de votre application (comme le produit dont vous faites la promotion).
 
 ![L'éditeur de messages in-app avec un menu latéral pour personnaliser l'élément bouton.][img2]
 

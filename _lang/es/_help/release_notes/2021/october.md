@@ -26,15 +26,15 @@ Cuando esta configuración se desactive, Braze notificará al contacto de la emp
 
 ### Tarjetas de contenido
 
-Esta [guía de implementación]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/) opcional y avanzada abarca consideraciones sobre códigos de tarjetas de contenido, tres casos de uso personalizados creados por nuestro equipo, fragmentos de código que los acompañan y orientaciones sobre el registro de impresiones, clics y descartes.
+Esta [guía de implementación]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) opcional y avanzada abarca consideraciones sobre códigos de tarjetas de contenido, tres casos de uso personalizados creados por nuestro equipo, fragmentos de código que los acompañan y orientaciones sobre el registro de impresiones, clics y descartes.
 
 ### Mensajería dentro de la aplicación
 
-Esta [guía de implementación]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/) opcional y avanzada abarca consideraciones sobre códigos de mensajes dentro de la aplicación, tres casos de uso personalizados creados por nuestro equipo y fragmentos de código que los acompañan.
+Esta [guía de implementación]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android) opcional y avanzada abarca consideraciones sobre códigos de mensajes dentro de la aplicación, tres casos de uso personalizados creados por nuestro equipo y fragmentos de código que los acompañan.
 
 ### Notificaciones emergentes
 
-Esta [guía de implementación]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) opcional y avanzada cubre formas de aprovechar una subclase personalizada de `FirebaseMessagingService` para sacar el máximo partido a tus mensajes push. Se incluye un caso de uso personalizado creado por nuestro equipo, fragmentos de código que lo acompañan y orientaciones sobre el registro de análisis.
+Esta [guía de implementación]({{site.baseurl}}/developer_guide/push_notifications/examples/?sdktab=android) opcional y avanzada cubre formas de aprovechar una subclase personalizada de `FirebaseMessagingService` para sacar el máximo partido a tus mensajes push. Se incluye un caso de uso personalizado creado por nuestro equipo, fragmentos de código que lo acompañan y orientaciones sobre el registro de análisis.
 
 ## Nuevas asociaciones Braze
 
@@ -46,4 +46,4 @@ La integración de Braze y [Adobe]({{site.baseurl}}/partners/data_and_infrastruc
 
 ### Shopify - Comercio electrónico
 
-[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) es una empresa líder en comercio global que proporciona herramientas de confianza para iniciar, hacer crecer, comercializar y administrar un negocio minorista de cualquier tamaño. Juntas, la integración de Braze y Shopify permite a las marcas conectar fácilmente su tienda Shopify con Braze para pasar determinados webhooks de Shopify a Braze. Aprovecha las estrategias de canales cruzados de Braze y Canvas para reorientar a tus usuarios con mensajes de pago abandonado y animar a los clientes a completar su compra, o reorientar a los usuarios en función de sus compras anteriores.
+[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/) es una empresa líder en comercio global que proporciona herramientas de confianza para iniciar, hacer crecer, comercializar y administrar un negocio minorista de cualquier tamaño. Juntas, la integración de Braze y Shopify permite a las marcas conectar fácilmente su tienda Shopify con Braze para pasar determinados webhooks de Shopify a Braze. Aprovecha las estrategias de canales cruzados de Braze y Canvas para reorientar a tus usuarios con mensajes de pago abandonado y animar a los clientes a completar su compra, o reorientar a los usuarios en función de sus compras anteriores.

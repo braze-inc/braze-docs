@@ -83,7 +83,7 @@ Veillez à la pertinence des cartes de contenu en les configurant pour qu'elles 
 
 | Cartes de contenu pour Android | Cartes de contenu pour iOS | Cartes de contenu pour Web |
 | --- | --- |---|
-| Par défaut, le SDK Android ne prend pas en charge les GIF animés. Pour plus de détails sur l'activation de la prise en charge des GIF, reportez-vous à [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | Par défaut, le SDK Swift ne prend pas en charge les GIF animés. Pour plus de détails sur l'activation de la prise en charge du format GIF, reportez-vous au [didacticiel sur la prise en charge du format GIF](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | La prise en charge du format GIF est incluse par défaut dans l'intégration SDK Web. |
+| Par défaut, le SDK Android ne prend pas en charge les GIF animés. Pour plus de détails sur l'activation de la prise en charge des GIF, reportez-vous à [GIFs]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android). | Par défaut, le SDK Swift ne prend pas en charge les GIF animés. Pour plus de détails sur l'activation de la prise en charge du format GIF, reportez-vous au [didacticiel sur la prise en charge du format GIF](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | La prise en charge du format GIF est incluse par défaut dans l'intégration SDK Web. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>

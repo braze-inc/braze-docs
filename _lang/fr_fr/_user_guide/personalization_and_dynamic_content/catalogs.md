@@ -52,7 +52,7 @@ Vous pouvez ajouter n’importe quel type de données à un catalogue. Général
 ### Voyages et hôtellerie
 
 - **Destinations :** Importez des destinations de voyage et leurs attractions, restaurants et activités les plus populaires, puis personnalisez des recommandations à vos utilisateurs en fonction de leurs voyages précédents.
-- **Hébergement :** Importez des établissements hôteliers et leurs équipements, types de chambres et tarifs, puis envoyez des promotions à vos utilisateurs en fonction des préférences qu'ils ont sélectionnées.
+- **Hébergement :** Importez des établissements hôteliers et leurs équipements, types de chambres et tarifs, puis envoyez des promotions à vos utilisateurs en fonction des préférences qu'ils ont sélectionnées.
 - **Modes de voyage** : Importez des offres et des promotions pour les modes de voyage (vols, trains, voitures de location et autres), puis envoyez-les à vos utilisateurs en fonction de l'historique de leurs recherches récentes.
 - **Préférences en matière de repas :** Importer des informations sur les offres de repas et utiliser les [sélections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) pour envoyer des messages personnalisés aux utilisateurs qui ont des préférences spécifiques en matière de repas, en fonction de la catégorie d'aliments qu'ils ont consultée le plus récemment.
 

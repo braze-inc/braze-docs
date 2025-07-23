@@ -10,7 +10,7 @@ description: "This reference article covers the basics of webhooks, including co
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}About Webhooks
 
-> This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Looking for steps on how to create a webhook in Braze? Refer to [Creating a webhook][1].
+> This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Looking for steps on how to create a webhook in Braze? Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
 
 Webhooks are a common way for applications to communicate—to share data in real time. In this day and age, we rarely have one standalone application that can do everything. Most of the time, you're working in many different apps or systems that are specialized to perform certain tasks, and these apps all need to be able to communicate with one another. That's where webhooks come in.
 
@@ -37,9 +37,7 @@ Some more specific use cases include the following:
 
 ## Anatomy of a webhook
 
-A webhook consists of the following three parts:
-
-![Example webhook broken out into HTTP method, HTTP URL, and request body. See the following table for details.][2]
+A webhook consists of the following parts.
 
 | Part of Webhook | Description |
 | --- | --- |
@@ -47,6 +45,8 @@ A webhook consists of the following three parts:
 | HTTP URL | The URL address of your webhook endpoint. The endpoint is the place where you'll be sending the information that you're capturing in the webhook. |
 | Request body | This part of the webhook contains the information that you're communicating to the endpoint. The request body can be JSON key-value pairs or raw text. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Example webhook with an HTTP method, HTTP URL, and request body.]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 ### HTTP methods {#methods}
 
@@ -93,6 +93,17 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 {% endtab %}
 {% endtabs %}
 
+## Webhook error handling and rate limiting
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[2]: {% image_buster /assets/img_archive/webhook_anatomy.png %}
+When Braze receives an error response from a webhook call, we automatically adjust that webhook's sending behavior based on these response headers:
+
+- `Retry-After`
+- `X-Rate-Limit-Limit`
+- `X-Rate-Limit-Remaining`
+- `X-Rate-Limit-Reset`
+
+These headers help us interpret rate limits and adjust sending speed accordingly to avoid further errors. We also implement an exponential backoff strategy for retries, which helps reduce the risk of overwhelming your servers by spacing out retry attempts over time.
+
+If we detect that the majority of webhook requests to a specific host are failing, we will temporarily defer all send attempts to that host. Then, we will resume sending after a defined cooldown period, allowing your system to recover.
+
+

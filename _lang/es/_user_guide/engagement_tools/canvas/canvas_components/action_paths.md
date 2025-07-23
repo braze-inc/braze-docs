@@ -14,7 +14,7 @@ tool: Canvas
 
 Utilizando las Rutas de Acción, puedes:
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Un paso en Rutas de acción como primer paso en un viaje de usuario de Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 * Personalizar las rutas de los usuarios en función de una acción específica, incluidos los eventos de participación del usuario y los eventos personalizados.
 * Retener a los usuarios durante un tiempo determinado para priorizar su próxima ruta en función de sus acciones durante este periodo de evaluación.
@@ -29,11 +29,11 @@ En la **Configuración de la acción**, establezca la **Ventana de evaluación**
 
 En **la Configuración de la acción**, también puede activar el orden de clasificación de los componentes activando la opción **Avanzar usuarios según orden de clasificación**.
 
-![][4]
+![La Configuración de la Acción con una ventana de evaluación de 1 día.][4]
 
 Por defecto, **la clasificación** está desactivada. Cuando un usuario entra en la ruta de acción y realiza el evento desencadenante asociado a cualquier grupo de acciones, avanzará inmediatamente por el grupo de acciones correspondiente. Si un usuario no realiza un evento desencadenante, avanzará a través del grupo por defecto **Todos los demás** al final del periodo de evaluación.
 
-Cuando la opción **Usuarios avanzados por orden de clasificación** está activada, significa que la **clasificación** está activada. Por lo tanto, todos los usuarios serán retenidos hasta el final de la ventana de evaluación. Al final del periodo de evaluación, los usuarios avanzarán por el grupo de acción de mayor prioridad al que puedan optar al final de la ventana de evaluación. Los usuarios que no realicen ninguna de las acciones durante la ventana de evaluación avanzarán a través del grupo por defecto **Todos los demás**.
+Cuando se activa **Usuarios avanzados según orden de clasificación**, significa que **la Clasificación** está activada. Por lo tanto, todos los usuarios serán retenidos hasta el final de la ventana de evaluación. Al final del periodo de evaluación, los usuarios avanzarán por el grupo de acción de mayor prioridad al que puedan optar al final de la ventana de evaluación. Los usuarios que no realicen ninguna de las acciones durante la ventana de evaluación avanzarán a través del grupo por defecto **Todos los demás**.
 
 #### Mensajes dentro de la aplicación
 
@@ -53,23 +53,23 @@ Añada un activador o varios activadores para definir sus grupos de acciones. Aq
 
 - Realizar una compra
 - Iniciar una sesión
-- Realizar un [evento personalizado][2]
+- Realiza un [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Realizar un evento de conversión
 - Agregar una dirección de correo electrónico
-- Cambiar el valor de un atributo personalizado
+- Cambiar el valor de un atributo personalizado (no atributos personalizados anidados)
 - Actualizar su estado de suscripción o de grupo de suscripción
 - Interactuar con una campaña o tarjeta de contenido
 - Escribir una ubicación
 - Desencadenar una geovalla
 - Enviar un mensaje entrante SMS o WhatsApp
 
-![][3]
+![Un grupo de acción llamado "Grupo 1" para los usuarios que realizan cualquier compra.][3]
 
-Dentro de la configuración de cada grupo de acción, también tiene la opción de seleccionar la casilla **Quiero que este grupo salga del Lienzo**, lo que significa que los usuarios dentro de este grupo saldrán del Lienzo al final del período de evaluación.
+En la configuración de cada grupo de acción, también tienes la opción de seleccionar la casilla **Quiero que este grupo salga del Canvas**, lo que significa que los usuarios de este grupo saldrán del Canvas al final del periodo de evaluación.
 
 ### Lienzos con posibilidad de readmisión
 
-Si los usuarios entran varias veces en una ruta de acción y tienen varias entradas en la ruta de acción al mismo tiempo, el comportamiento esperado varía en función del estado **del Ranking**. 
+Si los usuarios entran varias veces en una ruta de acción y tienen varias entradas en la ruta de acción al mismo tiempo, el comportamiento esperado varía en función del estado **del Ranking**.
 
 | Clasificación | Comportamiento de la ruta de acción |
 |---|--------------|
@@ -81,6 +81,5 @@ Ten en cuenta que las clasificaciones no son [editables después del lanzamiento
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events
 [3]: {% image_buster /assets/img/actionpath_group.png %}
 [4]: {% image_buster /assets/img/actionpath_settings.png %} 

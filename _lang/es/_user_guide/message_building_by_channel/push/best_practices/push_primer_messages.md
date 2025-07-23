@@ -114,7 +114,7 @@ Más allá de eso, puede decidir qué segmentos adicionales le parecen más apro
 
 ## Paso 6: Eventos de conversión
 
-Braze sugiere una configuración predeterminada para las conversiones, pero es posible que desee configurar [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) en torno a los cebadores de empuje.
+Braze sugiere una configuración predeterminada para las conversiones, pero es posible que desee configurar [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) en torno a los cebadores de empuje.
 
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/

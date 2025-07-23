@@ -97,7 +97,7 @@ En función de las necesidades individuales, estos usuarios se basan en:
 - Estructura tu contenido de forma lógica, y asegúrate de que los encabezamientos siguen la jerarquía correcta. No te saltes los niveles de encabezamiento.
 - Evita alinear el texto en el centro para trozos largos de contenido. Esto puede ser difícil de leer para los usuarios con discapacidades cognitivas o de aprendizaje. El contenido que ocupa más de dos líneas debe alinearse a la izquierda.
 - Utiliza fuentes sans-serif, que son más fáciles de leer en los dispositivos digitales.
-- Comprueba siempre tu texto [enviando un mensaje de prueba]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/) a un dispositivo para asegurarte de que no se trunca. Si tu mensaje se corta, esto te perjudica tanto a ti como al usuario, ya que impide que tu contenido llegue a tus usuarios.
+- Comprueba siempre tu texto [enviando un mensaje de prueba]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) a un dispositivo para asegurarte de que no se trunca. Si tu mensaje se corta, esto te perjudica tanto a ti como al usuario, ya que impide que tu contenido llegue a tus usuarios.
 
 ### Enlaces
 

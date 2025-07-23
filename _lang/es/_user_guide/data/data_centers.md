@@ -8,7 +8,7 @@ description: "Este artículo de referencia contiene información sobre los centr
 
 # Centros de datos
 
-> Los centros de datos Braze están construidos para ofrecerte opciones sobre dónde se procesan y almacenan los datos de tus usuarios. Esto te permite gestionar eficazmente los riesgos relacionados con la soberanía, flexibilidad y gestión de los datos. Cuando eliges un centro de datos Braze, puedes estar seguro de que nuestra plataforma cumple o supera todos los requisitos locales en materia de gestión de datos.
+> Los centros de datos Braze están construidos para ofrecerte opciones sobre dónde se procesan y almacenan los datos de tus usuarios. Esto te permite gestionar eficazmente los riesgos relacionados con la soberanía, flexibilidad y gestión de los datos.
 
 ## Cómo funciona
 
@@ -20,103 +20,17 @@ Supongamos que tienes una aplicación móvil que envía notificaciones push a lo
 
 ## Lista de centros de datos
 
-Consulta la tabla siguiente para ver la lista de centros de datos disponibles.
+### Australia
 
-<style>
-table th:nth-child(1) {
-    width: 10%;
-}
-table th:nth-child(2) {
-    width: 33%;
-}
-table th:nth-child(3) {
-    width: 33%;
-}
-table th:nth-child(4) {
-    width: 24%;
-}
-table td {
-    word-break: break-word;
-}
-</style>
-<table>
-  <thead>
-    <tr>
-      <th>Región del centro de datos</th>
-      <th>URL del panel de control</th>
-      <th>Punto final REST</th>
-      <th>punto final SDK</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Australia</b></td>
-      <td><code>https://dashboard.au-01.braze.com</code></td>
-      <td><code>https://rest.au-01.braze.com</code></td>
-      <td><code>sdk.au-01.braze.com</code></td>
-    </tr>
-    <tr>
-      <td><b>Europa</b></td>
-      <td>
-        <ul>
-          <li><code>https://dashboard-01.braze.eu</code></li>
-          <li><code>https://dashboard-02.braze.eu</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>https://rest.fra-01.braze.eu</code></li>
-          <li><code>https://rest.fra-02.braze.eu</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>sdk.fra-01.braze.eu</code></li>
-          <li><code>sdk.fra-02.braze.eu</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><b>US</b></td>
-      <td>
-        <ul>
-          <li><code>https://dashboard-01.braze.com</code></li>
-          <li><code>https://dashboard-02.braze.com</code></li>
-          <li><code>https://dashboard-03.braze.com</code></li>
-          <li><code>https://dashboard-04.braze.com</code></li>
-          <li><code>https://dashboard-05.braze.com</code></li>
-          <li><code>https://dashboard-06.braze.com</code></li>
-          <li><code>https://dashboard-07.braze.com</code></li>
-          <li><code>https://dashboard-08.braze.com</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>https://rest.iad-01.braze.com</code></li>
-          <li><code>https://rest.iad-02.braze.com</code></li>
-          <li><code>https://rest.iad-03.braze.com</code></li>
-          <li><code>https://rest.iad-04.braze.com</code></li>
-          <li><code>https://rest.iad-05.braze.com</code></li>
-          <li><code>https://rest.iad-06.braze.com</code></li>
-          <li><code>https://rest.iad-07.braze.com</code></li>
-          <li><code>https://rest.iad-08.braze.com</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>sdk.iad-01.braze.com</code></li>
-          <li><code>sdk.iad-02.braze.com</code></li>
-          <li><code>sdk.iad-03.braze.com</code></li>
-          <li><code>sdk.iad-04.braze.com</code></li>
-          <li><code>sdk.iad-05.braze.com</code></li>
-          <li><code>sdk.iad-06.braze.com</code></li>
-          <li><code>sdk.iad-07.braze.com</code></li>
-          <li><code>sdk.iad-08.braze.com</code></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{% multi_lang_include data_centers.md datacenters='AU' %}
+
+### Unión Europea
+
+{% multi_lang_include data_centers.md datacenters='EU' %}
+
+### Estados Unidos
+
+{% multi_lang_include data_centers.md datacenters='US' %}
 
 ## Registrarse en centros de datos específicos de una región
 

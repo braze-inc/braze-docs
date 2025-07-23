@@ -59,7 +59,7 @@ Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détail
 	Exemple d’appel webhook à l’endpoint Zoom.<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",
@@ -95,7 +95,7 @@ Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détail
 	Exemple d’appel webhook à l’endpoint Zoom.<br>
 	{% raw %}
 	```json
-	POST https://api.zoom.com//meetings/{webinarId}/registrants
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
 		"email": "{{${email_addresses}}}",

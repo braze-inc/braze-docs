@@ -10,7 +10,7 @@ search_rank: 2
 
 > This article will show how you can use a variety of user attributes to dynamically insert personal information into your messaging.
 
-Liquid is an open-source template language developed by Shopify and written in Ruby. You can use it in Braze to pull user profile data into your messages and customize that data. For example, you can use Liquid tags to create conditional messages, such as sending different offers based on a user's subscription anniversary date. Additionally, filters can manipulate data, like formatting a user's registration date from a timestamp into a more readable format, such as "January 15, 2022." For further details on Liquid syntax and its capabilities, refer to [Supported personalization tags][1].
+Liquid is an open-source template language developed by Shopify and written in Ruby. You can use it in Braze to pull user profile data into your messages and customize that data. For example, you can use Liquid tags to create conditional messages, such as sending different offers based on a user's subscription anniversary date. Additionally, filters can manipulate data, like formatting a user's registration date from a timestamp into a more readable format, such as "January 15, 2022." For further details on Liquid syntax and its capabilities, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 ## How it works
 
@@ -40,14 +40,14 @@ Hi Valued User, thanks for using the App!
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic user information][1] (for example, `first_name`, `last_name`, `email_address`)
-- [Custom attributes][2]
-    - [Nested custom attributes][3]
-- [Custom event properties][11]
-- [Most recently used device information][39]
-- [Target device information][40]
+- [Basic user information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (for example, `first_name`, `last_name`, `email_address`)
+- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
+    - [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
+- [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- [Most recently used device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
+- [Target device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-You can also pull content directly from a web server through Braze [Connected Content][9].
+You can also pull content directly from a web server through Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/).
 
 {% alert important %}
 Braze currently supports Liquid up to and including Liquid 5 from Shopify.
@@ -55,7 +55,7 @@ Braze currently supports Liquid up to and including Liquid 5 from Shopify.
 
 ## Using Liquid
 
-Using [Liquid tags][1], you can elevate the quality of your messages by enriching them with a personal touch. 
+Using [Liquid tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), you can elevate the quality of your messages by enriching them with a personal touch. 
 
 ### Liquid syntax
 
@@ -90,19 +90,15 @@ If you use Liquid in your email messages, be sure to:
 
 {% endalert %}
 
-{% raw %}
-
 ### Inserting pre-formatted variables
 
 You can insert pre-formatted variables with defaults through the **Add Personalization** modal located near any templated text field.
 
-![The Add Personalization modal that appears after selecting insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax][44]{: style="max-width:90%;"}
+![The Add Personalization modal that appears after selecting insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified by the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
+The modal will insert Liquid with your specified default value at the point where your cursor was. The insertion point is also specified by the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
 
-![A GIF of the Add Personalization modal that shows the user inserting "fellow traveler" as a default value, and the modal replacing the highlighted text "name" in the composer with the Liquid snippet.][45]
-
-{% endraw %}
+![A GIF of the Add Personalization modal that shows the user inserting "fellow traveler" as a default value, and the modal replacing the highlighted text "name" in the composer with the Liquid snippet.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Assigning variables
 
@@ -159,12 +155,3 @@ Find yourself assigning the same variables in every message? Instead of writing 
 As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating
-[9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information
-[40]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information
-[44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}
-[45]: {% image_buster /assets/img_archive/insert_var_shot.gif %}

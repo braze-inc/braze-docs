@@ -42,7 +42,6 @@ glossary_tags:
   - name: Email List
   - name: Email Templates
   - name: KPI
-  - name: News Feed
   - name: Purchases
   - name: Preference Center
   - name: Schedule Messages
@@ -315,18 +314,6 @@ glossaries:
     description: Retrieve a daily series of the total number of uninstalls on each date.
     tags:
       - KPI
-  - name: <a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>
-    description: Retrieve a daily series of engagement stats for a card over time.
-    tags:
-      - News Feed
-  - name: <a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>
-    description: Retrieve relevant information on a card.
-    tags:
-      - News Feed
-  - name: <a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>
-    description: Export a list of News Feed cards, each of which will include its name and card API identifier.
-    tags:
-      - News Feed
   - name: <a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>
     description: Remove "invalid" phone numbers from the invalid list in Braze. This can be used to re-validate phone numbers after they have been marked as invalid.
     tags:

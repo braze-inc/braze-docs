@@ -3,7 +3,6 @@ nav_title: Abortando Conteúdo Conectado
 article_title: Abortando Conteúdo Conectado
 page_order: 2
 description: "Este artigo de referência cobre algumas das melhores práticas de interrupção de mensagens para conteúdo conectado."
-
 ---
 
 # Abortando conteúdo conectado {#aborting-connected-content}

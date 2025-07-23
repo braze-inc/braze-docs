@@ -15,9 +15,7 @@ description: "En este artículo se describen los detalles del punto final Crear 
 
 > Utiliza este punto final para crear plantillas de correo electrónico en el panel Braze.
 
-Estas plantillas estarán disponibles en la **página Plantillas y medios.**  La respuesta de este punto final incluirá un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
-
-El estado de suscripción al correo electrónico de los usuarios puede actualizarse y recuperarse con Braze utilizando una API RESTful. Puedes utilizar la API para configurar la sincronización bidireccional entre Braze y otros sistemas de correo electrónico o tu propia base de datos. Todas las solicitudes a la API se realizan a través de HTTPS.
+Estas plantillas estarán disponibles en la **página Plantillas y medios.**  La respuesta de este punto final incluye un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -56,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Obligatoria|Cadena|Cuerpo de la plantilla de correo electrónico que puede incluir HTML.|
 |`plaintext_body`|Opcional|Cadena|Una versión en texto plano del cuerpo de la plantilla de correo electrónico.|
 |`preheader`|Opcional|Cadena|Preencabezado de correo electrónico utilizado para generar vistas previas en algunos clientes.|
-|`tags`|Opcional|Cadena|[Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) ya deben existir.|
+|`tags`|Opcional|Cadena|[Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) ya deben existir.|
 |`should_inline_css`|Opcional|Booleano|Habilita o deshabilita la característica `inline_css` por plantilla. Si no se proporciona, Braze utilizará la configuración predeterminada para el grupo de aplicaciones. Se espera una de `true` o `false`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -76,7 +74,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-## Posibles errores
+## Ejemplo de respuesta
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
+  "message": "success"
+}
+```
+
+## Solución de problemas
 
 La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas, si procede.
 

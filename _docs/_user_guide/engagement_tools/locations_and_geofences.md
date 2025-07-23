@@ -18,11 +18,8 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Mobile Integrations
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Frequently Asked Questions
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## About locations and geofences
@@ -36,4 +33,3 @@ You can gather and utilize user location data in a couple of ways:
 
 - When a user opens your app, location tracking captures their most recent locations using GPS location data. This allows you to see where your users have been and segment based on this data.
 - Geofences are defined virtual geographic areas. If a user has enabled background location tracking, you can use geofences to trigger campaigns in real-time when a user is in a geofence.
-<br><br><br>

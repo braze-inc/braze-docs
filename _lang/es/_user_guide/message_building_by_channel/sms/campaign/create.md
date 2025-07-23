@@ -25,14 +25,9 @@ search_rank: 1
 **Pasos:**
 
 1. Vaya a **Mensajería** > **Campañas** y seleccione **Crear campaña**.
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **Campañas** en **Interacción**.
-{% endalert %}
-
-{: start="2"}
-2\. Selecciona **SMS** o, para campañas dirigidas a varios canales, selecciona **Multicanal**.
-3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+2. Selecciona **SMS** o, para campañas dirigidas a varios canales, selecciona **Multicanal**.
+3. Ponle a tu campaña un nombre claro y significativo.
+4. Añade [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
    * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas. Por ejemplo, al utilizar el [Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por etiquetas concretas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Selecciona un [grupo de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) para asegurarte de que envías tu mensaje a los usuarios adecuados. Al seleccionar un grupo de suscripción, Braze añadirá automáticamente un filtro de segmentación, garantizando que sólo los usuarios suscritos recibirán la campaña. Sólo los códigos largos y cortos que pertenezcan a ese grupo de suscripción se utilizarán para enviar SMS a los usuarios objetivo.
@@ -86,7 +81,7 @@ Si piensa utilizar Liquid, asegúrese de incluir un valor predeterminado para la
 
 #### Crear mensajes de derecha a izquierda
 
-El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Paso 3: Vista previa y prueba de tu mensaje
 
@@ -123,7 +118,7 @@ A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_gui
 
 #### Elegir eventos de conversión
 
-Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
+Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
 
 Los eventos de conversión le ayudan a medir el éxito de su campaña. Por ejemplo:
 

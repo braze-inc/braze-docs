@@ -18,6 +18,10 @@ search_tag: Partner
 <!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a concise overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
 > DESCRIPTION.
 
+*This integration is maintained by PARTNER_NAME.*
+
+## Overview
+
 ADDITIONAL_INFORMATION.
 
 <!-- Most partner integrations will require the following prerequisites. However, you may add additional prerequisites as needed. -->

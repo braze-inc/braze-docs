@@ -97,7 +97,7 @@ Selon leurs besoins individuels, ces utilisateurs comptent sur :
 - Structurez votre contenu logique et assurez-vous que les en-têtes suivent une hiérarchie correcte. Ne sautez pas le niveau des titres.
 - Évitez le texte centré pour de longs blocs de contenu. Il peut être difficile à lire pour les utilisateurs souffrant d’incapacité cognitive ou d’apprentissage. Le contenu qui s’étend sur plus de deux lignes doit être aligné à gauche.
 - Utilisez des polices sans serif, qui sont plus faciles à lire sur les appareils numériques.
-- Testez toujours votre texte en [envoyant un message test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/) à un appareil pour vous assurer que votre texte n'est pas tronqué. Si votre message est coupé, cela a un impact sur vous et l’utilisateur, car il empêche votre contenu d’atteindre vos utilisateurs.
+- Testez toujours votre texte en [envoyant un message test]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) à un appareil pour vous assurer que votre texte n'est pas tronqué. Si votre message est coupé, cela a un impact sur vous et l’utilisateur, car il empêche votre contenu d’atteindre vos utilisateurs.
 
 ### Liens
 

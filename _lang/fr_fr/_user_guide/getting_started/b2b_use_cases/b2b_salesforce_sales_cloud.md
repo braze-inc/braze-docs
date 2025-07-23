@@ -92,7 +92,7 @@ Sélectionnez **\+ Add New Header** pour chacun des en-têtes de requête suivan
  
 ## Mise à jour d'une piste dans Salesforce Sales Cloud {#updating-lead}
 
-Pour configurer un webhook Braze Salesforce Sales Cloud qui met à jour les leads dans Salesforce, vous avez besoin d'un identifiant commun entre Salesforce Sales Cloud et Braze. L'exemple ci-dessous utilise le site `lead_id` de Salesforce comme site `external_id` de Braze, mais vous pouvez également utiliser un site `user_alias`. Pour plus de détails à ce sujet, reportez-vous à la section [Données B2B](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models)
+Pour configurer un webhook Braze Salesforce Sales Cloud qui met à jour les leads dans Salesforce, vous avez besoin d'un identifiant commun entre Salesforce Sales Cloud et Braze. L'exemple ci-dessous utilise le site `lead_id` de Salesforce comme site `external_id` de Braze, mais vous pouvez également utiliser un site `user_alias`. Pour plus de détails à ce sujet, reportez-vous à la section [Données B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)
 
 Cet exemple montre spécifiquement comment mettre à jour le stade d'un lead en "MQL" (Marketing Qualified Lead) après qu'il ait franchi un certain seuil de leads. Il s'agit d'un élément essentiel de notre cas d'utilisation du [workflow de scoring des prospects B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/).
 
@@ -158,7 +158,7 @@ Pour créer un lead dans Salesforce lorsqu'un utilisateur fournit son adresse e-
 
 ### Canevas de notation des prospects pour le franchissement du seuil de prospects qualifiés en marketing (MQL). {#lead-scoring}
 
-Ce webhook est abordé dans le cas d'utilisation du [lead scoring]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff), mais vous pouvez également vérifier les MQL et mettre directement à jour Salesforce dans le canevas de lead scoring (au lieu de créer une campagne de webhook distincte) : 
+Ce webhook est abordé dans le cas d'utilisation du [lead scoring]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff), mais vous pouvez également vérifier les MQL et mettre directement à jour Salesforce dans le canevas de lead scoring (au lieu de créer une campagne de webhook distincte) : 
 
 Ajoutez une étape ultérieure à votre mise à jour des utilisateurs pour vérifier si un utilisateur a franchi le seuil MQL que vous avez défini. S'ils se sont croisés, mettez à jour le statut de l'utilisateur en "MQL", puis mettez à jour Salesforce avec le même statut "MQL" à l'aide de ce modèle de webhook. Salesforce s'occupe du reste en acheminant ce lead vers les équipes de vente appropriées à l'aide des règles d'acheminement des leads que vous avez définies.  
 

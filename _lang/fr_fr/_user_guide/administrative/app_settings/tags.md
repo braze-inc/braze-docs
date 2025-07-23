@@ -82,10 +82,6 @@ table td {
 
 Vous pouvez utiliser les mêmes balises sur les campagnes, les Canvas et les segments. Pour renommer, supprimer ou ajouter des tags de manière efficace dans votre tableau de bord, accédez à **Paramètres** > **Gestion des tags**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne version de navigation]({{site.baseurl}}/navigation), cette page se trouve dans **Paramètres** > **Gérer les paramètres** > **Étiquettes**.
-{% endalert %}
-
 ![Onglet Balises de la page Gérer les paramètres][8]
 
 Pour une meilleure organisation des balises, elles peuvent être insérées sous une balise parent. Toutes les balises de vacances peuvent par exemple être insérées sous une `Holidays`balise parent, ou toutes les balises liées à une étape de l’entonnoir marketing sous une balise parent`Funnel`. 

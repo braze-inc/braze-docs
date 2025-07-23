@@ -15,12 +15,8 @@ tool:
 
 Você pode encontrar o **Relatório de receita** em **Análise de dados**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Revenue** em **Data**.
-{% endalert %}
-
 {% alert tip %}
-Procurando outras maneiras de obter dados de receita? Tente adicionar o comportamento de compra (bem como a compra de um produto) a campanhas ou telas como [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Procurando outras maneiras de obter dados de receita? Tente adicionar o comportamento de compra (bem como a compra de um produto) a campanhas ou telas como [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 {% endalert %}
 
 Para exportar seus dados de receita, selecione <i class="fas fa-bars" title="Menu de contexto do gráfico"></i> no gráfico **Performance Over Time** e selecione sua opção de exportação.

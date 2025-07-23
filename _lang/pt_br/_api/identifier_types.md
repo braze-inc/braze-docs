@@ -25,18 +25,11 @@ Há duas maneiras de localizar seu `app_id`:
 {% tabs local %}
 {% tab Identificadores de App %}
 Acessar **Configurações** > **APIs e Identificadores** > **Identificadores de Aplicativos**. Sua chave de API para cada app está listada na coluna **Identificador**.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Identificadores de App** está localizado em **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
 {% endtab %}
 
 {% tab Configurações do App %}
 Acessar **Configurações** > **Configurações do app**. Sua chave de API está listada ao lado do campo **Chave de API** na seção de configurações.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Configurações do App** localizadas em **Gerenciar Configurações** > **Configurações**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -82,9 +75,6 @@ Acesse **Modelos**, selecione uma página de modelo e, em seguida, selecione um 
 {% tab Chaves de API %}
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), pode encontrar identificadores de API em **console de desenvolvedor** > **Configurações da API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -103,9 +93,6 @@ Tenha em mente que, se você tiver um canva que possui variantes, existe um ID d
 
 Você pode encontrar seu ID do canva no dashboard. Acesse **Envio de mensagens** > **Canvas** e selecione um Canvas pré-existente. Se o canva que você deseja ainda não existir, crie um e salve-o. Na parte inferior de uma página individual do Canvas, clique em **Analyze Variants (Analisar variantes**). Uma janela é exibida com o identificador da API do Canva localizado na parte inferior.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **canva** está localizado sob **engajamento**.
-{% endalert %}
 
 ### Para que ele pode ser usado?
 
@@ -129,17 +116,11 @@ Você pode encontrar seu ID de campanha de duas maneiras:
 {% tab Campanhas %}
 Acesse **Envio de mensagens** > **Campanhas** e selecione uma campanha pré-existente. Se a campanha que você deseja ainda não existir, crie uma e salve-a. Na parte inferior da página da campanha individual, você poderá encontrar seu **Campaign API Identifier**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Campanhas** está sob **engajamento**.
-{% endalert %}
 {% endtab %}
 
 {% tab Chaves de API %}
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Chaves de API** está localizado em **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -164,17 +145,11 @@ Você pode encontrar sua ID de segmento de duas maneiras:
 {% tab Segmentos %}
 Acesse **Público** > **Segmentos** e selecione um segmento pré-existente. Se o segmento que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página de segmento individual, você poderá encontrar seu identificador de segmento.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Segmentos** está sob **engajamento**.
-{% endalert %}
 {% endtab %}
 
 {% tab Chaves de API %}
 Acesse **Configurações** > \*\*APIs**e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Chaves de API** está localizado em **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -198,17 +173,11 @@ Você pode encontrar o ID do cartão de duas maneiras:
 {% tab Feed de notícias %}
 Acesse **Envio de** **mensagens** > **Feed de notícias** e selecione um feed de notícias pré-existente. Se o Feed de notícias que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página individual do Feed de notícias, você poderá encontrar o identificador exclusivo do seu cartão.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **feed de notícias** está sob **engajamento**.
-{% endalert %}
 {% endtab %}
 
 {% tab Chaves de API %}
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), **Chaves de API** está localizado em **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 

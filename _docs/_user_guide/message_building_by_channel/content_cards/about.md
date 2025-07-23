@@ -14,10 +14,6 @@ search_rank: 4
 
 Content Cards are an add-on feature and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team.
 
-{% alert note %}
-If you're using our News Feed tool, we recommend that you move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. News Feed is also being deprecated. See our [Migration Guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.
-{% endalert %}
-
 ## Benefits of using Content Cards
 
 Here are just a few benefits of using Content Cards versus having your developers build content into your app:
@@ -176,9 +172,9 @@ Users can view and engage the most relevant content they are eligible for. Becau
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/)
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/)
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/)
+- [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web)
 
 ## Sources
 

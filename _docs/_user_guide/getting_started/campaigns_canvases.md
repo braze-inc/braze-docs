@@ -9,10 +9,10 @@ description: "This article provides an overview of the different ways you can se
 
 # Getting Started: Campaigns and Canvases
 
-In Braze, you can send messages either through a [campaign](#campaigns) or a [Canvas](#canvas-flow).
+In Braze, you can send messages either through a [campaign](#campaigns) or a [Canvas](#canvas).
 
 - For sending a single targeted message to a group of users, choose a campaign. A campaign is a single message step to connect with your users on various messaging channels.
-- For sending a series of ongoing messages in an overarching customer journey, choose Canvas Flow. Canvas Flow is our journey orchestration tool. While campaigns are good for sending simple, targeted messages, Canvases are where you take your relationships with customers to the next level.
+- For sending a series of ongoing messages in an overarching customer journey, choose Canvas, our journey orchestration tool. While campaigns are good for sending simple, targeted messages, Canvases are where you take your relationships with customers to the next level.
 
 ## Campaigns
 
@@ -38,11 +38,11 @@ Check out these additional resources to learn more about campaigns at Braze:
 - [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign)
 - [Ideas and strategies]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies)
 
-## Canvas Flow
+## Canvas
 
 Rather than sending out sporadic messages over multiple campaigns, Canvases create an ongoing fluid conversation with users. This is because a user's journey through a Canvas can split into different paths depending on their actions (or inaction) with your brand, allowing you to automatically advance users through a specific flow in real time.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 In this way, Canvases are great for casting a net to capture users who fall off the path to conversion and placing them in the most effective outreach initiatives.
 
@@ -50,7 +50,7 @@ When you create a Canvas, you follow many of the same steps as setting up a camp
 
 Your Canvas can have any combination of [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), and more. You can send on any supported messaging channel, and even [integrate with social and ad platforms]({{site.baseurl}}/partners/canvas_audience_sync/overview/) such as Facebook, Google, or TikTok.
 
-Check out these additional resources to learn more about Canvas Flow:
+Check out these additional resources to learn more about Canvas:
 
 - Braze Learning: [Journey Orchestration with Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
@@ -60,7 +60,7 @@ Check out these additional resources to learn more about Canvas Flow:
 
 Messaging channels are the various communication channels through which you can engage with your customers and deliver targeted messages. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 The following table outlines our supported channels.
 
@@ -70,11 +70,13 @@ The following table outlines our supported channels.
 | [Mobile push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | Deliver messages directly to users' mobile devices as notifications.                                                                                   |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Deliver notifications to users' web browsers, even when they are not actively on your website.                                                         |
 | [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Display messages within your mobile app while users are actively using it.                                                                             |
-| [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | Send text messages to users' mobile phones.                                                                                                            |
+| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/)*                   | Send text messages to users' mobile phones.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
+| [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)*       | Embed messages directly in your app or website. |
 | [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
 | [Connected TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
+| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Engage with users on LINE, the most popular messaging app in Japan.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>**Available as an add-on feature.*</sup>
@@ -83,5 +85,3 @@ The following table outlines our supported channels.
 For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/getting_started/channels.png %}
-[2]: {% image_buster /assets/img/getting_started/canvas_flow.png %}

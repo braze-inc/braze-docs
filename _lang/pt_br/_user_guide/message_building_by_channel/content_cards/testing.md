@@ -42,14 +42,9 @@ Depois que os cartões de conteúdo forem enviados, você poderá analisar ou de
 Um caso de uso comum é tentar depurar por que um usuário não consegue ver um determinado cartão de conteúdo. Para isso, é possível procurar nos **registros de usuários de eventos** os cartões de conteúdo entregues ao SDK no início da sessão, mas antes de uma impressão, e rastreá-los até uma campanha específica:
 
 1. Acesse **Configurações** > Registro de usuários de eventos.
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar o **registro de usuários de eventos** no **console do desenvolvedor**.
-{% endalert %}
-
-{:start="2"}
-2\. Localize e expanda a Solicitação de SDK para seu usuário teste.
-3\. Clique em **Raw Data (Dados brutos**).
-4\. Encontre o `id` para sua sessão. A seguir, um exemplo de trecho:
+2. Localize e expanda a Solicitação de SDK para seu usuário teste.
+3. Clique em **Raw Data (Dados brutos**).
+4. Encontre o `id` para sua sessão. A seguir, um exemplo de trecho:
 
     ```json
     [

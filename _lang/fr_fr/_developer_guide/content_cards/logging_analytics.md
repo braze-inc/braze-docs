@@ -1,7 +1,7 @@
 ---
 nav_title: Enregistrer les analyses  
 article_title: Enregistrer les analyses 
-page_order: 4
+page_order: 1
 description: "Cet article explique comment enregistrer manuellement les clics, les événements et les analyses pour vos cartes de contenu personnalisées."
 toc_headers: "h2"
 
@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # Enregistrer les analyses 
 
-> Si vous souhaitez afficher les cartes de contenu de manière totalement personnalisée, vous pouvez mettre en place votre propre interface utilisateur de présentation des cartes de contenu. Cependant, les données telles que les impressions, les clics et les rejets ne sont traitées automatiquement que lorsque vous utilisez les modèles de carte par défaut. Lors de la mise en œuvre d'une interface utilisateur entièrement personnalisée, vous devrez gérer ces données manuellement. Pour ce faire, alimentez votre interface utilisateur personnalisée avec des données issues des modèles de données de Braze et enregistrez manuellement des analyses/analytiques telles que les impressions et les clics. Une fois que vous avez compris comment enregistrer les analyses/analytiques, vous pouvez voir les façons courantes dont les clients de Braze [créent des cartes de contenu personnalisées]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards). 
+> Si vous souhaitez afficher les cartes de contenu de manière totalement personnalisée, vous pouvez mettre en place votre propre interface utilisateur de présentation des cartes de contenu. Cependant, les données telles que les impressions, les clics et les rejets ne sont traitées automatiquement que lorsque vous utilisez les modèles de carte par défaut. Lors de la mise en œuvre d'une interface utilisateur entièrement personnalisée, vous devrez gérer ces données manuellement. Pour ce faire, alimentez votre interface utilisateur personnalisée avec des données issues des modèles de données de Braze et enregistrez manuellement des analyses/analytiques telles que les impressions et les clics. Une fois que vous avez compris comment enregistrer les analyses/analytiques, vous pouvez voir les façons courantes dont les clients de Braze [créent des cartes de contenu personnalisées]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
 
 ## Écouter les mises à jour de la carte
 
@@ -20,7 +20,7 @@ Pour obtenir les modèles de données des cartes de contenu, abonnez-vous aux mi
 * **`id`**: Conseille la chaîne de caractères de l'ID de la carte de contenu. Il s'agit de l'identifiant unique utilisé pour enregistrer les analyses des cartes de contenu personnalisées.
 * **`extras`**: englobe toutes les paires clé-valeur du tableau de bord de Braze. 
 
-Toutes les propriétés autres que `id` et `extras` sont facultatives pour analyser les cartes de contenu personnalisées. Pour plus d'informations sur le modèle de données, consultez l'article sur l'intégration de chaque plateforme : [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/), [Web.]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/)
+Toutes les propriétés autres que `id` et `extras` sont facultatives pour analyser les cartes de contenu personnalisées. Pour plus d'informations sur le modèle de données, consultez l'article sur l'intégration de chaque plateforme : [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [Web.]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web)
 
 
 {% tabs %}
@@ -182,7 +182,7 @@ braze.openSession();
 ```
 
 {% alert note %}
-Les cartes de contenu ne seront actualisées au démarrage de la session que si une demande d'abonnement est appelée avant `openSession()`. Vous pouvez également choisir d'[actualiser manuellement le flux]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed).
+Les cartes de contenu ne seront actualisées au démarrage de la session que si une demande d'abonnement est appelée avant `openSession()`. Vous pouvez également choisir d'[actualiser manuellement le flux]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/).
 {% endalert %}
 
 {% endtab %}

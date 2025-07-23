@@ -15,18 +15,9 @@ guide_featured_list:
   - name: Criação de uma campanha
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
-  - name: Funcionalidades baseadas no tempo
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/
-    image: /assets/img/braze_icons/clock.svg
   - name: Agendamento da sua campanha
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: Direcionamento de usuários
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-    image: /assets/img/braze_icons/target-04.svg
-  - name: Eventos de conversão
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Limite de frequência e limitação de frequência
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
     image: /assets/img/braze_icons/alert-triangle.svg
@@ -36,5 +27,13 @@ guide_menu_list:
   - name: Assistente de Copywriting de IA
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
-
+  - name: Fluxo de aprovação
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: Eventos de conversão
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
+    image: /assets/img/braze_icons/edit-05.svg
+  - name: Direcionamento de usuários
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---

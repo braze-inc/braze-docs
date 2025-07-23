@@ -1,30 +1,16 @@
-{% if include.channel=="in-app messages" %}
-Braze soporta la visualización predeterminada de GIF animados e imágenes SVG para mensajes HTML dentro de la aplicación. Para todos los demás mensajes dentro de la aplicación, se requiere una biblioteca de imágenes personalizada.
-{% else %}
-Braze necesita una biblioteca de imágenes externa para mostrar GIF animados con {{ include.channel }}.
-{% endif %}
-
-{% alert note %}
-Aunque los ejemplos de este artículo son específicos para GIF, también puedes seguir esta guía para mostrar SVG si la biblioteca de imágenes personalizada que estás integrando admite archivos SVG.
-{% endalert %}
-
-## Integración personalizada de la biblioteca de imágenes {#gifs-delegate-integration}
-
-Braze ofrece la posibilidad de utilizar una biblioteca de imágenes personalizada para mostrar GIF animados con {{ include.channel }}.
-
-Aunque en el ejemplo siguiente se utiliza [Glide][gifs-67], cualquier biblioteca de imágenes que admita GIF es compatible.
+## Integración de una biblioteca de imágenes personalizada
 
 ### Paso 1: Crear el delegado del cargador de imágenes
 
 El delegado del cargador de imágenes debe implementar los siguientes métodos:
 
-* [`getInAppMessageBitmapFromUrl()`][gifs-71]
-* [`getPushBitmapFromUrl()`][gifs-72]
-* [`renderUrlIntoCardView()`][gifs-73]
-* [`renderUrlIntoInAppMessageView()`][gifs-74]
-* [`setOffline()`][gifs-70]
+* [`getInAppMessageBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html)
+* [`getPushBitmapFromUrl()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html)
+* [`renderUrlIntoCardView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-card-view.html)
+* [`renderUrlIntoInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-in-app-message-view.html)
+* [`setOffline()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html)
 
-El ejemplo de integración que se muestra a continuación procede de la [aplicación de ejemplo de integración de Glide][gifs-65] incluida en el SDK para Android de Braze.
+El ejemplo de integración que se muestra a continuación procede de la [aplicación de ejemplo de integración de Glide](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/glide-image-integration) incluida en el SDK para Android de Braze.
 
 {% tabs %}
 {% tab JAVA %}
@@ -141,7 +127,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 
 ### Paso 2: Configuración del delegado del cargador de imágenes
 
-El SDK de Braze utilizará cualquier cargador de imágenes personalizado configurado con [`setBrazeImageLoader`][gifs-66]. Recomendamos configurar el cargador de imágenes personalizado en una subclase de aplicación personalizada:
+El SDK de Braze utilizará cualquier cargador de imágenes personalizado configurado con [`setBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html). Recomendamos configurar el cargador de imágenes personalizado en una subclase de aplicación personalizada:
 
 {% tabs %}
 {% tab JAVA %}
@@ -236,17 +222,3 @@ ContentCardsList(
     )
 )
 ```
-
-[gifs-56]: http://developer.android.com/reference/android/app/Application.html
-[gifs-59]: https://github.com/braze-inc/braze-android-sdk#version-support
-[gifs-60]: http://developer.android.com/guide/topics/manifest/application-element.html#nm
-[gifs-61]: https://github.com/braze-inc/braze-android-sdk/tree/master/droidboy
-[gifs-64]: https://github.com/braze-inc/braze-android-sdk/tree/master/droidboy
-[gifs-65]: https://github.com/braze-inc/braze-android-sdk/tree/master/samples/glide-image-integration
-[gifs-66]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html
-[gifs-67]: https://bumptech.github.io/glide/
-[gifs-70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html
-[gifs-71]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html
-[gifs-72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html
-[gifs-73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-card-view.html
-[gifs-74]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-in-app-message-view.html

@@ -25,11 +25,15 @@ Su grupo de control global se aplica a todos los canales, campañas y lienzos, a
 
 ### Asignar usuarios aleatoriamente al Grupo de Control Global
 
-Braze selecciona aleatoriamente múltiples rangos de [números de cubos aleatorios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) e incluye usuarios de esos cubos seleccionados. Si está utilizando números aleatorios de cubo para otros fines, consulte [Cosas que debe tener en cuenta](#things-to-watch-for). 
+Braze selecciona aleatoriamente múltiples rangos de [números de cubos aleatorios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) e incluye usuarios de esos cubos seleccionados. Si actualmente utilizas números de contenedor aleatorios para otros fines, consulta [Cosas que debes tener en cuenta](#things-to-watch-for). 
 
-### Seguimiento de datos para la elaboración de informes
+Cuando se genere tu grupo de control global, todos los usuarios con números de contenedor aleatorios formarán parte del grupo. Además, los nuevos usuarios que se unan después de este punto (los adquiridos después de que se generara el grupo de control global) que tengan estos números de contenedor aleatorios también se añadirán al grupo de control global. Del mismo modo, si se eliminan muchos usuarios, es de esperar que el tamaño de tu grupo de control global se reduzca, porque un porcentaje de esos usuarios eliminados habrá caído en este grupo. Esto mantiene el tamaño de tu grupo como un porcentaje constante respecto a toda tu base de uso.
 
-Braze mide los comportamientos de los usuarios de su grupo de control y de los usuarios de su muestra de tratamiento. La muestra de tratamiento es una selección aleatoria de usuarios que no pertenecen al grupo de control, generada mediante el mismo método de números aleatorios de cubo.
+### Asignar usuarios aleatoriamente al grupo de tratamiento para la elaboración de informes
+
+Para que puedas informar sobre la elevación, Braze también crea un grupo de tratamiento. El grupo de tratamiento es un grupo seleccionado aleatoriamente de usuarios que no forman parte de tu grupo de control global, y se genera utilizando el mismo método de número de contenedor aleatorio que el grupo de control global. 
+
+Tu grupo de tratamiento tendrá un tamaño similar al de tu grupo de control global, pero es poco probable que tenga exactamente el mismo tamaño. Para [los informes](#reporting), Braze mide los comportamientos de los usuarios de tu grupo de control y de los usuarios de tu muestra de tratamiento. Cada espacio de trabajo tiene como máximo un grupo de control global y un grupo de muestra de tratamiento. El grupo de muestra de tratamiento es el mismo grupo de usuarios, independientemente de cómo configures tus informes de control global.
 
 ### Excluir usuarios de las banderas de características
 
@@ -41,15 +45,11 @@ No puedes habilitar [los indicadores de características]({{site.baseurl}}/user_
 
 En el panel de control, vaya a **Audiencia** > **Grupo de control global**.
 
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Compromiso** > **Configuración global de mensajes** > **Configuración global de grupos de control**.
-{% endalert %}
-
 ### Paso 2: Asignar un porcentaje de todos los usuarios a este grupo de control
 
-Introduzca un porcentaje para su grupo de control y haga clic en **Guardar**. Una vez introducido, Braze le muestra una estimación de cuántos usuarios entrarán en su muestra de Control global, tratamiento y tratamiento. Ten en cuenta que cuantos más usuarios tengas en tu espacio de trabajo, más precisa será esta estimación. 
+Introduce un porcentaje para tu grupo de control y selecciona **Guardar**. Una vez introducido, Braze le muestra una estimación de cuántos usuarios entrarán en su muestra de Control global, tratamiento y tratamiento. Ten en cuenta que cuantos más usuarios tengas en tu espacio de trabajo, más precisa será esta estimación. 
 
-El número de usuarios de su Grupo de control global se actualiza automáticamente tras su configuración inicial para que siga siendo proporcional a este porcentaje de audiencia cuando se añadan más usuarios a su espacio de trabajo. Por ejemplo, si el número de usuarios de su espacio de trabajo crece, el número de usuarios de su Grupo de control global también crecerá, de modo que su Grupo de control mantenga un porcentaje constante de la audiencia de su espacio de trabajo. Para conocer las pautas porcentuales, consulta la siguiente [sección de buenas prácticas](#percentage-guidelines).
+El número de usuarios de su Grupo de control global se actualiza automáticamente tras su configuración inicial para que siga siendo proporcional a este porcentaje de audiencia cuando se añadan más usuarios a su espacio de trabajo. Además, los nuevos usuarios que se unan después de que se haya configurado el grupo de control global y que tengan números de contenedor aleatorios también se añadirán al grupo de control global. Si se añaden muchos usuarios, entonces puedes esperar que el tamaño de tu grupo de control global crezca de modo que mantenga un porcentaje constante en relación con toda tu base de usuarios. Para conocer las pautas porcentuales, consulta la siguiente [sección de buenas prácticas](#percentage-guidelines).
 
 ![La Configuración del Grupo de Control Global con la Configuración de Audiencia establecida en "Asignar el cinco por ciento de todos los usuarios al Grupo de Control Global".][4]
 
@@ -67,7 +67,9 @@ Es posible que desee añadir ajustes de exclusión si tiene mensajes transaccion
 
 En este punto, Braze genera un grupo de usuarios seleccionados aleatoriamente para que constituyan el porcentaje seleccionado de su base total de usuarios. Una vez guardado, todas las campañas y lienzos activos y futuros dejarán de enviarse a los usuarios de este grupo, excepto las campañas o lienzos que contengan alguna de las etiquetas de la configuración de exclusión.
 
-## Desactive su Grupo de Control Global
+## Hacer cambios en tu grupo de control global
+
+Sólo puedes hacer cambios en tu grupo de control global desactivándolo y creando uno nuevo. Por ejemplo, si configuras un grupo de control global que represente el 10% de tu audiencia y quieres reducir su tamaño al 5%, debes desactivar tu grupo de control global actual y volver a habilitar un nuevo grupo de control global. 
 
 Puede desactivar su Grupo de control global en cualquier momento desde la pestaña **Configuración del grupo de control global**, pero tenga en cuenta que al hacerlo los usuarios de este grupo podrán participar inmediatamente en campañas y Canvas.
 

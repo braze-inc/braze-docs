@@ -45,7 +45,7 @@ Tous les utilisateurs sont éligibles pour le lead scoring, vous pouvez donc ajo
 
 ![Étape 3 de la création d'un canvas avec des options de sélection de segments et de filtres pour restreindre l'audience d'entrée.][3]{: style="max-width:80%;"}
 
-#### Étape 3b : Définissez la rééligibilité des canvas
+#### Étape 3b : Rééligibilité des toiles de canevas
 
 Un utilisateur passera par ce Canvas de nombreuses fois au cours de son cycle de vie avec vous, assurez-vous donc qu'il puisse y revenir aussi rapidement qu'il en est sorti la fois précédente. Ceci peut se faire par le biais de paramètres de rééligibilité. 
 
@@ -83,7 +83,7 @@ Ajoutez les groupes suivants à votre parcours d'action :
 - **Groupe 3 :** Tous les événements qui comptent pour un décrément de 1 point.
 - **Tous les autres :** Les parcours d'action vous permettent de définir la fenêtre d'attente pour voir si un utilisateur entreprend une action, avant de le placer dans un groupe "tous les autres". Pour la notation des prospects, c'est l'occasion d’abaisser le score pour « inactivité ».
 
-![Parcours d'action contenant des groupes d'action pour l'ajout d'un point, de cinq points et de dix points ; la soustraction d'un point et de dix points ; et « Tous les autres ».][7]
+![Parcours d'action contenant des groupes d'action pour l'ajout d'un point, de cinq points et de dix points ; la soustraction d'un point et de dix points ; et "Tous les autres".][7]
 
 #### Étape 4c : Configurez chaque groupe pour y inclure les événements pertinents
 
@@ -182,7 +182,7 @@ Pour mettre à jour l'enregistrement du prospect dans Salesforce avec le statut 
 
 | En-tête | Contenu |
 | --- | --- |
-| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_dba9068e-ead9-4112-9cbc-f71f22fe4c96/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_0a5f4c0b-bf4f-49cb-80ab-17f833861c2a/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Type_de_contenu | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

@@ -30,7 +30,7 @@ Avec cette approche, vous voulez encourager les utilisateurs à se rendre sur l�
 
 Si vous ne voulez pas que vos utilisateurs quittent votre application, vous devez d’abord sensibiliser vos utilisateurs avec un message in-app séparé. La sensibilisation est une manière de demander la permission à vos utilisateurs avant de leur envoyer l’invite d’évaluation sur l’App Store native. Pour ce faire, créez une campagne de communication in-app et ajoutez un lien profond personnalisé qui appelle la méthode `requestReview` lorsqu’ils sont cliqués. 
 
-Pour connaître les étapes détaillées, consultez la section [Invite personnalisée d’évaluation dans l’App Store]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/).
+Pour connaître les étapes détaillées, consultez la section [Invite personnalisée d’évaluation dans l’App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
 ![Deux messages in-app côte à côte. Le premier sensibilise l’utilisateur à l’évaluation de l’application en leur demandant s’ils ont le temps d’évaluer l’application. Le deuxième est le message natif iOS d’évaluation dans l’App Store, affichant une échelle de cinq étoiles que l’utilisateur peut sélectionner pour évaluer l’application.][2]
 

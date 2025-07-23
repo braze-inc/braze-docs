@@ -203,481 +203,6 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 {% endapi %}
 
 {% api %}
-## Live Activity Push To Start Token Change events
-
-{% apitags %}
-Live Activity, Push To Start Token
-{% endapitags %}
-
-This event occurs when Braze syncs Live Activity push to start token with the user
-
-{% tabs %}
-{% tab Amplitude %}
-```json
-// Live Activity Push To Start Token Change (users.behaviors.liveactivity.PushToStartTokenChange)
-
-{
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_to_start_token" : "(optional, string) Live Activity push to start token",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Mixpanel %}
-```json
-// Live Activity Push To Start Token Change (users.behaviors.liveactivity.PushToStartTokenChange)
-
-{
-  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
-  "properties" : {
-    "$partner_id" : "braze",
-    "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "distinct_id" : "(required, string) [PII] External ID of the user",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_to_start_token" : "(optional, string) Live Activity push to start token",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "time" : "(required, int) UNIX timestamp at which the event happened",
-    "token" : "(required, string) The Mixpanel API token"
-  }
-}
-```
-{% endtab %}
-
-{% tab mParticle %}
-```json
-// Live Activity Push To Start Token Changes (users.behaviors.liveactivity.PushToStartTokenChange)
-
-{
-  "device_info" : {
-    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
-  },
-  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
-  "events" : [
-    {
-      "data" : {
-        "custom_attributes" : {
-          "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-          "app_id" : "(optional, string) API ID of the app on which this event occurred",
-          "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-          "push_to_start_token" : "(optional, string) Live Activity push to start token",
-          "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-          "source_request_id" : "(required, string) Globally unique ID for this event"
-        },
-        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
-        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
-        "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
-      },
-      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
-    }
-  ],
-  "schema_version" : 2,
-  "user_attributes" : { },
-  "user_identities" : {
-    "customerid" : "(required, string) [PII] External ID of the user"
-  }
-}
-```
-{% endtab %}
-
-{% tab Segment %}
-```json
-// Live Activity Push To Start Token Changed (users.behaviors.liveactivity.PushToStartTokenChange)
-
-{
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
-  "context" : {
-    "traits" : { },
-    "device" : { }
-  },
-  "event" : "(required, string) The event type name, as it is exported to Segment",
-  "messageId" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_to_start_token" : "(optional, string) Live Activity push to start token",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type"
-  },
-  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
-  "type" : "track",
-  "userId" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.behaviors.liveactivity.PushToStartTokenChange
-
-{
-  "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-  "push_to_start_token" : "(optional, string) Live Activity push to start token",
-  "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% endapi %}
-
-{% api %}
-## Live Activity Update Token Change events
-
-{% apitags %}
-Live Activity, Update Token
-{% endapitags %}
-
-This event occurs when Braze syncs Live Activity update token with the user
-
-{% tabs %}
-{% tab Amplitude %}
-```json
-// Live Activity Update Token Change (users.behaviors.liveactivity.UpdateTokenChange)
-
-{
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "event_properties" : {
-    "activity_id" : "(optional, string) Live Activity identifier",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "update_token" : "(optional, string) Live Activity update token"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Mixpanel %}
-```json
-// Live Activity Update Token Change (users.behaviors.liveactivity.UpdateTokenChange)
-
-{
-  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
-  "properties" : {
-    "$partner_id" : "braze",
-    "activity_id" : "(optional, string) Live Activity identifier",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "distinct_id" : "(required, string) [PII] External ID of the user",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "time" : "(required, int) UNIX timestamp at which the event happened",
-    "token" : "(required, string) The Mixpanel API token",
-    "update_token" : "(optional, string) Live Activity update token"
-  }
-}
-```
-{% endtab %}
-
-{% tab mParticle %}
-```json
-// Live Activity Update Token Changes (users.behaviors.liveactivity.UpdateTokenChange)
-
-{
-  "device_info" : {
-    "ios_idfv" : "(optional, string) ID of the device on which the event occurred"
-  },
-  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
-  "events" : [
-    {
-      "data" : {
-        "custom_attributes" : {
-          "activity_id" : "(optional, string) Live Activity identifier",
-          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-          "app_id" : "(optional, string) API ID of the app on which this event occurred",
-          "device_id" : "(optional, string) ID of the device on which the event occurred",
-          "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-          "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-          "source_request_id" : "(required, string) Globally unique ID for this event",
-          "update_token" : "(optional, string) Live Activity update token"
-        },
-        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
-        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
-        "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
-      },
-      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
-    }
-  ],
-  "schema_version" : 2,
-  "user_attributes" : { },
-  "user_identities" : {
-    "customerid" : "(required, string) [PII] External ID of the user"
-  }
-}
-```
-{% endtab %}
-
-{% tab Segment %}
-```json
-// Live Activity Update Token Changed (users.behaviors.liveactivity.UpdateTokenChange)
-
-{
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
-  "context" : {
-    "traits" : { },
-    "device" : { }
-  },
-  "event" : "(required, string) The event type name, as it is exported to Segment",
-  "messageId" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "activity_id" : "(optional, string) Live Activity identifier",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "update_token" : "(optional, string) Live Activity update token"
-  },
-  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
-  "type" : "track",
-  "userId" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.behaviors.liveactivity.UpdateTokenChange
-
-{
-  "activity_id" : "(optional, string) Live Activity identifier",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-  "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% endapi %}
-
-{% api %}
-## Push Notification Token State Change events
-
-{% apitags %}
-Push, TokenStateChange
-{% endapitags %}
-
-This event occurs when a push token is inserted, updated or removed. Use this to track the states of push tokens.
-
-{% tabs %}
-{% tab Amplitude %}
-```json
-// Push Notification Token State Change (users.behaviors.pushnotification.TokenStateChange)
-
-{
-  "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "platform" : "(optional, string) Platform of the device",
-    "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
-    "push_token_device_id" : "(optional, string) Device id of the push token",
-    "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
-    "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
-    "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
-    "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
-    "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
-  },
-  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
-  "insert_id" : "(required, string) Globally unique ID for this event",
-  "library" : "Braze",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Mixpanel %}
-```json
-// Push Notification Token State Change (users.behaviors.pushnotification.TokenStateChange)
-
-{
-  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
-  "properties" : {
-    "$partner_id" : "braze",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "distinct_id" : "(required, string) [PII] External ID of the user",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "platform" : "(optional, string) Platform of the device",
-    "push_token" : "(optional, string) Push token of the event",
-    "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
-    "push_token_device_id" : "(optional, string) Device id of the push token",
-    "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
-    "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
-    "time" : "(required, int) UNIX timestamp at which the event happened",
-    "token" : "(required, string) The Mixpanel API token",
-    "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
-    "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
-    "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
-  }
-}
-```
-{% endtab %}
-
-{% tab mParticle %}
-```json
-// Push Notification Token State Changes (users.behaviors.pushnotification.TokenStateChange)
-
-{
-  "device_info" : {
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
-  "events" : [
-    {
-      "data" : {
-        "custom_attributes" : {
-          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-          "app_id" : "(optional, string) API ID of the app on which this event occurred",
-          "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-          "push_token" : "(optional, string) Push token of the event",
-          "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
-          "push_token_device_id" : "(optional, string) Device id of the push token",
-          "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
-          "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
-          "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-          "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
-          "source_request_id" : "(required, string) Globally unique ID for this event",
-          "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
-          "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
-          "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
-        },
-        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
-        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
-        "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
-      },
-      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
-    }
-  ],
-  "schema_version" : 2,
-  "user_attributes" : { },
-  "user_identities" : {
-    "customerid" : "(required, string) [PII] External ID of the user"
-  }
-}
-```
-{% endtab %}
-
-{% tab Segment %}
-```json
-// Push Notification Token State Changed (users.behaviors.pushnotification.TokenStateChange)
-
-{
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
-  "context" : {
-    "traits" : { },
-    "device" : { }
-  },
-  "event" : "(required, string) The event type name, as it is exported to Segment",
-  "messageId" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-    "push_token" : "(optional, string) Push token of the event",
-    "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
-    "push_token_device_id" : "(optional, string) Device id of the push token",
-    "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
-    "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
-    "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-    "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
-    "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
-    "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
-    "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
-  },
-  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
-  "type" : "track",
-  "userId" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.behaviors.pushnotification.TokenStateChange
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
-  "platform" : "(optional, string) Platform of the device",
-  "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
-  "push_token_device_id" : "(optional, string) Device id of the push token",
-  "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
-  "push_token_provisionally_opted_in" : "(optional, boolean) Provisionally opted in flag of the push token",
-  "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
-  "push_token_updated_at" : "(optional, int) UNIX timestamp at which the push token was last updated",
-  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "web_push_token_public_key" : "(optional, string) Public key of the push token, only applies to web push tokens",
-  "web_push_token_user_auth" : "(optional, string) User auth of the push token, only applies to web push tokens",
-  "web_push_token_vapid_public_key" : "(optional, string) VAPID public key of the push token, only applies to web push tokens"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% endapi %}
-
-{% api %}
 ## Global Subscription State Change events
 
 {% apitags %}
@@ -940,7 +465,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "timezone" : "(optional, string) Time zone of the user"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -982,7 +507,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -1023,7 +548,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
           "subscription_group_id" : "(required, string) Subscription group API ID",
-          "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'"
+          "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -1077,7 +602,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
-    "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'"
+    "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -1113,7 +638,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_group_id" : "(required, string) Subscription group API ID",
-  "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
+  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
@@ -2606,6 +2131,612 @@ This event occurs when a user progresses through a step in a Canvas with some ou
 {% endapi %}
 
 {% api %}
+## Banner Abort events
+
+{% apitags %}
+Banner, Abort
+{% endapitags %}
+
+This event occurs when an originally scheduled banner message was aborted for some reason.
+
+{% tabs %}
+{% tab Amplitude %}
+```json
+// Banner Abort (users.messages.banner.Abort)
+
+{
+  "adid" : "(optional, string) [PII] Advertising identifier",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+    "abort_type" : "(optional, string) Type of abort",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "device_model" : "(optional, string) Model of the device",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "idfa" : "(optional, string) [PII] Advertising identifier",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Banner Abort (users.messages.banner.Abort)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+    "abort_type" : "(optional, string) Type of abort",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "$device" : "(optional, string) Model of the device",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Banner Aborts (users.messages.banner.Abort)
+
+{
+  "device_info" : {
+    "android_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "device_model" : "(optional, string) Model of the device",
+    "ios_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred",
+    "limit_ad_tracking" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "microsoft_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "platform" : "(optional, string) Platform of the device",
+    "roku_advertising_id" : "(optional, string) [PII] Advertising identifier"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+          "abort_type" : "(optional, string) Type of abort",
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
+          "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+          "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Banner Aborted (users.messages.banner.Abort)
+
+{
+  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "context" : {
+    "traits" : { },
+    "device" : {
+      "model" : "(optional, string) Model of the device"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+    "abort_type" : "(optional, string) Type of abort",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Cloud Storage %}
+```json
+// users.messages.banner.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "carrier" : "(optional, string) Carrier of the device",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "resolution" : "(optional, string) Resolution of the device",
+  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## Banner Click events
+
+{% apitags %}
+Banner, Click
+{% endapitags %}
+
+This event occurs when a user clicks a banner.
+
+{% tabs %}
+{% tab Amplitude %}
+```json
+// Banner Click (users.messages.banner.Click)
+
+{
+  "adid" : "(optional, string) [PII] Advertising identifier",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "device_model" : "(optional, string) Model of the device",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "idfa" : "(optional, string) [PII] Advertising identifier",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Banner Click (users.messages.banner.Click)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "$device" : "(optional, string) Model of the device",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Banner Clicks (users.messages.banner.Click)
+
+{
+  "device_info" : {
+    "android_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "device_model" : "(optional, string) Model of the device",
+    "ios_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred",
+    "limit_ad_tracking" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "microsoft_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "platform" : "(optional, string) Platform of the device",
+    "roku_advertising_id" : "(optional, string) [PII] Advertising identifier"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
+          "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+          "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+          "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Banner Clicked (users.messages.banner.Click)
+
+{
+  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "context" : {
+    "traits" : { },
+    "device" : {
+      "model" : "(optional, string) Model of the device"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Cloud Storage %}
+```json
+// users.messages.banner.Click
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "carrier" : "(optional, string) Carrier of the device",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "resolution" : "(optional, string) Resolution of the device",
+  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## Banner Impression events
+
+{% apitags %}
+Banner, Impressions
+{% endapitags %}
+
+This event occurs when a user views a banner.
+
+{% tabs %}
+{% tab Amplitude %}
+```json
+// Banner Impression (users.messages.banner.Impression)
+
+{
+  "adid" : "(optional, string) [PII] Advertising identifier",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "event_properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "device_model" : "(optional, string) Model of the device",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "timezone" : "(optional, string) Time zone of the user"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "idfa" : "(optional, string) [PII] Advertising identifier",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Banner Impression (users.messages.banner.Impression)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "$device" : "(optional, string) Model of the device",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Banner Impressions (users.messages.banner.Impression)
+
+{
+  "device_info" : {
+    "android_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "device_model" : "(optional, string) Model of the device",
+    "ios_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "ios_idfv" : "(optional, string) ID of the device on which the event occurred",
+    "limit_ad_tracking" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "microsoft_advertising_id" : "(optional, string) [PII] Advertising identifier",
+    "platform" : "(optional, string) Platform of the device",
+    "roku_advertising_id" : "(optional, string) [PII] Advertising identifier"
+  },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "app_id" : "(optional, string) API ID of the app on which this event occurred",
+          "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+          "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "source_request_id" : "(required, string) Globally unique ID for this event"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Banner Viewed (users.messages.banner.Impression)
+
+{
+  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "context" : {
+    "traits" : { },
+    "device" : {
+      "model" : "(optional, string) Model of the device"
+    }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "ad_id" : "(optional, string) [PII] Advertising identifier",
+    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+    "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Cloud Storage %}
+```json
+// users.messages.banner.Impression
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "carrier" : "(optional, string) Carrier of the device",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "resolution" : "(optional, string) Resolution of the device",
+  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
 ## Content Card Abort events
 
 {% apitags %}
@@ -3931,7 +4062,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
@@ -3970,7 +4101,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -4010,7 +4141,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
@@ -4064,7 +4195,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
@@ -4096,7 +4227,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
@@ -4151,16 +4282,18 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "device_os" : "(optional, string) Device operating system extracted from user_agent",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+    "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
     "link_alias" : "(optional, string) Alias associated with this link ID",
     "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
+    "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
@@ -4198,17 +4331,19 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+    "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
     "link_alias" : "(optional, string) Alias associated with this link ID",
     "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
     "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
+    "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
@@ -4246,10 +4381,11 @@ This event occurs when a user clicks an email. Multiple events may be generated 
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "device_os" : "(optional, string) Device operating system extracted from user_agent",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+          "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
           "link_alias" : "(optional, string) Alias associated with this link ID",
           "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
           "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
@@ -4309,10 +4445,11 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "device_os" : "(optional, string) Device operating system extracted from user_agent",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+    "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
     "link_alias" : "(optional, string) Alias associated with this link ID",
     "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
     "link_url" : "(optional, string) URL that the user clicked on",
@@ -4320,6 +4457,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
+    "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -4349,18 +4487,20 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "device_os" : "(optional, string) Device operating system extracted from user_agent",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+  "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
   "link_alias" : "(optional, string) Alias associated with this link ID",
   "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
   "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
+  "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
@@ -4405,7 +4545,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
     "deferral_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4445,7 +4585,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -4483,7 +4623,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "deferral_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4537,7 +4677,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "deferral_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4571,7 +4711,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
   "deferral_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
@@ -4622,7 +4762,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4659,7 +4799,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -4697,7 +4837,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4749,7 +4889,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4779,7 +4919,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
@@ -4829,7 +4969,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4867,7 +5007,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -4906,7 +5046,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4959,7 +5099,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -4990,7 +5130,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
@@ -5048,7 +5188,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
     "device_os" : "(optional, string) Device operating system extracted from user_agent",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
@@ -5093,7 +5233,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -5139,7 +5279,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "device_os" : "(optional, string) Device operating system extracted from user_agent",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
@@ -5200,7 +5340,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "device_os" : "(optional, string) Device operating system extracted from user_agent",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
@@ -5238,7 +5378,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
   "device_os" : "(optional, string) Device operating system extracted from user_agent",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
@@ -5364,7 +5504,7 @@ This event occurs when an email send request was successfully communicated betwe
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5417,7 +5557,7 @@ This event occurs when an email send request was successfully communicated betwe
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
@@ -5498,7 +5638,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -5536,7 +5676,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "email_address" : "(required, string) [PII] Email address of the user",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -5575,7 +5715,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-          "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+          "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
           "from_domain" : "(optional, string) Sending domain for the email",
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -5628,7 +5768,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-    "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+    "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
     "from_domain" : "(optional, string) Sending domain for the email",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -5659,7 +5799,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
   "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_domain" : "(optional, string) Sending domain for the email",
   "id" : "(required, string) Globally unique ID for this event",
@@ -9582,9 +9722,11 @@ This event occurs when a user clicks an SMS short link.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
+    "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
@@ -9618,9 +9760,11 @@ This event occurs when a user clicks an SMS short link.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
+    "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
+    "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
@@ -9654,6 +9798,7 @@ This event occurs when a user clicks an SMS short link.
           "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
           "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "device_id" : "(optional, string) ID of the device on which the event occurred",
+          "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "short_url" : "(required, string) Shortened url that was clicked",
@@ -9705,9 +9850,11 @@ This event occurs when a user clicks an SMS short link.
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
+    "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
@@ -9734,9 +9881,11 @@ This event occurs when a user clicks an SMS short link.
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
+  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "short_url" : "(required, string) Shortened url that was clicked",
+  "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
@@ -9937,6 +10086,232 @@ This event occurs if a webhook message was aborted based on Liquid aborts, etc.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% endapi %}
+
+{% api %}
+## Webhook Failure events
+
+{% apitags %}
+Failure, Webhooks
+{% endapitags %}
+
+This event occurs if a webhook message was delivered but failed with an error response from the endpoint.
+
+{% tabs %}
+{% tab Amplitude %}
+```json
+// Webhook Failure (users.messages.webhook.Failure)
+
+{
+  "event_properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "content_length" : "(optional, int) Content length of the response",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
+    "host" : "(optional, string) The host of the webhook URL that returned a failure response",
+    "http_status_code" : "(optional, int) HTTP status code of the response",
+    "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "raw_response" : "(optional, string) Truncated raw response from endpoint",
+    "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
+    "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
+    "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
+  },
+  "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
+  "insert_id" : "(required, string) Globally unique ID for this event",
+  "library" : "Braze",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Mixpanel %}
+```json
+// Webhook Failure (users.messages.webhook.Failure)
+
+{
+  "event" : "(required, string) The event type name, as it is exported to Mixpanel",
+  "properties" : {
+    "$partner_id" : "braze",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "content_length" : "(optional, int) Content length of the response",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "distinct_id" : "(required, string) [PII] External ID of the user",
+    "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
+    "host" : "(optional, string) The host of the webhook URL that returned a failure response",
+    "http_status_code" : "(optional, int) HTTP status code of the response",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "raw_response" : "(optional, string) Truncated raw response from endpoint",
+    "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
+    "token" : "(required, string) The Mixpanel API token",
+    "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
+    "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
+    "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
+  }
+}
+```
+{% endtab %}
+
+{% tab mParticle %}
+```json
+// Webhook Failures (users.messages.webhook.Failure)
+
+{
+  "device_info" : { },
+  "environment" : "(required, string) The mParticle environment (either 'development' or 'production')",
+  "events" : [
+    {
+      "data" : {
+        "custom_attributes" : {
+          "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+          "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+          "campaign_name" : "(optional, string) Name of the campaign",
+          "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+          "canvas_name" : "(optional, string) Name of the Canvas",
+          "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+          "canvas_step_name" : "(optional, string) Name of the Canvas step",
+          "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+          "content_length" : "(optional, int) Content length of the response",
+          "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+          "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
+          "host" : "(optional, string) The host of the webhook URL that returned a failure response",
+          "http_status_code" : "(optional, int) HTTP status code of the response",
+          "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
+          "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+          "message_variation_name" : "(optional, string) Name of the message variation",
+          "raw_response" : "(optional, string) Truncated raw response from endpoint",
+          "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
+          "send_id" : "(optional, string) Message send ID this message belongs to",
+          "source_request_id" : "(required, string) Globally unique ID for this event",
+          "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
+          "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
+          "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
+        },
+        "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
+        "event_name" : "(required, string) The event type name, as it is exported to mParticle",
+        "source_message_id" : "(required, string) Globally unique ID for this event",
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
+      },
+      "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
+    }
+  ],
+  "schema_version" : 2,
+  "user_attributes" : { },
+  "user_identities" : {
+    "customerid" : "(required, string) [PII] External ID of the user"
+  }
+}
+```
+{% endtab %}
+
+{% tab Segment %}
+```json
+// Webhook Failed (users.messages.webhook.Failure)
+
+{
+  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "context" : {
+    "traits" : { },
+    "device" : { }
+  },
+  "event" : "(required, string) The event type name, as it is exported to Segment",
+  "messageId" : "(required, string) Globally unique ID for this event",
+  "properties" : {
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+    "campaign_name" : "(optional, string) Name of the campaign",
+    "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+    "canvas_name" : "(optional, string) Name of the Canvas",
+    "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+    "canvas_step_name" : "(optional, string) Name of the Canvas step",
+    "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+    "content_length" : "(optional, int) Content length of the response",
+    "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+    "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
+    "host" : "(optional, string) The host of the webhook URL that returned a failure response",
+    "http_status_code" : "(optional, int) HTTP status code of the response",
+    "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
+    "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+    "message_variation_name" : "(optional, string) Name of the message variation",
+    "raw_response" : "(optional, string) Truncated raw response from endpoint",
+    "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
+    "send_id" : "(optional, string) Message send ID this message belongs to",
+    "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
+    "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
+    "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
+  },
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
+  "type" : "track",
+  "userId" : "(optional, string) [PII] External ID of the user"
+}
+```
+{% endtab %}
+
+{% tab Cloud Storage %}
+```json
+// users.messages.webhook.Failure
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "content_length" : "(optional, int) Content length of the response",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "host" : "(optional, string) The host of the webhook URL that returned a failure response",
+  "http_status_code" : "(optional, int) HTTP status code of the response",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "raw_response" : "(optional, string) Truncated raw response from endpoint",
+  "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
+  "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
 }
 ```
 {% endtab %}

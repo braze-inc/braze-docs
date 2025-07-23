@@ -17,10 +17,6 @@ La page **Préférences de notification** vous permet de déterminer qui (si que
 
 Pour accéder à cette page, allez dans **Réglages** > **Réglages administratifs** > **Préférences de notification.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), sélectionnez le menu déroulant de votre compte et allez dans **Paramètres de l'entreprise** > **Préférences de notification.**
-{% endalert %}
-
 ## Notifications disponibles
 
 Le tableau suivant répertorie les notifications disponibles :
@@ -39,15 +35,12 @@ Le tableau suivant répertorie les notifications disponibles :
 | Limite de campagne planifiée atteinte | Informe les destinataires lorsque la limite d’une campagne planifiée récurrente a été atteinte. | E-mail, Webhook |
 | Envoi terminé d’une campagne planifiée | Informe les destinataires lorsque l’envoi d’une campagne planifiée est terminé. | E-mail, Webhook |
 | Rapport hebdomadaire d’analyse | Envoie chaque lundi aux destinataires un résumé de l'activité de l'espace de travail de la semaine écoulée. Les destinataires reçoivent un résumé pour chaque espace de travail auquel ils appartiennent. | E-mail |
+| Limites quotidiennes du volume d'entrées dans les canvas/campagnes | Envoie des notifications chaque fois qu'une limite d'envoi est atteinte. | E-mail |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Rapports hebdomadaires d’analyse
 
 Braze propose l’option d’envoi d’un rapport hebdomadaire par e-mail aux personnes que vous désignez dans votre entreprise tous les lundis à 5 h EST. Vous pouvez sélectionner les événements personnalisés à inclure dans le rapport hebdomadaire à partir de **Paramètres des données** > **Événements personnalisés**.
-
-{% alert note %}
-Si vous utilisez l'[ancienne version de la navigation]({{site.baseurl}}/navigation), cette page est située sous **Gérer les paramètres** > **Événements personnalisés**.
-{% endalert %}
 
 Vous pouvez sélectionner jusqu’à cinq événements à inclure dans votre rapport hebdomadaire :
 

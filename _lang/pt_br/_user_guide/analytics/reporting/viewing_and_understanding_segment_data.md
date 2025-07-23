@@ -76,11 +76,10 @@ A seção **Envio de Mensagens Use** mostra quais segmentos, campanhas atualment
 ![Em Uso de mensagens, veja as campanhas em que seu segmento está sendo usado.][4]
 
 ### Membro histórico
-A seção **Histórico de Membros** mostra como o tamanho do seu segmento mudou ao longo do tempo. Use o menu suspenso para filtrar a associação ao segmento por intervalo de datas. 
 
-A contagem histórica de membros do segmento é uma estimativa, da mesma forma que o tamanho do segmento é uma estimativa antes de você clicar em **Calculate Exact Statistics (Calcular estatísticas exatas**). A Braze estima a contagem de membros consultando os usuários em um intervalo aleatório. Isso significa que, em um dia, a contagem de associação pode se basear em usuários com um número de bloco aleatório de 111 a 120 e, em outro dia, em usuários com um número de bloco aleatório de 8.452 a 8.455. Portanto, o gráfico pode mostrar ligeiras flutuações em cada data devido a diferentes quantidades de usuários que chegam dentro dos intervalos aleatórios de buckets.
+A seção **Histórico de Membros** mostra como o tamanho do seu segmento mudou ao longo do tempo. Use o menu suspenso para filtrar a associação ao segmento por intervalo de datas.
 
-![Use o menu suspenso Associação histórica para filtrar a associação do segmento por intervalo de datas.][10]
+Para saber mais sobre como monitorar a associação e o tamanho do seu segmento, consulte [Medição do tamanho do segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### Prévia do usuário
 
@@ -145,5 +144,4 @@ Se a sua empresa ativou esse recurso em 2 de outubro e ativou o rastreamento de 
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_e_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}

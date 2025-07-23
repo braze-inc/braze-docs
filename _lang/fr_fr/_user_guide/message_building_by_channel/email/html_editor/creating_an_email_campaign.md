@@ -30,15 +30,9 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 {% tab Campagne %}
 
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **campagnes** sous **Engagement**.
-{% endalert %}
-
-{:start=“2"}
-2\. Sélectionnez **E-mail** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
-3\. Donnez un nom clair et significatif à votre campagne.
-4\. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
+2. Sélectionnez **E-mail** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
+3. Donnez un nom clair et significatif à votre campagne.
+4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Pour plus d'informations sur ce sujet, consultez [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -93,7 +87,7 @@ Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assi
 ![Bouton Lancer l’IA de rédaction, situé dans l’onglet Corps du composeur d’e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-Vous avez besoin d'aide pour rédiger des messages de droite à gauche dans des langues telles que l'arabe et l'hébreu ? Reportez-vous à la section [Créer des messages de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) pour connaître les meilleures pratiques.
+Vous avez besoin d'aide pour rédiger des messages de droite à gauche dans des langues telles que l'arabe et l'hébreu ? Reportez-vous à la section [Créer des messages de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) pour connaître les meilleures pratiques.
 
 ### Étape 3a : Ajoutez vos informations d'envoi
 
@@ -169,7 +163,7 @@ Les options d’e-mail vous permettent d'envoyer des données supplémentaires �
 Pour ajouter des e-mails supplémentaires, accédez aux **informations d'envoi** et sélectionnez **Ajouter un nouvel** e-mail supplémentaire.
 
 {% alert warning %}
-Le nombre total de paires clé-valeur ajoutées ne doit pas dépasser 1 kB. Sinon, les messages seront annulés.
+Le nombre total de paires clé-valeur ajoutées ne doit pas dépasser 1 Ko. Sinon, les messages seront annulés.
 {% endalert %}
 
 Les valeurs supplémentaires des e-mails ne sont pas publiées sur Currents ou Snowflake. Si vous souhaitez envoyer des métadonnées supplémentaires ou des valeurs dynamiques à Currents ou Snowflake, utilisez plutôt [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
@@ -256,7 +250,7 @@ Avec cette configuration, n'incluez pas de filtres dans l'étape **Utilisateurs 
 
 #### Sélectionner des événements de conversion
 
-Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), après avoir reçu une campagne. Vous pouvez spécifier l’une des actions suivantes en tant qu’événement de conversion :
+Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques, [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), après avoir reçu une campagne. Vous pouvez spécifier l’une des actions suivantes en tant qu’événement de conversion :
 
 - Ouvre l’application
 - Effectue un achat (il peut s’agir d’un achat générique ou d’un article spécifique)

@@ -30,7 +30,7 @@ Embora as campanhas possam ser criadas de forma exclusiva, dependendo do canal, 
 As campanhas regulares e de Testes A/B podem ser programadas (como informar uma lista de usuários sobre um evento futuro) ou automatizadas para envio em resposta a uma ação do usuário (como enviar um e-mail quando alguém se inscreve em seu boletim informativo). Saiba mais sobre o [agendamento de campanhas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types).
 {% endalert %}
 
-Independentemente do tipo de campanha que você criar, suas campanhas podem ouvir as necessidades do usuário e fornecer uma resposta atenciosa e personalizada. Depois de enviar sua campanha, use nossas [ferramentas integradas de análise de dados]({{site.baseurl}}/user_guide/analytics/reporting/) para ver a performance e quantos usuários converteram com base em seus [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+Independentemente do tipo de campanha que você criar, suas campanhas podem ouvir as necessidades do usuário e fornecer uma resposta atenciosa e personalizada. Depois de enviar sua campanha, use nossas [ferramentas integradas de análise de dados]({{site.baseurl}}/user_guide/analytics/reporting/) para ver a performance e quantos usuários converteram com base em seus [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Confira estes recursos adicionais para saber mais sobre as campanhas no Braze:
 

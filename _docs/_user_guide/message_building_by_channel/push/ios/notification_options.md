@@ -19,15 +19,15 @@ channel:
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
-Create your iOS push campaign, then look to the top of the **Compose** tab for the **Notification Groups** dropdown.
+Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
 
-![][26]{: style="max-width:60%;" }
+![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select **None** from the dropdown, the message will automatically send as normal to all defined users in the workspace.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking **Manage Notification Groups** in the dropdown and filling out the required fields in the **Manage iOS Push Notification Groups** window that appears.
 
-![][27]
+![Window to manage iOS push notification groups.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
@@ -82,7 +82,7 @@ Provisional Authorization has the potential dramatically increase your opt-in ra
 
 Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) under the **Engagement** tab in their user profile.
 
-![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Contact settings with a push subscribed status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -132,11 +132,17 @@ if (@available(iOS 12.0, *)) {
 
 ### Interruption level (iOS 15+) {#interruption-level}
 
-![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
 With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
 
+![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+
 Apps can now specify what level of interruption a notification should include, based on its urgency.
+
+To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
+
+![Dropdown for selecting the interruption level.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
 Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed to break through their focus.
 
@@ -150,12 +156,6 @@ Refer to the following table for interruption levels and their descriptions.
 |[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Will make a sound, vibrate, and turn on the screen even if the phone's **Do Not Disturb** switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Emergencies such as severe weather or safety alerts|Yes|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-To change the interruption level for an iOS push notification, select the **Settings** tab and choose the desired level from the **Interruption Level** dropdown menu.
-
-![Interruption Level set to Active (Default) and expanded to show all available interruption levels: Passive, Active (Default), Time Sensitive, and Critical.][28]
-
-This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
-
 ### Relevance score (iOS 15+) {#relevance-score}
 
 ![A notification summary for iOS titled "Your Evening Summary" with three notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -168,7 +168,7 @@ All notifications will still be accessible in the user's notification center.
 
 To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
-![][29]
+![Relevance score of "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
@@ -177,7 +177,3 @@ For more information on maximum message lengths for different message types, ref
 - [Image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption-level.png %}
-[29]: {% image_buster /assets/img/ios/relevance-score.png %}

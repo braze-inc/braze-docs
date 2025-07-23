@@ -49,7 +49,7 @@ Selecione as seguintes variáveis para um caso de uso de segmentação baseada e
 
 Para obter uma segmentação mais sofisticada ou complexa, consulte [Extensões de segmento do SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). Para ajudá-lo a começar, aqui estão alguns modelos de SQL que podem ser usados para ajudá-lo a obter uma vantagem inicial com a segmentação baseada em contas B2B:
 
-1. Crie um segmento comparando dois filtros em um único catálogo (por exemplo, usuários que trabalham no setor de restaurantes para uma conta de nível empresarial).
+1. Crie um segmento comparando dois filtros em um único catálogo (por exemplo, usuários que trabalham no setor de restaurantes para uma conta de nível empresarial). Você deve incluir a ID do catálogo e a ID do item.
 
 ```sql
 WITH salesforce_accounts AS (

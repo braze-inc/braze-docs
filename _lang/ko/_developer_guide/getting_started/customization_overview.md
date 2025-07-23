@@ -3,7 +3,9 @@ nav_title: 사용자 지정 개요
 article_title: 사용자 지정 개요
 page_order: 10
 description: "이 참조 문서에서는 SDK 메시징 채널을 사용자 지정하고 확장하는 데 필요한 필수 개념을 다룹니다."
-  
+hidden: true
+layout: redirect
+redirect_to: /docs/developer_guide/getting_started/
 ---
 
 # 사용자 지정 개요
@@ -126,7 +128,7 @@ table td {
 
 달리기 접근 방식에서는 개발자가 주도적으로 사용자 경험을 완전히 제어할 수 있습니다. 커스텀 코드에서는 메시지의 모양, 작동 방식, 다른 메시징 채널과의 상호 작용 방식(예: 푸시 알림에 기반한 콘텐츠 카드 트리거)을 지정합니다.
 
-새로운 유형의 콘텐츠 카드나 맞춤형 UI가 포함된 인앱 메시지 등 완전히 새로운 사용자 지정 콘텐츠를 생성하는 경우, Braze SDK는 자동으로 [분석을 추적하지]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/) 않습니다. 마케터가 Braze 대시보드에서 노출 횟수, 클릭, 해지 등의 측정기준에 계속 액세스할 수 있도록 프로그래밍 방식으로 분석을 처리해야 합니다. SDK에서 이 데이터를 Braze에 다시 전달하도록 Braze SDK의 분석 메서드를 호출합니다. 각 메시징 채널에는 이 작업을 용이하게 수행하는 데 도움이 되는 분석 문서가 있습니다.
+새로운 유형의 콘텐츠 카드나 맞춤형 UI가 포함된 인앱 메시지 등 완전히 새로운 사용자 지정 콘텐츠를 생성하는 경우, Braze SDK는 자동으로 [분석을 추적하지]({{site.baseurl}}/developer_guide/analytics/) 않습니다. 마케터가 Braze 대시보드에서 노출 횟수, 클릭, 해지 등의 측정기준에 계속 액세스할 수 있도록 프로그래밍 방식으로 분석을 처리해야 합니다. SDK에서 이 데이터를 Braze에 다시 전달하도록 Braze SDK의 분석 메서드를 호출합니다. 각 메시징 채널에는 이 작업을 용이하게 수행하는 데 도움이 되는 분석 문서가 있습니다.
 
 <table>
 <thead>

@@ -187,7 +187,7 @@ GO
 
 {:start="2"}
 
-2. Configure um diretor de serviço e conceda as permissões adequadas. Se você já possui credenciais de uma sincronização existente, pode reutilizá-las—apenas certifique-se de estender o acesso à tabela de origem do catálogo. Para saber mais sobre como criar uma nova entidade de serviço e credenciais, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+2. Configure uma entidade de serviço e conceda as permissões adequadas. Se você já possui credenciais de uma sincronização existente, pode reutilizá-las—apenas certifique-se de estender o acesso à tabela de origem do catálogo. Para saber mais sobre como criar uma nova entidade de serviço e credenciais, consulte a página [Ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
 
 {:start="3"}
 3\. Se você tiver políticas de rede em vigor, deverá conceder à Braze acesso de rede à sua instância do Microsoft Fabric. Para uma lista de IPs, consulte a [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).

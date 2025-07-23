@@ -17,7 +17,7 @@ description: "En este artículo se describen los detalles del punto final Realiz
 > Utiliza este punto final para registrar eventos personalizados y compras, y actualizar los atributos del perfil de usuario.
 
 {% alert note %}
-Braze procesa los datos pasados a través de la API en su valor nominal, y los clientes sólo deben pasar deltas (datos cambiantes) para minimizar el consumo innecesario de puntos de datos. Para saber más, consulta [Puntos de datos]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Braze procesa los datos pasados a través de la API en su valor nominal, y los clientes sólo deben pasar deltas (datos cambiantes) para minimizar el consumo innecesario de puntos de datos. Para saber más, consulta [Puntos de datos]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -297,10 +297,10 @@ Cada objeto evento de la matriz de eventos representa una única ocurrencia de u
 ## Usuarios activos al mes CY 24-25
 Para los clientes que hayan comprado Usuarios activos al mes - CY 24-25, Braze gestiona diferentes límites de velocidad en su punto final `/users/track`:
 - Los límites de velocidad por hora se establecen en función de la actividad prevista de ingesta de datos en tu cuenta, que puede corresponder al número de usuarios activos al mes que hayas comprado, al sector, a la estacionalidad o a otros factores.
-- Además del límite de solicitudes por hora, Braze también impone un límite de ráfagas en el número de solicitudes permitidas por segundo.
+- Además del límite horario, Braze aplica un límite de ráfagas al número de solicitudes que pueden enviarse cada tres segundos.
 - Cada solicitud puede contener hasta 50 actualizaciones combinadas de objetos de atributo, evento o compra.
 
-Los límites actuales basados en la ingesta prevista se encuentran en el panel, en **Configuración** > **API e identificadores** > **Límites de API**. Podemos modificar los límites de velocidad para proteger la estabilidad del sistema o permitir un mayor caudal de datos en tu cuenta. Ponte en contacto con el soporte de Braze o con tu administrador del éxito del cliente si tienes preguntas o dudas sobre el límite de solicitudes por hora o por segundo y las necesidades de tu empresa.
+Los límites actuales basados en la ingesta prevista se pueden encontrar en el panel en **Configuración** > **API e identificadores** > **Panel de uso de API**. Podemos modificar los límites de velocidad para proteger la estabilidad del sistema o permitir un mayor caudal de datos en tu cuenta. Ponte en contacto con el soporte de Braze o con tu administrador del éxito del cliente si tienes preguntas o dudas sobre el límite de solicitudes por hora o por segundo y las necesidades de tu empresa.
 
 
 

@@ -15,9 +15,6 @@ guide_featured_list:
   - name: Editar lienzos después del lanzamiento
     link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Aprobaciones y permisos de Canvas
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/
-    image: /assets/img/braze_icons/message-circle-01.svg
   - name: Guardar borradores para Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg
@@ -27,10 +24,16 @@ guide_featured_list:
   - name: Clonación de Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: Duplicar lienzos
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
-    image: /assets/img/braze_icons/copy-04.svg
-  - name: Archivar lienzos
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: Flujo de trabajo de aprobación
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: Archivar mensajes
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Duplicar mensajes
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    image: /assets/img/braze_icons/copy-04.svg
 ---

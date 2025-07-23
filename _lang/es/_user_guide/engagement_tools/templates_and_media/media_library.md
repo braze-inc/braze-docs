@@ -14,14 +14,11 @@ tool: Media
 
 Encontrará la **Mediateca** en **Plantillas**.
 
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), esta página se encuentra en **Plantillas y medios**.
-{% endalert %}
-
 Puedes utilizar la **Mediateca** para:
 
 * Cargar varias imágenes a la vez
 * Cargar archivos de contactos virtuales (.vcf)
+* Subir archivos de video para usarlos en mensajes de WhatsApp
 * Sube una carpeta con tus imágenes (máximo 50 imágenes)
 * [Genera una imagen utilizando IA](#generate-ai) y guárdala en la biblioteca multimedia
 * Recorta una imagen existente para crear la proporción adecuada para tus mensajes
@@ -36,7 +33,7 @@ Puedes utilizar la **Mediateca** para:
 
 ## Detalles de la imagen
 
-Dentro de la biblioteca multimedia, puede ver el tipo de imagen, el tamaño, las dimensiones, la URL y la fecha en que se añadió a la biblioteca.
+Dentro de la biblioteca multimedia, puedes ver el tipo de activo, el tamaño, las dimensiones, la URL, la fecha en que se añadió a la biblioteca y otra información. 
 
 ### Utilizar la mediateca frente a una CDN
 
@@ -44,7 +41,7 @@ El uso de la biblioteca multimedia mejora el almacenamiento en caché y el rendi
 
 ## Especificaciones de imagen
 
-Todas las imágenes subidas a la biblioteca multimedia deben ocupar menos de 5 MB. Los tipos de archivo admitidos son PNG, JPEG y GIF. Para recomendaciones específicas de imágenes por canal de mensajería, consulte las secciones siguientes.
+Todas las imágenes subidas a la biblioteca multimedia deben ocupar menos de 5 MB. Los tipos de archivo admitidos son PNG, JPEG, GIF y SVG. Para recomendaciones específicas de imágenes por canal de mensajería, consulte las secciones siguientes.
 
 ### Tarjetas de contenido
 
@@ -68,6 +65,14 @@ Para más información, consulta [Detalles creativos de los mensajes dentro de l
 
 - [Especificaciones de imagen y texto push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 
+### Video
+
+Por ahora, los videos que se suban a la biblioteca multimedia sólo podrán utilizarse en mensajes de WhatsApp. Para más información, consulta [Crear un mensaje de Whatsapp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+
+{% alert important %}
+Añadir videos a los mensajes de WhatsApp se encuentra actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
+{% endalert %}
+
 ## Acceso a la mediateca desde un compositor de mensajes
 
 La mediateca actúa como ubicación centralizada de activos en el panel de control, ya que todas las imágenes se cargan directamente en ella. Esto te permite reutilizar imágenes en diferentes mensajes.
@@ -79,13 +84,13 @@ La mediateca actúa como ubicación centralizada de activos en el panel de contr
 Puedes generar imágenes para tu biblioteca multimedia utilizando [DALL-E 3](https://openai.com/index/dall-e-3/), un sistema de IA de OpenAI, un proveedor externo de Braze. Este sistema puede crear imágenes y arte realistas a partir de una descripción en lenguaje natural. Cada solicitud genera cuatro variaciones de su mensaje, y su empresa puede generar imágenes 10 veces al día. Este total se aplica a todos los usuarios de su empresa.
 
 1. En la biblioteca multimedia, seleccione <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator**.
-2. Introduce una descripción de la imagen que quieres generar, de hasta 300 caracteres. Cuanto más detallada sea la descripción, mejor será el resultado.
+2. Introduce una descripción de la imagen que quieres generar, de hasta 300 caracteres. Cuanto más detallada sea la descripción, mejor será el resultado. Esta característica sólo admite la introducción de texto: no es posible cargar una imagen como referencia.
 3. Seleccione **Generar imágenes**. Las imágenes pueden tardar aproximadamente un minuto en generarse.
 4. Selecciona <i class="fas fa-download" title="Añadir imagen a la biblioteca multimedia"></i> sobre las imágenes que quieras añadir a tu biblioteca multimedia.
 
 ![Modal de generador de imágenes con IA en la biblioteca multimedia.][6]{: style="max-width:75%"}
 
-Entre tú y Braze, cualquier imagen generada utilizando DALL-E 3 es de tu propiedad intelectual. Braze no hará valer ningún derecho de propiedad intelectual sobre tales imágenes y no establecerá ningún tipo de garantía con respecto a los contenidos o las imágenes generados por IA. 
+Entre tú y Braze, cualquier imagen generada utilizando DALL-E 3 es de tu propiedad intelectual. Braze no hará valer ningún derecho de propiedad intelectual sobre tales imágenes y no establecerá ningún tipo de garantía con respecto a los contenidos o las imágenes generados por IA.
 
 Para generar imágenes, Braze enviará tu consulta a la Plataforma API de OpenAI. Todas las consultas enviadas a OpenAI desde Braze son anónimas, lo que significa que OpenAI no podrá identificar desde quién se envió la consulta a menos que usted incluya información identificable de forma única en la entrada que proporcione. Como se detalla en [los Compromisos de la Plataforma API de Open](https://openai.com/policies/api-data-usage-policies)AI, los datos enviados a la API de OpenAI a través de Braze no se utilizan para entrenar o mejorar sus modelos y se eliminarán al cabo de 30 días. Por favor, asegúrate de que cumples las políticas de OpenAI relevantes para ti, que pueden incluir su [Política de Uso](https://openai.com/policies/usage-policies) y su [Política de Compartir y Publicar](https://openai.com/policies/sharing-publication-policy). Braze no ofrece garantías de ningún tipo con respecto a cualquier contenido generado por IA. 
 

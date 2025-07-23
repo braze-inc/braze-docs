@@ -13,11 +13,11 @@ Cuando un usuario active un evento personalizado para un artículo, lo suscribir
 
 ## Cómo funcionan las notificaciones de reposición de existencias
 
-Configurará un evento personalizado para utilizarlo como evento de suscripción, como por ejemplo `product_clicked`. Este evento debe contener una propiedad del ID del artículo (ID de artículos del catálogo). Le sugerimos que incluya un nombre de catálogo, pero no es obligatorio. También proporcionará el nombre de un campo de cantidad de inventario, que debe ser de tipo dato numérico.
+Configurará un evento personalizado para utilizarlo como evento de suscripción, como por ejemplo `product_clicked`. Este evento debe contener una propiedad del ID del artículo (ID de artículos del catálogo). Le sugerimos que incluya un nombre de catálogo, pero no es obligatorio. También proporcionará el nombre de un campo de cantidad de inventario, que debe ser de tipo dato numérico. 
 
-Cuando un artículo tiene una cantidad de inventario que cumple su regla de inventario, buscaremos a todos sus usuarios suscritos a ese artículo (usuarios que realizaron el evento de suscripción) y enviaremos un evento personalizado Braze que puede utilizar para activar una campaña o Canvas.
+Ten en cuenta que el stock de un artículo del catálogo debe estar a cero para que un usuario pueda suscribirse a él con éxito. Cuando un artículo tiene una cantidad de inventario que cumple su regla de inventario, buscaremos a todos sus usuarios suscritos a ese artículo (usuarios que realizaron el evento de suscripción) y enviaremos un evento personalizado Braze que puede utilizar para activar una campaña o Canvas.
 
-Las propiedades del evento se envían junto con el usuario, por lo que puede introducir los detalles del elemento en la campaña o el lienzo que envía.
+Las propiedades del evento se envían junto con tu usuario, por lo que puedes introducir la plantilla con los detalles del elemento en la campaña o Canvas que envía.
 
 ## Configurar las notificaciones de reposición de existencias
 
@@ -50,7 +50,7 @@ Siga estos pasos para configurar las notificaciones de agotado en un catálogo e
     }
     ```
 {% alert note %}
-Los desencadenadores de reposición de existencias y de bajada de precios utilizan el mismo evento para suscribir al usuario a la notificación, por lo que puedes utilizar la matriz `type` para establecer tanto las notificaciones de bajada de precios como las de reposición de existencias en el mismo evento.
+Los desencadenantes de reposición de existencias y de bajada de precios utilizan el mismo evento para suscribir al usuario a la notificación, por lo que puedes utilizar la propiedad `type` para establecer tanto las notificaciones de bajada de precios como las de reposición de existencias en el mismo evento. Nota que la propiedad `type` debe ser una matriz.
 {% endalert %}
 
 {: start="4"}

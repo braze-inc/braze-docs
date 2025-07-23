@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version de juillet 2021."
 
 ## Message in-app de l'enquête simple
 
-Utilisez le [modèle de message in-app de l'enquête simple]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) pour collecter les attributs, informations et préférences des utilisateurs qui alimentent votre stratégie de communication. Par exemple, vous pouvez demander aux utilisateurs comment ils aimeraient utiliser votre application, en savoir plus sur leurs préférences personnelles, ou même sur leur satisfaction concernant une fonctionnalité en particulier. Ce modèle d’enquête est pris en charge pour les applications mobiles et les navigateurs Web.
+Utilisez le [modèle de message in-app de l'enquête simple]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/) pour collecter les attributs, informations et préférences des utilisateurs qui alimentent votre stratégie de communication. Par exemple, vous pouvez demander aux utilisateurs comment ils aimeraient utiliser votre application, en savoir plus sur leurs préférences personnelles, ou même sur leur satisfaction concernant une fonctionnalité en particulier. Ce modèle d’enquête est pris en charge pour les applications mobiles et les navigateurs Web.
 
 ## Bibliothèque de scénarios d’utilisation de Liquid
 
@@ -18,11 +18,11 @@ Vous vous demandez comment faire quelque chose avec Liquid ? Vous cherchez just
 
 ## Suivi des e-mails
 
-Le Suivi du pixel d’ouverture et des clics dans les e-mails peut maintenant être désactivé par profil utilisateur. Cette flexibilité vous aide à respecter les règlements sur la protection de la vie privée, dans lesquels un profil utilisateur individuel peut indiquer qu’il ne souhaite plus être suivi. Consultez notre article sur le [suivi des e-mails]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) pour en savoir plus.
+Le Suivi du pixel d’ouverture et des clics dans les e-mails peut maintenant être désactivé par profil utilisateur. Cette flexibilité vous aide à respecter les règlements sur la protection de la vie privée, dans lesquels un profil utilisateur individuel peut indiquer qu’il ne souhaite plus être suivi. Consultez notre article sur le [suivi des e-mails]({{site.baseurl}}/user_guide/analytics/tracking/email_tracking/) pour en savoir plus.
 
 ## Options de collecte de données du SDK
 
-Découvrez comment le SDK de Braze peut être intégré pour permettre une collecte de données flexible dans notre nouvelle documentation sur les [options de collecte de données du SDK.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)
+Découvrez comment le SDK de Braze peut être intégré pour permettre une collecte de données flexible dans notre nouvelle documentation sur les [options de collecte de données du SDK.]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)
 
 ## Vue d’ensemble du SSL
 

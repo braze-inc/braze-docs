@@ -114,7 +114,7 @@ Além disso, você pode decidir quais segmentos adicionais considera mais apropr
 
 ## Etapa 6: Eventos de conversão
 
-O Braze sugere configurações padrão para conversões, mas você pode querer configurar [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) em torno de primers push.
+O Braze sugere configurações padrão para conversões, mas você pode querer configurar [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) em torno de primers push.
 
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/

@@ -31,7 +31,7 @@
 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-| `https://dashboard-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
+| `https://dashboard.us-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
@@ -46,7 +46,7 @@
 |US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 |US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|US-10| `https://dashboard-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
+|US-10| `https://dashboard.us-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
 |AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |

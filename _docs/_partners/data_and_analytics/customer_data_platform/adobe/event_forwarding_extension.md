@@ -59,7 +59,7 @@ Create a new [event forwarding secret](https://experienceleague.adobe.com/docs/e
 
 After installing the extension, create a new event forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) and configure its conditions as desired. When configuring the actions for the rule, select the **Braze** extension, then select **Send Event** for the action type.
 
-![][1]
+![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
 {% tab User Identification %}
@@ -122,7 +122,7 @@ All attributes added within the configuration will be sent each time the event i
 
 After installing the extension, create a new event forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) and configure its conditions as desired. When configuring the actions for the rule, select the **Braze** extension, then select **Send Purchase Event** for the action type.
 
-![][3]
+![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
 {% tab User Identification %}
@@ -190,5 +190,3 @@ All attributes added within the configuration will be sent each time the event i
 
 If the event collection and Adobe Experience Platform integration were successful, you will see events within the Braze console when [viewing user profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Specifically, the new event data sent to Braze is reflected in the **Purchases** or **Custom Events** section of a particular user’s [overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 
-[1]: {% image_buster /assets/img/efe.png %} 
-[3]: {% image_buster /assets/img/efe2.png %}

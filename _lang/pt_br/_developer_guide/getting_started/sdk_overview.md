@@ -9,7 +9,7 @@ page_order: 0
 
 > Antes de começar a integrar os SDKs da Braze, você pode se perguntar o que exatamente está desenvolvendo e integrando. Talvez você esteja curioso para saber como pode personalizar o SDK para atender ainda mais às suas necessidades. O objetivo deste artigo é tirar as suas dúvidas sobre o SDK. 
 
-Você é um profissional de marketing e está procurando um resumo básico do SDK? Em vez disso, dê uma olhada em nossa [visão geral para profissionais de marketing]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/).
+Você é um profissional de marketing e está procurando um resumo básico do SDK? Em vez disso, dê uma olhada em nossa [visão geral para profissionais de marketing]({{site.baseurl}}/user_guide/getting_started/web_sdk/).
 
 Em resumo, o SDK da Braze:
 * Coleta e sincroniza dados de usuários em um perfil de usuário consolidado
@@ -29,7 +29,7 @@ O SDK da Braze foi projetado para ser discreto e não interferir em outros SDKs 
 
 ## Análise de dados padrão e tratamento de sessões
 
-Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e do fim da sessão, todos os outros dados rastreados automaticamente não contam para a sua cota de pontos de dados.
+Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e do fim da sessão, todos os outros dados rastreados automaticamente não contam para a sua cota de pontos de dados.
 
 {% alert note %}
 Todos os nossos recursos são configuráveis, mas é uma boa ideia implementar completamente o modelo padrão de coleta de dados.
@@ -67,7 +67,7 @@ O bloqueio da coleta de dados não é recomendado porque a remoção de dados an
 {% tabs %}
 {% tab SDK da Web %}
 
-Você pode simplesmente não integrar determinadas partes do SDK ou usar [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) para um usuário. Esse método sincronizará os dados registrados antes de `disableSDK()` ter sido chamado e fará com que todas as chamadas subsequentes ao Braze Web SDK para essa página e para futuros carregamentos de página sejam ignoradas. Para retomar a coleta de dados, use o método [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk). Para saber mais, consulte o artigo [Desativação do rastreamento Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/).
+Você pode simplesmente não integrar determinadas partes do SDK ou usar [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) para um usuário. Esse método sincronizará os dados registrados antes de `disableSDK()` ter sido chamado e fará com que todas as chamadas subsequentes ao Braze Web SDK para essa página e para futuros carregamentos de página sejam ignoradas. Para retomar a coleta de dados, use o método [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk). Para saber mais, consulte o artigo [Desativação do rastreamento Web]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web).
 
 {% endtab %}
 {% tab SDK para Android %}
@@ -87,7 +87,7 @@ Você pode atribuir um conjunto de campos elegíveis a [`configuration.devicePro
 Por padrão, todos os campos são coletados pelo Braze Swift SDK. A remoção de algumas propriedades do dispositivo pode desativar os recursos do SDK.
 {% endalert %}
 
-Para saber mais, consulte [Armazenamento]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage) na documentação do Swift SDK.
+Para saber mais, consulte [Armazenamento]({{site.baseurl}}/developer_guide/storage/?tab=swift) na documentação do Swift SDK.
 
 {% endtab %}
 {% endtabs %}
@@ -99,6 +99,6 @@ Use o dashboard para ver a versão do SDK de um determinado app em **Configuraç
 ![Um app chamado Swifty em um espaço de trabalho. A versão do Live SDK é 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
-Se você tiver um app iOS, confirme se está usando o [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) em vez do antigo [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) se a **versão do SDK ativa** for igual ou superior a 5.0.0, que foi a primeira versão lançada do Swift SDK.
+Se você tiver um app iOS, confirme se está usando o [Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) em vez do antigo [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) se a **Versão do Live SDK** for igual ou superior a 5.0.0, que foi a primeira versão lançada do Swift SDK.
 {% endalert %}
 

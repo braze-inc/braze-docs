@@ -33,7 +33,7 @@ Surface Braze data into the customer service agent view while communicating with
 
 You must be a Dixa administrator to configure integrations within Dixa. For the Braze integration, in Dixa, go to **Settings** > **Integrations** > **Braze**.
 
-![][1]{: style="width:450px;"}
+![]({% image_buster /assets/img/dixa/dixa-create-integration.png %}){: style="width:450px;"}
 
 ### Step 1: Create the integration in Dixa
 
@@ -77,7 +77,5 @@ Choose to show or hide a list products purchased by the user. Here, you can see 
 
 The following shows an example of the integration:
 
-![The Braze and Dixa integration in Dixa that displays a user's email subscription state, custom attributes, custom events, and purchases.][2]{: style="width:350px;"}
+![The Braze and Dixa integration in Dixa that displays a user's email subscription state, custom attributes, custom events, and purchases.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
 
-[1]: {% image_buster /assets/img/dixa/dixa-create-integration.png %}
-[2]: {% image_buster /assets/img/dixa/dixa-braze-integration.png %}

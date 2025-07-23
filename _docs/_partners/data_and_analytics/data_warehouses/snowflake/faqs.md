@@ -27,4 +27,12 @@ You might have used the wrong Snowflake account ID when creating your data share
 
 If your share is cross region, the data might not be immediately available. Depending on your data volume, it could take a few hours for data to sync to your region.
 
+### Why am I receiving a HIPAA compliance error when creating a data share?
+
+The specified account is either not HIPAA-compliant or on [Snowflake Editions](https://docs.snowflake.com/en/user-guide/intro-editions) lower than Business Critical. Your Snowflake account must be upgraded to the Business Critical Edition to be HIPAA-compliant for data sharing. Contact Snowflake support for further assistance with upgrading your account.
+
+### Why can't I recreate a data share after deleting one?
+
+The system may still be processing the deletion of your previous data share. Wait a few minutes for the deprovisioning process to complete, then try creating the new data share again.
+
 

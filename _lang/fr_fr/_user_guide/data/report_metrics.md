@@ -370,7 +370,7 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 SMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Taux de réception/distribution échouée' %}
+{% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
 
 Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour obtenir de l'aide afin de comprendre les raisons des échecs de réception/distribution.
 
@@ -658,7 +658,7 @@ WhatsApp
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md indicateurs='Taux de lecture' %}
+{% multi_lang_include metrics.md metric='Read Rate' %}
 
 <span class="calculation-line">Calcul : (lectures avec accusés de réception) / (envois)</span>
 
@@ -804,6 +804,8 @@ E-mail
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} Si un e-mail reçoit un échec provisoire d'envoi, nous effectuons généralement une nouvelle tentative dans les 72 heures, mais le nombre de tentatives varie d'un destinataire à l'autre.
+
+Bien que les échecs provisoires ne soient pas pris en compte dans l'analyse/analytique de votre campagne, vous pouvez surveiller les échecs provisoires dans le [journal d'activité du message.]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) Vous pouvez également exclure ces utilisateurs de vos envois ou examiner le nombre d'échecs provisoires d'envois des 30 derniers jours à l'aide du [filtre du segment des échecs provisoires d']({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced)envois. Dans le journal d'activité des messages, vous pouvez également voir la raison des échecs provisoires et comprendre les écarts éventuels entre les "envois" et les "réception/distributions" de vos campagnes de communication par e-mail.
 
 {% endapi %}
 

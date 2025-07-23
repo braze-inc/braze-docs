@@ -13,10 +13,6 @@ description: "Este artigo aborda a página APIs e identificadores, que exibe as 
 
 Você pode encontrar a página **APIs e identificadores** em **Configurações**.
 
-{% alert note %}
-Se estiver usando a navegação mais antiga, essa página se chama **Configurações da API** e está localizada em **Configurações** > **Gerenciar configurações**.
-{% endalert %}
-
 ### Chaves de API
 
 Esta seção fornece as chaves da API REST do seu espaço de trabalho, os identificadores exclusivos que permitem o acesso aos seus dados para um espaço de trabalho. Uma chave de API REST é necessária em cada solicitação à API da Braze. Para saber mais sobre como criar e usar chaves de API, consulte nossa [visão geral da chave da API REST]({{site.baseurl}}/api/api_key/).

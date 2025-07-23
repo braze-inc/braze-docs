@@ -11,7 +11,7 @@ search_tag: Partner
 
 # MyPostcard
 
-> [MyPostcard][1], a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. 
+> [MyPostcard](https://www.mypostcard.com), a leading global postcard app, empowers you to execute direct mail campaigns with ease, providing a seamless and profitable way to connect with your customers. 
 
 Use the MyPostcard and Braze integration to effortlessly send your customers print mailings.
 
@@ -34,7 +34,7 @@ To elevate your direct mail campaigns, it’s crucial to move beyond traditional
 
 ## Integration
 
-To integrate with MyPostcard, [log in or sign up][2] and create your first campaign to use it through [Braze webhooks][3].
+To integrate with MyPostcard, [log in or sign up](https://www.mypostcard.com/b2b/admin/) and create your first campaign to use it through [Braze webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks).
 
 ### Step 1: Create your Braze webhook template
 
@@ -90,20 +90,15 @@ MyPostcard requires an HTTP method along with the following HTTP headers to be i
 
 Copy the request body displayed in the B2B Admin Tool, then fill in the placeholders with content using any Liquid personalization tags.
 
-![Compose Tab showing the JSON body and webhook information.][4]
+![Compose Tab showing the JSON body and webhook information.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
 
 ### Step 2: Preview your request
 
 Next, preview your request in the **Preview** panel or go to the **Test** tab, where you can choose a random user, an existing user, or create a custom user to test your webhook. Don’t forget to save your template before leaving the page!
 
-![Test Webhook Tab with different fields to validate the implementation.][5]
+![Test Webhook Tab with different fields to validate the implementation.]({% image_buster /assets/img/mypostcard/mypostcard_test.jpg %})
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-[1]: https://www.mypostcard.com
-[2]: https://www.mypostcard.com/b2b/admin/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks
-[4]: {% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %}
-[5]: {% image_buster /assets/img/mypostcard/mypostcard_test.jpg %}

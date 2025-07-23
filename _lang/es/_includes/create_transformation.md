@@ -1,9 +1,5 @@
 En el panel de Braze, ve a **Configuración de Datos** > **Transformación de Datos**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **las Transformaciones** en **Datos**.
-{% endalert %}
-
 Selecciona **Crear transformación** para darle un nombre a tu transformación y, a continuación, elige tu experiencia de edición.
 
 ![Detalles de la transformación con la opción de elegir "Usar una plantilla" o "Empezar de cero" para tu experiencia de edición.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})

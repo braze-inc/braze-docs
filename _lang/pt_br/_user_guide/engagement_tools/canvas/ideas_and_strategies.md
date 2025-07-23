@@ -8,9 +8,9 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "Esta landing page contém ideias e estratégias do Canvas, incluindo práticas recomendadas, uma lista de verificação pré e pós-lançamento e orientações sobre o lançamento com o Canvas Flow."
+description: "Esta landing page contém ideias e estratégias do Canvas, incluindo práticas recomendadas, uma lista de verificação pré e pós-lançamento e orientações sobre o lançamento com o Canvas."
 
-guide_featured_title: "Artigos"
+guide_featured_title: "Artigos de seção"
 guide_featured_list:
   - name: Práticas recomendadas
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
@@ -21,17 +21,26 @@ guide_featured_list:
   - name: Lançamento com o Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: Localização
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Uso de modelos do Braze Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Localização
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
-    image: /assets/img/braze_icons/globe-02.svg
   - name: Enviar canvas de teste
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Pontuação de leads
     link: /docs/user_guide/getting_started/b2b_use_cases/lead_scoring/
     image: /assets/img/braze_icons/dataflow-02.svg
+  - name: Sistema de envio de e-mail para lembretes de reservas
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
+    image: /assets/img/braze_icons/channel-email.svg
+  - name: Casos de uso de comércio eletrônico
+    link: /docs/ecommerce_use_cases/
+    image: /assets/img/braze_icons/users-01.svg
 
 ---

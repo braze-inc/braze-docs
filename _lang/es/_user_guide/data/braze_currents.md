@@ -38,7 +38,9 @@ guide_featured_list:
 - name: "Transferencia de datos a Redshift"
   link: /docs/user_guide/data/braze_currents/transferring_data_to_redshift/
   image: /assets/img/braze_icons/switch-horizontal-01.svg
-
+- name: "Currents FAQ"
+  link: /docs/user_guide/data/braze_currents/faq/
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## Capacidades de Currents

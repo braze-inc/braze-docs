@@ -51,7 +51,7 @@ Next, let's assign our conversion event. Because our focus is on our "Enormous P
 2. Select **Make a specific purchase**. This allows us to select a specific product name.
 3. Select **Enormous Paper Plate**.
 
-![Primary Conversion Event - A with the conversion type "Makes Purchase" with the product name "Enormous Paper Plate". There is a 3-day conversion deadline.][1]
+![Primary Conversion Event - A with the conversion type "Makes Purchase" with the product name "Enormous Paper Plate". There is a 3-day conversion deadline.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### Step 3: Set an entry schedule
 
@@ -62,19 +62,19 @@ While this template's entry schedule is set to **API-Triggered**, our use case w
 3. For the entry window, select the start time date.
 4. Select the option to allow users to enter in their local time zone. This can keep our messaging relevant and lead to higher engagement if messages are sent at optimal times.
 
-![An action-based Canvas that targets users who have abandoned their cart, with the entry window October 15, 2024 3:20 pm at the users' local time zone.][2]
+![An action-based Canvas that targets users who have abandoned their cart, with the entry window October 15, 2024 3:20 pm at the users' local time zone.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### Step 4: Determine who enters the Canvas
 
 Next, let's define our target audience as users who have shopped exclusively online with us in the past 90 days. This helps us narrow our audience down to users we know are engaged with our products. 
 
-!["Online Shoppers Segment - 90 Days" as the segment of users to target for this Canvas.][3]
+!["Online Shoppers Segment - 90 Days" as the segment of users to target for this Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 We'll leave the entry controls as is, so users aren't allowed to re-enter this Canvas and there's no limit to the number of people who can potentially enter this Canvas.
 
 For the exit criteria, users will exit the Canvas if they have purchased the "Enormous Paper Plate". This way they won't receive further messages about an item they've already purchased.
 
-![Exit criteria that determines users who make a specific purchase for the enormous paper plate will exit the Canvas.][4]
+![Exit criteria that determines users who make a specific purchase for the enormous paper plate will exit the Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### Step 5: Select your send settings
 
@@ -87,14 +87,14 @@ Now, we’ll build our Canvas by customizing the templated steps:
 1. Select the Action Paths step, then select the **Made purchase** action group name.
 2. For **Make Purchase**, select **Make A Specific Purchase** and choose **Enormous Paper Plate** for the product. Similar to the exit criteria, users who purchase this product will exit the Canvas.
 
-!["Made purchase" action group that will exit the Canvas if the user purchases the enormous paper plate.][5]
+!["Made purchase" action group that will exit the Canvas if the user purchases the enormous paper plate.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3. For the Message step, select **Edit message** to customize the email that will be sent to our users, notifying them of the items in their abandoned cart.
 4. Keep the Delay step as is.
 5. In the Message steps subsequent to the Audience Path step, we'll customize the email and SMS message that our users will receive. This is where we want to encourage our users to purchase products with personalized messaging.
 
-![A preview of the SMS message that users will receive: "Hi there, you left the enormous paper plate behind in your cart! Complete your purchase now and step up your hosting game. Use code MYPLATE at checkout for 20 percent off your order!"][6]
+![A preview of the SMS message that users will receive: "Hi there, you left the enormous paper plate behind in your cart! Complete your purchase now and step up your hosting game. Use code MYPLATE at checkout for 20 percent off your order!"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6. In the next Action Paths step, select the **Made purchase** action group. Then, select **Make a specific purchase** and choose **Enormous Paper Plate** for the product. This step will mirror the first Action Paths step by exiting users who have purchased our product so they won't receive further messaging.
@@ -112,9 +112,3 @@ After testing and reviewing our Canvas to make sure it works as expected, select
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/abandoned_intent2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/abandoned_intent3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/abandoned_intent4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/abandoned_intent5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/abandoned_intent6.png %}

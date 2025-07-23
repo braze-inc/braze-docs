@@ -83,7 +83,7 @@ Mantenha os cartões de conteúdo relevantes, configurando-os para serem descart
 
 | Cartões de conteúdo para Android | Cartões de conteúdo para iOS | Cartões de conteúdo para a Web |
 | --- | --- |---|
-| O SDK para Android não oferece suporte a GIFs animados por padrão. Para obter mais detalhes sobre a ativação do suporte a GIFs, consulte [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | O Swift SDK não oferece suporte a GIFs animados por padrão. Para obter mais detalhes sobre a ativação do suporte a GIFs, consulte o [tutorial de suporte a GIFs](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | O suporte a GIF está incluído por padrão na integração do SDK Web. |
+| O SDK para Android não oferece suporte a GIFs animados por padrão. Para obter mais detalhes sobre a ativação do suporte a GIFs, consulte [GIFs]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android). | O Swift SDK não oferece suporte a GIFs animados por padrão. Para obter mais detalhes sobre a ativação do suporte a GIFs, consulte o [tutorial de suporte a GIFs](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | O suporte a GIF está incluído por padrão na integração do SDK Web. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>

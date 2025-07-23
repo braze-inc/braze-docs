@@ -409,11 +409,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: Actualizar un elemento de un catálogo.
+    description: Sustituye un elemento de un catálogo.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: Actualizar varios elementos de un catálogo.
+    description: Sustituye varios elementos de un catálogo.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,7 +437,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Usuarios/{id}</a>"
-    description: Busca una cuenta de usuario existente en el panel especificando su dirección de correo electrónico.
+    description: Busca una cuenta de usuario existente en el panel especificando su ID de recurso.
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Usuarios/{id}</a>"

@@ -21,6 +21,6 @@ Tool:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/geofences.md developer_ %}
+{% multi_lang_include developer_guide/swift/geofences.md %}
 {% endsdktab %}
 {% endsdktabs %}

@@ -25,10 +25,6 @@ Voir la section [Nombre de consommations](#consumption-count) de cet article pou
 
 Pour voir votre utilisation des points de données, allez dans **Paramètres** > **Facturation** et sélectionnez l'onglet **Utilisation Totale des Points de Données**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page en sélectionnant l'icône de votre compte > **Abonnements et utilisation** > **Utilisation totale des points de données**.
-{% endalert %}
-
 Pour plus d'informations sur les composants du tableau de bord des points de données, consultez [Facturation]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/).
 
 {% alert tip %}

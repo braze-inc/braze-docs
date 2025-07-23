@@ -39,6 +39,31 @@ You can also target users of one or more previously created segments that also f
 
 ![Targeting options for a message that include two segments and have an additional filter for a last purchase made less than 30 days ago.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
 {% endtab %}
+
+{% tab Specific apps %}
+
+You can deliver a campaign message or Canvas step to specific apps, such as sending an in-app message or push notification to only Android or iOS apps.
+
+However, remember that it’s possible for one user to use multiple apps. The “Has app” filter identifies all users who have the selected app, but doesn't control which apps receive messages. For example, if you apply a segment filter where “Has app” is set to Android, any users who also have the iOS app will also receive the message on their iOS app.
+
+![A filter for users who have the app "Hello, World (Android)".]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+
+Let's say you want to send an in-app message only to Android apps.
+
+1. Create a segment and set **Apps and websites targeted** to **Users from specific apps**, then select your Android app.
+
+![A segment targeting users from a specific app, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+
+{: start="2"}
+2. In your campaign or Canvas, go to the **Target Audiences** step and confirm that your segment is added in the **Target Users By Segment** section. 
+
+![The "Target Audiences" step with an example segment selected.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+
+{% alert note %}
+This won't work if you add your segment in the **Additional Filters** section through a segment membership filter. You must directly reference your segment in **Target Users By Segment** to deliver your message only to that app.
+{% endalert %}
+
+{% endtab %}
 {% endtabs %}
 
 {% alert tip %}
@@ -70,6 +95,10 @@ Braze provides detailed audience statistics of the targeted channels in the foot
 - To determine an accurate number for your reachable users, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics), as this will search through every user in your user base.
 - To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
 - To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
+
+##### Why the target audience count could differ from the reachable users count
+
+{% multi_lang_include segments.md section='Differing audience size' %}
 
 ![The "Total Population" section with estimated counts for reachable users in each targeted channel.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 

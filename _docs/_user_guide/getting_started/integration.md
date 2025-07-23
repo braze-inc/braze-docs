@@ -47,7 +47,7 @@ Be sure to tell your developers which channels you want to use to ensure that im
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
 | Email | This is an entirely different process. Check out the [Email Setup]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) section for more details on integration. |
 | Content Cards | To get started with [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), reach out to your Braze customer success manager. |
-| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) section for more details on integration. |
+| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) section for more details on integration. |
 | Webhooks | Requires SDK implementation as well as channel-specific steps. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

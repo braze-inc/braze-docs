@@ -28,7 +28,7 @@ Modal 인앱 메시지는 선택한 이미지 또는 문구의 크기와 비율�
 
 인앱 메시지(버튼, 헤드라인, 본문 등)에 포함할 수 있는 텍스트 글자 수에는 제한이 없지만, 사용하는 텍스트 글자 수를 조절할 수 있습니다. 텍스트가 너무 많으면 사용자가 메시지를 확장하고 스크롤해야 합니다.
 
-모든 인앱 메시지의 권장 이미지 크기는 500KB, 최대 이미지 크기는 5MB이며 PNG, JPG, GIF 파일 유형을 지원합니다.
+모든 인앱 메시지의 권장 이미지 크기는 500KB, 최대 이미지 크기는 5MB이며 PNG, JPEG, GIF 파일 유형을 지원합니다.
 
 {% tabs %}
 {% tab 인물 사진 %}
@@ -103,7 +103,7 @@ table td {
     <td>2:1(권장)</td>
     <td>최대 1038 x 1038 픽셀</td>
     <td>5 MB</td>
-    <td>PNG, JPG, GIF</td>
+    <td>PNG, JPEG, GIF</td>
     <td>2020년 1월부터 iOS 리치 푸시 알림은 1038 x 1038 픽셀의 이미지가 10MB 미만인 경우 처리할 수 있지만, 가능한 한 작은 파일 크기를 사용하는 것이 좋습니다. 실제로 대용량 파일을 전송하면 불필요한 네트워크 스트레스가 발생하고 다운로드 시간 초과가 더 자주 발생할 수 있습니다.<br><br>자세한 내용은 <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS 리치 알림</a>을 참조하세요.</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ table td {
     <td>1:1</td>
     <td>N/A</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td></td>
   </tr>
   <tr>
@@ -119,7 +119,7 @@ table td {
     <td>2:1</td>
     <td>작음: 512 x 256 픽셀<br>중간: 1024 x 512 픽셀<br>큼: 2048 x 1024 픽셀</td>
     <td>500 KB</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android 리치 알림에</a> 사용됩니다.</td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ table td {
     <td>3:2</td>
     <td>N/A</td>
     <td>N/A</td>
-    <td>PNG, JPG</td>
+    <td>PNG, JPEG</td>
     <td>자세한 내용은 <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android 인라인 이미지 푸시</a>를 참조하세요.</td>
   </tr>
 </table>
@@ -147,7 +147,7 @@ table td {
 | --- | --- | 
 | 크기 | 5 MB |
 | 폭 | 헤더: 600 픽셀<br>본문: 480 픽셀 |
-| 파일 유형 | PNG, JPG, GIF |
+| 파일 유형 | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | 텍스트 사양 | 권장 최대 속성 |

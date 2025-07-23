@@ -27,7 +27,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "Advanced Campaign Settings"
-  link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
+  link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
   image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Utilizing Badge Count"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/

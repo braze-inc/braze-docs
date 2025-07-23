@@ -34,6 +34,9 @@ guide_featured_list:
   - name: "POST: Rastreamento de usuários"
     link: /docs/api/endpoints/user_data/post_user_track/
     image: /assets/img/braze_icons/database-01.svg
+  - name: "POST: Rastreamento de usuários (síncrono)"
+    link: /docs/api/endpoints/user_data/post_user_track_synchronous/
+    image: /assets/img/braze_icons/database-01.svg
   - name: "POST: Mesclar usuários"
     link: /docs/api/endpoints/user_data/post_users_merge/
     image: /assets/img/braze_icons/users-01.svg

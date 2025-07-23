@@ -4,25 +4,30 @@ article_title: Criterios de salida
 page_order: 4.1
 alias: /exit_criteria/
 page_type: reference
-description: "Este artículo de referencia cubre la función Criterios de salida para el Flujo de Canvas."
+description: "Este artículo de referencia trata de los criterios de salida y de cómo los usuarios pueden salir de tu Canvas en función de los criterios seleccionados."
 tool: Canvas
 ---
 
 # Criterios de salida
 
-> Al añadir [eventos de excepción]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directamente a tus reglas de entrada de Canvas, tus usuarios pueden salir de tu Canvas en cuanto se produzca el evento al final del paso. Esto ayuda a conseguir un enfoque más específico de la mensajería de Canvas con tu audiencia.
+> Al añadir eventos de excepción directamente a tus reglas de entrada de Canvas, tus usuarios pueden salir de tu Canvas en cuanto se produzca el evento al final del paso. Esto ayuda a conseguir un enfoque más específico de la mensajería de Canvas con tu audiencia.
 
-En el paso **Público objetivo** del constructor de Canvas, puede establecer criterios de salida para identificar qué usuarios desea que salgan de su Canvas. Añade tu evento de excepción y, a continuación, selecciona **Añadir desencadenante**. 
+## Configuración de los criterios de salida
 
-También puede incluir segmentos y filtros en los criterios de salida, lo que significa que los usuarios que coincidan con el segmento o el filtro saldrán del lienzo y no recibirán más mensajes. Si el primer paso de un Lienzo es un paso de Retraso con un retraso de cinco días, los criterios de salida se aplicarán al final de este paso. Así, si un usuario cumple los criterios de salida, saldrá al final de los cinco días.
+En el paso **Público objetivo** del constructor de Canvas, puede establecer criterios de salida para identificar qué usuarios desea que salgan de su Canvas. 
 
-{% alert note %}
-Los atributos de matriz no se admiten actualmente como criterios de salida en eventos de excepción.
-{% endalert %}
+Los criterios de salida incluyen un evento de excepción, que es la acción específica que puede provocar que los usuarios salgan del Canvas.
 
-## Eventos de excepción
+![Los criterios de salida configurados para reactivar la interacción de los usuarios que han navegado por los productos pero aún no los han añadido a su cesta ni han realizado un pedido.][1]{: style="max-width:90%;"}
+
+### Seleccionar eventos de excepción {#exception-events}
+
+Cuando un usuario realice el evento de excepción, saldrá del Canvas. Ten en cuenta que los eventos de excepción sólo desencadenarán salidas cuando el usuario esté en el Canvas y avanzando por el recorrido del usuario.
+
+Supongamos que tienes un Canvas configurado para promocionar un nuevo producto. En este caso, la compra del producto sería el evento de excepción. De este modo, después de que un usuario realice la compra, no recibirá más mensajes sobre un producto que ya compró. Los eventos de excepción mantienen tu mensajería relevante y personalizada.
 
 Otros eventos de excepción son:
+
 - Realizar una compra
 - Iniciar una sesión
 - Realizar un evento personalizado
@@ -41,12 +46,28 @@ Otros eventos de excepción son:
 - Realización de un evento de pago completado
 - Realización de un evento de salida iniciada
 
-## Casos de uso
+### Utilización de segmentos y filtros
 
-Supongamos que quieres dirigirte a usuarios que aún no han realizado ninguna compra en tu empresa. Primero, selecciona **Realizar Compra** como evento de excepción. A continuación, selecciona **Añadir desencadenante**. Cuando se lance tu Canvas, tu audiencia excluirá a los usuarios que hayan realizado alguna compra con la siguiente configuración **de Criterios de salida**. 
+También puedes añadir segmentos y filtros en los criterios de salida. Esto significa que los usuarios que coincidan con el segmento o el filtro saldrán del Canvas y no recibirán más mensajería. 
 
-En el siguiente ejemplo, este criterio de salida también se aplica al segmento "Utilizado en el último día" para cualquier usuario que haya realizado exactamente una compra.
+Por ejemplo, si el primer paso de un Canvas es un paso de Retraso con un retraso de cinco días, los criterios de salida se aplicarán al final de este paso. Así, si un usuario cumple los criterios de salida, saldrá al final de los cinco días.
 
-![Configuración de Criterios de Salida con "Hace Cualquier Compra" como el evento de excepción, así que si un usuario hace cualquier compra, entonces saldrá de este Canvas.][1]
+{% alert note %}
+Los atributos de matriz no se admiten actualmente como criterios de salida en eventos de excepción.
+{% endalert %}
 
-[1]: {% image_buster /assets/img_archive/exit_criteria_example.png %} 
+## Ejemplo
+
+Supongamos que queremos dirigirnos a usuarios que aún no han realizado ninguna compra en nuestra empresa de suministro de mochilas. Para configurar los criterios de salida, lo haríamos:
+
+1. Selecciona **Realizar Compra** como evento de excepción.
+2. Selecciona **Añadir desencadenante**. 
+3. En **Segmentos**, selecciona **Utilizado en el último día** para que, cuando se lance nuestro Canvas, la audiencia excluya a los usuarios que hayan realizado alguna compra.
+4. Para **filtrar**, selecciona **Comportamiento de compra** > **Número de compras** > **Producto comprado**.
+5. Configura el grupo de filtrado en `backpack-example exactly 1`. Esto significa que los usuarios que han comprado nuestro producto mochila saldrían del Canvas.
+
+![Configuración de los Criterios de Salida con "Realiza cualquier compra" como evento de excepción, de modo que si un usuario realiza cualquier compra, entonces saldrá de este Canvas.][2]{: style="max-width:80%;"}
+
+
+[1]: {% image_buster /assets/img/exit_criteria.png %}
+[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}

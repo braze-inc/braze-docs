@@ -25,7 +25,7 @@ In the Braze dashboard, go to **Messaging** > **Canvas** and select an existing 
 
 In the Canvas editor, select **Edit Canvas** or **Edit draft**, depending on if your Canvas is active or in a draft. Expand the **Save as draft** dropdown in the footer and select **Save as template**.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Step 3: Save your template
 
@@ -45,7 +45,7 @@ If you are using the older navigation, you can find this page under **Engagement
 
 Select **Create template** and begin setting up your Canvas details. You can start by giving your Canvas template a name.
 
-![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".][1]
+![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Step 3: Customize your template
 
@@ -66,7 +66,7 @@ There are two ways to use your template when composing a Canvas:
 
 Braze has a selection of Canvas templates available for you to reference and use as best practices for common use cases. While these templates can't be edited, you can view them in **Templates** > **Braze templates** or use them in your Canvases.
 
-![Braze templates in the Canvas templates section with six available templates.][3]
+![Braze templates in the Canvas templates section with six available templates.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Select from the following available templates to reference or use as your Canvas.
 
@@ -162,6 +162,3 @@ Yes, you can save incomplete steps as a Canvas template. However, when the templ
 
 Yes, you can save settings in the Canvas builder within a Canvas template. For example, if you plan to use a combination of segments and filters often, you can save these **Target Audience** settings as part of your Canvas template.
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}
-[3]: {% image_buster /assets/img/braze_canvas_templates.png %}

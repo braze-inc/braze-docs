@@ -3,7 +3,7 @@ nav_title: Aperçu de Braze
 article_title: "Pour commencer : Aperçu de Braze"
 page_order: 1
 page_type: reference
-description: "Familiarisez-vous avec les concepts de base dont vous aurez besoin pour travailler dans Braze."
+description: "Familiarisez-vous avec les concepts de base que vous devrez connaître lorsque vous travaillerez dans Braze."
 
 ---
 

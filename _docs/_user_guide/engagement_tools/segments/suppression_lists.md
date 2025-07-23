@@ -1,7 +1,7 @@
 ---
 nav_title: Suppression Lists
 article_title: Suppression Lists
-page_order: 2.5
+page_order: 3
 page_type: reference
 tool: Segments
 description: "This page covers how to use suppression lists to specify which users should never receive your messages."
@@ -49,24 +49,24 @@ Suppression lists are dynamic and will automatically apply to all of the followi
 
 By default, suppression lists will apply to any API-triggered campaigns and API-triggered Canvases. You can change this by checking **Do not apply this suppression list to all API-triggered campaigns and API-triggered Canvases** in the **Exception Settings** section.
 
-![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.][6]{: style="max-width:70%;"}
+![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
 
 ## Setting up suppression lists
 
 Because suppression lists can significantly impact the messages you send, only admins can edit, save, active, and deactivate suppression lists (all users can view suppression lists).
 
-1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.][1]<br><br>
-2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.][2]{: style="max-width:80%;"}<br><br>
+1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
+2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
 3. Use segment filters to identify the users in your suppression lists. You must select at least one.
 
 {% alert important %}
 Though the setup process seems similar to [segment creation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
 {% endalert %}
 
-![A suppression list builder with a filter for users who last opened an email more than 90 days ago.][3]
+![A suppression list builder with a filter for users who last opened an email more than 90 days ago.]({% image_buster /assets/img/suppression_list_filters.png %})
 
 {: start="4"}
-4. Determine whether to have exceptions based on tag by checking the box beneath your segment name (refer to [How it works](#how-it-works) for more information), then add the tags of campaigns or Canvases that users in this suppression list should still receive. <br><br>In other words, if you add the exception tag “Shipping confirmation”, users in your suppression list will be excluded from all messaging except those that use the tag “Shipping confirmation".<br><br>![The "Shipping List Details" section with an exception tag applied called "Shipping confirmation".][4]<br><br>
+4. Determine whether to have exceptions based on tag by checking the box beneath your segment name (refer to [Why use suppression lists?](#why-use-suppression-lists) for more information), then add the tags of campaigns or Canvases that users in this suppression list should still receive. <br><br>In other words, if you add the exception tag “Shipping confirmation”, users in your suppression list will be excluded from all messaging except those that use the tag “Shipping confirmation".<br><br>![The "Shipping List Details" section with an exception tag applied called "Shipping confirmation".]({% image_buster /assets/img/exception_tags.png %})<br><br>
 5. Save or activate your suppression list.
 - When you save, your suppression list will be saved but won't be activated, which means it won't go into effect. Your suppression list will remain inactive until you activate it, and inactive suppression lists won't impact messaging (users won't excluded from messages).
 - When you activate, your suppression list will be saved and immediately go into effect, which means users in your suppression list will immediately be excluded from campaigns or Canvases (except for ones containing an exception tag).
@@ -83,7 +83,7 @@ You can deactivate or archive suppression lists when you no longer need them.
 
 To check if your suppression list prevented a user from receiving a message, use **User Lookup** in the **Target Audience** step within your campaign or Canvas. Here, you'll be able to see which suppression list they're part of.
 
-!["User Lookup" window showing that a user is in a suppression list.][7]{: style="max-width:70%;"}
+!["User Lookup" window showing that a user is in a suppression list.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 You can also find applied suppression lists in the **Summary** step.
@@ -91,7 +91,7 @@ You can also find applied suppression lists in the **Summary** step.
 
 While creating a campaign or Canvas, use **User Lookup** within the **Target Audience** step to search for a user, and if they aren't in the target audience, you can see the suppression list they're part of. 
 
-!["User Lookup" window showing that a user is in a suppression list.][7]{: style="max-width:70%;"}
+!["User Lookup" window showing that a user is in a suppression list.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 {% tabs local %}
 {% tab campaign %}
@@ -113,9 +113,3 @@ For example, let’s say you have a Canvas with an applied suppression list. The
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/suppression_lists_home.png %}
-[2]: {% image_buster /assets/img/create_suppression_list.png %}
-[3]: {% image_buster /assets/img/suppression_list_filters.png %}
-[4]: {% image_buster /assets/img/exception_tags.png %}
-[6]: {% image_buster /assets/img/suppression_list_checkbox.png %}
-[7]: {% image_buster /assets/img/suppression_list_user_lookup.png %}

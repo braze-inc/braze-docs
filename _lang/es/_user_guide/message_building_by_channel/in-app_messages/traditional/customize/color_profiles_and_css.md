@@ -14,10 +14,6 @@ channel:
 
 Vaya a **Plantillas** > **Plantillas de mensajes In-App**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará esta página en **Plantillas y medios**.
-{% endalert %}
-
 Desde esta página, puedes editar las plantillas existentes o hacer clic en **\+ Crear** y elegir **Perfil de color** o **Plantilla CSS** para crear nuevas plantillas y utilizarlas en tus mensajes dentro de la aplicación.
 
 ## Perfil de color

@@ -23,12 +23,15 @@ The following table describes how you can use each editor block type.
 | Title | Enters a title text into the message. |
 | Paragraph | Enters a paragraph text into the message. |
 | Button | Adds a standard button. Properties for this block allow for editing, setting links, and logging analytics. |
+| Radio Button | Adds a list of options from which users can select one. When submitted, the user profile logs the associated custom attribute. |
 | Image | Inserts an image from the media library. |
 | Link | Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | Spacer | Adds space or padding between other blocks. |
 | Custom Code | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
 | Phone Capture | Inserts a form field for phone numbers. When submitted, the user is subscribed to the SMS or WhatsApp subscription group. |
 | Email Capture | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
+| Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
+| Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Actions

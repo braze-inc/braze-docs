@@ -6,16 +6,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo traz informações sobre o endpoint da Braze \"Procurar uma conta de usuário no dashboard\"."
+description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braze Look up an existing dashboard user account resource ID."
 ---
 
 {% api %}
-# Procure uma conta de usuário de dashboard existente
+# Procure uma conta de usuário existente no dashboard por ID de recurso
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use este endpoint para procurar uma conta de usuário do dashboard existente especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/). 
+> Use este endpoint para procurar uma conta de usuário do dashboard existente especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/). 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 

@@ -108,7 +108,7 @@ Pour obtenir d’autres d'idées sur l'amélioration de la livrabilité, lisez [
 Si Microsoft est votre principal fournisseur de messagerie, vous pouvez utiliser cette intégration pour accéder à vos données de réputation Microsoft et les consulter. De cette façon, vous pouvez surveiller l’intégrité de vos adresses IP pour aider à déterminer comment vos e-mails sont reçus.
 
 {% alert important %}
-Si vous ne voyez pas vos données dans le Centre de livrabilité, contactez l’[assistance]({{site.baseurl}}/help/support/) avec une liste de vos adresses IP.
+Si vous ne voyez pas vos données dans le Centre de livrabilité, contactez l’[assistance]({{site.baseurl}}/user_guide/administrative/access_braze/support/) avec une liste de vos adresses IP.
 {% endalert %}
 
 ![][8]

@@ -85,7 +85,7 @@ Manteremos as configurações de inscrição padrão, para que enviemos apenas a
 Agora, criaremos nosso Canvas personalizando as etapas do modelo:
 
 1. Selecione a etapa Jornadas de ação e, em seguida, selecione o nome do grupo de ação **Compra efetuada**.
-2. Em **Make Purchase**, selecione **Make A Specific Purchase** e escolha **Enormous Paper Plate** como produto. Semelhante aos critérios de saída, os usuários que comprarem esse produto sairão do Canva.
+2. Em **Make Purchase**, selecione **Make A Specific Purchase** e escolha **Enormous Paper Plate** como produto. Semelhante aos critérios de saída, os usuários que comprarem este produto sairão do canva.
 
 ![Grupo de ação "Made purchase" que sairá do Canva se o usuário comprar o enorme prato de papel.][5]
 

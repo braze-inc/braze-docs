@@ -42,10 +42,6 @@ Les modèles dupliqués peuvent être trouvés en triant la colonne **Dernière 
 
 ## Modèles d'archivage
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), **Modèles** correspond à **Modèles et médias**.
-{% endalert %}
-
 ![Menu déroulant des paramètres étendus qui affiche trois options : Modifier, Archiver et Dupliquer, où l'option Archiver est mise en évidence.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 Pour archiver un modèle individuel, sélectionnez l'icône des paramètres dans l'écran de la grille des modèles et sélectionnez **Archiver**. Lorsqu'un modèle est archivé, notez les différents scénarios suivants :

@@ -30,10 +30,6 @@ Il existe deux états d’abonnement pour les utilisateurs de SMS : `subscribed
 - **Traitement automatique en cas d'abonnement/de désabonnement de l'utilisateur :** En envoyant par SMS un message d'abonnement ou de désabonnement par défaut [mot-clé :][7]], Braze définit et met à jour automatiquement l'état de l'abonnement de l'utilisateur.
 - **Import d'utilisateurs**: Les utilisateurs peuvent être ajoutés à des groupes d'abonnement e-mail ou SMS via l'**importation d'utilisateurs.** Si vous mettez à jour le statut du groupe d’abonnement, vous devez avoir les deux colonnes suivantes dans votre CSV : `subscription_group_id` et `subscription_state`. Reportez-vous à l'[importation d'utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) pour plus d'informations.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page s'appelle **Importation d'utilisateurs** et se trouve sous **Utilisateurs.**
-{% endalert %}
-
 Lorsqu'un numéro de téléphone est mis à jour dans un profil utilisateur, le nouveau numéro de téléphone hérite du statut du groupe d'abonnement de l'utilisateur. Si le numéro de téléphone est mis à jour vers un numéro qui existe déjà dans Braze, le statut d'abonnement de ce numéro de téléphone existant est hérité.
 
 Par exemple, si l'utilisateur A a un numéro de téléphone abonné à plusieurs groupes d'abonnement et que ce numéro de téléphone est ensuite ajouté à l'utilisateur B, l'utilisateur B sera abonné aux mêmes groupes d'abonnement. Pour empêcher un utilisateur d'hériter des abonnements existants, vous pouvez réinitialiser les groupes d'abonnement de l'ancien numéro via l'API REST chaque fois qu'un utilisateur change de numéro. Si plusieurs utilisateurs partagent ce numéro de téléphone, ils seront tous désabonnés.

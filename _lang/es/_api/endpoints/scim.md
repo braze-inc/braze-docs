@@ -17,7 +17,7 @@ guide_featured_list:
   - name: "POST: Crear cuenta de usuario en el panel"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "GET: Buscar cuenta de usuario del panel existente"
+  - name: "GET: Buscar cuenta de usuario existente en el panel por ID de recurso"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
   - name: "GET: Buscar cuenta de usuario existente en el panel por correo electrónico"

@@ -34,7 +34,7 @@ alias: /know_before_send/
 ## 이메일
 
 #### 확인할 사항
-- **고객 consent**: 초기 이메일을 보내기 전에 고객의 허락을 먼저 받는 것이 중요합니다. [동의 및 주소 수집]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) 및 자세한 내용은 당사의 [Braze 허용 사용 정책](https://www.braze.com/company/legal/aup)을 참조하십시오.
+- **고객 consent**: 초기 이메일을 보내기 전에 고객의 허락을 먼저 받는 것이 중요합니다. [동의 및 주소 수집]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/) 및 자세한 내용은 당사의 [Braze 허용 사용 정책](https://www.braze.com/company/legal/aup)을 참조하십시오.
 - **예상 볼륨**: 일일 200만 개의 이메일을 단일 IP로 보내는 것은 해당 볼륨이 [적절히 준비된]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming#ip-warming) 경우 일반적인 권장 사항입니다. 
   - 만약 이보다 더 많은 양을 지속적으로 보내려는 계획이 있다면, 제공업체가 이메일 수신을 제한하여 많은 소프트 바운스, 낮은 전달 가능성 비율, 그리고 IP 평판 저하를 초래하는 것을 피하기 위해, IP 풀에 묶인 여러 IP 주소를 사용하는 것을 고려하세요. 
   - 짧은 시간 내에만 보내고자 한다면, 다양한 제공업체가 메일을 수락하는 속도를 조사하여 적절한 IP 수를 파악하는 것을 권장합니다. 
@@ -48,7 +48,7 @@ alias: /know_before_send/
 ## 푸시
 
 #### 확인할 사항
-- [**옵트인/구독 및 푸시 사용**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): 사용자가 Braze로부터 푸시 메시지를 받으려면 구독 상태가 옵트인(iOS) 또는 구독(Android) 및 `Push Enabled = True`여야 합니다. Android 13은 푸시 알림을 보내는 앱을 관리하는 방식에 큰 변화를 도입했습니다. Braze [Android 13 소프트웨어 개발 키트 업그레이드 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/)는 새로운 Android 13 베타 버전이 출시될 때마다 계속 업데이트될 것입니다.
+- [**옵트인/구독 및 푸시 사용**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): 사용자가 Braze로부터 푸시 메시지를 받으려면 구독 상태가 옵트인(iOS) 또는 구독(Android) 및 `Push Enabled = True`여야 합니다. Android 13은 푸시 알림을 보내는 앱을 관리하는 방식에 큰 변화를 도입했습니다. Braze [Android 13 소프트웨어 개발 키트 업그레이드 가이드]({{site.baseurl}}/developer_guide/platforms/android/android_13/)는 새로운 Android 13 베타 버전이 출시될 때마다 계속 업데이트될 것입니다.
 
 #### 알아야 할 사항
 - **웹 푸시**: Braze [웹 SDK 설정]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)이 있는 경우 웹 푸시를 사용하여 사용자를 참여시키는 것을 고려하세요. 웹 푸시는 앱 푸시 알림이 휴대폰에서 작동하는 방식과 동일하게 작동합니다. 웹 푸시 작성에 대한 자세한 내용은 [푸시 알림 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)을 참조하세요.
@@ -92,5 +92,6 @@ alias: /know_before_send/
 #### 알아야 할 사항
 - **인앱 메시지 트리거링**: 세션 시작 시, SDK는 모든 적격 인앱 메시지가 트리거와 함께 기기로 전송되도록 요청하므로, 세션 중에 이벤트를 수행하면 인앱 메시지를 빠르고 신뢰성 있게 받을 수 있습니다. 이로 인해 캔버스 내에서 인앱 메시지는 커스텀 이벤트로 트리거될 수 없습니다.
 - **전송 대 노출 횟수**: 인앱 메시지의 경우, "발송됨"의 개념은 다른 사용 가능한 채널과 다릅니다. 인앱 메시지를 보려면 사용자가 세션을 시작하고, 해당 오디언스에 속하며, 트리거를 수행해야 합니다. 이 때문에 우리는 "노출 횟수"를 더 명확하게 추적합니다.
-- **트리거**: 기본값으로, 인앱 메시지는 SDK에 의해 기록된 이벤트에 의해 트리거됩니다. 서버에서 보낸 이벤트로 인해 인앱 메시지를 트리거하려면 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/) 및 [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization)에 대한 이러한 가이드를 통해서도 이를 달성할 수 있습니다.
-- [**캔버스 인-앱 메시지**]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): 이 메시지는 사용자가 앱을 처음 열 때(세션 시작 시 트리거됨) 캔버스 구성 요소에서 예약된 메시지가 전송된 후에 나타납니다.
+- **트리거**: 기본값으로, 인앱 메시지는 SDK에 의해 기록된 이벤트에 의해 트리거됩니다. 서버에서 보낸 이벤트로 인해 인앱 메시지를 트리거하려면 [iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift) 및 [Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android)에 대한 이러한 가이드를 통해서도 이를 달성할 수 있습니다.
+- [캔버스 인앱 메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): 이 메시지는 사용자가 앱을 처음 열 때(세션 시작 시 트리거됨) 캔버스 구성 요소에서 예약된 메시지가 전송된 후에 나타납니다.
+- **연결된 콘텐츠 호출**: 커넥티드 콘텐츠를 사용하면 메시지에서 동적 콘텐츠를 보낼 수 있습니다. 인앱 메시지와 같은 채널을 통해 메시지를 보내면 사용자의 디바이스에 더 많은 동시 접속자가 생길 수 있습니다(메시지는 일괄적으로 전송되지 않고 하나씩 전송됨). 이를 관리하려면 메시지 [속도 제한을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) 사용하는 것이 좋습니다.

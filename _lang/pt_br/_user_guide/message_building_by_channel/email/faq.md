@@ -25,6 +25,14 @@ As campanhas disparadas pela API desduplicarão ou enviarão desduplicações, d
 - **Cenário 2: Envio de e-mails duplicados em diferentes `user_ids` dentro do objeto de destinatários:** Se o mesmo e-mail aparecer em vários `External_user_IDs` referenciados pelo objeto `recipients``, o e-mail será enviado duas vezes.
 - **Cenário 3: Envio de e-mails duplicados devido a user_ids duplicados no objeto de destinatários:** Se você tentar adicionar o mesmo perfil de usuário duas vezes, apenas um dos perfis receberá o e-mail.
 
+### Como posso verificar se um endereço de e-mail já está associado a um usuário?
+
+Antes de criar um usuário por meio da API ou do SDK, chame o ponto de extremidade [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) e especifique o endereço do usuário `email_address`. Se retornar um perfil de usuário, esse usuário do Braze já está associado a esse endereço de e-mail.
+
+Recomendamos enfaticamente que você procure endereços de e-mail exclusivos quando novos usuários forem criados e evite enviar ou importar usuários com o mesmo endereço de e-mail. Caso contrário, você poderá ter consequências não intencionais que afetarão o envio de mensagens, o direcionamento, os relatórios e outros recursos.
+
+Por exemplo, digamos que você tenha perfis duplicados, mas determinados atributos personalizados ou eventos residam em apenas um perfil. Quando você tenta disparar campanhas ou Canvas com vários critérios, o Braze não consegue identificar o usuário como elegível porque há dois perfis de usuário. Ou, se uma campanha direcionar um endereço de e-mail compartilhado por dois usuários, a página **Pesquisar usuários** mostrará ambos os perfis de usuário como tendo recebido a campanha.
+
 ### As atualizações das minhas configurações de envio de e-mail serão aplicadas retroativamente?
 
 Não. As atualizações feitas nas configurações de e-mail de saída não afetam retroativamente os envios existentes. Por exemplo, a alteração de seu nome de exibição padrão nas configurações de e-mail não substituirá automaticamente o nome de exibição padrão existente em suas campanhas ativas ou Canvas. 
@@ -59,6 +67,12 @@ Você pode estar vendo mais cliques do que aberturas por qualquer um dos seguint
 - Os usuários estão realizando vários cliques no corpo do e-mail em uma única abertura.
 - Os usuários clicam em alguns links de e-mail no painel de visualização de seus telefones. Nesse caso, a Braze registra esse e-mail como tendo sido clicado, mas não aberto.
 - Os usuários reabrem um e-mail cuja prévia foi feita.
+
+### Por que estou vendo zero aberturas e cliques em e-mails?
+
+Você pode estar vendo zero aberturas e cliques de e-mail se houver uma configuração incorreta com seu domínio de rastreamento. Isso pode ser devido a qualquer um dos seguintes motivos:
+- Há um problema de SSL em que os URLs de rastreamento são `http` em vez de `https`.
+- Há um problema com a sua CDN em que a string do agente do usuário nos eventos de abertura, nos eventos de clique ou em ambos não está sendo preenchida.
 
 ### Quais são os possíveis riscos de disparar cliques no servidor?
 

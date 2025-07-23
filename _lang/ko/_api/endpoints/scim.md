@@ -17,7 +17,7 @@ guide_featured_list:
   - name: "POST: 대시보드 사용자 계정 만들기"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "GET: 기존 대시보드 사용자 계정 조회"
+  - name: "GET: 리소스 ID로 기존 대시보드 사용자 계정 조회하기"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
   - name: "GET: 이메일로 기존 대시보드 사용자 계정 검색"

@@ -1,7 +1,7 @@
 ---
 nav_title: Conocimiento de las funciones y nueva versión de la aplicación
 article_title: Conocimiento de las funciones y nueva versión de la aplicación
-page_order: 7
+page_order: 9
 page_type: reference
 description: "En este artículo de referencia se explica cómo mantener a los usuarios informados y entusiasmados cuando se lanzan nuevas funciones o versiones."
 tool: Campaigns

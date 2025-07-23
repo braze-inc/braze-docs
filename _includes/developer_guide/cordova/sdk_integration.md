@@ -6,6 +6,10 @@ Before you start, verify your environment is supported by the [latest Braze Cord
 
 ### Step 1: Add the SDK to your project
 
+{% alert warning %}
+Only add the Braze Cordova SDK using the methods below. Do not attempt to install using other methods as it could lead to a security breach.
+{% endalert %}
+
 If you're on Cordova 6 or later, you can add the SDK directly from GitHub. Alternatively, you can download a ZIP of the [GitHub repository](https://github.com/braze-inc/braze-cordova-sdk) and add the SDK manually.
 
 {% tabs local %}

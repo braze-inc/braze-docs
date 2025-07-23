@@ -28,7 +28,7 @@ Le contenu vidéo n’est disponible que si l’appareil dispose d’une vitesse
 
 ## Considérations relatives à Android
 
-Pour intégrer des vidéos et autres contenus HTML5 dans des messages in-app HTML sur Android, l’accélération matérielle est requise dans l’activité où le message in-app s’affiche. Pour plus d'informations, consultez le [guide du développeur Android]({{site.baseurl}}/developer_guide/platforms/android/in_app_messages/customization/youtube_in_html/).
+Pour intégrer des vidéos et autres contenus HTML5 dans des messages in-app HTML sur Android, l’accélération matérielle est requise dans l’activité où le message in-app s’affiche. Pour plus d'informations, consultez le [guide du développeur Android]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## Considérations relatives à iOS
 

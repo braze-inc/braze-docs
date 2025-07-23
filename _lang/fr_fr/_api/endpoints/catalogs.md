@@ -55,7 +55,7 @@ guide_menu_list3:
   - name: "POST : Créer un produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "PUT : Mise à jour de l'article du catalogue"
+  - name: "PUT : Remplacer l'article du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 

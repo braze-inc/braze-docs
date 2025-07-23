@@ -43,7 +43,7 @@ When the integration is successfully set, you can create email and push notifica
 ### Method 2
 In this method, you can integrate Braze with Zeotap through Symphony.
 
-- This method does not support the Braze UI features such as in-app messaging, News Feed, content cards, or push notifications.
+- This method does not support the Braze UI features such as in-app messaging, Content Cards, or push notifications.
 - Zeotap recommends mapping the `hashed email` available in Zeotap Catalogue to the `External ID`.
 
 When the integration is successfully set, you can only create email campaigns based on custom attributes sent to Braze through Symphony.
@@ -80,8 +80,8 @@ After creating a destination, next, you have to add workflow-level inputs, as me
 #### Data to send tab
 The **Data To Send** tab allows the you to map the Zeotap Catalogue fields to the Braze fields that can be sent to Braze. The mapping can be done in one of the following ways:
 - **Static Mapping** - There are certain fields that Zeotap automatically maps to the relevant Braze fields like email, phone, first name, last name, and so on.<br>
-- **Dropdown Selection** - Map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![Various user traits set in Zeotap, such as language, city, birthday, and more.][3]{: style="max-width:70%;"}<br>
-- **Custom Data Input** - Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Selecting "loyalty_points" as the user trait in Zeotap.][4]{: style="max-width:70%;"}
+- **Dropdown Selection** - Map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![Various user traits set in Zeotap, such as language, city, birthday, and more.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
+- **Custom Data Input** - Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Selecting "loyalty_points" as the user trait in Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## Supported attributes
 You can find details of all the Braze fields in this section.
@@ -90,7 +90,7 @@ You can find details of all the Braze fields in this section.
 | --- | --- | --- |
 | External ID | Dropdown selection | This is the persistent `User ID` you defined by Braze to track users across devices and platforms. We recommend that you map `User ID` to `External ID`; otherwise, Zeotap may send email as a user alias.<br><br>Zeotap recommends that you map the `hashed email` available in the Zeotap Catalogue to the `External ID`.|
 | Email | Static Mapping | This is mapped to `Email Raw` in the Zeotap Catalogue. |
-| Phone | Static Mapping | This is mapped to `Mobile Raw` in the Zeotap Catalogue.<br><br>• Braze accepts phone numbers in `E.164` format. Zeotap does not perform any transformation. Hence, you are required to ingest the phone numbers in the prescribed format. For more information, refer to [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/). |
+| Phone | Static Mapping | This is mapped to `Mobile Raw` in the Zeotap Catalogue.<br><br>• Braze accepts phone numbers in `E.164` format. Zeotap does not perform any transformation. Hence, you are required to ingest the phone numbers in the prescribed format. For more information, refer to [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/). |
 | First Name | Static Mapping | This is mapped to `First Name` in the Zeotap Catalogue. |
 | Last Name | Static Mapping | This is mapped to `Last Name` in the Zeotap Catalogue. |
 | Gender | Static Mapping | This is mapped to `Gender` in the Zeotap Catalogue. |
@@ -115,7 +115,7 @@ You can find details of all the Braze fields in this section.
 
 After you have mapped the relevant attributes to be sent and published in the workflow, the events start flowing to Braze based on the criteria defined. You can search by email ID or external ID on the Braze console.
 
-![][2]
+![]({% image_buster /assets/img/zeotap/zeotap6.jpg %})
 
 Various attributes come under different sections of the user dashboard within Braze.
 - The **Profile** tab contains the user attributes.
@@ -127,7 +127,3 @@ Various attributes come under different sections of the user dashboard within Br
 
 Users can create campaigns within Braze and activate users in real-time or based on the scheduled time. Campaigns can be triggered based on the actions performed by the user (custom event, purchase) or user attributes.
 
-[1]: {% image_buster /assets/img/zeotap/zeotap5.png %}
-[2]: {% image_buster /assets/img/zeotap/zeotap6.jpg %}
-[3]: {% image_buster /assets/img/zeotap/zeotap7.png %}
-[4]: {% image_buster /assets/img/zeotap/zeotap8.png %}

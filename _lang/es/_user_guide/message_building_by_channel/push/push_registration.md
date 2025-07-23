@@ -5,7 +5,7 @@ page_order: 2
 page_type: reference
 description: "Este artículo de referencia trata sobre lo que significa estar registrado para push y cómo enviamos mensajes push y tratamos los tokens push y el registro push en Braze."
 channel:
-  - push
+ - push
 
 ---
 
@@ -13,61 +13,82 @@ channel:
 
 > Este artículo cubre el proceso mediante el cual se asigna un token push a un usuario y cómo Braze envía mensajes push a sus usuarios.
 
-## Tokens de notificaciones push
+## Acerca de los tokens de notificaciones push {#push-tokens}
 
-Comprender los tokens de notificaciones push y lo que son es una pieza fundamental para entender cómo enviamos mensajes push aquí en Braze. Los tokens push son un identificador anónimo único generado por el dispositivo de un usuario y enviado a Braze para identificar dónde enviar la notificación de cada destinatario. Si un dispositivo no tiene un token de notificaciones push, no hay forma de enviarle push.
+Cuando una aplicación solicita permisos push a un dispositivo, el proveedor de servicios de notificaciones push del dispositivo generará un token de notificaciones push para esa aplicación. Cada aplicación recibe su propio token de notificaciones push, único y anónimo, que es como identifica el dispositivo y la instancia actual de la aplicación al enviar una notificación push.
 
-Los tokens push son generados por proveedores de servicios push. Braze se conecta con proveedores de servicios push como Firebase Cloud Messaging Service (FCMs) para Android y Apple Push Notification Service (APNs) para iOS, y esos proveedores envían tokens de dispositivo únicos que identifican tu aplicación. Cada dispositivo tiene un token único que se utiliza para la mensajería. Los tokens pueden [caducar](#push-token-expire) o actualizarse.
+Ten en cuenta que los tokens de notificaciones push no son identificadores estáticos que duren para siempre: pueden actualizarse y [caducar](#push-token-expire).
 
-Hay dos formas de clasificar un [push token][push-tokens] que son esenciales para entender cómo se puede enviar una notificación push a sus usuarios.
+{% alert tip %}
+Para detalles específicos de la plataforma, consulta [Registro de token de notificaciones push](#push-token-registration).
+{% endalert %}
 
-1. **Foreground push** ofrece la posibilidad de enviar notificaciones push visibles de forma regular al primer plano del dispositivo de un usuario.
-2. **Las notificaciones push en segundo plano** están disponibles independientemente de si un dispositivo concreto ha optado por recibir notificaciones push de esa marca. El push en segundo plano permite a las marcas enviar notificaciones push silenciosas -notificaciones que intencionadamente no se muestran- a los dispositivos para dar soporte a funcionalidades clave como el seguimiento de desinstalaciones.
+### Foreground vs. background push {#foreground-vs-background}
 
-Cuando un perfil de usuario tiene un token push válido en primer plano asociado a una aplicación, Braze considera que el usuario está "registrado push" para la aplicación en cuestión. Braze, entonces, proporciona un filtro de segmentación específico, `Push enabled for App,` para ayudar a identificar a estos usuarios.
+Los tokens de notificaciones push se utilizan para enviar notificaciones push tanto en primer plano como en segundo plano.
+
+| Tipo       | ¿Requiere adhesión voluntaria? | Descripción                                                 |
+|------------------|------------------|--------------------------------------------------------------------------------------------------------------|
+| Foreground push | Sí       | Se muestra una notificación visible al usuario mientras la aplicación está en primer plano.           |
+| Push de fondo | No        | Una notificación se entrega silenciosamente en segundo plano sin mostrarse. A menudo se utiliza para funciones como el seguimiento de desinstalaciones. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Cuando un usuario se adhiere voluntariamente a las notificaciones push de tu aplicación, se le considera "registrado push", lo que significa que ahora se le puede dirigir utilizando el filtro de segmentación `Push enabled for App` en Braze.
 
 {% alert note %}
-El filtro `Push enabled for App` sólo tiene en cuenta la presencia de un token push válido en primer o segundo plano para la aplicación en cuestión. Sin embargo, el filtro más genérico `Push Enabled` segmenta a los usuarios que han activado explícitamente las notificaciones push para cualquier aplicación de su espacio de trabajo. Este recuento incluye sólo los push en primer plano y no incluye a los usuarios que se han dado de baja. Puede obtener más información sobre estos y otros filtros en [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Esto es diferente del filtro de segmentación `Push Enabled`, que se utiliza para identificar a los usuarios que han optado por la adhesión voluntaria a al menos una de tus aplicaciones, no a una aplicación concreta. Para más información, consulta [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#push-enabled).
 {% endalert %}
 
 ### Varios usuarios en un dispositivo
 
-Los tokens push son específicos tanto de un dispositivo como de una aplicación, por lo que no es posible utilizarlos para distinguir entre varios usuarios que utilicen el mismo dispositivo.
+Los tokens de notificaciones push son únicos tanto para el dispositivo como para la aplicación, lo que significa que los tokens push no pueden utilizarse para dirigirse a usuarios concretos si varios usuarios utilizan el mismo dispositivo.
 
 Por ejemplo, supongamos que tiene dos usuarios: Charlie y Kim. Si Charlie ha activado las notificaciones push para tu aplicación en su teléfono y Kim utiliza el teléfono de Charlie para salir del perfil de Charlie e iniciar sesión en el suyo, el token push se reasignará al perfil de Kim. El token push permanecerá asignado al perfil de Kim en ese dispositivo hasta que se desconecte y Charlie vuelva a conectarse.
 
 Una aplicación o sitio web sólo puede tener una suscripción push por dispositivo. Así, cuando un usuario se desconecta de un dispositivo o sitio web y otro nuevo se conecta, el token push se reasigna al nuevo usuario. Esto se refleja en el perfil del usuario en la sección **Configuración de contactos** de la pestaña **Compromiso**:
 
-![Registro de cambios del token de notificaciones push en la pestaña \*\*Interacción** del perfil de un usuario, que enumera cuándo se trasladó el token de notificaciones push a otro usuario, y de qué token se trataba.][4]
+![Registro de cambios del token de notificaciones push en la pestaña \*\*Interacción** del perfil de un usuario, que enumera cuándo se trasladó el token de notificaciones push a otro usuario, y cuál era el token.]({% image_buster /assets/img/push_token_changelog.png %})
 
 Dado que los proveedores de push (APN/FCM) no pueden distinguir entre varios usuarios en un mismo dispositivo, pasamos el token de push al último usuario que inició sesión para determinar a qué usuario se debe enviar el push en el dispositivo.
 
 ## Registro de token de notificaciones push
 
-Las plataformas tratan el registro de token de notificaciones push y los permisos push de diferentes maneras:
+Cada plataforma de dispositivos gestiona el registro de token de notificaciones push de forma diferente. Consulta a continuación los detalles específicos de cada plataforma:
 
-- **Android**:
-  - **Androide 13**:<br>El permiso push debe ser solicitado y concedido por el usuario. Recibe un token después de que el usuario conceda el permiso. Tu aplicación puede pedir permiso manualmente al usuario en los momentos oportunos, pero si no, se lo pedirá automáticamente después de que tu aplicación cree un [canal de notificación](https://developer.android.com/reference/android/app/NotificationChannel).
-  - **Android 12 y anteriores**:<br>Todos los usuarios son considerados `Subscribed` en su primera sesión, cuando Braze solicita automáticamente un token de notificaciones push. En este punto, el usuario está **habilitado para push** con un token push válido para ese dispositivo y un estado de suscripción predeterminado de `Subscribed`.<br><br>
-- **iOS**: No se registra automáticamente para push.
-    - **iOS 12 (con autorización provisional)**: <br>Su aplicación puede solicitar [autorización provisional]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) o push autorizado. El push autorizado requiere el permiso explícito de un usuario antes de enviar cualquier notificación (recibe un token después de que el usuario conceda el permiso), mientras que [push provisional][provisional-blog] permite enviar notificaciones __silenciosamente__, directamente al centro de notificaciones sin ningún sonido o alerta.
-    - **iOS 11 y posteriores e iOS 12 (sin autorización provisional)**: <br>Todos los usuarios deben optar explícitamente por recibir notificaciones push. Recibirá un token después de que los usuarios se hayan registrado.<br><br>
-- **Web:** Debe solicitar el consentimiento explícito de los usuarios a través del cuadro de diálogo de permisos nativo del navegador. Recibirá un token después de que los usuarios hayan optado por la adhesión voluntaria.  A diferencia de iOS y Android, que permiten que tu aplicación muestre el aviso de permiso en cualquier momento, algunos navegadores modernos sólo lo muestran si se activa mediante un "gesto del usuario" (clic del ratón o pulsación de una tecla). Si tu sitio intenta solicitar permiso de notificación push al cargar la página, es probable que el navegador lo ignore o lo silencie.
+{% tabs local %}
+{% tab android %}
+Cuando se instala tu aplicación, se genera automáticamente un token de notificaciones push; sin embargo, sólo puede utilizarse para [notificaciones push en segundo plano](#foreground-vs-background) hasta que el usuario acepte explícitamente. Además, el registro se gestiona de forma diferente en las distintas versiones de Android:
 
-| Obtener un token de notificaciones push | Enviar un token push |
-| ---------------- | ----------------- |
-| Las aplicaciones deben registrarse en un proveedor push para obtener un token de notificaciones push para un dispositivo. | A continuación, los desarrolladores pueden dirigirse al dispositivo utilizando el token de notificaciones push generado por FCM/APN.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+| Versión       | Detalles                                                                                                                                                |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Android 13**         | El permiso push debe ser solicitado y concedido por el usuario. Tu aplicación puede solicitar el permiso manualmente, o se pedirá permiso a los usuarios automáticamente después de crear un [canal de notificación](https://developer.android.com/reference/android/app/NotificationChannel). |
+| **Android 12 y anteriores** | Todos los usuarios son considerados `Subscribed` después de su primera sesión. Braze solicita automáticamente un token de notificaciones push en este punto, haciendo que el usuario quede habilitado para push con un token válido y un estado de suscripción predeterminado de `Subscribed`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
 
-### Comprobar el estado de la suscripción push del usuario
+{% tab ios %}
+iOS no genera automáticamente tokens de notificaciones push para una aplicación cuando se instala. Además, el registro se gestiona de forma diferente en las distintas versiones de iOS: 
 
-![Perfil de usuario de John Doe con su estado de suscripción push establecido en Suscrito.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+| Versión                         | ¿Autorización provisional? | Detalles                                                                                                                                                     |
+|------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **iOS 12**      | Sí                         | Cuando un usuario se adhiere voluntariamente a las notificaciones push, recibes una autorización estándar que te permite enviar [notificaciones push en primer plano](#foreground-vs-background). Sin embargo, también puedes solicitar [una autorización provisional]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), que te permite enviar [notificaciones push](#foreground-vs-background) silenciosas [en segundo plano](#foreground-vs-background) directamente al centro de notificaciones. |
+| **iOS 11 y posteriores** | No                          | Todos los usuarios deben optar explícitamente por recibir notificaciones push. Sólo se genera un token de notificaciones push cuando se concede el permiso.                                     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{% endtab %}
+
+{% tab Web %}
+Debe solicitar el consentimiento explícito de los usuarios a través del cuadro de diálogo de permisos nativo del navegador. Recibirá un token después de que los usuarios hayan optado por la adhesión voluntaria. A diferencia de iOS y Android, que permiten que tu aplicación muestre el aviso de permiso en cualquier momento, algunos navegadores modernos sólo lo muestran si se activa mediante un "gesto del usuario" (clic del ratón o pulsación de una tecla). Si tu sitio intenta solicitar permiso de notificación push al cargar la página, es probable que el navegador lo ignore o lo silencie.
+{% endtab %}
+{% endtabs %}
+
+### Comprobación del estado de la suscripción push del usuario
+
+![Perfil de usuario de John Doe con su estado de suscripción push establecido en Suscrito.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Hay dos formas de comprobar el estado de la suscripción push de un usuario con Braze:
 
-1. **Perfil del usuario**: Puede acceder a perfiles de usuario individuales a través del panel de control de Braze en la página [Búsqueda de usuarios][5]. Después de encontrar el perfil de un usuario (a través de la dirección de correo electrónico, el número de teléfono o el ID de usuario externo), puede seleccionar la pestaña **Compromiso** para ver y ajustar manualmente el estado de suscripción de un usuario. 
-<br>
-2. **Exportación de API REST**: Puede exportar perfiles de usuario individuales en formato JSON utilizando los puntos finales de exportación [Usuarios por segmento][segmento] o [Usuarios por identificador][identificador]. Braze devolverá un objeto de tokens push que contiene información de habilitación push por dispositivo.
+- **Perfil del usuario**: Puedes acceder a perfiles de usuario individuales a través del panel de Braze en la página de [Búsqueda de usuarios]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/). Después de encontrar el perfil de un usuario (a través de la dirección de correo electrónico, el número de teléfono o el ID de usuario externo), puede seleccionar la pestaña **Compromiso** para ver y ajustar manualmente el estado de suscripción de un usuario.
+- **Exportación de API REST**: Puedes exportar perfiles de usuario individuales en formato JSON utilizando los puntos finales de exportación [Usuarios por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) o [Usuarios por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). Braze devolverá un objeto de tokens push que contiene información de habilitación push por dispositivo.
 
 ### Comprobar el estado del registro push
 
@@ -75,7 +96,7 @@ En la pestaña **Participación** del perfil de un usuario, verá **Push Registe
 
 Si el nombre de la aplicación de la entrada del dispositivo lleva el prefijo `Foreground:`, la aplicación está autorizada a recibir tanto notificaciones push en primer plano (visibles para el usuario) como notificaciones push en segundo plano (no visibles para el usuario) en ese dispositivo.
 
-![Registro de cambios push con un token de notificaciones push de ejemplo.][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
+![Registro de cambios push con un token de notificaciones push de ejemplo.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 Por otro lado, si el nombre de la aplicación de la entrada del dispositivo lleva el prefijo `Background:`, la aplicación sólo está autorizada a recibir [push en segundo plano]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) y no puede mostrar notificaciones visibles para el usuario en ese dispositivo. Esto suele indicar que el usuario ha desactivado las notificaciones de la aplicación en ese dispositivo.
 
@@ -88,7 +109,7 @@ Consulte el siguiente gráfico para ver las acciones que provocan cambios en los
 | Acción | Descripción |
 | ------ | ----------- |
 | `changeUser()` método llamado | El método Braze `changeUser()` cambia el ID de usuario al que los SDK asignan los datos de comportamiento del usuario. Este método suele llamarse cuando un usuario inicia sesión en una aplicación. Cuando se llama a `changeUser()` con un ID de usuario diferente o nuevo en un dispositivo específico, el token push de ese dispositivo se moverá al perfil Braze apropiado con el ID de usuario correspondiente. |
-| Se produce un error de empuje | Algunos errores push comunes que llevan a la eliminación del token son `MismatchSenderId`, `InvalidRegistration`, y otros tipos de rebotes push. <br><br>Consulte nuestra lista completa de [errores push][errors] comunes. |
+| Se produce un error de empuje | Algunos errores push comunes que llevan a la eliminación del token son `MismatchSenderId`, `InvalidRegistration`, y otros tipos de rebotes push. <br><br>Consulte nuestra lista completa de [errores push]({{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid) comunes. |
 | El usuario desinstala | Cuando un usuario desinstale la aplicación de un dispositivo, Braze eliminará el token push del usuario del perfil. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -98,7 +119,7 @@ Cuando un usuario abre una nueva aplicación y concede acceso push desde una sol
 
 Si queremos lanzar una campaña, creamos una campaña en Braze que genere una carga útil push para enviar al proveedor push. A partir de ahí, el proveedor entrega la carga útil push al dispositivo del usuario y el SDK pasa el estado de la mensajería a Braze.
 
-![Un diagrama de flujo que mapea el proceso push antes mencionado entre Braze, el cliente y el servicio de notificaciones push de Apple o Firebase Cloud Messaging.][push-process]
+![Un diagrama de flujo que mapea el mencionado proceso push entre Braze, el cliente, y el servicio de notificación push de Apple o la mensajería en la nube de Firebase.]({% image_buster /assets/img/push_process.png %})
 
 | Pasos de la inscripción | Pasos de la mensajería |
 | ------------------ | --------------- |
@@ -118,15 +139,3 @@ Además, si un usuario volviera a activar la función push en primer plano, ser�
 Por desgracia, APN y FCM no lo definen realmente. Los tokens push pueden caducar cuando se actualiza una aplicación, cuando los usuarios transfieren sus datos a un nuevo dispositivo o cuando reinstalan un sistema operativo. En general, no tenemos información sobre por qué los proveedores de push caducan determinados tokens de notificaciones push.
 
 Para tener en cuenta esta ambigüedad, nuestras integraciones push SDK siempre registran y descargan los tokens al inicio de la sesión para garantizar que tenemos el token más actualizado.
-
-[errors]: {{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[push-process]: {% image_buster /assets/img/push_process.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[2]: {% image_buster /assets/img/push_changelog.png %}
-[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[3]: {% image_buster /assets/img/push_example.png %}
-[4]: {% image_buster /assets/img/push_token_changelog.png %}
-
-

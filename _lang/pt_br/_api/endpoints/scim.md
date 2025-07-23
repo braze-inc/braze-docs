@@ -17,7 +17,7 @@ guide_featured_list:
   - name: "POST: Criar conta de usuário do dashboard"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "OBTER: Procurar conta de usuário existente no dashboard"
+  - name: "OBTER: Procurar conta de usuário existente no dashboard por ID de recurso"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
   - name: "OBTER: Pesquisar conta de usuário existente do dashboard por e-mail"

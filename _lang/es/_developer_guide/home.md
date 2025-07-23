@@ -1,63 +1,64 @@
 ---
 page_order: 0
+nav_title: Inicio
 layout: dev_guide
 guide_top_header: "Guía del desarrollador de Braze"
-guide_top_text: "Aquí es donde los desarrolladores pueden encontrar todas las integraciones disponibles con Braze. Para conectar, aprender e inspirarte con otros desarrolladores que construyen con Braze, únete a la <a href='https://www.braze.com/dev-portal'>comunidad de desarrolladores de Braze</a>."
+guide_top_text: "Aquí es donde los desarrolladores pueden encontrar todo lo que necesitan saber sobre el SDK de Braze. Cada SDK está alojado en su propio repositorio público de GitHub, que incluye aplicaciones de muestra totalmente compilables que puedes utilizar para probar las características de Braze o implementarlas junto con tus propias aplicaciones. Para saber más, consulta <a href='{{site.baseurl}}/developer_guide/references/'>Referencias, Repositorios y Ejemplos de aplicaciones</a>.<br><br>¿Quieres conectar, aprender e inspirarte con otros desarrolladores que construyen con Braze? ¡Únete a la <a href='https://www.braze.com/dev-portal'>comunidad de desarrolladores Braze</a>!"
 article_title: Guía del desarrollador de Braze
 description: "Esta página de inicio es donde los desarrolladores pueden encontrar todas las integraciones disponibles con Braze."
 
 guide_featured_title: "Integraciones características"
 guide_featured_list:
-- name: Android y FireOS
+- name: Android
   image: /assets/img/braze_icons/android.svg
-  link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+  link: /docs/developer_guide/sdk_integration/?sdktab=android
   nav_link: android
 - name: Swift
-  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
+  link: /docs/developer_guide/sdk_integration/?sdktab=swift
   image: /assets/img/braze_icons/swift.svg
 - name: Web
-  link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+  link: /docs/developer_guide/sdk_integration/?sdktab=web
   image: /assets/img/braze_icons/globe-02.svg
   nav_link: web
 
 guide_menu_title: "All integrations"
 guide_menu_list:
-  - name: Cordova Android
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
+  - name: Cordova
+    link: /docs/developer_guide/sdk_integration/?sdktab=cordova
     image: /assets/img/cordova.png
     nav_link: cordova
-  - name: Cordova iOS
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    image: /assets/img/cordova.png
-    nav_link: cordova
-  - name: Flutter Android e iOS
-    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
+  - name: FireOS
+    link: /docs/developer_guide/sdk_integration/?sdktab=android
+    image: /assets/img/fire-os-bw.png
+    nav_link: fireos
+  - name: Flutter
+    link: /docs/developer_guide/sdk_integration/?sdktab=flutter
     image: /assets/img/flutter_icon.png
     nav_link: flutter
   - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=react%20native
     image: /assets/img/reactnative_icon.png
     nav_link: reactnative
-  - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    image: /assets/img/unity.png
-    nav_link: unity
-  - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    image: /assets/img/unity.png
-    nav_link: unity
-  - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    image: /assets/img/xamarin.png
-    nav_link: xamarin
   - name: Roku
-    link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=roku
     image: /assets/img/roku.png
     nav_link: roku
+  - name: Unity
+    link: /docs/developer_guide/sdk_integration/?sdktab=unity
+    image: /assets/img/unity.png
+    nav_link: unity
   - name: Unreal Engine
-    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    link: /docs/developer_guide/sdk_integration/?sdktab=unreal%20engine
     image: /assets/img/unreal.png
-    nav_link: unrealengine
+    nav_link: unreal_engine
+  - name: Xamarin
+    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
+    image: /assets/img/xamarin.png
+    nav_link: xamarin
+  - name: TV Y OTT
+    link: /docs/developer_guide/platforms/tv_and_ott/
+    image: /assets/img/braze_icons/tv-03.svg
+    nav_link: tv_and_ott
 
 guide_footer_header: " "
 guide_footer_text: " "

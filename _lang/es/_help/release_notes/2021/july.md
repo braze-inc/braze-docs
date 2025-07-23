@@ -10,7 +10,7 @@ description: "Este artículo contiene notas de la versión de julio de 2021."
 
 ## Mensaje dentro de la aplicación del cuestionario simple
 
-Utiliza la [sencilla plantilla de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) para recopilar atributos, información y preferencias de los usuarios que impulsen tu estrategia de campaña. Por ejemplo, puedes preguntar a los usuarios cómo les gustaría utilizar tu aplicación, conocer mejor sus preferencias personales o incluso preguntarles por su satisfacción con una característica concreta. Esta plantilla de cuestionario es compatible tanto con aplicaciones móviles como con navegadores web.
+Utiliza la [sencilla plantilla de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/) para recopilar atributos, información y preferencias de los usuarios que impulsen tu estrategia de campaña. Por ejemplo, puedes preguntar a los usuarios cómo les gustaría utilizar tu aplicación, conocer mejor sus preferencias personales o incluso preguntarles por su satisfacción con una característica concreta. Esta plantilla de cuestionario es compatible tanto con aplicaciones móviles como con navegadores web.
 
 ## Biblioteca de casos de uso de Liquid
 
@@ -18,11 +18,11 @@ Utiliza la [sencilla plantilla de mensajes dentro de la aplicación]({{site.base
 
 ## Seguimiento por correo electrónico
 
-Ahora se puede desactivar el seguimiento de píxeles abiertos y de clics por perfil de usuario. Esta flexibilidad ayuda a los clientes a cumplir las leyes de privacidad regionales, en las que un perfil de usuario individual puede indicar que ya no desea ser objeto de seguimiento. Consulta nuestro artículo sobre [seguimiento de correo electrónico]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) para obtener más información.
+Ahora se puede desactivar el seguimiento de píxeles abiertos y de clics por perfil de usuario. Esta flexibilidad ayuda a los clientes a cumplir las leyes de privacidad regionales, en las que un perfil de usuario individual puede indicar que ya no desea ser objeto de seguimiento. Consulta nuestro artículo sobre [seguimiento de correo electrónico]({{site.baseurl}}/user_guide/analytics/tracking/email_tracking/) para obtener más información.
 
 ## Opciones de recopilación de datos del SDK
 
-Obtén más información sobre cómo se puede integrar el SDK de Braze para permitir una recopilación de datos flexible en nuestra nueva documentación sobre [las opciones de recopilación de datos del SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+Obtén más información sobre cómo se puede integrar el SDK de Braze para permitir una recopilación de datos flexible en nuestra nueva documentación sobre [las opciones de recopilación de datos del SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
 
 ## Resumen de SSL
 

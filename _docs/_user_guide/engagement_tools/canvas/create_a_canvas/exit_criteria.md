@@ -18,7 +18,7 @@ In the **Target Audience** step of the Canvas builder, you can set up exit crite
 
 The exit criteria includes an exception event, which is the specific action that can cause users to exit the Canvas.
 
-![The exit criteria set up to re-engage users who have browsed products but haven't added them to their cart or placed an order yet.][1]{: style="max-width:90%;"}
+![The exit criteria set up to re-engage users who have browsed products but haven't added them to their cart or placed an order yet.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### Selecting exception events {#exception-events}
 
@@ -66,8 +66,6 @@ Let's say we want to target users who haven't made any purchases at our backpack
 4. For **Filters**, select **Purchase behavior** > **Number of purchases** > **Purchased product**.
 5. Set the filter group to `backpack-example exactly 1`. This means that users who have purchased our backpack product would exit the Canvas.
 
-![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.][2]{: style="max-width:80%;"}
+![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 
-[1]: {% image_buster /assets/img/exit_criteria.png %}
-[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}

@@ -16,10 +16,6 @@ tool:
 
 Para editar suas configurações de estilo global, acessar **Configurações** > **Preferências de e-mail** > **Preferências de e-mail de arrastar e soltar**. Depois de editar os estilos no editor de e-mail de arrastar e soltar, clique em **Salvar**. Para personalizar ainda mais suas campanhas de e-mail e canvas, confira como você pode incorporar blocos de editor de arrastar e soltar][8].
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta página está localizada em **Gerenciar Configurações** > **Configurações de E-mail** > **Configurações do Editor de E-mail de Arrastar e Soltar**.
-{% endalert %}
-
 ![][1]
 
 {% alert note %}

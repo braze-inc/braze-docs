@@ -29,10 +29,6 @@ O Braze coleta automaticamente um nível básico de informações de desinstala�
 
 Você pode ativar o rastreamento de desinstalação na página **Configurações do aplicativo**, em **Configurações**, para cada app que deseja rastrear.
 
-{% alert note %}
-Se estiver usando a navegação mais antiga, **Configurações do app** é **Configurações** e está localizado em **Gerenciar configurações**.
-{% endalert %}
-
 Quando o rastreamento de desinstalação estiver ativado para um app, mensagens no app em segundo plano serão enviadas todas as noites para os usuários que não tiverem registrado uma sessão ou recebido um push em 24 horas.
 
 ### Configuração

@@ -9,18 +9,18 @@ search_tag: Partner
 
 # Sheetlabs
 
-> [Sheetlabs][1] is a platform that allows you to turn spreadsheets into powerful, well-documented APIs. You can import data from Google Sheets or Excel, turn it into an API, and then use that API in other applications, such as Braze.
+> [Sheetlabs](https://sheetlabs.com/) is a platform that allows you to turn spreadsheets into powerful, well-documented APIs. You can import data from Google Sheets or Excel, turn it into an API, and then use that API in other applications, such as Braze.
 _This integration is maintained by Sheetlabs._
 
 ## About the integration
 
-The Sheetlabs and Braze integration allows you to leverage [Connected Content][2] to include Sheetlabs APIs inside your Braze marketing campaigns. This is commonly used to provide a bridge between a Google Spreadsheet (which is updated directly by the marketing team) and Braze templates. This allows you to achieve more with Braze templates, such as translations or larger sets of custom attributes.
+The Sheetlabs and Braze integration allows you to leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) to include Sheetlabs APIs inside your Braze marketing campaigns. This is commonly used to provide a bridge between a Google Spreadsheet (which is updated directly by the marketing team) and Braze templates. This allows you to achieve more with Braze templates, such as translations or larger sets of custom attributes.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Sheetlabs account | A [Sheetlabs account][1] is required to take advantage of this partnership. |
+| Sheetlabs account | A [Sheetlabs account](https://sheetlabs.com/) is required to take advantage of this partnership. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -31,7 +31,7 @@ The Braze and Sheetlabs integration allows you to achieve the following use case
 2. **Translations**: Braze templates do not natively support translations. If you wish to support multiple languages, you must create multiple templates. By using Sheetlabs in conjunction with Braze, you can have a single Braze template that is translated into multiple languages.
 3. **Extending custom attributes**: Braze provides a certain number of custom attributes that can be configured. By using Sheetlabs in conjunction with Braze, you can add additional custom attributes beyond this initial allotment.
 
-Refer to [Sheetlabs][3] for more information on these use cases.
+Refer to [Sheetlabs](https://app.sheetlabs.com/docs/producers/braze/) for more information on these use cases.
 
 ## Integration
 
@@ -50,7 +50,7 @@ Make sure you include the Braze user ID in your spreadsheet or something else th
 
 Next, in Sheetlabs, go to **APIs > Create API**, and give your API a name. You will likely want to allow queries via a lookup field from your spreadsheet, such as the Braze user ID.
 
-At this point, you should be able to access your API with a link like:<br> [`https://sheetlabs.com/ACME/email1_translations?country=en`][4].
+At this point, you should be able to access your API with a link like:<br> [`https://sheetlabs.com/ACME/email1_translations?country=en`](https://sheetlabs.com/ACME/email1_translations?country=en).
 
 ### Step 3: Use the API in Braze Connected Content
 
@@ -68,7 +68,3 @@ Now that your API is accessible, you can use it in your Connected Content calls.
 {% alert tip %}
 For more examples and advice on integrating with Sheetlabs, refer to [Sheetlabs documentation](https://app.sheetlabs.com/docs/producers/braze/).
 {% endalert %}
-[1]: https://sheetlabs.com/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[3]: https://app.sheetlabs.com/docs/producers/braze/
-[4]: https://sheetlabs.com/ACME/email1_translations?country=en

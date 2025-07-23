@@ -8,7 +8,7 @@ description: "This help article describes how to use event logging to troublesho
 
 # Using event logging
 
-To help troubleshoot issues with your Braze integration, you can set up an anonymous user profile and an [event user log][1]. For steps on how to set up an anonymous profile, refer to [Adding test users][2].
+To help troubleshoot issues with your Braze integration, you can set up an anonymous user profile and an [event user log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab). For steps on how to set up an anonymous profile, refer to [Adding test users]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 ## About logging
 
@@ -20,5 +20,3 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on November 16, 2022_
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

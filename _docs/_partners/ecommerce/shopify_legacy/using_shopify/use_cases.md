@@ -12,6 +12,8 @@ page_order: 2
 
 > Interested in seeing how you can leverage your Shopify integration to create timely and effective messaging for your users? Refer to the following sections on common [beginner](#beginner) and [advanced](#advanced) use cases to learn more!
 
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
+
 ## Beginner
 
 These are some simple yet effective use cases that you can create shortly after setting up Shopify. No additional work is required. 

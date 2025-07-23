@@ -26,7 +26,7 @@ To send a test to either [content test groups]({{site.baseurl}}/user_guide/admin
 
 You can also preview messages from the **Test** tab as if you were a user. You can select a specific user, a random user, or create a custom user.
 
-![A Content Card preview in the "Test" tab.][3]{: style="max-width:80%;"}
+![A Content Card preview in the "Test" tab.]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### Test checklist
 
@@ -71,9 +71,7 @@ A common use case is trying to debug why a user can't see a particular Content C
 
 6. Go to the **Campaigns** page and search for the `campaign_id`.
 
-![Search for campaign_id on Campaigns page][1]{: style="max-width:80%;"}
+![Search for campaign_id on Campaigns page]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

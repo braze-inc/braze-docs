@@ -11,7 +11,7 @@ description: "이 참조 문서는 AI 카피라이팅 어시스턴트의 브랜�
 
 ## 브랜드 가이드라인 만들기 {#steps}
 
-AI 카피라이팅 어시스턴트에서 브랜드 가이드라인을 작성하려면 다음 단계를 따르세요.
+AI 카피라이팅 어시스턴트에서 브랜드 가이드라인을 작성하려면 다음 단계를 따르세요. You can also create brand guidelines on the [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/) settings page.
 
 ### 1단계: 브랜드 가이드라인 작성
 
@@ -20,6 +20,7 @@ AI 카피라이팅 어시스턴트에서 브랜드 가이드라인을 작성하�
 2. **브랜드 가이드라인 적용**을 선택한 다음 **브랜드 가이드라인 생성**을 선택하세요.
 3. 이 지침에 대한 이름을 입력하세요. 이것은 이전 선택에서 보게 될 레이블입니다.
 4. **이 브랜드 가이드라인을 언제 사용할 것인가?**에 대해, 동료(그리고 미래의 본인)가 이 가이드라인을 사용하는 맥락을 이해할 수 있도록 세부 사항을 추가하세요.
+5. If you want this to be the default brand guideline for the current workspace, check **Use as default brand guideline**.
 
 ![브랜드 가이드라인 생성 보기.][1]
 

@@ -27,7 +27,7 @@ To create or edit your custom footer, do the following:
 3. Edit your footer in the **Compose** section.
 4. Send a test message. 
 
-![An example of a custom footer.][20]
+![An example of a custom footer.]({% image_buster /assets/img_archive/custom_footer.png %})
 
 The default footer uses the {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} attribute and our physical mailing address. If you're using this default, be sure to select **&#60;other&#62;** for the **Protocol**.
 
@@ -35,7 +35,7 @@ The default footer uses the {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% end
 To comply with CAN-SPAM regulations, your custom footer must include {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. You won't be able to save a custom footer without this attribute.
 {% endalert %}
 
-![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
+![Protocol and URL values needed for the custom footer.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## Footers without unsubscribe links
 
@@ -43,11 +43,11 @@ Be very careful when using a template with the custom footer {% raw %}`{{${email
 
 Here's a warning in the email composer:
 
-![Example email composed without a footer.][21]
+![Example email composed without a footer.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 Here's a warning in the campaign composer:
 
-![No-footer campaign composition.][22]
+![No-footer campaign composition.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### Adding a custom unsubscribe link
 
@@ -89,10 +89,5 @@ You can also choose to set a custom footer for plaintext emails from the **Subsc
 
 If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, select **Save**.
 
-![Email with Set Custom Plaintext Footer option selected.][23]{: style="max-width:70%" }
+![Email with Set Custom Plaintext Footer option selected.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}

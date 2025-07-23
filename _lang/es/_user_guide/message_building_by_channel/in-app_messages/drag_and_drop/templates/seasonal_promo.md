@@ -26,7 +26,7 @@ Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecci
 
 ### Paso 3: Personaliza tu componente botón
 
-Para empezar a crear tu promoción de temporada, selecciona el componente botón en el editor. Después, utiliza el menú lateral para seleccionar a dónde se lleva a los usuarios cuando seleccionan el botón. La plantilla predeterminada es cerrar el mensaje, pero puedes elegir navegar a una página específica dentro de tu aplicación (como el producto que estás promocionando).
+Para empezar a crear tu promoción de temporada, selecciona el componente botón en el editor. Después, utiliza el menú lateral para seleccionar a dónde se lleva a los usuarios cuando seleccionan el botón. La plantilla predeterminada es cerrar el mensaje, pero puedes elegir navegar a una página específica de tu aplicación (como el producto que estás promocionando).
 
 ![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento botón.][img2]
 

@@ -15,10 +15,6 @@ channel: email
 
 **As Preferências de e-mail** podem ser encontradas em **Configurações no dashboard**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página se chama **Configurações de e-mail** e está localizada em **Configurações** > **Gerenciar configurações** > **Configurações de e-mail**.
-{% endalert %}
-
 ## Envio de configuração
 
 As configurações de e-mail na seção **Configuração de envio de** e-mail determinam quais detalhes são incluídos nas suas campanhas de e-mail. Em particular, essas configurações estão relacionadas principalmente ao que o usuário vê quando recebe um e-mail do Braze.
@@ -34,8 +30,6 @@ Nessa seção, é possível adicionar os nomes e endereços de e-mail que podem 
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
-Ao definir seus endereços no campo "de", confira se o domínio de e-mail do campo "de" corresponde ao domínio de envio (como marketing.yourdomain.com). Não fazer isso pode resultar em desalinhamento de SPF e DKIM. Os e-mails com endereços "De" dinâmicos serão enviados do pool de IP do domínio de envio correspondente. Todos os e-mails de resposta podem ser definidos para seu domínio raiz.
-
 {% endtab %}
 {% tab Endereço de resposta %}
 
@@ -49,7 +43,7 @@ A adição de um endereço de e-mail nessa seção permite selecioná-lo como en
 Essa seção permite adicionar e gerenciar endereços BCC que podem ser anexados às mensagens de e-mail enviadas pelo Braze. O acréscimo de um endereço BCC a uma mensagem de e-mail enviará uma cópia idêntica da mensagem recebida pelo usuário para a sua caixa de entrada BCC. Essa é uma ferramenta útil para reter cópias das mensagens enviadas aos usuários para atender a requisitos de conformidade ou problemas de suporte ao cliente. Os e-mails BCC não são incluídos nos relatórios e na análise de dados de e-mail.
 
 {% alert important %}
-Anexar um endereço BBC à sua campanha ou ao Canvas resultará na duplicação de seus e-mails faturáveis para o componente da campanha ou do Canvas, pois o Braze enviará uma mensagem para o usuário e outra para o endereço BCC.
+Adicionar um endereço BCC à sua campanha ou canva resultará na duplicação dos seus e-mails faturáveis para a campanha ou componente do canva, uma vez que o Braze enviará uma mensagem para o seu usuário e uma para o seu endereço BCC.
 {% endalert %}
 
 ![Seção Endereço BCC da guia Configurações de e-mail.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
@@ -82,10 +76,6 @@ Para alterar o local:
 1. No Braze, acesse **Configurações** > **Preferências de e-mail**.
 2. Clique na caixa de seleção em **Configurações personalizadas do pixel de rastreamento de abertura**. 
 3. Pressione **Salvar**.
-
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), ela está localizada em **Gerenciar configurações** > **Configurações de e-mail**).
-{% endalert %}
 
 Uma vez salvo, o Braze enviará instruções especiais ao ESP para colocar o pixel de rastreamento de abertura na parte superior de todos os e-mails em HTML.
   
@@ -135,7 +125,7 @@ Se o cabeçalho estiver na versão bruta do e-mail, mas não for exibido, o prov
 
 Quando o recurso de cabeçalho de cancelamento de inscrição de e-mail está ativado, essa configuração se aplica a todo o espaço de trabalho, não ao nível da empresa. Ele é adicionado a campanhas e Canvas configurados para enviar a usuários inscritos ou com aceitação, ou a usuários com aceitação na etapa de **públicos-alvo** dos construtores de campanhas e Canvas.
 
-O Braze não adiciona o cabeçalho para o que é considerado transacional, portanto, se uma mensagem for configurada para ser enviada a todos os usuários, incluindo os que cancelaram a inscrição, o cabeçalho list-unsubscribe não será anexado à mensagem, a menos que especificado de outra forma na configuração list-unsubscribe de um clique no nível da mensagem. Além disso, o cabeçalho não é adicionado às mensagens entregues por meio do envio de teste porque o cabeçalho list-unsubscribe só é gerado e adicionado para o direcionamento de perfis de usuário no Braze.
+Ao usar o "padrão de espaço de trabalho", o Braze não adiciona o cabeçalho de cancelamento de inscrição com um clique para campanhas que são consideradas transacionais, que estão configuradas para "enviar para todos os usuários, incluindo usuários cancelados". Para substituir isso e adicionar o cabeçalho de cancelamento de inscrição com um clique ao enviar para usuários cancelados, você pode selecionar **Cancelar inscrição globalmente de todos os e-mails** nas configurações de cancelamento de inscrição com um clique no nível da mensagem.
 
 ### Cabeçalho padrão list-unsubscribe
 

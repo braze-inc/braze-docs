@@ -1,8 +1,12 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} Additionally, you'll need to [set up silent push notifications]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 
-## Setting up geofences
+## Setting up geofences {#setting-up-geofences}
 
-### Step 1: Update `build.gradle`
+### Step 1: Enable in Braze
+
+{% multi_lang_include developer_guide/_shared/enable_geofences_in_braze.md %}
+
+### Step 2: Update `build.gradle`
 
 Add `android-sdk-location` to your app-level `build.gradle`. Also, add the Google Play Services [location package](https://developers.google.com/android/reference/com/google/android/gms/location/package-summary) using the Google Play Services [setup guide](https://developers.google.com/android/guides/setup):
 
@@ -13,7 +17,7 @@ dependencies {
 }
 ```
 
-### Step 2: Update the manifest
+### Step 3: Update the manifest
 
 Add boot, fine location, and background location permissions to your `AndroidManifest.xml`:
 
@@ -37,7 +41,7 @@ Add the Braze boot receiver to the `application` element of your `AndroidManifes
 </receiver>
 ```
 
-### Step 3: Enable Braze location collection
+### Step 4: Enable Braze location collection
 
 If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_braze_enable_location_collection` and confirm its value is set to `true`:
 
@@ -55,7 +59,7 @@ Braze geofences are enabled if Braze location collection is enabled. If you woul
 <bool name="com_braze_geofences_enabled">true</bool>
 ```
 
-### Step 4: Obtain location permissions from the end user
+### Step 5: Obtain location permissions from the end user
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
 
@@ -210,20 +214,6 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 {% endtab %}
 {% endtabs %}
-
-### Step 5: Enable geofences on the dashboard
-
-Android only allows up to 100 geofences to be stored for a given app. Braze locations products will use up to 20 geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
-
-For Braze locations products to work correctly, confirm that your app is not using all available geofence spots.
-
-#### Enable geofences from the locations page
-
-![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
-
-#### Enable geofences from the settings page
-
-![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
 ### Step 6: Manually request geofence updates (optional)
 

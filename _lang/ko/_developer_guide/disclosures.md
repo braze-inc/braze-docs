@@ -1,8 +1,8 @@
 ---
+page_order: 99
 nav_title: 공개
 article_title: 공개 및 검증
 layout: dev_guide
-page_order: 100
 guide_top_header: "공개"
 guide_top_text: "Braze가 여러분을 지원합니다! 다음 기사들을 확인해보세요!"
 
@@ -18,13 +18,13 @@ guide_featured_list:
     link: /docs/developer_guide/disclosures/open_source_software_disclosure/
     image: /assets/img/braze_icons/globe-02.svg
   - name: 혁신을 위한 노력
-    link: /docs/help/innovation_statement/
+    link: /docs/innovation_statement/
     image: /assets/img/braze_icons/asterisk-01.svg
   - name: 보안 요건 검증
     link: /docs/developer_guide/disclosures/security_qualifications/
     image: /assets/img/braze_icons/user-square.svg
   - name: 데이터 보호 기술 지원
-    link: /docs/help/dp-technical-assistance/
+    link: /docs/dp-technical-assistance/
     image: /assets/img/braze_icons/globe-04.svg
 
 ---

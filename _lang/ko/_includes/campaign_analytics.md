@@ -5,12 +5,12 @@
 {% alert tip %}
 보고서에 나열된 용어와 측정기준에 대한 정의를 찾고 계십니까? 참고:
   {% if include.channel == "email" %}[이메일 분석 용어집]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 콘텐츠 카드로 필터링
-  {% elsif include.channel == "in-app message" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 인앱 메시지로 필터링
-  {% elsif include.channel == "push" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 푸시로 필터링
-  {% elsif include.channel == "SMS" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 SMS로 필터링
-  {% elsif include.channel == "whatsapp" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 WhatsApp으로 필터링
-  {% elsif include.channel == "webhook" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 및 웹훅으로 필터링{% endif %}.
+  {% elsif include.channel == "Content Card" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 콘텐츠 카드로 필터링
+  {% elsif include.channel == "in-app message" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 인앱 메시지로 필터링
+  {% elsif include.channel == "push" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 푸시로 필터링
+  {% elsif include.channel == "SMS" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 SMS로 필터링
+  {% elsif include.channel == "whatsapp" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 WhatsApp으로 필터링
+  {% elsif include.channel == "webhook" %}[보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/) 및 웹훅으로 필터링{% endif %}.
 {% endalert %}
 
 **캠페인 분석** 탭에서, 일련의 패널에서 보고서를 볼 수 있습니다. 아래 섹션에 나열된 것보다 더 많거나 적은 항목을 볼 수 있지만, 각각 유용한 목적이 있습니다.
@@ -208,7 +208,7 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='고유 클릭 수' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">고유 무시 수</a></td>
@@ -386,7 +386,7 @@ _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">닫기 메시지</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='닫기 메시지' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -672,13 +672,13 @@ Braze 분석 외에도 템플릿 수준의 분석은 WhatsApp 비즈니스 매�
 
 ## 리텐션 보고서
 
-유지 보고서는 사용자가 특정 캠페인이나 캔버스에서 시간 경과에 따라 선택된 유지 이벤트를 수행한 비율을 보여줍니다. 자세한 정보는 [Retention reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/)를 참조하십시오.
+유지 보고서는 사용자가 특정 캠페인이나 캔버스에서 시간 경과에 따라 선택된 유지 이벤트를 수행한 비율을 보여줍니다. 자세한 정보는 [유지 보고서]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/)를 참조하십시오.
 
 ## 퍼널 보고서
 
 퍼널 리포팅은 고객이 캠페인이나 캔버스를 수신한 후의 여정을 분석할 수 있는 시각적 보고서를 제공합니다. 캠페인이나 캔버스가 대조군이나 여러 변형을 사용하는 경우, 다양한 변형이 전환 퍼널에 미친 영향을 더 세부적으로 이해하고 이 데이터에 기반하여 최적화할 수 있습니다.
 
-자세한 정보는 [퍼널 보고서]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/)을 참조하십시오.
+자세한 정보는 [퍼널 보고서]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/)를 참조하십시오.
 
 {% endif %}
 

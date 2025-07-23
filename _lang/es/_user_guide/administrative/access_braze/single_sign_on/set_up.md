@@ -19,12 +19,8 @@ Tras la configuración, se le pedirá que proporcione una URL de inicio de sesi�
 |---|---|
 | URL del Servicio de Consumidor de Afirmaciones (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> Para los dominios de la Unión Europea, la URL ASC es `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> Para algunos IdP, también puede denominarse URL de respuesta, URL de inicio de sesión, URL de audiencia o URI de audiencia. |
 | ID de la entidad | `braze_dashboard` |
-| Clave API RelayState | Ve a **Configuración** > **Claves de API** y crea una clave de API con permisos `sso.saml.login`, y luego introduce la clave de API generada como parámetro `RelayState` dentro de tu IdP. |
+| Clave API RelayState | Ve a **Configuración** > **Claves de API** y crea una clave de API con permisos `sso.saml.login`, y luego introduce la clave de API generada como parámetro `RelayState` dentro de tu IdP. Para conocer los pasos detallados, consulta [Configurar tu RelayState](#setting-up-your-relaystate). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Si utilizas la [navegación más antigua]({{site.baseurl}}/navigation), puedes encontrar tus claves de API en **Configuración** en **Consola de desarrollador** > **Configuración de API**.
-{% endalert %}
 
 ## Configuración de SAML SSO
 
@@ -52,10 +48,6 @@ Cuando termine de configurar Braze en su proveedor de identidad, éste le propor
 
 Después de que su administrador de cuenta active SAML SSO para su cuenta, vaya a **Configuración** > **Configuración de administración** > **Configuración de seguridad** y **active la** sección SAML SSO.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), seleccione el icono de su cuenta y vaya a **Configuración de la empresa** > **Configuración de seguridad** para encontrar la sección SAML SSO.
-{% endalert %}
-
 En la misma página, introduce lo siguiente:
 
 | Requisito | Detalles |
@@ -80,6 +72,16 @@ Asegúrese de que su certificado `x.509` sigue este formato cuando lo añada al 
 Guarde su configuración de seguridad y cierre la sesión. A continuación, vuelve a iniciar sesión con tu proveedor de identidad.
 
 ![Pantalla de inicio de sesión con SSO habilitado]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
+## Configuración de tu RelayState
+
+1. En Braze, ve a **Configuración** > **API e identificadores**.
+2. En la pestaña **Claves de API**, selecciona el botón **Crear clave de API**.
+3. En el campo **Nombre de la clave de API**, introduce un nombre para tu clave.
+4. Amplía el desplegable **SSO** en **Permisos** y marca **sso.saml.login**.<br><br>![La sección "Permisos" con sso.saml.login marcado.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+5. Selecciona **Crear clave de API**.
+6. En la pestaña **Claves de API**, copia el identificador que aparece junto a la clave de API que has creado.
+7. Pega la clave de API RelayState en el RelayState de tu IdP (también puede aparecer como "Estado de retransmisión" o "Estado de retransmisión predeterminado" en función de tu IdP).
 
 ## Comportamiento del SSO
 
@@ -119,3 +121,56 @@ Ve a tu panel de Braze e intenta iniciar sesión mediante SSO. Si encuentras un 
 Selecciona **Exportar**. Para **Seleccionar perfil de filtrado de cookies**, selecciona **Ninguno**. A continuación, selecciona **Exportar**. Esto generará un archivo JSON que puedes enviar al soporte de Braze para una mayor solución de problemas.
 
 ![Menú "Exportar preferencias de rastreo SAML" con la opción "Ninguna" seleccionada.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+
+## Solución de problemas
+
+### ¿Está correctamente configurada la dirección de correo electrónico del usuario?
+
+Si recibes el error `ERROR_CODE_SSO_INVALID_EMAIL`, la dirección de correo electrónico del usuario no es válida. Confirma en el rastreo SAML que el campo `saml2:Attribute Name="email"` coincide con la dirección de correo electrónico que el usuario está utilizando para iniciar sesión. Si utilizas Microsoft Entra ID, el mapeado de atributos es `email = user.userprincipalname`.
+
+La dirección de correo electrónico distingue entre mayúsculas y minúsculas y debe coincidir exactamente con la que se configuró en Braze, incluida la configurada en tu proveedor de identidad (como Okta, OneLogin, Azure Active Directory y otros).
+
+Otros errores que indican que tienes problemas con la dirección de correo electrónico del usuario son:
+- `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: La dirección de correo electrónico del usuario no está dentro del panel.
+- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISSING`: La dirección de correo electrónico del usuario está vacía o mal configurada.
+- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISMATCH` o `ERROR_CODE_SSO_SIGN_IN_EMAIL_MISMATCH`: La dirección de correo electrónico del usuario no coincide con la utilizada para configurar el SSO.
+
+### ¿Tienes un certificado SAML válido (x.509 certificate)?
+
+Puedes validar tu certificado SAML utilizando [esta herramienta de validación SAML](https://www.samltool.com/validate_response.php). Ten en cuenta que un certificado SAML caducado es también un certificado SAML no válido.
+
+### ¿Has subido un certificado SAML correcto (x.509 certificate)?
+
+Confirma que el certificado de la sección `ds:X509Certificate` del rastreo SAML coincide con el que subiste a Braze. Esto no incluye la cabecera `-----BEGIN CERTIFICATE-----` y el pie `-----END CERTIFICATE-----`.
+
+### ¿Has escrito o formateado mal tu certificado SAML (x.509 certificate)?
+
+Confirma que no hay espacios en blanco ni caracteres adicionales en el certificado que enviaste en el panel de Braze.
+
+Cuando introduzcas tu certificado en Braze, es necesario que esté codificado con Privacy Enhanced Mail (PEM) y formateado correctamente (incluyendo la cabecera `-----BEGIN CERTIFICATE-----` y el pie de página `-----END CERTIFICATE-----` ). 
+
+Aquí tienes un ejemplo de certificado con el formato correcto:
+
+```
+-----BEGIN CERTIFICATE-----
+THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjcwOTA4MzFaFw0yNTAbMjcwOTA4MzFaMDQxMjAwBgNVBAMTKU1pY3Jvca9mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnAFWAOKGPAWIGKJPOAMWANBgkqhkiG9w0BAQEFAAaCAQ8AMIIBCgKCAQEA1+KFJwxoac6jdFztQd+vQu59qM8rgfX5RICk0ODfpXkuDUNudcI0XmOAkKHRoMNPYlmMEf5NSiZ7TMElEPtK9zZlpAoSchxxC0Ndegc1AMFi7i2BsEIqPwrer0G6kx2vuAjdrDROPPafkmwalkfmklaw23FlYmV7doE0Vrj2WxR1PG0eFAdsxPLsO1ny55fPj2ibwaqc0XpDkfTrO9GnFvmZAS8ebYtLZsYAMAGLKWAMLGKAWMLKMFDW6vBDaK290s9FdaWza3GPHTcDstawRhyqbXpVjiqpQ0mtxANW4WduSiohhpeqv05TlSOhx87QalkfmwalfmAWMFLKQEBCwUAA4IBAQBdZ5E9FqICfL1q+G6D1tChKl1Y6I6IVULQb4LESSJRaxv53nakmflwakmMALKFMWOYKAeUWO2hdED54qGMgUnLL6YheQBrsm6ilBC68F7ZFmIzVKycvw65yamWbTMi2f2lF60GNYMrq8sGQUkgO0O2zTN07J9wGTe9M+MAFLKWAMFLKalkmflkawoij4jpcsLXXFZJoHSXnF3+qQuzu+49D6pR2lF7DDW+5+PRoc1QpDSytdXxWzItsjQ6IFRuvIGsbrMg0FVaze7ePdKrc47wSlElno7SQ0H+6g40q25rsDSLO
+-----END CERTIFICATE-----
+```
+
+### ¿Es válido el token de sesión del usuario?
+
+Haz que el usuario afectado [borre la caché y las cookies de su navegador](https://its.uiowa.edu/services/how-clear-cache-and-cookies-your-web-browser) y, a continuación, vuelva a intentar iniciar sesión con SAML SSO.
+
+### ¿Has configurado tu RelayState?
+
+Si recibes el error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, tu RelayState podría estar mal configurado o ser inexistente. Si aún no lo has hecho, tienes que configurar tu RelayState en tu sistema de gestión de IdP. Para conocer los pasos, consulta [Configurar tu RelayState](#setting-up-your-relaystate). 
+
+### ¿Está el usuario atrapado en un bucle de inicio de sesión entre Okta y Braze?
+
+Si un usuario no puede iniciar sesión porque está bloqueado entre el SSO de Okta y el panel de Braze, tienes que ir a Okta y establecer el destino de la URL SSO en tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por ejemplo, `https://dashboard-07.braze.com`). 
+
+Si utilizas otro IdP, comprueba si tu empresa ha cargado en Braze el certificado SAML o x.509 correcto.
+
+### ¿Estás utilizando una integración manual?
+
+Si tu empresa no ha descargado la aplicación Braze de la tienda de aplicaciones de tu IdP, tienes que descargar la integración preconstruida. Por ejemplo, si Okta es tu IdP, descargarías la aplicación Braze desde su [página de integración](https://www.okta.com/integrations/braze/).

@@ -1,0 +1,89 @@
+<style>
+  #onetrust-banner-sdk {
+    left: auto !important; /* Override default left positioning */
+    right: 0 !important;   /* Move to the bottom right */
+    margin-right: 10px;    /* Optional spacing */
+  }
+</style>
+
+<a class="skip-main" href="#content_start">콘텐츠로 건너뛰기</a> {% 댓글 %} 원트러스트 종료 {% endcomment %} <!-- OneTrust Cookies Consent Notice start for braze.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="a4189af1-fcc1-4ec1-9f51-e3bc768c6650"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for braze.com --> {댓글 %} 원트러스트 종료 {% endcomment %}
+
+<header id="header_nav" >
+
+  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="헤더 탐색" title="헤더 탐색">
+    <div id="header_wrapper">
+      <div id="nav_logo">
+           <a id="logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-white.svg" alt="Braze"></a> <a id="icon_logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-monogram-purple.svg" alt="Braze"></a>
+
+      </div>
+    <div class="navbarCollapse d-none d-md-block" id="header_navbar" >
+      <ul class="navbar-nav" id="header_menu">
+        {%- assign collect = site.collections | sort: site.page_order -%} {%- assign active_url = '' -%} {%- assign active_title = ''-%} {%- assign isactive = '' -%} {%- for cl in collect -%} {%- if cl.title -%} {%- unless cl.hidden 또는 cl.page_order == 1 -%} {%- if cl.label == 'home' -%} {%- assign nav_url = site.baseurl | append: '/' -%} {%- else -%} {%- assign nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%} {%- endif -%} {%- if cl.default_nav_url -%} {%- assign nav_url = nav_url | append: cl.default_nav_url -%} {%- endif -%} {%- assign isactive = '' -%} {%- if (cl.label == page.collection) 또는 (cl.label == page.custom_collection) -%} {%- assign isactive = 'active' -%} {%- assign active_url = nav_url -%} {%- assign active_title = cl.title -%} {%- endif -%}
+              <li class="nav-item {{isactive}}">
+                  <a class="nav-link" href="{{nav_url}}"><div>{{cl.title}}</div></a>
+              </li>
+
+            {%- endunless -%} {%- endif -%} {%- endfor -%}
+				<li>
+					<ul id="braze_header_lang">
+						<li class="nav-item nav-item-lang-li">
+							<div id="nav-item-lang">
+							<label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
+							<select class="lang-select" id="lang_select" aria-label="언어 선택">
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="fr">FR</option>
+                <option value="ja">JA</option>
+                <option value="ko">KO</option>
+                <option value="pt-br">PT-BR</option>
+  						</select>
+							</div>
+						</li>
+					</ul>
+				</li>
+      </ul>
+    </div>
+
+
+    {%- assign default_url = site.baseurl | append: '/' -%} {%- assign default_title = '홈' -%} {%- if active_title == '' -%} {%- assign active_url = default_url -%} {%- assign active_title = default_title -%} {%- endif -%}
+
+    <div class="navbarCollapse d-md-none" id="dropdown_navbar">
+      <div id="dropdown_navbar_lang">
+        <label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
+        <select class="lang-select" id="lang_select_responsive" aria-label="언어 선택">
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="ja">JA</option>
+          <option value="ko">KO</option>
+          <option value="pt-br">PT-BR</option>
+        </select>
+      </div>
+      <ul class="navbar-nav " id="dropdown_menu">
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" id="nav_responsive_dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <div>{{active_title}}</div>
+             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"> <path d="M4.5 9L7.5 6L4.5 3" stroke="#FDA4FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg> </a>
+           <div class="dropdown-menu" aria-labelledby="nav_responsive_dropdown">
+             {%- for cl in collect -%} {%- if cl.title -%} {%- unless cl.hidden -%} {%- if cl.label == 'home' -%} {%- assign nav_url = site.baseurl | append: '/' -%} {%- else -%} {%- assign nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%} {%- endif -%} {%- if cl.default_nav_url -%} {%- assign nav_url = nav_url | append: cl.default_nav_url -%} {%- assign isactive = '' -%} {%- if (cl.label == page.collection) 또는 (cl.label == page.custom_collection) -%} {%- assign isactive = 'active' -%} {%- assign active_url = nav_url -%} {%- assign active_title = cl.title -%} {%- endif -%} <a class="dropdown-item {{isactive}}" href="{{nav_url}}"><div>{{cl.title}}</div></a> {%-ENDIF -%} {%- endunless -%} {%- endif -%} {%- endfor -%}
+             <hr />
+                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a>
+           </div>
+         </li>
+      </ul>
+    </div>
+    </div>
+    <div id="navbar-search">
+       {% include header_search.html %}
+    <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
+    </div>
+
+      {% unless hide_nav %} {%- if active_title != "홈" -%} <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="탐색 토글" id="header_toggle"> <span class="burger burger-1"></span><span class="burger burger-2"></span><span class="burger burger-3"></span><span class="burger burger-4"></span> </button> {% endif %} {% endunless %}
+  </nav>
+</header>

@@ -9,10 +9,10 @@ description: "This landing page is home to all things Amazon Personalize includi
 page_order: 0
 guide_featured_list:
 - name: Amazon Personalize
-  link: /docs/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/
+  link: /docs/partners/amazon_personalize_overview/
   image: /assets/img/braze_icons/amazon.svg
 - name: Amazon Personalize Workshop
-  link: /docs/partners/message_personalization/dynamic_content/amazon_personalize/workshop/
+  link: /docs/partners/amazon_personalize_workshop/
   image: /assets/img/braze_icons/tool-01.svg
 ---
 

@@ -57,10 +57,6 @@ Pour utiliser la configuration des e-mails en libre-service, vous devez remplir 
 2. Ensuite, sélectionnez l'onglet **Vérification de l'expéditeur**. Pour afficher cet onglet, vous devez disposer de l'autorisation « Peut gérer les paramètres de l'entreprise » au niveau de l'entreprise.
 3. Cliquez sur le bouton **Démarrer la configuration**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver la **vérification de l'expéditeur** en sélectionnant l'icône de votre profil.
-{% endalert %}
-
 ### Étape 2 : Ajouter et vérifier un domaine d'envoi
 
 Un domaine d'envoi est utilisé dans l'adresse "from" lors de l'envoi d'un e-mail. Entrez un domaine d'envoi et cliquez sur **Soumettre**. 

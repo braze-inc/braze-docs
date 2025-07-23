@@ -158,3 +158,6 @@ Ce filtre vous permet de segmenter en fonction du moment où l’utilisateur a u
 - **Comparaisons autorisées :** `after`, `before`
 - **Valeurs autorisées :** datetime (chaîne ISO 8601)
 
+### Considérations
+
+Les audiences connectées ne peuvent pas filtrer les utilisateurs en fonction d'attributs par défaut, d'événements personnalisés, de segments ou d'événements d'engagement aux messages. Pour utiliser ces filtres, nous vous recommandons de les incorporer dans un segment d'audience et de spécifier ensuite ce segment dans le champ [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).

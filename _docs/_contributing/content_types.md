@@ -36,11 +36,17 @@ You can keep these comments in your file while writing, but you'll need to remov
 
 ### How-to guides
 
-How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/):
+There are two kinds of how-tos: generic and technology partner. Only use the technology partner template when adding new content to [Technology Partners]({{site.baseurl}}/partners/home).
 
 {% tabs local %}
-{% tab how-to template %}
+{% tab generic %}
+How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/).
+
 {% multi_lang_include contributing/templates/how_to_guide.md %}
+{% endtab %}
+
+{% tab technology partner %}
+{% multi_lang_include contributing/templates/technology_partner.md %}
 {% endtab %}
 {% endtabs %}
 

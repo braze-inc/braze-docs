@@ -12,7 +12,7 @@ tool: Canvas
 
 > Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues.
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## Benefits
 
@@ -48,7 +48,7 @@ You won't be able to delete another user's comments or threads. However, anyone 
 
 ## Managing notifications
 
-![][2]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 To manage email notifications for a Canvas, open the sidebar and click <i class="fa-solid fa-bell"></i> **Notifications**. Here, you can select your notification preferences.
 
@@ -59,5 +59,3 @@ To turn off comments notifications for a Canvas, select **None**. By default, th
 Note the **Comments within Canvases** toggle under these notification preferences controls whether you're opted-in or opted-out of notifications across all Canvases. So, if you turn off this setting, you won't receive any email notifications about any comment actions.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}

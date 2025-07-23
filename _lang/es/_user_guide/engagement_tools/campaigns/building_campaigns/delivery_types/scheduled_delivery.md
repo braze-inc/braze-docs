@@ -20,7 +20,7 @@ Si eliges enviar un mensaje en cuanto se lance, tu mensaje empezará a enviarse 
 
 Este tipo de programación está pensado para campañas puntuales que desea enviar inmediatamente, como mensajes sobre un acontecimiento actual. Una aplicación deportiva, por ejemplo, puede programar notificaciones push sobre actualizaciones de resultados utilizando esta opción. Además, cuando envíe mensajes de prueba dirigidos sólo a usted o a su equipo, esta opción le permite entregarlos inmediatamente. 
 
-Si piensas editar la campaña y volver a enviarla después de ver la prueba, asegúrate de marcar la casilla que hace que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) para recibir la campaña. Por defecto, Braze envía una campaña a un usuario una sola vez, a menos que esa casilla esté marcada.
+Si piensas editar la campaña y volver a enviarla después de ver la prueba, asegúrate de marcar la casilla que hace que los usuarios [vuelvan a ser elegibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) para recibir la campaña. Por defecto, Braze envía una campaña a un usuario una sola vez, a menos que esa casilla esté marcada.
 
 ## Opción 2: Enviar a una hora determinada
 

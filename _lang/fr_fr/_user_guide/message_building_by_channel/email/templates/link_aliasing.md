@@ -121,7 +121,7 @@ Les tableaux suivants présentent des exemples de liens dans le corps d'un e-mai
 Dans l'onglet **Gestion des liens**, sélectionnez les alias que vous souhaitez « suivre » à des fins de segmentation et qui doivent être présents dans les filtres de segmentation. Notez que les alias suivis le sont uniquement à des fins de segmentation et n’auront aucun impact sur votre lien suivi à des fins de reporting.
 
 {% alert tip %}
-Pour suivre les métriques d'engagement des liens, assurez-vous que votre lien commence par HTTP ou HTTPS.
+Pour suivre les métriques d'engagement des liens, assurez-vous que votre lien commence par HTTP ou HTTPS. Pour désactiver le suivi des clics pour des liens spécifiques, reportez-vous aux rubriques [Liens universels et Liens d'application.]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis)
 {% endalert %}
 
 Braze vous permet de sélectionner un nombre illimité de liens à suivre, bien que vous ne puissiez recibler les utilisateurs que sur les liens les plus récents qu'ils ont ouverts. Les profils d'utilisateur incluent leurs 100 liens les plus récemment cliqués. Par exemple, si vous assurez le suivi de 500 liens et qu'un utilisateur clique sur ces 500 liens, vous pouvez recibler ou créer des segments en fonction des 100 liens les plus récemment cliqués.
@@ -145,7 +145,7 @@ Braze suit uniquement les 100 derniers alias de liaison cliqués au niveau du p
 
 ### Filtres basés sur des actions
  
-Vous pouvez créer des messages par événement ciblant n’importe quel lien (suivi ou non) ou reciblant des utilisateurs sur la base du fait qu’ils aient cliqué un alias dans une des campagnes par e-mail ou composant de Canvas.
+Vous pouvez créer des messages basés sur des actions ciblant n'importe quel lien (suivi ou non) ou recibler les utilisateurs selon qu'ils ont cliqué ou non sur un alias dans n'importe quelle campagne e-mail ou composant Canvas.
 
 ![Options basées sur l'action pour cibler les utilisateurs qui ont cliqué sur un alias dans un composant Canvas ou qui ont interagi avec une campagne.][6]
 
@@ -153,11 +153,11 @@ Vous pouvez créer des messages par événement ciblant n’importe quel lien (s
 
 Dans Braze, si vous avez un alias de lien dans votre e-mail et qu'un utilisateur clique dessus, l'événement est enregistré dans le profil de l'utilisateur avec l'alias.
 
-Si vous utilisez le filtre de segmentation "Alias cliqué dans n'importe quelle campagne ou étape du canvas" et que vous décidez par la suite de renommer cet alias de lien, les données relatives aux clics précédents dans le profil utilisateur **ne seront pas** mises à jour, ce qui signifie qu'il s'agira toujours de l'ancien alias de lien. Donc, si vous ciblez les utilisateurs en fonction du nouvel alias de lien, il n'inclura pas les données de l'ancien alias de lien.
+Si vous utilisez le filtre de segmentation "Alias cliqué dans n'importe quelle campagne ou étape du canvas" et que vous décidez par la suite de renommer cet alias de lien, les données relatives aux clics précédents dans le profil utilisateur **ne seront pas** mises à jour, ce qui signifie qu'il s'agira toujours de l'ancien alias de lien. Ainsi, si vous ciblez des utilisateurs sur la base du nouvel alias de lien, les données de l'alias de lien précédent ne seront pas prises en compte.
 
 Si vous utilisez le filtre de segmentation "Alias cliqué dans la campagne" ou "Alias cliqué dans le canevas", vos utilisateurs seront filtrés selon qu'ils ont cliqué sur un alias spécifique dans une campagne ou un canevas spécifique. Si plusieurs utilisateurs partagent la même adresse e-mail et que l'on clique sur l'alias du lien, tous les autres utilisateurs qui partagent l'adresse e-mail verront leur profil utilisateur mis à jour. 
 
-Les filtres de segmentation suivants s'appliquent aux événements de clics qui sont suivis au moment du traitement de l'événement. Cela signifie que le fait de ne pas suivre les liens ne supprimera pas les données existantes et que le suivi d'un lien ne remplira pas les données manquantes. Pour plus de détails, voir [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Les filtres de segmentation suivants s'appliquent aux événements de clics qui sont suivis au moment du traitement de l'événement. Cela signifie que les liens non suivis ne supprimeront pas les données existantes et que le suivi d'un lien ne remplira pas les données. Pour plus de détails, voir [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 #### Abandon du suivi des liens
 
@@ -220,11 +220,11 @@ Pour les blocs de contenu, Braze recommande de créer des copies des blocs de co
 
 ## Aliasage de lien pour les URL générées par Liquid
 
-Pour les tags générés par une déclaration `assign` dans le code HTML ou dans un bloc de contenu, vous devez ajouter un point d'interrogation (`?`) à la balise d'ancrage. Cela permet à Braze d'ajouter des paramètres de requête (`lid = somevalue`) afin que l'aliasage de lien puisse fonctionner correctement. Si vous ne savez pas où ajouter les paramètres de requête, l'aliasage de lien ne reconnaîtra pas ces URL et les modèles de lien ne s'appliqueront pas.
+Pour les URL générées par Liquid, telles que les déclarations `assign` dans le HTML ou à partir d'un bloc de contenu, vous devez ajouter un point d'interrogation (`?`) à l'étiquette Liquid. Cela permet à Braze d'ajouter des paramètres de requête (`lid = somevalue`) afin que l'aliasage de lien puisse fonctionner correctement. Si vous ne savez pas où ajouter les paramètres de requête, l'aliasage de lien ne reconnaîtra pas ces URL et les modèles de lien ne s'appliqueront pas.
 
 ### Exemple
 
-Consultez cet exemple de l’aliasage de lien pour le formatage recommandé de la balise d’ancrage :
+Consultez cet exemple d'aliasage de lien pour connaître le formatage recommandé du lien :
 
 {% raw %}
 ```liquid

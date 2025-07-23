@@ -26,15 +26,15 @@ A Braze notificará o contato da empresa e quem criou a extensão quando essa co
 
 ### Cartões de conteúdo
 
-Este guia de implementação opcional e avançado [cobre considerações de código do cartão de conteúdo]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/), três casos de uso personalizados criados por nossa equipe, trechos de código que o acompanham e orientações sobre o registro de impressões, cliques e dispensas.
+Este guia de implementação opcional e avançado [cobre considerações de código do cartão de conteúdo]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/), três casos de uso personalizados criados por nossa equipe, trechos de código que o acompanham e orientações sobre o registro de impressões, cliques e dispensas.
 
 ### Envio de mensagens no app
 
-Este [guia de implementação]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/) opcional e avançado traz considerações de código de mensagem no app, três casos de uso personalizados criados por nossa equipe e trechos de código que o acompanham.
+Este [guia de implementação]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android) opcional e avançado traz considerações de código de mensagem no app, três casos de uso personalizados criados por nossa equipe e trechos de código que o acompanham.
 
 ### Notificações por push
 
-Este [guia de implementação opcional e avançado`FirebaseMessagingService` cobre maneiras de aproveitar uma subclasse personalizada para obter o máximo de suas mensagens push.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) Inclui um caso de uso personalizado criado por nossa equipe, trechos de código de acompanhamento e orientações sobre o registro de análise de dados.
+Este [guia de implementação opcional e avançado`FirebaseMessagingService` cobre maneiras de aproveitar uma subclasse personalizada para obter o máximo de suas mensagens push.]({{site.baseurl}}/developer_guide/push_notifications/examples/?sdktab=android) Inclui um caso de uso personalizado criado por nossa equipe, trechos de código de acompanhamento e orientações sobre o registro de análise de dados.
 
 ## Novas parcerias Braze
 
@@ -44,6 +44,6 @@ Construída na Adobe Experience Platform, a plataforma de dados do cliente em te
 
 A integração do Braze e [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP permite que as marcas conectem e mapeiem seus dados do Adobe (atributos e segmentos personalizados) ao Braze em tempo real. As marcas podem então agir com base nesses dados, oferecendo experiências personalizadas e direcionadas a esses usuários. 
 
-### Shopify - Ecommerce
+### Shopify - Comércio eletrônico
 
-A [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) é uma empresa líder global de comércio que fornece ferramentas confiáveis para iniciar, desenvolver, comercializar e gerenciar um negócio de varejo de qualquer tamanho. Juntos, a integração da Braze com a Shopify permite que as marcas conectem sua loja Shopify perfeitamente com a Braze para passar webhooks selecionados do Shopify para a Braze. Aproveite as estratégias cross-canal da Braze e o canva para redirecionar seus usuários com envio de mensagens de checkout abandonado e incentive os clientes a concluir sua compra, ou redirecione os usuários com base em suas compras anteriores.
+A [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/) é uma empresa de comércio global líder que fornece ferramentas confiáveis para abrir, expandir, comercializar e gerenciar um negócio de varejo de qualquer tamanho. Juntos, a integração da Braze com a Shopify permite que as marcas conectem sua loja Shopify perfeitamente com a Braze para passar webhooks selecionados do Shopify para a Braze. Aproveite as estratégias cross-canal da Braze e o canva para redirecionar seus usuários com envio de mensagens de checkout abandonado e incentive os clientes a concluir sua compra, ou redirecione os usuários com base em suas compras anteriores.

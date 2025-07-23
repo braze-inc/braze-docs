@@ -28,7 +28,7 @@ Si quieres ver ejemplos o probar este punto final para **Grupos de WhatsApp**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## Requisitos
+## Requisitos previos
 
 Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `subscription.groups.get`.
 
@@ -76,4 +76,23 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endraw %}
 {% endtab %}
 {% endtabs %}
+
+## Ejemplo de respuesta
+
+```json
+{
+  "success": true,
+  "subscription_groups": [
+    {
+      "subscription_group_id": "group_id_1",
+      "subscription_status": "subscribed"
+    },
+    {
+      "subscription_group_id": "group_id_2",
+      "subscription_status": "unsubscribed"
+    }
+  ]
+}
+```
+
 {% endapi %}

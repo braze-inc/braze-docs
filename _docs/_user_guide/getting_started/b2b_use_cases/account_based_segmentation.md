@@ -25,7 +25,7 @@ To help you get started, we created basic SQL templates for simple account-based
 
 Let’s say you want to segment users who are employees of a target enterprise account. 
 
-1. Go to **Audience** > **Segment Extensions** > **Create New Extension** > **Start with a template** and select the template **Catalog segment for events**. <br><br> !["Select a Template" modal with catalog segment options for events or purchases.][1]<br><br>The SQL editor automatically populates with a template that joins user event data with catalog data to segment users who engage with certain catalog items. <br><br>![A SQL editor for a new extension with an open "Variables" tab.][2]<br><br>
+1. Go to **Audience** > **Segment Extensions** > **Create New Extension** > **Start with a template** and select the template **Catalog segment for events**. <br><br> !["Select a Template" modal with catalog segment options for events or purchases.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>The SQL editor automatically populates with a template that joins user event data with catalog data to segment users who engage with certain catalog items. <br><br>![A SQL editor for a new extension with an open "Variables" tab.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Use the **Variables** tab to provide the necessary fields for your template before generating your segment.<br><br>For Braze to identify users based on their engagement with catalog items, you need to do the following:
 - Select a catalog that contains a catalog field
 - Select a custom event that contains an event property
@@ -114,5 +114,3 @@ For the basics on how to use connected sources in segmentation, refer to [CDI se
 
 After you’ve created your account-level segmentation in the above steps, you can directly pull those Segment Extensions into your targeting criteria. It’s also easy to layer on incremental user demographic criteria such as role, engagement with previous campaigns, and more. For more information, refer to [Using your extension in a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment).
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}

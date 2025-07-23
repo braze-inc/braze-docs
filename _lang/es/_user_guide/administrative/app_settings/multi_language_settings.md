@@ -41,26 +41,30 @@ Para conocer los pasos necesarios para utilizar estas configuraciones regionales
 
 ## Consideraciones
 
-Al configurar una localización, puedes seleccionar los idiomas a partir de los atributos predeterminados del usuario o de atributos personalizados. No puedes elegir entre ambos.
-
-Puedes seleccionar hasta dos atributos personalizados en una única localización, o hasta dos idiomas predeterminados para atributos de usuario. En ambos casos, el segundo atributo es opcional.
+- Al configurar una localización, puedes seleccionar los idiomas a partir de los atributos predeterminados del usuario o de atributos personalizados. No puedes elegir entre ambos.
+- Puedes seleccionar hasta dos atributos personalizados en una única localización, o hasta dos idiomas predeterminados para atributos de usuario. En ambos casos, el segundo atributo es opcional.
+- Cuando edites los valores traducidos del archivo CSV, evita modificar los valores predeterminados del archivo.
+- La clave de configuración regional de tu archivo cargado debe coincidir con la de tu configuración multilingüe.
 
 ### Apoyo y priorización
 
 - Los usuarios que coinciden con la localización de un atributo personalizado tienen prioridad sobre los usuarios que coinciden con un atributo predeterminado de usuario.
 - La compatibilidad con atributos personalizados se limita a los tipos de cadena y a la clave de comparación `equals`.
-- Si el Soporte elimina un atributo personalizado o cambia el tipo, el usuario ya no podrá pertenecer a esa localización y bajará en la lista de prioridades de las localizaciones a las que pertenezca o recibirá traducciones de marketing predeterminadas.
+- Si se elimina un atributo personalizado o se cambia su tipo, el usuario ya no podrá pertenecer a esa localización y bajará en la lista de prioridad de localizaciones a las que pertenece o recibirá traducciones de marketing predeterminadas.
 - Si una localización no es válida (el atributo personalizado ha cambiado o se ha eliminado), el error aparecerá en la página de **Soporte multilingüe**.
 
 ## Preguntas más frecuentes
 
 #### ¿Cuántas configuraciones regionales puedo añadir?
+
 Puedes añadir hasta 200 configuraciones regionales.
 
 #### ¿Dónde se almacenan los archivos de traducción en Braze?
+
 Los archivos de traducción se almacenan a nivel de campaña, lo que significa que cada variante de mensaje debe tener traducciones cargadas.
 
 #### ¿El nombre de la configuración regional tiene que seguir un patrón o formato específico?
+
 No. Puedes utilizar la convención de nomenclatura que prefieras. El nombre de la configuración regional se utiliza al seleccionar la configuración regional en el editor y aparecerá en los encabezados del archivo que descargue con los identificadores de traducción.
 
 [1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

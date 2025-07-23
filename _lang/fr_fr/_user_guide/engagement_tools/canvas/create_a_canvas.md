@@ -7,7 +7,7 @@ guide_top_header: "Développement de Canvas"
 guide_top_text: "Les articles de cette section vous guideront dans la création et le lancement rapide d'un canvas multidimensionnel, de l'idéation à l'exécution, jusqu'à vos utilisateurs. Avec son interface intuitive de glisser-déposer et son espace de collaboration, vous pouvez tirer parti de cet environnement de programmation visuelle pour aider à obtenir les meilleurs résultats pour vos objectifs d'engagement client."
 
 page_type: landing
-description: "Cette page d’accueil contient des ressources qui vous aideront à créer et à lancer un Canvas multidimensionnel, comme la création d’un Canvas, les événements d’exception, les critères de sortie, les propriétés d’entrée dans le Canvas, etc."
+description: "Cette page d'accueil contient des ressources qui vous aideront à créer et à lancer un Canvas multidimensionnel, comme la création d'un Canvas, les critères de sortie, les propriétés d'entrée du Canvas, et plus encore."
 tool: Canvas
 
 guide_featured_title: "Section Articles"
@@ -20,16 +20,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-circle-01.svg
   - name: "Création d'un modèle de canvas"
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/
-    image: /assets/img/braze_icons/brush-02.svg    
-  - name: Fonctionnalités basées sur le temps
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
-    image: /assets/img/braze_icons/clock.svg
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Limitation du débit
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting
     image: /assets/img/braze_icons/alert-triangle.svg
-  - name: "Événements d'exception"
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-    image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Critère de sortie
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
     image: /assets/img/braze_icons/users-right.svg
@@ -51,10 +45,13 @@ guide_featured_list:
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: Prévisualisation des chemins utilisateur
-    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
-    image: /assets/img/braze_icons/target-04.svg
   - name: Assistant de rédaction IA
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: Types de livraison
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
+    image: /assets/img/braze_icons/beaker-02.svg
+  - name: Prévisualisation des chemins utilisateur
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
+    image: /assets/img/braze_icons/target-04.svg
 ---

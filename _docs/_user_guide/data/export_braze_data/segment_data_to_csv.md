@@ -13,11 +13,11 @@ description: "This reference article covers how to export segment data to CSV."
 
 To export segment data to a CSV, select the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
 
-![Segment Details section with User Data dropdown showing export options.][1]
+![Segment Details section with User Data dropdown showing export options.]({% image_buster /assets/img_archive/csvexport.png %})
 
 You can also request a CSV export from the main **Segments** page by selecting the <i class="fas fa-gear"></i> **Settings** dropdown for a segment:
 
-![Settings dropdown on the main Segments page.][2]
+![Settings dropdown on the main Segments page.]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 To export data from all your user profiles, create a segment with no filters, and then request a CSV export.
@@ -29,7 +29,7 @@ The CSV output contains the data from each user profile captured in the segment 
 Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, see [Exporting large segments]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).
 {% endalert %}
 
-If you've linked your [Amazon S3 credentials][26] to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting, and requires you to be logged into the dashboard for access.
+If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting, and requires you to be logged into the dashboard for access.
 
 ## Data included in export
 
@@ -95,6 +95,3 @@ The following is included in your export depending on your selection.
 For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
 {% endalert %} 
 
-[1]: {% image_buster /assets/img_archive/csvexport.png %}
-[2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

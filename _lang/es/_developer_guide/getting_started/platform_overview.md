@@ -58,7 +58,7 @@ La API de Braze te permite mover datos dentro y fuera de Braze a escala. Utiliza
 
 La API también proporciona un servicio Web en el que puedes registrar las acciones realizadas por tus usuarios directamente a través de HTTP, en lugar de a través de los SDK móviles y Web. Combinado con webhooks, esto significa que puedes hacer un seguimiento de las acciones y desencadenar actividades para los usuarios dentro y fuera de la experiencia de la aplicación. La [guía de la API]({{site.baseurl}}/api/home) enumera los puntos finales de la API de Braze disponibles y sus usos.
 
-Para saber más sobre las partes y piezas de Braze, echa un vistazo: [Cómo empezar: Resumen de la arquitectura]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview).
+Para saber más sobre las partes y piezas de Braze, echa un vistazo: [Cómo empezar: Resumen de la arquitectura]({{site.baseurl}}/developer_guide/getting_started/architecture_overview/).
 
 ## Análisis de datos y acción
 
@@ -74,7 +74,7 @@ El panel de Braze muestra gráficos que se actualizan en tiempo real basándose 
 
 La segmentación te permite crear grupos de usuarios basados en potentes filtros de su comportamiento dentro de la aplicación, datos demográficos y similares. Braze también te permite definir cualquier acción del usuario dentro de la aplicación como un "evento personalizado" si la acción deseada no está predeterminada. Lo mismo ocurre con las características del usuario mediante "atributos personalizados". Una vez creado un segmento de usuarios en el panel, tus usuarios entrarán y saldrán del segmento a medida que cumplan (o no) los criterios definidos. Por ejemplo, puedes crear un segmento que incluya a todos los usuarios que han gastado dinero in-app y que utilizaron la aplicación por última vez hace más de dos semanas.
 
-Para saber más sobre nuestros modelos de datos, consulta: [Cómo empezar: Resumen del análisis]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview).
+Para saber más sobre nuestros modelos de datos, consulta: [Cómo empezar: Resumen del análisis]({{site.baseurl}}/developer_guide/getting_started/architecture_overview/).
 
 ## Mensajería multicanal
 
@@ -106,39 +106,10 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 
 <br>
 <br>
-Para saber más sobre cómo personalizar los canales de mensajería, consulta: [Primeros pasos: Resumen de personalización]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
 
 ## Integración de Braze
 
-Braze está diseñado para ponerse en marcha rápida y fácilmente. Nuestro tiempo medio de creación de valor es de seis semanas en nuestra base de clientes de cientos de marcas. Para más información sobre el proceso de integración, consulta: [Cómo empezar: Resumen de la integración]({{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/).
-
-Explora los diferentes SDK que ofrece Braze:
-
-<style>
-table th:nth-child(1) {
-width: 33%;
-}
-table th:nth-child(2) {
-width: 33%;
-}
-table th:nth-child(3) {
-width: 33%;
-}
-table td {
-word-break: break-word;
-text-align: center;
-}
-</style>
-Integraciones características   |    |   
------------ |---------------- | --------------------
-[![Android]({% image_buster /assets/img/braze_icons/android.svg %})]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) |[![Swift]({% image_buster /assets/img/braze_icons/apple.svg %})]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/){: style="max-width:20%;margin-right:15px;border:0" class="noimgborder"} [Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/) |[![Web]({% image_buster /assets/img/braze_icons/globe-02.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/){: style="max-width:25%;margin-right:15px;border:0" class="noimgborder"} [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)  
-
-Todas las integraciones   |    |   
------------ |---------------- | --------------------
-[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/) | [![Flutter Android e iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/){: style="max-width:20%;margin-top:5%;border:0" class="noimgborder"}  [Flutter Android e iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/)
-[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/)
-[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/)
-[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Motor Unreal Engine]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/)
+Braze está diseñado para ponerse en marcha rápida y fácilmente. Nuestro tiempo medio de creación de valor es de seis semanas en nuestra base de clientes de cientos de marcas. Para más información sobre el proceso de integración, consulta: [Cómo empezar: Resumen de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Recursos para marcar
 
@@ -146,6 +117,7 @@ Como recurso técnico, participarás en muchos de los aspectos prácticos de Bra
 
 | Recursos | Lo que aprenderás|
 |---|---|
+| [Depurar el SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | Cuando resuelvas los problemas de tu integración, la herramienta de depuración del SDK te será de gran ayuda. ¡Asegúrate de tenerlo a mano! |
 | [GitHub público de Braze](https://github.com/braze-inc/) | Encontrarás información detallada sobre la integración y código de muestra en nuestro repositorio de GitHub. |
 | [Repositorio GitHub del SDK de Android](https://github.com/braze-inc/braze-android-sdk/) | El repositorio GitHub del SDK de Android. |
 | [Referencia del SDK de Android](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Documentación de clases para el SDK de Android. |
@@ -153,9 +125,8 @@ Como recurso técnico, participarás en muchos de los aspectos prácticos de Bra
 | [Referencia del SDK de iOS (Swift)](https://braze-inc.github.io/braze-swift-sdk/) | Documentación de clases para el SDK de iOS. |
 | [Repositorio de GitHub del SDK Web](https://github.com/braze-inc/braze-web-sdk) | El repositorio GitHub del SDK Web. |
 | [Referencia del SDK Web](https://js.appboycdn.com/web-sdk/5.0/doc/modules/braze.html) | Documentación de clases para el SDK de iOS. |
-| [Registros de cambios del SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs) | Braze tiene lanzamientos mensuales predecibles, además de lanzamientos para cualquier problema crítico y actualizaciones importantes del SO. |
+| [Registros de cambios del SDK]({{site.baseurl}}/developer_guide/changelogs) | Braze tiene lanzamientos mensuales predecibles, además de lanzamientos para cualquier problema crítico y actualizaciones importantes del SO. |
 | [Colección Postman de la API Braze](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest) | Descarga aquí nuestra colección Cartero.  |
 | [Monitor de estado del sistema Braze](https://braze.statuspage.io/) | Nuestra página de estado se actualiza siempre que hay incidentes o cortes. Ve a esta página para suscribirte a las alertas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
 

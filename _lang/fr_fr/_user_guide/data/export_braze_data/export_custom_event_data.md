@@ -14,10 +14,6 @@ tool: Reports
 
 Vous trouverez le **rapport sur les événements personnalisés** dans la rubrique **Analyse.**
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), vous trouverez la page du rapport sur les **événements personnalisés** sous **Données.**
-{% endalert %}
-
 ![Événements personnalisés][14]
 
 Vous pouvez exporter les CSVs suivants :

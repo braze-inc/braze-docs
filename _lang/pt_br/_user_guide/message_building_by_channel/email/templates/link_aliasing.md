@@ -121,7 +121,7 @@ As tabelas a seguir fornecem exemplos de links em um e-mail, resultados de alias
 Na guia **Link Management (Gerenciamento de links)**, selecione quais aliases você gostaria que fossem "rastreados" para fins de segmentação e que estivessem presentes nos filtros de segmentação. Note que os aliases rastreados são apenas para fins de segmentação e não terão impacto sobre o rastreamento de seu link para fins de relatório.
 
 {% alert tip %}
-Para rastrear as métricas de engajamento do link, seu link precisa ser precedido por HTTP ou HTTPS.
+Para rastrear as métricas de engajamento do link, seu link precisa ser precedido por HTTP ou HTTPS. Para desativar o rastreamento de cliques para links específicos, consulte [Links universais e App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis).
 {% endalert %}
 
 O Braze permite selecionar um número ilimitado de links para rastreamento, embora você só possa redirecionar os usuários para os links mais recentes que eles abriram. Os perfis de usuário incluem os 100 links clicados mais recentemente. Por exemplo, se você rastrear 500 links e um usuário clicar em todos os 500, poderá redirecionar ou criar segmentos com base nos 100 links clicados mais recentemente.
@@ -157,7 +157,7 @@ Se você usar o filtro de segmentação "Clique no Alias em Qualquer Campanha ou
 
 Se você usar o filtro de segmentação "Alias Clicado na Campanha" ou "Alias Clicado no Canva", isso filtrará seus usuários com base em se eles clicaram em um alias específico em uma campanha ou Canva específica. Se vários usuários compartilharem o mesmo e-mail e o alias do link for clicado, todos os outros usuários que compartilham o e-mail terão seus perfis de usuário atualizados. 
 
-Os seguintes filtros de segmentação se aplicam a eventos de clique que são rastreados no momento em que o evento é processado. Isso significa que o cancelamento do rastreamento de links não removerá os dados existentes e o rastreamento de um link não preencherá novamente os dados. Para mais detalhes, veja [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Os seguintes filtros de segmentação se aplicam a eventos de clique que são rastreados no momento em que o evento é processado. Isso significa que os links não rastreados não removerão os dados existentes e o rastreamento de um link não preencherá os dados novamente. Para mais detalhes, veja [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 #### Deixando de rastrear links
 
@@ -220,11 +220,11 @@ Para blocos de conteúdo, o Braze recomenda a criação de cópias de blocos de 
 
 ## Aliasing de links para URLs gerados pelo Liquid
 
-Para URLs gerados por uma declaração `assign` no HTML ou em um bloco de conteúdo, é necessário adicionar um ponto de interrogação (`?`) à tag de âncora. Isso permite que o Braze acrescente parâmetros de consulta (`lid = somevalue`) para que o link aliasing possa funcionar corretamente. Sem identificar onde anexar os parâmetros de consulta, o aliasing de links não reconhecerá esses URLs e os modelos de links não serão aplicados.
+Para URLs gerados pelo Liquid, como declarações `assign` no HTML ou de um bloco de conteúdo, você deve adicionar um ponto de interrogação (`?`) à tag Liquid. Isso permite que o Braze acrescente parâmetros de consulta (`lid = somevalue`) para que o link aliasing possa funcionar corretamente. Sem identificar onde anexar os parâmetros de consulta, o aliasing de links não reconhecerá esses URLs e os modelos de links não serão aplicados.
 
 ### Exemplo
 
-Dê uma olhada neste exemplo de aliasing de link para ver a formatação recomendada da tag âncora:
+Confira este exemplo de aliasing de link para ver a formatação recomendada do link:
 
 {% raw %}
 ```liquid

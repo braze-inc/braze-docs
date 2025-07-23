@@ -90,7 +90,7 @@ Uma mensagem rica em texto pode conter até 400 caracteres.
 
 ## Cartão-baseado (carrossel)
 
-Uma mensagem baseada em cartão LINE permite que os usuários rolem por várias mensagens, como um carrossel, e tomem ações nas mensagens mais relevantes para eles, selecionando um cartão ou os botões de um cartão.
+Uma mensagem baseada em cartão do LINE permite que os usuários rolem por várias mensagens, como um carrossel, e tomem ações nas mensagens mais relevantes para eles, selecionando um cartão ou os botões de um cartão.
 
 Os casos de uso incluem:
 - Exibir promoções para itens de menu específicos

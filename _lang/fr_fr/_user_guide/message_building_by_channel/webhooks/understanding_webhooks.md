@@ -55,7 +55,7 @@ Le tableau suivant décrit les quatre méthodes HTTP différentes que vous pouve
 | Méthode HTTP | Description |
 | ----------- | ----------- |
 | POST | Cette méthode écrit la nouvelle information sur le serveur destinataire. Un exemple courant de la méthode POST dans une application réelle est un [formulaire de contact](https://www.braze.com/company/contact) sur un site web. Les informations que vous intégrez dans le formulaire deviennent une partie du corps de la requête et sont envoyées à un récepteur. Il s’agit de la méthode la plus employée pour l’envoi de données.
-| GET | Cette méthode récupère les informations existantes au contraire d’écrire de nouvelles informations. C’est la méthode la plus utilisée lorsque vous demandez des données à un serveur. Prenons l'exemple de l'[endpoint `/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Si vous réalisiez une requête GET, elle renverrait une liste de vos segments.
+| GET | Cette méthode récupère les informations existantes au contraire d’écrire de nouvelles informations. Par définition, une requête GET ne comporte pas de corps de requête. C’est la méthode la plus utilisée lorsque vous demandez des données à un serveur. Prenons l'exemple de l'[endpoint `/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Si vous réalisiez une requête GET, elle renverrait une liste de vos segments.
 | PUT | Cette méthode met à jour les informations sur l’endpoint en remplaçant les informations existantes avec le contenu du corps de la requête. 
 | DELETE | Cette méthode supprime la ressource dans l’URL HTTP. 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

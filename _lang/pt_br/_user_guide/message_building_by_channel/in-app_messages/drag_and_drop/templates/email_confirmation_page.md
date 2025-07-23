@@ -16,7 +16,7 @@ description: "Esta página aborda como usar o editor de arrastar e soltar de men
 
 ### Etapa 1: Escolha seu modelo
 
-Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Envio de e-mail com página de confirmação** como modelo e, em seguida, selecione **Montar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
+Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Envio de e-mail com página de confirmação** como modelo e, em seguida, selecione **Criar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
 ![O editor de mensagens no app com o modelo de um formulário de envio de e-mail com página de confirmação.][img1]
 

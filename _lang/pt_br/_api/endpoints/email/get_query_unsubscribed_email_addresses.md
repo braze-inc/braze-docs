@@ -14,7 +14,7 @@ description: "Este artigo descreve os detalhes sobre o endpoint Retrieve list of
 /email/unsubscribes
 {% endapimethod %}
 
-> Use esse endpoint para retornar os e-mails mais recentes que cancelaram inscrição durante o período de `start_date` a `end_date`. Para obter um histórico completo do estado da inscrição, use o [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) para rastrear esses dados.
+> Use esse endpoint para retornar os e-mails mais recentes que cancelaram inscrição durante o período de `start_date` a `end_date`. Para obter um histórico completo do estado da inscrição, use o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) para rastrear esses dados.
 
 Você pode usar esse endpoint para configurar uma sincronização bidirecional entre o Braze e outros sistemas de e-mail ou seu próprio banco de dados.
 

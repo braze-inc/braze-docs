@@ -12,13 +12,16 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Envio de mensagens de erro comuns do push
-    link: /docs/help/help_articles/push/push_error_codes/
+    link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
+    image: /assets/img/braze_icons/alert-circle.svg
+  - name: Cliques push que abrem inesperadamente no app
+    link: /docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/
     image: /assets/img/braze_icons/alert-circle.svg
   - name: Definição da capacitação push
     link: /docs/help/help_articles/push/defining_push_enablement/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Falta de notificações por push
-    link: /docs/help/help_articles/push/no_push_notification_was_received/
+    link: /docs/user_guide/message_building_by_channel/push/troubleshooting/
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migração de tokens por push
     link: /docs/help/help_articles/push/push_token_migration/

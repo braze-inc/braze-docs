@@ -11,7 +11,7 @@ description: "This article contains release notes for April 2020."
 
 Movable Ink provides Braze customers the ability to use Intelligent Creative features like countdown timers, polls, and scratch offs in their push, in-app message and Content Card campaigns. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
-Start [integrating Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) into your campaigns!
+Start [integrating Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/) into your campaigns!
 
 ## Intelligent Timing
 
@@ -41,6 +41,5 @@ The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templat
 
 When creating an email message within Braze, you can now personalize the From Address of the message in the **Sending Info** section of email composition. You can use any of our supported [personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
 
-![Personalized From Address][0]{: style="max-width:80%"}
+![Personalized From Address]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}

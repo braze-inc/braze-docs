@@ -13,10 +13,6 @@ tool:
 
 > Los paneles de rendimiento del canal muestran métricas de rendimiento agregadas de todo un canal, tanto de campañas como de Canvases. Estos paneles están actualmente disponibles para correo electrónico y SMS.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), los paneles de rendimiento de los canales se encuentran en **Visión general**.
-{% endalert %}
-
 ![Panel de rendimiento del correo electrónico que muestra la participación en el canal de correo electrónico de los últimos treinta días.][1]
 
 Puedes ver los siguientes paneles:
@@ -41,7 +37,7 @@ Cada mosaico muestra primero la métrica de tasa, seguida de la métrica de recu
 | Envíos | Recuento | Número total de envíos en cada día del intervalo de fechas |
 | Tasa de entrega | Tasa | (Número total de entregas en cada día del intervalo de fechas) / (Número total de envíos en cada día del intervalo de fechas) |
 | Tasa de rebote | Tasa | (Número total de rebotes en cada día del intervalo de fechas) / (Número total de envíos en cada día del intervalo de fechas) |
-| Tasa de cancelaciones | Tasa | (Número total de bajas únicas en cada día del intervalo de fechas) / (Número total de entregas para un intervalo de fechas)<br><br>Esto utiliza cancelaciones de suscripción únicas, que también se utilizan en el análisis de campaña, el resumen y el generador de informes. |
+| Tasa de cancelaciones | Tasa | (Número total de bajas únicas en cada día del intervalo de fechas) / (Número total de entregas para un intervalo de fechas)<br><br>Esto utiliza cancelaciones de suscripción únicas, que también se utilizan en el análisis de campaña, el resumen y el generador de informes. Estas bajas se registran en todas las fuentes (como el SDK, la API REST, las importaciones CSV, los correos electrónicos y las bajas de listas). Las tasas de cancelación de suscripción en los análisis de Campaign y Canvas son las cancelaciones de suscripción que se producen como resultado de un clic de cancelación de suscripción en un correo electrónico entregado por Braze.  |
 | Tasa de apertura única | Tasa | (Número total de aperturas únicas en cada día del intervalo de fechas) / (Número total de entregas para un intervalo de fechas) |
 | Otra tasa de apertura | Tasa | (Número total de otras aperturas totales en cada día del intervalo de fechas) / (Número total de entregas para el intervalo de fechas)<br><br>Otras aperturas incluye correos electrónicos que no se han identificado como aperturas automáticas, como cuando un usuario abre un correo electrónico. Esta métrica no es única y es una submétrica del total de aperturas.  |
 | Tasa de clics únicos | Tasa | (Número total de clics únicos en cada día del intervalo de fechas) / (Número total de entregas para un intervalo de fechas) |
@@ -81,7 +77,7 @@ El informe **Compromiso por proveedor de buzón** muestra los principales provee
 
 ### Hora de participación
 
-El informe **Tiempo de interacción** muestra datos sobre el momento en que los usuarios interactúan con sus mensajes de correo electrónico. Esto puede ayudar a responder preguntas como qué día de la semana o a qué hora se produce la mayor participación de sus clientes. Con esta información, puede experimentar con el mejor día u hora para enviar sus mensajes y conseguir una mayor participación. Tenga en cuenta que estas horas se basan en la zona horaria de su espacio de trabajo.
+El informe **Tiempo de interacción** muestra datos sobre el momento en que los usuarios interactúan con sus mensajes de correo electrónico. Esto puede ayudar a responder preguntas como qué día de la semana o a qué hora se produce la mayor participación de sus clientes. Con esta información, puede experimentar con el mejor día u hora para enviar sus mensajes y conseguir una mayor participación. Ten en cuenta que estas horas se basan en la zona horaria de tu empresa.
 
 El informe de compromiso **del día de la semana** desglosa las aperturas o los clics por día de la semana. 
 

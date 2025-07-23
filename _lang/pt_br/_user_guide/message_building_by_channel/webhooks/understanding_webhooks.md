@@ -55,7 +55,7 @@ A tabela a seguir descreve os quatro métodos HTTP diferentes que você pode esp
 | Método HTTP | Descrição |
 | ----------- | ----------- |
 | POST | Este método grava novas informações no servidor de recebimento. Um exemplo comum do método POST em uma aplicação do mundo real é um [formulário de contato](https://www.braze.com/company/contact) em um site. Qualquer informação que você colocar no formulário se torna parte de um corpo de solicitação e é enviada a um receptor. Este é o método mais comum usado ao enviar dados.
-| OBTER | Este método recupera informações existentes, em vez de escrever novas informações. Este é o método mais comum usado ao solicitar dados de um servidor. Por exemplo, considere o [endpoint `/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Se você fizesse uma solicitação GET, ela retornaria uma lista de seus segmentos.
+| OBTER | Este método recupera informações existentes, em vez de escrever novas informações. Por definição, uma solicitação GET não é compatível com um corpo de solicitação. Este é o método mais comum usado ao solicitar dados de um servidor. Por exemplo, considere o [endpoint `/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Se você fizesse uma solicitação GET, ela retornaria uma lista de seus segmentos.
 | PUT | Este método atualiza as informações no endpoint, substituindo qualquer informação existente pelo que está no corpo da solicitação. 
 | EXCLUIR | Este método exclui o recurso no URL HTTP. 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

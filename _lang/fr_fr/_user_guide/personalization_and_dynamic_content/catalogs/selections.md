@@ -38,7 +38,11 @@ Après avoir créé une sélection, vous pouvez utiliser la section **Prévisual
 
 ### Liquide dans les résultats de la sélection
 
-L'utilisation de tout liquide dans les catalogues, comme les attributs personnalisés et les événements personnalisés, peut donner lieu à des résultats différents pour chaque utilisateur de votre sélection.
+L'utilisation de tout liquide dans les catalogues, comme les attributs personnalisés et les événements personnalisés, peut donner lieu à des résultats différents pour chaque utilisateur de votre sélection. 
+
+{% alert note %}
+Le contenu connecté liquid n'est pas pris en charge dans ces paramètres de filtrage.
+{% endalert %}
 
 ![Paramètres de filtrage pour la sélection du catalogue lorsque l'attribut est défini sur un attribut personnalisé Liquid.][7]
 
@@ -70,7 +74,7 @@ Pour utiliser ce catalogue et cette sélection dans une campagne, utilisez la fe
 
 Par exemple, si vous avez un utilisateur pour lequel la catégorie visualisée le plus récemment est « Poulet ». En utilisant la personnalisation définie et une campagne de cartes de contenu, vous pouvez envoyer trois recommandations de repas incluant du poulet à cet utilisateur.
 
-![Une carte de contenu avec une image de poulet grillé au citron et une liste de trois recommandations de repas incluant du poulet, sur la base de la dernière catégorie consultée par l'utilisateur.][4]{: style="max-width:90%;"}
+![Une carte de contenu avec une image de poulet au citron grillé et une liste de trois recommandations de repas incluant du poulet, basées sur la dernière catégorie consultée par l'utilisateur.][4]{: style="max-width:90%;"}
 
 En utilisant la même personnalisation, vous pouvez également envoyer trois recommandations de repas à un utilisateur dont la catégorie la plus récemment consultée est "Bœuf".
 

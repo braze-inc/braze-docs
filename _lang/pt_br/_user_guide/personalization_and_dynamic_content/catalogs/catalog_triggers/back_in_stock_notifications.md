@@ -13,11 +13,11 @@ Quando um usuário dispara um evento personalizado para um item, nós o inscreve
 
 ## Como funcionam as notificações de estoque em espera
 
-Você configurará um evento personalizado para usar como um evento de inscrição, como um evento `product_clicked`. Este evento deve conter uma propriedade do ID do item (IDs dos itens do catálogo). Sugerimos que você inclua um nome de catálogo, mas isso não é obrigatório. Você também fornecerá o nome de um campo de quantidade de estoque, que deve ser um tipo de dado numérico.
+Você configurará um evento personalizado para usar como um evento de inscrição, como um evento `product_clicked`. Este evento deve conter uma propriedade do ID do item (IDs dos itens do catálogo). Sugerimos que você inclua um nome de catálogo, mas isso não é obrigatório. Você também fornecerá o nome de um campo de quantidade de estoque, que deve ser um tipo de dado numérico. 
 
-Quando um item tiver uma quantidade de estoque que atenda à sua regra de estoque, procuraremos todos os seus usuários que estão inscritos nesse item (usuários que fizeram o evento de gatilho) e enviaremos um evento personalizado da Braze que poderá ser usado para disparar uma campanha ou canva.
+Note que o estoque de um item de catálogo deve ser zero para que um usuário possa assiná-lo com sucesso. Quando um item tiver uma quantidade de estoque que atenda à sua regra de estoque, procuraremos todos os seus usuários que estão inscritos nesse item (usuários que fizeram o evento de gatilho) e enviaremos um evento personalizado da Braze que poderá ser usado para disparar uma campanha ou canva.
 
-As propriedades do evento são enviadas junto com seu usuário, para que você possa fazer um modelo com os detalhes do item na campanha ou canva que envia!
+As propriedades do evento são enviadas junto com o usuário, portanto, é possível modelar os detalhes do item na campanha ou na canva que envia.
 
 ## Configurando notificações de estoque em espera
 
@@ -50,7 +50,7 @@ Siga estas etapas para configurar notificações de falta de estoque em um catá
     }
     ```
 {% alert note %}
-Os disparadores de queda de preço e de volta ao estoque usam o mesmo evento para inscrever o usuário na notificação, portanto, é possível usar a matriz `type` para definir notificações de queda de preço e de volta ao estoque no mesmo evento.
+Os disparadores de baixa de estoque e de preço usam o mesmo evento para inscrever o usuário na notificação, portanto, é possível usar a propriedade `type` para definir as notificações de baixa de preço e de baixa de estoque no mesmo evento. Note que a propriedade `type` deve ser uma matriz.
 {% endalert %}
 
 {: start="4"}

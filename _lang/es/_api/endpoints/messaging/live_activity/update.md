@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Actual
 /messages/live_activity/update
 {% endapimethod %}
 
-> Utilice este punto final para actualizar y finalizar [las Actividades en Directo]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) mostradas por su aplicación iOS. Este punto final requiere una configuración adicional.
+> Utilice este punto final para actualizar y finalizar [las Actividades en Directo]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) mostradas por su aplicación iOS. Este punto final requiere una configuración adicional.
 
 Después de registrar una Live Activity, puede pasar una carga JSON para actualizar su servicio de Notificaciones Push de Apple (APNs). Para más información, consulte la documentación de Apple sobre la [actualización de Live Activity con cargas útiles de notificaciones push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications).
 
@@ -26,7 +26,7 @@ Después de registrar una Live Activity, puede pasar una carga JSON para actuali
 Para utilizar este punto final, tendrás que completar lo siguiente:
 
 - Generar una clave API con el permiso `messages.live_activity.update`.
-- Registra una actividad en vivo [de forma remota]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) o [local]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) utilizando el SDK Swift de Braze.
+- Registra una actividad en vivo [de forma remota]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) o [local]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) utilizando el SDK Swift de Braze.
 
 ## Límite de velocidad
 

@@ -33,13 +33,13 @@ The Braze and ViralSweep integration allows you to hold sweepstakes and contests
 
 In ViralSweep, navigate to **Integrations > Email & SMS > Add Service** and select **Braze**. 
 
-![][1]
+![]({% image_buster /assets/img/viralsweep/connect.gif %})
 
 ### Step 2 : Add Braze Credentials
 
 In the integrations configuration window, provide your Braze REST API key and REST endpoint. Make sure the endpoint you provide does not include `https://`, for example, `dashboard-03.braze.com`. 
 
-![ViralSweep service integration page prompting the user for the Braze API key and Braze dashboard URL.][2]{: style="max-width:40%;"}
+![ViralSweep service integration page prompting the user for the Braze API key and Braze dashboard URL.]({% image_buster /assets/img/viralsweep/connect2.png %}){: style="max-width:40%;"}
 
 Click **Connect**.
 
@@ -77,5 +77,3 @@ The email address entered into the promotion may already be in your Braze accoun
 The email address entered into the promotion has already been entered previously, so it is not passed to Braze again. This can happen if you set up your Braze integration after you have already entered the promotion.
 
 
-[1]: {% image_buster /assets/img/viralsweep/connect.gif %}
-[2]: {% image_buster /assets/img/viralsweep/connect2.png %}

@@ -13,7 +13,9 @@ channel:
 
 # Encurtamento de links
 
-> O encurtamento de links e o rastreamento de cliques permitem encurtar automaticamente os URLs contidos nas mensagens SMS e coletar análises de dados da taxa de engajamento, fornecendo métricas de engajamento adicionais para ajudar a entender como os usuários estão se envolvendo com suas campanhas de mensagens SMS. <br><br> Esta página aborda como ativar o encurtamento de links em suas mensagens SMS, testar links encurtados, usar seu domínio personalizado em links encurtados e muito mais.
+> Esta página aborda como ativar o encurtamento de links em suas mensagens SMS, testar links encurtados, usar seu domínio personalizado em links encurtados e muito mais.
+
+O encurtamento de links e o rastreamento de cliques permitem encurtar automaticamente os URLs contidos nas mensagens SMS e coletar análises de dados da taxa de engajamento, fornecendo métricas de engajamento adicionais para ajudar a entender como os usuários estão se envolvendo com suas campanhas de mensagens SMS.
 
 O encurtamento de links e o rastreamento de cliques podem ser ativados no [nível da variante de mensagens]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) em campanhas e Canvas. 
 
@@ -41,15 +43,7 @@ A Braze só reconhecerá URLs que comecem com `http://` ou `https://`. Quando um
 
 ### Adição de parâmetros UTM
 
-Embora o encurtamento de links permita rastrear seus URLs automaticamente, também é possível adicionar parâmetros UTM aos URLs para rastrear a performance das campanhas em ferramentas de análise de dados de terceiros, como o Google Analytics.
-
-Para adicionar parâmetros UTM ao seu URL, faça o seguinte:
-
-1. Comece com seu URL de base. Esse é o URL da página que você deseja rastrear (como `https://www.example.com`).
-2. Adicione um ponto de interrogação (?) após o URL da base.
-3. Adicione cada parâmetro UTM separado por um E comercial (&).
-
-Um exemplo é `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
+{% multi_lang_include click_tracking.md section='Parâmetros UTM' %}
 
 ## Personalização Liquid em URLs
 
@@ -122,35 +116,15 @@ Os gráficos **Historical Performance** e **SMS/MMS Performance** também inclue
 
 Para obter orientação sobre redirecionamento, visite [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-## Domínios personalizados
+{% multi_lang_include click_tracking.md section='Domínios personalizados' %}
 
-O encurtamento de links também permite que você use seu próprio domínio para personalizar a aparência de seus URLs encurtados, o que ajuda a retratar uma imagem de marca consistente. Para saber mais, consulte [Domínios personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
+{% multi_lang_include click_tracking.md section='Perguntas frequentes' %}
 
-## Perguntas frequentes
-
-### Encurtamento de links
-
-#### Os links que recebo ao testar o envio de URLs são reais?
-
-Se a campanha tiver sido salva como rascunho antes do envio do teste, sim. Caso contrário, é um link de espaço reservado. Note que a URL exata enviada em uma campanha lançada pode ser diferente daquela enviada por meio de um envio de teste.
-
-#### O SDK da Braze precisa ser instalado para encurtar links?
-
-Não. O encurtamento de links funciona sem integração de SDK.
-
-#### Eu sei quais usuários individuais estão clicando em um URL?
+### Eu sei quais usuários individuais estão clicando em um URL?
 
 Sim. Quando o **rastreamento avançado** está ativado, é possível redirecionar os usuários que clicaram em URLs, aproveitando os [filtros de redirecionamento de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) ou os eventos de clique de SMS (`users.messages.sms.ShortLinkClick`) enviados via Currents.
 
-#### Posso adicionar parâmetros UTM a um URL antes de ele ser encurtado?
-
-Sim. Podem ser adicionados parâmetros estáticos e dinâmicos. 
-
-#### Por quanto tempo os URLs encurtados permanecem válidos?
-
-Os URLs estáticos são válidos por um ano a partir do momento do registro do URL, como o primeiro envio. Os URLs dinâmicos são válidos por dois meses a partir do momento do registro do URL.
-
-#### O encurtamento de links funciona com deep links ou links universais?
+### O encurtamento de links funciona com deep links ou links universais?
 
 O encurtamento de links não funciona com deep links. Você pode encurtar links universais de provedores como Branch ou Appsflyer, mas o Braze não pode solucionar problemas que possam surgir ao fazer isso (como quebrar a atribuição ou causar um redirecionamento).
 

@@ -12,7 +12,7 @@ description: "En esta página encontrarás artículos sobre la recopilación de 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
   - name: Recopilación de datos del SDK
-    link: /docs/user_guide/data/user_data_collection/data_collected_by_default/
+    link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Ciclo de vida del perfil de usuario
     link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/
@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/data/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: Usuarios anónimos
-    link: /docs/user_guide/data/user_data_collection/anonymous_users/
+    link: /docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
   - name: Códigos de idioma del usuario
     link: /docs/user_guide/data/user_data_collection/language_codes/

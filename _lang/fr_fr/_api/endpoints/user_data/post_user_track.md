@@ -17,7 +17,7 @@ description: "Cet article présente en détail l’endpoint Braze Suivi utilisat
 > Utilisez cet endpoint pour enregistrer les événements et les achats personnalisés et mettre à jour les attributs du profil utilisateur.
 
 {% alert note %}
-Braze traite les données transmises par l'API à leur valeur nominale, et les clients ne doivent transmettre que des deltas (données changeantes) afin de minimiser la consommation inutile de points de données. Pour en savoir plus, consultez la rubrique [Points de données]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Braze traite les données transmises par l'API à leur valeur nominale, et les clients ne doivent transmettre que des deltas (données changeantes) afin de minimiser la consommation inutile de points de données. Pour en savoir plus, consultez la rubrique [Points de données]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -297,10 +297,10 @@ Chaque objet d'événement du tableau d'objets représente une occurrence unique
 ## Utilisateurs actifs par mois CY 24-25
 Pour les clients qui ont acheté Utilisateurs actifs par mois - CY 24-25, Braze gère différentes limites de débit sur son endpoint `/users/track`:
 - Les limites de débit horaire sont fixées en fonction de l'activité d'ingestion de données prévue sur votre compte, qui peut correspondre au nombre d'utilisateurs actifs par mois que vous avez achetés, au secteur d'activité, à la saisonnalité ou à d'autres facteurs.
-- En plus de la limite des demandes par heure, Braze impose également une limite de rafale sur le nombre de demandes autorisées par seconde.
+- En plus de la limite horaire, Braze applique une limite de rafale sur le nombre de demandes qui peuvent être envoyées toutes les trois secondes.
 - Chaque demande peut comporter jusqu'à 50 mises à jour combinées pour des attributs, des événements ou des objets d'achat.
 
-Les limites actuelles basées sur l'ingestion prévue sont disponibles dans le tableau de bord sous **Paramètres** > **API et identifiants** > **Limites de l'API.** Nous pouvons modifier les limites de débit pour protéger la stabilité du système ou permettre une augmentation du débit de données sur votre compte. Veuillez contacter l'assistance Braze ou votre gestionnaire satisfaction client pour toute question ou préoccupation concernant la limite de demande horaire ou par seconde et les besoins de votre entreprise.
+Les limites actuelles basées sur l'ingestion prévue peuvent être trouvées dans le tableau de bord sous **Paramètres** > **API et identifiants** > **Tableau de bord de l'utilisation de l'API**. Nous pouvons modifier les limites de débit pour protéger la stabilité du système ou permettre une augmentation du débit de données sur votre compte. Veuillez contacter l'assistance Braze ou votre gestionnaire satisfaction client pour toute question ou préoccupation concernant la limite de demande horaire ou par seconde et les besoins de votre entreprise.
 
 
 

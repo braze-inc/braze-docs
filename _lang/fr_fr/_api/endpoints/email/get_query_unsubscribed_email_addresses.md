@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Récupérer la
 /email/unsubscribes
 {% endapimethod %}
 
-> Utilisez cet endpoint pour renvoyer les e-mails qui ont été désinscrits entre le `start_date` et le `end_date`. Pour un historique complet de l'état de l'abonnement, utilisez [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) pour suivre ces données.
+> Utilisez cet endpoint pour renvoyer les e-mails qui ont été désinscrits entre le `start_date` et le `end_date`. Pour un historique complet de l'état de l'abonnement, utilisez [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) pour suivre ces données.
 
 Vous pouvez utiliser cet endpoint pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données.
 

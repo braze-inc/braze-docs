@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: Conmutador de características
 article_title: Banderas de características para el SDK de Braze
-page_order: 1
 description: "Este artículo de referencia ofrece un resumen de los indicadores de características, incluidos los requisitos previos y los casos de uso."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > Las banderas de características te permiten habilitar o deshabilitar a distancia la funcionalidad para una selección específica o aleatoria de usuarios. Y lo que es más importante, te permiten activar y desactivar una característica en producción sin necesidad de desplegar código adicional ni actualizar la tienda de aplicaciones. Esto te permite desplegar nuevas características con seguridad y confianza.
 
 {% alert tip %}
-Cuando estés listo para crear tus propias banderas de características, consulta [Crear banderas de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+Cuando estés listo para crear tus propias banderas de características, consulta [Crear banderas de características]({{site.baseurl}}/developer_guide/feature_flags/create/).
 {% endalert %}
 
 ## Requisitos previos
@@ -51,7 +51,7 @@ Con las feature flags de Braze, podemos desplegar la característica gradualment
 * Habilitaremos esta nueva característica sólo para el 10% de los usuarios para determinar si contamos con el personal adecuado.
 * Si hay algún error, podemos desactivar rápidamente la característica en lugar de apresurarnos a enviar una nueva versión.
 
-Para desplegar gradualmente esta característica, podemos [crear una bandera de característica]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) llamada "Widget de chat en vivo".
+Para desplegar gradualmente esta característica, podemos [crear una bandera de característica]({{site.baseurl}}/developer_guide/feature_flags/create/) llamada "Widget de chat en vivo".
 
 ![Detalles de la feature flag de un ejemplo llamado Widget de Chat en vivo. El ID es enable_live_chat. La descripción de esta bandera de característica dice que el widget de chat en vivo se mostrará en la página de soporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -161,9 +161,9 @@ if (featureFlag?.enabled) {
 }
 ```
 
-Configuraremos nuestra prueba A/B en un [Experimento de bandera de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+Configuraremos nuestra prueba A/B en un [Experimento de bandera de características]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
-Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include metrics.md metric='Tasa de conversión' %}
+Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![Un experimento de bandera de características que divide el tráfico en dos grupos del 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -188,7 +188,7 @@ Estas son las limitaciones de la bandera de características para los planes gra
 | Característica                                                                                                   | Versión gratuita     | Versión de pago      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Banderas de características activas](#active-feature-flags)                                                                     | 10 por espacio de trabajo | 110 por espacio de trabajo |
-| [Experimentos activos de campaña]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 por espacio de trabajo  | 100 por espacio de trabajo |
+| [Experimentos activos de campaña]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 1 por espacio de trabajo  | 100 por espacio de trabajo |
 | [Pasos en Canvas de feature flag]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Sin límites        | Sin límites         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -18,10 +18,6 @@ description: "Este artigo de referência aborda como criar e personalizar modelo
 
 No dashboard do Braze, acesse **Modelos** > **Modelos de Webhook**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página em **Engajamento** > **Modelos e mídias** > **Modelos de webhook**.
-{% endalert %}
-
 ![A página "Webhook Templates" com modelos de webhook predefinidos e salvos.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Etapa 2: Escolha seu modelo

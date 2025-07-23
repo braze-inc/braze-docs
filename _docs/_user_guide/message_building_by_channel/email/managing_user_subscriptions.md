@@ -70,7 +70,7 @@ If available, the user profile also displays a timestamp for when the user's sub
 
 ### Checking email subscription state
 
-![User profile for John Doe with their email subscription state set to Subscribed.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 There are two ways you can check a user's email subscription state with Braze:
 
@@ -96,13 +96,13 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 
 All subscription groups are automatically added to your preference center.
 
-![Fields to create a subscription group.][2]{: style="max-width:75%"}
+![Fields to create a subscription group.]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### Segmenting with a subscription group
 
 When creating your segments, set the subscription group name as a filter. This will confirm that users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more.
 
-![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.][3]{: style="max-width:90%"}
+![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### Archiving subscription groups
 
@@ -119,7 +119,7 @@ Braze will not process any state changes for users in archived groups. For examp
 
 You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to view the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
 
-![An example "Subscription Group Timeseries" graph dated from December 2nd through 11th. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.][4]
+![An example "Subscription Group Timeseries" graph dated from December 2nd through 11th. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### Viewing subscription groups in campaign analytics
 
@@ -128,7 +128,7 @@ You can see the number of users who changed their subscription state (subscribed
 1. From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section.
 2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
-![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.][5]
+![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
 ## Email preference center
 
@@ -163,7 +163,7 @@ To create a custom landing page that users will be directed to (instead of the d
 
 We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
-![Custom unsubscribe email in the Custom Unsubscribe Page panel.][6]
+![Custom unsubscribe email in the Custom Unsubscribe Page panel.]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### Creating a custom opt-in page
 
@@ -197,13 +197,5 @@ The "Email Subscription Status" and "Push Subscription Status" filters allow you
 
 This can be useful if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. In that case, you would create a segment with a filter for "Email/Push Subscription Status is Subscribed" and campaigns to this segment will go to users who are subscribed, but not opted-in.
 
-![Email Subscription Status used as a segment filter.][8]
+![Email Subscription Status used as a segment filter.]({% image_buster /assets/img_archive/not_optin.png %})
 
-[1]: {% image_buster /assets/img/push_example.png %}
-[2]: {% image_buster /assets/img/sub_group_create.png %}
-[3]: {% image_buster /assets/img/segment_sub_group.png %}
-[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[8]: {% image_buster /assets/img_archive/not_optin.png %}

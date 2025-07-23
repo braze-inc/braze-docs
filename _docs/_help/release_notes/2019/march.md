@@ -17,7 +17,7 @@ Braze is proud to announce that we have made improvements to the look and feel o
 - Improved responsive behavior for all message types to better fit viewports
 - Button borders to create custom contrasts between buttons
 
-Our [new in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/) will take your interactions with your user from good to app-mazing!
+Our [new in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) will take your interactions with your user from good to app-mazing!
 
 ![Full Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

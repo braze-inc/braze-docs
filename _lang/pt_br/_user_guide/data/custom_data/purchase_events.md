@@ -19,13 +19,13 @@ Você pode registrar compras passando um [objeto de compra]({{site.baseurl}}/api
 
 A seguir estão listados métodos em várias plataformas que são usados para registrar compras. Nessas páginas, você também encontrará documentação sobre como adicionar propriedades e quantidades ao seu evento de compra. Você pode segmentar ainda mais seus usuários com base nessas propriedades.
 
-- [Android e FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android e FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Visualizando dados de compra
 
@@ -256,10 +256,6 @@ Isso ajuda a tornar os produtos fáceis de identificar para segmentação e disp
 Você pode ocasionalmente identificar eventos de compra que consomem muitos pontos de dados, {2|não são mais úteis para sua estratégia de marketing, ou {3|foram registrados por engano. Para impedir que esses dados sejam enviados para a Braze, você pode colocar o objeto de dados personalizados na lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site.
 
 No dashboard da Braze, você pode gerenciar a lista de bloqueio em **Configurações de Dados** > **Produtos**. Confira [Gerenciamento de dados personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) para saber mais.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **Produtos** em **Gerenciar configurações**.
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

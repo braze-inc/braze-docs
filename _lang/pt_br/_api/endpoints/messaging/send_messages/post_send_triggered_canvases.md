@@ -40,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "context": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
@@ -67,14 +67,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`canvas_entry_properties`| Opcional | Objeto | Consulte [Propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Os pares de chave-valor de personalização se aplicarão a todos os usuários nesta solicitação. O objeto de propriedades de entrada do canva tem um limite máximo de tamanho de 50 KB. |
 |`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir essa flag inadvertidamente pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
 |`audience`| Opcional| Objeto do público conectado | Consulte [Público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Vetor | Consulte o [objeto Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). Se não fornecido e `broadcast` estiver definido como verdadeiro, a mensagem será enviada para todo o segmento alvo do canva.<br><br> O `recipients` array pode conter até 50 objetos, com cada objeto contendo uma única `external_user_id` string e um `canvas_entry_properties` objeto. Os endereços `external_user_id` ou `user_alias` são necessários para essa chamada. As solicitações devem especificar apenas uma. <br><br> Quando `send_to_existing_only` é `true`, Braze só enviará a mensagem para usuários existentes—no entanto, essa flag não pode ser usada com aliases de usuário. Quando `send_to_existing_only` for `false` e não existir um usuário com o `id` fornecido, o Braze criará um usuário com esse ID e atribuições antes de enviar a mensagem.|
+|`recipients`| Opcional | Vetor | Consulte o [objeto Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Se não fornecido e `broadcast` estiver definido como verdadeiro, a mensagem será enviada para todo o segmento alvo do canva.<br><br> O `recipients` array pode conter até 50 objetos, com cada objeto contendo uma única `external_user_id` string e um `canvas_entry_properties` objeto. Esta chamada requer um `external_user_id`, `user_alias` ou `email`. As solicitações devem especificar apenas uma. <br><br>Se `email` for o identificador, você deve incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) no objeto de destinatários. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Os clientes que usam a API para chamadas de servidor para servidor talvez precisem listar o URL apropriado da API se estiverem protegidos por um firewall.
-
 {% alert important %}
-A especificação de um destinatário por endereço de e-mail está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
+Para o parâmetro `recipients`, quando `send_to_existing_only` é `true`, a Braze enviará a mensagem apenas para usuários existentes. No entanto, esse sinalizador não pode ser usado com aliases de usuário. <br><br>Se `send_to_existing_only` for `false`, um objeto de atribuição deverá ser incluído. Quando `send_to_existing_only` é `false` **e** um usuário com o `id` dado não existe, a Braze criará um usuário com esse ID e atributos antes de enviar a mensagem.
 {% endalert %}
+
+Os clientes que usam a API para chamadas de servidor para servidor talvez precisem listar o URL apropriado da API se estiverem protegidos por um firewall.
 
 {% alert note %}
 Se você incluir tanto usuários específicos na sua chamada de API quanto um segmento alvo no dashboard, a mensagem será enviada especificamente para os perfis de usuário que estão tanto na chamada de API quanto qualificam para os filtros de segmento.
@@ -174,7 +174,7 @@ Se sua solicitação encontrar um erro fatal, consulte [Erros e respostas]({{sit
 
 ## Objeto de atributos para canva
 
-Use o objeto de envio de mensagens `attributes` para adicionar, criar ou atualizar atributos e valores para um usuário antes de enviar um Canvas acionado por API usando o endpoint `canvas/trigger/send`. Esta chamada de API processa o objeto de atributos do usuário antes de processar e enviar o canva. Isso ajuda a minimizar o risco de problemas causados por [condições de corrida]({{site.baseurl}}/help/best_practices/race_conditions/). No entanto, por padrão, os grupos de inscrições não podem ser atualizados dessa forma.
+Use o objeto de envio de mensagens `attributes` para adicionar, criar ou atualizar atributos e valores para um usuário antes de enviar um Canvas acionado por API usando o endpoint `canvas/trigger/send`. Esta chamada de API processa o objeto de atributos do usuário antes de processar e enviar o canva. Isso ajuda a minimizar o risco de problemas causados por [condições de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/). No entanto, por padrão, os grupos de inscrições não podem ser atualizados dessa forma.
 
 {% alert note %}
 Procurando a versão da campanha deste endpoint? Confira [Envio de mensagens de campanha usando entrega acionada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).

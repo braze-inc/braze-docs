@@ -187,7 +187,7 @@ To decode an encoded link, use the `String` property [`removingPercentEncoding`]
 
 ## Deep linking to app settings
 
-You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze push notifications, in-app messages, and the News Feed.
+You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze push notifications and in-app messages.
 
 To take users from your app into the iOS settings:
 1. First, make sure your application is set up for either [scheme-based deep links](#swift_register-a-scheme) or [universal links](#swift_universal-links).

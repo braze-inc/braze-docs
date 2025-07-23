@@ -18,11 +18,11 @@ Este guia opcional de [integração do SDK com o iOS]({{site.baseurl}}/developer
 
 ## Compras preditivas
 
-As compras preditivas oferecem aos profissionais de marketing uma ferramenta poderosa para a identificação e o envio de mensagens privadas aos usuários com base na probabilidade de que eles façam uma compra. Quando você cria uma previsão de compra, o Braze treina um modelo de machine learning usando [árvores de decisão com aumento de gradiente](https://en.wikipedia.org/wiki/Gradient_boosting) para aprender com a atividade de compra anterior e prever a atividade de compra futura. Visite nossos documentos sobre [compras preditivas]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) para saber mais. 
+As compras preditivas oferecem aos profissionais de marketing uma ferramenta poderosa para a identificação e o envio de mensagens privadas aos usuários com base na probabilidade de que eles façam uma compra. Quando você cria uma previsão de compra, o Braze treina um modelo de machine learning usando [árvores de decisão com aumento de gradiente](https://en.wikipedia.org/wiki/Gradient_boosting) para aprender com a atividade de compra anterior e prever a atividade de compra futura. Visite nossos documentos sobre [compras preditivas]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) para saber mais. 
 
 ## Editor de arrastar e soltar
 
-Com o Braze Email, você pode criar mensagens de e-mail totalmente personalizadas em campanhas ou canvas usando nossa nova [experiência de edição de arrastar e soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). Os usuários agora podem arrastar blocos do editor para seus e-mails, permitindo uma personalização mais intuitiva. 
+Com o Braze Email, você pode criar mensagens de e-mail totalmente personalizadas em campanhas ou canvas usando nossa nova [experiência de edição de arrastar e soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). Os usuários agora podem arrastar blocos do editor para seus e-mails, permitindo uma personalização mais intuitiva. 
 
 ## Importação de alias de usuário
 

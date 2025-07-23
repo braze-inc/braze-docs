@@ -15,10 +15,6 @@ channel: email
 
 **Las preferencias de correo electrónico** se encuentran en la sección **Configuración** del panel de control.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), esta página se llama **Configuración de correo electrónico** y se encuentra en **Configuración** > **Administrar configuración** > **Configuración de correo electrónico**.
-{% endalert %}
-
 ## Configuración de envío
 
 Los ajustes de correo electrónico en la sección **Configuración de envío** determinan qué detalles se incluyen en sus campañas de correo electrónico. En concreto, estos ajustes están relacionados principalmente con lo que el usuario ve cuando recibe un correo electrónico de Braze.
@@ -34,8 +30,6 @@ En esta sección, puede añadir los nombres y direcciones de correo electrónico
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
-Cuando configure sus direcciones "De", asegúrese de que su dominio de correo electrónico "De" coincide con su dominio de envío (como marketing.yourdomain.com). Si no lo hace, puede producirse una desalineación entre SPF y DKIM. Los correos electrónicos con direcciones "De" dinámicas se enviarán desde el grupo de IP del dominio remitente correspondiente. Todos los correos electrónicos de respuesta se pueden configurar en tu dominio raíz.
-
 {% endtab %}
 {% tab Dirección de respuesta %}
 
@@ -49,7 +43,7 @@ Si añade una dirección de correo electrónico en esta sección, podrá selecci
 Esta sección permite añadir y gestionar las direcciones CCO que pueden adjuntarse a los mensajes de correo electrónico salientes enviados desde Braze. Al añadir una dirección CCO a un mensaje de correo electrónico, se enviará una copia idéntica del mensaje que reciba el usuario a su bandeja de entrada CCO. Se trata de una herramienta útil para conservar copias de los mensajes enviados a los usuarios por motivos de cumplimiento de normativas o de atención al cliente. Los correos electrónicos CCO no se incluyen en los informes y análisis de correo electrónico.
 
 {% alert important %}
-Si añade una dirección CCO a su campaña o Canvas, se duplicarán sus correos electrónicos facturables para la campaña o el componente Canvas, ya que Braze enviará un mensaje a su usuario y otro a su dirección CCO.
+Si añades una dirección CCO a tu campaña o Canvas, se duplicarán tus correos electrónicos facturables para la campaña o el componente Canvas, ya que Braze enviará un mensaje a tu usuario y otro a tu dirección CCO.
 {% endalert %}
 
 ![Sección Dirección CCO de la pestaña Configuración de correo electrónico.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
@@ -82,10 +76,6 @@ Para cambiar la ubicación:
 1. En Braze, ve a **Configuración** > **Preferencias de correo electrónico**.
 2. Haga clic en la casilla de verificación **Configuración personalizada del píxel de seguimiento abierto**. 
 3. Pulsa **Guardar**.
-
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), se encuentra en **Gestionar configuración** > **Configuración de correo electrónico**.
-{% endalert %}
 
 Una vez guardado, Braze enviará instrucciones especiales al ESP para colocar el píxel de seguimiento de apertura en la parte superior de todos los correos electrónicos HTML.
   
@@ -135,7 +125,7 @@ Si el encabezado está en la versión sin procesar del correo electrónico pero 
 
 Cuando se activa la función de encabezado de cancelación de suscripción de correo electrónico, esta configuración se aplica a todo el espacio de trabajo, no a nivel de empresa. Se añade a las campañas y a los lienzos que están configurados para enviar a usuarios que están suscritos o que han dado su consentimiento, o a usuarios que han dado su consentimiento en el paso **Públicos objetivo** de los creadores de campañas y lienzos.
 
-Braze no añade el encabezado para lo que se considera transaccional, por lo que si un mensaje está configurado para enviarse a todos los usuarios, incluidos los usuarios dados de baja, el encabezado de cancelación de suscripción no se adjuntará al mensaje a menos que se especifique lo contrario en la configuración de cancelación de suscripción con un solo clic a nivel de mensaje. Además, el encabezado no se añade a los mensajes enviados a través del envío de prueba porque el encabezado de cancelación de suscripción sólo se genera y añade a los perfiles de usuario de destino en Braze.
+Cuando se utiliza el "espacio de trabajo predeterminado", Braze no añade el encabezado de cancelar suscripción con un clic para las campañas que se consideran transaccionales, que están configuradas para "enviar a todos los usuarios, incluidos los usuarios dados de baja". Para anular esto y añadir el encabezado de cancelar suscripción con un clic al enviar a usuarios dados de baja, puedes seleccionar **Cancelar suscripción globalmente de todos los mensajes de correo electrónico** en la configuración de cancelación de suscripción con un clic de la lista a nivel de mensaje.
 
 ### Cabecera predeterminada de cancelación de suscripción
 

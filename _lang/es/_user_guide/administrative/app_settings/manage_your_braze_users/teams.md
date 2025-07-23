@@ -23,10 +23,6 @@ Los equipos no están disponibles en todos los contratos Braze. Si desea acceder
 
 Vaya a **Configuración** > **Equipos internos** y seleccione <i class="fas fa-plus"></i> **Añadir equipo**.
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), **Equipos internos** se encuentra en **Gestionar configuración** > **Gestionar equipos**.
-{% endalert %}
-
 ![Añadir un nuevo equipo][68]
 
 Introduce el **nombre del equipo**. Si lo desea, utilice el campo **Definir equipo** para seleccionar un atributo personalizado, una ubicación o un idioma para definir mejor a qué datos de usuario tiene acceso el equipo. Por ejemplo, un posible caso de uso es realizar [pruebas con equipos](#testing-with-teams) creando un equipo de desarrollo que sólo tenga acceso a los usuarios de prueba, identificados por un atributo personalizado. Otro caso de uso es restringir la comunicación con los usuarios en función del producto.
@@ -38,10 +34,6 @@ Si un equipo se define por un atributo personalizado, idioma o país, puede util
 Los administradores de Braze y los usuarios limitados con el permiso a nivel de empresa "Puede gestionar la configuración de la empresa" pueden asignar permisos a nivel de equipo a un usuario del cuadro de mandos con acceso limitado. Cuando se asignan a un equipo, los usuarios del cuadro de mandos sólo pueden leer o escribir datos disponibles para sus equipos concretos, como el idioma del usuario, la ubicación o el atributo personalizado, tal y como se definieron al crear el equipo.
 
 Para asignar un usuario a un equipo, vaya a **Configuración** > **Usuarios de la empresa** y seleccione un usuario que desee añadir a su equipo.
-
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), puede encontrar esta página seleccionando el icono de su cuenta y seleccionando **Gestionar usuarios**.
-{% endalert %}
 
 A continuación, realiza los siguientes pasos:
 

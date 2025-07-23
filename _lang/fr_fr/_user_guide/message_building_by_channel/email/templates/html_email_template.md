@@ -29,10 +29,6 @@ Tout d'abord, vous devez créer votre modèle d'e-mail HTML. Il doit s'agir d'un
 
 Allez dans la section **Modèles** > **Modèles d'e-mail**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page est située sous **Engagement** > **Modèles et médias** > **Modèles d'e-mail**.
-{% endalert %}
-
 ### Étape 2 : Ouvrir le téléchargeur
 
 Dans la section **Type de modèle**, sélectionnez **Editeur HTML** et descendez jusqu'à la section **Démarrer à partir d'un modèle HTML de base.** Sélectionnez **Depuis le fichier**.

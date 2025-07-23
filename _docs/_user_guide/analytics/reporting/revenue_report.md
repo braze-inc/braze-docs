@@ -16,7 +16,7 @@ To view a report for your revenue from the dashboard, go to **Analytics** > **Re
 
 You can customize your revenue report by selecting a date range, the apps to report on, and parameters.
 
-![The "Revenue Report" page showing the "Performance Over Time" graph with "Revenue" set as the parameter.][1]
+![The "Revenue Report" page showing the "Performance Over Time" graph with "Revenue" set as the parameter.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtering by date and apps
 
@@ -80,8 +80,6 @@ You can view the following data in the **Performance Over Time Graph**:
 
 Refer to the **Product Breakdown** table for a list of the products purchased during your selected date range, how many of each product were purchased, and how much revenue each product generated.
 
-![The "Product Breakdown" table showing the columns "Product Name", "Purchased", and "Revenue".][2]
+![The "Product Breakdown" table showing the columns "Product Name", "Purchased", and "Revenue".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

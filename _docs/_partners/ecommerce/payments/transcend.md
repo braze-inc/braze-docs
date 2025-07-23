@@ -58,4 +58,3 @@ To remove the Braze data silo from your Transcend Data Map:
 3. Confirm the silo has been removed by navigating back to your Data Map.
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

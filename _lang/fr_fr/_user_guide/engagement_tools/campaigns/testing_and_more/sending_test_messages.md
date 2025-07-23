@@ -126,7 +126,7 @@ Une fois que vous avez mis en place un segment d'essai, vous pouvez utiliser ces
 
 1. Accédez à la page **Segments** et [créez un nouveau segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Cliquez sur le menu déroulant sous **Ajouter un filtre** et localisez les filtres de test au bas de la liste. <br><br>![Test des filtres]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Utilisez les filtres de test pour sélectionner les utilisateurs ayant des adresses e-mail ou des [ID]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) externes spécifiques.<br><br>![Test des options de filtre]({% image_buster /assets/img_archive/testmessages2.png %})
+3. Utilisez les filtres de test pour sélectionner les utilisateurs ayant des adresses e-mail ou des [ID]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) externes spécifiques.<br><br>![Test des options de filtre]({% image_buster /assets/img_archive/testmessages2.png %})
 <br><br>Ces filtres ont les options suivantes :
 - **Équivaut**: recherche l’e-mail ou l’ID utilisateur exact que vous fournissez. Utilisez cette option si vous souhaitez envoyer les campagnes de test uniquement aux appareils associés à un seul e-mail ou ID utilisateur.
 - **N'est pas égal à**: exclut un e-mail ou un ID utilisateur particulier des campagnes de test.

@@ -19,7 +19,7 @@ Demandez aux utilisateurs d’envoyer « START », « UNSTOP », « YES »
 
 ## Option 2 : Les utilisateurs d’abonnement par message in-app
 
-Pour permettre aux utilisateurs d'opter pour les SMS à partir d'un message in-app, utilisez le [formulaire de capture de numéro de téléphone]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) fourni par Braze pour créer un formulaire de marque qui vous permet de collecter des numéros de téléphone et d'augmenter votre liste de SMS.
+Pour permettre aux utilisateurs d'opter pour les SMS à partir d'un message in-app, utilisez le [formulaire de capture de numéro de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) fourni par Braze pour créer un formulaire de marque qui vous permet de collecter des numéros de téléphone et d'augmenter votre liste de SMS.
 
 ![][3]{: style="max-width:30%;"}
 

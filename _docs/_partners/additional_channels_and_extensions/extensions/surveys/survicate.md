@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Survicate
 
-![An example of what a embedded HTML survey (first question) could look like in a Braze email.][2]{: style="float:right;max-width:40%;border:0; margin-left:8px;"}
+![An example of what a embedded HTML survey (first question) could look like in a Braze email.]({% image_buster /assets/img/survicate/survicate_asset_1.png %}){: style="float:right;max-width:40%;border:0; margin-left:8px;"}
 
-> [Survicate][1] is a customer feedback platform that helps you collect, analyze, and act on customer insights across multiple channels and throughout the user journey.  
+> [Survicate](https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter) is a customer feedback platform that helps you collect, analyze, and act on customer insights across multiple channels and throughout the user journey.  
 
 _This integration is maintained by Survicate._
 
@@ -53,21 +53,21 @@ The Survicate and Braze integration offers real-time data syncing, so the most u
 2. Choose your survey channel—**email, link, website, in-product, and mobile app surveys** are available. 
 3. Design your survey from scratch, use the AI survey creator, or select from over 100 ready-to-use templates.
 
-![Four options to create a survey: start from scratch, use a template, AI-assisted creation, and import questions.][4]
+![Four options to create a survey: start from scratch, use a template, AI-assisted creation, and import questions.]({% image_buster /assets/img/survicate/survicate_asset_3.png %})
 
 ### Step 2: Identify respondents automatically with Braze emails
 
 1. After your survey is ready, go to the **Configure** tab.
 2. For *Identify respondents with*, select **Braze**. This automatically links responses to your Braze customer profiles, so there’s no need to ask for contact details in your survey.
 
-![Braze is selected as the respondents.][5]
+![Braze is selected as the respondents.]({% image_buster /assets/img/survicate/survicate_asset_2.png %})
 
 ### Step 3: Connect the integration
 
 1. Then, in the **Connect tab**, find Braze and select **Connect** to integrate. 
 2. Insert your Braze account Workspace API Key and Braze Instance URL.
 
-![Fields to enter the workspace API key and Braze instance URL.][3]
+![Fields to enter the workspace API key and Braze instance URL.]({% image_buster /assets/img/survicate/image1.png %})
 
 ### Step 4: Share your survey
 
@@ -82,8 +82,3 @@ The Survicate and Braze integration offers real-time data syncing, so the most u
 2. Start collecting feedback and track responses directly within Survicate.
 
 
-[1]: https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter
-[2]:  {% image_buster /assets/img/survicate/survicate_asset_1.png %}
-[3]:  {% image_buster /assets/img/survicate/image1.png %}
-[4]:  {% image_buster /assets/img/survicate/survicate_asset_3.png %}
-[5]:  {% image_buster /assets/img/survicate/survicate_asset_2.png %}

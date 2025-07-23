@@ -20,7 +20,7 @@ alias: /line/create/
 Antes de crear un mensaje LINE, haga lo siguiente:
 
 1. Lea el resumen de LINE.
-2. Políticas de reconocimiento, límites y normas de contenido.
+2. Reconoce las políticas, los límites y las normas de contenido.
 3. [Configura tu conexión LINE]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 Al enviar mensajes de LINE desde Braze, se utilizarán los créditos de mensajes de tu cuenta.
@@ -35,14 +35,9 @@ Al enviar mensajes de LINE desde Braze, se utilizarán los créditos de mensajes
 **Pasos:**
 
 1. Vaya a **Mensajería** > **Campañas** y seleccione **Crear campaña**.
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), encontrará **Campañas** en **Compromiso**.
-{% endalert %}
-
-{: start="2"}
-2\. Seleccione **LÍNEA** o, para campañas dirigidas a varios canales, seleccione **Campaña multicanal**.
-3\. Ponle a tu campaña un nombre claro y significativo.
-4\. Añade [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
+2. Seleccione **LÍNEA** o, para campañas dirigidas a varios canales, seleccione **Campaña multicanal**.
+3. Ponle a tu campaña un nombre claro y significativo.
+4. Añada [equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) y [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) según sea necesario.
    * Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de informes a partir de ellas.
 5. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -79,7 +74,7 @@ Si piensa utilizar Liquid, asegúrese de incluir un valor por defecto para su pe
 
 #### Crear mensajes de derecha a izquierda
 
-El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Paso 3: Vista previa y prueba de tu mensaje
 
@@ -108,7 +103,7 @@ Selecciona la audiencia más amplia de tus segmentos y, opcionalmente, acota aú
 
 ### Elegir eventos de conversión
 
-Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
+Braze le permite realizar un seguimiento de la frecuencia con la que los usuarios realizan acciones específicas, [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), tras recibir una campaña. Tiene la opción de permitir una ventana de hasta 30 días durante la cual se contabilizará una conversión si el usuario realiza la acción especificada.
 
 Los eventos de conversión le ayudan a medir el éxito de su campaña. Por ejemplo:
 
@@ -120,7 +115,7 @@ También puede establecer eventos de conversión personalizados basados en su ca
 {% endtab %}
 {% tab Canvas %}
 
-Si aún no lo has hecho, completa las secciones restantes de tu Canvas. Para obtener más información sobre cómo crear el resto del lienzo, utilizar las pruebas multivariantes y la selección inteligente, etc., consulte [Creación de un lienzo](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si aún no lo has hecho, completa las secciones restantes de tu Canvas. Para obtener más información sobre cómo crear el resto del lienzo, utilizar las pruebas multivariantes y la selección inteligente, etc., consulte [Creación de un lienzo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -129,7 +124,7 @@ Si aún no lo has hecho, completa las secciones restantes de tu Canvas. Para obt
 
 Cuando hayas terminado de crear lo último de tu campaña o Canvas, revisa sus detalles, pruébala y ¡envíala!
 
-A continuación, echa un vistazo a [los informes de LINE](https://www.braze.com/docs/line/reporting/) para saber cómo puedes acceder a los resultados de tus campañas LINE.
+A continuación, echa un vistazo a [los informes de LINE]({{site.baseurl}}/line/reporting/) para saber cómo puedes acceder a los resultados de tus campañas LINE.
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}

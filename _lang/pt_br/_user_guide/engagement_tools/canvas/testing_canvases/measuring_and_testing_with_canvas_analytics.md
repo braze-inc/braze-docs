@@ -69,7 +69,7 @@ Assim como as conversões, a receita é tecnicamente rastreada no nível da tela
 Por exemplo, se um usuário concluir duas etapas e depois fizer uma compra, essa receita será atribuída ao segundo componente e à variante inserida. Se ele entrar no canva, mas fizer uma compra antes de receber o primeiro componente do canva, essa receita será atribuída à variante em que ele entrou, mas não a nenhum componente.
 {% endalert %}
 
-Além disso, você pode ver um detalhamento mais explícito dos [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), incluindo o seguinte:
+Além disso, você pode ver um detalhamento mais explícito dos [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), incluindo o seguinte:
 
 - Totais de conversão e taxas de conversão para cada evento de conversão
 - Elevação em relação à variante de controle

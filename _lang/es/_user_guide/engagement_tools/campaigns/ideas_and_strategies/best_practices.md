@@ -16,7 +16,7 @@ Braze recomienda que solo envíes datos de clientes que pretendas utilizar en la
 - **Dirígete a** tus audiencias creando [segmentos de audiencia]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Active** sus mensajes con envíos [basados en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) o [activados por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 - **Plantilla** y personaliza tus mensajes con [la lógica condicional de Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Controle** la eficacia de sus campañas con [el seguimiento de conversiones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
+- **Controle** la eficacia de sus campañas con [el seguimiento de conversiones]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Esto le permite optimizar los datos que envía a Braze y agilizará su capacidad para enviar mensajes a sus usuarios, al tiempo que le garantiza que no rastreará puntos de datos que su equipo no considere útiles a largo plazo. 
 

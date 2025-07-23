@@ -76,11 +76,10 @@ La sección **Uso de la mensajería** muestra qué segmentos, campañas habilita
 ![En Uso de mensajería, vea las campañas en las que se está utilizando su segmento.][4]
 
 ### Afiliación histórica
-La sección **Afiliación histórica** muestra cómo ha cambiado el tamaño de tu segmento a lo largo del tiempo. Utilice el menú desplegable para filtrar los miembros del segmento por intervalo de fechas. 
 
-El recuento histórico de miembros del segmento es una estimación, del mismo modo que el tamaño del segmento es una estimación antes de hacer clic en **Calcular estadísticas exactas**. Braze calcula el número de miembros consultando a los usuarios en un intervalo de cubos aleatorio. Esto significa que un día, el recuento de miembros podría basarse en usuarios con un número de contenedor aleatorio de 111-120, y otro día, en usuarios con un número de contenedor aleatorio de 8452-8455. Por lo tanto, el gráfico podría mostrar ligeras fluctuaciones en cada fecha debido a las diferentes cantidades de usuarios que aterrizan dentro de los rangos de cubos aleatorios.
+La sección **Afiliación histórica** muestra cómo ha cambiado el tamaño de tu segmento a lo largo del tiempo. Utilice el menú desplegable para filtrar los miembros del segmento por intervalo de fechas.
 
-![Utilice el desplegable Afiliación histórica para filtrar la afiliación a segmentos por intervalo de fechas.][10]
+Para saber más sobre cómo controlar el número de miembros y el tamaño de tu segmento, consulta [Medir el tamaño del segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### Vista previa del usuario
 
@@ -145,5 +144,4 @@ Si su empresa activó esta función el 2 de octubre y activó el seguimiento ana
 [7]: {% image_buster /assets/img_archive/preview_users.png %}
 [8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}

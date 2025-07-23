@@ -6,16 +6,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Rechercher un compte utilisateur de tableau de bord existant."
+description: "Cet article présente les détails de la fonction Rechercher un compte d'utilisateur de tableau de bord existant ID ressource Braze endpoint."
 ---
 
 {% api %}
-# Rechercher un compte utilisateur de tableau de bord existant
+# Recherche d'un compte d'utilisateur du tableau de bord existant par ID de ressource
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour rechercher un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. 
+> Utilisez cet endpoint pour rechercher un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) SCIM. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 

@@ -17,7 +17,7 @@ This detailed guide covers how to leverage subclassing to create custom slideup 
 
 ## SMS custom keyword categories and retargeting options
 
-Braze has expanded our native SMS capabilities to include the ability to add custom keywords for two-way messaging, custom categories for keywords, multi-language support, and keyword retargeting and filtering options. To read more about SMS keyword processing, visit our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/). 
+Braze has expanded our native SMS capabilities to include the ability to add custom keywords for two-way messaging, custom categories for keywords, multi-language support, and keyword retargeting and filtering options. To read more about SMS keyword processing, visit our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/). 
 
 ## Playable partnership is live
 

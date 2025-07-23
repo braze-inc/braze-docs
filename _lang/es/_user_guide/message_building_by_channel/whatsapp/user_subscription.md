@@ -33,10 +33,6 @@ Existen dos estados de suscripción para los usuarios de WhatsApp: `subscribed` 
 
 - **Perfil del usuario:** Se puede acceder a los perfiles de usuario individuales a través del panel Braze desde **Audiencia** > **Buscar usuarios**. Aquí puede buscar perfiles de usuario por dirección de correo electrónico, número de teléfono o ID de usuario externo. Cuando estás dentro del perfil de un usuario, en la pestaña **Compromiso**, puedes ver el grupo de suscripción de WhatsApp de un usuario y su estado.
 
-{% alert note %}
-Si utiliza la [navegación antigua]({{site.baseurl}}/navigation), puede encontrar esta página en **Usuarios** > **Búsqueda de usuarios**.
-{% endalert %}
-
 - **API REST:** Los perfiles de usuario individuales del grupo de suscripción se pueden ver mediante el punto final [Listar grupos de suscripción del usuario][9] o el punto final [Listar estado del grupo de suscripción del usuario][8] utilizando la API REST de Braze. 
 
 ## Proceso de adhesión voluntaria y exclusión voluntaria de WhatsApp

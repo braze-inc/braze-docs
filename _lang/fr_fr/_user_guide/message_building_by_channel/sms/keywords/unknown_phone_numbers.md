@@ -14,7 +14,7 @@ channel:
 > Vous pouvez constater qu'après avoir activé les SMS avec Braze, vous recevez des messages d'utilisateurs inconnus. Les étapes suivantes décrivent comment un utilisateur et un numéro non identifiés sont traités.
 
 {% alert important %}
-Êtes-vous actuellement un client SMS non natif ? Si c'est le cas, consultez la [documentation SMS non native](/docs/user_guide/message_building_by_channel/sms/non_native/) pour votre article correspondant sur la gestion des numéros de téléphone inconnus.
+Êtes-vous actuellement un client SMS non natif ? Si c'est le cas, consultez la [documentation SMS non native]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) pour votre article correspondant sur la gestion des numéros de téléphone inconnus.
 {% endalert %}
 
 ## Abonnement/désabonnement et workflow de mot-clé personnalisé pour les numéros inconnus

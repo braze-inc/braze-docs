@@ -34,8 +34,8 @@ You can create an unlimited number of link templates to support your various nee
 1. Go to **Templates** > **Email Link Templates**. 
 2. Select **Create email link template**.
 3. Give your link template a name.
-4. (optional) Add a description, team, or tag to add details about the link template.
-5. (optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
+4. (Optional) Add a description, team, or tag to add details about the link template.
+5. (Optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
 
 There are two types of link templates you can create:
 
@@ -78,7 +78,7 @@ To access the **Link Management** tab in the updated HTML email editor, you must
 
 - **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
 
-![Link Management tab in the drag-and-drop editor with an example list of link templates.][1]
+![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 Link templates aren't applied to plain text. This means Currents may show clicks that don't include the parameters from the link templates as those clicks may come from the plain text version of the email.
@@ -96,11 +96,5 @@ Archiving templates is not currently available for link templates.
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQ][10] page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

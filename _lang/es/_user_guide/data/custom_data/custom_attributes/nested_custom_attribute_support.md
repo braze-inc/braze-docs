@@ -40,6 +40,7 @@ Los objetos de atributo personalizados pueden contener [tipos de datos][1], como
 - Los objetos tienen un tamaño máximo de 100 KB.
 - Los nombres de las claves y los valores de las cadenas tienen un límite de tamaño de 255 caracteres.
 - Los nombres de las claves no pueden contener espacios.
+- Los puntos (`.`) y los signos de dólar (`$`) no son caracteres admitidos en una carga útil de la API si intentas enviar un atributo personalizado anidado a un perfil de usuario.
 - No todos los socios Braze admiten atributos personalizados anidados. Consulta la [documentación del socio]({{site.baseurl}}/partners/home) para confirmar si determinadas integraciones del socio admiten esta característica.
 - Los atributos personalizados anidados no se pueden utilizar como filtro al realizar una llamada a la API de Connected Audience.
 
@@ -357,10 +358,6 @@ Para este ejemplo, supongamos que tenemos una matriz de objetos `accounts` que a
 ```
 
 En el panel de Braze, ve a **Configuración de datos** > **Atributos personalizados**.
-
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar **los atributos personalizados** en **Administrar configuración**.
-{% endalert %}
 
 Busca tu objeto o matriz de objetos. En la columna **Nombre del atributo**, selecciona **Generar esquema**.
 

@@ -56,7 +56,7 @@ Puede utilizar [segmentos predefinidos]({{site.baseurl}}/user_guide/engagement_t
 
 > ¿Por qué haces esta campaña? 
 
-Siempre es importante tener un objetivo definido en mente, y las campañas le ayudan a comprender su rendimiento con respecto a KPI como la participación en la sesión, las compras y los eventos personalizados. La selección de al menos un [evento de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) le permitirá comprender el rendimiento de su campaña.
+Siempre es importante tener un objetivo definido en mente, y las campañas le ayudan a comprender su rendimiento con respecto a KPI como la participación en la sesión, las compras y los eventos personalizados. La selección de al menos un [evento de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) le permitirá comprender el rendimiento de su campaña.
 
 ### El "dónde": Encontrar mi público
 

@@ -11,7 +11,7 @@ description: "Este artículo de referencia cubre las directrices de marca para e
 
 ## Crear directrices de marca {#steps}
 
-Sigue estos pasos para crear directrices de marca en el asistente de redacción de IA.
+Sigue estos pasos para crear directrices de marca en el asistente de redacción de IA. También puedes crear directrices de marca en la página de configuración de [Directrices de marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
 ### Paso 1: Crear una directriz de marca
 
@@ -20,6 +20,7 @@ Sigue estos pasos para crear directrices de marca en el asistente de redacción 
 2. Selecciona **Aplicar directriz de marca** y luego **Crear una directriz de marca**.
 3. Introduce un nombre para esta directriz. Será la etiqueta que ves en la selección anterior.
 4. Para **¿Cuándo utilizarás estas directrices de marca?**, añade detalles para ayudar a tus colegas (y a ti en el futuro) a comprender el contexto de utilización de esta directriz.
+5. Si quieres que ésta sea la directriz de marca predeterminada para el espacio de trabajo actual, marca **Usar como directriz de marca predeterminada**.
 
 ![Vista de la creación de la directriz de marca.][1]
 

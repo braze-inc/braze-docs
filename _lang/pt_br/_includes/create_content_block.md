@@ -1,9 +1,5 @@
 1. Acessar **Modelos** > **Blocos de Conteúdo**. Clique em <i class="fas fa-plus"></i> **Criar Bloco de Conteúdo** e selecione **Arrastar e soltar Bloco de Conteúdo**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta página está localizada em **engajamento** > **modelos e mídias** > **Biblioteca de Blocos de Conteúdo**.
-{% endalert %}
-
 {% if include.location == "dnd" %}
 
 {:start="2"}

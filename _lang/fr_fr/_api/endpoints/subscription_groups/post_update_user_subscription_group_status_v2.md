@@ -32,7 +32,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour **WhatsApp Group
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-## Pré-requis
+## Conditions préalables
 
 Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `subscription.status.set`.
 
@@ -74,7 +74,8 @@ Lorsque vous créez de nouveaux utilisateurs à l'aide de l'[endpoint`/users/tra
 | `subscription_state` | Requis | Chaîne de caractères | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
 | `external_ids` | Obligatoire* | Tableau de chaînes de caractères | L’`external_id` de l’utilisateur ou des utilisateurs (50 `id`s max). |
 | `emails` | Obligatoire* | Chaîne de caractères ou tableau de chaînes de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) du même espace de travail partagent la même adresse e-mail, tous les utilisateurs qui partagent l'adresse e-mail sont mis à jour avec les modifications apportées au groupe d'abonnement. |
-| `phones` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Les numéros de téléphone de l’utilisateur, peuvent être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (maximum 50). |
+| `phones` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Les numéros de téléphone de l’utilisateur, peuvent être transmis comme un tableau de chaînes de caractères. Vous devez inclure au moins un numéro de téléphone (jusqu'à 50). <br><br>Si plusieurs utilisateurs (`external_id`) du même espace de travail partagent le même numéro de téléphone, tous les utilisateurs qui partagent le numéro de téléphone sont mis à jour avec les mêmes changements de groupe d'abonnement.|
+| `use_double_opt_in_logic` | Facultatif | Valeur booléenne | Si ce paramètre est omis ou défini sur `false`, les utilisateurs ne seront pas pris en compte dans le processus de double abonnement par SMS. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}

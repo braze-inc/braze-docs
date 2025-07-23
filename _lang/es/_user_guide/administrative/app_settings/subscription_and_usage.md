@@ -15,10 +15,6 @@ search_rank: 5
 
 Para navegar a la página de **Facturación**, vaya a **Configuración** > **Facturación**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar esta página seleccionando el icono de tu cuenta y, a continuación, **Suscripciones y uso**.
-{% endalert %}
-
 La página **Facturación** incluye las siguientes pestañas:
 
 - [Suscripciones y uso](#subscriptions-and-usage)

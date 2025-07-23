@@ -9,7 +9,7 @@ page_order: 0
 
 > Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exactement ce que vous concevez et intégrez. Vous pourriez être curieux de savoir comment le SDK peut être personnalisé afin de mieux répondre à vos besoins. Cet article peut vous aider à répondre à toutes vos questions concernant SDK. 
 
-Êtes-vous un spécialiste du marketing à la recherche d’un aperçu de base du SDK ? Consultez plutôt notre [présentation pour les marketeurs]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/).
+Êtes-vous un spécialiste du marketing à la recherche d’un aperçu de base du SDK ? Consultez plutôt notre [présentation pour les marketeurs]({{site.baseurl}}/user_guide/getting_started/web_sdk/).
 
 Le SDK Braze en bref :
 * Collecte et synchronise les données de l'utilisateur dans un profil utilisateur consolidé.
@@ -29,7 +29,7 @@ Le SDK de Braze est conçu pour se comporter au mieux et ne pas interférer avec
 
 ## Analyses par défaut et gestion de session
 
-Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans le calcul de votre nombre de points de données.
+Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans le calcul de votre nombre de points de données.
 
 {% alert note %}
 Toutes nos fonctionnalités sont configurables, mais il est judicieux de mettre en œuvre le modèle de collecte de données par défaut.
@@ -67,7 +67,7 @@ Nous recommandons fortement d’intégrer pleinement les SDK pour tirer le meill
 {% tabs %}
 {% tab Web SDK %}
 
-Vous pouvez soit simplement ne pas intégrer certaines parties du SDK, soit utiliser [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) pour un utilisateur. Cette méthode synchronisera les données enregistrées avant que `disableSDK()` soit appelé et tous les appels ultérieurs vers le SDK Braze pour le Web pour cette page et les charges de page ultérieures seront ignorés. Si vous souhaitez reprendre le recueil de données ultérieurement, vous pouvez utiliser la méthode [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) plus tard pour reprendre la collecte des données. Pour en savoir plus à ce sujet, consultez notre article [Désactivation du suivi Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/).
+Vous pouvez soit simplement ne pas intégrer certaines parties du SDK, soit utiliser [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) pour un utilisateur. Cette méthode synchronisera les données enregistrées avant que `disableSDK()` soit appelé et tous les appels ultérieurs vers le SDK Braze pour le Web pour cette page et les charges de page ultérieures seront ignorés. Si vous souhaitez reprendre le recueil de données ultérieurement, vous pouvez utiliser la méthode [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) plus tard pour reprendre la collecte des données. Pour en savoir plus à ce sujet, consultez notre article [Désactivation du suivi Web]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web).
 
 {% endtab %}
 {% tab Android SDK %}
@@ -87,7 +87,7 @@ Vous pouvez attribuer un ensemble de champs éligibles à [`configuration.device
 Par défaut, tous les champs sont collectés par le SDK Braze Swift. La suppression de certaines propriétés de l'appareil peut entraîner la désactivation de certaines des fonctionnalités du SDK.
 {% endalert %}
 
-Pour plus de détails sur l'utilisation, reportez-vous à la rubrique [Stockage]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage) dans la documentation du SDK Swift.
+Pour plus de détails sur l'utilisation, reportez-vous à la rubrique [Stockage]({{site.baseurl}}/developer_guide/storage/?tab=swift) dans la documentation du SDK Swift.
 
 {% endtab %}
 {% endtabs %}
@@ -99,6 +99,6 @@ Vous pouvez utiliser le tableau de bord pour voir la version du SDK d'une applic
 ![Une application nommée Swifty dans un espace de travail. La version du SDK Live est la 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
-Si vous avez une application iOS, vous pouvez confirmer que vous utilisez le [SDK Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) au lieu de l'ancien [SDK iOS Objective-C]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) si la **version de votre Live SDK** est égale ou supérieure à 5.0.0, qui était la première version publiée du SDK Swift.
+Si vous avez une application iOS, vous pouvez confirmer que vous utilisez le [SDK Swift]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) au lieu de l'ancien [SDK iOS Objective-C]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) si la **version de votre Live SDK** est égale ou supérieure à 5.0.0, qui était la première version publiée du SDK Swift.
 {% endalert %}
 

@@ -18,9 +18,9 @@ The Braze and Nexla integration allows customers that use [Currents]({{site.base
 
 | Requirement | Description |
 |---|---|
-| Nexla account | A [Nexla account][2] is required to take advantage of this partnership. |
+| Nexla account | A [Nexla account](https://www.nexla.com/get-demo) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -59,5 +59,3 @@ To send data to a destination, click the **Send to Destination** arrow on the da
 
 Once the flow is set up, nothing more is required. Nexla will handle any changes in the source data, scale to any new data, and notify you of any schema changes or errors for triage. If you'd like to make changes to transformations, the source, or the destination, you can click into these options and make the change, and Nexla will update the flow instantly.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
-[2]: https://www.nexla.com/get-demo

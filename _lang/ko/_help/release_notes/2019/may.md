@@ -25,7 +25,7 @@ description: "이 문서에는 2019년 5월의 릴리스 노트가 포함되어 
 - Android: 2.6.0 이상
 - 웹: 2.2.0 이상
 
-[여기에서 콘텐츠 카드에 대해 자세히 알아보세요!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
+[여기에서 콘텐츠 카드에 대해 자세히 알아보세요!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
 
 {% alert update %}
 커런츠용 콘텐츠 카드와 콘텐츠 카드용 API 설명서는 이번 주 후반에 출시될 예정입니다. 기대해 주세요!
@@ -35,7 +35,7 @@ description: "이 문서에는 2019년 5월의 릴리스 노트가 포함되어 
 
 Braze의 기능에 새로운 채널이 추가되었습니다! 새로운 채널로 확장함으로써 고객은 시청 행동을 이해하여 데이터를 강화하거나 모든 관련 채널에서 소비자에게 의미 있는 경험을 제공할 수 있습니다.
 
-이제 데이터 강화 및 커스텀 이벤트 추적 기술을 위해 [Roku 기기에서 데이터를 검색]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)할 수 있습니다.
+이제 데이터 강화 및 커스텀 이벤트 추적 기술을 위해 [Roku 기기에서 데이터를 검색]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku)할 수 있습니다.
 
 ## 캔버스 또는 캠페인 업데이트에 대한 알림 기본 설정
 
@@ -45,7 +45,7 @@ Braze의 기능에 새로운 채널이 추가되었습니다! 새로운 채널�
 
 Jampp는 모바일 고객을 확보하고 리타겟팅하기 위한 퍼포먼스 마케팅 플랫폼입니다. 행동 데이터와 예측 및 프로그래매틱 기술을 결합하여 소비자가 처음 구매하거나 더 자주 구매하도록 유도하는 개인 맞춤형 관련성 광고를 표시함으로써 광고주에게 수익을 창출합니다.
 
-Braze 고객은 이벤트를 Jampp로 스트리밍하도록 Braze 웹훅 채널을 구성하여 [Jampp와 통합]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/)할 수 있습니다. 그 결과, 고객은 모바일 광고 생태계 내에서 Jampp를 통해 리타겟팅 이니셔티브에 더 풍부한 데이터 세트를 추가할 수 있습니다.
+Braze 고객은 이벤트를 Jampp로 스트리밍하도록 Braze 웹훅 채널을 구성하여 [Jampp와 통합]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/jampp/)할 수 있습니다. 그 결과, 고객은 모바일 광고 생태계 내에서 Jampp를 통해 리타겟팅 이니셔티브에 더 풍부한 데이터 세트를 추가할 수 있습니다.
 
 ## 인앱 메시지용 플랫폼 선택기
 
@@ -85,7 +85,7 @@ _2019년 8월에 업데이트가 기록되었습니다._
 
 이전 고유성 기간이 30일 이상이었기 때문에 Mailjet을 사용하는 모든 사용자도 이 수치가 급증하는 것을 볼 수 있습니다. 이 변경 사항은 3주 전에 알려드렸어야 합니다.  SendGrid 고객은 아무런 차이를 느끼지 못할 것입니다.
 
-업데이트된 용어는 [보고서 메트릭 용어집에서]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) 검색할 수 있습니다.
+업데이트된 용어는 [보고서 메트릭 용어집에서]({{site.baseurl}}/user_guide/data/report_metrics/) 검색할 수 있습니다.
 
 {% alert update %}
 `dispatch_id`에 대한 동작은 캔버스와 캠페인 간에 다르며, 이는 Braze가 캔버스 단계(예약 가능한 엔트리 단계 제외)가 "예약된" 경우에도 트리거된 이벤트로 취급하기 때문입니다. [캔버스와 캠페인의 [`dispatch_id` 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)에 대해 자세히 알아보세요.
@@ -97,7 +97,7 @@ _2019년 8월에 업데이트가 기록되었습니다._
 ## 참여도가 가장 높은 채널
 
 {% alert update %}
-[2019년 11월 제품 릴리스부터]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite)'가장 참여도가 높은 채널'은 ['지능형 채널']({{site.baseurl}}/user_guide/intelligence/intelligent_channel/)로 이름이 변경되었습니다.
+[2019년 11월 제품 릴리스부터]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite)'가장 참여도가 높은 채널'은 ['지능형 채널']({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)로 이름이 변경되었습니다.
 {% endalert %}
 
 참여도가 가장 높은 채널 필터는 선택한 메시징 채널이 "최고"의 채널인 오디언스 중 일부를 선택합니다. 이 경우 "최고"는 "사용자의 기록을 고려할 때 인게이지먼트 가능성이 가장 높음"을 의미합니다. 이메일, 웹 푸시 또는 모바일 푸시(사용 가능한 모든 모바일 OS 또는 기기 포함)를 채널로 선택할 수 있습니다.

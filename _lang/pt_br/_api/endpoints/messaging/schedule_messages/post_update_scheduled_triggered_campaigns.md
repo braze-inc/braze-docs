@@ -19,7 +19,9 @@ Você pode passar o endereço `trigger_properties` que será modelado na própri
 
 Observe que, para enviar mensagens com esse ponto de extremidade, você deve ter um ID de campanha, criado ao criar uma [campanha disparada por API]({{site.baseurl}}/api/api_campaigns/).
 
-Qualquer agendamento substituirá completamente o que você forneceu na solicitação de criação de agendamento ou em solicitações anteriores de atualização de agendamento. Por exemplo, se você originalmente forneceu `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` e, em sua atualização, forneceu `"schedule" : {"time" : "2015-02-20T14:14:47"}`, sua mensagem será enviada no horário fornecido em UTC, e não no fuso local do usuário. Os disparos programados que forem atualizados muito perto ou durante o horário em que deveriam ser enviados serão atualizados com os melhores esforços, de modo que as alterações de último segundo poderão ser aplicadas a todos, alguns ou nenhum dos usuários direcionados.
+Qualquer programação substituirá completamente a que você forneceu na solicitação de criação de programação ou nas solicitações anteriores de atualização de programação. Por exemplo, se você definir originalmente o agendamento para `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` e depois atualizá-lo para `"schedule" : {"time" : "2015-02-20T14:14:47"}`, a mensagem será enviada no horário especificado em UTC, e não no fuso local do usuário.
+
+Os disparos programados que forem atualizados muito perto ou durante o horário em que deveriam ser enviados serão atualizados com os melhores esforços para que as alterações de último segundo possam ser aplicadas a todos, alguns ou nenhum dos seus usuários direcionados. As atualizações não serão aplicadas se a programação original tiver usado o fuso local e a hora original já tiver passado em qualquer fuso horário.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 

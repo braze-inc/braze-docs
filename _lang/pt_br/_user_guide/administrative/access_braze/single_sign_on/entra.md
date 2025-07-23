@@ -23,10 +23,6 @@ Após a configuração, solicitaremos que você forneça uma URL de login e um U
 | Chave de API do RelayState | Para ativar o login do provedor de identidade, acesse **Settings** > **API Keys (** **Configurações** > **Chaves de API** ) e crie uma chave de API com permissões `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar suas chaves API em **Configurações** na **console de desenvolvedor** > **Configurações de API**.
-{% endalert %}
-
 ## Login iniciado pelo prestador de serviço (SP) no Microsoft Entra SSO
 
 ### Etapa 1: Adicionar Braze da galeria
@@ -96,13 +92,7 @@ Depois que você configurar o Braze no centro de administração do Microsoft En
 Depois que seu gerente de conta ativar o SAML SSO para sua conta, faça o seguinte:
 
 1. Acesse **Configurações** > **Configurações administrativas** > **Configurações de segurança** e alterne a seção SAML SSO para **ATIVADO**.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), selecione o ícone da sua conta e acesse **Configurações da Empresa** > **Configurações de Segurança** para encontrar a seção SAML SSO.
-{% endalert %}
-
-{: start="2"}
-2\. Na mesma página, adicione o seguinte:
+2. Na mesma página, adicione o seguinte:
 
 | Requisito | Informações |
 |---|---|

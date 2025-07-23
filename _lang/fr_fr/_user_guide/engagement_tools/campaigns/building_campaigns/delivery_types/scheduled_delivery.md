@@ -20,7 +20,7 @@ Si vous choisissez d’envoyer un message dès qu’elle est lancée, il commenc
 
 Ce type de planification est conçu pour les campagnes ponctuelles que vous souhaitez envoyer immédiatement, telles que les messages concernant un événement en cours. Une application sportive, par exemple, peut planifier des notifications push basées sur les mises à jour des scores en utilisant cette option. En outre, lorsque vous envoyez des messages de test destinés à vous-même ou à votre équipe, cette option vous permet de les livrer immédiatement. 
 
-Si vous envisagez de modifier la campagne et de l'envoyer à nouveau après avoir vu le test, veillez à cocher la case qui rend les utilisateurs à [nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) pour recevoir la campagne. Par défaut, Braze envoie une seule fois une campagne à un utilisateur à moins que cette case ne soit cochée.
+Si vous envisagez de modifier la campagne et de l'envoyer à nouveau après avoir vu le test, veillez à cocher la case qui rend les utilisateurs à [nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) pour recevoir la campagne. Par défaut, Braze envoie une seule fois une campagne à un utilisateur à moins que cette case ne soit cochée.
 
 ## Option 2 : Envoyer à un moment spécifié
 

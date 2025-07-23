@@ -2,8 +2,7 @@
 nav_title: Extensiones de segmento
 article_title: Extensiones de segmento
 page_order: 3.1
-
-page_type: tutorial
+page_type: reference
 description: "Este artículo le mostrará cómo configurar y utilizar una extensión de segmento para mejorar sus capacidades de segmentación."
 tool: Segments
 ---
@@ -32,10 +31,6 @@ Para crear una extensión de segmento, crearás un filtro para refinar un segmen
 
 Vaya a **Audiencia** > **Extensiones de segmento**.
 
-{% alert note %}
-Si está utilizando la [navegación antigua]({{site.baseurl}}/navigation), puede encontrar esta página en **Compromiso** > **Segmentos** > **Extensiones de segmento**.
-{% endalert %}
-
 En la tabla Extensiones de segmento, selecciona **Crear nueva extensión** y, a continuación, selecciona tu experiencia de creación de extensiones de segmento:
 
 - **Extensión sencilla:** Crear la extensión de segmento enfocada en un solo evento usando un formulario guiado.
@@ -44,7 +39,7 @@ Lo mejor para cuando no se quiere utilizar SQL.
 - **Actualización incremental:** Escribe un segmento SQL de Snowflake que automáticamente actualice los últimos 2 días de datos, o puedes actualizar manualmente en caso de ser necesario. Esta es la mejor opción para equilibrar precisión y eficiencia de costos.
 - **Actualización completa:** Escribe un segmento SQL de Snowflake que recalcule toda la audiencia después de actualizar manualmente. La mejor opción cuando necesitas una actualización total de la vista de tu audiencia.
 
-![""][20]{: style="max-width:50%"}
+![Tabla con diferentes experiencias de creación de extensiones de segmento para seleccionar.][20]{: style="max-width:50%"}
 
 Si seleccionas una experiencia que utiliza SQL, consulta [Extensiones de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) para más información.
 
@@ -62,7 +57,7 @@ Seleccione entre criterios de compra, participación en mensajes o eventos perso
 
 La segmentación basada en datos de eventos de más de 730 días puede realizarse utilizando otros filtros situados en **Segmentos**. Al elegir el periodo de tiempo, puede especificar un intervalo de fechas relativo (por ejemplo, los últimos X días), una fecha de inicio, una fecha final o un intervalo de fechas exacto (de la fecha A a la fecha B).
 
-![""][3]
+![Criterios de segmentación para usuarios que realizaron un evento personalizado, "# de aaa", más de 0 veces en el intervalo de fechas del 1 de agosto de 2023 al 10 de agosto de 2023.][3]
 
 #### Segmentación de propiedades de eventos
 
@@ -131,30 +126,59 @@ La actualización de los segmentos podría requerir hasta 60 minutos debido a lo
 - Sólo puede producirse una actualización a la vez para una extensión de segmento específica. Si hay un conflicto en el que se inicia una nueva actualización cuando una actualización existente ya ha comenzado a procesarse, Braze cancelará la nueva solicitud de actualización y continuará el procesamiento en curso.
 {% endalert %}
 
+#### Criterios para desactivar automáticamente las extensiones obsoletas
+
+Las actualizaciones programadas se desactivan automáticamente cuando una extensión de segmento caduca. Una extensión de segmento es antigua si cumple los siguientes criterios:
+
+- No se ha utilizado en ninguna campaña o Canvas activos
+- No se utiliza en ningún segmento que esté en una campaña o Canvas activos
+- No se utiliza en ningún segmento que tenga activado el [seguimiento de análisis]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) 
+- No se ha modificado en más de siete días
+- No se ha añadido a una campaña o Canvas (incluidos borradores), o segmento en más de siete días
+
+Si la actualización programada está desactivada para una extensión de segmento, dicha extensión tendrá una notificación que así lo indique.
+
+![Una notificación que dice que "Las actualizaciones programadas se han desactivado para esta extensión porque no se utiliza en ninguna campaña, lienzo o segmento activos". La extensión de segmento se desactivó el 23 de febrero de 2025 a las 12:00 AM."][1]
+
+Cuando estés listo para utilizar una Extensión de segmento obsoleta, [revisa la configuración de](#step-4-designate-refresh-settings-optional) actualización, selecciona el programa de actualización que se ajuste a tu caso de uso y, a continuación, guarda las modificaciones.
+
 ### Paso 5: Guarda tu extensión de segmento
 
 Una vez que selecciones **Guardar**, tu extensión comenzará a procesarse. El tiempo que se tarda en generar la extensión depende del número de usuarios que tengas, de cuántos eventos personalizados o de compra estés capturando y de cuántos días estés mirando hacia atrás en el historial.
 
 Mientras su extensión se está procesando, verá una pequeña animación junto al nombre de la extensión, y la palabra "Procesando" en la columna **Último Procesado** de la lista de extensiones. Tenga en cuenta que no podrá editar una extensión mientras se esté procesando.
 
-![""][5]
+![Página "Extensiones de segmento" con dos extensiones activas.][5]
 
 ### Paso 6: Utilice su extensión en un segmento
 
 Una vez creada una extensión, puede utilizarla como filtro al crear un segmento o definir un público para una campaña o Canvas. Para empezar, seleccione **Extensión de segmento Braze** en la lista de filtros de la sección **Atributos de usuario**.
 
-![""][6]
+![Sección "Filtros" con un desplegable de filtros que muestra "Extensiones de segmento Braze".][6]
 
 En la lista de filtros Extensión de segmento Braze, elija la extensión que desea incluir o excluir en este segmento.
 
-![""][7]
+![Un filtro "Extensiones de segmento Braze" que incluye un segmento "Compradores en línea Ext...".][7]
 
 Para ver los criterios de la extensión, selecciona **Ver detalles de la extensión** para mostrar los detalles en una ventana emergente modal.
 
-![""][8]{: style="max-width:70%;"}
+![Detalles de la extensión "Extensión para compradores online - 90 días".][8]{: style="max-width:70%;"}
 
 Ahora puedes proceder como de costumbre con [la creación de tu segmento][11].
 
+## Preguntas más frecuentes
+
+### ¿Puedo crear una extensión de segmento que utilice varios eventos personalizados?
+
+Sí. Puedes añadir varios eventos o hacer referencia a varias tablas Snowflake cuando utilices [las extensiones de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+
+Al utilizar **la extensión Simple** Extensiones de segmento, puedes seleccionar un evento personalizado, un evento de compra o una interacción de canal. Sin embargo, puedes combinar varias extensiones de segmento con un Y u O al crear el segmento.
+
+### ¿Puedo archivar extensiones de segmento si existen en una campaña activa?
+
+No. Antes de archivar una extensión de segmento, tienes que eliminarla de toda la mensajería activa.
+
+[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
 [3]: {% image_buster /assets/img/segment/segment_extension1.png %}
 [5]: {% image_buster /assets/img/segment/segment_extension5.png %}

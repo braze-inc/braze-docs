@@ -19,10 +19,6 @@ Segment Insights le muestra el rendimiento de un segmento en comparación con ot
 
 Vaya a la página **Segment Insights** de su panel de control, en **Analytics**, y haga clic en <i class="fas fa-plus"></i> **Add Segment** para ver hasta cuatro segmentos diferentes comparados con una línea de base.
 
-{% alert note %}
-Si está utilizando la [navegación anterior]({{site.baseurl}}/navigation), puede encontrar esta página en **Participación** > **Segmentos** > **Información de segmentos**.
-{% endalert %}
-
 ![Panel de información del segmento.][1]
 
 El segmento base puede ser un segmento específico que usted seleccione o un segmento que contenga a todos sus usuarios. Puede comparar las siguientes estadísticas utilizando Segment Insights:

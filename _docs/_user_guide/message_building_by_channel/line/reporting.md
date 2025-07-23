@@ -6,8 +6,7 @@ description: "This reference article covers LINE metrics used at Braze, as well 
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # LINE reporting
@@ -40,7 +39,7 @@ To measure the impact of an individual LINE message, you can add a [control grou
 
 The **LINE Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
-![The "LINE Performance" panel show metrics for two variants.][1]
+![The "LINE Performance" panel show metrics for two variants.]({% image_buster /assets/img/line/line_performance.png %})
 
 If you want to simplify your view, select **+ Add/Remove Columns** and clear any metrics as desired. By default, all metrics are displayed.
 
@@ -72,4 +71,3 @@ The **Conversion Event Details** panel shows you the performance of your convers
 The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

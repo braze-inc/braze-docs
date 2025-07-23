@@ -14,7 +14,7 @@ tool: Canvas
 
 Les parcours d’action vous permettent d’effectuer les tâches suivantes :
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Une étape de parcours d'action comme première étape d'un parcours utilisateur Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 * Personnaliser des chemins d’utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés
 * Conserver des utilisateurs pendant une certaine durée pour prioriser leur parcours suivant en fonction de leurs actions au cours de cette période d’évaluation
@@ -29,11 +29,11 @@ Dans les **paramètres de l'action**, définissez la **fenêtre d'évaluation** 
 
 Dans les **paramètres d'action**, vous pouvez également activer l'ordre de classement de vos composants en basculant sur l'option **Avancer les utilisateurs en fonction de l'ordre de classement**.
 
-![][4]
+![L'action Paramètres est assortie d'une fenêtre d'évaluation d'un jour.][4]
 
 Par défaut, le **classement** est désactivé. Lorsqu’un utilisateur accède au parcours d’action et effectue l’événement déclencheur annexe à tout groupe d’actions, il passe automatiquement au groupe d’actions pertinent. Si un utilisateur n'effectue pas d'événement déclencheur, il avancera dans le groupe par défaut **Tous les autres** à la fin de la période d'évaluation.
 
-Lorsque l'option **Utilisateurs avancés en fonction de l'ordre de classement** est activée, cela signifie que l'option **Classement** est activée. Tous les utilisateurs seront donc conservés jusqu’à la fin de la fenêtre d’évaluation. À la fin de la période d’évaluation, les utilisateurs passeront au groupe d’actions de priorité absolue auquel ils sont éligibles à la fin de la fenêtre d’évaluation. Les utilisateurs qui n'effectuent aucune des actions pendant la fenêtre d'évaluation avanceront dans le groupe par défaut **Tous les autres.**
+Lorsque l'option **Utilisateurs avancés en fonction de l'ordre de classement** est activée, cela signifie que l'**option Classement** est activée. Tous les utilisateurs seront donc conservés jusqu’à la fin de la fenêtre d’évaluation. À la fin de la période d’évaluation, les utilisateurs passeront au groupe d’actions de priorité absolue auquel ils sont éligibles à la fin de la fenêtre d’évaluation. Les utilisateurs qui n'effectuent aucune des actions pendant la fenêtre d'évaluation avanceront dans le groupe par défaut **Tous les autres.**
 
 #### in-app Messages
 
@@ -53,23 +53,23 @@ Ajoutez un ou plusieurs déclencheurs pour définir vos groupes d’actions. Ici
 
 - Effectuer un achat
 - Lancer une session
-- Effectuer un [événement personnalisé][2]
+- Exécuter un [événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Effectuer un événement de conversion
 - Ajouter une adresse e-mail
-- Modifier la valeur d'un attribut personnalisé
+- Modifier la valeur d'un attribut personnalisé (pas les attributs personnalisés imbriqués)
 - Mettre à jour leur statut du groupe d'abonnement ou leur statut du groupe d'abonnement
 - Interagir avec une campagne ou une carte de contenu
 - Saisir un emplacement
 - Déclencher un géorepérage
 - Envoyer un message entrant par SMS ou WhatsApp
 
-![][3]
+![Un groupe d'action nommé "Groupe 1" pour les utilisateurs qui effectuent un achat.][3]
 
-Dans les paramètres de chaque groupe d'action, vous avez également la possibilité de cocher la case **Je veux que ce groupe quitte le Canvas**, ce qui signifie que les utilisateurs de ce groupe quitteront le Canvas à la fin de la période d'évaluation.
+Dans chaque paramètre de groupe d'action, vous avez également la possibilité de cocher la case **Je veux que ce groupe quitte le Canvas**, ce qui signifie que les utilisateurs de ce groupe quitteront le Canvas à la fin de la période d'évaluation.
 
 ### Canvas avec rééligibilité
 
-Si les utilisateurs entrent dans un parcours d'action plusieurs fois et ont plusieurs entrées dans le parcours d'action en même temps, le comportement attendu varie en fonction de l'état du **classement**. 
+Si les utilisateurs entrent plusieurs fois dans un parcours d'action et ont plusieurs entrées dans le parcours d'action en même temps, le comportement attendu varie en fonction de l'état du **classement**.
 
 | Statut de classement | Comportement de parcours d’action |
 |---|--------------|
@@ -81,6 +81,5 @@ Notez que les classements ne sont pas [modifiables après le lancement]({{site.b
 
 
 [1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events
 [3]: {% image_buster /assets/img/actionpath_group.png %}
 [4]: {% image_buster /assets/img/actionpath_settings.png %} 

@@ -23,10 +23,6 @@ L’option Teams (Équipes) n’est pas disponible sur tous les contrats Braze. 
 
 Allez dans **Paramètres** > **Équipes internes** et sélectionnez <i class="fas fa-plus"></i> **Ajouter une équipe**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), **Équipes internes** se trouve sous **Gérer les paramètres** > **Gérer les équipes**.
-{% endalert %}
-
 ![Ajouter une nouvelle Team][68]
 
 Saisissez le **nom de l'équipe**. Si vous le souhaitez, utilisez le champ **Définir l'équipe** pour sélectionner un attribut personnalisé, un emplacement ou une langue afin de définir plus précisément les données utilisateur auxquelles l'équipe a accès. Par exemple, un cas d'utilisation possible est de réaliser des [tests avec des Teams](#testing-with-teams) en créant une équipe de développement qui n'a accès qu'aux utilisateurs test, identifiés par un attribut personnalisé. Un autre cas d'utilisation consiste à restreindre la communication avec les utilisateurs en fonction du produit.
@@ -38,10 +34,6 @@ Si une équipe est définie par un attribut personnalisé, une langue ou un pays
 Les administrateurs de Braze et les utilisateurs limités disposant de l'autorisation au niveau de l'entreprise "Peut gérer les paramètres de l'entreprise" peuvent attribuer des autorisations au niveau de l'équipe à un utilisateur du tableau de bord disposant d'un accès limité. Lorsqu'ils sont affectés à une équipe, les utilisateurs du tableau de bord sont limités à la lecture ou à l'écriture des données disponibles pour leur équipe particulière, telles que la langue de l'utilisateur, l'emplacement ou un attribut personnalisé, comme défini lors de la création de l'équipe.
 
 Pour affecter un utilisateur à une équipe, accédez à **Paramètres** > **Utilisateurs de l'entreprise** et sélectionnez l'utilisateur que vous souhaitez ajouter à votre équipe.
-
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous pouvez trouver cette page en sélectionnant l'icône de votre compte et en sélectionnant **Gérer les utilisateurs**.
-{% endalert %}
 
 Effectuez ensuite les étapes suivantes :
 

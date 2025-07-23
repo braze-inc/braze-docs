@@ -15,10 +15,6 @@ search_rank: 5
 
 Para navegar até a página **Faturamento**, acesse **Configurações** > **Faturamento**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar esta página selecionando o ícone da sua conta e, em seguida, selecionando **Inscrições e uso**.
-{% endalert %}
-
 A página **Faturamento** inclui as seguintes guias:
 
 - [Inscrições e uso](#subscriptions-and-usage)

@@ -24,7 +24,7 @@ Os atributos de Campanha e Canva também estão disponíveis no [endpoint de det
 
 ### Currents
 
-Os atributos da Campanha e da Canva estão ligados a [eventos de engajamento com mensagem]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) do Currents. Isso é importante para que você possa determinar com qual campanha ou componente de canva um push ou abertura de e-mail está associado.
+Os atributos da Campanha e da Canva estão ligados a [eventos de engajamento com mensagem]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) do Currents. Isso é importante para que você possa determinar com qual campanha ou componente de canva um push ou abertura de e-mail está associado.
 
 ## Atributos da campanha
 

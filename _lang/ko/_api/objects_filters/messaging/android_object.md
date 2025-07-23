@@ -30,6 +30,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
    // Specifying "default" in the sound field will play the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
+   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to false,
    "summary_text": (optional, string),
    "time_to_live": (optional, integer (maximum of 2,419,200 seconds)),
    "notification_id": (optional, integer),
@@ -37,7 +38,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 Andr
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
    "buttons" : (optional, array of Android push action button objects) push action buttons to display
-   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push.
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push
 }
 ```
 

@@ -13,7 +13,9 @@ channel:
 
 # Acortamiento de enlaces
 
-> El acortamiento de enlaces y el seguimiento de clics te permiten acortar automáticamente las URL contenidas en los mensajes SMS y recopilar datos analíticos sobre el porcentaje de clics, lo que proporciona métricas de participación adicionales para ayudarte a comprender cómo se relacionan tus usuarios con tus campañas por SMS. <br><br> Esta página explica cómo activar el acortamiento de enlaces en tus mensajes SMS, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces acortados y mucho más.
+> Esta página explica cómo activar el acortamiento de enlaces en tus mensajes SMS, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces acortados y mucho más.
+
+El acortamiento de enlaces y el seguimiento de clics te permiten acortar automáticamente las URL contenidas en los mensajes SMS y recopilar datos analíticos sobre el porcentaje de clics, lo que proporciona métricas de participación adicionales para ayudarte a comprender cómo se relacionan tus usuarios con tus campañas por SMS.
 
 El acortamiento de enlaces y el seguimiento de clics pueden activarse [a nivel de variante de mensaje]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign), tanto en campañas como en Lienzos. 
 
@@ -41,15 +43,7 @@ Braze sólo reconocerá las URL que empiecen por `http://` o `https://`. Cuando 
 
 ### Añadir parámetros UTM
 
-Aunque el acortamiento de enlaces te permite hacer un seguimiento automático de tus URL, también puedes añadir parámetros UTM a tus URL para hacer un seguimiento del rendimiento de las campañas en herramientas de análisis de terceros, como Google Analytics.
-
-Para añadir parámetros UTM a tu URL, haz lo siguiente:
-
-1. Empieza con tu URL base. Esta es la URL de la página de la que quieres hacer un seguimiento (como `https://www.example.com`).
-2. Añade un signo de interrogación (?) después de tu URL base.
-3. Añade cada parámetro UTM separado por un ampersand (&).
-
-Un ejemplo es `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
+{% multi_lang_include click_tracking.md section='Parámetros UTM' %}
 
 ## Personalización líquida en las URL
 
@@ -122,35 +116,15 @@ Los gráficos de **Rendimiento histórico** y **Rendimiento SMS/MMS** también i
 
 Para obtener asistencia sobre reorientación, visita [Reorientación por SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-## Dominios personalizados
+{% multi_lang_include click_tracking.md section='Dominios personalizados' %}
 
-El acortamiento de enlaces también le permite utilizar su propio dominio para personalizar el aspecto de sus URL acortadas, lo que contribuye a mostrar una imagen de marca coherente. Para más información, consulta [Dominios personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
+{% multi_lang_include click_tracking.md section='Preguntas frecuentes' %}
 
-## Preguntas más frecuentes
-
-### Acortamiento de enlaces
-
-#### ¿Los enlaces que recibo al realizar el envío de prueba son URL reales?
-
-Si la campaña se ha guardado como borrador antes del envío de prueba, sí. De lo contrario, se trata de un enlace de marcador de posición. Ten en cuenta que la URL exacta enviada en una campaña lanzada puede diferir de la enviada en un envío de prueba.
-
-#### ¿Es necesario instalar el SDK de Braze para acortar enlaces?
-
-No. El acortamiento de enlaces funciona sin ninguna integración SDK.
-
-#### ¿Sé qué usuarios individuales hacen clic en una URL?
+### ¿Sé qué usuarios individuales hacen clic en una URL?
 
 Sí. Cuando **el seguimiento avanzado** está activado, puedes reorientar a los usuarios que han hecho clic en las URL aprovechando los [filtros de reorientación]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) por SMS o los eventos de clic por SMS (`users.messages.sms.ShortLinkClick`) enviados por Currents.
 
-#### ¿Puedo añadir parámetros UTM a una URL antes de acortarla?
-
-Sí. Se pueden añadir parámetros estáticos y dinámicos. 
-
-#### ¿Durante cuánto tiempo son válidas las URL acortadas?
-
-Las URL estáticas son válidas durante un año desde el momento del registro de la URL, como el primer envío. Las URL dinámicas son válidas durante dos meses desde el momento del registro de la URL.
-
-#### ¿Funciona el acortamiento de enlaces con enlaces profundos o universales?
+### ¿Funciona el acortamiento de enlaces con enlaces profundos o universales?
 
 El acortamiento de enlaces no funciona con los vínculos profundos. Puedes acortar enlaces universales de proveedores como Branch o Appsflyer, pero Braze no puede solucionar los problemas que puedan surgir al hacerlo (como romper la atribución o provocar una redirección).
 

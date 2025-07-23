@@ -51,7 +51,7 @@ Sim, você pode inserir quantos modelos quiser em suas mensagens de e-mail. Como
 
 ### Como faço para prévia meus links com todas as tags aplicadas?
 
-Existem várias maneiras de abrir uma prévia de seus links. Depois de aplicar o [modelo de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), você pode enviar um [e-mail de teste]({{site.baseurl}}/developer_guide/sending_test_messages/) para si mesmo para visualizar todos os links. 
+Existem várias maneiras de abrir uma prévia de seus links. Depois de aplicar o [modelo de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), você pode enviar um [e-mail de teste]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) para si mesmo para visualizar todos os links. 
 
 No painel de prévia em uma nova guia, você também pode abrir os links para visualizar os links. Você também pode passar o mouse sobre os links no painel de prévia e vê-los na parte inferior do seu navegador.
 

@@ -44,6 +44,15 @@ See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details,
 {% elsif include.endpoint == "users export ids" %}
 If you onboarded with Braze on or after August 22, 2024, this endpoint has a rate limit of 250 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+You can also increase this endpoint's rate limit to 40 requests per second by meeting the following requirements:
+
+- Your workspace has the default rate limit (250 requests per minute) enabled. Contact your Braze account manager for further assistance with removing any pre-existing rate limit you may have.
+- Your request includes the `fields_to_export` parameter to list out all the fields you want to receive.
+
+{% alert important %}
+If you include `canvases_received` or `campaigns_received` in the `fields_to_export` parameter, your request will be ineligible for the faster rate limit. We recommend only including these in your request if you have a specific use case for them.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}

@@ -83,7 +83,7 @@ Mantenga la relevancia de las tarjetas de contenido configurándolas para que se
 
 | Tarjetas de contenido para Android | Tarjetas de contenido para iOS | Tarjetas de contenido para Web |
 | --- | --- |---|
-| El SDK de Android no proporciona soporte para GIF animados por defecto. Para más detalles sobre cómo activar la compatibilidad con GIF, consulta [GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/). | El SDK Swift no proporciona soporte para GIF animados de forma predeterminada. Para obtener más información sobre la activación de la compatibilidad con GIF, consulta el [tutorial sobre compatibilidad con GIF](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | La compatibilidad con GIF está incluida por defecto en la integración del SDK Web. |
+| El SDK de Android no proporciona soporte para GIF animados por defecto. Para más detalles sobre cómo activar la compatibilidad con GIF, consulta [GIF]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android). | El SDK Swift no proporciona soporte para GIF animados de forma predeterminada. Para obtener más información sobre la activación de la compatibilidad con GIF, consulta el [tutorial sobre compatibilidad con GIF](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support). | La compatibilidad con GIF está incluida por defecto en la integración del SDK Web. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>

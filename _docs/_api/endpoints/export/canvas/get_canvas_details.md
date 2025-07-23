@@ -31,6 +31,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
+| `post_launch_draft_version` | Optional | Boolean | For Canvases that have a post-launch draft, setting this to `true` will show any draft changes available. Defaults to `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
@@ -45,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Responses
 
 {% alert note %}
-All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For full steps and Message steps, the `next_step_ids` field will be present, but will not contain data for other Canvas Flow steps.
+All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For Message steps, the `next_step_ids` field will be present, but will not contain data for other Canvas steps.
 {% endalert %}
 
 ```json
@@ -58,6 +59,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "description": (string) the Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
+  "enabled": (boolean) whether this Canvas is active or not,
+  "has_post_launch_draft": (boolean) whether this Canvas has a post-launch draft,
   "schedule_type": (string) the type of scheduling action,
   "first_entry": (string) the date of first entry as ISO 8601 date,
   "last_entry": (string) the date of last entry as ISO 8601 date,
@@ -114,6 +117,8 @@ The following is an example response that includes Canvas messages sent through 
   "description": "Complete profile reminder via multiple channels",
   "archived": false,
   "draft": false,
+  "enabled": true,
+  "has_post_launch_draft": true,
   "schedule_type": "date",
   "first_entry": "2023-01-01T12:00:00Z",
   "last_entry": "2023-01-10T12:00:00Z",

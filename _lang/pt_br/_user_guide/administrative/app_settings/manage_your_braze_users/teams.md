@@ -23,10 +23,6 @@ As equipes não estão disponíveis em todos os contratos Braze. Se quiser acess
 
 Acesse **Configurações** > **Equipes internas** ) e selecione <i class="fas fa-plus"></i> ** Adicionar equipe**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), o **Internal Teams** está localizado em **Manage Settings** > **Manage Teams**.
-{% endalert %}
-
 ![Adição de uma nova equipe][68]
 
 Digite o **nome da equipe**. Se desejar, use o campo **Definir equipe** para selecionar um atributo personalizado, local ou idioma para definir melhor a quais dados de usuários a equipe tem acesso. Por exemplo, um possível caso de uso é realizar [testes com equipes](#testing-with-teams) criando uma equipe de desenvolvimento que só tenha acesso a usuários teste, identificados por um atributo personalizado. Outro caso de uso é restringir a comunicação com os usuários com base no produto.
@@ -38,10 +34,6 @@ Se uma equipe for definida por um atributo personalizado, idioma ou país, será
 Os administradores do Braze e os usuários limitados com a permissão no nível da empresa "Pode gerenciar as configurações da empresa" podem atribuir permissões no nível da equipe a um usuário do dashboard com acesso limitado. Quando atribuídos a uma equipe, os usuários do dashboard são limitados a apenas ler ou gravar dados disponíveis para suas equipes específicas, como idioma do usuário, local ou atributo personalizado, conforme definido quando a equipe foi criada.
 
 Para atribuir um usuário a uma equipe, navegue até **Configurações** > **Usuários da empresa** e selecione o usuário que deseja adicionar à sua equipe.
-
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar essa página selecionando o ícone da sua conta e selecionando **Gerenciar usuários**.
-{% endalert %}
 
 Em seguida, execute as etapas a seguir:
 

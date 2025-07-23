@@ -14,27 +14,27 @@ description: "Este artigo de referência apresenta uma visão geral do resultado
 
 ## Interromper sua campanha
 
-Para interromper uma campanha, abra a página **Detalhes da campanha** e selecione o botão **Interromper campanha** no canto inferior direito da página. Quando uma campanha é interrompida:
-- O envio de mensagens programadas para serem enviadas será cancelado
-- Os Testes A/B em que o teste inicial já foi enviado serão permanentemente cancelados
-- Os eventos para mensagens que já foram enviadas (por exemplo, cliques abertos) ainda serão rastreados
-- As campanhas podem ser reiniciadas clicando em **Resume**
+Para parar uma campanha, abra sua página de **Detalhes da Campanha** e selecione **Parar Campanha**. Quando uma campanha é interrompida:
 
-Uma vez retomada, essa campanha continuará enviando mensagens e Testes A/B, mas as mensagens perdidas não serão reenviadas ou reagendadas.
+- As mensagens agendadas para serem enviadas serão canceladas.
+- Os testes A/B onde o teste inicial já foi enviado serão cancelados permanentemente.
+- Eventos para mensagens que já foram enviadas (por exemplo, cliques abertos) ainda serão rastreados.
+
+Para reiniciar sua campanha, selecione **Retomar**. Sua campanha continuará enviando mensagens e testes A/B, mas quaisquer mensagens perdidas não serão reenviadas ou reprogramadas.
 
 ## Campanhas disparadas
 
-Todas as alterações nas campanhas de entrega baseada em ação e nas campanhas de entrega disparada por API entram em vigor imediatamente para envios futuros.
+Todas as alterações em campanhas de entrega baseada em ação e campanhas de entrega acionadas por API entram em vigor imediatamente para envios futuros. 
 
-Se essas campanhas tiverem sido disparadas, mas ainda não tiverem sido enviadas (por exemplo, uma campanha de entrega baseada em ação com uma postergação de 1 dia é editada durante o período de 1 dia de postergação), consulte a seguinte orientação para campanhas programadas.
+Se essas campanhas foram acionadas, mas ainda não enviadas (por exemplo, uma campanha de entrega baseada em ação com um atraso de 1 dia é editada durante o período de atraso de 1 dia), consulte as seguintes orientações para campanhas agendadas.
 
-## Campanhas programadas
+### Campanhas programadas
 
 Se precisar fazer alterações em uma campanha após o lançamento, observe os seguintes itens ao editar sua campanha para verificar se as alterações têm os efeitos desejados.
 
 ### Conteúdo das mensagens
 
-Todas as alterações no conteúdo da mensagem (incluindo títulos, corpos, imagens etc.) entram em vigor imediatamente ao serem salvas para todos os envios de mensagens futuros. Não é possível alterar o conteúdo das mensagens que já foram enviadas.
+Quaisquer alterações no conteúdo da mensagem (incluindo títulos, corpos e imagens) entram em vigor imediatamente ao salvar para todos os envios de mensagens futuros. Não é possível alterar o conteúdo das mensagens que já foram despachadas.
 
 ### Programação e público
 
@@ -55,3 +55,27 @@ Se você precisar que as alterações entrem em vigor imediatamente, faça o seg
 {% alert important %}
 Isso redefine a elegibilidade para as pessoas que já receberam a campanha original, portanto, talvez seja necessário filtrar a campanha duplicada para as pessoas que não receberam a original.
 {% endalert %}
+
+## Salvando rascunhos de campanhas ativas {#campaign-drafts}
+
+Rascunhos são ótimos para fazer alterações em larga escala em campanhas ativas. Ao criar um rascunho, você pode testar as alterações planejadas antes do seu próximo lançamento.
+
+{% alert note %}
+Uma campanha só pode ter um rascunho por vez. Além disso, análises não estão disponíveis, pois as alterações rascunhadas ainda não foram lançadas.
+{% endalert %}
+
+Para criar um rascunho, faça o seguinte:
+
+1. Acesse sua campanha ativa.
+2. Faça suas alterações.
+3. Selecione **Salvar como Rascunho**. Observe que, após criar um rascunho, você não pode editar a campanha ativa até que você lance ou descarte seu rascunho.
+
+![Um rascunho de uma campanha ativa com a opção de visualizar a campanha ativa.]({% image_buster /assets/img/campaign_draft.png %})
+
+Enquanto você faz edições no rascunho, você também pode consultar a campanha ativa no cabeçalho do rascunho da campanha ou no rodapé da análise da campanha. 
+
+Para retornar a uma campanha ativa, selecione **Editar rascunho** na exibição de análise de dados ou na exibição de campanha ativa.
+
+### Priorização de mensagens no app
+
+A prioridade das mensagens no app será atualizada imediatamente (antes do lançamento do rascunho) quando você selecionar **Definir prioridade exata** e especificar a prioridade em relação a outras campanhas ou Canvas.

@@ -27,7 +27,7 @@ The Braze and Adobe integration allows you to seamlessly control the flow of inf
 
 ### Step 1: Create an XDM schema in Adobe
 
-1. In Adobe Experience Platform, go to **Schemas** > select **Create schema** > select **Experience Event** > select **Next**.<br><br>![Adobe Schemas page for the schema called "Braze Currents Walk-Through".][1]<br><br>
+1. In Adobe Experience Platform, go to **Schemas** > select **Create schema** > select **Experience Event** > select **Next**.<br><br>![Adobe Schemas page for the schema called "Braze Currents Walk-Through".]({% image_buster /assets/img/adobe/currents_sources.png %})<br><br>
 2. Provide a name and description for your schema. 
 3. In the **Composition** panel, configure your schema attributes:
 - In **Field groups**, select **Add** and then add the **Braze Currents User Event** field group.
@@ -39,7 +39,7 @@ For more information on schemas, refer to Adobe's documentation on [creating sch
 
 1. In Adobe Experience Platform, go to **Sources** > **Catalog** > **Marketing automation**.
 2. Select **Add data** for Braze Currents.
-3. Upload the [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json).<br><br>![Adobe "Add data page".][2]<br><br>
+3. Upload the [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json).<br><br>![Adobe "Add data page".]({% image_buster /assets/img/adobe/currents_add_data.png %})<br><br>
 4. After your file is uploaded, provide your dataflow details, including information about your dataset and the schema that you are mapping to. 
     - If this is your first time connecting a Braze Currents source, create a new dataset and make sure to use the schema you created in [Step 1](#step-1-create-an-xdm-schema-in-adobe). 
     - If this isn't your first time, use any existing dataset that references the Braze schema.
@@ -47,7 +47,7 @@ For more information on schemas, refer to Adobe's documentation on [creating sch
     - Change the mapping for `id` from `to _braze.appID` to `_id` at the root level of the schema.
     - Make sure `properties.is_amp` is mapped to `_braze.messaging.email.isAMP`.
     - Delete the `time` and `timestamp` mapping, then select the add icon > **Add calculated field** and enter **time * 1000**. Select **Save**.
-    - Select **Map target field** next to the new source field and map it to **timestamp** at the root level of the schema. <br><br>![Adobe "Add data" page with mappings.][3]<br><br>
+    - Select **Map target field** next to the new source field and map it to **timestamp** at the root level of the schema. <br><br>![Adobe "Add data" page with mappings.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
 6. Select **Validate** to confirm you resolved the issues.
 
 {% alert important %}
@@ -55,7 +55,7 @@ Braze timestamps are expressed in seconds. To accurately reflect timestamps in A
 {% endalert %}
 
 {: start="7"}
-7. Select **Next**, review your dataflow details, and then select **Finish**.<br><br>![Adobe "Add data" page with no mapping errors.][4]
+7. Select **Next**, review your dataflow details, and then select **Finish**.<br><br>![Adobe "Add data" page with no mapping errors.]({% image_buster /assets/img/adobe/currents_no_errors.png %})
 
 ### Step 3: Gather credentials
 
@@ -82,7 +82,3 @@ Collect the following creditials to input into Braze, which will allow Braze to 
 4. Optionally configure any desired field exclusions or transformations.
 5. Select **Launch Current**.
 
-[1]: {% image_buster /assets/img/adobe/currents_sources.png %} 
-[2]: {% image_buster /assets/img/adobe/currents_add_data.png %}
-[3]: {% image_buster /assets/img/adobe/currents_mapping.png %}
-[4]: {% image_buster /assets/img/adobe/currents_no_errors.png %}

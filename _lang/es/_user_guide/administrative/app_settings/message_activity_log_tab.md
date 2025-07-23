@@ -15,10 +15,6 @@ Puede ver las transacciones de campaña de la API, solucionar problemas de mensa
 
 Para acceder al registro, ve a **Configuración** > **Registro de actividad de mensajes**.
 
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes encontrar el **Registro de actividad de mensajes** en **Configuración** > **Consola para desarrolladores**.
-{% endalert %}
-
 ![Registro de actividad de mensajes][2]
 
 {% alert tip %}

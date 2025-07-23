@@ -72,4 +72,3 @@ For more information on this integration, visit Microsoft's Braze [integration a
 {% endalert %}
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

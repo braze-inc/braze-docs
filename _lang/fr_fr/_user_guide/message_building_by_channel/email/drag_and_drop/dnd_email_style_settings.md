@@ -16,10 +16,6 @@ tool:
 
 Pour modifier vos paramètres de style globaux, allez dans **Paramètres** > **Préférences e-mail** > **Préférences e-mail glisser-déposer.** Après avoir modifié les styles dans l'éditeur par glisser-déposer de l'e-mail, cliquez sur **Enregistrer.** Pour personnaliser davantage vos campagnes d'e-mail et Canvases, découvrez comment vous pouvez incorporer [des blocs d'éditeur par glisser-déposer][8].
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve dans **Gérer les paramètres** > **Paramètres des e-mails** > **Paramètres de l'éditeur d’e-mail par glisser-déposer**.
-{% endalert %}
-
 ![][1]
 
 {% alert note %}

@@ -43,8 +43,8 @@ A purchase object is an object that gets passed through the API when a purchase 
 
 - [External user ID]({{site.baseurl}}/api/basics/#user-ids)
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
-- [ISO 4217 Currency Code Wiki][20]
-- [ISO 8601 Time Code Wiki][22]
+- [ISO 4217 Currency Code Wiki](http://en.wikipedia.org/wiki/ISO_4217)
+- [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
 ## Purchase product ID
 
@@ -177,5 +177,3 @@ Using the example provided, we can see that someone bought a backpack with the p
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
 
 
-[20]: http://en.wikipedia.org/wiki/ISO_4217
-[22]: https://en.wikipedia.org/wiki/ISO_8601

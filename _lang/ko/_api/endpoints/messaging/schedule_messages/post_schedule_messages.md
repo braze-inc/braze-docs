@@ -18,6 +18,10 @@ description: "이 문서에서는 예약된 메시지 만들기 Braze 엔드포�
 
 세그먼트를 타겟팅하는 경우, 예약된 모든 메시지가 전송된 후 요청 기록이 [개발자 콘솔에](https://dashboard.braze.com/app_settings/developer_console/activitylog/) 저장됩니다.
 
+{% alert tip %}
+지정된 사용자에게 즉시 메시지를 보내려면 [`/messages/send` 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) 대신 사용하세요.
+{% endalert %}
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
 ## 필수 구성 요소

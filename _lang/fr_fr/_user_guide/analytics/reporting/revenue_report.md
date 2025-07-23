@@ -12,10 +12,6 @@ tool: Reports
 
 Pour afficher un rapport sur vos chiffres d'affaires à partir du tableau de bord, accédez à **Analyse** > **Rapport sur les revenus.** 
 
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), cette page se trouve sous **Données.**
-{% endalert %}
-
 ## Personnalisation de votre chiffre d'affaires
 
 Vous pouvez personnaliser votre rapport du chiffre d'affaires en sélectionnant une plage de dates, les applications sur lesquelles portera le rapport, ainsi que des paramètres.

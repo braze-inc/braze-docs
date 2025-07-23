@@ -41,14 +41,14 @@ The Braze and Optimizely integration is a two-way integration that allows you to
 4. Select **Create New Current** > **Custom Currents Export**.
 5. Configure the Current using the endpoint and token provided in ODP. This is required to sync Braze events to ODP. 
 
-![Optimizely authorization.][1]
+![Optimizely authorization.]({% image_buster /assets/img/optimizely/image1_authorization.png %})
 
 {:start="6"}
 6. In ODP, expand the **Segments** section and select specific segments from the **Segments to Sync** list, or select **Import All Customers** to sync all segments.
 7. Add any [additional field mappings](https://www.google.com/url?q=https://support.optimizely.com/hc/en-us/articles/29918568615949-Integrate-Braze%23h_01J6Z1P53JVDBFZ758Q78CK1QB&sa=D&source=editors&ust=1733948158380300&usg=AOvVaw3WSAND5ie3LCVuSxUlLanR) you want between Braze and ODP.
 8. Select **Save**.
 
-![Optimizely Braze segment sync.][2]
+![Optimizely Braze segment sync.]({% image_buster /assets/img/optimizely/image2_syncsegment.png %})
 
 {% alert tip %} 
 You must select segments to import Braze customer profiles. If you don't select any segments, the integration won't import any customer profiles. 
@@ -58,7 +58,7 @@ You must select segments to import Braze customer profiles. If you don't select 
 
 The integration has default data field mappings between Braze and ODP. For example, the **Email** field in Braze is mapped to the **Last Seen Email** field in ODP.
 
-![Optimizely and Braze segment map fields.][3]
+![Optimizely and Braze segment map fields.]({% image_buster /assets/img/optimizely/image3_emailmapfield.png %})
 
 #### Map additional fields (optional)
 
@@ -68,7 +68,7 @@ If there are additional data fields in Braze that you want to map to ODP, do the
 2. Select the ODP field from the **ODP Customer Fields** drop-down list.
 3. Select **Save Field Map**.
 
-![Optimizely Braze Segment Save Field Maps][4]
+![Optimizely Braze Segment Save Field Maps]({% image_buster /assets/img/optimizely/image4_mapfields.png %})
 
 #### Delete non-required field mappings (optional)
 
@@ -77,7 +77,7 @@ You can also delete any data field mappings that aren't required. Do the followi
 1. In the **Segments** section of the app, select the field mapping you want to delete from the **Field Map** drop-down list.
 2. Select **Delete Field Map**.
 
-![Optimizely Braze Segment Delete Field Maps][5]
+![Optimizely Braze Segment Delete Field Maps]({% image_buster /assets/img/optimizely/image5_deletephonefield.png %})
 
 ### Step 3: Sync data from Optimizely Data Platform (ODP) to Braze
 
@@ -87,8 +87,8 @@ After you configure the integration, you can set up an activation in ODP to sync
 2. Select **Behavioral** to set up an automated, recurring sync.
 3. Select **Create From Scratch**, then enter a name for your activation that represents the data you are syncing to Braze (such as **Braze Data Sync**).
 4. In the **Enrollment** section, you can sync data for customers that match a segment or sync data for customers that trigger an event (like when ODP registers that a customer opens an email):
-   - **Customers that match a segment:** Select your desired segment, then select **Next**.<br><br>![Optimizely Select Segment][6]
-   - **Customers that trigger an event:** Expand the **Filter** drop-down list and select the ODP event to use as the trigger for this data sync to Braze. Then, expand **Automation Rules** and adjust as desired. <br><br>![Optimizely Trigger Event][7]
+   - **Customers that match a segment:** Select your desired segment, then select **Next**.<br><br>![Optimizely Select Segment]({% image_buster /assets/img/optimizely/image6_segment.png %})
+   - **Customers that trigger an event:** Expand the **Filter** drop-down list and select the ODP event to use as the trigger for this data sync to Braze. Then, expand **Automation Rules** and adjust as desired. <br><br>![Optimizely Trigger Event]({% image_buster /assets/img/optimizely/image7_trigger.png %})
 5. Expand **Touchpoints**, select to edit **Touchpoint 1**, then select **Braze**.
 6. Expand the **Targeting** section, then select the **Target Identifier**.
 7. Select one of the following options for **Add Users To** in the **Configure** section:
@@ -131,10 +131,3 @@ Each data sync is also logged in the [ODP activity log](https://www.google.com/u
 2. Filter the categories by **braze**.
 3. Select **View Details** for a formatted view of the log details, including the number of matches.
 
-[1]: {% image_buster /assets/img/optimizely/image1_authorization.png %} 
-[2]: {% image_buster /assets/img/optimizely/image2_syncsegment.png %} 
-[3]: {% image_buster /assets/img/optimizely/image3_emailmapfield.png %} 
-[4]: {% image_buster /assets/img/optimizely/image4_mapfields.png %} 
-[5]: {% image_buster /assets/img/optimizely/image5_deletephonefield.png %} 
-[6]: {% image_buster /assets/img/optimizely/image6_segment.png %} 
-[7]: {% image_buster /assets/img/optimizely/image7_trigger.png %} 

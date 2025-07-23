@@ -43,7 +43,7 @@ To request an upgrade to Data Transformation Pro, contact your Braze account man
 
 ### Rate limits
 
-The rate limit for Braze Data Transformation is 1,000 incoming requests per minute. If you have Data Transformation Pro and need a higher rate limit, contact your Braze account manager.
+The rate limit for Braze Data Transformations is 1,000 incoming requests per minute per workspace. If you have Data Transformation Pro and need a higher rate limit, contact your Braze account manager.
 
 ## Frequently asked questions
 
@@ -74,5 +74,3 @@ In most cases, yes. Braze Data Transformation eventually creates a `/users/track
 Contact your Braze account manager for additional assistance.
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}

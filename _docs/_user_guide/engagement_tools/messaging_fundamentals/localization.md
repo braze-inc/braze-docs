@@ -55,7 +55,7 @@ This approach separates templating into different sending locales. After sending
 
 In this approach, localization is handled within [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
 
-After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [segment funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/), such as combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
+After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [segment funnels]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/), such as combining [**Country**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) filters.
 
 | Advantages | Considerations |
 | --- | --- |

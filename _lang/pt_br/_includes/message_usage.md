@@ -9,10 +9,6 @@ O **Message Usage** dashboard é dividido em três seções:
 
 Acesse o dashboard indo para **Configurações** > **Faturamento** > **Uso de Mensagens**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar esta página selecionando o ícone da sua conta e, em seguida, selecionando **Inscrições e uso**.
-{% endalert %}
-
 ## Visão geral do uso de créditos de mensagem
 
 **Visão Geral do Uso de Créditos de Mensagem** fornece uma visão geral do uso em todos os canais que utilizam créditos. Você pode ver como está seu ritmo em relação ao seu limite de crédito total e encontrar detalhes sobre seu contrato ativo e seu período de contrato.

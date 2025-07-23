@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: Atualizar Item do Catálogo"
-article_title: "PUT: Atualizar Item do Catálogo"
+nav_title: "PUT: Substituir item de catálogo"
+article_title: "PUT: Substituir item de catálogo"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint da Braze \"Atualizar item de catálogo\"."
+description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braze do item de catálogo Replace."
 
 ---
 {% api %}
-# atualiza item do catálogo
+# Substituir item de catálogo
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Use este endpoint para atualizar um item em seu catálogo.
+> Use esse ponto de extremidade para substituir um item em seu catálogo.
 
 Se o `item_id` não for encontrado, este endpoint criará o item em seu catálogo. Este endpoint é síncrono.
 

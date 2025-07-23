@@ -13,10 +13,6 @@ tool:
 
 > La página de **inicio** del panel de control proporciona métricas clave para que pueda realizar un seguimiento y comprender el rendimiento de su aplicación o sitio web, y le ofrece una visión general de alto nivel de su base de usuarios.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), ésta es tu página de **resumen**.
-{% endalert %}
-
 ![Panel de inicio en Braze.][1]
 
 La página de **inicio** tiene dos secciones principales:
@@ -31,7 +27,7 @@ Puedes volver a visitar campañas, lienzos y segmentos editados o creados recien
 
 ![Un borrador de Canvas, un segmento activo y un borrador de campaña en la sección "Continúa donde lo dejaste".][6]
 
-## Resumen de prestaciones
+## Resumen del rendimiento
 
 Por defecto, la sección **Resumen de rendimiento** muestra los datos de los últimos 30 días de todas las aplicaciones y sitios. Todas las métricas se calculan en función del intervalo de fechas seleccionado.
 
@@ -62,7 +58,7 @@ Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales d
 ### Sesiones por ciclo de vida
 
 *Sesiones de por vida* es el recuento total de sesiones que Braze ha registrado desde la integración. En pocas palabras, una sesión es cada vez que un usuario utiliza la aplicación o visita su sitio web. Para una definición más precisa sobre cómo se definen las sesiones por plataforma, consulta el correspondiente
-[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android y FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), o artículos para desarrolladores sobre seguimiento de sesiones [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android y FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), o artículos para desarrolladores sobre seguimiento de sesiones [web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
 ### Usuarios activos al mes
 

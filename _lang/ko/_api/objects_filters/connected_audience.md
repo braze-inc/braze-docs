@@ -158,3 +158,6 @@ description: "이 문서에서는 연결된 대상 개체의 다양한 구성 �
 - **허용된 비교:** `after`, `before`
 - **허용되는 값:** 날짜/시간(ISO 8601 문자열)
 
+### 고려 사항
+
+연결된 오디언스는 기본 속성, 사용자 지정 이벤트, 세그먼트 또는 메시지 참여 이벤트를 기준으로 사용자를 필터링할 수 없습니다. 이러한 필터를 사용하려면 해당 필터를 대상 세그먼트에 통합한 다음 해당 세그먼트를 [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).

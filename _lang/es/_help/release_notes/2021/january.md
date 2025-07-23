@@ -9,11 +9,11 @@ description: "Este artículo contiene notas de la versión de enero de 2021."
 
 ## Generador de informes Canvas
 
-El generador de informes te permite comparar los resultados de varias campañas o Canvases en una sola vista, para que puedas determinar fácilmente qué estrategias de interacción han tenido un mayor impacto en tus métricas clave. Más información sobre el [generador de informes de Canvas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
+El generador de informes te permite comparar los resultados de varias campañas o Canvases en una sola vista, para que puedas determinar fácilmente qué estrategias de interacción han tenido un mayor impacto en tus métricas clave. Más información sobre el [generador de informes de Canvas]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
 
 ## Guía de implementación de mensajes dentro de la aplicación para iOS
 
-Esta guía detallada explica cómo aprovechar las subclases para crear mensajes dentro de la aplicación personalizados con deslizamiento hacia arriba, mensajes modales dentro de la aplicación personalizados y mensajes completos dentro de la aplicación personalizados para añadirlos a tus campañas y lienzos Braze. Se incluye la consideración sobre códigos necesaria, casos de uso detallados construidos por nuestro equipo y fragmentos de código adjuntos. Visita nuestra documentación [aquí]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) para saber más. 
+Esta guía detallada explica cómo aprovechar las subclases para crear mensajes dentro de la aplicación personalizados con deslizamiento hacia arriba, mensajes modales dentro de la aplicación personalizados y mensajes completos dentro de la aplicación personalizados para añadirlos a tus campañas y lienzos Braze. Se incluye la consideración sobre códigos necesaria, casos de uso detallados construidos por nuestro equipo y fragmentos de código adjuntos. Visita nuestra documentación [aquí]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/implementation_guide/) para saber más. 
 
 ## Categorías de palabras clave personalizadas por SMS y opciones de reorientación
 

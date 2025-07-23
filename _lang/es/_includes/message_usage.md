@@ -9,10 +9,6 @@ El panel de **Uso de Mensajes** está dividido en tres secciones:
 
 Accede al panel yendo a **Configuración** > **Facturación** > **Uso de mensajes**.
 
-{% alert note %}
-Si utilizas la [navegación antigua]({{site.baseurl}}/navigation), puedes encontrar esta página seleccionando el icono de tu cuenta y, a continuación, **Suscripciones y uso**.
-{% endalert %}
-
 ## Resumen del uso de los créditos para mensajes
 
 **El resumen de uso de créditos de mensajes** proporciona un resumen del uso en todos los canales que utilizan créditos. Puedes ver cómo vas con respecto a tu asignación total de crédito, y encontrar detalles sobre tu contrato activo y tu periodo de contrato.

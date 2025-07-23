@@ -30,7 +30,7 @@ Con este enfoque, quiere animar a los usuarios a visitar la App Store para añad
 
 Si no quieres que los usuarios abandonen tu aplicación, puedes prepararles primero con un mensaje in-app independiente. El cebado es una forma de pedir permiso a los usuarios antes de enviarles la solicitud de revisión nativa de la App Store. Para ello, cree una campaña de mensajes in-app y añada un enlace profundo personalizado que llame al método `requestReview` cuando se haga clic en él. 
 
-Para conocer los pasos detallados, consulta la [solicitud de revisión personalizada de la App Store]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/).
+Para conocer los pasos detallados, consulta la [solicitud de revisión personalizada de la App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
 ![Dos mensajes in-app uno al lado del otro. La primera anima al usuario a valorar la aplicación preguntándole si tiene un momento para hacerlo. El segundo es el mensaje nativo de revisión de la App Store de iOS, que muestra una escala de cinco estrellas que el usuario puede seleccionar para valorar la aplicación.][2]
 

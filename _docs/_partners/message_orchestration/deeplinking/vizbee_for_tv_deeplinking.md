@@ -9,7 +9,7 @@ search_tag: Partner
 ---
 # Vizbee {#vizbee}
 
-> [Vizbee][1] enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps you leverage existing mobile app marketing channels like notifications, deep-links, and emails to seamlessly acquire and engage viewership across all Connected TV (CTV) devices (like Roku, FireTV, Samsung TV, LG TV, etc.).
+> [Vizbee](https://vizbee.tv/) enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps you leverage existing mobile app marketing channels like notifications, deep-links, and emails to seamlessly acquire and engage viewership across all Connected TV (CTV) devices (like Roku, FireTV, Samsung TV, LG TV, etc.).
 
 _This integration is maintained by Vizbee._
 
@@ -23,19 +23,17 @@ The Braze and Vizbee integration allows you to use a single console to schedule 
 
 | Requirement | Description |
 |---|---|
-| Vizbee account | A [Vizbee][1] account is required to take advantage of this partnership. You must register your app in Vizbee and have an assigned Vizbee ID. |
+| Vizbee account | A [Vizbee](https://vizbee.tv/) account is required to take advantage of this partnership. You must register your app in Vizbee and have an assigned Vizbee ID. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. |
 | Vizbee SDK | In addition to the required Braze SDK, you must install the Vizbee SDK. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
-Follow Vizbee's [SDK integration guide][2] to get up and running with your Vizbee and Braze integration. Here, you can find guidance on mobile-to-TV deep linking, TV app installs, and viewership attribution. 
+Follow Vizbee's [SDK integration guide](https://console.vizbee.tv/app/vzb1765003429/develop/guides/ios-continuity) to get up and running with your Vizbee and Braze integration. Here, you can find guidance on mobile-to-TV deep linking, TV app installs, and viewership attribution. 
 
 ### Viewing install and attribution reports {#vizbee-tv-app-installs-viewership-attribution}
 
 Vizbee and Braze also enable you to view the holistic performance of your campaigns across mobile and CTV devices. The Vizbee SDK sends custom events to the Braze SDK that can be viewed in your campaign reports from the Braze dashboard.
 
 
-[1]: https://vizbee.tv/
-[2]: https://console.vizbee.tv/app/vzb1765003429/develop/guides/ios-continuity

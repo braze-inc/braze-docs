@@ -114,7 +114,7 @@ Cette section couvre les trois façons les plus courantes de placer les cartes d
 - [Carrousel](#carousel)
 - [Bannière](#banner)
 
-La logique et la mise en œuvre de ces placements ne sont pas une option par défaut dans Braze, de sorte que votre équipe d'ingénieurs doit fournir et prendre en charge le travail nécessaire pour réaliser ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/content_cards/creating_custom_content_cards/).
+La logique et la mise en œuvre de ces placements ne sont pas une option par défaut dans Braze, de sorte que votre équipe d'ingénieurs doit fournir et prendre en charge le travail nécessaire pour réaliser ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
 ![3 exemples de cartes de contenu, montrant les différentes options de placement : boîte de réception des messages, carrousel et bannière.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 

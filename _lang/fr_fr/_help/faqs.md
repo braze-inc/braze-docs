@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
     image: /assets/img/braze_icons/link-03.svg
   - name: "FAQ sur les Exportations"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    link: /docs/user_guide/data/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "FAQ sur les messages in-app"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
@@ -40,23 +40,26 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
     image: /assets/img/braze_icons/whatsapp.svg
   - name: "FAQ Intelligence"
-    link: /docs/user_guide/intelligence/faqs/
+    link: /docs/user_guide/brazeai/intelligence/faqs/
     image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "FAQ de l'éditeur glisser-déposer par e-mail"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
     image: /assets/img/braze_icons/channel-email.svg
   - name: "FAQ sur l’exportation API et CSV"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    link: /docs/user_guide/data/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "FAQ sur les indicateurs de fonctionnalité"
-    link: /docs/developer_guide/platform_wide/feature_flags/faq/
+    link: /docs/developer_guide/feature_flags/faq/
     image: /assets/img/braze_icons/flag-01.svg
   - name: "FAQ sur les activités en direct"
-    link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
+    link: /docs/developer_guide/push_notifications/live_notifications/?sdktab=swift#swift_faq
     image: /assets/img/braze_icons/swift.svg
   - name: "FAQ sur Liquid"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: "FAQ sur la poussée"
+    link: /docs/user_guide/message_building_by_channel/push/faq/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 
 guide_menu_title: "Best practices"

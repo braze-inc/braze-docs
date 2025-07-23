@@ -36,7 +36,7 @@ Le contenu d’un message in-app complet est affiché dans un WKWebView et peut 
 
 ### Messages in-app (déclenchés)
 
-La documentation suivante fait référence au produit `In-App Messaging` de Braze, également connu sous le nom de "messages in-app déclenchés", dont la marque est mise en évidence ci-dessous dans le menu déroulant "Créer une campagne" :
+La documentation suivante fait référence au produit Braze `In-App Messaging`, également connu sous le nom de "messages in-app déclenchés", dont la marque est mise en évidence ci-dessous dans le menu déroulant "Créer une campagne" :
 
 ![Compositeur de messages in-app][in_app_message_13]
 

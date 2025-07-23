@@ -14,10 +14,6 @@ page_order: 1
 
 Dans Braze, sélectionnez **Analyse** > **Prédiction du taux d'attrition**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez les **prédictions** sous la rubrique **Engagement**.
-{% endalert %}
-
 Une prédiction est une instance d'un modèle d'apprentissage automatique formé et de tous les paramètres et données qu'il utilise. Sur cette page, vous trouverez une liste des prédictions actives actuelles ainsi que quelques informations de base à leur sujet. Vous pouvez y renommer, archiver et créer de nouvelles prédictions. Les prédictions archivées sont inactives et ne mettent pas à jour les scores utilisateur. 
 
 Pour créer une nouvelle prédiction, choisissez **Créer une prédiction** et sélectionnez une nouvelle **prédiction du taux d'attrition**.

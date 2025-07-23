@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 요청에 치명적인 오류가 발생할 경우 반환되는 상태 코드 및 관련 오류 메시지는 [치명적인 오류를]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% alert tip %}
-CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) 참조하세요.
+CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)를 방문하세요.
 {% endalert %}
 
 {% endapi %}

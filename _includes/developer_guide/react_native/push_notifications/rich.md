@@ -22,4 +22,4 @@ To enable rich push notifications on iOS using Expo, configure the `enableBrazeI
 }
 ```
 
-Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](#reactnative_app-extensions).
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`.

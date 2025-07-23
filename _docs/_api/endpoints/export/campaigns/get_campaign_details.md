@@ -33,6 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Required | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page and the **Campaign Details** page within your dashboard; or you can use the [Export campaigns list endpoint](#campaign-list-endpoint). |
+| `post_launch_draft_version` | Optional | Boolean | For messages that have a post-launch draft, setting this to `true` will show any draft changes available. Defaults to `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
@@ -54,6 +55,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "enabled": (boolean) whether this campaign is active or not,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
@@ -81,7 +84,8 @@ The `messages` response will contain information about each message. The followi
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,

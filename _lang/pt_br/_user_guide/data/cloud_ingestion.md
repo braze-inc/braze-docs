@@ -8,12 +8,12 @@ page_order: 0.1
 page_type: landing
 
 guide_top_header: "Ingestão de dados para nuvem da Braze"
-guide_top_text: "<h2>O que é?</h2>A Ingestão de Dados na Nuvem (CDI) da Braze permite que você configure uma conexão direta da sua solução de armazenamento de dados para a Braze para sincronizar dados relevantes de usuários ou catálogos, e excluir usuários. Quando sincronizados com a Braze, esses dados podem ser aproveitados para casos de uso, como personalização ou segmentação. A integração flexível da ingestão de dados para a nuvem oferece suporte a estruturas de dados complexas, incluindo JSON aninhado e vetores de objetos. <br><br>**Capacidades de Ingestão de Dados na Nuvem da Braze:**<br> - Crie uma integração simples diretamente do seu data warehouse ou solução de armazenamento de arquivos para a Braze em apenas alguns minutos.<br>- Sincronize com segurança os dados de usuários, incluindo atributos, eventos e compras do seu data warehouse para a Braze.<br>- Feche o ciclo de dados com a Braze combinando a Ingestão de Dados em Nuvem com Currents ou Snowflake Data Sharing.<br><br>**A Ingestão de Dados na Nuvem pode sincronizar dados de:**<br> Amazon Redshift<br> Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Snowflake"
+guide_top_text: "<h2>O que é?</h2>A Ingestão de Dados em Nuvem (CDI) do Braze permite que você configure uma conexão direta entre sua solução de armazenamento de dados e o Braze para sincronizar dados relevantes de usuários ou catálogos e excluir usuários. Quando sincronizados com a Braze, esses dados podem ser aproveitados para casos de uso, como personalização ou segmentação. A integração flexível da Ingestão de Dados em Nuvem suporta estruturas de dados complexas, incluindo JSON aninhado e arrays de objetos. <br><br>**Capacidades de Ingestão de Dados na Nuvem da Braze:**<br> - Crie uma integração simples diretamente do seu data warehouse ou solução de armazenamento de arquivos para a Braze em apenas alguns minutos.<br>- Sincronize com segurança os dados de usuários, incluindo atributos, eventos e compras do seu data warehouse para a Braze.<br>- Feche o ciclo de dados com a Braze combinando a Ingestão de Dados em Nuvem com Currents ou Snowflake Data Sharing.<br><br>**A Ingestão de Dados na Nuvem pode sincronizar dados de:**<br> Amazon Redshift<br> Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Snowflake"
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
   - name: Visão geral e melhores práticas
-    link: /docs/user_guide/data/cloud_ingestion/
+    link: /docs/user_guide/data/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
   - name: Fontes conectadas
     link: /docs/user_guide/data/cloud_ingestion/connected_sources/

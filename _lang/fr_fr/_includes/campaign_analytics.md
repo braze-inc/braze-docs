@@ -5,12 +5,12 @@ Une fois que vous avez lancé votre campagne, vous pouvez revenir à la page des
 {% alert tip %}
 Vous recherchez des définitions pour les termes et les indicateurs répertoriés dans votre rapport ? Consultez notre
   {% if include.channel == "email" %}[Glossaire analytique pour l’e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par cartes de contenu
-  {% elsif include.channel == "in-app message" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrage par message in-app
-  {% elsif include.channel == "push" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par notification push
-  {% elsif include.channel == "SMS" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrage par SMS
-  {% elsif include.channel == "whatsapp" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par WhatsApp
-  {% elsif include.channel == "webhook" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par webhook{% endif %}.
+  {% elsif include.channel == "Content Card" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par cartes de contenu
+  {% elsif include.channel == "in-app message" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtrage par message in-app
+  {% elsif include.channel == "push" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par Push
+  {% elsif include.channel == "SMS" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtrage par SMS
+  {% elsif include.channel == "whatsapp" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par WhatsApp
+  {% elsif include.channel == "webhook" %}[Report Metrics Glossaire]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par webhook{% endif %}.
 {% endalert %}
 
 À partir de l'onglet **Analyse/analytique de la campagne**, vous pouvez consulter vos rapports dans une série d'adjectifs. Vous pouvez voir plus ou moins que ceux énumérés dans les sections ci-dessous, mais chacun a son propre objectif utile.
@@ -186,7 +186,7 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">Messages envoyés</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
-                Ce montant est calculé différemment en fonction de ce que vous avez choisi pour 
+                Ce montant est calculé différemment en fonction de ce que vous avez choisi pour
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Création de cartes</a>:<br><br>
                 <ul>
                     <li><b>Au moment du lancement ou de l'entrée d’étape :</b> Le nombre de cartes créées et disponibles pour être vues. Le fait que les utilisateurs aient consulté ou non la carte n’est pas comptabilisé.</li>
@@ -204,7 +204,7 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinataires uniques</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' (destinataires uniques) %} <br><br> Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics uniques</a></td>
@@ -212,7 +212,7 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">Rejets uniques</a></td>
-            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' (licenciements uniques) %}</td>
+            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
 </table>
@@ -307,7 +307,7 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Report</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md indicateurs="Report %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
         </tr>
     </tbody>
 </table>
@@ -386,7 +386,7 @@ Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vo
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Fermer le message</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' (message de fermeture) %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -602,13 +602,13 @@ Voici quelques indicateurs clés de WhatsApp qui peuvent apparaître dans vos an
 
 #### Blocage de l'utilisateur final et indicateurs de reporting
 
-D'autres indicateurs peuvent être consultés via le [tableau de bord du gestionnaire WhatsApp](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), bien qu'une [confirmation de votre accès soit](https://www.facebook.com/business/help/218116047387456) nécessaire pour accéder à toutes les informations disponibles. 
+D'autres indicateurs peuvent être consultés via le [tableau de bord du gestionnaire WhatsApp](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), bien qu'une [confirmation de votre accès soit](https://www.facebook.com/business/help/218116047387456) nécessaire pour accéder à toutes les informations disponibles.
 
 {% endif %}
 
 ### Performances historiques
 
-Le panneau **Performances historiques** vous permet de visualiser les indicateurs du panneau **Performances des messages** sous la forme d'un graphique dans le temps. Utilisez les filtres en haut du volet pour modifier les statistiques et les canaux affichés dans le graphique. La plage temporelle de ce graphique reflète toujours la plage de temps spécifiée en haut de la page. 
+Le panneau **Performances historiques** vous permet de visualiser les indicateurs du panneau **Performances des messages** sous la forme d'un graphique dans le temps. Utilisez les filtres en haut du volet pour modifier les statistiques et les canaux affichés dans le graphique. La plage temporelle de ce graphique reflète toujours la plage de temps spécifiée en haut de la page.
 
 Pour obtenir une ventilation jour par jour, cliquez sur le menu hamburger <i class="fas fa-bars"></i> et sélectionnez **Télécharger CSV** pour recevoir une exportation CSV du rapport.
 
@@ -652,7 +652,7 @@ Le panneau **Corrélation de conversion** vous donne des informations sur les at
 
 ### Analyses Meta
 
-En plus des analyses/analytiques de Braze, des analyses au niveau des modèles sont accessibles dans le gestionnaire d'entreprise de WhatsApp. Pour plus d'informations, consultez la [documentation de Meta](https://www.facebook.com/business/help/218116047387456). 
+En plus des analyses/analytiques de Braze, des analyses au niveau des modèles sont accessibles dans le gestionnaire d'entreprise de WhatsApp. Pour plus d'informations, consultez la [documentation de Meta](https://www.facebook.com/business/help/218116047387456).
 
 {% endif %}
 
@@ -660,7 +660,7 @@ En plus des analyses/analytiques de Braze, des analyses au niveau des modèles s
 
 ### Événements SMS Currents
 
-Comme pour les e-mails, Braze reçoit des événements au niveau utilisateur liés à un message SMS à mesure qu’il effectue son parcours à destination d’un utilisateur. Tout événement SMS entrant sera également envoyé en tant qu'événement Currents par le biais de l'événement [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events). Cela vous permet d'effectuer des actions supplémentaires ou des rapports sur les messages que vos utilisateurs envoient en dehors de la plateforme Braze. 
+Comme pour les e-mails, Braze reçoit des événements au niveau utilisateur liés à un message SMS à mesure qu’il effectue son parcours à destination d’un utilisateur. Tout événement SMS entrant sera également envoyé en tant qu'événement Currents par le biais de l'événement [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events). Cela vous permet d'effectuer des actions supplémentaires ou des rapports sur les messages que vos utilisateurs envoient en dehors de la plateforme Braze.
 
 {% alert note %}
 Les messages entrants sont tronqués au-delà de 1 600 caractères.
@@ -672,13 +672,13 @@ Les messages entrants sont tronqués au-delà de 1 600 caractères.
 
 ## Rapport de rétention
 
-Les rapports de rétention indiquent les taux auxquels vos utilisateurs ont effectué un événement de rétention sélectionné sur les périodes dans une campagne ou un Canvas spécifique. Pour plus d'informations, reportez-vous aux [rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Les rapports de rétention indiquent les taux auxquels vos utilisateurs ont effectué un événement de rétention sélectionné sur les périodes dans une campagne ou un Canvas spécifique. Pour plus d'informations, reportez-vous aux [rapports de rétention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Rapport d'entonnoir
 
 Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’une campagne ou d’un Canvas. Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre comment les différentes variantes ont impacté le tunnel de conversion à un niveau plus précis et de l’optimiser en fonction de ces données.
 
-Pour plus d'informations, reportez-vous aux [rapports d'entonnoirs]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+Pour plus d'informations, reportez-vous aux [rapports d'entonnoirs]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 

@@ -18,7 +18,7 @@ tool:
 After you duplicate a campaign or Canvas, the new message will be automatically titled `"Copy of [Original Name]"` and you'll be brought to its editing page. These duplicates will remain as drafts until you edit and launch them.
 
 {% alert tip %}
-You can also [copy your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace) across workspaces. The copy will remain as a draft until you edit and launch.
+You can also [copy your campaign]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) across workspaces. The copy will remain as a draft until you edit and launch.
 {% endalert %}
 
 {% tabs %}
@@ -37,12 +37,5 @@ To duplicate a Canvas:
 2. Hover over the Canvas row and select <i class="fas fa-ellipsis-vertical"></i> **More actions**.
 3. Select **Duplicate**.
 
-{% details Original Canvas editor %}
-
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. 
-
-Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-
-{% enddetails %}
 {% endtab %}
 {% endtabs %}

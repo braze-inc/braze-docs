@@ -15,7 +15,7 @@ Lorsque vous aurez terminé ces tutoriels, vous serez en mesure de.. :
 - Écrire du code Liquid pour les cas d'utilisation courants
 - Enchaîner des logiques conditionnelles Liquid pour personnaliser les messages en fonction des données de l'utilisateur.
 - Utilisez des variables et des filtres pour écrire des équations qui utilisent les valeurs des attributs.
-- Reconnaître les commandes de base dans un code Liquid et comprendre ce que fait le code.
+- Reconnaître les commandes de base d'un code liquide et se faire une idée générale de ce que fait le code.
 
 | Tutoriel | Objectifs d'apprentissage |
 | --- | --- |
@@ -334,7 +334,7 @@ Mettons en avant le produit préféré d'un utilisateur si la date de son dernie
 {% endraw %}
 
 {: start="6"}
-6\. Comme la date du dernier achat et la date d'aujourd'hui sont exprimées en secondes, nous devons calculer le nombre de secondes que contiennent les six mois. Formons une équation (environ 6 mois * 30,44 jours * 24 heures * 60 minutes * 60 secondes) et affectons-la à la variable `six_months`. Nous utiliserons `times` pour spécifier la multiplication des unités de temps.
+6\. Comme la date du dernier achat et la date d'aujourd'hui sont exprimées en secondes, nous devons calculer combien de secondes il y a dans six mois. Formons une équation (environ 6 mois * 30,44 jours * 24 heures * 60 minutes * 60 secondes) et affectons-la à la variable `six_months`. Nous utiliserons `times` pour spécifier la multiplication des unités de temps.
 
 {% raw %}
 ```liquid

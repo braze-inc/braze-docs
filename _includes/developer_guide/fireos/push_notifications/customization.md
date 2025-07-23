@@ -14,13 +14,13 @@ The **Time to Live** (TTL) field allows you to set a custom length of time to st
 
 The summary text allows you to set additional text in the expanded notification view. It also serves as a caption for notifications with images.
 
-![An Android message with the title "Greetings from Appboy!", the message "This is the message body! You can even add emojis." and summary text "This is the summary text."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-The summary text will display under the body of the message in the expanded view.
+The summary text will display under the body of the message in the expanded view. 
+
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. 
-
-![An Android message with the title "Appboy!", the message "This is the message body.." and summary text "and this is the Summary Text."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### Custom URIs {#custom-uri}
 

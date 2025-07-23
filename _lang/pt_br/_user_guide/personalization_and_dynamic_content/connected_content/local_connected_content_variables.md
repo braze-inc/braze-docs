@@ -100,27 +100,34 @@ Por padrão, o conteúdo conectado faz uma solicitação HTTP GET para a URL esp
 
 Você pode opcionalmente fornecer um corpo POST especificando `:body` seguido por uma consulta string do formato `key1=value1&key2=value2&...` ou uma referência aos valores capturados. O tipo de conteúdo padrão é `application/x-www-form-urlencoded`. Se você especificar `:content_type application/json` e fornecer um corpo codificado em formulário, como `key1=value1&key2=value2`, a Braze codificará automaticamente o corpo em JSON antes de enviar.
 
+O Connected Content também não armazena em cache as chamadas POST por padrão. Você pode atualizar esse comportamento adicionando `:cache_max_age` à chamada POST do Connected Content.
+
 #### Tipo de conteúdo padrão
+
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
 ```
 #### Tipo de Conteúdo Application/JSON
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
 ```
 {% endraw %}
 
 ### Fornecimento de corpo JSON
+
 Para fornecer seu próprio corpo JSON, escreva-o em linha se não houver espaços. Se seu corpo tiver espaços, você deve usar uma instrução de atribuir ou capturar. Ou seja, qualquer um desses três é aceitável:
 
 {% raw %}
 ##### Em linha: espaços não permitidos
+
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
 ##### Corpo em uma declaração de captura: espaços permitidos
+
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
@@ -148,8 +155,10 @@ Para fornecer seu próprio corpo JSON, escreva-o em linha se não houver espaço
 %}
 ```
 {% endraw %}
+
 {% raw %}
 ##### Corpo em uma instrução de atribuição: espaços permitidos
+
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
@@ -173,48 +182,6 @@ Você pode utilizar o status HTTP de uma chamada de conteúdo conectado salvando
 Esta chave só será adicionada automaticamente ao objeto de conteúdo conectado se o endpoint retornar um objeto JSON válido e uma `2XX` resposta. Se o endpoint retornar um vetor ou outro tipo, essa chave não poderá ser configurada automaticamente na resposta.
 {% endalert %}
 
-## Cache configurável {#configurable-caching}
-
-As respostas de Conteúdo Conectado podem ser armazenadas em cache em diferentes campanhas ou mensagens (dentro do mesmo espaço de trabalho) para otimizar a velocidade de envio.
-
-O Braze não registra nem armazena permanentemente as respostas do Connected Content. Se você optar explicitamente por armazenar uma resposta de chamada do Connected Content como uma variável Liquid, o Braze armazenará essa resposta apenas na memória, ou seja, em um armazenamento temporário que será excluído após um curto período de tempo, para renderizar a variável Liquid e enviar a mensagem. Para impedir totalmente o armazenamento em cache, você pode especificar `:no_cache`, o que pode aumentar o tráfego de rede. Para ajudar a solucionar problemas e monitorar a integridade do sistema, o Braze também pode registrar as chamadas de Connected Content que falham (como 404s e 429s); esses registros são mantidos por até 30 dias.
-
-### Limite de tamanho do cache
-
-O corpo da resposta do conteúdo conectado não deve exceder 1 MB, ou não será armazenado em cache.
-
-### Tempo de cache
-
-O conteúdo conectado armazenará em cache o valor que retorna dos endpoints GET por um mínimo de 5 minutos. Se um tempo de cache não for especificado, o tempo de cache padrão é de 5 minutos. 
-
-O tempo de cache do conteúdo conectado pode ser configurado para ser mais longo com `:cache_max_age`, conforme mostrado no exemplo a seguir. O tempo mínimo de cache é de 5 minutos e o tempo máximo de cache é de 4 horas. Os dados de conteúdo conectado são armazenados em cache na memória usando um sistema de cache volátil, como o Memcached. Como resultado, independentemente do tempo de cache especificado, os dados do conteúdo conectado podem ser removidos do cache em memória da Braze antes do especificado. Isso significa que as durações do cache são sugestões e podem não representar realmente a duração que os dados são garantidos a serem armazenados em cache pelo Braze e você pode ver mais solicitações de Conteúdo Conectado do que pode esperar com uma determinada duração de cache.
-
-Por padrão, o conteúdo conectado não armazena em cache as chamadas POST. Você pode alterar esse comportamento adicionando `:cache_max_age` à chamada POST do conteúdo conectado.
-
-#### Cache por segundos especificados
-
-Este exemplo será armazenado em cache por 900 segundos (ou 15 minutos).
-{% raw %}
-```
-{% connected_content https://example.com/webservice.json :cache_max_age 900 %}
-```
-{% endraw %}
-
-#### Cache busting
-
-Para evitar que o conteúdo conectado armazene em cache o valor que retorna de uma solicitação GET, você pode usar a configuração `:no_cache`. No entanto, as respostas de hosts internos à Braze ainda serão armazenadas em cache.
-
-{% raw %}
-```js
-{% connected_content https://example.com/webservice.json :no_cache %}
-```
-{% endraw %}
-
-{% alert important %}
-Certifique-se de que o endpoint de Conteúdo Conectado fornecido pode lidar com grandes picos de tráfego antes de usar esta opção, ou você provavelmente verá um aumento na latência de envio (aumento dos atrasos ou intervalos de tempo mais amplos entre a solicitação e a resposta) devido ao Braze fazer solicitações de Conteúdo Conectado para cada mensagem.
-{% endalert %}
-
-Com um `POST` você não precisa fazer cache bust, pois a Braze nunca armazena em cache os resultados de solicitações `POST`.
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Exemplo de Uso de Push de Conteúdo Conectado"

@@ -17,7 +17,7 @@ alias: "/help/release_notes/2022/january/"
 
 ## 커런츠 메시지 참여 이벤트의 새로운 속성
 
-일부 [메시지 참여 이벤트에]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) 대한 새로운 속성이 추가되었습니다. 이 업데이트는 다음 커런츠 메시지 인게이지먼트 이벤트와 이를 사용하는 모든 파트너에 적용됩니다.
+일부 [메시지 참여 이벤트에]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) 대한 새로운 속성이 추가되었습니다. 이 업데이트는 다음 커런츠 메시지 인게이지먼트 이벤트와 이를 사용하는 모든 파트너에 적용됩니다.
 
 - `LINK_ID`, `LINK_ALIAS`를 다음에 추가:
   - 이메일 클릭(모든 대상)

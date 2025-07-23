@@ -15,9 +15,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Criar m
 
 > Use esse endpoint para criar modelos de e-mail no dashboard do Braze.
 
-Esses modelos estarão disponíveis na página **Modelos e mídias**. A resposta desse endpoint incluirá um campo para `email_template_id`, que pode ser usado para atualizar o modelo em chamadas subsequentes da API.
-
-O status de inscrição de e-mail dos usuários pode ser atualizado e recuperado com o Braze usando uma API REST de e-mail. Você pode usar a API para configurar a sincronização bidirecional entre o Braze e outros sistemas de e-mail ou seu próprio banco de dados. Todas as solicitações de API são feitas por HTTPS.
+Esses modelos estarão disponíveis na página **Modelos e mídias**. A resposta desse endpoint inclui um campo para `email_template_id`, que pode ser usado para atualizar o modelo em chamadas subsequentes à API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -56,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Obrigatória|String|Corpo do modelo de e-mail que pode incluir HTML.|
 |`plaintext_body`|Opcional|String|Uma versão em texto simples do corpo do modelo de e-mail.|
 |`preheader`|Opcional|String|Pré-cabeçalho de e-mail usado para gerar prévias em alguns clientes.|
-|`tags`|Opcional|String|[As tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) já devem existir.|
+|`tags`|Opcional|String|[As tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) já devem existir.|
 |`should_inline_css`|Opcional|Booleano|Ativa ou desativa o recurso `inline_css` por modelo. Se não for fornecido, a Braze usará a configuração padrão para o grupo de app. Espera-se que seja um dos sites `true` ou `false`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -76,7 +74,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-## Possíveis erros
+## Exemplo de resposta
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
+  "message": "success"
+}
+```
+
+## Solução de problemas
 
 A tabela a seguir lista os possíveis erros retornados e as etapas de solução de problemas associadas, se aplicável.
 

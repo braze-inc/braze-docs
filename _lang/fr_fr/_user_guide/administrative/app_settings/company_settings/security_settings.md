@@ -13,10 +13,6 @@ description: "Cet article de référence traite des paramètres génériques de 
 
 Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité**.
 
-{% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), sélectionnez le menu déroulant de votre compte et allez dans **Paramètres de l'entreprise** > **Paramètres de sécurité**.
-{% endalert %}
-
 ## Règles d’authentification
 
 ### Longueur du mot de passe
@@ -31,7 +27,7 @@ Sélectionnez **Renforcer les mots de passe complexes** pour exiger que les mots
 - Nombre
 - Caractère spécial
 
-### Réutilisation du mot de passe
+### Réutilisation des mots de passe
 
 Détermine le nombre minimum de nouveaux mots de passe devant être définis avant qu’un utilisateur puisse réutiliser un mot de passe. La valeur par défaut est trois.
 

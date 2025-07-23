@@ -10,7 +10,7 @@ page_type: landing
 search_tag: Endpoint
 
 guide_top_header: "구독 그룹 엔드포인트"
-guide_top_text: "구독 그룹 REST API를 사용하여 Braze 대시보드의 **구독 그룹** 페이지에 저장한 구독 그룹을 프로그래밍 방식으로 관리할 수 있습니다. 이는 SMS 및 이메일 구독 그룹 모두에 적용됩니다.<br><br> 구독 그룹 생성에 대한 안내를 찾고 계신가요? <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>SMS 구독 그룹</a> 및 <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>이메일 구독 그룹에</a> 대한 도움말을 확인하세요."
+guide_top_text: "구독 그룹 REST API를 사용하여 Braze 대시보드의 **구독 그룹** 페이지에 저장한 구독 그룹을 프로그래밍 방식으로 관리할 수 있습니다. 이는 SMS 및 이메일 구독 그룹 모두에 적용됩니다.<br><br> 구독 그룹 생성에 대한 안내를 찾고 계신가요? <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>SMS 구독 그룹</a> 및 <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>이메일 구독 그룹에</a> 대한 도움말을 확인하세요."
 
 guide_featured_title: ""
 guide_featured_list:

@@ -41,7 +41,7 @@ Provide the following credentials:
 
 After you enter the credentials, click **Connect**.
 
-![Connect Braze screen in Antavo with Instance URL, API Token, and App Identifier.][1]
+![Connect Braze screen in Antavo with Instance URL, API Token, and App Identifier.]({% image_buster /assets/img/antavo/connect_braze.png %})
 
 ### Step 2: Configure field mapping
 
@@ -64,7 +64,7 @@ You can find your list of custom attributes in Braze under **Data Settings** > *
 
 When any value of the configured fields changes in Antavo, not only the synchronization of that single value is triggered, but every field added to the field mapping is included in the request.
 
-![Sync Fields page in Antavo.][2]
+![Sync Fields page in Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
 To minimize data point consumption, we recommend only mapping the fields that will be actioned on within Braze.
@@ -74,7 +74,7 @@ To minimize data point consumption, we recommend only mapping the fields that wi
 
 The integration supports all Braze custom attribute [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage), namely: number (integer, float), string, array, boolean, object, array of objects, and date.
 
-![Braze profile showing different custom attributes.][3]
+![Braze profile showing different custom attributes.]({% image_buster /assets/img/antavo/braze_profile.png %})
 
 The data fields are populated based on the configured field mapping.
 
@@ -95,6 +95,3 @@ Use events synchronized from Antavo to enter loyalty members in action-based Bra
 Visit the step-by-step guide to learn how to configure the synchronization of the [loyalty program enrollment event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!) and the synchronization of the [loyalty program benefit earning event](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!).
 
 
-[1]: {% image_buster /assets/img/antavo/connect_braze.png %}
-[2]: {% image_buster /assets/img/antavo/data_field_mapping.png %}
-[3]: {% image_buster /assets/img/antavo/braze_profile.png %}

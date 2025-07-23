@@ -8,12 +8,12 @@ This implementation guide is centered around a Swift implementation, but Objecti
 
 ![Two push messages shown side-by side. The message on the left shows what a push looks like with the default UI. The message on the right shows a coffee punch card push made by implementing a custom push UI.]({% image_buster /assets/img/push_implementation_guide/push1.png %}){: style="max-width:65%;border:0;margin-top:10px"}
 
-Notification content app extensions provide you a great option for push notification customization. Notification content app extensions display a custom interface for your app’s notifications when a push notification is expanded. 
+Notification content app extensions provide you a great option for push notification customization. Notification content app extensions display a custom interface for your app’s notifications when a push notification is expanded.
 
 Push notifications can be expanded in three different ways:
 - A long press on the push banner
 - Swiping down on the push banner
-- Swiping the banner to the left and selecting "View" 
+- Swiping the banner to the left and selecting "View"
 
 These custom views offer smart ways to engage customers by displaying distinct types of content, including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. One of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a push notification content app extension can look like!
 
@@ -113,7 +113,7 @@ func didReceive(_ notification: UNNotification) {
 Push notifications can capture user information inside a content app extension, pushing the limits of what is possible with a push. Requesting user input through push notifications allows you to not only request basic information like name or email, but also prompt users to submit feedback or complete an unfinished user profile. 
 
 {% alert tip %}
-For more information, see [Logging push notification data]({{site.baseurl}}/developer_guide/analytics/logging_push_data/).
+For more information, see [Logging push notification data]({{site.baseurl}}/developer_guide/analytics/logging_channel_data/push_notifications/).
 {% endalert %}
 
 In the following flow, the custom view is able to respond to state changes. Those state change components are represented in each image. 

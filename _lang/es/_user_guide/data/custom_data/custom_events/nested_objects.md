@@ -39,7 +39,7 @@ Si se envían nuevas propiedades en el futuro, no estarán en el esquema hasta q
 
 ## Paso 2: Utilizar el objeto anidado
 
-Después de generar un esquema, puede hacer referencia a los datos anidados durante la segmentación y la personalización. Consulte los siguientes apartados para ver ejemplos de uso:
+Puedes hacer referencia a los datos anidados durante la segmentación y la personalización. Nota que no es necesario un esquema. Consulte los siguientes apartados para ver ejemplos de uso:
 
 - [Cuerpo de la solicitud API](#api-request-body)
 - [Plantillas de Liquid](#liquid-templating)

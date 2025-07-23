@@ -12,10 +12,6 @@ tool: Reports
 
 Para visualizar um relatório de sua receita no dashboard, acesse **Análise de dados** > **Relatório de receita**. 
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), essa página pode ser encontrada em **Dados**.
-{% endalert %}
-
 ## Personalização do relatório de receita
 
 Você pode personalizar seu relatório de receita selecionando um intervalo de datas, os apps a serem relatados e os parâmetros.

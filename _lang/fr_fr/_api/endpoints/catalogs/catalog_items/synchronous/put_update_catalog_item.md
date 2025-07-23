@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT : Mise à jour de l'article du catalogue"
-article_title: "PUT : Mise à jour de l'article du catalogue"
+nav_title: "PUT : Remplacer l'article du catalogue"
+article_title: "PUT : Remplacer l'article du catalogue"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Mettre à jour un produit du catalogue."
+description: "Cet article présente les détails du point de terminaison Replace catalog item Braze."
 
 ---
 {% api %}
-# Mettre à jour un produit du catalogue
+# Remplacer l'article du catalogue
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour un produit dans votre catalogue.
+> Utilisez cet endpoint pour remplacer un élément dans votre catalogue.
 
 Si l’`item_id` n'est pas trouvé, cet endpoint créera le produit dans votre catalogue. Cet endpoint est synchrone.
 

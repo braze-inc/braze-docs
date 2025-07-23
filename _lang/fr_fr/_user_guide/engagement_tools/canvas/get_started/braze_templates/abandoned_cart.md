@@ -85,7 +85,7 @@ Nous conserverons les paramètres d'abonnement par défaut, afin de n'envoyer de
 Nous allons maintenant créer notre canvas en personnalisant les étapes du canevas :
 
 1. Sélectionnez l'étape Parcours d'action, puis le nom du groupe d'action **Achat**.
-2. Pour **Effectuer un achat**, sélectionnez **Effectuer un achat spécifique** et choisissez **Enormous Paper Plate** pour le produit. Comme pour le critère de sortie, les utilisateurs qui achètent ce produit quitteront le Canvas.
+2. Pour **Effectuer un achat**, sélectionnez **Effectuer un achat spécifique** et choisissez **Enormous Paper Plate** pour le produit. Comme pour les critères de sortie, les utilisateurs qui achètent ce produit quitteront le Canvas.
 
 ![Groupe d'action "Achat effectué" qui quittera le canvas si l'utilisateur achète l'énorme assiette en papier.][5]
 

@@ -15,6 +15,83 @@ toc_headers: h2
 
 {% multi_lang_include contributing/troubleshooting/redirects.md %}
 
+## Preview deployment returns a 404
+
+If your [GitHub preview deployment]({{site.baseurl}}/contributing/generating_a_preview/) builds successfully but returns a 404 response, there may be an issue with an image or Liquid tag in your Markdown file.
+
+!["Example error 404 response after opening a preview deployment in GitHub."]({% image_buster /assets/img/contributing/github/build_preview_404.png %}){: style="max-width:55%;"}
+
+To fix this issue, review each image and Liquid tag in your file.
+
+{% tabs local %}
+{% tab Image references %}
+Verify that each image reference follows our [image reference syntax]({{site.baseurl}}/contributing/content_management/images/). For example:
+
+{% raw %}
+```markdown
+![Braze Docs on GitHub.]({% image_buster /assets/img/contributing/github_homepage.png %})
+```
+{% endraw %}
+
+Each image reference must use the exact path and filename for that image. For example:
+
+```bash
+braze-docs
+└── assets
+    └── img
+        └── contributing 
+            └── github_homepage.png
+```
+
+{% endtab %}
+
+{% tab Opening and closing tags %}
+Check that there's no mismatch between your opening and closing tags. For example, {% raw %}`{% tab %}`{% endraw %} tags need the same number of opening and closing tags:
+
+{% raw %}
+```plaintext
+{% tabs %}                # Opening tag for tab group.
+{% tab Tab One %}         # Opening tag for tab one.
+Content for tab one.
+{% endtab %}              # Closing tag for tab one.
+
+{% tab Tab Two %}         # Opening tag for tab two.
+Content for tab two.
+{% endtab %}              # Closing tag for tab two.
+{% endtabs %}             # Closing tag for tab group.
+```
+{% endraw %}
+
+{% alert tip %}
+For more Liquid tag examples, see [Styling examples]({{site.baseurl}}/contributing/styling_examples).
+{% endalert %}
+{% endtab %}
+
+{% tab Raw tags %}
+If you're documenting actual Liquid code in your Markdown file, ensure each codeblock is surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw).
+
+{% subtabs local %}
+{% subtab Raw tag %}
+<code>
+&#123;% raw %} &#123;% endraw %}
+</code>
+{% endsubtab %}
+
+{% subtab Example usage %}
+<code>
+&#123;% raw %}<br>
+&#96;``<br>
+&#123;% alert note %}<br>
+Looking for sample code? Check out [our apps](&#123;&#123;site.baseurl}}/developer_guide/samples/)!<br>
+&#123;% endalert %}<br>
+&#96;``<br>
+&#123;% endraw %}<br>
+</code>
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
 ## Cross-reference link returns a 404
 
 If a [cross-reference link]({{site.baseurl}}/contributing/content_management/cross_referencing/) on your page (such as `{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}`) returns a 404 page, check the URL for the following string.

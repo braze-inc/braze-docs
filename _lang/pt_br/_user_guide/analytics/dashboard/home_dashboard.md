@@ -13,10 +13,6 @@ tool:
 
 > A página **inicial** do dashboard fornece métricas importantes para que você rastreie e entenda a performance do seu app ou site, além de oferecer uma compreensão rápida e de alto nível da sua base de usuários.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), esta é a página **Overview (Visão geral)**.
-{% endalert %}
-
 ![Painel de controle doméstico no Braze.][1]
 
 A página **inicial** tem duas seções principais:
@@ -31,7 +27,7 @@ Você pode revisitar campanhas, Canvas e segmentos recentemente editados ou cria
 
 ![Um rascunho do Canva, um segmento ativo e um rascunho de campanha na seção "Continue de onde parou".][6]
 
-## Visão geral do desempenho
+## Visão geral de performance
 
 Por padrão, a seção **Visão geral da performance** mostra os últimos 30 dias de dados de todos os apps e sites. Suas métricas são todas calculadas com base no intervalo de datas selecionado.
 
@@ -62,7 +58,7 @@ Uma baixa relação MAU/usuário pode indicar que é necessário diversificar se
 ### Sessões vitalícias
 
 *Sessões vitalícias* é a contagem total de sessões que o Braze registrou desde a integração. Em termos simples, uma sessão é cada vez que um usuário usa o app ou visita seu site. Para obter uma definição mais precisa sobre como as sessões são definidas por plataforma, consulte o
-[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android e FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), ou artigos de desenvolvedores sobre rastreamento de sessões na [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android e FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), ou artigos de desenvolvedores sobre rastreamento de sessões na [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
 ### Usuários ativos mensais
 

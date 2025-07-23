@@ -15,8 +15,6 @@ valid_partner_list:
   url: /docs/partners/jacquard/
 - name: Notify
   url: /docs/partners/notify/
-- name: Offerfit
-  url: /docs/partners/offerfit/
 - name: Trustpilot
   url: /docs/partners/trustpilot/
 - name: Amazon Personalize
@@ -67,6 +65,16 @@ valid_partner_list:
   url: /docs/partners/smartling/
 - name: Tangerine
   url: /docs/partners/tangerine/
+- name: Stylitics
+  url: /docs/partners/stylitics/
+- name: NiftyImages
+  url: /docs/partners/niftyimages/
+- name: Future Anthem
+  url: /docs/partners/future_anthem
+- name: SEEN
+  url: /docs/partners/seen
+- name: Just Words
+  url: /docs/partners/just_words/
 - name: Transifex
   url: /docs/partners/transifex/
 - name: AccuWeather
@@ -87,4 +95,6 @@ valid_partner_list:
   url: /docs/partners/friendbuy/
 - name: ViralSweep
   url: /docs/partners/viralsweep/
+- name: Mention Me
+  url: /docs/partners/mention_me/
 ---

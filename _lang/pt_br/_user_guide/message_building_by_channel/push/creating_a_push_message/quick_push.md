@@ -2,7 +2,7 @@
 nav_title: Mensagens de Push Rápidas
 article_title: Mensagens de Push Rápidas
 alias: "/quick_push/"
-description: "Este artigo descreve coisas a saber ao criar uma campanha de push ou Canvas usando a experiência de edição rápida de push."
+description: "Este artigo descreve coisas a saber ao criar uma campanha de push ou um canva usando a experiência de edição rápida de push."
 ---
 
 # Mensagens de push rápidas
@@ -62,9 +62,9 @@ Se você selecionar vários dispositivos para plataformas móveis, como iOS e An
 
 ### Configurações específicas do dispositivo
 
-Você pode editar configurações específicas da plataforma no editor. Isso inclui configurações como [botões de ação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canais e grupos de notificação, TTL, prioridade de exibição, sons e muito mais.
+Você pode editar configurações específicas da plataforma no editor. Isso inclui configurações como [botões de ação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), canais e grupos de notificação, TTL, prioridade de exibição, sons e muito mais. 
 
-Para saber mais sobre as configurações específicas do dispositivo, consulte as seguintes coleções de artigos:
+Observe que os botões de ação por push não são suportados ao direcionar tanto iOS quanto Android usando campanhas de push rápidas. Para saber mais sobre as configurações específicas do dispositivo, consulte as seguintes coleções de artigos:
 
 - [Opções iOS][6]
 - [Opções do Android][7]

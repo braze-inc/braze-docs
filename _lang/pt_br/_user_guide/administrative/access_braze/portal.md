@@ -13,10 +13,6 @@ description: "Este artigo de referência aborda como acessar e usar o Portal do 
 
 O portal do produto pode ser encontrado em **Community** > **Product Roadmap**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **o Product Roadmap** em **Recursos**.
-{% endalert %}
-
 ## O que há no portal
 
 | Seção | Descrição |

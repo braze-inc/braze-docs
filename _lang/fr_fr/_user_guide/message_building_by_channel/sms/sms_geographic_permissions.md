@@ -40,7 +40,7 @@ Les modifications prendront effet une fois que vous aurez sélectionné **Enregi
 
 Certains pays présentent un risque plus élevé de pompage par SMS. Ces pays sont signalés par une étiquette " **High Risk** " dans la liste déroulante des pays.
 
-![Le pays en bas, l'Azerbaïdjan, classé « à haut risque ».][4]{: style="max-width:80%;"}
+![La liste déroulante des pays avec l'Azerbaïdjan ayant une étiquette "Risque élevé".][4]{: style="max-width:80%;"}
 
 Si vous autorisez l'envoi dans ces pays, vous devez d'abord reconnaître le risque que cela comporte avant que le pays ne soit ajouté à votre liste d'autorisation.
 

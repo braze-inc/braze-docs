@@ -102,9 +102,15 @@ Esses campos mesclados atualizarão os filtros "para X eventos em Y dias". Para 
 
 Se um `email` ou `phone` for especificado como um identificador, um valor adicional `prioritization` será necessário no identificador. O `prioritization` deve ser uma matriz que especifica qual usuário deve ser mesclado se houver vários usuários encontrados. `prioritization` é uma matriz ordenada, ou seja, se mais de um usuário corresponder a uma priorização, a mesclagem não ocorrerá.
 
-Os valores permitidos para o vetor são: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refere-se à priorização do usuário atualizado mais recentemente.
+Os valores permitidos para a matriz são:
+
+- `identified`
+- `unidentified`
+- `most_recently_updated` (refere-se à priorização do usuário atualizado mais recentemente)
+- `least_recently_updated` (refere-se à priorização do usuário atualizado menos recentemente)
 
 Somente uma das opções a seguir pode existir na matriz de priorização por vez:
+
 - `identified` refere-se à priorização de um usuário com uma `external_id`
 - `unidentified` refere-se à priorização de um usuário sem um `external_id`
 
@@ -159,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Mesclando usuário não identificado
 
-A solicitação a seguir mesclaria o usuário não identificado atualizado mais recentemente com o endereço de e-mail "john.smith@braze.com" no usuário com `external_id` "john". Usar `most_recently_updated` filtra a consulta para apenas um usuário não identificado. Portanto, se houvesse dois usuários não identificados com esse endereço de e-mail, apenas um seria mesclado no usuário com `external_id` "john".
+A solicitação a seguir mesclaria o usuário não identificado atualizado mais recentemente com o endereço de e-mail "john.smith@braze.com" no usuário com `external_id` "john". Usar `most_recently_updated` ou `least_recently_updated` filtra a consulta para apenas um usuário não identificado. Portanto, se houvesse dois usuários não identificados com esse endereço de e-mail, apenas um seria mesclado no usuário com `external_id` "john".
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -183,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Mesclando usuário não identificado com usuário identificado
 
-O próximo exemplo mescla o usuário não identificado atualizado mais recentemente com o endereço de e-mail "john.smith@braze.com" com o usuário identificado atualizado mais recentemente com o endereço de e-mail "john.smith@braze.com". Usar `most_recently_updated` filtra as consultas para apenas um usuário (um usuário não identificado para `identifier_to_merge` e um usuário identificado para `identifier_to_keep`).
+O próximo exemplo mescla o usuário não identificado atualizado mais recentemente com o endereço de e-mail "john.smith@braze.com" com o usuário identificado atualizado mais recentemente com o endereço de e-mail "john.smith@braze.com". Usar `most_recently_updated` ou `least_recently_updated` filtra as consultas para apenas um usuário (um usuário não identificado para `identifier_to_merge` e um usuário identificado para `identifier_to_keep`).
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -195,11 +201,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     {
       "identifier_to_merge": {
         "email": "john.smith@braze.com",
-        "prioritization": ["unidentified", "most_recently_updated"]
+        "prioritization": ["unidentified", "most_recently_updated", "least_recently_updated"]
       },
       "identifier_to_keep": {
         "email": "john.smith@braze.com",
-        "prioritization": ["identified", "most_recently_updated"]
+        "prioritization": ["identified", "most_recently_updated", "least_recently_updated"]
       }
     }
   ]
@@ -262,7 +268,7 @@ A tabela a seguir lista as possíveis mensagens de erro que podem ocorrer.
 | --- |
 | `'merge_updates' must be an array of objects` | Verifique se `merge_updates` é um vetor de objetos. |
 | `a single request may not contain more than 50 merge updates` | Você só pode especificar até 50 atualizações de mesclagem em uma única solicitação. |
-| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Verifique os identificadores em sua solicitação. |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, 'email' property that is a string, or 'phone' property that is a string` | Verifique os identificadores em sua solicitação. |
 | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Verifique se o site `merge_updates` contém apenas os dois objetos `identifier_to_merge` e `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
