@@ -68,6 +68,7 @@ width: 33%;
 table td {
 word-break: break-word;
 text-align: center;
+vertical-align: middle;
 }
 </style>
 Featured integrations   | &nbsp;  |  &nbsp;
