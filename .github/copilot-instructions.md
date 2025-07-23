@@ -11,22 +11,23 @@ Clearly structure your writing and make it easy for people to find the informati
 3. Use consistent language for features and actions.
 
 ## WHAT NOT TO DO
-Avoid references to future features, or suggestions that something may be supported in the future.
-Avoid using definitive terms such as "guarantee" or "ensure." Instead, employ forward-looking statements like "Designed to" or "Intended to" to accurately convey the product's capabilities and intentions.
-Don’t use words and phrases that anchor your writing to a point in time, as they make content become quickly outdated. Focus on how the product works right now, not on what has changed (except for time-focused content, such as in release notes).
-Specifically avoid the following list of words and phrases
-1. as of this writing
-2. currently
-3. does not yet
-4. eventually
-5. future
-6. in the future
-7. latest
-8. new
-9. newer
-10. now
-11. old
-12. older
-13. presently
-14. at present
-15. soon
+When describing Braze products and features, avoid the following:
+1. References to future features, or suggestions that something may be supported in the future.
+2. Using definitive terms such as "guarantee" or "ensure." Instead, employ forward-looking statements like "Designed to" or "Intended to" to accurately convey the product's capabilities and intentions.
+3. Using words and phrases that anchor your writing to a point in time, as they make content become quickly outdated. Focus on how the product works right now, not on what has changed (except for time-focused content, such as in release notes).
+4. Specifically avoid the following list of words and phrases:
+   - as of this writing
+   - currently
+   - does not yet
+   - eventually
+   - future
+   - in the future
+   - latest
+   - new
+   - newer
+   - now
+   - old
+   - older
+   - presently
+   - at present
+   - soon
