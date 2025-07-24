@@ -29,15 +29,15 @@ Optionally, you can do the following:
 
 ## Step 3: Choose your app or platform
 
-Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. If you choose **Users from all apps**, the segment includes all users regardless of any session or app data. If you choose **Users from specific apps**, you can then select which apps or platforms you want to include in your segment.
+Choose which apps or platforms you'd like to target by selecting **Users from all apps** (default), or **Users from specific apps**. **Users from specific apps** targets users with at least one session in the specified apps.
 
-For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
+For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created through user import or REST API).
 
 ![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## Step 4: Add filters to your segment
 
-Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific.
+Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. 
 
 {% alert note %}
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
@@ -93,7 +93,7 @@ Excluded users will not be counted as part of your segment’s _Total reachable 
 
 #### Testing segments
 
-After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, search for a user’s `external_id` or `braze_id` in the **User Lookup** section.
+After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, search for a user’s `external_id` or `braze_id` in the **User Lookup** section. Note that you cannot search by email address in **User Lookup**.
 
 ![User Lookup section with a search field.]({% image_buster /assets/img_archive/user_lookup.png %})
 

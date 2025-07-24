@@ -22,6 +22,10 @@ Braze SDKs automatically track a user's most recent app version. These versions 
 
 ![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
 
+{% alert note %}
+It may take time for the current app versions to populate. The app version on the user profile updates when the information is captured by the SDK, which relies on when users open their apps. If the user doesn't open the app, the current version won't be updated. <br><br> These filters also won't apply retroactively. It's good to use "greater than" or "equal" to current and future versions, but using past version filters may cause unexpected behaviors.
+{% endalert %}
+
 ### App version number
 
 Use the **App Version Number** filter to segment users by the app's version and build number. 
