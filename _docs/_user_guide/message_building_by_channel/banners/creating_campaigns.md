@@ -76,11 +76,12 @@ If you have multiple Banner campaigns using the same placement ID, we recommend 
 
 Finish building your campaign by completing the following:
 
-| Option | Description |
-| --- | --- |
-| **Targeted Users** | Target users by choosing segments or filters to narrow down your audience. You’ll automatically be given a snapshot of the approximate segment population. Exact segment membership is calculated just before the message is sent. |
-| **Conversion Events** | Track how often users perform specific actions after receiving a campaign. You can define conversion events with up to a 30-day window to count the action as a conversion. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+1. In **Target Audiences**, choose segments or filters to narrow down your audience. You’ll automatically be given a preview of the approximate segment population. Exact segment membership is calculated just before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
+
+{:start="2"}
+2. In **Assign Conversions**, track how often users perform specific actions after receiving a campaign by defining conversion events with up to a 30-day window to count the action as a conversion.
 
 ### Step 8: Launch your campaign
 
