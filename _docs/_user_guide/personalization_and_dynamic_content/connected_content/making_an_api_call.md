@@ -170,6 +170,18 @@ Braze has a reserved set of IPs used for all services, not all of which are acti
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
+### `User-Agent` header
+
+Braze includes a `User-Agent` header in all Connected Content and webhook requests that is similar to the following:
+
+```text
+Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
+```
+
+{% alert tip %}
+Keep in mind that the hash value changes regularly. If you're filtering traffic by `User-Agent`, allow all values that start with `Braze Sender`.
+{% endalert %}
+
 ## Troubleshooting
 
 Use [Webhook.site](https://webhook.site/) to troubleshoot your Connected Content calls. 
