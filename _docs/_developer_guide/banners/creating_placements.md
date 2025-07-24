@@ -1,4 +1,4 @@
----
+----
 nav_title: Creating Placements
 article_title: Creating Banner placements for the Braze SDK
 description: "Learn how to create Banner placements for the Braze SDK."
@@ -262,6 +262,30 @@ braze.subscribeToBannersUpdates((banners) => {
 });
 
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+```
+
+{% alert tip %}
+If you use React, use a `ref` to target your container node:
+{% endalert %}
+
+```tsx
+import { useRef } from 'react';
+import * as braze from "@braze/web-sdk";
+
+export default function App() {
+    const bannerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+       const globalBanner = braze.getBanner("global_banner");
+       if (!globalBanner || globalBanner.isControl) {
+           // hide the container
+       } else {
+           // insert the banner to the container node
+           braze.insertBanner(globalBanner, bannerRef.current);
+       }
+    }, []);
+    return <div ref={bannerRef}></div>
+}
 ```
 
 {% endtab %}
