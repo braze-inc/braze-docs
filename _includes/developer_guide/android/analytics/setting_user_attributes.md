@@ -2,6 +2,26 @@
 
 ## Default user attributes
 
+### Predefined methods
+
+Braze provides predefined methods for setting the following user attributes within the [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) class. For method specifications, refer to [our KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+
+- First name
+- Last name
+- Country
+- Language
+- Date of birth
+- Email
+- Gender
+- Home city
+- Phone number
+
+{% alert note %}
+All string values such as first name, last name, country, and home city are limited to 255 characters.
+{% endalert %}
+
+### Setting default attributes
+
 To set a default attribute for a user, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
 {% tabs %}
@@ -28,7 +48,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-To unset a user attribute, simply pass in `null` to the corresponding method:
+### Unsetting default attributes
+
+To unset a user attribute, pass `null` to the relevant method.
 
 {% tabs %}
 {% tab JAVA %}
@@ -53,22 +75,6 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 {% endtab %}
 {% endtabs %}
-
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). For method specifications, refer to [our KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
-
-- First name
-- Last name
-- Country
-- Language
-- Date of birth
-- Email
-- Gender
-- Home city
-- Phone number
-
-{% alert note %}
-All string values such as first name, last name, country, and home city are limited to 255 characters.
-{% endalert %}
 
 ## Custom user attributes
 
@@ -322,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Unsetting a custom attribute
+### Unsetting custom attributes
 
-Custom attributes can also be unset using the following method:
+To unset a custom attribute, pass the relevant attribute key to the `unsetCustomUserAttribute` method.
 
 {% tabs %}
 {% tab JAVA %}
@@ -350,9 +356,42 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Nested custom attributes
+### Nesting custom attributes
 
-Custom attributes can also contain nested attribute properties. For more information, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Using the REST API
 
