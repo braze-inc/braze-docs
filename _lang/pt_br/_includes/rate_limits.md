@@ -44,55 +44,59 @@ Consulte nossa página sobre [limites de frequência da API]({{site.baseurl}}/ap
 {% elsif include.endpoint == "users export ids" %}
 Se sua integração com a Braze ocorreu em 22 de agosto de 2024 ou após essa data, esse endpoint tem um limite de frequência de 250 solicitações por minuto, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
+Você também pode aumentar o limite de frequência desse ponto de extremidade para 40 solicitações por segundo, atendendo aos seguintes requisitos:
+
+- Seu espaço de trabalho tem o limite de frequência padrão (250 solicitações por minuto) ativado. Entre em contato com seu gerente de conta Braze para obter mais assistência na remoção de qualquer limite de frequência pré-existente que possa ter.
+- Sua solicitação inclui o parâmetro `fields_to_export` para listar todos os campos que você deseja receber.
+
+{% alert important %}
+Se você incluir `canvases_received` ou `campaigns_received` no parâmetro `fields_to_export`, sua solicitação não será elegível para o limite de frequência mais rápido. Recomendamos incluí-los em sua solicitação apenas se você tiver um caso de uso específico para eles.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/alias/new`, `/users/identify` e `/users/merge`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/alias/new`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/identify`, `/users/merge` e `/users/alias/new`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
-
-<!---/users/alias/update-->
-
-{% elsif include.endpoint == "users alias update" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/identify` e `/users/merge`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/merge`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/events`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/events`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-Para clientes que integraram a Braze a partir de 16 de setembro de 2021, aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/events/list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/events/list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
@@ -133,7 +137,7 @@ Esse endpoint tem um limite de frequência de 100 solicitações por minuto.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "endpoints de mensagens" %}
+{% if include.category == "message endpoints" %}
 
 Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/api/api_limits/#batching-api-requests). Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
 
@@ -143,9 +147,17 @@ Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/a
 
 {% endif %}
 
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "translation endpoints" %}
+
+Esse endpoint tem um limite de frequência de 250.000 solicitações por minuto.
+
+{% endif %}
+
 <!---Additional if statement for /messages/send endpoint-->
 
-{% if include.category == "endpoint de envio de mensagens" %}
+{% if include.category == "message send endpoint" %}
 
 Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/api/api_limits/#batching-api-requests). Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
 
@@ -184,3 +196,4 @@ Esse endpoint tem um limite de frequência compartilhado de 50 solicitações po
 Esse endpoint tem um limite de frequência de 50.000 solicitações por minuto.
 
 {% endif %}
+
