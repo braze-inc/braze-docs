@@ -106,6 +106,10 @@ La <i>confianza</i> es el porcentaje de confianza en que una determinada variant
 <i>Los fallos de entrega</i> se producen cuando el SMS no se ha podido enviar porque se han desbordado las colas (envío de SMS a una tasa superior a la que pueden soportar tus códigos largo o abreviado).
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+<i>Los fallos de entrega</i> se producen cuando no se ha podido enviar el RCS por desbordamiento de las colas (envío de RCS a una tasa superior a la que puede soportar tu remitente verificado por RCS).
+{% endif %}
+
 {% if include.metric == "Failed Delivery Rate" %}
 La <i>tasa de entregas fallidas</i> es el porcentaje de envíos que fallaron porque no se pudo enviar el mensaje. Esto puede ocurrir por varias razones, como el desbordamiento de la cola, la suspensión de la cuenta y errores de medios en el caso de los MMS.
 {% endif %}
@@ -163,7 +167,7 @@ Los <i>ingresos diarios por usuario</i> son los ingresos medios diarios por usua
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-La <i>exclusión voluntaria</i> se produce cuando un usuario responde a tu mensaje con una <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palabra clave de exclusión voluntaria</a> y se da de baja de tu programa de SMS.
+La <i>exclusión voluntaria</i> se produce cuando un usuario responde a tu mensaje con una <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">palabra clave de exclusión voluntaria</a> y se da de baja de tu programa de SMS o RCS.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -175,7 +179,7 @@ El <i>reintento pendiente</i> hace referencia al número de solicitudes que fuer
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Leer</i> es cuando el usuario lee el mensaje de WhatsApp. Los recibos de lectura del usuario deben estar "Activados" para que Braze realice un seguimiento de las lecturas.
+<i>Lee</i> es cuando el usuario lee el mensaje. Los recibos de lectura del usuario deben estar "Activados" para que Braze realice un seguimiento de las lecturas.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -187,7 +191,7 @@ El <i>reintento pendiente</i> hace referencia al número de solicitudes que fuer
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>Los rechazos</i> se producen cuando el SMS ha sido rechazado por el operador. Esto puede ocurrir por varias razones, como el filtrado de contenidos del operador, la disponibilidad del dispositivo de destino, que el número de teléfono ya no esté en servicio, y similares.
+<i>Los rechazos</i> se producen cuando el SMS o RCS ha sido rechazado por el operador. Esto puede ocurrir por varias razones, como el filtrado de contenidos del operador, la disponibilidad del dispositivo de destino, que el número de teléfono ya no esté en servicio, y similares.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -199,7 +203,7 @@ Los <i>ingresos</i> son los ingresos totales en dólares de los destinatarios de
 {% endif %}
 
 {% if include.metric == "Sent" %}
-Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un paso en Canvas, y se ha enviado un SMS desde Braze. Es posible que el SMS no haya llegado al dispositivo del usuario debido a errores.
+Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un paso en Canvas, y se ha enviado un SMS o RCS desde Braze. Es posible que el SMS o RCS no haya llegado al dispositivo de un usuario debido a errores.
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -227,7 +231,7 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Clics totales</i> es el número de destinatarios únicos que hicieron clic en un enlace del correo electrónico entregado.
+<i>Clics totales</i> es el número de destinatarios únicos que hicieron clic en un enlace del mensaje entregado.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -257,11 +261,11 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-Las <i>impresiones únicas</i> son el número total de usuarios que recibieron y vieron un mensaje determinado en un día.
+Las <i>impresiones únicas</i> son el número total de usuarios que recibieron y vieron un mensaje de una campaña determinada.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Destinatarios únicos</i> es el número de destinatarios únicos diarios, o usuarios que recibieron un mensaje concreto en un día.
+<i>Destinatarios únicos</i> es el número de destinatarios únicos diarios, o usuarios que recibieron un mensaje nuevo en un día. Para que este recuento se incremente para un usuario más de una vez, el usuario debe recibir un nuevo mensaje en un día diferente.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
