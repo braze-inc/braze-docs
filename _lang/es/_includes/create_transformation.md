@@ -2,7 +2,7 @@ En el panel de Braze, ve a **Configuración de Datos** > **Transformación de Da
 
 Selecciona **Crear transformación** para darle un nombre a tu transformación y, a continuación, elige tu experiencia de edición.
 
-![Detalles de la transformación con la opción de elegir "Usar una plantilla" o "Empezar de cero" para tu experiencia de edición.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
+![Detalles de la transformación con la opción de elegir "Usar una plantilla" o "Empezar de cero" para tu experiencia de edición.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Selecciona **Utilizar una plantilla** para examinar una biblioteca de plantillas, incluidos los casos de uso de Transformación de datos. O bien, selecciona **Empezar de cero** para cargar una plantilla de código predeterminada. 
 
@@ -24,8 +24,8 @@ Después de crear tu transformación, verás la vista detallada de la transforma
 
 {% if include.location == "typeform" %}
 
-![]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
-
-Captura la **URL de tu webhook** para utilizarla en el siguiente paso.
+![Un ejemplo de detalles de webhook y código de transformación.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
 {% endif %}
+
+Captura la **URL de tu webhook** para utilizarla en el siguiente paso.

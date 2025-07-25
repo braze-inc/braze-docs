@@ -44,55 +44,59 @@ Consulta nuestra página sobre [los límites de velocidad de la API]({{site.base
 {% elsif include.endpoint == "users export ids" %}
 Si te incorporaste a Braze a partir del 22 de agosto de 2024, este punto final tiene un límite de velocidad de 250 solicitudes por minuto, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
 
+También puedes aumentar el límite de velocidad de este punto final a 40 peticiones por segundo cumpliendo los siguientes requisitos:
+
+- Tu espacio de trabajo tiene habilitado el límite de velocidad predeterminado (250 peticiones por minuto). Ponte en contacto con tu administrador de cuentas Braze para que te ayude a eliminar cualquier límite de velocidad preexistente que puedas tener.
+- Tu solicitud incluye el parámetro `fields_to_export` para enumerar todos los campos que quieres recibir.
+
+{% alert important %}
+Si incluyes `canvases_received` o `campaigns_received` en el parámetro `fields_to_export`, tu solicitud no podrá acogerse al límite de velocidad más rápido. Te recomendamos que sólo los incluyas en tu solicitud si tienes un caso de uso específico para ellos.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 20.000 solicitudes por minuto a este punto final. Este límite de velocidad se comparte con los puntos finales `/users/alias/new`, `/users/identify`, y `/users/merge`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos a este punto final un límite de velocidad compartido de 20.000 peticiones por minuto. Este límite de velocidad se comparte con los puntos finales `/users/alias/new`, `/users/identify`, `/users/merge`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 20 000 solicitudes por minuto a este punto final. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/identify`, `/users/merge`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos a este punto final un límite de velocidad compartido de 20.000 peticiones por minuto. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/identify`, `/users/merge`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 20 000 solicitudes por minuto a este punto final. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/identify`, `/users/merge`, y `/users/alias/new`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
-
-<!---/users/alias/update-->
-
-{% elsif include.endpoint == "users alias update" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 20 000 solicitudes por minuto a este punto final. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/identify`, y `/users/merge`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos a este punto final un límite de velocidad compartido de 20.000 peticiones por minuto. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/alias/new`, `/users/identify`, y `/users/merge`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 20 000 solicitudes por minuto a este punto final. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/alias/new`, `/users/merge`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos a este punto final un límite de velocidad compartido de 20.000 peticiones por minuto. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/alias/new`, `/users/merge`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 20 000 solicitudes por minuto a este punto final. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/alias/new`, `/users/identify`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos a este punto final un límite de velocidad compartido de 20.000 peticiones por minuto. Este límite de velocidad se comparte con los puntos finales `/users/delete`, `/users/alias/new`, `/users/identify`, y `/users/alias/update`, como se documenta en [Límites de tasa de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 1000 solicitudes por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/events`, `/events/list`, y `/purchases/product_list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos un límite de velocidad compartido de 1.000 peticiones por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/events`, `/events/list`, y `/purchases/product_list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 1000 solicitudes por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/custom_attributes`, `/events/list`, y `/purchases/product_list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos un límite de velocidad compartido de 1.000 peticiones por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/custom_attributes`, `/events/list`, y `/purchases/product_list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 1000 solicitudes por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/custom_attributes`, `/events`, y `/purchases/product_list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos un límite de velocidad compartido de 1.000 peticiones por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/custom_attributes`, `/events`, y `/purchases/product_list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-Para los clientes que se incorporaron a Braze a partir del 16 de septiembre de 2021, aplicamos un límite de velocidad compartido de 1000 solicitudes por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/custom_attributes`, `/events`, y `/events/list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Aplicamos un límite de velocidad compartido de 1.000 peticiones por hora a este punto final. Este límite de velocidad se comparte con los puntos finales `/custom_attributes`, `/events`, y `/events/list`, como se documenta en [Límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
@@ -143,6 +147,14 @@ Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseur
 
 {% endif %}
 
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "puntos finales de traducción" %}
+
+Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
+
+{% endif %}
+
 <!---Additional if statement for /messages/send endpoint-->
 
 {% if include.category == "punto final de envío de mensajes" %}
@@ -184,3 +196,4 @@ Este punto final tiene un límite de velocidad compartido de 50 peticiones por m
 Este punto final tiene un límite de velocidad de 50 000 peticiones por minuto.
 
 {% endif %}
+
