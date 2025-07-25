@@ -79,6 +79,15 @@ For more on using uninstall tracking, see our blog post [Uninstall Tracking: An 
 
 If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging (FCM) and Apple Push Notification Service (APNS) revoking old tokens at a different frequency.
 
+{% alert note %} 
+For privacy reasons, the underlying providers that Braze relies on to track uninstalls often intentionally revoke tokens at irregular intervals.
+This leads to situations where, if you are monitoring uninstalls over time, you may observe significant increases in the number of uninstalls in a given time period.
+
+We recommend that you combine your monitoring of uninstall tracking with monitoring a metric the requires user action, such as direct push open rate for example.
+
+If the number of uninstalls reported in a time period increases sharply, but the absolute number of direct push opens remains stable during that time period, it is likely that one of Braze's push partners recently revoked a set of old tokens.
+{% endalert %}
+
 ### Why are the number of app uninstalls different from what's in APNs?
 
 The difference is expected. 
