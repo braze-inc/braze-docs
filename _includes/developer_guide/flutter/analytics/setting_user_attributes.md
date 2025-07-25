@@ -2,11 +2,7 @@
 
 ## Default user attributes
 
-To set user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
-
-```dart
-braze.setFirstName('Name');
-```
+### Supported attributes
 
 The following attributes are supported:
 
@@ -23,6 +19,14 @@ The following attributes are supported:
 {% alert important %}
 All string values such as first name, last name, country, and home city are limited to 255 characters.
 {% endalert %}
+
+### Setting default attributes 
+
+To set user attributes automatically collected by Braze, you can use the setter methods included with the SDK.
+
+```dart
+braze.setFirstName('Name');
+```
 
 ## Custom user attributes
 
@@ -89,7 +93,9 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 {% endalert %}
 
-### Unsetting a custom attribute
+### Unsetting custom attributes
+
+To unset a custom attribute, pass the relevant attribute key to the `unsetCustomUserAttribute` method.
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');
