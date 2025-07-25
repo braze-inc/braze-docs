@@ -11,6 +11,33 @@ description: "This reference article covers using an array of objects as a data 
 
 > This page covers how to use an array of objects to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
+## Supported data types
+
+Objects within arrays can contain various [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types), such as:
+
+- Numbers
+- Strings  
+- Booleans
+- Arrays
+- Time
+- Other objects
+- [Arrays of objects]({{site.baseurl}}/array_of_objects/)
+
+Here's an example showing different data types in an object:
+
+```json
+{
+  "id": 1,
+  "name": "Gus",
+  "is_active": true,
+  "age": 5,
+  "favorite_treats": ["bacon", "cheese"],
+  "last_checkup": "2023-06-15"
+}
+```
+
+For more information on using nested data structures, refer to [Nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/).
+
 ## Limitations
 
 - Arrays of objects are intended for custom attributes sent through the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
@@ -28,7 +55,7 @@ For more information on using arrays of objects for user attributes objects, ref
 {% tabs local %}
 {% tab Create %}
 
-The following is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced later when making updates.
+The following is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` (number data type) that can be referenced later when making updates, and the other properties use string data types.
 
 ```json
 {
