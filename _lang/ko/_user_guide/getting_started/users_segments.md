@@ -19,7 +19,7 @@ Braze에서는 오디언스에 대한 정보가 고객 프로필에 저장됩니
 
 사용자 프로필을 이해하면 오디언스에 대한 인사이트를 확보하고 개인화된 타겟팅 수준으로 오디언스와 소통할 수 있습니다. 사용자 프로필에는 많은 정보가 포함되어 있지만 주요 내용은 다음과 같습니다:
 
-- **사용자 식별자:** 각 고객 프로필은 `external_id`라는 사용자 ID로 고유하게 식별됩니다. 이 식별자를 통해 Braze는 다양한 채널과 디바이스에서 사용자 데이터를 추적하고 연결하여 브랜드와 각 사용자의 상호 작용을 통합적으로 파악할 수 있습니다. [Anonymous user profiles]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) as an alternative identifier.
+- **사용자 식별자:** 각 고객 프로필은 `external_id`라는 사용자 ID로 고유하게 식별됩니다. 이 식별자를 통해 Braze는 다양한 채널과 디바이스에서 사용자 데이터를 추적하고 연결하여 브랜드와 각 사용자의 상호 작용을 통합적으로 파악할 수 있습니다. [Anonymous user profiles]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) as an alternative identifier.
 - [속성](#attributes)**:** 이는 사용자의 이름, 나이, 위치 또는 기타 인구통계학적 정보와 같은 사용자에 대한 특정 정보입니다. 이러한 속성을 사용하여 오디언스를 세분화하고 메시징을 개인화할 수 있습니다.
 - [이벤트](#events)**:** 이는 구매, 링크 클릭, 앱 열기 등 사용자가 취하는 행동입니다. Braze는 이러한 이벤트를 추적하여 사용자의 행동과 참여를 이해하는 데 도움을 줍니다. 속성과 마찬가지로 이벤트를 사용하여 세분화하고 개인화할 수도 있습니다.
 - **구매:** 이 섹션에는 사용자의 구매 내역이 기록됩니다. 이는 사용자의 구매 습관과 선호도를 이해하는 데 매우 중요합니다.

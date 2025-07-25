@@ -51,7 +51,7 @@ channel: email
 
 ### 내 링크를 모든 태그가 적용된 상태로 미리 보려면 어떻게 해야 하나요?
 
-링크를 미리 보는 여러 가지 방법이 있습니다. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/sending_test_messages/) to yourself to view all the links. 
+링크를 미리 보는 여러 가지 방법이 있습니다. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to yourself to view all the links. 
 
 새 탭의 미리보기 창에서 링크를 열어 링크를 볼 수도 있습니다. 미리보기 창에서 링크 위에 마우스를 올리면 브라우저 하단에서 링크를 볼 수 있습니다.
 

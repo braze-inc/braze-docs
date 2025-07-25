@@ -12,17 +12,13 @@ search_rank: 1
 
 > 이 참조 문서에서는 캔버스를 만들고, 유지 관리하고, 테스트하는 데 필요한 단계를 다룹니다. 이 가이드를 따르거나 [캔버스 Braze 학습 과정](https://learning.braze.com/quick-overview-canvas-setup)을 확인하세요.
 
-{% alert important %}
-2023년 2월 28일부터는 더 이상 기존 캔버스 환경을 사용하여 캔버스를 만들거나 복제할 수 없습니다. Braze는 기존 캔버스 환경을 사용하는 고객은 캔버스 흐름으로 전환할 것을 권장합니다. 향상된 편집 경험을 통해 캔버스를 더 잘 구축하고 관리할 수 있습니다. [캔버스를 캔버스 플로우에 복제하는 방법]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)에 대해 자세히 알아보세요.
-{% endalert %}
+{% details 원래 캔버스 편집기 %}
+더 이상 기존 캔버스 환경을 사용하여 캔버스를 만들거나 복제할 수 없습니다. Braze는 [캔버스를 캔버스 플로우에 복제하는]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) 것을 권장합니다.
+{% enddetails %}
 
 ## 1단계: 새 캔버스 만들기 
 
 **메시징** > **캔버스**로 이동한 다음 **캔버스 만들기**를 선택합니다.
-
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **캔버스**를 **인게이지먼트** 아래에서 찾을 수 있습니다.
-{% endalert %}
 
 ## 2단계: 캔버스를 설정하세요
 
@@ -81,11 +77,11 @@ search_rank: 1
 캔버스에 태그를 지정하여 쉽게 찾고 이를 이용하여 보고서를 작성할 수 있습니다. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![캔버스 이름, 설명, 위치 및 태그 필드가 있는 캔버스 세부 정보 페이지입니다.][53]
+![캔버스 이름, 설명, 위치 및 태그 필드가 있는 캔버스 세부 정보 페이지입니다.][53]{: style="max-width:70%;"}
 
 #### 전환 이벤트 선택
 
-전환 이벤트 유형을 선택한 다음 기록할 전환을 선택하세요. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will measure the efficiency of your Canvas. 
+전환 이벤트 유형을 선택한 다음 기록할 전환을 선택하세요. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
 
 ![구매하기 전환 이벤트 유형의 주요 전환 이벤트 A는 3일의 전환 기한 내에 구매를 한 사용자의 대화를 기록합니다.][52]
 
@@ -101,7 +97,7 @@ search_rank: 1
   {% tab 예정된 전달 %}
     예약된 전달을 통해 사용자는 캠페인을 예약하는 방식과 유사하게 시간 스케줄에 따라 입력하게 됩니다. 캔버스가 출시되자마자 사용자를 등록하거나, 나중에 여정에 등록하거나, 매일, 매주 또는 매월 반복적으로 등록할 수 있습니다. 
 
-    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2023 until December 31, 2023.
+    In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -110,7 +106,7 @@ search_rank: 1
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
 
-    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2023.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
   {% tab API 트리거 전달 %}
@@ -148,15 +144,19 @@ search_rank: 1
 
 After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
-!['사용자 조회' 필드에서는 외부 사용자 아이디 또는 Braze 아이디로 검색할 수 있습니다.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}
+!['사용자 조회' 필드에서는 외부 사용자 아이디 또는 Braze 아이디로 검색할 수 있습니다.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 #### 항목 컨트롤 선택
 
-진입 제어는 사용자가 캔버스에 다시 입장할 수 있는지 여부를 결정합니다. 또한 이 캔버스에 들어올 수 있는 사람의 수를 제한할 수 있습니다. 예를 들어, **이 캔버스에 잠재적으로 들어갈 수 있는 최대 사용자 수** 필드를 1,000명으로 설정하고 **캔버스가 예약될 때마다 제한** 체크박스를 선택하면, 캔버스는 하루에 1,000명의 사용자에게 전송됩니다.
+진입 제어는 사용자가 캔버스에 다시 입장할 수 있는지 여부를 결정합니다. 또한 선택한 주기(매일, 캔버스의 평생 또는 캔버스가 예약될 때마다)에 따라 이 캔버스에 입장할 수 있는 사람의 수를 제한할 수도 있습니다. 
 
-!["항목 컨트롤" 페이지에 "사용자가 캔버스에 다시 입장할 수 있도록 허용" 및 "이 캔버스에 입장할 수 있는 사람 수 제한"에 대한 확인란이 표시됩니다. 후자를 사용하면 최대 사용자를 설정하고 캔버스를 예약할 때마다 제한할지 여부를 설정할 수 있습니다.]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
+예를 들어, **입력량 제한을** 선택하고 **최대 입력** 필드를 5,000명의 사용자로 설정하고 **매일을** 제한 주기로 설정하면 캔버스는 하루에 5,000명의 사용자에게만 전송합니다.
 
-Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**을 사용하는 것을 권장하지 않습니다. 이는 발송량 증가로 이어질 수 있습니다.
+!['사용자가 캔버스에 다시 입장할 수 있도록 허용' 및 '입장 볼륨 제한' 확인란이 표시된 '입장 컨트롤' 페이지입니다. 후자를 사용하면 최대 항목 수를 설정하고 일일, 캔버스 평생 또는 캔버스를 예약할 때마다 제한할지 여부를 설정할 수 있습니다.]({% image_buster /assets/img_archive/entry_controls.png %})
+
+{% alert tip %}
+Braze는 IP 워밍업을 위해 **캔버스를 예약할 때마다** 기능을 사용하면 전송량이 증가할 수 있으므로 사용하지 않는 것을 권장합니다.
+{% endalert %}
 
 #### 종료 기준 설정
 
@@ -205,7 +205,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 ### 배리언트 추가
 
-![사용자가 '이형 상품 추가'를 선택한 다음 컨텍스트 메뉴에서 다시 '이형 상품 추가'를 선택하는 모습을 보여주는 GIF입니다.][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+!['이형 상품 추가' 버튼을 선택하면 '이형 상품 추가' 옵션이 있는 컨텍스트 메뉴가 표시됩니다.][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 **배리언트 추가**를 선택한 다음 캔버스에 새 배리언트를 추가합니다. 변형은 사용자가 거칠 여정을 나타내며 여러 단계와 분기를 포함할 수 있습니다.
 
@@ -235,7 +235,7 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 단계를 추가하기 시작하면 세부 사항에 집중하거나 전체 사용자 여정을 파악하기 위해 확대/축소 수준을 변경할 수 있습니다. <kbd>Shift</kbd> + <kbd>+</kbd>를 사용하여 확대하거나 <kbd>Shift</kbd> + <kbd>-</kbd>를 사용하여 축소합니다
 {% endalert %}
 
-![브레이즈 캔버스에 지연 단계를 추가하는 컴포넌트 검색 창.]({% image_buster /assets/img_archive/add_components_flow.png %})
+![브레이즈 캔버스에 지연 단계를 추가하는 컴포넌트 검색 창.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 캔버스 흐름을 사용하여 만든 캔버스는 최대 200단계를 포함할 수 있습니다. 캔버스가 200 단계를 초과하면 로딩 문제가 발생합니다.
@@ -277,11 +277,9 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 {% tabs local %}
 {% tab 캔버스 진입 등록 정보 %}
 
-`canvas_entry_properties`은(는) 캔버스를 생성하는 입력 일정 단계에서 구성되며 사용자를 캔버스로 진입시키는 트리거를 나타냅니다. 이러한 속성은 API 트리거 캔버스에 있는 항목 페이로드의 속성에도 액세스할 수 있습니다. `canvas_entry_properties` 객체의 최대 크기는 50KB입니다. 
+`canvas_entry_properties`은(는) 캔버스를 생성하는 입력 일정 단계에서 구성되며 사용자를 캔버스로 진입시키는 트리거를 나타냅니다. 이러한 속성은 API 트리거 캔버스에 있는 항목 페이로드의 속성에도 액세스할 수 있습니다. `canvas_entry_properties` 객체는 최대 50KB까지 가능합니다. 
 
-캔버스 흐름의 경우 Liquid에서 모든 메시지 단계에서 항목 속성을 사용할 수 있습니다. 이러한 항목 속성을 참조할 때는 {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %} Liquid를 사용합니다. 이 방법으로 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
-
-이러한 항목 속성을 참조할 때는 {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %} Liquid를 사용합니다. 이 방법을 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
+이러한 항목 속성을 참조할 때는 {% raw %} ``canvas_entry_properties.${property_name}`` {% endraw %} Liquid를 사용합니다. 이 방법을 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
 
 {% raw %}
 예를 들어 다음 요청을 고려해 보세요: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. "shoes"라는 단어를 ``{{canvas_entry_properties.${product_name}}}`` Liquid을 사용하여 메시지에 추가할 수 있습니다.
@@ -317,13 +315,13 @@ Braze는 IP 워밍을 위해 **캔버스가 예약될 때마다 제한 기능**�
 
 ### 캔버스를 위한 지능형 선택
 
-지능형 선택 기능은 이제 다변량 캔버스 내에서 사용할 수 있습니다. 다변량 캠페인을 위한 지능형 선택][18a] 기능과 유사하게, 캔버스를 위한 지능형 선택은 각 캔버스 배리언트의 성능을 분석하고 각 배리언트를 통해 유입되는 사용자 비율을 조정합니다. 이 분포는 총 예상 전환 수를 극대화하기 위해 각 배리언트의 성능/성과 측정기준을 기반으로 합니다.
+지능형 선택 기능은 이제 다변량 캔버스 내에서 사용할 수 있습니다. 다변량 캠페인을 위한 지능형 선택][18a] 기능과 유사하게, 캔버스를 위한 지능형 선택은 각 캔버스 배리언트의 성능을 분석하고 각 배리언트를 통해 유입되는 사용자 비율을 조정합니다. 이 분포는 총 예상 전환 수를 최대화하기 위해 각 이형 상품의 성과 지표를 기반으로 합니다.
 
 다변량 캔버스를 사용하면 카피뿐만 아니라 타이밍과 채널도 테스트할 수 있다는 점을 명심하세요. 지능형 선택을 통해 캔버스를 더 효율적으로 테스트하고 사용자가 최상의 캔버스 여정을 경험할 수 있도록 자신감을 가질 수 있습니다.
 
 !['지능형 선택' 옵션은 '이형 상품 배포 편집' 페이지에서 활성화됩니다. 캔버스를 분석하고 최적화할 때 페이지 전체에 가로 막대가 표시되며, 이 가로 막대는 각각 색상과 크기가 다른 여러 섹션으로 나뉘어져 있습니다. 이는 시각적 표현일 뿐이며 특정 분석과 관련이 없습니다.][18b]
 
-캔버스용 지능형 선택은 각 배리언트로 분류된 사용자 분포를 점차 실시간으로 조정하여 캔버스 결과를 최적화합니다. 통계 알고리즘이 귀하의 변형들 중에서 결정적인 승자를 결정하면 성과가 저조한 변형들을 배제하고 향후 모든 적격 수신자를 캔버스의 승리 변형에 배정합니다. 
+캔버스용 지능형 선택은 각 배리언트로 분류된 사용자 분포를 점차 실시간으로 조정하여 캔버스 결과를 최적화합니다. 통계 알고리즘이 변형 중에서 결정적인 승자를 결정하면, 실적이 저조한 변형은 배제하고 향후 캔버스의 모든 적격 대상자를 우승 변형에 넣습니다. 
 
 이러한 이유로 지능형 선택은 새로운 사용자가 자주 들어오는 캔버스에서 가장 잘 작동합니다.
 
