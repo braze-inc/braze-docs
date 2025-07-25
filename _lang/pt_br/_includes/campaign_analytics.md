@@ -212,7 +212,7 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Impressões únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Unique Impressions' %} <span style="white-space: nowrap">Essa contagem</span> não aumenta na segunda vez que um usuário visualiza um Cartão de Conteúdo.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Essa contagem</span> não aumenta na segunda vez que um usuário visualiza um Cartão de Conteúdo.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Destinatários únicos</a></td>
@@ -275,7 +275,7 @@ Para as definições completas de todas as métricas de Banners, consulte o [Glo
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressões únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md métrica='Unique Impressions' %} <span style="white-space: nowrap">Cada usuário é contado apenas uma vez.</span></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Cada usuário é contado apenas uma vez.</span></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Total de cliques</a></td>
