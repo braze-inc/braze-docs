@@ -452,3 +452,37 @@ Here's what you need to know about Banner dimensions and sizing:
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
+
+### Accessing properties {#accessing-properties}
+
+To access the properties of a banner, use one of the following methods depending on the type you defined in the dashboard.
+
+If a property you referenced does not exist, these methods will return `null`.
+
+{% tab Swift %}
+
+```swift
+// Passes the specified banner to the completion handler
+AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner in
+  // Returns the String property
+  let stringProperty: String? = banner.stringProperty(key: "color")
+
+  // Returns the boolean property
+  let booleanProperty: Bool? = banner.boolProperty(key: "expanded")
+
+  // Returns the number property as a double
+  let numberProperty: Double? = banner.numberProperty(key: "height")
+
+  // Returns the Unix UTC millisecond timestamp property as an integer
+  let timestampProperty : Int? = banner.timestampProperty(key: "account_start")
+
+  // Returns the image property as a String of the image URL
+  let imageProperty : String? = banner.imageProperty(key: "homepage_icon")
+
+  // Returns the JSON object property as a [String: Any] dictionary
+  let jsonObjectProperty : [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
+}
+```
+
+{% endtab %}
+{% endtabs %}
