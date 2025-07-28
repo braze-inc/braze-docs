@@ -34,4 +34,11 @@ If your campaign analytics count for *Message Sent* or *Unique Recipients* doesn
 
 ### Target audience is too complex to launch
 
-This error means your target audience contains too many regex values, very long regex values, or too many filters. Simplify your audience before trying to launch again.
+This rare error means your target audience contains too many regex values, very long regex values, or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
+
+If you receive this error, simplify your target audience before launching again, including:
+
+- If your audience references multiple segments, make sure the segments don't have redundancies, such as the same filters appearing in multiple segments.
+- Make sure you aren't referencing outdated data in segment filters. For example, an outdated filter might look for users who haven't received a certain Canvas step in the past week, even though the Canvas has been stopped for months.
+
+You can also [contact Support]({{site.baseurl}}/braze_support/) for further assistance with filter optimization.
