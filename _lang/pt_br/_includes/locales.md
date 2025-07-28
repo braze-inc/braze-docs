@@ -1,15 +1,30 @@
+{% if include.section == "Prerequisites" %}
+## Pré-requisitos
+
+Para editar e gerenciar [o suporte a vários idiomas]({{site.baseurl}}/multi_language_support/), é necessário ter a permissão de usuário "Manage Multi-Language Settings" (Gerenciar configurações de vários idiomas). Para adicionar a localização a uma mensagem, você precisará de permissões para editar campanhas.
+
+{% endif %}
+
+{% if include.section == "Preview" %}
+
+## Faça uma prévia de suas localidades
+
+No menu suspenso de **Prévia da mensagem como usuário** dentro da aba **Teste**, selecione **Usuário personalizado** e insira diferentes idiomas para pré-visualizar a mensagem e verificar se sua mensagem é traduzida conforme o esperado.
+
+{% endif %}
+
 {% if include.section == "Frequently Asked Questions" %}
 
 ## Perguntas frequentes
 
 #### Posso fazer uma alteração na cópia traduzida em uma das minhas localidades?
-Sim. Primeiro, faça a edição no CSV, depois faça o upload do arquivo novamente para alterar a cópia traduzida.
+Sim. Primeiro, faça a edição no CSV, depois faça upload do arquivo novamente para fazer uma alteração na cópia traduzida.
 
 #### Posso aninhar tags de tradução?
 Não.
 
 #### Posso adicionar estilo HTML nas tags de tradução?
-Sim, mas certifique-se de verificar se a formatação HTML não foi traduzida junto com o conteúdo.
+Sim, mas certifique-se de verificar se a formatação HTML não é traduzida junto com o conteúdo.
 
 #### Que validações ou verificações extras o Braze faz?
 

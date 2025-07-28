@@ -1,3 +1,18 @@
+{% if include.section == "Prerequisites" %}
+## Requisitos previos
+
+Para editar y administrar [el soporte multilingüe]({{site.baseurl}}/multi_language_support/), debes tener el permiso de usuario "Administrar configuración multilingüe". Para añadir la configuración regional a un mensaje, necesitarás permisos para editar campañas.
+
+{% endif %}
+
+{% if include.section == "Preview" %}
+
+## Vista previa de tus configuraciones regionales
+
+En el desplegable **Vista previa del mensaje como usuario**, dentro de la pestaña **Prueba**, selecciona **Usuario personalizado** e introduce distintos idiomas para previsualizar el mensaje y comprobar si tu mensaje se traduce como esperabas.
+
+{% endif %}
+
 {% if include.section == "Frequently Asked Questions" %}
 
 ## Preguntas más frecuentes

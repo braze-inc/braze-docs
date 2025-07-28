@@ -20,7 +20,7 @@ Braze provides predefined methods for setting the following user attributes with
 
 {% tabs %}
 {% tab using methods %}
-To set a default attribute for a user, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
+To set a default attribute for a user, call the `getUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
 {% subtabs local %}
 {% subtab First name %}

@@ -17,7 +17,7 @@ Your segment will always begin processing after the initial save. Whenever your 
 
 #### Setting up a recurring refresh
 
-To set up a recurring schedule by designating refresh settings, select **Enable refresh**. The option to designate refresh settings is available for all types of Segment Extensions, including SQL segments, CDI segments, and simple form-based Segment Extensions.
+To set up a recurring schedule by designating refresh settings, select **Enable refresh**. The option to designate refresh settings is available for all types of Segment Extensions, including SQL segments, CDI Segment Extensions, and simple form-based Segment Extensions.
 
 {% alert important %}
 To optimize your data management, refresh settings are automatically turned off for unused Segment Extensions. Segment Extension are considered unused when they're:
@@ -43,7 +43,7 @@ The ability to set an hourly refresh schedule isn't available for form-based Seg
 
 #### Credit consumption and additional costs
 
-Because refreshes re-run your segment’s query, each refresh for SQL segments will consume SQL segment credits, and each refresh for CDI segments will incur a cost within your third-party data warehouse.
+Because refreshes re-run your segment’s query, each refresh for SQL segments will consume SQL segment credits, and each refresh for CDI Segment Extensions will incur a cost within your third-party data warehouse.
 
 {% alert note %}
 Segments could require up to 60 minutes to refresh because of data processing times. Segments that are currently in the process of refreshing will have a “Processing” status within your Segment Extensions list. This has a couple of implications:
