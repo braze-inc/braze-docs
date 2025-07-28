@@ -2,8 +2,24 @@
 
 ## Default user attributes
 
+### Predefined methods
+
+Braze provides predefined methods for setting the following user attributes within the [`User` class](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html):
+
+- First Name
+- Last Name
+- Language
+- Country
+- Date of Birth
+- Email
+- Gender
+- Home City
+- Phone Number
+
+### Setting default attributes
+
 {% tabs %}
-{% tab standard implementation %}
+{% tab using methods %}
 To set a default attribute for a user, call the `getUser()` method on your Braze instance to get a reference to the current user of your app. Then you can call methods to set a user attribute.
 
 {% subtabs local %}
@@ -38,22 +54,34 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Braze provides predefined methods for setting the following user attributes within the [`User` class](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html):
+### Unsetting default attributes
 
-- First Name
-- Last Name
-- Language
-- Country
-- Date of Birth
-- Email
-- Gender
-- Home City
-- Phone Number
+To unset a default user attribute, pass `null` to the related method. For example:
+
+{% tabs local %}
+{% tab First name %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab Gender %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab Date of birth %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## Custom user attributes
 
+### Setting custom attributes
+
 {% tabs %}
-{% tab standard implementation %}
+{% tab using methods %}
 In addition to the default user attribute methods, you can also set [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for your users. Full method specifications, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -154,12 +182,28 @@ The GTM template does not support nested properties on events or purchases. You 
 {% endtab %}
 {% endtabs %}
 
-### Unsetting a custom attribute
+### Unsetting custom attributes
 
-Custom attributes can be unset by setting their value to `null`.
+To unset a custom attribute, pass `null` to the related method.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
+```
+
+### Nesting custom attributes
+
+You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
 ```
 
 ### Using the REST API
