@@ -26,6 +26,8 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 
 {% alert note %}
 Treasure Data logs each event in batches. For more information on how to query Treasure Data to get event counts, refer to [Braze Currents Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+
+If you're looking to integrate with Treasure Data's new Braze streaming connector, refer to [Treasure Data's documentation](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4) for detailed setup instructions. For any questions about the migration or setup within Braze, please reach out to your Braze account team.
 {% endalert %}
 
 ## Integration
