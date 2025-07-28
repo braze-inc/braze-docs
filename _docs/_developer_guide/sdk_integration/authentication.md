@@ -452,3 +452,6 @@ When a request is rejected because of an authentication error, the SDK will invo
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
+#### Can you use the SDK Authentication feature for anonymous users? {#faq-anonymous-users}
+
+No. This feature will no-op for anonymous users.
