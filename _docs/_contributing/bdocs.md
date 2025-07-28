@@ -54,7 +54,7 @@ If you're on MacOS, you can copy the output of `bdocs` directly to your clipboar
 
 ### `deploy`
 
-This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `master` and then listing them in the proper Markdown format.
+This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `main` and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}
@@ -70,7 +70,7 @@ $ ./bdocs deploy
 
 ### `release`
 
-This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `master` since the last release and then listing them in the proper Markdown format.
+This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `main` since the last release and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}

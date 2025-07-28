@@ -8,9 +8,9 @@ on:
 
 jobs:
   add-deploy-label:
-    # Only run if the PR is merged, and the base branch == 'master' and head branch == 'develop'
+    # Only run if the PR is merged, and the base branch == 'main' and head branch == 'develop'
     if: github.event.pull_request.merged == true &&
-        github.event.pull_request.base.ref == 'master' &&
+        github.event.pull_request.base.ref == 'main' &&
         github.event.pull_request.head.ref == 'develop'
     runs-on: ubuntu-latest
     steps:
