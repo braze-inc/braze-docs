@@ -21,7 +21,7 @@ O Dashboard Builder permite que você crie e visualize dashboards analíticos pe
 2. Selecione **Create Dashboard**.
 3. Selecione qual fonte de dados alimentará seus relatórios:
 - **Relatórios** criados no Report Builder
-- **Consultas personalizadas** que foram criadas no Query Builder<br><br>![Janela para selecionar a fonte de dados para seu dashboard.][4]<br><br>
+- **Consultas personalizadas** que foram criadas no Query Builder<br><br>![Janela para selecionar a fonte de dados para seu dashboard.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Agora, siga as respectivas etapas para sua fonte de dados:
 
@@ -82,13 +82,13 @@ Ajuste o tamanho do bloco arrastando o canto inferior direito do bloco e ajuste 
 
 ### Modelos de dashboard disponíveis
 
-A Braze oferece modelos de dashboards pré-criados para casos de uso frequente, como análise de receita usando a atribuição do último ponto de contato. Note que a capacidade de editar um dashboard de modelo ainda não está disponível. Entre em contato com seu gerente de sucesso do cliente se quiser ver determinados modelos de dashboard em futuras versões de modelos.
+A Braze oferece modelos de dashboards pré-criados para casos de uso frequente, como análise de receita usando a atribuição do último ponto de contato. Note que a capacidade de editar um dashboard de modelo ainda não está disponível. Entre em contato com seu gerente de sucesso do cliente se desejar ver determinados modelos de dashboard em futuras versões de modelos.
 
 #### Receita – atribuição de último ponto de contato
 
 O modelo **Receita - Atribuição do último ponto de contato** fornece uma análise da receita em campanhas, telas e canais. Todos os dados de receita são atribuídos à última mensagem tocada durante a janela de atribuição.
 
-Os toques incluem _clique em e-mail_, _clique em cartão de conteúdo_, _clique em mensagem no app_, _envio de mensagens SMS_, _leitura do WhatsApp_ e _envio de webhook_.
+Os toques incluem _clique em e-mail_, _clique em cartão de conteúdo_, _clique em mensagem no app_, _clique em link curto de SMS_, _leitura de WhatsApp_ e _envio de webhook_.
 
 | Métricas | Definição |
 | --- | --- |
@@ -121,7 +121,3 @@ Os toques incluem _clique em e-mail_, _clique em cartão de conteúdo_, _clique 
 
 Selecione o botão **Enviar feedback** ou entre em contato com o gerente de sucesso do cliente para compartilhar seu feedback conosco.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}
-[4]: {% image_buster /assets/img/select_data_source.png %}
