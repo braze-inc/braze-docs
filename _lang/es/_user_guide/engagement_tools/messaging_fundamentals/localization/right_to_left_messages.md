@@ -3,7 +3,7 @@ nav_title: Mensajes de derecha a izquierda
 article_title: Creación de mensajes de derecha a izquierda
 page_order: 1
 page_type: reference
-description: "En esta página se describen las mejores prácticas para elaborar mensajes en Braze que se lean de derecha a izquierda."
+description: "Esta página describe las mejores prácticas para crear mensajes en Braze que se lean de derecha a izquierda."
 ---
 
 # Crear mensajes de derecha a izquierda
