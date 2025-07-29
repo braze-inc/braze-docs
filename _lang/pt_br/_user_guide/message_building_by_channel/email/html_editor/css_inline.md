@@ -16,15 +16,13 @@ Para alguns clientes de e-mail, o envio de e-mail com CSS inlining pode melhorar
 
 ## Uso de CSS inlining
 
-Você pode controlar se a inclusão de CSS está ativada ou desativada para qualquer mensagem de e-mail selecionando uma caixa de seleção na **Informações de Envio** guia do editor de HTML.
 
-![Caixa de seleção para gerenciar o inlining de CSS no criador do HTML.][2]{: style="max-width:80%;"}
+
+
 
 ### Estado padrão de inlining
 
 Você pode definir um estado padrão ligado ou desligado globalmente em **Configurações** > **Preferências de e-mail**. Localize a configuração para **CSS Inlining**. Essa configuração determina o valor padrão desejado com o qual todas as novas mensagens de e-mail começam. Observe que a alteração dessa configuração não afetará nenhuma das mensagens de e-mail existentes. Você também pode substituir esse padrão a qualquer momento durante o envio de mensagens de e-mail.
 
-![Opção de CSS embutido em novos e-mails por padrão, localizada nas configurações de e-mail.][1]
 
-[1]:{% image_buster /assets/img_archive/css-inline1.png %}
-[2]:{% image_buster /assets/img_archive/css-inline2.png %}
+
