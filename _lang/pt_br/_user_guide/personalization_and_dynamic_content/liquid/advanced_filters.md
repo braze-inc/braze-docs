@@ -72,20 +72,68 @@ Não há como instanciar um hash como uma variável (como uma expressão) no Liq
 | nome do filtro | descrição do filtro | exemplo de entrada | exemplo de saída |
 |---|---|---|---|
 | `number_with_delimiter` | Formata um número com vírgulas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 
 ## Filtro de escape JSON / escape de string
 
 | nome do filtro | descrição do filtro |
-|---|---|---|---|
+|---|---|
 | `json_escape` | Escapa todos os caracteres especiais em uma string (como aspas duplas `""` e barra invertida ''). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Esse filtro deve ser sempre usado ao personalizar uma string em um dicionário JSON e é útil principalmente para webhooks.
+
+## 
+
+| nome do filtro | descrição do filtro |
+|---|---|
+|  |  | 
+|  |  | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% endraw %}
+
+
+
+###  
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### 
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+
+
+
+
+### 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### 
+
+```liquid
+{{json_string}}
+```
 {% endraw %}
 
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values
