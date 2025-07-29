@@ -22,7 +22,7 @@ Before you can track user data in the experiment, your app needs to record when 
 To learn more about logging feature flag impressions, see [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions).
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
@@ -35,7 +35,9 @@ if (featureFlag?.enabled) {
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
@@ -47,8 +49,8 @@ if (featureFlag != null && featureFlag.getEnabled()) {
 }
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("my-new-feature")
@@ -60,6 +62,8 @@ if (featureFlag?.enabled == true) {
 }
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
