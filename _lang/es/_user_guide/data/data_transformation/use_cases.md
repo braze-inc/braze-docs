@@ -25,13 +25,13 @@ Cuando los clientes abren tickets de servicio al cliente en una plataforma como 
 
 ## Integración con Braze
 
-Braze tiene una integración con [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/), una plataforma de información y cuestionarios para clientes. Con Transformación de datos, puede guardar varias respuestas de encuesta en un atributo personalizado anidado, en lugar de en la integración existente que guarda varios atributos personalizados.
+ Con Transformación de datos, puede guardar varias respuestas de encuesta en un atributo personalizado anidado, en lugar de en la integración existente que guarda varios atributos personalizados.
 
 ## Ejemplo de código de transformación
 
 Considere esta carga útil de muestra de Typeform, una plataforma de encuestas, que se envía cada vez que se recibe una respuesta a una encuesta.
 
-![][1]
+
 
 {% tabs local %}
 {% tab Transformación básica %}
