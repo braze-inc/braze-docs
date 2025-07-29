@@ -9,15 +9,21 @@ alias: /landing_pages/
 
 # Acerca de las páginas de destino
 
-> Las páginas de destino Braze son páginas web independientes que pueden impulsar su estrategia de captación y compromiso de usuarios.
+> 
+
+
+
+
 
 ## Requisitos previos
 
-Para poder acceder a las páginas de destino, crearlas y publicarlas, necesitas permisos de administrador o todos los permisos siguientes:
+
 
 - Acceder a páginas de inicio
 - Crear borradores de página de inicio
 - Publicar páginas de inicio
+
+
 
 ## Niveles del plan
 
@@ -41,7 +47,7 @@ No, no hay requisitos técnicos.
 
 ### ¿Existe un editor HTML para las páginas de destino?
 
-Puedes editar el HTML de una página de destino utilizando el bloque Código personalizado.
+ 
 
 ### ¿Puedo crear un webhook dentro de una página de destino?
 
