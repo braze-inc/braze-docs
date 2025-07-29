@@ -37,7 +37,7 @@ A tabela a seguir descreve como os usuários podem usar cada tipo de bloco de ed
 |`Video`| Cria um link para o conteúdo do vídeo. |
 |`Social`| Insira o ícone da plataforma de redes sociais. Imagens personalizadas podem ser feitas upload para ícones específicos da marca. |
 |`Icons`| Insere um ícone. É possível fazer upload de imagens personalizadas. Um ícone de espaço reservado de grandes dimensões será usado até que uma imagem seja feita upload. |
-|`HTML`| Insere HTML bruto. Ótimo para Liquid avançado, como conteúdo conectado ou declarações condicionais. | 
+|`HTML`| Insere HTML bruto.  | 
 |`Menu`| Cria um menu flexível para a mensagem que você está projetando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -109,6 +109,8 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Button`.
 |---|---|
 |`Link Type`| Determina a ação ao clicar no botão e define o protocolo de link apropriado. |
 |`URL`| Dinâmico com base no site selecionado `Link Type`.|
+|| |
+||  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Divisor
@@ -138,10 +140,14 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Image`. 
 
 | propriedades | descrição |
 |---|---|
-|`Auto Width`| Modifica os pixels da imagem. |
-|`Align`| Move a imagem para a esquerda, para o centro ou para a direita. |
-|`URL`| O endereço hospedado de sua imagem. |
-|`Alternate text`| A cópia escrita que aparece no lugar de uma imagem quando a imagem não é carregada. |
+|`Auto Width`|  |
+|`Align`|  |
+||  |
+|`URL`|  |
+|`Alternate text`|   |
+||   |
+|| |
+||  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
