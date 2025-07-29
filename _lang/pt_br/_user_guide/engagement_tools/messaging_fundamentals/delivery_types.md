@@ -15,7 +15,7 @@ tool:
 
 ## Tipos de entrega e entrada
 
-Para campanhas, o tipo de entrega determina quando os usuários entrarão na campanha e quando ela será enviada. Como um Canva é criado como uma jornada contínua do usuário, o conceito de envio de mensagens de um agendamento é chamado de tipo de entrada.
+Para campanhas, o tipo de entrega determina quando os usuários entrarão na campanha e quando ela será enviada. Como o Canva é construído como uma jornada contínua do usuário, o conceito de envio de mensagens de um agendamento é chamado de tipo de entrada.
 
 | Entrega<nobr> e tipos de entrada | Descrição                                                                                                                                                                                                                                                                                                                                      |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -35,7 +35,7 @@ Você pode escolher entre as seguintes opções ao usar a entrega programada:
 - [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Com a entrega programada, os usuários entrarão em uma programação de tempo, da mesma forma que você programaria uma campanha. É possível inscrever usuários em um Canva assim que ele for lançado ou em um horário determinado.
 
 #### Horários designados
@@ -51,7 +51,7 @@ Você pode optar por enviar seu Canva em uma frequência de entrada específica,
 A entrega baseada em ação enviará campanhas aos usuários que realizarem uma ação específica. Depois que essa ação ocorrer, você poderá decidir quando enviar a campanha: imediatamente, após um horário específico, em um horário específico ou em um horário futuro.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 As opções baseadas em ações determinam quais ações (ou disparos) um usuário precisa realizar para entrar em um Canva e em que momento específico ele pode começar a entrar. Por exemplo, você pode avaliar seus usuários pelas seguintes ações:
 
 - Abrindo seu aplicativo
@@ -71,7 +71,7 @@ A janela de entrada do seu Canvas determina quais usuários podem entrar no Canv
 Ao selecionar API-triggered como opção de entrega, você receberá um ID de campanha para identificar qual campanha enviar com o [endpoint`/campaigns/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#prerequisites).
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Ao selecionar API-triggered como seu tipo de entrada, você receberá um Canva ID para identificar qual campanha enviar com o [endpoint`/canvas/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases).
 {% endtab %}
 {% endtabs %}
