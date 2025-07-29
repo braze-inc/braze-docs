@@ -14,13 +14,13 @@ search_rank: 2
 
 {% raw %}
 
-Para enviar una llamada de contenido conectado, utilice la etiqueta `{% connected_content %}`. Con esta etiqueta, puede asignar o declarar variables utilizando `:save`. Se puede hacer referencia a aspectos de estas variables más adelante en el mensaje con [Liquid][2].
+Para enviar una llamada de contenido conectado, utilice la etiqueta `{% connected_content %}`. Con esta etiqueta, puede asignar o declarar variables utilizando `:save`. 
 
 Por ejemplo, el siguiente cuerpo de mensaje accederá a la URL `http://numbersapi.com/random/trivia` e incluirá un dato curioso en su mensaje:
 
 ```
 {% connected_content http://numbersapi.com/random/trivia :save result %}
-Hi there, here is fun some trivia for you!: {{result.text}}
+Hi there, here is some fun trivia for you!: {{result.text}}
 ```
 
 ### Añadir variables
@@ -43,13 +43,13 @@ Las solicitudes de contenido conectado sólo admiten solicitudes GET y POST.
 
 ## Tratamiento de errores
 
-Si la URL no está disponible y llega a una página 404, Braze mostrará una cadena vacía en su lugar. Si la URL llega a una página HTTP 500 o 502, la URL fallará en la lógica de reintento.
+Si la URL no está disponible y llega a una página 404, Braze mostrará una cadena vacía en su lugar. 
 
-Si el punto final devuelve JSON, puedes detectarlo comprobando si el valor `connected` es nulo, y entonces [anular condicionalmente el mensaje][1]. Braze solo permite URL que se comuniquen a través de los puertos 80 (HTTP) y 443 (HTTPS).
+ Braze solo permite URL que se comuniquen a través de los puertos 80 (HTTP) y 443 (HTTPS).
 
 ### Detección de host no sano
 
-El Contenido conectado emplea un mecanismo de detección de host no saludable para detectar cuando el host de destino experimenta una alta tasa de lentitud significativa o una sobrecarga que da lugar a tiempos de espera, demasiadas solicitudes u otros resultados que impiden que Braze se comunique correctamente con el punto final de destino. Actúa como salvaguarda para reducir la carga innecesaria que pueda estar causando dificultades al host de destino. También sirve para estabilizar la infraestructura de Braze y mantener velocidades rápidas de mensajería.
+ Actúa como salvaguarda para reducir la carga innecesaria que pueda estar causando dificultades al host de destino. También sirve para estabilizar la infraestructura de Braze y mantener velocidades rápidas de mensajería.
 
 Si el host de destino experimenta una alta tasa de lentitud o sobrecarga significativa, Braze detendrá temporalmente las peticiones al host de destino durante un minuto, simulando en su lugar respuestas que indiquen el fallo. Al cabo de un minuto, Braze sondeará la salud del anfitrión utilizando un pequeño número de peticiones antes de reanudar las peticiones a toda velocidad si se comprueba que el anfitrión está sano. Si el anfitrión sigue sin estar sano, Braze esperará otro minuto antes de volver a intentarlo.
 
@@ -63,14 +63,14 @@ Visita [Solución de problemas de webhook y solicitudes de contenido conectado](
 
 ## Permitir un rendimiento eficiente
 
-Dado que Braze entrega mensajes a una tasa muy rápida, asegúrate de que tu servidor puede gestionar miles de conexiones simultáneas para que los servidores no se sobrecarguen al descargar contenidos. Cuando utilices API públicas, confirma que tu uso no infringe ningún límite de tasa que pueda emplear el proveedor de la API. Braze requiere que el tiempo de respuesta del servidor sea inferior a dos segundos por razones de rendimiento; si el servidor tarda más de dos segundos en responder, el contenido no se insertará.
+Dado que Braze entrega mensajes a una tasa muy rápida, asegúrate de que tu servidor puede gestionar miles de conexiones simultáneas para que los servidores no se sobrecarguen al descargar contenidos. Cuando utilices API públicas, confirma que tu uso no infringe ningún límite de tasa que pueda emplear el proveedor de la API. 
 
-Los sistemas Braze pueden realizar la misma llamada a la API de contenido conectado más de una vez por destinatario. Esto se debe a que Braze puede necesitar realizar una llamada a la API de contenido conectado para representar la carga útil de un mensaje, y las cargas útiles de los mensajes pueden representarse varias veces por destinatario para validación, lógica de reintento u otros fines internos. Sus sistemas deben ser capaces de tolerar que la misma llamada de Contenido Conectado se realice más de una vez por destinatario.
+Los sistemas Braze pueden realizar la misma llamada a la API de contenido conectado más de una vez por destinatario. Esto se debe a que Braze puede necesitar realizar una llamada a la API de contenido conectado para representar la carga útil de un mensaje, y las cargas útiles de los mensajes pueden representarse varias veces por destinatario para validación, lógica de reintento u otros fines internos. 
 
 ## Lo que hay que saber
 
 * Braze no cobra por las llamadas a la API y no contarán para tu asignación de puntos de datos.
-* Hay un límite de un MB para las respuestas de Contenido conectado.
+* 
 * Las llamadas a Contenido Conectado se realizarán cuando se envíe el mensaje, excepto en el caso de los mensajes in-app, que realizarán esta llamada cuando se visualice el mensaje.
 * Las llamadas de Contenido Conectado no siguen redireccionamientos.
 
@@ -80,17 +80,17 @@ Los sistemas Braze pueden realizar la misma llamada a la API de contenido conect
 
 Si la URL requiere autenticación básica, Braze puede generar una credencial de autenticación básica para que la utilice en su llamada a la API. Puedes gestionar las credenciales de autenticación básica existentes y añadir otras nuevas desde **Configuración** > **Contenido conectado**.
 
-![La configuración de "Contenido conectado" en el panel de Braze.][34]
+
 
 Para añadir una nueva credencial, selecciona **Añadir credencial**. Dale un nombre a tu credencial e introduce el nombre de usuario y la contraseña.
 
-![La ventana "Crear nuevas credenciales" con la opción de introducir un nombre, un nombre de usuario y una contraseña.][35]{: style="max-width:30%" }
+
 
 A continuación, puede utilizar esta credencial de autenticación básica en sus llamadas a la API haciendo referencia al nombre del token:
 
 {% raw %}
 ```
-Hi there, here is fun some trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
+Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
 {% endraw %}
 
@@ -121,11 +121,11 @@ Al utilizar Braze Connected Content, es posible que determinadas API requieran u
 
 ### Utilizar la autenticación abierta (OAuth)
 
-Algunas configuraciones de la API requieren la obtención de un token de acceso que luego se puede utilizar para autenticar el punto final de la API al que quieres acceder.
+
 
 #### Paso 1: Recuperar el token de acceso
 
-El siguiente ejemplo ilustra la recuperación y el almacenamiento de un token de acceso en una variable local que puede utilizarse para autenticar la siguiente llamada a la API. Se puede añadir un parámetro `:cache_max_age` para que coincida con el tiempo de validez del token de acceso y reducir el número de llamadas salientes de Connected Content. Consulte [Caché configurable][36] para obtener más información.
+ Se puede añadir un parámetro `:cache_max_age` para que coincida con el tiempo de validez del token de acceso y reducir el número de llamadas salientes de Connected Content. 
 
 {% raw %}
 ```
@@ -164,9 +164,9 @@ Una vez guardado el token, puede introducirse dinámicamente en la siguiente lla
 
 Cuando se envía un mensaje que utiliza contenido conectado desde Braze, los servidores de Braze realizan automáticamente solicitudes de red a los servidores de nuestros clientes o de terceros para recuperar datos. Con las listas de IP permitidas, puedes verificar que las solicitudes de Contenido conectado proceden realmente de Braze, lo que añade una capa adicional de seguridad.
 
-Braze enviará solicitudes de Contenido Conectado desde los siguientes rangos de IP. Los rangos de la lista se añaden automática y dinámicamente a cualquier clave API que haya optado por permitir la inclusión en la lista. 
+Braze enviará solicitudes de Contenido Conectado desde los siguientes rangos de IP.  
 
-Braze tiene un conjunto reservado de IPs que se utilizan para todos los servicios, no todos los cuales están activos en un momento dado. Esto está diseñado para que Braze envíe desde un centro de datos diferente o realice tareas de mantenimiento, si es necesario, sin afectar a los clientes. Braze puede utilizar una, un subconjunto o todas las siguientes IP enumeradas al realizar solicitudes de Contenido conectado.
+Braze tiene un conjunto reservado de IPs que se utilizan para todos los servicios, no todos los cuales están activos en un momento dado.  Braze puede utilizar una, un subconjunto o todas las siguientes IP enumeradas al realizar solicitudes de Contenido conectado.
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
@@ -197,9 +197,4 @@ Por predeterminado, las peticiones POST no se almacenan en caché. Sin embargo, 
 El almacenamiento en caché puede ayudar a reducir las llamadas duplicadas de Contenido conectado. Sin embargo, no está garantizado que siempre resulte en una única llamada de Contenido conectado por usuario.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
-[36]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching
