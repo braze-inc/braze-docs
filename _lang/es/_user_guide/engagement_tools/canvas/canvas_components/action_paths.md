@@ -12,14 +12,14 @@ tool: Canvas
 
 > Las Rutas de Acción en Canvas te permiten ordenar a tus usuarios en función de sus acciones. 
 
-Utilizando las Rutas de Acción, puedes:
 
-![Un paso en Rutas de acción como primer paso en un viaje de usuario de Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+
+Utilizando las Rutas de Acción, puedes:
 
 * Personalizar las rutas de los usuarios en función de una acción específica, incluidos los eventos de participación del usuario y los eventos personalizados.
 * Retener a los usuarios durante un tiempo determinado para priorizar su próxima ruta en función de sus acciones durante este periodo de evaluación.
 
-## Crear una ruta de acción
+## 
 
 Para crear una ruta de acción, añada un componente a su lienzo. Arrastre y suelte el componente desde la barra lateral, o seleccione el botón <i class="fas fa-plus-circle"></i> más en la parte inferior de un paso y seleccione **Rutas de acción**. 
 
@@ -29,7 +29,7 @@ En la **Configuración de la acción**, establezca la **Ventana de evaluación**
 
 En **la Configuración de la acción**, también puede activar el orden de clasificación de los componentes activando la opción **Avanzar usuarios según orden de clasificación**.
 
-![La Configuración de la Acción con una ventana de evaluación de 1 día.][4]
+
 
 Por defecto, **la clasificación** está desactivada. Cuando un usuario entra en la ruta de acción y realiza el evento desencadenante asociado a cualquier grupo de acciones, avanzará inmediatamente por el grupo de acciones correspondiente. Si un usuario no realiza un evento desencadenante, avanzará a través del grupo por defecto **Todos los demás** al final del periodo de evaluación.
 
@@ -63,7 +63,7 @@ Añada un activador o varios activadores para definir sus grupos de acciones. Aq
 - Desencadenar una geovalla
 - Enviar un mensaje entrante SMS o WhatsApp
 
-![Un grupo de acción llamado "Grupo 1" para los usuarios que realizan cualquier compra.][3]
+
 
 En la configuración de cada grupo de acción, también tienes la opción de seleccionar la casilla **Quiero que este grupo salga del Canvas**, lo que significa que los usuarios de este grupo saldrán del Canvas al final del periodo de evaluación.
 
@@ -80,6 +80,3 @@ Si los usuarios entran varias veces en una ruta de acción y tienen varias entra
 Ten en cuenta que las clasificaciones no son [editables después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[3]: {% image_buster /assets/img/actionpath_group.png %}
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 
