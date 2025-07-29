@@ -67,9 +67,15 @@ Keep in mind that paths and their downstream steps cannot be removed from a Canv
 To prevent experiment contamination, if your Canvas has an active or in-progress experiment and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will end. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas. You also can't turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step.<br><br>For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
+### Additonal settings
+
+Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you’d like this experiment to track conversions. The time window you specify here will determine how long conversion events (chosen in the Canvas setup) will be tracked for the experiment. The per-event conversion windows specified in the Canvas setup will not apply to this step’s tracking and will be replaced by this conversion window.
+
+Experiment Paths have their own conversion windows, rather than inheriting the same duration set at the Canvas level. If a conversion (configured in the Experiement Paths step) happens in the conversion window set on the step, it will be attributed to the step. If a conversion occurs outside of the conversion window, it'll be attributed to the Canvas. These metrics are separated at a Canvas level.
+
 ## Tracking performance
 
-From the **Canvas Analytics** page, click the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
+From the **Canvas Analytics** page, select the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
 
 Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that the analytics of individual steps do **not** take into account the structure of the experiment. The analytics in the Experiment Step should be used to compare across paths.
 

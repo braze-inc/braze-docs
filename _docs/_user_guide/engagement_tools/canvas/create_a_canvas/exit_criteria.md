@@ -12,6 +12,12 @@ tool: Canvas
 
 > By adding exception events directly to your Canvas entry rules, your users can exit your Canvas as soon as the event happens at the end of the step. This helps achieve a more targeted approach to Canvas messaging with your audience.
 
+### How users exit
+
+After performing the exit event, users are exited from the Canvas as soon as the step they're currently in has been exited. For example, if a user is in a Delay step for 30 days and they perform the exit event on the first day of the Delay step, the user won't exit the Canvas for another 29 days.
+
+Let's consider another example when using time-based exit criteria. A user enters a Delay step set to 24 hours on July 1 at 12 am. In this delay period, they perform the exit event ""Last made purchase less than 1 hour ago"" at 3 am. This user will be evaluated for the exit criteria on July 2 at 12 am, which is the conclusion of the Delay step's duration. Since 21 hours have passed since their purchase on July 1 at 3 am, they won't exit the Canvas because they didn't make a purchase within the one hour of exiting the Delay step on July 2. This impacts the ""Total Exits by Exit Criteria"" in your Canvas analytics, which are only updated after a user has fully exited the Canvas."
+
 ## Setting up exit criteria
 
 In the **Target Audience** step of the Canvas builder, you can set up exit criteria to identify which users you want to exit your Canvas. 
@@ -45,6 +51,15 @@ Additional exception events include:
 - Performing a cart updated event
 - Performing a checkout completed event
 - Performing a checkout started event
+
+#### Scheduled steps
+
+If a Canvas step is scheduled, the user will drop out immediately from the Canvas after the exception event occurs. 
+Let's say a user enters a Canvas where the first step has a one-week delay and an exception event. If the user performs the exception event on day 5, they would exit immediately after performing the exception event (on day 5). 
+ 
+#### Triggered steps
+
+If a Canvas step is triggered by an event, the last scheduled send enqueued from that trigger will be canceled, but the user will remain inside the canvas for the duration of the window. That means the user can still be sent the step if they perform the trigger event again within the window. After the window passes, the user will then exit the Canvas.
 
 ### Using segments and filters
 
