@@ -10,6 +10,9 @@ description: "Esta página de destino cubre los canales de mensajería Braze. Lo
 
 guide_featured_title: "Canales disponibles"
 guide_featured_list:
+- name: ""
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Tarjetas de contenido
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: Mensajería Push
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS Y MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: ""
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## 
+
+Puede utilizar Braze para crear campañas de mensajería accesibles en cada canal. Trabaja con tus ingenieros para asegurarte de que cumples las normas de accesibilidad en tu implementación. 
+
+-  
+-  
+
+
 
 ## Elegir un canal de mensajes
 
