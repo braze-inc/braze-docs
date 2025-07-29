@@ -14,10 +14,6 @@ search_rank: 4
 
 Os Cartões de Conteúdo são um recurso adicional e devem ser adquiridos. Para começar com os Cartões de Conteúdo, entre em contato com seu gerente de sucesso do cliente da Braze ou com nossa equipe de suporte.
 
-{% alert note %}
-Se você estiver usando nossa ferramenta de feed de notícias, recomendamos que você mude para o nosso canal de envio de mensagens Content Cards—é mais flexível, personalizável e confiável. O Feed de notícias também está sendo descontinuado. Veja nosso [Guia de Migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou entre em contato com seu gerente de conta da Braze para saber mais.
-{% endalert %}
-
 ## Benefícios do uso de cartões de conteúdo
 
 Aqui estão apenas alguns benefícios do uso de cartões de conteúdo em comparação com o fato de seus desenvolvedores criarem conteúdo em seu app:
@@ -176,9 +172,9 @@ Os usuários podem visualizar e interagir com o conteúdo mais relevante para o 
 
 Seus desenvolvedores irão integrar os Cartões de Conteúdo quando integrarem o SDK da Braze. Para mais detalhes sobre como integrar com os cartões de conteúdo, consulte os artigos do guia do desenvolvedor para sua plataforma:
 
-- []({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guia de Integração de Cartão de Conteúdo do iOS")
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guia de Integração do Cartão de Conteúdo do Android")
-- []({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guia de Integração de Cartão de Conteúdo da Web")
+- 
+- 
+- 
 
 ## Fontes
 
