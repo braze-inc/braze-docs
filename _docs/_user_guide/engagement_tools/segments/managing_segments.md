@@ -48,6 +48,14 @@ These are the columns of information that you can select to display in the segme
 
 Selecting **Show Starred Only** narrows your view to the segments that were starred by you.
 
+## Viewing a segment's messaging use
+
+Go to a segment's **Messaging Use** section for an overview of where the segment is being used, such as within other segments, campaigns, and Canvases.
+
+{% alert note %}
+To prevent loops of segments referencing one another, segments that use the **Segment Membership** filter can't be referenced by other segments. For more details, refer to [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+{% endalert %}
+
 ## Managing specific segments
 
 ![The edit menu for a segment showing the options "Edit", "Duplicate", "Archive", and "Add to starred".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}

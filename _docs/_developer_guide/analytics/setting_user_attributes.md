@@ -26,6 +26,14 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 {% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% multi_lang_include developer_guide/roku/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}

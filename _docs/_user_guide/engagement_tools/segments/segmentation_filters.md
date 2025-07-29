@@ -395,11 +395,11 @@ glossaries:
     tags:
       - App
   - name: Most Recent App Version Name
-    description: Segments by the recent name of the user's app.
+    description: Segments by the recent name of the user's app.<br><br>When using "less than" or "less than or equal to", if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.
     tags:
       - App 
   - name: Most Recent App Version Number
-    description: Segments by the recent app version number of the user's app.
+    description: Segments by the recent app version number of the user's app.<br><br>When using “less than” or “less than or equal to”, if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.<br><br>It may take time for the current app versions to populate. The app version on the user profile updates when the information is captured by the SDK, which relies on when users open their apps. If the user doesn't open the app, the current version won't be updated. These filters also won't apply retroactively. It's good to use "greater than" or "equal" to current and future versions, but using past version filters may cause unexpected behaviors.
     tags:
       - App 
   - name: Uninstalled
