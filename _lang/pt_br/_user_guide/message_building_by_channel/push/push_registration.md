@@ -87,7 +87,7 @@ O iOS não gera automaticamente tokens por push para um app quando ele é instal
 
 Há duas maneiras de verificar o estado da inscrição push de um usuário com o Braze:
 
-- **Perfil do usuário**: Você pode acessar perfis de usuários individuais por meio do dashboard do Braze na página [User Search (Pesquisa de usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) ). Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
+- **Perfil do usuário**:  Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
 - **Exportação da API Rest**: É possível exportar perfis de usuários individuais no formato JSON usando os pontos de extremidade Exportar [usuários por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Usuários por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). A Braze retornará um objeto de tokens por push que contém informações de capacitação por push por dispositivo.
 
 ### Verificação do status do registro push
