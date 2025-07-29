@@ -22,7 +22,7 @@ Considere as [condições de corrida]({{site.baseurl}}/user_guide/engagement_too
 
 Para entrar em uma canva, os usuários devem estar no público de entrada antes que o horário de entrada ocorra, independentemente de a canva estar agendada, baseada em ação ou acionada por API. 
 
-![][1]{: style="max-width:75%;"}
+
 
 Observe que os usuários que se qualificarem para seu público de entrada após o lançamento do canva não entrarão no canva.
 
@@ -102,4 +102,3 @@ Depois de revisar os detalhes mais finos da sua canva, confira [Enviando canvas 
 - Confirme que a etapa do Canvas estava conectada à etapa anterior no momento do envio.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}
