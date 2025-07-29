@@ -10,6 +10,9 @@ description: "Esta landing page abrange os canais de envio de mensagens da Braze
 
 guide_featured_title: "Canais disponíveis"
 guide_featured_list:
+- name: ""
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Cartões de conteúdo
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: Mensagens por push
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS E MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: ""
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## 
+
+Você pode usar o Braze para criar campanhas de envio de mensagens acessíveis em cada canal. Trabalhe com seus engenheiros para garantir que você atenda aos padrões de acessibilidade em sua implementação. 
+
+-  
+-  
+
+
 
 ## Escolha de um canal de envio de mensagens
 
