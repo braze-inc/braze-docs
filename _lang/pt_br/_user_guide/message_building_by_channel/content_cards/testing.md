@@ -26,7 +26,7 @@ Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_g
 
 Também é possível fazer a prévia das mensagens na guia **Teste** como se fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado.
 
-
+![Prévia de um cartão de conteúdo na guia "Teste".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### Lista de verificação de teste
 
@@ -67,11 +67,11 @@ Um caso de uso comum é tentar depurar por que um usuário não consegue ver um 
     4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    <br><br>
+    Onde `4861692e-6fce-4215-bd05-3254fb9e9057` é o `campaign_id`.<br><br>
 
 6. Acesse a página **Campanhas** e pesquise o endereço `campaign_id`.
 
-
+![Procure por campaign_id na página de Campanhas]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 A partir daí, é possível revisar as configurações e o conteúdo das mensagens para detalhar e determinar por que um usuário não consegue ver um determinado cartão de conteúdo.
 
