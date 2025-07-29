@@ -10,7 +10,7 @@ description: "Saiba mais sobre a pesquisa global no Braze."
 
 Você pode usar a barra de pesquisa para encontrar seu trabalho e outras informações em seu dashboard do Braze. A barra de pesquisa está na parte superior de seu dashboard da Braze. Clique na barra de pesquisa ou pressione <kbd>Ctrl</kbd> + <kbd>K</kbd> no Windows ou <kbd>⌘</kbd> + <kbd>K</kbd> no Mac para ir diretamente para a barra de pesquisa.
 
-![Resultados de busca para a palavra-chave "promo", mostrando campanhas e itens que incluem o termo promo, incluindo a página Códigos de Promoção.][1]
+
 
 ## O que você pode pesquisar?
 
@@ -66,13 +66,13 @@ Cada resultado de pesquisa é associado a tags que indicam o tipo de conteúdo d
 
 Você pode revisitar o conteúdo acessado recentemente no menu de pesquisa. A interface de pesquisa exibe seus resultados abertos recentemente abaixo da barra de pesquisa, incluindo itens com os quais interagiu em toda a plataforma Braze. Isso permite que você retorne a páginas, campanhas, Canvas, segmentos ou modelos de e-mail visualizados anteriormente, para que possa continuar de onde parou com menos cliques.
 
-![Busca expandida, mostrando páginas recentemente abertas e conteúdo Braze para o usuário.][2]
+
 
 ### Localizar páginas que foram renomeadas
 
 A pesquisa compreende sinônimos para páginas que foram renomeadas em nossa [navegação atualizada]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). Por exemplo, ele encontrará "Exportação de Dados" quando você pesquisar "Currents", pois essa página foi renomeada.
 
-![Resultados de busca para "Exportação de Dados" onde o usuário pesquisou por "Currents."][3]
+
 
 <!---
 
@@ -88,15 +88,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 Você pode incluir conteúdo ativo e de rascunho nos resultados da pesquisa selecionando **Mostrar somente ativo e de rascunho**. Por padrão, a alternância está ativada e todo o conteúdo, inclusive o arquivado, é mostrado.
 
-![O botão de alternância "Mostrar somente ativos e rascunhos".][4]
+
 
 ### Pesquisar emojis
 
 Você usa emojis ao nomear seu trabalho no Braze? Procure por eles! Você pode usar emojis como consultas de pesquisa. 😎
 
-[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
-[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
-[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
-[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
 
