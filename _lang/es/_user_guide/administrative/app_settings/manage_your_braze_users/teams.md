@@ -17,7 +17,7 @@ Los equipos no están disponibles en todos los contratos Braze. Si desea acceder
 
 ## 
 
-{% multi_lang_include permissions.md content="Diferencias" %}
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## 
 
