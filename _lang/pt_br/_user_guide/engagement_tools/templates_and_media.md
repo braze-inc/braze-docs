@@ -35,17 +35,11 @@ guide_featured_list:
 
 Você pode usar e gerenciar modelos e conteúdo criativo na seção **Modelos** para os seguintes recursos:
 
-- **[Modelos de e-mail][2]**
-- **[Blocos de Conteúdo][7]**
-- **[Modelos de Webhook][3]**
-- **[Modelos de link][6]**
-- **[Perfis de cores de mensagem no app e modelos CSS][4]**
-- **[Gerenciar ativos na biblioteca de mídia][5]**
+- 
+- 
+- 
+- 
+- 
+- 
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/
