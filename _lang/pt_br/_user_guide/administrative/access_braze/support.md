@@ -47,7 +47,7 @@ Ao se comunicar com o suporte, você pode descobrir que precisa acessar seu cons
   3. Tire uma captura de tela da guia do console.<br><br>
 - Safari
   1. Acessar Safari na barra de menu no topo do seu canva e então selecionar **Preferências**.
-  2. Selecione **Avançado** e marque a caixa de seleção ao lado de **Mostrar menu Desenvolver na barra de menus**. Você pode então sair da janela.
+  2. Selecione **Advanced** e marque a caixa de seleção ao lado de **Show Develop menu in menu bar**. Você pode então sair da janela.
   3. Clique com o botão direito do mouse na página da Web e selecione **Inspecionar elemento**.
   4. Selecione a guia **Console** na janela que se abre.
   5. Tire uma captura de tela da guia do console.
