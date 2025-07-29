@@ -62,7 +62,7 @@ Embora a programação de entrada desse modelo esteja definida como **API-Trigge
 3. Na janela de entrada, selecione a data de início.
 4. Selecione a opção para permitir que os usuários insiram seu fuso local. Isso pode manter a relevância do envio de mensagens e levar a um maior engajamento se as mensagens forem enviadas nos melhores horários para envio.
 
-![Um Canvas baseado em ações que visa usuários que abandonaram seu carrinho, com a janela de entrada em 15 de outubro de 2024 às 15:20 no fuso horário local dos usuários.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
+![Um Canvas baseado em ações que visa usuários que abandonaram seu carrinho, com a janela de entrada em 15 de outubro de 2024 às 15:20 no fuso local dos usuários.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### Etapa 4: Determinar quem entra no Canva
 
