@@ -10,7 +10,7 @@ description: "This page covers how to use suppression lists to specify which use
 
 # Suppression lists
 
-> Suppression lists specify groups of users who will never receive messages. Admins can create dynamic suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
+> Suppression lists are groups of users who won't automatically receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users will enter and exit suppression lists as they meet filter criteria. You can also set exception tags so that the suppression list won’t apply to campaigns or Canvases with those tags. Messages from campaigns or Canvases with exception tags will still reach suppression list users who are in the target segments.
 
 {% alert important %}
 Suppression lists are currently in beta. If you're interested in being part of this beta, reach out to your customer success manager. During the beta, functionality may change, and you can have up to five active suppression lists at a time, but let your customer success manager know if you need more. 
