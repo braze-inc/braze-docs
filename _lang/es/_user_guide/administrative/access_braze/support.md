@@ -28,7 +28,7 @@ Los contactos de soporte designados pueden acceder a todos los casos de soporte 
 
 ![La casilla de verificación para configurar a un usuario como contacto de soporte designado.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
-El número de contactos de soporte designados que puedes establecer depende de tu límite de contactos. Para más información, ponte en contacto con tu administrador del éxito del cliente.
+El número de contactos de soporte designados que puedes establecer depende de tu límite de contactos. Ponte en contacto con tu administrador del éxito del cliente para obtener más información.
 
 ### Obtener acceso
 
