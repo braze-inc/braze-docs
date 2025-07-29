@@ -16,7 +16,7 @@ Consultar el historial de versiones de Canvas puede ser especialmente útil para
 
 ## Gestión de versiones
 
-
+![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Para crear una nueva versión, haga clic en **Actualizar lienzo**. Esto le permite realizar cambios sin sobrescribir la configuración anterior del lienzo. Cuando se crea una nueva versión del lienzo, los usuarios que ya están en el lienzo avanzan por el flujo de trabajo de la nueva versión. Los usuarios que entren en el Lienzo entrarán también en la nueva versión. 
 
@@ -32,7 +32,7 @@ Tenga en cuenta que si no realizó ninguna edición entre el lanzamiento de un l
 
 A medida que aumente tu historial de versiones, también podrás cambiar el nombre de cada versión en la barra lateral para mantenerte organizado. Por defecto, los nombres de las versiones se generan como un número basado en cuántas versiones se han creado previamente. Si cambia el nombre de una versión cuando ya no está activa, aparecerá en el registro de cambios de Canvas, pero no en el registro de cambios de la versión dentro de la vista del historial de versiones.
 
-
+![Ejemplo de registro de cambios en Canvas que muestra que se han creado dos nuevas versiones de Canvas.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Descartar versiones
 
