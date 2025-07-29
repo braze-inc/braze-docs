@@ -65,11 +65,11 @@ A guia **Criador** consiste nos seguintes campos:
 - Método HTTP
 - Corpo da solicitação
 
-![A guia "Compose" com um exemplo de modelo de webhook do Facebook Messenger.]({% image_buster /assets/img_archive/webhook_compose.png %})
+
 
 #### Idioma {#internationalization}
 
-A [internacionalização][16] é compatível com o URL e o corpo da solicitação. Para internacionalizar sua mensagem, selecione **Adicionar idiomas** e preencha os campos obrigatórios. 
+ Para internacionalizar sua mensagem, selecione **Adicionar idiomas** e preencha os campos obrigatórios. 
 
 Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para ver a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
@@ -85,7 +85,7 @@ A Braze só permite URLs que se comunicam pelas portas padrão `80` (HTTP) e `44
 
 ##### Usando Liquid
 
-Você pode personalizar seus URLs de webhook usando o [Liquid][15]. Às vezes, determinados pontos de extremidade podem exigir que você identifique um usuário ou forneça informações específicas do usuário como parte do seu URL. Ao usar o Liquid, inclua um [valor padrão][19] para cada informação específica do usuário usada no URL.
+ Às vezes, determinados pontos de extremidade podem exigir que você identifique um usuário ou forneça informações específicas do usuário como parte do seu URL. 
 
 #### Método HTTP
 
@@ -101,13 +101,13 @@ Os pares de valores-chave JSON permitem que você escreva facilmente uma solicit
 
 ![Corpo da solicitação definido como pares de valores-chave JSON.]({% image_buster /assets/img/webhook_json_1.png %})
 
-É possível personalizar seus pares de valores-chave usando o Liquid, como incluir qualquer atributo de usuário, [atributo personalizado][17] ou [propriedade de evento][18] em sua solicitação. Por exemplo, você pode incluir o nome e o e-mail de um cliente em sua solicitação. Não se esqueça de incluir um [valor padrão][19] para cada atribuição.
+ Por exemplo, você pode incluir o nome e o e-mail de um cliente em sua solicitação. 
 
 ##### Texto bruto
 
 A opção de texto bruto lhe dá a flexibilidade de escrever uma solicitação para um ponto de extremidade que espera um corpo de qualquer formato. Por exemplo, você pode usar isso para escrever uma solicitação para um ponto de extremidade que espera que sua solicitação esteja no formato XML. 
 
-Tanto a [personalização][15] quanto a [internacionalização][16] usando Liquid são suportadas em texto bruto.
+
 
 ![Um exemplo de um corpo de solicitação com texto bruto usando Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
@@ -172,7 +172,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar os [usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Nessa etapa, você selecionará o público maior de seus segmentos e restringirá ainda mais esse segmento com nossos filtros, se desejar. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+ Nessa etapa, você selecionará o público maior de seus segmentos e restringirá ainda mais esse segmento com nossos filtros, se desejar. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
 
 #### Selecionar eventos de conversão
 
@@ -195,17 +195,20 @@ Depois de terminar de criar a última parte de sua campanha ou Canva, revise seu
 
 ### Erros, lógica de nova tentativa e tempos limite
 
-Os webhooks dependem de servidores Braze que fazem solicitações a um endpoint externo, e podem ocorrer erros de sintaxe e outros. A primeira etapa para evitar erros de webhook é testar sua campanha de webhook quanto a erros de sintaxe e certificar-se de que as variáveis personalizadas tenham um valor padrão. No entanto, os webhooks ainda podem falhar devido a problemas como chaves de API expiradas, limites de frequência ou erros inesperados do servidor. Se o seu webhook não conseguir enviar, uma mensagem de erro será registrada no [Message Activity Log][42].
+  
 
-Essa descrição contém a hora em que o erro ocorreu, o nome do app e a mensagem de erro:
+- 
+- 
+
+
 
 ![Erro de webhook com a mensagem "Um token de acesso ativo deve ser usado para consultar informações sobre o usuário atual".]({% image_buster /assets/img_archive/webhook-error.png %})
 
-Se o corpo da mensagem não for suficientemente claro em relação à origem do erro, verifique a documentação do endpoint da API que está usando. Normalmente, eles fornecem uma explicação dos códigos de erro que o endpoint usa, bem como a causa típica desses erros.
+ Normalmente, eles fornecem uma explicação dos códigos de erro que o endpoint usa, bem como a causa típica desses erros.
 
-Como em outras campanhas, o Braze rastreia a entrega de suas campanhas de webhook e as conversões resultantes delas. Quando a solicitação do webhook for enviada, o servidor receptor retornará um código de resposta indicando o que aconteceu com a solicitação. 
+#### 
 
-A tabela a seguir resume as diferentes respostas que o servidor pode enviar, como elas afetam a análise de dados da campanha e se, no caso de erros, o Braze tentará reenviar a campanha:
+Quando a solicitação do webhook for enviada, o servidor receptor retornará um código de resposta indicando o que aconteceu com a solicitação. A tabela a seguir resume as diferentes respostas que o servidor pode enviar, como elas afetam a análise de dados da campanha e se, no caso de erros, o Braze tentará reenviar a campanha:
 
 | Código da resposta | Marcado como recebido? | Novas tentativas? |
 |---------------|-----------|----------|
@@ -218,8 +221,12 @@ A tabela a seguir resume as diferentes respostas que o servidor pode enviar, com
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Para erros de `5XX`, o Braze tentará enviar novamente o webhook até 5 vezes em 30 minutos usando o backoff exponencial. Para todos os outros erros, o Braze continuará tentando novamente por até 24 horas.<br><br>Cada webhook tem 90 segundos antes de atingir o tempo limite.
+ <br><br>Cada webhook tem 90 segundos antes de atingir o tempo limite.
 {% endalert %}
+
+#### 
+
+ 
 
 ### Lista de permissões de IP {#ip-allowlisting}
 
@@ -238,15 +245,9 @@ Se estiver criando um webhook Braze-para-Braze e usando a lista de permissões, 
 Há muitas maneiras de usar webhooks e, com nossos parceiros de tecnologia (Alloys), é possível usar webhooks para elevar o nível da comunicação diretamente com seus clientes e usuários.
 
 Confira:
-* [Messenger]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
-* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
-* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
+* 
+* 
+* 
 * E muitos outros de nossos [parceiros de tecnologia]({{site.baseurl}}/partners/home/)!
 
 
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/
