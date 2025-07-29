@@ -30,7 +30,7 @@ guide_featured_list:
 
 guide_menu_title: "Other articles"
 guide_menu_list:
-- name: ""
+- name: Blocos de produtos de arrastar e soltar
   link: /docs/dnd_product_blocks/
   image: /assets/img/braze_icons/columns-01.svg
 
