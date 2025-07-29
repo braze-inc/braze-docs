@@ -13,7 +13,7 @@ local_redirect: #optimizations
 
 > Você pode criar um [teste multivariante ou A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para qualquer campanha que tenha como direcionamento um único canal.
 
-![O menu suspenso ao selecionar o botão "Criar campanha" para escolher entre multicanal ou canal único.][2]{: style="max-width:25%;float:right;margin-left:15px;" }
+
 
 ## Etapa 1: Crie sua campanha
 
@@ -26,11 +26,11 @@ Você pode criar até oito variantes da sua mensagem, diferenciando entre títul
 
 Para obter algumas ideias sobre como começar a diferenciar suas variantes, consulte [Dicas para diferentes canais](#tips-different-channels).
 
-![Selecionando "Adicionar Variante" para uma campanha.][3]
+
 
 ## Etapa 3: Programe sua campanha
 
-O agendamento de sua campanha multivariante funciona da mesma forma que o agendamento de qualquer outra campanha do Braze. Todos os tipos de entrega padrão [][4] ] estão disponíveis.
+O agendamento de sua campanha multivariante funciona da mesma forma que o agendamento de qualquer outra campanha do Braze. 
 
 Após o início de um teste multivariante, não é possível fazer alterações na campanha. Se você alterar os parâmetros, como a linha de assunto ou o corpo do HTML, a Braze considerará o experimento comprometido e o desativará imediatamente.
 
@@ -50,7 +50,7 @@ Para campanhas push, de e-mail e webhook programadas para serem enviadas uma vez
 
 Ao visualizar seus resultados, é possível comparar as taxas de conversão de suas variantes com uma taxa de conversão de linha de base fornecida pelo grupo de controle. Isso permite comparar os efeitos de suas variantes e os efeitos de suas variantes com a taxa de conversão que resultaria se você não enviasse nenhuma mensagem.
 
-![Painel Testes A/B que mostra o detalhamento percentual do Grupo de controle, Variante 1, Variante 2 e Variante 3 com 25% para cada grupo.][5]
+
 
 {% alert important %}
 Usar um grupo de controle ao determinar um vencedor por _Aberturas_ ou _Cliques_ não é recomendado. Como o grupo de controle não receberá a mensagem, esses usuários não poderão abrir ou clicar. Portanto, a taxa de conversão desse grupo é 0% por definição e não constitui uma comparação significativa com as variantes.
@@ -62,7 +62,7 @@ Ao usar o limite de frequência com um Testes A/B, o limite de frequência não 
 
 #### Grupos de controle com Intelligent Selection
 
-O tamanho do grupo de controle de uma campanha com [Intelligent Selection][1] é baseado no número de variantes. Se cada variante for enviada para mais de 20% dos usuários, então o grupo de controle é 20%, e as variantes são divididas igualmente entre os 80% restantes. No entanto, se tiver variantes suficientes para que cada variante seja enviada a menos de 20% dos usuários, o grupo de controle deverá ser menor. Quando a Intelligent Selection começa a analisar a performance do seu teste, o grupo de controle aumenta ou diminui com base nos resultados.
+ Se cada variante for enviada para mais de 20% dos usuários, então o grupo de controle é 20%, e as variantes são divididas igualmente entre os 80% restantes. No entanto, se tiver variantes suficientes para que cada variante seja enviada a menos de 20% dos usuários, o grupo de controle deverá ser menor. Quando a Intelligent Selection começa a analisar a performance do seu teste, o grupo de controle aumenta ou diminui com base nos resultados.
 
 ## Etapa 5: Designar um evento de conversão (opcional)
 
@@ -89,7 +89,7 @@ Dependendo de qual canal você selecionar, você pode testar diferentes componen
 | ---------------------| --------------- | ------------- |
 | Push | Copiar <br> Uso de imagens e emojis <br> Deep links  <br> Apresentação de números (por exemplo, "triplicar" versus "aumentar em 200%")  <br> Apresentação do tempo (por exemplo, "termina à meia-noite" versus "termina em 6 horas") | Aberturas  <br> Taxa de conversão |
 | E-mail | Assunto <br> Nome de exibição <br> Saudação <br> Texto do corpo <br> Uso de imagens e emojis <br> Apresentação de números (por exemplo, "triplicar" versus "aumentar em 200%") <br> Apresentação do tempo (por exemplo, "termina à meia-noite" versus "termina em 6 horas") | Aberturas  <br> Taxa de conversão |
-| Mensagem no app | Aspectos listados para "push" (empurrar) <br> [Formato da mensagem][7] | Clique <br> Taxa de conversão |
+| Mensagem no app | Aspectos listados para "push" (empurrar) <br>  | Clique <br> Taxa de conversão |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -100,7 +100,7 @@ Além disso, a duração ideal de seu teste também pode variar dependendo do ca
 
 Por exemplo, se você está testando um push, pode obter resultados significativos mais rapidamente do que ao testar e-mail, uma vez que os usuários veem os pushes imediatamente, mas pode levar dias até que vejam ou abram um e-mail. Se você está testando mensagens no aplicativo, tenha em mente que os usuários devem abrir o aplicativo para ver a campanha, então você deve esperar mais para coletar resultados tanto dos seus usuários mais ativos quanto dos seus usuários mais típicos.
 
-Se você não tiver certeza de quanto tempo seu teste deve durar, o recurso [seleção inteligente][6]] pode ser útil para encontrar uma variante vencedora de forma eficiente.
+
 
 ### Escolha de um segmento {#choosing-a-segment}
 
@@ -130,10 +130,3 @@ Por exemplo, se você enviar uma mensagem push para um público amplo com um con
 Se você usar manualmente números de balde aleatórios para grupos de controle, confira [coisas a observar]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) em seus grupos de controle.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[2]: {% image_buster /assets/img/ab_create_1.png %}
-[3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
