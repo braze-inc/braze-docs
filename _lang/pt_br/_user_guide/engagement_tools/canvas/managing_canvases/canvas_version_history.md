@@ -16,7 +16,7 @@ Consultar o histórico de versões do Canvas pode ser especialmente útil para m
 
 ## Gerenciamento de versões
 
-
+![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Para criar uma nova versão, clique em **Update Canva (Atualizar tela**). Isso permite que você faça alterações sem substituir a configuração anterior do Canva. Quando uma nova versão do Canvas for criada, os usuários que já estiverem no Canvas avançarão pelo fluxo de trabalho da nova versão. Os usuários que entrarem no Canva também entrarão na nova versão. 
 
@@ -32,7 +32,7 @@ Note que, se você não fez nenhuma edição entre o lançamento de um Canvas e 
 
 À medida que a contagem do histórico de versões aumenta, você também pode renomear cada versão na barra lateral para manter a organização. Por padrão, os nomes das versões são gerados como um número com base em quantas versões foram criadas anteriormente. Se você renomear uma versão enquanto ela não estiver mais ativa, isso aparecerá no changelog do Canva, mas não no changelog da versão na visualização do histórico de versões.
 
-
+![canva changelog exemplo mostrando que duas novas versões do canva foram criadas.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Descarte de versões
 
