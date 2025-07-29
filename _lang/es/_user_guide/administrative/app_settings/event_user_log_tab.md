@@ -32,11 +32,13 @@ Cada registro se divide en varias secciones, que pueden incluir:
 * Eventos de campaña
 * Datos de respuesta
 
-Haga clic en el botón **Datos sin procesar** para mostrar los datos JSON sin procesar de ese registro específico.
 
-![Registros sin procesar de eventos][10]
+
+
 
 Los registros de eventos de usuario permanecerán en el panel de control durante los 30 días posteriores a su registro.
+
+
 
 ## Solución de problemas
 
@@ -67,4 +69,3 @@ En relación con las sesiones de usuario, puede utilizar Braze para supervisar d
 
 Estos comportamientos no se ven afectados por el evento de fin de sesión que se descarga en la siguiente sesión.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}
