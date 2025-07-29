@@ -26,7 +26,7 @@ Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_g
 
 También puedes previsualizar los mensajes desde la pestaña **Prueba** como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado.
 
-
+![Una vista previa de la tarjeta de contenido en la pestaña "Prueba".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### Lista de comprobación
 
@@ -67,11 +67,11 @@ Un caso de uso común es tratar de depurar por qué un usuario no puede ver una 
     4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    <br><br>
+    Donde `4861692e-6fce-4215-bd05-3254fb9e9057` es el `campaign_id`.<br><br>
 
 6. Vaya a la página de **Campañas** y busque `campaign_id`.
 
-
+![Buscar campaign_id en la página de Campañas]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 A partir de ahí, puede revisar la configuración y el contenido de sus mensajes para determinar por qué un usuario no puede ver una tarjeta de contenido concreta.
 
