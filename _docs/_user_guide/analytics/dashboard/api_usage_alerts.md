@@ -70,7 +70,7 @@ You can set up an email alert, a webhook alert or both. Webhook alerts can be ve
 
 ![An email will be sent to the selected email when the criteria for the alert is reached.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
-### API usage alert webhook payload example {#payload}
+### Sample payload {#payload}
 
 The following is a sample payload for the body of an API Usage Alert webhook.
 
@@ -96,45 +96,47 @@ The following is a sample payload for the body of an API Usage Alert webhook.
 }
 ```
 
-### Examples
+### Example alerts
 
 Here are some ways to set up your API usage alert configurations to be notified in the following scenarios.
 
-#### General API health
-
+{% tabs local %}
+{% tab api health %}
 You can set up alerts to monitor the general health of your API. For example, you can set up these alerts when API errors increase drastically, such as 20% from the previous hour.
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |
 | --- | --- | --- | --- | --- | --- |
 | All endpoints | All API keys | `4XX` and `5XX` | Increased by 10% | 10 | 1 hour |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
+{% endtab %}
 
-#### Rate limit for an endpoint
-
+{% tab endpoint rate limit %}
 Be alerted when your workspace reaches its rate limit for `/users/track` endpoint. You can also apply this configuration for other Braze endpoints.
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |
 | --- | --- | --- | --- | --- | --- |
 | `/users/track` | All API keys | `429` | Greater than or equal to | 100 | 1 hour |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
+{% endtab %}
 
-#### Errors for API-triggered campaigns
-
+{% tab api-triggered campaigns %}
 This alert configuration notifies you when errors occur for API triggered campaigns and Canvases, some of which may be high-priority.
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |
 | --- | --- | --- | --- | --- | --- |
 | {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | All API keys | `4XX` and `5XX` | Greated than or equal to | 1 | 1 hour |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
+{% endtab %}
 
-#### Partner integrations
-
+{% tab partner integrations %}
 Use the following alert configuration to be alerted when a partner integration stops sending data to Braze.
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |
 | --- | --- | --- | --- | --- | --- |
 | All endpoints | The API key used for your partner integration | All response codes | Less than or equal to | 0 | 1 day |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
+{% endtab %}
+{% endtabs %}
 
 ## Considerations
 
