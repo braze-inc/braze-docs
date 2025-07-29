@@ -9,7 +9,7 @@ description: "Este artigo o orienta na solução de problemas que você pode ter
 
 # Solução de problemas de acesso ao Braze
 
-> Este artigo ajuda a solucionar problemas que possam ocorrer ao tentar acessar o Braze.
+> Este artigo o ajuda a solucionar problemas que possam ocorrer ao tentar acessar o Braze.
 
 ## Bloqueio da conta
 
