@@ -18,7 +18,7 @@ El panel de Braze está disponible en [varios idiomas](#supported-languages). Pu
 1. En el encabezado global, haz clic en <i class="fa-solid fa-globe" aria-label="Selecciona tu idioma"></i>.
 2. Elija su idioma en la lista.
 
-
+![]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
 
 El panel puede tardar unos instantes en volver a cargarse.
 
