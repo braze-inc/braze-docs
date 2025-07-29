@@ -70,7 +70,7 @@ A [Central de Preferências](#email-preference-center) Liquid pode ser incluída
 
 ### Verificação do estado do envio de e-mail
 
-![Perfil de usuário para John Doe com o estado de inscrição de e-mail definido como Subscribed (Inscrito).][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+
 
 Há duas maneiras de verificar o estado da inscrição de e-mail de um usuário no Braze:
 
@@ -96,13 +96,13 @@ Use os [endpoints de grupo de Inscrições]({{site.baseurl}}/api/endpoints/subsc
 
 Todos os grupos de inscrições são adicionados automaticamente à sua Central de Preferências.
 
-![Campos para criar um grupo de inscrições.][2]{: style="max-width:75%"}
+
 
 ### Segmentação com um grupo de inscrições
 
 Ao criar seus segmentos, defina o nome do grupo de inscrições como um filtro. Isso confirmará que os usuários que fizeram a aceitação do seu grupo receberão seus e-mails. Isso é ótimo para boletins informativos mensais, cupons, níveis de associação e muito mais.
 
-![Exemplo de direcionamento de usuários no segmento "Usuários Inativos" com o filtro para usuários no grupo de inscrições "Alertas Estáveis".][3]{: style="max-width:90%"}
+
 
 ### Arquivamento de grupos de inscrições
 
@@ -119,7 +119,7 @@ O Braze não processará nenhuma alteração de estado para usuários em grupos 
 
 Você pode consultar o gráfico de **Série temporal do grupo de inscrições** na página **Grupos de Inscrições** para visualizar o tamanho do grupo de inscrições com base no número de usuários ao longo de um período de tempo. Esses tamanhos de grupos de inscrições também são consistentes com outras áreas do Braze, como o cálculo do tamanho do segmento.
 
-![Um exemplo de gráfico "grupo de inscrições Timeseries" datado de 2 a 11 de dezembro. O gráfico mostra um aumento de ~10 milhões no número de usuários da 6ª para a 7ª.][4]
+![Um exemplo de gráfico "grupo de inscrições Timeseries" datado de 2 a 11 de dezembro. 
 
 #### Visualização de grupos de inscrições na análise de dados da campanha
 
@@ -128,7 +128,7 @@ Você pode consultar o gráfico de **Série temporal do grupo de inscrições** 
 1. Na página de **Análise de dados de campanha** para sua campanha, role para baixo até a seção **Performance de mensagens de e-mail**.
 2. Selecione a seta abaixo de **Grupos de inscrições** para ver a contagem agregada de mudanças de estado, conforme enviado por seus clientes.
 
-![A página "Desempenho da Mensagem de E-mail" exibindo a contagem agregada de mudanças de estado enviadas pelos clientes.][5]
+
 
 ## Central de Preferências de E-mail
 
@@ -163,7 +163,7 @@ Para criar uma landing page personalizada para a qual os usuários serão direci
 
 Recomendamos incluir um link de cancelamento de inscrição (como {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) na landing page para que os usuários tenham a opção de cancelar a inscrição caso tenham cancelado por acidente.
 
-![Envio de e-mail de cancelamento de inscrição personalizado no painel Página de cancelamento de inscrição personalizado.][6]
+
 
 ### Criação de uma página de aceitação personalizada
 
@@ -197,13 +197,5 @@ Os filtros "Status de Inscrição por E-mail" e "Status de Inscrição por Push"
 
 Isso pode ser útil se você quiser direcionar usuários que não se inscreveram nem se descadastraram e incentivá-los a se inscrever explicitamente para e-mail ou push. Nesse caso, você criaria um segmento com um filtro para "Status de inscrição em e-mail/push" e as campanhas para esse segmento serão direcionadas aos usuários inscritos, mas sem aceitação.
 
-![Status da inscrição de e-mail usado como um filtro de segmento.][8]
 
-[1]: {% image_buster /assets/img/push_example.png %}
-[2]: {% image_buster /assets/img/sub_group_create.png %}
-[3]: {% image_buster /assets/img/segment_sub_group.png %}
-[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[8]: {% image_buster /assets/img_archive/not_optin.png %}
+
