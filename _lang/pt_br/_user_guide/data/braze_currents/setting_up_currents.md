@@ -77,11 +77,17 @@ A seleção de um campo para uma dessas transformações aplicará essa transfor
 
 ### Etapa 6: Teste sua integração
 
-Você pode testar sua integração ou dar uma olhada nos dados de amostra do Currents em nosso [repositório do GitHub](https://github.com/Appboy/currents-examples) de exemplos do Currents.
-
 {% alert important %}
 O Currents descartará eventos com cargas úteis excessivamente grandes, superiores a 900 KB.
 {% endalert %}
+
+ 
+
+#### 
+
+ 
+
+
 
 #### Teste de conectores Currents
 
@@ -92,7 +98,7 @@ Os conectores Test Currents são versões gratuitas de nossos conectores existen
 
 Depois que seus conectores de teste do Currents atingirem o limite de envio, seu conector não enviará eventos até o próximo período de sete dias.
 
-Para fazer upgrade de seu conector de teste do Currents, edite a integração no dashboard e selecione **Upgrade**.
+
 
 ## Atualização de Currents
 
