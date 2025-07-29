@@ -15,7 +15,7 @@ tool:
 
 ## Arquivamento
 
-Quando você arquivar uma campanha ou um Canva, nenhuma outra mensagem será enviada e suas mensagens no app não serão exibidas. Você ainda poderá visualizar os resultados após o arquivamento, mas não poderá editar a campanha ou o Canva. Para fazer isso, você precisará [desarquivá-lo](#unarchiving-campaigns-and-canvases) primeiro.
+Ao arquivar uma campanha ou um Canva, nenhuma outra mensagem será enviada e suas mensagens no app não serão exibidas. Você ainda poderá visualizar os resultados após o arquivamento, mas não poderá editar a campanha ou o Canva. Para fazer isso, você precisará [desarquivá-lo](#unarchiving-campaigns-and-canvases) primeiro.
 
 {% tabs local %}
 {% tab campanha %}
@@ -26,7 +26,7 @@ Para arquivar uma campanha:
 3. Selecione **Arquivo**.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Para arquivar um Canva:
 
 1. Acesse **Envio de mensagens** > **Canva**.
