@@ -18,7 +18,7 @@ Para visualizar um relatório do seu [grupo de controle global]({{site.baseurl}}
 
 Em seguida, selecione o parâmetro com o qual deseja executar o relatório (sessões ou um evento personalizado específico) e selecione **Gerar relatório**.
 
-![][6]
+
 
 ## Configuração de seu relatório
 
@@ -49,4 +49,3 @@ Cada espaço de trabalho tem no máximo um grupo de controle global e um grupo d
 | Eventos por usuário | O número médio estimado de vezes que os usuários em cada grupo concluíram seus eventos de conversão durante o período de tempo selecionado. | Total de eventos ÷ tamanho estimado do grupo. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}
