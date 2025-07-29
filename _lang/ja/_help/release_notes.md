@@ -11,6 +11,9 @@ description: "このランディングページには、Brazeのリリースノ�
 
 guide_featured_title: "リリースノート"
 guide_featured_list:
+  - name: 2025
+    link: /docs/help/release_notes/2025/
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2024
     link: /docs/help/release_notes/2024/
     image: /assets/img/braze_icons/calendar-check-02.svg
