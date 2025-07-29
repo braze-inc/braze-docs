@@ -55,7 +55,7 @@ Este enfoque separa la plantilla en distintas localizaciones de envío. Tras el 
 
 En este enfoque, la localización se gestiona dentro de [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) y Liquid para definir la mensajería para cada usuario. 
 
-Tras el envío de un Canvas, el panel de control proporciona [análisis agregados de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), mientras que la participación a nivel de usuario puede medirse a través de [embudos de segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/) personalizados, como la combinación de filtros de [**País**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) y [**Paso de Canvas recibido**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step).
+Tras el envío de un Canvas, el panel de control proporciona [análisis agregados de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), mientras que la participación a nivel de usuario puede medirse a través de [embudos de segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) personalizados, como la combinación de filtros de [**País**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) y [**Paso de Canvas recibido**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step).
 
 | Ventajas | Consideraciones |
 | --- | --- |
@@ -234,7 +234,7 @@ Estos elementos del catálogo pueden ser referenciados utilizando [la personaliz
 {% endtab %}
 
 {% tab Mensajes de localización %}
-Añade y utiliza localizaciones en tu mensaje para dirigirte a usuarios en diferentes idiomas, todo dentro de una misma campaña o Canvas para los canales de correo electrónico o push. Para un recorrido completo, consulta [Locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) [en los]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/) [mensajes de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) o [Locales en los mensajes push]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
+Añade y utiliza localizaciones en tu mensaje para dirigirte a usuarios en diferentes idiomas, todo dentro de una misma campaña o Canvas para los canales de correo electrónico o push. Para una guía completa, consulta [Locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) [en los]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/) [mensajes de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) o [Locales en los mensajes push]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
 
 {% alert important %}
 Esta característica está actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
