@@ -34,7 +34,7 @@ Por padrão, as campanhas verificam os filtros de público no momento da entrada
 
 ### Por que há uma diferença entre o número de destinatários únicos e o número de envios para uma determinada campanha ou canva?
 
-Uma possível explicação para essa diferença pode ser devido à campanha ou canva ter a re-eligibilidade ativada. Ao ativar isso, os usuários que se qualificarem para o segmento e as configurações de entrega poderão receber a mensagem mais de uma vez. Se a re-eligibilidade não estiver ativada, a provável explicação para a diferença entre envios e destinatários únicos pode ser devido a usuários com vários dispositivos, em diferentes plataformas, associados aos seus perfis. 
+ Se a re-eligibilidade não estiver ativada, a provável explicação para a diferença entre envios e destinatários únicos pode ser devido a usuários com vários dispositivos, em diferentes plataformas, associados aos seus perfis. 
 
 Por exemplo, se você tiver uma canva que tenha notificações push para iOS e web, um determinado usuário com dispositivos móveis e de desktop pode receber mais de uma mensagem.
 
@@ -46,7 +46,7 @@ Se você tiver um [grupo de controle global]({{site.baseurl}}/user_guide/engagem
 
 A entrega no fuso local permite que você entregue campanhas de envio de mensagens para um segmento com base no fuso horário individual de um usuário. Sem entrega de fuso local, as campanhas serão agendadas com base nas configurações de fuso horário da sua empresa no Braze. 
 
-Por exemplo, uma empresa com sede em Londres que envia uma campanha às 12h atingirá usuários na costa oeste da América às 4h. Se o seu app estiver disponível apenas em determinados países, isso pode não ser um risco para você, caso contrário, recomendamos fortemente evitar o envio de notificações por push de madrugada para sua base de usuários!
+Por exemplo, uma empresa com sede em Londres que envia uma campanha às 12h atingirá usuários na costa oeste da América às 4h.  
 
 ### Como o Braze reconhece o fuso horário de um usuário?
 
@@ -68,7 +68,7 @@ Para que um usuário seja elegível para entrada, ele deve ser elegível para am
 
 O usuário precisa estar no segmento por 24 horas antes do lançamento. Se o usuário não for elegível na primeira verificação, então a Braze não tentará a segunda verificação.
 
-Por exemplo, se uma campanha está programada para ser entregue às 19h UTC, começamos a enfileirar os envios da campanha assim que um fuso horário é identificado (como Samoa). Isso significa que estamos nos preparando para enviar a mensagem, não para enviar a campanha. Se os usuários não corresponderem a nenhum filtro quando verificarmos a elegibilidade, eles não se enquadrarão no público-alvo.
+Por exemplo, se uma campanha está programada para ser entregue às 19h UTC, começamos a enfileirar os envios da campanha assim que um fuso horário é identificado (como Samoa). Isso significa que estamos nos preparando para enviar a mensagem, não para enviar a campanha. 
 
 Como outro exemplo, digamos que você queira criar duas campanhas agendadas para serem enviadas no mesmo dia—uma de manhã e outra à noite—e adicionar um filtro para que os usuários só possam receber a segunda campanha se já tiverem recebido a primeira. Com a entrega no fuso local, alguns usuários podem não receber a segunda campanha. Isso ocorre porque verificamos a elegibilidade quando o fuso horário do usuário é identificado; portanto, se o horário programado ainda não tiver ocorrido em seu fuso horário, ele não recebeu a primeira campanha, o que significa que não será elegível para a segunda campanha.
 
@@ -76,9 +76,9 @@ Como outro exemplo, digamos que você queira criar duas campanhas agendadas para
 
 Ao programar uma campanha, opte por enviá-la em um horário designado e, em seguida, selecione **Enviar campanha para usuários em seu fuso local**.
 
-A Braze recomenda fortemente que todas as campanhas no fuso local sejam agendadas com 24 horas de antecedência. Como uma campanha desse tipo precisa ser enviada durante um dia inteiro, o envio de mensagens com 24 horas de antecedência garante que sua mensagem chegue a todo o segmento de mensagem. No entanto, você pode agendar essas campanhas com menos de 24 horas de antecedência, se necessário. Lembre-se de que a Braze não enviará mensagens para nenhum usuário que tenha perdido o horário de envio por mais de 1 hora. 
+  No entanto, você pode agendar essas campanhas com menos de 24 horas de antecedência, se necessário.  
 
-Por exemplo, se for 13h00 e você programar uma campanha de fuso local para as 15h00, a campanha será enviada imediatamente a todos os usuários cujo horário local esteja entre 15h00 e 16h00, mas não aos usuários cujo horário local seja 17h00. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
+ Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
 
 Editar uma campanha de fuso local que está programada para menos de 24 horas de antecedência não alterará o cronograma da mensagem. Se você decidir editar uma campanha de fuso local para enviar em um horário posterior (por exemplo, 19h em vez de 18h), os usuários que estavam no segmento alvo quando o horário de envio original foi escolhido ainda receberão a mensagem no horário original (18h). Se você editar um fuso local para enviar em um horário anterior (por exemplo, 16h em vez de 17h), a campanha ainda será enviada a todos os membros do segmento no horário original (17h). 
 
@@ -107,25 +107,19 @@ Isso pode acontecer quando uma campanha está programada para ser lançada exata
 
 ### Qual é a "zona segura" antes que as mensagens em uma campanha agendada sejam enfileiradas?
 
-Você pode fazer alterações com segurança nas mensagens dentro das seguintes zonas seguras:
 
-- **Campanhas agendadas únicas** podem ser editadas até o horário de envio agendado.
-- **Campanhas recorrentes agendadas** podem ser editadas até o horário de envio agendado.
-- **As campanhas de horário de envio local** podem ser editadas até 24 horas antes do horário de envio programado.
-- **As campanhas de horário ideal de envio** podem ser editadas até 24 horas antes do dia em que a campanha está programada para ser enviada.
 
-### E se eu fizer uma edição no horário de envio dentro da "zona segura"?
+-  
+-  
+-  
+-  
 
-Alterar o horário de envio das campanhas dentro desse período pode levar a um comportamento indesejado, por exemplo:
+ 
 
 - A Braze não enviará mensagens para nenhum usuário que tenha perdido o horário de envio por mais de uma hora.
-- Mensagens pré-enfileiradas ainda podem ser enviadas no horário originalmente enfileirado, em vez do horário ajustado.
+- 
 
-### O que devo fazer se a "zona segura" já passou?
-
-Para garantir que as campanhas operem conforme desejado, recomendamos parar a campanha atual (isso cancelará quaisquer mensagens enfileiradas). Em seguida, você pode duplicar a campanha, fazer as alterações necessárias e lançar a nova campanha. Você pode precisar excluir usuários desta campanha que já receberam a primeira campanha.
-
-Reajuste os horários da campanha para permitir o envio no fuso horário.
+ Em seguida, você pode duplicar a campanha, fazer as alterações necessárias e lançar a nova campanha. Você pode precisar excluir usuários desta campanha que já receberam a primeira campanha. Reajuste os horários da campanha para permitir o envio no fuso horário.
 
 ### Por que o número de usuários que entram em uma campanha não corresponde ao número esperado?
 
@@ -147,7 +141,7 @@ Sim, use o filtro `api_id:YOUR_API_ID` na página **Campanhas** para procurar um
 
 As campanhas acionadas por API permitem gerenciar o texto da campanha, os testes multivariantes e as regras de reelegibilidade no dashboard do Braze e, ao mesmo tempo, disparar a entrega desse conteúdo a partir de seus próprios servidores e sistemas. Essas mensagens também podem incluir dados adicionais a serem modelados nas mensagens em tempo real.
 
-Campanhas de API são usadas para rastrear as mensagens que você envia usando a API. Diferentemente da maioria das campanhas, você não especifica a mensagem, os destinatários ou a programação, mas passa os identificadores para as chamadas de API. 
+ Diferentemente da maioria das campanhas, você não especifica a mensagem, os destinatários ou a programação, mas passa os identificadores para as chamadas de API. 
 
 ### Qual é a diferença entre campanhas baseadas em ação e campanhas acionadas por API?
 
@@ -173,7 +167,7 @@ Campanhas de entrega baseada em ação ou campanhas disparadas por eventos são 
 
 As campanhas acionadas por API e por servidor são ideais para lidar com transações mais avançadas, permitindo disparar a entrega do conteúdo da campanha a partir de seus próprios servidores e sistemas. A solicitação da API para disparar a mensagem também pode incluir dados adicionais a serem modelados na mensagem em tempo real.
 
-| Prós | Cons | 
+|  |  | 
 | ---- | ---- |
 | • Não consome pontos de dados<br><br>• Elementos de personalização estão incluídos nas propriedades da carga útil JSON | • Não permite que você crie um segmento de usuários elegíveis para a mensagem nas propriedades da carga útil JSON<br><br>\- Não é possível ver cargas úteis JSON de entrada com o **registro de atividades de mensagens**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
