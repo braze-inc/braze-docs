@@ -9,15 +9,21 @@ alias: /landing_pages/
 
 # Sobre landing pages
 
-> As landing pages do Braze são páginas da Web independentes que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
+> 
+
+
+
+
 
 ## Pré-requisitos
 
-Antes de poder acessar, criar e publicar landing pages, você precisa de permissões de administrador ou de todas as seguintes permissões:
+
 
 - Acessar landing page
 - Criar rascunhos de landing page
 - Publicar landing page
+
+
 
 ## Níveis de planos
 
@@ -41,7 +47,7 @@ Não, não há requisitos técnicos.
 
 ### Existe um editor de HTML para landing pages?
 
-Você pode editar o HTML de uma landing page usando o bloco Custom Code.
+ 
 
 ### Posso criar um webhook dentro de uma landing page?
 
