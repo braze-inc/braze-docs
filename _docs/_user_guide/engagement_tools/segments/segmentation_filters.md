@@ -395,7 +395,7 @@ glossaries:
     tags:
       - App
   - name: Most Recent App Version Name
-    description: Segments by the recent name of the user's app.<br><br>When using “less than” or “less than or equal to”, if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.
+    description: Segments by the recent name of the user's app.<br><br>When using "less than" or "less than or equal to", if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.
     tags:
       - App 
   - name: Most Recent App Version Number

@@ -139,11 +139,11 @@ Refer to [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/seg
 
 #### Has not entered Canvas variation
 
-The user never entered a variation path of a specific Canvas. All users who aren't in the control are included, regardless of whether they have entered the Canvas. This includes users who entered another variation and users who haven't entered any variation. 
+The user never entered a variation path of a specific Canvas. All users who aren't in the control group are included, regardless of whether they have entered the Canvas. This includes users who entered another variation and users who haven't entered any variation. 
 
 #### Is not in Canvas control group
 
-The user entered the Canvas, but isn't in the control group and consquently received a variation. This only includes users who entered the Canvas.
+The user entered the Canvas, but isn't in the control group and consequently received a variation. This only includes users who entered the Canvas.
 
 Note that variation assignment occurs at Canvas entry. If a user hasn't entered a Canvas, they won't be assigned any variant. In other words, they won't be in the control group or a variant.
 
