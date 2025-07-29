@@ -15,7 +15,7 @@ channel:
 
 ## Solicitações
 
-A Braze não é responsável pelo registro dos usuários no Google ou pelo cumprimento dos requisitos de segurança necessários.
+A Braze não é responsável pelo registro dos usuários no Google ou pelo cumprimento dos requisitos de segurança necessários. 
 
 | Requisito   | Descrição |
 | --------------| ----------- |
@@ -42,7 +42,7 @@ Para obter uma lista completa dos clientes de e-mail compatíveis, consulte a [d
 
 Acesse as configurações do Gmail e selecione **Ativar e-mail dinâmico** em **Geral**.
 
-![Um exemplo das configurações do Gmail com a caixa de seleção "Ativar envio de e-mail dinâmico" marcada.][1]
+
 
 ## Uso da API
 
@@ -252,4 +252,3 @@ Se nenhuma dessas condições estiver causando o erro, entre em contato com [o S
 Defendemos a não segmentação para enviar a todos os tipos diferentes de usuários. Isso ocorre porque enviamos mensagens AMP em multipartes, com diferentes versões incluídas no e-mail original. Se um usuário não puder ver a versão AMP, ela voltará ao padrão HTML. 
 
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}
