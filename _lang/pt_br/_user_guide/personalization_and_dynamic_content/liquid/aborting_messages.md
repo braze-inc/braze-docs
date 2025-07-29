@@ -8,7 +8,7 @@ description: "Este artigo de referência aborda o cancelamento de mensagens Liqu
 
 # Abortar o envio de mensagens
 
-> Opcionalmente, você pode abortar o envio de mensagens Liquid dentro de condicionais. Este artigo de referência lista alguns exemplos de como esse recurso pode ser usado em campanhas de marketing.
+>  Este artigo de referência lista alguns exemplos de como esse recurso pode ser usado em campanhas de marketing.
 
 {% alert note %}
 Se uma etapa de mensagens for abortada em um canva, o usuário **não sairá** do canva e **prosseguirá** para a próxima etapa.
@@ -59,15 +59,12 @@ Também é possível fazer com que a mensagem de abortar registre algo no Regist
 ```
 {% endraw %}
 
-![Registro de erro de mensagem no console do desenvolvedor com uma mensagem de aborto de "language was nil".][26]
+
 
 ## Consulta de mensagens de aborto
 
 Você pode usar o [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou seu próprio data warehouse, se ele estiver conectado ao Braze, para consultar mensagens de aborto específicas que são disparadas quando a lógica do Liquid faz com que uma mensagem seja abortada.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:[31]:
-[32]:[32]:
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+## 
+
+
