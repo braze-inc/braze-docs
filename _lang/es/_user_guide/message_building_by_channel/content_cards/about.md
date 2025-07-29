@@ -14,10 +14,6 @@ search_rank: 4
 
 Las tarjetas de contenido son una característica adicional y deben adquirirse. Para empezar a utilizar las tarjetas de contenido, póngase en contacto con su gestor de éxito de clientes de Braze o con nuestro equipo de asistencia.
 
-{% alert note %}
-Si utilizas nuestra herramienta de noticias, te recomendamos que te pases a nuestro canal de mensajería de tarjetas de contenido: es más flexible, personalizable y fiable. La fuente de noticias también está obsoleta. Consulte nuestra [Guía de migración]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) o póngase en contacto con su gestor de cuenta Braze para obtener más información.
-{% endalert %}
-
 ## Ventajas de utilizar tarjetas de contenido
 
 Éstas son sólo algunas de las ventajas de utilizar tarjetas de contenido frente a pedir a tus desarrolladores que incorporen contenido a tu aplicación:
@@ -176,9 +172,9 @@ Los usuarios pueden ver y participar en los contenidos más relevantes para ello
 
 Tus desarrolladores integrarán las tarjetas de contenido cuando integren el SDK de Braze. Para obtener más información sobre cómo integrarse con las tarjetas de contenido, consulte los artículos de la guía para desarrolladores de su plataforma:
 
-- [ iOSiOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guía de integración de la tarjeta de contenido")
-- [ AndroidAndroid]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
-- [ WebWeb]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guía de integración de la tarjeta de contenido")
+- 
+- 
+- 
 
 ## Fuentes
 
