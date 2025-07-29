@@ -40,12 +40,10 @@ channel: in-app messages
 
 - Qual é o seu objetivo com essa mensagem? Como você pode representar isso em sua mensagem?
 - Seus botões oferecem opções que fazem sentido para o usuário? Qual é a sua [principal chamada para ação]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)?
-- Você está [fazendo deep linking para outros conteúdos in-app][1]? Você está usando essa mensagem no app para enviar e aceitar uma [permissão ou solicitação de push priming][21]?
+-  
 - Você tem uma opção de saída de mensagens? Caso contrário, você sempre poderá copiar e colar esse trecho para criar um botão rápido:
     ```html
     <a href="appboy://close">X</a>
     ```
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
