@@ -122,48 +122,48 @@ Si está probando campañas que rellenan datos de usuario o utilizan propiedades
 
 ### Probar campañas personalizadas con atributos de usuario
 
-
+Si utilizas [la personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) en tu mensaje, tendrás que tomar medidas adicionales para previsualizar adecuadamente tu campaña y comprobar que los datos de usuario rellenan correctamente el contenido.
 
 Cuando envíe un mensaje de prueba, asegúrese de elegir la opción **Seleccionar usuario existente** o Vista previa como **usuario personalizado**.
 
-
+![Probar un mensaje personalizado]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Seleccionar un usuario existente
 
 Si selecciona un usuario existente, introduzca el ID de usuario específico o el correo electrónico en el campo de búsqueda. A continuación, utiliza la vista previa del panel de control para ver qué aspecto tendría tu mensaje para ese usuario y envía un mensaje de prueba a tu dispositivo que refleje lo que vería ese usuario.
 
-
+![Selecciona un usuario]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### Seleccionar un usuario personalizado
 
 Si realiza una vista previa como usuario personalizado, introduzca texto para los distintos campos disponibles para la personalización, como el nombre del usuario y cualquier atributo personalizado. Una vez más, puedes ingresar tu propia dirección de correo electrónico para enviar una prueba a tu dispositivo.
 
-
+![Usuario personalizado]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### Probar campañas personalizadas con propiedades de eventos personalizadas
 
- La forma más sólida de probar campañas personalizadas utilizando propiedades de eventos personalizados es activar la campaña usted mismo haciendo lo siguiente:
+Probar campañas personalizadas con [propiedades del evento personalizadas]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties) difiere ligeramente de probar otros tipos de campañas esbozadas. La forma más sólida de probar campañas personalizadas utilizando propiedades de eventos personalizados es activar la campaña usted mismo haciendo lo siguiente:
 
-1. Escribe la copia que implica la propiedad del evento. 
-2. 
+1. Escribe la copia que implica la propiedad del evento. ![Componer mensaje de prueba con propiedades]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+2. Utiliza la [entrega basada en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) para entregar la campaña cuando se produzca el evento.
 
 {% alert note %}
 Si estás probando una campaña push para iOS, debes establecer el retraso en 1 minuto para que te dé tiempo a salir de la aplicación, ya que iOS no entrega notificaciones push para la aplicación abierta en ese momento. Otros tipos de campañas pueden configurarse para delivery inmediato.
 {% endalert %}
 
-
+![Prueba de entrega de mensajes]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3\. Seleccione a los usuarios como lo haría para las pruebas utilizando un filtro de pruebas o seleccionando su propia dirección de correo electrónico y termine de crear la campaña. 
 
-
+![Prueba de orientación de mensajes]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4\. Entra en tu aplicación y completa el evento personalizado.
 
 La campaña se activará y mostrará el mensaje personalizado con la propiedad de evento.
 
-
+![Ejemplo de mensaje de prueba]({% image_buster /assets/img_archive/testeventproperties-message.PNG %})
 
 Alternativamente, si guardas ID de usuario personalizadas, también puedes probar la campaña enviándote un mensaje de prueba personalizado a ti mismo.
 
@@ -172,5 +172,5 @@ Alternativamente, si guardas ID de usuario personalizadas, también puedes proba
 3. Añade la propiedad del evento personalizado en la parte inferior de la página, y añade tu ID de usuario o dirección de correo electrónico en la casilla superior.
 4. Haga clic en **Enviar prueba** para recibir un mensaje personalizado con la propiedad.
 
-
+![Pruebas mediante usuario personalizado]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
