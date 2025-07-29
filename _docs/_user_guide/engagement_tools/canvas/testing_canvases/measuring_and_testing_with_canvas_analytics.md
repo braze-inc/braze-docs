@@ -75,6 +75,26 @@ Beyond that, you can see a more explicit breakdown of [conversion events]({{site
 - Uplift against the control variant
 - Statistical confidence for each conversion event
 
+### How conversions are tracked 
+
+A user can only convert once per conversion event per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The Canvas summary reflects all conversions performed by users in that path and whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received. 
+
+Consider the following example: a Canvas has 10 push notifications and the conversion event is "Opens App" (or "Session Start").
+- User A opens the app after entering but before receiving the first message.
+- User B opens the app after each push notification.
+
+The Canvas summary will show two conversions while the individual steps will show one conversion on the first step and none for all subsequent steps. If Quiet Hours are active when the conversion event happens, the same rules will apply. 
+
+Now, let's say we have a Canvas with Quiet Hours and the following events occur:
+
+1. User A enters a Canvas.
+2. The first step is a Delay step within the set Quiet Hours, so the message is supressed.
+3. User A performs the conversion event.
+
+User A will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+
+For our last example, let's say we have a Canvas with re-eligiblity turned on. If a re-eligible user performs the conversion event on the first entry and second entry, two conversions will be counted.
+
 ### Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
