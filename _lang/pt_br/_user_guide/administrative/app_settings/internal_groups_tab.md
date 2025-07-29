@@ -12,7 +12,7 @@ description: "Este artigo de referência aborda grupos internos, uma ótima mane
 > Os grupos internos são uma ótima maneira de criar e organizar grupos de teste internos ou de terceiros. Eles fornecem insight sobre os registros do SDK ou da API e são úteis ao testar a integração do SDK. É possível criar um número ilimitado de grupos internos personalizados com até 1.000 usuários.
 
 {% alert tip %}
-Também recomendamos que você confira nosso curso [Ferramentas de garantia de qualidade e depuração](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) do Braze Learning, que aborda como usar grupos internos para conduzir sua própria solução de problemas e depuração.
+
 {% endalert %}
 
 ## Pré-requisitos
@@ -58,7 +58,7 @@ Depois de criar o grupo interno, é possível adicionar usuários de teste como 
 Semelhante ao envio de um teste prévio de uma mensagem, o Grupo de teste de conteúdo economiza seu tempo e permite lançar testes para uma lista predefinida de usuários do Braze simultaneamente. Isso está disponível para mensagens push, mensagens no app, SMS, e-mail e cartões de conteúdo no Braze. Somente os grupos marcados como Grupos de teste de conteúdo estarão disponíveis na seção de prévia de uma mensagem.
 
 {% alert note %}
-As mensagens de teste [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) só podem ser enviadas para números de telefone válidos no banco de dados.
+
 {% endalert %}
 
 É possível selecionar usuários individuais do Braze ou tantos grupos internos para os quais enviar a mensagem. Se a sua mensagem incluir qualquer Liquid ou outra personalização dinâmica, o Braze usará as atribuições disponíveis para cada usuário para personalizar o conteúdo da mensagem. Para usuários que não têm atribuições, a Braze usará o valor padrão definido.
