@@ -39,7 +39,7 @@ For your data source, choose **CDI Data Tables**.
 
 As part of your CDI setup, you can select from different connections to use in CDI Segment Extensions. Each connection has a specific set of data tables. Your development team can configure your connections and data tables during CDI setup.
 
-To view the available data tables, select **Reference**. When you're ready, select a connection.
+To view the available data tables, including their schema and any available descriptions, select **Reference**. When you're ready, select a connection.
 
 ![]({% image_buster /assets/img/segment/connection_schema.png %}){: style="max-width:100%;"}
 
