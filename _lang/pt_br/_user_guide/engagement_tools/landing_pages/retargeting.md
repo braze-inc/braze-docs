@@ -24,9 +24,9 @@ O Braze rastreia automaticamente quando um usuário envia um formulário de land
 {% tab Usando um segmento %}
 Quando você [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), no grupo "Redirecionamento", escolha **Formulário enviado na landing page**.
 
-![Criação de segmento com o grupo de filtros selecionado como "Formulário enviado na landing page".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
+![Criação de segmento com o grupo de filtros selecionado como "Formulário enviado na landing page"]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
-A partir daqui, é possível segmentar os usuários com base no fato de eles terem ou não enviado um formulário para sua landing page.
+A partir daí, é possível segmentar os usuários com base no fato de eles terem ou não enviado um formulário para sua landing page.
 {% endtab %}
 
 {% tab Uso de um disparador de mensagens %}
@@ -34,11 +34,6 @@ Ao escolher a opção de entrega para sua [campanha]({{site.baseurl}}/user_guide
 
 Todos os usuários que enviarem um formulário por meio desse formulário da landing page receberão um envio de mensagens pelo canal de envio de mensagens escolhido ou entrarão no Canva escolhido.
 
-![Ação-gatilho da landing page no envio de mensagens.]({% image_buster /assets/img/landing_pages/trigger.png %})
-
-{% alert note %}
-A opção de entrega baseada em ação para landing pages não está disponível para mensagens no app. Para direcionar os usuários que enviaram um formulário em uma landing page com uma mensagem no app, selecione o filtro **Formulário enviado na landing page** nas **Opções de direcionamento** da sua campanha.
-{% endalert %}
-
+![Ação-gatilho da landing page no envio de mensagens]({% image_buster /assets/img/landing_pages/trigger.png %})
 {% endtab %}
 {% endtabs %}
