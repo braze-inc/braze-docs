@@ -16,7 +16,7 @@ Se você tiver um Canva ativo que requer mudanças em larga escala, pode usar es
 
 Assim como em qualquer canva, apenas um usuário pode editar um rascunho por vez, e um canva pode ter apenas um rascunho por vez. Esses rascunhos não têm nenhuma análise de dados, pois as alterações de rascunho ainda não foram lançadas.
 
-![Um exemplo de rascunho de Canvas com um banner que indica ao usuário que ele está editando um rascunho de Canvas com uma opção para visualizar o Canvas ativo. O rodapé tem opções para voltar à exibição de análise de dados, salvar como rascunho ou iniciar rascunho.][1]
+![Um exemplo de rascunho de Canvas com um banner que indica ao usuário que ele está editando um rascunho de Canvas com uma opção para visualizar o Canvas ativo. 
 
 ## Criando um rascunho
 
@@ -43,4 +43,3 @@ Para rascunhos de um Canvas ativo, a prioridade da mensagem no app dentro do con
 
 No entanto, as alterações de prioridade de mensagem no app em nível de etapa são salvas como rascunho e aplicadas quando o Canva é atualizado. Por exemplo, em uma etapa de Mensagem, o classificador de prioridades será atualizado quando um usuário iniciar o rascunho, pois as configurações da etapa se aplicam em um nível de etapa.
 
-[1]: {% image_buster /assets/img_archive/canvas_draft1.png %}
