@@ -10,7 +10,7 @@ tool:
 
 # Status da campanha e do Canva
 
-> Saiba mais sobre os status de campanhas e Canvas e como usá-los no dashboard.
+> Saiba mais sobre status para campanhas e Canvas e como usá-los no dashboard.
 
 ## Filtragem por status
 
@@ -34,7 +34,7 @@ Esses são os status disponíveis para campanhas e telas:
 | Rascunho | Os rascunhos de campanhas e telas são salvos, mas não são lançados. Para continuar editando e começar a enviar, você pode selecionar o rascunho acessando **Envio de mensagens** no dashboard do Braze e selecionando **Canvas** ou **Campaigns**. |
 | Arquivado | Campanhas e Canvas arquivadas são mensagens que não estão mais sendo enviadas. Essas campanhas e telas também são removidas dos gráficos de estatísticas na seção [**Início**]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard) e [**Receita**]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report) páginas.|
 | Interrompido | Campanhas e telas interrompidas são pausadas, mas você ainda pode editá-las. Para retomar, selecione o menu <i class="fas fa-ellipsis-vertical"></i> e, em seguida, **Resume (Retomar**). Para saber mais, consulte [Comportamento do Canva interrompido](#stopped-canvas-behavior). |
-| Sem atividade | Quando uma campanha ou Canvas não estiver mais enviando mensagens, o Braze atribuirá a ela um status sem atividades para ajudar a classificar e gerenciar sua lista de campanhas e Canvas. Você pode ver quais campanhas ou Canvas serão automaticamente interrompidas e a data de interrupção associada. |
+| Sem atividade | Quando uma campanha ou Canvas não estiver mais enviando mensagens, o Braze atribuirá a ela um status sem atividades para ajudar a classificar e gerenciar sua lista de campanhas e Canvas. Você pode visualizar quais campanhas ou Canvas serão automaticamente interrompidas e a data de interrupção associada. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Comportamento do Canva interrompido {#stopped-canvas-behavior}
