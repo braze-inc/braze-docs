@@ -52,9 +52,9 @@ Na mesma página, insira o seguinte:
 
 | Requisito | Informações |
 |---|---|
-| `SAML Name` | Isso aparecerá como o texto do botão na tela de login.<br>Normalmente, esse é o nome de seu provedor de identidade, como "Okta". |
-| `Target URL` | Isso acontecerá após a configuração da Braze em seu IdP.<br> Alguns IdPs fazem referência a isso como URL de SSO ou endpoint SAML 2.0. |
-| `Certificate` | O certificado `x.509` que é fornecido por seu provedor de identidade.|
+|  | Isso aparecerá como o texto do botão na tela de login.<br>Normalmente, esse é o nome de seu provedor de identidade, como "Okta". |
+|  | Isso acontecerá após a configuração da Braze em seu IdP.<br> Alguns IdPs fazem referência a isso como URL de SSO ou endpoint SAML 2.0. |
+|  | O certificado `x.509` que é fornecido por seu provedor de identidade.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Confira se o seu certificado `x.509` segue esse formato ao adicioná-lo ao dashboard:
@@ -65,13 +65,13 @@ Confira se o seu certificado `x.509` segue esse formato ao adicioná-lo ao dashb
 -----END CERTIFICATE-----
 ```
 
-![Abertura das configurações de segurança e adição de detalhes de SSO SAML]({% image_buster /assets/img/samlsso.gif %})
+
 
 ### Etapa 3: Faça login no Braze
 
 Salve suas configurações de segurança e faça o registro. Em seguida, faça login novamente com seu provedor de identidade.
 
-![Tela de login do dashboard com SSO ativado]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+
 
 ## Configuração do seu RelayState
 
@@ -91,7 +91,7 @@ Os membros que aceitarem usar o SSO não poderão mais usar sua senha como fazia
 
 Você pode restringir os membros de sua organização para que façam login apenas com o Google SSO ou o SAML SSO. Para ativar as restrições, acesse **Security Settings** e selecione **Enforce Google SSO only login** ou **Enforce custom SAML SSO only login**.
 
-![Seção Authentication Rules (Regras de autenticação) da página Security Settings (Configurações de segurança)]({% image_buster /assets/img/sso3.png %})
+ 
 
 Ao ativar as restrições, os usuários do Braze da sua empresa não poderão mais se registrar usando uma senha, mesmo que já tenham se registrado com uma senha anteriormente.
 
@@ -126,9 +126,9 @@ Selecionar **Exportar**. Para **Selecionar o perfil de filtro de cookies**, sele
 
 ### O endereço de e-mail do usuário está configurado corretamente?
 
-Se você está recebendo o erro `ERROR_CODE_SSO_INVALID_EMAIL`, o endereço de e-mail do usuário não é válido. Confirme no rastreamento SAML que o campo `saml2:Attribute Name="email"` corresponde ao endereço de e-mail que o usuário está usando para fazer login. Se você usa o Microsoft Entra ID, o mapeamento de atributos é `email = user.userprincipalname`.
+Se você está recebendo o erro `ERROR_CODE_SSO_INVALID_EMAIL`, o endereço de e-mail do usuário não é válido. Confirme no rastreamento SAML que o campo `saml2:Attribute Name="email"` corresponde ao endereço de e-mail que o usuário está usando para fazer login. 
 
-O endereço de e-mail é sensível a maiúsculas e minúsculas e deve corresponder exatamente ao que foi configurado no Braze, incluindo o que foi configurado no seu provedor de identidade (como Okta, OneLogin, Azure Active Directory e outros).
+
 
 Outros erros que indicam que você tem problemas com o endereço de e-mail do usuário incluem:
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: O endereço de e-mail do usuário não está dentro do dashboard.
