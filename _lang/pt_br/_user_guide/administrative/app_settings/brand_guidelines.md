@@ -10,7 +10,7 @@ description: "Este artigo de referência descreve como criar, gerenciar e usar a
 
 > Adapte o estilo de sua cópia gerada por IA para que corresponda à voz, ao tom e à personalidade de sua marca com as diretrizes personalizadas da marca.
 
-Você pode criar e gerenciar as diretrizes da marca acessando **Configurações** > **Diretrizes da marca**. Você também pode criá-los no [assistente de copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines/).
+Você pode criar e gerenciar as diretrizes da marca acessando **Configurações** > **Diretrizes da marca**. Você também pode criá-los no [assistente de copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
 
 ## Criação de diretrizes da marca
 
@@ -36,7 +36,7 @@ Para a **personalidade da marca**, pense no que torna sua marca única. Inclua c
 
 Para **Exclusões**, liste qualquer linguagem ou estilo que não esteja alinhado com sua marca. Por exemplo, talvez você queira evitar "sarcasmo", "atitudes negativas" ou tons "condescendentes".
 
-![A janela "Criar diretriz da marca" com campos para inserir o nome, a descrição, a personalidade, as exclusões e o tom.]({% image_buster /assets/img/guidelines_create.png %})
+![A janela "Criar diretriz da marca" com campos para inserir o nome, a descrição, a personalidade, as exclusões e o tom.][1]
 
 ### Etapa 4: Teste suas diretrizes
 
@@ -54,12 +54,18 @@ Você pode alterar o idioma de saída independentemente do idioma em que sua có
 
 Você pode editar as diretrizes da marca selecionando-as na página **Diretrizes da marca**. Arquive uma diretriz da marca para torná-la inativa e removê-la do Assistente de Copywriting da IA. Para torná-lo ativo e selecionável novamente, você pode filtrar as diretrizes da marca arquivadas e, em seguida, desarquivá-las.
 
-![A página "Diretrizes da marca" filtrou as diretrizes da marca arquivadas.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
+![A página "Diretrizes da marca" filtrou as diretrizes da marca arquivadas.][4]
 
 ## Usar as diretrizes da marca
 
-Ao redigir uma mensagem, abra o [Assistente de Copywriting IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) e selecione a diretriz da sua marca no menu suspenso **Aplicar diretriz da marca**. Se você designar uma diretriz de marca específica como padrão, ela será automaticamente selecionada no menu suspenso, mas você pode escolher uma diretriz diferente. 
+Ao redigir uma mensagem, abra o [Assistente de Copywriting IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) e selecione a diretriz da sua marca no menu suspenso **Aplicar diretriz da marca**. Se você designar uma diretriz de marca específica como padrão, ela será automaticamente selecionada no menu suspenso, mas você pode escolher uma diretriz diferente. 
 
-!["Assistente de Copywriting IA com "Alertas importantes!!!" selecionado como diretriz da marca.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
+!["Assistente de Copywriting de IA com "Alertas importantes!!!" selecionado como diretriz da marca.][2]
 
-{% multi_lang_include brazeai/generative_ai/policy.md %}
+## Como meus dados são usados e enviados para a OpenAI?
+
+Para gerar uma cópia usando uma diretriz da marca, o Braze enviará sua consulta, incluindo o conteúdo da sua diretriz, para a OpenAI. Todas as consultas enviadas pela Braze à OpenAI são anônimas, o que significa que a OpenAI não poderá identificar o remetente da consulta, a menos que você inclua informações exclusivamente identificáveis na entrada fornecida ou nos dados de sua campanha anterior ao ativar a opção "Faz referência a dados de campanhas antigas". De acordo com a [política da OpenAI](https://openai.com/policies/api-data-usage-policies), os dados enviados à API da OpenAI usando o Braze não são usados para treinar ou aprimorar seus modelos e serão excluídos após 30 dias. Entre você e a Braze, qualquer conteúdo gerado usando GPT é de sua propriedade intelectual. A Braze não fará valer nenhuma reivindicação de propriedade de direitos autorais sobre tal conteúdo e não oferece nenhuma garantia de qualquer tipo com relação a qualquer conteúdo gerado por IA.
+
+[1]: {% image_buster /assets/img/guidelines_create.png %}
+[2]: {% image_buster /assets/img/guidelines_ai_assistant.png %}
+[4]: {% image_buster /assets/img/unarchive_brand_guideline.png %}
