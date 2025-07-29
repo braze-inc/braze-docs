@@ -51,7 +51,7 @@ En primer lugar, comprueba si el panel se carga en otro navegador. Si el problem
 - **Utiliza plugins compatibles o herramientas de terceros:** Los bloqueadores de anuncios o el software de seguridad pueden impedir que se cargue el panel de Braze. Pruébalo desactivando un bloqueador de anuncios y, a continuación, accediendo a tu panel de Braze.
         \- También puedes comprobar los registros de la consola de tu navegador. Los errores relacionados con `ERR_BLOCKED_BY_CLIENT` pueden indicar que el contenido está bloqueado por un bloqueador de anuncios.
 - **Comprueba la calidad de tu conexión:** Puede que la calidad de tu conexión sea mala. Intenta iniciar sesión en tu panel de Braze en un dispositivo diferente.
-- **Confirma que estás accediendo al cluster correcto:** Asegúrate de que estás accediendo al clúster asignado a tu empresa. Por ejemplo, puedes estar asignado a US-03, pero estás entrando en US-01.
+- **Confirma que estás accediendo al cluster correcto:** Asegúrate de que estás accediendo al clúster asignado a tu empresa. Por ejemplo, puedes estar asignado a US-03, pero te estás conectando a US-01.
 - **Actualiza tu navegador:** Actualiza tu navegador a la última versión [compatible]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#supported-browsers) e intenta acceder a tu panel.
 
 Si el problema se produce en todos los navegadores, prueba lo siguiente:
