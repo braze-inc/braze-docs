@@ -22,16 +22,26 @@ Consulte a tabela a seguir para um resumo das diferenças entre as propriedades 
 | | Propriedades de entrada do canva | Propriedades do evento
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
-| **Persistência** | Pode ser referenciado por todas as etapas [de mensagens][1] durante a duração de um Canvas criado usando o Canvas Flow. | \- Só pode ser referenciado uma vez. <br> \- Não pode ser referenciado por nenhuma etapa de Mensagem subsequente. |
-| **Comportamento da tela original** | \- As propriedades de entrada persistente devem estar ativadas. <br> \- Só pode fazer referência a `canvas_entry_properties` na primeira etapa completa de um Canva. O Canva deve ser baseado em ação ou disparado por API. | \- Pode fazer referência a `event_properties` em qualquer etapa completa que use a entrega baseada em ação em um Canva. <br> \- Não pode ser usado em etapas completas programadas que não sejam a primeira etapa completa de um Canva baseado em ação. No entanto, se um usuário estiver usando um [componente de canvas][2], o comportamento seguirá as regras do Canvas Flow para `event_properties`. |
-| **Comportamento do Canvas Flow** | Pode fazer referência a `canvas_entry_properties` em qualquer etapa de um Canva. Para o comportamento pós-lançamento, consulte [Editando Canvas após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | \- Pode fazer referência a `event_properties` na primeira etapa de mensagem **após** uma etapa [de jornadas de ação][3] em que a ação realizada é um evento personalizado ou um evento de compra. <br> \- Não pode estar após a jornada Restante do público da etapa Jornadas de ação. <br> \- Pode ter outros componentes do canva que não sejam de mensagem entre as jornadas de ação e as etapas de mensagem. Se um desses componentes que não são de mensagens for uma etapa de jornadas de ação, o usuário poderá passar pela jornada Everyone Else desse caminho de ação. | 
+| **Persistência** |  | \- Só pode ser referenciado uma vez. <br> \- Não pode ser referenciado por nenhuma etapa de Mensagem subsequente. |
+|  | Pode fazer referência a `canvas_entry_properties` em qualquer etapa de um Canva. Para o comportamento pós-lançamento, consulte [Editando Canvas após o lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). |  <br> \- Não pode estar após a jornada Restante do público da etapa Jornadas de ação. <br>  Se um desses componentes que não são de mensagens for uma etapa de jornadas de ação, o usuário poderá passar pela jornada Everyone Else desse caminho de ação. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% details Detalhes do editor de Canvas original %}
-Desde 28 de fevereiro de 2023, não é mais possível criar ou duplicar canvas usando o editor original. Este artigo está disponível para referência ao usar `canvas_entry_properties` e `event_properties` para o fluxo de trabalho original do canva.
 
-No editor de canvas original e no Canvas Flow, não é possível usar `event_properties` na etapa do canva. Em vez disso, você deve usar `canvas_entry_properties` ou adicionar uma etapa de jornadas de ação com o evento correspondente **antes** da etapa de Mensagem que inclui `event_properties`.
-{% enddetails %}
+ 
+
+
+-  
+-  O Canva deve ser baseado em ação ou disparado por API.
+
+
+- 
+-  
+
+
+-  Em vez disso, você deve usar `canvas_entry_properties` ou adicionar uma etapa de jornadas de ação com o evento correspondente **antes** da etapa de Mensagem que inclui `event_properties`.
+
+
 
 ### Coisas para saber
 
@@ -57,7 +67,7 @@ Se você estiver usando `event_properties` em um Canvas, os carimbos de data/hor
 
 ## Caso de uso
 
-![Um passo de Caminho de Ação seguido por um passo de Postergação e um passo de Mensagem para usuários que adicionaram um item à sua lista de desejos, e um caminho para todos os outros.][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+
 
 Para entender melhor as diferenças entre `canvas_entry_properties` e `event_properties`, vamos considerar este cenário em que os usuários entrarão em um Canva baseado em ação se executarem o evento personalizado "adicionar item à lista de desejos". 
 
@@ -67,10 +77,5 @@ Nesta tela, temos uma jornada de usuário que começa com uma etapa das jornadas
 
 A primeira etapa da mensagem em uma jornada do usuário terá acesso ao `event_properties` personalizado da etapa Jornadas de ação. Nesse caso, podemos incluir ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` nessa etapa de Mensagem como parte do conteúdo da mensagem. Se um usuário não adicionar um item à sua lista de desejos, ele acessará a jornada Restante do público, o que significa que o `event_properties` não pode ser referenciado e refletirá um erro de configurações inválidas.
 
-Observe que você só terá acesso a `event_properties` se a etapa de mensagem puder ser rastreada até uma jornada que não seja "Restante do público" em uma etapa de jornada de ação. Se a etapa da mensagem estiver conectada a uma jornada Restante do público, mas puder ser rastreada até uma etapa das jornadas de ação na jornada do usuário, você também terá acesso a `event_properties`. Para saber mais sobre esses comportamentos, consulte [Etapa da mensagem][8].
+Observe que você só terá acesso a `event_properties` se a etapa de mensagem puder ser rastreada até uma jornada que não seja "Restante do público" em uma etapa de jornada de ação. Se a etapa da mensagem estiver conectada a uma jornada Restante do público, mas puder ser rastreada até uma etapa das jornadas de ação na jornada do usuário, você também terá acesso a `event_properties`. 
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-[7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
-[8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
