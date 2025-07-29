@@ -24,11 +24,11 @@ En **Vista Previa**, la vista de tu mensaje puede no ser idéntica a su represen
 
 Previsualice el aspecto que tendrá su mensaje para un usuario aleatorio, un usuario específico o un usuario personalizado; estos dos últimos son especialmente útiles si su mensaje contiene personalización o varios idiomas. También puedes previsualizar los mensajes para dispositivos móviles o tabletas para hacerte una mejor idea de lo que experimentarán los usuarios.
 
-![La pestaña Redactar al crear un mensaje dentro de la aplicación muestra una vista previa del aspecto que tendrá el mensaje. No se selecciona un usuario, por lo que el Líquido añadido en la sección del cuerpo se muestra tal cual.][1]
+![La pestaña Redactar al crear un mensaje dentro de la aplicación muestra una vista previa del aspecto que tendrá el mensaje. 
 
 Braze dispone de tres generaciones de mensajes in-app. Puede ajustar con precisión a qué dispositivos deben enviarse sus mensajes, en función de la generación que admitan.
 
-![Cambio entre generaciones al previsualizar un mensaje in-app.][2]{: height="50%" width="50%"}
+
 
 ## Probar
 
@@ -40,7 +40,7 @@ Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_g
 
 También puedes previsualizar los mensajes desde la pestaña **Prueba**, como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado.
 
-![Pestaña de prueba al crear un mensaje dentro de la aplicación. "Previsualizar mensaje como usuario" se establece en "Usuario personalizado" y los campos de perfil disponibles aparecen como opciones configurables.][3]
+![Pestaña de prueba al crear un mensaje dentro de la aplicación. 
 
 ### Lista de comprobación
 
@@ -49,6 +49,29 @@ También puedes previsualizar los mensajes desde la pestaña **Prueba**, como si
 - ¿Es su texto claro, conciso y correcto?
 - ¿Sus botones dirigen al usuario hacia dónde debe ir?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## 
+
+  
+
+
+
+
+
+
+
+### 
+
+ 
+
+- 
+- 
+- 
+
+### 
+
+
+
+
+
+
+
