@@ -92,7 +92,7 @@ The following is a sample payload for the body of an API Usage Alert webhook.
     "previous_timeframe_end": 2025-03-20T15:35:00Z,
     "previous_volume": 1000
   },
-  "text": "Your My First API Usage Alert alert has triggered. You can view your alert and usage here: <link>. Note that this alert will reset in 1 day, as each alert will only send one notification per 24 hours."
+  "text": "Your My First API Usage Alert alert has triggered. You can view your alert and usage here: <link>. Note that this alert will reset in 1 day, as each alert will only send one notification per 8 hours."
 }
 ```
 
