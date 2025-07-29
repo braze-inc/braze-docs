@@ -38,7 +38,7 @@ Para criar um alias de link, siga estas etapas:
 
 Você também pode definir um alias que será usado para fazer referência a um link específico ao lidar com relatórios ou segmentação. 
 
-![Página de Gerenciamento de Links com quatro aliases de link.][2]
+
 
 {% alert note %}
 O aliasing de links só é compatível com as atribuições `href` dentro de tags de âncora HTML, onde é seguro anexar um parâmetro de consulta. É uma boa prática incluir um ponto de interrogação (?) no final do seu link para que o Braze possa facilmente anexar o `lid` valor. Sem anexar o valor `lid`, a Braze não reconhecerá o URL para aliasing de link.
@@ -57,7 +57,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/
 
 Aqui, você pode classificar, pesquisar e desativar o rastreamento para aliases de link.
 
-![Página de Aliases de Links Rastreados que mostra dois aliases de link chamados "TechPartners" e "Help" que estão associados a uma campanha chamada "e-mail_Survey".][8]
+
 
 {% alert tip %}
 Use os endpoints [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) e [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extrair o conjunto `alias` em cada variante de mensagem em uma campanha ou um componente Canvas específico de e-mail.
@@ -147,7 +147,7 @@ O Braze só rastreia até os últimos 100 aliases de links clicados no nível do
  
 É possível criar mensagens baseadas em ações direcionadas a qualquer link (rastreado ou não) ou redirecionar usuários com base no fato de terem clicado em um alias em qualquer campanha de e-mail ou componente do Canvas.
 
-![Opções Baseadas em Ação para segmentar usuários que clicaram em um alias em um componente Canva ou interagiram com uma campanha.][6]
+
 
 ### Filtros de segmentação
 
@@ -161,11 +161,11 @@ Os seguintes filtros de segmentação se aplicam a eventos de clique que são ra
 
 #### Deixando de rastrear links
 
-Desvincular um link não realocará os segmentos existentes com o filtro para o alias não rastreado. Os dados antigos permanecerão nos perfis dos usuários até serem substituídos por dados mais novos.
+Desvincular um link não realocará os segmentos existentes com o filtro para o alias não rastreado. Os dados antigos permanecerão nos perfis dos usuários até serem substituídos por dados mais novos. 
 
-Para fins de segmentação, apenas 100 links podem ser rastreados por espaço de trabalho por padrão. Os links em mensagens arquivadas são automaticamente desmarcados. No entanto, se as mensagens arquivadas forem desarquivadas, os links precisarão ser rastreados novamente. Quando os aliases de links são rastreados, os relatórios de links são indexados pelo alias em vez de domínios de nível superior ou URLs completos.
+Os links em mensagens arquivadas são automaticamente desmarcados. No entanto, se as mensagens arquivadas forem desarquivadas, os links precisarão ser rastreados novamente. Quando os aliases de links são rastreados, os relatórios de links são indexados pelo alias em vez de domínios de nível superior ou URLs completos.
 
-![Aba de Análise de Dados da Campanha que exibe três aliases de link e seus cliques totais.][1]
+
 
 ### Evento de cliques de e-mail
 
@@ -245,8 +245,3 @@ Se o link tiver parâmetros dentro dele que contenham um ponto de interrogação
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}
