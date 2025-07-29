@@ -10,17 +10,17 @@ description: "Este artículo explica cómo crear un webhook Braze-to-Braze para 
 
 # Crear un Webhook Braze to Braze
 
->  Se trata de un webhook de Braze a Braze, es decir, un webhook que se comunica de Braze a Braze. 
+> Puedes utilizar webhooks para comunicarte con [la API REST]({{site.baseurl}}/api/basics/) de Braze, básicamente para hacer cualquier cosa que te permita nuestra API. Se trata de un webhook de Braze a Braze, es decir, un webhook que se comunica de Braze a Braze. Los casos de uso de esta página suponen que estás familiarizado con [el funcionamiento de los webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) y con la [creación de un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) en Braze.
 
 ## Requisitos previos
 
-
+Para crear un webhook Braze to Braze, necesitarás una [clave de API]({{site.baseurl}}/api/api_key/) con permisos para el punto final al que quieres llegar.
 
 ## Configuración de tu Webhook Braze to Braze
 
 Aunque los detalles de su solicitud de webhook variarán de un caso de uso a otro, el flujo de trabajo general para crear un webhook Braze-to-Braze sigue siendo el mismo.
 
-1.  
+1. [Crea un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) como componente de campaña o de Canvas. 
 2. Elija **Plantilla en blanco**.
 3. En la pestaña **Redactar**, especifique la **URL del Webhook** y el **cuerpo de la solicitud** según lo indicado para su caso de uso.
 4. En la pestaña **Configuración**, especifique el **método HTTP** y **las cabeceras de solicitud** según lo indicado para su caso de uso.
@@ -45,7 +45,7 @@ Por ejemplo, es posible que desee contar cuántas veces un usuario ha visto una 
 
 Siga los pasos generales para crear un webhook Braze-to-Braze, y consulte lo siguiente cuando configure su webhook:
 
-- **URL del webhook:**  Por ejemplo, para la instancia `US-06`, la URL sería `https://rest.iad-06.braze.com/users/track`.
+- **URL del webhook:** La [URL de]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) tu [punto final REST]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) seguida de `/users/track`. Por ejemplo, para la instancia `US-06`, la URL sería `https://rest.iad-06.braze.com/users/track`.
 - **Cuerpo de la solicitud:** Texto sin procesar
 
 #### Encabezados de solicitud y método
@@ -59,11 +59,11 @@ Braze requiere un encabezado HTTP para la autorización que incluya tu clave API
 
 Sustituye `YOUR_API_KEY` por una clave de API Braze con permisos `users.track`. Puede crear una clave de API en el panel de control de Braze en **Configuración** > **Claves de API**.
 
-
+![Los encabezados de solicitud para el webhook.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Cuerpo de la solicitud
 
-Añade tu petición de seguimiento de usuario en el cuerpo de la petición y el Liquid para asignar una variable contador. 
+Añade tu petición de seguimiento de usuario en el cuerpo de la petición y el Liquid para asignar una variable contador. Para más detalles, consulta el [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 Lo siguiente es un ejemplo tanto del Liquid requerido como del cuerpo de la solicitud para este punto final, donde `your_attribute_count` es el atributo que estás utilizando para contar cuántas veces ha visto un usuario un mensaje:
 
@@ -97,7 +97,7 @@ Para este caso de uso, crearás dos lienzos y utilizarás un webhook para activa
 
 Consulte lo siguiente cuando configure su webhook:
 
-- **URL del webhook:**  Por ejemplo, para la instancia US-06, la URL sería `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **URL del webhook:** La [URL de]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) tu [punto final REST]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) seguida de `canvas/trigger/send`. Por ejemplo, para la instancia US-06, la URL sería `https://rest.iad-06.braze.com/canvas/trigger/send`.
 - **Cuerpo de la solicitud:** Texto sin procesar
 
 #### Encabezados de solicitud y método
@@ -111,11 +111,11 @@ Braze requiere un encabezado HTTP para la autorización que incluya tu clave API
 
 Sustituye `YOUR_API_KEY` por una clave de API Braze con permisos `canvas.trigger.send`. Puede crear una clave de API en el panel de control de Braze en **Configuración** > **Claves de API**.
 
-
+![Los encabezados de solicitud para el webhook.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Cuerpo de la solicitud
 
-Añada su solicitud `canvas/trigger/send` en el campo de texto.  El siguiente es un ejemplo del cuerpo de la solicitud para este punto final, donde `your_canvas_id` es el ID del lienzo de su segundo lienzo: 
+Añada su solicitud `canvas/trigger/send` en el campo de texto. Para más detalles, consulta [Enviar mensajes Canvas mediante entrega desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). El siguiente es un ejemplo del cuerpo de la solicitud para este punto final, donde `your_canvas_id` es el ID del lienzo de su segundo lienzo: 
 
 {% raw %}
 ```json
