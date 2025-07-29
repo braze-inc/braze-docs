@@ -16,10 +16,10 @@ guide_featured_list:
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
   image: /assets/img/braze_icons/clock.svg
-- name: ""
+- name: Predictive Churn
   link: /docs/user_guide/brazeai/predictive_churn/
   image: /assets/img/braze_icons/stars-01.svg
-- name: ""
+- name: Eventos predecibles
   link: /docs/user_guide/brazeai/predictive_events/
   image: /assets/img/braze_icons/calendar-check-01.svg
 - name: Recomendaciones
