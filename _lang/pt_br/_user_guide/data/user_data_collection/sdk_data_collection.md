@@ -82,7 +82,7 @@ Além dos dados mínimos de integração, as seguintes atribuições são captur
 | Agente do usuário              | Web               | [Agente do usuário](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Esse atributo é usado para enviar mensagens apenas para dispositivos compatíveis. Também pode ser usado dentro da segmentação.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Para saber mais sobre o rastreamento de propriedades em nível de dispositivo (como operadora sem fio do dispositivo, fuso horário, resolução e outros), consulte a documentação específica da plataforma: [ do AndroidAndroid]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Documentação da lista de permissões"), [ do iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "documentação da lista de permissões"), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
+Para saber mais sobre o rastreamento de propriedades em nível de dispositivo (como operadora sem fio do dispositivo, fuso horário, resolução e outros), consulte a documentação específica da plataforma: 
 
 ## Dados não coletados por padrão
 
@@ -111,4 +111,3 @@ O Braze banirá ou bloqueará os usuários com mais de 5.000.000 de sessões ("u
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Campos de nível de dispositivo Android"
