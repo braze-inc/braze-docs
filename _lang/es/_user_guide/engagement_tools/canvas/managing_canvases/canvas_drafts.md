@@ -16,7 +16,7 @@ Si tienes un Canvas activo que requiere cambios a gran escala, puedes utilizar e
 
 Como en cualquier Canvas, sólo un usuario puede editar un borrador a la vez, y un Canvas sólo puede tener un borrador a la vez. Estos borradores no tienen ningún análisis porque todavía no se han lanzado los cambios de borrador.
 
-![Un ejemplo de borrador de lienzo con un banner que indica al usuario que está editando un borrador de lienzo con una opción para ver el lienzo activo. 
+![Un ejemplo de borrador de lienzo con un banner que indica al usuario que está editando un borrador de lienzo con una opción para ver el lienzo activo. El pie de página tiene opciones para volver a la vista de análisis, guardar como borrador o iniciar el borrador.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 ## Crear un borrador
 
