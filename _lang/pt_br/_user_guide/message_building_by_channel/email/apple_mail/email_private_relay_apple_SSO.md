@@ -25,6 +25,7 @@ Se você usar o SendGrid como provedor de e-mail, poderá enviar e-mails para a 
 2. Acesse a página **Certificados, identificadores e perfis**.
 3. Selecione **Serviços** > **Fazer login com a Apple para comunicação por e-mail**.
 4. Na seção **Fontes de e-mail**, adicione os domínios e subdomínios.
+-  
 
 Se o endereço "From" desejado for um endereço `abmail`, inclua-o em seu subdomínio. Por exemplo, use `abmail.docs.braze.com` em vez de `docs.braze.com`.
 
