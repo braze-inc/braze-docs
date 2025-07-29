@@ -45,7 +45,7 @@ No entanto, uma taxa pode ser superior a 98% e ainda assim ter problemas de entr
 
 Além disso, as mensagens podem estar sendo enviadas e acabando em Spam, o que indica problemas de reputação potencialmente sérios. É importante monitorar não apenas o número de mensagens enviadas, mas também as taxas de abertura e de cliques para determinar se os usuários estão realmente vendo as mensagens em suas caixas de entrada. Como os provedores geralmente não relatam todas as instâncias de spam, uma taxa de spam de até 1% pode ser motivo de preocupação e de análise adicional.
 
-Por fim, sua empresa e os tipos de e-mail que você envia também podem afetar a entrega. Por exemplo, alguém que envia principalmente [e-mails de transação][1] deve esperar ver uma taxa melhor do que alguém que envia muitas mensagens de marketing.
+Por fim, sua empresa e os tipos de e-mail que você envia também podem afetar a entrega. 
 
 ### Por que minhas métricas de envio de e-mail não estão chegando a 100%?
 
@@ -89,7 +89,7 @@ Você pode remover e-mails devolvidos e e-mails na lista de spam com os seguinte
 ### Como posso verificar o grupo de inscrições para e-mail de um usuário?
 
 - **Perfil do usuário:** Os perfis de usuários individuais podem ser acessados por meio do dashboard do Braze na página [Pesquisar usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles). Aqui, é possível procurar perfis de usuários por endereço de e-mail, número de telefone ou ID de usuário externo. Em um perfil de usuário, na guia Engajamento, é possível visualizar os grupos de inscrições para e-mail de um usuário.
-- **API REST:** O grupo de inscrições de perfis de usuários individuais pode ser visualizado pelo [endpoint Listar grupos de inscrições do][9] usuário ou pelo [endpoint Listar status do grupo de inscrições do usuário][8] usando a Braze REST API. 
+- **API REST:**  
 
 ### Como posso atualizar o grupo de inscrições para e-mail de um usuário?
 
@@ -105,6 +105,3 @@ Não, o Braze não oferece essa funcionalidade. Isso ocorre porque a maioria cre
 
 **Solução alternativa:** Para obter esse mesmo resultado, é possível hospedar o conteúdo do e-mail em uma landing page externa (como seu site), que pode ser vinculada à campanha de e-mail que você está criando usando a ferramenta **Link** ao editar o corpo do e-mail.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign
