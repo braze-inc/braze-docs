@@ -24,11 +24,11 @@ Na **Prévia**, a visualização da sua mensagem pode não ser idêntica à rend
 
 Faça uma prévia de como sua mensagem será exibida para um usuário aleatório, um usuário específico ou um usuário personalizado - os dois últimos são especialmente úteis se sua mensagem contiver personalização ou vários idiomas. Também é possível fazer uma prévia das mensagens em dispositivos móveis ou tablets para ter uma ideia melhor da experiência dos usuários.
 
-![Guia "Criar" ao criar uma mensagem no app mostrando a prévia de como será a mensagem. Um usuário não é selecionado, portanto, o Liquid adicionado na seção do corpo é exibido como está.][1]
+![Guia "Criar" ao criar uma mensagem no app mostrando a prévia de como será a mensagem. 
 
 O Braze tem três gerações de mensagens no app disponíveis. Você pode ajustar para quais dispositivos suas mensagens devem ser enviadas, com base na geração que eles suportam.
 
-![Alternância entre gerações ao visualizar uma mensagem no app.][2]{: height="50%" width="50%"}
+
 
 ## Testar
 
@@ -40,7 +40,7 @@ Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_g
 
 Também é possível fazer a prévia das mensagens na guia **Teste**, como se fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado.
 
-![Guia Teste ao criar uma mensagem no app. A opção "Pré-visualizar mensagem como usuário" está definida como "Usuário personalizado", com os campos de perfil disponíveis aparecendo como opções configuráveis.][3]
+![Guia Teste ao criar uma mensagem no app. 
 
 ### Lista de verificação de teste
 
@@ -49,6 +49,29 @@ Também é possível fazer a prévia das mensagens na guia **Teste**, como se fo
 - Seu texto é claro, conciso e correto?
 - Seus botões direcionam o usuário para onde ele deve acessar?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## 
+
+  
+
+
+
+
+
+
+
+### 
+
+ 
+
+- 
+- 
+- 
+
+### 
+
+
+
+
+
+
+
