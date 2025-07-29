@@ -227,11 +227,9 @@ Create a container element for the Banner. Be sure to set its width and height.
 <div id="global-banner-container" style="width: 100%; height: 450px;"></div>
 ```
 
-Next, use the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
-
-{% alert tip %}
-To track impressions, be sure to call `insertBanner` for `isControl`. You can then hide or collapse your container afterwards.
-{% endalert %}
+{% subtabs local %}
+{% subtab javascript %}
+If you're using vanilla JavaScript with the Web Braze SDK, call the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -263,10 +261,10 @@ braze.subscribeToBannersUpdates((banners) => {
 
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
+{% endsubtab %}
 
-{% alert tip %}
-If you use React, use a `ref` to target your container node:
-{% endalert %}
+{% subtab react %}
+If you're using React with the Web Braze SDK, call the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method with a `ref` to replace the inner HTML of the container element.
 
 ```tsx
 import { useRef } from 'react';
@@ -287,6 +285,12 @@ export default function App() {
     return <div ref={bannerRef}></div>
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
+
+{% alert tip %}
+To track impressions, be sure to call `insertBanner` for `isControl`. You can then hide or collapse your container afterwards.
+{% endalert %}
 
 {% endtab %}
 {% tab Swift %}
