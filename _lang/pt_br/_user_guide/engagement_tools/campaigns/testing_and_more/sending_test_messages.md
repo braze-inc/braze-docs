@@ -122,48 +122,48 @@ Se estiver testando campanhas que preenchem dados de usuários ou usam proprieda
 
 ### Teste de campanhas personalizadas com atribuições do usuário
 
-
+Se estiver usando [personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) em sua mensagem, precisará realizar etapas adicionais para fazer uma prévia adequada da campanha e verificar se os dados de usuários estão preenchendo adequadamente o conteúdo.
 
 Ao enviar uma mensagem de teste, certifique-se de escolher a opção **Selecionar usuário existente** ou prévia como **usuário personalizado**.
 
-
+![Teste de uma mensagem personalizada]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Seleção de um usuário existente
 
 Se estiver selecionando um usuário existente, digite o ID do usuário específico ou o e-mail no campo de pesquisa. Em seguida, use a prévia do dashboard para ver como sua mensagem apareceria para esse usuário e envie uma mensagem de teste para seu dispositivo que reflita o que esse usuário veria.
 
-
+![Selecione um usuário]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### Seleção de um usuário personalizado
 
 Se a prévia for feita como um usuário personalizado, insira o texto de vários campos disponíveis para personalização, como o nome do usuário e quaisquer atributos personalizados. Mais uma vez, você pode inserir seu próprio endereço de e-mail para enviar um teste para seu dispositivo.
 
-
+![Usuário personalizado]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### Teste de campanhas personalizadas com propriedades de eventos personalizados
 
- A maneira mais robusta de testar campanhas personalizadas usando propriedades de eventos personalizados é disparar a campanha você mesmo, fazendo o seguinte:
+O teste de campanhas personalizadas com [propriedades de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties) é um pouco diferente do teste de outros tipos de campanhas descritas. A maneira mais robusta de testar campanhas personalizadas usando propriedades de eventos personalizados é disparar a campanha você mesmo, fazendo o seguinte:
 
-1. Escreva a cópia envolvendo a propriedade do evento. 
-2. 
+1. Escreva a cópia envolvendo a propriedade do evento. ![Criador de mensagem de teste com propriedades]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+2. Use [a entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) para entregar a campanha quando o evento ocorrer.
 
 {% alert note %}
 Se estiver testando uma campanha push para iOS, defina a postergação para 1 minuto para ter tempo de sair do app, pois o iOS não fornece notificações por push para o app aberto no momento. Outros tipos de campanhas podem ser definidos para entrega imediata.
 {% endalert %}
 
-
+![Teste o envio de mensagens]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3\. Direcione os usuários como faria para testes, usando um filtro de teste ou direcionando seu próprio endereço de e-mail, e termine de criar a campanha. 
 
-
+![Envio de mensagens de teste]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4\. Acesse seu app e conclua o evento personalizado.
 
 A campanha será disparada e mostrará a mensagem personalizada com a propriedade de evento.
 
-
+![Exemplo de envio de mensagens de teste]({% image_buster /assets/img_archive/testeventproperties-message.PNG %})
 
 Como alternativa, se estiver salvando IDs de usuário personalizados, também poderá testar a campanha enviando uma mensagem de teste personalizada para si mesmo.
 
@@ -172,5 +172,5 @@ Como alternativa, se estiver salvando IDs de usuário personalizados, também po
 3. Adicione a propriedade do evento personalizado na parte inferior da página e adicione seu ID de usuário ou endereço de e-mail na caixa superior.
 4. Clique em **Enviar teste** para receber uma mensagem personalizada com a propriedade.
 
-
+![Testes usando o usuário personalizado]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
