@@ -56,6 +56,21 @@ For example, if the first step in a Canvas is a Delay step with a five-day delay
 Array attributes aren’t currently supported as exit criteria on exception events.
 {% endalert %}
 
+### Having the same exit event and conversion event
+
+When the exit event and conversion event are the same, both the conversion and exit events will be accounted for. For example, if a Canvas has a Delay step and a user performs the exit criteria while in that Delay step, the exit event will increment as soon as the user exits the Delay step. The conversion will increment as soon as the event is logged on the user profile.
+
+Conversions are tracked even after the Canvas ends, but exits are not tracked once the user exits the Canvas. The conversion window extends to three days beyond the maximum duration of the Canvas. This means conversions will continue to be tracked after exits stop being tracked. 
+
+The minimum time for a conversion window is five minutes. Set the conversion windows to five minutes for your conversion events to get as close as possible to parity with exit events. We also recommend setting the conversion window to at least match the longest path in the Canvas.
+
+Consider the following example on how analytics are calculated:
+
+- You have 10 users who went through the Canvas.
+- Three users performed the conversion event within five minutes (Number of exit events is three, and the number of conversion events is three).
+- Another five users exited the Canvas after five minutes but performed the conversion event after two days (Number of exit events remains the same, but the conversion event increases to eight).
+- The last two users exited the Canvas after five minutes but didn't perform the conversion event, or performed it after three days and five minutes, so they aren't counted in either exit events or conversion events metrics.
+
 ## Example
 
 Let's say we want to target users who haven't made any purchases at our backpack supply company yet. To set up the exit criteria, we would:
