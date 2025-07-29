@@ -32,11 +32,13 @@ Cada registro é dividido em várias seções, que podem incluir:
 * Eventos da campanha
 * Dados de respostas
 
-Clique no botão **Raw Data (Dados brutos** ) para mostrar os dados JSON brutos desse registro específico.
 
-![Registros brutos de eventos][10]
+
+
 
 Os registros de usuários de eventos permanecerão no dashboard por 30 dias após terem sido registrados.
+
+
 
 ## Solução de problemas
 
@@ -67,4 +69,3 @@ Em relação às sessões de usuários, é possível usar a Braze para monitorar
 
 Esses comportamentos não são afetados pelo fato de o evento de ponta a ponta da sessão ser liberado na próxima sessão.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}
