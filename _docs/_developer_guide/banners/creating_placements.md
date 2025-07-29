@@ -38,7 +38,7 @@ Refresh placements as soon as possible to avoid delays in downloading or display
 {% endalert %}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -54,7 +54,9 @@ AppDelegate.braze?.banners.requestRefresh(placementIds: ["global_banner", "navig
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs %}
+{% subtab Java %}
 
 ```java
 ArrayList<String> listOfBanners = new ArrayList<>();
@@ -63,13 +65,15 @@ listOfBanners.add("navigation_square_banner");
 Braze.getInstance(context).requestBannersRefresh(listOfBanners);
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 Braze.getInstance(context).requestBannersRefresh(listOf("global_banner", "navigation_square_banner"))
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -85,7 +89,6 @@ This feature is not currently supported on Unity.
 ```
 
 {% endtab %}
-
 {% tab Cordova %}
 
 ```javascript
@@ -100,7 +103,6 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 
 {% endtab %}
-
 {% tab Roku %}
 
 ```brightscript
@@ -117,7 +119,7 @@ If you insert banners using the SDK methods in this guide, all analytics events 
 {% endalert %}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -142,7 +144,9 @@ let cancellable = brazeClient.braze()?.banners.subscribeToUpdates { banners in
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs %}
+{% subtab Java %}
 
 ```java
 Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
@@ -152,8 +156,8 @@ Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
 });
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 Braze.getInstance(context).subscribeToBannersUpdates { update ->
@@ -163,6 +167,8 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 }
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -187,7 +193,6 @@ This feature is not currently supported on Unity.
 ```
 
 {% endtab %}
-
 {% tab Cordova %}
 
 ```javascript
@@ -206,7 +211,6 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 ```
 
 {% endtab %}
-
 {% tab Roku %}
 
 ```brightscript
@@ -219,7 +223,7 @@ This feature is not currently supported on Roku.
 ### Step 4: Insert using the placement ID {#insertBanner}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 Create a container element for the Banner. Be sure to set its width and height.
 
@@ -228,7 +232,7 @@ Create a container element for the Banner. Be sure to set its width and height.
 ```
 
 {% subtabs local %}
-{% subtab javascript %}
+{% subtab JavaScript %}
 If you're using vanilla JavaScript with the Web Braze SDK, call the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method to replace the inner HTML of the container element.
 
 ```javascript
@@ -263,7 +267,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 {% endsubtab %}
 
-{% subtab react %}
+{% subtab React %}
 If you're using React with the Web Braze SDK, call the [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) method with a `ref` to replace the inner HTML of the container element.
 
 ```tsx
@@ -344,7 +348,9 @@ if let braze = AppDelegate.braze {
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs %}
+{% subtab Java %}
 To get the Banner in Java code, use:
 
 ```java
@@ -360,9 +366,9 @@ You can create Banners in your Android views layout by including this XML:
     android:layout_height="wrap_content"
     app:placementId="global_banner" />
 ```
+{% endsubtab %}
 
-{% endtab %}
-{% tab Kotlin %}
+{% subtab Kotlin %}
 If you're using Android Views, use this XML:
 
 ```xml
@@ -383,6 +389,8 @@ To get the Banner in Kotlin, use:
 ```kotlin
 val banner = Braze.getInstance(context).getBanner("global_banner")
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -420,7 +428,6 @@ This feature is not currently supported on Unity.
 ```
 
 {% endtab %}
-
 {% tab Cordova %}
 
 ```javascript
@@ -451,7 +458,6 @@ braze.getBanner("global_banner").then((banner) {
 ```
 
 {% endtab %}
-
 {% tab Roku %}
 
 ```brightscript
