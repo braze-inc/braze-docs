@@ -25,13 +25,13 @@ Quando os clientes abrem tickets de atendimento ao cliente em uma plataforma com
 
 ## Integração com o Braze
 
-O Braze tem uma integração com a [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/), uma plataforma de insights e pesquisas com clientes. Com a Transformação de dados, é possível salvar várias respostas de pesquisa em um atributo personalizado aninhado, em vez da integração existente que salva vários atributos personalizados.
+ Com a Transformação de dados, é possível salvar várias respostas de pesquisa em um atributo personalizado aninhado, em vez da integração existente que salva vários atributos personalizados.
 
 ## Exemplo de código de transformação
 
 Considere este exemplo de carga útil da Typeform, uma plataforma de pesquisa, que é enviada sempre que uma resposta de pesquisa é recebida.
 
-![][1]
+
 
 {% tabs local %}
 {% tab Transformação básica %}
