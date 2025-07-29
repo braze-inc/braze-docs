@@ -1,6 +1,6 @@
-Puedes utilizar esta plantilla para crear documentación de socio tecnológico. Para ver un ejemplo, consulta [Análisis de Scuba]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/scuba/).
+Você pode usar esse modelo para criar a documentação do parceiro de tecnologia. Para obter um exemplo, consulte [Análise de dados Scuba]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/scuba/).
 
-{% details Mostrar plantilla %}
+{% details Mostrar modelo %}
 {% raw %}
 `````markdown
 ---
