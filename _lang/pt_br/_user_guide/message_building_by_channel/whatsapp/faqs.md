@@ -34,7 +34,9 @@ Sim, você ainda precisa criar uma conta do WhatsApp Business. Recomendamos que 
 Depois de concluir o fluxo incorporado de inscrição, você pode acessar sua conta em business.facebook.com > [seção WhatsApp](https://business.facebook.com/wa/manage/home). 
 
 #### Posso conectar várias WABAs ao Braze? 
-Sim, você pode conectar um WABAs por espaço de trabalho. Portanto, você pode ter vários WABAs conectados a vários espaços de trabalho do Braze. Por exemplo, se você tiver espaços de trabalho diferentes para marcas diferentes ou espaços de trabalho diferentes para países diferentes, cada um poderá ter seu próprio WABA conectado.
+
+
+ 
 
 ### Números de telefone da conta empresarial do WhatsApp 
 
