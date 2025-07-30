@@ -31,13 +31,38 @@ Para dirigirse a usuarios que pertenecen a varios segmentos creados previamente,
 {% tab filtros múltiples %}
 Para dirigirse a los usuarios sin añadir un segmento, puede utilizar una serie de filtros. Se trata de una audiencia improvisada durante la creación del mensaje y te permite omitir la creación de segmentos cuando envías a audiencias puntuales.
 
-![Filtros adicionales para un mensaje dirigido a usuarios que han abierto una aplicación por última vez en el día, que nunca han recibido una campaña o un paso en Canvas y que realizaron una compra hace menos de 30 días.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:70%;"}
+![Filtros adicionales para un mensaje dirigido a usuarios que han abierto una aplicación por última vez en el día, que nunca han recibido una campaña o un paso en Canvas y que realizaron una compra hace menos de 30 días.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segmentos y filtros %}
 También puede dirigirse a los usuarios de uno o varios segmentos creados previamente que también estén incluidos en filtros adicionales. Después de seleccionar primero sus segmentos, puede refinar aún más su audiencia en la sección **Filtros adicionales**. Esto se demuestra en la siguiente captura de pantalla, que se dirige a los usuarios que están en el segmento "Usuarios activos diarios", en el segmento "Nunca han abierto el correo electrónico" y que hicieron una compra hace más de 30 días.
 
-![Opciones de segmentación para un mensaje que incluye dos segmentos y tiene un filtro adicional para una última compra realizada hace menos de 30 días.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:70%;"}
+![Opciones de segmentación para un mensaje que incluye dos segmentos y tiene un filtro adicional para una última compra realizada hace menos de 30 días.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
+{% endtab %}
+
+{% tab Aplicaciones específicas %}
+
+Puedes entregar un mensaje de campaña o un paso en Canvas a aplicaciones específicas, como enviar un mensaje dentro de la aplicación o una notificación push sólo a aplicaciones Android o iOS.
+
+Sin embargo, recuerda que es posible que un usuario utilice varias aplicaciones. El filtro "Tiene aplicación" identifica a todos los usuarios que tienen la aplicación seleccionada, pero no controla qué aplicaciones reciben mensajes. Por ejemplo, si aplicas un filtro de segmento en el que "Tiene aplicación" está configurado como Android, cualquier usuario que también tenga la aplicación iOS también recibirá el mensaje en su aplicación iOS.
+
+![Un filtro para los usuarios que tienen la aplicación "Hola, Mundo (Android)".]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+
+Supongamos que quieres enviar un mensaje dentro de la aplicación sólo a aplicaciones de Android.
+
+1. Crea un segmento y establece **Aplicaciones y sitios web dirigidos** a **Usuarios de aplicaciones específicas**, luego selecciona tu aplicación Android.
+
+![Un segmento dirigido a usuarios de una aplicación concreta, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+
+{: start="2"}
+2\. En tu campaña o Canvas, ve al paso **Audiencias objetivo** y confirma que tu segmento está añadido en la sección **Usuarios objetivo por segmento**. 
+
+![El paso "Audiencias objetivo" con un segmento de ejemplo seleccionado.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+
+{% alert note %}
+Esto no funcionará si añades tu segmento en la sección **Filtros adicionales** a través de un filtro de pertenencia a un segmento. Debes hacer referencia directa a tu segmento en **Usuarios objetivo por segmento** para entregar tu mensaje sólo a esa aplicación.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -49,7 +74,7 @@ En el caso de las campañas por correo electrónico, puede dirigirse a los Grupo
 
 Después de añadir segmentos y filtros a su público, puede probar si su público está configurado como se esperaba [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar si coincide con los criterios del público.
 
-![La sección "Búsqueda de usuarios" con un botón "Búsqueda de usuarios".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%"}
+![La sección "Búsqueda de usuarios" con un botón "Búsqueda de usuarios".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Resumen para la audiencia
 
@@ -70,6 +95,10 @@ Braze proporciona estadísticas detalladas de audiencia de los canales seleccion
 - Para determinar un número exacto de tus usuarios alcanzables, selecciona [Calcular estadísticas exactas]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics), ya que esto buscará entre todos los usuarios de tu base de usuarios.
 - Para ver a qué porcentaje de tu base de usuarios se dirige o el valor de duración del ciclo de vida (LTV) de este segmento, selecciona **Mostrar estadísticas adicionales**.
 - Para ver a qué porcentaje de tu base de usuarios se dirige o el valor de duración del ciclo de vida (LTV) de este segmento, selecciona **Mostrar estadísticas adicionales**.
+
+##### Por qué el recuento de la audiencia objetivo puede diferir del recuento de usuarios alcanzables
+
+{% multi_lang_include segments.md section='Diferentes tamaños de audiencia' %}
 
 ![La sección "Población total" con recuentos estimados de usuarios alcanzables en cada canal objetivo.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
