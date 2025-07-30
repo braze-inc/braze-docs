@@ -35,7 +35,7 @@ En la sección **Tipo de plantilla**, seleccione **Editor HTML** y desplácese h
 
 ### Paso 3: Sube tu plantilla
 
-Haga clic en **Cargar desde archivo** y seleccione la plantilla de su ordenador. Consulte la sección [Requisitos previos](#upload-requirements) para asegurarse de que su plantilla cumple los requisitos de carga.
+Selecciona **Cargar desde archivo** y selecciona la plantilla de tu computadora. Consulte la sección [Requisitos previos](#upload-requirements) para asegurarse de que su plantilla cumple los requisitos de carga.
 
 #### Solucionar errores de carga de plantillas
 
@@ -54,7 +54,7 @@ Hay varios mensajes de error de correo electrónico que puede recibir al cargar 
 
 ### Paso 4: Finaliza y guarda tu plantilla
 
-Asegúrese de guardar su plantilla haciendo clic en **Guardar plantilla**. Ya puedes utilizar esta plantilla en cualquier campaña o lienzo que elijas.
+Asegúrate de guardar tu plantilla seleccionando **Guardar plantilla**. Ya puedes utilizar esta plantilla en cualquier campaña o lienzo que elijas.
 
 {% alert note %}
 Si modifica una plantilla existente, los cambios no se reflejarán en las campañas creadas con versiones anteriores de esa plantilla.
@@ -64,7 +64,7 @@ Si modifica una plantilla existente, los cambios no se reflejarán en las campa�
 
 Para utilizar su correo electrónico en una campaña API, necesita la dirección `email_template_id`, que se encuentra en la parte inferior de cualquier plantilla de correo electrónico creada en Braze.
 
-![Sección de identificador API de una plantilla de correo electrónico HTML.][4]
+![Sección del identificador API de una plantilla de correo electrónico HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## Gestión de plantillas de correo electrónico
 
@@ -72,8 +72,6 @@ Puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_medi
 
 ## Preguntas más frecuentes
 
-Si desea conocer las respuestas a las preguntas más frecuentes sobre plantillas de correo electrónico, consulte nuestra página de preguntas frecuentes sobre plantillas de correo electrónico y enlaces][10].
+Para obtener respuestas a las preguntas más frecuentes sobre plantillas de correo electrónico, consulta nuestra página [de preguntas frecuentes sobre plantillas de correo electrónico y enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
 
-[4]: {% image_buster /assets/img_archive/email_template_id.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
