@@ -51,7 +51,7 @@ Si todos los mensajes de su campaña van a ser similares o van a tener el mismo 
 {% endtab %}
 {% endtabs %}
 
-{% multi_lang_include drag_and_drop_access.md variable_name='correo electrónico editor HTML' %}
+{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
 
 ## Paso 2: Seleccione su experiencia de edición {#step-2-choose-your-template-and-compose-your-email}
 
