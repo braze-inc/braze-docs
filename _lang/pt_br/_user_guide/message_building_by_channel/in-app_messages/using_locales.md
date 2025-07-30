@@ -68,6 +68,6 @@ Quaisquer alterações nas IDs ou localizações no arquivo CSV não serão atua
 Confira nossa [API de tradução]({{site.baseurl}}/api/endpoints/translations) para gerenciar e atualizar traduções em suas campanhas e canvas.
 {% endalert %}
 
-{% multi_lang_include locales.md seção="Prévia" %}
+{% multi_lang_include locales.md section="Preview" %}
 
 {% multi_lang_include locales.md section="Frequently Asked Questions" %}
