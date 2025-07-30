@@ -15,8 +15,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Com o editor de arrastar e soltar, você pode criar mensagens no app totalmente personalizadas em campanhas ou no canva usando a experiência de edição de arrastar e soltar.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
-
 Se quiser usar seus modelos HTML personalizados existentes ou modelos criados por terceiros, eles deverão ser recriados no editor de arrastar e soltar.
 
 Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou um [Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas. Depois de selecionar onde criar sua mensagem, vamos nos aprofundar nas etapas para criar uma mensagem no app do tipo arrastar e soltar.
@@ -69,7 +67,7 @@ Depois de selecionar o editor de arrastar e soltar como sua experiência de edi�
 
 Selecione **Criar mensagem** para começar a criar sua mensagem no app no editor de arrastar e soltar.
 
-![A seção Braze Templates, na qual é possível escolher um modelo básico, de imagem de fundo, de captura de número de telefone ou em branco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![A seção Braze Templates, na qual é possível escolher um modelo básico, de imagem de fundo, de captura de número de telefone ou em branco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 Também é possível acessar todos os modelos na seção **Modelos** do dashboard.
 
@@ -175,6 +173,8 @@ Os cliques no corpo não são coletados automaticamente para mensagens no app cr
 
 Sim, você pode segmentar com base em cliques em botões para até dois botões em sua mensagem. Para fazer isso, defina o **Identificador para relatórios** de seus botões como "0" e "1", que corresponderão aos filtros de segmento de mensagem "Clicou no botão de mensagem no app 1" e "Clicou no botão de mensagem no app 2", respectivamente.
 
+![O campo "Identifier for Reporting" (Identificador para relatórios) com um valor de "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### Posso personalizar minha mensagem no app usando HTML ou JavaScript personalizado ou transferir mensagens HTML existentes para o editor?
 
 Não é possível transferir diretamente mensagens HTML existentes para o editor, mas você pode inserir HTML, CSS e JavaScript brutos em um bloco de código personalizado. Você pode usar blocos de código personalizado para incorporar vídeos de terceiros e Liquid avançado, como conteúdo conectado ou declarações condicionais.
@@ -187,6 +187,6 @@ Atualmente, o editor está limitado apenas a mensagens modais e de tela cheia. �
 
 Sim. Para qualquer mensagem no app que queira reutilizar em uma campanha futura ou etapa do Canva, é possível salvá-la como um modelo personalizado usando o botão **Salvar como modelo**, disponível depois que você sair do editor. Antes de poder salvá-la como modelo, você deve primeiro lançar a campanha OU salvá-la como rascunho.
 
-![Uma prévia de uma mensagem no app para inscrever-se em atualizações de texto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![Uma prévia de uma mensagem no app para um tour de produto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 Você também pode criar e salvar modelos de mensagens no app navegando até **Modelos** > **Modelos de mensagens no app**.
