@@ -35,7 +35,7 @@ Hay dos formas de probar tu Canvas.
 
 - **Método 1:** En el lienzo duplicado, edite la parte **Audiencia de entrada** del constructor del lienzo para que sólo los usuarios de prueba sean elegibles para el lienzo. También puede introducir su propia dirección de correo electrónico como usuario de prueba añadiendo el filtro de prueba **Dirección de correo electrónico**. En el ejemplo siguiente, hemos limitado el Canvas a dos usuarios de prueba que han utilizado la aplicación por primera vez hace menos de tres días.
 
-![][2]
+![Un Canvas con una audiencia de entrada de "Utilizó por primera vez estas aplicaciones hace menos de 3 días" y las direcciones de correo electrónico de dos usuarios de prueba.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **Método 2:** [Previsualice sus rutas de usuario]({{site.baseurl}}/preview_user_paths/) seleccionando el botón **Probar lienzo** en el pie de página del constructor de lienzos.
 
@@ -84,5 +84,3 @@ Cuando esté probando un Canvas con múltiples ramas que se dirigen a los usuari
 1. Para cada rama, identifique los atributos y eventos que el usuario debe tener para ser incluido en el recorrido Canvas.
 2. Constrúyelos en una carga útil JSON que se publicará utilizando el punto final `/users/track`.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}
