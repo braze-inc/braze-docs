@@ -11,10 +11,6 @@ description: "Este artículo le mostrará cómo configurar el aprovisionamiento 
 
 > El aprovisionamiento justo a tiempo funciona con [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) para permitir que los nuevos usuarios del panel creen una cuenta Braze en su primer inicio de sesión. Esto elimina la necesidad de que los administradores creen manualmente una cuenta para un nuevo usuario del cuadro de mandos, elijan sus permisos, lo asignen a un espacio de trabajo y esperen a que active su cuenta.
 
-{% alert note %}
-El aprovisionamiento justo a tiempo de SAML se encuentra actualmente en acceso temprano. Póngase en contacto con su gestor de éxito de clientes de Braze si está interesado en participar en el acceso anticipado.
-{% endalert %}
-
 ## Requisitos previos
 
 Esta característica requiere que SAML SSO esté configurado e integrado, y no es compatible con Google SSO.
