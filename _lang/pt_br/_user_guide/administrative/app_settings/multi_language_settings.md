@@ -14,10 +14,14 @@ description: "Este artigo fornece uma visão geral das configurações multilín
 
 Para editar e gerenciar o suporte a vários idiomas, é necessário ter a permissão de usuário "Manage Multi-Language Settings" (Gerenciar configurações de vários idiomas). Para adicionar a localização a uma mensagem, você precisará de permissões para editar campanhas.
 
+{% alert important %}
+O suporte a vários idiomas está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+{% endalert %}
+
 ## Adicionar uma localização
 
 1. Acesse **Configurações** > **Suporte a vários idiomas** em **Configurações do espaço de trabalho**.
-2. Selecione **Add locale (Adicionar localidade)** e, em seguida, selecione **Default locale (Localidade padrão)** ou **Custom Attributes (Atributos personalizados)**.<br><br>![O menu suspenso "Add locale" (Adicionar localidade) com opções para selecionar a localidade padrão ou atributos personalizados.][1]{: style="max-width:40%;"}
+2. Selecione **Add locale (Adicionar localidade)** e, em seguida, selecione **Default locale (Localidade padrão)** ou **Custom Attributes (Atributos personalizados)**.<br><br>![O menu suspenso "Add locale" (Adicionar localidade) com opções para selecionar a localidade padrão ou atributos personalizados.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Digite um nome para a localização.
 4. Selecione as respectivas atribuições do usuário para a opção de localização escolhida.
 
@@ -67,4 +71,3 @@ Os arquivos de tradução são armazenados no nível da campanha, o que signific
 
 Não. Você pode usar sua convenção de nomenclatura preferida. O nome da localização é usado ao selecionar a localização no editor e estará nos cabeçalhos do arquivo baixado com os IDs de tradução.
 
-[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}
