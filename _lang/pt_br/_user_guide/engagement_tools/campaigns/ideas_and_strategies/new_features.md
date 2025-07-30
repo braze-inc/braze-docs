@@ -20,7 +20,7 @@ As campanhas de conscientização de recursos são uma ótima maneira de incenti
 
 Os SDKs do Braze rastreiam automaticamente a versão mais recente do app de um usuário. Essas versões podem ser usadas em filtros e segmentos para determinar quais usuários devem receber uma mensagem ou campanha.
 
-![O painel Opções de direcionamento na etapa Usuários-alvo no fluxo de trabalho de criação de campanhas. A seção Filtros adicionais inclui o seguinte filtro "O número da versão mais recente do app para Android Stopwatch (Android) é abaixo de 3.7.0 (134.0.0.0)".][1]
+![O painel Opções de direcionamento na etapa Usuários-alvo no fluxo de trabalho de criação de campanhas. A seção Filtros adicionais inclui o seguinte filtro "O número da versão mais recente do app para Android Stopwatch (Android) é inferior a 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
 
 ### Número da versão do app
 
@@ -37,7 +37,7 @@ Esse novo filtro pode substituir o antigo filtro "App Version Name", que exigiri
 
 **Importante**
 
-* Os apps para Android têm um arquivo legível por humanos [`versionName`][7] e um arquivo interno [`versionCode`][9]. O filtro Número da versão do app usa `versionCode` porque é garantido que ele seja incrementado a cada lançamento da loja de aplicativos.
+* Os apps para Android têm um arquivo legível por humanos [`versionName`](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) legível por humanos e um [`versionCode`](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()). O filtro Número da versão do app usa `versionCode` porque é garantido que ele seja incrementado a cada lançamento da loja de aplicativos.
 * Isso pode causar confusão quando o `versionName` e o `versionCode` do seu app ficam fora de sincronia, especialmente porque ambos os campos podem ser visualizados no dashboard do Braze. Como prática recomendada, verifique se `versionName` e `versionCode` do seu app são incrementados juntos.
 * Se, em vez disso, você precisar filtrar pelo campo `versionName` legível por humanos (incomum), use o filtro App Version Name.
 
@@ -45,9 +45,9 @@ Esse novo filtro pode substituir o antigo filtro "App Version Name", que exigiri
 
 Os valores para esse filtro são coletados a partir do Braze Android SDK v3.6.0+ e iOS SDK v3.21.0+. Mesmo que esse filtro tenha requisitos de SDK, você ainda poderá direcionar os usuários que estão em versões inferiores (mais antigas) do seu app usando esse recurso!
 
-Para Android, esse número de versão é baseado no [código da versão longa do pacote][9] do app.
+Para Android, esse número de versão é baseado no [código de versão longa](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) do [pacote](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) para o app.
 
-Para iOS, esse número de versão é baseado na [string da versão curta][8] do app.
+Para iOS, esse número de versão é baseado na [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) do aplicativo.
 
 {% alert tip %}
 Esse filtro preencherá os valores depois que os usuários fizerem upgrade de seus apps para as versões suportadas do SDK da Braze. Até lá, o filtro não mostrará nenhuma versão quando selecionado.
@@ -73,22 +73,14 @@ Use o filtro "App Version Name" para segmentar os usuários pelo "nome de compil
 
 Esse filtro suporta correspondência com "is", "is not" e expressões regulares. Por exemplo, você pode direcionar usuários que tenham um app que não seja da versão "1.2.3-test-build".
 
-Para Android, esse nome de versão é baseado no [nome da versão do pacote][7] para o app. Para iOS, esse nome de versão é baseado na [string da versão curta][8] do app.
+No Android, esse nome de versão é baseado no [nome da versão do pacote](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) do app. Para iOS, esse nome de versão é baseado na [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) do app.
 
 ### Não utilizou o recurso
 
-Quando você lança uma nova versão do app e introduz novos recursos, os usuários podem não notar o novo conteúdo. A execução de uma campanha de conscientização de recursos é uma ótima maneira de ensinar aos usuários sobre novos recursos ou sobre recursos que eles nunca usaram. Para isso, é necessário criar um [atributo personalizado][3] que é atribuído aos usuários que nunca concluíram uma determinada ação no app ou usar um [evento personalizado][4] para rastrear uma ação específica. Você pode usar essa atribuição (ou evento) para segmentar os usuários para os quais deseja enviar a campanha.
+Quando você lança uma nova versão do app e introduz novos recursos, os usuários podem não notar o novo conteúdo. A execução de uma campanha de conscientização de recursos é uma ótima maneira de ensinar aos usuários sobre novos recursos ou sobre recursos que eles nunca usaram. Para isso, é necessário criar um [atributo personalizado]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) atribuído aos usuários que nunca concluíram uma determinada ação no app ou usar um [evento personalizado]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) para rastrear uma ação específica. Você pode usar essa atribuição (ou evento) para segmentar os usuários para os quais deseja enviar a campanha.
 
 {% alert tip %}
 Deseja redirecionar uma parte específica de seu público? Confira [Campanhas de redirecionamento]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) para saber como redirecionar campanhas aproveitando as ações anteriores do usuário.
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img_archive/new_app_version.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/
-[7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
-[8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
-[9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()
