@@ -33,6 +33,9 @@ guide_featured_list:
   - name: Preguntas frecuentes
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
+  - name: Lienzos de solución de problemas
+    link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 {% alert important %}
