@@ -43,6 +43,5 @@ Ao visualizar um perfil de usuário no dashboard do Braze, você pode ver se ele
 
 Se o `native_line_id` foi definido, estará sob **LINE User ID**. Caso contrário, não aparecerá.
 
-![Configurações de Contato de Linha na guia de Engajamento.][1]{: style="max-width:60%;"}
+![Configurações de Contato de Linha na guia de Engajamento.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}
