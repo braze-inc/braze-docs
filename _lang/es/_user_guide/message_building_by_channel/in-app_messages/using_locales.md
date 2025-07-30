@@ -10,7 +10,7 @@ description: "Este artículo explica cómo utilizar localizaciones en tus mensaj
 
 > Tras añadir localizaciones a tu espacio de trabajo, puedes dirigirte a usuarios en distintos idiomas con un solo mensaje dentro de la aplicación.
 
-{% multi_lang_include locales.md section="Requisitos previos" %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Usar configuraciones regionales
 
@@ -68,6 +68,6 @@ Cualquier cambio en las ID o localizaciones del archivo CSV no se actualizará a
 Echa un vistazo a nuestra [API de traducción]({{site.baseurl}}/api/endpoints/translations) para gestionar y actualizar las traducciones en tus campañas y Canvases.
 {% endalert %}
 
-{% multi_lang_include locales.md section="Vista previa" %}
+{% multi_lang_include locales.md section="Preview" %}
 
-{% multi_lang_include locales.md section="Preguntas frecuentes" %}
+{% multi_lang_include locales.md section="Frequently Asked Questions" %}
