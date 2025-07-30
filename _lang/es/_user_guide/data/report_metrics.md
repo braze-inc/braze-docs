@@ -118,7 +118,7 @@ Mensaje dentro de la aplicación
 Mensaje dentro de la aplicación
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Clics en el botón 1' %} Los informes para _clics en el botón 1_ sólo funcionan cuando especificas el **identificador para informes** como "0" en el mensaje dentro de la aplicación.
+{% multi_lang_include metrics.md metric='Button 1 Clicks' %} Los informes para _clics en el botón 1_ sólo funcionan cuando especificas el **identificador para informes** como "0" en el mensaje dentro de la aplicación.
 
 <span class="calculation-line">Cálculo: (Clics en el botón 1) / (Impresiones)</span>
 
@@ -132,7 +132,7 @@ Mensaje dentro de la aplicación
 Mensaje dentro de la aplicación
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Botón 2 Clics' %} Los informes para el _botón 2 clics_ sólo funcionan cuando especificas el **identificador para informes** como "1" en el mensaje dentro de la aplicación.
+{% multi_lang_include metrics.md metric='Button 2 Clicks' %} Los informes para el _botón 2 clics_ sólo funcionan cuando especificas el **identificador para informes** como "1" en el mensaje dentro de la aplicación.
 
 <span class="calculation-line">Cálculo: (Clics en el botón 2) / (Impresiones)</span>
 
@@ -371,7 +371,7 @@ Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> par
 RCS
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Fallos de entrega RCS' %}
+{% multi_lang_include metrics.md metric='Delivery Failures RCS' %}
 
 Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender las razones de los fallos en la entrega.
 
@@ -964,7 +964,7 @@ Mensaje en la aplicación, tarjetas de contenido
 Correo electrónico, push de iOS, push de Android, notificación push web, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Aperturas totales' %}
+{% multi_lang_include metrics.md metric='Total Opens' %}
 
 |Canal|Información adicional|
 |-------|-----------------------|
@@ -1008,7 +1008,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, p
 Correo electrónico, Tarjetas de contenido, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Clics únicos' %}
+{% multi_lang_include metrics.md metric='Unique Clicks' %}
 
 Esto incluye los clics en los enlaces de cancelación de suscripción proporcionados por Braze.
 
@@ -1073,7 +1073,7 @@ Mensaje en la aplicación, tarjetas de contenido
 Correo electrónico, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md métrica='Unique Opens' (Aperturas únicas) %}
+{% multi_lang_include metrics.md metric='Unique Opens' %}
 
 |Canal|Información adicional|
 |-------|-----------------------|
