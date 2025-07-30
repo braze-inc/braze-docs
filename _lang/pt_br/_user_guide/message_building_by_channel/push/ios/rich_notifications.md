@@ -21,9 +21,9 @@ tool:
 
 Antes de criar uma notificação por push avançada para iOS, observe os seguintes detalhes:
 
-- Para garantir que seu aplicativo possa enviar notificações por push, siga as instruções de [integração de push do iOS][1], pois o desenvolvedor precisará adicionar uma extensão de serviço ao seu aplicativo.
+- Para garantir que seu aplicativo possa enviar notificações por push, siga as instruções de [integração de push do iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications), pois o desenvolvedor precisará adicionar uma extensão de serviço ao seu aplicativo.
 - Os tipos de arquivo que suportamos atualmente para fazer upload direto em nosso dashboard incluem JPEG, PNG ou GIF. Esses arquivos também podem ser inseridos no campo de URL de modelo, juntamente com esses tipos de arquivos adicionais: AIF, M4A, MP3, MP4 ou WAV.
-- Consulte a [documentação da Apple][2] para conhecer as limitações e especificações da mídia.
+- Consulte a [documentação da Apple](https://developer.apple.com/reference/usernotifications/unnotificationattachment) para conhecer as limitações e especificações da mídia.
 - As notificações Rich do iOS não estão disponíveis ao criar uma campanha push rápida.
 - O iOS dimensionará as imagens para que caibam na tela e dimensionará as imagens ricas para a exibição ativa ou bloqueada.
 
@@ -121,30 +121,23 @@ Os detalhes a seguir também podem afetar a truncagem do texto:
 
 ### Etapa 1: Criar uma campanha push
 
-Siga as [etapas da campanha][3] para compor uma notificação por push para iOS. Você usará o mesmo criador que usa para configurar notificações por push que não contêm conteúdo avançado.
+Siga as [etapas da campanha]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) para compor uma notificação por push para iOS. Você usará o mesmo criador que usa para configurar notificações por push que não contêm conteúdo avançado.
 
 ### Etapa 2: Adicionar mídia
 
 Adicione seu arquivo de imagem, GIF, áudio ou vídeo no campo **Rich Notification Media (Mídia de notificação Rich)** no criador da mensagem. Consulte os [requisitos](#requirements) sobre como adicionar seus arquivos de conteúdo.
 
-![Um exemplo de texto de resumo para uma notificação por push.][4]{: style="max-width:70%;" }
+![Um exemplo de texto de resumo para uma notificação por push.]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 Também é possível limitar o envio dessa mensagem apenas para usuários que tenham um dispositivo com iOS 10. Para os usuários que não fizeram upgrade para o iOS 10, elas aparecerão como notificações apenas de texto, sem o conteúdo avançado, se você deixar desmarcada a opção **Enviar apenas para dispositivos com suporte a notificações Rich**.
 
-![A seção Imagem de notificação expandida, na qual é possível adicionar uma imagem ou inserir um URL de imagem.][5]{: style="max-width:70%;" }
+![A seção de imagem de notificação expandida, onde é possível adicionar uma imagem ou inserir um URL de imagem.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### Etapa 3: Continue criando sua campanha
 
-Depois que o conteúdo da notificação Rich for feito upload no dashboard, você poderá continuar [programando sua campanha][6].
+Depois que o conteúdo da notificação Rich for feito upload no dashboard, você poderá continuar a [programar sua campanha]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign).
 
 Quando um usuário recebe a notificação por push, ele pode pressionar a mensagem por push para expandir a imagem.
 
-![Um usuário recebe uma notificação por push e pressiona a mensagem para mostrar uma imagem expandida que diz "Olá!".][8]{: style="max-width:50%;" }
+![Um usuário recebe uma notificação por push e pressiona a mensagem para mostrar uma imagem expandida que diz "Hello!".]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
-[2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}
-[5]: {% image_buster /assets/img_archive/rich_notification_ios10_select.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
-[8]: {% image_buster /assets/img_archive/rich_notification_ios.gif %}
