@@ -15,21 +15,23 @@ channel: content cards
 
 Al igual que ocurre con otros canales de mensajería de Canvas, las Tarjetas de contenido se enviarán al dispositivo de un usuario cuando éste cumpla los criterios de audiencia y segmentación especificados para su paso. Una vez enviada la tarjeta de contenido, estará disponible en el feed de cada usuario que cumpla los requisitos la próxima vez que se actualice su feed de tarjetas.
 
-![][1]
+![Tarjetas de contenido seleccionadas como canal de mensajería para un paso de Mensaje.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
-Dos opciones que cambiarán la forma en que el paso Tarjeta de contenido interactuará con Canvas son su [Expiración](#content-card-expiration) y su [Comportamiento de avance](#advancement-behavior-options).
+Dos opciones que cambiarán el modo en que el paso en Tarjeta de contenido interactuará con Canvas son su [caducidad](#content-card-expiration) y su [eliminación](#removal).
 
 ## Caducidad de la tarjeta de contenido {#content-card-expiration}
 
 Al componer una nueva tarjeta de contenido, puede elegir cuándo debe caducar del feed del usuario en función de su hora de envío. La cuenta atrás para la caducidad de una Tarjeta de Contenido comienza cuando el usuario llega al paso Mensaje en el Canvas donde se envía la tarjeta. La tarjeta estará activa en el feed del usuario desde este momento hasta que caduque. Una tarjeta puede existir en el feed de un usuario durante un máximo de 30 días. 
 
-### Fechas de caducidad relativas frente a absolutas
+![Configuración de caducidad de una tarjeta de contenido para un paso de mensaje que se eliminará al cabo de tres horas en la fuente de un usuario.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
-Hay dos formas de establecer cuándo debe desaparecer una tarjeta del feed de un usuario: una fecha relativa o una fecha absoluta. A continuación te explicamos cómo funciona cada uno:
+### Tipos de caducidad
+
+Hay dos formas de establecer cuándo debe desaparecer una tarjeta del feed de un usuario: una fecha relativa o una fecha absoluta.
 
 #### Fechas relativas
 
-Si elige una fecha relativa, como "Eliminar tarjetas enviadas después de 5 días en el feed de un usuario", puede establecer una fecha de caducidad máxima de 30 días.
+Cuando eliges una fecha relativa, como "Eliminar tarjetas enviadas tras 5 días en la fuente de un usuario", puedes establecer una fecha de caducidad de hasta 30 días.
 
 #### Fechas absolutas
 
@@ -45,49 +47,19 @@ La tarjeta de contenido permanece disponible en el feed del usuario hasta que ll
 
 Cuando caduque una tarjeta de contenido, se eliminará automáticamente del feed del usuario durante la siguiente actualización, aunque no la haya visto todavía.
 
-## Opciones de comportamiento de avance {#advancement-behavior-options}
+## Eliminación de la tarjeta de contenido {#removal}
 
-{% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible como referencia para entender cómo funciona el comportamiento de avance para los pasos con Tarjetas de Contenido.
-{% endalert %}
+Las tarjetas de contenido se pueden eliminar cuando los usuarios completan una compra o realizan un evento personalizado. Puedes seleccionar uno de los siguientes como evento de eliminación: **Realiza el evento personalizado** y **efectúa la compra**. A continuación, selecciona **Añadir Evento**.
 
-{% alert note %}
-En el Flujo Canvas, los componentes de Mensaje hacen avanzar automáticamente a todos los usuarios que entran en el paso. No es necesario especificar el comportamiento de avance de los mensajes, lo que simplifica la configuración del paso general. Si desea implementar la opción **Avanzar cuando se envíe el mensaje**, añada una [Ruta de público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) independiente para filtrar los usuarios que no hayan recibido el paso anterior.
-{% endalert %}
-
-La opción Comportamiento de avance le permite controlar cuándo un usuario debe avanzar a su siguiente paso elegible. Los pasos que [sólo envían Tarjetas de contenido](#steps-with-in-content-cards-only) tienen diferentes opciones de avance que [los pasos con varios tipos de mensajes](#steps-with-multiple-message-channels) (push, correo electrónico, etc.). Para las Tarjetas de contenido en un flujo de trabajo de Canvas Flow, esta opción está configurada para que la audiencia avance siempre inmediatamente.
-
-### Pasos solo con tarjetas de contenido {#steps-with-in-content-cards-only}
-
-Si un paso sólo contiene Tarjetas de contenido (y ningún otro canal de mensajería), puede controlar el comportamiento de avance con las siguientes opciones:
-
-| Opción | Descripción |
-|---|---|
-| Avanzar cuando el mensaje se haya enviado | Los usuarios avanzarán a los siguientes pasos del lienzo cuando la tarjeta de contenido se haya enviado correctamente. Utilice esta opción cuando desee que los usuarios sólo avancen si la tarjeta va a ser enviada y no abortada. |
-| Avanzar audiencia inmediatamente | Los usuarios avanzarán a los siguientes pasos del lienzo cuando se intente enviar la tarjeta de contenido. Si la tarjeta se cancela y no se envía, los usuarios seguirán avanzando al siguiente paso. Utilice esta opción cuando desee que los usuarios avancen independientemente de si la tarjeta de contenido se envía correctamente o se cancela. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][2]
-
-### Componentes con varios canales {#steps-with-multiple-message-channels}
-
-Los componentes del lienzo con una tarjeta de contenido y otro canal de mensajería tienen las siguientes opciones de avance:
-
-| Opción | Descripción |
-|---|---|
-| Avanzar cuando el mensaje se haya enviado | Los usuarios avanzarán a los siguientes pasos del Canvas cuando al menos uno de los tipos de mensaje de este paso se haya enviado correctamente.|
-| Avanzar audiencia inmediatamente | Cuando se selecciona esta opción, todas las personas del público del componente avanzarán a los pasos siguientes una vez transcurrido el retardo, hayan visto o no el mensaje señalado.  <br> <br> _Los usuarios deben coincidir con los criterios de segmento y filtro del componente para avanzar a los siguientes pasos._ |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][3]
+!["Eliminar tarjetas cuando los usuarios completen una compra o realicen un evento personalizado" seleccionado con el desencadenante de eliminar tarjetas para los usuarios que realicen una compra específica para "Pulsera".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Informes y análisis
 
 Después de lanzar un paso de Tarjetas de contenido en Canvas, puede comenzar a analizar varias métricas diferentes para este paso. Estas métricas incluyen el número de mensajes enviados, los destinatarios únicos, las tasas de conversión, los ingresos totales, etc.
 
-![][4]
+![Análisis de un paso de mensaje con el rendimiento del mensaje de la tarjeta de contenido.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
-Para más información sobre las métricas disponibles y sus definiciones, consulte nuestro [Glosario de métricas de los informes][6].
+Para más información sobre las métricas disponibles y sus definiciones, consulta nuestro [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 ## Ejemplos
 
@@ -103,12 +75,6 @@ Mediante Canvas, puede añadir un componente que envíe tanto una tarjeta de con
 
 #### Múltiples fuentes basadas en categorías
 
-Puede separar sus tarjetas de contenido en varios feeds en función de categorías como, por ejemplo, los distintos temas que pueden consultar los usuarios, o los feeds transaccionales y de marketing. Si desea más información sobre la creación de múltiples feeds mediante pares clave-valor, consulte nuestra guía para [Personalizar los feeds de las tarjetas de contenido][7].
+Puede separar sus tarjetas de contenido en varios feeds en función de categorías como, por ejemplo, los distintos temas que pueden consultar los usuarios, o los feeds transaccionales y de marketing. Para más información sobre la creación de múltiples fuentes utilizando pares clave-valor, consulta nuestra guía para [Personalizar las fuentes de la tarjeta de contenido]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 
 
-[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
-[3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
-[4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds
