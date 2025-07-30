@@ -16,7 +16,7 @@ Para visualizar um relatório de sua receita no dashboard, acesse **Análise de 
 
 Você pode personalizar seu relatório de receita selecionando um intervalo de datas, os apps a serem relatados e os parâmetros.
 
-![A página "Revenue Report" mostra o gráfico "Performance Over Time" com "Revenue" definido como parâmetro.][1]
+![A página "Revenue Report" mostra o gráfico "Performance Over Time" com "Revenue" definido como parâmetro.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtragem por data e aplicativos
 
@@ -80,8 +80,6 @@ Você pode visualizar os seguintes dados no **gráfico Performance Over Time**:
 
 Consulte a tabela **Detalhamento de produtos** para obter uma lista dos produtos comprados durante o intervalo de datas selecionado, quantos de cada produto foram comprados e a receita gerada por cada produto.
 
-![A tabela "Product Breakdown" mostra as colunas "Product Name" (Nome do produto), "Purchased" (Comprado) e "Revenue" (Receita).][2]
+![A tabela "Product Breakdown" (Detalhamento do produto) mostra as colunas "Product Name" (Nome do produto), "Purchased" (Comprado) e "Revenue" (Receita).]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}
