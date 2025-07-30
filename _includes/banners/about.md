@@ -78,7 +78,6 @@ Additionally, Banner messages do not support the following features:
 
 - Canvas integration
 - API-triggered and action-based campaigns
-- Currents
 - Connected Content
 - Promotional codes
 - User-controlled dismissals

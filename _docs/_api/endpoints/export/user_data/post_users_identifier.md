@@ -16,7 +16,7 @@ description: "This article outlines details about the Export users by identifier
 
 > Use this endpoint to export data from any user profile by specifying a user identifier.
 
-Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of any identifier can be included per request.
+Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of these identifiers can be included per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 

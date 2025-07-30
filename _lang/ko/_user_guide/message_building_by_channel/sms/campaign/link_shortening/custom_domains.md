@@ -11,9 +11,4 @@ channel:
   - SMS
 ---
 
-<!--
-This page needs to be manually translated again from:
-_docs/_user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains.md
-
-Removed the include as it no longer exists/is broken:
--->
+{% multi_lang_include custom_domains.md channel='SMS' %}

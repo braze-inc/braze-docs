@@ -219,7 +219,7 @@ To effectively coordinate feature rollout and messaging, we'll create a new feat
 
 ![A feature flag with the name Loyalty Rewards Program. The ID is show_loyalty_program, and the description that this shows the new loyalty rewards program on the home screen and profile page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
-Then, in Canvas Flow, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
+Then, in Canvas, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
 
 ![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 

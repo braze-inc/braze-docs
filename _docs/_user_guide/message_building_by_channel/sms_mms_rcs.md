@@ -9,7 +9,7 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS, and RCS"
-guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS, MMS, or RCS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS, MMS, and RCS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
+guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS, MMS, or RCS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/about_sms/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS, MMS, and RCS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
 description: "This landing page is home to SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services). These services offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time."
 
 guide_featured_title: "General articles"
@@ -53,8 +53,11 @@ guide_menu_list:
 - name: "About SMS"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "SMS Setup"
-  link: /docs/sms_setup/
+- name: "SMS Terms to Know"
+  link: /docs/sms_terms_to_know/
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "SMS Message Sending"
+  link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Creating an SMS Message"
   link: /docs/create_sms_message/

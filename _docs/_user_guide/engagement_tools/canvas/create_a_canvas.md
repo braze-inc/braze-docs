@@ -39,9 +39,6 @@ guide_featured_list:
   - name: In-App Messages in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Advancement Behaviors
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:

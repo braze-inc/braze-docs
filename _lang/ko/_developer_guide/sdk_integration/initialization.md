@@ -16,7 +16,7 @@ description: "Braze SDK를 런타임 초기화, 지연 초기화 또는 Google T
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/sdk_initialization.md %}
+{% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
