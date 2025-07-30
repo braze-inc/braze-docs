@@ -21,7 +21,7 @@ Para acceder a esta página, vaya a **Configuración** > **Configuración de adm
 
 En esta página puede gestionar la información de contacto y la zona horaria de su empresa. Asegúrate de pulsar **Guardar** antes de salir de la página.
 
-### Consecuencias del cambio de huso horario
+## Consecuencias del cambio de huso horario
 
 {% alert warning %}
 
