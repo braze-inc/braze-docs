@@ -6,8 +6,7 @@ description: "Este artigo de referência aborda as métricas LINE usadas no Braz
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # Relatórios LINE
@@ -40,7 +39,7 @@ Para medir o impacto de uma mensagem LINE individual, é possível adicionar um 
 
 O painel **LINE Performance** descreve o desempenho de sua mensagem em várias dimensões. As métricas nesse painel variam de acordo com o canal de envio de mensagens escolhido e com o fato de estar ou não executando um teste multivariante. Você pode clicar no ícone <i class="fa fa-eye preview-icon"></i> **Preview** para visualizar sua mensagem para cada variante ou canal.
 
-![O painel "LINE Performance" mostra métricas para duas variantes.][1]
+![O painel "Desempenho da LINHA" mostra métricas para duas variantes.]({% image_buster /assets/img/line/line_performance.png %})
 
 Se quiser simplificar sua visualização, selecione **\+ Add/Remove Columns (Adicionar/remover colunas** ) e limpe todas as métricas que desejar. Por padrão, todas as métricas são exibidas.
 
@@ -72,4 +71,3 @@ O painel **Detalhes do evento de conversão** mostra a performance de seus event
 O painel **Correlação de conversões** oferece insight sobre quais atribuições e comportamentos do usuário ajudam ou prejudicam os resultados definidos para as campanhas. Para saber mais, consulte [Correlação de conversão]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}
