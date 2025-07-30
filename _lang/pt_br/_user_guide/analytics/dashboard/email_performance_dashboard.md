@@ -13,7 +13,7 @@ tool:
 
 > Os dashboards de desempenho do canal mostram métricas de desempenho agregadas para um canal inteiro, tanto de campanhas quanto de Canvas. Atualmente, esses dashboards estão disponíveis para envio de e-mail e SMS.
 
-![Dashboard de performance de e-mail que exibe o engajamento do canal de e-mail dos últimos trinta dias.][1]
+![Dashboard de performance de e-mail exibindo o engajamento do canal de e-mail nos últimos trinta dias.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Você pode visualizar os seguintes dashboards:
 - [Painel de desempenho de e-mail](#email-performance-dashboard)
@@ -26,7 +26,7 @@ Visualize seu dashboard de desempenho de e-mail acessando **Análise de** dados 
 
 ### Como as métricas são calculadas
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Os cálculos para diferentes métricas no dashboard de desempenho de e-mail são os mesmos que aqueles em um nível de mensagem individual (como a análise de dados da campanha). Nesse dashboard, as métricas são agregadas em todas as campanhas e Canvas para o intervalo de datas que você selecionou. Para saber mais sobre essas definições, consulte [Métricas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
@@ -73,7 +73,7 @@ Para abertura de e-mails, a Braze separará o Google Image Proxy, o Apple Image 
 
 O relatório de **engajamento por provedor de caixa de e-mail** exibe os principais provedores de caixa de e-mail que contribuem para seus cliques ou aberturas. Você pode clicar em provedores de caixa de e-mail principais específicos para se aprofundar em domínios de recebimento específicos. Por exemplo, se a Microsoft estiver listada nesse relatório como um dos principais provedores de caixa de e-mail, você poderá visualizar detalhes dos domínios de recebimento, como "outlook.com", "hotmail.com", "live.com" e outros.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Horário do engajamento
 
@@ -81,11 +81,11 @@ O relatório **Time of Engagement (Tempo de engajamento** ) exibe dados de usuá
 
 O relatório de engajamento **do dia da semana** divide as aberturas ou os cliques por dia da semana. 
 
-![][6]
+![]({% image_buster /assets/img_archive/time_engagement.png %})
 
-O relatório de engajamento **Hora do dia** divide as aberturas ou os cliques por hora em um período de 24 horas.
+O relatório de engajamento **Hora do dia** divide as aberturas ou os cliques por hora em uma janela de 24 horas.
 
-![][7]
+![]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Para saber mais sobre a análise de dados de seus e-mails, consulte [Relatórios de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -95,9 +95,9 @@ Para usar seu dashboard de desempenho de SMS, acesse **Análise de dados** > **D
 
 ### Como as métricas são calculadas
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-Os cálculos para diferentes métricas no dashboard de performance de SMS são os mesmos que aqueles em um nível de mensagem individual (como análise de dados de campanha). Nesse dashboard, as métricas são agregadas em todas as campanhas e Canvas para o intervalo de datas que você selecionou. Para saber mais sobre essas definições, consulte [Métricas de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+Os cálculos para diferentes métricas no dashboard de performance de SMS são os mesmos que aqueles em um nível de mensagem individual (como análise de dados de campanha). Nesse dashboard, as métricas são agregadas em todas as campanhas e Canvas para o intervalo de datas que você selecionou. Para saber mais sobre essas definições, consulte [Métricas de SMS]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 Cada bloco mostra primeiro a métrica de taxa, seguida pela métrica de contagem (com exceção de _Envios_, que exibe a métrica de contagem seguida pela média por dia). Cada bloco também mostra a [comparação com o último período](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -120,7 +120,7 @@ Você pode filtrar os dados em seu dashboard usando as seguintes opções de fil
 - **Canvas:** Escolha até 10 telas. Quando aplicado, seu dashboard mostrará métricas apenas para os canvas selecionados. Se você selecionar um filtro de tag primeiro, suas opções de filtros de Canvas incluirão apenas Canvas que tenham a tag selecionada.
 - **Campanha:** Escolha até 10 campanhas. Quando aplicado, seu dashboard mostrará métricas apenas para as campanhas selecionadas. Se você selecionar um filtro de tag primeiro, suas opções de filtros de campanha incluirão apenas campanhas que tenham a tag selecionada.
 
-![Opções de filtro no Channel Performance Dashboard, onde você pode selecionar uma tag e uma lista de Canvas para filtrar.][3]
+![Opções de filtro no dashboard de performance do canal, onde você pode selecionar uma tag e uma lista de telas para filtrar.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Comparação de períodos de tempo
 
@@ -132,7 +132,7 @@ A comparação é a mudança percentual entre o último período e o atual, calc
 
 Você pode alternar entre **Show Change in Totals (Mostrar alteração nos totais) - que**compara as contagens totais (como o número de e-mails entregues) entre os dois períodos - e **Show Change in Rates (Mostrar alteração nas taxas) - que**compara as taxas (como a taxa de entrega).
 
-![Botões de rádio para alternar entre mostrar a alteração nos totais ou a alteração nas taxas do dashboard de performance do canal.][4]
+![Botões de rádio para alternar entre mostrar a alteração nos totais ou a alteração nas taxas do dashboard de performance do canal.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
 ## Perguntas frequentes
 
@@ -168,10 +168,3 @@ This means Braze hasn't recorded any data for that metric during the time you se
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}
