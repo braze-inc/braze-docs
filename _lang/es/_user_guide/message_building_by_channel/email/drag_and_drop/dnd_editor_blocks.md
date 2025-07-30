@@ -37,7 +37,7 @@ La siguiente tabla describe cómo los usuarios pueden utilizar cada tipo de bloq
 |`Video`| Crea un enlace al contenido del vídeo. |
 |`Social`| Inserta el icono de la plataforma de medios sociales. Se pueden cargar imágenes personalizadas para iconos específicos de la marca. |
 |`Icons`| Inserta un icono. Se pueden cargar imágenes personalizadas. Se utilizará un icono de gran tamaño hasta que se cargue una imagen. |
-|`HTML`| Inserta HTML sin formato. Ideal para Líquido avanzado como Contenido conectado o sentencias condicionales. | 
+|`HTML`| Inserta HTML sin formato. Recomendado para Liquid, como Contenido conectado o declaraciones condicionales. | 
 |`Menu`| Crea un menú flexible para el mensaje que estás diseñando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -109,6 +109,8 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 |---|---|
 |`Link Type`| Determina la acción al pulsar el botón y establece el protocolo de enlace apropiado. |
 |`URL`| Dinámico en función de la dirección `Link Type` seleccionada.|
+|`Button options`| Establece varias opciones de botón, como fuente, anchura, color, etc.|
+|`Button Hover`| El estilo del botón cuando un usuario pasa el ratón o el trackpad sobre él. Esto incluye el color de fondo del botón, el color de la fuente y los estilos de los bordes.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Divisor
@@ -138,10 +140,14 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 | Propiedades | descripción |
 |---|---|
-|`Auto Width`| Modifica los píxeles de la imagen. |
-|`Align`| Desplaza la imagen hacia la izquierda, el centro o la derecha. |
-|`URL`| La dirección de alojamiento de su imagen. |
-|`Alternate text`| La copia escrita que aparece en lugar de una imagen cuando ésta no se carga. |
+|`Auto Width`| Modifica la anchura de la imagen en píxeles. |
+|`Align`| Orienta la imagen hacia la izquierda, el centro o la derecha del bloque. |
+|`Image with Liquid`| Utiliza la lógica Liquid para establecer dinámicamente diferentes imágenes dentro del mismo bloque de contenido. |
+|`URL`| Configura una imagen utilizando la dirección donde está alojada. |
+|`Alternate text`| Una breve descripción de la imagen que proporciona a los usuarios la misma información que se muestra en la imagen. Esto es esencial para la accesibilidad de los lectores de pantalla o cuando la imagen no se carga. |
+|`Image with Rounded Corners`| Renderiza la imagen con las esquinas redondeadas. Por defecto, las imágenes se representan con esquinas cuadradas. |
+|`Action`| Desencadena una acción cuando el usuario hace clic en la imagen.|
+|`Block Options`| Establece el relleno alrededor del bloque de imagen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
