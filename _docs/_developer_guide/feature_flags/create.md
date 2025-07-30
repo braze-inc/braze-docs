@@ -312,7 +312,7 @@ const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 // Returns the Feature Flag instance
 let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
 
-// Returns the String property
+// Returns the string property
 let stringProperty: String? = featureFlag.stringProperty(key: "color")
 
 // Returns the boolean property
@@ -322,13 +322,13 @@ let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 
 // Returns the Unix UTC millisecond timestamp property as an integer
-let timestampProperty : Int? = featureFlag.timestampProperty(key: "account_start")
+let timestampProperty: Int? = featureFlag.timestampProperty(key: "account_start")
 
 // Returns the image property as a String of the image URL
-let imageProperty : String? = featureFlag.imageProperty(key: "homepage_icon")
+let imageProperty: String? = featureFlag.imageProperty(key: "homepage_icon")
 
 // Returns the JSON object property as a [String: Any] dictionary
-let jsonObjectProperty : [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
+let jsonObjectProperty: [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
 ```
 
 {% endtab %}

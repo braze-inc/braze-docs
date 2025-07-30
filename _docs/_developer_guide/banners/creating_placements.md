@@ -465,7 +465,7 @@ If a property you referenced does not exist, these methods will return `null`.
 ```swift
 // Passes the specified banner to the completion handler
 AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner in
-  // Returns the String property
+  // Returns the string property
   let stringProperty: String? = banner.stringProperty(key: "color")
 
   // Returns the boolean property
@@ -475,13 +475,13 @@ AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner 
   let numberProperty: Double? = banner.numberProperty(key: "height")
 
   // Returns the Unix UTC millisecond timestamp property as an integer
-  let timestampProperty : Int? = banner.timestampProperty(key: "account_start")
+  let timestampProperty: Int? = banner.timestampProperty(key: "account_start")
 
   // Returns the image property as a String of the image URL
-  let imageProperty : String? = banner.imageProperty(key: "homepage_icon")
+  let imageProperty: String? = banner.imageProperty(key: "homepage_icon")
 
   // Returns the JSON object property as a [String: Any] dictionary
-  let jsonObjectProperty : [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
+  let jsonObjectProperty: [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
 }
 ```
 
