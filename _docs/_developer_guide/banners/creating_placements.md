@@ -459,6 +459,7 @@ To access the properties of a banner, use one of the following methods depending
 
 If a property you referenced does not exist, these methods will return `null`.
 
+{% tabs %}
 {% tab Swift %}
 
 ```swift
