@@ -29,7 +29,7 @@ Si establece ID de usuario para identificar a los usuarios, cuando un nuevo usua
 
 Utilizando nuestra selección de filtros, cree un segmento de usuarios que considere que engloba a su base de usuarios más fieles y constantes. El siguiente segmento de muestra define a los principales usuarios.
 
-![][1]
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define tus principales usuarios")
 
 Además, no tendrá que seguir actualizando este segmento, ya que los usuarios que pasen dentro o fuera de las restricciones de la campaña serán correspondientemente apuntados o descartados.
 
@@ -45,11 +45,9 @@ Haz que tus usuarios se sientan apreciados agradeciéndoles su fidelidad y dedic
 
 Las recompensas inesperadas pueden ser más efectivas para animar a los usuarios a seguir actuando que si se las hubieras prometido desde el principio.
 
-![Una campaña en el paso Redactar con una notificación enriquecida de iOS que dice: "¡Gracias de nuevo por comprar con nosotros! Como muestra de nuestro agradecimiento, te regalamos los gastos de envío de tu próxima compra".][2]
+![Una campaña en el paso Redactar con una notificación enriquecida de iOS que dice: "¡Gracias de nuevo por comprar con nosotros! Para mostrarte nuestro agradecimiento, te regalamos los gastos de envío en tu próxima compra".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Haz un seguimiento de tus resultados
 
 Realice un seguimiento de las aperturas para asegurarse de que se dirige a la colección adecuada de usuarios con el tipo de mensaje óptimo. Además, lleve un registro de las cancelaciones push y tenga cuidado de no perder a estos usuarios cruciales.
 
-[1]: {% image_buster /assets/img_archive/define_top_users.png %} "Defina sus principales usuarios"
-[2]: {% image_buster /assets/img/congratulations_push.jpg %}
