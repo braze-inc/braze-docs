@@ -12,7 +12,7 @@ tool: Canvas
 
 > Los comentarios en los lienzos pueden ser un gran espacio de colaboración para que su equipo de marketing identifique, discuta y revise los detalles más finos de sus lienzos. A medida que construyes un Canvas, puedes hacer y gestionar comentarios para identificar estas áreas que pueden requerir retroalimentación adicional de tus colegas.
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## Beneficios
 
@@ -48,7 +48,7 @@ No podrás borrar los comentarios o hilos de otro usuario. Sin embargo, cualquie
 
 ## Gestión de las notificaciones
 
-![][2]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 Para gestionar las notificaciones por correo electrónico de un lienzo, abra la barra lateral y haga clic en <i class="fa-solid fa-bell"></i> **Notificaciones**. Aquí puedes seleccionar tus preferencias de notificación.
 
@@ -59,5 +59,3 @@ Para desactivar las notificaciones de comentarios de un lienzo, seleccione **Nin
 Ten en cuenta que la opción **Comentarios en los lienzos** de estas preferencias de notificación controla si quieres recibir o no notificaciones en todos los lienzos. Por lo tanto, si desactivas esta opción, no recibirás notificaciones por correo electrónico sobre ninguna acción relacionada con los comentarios.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}
