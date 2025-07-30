@@ -7,7 +7,7 @@ page_type: reference
 description: "Este artículo de referencia explica cómo acceder y utilizar el portal de productos Braze para proporcionar comentarios desde el panel de control."
 ---
 
-# Portal de productos ![Menú de recursos en el panel de control de Braze][1]{: style="float:right;max-width:33%;margin-left:15px;margin-top:15px;"}
+# Portal de productos ![Menú de recursos en el panel de Braze]({% image_buster /assets/img/portal.png %}){: style="float:right;max-width:33%;margin-left:15px;margin-top:15px;"}
 
 > Con el portal de productos, puedes acceder a la hoja de ruta de productos Braze y enviar ideas. Esto le permitirá conocer lo que hemos lanzado recientemente, las nuevas funciones en las que estamos trabajando y las ideas que estamos considerando construir. En el portal, puede votar por las funciones que desee clasificándolas según su importancia y dejar un comentario con su opinión o petición. 
 
@@ -53,4 +53,3 @@ Cuanta más información y contexto, mejor. Incluya enlaces a campañas, lienzos
 
 Para ver un ejemplo de solicitud de producto bien redactada, consulte este [Ejemplo de solicitud de producto]({{site.baseurl}}/product_request/). 
 
-[1]: {% image_buster /assets/img/portal.png %}
