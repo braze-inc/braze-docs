@@ -46,7 +46,7 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 Em seguida, vamos atribuir nossos eventos de conversão. Os eventos de conversão são um tipo de métrica que pode ser usada para medir o sucesso do Canva. Para **Nome do evento personalizado**, selecione **Clique de e-mail** como o evento personalizado.
 
-![Evento de conversão primária - Um evento com o tipo de conversão "Realiza evento personalizado" com o nome de evento personalizado "Envio de e-mail". Há um prazo de conversão de 4 dias.][1]
+![Evento de conversão primária - Um evento com o tipo de conversão "Realiza evento personalizado" com o nome de evento personalizado "Envio de e-mail". Há um prazo de conversão de 4 dias.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 Isso significa que os novos usuários têm até quatro dias para clicar no e-mail de boas-vindas. Nesse caso, queremos que nossos novos usuários tenham um senso de urgência para se engajarem no PantsLabyrinth e assinarem uma entrega recorrente de roupas sazonais.
 
@@ -56,7 +56,7 @@ Como o objetivo é direcionar novos usuários do PantsLabyrinth, manteremos o Ca
 
 Em seguida, ajuste a **Entry Window (Janela de entrada)** para determinar quando os usuários podem entrar no Canva. Digamos que haja um lançamento de inscrição no PantsLabyrinth no final de outubro. É aqui que definiremos o horário de início como **2024/10/28 8:00 am**. Opcionalmente, também podemos permitir que os usuários insiram o Canva em seu fuso local.
 
-![Uma janela de entrada com horário de início em 28 de outubro de 2024, às 8 horas. Os usuários digitarão essa mensagem em seu fuso local.][4]
+![Uma janela de entrada com horário de início em 28 de outubro de 2024, às 8 horas. Os usuários digitarão essa mensagem em seu fuso local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Etapa 4: Direcionamento para seu público
 
@@ -82,7 +82,7 @@ Agora, nossos usuários receberão esse e-mail de boas-vindas depois de iniciare
 
 Na etapa da jornada do público denominada **Audience Split (Divisão do público)**, podemos personalizar o filtro para nossos usuários engajados. No modelo, o filtro é **Tem e-mail clicado para a etapa E-mail de boas-vindas**, o que significa que os usuários são divididos em dois grupos: usuários que clicaram no e-mail de boas-vindas e aqueles que não clicaram.
 
-![Uma etapa de divisão de público com uma jornada para usuários engajados e outra para todos os outros.][2]{: style="max-width:70%;"}
+![Uma etapa de divisão de público com uma jornada para usuários engajados e outra para todos os outros.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 Como varejista on-line de roupas, a PantsLabyrinth também tem um grupo ativo de usuários móveis. Portanto, em uma tela de integração separada, também podemos selecionar o seguinte filtro para identificar e dividir nossos usuários móveis nesses segmentos:
 
@@ -101,7 +101,3 @@ Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme 
 Confira nossa [lista de verificação pré e pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber o que considerar antes e depois de lançar um Canva.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}
