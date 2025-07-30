@@ -40,7 +40,7 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conteúdo, crie sua mensagem antes de adicionar variantes adicionais. Em seguida, você pode selecionar **Copiar da variante** no menu suspenso **Adicionar variante**.
 {% endalert %}
 {% endtab %}
-{% tab Canva %}
+{% tab Canvas %}
 
 1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Depois de configurar seu canvas, adicione uma etapa no construtor do canva. Dê um nome claro e significativo à sua etapa.
@@ -51,7 +51,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endtab %}
 {% endtabs %}
 
-{% multi_lang_include editor de arrastar e soltar variable_name='e-mail editor de HTML' %}
+{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
 
 ## Etapa 2: Selecione sua experiência de edição {#step-2-choose-your-template-and-compose-your-email}
 
