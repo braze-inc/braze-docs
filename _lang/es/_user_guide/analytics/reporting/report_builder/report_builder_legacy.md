@@ -12,9 +12,9 @@ tool:
 
 # Generador de informes (heredado)
 
-> El generador de informes le permite comparar los resultados de varias campañas o lienzos en una sola vista para que pueda determinar fácilmente qué estrategias de participación han tenido un mayor impacto en sus métricas clave. Tanto para las campañas como para los Lienzos, puedes exportar tus datos y guardar tu informe para consultarlo en el futuro.<br><br>Para obtener una lista descriptiva de las métricas que encontrarás en tus informes, consulta el [Glosario de métricas de los informes][16].
+> El generador de informes le permite comparar los resultados de varias campañas o lienzos en una sola vista para que pueda determinar fácilmente qué estrategias de participación han tenido un mayor impacto en sus métricas clave. Tanto para las campañas como para los Lienzos, puedes exportar tus datos y guardar tu informe para consultarlo en el futuro.<br><br>Para obtener una lista descriptiva de las métricas que encontrarás en tus informes, consulta el [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data/report_metrics/).
 
-![Ejemplo de comparación de campañas][5]{: style="max-width:80%;"}
+![Ejemplo de comparación de campaña]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 Utilice este informe para responder a preguntas clave de compromiso, por ejemplo:
 
@@ -41,7 +41,7 @@ Selecciona **Crear informe nuevo** y elige un informe comparativo de campaña o 
 
 Si decide realizar un informe sobre las campañas, puede seleccionar entre un informe **Manual** o **Automatizado**. Los informes pueden contener campañas o lienzos, pero no ambos a la vez. Todas las campañas y Lienzos que hayan enviado mensajes por última vez en los últimos 12 meses serán elegibles para un informe.
 
-![Panel de campaña][6]{: style="max-width:80%;"}
+![Panel de campaña]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 A continuación se exponen las diferencias entre estas dos opciones:
 
@@ -62,9 +62,9 @@ Los informes de Canvas funcionan de forma similar a un informe de campaña manua
 
 Después de crear tu informe, encontrarás una tabla en blanco que contiene campañas en cada fila. La tabla se rellenará después de que seleccione **Editar columnas** y elija las métricas que desea añadir.
 
-![Opciones de campaña][15]{: style="max-width:80%;"}
+![Opciones de campaña]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
-Su tabla se rellenará con las métricas que elija. Para las definiciones de estas métricas, consulte el [Glosario de métricas del Informe][16]. Algunas métricas sólo están disponibles para los informes de comparación de campañas.
+Su tabla se rellenará con las métricas que elija. Para las definiciones de estas métricas, consulte el [Glosario de métricas del Informe]({{site.baseurl}}/user_guide/data/report_metrics/). Algunas métricas sólo están disponibles para los informes de comparación de campañas.
 
 También puede alternar los cálculos para la **Media** de cualquier tasa o métrica numérica y el **Total** para cualquier métrica numérica.
 
@@ -72,13 +72,13 @@ También puede alternar los cálculos para la **Media** de cualquier tasa o mét
 
 Puede seleccionar un periodo de tiempo específico para ver los datos de su informe. Si una determinada campaña, Canvas, variante en Canvas o componente de Canvas no tiene datos para el periodo de tiempo seleccionado, los resultados de esa fila estarán en blanco. 
 
-![Métrica numérica de la campaña][4]{: style="max-width:60%;"}
+![Campaña métrica numérica]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### Paso 4: Asigne un nombre a su informe y guárdelo
 
 Nombra tu informe antes de guardarlo. Si se guarda un informe sin nombrarlo, Braze aplicará un nombre por defecto de "Informe de comparación de campañas".
 
-![Nota de campaña][7]{: style="max-width:60%;"}
+![Nota de campaña]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
 
 Cuando estés listo, selecciona **Guardar**. Los informes guardados pueden consultarse posteriormente en la página **del generador de informes**.
 
@@ -86,7 +86,7 @@ Cuando estés listo, selecciona **Guardar**. Los informes guardados pueden consu
 
 Para cualquier campaña multivariante, puede ver estas métricas desglosadas por sus variantes y grupo de control haciendo clic en la flecha situada junto al nombre de la campaña. Las filas que contienen sus variantes incluirán los resultados de rendimiento para esa variante, y la fila que contiene su control incluirá sólo los resultados para sus eventos de conversión. 
 
-![Nota de campaña][3]{: style="float:right;max-width:15%;margin-left:15px;"}
+![Nota de campaña]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 Las métricas que rellenan la fila de tu campaña general reflejarán el rendimiento de sus variantes, pero no incluirán el rendimiento del control. Por ejemplo, el Evento de conversión primaria A de tu campaña general será la suma del Evento de conversión primaria A de tus variantes, y esto no incluirá el Evento de conversión primaria A de tu control.
 
@@ -102,19 +102,19 @@ Dentro de un informe de Canvas, puede ver sus Canvases desglosados por variante,
 
 Si seleccionas el **desglose por variante**, podrás ver las estadísticas de alto nivel de todos tus Canvas, así como las estadísticas de cada variante, que pueden ampliarse seleccionando la flecha situada junto al nombre del Canvas.
 
-![Variantes][12]{: style="max-width:90%;"}
+![Variantes]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
 
 ### Pasos 
 
 Si seleccionas el **desglose por pasos**, podrás ver las métricas a nivel de paso, y cada fila del informe contendrá la fila de un paso.
 
-![Pasos][13]{: style="max-width:90%;"}
+![Pasos]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
 
 ### Mensaje
 
 De forma similar a un desglose por pasos, al seleccionar **desglose por mensaje** se muestra el nombre de los pasos en cada fila. Sin embargo, dentro de las **columnas de edición**, tendrá acceso a las métricas a nivel de mensaje, como las estadísticas específicas del canal, como los clics de correo electrónico y las aperturas push.
 
-![Informe][14]{: style="max-width:90%;"}
+![Informe]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
 
 Tenga en cuenta que en el panel de control de Braze puede previsualizar las 50 primeras filas del informe Canvas. Puede acceder al informe completo cuando exporte un CSV.
 
@@ -141,7 +141,7 @@ Si su informe contiene alguna campaña multivariante, su exportación incluirá 
 
 El archivo que contiene las métricas de variantes tendrá `variant_` añadido al principio de su nombre. La primera vez que exporte un informe automatizado, aparecerá una ventana emergente pidiéndole permiso para descargar varios archivos: haga clic en **Permitir**.
 
-![Descarga de la campaña][8]{: style="max-width:60%;"}
+![Campaña Descarga]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### Exportación de informes de comparación de lienzos
 
@@ -156,7 +156,7 @@ Si descarga un informe Canvas de desglose de variantes, recibirá dos archivos C
 
 Utilice gráficos para visualizar una métrica seleccionada en su informe. Los gráficos están disponibles para los informes que incluyen campañas y tienen al menos una métrica añadida a sus columnas.
 
-![Gráfico de rendimiento de la campaña con la métrica Mensaje enviado seleccionada][17]
+![Gráfico de rendimiento de la campaña con métrica Mensaje enviado seleccionado]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 Por defecto, el gráfico de cada informe mostrará la métrica en la primera columna del informe. Para seleccionar una métrica diferente para el gráfico, elija su métrica en el menú desplegable. Cualquier métrica de la tabla del informe podrá mostrarse en el gráfico.
 
@@ -167,16 +167,4 @@ Si el gráfico sólo contiene una métrica, mostrará hasta 30 campañas en orde
 Actualmente, los gráficos no se guardan al guardar el informe.
 
 
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
