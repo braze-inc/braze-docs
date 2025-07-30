@@ -18,7 +18,7 @@ tool:
 
 Para ejecutar estos informes, haga lo siguiente:
 1. En **el Generador de consultas**, elige crear un informe nuevo SQL con una plantilla. 
-2. Filtra las plantillas en las que las métricas incluyen desgloses de segmento, que son:
+2. Selecciona Desgloses de **segmento** para la métrica, que filtra las plantillas para aquellas en las que la métrica incluye desgloses de segmento, que son:
 - Métricas de rendimiento del correo electrónico por segmento
 - Métricas de compromiso del correo electrónico para variantes o pasos, por segmento
 - Compras e ingresos por segmento
