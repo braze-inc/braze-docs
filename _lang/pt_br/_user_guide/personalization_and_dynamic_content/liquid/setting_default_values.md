@@ -14,7 +14,7 @@ description: "Este artigo de referência cobre como definir valores de fallback 
 
 ## Como eles funcionam
 
-Os valores padrão podem ser adicionados especificando um [Liquid Filter][3] (use `|` para distinguir o filtro em linha, como mostrado) com o nome "default".
+Os valores padrão podem ser adicionados especificando um [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) (use `|` para distinguir o filtro em linha, como mostrado) com o nome "default".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values
