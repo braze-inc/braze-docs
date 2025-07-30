@@ -8,6 +8,7 @@ channel:
 tool:
   - Campaigns
 search_rank: 4.8
+toc_headers: h2
 ---
 
 # Criar uma mensagem no app
@@ -66,9 +67,13 @@ Comece escolhendo quais plataformas devem receber a mensagem. Use essa seleção
 
 Depois de selecionar uma plataforma de envio, navegue pelos tipos de mensagens, layouts e outras opções associadas a ela. Saiba mais sobre o comportamento esperado e a aparência de cada uma dessas mensagens em nossa página [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) ou clicando nos tipos de mensagem vinculados nas tabelas a seguir.
 
-Ao decidir qual tipo de mensagem usar, você deve considerar o quão intrusiva sua campanha de mensagens no app precisa ser. Essa é uma medida da quantidade de espaço na tela que a mensagem ocupará e o quanto isso interrompe a experiência regular do cliente no app ou no site. Quanto mais rico for o conteúdo que você deseja fornecer, mais intrusiva precisará ser sua mensagem.
+Ao decidir qual tipo de mensagem usar, considere o espaço que a mensagem ocupará e o quanto ela pode atrapalhar a experiência do usuário.
 
-![Gráfico mostrando uma escala de menos intrusivo a mais intrusivo, com o controle deslizante sendo o menos intrusivo, seguido pelo modal, e a tela cheia sendo o mais intrusivo]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+- As mensagens **slideup** são as menos intrusivas, aparecendo sutilmente sem bloquear o conteúdo.
+- As mensagens **modais** ficam no meio - proeminentes o suficiente para chamar a atenção sem ocupar totalmente a tela.
+- As mensagens **em tela cheia** são as que mais chamam a atenção e são melhores para anúncios ou promoções importantes.
+
+Quanto mais complexo for o conteúdo, mais espaço será necessário e maior será a probabilidade de a mensagem interromper o fluxo do usuário.
 
 ### Tipos de mensagens
 
@@ -176,13 +181,13 @@ Se o Braze detectar que você não tem um botão de fechar ou dispensar incluíd
 
 A guia **Criar** permite que você edite todos os aspectos do conteúdo e do comportamento da sua mensagem.
 
-![Um exemplo de mensagem no app de uma marca para dar as boas-vindas a novos clientes e solicitar que eles criem um perfil de usuário.][24]{: style="max-width:85%" }
+![Um exemplo de mensagem no app de uma marca para dar as boas-vindas a novos clientes e solicitar que eles criem um perfil de usuário.]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 O conteúdo da guia **Compose (Criar)** varia de acordo com as opções de mensagem escolhidas na etapa anterior, mas pode incluir qualquer uma das opções a seguir:
 
 ### Idioma
 
-Selecione **Add Languages (Adicionar idiomas)** e selecione os idiomas desejados na lista fornecida. Isso inserirá o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Consulte nossa [lista completa de idiomas disponíveis][18].
+Selecione **Add Languages (Adicionar idiomas)** e selecione os idiomas desejados na lista fornecida. Isso inserirá o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Veja nossa [lista completa de idiomas disponíveis]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 ### Imagem
 
@@ -198,7 +203,7 @@ Alguns tipos de mensagens não precisam de cabeçalhos e, portanto, não os soli
 
 ##### Geração de cópia de IA
 
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Inicie o botão IA Copywriter, localizado no campo Mensagem do criador de mensagens no app.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
@@ -210,13 +215,15 @@ Precisa de ajuda para criar mensagens da direita para a esquerda em idiomas como
 
 Quando disponível para o seu tipo de mensagem, você pode fazer com que até dois botões apareçam sob o corpo do texto. Você pode criar e editar o texto e a cor do botão personalizado. Você também pode adicionar o link dos Termos de Serviço nos formulários de captura de e-mail.
 
-![Botões primário e secundário em uma mensagem no app]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
-
 Se você optar por usar apenas um botão, ele se ajustará automaticamente para ocupar o espaço disponível na parte inferior da mensagem, em vez de deixar espaço para um botão adicional.
 
 #### Escolha de um botão principal
 
-Se você decidir formatar esses botões com suas próprias cores, recomendamos que use o Botão 2 para obter o resultado desejado. Em outras palavras, se quiser que o usuário clique mais em um botão do que no outro, certifique-se de que ele esteja à direita. O botão direito geralmente apresenta melhor potencial para ser clicado, especialmente se tiver uma cor contrastante ou que se destaque do restante da mensagem. Isso só é enfatizado quando o botão à esquerda combina mais visualmente com a mensagem.
+Se você decidir formatar esses botões com suas próprias cores, recomendamos que use o Botão 2 para obter o resultado desejado.
+
+Em outras palavras, se quiser que o usuário clique mais em um botão do que no outro, certifique-se de que ele esteja à direita. O botão direito geralmente apresenta melhor potencial para ser clicado, especialmente se tiver uma cor contrastante ou que se destaque do restante da mensagem. Isso só é enfatizado quando o botão à esquerda combina mais visualmente com a mensagem.
+
+![Botões primário e secundário em uma mensagem no app]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### Comportamento ao clicar {#button-actions}
 
@@ -288,7 +295,7 @@ Alguns tipos de mensagens no app não têm a opção de estilização além de f
 
 ### Pares de valores chave
 
-É possível adicionar [key-value pairs][19] para enviar campos personalizados adicionais aos dispositivos do usuário.
+É possível adicionar [pares de valores-chave]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) para enviar campos personalizados adicionais aos dispositivos dos usuários.
 
 ## Etapa 7: Crie o restante de sua campanha ou Canva
 
@@ -344,7 +351,7 @@ As opções alta, média e baixa para as prioridades das mensagens disparadas s�
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
 
 {% alert note %}
 Se houver uma postergação na etapa da mensagem no app, a associação ao segmento será avaliada após o atraso. Se o usuário for elegível, a mensagem no app será sincronizada na próxima sessão disponível.
@@ -354,7 +361,7 @@ Se houver uma postergação na etapa da mensagem no app, a associação ao segme
 
 Em alguns cenários, talvez seja necessário reavaliar a elegibilidade de um usuário quando ele dispara uma mensagem no app para ser exibida. Os exemplos incluem campanhas que direcionam um atributo personalizado que muda com frequência ou mensagens que devem refletir qualquer alteração de perfil de última hora.
 
-![Seção Resumo do público da etapa Usuários-alvo com a opção "Reavaliar elegibilidade da campanha antes de exibir" selecionada.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![Caixa de seleção para "Reavaliar a elegibilidade da campanha antes de exibi-la" selecionada.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 Ao selecionar **Reavaliar a elegibilidade da campanha antes de** exibi-la, será feita uma solicitação adicional ao Braze para confirmar que o usuário ainda é elegível para essa mensagem antes do envio. Além disso, todas as variáveis [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) ou [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) serão modeladas nesse momento, antes que a mensagem seja exibida.
 
@@ -401,11 +408,3 @@ Você pode ter até 200 campanhas de mensagens no app ativas e baseadas em açã
 A contagem de 200 inclui campanhas ativas de mensagens no app que ainda não atingiram o horário de término e aquelas que não têm horário de término. Campanhas ativas de mensagens no app que tenham ultrapassado o horário de término não serão contadas. O cliente Braze médio tem um total de 26 campanhas ativas ao mesmo tempo, portanto, é improvável que essa limitação afete você.
 
 
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[16]: {{site.baseurl}}/user_guide/engajamento_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img_archive/iam_compose.png %}
-[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}
