@@ -21,7 +21,7 @@ Para acessar essa página, acesse **Configurações** > **Configurações admini
 
 É nessa página que você pode gerenciar as informações de contato e o fuso horário da sua empresa. Não se esqueça de clicar em **Salvar** antes de sair da página!
 
-### Consequências da mudança de fuso horário
+## Consequências da mudança de fuso horário
 
 {% alert warning %}
 

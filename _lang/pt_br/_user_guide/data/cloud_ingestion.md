@@ -35,8 +35,3 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-[1]: {% image_buster /assets/img/cloud_ingestion/ingestion_1.png %}
-[2]: {% image_buster /assets/img/cloud_ingestion/ingestion_2.png %}
-[3]: {% image_buster /assets/img/cloud_ingestion/ingestion_3.png %}
-[4]: {% image_buster /assets/img/cloud_ingestion/ingestion_4.png %}
-[5]: {% image_buster /assets/img/cloud_ingestion/ingestion_5.png %}

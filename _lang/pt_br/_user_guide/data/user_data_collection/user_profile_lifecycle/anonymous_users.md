@@ -44,7 +44,7 @@ Digamos que você atribua o atributo personalizado "is_lead_profile" a cada perf
 - **External User ID is blank**
 - "is_lead_profile" **is true**
 
-![Filtros de segmento para um ID de usuário externo em branco e um atributo personalizado "is_lead_profile" verdadeiro.][1]
+![Filtros de segmento para um ID de usuário externo em branco e um atributo personalizado "is_lead_profile" verdadeiro.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Capture dados de checkout de um usuário anônimo
 
@@ -76,4 +76,3 @@ Aqui está um exemplo de carga útil que será gerada quando o formulário de ca
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img/getting_started/anonymous_users.png %}

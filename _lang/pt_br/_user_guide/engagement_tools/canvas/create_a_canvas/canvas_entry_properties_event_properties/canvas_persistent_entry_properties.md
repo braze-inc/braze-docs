@@ -83,11 +83,9 @@ Nessa solicitação, o valor global de "food allergies" (alergias alimentares) �
 
 Se você tiver um Canvas que é disparado quando um usuário navega por um item em seu site de comércio eletrônico, mas não o adiciona ao carrinho, a primeira etapa do Canvas pode ser uma notificação por push perguntando se ele está interessado em comprar o item. Você pode fazer referência ao nome do produto usando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 A segunda etapa pode enviar outra notificação por push solicitando que o usuário finalize a compra, caso tenha adicionado o item ao carrinho, mas ainda não o tenha comprado. Você pode continuar a fazer referência à propriedade de entrada `product_name` usando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

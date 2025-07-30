@@ -26,7 +26,7 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='criar usuário do dashboard' %}
+{% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
 
 ## Corpo da solicitação
 ```

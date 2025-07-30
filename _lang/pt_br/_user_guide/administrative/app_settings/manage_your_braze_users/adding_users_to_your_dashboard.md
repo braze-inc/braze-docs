@@ -29,13 +29,13 @@ Adicionar um novo usuário:
 O departamento listado no perfil de um usuário determina quais tipos de comunicações eles recebem da Braze. Isso é para que todos recebam apenas as comunicações e alertas que são relevantes para como eles usam Braze.
 {% endalert %}
 
-![][2]
+![Campos de detalhes do usuário.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. Para usuários que não são administradores, selecione as permissões de nível de empresa e de nível de espaço de trabalho [permissões]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) que você deseja que este usuário tenha.
 
-![][3]
+![Permissões em nível de espaço de trabalho com uma seção para campos de permissões personalizadas.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Requisitos de endereço de e-mail
 
@@ -53,11 +53,11 @@ Suspender um usuário coloca a conta dele em um estado inativo, onde o usuário 
 
 Para suspender um usuário, acesse **Configurações** > **Usuários da empresa**, localize o nome de usuário e selecione <i class="fa-solid fa-user-lock"></i> **Suspender**.
 
-![Suspender um usuário][4]
+![Opção para suspender um usuário.]({% image_buster /assets/img_archive/suspend_user.png %})
 
 Os administradores também podem suspender um usuário selecionando seu nome na lista e clicando em **Suspender usuário** no rodapé.
 
-![Suspender um usuário ao editar os detalhes do usuário.][5]
+![Suspender um usuário ao editar os detalhes do usuário.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Atribuindo acesso e responsabilidades do usuário
 
@@ -67,7 +67,7 @@ Os administradores também podem suspender um usuário selecionando seu nome na 
 
 Para excluir um usuário, acessar **Configurações** > **Usuários da Empresa**, encontre o nome de usuário e selecione <i class="fa fa-trash-can"></i> **Excluir usuário**.
 
-![Excluir um usuário][34]
+![Excluir um usuário]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 Depois que um usuário é excluído, a Braze não mantém nenhum dos seguintes dados:
 
@@ -87,7 +87,7 @@ Braze manterá os seguintes dados da conta:
 
 ## Solução de problemas
 
-### "O e-mail já está em uso" ao tentar adicionar um usuário
+### "E-mail já está em uso" ao tentar adicionar um usuário
 
 Se você tentar adicionar um novo usuário e receber um erro dizendo que o e-mail já está em uso, mas não conseguir encontrá-lo na sua lista de usuários, esse usuário provavelmente existe em uma instância diferente do mesmo cluster de dashboard do Braze.
 
@@ -96,12 +96,5 @@ Para criar este novo usuário, você pode fazer uma das seguintes opções:
 1. Excluir o usuário da outra instância antes de poder criá-lo na nova, ou
 2. Criar o usuário com uma string de e-mail diferente (como `testing+01@braze.com`) ou outro alias de e-mail. 
 
-Se você não receber a ativação da mensagem na sua caixa de entrada ao usar `testing+01@braze.com`, confirme com sua equipe de TI que você pode aceitar mensagens desse tipo de endereço de e-mail. Alguns administradores filtram mensagens enviadas para endereços de e-mail com um `+`.
+Se você não receber a mensagem de ativação na sua caixa de entrada ao usar `testing+01@braze.com`, confirme com sua equipe de TI que você pode aceitar mensagens desse tipo de endereço de e-mail. Alguns administradores filtram mensagens enviadas para endereços de e-mail com um `+`.
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-[27]: {% image_buster /assets/img/add-user.gif %} "Adicionar um Novo Processo de Usuário"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}

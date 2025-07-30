@@ -37,7 +37,7 @@ A tabela a seguir descreve como os usuários podem usar cada tipo de bloco de ed
 |`Video`| Cria um link para o conteúdo do vídeo. |
 |`Social`| Insira o ícone da plataforma de redes sociais. Imagens personalizadas podem ser feitas upload para ícones específicos da marca. |
 |`Icons`| Insere um ícone. É possível fazer upload de imagens personalizadas. Um ícone de espaço reservado de grandes dimensões será usado até que uma imagem seja feita upload. |
-|`HTML`| Insere HTML bruto. Ótimo para Liquid avançado, como conteúdo conectado ou declarações condicionais. | 
+|`HTML`| Insere HTML bruto. Recomendado para Liquid, como Connected Content ou declarações condicionais. | 
 |`Menu`| Cria um menu flexível para a mensagem que você está projetando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -109,6 +109,8 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Button`.
 |---|---|
 |`Link Type`| Determina a ação ao clicar no botão e define o protocolo de link apropriado. |
 |`URL`| Dinâmico com base no site selecionado `Link Type`.|
+|`Button options`| Define várias opções de botão, como fonte, largura, cor etc.|
+|`Button Hover`| O estilo do botão quando um usuário passa o mouse sobre ele usando um mouse ou trackpad. Isso inclui a cor de fundo do botão, a cor da fonte e os estilos de borda.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Divisor
@@ -138,10 +140,14 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Image`. 
 
 | propriedades | descrição |
 |---|---|
-|`Auto Width`| Modifica os pixels da imagem. |
-|`Align`| Move a imagem para a esquerda, para o centro ou para a direita. |
-|`URL`| O endereço hospedado de sua imagem. |
-|`Alternate text`| A cópia escrita que aparece no lugar de uma imagem quando a imagem não é carregada. |
+|`Auto Width`| Modifica a largura da imagem em pixels. |
+|`Align`| Orienta a imagem para a esquerda, o centro ou a direita do bloco. |
+|`Image with Liquid`| Use a lógica Liquid para definir dinamicamente imagens diferentes dentro do mesmo bloco de conteúdo. |
+|`URL`| Defina uma imagem usando o endereço de onde ela está hospedada. |
+|`Alternate text`| Uma breve descrição da imagem que fornece aos usuários as mesmas informações que são mostradas na imagem. Isso é essencial para a acessibilidade do leitor de tela ou quando a imagem não é carregada. |
+|`Image with Rounded Corners`| Renderize a imagem com cantos arredondados. Por padrão, as imagens são renderizadas com cantos quadrados. |
+|`Action`| Desencadeia uma ação quando o usuário clica na imagem.|
+|`Block Options`| Define o preenchimento ao redor do bloco de imagem. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}

@@ -18,13 +18,13 @@ Para exportar CSVs de dados dessa página:
 
 1. Defina o período de tempo e os apps para os quais deseja visualizar os dados. Por padrão, o dashboard mostra os últimos 30 dias de dados de todos os aplicativos.
 
-![Campos período e app na página inicial do dashboard.][1]{: style="max-width:60%;"}
+![Período de tempo e campos de app no dashboard inicial.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Role a tela para baixo até o gráfico **Performance Over Time (Desempenho ao longo do tempo** ).
 3\. Selecione os dados que você gostaria de exportar no campo **Statistics For (Estatísticas para** ). Veja os [dados disponíveis](#available-data) para você exportar.
 
-![Gráfico Performance ao longo do tempo no dashboard da Página inicial.][2]
+![Gráfico de performance ao longo do tempo no dashboard inicial.]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4\. Selecionar <i class="fas fa-bars" title="Menu de contexto do gráfico"></i> e, em seguida, selecione sua opção de exportação.
@@ -51,7 +51,6 @@ Você pode exportar CSVs com os seguintes dados:
     - Número de mensagens no app abertas
 - MAUs por data
 - Número de novos usuários por data
-- Impressões do feed de notícias por data
 - Notificações por push por data
     - (Opcional) Notificações por push para diferentes plataformas de app
     - Número de notificações por push enviadas
@@ -66,5 +65,3 @@ Você pode exportar CSVs com os seguintes dados:
 Para obter ajuda com exportações CSV e API, visite nosso artigo [de solução de problemas de exportação]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}

@@ -17,7 +17,7 @@ A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar
 
 > O recurso **Advancement Behavior (Comportamento de avanço)** permite que você escolha os critérios de avanço por meio do [componente do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
-![Avanço Configurações de comportamento com duas opções para avançar o público quando a mensagem for enviada ou para avançar imediatamente o público.][1]
+![Configurações de Comportamento de Avanço com duas opções para avançar o público quando a mensagem é enviada, ou para avançar imediatamente o público.]({% image_buster /assets/img/push-advancement-behavior.png %} "Comportamento de Avanço")
 
 Os usuários devem atender aos critérios da etapa para poderem avançar por ela. Com as etapas [de mensagens]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), você pode ativar as validações de entrega para verificar se o público atende aos critérios de entrega no envio da mensagem. Isso contará para os critérios da etapa ao usar o Canvas Flow. Portanto, se um usuário não atender aos critérios de validação de entrega, ele sairá do canva.
 
@@ -41,7 +41,7 @@ Quando **a opção Avançar público imediatamente** for selecionada, os usuári
 
 ### Etapas programadas
 
-Para um componente agendado, os usuários devem atender às opções de público da etapa para poderem avançar na etapa. Se a etapa tiver um [evento de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), os usuários que realizarem o evento de exceção não avançarão na etapa.
+Para um componente agendado, os usuários devem atender às opções de público da etapa para poderem avançar na etapa. Se a etapa tiver um [evento de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events), os usuários que realizarem o evento de exceção não avançarão na etapa.
 
 Ao enviar um componente multicanal com o [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), podemos enviar ou tentar enviar mensagens em vários canais em horários diferentes. O Braze avançará automaticamente os usuários no momento em que a primeira mensagem de um componente tentar ser enviada.
 
@@ -77,4 +77,3 @@ Os clientes do Braze que participaram da primeira rodada da versão beta das men
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Comportamento de avanço"

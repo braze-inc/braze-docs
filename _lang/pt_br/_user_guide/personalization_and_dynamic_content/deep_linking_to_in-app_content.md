@@ -30,7 +30,7 @@ O Braze não oferece suporte ao uso de um wrapper como o Flutter para enviar dee
 
 ### O que é uma tag UTM?
 
-[As tags UTM (Urchin Traffic Manager)][4] permitem que você inclua detalhes de atribuição de campanha diretamente nos links. As tags UTM são usadas pelo Google Analytics para coletar dados de atribuição de campanha e podem ser usadas para rastrear as seguintes propriedades:
+[As tags UTM (Urchin Traffic Manager)](https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article) permitem que você inclua detalhes de atribuição de campanha diretamente nos links. As tags UTM são usadas pelo Google Analytics para coletar dados de atribuição de campanha e podem ser usadas para rastrear as seguintes propriedades:
 
 - `utm_source`: O identificador da origem do tráfego (por exemplo, `my_app`)
 - `utm_medium`: A mídia da campanha (por exemplo, `newsfeed`)
@@ -42,9 +42,9 @@ As tags UTM podem ser incorporadas em links HTTP (web) regulares e deep links e 
 
 ### Uso de tags UTM com a Braze
 
-Se quiser usar tags UTM com links HTTP (web) regulares (por exemplo, para fazer atribuição de campanha para suas campanhas de e-mail) e sua organização já usa o Google Analytics, você pode usar [criador de URL do Google][6] para gerar links UTM. Esses links podem ser prontamente incorporados ao texto da campanha do Braze, como qualquer outro link.
+Se quiser usar tags UTM com links HTTP (web) regulares (por exemplo, para fazer atribuição de campanha para suas campanhas de e-mail) e sua organização já usa o Google Analytics, você pode usar [criador de URL do Google](https://ga-dev-tools.google/ga4/campaign-url-builder/) para gerar links UTM. Esses links podem ser prontamente incorporados ao texto da campanha do Braze, como qualquer outro link.
 
-Para usar tags UTM em deep linkings para seu aplicativo, ele deve ter o [SDK do Google Analytics][5] relevante integrado e configurado corretamente para lidar com deep links. Consulte seus desenvolvedores se não tiver certeza sobre isso.
+Para usar tags UTM em deep linkings para seu aplicativo, ele deve ter o [SDK do Google Analytics](https://developers.google.com/analytics/devguides/collection/) relevante integrado e configurado corretamente para lidar com deep links. Consulte seus desenvolvedores se não tiver certeza sobre isso.
 
 Depois que o SDK do Analytics for integrado e configurado, as tags UTM poderão ser usadas com deep links nas campanhas do Braze. Para configurar tags UTM para sua campanha, inclua as tags UTM necessárias no URL de destino ou nos deep linkings. Os exemplos a seguir mostram como usar tags UTM em notificações por push e mensagens no app.
 
@@ -56,7 +56,7 @@ Para incluir tags UTM em seus deep links para notificações por push, defina o 
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![][8]
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### Atribuição de cliques em mensagens no app com tags UTM
 
@@ -66,15 +66,5 @@ Para incluir tags UTM nos deep links em suas mensagens no app, use o seguinte:
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-![][10]
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article
-[5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://ga-dev-tools.google/ga4/campaign-url-builder/
-[8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
-[9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
-[10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
-[11]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/

@@ -26,7 +26,7 @@ Os serviços de limpeza de listas de e-mail podem fazer isso para você, determi
 
 Para identificar os usuários com maior engajamento, primeiro remova os usuários que estão profundamente desistentes. É uma prática recomendada não enviar e-mails a usuários que não tenham se engajado com um e-mail há mais de seis meses, pois isso pode prejudicar a reputação do remetente do e-mail. Ao importar sua lista de e-mails, certifique-se de incluir apenas os usuários que abriram um e-mail seu nos últimos seis meses.
 
-A longo prazo, você também deve considerar a implementação de uma [política de sunsetting][60].
+A longo prazo, você também deve considerar a implementação de uma [política de sunsetting]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### Evitar listas de supressão
 
@@ -36,4 +36,3 @@ Se estiver fazendo a transição de um provedor de e-mail existente, certifique-
 
 Depois de preparar sua lista de e-mails, há várias maneiras de importar usuários para o Braze, como por meio da API REST de e-mail do Braze ou de arquivos CSV. Leia mais em nosso artigo dedicado à [importação de usuários]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

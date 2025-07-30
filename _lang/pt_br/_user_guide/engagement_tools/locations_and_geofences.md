@@ -18,11 +18,8 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Integrações móveis
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Perguntas frequentes
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## Sobre locais e geofences
@@ -36,4 +33,3 @@ Com o Braze, é possível criar e aprimorar relacionamentos com seus usuários c
 
 - Quando um usuário abre seu app, o monitoramento de localização captura seus locais mais recentes usando dados de localização do GPS. Isso permite ver onde seus usuários estiveram e segmentar com base nesses dados.
 - As geofences são áreas geográficas virtuais definidas. Se um usuário tiver ativado o monitoramento de localização em segundo plano, é possível usar geofences para disparar campanhas em tempo real quando um usuário estiver em uma geofence.
-<br><br><br>

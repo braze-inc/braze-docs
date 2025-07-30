@@ -107,7 +107,7 @@ Para definir seu "quem", você pode usar segmentos predefinidos disponíveis no 
 * [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [Mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [Cartões de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS ou MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS ou MMS]({{site.baseurl}}/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### O "como": Crie a experiência completa

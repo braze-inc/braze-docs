@@ -26,7 +26,7 @@ Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_g
 
 Também é possível fazer a prévia das mensagens na guia **Teste** como se fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado.
 
-![Custom_User_Preview][3]
+![Prévia de um cartão de conteúdo na guia "Teste".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### Lista de verificação de teste
 
@@ -52,7 +52,7 @@ Um caso de uso comum é tentar depurar por que um usuário não consegue ver um 
         "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
         "data": {
           "ids": [
-            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
           ]
         },
         "name": "cci",
@@ -64,16 +64,14 @@ Um caso de uso comum é tentar depurar por que um usuário não consegue ver um 
 5. Use uma ferramenta de decodificação como [Base64 Decode and Encode](https://www.base64decode.org/) para decodificar o `id` do formato Base64 e encontrar o `campaign_id` associado. Em nosso exemplo, isso resulta no seguinte:
 
     ```
-    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    Onde `6185005a9d9bee79387cce43` é o `campaign_id`.<br><br>
+    Onde `4861692e-6fce-4215-bd05-3254fb9e9057` é o `campaign_id`.<br><br>
 
 6. Acesse a página **Campanhas** e pesquise o endereço `campaign_id`.
 
-![Pesquisar campaign_id na página Campaigns][1]
+![Procure por campaign_id na página de Campanhas]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 A partir daí, é possível revisar as configurações e o conteúdo das mensagens para detalhar e determinar por que um usuário não consegue ver um determinado cartão de conteúdo.
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

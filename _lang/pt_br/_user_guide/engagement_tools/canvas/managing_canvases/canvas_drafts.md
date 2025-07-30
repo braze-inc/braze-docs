@@ -16,14 +16,14 @@ Se você tiver um Canva ativo que requer mudanças em larga escala, pode usar es
 
 Assim como em qualquer canva, apenas um usuário pode editar um rascunho por vez, e um canva pode ter apenas um rascunho por vez. Esses rascunhos não têm nenhuma análise de dados, pois as alterações de rascunho ainda não foram lançadas.
 
-![Um exemplo de rascunho de Canvas com um banner que indica ao usuário que ele está editando um rascunho de Canvas com uma opção para visualizar o Canvas ativo. O rodapé tem opções para voltar à exibição de análise de dados, salvar como rascunho ou iniciar rascunho.][1]
+![Um exemplo de rascunho de Canvas com um banner que indica ao usuário que ele está editando um rascunho de Canvas com uma opção para visualizar o Canvas ativo. O rodapé tem opções para voltar à visualização de análise de dados, salvar como rascunho ou lançar rascunho.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 ## Criando um rascunho
 
 Para criar um rascunho:
 
-1. Acesse um Canvas ativo.
-2. Selecione o botão **Salvar como Rascunho** no rodapé do Canvas. 
+1. Acessar um canva ativo.
+2. Selecione o botão **Salvar como Rascunho** no rodapé do canva. 
 
 Observe que as edições no canvas ativo não podem ser feitas enquanto houver um rascunho de um canvas. Você pode atualizar o Canva para aplicar as alterações ou descartar o rascunho.
 
@@ -34,7 +34,7 @@ Para fazer referência ao Canvas ativo, selecione **Exibir Canvas ativo** no rod
 Você só pode referenciar etapas que já foram lançadas antes da criação do rascunho. Isso significa que se você criou uma etapa ou canal **após** o rascunho foi criado, não pode ser referenciado no seu rascunho.
 
 {% alert note %}
-Se um bloco de conteúdo for referenciado em um rascunho do Canvas, o Canvas é listado na contagem de inclusão do bloco de conteúdo. No entanto, se o bloco de conteúdo for referenciado em um rascunho de um **ativo** Canvas, o Canvas não será listado na contagem de inclusão do bloco de conteúdo.
+Se um bloco de conteúdo for referenciado em um rascunho de canva, o canva é listado na contagem de inclusão de bloco de conteúdo. No entanto, se o bloco de conteúdo for referenciado em um rascunho de um **ativo** canva, o canva não será listado na contagem de inclusão de bloco de conteúdo.
 {% endalert %}
 
 ### Priorização de mensagens no app
@@ -43,4 +43,3 @@ Para rascunhos de um Canvas ativo, a prioridade da mensagem no app dentro do con
 
 No entanto, as alterações de prioridade de mensagem no app em nível de etapa são salvas como rascunho e aplicadas quando o Canva é atualizado. Por exemplo, em uma etapa de Mensagem, o classificador de prioridades será atualizado quando um usuário iniciar o rascunho, pois as configurações da etapa se aplicam em um nível de etapa.
 
-[1]: {% image_buster /assets/img_archive/canvas_draft1.png %}

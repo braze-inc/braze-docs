@@ -26,7 +26,7 @@ Para arquivar uma campanha:
 3. Selecione **Arquivo**.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Para arquivar um Canva:
 
 1. Acesse **Envio de mensagens** > **Canva**.

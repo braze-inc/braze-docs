@@ -35,7 +35,7 @@ Os dados a seguir podem ser visualizados no gráfico **Performance Over Time (De
     - (Opcional) Receita por hora por segmento
 - Receita por usuário
 
-![Gráfico de receita][9]
+![Gráfico de receita]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## Total de receitas
 
@@ -51,12 +51,12 @@ Os relatórios de receita não podem ser exportados por meio da API. Para obter 
 
 ## Receita direta
 
-Você pode visualizar as seguintes métricas de receita adicionais gerando um Relatório de comparação de campanhas usando o [Report Builder][1]:
+Você pode visualizar as seguintes métricas de receita adicionais gerando um Relatório de comparação de campanhas usando o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/):
 
-- [Total em receitas diretas][2]
-- [Total de compras diretas][3]
-- [Compras diretas únicas][4]
-- [Receita por destinatário][5]
+- [Total em receitas diretas]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
+- [Total de compras diretas]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)
+- [Compras diretas únicas]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases)
+- [Receita por destinatário]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient)
 
 Essas métricas se baseiam na atribuição do último clique, o que significa que a receita será atribuída a uma campanha se essa campanha for a mesma:
 
@@ -66,12 +66,6 @@ Essas métricas se baseiam na atribuição do último clique, o que significa qu
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}

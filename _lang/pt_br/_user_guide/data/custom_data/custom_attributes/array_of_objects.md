@@ -484,17 +484,17 @@ Ao segmentar usuários com base em vetores de objetos, um usuário se qualificar
 
 Crie um novo segmento e selecione **Atributo personalizado aninhado** como seu filtro. Em seguida, procure e selecione o nome de seu vetor de objetos.
 
-![Filtrar por vetor de objetos.][1]
+![Filtrar por vetor de objetos.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 Use a notação de ponto para especificar qual campo do vetor de objetos você deseja usar. Inicie o campo de texto com um conjunto vazio de colchetes `[]` para informar ao Braze que você está procurando dentro de um vetor de objetos. Depois disso, adicione um ponto `.`, seguido do nome do campo que você deseja usar.
 
 Por exemplo, se você quiser filtrar o vetor de objetos `pets` com base no campo `type`, digite `[].type` e escolha o tipo de animal de estimação a ser filtrado, como `snake`.
 
-![Filtrar por tipo de animal de estimação igual a cobra.][3]
+![Filtrar por tipo de animal de estimação igual a cobra.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 Ou você pode filtrar por animais de estimação que tenham um `type` de `dog`. Aqui, um usuário tem pelo menos um cachorro, portanto, ele se qualifica para o segmento de "qualquer usuário que tenha pelo menos um animal de estimação do tipo cachorro".
 
-![Filtrar por tipo de animal de estimação igual a cachorro.][2]
+![Filtrar por tipo de animal de estimação igual a cachorro.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Níveis de aninhamento
 
@@ -635,6 +635,3 @@ A remoção de um objeto de um vetor consome um ponto de dados para cada critér
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
-[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
-[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}

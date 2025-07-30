@@ -24,7 +24,7 @@ Embora a Apple exija o uso do prompt nativo, você ainda pode aproveitar as camp
 
 Com essa abordagem, você deseja incentivar os usuários a visitar a App Store para adicionar uma avaliação. Para fazer isso, crie uma campanha de mensagens no app que [faça deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) para a App Store.
 
-![Duas telas de celular lado a lado. A primeira é uma mensagem no app que pede ao usuário para avaliar o aplicativo na App Store. A segunda é a página da App Store do iOS para esse app.][1]
+![Duas telas de celular lado a lado. A primeira é uma mensagem no app que pede ao usuário para avaliar o aplicativo na App Store. O segundo é a página do App Store iOS para esse app.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Abordagem 2: Escorvamento suave
 
@@ -32,7 +32,7 @@ Se não quiser que os usuários saiam do seu app, você pode primeiramente dar a
 
 Para obter informações detalhadas, consulte o [prompt de revisão da Custom App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Duas mensagens no app lado a lado. A primeira prepara o usuário para avaliar o app, perguntando se ele tem um momento para avaliar o aplicativo. A segunda é a mensagem nativa de avaliação da App Store do iOS, que exibe uma escala de cinco estrelas que o usuário pode selecionar para avaliar o app.][2]
+![Duas mensagens no app lado a lado. A primeira prepara o usuário para avaliar o app, perguntando se ele tem um momento para avaliar o aplicativo. O segundo é a mensagem de revisão nativa do App Store iOS, exibindo uma escala de cinco estrelas que o usuário pode selecionar para avaliar o app.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Os usuários enviarão uma classificação por meio do prompt de avaliação nativo da App Store e poderão escrever e enviar uma avaliação sem sair do app.
 
@@ -44,5 +44,3 @@ Como alternativa ao soft priming, você também pode exibir o prompt de classifi
 Não crie mensagens no app em HTML personalizado que imitem um prompt de classificação de aplicativo iOS nativo, pois isso viola as diretrizes da Apple.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}

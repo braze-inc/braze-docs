@@ -50,14 +50,14 @@ Selecione **Criar novo catálogo** e, em seguida, escolha fazer **upload de CSV*
 
 ### Método 1: Fazer upload de CSV
 
-1. Arraste e solte seu arquivo na zona de upload ou selecione **Fazer upload de CSV** e escolha seu arquivo. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Arraste e solte seu arquivo na zona de upload ou selecione **Fazer upload de CSV** e escolha seu arquivo. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. Selecione um dos seguintes tipos de dados para cada coluna: booleano, número, string ou hora.
-<br> ![][9]{: style="max-width:80%;"} <br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. Dê um nome ao seu catálogo. Tenha em mente os seguintes requisitos para um nome de catálogo:
 - Deve ser exclusivo
 - Máximo de 250 caracteres
 - Só pode incluir números, letras, hífens e sublinhados<br><br>
-4. (opcional) Adicione uma descrição para o catálogo.
+4. (Opcional) Adicione uma descrição para o catálogo.
 5. Selecione **Processar catálogo** para criar o catálogo.
 
 {% alert note %}
@@ -87,11 +87,11 @@ Para editar ou criar catálogos no navegador, você precisará da permissão "Ma
 1. Digite um nome para seu catálogo. Tenha em mente os seguintes requisitos para o nome do seu catálogo:
 - Deve ser exclusivo
 - Até 250 caracteres
-- Só pode incluir números, letras, hífens e sublinhados <br> ![Um catálogo chamado "my_catalog".][14]{: style="max-width:80%;"} <br><br>
-2. (opcional) Digite uma descrição para seu catálogo.
+- Só pode incluir números, letras, hífens e sublinhados <br> ![Um catálogo chamado "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
+2. (Opcional) Digite uma descrição para seu catálogo.
 3. Selecione o catálogo que você acabou de criar na página List **Catalogs** para atualizar seu catálogo.
-4. Selecione **Update Catalog** > **Add fields** para adicionar seus campos. Em seguida, digite o **nome do campo** e use a lista suspensa para selecionar o tipo de dados. Repita conforme necessário.<br> ![Dois campos de exemplo: "rating" e "name".][12]{: style="max-width:50%;"}<br><br>
-5. Selecione **Update Catalog** > **Add items** para adicionar um item ao seu catálogo, inserindo as informações com base nos campos adicionados anteriormente. Em seguida, selecione **Salvar item** ou **Salvar e adicionar outro** para continuar adicionando seus itens. <br> ![Adicionar um item de catálogo.][13]{: style="max-width:50%;"}
+4. Selecione **Update Catalog** > **Add fields** para adicionar seus campos. Em seguida, digite o **nome do campo** e use a lista suspensa para selecionar o tipo de dados. Repita conforme necessário.<br> ![Dois campos de exemplo "rating" e "name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. Selecione **Update Catalog** > **Add items** para adicionar um item ao seu catálogo, inserindo as informações com base nos campos adicionados anteriormente. Em seguida, selecione **Salvar item** ou **Salvar e adicionar outro** para continuar adicionando seus itens. <br> ![Adicionar um item de catálogo.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 Também é possível fazer upload de um arquivo CSV depois de selecionar a criação de um catálogo no navegador.
 
@@ -139,11 +139,11 @@ Criaremos o catálogo fazendo upload de um arquivo CSV. Os tipos de dados para `
 Esse tipo de dados não pode ser editado após a configuração do catálogo.
 {% endalert %}
 
-![Quatro nomes de colunas de catálogo: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
+![Quatro nomes de colunas de catálogo: "id", "title", "price", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Em seguida, nomearemos esse catálogo como "games_catalog" e selecionaremos o botão **Processar catálogo**. Em seguida, a Braze verificará se há erros no catálogo antes da criação do catálogo.
 
-![Um catálogo chamado "games_catalog".][11]{: style="max-width:85%;"}
+![Um catálogo chamado "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Note que você não poderá editar esse nome depois que o catálogo for criado. Você pode excluir um catálogo e fazer upload novamente de uma versão atualizada usando o mesmo nome de catálogo.
 
@@ -171,17 +171,9 @@ O direito ao pacote mostrado no dashboard da Braze é arredondado para a unidade
 
 #### Versão gratuita
 
-O tamanho do armazenamento da versão gratuita dos catálogos é de até 100 MB. Você pode ter itens ilimitados, desde que tenham menos de 100 MB. As seleções contribuirão para seu armazenamento. Quanto mais complexa for uma seleção, mais espaço de armazenamento ela ocupará. Haverá também uma incompatibilidade de tamanho entre os dados do catálogo CSV e a representação desses dados em nosso repositório de dados.
+O tamanho do armazenamento da versão gratuita dos catálogos é de até 100 MB. Você pode ter itens ilimitados, desde que eles tenham menos de 100 MB. 
 
 #### Catálogos Pro
 
 Em nível de empresa, o armazenamento máximo do Catalogs Pro é baseado no tamanho dos dados do catálogo. As opções de tamanho de armazenamento são: 5 GB, 10 GB ou 15 GB. Note que o armazenamento da versão gratuita (100 MB) está incluído em cada um desses planos.
 
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
-[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
-[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
-[12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
-[13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
-[14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}

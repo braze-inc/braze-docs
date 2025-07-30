@@ -82,7 +82,7 @@ Além dos dados mínimos de integração, as seguintes atribuições são captur
 | Agente do usuário              | Web               | [Agente do usuário](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Esse atributo é usado para enviar mensagens apenas para dispositivos compatíveis. Também pode ser usado dentro da segmentação.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Para saber mais sobre o rastreamento de propriedades em nível de dispositivo (como operadora sem fio do dispositivo, fuso horário, resolução e outros), consulte a documentação específica da plataforma: [ do AndroidAndroid]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Documentação da lista de permissões"), [ do iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "documentação da lista de permissões"), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
+Para saber mais sobre o rastreamento de propriedades em nível de dispositivo (como operadora sem fio do dispositivo, fuso horário, resolução e outros), consulte a documentação específica da plataforma: [Android]({{site.baseurl}}/developer_guide/storage/?tab=android), [iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
 
 ## Dados não coletados por padrão
 
@@ -93,7 +93,7 @@ Por padrão, as seguintes atribuições não são coletadas. Cada atribuição p
 | Rastreamento de anúncios no dispositivi ativado | Android, iOS | No iOS:<br>[`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:))<br><br>No Android:<br>[`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) | Esta propriedade requer permissões adicionais de nível de app, que devem ser concedidas pelo integrador.                                                                                                                                                                                      |
 | IDFA do dispositivo                | iOS          | Identificador de dispositivo para anunciantes                                                                                                                                                                                                                                                                                         | Isso requer o framework de Transparência de Rastreamento de Anúncios, que disparará uma revisão adicional de privacidade da App Store. Para mais detalhes, veja [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)) |
 | ID de publicidade do Google      | Android      | Identificador para publicidade em aplicativos do Google Play                                                                                                                                                                                                                                                                        | Isso requer que o app recupere o GAID e o passe para a Braze. Para mais detalhes, consulte [ID de publicidade opcional do Google]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id).                                         |
-| Local mais recente | Android, iOS | Este é o último local de GPS conhecido do dispositivo do usuário. Isso é atualizado no início da sessão e é armazenado no perfil do usuário. | Isso requer que o usuário conceda permissão de local ao seu app. |
+| Local mais recente | Android, iOS | Este é o último local de GPS conhecido do dispositivo do usuário. Isso é atualizado no início da sessão e é armazenado no perfil do usuário. | Isso exige que o usuário conceda permissão de local ao seu app. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -111,4 +111,3 @@ O Braze banirá ou bloqueará os usuários com mais de 5.000.000 de sessões ("u
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Campos de nível de dispositivo Android"

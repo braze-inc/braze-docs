@@ -15,21 +15,23 @@ channel: content cards
 
 Assim como em outros canais de envio de mensagens do Canva, os cartões de conteúdo serão enviados para o dispositivo do usuário quando ele atender ao público e aos critérios de direcionamento especificados para a etapa do canva. Depois que o cartão de conteúdo for enviado, ele estará disponível no feed de cada usuário elegível na próxima vez que o feed de cartões for atualizado.
 
-![][1]
+![Cartões de conteúdo selecionados como o canal de envio de mensagens para uma etapa de Mensagem.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
-Duas opções que mudarão a forma como a etapa do cartão de conteúdo interagirá com o Canva são seu [comportamento de](#advancement-behavior-options) [expiração](#content-card-expiration) e [avanço](#advancement-behavior-options).
+Duas opções que mudarão a forma como a etapa do cartão de conteúdo interagirá com o Canva são a [expiração](#content-card-expiration) e a [remoção](#removal).
 
 ## Expiração do cartão de conteúdo {#content-card-expiration}
 
 Ao criar um novo cartão de conteúdo, você pode escolher quando ele deve expirar do feed do usuário com base no tempo de envio. A contagem regressiva para a expiração de um cartão de conteúdo começa quando o usuário chega à etapa de mensagens no Canva em que o cartão é enviado. O cartão estará ativo no feed do usuário a partir desse momento até expirar. Um cartão pode existir no feed de um usuário por até 30 dias. 
 
-### Datas de expiração relativas versus absolutas
+![Configurações de expiração de um cartão de conteúdo para uma etapa de mensagem que será removida após três horas no feed de um usuário.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
-Você tem duas maneiras de definir quando um cartão deve desaparecer do feed de um usuário: uma data relativa ou uma data absoluta. Veja a seguir como cada um deles funciona:
+### Tipos de expiração
+
+Você tem duas maneiras de definir quando um cartão deve desaparecer do feed de um usuário: uma data relativa ou uma data absoluta.
 
 #### Datas relativas
 
-Ao escolher uma data relativa, como "Remover cartões enviados após 5 dias no feed de um usuário", é possível definir uma data de expiração máxima de 30 dias.
+Ao escolher uma data relativa, como "Remover cartões enviados após 5 dias no feed de um usuário", é possível definir uma data de expiração de até 30 dias.
 
 #### Datas absolutas
 
@@ -45,49 +47,19 @@ O cartão de conteúdo permanece disponível no feed do usuário até atingir su
 
 Após a expiração de um cartão de conteúdo, ele será automaticamente removido do feed do usuário durante a próxima atualização, mesmo que ele ainda não o tenha visualizado.
 
-## Opções de comportamento de avanço {#advancement-behavior-options}
+## Remoção do cartão de conteúdo {#removal}
 
-{% alert important %}
-A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar canvas usando o editor original. Esta seção está disponível para referência ao entender como o comportamento de avanço funciona para etapas com cartões de conteúdo.
-{% endalert %}
+Os cartões de conteúdo podem ser removidos quando os usuários concluem uma compra ou realizam um evento personalizado. Você pode selecionar uma das seguintes opções como o evento de remoção: **Execute o evento personalizado** e **faça a compra**. Em seguida, selecione **Add Event (Adicionar evento**).
 
-{% alert note %}
-No Canvas Flow, os componentes de mensagem avançam automaticamente todos os usuários que entram na etapa do canva. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral. Se quiser implementar a opção **Advance when message sent**, adicione uma [jornada do público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) separada para filtrar os usuários que não receberam a etapa anterior.
-{% endalert %}
-
-A opção Advancement Behavior (Comportamento de avanço) permite controlar quando um usuário deve avançar para a próxima etapa elegível. As etapas que enviam [apenas cartões de conteúdo](#steps-with-in-content-cards-only) têm opções de avanço diferentes das [etapas com vários tipos de mensagens](#steps-with-multiple-message-channels) (push, e-mail etc.). Para os cartões de conteúdo em um fluxo de trabalho do Canvas Flow, essa opção é definida para sempre avançar imediatamente o público.
-
-### Etapas somente com cartões de conteúdo {#steps-with-in-content-cards-only}
-
-Se uma etapa contiver apenas cartões de conteúdo (e nenhum outro canal de envio de mensagens), você poderá controlar o comportamento de avanço com as seguintes opções:
-
-| Opção | Descrição |
-|---|---|
-| Avançar quando uma mensagem for enviada | Os usuários avançarão para as próximas etapas do Canva quando o cartão de conteúdo tiver sido enviado com sucesso. Use essa opção quando quiser que os usuários avancem apenas se o cartão for enviado e não for abortado. |
-| Avançar público imediatamente | Os usuários avançarão para as próximas etapas do Canva quando houver tentativa de envio do cartão de conteúdo. Se o cartão for abortado e não for enviado, os usuários ainda avançarão para a próxima etapa. Use essa opção quando quiser que os usuários avancem, independentemente de o cartão de conteúdo ser enviado com êxito ou abortado. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][2]
-
-### Componentes com vários canais {#steps-with-multiple-message-channels}
-
-Os componentes do canva com um cartão de conteúdo e outro canal de envio de mensagens têm as seguintes opções de avanço:
-
-| Opção | Descrição |
-|---|---|
-| Avançar quando uma mensagem for enviada | Os usuários avançarão para as próximas etapas do canva quando pelo menos um dos tipos de mensagem nessa etapa tiver sido enviado com êxito.|
-| Avançar público imediatamente | Quando essa opção for selecionada, todos no público do componente avançarão para as próximas etapas após o envio das mensagens, independentemente de terem visto a mensagem notada ou não.  <br> <br> _Os usuários devem corresponder ao segmento do componente e aos critérios de filtro para avançar para as próximas etapas._ |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][3]
+!["Remove cards when users complete a purchase or perform a custom event." selecionado com o disparo para remover cartões para usuários que fazem uma compra específica para "Bracelet".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Relatórios e análise de dados
 
 Depois de iniciar uma etapa dos cartões de conteúdo no Canva, você pode começar a analisar várias métricas diferentes para essa etapa. Essas métricas incluem o número de mensagens enviadas, destinatários únicos, taxas de conversão, receita total e muito mais.
 
-![][4]
+![Análise de dados para uma etapa de mensagem com a performance de mensagem do cartão de conteúdo.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
-Para saber mais sobre as métricas disponíveis e suas definições, consulte nosso [Glossário de métricas de relatórios][6].
+Para saber mais sobre as métricas disponíveis e suas definições, consulte nosso [Glossário de métricas do relatório]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 ## Casos de uso
 
@@ -103,12 +75,6 @@ Usando o Canva, é possível adicionar um componente que envia um Content Card e
 
 #### Vários feeds com base em categorias
 
-É possível separar seus cartões de conteúdo em vários feeds com base em categorias, como diferentes tópicos que os usuários podem navegar, ou feeds transacionais e de marketing. Para saber mais sobre como criar vários feeds usando pares de valores-chave, consulte nosso guia para [Personalização dos feeds do cartão de conteúdo][7].
+É possível separar seus cartões de conteúdo em vários feeds com base em categorias, como diferentes tópicos que os usuários podem navegar, ou feeds transacionais e de marketing. Para saber mais sobre como criar vários feeds usando pares de valores-chave, consulte nosso guia para [personalizar os feeds do cartão de conteúdo]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 
 
-[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
-[3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
-[4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds

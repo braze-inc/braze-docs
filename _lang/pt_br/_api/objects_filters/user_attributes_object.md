@@ -11,7 +11,7 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 
 > Uma solicitação de API com qualquer campo no objeto de atribuições criará ou atualizará um atributo desse nome com o valor fornecido no perfil de usuário especificado. 
 
-Use os nomes de campo do perfil de usuário do Braze (listados a seguir ou qualquer outro listado na seção de [campos de perfil de usuário do Braze][27]) para atualizar esses valores especiais no perfil de usuário no dashboard ou adicionar seus próprios dados de atributo personalizado ao usuário.
+Use os nomes de campo do perfil de usuário do Braze (listados a seguir ou qualquer outro listado na seção de [campos de perfil de usuário do Braze](#braze-user-profile-fields)) para atualizar esses valores especiais no perfil de usuário no dashboard ou adicionar seus próprios dados de atributo personalizado ao usuário.
 
 ## Corpo do objeto
 
@@ -75,7 +75,7 @@ Após a importação, à medida que cada usuário iniciar a versão ativada pelo
 
 O Braze verificará uma vez por mês para encontrar qualquer perfil anônimo com o sinalizador `push_token_import` que não tenha um token por push. Se o perfil anônimo não tiver mais um token por push, nós o excluiremos. No entanto, se o perfil anônimo ainda tiver um token por push, o que sugere que o usuário real ainda não fez login no dispositivo com o referido token por push, não faremos nada.
 
-Para saber mais, consulte [Migração de tokens por push][3].
+Para saber mais, consulte [Migração de tokens por push]({{site.baseurl}}/help/help_articles/push/push_token_migration/).
 
 #### Tipos de dados de atributos personalizados
 
@@ -83,10 +83,10 @@ Os seguintes tipos de dados podem ser armazenados como um atributo personalizado
 
 | Tipo de dados | Notas |
 | --- | --- |
-| Matrizes | Há suporte para matrizes de atributos personalizados. Adicionar um elemento a uma matriz de atributos personalizados anexa o elemento ao final da matriz, a menos que ele já esteja presente, caso em que ele é movido de sua posição atual para o final da matriz.<br><br>Por exemplo, se uma matriz `['hotdog','hotdog','hotdog','pizza']` for importada, ela será exibida na atribuição da matriz como `['hotdog', 'pizza']` porque somente valores exclusivos são suportados.<br><br>Além de definir os valores de uma matriz dizendo algo como `"my_array_custom_attribute":[ "Value1", "Value2" ]`, você pode adicionar a matrizes existentes fazendo algo como `"my_array_custom_attribute" : { "add" : ["Value3"] },` ou remover valores de uma matriz fazendo algo como `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>O número máximo de elementos em matrizes de atributos personalizados tem como padrão 25, mas pode ser aumentado até 100 para uma matriz individual. Para saber mais, consulte [Matrizes][6]. |
+| Matrizes | Há suporte para matrizes de atributos personalizados. Adicionar um elemento a uma matriz de atributos personalizados anexa o elemento ao final da matriz, a menos que ele já esteja presente, caso em que ele é movido de sua posição atual para o final da matriz.<br><br>Por exemplo, se uma matriz `['hotdog','hotdog','hotdog','pizza']` for importada, ela será exibida na atribuição da matriz como `['hotdog', 'pizza']` porque somente valores exclusivos são suportados.<br><br>Além de definir os valores de uma matriz dizendo algo como `"my_array_custom_attribute":[ "Value1", "Value2" ]`, você pode adicionar a matrizes existentes fazendo algo como `"my_array_custom_attribute" : { "add" : ["Value3"] },` ou remover valores de uma matriz fazendo algo como `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>O número máximo de elementos em matrizes de atributos personalizados tem como padrão 25, mas pode ser aumentado até 100 para uma matriz individual. Para saber mais, consulte [Matrizes]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays). |
 | Array de objetos | O vetor de objetos permite que você defina uma lista de objetos em que cada objeto contém um conjunto de atribuições. Isso pode ser útil se for necessário armazenar vários conjuntos de dados relacionados a um usuário, como estadias em hotéis, histórico de compras ou preferências. <br><br> Por exemplo, é possível definir um atributo personalizado em um perfil de usuário chamado `hotel_stays`. Esse atributo personalizado pode ser definido como um vetor de objeto em que cada objeto representa uma estadia separada, com atributos como `hotel_name`, `check_in_date`, `nights_stayed`. Para obter mais detalhes, consulte [este exemplo](#array-of-objects-example). |
 | Booleanos | `true` ou `false` |
-| Datas | Deve ser armazenado no formato [ISO 8601][19] ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note que "T" é um designador de tempo, não um espaço reservado, e não deve ser alterado ou removido. <br><br>As atribuições de horário sem um fuso horário terão como padrão a meia-noite UTC (e serão formatadas no dashboard como o equivalente à meia-noite UTC no fuso horário da empresa). <br><br> Os eventos com registros de data e hora no futuro terão como padrão a hora atual. <br><br> Para atributos personalizados regulares, se o ano for menor que 0 ou maior que 3000, a Braze armazenará esses valores como strings no usuário. |
+| Datas | Deve ser armazenado no formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note que "T" é um designador de tempo, não um espaço reservado, e não deve ser alterado ou removido. <br><br>As atribuições de horário sem um fuso horário terão como padrão a meia-noite UTC (e serão formatadas no dashboard como o equivalente à meia-noite UTC no fuso horário da empresa). <br><br> Os eventos com registros de data e hora no futuro terão como padrão a hora atual. <br><br> Para atributos personalizados regulares, se o ano for menor que 0 ou maior que 3000, a Braze armazenará esses valores como strings no usuário. |
 | Floats | Os atributos personalizados Float são números positivos ou negativos com um ponto decimal. Por exemplo, você pode usar flutuadores para armazenar saldos de contas ou classificações de usuários para produtos ou serviços. |
 | Inteiros | Os atributos personalizados inteiros podem ser incrementados por números inteiros positivos ou negativos, atribuindo a eles um objeto com o campo "inc" e o valor pelo qual você deseja incrementá-los. <br><br>Exemplo: `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Atributos personalizados aninhados | Os atributos personalizados aninhados definem um conjunto de atributos como uma propriedade de outro atributo. Ao definir um objeto de atributo personalizado, você define um conjunto de atributos adicionais para esse objeto. Para saber mais, consulte [Atributos personalizados aninhados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/). |
@@ -119,28 +119,28 @@ Os seguintes campos de perfil de usuário diferenciam maiúsculas de minúsculas
 | nome_alias | (string) |
 | alias_label | (string) |
 | braze_id | (string, opcional) Quando um perfil de usuário é reconhecido pelo SDK, um perfil de usuário anônimo é criado com um `braze_id` associado. O endereço `braze_id` é atribuído automaticamente pela Braze, não pode ser editado e é específico do dispositivo. | 
-| country | (string) Exigimos que os códigos de país sejam transmitidos à Braze no [padrão ISO-3166-1 alfa-2][17]. Nossa API se esforçará ao máximo para mapear os países recebidos em diferentes formatos. Por exemplo, "Austrália" pode ser mapeado para "AU". No entanto, se a entrada não corresponder a um determinado [padrão ISO-3166-1 alfa-2][17], o valor do país será definido como `NULL`. <br><br>A configuração de `country` em um usuário por importação de CSV ou API impedirá que a Braze capture automaticamente essas informações por meio do SDK. |
+| country | (string) Exigimos que os códigos de país sejam transmitidos à Braze no [padrão ISO-3166-1 alfa-2](http://en.wikipedia.org/wiki/ISO_3166-1). Nossa API se esforçará ao máximo para mapear os países recebidos em diferentes formatos. Por exemplo, "Austrália" pode ser mapeado para "AU". No entanto, se a entrada não corresponder a um determinado [padrão ISO-3166-1 alfa-2](http://en.wikipedia.org/wiki/ISO_3166-1), o valor do país será definido como `NULL`. <br><br>A configuração de `country` em um usuário por importação de CSV ou API impedirá que a Braze capture automaticamente essas informações por meio do SDK. |
 | current_location | (objeto) Da forma {"longitude": -73.991443, "latitude": 40.753824} |
 | data_da_primeira_sessão | (data em que o usuário usou o app pela primeira vez) String no formato ISO 8601 ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | data_da_última_sessão | (data em que o usuário usou o app pela última vez) String no formato ISO 8601 ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
 | dob | (data de nascimento) String no formato "AAAA-MM-DD", por exemplo, 1980-12-21. |
 | e-mail | (string) |
 | email_subscribe | (string) Os valores disponíveis são "opted_in" (explicitamente registrado para receber mensagens de e-mail), "unsubscribed" (explicitamente cancelado inscrição para receber mensagens de e-mail) e "subscribed" (nem optado nem cancelado).  |
-| email_open_tracking_disabled |(booleano) `true` ou `false` aceito. Defina como `true` para desativar a adição do pixel de rastreamento de abertura a todos os futuros e-mails enviados a esse usuário.|
-| email_click_tracking_disabled |(booleano) `true` ou `false` aceito. Defina como `true` para desativar o rastreamento de cliques para todos os links em um e-mail futuro enviado a esse usuário.|
+| email_open_tracking_disabled |(booleano) `true` ou `false` aceito. Defina como `true` para desativar a adição do pixel de rastreamento de abertura a todos os futuros e-mails enviados a esse usuário. Disponível apenas para SparkPost e SendGrid.|
+| email_click_tracking_disabled |(booleano) `true` ou `false` aceito. Defina como `true` para desativar o rastreamento de cliques para todos os links em um e-mail futuro enviado a esse usuário. Disponível apenas para SparkPost e SendGrid.|
 | external_id | (string) Um identificador exclusivo para um perfil de usuário. Depois de atribuído um `external_id`, o perfil do usuário é identificado nos dispositivos do usuário. Na primeira instância de atribuir um external_id a um perfil de usuário desconhecido, todos os dados do perfil de usuário existentes serão migrados para o novo perfil de usuário. |
 | Facebook | hash contendo qualquer um dos seguintes itens: `id` (string), `likes` (vetor of strings), `num_friends` (inteiro). |
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (outro), "N" (não aplicável), "P" (prefere não dizer) ou nil (desconhecido). |
 | home_city | (string) |
-| language | (string), exigimos que a linguagem seja passada para a Braze no [padrão ISO-639-1][24]. Para saber os idiomas compatíveis, consulte nossa [lista de idiomas aceitos][2].<br><br>A configuração de `language` em um usuário por importação de CSV ou API impedirá que a Braze capture automaticamente essas informações por meio do SDK. |
+| language | (string), exigimos que a linguagem seja passada para a Braze no [padrão ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). Para saber os idiomas compatíveis, consulte nossa [lista de idiomas aceitos]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>A configuração de `language` em um usuário por importação de CSV ou API impedirá que a Braze capture automaticamente essas informações por meio do SDK. |
 | last_name | (string) |
 | marked_email_as_spam_at | (string) Data em que o e-mail do usuário foi marcado como spam. Aparece no formato ISO 8601 ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | telefone | (string) Recomendamos fornecer números de telefone no formato [E.164](https://en.wikipedia.org/wiki/E.164). Para obter detalhes, consulte [Números de telefone do usuário]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting).|
 | push_subscribe | (string) Os valores disponíveis são "opted_in" (explicitamente registrado para receber mensagens push), "unsubscribed" (explicitamente optado por não receber mensagens push) e "subscribed" (nem nem optou por receber, nem por não receber).  |
 | push_tokens | Vetor de objetos com `app_id` e `token` string. Como opção, você pode fornecer um `device_id` para o dispositivo ao qual esse token está associado, por exemplo, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Se o endereço `device_id` não for fornecido, um será gerado aleatoriamente. |
 | subscription_groups| Vetor de objetos com as strings `subscription_group_id` e `subscription_state`, por exemplo, `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Os valores disponíveis para `subscription_state` são "subscribed" (inscrito) e "unsubscribed" (cancelado inscrição).|
-| time_zone | (string) Nome do fuso horário do [banco de dados de fuso horário da IANA][26] (por exemplo, "America/New_York" ou "Eastern Time (US & Canada)"). Somente os valores válidos de fuso horário serão definidos. |
+| time_zone | (string) Nome do fuso horário do [banco de dados de fuso horário da IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por exemplo, "America/New_York" ou "Eastern Time (US & Canada)"). Somente os valores válidos de fuso horário serão definidos. |
 | twitter | Hash contendo qualquer um dos seguintes itens: `id` (inteiro), `screen_name` (string, identificador do X (antigo Twitter)), `followers_count` (inteiro), `friends_count` (inteiro), `statuses_count` (inteiro). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -148,7 +148,7 @@ Os valores de idioma definidos explicitamente por meio dessa API terão precedê
 
 ####  Exemplo de solicitação de atribuição de usuário
 
-Este exemplo contém dois objetos de atribuição de usuário com as 75 solicitações permitidas por chamada de API.
+Este exemplo contém quatro objetos de atribuição de usuário, de um total de 75 objetos de atribuição permitidos por chamada de API.
 
 ```json
 POST https://YOUR_REST_API_URL/users/track
@@ -183,12 +183,3 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[17]: http://en.wikipedia.org/wiki/ISO_3166-1 "Códigos ISO-3166-1"
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "Wiki do código de tempo ISO 8601"
-[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "Códigos ISO-639-1"
-[26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: #braze-user-profile-fields

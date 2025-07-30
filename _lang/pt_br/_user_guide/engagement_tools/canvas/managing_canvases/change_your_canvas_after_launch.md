@@ -25,7 +25,7 @@ Você pode editar suas Canvas após o lançamento:
 A distribuição da variante de controle só pode ser reduzida após o lançamento.
 {% endalert %}
 
-Tenha em mente as seguintes edições permitidas do Canvas após o lançamento, dependendo do fluxo de trabalho com o qual o Canvas foi criado. Se o seu canva usar o fluxo de trabalho original do canva, será necessário clonar o Canvas Flow primeiro para realizar as edições pós-lançamento.
+Tenha em mente as seguintes edições permitidas no Canvas após o lançamento, dependendo de qual fluxo de trabalho seu Canvas foi criado. Se o seu canva usar o fluxo de trabalho original do canva, será necessário clonar o Canvas Flow primeiro para realizar as edições pós-lançamento.
 
 Você pode excluir qualquer um dos itens a seguir em sua jornada de usuário:
 
@@ -51,17 +51,18 @@ Consulte a seção [Práticas recomendadas](#best-practices) para obter casos de
 A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar Canvas usando a experiência original do Canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow. É uma experiência de edição aprimorada para criar e gerenciar melhor as telas. Saiba mais sobre a [clonagem de canvas no Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
-Não é possível editar ou excluir conexões existentes e não é possível inserir uma etapa entre etapas conectadas existentes. Se quiser editar ou adicionar mais etapas à jornada do usuário do canva, os detalhes a seguir serão aplicados:
+Você não pode editar ou excluir conexões existentes, e não pode inserir uma etapa entre etapas conectadas existentes. Se quiser editar ou adicionar mais etapas à jornada do usuário do canva, os detalhes a seguir serão aplicados:
 
 - Os usuários que ainda não entraram no Canva são elegíveis para todas as etapas recém-criadas. 
 - Se as configurações de entrada do Canva permitirem que os usuários entrem novamente nas etapas, os usuários que já passaram nas etapas recém-criadas serão elegíveis para entrar novamente.
 - Os usuários que estão atualmente em um Canvas lançado, mas que não alcançaram as etapas recém-adicionadas na jornada do usuário, são elegíveis para receber essas etapas recém-adicionadas.
+- Se uma etapa de postergação for a última etapa do Canva, os usuários que alcançarem essa etapa serão automaticamente avançados para fora do Canvas e não receberão nenhuma etapa recém-criada.
 
-Se você atualizar as configurações de **Atraso** ou **Janela** de uma etapa do Canva, somente os novos usuários que entrarem no Canva e os usuários que ainda não estiverem na fila para essa etapa receberão a mensagem com a postergação atualizada. Se uma etapa de postergação for a última etapa do Canva, os usuários que alcançarem essa etapa serão automaticamente avançados para fora do Canvas e não receberão nenhuma etapa recém-criada. 
-
-{% alert note %}
-A interrupção de um Canva não encerrará os usuários que estiverem esperando para receber uma mensagem. Se você reativar o Canva e os usuários ainda estiverem aguardando a mensagem, eles a receberão (a menos que o tempo em que a mensagem deveria ter sido enviada já tenha passado, então eles não a receberão).
+{% alert important %}
+Se você atualizar as configurações de **Delay** ou **Window** para uma etapa do canva, os usuários que estiverem atualmente nessa etapa no momento da atualização seguirão o tempo de postergação que foi atribuído quando entraram originalmente. Apenas novos usuários que entrarem no Canvas e aqueles que ainda não foram colocados na fila para essa etapa receberão a mensagem no horário atualizado.
 {% endalert %}
+
+A interrupção de um Canva não encerrará os usuários que estiverem esperando para receber uma mensagem. Se você reativar o Canva e os usuários ainda estiverem aguardando a mensagem, eles a receberão (a menos que o tempo em que a mensagem deveria ter sido enviada já tenha passado, então eles não a receberão).
 
 {% enddetails %}
 
@@ -144,7 +145,7 @@ Ao criar ou editar etapas desconectadas, você pode fazer alterações nessas et
 
 ### Etapa da jornada experimental
 
-Se o seu canvas tiver uma etapa da jornada experimental ativa ou em andamento e você atualizar o canva ativo (mesmo que não seja a etapa do caminho experimental), o experimento em andamento será reiniciado. Para evitar que seus usuários entrem novamente na jornada experimental, é possível duplicar e criar um novo Canvas em vez de atualizar o Canvas.
+Se o seu Canvas tiver um experimento ativo ou em andamento e você atualizar o Canvas ativo (mesmo que não seja para a etapa da jornada experimental), o experimento em andamento será encerrado. Para reiniciar o experimento, você pode desconectar a jornada experimental existente e lançar uma nova, ou duplicar o Canvas e lançar um novo Canvas.
 
 ### Postergação de tempo
 

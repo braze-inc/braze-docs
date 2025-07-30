@@ -77,11 +77,17 @@ A seleção de um campo para uma dessas transformações aplicará essa transfor
 
 ### Etapa 6: Teste sua integração
 
-Você pode testar sua integração ou dar uma olhada nos dados de amostra do Currents em nosso [repositório do GitHub](https://github.com/Appboy/currents-examples) de exemplos do Currents.
-
 {% alert important %}
 O Currents descartará eventos com cargas úteis excessivamente grandes, superiores a 900 KB.
 {% endalert %}
+
+Antes de testar, considere dar uma olhada em nossos [dados de amostra do Currents no GitHub](https://github.com/Appboy/currents-examples). Quando estiver pronto para testar, escolha uma opção abaixo:
+
+#### Envio de eventos de teste
+
+Para testar sua integração, você pode selecionar **Send Test Events (Enviar eventos de teste** ) para enviar um evento de cada um dos tipos de evento selecionados para essa corrente. Para obter informações detalhadas sobre cada tipo de evento, consulte nossas bibliotecas de [eventos de comportamento do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) e [de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+
+![A página "Currents Test" (Teste de correntes) no dashboard do Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Teste de conectores Currents
 
@@ -92,7 +98,7 @@ Os conectores Test Currents são versões gratuitas de nossos conectores existen
 
 Depois que seus conectores de teste do Currents atingirem o limite de envio, seu conector não enviará eventos até o próximo período de sete dias.
 
-Para fazer upgrade de seu conector de teste do Currents, edite a integração no dashboard e selecione **Upgrade**.
+Para fazer upgrade de seu conector Test Currents, edite a integração no dashboard e selecione **Upgrade Test Integration**.
 
 ## Atualização de Currents
 

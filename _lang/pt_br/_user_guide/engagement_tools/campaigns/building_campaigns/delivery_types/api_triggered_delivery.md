@@ -23,14 +23,14 @@ Uma campanha acionada por API é diferente de uma [campanha de API]({{site.baseu
 
 Em seguida, configure sua cópia e notificações da mesma forma que faria normalmente para notificações agendadas e selecione **Entrega Acionada por API**. Para saber mais sobre o disparo dessas campanhas a partir do seu servidor, confira este artigo [envio de campanha acionada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 
-![][37]
+![]({% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %})
 
 ## Usando o conteúdo modelado incluído com uma solicitação de API
 
 Além de acionar a mensagem, você também pode incluir conteúdo com a solicitação da API para ser modelado na mensagem dentro do objeto `trigger_properties`. Este conteúdo pode ser referenciado no corpo da mensagem. Por exemplo, você pode incluir:
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}`` Veja o seguinte exemplo de notificação social para contexto adicional:
 
-![A propriedade de disparar mencionada incluída na mensagem para preencher automaticamente o nome do usuário seguida do texto: "curtiu sua foto!" Clique aqui para ver o que eles têm feito.".][38]{: style="max-width:70%;"}
+![A propriedade de disparar mencionada incluída na mensagem para preencher automaticamente o nome do usuário seguida do texto: "curtiu sua foto!" Clique aqui para ver o que eles têm feito.".]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## Re-eligibilidade com campanhas acionadas por API
 
@@ -38,11 +38,6 @@ O número de vezes que um usuário recebe uma campanha acionada por API pode ser
 
 Por exemplo, digamos que você está usando uma campanha acionada por API para enviar ao usuário uma campanha sobre um item que ele visualizou recentemente. Neste caso, você pode limitar a campanha para enviar no máximo uma mensagem por dia, independentemente de quantos itens eles visualizaram enquanto disparavam o gatilho da API para cada item. Por outro lado, se sua campanha acionada por API for transacional, você vai querer garantir que o usuário receba a campanha toda vez que fizer a transação, definindo a postergação para zero minutos.
 
-![][43]
+![]({% image_buster /assets/img_archive/api_triggered_reeligible.png %})
 
 
-[37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
-[38]: {% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}
-[39]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[42]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[43]: {% image_buster /assets/img_archive/api_triggered_reeligible.png %}

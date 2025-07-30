@@ -13,7 +13,7 @@ search_rank: 4.9
 
 > As mensagens no app são boas para muitas coisas. Elas são ricas em conteúdo e têm um senso de urgência menor, pois essas mensagens não são enviadas para fora do app do usuário e não interferem em sua tela inicial. As mensagens no app existem dentro do seu aplicativo (daí o nome), vêm com contexto e quase nunca são indesejadas! Eles são sempre entregues quando o usuário está ativo em seu app.
 
-Para ver exemplos de mensagens no app, confira nossos [estudos de caso][1].
+Para ver exemplos de mensagens no app, confira nossos [estudos de caso](https://www.braze.com/customers).
 
 ## Casos de uso em potencial
 
@@ -21,10 +21,10 @@ Com o rico nível de conteúdo oferecido pelas mensagens no app, você pode apro
 
 | Caso de uso | Explicação |
 | --- | --- |
-| Push primer | Execute uma campanha de [push primer][2] usando uma mensagem no app rich para mostrar aos seus clientes o benefício da aceitação do push para seu app ou site e apresente a eles um pedido de aceitação da permissão de push.
+| Push primer | Execute uma campanha de [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) usando uma mensagem no app rich para mostrar aos seus clientes o benefício da aceitação do push para seu app ou site e apresente a eles um pedido de aceitação da permissão de push.
 | Vendas e promoções | Use mensagens modais no app com código personalizado para cumprimentar os clientes com mídias chamativas, com códigos de promoção estáticos ou ofertas. Incentive-os a fazer compras ou conversões quando, de outra forma, não o fariam. |
 | Incentivar a adoção de recursos | Incentive os clientes a usar outras partes do seu app ou a aproveitar um serviço. |
-| Campanhas altamente personalizadas | Coloque as mensagens no app como a primeira coisa que seus clientes veem quando entram em seu aplicativo ou site. Acrescente alguns recursos de personalização da Braze, como [conteúdo conectado][3], para motivar os usuários a agir e, portanto, tornar seu alcance mais eficaz.
+| Campanhas altamente personalizadas | Coloque as mensagens no app como a primeira coisa que seus clientes veem quando entram em seu aplicativo ou site. Acrescente alguns recursos de personalização da Braze, como [conteúdo conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), para motivar os usuários a agir e, portanto, tornar seu alcance mais eficaz.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Outros casos de uso a serem considerados incluem o seguinte:
@@ -69,16 +69,10 @@ As mensagens em tela cheia são exatamente o que se espera - elas ocupam a tela 
 {% endtab %}
 {% endtabs %}
 
-Além desses modelos de mensagens prontos para uso, você também pode personalizar ainda mais seu envio de mensagens usando mensagens no app em HTML personalizado, modais da Web com CSS ou formulários de captura de e-mail na Web. Para saber mais, consulte [Personalização][4].
+Além desses modelos de mensagens prontos para uso, você também pode personalizar ainda mais seu envio de mensagens usando mensagens no app em HTML personalizado, modais da Web com CSS ou formulários de captura de e-mail na Web. Para saber mais, consulte [Personalização]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 ## Mais recursos
 
-Antes de começar a criar suas próprias campanhas de mensagens no app - ou usar mensagens no app em uma campanha multicanais -, recomendamos que consulte nosso [guia de preparação de mensagens no app][5]. Este guia aborda questões de direcionamento, conteúdo e conversão que você deve considerar ao criar mensagens no app.
+Antes de começar a criar suas próprias campanhas de mensagens no app - ou usar mensagens no app em uma campanha multicanais -, recomendamos que consulte nosso [guia de preparação de mensagens no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). Este guia aborda questões de direcionamento, conteúdo e conversão que você deve considerar ao criar mensagens no app.
 
 
-[1]: https://www.braze.com/customers
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
-[6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/

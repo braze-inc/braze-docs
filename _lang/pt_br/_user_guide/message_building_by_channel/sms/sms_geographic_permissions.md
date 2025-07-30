@@ -40,7 +40,7 @@ As alterações entrarão em vigor depois que você selecionar **Salvar**. A rem
 
 Certos países têm um risco maior de bombeamento de tráfego de SMS. Esses países são indicados por uma tag de **Alto risco** no menu suspenso de países.
 
-![O menu suspenso de países com o Azerbaijão tendo uma tag de "Alto Risco".][4]{: style="max-width:80%;"}
+![O menu suspenso do país com o Azerbaijão tendo uma tag de "Alto Risco".][4]{: style="max-width:80%;"}
 
 Se você permitir o envio nesses países, deverá primeiro reconhecer o risco de fazê-lo antes que o país seja adicionado à sua lista de permissões.
 

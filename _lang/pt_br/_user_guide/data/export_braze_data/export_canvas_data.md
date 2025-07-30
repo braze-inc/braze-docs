@@ -30,10 +30,9 @@ Também é possível exportar os dados de usuários de todos os participantes de
 
 Os resultados do Canvas podem ser exportados em uma base de componente individual para o fluxo de trabalho original do Canvas. Para fazer isso, selecione o componente específico e, em seguida, selecione o menu suspenso **Dados de usuários** na página **Detalhes da etapa do canva**. 
 
-![Dados de usuários na página Detalhes do Canva.][1]
+![Lista suspensa Dados de usuários na página Detalhes do canvas.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
 Para obter ajuda com exportações CSV e API, visite nosso artigo [de solução de problemas de exportação]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_csv_export.png %}
