@@ -19,7 +19,7 @@ Vea o descargue nuestra Postman Collection haciendo clic en **Ejecutar en Postma
 
 ## Utilización de la colección Braze Postman
 
-Si tienes una cuenta Postman (puedes descargar las versiones para macOS, Windows y Linux desde el [sitio web de Postman][1]), puedes abrir nuestra documentación Postman en tu propia aplicación Postman haciendo clic en el botón naranja **Ejecutar en Postman**. A continuación, puede [crear un entorno](#setting-up-your-postman-environment), o utilizar nuestro entorno Braze REST API como plantilla, y editar las solicitudes disponibles `POST` y `GET` para adaptarlas a sus propias necesidades.
+Si tienes una cuenta Postman (puedes descargar las versiones para macOS, Windows y Linux desde el [sitio web de Postman](https://www.getpostman.com)), puedes abrir nuestra documentación Postman en tu propia aplicación Postman haciendo clic en el botón naranja **Ejecutar en Postman**. A continuación, puede [crear un entorno](#setting-up-your-postman-environment), o utilizar nuestro entorno Braze REST API como plantilla, y editar las solicitudes disponibles `POST` y `GET` para adaptarlas a sus propias necesidades.
 
 ### Configuración del entorno Postman
 
@@ -31,14 +31,14 @@ Para configurar tu propio entorno, realiza los siguientes pasos:
 
 1. En la pestaña **Espacios de trabajo**, seleccione **Entornos**.
 2. Haz clic en el botón **+** más para crear un nuevo entorno.
-3. Asigne un nombre a este entorno (por ejemplo, "Solicitudes de API Braze") y añada claves para `instance_url` y `api_key` con los valores correspondientes a su [instancia Braze][7] y [clave de API REST Braze][8].
+3. Dale un nombre a este entorno (por ejemplo, "Solicitudes de API Braze") y añade claves para `instance_url` y `api_key` con los valores correspondientes a tu [instancia de Braze]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) y a [tu clave de API REST Braze]({{site.baseurl}}/api/api_key/).
 4. Haga clic en **Guardar**.
 
 {% alert note %}
 En los cuerpos de solicitud de `POST`, `api_key` debe ir entre comillas: `"MY-API-KEY-EXAMPLE"`. En las URL de `GET`, no debería serlo. Ya te hemos proporcionado este formato en los cuerpos de solicitud de esta documentación `POST`, las URL de `GET` y la plantilla de entorno para `YOUR-API-KEY-HERE`.
 {% endalert %}
 
-![Añadir variables para la clave API y la URL de instancia al entorno Braze REST API en Postman.][3]
+![Añadir variables para la clave de API y la URL de instancia al entorno de la API REST de Braze en Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### Utilizar las solicitudes preconstruidas de la colección
 
@@ -50,24 +50,17 @@ En general, los puntos finales de la API de Braze aceptan dos tipos de solicitud
 
 Para editar una solicitud `POST`, abra la solicitud y vaya a la sección **Cuerpo** del editor de solicitudes. Para facilitar la lectura, seleccione el botón de opción **sin formato** para dar formato al cuerpo de la solicitud `JSON`.
 
-![Pestaña del cuerpo al editar una petición POST User Track en Postman][4]
+![Pestaña del cuerpo al editar una solicitud POST de seguimiento de usuario en Postman]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### Editar una solicitud GET
 
 Al editar una solicitud `GET`, edite los parámetros pasados en la URL de la solicitud. Para ello, seleccione la pestaña **Parámetros** y edite los pares clave-valor en los campos que aparecen.
 
-![Pestaña Params al editar una solicitud GET Query List of Unsubscribed Email Addresses en Postman.][5]
+![Pestaña de parámetros al editar una consulta GET Lista de direcciones de correo electrónico no suscritas en Postman.]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### Envía tu solicitud
 
 Cuando tu solicitud API esté lista, haz clic en **Enviar**. La solicitud se envía y los datos de respuesta se rellenan en una sección debajo del editor de solicitudes. Desde aquí, puedes ver los datos sin procesar devueltos por la API de Braze, el código de respuesta HTTP, el tiempo que ha tardado en procesarse la solicitud y la información del encabezado.
 
-![Ejemplo de datos de respuesta del cuerpo de una solicitud POST con un estado de 201 Creado y un tiempo de respuesta de 269 milisegundos.][6]
+![Ejemplo de datos de respuesta del cuerpo de una solicitud POST con un estado de 201 Creado y un tiempo de respuesta de 269 milisegundos.]({% image_buster /assets/img_archive/postman_response.png %})
 
-[1]: https://www.getpostman.com
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
-[4]: {% image_buster /assets/img_archive/postman_post.png %}
-[5]: {% image_buster /assets/img_archive/postman_get.png %}
-[6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {{site.baseurl}}/api/api_key/
