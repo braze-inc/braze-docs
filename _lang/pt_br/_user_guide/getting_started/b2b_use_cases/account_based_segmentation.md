@@ -25,7 +25,7 @@ Para ajudá-lo a começar, criamos modelos SQL básicos para segmentação simpl
 
 Digamos que você queira segmentar os usuários que são colaboradores de uma conta corporativa de destino. 
 
-1. Acesse **Público** > **Extensões de segmento** > **Criar nova extensão** > **Iniciar com um modelo** e selecione o modelo **Catálogo de segmento para eventos**. <br><br> ![Modal "Select a Template" (Selecione um modelo) com opções de segmento de catálogo para eventos ou compras.][1]<br><br>O editor SQL é preenchido automaticamente com um modelo que une os dados de eventos de usuários com os dados do catálogo para segmentar os usuários que se engajam com determinados itens do catálogo. <br><br>![Um editor SQL para uma nova extensão com uma guia "Variables" aberta.][2]<br><br>
+1. Acesse **Público** > **Extensões de segmento** > **Criar nova extensão** > **Iniciar com um modelo** e selecione o modelo **Catálogo de segmento para eventos**. <br><br> ![Modal "Select a Template" (Selecione um modelo) com opções de segmento de catálogo para eventos ou compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>O editor SQL é preenchido automaticamente com um modelo que une os dados de eventos de usuários com os dados do catálogo para segmentar os usuários que se engajam com determinados itens do catálogo. <br><br>![Um editor SQL para uma nova extensão com uma guia "Variables" (Variáveis) aberta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Use a guia **Variables (Variáveis** ) para fornecer os campos necessários para seu modelo antes de gerar seu segmento.<br><br>Para que o Braze identifique os usuários com base no engajamento deles com os itens do catálogo, é necessário fazer o seguinte:
 - Selecione um catálogo que contenha um campo de catálogo
 - Selecione um evento personalizado que contenha uma propriedade de evento
@@ -114,5 +114,3 @@ Para obter informações básicas sobre como usar fontes conectadas na segmenta�
 
 Depois de criar a segmentação no nível da conta nas etapas acima, você poderá incluir diretamente essas extensões de segmento em seus critérios de direcionamento. Também é fácil acrescentar critérios demográficos incrementais do usuário, como função, engajamento em campanhas anteriores e muito mais. Para saber mais, consulte [Uso de sua extensão em um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment).
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}
