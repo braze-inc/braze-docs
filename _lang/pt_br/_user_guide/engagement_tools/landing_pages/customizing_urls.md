@@ -11,7 +11,7 @@ page_order: 1
 
 ## Como funciona?
 
-Quando você [conectar seu domínio ao Braze](#connecting-your-domain-to-braze), ele será usado como o domínio padrão para todas as landing pages. Por exemplo, se você conectar o subdomínio `forms.example.com`, os URLs da landing page agora serão `forms.example.com/holiday-sale`.
+Quando você [conectar seu domínio ao Braze](#connecting-your-domain-to-braze), ele será usado como o domínio padrão para todas as landing pages. Por exemplo, se você conectar o subdomínio `forms.example.com`, os URLs de sua landing page agora serão `forms.example.com/holiday-sale`.
 
 ## Conectando seu domínio ao Braze
 
