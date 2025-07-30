@@ -57,10 +57,16 @@ guide_menu_list:
   - name: Arquivamento de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Cópia entre espaços de trabalho
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicação de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: Status de envio de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: Saiba antes de enviar
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---
