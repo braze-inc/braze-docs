@@ -10,7 +10,7 @@ description: "Este artigo fornece etapas sobre como usar localidades em suas men
 
 > Depois de adicionar localidades ao seu espaço de trabalho, é possível direcionar usuários em diferentes idiomas em uma única mensagem no app.
 
-{% multi_lang_include locales.md seção="Pré-requisitos" %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Uso de localidades
 
