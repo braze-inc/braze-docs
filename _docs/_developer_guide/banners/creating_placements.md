@@ -457,7 +457,7 @@ Here's what you need to know about Banner dimensions and sizing:
 
 To access the properties of a banner, use one of the following methods depending on the type you defined in the dashboard.
 
-If a property you referenced does not exist, these methods will return `null`.
+If there is no such property of the corresponding type for the key you provided, these methods will return `null`.
 
 {% tabs %}
 {% tab Swift %}
