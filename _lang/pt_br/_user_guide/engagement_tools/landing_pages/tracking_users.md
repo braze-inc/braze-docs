@@ -41,7 +41,7 @@ Acesse **Envio de mensagens** > **Campanhas** e escolha uma campanha. No editor 
 
 O Braze gerará automaticamente uma Liquid tag usando o [URL de](#page-url) sua [landing page](#page-url). Consulte a tabela a seguir para gerar sua tag:
 
-\|**Tipo** de personalização: Escolha a **landing page**.
+\|**Tipo** de personalização: Escolha **a landing page**.
 \|**Escolha** a landing page que [você criou anteriormente](#prerequisites).
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
