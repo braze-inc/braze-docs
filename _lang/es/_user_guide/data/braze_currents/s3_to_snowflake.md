@@ -109,12 +109,12 @@ COPY INTO
 
 1. En AWS, navega hasta el contenedor correspondiente del nuevo escenario de Snowflake. A continuación, en la pestaña **Propiedades**, vaya a **Eventos**.
 
-![Pestaña Propiedades de AWS][1]{: height="50%" width="50%"}
+![Pestaña Propiedades de AWS]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\. Cree nuevos eventos para cada conjunto de Datos Corrientes, según sea necesario[(Mensajería]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [Comportamiento del Usuario]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)), o ambos.
 
-![Creación de un nuevo evento en AWS][2]{: height="50%" width="50%"}
+![Crear un nuevo evento en AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\. Marque la casilla correspondiente para el objeto crear notificaciones, así como el ARN en la parte inferior del formulario (de la columna del canal de notificación en Snowflake).
@@ -278,5 +278,3 @@ Para ver los tipos de análisis que puede realizar con Braze Currents, consulte 
 Ponte en contacto con tu director de cuentas Braze si tienes alguna pregunta o si te interesa que Braze te guíe en este proceso.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/aws-properties.png %}
-[2]: {% image_buster /assets/img/aws-events.png %}
