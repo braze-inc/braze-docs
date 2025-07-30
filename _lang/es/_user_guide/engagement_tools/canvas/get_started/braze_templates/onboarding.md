@@ -46,7 +46,7 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 A continuación, vamos a asignar nuestros eventos de conversión. Los eventos de conversión son un tipo de métrica que puede utilizarse para medir el éxito del Canvas. En **Nombre de evento personalizado**, selecciona **Enviar clic** como evento personalizado.
 
-![Evento de conversión primaria - A con el tipo de conversión "Realiza evento personalizado" con el nombre de evento personalizado "Clic de correo electrónico". Hay un plazo de conversión de 4 días.][1]
+![Evento de conversión primaria - A con el tipo de conversión "Realiza evento personalizado" con el nombre de evento personalizado "Clic de correo electrónico". Hay un plazo de 4 días para la conversión.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 Esto significa que los nuevos usuarios tienen hasta cuatro días para hacer clic en el correo electrónico de bienvenida. En este caso, queremos que nuestros nuevos usuarios sientan la urgencia de interactuar con PantsLabyrinth y suscribirse a una entrega recurrente de ropa de temporada.
 
@@ -56,7 +56,7 @@ Como el objetivo es captar nuevos usuarios de PantsLabyrinth, mantendremos el Ca
 
 A continuación, ajusta la **Ventana de entrada** para determinar cuándo pueden entrar los usuarios en el Canvas. Supongamos que a finales de octubre se lanza una suscripción a PantsLabyrinth. Aquí es donde estableceremos la hora de inicio como **2024/10/28 8:00 h**. Opcionalmente, también podemos dejar que los usuarios introduzcan el Canvas en su zona horaria local.
 
-![Una ventana de entrada con hora de inicio el 28 de octubre de 2024 a las 8 de la mañana. Los usuarios introducirán este mensaje en su zona horaria local.][4]
+![Una ventana de entrada con hora de inicio el 28 de octubre de 2024 a las 8 de la mañana. Los usuarios introducirán este mensaje en su zona horaria local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Paso 4: Dirígete a tu audiencia
 
@@ -82,7 +82,7 @@ Ahora, nuestros usuarios recibirán este correo electrónico de bienvenida despu
 
 En el paso Ruta de audiencia, llamado **División de la audiencia**, podemos personalizar el filtro para nuestros usuarios comprometidos. En la plantilla, el filtro es **Ha hecho clic en el correo electrónico para el paso Correo electrónico de** bienvenida, lo que significa que los usuarios se dividen en dos grupos: los usuarios que han hecho clic en el correo electrónico de bienvenida y los que no.
 
-![Un paso de división de la audiencia con una ruta para los usuarios comprometidos y otra para todos los demás.][2]{: style="max-width:70%;"}
+![Un paso de división de la audiencia con una ruta para los usuarios comprometidos y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 Como comercio minorista de ropa online, PantsLabyrinth también tiene un grupo activo de usuarios móviles. Así, en un Canvas de incorporación independiente, también podemos seleccionar el siguiente filtro para identificar y dividir a nuestros usuarios móviles en estos segmentos:
 
@@ -101,7 +101,3 @@ Después de probar y revisar nuestro Canvas para asegurarnos de que funciona com
 Consulta nuestra [Lista de comprobación previa y posterior al lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber qué cosas debes tener en cuenta antes y después de lanzar un Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}
