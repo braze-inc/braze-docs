@@ -26,7 +26,7 @@ Para utilizar este punto final, necesitarás un token SCIM. Utilizarás el orige
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='crear usuario de cuadro de mandos' %}
+{% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
 
 ## Cuerpo de la solicitud
 ```
