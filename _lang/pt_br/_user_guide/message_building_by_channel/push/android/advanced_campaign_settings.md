@@ -22,7 +22,7 @@ Um ID de notificação é um identificador exclusivo para uma categoria de mensa
 
 Para atribuir um ID de notificação, navegue até a página de composição do push ao qual deseja adicionar o ID e selecione a guia **Configurações**. Insira um número inteiro na seção **Notification ID (ID da notificação** ). Para atualizar essa notificação depois de emiti-la, envie outra notificação com a mesma ID usada anteriormente.
 
-![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
+![Campo de ID da notificação.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## Time-To-Live (TTL) {#ttl}
 
@@ -30,7 +30,7 @@ O campo **Time to Live** permite que você defina um tempo personalizado para ar
 
 Para editar o tempo de vida do seu push Android, acesse o criador e selecione a guia **Configurações**. Encontre o campo **Time to Live** e insira um valor em dias, horas ou segundos.
 
-Os valores padrão para o tempo de vida são definidos pelo seu administrador na página de [Configurações de TTL do Push]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/). Por padrão, a Braze define o TTL do Push para o valor máximo para cada serviço de envio de mensagens por push. Embora as configurações padrão de TTL se apliquem globalmente, você pode substituí-las no nível da mensagem durante a criação da campanha. Isso é útil quando diferentes campanhas exigem urgência ou janelas de entrega variadas.
+Os valores padrão para o tempo de vida são definidos pelo seu administrador na página [Configurações de Push]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/). Por padrão, a Braze define o TTL do Push para o valor máximo para cada serviço de envio de mensagens por push. Embora as configurações padrão de TTL se apliquem globalmente, você pode substituí-las no nível da mensagem durante a criação da campanha. Isso é útil quando diferentes campanhas exigem urgência ou janelas de entrega variadas.
 
 Por exemplo, digamos que seu app hospede um concurso de trivia semanal. Você envia uma notificação por push uma hora antes de começar. Ao definir o TTL para 1 hora, você garante que os usuários que abrem o app após o início do concurso não receberão uma notificação sobre um evento que já começou.
 
@@ -40,7 +40,7 @@ Por exemplo, digamos que seu app hospede um concurso de trivia semanal. Você en
 
 TTLs mais curtos garantem que os usuários recebam notificações oportunas para eventos ou promoções que rapidamente perdem relevância. Por exemplo:
 
-- **Varejo** Enviando um push para uma venda relâmpago que termina em 2 horas (TTL: 1–2 horas)
+- **Varejo:** Enviando um push para uma venda relâmpago que termina em 2 horas (TTL: 1–2 horas)
 - **Entrega de alimentos:** Notificando os usuários quando seu pedido está próximo (TTL: 10–15 minutos)
 - **Apps de transporte:** Compartilhando atualizações de chegada de caronas (TTL: alguns minutos)
 - **Lembretes de eventos:** Notificando os usuários quando um webinar está prestes a começar (TTL: menos de 1 hora)
@@ -54,23 +54,39 @@ TTLs mais curtos garantem que os usuários recebam notificações oportunas para
 
 ## Prioridade de envio de mensagens do Firebase {#fcm-priority}
 
-O campo **Prioridade de entrega de mensagens do Firebase** permite controlar se um push é enviado com prioridade "normal" ou "alta" para o Firebase Cloud Messaging. Consulte [a documentação do FCM](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) para saber mais.
+O campo **Prioridade de entrega de mensagens do Firebase** permite controlar se um push é enviado com prioridade "normal" ou "alta" para o Firebase Cloud Messaging. Essa configuração determina quão rapidamente as mensagens são entregues e como elas afetam a vida útil da bateria do dispositivo.
+
+| Prioridade | Descrição | Melhor para |
+|---------|-------------|----------|
+| Normal | Entrega otimizada para bateria que pode ser atrasada para conservar a bateria | Conteúdo não urgente, ofertas promocionais, atualizações de notícias |
+| Alta | Entrega imediata com maior consumo de bateria | Notificações sensíveis ao tempo, alertas críticos, atualizações de eventos ao vivo, alertas de conta, notícias de última hora ou lembretes urgentes |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### Considerações
+
+- **Configuração padrão**: Você pode definir uma prioridade padrão do FCM para todas as campanhas Android em suas [Configurações de Push]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/). Essa configuração em nível de campanha substituirá a padrão, se necessário.
+- **Despriorização**: Se o FCM detectar que seu app frequentemente envia mensagens de alta prioridade que não resultam em notificações visíveis para o usuário ou engajamento do usuário, essas mensagens podem ser automaticamente despriorizadas para prioridade normal.
+- **Impacto na bateria**: Mensagens de alta prioridade despertam dispositivos adormecidos de forma mais agressiva e consomem mais bateria. Use essa prioridade com cautela.
+
+Para informações mais detalhadas sobre o manuseio de mensagens e despriorização, consulte [documentação do FCM](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) e [Manuseio de mensagens e despriorização no Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize).
 
 ## Texto do resumo
 
-O texto de resumo permite que você defina um texto adicional na exibição **de notificação expandida**. O texto do resumo será exibido sob o corpo da mensagem na exibição expandida. Ele também serve como legenda para notificações com imagens.
+O texto de resumo permite que você defina texto adicional na visualização expandida da notificação. Ele também serve como legenda para notificações com imagens.
 
-![][9]
+![Uma mensagem Android com o título "Este é o título da notificação." e texto resumo "Este é o texto resumo da notificação."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-Para notificações por push que incluem imagens, o texto da mensagem será mostrado na exibição recolhida, enquanto o texto do resumo será exibido como a legenda da imagem quando a notificação for expandida. Dê uma olhada na animação a seguir para ver um exemplo desse comportamento.
+O texto do resumo será exibido sob o corpo da mensagem na exibição expandida. 
 
-![Resumo do comportamento do texto][15]
+![Uma mensagem Android com o título "Este é o título da notificação." e texto resumo "Este é o texto resumo da notificação."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+
+Para notificações por push que incluem imagens, o texto da mensagem será mostrado na exibição recolhida, enquanto o texto do resumo será exibido como a legenda da imagem quando a notificação for expandida. 
 
 ## URIs personalizados
 
-O recurso **URI personalizado** permite especificar um URL da Web ou um recurso do Android para o qual navegar quando a notificação for clicada. Se nenhum URI personalizado for especificado, clicar na notificação levará os usuários ao seu app. Você pode usar o URI personalizado para fazer deep linking dentro do seu app, bem como direcionar os usuários para recursos que existem fora do seu app também. Isso pode ser especificado por meio de nossa [API de envio de mensagens][13] ou nas **configurações** do criador de mensagens push.
+O recurso **URI personalizado** permite especificar um URL da Web ou um recurso do Android para o qual navegar quando a notificação for clicada. Se nenhum URI personalizado for especificado, clicar na notificação levará os usuários ao seu app. Você pode usar o URI personalizado para fazer deep linking dentro do seu app, bem como direcionar os usuários para recursos que existem fora do seu app também. Isso pode ser especificado através da nossa [API de Mensagens]({{site.baseurl}}/api/endpoints/messaging/) ou na aba **Compor** do criador de push.
 
-![URI personalizado][12]
+![Campo URI personalizado.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
 ## Prioridade de exibição de notificação
 
@@ -84,7 +100,7 @@ Esse recurso é útil para diferenciar suas mensagens com base em seu grau de cr
 
 No Android O, a prioridade de notificação tornou-se uma propriedade dos canais de notificação. Você precisará trabalhar com seu desenvolvedor para definir a prioridade de um canal durante sua configuração e, em seguida, usar o dashboard para selecionar o canal adequado ao enviar seus sons de notificação. Para dispositivos que executam versões do Android anteriores ao O, é possível especificar um nível de prioridade para notificações do Android e do Fire OS por meio do dashboard do Braze e da API de envio de mensagens.
 
-Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos que especifique indiretamente a prioridade por meio da [configuração do canal de envio de mensagens][17] (para direcionar dispositivos O+) e envie a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos que você especifique indiretamente a prioridade através da [configuração do canal de notificação](https://developer.android.com/training/notify-user/channels#importance) (para direcionar dispositivos O+) e envie a prioridade individual do dashboard (para direcionar dispositivos <O).
 
 Consulte a tabela a seguir para ver os níveis de prioridade que você pode definir nas notificações por push do Android ou do Fire OS:
 
@@ -97,13 +113,13 @@ Consulte a tabela a seguir para ver os níveis de prioridade que você pode defi
 | Mín. | Informações contextuais ou de fundo. | `-2`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Para saber mais, consulte a documentação do Google sobre [as notificações do Android][2].
+Para saber mais, consulte a documentação do Google sobre [as notificações do Android](http://developer.android.com/design/patterns/notifications.html).
 
 ## Categoria push
 
 As notificações por push do Android oferecem a opção de especificar se a notificação se enquadra em uma categoria predefinida. A interface de usuário do sistema Android pode usar essa categoria para tomar decisões de classificação ou filtragem sobre onde colocar a notificação na bandeja de notificações do usuário.
 
-![Guia Configurações com a Categoria definida como Nenhuma, que é a configuração padrão.][52]
+![A guia Configurações com a Categoria definida como Nenhum, que é a configuração padrão.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | Categoria | Descrição |
 |---|-------|
@@ -138,13 +154,13 @@ As notificações por push do Android fornecem um campo opcional para determinar
 
 Além disso, os usuários do Android podem substituir a forma como as notificações por push aparecem na tela de bloqueio, alterando a configuração de privacidade da notificação no dispositivo. Essa configuração substituirá a visibilidade da notificação por push.
 
-![Local de prioridade push do dashboard com Visibilidade ativada e definida como Privada.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![Localização da prioridade de push do Dashboard com Visibilidade Definida habilitada e configurada como Privada.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Independentemente da visibilidade, todas as notificações serão mostradas na tela de bloqueio do usuário se a configuração de privacidade da notificação no dispositivo for **Mostrar todo o conteúdo** (configuração padrão). Da mesma forma, as notificações não serão exibidas na tela de bloqueio se a privacidade de notificação estiver definida como **Não mostrar notificações**. A visibilidade só terá efeito se a privacidade da notificação estiver definida como **Ocultar conteúdo confidencial**.
 
 A visibilidade não tem efeito em dispositivos anteriores ao Android Lollipop 5.0.0, o que significa que todas as notificações serão exibidas nesses dispositivos.
 
-Consulte nossa [documentação do Android][51] para saber mais.
+Consulte nossa [documentação do Android](https://developer.android.com/guide/topics/ui/notifiers/notifications) para saber mais.
 
 ## Sons de notificação
 
@@ -152,22 +168,11 @@ No Android O, os sons de notificação se tornaram uma propriedade dos canais de
 
 Para dispositivos que executam versões do Android anteriores ao Android O, o Braze permite que você defina o som de uma mensagem push individual por meio do criador do dashboard. Você pode fazer isso especificando um recurso de som local no dispositivo (por exemplo, `android.resource://com.mycompany.myapp/raw/mysound`). 
 
-A seleção de **Padrão** nesse campo reproduzirá o som de notificação padrão no dispositivo. Isso pode ser especificado por meio de nossa [API de envio de mensagens][13] ou nas **configurações** do criador de mensagens push.
+A seleção de **Padrão** nesse campo reproduzirá o som de notificação padrão no dispositivo. Isso pode ser especificado através da nossa [API de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) ou nas **Configurações** no criador de push.
 
-![][11]
+![O campo "Som".]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Em seguida, digite o URI completo do recurso de som (por exemplo, `android.resource://com.mycompany.myapp/raw/mysound`) no prompt do dashboard.
 
-Para enviar mensagens a toda a sua base de usuários com um som específico, recomendamos que especifique indiretamente o som por meio da [configuração do canal de envio de mensagens][16] (para direcionar dispositivos O+) e envie o som individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens para toda a sua base de usuários com um som específico, recomendamos que você especifique indiretamente o som através da [configuração do canal de notificação](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) e envie o som individual do dashboard (para direcionar dispositivos <O).
 
-[2]: http://developer.android.com/design/patterns/notifications.html
-[9]: {% image_buster /assets/img_archive/summary_text.png %}
-[11]: {% image_buster /assets/img_archive/sound_android.png %}
-[12]: {% image_buster /assets/img_archive/deep_link.png %}
-[13]: {{site.baseurl}}/api/endpoints/messaging/
-[15]: {% image_buster /assets/img_archive/messagesummary.gif %}
-[17]: https://developer.android.com/training/notify-user/channels#importance
-[16]: https://developer.android.com/training/notify-user/channels
-Daqui a [51]: https://developer.android.com/guide/topics/ui/notifiers/notifications
-[52]: {% image_buster /assets/img_archive/braze_category.png %}
-[53]: {% image_buster /assets/img_archive/braze_visibility.png %}
