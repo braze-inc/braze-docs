@@ -25,7 +25,7 @@ Puedes editar tus Lienzos después del lanzamiento:
 La distribución de la variante de control sólo puede reducirse después del lanzamiento.
 {% endalert %}
 
-Tenga en cuenta las siguientes ediciones permitidas tras el lanzamiento del lienzo en función del flujo de trabajo con el que se creó el lienzo. Si tu Canvas utiliza el flujo de trabajo original de Canvas, tendrás que clonarlo primero en Canvas Flow para poder realizar ediciones posteriores al lanzamiento.
+Ten en cuenta las siguientes ediciones permitidas tras el lanzamiento del Canvas, dependiendo del flujo de trabajo con el que se haya creado tu Canvas. Si tu Canvas utiliza el flujo de trabajo original de Canvas, tendrás que clonarlo primero en Canvas Flow para poder realizar ediciones posteriores al lanzamiento.
 
 Puedes eliminar cualquiera de los siguientes elementos de tu recorrido de usuario:
 
@@ -51,17 +51,18 @@ Consulte la sección [Prácticas recomendadas](#best-practices) para conocer los
 A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando la experiencia Canvas original. Braze recomienda a los clientes que utilicen la experiencia Canvas original que se pasen a Canvas Flow. Es una experiencia de edición mejorada para construir y gestionar mejor los lienzos. Más información sobre la [clonación de tus lienzos en el flujo de lienzos]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
-No se pueden editar ni borrar las conexiones existentes, y no se puede insertar un paso entre pasos conectados existentes. Si desea editar o añadir más pasos a su recorrido de usuario de Canvas, se aplicarán los siguientes detalles:
+No puedes editar o borrar conexiones existentes, y no puedes insertar un paso entre pasos conectados existentes. Si desea editar o añadir más pasos a su recorrido de usuario de Canvas, se aplicarán los siguientes detalles:
 
 - Los usuarios que aún no hayan entrado en el Lienzo podrán acceder a los pasos recién creados. 
 - Si tu configuración de entrada en Canvas permite a los usuarios volver a entrar en los pasos, los usuarios que ya hayan superado pasos recién creados serán elegibles para volver a entrar.
 - Los usuarios que están actualmente en un Canvas lanzado, pero que no han alcanzado los nuevos pasos añadidos en el recorrido del usuario, pueden recibir esos nuevos pasos añadidos.
+- Si un paso de Retraso es el último paso del lienzo, los usuarios que lleguen a ese paso saldrán automáticamente del lienzo y no recibirán ningún paso recién creado.
 
-Si actualiza la configuración de **Retraso** o **Ventana** para un paso del lienzo, sólo los nuevos usuarios que entren en el lienzo y los usuarios que aún no se hayan puesto en cola para ese paso recibirán el mensaje con el retraso actualizado. Si un paso de Retraso es el último paso del lienzo, los usuarios que lleguen a ese paso saldrán automáticamente del lienzo y no recibirán ningún paso recién creado. 
-
-{% alert note %}
-Al detener un Canvas no saldrán los usuarios que estén esperando recibir un mensaje. Si vuelves a activar el Canvas y los usuarios siguen esperando el mensaje, lo recibirán (a menos que haya pasado el tiempo en el que se les debería haber enviado el mensaje, entonces no lo recibirán).
+{% alert important %}
+Si actualizas la configuración de **Retraso** o **Ventana** de un paso en Canvas, los usuarios que se encuentren en ese paso en el momento de la actualización respetarán el tiempo de retraso que se les asignó cuando entraron en él. Sólo los nuevos usuarios que entren en el Canvas y los que aún no se hayan puesto en cola para ese paso recibirán el mensaje en el momento actualizado.
 {% endalert %}
+
+Al detener un Canvas no saldrán los usuarios que estén esperando recibir un mensaje. Si vuelves a activar el Canvas y los usuarios siguen esperando el mensaje, lo recibirán (a menos que haya pasado el tiempo en el que se les debería haber enviado el mensaje, entonces no lo recibirán).
 
 {% enddetails %}
 
@@ -144,7 +145,7 @@ Al crear o editar pasos desconectados, puede realizar cambios en estos pasos ind
 
 ### Paso de ruta de experimentos
 
-Si tu Canvas tiene un paso de ruta de experimentos activo o en curso y actualizas el Canvas activo (aunque no sea al paso de ruta de experimentos), el experimento en curso se reiniciará. Para evitar que sus usuarios vuelvan a introducir la ruta del experimento, puede duplicar y crear un nuevo lienzo en lugar de actualizar el lienzo.
+Si tu Canvas tiene un experimento activo o en curso y actualizas el Canvas activo (aunque no sea al paso de Ruta de experimentos), el experimento en curso finalizará. Para reiniciar el experimento, puedes desconectar la Ruta de experimentos existente y lanzar una nueva, o duplicar el Canvas y lanzar un nuevo Canvas.
 
 ### Retrasos temporales
 
