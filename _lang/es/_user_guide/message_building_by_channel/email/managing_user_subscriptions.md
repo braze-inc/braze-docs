@@ -70,7 +70,7 @@ El [centro de preferencias](#email-preference-center) Liquid puede incluirse en 
 
 ### Comprobación del estado de suscripción al correo electrónico
 
-![Perfil de usuario para John Doe con su estado de suscripción de correo electrónico establecido en Suscrito.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Perfil de usuario de John Doe con su estado de suscripción por correo electrónico establecido en Suscrito.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Existen dos formas de comprobar el estado de suscripción al correo electrónico de un usuario con Braze:
 
@@ -96,13 +96,13 @@ Utiliza los [puntos finales de Grupo de suscripción]({{site.baseurl}}/api/endpo
 
 Todos los grupos de suscripción se añaden automáticamente a su centro de preferencias.
 
-![Campos para crear un grupo de suscripción.][2]{: style="max-width:75%"}
+![Campos para crear un grupo de suscripción.]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### Segmentar con un grupo de suscripción
 
 Al crear sus segmentos, establezca el nombre del grupo de suscripción como filtro. Esto confirmará que los usuarios que hayan optado por formar parte de su grupo recibirán sus correos electrónicos. Es ideal para boletines mensuales, cupones, niveles de afiliación y mucho más.
 
-![Ejemplo de segmentación de usuarios en el segmento "Usuarios caducados" con el filtro para usuarios del grupo de suscripción "Alertas estables".][3]{: style="max-width:90%"}
+![Ejemplo de segmentación de usuarios del segmento "Usuarios caducados" con el filtro de usuarios del grupo de suscripción "Alertas estables".]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### Archivar grupos de suscripción
 
@@ -117,9 +117,9 @@ Braze no procesará ningún cambio de estado para usuarios en grupos archivados.
 
 #### Ver el tamaño de los grupos de suscripción
 
-Puedes consultar el gráfico de **series temporales del grupo de suscripción** en la página **Grupos de suscripción** para ver el tamaño del grupo de suscripción en función del número de usuarios durante un periodo de tiempo. Estos tamaños de grupos de suscripción también son coherentes con otras áreas de Braze, como el cálculo del tamaño de los segmentos.
+Puedes consultar el gráfico **Series temporales de grupos de suscripción** en la página **Grupos de suscripción** para ver el tamaño del grupo de suscripción en función del número de usuarios durante un periodo de tiempo. Estos tamaños de grupos de suscripción también son coherentes con otras áreas de Braze, como el cálculo del tamaño de los segmentos.
 
-![Un ejemplo de gráfico de "Timeseries de grupos de suscripción" del 2 al 11 de diciembre. El gráfico muestra un aumento de ~10 millones en el número de usuarios del 6º al 7º.][4]
+![Un ejemplo de gráfico de "Timeseries de grupos de suscripción" del 2 al 11 de diciembre. El gráfico muestra un aumento de ~10 millones en el número de usuarios del 6º al 7º.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### Visualización de los grupos de suscripción en los análisis de campaña
 
@@ -128,7 +128,7 @@ Puede ver el número de usuarios que cambiaron su estado de suscripción (suscri
 1. En la página **Análisis de** campaña de tu campaña, desplázate hasta la sección **Rendimiento de los mensajes de correo electrónico**.
 2. Selecciona la flecha bajo **Grupos de suscripción** para ver el recuento agregado de cambios de estado, tal y como los envían tus clientes.
 
-![La página "Rendimiento de los mensajes de correo electrónico" muestra el recuento agregado de los cambios de estado enviados por los clientes.][5]
+![La página "Rendimiento de los mensajes de correo electrónico" muestra el recuento agregado de los cambios de estado enviados por los clientes.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
 ## Centro de preferencias de correo electrónico
 
@@ -163,7 +163,7 @@ Para crear una página de destino personalizada a la que se dirigirá a los usua
 
 Recomendamos incluir un enlace de resuscripción (como {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) en la página de destino para que los usuarios tengan la opción de volver a suscribirse en caso de que se hayan dado de baja por accidente.
 
-![Correo electrónico de cancelación de suscripción personalizado en el panel Página de cancelación de suscripción personalizada.][6]
+![Envío por correo electrónico personalizado para cancelar suscripción en el panel Página personalizada de cancelación de suscripción.]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### Crear una página de adhesión voluntaria personalizada
 
@@ -197,13 +197,5 @@ Los filtros "Estado de suscripción por correo electrónico" y "Estado de suscri
 
 Esto puede ser útil si quieres dirigirte a usuarios que no han optado ni por la adhesión ni por la exclusión y animarles a que opten explícitamente por la adhesión voluntaria al correo electrónico o push. En ese caso, crearía un segmento con un filtro para "Estado de suscripción de correo electrónico/envío es suscrito" y las campañas a este segmento irían a los usuarios que están suscritos, pero no han optado por ello.
 
-![Estado de suscripción al correo electrónico utilizado como filtro de segmento.][8]
+![Estado de la suscripción al correo electrónico utilizado como filtro de segmento.]({% image_buster /assets/img_archive/not_optin.png %})
 
-[1]: {% image_buster /assets/img/push_example.png %}
-[2]: {% image_buster /assets/img/sub_group_create.png %}
-[3]: {% image_buster /assets/img/segment_sub_group.png %}
-[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[8]: {% image_buster /assets/img_archive/not_optin.png %}
