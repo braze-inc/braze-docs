@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='e-mail de transação' %}
+{% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
 ## Parâmetros da jornada
 
