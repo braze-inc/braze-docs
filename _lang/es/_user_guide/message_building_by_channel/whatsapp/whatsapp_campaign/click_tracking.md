@@ -1,7 +1,7 @@
 ---
 nav_title: Seguimiento de clic
 article_title: Seguimiento de clic
-page_order: 5
+page_order: 2
 description: "Este artículo de referencia explica cómo activar el seguimiento de clics en tus mensajes de WhatsApp, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces rastreados y mucho más."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -15,13 +15,9 @@ channel:
 
 > Esta página explica cómo activar el seguimiento de clics en tus mensajes de WhatsApp, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces rastreados y mucho más.
 
-El seguimiento de clics te permite medir cuándo alguien pulsa un enlace en tu mensaje de WhatsApp, lo que te proporciona una visión clara del contenido que genera interacción. Braze acorta tus URL, añade seguimiento entre bastidores y registra los clics en el momento en que se producen.
+El seguimiento de clics te permite medir cuándo alguien pulsa un enlace en tu mensaje de WhatsApp, dándote una visión clara de qué contenido está generando interacción. Braze acorta tus URL, añade seguimiento entre bastidores y registra los clics en el momento en que se producen.
 
 Puedes activar el seguimiento de clics tanto en los mensajes de respuesta como en los de plantilla. Funciona con enlaces en botones y cuerpo de texto, y admite URL personalizadas y dominios personalizados. Una vez activada, verás los datos de clics en tus informes de rendimiento de WhatsApp y podrás segmentar a los usuarios en función de quién hizo clic en qué.
-
-{% alert important %}
-El seguimiento de clics para WhatsApp está actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
 
 ## Cómo funciona
 
@@ -35,7 +31,7 @@ El enlace se acortará al dominio Braze, o al dominio personalizado especificado
 
 Todas las URL estáticas que empiecen por `http://` o `https://` se acortarán. Las URL acortadas que contengan personalización Liquid (como la orientación de seguimiento a nivel de usuario) serán válidas durante dos meses.
 
-![Creador de mensajes de WhatsApp con cuerpo de contenido y un botón.][1]
+![Creador de mensajes de WhatsApp con cuerpo de contenido y un botón.]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
 
 ### Mensajes de plantilla 
 
@@ -46,14 +42,14 @@ Para los mensajes de plantilla, la URL base debe enviarse correctamente al crear
 1. En tu administrador de WhatsApp, crea una URL base que sea tu dominio personalizado o `brz.ai`.
 2. Asegúrate de que los enlaces incluidos en la plantilla son compatibles con el seguimiento de clics.
 3. No cambies las variables de la plantilla después de haberla configurado como campaña en Braze; los cambios posteriores no podrán incorporarse.
-4. Para los enlaces de botón CTA, selecciona **Dinámico** y, a continuación, proporciona la URL base (`brz.ai` o tu dominio personalizado).<br><br>![Sección para crear una llamada a la acción.][2]<br><br>
-5. Para los enlaces en el cuerpo del texto, cuando escribas la plantilla en tu administrador de WhatsApp, elimina los espacios insertados para los enlaces contenidos en el cuerpo que quieras seguir.<br><br>![Cuadro de texto para introducir el cuerpo del contenido de la llamada a la acción.][3]
+4. Para los enlaces de botón CTA, selecciona **Dinámico** y, a continuación, proporciona la URL base (`brz.ai` o tu dominio personalizado).<br><br>![Sección para crear una llamada a la acción.]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
+5. Para los enlaces en el cuerpo del texto, cuando escribas la plantilla en tu administrador de WhatsApp, elimina los espacios insertados para los enlaces contenidos en el cuerpo que quieras seguir.<br><br>![Cuadro de texto para introducir el cuerpo del contenido de la llamada a la acción.]({% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %})
 
 #### Paso 2: Completa tu plantilla en Braze
 
 Al componer, Braze detectará automáticamente qué plantillas tienen dominios URL compatibles, tanto en el cuerpo del texto como en los botones CTA. El estado se mostrará en la parte inferior de la plantilla. 
 
-![La sección "Estado del enlace" muestra un estado activo para el seguimiento de los clics.][4]{: style="max-width:70%;"}
+![Sección "Estado del enlace" que muestra un estado activo para el seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
 
 - **Enlaces compatibles:** Los enlaces que se envíen con la URL base coincidente tendrán habilitado el seguimiento de clics.
 - **Enlaces con soporte parcial:** Si algunos enlaces de una plantilla se envían como URL completas, el seguimiento de clics **no** se aplicará a esos enlaces.
@@ -61,7 +57,7 @@ Al componer, Braze detectará automáticamente qué plantillas tienen dominios U
 
 Tendrás que indicar la URL de destino para cualquier enlace con una URL base que coincida con `brz.ai` o con tu dominio personalizado. 
 
-![Sección "Botones" con campos para el nombre del botón, la URL del sitio web y la URL de seguimiento de los clics.][5]{: style="max-width:70%;"}
+![Sección "Botones" con campos para el nombre de un botón, la URL del sitio web y la URL de seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
 {% multi_lang_include click_tracking.md section='Dominios personalizados' %}
 
@@ -101,19 +97,19 @@ Si se crea un borrador dentro de un Canvas activo, no se generará una URL acort
 
 ## Informe
 
-Cuando el seguimiento de clics está activado o se utiliza con plantillas compatibles, la tabla de rendimiento de WhatsApp incluye la columna **Clics totales**, que muestra un recuento de eventos de clic por variante y una tasa de clics asociada. Para más detalles sobre las métricas de WhatsApp, consulta [Rendimiento de los mensajes de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics#message-performance).
+Cuando el seguimiento de clics está activado o se utiliza con plantillas compatibles, la tabla de rendimiento de WhatsApp incluye la columna **Clics totales**, que muestra un recuento de eventos de clic por variante y una tasa de clics asociada. Para más detalles sobre las métricas de WhatsApp, consulta [Rendimiento de los mensajes de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics).
 
-![Paso en Canvas de mensajes de WhatsApp.][6]{: style="max-width:30%;"}
+![Paso en Canvas de mensajes de WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
 
 Los datos de los clics aparecerán automáticamente en el panel de análisis.
 
-![Tabla de rendimiento de los mensajes de WhatsApp.][7]
+![Tabla de rendimiento de los mensajes de WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
 
 ## Reorientar usuarios 
 
 Puedes utilizar el filtro `Clicked/Opened Step` y la interacción `clicked tracked WhatsApp link` para segmentar a los usuarios en función de sus interacciones con los enlaces.
 
-![Filtrar grupo con un filtro para "enlace de WhatsApp de seguimiento pulsado".][8]
+![Filtrar grupo con un filtro para "enlace de WhatsApp de seguimiento pulsado".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
 {% multi_lang_include click_tracking.md section='Preguntas frecuentes' %}
 
@@ -128,13 +124,4 @@ El seguimiento de los clics no funciona con los vínculos en profundidad. Puedes
 ### ¿Las vistas previas en el dispositivo de WhatsApp cuentan como clics? 
 
 No, no contribuyen a la tasa de clics de los mensajes de WhatsApp. 
-
-[1]: {% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %}
-[2]: {% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %}
-[3]: {% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %}
-[4]: {% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}
-[5]: {% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}
-[6]: {% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}
-[7]: {% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %}
-[8]: {% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %}
 
