@@ -123,7 +123,7 @@ Estamos rastreando essa limitação para melhorias futuras. Se isso afetar seus 
 
 ### Entendendo testes de acessibilidade automatizados
 
-{% multi_lang_include acessibilidade/testes_automatizados.md %}
+{% multi_lang_include accessibility/automated_testing.md %}
 
 ## Precisão do teste
 
