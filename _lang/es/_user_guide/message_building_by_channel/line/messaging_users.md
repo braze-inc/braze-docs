@@ -23,13 +23,13 @@ Puede crear campañas y lienzos que comiencen, se ramifiquen y tengan cambios a 
 
 Configura tus palabras desencadenantes al programar una campaña de entrega basada en acciones.
 
-![Activador basado en acción de "Enviar esta campaña a los usuarios que enviaron LÍNEA entrante al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.][1]
+![Acción desencadenante de "Enviar esta campaña a los usuarios que enviaron LÍNEA de entrada al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Establezca sus palabras desencadenantes dentro de [rutas de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) en su Canvas.
 
-![Ruta de acción con un disparador de "Enviar esta campaña a los usuarios que enviaron LÍNEA de entrada al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.][2]
+![Ruta de acción con un desencadenante de "Enviar esta campaña a los usuarios que enviaron LÍNEA de entrada al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Requisitos
 
@@ -47,5 +47,3 @@ Después de crear grupos de acciones para las frases de filtro personalizadas, a
 
 Para este mensaje, debe enviar un mensaje LINE informando al usuario de que este canal no está supervisado por un humano y, si es necesario, guiarle a un canal de soporte.
 
-[1]: {% image_buster /assets/img/line/trigger_word_campaign.png %}
-[2]: {% image_buster /assets/img/line/trigger_word_canvas.png %}
