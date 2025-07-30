@@ -21,13 +21,15 @@ Al comparar los comportamientos de los usuarios que reciben mensajes con los que
 
 Con el Grupo de Control Global, puede establecer un porcentaje de todos los usuarios como grupo de control. Una vez guardado, los usuarios del grupo no recibirán campañas ni lienzos. 
 
-Su grupo de control global se aplica a todos los canales, campañas y lienzos, a excepción de [las campañas API]({{site.baseurl}}/api/api_campaigns#api-campaigns) y las News Feed Cards (en desuso). Los usuarios de tu grupo de control seguirán recibiendo campañas API y tarjetas de canal de noticias. Esta excepción no se aplica a las tarjetas de contenido: si utiliza tarjetas de contenido, los usuarios de su grupo de control no las recibirán.
+{% alert important %}
+Tu grupo de control global se aplica a todos los canales, campañas y lienzos, excepto a [las campañas API]({{site.baseurl}}/api/api_campaigns). Esto significa que los usuarios de tu grupo de control seguirán recibiendo campañas API. Sin embargo, esta excepción no se aplica a las tarjetas de contenido. Si utilizas una campaña de tarjeta de contenido desencadenada por API, los usuarios de tu grupo de control no las recibirán.
+{% endalert %}
 
 ### Asignar usuarios aleatoriamente al Grupo de Control Global
 
 Braze selecciona aleatoriamente múltiples rangos de [números de cubos aleatorios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) e incluye usuarios de esos cubos seleccionados. Si actualmente utilizas números de contenedor aleatorios para otros fines, consulta [Cosas que debes tener en cuenta](#things-to-watch-for). 
 
-Cuando se genere tu grupo de control global, todos los usuarios con números de contenedor aleatorios formarán parte del grupo. Además, los nuevos usuarios que se unan después de este punto (los adquiridos después de que se generara el grupo de control global) que tengan estos números de contenedor aleatorios también se añadirán al grupo de control global. Del mismo modo, si se eliminan muchos usuarios, es de esperar que el tamaño de tu grupo de control global se reduzca, porque un porcentaje de esos usuarios eliminados habrá caído en este grupo. Esto mantiene el tamaño de tu grupo como un porcentaje constante respecto a toda tu base de uso.
+Cuando se genere tu grupo de control global, todos los usuarios con números de contenedor aleatorios formarán parte del grupo. Además, los nuevos usuarios que se unan después de este punto (los adquiridos después de que se generara el grupo de control global) que tengan estos números de contenedor aleatorios también se añadirán al grupo de control global. Del mismo modo, si se eliminan muchos usuarios, es de esperar que el tamaño de tu grupo de control global se reduzca, porque un porcentaje de esos usuarios eliminados habrá caído en este grupo. Esto mantiene el tamaño de tu grupo como un porcentaje constante en relación con toda tu base de uso.
 
 ### Asignar usuarios aleatoriamente al grupo de tratamiento para la elaboración de informes
 
@@ -49,9 +51,11 @@ En el panel de control, vaya a **Audiencia** > **Grupo de control global**.
 
 Introduce un porcentaje para tu grupo de control y selecciona **Guardar**. Una vez introducido, Braze le muestra una estimación de cuántos usuarios entrarán en su muestra de Control global, tratamiento y tratamiento. Ten en cuenta que cuantos más usuarios tengas en tu espacio de trabajo, más precisa será esta estimación. 
 
-El número de usuarios de su Grupo de control global se actualiza automáticamente tras su configuración inicial para que siga siendo proporcional a este porcentaje de audiencia cuando se añadan más usuarios a su espacio de trabajo. Además, los nuevos usuarios que se unan después de que se haya configurado el grupo de control global y que tengan números de contenedor aleatorios también se añadirán al grupo de control global. Si se añaden muchos usuarios, entonces puedes esperar que el tamaño de tu grupo de control global crezca de modo que mantenga un porcentaje constante en relación con toda tu base de usuarios. Para conocer las pautas porcentuales, consulta la siguiente [sección de buenas prácticas](#percentage-guidelines).
+El número de usuarios de tu grupo de control global se actualiza automáticamente tras su configuración inicial para seguir siendo proporcional a este porcentaje cuando se añaden más usuarios a tu espacio de trabajo. Además, los usuarios que se unan después de configurar el grupo de control global y que tengan números de contenedor aleatorios también se añadirán al grupo de control global. Si se añaden muchos usuarios, el tamaño de tu grupo de control global crecerá para mantener un porcentaje constante en relación con toda tu base de usuarios. Cuando aumente el tamaño de tu grupo de control global, los usuarios que estaban antes en el grupo seguirán estando en él (a menos que hagas cambios en tu grupo desactivándolo y creando uno nuevo).
 
-![La Configuración del Grupo de Control Global con la Configuración de Audiencia establecida en "Asignar el cinco por ciento de todos los usuarios al Grupo de Control Global".][4]
+Para conocer las pautas porcentuales, consulta [Pruebas de buenas prácticas](#percentage-guidelines).
+
+![La configuración del grupo de control global con la configuración de audiencia establecida en "Asignar el cinco por ciento de todos los usuarios al grupo de control global".]({% image_buster /assets/img/control_group/control_group4.png %})
 
 ### Paso 3: Asignar parámetros de exclusión
 
@@ -61,7 +65,7 @@ Utilice etiquetas para añadir configuraciones de exclusión a su Grupo de Contr
 Es posible que desee añadir ajustes de exclusión si tiene mensajes transaccionales que deben enviarse a todos los usuarios.
 {% endalert %}
 
-![La opción de añadir ajustes de exclusión a su Grupo de Control Global.][5]
+![La sección para añadir o editar configuraciones de exclusión para tu grupo de control global.]({% image_buster /assets/img/control_group/control_group5.png %})
 
 ### Paso 4: Guarda tu grupo de control
 
@@ -77,7 +81,7 @@ Antes de desactivar su grupo de control, le recomendamos que [exporte](#export-g
 
 Después de desactivar su Grupo de Control, puede guardar uno nuevo. Al introducir un porcentaje y guardarlo, Braze genera un nuevo grupo de usuarios seleccionados aleatoriamente. Si introduce el mismo porcentaje que antes, Braze seguirá generando un nuevo grupo de usuarios para sus grupos de control y tratamiento.
 
-![Aparecerá un cuadro de diálogo titulado "Está realizando cambios en la configuración global de mensajería" con el siguiente texto: "Una vez desactivado el grupo de control global, dejará de estar excluido de cualquier campaña o lienzo nuevo o actualmente activo. Los usuarios de este grupo podrán recibir mensajes inmediatamente. ¿Está seguro de que desea continuar?" con dos botones: Cancelar y continuar.][2]{: style="max-width:50%" }
+![Un cuadro de diálogo titulado "Estás realizando cambios en la configuración de mensajes globales" con un texto que advierte de que, una vez desactivado tu grupo de control global, ya no se excluirá de ninguna campaña o lienzo nuevo o activo.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:60%" }
 
 ## Exporte los miembros de su grupo de control {#export-group-members}
 
@@ -93,7 +97,7 @@ Los grupos de control históricos no se conservan, por lo que sólo puede export
 
 Puedes ver la pertenencia a un grupo de control global yendo a la sección **Varios** en la pestaña **Interacción** del perfil de un usuario individual.
 
-![Una sección "Varios" informa de que el usuario tiene un número de contenedor aleatorio es 2030 y está en el grupo de control global.][1]{: style="max-width:60%;"}
+![Una sección "Varios" que informa de que el usuario tiene un número de contenedor aleatorio de 6356 y no está en el grupo de control global.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
 
 ## Informe
 
@@ -171,8 +175,3 @@ Antes de comenzar el experimento, debe decidir cuánto tiempo va a durar y, a co
 
 Tenga en cuenta los comportamientos de referencia para las métricas que más le interesan. ¿Te interesan las tasas de compra de los planes de suscripción que sólo se renuevan anualmente? ¿O tienen los clientes un hábito semanal para el evento que le gustaría medir? Piense en el tiempo que tardan los usuarios en alterar potencialmente sus comportamientos debido a su mensaje. Después de decidir cuánto tiempo debe durar tu experimento, asegúrate de no terminar tu experimento ni registrar los resultados finales antes de tiempo, o tus conclusiones podrían estar sesgadas.
 
-[1]: {% image_buster /assets/img/control_group/control_group1.png %}
-[2]: {% image_buster /assets/img/control_group/control_group2.png %}
-[4]: {% image_buster /assets/img/control_group/control_group4.png %}
-[5]: {% image_buster /assets/img/control_group/control_group5.png %}
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}
