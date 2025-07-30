@@ -33,7 +33,7 @@ Se quiser segmentar usuários para testes em uma única campanha ou em um único
 
 Ao [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), adicione o filtro "Random Bucket #". Em seguida, especifique um número ou intervalo de números para incluir em seu segmento.
 
-![][2]
+![Um filtro de segmento que é para números de balde aleatórios não superiores a "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Talvez você queira usar esses tipos de segmentos se quiser executar um teste de três variantes diferentes e também incluir um grupo de controle. Considere o seguinte exemplo de plano para criar segmentos de tamanho igual para três variantes e um grupo de controle:
 
@@ -57,4 +57,3 @@ O reingresso aleatório do público pode ser útil para [Testes A/B]({{site.base
 5. Lance sua campanha e monitore a performance de cada pacote. É possível analisar métricas como taxas de engajamento e taxas de conversão para determinar a eficácia da reentrada aleatória do público no seu caso de uso.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}
