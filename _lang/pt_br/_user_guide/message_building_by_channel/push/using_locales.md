@@ -9,7 +9,7 @@ description: "Este artigo fornece etapas sobre como usar localidades em suas not
 
 > Depois de adicionar localizações ao seu espaço de trabalho, é possível direcionar usuários em diferentes idiomas, tudo em uma única notificação por push.
 
-{% multi_lang_include locales.md seção="Pré-requisitos" %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 {% alert important %}
 O suporte a vários idiomas e as localizações nas mensagens estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
@@ -41,6 +41,6 @@ Quaisquer alterações nas IDs ou localizações no arquivo CSV não serão atua
 Confira nossa [API de tradução]({{site.baseurl}}/api/endpoints/translations) para gerenciar e atualizar traduções em suas campanhas e canvas.
 {% endalert %}
 
-{% multi_lang_include locales.md seção="Prévia" %}
+{% multi_lang_include locales.md section="Preview" %}
 
 {% multi_lang_include locales.md section="Frequently Asked Questions" %}
