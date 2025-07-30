@@ -63,7 +63,7 @@ Un dominio de envío se utiliza en la dirección "de" al enviar un correo electr
 
 A continuación, añada los registros TXT y CNAME de la parte inferior de la página a su proveedor de DNS. A continuación, vuelva al panel de control de Braze y haga clic en **Verificar**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 El dominio de envío debe estar subordinado a un dominio de su propiedad. Por ejemplo, si eres propietario de "example.com", un subdominio podría ser "mail.example.com", lo que te permitiría utilizar la dirección de envío "@mail.example.com".
@@ -85,4 +85,3 @@ Tenga en cuenta que los dominios adicionales que se hayan añadido no aparecerá
 
 Una vez completada la verificación del remitente, recomendamos el calentamiento de IP para que sus mensajes lleguen a las bandejas de entrada de destino con una frecuencia elevada y constante. Después de completar esta configuración, asegúrese también de consultar con el equipo Braze Onboarding para confirmar si sus dominios y [dirección IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) están funcionando.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}
