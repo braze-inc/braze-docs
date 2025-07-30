@@ -10,7 +10,7 @@ description: "Este artigo de referência cobre o básico dos webhooks, incluindo
 
 # [![curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}Sobre Webhooks
 
-> Este artigo de referência cobre o básico dos webhooks para fornecer os blocos de construção necessários para criar o seu próprio. Procurando etapas sobre como criar um webhook na Braze? Consulte [Creating a webhook][1].
+> Este artigo de referência cobre o básico dos webhooks para fornecer os blocos de construção necessários para criar o seu próprio. Procurando etapas sobre como criar um webhook na Braze? Consulte [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
 
 Webhooks são uma maneira comum para aplicativos se comunicarem—para compartilhar dados em tempo real. Nos dias de hoje, raramente temos um aplicativo independente que possa fazer tudo. Na maioria das vezes, você está trabalhando em muitos aplicativos ou sistemas diferentes que são especializados para realizar certas tarefas, e esses aplicativos precisam ser capazes de se comunicar uns com os outros. É aí que os webhooks entram.
 
@@ -30,16 +30,14 @@ Alguns casos de uso mais específicos incluem o seguinte:
 
 - Se um usuário cancelar a inscrição do e-mail, você pode ter um webhook atualizando seu banco de dados de análise de dados ou CRM com essa mesma informação, garantindo uma visão holística do comportamento desse usuário.
 - Envie [mensagens transacionais]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) para usuários no Facebook Messenger ou LINE.
-- Envie mala direta para os clientes em resposta à atividade deles no app e na web, usando webhooks para se comunicar com serviços de terceiros como [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
+- Envie mala direta para os clientes em resposta à atividade deles no app e na web, usando webhooks para se comunicar com serviços de terceiros como [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/).
 - Se um jogador atingir um certo nível ou acumular um certo número de pontos, use webhooks e sua configuração de API existente para enviar um upgrade de personagem ou moedas diretamente para sua conta. Se você enviar o webhook como parte de uma campanha de mensagens em vários canais, você pode enviar um push ou outra mensagem para informar o jogador sobre a recompensa ao mesmo tempo.
 - Se você é uma companhia aérea, pode usar webhooks e sua configuração de API existente para creditar a conta de um cliente com um desconto após ele ter reservado um certo número de voos.
 - Receitas infinitas do "If This Then That" ([IFTTT](https://ifttt.com/about)) — por exemplo, se um cliente entrar no app via e-mail, esse endereço pode ser configurado automaticamente no Salesforce.
 
 ## Anatomia de um webhook
 
-Um webhook consiste nas seguintes três partes:
-
-![Exemplo de webhook dividido em método HTTP, URL HTTP e corpo da solicitação. Veja a tabela a seguir para obter detalhes.][2]
+Um webhook consiste nas seguintes partes.
 
 | Parte do Webhook | Descrição |
 | --- | --- |
@@ -47,6 +45,8 @@ Um webhook consiste nas seguintes três partes:
 | URL HTTP | O endereço URL do seu endpoint de webhook. O endpoint é o local onde você enviará as informações que está capturando no webhook. |
 | Corpo da solicitação | Essa parte do webhook contém as informações que você está comunicando ao endpoint. O corpo da solicitação pode ser pares de chave-valor JSON ou texto bruto. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Exemplo de webhook com um método HTTP, URL HTTP e corpo da solicitação.]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 ### Métodos HTTP {#methods}
 
@@ -93,6 +93,17 @@ Consulte [Criando um webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 {% endtab %}
 {% endtabs %}
 
+## Tratamento de erros e limite de frequência de webhooks
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[2]: {% image_buster /assets/img_archive/webhook_anatomy.png %}
+Quando o Braze recebe uma resposta de erro de uma chamada de webhook, ajustamos automaticamente o comportamento de envio desse webhook com base nesses cabeçalhos de resposta:
+
+- `Retry-After`
+- `X-Rate-Limit-Limit`
+- `X-Rate-Limit-Remaining`
+- `X-Rate-Limit-Reset`
+
+Esses cabeçalhos nos ajudam a interpretar os limites de frequência e a ajustar a velocidade de envio de acordo para evitar mais erros. Também implementamos uma estratégia de backoff exponencial para novas tentativas, o que ajuda a reduzir o risco de sobrecarga dos servidores, espaçando as tentativas de nova tentativa ao longo do tempo.
+
+Se detectarmos que a maioria das solicitações de webhook para um host específico está falhando, adiaremos temporariamente todas as tentativas de envio para esse host. Em seguida, retomaremos o envio após um período de resfriamento definido, permitindo que seu sistema se recupere.
+
+
