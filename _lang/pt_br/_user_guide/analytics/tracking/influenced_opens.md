@@ -24,9 +24,7 @@ Isso difere da definição de aberturas de aplicativos como um evento de convers
 
 As aberturas por influência são adicionadas às aberturas diretas de uma campanha para obter um número total de aberturas. Isso é exibido em uma página de **análise de dados** da **campanha** push. O total de aberturas e as aberturas diretas são mostrados nas seções Desempenho de mensagens e **Desempenho histórico**. As aberturas por influência são a diferença entre as duas medidas.
 
-![O Influenced abre estatísticas na página Detalhes da campanha para uma campanha][1]
+![As aberturas por influência das estatísticas na página Detalhes da campanha para uma campanha]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
 
-Para saber mais sobre o rastreamento de aberturas, confira a seção de rastreamento de conversões de nossas [práticas recomendadas para push][bp].
+Para saber mais sobre o rastreamento de aberturas, confira a seção de rastreamento de conversões de nossas [práticas recomendadas para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
-[bp]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[1]: {% image_buster /assets/img_archive/Influenced_Opens2.png %}
