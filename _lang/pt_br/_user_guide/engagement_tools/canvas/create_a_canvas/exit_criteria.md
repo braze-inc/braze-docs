@@ -18,7 +18,7 @@ Na etapa do **público-alvo** do construtor do Canvas, é possível configurar c
 
 Os critérios de saída incluem um evento de exceção, que é a ação específica que pode fazer com que os usuários saiam do Canva.
 
-![Os critérios de saída configurados para reengajar os usuários que navegaram pelos produtos, mas ainda não os adicionaram ao carrinho ou fizeram um pedido.][1]{: style="max-width:90%;"}
+![Os critérios de saída configurados para reengajar os usuários que navegaram pelos produtos, mas ainda não os adicionaram ao carrinho ou fizeram um pedido.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### Seleção de eventos de exceção {#exception-events}
 
@@ -66,8 +66,6 @@ Digamos que queremos direcionar os usuários que ainda não fizeram nenhuma comp
 4. Para **Filtros**, selecione **Comportamento de compra** > **Número de compras** > **Produto comprado**.
 5. Defina o grupo de filtros como `backpack-example exactly 1`. Isso significa que os usuários que compraram nosso produto de mochila sairiam do Canva.
 
-![Configurações de critérios de saída com "Makes Any Purchase" como o evento de exceção, portanto, se um usuário fizer uma compra, ele sairá desse Canva.][2]{: style="max-width:80%;"}
+![Configurações de critérios de saída com "Makes Any Purchase" como o evento de exceção, portanto, se um usuário fizer qualquer compra, ele sairá dessa tela.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 
-[1]: {% image_buster /assets/img/exit_criteria.png %}
-[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}
