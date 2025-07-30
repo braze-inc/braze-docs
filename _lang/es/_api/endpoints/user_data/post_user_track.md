@@ -294,6 +294,10 @@ La herramienta de segmentación incluirá a estos usuarios independientemente de
 
 Cada objeto evento de la matriz de eventos representa una única ocurrencia de un evento personalizado por parte de un usuario en un momento determinado. Esto significa que cada evento ingestado en Braze tiene su propio ID de evento, por lo que los eventos "duplicados" se tratan como eventos separados y únicos.
 
+### ¿Cómo gestiona `/users/track` los atributos personalizados anidados no válidos?
+
+Cuando un atributo personalizado anidado contiene algún valor no válido (como formatos de hora no válidos o valores nulos), todas las actualizaciones de atributos personalizados anidados de la solicitud se eliminarán del procesamiento. Esto se aplica a todas las estructuras anidadas dentro de ese atributo específico. Para garantizar el éxito del proceso, comprueba que todos los valores de los atributos personalizados anidados son válidos antes de enviarlos.
+
 ## Usuarios activos al mes CY 24-25
 Para los clientes que hayan comprado Usuarios activos al mes - CY 24-25, Braze gestiona diferentes límites de velocidad en su punto final `/users/track`:
 - Los límites de velocidad por hora se establecen en función de la actividad prevista de ingesta de datos en tu cuenta, que puede corresponder al número de usuarios activos al mes que hayas comprado, al sector, a la estacionalidad o a otros factores.
