@@ -13,18 +13,14 @@ description: "Este artigo de referência aborda como abrir exportações de CSV 
 
 ## Definir o Excel como o programa padrão
 
-Embora os arquivos CSV geralmente sejam abertos automaticamente no Excel por padrão, nem sempre esse é caso. Consulte os artigos de solução de problemas [do Windows][20] e [da Apple][21] para obter as etapas para definir o Excel como seu programa padrão.
+Embora os arquivos CSV geralmente sejam abertos automaticamente no Excel por padrão, nem sempre esse é caso. Consulte os artigos de solução de problemas [do Windows](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495) e [da Apple](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac) para obter as etapas para definir o Excel como seu programa padrão.
 
 ## Conversão de CSV em XLSX ou XLS
 
-Para converter um CSV em XLSX ou XLS ou eliminar a vírgula entre os valores de dados, consulte [este guia][19] para importar CSVs para o Excel.
+Para converter um CSV em XLSX ou XLS ou eliminar a vírgula entre os valores de dados, consulte [este guia](https://www.ablebits.com/office-addins-blog/convert-csv-excel/#import-csv-wizard) para importar CSVs para o Excel.
 
 ## Zeros à esquerda retirados dos IDs de usuário
 
-Às vezes, é possível que os zeros à esquerda sejam removidos das IDs de usuário na exportação CSV. Isso acontece porque o Excel trata os números em um CSV como dados em vez de texto. Para resolver isso, execute o [Assistente de importação de texto do Excel][22].
+Às vezes, é possível que os zeros à esquerda sejam removidos das IDs de usuário na exportação CSV. Isso acontece porque o Excel trata os números em um CSV como dados em vez de texto. Para resolver isso, execute o [Assistente de importação de texto do Excel](https://www.ablebits.com/office-addins-blog/converting-csv-excel-issues/#leading-zeros).
 
 
-[19]: https://www.ablebits.com/office-addins-blog/convert-csv-excel/#import-csv-wizard
-[20]: https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495
-[21]: https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac
-[22]: https://www.ablebits.com/office-addins-blog/converting-csv-excel-issues/#leading-zeros
