@@ -42,8 +42,7 @@ Para configurar tu campaña, realiza los siguientes pasos:
 ## Llamadas a la API
 
 Después de guardar tu campaña de API incluye lo siguiente en tu solicitud API: 
-- Los campos `campaign_id` generados con tu solicitud API según se haya indicado en los [puntos finales Enviar mensajes][2].
+- Los campos `campaign_id` generados con tu solicitud API según se haya indicado en los [puntos finales Enviar mensajes]({{site.baseurl}}/api/endpoints/messaging/#send-endpoints).
 - Un [objeto de mensaje]({{site.baseurl}}/api/objects_filters/#messaging-objects) para cada plataforma incluida en la campaña. En el objeto mensaje, proporciona el ID de variación del mensaje. Esto especificará que las estadísticas deben recopilarse y mostrarse bajo esa variante. Se admiten los siguientes objetos de mensaje: Android, tarjetas de contenido, correo electrónico, iOS, Kindle, SMS/MMS, notificación push web y webhook.
 
-[2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
 
