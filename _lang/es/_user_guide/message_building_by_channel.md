@@ -43,7 +43,7 @@ Puede utilizar Braze para crear campañas de mensajería accesibles en cada cana
 - [Fundamentos de la mensajería accesible](https://learning.braze.com/accessible-messaging-foundations): Aprende los principios fundamentales de accesibilidad que se aplican a las comunicaciones de marca en este curso de Braze Learning.
 - [Construir mensajes accesibles]({{site.baseurl}}/help/accessibility/): Aprende a añadir texto alternativo y a estructurar tu contenido para tecnologías de apoyo directamente desde Braze.
 
-{% multi_lang_include accesibilidad/feedback.md %}
+{% multi_lang_include accessibility/feedback.md %}
 
 ## Elegir un canal de mensajes
 
