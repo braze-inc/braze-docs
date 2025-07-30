@@ -15,7 +15,7 @@ Puede ver las transacciones de campaña de la API, solucionar problemas de mensa
 
 Para acceder al registro, ve a **Configuración** > **Registro de actividad de mensajes**.
 
-![Registro de actividad de mensajes][2]
+![Registro de actividad de mensajes]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 {% alert tip %}
 Además de este artículo, también recomendamos consultar nuestro curso Braze Learning sobre [herramientas de control de calidad y depuración](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), que trata sobre cómo utilizar el registro de actividad de mensajes para llevar a cabo su propia solución de problemas y depuración.
@@ -43,7 +43,7 @@ Estos mensajes pueden proceder de nuestro propio sistema, de sus aplicaciones o 
 
 Para determinar el significado de sus mensajes, preste atención a la redacción de cada mensaje y a las columnas que se corresponden con él, ya que puede ayudarle a solucionar problemas utilizando pistas contextuales. 
 
-Por ejemplo, si tiene una entrada de registro cuyo mensaje dice "empty-cart_app" y no está seguro de lo que significa, mire a la izquierda en la columna **Tipo**. Si ves "Error de mensaje anulado", puedes suponer con seguridad que el mensaje era lo que se escribió como [mensaje anulado][1] utilizando Liquid, y que el mensaje se anuló porque el destinatario del mensaje tenía un carrito vacío en tu aplicación.
+Por ejemplo, si tiene una entrada de registro cuyo mensaje dice "empty-cart_app" y no está seguro de lo que significa, mire a la izquierda en la columna **Tipo**. Si ves "Error de mensaje anulado", puedes suponer con seguridad que el mensaje era lo que se escribió como [mensaje anulado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) utilizando Liquid, y que el mensaje se anuló porque el destinatario del mensaje tenía un carrito vacío en tu aplicación.
 
 ### Mensajes comunes
 
@@ -55,7 +55,7 @@ Los siguientes mensajes se incluyen a modo de ejemplo y pueden no coincidir exac
 |---|---|---|
 | Rebote suave | La dirección de correo electrónico same@example.com arrojó un rebote blando. | La dirección de correo electrónico era válida y el mensaje llegó al servidor de correo del destinatario, pero fue rechazado por un problema "temporal". <br><br>Entre las razones más comunes del rebote blando se incluyen: {::nomarkdown} <ul> <li> El buzón estaba lleno (el usuario ha superado su cuota) </li> <li> El servidor no funcionaba </li> <li> El mensaje era demasiado grande para la bandeja de entrada del destinatario </li>  </ul> {:/} Si un correo electrónico arroja un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. |
 | Rebote duro | La cuenta de correo electrónico a la que ha intentado acceder no existe. Compruebe que la dirección de correo electrónico del destinatario no contenga erratas ni espacios innecesarios. | Tu mensaje nunca llegó a la bandeja de entrada de esta persona porque no había bandeja de entrada a la que llegar. Si quieres profundizar más, los mensajes de este tipo pueden tener a veces enlaces en la columna **Ver detalles** que te permitirán ver el perfil del destinatario.|
-| Bloquear | El mensaje spam es rechazado debido a la política anti-spam. | Tu mensaje ha sido clasificado como spam. Este error de correo se registra para un usuario si hemos recibido un evento del ESP indicando que el correo electrónico ha sido descartado. Puede que sólo sea para ese destinatario, pero si ves este mensaje a menudo, quizá quieras reevaluar tus hábitos de envío o el contenido de tu mensaje. Además, recuerda: ¿hiciste el [calentamiento de tu IP][8]? Si no, ponte en contacto con Braze para que te asesore sobre cómo ponerlo en marcha.|
+| Bloquear | El mensaje spam es rechazado debido a la política anti-spam. | Tu mensaje ha sido clasificado como spam. Este error de correo se registra para un usuario si hemos recibido un evento del ESP indicando que el correo electrónico ha sido descartado. Puede que sólo sea para ese destinatario, pero si ves este mensaje a menudo, quizá quieras reevaluar tus hábitos de envío o el contenido de tu mensaje. Además, haz memoria: [¿calentaste tu IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Si no, ponte en contacto con Braze para que te asesore sobre cómo ponerlo en marcha.|
 | Error de mensaje anulado | empty-cart_web | Si tiene una aplicación con un carrito o crea un envío con un mensaje de cancelación en el Líquido, puede personalizar qué mensaje se le devuelve si se cancela el envío. En este caso, el mensaje devuelto es empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -87,6 +87,3 @@ Aquí tienes un resumen de las condiciones que afectan al número de registros q
     - Errores de actividad en vivo
     - Errores de desencadenamiento del usuario malo
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
-[2]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[8]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/
