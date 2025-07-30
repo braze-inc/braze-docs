@@ -14,7 +14,7 @@ tool: Reports
 
 Encontrará el **Informe de eventos personalizados** en **Análisis**.
 
-![Eventos personalizados][14]
+![Eventos personalizados]({% image_buster /assets/img_archive/Export_events.png %})
 
 Puede exportar los siguientes CSV:
 
@@ -31,4 +31,3 @@ Puede exportar los siguientes CSV:
 Para obtener ayuda con las exportaciones CSV y API, consulta [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[14]: {% image_buster /assets/img_archive/Export_events.png %}
