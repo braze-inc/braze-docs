@@ -69,7 +69,7 @@ El escáner se ejecuta automáticamente en mensajes HTML personalizados y evalú
 
 ### Comprender las pruebas de accesibilidad automatizadas
 
-{% multi_lang_include accesibilidad/pruebas_automatizadas.md %}
+{% multi_lang_include accessibility/automated_testing.md %}
 
 
 
