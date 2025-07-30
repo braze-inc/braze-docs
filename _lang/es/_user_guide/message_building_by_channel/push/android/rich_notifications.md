@@ -37,13 +37,13 @@ Aunque Braze proporciona instrucciones sobre cómo configurar las notificaciones
 
 ### Paso 1: Crear una campaña push
 
-Sigue los pasos para [crear una campaña][3] para redactar una notificación push para Android. Utilizarás el mismo compositor para configurar notificaciones push que no contengan contenido enriquecido.
+Sigue los pasos para [crear una campaña]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) para redactar una notificación push para Android. Utilizarás el mismo compositor para configurar notificaciones push que no contengan contenido enriquecido.
 
 ### Paso 2: Añadir subtítulos
 
 Añade el **texto de resumen/título de imagen** que deseas mostrar antes de la imagen en la notificación.
 
-![La sección Imagen de notificación ampliada, donde puedes añadir una imagen o introducir una URL de imagen.][9]
+![La sección Ampliada de imágenes de notificación donde puedes añadir una imagen o introducir una URL de imagen.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Paso 3: Añadir medios
 
@@ -51,13 +51,9 @@ Añade tu imagen en el campo **Imagen de notificación expandida** del redactor 
 
 Para más detalles sobre las imágenes compatibles, consulta [Especificaciones de imagen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-![Un usuario recibe una notificación push para iOS con "Hola" como título y "¡Gracias por unirte a nuestro programa de fidelización!" como texto.][8]
+![Un usuario recibe una notificación push para iOS con "Hola" como título y "¡Gracias por unirte a nuestro programa de fidelización!" como texto.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Paso 4: Sigue creando tu campaña
 
-Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes continuar [programando tu campaña][6].
+Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes continuar [programando tu campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[8]: {% image_buster /assets/img_archive/android_rich_image.png %}
-[9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}
