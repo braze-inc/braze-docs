@@ -164,11 +164,9 @@ Ao segmentar usando o filtro **NÃO CORRESPONDE À REGEX**, você deve já ter u
 
 Os atributos de array são bons para armazenar listas relacionadas de informações sobre seus usuários. Por exemplo, armazenar os últimos 100 conteúdos que um usuário assistiu em um array permitiria a segmentação de interesses específicos.
 
-Por padrão, o comprimento máximo de um array para um atributo é definido como 25 e pode ser aumentado para 100 para um array individual. Por exemplo, se você estiver enviando uma atribuição como "Movies Watched" (Filmes assistidos) e ela estiver definida como 100, quando um usuário assistir ao 101º filme, o primeiro filme será removido da matriz e o filme mais recente será adicionado.
+Por padrão, o comprimento de uma matriz para um atributo é de até 500 itens. Por exemplo, se você estiver enviando uma atribuição como "Movies Watched" (Filmes assistidos) e ela estiver definida como 500, quando um usuário assistir ao 501º filme, o primeiro filme será removido da matriz e o filme mais recente será adicionado.
 
-Para aumentar esse máximo, entre em contato com seu gerente de sucesso do cliente. O administrador do seu dashboard pode então aumentar o comprimento máximo para arrays individuais para mais de 100 na guia **Custom Attributes** da página **Manage Settings**.
-
-Note que se você inserir quaisquer valores com espaços entre, antes ou depois das palavras, então a Braze também verificará os mesmos espaços.
+Observe que, se você inserir valores com espaços entre, antes ou depois das palavras, o Braze também verificará se há os mesmos espaços.
 
 {% alert note %}
 A opção para aumentar o comprimento máximo não estará disponível se o atributo estiver configurado para detectar automaticamente o tipo de dado; o tipo de dado deve ser configurado como array.
