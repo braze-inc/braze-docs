@@ -5,7 +5,7 @@ alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "Este artículo cubre las mejores prácticas para evitar que las condiciones de carrera afecten a sus campañas de mensajería."
-
+toc_headers: h2
 ---
 
 # Condiciones de la carrera
@@ -72,7 +72,7 @@ En lugar de utilizar varios puntos finales, puedes incluir los [atributos de usu
 
 Cuando estos objetos se incluyen con el desencadenante, los atributos se procesarán primero, antes de que se desencadene el mensaje, eliminando posibles condiciones de carrera. Ten en cuenta que las propiedades desencadenantes no actualizan el perfil de usuario, sino que sólo se utilizan en el contexto del mensaje.
 
-#### Utiliza el POST: Punto final de seguimiento de usuarios (masivo)
+#### Utiliza el POST: Punto final de seguimiento de usuarios (sincronización)
 
 Utiliza el [punto final`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) para registrar eventos personalizados y compras y actualizar los atributos del perfil de usuario de forma sincrónica. Utilizar este punto final para actualizar los perfiles de usuario al mismo tiempo y en una sola llamada puede ayudar a evitar posibles condiciones de carrera.
 
@@ -118,7 +118,3 @@ En este caso, puedes implementar un desencadenante de retraso en una campaña o 
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
