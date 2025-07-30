@@ -17,4 +17,4 @@ Antes de testar mensagens de Banner no Braze, você precisará criar uma [campan
 
 ## Testando um Banner
 
-{% multi_lang_include banners/testing.md página="testando" %}
+{% multi_lang_include banners/testing.md page="testing" %}
