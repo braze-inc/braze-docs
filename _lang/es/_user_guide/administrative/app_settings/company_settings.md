@@ -31,4 +31,3 @@ Cualquier modificación realizada en la sección **Configuración del administra
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/
