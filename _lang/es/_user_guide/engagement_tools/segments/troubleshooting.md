@@ -1,7 +1,7 @@
 ---
 nav_title: Solución de problemas
 article_title: Segmentos de resolución de problemas
-page_order: 10
+page_order: 12
 page_type: reference
 tool: 
   - Segments
