@@ -123,7 +123,7 @@ Elige una hora alternativa para utilizar si el perfil de un usuario no tiene suf
 
 ![Programar una campaña con Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
-{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campaña" %}
+{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campaign" %}
 
 ### Paso 5: Vista previa de los plazos de entrega
 
