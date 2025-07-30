@@ -48,5 +48,5 @@ guide_menu_list:
   image: /assets/img/braze_icons/snowflake-01.svg
 ---
 
-{% multi_lang_include arrastar_e_soltar_acesso.md nome_variavel='editores_dnd' %}
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
 
