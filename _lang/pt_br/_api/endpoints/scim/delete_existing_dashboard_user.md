@@ -27,7 +27,7 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='excluir usuário do dashboard' %}
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
 ## Parâmetros da jornada
 
