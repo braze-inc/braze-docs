@@ -29,7 +29,7 @@ Tras la configuración, se le pedirá que proporcione una URL de inicio de sesi�
 2. Vaya a **Aplicaciones** > **Añadir aplicaciones** en la barra de navegación superior. Busque "Braze" y seleccione la aplicación Braze.![Resultados de la búsqueda de Braze en OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Guarda la aplicación Braze en tu empresa.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. Una vez guardado, vaya a **Configuración** y añada su **dominio Braze** y su clave API **RelayState**.![Pestaña de configuración de OneLogin para la aplicación Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze espera las aserciones SAML en un [formato específico][1]. En **Parámetros**, los atributos soportados por Braze deberían estar precargados. Compruebe que son correctos.![Parámetros SAML de Braze en OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+5. Braze espera las aserciones SAML en un [formato específico]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). En **Parámetros**, los atributos soportados por Braze deberían estar precargados. Compruebe que son correctos.![Parámetros SAML de Braze en OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
 6. Copia el **certificado** y el **punto final SAML 2.0 (HTTP)** necesarios para configurar el panel de Braze desde la pestaña **SSO**.![Certificados para copiar desde la pestaña SSO de la aplicación Braze en OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Paso 2: Configurar OneLogin en Braze
@@ -47,10 +47,9 @@ En esta página, introduzca lo siguiente:
 | `Certificate` | El certificado codificado PEM `x.509` lo proporciona tu OneLogin. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Abrir la configuración de seguridad en Braze y añadir detalles de SAML SSO.]({% image_buster /assets/img/samlsso.gif %})
+![Configuración de SAML SSO con el alternador seleccionado.]({% image_buster /assets/img/samlsso.png %})
 
 {% alert tip %}
 Si desea que los usuarios de su cuenta Braze sólo inicien sesión con SAML SSO, puede [restringir la autenticación de inicio de sesión único]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) desde la página **Configuración de la empresa**.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider
