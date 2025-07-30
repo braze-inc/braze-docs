@@ -25,7 +25,7 @@ Para ayudarte a empezar, hemos creado plantillas SQL básicas para una segmentac
 
 Supongamos que quieres segmentar a los usuarios que son empleados de una cuenta de empresa objetivo. 
 
-1. Ve a **Audiencia** > **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con una plantilla** y selecciona la plantilla **Segmento de catálogo para eventos**. <br><br> ![Modalidad "Selecciona una plantilla" con opciones de segmento de catálogo para eventos o compras.][1]<br><br>El editor SQL se rellena automáticamente con una plantilla que une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que interactúan con determinados elementos del catálogo. <br><br>![Un editor SQL para una nueva extensión con una pestaña "Variables" abierta.][2]<br><br>
+1. Ve a **Audiencia** > **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con una plantilla** y selecciona la plantilla **Segmento de catálogo para eventos**. <br><br> !["Selecciona una plantilla" modal con opciones de segmento de catálogo para eventos o compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>El editor SQL se rellena automáticamente con una plantilla que une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que interactúan con determinados elementos del catálogo. <br><br>![Un editor SQL para una nueva extensión con una pestaña "Variables" abierta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Utilice la pestaña **Variables** para proporcionar los campos necesarios para su plantilla antes de generar su segmento.<br><br>Para que Braze identifique a los usuarios en función de su compromiso con los artículos del catálogo, debe hacer lo siguiente:
 - Selecciona un catálogo que contenga un campo de catálogo
 - Selecciona un evento personalizado que contenga una propiedad de evento
@@ -114,5 +114,3 @@ Para obtener información básica sobre cómo utilizar fuentes conectadas en la 
 
 Después de haber creado tu segmentación a nivel de cuenta en los pasos anteriores, puedes incorporar directamente esas extensiones de segmento a tus criterios de segmentación. También es fácil añadir criterios demográficos incrementales de los usuarios, como la función, la interacción con campañas anteriores, etc. Para más información, consulta [Utilizar tu extensión en un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment).
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}
