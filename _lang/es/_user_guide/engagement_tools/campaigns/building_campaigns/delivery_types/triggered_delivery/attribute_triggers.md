@@ -22,7 +22,7 @@ Los activadores de atributos están disponibles para los siguientes escenarios:
 
 Para empezar a utilizar los activadores de atributos, cree una campaña o un componente Canvas y seleccione **Entrega basada en acciones** como método de entrega. A continuación, selecciona el desencadenante de atributos que quieras utilizar.
 
-![][1]
+![]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Actualizar el estado de la suscripción
 
@@ -66,7 +66,7 @@ Considere el siguiente ejemplo de uso con una notificación de actualización de
 Los activadores de atributos no están disponibles actualmente para los atributos de matriz.
 {% endalert %}
 
-![Cualquier nuevo valor][2]
+![Cualquier valor nuevo]({% image_buster /assets/img_archive/any_value.png %})
 
 También puede utilizar Liquid para personalizar el cuerpo del mensaje con el nuevo nivel de fidelización del cliente y proporcionarle más información sobre el cambio.
 
@@ -82,7 +82,7 @@ Utilice el disparador `Change Custom Attribute Value` con la opción `specific v
 
 Por ejemplo, diríjase a los usuarios cuando su nivel de fidelidad cambie al mejor nivel. Para este ejemplo, digamos que el mejor nivel de fidelidad es Super VIP. Puede configurar una campaña para que se active cuando el atributo personalizado de nivel de fidelización de un usuario cambie a `Super VIP`, de forma que pueda felicitar al usuario por convertirse en Super VIP.
 
-![][4]
+![]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Los activadores de atributos para valores de atributos personalizados específicos no están disponibles para atributos personalizados de matriz y fecha.
@@ -91,6 +91,3 @@ Por ejemplo, diríjase a los usuarios cuando su nivel de fidelidad cambie al mej
 - El activador de cambio de valores de atributos personalizados también se aplica a los nuevos usuarios creados.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}
