@@ -17,4 +17,4 @@ Antes de que puedas probar mensajes [de Banner]({{site.baseurl}}/user_guide/mess
 
 ## Probar un banner
 
-{% multi_lang_include banners/testing.md page="probando" %}
+{% multi_lang_include banners/testing.md page="testing" %}
