@@ -85,7 +85,7 @@ Você não precisa de extensões de segmento para usar propriedades de evento ou
 
 ### Etapa 4: Designar configurações de atualização (opcional)
 
-{% multi_lang_include segments.md seção='Atualizar configurações' %}
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ### Etapa 5: Salve sua extensão de segmento
 
