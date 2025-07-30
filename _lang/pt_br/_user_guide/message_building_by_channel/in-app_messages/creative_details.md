@@ -1,7 +1,7 @@
 ---
 nav_title: Detalhes criativos
 article_title: Detalhes criativos
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "Detalhes criativos"
 guide_top_text: "Antes de ser criativo com nossas mensagens no app, você deve conhecer algumas das diretrizes. Todos os modelos de mensagens no app foram projetados para exibir textos de diferentes comprimentos e tamanhos de imagens em dispositivos modernos. Para garantir que sua mensagem seja bem exibida em todos os telefones, tablets e computadores, recomendamos que você siga estas diretrizes e sempre <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>teste suas mensagens</a> antes de lançá-las."
