@@ -22,8 +22,8 @@ Para configurar seu relatório do dashboard de conversões:
 3. Selecione as campanhas ou as Canvas (ou ambas) a serem analisadas. 
    - (opcional) Filtre campanhas e telas selecionando uma tag.  
 4. Selecione o(s) **canal(is)** a ser(em) analisado(s) para suas mensagens.
-5. (opcional) Selecione uma camada de **detalhamento** para visualizar diferentes dimensões de dados, como por variante, etapa do canva, país ou idioma.
-6. (opcional) Se você quiser calcular as conversões de um evento que não foi configurado como um evento de conversão na campanha ou no Canva, ative [Usar eventos personalizados](#using-custom-events).
+5. Selecione uma **divisão por** camada para visualizar diferentes dimensões de dados, como por variante, etapa do canva, país ou idioma.
+6. (Opcional) Se você quiser calcular as conversões de um evento que não foi configurado como um evento de conversão na campanha ou no Canva, ative [Usar eventos personalizados](#using-custom-events).
 7. Selecione um [método de atribuição](#attribution-methods) para analisar as mensagens selecionadas.
 
 {% alert note %}
@@ -59,7 +59,11 @@ Seu relatório é dividido em três seções:
 
 ### Detalhes da conversão
 
-A tabela de detalhes da conversão sempre mostra uma coluna para *Destinatários* e outra para *Conversões* (taxa e total). As duas colunas restantes da tabela que aparecem dependem das opções que você selecionou ao configurar o relatório. A tabela a seguir descreve as métricas possíveis.
+A tabela de detalhes da conversão sempre mostra uma coluna para *Destinatários* e outra para *Conversões* (taxa e total). As duas colunas restantes da tabela que aparecem dependem das opções que você selecionou ao configurar o relatório. 
+
+![Tabela de detalhes da conversão mostrando o Touches como método de atribuição para as colunas três e quatro.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+
+A tabela a seguir descreve as métricas possíveis.
 
 | Métrica mostrada | Descrição |
 | --- | --- |
@@ -68,8 +72,6 @@ A tabela de detalhes da conversão sempre mostra uma coluna para *Destinatários
 | Método de atribuição | Definido pelo [método de atribuição](#attribution-methods) que você selecionou ao configurar o relatório. Para atribuição do Último ponto de contato ou se vários canais forem selecionados, isso aparecerá como [Toques](#terms-to-know). |
 | Taxa de conversão (método de atribuição) | Definido pelo [método de atribuição](#attribution-methods) que você selecionou ao configurar o relatório. Se vários canais forem selecionados, o padrão será a atribuição do último ponto de contato. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 Se você selecionou detalhes em nível de detalhamento para campanhas ou Canvas ao [configurar seu relatório](#setting-up-your-report) (etapa 5), poderá clicar em <i class="fas fa-angle-down"></i> para expandir a tabela.
 
@@ -85,7 +87,7 @@ Para baixar os dados da série temporal, selecione uma opção de download: PNG,
 Esse gráfico mostra apenas os dados de um único canal de cada vez. Use o menu suspenso **Canal** no gráfico para selecionar um único canal.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
+![Gráfico de barras do funil de conversões para duas campanhas de e-mail mostrando resultados semelhantes para e-mails entregues, e-mails abertos, e-mails clicados e conversões.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Conversões ao longo do tempo
 
@@ -93,7 +95,7 @@ Esse gráfico de série temporal inclui uma representação das conversões por 
 
 Para baixar os dados da série temporal, selecione <i class="fas fa-bars"></i> e, em seguida, selecione a opção de download. As opções disponíveis são PNG, JPEG, PDF, SVG ou CSV.
 
-![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+![Gráfico de série temporal de conversões ao longo do tempo para duas campanhas de e-mail, mostrando as conversões por dia.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Métodos de atribuição
 
