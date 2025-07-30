@@ -14,27 +14,33 @@ description: "Este artículo de referencia trata sobre las etiquetas en el panel
 
 Puede añadir etiquetas al crear o editar una campaña, un lienzo o un segmento. Haga clic en <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Etiquetas** bajo el nombre del compromiso y seleccione una etiqueta existente, o empiece a escribir para añadir una nueva etiqueta.
 
-![Añadir etiquetas durante la creación de la campaña][2]
-
-También puede añadir etiquetas a varias campañas, lienzos o segmentos seleccionando varias interacciones y haciendo clic en <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Etiquetar como**.
-
-![Añadir etiquetas a varias campañas al mismo tiempo][5]
-
-Las etiquetas establecidas en una campaña, lienzo o segmento son visibles en la página de detalles, cerca del nombre del compromiso.
-
-![Etiquetas mostradas en la página de detalles de la campaña][3]
-
-También son visibles en la lista de campañas, Lienzos o segmentos, junto con etiquetas de estado adicionales como **Archivado** y **Borrador**.
-
-![Etiquetas de la lista de campañas][4]{: style ="max-width:70%;" }
-
-Para filtrar por una etiqueta, seleccione el nombre de la etiqueta en la lista de etiquetas o búsquela en el panel de búsqueda mediante el selector `tag:`. Por ejemplo, para buscar la etiqueta `Onboarding`, introduce "tag:Onboarding".
-
-![Buscar todas las campañas etiquetadas como Correo de bienvenida][6]
+![Añadir etiquetas durante la creación de la campaña.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 Puedes añadir hasta 175 etiquetas a una campaña, Canvas o segmento.
 {% endalert %}
+
+### Etiquetado masivo
+
+También puedes añadir etiquetas a varias campañas, lienzos o segmentos seleccionando varias interacciones y seleccionando <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Etiquetar como**.
+
+![Añadir etiquetas a varias campañas al mismo tiempo.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+
+{% alert important %}
+Cuando utilices el etiquetado masivo para aplicar una nueva etiqueta a varias campañas que ya tengan etiquetas diferentes, cada campaña seleccionada recibirá la nueva etiqueta, y cualquier etiqueta presente en una campaña se aplicará a todas las demás campañas seleccionadas, aunque esas etiquetas no estuvieran asociadas originalmente a ellas.
+{% endalert %}
+
+### Ver etiquetas
+
+Las etiquetas configuradas en una campaña, Canvas o segmento son visibles en la página de detalles, cerca del nombre de la interacción. También aparecen en los análisis de campaña.
+
+![Etiquetas mostradas en la página de análisis de la campaña.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+
+### Filtrar por etiqueta
+
+Las etiquetas son visibles en la lista de campañas, Lienzos o segmentos, junto con etiquetas adicionales para estados como **Archivado** y **Borrador**. Para filtrar por una etiqueta, selecciona el nombre de la etiqueta en la lista de etiquetas.
+
+![Etiquetas en la lista de campañas.]({% image_buster /assets/img_archive/tags_grid.png %})
 
 ## Etiquetas de datos personalizadas
 
@@ -43,6 +49,18 @@ También se pueden añadir etiquetas a los datos personalizados cuando se gestio
 {% alert important %}
 Esta función se encuentra actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.
 {% endalert %}
+
+## Administrador de etiquetas
+
+Puede utilizar las mismas etiquetas en todas las campañas, Canvases y segmentos. Para renombrar, eliminar o añadir etiquetas de forma eficaz en tu panel de control, ve a **Configuración** > **Gestión de etiquetas**.
+
+![Pestaña Etiquetas de la página Administrar configuración.]({% image_buster /assets/img_archive/tags_view.png %})
+
+Para organizar mejor tus etiquetas, anídalas bajo una etiqueta padre. Por ejemplo, puede mantener todas las etiquetas de vacaciones anidadas bajo una etiqueta padre `Holidays`, o todas las etiquetas relacionadas con una etapa de su embudo de marketing bajo una etiqueta padre `Funnel`. 
+
+Para ello, cree una nueva etiqueta, seleccione **Anidar etiqueta bajo** y elija la etiqueta existente bajo la que desea anidar la nueva etiqueta. También puede anidar las etiquetas existentes desde la página **Gestión de etiquetas**. En esta página, pase el ratón por encima de una fila con su etiqueta y haga clic en **<i class="fas fa-pencil-alt"></i>Editar**. A continuación, siga los mismos pasos que antes.
+
+![Crea una etiqueta anidada.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## Buenas prácticas {#tags-best-practices}
 
@@ -80,16 +98,6 @@ table td {
 </tbody>
 </table>
 
-Puede utilizar las mismas etiquetas en todas las campañas, Canvases y segmentos. Para renombrar, eliminar o añadir etiquetas de forma eficaz en tu panel de control, ve a **Configuración** > **Gestión de etiquetas**.
-
-![Pestaña Etiquetas de la página Administrar configuración][8]
-
-Para organizar mejor tus etiquetas, anídalas bajo una etiqueta padre. Por ejemplo, puede mantener todas las etiquetas de vacaciones anidadas bajo una etiqueta padre `Holidays`, o todas las etiquetas relacionadas con una etapa de su embudo de marketing bajo una etiqueta padre `Funnel`. 
-
-Para ello, cree una nueva etiqueta, seleccione **Anidar etiqueta bajo** y elija la etiqueta existente bajo la que desea anidar la nueva etiqueta. También puede anidar las etiquetas existentes desde la página **Gestión de etiquetas**. En esta página, pase el ratón por encima de una fila con su etiqueta y haga clic en **<i class="fas fa-pencil-alt"></i>Editar**. A continuación, siga los mismos pasos que antes.
-
-![Crear una etiqueta anidada][1]{: style ="max-width:70%;" }
-
 ## Ejemplos
 
 ¿Buscas inspiración sobre cómo aprovechar las etiquetas para gestionar el ciclo de vida de tus mensajes? He aquí algunos casos de uso habituales:
@@ -105,14 +113,3 @@ Limite la frecuencia con la que sus clientes reciben campañas de un determinado
 ### Informe
 
 Configure un informe de participación para controlar el volumen de todas las campañas con una etiqueta determinada. Por ejemplo, si quieres controlar todas tus campañas push, puedes añadir una etiqueta como `Push Reporting` a esas campañas, y luego configurar un [Informe de participación]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) para que te envíe un informe de esas campañas etiquetadas cada día.
-
-
-
-[1]: {% image_buster /assets/img_archive/tag_nested.png %}
-[2]: {% image_buster /assets/img_archive/tags_add_tag.png %}
-[3]: {% image_buster /assets/img_archive/tag_details_page.png %}
-[4]: {% image_buster /assets/img_archive/tags_grid.png %}
-[5]: {% image_buster /assets/img_archive/tags_apply_multiple.png %}
-[6]: {% image_buster /assets/img_archive/tags_filtering.png %}
-[7]: {% image_buster /assets/img_archive/Tags-Potential_Tags.png %}
-[8]: {% image_buster /assets/img_archive/tags_view.png %}
