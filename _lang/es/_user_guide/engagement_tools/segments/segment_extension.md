@@ -85,7 +85,7 @@ No necesitas extensiones de segmento para utilizar propiedades de eventos o atri
 
 ### Paso 4: Designar configuración de actualización (opcional)
 
-{% multi_lang_include segments.md section='Actualizar configuración' %}
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ### Paso 5: Guarda tu extensión de segmento
 
