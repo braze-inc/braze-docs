@@ -21,7 +21,7 @@ Dashboard Builder te permite componer y visualizar paneles de análisis personal
 2. Selecciona **Crear panel**.
 3. Selecciona qué origen de datos alimentará tus informes:
 - **Informes** creados con el Generador de informes
-- **Consultas personalizadas** creadas en el Generador de consultas<br><br>![Ventana para seleccionar el origen de datos de tu panel.][4]<br><br>
+- **Consultas personalizadas** creadas en el Generador de consultas<br><br>![Ventana para seleccionar el origen de datos para tu panel.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Ahora, sigue los pasos correspondientes a tu origen de datos:
 
@@ -88,7 +88,7 @@ Braze proporciona plantillas de paneles preconstruidas para casos de uso frecuen
 
 La plantilla **Ingresos - Atribución al último toque** proporciona una revisión de los ingresos en todas las campañas, lienzos y canales. Todos los datos de ingresos se atribuyen al último mensaje tocado durante la ventana de atribución.
 
-Los toques incluyen _clic de correo electrónico_, _clic de tarjeta de contenido_, _clic de mensaje dentro de la aplicación_, _entrega de SMS_, _lectura de WhatsApp_ y _envío de webhook_.
+Los toques incluyen _clic de correo electrónico_, _clic de tarjeta de contenido_, _clic de mensaje dentro de la aplicación_, _clic de enlace corto de SMS_, _lectura de WhatsApp_ y _envío de webhook_.
 
 | Métricas | Definición |
 | --- | --- |
@@ -121,7 +121,3 @@ Los toques incluyen _clic de correo electrónico_, _clic de tarjeta de contenido
 
 Selecciona el botón **Enviar opinión** o ponte en contacto con tu administrador del éxito del cliente para compartir tu opinión con nosotros.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}
-[4]: {% image_buster /assets/img/select_data_source.png %}
