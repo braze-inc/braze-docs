@@ -26,7 +26,7 @@ A nova opção Modo escuro, localizada na guia Estilo ao [criar uma mensagem no 
 
 ![Envio de mensagens pelo usuário entre os estilos Modo Claro e Modo Escuro na guia Estilo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-Quando essa opção está ativada, você pode escolher cores de tema escuro para sua mensagem no app usando o seletor de cores ou selecionando [Perfis de cores][2] existentes para reutilizar os temas Escuro ou Claro existentes.
+Quando essa opção está ativada, você pode escolher cores de tema escuro para sua mensagem no app usando o seletor de cores ou selecionando [Perfis de cores]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) existentes para reutilizar os temas Escuro ou Claro existentes.
 
 {% alert note %}
 Você ainda pode usar esse recurso mesmo que seu app não ofereça seu próprio tema escuro. No entanto, os dispositivos que não suportam o modo escuro exibirão o tema claro por padrão. A alteração do tema do dispositivo no Android enquanto uma mensagem no app estiver sendo exibida não alterará o tema usado para essa mensagem no app.
@@ -36,7 +36,7 @@ Você ainda pode usar esse recurso mesmo que seu app não ofereça seu próprio 
 
 Para usar o modo escuro em todas as mensagens no app, acesse **Modelos** > **Modelos de mensagens no app**.
 
-A partir daí, selecione [Create Color Profile (Criar perfil de cores][2] ) no menu suspenso. Crie um perfil de cores que se alinhe ao tema do modo escuro. Então, sempre que criar uma versão em modo escuro de uma mensagem no app, você poderá selecionar esse perfil de cor e manter a aparência das mensagens no app consistente.
+A partir daí, selecione [Create Color Profile (Criar perfil de cores]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) ) no menu suspenso. Crie um perfil de cores que se alinhe ao tema do modo escuro. Então, sempre que criar uma versão em modo escuro de uma mensagem no app, você poderá selecionar esse perfil de cor e manter a aparência das mensagens no app consistente.
 
 ## Compatibilidade
 
@@ -69,4 +69,3 @@ Por exemplo:
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
