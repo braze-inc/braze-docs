@@ -35,7 +35,7 @@ Se um usuário não tiver dados de engajamento suficientes para que o Braze calc
 Esta seção descreve como configurar o Intelligent Timing para suas campanhas e canvas.
 
 {% tabs local %}
-{% tab Campanha %}
+{% tab Campaign %}
 ### Etapa 1: Adicionar Intelligent Timing
 
 1. Crie uma campanha e componha sua mensagem.
@@ -123,7 +123,7 @@ Escolha um tempo de fallback para usar se o perfil de um usuário não tiver dad
 
 ![Agendamento de uma campanha com o Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
-{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campaign" (tipo="campanha") %}
+{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campaign" %}
 
 ### Etapa 5: Prévia dos horários de entrega
 
