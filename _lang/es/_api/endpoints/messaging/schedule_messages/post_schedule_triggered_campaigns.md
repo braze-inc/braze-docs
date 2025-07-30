@@ -28,7 +28,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='default' category='puntos_de_mensaje' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Cuerpo de la solicitud
 
