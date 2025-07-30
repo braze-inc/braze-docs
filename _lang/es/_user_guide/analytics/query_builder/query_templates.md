@@ -1,7 +1,7 @@
 ---
 nav_title: Plantillas de consulta
 article_title: Plantillas del Generador de consultas
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "Este artículo de referencia enumera los tipos de informes que puede crear utilizando datos Braze de Snowflake en el Generador de consultas."

@@ -26,11 +26,11 @@ Las alertas de campaña están disponibles para las siguientes campañas:
 
 Vaya a la página de análisis de su campaña para empezar a configurar su alerta. Cuando seleccione **Configurar alerta**, podrá especificar los umbrales de alerta superior e inferior, así como los destinatarios y canales de la alerta.
 
-![Cuadro de diálogo Seguimiento de campaña con dos botones: Cancelar y Guardar.][2]
+![Cuadro de diálogo Seguimiento de campaña con dos botones: Cancelar y Guardar.]({% image_buster /assets/img_archive/campaign_alerts.png %})
 
 Para una campaña recurrente programada, puede establecer umbrales superiores e inferiores para los mensajes enviados cada vez que se envíe la campaña. Para una campaña activada, puede establecer umbrales superiores e inferiores para el número de mensajes enviados cada hora y cada día.
 
-Puedes configurar una alerta por correo electrónico, una alerta por webhook o ambas. Las alertas webhook pueden ser muy útiles, ya que te permiten enviar una alerta a un canal de Slack. Para más información sobre la integración de las alertas de campaña con Slack, consulta nuestra [documentación][1].
+Puedes configurar una alerta por correo electrónico, una alerta por webhook o ambas. Las alertas webhook pueden ser muy útiles, ya que te permiten enviar una alerta a un canal de Slack. Para más información sobre la integración de las alertas de campaña con Slack, consulta nuestra [documentación]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration).
 
 {% alert note %}
 Al configurar alertas de campaña para futuras campañas, puede recibir actualizaciones antes de que comience la campaña y después de que finalice. Esto se debe a que las alertas de campaña continuarán enviándose hasta que la campaña se haya detenido manualmente.
@@ -48,5 +48,3 @@ A continuación se muestra un ejemplo de carga útil para el cuerpo de un webhoo
 "campaign_api_id":"fe787bc5-d13f-4123-b22f-3bd48f9fc407","upper_threshold":0,"lower_threshold":500,"value":4}}
 ```
 
-[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration
-[2]: {% image_buster /assets/img_archive/campaign_alerts.png %}

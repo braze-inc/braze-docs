@@ -23,7 +23,7 @@ Cuando se activan las Rutas Personalizadas en un paso de Ruta de Experimento, el
 
 Añada una [Ruta de Experimento]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) a su Lienzo y active **las Rutas Personalizadas**.
 
-![][1]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### Paso 2: Configurar los ajustes de las rutas personalizadas
 
@@ -31,7 +31,7 @@ Especifique el evento de conversión que debe determinar el ganador. Si no hay e
 
 A continuación, ajuste la **Ventana de Experimento**. La **Ventana de Experimento** determina cuánto tiempo se enviará a los usuarios por todos los caminos antes de elegir el mejor camino para cada usuario del grupo de retardo. La ventana comienza cuando el primer usuario entra en el paso.
 
-![][2]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### Paso 3: Determinar la alternativa
 
@@ -39,11 +39,11 @@ Por defecto, si los resultados de la prueba no son suficientes para determinar u
 
 Alternativamente, puedes seleccionar **Continuar enviando a todos los futuros usuarios la mezcla de rutas**.
 
-![][3]
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 Esta opción enviará a los futuros usuarios por la mezcla de rutas según los porcentajes especificados en la distribución de rutas del experimento.
 
-![][4]
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### Paso 4: Añade tus rutas y lanza el Canvas
 
@@ -145,9 +145,3 @@ No recomendamos utilizar la entrega en hora local en Lienzos con Caminos Persona
 
 Alternativamente, si desea utilizar la entrega local, utilice una ventana de experimentación de 24-48 horas o más. De este modo, los usuarios de zonas horarias tempranas entran en el lienzo y activan el experimento para que comience, pero queda tiempo suficiente en la ventana del experimento. Los usuarios de zonas horarias más tardías aún tendrán tiempo suficiente para entrar en el Lienzo y en el Paso del Experimento con Rutas Personalizadas y posiblemente convertir antes de que expire la ventana del experimento.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_personalized_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}

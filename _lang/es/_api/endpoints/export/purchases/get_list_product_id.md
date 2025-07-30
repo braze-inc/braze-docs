@@ -24,7 +24,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='lista de productos de compras' %}
+{% multi_lang_include rate_limits.md endpoint='purchases product list' %}
 
 ## Parámetros de la solicitud
 

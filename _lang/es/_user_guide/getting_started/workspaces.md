@@ -77,15 +77,15 @@ Debe crear instancias de aplicación distintas para cada versión de su aplicaci
 
 #### Equipos
 
-[Los equipos][1] pueden configurarse en función de la ubicación de la base de clientes, el idioma y los atributos personalizados, de modo que los miembros del equipo y los que no lo son tengan diferente acceso a las funciones de mensajería y a los datos de los clientes.
+[Los equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) pueden configurarse en función de la ubicación de la base de clientes, el idioma y los atributos personalizados, de modo que los miembros del equipo y los que no lo son tengan diferente acceso a las funciones de mensajería y a los datos de los clientes.
 
 #### Permisos de usuario Braze
 
-Los espacios de trabajo tienen definiciones independientes de acceso y permiso de usuario. [Los permisos de usuario][2] le permiten crear controles granulares sobre a qué tiene acceso un usuario individual del cuadro de mandos o un equipo dentro de un mismo espacio de trabajo.
+Los espacios de trabajo tienen definiciones independientes de acceso y permiso de usuario. [Los permisos de usuario]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) le permiten crear controles granulares sobre a qué tiene acceso un usuario individual del cuadro de mandos o un equipo dentro de un mismo espacio de trabajo.
 
 #### Conectores de corriente
 
-La herramienta [Currents][3] es un flujo de datos en tiempo real de sus eventos de participación que es la exportación más sólida y granular de la plataforma Braze. Los conectores Currents se incluyen con determinados paquetes Braze, y es posible que haya recibido uno inicialmente, suponiendo un único espacio de trabajo.
+La herramienta [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) es un flujo de datos en tiempo real de sus eventos de participación que es la exportación más sólida y granular de la plataforma Braze. Los conectores Currents se incluyen con determinados paquetes Braze, y es posible que haya recibido uno inicialmente, suponiendo un único espacio de trabajo.
 
 A la hora de decidir entre crear espacios de trabajo separados o combinados, es importante pensar en el número de conectores Currents que tiene, ya que los conectores Currents no se comparten entre espacios de trabajo. 
 
@@ -93,7 +93,7 @@ Por ejemplo, si tiene espacios de trabajo separados para los entornos de desarro
 
 #### Perfiles de usuario
 
-Todos los datos persistentes asociados a un usuario se almacenan en su [perfil de usuario][4]. Sin embargo, los perfiles de usuario también son un gran recurso para solucionar problemas y realizar pruebas, ya que se puede acceder fácilmente a información sobre el historial de participación de un usuario, su pertenencia a un segmento, su dispositivo y su sistema operativo.
+Todos los datos persistentes asociados a un usuario se almacenan en su [perfil de usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Sin embargo, los perfiles de usuario también son un gran recurso para solucionar problemas y realizar pruebas, ya que se puede acceder fácilmente a información sobre el historial de participación de un usuario, su pertenencia a un segmento, su dispositivo y su sistema operativo.
 
 #### Segmentos, campañas y lienzos
 
@@ -205,7 +205,7 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>Duplicación de contenidos</td>
         <td>N/A</td>
         <td>No se pueden duplicar segmentos, campañas push o de tarjeta de contenido, ni lienzos entre espacios de trabajo.</td>
-        <td>Puedes [duplicar campañas entre espacios de trabajo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
+        <td>Puedes [duplicar campañas entre espacios de trabajo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,10 +240,5 @@ Debe tener más de un usuario Braze con permisos de administrador para un mismo 
 
 ## Próximos pasos
 
-Una vez que hayas determinado tu plan de espacio de trabajo, es hora de crear tu espacio de trabajo y añadir instancias de aplicaciones. Para conocer los pasos, consulta [Crear y gestionar espacios de trabajo][5].
+Una vez que hayas determinado tu plan de espacio de trabajo, es hora de crear tu espacio de trabajo y añadir instancias de aplicaciones. Para conocer los pasos, consulta [Crear y gestionar espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/workspaces/

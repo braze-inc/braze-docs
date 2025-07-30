@@ -43,4 +43,3 @@ Si utilizas la API para llamadas de servidor a servidor, puede que tengas que pe
 
 Las respuestas del punto final de programación de mensajes incluirán la dirección `dispatch_id` del mensaje como referencia para el envío del mensaje. El `dispatch_id` es el ID del envío del mensaje (ID único para cada "transmisión" enviada desde Braze).
 
-[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/

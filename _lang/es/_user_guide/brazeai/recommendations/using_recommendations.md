@@ -57,7 +57,7 @@ Una vez asignados los datos de recomendación, puedes hacer referencia a element
 
 {% endraw %}
 
-Para incluir varios artículos, haz referencia a cada artículo individualmente por su índice. `.name` y `.price` extraen el campo correspondiente del catálogo. 
+Para incluir varios elementos, haz referencia a cada uno de ellos individualmente por su índice. `.name` y `.price` extraen el campo correspondiente del catálogo. 
 
 {% raw %}
 

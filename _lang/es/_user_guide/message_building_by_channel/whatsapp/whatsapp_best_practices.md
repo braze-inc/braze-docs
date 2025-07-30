@@ -18,7 +18,7 @@ WhatsApp basa su [calificación de calidad telefónica](https://www.facebook.com
 
 La primera vez que envíe un mensaje a un usuario en WhatsApp, estas opciones aparecerán en el hilo del mensaje.
 
-![Hilo de mensajes de WhatsApp con opciones para bloquear o denunciar a una empresa][1]{: style="max-width:30%;"}
+![Hilo de mensajes de WhatsApp con opciones para bloquear o denunciar un negocio]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 Para obtener métricas sobre tus bloqueos e informes, asegúrate de que la [pestaña Insights](https://www.facebook.com/business/help/683499390267496) está activada en tu WhatsApp Manager.
@@ -46,7 +46,5 @@ Las cancelaciones no afectan a tu valoración de la calidad telefónica, por lo 
 
 Una buena práctica sugerida es proporcionar instrucciones sobre cancelaciones en el pie de página del primer mensaje que envíes a los usuarios. Por ejemplo, puede indicar que los usuarios pueden darse de baja de su canal de WhatsApp respondiendo con su palabra desencadenante de baja. También puede incluir regularmente el pie de página de exclusión en futuras campañas. Para saber cómo configurarlo, consulte [Opt-in y opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
  
-![Mensaje de WhatsApp con un pie de página indicando que hay que responder STOP para darse de baja del canal][2]{: style="max-width:35%;"}
+![Mensaje de WhatsApp con un pie de página indicando que respondas STOP para cancelar suscripción al canal]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}

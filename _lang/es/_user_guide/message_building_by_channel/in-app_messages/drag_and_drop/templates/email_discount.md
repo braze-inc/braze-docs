@@ -18,7 +18,7 @@ description: "Esta página de referencia explica cómo utilizar el editor de arr
 
 Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro por correo electrónico con descuento de bienvenida** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
-![El editor de mensajes dentro de la aplicación con la plantilla de un formulario de registro por correo electrónico con descuento.][img1]
+![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de registro por correo electrónico con descuento.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
 ### Paso 2: Configura tus estilos de mensaje
 
@@ -30,7 +30,7 @@ Para empezar a crear su formulario de suscripción por correo electrónico, sele
 
 Puede personalizar el texto del marcador de posición y el texto de la etiqueta del elemento de captura de correo electrónico.
 
-![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.][img2]
+![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
 
 #### Validación del correo electrónico
 
@@ -42,7 +42,7 @@ Puede personalizar el texto del marcador de posición y el texto de la etiqueta 
 
 ### Paso 5: Estiliza tu mensaje
 
-Personaliza el aspecto de tu formulario de registro y descuento utilizando los [componentes de arrastrar y soltar de mensajes dentro de la aplicación][3].
+Personaliza el aspecto de tu formulario de registro y descuento utilizando los [componentes de arrastrar y soltar de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analizar los resultados
 
@@ -53,7 +53,4 @@ Personaliza el aspecto de tu formulario de registro y descuento utilizando los [
 {% multi_lang_include drag_and_drop/templates.md section='correo electrónico doble adhesión voluntaria' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

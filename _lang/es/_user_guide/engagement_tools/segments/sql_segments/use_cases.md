@@ -67,7 +67,7 @@ HAVING COUNT(DISTINCT id) > 3
 Evento, intervalo de tiempo
 {% endapitags %}
 
-Seleccione los usuarios que hayan realizado una compra en cada uno de los cuatro últimos trimestres. Este segmento de usuarios puede utilizarse con [la sincronización de audiencias]({{site.baseurl}}/partners/canvas_steps) para identificar clientes similares de alto valor para la adquisición.
+Seleccione los usuarios que hayan realizado una compra en cada uno de los cuatro últimos trimestres. Este segmento de usuarios puede utilizarse con [la sincronización de audiencias]({{site.baseurl}}/partners/canvas_audience_sync/) para identificar clientes similares de alto valor para la adquisición.
 
 ```sql
 ELECT DISTINCT user_id

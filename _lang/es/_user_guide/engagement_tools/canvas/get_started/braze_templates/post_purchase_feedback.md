@@ -18,13 +18,13 @@ Este artículo te guiará a través de un caso de uso de la plantilla **Comentar
 Para utilizar correctamente esta plantilla, necesitarás lo siguiente:
 
 - Un [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) al que hacer referencia para los resultados del cuestionario de opinión.
-- Una [Sincronización de Audiencias Braze]({{site.baseurl}}/partners/canvas_steps) configurada con los socios y audiencias que utilices.
+- Una [Sincronización de Audiencias Braze]({{site.baseurl}}/partners/canvas_audience_sync/) configurada con los socios y audiencias que utilices.
 
 ## Adaptar la plantilla a tus necesidades
 
 Supongamos que trabajamos para Decorumsoft, un desarrollador de videojuegos para móviles. Utilizaremos la plantilla de comentarios posteriores a la compra para recabar opiniones sobre el lanzamiento de nuestro último videojuego, Proxy War 3: Guerra de sed. Con esta información, elaboraremos nuestros planes de desarrollo para la expansión Liquid Mirage.
 
-Antes de crear el Canvas, configuramos la integración de [Braze Audience Sync con Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/), de modo que podamos añadir datos de usuarios de Braze a Google Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
+Antes de crear el Canvas, configuramos la integración de [Braze Audience Sync con Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/), de modo que podamos añadir datos de usuarios de Braze a Google Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
 
 Para acceder a la plantilla de comentarios posteriores a la compra, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. A continuación, junto a **Comentarios posteriores a la compra**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
 

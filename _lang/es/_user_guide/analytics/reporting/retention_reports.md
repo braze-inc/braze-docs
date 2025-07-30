@@ -19,7 +19,7 @@ Los informes de retención no están disponibles para las campañas activadas po
 
 ### Paso 1: Seleccione un intervalo de fechas
 
-![Fecha del informe][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Fecha del informe]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Para empezar, visite cualquier campaña o Canvas en el panel de control de Braze y seleccione un intervalo de fechas para el informe. Seleccionar un intervalo de fechas adecuado es crucial por la forma en que afecta a los informes de retención. 
 
@@ -42,13 +42,13 @@ A continuación, selecciona **Analizar variantes**. Desde aquí, puede analizar 
 {% endtab %}
 {% endtabs %}
 
-![Selecciona un evento de Retención][1]{: style="max-width:80%"}
+![Selecciona un evento de Retención]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Paso 3: Generar el informe
 
 Cuando hayas seleccionado un evento de retención, selecciona **Ejecutar informe** para iniciar la consulta.
 
-![Ejecutar informe][2]{: style="max-width:80%"}
+![Ejecutar informe]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 Esta consulta puede tardar unos minutos en ejecutarse, dependiendo de la cantidad de datos que haya que recuperar para generar los resultados. Si tarda demasiado, verás una notificación pidiéndote que vuelvas a intentar cargar el informe. Puede que tengas que esperar hasta cinco minutos antes de que se cargue el informe.
 
@@ -97,7 +97,7 @@ La retención por intervalos mide cuántos usuarios vuelven en el intervalo de d
 
 Los informes de rangos son unos de los más intuitivos de leer. Indican claramente, de todos los usuarios de una cohorte, qué porcentaje de esos usuarios realizó el evento de retención dentro de un intervalo de fechas determinado. Por ejemplo, en la siguiente imagen, haciendo referencia a la cohorte Todos los usuarios, en el intervalo de fechas "Día 0 (0-24hrs)", el 35,71% de la cohorte realizó el informe de retención. Si un usuario realiza varios eventos de retención dentro de varios intervalos de fechas, se contarán como retenidos para cada intervalo.
 
-![Informe de retención][5]
+![Informe de retención]({% image_buster /assets/img/range_retention.png %})
 
 ### Componentes del informe de retención
 
@@ -151,9 +151,5 @@ Los informes de retención son fáciles de generar, pero difíciles de interpret
 - ¿Observas fatiga de mensajería?
 - ¿Tuvo un impacto positivo una optimización específica que hiciste en una campaña o Canvas hace X días?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 

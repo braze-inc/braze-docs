@@ -21,7 +21,7 @@ Esta sección proporciona las claves REST API de su espacio de trabajo, los iden
 
 Para mayor seguridad, puedes especificar una lista de direcciones IP y subredes a las que se permite realizar solicitudes de API REST para una clave de API REST determinada. Esto se denomina lista blanca o lista permitida. Para permitir direcciones IP o subredes específicas, añádalas a la sección **Lista blanca de IP** al crear una nueva clave de API de REST: 
 
-![Sección de listas blancas de IP de API al crear una nueva clave de API][26]
+![Sección de listas blancas de IP de API al crear una nueva clave de API]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Si no especifica ninguna, las peticiones pueden enviarse desde cualquier dirección IP.
 
@@ -35,13 +35,7 @@ Esta sección incluye una lista de identificadores utilizados para hacer referen
 
 ### Otros identificadores
 
-Para integrarse con nuestra API, puede buscar los identificadores relacionados con cualquier segmento, campaña, tarjeta de contenido, etc., a los que desee acceder desde la API externa de Braze. Todos los mensajes deben seguir la codificación [UTF-8][12]. Después de seleccionar cualquiera de ellos, el identificador aparecerá debajo del menú desplegable.
+Para integrarse con nuestra API, puede buscar los identificadores relacionados con cualquier segmento, campaña, tarjeta de contenido, etc., a los que desee acceder desde la API externa de Braze. Todos los mensajes deben seguir la codificación [UTF-8](https://en.wikipedia.org/wiki/UTF-8). Después de seleccionar cualquiera de ellos, el identificador aparecerá debajo del menú desplegable.
 
 Para más información, consulta [Tipos de identificadores API]({{site.baseurl}}/api/identifier_types/).
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipedia: UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

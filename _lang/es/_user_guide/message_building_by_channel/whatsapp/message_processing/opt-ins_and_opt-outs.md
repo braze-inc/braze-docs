@@ -98,11 +98,11 @@ Puedes configurar una campaña o Canvas que permita a los usuarios que envíen m
 
 #### Paso 1: Crear un lienzo con el desencadenante "Mensaje de WhatsApp entrante"
  
-![Paso en Canvas basado en acciones que da entrada a los usuarios que envían un mensaje entrante de WhatsApp.][6]{: style="max-width:85%;"}
+![Paso en Canvas basado en acciones que da entrada a los usuarios que envían un mensaje entrante de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Cuando selecciones palabras clave desencadenantes, incluye palabras como "Detener" o "Sin mensaje". Si eliges este método, asegúrate de que tus clientes conocen tus palabras de cancelación. Por ejemplo, después de recibir la adhesión voluntaria inicial, incluye una respuesta de seguimiento como "Para cancelar estos mensajes, envía el mensaje "Detener" en cualquier momento". 
 
-![Paso de mensaje para enviar un mensaje entrante de WhatsApp en el que el cuerpo del mensaje sea "STOP" o "SIN MENSAJE".][7]
+![Paso de mensaje para enviar un mensaje entrante de WhatsApp en el que el cuerpo del mensaje es "STOP" o "SIN MENSAJE".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Paso 2: Actualizar el perfil del usuario
 
@@ -112,7 +112,7 @@ Actualice el perfil del usuario utilizando uno de los métodos descritos en [Gru
 
 Dentro del creador de plantillas de mensajes de WhatsApp, puedes incluir la opción de "exclusión de marketing". Cada vez que incluya esto, asegúrese de que la plantilla se utiliza en un Canvas con un paso posterior para un cambio de grupo de suscripción. 
 
-1. Cree una plantilla de mensaje con la respuesta rápida "marketing opt-out".<br>![Plantilla de mensaje con una opción de pie de página de "Exclusión voluntaria de marketing"][11]<br><br>![Sección para configurar un botón de oopt-out de marketing.][12]<br><br>
+1. Cree una plantilla de mensaje con la respuesta rápida "marketing opt-out".<br>![Plantilla de mensaje con una opción de pie de página de "Exclusión voluntaria de marketing"]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Sección para configurar un botón de salida de marketing.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. Crea un Canvas que utilice esta plantilla de mensaje.<br><br>
 3. Sigue los pasos del ejemplo anterior pero con el texto desencadenante "DETENER PROMOCIONES".<br><br>
 4. Actualice el estado de suscripción del usuario utilizando uno de los métodos descritos en [Grupos de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
@@ -136,10 +136,10 @@ El paso Actualización de usuario evita condiciones de carrera porque el usuario
 Para los mensajes "STOP", invierta el paso del mensaje que confirma la exclusión y el paso de actualización del usuario. Si no lo hace, el usuario será excluido primero del grupo de suscripción y después no podrá recibir el mensaje de confirmación.
 {% endalert %}
 
-![Un paso de mensaje de WhatsApp en el que el cuerpo del mensaje es "COMENZAR".][13]{: style="max-width:70%;"}
+![Paso de un mensaje de WhatsApp en el que el cuerpo del mensaje es "INICIO".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\. En el Lienzo, cree un paso **Configurar Actualización de Usuario** y para **Acción** seleccione **Editor JSON Avanzado**. <br><br>![Paso de actualización de usuario con una acción de "Editor JSON avanzado".][14]<br><br>
+2\. En el Lienzo, cree un paso **Configurar Actualización de Usuario** y para **Acción** seleccione **Editor JSON Avanzado**. <br><br>![Paso de actualización de usuario con una acción de "Editor JSON avanzado".]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
 3\. Rellene el **objeto Actualización de usuario** con la siguiente carga útil JSON, sustituyendo `XXXXXXXXXXX` por el ID de su grupo de suscripción:
 
 {% raw %}
@@ -160,7 +160,7 @@ Para los mensajes "STOP", invierta el paso del mensaje que confirma la exclusió
 {% endraw %}
 
 {: start="4"}
-4\. Añade un paso de mensaje de WhatsApp posterior. <br><br>![Paso de actualización de usuario en Canvas.][15]{: style="max-width:20%;"}
+4\. Añade un paso de mensaje de WhatsApp posterior. <br><br>![Paso de actualización de usuario en Canvas.]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
 
 #### Consideraciones
 
@@ -174,10 +174,22 @@ Una campaña Webhook puede activar la entrada en una segunda campaña después d
 No es necesario utilizar este método para los mensajes STOP. El mensaje de confirmación se enviará antes de que el usuario se elimine del grupo de suscripción, por lo que puede utilizar uno de los otros dos pasos.
 {% endalert %}
 
-1. Crear una campaña o Canvas con un paso basado en una acción **Enviar un mensaje entrante de WhatsApp**. Seleccione **Donde el cuerpo del mensaje** e introduzca "START" para **Is.**<br><br>![Paso de mensaje de WhatsApp en el que el cuerpo del mensaje es "COMENZAR".][13]{: style="max-width:70%;"}<br><br>
-2. En la campaña o Canvas, crea un paso de Mensaje de webhook y cambia el **Cuerpo de la solicitud** a **Texto sin procesar**.<br><br>![Paso de mensaje para un webhook.][16]<br><br>
-3. Introduce la [URL del]({{site.baseurl}}/api/basics/) punto final del cliente en la **URL del Webhook**, seguida del enlace del punto final `campaigns/trigger/send`. Por ejemplo, `https://dashboard-02.braze.eu/campaigns/trigger/send`.<br><br>![URL del webhook en la sección "Componer webhook".][19]{: style="max-width:70%;"}<br><br>
-4. En el texto sin formato, introduzca la siguiente carga útil JSON y sustituya `XXXXXXXXXXX` por el ID de su grupo de suscripción. Tendrá que sustituir `campaign_id` después de crear su segunda campaña.
+1. Crear una campaña o Canvas con un paso basado en una acción **Enviar un mensaje entrante de WhatsApp**. Seleccione **Donde el cuerpo del mensaje** e introduzca "START" para **Is.**
+
+![Paso de mensaje de WhatsApp en el que el cuerpo del mensaje es "INICIO".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+
+{: start="2"}
+2\. En la campaña o Canvas, crea un paso de Mensaje de webhook y cambia el **Cuerpo de la solicitud** a **Texto sin procesar**.
+
+![Paso de mensaje para un webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+
+{: start="3"}
+3\. Introduce la [URL del]({{site.baseurl}}/api/basics/) punto final del cliente en la **URL del Webhook**, seguida del enlace del punto final `campaigns/trigger/send`. Por ejemplo, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
+
+![Campo URL del webhook en la sección "Componer webhook".]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+
+{: start="4"}
+4\. En el texto sin formato, introduzca la siguiente carga útil JSON y sustituya `XXXXXXXXXXX` por el ID de su grupo de suscripción. Tendrá que sustituir `campaign_id` después de crear su segunda campaña.
 
 {% raw %}
 ```json
@@ -219,22 +231,3 @@ En esta tabla, `STOP` se utiliza como palabra desencadenante de ejemplo para dem
 | `Matches regex` | `(?i)STOP(?-i)` | Captura cualquier uso de "STOP" en cualquier caso. Por ejemplo, esto capta "para", "por favor, para" y "nunca dejes de enviarme mensajes". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp114.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp115.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp116.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp117.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp118.png %}
-[9]: {% image_buster /assets/img/whatsapp/whatsapp119.png %}
-[10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %}
-[11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %}
-[12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %}
-[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}
-[14]: {% image_buster /assets/img/whatsapp/user_update.png %}
-[15]: {% image_buster /assets/img/whatsapp/message_step.png %}
-[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %}
-[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %}
-[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %}
-[19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 

@@ -24,7 +24,7 @@ Aunque Apple exige que utilices el aviso nativo, puedes aprovechar las campañas
 
 Con este enfoque, quiere animar a los usuarios a visitar la App Store para añadir una reseña. Para ello, crea una campaña de mensajería dentro de la aplicación que [se vincule en profundidad]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) con la App Store.
 
-![Dos pantallas de móvil una al lado de la otra. El primero es un mensaje in-app que pide al usuario que valore la aplicación en la App Store. La segunda es la página de la App Store de iOS de esa aplicación.][1]
+![Dos pantallas de móvil una al lado de la otra. El primero es un mensaje in-app que pide al usuario que valore la aplicación en la App Store. La segunda es la página de iOS App Store de esa aplicación.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Enfoque 2: Preparación suave
 
@@ -32,7 +32,7 @@ Si no quieres que los usuarios abandonen tu aplicación, puedes prepararles prim
 
 Para conocer los pasos detallados, consulta la [solicitud de revisión personalizada de la App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Dos mensajes in-app uno al lado del otro. La primera anima al usuario a valorar la aplicación preguntándole si tiene un momento para hacerlo. El segundo es el mensaje nativo de revisión de la App Store de iOS, que muestra una escala de cinco estrellas que el usuario puede seleccionar para valorar la aplicación.][2]
+![Dos mensajes in-app uno al lado del otro. La primera anima al usuario a valorar la aplicación preguntándole si tiene un momento para hacerlo. El segundo es el mensaje nativo de revisión de la App Store de iOS, que muestra una escala de cinco estrellas que el usuario puede seleccionar para valorar la aplicación.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Los usuarios enviarán una valoración a través de la solicitud de valoración nativa de la App Store, y pueden escribir y enviar una valoración sin salir de la aplicación.
 
@@ -44,5 +44,3 @@ Como alternativa a la imprimación suave, también puede mostrar directamente el
 No cree mensajes HTML personalizados dentro de la aplicación que imiten el mensaje de valoración de una aplicación nativa de iOS, ya que esto infringe las directrices de Apple.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}

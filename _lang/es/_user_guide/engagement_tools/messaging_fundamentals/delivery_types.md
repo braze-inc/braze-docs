@@ -60,7 +60,7 @@ Las opciones basadas en la acción determinan qué acciones (o desencadenantes) 
 
 #### Ventana de entrada
 
-La ventana de entrada de tu Canvas determina qué usuarios pueden entrar en el Canvas a la hora de inicio designada (y a la hora de finalización opcional). Al igual que en las campañas basadas en acciones, puedes elegir introducir a los usuarios en su zona horaria local.
+La ventana de entrada de tu Canvas determina qué usuarios pueden entrar en el Canvas a la hora de inicio designada (y a la hora de finalización opcional). De forma similar a las campañas basadas en acciones, puedes elegir introducir a los usuarios en su zona horaria local.
 {% endtab %}
 {% endtabs %}
 

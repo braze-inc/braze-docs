@@ -19,7 +19,7 @@ Todo lo que haces en Braze ocurre dentro de un espacio de trabajo. Los espacios 
 
 ### Paso 1: Ten un plan
 
-Antes de empezar, asegúrese de haber trabajado con su equipo y su gestor de incorporación a Braze para determinar la mejor configuración del espacio de trabajo para su caso de uso. Para obtener más información sobre cómo planificar tus espacios de trabajo en Braze, consulta nuestra [Introducción: Guía de espacios de trabajo][enlace].
+Antes de empezar, asegúrese de haber trabajado con su equipo y su gestor de incorporación a Braze para determinar la mejor configuración del espacio de trabajo para su caso de uso. Para saber más sobre cómo planificar tus espacios de trabajo en Braze, consulta nuestra página [Primeros pasos: Guía de espacios de trabajo]({{site.baseurl}}/user_guide/getting_started/workspaces/).
 
 ### Paso 2: Añade tu espacio de trabajo
 
@@ -27,7 +27,7 @@ Puede crear nuevos espacios de trabajo o cambiar entre espacios de trabajo exist
 
 1. Selecciona el desplegable del espacio de trabajo y, a continuación, <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Crear espacio de trabajo**.
 
-![El desplegable del espacio de trabajo con el botón "Crear espacio de trabajo".][1]{: style="max-width:60%;"}
+![El desplegable del espacio de trabajo con el botón "Crear espacio de trabajo".]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Dale un nombre a tu espacio de trabajo.
@@ -39,11 +39,11 @@ Es posible que desee adoptar una convención de nombres para que otras personas 
 {:start="3"}
 3\. Seleccione **Crear**. Braze puede tardar unos segundos en crear tu espacio de trabajo.
 
-!["Crear espacio de trabajo" modal con el nombre "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
+!["Crear espacio de trabajo" modal con el nombre "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
 
 Accederá a la página **Configuración de la aplicación** para empezar a añadir instancias de su aplicación. Puedes acceder a esta página en cualquier momento desde **Ajustes** > **Ajustes de la aplicación**.
 
-![Página "Configuración de la aplicación" para el espacio de trabajo Upon Voyage US - Staging con un botón para añadir una aplicación.][3]
+![Página "Configuración de la aplicación" para Upon Voyage US - Espacio de trabajo de puesta en escena con un botón para añadir una aplicación.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
 ### Paso 3: Añada las instancias de su aplicación
 
@@ -52,7 +52,7 @@ Denominamos "instancias de aplicación" a los distintos sitios y aplicaciones qu
 1. En la página **Configuración de la aplicación**, selecciona **\+ Añadir aplicación**.
 2. Dé un nombre a su instancia de aplicación y seleccione en qué plataforma o plataformas se encuentra esta instancia de aplicación. Si selecciona varias plataformas, Braze creará una instancia de aplicación para cada plataforma.
 
-![Modalidad "Añadir nueva aplicación a Upon Voyage US - Staging" con opciones para seleccionar los detalles de la aplicación.][4]{: style="max-width:60%" }
+![Modalidad "Añadir nueva aplicación a Upon Voyage US - Staging" con opciones para seleccionar los detalles de la aplicación.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
 
 {:start="3"}
 3\. Selecciona **Añadir aplicación** para confirmar.
@@ -61,7 +61,7 @@ Denominamos "instancias de aplicación" a los distintos sitios y aplicaciones qu
 
 Después de añadir la instancia de tu aplicación, tendrás acceso a su clave de API. La clave API se utiliza al realizar solicitudes entre la instancia de su aplicación y la API Braze. La clave de API también es importante para integrar el SDK de Braze con tu aplicación o sitio web.
 
-![Página de configuración de la aplicación Upon Voyage para iOS con campos para la clave de API y el punto final SDK.][5]
+![Página de configuración de la aplicación Upon Voyage para iOS con campos para la clave de API y el punto final SDK.]({% image_buster /assets/img/workspaces/app_api_key.png %})
 
 {% alert note %}
 Debe crear instancias de aplicación distintas para cada versión de su aplicación en cada plataforma. Por ejemplo, si tiene versiones Free y Pro de su aplicación tanto en iOS como en Android, cree cuatro instancias de aplicación dentro de su espacio de trabajo (aplicación Free para iOS, aplicación Free para Android, aplicación Pro para iOS y aplicación Pro para Android). Esto te dará cuatro claves de API para utilizar, una para cada instancia de la aplicación.
@@ -73,7 +73,7 @@ La versión del SDK activa que se muestra en la página Configuración de la apl
 
 Este campo aparece después de haber integrado el SDK de Braze con tu aplicación o sitio web. Si hay disponible una versión más reciente del SDK de Braze para tu plataforma, se anotará aquí con la etiqueta "Versión más reciente disponible."
 
-![Sección "Versión del SDK en vivo" con un valor de campo de "5.4.0" y un icono que dice que hay una nueva versión disponible.][6]
+![Sección "Versión del SDK en vivo" con un valor de campo "5.4.0" y un icono que dice que hay una nueva versión disponible.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### Paso 4: Repetir según sea necesario
 
@@ -89,7 +89,7 @@ Repita los pasos 2 y 3 para configurar tantos espacios de trabajo como requiera 
 
 Puedes añadir espacios de trabajo favoritos para acceder aún más rápido a los que más utilizas.
 
-![Desplegable del espacio de trabajo con la pestaña "Espacios de trabajo favoritos".][7]{: style="max-width:50%;"}
+![Desplegable del espacio de trabajo con la pestaña de "Espacios de trabajo favoritos".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 Para añadir espacios de trabajo favoritos:
 
@@ -108,7 +108,7 @@ Para cambiar el nombre de su espacio de trabajo:
 2. Pase el ratón por encima del nombre de su espacio de trabajo y seleccione <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Asigne un nuevo nombre a su espacio de trabajo y seleccione <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Guardar**.
 
-![El icono del lápiz que aparece junto al nombre del espacio de trabajo.][8]{: style="max-width:50%;"}
+![El icono del lápiz que aparece junto al nombre del espacio de trabajo.]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
 
 ### Eliminar espacios de trabajo e instancias de la aplicación
 
@@ -123,21 +123,23 @@ No puedes eliminar instancias de la aplicación o espacios de trabajo que se est
 Ten cuidado al eliminar espacios de trabajo. Una vez eliminado un espacio de trabajo, no se puede restaurar.
 {% endalert %}
 
-![La página de configuración de la aplicación con un botón para eliminar un espacio de trabajo y un icono de papelera para eliminar una aplicación.][9]
+![La página de configuración de la aplicación con un botón para eliminar un espacio de trabajo y un icono de papelera para eliminar una aplicación.]({% image_buster /assets/img/workspaces/workspace_delete.png %})
 
 ## Preguntas más frecuentes
 
 ### ¿Debo crear un nuevo espacio de trabajo cuando publique una aplicación actualizada?
 
-Si los usuarios sólo necesitan actualizar su aplicación y no vas a lanzar una aplicación completamente nueva a la tienda de aplicaciones, no deberías crear un nuevo espacio de trabajo a menos que no planees volver a enviar mensajes a los usuarios en la versión anterior.
+Esto depende de si estás actualizando tu aplicación o creando una completamente nueva.
 
-Al crear un nuevo espacio de trabajo, todos los datos históricos y perfiles de usuario de la versión anterior de la aplicación no existirán en este nuevo espacio de trabajo. Así, cuando los usuarios actuales se actualicen a la nueva versión de la aplicación, se les creará un nuevo perfil sin ninguno de los datos de comportamiento de la antigua aplicación.
+#### Actualizar tu aplicación
 
-Además, sus usuarios existirían en dos lugares: el espacio de trabajo antiguo y el nuevo. También pueden tener potencialmente el mismo "push token". Esto puede dar lugar a que los usuarios reciban un mensaje de marketing destinado únicamente a los usuarios de espacios de trabajo antiguos, aunque ya se hayan actualizado.
+Si vas a actualizar tu aplicación, debes separar las versiones antigua y nueva creando una nueva instancia de la aplicación dentro del mismo espacio de trabajo. De este modo, podrá dirigirse eficazmente a los usuarios de la nueva versión cuando seleccione esa aplicación durante la segmentación. Si desea enviar mensajes a usuarios que utilizan la versión anterior, puede utilizar filtros para [seleccionar la versión anterior de la aplicación]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
-#### ¿Qué debo hacer en su lugar?
+Si creas un nuevo espacio de trabajo, tus usuarios existirán en dos lugares: el antiguo espacio de trabajo y el nuevo espacio de trabajo. También podrían tener el mismo token de notificaciones push. Esto puede hacer que los usuarios reciban un mensaje de marketing destinado sólo a los antiguos usuarios del espacio de trabajo, aunque ya se hayan actualizado.
 
-Para separar las aplicaciones antiguas de las nuevas, cree una nueva instancia de aplicación dentro del mismo espacio de trabajo. De este modo, podrá dirigirse eficazmente a los usuarios de la nueva versión cuando seleccione esa aplicación durante la segmentación. Si desea enviar mensajes a usuarios que utilizan la versión anterior, puede utilizar filtros para [seleccionar la versión anterior de la aplicación]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
+#### Lanzamiento de una nueva aplicación
+
+Si vas a lanzar una aplicación completamente nueva a la tienda de aplicaciones, debes crear un nuevo espacio de trabajo. Al crear un nuevo espacio de trabajo, todos los datos históricos y perfiles de usuario de la versión anterior de la aplicación no existirán en este nuevo espacio de trabajo. Así, cuando los usuarios actuales se actualicen a la nueva versión de la aplicación, se les creará un nuevo perfil sin ninguno de los datos de comportamiento de la antigua aplicación.
 
 ### Tengo varias instancias de aplicaciones en un espacio de trabajo, ¿cómo puedo asegurarme de que mi mensaje sólo se dirige a una única aplicación? {#singular-app}
 
@@ -149,36 +151,25 @@ Por defecto, un segmento se dirige a todas las aplicaciones y sitios web del ár
 2. Para **aplicaciones y sitios web específicos**, seleccione **Usuarios de aplicaciones específicas**.
 3. En el menú desplegable **Aplicaciones específicas**, seleccione su aplicación o sitio.
 
-![Segmento que se dirige a usuarios de aplicaciones específicas.][10]
+![Segmento que se dirige a usuarios de aplicaciones específicas.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 A continuación, puede añadir este segmento a su mensaje y empezar a refinar aún más su audiencia con segmentos y filtros adicionales si es necesario.
 
 #### Campañas
 
-Para las campañas, añada su segmento al paso **Usuarios objetivo** del compositor.
+Para las campañas, añade tu segmento al paso **Audiencias objetivo** del compositor.
 
-#### Canvas Flow
+#### Canvas
 
-En Canvas Flow, añade tu segmento a tus pasos de Mensaje, en la sección **Validaciones de Entrega**. Las validaciones de entrega comprueban que tu audiencia cumple los criterios de entrega al enviar los mensajes. Recuerde especificar validaciones de entrega para cada paso de Mensaje para asegurarse de que se entregará a la aplicación correcta. No hay necesidad de segmentar en el nivel de entrada.
+En Canvas, añade tu segmento a los pasos de tu Mensaje, en la sección **Validaciones de entrega**. Las validaciones de entrega comprueban que tu audiencia cumple los criterios de entrega al enviar los mensajes. Recuerde especificar validaciones de entrega para cada paso de Mensaje para asegurarse de que se entregará a la aplicación correcta. No hay necesidad de segmentar en el nivel de entrada.
 
 {% details Ampliar los pasos del flujo de trabajo original de Canvas %}
 
 {% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este contenido está disponible como referencia para comprender los segmentos y la segmentación en el editor original.<br><br>Braze recomienda a los clientes que utilicen la experiencia Canvas original que se pasen a Canvas Flow. Es una experiencia de edición mejorada para construir y gestionar mejor los Lienzos. Más información sobre la [clonación de tus lienzos en el flujo de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este contenido está disponible como referencia para comprender los segmentos y la segmentación en el editor original.<br><br>Braze recomienda que los clientes que utilicen la experiencia original de Canvas clonen sus Canvas en el editor actualizado para construir y gestionar mejor los Canvases. Más información sobre la [clonación de tus Lienzos]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 En el flujo de trabajo original del lienzo, añada su segmento al nivel de componentes del lienzo en la sección **Audiencia**. No hay necesidad de segmentar en el nivel de entrada.
 {% enddetails %}
 
 
-[1]: {% image_buster /assets/img/workspaces/workspace_create.png %}
-[2]: {% image_buster /assets/img/workspaces/workspace_name.png %}
-[3]: {% image_buster /assets/img/workspaces/workspace_empty_state.png %}
-[4]: {% image_buster /assets/img/workspaces/workspace_add_app.png %}
-[5]: {% image_buster /assets/img/workspaces/app_api_key.png %}
-[6]: {% image_buster /assets/img/workspaces/app_live_sdk_version.png %}
-[7]: {% image_buster /assets/img/workspaces/workspace_favorites.png %}
-[8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
-[9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
-[10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}
-[link]: {{site.baseurl}}/user_guide/getting_started/workspaces/

@@ -13,7 +13,7 @@ search_rank: 4.9
 
 > Los mensajes in-app sirven para muchas cosas. Son ricos en contenido y tienen un menor sentido de urgencia, ya que estos mensajes no se envían fuera de la aplicación del usuario y no invaden su pantalla de inicio. Los mensajes in-app existen dentro de tu aplicación (de ahí su nombre), vienen contextualizados y casi nunca son mal recibidos. Siempre se entregan cuando el usuario está activo dentro de su aplicación.
 
-Para ver ejemplos de mensajes in-app, consulte nuestros [Estudios de casos][1].
+Para ver ejemplos de mensajes in-app, consulte nuestros [Estudios de casos](https://www.braze.com/customers).
 
 ## Posibles casos de uso
 
@@ -21,10 +21,10 @@ Con el rico nivel de contenido que ofrecen los mensajes in-app, puede aprovechar
 
 | Caso de uso | Explicación |
 | --- | --- |
-| Preparación para las notificaciones push | Ejecuta una campaña [de preparación push][2] utilizando un mensaje dentro de la aplicación para mostrar a tus clientes las ventajas de optar por push para tu aplicación o sitio web, y preséntales una solicitud para que concedan permiso push.
+| Preparación para las notificaciones push | Ejecuta una campaña [de preparación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) utilizando un mensaje dentro de la aplicación para mostrar a tus clientes las ventajas de optar por push para tu aplicación o sitio web, y preséntales una solicitud para que concedan permiso push.
 | Ventas y promociones | Utilice mensajes modales dentro de la aplicación para recibir a los clientes con medios visualmente atractivos que contengan códigos de promoción u ofertas estáticas. Incentivarles para que realicen compras o conversiones cuando de otro modo no lo habrían hecho. |
 | Fomentar la adopción de funciones | Anime a los clientes a utilizar otras partes de su aplicación o a beneficiarse de un servicio. |
-| Campañas altamente personalizadas | Coloque mensajes en la aplicación como lo primero que ven sus clientes cuando entran en su aplicación o sitio web. Añada algunas funciones de personalización de Braze, como [Contenido conectado][3], para obligar a los usuarios a actuar y, por tanto, hacer que su difusión sea más eficaz.
+| Campañas altamente personalizadas | Coloque mensajes en la aplicación como lo primero que ven sus clientes cuando entran en su aplicación o sitio web. Añada algunas funciones de personalización de Braze, como [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), para obligar a los usuarios a actuar y, por tanto, hacer que su difusión sea más eficaz.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Otros casos de uso a tener en cuenta son los siguientes:
@@ -69,16 +69,10 @@ Los mensajes a pantalla completa son exactamente lo que esperas: ¡ocupan toda l
 {% endtab %}
 {% endtabs %}
 
-Además de estas plantillas de mensajes listas para usar, también puedes personalizar aún más tu mensajería utilizando mensajes HTML personalizados dentro de la aplicación, modales web con CSS o formularios web de captura de correo electrónico. Para más información, consulte [Personalización][4].
+Además de estas plantillas de mensajes listas para usar, también puedes personalizar aún más tu mensajería utilizando mensajes HTML personalizados dentro de la aplicación, modales web con CSS o formularios web de captura de correo electrónico. Para más información, consulte [Personalización]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 ## Más recursos
 
-Antes de empezar a crear sus propias campañas de mensajes para aplicaciones, o de utilizar mensajes para aplicaciones en una campaña multicanal, le recomendamos encarecidamente que consulte nuestra [guía de preparación de mensajes para aplicaciones][5]. Esta guía abarca cuestiones de segmentación, contenido y conversión que debe tener en cuenta a la hora de crear mensajes dentro de la aplicación.
+Antes de empezar a crear sus propias campañas de mensajes para aplicaciones, o de utilizar mensajes para aplicaciones en una campaña multicanal, le recomendamos encarecidamente que consulte nuestra [guía de preparación de mensajes para aplicaciones]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). Esta guía abarca cuestiones de segmentación, contenido y conversión que debe tener en cuenta a la hora de crear mensajes dentro de la aplicación.
 
 
-[1]: https://www.braze.com/customers
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
-[6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/

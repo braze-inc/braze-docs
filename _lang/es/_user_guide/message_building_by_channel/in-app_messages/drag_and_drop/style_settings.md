@@ -9,13 +9,13 @@ page_order: 3
 
 > La experiencia de edición mediante arrastrar y soltar se divide en dos secciones: **Construir** y **Vista previa y prueba**. Este artículo cubre lo que necesitas saber para trabajar dentro de la pestaña **Construir** del editor y asume que ya has [creado un mensaje in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
 
-![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+!["Estilos de mensajes" pestaña.]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## Estilos de mensaje
 
 En la pestaña **Estilos de mensaje** puedes definir determinados estilos que se aplicarán a todos los bloques relevantes de tu mensaje in-app. Por ejemplo, puede que desee personalizar el tipo de letra de todo el texto o el color de todos los enlaces de su mensaje.
 
-Los estilos de esta sección se utilizan en todas las partes del mensaje, excepto cuando se anulan para un bloque específico. Si su mensaje tiene [varias páginas]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), también puede anular los estilos a nivel de mensaje para páginas individuales, excepto para el tipo de visualización y el ancho máximo.
+Los estilos de esta sección se utilizan en todas las partes del mensaje, excepto cuando se anulan para un bloque específico. Si su mensaje tiene [varias páginas]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), también puede anular los estilos a nivel de mensaje para páginas individuales, excepto para el tipo de visualización y el ancho máximo. Si intentas aplicar estilos a nivel de página y a nivel de mensaje, el estilo a nivel de página prevalecerá sobre el estilo a nivel de mensaje.
 
 Para facilitar el diseño, recomendamos configurar los estilos a nivel de mensaje antes de personalizar los estilos a nivel de bloque.
 
@@ -42,7 +42,7 @@ La fuente a nivel de mensaje sólo se aplicará al mensaje actual y a cualquier 
 
 ## Componentes de los mensajes
 
-![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
+![Un GIF que muestra la creación de un mensaje promocional dentro de la aplicación.]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 El editor de arrastrar y soltar utiliza dos componentes clave para componer mensajes in-app: **filas** y **bloques**. Todos los bloques deben colocarse en fila.
 
@@ -50,13 +50,13 @@ El editor de arrastrar y soltar utiliza dos componentes clave para componer mens
 
 Las filas son unidades estructurales que definen la composición horizontal de una sección del mensaje mediante celdas.
 
-![]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
+![Filas que puedes añadir en tu mensaje dentro de la aplicación.]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
 Cuando se selecciona una fila, puede añadir o eliminar el número de columnas que necesite desde la sección **Personalización de columnas** para colocar diferentes elementos de contenido uno al lado del otro. 
 
 También puede deslizar para ajustar el tamaño de las columnas existentes.
 
-![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
+![Ajustar las columnas desde la sección "Personalización de columnas".]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 Como práctica recomendada, formatee las propiedades de las filas y columnas antes de formatear los bloques de las filas. Hay muchos lugares donde se puede ajustar el espaciado y la alineación, por lo que empezar desde la base facilita la edición sobre la marcha.
 
@@ -68,11 +68,15 @@ Los bloques representan distintos tipos de contenido que puedes utilizar en tu m
 Antes de añadir bloques, configura [estilos a nivel de](#set-message-level-styles) mensaje para el contenedor de mensajes, la fuente, los colores y cualquier otra cosa que quieras personalizar. A continuación, puede personalizar bloques individuales según sus necesidades. El **botón Cerrar** permanecerá en la parte superior del mensaje para que los usuarios siempre tengan la opción de descartar el mensaje.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
+![Arrastra y suelta cuadros para seleccionar.]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
 Cada bloque tiene sus ajustes, como el control granular del relleno. El panel de la derecha cambia automáticamente a un panel de estilos para el elemento de contenido seleccionado. Para más información, consulta [Propiedades del bloque de editor]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
 A medida que construyes tu mensaje in-app, puedes seleccionar una vista de móvil, tableta o escritorio en la barra de herramientas para previsualizar cómo se verá tu mensaje in-app para tus grupos de usuarios. De este modo se asegurará de que su contenido es receptivo y podrá realizar los ajustes necesarios sobre la marcha.
+
+#### Extender texto
+
+{% multi_lang_include span_text.md %}
 
 ## Detalles creativos
 
@@ -80,7 +84,7 @@ A medida que construyes tu mensaje in-app, puedes seleccionar una vista de móvi
 
 En una tableta o en un navegador de escritorio, un mensaje a pantalla completa aparecerá en el centro de la pantalla de la aplicación. Cualquier modificación de la anchura máxima del mensaje a pantalla completa sólo se aplicará a los dispositivos de escritorio y tabletas. 
 
-![]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
+![Ejemplo de mensaje dentro de la aplicación a pantalla completa.]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
 ### Añadir una imagen de fondo
 
@@ -96,7 +100,7 @@ Si tienes problemas para seleccionar un bloque determinado, puedes utilizar la f
 
 ### Añadir líquido
 
-![]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![Icono para añadir personalización de Liquid.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
 Para añadir [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) a tu mensaje in-app, selecciona <i class="fa-solid fa-circle-plus"></i> **Añadir personalización** en la barra de herramientas del editor. Aquí puede añadir varios tipos de personalización, como atributos predeterminados, atributos de dispositivo, atributos personalizados, etc.
 
@@ -104,19 +108,19 @@ A continuación, tome el fragmento de Liquid generado e insértelo en el mensaje
 
 ### Utilizar el redactor de IA
 
-Cuando seleccione un bloque de texto en su mensaje in-app, haga clic en <i class="fa-solid fa-wand-magic-sparkles" title="Redactor AI"></i> en la barra de herramientas del bloque para iniciar el [asistente de redacción con inteligencia artificial]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). El asistente de redacción de textos de IA pasa un breve nombre o descripción del producto a la herramienta de generación de textos GPT3 de OpenAI para generar textos de marketing similares a los humanos para sus mensajes.
+Cuando seleccione un bloque de texto en su mensaje in-app, haga clic en <i class="fa-solid fa-wand-magic-sparkles" title="Redactor AI"></i> en la barra de herramientas del bloque para iniciar el [asistente de redacción con inteligencia artificial]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). El asistente de redacción de textos de IA pasa un breve nombre o descripción del producto a la herramienta de generación de textos GPT3 de OpenAI para generar textos de marketing similares a los humanos para sus mensajes.
 
 {% alert tip %}
 Puede ahorrarse algunos clics resaltando el texto dentro del bloque antes de hacer clic en el icono. El texto resaltado se añadirá a la herramienta y se generará una copia inmediatamente.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![GIF del redactor de AI.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### Restablecer los estilos al ajuste predeterminado
 
 Las propiedades que ha cambiado de su estilo por defecto se marcan con un punto naranja. Para restablecer una propiedad específica a su estilo predeterminado, pase el ratón por encima del campo y seleccione **Restablecer a predeterminado**.
 
-![]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
+![Punto naranja que restablece el tamaño predeterminado de un texto.]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
 
 También puede restablecer todos los estilos de un elemento seleccionado seleccionando el botón <i class="fas fa-paintbrush" title="Copiar o pegar estilos"></i> junto al nombre del panel de propiedades y seleccionando **Restablecer estilos por defecto**.
 
@@ -124,7 +128,7 @@ También puede restablecer todos los estilos de un elemento seleccionado selecci
 
 Después de realizar cambios en el estilo de un elemento, puede copiar y pegar esos estilos en otro elemento. Al pegar estilos, sólo se aplican las propiedades relevantes para ese elemento.
 
-![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:45%"}
+![Menú desplegable con opción de copiar estilos.]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:35%"}
 
 1. Con el elemento seleccionado, seleccione <i class="fas fa-paintbrush" title="Copiar o pegar estilos"></i> junto al nombre del panel de propiedades (por ejemplo, si tiene seleccionado un botón, junto a "Propiedades de los botones").
 2. Haga clic en **Copiar estilos** y seleccione el elemento en el que desea aplicar el estilo copiado.

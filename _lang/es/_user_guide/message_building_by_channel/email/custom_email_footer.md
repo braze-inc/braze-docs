@@ -27,7 +27,7 @@ Para crear o editar su pie de página personalizado, haga lo siguiente:
 3. Edita tu pie de página en la sección **Redactar**.
 4. Envía un mensaje de prueba. 
 
-![Un ejemplo de pie de página personalizado.][20]
+![Un ejemplo de pie de página personalizado.]({% image_buster /assets/img_archive/custom_footer.png %})
 
 El pie de página por defecto utiliza el atributo {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} y nuestra dirección postal física. Si utilizas este predeterminado, asegúrate de seleccionar **<otro>** para el **Protocolo**.
 
@@ -35,7 +35,7 @@ El pie de página por defecto utiliza el atributo {% raw %}`{{${set_user_to_unsu
 Para cumplir la normativa CAN-SPAM, su pie de página personalizado debe incluir {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. No podrá guardar un pie de página personalizado sin este atributo.
 {% endalert %}
 
-![Valores de protocolo y URL necesarios para el pie de página personalizado.][24]{: style="max-width:50%;"}
+![Valores de protocolo y URL necesarios para el pie de página personalizado.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## Pies de página sin enlaces para darse de baja
 
@@ -43,11 +43,11 @@ Tenga mucho cuidado cuando utilice una plantilla con el pie de página personali
 
 Aquí tienes una advertencia en el compositor de correo electrónico:
 
-![Ejemplo de correo electrónico redactado sin pie de página.][21]
+![Ejemplo de correo electrónico compuesto sin pie de página.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 Aquí tienes una advertencia en el compositor de la campaña:
 
-![Composición de la campaña sin pie de página.][22]
+![Composición de la campaña Sin pies.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### Añadir un enlace personalizado para cancelar suscripción
 
@@ -89,10 +89,5 @@ También puede optar por establecer un pie de página personalizado para los cor
 
 Si no incluye un pie de página en texto plano, Braze creará uno automáticamente a partir del pie de página HTML. Cuando tus pies de página personalizados estén a tu gusto, selecciona **Guardar**.
 
-![Correo electrónico con la opción Establecer pie de página de texto sin formato personalizado seleccionada.][23]{: style="max-width:70%" }
+![Correo electrónico con la opción Establecer pie de página personalizado en texto sin formato seleccionada.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}

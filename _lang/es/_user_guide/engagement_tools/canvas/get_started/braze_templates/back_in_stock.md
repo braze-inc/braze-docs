@@ -41,13 +41,13 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 3\. Actualiza la descripción para explicar que este Canvas contiene mensajería personalizada.
 4\. Añade la etiqueta **Disponible**, que está anidada bajo la etiqueta **Promocional**, para que podamos filtrarla en la página de inicio de Canvas. 
 
-![Paso en Canvas "Configurar detalles de Canvas" con un nombre de Canvas "De nuevo en stock - Pierna recta clásica" y una breve descripción de Canvas.][1]
+!["Configurar los detalles del Canvas" paso con un nombre de Canvas "De nuevo en stock - Pierna recta clásica" y una breve descripción del Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
 
 ### Paso 2: Asignar eventos de conversión
 
 Cambia el **evento de conversión primaria - A** a **Hacer una compra específica** y selecciona **Pierna recta clásica** para el nombre del producto.
 
-!["Asignar eventos de conversión" para el tipo de evento de conversión de compra del producto Pierna recta clásica con un plazo de conversión de 7 días.][2]
+!["Asignar eventos de conversión" para el tipo de evento de conversión de la compra del producto Pierna recta clásica con un plazo de conversión de 7 días.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
 
 ### Paso 3: Adapta el horario de entrada
 
@@ -57,12 +57,12 @@ Haremos dos ajustes en este paso:
 
 1. Selecciona el catálogo que incluye información sobre nuestros vaqueros clásicos de pierna recta, que hemos denominado "Pantalones de pierna recta". 
 
-![Paso en Canvas "Horario de entrada" para un Canvas basado en acciones.][3]
+!["Horario de entrada" paso para un Canvas basado en acciones.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
 
 {: start="2"}
 2\. Ajusta la **Hora de inicio (Obligatorio** ) a la fecha y hora de inicio que desees.
 
-![Sección "Ventana de entrada" con hora de inicio el 2 de enero de 2025 a las 12 de la mañana.][4]
+![Sección "Ventana de entrada" con hora de inicio el 2 de enero de 2025 a las 12 de la mañana.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
 
 ### Paso 4: Selecciona la audiencia objetivo
 
@@ -71,23 +71,23 @@ Definiremos nuestra audiencia objetivo como los usuarios que pensamos que tienen
 1. Selecciona nuestro segmento objetivo, "Favoritos - Vaqueros clásicos de pata recta", que consiste en usuarios que han dado "Favoritos" a nuestros vaqueros clásicos de pata recta en nuestra aplicación o sitio web.
 2. Selecciona un filtro para incluir a los usuarios que hayan comprado "Vaqueros" más de "0" veces.
 
-![Paso "Audiencia objetivo" con el segmento de "Favoritos - Vaqueros clásicos de pierna recta".][5]
+![Paso "Audiencia objetivo" con el segmento de "Favoritos - Vaqueros clásicos de pierna recta".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
 
 {: start="3"}
 3\. Adjust the entry controls to allow users to re-enter the Canvas after the Canvas's maximum duration, to prevent the likelihood of users triggering the same step concurrently.
 
-![Sección "Controles de entrada" con una casilla de verificación para permitir a los usuarios volver a entrar en este Canvas con una duración máxima del Canvas.][6]
+![Sección "Controles de entrada" con una casilla de verificación para permitir a los usuarios volver a entrar en este Canvas con una duración máxima del Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4\. Ajusta los criterios de salida para eliminar a los usuarios que realizaron el evento personalizado de desfavorecer los vaqueros Classic Straight Leg.
 
-![Sección "Criterios de salida" con una excepción para los usuarios que realicen el evento personalizado de "Desfavorito".][7]
+!["Criterios de Salida" con una excepción para los usuarios que realicen el evento personalizado de "Desfavorito".]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
 
 ### Paso 5: Selecciona tu configuración de envío
 
 Mantendremos la configuración predeterminada de la suscripción, de modo que sólo enviemos a los usuarios que se hayan suscrito o hayan optado por recibir mensajes o notificaciones, y omitiremos las demás configuraciones (limitación de frecuencia, horas tranquilas y grupos de semilla).
 
-![Paso "Configuración de envío" dirigido a usuarios suscritos o que han optado por la adhesión voluntaria.][8]
+![Paso "Enviar configuración" dirigido a usuarios suscritos o con adhesión voluntaria.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
 
 ### Paso 6: Personaliza tu Canvas
 
@@ -106,7 +106,7 @@ Comenzaremos nuestra personalización pasando por cada paso de Mensaje para actu
     - Los mensajes de "Alerta Push+Email" que se envían a los usuarios que no han realizado una compra
 4. Actualiza el paso Rutas de acción seleccionando el grupo de acciones **Comprar**. A continuación, selecciona **Hacer una compra específica** y elige Vaqueros clásicos de pierna recta como producto.
 
-![Paso en Canvas de push móvil con un mensaje que notifica a los usuarios que un producto vuelve a estar disponible.][9]
+![Paso en Canvas de push móvil con un mensaje que notifica a los usuarios que un producto vuelve a estar disponible.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
 
 ### Paso 7: Prueba y lanza tu Canvas
 
@@ -116,12 +116,3 @@ Después de probar y revisar nuestro Canvas para asegurarnos de que funciona com
 Consulta nuestra [Lista de comprobación previa y posterior al lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber qué cosas debes tener en cuenta antes y después de lanzar un Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/back_in_stock_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/back_in_stock_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/back_in_stock_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/back_in_stock_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/back_in_stock_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/back_in_stock_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/back_in_stock_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/back_in_stock_8.png %}
-[9]: {% image_buster /assets/img/canvas_templates/back_in_stock_9.png %}

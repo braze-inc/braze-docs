@@ -16,7 +16,7 @@ channel: email
 
 Cuando los usuarios se incorporen a la aplicación, facilíteles consejos útiles para empezar a utilizarla y muéstreles sólo las funciones más esenciales. Intente enviar siempre un correo electrónico de bienvenida después de que un usuario se registre. El siguiente es un ejemplo de LivingSocial que contiene sencillas llamadas a la acción e informa a los usuarios sobre una oferta:
 
-![Correo electrónico de bienvenida enviado por LivingSocial para dar la bienvenida a los nuevos usuarios.][26]{: style="max-width:70%;"}
+![Correo electrónico de incorporación enviado por LivingSocial que da la bienvenida a los nuevos usuarios.]({% image_buster /assets/img_archive/Livingsocial_email.png %}){: style="max-width:70%;"}
 
 Sin embargo, demasiada información puede resultar abrumadora y potencialmente confusa si el usuario aún no está familiarizado con su aplicación. A medida que introduzcas más información sobre tu aplicación, puede ser útil proporcionar enlaces a tu documentación y hacer saber a los usuarios cómo pueden obtener asistencia.
 
@@ -26,7 +26,7 @@ Su contenido debe comunicar el valor de una promoción, como la información sob
 
 Para recomendar determinados productos, intente presentarlos como sugerencias curadas y personales que puedan gustar al usuario. Si promocionas una oferta por tiempo limitado, asegúrate de comunicárselo a los usuarios. Ideeli hace un gran trabajo transmitiendo urgencia en este correo electrónico:
 
-![Correo electrónico promocional enviado desde Ideeli que notifica a los usuarios una oferta por tiempo limitado. Un banner de gran tamaño contiene el texto "Finaliza a medianoche EDT. Venta flash de 6 horas. ¡Date prisa! Estos increíbles hallazgos no durarán mucho".][27]{: style="max-width:70%;"}
+![Correo electrónico promocional enviado desde Ideeli que notifica a los usuarios una oferta por tiempo limitado. Un banner de gran tamaño contiene el texto "Finaliza a medianoche EDT. Venta flash de 6 horas. ¡Date prisa! Estos increíbles hallazgos no durarán mucho"]({% image_buster /assets/img_archive/Ideeli_email.png %}){: style="max-width:70%;"}
 
 ## Transaccional
 
@@ -37,7 +37,7 @@ Después de que un usuario realice una compra dentro de una aplicación, aquí t
 
 Como acabas de prestar un servicio a los usuarios, es más probable que compartan sus opiniones. He aquí un ejemplo de correo electrónico de Restaurant.com:
 
-![Correo electrónico transaccional enviado desde Restaurants.com en el que se solicita la opinión de los usuarios. El correo electrónico dice: "¡Cuéntanoslo todo! Esperamos que haya disfrutado de su comida y de su experiencia en REDACTED. Para asegurarnos de que hacemos todo lo posible para ofrecerle el mejor servicio, comida y experiencia en general, tómese un momento para hacernos llegar sus comentarios. Tu opinión es muy valiosa para nosotros y apreciamos tus pensamientos." La llamada a la acción dice "Haz el cuestionario".][28]{: style="max-width:80%;"}
+![Correo electrónico transaccional enviado desde Restaurants.com en el que se solicita la opinión de los usuarios. El correo electrónico dice: "¡Cuéntanoslo todo! Esperamos que haya disfrutado de su comida y de su experiencia en REDACTED. Para asegurarnos de que hacemos todo lo posible para ofrecerle el mejor servicio, comida y experiencia en general, tómese un momento para hacernos llegar sus comentarios. Tu opinión es muy valiosa para nosotros y apreciamos tus pensamientos." La llamada a la acción dice "Haz el cuestionario".]({% image_buster /assets/img_archive/Restaurant_email.png %}){: style="max-width:80%;"}
 
 ## Retención
 
@@ -48,7 +48,7 @@ Mantén un tono amable. Esta puede ser su última oportunidad de recuperar usuar
 
 Intente que su mensaje sea personal para demostrar al usuario que se le sigue valorando. Rue La La, por ejemplo, enmarca el correo electrónico de retención como una nota de su director general:
 
-![Correo electrónico de retención enviado a los clientes con un mensaje personalizado del director general de Rue La La. El correo electrónico dice "Solo un saludo rápido. Como director general de Rue, me gusta estar en contacto con nuestros miembros. La mayoría me dicen lo mucho que quieren a Rue. (Y nos sentimos halagados.) Pero no parece que lo sientas... todavía. No voy a ser sutil aquí. Te voy a dar un crédito de 25 dólares para que vayas a comprar al sitio y encuentres lo que te gusta, ya sea un bolso de diseño, un nuevo par de vaqueros o algo increíble para tu casa. Creo (de verdad) que aquí es donde empezarás a sentir el amor de Rue. Que lo disfrutes".][29]{: style="max-width:80%;"}
+![Correo electrónico de retención enviado a los clientes con un mensaje personalizado del director general de Rue La La. El correo electrónico dice "Solo un saludo rápido. Como director general de Rue, me gusta estar en contacto con nuestros miembros. La mayoría me dicen lo mucho que quieren a Rue. (Y nos sentimos halagados.) Pero no parece que lo sientas... todavía. No voy a ser sutil aquí. Te voy a dar un crédito de 25 dólares para que vayas a comprar al sitio y encuentres lo que te gusta, ya sea un bolso de diseño, un nuevo par de vaqueros o algo increíble para tu casa. Creo (de verdad) que aquí es donde empezarás a sentir el amor de Rue. Disfruta!"]({% image_buster /assets/img_archive/Ruelala_email.png %}){: style="max-width:80%;"}
 
 ## Social
 
@@ -56,7 +56,7 @@ El correo electrónico puede ayudarle a crear una base de seguidores sociales di
 
 Que sea divertido. Pruebe a organizar un concurso de fotografía, promocionar un hashtag o hacer un sorteo. El siguiente es un correo electrónico de Hailo que ofrece una recompensa por participar en retos fotográficos:
 
-![Ejemplo de correo electrónico social de Hailo que notifica a sus usuarios que participen en un reto fotográfico.][30]{: style="max-width:70%;"}
+![Ejemplo de correo electrónico social de Hailo que notifica a sus usuarios que participen en un reto fotográfico.]({% image_buster /assets/img_archive/Hailo_social_email.png %}){: style="max-width:70%;"}
 
 ## Actualizaciones
 
@@ -64,12 +64,6 @@ Envíe actualizaciones de funciones nuevas o mejoradas a todos sus usuarios. Act
 
 Si su función requiere una explicación o demostración, incluya un enlace en el mensaje. Aquí tienes un ejemplo de Allrecipes.com:
 
-![Ejemplo de correo electrónico de Allrecipes centrado en una actualización que notifica a sus usuarios una nueva función. La parte superior del correo electrónico dice "Demasiado. Muchos. Contraseñas. ¿Cansado de contraseñas? Nosotros también". El cuerpo del correo electrónico dirige a los usuarios a iniciar sesión con Facebook o Google Plus, con una llamada a la acción de "Ver cómo".][31]{: style="max-width:70%;"}
+![Ejemplo de correo electrónico de Allrecipes centrado en una actualización que notifica a sus usuarios una nueva función. La parte superior del correo electrónico dice "Demasiado. Muchos. Contraseñas. ¿Cansado de contraseñas? Nosotros también". El cuerpo del correo electrónico dirige a los usuarios a iniciar sesión con Facebook o Google plus, con una llamada a la acción de "Ver cómo".]({% image_buster /assets/img_archive/Allrecipes_email.png %}){: style="max-width:70%;"}
 
 
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
-[27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
-[28]: {% image_buster /assets/img_archive/Restaurant_email.png %}
-[29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
-[30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
-[31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}

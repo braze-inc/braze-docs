@@ -35,17 +35,11 @@ guide_featured_list:
 
 Puede utilizar y gestionar plantillas y contenido creativo en la sección **Plantillas** para las siguientes funciones:
 
-- **[Plantillas de correo electrónico][2]**
-- **[Bloques de contenido][7]**
-- **[Plantillas de webhook][3]**
-- **[Plantillas de enlaces][6]**
-- **[Perfiles de color y plantillas CSS para mensajes integrados en la aplicación][4]**
-- **[Gestionar activos en la mediateca][5]**
+- **[Plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
+- **[Bloques de contenido]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Plantillas de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Plantillas de enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[Perfiles de color y plantillas CSS para mensajes integrados en la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Gestionar activos en la mediateca]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/

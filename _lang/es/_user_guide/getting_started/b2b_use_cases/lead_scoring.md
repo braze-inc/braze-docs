@@ -25,7 +25,7 @@ Hay dos pasos clave para crear un flujo de trabajo de puntuación de clientes po
 
 1. Ve a **Mensajería** > **Canvas** y selecciona **Crear Canvas**, y luego rellena los datos básicos de tu Canvas.
 
-2. Dele a su Canvas un nombre relevante como "Lead Scoring Canvas" y, para una mejor localización, etiquételo con algo como "Lead Management".<br><br>![Paso 1 de la creación de un Canvas con el nombre "Lead Scoring Canvas" y la etiqueta "Lead Management".][1]{: style="max-width:80%;"}
+2. Dele a su Canvas un nombre relevante como "Lead Scoring Canvas" y, para una mejor localización, etiquételo con algo como "Lead Management".<br><br>![Paso 1 de la creación de un Canvas con el nombre "Lead Scoring Canvas" y la etiqueta "Lead Management".]({% image_buster /assets/img/b2b/step_1_simple.png %}){: style="max-width:80%;"}
 
 ### Paso 2: Configura tus criterios de entrada
 
@@ -35,7 +35,7 @@ Hay dos pasos clave para crear un flujo de trabajo de puntuación de clientes po
     - **Cambia el valor del atributo personalizado** por el nombre de tu atributo de puntuación de clientes potenciales (como `lead score`). Si aún no ha creado un atributo de puntuación de clientes potenciales, siga los pasos de [Atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). Esto introducirá a los usuarios en el Canvas cada vez que cambie su puntuación de cliente potencial.
     - **Agregar una dirección de correo electrónico**
 
-![Paso 2 de la creación de un Canvas con el horario de entrada de "Basado en la acción" y las opciones basadas en la acción de cambiar un atributo personalizado "puntuación de clientes potenciales" y añadir una dirección de correo electrónico.][2]{: style="max-width:80%;"}
+![Paso 2 de la creación de un Canvas con el horario de entrada de "Basado en la acción" y las opciones basadas en la acción de cambiar un atributo personalizado "puntuación de clientes potenciales" y añadir una dirección de correo electrónico.]({% image_buster /assets/img/b2b/step_2_simple.png %}){: style="max-width:80%;"}
 
 ### Paso 3: Identificar tu audiencia objetivo
 
@@ -43,7 +43,7 @@ Hay dos pasos clave para crear un flujo de trabajo de puntuación de clientes po
 
 Todos los usuarios son elegibles para la puntuación de clientes potenciales, por lo que puede añadir reglas específicas de la empresa sobre a quién puntuar seleccionando a qué [segmentos de]({{site.baseurl}}/user_guide/engagement_tools/segments/) usuarios dirigirse y aplicando [filtros adicionales]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Por ejemplo, puede excluir a empleados, usuarios que ya son clientes y similares. 
 
-![Paso 3 de la creación de un Canvas con opciones para seleccionar segmentos y filtros para acotar la audiencia de entrada.][3]{: style="max-width:80%;"}
+![Paso 3 de la creación de un Canvas con opciones para seleccionar segmentos y filtros para acotar la audiencia de entrada.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
 #### Paso 3b: Configurar la reelegibilidad de Canvas
 
@@ -54,7 +54,7 @@ En **Controles de entrada**, haga lo siguiente:
 - Selecciona **Ventana especificada**.
 - Establezca la reelegibilidad en "0" **segundos**.
 
-![Sección "Controles de entrada" que tiene selecciones para "Permitir a los usuarios volver a entrar en este Canvas" en una "Ventana especificada" de 0 segundos.][4]{: style="max-width:80%;"}
+![Sección "Controles de entrada" que tiene selecciones para "Permitir a los usuarios volver a entrar en este Canvas" en una "Ventana especificada" de 0 segundos.]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
 
 #### Paso 3c: Actualizar la configuración de envío
 
@@ -62,7 +62,7 @@ Dada la naturaleza operativa de este Canvas y el hecho de que no se enviarán me
 
 En **Configuración de la suscripción**, en **Enviar a estos usuarios:** seleccione **todos los usuarios, incluidos los usuarios dados de baja**. 
 
-![Paso 4 de la creación de un Canvas para configurar las opciones de envío de mensajes.][5]{: style="max-width:80%;"}
+![Paso 4 de la creación de un Canvas para configurar las opciones de envío de mensajes.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
 
 ### Paso 4: Construye tu Canvas
 
@@ -70,7 +70,7 @@ En **Configuración de la suscripción**, en **Enviar a estos usuarios:** selecc
 
 Bajo tu variante, selecciona el ícono más y, a continuación, selecciona **Rutas de acción**.
 
-![Canvas con "Rutas de acción" en el menú que se abre con el ícono más.][6]{: style="max-width:60%;"}
+![Canvas con "Rutas de acción" mostradas en el menú abierto por el icono más.]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
 
 #### Paso 4b: Crear grupos de acción
 
@@ -83,19 +83,19 @@ Añada los siguientes grupos a su ruta de acción:
 - **Grupo 3:** Todos los eventos que cuentan para un decremento de 1 punto.
 - **Todos los demás:** Las rutas de acción permiten definir la ventana para esperar a ver si un usuario realiza una acción, antes de incluirlo en un grupo de "todos los demás". Para la puntuación de clientes potenciales, esta es una oportunidad para disminuir la puntuación por "inactividad".
 
-![Ruta de acción que contiene Grupos de Acción para sumar un punto, cinco puntos y diez puntos; restar un punto y diez puntos; y "Todos los demás".][7]
+![Ruta de acción que contiene Grupos de Acción para sumar un punto, cinco puntos y diez puntos; restar un punto y diez puntos; y "Todos los demás".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
 
 #### Paso 4c: Configure cada grupo para incluir los eventos pertinentes
 
 En cada Grupo de Acciones, seleccione **Seleccionar activador** y elija el evento que sumará el número de puntos para ese Grupo de Acciones en particular. Añada más disparadores para incluir todos los eventos que incrementarán en uno la puntuación de clientes potenciales. Por ejemplo, un usuario podría incrementar su puntuación en uno cuando inicia una sesión en cualquier aplicación o realiza un evento personalizado (como registrarse o unirse a un seminario web). 
 
-![Grupo de acciones para añadir un punto con los desencadenantes de "Iniciar sesión en cualquier aplicación" y "Realizar evento personalizado".][8]{: style="max-width:80%;"}
+![Grupo de acciones para añadir un punto con los desencadenantes de "Iniciar sesión en cualquier aplicación" y "Realizar evento personalizado".]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
 
 #### Paso 4d: Paso de actualización de usuario
 
 Añada un paso de Actualización de Usuario a cada ruta Canvas creada debajo de su Ruta de Acción. 
 
-![Lienzo que muestra la ruta de acción con rutas de actualización de usuario ramificadas para cada grupo de acciones.][9]{: style="max-width:80%;"}
+![Canvas que muestra la ruta de acción con rutas de actualización de usuario ramificadas para cada grupo de acción.]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
 
 {: start=”2”}
 En la pestaña **Redactar** de cada paso de Actualización de usuario, haga lo siguiente para los campos respectivos:
@@ -133,7 +133,7 @@ Como herramienta de marketing, Braze contiene datos extremadamente relevantes qu
 Por ejemplo, los datos de participación en la mensajería (como aperturas y clics de correos electrónicos, participación en la página de destino y otros) pueden determinar el nivel de participación de un cliente potencial. Puede devolver estos datos a su almacén de datos en la nube y hacer que estén disponibles como entrada para sus modelos de puntuación de clientes potenciales utilizando las soluciones de exportación de datos en flujo Braze:
 
 - [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- [Intercambio seguro de datos Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
+- [Intercambio seguro de datos Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze como destino %}
@@ -182,11 +182,11 @@ Para actualizar el registro de clientes potenciales en Salesforce con el estado 
 
 | Encabezado | Contenido |
 | --- | --- |
-| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_43ec163f-c61e-4cd4-882f-8cdd8d97f033/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_d664afea-b595-417b-accb-0a485396cb13/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Webhook que se compone de una URL de webhook de Salesforce, un método HTTP PATCH, un cuerpo de solicitud de texto sin formato y encabezados de solicitud.][10]{: style="max-width:80%;"}
+![Webhook que se compone con una URL de webhook de Salesforce, método HTTP PATCH, cuerpo de solicitud de texto sin procesar y encabezados de solicitud.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### Paso 2b: Programar envíos de webhooks
 
@@ -200,20 +200,9 @@ En el paso **Programar entrega**, seleccione lo siguiente:
 
 En el paso **Públicos objetivo**, incluya un filtro que excluya a los usuarios cuyo estado de cliente potencial ya esté en MQL o más allá, como "`lead_status` `is none of` `MQL`".
 
-![Las opciones de orientación del webhook con el filtro de "lead_status" no es ninguna de "MQL".][11]{: style="max-width:80%;"}
+![Las opciones de orientación del webhook con el filtro de "lead_status" no es ninguna de "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Paso 3: Lanzar campaña
 
 Seleccione **Lanzar** y observe cómo cambia el estado de sus clientes potenciales en Salesforce a medida que sus clientes cruzan el umbral de puntuación de clientes potenciales MQL.
 
-[1]: {% image_buster /assets/img/b2b/step_1_simple.png %}
-[2]: {% image_buster /assets/img/b2b/step_2_simple.png %}
-[3]: {% image_buster /assets/img/b2b/step_3_simple.png %}
-[4]: {% image_buster /assets/img/b2b/entry_controls_simple.png %}
-[5]: {% image_buster /assets/img/b2b/step_4_simple.png %}
-[6]: {% image_buster /assets/img/b2b/action_paths_simple.png %}
-[7]: {% image_buster /assets/img/b2b/action_paths_selected_simple.png %}
-[8]: {% image_buster /assets/img/b2b/action_groups_simple.png %}
-[9]: {% image_buster /assets/img/b2b/user_update_paths_simple.png %}
-[10]: {% image_buster /assets/img/b2b/webhook.png %}
-[11]: {% image_buster /assets/img/b2b/step_3_webhook.png %}

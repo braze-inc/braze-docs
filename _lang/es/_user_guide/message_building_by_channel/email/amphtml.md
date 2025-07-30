@@ -15,7 +15,7 @@ channel:
 
 ## Requisitos
 
-Braze no es responsable de que los usuarios se registren en Google ni de que cumplan los requisitos de seguridad necesarios.
+Braze no es responsable de que los usuarios se registren en Google ni de que cumplan los requisitos de seguridad necesarios. AMP para correo electrónico sólo está disponible para SparkPost y SendGrid.
 
 | Requisito   | Descripción |
 | --------------| ----------- |
@@ -42,7 +42,7 @@ Para obtener una lista completa de los clientes de correo electrónico compatibl
 
 Ve a la configuración de Gmail y selecciona **Activar correo electrónico dinámico** en **General**.
 
-![Ejemplo de configuración de Gmail con la casilla "Activar correo electrónico dinámico" seleccionada.][1]
+![Un ejemplo de configuración de Gmail con la casilla "Habilitar correo electrónico dinámico" seleccionada.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## Uso de la API
 
@@ -252,4 +252,3 @@ Si ninguna de estas condiciones está causando el error, ponte en contacto con [
 Abogamos por no segmentar para enviar a todos los tipos de usuarios. Esto se debe a que enviamos mensajes AMP en multiparte, teniendo diferentes versiones incluidas en el correo electrónico original. Si un usuario no puede ver la versión AMP, volverá predeterminada a HTML. 
 
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}

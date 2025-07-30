@@ -82,7 +82,7 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
 1. En LINE, ve a la pestaña **API de mensajería** y edita la **configuración de tu Webhook**:
    - Establezca la **URL del Webhook** en `https://anna.braze.com/line/events`.
       - Braze lo cambiará automáticamente a una URL diferente cuando se integre, basándose en el clúster de su panel de control.
-   - Activa **Usar webhook** y **Reenviar webhook**. <br><br> ![Página de configuración del webhook para verificar o editar la URL del webhook, activar o desactivar "Usar webhook", "Reenviar webhook" y "Agregación de estadísticas de error".][1]{: style="max-width:70%;"}
+   - Activa **Usar webhook** y **Reenviar webhook**. <br><br> ![Página de configuración del webhook para verificar o editar la URL del webhook, alternando entre "Usar webhook", "Reenvío de webhook" y "Agregación de estadísticas de errores".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Tome nota de la siguiente información en la pestaña **Proveedores**:
 
 | Tipo de información | Ubicación |
@@ -99,7 +99,7 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
    - Desactivar **los mensajes de respuesta automática**. Todos los mensajes activados deben ser a través de Braze. Esto no te impedirá enviar directamente desde la consola LINE.
    - Activar **Webhooks**.
 
-![Página de configuración de respuesta con opciones para gestionar los chats de tu cuenta.][2]{: style="max-width:80%;"}
+![Página de configuración de la respuesta con alternadores sobre cómo tu cuenta gestionará los chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### Paso 2.2: Generar grupos de suscripción LINE en Braze
 
@@ -109,16 +109,18 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
    - Secreto del canal
    - Token de acceso al canal
 
+Si quieres añadir una lista blanca de IP en tu cuenta de LINE, añade a tu lista de permitidas todas las direcciones IP que aparecen para tu clúster en la [lista de permitidas de IP]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting).
+
 {% alert important %}
 Durante la integración, asegúrate de que el secreto de tu canal es correcto. Si es incorrecto, puede haber incoherencias en el estado de la suscripción.
 {% endalert %}
 
-![Página de integración de mensajería LINE con la sección de integración LINE.][3]{: style="max-width:80%;"}
+![Página de integración de la mensajería LINE con la sección de integración de LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2\. Tras la conexión, Braze generará automáticamente un grupo de suscripción Braze para cada integración de LINE que se añada correctamente a tu espacio de trabajo. <br><br> Cualquier cambio que se produzca en tu lista de seguidores (como nuevos seguidores o dejar de seguirlos) se enviará automáticamente a Braze.
 
-![La sección de grupos de suscripción LINE muestra un grupo de suscripción para el canal "LINE".][4]{: style="max-width:80%;"}
+![Sección de grupos de suscripción LINE que muestra un grupo de suscripción para el canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Paso 3: Conciliar ID de usuario
 
@@ -318,7 +320,7 @@ Para obtener el ID de LINE correcto para cada usuario, inicia sesión en LINE co
 
 Este método permite a los usuarios vincular su cuenta de LINE a la cuenta de usuario de tu aplicación. A continuación, puedes utilizar Liquid en Braze, como {% raw %}`{{line_id}}`{% endraw %}, para crear una URL personalizada para el usuario que devuelva el ID de LINE del usuario a tu sitio web o aplicación, que podrá asociarse a un usuario conocido.
 
-1. Crea un Canvas basado en acciones que se base en un cambio de estado de suscripción y se desencadene cuando un usuario se suscriba a tu canal de LINE.<br>![][9]
+1. Crea un Canvas basado en acciones que se base en un cambio de estado de suscripción y se desencadene cuando un usuario se suscriba a tu canal de LINE.<br>![Canvas que se desencadena cuando un usuario se suscribe al canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Crea un mensaje que incentive a los usuarios a iniciar sesión en tu sitio web o aplicación, pasando el ID de LINE del usuario como parámetro de consulta (a través de Liquid), como por ejemplo
 
 ```
@@ -327,7 +329,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. Crea un mensaje de seguimiento que entregue el código del cupón.
-4\. (Opcional) Crea una campaña basada en acciones o Canvas que se desencadene cuando se identifique al usuario de LINE para enviarle su código de cupón. <br>![][10]
+4\. (Opcional) Crea una campaña basada en acciones o Canvas que se desencadene cuando se identifique al usuario de LINE para enviarle su código de cupón. <br>![Campaña basada en acciones que se desencadena cuando se identifica al usuario de LINE.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### Cómo funciona
 
@@ -373,7 +375,7 @@ if (user && isLoggedIn && lineUserId) {
 
 Puedes probar tu canal LINE antes de configurar [la conciliación de usuarios](#user-id-reconciliation) creando un Canvas o campaña "Quién soy".
 
-1. Configure un Canvas que devuelva el ID de usuario Braze de un usuario en una palabra desencadenante específica. <br><br>Ejemplo de desencadenante <br><br>![Activador para enviar la campaña a los usuarios que enviaron una LÍNEA de entrada a un grupo de suscripción específico.][7]{: style="max-width:80%;"}<br><br>Ejemplo de mensaje<br><br>![Mensaje LINE indicando el ID de usuario Braze.][8]{: style="max-width:40%;"}<br><br>
+1. Configure un Canvas que devuelva el ID de usuario Braze de un usuario en una palabra desencadenante específica. <br><br>Ejemplo de desencadenante <br><br>![Desencadena el envío de la campaña a los usuarios que enviaron una LÍNEA de entrada a un grupo de suscripción específico.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Ejemplo de mensaje<br><br>![Mensaje de LINE con el ID de usuario de Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. En Braze, puede utilizar el ID de Braze para buscar usuarios específicos y modificarlos según sea necesario.
 
@@ -382,13 +384,3 @@ Asegúrese de que el lienzo no tiene control global o grupos de control que impi
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/line/webhook_settings.png %}
-[2]: {% image_buster /assets/img/line/response_settings.png %}
-[3]: {% image_buster /assets/img/line/integration.png %}
-[4]: {% image_buster /assets/img/line/line_subscription_groups.png %}
-[5]: {% image_buster /assets/img/line/filter_group.png %}
-[6]: {% image_buster /assets/img/line/csv_export_user_data.png %}
-[7]: {% image_buster /assets/img/line/trigger.png %}
-[8]: {% image_buster /assets/img/line/message.png %}
-[9]: {% image_buster /assets/img/line/account_link_1.png %}
-[10]: {% image_buster /assets/img/line/account_link_2.png %}

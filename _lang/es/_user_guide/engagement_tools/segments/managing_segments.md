@@ -1,7 +1,7 @@
 ---
 nav_title: Administrador de segmentos
 article_title: Administrador de segmentos
-page_order: 1.1
+page_order: 1
 page_type: tutorial
 tool: Segments
 description: "Este artículo cubre las acciones que puede realizar para gestionar sus segmentos, como filtrar una lista de segmentos, crear segmentos y editar segmentos."
@@ -12,7 +12,7 @@ description: "Este artículo cubre las acciones que puede realizar para gestiona
 
 > La sección Segmentos le permite ver una lista completa de sus segmentos existentes, crear nuevos segmentos y editar segmentos existentes. Puede refinar la lista de segmentos seleccionando una variedad de filtros y columnas para que sólo se muestre la información más relevante para usted.
 
-![La sección Segmentos muestra una lista de los segmentos activos.][1]
+![La sección Segmentos muestra una lista de los segmentos Activos.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Personalizar la vista
 
@@ -50,7 +50,7 @@ Si selecciona **Mostrar sólo marcados**, la vista se limitará a los segmentos 
 
 ## Gestión de segmentos específicos
 
-![El menú de edición de un segmento muestra las opciones "Editar", "Duplicar", "Archivar" y "Añadir a destacados".][2]{: style="float:right;max-width:25%;"}
+![El menú de edición de un segmento muestra las opciones "Editar", "Duplicar", "Archivar" y "Añadir a destacados".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 Para gestionar un segmento concreto, pase el ratón por encima de él y seleccione el icono de menú situado al final de la fila para ver las siguientes opciones:
 - **Editar:** Edita los filtros de tu segmento.
@@ -60,7 +60,7 @@ Para gestionar un segmento concreto, pase el ratón por encima de él y seleccio
  
 También puede realizar acciones en bloque -en concreto, archivar y etiquetar en bloque- marcando las casillas situadas junto a los nombres de varios segmentos.
 
-![Múltiples segmentos seleccionados con "CRM" seleccionado en el campo desplegable "Etiquetar como".][3]{: style="max-width:45%;"}
+![Múltiples segmentos seleccionados con "CRM" seleccionado en el campo desplegable "Etiquetar como".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### cambios desde la última visualización
 
@@ -71,9 +71,5 @@ Busque nombres de segmentos introduciendo términos en el campo de búsqueda.
 
 Se buscarán todos los términos y cadenas introducidos en este campo. Por ejemplo, la búsqueda de "segmento de prueba 1" devolverá segmentos con "prueba", "segmento" o "1" en cualquier parte de su nombre. Para buscar una cadena exacta, escriba el término de búsqueda entre comillas. La búsqueda ["segmento de prueba 1"] devolverá todos los segmentos que contengan la frase exacta "segmento de prueba 1" en su nombre.
 
-![Los resultados de la búsqueda al introducir "todos los usuarios" en el campo de búsqueda incluyen "Todos los usuarios (Prueba)", "Todos los usuarios", "Todos los usuarios 15".][4]
+![Los resultados de la búsqueda al introducir "todos los usuarios" en el campo de búsqueda incluyen "Todos los usuarios (Prueba)", "Todos los usuarios", "Todos los usuarios 15".]({% image_buster /assets/img/segment/segments_search.png %})
 
-[1]: {% image_buster /assets/img/segment/segments_page.png %}
-[2]: {% image_buster /assets/img/segment/segments_page_edit_menu.png %}
-[3]: {% image_buster /assets/img/segment/segments_bulk_action.png %}
-[4]: {% image_buster /assets/img/segment/segments_search.png %}

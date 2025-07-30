@@ -18,11 +18,8 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Integraciones móviles
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Preguntas frecuentes
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## Más información sobre ubicaciones y geovallas
@@ -36,4 +33,3 @@ Puede recopilar y utilizar los datos de localización de los usuarios de varias 
 
 - Cuando un usuario abre tu aplicación, el seguimiento de localización captura sus ubicaciones más recientes utilizando datos de localización GPS. Esto le permite ver dónde han estado sus usuarios y segmentar en función de estos datos.
 - Las geovallas son áreas geográficas virtuales definidas. Si un usuario ha habilitado el seguimiento de ubicación en segundo plano, puedes utilizar geovallas para desencadenar campañas en tiempo real cuando un usuario se encuentre en una geovalla.
-<br><br><br>

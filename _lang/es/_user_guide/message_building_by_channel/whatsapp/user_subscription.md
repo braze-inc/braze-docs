@@ -25,15 +25,15 @@ Existen dos estados de suscripción para los usuarios de WhatsApp: `subscribed` 
 
 ### Cómo configurar los grupos de suscripción de WhatsApp de los usuarios
 
-- **API REST:** Los perfiles de usuario pueden establecerse mediante programación en [`/subscription/status/set` endpoint][4] utilizando la API REST de Braze.
-- **SDK Web:** Los usuarios pueden añadirse a un grupo de suscripción por correo electrónico, SMS o WhatsApp mediante el método `addToSubscriptionGroup` para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) o [Web][11].
+- **API REST:** Los perfiles de usuario se pueden configurar mediante programación en el [punto final`/subscription/status/set` ]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) utilizando la API REST de Braze.
+- **SDK Web:** Los usuarios pueden añadirse a un grupo de suscripción por correo electrónico, SMS o WhatsApp utilizando el método `addToSubscriptionGroup` para [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) o [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup).
 - **Importación de usuarios**: Los usuarios pueden añadirse a grupos de suscripción por correo electrónico o SMS mediante **Importar usuarios**. Al actualizar el estado del grupo de suscripción, debe tener estas dos columnas en su CSV: `subscription_group_id` y `subscription_state`. Consulte [Importación de usuarios]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) para obtener más información.
 
 ### Cómo comprobar el grupo de suscripción de WhatsApp de un usuario
 
 - **Perfil del usuario:** Se puede acceder a los perfiles de usuario individuales a través del panel Braze desde **Audiencia** > **Buscar usuarios**. Aquí puede buscar perfiles de usuario por dirección de correo electrónico, número de teléfono o ID de usuario externo. Cuando estás dentro del perfil de un usuario, en la pestaña **Compromiso**, puedes ver el grupo de suscripción de WhatsApp de un usuario y su estado.
 
-- **API REST:** Los perfiles de usuario individuales del grupo de suscripción se pueden ver mediante el punto final [Listar grupos de suscripción del usuario][9] o el punto final [Listar estado del grupo de suscripción del usuario][8] utilizando la API REST de Braze. 
+- **API REST:** Los perfiles de usuario individuales del grupo de suscripción pueden verse mediante el [punto final Listar]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) [grupos de suscripción de usuario]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) o el [punto final Listar estado del grupo de suscripción de usuario]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) utilizando la API REST de Braze. 
 
 ## Proceso de adhesión voluntaria y exclusión voluntaria de WhatsApp
 
@@ -47,7 +47,7 @@ Independientemente de los métodos de adhesión voluntaria y de cancelación que
 
 - Cree un [webhook Braze-to-Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) que actualice el estado de la suscripción a través de REST API, como en el ejemplo siguiente:
 
-![][1]{: style="max-width:90%;"}
+![Webhook compositor de un mensaje utilizando el método POST.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 Para evitar condiciones de carrera, cualquier mensaje de seguimiento después del webhook debe estar contenido en un segundo Canvas que se active por los resultados del primer Canvas (como que un usuario haya entrado en una variación del Canvas y esté en un grupo de suscripción de WhatsApp).
 
@@ -75,15 +75,9 @@ Para evitar condiciones de carrera, cualquier mensaje de seguimiento después de
 	}
 	```
 
-![][2]{: style="max-width:90%;"}
+![Paso de actualización de usuario con un paso avanzado de editor JSON.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 La actualización del estado de suscripción de un usuario puede tardar hasta 60 segundos.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp118.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}
-[4]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[11]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup

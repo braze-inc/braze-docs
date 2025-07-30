@@ -13,16 +13,16 @@ channel:
 
 # Normativa sobre correo no deseado
 
-> Hay una serie de leyes que regulan a los remitentes de comunicaciones electrónicas, incluidos el correo electrónico, las notificaciones push y los SMS. Siempre debe conocer las [normativas locales][4] que puedan afectarle a usted o a sus usuarios. 
+> Hay una serie de leyes que regulan a los remitentes de comunicaciones electrónicas, incluidos el correo electrónico, las notificaciones push y los SMS. Siempre debe conocer las [normativas locales](https://en.wikipedia.org/wiki/Email_spam_legislation_by_country) que puedan afectarle a usted o a sus usuarios. 
 
 Braze proporciona información relevante basada en nuestra propia investigación, pero también debe consultar el texto completo de estas leyes para obtener detalles completos y actualizados.
 
-- [CAN-SPAM][1]
-- [Ley canadiense contra el correo no deseado][2]
+- [CAN-SPAM](#can-spam)
+- [Ley canadiense contra el correo no deseado](#casl)
 
 ## CAN-SPAM
 
-La Ley CAN-SPAM de 2003 regula los remitentes de correo electrónico en la dirección U.S. que envíen "cualquier mensaje de correo electrónico cuyo propósito principal sea la publicidad comercial o la promoción de un producto o servicio comercial". Puede obtener más información en el sitio web oficial [de la Comisión Federal de Comercio][5].
+La Ley CAN-SPAM de 2003 regula los remitentes de correo electrónico en la dirección U.S. que envíen "cualquier mensaje de correo electrónico cuyo propósito principal sea la publicidad comercial o la promoción de un producto o servicio comercial". Puede obtener más información en el sitio web oficial [de la Comisión Federal de Comercio](http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business).
 
 Hay siete requisitos clave para CAN-SPAM:
 
@@ -38,7 +38,7 @@ Los correos electrónicos transaccionales están exentos de estas normas, a exce
 
 ## Ley canadiense contra el correo no deseado (CASL) {#casl}
 
-El 1 de julio de 2014 entra en vigor la Ley canadiense contra el spam (CASL) para los correos electrónicos enviados a residentes canadienses. Puede leer el texto completo de la ley en el [sitio web de leyes de justicia][3] del Gobierno de Canadá. En esencia, la ley establece que los destinatarios canadienses tanto de correo electrónico como de notificaciones push deben dar su consentimiento "expreso o implícito" para que usted se comunique con ellos.
+El 1 de julio de 2014 entra en vigor la Ley canadiense contra el spam (CASL) para los correos electrónicos enviados a residentes canadienses. Puede leer el texto completo de la ley en el [sitio web de leyes de justicia](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) del Gobierno de Canadá. En esencia, la ley establece que los destinatarios canadienses tanto de correo electrónico como de notificaciones push deben dar su consentimiento "expreso o implícito" para que usted se comunique con ellos.
 
 ### CASL frente a CAN-SPAM
 
@@ -62,7 +62,7 @@ Los siguientes tipos de mensajes están exentos de los requisitos de la CASL:
 - Mensajes de notificación de información factual sobre la suscripción, afiliación o cuenta
 - Mensajes de entrega de un producto o servicio, incluidas actualizaciones o mejoras de productos
 
->  Esta no es la lista completa de exenciones. Para más detalles, consulte el [texto completo de la ley][3].
+>  Esta no es la lista completa de exenciones. Para más detalles, consulte el [texto completo de la ley](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html).
 
 ### Consentimiento de mensajes
 
@@ -112,11 +112,5 @@ En iOS, siempre se ha pedido a tus usuarios la adhesión voluntaria a las notifi
 
 ### Android {#spam-android}
 
-En Android, sus usuarios pueden suponer que han optado por el opt-in implícito que figura en su política de privacidad o en su acuerdo de licencia de usuario final. Puede que quieras implementar un proceso de adhesión voluntaria expresa, quizás en una pantalla inicial justo cuando el usuario inicia la aplicación por primera vez. Visite el artículo sobre [las mejores prácticas de Push][6] para obtener más información. También puedes orientar al usuario sobre los tipos de notificaciones push que recibirá, aumentando así la tasa de adhesión voluntaria.
+En Android, sus usuarios pueden suponer que han optado por el opt-in implícito que figura en su política de privacidad o en su acuerdo de licencia de usuario final. Puede que quieras implementar un proceso de adhesión voluntaria expresa, quizás en una pantalla inicial justo cuando el usuario inicia la aplicación por primera vez. Visite el artículo sobre [las mejores prácticas de Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) para obtener más información. También puedes orientar al usuario sobre los tipos de notificaciones push que recibirá, aumentando así la tasa de adhesión voluntaria.
 
-[1]: #can-spam
-[2]: #casl
-[3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: Legislación sobre correo electrónico no deseado por países"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "Ley CAN-SPAM: Guía de cumplimiento para empresas"
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

@@ -19,8 +19,8 @@ description: "Este artículo de referencia explica los distintos componentes del
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message),
-  "message": (required, object) message object specifying fields the required fields based on the specified message_type. See Message Types for field specifications.
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message),
+  "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
 
@@ -100,6 +100,8 @@ Actualmente, sólo se puede especificar una variable de botón, que es el compon
 }
 ```
 
+### Mensajes de respuesta
+
 #### text_response_message
 
 ```json
@@ -169,5 +171,83 @@ Actualmente, sólo se puede especificar una variable de botón, que es el compon
       "text": "No thanks"
     }
   ]
+}
+```
+
+#### lista_mensaje_respuesta
+
+El tipo `list_response_message` te permite enviar un mensaje basado en una lista en WhatsApp. Este tipo de mensaje incluye una lista de elementos con los que el destinatario puede interactuar.
+
+```json
+{
+  "header": (optional, string) the header of the message to send,
+  "body": (required, string) the body of the message to send,
+  "footer": (optional, string) the footer of the message to send,
+  "list": (required, object) the list object that contains:
+    "list_button_text": (required, string) the text that will appear on the list button,
+    "list_sections": (required, array) an array of List Section Objects
+}
+```
+
+#### Lista Sección Objeto
+
+```json
+{
+  "section_title": (required, string) The title of the section,
+  "list_rows": (required, array) An array of List Row Objects
+}
+```
+
+#### Lista Fila Objeto
+
+```json
+{
+  "row_title": (required, string) The title of the row,
+  "row_description": (optional, string) The description for the row
+}
+```
+
+##### Restricciones
+
+- **lista_secciones**: Debe tener al menos una sección.
+- **lista_filas**: Puedes incluir un máximo de 10 filas en todas las secciones.
+- **row_description**: Opcional para cada fila.
+
+##### Ejemplo
+
+```json
+{
+  "body": "Here is a list of options to choose from:",
+  "list": {
+    "list_button_text": "Choose an option",
+    "list_sections": [
+      {
+        "section_title": "Section 1",
+        "list_rows": [
+          {
+            "row_title": "Option 1"
+          },
+          {
+            "row_title": "Option 2",
+            "row_description": "Description for Option 2"
+          }
+        ]
+      },
+      {
+        "section_title": "Section 2",
+        "list_rows": [
+          {
+            "row_title": "Option 3"
+          },
+          {
+            "row_title": "Option 4"
+          },
+          {
+            "row_title": "Option 5"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```

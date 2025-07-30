@@ -183,7 +183,7 @@ Más preguntas que puede responder con este informe:
 {% tab Datos de los segmentos %}
 **Datos de los segmentos**
 
-Si ha activado el [seguimiento analítico]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) para un segmento, abra ese segmento para ver [los Datos del segmento]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/). Segment Data realiza un seguimiento de las sesiones, los eventos personalizados y los ingresos a lo largo del tiempo para los usuarios correspondientes.
+Si ha activado el [seguimiento analítico]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) para un segmento, abra ese segmento para ver [los Datos del segmento]({{site.baseurl}}/viewing_and_understanding_segment_data/). Segment Data realiza un seguimiento de las sesiones, los eventos personalizados y los ingresos a lo largo del tiempo para los usuarios correspondientes.
 
 Consulte esta página para conocer estas estadísticas:
 
@@ -289,7 +289,7 @@ Más preguntas que puede responder con este informe:
 {% tab Predictive Churn %}
 **Predictive Churn**
 
-[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) es el primer modelo de [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/). Utilice Predictive Churn para definir y generar predicciones, proporcionando un enfoque proactivo para minimizar futuras bajas.
+[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) es el primer modelo de [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/). Utilice Predictive Churn para definir y generar predicciones, proporcionando un enfoque proactivo para minimizar futuras bajas.
 
 Dado que cada empresa define la rotación y la retención de forma diferente, sólo tiene que introducir sus definiciones en Predictive Churn y Braze hará el resto. También puede crear campañas o lienzos para actuar a partir de las predicciones o crear segmentos para análisis posteriores.
 
