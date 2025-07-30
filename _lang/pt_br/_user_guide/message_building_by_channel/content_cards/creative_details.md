@@ -11,7 +11,7 @@ tool: Media
 
 # Detalhes criativos para cartões de conteúdo
 
-> A personalização dos cartões de conteúdo e do feed em que eles estão localizados não pode ser feita durante o processo de criação da campanha - você deve trabalhar com seus engenheiros e desenvolvedores para criar e personalizar seus cartões. Para obter detalhes técnicos, visite nossa [documentação do desenvolvedor][7].
+> A personalização dos cartões de conteúdo e do feed em que eles estão localizados não pode ser feita durante o processo de criação da campanha - você deve trabalhar com seus engenheiros e desenvolvedores para criar e personalizar seus cartões. Para obter detalhes técnicos, visite nossa [documentação para desenvolvedores]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
 
 ## Tipos de cartão de conteúdo
 
@@ -46,11 +46,11 @@ O cartão de imagem legendada é uma ótima maneira de exibir e atrair a atenç�
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Banner %}
+{% tab Somente imagem %}
 
-Se quiser algo sofisticado, o cartão de banner é para você. Isso é totalmente personalizado de acordo com o que você deseja que seja. Basta criar seu conteúdo em outro lugar e fazer upload dele para obter um belo cartão que é só seu.
+Se quiser ter mais controle criativo, o cartão somente para imagens é ideal para você. Crie sua imagem usando qualquer ferramenta de sua preferência e faça upload da imagem para esse tipo de cartão.
 
-![Imagem de um banner com detalhes recomendados e um exemplo de banner]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Imagem de um cartão de conteúdo somente de imagem com detalhes recomendados e um exemplo somente de imagem]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Capacidade do cartão | Informações |
 | --- | ---|
@@ -63,17 +63,17 @@ Se quiser algo sofisticado, o cartão de banner é para você. Isso é totalment
 
 ## Detalhes criativos globais {#general}
 
-Os cartões de conteúdo vêm com grande funcionalidade desde o início. No momento, a estilização do cartão não pode ser feita nativamente em sua conta Braze, mas você pode estilizar seu cartão de conteúdo por tipo e o feed do cartão de conteúdo durante a integração. Consulte [Personalização de cartões de conteúdo][4] para saber mais.
+Os cartões de conteúdo vêm com grande funcionalidade desde o início. No momento, a estilização do cartão não pode ser feita nativamente em sua conta Braze, mas você pode estilizar seu cartão de conteúdo por tipo e o feed do cartão de conteúdo durante a integração. Para saber mais, consulte [Personalização de cartões de conteúdo]({{site.baseurl}}/developer_guide/content_cards/).
 
 ### Comportamento de demissão
 
 Para um usuário descartar um cartão, ele pode passar o dedo no celular ou usar a função `close X`, conforme mostrado na captura de tela a seguir. O endereço `x` aparecerá ao passar o mouse somente para o SDK Web.
 
-![Imagem que mostra os comportamentos de passar o dedo ou fechar o descarte de um cartão][5]
+![Imagem que mostra os comportamentos de descarte de cartão por deslizar ou fechar]({% image_buster /assets/img/dismissal-cc.png %})
 
 Se um usuário tiver descartado todos os seus cartões ou se você não tiver empurrado nenhuma nova atualização, o feed do usuário geralmente terá a seguinte aparência:
 
-![Imagem de um feed de cartão de conteúdo vazio][6]{: style="max-width:45%"}
+![Imagem de um feed de cartão de conteúdo vazio]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 Mantenha os cartões de conteúdo relevantes, configurando-os para serem descartados quando um usuário realizar ações relevantes. Por exemplo, configure os cartões de conteúdo promocionais para serem descartados assim que os usuários fizerem uma compra, para que eles não continuem a ver uma oferta para algo que já compraram.
@@ -88,10 +88,3 @@ Mantenha os cartões de conteúdo relevantes, configurando-os para serem descart
 
 <br><br>
 
-[1]: {% image_buster /assets/img/content_card_classic.png %}
-[2]: {% image_buster /assets/img/content_card_captioned.png %}
-[3]: {% image_buster /assets/img/content_card_banner.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {% image_buster /assets/img/dismissal-cc.png %}
-[6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview
