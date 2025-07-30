@@ -17,7 +17,7 @@ tool:
 
 ## 개요
 
-For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) you've chosen for the campaign. 또한 특정 속성이나 행동을 가진 사용자가 전환할 가능성이 얼마나 높은지 또는 낮은지도 계산하여 유의미한 경우 표의 해당 면에 표시합니다. 각 속성 또는 관심 행동을 가진 사용자를 전체 캠페인 오디언스 전체의 비율과 비교합니다. 전환과 유의미한 상관관계가 없는 행동 및 속성은 표에 표시되지 않습니다.
+For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) you've chosen for the campaign. 또한 특정 속성이나 행동을 가진 사용자가 전환할 가능성이 얼마나 높은지 또는 낮은지도 계산하여 유의미한 경우 표의 해당 면에 표시합니다. 각 속성 또는 관심 행동을 가진 사용자를 전체 캠페인 오디언스 전체의 비율과 비교합니다. 전환과 유의미한 상관관계가 없는 행동 및 속성은 표에 표시되지 않습니다.
 
 전환 상관관계 분석을 실행하려면 드롭다운 메뉴에서 관심 있는 전환 이벤트를 선택합니다.
 

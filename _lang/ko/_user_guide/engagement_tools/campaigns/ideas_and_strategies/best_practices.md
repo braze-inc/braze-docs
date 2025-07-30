@@ -16,7 +16,7 @@ Braze는 Braze 플랫폼에서 활용할 의도가 있는 고객 데이터만 �
 - **타겟** 오디언스를 구축하여 [오디언스 세그먼트]({{site.baseurl}}/user_guide/engagement_tools/segments/)를 만드세요.
 - 메시지를 [실행 기반]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) 또는 [API 트리거된]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) 전달로 **트리거**합니다.
 - **템플릿** 및 [Liquid 조건 로직]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid)으로 메시지를 개인화하세요.
-- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
+- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 이렇게 하면 Braze에 보내는 데이터를 최적화하고 사용자가 추적하지 않는 데이터 포인트를 장기적으로 유용하지 않다고 생각할 수 있는 경우에도 메시지를 보낼 수 있는 기능을 간소화할 수 있습니다. 
 

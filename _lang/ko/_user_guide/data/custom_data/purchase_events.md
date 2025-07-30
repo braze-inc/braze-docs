@@ -19,13 +19,13 @@ search_rank: 3
 
 다음은 구매를 기록하는 데 사용되는 다양한 플랫폼의 방법을 나열한 것입니다. 이 페이지에서는 구매 이벤트에 속성 및 수량을 추가하는 방법에 대한 설명서도 확인할 수 있습니다. 이러한 속성을 기반으로 사용자를 추가로 타겟팅할 수 있습니다.
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## 구매 데이터 보기
 
@@ -256,10 +256,6 @@ Braze에서는 구매 개체에 대한 몇 가지 일반적인 이름 지정 규
 데이터 포인트를 너무 많이 소비하거나 마케팅 전략에 더 이상 유용하지 않거나 오류로 기록된 구매 이벤트를 식별하는 경우가 있습니다. 이 데이터가 Braze로 전송되지 않도록 하려면 엔지니어링 팀이 앱이나 웹사이트의 백엔드에서 해당 데이터를 제거하는 작업을 하는 동안 사용자 지정 데이터 개체를 차단 목록에 추가할 수 있습니다.
 
 Braze 대시보드의 **데이터 설정** > **제품**에서 차단 목록을 관리할 수 있습니다. 자세한 내용은 [사용자 지정 데이터 관리하기를]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) 참조하세요.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정 관리에서** **제품을** 찾을 수 있습니다.
-{% endalert %}
 
 [1]: {% image_buster /assets/img/purchase_filter_example.gif %}
 [2]: {% image_buster /assets/img/purchase2.png %}

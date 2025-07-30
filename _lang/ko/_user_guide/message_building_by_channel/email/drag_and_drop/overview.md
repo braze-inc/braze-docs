@@ -87,10 +87,6 @@ tool:
 
 **템플릿** 섹션에서 모든 템플릿에 액세스할 수도 있습니다.
 
-{% alert note %}
-[이전 탐색을 사용하는]({{site.baseurl}}/navigation) 경우 템플릿은 **템플릿 및 미디어** 아래에 있습니다.
-{% endalert %}
-
 템플릿을 선택하면 **이메일 변형** 아래에 전송 정보 및 이메일 본문이 포함된 이메일 개요가 표시됩니다. 
 
 Then, select **Edit Email Body** to begin designing the email structure in the drag-and-drop editor. 
@@ -238,7 +234,7 @@ When composing your message, you can toggle the text direction between left-to-r
 
 ![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.][1]{: style="max-width:50%;"}
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ### 링크에 HTML 속성 추가
 
@@ -256,7 +252,7 @@ The final appearance of right-to-left messages depends largely on how service pr
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` ( [사용자 지정 하위 경로를](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) 구성해야 함)
 
-유니버설 링크를 설정하려면 [유니버설 링크 및 앱 링크]({{site.baseurl}}/help/help_articles/email/universal_links/)를 참조하세요.
+유니버설 링크를 설정하려면 [유니버설 링크 및 앱 링크]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)를 참조하세요.
 
 또는 [브랜치]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/)나 [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) 같은 어트리뷰션 파트너와 통합하여 유니버설 링크를 관리할 수도 있습니다.
 

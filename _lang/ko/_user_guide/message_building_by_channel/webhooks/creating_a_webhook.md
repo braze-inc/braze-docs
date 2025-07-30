@@ -28,16 +28,10 @@ search_rank: 2
 **단계:**
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-
-{% alert note %}
-이전 탐색을 사용하는 경우 참여 아래에서 캠페인을 찾을 수 있습니다.
-{% endalert %}
-
-{:start="2"}
-2\. 웹훅을 선택하거나, 여러 채널을 타겟팅하는 캠페인의 경우, 다채널을 선택하십시오.
-3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. (선택 사항) 이 캠페인이 어떻게 사용될 것인지에 대한 설명을 추가하십시오.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+2. **웹훅**을 선택하거나, 여러 채널을 타겟팅하는 캠페인의 경우 **다채널**을 선택하세요.
+3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
+4. (선택 사항) 이 캠페인이 어떻게 사용될 것인지에 대한 설명을 추가하십시오.
+4. 필요에 따라 [팀]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) 및 [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)를 추가하세요.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 변형에 대해 서로 다른 웹훅 템플릿을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -79,7 +73,7 @@ URL과 요청 본문에서 [국제화가][16] 지원됩니다. 메시지를 국�
 
 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. 사용할 수 있는 전체 언어 목록은 지원되는 언어를 참조하십시오.
 
-If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### 웹훅 URL
 
@@ -182,7 +176,7 @@ URL 인코딩된 문자열이 포함된 요청 본문.
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 {% endtab %}
 
@@ -237,51 +231,7 @@ Braze는 다음 IP에서 웹훅을 전송합니다. 나열된 IP는 허용 목�
 Braze-to-Braze 웹훅을 만들고 허용 목록을 사용하는 경우 `127.0.0.1`을 포함하여 다음 IP를 모두 허용 목록에 추가해야 합니다.
 {% endalert %}
 
-| `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` 인스턴스: |
-|---|
-| `127.0.0.1`
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| 인스턴스 `EU-01` 및 `EU-02`의 경우: |
-|---|
-| `127.0.0.1`
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88` 
-
-| `US-08` 인스턴스의 경우: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Braze 파트너와 웹훅 사용 {#utilizing-webhooks}
 

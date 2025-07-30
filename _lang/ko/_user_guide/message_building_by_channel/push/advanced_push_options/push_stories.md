@@ -33,7 +33,11 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 
 ![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-푸시 스토리를 사용하려면 [푸시 캠페인]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)을 생성하고 **푸시 스토리**를 **알림 유형**으로 선택하세요.
+푸시 스토리를 사용하려면 다음과 같이 하세요:
+
+1. [푸시 캠페인을]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) 만듭니다.
+2. **알림 유형에서** **푸시 스토리를** 선택합니다.
+3. **iOS** 또는 **Android를** 선택합니다. 푸시 메시지에 대해 두 가지를 모두 선택하면 푸시 스토리 만들기 옵션이 표시되지 않습니다. 
 
 ### 푸시 스토리 작성기
 
