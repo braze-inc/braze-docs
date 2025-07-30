@@ -143,7 +143,6 @@ braze.featureFlags.subscribeToUpdates() { _ in
 
 // Only show the Live Chat view if the Braze SDK determines it is enabled
 liveChatView.isHidden = !liveChatEnabled
-
 ```
 
 {% endtab %}
