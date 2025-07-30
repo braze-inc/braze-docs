@@ -1,3 +1,3 @@
 {% alert important %}
-Only the users who match your defined criteria in the **Target Audiences** step can be eligible to receive your campaign, meaning Braze evaluates the target audience first then confirms if they've triggered the entry criteria specified in the **Schedule Delivery** step.
+ Your message will only send to users who already match the conditions you set in the **Target Audience** step. After that, they still need to meet the trigger you define in the **Schedule Delivery** step. Think of the target audience as a waiting room—only people already inside can move forward when the next action happens. 
 {% endalert %}
