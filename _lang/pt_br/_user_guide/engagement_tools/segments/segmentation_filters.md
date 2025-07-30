@@ -1,5 +1,5 @@
 ---
-page_order: 1.2
+page_order: 2
 nav_title: Filtros de Segmentação
 article_title: Filtros de Segmentação
 layout: glossary_page
@@ -71,7 +71,7 @@ glossaries:
     tags:
       - Custom events
   - name: Realizou pela última vez um evento personalizado 
-    description: "Determina a última vez que um usuário realizou um evento especialmente registrado. (período de 24 horas) <br><br>Exemplo:<br> Último Carrinho Abandonado Há menos de 1 dia<br><br>Fuso horário:<br>Fuso Horário da Empresa"
+    description: "Determina a última vez que um usuário realizou um evento especialmente registrado. Esse filtro aceita decimais, como 0,25 horas. (período de 24 horas) <br><br>Exemplo:<br> Último Carrinho Abandonado Há menos de 1 dia<br><br>Fuso horário:<br>Fuso Horário da Empresa"
     tags:
       - Custom events
   - name: Evento personalizado X em Y dias
@@ -127,11 +127,11 @@ glossaries:
     tags:
       - Sessions
   - name: Recebeu mensagem de campanha
-    description: "Segmenta seus usuários por terem ou não recebido uma campanha específica.<br><br> Para Cartões de Conteúdo e mensagens no app, isso ocorre quando um usuário registra uma impressão, não quando o cartão ou a mensagem no app é enviada.<br><br>Para push e webhooks, é quando a mensagem é enviada ao usuário.<br><br> Para o WhatsApp, isso ocorre quando a última solicitação de API de mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário."
+    description: "Segmenta seus usuários por terem ou não recebido uma campanha específica.<br><br> Para cartões de conteúdo, banners e mensagens no app, é quando um usuário registra uma impressão, não quando o cartão ou a mensagem no app é enviada.<br><br>Para push e webhooks, é quando a mensagem é enviada ao usuário.<br><br> Para o WhatsApp, isso ocorre quando a última solicitação de API de mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário."
     tags:
       - Retargeting
   - name: Recebeu variante de campanha
-    description: "Segmenta seus usuários por qual variante de uma campanha multivariante eles receberam.<br><br> Para Cartões de Conteúdo e mensagens no app, isso ocorre quando um usuário registra uma impressão, não quando o cartão ou a mensagem no app é enviada.<br><br>Para push e webhooks, é quando a mensagem é enviada ao usuário.<br><br> Para o WhatsApp, isso ocorre quando a última solicitação de API de mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário."
+    description: "Segmenta seus usuários por qual variante de uma campanha multivariante eles receberam.<br><br> Para cartões de conteúdo, banners e mensagens no app, é quando um usuário registra uma impressão, não quando o cartão ou a mensagem no app é enviada.<br><br>Para push e webhooks, é quando a mensagem é enviada ao usuário.<br><br> Para o WhatsApp, isso ocorre quando a última solicitação de API de mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário."
     tags:
       - Retargeting
   - name: Recebeu mensagem de uma etapa de um canva
@@ -147,7 +147,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Recebeu mensagem de campanha ou canva com tag
-    description: "Segmenta seus usuários por terem ou não recebido uma campanha específica ou canva com uma tag específica.<br><br> Para Cartões de Conteúdo e mensagens no app, isso ocorre quando um usuário registra uma impressão, não quando o cartão ou a mensagem no app é enviada.<br><br>Para push e webhooks, é quando a mensagem é enviada ao usuário.<br><br> Para o WhatsApp, isso ocorre quando a última solicitação de API de mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário."
+    description: "Segmenta seus usuários por terem ou não recebido uma campanha específica ou canva com uma tag específica.<br><br> Para cartões de conteúdo, banners (somente campanhas) e mensagens no app, é quando um usuário registra uma impressão, não quando o cartão ou a mensagem no app é enviada.<br><br>Para push e webhooks, é quando a mensagem é enviada ao usuário.<br><br> Para o WhatsApp, isso ocorre quando a última solicitação de API de mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário."
     tags:
       - Retargeting
   - name: Recebeu mensagem de campanha ou canva com tag pela última vez
@@ -180,14 +180,6 @@ glossaries:
       - Retargeting
   - name: Último recebimento por WhatsApp
     description: "Segmenta seus usuários pela última vez que receberam uma mensagem do WhatsApp. Isso é quando a solicitação de API da última mensagem é enviada para o WhatsApp, não quando a mensagem é entregue no dispositivo do usuário. (período de 24 horas)<br><br>Fuso horário:<br>Fuso Horário da Empresa"
-    tags:
-      - Retargeting
-  - name: Última visualização do feed de notícias
-    description: Segmenta seus usuários pela última vez que visualizaram o feed de notícias.
-    tags:
-      - Retargeting
-  - name: Contagem de visualizações do feed de notícias
-    description: Segmenta seus usuários pelo número de vezes que visualizaram o feed de notícias.
     tags:
       - Retargeting
   - name: Campanha clicada/aberta
@@ -259,11 +251,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Último recebimento de qualquer mensagem
-    description: "Segmenta seus usuários determinando a última mensagem que foi recebida. (período de 24 horas)<br><br> Para Cartões de Conteúdo e mensagens no app, isso é quando um usuário registrou uma impressão pela última vez, não quando o cartão ou mensagem no app foi enviado pela última vez.<br><br>Para push e webhooks, isso é quando qualquer mensagem foi enviada ao usuário.<br><br> Para o WhatsApp, isso é quando a última solicitação de API de mensagem foi enviada para o WhatsApp, não quando a mensagem foi entregue ao dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário.<br><br>Exemplo:<br>Última mensagem recebida há menos de 1 dia = menos de 24 horas atrás<br><br>Fuso horário:<br>Fuso Horário da Empresa"
+    description: "Segmenta seus usuários determinando a última mensagem que foi recebida. (período de 24 horas)<br><br> Para cartões de conteúdo, banners e mensagens no app, é quando um usuário registrou uma impressão pela última vez, não quando o cartão ou a mensagem no app foi enviada pela última vez.<br><br>Para push e webhooks, isso é quando qualquer mensagem foi enviada ao usuário.<br><br> Para o WhatsApp, isso é quando a última solicitação de API de mensagem foi enviada para o WhatsApp, não quando a mensagem foi entregue ao dispositivo do usuário. <br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando a última mensagem foi entregue ao provedor de SMS. Isso não garante que a mensagem foi entregue ao dispositivo do usuário.<br><br>Exemplo:<br>Última mensagem recebida há menos de 1 dia = menos de 24 horas atrás<br><br>Fuso horário:<br>Fuso Horário da Empresa"
     tags:
       - Retargeting
   - name: Última interação com mensagem
-    description: "Segmenta seus usuários pela última vez que clicaram ou abriram um dos seus canais de envio de mensagens (cartão de conteúdo, e-mail, no app, SMS, push, WhatsApp). Para o envio de mensagens de e-mail, o evento de abertura inclui tanto as aberturas por máquina quanto as que não são por máquina. (período de 24 horas)<br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Isso também inclui a opção de filtrar por \"abriu qualquer e-mail (aberturas de máquina)\" e \"abriu qualquer e-mail (outras aberturas)\". Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando o usuário selecionou pela última vez qualquer link encurtado em uma mensagem que tem o rastreamento de cliques do usuário ativado.<br><br>Fuso horário:<br>Fuso Horário da Empresa"
+    description: "Segmenta seus usuários pela última vez em que clicaram ou abriram um de seus canais de envio de mensagens (banners, cartão de conteúdo, e-mail, no app, SMS, push, WhatsApp). Para o envio de mensagens de e-mail, o evento de abertura inclui tanto as aberturas por máquina quanto as que não são por máquina. (período de 24 horas)<br><br>Para e-mails, isso é quando uma solicitação de e-mail é enviada ao prestador de serviço de e-mail (independentemente se ela realmente é entregue). Isso também inclui a opção de filtrar por \"abriu qualquer e-mail (aberturas de máquina)\" e \"abriu qualquer e-mail (outras aberturas)\". Quando vários usuários compartilham o mesmo e-mail:<br>- No envio inicial, apenas o perfil do usuário específico é atualizado. <br>- Quando o e-mail é entregue, ou se o usuário então abrir o e-mail ou um link no e-mail, todos os usuários que compartilham esse endereço de e-mail parecerão ter recebido a mensagem.<br><br>Para SMS, isso é quando o usuário selecionou pela última vez qualquer link encurtado em uma mensagem que tem o rastreamento de cliques do usuário ativado.<br><br>Fuso horário:<br>Fuso Horário da Empresa"
     tags:
       - Retargeting
   - name: Cartão clicado 
@@ -303,7 +295,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Notificações por push em segundo plano ativadas
-    description: Segmenta seus usuários com base em se eles ativaram o push em segundo plano ou não.
+    description: Segmenta de acordo com o fato de os usuários terem um token por push e não terem cancelado a inscrição.
     tags:
       - Channel subscription behavior
   - name: Data de aceitação de recebimento de push
