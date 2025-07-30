@@ -1,16 +1,16 @@
-# CODE OWNERS FILE FOR BRAZE DOCS
-# For additional information, refer to: https://help.github.com/articles/about-codeowners/
+# CODEOWNERS file for Braze Docs
+# For details, see: https://help.github.com/articles/about-codeowners/
 
 # SUPPORT CONTACT
-# Since some customers use this article to reach Support, it’s critical that it always works properly.
+# This article is used by some customers to reach Support, so it must remain reliable.
 /_docs/_hidden/other/support_contact.md @braze-inc/docs-team
 
 # LIQUID USE CASE LIBRARY
-# Validate that new and updated use cases are tested before merging them in.
+# Ensure new and updated Liquid use cases are tested before merging.
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @rachel-feinberg
 
 # INGESTION ENDPOINTS
-# Ingestion owns Data Transformation templates for the following endpoints.
+# The Ingestion team owns Data Transformation templates for these endpoints.
 /_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie
 /_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/ingestion @lydia-xie
 /_docs/_api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item.md @braze-inc/ingestion @lydia-xie
@@ -20,10 +20,11 @@
 /_docs/_api/endpoints/messaging/send_messages/post_send_triggered_canvases.md @braze-inc/ingestion @lydia-xie
 
 # CURRENTS EVENTS
-# Currents owns event payload auto-generation templates for these endpoints.
+# These docs are auto-generated from a separate repo, so the Currents team must verify changes to event payload templates.
 /_docs/_user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events.md @braze-inc/currents @braze-inc/docs-team
 /_docs/_user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events.md @braze-inc/currents @braze-inc/docs-team
 
 # CUSTOM SCRIPTS
+# These scripts share global variables and interdependencies, so changes must be verified to avoid breaking other scripts.
 /bdocs @internetisaiah
 /scripts @internetisaiah
