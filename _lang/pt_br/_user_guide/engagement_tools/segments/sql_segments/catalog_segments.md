@@ -64,7 +64,7 @@ Se tiver criado um segmento no qual espera que os usuários entrem e saiam regul
 
 ### Designar configurações de atualização
 
-{% multi_lang_include segments.md seção='Atualizar configurações' %}
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## Casos de uso
 
