@@ -11,11 +11,11 @@ tool:
 
 # Aprovações para campanhas e telas
 
-> O processo de aprovação de campanhas e Canvas adiciona um processo de revisão ao seu fluxo de trabalho antes do lançamento. Dessa forma, você pode verificar se cada seção na final da campanha ou do editor do Canva foi aprovada para o lançamento.
+> O processo de aprovação de campanhas e Canvas adiciona um processo de revisão ao seu fluxo de trabalho antes do lançamento. Dessa forma, você pode verificar se cada seção da final da campanha ou do editor do Canva foi aprovada para o lançamento.
 
 ## Como funciona?
 
-Você pode revisar os detalhes de sua campanha ou do Canva na etapa final do editor. Para campanhas, esse é o **Resumo da revisão** e, para telas, esse é o **Resumo**. 
+Você pode revisar os detalhes de sua campanha ou do Canva na etapa final do editor. Para campanhas, isso é **Resumo da revisão**, e para telas, isso é **Resumo**. 
 
 Se o administrador tiver ativado o fluxo de trabalho de aprovação, cada seção do resumo deverá ser aprovada por um usuário com as permissões apropriadas antes que a mensagem possa ser iniciada. O status padrão de cada seção é **Pending Approval (Aprovação pendente**).
 
@@ -29,7 +29,7 @@ Para lançar uma campanha, você deve aprovar esses componentes principais:
 - **Eventos de conversão:** Essa é a métrica que você está rastreando para fins de engajamento e relatórios.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Para lançar um Canva, você deve aprovar esses componentes principais:
 
 - **Eventos de conversão:** Essa é a métrica que você está rastreando para fins de engajamento e relatórios.
@@ -59,7 +59,7 @@ Depois que o fluxo de trabalho de aprovação for ativado, será necessário def
 Você deve ter a [ permissão "Approve and Deny Campaigns" (Aprovar e recusar campanhas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions)). Essa permissão controla quem pode atualizar o status de aprovação de uma campanha. É possível autoaprovar componentes de uma campanha.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Você deve ter a [ permissão "Approve and Deny Canvases" (Aprovar e recusar telas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions)). Um usuário com essa permissão pode realizar qualquer uma das seguintes ações no fluxo de trabalho do Canva:
 
 - Aprovar, mas não lançar o Canva
