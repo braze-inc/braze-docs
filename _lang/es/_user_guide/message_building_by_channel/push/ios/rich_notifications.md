@@ -21,9 +21,9 @@ tool:
 
 Antes de crear una notificación push enriquecidas para iOS, ten en cuenta los siguientes detalles:
 
-- Para asegurarte de que tu aplicación puede enviar notificaciones enriquecidas, sigue las instrucciones de [integración push de iOS][1], ya que tu desarrollador tendrá que añadir una extensión de servicio a tu aplicación.
+- Para asegurarte de que tu aplicación puede enviar notificaciones enriquecidas, sigue las instrucciones de [integración push de iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications), ya que tu desarrollador tendrá que añadir una extensión de servicio a tu aplicación.
 - Los tipos de archivo que actualmente admitimos para la carga directa en nuestro panel de control son JPEG, PNG o GIF. Estos archivos también pueden introducirse en el campo de URL planificable junto con estos tipos de archivo adicionales: AIF, M4A, MP3, MP4 o WAV.
-- Consulta [la documentación de Apple][2] para conocer las limitaciones y especificaciones de los soportes.
+- Consulta [la documentación de Apple](https://developer.apple.com/reference/usernotifications/unnotificationattachment) para conocer las limitaciones y especificaciones de los soportes.
 - Las notificaciones enriquecidas de iOS no están disponibles al crear una campaña push rápida.
 - iOS escalará las imágenes para que quepan en la pantalla y escalará las imágenes enriquecidas para la vista activa o bloqueada.
 
@@ -121,30 +121,23 @@ Los siguientes detalles también pueden influir en el truncamiento del texto:
 
 ### Paso 1: Crear una campaña push
 
-Sigue los [pasos de la campaña][3] para redactar una notificación push para iOS. Utilizará el mismo compositor que utiliza para configurar las notificaciones push que no contienen contenido enriquecido.
+Sigue los [pasos de la campaña]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) para redactar una notificación push para iOS. Utilizará el mismo compositor que utiliza para configurar las notificaciones push que no contienen contenido enriquecido.
 
 ### Paso 2: Añadir medios
 
 Añada su archivo de imagen, GIF, audio o vídeo en el campo **Rich Notification Media** del redactor del mensaje. Consulte los [requisitos](#requirements) sobre cómo añadir sus archivos de contenido.
 
-![Un ejemplo de texto resumido para una notificación push.][4]{: style="max-width:70%;" }
+![Un ejemplo de texto resumido para una notificación push.]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 También puedes limitar este mensaje para que solo se envíe a usuarios que tengan un dispositivo con iOS 10. Para los usuarios que no hayan actualizado a iOS 10, aparecerá como notificaciones de solo texto sin el contenido enriquecido si dejas desmarcada la opción **Solo enviar a dispositivos compatibles con notificaciones enriquecidas**.
 
-![La sección Imagen de notificación ampliada, donde puedes añadir una imagen o introducir una URL de imagen.][5]{: style="max-width:70%;" }
+![La sección Ampliada de imágenes de notificación donde puedes añadir una imagen o introducir una URL de imagen.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### Paso 3: Sigue creando tu campaña
 
-Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes continuar [programando tu campaña][6].
+Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes seguir [programando tu campaña]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign).
 
 Cuando un usuario recibe la notificación push, puede pulsar con fuerza sobre el mensaje push para ampliar la imagen.
 
-![Un usuario recibe una notificación push y pulsa con fuerza el mensaje para mostrar una imagen expandida que dice "¡Hola!".][8]{: style="max-width:50%;" }
+![Un usuario recibe una notificación push y pulsa con fuerza el mensaje para mostrar una imagen expandida que dice "¡Hola!".]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
-[2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}
-[5]: {% image_buster /assets/img_archive/rich_notification_ios10_select.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
-[8]: {% image_buster /assets/img_archive/rich_notification_ios.gif %}
