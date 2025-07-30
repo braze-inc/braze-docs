@@ -14,10 +14,14 @@ description: "Este artículo ofrece una visión general de la configuración mul
 
 Para editar y administrar el soporte multilingüe, debes tener el permiso de usuario "Administrar configuración multilingüe". Para añadir la configuración regional a un mensaje, necesitarás permisos para editar campañas.
 
+{% alert important %}
+El soporte multilingüe está actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
+{% endalert %}
+
 ## Añadir una configuración regional
 
 1. Vaya a **Configuración** > **Soporte multilingüe** en **Configuración del espacio de trabajo**.
-2. Selecciona **Añadir configuración regional** y, a continuación, selecciona **Configuración regional predeterminada** o **Atributos personalizados**.<br><br>![El desplegable "Añadir localización" con opciones para seleccionar la localización predeterminada o atributos personalizados.][1]{: style="max-width:40%;"}
+2. Selecciona **Añadir configuración regional** y, a continuación, selecciona **Configuración regional predeterminada** o **Atributos personalizados**.<br><br>![El desplegable "Añadir localización" con opciones para seleccionar la localización predeterminada o atributos personalizados.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Introduce un nombre para la configuración regional.
 4. Selecciona los atributos de usuario correspondientes a la opción de localización que hayas elegido.
 
@@ -67,4 +71,3 @@ Los archivos de traducción se almacenan a nivel de campaña, lo que significa q
 
 No. Puedes utilizar la convención de nomenclatura que prefieras. El nombre de la configuración regional se utiliza al seleccionar la configuración regional en el editor y aparecerá en los encabezados del archivo que descargue con los identificadores de traducción.
 
-[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}
