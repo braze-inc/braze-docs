@@ -43,7 +43,7 @@ Para solicitar una actualización a Data Transformation Pro, póngase en contact
 
 ### Límites de tarifa
 
-El límite de velocidad para la Transformación de datos de Braze es de 1000 solicitudes entrantes por minuto. Si tienes Transformación de datos Pro y necesitas un límite de velocidad superior, ponte en contacto con tu director de cuentas Braze.
+El límite de velocidad para las Transformaciones de Datos Braze es de 1.000 solicitudes entrantes por minuto y espacio de trabajo. Si tienes Transformación de datos Pro y necesitas un límite de velocidad superior, ponte en contacto con tu director de cuentas Braze.
 
 ## Preguntas más frecuentes
 
@@ -74,5 +74,3 @@ En la mayoría de los casos, sí. La Transformación de datos de Braze crea, fin
 Póngase en contacto con su gestor de cuentas Braze para obtener más ayuda.
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}
