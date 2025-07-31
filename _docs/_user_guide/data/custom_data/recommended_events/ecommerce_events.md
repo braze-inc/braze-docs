@@ -43,11 +43,10 @@ You can use the product viewed event to trigger when a customer views a product 
 
 #### Example objects
 
-{% tabs %}
-{% tab SDK Example %}
+{% subtabs %}
+{% subtab Web SDK %}
 
 ```javascript
-// Web SDK
 braze.logCustomEvent("ecommerce.product_viewed", {
     "product_id": "4111176",
     "product_name": "Brasil sneaker",
@@ -66,8 +65,10 @@ braze.logCustomEvent("ecommerce.product_viewed", {
 });
 ```
 
+{% endsubtab %}
+{% subtab Android SDK %}
+
 ```java
-// Android SDK
 BrazeProperties properties = new BrazeProperties()
     .addProperty("product_id", "4111176")
     .addProperty("product_name", "Brasil sneaker")
@@ -86,8 +87,10 @@ BrazeProperties properties = new BrazeProperties()
 Braze.getInstance(context).logCustomEvent("ecommerce.product_viewed", properties);
 ```
 
+{% endsubtab %}
+{% subtab Swift SDK %}
+
 ```swift
-// iOS SDK
 let properties: [String: Any] = [
     "product_id": "4111176",
     "product_name": "Brasil sneaker",
@@ -108,8 +111,8 @@ let properties: [String: Any] = [
 AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: properties)
 ```
 
-{% endtab %}
-{% tab API Example %}
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
@@ -140,8 +143,8 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.cart_updated %}
 
@@ -196,11 +199,10 @@ If there are two carts, add both to the merged user. Re-enqueue the Canvas if it
 
 #### Example objects
 
-{% tabs %}
-{% tab SDK Example %}
+{% subtabs %}
+{% subtab Web SDK %}
 
 ```javascript
-// Web SDK
 braze.logCustomEvent("ecommerce.cart_updated", {
     "cart_id": "cart_12345",
     "currency": "USD",
@@ -227,8 +229,10 @@ braze.logCustomEvent("ecommerce.cart_updated", {
 });
 ```
 
+{% endsubtab %}
+{% subtab Android SDK %}
+
 ```java
-// Android SDK
 JSONArray products = new JSONArray();
 JSONObject product = new JSONObject()
     .put("product_id", "8266836345064")
@@ -256,8 +260,10 @@ BrazeProperties properties = new BrazeProperties()
 Braze.getInstance(context).logCustomEvent("ecommerce.cart_updated", properties);
 ```
 
+{% endsubtab %}
+{% subtab Swift SDK %}
+
 ```swift
-// iOS SDK
 let products: [[String: Any]] = [
     [
         "product_id": "8266836345064",
@@ -288,8 +294,8 @@ let properties: [String: Any] = [
 AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: properties)
 ```
 
-{% endtab %}
-{% tab API Example %}
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
@@ -328,8 +334,8 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
@@ -370,11 +376,10 @@ Similar to the `ecommerce.cart_updated` event, this event allows you to leverage
 
 #### Example objects
 
-{% tabs %}
-{% tab SDK Example %}
+{% subtabs %}
+{% subtab Web SDK %}
 
 ```javascript
-// Web SDK
 braze.logCustomEvent("ecommerce.checkout_started", {
     "checkout_id": "checkout_abc123",
     "cart_id": "cart_12345",
@@ -401,8 +406,10 @@ braze.logCustomEvent("ecommerce.checkout_started", {
 });
 ```
 
+{% endsubtab %}
+{% subtab Android SDK %}
+
 ```java
-// Android SDK
 JSONArray products = new JSONArray();
 JSONObject product = new JSONObject()
     .put("product_id", "632910392")
@@ -429,8 +436,10 @@ BrazeProperties properties = new BrazeProperties()
 Braze.getInstance(context).logCustomEvent("ecommerce.checkout_started", properties);
 ```
 
+{% endsubtab %}
+{% subtab Swift SDK %}
+
 ```swift
-// iOS SDK
 let products: [[String: Any]] = [
     [
         "product_id": "632910392",
@@ -461,8 +470,8 @@ let properties: [String: Any] = [
 AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties: properties)
 ```
 
-{% endtab %}
-{% tab API Example %}
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
@@ -501,8 +510,8 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.order_placed %}
 
@@ -539,11 +548,10 @@ You can use the order placed event to trigger when a customer successfully compl
 
 #### Example objects
 
-{% tabs %}
-{% tab SDK Example %}
+{% subtabs %}
+{% subtab Web SDK %}
 
 ```javascript
-// Web SDK
 braze.logCustomEvent("ecommerce.order_placed", {
     "order_id": "order_67890",
     "cart_id": "cart_12345",
@@ -581,8 +589,10 @@ braze.logCustomEvent("ecommerce.order_placed", {
 });
 ```
 
+{% endsubtab %}
+{% subtab Android SDK %}
+
 ```java
-// Android SDK
 JSONArray discounts = new JSONArray();
 discounts.put(new JSONObject()
     .put("code", "SAVE10")
@@ -620,8 +630,10 @@ BrazeProperties properties = new BrazeProperties()
 Braze.getInstance(context).logCustomEvent("ecommerce.order_placed", properties);
 ```
 
+{% endsubtab %}
+{% subtab Swift SDK %}
+
 ```swift
-// iOS SDK
 let discounts: [[String: Any]] = [
     [
         "code": "SAVE10",
@@ -665,8 +677,8 @@ let properties: [String: Any] = [
 AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: properties)
 ```
 
-{% endtab %}
-{% tab API Example %}
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
@@ -716,8 +728,8 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: pr
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.order_refunded %}
 
@@ -752,11 +764,10 @@ You can use the order refunded event to trigger when an order is partially or en
 
 #### Example objects
 
-{% tabs %}
-{% tab SDK Example %}
+{% subtabs %}
+{% subtab Web SDK %}
 
 ```javascript
-// Web SDK
 braze.logCustomEvent("ecommerce.order_refunded", {
     "order_id": "order_67890",
     "total_value": 99.99,
@@ -792,8 +803,10 @@ braze.logCustomEvent("ecommerce.order_refunded", {
 });
 ```
 
+{% endsubtab %}
+{% subtab Android SDK %}
+
 ```java
-// Android SDK
 JSONArray discounts = new JSONArray();
 discounts.put(new JSONObject()
     .put("code", "SAVE5")
@@ -829,8 +842,10 @@ BrazeProperties properties = new BrazeProperties()
 Braze.getInstance(context).logCustomEvent("ecommerce.order_refunded", properties);
 ```
 
+{% endsubtab %}
+{% subtab Swift SDK %}
+
 ```swift
-// iOS SDK
 let discounts: [[String: Any]] = [
     [
         "code": "SAVE5",
@@ -872,8 +887,8 @@ let properties: [String: Any] = [
 AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_refunded", properties: properties)
 ```
 
-{% endtab %}
-{% tab API Example %}
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
@@ -921,8 +936,8 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_refunded", properties: 
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.order_cancelled %}
 
@@ -957,11 +972,10 @@ You can use the order cancelled event to trigger when a customer cancels an orde
 
 #### Example objects
 
-{% tabs %}
-{% tab SDK Example %}
+{% subtabs %}
+{% subtab Web SDK %}
 
 ```javascript
-// Web SDK
 braze.logCustomEvent("ecommerce.order_cancelled", {
     "order_id": "order_67890",
     "cancel_reason": "customer changed mind",
@@ -997,8 +1011,10 @@ braze.logCustomEvent("ecommerce.order_cancelled", {
 });
 ```
 
+{% endsubtab %}
+{% subtab Android SDK %}
+
 ```java
-// Android SDK
 JSONArray discounts = new JSONArray();
 discounts.put(new JSONObject()
     .put("code", "SAVE10")
@@ -1034,8 +1050,10 @@ BrazeProperties properties = new BrazeProperties()
 Braze.getInstance(context).logCustomEvent("ecommerce.order_cancelled", properties);
 ```
 
+{% endsubtab %}
+{% subtab Swift SDK %}
+
 ```swift
-// iOS SDK
 let discounts: [[String: Any]] = [
     [
         "code": "SAVE10",
@@ -1077,8 +1095,8 @@ let properties: [String: Any] = [
 AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties: properties)
 ```
 
-{% endtab %}
-{% tab API Example %}
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
@@ -1126,8 +1144,8 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 {% endtab %}
 {% endtabs %}
