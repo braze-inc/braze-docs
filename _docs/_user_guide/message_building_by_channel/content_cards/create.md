@@ -178,7 +178,7 @@ The entire data payload for a single Content Card cannot exceed 2 KB **after** a
 
 * Title
 * Message
-* Image URL (the length of the URL stringitself, not the image file size)
+* Image URL (the length of the URL string itself, not the image file size)
 * Link Text
 * Link URLs for all specified platforms (separate URLs for iOS, Android, and Web all count towards the total)
 * Key-Value Pairs (both the key names and their values)
