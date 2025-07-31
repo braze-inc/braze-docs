@@ -49,18 +49,18 @@ You can use the product viewed event to trigger when a customer views a product 
 ```javascript
 braze.logCustomEvent("ecommerce.product_viewed", {
     "product_id": "4111176",
-    "product_name": "Brasil sneaker",
+    "product_name": "Torchie runners",
     "variant_id": "4111176700",
-    "image_url": "https://example-store.com/images/products/large/brasil-sneaker.jpg",
-    "product_url": "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/",
+    "image_url": "https://braze-apparel.com/images/products/large/torchie-runners.jpg",
+    "product_url": "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/",
     "price": 85,
     "currency": "GBP",
-    "source": "https://example-store.com/",
+    "source": "https://braze-apparel.com/",
     "metadata": {
         "sku": "",
-        "colour": "DARK MYRTLE-TANGERINE",
+        "color": "ORANGE",
         "size": "6",
-        "brand": "Torchie"
+        "brand": "Braze"
     }
 });
 ```
@@ -71,18 +71,18 @@ braze.logCustomEvent("ecommerce.product_viewed", {
 ```java
 BrazeProperties properties = new BrazeProperties()
     .addProperty("product_id", "4111176")
-    .addProperty("product_name", "Brasil sneaker")
+    .addProperty("product_name", "Torchie runners")
     .addProperty("variant_id", "4111176700")
-    .addProperty("image_url", "https://example-store.com/images/products/large/brasil-sneaker.jpg")
-    .addProperty("product_url", "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/")
+    .addProperty("image_url", "https://braze-apparel.com/images/products/large/torchie-runners.jpg")
+    .addProperty("product_url", "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/")
     .addProperty("price", 85)
     .addProperty("currency", "GBP")
-    .addProperty("source", "https://example-store.com/")
+    .addProperty("source", "https://braze-apparel.com/")
     .addProperty("metadata", new JSONObject()
         .put("sku", "")
-        .put("colour", "DARK MYRTLE-TANGERINE")
+        .put("color", "ORANGE")
         .put("size", "6")
-        .put("brand", "Torchie"));
+        .put("brand", "Braze"));
 
 Braze.getInstance(context).logCustomEvent("ecommerce.product_viewed", properties);
 ```
@@ -93,18 +93,18 @@ Braze.getInstance(context).logCustomEvent("ecommerce.product_viewed", properties
 ```swift
 let properties: [String: Any] = [
     "product_id": "4111176",
-    "product_name": "Brasil sneaker",
+    "product_name": "Torchie runners",
     "variant_id": "4111176700",
-    "image_url": "https://example-store.com/images/products/large/brasil-sneaker.jpg",
-    "product_url": "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/",
+    "image_url": "https://braze-apparel.com/images/products/large/torchie-runners.jpg",
+    "product_url": "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/",
     "price": 85,
     "currency": "GBP",
-    "source": "https://example-store.com/",
+    "source": "https://braze-apparel.com/",
     "metadata": [
         "sku": "",
-        "colour": "DARK MYRTLE-TANGERINE",
+        "color": "ORANGE",
         "size": "6",
-        "brand": "Torchie"
+        "brand": "Braze"
     ]
 ]
 
@@ -124,18 +124,18 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
       "time": "2024-01-15T09:03:45Z",
       "properties": {
         "product_id": "4111176",
-        "product_name": "Brasil sneaker",
+        "product_name": "Torchie runners",
         "variant_id": "4111176700",
-        "image_url": "https://example-store.com/images/products/large/brasil-sneaker.jpg",
-        "product_url": "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/",
+        "image_url": "https://braze-apparel.com/images/products/large/torchie-runners.jpg",
+        "product_url": "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/",
         "price": 85,
         "currency": "GBP",
-        "source": "https://example-store.com/",
+        "source": "https://braze-apparel.com/",
         "metadata": {
           "sku": "",
-          "colour": "DARK MYRTLE-TANGERINE",
+          "color": "ORANGE",
           "size": "6",
-          "brand": "Torchie"
+          "brand": "Braze"
         }
       }
     }
@@ -212,19 +212,19 @@ braze.logCustomEvent("ecommerce.cart_updated", {
             "product_id": "8266836345064",
             "product_name": "Classic T-Shirt",
             "variant_id": "44610569208040",
-            "image_url": "https://example-store.com/images/tshirt-blue-medium.jpg",
-            "product_url": "https://example-store.com/products/classic-tshirt?variant=44610569208040",
+            "image_url": "https://braze-apparel.com/images/tshirt-blue-medium.jpg",
+            "product_url": "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040",
             "quantity": 2,
             "price": 99.99,
             "metadata": {
                 "sku": "TSH-BLU-M",
-                "colour": "Blue",
+                "color": "BLUE",
                 "size": "Medium",
-                "brand": "ExampleBrand"
+                "brand": "Braze"
             }
         }
     ],
-    "source": "https://example-store.com",
+    "source": "https://braze-apparel.com",
     "metadata": {}
 });
 ```
@@ -238,15 +238,15 @@ JSONObject product = new JSONObject()
     .put("product_id", "8266836345064")
     .put("product_name", "Classic T-Shirt")
     .put("variant_id", "44610569208040")
-    .put("image_url", "https://example-store.com/images/tshirt-blue-medium.jpg")
-    .put("product_url", "https://example-store.com/products/classic-tshirt?variant=44610569208040")
+    .put("image_url", "https://braze-apparel.com/images/tshirt-blue-medium.jpg")
+    .put("product_url", "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040")
     .put("quantity", 2)
     .put("price", 99.99)
     .put("metadata", new JSONObject()
         .put("sku", "TSH-BLU-M")
-        .put("colour", "Blue")
+        .put("color", "BLUE")
         .put("size", "Medium")
-        .put("brand", "ExampleBrand"));
+        .put("brand", "Braze"));
 products.put(product);
 
 BrazeProperties properties = new BrazeProperties()
@@ -254,7 +254,7 @@ BrazeProperties properties = new BrazeProperties()
     .addProperty("currency", "USD")
     .addProperty("total_value", 199.98)
     .addProperty("products", products)
-    .addProperty("source", "https://example-store.com")
+    .addProperty("source", "https://braze-apparel.com")
     .addProperty("metadata", new JSONObject());
 
 Braze.getInstance(context).logCustomEvent("ecommerce.cart_updated", properties);
@@ -269,15 +269,15 @@ let products: [[String: Any]] = [
         "product_id": "8266836345064",
         "product_name": "Classic T-Shirt",
         "variant_id": "44610569208040",
-        "image_url": "https://example-store.com/images/tshirt-blue-medium.jpg",
-        "product_url": "https://example-store.com/products/classic-tshirt?variant=44610569208040",
+        "image_url": "https://braze-apparel.com/images/tshirt-blue-medium.jpg",
+        "product_url": "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040",
         "quantity": 2,
         "price": 99.99,
         "metadata": [
             "sku": "TSH-BLU-M",
-            "colour": "Blue",
+            "color": "BLUE",
             "size": "Medium",
-            "brand": "ExampleBrand"
+            "brand": "Braze"
         ]
     ]
 ]
@@ -287,7 +287,7 @@ let properties: [String: Any] = [
     "currency": "USD",
     "total_value": 199.98,
     "products": products,
-    "source": "https://example-store.com",
+    "source": "https://braze-apparel.com",
     "metadata": [:]
 ]
 
@@ -314,19 +314,19 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
             "product_id": "8266836345064",
             "product_name": "Classic T-Shirt",
             "variant_id": "44610569208040",
-            "image_url": "https://example-store.com/images/tshirt-blue-medium.jpg",
-            "product_url": "https://example-store.com/products/classic-tshirt?variant=44610569208040",
+            "image_url": "https://braze-apparel.com/images/tshirt-blue-medium.jpg",
+            "product_url": "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040",
             "quantity": 2,
             "price": 99.99,
             "metadata": {
               "sku": "TSH-BLU-M",
-              "colour": "Blue",
+              "color": "BLUE",
               "size": "Medium",
-              "brand": "ExampleBrand"
+              "brand": "Braze"
             }
           }
         ],
-        "source": "https://example-store.com",
+        "source": "https://braze-apparel.com",
         "metadata": {}
       }
     }
@@ -394,14 +394,14 @@ braze.logCustomEvent("ecommerce.checkout_started", {
             "price": 199.98,
             "metadata": {
                 "sku": "WH-BLK-PRO",
-                "colour": "Black",
-                "brand": "AudioTech"
+                "color": "Black",
+                "brand": "BrazeAudio"
             }
         }
     ],
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": {
-        "checkout_url": "https://checkout.example-electronics.com/abc123"
+        "checkout_url": "https://checkout.braze-audio.com/abc123"
     }
 });
 ```
@@ -419,7 +419,7 @@ JSONObject product = new JSONObject()
     .put("price", 199.98)
     .put("metadata", new JSONObject()
         .put("sku", "WH-BLK-PRO")
-        .put("colour", "Black")
+        .put("color", "Black")
         .put("brand", "AudioTech"));
 products.put(product);
 
@@ -429,9 +429,9 @@ BrazeProperties properties = new BrazeProperties()
     .addProperty("total_value", 199.98)
     .addProperty("currency", "USD")
     .addProperty("products", products)
-    .addProperty("source", "https://example-electronics.com")
+    .addProperty("source", "https://braze-audio.com")
     .addProperty("metadata", new JSONObject()
-        .put("checkout_url", "https://checkout.example-electronics.com/abc123"));
+        .put("checkout_url", "https://checkout.braze-audio.com/abc123"));
 
 Braze.getInstance(context).logCustomEvent("ecommerce.checkout_started", properties);
 ```
@@ -449,8 +449,8 @@ let products: [[String: Any]] = [
         "price": 199.98,
         "metadata": [
             "sku": "WH-BLK-PRO",
-            "colour": "Black",
-            "brand": "AudioTech"
+            "color": "Black",
+            "brand": "BrazeAudio"
         ]
     ]
 ]
@@ -461,9 +461,9 @@ let properties: [String: Any] = [
     "total_value": 199.98,
     "currency": "USD",
     "products": products,
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": [
-        "checkout_url": "https://checkout.example-electronics.com/abc123"
+        "checkout_url": "https://checkout.braze-audio.com/abc123"
     ]
 ]
 
@@ -495,14 +495,14 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties
             "price": 199.98,
             "metadata": {
               "sku": "WH-BLK-PRO",
-              "colour": "Black",
-              "brand": "AudioTech"
+              "color": "Black",
+              "brand": "BrazeAudio"
             }
           }
         ],
-        "source": "https://example-electronics.com",
+        "source": "https://braze-audio.com",
         "metadata": {
-          "checkout_url": "https://checkout.example-electronics.com/abc123"
+          "checkout_url": "https://checkout.braze-audio.com/abc123"
         }
       }
     }
@@ -573,18 +573,18 @@ braze.logCustomEvent("ecommerce.order_placed", {
             "price": 199.98,
             "metadata": {
                 "sku": "WH-BLK-PRO",
-                "colour": "Black",
-                "brand": "AudioTech"
+                "color": "Black",
+                "brand": "BrazeAudio"
             }
         }
     ],
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": {
-        "order_status_url": "https://example-electronics.com/orders/67890/status",
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
         "order_number": "ORD-2024-001234",
         "tags": ["electronics", "audio"],
-        "referring_site": "https://www.google.com",
-        "payment_gateway_names": ["stripe", "paypal"]
+        "referring_site": "https://www.e-referrals.com",
+        "payment_gateway_names": ["tap2pay", "dotcash"]
     }
 });
 ```
@@ -607,7 +607,7 @@ JSONObject product = new JSONObject()
     .put("price", 199.98)
     .put("metadata", new JSONObject()
         .put("sku", "WH-BLK-PRO")
-        .put("colour", "Black")
+        .put("color", "Black")
         .put("brand", "AudioTech"));
 products.put(product);
 
@@ -619,13 +619,13 @@ BrazeProperties properties = new BrazeProperties()
     .addProperty("total_discounts", 10.00)
     .addProperty("discounts", discounts)
     .addProperty("products", products)
-    .addProperty("source", "https://example-electronics.com")
+    .addProperty("source", "https://braze-audio.com")
     .addProperty("metadata", new JSONObject()
-        .put("order_status_url", "https://example-electronics.com/orders/67890/status")
+        .put("order_status_url", "https://braze-audio.com/orders/67890/status")
         .put("order_number", "ORD-2024-001234")
         .put("tags", new JSONArray().put("electronics").put("audio"))
-        .put("referring_site", "https://www.google.com")
-        .put("payment_gateway_names", new JSONArray().put("stripe").put("paypal")));
+        .put("referring_site", "https://www.e-referrals.com")
+        .put("payment_gateway_names", new JSONArray().put("tap2pay").put("dotcash")));
 
 Braze.getInstance(context).logCustomEvent("ecommerce.order_placed", properties);
 ```
@@ -650,8 +650,8 @@ let products: [[String: Any]] = [
         "price": 199.98,
         "metadata": [
             "sku": "WH-BLK-PRO",
-            "colour": "Black",
-            "brand": "AudioTech"
+            "color": "Black",
+            "brand": "BrazeAudio"
         ]
     ]
 ]
@@ -664,13 +664,13 @@ let properties: [String: Any] = [
     "total_discounts": 10.00,
     "discounts": discounts,
     "products": products,
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": [
-        "order_status_url": "https://example-electronics.com/orders/67890/status",
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
         "order_number": "ORD-2024-001234",
         "tags": ["electronics", "audio"],
-        "referring_site": "https://www.google.com",
-        "payment_gateway_names": ["stripe", "paypal"]
+        "referring_site": "https://www.e-referrals.com",
+        "payment_gateway_names": ["tap2pay", "dotcash"]
     ]
 ]
 
@@ -709,18 +709,18 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: pr
             "price": 199.98,
             "metadata": {
               "sku": "WH-BLK-PRO",
-              "colour": "Black",
-              "brand": "AudioTech"
+              "color": "Black",
+              "brand": "BrazeAudio"
             }
           }
         ],
-        "source": "https://example-electronics.com",
+        "source": "https://braze-audio.com",
         "metadata": {
-          "order_status_url": "https://example-electronics.com/orders/67890/status",
+          "order_status_url": "https://braze-audio.com/orders/67890/status",
           "order_number": "ORD-2024-001234",
           "tags": ["electronics", "audio"],
-          "referring_site": "https://www.google.com",
-          "payment_gateway_names": ["stripe", "paypal"]
+          "referring_site": "https://www.e-referrals.com",
+          "payment_gateway_names": ["tap2pay", "dotcash"]
         }
       }
     }
@@ -788,14 +788,14 @@ braze.logCustomEvent("ecommerce.order_refunded", {
             "price": 99.99,
             "metadata": {
                 "sku": "WH-BLK-PRO",
-                "colour": "Black",
-                "brand": "AudioTech"
+                "color": "Black",
+                "brand": "BrazeAudio"
             }
         }
     ],
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": {
-        "order_status_url": "https://example-electronics.com/orders/67890/status",
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
         "order_note": "Customer requested refund due to defective item",
         "order_number": "ORD-2024-001234",
         "tags": ["refund", "defective"]
@@ -821,7 +821,7 @@ JSONObject product = new JSONObject()
     .put("price", 99.99)
     .put("metadata", new JSONObject()
         .put("sku", "WH-BLK-PRO")
-        .put("colour", "Black")
+        .put("color", "Black")
         .put("brand", "AudioTech"));
 products.put(product);
 
@@ -832,9 +832,9 @@ BrazeProperties properties = new BrazeProperties()
     .addProperty("total_discounts", 5.00)
     .addProperty("discounts", discounts)
     .addProperty("products", products)
-    .addProperty("source", "https://example-electronics.com")
+    .addProperty("source", "https://braze-audio.com")
     .addProperty("metadata", new JSONObject()
-        .put("order_status_url", "https://example-electronics.com/orders/67890/status")
+        .put("order_status_url", "https://braze-audio.com/orders/67890/status")
         .put("order_note", "Customer requested refund due to defective item")
         .put("order_number", "ORD-2024-001234")
         .put("tags", new JSONArray().put("refund").put("defective")));
@@ -862,8 +862,8 @@ let products: [[String: Any]] = [
         "price": 99.99,
         "metadata": [
             "sku": "WH-BLK-PRO",
-            "colour": "Black",
-            "brand": "AudioTech"
+            "color": "Black",
+            "brand": "BrazeAudio"
         ]
     ]
 ]
@@ -875,9 +875,9 @@ let properties: [String: Any] = [
     "total_discounts": 5.00,
     "discounts": discounts,
     "products": products,
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": [
-        "order_status_url": "https://example-electronics.com/orders/67890/status",
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
         "order_note": "Customer requested refund due to defective item",
         "order_number": "ORD-2024-001234",
         "tags": ["refund", "defective"]
@@ -918,14 +918,14 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_refunded", properties: 
             "price": 99.99,
             "metadata": {
               "sku": "WH-BLK-PRO",
-              "colour": "Black",
-              "brand": "AudioTech"
+              "color": "Black",
+              "brand": "BrazeAudio"
             }
           }
         ],
-        "source": "https://example-electronics.com",
+        "source": "https://braze-audio.com",
         "metadata": {
-          "order_status_url": "https://example-electronics.com/orders/67890/status",
+          "order_status_url": "https://braze-audio.com/orders/67890/status",
           "order_note": "Customer requested refund due to defective item",
           "order_number": "ORD-2024-001234",
           "tags": ["refund", "defective"]
@@ -997,14 +997,14 @@ braze.logCustomEvent("ecommerce.order_cancelled", {
             "price": 199.98,
             "metadata": {
                 "sku": "WH-BLK-PRO",
-                "colour": "Black",
-                "brand": "AudioTech"
+                "color": "Black",
+                "brand": "BrazeAudio"
             }
         }
     ],
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": {
-        "order_status_url": "https://example-electronics.com/orders/67890/status",
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
         "order_number": "ORD-2024-001234",
         "tags": ["cancelled", "customer_request"]
     }
@@ -1029,7 +1029,7 @@ JSONObject product = new JSONObject()
     .put("price", 199.98)
     .put("metadata", new JSONObject()
         .put("sku", "WH-BLK-PRO")
-        .put("colour", "Black")
+        .put("color", "Black")
         .put("brand", "AudioTech"));
 products.put(product);
 
@@ -1041,9 +1041,9 @@ BrazeProperties properties = new BrazeProperties()
     .addProperty("total_discounts", 10.00)
     .addProperty("discounts", discounts)
     .addProperty("products", products)
-    .addProperty("source", "https://example-electronics.com")
+    .addProperty("source", "https://braze-audio.com")
     .addProperty("metadata", new JSONObject()
-        .put("order_status_url", "https://example-electronics.com/orders/67890/status")
+        .put("order_status_url", "https://braze-audio.com/orders/67890/status")
         .put("order_number", "ORD-2024-001234")
         .put("tags", new JSONArray().put("cancelled").put("customer_request")));
 
@@ -1070,8 +1070,8 @@ let products: [[String: Any]] = [
         "price": 199.98,
         "metadata": [
             "sku": "WH-BLK-PRO",
-            "colour": "Black",
-            "brand": "AudioTech"
+            "color": "Black",
+            "brand": "BrazeAudio"
         ]
     ]
 ]
@@ -1084,9 +1084,9 @@ let properties: [String: Any] = [
     "total_discounts": 10.00,
     "discounts": discounts,
     "products": products,
-    "source": "https://example-electronics.com",
+    "source": "https://braze-audio.com",
     "metadata": [
-        "order_status_url": "https://example-electronics.com/orders/67890/status",
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
         "order_number": "ORD-2024-001234",
         "tags": ["cancelled", "customer_request"]
     ]
@@ -1127,14 +1127,14 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
             "price": 199.98,
             "metadata": {
               "sku": "WH-BLK-PRO",
-              "colour": "Black",
-              "brand": "AudioTech"
+              "color": "Black",
+              "brand": "BrazeAudio"
             }
           }
         ],
-        "source": "https://example-electronics.com",
+        "source": "https://braze-audio.com",
         "metadata": {
-          "order_status_url": "https://example-electronics.com/orders/67890/status",
+          "order_status_url": "https://braze-audio.com/orders/67890/status",
           "order_number": "ORD-2024-001234",
           "tags": ["cancelled", "customer_request"]
         }
