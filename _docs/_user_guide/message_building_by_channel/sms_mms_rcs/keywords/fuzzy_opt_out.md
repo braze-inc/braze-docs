@@ -40,12 +40,12 @@ To configure fuzzy opt-out, navigate to the subscription group keyword managemen
 
 ## Best practices for fuzzy opt-out messages
 
-To ensure a clear, compliant, and positive experience for your subscribers, it's crucial to configure your Fuzzy Opt-Out message thoughtfully. The core purpose of the fuzzy opt-out message is to **guide users who send a message similar to, but not exactly, your designated opt-out keyword**. The message prompts users on how to successfully unsubscribe.
+To ensure a clear, compliant, and positive experience for your subscribers, it's crucial to configure your fuzzy opt-out message thoughtfully. The main purpose of the fuzzy opt-out message is to **guide users who send a message similar to, but not exactly, your designated opt-out keyword**. The message prompts users on how to successfully unsubscribe.
 
 ### Critical considerations
 
 {% alert warning %}
-**DO NOT** configure your fuzzy opt-out message to confirm an unsubscribe. Your fuzzy opt-out message must not contain language that implies a user has already successfully unsubscribed. For example, do **not** use "You have been unsubscribed," "You will not receive any more messages from this number," or "You are now opted out".
+**DO NOT** configure your fuzzy opt-out message to confirm an unsubscribe. Your fuzzy opt-out message must not contain language that implies a user has already successfully unsubscribed. For example, **do not** use "You have been unsubscribed," "You will not receive any more messages from this number," or "You are now opted out".
 {% endalert %}
 
 The fuzzy opt-out message is sent before the user has successfully opted out. Using confirmation language misleads the subscriber into believing they are unsubscribed when they are not, leading to continued unwanted messages, subscriber frustration, and significant compliance risks.
