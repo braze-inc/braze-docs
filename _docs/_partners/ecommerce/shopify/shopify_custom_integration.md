@@ -660,6 +660,8 @@ Using an email address or a hashed email address as your Braze external ID can h
 - **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
 {% endalert %}
 
+By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
+
 If you selected a custom external ID type, proceed to steps 6.1—6.3. Otherwise, continue to step 6.4.
 
 #### Step 6.1: Create the `braze.external_id` metafield
