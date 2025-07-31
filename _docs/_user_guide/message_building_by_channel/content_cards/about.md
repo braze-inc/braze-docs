@@ -35,7 +35,7 @@ Because you, the marketer, are building Content Cards yourself in Braze, you can
 
 ## How it works
 
-At their core, Content Cards are actually a payload of data, not what the data looks like. Braze provides different Card Types schema (e.g., Classic, Captioned Image, or Image ) to display the Content Card, which is ultimately what your message looks like.
+Braze provides different Content Card types to display the Content Card: Classic, Captioned Image, or Image. At their core, Content Cards are actually a payload of data, not what the data looks like. 
 
 Now let’s get a little technical. Behind the scenes, there are three main parts of a Content Card:
 
