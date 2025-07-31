@@ -56,18 +56,33 @@ The fuzzy opt-out message is sent before the user has successfully opted out. Us
 
 If your fuzzy message is the same as, or too close to, your exact opt-out keyword (for example, if "STOP" is your exact keyword and your fuzzy message is "Text STOP to unsubscribe"), it can create confusion about whether the user's initial message actually resulted in an unsubscribe or if they need to take another action. The fuzzy message should always clarify what action the user needs to take.
 
-### Recommended fuzzy opt-out messages
+### Examples of fuzzy opt-out messages
 
-Focus on guiding users. If your exact opt-out keyword is "STOP", use messages like:
+Focus on guiding users. For example, if your opt-out keyword is "STOP", these are good and poor examples of fuzzy opt-out messages you could create:
 
-- "To unsubscribe from all messages, please reply with the word STOP."
-- "We received your message. If you'd like to stop receiving texts, please text STOP."
-- "Did you mean to unsubscribe? Reply STOP to opt out of all future messages."
-
-#### Incorrect messages
-
-**Do not use these messages.**
-
-- "You have successfully been unsubscribed. You will not receive any more messages from this number. Reply START to resubscribe." This is a direct confirmation of unsubscribe, which is misleading in a fuzzy opt-out scenario.
-- "STOP." This is just the exact keyword itself, which doesn't guide the user.
-- "Text STOP to unsubscribe." If "STOP" is also your exact keyword, this is redundant and doesn't clarify the action if the initial message was fuzzy.
+<table role="presentation" class="reset-td-br-1 reset-td-br-2">
+  <thead>
+    <tr>
+      <th style="width: 50%">
+        Good examples <span aria-hidden="true">✅</span>
+      </th>
+      <th style="width: 50%">
+        Poor examples <span aria-hidden="true">🚫</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"To unsubscribe from all messages, please reply with the word STOP."</td>
+      <td>"You have successfully been unsubscribed. You will not receive any more messages from this number. Reply START to resubscribe." (This is a direct confirmation of unsubscribe, which is misleading in a fuzzy opt-out scenario.)</td>
+    </tr>
+    <tr>
+      <td>"We received your message. If you'd like to stop receiving texts, please text STOP."</td>
+      <td>"STOP." (This is just the exact keyword itself, which doesn't guide the user.)</td>
+    </tr>
+    <tr>
+      <td>"Did you mean to unsubscribe? Reply STOP to opt out of all future messages."</td>
+      <td>"Text STOP to unsubscribe." (If "STOP" is also your exact keyword, this is redundant and doesn't clarify the action if the initial message was fuzzy.)</td>
+    </tr>
+  </tbody>
+</table>
