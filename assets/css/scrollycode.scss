@@ -62,7 +62,7 @@ $font-family_1: monospace;
   overflow: auto;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px);
   code {
     display: block;
     // width: 100%;
@@ -124,6 +124,7 @@ pre {
   padding: 15px;
   display: flex;
   gap: 0.5rem;
+  height: 60px;
   button {
     &:hover {
       background: #0d1117;
