@@ -102,9 +102,9 @@ Take advantage of Content Cards to highlight promotional messages and unclaimed 
 
 Outside of these main use cases, our customers use Content Cards in so many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) and send the payloads to your app or website.
 
-## Content Card placements
+## Content Card in your app
 
-This section covers the three most common ways to place Content Cards within your app or website:
+This section covers the most common ways to place Content Cards within your app or website:
 
 - [Message inbox](#message-inbox)
 - [Carousel](#carousel)
