@@ -19,7 +19,7 @@ channel:
 
 ## 옵션 2: 사용자가 인앱 메시지를 통해 옵트인
 
-사용자가 인앱 메시지에서 SMS를 수신할 수 있도록 하려면 Braze에서 제공하는 [전화번호 캡처 양식을]({{site.baseurl}}//user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) 사용하여 전화번호를 수집하고 SMS 목록을 늘릴 수 있는 브랜드 양식을 만드세요.
+사용자가 인앱 메시지에서 SMS를 수신할 수 있도록 하려면 Braze에서 제공하는 [전화번호 캡처 양식을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) 사용하여 전화번호를 수집하고 SMS 목록을 늘릴 수 있는 브랜드 양식을 만드세요.
 
 ![][3]{: style="max-width:30%;"}
 

@@ -34,16 +34,11 @@ SQL 세그먼트 확장을 만들 때 선택할 수 있는 SQL 편집기에는 S
 전체 새로 고침 SQL 세그먼트 확장을 만들려면 다음과 같이 하세요:
 
 1. **대상** > **세그먼트 확장으로** 이동합니다.
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **인게이지먼트** > **세그먼트** > **세그먼트 확장**에서 이 페이지를 찾을 수 있습니다.
-{% endalert %}
-
-{:start="2"}
-2\. **새 확장 프로그램 만들기**를 클릭하고 **전체 새로고침**을 선택합니다.<br><br>
+2. **새 확장 프로그램 만들기**를 클릭하고 **전체 새로고침**을 선택합니다.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3\. 세그먼트 확장의 이름을 추가하고 SQL을 입력합니다. 요구 사항 및 리소스는 [SQL 작성하기](#writing-sql) 섹션을 참조하세요.<br><br>
+3. 세그먼트 확장의 이름을 추가하고 SQL을 입력합니다. 요구 사항 및 리소스는 [SQL 작성하기](#writing-sql) 섹션을 참조하세요.<br><br>
    ![SQL 세그먼트 확장 예제를 보여주는 SQL 편집기]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
-4\. 세그먼트 확장자를 저장합니다.
+4. 세그먼트 확장자를 저장합니다.
 
 {% endtab %}
 {% tab 증분 새로 고침 %}
@@ -53,7 +48,7 @@ SQL 세그먼트 확장을 만들 때 선택할 수 있는 SQL 편집기에는 S
 1. **대상** > **세그먼트 확장으로** 이동합니다.
 {% alert note %}
 
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **인게이지먼트** > **세그먼트** > **세그먼트 확장**에서 이 페이지를 찾을 수 있습니다.
+[이전 탐색]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)을 사용하는 경우 **인게이지먼트** > **세그먼트** > **세그먼트 확장**에서 이 페이지를 찾을 수 있습니다.
 {% endalert %}
 
 {:start="2"}

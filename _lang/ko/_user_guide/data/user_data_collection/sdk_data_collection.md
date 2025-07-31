@@ -25,10 +25,10 @@ Braze는 유연한 데이터 수집이 가능하도록 설계되었으므로 다
 | 속성 | 설명 | 수집하는 이유 |
 | --------- | ----------- | ------------------ |
 | 앱 버전 이름 /<br> 앱 버전 코드 | 최신 앱 버전 | 이 속성은 앱 버전 호환성과 관련된 메시지를 올바른 디바이스로 전송하는 데 사용됩니다. 서비스 중단이나 버그를 사용자에게 알리는 데 사용할 수 있습니다. |
-| 국가 | IP 주소 지리적 위치로 식별된 국가 | 이 속성은 위치를 기준으로 메시지를 타겟팅하는 데 사용됩니다. |
+| 국가 | IP 주소 지리적 위치로 식별된 국가. IP 주소 지리적 위치를 사용할 수 없는 경우 [디바이스 로캘로](#optional-data-collected-by-default) 식별됩니다. 이 값은 SDK가 `setCountry` 로 직접 설정한 값을 사용할 수도 있지만, SDK 또는 API를 통해 속성 값을 전달하면 데이터 포인트를 소비하게 됩니다.| 이 속성은 위치를 기준으로 메시지를 타겟팅하는 데 사용됩니다. |
 | 기기 ID | 기기 식별자, 무작위로 생성된 문자열 | 이 속성은 사용자의 디바이스를 구분하고 올바른 디바이스로 메시지를 전송하는 데 사용됩니다. |
 | OS 및 OS 버전 | 현재 보고된 기기 또는 브라우저 및 기기 또는 브라우저 버전 | 이 속성은 호환되는 디바이스로만 메시지를 보내는 데 사용됩니다. 세분화 내에서 사용하여 사용자가 앱 버전을 업그레이드하도록 타겟팅할 수도 있습니다. |
-| 세션 시작 및 세션 종료 | 사용자가 통합된 앱 또는 사이트를 사용하기 시작할 때 | Braze SDK는 사용자 인게이지먼트를 계산하기 위해 Braze 대시보드에서 사용하는 세션 데이터 및 사용자를 이해하는 데 핵심적인 기타 분석을 보고합니다. Exactly when the session start and session end is called by your app or site is configurable by a developer ([Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/)). |
+| 세션 시작 및 세션 종료 | 사용자가 통합된 앱 또는 사이트를 사용하기 시작할 때 | Braze SDK는 사용자 인게이지먼트를 계산하기 위해 Braze 대시보드에서 사용하는 세션 데이터 및 사용자를 이해하는 데 핵심적인 기타 분석을 보고합니다. Exactly when the session start and session end is called by your app or site is configurable by a developer ([Android]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)). |
 | SDK 메시지 상호작용 데이터 | 푸시 직접 열기, 인앱 메시지 상호작용, 콘텐츠 카드 상호작용 | 이 속성은 메시지가 수신되었는지 확인하고 전송이 중복되지 않도록 하는 등 품질 관리 목적으로 사용됩니다. |
 | SDK 버전 | 현재 SDK 버전 | 이 속성은 호환되는 디바이스로만 메시지를 전송하고 서비스 중단을 방지하는 데 사용됩니다. |
 | 세션 ID 및 세션 타임스탬프 | 세션 식별자, 무작위로 생성된 문자열 및 세션 타임스탬프 | 사용자가 새 세션을 시작하는지 기존 세션을 시작하는지 여부를 결정하고 이 사용자에게 의도된 메시지의 재적격성을 결정하는 데 사용됩니다.<br><br>일부 메시징 채널(예: 인앱 메시지 및 콘텐츠 카드)은 세션 시작 시 기기와 동기화됩니다. 그 후 백엔드는 사용자가 새로운 메시지를 받을 자격이 있는지 확인하기 위해 기기가 저장하고 다시 보내는 Braze 서버에 마지막으로 접속한 시점과 관련된 데이터를 사용합니다.|
@@ -67,21 +67,22 @@ Braze는 SDK 데이터, 비 SDK 메시지와 관련된 메시지 상호작용 �
 
 최소 연동 데이터 외에도, SDK 연동을 초기화할 때 다음 속성이 Braze에 의해 자동으로 캡처됩니다. 최소한의 통합을 위해 이러한 속성 수집을 [거부할]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection) 수 있습니다.
 
-| 속성               | 플랫폼          | 설명                                                                        | 수집된 이유                                                                                                                                                      |
+| 속성               | 플랫폼          | 설명                                                                        | 수집하는 이유                                                                                                                                                      |
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 브라우저 이름            | 웹               | 브라우저의 이름                                                                | 이 속성은 호환되는 브라우저에만 메시지를 보내는 데 사용됩니다. 브라우저 기반 세분화에도 사용할 수 있습니다.                                     |
 | 기기 로캘           | Android, iOS      | 기기의 기본 로캘                                                   | 이 속성은 사용자의 선호 언어로 메시지를 번역하는 데 사용됩니다.                                                                                            |
+| 최신 기기 로캘           | Android, iOS      | 장치의 가장 최근 기본 로캘                                                   | 이 속성은 사용자의 디바이스 설정에서 가져오며 메시지를 사용자가 선호하는 언어로 번역하는 데 사용됩니다. `Most Recent Location` 속성과는 독립적입니다.                                                                                            |
 | 기기 모델            | Android, iOS      | 기기의 특정 하드웨어                                                | 이 속성은 호환되는 디바이스로만 메시지를 보내는 데 사용됩니다. 세분화 내에서도 사용할 수 있습니다.                                                 |
 | 기기 브랜드            | Android           | 기기의 브랜드(예: 삼성)                                         | 이 속성은 호환되는 디바이스로만 메시지를 보내는 데 사용됩니다.                                                                                          |
 | 기기 이동통신사 | Android, iOS      | 이동통신사                                                                 | 이 속성은 메시지 타겟팅에 선택적으로 사용됩니다.<br><br>**참고:** 이 필드는 iOS 16부터 더 이상 사용되지 않으며 향후 iOS 버전에서 `--`로 기본값이 설정될 것입니다. |
-| 언어                | Android, iOS, 웹 | 장치 또는 브라우저 언어                                                            | 이 속성은 사용자의 선호 언어로 메시지를 번역하는 데 사용됩니다.                                                                                            |
+| 언어                | Android, iOS, 웹 | 장치 또는 브라우저 언어, 장치 로캘에서 가져온 언어                                                            | 이 속성은 메시지를 사용자가 선호하는 언어로 번역하는 데 사용됩니다. 디바이스 로캘을 기반으로 합니다.                                                                                            |
 | 알림 설정   | Android, iOS, 웹 | 이 앱에 푸시 알림이 활성화되어 있는지 여부.                                   | 이 속성은 푸시 알림을 활성화하는 데 사용됩니다.                                                                                                                    |
 | 해상도              | Android, iOS, 웹 | 장치 또는 브라우저 해상도                                                          | 선택적으로 기기 기반 메시지 타겟팅에 사용됩니다. 이 값의 형식은 "`<width>`x`<height>`"입니다.                                                                 |
 | 시간대               | Android, iOS, 웹 | 기기 또는 브라우저 시간대                                                           | 이 속성은 각 사용자의 현지 표준 시간대에 따라 적절한 시간에 메시지를 보내는 데 사용됩니다.                                                   |
 | 사용자 에이전트              | 웹               | [사용자 에이전트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | 이 속성은 호환되는 디바이스로만 메시지를 보내는 데 사용됩니다. 세분화 내에서도 사용할 수 있습니다.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-디바이스 수준 속성(디바이스 무선 통신사, 시간대, 해상도 등) 추적에 대해 자세히 알아보려면 플랫폼별 설명서를 참조하세요: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android 허용 리스트 설명서"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS 허용 리스트 설명서"), [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "웹 허용 리스트 설명서").
+디바이스 수준 속성(디바이스 무선 통신사, 시간대, 해상도 등) 추적에 대해 자세히 알아보려면 플랫폼별 설명서를 참조하세요: [Android안드로이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "허용 목록 문서"), [iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "허용 목록 문서"), [웹]({{site.baseurl}}/developer_guide/storage/#cookies).
 
 ## 데이터는 기본값으로 수집되지 않습니다
 
@@ -92,7 +93,12 @@ Braze는 SDK 데이터, 비 SDK 메시지와 관련된 메시지 상호작용 �
 | 기기 광고 추적 활성화 | Android, iOS | iOS에서:<br>[`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:))<br><br>Android에서:<br>[`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) | 이 속성정보는 추가적인 앱 수준 권한이 필요하며, 통합자가 부여해야 합니다.                                                                                                                                                                                      |
 | 기기 IDFA                | iOS          | 광고주를 위한 기기 식별자                                                                                                                                                                                                                                                                                         | 이는 앱 스토어에서 추가적인 개인정보 검토를 트리거할 광고 추적 투명성 프레임워크를 필요로 합니다. 자세한 내용은 [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:))를 참조하세요 |
 | 구글 광고 ID      | Android      | Google Play 앱 내 광고를 위한 식별자                                                                                                                                                                                                                                                                        | 이를 위해 앱이 GAID를 검색하여 Braze에 전달해야 합니다. 자세한 내용은 [선택적 Google 광고 ID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id)를 참조하십시오.                                         |
+| 가장 최근 위치 | Android, iOS | 사용자 디바이스의 마지막으로 알려진 GPS 위치입니다. 세션 시작 시 업데이트되며 사용자의 프로필에 저장됩니다. | 이를 위해서는 사용자가 앱에 위치 권한을 부여해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+Braze SDK는 IP 주소를 로컬에 저장하지 않습니다.
+{% endalert %}
 
 ## 개인화된 통합
 

@@ -163,8 +163,6 @@ To create a custom landing page that users will be directed to (instead of the d
 
 We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
-![Custom unsubscribe email in the Custom Unsubscribe Page panel.]({% image_buster /assets/img/custom_unsubscribe.png %})
-
 ### Creating a custom opt-in page
 
 Instead of immediately subscribing a user to your email campaigns, creating a custom opt-in page can give your users the opportunity to acknowledge and control their notification preferences. This additional communication can also help your email campaigns stay out of the spam folder since your users will have chosen to be opted-in. 
@@ -173,9 +171,13 @@ Instead of immediately subscribing a user to your email campaigns, creating a cu
 2. Select **Subscription Pages and Footers**.
 3. Customize the styling in the **Custom opt-in page** section to see how that indicates to your users that they've been subscribed.
 
+Users will be directed to this page through the {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} tag.
+
 {% alert tip %}
 Braze recommends using a double opt-in process to help your email outreach. This process sends an additional confirmation email where a user would confirm their notification preferences again via a link in the email. At this point, the user is considered opted-in.
 {% endalert %}
+
+![Custom opt-in email with a message "Glad to see you still want to hear from us".]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ## Subscriptions and campaign targeting {#subscriptions-and-campaign-targeting}
 
