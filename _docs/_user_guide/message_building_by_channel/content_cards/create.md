@@ -168,7 +168,7 @@ Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_bui
 
 ## Things to know
 
-### Payload and feed limitations for Content Cards
+### Payload and feed limitations
 
 To ensure performane, Content Cards have size and limit volumes.
 
@@ -180,7 +180,7 @@ The entire data payload for a single Content Card cannot exceed 2 KB **after** a
 * Message
 * Image URL (the length of the URL stringitself, not the image file size)
 * Link Text
-* Link URLs for all specified platforms (e.g., if you separate URLs for iOS, Android, and Web, all count towards the total)
+* Link URLs for all specified platforms (separate URLs for iOS, Android, and Web all count towards the total)
 * Key-Value Pairs (both the key names and their values)
 
 Using Liquid to pull in long strings of text (e.g., from Custom Attributes) can cause you to exceed the limit. 
@@ -208,7 +208,7 @@ To prevent issues with the card limit, we advise the following best practices:
 *  Leverage actio-based removal. Set up removal events for transactional or goal-based cards. For example, a card prompting a user to complete their profile should be removed as soon as a `profile_completed` event is logged.
 * Audit long-running campaigns. Review recurring or ongoing campaigns to ensure they aren't creating a poor experience for your users by filling the feed with too many cards over time.
 
-### Understanding campaign re-eligibility for Content Cards
+### Understanding re-eligibility for Content Cards
 
 Re-eligibility determines if and when a user can receive a message from the same campaign more than once. For Content Cards, understanding how this works is critical for managing recurring campaigns and ensuring users don't receive duplicate or stale messages.
 
