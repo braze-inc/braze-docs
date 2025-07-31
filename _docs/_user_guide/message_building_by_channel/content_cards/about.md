@@ -10,9 +10,9 @@ search_rank: 4
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} About Content Cards
 
-> Content Cards are embedded directly into your app or website so that you can engage users with an experience that feels natural and seamless. They give you more control over your app or website experience, and let you create message inboxes, carousels, and banners, and extend the reach of other channels (such as email or push notifications).
+> Content Cards feeds are embedded directly into your app or website so that you can engage users with an experience that feels natural and seamless. They give you more control over your app or website experience, and let you create message inboxes and carousels that extend the reach of other channels (such as email or push notifications).
 
-Content Cards are an add-on feature and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team.
+Content Cards are available as part of your Message Credits entitlements. If you’re not on our flexible Message Credits model, Content Cards are available as an add-on feature. Reach out to your Braze customer success manager or our support team for more information.
 
 ## Benefits of using Content Cards
 
@@ -35,7 +35,7 @@ Because you, the marketer, are building Content Cards yourself in Braze, you can
 
 ## How it works
 
-At their core, Content Cards are actually a payload of data, not what the data looks like. Braze provides template views (banner, modal, captioned image) to display the Content Card data, which is ultimately what your message looks like.
+At their core, Content Cards are actually a payload of data, not what the data looks like. Braze provides template views (e.g., modal, captioned image) to display the Content Card data, which is ultimately what your message looks like.
 
 Now let’s get a little technical. Behind the scenes, there are three main parts of a Content Card:
 
@@ -108,7 +108,6 @@ This section covers the three most common ways to place Content Cards within you
 
 - [Message inbox](#message-inbox)
 - [Carousel](#carousel)
-- [Banner](#banner)
 
 The logic and implementation of these placements are not a default in Braze, so your engineering team must supply and support the work for achieving these use cases. For an overview on how to implement these placements, refer to [Creating custom Content Card]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
@@ -152,21 +151,6 @@ Carousels display multiple pieces of content in a single space that your custome
 When a user is eligible for a card, it will appear in a carousel on whichever page of your app the carousel is added to. Users can swipe horizontally to view additional featured cards.
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, image only, and captioned image cards aren't supported with this implementation.
-
-### Banner
-
-![An example content card using the "banner" placement.]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
-
-Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages.
-
-#### Benefits
-
-- Persists on the page unlike an in-app message, so you have more time to reach your audience
-- Great way to showcase new content in a prominent location on your home page
-
-#### Behavior
-
-Users can view and engage the most relevant content they are eligible for. Because this is a custom implementation, you’ll need to work with your developers to customize the views to display the Content Cards.
 
 ## Integrating Content Cards
 
