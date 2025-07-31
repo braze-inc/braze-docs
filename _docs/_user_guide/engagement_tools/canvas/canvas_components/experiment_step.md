@@ -82,7 +82,7 @@ Take advantage of Winning Paths to track performance over a period of time and t
 
 ### Additional settings
 
-Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you'd like this experiment to track conversions. The time window you specify here will determine how long conversion events (chosen in the Canvas setup) will be tracked for the experiment. The per-event conversion windows specified in the Canvas setup will not apply to this step’s tracking and will be replaced by this conversion window.
+Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you'd like this experiment to track conversions. The time window you specify here will determine how long conversion events (chosen in the Canvas setup) will be tracked for the experiment. The per-event conversion windows specified in the Canvas setup will not apply to this step's tracking and will be replaced by this conversion window.
 
 Experiment Paths have their own conversion windows, rather than inheriting the same duration set at the Canvas level. These metrics are separated at a Canvas level.
 
