@@ -229,7 +229,7 @@ A common source of confusion is the interaction between campaign re-eligibility 
 
 All Content Cards are automatically purged from Braze's systems 30 days after they are created. If you have a long-running, recurring campaign with re-eligibility turned **off**, a user may still receive the same card again after 30 days. When the original card is purged, the system no longer sees a record of that user having received the campaign, making them eligible again on their next session. 
 
-To ensure users only ever receive a message from a specific campaign once, add an audience filter to your campaign or Canvas step for users that have not received a message from this campaign. This filter is the most reliable way to prevent duplcate sends from long-running campaigns. 
+To ensure users only ever receive a message from a specific campaign once, add an audience filter to your campaign or Canvas step for users that have not received a message from this campaign. This filter is the most reliable way to prevent duplicate sends from long-running campaigns. 
 
 ### Managing live Content Cards
 
