@@ -51,16 +51,16 @@ braze.logCustomEvent("ecommerce.product_viewed", {
     "product_id": "4111176",
     "product_name": "Brasil sneaker",
     "variant_id": "4111176700",
-    "image_url": "https://seven2018test.parasparstaging.com/images/products/large/default.jpg",
-    "product_url": "https://seven2018test.parasparstaging.com/footwear-categories/sneakers/puma-dark-myrtletangerine-brasil-sneaker/",
+    "image_url": "https://example-store.com/images/products/large/brasil-sneaker.jpg",
+    "product_url": "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/",
     "price": 85,
     "currency": "GBP",
-    "source": "https://seven2018test.parasparstaging.com/",
+    "source": "https://example-store.com/",
     "metadata": {
         "sku": "",
         "colour": "DARK MYRTLE-TANGERINE",
         "size": "6",
-        "brand": "Puma"
+        "brand": "Torchie"
     }
 });
 ```
@@ -73,16 +73,16 @@ BrazeProperties properties = new BrazeProperties()
     .addProperty("product_id", "4111176")
     .addProperty("product_name", "Brasil sneaker")
     .addProperty("variant_id", "4111176700")
-    .addProperty("image_url", "https://seven2018test.parasparstaging.com/images/products/large/default.jpg")
-    .addProperty("product_url", "https://seven2018test.parasparstaging.com/footwear-categories/sneakers/puma-dark-myrtletangerine-brasil-sneaker/")
+    .addProperty("image_url", "https://example-store.com/images/products/large/brasil-sneaker.jpg")
+    .addProperty("product_url", "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/")
     .addProperty("price", 85)
     .addProperty("currency", "GBP")
-    .addProperty("source", "https://seven2018test.parasparstaging.com/")
+    .addProperty("source", "https://example-store.com/")
     .addProperty("metadata", new JSONObject()
         .put("sku", "")
         .put("colour", "DARK MYRTLE-TANGERINE")
         .put("size", "6")
-        .put("brand", "Puma"));
+        .put("brand", "Torchie"));
 
 Braze.getInstance(context).logCustomEvent("ecommerce.product_viewed", properties);
 ```
@@ -95,16 +95,16 @@ let properties: [String: Any] = [
     "product_id": "4111176",
     "product_name": "Brasil sneaker",
     "variant_id": "4111176700",
-    "image_url": "https://seven2018test.parasparstaging.com/images/products/large/default.jpg",
-    "product_url": "https://seven2018test.parasparstaging.com/footwear-categories/sneakers/puma-dark-myrtletangerine-brasil-sneaker/",
+    "image_url": "https://example-store.com/images/products/large/brasil-sneaker.jpg",
+    "product_url": "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/",
     "price": 85,
     "currency": "GBP",
-    "source": "https://seven2018test.parasparstaging.com/",
+    "source": "https://example-store.com/",
     "metadata": [
         "sku": "",
         "colour": "DARK MYRTLE-TANGERINE",
         "size": "6",
-        "brand": "Puma"
+        "brand": "Torchie"
     ]
 ]
 
@@ -126,16 +126,16 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
         "product_id": "4111176",
         "product_name": "Brasil sneaker",
         "variant_id": "4111176700",
-        "image_url": "https://seven2018test.parasparstaging.com/images/products/large/default.jpg",
-        "product_url": "https://seven2018test.parasparstaging.com/footwear-categories/sneakers/puma-dark-myrtletangerine-brasil-sneaker/",
+        "image_url": "https://example-store.com/images/products/large/brasil-sneaker.jpg",
+        "product_url": "https://example-store.com/footwear-categories/sneakers/torchie-dark-myrtletangerine-brasil-sneaker/",
         "price": 85,
         "currency": "GBP",
-        "source": "https://seven2018test.parasparstaging.com/",
+        "source": "https://example-store.com/",
         "metadata": {
           "sku": "",
           "colour": "DARK MYRTLE-TANGERINE",
           "size": "6",
-          "brand": "Puma"
+          "brand": "Torchie"
         }
       }
     }
