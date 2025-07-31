@@ -170,13 +170,13 @@ A user enters this Canvas at 2:01 pm and enters the Delay step at the same time.
 The following common issues can be triggered by editing or adding more components to any other component in a Canvas after launching. 
 
 {% alert important %}
-These common issues are avoidable. If you need to make edits to a Canvas after it's been launched, we recommend you first confirm that all the users that have already entered the Canvas have completed their user journey. Additionally, we recommend that you do not delete steps that have already processed at least one user.
+These following issues are avoidable. If you need to make edits to a Canvas after it's been launched, we recommend first confirming that all the users who have already entered the Canvas have completed their user journey. Additionally, we suggest that you don't delete steps that have already processed at least one user.
 {% endalert %}
 
 - Missing reporting data (when message variants are deleted and re-added)
 - Users aren't following the expected path
 - Messages are sent at unexpected times
-- The edits do not overwrite Currents data, so you may notice discrepancies between Canvas steps (such as `canvas_step_ids` that do not exist in the Canvas due to deletion)
+- The edits do not overwrite Currents data, so you may notice discrepancies between Canvas steps (such as `canvas_step_ids` that don't exist in the Canvas due to deletion)
 - Users can receive the same message twice
 - Users are aborted from receiving messages due to the existing rate limit
-  - When users are dispatched into a canvas, the rate limit applied to the Canvas when a user is dispatched is applied to the user. After the Canvas is sent, the rate limit cannot be edited for that user, so increasing or decreasing the rate limit post-launch won't affect users who are already dispatched.
+  - When users are dispatched into a Canvas, the rate limit applied to the Canvas when a user is dispatched is applied to the user. After the Canvas is sent, the rate limit cannot be edited for that user, so increasing or decreasing the rate limit post-launch won't affect users who are already dispatched.
