@@ -92,7 +92,9 @@ Context variables have the same expected formats for data types as [custom event
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-The `time` data type will always be stored in UTC. If you use a `string` data type to store a time value, you can define the time as PST, EST, UTC, or other time zones. For using time in calculations, use a `time` data type. For displaying the time in a message, use a `string` data type.
+By default, the time data type is in UTC. If you use a string data type to store a time value, you can define the time as a different time zone like PST. 
+
+For example, if you're sending a message to a user the day before their birthday, you would save the context variable as a time data type because there's Liquid logic associated with sending the day before. However, if you're sending a holiday message on Christmas Day (December 25), you wouldn't need to reference the time as a dynamic variable, so using a string data type would be preferable.
 
 ## Using context variables {#using-context-variables}
 
