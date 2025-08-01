@@ -44,7 +44,7 @@ Copy and paste one of the following templates into your Markdown file, and then 
 {% endtab %}
 {% endtabs %}
 
-![Diagram showing the components of a page.]({% image_buster /assets/img/contributing/article_anatomy.png %})
+![Diagram showing the components of a page, such as breadcrumbs, article title, description, and table of contents.]({% image_buster /assets/img/contributing/article_anatomy.png %})
 <sup>*The [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) page uses the [how-to guide]({{site.baseurl}}/contributing/content_types/#how-to-guides) and [reference]({{site.baseurl}}/contributing/content_types/#references) templates.*</sup>
 
 ## Writing content
