@@ -80,10 +80,10 @@ The minimum time for a conversion window is five minutes. Set the conversion win
 
 Consider the following example on how analytics are calculated:
 
-- You have 10 users who went through the Canvas.
-- Three users performed the conversion event within five minutes (Number of exit events is three, and the number of conversion events is three).
-- Another five users exited the Canvas after five minutes but performed the conversion event after two days (Number of exit events remains the same, but the conversion event increases to eight).
-- The last two users exited the Canvas after five minutes but didn't perform the conversion event, or performed it after three days and five minutes, so they aren't counted in either exit events or conversion events metrics.
+1. Ten users go through the Canvas.
+2. Three users perform the conversion event within five minutes (the number of exit events is three, and the number of conversion events is three).
+3. Another five users exit the Canvas after five minutes but perform the conversion event after two days (the number of exit events remains the same, but the conversion event increases to eight).
+4. The last two users exit the Canvas after five minutes but don't perform the conversion event, or perform it after three days and five minutes (they aren't counted in either exit events or conversion events metrics).
 
 ## Example
 
