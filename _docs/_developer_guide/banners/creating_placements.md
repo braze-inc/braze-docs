@@ -486,4 +486,56 @@ AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner 
 ```
 
 {% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Get a Banner object
+val banner: Banner = Braze.getInstance(context).getBanner("placement_id_homepage_top") ?: return
+
+// Get a String property
+val stringProperty: String? = banner.getStringProperty("color")
+
+// Get a Boolean property
+val booleanProperty: Boolean? = banner.getBooleanProperty("expanded")
+
+// Get a Number property
+val numberProperty: Number? = banner.getNumberProperty("height")
+
+// Get a Timestamp property (as a Long)
+val timestampProperty: Long? = banner.getTimestampProperty("account_start")
+
+// Get an Image URL property (as a String)
+val imageProperty: String? = banner.getImageProperty("homepage_icon")
+
+// Get a JSON Object property
+val jsonProperty: JSONObject? = banner.getJSONProperty("footer_settings")
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Get a Banner object
+Banner banner = Braze.getInstance(context).getBanner("placement_id_homepage_top");
+
+// Get a String property
+String stringProperty = banner.getStringProperty("color");
+
+// Get a Boolean property
+Boolean booleanProperty = banner.getBooleanProperty("expanded");
+
+// Get a Number property
+Number numberProperty = banner.getNumberProperty("height");
+
+// Get a Timestamp property (as a Long)
+Long timestampProperty = banner.getTimestampProperty("account_start");
+
+// Get an Image URL property (as a String)
+String imageProperty = banner.getImageProperty("homepage_icon");
+
+// Get a JSON Object property
+JSONObject jsonProperty = banner.getJSONProperty("footer_settings");
+```
+
+{% endtab %}
 {% endtabs %}
