@@ -14,7 +14,7 @@ channel: email
 
 ## Considerations before importing
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### Validate your email lists
 
