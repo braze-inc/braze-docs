@@ -63,4 +63,4 @@ Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestio
 
 ## Legally required transactional emails
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
