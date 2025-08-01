@@ -61,7 +61,7 @@ For customers who have onboarded with Braze on or after August 22, 2024, the req
 | `braze_id`         | Optional | String                                                        | Braze identifier for a particular user.                                                      |
 | `email_address`    | Optional | String                                                        | Email address of user.                                                                       |
 | `phone`            | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user.                                                                        |
-| `fields_to_export` | Optional* | Array of strings                                              | Name of user data fields to export.<br><br>*This field is required to automatically use the faster rate limit. If omitted, the default rate limit of 250 requests per min will be used. |
+| `fields_to_export` | Optional* | Array of strings                                              | Name of user data fields to export.<br><br>*This field is required to automatically use the faster rate limit. If omitted, the default rate limit of 250 requests per min will be used instead. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 *Required for customers who have onboarded with Braze on or after August 22, 2024.
