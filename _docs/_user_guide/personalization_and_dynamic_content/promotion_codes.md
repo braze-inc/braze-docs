@@ -202,7 +202,12 @@ If the message contains Liquid logic that conditionally inserts a promotion code
 
 ### How do I save a promotion code to a user's profile so it can be used in subsequent messages?
 
-To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done by attaching a Braze-to-Braze webhook to the same campaign or Canvas Message step.
+To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
 
-To identify which promotion code was sent to each user, you can either use the [`message_extras` Liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras#message-extras-liquid-tag) in the message body, or update the custom attribute with the promotion code **before** sending it.
+First, select the following for each field in the User Update step:
 
+- **Attribute Name:** Promo Code
+- **Action:** Update
+- **Key Value:** The promotion code's Liquid code snippet, such as {% raw %}`{% promotion('spring25') %}`{% endraw %}
+
+Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) to a message. The discount code will be templated in.
