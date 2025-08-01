@@ -92,7 +92,7 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 - Confirm they match your Canvas send settings. (If users are “subscribed” but the settings are “Opted-in”, users won’t be enabled for the channel.)
 - If global frequency capping is enabled for your Canvas, check if your rules are limiting how many times each user can receive a message from a specific channel.
 - If Quiet Hours are enabled, your message send time could be affected, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancelled entirely.
-- Check user availability for additional filters in your Canvas step
+- Check user availability for additional filters in your Canvas step.
 
 ### Confirm that they performed the prerequisite custom event or purchase
 

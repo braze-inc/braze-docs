@@ -123,6 +123,6 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 
 #### Confirm how user data is being managed
 
-When a user enters a Canvas that they weren't meant to enter, this can be caused by a race condition during the time of entry evaluation for the Canvas. For example, the user's profile could be set to be included in the audience and subsequently updated after the Canvas has enqueued the users to no longer be eligible in the audience. 
+If there is a race condition during the Canvas entry evaluation, users may enter a Canvas that they weren't meant to enter. For example, the user's profile could be set to be included in the audience and subsequently updated after the Canvas has enqueued the users to no longer be eligible in the audience. 
 
 We recommend confirming how user data is managed and updated, specifically when and how specific attributes are updated, such as by SDK, API, batch API, and other methods. This can help identify and clarify why a user has entered a campaign or Canvas versus when a user's profile was updated.

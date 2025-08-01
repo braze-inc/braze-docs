@@ -54,8 +54,7 @@ Additional exception events include:
 
 #### Scheduled steps
 
-If a Canvas step is scheduled, the user will drop out immediately from the Canvas after the exception event occurs. 
-Let's say a user enters a Canvas where the first step has a one-week delay and an exception event. If the user performs the exception event on day 5, they would exit immediately after performing the exception event (on day 5). 
+If a Canvas step is scheduled, the user will drop out immediately from the Canvas after the exception event occurs. Let's say a user enters a Canvas where the first step has a one-week delay and an exception event. If the user performs the exception event on day 5, they would exit immediately after performing the exception event (on day 5). 
  
 #### Triggered steps
 
@@ -73,7 +72,7 @@ Array attributes aren’t currently supported as exit criteria on exception even
 
 ### Having the same exit event and conversion event
 
-When the exit event and conversion event are the same, both the conversion and exit events will be accounted for. For example, if a Canvas has a Delay step and a user performs the exit criteria while in that Delay step, the exit event will increment as soon as the user exits the Delay step. The conversion will increment as soon as the event is logged on the user profile.
+When the exit event and conversion event are the same, both the conversion and exit events will be accounted for. For example, if a Canvas has a Delay step and a user performs the exit criteria while in that Delay step, the exit event will increment as soon as the user exits the Delay step. The conversion will also increment as soon as the event is logged on the user profile.
 
 Conversions are tracked even after the Canvas ends, but exits are not tracked once the user exits the Canvas. The conversion window extends to three days beyond the maximum duration of the Canvas. This means conversions will continue to be tracked after exits stop being tracked. 
 
