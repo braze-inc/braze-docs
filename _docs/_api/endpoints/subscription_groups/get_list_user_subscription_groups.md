@@ -81,17 +81,23 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 
 ```json
 {
-  "success": true,
-  "subscription_groups": [
-    {
-      "subscription_group_id": "group_id_1",
-      "subscription_status": "subscribed"
-    },
-    {
-      "subscription_group_id": "group_id_2",
-      "subscription_status": "unsubscribed"
-    }
-  ]
+  "message": "success",
+  "total_count": 1,
+  "users":[{
+    "email": "test@email.com",
+    "phone": null,
+    "external_id": "some_extearnal_id",
+    "subscription_groups": [
+        {
+          "subscription_group_id": "group_id_1",
+          "subscription_status": "Subscribed"
+        },
+        {
+          "subscription_group_id": "group_id_2",
+          "subscription_status": "Unsubscribed"
+        }
+      ]
+  }]
 }
 ```
 
