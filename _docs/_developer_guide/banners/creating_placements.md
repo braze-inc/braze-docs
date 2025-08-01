@@ -486,3 +486,90 @@ Here's what you need to know about Banner dimensions and sizing:
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
+
+### Accessing properties {#accessing-properties}
+
+To access the properties of a banner, use one of the following methods depending on the type you defined in the dashboard.
+
+If there is no such property of the corresponding type for the key you provided, these methods will return `null`.
+
+{% tabs %}
+{% tab Swift %}
+
+```swift
+// Passes the specified banner to the completion handler
+AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner in
+  // Returns the string property
+  let stringProperty: String? = banner.stringProperty(key: "color")
+
+  // Returns the boolean property
+  let booleanProperty: Bool? = banner.boolProperty(key: "expanded")
+
+  // Returns the number property as a double
+  let numberProperty: Double? = banner.numberProperty(key: "height")
+
+  // Returns the Unix UTC millisecond timestamp property as an integer
+  let timestampProperty: Int? = banner.timestampProperty(key: "account_start")
+
+  // Returns the image property as a String of the image URL
+  let imageProperty: String? = banner.imageProperty(key: "homepage_icon")
+
+  // Returns the JSON object property as a [String: Any] dictionary
+  let jsonObjectProperty: [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
+}
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Returns the Banner instance
+Banner banner = Braze.getInstance(context).getBanner("placement_id_homepage_top");
+
+// Returns the String property
+String stringProperty = banner.getStringProperty("color");
+
+// Returns the Boolean property
+Boolean booleanProperty = banner.getBooleanProperty("expanded");
+
+// Returns the Number property
+Number numberProperty = banner.getNumberProperty("height");
+
+// Returns the Timestamp property (as a Long)
+Long timestampProperty = banner.getTimestampProperty("account_start");
+
+// Returns the Image URL property as a String of the URL
+String imageProperty = banner.getImageProperty("homepage_icon");
+
+// Returns the JSON object property as a JSONObject
+JSONObject jsonObjectProperty = banner.getJSONProperty("footer_settings");
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Returns the Banner instance
+val banner: Banner = Braze.getInstance(context).getBanner("placement_id_homepage_top") ?: return
+
+// Returns the String property
+val stringProperty: String? = banner.getStringProperty("color")
+
+// Returns the Boolean property
+val booleanProperty: Boolean? = banner.getBooleanProperty("expanded")
+
+// Returns the Number property
+val numberProperty: Number? = banner.getNumberProperty("height")
+
+// Returns the Timestamp property (as a Long)
+val timestampProperty: Long? = banner.getTimestampProperty("account_start")
+
+// Returns the Image URL property as a String of the URL
+val imageProperty: String? = banner.getImageProperty("homepage_icon")
+
+// Returns the JSON object property as a JSONObject
+val jsonObjectProperty: JSONObject? = banner.getJSONProperty("footer_settings")
+```
+
+{% endtab %}
+{% endtabs %}
