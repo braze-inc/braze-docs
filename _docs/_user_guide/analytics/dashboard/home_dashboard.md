@@ -68,9 +68,36 @@ The percentage next to the MAU count shows the change in MAU for this period com
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### MAU calculation rules
+
+MAU calculations follow specific rules to ensure accurate and consistent billing:
+
+- **Calculation timing**: Calculated once per day at 12:05 UTC as a 30-day snapshot; counts never change retroactively.
+- **Anonymous profiles**: Count **only** when at least one session is logged.
+- **Identified profiles**: Count automatically once they exist.
+- **Orphaned profiles**: Duplicates merged into another user are **not** counted.
+- **CSV uploads**: Users uploaded by CSV count only when `date_of_first_session` or `date_of_last_session` is supplied, or when they later log a session.
+- **API deletions**: Deleting a user via API does not update MAU immediately; the count self-corrects in the next monthly cycle.
+
 {% alert note %}
 Anonymous users also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 {% endalert %}
+
+#### MAU calculation scenario
+
+The following scenario demonstrates how MAU calculations work through different user actions:
+
+| Step | Action | Immediate MAU change | Resulting total |
+|------|--------|----------------------|-----------------|
+| 1 | Create **Anonymous User 1** and log a session | +1 | 1 |
+| 2 | Identify **Anonymous User 1** (profile converts to identified) | 0 | 1 |
+| 3 | Create **Anonymous User 2** and log a session | +1 | 2 |
+| 4 | Identify **Anonymous User 2** as the **same person** as User 1 (User 2 becomes orphaned) | –1 | 1 |
+
+**Key insights:**
+- **MAU for day X** (after step 3) is permanently **2**, because two distinct profiles existed in that day's snapshot.
+- **MAU for day Y** (after step 4) is **1**, because the orphaning happened before the day-Y snapshot.
+- Within a single 30-day window, this flow ultimately consumes **1 MAU**, since only one distinct, non-orphaned user remains.
 
 ### Daily active users
 
