@@ -16,7 +16,7 @@ tool: Canvas
 
 After performing the exit event, users are exited from the Canvas as soon as the step they're currently in has been exited. For example, if a user is in a Delay step for 30 days and they perform the exit event on the first day of the Delay step, the user won't exit the Canvas for another 29 days.
 
-Let's consider another example when using time-based exit criteria. A user enters a Delay step set to 24 hours on July 1 at 12 am. In this delay period, they perform the exit event ""Last made purchase less than 1 hour ago"" at 3 am. This user will be evaluated for the exit criteria on July 2 at 12 am, which is the conclusion of the Delay step's duration. Since 21 hours have passed since their purchase on July 1 at 3 am, they won't exit the Canvas because they didn't make a purchase within the one hour of exiting the Delay step on July 2. This impacts the ""Total Exits by Exit Criteria"" in your Canvas analytics, which are only updated after a user has fully exited the Canvas."
+Let's consider another example when using time-based exit criteria. A user enters a Delay step set to 24 hours on July 1 at 12 am. In this delay period, they perform the exit event "Last made purchase less than 1 hour ago" at 3 am. This user will be evaluated for the exit criteria on July 2 at 12 am, which is the conclusion of the Delay step's duration. Because 21 hours have passed since their purchase on July 1 at 3 am, they won't exit the Canvas because they didn't make a purchase within the one hour of exiting the Delay step on July 2. This impacts the "Total Exits by Exit Criteria" in your Canvas analytics, which are only updated after a user has fully exited the Canvas.
 
 ## Setting up exit criteria
 
