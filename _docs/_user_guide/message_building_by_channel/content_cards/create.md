@@ -12,6 +12,8 @@ search_rank: 3.9
 
 ---
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 # Creating a Content Card
 
 > This article covers how to create a Content Card in Braze when you build campaigns and Canvases. Here, we'll walk you through choosing a messaging type, composing your card, and scheduling your message delivery.
