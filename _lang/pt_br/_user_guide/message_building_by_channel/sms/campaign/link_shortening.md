@@ -126,7 +126,12 @@ Sim. Quando o **rastreamento avançado** está ativado, é possível redireciona
 
 ### O encurtamento de links funciona com deep links ou links universais?
 
-O encurtamento de links não funciona com deep links. Você pode encurtar links universais de provedores como Branch ou Appsflyer, mas o Braze não pode solucionar problemas que possam surgir ao fazer isso (como quebrar a atribuição ou causar um redirecionamento).
+O encurtamento de links não funciona com deep links. Você pode encurtar links universais de provedores como Branch ou Appsflyer, mas há considerações importantes:
+
+- **Impacto potencial na experiência do usuário**: Quando o encurtamento de links é aplicado a links universais (como links do Branch), os usuários podem experimentar um breve redirecionamento ou efeito de "piscadela". Isso ocorre porque o link encurtado é roteado pela web primeiro, antes de resolver para o link universal que oferece suporte à abertura do aplicativo.
+- **Atribuição e funcionalidade**: O Braze não pode solucionar problemas que possam surgir ao encurtar links universais, como quebrar a atribuição ou causar redirecionamentos inesperados.
+
+Considere testar a experiência do usuário antes de implementar o encurtamento de links com links universais para garantir que atenda às suas expectativas.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %}
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %}

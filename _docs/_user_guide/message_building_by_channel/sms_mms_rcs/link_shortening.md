@@ -132,7 +132,12 @@ At this time, RCS Click events are not available through Currents.
 
 ### Does link shortening work with deep links or universal links?
 
-Link shortening doesn't work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
+Link shortening doesn't work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but there are important considerations:
+
+- **Potential user experience impact**: When link shortening is applied to universal links (such as Branch links), users may experience a brief redirect or "flickering" effect. This occurs because the shortened link routes through the web first before resolving to the universal link that supports app opening.
+- **Attribution and functionality**: Braze is unable to troubleshoot issues that may arise when shortening universal links, such as breaking the attribution or causing unexpected redirects.
+
+Consider testing the user experience before implementing link shortening with universal links to ensure it meets your expectations.
 
 ### Are `send_ids` associated with SMS click events?
 
