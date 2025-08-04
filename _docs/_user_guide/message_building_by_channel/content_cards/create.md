@@ -170,7 +170,7 @@ Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_bui
 
 ### Payload and feed limitations
 
-To ensure performane, Content Cards have size and limit volumes.
+To ensure performance, Content Cards have size and limit volumes.
 
 #### Size limitations for Content Cards
 
