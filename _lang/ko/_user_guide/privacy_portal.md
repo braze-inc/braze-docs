@@ -64,7 +64,7 @@ guide_featured_list:
 guide_menu_title: "Legal"
 guide_menu_list:
 - name: 데이터 처리 부록(PDF)
-  link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
+  link: https://cdn.sanity.io/files/b7pblshe/marketing-prod/278808c2579b16e3d478e52c341890a28d3216ab.pdf
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA 자주 묻는 질문
   link: https://www.braze.com/company/legal/dpa

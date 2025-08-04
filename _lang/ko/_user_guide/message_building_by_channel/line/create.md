@@ -20,7 +20,7 @@ alias: /line/create/
 LINE 메시지를 작성하기 전에 다음을 수행합니다:
 
 1. LINE 개요를 읽어보세요.
-2. 정책, 제한 및 콘텐츠 규칙에 동의합니다.
+2. 정책, 제한 및 콘텐츠 규칙을 확인합니다.
 3. [LINE 연결을 설정합니다]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 차감됩니다.
@@ -35,14 +35,9 @@ Braze에서 LINE 메시지를 보내면 계정의 메시지 크레딧이 차감�
 **단계:**
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
-{% endalert %}
-
-{: start="2"}
-2\. **LINE**을 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인을** 선택합니다.
-3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+2. **LINE**을 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널 캠페인을** 선택합니다.
+3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -79,7 +74,7 @@ Liquid를 사용하려는 경우 개인화에 대한 기본값을 포함해야 �
 
 #### Creating right-to-left messages
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## 3단계: 메시지 미리보기 및 테스트
 
@@ -108,7 +103,7 @@ LINE 메시지는 예약된 시간, 동작 또는 API 트리거에 따라 전송
 
 ### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 전환 이벤트는 캠페인의 성공 여부를 측정하는 데 도움이 됩니다. 예를 들어, 다음과 같습니다.
 
@@ -120,7 +115,7 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 {% endtab %}
 {% tab 캔버스 %}
 
-아직 완료하지 않았다면 캔버스의 나머지 섹션을 완성하세요. 캔버스의 나머지 구성, 다변량 테스트 및 지능형 선택 등을 사용하는 방법에 대한 자세한 내용은 [캔버스 만들기](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)를 참조하세요.
+아직 완료하지 않았다면 캔버스의 나머지 섹션을 완성하세요. 캔버스의 나머지 구성, 다변량 테스트 및 지능형 선택 등을 사용하는 방법에 대한 자세한 내용은 [캔버스 만들기]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)를 참조하세요.
 
 {% endtab %}
 {% endtabs %}
@@ -129,7 +124,7 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 
 캠페인 또는 캔버스의 마지막 제작을 완료한 후에는 세부 정보를 검토하고 테스트한 다음 전송하세요!
 
-다음으로 [LINE 리포팅을](https://www.braze.com/docs/line/reporting/) 통해 LINE 캠페인의 결과에 액세스하는 방법을 알아보세요.
+다음으로 [LINE 리포팅을]({{site.baseurl}}/line/reporting/) 통해 LINE 캠페인의 결과에 액세스하는 방법을 알아보세요.
 
 
 [1]: {% image_buster /assets/img/line/line_composer.png %}

@@ -69,7 +69,7 @@ tool:
 예를 들어 사용자가 두 단계를 완료한 후 구매를 하는 경우 해당 수익은 두 번째 구성 요소와 사용자가 입력한 이형 상품에 귀속됩니다. 캔버스에 들어왔지만 첫 번째 캔버스 구성 요소를 받기 전에 구매를 한 경우 해당 매출은 입력한 배리언트에 귀속되며, 어떤 구성 요소에도 귀속되지 않습니다.
 {% endalert %}
 
-그 외에도 다음과 같은 [전환 이벤트에]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 대한 보다 명확한 분석을 확인할 수 있습니다:
+그 외에도 다음과 같은 [전환 이벤트에]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) 대한 보다 명확한 분석을 확인할 수 있습니다:
 
 - 각 전환 이벤트의 전환 총계 및 전환율
 - 제어 배리언트에 대한 업리프트

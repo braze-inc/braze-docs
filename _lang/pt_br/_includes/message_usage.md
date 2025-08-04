@@ -1,6 +1,6 @@
 # Painel de uso de mensagens
 
-> O dashboard de uso de mensagens fornece insights de autoatendimento sobre o uso de créditos de SMS e WhatsApp para uma visão abrangente do uso histórico e atual em comparação com as atribuições do contrato. Essas percepções podem reduzir sua confusão e ajudá-lo a fazer ajustes para prevenir riscos de excedente.
+> O dashboard de uso de mensagens fornece insights de autoatendimento sobre o uso de créditos de SMS, RCS e WhatsApp para uma visão abrangente do uso histórico e atual em comparação com as atribuições do contrato. Essas percepções podem reduzir sua confusão e ajudá-lo a fazer ajustes para prevenir riscos de excedente.
 
 O **Message Usage** dashboard é dividido em três seções:
 - [Visão Geral do Uso de Crédito](#credit-usage-overview)
@@ -13,7 +13,7 @@ Acesse o dashboard indo para **Configurações** > **Faturamento** > **Uso de Me
 
 **Visão Geral do Uso de Créditos de Mensagem** fornece uma visão geral do uso em todos os canais que utilizam créditos. Você pode ver como está seu ritmo em relação ao seu limite de crédito total e encontrar detalhes sobre seu contrato ativo e seu período de contrato.
 
-Esta página exibe se você está em um contrato de créditos de mensagem ou se você comprou o WhatsApp. Os canais que usam créditos de mensagem são mostrados na **Visão geral do contrato de créditos**.
+Esta página é exibida se você estiver em um contrato de créditos de mensagens. Os canais que usam créditos de mensagem são mostrados na **Visão geral do contrato de créditos**.
 
 {% alert note %}
 Se você comprou o WhatsApp, mas não está em um contrato de créditos de mensagem, ainda verá o consumo de créditos para o WhatsApp, porque é assim que os contratos legados do WhatsApp são cobrados. Isso difere do SMS legado, que consome créditos apenas quando você está em um contrato de créditos de mensagem.
@@ -25,15 +25,15 @@ Se você comprou o WhatsApp, mas não está em um contrato de créditos de mensa
 
 O **Gráfico de Uso de Créditos de Mensagem** mostra seu uso durante o período de tempo selecionado. A granularidade deste gráfico depende do período de tempo selecionado. Exporte opções de exportação selecionando o menu no canto superior direito do gráfico.
 
-![Visão geral do painel de uso de créditos de mensagem com seções para uso de créditos, visão geral do contrato de créditos e consumo de créditos ao longo do contrato.][1]{: style="max-width:80%;"}
+![Painel de visão geral do uso de créditos de mensagens com seções para uso de crédito, visão geral do contrato de crédito e consumo de crédito ao longo do contrato.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
-## SMS e MMS
+## SMS, MMS e RCS
 
-**Uso de Créditos SMS/MMS** mostra a divisão de uso para o canal SMS/MMS. As colunas na tabela de dados variam dependendo se SMS/MMS é um canal de crédito. Se SMS/MMS for um canal de crédito, colunas adicionais **Taxa de crédito** e **Créditos** estarão visíveis e indicarão a respectiva taxa do país e os créditos consumidos. Além disso, os azulejos de alto nível indicarão o consumo total de SMS e, quando relevante, MMS ao longo do intervalo de datas selecionado.
+**SMS/MMS/RCS Uso de créditos** mostra o detalhamento do uso do canal SMS, MMS e RCS. As colunas na tabela de dados geralmente exigem que você tenha adquirido Créditos de Mensagens (embora o Braze ainda ofereça suporte temporário a modelos de cobrança mais antigos), e as colunas **Taxa de Crédito** e **Créditos** indicam a respectiva taxa do país e os créditos consumidos. Além disso, os azulejos de alto nível indicarão o consumo total de SMS e, quando relevante, MMS ao longo do intervalo de datas selecionado.
 
-Filtros estão disponíveis permitindo que você filtre por **País** ou **tipo de SMS**.
+Os filtros estão disponíveis, permitindo que você filtre por **país** ou tipo de SMS e RCS.
 
-![Uso de Créditos SMS/MSS com blocos para dados de alto nível e uma seção para consumo por conta.][2]{: style="max-width:80%;"}
+![SMS/MSS/RCS Uso de créditos com blocos para dados de alto nível e uma seção para consumo por conta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 Ao contrário do **Visão Geral do Uso de Créditos de Mensagem**, esta seção contém dados históricos de períodos contratuais anteriores. 
 
@@ -41,7 +41,7 @@ Ao contrário do **Visão Geral do Uso de Créditos de Mensagem**, esta seção 
 É possível selecionar um intervalo de datas que contenha tanto o uso de não créditos quanto o uso de créditos de mensagem. Neste caso, o consumo que ocorreu fora dos créditos de mensagem será exibido `—` (nulo) nas colunas **Relação de créditos** e **Créditos**.
 {% endalert %}
 
-![Tabela de Uso de Créditos SMS/MMS com valores nulos.][3]{: style="max-width:80%;"}
+![SMS/MMS/RCS Tabela de uso de créditos com valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -56,7 +56,7 @@ Você pode filtrar seus dados por:
 - Tipo de categoria de conversa
 - Região
 
-![Uso de Créditos do WhatsApp com um título para créditos totais consumidos e uma tabela de uso por conta.][4]{: style="max-width:80%;"}
+![Uso de créditos do WhatsApp com um bloco para o total de créditos consumidos e uma tabela de uso por conta.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
 
 ## Coisas para saber
 
@@ -67,7 +67,3 @@ Os dados mostrados no **Uso de Mensagens** dashboard estão no nível do contrat
 - Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. 
 - Braze segue a metodologia padrão de arredondamento: os números são arredondados para cima até a décima mais próxima.
 
-[1]: {% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}
-[2]: {% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}
-[3]: {% image_buster /assets/img/app_settings/sms_table_null3.png %}
-[4]: {% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}

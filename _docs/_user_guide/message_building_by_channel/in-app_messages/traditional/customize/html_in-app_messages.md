@@ -207,14 +207,14 @@ You can press <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows) or <kbd>Command</kbd> + <
 
 ### Button tracking {#button-tracking-improvements}
 
-You can track performance within your custom code in-app message using the [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript method. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")`, or `brazeBridge.logClick()`, respectively.
+You can track performance within your custom code in-app message using the [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript method. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')`, or `brazeBridge.logClick()`, respectively.
 
 | Clicks     | Method                       |
 | ---------- | ---------------------------- |
-| Button 1   | `brazeBridge.logClick("0")` |
-| Button 2   | `brazeBridge.logClick("1")` |
+| Button 1   | `brazeBridge.logClick('0')` |
+| Button 2   | `brazeBridge.logClick('1')` |
 | Body click | `brazeBridge.logClick()`    |
-| Custom button tracking |`brazeBridge.logClick("your custom name here")`|
+| Custom button tracking |`brazeBridge.logClick('your custom name here')`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -227,7 +227,11 @@ You can track multiple button click events per impression. For example, to close
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
 ``` 
 
-You can also track new custom button names—up to 100 unique names per campaign. For example, `brazeBridge.logClick("blue button")` or `brazeBridge.logClick("viewed carousel page 3")`.
+You can also track new custom button names—up to 100 unique names per campaign. For example, `brazeBridge.logClick('blue button')` or `brazeBridge.logClick('viewed carousel page 3')`.
+
+{% alert tip %}
+When using JavaScript methods inside an `onclick` attribute, wrap string values in single quotes to avoid conflicts with the double-quoted HTML attribute.
+{% endalert %}
 
 #### Limitations
 

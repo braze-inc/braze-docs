@@ -48,7 +48,7 @@ tool: Canvas
 
 ### 예외 이벤트는 언제 트리거되나요?
 
-[예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)는 사용자가 연결된 캔버스 구성 요소를 수신하기 위해 대기하는 동안에만 트리거됩니다. 사용자가 미리 작업을 수행하면 예외 이벤트가 트리거되지 않습니다. 특정 이벤트를 미리 수행한 사용자를 제외하려면 대신 [필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하세요.
+예외 이벤트는 사용자가 연결된 캔버스 컴포넌트를 수신하기 위해 대기하는 동안에만 트리거됩니다. 사용자가 미리 작업을 수행하면 예외 이벤트가 트리거되지 않습니다. 특정 이벤트를 미리 수행한 사용자를 제외하려면 대신 [필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하세요.
 
 ### 캔버스를 편집하면 이미 캔버스에 있는 사용자에게 어떤 영향이 있나요?
 

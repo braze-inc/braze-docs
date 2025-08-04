@@ -133,6 +133,20 @@ By default, filters and segments for full steps in the Canvas are checked at sen
 For further assistance with Canvas troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
 {% endalert %}
 
+### What is the difference between "Has not entered Canvas variation" and "Is not in Canvas control group"?
+
+Refer to [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) for full filter definitions.
+
+#### Has not entered Canvas variation
+
+The user never entered a variation path of a specific Canvas. All users who aren't in the control group are included, regardless of whether they have entered the Canvas. This includes users who entered another variation and users who haven't entered any variation. 
+
+#### Is not in Canvas control group
+
+The user entered the Canvas, but isn't in the control group and consequently received a variation. This only includes users who entered the Canvas.
+
+Note that variation assignment occurs at Canvas entry. If a user hasn't entered a Canvas, they won't be assigned any variant. In other words, they won't be in the control group or a variant.
+
 {% details Expand for original Canvas editor FAQs %}
 
 ### How do I convert an existing Canvas from the original editor to the current editor?

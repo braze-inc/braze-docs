@@ -16,10 +16,6 @@ search_rank: 3
 
 **오디언스** > **세그먼트**로 이동합니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **세그먼트**를 **참여** 아래에서 찾을 수 있습니다.
-{% endalert %}
-
 ## 2단계: 세그먼트에 이름을 지정하세요
 
 **Create 세그먼트**을(를) 선택하여 세그먼트를 만들기 시작합니다. 세그먼트의 이름을 필터링하려는 사용자 유형을 설명하여 지정하세요. 이것은 캠페인 또는 캔버스를 대상으로 할 때 세그먼트를 식별하는 데 도움이 됩니다. 모호한 세그먼트 제목은 혼란스러울 수 있습니다.
@@ -124,43 +120,13 @@ Also, nesting segments like this adds complexity and can slow things down. Inste
 
 Braze에는 사용자 ID 또는 이메일 주소로 특정 사용자를 타겟팅하기 위한 테스트 필터가 있습니다.
 
-### 5단계: 세그먼트 저장
+## 5단계: 세그먼트 저장
 
 **저장**을 선택하십시오. 이제 사용자에게 메시지를 보내기 시작할 준비가 되었습니다!
 
-## 세그먼트 멤버십 계산 {#segment-membership-calculation}
+## 세그먼트 크기 측정
 
-Braze는 데이터가 서버로 전송되어 처리되는 즉시 사용자의 세그먼트 멤버십을 업데이트하며, 이는 일반적으로 즉시 이루어집니다. 사용자의 세그먼트 멤버십은 해당 세션이 처리될 때까지 변경되지 않습니다. 예를 들어 세션이 처음 시작될 때 경과된 사용자 세그먼트에 속하는 사용자는 세션이 처리되면 즉시 경과된 사용자 세그먼트에서 이동합니다.
-
-### 총 도달 가능한 사용자 계산
-
-각 세그먼트는 해당 세그먼트의 구성원인 사용자 수를 표시합니다. 모든 앱의 **사용자를 필터링할 때**, 웹 푸시 또는 이메일과 같은 사용자와 통신할 수 있는 다양한 채널도 표시됩니다. 총 사용자 수가 각 채널에서 도달할 수 있는 사용자 수와 다를 수 있습니다.
-
-![이메일, iOS 푸시, Android 푸시, 웹 푸시, Kindle 푸시 및 Android China 푸시로 도달할 수 있는 사용자를 세분화하여 총 도달 가능한 사용자를 표시하는 표입니다.][10]
-
-특정 채널을 통해 도달 가능한 사용자로 표시되려면 사용자가 두 가지 채널을 모두 보유해야 합니다.
-* 유효한 이메일 주소 또는 프로필과 연결된 푸시 토큰; 및
-* 앱에 가입하거나 구독했습니다.
-
-단일 사용자는 서로 다른 접근 가능한 사용자 그룹에 속할 수 있습니다. 예를 들어, 사용자가 유효한 이메일 주소와 유효한 Android 푸시 토큰을 모두 가지고 있고 두 가지 모두에 옵트인되어 있지만 연결된 iOS 푸시 토큰이 없을 수 있습니다. 도달 가능한 총 사용자와 다양한 채널의 합계 사이의 차이는 세그먼트에 적합하지만 해당 커뮤니케이션 채널을 통해 도달할 수 없는 사용자 수입니다.
-
-### 세그먼트 크기 통계
-
-Braze는 세그먼트 크기에 대한 다음 통계를 제공합니다. 모든 추정 통계는 실제 값보다 1% 이상 또는 이하이며, 정확한 세그먼트 멤버십은 캠페인 또는 캔버스에서 메시지가 전송되기 전에 항상 계산됩니다.
-
-#### 필터 통계
-
-각 필터 그룹에 대해 예상 도달 사용자 수를 볼 수 있습니다. **추가 퍼널 통계를 확장**을 선택하여 채널별 분석을 확인하세요.
-
-![성별이 알려지지 않은 필터가 있는 필터 그룹입니다.][4]{: style="max-width:80%;"}
-
-#### 세그먼트 통계
-
-전체 세그먼트에 대해 페이지 하단에서 예상 도달 사용자 수와 각 채널의 예상 사용자 수를 확인할 수 있습니다. 또한 **정확한 통계 계산**을 선택하여 도달 가능한 사용자 수(세그먼트 전체 및 채널별 기준)를 정확하게 확인할 수 있습니다.
-
-참고:
-- 정확한 통계를 계산하는 데 몇 분이 걸릴 수 있습니다. 이 함수는 필터 또는 필터 그룹 수준이 아닌 세그먼트 수준에서만 정확한 통계를 계산합니다.
-- 큰 세그먼트의 경우, 정확한 통계를 계산할 때에도 약간의 변동이 있는 것이 정상입니다. 이 기능의 정확도는 99.999% 이상일 것으로 예상됩니다.
+세그먼트의 멤버십 및 크기 모니터링에 대해 자세히 알아보려면 [세그먼트 크기 측정을]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) 참조하세요.
 
 ## 세그먼트 보관
 
@@ -197,13 +163,11 @@ Braze는 세그먼트 크기에 대한 다음 통계를 제공합니다. 모든 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
 [8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
 [9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}

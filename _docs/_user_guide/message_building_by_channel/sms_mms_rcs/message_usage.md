@@ -8,4 +8,4 @@ description: "This reference article covers the Message Usage dashboard, where y
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}

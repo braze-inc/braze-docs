@@ -24,19 +24,11 @@ description: "이 문서는 Braze를 Okta와 함께 SSO으로 사용하는 방�
 | RelayState API 키 | IdP 로그인을 활성화하려면 **설정** > **API 키**로 이동하여 `sso.saml.login` 권한이 있는 API 키를 생성하십시오. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **설정**에서 **개발자 콘솔** > **API 설정** 아래에 API 키를 찾을 수 있습니다.
-{% endalert %}
-
 ## 1단계: Braze 구성
 
 ### 1a 단계  Braze에서 보안 설정으로 이동
 
 계정 매니저가 계정에 대해 SAML SSO를 활성화한 후, **설정** > **관리자 설정** > **보안 설정**으로 이동하여 SAML SSO 섹션을 **ON**으로 토글합니다.
-
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 계정 아이콘을 선택하고 **회사 설정** > **보안 설정**으로 이동하여 SAML SSO 섹션을 찾으십시오.
-{% endalert %}
 
 ![Okta SAML SSO가 보안 설정 페이지에서 활성화되었습니다.][1]
 

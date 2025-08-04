@@ -20,7 +20,7 @@ tool: Campaigns
 
 이 유형의 일정은 현재 이벤트에 대한 메시지와 같이 즉시 전송하려는 일회성 캠페인을 위해 설계되었습니다. 예를 들어 스포츠 앱에서는 이 옵션을 사용하여 점수 업데이트에 대한 푸시 알림을 예약할 수 있습니다. 또한, 본인 또는 팀만을 대상으로 테스트 메시지를 보낼 때 이 옵션을 사용하면 즉시 메시지를 전달할 수 있습니다. 
 
-테스트를 본 후 캠페인을 편집하여 다시 보낼 계획이라면 사용자가 캠페인을 [다시]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) 받을 수 있도록 설정하는 확인란을 선택해야 합니다. 기본적으로 Braze는 해당 확인란을 선택하지 않는 한 사용자에게 캠페인을 한 번만 전송합니다.
+테스트를 본 후 캠페인을 편집하여 다시 보낼 계획이라면 사용자가 캠페인을 [다시]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) 받을 수 있도록 설정하는 확인란을 선택해야 합니다. 기본적으로 Braze는 해당 확인란을 선택하지 않는 한 사용자에게 캠페인을 한 번만 전송합니다.
 
 ## 옵션 2: 지정한 시간에 발송
 

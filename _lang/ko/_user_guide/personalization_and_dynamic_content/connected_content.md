@@ -10,27 +10,30 @@ description: "이 랜딩 페이지에는 커넥티드 콘텐츠에 관한 모든
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-- name: API 호출 만들기
+- name: 커넥티드 콘텐츠 API 호출 만들기
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: 로컬 연결 콘텐츠 변수
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/server-01.svg
+- name: 연결된 콘텐츠 응답 캐싱
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: 연결된 콘텐츠 중단하기
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
   image: /assets/img/braze_icons/stop-circle.svg
-- name: 연결된 콘텐츠 재시도
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  image: /assets/img/braze_icons/refresh-ccw-01.svg
-- name: 공개 API
-  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
-  image: /assets/img/braze_icons/target-05.svg
 - name: 사용자 프로필 데이터 가져오기
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
   image: /assets/img/braze_icons/users-01.svg
+- name: 연결된 콘텐츠 재시도
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: 연결된 콘텐츠 요청 문제 해결 
   link: /docs/help/help_articles/api/webhook_connected_content_errors/
   image: /assets/img/braze_icons/check-square-broken.svg
+- name: 공개 API 사용
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
+  image: /assets/img/braze_icons/target-05.svg
 ---
 
 <br><br>

@@ -88,9 +88,13 @@ Context variables have the same expected formats for data types as [custom event
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
-|Time| last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
+|Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+By default, the time data type is in UTC. If you use a string data type to store a time value, you can define the time as a different time zone like PST. 
+
+For example, if you're sending a message to a user the day before their birthday, you would save the context variable as a time data type because there's Liquid logic associated with sending the day before. However, if you're sending a holiday message on Christmas Day (December 25), you wouldn't need to reference the time as a dynamic variable, so using a string data type would be preferable.
 
 ## Using context variables {#using-context-variables}
 

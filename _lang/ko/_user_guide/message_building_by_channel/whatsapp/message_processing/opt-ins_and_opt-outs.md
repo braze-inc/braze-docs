@@ -30,7 +30,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 ## Braze WhatsApp 채널에 옵트인을 설정하세요
 
 WhatsApp 옵트인에 대해서는 [WhatsApp의 요구 사항](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/)을 준수해야 합니다. 다음 정보를 Braze에 제공해야 합니다:
-- [전화번호]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)인 `external_id` 및 모든 사용자의 업데이트된 가입 상태. This can be done by using the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) or through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status.
+- [전화번호]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)인 `external_id` 및 모든 사용자의 업데이트된 가입 상태. This can be done by using the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) or through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status.
 
 {% alert note %}
 Braze는 `/users/track` 엔드포인트에 대한 개선 사항을 발표하여 [구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)에서 배울 수 있는 구독 상태 업데이트를 허용합니다. 그러나 [`/v2/subscription/status/set` 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)를 사용하여 이미 옵트인 프로토콜을 생성한 경우 계속해서 해당 엔드포인트를 사용할 수 있습니다.

@@ -24,10 +24,6 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 - 푸시 토큰
 - "[user_alias]:[alias_name]" 형식의 사용자 별칭, 예: "amplitude_id:user_123"
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **사용자 검색**은 **사용자 검색이며** **사용자** 아래에서 찾을 수 있습니다.
-{% endalert %}
-
 일치하는 항목이 발견되면 Braze SDK를 통해 해당 사용자에 대해 기록한 정보를 확인할 수 있습니다. 그렇지 않으면 검색에서 여러 사용자 프로필이 반환되는 경우 각 프로필을 개별적으로 병합하거나 일괄 사용자 병합을 수행할 수 있습니다. 전체 안내는 [중복 사용자]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)를 참조하세요.
 
 ![검색 결과에는 "검색 조건과 일치하는 사용자가 여러 명입니다"라는 배너와 이전 및 다음이라고 표시된 두 개의 버튼이 표시됩니다.][1]
@@ -128,10 +124,6 @@ If you have feedback on this table or would like to see specific events, please 
 ##### 주파수 제한 이벤트
 
 A frequency cap event occurs when a user is qualified to receive a message, but doesn't actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. **설정** > **최대 게재빈도 설정**에서 최대 게재빈도 설정을 커스텀할 수 있습니다.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** > **글로벌 메시지 설정에서** 빈도 제한을 관리할 수 있습니다.
-{% endalert %}
 
 ##### 빈 대상
 

@@ -11,6 +11,8 @@ description: "This reference article covers using an array of objects as a data 
 
 > This page covers how to use an array of objects to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
+{% multi_lang_include nested_attribute_objects/supported_data_types.md %}
+
 ## Limitations
 
 - Arrays of objects are intended for custom attributes sent through the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 

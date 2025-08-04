@@ -59,7 +59,7 @@ The destination URL will need to be provided for any link with a base URL that m
 
 !["Buttons" section with fields for a button name, website URL, and click tracking URL.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## Liquid personalization in URLs
 
@@ -111,7 +111,7 @@ You can use the `Clicked/Opened Step` filter and `clicked tracked WhatsApp link`
 
 ![Filter group with a filter for "clicked tracked WhatsApp link".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### Do I know which individual users are clicking on a URL?
 

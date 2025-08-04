@@ -135,7 +135,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 - 사용 가능한 편집기 블록 및 해당 속성 목록은 [편집기 블록]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)을 참조하십시오.
 - 메시지의 모양과 느낌을 사용자 정의하는 데 도움이 필요하면 [스타일 설정]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)을 확인하세요.
-- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## 5단계: 인앱 메시지를 테스트하세요
 

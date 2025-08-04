@@ -48,7 +48,7 @@ The drag-and-drop editor uses two key components for composing in-app messages: 
 
 ### Close x button
 
-For Modal and Fullscreen in-app messages, you can customize the close button displayed as <i class="fa-solid fa-xmark"></i> in the top-right corner of your message. Customization options include button size, fill color, background color, border style, and border radius.
+For Modal and Fullscreen in-app messages, you can customize the close button displayed as <i class="fa-solid fa-xmark"></i> in the top-right corner of your message. Customization options include button position, size, fill color, background color, border style, and border radius.
 
 ![Options to customize the close x button in in-app messages including button size, fill color, background color, border style, and border radius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
 

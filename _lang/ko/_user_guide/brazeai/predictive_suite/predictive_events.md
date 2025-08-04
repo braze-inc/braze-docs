@@ -37,10 +37,6 @@ guide_featured_list:
 
 **예측** 페이지는 **분석** 섹션에 위치해 있습니다. 전체 액세스를 위해 계정 매니저에게 문의하세요.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **예측**을 **인게이지먼트** 아래에서 찾을 수 있습니다.
-{% endalert %}
-
 이 기능을 구매하기 전에 미리보기 모드에서 사용할 수 있습니다. 이것은 합성 데이터를 사용한 데모 예측을 볼 수 있게 해주며, 한 번에 하나의 미리보기 예측 모델을 생성할 수 있게 해줍니다. 이 예측은 실제 사용자 데이터를 기반으로 생성되지만, 사용자의 가능성 점수에 따라 메시징 대상으로 설정할 수는 없습니다. 생성 후에는 정기적으로 업데이트되지 않습니다.
 
 미리보기를 사용하면 이 예측을 편집하고 다시 빌드하거나 보관하여 다른 [예측 품질]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#prediction_quality)을 테스트하고 [다양한 오디언스]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/#audience)와 친숙해지며 분석에 익숙해질 수 있습니다.
