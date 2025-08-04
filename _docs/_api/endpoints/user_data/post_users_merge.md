@@ -60,7 +60,7 @@ This endpoint will merge the following fields if they're not found on the target
 
 - First name
 - Last name
-- Email
+- Email (unencrypted emails only)
 - Gender
 - Date of birth
 - Phone number
