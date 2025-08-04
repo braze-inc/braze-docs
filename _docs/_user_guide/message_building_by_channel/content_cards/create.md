@@ -204,7 +204,7 @@ Each user can have up to 250 non-expired Content Cards in their feed at any give
 
 To prevent issues with the card limit, we advise the following best practices:
 
-* Use shorter expiration dates. For campaigns that are time sensitive (e.g., a weekend sale), set a specific expiration date. The ensures cards are automatically removed from the feed and don't count toward the limit after they are no longer elevant.
+* Use shorter expiration dates. For campaigns that are time sensitive (e.g., a weekend sale), set a specific expiration date. The ensures cards are automatically removed from the feed and don't count toward the limit after they are no longer relevant.
 *  Leverage action-based removal. Set up removal events for transactional or goal-based cards. For example, a card prompting a user to complete their profile should be removed as soon as a `profile_completed` event is logged.
 * Audit long-running campaigns. Review recurring or ongoing campaigns to ensure they aren't creating a poor experience for your users by filling the feed with too many cards over time.
 
