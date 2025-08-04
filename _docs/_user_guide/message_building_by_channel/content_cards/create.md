@@ -307,6 +307,10 @@ All Content Cards are automatically purged from Braze's systems 30 days after th
 
 #### Making cards last longer than 30 days
 
+{% alert tip %}
+For use cases requiring messages to persist longer than the 30-day Content Card limit, consider using the Banners. Banners are designed for persistence and do not have a mandatory expiration date, allowing them to stay visible as long as they are needed.
+{% endalert %}
+
 If you want a card to seem likes it's always available (i.e., lasts longer than the 30-day max), you can create a recurring campaign that effectively replaces the card every 30 days:
 
 1. Set the duration of the Content Card for 30 days.
