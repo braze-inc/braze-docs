@@ -682,7 +682,7 @@ You need to create a public endpoint that Braze can call to retrieve the externa
 
 ##### Endpoint specifications
 
-Method: `GET`
+**Method:** `GET`
 
 | Parameters | Description |
 | --- | --- |
@@ -700,7 +700,7 @@ https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.c
 
 ##### Expected response
 
-Braze expects a 200 status code. Any other code is considered a failure.
+Braze expects a `200` status code. Any other code is considered a failure.
 
 {% raw %}
 ```json
