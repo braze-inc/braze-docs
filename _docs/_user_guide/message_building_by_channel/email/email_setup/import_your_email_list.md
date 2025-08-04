@@ -28,7 +28,7 @@ Before creating a user through the API or SDK, call the [`/users/export/ids`]({{
 
 We strongly recommend that you look for unique email addresses when new users are created, and avoid passing or importing users with the same email address. Otherwise, you may have unintended consequences that impact message sending, targeting, reporting, and other features.
 
-For example, let's say you have duplicate profiles but certain custom attributes or events reside on only one profile. When you try to trigger campaigns or Canvases with multiple criteria, Braze can't identify the user as eligible because there are two user profiles. Or, if a campaign targets an email address shared by two users, the **Search Users** page will show both user profiles as having received the campaign.
+For example, let's say you have duplicate profiles, but certain custom attributes or events reside on only one profile. When you try to trigger campaigns or Canvases with multiple criteria, Braze can't identify the user as eligible because there are two user profiles. Or, if a campaign targets an email address shared by two users, the **Search Users** page will show both user profiles as having received the campaign.
 
 ### Identify your engaged users
 
