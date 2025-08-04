@@ -82,9 +82,9 @@ It's possible for Intelligent Selection to stop optimizing without picking a sin
 
 ## Intelligent Selection variant distribution
 
-Intelligent Selection bases its variant distribution on the current status of campaign conversions. It only determines the final districtions after the training period. 
+Intelligent Selection bases its variant distribution on the current status of campaign conversions. It only determines the final distributions after the training period. 
 
-This means that during the early stages of the campaign, both the 99% and 1% Intelligent Selections may receive approximately equal sends, but the final percentages for variant allocation may set at 99%—1%.
+This means that during the early stages of the campaign, both the 99% and 1% Intelligent Selections may receive approximately equal sends, but the final percentages for variant allocation may be set at 99%—1%.
 
 If you don't want Intelligent Selection to send 50/50 during the early stages of the campaign, we recommend using a traditional A/B test with fixed variants.
 

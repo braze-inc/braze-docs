@@ -155,7 +155,7 @@ In in-app message campaigns, the way users are tracked and how impressions are l
 
 For example, let's say a campaign has a target audience of 200 users at launch, with 100 users in the control group and 100 users in the variant.
 
-The 100 users in the variant are sent the in-app message payload, and 50 of them perform the trigger action and see the in-app message. The 100 users in the control group are only tracked for if they perform the campaign's trigger action, and 75 of them perform the trigger action and log an impression but don't see the in-app message.
+The 100 users in the variant receive the in-app message payload, and 50 of them perform the trigger action and see the in-app message. The 100 users in the control group are only tracked if they perform the campaign's trigger action, and 75 of them perform the trigger action and log an impression but don't see the in-app message.
 
 Despite the initial 50/50 split, the unique impressions logged aren't balanced. The variant group has 50 impressions, while the control group has 75 impressions.
 
