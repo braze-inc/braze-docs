@@ -10,7 +10,7 @@ search_rank: 4
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} About Content Cards
 
-> Content Cards are embedded directly into your app or website so that you can engage users with an experience that feels natural and seamless. They give you more control over your app or website experience, and let you create message inboxes or other custom interfaces, like carousels and tiles, that extend the reach of other channels such as email or push notifications.
+> Content Cards are embedded directly into your app or website so that you can engage users with an experience that feels natural and seamless. They give you more control over your app or website, letting you create message inboxes and custom interfaces that extend the reach of other channels such as email or push notifications.
 
 Content Cards are available as part of your Message Credits entitlements. If you’re not on our flexible Message Credits model, Content Cards are available as an add-on feature. Reach out to your Braze customer success manager or our support team for more information.
 
@@ -102,7 +102,7 @@ Take advantage of Content Cards to highlight promotional messages and unclaimed 
 
 Outside of these main use cases, our customers use Content Cards in so many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) and send the payloads to your app or website.
 
-## Content Card in your app
+## Content Cards in your app
 
 This section covers the most common ways to place Content Cards within your app or website:
 
