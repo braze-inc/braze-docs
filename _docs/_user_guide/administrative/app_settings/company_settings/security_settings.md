@@ -220,7 +220,7 @@ For the existing team permission capabilities, refer to [Setting user permission
 ### Defining PII
 
 {% alert important %}
-Defining PII fields only affects what users can view on the Braze dashboard and **does not** impact how user data is handled. Consult your legal team to make sure your company is complying with GDPR and other regulations involving [data retention]({{site.baseurl}}/data_retention/).
+Selecting and defining certain fields as PII fields only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
 You can select the fields your company designates as PII in the dashboard. To do this, go to **Company Settings** > **Admin Settings** > **Security Settings**.
