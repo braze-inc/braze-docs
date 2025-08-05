@@ -49,7 +49,6 @@ Authorization: Bearer YOUR-REST-API-KEY
   "external_user_ids": (optional, array of strings) see external user identifier,
   "user_aliases": (optional, array of user alias object) see user alias,
   "audience": (optional, connected audience object) see connected audience,
-  "segment_id": (optional, string) see segment identifier,
   "campaign_id": (optional, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
