@@ -176,7 +176,7 @@ case $1 in
             "$DEPLOY"
         fi
         ;;
-    release)        
+    release)
         require_git_fetch
         require_new_merges
         require_jq
