@@ -7,7 +7,7 @@
 {%- endif -%}
 {% if include.type == "static" %}
 <div class="fixed_video">
-    <iframe src="{{ embed_base_url }}/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+<iframe src="{{ embed_base_url }}/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
 </div>
 {%- else -%}
 <iframe width="560" height="315" src="{{ embed_base_url }}/{{ include.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
