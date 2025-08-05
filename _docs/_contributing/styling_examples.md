@@ -418,6 +418,10 @@ This is a update
 Defaults to YouTube embedded.
 {% multi_lang_include video.html id="9SrKbY4BV2E" source="youtube" %}
 
+#### Embedded Video/Wistia
+Embeds a Wistia video.
+{% multi_lang_include video.html id="c5lgi4xnvo" source="wistia" %}
+
 #### Embedded Video Right Align
 {% multi_lang_include video.html id="9SrKbY4BV2E" align="right" source="youtube" %}
 
