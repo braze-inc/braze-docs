@@ -149,6 +149,16 @@ A test that doesn't have a confidence of 95% can still hold important insights. 
 
 Whether or not your test has a clear winner, it can be helpful to run a [follow-up test](#recommended-follow-ups) to confirm your results or apply your findings to a slightly different scenario.
 
+## Discrepancies between the control group and variant
+
+In in-app message campaigns, the way users are tracked and how impressions are logged can cause discrepancies in the expected split between the control group and variant. This is because the actual impressions logged may not reflect this split, and Braze ultimately has no control over the individual user behavior of who will perform the trigger.
+
+For example, let's say a campaign has a target audience of 200 users at launch, with 100 users in the control group and 100 users in the variant.
+
+The 100 users in the variant receive the in-app message payload, and 50 of them perform the trigger action and see the in-app message. The 100 users in the control group are only tracked if they perform the campaign's trigger action, and 75 of them perform the trigger action and log an impression but don't see the in-app message.
+
+Despite the initial 50/50 split, the unique impressions logged aren't balanced. The variant group has 50 impressions, while the control group has 75 impressions.
+
 ## Recommended follow-ups {#recommended-follow-ups}
 
 One multivariate and A/B test can (and should!) inspire ideas for future tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include the following:
