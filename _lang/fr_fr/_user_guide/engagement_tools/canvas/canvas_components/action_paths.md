@@ -56,7 +56,7 @@ Ajoutez un ou plusieurs déclencheurs pour définir vos groupes d’actions. Ici
 - Exécuter un [événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Effectuer un événement de conversion
 - Ajouter une adresse e-mail
-- Modifier la valeur d'un attribut personnalisé (pas les attributs personnalisés imbriqués)
+- Modifier la valeur d'un attribut personnalisé (y compris les tableaux, mais pas les attributs personnalisés imbriqués)
 - Mettre à jour leur statut du groupe d'abonnement ou leur statut du groupe d'abonnement
 - Interagir avec une campagne ou une carte de contenu
 - Saisir un emplacement

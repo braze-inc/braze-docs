@@ -56,7 +56,7 @@ Añada un activador o varios activadores para definir sus grupos de acciones. Aq
 - Realiza un [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Realizar un evento de conversión
 - Agregar una dirección de correo electrónico
-- Cambiar el valor de un atributo personalizado (no atributos personalizados anidados)
+- Cambiar el valor de un atributo personalizado (incluidas las matrices, pero no atributos personalizados anidados)
 - Actualizar su estado de suscripción o de grupo de suscripción
 - Interactuar con una campaña o tarjeta de contenido
 - Escribir una ubicación
