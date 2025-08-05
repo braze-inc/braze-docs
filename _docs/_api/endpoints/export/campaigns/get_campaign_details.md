@@ -90,7 +90,7 @@ The `messages` response will contain information about each message. The followi
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
     "action": (string) action link from click,
-    "image_url": (string) the image URL for Android notification image, iOS notification image, or Web push icon image,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
     "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
