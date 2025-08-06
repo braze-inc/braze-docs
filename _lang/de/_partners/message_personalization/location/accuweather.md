@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) ist ein Medienunternehmen, das weltweit Dienste zur Wettervorhersage anbietet. Mit AccuWeather können Sie Ihre Marketing Kampagnen anreichern und personalisieren sowie Übersetzungen durch den Einsatz von Braze [Connected-Content][60] automatisieren. 
+> [AccuWeather](https://www.accuweather.com/) ist ein Medienunternehmen, das weltweit Dienste zur Wettervorhersage anbietet. Mit AccuWeather können Sie Ihre Marketing Kampagnen anreichern und personalisieren sowie Übersetzungen durch den Einsatz von Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) automatisieren. 
 
 _Diese Integration wird von Accuweather gepflegt._
 
@@ -18,7 +18,7 @@ _Diese Integration wird von Accuweather gepflegt._
 
 | Anforderung | Beschreibung |
 |---|---|
-| AccuWeather API-Schlüssel | Wenden Sie sich an Ihren Accuweather Account Manager:in, um kompatible API-Schlüssel für Ihre Anfrage-URLs zu erhalten.<br><br>Weitere Anweisungen finden Sie auf der Seite [AccuWeather Enterprise API][57] ]. |
+| AccuWeather API-Schlüssel | Wenden Sie sich an Ihren Accuweather Account Manager:in, um kompatible API-Schlüssel für Ihre Anfrage-URLs zu erhalten.<br><br>Weitere Anweisungen finden Sie auf der Seite [AccuWeather Enterprise API](https://apidev.accuweather.com/developers/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Verfügbare AccuWeather APIs
@@ -27,15 +27,15 @@ Im Folgenden finden Sie die AccuWeather APIs, die Sie in Ihren Braze Kampagnen u
 
 | API | Beschreibung |
 |---|---|
-|[Standorte][48] | Holen Sie sich einen Standortschlüssel für Ihren gewünschten Standort. Verwenden Sie den Standort-Schlüssel, um Wetterdaten von der API für Vorhersage oder aktuelle Bedingungen abzurufen. |
-| [Vorhersage][49] | Erhalten Sie Vorhersageinformationen für einen bestimmten Standort. |
-| [Aktuelle Bedingungen][50] | Rufen Sie Daten zu den aktuellen Bedingungen für einen bestimmten Standort ab. |
-| [Indizes][51] | Erhalten Sie tägliche Indexwerte für einen bestimmten Standort. Die Verfügbarkeit des Index ist je nach Standort unterschiedlich. |
-| [Wetteralarm][52] | Erhalten Sie Wetteralarme für einen bestimmten Standort. AccuWeather Wetteralarme werden anhand der täglichen Vorhersagen für einen Standort ermittelt. Für einen Standort besteht ein Alarm, wenn die Wettervorhersage [bestimmte Schwellenwerte][58]] erreicht oder überschreitet. |
-| [Alerts][53] | Erhalten Sie Unwetterwarnungen von offiziellen staatlichen Wetterdiensten und führenden globalen Wetterwarnungsanbietern. |
-| [Bildmaterial][54] | Holen Sie sich Radar- und Satellitenbilder. |
-| [Tropisch][55] | Erhalten Sie die aktuelle Position, frühere Positionen und Vorhersagen für tropische Wirbelstürme weltweit. |
-| [Übersetzungen][56] | Erhalten Sie eine Liste der verfügbaren Sprachen. Erhalten Sie Übersetzungen für bestimmte Gruppen von Phrasen. |
+|[Standorte](https://apidev.accuweather.com/developers/locationsAPIguide) | Holen Sie sich einen Standortschlüssel für Ihren gewünschten Standort. Verwenden Sie den Standort-Schlüssel, um Wetterdaten von der API für Vorhersage oder aktuelle Bedingungen abzurufen. |
+| [Vorhersage](https://apidev.accuweather.com/developers/forecastsAPIguide) | Erhalten Sie Vorhersageinformationen für einen bestimmten Standort. |
+| [Aktuelle Bedingungen](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) | Rufen Sie Daten zu den aktuellen Bedingungen für einen bestimmten Standort ab. |
+| [Indizes](https://apidev.accuweather.com/developers/indicesApiGuide) | Erhalten Sie tägliche Indexwerte für einen bestimmten Standort. Die Verfügbarkeit des Index ist je nach Standort unterschiedlich. |
+| [Wetteralarme](https://apidev.accuweather.com/developers/weatheralarmsAPIguide) | Erhalten Sie Wetteralarme für einen bestimmten Standort. AccuWeather Wetteralarme werden anhand der täglichen Vorhersagen für einen Standort ermittelt. Für einen Standort besteht ein Alarm, wenn die Wettervorhersage [bestimmte Schwellenwerte](https://apidev.accuweather.com/developers/weatheralarms) erreicht oder überschreitet. |
+| [Warnungen](https://apidev.accuweather.com/developers/alertsApiGuide) | Erhalten Sie Unwetterwarnungen von offiziellen staatlichen Wetterdiensten und führenden globalen Wetterwarnungsanbietern. |
+| [Bildmaterial](https://apidev.accuweather.com/developers/imageryAPIguide) | Holen Sie sich Radar- und Satellitenbilder. |
+| [Tropisch](https://apidev.accuweather.com/developers/tropicalAPIGuide) | Erhalten Sie die aktuelle Position, frühere Positionen und Vorhersagen für tropische Wirbelstürme weltweit. |
+| [Übersetzungen](https://apidev.accuweather.com/developers/translationsApiGuide) | Erhalten Sie eine Liste der verfügbaren Sprachen. Erhalten Sie Übersetzungen für bestimmte Gruppen von Phrasen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Connected-Content Beispiel
@@ -58,7 +58,7 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![Eine Connected-Content Push-Nachricht mit dem Inhalt "Es regnet! Schnappen Sie sich einen Regenschirm!", angezeigt auf einem Android Gerät][17]{: style="max-width:40%"}
+![Eine Connected-Content Push-Nachricht mit dem Inhalt "Es regnet! Schnappen Sie sich einen Regenschirm!" auf einem Android Gerät]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected-Content Push Usage Example"){: style="max-width:40%"}
 
 Eine Aufschlüsselung der beiden Connected-Content-Aufrufe finden Sie in den folgenden Beispielen.
 
@@ -206,16 +206,3 @@ Wenn der API-Aufruf mit `{{local_weather[0].WeatherText}}` antwortet und `Rain` 
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Beispiel für die Verwendung von Connected Content Push"
-[48]: https://apidev.accuweather.com/developers/locationsAPIguide
-[49]: https://apidev.accuweather.com/developers/forecastsAPIguide
-[50]: https://apidev.accuweather.com/developers/currentConditionsAPIGuide
-[51]: https://apidev.accuweather.com/developers/indicesApiGuide
-[52]: https://apidev.accuweather.com/developers/weatheralarmsAPIguide
-[53]: https://apidev.accuweather.com/developers/alertsApiGuide
-[54]: https://apidev.accuweather.com/developers/imageryAPIguide
-[55]: https://apidev.accuweather.com/developers/tropicalAPIGuide
-[56]: https://apidev.accuweather.com/developers/translationsApiGuide
-[57]: https://apidev.accuweather.com/developers/
-[58]: https://apidev.accuweather.com/developers/weatheralarms
-[60]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
