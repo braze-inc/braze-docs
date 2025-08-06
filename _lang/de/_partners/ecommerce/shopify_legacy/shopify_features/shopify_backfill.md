@@ -12,7 +12,7 @@ page_order: 1
 
 > Das Shopify Historical Backfill Feature erlaubt es Marken, Kunden- und Kaufdaten automatisiert und nahtlos zu synchronisieren, so dass Sie sofort mit dem Engagement mit einem Ihrer wertvollsten Segmente beginnen können - den Käufern. 
 
-{% multi_lang_include alerts.md alert='Shopify Verwerfung' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 Im Rahmen dieses Backfill importiert Braze alle Kund:innen, Bestellungen und Kauf-Events der letzten 90 Tage vor Ihrer Shopify Integration. Beachten Sie, dass dieses Feature ideal für neuere Kund:innen ist, die noch keine aktiven Nachrichten laufen haben, da die Auswirkungen im nächsten Abschnitt erläutert werden. Dieses Feature wird auch auf Ihre Datenpunkt-Nutzung angerechnet.
 
