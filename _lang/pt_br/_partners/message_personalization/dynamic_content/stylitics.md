@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Stylitics](https://stylitics.com/) é uma plataforma SaaS baseada em nuvem para varejistas automatizarem e distribuírem conteúdo visual em escala. Os pacotes da Stylitics inspiram ao contextualizar produtos, aumentando a confiança na compra e elevando o engajamento. Isso gera um maior valor médio de pedido e taxas de conversão mais elevadas.
 
-
+_Esta integração é mantida pela Stylitics._
 
 ## Sobre a integração
 
