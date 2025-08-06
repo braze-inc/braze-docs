@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Además del contenido conectado y los atributos personalizados, puedes compartir códigos de Voucherify utilizando el fragmento de código promocional Braze. En primer lugar, exporte códigos desde Voucherify, importe códigos a Braze y añada un fragmento de código de correo electrónico para extraer códigos de la lista de promociones. 
 
-
+_Esta integración es mantenida por Voucherify._
 
 ## Paso 1: Exportar códigos únicos desde Voucherify
 
