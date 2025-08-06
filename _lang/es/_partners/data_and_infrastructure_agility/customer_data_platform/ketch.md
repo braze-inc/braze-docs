@@ -11,7 +11,7 @@ search_tag: Ketch
 
 > [Ketch](https://www.ketch.com) permite a las empresas ser administradoras responsables de sus datos. Ketch proporciona operaciones de privacidad simplificadas y un control y una inteligencia de datos completos y dinámicos. 
 
-
+_Esta integración está mantenida por Ketch._
 
 ## Sobre la integración
 
