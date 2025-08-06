@@ -12,7 +12,7 @@ description: "En esta página encontrarás artículos de ayuda que pueden ayudar
 guide_featured_title: "Temas"
 guide_featured_list:
   - name: Cuenta
-    link: /docs/help/help_articles/account/
+    link: /docs/user_guide/administrative/access_braze/troubleshooting/
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
@@ -32,9 +32,6 @@ guide_featured_list:
   - name: Correo electrónico
     link: /docs/help/help_articles/email/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Mensajes dentro de la aplicación
-    link: /docs/help/help_articles/in-app_messages/
-    image: /assets/img/braze_icons/phone-02.svg
   - name: Push
     link: /docs/help/help_articles/push/
     image: /assets/img/braze_icons/message-square-02.svg
