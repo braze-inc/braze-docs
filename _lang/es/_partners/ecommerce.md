@@ -1,10 +1,10 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: Comercio electrónico
+article_title: Socios de comercio electrónico
 page_order: 10
 
 page_type: landing
-description: ""
+description: "Esta página de destino enumera los socios de Braze (Alloys) que te permiten integrarte con su plataforma de comercio electrónico."
 
 layout: partner_page
 search_tag: Partner
@@ -12,44 +12,44 @@ search_tag: Partner
 partner_top_header: "eCommerce"
 
 valid_partner_list:
-- name: ""
+- name: Lexer
   url: /docs/partners/lexer/
-- name: ""
+- name: Peak
   url: /docs/partners/peak/
-- name: ""
+- name: Personalizar
   url: /docs/partners/personalize/
-- name: ""
+- name: Tangerine
   url: /docs/partners/tangerine/
-- name: ""
+- name: Niño prodigio
   url: /docs/partners/wunderkind/
-- name: ""
+- name: Talon.One
   url: /docs/partners/talonone/
-- name: ""
+- name: ViralSweep
   url: /docs/partners/viralsweep/
-- name: ""
+- name: Voucherify
   url: /docs/partners/voucherify/
-- name: ""
+- name: Antavo
   url: /docs/partners/antavo/
-- name: ""
+- name: Kognitiv Inspire
   url: /docs/partners/kognitiv/
-- name: ""
+- name: Yotpo
   url: /docs/partners/yotpo/
-- name: ""
+- name: Narvar
   url: /docs/partners/narvar/
-- name: ""
+- name: Olo
   url: /docs/partners/olo/
-- name: ""
+- name: Recurly
   url: /docs/partners/recurly/
-- name: ""
+- name: RevenueCat
   url: /docs/partners/revenuecat
-- name: ""
+- name: Transcend
   url: /docs/partners/transcend/
-- name: ""
+- name: Constructor
   url: /docs/partners/constructor/
-- name: ""
+- name: Stylitics
   url: /docs/partners/stylitics/
-- name: ""
+- name: Shopify
   url: /docs/partners/shopify/
-- name: ""
+- name: Raya
   url: /docs/partners/stripe/
 ---
