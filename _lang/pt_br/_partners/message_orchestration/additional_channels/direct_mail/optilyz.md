@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [optilyz][1] é uma plataforma de automação de mala direta que permite executar campanhas de mala direta mais sustentáveis, lucrativas e centradas no cliente. 
 
-
+_Essa integração é mantida pela Optilyz._
 
 ## Sobre a integração
 
