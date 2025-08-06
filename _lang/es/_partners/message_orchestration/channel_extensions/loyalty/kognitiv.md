@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Kognitiv Inspire][1] es un sistema tecnológico de fidelización que ayuda a desbloquear experiencias de cliente inigualables a través de programas de fidelización basados en resultados que amplifican el compromiso del cliente, aumentan el gasto y celebran el comportamiento leal.
 
-
+_Esta integración está mantenida por Kognitiv Inspire._
 
 ## Sobre la integración
 
