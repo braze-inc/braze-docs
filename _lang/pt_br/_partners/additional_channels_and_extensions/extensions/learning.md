@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Aprendizagem
 config_only: true
 ---
