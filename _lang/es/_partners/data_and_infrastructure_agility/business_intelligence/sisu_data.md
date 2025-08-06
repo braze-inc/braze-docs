@@ -18,7 +18,7 @@ La integración de Sisu Data y Braze le permite comprender en todas las campaña
 | Requisito | Descripción |
 | ----------- | ----------- |
 | Cuenta Sisu | Se necesita una cuenta [Sisu][3] para beneficiarse de esta asociación. |
-| Almacén en nube | Esta integración asume que sus datos Braze se almacenan en un almacén en la nube (por ejemplo, Snowflake, BigQuery).  |
+| Almacén en nube | Esta integración asume que sus datos Braze se almacenan en un almacén en la nube (por ejemplo, Snowflake, BigQuery). Para agilizar este proceso de integración, recomendamos utilizar la funcionalidad nativa de Braze a través de [Currents][4]. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integración
