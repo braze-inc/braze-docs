@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Amperity](https://amperity.com/) es una plataforma integral de datos de clientes empresariales que ayuda a las marcas a conocer a sus clientes, tomar decisiones estratégicas y adoptar sistemáticamente las medidas adecuadas para servir mejor a sus consumidores. Amperity proporciona funciones inteligentes de unificación de la gestión de datos, análisis, información y activación.
 
-
+_Esta integración está mantenida por Amperity._
 
 {% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 
@@ -84,7 +84,7 @@ El tipo de datos utilizado depende de la naturaleza del atributo. Por ejemplo, u
 
 ### Duplicación de atributos
 
-Evite enviar atributos personalizados que dupliquen campos predeterminados del perfil de usuario.  Si se envían como "birthday", "Birthdate" o cualquier otra cadena, se creará un atributo personalizado y los valores del campo "dob" no se actualizarán.
+Evite enviar atributos personalizados que dupliquen campos predeterminados del perfil de usuario. Por ejemplo, las fechas de nacimiento deben enviarse a Braze como un campo de perfil de usuario llamado "dob" para que coincida con el atributo estándar de Braze. Si se envían como "birthday", "Birthdate" o cualquier otra cadena, se creará un atributo personalizado y los valores del campo "dob" no se actualizarán.
 
 ### Puntos de datos
 
