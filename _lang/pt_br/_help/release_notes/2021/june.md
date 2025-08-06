@@ -22,7 +22,7 @@ Novos [filtros de codificação`hmac_sha1` e `hmac_sha256` Liquid]({{site.baseur
 
 ## Página do evento de compra
 
-Quer saber os detalhes dos eventos de compra na Braze? Acesse nosso artigo dedicado a [eventos de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) para saber mais.
+Quer saber os detalhes dos eventos de compra na Braze? Acesse nosso artigo dedicado a [eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) para saber mais.
 
 ## Novas parcerias Braze
 
