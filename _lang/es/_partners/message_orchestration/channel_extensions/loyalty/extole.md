@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Extole](https://www.extole.com/), una empresa de SaaS, es líder en el sector del marketing de recomendación a amigos y ayuda a crear y optimizar programas eficaces de marketing de recomendación para aumentar la captación de clientes.
 
-
+_Esta integración está mantenida por Extole._
 
 ## Sobre la integración
 
