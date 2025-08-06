@@ -11,7 +11,7 @@ Tool:
 
 # Sincronização do público com a Criteo
 
- 
+Usando o Braze Audience Sync to Criteo, as marcas podem optar por adicionar dados de usuários de sua própria integração do Braze às listas de clientes da Criteo para fornecer anúncios com base em disparadores comportamentais, segmentação e muito mais. Qualquer critério que você normalmente usaria para disparar uma mensagem (push, e-mail, SMS, webhook, etc.) em um Braze Canvas com base nos dados de seu usuário agora pode ser usado para disparar um anúncio para esse usuário em suas listas de clientes da Criteo.
 
 **Os casos de uso comuns para sincronização de público incluem:**
 
@@ -90,7 +90,7 @@ Em seguida, selecione sua conta de anúncio da Criteo desejada. No menu suspenso
 {% tabs %}
 {% tab Criar um novo público %}
 **Crie um Novo Público**<br>
- Em seguida, salve seu público clicando no botão **Criar Público** na parte inferior do editor de etapas.
+Digite um nome para o novo público, selecione **Add Users to Audience (Adicionar usuários ao público**) e selecione os campos que deseja sincronizar com a Criteo. Em seguida, salve seu público clicando no botão **Criar Público** na parte inferior do editor de etapas.
 
 ![Visualização expandida da etapa do canva de público-alvo personalizado. Aqui a conta de anúncios desejada é selecionada, e um novo público é criado.]({% image_buster /assets/img/criteo/criteo3.png %})
 
@@ -102,7 +102,7 @@ Ao lançar um canva com um novo público, a Braze sincroniza os usuários quase 
 {% endtab %}
 {% tab Sincronização com um público existente %}
 **Sincronizar com um Público Existente**<br>
- Para sincronizar com um público existente, digite o nome do público existente no menu suspenso e **adicione ao público**. A Braze adicionará usuários quase em tempo real quando eles entrarem no componente do Audience Sync.
+O Braze também oferece a capacidade de adicionar usuários aos públicos existentes da Criteo para garantir que esses públicos estejam atualizados. Para sincronizar com um público existente, digite o nome do público existente no menu suspenso e **adicione ao público**. A Braze adicionará usuários quase em tempo real quando eles entrarem no componente do Audience Sync.
 
 ![Visualização expandida da etapa do canva de público-alvo personalizado. Aqui a conta de anúncios desejada e o público existente estão selecionados.]({% image_buster /assets/img/criteo/criteo8.png %})
 
@@ -111,7 +111,7 @@ Ao lançar um canva com um novo público, a Braze sincroniza os usuários quase 
 
 ### Etapa 5: Lançar canva
 
-Depois de configurar o Audience Sync para a Criteo, basta iniciar o canva!  Se o seu Canva contiver componentes subsequentes, os usuários avançarão para a próxima etapa da jornada do usuário.
+Depois de configurar o Audience Sync para a Criteo, basta iniciar o canva! O novo público será criado, e os usuários que passarem pela etapa Audience Sync serão transferidos para esse público na Criteo. Se o seu Canva contiver componentes subsequentes, os usuários avançarão para a próxima etapa da jornada do usuário.
 
 Você pode visualizar o público na Criteo acessando sua conta do Gerenciador de anúncios e selecionando Segmentos na **Biblioteca de públicos** da navegação. Na página **Segments (Segmentos** ), você pode ver o tamanho de cada público depois que ele atinge ~1.000.
 
@@ -119,9 +119,9 @@ Você pode visualizar o público na Criteo acessando sua conta do Gerenciador de
 
 ## Considerações sobre sincronização de usuário e limite de frequência
 
-Quando os usuários atingirem a etapa de sincronização do público, o Braze sincronizará esses usuários quase em tempo real, respeitando também os limites de frequência da API da Criteo. 
+Quando os usuários atingirem a etapa de sincronização do público, o Braze sincronizará esses usuários quase em tempo real, respeitando também os limites de frequência da API da Criteo. Na prática, isso significa que o Braze tentará agrupar e processar o máximo de usuários a cada 5 segundos antes de enviar esses usuários para a Criteo.
 
- Se um cliente do Braze atingir esse limite de frequência, o Braze the Canvas tentará novamente a sincronização por até 13 horas. Se a sincronização não for possível, esses usuários são listados na métrica de Usuários com Erro. 
+O limite de frequência da API da Criteo estabelece não mais do que 250 solicitações por minuto. Se um cliente do Braze atingir esse limite de frequência, o Braze the Canvas tentará novamente a sincronização por até 13 horas. Se a sincronização não for possível, esses usuários são listados na métrica de Usuários com Erro. 
 
 ## Compreensão da análise de dados
 
@@ -144,20 +144,20 @@ Lembre-se de que haverá uma postergação nos relatórios das métricas de usu�
 
 ## Perguntas frequentes
 
-### 
+### O que devo fazer em seguida se receber um erro de token inválido?
 Você pode simplesmente desconectar e reconectar sua conta da Criteo na página de parceiros da Criteo. Verifique com seu administrador da Criteo se você tem as permissões apropriadas para a conta de anúncios com a qual deseja sincronizar.
 
-### 
+### Por que meu Canva não pode ser iniciado?
 
- 
+Confirme que sua conta de anúncios da Criteo foi conectada com sucesso ao Braze na página de parceiros da Criteo. Em seguida, verifique se você selecionou uma conta de anúncios, inseriu um nome para o novo público e selecionou os campos para correspondência.
 
-### 
+### Como posso saber se houve correspondência entre os usuários depois de passá-los para a Criteo?
 
 A Criteo não fornece essas informações devido às suas políticas internas de privacidade de dados.
 
-### 
+### Quantos públicos a Criteo pode suportar?
 
-No momento, você só pode ter 1.000 públicos na sua conta da Criteo.  
+No momento, você só pode ter 1.000 públicos na sua conta da Criteo. Se você exceder esse limite, o Braze o notificará de que não é possível criar novos públicos. Você precisará remover os públicos que não está mais usando na sua conta de anúncios da Criteo.
 
 
 [0]: {% image_buster /assets/img/criteo/criteo.png %}
