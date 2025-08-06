@@ -11,38 +11,38 @@ search_tag: Partner
 
 {% sdktabs %}
 {% sdktab Content Cards %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/contentcard.md %}
+{% multi_lang_include snowflake_users_messages/contentcard.md %}
 {% endsdktab %}
 
 {% sdktab Email %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/email.md %}
+email.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab Feature Flags %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/featureflag.md %}
+featureflag.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab In-App Messages %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/inappmessage.md %}
+inappmessage.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab News Feed %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/newsfeedcard.md %}
+newsfeedcard.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab Push Notifications %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/pushnotification.md %}
+pushnotification.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab SMS %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/sms.md %}
+sms.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab Webhook %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/webhook.md %}
+webhook.md snowflake_users_messages/ %}
 {% endsdktab %}
 
 {% sdktab WhatsApp %}
-{% multi_lang_include copo_nieve_usuarios_mensajes/whatsapp.md %}
+whatsapp.md snowflake_users_messages/ %}
 {% endsdktab %}
 {% endsdktabs %}
