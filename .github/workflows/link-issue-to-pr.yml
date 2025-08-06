@@ -1,8 +1,10 @@
+# Links pull requests to matching issues based on BD-#### tags.
 name: Link PR to Matching Issue
 
 on:
   pull_request:
-    types: [opened, edited, synchronize]
+    # Add more types if needed, but only the minimum required for each job in the workflow.
+    types: [opened, edited]  # ‘edited’ covers title/body changes; omit ‘synchronize’ if not needed
 
 jobs:
   link-issue:
@@ -21,41 +23,43 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr = context.payload.pull_request;
-            const prTitle = pr.title;
-            const match = prTitle.match(/\[BD-(\d+)\]/);
+            const title = pr.title;
+
+            // Match any “BD-” followed by one or more digits, e.g. BD-1 or BD-123456789
+            const match = title.match(/BD-(\d+)/);
             if (!match) return;
 
-            const tag = `BD-${match[1]}`;
+            const tag  = `BD-${match[1]}`;        // BD-1234
+            const tagWithBrackets = `[${tag}]`;    // [BD-1234]
 
-            // Step 1: Find matching open issue
+            // Step 1 – find the matching open issue
             const { data: issues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              state: "open"
+              state: 'open'
             });
 
-            const matchedIssue = issues.find(issue =>
-              issue.title.includes(`[${tag}]`)
+            const issue = issues.find(i =>
+              i.title.includes(tagWithBrackets) || i.title.includes(tag)
             );
-            if (!matchedIssue) return;
+            if (!issue) return;
 
-            // Step 2: Check existing comments
+            // Step 2 – check for an existing “Fixes #N” comment
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
             });
 
-            const alreadyCommented = comments.some(comment =>
-              comment.body.includes(`Fixes #${matchedIssue.number}`)
+            const alreadyPosted = comments.some(c =>
+              c.body.includes(`Fixes #${issue.number}`)
             );
+            if (alreadyPosted) return;
 
-            // Step 3: Comment if not already posted
-            if (!alreadyCommented) {
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pr.number,
-                body: `Fixes #${matchedIssue.number}`
-              });
-            }
+            // Step 3 – post the comment
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: `Fixes #${issue.number}`
+            });
