@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Looker](https://looker.com/), uma plataforma de análise de dados e análises de big data, o capacita a explorar, analisar e compartilhar análises de business intelligence em tempo real sem problemas.
 
-A integração entre o Braze e o Looker permite que os usuários do Braze aproveitem a sinalização de usuários dos [blocos do Looker](#looker-blocks) e do [Looker Actions](#looker-actions) por meio da API REST. Esses usuários sinalizados podem ser adicionados a segmentos para [direcionamento](#segment-users) de futuras campanhas ou canvas do Braze. 
+A integração entre o Braze e o Looker permite que os usuários do Braze aproveitem a sinalização de usuários dos [blocos do Looker](#looker-blocks) e do [Looker Actions](#looker-actions) por meio da API REST. Esses usuários sinalizados podem ser adicionados a segmentos para [direcionamento](#segment-users) de futuras campanhas ou canvas do Braze. Para usar o Looker com o Braze, recomendamos enviar seus dados do Braze para um data [warehouse usando o Braze Currents][6] e, em seguida, usar os blocos do Looker do Braze para modelar e visualizar rapidamente seus dados do Braze no Looker.
 
 ## Pré-requisitos
 
