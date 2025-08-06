@@ -38,7 +38,7 @@ Como en la primera integración de tu tienda Shopify, puedes elegir entre una co
 
 Elige la opción que mejor se adapte a tus necesidades:
 
-{% multi_lang_include shopify.md section='Pestañas de integración' %}
+{% multi_lang_include shopify.md section='Integration Tabs' %}
 
 Para ver la integración de cada tienda y configurar los ajustes avanzados, selecciona una tienda en el menú desplegable.
 
