@@ -32,45 +32,45 @@ Con la compartición de datos, no se copian ni transfieren datos reales entre cu
 
 Además, utilizando las funciones y permisos incorporados de Snowflake, el acceso a los datos compartidos desde Braze puede controlarse y gobernarse utilizando los controles de acceso ya existentes para tu cuenta de Snowflake y los datos que contiene. El acceso puede restringirse y controlarse del mismo modo que tus propios datos.
 
-
+Para saber más sobre la compartición de datos de Snowflake, consulta [Introducción a la compartición segura de datos](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
 ## Requisitos previos
 
-
+Antes de poder utilizar esta característica, tendrás que completar lo siguiente:
 
 | Requisito | Descripción |
 | ----------- | ----------- |
-|  |  |
-| Cuenta Snowflake |  |
+| Acceso Braze | Para acceder a esta característica en Braze, tendrás que ponerte en contacto con tu cuenta Braze o con tu administrador del éxito del cliente. |
+| Cuenta Snowflake | Una cuenta Snowflake con permisos `admin`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 
+## Configuración del Intercambio Seguro de Datos
 
-   
+En Snowflake, los datos se comparten entre un [proveedor](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) y un [consumidor de datos](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers). En este contexto, tu cuenta Braze es el proveedor de datos porque crea y envía el datashare, mientras que tu cuenta Snowflake es el consumidor de datos porque utiliza el datashare para crear una base de datos. Para más detalles, consulta [Snowflake: Consumir datos compartidos](https://docs.snowflake.com/en/user-guide/data-share-consumers).
 
-### Paso 1: 
+### Paso 1: Enviar el datashare desde Braze
 
-1. 
-2.  
+1. En Braze, ve a **Integraciones de socios** > Compartir datos.
+2. Introduce los datos de tu cuenta Snowflake y el localizador. Para obtener el localizador de tu cuenta, ejecuta `SELECT CURRENT_ACCOUNT()` en la cuenta de destino.
 3. Si utilizas un recurso compartido CRR, especifica el proveedor de la nube y la región.
-4.  
+4. Cuando hayas terminado, selecciona **Crear Datashare**. Esto enviará el datashare a tu cuenta Snowflake.
 
-### Paso 2: 
+### Paso 2: Crea la base de datos en Snowflake
 
-1. 
-2.  Por ejemplo:
+1. Al cabo de unos minutos, deberías recibir el datashare entrante en tu cuenta de Snowflake.
+2. Utilizando el datashare de entrada, crea una base de datos para ver y consultar las tablas. Por ejemplo:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. 
+3. Concede privilegios para consultar la nueva base de datos.
 
 {% alert warning %}
-
+Si eliminas y vuelves a crear un recurso compartido en el panel de Braze, debes eliminar la base de datos creada anteriormente y volver a crearla utilizando `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` para consultar el recurso compartido entrante.
 {% endalert %}
 
 ## Utilización y visualización
 
- Sin embargo, ten en cuenta que los datos compartidos son de sólo lectura y sólo pueden consultarse, pero no modificarse ni borrarse de ninguna manera.
+Una vez aprovisionado el recurso compartido de datos, tendrás que crear una base de datos a partir del recurso compartido de datos entrante, para que todas las tablas compartidas aparezcan en tu instancia Snowflake y puedan consultarse como cualquier otro dato que almacenes en tu instancia. Sin embargo, ten en cuenta que los datos compartidos son de sólo lectura y sólo pueden consultarse, pero no modificarse ni borrarse de ninguna manera.
 
 De forma similar a Currents, puedes utilizar tu compartición segura de datos de Snowflake para:
 
@@ -139,7 +139,7 @@ La velocidad, el rendimiento y el coste de cualquier consulta realizada sobre lo
 
 ## Puntos de referencia Braze
 
-
+Benchmarks, [una herramienta de datos creada por Braze](https://www.braze.com/perspectives/benchmarks), permite a los clientes potenciales y a los clientes de Braze ver cómo se comparan con los principales actores de su sector comparando sus métricas con los puntos de referencia del sector Braze.
 
 Los sectores iniciales incluyen:
 
