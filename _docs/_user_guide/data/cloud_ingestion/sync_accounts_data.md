@@ -209,12 +209,13 @@ For more details on setting up an S3 sync, see the [File Storage Integrations]({
 Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
 
 **Files should include the below fields:**
-| Field | Required | Description |
-| --- | --- |
-| `ID` | YES | ID of the Account to update or create |
-| `NAME` | YES | Name of the Account |
-|`PAYLOAD` | YES | This is a JSON string of the fields you want to sync to the user in Braze. |
-|`DELETED` | NO | Boolean indicating to delete the Account from Braze. |
+
+| Field | Required | Description |  
+| --- | --- | --- |  
+| `ID` | YES | ID of the Account to update or create |  
+| `NAME` | YES | Name of the Account |  
+|`PAYLOAD` | YES | This is a JSON string of the fields you want to sync to the user in Braze. |  
+|`DELETED` | NO | Boolean indicating to delete the Account from Braze. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
