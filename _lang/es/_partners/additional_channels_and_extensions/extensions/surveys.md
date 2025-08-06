@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Cuestionarios
 config_only: true
 ---
