@@ -196,7 +196,7 @@ Braze needs a certain amount of engagement data to make a good estimate. If ther
 
 Intelligent Timing relies on the specified local time zone of each user, so the scheduled delivery date and time may vary across users.
 
-If users don't receive messages as expected, check that the time zone field in their profile is populated correctly. If the time zone field is empty, the user may recieve messages that align with the company's time zone instead of their local time.
+If users don't receive messages as expected, check that the time zone field in their profile is populated correctly. If the time zone field is empty, the user may receive messages that align with the company's time zone instead of their local time.
 
 ### Sending past the scheduled date
 
