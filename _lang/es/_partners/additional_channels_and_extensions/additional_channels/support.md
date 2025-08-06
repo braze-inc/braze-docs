@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Soporte
 config_only: true
 ---
