@@ -48,7 +48,7 @@ If you're experiencing rate limit issues, analyze your usage of SDK methods and 
 
 - **`requestImmediateDataFlush()`**: Forces immediate data transmission
 - **`requestContentCardsRefresh()`**: Refreshes Content Cards from the server
-- **`refreshFeatureFlags()`**: Requests the latest Feature Flag data
+- **`refreshFeatureFlags()`**: Refreshes Feature Flags from the server
 - **`logCustomEvent()`**: Logs custom events
 - **`logPurchase()`**: Logs purchase events
 
@@ -56,7 +56,7 @@ When reviewing your integration, consider:
 
 1. **Event frequency**: Are you tracking meaningful actions or every interaction?
 2. **Refresh patterns**: Are you refreshing content when necessary or on every user action?
-3. **Batching strategy**: Are you letting the SDK handle batching automatically?
+3. **Batching strategy**: Are you letting the SDK handle batching automatically or frequently forcing requests?
 
 When contacting Support about rate limit issues, please provide:
 - Which SDK methods you're calling
