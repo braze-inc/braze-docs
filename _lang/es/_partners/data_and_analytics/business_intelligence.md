@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Inteligencia empresarial
 config_only: true
 ---
