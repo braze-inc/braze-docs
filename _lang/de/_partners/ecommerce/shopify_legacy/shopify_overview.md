@@ -14,7 +14,7 @@ page_order: 0
 
 Die Integration von Shopify und Braze erlaubt es Ihnen, Ihren Shopify-Shop zu verbinden, um Ihre Shopify-Daten nahtlos an Braze weiterzugeben. Sie können kanalübergreifende Strategien und Canvas in Braze nutzen, um neue Leads zu engagieren, neue Kunden zu benachrichtigen oder Ihre Benutzer mit Nachrichten über abgebrochene Kassiervorgänge zu retargeten, um sie zum Abschluss ihrer Einkäufe zu bewegen.
 
-{% multi_lang_include alerts.md alert='Shopify Verwerfung' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Unterstützte Funktionen
 
