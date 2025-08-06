@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Pypestream](https://www.pypestream.com) es una plataforma de IA conversacional de stack completo que ofrece mensajería en la nube patentada y todo en uno para transformar las marcas en entidades digitales "siempre activas". Con Pypestream, las marcas ahora pueden entablar conversaciones omnicanal a escala con cada cliente mientras aprovechan una experiencia de usuario inmersiva, capacidades avanzadas de NLU e integraciones en tiempo real con sistemas backend.
 
-
+_Esta integración está mantenida por Pypestream._
 
 ## Sobre la integración
 
