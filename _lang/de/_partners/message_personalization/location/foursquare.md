@@ -34,7 +34,7 @@ Um die beiden Plattformen zu integrieren, müssen Sie die beiden SDKs integriere
 Um die Felder zwischen den beiden SDKs korrekt abzubilden, setzen Sie in beiden Systemen dieselbe Nutzer:in ID mit der [Methode`changeUser` ]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) im Braze SDK und der Methode `setUserId` von [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) im Pilgrim SDK.
 
 ### Schritt 2: Pilgrim-Konsole konfigurieren
-![Ein Bild der Pilgrim-Konsole, die nach der Gruppen-ID, der Android App ID und der iOS App ID fragt.][2]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Ein Bild der Pilgrim-Konsole, die nach der Gruppen-ID, der Android App ID und der iOS App ID fragt.]({% image_buster /assets/img_archive/pilgrim-dev-console.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Suchen Sie die Workspace- und App IDs in der Braze Entwickler:in-Konsole. Als nächstes geben Sie Ihren Braze REST API-Schlüssel und Ihre App IDs in der Foursquare Pilgrim-Konsole ein.
 
@@ -63,5 +63,3 @@ Um Ihre Nutzer:innen erneut zu retargeten, verwenden Sie das Pilgrim SDK, um ein
 Sie können in Braze auch Nutzer:innen segmentieren, die in einem bestimmten Zeitfenster eine bestimmte Art von Veranstaltungsort auf der Grundlage von Foursquare `primaryCategoryId` besucht haben. Um diesen Datenpunkt für Ihre Retargeting-Anwendungsfälle zu nutzen, protokollieren Sie `primaryCategoryId` als Event-Eigenschaft während Ihrer Segmentierung der Zielgruppe. Um die Nutzer:innen und Eigenschaften zu identifizieren, die von der Foursquare API und dem Pilgrim SDK verwendet werden, besuchen Sie die [Entwickler:in von Foursquare](https://developer.foursquare.com/).
 
 
-[1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
-[2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}
