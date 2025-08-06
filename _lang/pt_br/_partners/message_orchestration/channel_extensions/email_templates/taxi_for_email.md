@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [O Taxi for Email](http://taxiforemail.com/) é uma ferramenta de marketing por e-mail on-line que oferece um editor visual de e-mail intuitivo do tipo arrastar e soltar. O Taxi incentiva as equipes a colaborar facilmente em campanhas de e-mail, permitindo que redatores e editores tenham acesso e recursos necessários para criar e-mails, tudo sem código.
 
-
+_Esta integração é mantida pelo Taxi for Email._
 
 ## Sobre a integração
 
