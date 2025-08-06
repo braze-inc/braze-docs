@@ -11,7 +11,7 @@ search_tag: Partner
 
 > Un código de cupón es un código único que puede ser utilizado por un solo usuario (ya sea de uso único o múltiple). El marco Punchh genera códigos de cupón, que pueden procesarse dentro de una aplicación móvil o en el sistema de punto de venta (TPV).
 
-
+_Esta integración está mantenida por Punchh._
 
 ## Sobre la integración
 
@@ -29,7 +29,7 @@ Utilizando el marco de cupones Punchh y Braze, puede lograr los siguientes escen
     - Token dinámico de generación de cupones: Se trata de un token de seguridad generado por el sistema para la encriptación.
     - URL de generación de cupones dinámicos: Esta URL se incrustará en el correo electrónico como enlace o imagen, según requiera la empresa.
 
-
+![El formulario para crear una campaña de cupones en Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Generar firma y construir URL
 
