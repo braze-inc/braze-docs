@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Análise de dados
 config_only: true
 ---
