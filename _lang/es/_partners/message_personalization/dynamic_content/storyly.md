@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Storyly](https://www.storyly.io/) es un SDK ligero que lleva historias a tu aplicación o sitio web. Con un estudio de diseño intuitivo, un análisis profundo y una conectividad perfecta, Storyly es una potente herramienta para enriquecer la experiencia de la audiencia. 
 
-
+_Esta integración está mantenida por Storyly._
 
 ## Sobre la integración
 
