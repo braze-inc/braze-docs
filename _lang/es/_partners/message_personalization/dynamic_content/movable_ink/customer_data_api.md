@@ -59,7 +59,7 @@ Para obtener más información sobre Stories, la API de datos de clientes de Mov
 #### Paso 1c: Configura tu carga útil
 
 1. Vuelva a la pestaña **Redactar**.
-2. Para tu **cuerpo** de solicitud, crea tu propio cuerpo de solicitud con pares clave-valor JSON o introduce la carga útil de tu evento como texto sin formato. 
+2. Para tu **cuerpo** de solicitud, crea tu propio cuerpo de solicitud con pares clave-valor JSON o introduce la carga útil de tu evento como texto sin formato. Consulta las [cargas útiles de muestra](#sample-payloads) para ver ejemplos de eventos estándar de comercio electrónico.
 
 ![Pestaña Componer del creador de webhooks en Braze con pares clave-valor JSON para ID, marca de tiempo, ID de usuario y tipo de evento.][img3]{: style="max-width:75%" }
 
