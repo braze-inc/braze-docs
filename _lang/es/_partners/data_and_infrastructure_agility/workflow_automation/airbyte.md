@@ -12,7 +12,7 @@ search_tag: Airbyte
 
 > [Airbyte](https://airbyte.com/) es un motor de integración de datos de código abierto que te ayuda a consolidar tus datos en tus almacenes de datos, lagos y bases de datos.
 
-
+_Esta integración está mantenida por Airbyte._
 
 ## Sobre la integración
 
