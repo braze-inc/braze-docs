@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [O MetaRouter](https://www.metarouter.io/) eleva sua experiência no Braze ao se integrar perfeitamente como uma poderosa plataforma de gerenciamento de tags no lado do servidor. Ela permite que você orquestre uma jornada completa de dados de clientes na Braze, desde a coleta confiável de dados totalmente primários, enriquecida em até 30%, até a ativação do fluxo de dados em tempo real para jornadas personalizadas. Além disso, a MetaRouter agiliza a implementação, eliminando a necessidade de tags da Braze ou de outras tags de terceiros. Dessa forma, você tem controle granular, parâmetro por parâmetro, dos dados transferidos para a Braze.
 
-
+_Essa integração é mantida pelo Metarouter._
 
 ## Recursos suportados
 
