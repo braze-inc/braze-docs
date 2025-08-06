@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Snowplow][1] es una plataforma escalable de código abierto para la recopilación de datos ricos, de alta calidad y baja latencia. Está diseñado para recopilar datos de comportamiento completos y de alta calidad para las empresas.
 
-
+_Esta integración está mantenida por Snowplow._
 
 ## Sobre la integración
 
