@@ -35,7 +35,7 @@ Crie uma nova função no Console do Google Cloud Platform navegando até **IAM 
 
 ![]({% image_buster /assets/img/gcs1.png %})
 
-
+Dê um nome à função, selecione **+Add Permissions (Adicionar permissões** ) e escolha o seguinte:
 
 - `storage.objects.create`
 - `storage.objects.delete`
@@ -44,16 +44,16 @@ Crie uma nova função no Console do Google Cloud Platform navegando até **IAM 
 - `storage.buckets.get`
 
 {% alert note %}
- <br><br>Em raras circunstâncias, o Google Cloud pode encerrar as conexões antes do previsto, o que faz com que a Braze grave arquivos incompletos no Google Cloud Storage. 
+A permissão `storage.objects.delete` é opcional. Ele permite que o Braze limpe os arquivos incompletos.<br><br>Em raras circunstâncias, o Google Cloud pode encerrar as conexões antes do previsto, o que faz com que a Braze grave arquivos incompletos no Google Cloud Storage. Na maioria dos casos, o Braze tentará novamente e criará um novo arquivo com os dados corretos, deixando o arquivo antigo no Google Cloud Storage.
 {% endalert %}
 
-
+Quando terminar, selecione **Create (Criar**).
 
 ![]({% image_buster /assets/img/gcs2.png %})
 
-### Etapa 2: 
+### Etapa 2: Criar uma nova conta de serviço
 
-#### Etapa 2.1: 
+#### Etapa 2.1: Criar a conta de serviço
 
 Crie uma nova conta de serviço no Console do Google Cloud Platform navegando até **IAM e admin** > **Contas de serviço** e selecionando **Criar conta de serviço**.
 
@@ -61,7 +61,7 @@ Crie uma nova conta de serviço no Console do Google Cloud Platform navegando at
 
 Em seguida, dê um nome à conta de serviço e conceda a ela acesso à função personalizada recém-criada.
 
-
+![No Google Cloud Platform, na página de criação de serviços, digite o nome de sua função no campo "Select a Role" (Selecionar uma função).]({% image_buster /assets/img/gcs4.png %})
 
 #### Etapa 2.2: Criar uma chave
 
@@ -79,25 +79,25 @@ Em seguida, faça upload de sua chave privada JSON em **GCS JSON Credentials** (
 É importante manter seu arquivo de credenciais atualizado; se as credenciais do conector expirarem, o conector deixará de enviar eventos. Se isso persistir por mais de **48 horas**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
 {% endalert %}
 
-![A página do Google Cloud Storage Currents no Braze. 
+![A página do Google Cloud Storage Currents no Braze. Nessa página, existem campos para o nome da integração, o e-mail de contato, a credencial JSON do GCS, o nome do bucket do GCS e o prefixo.]({% image_buster /assets/img/gcs6.png %})
 
 Por fim, role até a parte inferior da página e selecione quais eventos de engajamento com mensagens ou eventos de comportamento do cliente você gostaria de exportar. Quando concluído, inicie seu Current.
 
-### Etapa 4: 
+### Etapa 4: Configurar exportações do Google Cloud Storage
 
 Para configurar as exportações do Google Cloud Storage (GCS), acesse **Parceiros de tecnologia** > **Google Cloud Storage**, insira suas credenciais do GCS e selecione **Definir como o destino padrão de exportação de dados**.
 
-
+Lembre-se de que a organização e o conteúdo de todos os arquivos exportados serão idênticos nas integrações do AWS S3, Microsoft Azure e Google Cloud Storage.
 
 {% alert important %}
-
+Certifique-se de inserir o valor JSON completo que é [gerado pelo Google Cloud](https://cloud.google.com/iam/docs/keys-create-delete).
 {% endalert %}
 
+![A página do Google Cloud Storage no dashboard do Braze.]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
 
+### Etapa 5: Teste as credenciais de sua conta de serviço (opcional)
 
-### Etapa 5: 
-
-
+Sua conta de serviço do Google Cloud IAM deve ter as seguintes permissões:
 
 - `storage.objects.create`
 - `storage.objects.delete`
@@ -105,9 +105,9 @@ Para configurar as exportações do Google Cloud Storage (GCS), acesse **Parceir
 - `storage.objects.get`
 - `storage.buckets.get`
 
+Para verificar essas permissões no dashboard do Braze, acesse a página **do Google Cloud Storage** e selecione **Testar Credenciais**.
 
-
-
+![A seção de credenciais do Google Cloud Storage no dashboard do Braze.]({% image_buster /assets/img/gcs8.png %}){: style="max-width:70%;"}
 
 ## Comportamento de exportação
 
@@ -118,15 +118,15 @@ Os usuários que integraram uma solução de armazenamento de dados na nuvem e e
 
 ## Solução de problemas
 
-### 
+### As credenciais do Google Cloud Storage são inválidas
 
-
+Se você receber o seguinte erro ao tentar inserir suas credenciais:
 
 ```
 Google Cloud Storage Credentials are invalid. Please ensure that your credentials string, bucket name, and prefix are valid. You do not have read permission.
 ```
 
-
+Certifique-se de que sua conta de serviço do Google Cloud IAM tenha as seguintes permissões:
 
 - `storage.objects.create`
 - `storage.objects.delete`
@@ -134,4 +134,4 @@ Google Cloud Storage Credentials are invalid. Please ensure that your credential
 - `storage.objects.get`
 - `storage.buckets.get`
 
-
+Após a verificação, você pode [testar suas credenciais no dashboard do Braze](#step-5-test-your-service-account-credentials-optional).
