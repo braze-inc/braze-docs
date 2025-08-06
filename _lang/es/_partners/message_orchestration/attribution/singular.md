@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Singular es una plataforma unificada de análisis de marketing que ofrece atribución, agregación de costes, análisis de marketing, informes creativos y automatización del flujo de trabajo.
 
+
+
+## Sobre la integración
+
 La integración de Braze y Singular te permite importar datos de atribución de instalación de pago para segmentar de forma inteligente dentro de tus campañas según el ciclo de vida.
 
 ## Requisitos previos
@@ -72,13 +76,9 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **Singular**. 
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará a **los socios tecnológicos** en **Integraciones**.
-{% endalert %}
-
 Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puedes crear una nueva o invalidar una existente. 
 
-Tendrás que proporcionar la clave de importación de datos y el punto final REST a tu administrador de cuentas de Singular para completar la integración.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología Singular. En este cuadro, se te muestra la clave de importación de datos y el punto final REST.][4]{: style="max-width:90%;"}
+Tendrás que proporcionar la clave de importación de datos y el punto final REST a tu administrador de cuentas de Singular para completar la integración.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología Singular. 
 
 ### Paso 3: Confirmar la integración
 
@@ -126,4 +126,4 @@ idfv={{most_recently_used_device.${id}}}
 Si actualmente no utilizas ningún identificador de dispositivo -como el IDFV o el GAID- en tus enlaces de seguimiento de clics, o no piensas hacerlo en el futuro, Singular podrá seguir atribuyendo estos clics mediante su modelado probabilístico.
 {% endalert %}
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
+
