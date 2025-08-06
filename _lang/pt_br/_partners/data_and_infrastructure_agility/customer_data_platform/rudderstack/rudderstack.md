@@ -54,7 +54,7 @@ Saiba mais sobre os [modos de conexão](https://www.rudderstack.com/docs/destina
 
 Com esse modo, você pode enviar seus eventos para a Braze usando o SDK da Braze configurado em seu site ou app móvel.
 
-
+Configure os mapeamentos para o SDK do RudderStack para sua plataforma no repositório do GitHub do Braze, conforme descrito em [métodos suportados](#supported-methods):
 
 - [Android][android]
 - [iOS][ios]
@@ -128,7 +128,7 @@ Se enviar eventos para a Braze usando o modo dispositivo, você poderá economiz
 O [método`track` ](https://rudderstack.com/docs/destinations/marketing/braze/#track) do RudderStack captura todas as atividades do usuário e as propriedades associadas a essas atividades.
 
 **Pedido concluído**<br>
-
+Ao usar a [API de eCommerce do RudderStack][20] para chamar o método track para um evento com o nome `Order Completed`, o RudderStack envia os produtos listados nesse evento para o Braze como [`purchases`][21].
 
 {% endtab %}
 {% tab Tela %}
@@ -257,7 +257,7 @@ Para as operações de atualização e remoção, `identifier` é uma chave obri
 {% endalert %}
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
-Daqui a [1]: https://rudderstack.com/
+[1]: https://rudderstack.com/
 [3]: https://www.rudderstack.com/docs/dashboard-guides/sources/
 [15]: {{site.baseurl}}/api/basics/#endpoints
 [20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
