@@ -34,7 +34,7 @@ A seguinte integração do Currents é compatível com o [Amazon S3](#setting-up
 
 #### Etapa 1: Localize sua ID externa {#step-one}
 
- Em seguida, selecione **Amazon S3**. Note o ID externo fornecido aqui; você precisará dele para permitir que o Fivetran acesse seu bucket S3. 
+No [Fivetran Dashboard](https://fivetran.com/dashboard), selecione **\+ Connector** e, em seguida, selecione o conector **Braze** para iniciar o formulário de configuração. Em seguida, selecione **Amazon S3**. Note o ID externo fornecido aqui; você precisará dele para permitir que o Fivetran acesse seu bucket S3. 
 
 ![O formulário do conector Fivetran para a Braze. O campo de ID externo necessário para esta etapa está localizado no meio da página em uma caixa cinza claro.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
@@ -44,9 +44,9 @@ A seguinte integração do Currents é compatível com o [Amazon S3](#setting-up
 
 Abra o [Console do Amazon IAM](https://console.aws.amazon.com/iam/home#home) e navegue até **Políticas > Criar política**.
 
+![Console do Amazon IAM com lista de políticas.]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
-
- Substitua `{your-bucket-name}` pelo nome de seu bucket S3.
+Em seguida, abra a guia **JSON** e cole a seguinte política. Substitua `{your-bucket-name}` pelo nome de seu bucket S3.
 
 {% raw %}
 ```json
@@ -74,25 +74,25 @@ Abra o [Console do Amazon IAM](https://console.aws.amazon.com/iam/home#home) e n
 ```
 {% endraw %}
 
-  
+Por fim, selecione **Revisar política** e dê à política um nome e uma descrição exclusivos. Selecione **Criar política** para criar sua política. 
 
-
+![Campos para nomear a política e fornecer uma descrição.]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
 ##### Criar uma função de IAM {#step-two}
 
 Na AWS, navegue até **Roles (Funções**) e selecione **Create New Role (Criar nova função**).
 
-
+![A página "Roles" (Funções) com o botão para criar uma nova função.]({% image_buster /assets/img/fivetran_iam_new_role.png %})
 
 Selecione **Another AWS Account** (Outra conta AWS) e forneça o ID da conta Fivetran `834469178297`. Certifique-se de marcar a caixa de seleção **Require external ID (Exigir ID externo** ). Aqui você fornecerá o ID externo encontrado na etapa 1.
 
+![O campo para inserir seu "ID da conta", uma caixa de seleção para exigir o ID externo e uma caixa de texto em branco para inserir seu "ID externo".]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
+Em seguida, selecione **Next: Permissions (Permissões)** para selecionar a política que você acabou de criar.
 
- Permissions (Permissões)** para selecionar a política que você acabou de criar.
+![Lista de políticas.]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
-
-
-  
+Selecione **Next: Consulte**, nomeie sua nova função (como Fivetran) e selecione **Create Role (Criar função**). Depois que a função for criada, selecione-a e note o ARN da função mostrado.
 
 ![O ARN do Amazon S3 listado na função.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
@@ -102,51 +102,51 @@ Você pode especificar permissões para o ARN de função que designar para o Fi
 
 #### Etapa 3: Complete o conector Fivetran
 
- No formulário, preencha os campos fornecidos com os valores apropriados:
+No Fivetran, selecione **\+ Connector** e, em seguida, selecione o conector **Braze** para abrir o formulário de configuração. No formulário, preencha os campos fornecidos com os valores apropriados:
 - `Destination schema`: Um nome de esquema exclusivo.
 - `API URL`: Seu endpoint da API REST da Braze.
 - `API Key`: Sua chave da API REST do Braze. 
 - `External ID`: A ID externa definida na [etapa 2](#step-two) das instruções de configuração do Currents. Essa ID é um valor fixo.
-- `Bucket`: 
+- `Bucket`: Encontrado em sua conta Braze, navegando até **Integrações com parceiros** > **Exportação de dados** > Seu nome atual.
 - `Role ARN`: O ARN da função pode ser encontrado na [etapa 1](#step-one) das instruções de configuração do Current.
 
 {% alert important %}
 Certifique-se de que **o Amazon S3** esteja selecionado como a opção de **armazenamento em nuvem**.
 {% endalert %}
 
-
+Por fim, selecione **Save & Test (Salvar e testar**), e o Fivetran fará o resto, sincronizando com os dados de sua conta Braze!
 
 ### Configuração do Braze Currents para o Google Cloud Storage
 
 #### Etapa 1: recupere seu e-mail do Fivetran no Google Cloud Storage {#step-one2}
 
- Em seguida, selecione **Google Cloud Storage**. Anote o endereço de e-mail que aparece.
+No [dashboard do Fivetran](https://fivetran.com/dashboard), selecione **\+ Connector** e, em seguida, selecione o conector **Braze** para iniciar o formulário de configuração. Em seguida, selecione **Google Cloud Storage**. Anote o endereço de e-mail que aparece.
 
 ![O formulário do conector Fivetran para a Braze. O campo de e-mail necessário para essa etapa está localizado no meio da página, em uma caixa cinza claro.]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 #### Etapa 2: conceda acesso ao bucket
 
+Navegue até o [Google Storage Console](https://console.cloud.google.com/storage/browser), selecione o bucket com o qual você configurou o Braze Currents e selecione **Editar permissões do bucket**.
 
-
-![Os compartimentos disponíveis no Console de armazenamento do Google. 
+![Os compartimentos disponíveis no Console de armazenamento do Google. Localize um bucket e selecione o ícone de três pontos verticais para abrir o menu suspenso que permite editar as permissões do bucket.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
 Em seguida, conceda ao `Storage Object Viewer` acesso ao e-mail da [etapa 1](#step-one2), adicionando-o como membro. Anote o nome do bucket; você precisará dele na próxima etapa para configurar o Fivetran.
 
-
+![Balde com permissões.]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 
 #### Etapa 3: Complete o conector Fivetran
 
- No formulário, preencha os campos fornecidos com os valores apropriados:
+No Fivetran, selecione **\+ Connector** e, em seguida, selecione o conector **Braze** para abrir o formulário de configuração. No formulário, preencha os campos fornecidos com os valores apropriados:
 - `Destination schema`: Um nome de esquema exclusivo.
 - `API URL`: Seu endpoint da API REST da Braze.
 - `API Key`: Sua chave da API REST do Braze. 
-- `Bucket Name`: 
-- `Folder`: 
+- `Bucket Name`: Encontrado em sua conta Braze, navegando até **Integrações com parceiros** > **Exportação de dados** > Seu nome atual.
+- `Folder`: Encontrado em sua conta Braze, navegando até **Integrações com parceiros** > **Exportação de dados** > Seu nome atual.
 
 {% alert important %}
 Certifique-se de que **o Google Cloud Storage** esteja selecionado como a opção de **armazenamento na nuvem**.
 {% endalert %}
 
-
+Por fim, selecione **Save & Test (Salvar e testar**), e o Fivetran fará o resto, sincronizando com os dados de sua conta Braze!
 
 [1]: {{site.baseurl}}/api/basics/#api-definitions
