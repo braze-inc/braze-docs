@@ -11,7 +11,7 @@ Bem-vindo a um novo ano!
 
 ## Push time to live (TTL)
 
-Em sua conta, em **Manage Settings (Gerenciar configurações)**, clique na guia [push TTL Settings (Configurações de TTL de push]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) ) para gerenciar o tempo de duração das tentativas de reenvio no caso de um dispositivo estar off-line.
+Em sua conta, em **Manage Settings (Gerenciar configurações)**, clique na guia [push TTL Settings (Configurações de TTL de push]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) ) para gerenciar o tempo de duração das tentativas de reenvio no caso de um dispositivo estar off-line.
 
 ## Lista de permissões de IP para conteúdos conectados
 
@@ -21,6 +21,5 @@ A Braze tem o prazer de anunciar que, devido a uma série de atualizações de i
 
 Adicionamos a opção para que qualquer etapa do Canva seja enviada imediatamente.
 
-![Postergação da tela][1]
+![Canva Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
 
-[1]: {% image_buster /assets/img/canvas_delay_immediate.png %}
