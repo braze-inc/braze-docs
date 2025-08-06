@@ -38,7 +38,7 @@ Assim como na sua primeira integração com a Shopify, você pode escolher entre
 
 Escolha a opção que melhor atende às suas necessidades:
 
-{% multi_lang_include shopify.md seção='Abas de Integração' %}
+{% multi_lang_include shopify.md section='Integration Tabs' %}
 
 Para visualizar cada integração de loja e configurar as configurações avançadas, selecione uma loja no menu suspenso.
 
