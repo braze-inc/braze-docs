@@ -64,11 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Kochava** aus. 
 
-Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Kochava einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Kochava Technologieseite finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.][4]{: style="max-width:90%;"}
+Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Kochava einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Kochava Technologieseite finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Einrichten eines Postbacks von Kochava
 
-Fügen Sie ein [Postback][18] in Ihrem Kochava Dashboard hinzu. Sie werden zur Eingabe des Datenimport-Schlüssels und des REST-Endpunkts aufgefordert, die Sie im Braze-Dashboard gefunden haben.
+Fügen Sie ein [Postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) in Ihrem Kochava Dashboard hinzu. Sie werden zur Eingabe des Datenimport-Schlüssels und des REST-Endpunkts aufgefordert, die Sie im Braze-Dashboard gefunden haben.
 
 ### Schritt 4: Bestätigen Sie die Integration
 
@@ -117,7 +117,3 @@ Wenn Sie derzeit keine Geräte-Identifikatoren - wie IDFV oder GAID - in Ihren C
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
-[4]: {% image_buster /assets/img/attribution/kochava.png %}
