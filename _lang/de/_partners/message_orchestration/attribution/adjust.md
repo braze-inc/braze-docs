@@ -33,10 +33,10 @@ Mit der Integration von Braze und Adjust können Sie Daten zur nicht-organischen
 
 #### Android
 
-Wenn Sie eine Android App haben, müssen Sie Adjust eine eindeutige Braze ID für Ihr Gerät übergeben. Diese ID kann in der Methode `addSessionPartnerParameter()` des Adjust SDK festgelegt werden. Der folgende Code-Snippet muss vor der Initialisierung des SDK auf `Adjust.onCreate.`
+Wenn Sie eine Android App haben, müssen Sie Adjust eine eindeutige Braze ID für Ihr Gerät übergeben. Diese ID kann in der Methode `addGlobalPartnerParameter()` des Adjust SDK festgelegt werden. Der folgende Code-Snippet muss vor der Initialisierung des SDK auf `Adjust.initSdk.`
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
@@ -74,7 +74,7 @@ Wenn Sie planen, Ereignisse nach der Installation von Adjust an Braze zu senden,
 
 Navigieren Sie in Braze zu **Integrationen** > **Technologiepartner** und wählen Sie **Adjust**. 
 
-Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Adjust einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Technologie anpassen finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.][1]{: style="max-width:90%;"}
+Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Adjust einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Technologie anpassen finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Braze in Adjust konfigurieren
 
@@ -141,5 +141,3 @@ Wenn Sie in Ihren Click-through-Links derzeit keine Geräte-Identifikatoren wie 
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}
