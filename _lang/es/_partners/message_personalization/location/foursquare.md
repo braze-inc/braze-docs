@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Foursquare](https://foursquare.com/) es una plataforma de datos de ubicación que proporciona orientación de datos de ubicación en tus campañas de Braze. Utiliza el SDK Pilgrim de Foursquare en aplicaciones iOS y Android para desencadenar eventos en tiempo real basados en la ubicación, lo que te permitirá aprovechar las potentes capacidades de orientación geográfica de Foursquare para enviar mensajes relevantes y personalizados con Braze.
 
-
+_Esta integración está mantenida por Foursquare._
 
 ## Requisitos previos
 
@@ -34,7 +34,7 @@ Para integrar las dos plataformas, debes integrar los dos SDK y mapear los campo
 Para mapear correctamente los campos entre los dos SDK, establece el mismo ID de usuario en ambos sistemas utilizando el método [`changeUser` ]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) en el SDK de Braze y el método `setUserId` de [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) en el SDK Pilgrim.
 
 ### Paso 2: Configurar la consola Pilgrim
-
+![Una imagen de la consola Pilgrim pidiendo el ID de grupo, el ID de la aplicación Android y el ID de la aplicación iOS.]({% image_buster /assets/img_archive/pilgrim-dev-console.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Encuentra el espacio de trabajo y los ID de la aplicación en la consola para desarrolladores Braze. A continuación, introduce tu clave de API REST de Braze y los ID de aplicación en la Consola Foursquare Pilgrim.
 
