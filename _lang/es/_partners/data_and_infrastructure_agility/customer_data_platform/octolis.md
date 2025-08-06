@@ -12,7 +12,7 @@ search_tag: Octolis
 
 > [Octolis][0] es una potente plataforma de activación de datos (o CDP sin cabeza). Situándose sobre una base de datos de tu propiedad, Octolis es una forma sencilla de unificar, preparar, puntuar y sincronizar datos en tus herramientas empresariales.
 
-
+_Esta integración está mantenida por Octolis._
 
 ## Sobre la integración
 
@@ -84,7 +84,7 @@ Aquí tienes una definición específica de los campos de configuración.
 
 | Campo | Descripción |
 | --- | --- |
-| ¿Hacia dónde quieres sincronizar a la audiencia? |  |
+| ¿Hacia dónde quieres sincronizar a la audiencia? | La entidad Braze en la que crearás o actualizarás registros. |
 | ¿Qué campo se utiliza para identificar un registro? | El campo utilizará Octolis para identificar un registro si ya existe en Braze. |
 | ¿Con qué frecuencia quieres enviar cada registro? | Por predeterminado, la sincronización será incremental para todas las integraciones (API, base de datos, FTP). Esto significa que sólo se actualizarán los valores nuevos desde la última actualización. Si es necesario, también puedes enviar tablas enteras a intervalos regulares. Al iniciarse, Octolis enviará la tabla completa. |
 | ¿Qué campos deben sincronizarse? | Mapeado de campos Octolis a Braze. La lista de todos los campos disponibles aparece en el menú desplegable. Para enviar un campo calculado a Braze, primero debes asegurarte de haber creado la columna correspondiente dentro de tu entidad Braze. |
