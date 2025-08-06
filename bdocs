@@ -165,6 +165,9 @@ logger() {
     return $exit_code
 }
 
+# Always check if the command is unsupported in hidden repo
+not_supported_for_hidden "$1"
+
 # Argument parsing
 case $1 in
     deploy)
