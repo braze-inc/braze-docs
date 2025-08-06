@@ -1,15 +1,15 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: Shopify (Legado)
+article_title: Shopify (Legado)
 alias: /shopify/
 alias: /partners/shopify_legacy/
 layout: dev_guide
 noindex: true
-guide_top_header: ""
+guide_top_header: "Shopify (Legado)"
 guide_top_text: |
   
-  A Shopify é uma empresa líder em comércio global que fornece ferramentas confiáveis para iniciar, comercializar e gerenciar um negócio de varejo de qualquer tamanho. A Shopify torna o comércio melhor para todo mundo com uma plataforma e serviços projetados para confiabilidade, enquanto oferece uma melhor experiência de compra para consumidores em todos os lugares.  
-description: ""
+  A Shopify é uma empresa líder em comércio global que fornece ferramentas confiáveis para iniciar, comercializar e gerenciar um negócio de varejo de qualquer tamanho. A Shopify torna o comércio melhor para todo mundo com uma plataforma e serviços projetados para confiabilidade, enquanto oferece uma melhor experiência de compra para consumidores em todos os lugares. Esta landing page é o lar de tudo relacionado à integração <b>legado</b> do Shopify. Para informações sobre a integração atual do Shopify, consulte <a href="/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/">Shopify</a>.
+description: "Esta landing page é o lar de tudo relacionado à integração legado do Shopify, incluindo uma visão geral, guia de configuração, processamento de dados do Shopify e mais."
 
 guide_featured_title: "Artigos em destaque"
 guide_featured_list:
