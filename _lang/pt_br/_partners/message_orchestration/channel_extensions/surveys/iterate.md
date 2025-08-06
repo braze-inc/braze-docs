@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Iterate](https://iteratehq.com) facilita o aprendizado com seus clientes, oferecendo ferramentas de pesquisa inteligentes e fáceis de usar que se parecem com a sua marca.
 
-
+_Essa integração é mantida pela Iterate._
 
 ## Sobre a integração
 
