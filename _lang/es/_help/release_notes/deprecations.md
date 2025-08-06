@@ -34,7 +34,7 @@ El soporte para Shopify `checkout.liquid` comenzará a quedar obsoleto en agosto
 
 **Apoyo retirado**: Octubre de 2022
 
-El uso de un `BroadcastReceiver` personalizado para las notificaciones push ha quedado obsoleto. Utiliza [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) en su lugar.
+El uso de un `BroadcastReceiver` personalizado para las notificaciones push ha quedado obsoleto. Utiliza [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) en su lugar.
 
 ### Asociación con Grouparoo
 
@@ -88,7 +88,7 @@ Si actualmente utilizas [Apptimize con Braze]({{site.baseurl}}/help/release_note
 ### Mensajes originales dentro de la aplicación
 
 **Soporte retirado:** Febrero de 2019<br>
-**Sustituido por**: [Enviar mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**Sustituido por**: [Enviar mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 Braze ha mejorado el aspecto de los mensajes dentro de la aplicación para ajustarse a las buenas prácticas de UX y UI y ya no admite los mensajes dentro de la aplicación originales.
 
@@ -128,9 +128,9 @@ Si necesitas ayuda con tu integración en Eclipse antes de la migración, ponte 
 ### El flujo de eventos en bruto (RES)
 
 **Apoyo retirado**: Julio de 2018<br>
-**Sustituido por**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**Sustituido por**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-El flujo de eventos sin procesar fue el predecesor de [Currents]({{site.baseurl}}/partners/braze_currents/about/) y quedó obsoleto para dejar espacio al futuro de los datos Braze.
+El flujo de eventos sin procesar fue el predecesor de [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) y quedó obsoleto para dejar espacio al futuro de los datos Braze.
 
 ### Retraso en reposo - Característica de GCM
 
@@ -145,4 +145,3 @@ Antes, el parámetro Retraso en reposo formaba parte de las [opciones push de GC
 Eliminación de puntos finales personalizados. Si tienes un punto final personalizado, puedes seguir utilizándolo, pero Braze ya no los facilita.
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}
