@@ -16,7 +16,7 @@ Tool:
 
 O tempo necessário para preencher um público depende do parceiro específico. Todas as redes processarão as solicitações do Braze e tentarão combinar os usuários. Em geral, esse processo pode levar de 6 a 48 horas.
 
-
+É possível verificar o intervalo de tempo específico na seção Solução de problemas da documentação de cada parceiro do Audience Sync.
 
 ### Que tipo de dados primários posso usar no meu Audience Sync?
 
@@ -26,21 +26,21 @@ Por exemplo, ao configurar uma sincronização de público do Facebook, você po
 
 É importante notar que os campos de usuário que podem ser selecionados para sincronização estão correlacionados com os atributos padrão do Braze e os IDs de publicidade móvel. Você deve garantir a transmissão adequada desses dados por meio de nossos SDKs ou APIs. 
 
-### 
+### O que acontece quando meus dados estão sendo processados para serem enviados a cada parceiro do Audience Sync?
 
 Os dados que você selecionar para enviar ao destino do Audience Sync serão normalizados. Cada parceiro pode ter especificações diferentes para a normalização de dados com base em seus requisitos de API, portanto, consulte o endpoint específico de cada parceiro para obter mais detalhes.
 
 Além disso, o Braze criará hashes para todos os dados antes de sincronizar os usuários com nossos parceiros do Audience Sync, garantindo que todos os IPI sejam criptografados usando SHA256.
 
-### 
+### Por que posso selecionar vários identificadores em uma etapa para alguns parceiros, mas só posso selecionar um identificador para outros?
 
- 
+Isso é determinado pelos métodos de integração com parceiros e não é controlado pelo Braze. Alguns parceiros (como o Meta) permitem a sincronização de vários identificadores e outros parceiros (como o Google) permitem que apenas um único identificador seja sincronizado com um usuário em um determinado momento.
 
-### 
+### Como faço para reconectar minha integração?
 
-  
+Se o usuário anterior que conectou a integração não estiver mais na sua empresa, será necessário atualizar a integração com o novo usuário. Você pode fazer isso selecionando **Confirm (Confirmar**). Note que isso pode interromper as telas ativas.
 
-   
+O usuário que está se reconectando deve ter acesso de leitura e gravação a todos os públicos para que os usuários possam ser sincronizados com sucesso com os parceiros. Verifique se o usuário que está reconectando a integração tem acesso às mesmas contas de anúncios e públicos. Não deve haver necessidade de editar nenhuma etapa do Canva existente. 
 
 ### Quais são os erros mais comuns que podem ocorrer ao criar e gerenciar minhas sincronizações do público?
 
