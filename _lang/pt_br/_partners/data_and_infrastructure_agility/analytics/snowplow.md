@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Snowplow][1] é uma plataforma de código aberto dimensionável para coleta de dados avançados, de alta qualidade e de baixa latência. Ela foi projetada para coletar dados comportamentais completos e de alta qualidade para empresas.
 
-
+_Essa integração é mantida pela Snowplow._
 
 ## Sobre a integração
 
@@ -31,7 +31,7 @@ Aproveite os ricos dados de comportamento da Snowplow para promover interações
 | Pipeline da Snowplow | Um pipeline de Snowplow precisa estar em funcionamento. |
 | No lado do servidor do Google Tag Manager | O GTM-SS precisa ser implantado, e é preciso configurar o [cliente da Snowplow para o GTM-SS][2]. |
 | chave da API REST Braze | Uma chave da API REST da Braze com permissões `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][3]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][3] Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
