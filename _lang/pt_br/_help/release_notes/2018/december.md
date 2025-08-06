@@ -19,4 +19,4 @@ Com os blocos de conteúdo, você pode:
 
 ## Ferramenta promocional do Gmail
 
-O Gmail atualizou a guia Promoções para mobile para permitir que os profissionais de marketing enviem mais informações por meio de anotações em um "cartão", em vez de apenas a linha de assunto ou as informações do pré-cabeçalho. Com a [ferramenta promocional do Gmail]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/), a Braze pode ajudar você a criar o cartão a partir de nosso produto.
+O Gmail atualizou a guia Promoções para mobile para permitir que os profissionais de marketing enviem mais informações por meio de anotações em um "cartão", em vez de apenas a linha de assunto ou as informações do pré-cabeçalho. Com a [ferramenta promocional do Gmail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/), a Braze pode ajudar você a criar o cartão a partir de nosso produto.
