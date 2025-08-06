@@ -57,7 +57,7 @@ Use públicos para enviar propriedades e cálculos do usuário para o Braze como
 
 Quando a propriedade de um usuário ou um cálculo for atualizado, o Amplitude atualizará um atributo personalizado no Braze com o mesmo nome da propriedade ou do cálculo do usuário.
 
-  
+A característica do usuário e as sincronizações de computação criarão novos usuários para identificadores de usuário que ainda não existem no Braze. Os cálculos e as características do usuário só podem ser sincronizados usando identificadores de usuário. Um identificador de usuário pode ser qualquer um dos seguintes:
 - ID externo
 - ID da Braze
 - Alias de usuário
