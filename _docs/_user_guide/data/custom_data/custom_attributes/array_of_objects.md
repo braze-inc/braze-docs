@@ -27,8 +27,6 @@ For more information on using arrays of objects for user attributes objects, ref
 
 ## API example
 
-### Arrays
-
 {% tabs local %}
 {% tab Create %}
 
@@ -38,14 +36,19 @@ The following is a `/users/track` example with a `pets` array. To capture the pr
 {
   "attributes": [
     {
-      "external_id": "user123",
-      "purchases": [
+      "external_id": "user_id",
+      "pets": [
         {
-          "item_name": "T-shirt",
-          "price": 19.99,
-          "purchase_time": {
-            "$time": "2020-05-28"
-          }
+          "id": 1,
+          "type": "dog",
+          "breed": "beagle",
+          "name": "Gus"
+        },
+        {
+          "id": 2,
+          "type": "cat",
+          "breed": "calico",
+          "name": "Gerald"
         }
       ]
     }
@@ -125,6 +128,7 @@ The following example shows updating the `breed` property to `goldfish` for the 
   ]
 }
 ```
+
 {% alert warning %}
 You must set `_merge_objects` to true, or your objects will be overwritten. `_merge_objects` is false by default.
 {% endalert %}
@@ -168,22 +172,22 @@ The following example shows removing any object in the `pets` array that has an 
 
 ### Timestamps
 
-When including fields like timestamps in an array of objects, format them as integers in Unix epoch seconds.
+When including fields like timestamps in an array of objects, use the `$time` format instead of plain strings or Unix epoch integers.
 
 ```json
 {
   "attributes": [
     {
       "external_id": "user123",
-      "custom_attributes": {
-        "purchases": [
-          {
-            "item_name": "T-shirt",
-            "price": 19.99,
-            "purchase_time": 1690240800
+      "purchases": [
+        {
+          "item_name": "T-shirt",
+          "price": 19.99,
+          "purchase_time": {
+            "$time": "2020-05-28"
           }
-        ]
-      }
+        }
+      ]
     }
   ]
 }
