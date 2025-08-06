@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Enlace profundo
 config_only: true
 ---
