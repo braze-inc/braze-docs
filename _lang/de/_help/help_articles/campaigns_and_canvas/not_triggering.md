@@ -22,7 +22,7 @@ Wenn Ihre Kampagne durch ein angepasstes Event getriggert wird, sollten Sie sich
 
 Wenn das Segment beispielsweise das Ereignis `SessionStart` "Hat die App mehr als einmal genutzt" enthält und das Ereignis, von dem die Kampagne getriggert wird, `SessionStart` ist, erhält der Nutzer:in zwar die Nachricht, aber nicht unbedingt für die erste Sitzung. Das liegt daran, dass die Kampagne im ersten Schritt bei der Prüfung, ob ein Nutzer:innen eine Kampagne erhalten soll, das Segment Targeting überprüft. 
 
-Kurz gesagt, vermeiden Sie es, eine aktionsbasierte Kampagne oder ein Canvas mit demselben Trigger wie den Zielgruppen-Filter zu konfigurieren (z. B. ein geändertes Attribut oder die Durchführung eines angepassten Events). Es kann eine [Race-Condition][2] auftreten, bei der sich der Nutzer:in nicht in der Zielgruppe befindet, wenn er das Trigger-Ereignis ausführt, was bedeutet, dass er die Kampagne nicht erhält oder den Canvas nicht betritt.
+Kurz gesagt, vermeiden Sie es, eine aktionsbasierte Kampagne oder ein Canvas mit demselben Trigger wie den Zielgruppen-Filter zu konfigurieren (z. B. ein geändertes Attribut oder die Durchführung eines angepassten Events). Es kann eine [Race-Condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/) auftreten, bei der sich der Nutzer:in nicht in der Zielgruppe befindet, wenn er das Trigger-Ereignis ausführt, was bedeutet, dass er die Kampagne nicht erhält oder den Canvas nicht betritt.
 
 {% alert tip %}
 Wenn Sie weitere Unterstützung bei der Fehlersuche in der Kampagne benötigen, wenden Sie sich bitte innerhalb von 30 Tagen nach Auftreten des Problems an den Braze-Support, da wir nur die Diagnoseprotokolle der letzten 30 Tage haben.
@@ -30,5 +30,3 @@ Wenn Sie weitere Unterstützung bei der Fehlersuche in der Kampagne benötigen, 
 
 _Zuletzt aktualisiert am 25\. Juni 2024_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/
