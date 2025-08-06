@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Branch][1], una plataforma de enlace móvil, te ayuda a adquirir, interactuar y medir en todos los dispositivos, canales y plataformas, proporcionando una visión holística de todos los puntos de intervención del usuario.
 
-
+_Esta integración está mantenida por Branch._
 
 ## Sobre la integración
 
