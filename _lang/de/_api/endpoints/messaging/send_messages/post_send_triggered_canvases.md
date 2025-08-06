@@ -40,8 +40,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "context": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -61,11 +62,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Erforderlich | String | Siehe [Canvas Bezeichner]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Optional | Objekt | Siehe [Canvas Eingang-Eigenschaften]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Die Schlüssel-Wert-Paare für die Personalisierung gelten für alle Nutzer:innen in dieser Anfrage. Das Objekt Canvas Eingang-Eigenschaften hat eine maximale Größe von 50 KB. |
-|`broadcast`| Optional | Boolesche | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
+|`canvas_entry_properties`| Optional | Objekt | Dazu gehören auch die [Eigenschaften von Canvas-Eingängen]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Die Schlüssel-Wert-Paare für die Personalisierung gelten für alle Nutzer:innen in dieser Anfrage. Das Objekt Canvas Eingang-Eigenschaften hat eine maximale Größe von 50 KB. <br><br>**Hinweis:** Wenn Sie am [Canvas-Kontext-Frühzugang]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/) teilnehmen, lautet dieser Parameter `context` und enthält die Eigenschaften des Canvas-Eingangs. |
+|`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
+|`segment_id `| Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional| Verbundenes Objekt der Zielgruppe | Siehe [Verbundenes Publikum]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | Siehe [Objekt Empfänger:innen]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Falls nicht angegeben und `broadcast` auf true gesetzt ist, wird die Nachricht an das gesamte Segment, auf das das Canvas abzielt, gesendet.<br><br> Das Array `recipients` kann bis zu 50 Objekte enthalten, wobei jedes Objekt einen einzelnen String `external_user_id` und ein Objekt `canvas_entry_properties` enthält. Dieser Aufruf erfordert eine `external_user_id`, `user_alias` oder `email`. In der Anfrage darf nur eine Angabe gemacht werden. <br><br>Wenn `email` der Bezeichner ist, müssen Sie [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in das Empfänger:innen-Objekt aufnehmen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
