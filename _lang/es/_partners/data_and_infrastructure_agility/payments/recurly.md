@@ -11,7 +11,7 @@ search_tag: partner
 
 > [Recurly](https://recurly.com/) es una plataforma de gestión de suscripciones y facturación. La plataforma integrada Recurly simplifica la automatización del ciclo de vida de la suscripción a escala, habilitando a los equipos para que gestionen y optimicen la experiencia del suscriptor, desde la prueba de nuevos planes, ofertas y promociones hasta la gestión de métodos de pago, integraciones e información.
 
-
+_Esta integración está mantenida por Recurly._
 
 ## Sobre la integración
 
