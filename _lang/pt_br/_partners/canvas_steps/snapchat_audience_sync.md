@@ -105,7 +105,7 @@ Depois de configurar o Audience Sync para o Snapchat, inicie o canva! Um novo p�
 
 É possível visualizar o público no Snapchat entrando em sua conta do Gerenciador de Anúncios e selecionando **Públicos** na seção Ativos da navegação. Na página **Audiences (Públicos** ), você pode ver o tamanho de cada público depois que ele atinge ~1.000.
 
-
+![Detalhes do público de um determinado público do Snapchat que incluem o nome do público, o tipo de público, o tamanho do público e a retenção do público em dias.][9]
 
 ## Considerações sobre sincronização de usuários e limite de frequência
 
@@ -134,23 +134,23 @@ Lembre-se de que haverá uma postergação nos relatórios de usuários sincroni
 
 ## Perguntas frequentes
 
-### 
+### Quantos públicos o Snapchat pode suportar?
 
 No momento, você só pode ter 1.000 públicos na sua conta do Snapchat. 
 
- 
+Se você exceder esse limite, o Braze o notificará de que não é possível criar novos públicos. Você precisará remover os públicos que não está mais usando em sua conta de anúncios do Snapchat.
 
-### 
+### Como posso saber se os usuários foram correspondidos depois de passá-los para o Snapchat?
 
+O Snapchat não fornece essas informações para suas políticas de privacidade de dados.
 
+### O que devo fazer em seguida se receber um erro de token inválido?
 
-### 
+Você pode desconectar e reconectar sua conta do Snapchat na página de parceiros do Snapchat. Confirme com seu administrador do Snapchat Business Manager que você tem as permissões apropriadas para a conta de anúncios com a qual deseja sincronizar.
 
-Você pode desconectar e reconectar sua conta do Snapchat na página de parceiros do Snapchat. 
+### Por que meu Canva não pode ser iniciado?
 
-### 
-
- 
+Certifique-se de que sua conta de anúncios do Snapchat se conecte com sucesso ao Braze na página de parceiros do Snapchat. Verifique se você selecionou uma conta de anúncios, inseriu um nome para o novo público e selecionou os campos para correspondência.
 
 
 [1]: {% image_buster /assets/img/snapchat/snapchat1.png %}
