@@ -24,7 +24,7 @@ Sie können diesen Endpunkt verwenden, um eine bidirektionale Synchronisierung z
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `email.unsubscribe`.
 
-## Rate-Limit
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
