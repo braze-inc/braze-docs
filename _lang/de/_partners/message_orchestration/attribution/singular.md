@@ -78,7 +78,7 @@ Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und
 
 Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. 
 
-Sie müssen den Datenimport-Schlüssel und den REST-Endpunkt an Ihren Singular Account Manager:in weitergeben, um die Integration abzuschließen.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Singular Technologie finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.][4]{: style="max-width:90%;"}
+Sie müssen den Datenimport-Schlüssel und den REST-Endpunkt an Ihren Singular Account Manager:in weitergeben, um die Integration abzuschließen.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Singular Technologie finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Bestätigen Sie die Integration
 
@@ -127,4 +127,3 @@ Wenn Sie derzeit keine Geräte-Identifikatoren - wie IDFV oder GAID - in Ihren C
 {% endalert %}
 
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
