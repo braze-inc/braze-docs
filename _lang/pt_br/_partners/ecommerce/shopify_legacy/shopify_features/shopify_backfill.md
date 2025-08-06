@@ -12,7 +12,7 @@ page_order: 1
 
 > O recurso de Preenchimento Histórico do Shopify permite que as marcas sincronizem clientes e dados de compras de maneira automatizada e contínua, para que você possa começar a interagir imediatamente com um dos seus segmentos mais valiosos – os compradores. 
 
-{% multi_lang_include alerts.md alert='Shopify depreciação' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 Como parte deste preenchimento retroativo, a Braze importará todos os clientes, pedidos e eventos de compra dos últimos 90 dias antes da conexão de integração com o Shopify. Observe que esse recurso é ideal para novos clientes sem mensagens ativas em execução, dadas as implicações explicadas na próxima seção. O recurso também conta para o uso dos seus pontos de dados.
 
