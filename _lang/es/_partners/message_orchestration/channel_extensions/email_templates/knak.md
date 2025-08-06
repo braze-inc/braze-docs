@@ -12,7 +12,7 @@ search_tag: Knak
 
 > [Knak][1] es la primera plataforma de creación de campañas creada para que los equipos de marketing de las empresas la utilicen internamente. Su plataforma de arrastrar y soltar permite crear correos electrónicos de gran calidad para las marcas y páginas principales en cuestión de minutos, sin necesidad de código ni de asistencia externa.
 
-
+_Esta integración está mantenida por Knak._
 
 ## Sobre la integración
 
