@@ -11,7 +11,7 @@ search_tag: Partner
 
 > Um código de cupom é um código exclusivo que pode ser usado por um único usuário (uso único ou múltiplo). A estrutura Punchh gera códigos de cupom, que podem ser processados em um app móvel ou no sistema de ponto de venda (POS).
 
-
+_Esta integração é mantida pela Punchh._
 
 ## Sobre a integração
 
@@ -29,7 +29,7 @@ Usando a estrutura de cupom Punchh e o Braze, você pode realizar os seguintes c
     - Token de geração de cupom dinâmico: Esse é um token de segurança gerado pelo sistema para criptografia.
     - URL de geração de cupom dinâmico: Esse URL será incorporado ao e-mail como um link ou imagem, conforme exigido pela empresa.
 
-
+![O formulário para criar uma campanha de cupons na Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### Etapa 2: gerar a assinatura e construir o URL
 
