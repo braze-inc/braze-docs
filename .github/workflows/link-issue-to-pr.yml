@@ -22,12 +22,17 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             const prTitle = pr.title;
+
             const match = prTitle.match(/\[BD-(\d+)\]/);
             if (!match) return;
 
             const tag = `BD-${match[1]}`;
 
-            // Step 1: Find matching open issue
+            // Check if PR already has 'fixes an issue' label
+            const labels = pr.labels.map(label => label.name);
+            if (labels.includes("fixes an issue")) return;
+
+            // Find matching open issue with same tag
             const { data: issues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -39,23 +44,18 @@ jobs:
             );
             if (!matchedIssue) return;
 
-            // Step 2: Check existing comments
-            const { data: comments } = await github.rest.issues.listComments({
+            // Comment on PR
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
+              body: `Fixes #${matchedIssue.number}`
             });
 
-            const alreadyCommented = comments.some(comment =>
-              comment.body.includes(`Fixes #${matchedIssue.number}`)
-            );
-
-            // Step 3: Comment if not already posted
-            if (!alreadyCommented) {
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pr.number,
-                body: `Fixes #${matchedIssue.number}`
-              });
-            }
+            // Add label to mark it's been handled
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              labels: ["fixes an issue"]
+            });
