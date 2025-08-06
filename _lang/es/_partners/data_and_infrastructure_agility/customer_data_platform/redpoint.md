@@ -11,7 +11,7 @@ search_tag: Redpoint
 
 > [Redpoint][2] es una plataforma tecnológica que ofrece a los profesionales del marketing una plataforma de orquestación de campañas totalmente integrada. Aproveche las funciones de segmentación, programación y automatización de Redpoint para controlar cómo y cuándo se importan los datos CDP a Braze.
 
-
+_Esta integración está mantenida por Redpoint._
 
 ## Sobre la integración
 
