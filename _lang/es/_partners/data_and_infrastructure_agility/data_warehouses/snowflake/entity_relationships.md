@@ -15,62 +15,62 @@ search_tag: Partner
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/contentcard.md %}
+{% multi_lang_include copo_nieve_snowflake_users_messages/contentcard.md %}
 {% endsdktab %}
 
 {% sdktab Email %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/email.md %}
+{% multi_lang_include snowflake_users_messages/email.md %}
 {% endsdktab %}
 
 {% sdktab Feature Flags %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/featureflag.md %}
+{% multi_lang_include snowflake_users_messages/featureflag.md %}
 {% endsdktab %}
 
 {% sdktab In-App Messages %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/inappmessage.md %}
+{% multi_lang_include snowflake_users_messages/inappmessage.md %}
 {% endsdktab %}
 
 {% sdktab News Feed %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/newsfeedcard.md %}
+{% multi_lang_include snowflake_users_messages/newsfeedcard.md %}
 {% endsdktab %}
 
 {% sdktab Push Notifications %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/pushnotification.md %}
+{% multi_lang_include snowflake_users_messages/pushnotification.md %}
 {% endsdktab %}
 
 {% sdktab SMS %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/sms.md %}
+{% multi_lang_include snowflake_users_messages/sms.md %}
 {% endsdktab %}
 
 {% sdktab Webhook %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/webhook.md %}
+{% multi_lang_include snowflake_users_messages/webhook.md %}
 {% endsdktab %}
 
 {% sdktab WhatsApp %}
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_usuarios_mensajes/whatsapp.md %}
+{% multi_lang_include snowflake_users_messages/whatsapp.md %}
 {% endsdktab %}
 {% endsdktabs %}
