@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [SmarterSends][2] impulsa la personalización con campañas de marketing que las empresas pueden crear, programar y desplegar para reforzar el cumplimiento legal y de la marca con control sobre el contenido y los datos utilizados. 
 
-
+_Esta integración está mantenida por SmarterSends._
 
 ## Sobre la integración
 
