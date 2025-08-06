@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Merkury](https://merkury.merkleinc.com/) es la plataforma de identidad empresarial de Merkle que ayuda a las marcas a maximizar la interacción, la experiencia y los ingresos de los consumidores a través de funciones de identidad de primera mano sin necesidad de intermediarios. `MerkuryID` unifica los registros de clientes y clientes potenciales conocidos y desconocidos de una marca, las visitas a sitios o aplicaciones y los datos de los consumidores en un único y persistente identificador de persona.
 
-
+_Esta integración está mantenida por Merkury._
 
 ## Sobre la integración
 
