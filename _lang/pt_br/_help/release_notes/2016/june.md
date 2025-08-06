@@ -22,11 +22,9 @@ Os clientes agora podem pausar e retomar várias campanhas simultaneamente na p�
 
 ## Desinstalar o ponto de extremidade da API de dados
 
-Os clientes agora podem obter dados de rastreamento de desinstalação diretamente de nossas APIs de exportação. Consulte os [pontos de extremidade de exportação][4] para obter mais detalhes.
+Os clientes agora podem obter dados de rastreamento de desinstalação diretamente de nossas APIs de exportação. Consulte os [pontos de extremidade de exportação]({{site.baseurl}}/developer_guide/rest_api/export/#kpi-export) para obter mais detalhes.
 
 ## Melhoria do registro de erros
 
-Melhoramos sua capacidade de classificar por tipo de erro no [Registro de erros de mensagens][5]!
+Melhoramos sua capacidade de classificar por tipo de erro no [Registro de Erros de Mensagem]({% image_buster /assets/img_archive/improved_error_log.png %})!
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
-[5]: {% image_buster /assets/img_archive/improved_error_log.png %}
