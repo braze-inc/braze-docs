@@ -24,7 +24,7 @@ Braze aloja nuestra aplicación en varios clústeres repartidos por Estados Unid
 | US-08 | `https://rest.iad-08.braze.com` |
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
-|  | `https://rest.au-01.braze.com`  |
+| AU-01 | `https://rest.au-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## URL del punto final
