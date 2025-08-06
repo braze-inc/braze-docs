@@ -30,7 +30,7 @@ Saiba mais sobre o SSL no Braze, por que o SSL é importante e como você pode a
 
 ## Pontos de extremidade da API do perfil de usuário do Amplitude
 
-A API de perfil de usuário do Amplitude atende aos perfis de usuário do Amplitude. Isso inclui propriedades do usuário, propriedades computadas do usuário, uma lista de IDs de coortes que incluem o usuário e recomendações. Consulte os [endpoints da API de perfil de usuário do Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) para saber mais.
+A API de perfil de usuário do Amplitude atende aos perfis de usuário do Amplitude. Isso inclui propriedades do usuário, propriedades computadas do usuário, uma lista de IDs de coortes que incluem o usuário e recomendações. Consulte os [endpoints da API de perfil de usuário do Amplitude]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/) para saber mais.
 
 ## Ponto de extremidade de detalhes da campanha 
 
