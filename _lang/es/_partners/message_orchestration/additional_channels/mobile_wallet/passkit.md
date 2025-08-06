@@ -12,7 +12,7 @@ search_tag: Partner
 
 > PassKit te habilita para ampliar tu alcance móvil integrando pases de Apple Wallet y Google Pay en la experiencia de tus clientes. Cree, gestione, distribuya y analice fácilmente el rendimiento de cupones digitales, tarjetas de fidelización, carnés de socio, entradas y mucho más; sin que sus clientes necesiten otra aplicación.
 
-
+_Esta integración está mantenida por Passkit._
 
 ## Sobre la integración
 
@@ -30,7 +30,7 @@ La integración de Braze y PassKit le permite aumentar y medir el compromiso de 
 
 ## Integración
 
- 
+Para enriquecer aún más la experiencia de tus clientes con el monedero móvil, desde tu panel PassKit puedes optar por pasar los datos a Braze a través del punto final Braze [`/users/track`][7] . 
 
 Ejemplos de datos para compartir de PassKit incluyen:
 - **Pase creado**: cuando un cliente hace clic en un enlace de pase y se le muestra por primera vez un pase.
@@ -265,7 +265,7 @@ Recuerda guardar tu plantilla antes de salir de la página. <br>Las plantillas w
 
 ## Recuperar detalles del pase a través de Contenido conectado
 
-
+Además de crear y actualizar pases, también puedes recuperar los metadatos de los pases de tus usuarios a través de Braze [Contenido conectado][15] para incorporar detalles personalizados de los pases en tus campañas de mensajería.
 
 **Llamada al contenido conectado de PassKit**
 
