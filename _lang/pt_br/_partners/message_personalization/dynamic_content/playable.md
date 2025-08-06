@@ -12,7 +12,7 @@ search_tag: Partner
 
 > O [Playable][1] permite que você adicione conteúdo de vídeo de reprodução automática às suas campanhas de e-mail do Braze.
 
-
+_Essa integração é mantida pela Playable._
 
 ## Sobre a integração
 
