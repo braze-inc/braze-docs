@@ -18,8 +18,8 @@ O [Portal do Produto Braze]({{site.baseurl}}/user_guide/administrative/access_br
 
 ## Guia de implementação do cartão de conteúdo do iOS
 
-Adotando uma estratégia técnica centrada no desenvolvedor, a Braze lançou seu primeiro guia de implementação, destacando as diretrizes e as práticas recomendadas do cartão de conteúdo do iOS orientadas para casos de uso. Este guia abrangente fornece casos de uso exclusivos, instruções em vídeo, trechos de código e orientações sobre como registrar métricas valiosas de usuários. Para saber mais sobre como você pode começar a implementar os cartões de conteúdo do iOS como um profissional, consulte nosso [guia de implementação]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/). 
+Adotando uma estratégia técnica centrada no desenvolvedor, a Braze lançou seu primeiro guia de implementação, destacando as diretrizes e as práticas recomendadas do cartão de conteúdo do iOS orientadas para casos de uso. Este guia abrangente fornece casos de uso exclusivos, instruções em vídeo, trechos de código e orientações sobre como registrar métricas valiosas de usuários. Para saber mais sobre como você pode começar a implementar os cartões de conteúdo do iOS como um profissional, consulte nosso [guia de implementação]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/implementation_guide/). 
 
 ## Swift Package Manager
 
-O [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewswift_package_manager) está integrado ao sistema de compilação do Swift e baixa, compila e vincula automaticamente as dependências. A instalação do SDK do iOS por meio do Swift Package Manager automatizará a maior parte do processo de instalação para você.
+O [Swift Package Manager]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift#swift_integrating-the-swift-sdk) está integrado ao sistema de compilação do Swift e baixa, compila e vincula automaticamente as dependências. A instalação do SDK do iOS por meio do Swift Package Manager automatizará a maior parte do processo de instalação para você.
