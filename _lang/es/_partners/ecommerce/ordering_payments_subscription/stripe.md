@@ -1,13 +1,13 @@
 ---
-nav_title: Raya
-article_title: Raya
+nav_title: Stripe
+article_title: Stripe
 description: "Este artículo describe la asociación entre Braze y Stripe."
 alias: /partners/stripe/
 page_type: partner
 search_tag: Partner
 ---
 
-# Raya
+# Stripe
 
 > [Stripe](https://www.stripe.com/) es una plataforma integral de infraestructura financiera que habilita a las empresas para aceptar pagos, gestionar operaciones de ingresos y facilitar el comercio global a través de una línea de productos y servicios integrados.
 
@@ -29,7 +29,7 @@ Integrando Braze y Stripe, puedes:
 
 ### Paso 1: Configura la transformación de datos Braze para que acepte los webhooks de Stripe {#step-1}
 
-{% multi_lang_include crear_transformacion.md %}
+{% multi_lang_include create_transformation.md %}
 
 ### Paso 2: Configurar webhooks de Stripe
 
