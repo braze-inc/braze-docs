@@ -15,7 +15,7 @@ search_tag: Partner
 
 ## Tablas de relaciones
 
-{% multi_lang_include copo_nieve_snowflake_users_messages/contentcard.md %}
+{% multi_lang_include snowflake_users_messages/contentcard.md %}
 {% endsdktab %}
 
 {% sdktab Email %}
