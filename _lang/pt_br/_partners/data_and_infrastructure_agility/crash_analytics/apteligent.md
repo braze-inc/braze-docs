@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Apteligent](https://www.vmware.com/products/workspace-one/intelligence-consumer-apps.html) é uma plataforma de performance de aplicativos móveis que fornece ferramentas e insights para desenvolvedores e gerentes de produtos. 
 
-
+_Essa integração é mantida pela Apteligent._
 
 ## Sobre a integração
 
