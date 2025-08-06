@@ -12,7 +12,7 @@ page_order: 2
 
 > Möchten Sie wissen, wie Sie Ihre Shopify Integration nutzen können, um zeitnahe und effektive Nachrichten für Ihre Nutzer:innen zu erstellen? Lesen Sie die folgenden Abschnitte über gängige Anwendungsfälle [für Anfänger](#beginner) und [Fortgeschrittene](#advanced), um mehr zu erfahren!
 
-{% multi_lang_include alerts.md alert='Shopify Verwerfung' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Anfänger
 
