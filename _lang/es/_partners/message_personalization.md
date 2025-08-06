@@ -11,23 +11,23 @@ search_tag: Partner
 partner_top_header: "Message Personalization"
 
 valid_partner_list:
-- name: ""
+- name: Jacquard
   url: /docs/partners/jacquard/
-- name: ""
+- name: Avisa a
   url: /docs/partners/notify/
-- name: ""
+- name: Trustpilot
   url: /docs/partners/trustpilot/
-- name: ""
+- name: Amazon Personalizar
   url: /docs/partners/amazon_personalize/
 - name: Dynamic Yield
   url: /docs/partners/dynamic_yield/
-- name: ""
+- name: LiftIgniter
   url: /docs/partners/liftigniter/
 - name: Movable Ink
   url: /docs/partners/movable_ink/
 - name: Sheetlabs
   url: /docs/partners/sheetlabs/
-- name: ""
+- name: Amplitude
   url: /docs/partners/amplitude/
 - name: Certona
   url: /docs/partners/certona/
@@ -35,15 +35,15 @@ valid_partner_list:
   url: /docs/partners/future_anthem/
 - name: Judo
   url: /docs/partners/judo/
-- name: ""
+- name: Imágenes ingeniosas
   url: /docs/partners/nifty_images/
-- name: ""
+- name: Odicci
   url: /docs/partners/odicci/
 - name: Playable
   url: /docs/partners/playable/
 - name: VISTO
   url: /docs/partners/seen/
-- name: ""
+- name: Storyly
   url: /docs/partners/storyly/
 - name: Stylitics
   url: /docs/partners/stylistics/
@@ -53,7 +53,7 @@ valid_partner_list:
   url: /docs/partners/wsc_sports/
 - name: Wyng
   url: /docs/partners/wyng/
-- name: ""
+- name: Yotpo
   url: /docs/partners/yotpo/
 - name: Crowdin
   url: /docs/partners/crowdin/
@@ -73,11 +73,11 @@ valid_partner_list:
   url: /docs/partners/future_anthem
 - name: VISTO
   url: /docs/partners/seen
-- name: ""
+- name: Sólo palabras
   url: /docs/partners/just_words/
 - name: Transifex
   url: /docs/partners/transifex/
-- name: ""
+- name: AccuWeather
   url: /docs/partners/accuweather/
 - name: Bluedot
   url: /docs/partners/bluedot/
@@ -89,12 +89,12 @@ valid_partner_list:
   url: /docs/partners/loplat/
 - name: Radar
   url: /docs/partners/radar/
-- name: ""
+- name: Extole
   url: /docs/partners/extole/
-- name: ""
+- name: Friendbuy
   url: /docs/partners/friendbuy/
-- name: ""
+- name: ViralSweep
   url: /docs/partners/viralsweep/
-- name: ""
+- name: Mencióname
   url: /docs/partners/mention_me/
 ---
