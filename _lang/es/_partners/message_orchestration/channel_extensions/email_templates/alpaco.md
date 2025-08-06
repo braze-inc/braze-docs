@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Alpaco](https://alpaco.email/) es una herramienta de marketing por correo electrónico en línea que ofrece un editor de arrastrar y soltar para un nuevo nivel de control del diseño y el resultado. La integración de Braze y Alpaco te permite exportar a Braze correos electrónicos basados en datos. 
 
-
+_Esta integración está mantenida por Alpaco._
 
 {% alert note %}
 Alpaco es [totalmente compatible con las variables de Liquid](https://shopify.github.io/liquid/) y, como tal, también es totalmente compatible con cualquier variable de Liquid utilizada en tus configuraciones Braze.
