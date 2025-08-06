@@ -34,7 +34,7 @@ No próximo exemplo, considere uma promoção válida para usuários dos Estados
 
 Pode haver situações de direcionamento de usuários em que o uso do operador `OR` deve ser evitado. O operador `OR` cria uma declaração que é avaliada como verdadeira se um usuário atender aos critérios de um ou mais filtros em uma declaração. Por exemplo, se você quiser criar um segmento de usuários que pertençam a "foodies", mas não pertençam a "non-foodies" ou "candy-lovers", o operador `OR` funcionaria aqui.
 
-![][1]
+![]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
 No entanto, se o seu objetivo for segmentar os usuários que pertencem ao segmento "foodies" e não estão em nenhum dos segmentos "non-foodies" e "candy-lovers", use o operador `AND`. Dessa forma, os usuários que recebem a campanha ou o Canva estão no segmento pretendido ("foodies") e não nos outros segmentos ("non-foodies" e "candy-lovers") ao mesmo tempo. 
 
@@ -50,14 +50,11 @@ Se `is not`, `does not equal`, ou `does not match regex` forem usados com o oper
 
 No próximo exemplo, usaremos os operadores `AND` e `OR`. Aqui, o público-alvo inclui usuários que compraram tênis Nike ou Adidas e aceitaram receber notificações por e-mail.
 
-![Criação de um segmento para compradores de tênis em que a marca favorita do usuário é Nike ou Adidas, e ele aceitou o envio de e-mail][33]
+![Criação de um segmento para compradores de tênis em que a marca favorita do usuário é Nike ou Adidas e ele aceitou o envio de e-mail]({% image_buster /assets/img_archive/NikeSneakers.png %})
 
-Outra maneira de garantir que esteja criando a lógica correta é criar seu segmento e [prévia dos usuários][35] que se enquadram nele com base em seus filtros. Dessa forma, você pode ter certeza de que as atribuições, a versão do app ou qualquer outra segmentação correspondem ao que você está vendo.
+Outra maneira de garantir que está construindo a lógica correta é criar seu segmento e fazer [uma prévia dos usuários]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) que se enquadram nele com base em seus filtros. Dessa forma, você pode ter certeza de que as atribuições, a versão do app ou qualquer outra segmentação correspondem ao que você está vendo.
 
 Ainda precisa de ajuda? Abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
 
 _Última atualização em 3 de junho de 2022_
 
-[1]: {% image_buster /assets/img_archive/or_operator_segment.png %}
-[33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
-[35]: {{site.baseurl}}/user_guide/data_e_analytics/reporting/viewing_and_understanding_segment_data/
