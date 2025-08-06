@@ -12,7 +12,7 @@ page_order: 2
 
 > Interessado em ver como você pode aproveitar sua integração com o Shopify para criar envio de mensagens oportuno e eficaz para seus usuários? Consulte as seguintes seções sobre casos de uso comuns [iniciante](#beginner) e [avançado](#advanced) para saber mais!
 
-{% multi_lang_include alerts.md alert='Shopify depreciação' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Iniciante
 
