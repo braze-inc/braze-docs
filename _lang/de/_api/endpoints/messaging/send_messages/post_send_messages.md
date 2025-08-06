@@ -16,9 +16,9 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nachrichten so
 
 > Verwenden Sie diesen Endpunkt, um über die Braze API sofortige Nachrichten an bestimmte Nutzer:innen zu senden.
 
-Achten Sie darauf, dass Sie Messaging-Objekte in Ihren Textkörper aufnehmen, um Ihre Anfragen zu vervollständigen.
-
 Wenn Sie ein Segment Targeting betreiben, wird ein Datensatz Ihrer Anfrage in der [Entwickler:in-Konsole](https://dashboard.braze.com/app_settings/developer_console/activitylog/) gespeichert.
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berech
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Anfragetext
+
+{% alert tip %}
+Achten Sie darauf, dass Sie [Messaging-Objekte]({{site.baseurl}}/api/objects_filters/#messaging-objects) in Ihren Textkörper aufnehmen, um Ihre Anfragen zu vervollständigen.
+{% endalert %}
 
 ```
 Content-Type: application/json
