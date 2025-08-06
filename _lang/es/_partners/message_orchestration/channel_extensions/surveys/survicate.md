@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Survicate][1] es una plataforma de opiniones de clientes que te ayuda a recopilar, analizar y actuar sobre la información de los clientes en múltiples canales y a lo largo del recorrido del usuario.  
 
-
+_Esta integración está mantenida por Survicate._
 
 ## Sobre la integración
 
