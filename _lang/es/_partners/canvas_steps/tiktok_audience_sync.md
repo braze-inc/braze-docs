@@ -133,31 +133,31 @@ Recuerde que se producirá un retraso en los informes de las métricas de usuari
 
 ## Preguntas más frecuentes
 
-### 
+### ¿Qué debo hacer si recibo un error de token no válido?
 
 Puedes desconectar y volver a conectar tu cuenta de TikTok en la página de socios de TikTok. Asegúrate con tu administrador de TikTok Business Center que tienes los permisos apropiados para la cuenta de anuncios que deseas sincronizar.
 
-### 
+### ¿Por qué no se puede iniciar mi Canvas?
 
- 
+Confirma que tu cuenta de TikTok se conecta correctamente a Braze en la página del socio de TikTok. A continuación, asegúrate de haber seleccionado una cuenta de publicidad, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
 
-### 
+### ¿Cómo sé si los usuarios han coincidido después de pasar usuarios a TikTok?
 
 TikTok no proporciona esta información para sus políticas de privacidad de datos.
 
-### 
+### ¿Cuánto tardarán mis audiencias en poblar TikTok?
 
 El tamaño de la audiencia se actualizará en 24-48 horas en la página de Audiencias en el Administrador de Anuncios de TikTok.
 
-### 
+### ¿Cuál es el número máximo de audiencias que puedo tener en mi cuenta de anuncios de TikTok?
 
+Puedes tener hasta 400 audiencias por cuenta de anuncios de TikTok.
 
+### ¿Por qué el tamaño de mi audiencia o la tasa de coincidencias en TikTok es mayor que la de los usuarios sincronizados en Braze con Audience Sync?
 
-### 
+Esto se debe a que en TikTok, un ID puede estar asociado a varios usuarios de TikTok. Esto ocurre con mayor frecuencia cuando los clientes utilizan ID de anuncios para móviles (IDFA de iOS y GAID de Android) porque un dispositivo puede tener varios usuarios de TikTok conectados. 
 
-  
-
- 
+Además, TikTok también cuenta a los usuarios de Pangle como usuarios coincidentes, lo que en algunos casos puede dar lugar a una tasa de coincidencia elevada. Sin embargo, cuando utilizas la audiencia para la entrega de anuncios, es posible que el tamaño real de la audiencia entregable no sea tan alto como el tamaño del usuario emparejado, ya que depende de la ubicación y de otros factores que influyen.
 
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
