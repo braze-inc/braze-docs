@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Retención de datos de Snowflake
 
->  Si utilizas el uso compartido de datos de Snowflake, puedes optar por conservar los datos completos de los eventos en tu entorno almacenando una copia en tu cuenta de Snowflake antes de que se aplique la política de retención.
+> Braze anonimiza -elimina la información de identificación personal (PII)- todos los datos de eventos almacenados en Snowflake que tengan más de dos años. Si utilizas el uso compartido de datos de Snowflake, puedes optar por conservar los datos completos de los eventos en tu entorno almacenando una copia en tu cuenta de Snowflake antes de que se aplique la política de retención.
 
 Esta página presenta dos formas de conservar los datos no anonimizados: 
 
@@ -20,7 +20,7 @@ Esta página presenta dos formas de conservar los datos no anonimizados:
 Braze anonimiza automáticamente los datos de eventos de los usuarios que se borran de Braze, tal y como se describe en [la Asistencia Técnica de Protección de Datos]({{site.baseurl}}/dp-technical-assistance/). Los datos copiados fuera de la base de datos compartida no se incluirán en este proceso, puesto que Braze ya no los administra.
 {% endalert %}
 
-## 
+## Copiar todos los datos a otra base de datos Snowflake
 
 Puedes conservar los datos no anonimizados copiando tus datos del esquema compartido `BRAZE_RAW_EVENTS` a otra base de datos y esquema en Snowflake. Para ello, sigue estos pasos:
 
@@ -158,7 +158,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DA
 Ejecutar repetidamente el procedimiento no creará registros duplicados, porque este procedimiento comprueba el `SF_CREATED_AT` más reciente y sólo hace copias de seguridad de los datos más recientes.
 {% endalert %}
 
-## 
+## Descarga de datos en el escenario
 
 Puedes conservar los datos no anonimizados descargando los datos del esquema compartido `BRAZE_RAW_EVENTS` en una etapa. Para ello, sigue estos pasos:
 
