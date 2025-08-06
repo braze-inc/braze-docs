@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A BlueConic][1], a principal plataforma de dados do cliente, libera os dados primários das empresas de sistemas díspares e os torna acessíveis onde e quando forem necessários para transformar os relacionamentos com os clientes e impulsionar o crescimento dos negócios. 
 
-
+_Essa integração é mantida pela Blueconic._
 
 ## Sobre a integração
 
