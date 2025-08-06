@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [RevenueCat](https://www.revenuecat.com/) es la única fuente de información sobre el estado de tu suscripción en iOS, Android y Web. Tanto si está creando una nueva aplicación como si ya tiene millones de suscriptores, puede utilizar RevenueCat para crear compras dentro de la aplicación multiplataforma, gestionar sus productos y suscriptores y analizar sus datos, sin necesidad de código de servidor.
 
-
+_Esta integración está mantenida por RevenueCat._
 
 ## Sobre la integración
 
