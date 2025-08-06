@@ -11,7 +11,7 @@ search_tag: Partner
 
 >[Scuba Analytics][1] es una plataforma de colaboración de datos completa, impulsada por el aprendizaje automático y diseñada para datos de series temporales de alta velocidad. Scuba le permite exportar selectivamente usuarios (también llamados actores) y cargarlos en su plataforma Braze. En Scuba, las propiedades de actor personalizadas se utilizan para analizar tendencias de comportamiento, activar sus datos en varias plataformas y realizar modelos predictivos mediante aprendizaje automático.
 
-
+_Esta integración es mantenida por Scuba Analytics._
 
 ## Requisitos previos
 
