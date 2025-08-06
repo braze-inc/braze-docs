@@ -12,10 +12,10 @@ search_tag: Partner
 
 > [Amazon S3](https://aws.amazon.com/s3/) es un sistema de almacenamiento altamente escalable ofrecido por Amazon Web Services.
 
+La integración de Braze y Amazon S3 presenta dos estrategias de integración:
 
-
-- 
-- 
+- Aprovecha [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), habilitándote para almacenar datos allí hasta que quieras conectarlos a otras plataformas, herramientas y ubicaciones.
+- Utiliza las exportaciones de datos del panel (como las exportaciones CSV y los informes de interacción).
 
 ## Requisitos previos
 
@@ -26,22 +26,22 @@ search_tag: Partner
 | Currents | Para volver a exportar datos a Amazon S3, debes tener configurado [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) en tu cuenta. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 
+#### Crear un nuevo contenedor de S3
 
+Para crear un contenedor para tu aplicación, haz lo siguiente:
 
-
-1.  
+1. Abre la [consola de Amazon S3](https://console.aws.amazon.com/s3/) y sigue las instrucciones para **Iniciar sesión** o **Crear una cuenta en AWS**. 
 2. Tras iniciar sesión, selecciona **S3** en la categoría **Almacenamiento y entrega de contenidos**. 
 3. Selecciona **Crear contenedor** en la siguiente pantalla. 
 4. Se te pedirá que crees tu contenedor y selecciones una región.
 
 {% alert note %}
-
+Currents no admite contenedores con [Bloqueo de Objeto](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configurado.
 {% endalert %}
 
 ## Integración
 
- 
+Braze tiene dos estrategias diferentes de integración con Amazon S3: una para [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) y otra para todas las exportaciones de datos del panel (como exportaciones CSV o informes de interacción). Ambas integraciones admiten dos métodos diferentes de autenticación o autorización:
 
 - [Método de clave de acceso secreta de AWS](#aws-secret-key-auth-method)
 - [Método ARN del rol de AWS](#aws-role-arn-auth-method)
@@ -56,18 +56,18 @@ Para recuperar tu ID de clave de acceso y tu clave de acceso secreta, tendrás q
 
 ### Paso 2: Obtener credenciales {#secret-key-2}
 
- 
+Tras crear un nuevo usuario, selecciona **Mostrar credenciales de seguridad del usuario** para revelar su ID de clave de acceso y su clave de acceso secreta. A continuación, anota estas credenciales en algún sitio o selecciona el botón **Descargar credenciales**, ya que tendrás que introducirlas en el panel Braze más adelante.
 
 ![][11]
 
 ### Paso 3: Crear política {#secret-key-3}
 
- A continuación, selecciona **Crear tu propia política**. Esto dará permisos limitados, para que Braze sólo pueda acceder a los contenedores especificados. 
+Ve a **Políticas** > **Empezar** > **Crear política** para añadir permisos a tu usuario. A continuación, selecciona **Crear tu propia política**. Esto dará permisos limitados, para que Braze sólo pueda acceder a los contenedores especificados. 
 
 ![][12]
 
 {% alert note %}
-
+Se necesitan políticas diferentes para la Exportación de Datos de Currents y de Dashboard. `s3:GetObject` es necesario para permitir que el backend de Braze realice la gestión de errores.
 {% endalert %}
 
 Especifica un nombre de política de tu elección, e introduce el siguiente fragmento de código en la sección **Documento de Política**. Asegúrate de sustituir `INSERTBUCKETNAME` por el nombre de tu contenedor. Sin estos permisos, la integración no superará la comprobación de credenciales y no se creará.
@@ -115,7 +115,7 @@ Especifica un nombre de política de tu elección, e introduce el siguiente frag
 
 ### Paso 4: Adjuntar política {#secret-key-4}
 
-  
+Después de crear una nueva política, ve a **Usuarios** y selecciona en tu usuario específico. En la pestaña **Permisos**, selecciona **Adjuntar política** y selecciona la nueva política que has creado. Ahora, estás listo para vincular tus credenciales de AWS a tu cuenta Braze.
 
 ![][13]
 
@@ -126,9 +126,9 @@ Especifica un nombre de política de tu elección, e introduce el siguiente frag
 
 En Braze, ve a **Integraciones de socios** > **Exportación de datos**.
 
+A continuación, selecciona **Crear corriente** y luego **Exportación de datos de Amazon S3**.
 
-
- 
+Ponle nombre a tu Corriente. En la sección **Credenciales**, asegúrate de que está seleccionada la Clave de acceso secreta **de AWS** y, a continuación, introduce tu ID de acceso a S3, la clave de acceso secreta de AWS y el nombre de contenedor de S3 en los campos designados.
 
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
@@ -141,21 +141,21 @@ También puedes añadir las siguientes personalizaciones en función de tus nece
 - **Ruta de la carpeta:** De forma predeterminada, `currents`. Si esta carpeta no existe, Braze te la creará automáticamente. 
 - **Encriptación AES-256 del lado del servidor, en reposo:** Está predeterminado en OFF e incluye la cabecera `x-amz-server-side-encryption`.
 
-
+Selecciona **Lanzar Corriente** para continuar.
 
 Una notificación te informará de si tus credenciales se han validado correctamente. AWS S3 debería estar ahora configurado para Braze Currents.
 
 {% endtab %}
 {% tab Exportación de datos del panel %}
 
+En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **Amazon S3**.
 
-
- 
+En la página de **credenciales de AWS**, asegúrate de que está seleccionada la clave de acceso secreta **de AWS** y, a continuación, introduce tu ID de acceso a AWS, la clave de acceso secreta de AWS y el nombre de contenedor de S3 en los campos designados. Cuando introduzcas tu clave secreta, selecciona primero **Probar credenciales** para asegurarte de que tus credenciales funcionan y, a continuación, selecciona **Guardar** cuando lo consigas.
 
 ![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 
 {% alert tip %}
-
+Siempre puedes recuperar nuevas credenciales navegando hasta tu usuario y seleccionando **Crear clave de acceso** en la pestaña **Credenciales de seguridad** de la consola de AWS.
 {% endalert %}
 
 Una notificación te informará de si tus credenciales se han validado correctamente. AWS S3 debería estar ahora integrado en tu cuenta Braze.
@@ -165,16 +165,16 @@ Una notificación te informará de si tus credenciales se han validado correctam
 
 ## Método de autenticación ARN del rol de AWS
 
-
+Este método de autenticación genera un nombre de recurso de Amazon (ARN) de rol que habilita la cuenta de Amazon Braze para autenticarse como miembro del rol que creaste para escribir datos en tu contenedor.
 
 ### Paso 1: Crear política {#role-arn-1}
 
-Para empezar, inicia sesión en la consola de administración de AWS como administrador de cuentas. 
+Para empezar, inicia sesión en la consola de administración de AWS como administrador de cuentas. Ve a la sección IAM de la consola de AWS, selecciona **Políticas** en la barra de navegación y selecciona **Crear política**.
 
 ![]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
 {% alert note %}
-
+Se necesitan políticas diferentes para la Exportación de Datos de Currents y de Dashboard. `s3:GetObject` es necesario para permitir que el backend de Braze realice la gestión de errores.
 {% endalert %}
 
 Abre la pestaña **JSON** e introduce el siguiente fragmento de código en la sección **Documento de Política**. Asegúrate de sustituir `INSERTBUCKETNAME` por el nombre de tu contenedor. Seleccione **Revisar política** cuando haya terminado.
@@ -224,7 +224,7 @@ Abre la pestaña **JSON** e introduce el siguiente fragmento de código en la se
 {% endtab %}
 {% endtabs %}
 
-
+A continuación, dale un nombre y una descripción a la política y selecciona **Crear política**.
 
 ![]({{site.baseurl}}/assets/img/create_policy_3_name.png)
 
@@ -232,13 +232,13 @@ Abre la pestaña **JSON** e introduce el siguiente fragmento de código en la se
 
 ### Paso 2: Crear rol {#role-arn-2}
 
-
+Dentro de la misma sección IAM de la consola, selecciona **Roles** > **Crear Rol**.
 
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Recupera el ID de tu cuenta Braze y el ID externo de tu cuenta Braze:
-- **Currents**: En Braze, ve a **Integraciones de socios** > **Exportación de datos**.  Aquí encontrarás los identificadores necesarios para crear tu rol.
-- **Exportación de datos del panel**:  
+- **Currents**: En Braze, ve a **Integraciones de socios** > **Exportación de datos**. A continuación, selecciona **Crear corriente** y luego **Exportación de datos de Amazon S3**. Aquí encontrarás los identificadores necesarios para crear tu rol.
+- **Exportación de datos del panel**: En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **Amazon S3**. Aquí encontrarás los identificadores necesarios para crear tu rol.
 
 De vuelta en la consola de AWS, selecciona **Otra cuenta de AWS** como tipo de selector de entidad de confianza. Proporciona el ID de tu cuenta Braze, marca la casilla **Requerir ID externo** e introduce el ID externo Braze. Seleccione **Siguiente** cuando haya terminado.
 
@@ -250,7 +250,7 @@ A continuación, adjunta al rol la política que creaste anteriormente. Busca la
 
 ![ARN del rol]({{site.baseurl}}/assets/img/create_role_3_attach.png)
 
-
+Dale al rol un nombre y una descripción, y selecciona **Crear rol**.
 
 ![ARN del rol]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
@@ -258,7 +258,7 @@ Ahora deberías ver tu función recién creada en la lista.
 
 ### Paso 4: Enlace a Braze AWS {#role-arn-4}
 
-En la consola de AWS, busca en la lista el rol que acabas de crear. 
+En la consola de AWS, busca en la lista el rol que acabas de crear. Selecciona el nombre para abrir los detalles de ese rol.
 
 ![]({{site.baseurl}}/assets/img/create_role_5_created.png)
 
@@ -271,18 +271,18 @@ Vuelve a tu cuenta de Braze y copia el ARN del rol en el campo correspondiente.
 {% tabs %}
 {% tab Braze Currents %}
 
- 
+En Braze, ve a la página **Currents** en **Integraciones**. A continuación, selecciona **Crear corriente** y selecciona **Exportación de datos de Amazon S3**
 
 ![]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
-Dale un nombre a tu Corriente. 
+Dale un nombre a tu Corriente. A continuación, en la sección **Credenciales**, asegúrate de que está seleccionado **el ARN de rol de AWS** y, a continuación, proporciona tu ARN de rol y el nombre de contenedor de AWS S3 en los campos designados.
 
 También puedes añadir las siguientes personalizaciones en función de tus necesidades:
 
 - Ruta de la carpeta (predeterminada a `currents`)
 - Encriptación AES-256 del lado del servidor, en reposo (predeterminada en OFF) - Incluye la cabecera `x-amz-server-side-encryption` 
 
-  AWS S3 debería estar ahora configurado para Braze Currents.
+Selecciona **Lanzar Corriente** para continuar. Una notificación te indicará si tus credenciales han sido validadas correctamente. AWS S3 debería estar ahora configurado para Braze Currents.
 
 {% alert important %}
 Si recibes un error "Las credenciales de S3 no son válidas", puede deberse a una integración demasiado rápida después de crear un rol en AWS. Espera y vuelve a intentarlo.
@@ -291,14 +291,14 @@ Si recibes un error "Las credenciales de S3 no son válidas", puede deberse a un
 {% endtab %}
 {% tab Exportación de datos del panel %}
 
-
+En Braze, ve a la página de **socios tecnológicos** en **Integraciones** y selecciona **Amazon S3**.
 
 ![]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
-En la página de **credenciales de AWS**, asegúrate de que el botón de opción **ARN de rol de AWS** está seleccionado y, a continuación, introduce el ARN de tu rol y el nombre de contenedor de S3 de AWS en los campos designados. 
+En la página de **credenciales de AWS**, asegúrate de que el botón de opción **ARN de rol de AWS** está seleccionado y, a continuación, introduce el ARN de tu rol y el nombre de contenedor de S3 de AWS en los campos designados. Selecciona primero **Probar credenciales** para confirmar que tus credenciales funcionan correctamente y, a continuación, selecciona **Guardar** cuando lo consigas.
 
 {% alert tip %}
-
+Siempre puedes recuperar nuevas credenciales navegando hasta tu usuario y seleccionando **Crear clave de acceso** en la pestaña **Credenciales de seguridad** de la consola de AWS.
 {% endalert %}
 
 Una notificación te informará de si tus credenciales se han validado correctamente. AWS S3 debería estar ahora integrado en tu cuenta Braze.
