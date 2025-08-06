@@ -32,3 +32,9 @@ These traps can be avoided if you set up a confirmed opt-in process. By sending 
 {% alert tip %}
 The Braze Customer Success and Deliverability teams can help make sure you're following best practices to maximize deliverability across the globe.
 {% endalert %}
+
+## Removing an email address from your bounce or spam list
+
+You can remove bounced emails and emails on your Braze spam list with the following endpoints:
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

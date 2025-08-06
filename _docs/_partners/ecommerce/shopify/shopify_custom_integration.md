@@ -39,7 +39,7 @@ The shop must be named “Shopify” or the integration may not work properly.
 
 ### Step 2: Add subdomain and environmental variables {#step-2}
 
-1. Set up your Shopify subdomain to [redirect traffic from your online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic/).  
+1. Set up your Shopify subdomain to [redirect traffic from your online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic).  
 2. Add a [callback URI](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen#step-2-set-up-the-environment) for login. (The URI will automatically be added when the domain is added.)
 3. Set up your [Shopify environment variables](https://shopify.dev/docs/storefronts/headless/hydrogen/environments#create-a-new-environment-variable):
   - Create two environment variables using the values from the website app you created in [Step 1](#step-1).
@@ -647,7 +647,7 @@ With the Braze SDKs, you can track custom events or custom attributes that go be
 
 The SDK must be initialized (listening for activity) on a user’s device to log events or custom attributes. To learn more about logging custom data, refer to [User object](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) and [logCustomEvent](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
-### Step 6: Configure how you manage users (optional)
+### Step 6: Configure how you manage users (optional) {#step-6}
 
 Select your `external_id` type from the dropdown.
 
@@ -660,33 +660,71 @@ Using an email address or a hashed email address as your Braze external ID can h
 - **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
 {% endalert %}
 
-If you selected a custom external ID type, proceed to steps 6.1 and 6.2. Otherwise, continue to step 6.3.
+By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
 
-#### Step 6.1: Create a custom `external_id`
+If you selected a custom external ID type, proceed to steps 6.1—6.3. Otherwise, continue to step 6.4.
 
-First, go to Shopify and create the `braze.external_id` metafield. We recommend following the steps in [Creating custom metafield descriptions](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). For **Namespace and key**, enter `braze.external_id`. For **Type**, we recommend you choose an ID type.
+#### Step 6.1: Create the `braze.external_id` metafield
 
-After creating the metafield, listen to [`customer/create` webhooks](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) so that you can write the metafield when a new customer is created. Then, use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to backfill all of your previously created customers with this metafield.
+1. In your Shopify admin panel, go to **Settings** > **Metafields**.
+2. Select **Customers** > **Add definition**.
+3. For **Namespace and key**, enter `braze.external_id`.
+4. For **Type**, select **ID Type**.
 
-#### Step 6.2: Create an endpoint
+After the metafield is created, populate it for your customers. We recommend the following approaches:
 
-You need a public GET endpoint to retrieve your external ID. If Shopify can't provide the metafield, Braze will call that endpoint to retrieve the external ID.
+- **Listen to customer creation webhooks:** Set up a webhook to listen for [`customer/create` events](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks). This allows you to write the metafield when a new customer is created.
+- **Backfill existing customers:** Use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to backfill the metafield for previously created customers.
 
-An example endpoint is: `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+#### Step 6.2: Create an endpoint to retrieve your external ID
 
-##### Response
+You need to create a public endpoint that Braze can call to retrieve the external ID. This is necessary for scenarios where Shopify can't provide the `braze.external_id` metafield. 
 
-Braze expects a 200 status code. Any other code is considered an endpoint failure. The response should be:
+##### Endpoint specifications
+
+**Method:** `GET`
+
+| Parameters | Description |
+| --- | --- |
+| `shopify_customer_id` | The Shopify customer ID. |
+| `email_address` | The email address of the logged-in user. |
+| `shopify_storefront` | The storefront for the request. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+##### Example endpoint
+
+```
+GET 
+https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
+```
+
+##### Expected response
+
+Braze expects a `200` status code. Any other code is considered a failure.
 
 {% raw %}
 ```json
-{ "external_id": "my_external_id" }
+{ 
+    "external_id": "my_external_id" 
+}
 ```
 {% endraw %}
 
-Vaidate the `shopify_customer_id` and email address by using the Admin API or Customer API to confirm that the parameter values match the customer values in Shopify. After validating, you could also use the APIs to retrieve the `braze.external_id` metafield and return the external ID value.
+{% alert important %}
+It's important to validate that the `shopify_customer_id` and `email_address` match the customer values in Shopify. You can use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to validate these parameters and retrieve the `braze.external_id` metafield.
+{% endalert %}
 
-#### Step 6.3: Collect your email or SMS opt-ins from Shopify (optional)
+#### Step 6.3: Input your external ID
+
+Repeat [Step 6](#step-6), and enter your endpoint URL after selecting custom external ID as your Braze external ID type.
+
+##### Considerations
+
+- If your external ID isn't generated when Braze sends a request to your endpoint, the integration will default to using the Shopify customer ID when the `changeUser` function is called. This step is crucial for merging the anonymous user profile with the identified user profile. As a result, there may be a temporary period during which different types of external IDs exist within your workspace.
+- When the external ID is available in the `braze.external_id` metafield, the integration will prioritize and assign this external ID. 
+    - If the Shopify customer ID was previously set as the Braze external ID, it will be replaced with the `braze.external_id` metafield value. 
+
+#### Step 6.4: Collect your email or SMS opt-ins from Shopify (optional)
 
 You have the option to collect your email or SMS marketing opt-ins from Shopify. 
 
