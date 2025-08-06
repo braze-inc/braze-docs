@@ -12,7 +12,7 @@ search_tag: Airbyte
 
 > O [Airbyte](https://airbyte.com/) é um mecanismo de integração de dados de código aberto que ajuda a consolidar os dados em data warehouses, lakes e bancos de dados.
 
-
+_Essa integração é mantida pela Airbyte._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ A integração Braze e Airbyte permite que os usuários criem um pipeline de dad
 | ----------- | ----------- |
 | Conta Airbyte Cloud | É necessário ter uma conta [Airbyte Cloud](https://cloud.airbyte.io/workspaces) para usar a integração. |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com todas as permissões. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Ponto de extremidade REST do Braze | Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST  do Braze | Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
