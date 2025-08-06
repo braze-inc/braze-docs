@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [O SmarterSends][2] impulsiona a personalização com campanhas de marketing que as empresas podem criar, programar e implementar para reforçar a conformidade legal e da marca com controle sobre o conteúdo e os dados usados. 
 
-
+_Essa integração é mantida pelo SmarterSends._
 
 ## Sobre a integração
 
@@ -23,7 +23,7 @@ A parceria entre a Braze e a SmarterSends permite combinar o poder da Braze com 
 | --- | --- |
 | Conta SmarterSends | É necessário ter uma [conta SmarterSends][2] para aproveitar essa parceria. |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com essas permissões: {::nomarkdown}<ul><li><code>users.track</code></li><li><code>users.export.ids</code></li><li><code>messages.schedule.create</code></li><li><code>messages.schedule.update</code></li> <li><code>messages.schedule.delete</code></li><li><code>sends.id.create</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>sends.data_series</code></li></ul>{:/} Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. Para aumentar a segurança, coloque na lista de permissões o endereço IP da SmarterSends (disponível em sua instância). |
-| Ponto de extremidade REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Ponto de extremidade REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 | ID da campanha da API do Braze | O [ID da campanha da API do Braze]({{site.baseurl}}/api/api_campaigns/) é o identificador exclusivo de todas as campanhas enviadas por meio do SmarterSends. Isso pode ser criado no dashboard da Braze em **Envio de mensagens** > **Campanhas**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
