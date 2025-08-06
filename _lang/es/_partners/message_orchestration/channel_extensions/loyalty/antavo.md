@@ -1,7 +1,7 @@
 ---
 nav_title: Antavo
 article_title: Nube de fidelización Antavo
-description: ""
+description: "Este artículo de referencia describe la asociación entre Braze y Antavo, un programa de fidelización de nueva generación que va más allá de recompensar las compras."
 alias: /partners/antavo/
 page_type: partner
 search_tag: Partner
@@ -11,18 +11,18 @@ search_tag: Partner
 
 > [Antavo](https://antavo.com/) es un proveedor de tecnología de fidelización SaaS de nivel empresarial que crea programas de fidelización integrales para fomentar la fidelidad a la marca y cambiar el comportamiento del cliente.
 
-
+_Esta integración está mantenida por Antavo._
 
 ## Sobre la integración
 
-La integración de Antavo y Braze te permite utilizar los datos relacionados con el programa de fidelización para crear campañas personalizadas que mejoren la experiencia del cliente. Antavo admite la sincronización de datos de fidelización entre las dos plataformas; se trata de una sincronización de datos unidireccional únicamente, de Antavo a Braze. 
+La integración de Antavo y Braze te permite utilizar los datos relacionados con el programa de fidelización para crear campañas personalizadas que mejoren la experiencia del cliente. Antavo admite la sincronización de datos de fidelización entre las dos plataformas; se trata de una sincronización de datos unidireccional únicamente, de Antavo a Braze. La integración admite el campo `external_id` Braze, que Antavo utiliza para sincronizar el ID de miembro de fidelización.
 
 ## Requisitos previos
 
 | Requisito          | Descripción                                                                                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |
 | Cuenta Antavo       | Se necesita una cuenta [Antavo](https://antavo.com/) con la integración Braze habilitada para aprovechar esta asociación.                                                |
-| Clave de API REST de Braze   | <br><br>Puede crearse en el panel Braze desde **Configuración** > **Claves API**.  |
+| Clave de API REST de Braze   | Una clave de API REST Braze con los siguientes permisos: `users.track`, `events.list`, `events.data_series`, y `events.get`.<br><br>Puede crearse en el panel Braze desde **Configuración** > **Claves API**.  |
 | Punto final REST Braze  | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia.                |
 | Identificador de la aplicación Braze | La clave del identificador de tu aplicación. <br><br>Para localizar esta clave en el panel de Braze, ve a **Configuración** > **Claves de API** y busca la sección **Identificación**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -90,7 +90,7 @@ Visita la guía paso a paso para aprender a configurar la sincronización de [lo
 
 ### Sincronizar los eventos del programa de fidelización
 
-Utiliza eventos sincronizados desde Antavo para introducir miembros de fidelización en Canvas de Braze basados en acciones. 
+Utiliza eventos sincronizados desde Antavo para introducir miembros de fidelización en Canvas de Braze basados en acciones. La integración puede sincronizar cualquier evento de Antavo (incluidos los eventos de compra) que aparezca en Braze como eventos personalizados.
 
 Visita la guía paso a paso para aprender a configurar la sincronización del [evento de inscripción al programa de fidelización](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!) y la sincronización del [evento de obtención de beneficios del programa de fidelización](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!).
 
