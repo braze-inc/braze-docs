@@ -23,57 +23,21 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen i
 
 Der Aufruf von `/users/identify` kombiniert ein Nutzerprofil, das durch einen Alias (Nur-Alias-Profil), eine E-Mail Adresse (Nur-E-Mail-Profil) oder eine Telefonnummer (Nur-Telefonnummer-Profil) identifiziert wird, mit einem Nutzerprofil, das über eine `external_id` (identifiziertes Profil) verfügt, und entfernt dann das Nur-Alias-Profil. 
 
-Um einen Nutzer:in zu identifizieren, muss ein `external_id` in das Objekt `aliases_to_identify` oder `emails_to_identify` oder `phone_numbers_to_identify` aufgenommen werden. Wenn es keinen Nutzer:in mit diesem `external_id` gibt, wird `external_id` zum Datensatz des Nutzer:innen hinzugefügt, und der Nutzer gilt als identifiziert.
+Die Identifizierung eines Nutzers:in erfordert eine `external_id`, die in den folgenden Objekten enthalten ist:
 
-Beachten Sie das Folgende:
+- `aliases_to_identify`
+- `emails_to_identify` 
+- `phone_numbers_to_identify`
 
-- Wenn diese nachträglichen Verknüpfungen mit dem Feld `merge_behavior` auf `none` gesetzt werden, werden nur die Push-Tokens und der Verlauf der Nachrichten, die mit dem Nutzer-Alias verbunden sind, beibehalten. Alle Attribute, Ereignisse oder Käufe werden "verwaist" und sind für den identifizierten Nutzer:innen nicht verfügbar. Eine Abhilfe besteht darin, die Daten des Nutzer:innen vor der Identifizierung über den [Endpunkt`/users/export/ids` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) zu exportieren und dann die Attribute, Ereignisse und Käufe erneut mit dem Nutzer:innen zu verknüpfen.
-- Wenn das Feld `merge_behavior` auf `merge` eingestellt ist, führt dieser Endpunkt [bestimmte Felder](#merge) des anonymen Nutzer:in mit dem identifizierten Nutzer zusammen.
-- Nutzer:innen können nur einen Alias für ein bestimmtes Label haben. Wenn es bereits einen Nutzer:innen mit der Adresse `external_id` gibt, der einen Alias mit demselben Label wie das Profil "Nur Alias" hat, werden die Nutzerprofile nicht kombiniert.
+Wenn es keinen Nutzer:in mit diesem `external_id` gibt, wird `external_id` zum Datensatz des Nutzer:innen hinzugefügt, und der Nutzer gilt als identifiziert. Nutzer:innen können nur einen Alias für ein bestimmtes Label haben. Wenn es bereits einen Nutzer:innen mit der Adresse `external_id` gibt, der einen Alias mit demselben Label wie das Profil "Nur Alias" hat, werden die Nutzerprofile nicht kombiniert.
 
 {% alert tip %}
 Um unerwartete Datenverluste bei der Identifizierung von Nutzer:innen zu vermeiden, empfehlen wir Ihnen dringend, zunächst die [Best Practices für die Datenerfassung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) zu referenzieren, um zu erfahren, wie Sie Nutzerdaten erfassen können, wenn bereits Bezeichner-Alias-Informationen vorhanden sind.
 {% endalert %}
 
-## Voraussetzungen
+### Verhalten bei der Zusammenführung
 
-Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.identify`.
-
-## Rate-Limit
-
-{% multi_lang_include rate_limits.md endpunkt='Nutzer:innen identifizieren' %}
-
-## Anfragetext
-
-```
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
-```
-
-```json
-{
-   "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of string) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of string) User phone numbers to identify,
-   "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
-}
-```
-
-### Parameter der Anfrage
-
-Sie können pro Anfrage bis zu 50 Nutzer:innen-Aliase hinzufügen. Sie können mehrere zusätzliche Nutzer:innen-Alias mit einem einzigen `external_id` verknüpfen.
-
-| Parameter                   | Erforderlich | Datentyp                           | Beschreibung                                                                                                                                                                 |
-|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `aliases_to_identify`       | Erforderlich | Bezeichner-Array zur Identifizierung des Objekts | Siehe [Bezeichner zur Identifizierung des Objekts]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) und [Nutzer:in-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify`        | Erforderlich | Bezeichner-Array zur Identifizierung des Objekts | E-Mail-Adressen zur Identifizierung von Nutzer:innen. Siehe [Identifizierung von Nutzer:innen per E-Mail](#identifying-users-by-email).                                                                                                              |
-| `phone_numbers_to_identify` | Erforderlich | Bezeichner-Array zur Identifizierung des Objekts | Telefonnummern zur Identifizierung von Nutzer:innen.                                                                                                                                            |
-| `merge_behavior`            | Optional | String                              | Erwartet wird eines von `none` oder `merge`.                                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-#### Feld Merge_behavior {#merge}
-
-Wenn Sie das Feld `merge_behavior` auf `merge` setzen, wird der Endpunkt so eingestellt, dass er die folgende Liste von Feldern, die **ausschließlich** bei anonymen Nutzer:in gefunden wurden, mit dem identifizierten Nutzer zusammenführt. Wenn Sie das Feld auf `none` setzen, werden keine Nutzerdaten mit dem identifizierten Nutzerprofil zusammengeführt. Standardmäßig wird dieses Feld auf `merge` gesetzt.
+Standardmäßig führt dieser Endpunkt die folgende Liste von Feldern, die **ausschließlich** beim anonymen Nutzer:in zu finden sind, mit dem identifizierten Nutzer zusammen.
 
 {% details Liste der Felder, die zusammengeführt werden %}
 - Vorname
@@ -111,9 +75,49 @@ Wenn Sie das Feld `merge_behavior` auf `merge` setzen, wird der Endpunkt so eing
   - Wenn unsere Zielgruppe zum Beispiel keine App-Zusammenfassung für "ABCApp" hat, unser ursprünglicher Nutzer aber schon, dann hat der Nutzer:innen nach der Zusammenführung die App-Zusammenfassung "ABCApp" in seinem Profil.
 {% enddetails %}
 
-### Identifizierung von Nutzer:innen per E-Mail
+## Voraussetzungen
 
-Wenn ein `email` als Bezeichner angegeben wird, müssen Sie auch `prioritization` in den Bezeichner aufnehmen. `prioritization` muss ein Array sein, das angibt, welcher Nutzer:innen zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. `prioritization` ist ein geordnetes Array, d.h. wenn mehr als ein Nutzer:innen aus einer Priorisierung übereinstimmt, wird die Zusammenführung nicht durchgeführt.
+Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `users.identify`.
+
+## Rate-Limit
+
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
+
+## Anfragetext
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+```json
+{
+   "aliases_to_identify" : (required, array of alias to identify objects),
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
+},
+```
+
+### Parameter der Anfrage
+
+Sie können pro Anfrage bis zu 50 Nutzer:innen-Aliase hinzufügen. Sie können mehrere zusätzliche Nutzer:innen-Alias mit einem einzigen `external_id` verknüpfen.
+
+{% alert important %}
+Eine der folgenden Angaben ist erforderlich: `aliases_to_identify`, `emails_to_identify`, oder `phone_numbers_to_identify` pro Anfrage. Sie können diesen Endpunkt zum Beispiel verwenden, um Nutzer:innen per E-Mail zu identifizieren, indem Sie `emails_to_identify` in Ihrer Anfrage verwenden.
+{% endalert %}
+
+| Parameter                   | Erforderlich | Datentyp                           | Beschreibung                                                                                                                                                                 |
+|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `aliases_to_identify`       | Erforderlich | Bezeichner-Array zur Identifizierung des Objekts | Siehe [Bezeichner zur Identifizierung des Objekts]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) und [Nutzer:in-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `emails_to_identify`        | Erforderlich | Bezeichner-Array zur Identifizierung des Objekts | Erforderlich, wenn `email` als Bezeichner angegeben ist. E-Mail-Adressen zur Identifizierung von Nutzer:innen. Siehe [Identifizierung von Nutzer:innen per E-Mail](#identifying-users-by-email).                                                                                                              |
+| `phone_numbers_to_identify` | Erforderlich | Bezeichner-Array zur Identifizierung des Objekts | Telefonnummern zur Identifizierung von Nutzer:innen.                                                                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+### Identifizierung von Nutzer:innen anhand von E-Mail-Adressen und Telefonnummern
+
+Wenn eine E-Mail-Adresse oder Telefonnummer als Bezeichner angegeben wird, müssen Sie auch `prioritization` in den Bezeichner aufnehmen.
+
+`prioritization` muss ein Array sein, das angibt, welcher Nutzer:innen zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. `prioritization` ist ein geordnetes Array, d.h. wenn mehr als ein Nutzer:innen aus einer Priorisierung übereinstimmt, wird die Zusammenführung nicht durchgeführt.
 
 Die zulässigen Werte für das Array sind:
 
@@ -130,6 +134,7 @@ Es kann jeweils nur eine der folgenden Optionen im Prioritätsfeld vorhanden sei
 Wenn Sie in dem Array `identified` angeben, würde das bedeuten, dass der Nutzer:in über eine `external_id` verfügen **muss**, um in den Canvas eingegeben zu werden. Wenn Sie möchten, dass Nutzer:innen mit E-Mail-Adressen die Nachricht eingeben können, unabhängig davon, ob sie identifiziert sind oder nicht, verwenden Sie stattdessen nur den Parameter `most_recently_updated` oder `least_recently_updated`.
 
 ## Beispiel für eine Anfrage
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
@@ -151,7 +156,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
       "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
-  "merge_behavior": "merge"
 }'
 ```
 
