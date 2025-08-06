@@ -13,7 +13,7 @@ description: "Este artículo contiene las notas de la versión de febrero de 201
 
 Por ejemplo, si envías varias categorías de campañas por correo electrónico, puedes ofrecer a tus clientes la opción de suscribirse o cancelar suscripción a esos grupos de forma masiva desde una sola página, utilizando nuestro [centro de preferencias de correo electrónico](#email-preference-center).
 
-Utiliza [las API REST de grupo de suscripción]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) para gestionar de forma programática los grupos de suscripción que hayas almacenado en el panel de Braze a la página **Grupo de suscripción**.
+Utiliza [las API REST de grupo de suscripción]({{site.baseurl}}/api/endpoints/subscription_groups/) para gestionar de forma programática los grupos de suscripción que hayas almacenado en el panel de Braze a la página **Grupo de suscripción**.
 
 ## Centro de preferencias de correo electrónico
 
