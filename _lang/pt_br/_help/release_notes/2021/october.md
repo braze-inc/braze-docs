@@ -26,7 +26,7 @@ A Braze notificará o contato da empresa e quem criou a extensão quando essa co
 
 ### Cartões de conteúdo
 
-Este guia de implementação opcional e avançado [cobre considerações de código do cartão de conteúdo]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/), três casos de uso personalizados criados por nossa equipe, trechos de código que o acompanham e orientações sobre o registro de impressões, cliques e dispensas.
+Este guia de implementação opcional e avançado [cobre considerações de código do cartão de conteúdo]({{site.baseurl}}/developer_guide/content_cards/), três casos de uso personalizados criados por nossa equipe, trechos de código que o acompanham e orientações sobre o registro de impressões, cliques e dispensas.
 
 ### Envio de mensagens no app
 
@@ -42,8 +42,8 @@ Este [guia de implementação opcional e avançado`FirebaseMessagingService` cob
 
 Construída na Adobe Experience Platform, a plataforma de dados do cliente em tempo real (CDP em tempo real) da Adobe ajuda as empresas a reunir dados conhecidos e anônimos de várias fontes empresariais para criar perfis de clientes que podem ser usados para fornecer experiências personalizadas aos clientes em todos os canais e dispositivos em tempo real.
 
-A integração do Braze e [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP permite que as marcas conectem e mapeiem seus dados do Adobe (atributos e segmentos personalizados) ao Braze em tempo real. As marcas podem então agir com base nesses dados, oferecendo experiências personalizadas e direcionadas a esses usuários. 
+A integração do Braze e [Adobe]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/adobe/) CDP permite que as marcas conectem e mapeiem seus dados do Adobe (atributos e segmentos personalizados) ao Braze em tempo real. As marcas podem então agir com base nesses dados, oferecendo experiências personalizadas e direcionadas a esses usuários. 
 
 ### Shopify - Comércio eletrônico
 
-A [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/) é uma empresa de comércio global líder que fornece ferramentas confiáveis para abrir, expandir, comercializar e gerenciar um negócio de varejo de qualquer tamanho. Juntos, a integração da Braze com a Shopify permite que as marcas conectem sua loja Shopify perfeitamente com a Braze para passar webhooks selecionados do Shopify para a Braze. Aproveite as estratégias cross-canal da Braze e o canva para redirecionar seus usuários com envio de mensagens de checkout abandonado e incentive os clientes a concluir sua compra, ou redirecione os usuários com base em suas compras anteriores.
+A [Shopify]({{site.baseurl}}/partners/shopify/) é uma empresa de comércio global líder que fornece ferramentas confiáveis para abrir, expandir, comercializar e gerenciar um negócio de varejo de qualquer tamanho. Juntos, a integração da Braze com a Shopify permite que as marcas conectem sua loja Shopify perfeitamente com a Braze para passar webhooks selecionados do Shopify para a Braze. Aproveite as estratégias cross-canal da Braze e o canva para redirecionar seus usuários com envio de mensagens de checkout abandonado e incentive os clientes a concluir sua compra, ou redirecione os usuários com base em suas compras anteriores.
