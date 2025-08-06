@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Jampp](https://www.jampp.com/) é uma plataforma de marketing de performance usada para aquisição e redirecionamento de clientes móveis. Jampp combina dados comportamentais com tecnologia preditiva e programática para gerar receita para os anunciantes, exibindo anúncios pessoais e relevantes que inspiram os consumidores a comprar pela primeira vez ou com mais frequência.
 
-
+_Essa integração é mantida pelo Jampp._
 
 ## Sobre a integração
 
