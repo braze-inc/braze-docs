@@ -876,7 +876,7 @@ Você pode filtrar os eventos do Shopify com todos os [filtros personalizados ex
 
 ![Página de detalhes do segmento para um segmento Shopify_Test com o filtro para o evento personalizado "shopify_checkouts_abandon" destacado.][12]{: style="max-width:80%;"}
 
-
+Além disso, você pode usar o filtro de amplitude de compra no Braze para criar segmentos de usuários com base em:
 - Primeira/última compra
 - Primeira/última compra de um app específico
 - Produtos que eles compraram anteriormente nos últimos 30 dias
@@ -896,7 +896,7 @@ Com os eventos personalizados do Shopify no Braze, você pode disparar canvas ou
 
 ![Canva baseada em ação que entra nos usuários que realizam o evento personalizado "shopify_checkouts_abandon".][5]
 
- A seguir, um exemplo de como disparar uma campanha usando um produto específico do evento personalizado `shopify_created_order`. Use `list_items[0].product_id` para indexar sua lista de itens e acessar o ID do produto.
+Com o suporte a objetos aninhados para propriedades de eventos personalizados, os clientes podem disparar campanhas e Canvas usando uma propriedade de evento aninhada. A seguir, um exemplo de como disparar uma campanha usando um produto específico do evento personalizado `shopify_created_order`. Use `list_items[0].product_id` para indexar sua lista de itens e acessar o ID do produto.
 
 ![Campanha baseada em ação que envia aos usuários que realizam o evento personalizado "shopify_created_order" em que a propriedade aninhada "product_id" é igual a um número específico.][26]
 
