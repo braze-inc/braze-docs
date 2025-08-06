@@ -12,7 +12,7 @@ search_tag: Knak
 
 > [Knak][1] é a primeira plataforma de criação de campanhas construída para equipes de marketing empresarial usarem internamente. A plataforma é intuitiva e fácil de usar e permite que qualquer pessoa crie e-mails e landing pages da marca em minutos, sem precisar de código ou ajuda externa.
 
-
+_Esta integração é mantida pela Knak._
 
 ## Sobre a integração
 
@@ -23,8 +23,8 @@ A integração Braze e Knak permite que você crie e-mails totalmente responsivo
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Conta da Knak | É necessário ter uma conta Knak para aproveitar esta parceria. |
-| Chave da API REST do Braze | Uma chave da API REST da Braze com permissões completas de **Templates**. <br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][2]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Chave da API REST do Braze | Uma chave da API REST da Braze com permissões completas de **modelos**. <br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][2] Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
