@@ -49,11 +49,11 @@ Sie können "Big Picture"-Benachrichtigungen senden, indem Sie den Schlüssel `a
 | Parameter | Details |
 | --------- | ------- |
 | `priority` | Dieser Parameter akzeptiert Werte von `-2` bis `2`, wobei `-2` für die Priorität "MIN" und `2` für "MAX" steht. `0` ist der "DEFAULT"-Wert. <br> <br> Alle Werte, die außerhalb dieses Bereichs gesendet werden, werden standardmäßig auf 0 gesetzt. Weitere Informationen darüber, welche Prioritätsstufe Sie verwenden sollten, finden Sie unter [Android Benachrichtigungspriorität]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
-| `android_priority` | Dieser Parameter akzeptiert entweder die Werte "normal" oder "hoch", um die Priorität des FCM Senders festzulegen. Standardmäßig werden Benachrichtigungsnachrichten mit hoher Priorität und Nachrichten mit normaler Priorität gesendet.<br><br> Weitere Informationen darüber, wie sich unterschiedliche Werte auf die Zustellung auswirken, finden Sie unter [Android Nachrichtenpriorität](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
+| `android_priority` | Dieser Parameter akzeptiert entweder die Werte `normal` oder `high`, um die Priorität des FCM Senders anzugeben. Standardmäßig werden Nachrichten mit der auf der Seite [Push-Einstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/#default-fcm-priority-for-android-campaigns) konfigurierten Standard-FCM-Priorität gesendet.<br><br> Weitere Informationen darüber, wie sich unterschiedliche Werte auf die Zustellung auswirken, finden Sie unter [Android Nachrichtenpriorität](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
 | `collapse_key` | FCM kann gleichzeitig nur bis zu vier Klappschlüssel pro Gerät speichern. Wenn Sie mehr als vier Collapse Keys verwenden, übernimmt FCM keine Garantie dafür, welche davon erhalten bleiben. Braze verwendet standardmäßig einen dieser Schlüssel für Kampagnen. Stellen Sie daher sicher, dass Sie nur bis zu drei zusätzliche Klappschlüssel für Android-Nachrichten angeben. |
 | `push_icon_image_url` | Der Wert für den Parameter "Großes Symbol" sollte eine URL sein, die auf den Ort verweist, an dem Ihr Bild gehostet wird. <br> <br> Die Bilder müssen auf ein Seitenverhältnis von 1:1 beschnitten werden und sollten mindestens 40x40 groß sein. |
-| `notification_channel` | Wenn dies nicht angegeben wird, versucht Braze, die Nutzdaten der Benachrichtigung mit der [Fallback-Kanal-ID des Dashboards][45] zu senden. Weitere Informationen finden Sie unter [Benachrichtigungskanäle][44] und in den Schritten zur [Definition von Benachrichtigungskanälen][43] während der Integration. |
-| `send_to_sync` | Weitere Informationen zu `send_to_sync` Nachrichten finden Sie unter [Stille Android-Benachrichtigungen][28]. |
+| `notification_channel` | Wenn dies nicht angegeben wird, versucht Braze, die Nutzdaten der Benachrichtigung mit der [Fallback-Kanal-ID des Dashboards]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) zu senden. Weitere Informationen finden Sie unter [Benachrichtigungskanäle]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/) und in den Schritten zur [Definition von Benachrichtigungskanälen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels) während der Integration. |
+| `send_to_sync` | Weitere Informationen zu `send_to_sync` Nachrichten finden Sie unter [Stille Android-Benachrichtigungen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Android Push-Action-Button Objekt
@@ -71,7 +71,7 @@ Sie können "Big Picture"-Benachrichtigungen senden, indem Sie den Schlüssel `a
 
 {% sdk_min_versions android:15.0.0 %}
 
-Die Konzepte in dieser Nachricht entsprechen denen in der [Android People und Conversations][46] Push Dokumentation.
+Die Konzepte in dieser Nachricht entsprechen denen in der [Android People und Conversations](https://developer.android.com/guide/topics/ui/conversations) Push Dokumentation.
 
 ```json
 {
@@ -101,8 +101,3 @@ Die Konzepte in dieser Nachricht entsprechen denen in der [Android People und Co
 }
 ```
 
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications
-[44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
-[43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
-[45]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel
-[46]: https://developer.android.com/guide/topics/ui/conversations
