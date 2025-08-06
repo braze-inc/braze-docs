@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Remerge](https://www.remerge.io/) se ha creado específicamente para la reorientación de aplicaciones a gran escala, y te proporciona herramientas para segmentar eficazmente las audiencias de las aplicaciones y reorientar a los usuarios.
 
-
+_Esta integración está mantenida por Remerge._
 
 ## Sobre la integración
 
