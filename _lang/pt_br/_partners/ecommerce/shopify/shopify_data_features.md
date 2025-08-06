@@ -1,23 +1,23 @@
 ---
-nav_title: ""
-article_title: ""
-description: ""
+nav_title: Recursos de Dados do Shopify
+article_title: "Recursos de Dados do Shopify"
+description: "Este artigo de referência cobre os recursos de dados do Shopify."
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
 page_order: 3
 ---
 
-# 
+# Recursos de dados do Shopify
 
-> 
+> Este artigo fornece uma visão geral dos nossos recursos do Shopify, incluindo quais dados do Shopify são rastreados e exemplos de cargas úteis, preenchimento histórico e sincronizações de produtos.
 
-## 
+## Eventos rastreados do Shopify
 
-
-
-
-
+{% tabs %}
+{% tab Exemplo de carga útil %}
+{% subtabs global %}
+{% subtab Product viewed %}
 ```json
 {
     "name": "ecommerce.product_viewed",
@@ -40,8 +40,8 @@ page_order: 3
     }
 }
 ```
-
-
+{% endsubtab %}
+{% subtab Cart updated %}
 ```json
 {
     "name": "ecommerce.cart_updated",
@@ -68,8 +68,8 @@ page_order: 3
     }
 }
 ```
-
-
+{% endsubtab %}
+{% subtab Checkout started %}
 ```json
 {
     "name": "ecommerce.checkout_started",
@@ -98,9 +98,9 @@ page_order: 3
     }
 }
 ```
-
-
-
+{% endsubtab %}
+{% subtab Order placed %}
+{% raw %}
 ```json
 {
     "name": "ecommerce.order_placed",
@@ -141,9 +141,9 @@ page_order: 3
     }
 }
 ```
-
-
-
+{% endraw %}
+{% endsubtab %}
+{% subtab Fulfilled order %}
 ```json
 {
  "name": "shopify_fulfilled_order",
@@ -217,8 +217,8 @@ page_order: 3
  "braze_id": "123abc123abc"
 }
 ```
-
-
+{% endsubtab %}
+{% subtab Partially fulfilled order %}
 ```json
 {
  "name": "shopify_partially_fulfilled_order",
@@ -291,8 +291,8 @@ page_order: 3
  "braze_id": "abc123abc123"
 }
 ```
-
-
+{% endsubtab %}
+{% subtab Paid order %}
 ```json
 {
  "name": "shopify_paid_order",
@@ -317,8 +317,8 @@ page_order: 3
  }
 }
 ```
-
-
+{% endsubtab %}
+{% subtab Order cancelled %}
 ```json
 {
     "name": "ecommerce.order_cancelled",
@@ -354,8 +354,8 @@ page_order: 3
     }
 }
 ```
-
-
+{% endsubtab %}
+{% subtab Order refunded %}
 ```json
 {
     "name": "ecommerce.order_refunded",
@@ -383,8 +383,8 @@ page_order: 3
     }
 } 
 ```
-
-
+{% endsubtab %}
+{% subtab Account login %}
 ```json
 {
 	name: "shopify_account_login",
@@ -393,365 +393,365 @@ page_order: 3
   }
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Eventos do Shopify %}
+{% subtabs global %}
+{% subtab Product viewed %}
+**Evento**: `ecommerce.product_viewed`<br>
+**Tipo**: Evento recomendado<br>
+**Acionado**: Quando um cliente visualiza uma página de produto<br>
+**Caso de Uso**: Abandono de navegação
 
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+\|------------------|-----------------------------------------------------|
+| `product_id`       | `{{event_properties.${product_id}}}`                |
+| `product_name `    | `{{event_properties.${product_name}}}`              |
+| `variant_id`       | `{{event_properties.${variant_id}}}`                |
+| `image_url `       | `{{event_properties.${image_url}}}`                 |
+| `product_url`      | `<your-store.myshopify.com>{{event_properties.${product_url}}}` <br><br>Adicione o domínio do seu site Shopify antes da URL. |
+| `price`            | `{{event_properties.${price}}}`                     |
+| `currency`         | `{{event_properties.${currency}}}`                  |
+| `source`           | `{{event_properties.${source}}}`                    |
+| `sku`              | `{{event_properties.${metadata}[0].sku}}`          |
+| `type`             | `event_properties.${type}`          |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
 
+{% endsubtab %}
+{% subtab Cart updated %}
+**Evento**: `ecommerce.cart_updated`<br>
+**Tipo**: Evento recomendado<br>
+**Acionado**: Quando um cliente adiciona, remove ou atualiza seu carrinho de compras<br>
+**Caso de Uso**: Abandono de carrinho
 
+Para Canvases de Carrinho Abandonado, você primeiro precisa adicionar a tag Liquid do carrinho de compras inicial para obter o contexto do carrinho de compras em sua mensagem. 
 
-
-
-<br>
- <br>
- <br>
- 
-
-
-
-
-
-
-
-
-
- <br><br>
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br>
- 
-
- 
-
-
+{% raw %}
 ```liquid
 {% shopping_cart {{context.${cart_id}}} %}
 ```
+{% endraw %}
 
+Então você pode adicionar as seguintes tags Liquid do carrinho de compras em sua mensagem.
 
+{% raw %}
+| Variável         | Modelagem Liquid                                   |
+\|------------------|-----------------------------------------------------|
+| `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
+| `currency`         | `{{ shopping_cart.currency }}`                      |
+| `total_value`      | `{{ shopping_cart.total_value }}`                   |
+| `product_id`       | `{{ shopping_cart.products[0].product_id }}`       |
+| `product_name`     | `{{ shopping_cart.products[0].product_name }}`     |
+| `variant_id`       | `{{ shopping_cart.products[0].variant_id }}`       |
+| `image_url`        | `{{ shopping_cart.products[0].image_url }}`        |
+| `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
+| `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
+| `price`            | `{{ shopping_cart.products[0].price }}`            |
+| `sku`              | `{{ shopping_cart.products[0].metadata[0].sku }}`  |
+| `source`           | `{{ shopping_cart.source }}`                        |
+| `metadata (value)` | `{{ shopping_cart.metadata[0].<add_value_here> }}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
 
+{% alert tip %}
+Para saber mais sobre como construir um loop Liquid `for` para adicionar dinamicamente todos os produtos ao seu e-mail, consulte [Personalização de produtos de carrinho abandonado para e-mails]({{site.baseurl}}/ecommerce_use_cases/#abandoned-cart).
+{% endalert %}
 
+{% endsubtab %}
+{% subtab Checkout started %}
+**Evento**: `ecommerce.checkout_started`<br>
+**Tipo**: Evento recomendado<br>
+**Acionado**: Quando um cliente adiciona, remove ou atualiza seu carrinho de compras<br>
+**Caso de Uso**: Abandono de checkout
 
+Para Canvases de Checkout Abandonado, você primeiro precisa usar a seguinte tag Liquid:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br>
- 
-
-
-
-
+{% raw %}
 ```liquid
 {% shopping_cart {{context.${cart_id}}} :abort_if_not_abandoned false %}
 {{context.${cart_id}}}
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-<br>
- <br>
- <br>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br> 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br>  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br> 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <br>
- <br>
- 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-## 
-
-
-
-
+{% endraw %}
+
+Então você pode adicionar as seguintes tags Liquid na sua mensagem para referenciar os produtos dentro do seu carrinho no momento do checkout.
+
+{% raw %}
+| Variável         | Modelagem Liquid                                   |
+\|------------------|-----------------------------------------------------|
+| `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
+| `currency`         | `{{ shopping_cart.currency }}`                      |
+| `total_value`      | `{{ shopping_cart.total_value }}`                   |
+| `product_id`       | `{{ shopping_cart.products[0].product_id }}`       |
+| `product_name`     | `{{ shopping_cart.products[0].product_name }}`     |
+| `variant_id`       | `{{ shopping_cart.products[0].variant_id }}`       |
+| `image_url`        | `{{ shopping_cart.products[0].image_url }}`        |
+| `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
+| `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
+| `price`            | `{{ shopping_cart.products[0].price }}`            |
+| `sku`              | `{{ shopping_cart.products[0].metadata.sku }}`     |
+| `source`           | `{{ shopping_cart.source }}`                        |
+| `checkout_url`     | `{{ shopping_cart.metadata[0].checkout_url }}`     |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% endsubtab %}
+{% subtab Order placed %}
+**Evento**: `ecommerce.order_placed`<br>
+**Tipo**: Evento recomendado<br>
+**Acionado**: Quando um usuário completa com sucesso o processo de checkout e faz um pedido<br>
+**Caso de Uso**: Confirmação de pedido, redirecionamento pós-compra, upsells ou cross-sells 
+
+{% raw %}
+| Variável                | Modelagem Liquid                                   |
+\|-------------------------|-----------------------------------------------------|
+| cart_id                 | `{{event_properties.${cart_id}}}`                   |
+| moeda                   | `{{event_properties.${currency}}}`                  |
+| descontos               | `{{event_properties.${discounts}}}`                 |
+| order_id                | `{{event_properties.${order_id}}}`                  |
+| product_id              | `{{event_properties.${products}[0].product_id}}`   |
+| product_name            | `{{event_properties.${products}[0].product_name}}` |
+| variant_id              | `{{event_properties.${products}[0].variant_id}}`   |
+| quantidade              | `{{event_properties.${products}[0].quantity}}`     |
+| sku                     | `{{event_properties.${products}[0].metadata.sku}}` |
+| total_discounts         | `{{event_properties.${total_discounts}}}`           |
+| order_status_url        | `{{event_properties.${metadata}.order_status_url}}` |
+| order_number            | `{{event_properties.${metadata}.order_number}}`     |
+| tags                    | `{{event_properties.${metadata}.tags}}`             |
+| referring_site          | `{{event_properties.${metadata}.referring_site}}`   |
+| payment_gateway_names    | `{{event_properties.${metadata}.payment_gateway_names}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% alert tip %}
+O webhook de finalização de checkout do Shopify não contém URLs de produtos ou URLs de imagens. Como resultado, você precisa usar a personalização de Catálogos Liquid conforme mencionado em [Personalização de produtos de carrinho abandonado para e-mails]({{site.baseurl}}/ecommerce_use_cases/#order-confirmation-and-feedback-survey).
+{% endalert %}
+
+{% endsubtab %}
+{% subtab Fulfilled order %}
+**Evento**: `shopify_fulfilled_order`<br>
+**Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**Acionado**: Quando o pedido de um usuário é atendido e está pronto para envio<br>
+**Caso de Uso**: (Transacional) Atualização de atendimento 
+
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+| ID do pedido | `{{event_properties.${order_id}}}` |
+| Preço total | `{{event_properties.${total_price}}}` |
+| Descontos totais | `{{event_properties.${total_discounts}}}` |
+| Status confirmado | `{{event_properties.${confirmed}}}` |
+| URL de status do pedido | `{{event_properties.${order_status_url}}}` |
+| Número do pedido | `{{event_properties.${order_number}}}` |
+| Cancelamento de registro de data e hora | `{{event_properties.${cancelled_at}}}` |
+Fechado | Carimbo de data/hora | `{{event_properties.${closed_at}}}` |
+| ID do item | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantidade do item | `{{event_properties.${line_items}[0].quantity}}` |
+| SKU do item | `{{event_properties.${line_items}[0].sku}}` |
+| Título do item | `{{event_properties.${line_items}[0].title}}` |
+| Fornecedor do item | `{{event_properties.${line_items}[0].vendor}}` |
+| Nome do item | `{{event_properties.${line_items}[0].name}}` |
+| Propriedades do item | `{{event_properties.${line_items}[0].properties}}` |
+| Preço do item | `{{event_properties.${line_items}[0].price}}` |
+| Título da remessa | `{{event_properties.${shipping}[0].title}}` |
+| Preço de remessa | `{{event_properties.${shipping}[0].price}}` |
+| Status de cumprimento | `{{event_properties.${fulfillment_status}}}` |
+| Status do envio do processamento | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Status | `{{event_properties.${fulfillments}[0].status}}` |
+| Empresa de rastreamento de cumprimento | `{{event_properties.${fulfillments}[0].Fulfillment tracking_company}}` |
+| Número de rastreamento do cumprimento | `{{event_properties.${fulfillments}[0].Fulfillment tracking_number}}` |
+| Números de rastreamento de cumprimento | `{{event_properties.${fulfillments}[0].Fulfillment tracking_numbers}}` |
+| URL de rastreamento do processamento | `{{event_properties.${fulfillments}[0].Fulfillment tracking_url}}` |
+| URLs de rastreamento do processamento | `{{event_properties.${fulfillments}[0].Fulfillment tracking_urls}}` |
+| Status de cumprimento | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Nome do processamento | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Preço do processamento | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| ID do produto de atendimento | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Quantidade do processamento | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Envio do processamento | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| SKU do processamento | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Título do processamento | `{{event_properties.${fulfillments}[0].line_items[0].title}}`
+| Fornecedor do processamento | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
+| Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% endsubtab %}
+{% subtab Partially fulfilled order %}
+**Evento**: `shopify_partially_fulfilled_order`<br>
+**Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**Acionado**: Quando parte do pedido de um usuário é atendida e está pronta para envio<br> 
+**Caso de Uso**: (Transacional) Atualização de atendimento 
+
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+| ID do pedido | `{{event_properties.${order_id}}}` |
+| Preço total | `{{event_properties.${total_price}}}` |
+| Descontos totais | `{{event_properties.${total_discounts}}}` |
+| Status confirmado | `{{event_properties.${confirmed}}}` |
+| URL de status do pedido | `{{event_properties.${order_status_url}}}` |
+| Número do pedido | `{{event_properties.${order_number}}}` |
+| Cancelamento de registro de data e hora | `{{event_properties.${cancelled_at}}}` |
+Fechado | Carimbo de data/hora | `{{event_properties.${closed_at}}}` |
+| ID do item | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantidade do item | `{{event_properties.${line_items}[0].quantity}}` |
+| SKU do item | `{{event_properties.${line_items}[0].sku}}` |
+| Título do item | `{{event_properties.${line_items}[0].title}}` |
+| Fornecedor do item | `{{event_properties.${line_items}[0].vendor}}` |
+| Nome do item | `{{event_properties.${line_items}[0].name}}` |
+| Propriedades do item | `{{event_properties.${line_items}[0].properties}}` |
+| Preço do item | `{{event_properties.${line_items}[0].price}}` |
+| Título da remessa | `{{event_properties.${shipping}[0].title}}` |
+| Preço de remessa | `{{event_properties.${shipping}[0].price}}` |
+| Status de cumprimento | `{{event_properties.${fulfillment_status}}}` |
+| Status do envio do processamento | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Status de cumprimento | `{{event_properties.${fulfillments}[0].status}}` |
+| Empresa de rastreamento de cumprimento | `{{event_properties.${fulfillments}[0].tracking_company}}` |
+| Número de rastreamento do cumprimento | `{{event_properties.${fulfillments}[0].tracking_number}}` |
+| Números de rastreamento de cumprimento | `{{event_properties.${fulfillments}[0].tracking_numbers}}` |
+| URL de rastreamento do processamento | `{{event_properties.${fulfillments}[0].tracking_url}}` |
+| URLs de rastreamento do processamento | `{{event_properties.${fulfillments}[0].tracking_urls}}` |
+| Status de cumprimento | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Nome do processamento | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Preço do processamento | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| ID do produto de atendimento | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Quantidade do processamento | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Envio do processamento | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| SKU do processamento | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Título do processamento | `{{event_properties.${fulfillments}[0].line_items[0].title}}`
+| Fornecedor do processamento | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
+| Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% endsubtab %}
+{% subtab Paid order %}
+**Evento**: `shopify_paid_order`<br>
+**Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**Acionado**: Quando o pedido de um usuário é marcado como pago dentro do Shopify<br>  
+**Caso de Uso**: (Transacional) Confirmação de pagamento
+
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+| ID do pedido | `{{event_properties.${order_id}}}` |
+| Status confirmado | `{{event_properties.${confirmed}}}` |
+| URL de status do pedido | `{{event_properties.${order_status_url}}}` |
+| Número do pedido | `{{event_properties.${order_number}}}` |
+| Cancelamento de registro de data e hora | `{{event_properties.${cancelled_at}}}` |
+| Descontos totais | `{{event_properties.${total_discounts}}}` |
+| Preço total | `{{event_properties.${total_price}}}` |
+| Tags | `{{event_properties.${tags}}}` |
+| Códigos de desconto | `{{event_properties.${discount_codes}}}` |
+| ID do item | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantidade do item | `{{event_properties.${line_items}[0].quantity}}` |
+| SKU do item | `{{event_properties.${line_items}[0].sku}}` |
+| Título do item | `{{event_properties.${line_items}[0].title}}` |
+| Fornecedor do item | `{{event_properties.${line_items}[0].vendor}}` |
+| Propriedades do item | `{{event_properties.${line_items}[0].properties}}` |
+| Preço do item | `{{event_properties.${line_items}[0].price}}` |
+| Título da remessa | `{{event_properties.${shipping}[0].title}}` |
+| Preço de remessa | `{{event_properties.${shipping}[0].price}}` |
+| ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
+| Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% endsubtab %}
+{% subtab Order cancelled %}
+**Evento**: `shopify_cancelled_order`<br>
+**Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**Acionado**: Quando o pedido de um usuário é cancelado<br> 
+**Caso de Uso**: (Transacional) Confirmação de cancelamento de pedido
+
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+| ID do pedido | `{{event_properties.${order_id}}}` |
+| Preço total | `{{event_properties.${total_price}}}` |
+| Descontos totais | `{{event_properties.${total_discounts}}}` |
+| Confirmado | `{{event_properties.${confirmed}}}` |
+| URL de status do pedido | `{{event_properties.${order_status_url}}}` |
+| Número do pedido | `{{event_properties.${order_number}}}` |
+| Cancelamento de registro de data e hora | `{{event_properties.${cancelled_at}}}` |
+| Tags | `{{event_properties.${tags}}}` |
+| Códigos de desconto | `{{event_properties.${discount_codes}}}` |
+| Status de cumprimento | `{{event_properties.${fulfillment_status}}}` |
+| Cumprimentos | `{{event_properties.${fulfillments}}}` |
+| ID do item | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantidade do item | `{{event_properties.${line_items}[0].quantity}}` |
+| SKU do item | `{{event_properties.${line_items}[0].sku}}` |
+| Título do item | `{{event_properties.${line_items}[0].title}}` |
+| Fornecedor do item | `{{event_properties.${line_items}[0].vendor}}` |
+| Nome do item | `{{event_properties.${line_items}[0].name}}` |
+| Propriedades do item | `{{event_properties.${line_items}[0].properties}}` |
+| Status de cumprimento | `{{event_properties.${line_items}[0].fulfillment_status}}` |
+| Título da remessa | `{{event_properties.${shipping}[0].title}}` |
+| Preço de remessa | `{{event_properties.${shipping}[0].price}}` |
+| ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
+| Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+{% endsubtab %}
+{% subtab Order refunded %}
+**Evento**: `shopify_order_refunded`<br>
+**Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**Acionado**: Quando o pedido de um usuário é reembolsado<br>
+**Caso de Uso**: (Transacional) Confirmação de reembolso
+
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+| ID do pedido | `{{event_properties.${order_id}}}` |
+| Nota de pedido | `{event_properties.${note}}}` |
+| ID do item | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantidade do item | `{{event_properties.${line_items}[0].quantity}}` |
+| SKU do item | `{{event_properties.${line_items}[0].sku}}` |
+| Título do item | `{{event_properties.${line_items}[0].title}}` |
+| Fornecedor do item | `{{event_properties.${line_items}[0].vendor}}` |
+| Nome do item | `{{event_properties.${line_items}[0].name}}` |
+| Propriedades do item | `{{event_properties.${line_items}[0].properties}}` |
+| Preço do item | `{{event_properties.${line_items}[0].price}}` |
+| ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
+| Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% endsubtab %}
+{% subtab Account login %}
+
+**Evento**: `shopify_account_login`<br>
+**Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**Acionado**: Quando um usuário faz login em sua conta<br>
+**Caso de Uso**: Série de boas-vindas
+
+{% raw %}
+| Variável | Modelagem Liquid |
+| --- | --- |
+| `source` | {{event_properties.${source}}} |
+{: .reset-br-td-1 .reset-br-td-2 role="presentation" }
+{% endraw %}
+
+{% alert note %}
+A integração do Shopify atualmente não suporta a população do evento de [compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) do Braze. Como resultado, filtros de compra, tags Liquid, gatilhos baseados em ações e análise de dados devem usar o evento ecommerce.pedido_realizado.
+{% endalert %}
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+## Atributos personalizados compatíveis com a Shopify
+{% tabs local %}
+{% tab Exemplo de carga útil %}
+{% subtabs %}
+{% subtab Shopify Tags %}
 ```json
 {
   "attributes": [
@@ -767,69 +767,69 @@ page_order: 3
   ]
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Atributos personalizados da Shopify %}
+Nome do atributo | Descrição | Nome do atributo | Descrição
+| --- | --- |
+| `shopify_total_spent` O valor total que o cliente gastou no histórico de pedidos. |
+| `shopify_order_count` | O número de pedidos associados a esse cliente. Os pedidos de teste e arquivados não são considerados. |
+| `shopify_last_order_id` | O ID do último pedido do cliente. |
+| `shopify_last_order_name` | O nome do último pedido do cliente. Isso está diretamente relacionado ao campo `name` no recurso do pedido. |
+| `shopify_zipcode` | O código postal do cliente do endereço padrão. |
+| `shopify_province` A província do cliente a partir de seu endereço padrão. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+### Personalização Liquid
 
+Para adicionar a personalização Liquid aos seus atributos personalizados da Shopify, selecione **\+ Personalização**. Em seguida, selecione **Atributos personalizados** como seu tipo de personalização.
 
+![A seção "Add Personalization" (Adicionar personalização) com o menu suspenso "Attribute" (Atribuição) estendido.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 
+Depois de selecionar seu atributo personalizado, insira um valor padrão e cole o snippet do Liquid na sua mensagem.
 
+![Colar um trecho do Liquid em uma mensagem.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+{% endtab %}
+{% endtabs %}
 
+## Atribuições padrão compatíveis com o Shopify
 
- 
+- E-mail
+- Nome
+- Sobrenome
+- Telefone
+- Cidade
+- País
 
- 
+{% alert note %}
+A Braze só atualizará os atributos personalizados compatíveis da Shopify e os atributos padrão da Braze se houver uma diferença nos dados do perfil do usuário existente. Por exemplo, se os dados de entrada do Shopify contiverem um primeiro nome de Bob e Bob já existir como um primeiro nome no perfil de usuário do Braze, o Braze não disparará uma atualização e não será cobrado um ponto de dados.
+{% endalert %}
 
+## coleta de dados do SDK 
 
+Para saber mais sobre quais dados são coletados pelos SDKs do Braze, veja [coleta de dados do SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). 
 
+## Provisionamento de dados históricos
 
-### 
+Durante a integração da sua loja Shopify, você pode iniciar uma sincronização inicial de dados através de preenchimento histórico para engajar imediatamente seus clientes. Como parte desse preenchimento, o Braze realizará uma sincronização inicial de todos os clientes e pedidos realizados nos últimos 90 dias antes da conexão da sua integração Shopify. Quando o Braze importa seus clientes do Shopify, nós iremos atribuir o tipo `external_id` que você escolheu nas configurações de configuração.
 
- 
+{% alert note %}
+Se você planeja integrar com um ID externo personalizado (para a [integração padrão]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) ou a [integração personalizada]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), será necessário adicionar seu ID externo personalizado como um metafield de cliente Shopify a todos os perfis de clientes Shopify existentes e, em seguida, realizar o preenchimento histórico.
+{% endalert %}
 
+### Configurando o preenchimento histórico do Shopify
 
+1. Ative o preenchimento histórico na etapa **Rastrear dados do Shopify**.
 
+![A etapa "Rastrear dados do Shopify" da integração Shopify mostrando o preenchimento histórico selecionado.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
+{: start="2"}
 
+2. Após concluir a configuração da sua integração, o Braze começará a sincronização inicial de dados. Você pode monitorar o progresso na aba **Dados do Shopify** das configurações da sua integração. 
 
+![A página de Configurações da Integração Shopify com um indicador mostrando que os eventos estão sincronizando ativamente.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
+### Dados sincronizados 
 
-
-## 
-
-- 
-- 
-- 
-- 
-- 
-- 
-
-
- 
-
-
-##  
-
- 
-
-## 
-
-  
-
-
-
-
-
-### 
-
-1. 
-
-
-
-
-
-2.   
-
-
-
-###  
-
- 
+Para a sincronização inicial de dados, o Braze importará clientes e pedidos realizados nos últimos 90 dias antes da conexão da sua integração Shopify. Quando o Braze importa seus clientes do Shopify, ele irá atribuir o tipo `external_id` que você escolheu nas configurações de configuração.
