@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Adjust](https://www.adjust.com/) é uma empresa de atribuição e análise de dados móveis que combina a atribuição de fontes de publicidade com análises avançadas para obter um quadro abrangente de business intelligence.
 
-
+_Essa integração é mantida pela Adjust._
 
 ## Sobre a integração
 
@@ -33,7 +33,7 @@ A integração do Braze e da Adjust permite importar dados de atribuição de in
 
 #### Android
 
-Se você tiver um app Android, deve passar um ID de dispositivo Braze único para o Adjust.  
+Se você tiver um app Android, deve passar um ID de dispositivo Braze único para o Adjust. Esse ID pode ser definido no método `addGlobalPartnerParameter()` do SDK da Adjust. O snippet de código a seguir deve ser incluído antes da inicialização do SDK em `Adjust.initSdk.`
 
 ```
 Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
@@ -56,7 +56,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 Se você tiver um app para iOS, seu IDFV será coletado pelo Adjust e enviado ao Braze. Esse ID será então mapeado para um ID de dispositivo exclusivo no Braze.
 
- Caso contrário, o IDFV será usado como um identificador de fallback para mapear os usuários.
+O Braze ainda armazenará os valores de IDFA dos usuários que fizeram a aceitação se você estiver coletando o IDFA com o Braze, conforme descrito em nosso [Guia de atualização do iOS]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/). Caso contrário, o IDFV será usado como um identificador de fallback para mapear os usuários.
 
 {% endtab %}
 {% tab Swift %}
@@ -74,7 +74,7 @@ Se estiver planejando enviar eventos pós-instalação da Adjust para a Braze, s
 
 Na Braze, navegue até **Integrações** > **Parceiros de tecnologia** e selecione **Adjust**. 
 
-Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Adjust.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia Adjust (Ajustar). 
+Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Adjust.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia Adjust (Ajustar). Nessa caixa, você verá a chave de importação de dados e o ponto de extremidade REST.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: configurar a Braze na Adjust
 
