@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [IAM Studio](https://www.inappmessage.com) es una plataforma de personalización de mensajes sin código que permite crear experiencias personalizadas y enriquecidas dentro de la aplicación y ofrecerlas a través de Braze.
 
-
+_Esta integración está mantenida por IAM Studio.\*s._
 
 ## Sobre la integración
 
@@ -60,7 +60,7 @@ A continuación, crea tu mensaje personalizado en la aplicación añadiendo fuen
 
 {% tabs local %}
 {% tab Fuentes %}
-![La interfaz de usuario de IAM Studio muestra las opciones para añadir Liquid. 
+![La interfaz de usuario de IAM Studio muestra las opciones para añadir Liquid. Estas opciones incluyen la realización de frases personalizadas.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Líquido %}
 ![La interfaz de usuario de IAM Studio muestra las opciones para personalizar el registro de eventos/atributos. Estas opciones incluyen que el registro de comportamiento del usuario.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
