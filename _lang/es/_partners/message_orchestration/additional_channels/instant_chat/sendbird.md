@@ -12,12 +12,12 @@ search_tag: Partner
 
 > [Sendbird][4] Notifications ofrece a los responsables de marketing y de producto un nuevo y potente canal para comunicarse con sus clientes in-app con mensajes unidireccionales persistentes e interactivos. Estos mensajes pueden utilizarse para cualquier tipo de comunicación y se emplean sobre todo con fines promocionales y transaccionales.
 
-
+_Esta integración está mantenida por Sendbird._
 
 ## Sobre la integración
 
 La integración de Braze y Sendbird permite a los usuarios de Braze:
-* 
+* Utiliza las funciones de segmentación y desencadenamiento de Braze para iniciar notificaciones personalizadas dentro de la aplicación.
 * Cree notificaciones personalizadas dentro de la aplicación en la plataforma Sendbird Notifications, que luego se entregan dentro del entorno de la aplicación, mejorando el compromiso del usuario.
 
 Al aprovechar las capacidades conjuntas de Braze y Sendbird Notifications, las empresas pueden elevar el compromiso de los clientes y aumentar las tasas de conversión a través de estrategias eficaces de notificación dentro de la aplicación.
