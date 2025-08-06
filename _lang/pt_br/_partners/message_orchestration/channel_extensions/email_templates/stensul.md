@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Stensul](https://stensul.com/) permite que os profissionais de marketing por e-mail criem facilmente e-mails responsivos para dispositivos móveis com alinhamento de marca na Stensul antes de enviá-los à Braze, em tempo real, para a criação de campanhas.
 
-
+_Esta integração é mantida pela Stensul._
 
 ## Sobre a integração
 
@@ -23,7 +23,7 @@ A integração da Braze com a Stensul permite exportar seus e-mails da Stensul f
 | Requisito | Descrição |
 | ------------| ----------- |
 | Conta da Stensul | É necessário ter uma conta da Stensul para usar a parceria. |
-| chave da API REST Braze | Uma chave da API REST da Braze com permissões completas de **Templates**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
+| chave da API REST Braze | Uma chave da API REST da Braze com permissões completas de **modelos**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | Instância do cluster | Sua [instância de cluster]({{site.baseurl}}/api/basics/#endpoints) da Braze se alinha com o dashboard e o endpoint REST da Braze.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
