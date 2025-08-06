@@ -19,7 +19,7 @@ As campanhas de mensagens agora também usam o "horário de silêncio" em vez de
 
 ## Ajustar clientes
 
-Os clientes do Braze que usam [o Adjust]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/) agora podem ver sua chave de API do Braze e o URL da instância do Braze, que serão usados na plataforma Adjust para integração.
+Os clientes do Braze que usam [o Adjust]({{site.baseurl}}/partners/message_orchestration/attribution/adjust/) agora podem ver sua chave de API do Braze e o URL da instância do Braze, que serão usados na plataforma Adjust para integração.
 
 ## Não está no filtro de segmento
 
@@ -27,7 +27,7 @@ Os clientes agora podem criar um segmento a partir de usuários que [não]({{sit
 
 ## Exportações CSV do destinatário da tela
 
-Os clientes agora podem [exportar dados]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) de usuários que entraram em um Canva. O CSV gerado será semelhante ao CSV da campanha.
+Os clientes agora podem [exportar dados]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/) de usuários que entraram em um Canva. O CSV gerado será semelhante ao CSV da campanha.
 
 ## Filtro de segmento do iOS 12 autorizado provisoriamente
 
