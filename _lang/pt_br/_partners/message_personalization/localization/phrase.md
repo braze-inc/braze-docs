@@ -12,7 +12,7 @@ search_tag: Partner
 
 > O [Phrase](https://phrase.com/) é um software baseado em nuvem para gerenciamento de localização. O Phrase ativa fluxos de trabalho de tradução automatizados e oferece suporte à localização contínua para equipes ágeis.
 
-
+_Essa integração é mantida pelo Phrasee._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ A integração do Phrase e da Braze permite traduzir modelos de e-mail e blocos 
 | --- | --- |
 | Conta Phrase TMS | É necessário ter uma conta Phrase TMS Ultimate ou Enterprise para aproveitar essa parceria. |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com todas as permissões. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze |  Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
