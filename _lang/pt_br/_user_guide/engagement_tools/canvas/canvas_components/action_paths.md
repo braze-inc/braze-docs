@@ -56,7 +56,7 @@ Adicione um disparar ou vários disparar para definir seus grupos de ação. Aqu
 - Realizar um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Realizar um evento de conversão
 - Adicione um endereço de e-mail
-- Alterar um valor de atributo personalizado (incluindo arrays, mas não atributos personalizados aninhados)
+- Alterar um valor de atributo personalizado (não atributos personalizados aninhados)
 - Atualize o status da inscrição ou o status do grupo de inscrições
 - Interaja com uma campanha ou cartão de conteúdo
 - Insira um local

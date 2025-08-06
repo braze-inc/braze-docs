@@ -56,7 +56,7 @@ Fügen Sie einen oder mehrere Trigger hinzu, um Ihre Aktionsgruppen zu definiere
 - Ein [angepasstes Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) durchführen
 - Ein Konversions-Event durchführen
 - E-Mail-Adresse hinzufügen
-- Ändern eines angepassten Attributwerts (einschließlich Arrays, aber nicht verschachtelte angepasste Attribute)
+- Ändern eines angepassten Attributwerts (nicht verschachtelte angepasste Attribute)
 - Ihren Abonnementstatus oder den Status Ihrer Abonnementgruppe aktualisieren
 - Interaktion mit einer Kampagne oder Inhaltskarte
 - Einen Standort eingeben
