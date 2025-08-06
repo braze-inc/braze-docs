@@ -23,7 +23,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berech
 
 ## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpunkt='cdi job sync' %}
+{% multi_lang_include rate_limits.md endpoint='cdi job sync' %}
 
 ## Pfad-Parameter
 
