@@ -12,7 +12,7 @@ search_tag: Partner
 
 > LiftIgniter es una plataforma de personalización líder que ayuda a las empresas a transformar la experiencia de sus clientes mediante la personalización en tiempo real en todos los puntos de intervención.
 
-
+_Esta integración está mantenida por Liftigniter._
 
 ## Sobre la integración
 
