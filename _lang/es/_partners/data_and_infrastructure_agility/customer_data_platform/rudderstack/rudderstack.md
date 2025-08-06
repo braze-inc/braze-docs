@@ -54,7 +54,7 @@ Más información sobre los [modos de conexión](https://www.rudderstack.com/doc
 
 Con este modo, puedes enviar tus eventos a Braze utilizando el SDK de Braze configurado en tu sitio web o aplicación móvil.
 
-
+Configura los mapeados al SDK de Rudderstack para tu plataforma en el repositorio Braze de GitHub, como se describe en [métodos compatibles](#supported-methods):
 
 - [Android][android]
 - [iOS][ios]
@@ -128,7 +128,7 @@ Puede eliminar un usuario en Braze utilizando la [regulación Supresión con Bor
 El [método`track` ](https://rudderstack.com/docs/destinations/marketing/braze/#track) de RudderStack captura todas las actividades del usuario y las propiedades asociadas a dichas actividades.
 
 **Pedido realizado**<br>
-
+Al utilizar la [API de comercio electrónico de Rudderstack][20] para llamar al método de seguimiento de un evento con el nombre `Order Completed`, RudderStack envía los productos incluidos en ese evento a Braze como [`purchases`][21].
 
 {% endtab %}
 {% tab Pantalla %}
