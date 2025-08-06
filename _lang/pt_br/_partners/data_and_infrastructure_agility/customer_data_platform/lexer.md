@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [A Lexer][6], uma plataforma de dados do cliente criada para o varejo, ajuda as marcas a aumentar as vendas por meio de melhores experiências do cliente, combinando o enriquecimento robusto de dados com as ferramentas mais intuitivas e a consultoria especializada.
 
-
+_Esta integração é mantida pela Lexer._
 
 ## Sobre a integração
 
