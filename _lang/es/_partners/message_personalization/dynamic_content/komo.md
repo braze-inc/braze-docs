@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Komo][7] es una plataforma de interacción con los clientes especializada en gamificación, contenidos interactivos, concursos, premios y fidelización.
 
-
+_Esta integración está mantenida por Komo._
 
 ## Sobre la integración
 
