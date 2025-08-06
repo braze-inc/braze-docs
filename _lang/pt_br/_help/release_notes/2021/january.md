@@ -17,7 +17,7 @@ Este guia detalhado aborda como aproveitar a subclasse para criar mensagens no a
 
 ## Categorias de palavras-chave personalizadas para SMS e opções de redirecionamento
 
-O Braze expandiu nossos recursos nativos de SMS para incluir a capacidade de adicionar palavras-chave personalizadas para envio de mensagens bidirecionais, categorias personalizadas para palavras-chave, suporte a vários idiomas e opções de redirecionamento e filtragem de palavras-chave. Para saber mais sobre o processamento de palavras-chave de SMS, visite nossa [documentação sobre SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/). 
+O Braze expandiu nossos recursos nativos de SMS para incluir a capacidade de adicionar palavras-chave personalizadas para envio de mensagens bidirecionais, categorias personalizadas para palavras-chave, suporte a vários idiomas e opções de redirecionamento e filtragem de palavras-chave. Para saber mais sobre o processamento de palavras-chave de SMS, visite nossa [documentação sobre SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/). 
 
 ## A parceria com a Playable está ativa
 
