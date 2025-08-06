@@ -308,11 +308,11 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/contentful/
 - name: Outgrow
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
-- name: ""
+- name: Justuno
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
-- name: ""
+- name: Construtor
   url: /docs/partners/message_personalization/dynamic_content/constructor/
-- name: ""
+- name: Envio de e-mail para o amor
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
 - name: Adikteev
   url: /docs/partners/data_and_infrastructure_agility/analytics/adikteev/
@@ -326,7 +326,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/front/
 - name: Notify
   url: /docs/partners/message_personalization/dynamic_content/notify/
-- name: ""
+- name: Odicci
   url: /docs/partners/message_personalization/dynamic_content/odicc/
 - name: Pinterest
   url: /docs/partners/canvas_steps/pinterest_audience_sync/
@@ -334,22 +334,22 @@ valid_partner_list:
   url: /docs/partners/canvas_steps/snapchat_audience_sync/
 - name: TikTok
   url: /docs/partners/canvas_steps/tiktok_audience_sync/
-- name: ""
+- name: Trustpilot
   url: /docs/partners/trustpilot/
-- name: ""
+- name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SessãoM
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
-- name: ""
+- name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
-- name: ""
+- name: Mencione-me
   url: /docs/partners/mention_me/
-- name: ""
+- name: Apenas palavras
   url: /docs/partners/just_words/
-- name: ""
+- name: Olho de águia
   url: /docs/partners/eagle_eye/
-- name: ""
+- name: Eppo
   url: /docs/partners/eppo/
-- name: ""
+- name: Listrado
   url: /docs/partners/stripe/
 ---
