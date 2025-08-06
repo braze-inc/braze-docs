@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [O eduMe](https://edume.com) é uma ferramenta de treinamento baseada em dispositivos móveis que oferece à sua força de trabalho o conhecimento de que ela precisa para ter sucesso, quando precisar, onde quer que esteja. 
 
-
+_Esta integração é mantida pela EduMe._
 
 ## Sobre a integração
 
