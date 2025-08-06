@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [actionable.me][2], construído pela equipe da Massive Rocket, uma agência de dados e CRM, é uma abordagem padronizada e automatizada para executar programas de CRM, fornecendo ferramentas e processos projetados para levar os clientes da Braze a obter valor de forma rápida, consistente e previsível. 
 
-
+_Essa integração é mantida por actionable.me._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ A integração entre a Braze e a actionable.me permite implantar um serviço par
 | --- | --- |
 | Conta actionable.me | Uma conta actionable.me é necessária para aproveitar esta parceria. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com as permissões listadas na próxima seção.<br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
