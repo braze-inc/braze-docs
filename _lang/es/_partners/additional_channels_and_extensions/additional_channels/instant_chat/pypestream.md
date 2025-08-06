@@ -1,50 +1,50 @@
 ---
-nav_title: ""
-article_title: ""
-description: ""
+nav_title: Pypestream
+article_title: Pypestream
+description: "Este artículo de referencia describe la asociación entre Braze y Pypestream, una plataforma de IA conversacional de pila completa que le permite mejorar el compromiso digital con su marca."
 alias: /partners/pypestream/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# 
+# Pypestream
 
->  
+> [Pypestream](https://www.pypestream.com) es una plataforma de IA conversacional de stack completo que ofrece mensajería en la nube patentada y todo en uno para transformar las marcas en entidades digitales "siempre activas". Con Pypestream, las marcas ahora pueden entablar conversaciones omnicanal a escala con cada cliente mientras aprovechan una experiencia de usuario inmersiva, capacidades avanzadas de NLU e integraciones en tiempo real con sistemas backend.
 
+_Esta integración está mantenida por Pypestream._
 
+## Sobre la integración
 
-## 
+La integración de Braze y Pypestream te permite orquestar fácilmente el ciclo de vida del cliente de extremo a extremo, desde la captación inicial hasta el seguimiento omnicanal a través de la reorientación inteligente. 
 
- 
+## Requisitos previos
 
-## 
-
-|  |  |
+| Requisito | Descripción |
 |---|---|
-|  | <br><br> |
-|  |  <br><br>  |
-|   |   |
+| Cuenta Pypestream | Se requiere una [cuenta Pypestream](https://www.pypestream.com/contact-us/) para beneficiarse de esta asociación.<br><br>Una vez suscrito, el equipo de Pypestream le ayudará a configurar su entorno dedicado para empezar a crear su solución de IA conversacional para integrarla con Braze. |
+| Clave REST API de Braze | Una clave de API REST de Braze con permisos `users.track`. <br><br> Puede crearse en el panel Braze desde **Configuración** > **Claves API**. |
+| Punto final REST Braze  | La URL de su punto final REST. Tu punto final dependerá de la [URL Braze de tu instancia]({{site.baseurl}}/api/basics/). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Casos prácticos
 
-## 
+La asociación entre Braze y Pypestream puede utilizarse en tus Canvases para lograr casos de uso comunes como:
+* **Redireccionamiento inteligente**: Vuelva a dirigirse a los usuarios con Braze Canvas después de su interacción conversacional con su marca aprovechando todos los puntos de datos enriquecidos recopilados a través de Pypestream.
+* **Orientación dinámica**: Llegue a los clientes actuales y potenciales en función de sus cohortes y segmentos específicos, ofreciéndoles experiencias conversacionales personalizadas a través de Pypestream.
+* **Información contextual sobre el cliente**: Después de que un usuario final (cliente existente o potencial) acceda a su sitio web, combine las etiquetas de la página web recibidas de Pypestream Event Listener con los datos del cliente almacenados en Braze para proporcionar una interacción conversacional totalmente personalizada y contextual.
 
+## Integración
 
-*  
-*  
-*  
+Pypestream aprovecha una capa de integración sin servidor para realizar integraciones personalizadas en diversas plataformas. Esta capa se utiliza para interactuar con los servicios o sistemas para apoyar los requisitos de datos del flujo conversacional que se está construyendo. Estas integraciones, denominadas integraciones de Action Node, se escriben normalmente en Python y se despliegan utilizando la plataforma Pypestream. Una vez instanciado un nodo de acción, ofrece la flexibilidad de integrarse en cualquier punto final de la API Braze y permite evaluar los resultados de muchas maneras. 
 
-## 
+{% alert note %}
+Visita este [artículo de Pypestream](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) para obtener una visión general y los pasos de configuración de los nodos de acción de Pypestream. Debe ser cliente de Pypestream para acceder a esta documentación.
+{% endalert %}
 
-    
+### Paso 1: Establecer configuraciones de punto final
 
-
- 
-
-
-###  
-
- 
+Los valores de configuración principales, como la URL del punto final REST de Braze y las claves de la API de Braze, deben establecerse en el archivo `app.py` de la solución: 
 
 ```
 import os
@@ -71,9 +71,9 @@ PARAMS = {
 }
 ```
 
-###  
+### Paso 2: Desarrollar una plantilla de nodos de acción
 
-   
+Los nodos de acción aprovechan el entorno con el que se despliega la solución para interactuar, con los respectivos puntos finales Braze establecidos en el paso anterior. Este paso desarrolla un nodo de acción para integrar puntos finales Braze específicos. Utilice la siguiente plantilla como guía para desarrollar las integraciones: 
 
 ```
 # -*- coding: utf-8 -*-
@@ -155,37 +155,37 @@ class BrazeExample:
 
         return {'success': 'error'}
 ```
-###  
+### Paso 3: Actualizar los diseños de las soluciones
 
- 
+El paso final de la integración con la API REST de Braze consiste en configurar los flujos dentro de [Design Studio](https://platform.pypestream.com/design-studio/) de Pypestream para utilizar el nodo de acción que se desarrolló en el paso anterior. 
 
+{% alert note %}
+Visita este [artículo de Pypestream](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) para obtener un resumen sobre cómo configurar los modos en Design Studio. Debe ser cliente de Pypestream para acceder a esta documentación.
+{% endalert %}
 
- 
+## Caso de uso de integración
 
+Una vez cumplidos los requisitos previos y creada una estructura de nodos de acción, el desarrollador dispone de un lienzo en blanco desde el que trabajar cuando interactúa con los puntos finales de la API Braze. Este ejemplo muestra los pasos necesarios para integrar un nodo de acción en el [punto final `/user/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de Braze, concretamente para crear un perfil de usuario que permita realizar un seguimiento de un usuario específico que entra en un flujo conversacional de Pypestream.
 
-## 
+### Paso 1: Recoger datos del usuario en una conversación
 
- 
+Cuando un usuario entra en una sesión de Pypestream, los detalles de los datos recogidos dependen totalmente del caso de uso que se esté llevando a cabo. Para poder crear un perfil de usuario en Braze, la conversación debe recoger los campos necesarios
+requerido por el punto final deseado.
 
-###  
+Por ejemplo, si la solución recopiló la siguiente información del usuario durante la conversación para el punto final Braze `/user/track`: 
 
- 
+* Nombre
+* Apellido
+* Dirección de correo electrónico
+* Fecha de nacimiento
+* Ciudad de residencia
+* Sistema operativo
 
+Estos datos pueden enviarse ahora a la plataforma Braze para realizar un seguimiento de la participación de este usuario con la posibilidad de volver a dirigirse a él en el futuro. Consulte la [lista de casos de uso](#use-cases) para ver las aplicaciones más comunes.
 
- 
+### Paso 2: Rellenar datos en la estructura del nodo de acción
 
-* 
-* 
-* 
-* 
-* 
-* 
-
- 
-
-###  
-
-
+Aprovechando la misma estructura para desarrollar nodos de acción, los datos recopilados del usuario pueden rellenarse en el nodo de acción para enviarse a Braze a través de nuestro endpoint `/user/track`.
 
 ```
 # -*- coding: utf-8 -*-
@@ -278,7 +278,7 @@ class BrazeExample:
         return {'success': 'error'}
 ```
 
-###  
+### Paso 3: Actualizar los flujos de soluciones para redirigirlos en caso de éxito/fracaso del nodo de acción.
 
-  
+Por último, en el diseño de cada solución, puede dirigir a los usuarios a los nodos en función de si la llamada a la API del nodo de acción se ha realizado correctamente. Si el nodo de acción recibe un mensaje de error, el usuario final debe ser tratado con cuidado. 
 
