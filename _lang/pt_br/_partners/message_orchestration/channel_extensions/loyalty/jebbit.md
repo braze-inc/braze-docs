@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Jebbit](https://www.jebbit.com/) é uma PaaS que permite criar experiências de engajamento para que os usuários capturem dados primários.
 
-
+_Essa integração é mantida pelo Jebbit._
 
 ## Sobre a integração
 
