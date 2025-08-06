@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [GrowthLoop](https://growthloop.com/) ayuda a los equipos de marketing a activar los datos de clientes desde el almacén de datos en la nube a Braze y otros canales. Automatiza, escala y mide los programas de marketing desde tu almacén de datos en la nube, manteniendo los datos en una ubicación única y centralizada.
 
-
+_GrowthLoop se encarga del mantenimiento de esta integración._
 
 ## Sobre la integración
 
