@@ -83,9 +83,9 @@ MAU calculations follow specific rules to ensure accurate and consistent billing
 Anonymous users also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 {% endalert %}
 
-#### MAU calculation scenario
+#### MAU calculation example
 
-The following scenario demonstrates how MAU calculations work through different user actions:
+The following example demonstrates how MAU calculations work through different user actions:
 
 | Step | Action | Immediate MAU change | Resulting total |
 |------|--------|----------------------|-----------------|
@@ -94,10 +94,7 @@ The following scenario demonstrates how MAU calculations work through different 
 | 3 | Create **Anonymous User 2** and log a session | +1 | 2 |
 | 4 | Identify **Anonymous User 2** as the **same person** as User 1 (User 2 becomes orphaned) | –1 | 1 |
 
-**Key insights:**
-- **MAU for day X** (after step 3) is permanently **2**, because two distinct profiles existed in that day's snapshot.
-- **MAU for day Y** (after step 4) is **1**, because the orphaning happened before the day-Y snapshot.
-- Within a single 30-day window, this flow ultimately consumes **1 MAU**, since only one distinct, non-orphaned user remains.
+MAU snapshots are calculated once per day and never change retroactively. In this example, the MAU count for the day after step 3 permanently remains 2, even though User 2 later becomes orphaned. However, the MAU count for subsequent days reflects only the non-orphaned user. Within any 30-day window, this flow ultimately consumes 1 MAU since only one distinct, non-orphaned user remains.
 
 ### Daily active users
 
