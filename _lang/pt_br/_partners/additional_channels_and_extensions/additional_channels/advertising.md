@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Publicidade
 config_only: true
 ---
