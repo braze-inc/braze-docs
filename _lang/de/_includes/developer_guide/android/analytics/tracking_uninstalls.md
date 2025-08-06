@@ -2,7 +2,7 @@
 
 ### Schritt 1: FCM einrichten
 
-Das Android Braze SDK verwendet Firebase Cloud Messaging (FCM), um stille Push-Benachrichtigungen zu versenden, die zum Sammeln von Analytics für das Uninstall-Tracking verwendet werden. Falls noch nicht geschehen, [richten Sie die]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/#setting-up-push-notifications) Firebase Cloud Messaging API für Push-Benachrichtigungen ein oder [migrieren Sie zu dieser]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
+Das Android Braze SDK verwendet Firebase Cloud Messaging (FCM), um stille Push-Benachrichtigungen zu versenden, die zum Sammeln von Analytics für das Uninstall-Tracking verwendet werden. Falls Sie dies noch nicht getan haben, richten Sie [die]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/#setting-up-push-notifications) Firebase Cloud Messaging API für Push-Benachrichtigungen ein oder [migrieren Sie zu dieser]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
 ### Schritt 2: Manuelles Uninstall-Tracking erkennen (optional)
 
