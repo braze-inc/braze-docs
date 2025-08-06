@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [SalesWings][1] es un complemento de perfiles de clientes potenciales de B2B SaaS creado para equipos de marketing y ventas, que ayuda a gestionar la cualificación de clientes potenciales y cuentas mediante la puntuación y clasificación de clientes potenciales, información y alertas de ventas, alineación de marketing e informes de atribución B2B, junto con una estrecha integración con Salesforce CRM.
 
-
+_Esta integración está mantenida por SalesWings._
 
 ## Sobre la integración
 
