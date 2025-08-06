@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Digioh](https://www.digioh.com/) te ayuda a hacer crecer tus listas, capturar datos propios y poner tus datos al servicio de tus campañas Braze.
 
-
+_Esta integración está mantenida por Digioh._
 
 ## Sobre la integración
 
