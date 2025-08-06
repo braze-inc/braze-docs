@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Como uma plataforma de análise de dados de marketing unificada, a Singular oferece atribuição, agregação de custos, análise de dados de marketing, relatórios criativos e automação de fluxo de trabalho.
 
-
+_A integração é mantida pela Singular._
 
 ## Sobre a integração
 
@@ -78,7 +78,7 @@ Na Braze, navegue até **Integrações de parceiros** > **Parceiros de tecnologi
 
 Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. 
 
-Você precisará fornecer a chave de importação de dados e o endpoint REST ao gerente de sua conta Singular para concluir a integração.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página da tecnologia Singular. 
+Você precisará fornecer a chave de importação de dados e o endpoint REST ao gerente de sua conta Singular para concluir a integração.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página da tecnologia Singular. Nesta caixa, você vê a chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Confirmar a integração
 
