@@ -24,13 +24,14 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpunkt='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Erforderlich | String | Siehe [Canvas API Bezeichner]({{site.baseurl}}/api/identifier_types/) |
+| `post_launch_draft_version` | Optional | Boolesch | Für Canvase, die einen Entwurf nach dem Start haben, zeigt die Einstellung `true` alle verfügbaren Änderungen an. Standardmäßig ist `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -58,6 +59,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "description": (string) the Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
+  "enabled": (boolean) whether this Canvas is active or not,
+  "has_post_launch_draft": (boolean) whether this Canvas has a post-launch draft,
   "schedule_type": (string) the type of scheduling action,
   "first_entry": (string) the date of first entry as ISO 8601 date,
   "last_entry": (string) the date of last entry as ISO 8601 date,
@@ -114,6 +117,8 @@ Im Folgenden finden Sie eine Beispielantwort, die Canvas-Nachrichten enthält, d
   "description": "Complete profile reminder via multiple channels",
   "archived": false,
   "draft": false,
+  "enabled": true,
+  "has_post_launch_draft": true,
   "schedule_type": "date",
   "first_entry": "2023-01-01T12:00:00Z",
   "last_entry": "2023-01-10T12:00:00Z",
