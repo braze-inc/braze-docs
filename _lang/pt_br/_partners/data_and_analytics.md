@@ -1,166 +1,166 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: "Dados e análises"
+article_title: Parceiros de dados e análises
 page_order: 5
 
 page_type: landing
-description: ""
+description: "Esta página lista os parceiros da Braze (Alloys) que permitem que você envie, armazene e coordene seus dados em diferentes ferramentas e provedores."
 layout: partner_page
 search_tag: Partner
 
 partner_top_header: "Data & Analytics"
 
 valid_partner_list:
-- name: ""
+- name: Optimizely
   url: /docs/partners/optimizely/
-- name: ""
+- name: VWO
   url: /docs/partners/vwo/
-- name: ""
+- name: Adjust
   url: /docs/partners/adjust/
-- name: ""
+- name: Airbridge
   url: /docs/partners/airbridge/
-- name: ""
+- name: AppsFlyer
   url: /docs/partners/appsflyer/
-- name: ""
+- name: Branch
   url: /docs/partners/branch_for_deeplinking/
-- name: ""
+- name: Apteligent
   url: /docs/partners/apteligent/
-- name: ""
+- name: Amplitude
   url: /docs/partners/amplitude/
-- name: ""
+- name: Mixpanel
   url: /docs/partners/mixpanel/
-- name: ""
+- name: Looker
   url: /docs/partners/looker/
-- name: ""
+- name: Kubit
   url: /docs/partners/kubit/
-- name: ""
+- name: NPAW
   url: /docs/partners/npaw/
-- name: ""
+- name: Clarisights
   url: /docs/partners/clarisights/
-- name: ""
+- name: Heap
   url: /docs/partners/heap/ 
-- name: ""
+- name: Datadog
   url: /docs/partners/datadog/
-- name: ""
+- name: ThoughtSpot
   url: /docs/partners/thoughtspot//
-- name: ""
+- name: Tellius
   url: /docs/partners/tellius/
-- name: ""
+- name: Contentsquare
   url: /docs/partners/contentsquare/
-- name: ""
+- name: Sisu
   url: /docs/partners/sisu_data/
-- name: ""
+- name: Mozart Data
   url: /docs/partners/mozart_data/
-- name: ""
+- name: SalesWings
   url: /docs/partners/saleswings/
-- name: ""
+- name: Mergulho
   url: /docs/partners/scuba/
-- name: ""
+- name: Monstro da Caixa de Entrada
   url: /docs/partners/inbox_monster/
-- name: ""
+- name: Amazon S3
   url: /docs/partners/amazon_s3/
-- name: ""
+- name: Google Cloud Storage
   url: /docs/partners/google_cloud_storage_for_currents/
-- name: ""
+- name: Armazenamento de Blob do Microsoft Azure
   url: /docs/partners/microsoft_azure_blob_storage_for_currents/
-- name: ""
+- name: Pequenas pistas
   url: /docs/partners/tinyclues/
-- name: ""
+- name: Treasure Data
   url: /docs/partners/treasure_data/
-- name: ""
+- name: Adobe
   url: /docs/partners/adobe/
-- name: ""
+- name: ActionIQ
   url: /docs/partners/actioniq/
-- name: ""
+- name: Amperity
   url: /docs/partners/amperity/
-- name: ""
+- name: Blueconic
   url: /docs/partners/blueconic/
-- name: ""
+- name: Celebrus
   url: /docs/partners/celebrus/
-- name: ""
+- name: Dynamics 365 Customer Insights
   url: /docs/partners/dynamics_365_customer_insights
-- name: ""
+- name: GrowthLoop
   url: /docs/partners/growthloop/
-- name: ""
+- name: Hightouch
   url: /docs/partners/hightouch/
-- name: ""
+- name: Lexer
   url: /docs/partners/lexer/
-- name: ""
+- name: Lítica
   url: /docs/partners/lytics/
-- name: ""
+- name: Merkury
   url: /docs/partners/merkury/
-- name: ""
+- name: mParticle
   url: /docs/partners/mparticle_overview/
-- name: ""
+- name: Octolis
   url: /docs/partners/octolis/
-- name: ""
+- name: Redpoint
   url: /docs/partners/redpoint/
-- name: ""
+- name: RudderStack
   url: /docs/partners/rudderstack/
-- name: ""
+- name: Segmento
   url: /docs/partners/segment/
-- name: ""
+- name: Dados do Simon
   url: /docs/partners/simon_data/
-- name: ""
+- name: Snowplow
   url: /docs/partners/snowplow/
-- name: ""
+- name: Tealium
   url: /docs/partners/tealium/
-- name: ""
+- name: Toovio
   url: /docs/partners/toovio/
-- name: ""
+- name: Zeotap
   url: /docs/partners/zeotap/
-- name: ""
+- name: actionable.me
   url: /docs/partners/actionableme/
-- name: ""
+- name: DataGrail
   url: /docs/partners/datagrail/
-- name: ""
+- name: Ketch
   url: /docs/partners/ketch/
-- name: ""
+- name: OneTrust
   url: /docs/partners/onetrust/
-- name: ""
+- name: Snowflake
   url: /docs/partners/snowflake/
-- name: ""
+- name: Anúncios de leads do Facebook via Zapier
   url: /docs/partners/facebook_via_zapier/
-- name: ""
+- name: Zapier
   url: /docs/partners/zapier/
-- name: ""
+- name: Jebbit
   url: /docs/partners/jebbit/
-- name: ""
+- name: Justuno
   url: /docs/partners/justuno/
-- name: ""
+- name: Outgrow
   url: /docs/partners/outgrow/
-- name: ""
+- name: Quikly
   url: /docs/partners/quikly/
-- name: ""
+- name: ViralSweep
   url: /docs/partners/viralsweep/
-- name: ""
+- name: Wunderkind
   url: /docs/partners/wunderkind/
-- name: ""
+- name: Wyng
   url: /docs/partners/wyng/
-- name: ""
+- name: Antavo
   url: /docs/partners/antavo/
-- name: ""
+- name: FriendBuy
   url: /docs/partners/friendbuy/
-- name: ""
+- name: Kognitiv Inspire
   url: /docs/partners/kognitiv/
-- name: ""
+- name: Punchh
   url: /docs/partners/punchh/
-- name: ""
+- name: SessãoM
   url: /docs/partners/sessionm/
-- name: ""
+- name: Voucherify
   url: /docs/partners/voucherify/
-- name: ""
+- name: Census
   url: /docs/partners/census/
-- name: ""
+- name: Airbyte
   url: /docs/partners/airbyte/
-- name: ""
+- name: Fivetran
   url: /docs/partners/fivetran/
-- name: ""
+- name: MetaRouter
   url: /docs/partners/metarouter/
-- name: ""
+- name: Nexla
   url: /docs/partners/nexla/
-- name: ""
+- name: Olho de águia
   url: /docs/partners/eagle_eye/
-- name: ""
+- name: Eppo
   url: /docs/partners/eppo/
 ---
