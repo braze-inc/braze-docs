@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/), una plataforma de enlace móvil, te ayuda a adquirir, interactuar y medir en todos los dispositivos, canales y plataformas, proporcionando una visión holística de todos los puntos de intervención del usuario.
 
-
+_Esta integración está mantenida por Branch._
 
 ## Sobre la integración
 
@@ -89,10 +89,10 @@ Aquí encontrarás el punto final REST y generarás tu clave de importación de 
 
 ### Paso 3: Configurar fuentes de datos
 
-1. 
-2.  
+1. En Branch, en la sección **Exportaciones**, selecciona **Fuentes de datos**.
+2. En la página **Administrador de fuentes de datos**, selecciona la pestaña **Integraciones de datos** en la parte superior de la página. 
 3. Selecciona Braze de la lista de socios de datos disponibles. 
-4. 
+4. En la página de exportación Braze, proporciona la clave de importación de datos y el punto final REST que encontraste en el panel Braze y selecciona **Habilitar**.
 
 ### Paso 4: Confirmar la integración
 
