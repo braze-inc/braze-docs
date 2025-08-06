@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) es una plataforma unificada de medición móvil que le ayuda a descubrir las verdaderas fuentes de crecimiento a través de la atribución móvil, la medición incrementalista y el modelado de marketing mix.
 
-
+_Esta integración está mantenida por Airbridge._
 
 ## Sobre la integración
 
@@ -196,12 +196,12 @@ En Braze, vaya a **Integraciones de socios** > **Socios tecnológicos** y selecc
 
 Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puedes crear una nueva clave o invalidar una existente. La clave de importación de datos y el punto final REST se utilizan en el siguiente paso al configurar un postback en el panel de Airbridge.
 
-
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Paso 3: Configura Braze en el panel de Airbridge
 
 1. En Airbridge, vaya a **Integraciones > Integraciones de terceros** en la barra lateral izquierda y seleccione **Braze**.
-2. 
+2. Proporciona la clave de importación de datos y el punto final REST que encontraste en el panel Braze.
 3. Selecciona el tipo de evento (Instalar evento o Instalar & Deeplink Abrir evento) y guárdalo.
 
 {% alert note %}
@@ -231,7 +231,7 @@ Suponiendo que configure su integración como se sugiere, Braze asignará los da
 
 Su base de usuarios puede segmentarse por datos de atribución en el cuadro de mandos de Braze utilizando los filtros Instalar atribución.
 
-
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Datos de atribución de Meta Business
 
