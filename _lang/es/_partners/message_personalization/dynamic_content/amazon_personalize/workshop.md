@@ -11,11 +11,11 @@ search_tag: Partner
 
 > Este artículo de referencia le guiará a través del proceso de configuración de Amazon Personalize y su integración en su entorno Braze mediante Connected Content. Para ello se utilizará un taller práctico que le guiará a través de todos los pasos necesarios para desplegar y entrenar las soluciones de Amazon Personalize e integrarlas en una campaña de correo electrónico Braze.
 
-
+_Esta integración es mantenida por Amazon Personalize._
 
 ## Sobre la integración
 
- Los recursos y el código de este tutorial están publicados en la [tienda de demos de AWS Samples Retail](https://github.com/aws-samples/retail-demo-store/). Puede utilizar esta implementación de arquitectura de referencia como esquema para implementar Amazon Personalize en su propio entorno.
+Los siguientes ejemplos están desplegados en un sitio de comercio electrónico de ejemplo totalmente funcional llamado Tienda de demostración minorista. Los recursos y el código de este tutorial están publicados en la [tienda de demos de AWS Samples Retail](https://github.com/aws-samples/retail-demo-store/). Puede utilizar esta implementación de arquitectura de referencia como esquema para implementar Amazon Personalize en su propio entorno.
 
 ## Requisitos
 
@@ -23,7 +23,7 @@ Deberá clonar el [repositorio de Retail Demo Store](https://github.com/aws-samp
 
 ## Arquitectura de integración
 
-
+Antes de configurar Braze para enviar mensajes personalizados a los usuarios, revisa los componentes relevantes necesarios para un sitio web típico de comercio electrónico, utilizando como ejemplo la arquitectura de la tienda de demostración minorista.
 
 ![Una imagen en la que se desglosa la arquitectura de personalización Braze y se observa cómo interactúan entre sí los distintos componentes.]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
