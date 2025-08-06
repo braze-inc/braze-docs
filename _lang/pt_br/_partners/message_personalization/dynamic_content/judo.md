@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [O Judo](https://judo.app) é uma plataforma de interface do usuário orientada por servidor que permite que os editores forneçam com eficiência experiências ricas e envolventes para o usuário no app, sem atualizações do app.
 
-
+_Essa integração é mantida pelo Judo._
 
 ## Sobre a integração
 
