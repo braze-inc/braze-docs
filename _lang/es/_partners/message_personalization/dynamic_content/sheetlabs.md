@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Sheetlabs][1] es una plataforma que permite convertir hojas de cálculo en API potentes y bien documentadas. Puedes importar datos de Google Sheets o Excel, convertirlos en una API y luego utilizar esa API en otras aplicaciones, como Braze.
 
-
+_Esta integración está mantenida por Sheetlabs._
 
 ## Sobre la integración
 
