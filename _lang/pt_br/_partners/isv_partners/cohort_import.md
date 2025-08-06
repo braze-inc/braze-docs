@@ -24,7 +24,7 @@ A Braze hospeda nosso aplicativo em vários clusters nos EUA e na UE. A URL dos 
 | US-08 | `https://rest.iad-08.braze.com` |
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
-|  | `https://rest.au-01.braze.com`  |
+| AU-01 | `https://rest.au-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## URLs dos endpoints
