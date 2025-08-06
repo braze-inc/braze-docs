@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [MetaRouter](https://www.metarouter.io/) eleva tu experiencia Braze integrándose fácilmente como una potente plataforma de gestión de etiquetas del lado del servidor. Le permite orquestar un recorrido completo de los datos del cliente dentro de Braze, desde la recopilación de datos de origen totalmente fiable y enriquecida hasta en un 30%, hasta la activación de flujos de eventos en tiempo real para recorridos personalizados. Además, MetaRouter agiliza la implementación al eliminar la necesidad de etiquetas Braze u otras etiquetas de terceros, otorgándole un control granular, parámetro por parámetro, sobre los datos que fluyen hacia Braze.
 
-
+_Esta integración está mantenida por Metarouter._
 
 ## Características compatibles
 
