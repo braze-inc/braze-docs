@@ -1,22 +1,22 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: "Configuración del canal de eventos ETL"
+article_title: Configuración de la canalización de eventos ETL Snowflake
 page_order: 2
-description: ""
+description: "Esta página de socio ofrece un ejemplo de configuración de una consulta de clics de correo electrónico como referencia para configurar sus propias consultas."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# 
+# Configuración del canal de eventos ETL
 
-> 
+> Esta página asociada ofrece un ejemplo de configuración de una consulta de clics de correo electrónico que puede utilizar como referencia para configurar sus propias consultas.
 
+Puede utilizar esta consulta de clics de correo electrónico para analizar las interacciones con correos electrónicos específicos en sus campañas Braze y Canvases.
 
+## Configure esta consulta
 
-## 
-
-
+Cree una base de datos para `BRAZE`, luego cree una base de datos si no existe ninguna para `BRAZE_CURRENTS;`:
 
 ```sql
 use schema BRAZE_CURRENTS.public;
@@ -32,7 +32,7 @@ alter stage braze_currents.public.braze_data set file_format = braze_currents.pu
 show stages;
 ```
 
-
+Utilice el siguiente comando para crear su tabla:
 
 ```sql
 CREATE TABLE
@@ -58,7 +58,7 @@ CREATE TABLE
   );
 ```
 
-
+Utiliza el siguiente comando para crear o sustituir tu canalización:
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -94,18 +94,18 @@ COPY INTO
 show pipes;
 ```
 
-## 
+## Haz más con este ejemplo de consulta
 
+Copie la dirección `notification_channel` de la salida del comando anterior y utilícela para configurar las notificaciones de los buckets de S3.
 
-
-
+Sincroniza manualmente desde S3 a Snowflake para el siguiente nombre de canalización dado:
 ```sql
 ALTER PIPE
   pipe_users_messages_email_click
   refresh ;
 ```
 
-
+Comprueba el estado de la canalización, que mostrará cuándo se reenvió el mensaje desde S3 a Snowflake:
 ```sql
 SELECT
   SYSTEM$PIPE_STATUS(
@@ -113,7 +113,7 @@ SELECT
   )
 ```
 
-
+Por último, muestra el historial de copias de la tabla seleccionando `*` desde:
 ```sql
 table(braze_currents.information_schema.copy_history(table_name=>'users_messages_email_click', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
