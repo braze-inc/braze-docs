@@ -16,7 +16,7 @@ A integração da Shopify e da Braze permite que você conecte sua loja da Shopi
 
 
 {% alert important %}
- <br><br> <br><br>  <br><br>    <br><br> 
+Uma nova versão da integração do Shopify será lançada em fases a partir de abril, com base no tipo de loja do Shopify e no ID externo usado para configurar a integração inicial. <br><br>**A versão mais antiga da integração será descontinuada em 28 de agosto de 2025. Você deve atualizar para a versão mais recente da integração antes de 28 de agosto de 2025.**<br><br>**Novos clientes Braze:** A partir de abril de 2025, o Braze estará implementando gradualmente o novo conector Shopify para novas integrações e fazendo upgrade dos clientes existentes. Para saber mais sobre a nova integração padrão, consulte a [integração padrão do Shopify]({{site.baseurl}}/shopify_standard_integration/).<br><br>**Clientes Braze existentes:** A partir de fevereiro de 2025, entraremos em contato com um guia de upgrade para ajudá-lo na transição para a integração mais recente da Shopify.  Organizaremos os clientes em grupos (coortes) com base em sua loja do Shopify e em como você usa IDs externas do Braze para facilitar uma experiência de upgrade tranquila e personalizada. Você será notificado quando seu coorte estiver pronto para fazer upgrade.<br><br>**Fazer upgrade para essa versão mais recente causará alterações significativas.** Você será guiado por um processo de revisão no dashboard do Braze para ajudar você e sua equipe de desenvolvimento a lidar com essas alterações antes de fazer o upgrade.
 {% endalert %}
 
 ## Recursos suportados
