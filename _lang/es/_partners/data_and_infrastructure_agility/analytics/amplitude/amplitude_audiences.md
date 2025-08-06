@@ -57,7 +57,7 @@ Utiliza Audiences para enviar propiedades de usuario y cálculos a Braze como at
 
 Cuando se actualice una propiedad de usuario o un cálculo, Amplitude actualizará un atributo personalizado en Braze con el mismo nombre que esa propiedad de usuario o cálculo.
 
-  
+Las sincronizaciones de rasgos de usuario y computación crearán nuevos usuarios para identificadores de usuario que aún no existen en Braze. Las computadoras y los rasgos de usuario sólo pueden sincronizarse utilizando identificadores de usuario. Un identificador de usuario puede ser cualquiera de los siguientes:
 - ID externo
 - ID de Braze
 - Alias de usuario
