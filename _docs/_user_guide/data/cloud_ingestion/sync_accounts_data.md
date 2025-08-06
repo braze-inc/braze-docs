@@ -20,8 +20,10 @@ description: "This page provides an overview of how to sync account data."
 
 Any changes to the accounts schema in your workspace (for example, adding new fields or changing field type) must be made through the accounts dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
-## Step 2: Integrate Cloud Data Ingestion with Accounts
+## Step 2: Integrate your data sourcee with CDI and Accounts
 The setup for an Accounts sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+
+### Data Warehouse Integrations
 
 {% tabs %}
 {% tab Snowflake %}
@@ -202,8 +204,10 @@ GO
 3. If you have network policies in place, you must give Braze network access to your Microsoft Fabric instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
-{% tab S3 %}
 
+{% endtabs %}
+
+### File Storage Integrations
 For more details on setting up an S3 sync, see the [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations) page. 
 
 Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
@@ -251,14 +255,19 @@ ID,NAME,PAYLOAD
 
 
 
-{% endtab %}
-{% endtabs %}
+## Usage Notes
+### Sync Operations
+- Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
+- The data fetched from the integration will be used to create or update accounts based on the `id` provided.
+- If DELETED is set to `true`, the corresponding account item will be deleted.
+- The sync won't consume data points, but all data synced will count toward your total accounts usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
+- Any fields that exist in your source data but not in the accounts schema will be dropped before they're synced to Braze; to add new fields, update the accounts schema and then sync the new data
 
-## How the integration works
 
-Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. We recommend creating a view in your data warehouse from your account data to set up a source that will refresh each time a sync runs. With views, you won't need to rewrite the query each time.
+### Data Formatting
+We recommend creating a view in your data warehouse from your account data to set up a source that will refresh each time a sync runs. With views, you won't need to rewrite the query each time.
 
-For example, if you have a table of accounts data (`account_details_1`) with `account_id`, `account_name` and three additional attributes, you could sync the below view:
+For example, if you have a table of accounts data called `account_details_1` with `account_id`, `account_name` and three additional attributes, you could sync the below view:
 
 {% tabs %}
 {% tab Snowflake %}
@@ -343,7 +352,4 @@ FROM [braze].[account_details_1] ;
 {% endtab %}
 {% endtabs %}
 
-- The data fetched from the integration will be used to create or update accounts based on the `id` provided.
-- If DELETED is set to `true`, the corresponding account item will be deleted.
-- The sync won't consume data points, but all data synced will count toward your total accounts usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
-- Any fields that exist in your source data but not in the accounts schema will be dropped; to add new fields, update the accounts schema and then sync the new fields
+
