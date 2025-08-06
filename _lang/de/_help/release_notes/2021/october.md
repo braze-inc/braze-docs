@@ -26,7 +26,7 @@ Braze benachrichtigt den Firmenkontakt und den Ersteller der Erweiterung, wenn d
 
 ### Content-Cards
 
-Dieser optionale und fortschrittliche [Implementierungsleitfaden]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) enthält Hinweise zum Code-Anpassung von Content-Cards, drei speziell von unserem Team entwickelte Anwendungsfälle, begleitende Code-Snippets und Anleitungen zur Protokollierung von Impressionen, Klicks und Abbrüchen.
+Dieser optionale und fortschrittliche [Implementierungsleitfaden]({{site.baseurl}}/developer_guide/content_cards/) enthält Hinweise zum Code-Anpassung von Content-Cards, drei speziell von unserem Team entwickelte Anwendungsfälle, begleitende Code-Snippets und Anleitungen zur Protokollierung von Impressionen, Klicks und Abbrüchen.
 
 ### In-App-Nachrichten
 
@@ -42,8 +42,8 @@ Diese optionale und vorwärtsgebrachte [Implementierungsanleitung]({{site.baseur
 
 Die auf der Adobe Experience Platform basierende Customer Data Platform (Realtime CDP) von Adobe hilft Unternehmen, bekannte und anonyme Daten aus verschiedenen Unternehmensquellen zusammenzuführen, um Kundenprofile zu erstellen, die für personalisierte Kundenerlebnisse über alle Kanäle und Geräte hinweg in Echtzeit genutzt werden können.
 
-Die Integration von Braze und [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP erlaubt es Marken, ihre Adobe-Daten (angepasste Attribute und Segmente) mit Braze zu verbinden und in Echtzeit abzubilden. Marken können dann auf Basis dieser Daten handeln und diesen Nutzer:innen personalisierte, zielgerichtete Erlebnisse zustellen. 
+Die Integration von Braze und [Adobe]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/adobe/) CDP erlaubt es Marken, ihre Adobe-Daten (angepasste Attribute und Segmente) mit Braze zu verbinden und in Echtzeit abzubilden. Marken können dann auf Basis dieser Daten handeln und diesen Nutzer:innen personalisierte, zielgerichtete Erlebnisse zustellen. 
 
 ### Shopify - E-Commerce
 
-[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/) ist ein weltweit führendes Handelsunternehmen, das zuverlässige Tools für die Gründung, das Wachstum, das Marketing und die Verwaltung von Einzelhandelsgeschäften jeder Größe bereitstellt. Die Integration von Braze und Shopify erlaubt es Marken, ihren Shopify-Shop nahtlos mit Braze zu verbinden, um ausgewählte Shopify-Webhooks an Braze weiterzugeben. Nutzen Sie die kanalübergreifenden Strategien von Braze und Canvas, um Ihre Nutzer:in mit Nachrichten über abgebrochene Kassiervorgänge erneut anzusprechen und sie dazu zu bewegen, ihren Kauf abzuschließen, oder um Nutzer:in auf der Grundlage ihrer früheren Käufe erneut zu retargeten.
+[Shopify]({{site.baseurl}}/partners/shopify/) ist ein weltweit führendes Handelsunternehmen, das zuverlässige Tools für die Gründung, das Wachstum, das Marketing und die Verwaltung von Einzelhandelsgeschäften jeder Größe bereitstellt. Die Integration von Braze und Shopify erlaubt es Marken, ihren Shopify-Shop nahtlos mit Braze zu verbinden, um ausgewählte Shopify-Webhooks an Braze weiterzugeben. Nutzen Sie die kanalübergreifenden Strategien von Braze und Canvas, um Ihre Nutzer:in mit Nachrichten über abgebrochene Kassiervorgänge erneut anzusprechen und sie dazu zu bewegen, ihren Kauf abzuschließen, oder um Nutzer:in auf der Grundlage ihrer früheren Käufe erneut zu retargeten.
