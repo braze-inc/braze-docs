@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [O ViralSweep](https://viralsweep.com) é um software como serviço que permite às marcas criar, executar e gerenciar promoções de marketing digital, como sorteios, concursos, prêmios instantâneos, listas de espera, promoções por indicação e muito mais. 
 
-
+_Essa integração é mantida pela ViralSweep._
 
 ## Sobre a integração
 
