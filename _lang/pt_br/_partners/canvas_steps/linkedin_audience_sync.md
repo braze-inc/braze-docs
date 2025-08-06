@@ -156,31 +156,31 @@ Selecione o parceiro como **LinkedIn**, sua conta de anúncios e o público para
 
 ## Perguntas frequentes
 
-### 
+### Quanto tempo levará para que os tamanhos do público sejam preenchidos no LinkedIn?
 
 Pode haver uma demora de até 48 horas para visualizar os públicos em sua conta do LinkedIn.
 
-### 
+### Qual é o tamanho mínimo do público para o LinkedIn preencher sua conta de anúncios?
 
 O público deve incluir pelo menos 300 membros para preencher o tamanho do público em sua conta do LinkedIn.
 
-### 
+### O que devo fazer em seguida se receber um erro de token inválido?
 
 Você pode desconectar e reconectar sua conta do LinkedIn na página de parceiros do LinkedIn. Confirme com seu administrador do LinkedIn que você tem as permissões apropriadas para a conta de anúncios com a qual deseja sincronizar.
 
-### 
+### Por que meu Canva não pode ser iniciado?
 
- 
+Confirme se sua conta de anúncios do LinkedIn foi conectada com sucesso ao Braze na página de parceiros do LinkedIn. Em seguida, verifique se você selecionou uma conta de anúncios, inseriu um nome para o novo público e selecionou os campos para correspondência.
 
 ### Como posso saber se houve correspondência entre os usuários depois de passá-los para o LinkedIn?
 
- Você pode revisá-lo no LinkedIn na seção **Públicos**. 
+O LinkedIn fornece informações sobre as taxas de correspondência em seu dashboard. Você pode revisá-lo no LinkedIn na seção **Públicos**. Você pode revisar a taxa de correspondência do seu público do LinkedIn nos detalhes da etapa do Canva da etapa de sincronização do público.
 
-### 
+### Quantos públicos o LinkedIn pode suportar?
 
 Atualmente, não há limite para o número de públicos em sua conta de anúncios do LinkedIn.
 
-### 
+### Por que um segmento está preso no status BUILDING e não é atualizado?
 
 Um segmento é considerado não utilizado e definido como ARQUIVADO depois de não ser usado continuamente por 30 dias em um rascunho ou em uma campanha ativa. Por esse motivo, um segmento pode parecer "preso" em COMPILANDO quando as atualizações são transmitidas para um segmento ARQUIVADO, empurrando-o para o estado COMPILANDO e, logo antes de ser arquivado novamente, novas atualizações são transmitidas para o segmento não utilizado.
 
