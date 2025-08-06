@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Remerge](https://www.remerge.io/) é criada para o redirecionamento de apps em larga escala, oferecendo ferramentas para segmentar públicos do app e redirecionar usuários de forma eficiente.
 
-
+_Essa integração é mantida pela Remerge._
 
 ## Sobre a integração
 
