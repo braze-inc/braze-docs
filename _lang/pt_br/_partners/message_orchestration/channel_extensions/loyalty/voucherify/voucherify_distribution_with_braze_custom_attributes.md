@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A integração com a Braze permite enviar códigos Voucherify nas suas mensagens da Braze. Este artigo de referência aborda como usar os atributos personalizados do Braze com as distribuições do Voucherify.
 
-
+_Essa integração é mantida pela Voucherify._
 
 {% alert tip %}
 Antes de usar os atributos personalizados do Braze nas distribuições do Voucherify, é necessário adicionar seus usuários do Braze ao dashboard do Voucherify. Você pode usar o conteúdo conectado da Braze para sincronizar usuários ou importar seus clientes por CSV ou API. Visite [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) para saber mais.
