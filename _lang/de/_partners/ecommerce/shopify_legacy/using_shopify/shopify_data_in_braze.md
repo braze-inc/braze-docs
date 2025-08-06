@@ -14,7 +14,7 @@ page_order: 1
 
 Nachdem die Installation der App abgeschlossen ist, erstellt Braze automatisch Ihren Webhook und die ScriptTag Integration mit Shopify. In der folgenden Tabelle finden Sie weitere Informationen dazu, wie die unterstützten Shopify Events an angepasste Events und angepasste Attribute von Braze angepasst werden.
 
-{% multi_lang_include alerts.md alert='Shopify Verwerfung' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Unterstützte Shopify Ereignisse
 
