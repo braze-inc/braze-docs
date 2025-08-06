@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Bluedot](https://bluedot.io/) é uma plataforma de localização que fornece recursos precisos e simples de geofencing para seus apps. Use o SDK da Bluedot para enviar mensagens mais inteligentes, automatizar check-ins de pedidos móveis, otimizar fluxos de trabalho e criar experiências sem atrito. 
 
-
+_Esta integração é mantida pela Bluedot._
 
 ## Sobre a integração
 
