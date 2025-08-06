@@ -50,7 +50,7 @@ Cuando la integración se haya configurado correctamente, sólo podrá crear cam
 
 ## Flujo de datos a Braze e identificadores compatibles
 
- 
+Los datos fluirán de Zeotap a Braze utilizando el [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Los siguientes puntos resumen el flujo de datos:
 
 1. Zeotap envía atributos de perfil de usuario, atributos personalizados, eventos personalizados y campos de compra.
 2. Se asignan todos los campos relevantes del Catálogo Zeotap a los campos Braze en la pestaña **Datos a enviar**.
@@ -64,7 +64,7 @@ Después de aplicar filtros o añadir una condición para sus usuarios en Sympho
 
 #### Añadir nuevo destino
 Realice los siguientes pasos para añadir un nuevo destino:
-1. 
+1. Selecciona **Añadir nuevo destino**.
 2. Busca **Braze**.
 3. Añada el **Nombre del Cliente**, la **Clave API** y la **Instancia** y guarde el destino.
 
