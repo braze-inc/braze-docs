@@ -46,7 +46,7 @@ El conector HTTP personalizado está actualmente en fase beta. Si te interesa co
 4. En **Credenciales**, introduce la siguiente información que anotaste en [el Paso 1](#step-1-create-a-currents-source):
 - La URL de la API como **punto final**
 - La clave de escritura como **token portador**<br><br>![Secciones para introducir los detalles de la integración y las credenciales.][4]<br><br>
-5. <br><br>![La pestaña "Configuración general" con una sección para seleccionar eventos de interacción de mensajes.][5]
+5. Selecciona los eventos de interacción de mensajes que quieres enviar a Zeotap.<br><br>![La pestaña "Configuración general" con una sección para seleccionar eventos de interacción de mensajes.][5]
 6. Selecciona **Lanzar Corriente** para guardar los cambios y empezar a enviar eventos a Zeotap.
 
 {% alert important %}
