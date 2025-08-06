@@ -72,7 +72,7 @@ Stellen Sie zum Beispiel alle Nutzer:innen zusammen, die Ihren Shop innerhalb de
 
 Das folgende Beispiel zeigt, wie Sie eine Aktion durchführen, um Nutzer:innen in der Nähe mit einem digitalen Angebot in den Shop zu locken. 
 
-![Ein Android-Bild einer Connected-Content-Push-Nachricht, die "Neue In Store Deals, Walmart und Targeting in Ihrer Nähe" anzeigt.][1]{: style="float:right;max-width:30%;border:0;"}
+![Ein Android-Bild einer Connected-Content-Push-Nachricht, die "Neue In Store Deals, Walmart und Targeting in Ihrer Nähe" anzeigt.]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 Um loszulegen, benötigen Sie Ihren Radar API-Schlüssel, den Sie in Ihren Anfrage-URLs verwenden können.
 
@@ -184,4 +184,3 @@ In der [Dokumentation von Radar](https://radar.io/documentation/api) finden Sie 
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/radar_example.png %}
