@@ -12,7 +12,7 @@ page_order: 3
 
 > Braze empfängt Signale von Ihren Shopify-Kunden durch deren On-Site-Verhalten und durch Abhören von Shopify-Webhooks, die Sie im Rahmen Ihrer Integration konfiguriert haben. Bei Shopify-Websites, die nicht ohne Kopfzeile arbeiten, hilft Braze beim Abgleich der Nutzer:innen auf der Kassenseite. Für Shopify-Websites ohne Kopfzeile referenzieren Sie auf unsere Integrationsanleitung, wie Sie [Nutzer:innen aus der Kasse abgleichen]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#headless-checkout) können.
 
-{% multi_lang_include alerts.md alert='Shopify Verwerfung' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Erfassen von Informationen für Nutzer:innen-Profile 
 
