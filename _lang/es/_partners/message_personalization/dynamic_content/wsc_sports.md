@@ -12,7 +12,7 @@ search_tag: Partner
 
 > La plataforma [WSC Sports][1] genera vídeos deportivos personalizados para cada plataforma digital y cada aficionado al deporte, de forma automática y en tiempo real. 
 
-
+_Esta integración es mantenida por WSC Sports._
 
 ## Sobre la integración
 
