@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [optilyz][1] es una plataforma de automatización de correo directo que le permite realizar campañas de correo directo más centradas en el cliente, sostenibles y rentables. 
 
-
+_Esta integración está mantenida por optilyz._
 
 ## Sobre la integración
 
