@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Adikteev](https://www.adikteev.com/churn-prediction) é um mecanismo de retenção de usuários que combina a previsão de churn com o redirecionamento de aplicativos full-service.
 
-
+_Essa integração é mantida por Adikteev._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ A integração entre o Braze e a Adikteev permite aumentar a retenção de usuá
 | --- | --- |
 | Conta da Adikteev | É necessário ter uma conta Adikteev para aproveitar essa parceria. |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com a permissão `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **APIs e identificadores**. |
-| Ponto de extremidade REST do Braze | [Seu URL do ponto de extremidade REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Seu endpoint dependerá do URL do Braze para sua instância. |
+| Ponto de extremidade REST do Braze | [Sua URL de endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
@@ -38,7 +38,7 @@ Refinamento de seus segmentos de público com base no risco de churn.<br> Os nom
 {% tab Direcionamento de mensagens %}
 Personalização de suas campanhas de mensagens do Braze com base no risco de churn dos destinatários.
 
-
+![Uma captura de tela mostrando um exemplo de como usar um atributo personalizado enviado pelo Adikteev como um filtro de direcionamento de campanha.]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 
