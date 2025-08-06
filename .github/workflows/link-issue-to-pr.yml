@@ -1,8 +1,10 @@
+# Links pull requests to matching issues when PR titles contain one or more [BD-####] tags.
 name: Link PR to Matching Issue
 
 on:
   pull_request:
-    types: [opened, edited, synchronize]
+    # Add more types if needed, but only the minimum required for each job in the workflow.
+    types: [opened, edited, synchronize]  # 'edited' covers title/body changes
 
 jobs:
   link-issue:
@@ -20,39 +22,23 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const pr = context.payload.pull_request;
+            const prTitle = pr.title;
+
+            // Find all [BD-####] tags in the PR title
             const matches = [...prTitle.matchAll(/\[BD-(\d+)\]/g)];
-            if (matches.length === 0) return;
-
-            for (const m of matches) {
-              const tag = `[BD-${m[1]}]`;
-
-              // Step 1 – find the matching open issue
-              const { data: issues } = await github.rest.issues.listForRepo({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                state: "open"
-              });
-
-              const matchedIssue = issues.find(issue => issue.title.includes(tag));
-              if (!matchedIssue) continue;
-
-              // Step 2 – check existing comments
-              const { data: comments } = await github.rest.issues.listComments({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pr.number,
-              });
-
-              const alreadyCommented = comments.some(comment =>
-                comment.body.includes(`Fixes #${matchedIssue.number}`)
-              );
-              if (alreadyCommented) continue;
-
-              // Step 3 – post the comment
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pr.number,
-                body: `Fixes #${matchedIssue.number}`
-              });
+            if (matches.length === 0) {
+              console.log("No [BD-####] tags found in PR title");
+              return;
             }
+
+            // Fetch open issues once
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open"
+            });
+
+            // Fetch existing PR comments once
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
