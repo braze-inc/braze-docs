@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Peak](https://platform.peak.ai/), uma plataforma de inteligência de decisão, é um sistema de ponta a ponta onde a inteligência de decisão é a aplicação comercial de IA para melhorar a tomada de decisões empresariais, aumentando a receita e os lucros.
 
-
+_Essa integração é mantida pela Peak._
 
 ## Sobre a integração
 
