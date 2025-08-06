@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A Transcend é uma empresa de infraestrutura de privacidade de dados que simplifica o processo para que as empresas forneçam aos usuários o controle sobre seus dados, atendendo automaticamente às solicitações dos titulares dos dados dentro das empresas em todos os seus sistemas de dados e fornecedores. 
 
-
+_Essa integração é mantida pela Transcend._
 
 ## Sobre a integração
 
