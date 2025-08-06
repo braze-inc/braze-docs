@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [SalesWings][1] é um complemento de perfil de leads B2B SaaS desenvolvido para equipes de marketing e vendas, que ajuda a gerenciar a qualificação de leads e contas por meio de pontuação e classificação de leads, insights e alertas de vendas, alinhamento de marketing e relatórios de atribuição B2B, juntamente com uma integração estreita com o Salesforce CRM.
 
-
+_Essa integração é mantida pela SalesWings._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ SalesWings permite que as equipes de marketing e os gerentes de operações de m
 | ----------- | ----------- |
 | Conta SalesWings | É necessária uma conta [SalesWings][1] para aproveitar esta parceria. |
 | chave da API REST Braze | Uma chave da API REST da Braze com permissões `users.export.ids`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][2]. Seu endpoint dependerá da URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][2] Seu endpoint dependerá da URL do Braze para sua instância. |
 | Segment.com conta (opcional) | Se você é um usuário do Segment.com, é possível enviar todos os dados de engajamento e perfis de leads e identificar eventos via Segment.com para a criação de perfis de leads. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
