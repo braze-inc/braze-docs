@@ -42,9 +42,12 @@ jobs:
             const matchedIssue = issues.find(issue =>
               issue.title.includes(`[${tag}]`)
             );
-            core.info(`matching issue found? ${matchedIssue ? "yes" : "no"}`);
-            if (!matchedIssue) return;
 
+            const issueFound = !!matchedIssue;
+            core.info(`matching issue found? ${issueFound ? "yes" : "no"}`);
+            if (!issueFound) return;
+
+            core.info("comment posted? starting");
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
