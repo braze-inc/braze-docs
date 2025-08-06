@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Toovio](https://toovio.com/) é uma empresa de dados como serviço alimentada por inteligência artificial que o ajuda a descobrir seus dados acionáveis e a usar os elementos mais importantes para gerar resultados incrementais com base em objetivos predefinidos.
 
-
+_Esta integração é mantida pela Toovio._
 
 ## Sobre a integração
 
