@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Transifex permite una localización robusta en toda su base de usuarios, sin importar el idioma.
 
-
+_Esta integración está mantenida por Transifex._
 
 ## Sobre la integración
 
