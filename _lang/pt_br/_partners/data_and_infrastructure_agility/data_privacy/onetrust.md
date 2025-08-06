@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [OneTrust](https://www.onetrust.com/) é um provedor de software de privacidade e segurança que fornece a visibilidade necessária para entender melhor seu cenário de confiança, ações para aproveitar insights poderosos e automação para manter sua empresa à frente da concorrência. 
 
-
+_Essa integração é mantida pela OneTrust._
 
 ## Sobre a integração
 
