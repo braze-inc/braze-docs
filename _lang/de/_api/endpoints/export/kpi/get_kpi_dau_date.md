@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt den Endpunkt Export täglich aktive Nutz
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `kpi.dau.data_series`.
 
-## Rate-Limit
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
