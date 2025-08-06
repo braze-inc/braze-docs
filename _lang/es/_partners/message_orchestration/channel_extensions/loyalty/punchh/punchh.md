@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Punchh](https://punchh.com/) es una plataforma de fidelización y compromiso líder del sector que permite a las marcas ofrecer programas omnicanal de fidelización de clientes tanto en la tienda como digitalmente. 
 
-
+_Esta integración está mantenida por Punchh._
 
 ## Sobre la integración
 
@@ -53,11 +53,11 @@ La integración de Braze y Punchh permite sincronizar los datos para regalos y f
 
 Punchh ofrece varios puntos finales a disposición de los clientes de Braze para ayudar a añadir ID externos a la plataforma Punchh utilizando los siguientes puntos finales de la API de Punchh. Una vez añadidos los ID externos, cree un adaptador en Punchh, proporcione sus credenciales de Braze y seleccione los eventos que desea sincronizar. A continuación, puede tomar el ID de segmento de Punchh y utilizarlo para crear un webhook de Punchh para activar la sincronización de clientes en un recorrido de Canvas.
 
- 
--   
--   
+Ten en cuenta que Punchh `user_id` y Braze `external_id` deben estar disponibles en cualquiera de las dos plataformas para que la integración se sincronice correctamente. 
+- Los eventos enviados desde Punchh a Braze incluirán el `external_id` de Braze como identificador. Si Punchh está configurado para utilizar el `external_source_id`, ese valor se establecerá como Braze `external_id`. De lo contrario, la integración predeterminará la configuración de Punchh `user_id` como Braze `external_id`.
+- Para enviar webhooks de Braze a Punchh, la dirección `user_id` de Punchh debe estar disponible en el perfil de usuario de Braze. Si no se utiliza Punchh `user_id` como el `external_id` de Braze, debe establecerse como atributo personalizado "punchh_user_id". 
 
-### Paso 1: 
+### Paso 1: Configurar puntos finales de ingestión de ID externos (opcional)
 
 Los ID externos de Braze pueden añadirse utilizando los siguientes puntos finales para usuarios nuevos y existentes de Punchh.
 
