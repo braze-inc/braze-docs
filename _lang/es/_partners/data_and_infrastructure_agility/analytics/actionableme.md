@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [actionable.me][2], desarrollado por el equipo de Massive Rocket, una agencia de datos y CRM, es un enfoque estandarizado y automatizado para ejecutar programas de CRM, que proporciona herramientas y procesos diseñados para que los clientes de Braze obtengan valor de forma rápida, consistente y predecible. 
 
-
+_Esta integración está mantenida por actionable.me._
 
 ## Sobre la integración
 
