@@ -1,22 +1,22 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: "Configuração do pipeline de eventos ETL"
+article_title: Configuração do pipeline de eventos ETL do Snowflake
 page_order: 2
-description: ""
+description: "Esta página de parceiro oferece um exemplo de configuração de uma consulta de cliques de e-mail para referência ao configurar suas próprias consultas."
 page_type: partner
 search_tag: Partner
 
 ---
 
-# 
+# Configuração do pipeline de eventos ETL
 
-> 
+> Esta página de parceiro oferece um exemplo de configuração de uma consulta de cliques de e-mail para referência ao configurar suas próprias consultas.
 
+Você pode usar essa consulta de cliques em e-mails para analisar as interações com e-mails específicos em suas campanhas e Canvas do Braze.
 
+## Configure esta consulta
 
-## 
-
-
+Crie um banco de dados para `BRAZE` e, se não houver nenhum, crie um banco de dados para `BRAZE_CURRENTS;`:
 
 ```sql
 use schema BRAZE_CURRENTS.public;
@@ -32,7 +32,7 @@ alter stage braze_currents.public.braze_data set file_format = braze_currents.pu
 show stages;
 ```
 
-
+Use o seguinte comando para criar sua tabela:
 
 ```sql
 CREATE TABLE
@@ -58,7 +58,7 @@ CREATE TABLE
   );
 ```
 
-
+Use o seguinte comando para criar ou substituir seu pipe:
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -94,18 +94,18 @@ COPY INTO
 show pipes;
 ```
 
-## 
+## Faça mais com este exemplo de consulta
 
+Copie o endereço `notification_channel` da saída do comando anterior e use-o ao configurar as notificações do bucket S3.
 
-
-
+Sincronize manualmente do S3 para o Snowflake para o seguinte nome de canal fornecido:
 ```sql
 ALTER PIPE
   pipe_users_messages_email_click
   refresh ;
 ```
 
-
+Verifique o status do pipe, que mostrará quando a mensagem foi encaminhada do S3 para o Snowflake:
 ```sql
 SELECT
   SYSTEM$PIPE_STATUS(
@@ -113,7 +113,7 @@ SELECT
   )
 ```
 
-
+Por fim, mostre o histórico de cópias da tabela selecionando `*` de:
 ```sql
 table(braze_currents.information_schema.copy_history(table_name=>'users_messages_email_click', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
