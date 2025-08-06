@@ -232,7 +232,7 @@ La guía [Reporting Webhooks guide][7] ] de Regal incluye la lista completa de e
 
 ### Paso 3: Transforme los eventos Regal en eventos Braze
 
-
+La característica [Transformación de datos]({{site.baseurl}}/data_transformation) Braze te permite mapear los eventos Regal entrantes en el formato necesario para añadirlos como atributos, eventos o compras en Braze.
 
 1. Asigne un nombre a su transformación de datos. Se recomienda configurar una Transformación de Datos por webhook de evento.
 
