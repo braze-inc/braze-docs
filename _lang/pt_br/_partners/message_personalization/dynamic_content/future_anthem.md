@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Hino Futuro
 
-> O produto tudo-em-um da Future Anthem para a indústria de jogos com dinheiro real, Amplifier IA, oferece personalização de conteúdo, experiências em tempo real e públicos dinâmicos. 
+> O produto tudo-em-um da Future Anthem para a indústria de jogos com dinheiro real, Amplifier IA, oferece personalização de conteúdo, experiências em tempo real e públicos dinâmicos. O Amplifier IA funciona perfeitamente em esportes, cassinos e loterias, permitindo que os clientes aprimorem os perfis de jogadores do Braze com atribuições específicas do setor, como jogo favorito, time favorito, pontuação de engajamento, recomendação de próxima aposta, próxima aposta esperada e muito mais.
 
 {% alert important %}
 Este recurso está atualmente em Acesso Antecipado. Por favor, entre em contato com a equipe de sucesso do cliente da Future Anthem para começar.
@@ -102,7 +102,7 @@ Estes são os atributos personalizados do Braze disponíveis. Para informações
 | Subcategoria | Exemplo | Tipo de dado |
 | ------- | ----------- |----------- |
 | Pontuação de Risco | 0,5| Número |
-| Jogador Arriscado | Verdadeiro | Booleano |
+| Jogador Arriscado | Sim | Booleano |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
