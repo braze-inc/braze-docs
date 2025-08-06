@@ -11,7 +11,7 @@ search_tag: Partner
 partner_top_header: "Message Orchestration"
 
 valid_partner_list:
-- name: ""
+- name: Jacquard
   url: /docs/partners/jacquard/
 - name: Adjust
   url: /docs/partners/adjust/
@@ -25,23 +25,23 @@ valid_partner_list:
   url: /docs/partners/kochava/
 - name: Singular
   url: /docs/partners/singular/
-- name: ""
+- name: Contenido
   url: /docs/partners/contentful/
 - name: AppsFlyer
   url: /docs/partners/appsflyer/
 - name: Vizbee
   url: /docs/partners/vizbee/
-- name: ""
+- name: Adikteev
   url: /docs/partners/adikteev/
-- name: ""
+- name: Contentsquare
   url: /docs/partners/contentsquare/
 - name: Facebook
   url: /docs/partners/facebook/
 - name: Jampp
   url: /docs/partners/jampp/
-- name: ""
+- name: LiveRamp
   url: /docs/partners/liveramp/
-- name: ""
+- name: Looker
   url: /docs/partners/looker/
 - name: Quikly
   url: /docs/partners/quikly/
@@ -49,19 +49,19 @@ valid_partner_list:
   url: /docs/partners/remerge/
 - name: Alpaco
   url: /docs/partners/alpaco/
-- name: ""
+- name: Blayer
   url: /docs/partners/blayer/
-- name: ""
+- name: Dyspatch
   url: /docs/partners/dyspatch/
-- name: ""
+- name: Amor por correo electrónico
   url: /docs/partners/email_love/
-- name: ""
+- name: IAM Studio
   url: /docs/partners/iam_studio/
 - name: Knak
   url: /docs/partners/knak/
 - name: Sageflo
   url: /docs/partners/sageflo/
-- name: ""
+- name: SmarterSends
   url: /docs/partners/smartersends/
 - name: Stensul
   url: /docs/partners/stensul/
@@ -127,6 +127,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
-- name: ""
+- name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
