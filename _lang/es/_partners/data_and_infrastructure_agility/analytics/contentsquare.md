@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Contentsquare](https://contentsquare.com/) es una plataforma de análisis de la experiencia digital que permite una comprensión sin precedentes de la experiencia del cliente.
 
-
+_Esta integración es mantenida por Contentsquare._
 
 ## Sobre la integración
 
