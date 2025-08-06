@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Stripo](https://stripo.email/) es un creador de plantillas de correo electrónico de arrastrar y soltar que te ayuda a crear y diseñar correos electrónicos receptivos con elementos interactivos. Los usuarios de Stripo también pueden editar en HTML y decidir qué elementos mostrar u ocultar en los distintos dispositivos a través del editor de Stripo.
 
-
+_Esta integración está mantenida por Stripo._
 
 ## Sobre la integración
 
