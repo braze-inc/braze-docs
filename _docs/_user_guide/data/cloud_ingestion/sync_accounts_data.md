@@ -202,6 +202,55 @@ GO
 3. If you have network policies in place, you must give Braze network access to your Microsoft Fabric instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
+{% tab S3 %}
+
+For more details on setting up an S3 sync, see the [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations) page. 
+
+Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
+
+**Files should include the below fields:**
+| Field | Required | Description |
+| --- | --- |
+| `ID` | YES | ID of the Account to update or create |
+| `NAME` | YES | Name of the Account |
+|`PAYLOAD` | YES | This is a JSON string of the fields you want to sync to the user in Braze. |
+|`DELETED` | NO | Boolean indicating to delete the Account from Braze. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert note %}
+Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported. 
+{% endalert %}
+
+{% tabs %}
+{% tab JSON Accounts %}
+``` json  
+{"id":"s3-qa-0","name":"account0","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
+{"id":"s3-qa-1","name":"account1","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":true}
+{"id":"s3-qa-2","name":"account2","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":false}
+{"id":"s3-qa-3","name":"account3","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}```  
+{% alert important %}
+Every line in your source file must contain valid JSON, or the file will be skipped. 
+{% endalert %}
+{% endtab %}
+{% tab CSV Accounts with Delete  %}
+```plaintext  
+ID,NAME,PAYLOAD,DELETED
+85,"ACCOUNT_1","{""region"": ""APAC"", ""employees"": 850}",TRUE 
+1,"ACCOUNT_2","{""region"": ""EMEA"", ""employees"": 10000}",FALSE
+```
+{% endtab %}
+{% tab CSV Accounts without Delete  %}
+```plaintext  
+ID,NAME,PAYLOAD
+85,"ACCOUNT_1","{""region"": ""APAC"", ""employees"": 850}"
+1,"ACCOUNT_2","{""region"": ""EMEA"", ""employees"": 10000}"
+```
+{% endtab %}
+{% endtabs %}  
+
+
+
+{% endtab %}
 {% endtabs %}
 
 ## How the integration works
