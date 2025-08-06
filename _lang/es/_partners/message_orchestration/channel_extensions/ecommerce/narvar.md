@@ -34,7 +34,7 @@ Si te interesan otros tipos o canales de notificación, ponte en contacto con tu
 
 ## Detalles de la integración
 
-
+Para cada evento de notificación, Narvar inicia una solicitud al punto final Braze [`/messaging/send`]({{site.baseurl}}/api/endpoints/messaging) para entregar un mensaje push a cada consumidor con adhesión voluntaria.
 
 Narvar es responsable de configurar las cargas útiles de notificación push para cada mensaje. Actualmente, Narvar no tiene una interfaz de diseño integrada para notificaciones push, por lo que su equipo colaborará con el tuyo para determinar y definir los requisitos de la carga útil. Estas cargas útiles pueden personalizarse en la misma medida que las que se envían a través de tu propio sistema, incluida la compatibilidad con marcadores de posición de contenido variable, como datos de pedidos y detalles de consumidores.
 
