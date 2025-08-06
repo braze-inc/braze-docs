@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Wyng][0] facilita la creación de experiencias digitales interactivas (es decir, cuestionarios, centros de preferencias, promociones) que atraen a los consumidores en los momentos adecuados, recopilan preferencias y otros datos de terceros y personalizan en tiempo real.
 
-
+_Esta integración está mantenida por Wyng._
 
 ## Sobre la integración
 
