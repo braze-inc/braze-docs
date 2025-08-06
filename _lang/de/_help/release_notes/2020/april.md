@@ -11,7 +11,7 @@ description: "Dieser Artikel enthält Versionshinweise für April 2020."
 
 Movable Ink bietet Braze-Kunden die Möglichkeit, intelligente kreative Features wie Countdown-Timer, Umfragen und Rubbellose in ihren Push-, In-App-Nachrichten- und Content-Card-Kampagnen zu verwenden. Movable Ink und Braze ermöglichen einen umfassenderen Ansatz für dynamische datengestützte Nachrichten, die Nutzer:innen mit Echtzeit-Elementen über die Dinge versorgen, die wichtig sind.
 
-Beginnen Sie mit der [Integration von Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) in Ihre Kampagnen!
+Beginnen Sie mit der [Integration von Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/) in Ihre Kampagnen!
 
 ## Intelligentes Timing
 
@@ -41,6 +41,5 @@ Die [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templat
 
 Wenn Sie in Braze eine E-Mail-Nachricht erstellen, können Sie jetzt die Absenderadresse der Nachricht im Abschnitt **Sendeinfo** der E-Mail-Komposition personalisieren. Sie können jeden unserer unterstützten [Tags für die Personalisierung]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) verwenden
 
-![Personalisierte Absenderadresse][0]{: style="max-width:80%"}
+![Personalisierte Absenderadresse]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}
