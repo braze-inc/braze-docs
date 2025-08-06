@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Lexer][6], una plataforma de datos de clientes creada para el comercio minorista, ayuda a las marcas a incrementar sus ventas mediante la mejora de la experiencia del cliente, combinando un sólido enriquecimiento de datos con las herramientas más intuitivas y el asesoramiento de expertos.
 
-
+_Esta integración está mantenida por Lexer._
 
 ## Sobre la integración
 
