@@ -103,9 +103,9 @@ Aquí encontrarás el punto final REST y generarás tu clave de importación de 
 
 ### Paso 3: Configurar Braze en el panel de AppsFlyer
 
-1. En AppsFlyer, vaya a la página de **socios integrados** en la barra de la izquierda. 
+1. En AppsFlyer, vaya a la página de **socios integrados** en la barra de la izquierda. A continuación, busca **Braze** y selecciona el logotipo de Braze para abrir una ventana de configuración.
 2. Dentro de la pestaña **Integración**, active **Activar socio**.
-3.  
+3. Proporciona la clave de importación de datos y el punto final REST que encontraste en el panel Braze. 
 4. Desactive la **privacidad avanzada** y guarde la configuración.
 
 Encontrará más información sobre estas instrucciones en la documentación de [AppsFlyer][16].
