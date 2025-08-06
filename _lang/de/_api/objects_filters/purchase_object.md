@@ -43,8 +43,8 @@ Ein Kauf-Objekt ist ein Objekt, das über die API übergeben wird, wenn ein Kauf
 
 - [Externe Benutzer-ID]({{site.baseurl}}/api/basics/#user-ids)
 - [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
-- [ISO 4217 Währungscode Wiki][20]
-- [ISO 8601 Zeitcode Wiki][22]
+- [ISO 4217 Währungscode Wiki](http://en.wikipedia.org/wiki/ISO_4217)
+- [ISO 8601 Zeitcode Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
 ## ID des Produkts kaufen
 
@@ -177,5 +177,3 @@ Anhand des angegebenen Beispiels können wir sehen, dass jemand einen Rucksack m
 Wenn Sie Eigenschaften zur Segmentierung speichern, speichern und tracken möchten, müssen Sie diese als angepasste Attribute einrichten. Dies kann mit Hilfe von [Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) geschehen, die es Ihnen ermöglichen, Targeting auf der Grundlage von angepassten Events oder Kauf-Events durchzuführen, die für die Lifetime des jeweiligen Benutzerprofils gespeichert wurden.
 
 
-[20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Währungscode"
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
