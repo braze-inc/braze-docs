@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Taxi for Email](http://taxiforemail.com/) es una herramienta de marketing por correo electrónico en línea que ofrece un editor de arrastrar y soltar de correo electrónico visual e intuitivo. Taxi anima a los equipos a colaborar fácilmente en campañas de correo electrónico, permitiendo a redactores y editores el acceso y los recursos que necesitan para crear correos electrónicos, todo ello sin código.
 
-
+_Esta integración la mantiene Taxi for Email._
 
 ## Sobre la integración
 
