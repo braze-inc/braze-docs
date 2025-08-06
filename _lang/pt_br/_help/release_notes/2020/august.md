@@ -23,11 +23,11 @@ Em determinados eventos de engajamento com mensagens do Currents, foram adiciona
 
 ## Parceria com a Amazon Personalize
 
-O Amazon Personalize usa machine learning para ajudar a criar recomendações de alta qualidade para seu site e aplicativos. O Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações de produtos e conteúdos personalizados em tempo real e promoções de marketing direcionadas. Para saber mais, consulte nossa documentação do [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/).
+O Amazon Personalize usa machine learning para ajudar a criar recomendações de alta qualidade para seu site e aplicativos. O Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações de produtos e conteúdos personalizados em tempo real e promoções de marketing direcionadas. Para saber mais, consulte nossa documentação do [Amazon Personalize]({{site.baseurl}}/partners/amazon_personalize/).
 
 ## Parceria Vizbee
 
-O Vizbee ativa a capacitação de todos os smartphones e TVs inteligentes em sua casa para trabalharem juntos como um dispositivo contínuo para proporcionar excelentes experiências ao usuário. O Vizbee ajuda a aproveitar os canais existentes de marketing para mobile app, como notificações, deep linkings e e-mails, para adquirir e engajar espectadores em todos os dispositivos de CTV (como Roku, FireTV, Samsung TV, LG TV etc.) Para saber mais, consulte nossa documentação do [Vizbee]({{site.baseurl}}/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/). 
+O Vizbee ativa a capacitação de todos os smartphones e TVs inteligentes em sua casa para trabalharem juntos como um dispositivo contínuo para proporcionar excelentes experiências ao usuário. O Vizbee ajuda a aproveitar os canais existentes de marketing para mobile app, como notificações, deep linkings e e-mails, para adquirir e engajar espectadores em todos os dispositivos de CTV (como Roku, FireTV, Samsung TV, LG TV etc.) Para saber mais, consulte nossa documentação do [Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/). 
 
 ## Parceria Bluedot
 
@@ -35,4 +35,4 @@ A Bluedot é uma plataforma local que fornece um geofencing preciso e direto par
 
 ## Parceria com a Iterate
 
-A Iterate facilita o aprendizado com seus clientes, oferecendo ferramentas de pesquisa inteligentes e fáceis de usar que se parecem com a sua marca. Para saber mais, consulte nossa documentação sobre o [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/). 
+A Iterate facilita o aprendizado com seus clientes, oferecendo ferramentas de pesquisa inteligentes e fáceis de usar que se parecem com a sua marca. Para saber mais, consulte nossa documentação sobre o [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/). 
