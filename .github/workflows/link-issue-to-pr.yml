@@ -20,19 +20,21 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const core = require("@actions/core");
+
             const pr = context.payload.pull_request;
             const prTitle = pr.title;
 
             const match = prTitle.match(/\[BD-(\d+)\]/);
-            if (!match) return;
+            const tag = match ? `BD-${match[1]}` : null;
+            core.info(`issue in title: ${tag || "None"}`);
+            if (!tag) return;
 
-            const tag = `BD-${match[1]}`;
-
-            // Check if PR already has 'fixes an issue' label
             const labels = pr.labels.map(label => label.name);
-            if (labels.includes("fixes an issue")) return;
+            const tagExists = labels.includes("fixes an issue");
+            core.info(`tag already exists? ${tagExists ? "yes" : "no"}`);
+            if (tagExists) return;
 
-            // Find matching open issue with same tag
             const { data: issues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -42,20 +44,23 @@ jobs:
             const matchedIssue = issues.find(issue =>
               issue.title.includes(`[${tag}]`)
             );
+            core.info(`matching issue found? ${matchedIssue ? "yes" : "no"}`);
             if (!matchedIssue) return;
 
-            // Comment on PR
+            // Add comment
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
               body: `Fixes #${matchedIssue.number}`
             });
+            core.info("comment posted? yes");
 
-            // Add label to mark it's been handled
+            // Add label to PR
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
               labels: ["fixes an issue"]
             });
+            core.info("tag added? yes");
