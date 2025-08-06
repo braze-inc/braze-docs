@@ -13,7 +13,7 @@ A Braze removeu o suporte ao Eclipse IDE devido ao fato de [o Google ter encerra
 {% endalert %}
 
 ## Etapa 1
-Em sua linha de comando, clone o [repositório GitHub da Braze para Android][03].
+Em sua linha de comando, clone o [repositório GitHub da Braze para Android](https://github.com/braze-inc/braze-android-sdk).
 
 ```bash
 $ git clone git@github.com:braze-inc/braze-android-sdk.git
@@ -26,16 +26,16 @@ Em Eclipse:
 
   - Acesse Arquivo > Importar.
 
-    ![Importação de arquivos][04]
+    ![Importação de arquivos]({{site.baseurl}}/assets/img_archive/file_import.png)
   - Selecione Android > Código Android existente no espaço de trabalho.
 
-    ![Importação para Android][05]
+    ![Importação para Android]({{site.baseurl}}/assets/img_archive/android_import.png)
   - Clique em "Navegar".
 
-    ![Navegar][06]
+    ![Navegar]({{site.baseurl}}/assets/img_archive/click_browse.png)
   - Verifique a pasta do projeto Braze UI e a opção "copy project into workspace" e clique em "Finish".
 
-    ![Selecione Android UI Project][07]
+    ![Selecione Android UI Project]({{site.baseurl}}/assets/img_archive/select_project_android.png)
 
 ## Etapa 3
 Faça referência ao Braze em seu próprio projeto.
@@ -43,10 +43,10 @@ Em Eclipse:
 
   - Clique com o botão direito do mouse em seu projeto e selecione "Propriedades".
 
-    ![Clique em Propriedades][08]
+    ![Clique em Propriedades]({{site.baseurl}}/assets/img_archive/click_properties.png)
   - Em "Android", clique em "Add..." (Adicionar...) na seção Library (Biblioteca) e adicione android-sdk-ui como uma biblioteca ao seu app.
 
-    ![Braze Add][09]
+    ![Braze Add]({{site.baseurl}}/assets/img_archive/add_appboy_ui.png)
 
 ## Etapa 4
 Resolver erros de dependência e corrigir o direcionamento da compilação.
@@ -55,10 +55,10 @@ Nesse momento, você poderá ver erros no código da Braze, porque suas dependê
 
    - Clique com o botão direito do mouse no projeto Braze UI e selecione Properties->Android para garantir que o direcionamento da compilação esteja definido para a versão atual das ferramentas de compilação do Braze.
 
-      ![Construir direcionamento][10]
+      ![Construir direcionamento]({{site.baseurl}}/assets/img_archive/build_target.png)
    - Clique com o botão direito do mouse no projeto Braze UI e selecione Propriedades->Java Build Path->Adicionar JARs... e adicione 'android-support-v4.jar' do aplicativo principal como uma biblioteca.
 
-      ![Suporte][11]
+      ![Suporte]({{site.baseurl}}/assets/img_archive/android_support_v4.png)
 
 ## Etapa 5
 
@@ -70,12 +70,3 @@ Adicione as peças finais.
 
   - Para a versão 1.7.0 ou superior do SDK, você precisará copiar "assets/fontawesome-webfont.ttf" do nosso projeto de biblioteca para o seu aplicativo. O Eclipse não inclui automaticamente a pasta de ativos das bibliotecas.
 
-[03]: https://github.com/braze-inc/braze-android-sdk "Repositório GitHub do Appboy para Android"
-[04]: {{site.baseurl}}/assets/img_archive/file_import.png
-[05]: {{site.baseurl}}/assets/img_archive/android_import.png
-[06]: {{site.baseurl}}/assets/img_archive/click_browse.png
-[07]: {{site.baseurl}}/assets/img_archive/select_project_android.png
-[08]: {{site.baseurl}}/assets/img_archive/click_properties.png
-[09]: {{site.baseurl}}/assets/img_archive/add_appboy_ui.png
-[10]: {{site.baseurl}}/assets/img_archive/build_target.png
-[11]: {{site.baseurl}}/assets/img_archive/android_support_v4.png
