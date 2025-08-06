@@ -36,19 +36,14 @@ The following is a `/users/track` example with a `pets` array. To capture the pr
 {
   "attributes": [
     {
-      "external_id": "user_id",
-      "pets": [
+      "external_id": "user123",
+      "purchases": [
         {
-          "id": 1,
-          "type": "dog",
-          "breed": "beagle",
-          "name": "Gus"
-        },
-        {
-          "id": 2,
-          "type": "cat",
-          "breed": "calico",
-          "name": "Gerald"
+          "item_name": "T-shirt",
+          "price": 19.99,
+          "purchase_time": {
+            "$time": "2020-05-28"
+          }
         }
       ]
     }
