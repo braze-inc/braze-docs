@@ -1,6 +1,6 @@
 ---
 nav_title: "Ejemplos de consultas"
-article_title: Consultas de ejemplo sobre el copo de nieve
+article_title: Consultas de ejemplo sobre Snowflake
 page_order: 1
 description: "Esta página de socio ofrece algunas consultas de ejemplo de posibles casos de uso como referencia a la hora de configurar sus consultas Snowflake."
 page_type: partner
