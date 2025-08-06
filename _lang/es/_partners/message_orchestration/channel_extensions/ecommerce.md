@@ -1,10 +1,10 @@
 ---
 nav_title: Comercio electrónico
-article_title: ""
+article_title: Socios de comercio electrónico
 page_order: 9
 
 page_type: landing
-description: ""
+description: "Esta página de destino enumera los socios de Braze (Alloys) que te permiten integrarte con su plataforma de comercio electrónico."
 
 layout: partner_page
 search_tag: Partner
@@ -20,6 +20,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
-- name: ""
+- name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---
