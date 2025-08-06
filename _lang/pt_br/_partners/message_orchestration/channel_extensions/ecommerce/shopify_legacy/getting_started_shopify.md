@@ -301,7 +301,7 @@ Confirme se sua integração SDK para Web inclui o seguinte:
 
 #### Configurando formulários do Shopify para reconciliação de usuários
 
-
+As marcas de comércio eletrônico provavelmente têm experiências em seu site da Shopify para capturar informações identificáveis dos clientes antes do checkout, como formulários de captura de e-mail.
 
 O SDK para Web rastreia o comportamento no site da Shopify e de usuários anônimos com o `device_id`. Para confirmar que os endereços de e-mail são adicionados ao perfil de usuário anônimo, adicione o seguinte a um boletim informativo ou formulário de captura de e-mail: 
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail) 
