@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Adikteev](https://www.adikteev.com/churn-prediction) es un motor de retención de usuarios que combina la predicción del abandono con servicios integrales de reorientación de aplicaciones.
 
-
+_Esta integración está mantenida por Adikteev._
 
 ## Sobre la integración
 
@@ -38,7 +38,7 @@ Afina tus segmentos de audiencia en función del riesgo de abandono.<br> Los nom
 {% tab Focalización de mensajes %}
 Personalización de tus campañas de mensajería Braze en función del riesgo de abandono de los destinatarios.
 
-
+![Una captura de pantalla que muestra un ejemplo de cómo utilizar un atributo personalizado enviado por Adikteev como filtro de segmentación de campaña.]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 
