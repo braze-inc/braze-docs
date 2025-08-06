@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Inkit][1] e a Braze ajudam organizações a gerar e distribuir documentos de forma segura, tanto em meio digital quanto por mala direta.
 
-
+_Esta integração é mantida pelo Inkit._
 
 ## Sobre a integração
 
