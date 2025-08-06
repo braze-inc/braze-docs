@@ -32,45 +32,45 @@ Com o compartilhamento de dados, nenhum dado real é copiado ou transferido entr
 
 Além disso, usando os recursos integrados de funções e permissões do Snowflake, o acesso aos dados compartilhados do Braze pode ser controlado e governado usando os controles de acesso já existentes para a sua conta do Snowflake e os dados nela contidos. O acesso pode ser restrito e monitorado da mesma forma que seus próprios dados.
 
-
+Para saber mais sobre o compartilhamento de dados do Snowflake, consulte [Introdução ao compartilhamento seguro de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
 ## Pré-requisitos
 
-
+Antes de poder usar esse recurso, você precisará concluir o seguinte:
 
 | Requisito | Descrição |
 | ----------- | ----------- |
-|  |  |
-| Conta Snowflake |  |
+| Acesso ao Braze | Para acessar esse recurso no Braze, você precisará entrar em contato com sua conta Braze ou com o gerente de sucesso do cliente. |
+| Conta Snowflake | Uma conta Snowflake com permissões `admin`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 
+## Configuração do compartilhamento seguro de dados
 
-   
+No Snowflake, o compartilhamento de dados ocorre entre um [provedor de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) e um [consumidor de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers). Nesse contexto, sua conta Braze é o provedor de dados porque cria e envia o compartilhamento de dados, ao passo que sua conta Snowflake é o consumidor de dados porque usa o compartilhamento de dados para criar um banco de dados. Para obter mais detalhes, consulte [Snowflake: Consumo de dados compartilhados](https://docs.snowflake.com/en/user-guide/data-share-consumers).
 
-### Etapa 1: 
+### Etapa 1: Enviar o compartilhamento de dados do Braze
 
-1. 
-2.  
+1. No Braze, acesse **Partner Integrations** > **Data Sharing (** **Integrações com parceiros** > **Compartilhamento de dados**).
+2. Insira os detalhes de sua conta Snowflake e o local. Para obter o localizador de sua conta, execute `SELECT CURRENT_ACCOUNT()` na conta de destinos.
 3. Se estiver usando um compartilhamento CRR, especifique o provedor de nuvem e a região.
-4.  
+4. Quando terminar, selecione **Create Datashare**. Isso enviará o compartilhamento de dados para sua conta do Snowflake.
 
-### Etapa 2: 
+### Etapa 2: Criar o banco de dados no Snowflake
 
-1. 
-2.  Por exemplo:
+1. Após alguns minutos, você deverá receber o compartilhamento de dados de entrada em sua conta do Snowflake.
+2. Usando o compartilhamento de dados de entrada, crie um banco de dados para visualizar e consultar as tabelas. Por exemplo:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. 
+3. Conceda privilégios para consultar o novo banco de dados.
 
 {% alert warning %}
-
+Se você excluir e recriar um compartilhamento no dashboard do Braze, deverá remover o banco de dados criado anteriormente e recriá-lo usando `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` para consultar o compartilhamento de entrada.
 {% endalert %}
 
 ## Uso e visualização
 
- No entanto, lembre-se de que os dados compartilhados são somente de leitura e só podem ser consultados, mas não modificados ou excluídos de forma alguma.
+Depois que o compartilhamento de dados for provisionado, será necessário criar um banco de dados a partir do compartilhamento de dados recebido, fazendo com que todas as tabelas compartilhadas apareçam na sua instância do Snowflake e possam ser consultadas como qualquer outro dado armazenado na sua instância. No entanto, lembre-se de que os dados compartilhados são somente de leitura e só podem ser consultados, mas não modificados ou excluídos de forma alguma.
 
 Semelhante ao Currents, você pode usar o compartilhamento seguro de dados do Snowflake para:
 
@@ -139,7 +139,7 @@ A velocidade, o desempenho e o custo de qualquer consulta executada nos dados s�
 
 ## Benchmarks do Braze
 
-
+Benchmarks, [uma ferramenta de dados criada pela Braze](https://www.braze.com/perspectives/benchmarks), permite que os clientes em potencial e clientes Braze vejam como eles se comparam aos principais participantes de seu setor, comparando suas métricas com os benchmarks do setor Braze.
 
 Os setores iniciais incluem:
 
