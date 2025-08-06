@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Carteira móvel
 config_only: true
 ---
