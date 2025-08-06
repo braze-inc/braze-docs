@@ -16,7 +16,7 @@ Tool:
 
 El tiempo que se tarda en poblar una audiencia depende del socio concreto. Todas las redes procesarán las solicitudes de Braze e intentarán emparejar a los usuarios. Este proceso suele durar entre 6 y 48 horas.
 
-
+Puedes consultar el intervalo de tiempo específico en la sección Solución de problemas de la documentación de cada socio de Audience Sync.
 
 ### ¿Qué tipo de datos propios puedo utilizar en mi Audience Sync?
 
@@ -26,21 +26,21 @@ Por ejemplo, cuando configure una Sincronización de Audiencia con Facebook, pod
 
 Es importante tener en cuenta que los campos de usuario que puede seleccionar para sincronizar se correlacionan con los atributos estándar de Braze y los ID de publicidad móvil. Debe asegurarse de que transmite adecuadamente estos datos a través de nuestros SDK o API. 
 
-### 
+### ¿Qué ocurre cuando se procesan mis datos para enviarlos a cada socio de Audience Sync?
 
 Los datos que selecciones para enviar a tu destino de Sincronización de Audiencias estarán normalizados. Cada socio puede tener especificaciones diferentes para la normalización de datos en función de los requisitos de su API, así que revisa el punto final específico de cada socio para obtener más detalles.
 
 Además, Braze aplicará hash a todos los datos antes de sincronizar a los usuarios con nuestros socios de Audience Sync, garantizando que toda la información de identificación personal se somete a hash SHA256.
 
-### 
+### ¿Por qué puedo seleccionar varios identificadores en un paso para algunos socios, pero sólo puedo seleccionar un identificador para otros?
 
- 
+Esto lo determinan los métodos de integración del socio, y no lo controla Braze. Algunos socios (como Meta) permiten sincronizar varios identificadores, y otros socios (como Google) sólo permiten sincronizar un único identificador con un usuario en un momento dado.
 
-### 
+### ¿Cómo vuelvo a conectar mi integración?
 
-  
+Si el usuario anterior que conectó la integración ya no está en tu empresa, tendrás que actualizar la integración con el nuevo usuario. Puedes hacerlo seleccionando **Confirmar**. Ten en cuenta que esto puede interrumpir los Lienzos activos.
 
-   
+El usuario que se vuelva a conectar debe tener acceso de lectura y escritura a todas las audiencias para que los usuarios puedan sincronizarse correctamente con los socios. Comprueba que el usuario que está reconectando la integración tiene acceso a las mismas cuentas de anuncios y audiencias. No debería ser necesario editar ningún paso en Canvas existente. 
 
 ### ¿Cuáles son los errores más comunes que pueden producirse al crear y gestionar mis Audience Syncs?
 
