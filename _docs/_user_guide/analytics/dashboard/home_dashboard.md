@@ -93,6 +93,7 @@ The following example demonstrates how MAU calculations work through different u
 | 2 | Identify **Anonymous User 1** (profile converts to identified) | 0 | 1 |
 | 3 | Create **Anonymous User 2** and log a session | +1 | 2 |
 | 4 | Identify **Anonymous User 2** as the **same person** as User 1 (User 2 becomes orphaned) | –1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 MAU snapshots are calculated once per day and never change retroactively. In this example, the MAU count for the day after step 3 permanently remains 2, even though User 2 later becomes orphaned. However, the MAU count for subsequent days reflects only the non-orphaned user. Within any 30-day window, this flow ultimately consumes 1 MAU since only one distinct, non-orphaned user remains.
 
