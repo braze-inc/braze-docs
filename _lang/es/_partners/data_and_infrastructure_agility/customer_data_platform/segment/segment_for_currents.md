@@ -45,12 +45,12 @@ Es importante mantener actualizada la clave de escritura de Segment. Si las cred
 
 ### Paso 3: Exportar eventos de compromiso de mensajes
 
-A continuación, seleccione los eventos de compromiso de mensajes que desea exportar. Consulte la siguiente tabla de eventos y propiedades de exportación. 
+A continuación, seleccione los eventos de compromiso de mensajes que desea exportar. Consulte la siguiente tabla de eventos y propiedades de exportación. Todos los eventos enviados a Segmento incluirán el `external_user_id` del usuario como `userId` y el `braze_id` del usuario como `anonymousId`.
 
-
+Ten en cuenta que Braze sólo envía datos de eventos de usuarios sin `external_user_id` si está marcada la opción **Incluir eventos de usuarios anónimos**.
 
 {% alert important %}
- Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
+La exportación de usuarios anónimos está actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
 {% endalert %}
 
 ![Lista de todos los eventos de compromiso de mensajes disponibles en la página Segment Currents de Braze.][2]
