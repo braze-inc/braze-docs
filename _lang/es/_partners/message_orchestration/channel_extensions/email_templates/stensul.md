@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Stensul](https://stensul.com/) permite a los profesionales del marketing por correo electrónico crear fácilmente en Stensul mensajes de correo electrónico adaptados a los dispositivos móviles y a la marca, antes de enviarlos a Braze, en tiempo real, para la creación de campañas.
 
-
+_Esta integración está mantenida por Stensul._
 
 ## Sobre la integración
 
