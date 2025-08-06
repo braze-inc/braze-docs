@@ -17,7 +17,7 @@ Braze SDKs implement adaptive client-side rate limiting designed to protect both
 
 Braze SDKs use a token bucket algorithm for rate limiting. This approach allows for bursts of activity while maintaining long-term rate control. The token bucket mechanism works by:
 
-- **Token generation**: Tokens are added to the bucket at a steady rate
+- **Token generation**: Tokens are replenished to the bucket at a steady rate
 - **Request consumption**: Each SDK call consumes a token from the bucket
 - **Burst handling**: Short bursts of activity are allowed if tokens are available
 - **Rate control**: Long-term rate is controlled by the token generation rate
@@ -44,22 +44,29 @@ Because rate limits can be adjusted remotely to protect our network infrastructu
 
 ## Review your integration approach
 
-If you're experiencing rate limit issues, analyze your usage of SDK methods and their call frequency. For example:
+If you're experiencing rate limit issues, review your SDK integration and consider these do's and don'ts:
 
-- **`requestImmediateDataFlush()`**: Forces immediate data transmission
-- **`requestContentCardsRefresh()`**: Refreshes Content Cards from the server
-- **`refreshFeatureFlags()`**: Refreshes Feature Flags from the server
-- **`logCustomEvent()`**: Logs custom events
-- **`logPurchase()`**: Logs purchase events
+**DO:**
+- Track meaningful user actions and milestones
+- Refresh content only when necessary
+- Let the SDK handle batching automatically
+- Focus on events that provide value to your analytics
 
-When reviewing your integration, consider:
+**DON'T:**
+- Track every minor interaction or UI event
+- Refresh content on every user action (like scroll events)
+- Force immediate data transmission unless absolutely necessary
+- Call SDK methods in rapid succession without considering frequency
 
-1. **Event frequency**: Are you tracking meaningful actions or every interaction?
-2. **Refresh patterns**: Are you refreshing content when necessary or on every user action?
-3. **Batching strategy**: Are you letting the SDK handle batching automatically or frequently forcing requests?
+### Getting Help
 
 When contacting Support about rate limit issues, please provide:
-- Which SDK methods you're calling
+- Which networking SDK methods you're calling. In particular:
+  - **`requestImmediateDataFlush()`**: Forces immediate data transmission
+  - **`requestContentCardsRefresh()`**: Refreshes Content Cards from the server
+  - **`refreshFeatureFlags()`**: Refreshes Feature Flags from the server
+  - **`logCustomEvent()`**: Logs custom events
+  - **`logPurchase()`**: Logs purchase events
 - How frequently each method is being called
 - The context in which these calls are being made (e.g., scroll events, button clicks, etc.)
 - Any patterns in your app's user flow that might trigger excessive calls
