@@ -1,7 +1,7 @@
 ---
 nav_title: Antavo
 article_title: Antavo Loyalty Cloud
-description: ""
+description: "Este artigo de referência descreve a parceria entre a Braze e a Antavo, um programa de fidelidade de próxima geração que vai além de recompensar compras."
 alias: /partners/antavo/
 page_type: partner
 search_tag: Partner
@@ -11,19 +11,19 @@ search_tag: Partner
 
 > [A Antavo](https://antavo.com/) é um provedor de tecnologia de fidelidade SaaS de nível empresarial que cria programas de fidelidade abrangentes para promover o amor à marca e mudar o comportamento do cliente.
 
-
+_A integração é mantida pela Antavo._
 
 ## Sobre a integração
 
-A integração entre a Antavo e a Braze permite que você use dados relacionados ao programa de fidelidade para criar campanhas personalizadas e aprimorar a experiência do cliente. O Antavo oferece suporte à sincronização de dados de fidelidade entre as duas plataformas - essa é uma sincronização de dados unidirecional apenas, do Antavo para o Braze. 
+A integração entre a Antavo e a Braze permite que você use dados relacionados ao programa de fidelidade para criar campanhas personalizadas e aprimorar a experiência do cliente. O Antavo oferece suporte à sincronização de dados de fidelidade entre as duas plataformas - essa é uma sincronização de dados unidirecional apenas, do Antavo para o Braze. A integração suporta o campo `external_id` da Braze, que a Antavo usa para sincronizar o ID do membro de fidelidade.
 
 ## Pré-requisitos
 
 | Requisito          | Descrição                                                                                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |
 | Conta Antavo       | Para aproveitar essa parceria, é necessário ter uma conta [Antavo](https://antavo.com/) com a integração Braze ativada.                                                |
-| Chave da API REST do Braze   | <br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**.  |
-| Ponto de extremidade REST do Braze  | [Seu URL do ponto de extremidade REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Seu endpoint dependerá do URL do Braze para sua instância.                |
+| Chave da API REST do Braze   | Uma chave da API REST da Braze com as seguintes permissões: `users.track`, `events.list`, `events.data_series` e `events.get`.<br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**.  |
+| Ponto de extremidade REST do Braze  | [Sua URL de endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Seu endpoint dependerá do URL do Braze para sua instância.                |
 | Identificador do app Braze | A chave do identificador de seu app. <br><br>Para localizar essa chave no dashboard do Braze, vá para **Configurações** > **Chaves de API** e encontre a seção **Identificação**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -90,7 +90,7 @@ Visite o guia passo a passo para saber como configurar a sincronização dos [da
 
 ### Sincronização de eventos do programa de fidelidade
 
-Use eventos sincronizados do Antavo para inserir membros de fidelidade em telas Braze baseadas em ações. 
+Use eventos sincronizados do Antavo para inserir membros de fidelidade em telas Braze baseadas em ações. A integração pode sincronizar qualquer evento da Antavo (incluindo eventos de compra) que aparece na Braze como eventos personalizados.
 
 Visite o guia passo a passo para saber como configurar a sincronização do [evento de registro do programa de fidelidade](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!) e a sincronização do [evento de ganho de benefícios do programa de fidelidade](https://antavo.atlassian.net/wiki/spaces/AUM/pages/812056598/Braze#Use-case----Welcome-to-the-loyalty-program!).
 
