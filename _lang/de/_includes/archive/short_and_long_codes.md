@@ -1,14 +1,43 @@
 
-# Senden von Telefonnummern
+# SMS und RCS Absender
 
-Kurz- und Langvorwahlen sind die Telefonnummern, von denen aus Sie Nachrichten an Ihre Benutzer oder Kunden senden. Sie können 5- bis 6-stellige Shortcodes oder 10-stellige Langcodes sein. Jede Art von Code bietet spezifische Vorteile und alle Faktoren sollten berücksichtigt werden, bevor Sie sich entscheiden, ob Sie einen Kurzcode benötigen und welche Art von Kurzcode Sie zusätzlich zu dem Ihnen bereits zugewiesenen Langcode benötigen.
+> In diesem Artikel erfahren Sie mehr über die wichtigsten Konzepte für das Senden von Telefonnummern mit Braze.
 
-## Arten von sendenden Nummern
+## Arten von SMS- und RCS-Sendern
 
 {% tabs %}
-{% tab Shortcodes %}
+{% tab RCS-überprüfter Sender %}
 
-#### Shortcodes
+#### RCS-verifizierter Sender
+
+Ein RCS-verifizierter Sender ist eine visuelle Darstellung Ihrer Marke, die einen Markennamen, ein Logo, eine optionale Beschriftung und ein überprüftes Badge enthält. Dies verschafft dem RCS-verifizierten Sender einen erheblichen Vorteil gegenüber SMS Codes, wenn es darum geht, das Vertrauen der Nutzer:innen zu gewinnen.  
+
+![Ein Beispiel für einen RCS-überprüften Sender in einer RCS-Nachricht namens "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
+
+##### Details
+
+| Visuelle Komponenten | Zugang | Durchsatz | MMS aktiviert | 1-Weg vs. 2-Wege |
+| --- | --- | --- | --- | --- |
+| \- Markenname<br>\- Logo<br>\- optionale Beschriftung<br> \- überprüftes Badge | 4-6 Wochen für eine Bewerbung (kann variieren) | Ungefähr 100 Messages pro Sender pro Sekunde. Die tatsächliche Durchsatzrate kann je nach Anbieter, Netzwerkbedingungen und spezifischen Implementierungsdetails variieren. | Kein:e | 2-Wege |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+##### Pro und Kontra
+
+| Profis |
+| ---- |
+| **Vertrauen schaffen**<br> RCS-verifizierte Absender sind weitaus effektiver beim Aufbau von Nutzer:innen-Vertrauen als SMS Codes, da sie sehr visuell sind und vom Betreiber ausdrücklich überprüft werden. 
+<br><br>**Umfangreiche Features für Messaging**<br>RCS-überprüfte Absender ermöglichen den Versand von Nachrichten mit umfangreicheren Messaging-Funktionen als SMS, einschließlich Rich Media, wie Bilddateien und interaktive Buttons. |
+{: .reset-td-br-1}
+
+| Nachteile |
+| ---- |
+| **Neuheit und dynamischer Charakter des Marktes**<br> RCS ist ein relativ neues Protokoll, was bedeutet, dass sich die Netzabdeckung, die Zustellbarkeit und die Preise in den verschiedenen Regionen unterschiedlich schnell entwickeln. Die jüngste Zustimmung von Apple, RCS zu unterstützen, bedeutet jedoch, dass die große Mehrheit der Nutzer:innen von Smartphones nun über dieses Protokoll erreichbar ist. <br><br>**Höhere Kosten für Rich Messaging**<br> RCS-Nachrichten, die viele Rich Messaging-Funktionen nutzen, kosten tendenziell mehr pro Nachricht als SMS-Nachrichten. Das ist angesichts der Vorteile umfangreicher Features nicht überraschend, kann aber für Ihr Marketing-Budget von Bedeutung sein. |
+{: .reset-td-br-1}
+
+{% endtab %}
+{% tab SMS Shortcodes %}
+
+#### SMS Shortcodes
 
 Ein Kurzcode ist eine einprägsame 5- bis 6-stellige Sequenz, die es Absendern ermöglicht, Nachrichten mit höherer Geschwindigkeit zu versenden als lange Codes. Dies macht Short Codes perfekt für zeitkritische Sendungen mit hohem Volumen.
 
@@ -23,7 +52,7 @@ Ein Kurzcode ist eine einprägsame 5- bis 6-stellige Sequenz, die es Absendern e
 
 | Profis |
 | ---- |
-| **Geschwindigkeit und Skalierbarkeit**<br> Short Codes bieten Geschwindigkeit und Skalierbarkeit mit Übertragungsraten von 100 Segmenten pro Sekunde, 6.000 Segmenten pro Minute, 360 Tausend Segmenten pro Stunde und 1 Million Segmenten pro 2 Stunden. Kurzwahlnummern können aufgrund der Überprüfung, die während des Antragsverfahrens für Kurzwahlnummern erforderlich ist, so hohe Raten erreichen.<br><br>**MMS für einige Kurznummern aktiviert**<br>Einige Kurzwahlnummern unterstützen MMS, auch bekannt als Multimedia Message Service. Damit können Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden. Weitere Informationen über MMS bei Braze finden Sie unter [Über MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Geschwindigkeit und Skalierbarkeit**<br> Short Codes bieten Geschwindigkeit und Skalierbarkeit mit Übertragungsraten von 100 Segmenten pro Sekunde, 6.000 Segmenten pro Minute, 360 Tausend Segmenten pro Stunde und 1 Million Segmenten pro 2 Stunden. Kurzwahlnummern können aufgrund der Überprüfung, die während des Antragsverfahrens für Kurzwahlnummern erforderlich ist, so hohe Raten erreichen.<br><br>**MMS für einige Kurznummern aktiviert**<br>Einige Kurzwahlnummern unterstützen MMS, auch bekannt als Multimedia Message Service. Damit können Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden. Weitere Informationen über MMS bei Braze finden Sie unter [Über MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Nachteile |
@@ -32,9 +61,9 @@ Ein Kurzcode ist eine einprägsame 5- bis 6-stellige Sequenz, die es Absendern e
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Lange Codes %}
+{% tab SMS Langcodes %}
 
-#### Lange Codes
+#### SMS-Langcodes
 
 Eine lange Vorwahl ist eine Standardtelefonnummer, die zum Senden und Empfangen von Sprachanrufen und SMS-Nachrichten verwendet wird. Telefonnummern werden in der Regel als "lange Codes" (in vielen Ländern 10-stellige Nummern) bezeichnet, wenn man sie mit SMS-Kurznummern (5-6-stellige Nummern) vergleicht.
 
@@ -49,7 +78,7 @@ Eine lange Vorwahl ist eine Standardtelefonnummer, die zum Senden und Empfangen 
 
 | Profis |
 | ---- |
-| **Kann sofort zum Versenden von Nachrichten verwendet werden (für bestimmte Länder)**<br>Lange Codes sorgen für ein lokalisiertes und persönliches Kundenerlebnis, wenn Sie Nachrichten von Person zu Person versenden. Im Gegensatz zu SMS-Kurzcodes ist der Erwerb eines langen Codes in einigen Ländern ein recht schneller Prozess. (Für andere Länder dauert es genauso lange oder länger als ein Kurzcode.). Lange Codes können auch als Ausweichnummer festgelegt werden, wenn ein kurzer Code nicht funktioniert.<br><br>**Größere Verfügbarkeit weltweit**<br>Lange Codes sind in über 100 wichtigen Ländern weltweit verfügbar. Bitte wenden Sie sich an Ihren Customer Success Manager oder den [Braze-Support]({{site.baseurl}}/braze_support/), um eine Liste der verfügbaren Länder zu erhalten.<br><br>**MMS für bestimmte Länder aktiviert**<br>Unterstützt MMS, auch bekannt als Multimedia Message Service, so dass Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden können. Weitere Informationen über MMS bei Braze finden Sie in unserer Dokumentation [hier]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Kann sofort zum Versenden von Nachrichten verwendet werden (für bestimmte Länder)**<br>Lange Codes sorgen für ein lokalisiertes und persönliches Kundenerlebnis, wenn Sie Nachrichten von Person zu Person versenden. Im Gegensatz zu SMS-Kurzcodes ist der Erwerb eines langen Codes in einigen Ländern ein recht schneller Prozess. (Für andere Länder dauert es genauso lange oder länger als ein Kurzcode.). Lange Codes können auch als Ausweichnummer festgelegt werden, wenn ein kurzer Code nicht funktioniert.<br><br>**Größere Verfügbarkeit weltweit**<br>Lange Codes sind in über 100 wichtigen Ländern weltweit verfügbar. Bitte wenden Sie sich an Ihren Customer Success Manager oder den [Braze-Support]({{site.baseurl}}/braze_support/), um eine Liste der verfügbaren Länder zu erhalten.<br><br>**MMS für bestimmte Länder aktiviert**<br>Unterstützt MMS, auch bekannt als Multimedia Message Service, so dass Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden können. Weitere Informationen über MMS bei Braze finden Sie in unserer Dokumentation [hier]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Nachteile |
@@ -58,9 +87,9 @@ Eine lange Vorwahl ist eine Standardtelefonnummer, die zum Senden und Empfangen 
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Vanity-Shortcode %}
+{% tab SMS Vanity Shortcode %}
 
-#### Vanity-Shortcodes
+#### SMS Vanity Shortcodes
 
 Eine Vanity-Kurznummer ist eine 5-6-stellige Telefonnummer, die speziell von einer Marke ausgewählt wird. Vanity-Kurznummern haben ein Markenzeichen und sind für die Verbraucher leichter zu merken, sind aber in der Regel teurer. Zum Beispiel:
 - Die Gesundheitsbehörde von New York City hat einen Vanity Short Code `692-692`, der auf einer Telefontastatur NYC-NYC buchstabiert.
@@ -78,7 +107,7 @@ Eine Vanity-Kurznummer ist eine 5-6-stellige Telefonnummer, die speziell von ein
 
 | Profis |
 | ---- |
-| **Geschwindigkeit und Skalierbarkeit**<br> Short Codes bieten Geschwindigkeit und Skalierbarkeit mit Übertragungsraten von 100 Segmenten pro Sekunde, 6.000 Segmenten pro Minute, 360 Tausend Segmenten pro Stunde und 1 Million Segmenten pro 2 Stunden. Kurzwahlnummern können aufgrund der Überprüfung, die während des Antragsverfahrens für Kurzwahlnummern erforderlich ist, so hohe Raten erreichen.<br><br>**MMS aktiviert**<br>Unterstützt MMS, auch bekannt als Multimedia Message Service, so dass Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden können. Weitere Informationen über MMS bei Braze finden Sie unter [Über MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Geschwindigkeit und Skalierbarkeit**<br> Short Codes bieten Geschwindigkeit und Skalierbarkeit mit Übertragungsraten von 100 Segmenten pro Sekunde, 6.000 Segmenten pro Minute, 360 Tausend Segmenten pro Stunde und 1 Million Segmenten pro 2 Stunden. Kurzwahlnummern können aufgrund der Überprüfung, die während des Antragsverfahrens für Kurzwahlnummern erforderlich ist, so hohe Raten erreichen.<br><br>**MMS aktiviert**<br>Unterstützt MMS, auch bekannt als Multimedia Message Service, so dass Sie Nachrichten mit Multimedia-Inhalten (JPEG, GIF, PNG) an Mobiltelefone senden können. Weitere Informationen über MMS bei Braze finden Sie unter [Über MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Nachteile |
@@ -87,9 +116,9 @@ Eine Vanity-Kurznummer ist eine 5-6-stellige Telefonnummer, die speziell von ein
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Alphanumerische Absender-ID %}
+{% tab SMS Alphanumerische Sender ID %}
 
-#### Alphanumerische Absender-ID
+#### SMS alphanumerische ID des Absenders
 
 Absender-IDs sind die kurzen oder langen Codes, die oben in einer SMS-Nachricht erscheinen und angeben, von wem die Nachricht gesendet wurde. Wenn ein Benutzer mit einer Absender-ID nicht vertraut ist, kann er sich dafür entscheiden, diese Nachrichten ganz zu ignorieren. Durch die Verwendung von alphanumerischen Absender-IDs können Nutzer schnell erkennen, von wem sie Nachrichten erhalten, was die Öffnungsrate erhöht. 
 
@@ -111,7 +140,7 @@ Mit alphanumerischen Absender-IDs können Sie Ihren Firmennamen oder Ihre Marke 
 
 Für weitere Informationen zur alphanumerischen Absender-ID wenden Sie sich bitte an Ihren Customer-Success-Manager.
 {% endtab %}
-{% tab Gebührenfreie Nummer %}
+{% tab SMS-Gebührenfreie Nummer %}
 
 #### SMS-fähige gebührenfreie Nummer
 
@@ -141,10 +170,14 @@ Wenn der Durchsatz überschritten wird, können einige Nachrichten fehlschlagen.
 Abgesehen von diesen Unterschieden sollten Sie wissen, dass eine Marke in der Regel einen kurzen Code hat, aber mehrere lange Codes als Reserve, je nachdem, wie viele Empfänger sie plant, SMS zu versenden.
 
 {% alert important %}
-Sie fragen sich, was es mit gemeinsamen Kurzcodes auf sich hat? Wenn Sie mehr darüber erfahren möchten, warum wir empfehlen, von gemeinsam genutzten Kurzcodes Abstand zu nehmen, besuchen Sie das Thema in unseren [SMS-FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/).
+Sie fragen sich, was es mit gemeinsamen Kurzcodes auf sich hat? Wenn Sie mehr darüber erfahren möchten, warum wir empfehlen, von gemeinsam genutzten Kurzcodes Abstand zu nehmen, besuchen Sie das Thema in unseren [SMS-FAQ]({{site.baseurl}}/sms_faq/).
 {% endalert %}
 
-## Wie erhalte ich einen Kurzcode?
+## Telefonnummern für den SMS-Versand
+
+Kurz- und Langvorwahlen sind die Telefonnummern, von denen aus Sie Nachrichten an Ihre Benutzer oder Kunden senden. Sie können 5- bis 6-stellige Shortcodes oder 10-stellige Langcodes sein. Jede Art von Code bietet spezifische Vorteile und alle Faktoren sollten berücksichtigt werden, bevor Sie sich entscheiden, ob Sie einen Kurzcode benötigen und welche Art von Kurzcode Sie zusätzlich zu dem Ihnen bereits zugewiesenen Langcode benötigen.
+
+## Wie erhalte ich einen SMS Shortcode?
 
 Die Beantragung eines Kurzcodes kann ein langwieriger Prozess sein. Aber es kann sich lohnen! Wenn Sie einen Kurzcode wünschen, wenden Sie sich an Ihren Onboarding-Manager oder einen anderen Braze-Mitarbeiter und lassen Sie es ihn wissen. Nachdem Sie das getan haben, wird man einen Antrag für Sie stellen - man wird Sie nach einigen grundlegenden Informationen fragen, die Ihnen helfen, sich zu qualifizieren. Dann brauchen Sie nur noch zu warten!
 
@@ -152,7 +185,7 @@ Die Beantragung eines Kurzcodes kann ein langwieriger Prozess sein. Aber es kann
 
 Braze ist zwar für die eigentliche Beantragung des Kurzcodes verantwortlich, aber wir benötigen einige Informationen von Ihnen. Wir empfehlen Ihnen, diese Fragen durchzugehen, bevor Sie sich an Braze wenden. 
 
-Die Vorschriften verlangen, dass es Antworten auf alle Opt-In-, Opt-Out- und Hilfe/Info-Schlüsselwortantworten gibt. Sie müssen uns die spezifischen Nachrichtenflüsse (die Antworten, die Sie an Benutzer senden möchten, nachdem sie ein [Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/) gesendet haben) mitteilen, die Sie für die folgenden Situationen wünschen.
+Die Vorschriften verlangen, dass es Antworten auf alle Opt-In-, Opt-Out- und Hilfe/Info-Schlüsselwortantworten gibt. Sie müssen uns die spezifischen Nachrichtenflüsse (die Antworten, die Sie an Benutzer senden möchten, nachdem sie ein [Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/) gesendet haben) mitteilen, die Sie für die folgenden Situationen wünschen.
 
 | Benötigter Fluss | Typ | Beispiel |
 | ----------- | ---- | ------- |
@@ -170,11 +203,28 @@ Außerdem müssen Sie uns unabhängig von der von Ihnen verwendeten Nummer mitte
 Wenn Sie einen eigenen Kurzcode haben, wenden Sie sich während des Einführungsprozesses an Ihren Customer Success Manager, um die Migration oder Übertragung Ihres Kurzcodes zu besprechen. Die Kurzcodes müssen von Ihrem Customer Success Manager eingerichtet werden.
 {% endalert %}
 
-## Anwendung-zu-Person 10-stellige lange Codes (A2P 10DLC)
+## SMS Application-to-Person 10-Digit Long Codes (A2P 10DLC)
 
 A2P 10DLC bezieht sich auf ein System in den Vereinigten Staaten, das es Unternehmen ermöglicht, Nachrichten vom Typ Application-to-Person (A2P) über einen standardmäßigen 10-stelligen langen Code (10DLC) zu versenden. 10-stellige lange Codes wurden traditionell für den Person-to-Person (P2P)-Verkehr entwickelt, was dazu führte, dass Unternehmen durch einen begrenzten Durchsatz und verstärkte Filterung behindert wurden. Dieser Service trägt dazu bei, diese Probleme zu lösen, indem er die Zustellbarkeit von Nachrichten insgesamt verbessert, es Marken ermöglicht, Nachrichten in großem Umfang zu versenden, einschließlich Links und Aufforderungen zum Handeln, und hilft, die Verbraucher vor unerwünschten Nachrichten zu schützen. 
 
-Alle Kunden, die derzeit US-Langcodes haben und/oder verwenden, um an US-Kunden zu senden, müssen ihre Langcodes für 10DLC registrieren. Dieses Bewerbungsverfahren dauert 4-6 Wochen. Wenn Sie mehr über die Besonderheiten von 10DLC erfahren möchten und warum es erforderlich ist, besuchen Sie unseren speziellen [10DLC-Artikel]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
+Alle Kunden, die derzeit US-Langcodes haben und/oder verwenden, um an US-Kunden zu senden, müssen ihre Langcodes für 10DLC registrieren. Dieses Bewerbungsverfahren dauert 4-6 Wochen. Wenn Sie mehr über die Besonderheiten von 10DLC erfahren möchten und warum es erforderlich ist, besuchen Sie unseren speziellen [10DLC-Artikel]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
+
+## Häufig gestellte Fragen
+
+### Wie ist der Durchsatz von RCS Nachrichten im Vergleich zum Durchsatz von SMS Nachrichten?
+
+Der Durchsatz von RCS Nachrichten ist nicht so streng definiert oder vom Netzbetreiber kontrolliert wie bei SMS. Da RCS Nachrichten über Datennetzwerke und nicht über die traditionellen zellularen Signalisierungskanäle der SMS versendet werden, ist RCS nicht wie die SMS auf feste netzwerkbedingte Grenzen angewiesen. 
+
+### Unterstützen RCS-verifizierte Absender einen hohen Durchsatz an Nachrichten wie einen Shortcode?
+
+Nein. RCS-überprüfte Absender haben nicht die Möglichkeit, einen separaten hohen Durchsatz an Nachrichten zu erhalten.
+
+### Kann ein RCS-verifizierter Sender von mehreren Abo-Gruppen gemeinsam genutzt werden? 
+
+Nein. Ähnlich wie bei einem SMS-Sender kann ein RCS-verifizierter Sender nur mit einer einzigen Abo-Gruppe verwendet werden.
+
+### Kann ein SMS Fallback-Sender von mehreren Abo-Gruppen gemeinsam genutzt werden?
+
+Nein. SMS Fallback-Sender können nur mit einer einzigen Abo-Gruppe verwendet werden.
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
