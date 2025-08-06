@@ -26,7 +26,7 @@ A integração do Braze com o Shopify oferece uma solução poderosa para empres
 
 O Braze oferece duas opções de integração para os comerciantes do Shopify que são projetadas para atender às diversas necessidades das empresas de comércio eletrônico: **Integração padrão** e **integração personalizada**.
 
-{% multi_lang_include shopify.md seção='Guias de integração' %}
+{% multi_lang_include shopify.md section='Integration Tabs' %}
 
 ## Como a integração funciona
 
