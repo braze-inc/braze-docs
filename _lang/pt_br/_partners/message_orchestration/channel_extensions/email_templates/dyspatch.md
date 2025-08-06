@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Dyspatch][1] oferece um construtor de e-mail intuitivo de arrastar e soltar usado para criar e-mails bonitos, responsivos e envolventes sem precisar escrever código. Colabore com sua equipe para criar e aprovar e-mails na Dyspatch e, em seguida, exportá-los para uso na Braze, tudo em apenas algumas etapas! 
 
-
+_Essa integração é mantida pela Dyspatch._
 
 ## Sobre a integração
 
