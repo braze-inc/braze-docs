@@ -11,7 +11,7 @@ description: "Este artículo contiene las notas de la versión de enero de 2019.
 
 ## Tiempo de vida (TTL) para notificación push
 
-En tu cuenta, dentro de **Administrar configuración**, haz clic en la pestaña [Configuración de TTL push]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) para administrar el tiempo de duración de los intentos de reenvío en caso de que un dispositivo esté desconectado.
+En tu cuenta, dentro de **Administrar configuración**, haz clic en la pestaña [Configuración de TTL push]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) para administrar el tiempo de duración de los intentos de reenvío en caso de que un dispositivo esté desconectado.
 
 ## Lista blanca de IP de contenido conectado
 
@@ -21,6 +21,5 @@ Braze se complace en anunciar que, gracias a una serie de mejoras de infraestruc
 
 Hemos añadido la opción de que cualquier paso en Canvas se envíe inmediatamente.
 
-![Retraso en Canvas][1]
+![Retardo Canvas]({% image_buster /assets/img/canvas_delay_immediate.png %})
 
-[1]: {% image_buster /assets/img/canvas_delay_immediate.png %}
