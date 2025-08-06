@@ -59,7 +59,7 @@ Para saber mais sobre o Stories, a API de dados de clientes da Movable Ink e com
 #### Etapa 1c: configure sua carga útil
 
 1. Retorne à guia **Compor**.
-2. Para o **corpo da solicitação**, crie seu próprio corpo de solicitação com pares de valores-chave JSON ou insira a carga útil do evento como texto bruto. 
+2. Para o **corpo da solicitação**, crie seu próprio corpo de solicitação com pares de valores-chave JSON ou insira a carga útil do evento como texto bruto. Consulte as [cargas úteis de amostra](#sample-payloads) para obter exemplos de eventos padrão de comércio eletrônico.
 
 ![Guia de composição do criador de webhook na Braze com pares de chave-valor JSON para ID, registro de data e hora, ID do usuário e tipo de evento.][img3]{: style="max-width:75%" }
 
