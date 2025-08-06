@@ -11,7 +11,7 @@ search_tag: partner
 
 > A [Recurly](https://recurly.com/) é uma plataforma de gerenciamento de inscrições e faturamento. A plataforma integrada da Recurly simplifica a automação do ciclo de vida da inscrição em escala, ativando as equipes para gerenciar e otimizar a experiência do inscrito - desde o teste de novos planos, ofertas e promoções até o gerenciamento de métodos de pagamento, integrações e insights.
 
-
+_Essa integração é mantida pelo Recurly._
 
 ## Sobre a integração
 
@@ -29,7 +29,7 @@ Consulte a [documentação da Recurly](https://docs.recurly.com/docs/braze-integ
 | ----------- | ----------- |
 | Conta da Recurly | Para aproveitar essa parceria, é necessário ter um plano de inscrição Elite [Recurly](https://recurly.com/) com a capacitação do recurso Braze. A ativação de faturas de crédito na sua plataforma da Recurly também é necessária.|
 | Chave da API REST do Braze | Uma chave da API REST da Braze com permissões `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. Como a Recurly usa apenas o endpoint `users.track`, recomendamos o provisionamento de uma chave específica da Recurly somente com essa permissão. |
-| Ponto de extremidade REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Ponto de extremidade REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 
 ## Integração
 
