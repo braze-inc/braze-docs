@@ -2,16 +2,16 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: ""
+description: "Este artículo de referencia describe la asociación entre Braze y Yotpo, una plataforma líder de marketing de comercio electrónico que ayuda a miles de marcas con visión de futuro a acelerar el crecimiento directo al consumidor."
 page_type: partner
 search_tag: Partner
 ---
 
 # Yotpo
 
->  El enfoque de plataforma única de Yotpo integra soluciones basadas en datos para reseñas, fidelización, marketing por SMS y mucho más, capacitando a las marcas para crear experiencias de cliente más inteligentes y de mayor conversión.
+> [Yotpo](https://www.yotpo.com/), la plataforma líder en marketing de comercio electrónico, ayuda a miles de marcas con visión de futuro a acelerar el crecimiento directo al consumidor. El enfoque de plataforma única de Yotpo integra soluciones basadas en datos para reseñas, fidelización, marketing por SMS y mucho más, capacitando a las marcas para crear experiencias de cliente más inteligentes y de mayor conversión.
 
-
+_Esta integración está mantenida por Yotpo._
 
 ## Sobre la integración
 
@@ -69,7 +69,7 @@ The average rating for this product is:
 ```
 {% endraw %}
 
-Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. 
+Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. Para que la integración funcione, el `product_id` en Braze debe coincidir con el ID del producto en Yotpo (normalmente el ID del producto padre de eCommerce).
 
 ![Sustituye YOTPO-API-KEY por tu clave de API de Reseñas de Yotpo][2]
 
@@ -92,7 +92,7 @@ Recent 5 Star Review for this product:
 ```
 {% endraw %}
 
-Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. 
+Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. Para que la integración funcione, el `product_id` en Braze debe coincidir con el ID del producto en Yotpo (normalmente el ID del producto padre de eCommerce).
 
 Este es el aspecto que tendrá el fragmento de código en tu editor de correo electrónico:
 
@@ -121,7 +121,7 @@ Image return NULL
 ```
 {% endraw %}
 
-Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. 
+Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. Para que la integración funcione, el `product_id` en Braze debe coincidir con el ID del producto en Yotpo (normalmente el ID del producto padre de eCommerce).
 
 El fragmento de código tendrá el siguiente aspecto:
 
