@@ -18,7 +18,7 @@ A integração entre o Sisu Data e o Braze permite que você entenda, em todas a
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Conta do Sisu | É necessário ter uma conta [no Sisu][3] para aproveitar essa parceria. |
-| Armazém na nuvem | Essa integração pressupõe que seus dados da Braze estejam armazenados em um data warehouse na nuvem (por exemplo, Snowflake, BigQuery).  |
+| Armazém na nuvem | Essa integração pressupõe que seus dados da Braze estejam armazenados em um data warehouse na nuvem (por exemplo, Snowflake, BigQuery). Para simplificar esse processo de integração, recomendamos a utilização da funcionalidade nativa do Braze via [Currents][4]. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
