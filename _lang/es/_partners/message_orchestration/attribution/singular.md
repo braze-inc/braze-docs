@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Singular es una plataforma unificada de análisis de marketing que ofrece atribución, agregación de costes, análisis de marketing, informes creativos y automatización del flujo de trabajo.
 
-
+_Esta integración está mantenida por Singular._
 
 ## Sobre la integración
 
@@ -78,7 +78,7 @@ En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y seleccio
 
 Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puedes crear una nueva o invalidar una existente. 
 
-Tendrás que proporcionar la clave de importación de datos y el punto final REST a tu administrador de cuentas de Singular para completar la integración.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología Singular. 
+Tendrás que proporcionar la clave de importación de datos y el punto final REST a tu administrador de cuentas de Singular para completar la integración.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología Singular. En este cuadro se te muestra la clave de importación de datos y el punto final REST.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Paso 3: Confirmar la integración
 
