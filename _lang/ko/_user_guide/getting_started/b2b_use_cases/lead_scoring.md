@@ -45,7 +45,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 
 ![옵션을 사용하여 세그먼트 및 필터를 선택하여 항목 오디언스를 좁히는 캔버스 생성의 3단계입니다.][3]{: style="max-width:80%;"}
 
-#### 3b단계: 캔버스 재자격 설정
+#### 3b단계: 캔버스 재사용 자격 설정
 
 사용자는 귀하와의 생애주기 동안 이 캔버스를 여러 번 거치게 되므로 이전에 나갔던 것만큼 빨리 다시 들어올 수 있도록 하세요. 이것은 재적격성 설정을 통해 달성할 수 있습니다. 
 
@@ -83,7 +83,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 - **그룹 3:** 1점 감소에 해당하는 모든 이벤트.
 - **다른 모든 사람:** 작업 경로를 사용하면 사용자가 조치를 취하는지 확인하기 위해 기다리는 창을 정의한 다음, 그들을 "기타 모든 사람" 그룹에 넣을 수 있습니다. 리드 스코어링의 경우, 이는 "비활동"에 대한 점수를 감소시킬 수 있는 기회입니다.
 
-![행동 경로에는 1점, 5점, 10점을 추가하는 행동 그룹; 1점과 10점을 빼는 행동 그룹; 그리고 “기타 모두”가 포함됩니다.][7]
+![1점, 5점, 10점을 더하는 액션 그룹, 1점, 10점을 빼는 액션 그룹 및 '기타 모든 사람'을 포함하는 액션 경로입니다.][7]
 
 #### 4c 단계: 각 그룹에 관련 이벤트를 포함하도록 구성하십시오
 
@@ -182,7 +182,7 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 | 헤더 | 콘텐츠 |
 | --- | --- |
-| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_f133d642-d4c1-41cf-8758-5743620c7b04/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_c25ac993-b31d-4e59-9db7-fff8795a2080/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 

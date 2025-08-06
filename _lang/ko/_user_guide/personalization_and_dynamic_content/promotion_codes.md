@@ -2,16 +2,20 @@
 nav_title: 프로모션 코드
 article_title: 프로모션 코드
 page_order: 5
+toc_headers: h2
 alias: "/promotion_codes/"
 description: "이 참조 문서에서는 프로모션 코드 목록을 생성하고 캠페인과 캔버스에 추가하는 방법을 설명합니다."
-
 ---
 
 # 프로모션 코드
 
-> 프로모션 코드라고도 하는 프로모션 코드는 구매에 중점을 둔 상호 작용을 유도하여 사용자의 참여를 유지하는 좋은 방법입니다.<br><br>This page covers how to create promotion code lists and add them to your campaigns and Canvases.
+> This page covers how to create promotion code lists and add them to your campaigns and Canvases.
 
-Braze Liquid 기능을 통해 광범위한 프로모션 코드를 간편하게 사용할 수 있는 방법을 제공하여, 이제 사용자가 제공한 프로모션 목록에서 자동으로 직관적으로 메시지를 가져올 수 있습니다. 프로모션 코드 기능은 최대 6개월의 유효기간과 목록당 최대 20밀리미터의 개별 코드를 지원합니다.
+## How it works
+
+프로모션 코드라고도 하는 프로모션 코드는 구매에 중점을 둔 상호 작용을 유도하여 사용자의 참여를 유지하는 좋은 방법입니다. 프로모션 코드 목록에서 가져오는 메시지를 만들 수 있습니다. 
+
+각 프로모션 코드의 유효 기간은 최대 6개월입니다. 목록당 최대 2천만 개의 코드를 저장하고 관리할 수 있습니다. 프로모션 코드의 성과를 관리하고 분석하여 프로모션 전략과 메시지에 대한 타겟팅된 결정을 내릴 수 있습니다.
 
 {% alert important %}
 프로모션 코드는 인앱 메시지로 전송할 수 없습니다.
@@ -19,66 +23,63 @@ Braze Liquid 기능을 통해 광범위한 프로모션 코드를 간편하게 �
 
 ## 프로모션 코드 목록 만들기
 
-### 1단계: 프로모션 코드 섹션으로 이동합니다.
+### 1단계: 프로모션 코드 섹션으로 이동
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![버튼을 클릭하여 프로모션 코드를 생성합니다.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-대시보드에서 **데이터 설정** > **프로모션 코드**로 이동한 다음 **프로모션 코드 목록 만들기**를 선택합니다.
+1. 대시보드에서 **데이터 설정** > **프로모션 코드로** 이동합니다.
+2. **프로모션 코드 목록 생성을** 선택합니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **통합**에서 **프로모션 코드**를 찾을 수 있습니다.
-{% endalert %}
+### 2단계: 프로모션 코드 이름 지정
 
-### 2단계: 프로모션 코드 이름 지정 및 생성
+1. 프로모션 코드 목록의 이름을 지정하고 선택 사항인 설명을 추가합니다.
+2. 다음으로 프로모션 코드에 대한 코드 스니펫을 생성합니다. 
 
-프로모션 코드 목록의 이름을 지정하고 선택 사항인 설명을 추가합니다.
+코드 조각을 만들 때 고려해야 할 몇 가지 세부 사항은 다음과 같습니다:
 
-![][2]{: style="max-width:90%"}
+- 코드 스니펫은 일단 저장되면 편집할 수 없습니다.
+- 스니펫은 대소문자를 구분합니다. 예를 들어, "Birthday_promo""와 "birthday_promo"은 서로 다른 두 개의 스니펫으로 인식됩니다.
+- Liquid에서 스니펫 이름을 사용하여 이 프로모션 코드 세트를 참조하세요.
+- 코드 스니펫이 다른 목록에서 이미 사용되고 있지 않은지 확인하세요.
 
-다음으로 프로모션 코드에 대한 코드 스니펫을 생성합니다. 이 코드 스니펫은 Liquid에서 이 특정 프로모션 코드 세트를 표시하기 위해 참조하게 될 것입니다. 다른 목록에서 이미 사용 중인 코드 스니펫이 아닌지 확인하세요.
+![코드 스니펫 "spring25"가 포함된 "SpringSale2025"라는 프로모션 코드 목록입니다.][3]{: style="max-width:80%"}
 
-{% alert important %}
-스니펫은 대소문자를 구분합니다. 예를 들어, "Birthday_promo""와 "birthday_promo"은 서로 다른 두 개의 스니펫으로 인식됩니다.
-{% endalert %}
+### 3단계: 프로모션 코드 옵션 선택
 
-![][3]{: style="max-width:90%"}
+각 프로모션 코드 목록에는 생성 시 설정되는 해당 만료 날짜와 시간이 있습니다. 최대 만료 기간은 목록을 만들거나 수정한 날로부터 6개월 후까지입니다. 
 
-{% alert warning %}
-저장 후에는 코드 스니펫을 변경할 수 없습니다!
-{% endalert %}
+해당 기간 내에 만료일을 반복해서 변경하고 업데이트할 수 있습니다. 이 만료 날짜는 이 목록에 추가된 모든 코드에 적용됩니다. 만료되면 해당 코드는 Braze 시스템에서 삭제되며 해당 목록의 코드 조각을 호출하는 모든 메시지는 전송되지 않습니다.
 
-### 3단계: 프로모션 코드 옵션
-
-각 프로모션 코드 목록에는 생성 시 설정되는 해당 만료 날짜와 시간이 있습니다. 최대 만료 기간은 목록을 만들거나 수정한 날로부터 6개월 후까지입니다. 해당 기간 내에 만료일을 반복해서 변경하고 업데이트할 수 있습니다. 이 만료 날짜는 이 목록에 추가된 모든 코드에 적용됩니다. 만료되면 해당 코드는 Braze 시스템에서 삭제되며 해당 목록의 코드 조각을 호출하는 모든 메시지는 전송되지 않습니다.
-
-![][4]{: style="max-width:90%"}
+![남은 모든 코드가 2025년 4월 30일 오전 12시에 만료되도록 만료 설정을 나열합니다.][4]{: style="max-width:80%"}
 
 임계값 알림을 선택 사항으로 설정하고 사용자 지정할 수도 있습니다. 이 알림을 설정하면 목록에 사용 가능한 프로모션 코드가 부족하거나 프로모션 코드 목록의 만료가 임박했을 때 지정된 수신자에게 이메일이 전송됩니다. 수신자에게는 하루에 한 번 알림이 전송됩니다.
 
-![][5]
+![프로모션 코드 목록이 5일 후에 만료되면 "마케팅@abc.com"에게 알리는 임계값 알림의 예입니다.][5]{: style="max-width:80%"}
 
 ### 4단계: 프로모션 코드 업로드
 
-Braze doesn't manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. CSV 파일이 다음 가이드라인을 따르는지 확인하세요:
+Braze doesn't manage code creation or redemption, meaning you must generate your promotion codes to a CSV file and upload them to Braze. 
+
+CSV 파일이 다음 가이드라인을 따르고 있는지 확인하세요:
 
 - 프로모션 코드 열을 포함합니다.
 - 행당 하나의 프로모션 코드가 있습니다.
 
 기본으로 제공되는 [Voucherify와의]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) 통합을 사용하거나 [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) 를 사용하여 프로모션 코드를 생성하고 내보낼 수 있습니다.
 
-{% alert note %}
+{% alert important %}
 최대 파일 크기는 100MB, 최대 목록 크기는 사용하지 않은 코드의 20밀리미터입니다. 잘못된 파일이 업로드된 경우 새 파일을 업로드하면 이전 파일이 대체됩니다.
 {% endalert %}
 
-![][6]
+1. 업로드가 완료되면 **목록 저장을** 선택하여 방금 입력한 모든 세부 정보와 코드를 저장합니다.
 
-업로드가 완료되면 **목록 저장을** 선택하여 방금 입력한 모든 세부 정보와 코드를 저장합니다.
+!["springsale"이라는 이름의 CSV 파일이 성공적으로 업로드되었습니다.][7]
 
-![][7]
+{:start="2"}
+2\. 저장을 선택하면 **가져오기 기록**에 새 행이 나타납니다.
+3\. 가져오기가 완료되었는지 확인하기 위해 표를 새로 고치려면 표 상단에서 <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **동기화를** 선택합니다.
 
-저장을 선택하면 **가져오기 기록**에 새 행이 나타납니다. 가져오기가 완료되었는지 확인하기 위해 표를 새로 고치려면 표 상단에서 <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **동기화를** 선택합니다.
-
-![][8]
+![프로모션 코드가 업로드되는 중입니다.][8]
 
 {% alert note %}
 대용량 파일은 가져오는 데 몇 분 정도 걸립니다. 기다리는 동안 페이지에서 나가서 가져오기가 진행되는 동안 다른 작업을 할 수 있습니다. When the import finishes, the status will change to **Complete** in the table.
@@ -92,19 +93,24 @@ Braze doesn't manage code creation or redemption, meaning you must generate your
 
 ### 5단계: 프로모션 코드 사용
 
-메시지로 프로모션 코드를 보내려면 코드 스니펫 **복사**를 선택하여 프로모션 코드 목록을 만들 때 설정한 코드 스니펫을 복사합니다.
+메시지로 프로모션 코드를 보내려면 다음과 같이 하세요:
 
-![][9]{: style="max-width:70%"}
+1. 코드 조각 **복사를** 선택하여 프로모션 코드 목록을 생성할 때 설정한 코드 조각을 복사합니다.
 
-거기에서 이 코드를 대시보드 내의 메시지에 붙여넣을 수 있습니다.
+![스니펫을 복사하여 메시지에 붙여넣을 수 있는 옵션입니다.][9]{: style="max-width:70%"}
 
-![][10]{: style="max-width:70%"}
+{:start="2"}
+2\. 거기에서 이 코드를 대시보드 내의 메시지에 붙여넣을 수 있습니다.
 
-[Liquid][11]를 사용하여 업로드한 CSV 파일의 고유 프로모션 코드 중 하나를 메시지에 삽입할 수 있습니다. 해당 코드는 다른 메시지에서 동일한 코드를 보내지 않도록 Braze 백엔드에 전송된 것으로 표시됩니다. 
+!["이번 봄에는 특별 혜택으로 멋진 선물을 받아보세요"라는 메시지와 코드 스니펫을 예로 들어보겠습니다.][10]{: style="max-width:70%"}
+
+[Liquid를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 사용하면 업로드한 CSV 파일의 고유 프로모션 코드 중 하나를 메시지에 삽입할 수 있습니다. 해당 코드는 다른 메시지에서 동일한 코드를 보내지 않도록 Braze 백엔드에 전송된 것으로 표시됩니다.
+
+#### 사용자에게 프로모션 코드 보내기
 
 멀티채널 캠페인이나 캔버스 단계에서 코드 스니펫을 사용하면 각 사용자는 항상 고유한 코드를 받게 됩니다. 캔버스의 여러 단계에 대해 각 사용자는 여러 개의 프로모션 코드를 받습니다.
 
-특정 사용자가 두 개 이상의 채널을 통해 코드를 받을 수 있는 자격이 있는 경우, 해당 사용자는 각 채널을 통해 동일한 코드를 받게 됩니다. 예를 들어 사용자가 두 개의 채널을 통해 두 개의 메시지를 수신하는 경우 하나의 코드만 수신하게 됩니다. 보고 목적으로도 동일하게 적용되며, 하나의 코드가 전송되고 사용자는 두 채널을 통해 이 코드를 받게 됩니다. 예를 들어, 멀티채널 캔버스 단계의 경우 사용자는 하나의 코드만 사용합니다.
+사용자가 두 개 이상의 채널을 통해 코드를 받을 수 있는 자격이 있는 경우 각 채널을 통해 동일한 코드를 받게 됩니다. 예를 들어 사용자가 두 개의 채널을 통해 두 개의 메시지를 수신하는 경우 하나의 코드만 수신하게 됩니다. 보고 목적으로도 동일하게 적용되며, 하나의 코드가 전송되고 사용자는 두 채널을 통해 이 코드를 받게 됩니다. 예를 들어, 멀티채널 캔버스 단계의 경우 사용자는 하나의 코드만 사용합니다.
 
 {% alert important %}
 프로모션 코드를 가져오는 캠페인에서 테스트 또는 실시간 메시지를 보낼 때 사용 가능한 프로모션 코드가 남아 있지 않으면 메시지가 전송되지 않습니다.
@@ -116,13 +122,13 @@ Braze doesn't manage code creation or redemption, meaning you must generate your
 
 ## 사용된 코드 수 확인
 
-**프로모션 코드** 페이지에 있는 프로모션 코드 목록의 **남은** 열에서 남은 코드 수를 확인할 수 있습니다.
+**프로모션 코드** 페이지의 프로모션 코드 목록의 **남은** 열에서 남은 코드 수를 확인할 수 있습니다.
 
-![][12]{: style="max-width:90%"}
+![사용하지 않은 코드가 있는 프로모션 코드의 예입니다.][12]
 
-이 코드 수는 기존 프로모션 코드 목록 페이지를 다시 방문할 때도 확인할 수 있습니다. 
+이 코드 수는 기존 프로모션 코드 목록 페이지를 다시 방문할 때도 확인할 수 있습니다. 사용하지 않는 코드를 CSV 파일로 내보낼 수도 있습니다. 
 
-![][13]{: style="max-width:50%"}
+!["블랙 프라이데이 세일"이라는 프로모션 코드가 992개 남아 있습니다.][13]{: style="max-width:70%"}
 
 ## 멀티채널 및 단일 채널 전송
 
@@ -175,7 +181,9 @@ Braze는 예상 사용량보다 더 많은 프로모션 코드를 업로드할 �
 
 ### 프로모션 코드 목록이 만료되었거나 비어 있으면 어떻게 되나요?
 
-메시지에 비어 있거나 만료된 목록의 프로모션 코드가 포함되어 있어야 하는 경우 메시지가 취소됩니다.
+만료된 코드는 6개월 후에 삭제됩니다.
+
+메시지에 비어 있거나 만료된 목록의 프로모션 코드가 포함되어 있어야 하는 경우 메시지가 취소됩니다. 
 
 메시지에 조건부로 프로모션 코드를 삽입하는 Liquid 로직이 포함된 경우, 메시지에 프로모션 코드가 포함되어 있어야 하는 경우에만 메시지가 취소됩니다. 메시지에 프로모션 코드가 포함되어 있지 않아야 하는 경우 메시지가 정상적으로 전송됩니다.
 
@@ -184,15 +192,12 @@ Braze는 예상 사용량보다 더 많은 프로모션 코드를 업로드할 �
 이후 메시지에서 동일한 프로모션 코드를 참조하려면 코드를 사용자 프로필에 사용자 지정 속성으로 저장해야 합니다. 이는 동일한 캠페인 또는 캔버스 메시지 단계에 [Braze-to-Braze 웹훅을]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) 연결하여 수행할 수 있습니다.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[2]:{% image_buster /assets/img/promocodes/promocode2.png %}
 [3]:{% image_buster /assets/img/promocodes/promocode3.png %}
 [4]:{% image_buster /assets/img/promocodes/promocode4.png %}
 [5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[6]:{% image_buster /assets/img/promocodes/promocode6.png %}
 [7]:{% image_buster /assets/img/promocodes/promocode7.png %}
 [8]:{% image_buster /assets/img/promocodes/promocode8.png %}
 [9]:{% image_buster /assets/img/promocodes/promocode9.png %}
 [10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [12]: {% image_buster /assets/img/promocodes/promocode11.png %}
 [13]: {% image_buster /assets/img/promocodes/promocode12.png %}

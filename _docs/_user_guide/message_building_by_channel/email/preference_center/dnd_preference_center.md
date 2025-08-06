@@ -10,7 +10,7 @@ page_order: 2
 
 > Using the drag-and-drop editor, you can create and customize a preference center to help manage which users receive certain types of communication. You can have up to 50 preference centers per workspace.
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## Step 1: Create an email preference center
 
@@ -106,7 +106,7 @@ When launching the preference center, you will be prompted to confirm the name, 
 
 ## Using the preference center
 
-{% multi_lang_include preference_center_warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
 To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by selecting the **Copy Liquid** icon.
 

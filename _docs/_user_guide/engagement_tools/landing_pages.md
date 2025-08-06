@@ -11,9 +11,9 @@ alias: /landing_pages/
 
 > Braze landing pages are standalone web pages that can drive your user acquisition and engagement strategy.
 
-![Skincare product launch landing page featuring benefits, images, and a customer testimonial layout.]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
-
 Use landing pages to grow your audience, capture user data, promote special offers, and support multichannel campaigns.
+
+{% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Before you can access, create, and publish landing pages, you either need admini
 - Create Landing Page Drafts
 - Publish Landing Pages
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## Plan tiers
 

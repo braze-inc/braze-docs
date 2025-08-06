@@ -41,26 +41,110 @@ You can use the product viewed event to trigger when a customer views a product 
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Example object
+#### Example objects
+
+{% subtabs %}
+{% subtab Web SDK %}
+
+```javascript
+braze.logCustomEvent("ecommerce.product_viewed", {
+    "product_id": "4111176",
+    "product_name": "Torchie runners",
+    "variant_id": "4111176700",
+    "image_url": "https://braze-apparel.com/images/products/large/torchie-runners.jpg",
+    "product_url": "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/",
+    "price": 85,
+    "currency": "GBP",
+    "source": "https://braze-apparel.com/",
+    "metadata": {
+        "sku": "",
+        "color": "ORANGE",
+        "size": "6",
+        "brand": "Braze"
+    }
+});
+```
+
+{% endsubtab %}
+{% subtab Android SDK %}
+
+```java
+BrazeProperties properties = new BrazeProperties()
+    .addProperty("product_id", "4111176")
+    .addProperty("product_name", "Torchie runners")
+    .addProperty("variant_id", "4111176700")
+    .addProperty("image_url", "https://braze-apparel.com/images/products/large/torchie-runners.jpg")
+    .addProperty("product_url", "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/")
+    .addProperty("price", 85)
+    .addProperty("currency", "GBP")
+    .addProperty("source", "https://braze-apparel.com/")
+    .addProperty("metadata", new JSONObject()
+        .put("sku", "")
+        .put("color", "ORANGE")
+        .put("size", "6")
+        .put("brand", "Braze"));
+
+Braze.getInstance(context).logCustomEvent("ecommerce.product_viewed", properties);
+```
+
+{% endsubtab %}
+{% subtab Swift SDK %}
+
+```swift
+let properties: [String: Any] = [
+    "product_id": "4111176",
+    "product_name": "Torchie runners",
+    "variant_id": "4111176700",
+    "image_url": "https://braze-apparel.com/images/products/large/torchie-runners.jpg",
+    "product_url": "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/",
+    "price": 85,
+    "currency": "GBP",
+    "source": "https://braze-apparel.com/",
+    "metadata": [
+        "sku": "",
+        "color": "ORANGE",
+        "size": "6",
+        "brand": "Braze"
+    ]
+]
+
+AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: properties)
+```
+
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
-    "name": "ecommerce.product_viewed",
-    "properties": {
-        "product_id": "12345",
-        "product_name": "product",
-        "variant_id": "123",
-        "image_url": "www.image-url.com",
-        "product_url": "mystorefront.myshopify.com/product",
-        "price": 10,
-        "currency": "USD",
-        "source": "mystorefront.myshopify.com",
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id": "your_app_identifier",
+      "name": "ecommerce.product_viewed",
+      "time": "2024-01-15T09:03:45Z",
+      "properties": {
+        "product_id": "4111176",
+        "product_name": "Torchie runners",
+        "variant_id": "4111176700",
+        "image_url": "https://braze-apparel.com/images/products/large/torchie-runners.jpg",
+        "product_url": "https://braze-apparel.com/footwear-categories/sneakers/braze-orange-torchie-runners/",
+        "price": 85,
+        "currency": "GBP",
+        "source": "https://braze-apparel.com/",
         "metadata": {
-            "sku": "sku"
+          "sku": "",
+          "color": "ORANGE",
+          "size": "6",
+          "brand": "Braze"
         }
+      }
     }
+  ]
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.cart_updated %}
 
@@ -113,34 +197,145 @@ If there are two carts, add both to the merged user. Re-enqueue the Canvas if it
 | `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Example object
+#### Example objects
+
+{% subtabs %}
+{% subtab Web SDK %}
+
+```javascript
+braze.logCustomEvent("ecommerce.cart_updated", {
+    "cart_id": "cart_12345",
+    "currency": "USD",
+    "total_value": 199.98,
+    "products": [
+        {
+            "product_id": "8266836345064",
+            "product_name": "Classic T-Shirt",
+            "variant_id": "44610569208040",
+            "image_url": "https://braze-apparel.com/images/tshirt-blue-medium.jpg",
+            "product_url": "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040",
+            "quantity": 2,
+            "price": 99.99,
+            "metadata": {
+                "sku": "TSH-BLU-M",
+                "color": "BLUE",
+                "size": "Medium",
+                "brand": "Braze"
+            }
+        }
+    ],
+    "source": "https://braze-apparel.com",
+    "metadata": {}
+});
+```
+
+{% endsubtab %}
+{% subtab Android SDK %}
+
+```java
+JSONArray products = new JSONArray();
+JSONObject product = new JSONObject()
+    .put("product_id", "8266836345064")
+    .put("product_name", "Classic T-Shirt")
+    .put("variant_id", "44610569208040")
+    .put("image_url", "https://braze-apparel.com/images/tshirt-blue-medium.jpg")
+    .put("product_url", "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040")
+    .put("quantity", 2)
+    .put("price", 99.99)
+    .put("metadata", new JSONObject()
+        .put("sku", "TSH-BLU-M")
+        .put("color", "BLUE")
+        .put("size", "Medium")
+        .put("brand", "Braze"));
+products.put(product);
+
+BrazeProperties properties = new BrazeProperties()
+    .addProperty("cart_id", "cart_12345")
+    .addProperty("currency", "USD")
+    .addProperty("total_value", 199.98)
+    .addProperty("products", products)
+    .addProperty("source", "https://braze-apparel.com")
+    .addProperty("metadata", new JSONObject());
+
+Braze.getInstance(context).logCustomEvent("ecommerce.cart_updated", properties);
+```
+
+{% endsubtab %}
+{% subtab Swift SDK %}
+
+```swift
+let products: [[String: Any]] = [
+    [
+        "product_id": "8266836345064",
+        "product_name": "Classic T-Shirt",
+        "variant_id": "44610569208040",
+        "image_url": "https://braze-apparel.com/images/tshirt-blue-medium.jpg",
+        "product_url": "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040",
+        "quantity": 2,
+        "price": 99.99,
+        "metadata": [
+            "sku": "TSH-BLU-M",
+            "color": "BLUE",
+            "size": "Medium",
+            "brand": "Braze"
+        ]
+    ]
+]
+
+let properties: [String: Any] = [
+    "cart_id": "cart_12345",
+    "currency": "USD",
+    "total_value": 199.98,
+    "products": products,
+    "source": "https://braze-apparel.com",
+    "metadata": [:]
+]
+
+AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: properties)
+```
+
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
-    "name": "ecommerce.cart_updated",
-    "properties": {
-        "cart_id": "Z2NwLXVzLWVhc3QxOjAxSjk3UFg4RlFZMjVTVkRHRlc1RlI3SlRY",
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id": "your_app_identifier",
+      "name": "ecommerce.cart_updated",
+      "time": "2024-01-15T09:15:30Z",
+      "properties": {
+        "cart_id": "cart_12345",
         "currency": "USD",
-        "total_value": 2000000,
+        "total_value": 199.98,
         "products": [
-            {
-                "product_id": "8266836345064",
-                "product_name": "PANTS!!!",
-                "variant_id": "44610569208040",
-                "image_url": "https://cdn.shopify.com/s/files/1/0604/4211/6328/files/1200px-Trousers-colourisolated.jpg?v=1689256168",
-                "product_url": "https://test-store.myshopify.com/products/pants?variant=44610569208040",
-                "quantity": 2,
-                "price": 1000000,
-                "metadata": {
-                    "sku": "007"
-                }
+          {
+            "product_id": "8266836345064",
+            "product_name": "Classic T-Shirt",
+            "variant_id": "44610569208040",
+            "image_url": "https://braze-apparel.com/images/tshirt-blue-medium.jpg",
+            "product_url": "https://braze-apparel.com/products/classic-tshirt?variant=44610569208040",
+            "quantity": 2,
+            "price": 99.99,
+            "metadata": {
+              "sku": "TSH-BLU-M",
+              "color": "BLUE",
+              "size": "Medium",
+              "brand": "Braze"
             }
+          }
         ],
-        "source": "https://test-store.myshopify.com",
+        "source": "https://braze-apparel.com",
         "metadata": {}
+      }
     }
+  ]
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
@@ -179,36 +374,144 @@ Similar to the `ecommerce.cart_updated` event, this event allows you to leverage
 | `checkout_url` | No | String | URL for the checkout page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Example object
+#### Example objects
+
+{% subtabs %}
+{% subtab Web SDK %}
+
+```javascript
+braze.logCustomEvent("ecommerce.checkout_started", {
+    "checkout_id": "checkout_abc123",
+    "cart_id": "cart_12345",
+    "total_value": 199.98,
+    "currency": "USD",
+    "products": [
+        {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 199.98,
+            "metadata": {
+                "sku": "WH-BLK-PRO",
+                "color": "Black",
+                "brand": "BrazeAudio"
+            }
+        }
+    ],
+    "source": "https://braze-audio.com",
+    "metadata": {
+        "checkout_url": "https://checkout.braze-audio.com/abc123"
+    }
+});
+```
+
+{% endsubtab %}
+{% subtab Android SDK %}
+
+```java
+JSONArray products = new JSONArray();
+JSONObject product = new JSONObject()
+    .put("product_id", "632910392")
+    .put("product_name", "Wireless Headphones")
+    .put("variant_id", "808950810")
+    .put("quantity", 1)
+    .put("price", 199.98)
+    .put("metadata", new JSONObject()
+        .put("sku", "WH-BLK-PRO")
+        .put("color", "Black")
+        .put("brand", "AudioTech"));
+products.put(product);
+
+BrazeProperties properties = new BrazeProperties()
+    .addProperty("checkout_id", "checkout_abc123")
+    .addProperty("cart_id", "cart_12345")
+    .addProperty("total_value", 199.98)
+    .addProperty("currency", "USD")
+    .addProperty("products", products)
+    .addProperty("source", "https://braze-audio.com")
+    .addProperty("metadata", new JSONObject()
+        .put("checkout_url", "https://checkout.braze-audio.com/abc123"));
+
+Braze.getInstance(context).logCustomEvent("ecommerce.checkout_started", properties);
+```
+
+{% endsubtab %}
+{% subtab Swift SDK %}
+
+```swift
+let products: [[String: Any]] = [
+    [
+        "product_id": "632910392",
+        "product_name": "Wireless Headphones",
+        "variant_id": "808950810",
+        "quantity": 1,
+        "price": 199.98,
+        "metadata": [
+            "sku": "WH-BLK-PRO",
+            "color": "Black",
+            "brand": "BrazeAudio"
+        ]
+    ]
+]
+
+let properties: [String: Any] = [
+    "checkout_id": "checkout_abc123",
+    "cart_id": "cart_12345",
+    "total_value": 199.98,
+    "currency": "USD",
+    "products": products,
+    "source": "https://braze-audio.com",
+    "metadata": [
+        "checkout_url": "https://checkout.braze-audio.com/abc123"
+    ]
+]
+
+AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties: properties)
+```
+
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
-    "name": "ecommerce.checkout_started",
-    "time": "2022-05-23T13:52:38-04:00",
-    "properties": {
-        "cart_id": "eeafa272cebfd4b22385bc4b645e762c",
-        "total_value": 421.88,
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id": "your_app_identifier",
+      "name": "ecommerce.checkout_started",
+      "time": "2024-01-15T09:25:45Z",
+      "properties": {
+        "checkout_id": "checkout_abc123",
+        "cart_id": "cart_12345",
+        "total_value": 199.98,
         "currency": "USD",
         "products": [
-            {
-                "product_id": "632910392",
-                "product_name": "IPod Nano - 8GB",
-                "variant_id": "808950810",
-                "quantity": 1,
-                "price": 199,
-                "metadata": {
-                    "sku": "IPOD2008PINK"
-                }
+          {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 199.98,
+            "metadata": {
+              "sku": "WH-BLK-PRO",
+              "color": "Black",
+              "brand": "BrazeAudio"
             }
+          }
         ],
-        "source": "braze-mock-storefront.myshopify.com",
-        "checkout_id": "123123123",
+        "source": "https://braze-audio.com",
         "metadata": {
-            "checkout_url": "https://checkout.local/548380009/checkouts/123123123/recover?key=example-secret-token"
+          "checkout_url": "https://checkout.braze-audio.com/abc123"
         }
+      }
     }
+  ]
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.order_placed %}
 
@@ -243,48 +546,190 @@ You can use the order placed event to trigger when a customer successfully compl
 | `payment_gateway_names` | No | Array | (Shopify only) Payement system source (such as point of sale or mobile). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Example object
+#### Example objects
+
+{% subtabs %}
+{% subtab Web SDK %}
+
+```javascript
+braze.logCustomEvent("ecommerce.order_placed", {
+    "order_id": "order_67890",
+    "cart_id": "cart_12345",
+    "total_value": 189.98,
+    "currency": "USD",
+    "total_discounts": 10.00,
+    "discounts": [
+        {
+            "code": "SAVE10",
+            "amount": 10.00
+        }
+    ],
+    "products": [
+        {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 199.98,
+            "metadata": {
+                "sku": "WH-BLK-PRO",
+                "color": "Black",
+                "brand": "BrazeAudio"
+            }
+        }
+    ],
+    "source": "https://braze-audio.com",
+    "metadata": {
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
+        "order_number": "ORD-2024-001234",
+        "tags": ["electronics", "audio"],
+        "referring_site": "https://www.e-referrals.com",
+        "payment_gateway_names": ["tap2pay", "dotcash"]
+    }
+});
+```
+
+{% endsubtab %}
+{% subtab Android SDK %}
+
+```java
+JSONArray discounts = new JSONArray();
+discounts.put(new JSONObject()
+    .put("code", "SAVE10")
+    .put("amount", 10.00));
+
+JSONArray products = new JSONArray();
+JSONObject product = new JSONObject()
+    .put("product_id", "632910392")
+    .put("product_name", "Wireless Headphones")
+    .put("variant_id", "808950810")
+    .put("quantity", 1)
+    .put("price", 199.98)
+    .put("metadata", new JSONObject()
+        .put("sku", "WH-BLK-PRO")
+        .put("color", "Black")
+        .put("brand", "AudioTech"));
+products.put(product);
+
+BrazeProperties properties = new BrazeProperties()
+    .addProperty("order_id", "order_67890")
+    .addProperty("cart_id", "cart_12345")
+    .addProperty("total_value", 189.98)
+    .addProperty("currency", "USD")
+    .addProperty("total_discounts", 10.00)
+    .addProperty("discounts", discounts)
+    .addProperty("products", products)
+    .addProperty("source", "https://braze-audio.com")
+    .addProperty("metadata", new JSONObject()
+        .put("order_status_url", "https://braze-audio.com/orders/67890/status")
+        .put("order_number", "ORD-2024-001234")
+        .put("tags", new JSONArray().put("electronics").put("audio"))
+        .put("referring_site", "https://www.e-referrals.com")
+        .put("payment_gateway_names", new JSONArray().put("tap2pay").put("dotcash")));
+
+Braze.getInstance(context).logCustomEvent("ecommerce.order_placed", properties);
+```
+
+{% endsubtab %}
+{% subtab Swift SDK %}
+
+```swift
+let discounts: [[String: Any]] = [
+    [
+        "code": "SAVE10",
+        "amount": 10.00
+    ]
+]
+
+let products: [[String: Any]] = [
+    [
+        "product_id": "632910392",
+        "product_name": "Wireless Headphones",
+        "variant_id": "808950810",
+        "quantity": 1,
+        "price": 199.98,
+        "metadata": [
+            "sku": "WH-BLK-PRO",
+            "color": "Black",
+            "brand": "BrazeAudio"
+        ]
+    ]
+]
+
+let properties: [String: Any] = [
+    "order_id": "order_67890",
+    "cart_id": "cart_12345",
+    "total_value": 189.98,
+    "currency": "USD",
+    "total_discounts": 10.00,
+    "discounts": discounts,
+    "products": products,
+    "source": "https://braze-audio.com",
+    "metadata": [
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
+        "order_number": "ORD-2024-001234",
+        "tags": ["electronics", "audio"],
+        "referring_site": "https://www.e-referrals.com",
+        "payment_gateway_names": ["tap2pay", "dotcash"]
+    ]
+]
+
+AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: properties)
+```
+
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
-    "name": "ecommerce.order_placed",
-    "time": "2022-05-23T13:52:38-04:00",
-    "properties": {
-        "order_id": "820982911946154508",
-        "cart_id": "eeafa272cebfd4b22385bc4b645e762c",
-        "total_value": 421.88,
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id": "your_app_identifier",
+      "name": "ecommerce.order_placed",
+      "time": "2024-01-15T09:35:20Z",
+      "properties": {
+        "order_id": "order_67890",
+        "cart_id": "cart_12345",
+        "total_value": 189.98,
         "currency": "USD",
-        "total_discounts": 5,
-        "discounts": [],
-        "products": [
-            {
-                "product_id": "632910392",
-                "product_name": "IPod Nano - 8GB",
-                "variant_id": "808950810",
-                "quantity": 1,
-                "price": 199,
-                "metadata": {
-                    "sku": "IPOD2008PINK"
-                }
-            }
+        "total_discounts": 10.00,
+        "discounts": [
+          {
+            "code": "SAVE10",
+            "amount": 10.00
+          }
         ],
-        "source": "braze-mock-storefront.myshopify.com",
+        "products": [
+          {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 199.98,
+            "metadata": {
+              "sku": "WH-BLK-PRO",
+              "color": "Black",
+              "brand": "BrazeAudio"
+            }
+          }
+        ],
+        "source": "https://braze-audio.com",
         "metadata": {
-            "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
-            "order_number": 1234,
-            "tags": [
-                "heavy",
-                "heavy2"
-            ],
-            "referring_site": "https://www.google.com",
-            "payment_gateway_names": [
-                "visa",
-                "bogus"
-            ]
+          "order_status_url": "https://braze-audio.com/orders/67890/status",
+          "order_number": "ORD-2024-001234",
+          "tags": ["electronics", "audio"],
+          "referring_site": "https://www.e-referrals.com",
+          "payment_gateway_names": ["tap2pay", "dotcash"]
         }
+      }
     }
+  ]
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.order_refunded %}
 
@@ -317,43 +762,182 @@ You can use the order refunded event to trigger when an order is partially or en
 | `tags`             | No       | Array     | (Shopify only) Order tags.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Example object
+#### Example objects
+
+{% subtabs %}
+{% subtab Web SDK %}
+
+```javascript
+braze.logCustomEvent("ecommerce.order_refunded", {
+    "order_id": "order_67890",
+    "total_value": 99.99,
+    "currency": "USD",
+    "total_discounts": 5.00,
+    "discounts": [
+        {
+            "code": "SAVE5",
+            "amount": 5.00
+        }
+    ],
+    "products": [
+        {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 99.99,
+            "metadata": {
+                "sku": "WH-BLK-PRO",
+                "color": "Black",
+                "brand": "BrazeAudio"
+            }
+        }
+    ],
+    "source": "https://braze-audio.com",
+    "metadata": {
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
+        "order_note": "Customer requested refund due to defective item",
+        "order_number": "ORD-2024-001234",
+        "tags": ["refund", "defective"]
+    }
+});
+```
+
+{% endsubtab %}
+{% subtab Android SDK %}
+
+```java
+JSONArray discounts = new JSONArray();
+discounts.put(new JSONObject()
+    .put("code", "SAVE5")
+    .put("amount", 5.00));
+
+JSONArray products = new JSONArray();
+JSONObject product = new JSONObject()
+    .put("product_id", "632910392")
+    .put("product_name", "Wireless Headphones")
+    .put("variant_id", "808950810")
+    .put("quantity", 1)
+    .put("price", 99.99)
+    .put("metadata", new JSONObject()
+        .put("sku", "WH-BLK-PRO")
+        .put("color", "Black")
+        .put("brand", "AudioTech"));
+products.put(product);
+
+BrazeProperties properties = new BrazeProperties()
+    .addProperty("order_id", "order_67890")
+    .addProperty("total_value", 99.99)
+    .addProperty("currency", "USD")
+    .addProperty("total_discounts", 5.00)
+    .addProperty("discounts", discounts)
+    .addProperty("products", products)
+    .addProperty("source", "https://braze-audio.com")
+    .addProperty("metadata", new JSONObject()
+        .put("order_status_url", "https://braze-audio.com/orders/67890/status")
+        .put("order_note", "Customer requested refund due to defective item")
+        .put("order_number", "ORD-2024-001234")
+        .put("tags", new JSONArray().put("refund").put("defective")));
+
+Braze.getInstance(context).logCustomEvent("ecommerce.order_refunded", properties);
+```
+
+{% endsubtab %}
+{% subtab Swift SDK %}
+
+```swift
+let discounts: [[String: Any]] = [
+    [
+        "code": "SAVE5",
+        "amount": 5.00
+    ]
+]
+
+let products: [[String: Any]] = [
+    [
+        "product_id": "632910392",
+        "product_name": "Wireless Headphones",
+        "variant_id": "808950810",
+        "quantity": 1,
+        "price": 99.99,
+        "metadata": [
+            "sku": "WH-BLK-PRO",
+            "color": "Black",
+            "brand": "BrazeAudio"
+        ]
+    ]
+]
+
+let properties: [String: Any] = [
+    "order_id": "order_67890",
+    "total_value": 99.99,
+    "currency": "USD",
+    "total_discounts": 5.00,
+    "discounts": discounts,
+    "products": products,
+    "source": "https://braze-audio.com",
+    "metadata": [
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
+        "order_note": "Customer requested refund due to defective item",
+        "order_number": "ORD-2024-001234",
+        "tags": ["refund", "defective"]
+    ]
+]
+
+AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_refunded", properties: properties)
+```
+
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
-    "name": "ecommerce.order_refunded",
-    "time": "2022-05-23T13:52:38-04:00",
-    "properties": {
-        "order_id": "820982911946154508",
-        "total_value": 421.88,
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id": "your_app_identifier",
+      "name": "ecommerce.order_refunded",
+      "time": "2024-01-15T10:15:30Z",
+      "properties": {
+        "order_id": "order_67890",
+        "total_value": 99.99,
         "currency": "USD",
-        "total_discounts": 5,
-        "discounts": [],
-        "products": [
-            {
-                "product_id": "632910392",
-                "product_name": "IPod Nano - 8GB",
-                "variant_id": "808950810",
-                "quantity": 1,
-                "price": 199,
-                "metadata": {
-                    "sku": "IPOD2008PINK"
-                }
-            }
+        "total_discounts": 5.00,
+        "discounts": [
+          {
+            "code": "SAVE5",
+            "amount": 5.00
+          }
         ],
-        "source": "braze-mock-storefront.myshopify.com",
+        "products": [
+          {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 99.99,
+            "metadata": {
+              "sku": "WH-BLK-PRO",
+              "color": "Black",
+              "brand": "BrazeAudio"
+            }
+          }
+        ],
+        "source": "https://braze-audio.com",
         "metadata": {
-            "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
-			"order_note": "item was broken",
-            "order_number": 1234,
-            "tags": [
-                "heavy",
-                "heavy2"
-            ]
+          "order_status_url": "https://braze-audio.com/orders/67890/status",
+          "order_note": "Customer requested refund due to defective item",
+          "order_number": "ORD-2024-001234",
+          "tags": ["refund", "defective"]
         }
+      }
     }
+  ]
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab ecommerce.order_cancelled %}
 
@@ -386,43 +970,182 @@ You can use the order cancelled event to trigger when a customer cancels an orde
 | `tags`                | No       | Array     | (Shopify only) Order tags.            |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Example object
+#### Example objects
+
+{% subtabs %}
+{% subtab Web SDK %}
+
+```javascript
+braze.logCustomEvent("ecommerce.order_cancelled", {
+    "order_id": "order_67890",
+    "cancel_reason": "customer changed mind",
+    "total_value": 189.98,
+    "currency": "USD",
+    "total_discounts": 10.00,
+    "discounts": [
+        {
+            "code": "SAVE10",
+            "amount": 10.00
+        }
+    ],
+    "products": [
+        {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 199.98,
+            "metadata": {
+                "sku": "WH-BLK-PRO",
+                "color": "Black",
+                "brand": "BrazeAudio"
+            }
+        }
+    ],
+    "source": "https://braze-audio.com",
+    "metadata": {
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
+        "order_number": "ORD-2024-001234",
+        "tags": ["cancelled", "customer_request"]
+    }
+});
+```
+
+{% endsubtab %}
+{% subtab Android SDK %}
+
+```java
+JSONArray discounts = new JSONArray();
+discounts.put(new JSONObject()
+    .put("code", "SAVE10")
+    .put("amount", 10.00));
+
+JSONArray products = new JSONArray();
+JSONObject product = new JSONObject()
+    .put("product_id", "632910392")
+    .put("product_name", "Wireless Headphones")
+    .put("variant_id", "808950810")
+    .put("quantity", 1)
+    .put("price", 199.98)
+    .put("metadata", new JSONObject()
+        .put("sku", "WH-BLK-PRO")
+        .put("color", "Black")
+        .put("brand", "AudioTech"));
+products.put(product);
+
+BrazeProperties properties = new BrazeProperties()
+    .addProperty("order_id", "order_67890")
+    .addProperty("cancel_reason", "customer changed mind")
+    .addProperty("total_value", 189.98)
+    .addProperty("currency", "USD")
+    .addProperty("total_discounts", 10.00)
+    .addProperty("discounts", discounts)
+    .addProperty("products", products)
+    .addProperty("source", "https://braze-audio.com")
+    .addProperty("metadata", new JSONObject()
+        .put("order_status_url", "https://braze-audio.com/orders/67890/status")
+        .put("order_number", "ORD-2024-001234")
+        .put("tags", new JSONArray().put("cancelled").put("customer_request")));
+
+Braze.getInstance(context).logCustomEvent("ecommerce.order_cancelled", properties);
+```
+
+{% endsubtab %}
+{% subtab Swift SDK %}
+
+```swift
+let discounts: [[String: Any]] = [
+    [
+        "code": "SAVE10",
+        "amount": 10.00
+    ]
+]
+
+let products: [[String: Any]] = [
+    [
+        "product_id": "632910392",
+        "product_name": "Wireless Headphones",
+        "variant_id": "808950810",
+        "quantity": 1,
+        "price": 199.98,
+        "metadata": [
+            "sku": "WH-BLK-PRO",
+            "color": "Black",
+            "brand": "BrazeAudio"
+        ]
+    ]
+]
+
+let properties: [String: Any] = [
+    "order_id": "order_67890",
+    "cancel_reason": "customer changed mind",
+    "total_value": 189.98,
+    "currency": "USD",
+    "total_discounts": 10.00,
+    "discounts": discounts,
+    "products": products,
+    "source": "https://braze-audio.com",
+    "metadata": [
+        "order_status_url": "https://braze-audio.com/orders/67890/status",
+        "order_number": "ORD-2024-001234",
+        "tags": ["cancelled", "customer_request"]
+    ]
+]
+
+AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties: properties)
+```
+
+{% endsubtab %}
+{% subtab API Payload %}
 
 ```json
 {
-    "name": "ecommerce.order_cancelled",
-    "time": "2022-05-23T13:52:38-04:00",
-    "properties": {
-        "order_id": "820982911946154508",
-        "cancel_reason": "no longer necessary",
-        "total_value": 421.88,
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id": "your_app_identifier",
+      "name": "ecommerce.order_cancelled",
+      "time": "2024-01-15T10:45:15Z",
+      "properties": {
+        "order_id": "order_67890",
+        "cancel_reason": "customer changed mind",
+        "total_value": 189.98,
         "currency": "USD",
-        "total_discounts": 5,
-        "discounts": [],
-        "products": [
-            {
-                "product_id": "632910392",
-                "product_name": "IPod Nano - 8GB",
-                "variant_id": "808950810",
-                "quantity": 1,
-                "price": 199,
-                "metadata": {
-                    "sku": "IPOD2008PINK"
-                }
-            }
+        "total_discounts": 10.00,
+        "discounts": [
+          {
+            "code": "SAVE10",
+            "amount": 10.00
+          }
         ],
-        "source": "braze-mock-storefront.myshopify.com",
+        "products": [
+          {
+            "product_id": "632910392",
+            "product_name": "Wireless Headphones",
+            "variant_id": "808950810",
+            "quantity": 1,
+            "price": 199.98,
+            "metadata": {
+              "sku": "WH-BLK-PRO",
+              "color": "Black",
+              "brand": "BrazeAudio"
+            }
+          }
+        ],
+        "source": "https://braze-audio.com",
         "metadata": {
-            "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
-            "order_number": 1234,
-            "tags": [
-                "heavy",
-                "heavy2"
-            ]
+          "order_status_url": "https://braze-audio.com/orders/67890/status",
+          "order_number": "ORD-2024-001234",
+          "tags": ["cancelled", "customer_request"]
         }
+      }
     }
+  ]
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
 
 {% endtab %}
 {% endtabs %}

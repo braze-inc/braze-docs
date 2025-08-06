@@ -1455,7 +1455,7 @@ $( document ).ready(function() {
                          In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data.
                           </label>
                           <label style="font-size: 12px;">
-                          Braze technical support hours of operation are from 9:00 am–5:00 pm GMT and 8:00 am–8:00 pm ET, Monday - Friday, excluding Braze recognized holidays. For issues logged outside of these hours, you should anticipate a response on the next business day.
+                          Braze technical support operates during standard business hours across multiple time zones to serve our global customer base. For specific support hours in your region or for issues logged outside of business hours, please refer to the support handbook. Response times may vary based on when your request is submitted, your support tier, and the severity of the issue.
                           </label>
                       </div>
                       <button type="submit" name="Submit Ticket" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT TICKET </button>

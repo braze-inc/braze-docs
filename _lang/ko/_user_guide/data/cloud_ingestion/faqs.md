@@ -41,7 +41,9 @@ toc_headers: h2
 
 ### Snowflake 인스턴스에 연결하는 동안 오류가 발생했습니다. IP로 들어오는 요청은 Snowflake에 액세스할 수 없습니다.
 
-공식 Braze IP를 IP 허용 목록에 추가해 보세요. 자세한 내용은 [데이터 웨어하우스 통합을]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) 참조하세요.
+공식 Braze IP를 IP 허용 목록에 추가해 보세요. 자세한 내용은 [데이터 웨어하우스 통합을]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) 참조하거나 관련 IP를 허용하세요:
+
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### 고객 구성으로 인해 SQL 실행 중 오류가 발생했습니다. 002003 (42S02): SQL 컴파일 오류: 존재하지 않거나 권한이 없습니다.
 
@@ -152,11 +154,11 @@ CDI는 `UPDATED_AT`을 사용하여 동기화 중에 어떤 레코드를 가져�
 
 ## 동기화 중에 여러 레코드가 동일한 ID를 공유하는 경우 순서가 유지되나요?
 
-처리 순서는 100% 예측할 수 없습니다. 예를 들어, 동기화 중에 테이블에 동일한 `EXTERNAL_ID` 행이 여러 개 있는 경우 최종 프로필에 어떤 값이 포함될지 보장할 수 없습니다. 
+처리 순서는 100% 예측할 수 없습니다. 예를 들어, 동기화 중에 테이블에 동일한 `EXTERNAL_ID` 행이 여러 개 있는 경우 최종 프로필에 어떤 값이 포함될지 보장할 수 없습니다. 페이로드 열에 다른 속성을 사용하여 동일한 `EXTERNAL_ID` 을 업데이트하는 경우 동기화가 완료되면 모든 변경 사항이 반영됩니다.
 
 ## CDI의 보안 대책은 무엇인가요?
 
-### Braze의 조치
+### 당사의 조치
 
 Braze는 CDI에 대해 다음과 같은 조치를 취하고 있습니다:
 

@@ -92,7 +92,7 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
  
 ## Salesforce Sales Cloud에서 리드 업데이트하기 {#updating-lead}
 
-세일즈포스에서 리드를 업데이트하는 Braze 세일즈포스 세일즈 클라우드 웹훅을 설정하려면 세일즈포스 세일즈 클라우드와 브레이즈 간의 공통 식별자가 필요합니다. 아래 예제에서는 Salesforce `lead_id` 를 Braze `external_id` 로 사용하지만 `user_alias` 를 사용하여 이 작업을 수행할 수도 있습니다. 이에 대한 자세한 내용은 [B2B 데이터를](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models) 참조하세요.
+세일즈포스에서 리드를 업데이트하는 Braze 세일즈포스 세일즈 클라우드 웹훅을 설정하려면 세일즈포스 세일즈 클라우드와 브레이즈 간의 공통 식별자가 필요합니다. 아래 예제에서는 Salesforce `lead_id` 를 Braze `external_id` 로 사용하지만 `user_alias` 를 사용하여 이 작업을 수행할 수도 있습니다. 이에 대한 자세한 내용은 [B2B 데이터를]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models) 참조하세요.
 
 이 예에서는 리드가 특정 리드 임계값을 넘은 후 리드의 리드 단계를 'MQL(마케팅 적격 리드)'로 업데이트하는 방법을 구체적으로 보여 줍니다. 이는 [B2B 리드 스코어링 워크플로]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/) 사용 사례의 핵심 부분입니다.
 
@@ -158,7 +158,7 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
 
 ### MQL(마케팅 적격 리드) 임계값을 넘기 위한 리드 스코어링 캔버스 {#lead-scoring}
 
-이 웹후크는 [리드 스코어링]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) 사용 사례에서 다루고 있지만, 별도의 웹후크 캠페인을 만드는 대신 리드 스코어링 캔버스 내에서 MQL을 확인하고 Salesforce를 직접 업데이트할 수도 있습니다(별도의 웹후크 캠페인을 만들지 않고): 
+이 웹후크는 [리드 스코어링]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) 사용 사례에서 다루고 있지만, 별도의 웹후크 캠페인을 만드는 대신 리드 스코어링 캔버스 내에서 MQL을 확인하고 Salesforce를 직접 업데이트할 수도 있습니다(별도의 웹후크 캠페인을 만들지 않고): 
 
 사용자 업데이트에 후속 단계를 추가하여 사용자가 정의한 MQL 임계값을 넘었는지 확인하세요. 교차된 경우 사용자의 상태를 "MQL"로 업데이트한 다음 이 웹훅 템플릿을 사용하여 동일한 "MQL" 상태로 Salesforce를 업데이트하세요. Salesforce는 정의된 리드 라우팅 규칙에 따라 이 리드를 적절한 영업 팀으로 라우팅하여 나머지 작업을 처리합니다.  
 

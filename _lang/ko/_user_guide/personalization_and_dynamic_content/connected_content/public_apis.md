@@ -1,11 +1,11 @@
 ---
-nav_title: 공개 API
+nav_title: 공개 API 사용
 article_title: 커넥티드 콘텐츠용 퍼블릭 API
-page_order: 4
+page_order: 10
 description: "이 문서에서는 연결된 콘텐츠에 사용할 수 있는 공개적으로 사용 가능한 API 목록을 다룹니다."
 ---
 
-# 공개 API
+# 커넥티드 콘텐츠에 퍼블릭 API 사용
 
 > 연결된 콘텐츠에 사용할 수 있는 공개적으로 사용 가능한 다양한 API가 있습니다. 공개 API를 사용하면 메시지에 사용자 지정 데이터를 삽입할 수 있습니다. This page compiles a list of public APIs that could be used for Connected Content. 그러나 더 많은 API를 통해 다양한 잠재적 연결된 콘텐츠 용도를 제공할 수 있습니다.  
 

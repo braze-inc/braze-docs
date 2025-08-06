@@ -42,7 +42,7 @@ channel:
 
 ## 웹 푸시 사용을 위한 전제 조건
 
-Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트에 푸시를 통합해야 합니다. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/).
+Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트에 푸시를 통합해야 합니다. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
 ### 푸시 권한
 
@@ -65,7 +65,7 @@ Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 �
 푸시 프로토콜 표준 및 브라우저 지원에 대한 자세한 내용은 사용 중인 브라우저에 따른 리소스를 검토할 수 있습니다.
 
 - [Safari(데스크톱)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari (mobile)]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/safari_push/)
+- [Safari (mobile)]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=safari)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 

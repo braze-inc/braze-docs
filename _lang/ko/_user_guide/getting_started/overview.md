@@ -3,7 +3,7 @@ nav_title: Braze 개요
 article_title: "시작하기: Braze 개요"
 page_order: 1
 page_type: reference
-description: "Braze에서 작업할 때 알아야 할 핵심 개념을 숙지하세요."
+description: "Braze에서 작업할 때 알아야 할 핵심 개념에 대해 알아보세요."
 
 ---
 

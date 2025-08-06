@@ -1,5 +1,7 @@
 {%- if include.source == "loom" -%}
 {%- assign embed_base_url = "https://www.loom.com/embed" -%}
+{%- elsif include.source == "wistia" -%}
+{%- assign embed_base_url = "https://fast.wistia.net/embed/iframe" -%}
 {%- else -%}
 {%- assign embed_base_url = "https://www.youtube.com/embed" -%}
 {%- endif -%}

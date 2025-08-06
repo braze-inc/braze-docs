@@ -15,6 +15,8 @@ platform:
 
 > Learn about Content Cards for the Braze SDK, including the different data models and card-specific properties available for your application.
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 {% sdktabs %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/content_cards.md %}

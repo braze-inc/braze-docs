@@ -213,19 +213,19 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
     <tbody>
         <tr>
             <td class="no-split">Total Opens</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} For AMP emails, this is the total opens for the HTML and plaintext versions.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Opens' %} For AMP emails, this is the total opens for the HTML and plaintext versions.</td>
         </tr>
         <tr>
             <td class="no-split">Total Clicks</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} For AMP emails, this is the total clicks in the HTML and plaintext versions.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %} For AMP emails, this is the total clicks in the HTML and plaintext versions.</td>
         </tr>
         <tr>
             <td class="no-split">AMP Opens</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split">AMP Clicks</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>

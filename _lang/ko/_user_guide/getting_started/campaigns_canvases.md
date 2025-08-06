@@ -30,7 +30,7 @@ Braze에서 메시지는 [캠페인](#campaigns) 또는 [캔버스](#canvas-flow
 정기 및 A/B 테스트 캠페인은 예정된 일정에 따라 (예: 다가오는 이벤트에 대해 사용자 목록에게 알림) 또는 사용자의 행동에 대한 응답으로 자동으로 발송될 수 있습니다 (예: 누군가가 뉴스레터를 구독할 때 이메일을 보내는 경우). [캠페인 일정]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types)에 대해 자세히 알아보세요.
 {% endalert %}
 
-캠페인의 유형에 관계없이, 캠페인은 사용자의 요구를 듣고 사려 깊고 개인화된 응답을 제공할 수 있습니다. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+캠페인의 유형에 관계없이, 캠페인은 사용자의 요구를 듣고 사려 깊고 개인화된 응답을 제공할 수 있습니다. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소스를 확인하세요:
 

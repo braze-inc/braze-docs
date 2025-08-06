@@ -6,6 +6,21 @@ Style Guide: https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhX
 
 These instructions are for contributors using GitHub Copilot to draft or edit documentation for Braze.
 
+## Pull request titles
+
+The title of the pull request should always match the corresponding issue title, which includes the pre-pended ticket number in the title as `[BD-NUMBER]` where `NUMBER` is the Jira ticket number listed in the corresponding issue. For example:
+
+- **Issue:** `[BD-5016]:Update behaviour on link shortening when used with universal link`
+- **PR Title:** `[BD-5016]:Update behaviour on link shortening when used with universal link`
+
+## Pull request body
+
+The pull request body should always use the [PULL_REQUEST_TEMPLATE](./PULL_REQUEST_TEMPLATE) as a base and add/edit the relevant sections in the template as needed. Specifically the Jira ticket number should always be linked using the following syntax:
+
+```
+- [BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
+```
+
 ## Voice and Tone
 
 Our brand voice is smart, conversational, and direct. We are a human voice in a world of tech buzzwords; we provide clarity and guidance to anyone interested in the craft of customer engagement.

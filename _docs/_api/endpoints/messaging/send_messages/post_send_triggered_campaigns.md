@@ -28,7 +28,7 @@ To use this endpoint, you'll need to generate an API key with the `campaigns.tri
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
 ## Request body
 
