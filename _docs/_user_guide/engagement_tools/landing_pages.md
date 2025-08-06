@@ -23,7 +23,7 @@ Before you can access, create, and publish landing pages, you either need admini
 - Create Landing Page Drafts
 - Publish Landing Pages
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## Plan tiers
 

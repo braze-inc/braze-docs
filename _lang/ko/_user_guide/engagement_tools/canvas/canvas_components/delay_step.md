@@ -32,6 +32,12 @@ Personalized delays and extended delays are in early access. Contact your Braze 
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
 
+다음과 같은 경우 Braze는 해당 단계에서 사용자를 종료합니다:
+
+- 컨텍스트 변수는 어떤 값으로도 반환되지 않습니다.
+- 임베디드 커넥티드 콘텐츠 호출이 실패했습니다.
+- 컨텍스트 변수 유형이 일치하지 않습니다.
+
 Let's say we want to remind our customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, we can select this context variable to delay by. In this case, our Context step would have the following fields:
 
 - **Context variable name:** product_reminder_interval

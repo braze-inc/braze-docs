@@ -1,14 +1,6 @@
 ## Default User Attributes
 
-To set a default attribute for a user, call the `GetCurrentUser()` method on the shared `UBrazeUser` object to get a reference to the current user of your app. Then you can call methods to set a user attribute.
-
-```cpp
-UBraze->GetCurrentUser([](UBrazeUser* BrazeUser) {
-    if (BrazeUser) {
-        BrazeUser->SetFirstName(TEXT("Alex"));
-    }
-});
-```
+### Supported attributes
 
 The following attributes should be set on the `UBrazeUser` object:
 
@@ -21,6 +13,18 @@ The following attributes should be set on the `UBrazeUser` object:
 - `SetHomeCity`
 - `SetPhoneNumber`
 - `SetGender`
+
+### Setting default attributes
+
+To set a default attribute for a user, call the `GetCurrentUser()` method on the shared `UBrazeUser` object to get a reference to the current user of your app. Then you can call methods to set a user attribute.
+
+```cpp
+UBraze->GetCurrentUser([](UBrazeUser* BrazeUser) {
+    if (BrazeUser) {
+        BrazeUser->SetFirstName(TEXT("Alex"));
+    }
+});
+```
 
 ## Custom User Attributes
 

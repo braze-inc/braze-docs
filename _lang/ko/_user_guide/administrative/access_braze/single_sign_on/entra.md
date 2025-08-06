@@ -23,10 +23,6 @@ description: "이 문서에서는 Braze로 Microsoft Entra 싱글 사인온 기�
 | RelayState API 키 | ID 공급자 로그인을 사용 **설정하려면 설정** > **API 키**로 이동하여 `sso.saml.login` 권한으로 API 키를 만듭니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **설정**에서 **개발자 콘솔** > **API 설정** 아래에 API 키를 찾을 수 있습니다.
-{% endalert %}
-
 ## 서비스 공급자(SP)가 Microsoft Entra SSO 내에서 로그인을 시작했습니다.
 
 ### 1단계: 갤러리에서 Braze 추가하기
@@ -96,13 +92,7 @@ Microsoft Entra 관리 센터에서 Braze를 설정하면 Microsoft Entra에서 
 계정 매니저가 계정에 대해 SAML SSO를 사용 설정한 후 다음을 수행합니다.
 
 1. **설정** > **관리자 설정** > **보안 설정으로** 이동하여 SAML SSO 섹션을 **켜기로** 전환합니다.
-
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 계정 아이콘을 선택하고 **회사 설정** > **보안 설정**으로 이동하여 SAML SSO 섹션을 찾으십시오.
-{% endalert %}
-
-{: start="2"}
-2\. 같은 페이지에서 다음을 추가합니다:
+2. 같은 페이지에서 다음을 추가합니다:
 
 | 요구 사항 | 세부 정보 |
 |---|---|

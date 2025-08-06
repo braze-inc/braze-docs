@@ -44,55 +44,59 @@ Weitere Informationen finden Sie auf unserer Seite über [API-Ratenbegrenzungen]
 {% elsif include.endpoint == "users export ids" %}
 Wenn Sie Braze am oder nach dem 22\. August 2024 aktiviert haben, gilt für diesen Endpunkt ein Rate-Limit von 250 Anfragen pro Minute, wie unter [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) beschrieben.
 
+Sie können das Rate-Limits dieses Endpunkts auch auf 40 Anfragen pro Sekunde erhöhen, wenn Sie die folgenden Voraussetzungen erfüllen:
+
+- In Ihrem Workspace ist das Standard Rate-Limiting (250 Anfragen pro Minute) aktiviert. Wenden Sie sich an Ihren Braze-Konto Manager:in, um weitere Unterstützung bei der Aufhebung eines bereits bestehenden Rate-Limits zu erhalten.
+- Ihre Anfrage enthält den Parameter `fields_to_export`, um alle Felder aufzulisten, die Sie erhalten möchten.
+
+{% alert important %}
+Wenn Sie `canvases_received` oder `campaigns_received` in den Parameter `fields_to_export` eingeben, kommt Ihre Anfrage nicht für das schnellere Rate-Limit in Frage. Wir empfehlen, diese nur dann in Ihre Anfrage aufzunehmen, wenn Sie einen speziellen Anwendungsfall dafür haben.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-Für Kund:innen, die Braze am oder nach dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 20.000 Anfragen pro Minute. Dieses Rate-Limit wird mit den Endpunkten `/users/alias/new`, `/users/identify` und `/users/merge` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden ein gemeinsames Rate-Limits von 20.000 Anfragen pro Minute auf diesen Endpunkt an. Dieses Rate-Limit wird mit den Endpunkten `/users/alias/new`, `/users/identify`, `/users/merge` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-Für Kund:innen, die Braze am oder nach dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 20.000 Anfragen pro Minute. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/identify`, `/users/merge` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden ein gemeinsames Rate-Limits von 20.000 Anfragen pro Minute auf diesen Endpunkt an. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/identify`, `/users/merge` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-Für Kund:innen, die Braze am oder nach dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 20.000 Anfragen pro Minute. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/identify`, `/users/merge` und `/users/alias/new` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
-
-<!---/users/alias/update-->
-
-{% elsif include.endpoint == "users alias update" %}
-Für Kund:innen, die Braze am oder nach dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 20.000 Anfragen pro Minute. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/identify` und `/users/merge` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden ein gemeinsames Rate-Limits von 20.000 Anfragen pro Minute auf diesen Endpunkt an. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/alias/new`, `/users/identify` und `/users/merge` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-Für Kund:innen, die Braze am oder nach dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 20.000 Anfragen pro Minute. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/alias/new`, `/users/merge` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden ein gemeinsames Rate-Limits von 20.000 Anfragen pro Minute auf diesen Endpunkt an. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/alias/new`, `/users/merge` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-Für Kund:innen, die Braze am oder nach dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 20.000 Anfragen pro Minute. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/alias/new`, `/users/identify` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden ein gemeinsames Rate-Limits von 20.000 Anfragen pro Minute auf diesen Endpunkt an. Dieses Rate-Limit wird mit den Endpunkten `/users/delete`, `/users/alias/new`, `/users/identify` und `/users/alias/update` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-Für Kund:innen, die Braze ab dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 1.000 Anfragen pro Stunde. Dieses Rate-Limit wird mit den Endpunkten `/events`, `/events/list` und `/purchases/product_list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden auf diesen Endpunkt ein gemeinsames Rate-Limits von 1.000 Anfragen pro Stunde an. Dieses Rate-Limit wird mit den Endpunkten `/events`, `/events/list` und `/purchases/product_list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-Für Kund:innen, die Braze ab dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 1.000 Anfragen pro Stunde. Dieses Rate-Limit wird mit den Endpunkten `/custom_attributes`, `/events/list` und `/purchases/product_list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden auf diesen Endpunkt ein gemeinsames Rate-Limits von 1.000 Anfragen pro Stunde an. Dieses Rate-Limit wird mit den Endpunkten `/custom_attributes`, `/events/list` und `/purchases/product_list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-Für Kund:innen, die Braze ab dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 1.000 Anfragen pro Stunde. Dieses Rate-Limit wird mit den Endpunkten `/custom_attributes`, `/events` und `/purchases/product_list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden auf diesen Endpunkt ein gemeinsames Rate-Limits von 1.000 Anfragen pro Stunde an. Dieses Rate-Limit wird mit den Endpunkten `/custom_attributes`, `/events` und `/purchases/product_list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-Für Kund:innen, die Braze ab dem 16\. September 2021 nutzen, gilt für diesen Endpunkt ein gemeinsames Rate-Limit von 1.000 Anfragen pro Stunde. Dieses Rate-Limit wird mit den Endpunkten `/custom_attributes`, `/events` und `/events/list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
+Wir wenden auf diesen Endpunkt ein gemeinsames Rate-Limits von 1.000 Anfragen pro Stunde an. Dieses Rate-Limit wird mit den Endpunkten `/custom_attributes`, `/events` und `/events/list` geteilt, wie in [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) dokumentiert.
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
@@ -143,9 +147,17 @@ Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/ap
 
 {% endif %}
 
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "translation endpoints" %}
+
+Dieser Endpunkt hat ein Rate-Limits von 250.000 Anfragen pro Minute.
+
+{% endif %}
+
 <!---Additional if statement for /messages/send endpoint-->
 
-{% if include.category == "Endpunkt zum Senden von Nachrichten" %}
+{% if include.category == "message send endpoint" %}
 
 Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
 
@@ -184,3 +196,4 @@ Für diesen Endpunkt gilt ein gemeinsames Rate-Limit von 50 Anfragen pro Minute 
 Dieser Endpunkt hat ein Rate-Limit von 50.000 Anfragen pro Minute.
 
 {% endif %}
+

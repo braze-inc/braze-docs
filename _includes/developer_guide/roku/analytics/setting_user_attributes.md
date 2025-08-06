@@ -2,7 +2,9 @@
 
 ## Default user attributes
 
-User attributes will be assigned to the currently active user. The following default fields may be set:
+### Predefined methods
+
+Braze provides predefined methods for setting the following user attributes using the `m.Braze` object.
 
 - `FirstName`
 - `LastName`
@@ -14,11 +16,57 @@ User attributes will be assigned to the currently active user. The following def
 - `HomeCity`
 - `PhoneNumber`
 
-For example, you could set up a first name using the following approach:
+### Setting default attributes
 
+To set a default attribute, call the relevant method on the `m.Braze` object.
+
+{% tabs local %}
+{% tab First name %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
+{% endtab %}
+{% tab Last name %}
+```brightscript
+m.Braze.setLastName("Smith")
+```
+{% endtab %}
+{% tab Email %}
+```brightscript
+m.Braze.setEmail("alex@example.com")
+```
+{% endtab %}
+{% tab Gender %}
+```brightscript
+m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
+```
+{% endtab %}
+{% tab Birth date %}
+```brightscript
+m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
+```
+{% endtab %}
+{% tab Country %}
+```brightscript
+m.Braze.setCountry("United States")
+```
+{% endtab %}
+{% tab Language %}
+```brightscript
+m.Braze.setLanguage("en")
+```
+{% endtab %}
+{% tab Home city %}
+```brightscript
+m.Braze.setHomeCity("New York")
+```
+{% endtab %}
+{% tab Phone number %}
+```brightscript
+m.Braze.setPhoneNumber("+1234567890")
+```
+{% endtab %}
+{% endtabs %}
 
 ## Custom user attributes
 
@@ -96,7 +144,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 ### Unsetting custom attributes
 
-Custom attributes can also be unset using the following method:
+To unset a custom attribute, pass the relevant attribute key to the `unsetCustomAttribute` method.
 
 ```brightscript
 m.Braze.unsetCustomAttribute("attributeName")

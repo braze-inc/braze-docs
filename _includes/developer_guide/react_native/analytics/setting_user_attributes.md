@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### Unsetting a custom attribute
+#### Unsetting custom attributes
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){

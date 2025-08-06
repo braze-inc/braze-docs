@@ -251,7 +251,7 @@ When this feature is set as [Required](#enforcement-options), the following scen
 - JWT was empty or missing
 - JWT failed to verify for the public keys you uploaded to the Braze dashboard
 
-You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`](#error-codes), `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication token (JWT) that caused the error. 
+You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`](#error-codes), `reason` for the error, the `userId` of the request (the user cannot be anonymous), and the authentication token (JWT) that caused the error. 
 
 Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply the Braze SDK with this new valid token.
 
@@ -452,3 +452,6 @@ When a request is rejected because of an authentication error, the SDK will invo
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
+#### Can you use SDK authentication for anonymous users? {#faq-anonymous-users}
+
+No. SDK authentication will no-op for anonymous users.

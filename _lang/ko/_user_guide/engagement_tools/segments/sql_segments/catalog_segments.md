@@ -98,7 +98,7 @@ B2B SaaS 플랫폼이 있고 기존 고객의 직원인 사용자를 세분화�
 
 ### 현재 템플릿이 지원하지 않는 카탈로그 세그먼트 사용 사례가 있습니다. 어떻게 설정해야 하나요?
 
-추가 안내가 필요하면 고객 지원 관리자 또는 [Braze 지원팀에]({{site.baseurl}}/help/support/) 문의하세요.
+추가 안내가 필요하면 고객 지원 관리자 또는 [Braze 지원팀에]({{site.baseurl}}/user_guide/administrative/access_braze/support/) 문의하세요.
 
 [1]: {% image_buster /assets/img/catalog-segments-template.png %}
 [2]: {% image_buster /assets/img/catalog-segments-editor.png %}

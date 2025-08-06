@@ -17,6 +17,7 @@ page_order: 5
 ## 항목 속성 사용
 
 항목 속성은 작업 기반 및 API 트리거 캔버스에서 사용할 수 있습니다. 이 항목 속성은 커스텀 이벤트, 구매 또는 API 호출에 의해 캔버스가 트리거될 때 정의됩니다. 자세한 내용은 다음 기사를 참조하십시오:
+
 - [캔버스 항목 속성 객체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [이벤트 속성 객체]({{site.baseurl}}/api/objects_filters/event_object/)
 - [구매 객체]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)

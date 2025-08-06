@@ -24,6 +24,9 @@ guide_featured_list:
   - name: 보고서 빌더
     link: /docs/user_guide/analytics/reporting/report_builder/
     image: /assets/img/braze_icons/tool-01.svg
+  - name: 대시보드 빌더
+    link: /docs/user_guide/analytics/reporting/dashboard_builder/
+    image: /assets/img/braze_icons/tool-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

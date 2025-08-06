@@ -16,7 +16,7 @@ tool: Canvas
 
 사용자 업데이트를 사용하면 업데이트는 분당 `/users/track` 요청 사용량 제한에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
 
-사용자는 관련 사용자 업데이트가 완료된 후에만 다음 캔버스 단계로 진행할 수 있습니다. 후속 메시징이 사용자 업데이트에 의존하는 경우 메시지를 보내기 전에 이러한 업데이트가 완료되었는지 확인할 수 있습니다.
+사용자는 관련 사용자 업데이트가 완료된 후에만 다음 캔버스 단계로 진행할 수 있습니다. 즉, 이러한 사용자 업데이트에 의존하는 모든 후속 메시징은 다음 단계가 실행될 때 최신 상태로 유지됩니다.
 
 ## 사용자 업데이트 만들기
 

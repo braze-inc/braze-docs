@@ -30,7 +30,7 @@ Apple은 기본 프롬프트를 사용하도록 요구하지만, Braze 캠페인
 
 사용자가 앱을 떠나지 않도록 하려면 먼저 별도의 인앱 메시지로 사용자에게 메시지를 전달할 수 있습니다. 프라이밍은 기본 App Store 리뷰 프롬프트를 보내기 전에 사용자에게 권한을 요청하는 방법입니다. 이렇게 하려면 인앱 메시지 캠페인을 생성하고 클릭 시 `requestReview` 메서드를 호출하는 커스텀 딥링크를 추가합니다. 
 
-For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/customization/app_store_review_prompt/).
+For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
 ![두 개의 인앱 메시지를 나란히 표시합니다. 첫 번째는 앱을 평가할 시간이 있는지 물어봄으로써 사용자가 앱을 평가하도록 유도합니다. 두 번째는 기본 iOS 앱 스토어 리뷰 메시지로, 사용자가 앱을 평가하기 위해 선택할 수 있는 별 5개 등급을 표시합니다.][2]
 

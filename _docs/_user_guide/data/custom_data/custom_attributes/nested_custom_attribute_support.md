@@ -11,28 +11,9 @@ description: "This reference article covers using nested custom attributes as a 
 
 > This page covers nested custom attributes, which allow you to define a set of attributes as a property of another attribute. In other words, when you define a custom attribute object, you can define a set of additional attributes for that object.
 
-Let's say you want to define a custom attribute on the user profile called `favorite_book`. This custom attribute can be defined as an object that has the nested attributes `title`, `author`, and `publishing_date`, like so:
+{% multi_lang_include nested_attribute_objects/about_nested_attributes.md %}
 
-```json
-"favorite_book": {
-  "title": "The Hobbit",
-  "author": "J.R.R. Tolkien",
-  "publishing_date": "1937"
-}
-```
-
-This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
-
-Custom attribute objects can contain [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types), such as:
-
-- Numbers
-- Strings
-- Booleans
-- Arrays
-- Time
-  - When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
-- Other objects
-- [Arrays of objects]({{site.baseurl}}/array_of_objects/)
+{% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
 ## Limitations
 

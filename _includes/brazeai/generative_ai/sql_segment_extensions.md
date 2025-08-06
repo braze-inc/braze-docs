@@ -177,7 +177,7 @@ For incremental SQL Segment Extensions, the preview will not include the additio
 Next, determine if you need to invert SQL. While it's not possible to directly query for users with zero events, you can use **Invert SQL** to target these users.
 
 {% alert note %}
-By default, **Invert SQL** is not toggled on. However, if you generate a SQL statement for Segment Extensions that needs to be negated, ChatGPT could return an output that automatically toggles this feature on.
+By default, **Invert SQL** is not toggled on. However, if you use the AI SQL generator to generate a SQL statement that needs to be negated, ChatGPT could return an output that automatically toggles this feature on.
 {% endalert %}
 
 For example, to target users who have fewer than three purchases, first write a query to select users who have three or more purchases. Then, select the **Invert SQL** to target users with fewer than three purchases (including those with zero purchases).

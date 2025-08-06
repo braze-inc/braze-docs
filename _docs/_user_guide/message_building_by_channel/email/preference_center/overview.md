@@ -43,7 +43,7 @@ The [Generate preference center URL endpoint]({{site.baseurl}}/api/endpoints/pre
 
 ### Step 2: Include in your email campaign
 
-{% multi_lang_include preference_center_warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
 To place a link to the preference center in your emails, use the following Liquid tag in the desired place in your email, similar to the way you would insert unsubscribe URLs.
 

@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,8 +61,10 @@ For customers who have onboarded with Braze on or after August 22, 2024, the req
 | `braze_id`         | Optional | String                                                        | Braze identifier for a particular user.                                                      |
 | `email_address`    | Optional | String                                                        | Email address of user.                                                                       |
 | `phone`            | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user.                                                                        |
-| `fields_to_export` | Required | Array of strings                                              | Name of user data fields to export.                                                          |
+| `fields_to_export` | Optional* | Array of strings                                              | Name of user data fields to export.<br><br>*This field is required to use the faster rate limit of 40 requests per second. If omitted, the default rate limit of 250 requests per min will be used instead. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+*Required for customers who have onboarded with Braze on or after August 22, 2024.
 
 ## Example request
 ```

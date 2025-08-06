@@ -33,7 +33,7 @@ Braze는 데이터 포인트, 전 세계 및 구독 그룹에 대한 구독 상�
 
 Braze는 [커스텀 바닥글]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer)을 통해 수동으로 이메일 구독을 취소하는 모든 사용자의 구독을 자동으로 취소합니다. 사용자가 이메일 주소를 업데이트하고 **전송 구성** 설정에서 **이메일 업데이트 시 사용자 재구독이** 활성화되어 있으면 정상적인 이메일 전송이 재개됩니다.
 
-사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 이 경우 트랜잭션 이메일은 **대상 고객** 단계에서 **수신 거부한 사용자를 포함한 모든 사용자에게 보내기** 옵션을 선택한 것을 의미합니다.
+사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 이 경우 트랜잭션 이메일은 **대상 고객** 단계에서 **수신 거부한 사용자를 포함한 모든 사용자에게 보내기** 옵션을 선택한 것을 참조합니다.
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
@@ -41,7 +41,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 ### 반송 및 유효하지 않은 이메일
 
-{% multi_lang_include metrics.md metric='하드 바운스' %} {% multi_lang_include metrics.md metric='소프트 바운스' %} 
+{% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='소프트 바운스' %} 
 
 When an email address hard bounces, the user's subscription state isn't automatically set to "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. 해당 사용자의 이메일 주소가 변경되면 새 이메일이 유효할 수 있으므로 이메일 전송을 재개합니다. 소프트 바운스는 72시간 동안 자동으로 재시도됩니다.
 
@@ -90,15 +90,9 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 ### 구독 그룹 만들기
 
 1. **오디언스** > **구독**으로 이동합니다.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
-{% endalert %}
-
-{: start="2"}
-2\. Select **Create email subscription group**.
-3\. Give your subscription group a name and description.
-4\. Select **Save**. 
+2. Select **Create email subscription group**. 
+3. Give your subscription group a name and description.
+4. Select **Save**. 
 
 모든 구독 그룹은 환경설정 센터에 자동으로 추가됩니다.
 
