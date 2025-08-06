@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Stripo](https://stripo.email/) é um criador de e-mail de arrastar e soltar que ajuda você a criar e projetar e-mails responsivos com elementos interativos. Os usuários do Stripo também podem editar em HTML e decidir quais elementos exibir ou ocultar em vários dispositivos através do editor Stripo.
 
-
+_Essa integração é mantida pela Stripo._
 
 ## Sobre a integração
 
@@ -23,7 +23,7 @@ A integração Braze e Stripo permite que você exporte seus e-mails personaliza
 | Requisito | Descrição |
 | ------------| ----------- |
 | Conta Stripo | É necessário ter uma conta Stripo para aproveitar esta parceria. |
-| Chave da API REST do Braze | Uma chave da API REST da Braze com permissões completas de **Templates**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
+| Chave da API REST do Braze | Uma chave da API REST da Braze com permissões completas de **modelos**. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | Instância do cluster | Sua [instância de cluster]({{site.baseurl}}/api/basics/#endpoints) da Braze se alinha com o dashboard e o endpoint REST da Braze.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
