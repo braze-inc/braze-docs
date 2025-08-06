@@ -1,32 +1,32 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: "Retención de datos"
+article_title: Retención de datos de Snowflake
 page_order: 3
-description: ""
+description: "Esta página explica cómo conservar los datos de eventos completos cuando se aplica la política de retención de Braze."
 page_type: partner
 search_tag: Partner
 ---
 
-# 
+# Retención de datos de Snowflake
 
->  
+> Braze anonimiza -elimina la información de identificación personal (PII)- todos los datos de eventos almacenados en Snowflake que tengan más de dos años. Si utilizas el uso compartido de datos de Snowflake, puedes optar por conservar los datos completos de los eventos en tu entorno almacenando una copia en tu cuenta de Snowflake antes de que se aplique la política de retención.
 
- 
+Esta página presenta dos formas de conservar los datos no anonimizados: 
 
-- 
-- 
+- Copia tus datos a otra base de datos Snowflake
+- Descarga tus datos en un escenario
 
+{% alert warning %}
+Braze anonimiza automáticamente los datos de eventos de los usuarios que se borran de Braze, tal y como se describe en [la Asistencia Técnica de Protección de Datos]({{site.baseurl}}/dp-technical-assistance/). Los datos copiados fuera de la base de datos compartida no se incluirán en este proceso, puesto que Braze ya no los administra.
+{% endalert %}
 
- 
+## Copiar todos los datos a otra base de datos Snowflake
 
+Puedes conservar los datos no anonimizados copiando tus datos del esquema compartido `BRAZE_RAW_EVENTS` a otra base de datos y esquema en Snowflake. Para ello, sigue estos pasos:
 
-## 
+1. En tu cuenta de Snowflake, crea el procedimiento `COPY_BRAZE_SHARE`, que se utilizará para copiar todos los datos compartidos por Braze a otra base de datos y esquema dentro de Snowflake. 
 
- 
-
-1.  
-
-
+{% raw %}
 ```sql
 CREATE PROCEDURE COPY_BRAZE_SHARE(
     SOURCE_DATABASE STRING, -- Database name of the braze data share
@@ -120,51 +120,51 @@ def run(session: snowpark.Session, SOURCE_DATABASE: str, SOURCE_SCHEMA: str, DES
     return session.create_dataframe(result, schema=['TABLE_NAME', 'SUCCESS', 'INFO'])
 $$;
 ```
+{% endraw %}
 
+{: start="2"}
+2\. Ejecuta uno de los siguientes comandos en tu cuenta Snowflake para ejecutar el procedimiento.
 
+{% tabs %}
+{% tab Predeterminado %}
 
- 
+Por defecto, el procedimiento hará una copia de seguridad de los datos de más de dos años para todos los tipos de eventos de `USERS_*`. 
 
-
-
-
- 
-
-
+{% raw %}
 ```sql
 -- Copy all the rows that are two years or older in all the 'USERS_*' tables 
 -- from 'SOURCE_DB'.'SOURCE_SCHEMA' to 'DEST_DB'.'DEST_SCHEMA'
 
 CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA')
 ```
+{% endraw %}
+{% endtab %}
+{% tab Filtrado %}
 
+Especifica un filtro para elegir de qué datos de edad hacer copia de seguridad, y especifica un filtro de nombre de tabla para hacer copia de seguridad sólo de las tablas de eventos seleccionadas. 
 
-
-
- 
-
-
+{% raw %}
 ```sql
 -- Copy all the rows that are one year or older in all the 'USERS_BEHAVIORS_*' tables
 -- from 'SOURCE_DB'.'SOURCE_SCHEMA' to 'DEST_DB'.'DEST_SCHEMA'
 
 CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DATEADD(year, -1, CURRENT_DATE()), 'USERS_BEHAVIORS_%')
 ```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
+{% alert note %}
+Ejecutar repetidamente el procedimiento no creará registros duplicados, porque este procedimiento comprueba el `SF_CREATED_AT` más reciente y sólo hace copias de seguridad de los datos más recientes.
+{% endalert %}
 
+## Descarga de datos en el escenario
 
+Puedes conservar los datos no anonimizados descargando los datos del esquema compartido `BRAZE_RAW_EVENTS` en una etapa. Para ello, sigue estos pasos:
 
+1. Crea el procedimiento `UNLOAD_BRAZE_SHARE`, que se utilizará para copiar todos los datos compartidos por Braze a la etapa especificada.
 
-
-
-
-## 
-
- 
-
-1. 
-
-
+{% raw %}
 ```sql
 CREATE PROCEDURE UNLOAD_BRAZE_SHARE(
     SOURCE_DATABASE STRING, -- Database name of the braze data share
@@ -232,17 +232,17 @@ def run(session: snowpark.Session, DATABASE_NAME: str, SCHEMA_NAME: str, STAGE_N
     return session.create_dataframe(result, schema=['TABLE_NAME', 'SUCCESS', 'INFO'])
 $$;
 ```
+{% endraw %}
 
+{: start="2"}
+2\. Ejecuta uno de los siguientes comandos para ejecutar el procedimiento. 
 
+{% tabs %}
+{% tab Predeterminado %}
 
-  
+Por defecto, el procedimiento copiará todas las tablas con el prefijo `USERS_`.
 
-
-
-
-
-
-
+{% raw %}
 ```sql
 -- Create a Snowflake stage to store the file
 create stage MY_EXPORT_STAGE;
@@ -255,13 +255,13 @@ CALL UNLOAD_BRAZE_SHARE('DATABASE_NAME', 'SCHEMA', 'MY_EXPORT_STAGE', '2020-01-0
 -- List the files that are unloaded
 LIST @MY_EXPORT_STAGE;
 ```
+{% endraw %}
+{% endtab %}
+{% tab Filtrado %}
 
+Especifica un filtro en el procedimiento para descargar sólo las tablas especificadas.
 
-
-
-
-
-
+{% raw %}
 ```sql
 -- Create a Snowflake stage to store the file
 create stage MY_EXPORT_STAGE;
@@ -273,6 +273,6 @@ CALL EXPORT_BRAZE_SHARE_TO_STAGE('DATABASE_NAME', 'SCHEMA', 'MY_EXPORT_STAGE', '
 -- List the files that are unloaded 
 LIST @MY_EXPORT_STAGE;
 ```
-
-
-
+{% endraw %}
+{% endtab %}
+{% endtabs %}
