@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Deeplinking
 config_only: true
 ---
