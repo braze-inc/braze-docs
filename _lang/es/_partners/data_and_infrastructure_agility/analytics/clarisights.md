@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Clarisights][2] es una plataforma autoservicio de informes de marketing del rendimiento para organizaciones basadas en datos. Integra, procesa y visualiza automáticamente todos sus datos procedentes de fuentes de marketing, analíticas y de atribución.
 
-
+_Esta integración está mantenida por Clarisights._
 
 ## Sobre la integración
 
