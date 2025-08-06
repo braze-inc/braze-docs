@@ -12,7 +12,7 @@ search_tag: Partner
 
 > O Transifex oferece serviços de tradução robustos aplicáveis a toda a sua base de usuários, independentemente do idioma.
 
-
+_Essa integração é mantida pela Transifex._
 
 ## Sobre a integração
 
