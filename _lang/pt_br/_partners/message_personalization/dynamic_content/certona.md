@@ -2,7 +2,7 @@
 nav_title: Certona
 article_title: Certona
 alias: /partners/certona/
-description: "Este artigo de referência descreve a parceria entre o Braze e a Certona, uma solução de personalização omnicanal em tempo real que oferece personalização em todo o ciclo de vida do cliente. "
+description: "Este artigo de referência descreve a parceria entre o Braze e a Certona, uma solução de personalização omnicanal em tempo real que oferece personalização em todo o ciclo de vida do cliente. Use a Certona com o parceiro Braze Connected Content para inserir facilmente recomendações de conteúdo em campanhas multicanais."
 page_type: partner
 search_tag: Partner
 
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A plataforma da Certona oferece personalização ao longo de todo o ciclo de vida do cliente. De campanhas de envio de e-mail altamente individualizadas a recomendações de produtos baseadas em machine learning, a Certona garante que você esteja aproveitando o poder da personalização.
 
-
+_Essa integração é mantida pela Certona._
 
 ## Sobre a integração
 
