@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Quikly][1], uma plataforma de marketing de urgência, utiliza a psicologia para motivar os consumidores, de modo que as marcas possam aumentar imediatamente a resposta em torno de suas principais iniciativas de marketing.
 
-
+_Essa integração é mantida pela Quikly._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ A parceria Braze e Quikly permite que você acelere as conversões em eventos de
 | ----------- | ----------- |
 | Conta Quikly | É necessário ter uma conta de parceiro da marca [Quikly][1] para aproveitar essa parceria. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com as permissões `users.track`, `subscription.status.set`, `users.export.ids` e `subscription.status.get`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][2]. Seu endpoint dependerá da URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][2] Seu endpoint dependerá da URL do Braze para sua instância. |
 | Chave de API da Quikly (opcional) | Uma chave de API da Quikly fornecida por seu gerente de sucesso do cliente (somente webhook). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -56,7 +56,7 @@ Aqui está um esboço de como a Quikly executa esse fluxo de trabalho.
     - Não crie um novo perfil.
     - Se desejar, o Quikly pode registrar um atributo personalizado no perfil do usuário para indicar que o usuário participou da ativação.
   - Se o usuário não existir:
-    - 
+    - A Quikly cria um perfil somente de alias por meio do [ponto de extremidade]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) do Braze [`/users/track`, definindo o e-mail do usuário como o alias do usuário para fazer referência a esse usuário no futuro (já que o usuário não terá um ID externo).]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
     - Se desejar, a Quikly pode registrar eventos personalizados para indicar que esse perfil participou da ativação da Quikly.
 
 {% details /users/track request %}
@@ -94,7 +94,7 @@ O Quikly realizará uma pesquisa de inscrição usando o número de telefone do 
 
 Aqui está o fluxo de trabalho completo quando um cliente fornece seu número de celular e consentimento por meio da Quikly:
 1. A Quikly realiza uma pesquisa de inscrição usando o [status do grupo de inscrições]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) para ver se um determinado `phone` está inscrito em um `subscription_group_id`. Se houver uma inscrição, credite o usuário na ativação da Quikly. Nenhuma ação adicional é necessária.
-2. O Quikly realiza uma pesquisa de usuário usando o [ponto de extremidade Exportar perfil de usuário por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) para ver se existe um perfil de usuário com um determinado `email_address`. 
+2. O Quikly realiza uma pesquisa de usuário usando o [ponto de extremidade Exportar perfil de usuário por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) para ver se existe um perfil de usuário com um determinado `email_address`. Se não houver nenhum usuário, crie um perfil somente de alias por meio do [ponto de extremidade]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) do Braze [`/users/track`, definindo o e-mail do usuário como o alias do usuário para fazer referência a esse usuário no futuro (já que o usuário não terá um ID externo).]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 3. Atualize o status da inscrição usando o [endpoint "Atualizar status do grupo de inscrições do usuário"]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
 Para dar suporte aos fluxos de trabalho de inscrição por SMS de aceitação dupla existentes, a Quikly pode enviar um evento personalizado para o Braze em vez do fluxo de trabalho acima. Nesse caso, em vez de atualizar o status da inscrição diretamente, o [evento personalizado dispara o processo de dupla aceitação]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/), e o status da inscrição é monitorado periodicamente para verificar se o usuário fez a aceitação total antes de creditá-lo na ativação da Quikly.
