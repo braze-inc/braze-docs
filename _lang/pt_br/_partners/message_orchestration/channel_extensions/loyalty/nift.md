@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Nift](https://gonift.com/) ajuda as empresas a adquirir, engajar e reter clientes. A plataforma bilateral ajuda os parceiros a agradecerem seus clientes com cartões-presente da Nift. Agradecer aos clientes aumenta o valor do tempo de vida e gera receita incremental.
 
-
+_Essa integração é mantida pelo Nift._
 
 ## Sobre a integração
 
