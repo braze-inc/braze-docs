@@ -19,7 +19,7 @@ Esta función está actualmente en fase beta. Para más información, ponte en c
 | Requisito | Descripción |
 | ----------- | ----------- |
 | Cuenta de Treasure Data | Se necesita una cuenta de [Treasure Data](https://www.treasuredata.com/) para beneficiarse de esta asociación. |
-| Clave de importación de datos Braze |  |
+| Clave de importación de datos Braze | Esto se puede capturar en el panel Braze desde **Integraciones de socios** > **Socios tecnológicos** y luego seleccionar **Treasure Data**. |
 | Punto final REST Braze | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia. |
 | Dirección IP estática de Treasure Data | La dirección IP estática de Treasure Data es el punto de acceso y la fuente del enlace para esta Integración. Para determinar la dirección IP estática, ponte en contacto con tu representante de éxito del cliente de Treasure Data o con el soporte técnico de Treasure Data. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
