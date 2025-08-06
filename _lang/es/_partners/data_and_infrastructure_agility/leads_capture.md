@@ -16,6 +16,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
 - name: Supera a
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
-- name: ""
+- name: Justuno
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
 ---
