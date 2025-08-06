@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Com o Braze Connected Content, você pode buscar dados da API da Voucherify e enviar mensagens para segmentos específicos da Braze. Este artigo de referência mostrará como configurar scripts de Conteúdo Conectado para publicar cupons do Voucherify, convidar novos indicados, recuperar o saldo de cartões de fidelidade e mais.
 
-
+_Esta integração é mantida pelo Voucherify._
 
 ## Sobre a integração
 
