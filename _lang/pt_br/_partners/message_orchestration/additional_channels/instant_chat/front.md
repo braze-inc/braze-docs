@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A integração da Front o capacita a aproveitar a transformação de dados do Braze e os webhooks de cada plataforma para configurar um pipeline de SMS de conversação bidirecional.
 
-O webhook de entrada do Front conterá uma carga útil que inclui a mensagem enviada pelo agente em tempo real.  O modelo Front Data Transformation reformatará a carga útil de **SMS** e gravará um evento personalizado no perfil do usuário intitulado **Outbound SMS Sent,** com o corpo da mensagem sendo passado como uma propriedade do evento.
+O webhook de entrada do Front conterá uma carga útil que inclui a mensagem enviada pelo agente em tempo real. A solicitação precisará ser reformatada antes de ser aceita pelos endpoints do Braze. O modelo Front Data Transformation reformatará a carga útil de **SMS** e gravará um evento personalizado no perfil do usuário intitulado **Outbound SMS Sent,** com o corpo da mensagem sendo passado como uma propriedade do evento.
 
 Antes de configurar uma nova transformação no Braze, recomendamos revisar a matriz de suporte para cada camada em nossa documentação de [transformação de dados]({{site.baseurl}}/user_guide/data/data_transformation/overview/). Nossos níveis Free e Pro oferecem um número diferente de transformações ativas e solicitações de entrada por mês. Confirme se o plano atual em que você está pode suportar seu caso de uso.
 
@@ -23,12 +23,12 @@ Antes de começar, você precisará do seguinte:
 | Pré-requisito             | Descrição                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Um relato da Front            | É necessário ter uma conta Front para usar a parceria.|
-| URL do webhook de transformação de dados do Braze | |
+| URL do webhook de transformação de dados do Braze | [A transformação de dados do Braze]({{site.baseurl}}/user_guide/data/data_transformation/overview/) será usada para reformatar o webhook de entrada do Front para que ele possa ser aceito pelo endpoint Braze /users/track.|
 | Uma chave da API REST do Front         | Uma chave da API REST da Front será usada para fazer uma solicitação de webhook de saída da Braze para a Front. |
 
 ## Casos de uso
 
-- 
+- Simplifique seu processo de geração de leads usando o envio automatizado de mensagens SMS da Braze para identificar as preferências do usuário e ativar os agentes de vendas para acompanhar e fechar as vendas.
 - Reengaje os clientes que abandonaram seus carrinhos de compras, impulsionando as conversões de vendas por meio de respostas automatizadas por SMS e suporte por bate-papo ao vivo.
 
 ## Integração da Front
