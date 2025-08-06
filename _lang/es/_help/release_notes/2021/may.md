@@ -18,7 +18,7 @@ Hemos actualizado las métricas del informe [Grupos de control global]({{site.ba
 
 ## Resumen de informes
 
-¿No sabes por dónde empezar a analizar tus campañas o tus Lienzos? El [resumen de Informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) te orienta sobre qué informes y análisis puedes utilizar para responder a preguntas habituales sobre estrategia de marketing.
+¿No sabes por dónde empezar a analizar tus campañas o tus Lienzos? El [resumen de Informes]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/) te orienta sobre qué informes y análisis puedes utilizar para responder a preguntas habituales sobre estrategia de marketing.
 
 ## Nuevo clúster US-05
 
