@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Aproveite a integração entre Friendbuy e Braze para expandir suas capacidades de e-mail e SMS enquanto automatiza facilmente suas comunicações de programa de indicação e programa de fidelidade. A Braze gerará perfis de clientes para todos os números de telefone de aceitação coletados via Friendbuy.
 
-
+_Essa integração é mantida pela Friendbuy._
 
 ## Pré-requisitos
 
