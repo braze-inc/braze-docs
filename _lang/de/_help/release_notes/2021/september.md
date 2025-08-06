@@ -20,7 +20,7 @@ Mit iOS 15 wurden neue Features für Benachrichtigungen eingeführt, die den Nut
 
 ## Kontakt Karten
 
-Contact Cards sind ein standardisiertes Dateiformat für das Versenden von Geschäfts- und Kontaktinformationen, die einfach in Adress- oder Kontaktbücher importiert werden können. Sie können jetzt Kontaktkarten für Ihre SMS- und MMS-Nachrichten hochladen und erstellen. Wenn Sie mehr darüber erfahren möchten, wie Sie Kontaktkarten mit unserem integrierten Kontaktkarten-Generator erstellen, besuchen Sie unsere [Dokumentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
+Contact Cards sind ein standardisiertes Dateiformat für das Versenden von Geschäfts- und Kontaktinformationen, die einfach in Adress- oder Kontaktbücher importiert werden können. Sie können jetzt Kontaktkarten für Ihre SMS- und MMS-Nachrichten hochladen und erstellen. Wenn Sie mehr darüber erfahren möchten, wie Sie Kontaktkarten mit unserem integrierten Kontaktkarten-Generator erstellen, besuchen Sie unsere [Dokumentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/).
 
 ## Standard Content-Cards anpassen
 
@@ -32,7 +32,7 @@ Die [Rate-Limits]({{site.baseurl}}/api/basics/#api-limits/) gelten für alle Kun
 
 ## Updates für Android- und FireOS-Entwickler:in
 
-Android- und FireOS-Entwickler:in sind an einem Standort zusammengeführt worden. Spezielle FireOS-Artikel werden in diesem [neuen Android-Bereich]({{site.baseurl}}/developer_guide/platforms/fireos/push_notifications/) verfügbar sein.
+Android- und FireOS-Entwickler:in sind an einem Standort zusammengeführt worden. Spezielle FireOS-Artikel werden in diesem [neuen Android-Bereich]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android) verfügbar sein.
 
 ## Updates für Funnel- und Bindungsberichte
 
