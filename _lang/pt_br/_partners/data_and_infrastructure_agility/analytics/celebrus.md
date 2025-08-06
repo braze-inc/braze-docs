@@ -8,7 +8,7 @@ description: "Integração entre Braze e Celebrus."
 
 > A Celebrus se integra perfeitamente ao SDK da Braze nos canais de aplicativos móveis e da Web, facilitando o preenchimento da Braze com dados de atividade do canal. Isso inclui insights abrangentes sobre o tráfego de visitantes em ativos digitais durante períodos específicos. <br><br>Além disso, a Celebrus captura dados de perfil ricos para cada cliente individual, que podem ser sincronizados com a Braze. Isso permite criar estratégias eficazes de análise e comunicação da Braze com base em dados primários abrangentes, precisos e detalhados. Esse recurso é ainda mais reforçado pelos sinais orientados por machine learning da Celebrus, que permitem a captura de dados sem complicações e sem a necessidade de tag extensa. Com um robusto gráfico de identidade primário implementado, todos os dados se tornam instantaneamente acessíveis para uso imediato. 
 
-
+_Esta integração é mantida pelo Celebrus._
 
 ## Pré-requisitos
 
@@ -54,7 +54,7 @@ Essa integração usa a ingestão de dados do Braze Cloud. Siga as instruções 
 
 A Celebrus captura e atribui identificadores exclusivos a um indivíduo, como e-mail, telefone, `external_id`ou alias de usuário, e os envia à Braze via CDI. Isso permite que os dados sejam sincronizados com a Braze para o mesmo indivíduo.
 
-O Celebrus usará os identificadores definidos para enviar os atributos do cliente que estão definidos no construtor de perfil do Celebrus, mas somente quando os valores dos atributos forem alterados.  
+O Celebrus usará os identificadores definidos para enviar os atributos do cliente que estão definidos no construtor de perfil do Celebrus, mas somente quando os valores dos atributos forem alterados. Observe que os nomes dos atributos definidos no construtor de perfil do Celebrus serão usados no Braze por padrão. Portanto, certifique-se de atualizar esses nomes para aderir às [convenções de nomenclatura do Braze]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
 
 {% alert important %}
 Por enquanto, esta versão não oferece suporte a eventos e compras.<br><br> Esta integração envia atribuições como valores de string, então alguns atributos são listas (como sinais). Por enquanto, as listas não podem ser convertidas em vetores. Não há atribuições aninhadas.
