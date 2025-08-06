@@ -13,7 +13,7 @@ search_tag: Partner
 -->
 > O Amazon Personalize é como ter seu próprio sistema de recomendação de machine learning da Amazon o dia todo. Com base em mais de 20 anos de experiência em recomendações, o Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações personalizadas de produtos e conteúdo em tempo real e promoções de marketing direcionadas.
 
-
+_Essa integração é mantida pela Amazon Personalize._
 
 ## Sobre a integração
 
