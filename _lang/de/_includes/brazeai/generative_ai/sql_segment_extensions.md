@@ -190,7 +190,7 @@ Wenn Sie ein Segment erstellt haben, bei dem Sie erwarten, dass die Benutzer es 
 
 ### Festlegen der Aktualisierungseinstellungen
 
-{% multi_lang_include segments.md section='Einstellungen aktualisieren' %}
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## Snowflake Kredite
 
