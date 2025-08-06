@@ -133,31 +133,31 @@ Lembre-se de que haverá uma postergação nos relatórios das métricas de usu�
 
 ## Perguntas frequentes
 
-### 
+### O que devo fazer em seguida se receber um erro de token inválido?
 
 Você pode desconectar e reconectar sua conta do TikTok na página de parceiros do TikTok. Verifique com seu administrador do TikTok Business Center se você tem as permissões apropriadas para a conta de anúncios que deseja sincronizar.
 
-### 
+### Por que meu Canva não pode ser iniciado?
 
- 
+Confirme que sua conta do TikTok se conecta com sucesso ao Braze na página do parceiro do TikTok. Em seguida, verifique se você selecionou uma conta de anúncios, inseriu um nome para o novo público e selecionou os campos para correspondência.
 
-### 
+### Como posso saber se houve correspondência entre os usuários depois de passá-los para o TikTok?
 
 O TikTok não fornece essas informações para suas políticas de privacidade de dados.
 
-### 
+### Quanto tempo levará para que meus públicos sejam preenchidos no TikTok?
 
 O tamanho do público será atualizado dentro de 24 a 48 horas na página Públicos no Gerenciador de Anúncios do TikTok.
 
-### 
+### Qual é o número máximo de públicos que posso ter em minha conta de anúncios do TikTok?
 
+Você pode ter até 400 públicos por conta de anúncio do TikTok.
 
+### Por que o tamanho do meu público ou a taxa de correspondência no TikTok é maior do que a dos usuários sincronizados no Braze com o Audience Sync?
 
-### 
+Isso ocorre porque, no TikTok, um ID pode estar associado a vários usuários do TikTok. Isso ocorre com mais frequência quando os clientes usam IDs de anúncios móveis (iOS IDFA e Android GAID) porque um dispositivo pode ter vários usuários do TikTok registrados. 
 
-  
-
- 
+Além disso, o TikTok também conta os usuários do Pangle como usuários correspondidos, o que, em alguns casos, pode resultar em uma taxa de correspondência elevada. No entanto, quando se usa o público para a entrega de anúncios, o tamanho real do público entregável pode não ser tão alto quanto o tamanho do usuário correspondente, pois depende do posicionamento e de outros fatores de influência.
 
 
 [1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
