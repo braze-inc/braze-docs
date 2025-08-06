@@ -8,7 +8,7 @@ description: "Integración de Braze y Celebrus."
 
 > Celebrus se integra a la perfección con el SDK de Braze en todos los canales web y de aplicaciones móviles, facilitando la población de Braze con datos de actividad del canal. Esto incluye información exhaustiva sobre el tráfico de visitantes a través de activos digitales durante periodos específicos. <br><br>Además, Celebrus captura datos de perfil enriquecidos para cada cliente individual, que pueden sincronizarse con Braze. Esto le permite crear estrategias eficaces de comunicación y análisis de Braze basadas en datos de origen completos, precisos y detallados. Esta capacidad se ve reforzada por las señales basadas en el aprendizaje automático de Celebrus, que permiten una captura de datos sin complicaciones y sin necesidad de un etiquetado exhaustivo. Con un sólido gráfico de identidades de origen, todos los datos son accesibles al instante para su uso inmediato. 
 
-
+_Esta integración está mantenida por Celebrus._
 
 ## Requisitos previos
 
@@ -54,7 +54,7 @@ Esta integración utiliza Braze Cloud Data Ingestion. Siga las instrucciones en 
 
 Celebrus captura y asigna identificadores únicos a un individuo, como correo electrónico, teléfono, `external_id`o alias de usuario, y los envía a Braze a través de CDI. Esto permite sincronizar con Braze los datos de un mismo individuo.
 
-Celebrus utilizará los identificadores definidos para enviar los atributos del cliente definidos en el generador de perfiles de Celebrus, pero sólo cuando cambien los valores de los atributos.  
+Celebrus utilizará los identificadores definidos para enviar los atributos del cliente definidos en el generador de perfiles de Celebrus, pero sólo cuando cambien los valores de los atributos. Ten en cuenta que los nombres de atributos definidos en el generador de perfiles Celebrus se utilizarán en Braze por defecto. Así que asegúrate de actualizar estos nombres para que se adhieran a [las convenciones de nomenclatura de Braze]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
 
 {% alert important %}
 Por ahora, esta versión no admite eventos ni compras.<br><br> Esta integración envía atributos como valores de cadena, por lo que algunos atributos son listas (como las señales). Por ahora, las listas no pueden convertirse en matrices. No hay atributos anidados.
