@@ -22,4 +22,4 @@ Braze hat seinen ersten Implementierungsleitfaden veröffentlicht, der eine auf 
 
 ## Swift Paket Manager
 
-Der [Swift-Paketmanager:]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewswift_package_manager) in ist in das Swift-Build-System integriert und wird automatisch Abhängigkeiten herunterladen, kompilieren und verknüpfen. Die Installation des iOS SDK über den Swift-Paketmanager:in automatisiert den Großteil des Installationsprozesses für Sie.
+Der [Swift-Paketmanager:]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift#swift_integrating-the-swift-sdk) in ist in das Swift-Build-System integriert und wird automatisch Abhängigkeiten herunterladen, kompilieren und verknüpfen. Die Installation des iOS SDK über den Swift-Paketmanager:in automatisiert den Großteil des Installationsprozesses für Sie.
