@@ -14,7 +14,7 @@ redirect_to: /docs/partners/home
 
 > [Rokt Calendar](https://www.rokt.com/rokt-calendar/) es una tecnología de marketing de calendario dinámico que permite a las marcas impulsar eventos 1:1 y comunicaciones promocionales en forma de eventos de calendario y notificaciones.
 
-
+_Esta integración está mantenida por Rokt Calendar._
 
 ## Sobre la integración
 
