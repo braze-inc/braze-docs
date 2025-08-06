@@ -12,12 +12,12 @@ search_tag: Partner
 
 > O [Sendbird][4] Notifications oferece aos profissionais de marketing e gerentes de produtos um novo e poderoso canal de envio de mensagens persistentes e interativas no app para se comunicar com seus clientes. Essas mensagens podem ser usadas para qualquer comunicação e são mais comumente usadas para fins promocionais e transacionais.
 
-
+_Essa integração é mantida pela Sendbird._
 
 ## Sobre a integração
 
 A integração do Braze e do Sendbird permite que os usuários do Braze:
-* 
+* Utilize os recursos de segmentação e disparo do Braze para iniciar notificações personalizadas no app.
 * Crie notificações personalizadas no aplicativo na plataforma Sendbird Notifications, que são então entregues no ambiente do app, aumentando o engajamento do usuário.
 
 Ao aproveitar os recursos conjuntos da Braze e do Sendbird Notifications, as empresas podem elevar o engajamento do cliente e aumentar as taxas de conversão por meio de estratégias eficazes de notificação no aplicativo.
@@ -29,7 +29,7 @@ Ao aproveitar os recursos conjuntos da Braze e do Sendbird Notifications, as emp
 | Conta Sendbird | É necessário ter uma conta Sendbird para aproveitar essa parceria. |
 | Sendbird UIKit | Você deve ter o Sendbird UIKit instalado em seu app para [iOS][2] ou [Android][3]. |
 | chave da API REST Braze | Uma chave da API REST da Braze com permissões `users.track`. <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
