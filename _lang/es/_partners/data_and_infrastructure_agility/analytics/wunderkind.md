@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Niño prodigio
 
->  Gracias a la tecnología de identificación de Wunderkind, las marcas pueden reconocer a más usuarios anónimos en todos los dispositivos, hasta una dirección de correo electrónico procesable. De media, Wunderkind escala el porcentaje de Identificación del 3-5 % del tráfico del sitio web a aproximadamente ~40-60 %.
+> [Wunderkind](https://www.wunderkind.co) es una plataforma que aumenta los ingresos del comercio electrónico mediante envíos de correo electrónico personalizados de alto rendimiento. Gracias a la tecnología de identificación de Wunderkind, las marcas pueden reconocer a más usuarios anónimos en todos los dispositivos, hasta una dirección de correo electrónico procesable. De media, Wunderkind escala el porcentaje de Identificación del 3-5 % del tráfico del sitio web a aproximadamente ~40-60 %.
 
-
+_Esta integración está mantenida por Wunderkind._
 
 ## Sobre la integración
 
