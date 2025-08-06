@@ -196,7 +196,7 @@ Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und
 
 Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Airbridge einrichten.
 
-![][1]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Schritt 3: Konfigurieren Sie Braze im Dashboard von Airbridge
 
@@ -231,7 +231,7 @@ Vorausgesetzt, Sie konfigurieren Ihre Integration wie vorgeschlagen, wird Braze 
 
 Ihre Nutzer:innen können im Braze-Dashboard mit Hilfe der Install-Attribution-Filter nach Attributionsdaten segmentiert werden.
 
-![][2]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Meta Business Attribution Daten
 
@@ -274,5 +274,3 @@ Wenn Sie derzeit keine Geräte-Identifikatoren - wie IDFV oder GAID - in Ihren C
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
-[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}
