@@ -103,9 +103,9 @@ Aqui você encontra o endpoint REST e gera sua chave de importação de dados da
 
 ### Etapa 3: Configurar o Braze no dashboard da AppsFlyer
 
-1. Na AppsFlyer, navegue até a página **Parceiros integrados** na barra esquerda. 
+1. Na AppsFlyer, navegue até a página **Parceiros integrados** na barra esquerda. Em seguida, procure o **Braze** e selecione o logotipo do Braze para abrir uma janela de configuração.
 2. Na guia **Integração**, ative **Ativar parceiro**.
-3.  
+3. Forneça a chave de importação de dados e o ponto de extremidade REST que você encontrou no dashboard do Braze. 
 4. Desative a opção **Advanced Privacy** (Privacidade avançada) e salve sua configuração.
 
 Informações adicionais sobre essas instruções estão disponíveis na [documentação da AppsFlyer][16].
