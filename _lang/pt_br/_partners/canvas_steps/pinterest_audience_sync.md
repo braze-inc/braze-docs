@@ -48,11 +48,11 @@ No dashboard da Braze, acesse **Integrações de parceiros** > **Parceiros de te
 
 Em seguida, a ferramenta redirecionará você para a página de OAuth do Pinterest para autorizar a Braze a executar o gerenciamento de contas de anúncios e o gerenciamento de público.
 
- 
+Depois de selecionar **Confirm (Confirmar**), você será redirecionado de volta ao Braze para selecionar quais contas de anúncios do Pinterest deseja sincronizar. 
 
 ![Uma lista de contas de anúncios disponíveis que você pode conectar ao Pinterest.][2]{: style="max-width:80%;"}
 
-
+Quando a conexão for bem-sucedida, você retornará à página do parceiro, onde poderá ver quais contas estão conectadas e desconectar contas existentes.
 
 ![Uma versão atualizada da página de parceiros de tecnologia do Pinterest mostrando as contas de anúncios conectadas com sucesso.][3]{: style="max-width:80%;"}
 
@@ -132,25 +132,25 @@ Lembre-se de que haverá uma postergação nos relatórios de usuários sincroni
 
 ## Perguntas frequentes
 
-### 
+### Quanto tempo levará para que meus públicos sejam preenchidos no Pinterest?
 
+O tamanho do público será atualizado dentro de 24 a 48 horas na página **Públicos** no Gerenciador de Anúncios do Pinterest.
 
-
-### 
+### Como posso saber se os usuários corresponderam depois de passá-los para o Pinterest?
 
 O Pinterest não fornece essas informações para suas próprias políticas de privacidade de dados.
 
-### 
+### O que devo fazer em seguida se receber um erro de token inválido?
 
-  
+Confirme com seu administrador do Pinterest Business Hub que você tem as permissões apropriadas para a conta de anúncios que deseja sincronizar. Você também pode desconectar e reconectar sua conta do Pinterest na página de parceiros do Pinterest. 
 
-### 
+### Por que meu Canva não pode ser iniciado?
 
 Certifique-se de que sua conta do Pinterest se conecte com sucesso ao Braze na página de parceiros do Pinterest. Certifique-se de ter selecionado uma conta de anúncios, inserido um nome para o novo público e selecionado os campos para correspondência.
 
-### 
+### Por que não consigo selecionar minha conta de anúncios para a etapa Audience Sync?
 
-  
+Verifique se o token foi gerado com as permissões de conta corretas. Observe que, se houver muitos públicos em sua conta de anúncios do Pinterest, o menu suspenso para selecionar sua conta de anúncios poderá expirar. Nesse caso, recomendamos reduzir o número de públicos em sua conta de anúncios.
 
 [1]: {% image_buster /assets/img/pinterest/pinterest1.png %}
 [2]: {% image_buster /assets/img/pinterest/pinterest2.png %}
