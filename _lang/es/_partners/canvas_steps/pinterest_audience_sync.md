@@ -48,11 +48,11 @@ En el panel de Braze, ve a **Integraciones de socios** > **Socios tecnológicos*
 
 A continuación, se te redirigirá a la página OAuth de Pinterest para que autorices a Braze para la gestión de cuentas publicitarias y la gestión de audiencias.
 
- 
+Tras seleccionar **Confirmar**, se te redirigirá de nuevo a Braze para que selecciones las cuentas de anuncios de Pinterest que deseas sincronizar. 
 
 ![Una lista de las cuentas de anuncios disponibles que puedes conectar a Pinterest.][2]{: style="max-width:80%;"}
 
-
+Cuando te hayas conectado correctamente, volverás a la página del socio, donde podrás ver qué cuentas están conectadas y desconectar las cuentas existentes.
 
 ![Una versión actualizada de la página de socios tecnológicos de Pinterest que muestra las cuentas de anuncios conectadas correctamente.][3]{: style="max-width:80%;"}
 
@@ -132,25 +132,25 @@ Recuerda que habrá un retraso en los informes de los usuarios sincronizados y d
 
 ## Preguntas más frecuentes
 
-### 
+### ¿Cuánto tardarán mis audiencias en poblar Pinterest?
 
+El tamaño de la audiencia se actualizará en 24-48 horas en la página **Audiencias** del administrador de anuncios de Pinterest.
 
-
-### 
+### ¿Cómo sé si los usuarios han coincidido después de pasar usuarios a Pinterest?
 
 Pinterest no proporciona esta información para sus propias políticas de privacidad de datos.
 
-### 
+### ¿Qué debo hacer si recibo un error de token no válido?
 
-  
+Confirma con tu administrador de Pinterest Business Hub que tienes los permisos adecuados para la cuenta de anuncios que deseas sincronizar. También puedes desconectar y volver a conectar tu cuenta de Pinterest en la página del socio de Pinterest. 
 
-### 
+### ¿Por qué no se puede iniciar mi Canvas?
 
 Asegúrate de que tu cuenta de Pinterest se conecta correctamente a Braze en la página del socio de Pinterest. Asegúrate de haber seleccionado una cuenta de publicidad, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
 
-### 
+### ¿Por qué no puedo seleccionar mi cuenta de anuncios para mi paso de Sincronización de Audiencias?
 
-  
+Comprueba que tu token se generó con los permisos de cuenta correctos. Ten en cuenta que si tienes demasiadas audiencias en tu cuenta de anuncios de Pinterest, el menú desplegable para seleccionar tu cuenta de anuncios puede agotarse. En este caso, te recomendamos que reduzcas la cantidad de audiencias de tu cuenta publicitaria.
 
 [1]: {% image_buster /assets/img/pinterest/pinterest1.png %}
 [2]: {% image_buster /assets/img/pinterest/pinterest2.png %}
