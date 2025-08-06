@@ -45,12 +45,12 @@ No dashboard da Segment, selecione sua fonte da Segment. Em seguida, acesse **Se
 
 ### Etapa 3: Exportar eventos de engajamento com mensagens
 
-Em seguida, selecione os eventos de engajamento com mensagens que você gostaria de exportar. Consulte a tabela de eventos e propriedades de exportação listada a seguir. 
+Em seguida, selecione os eventos de engajamento com mensagens que você gostaria de exportar. Consulte a tabela de eventos e propriedades de exportação listada a seguir. Todos os eventos enviados ao Segment incluirão o endereço `external_user_id` do usuário como `userId` e o endereço `braze_id` do usuário como `anonymousId`.
 
-
+Lembre-se de que o Braze só envia dados de usuários sem um `external_user_id` se a opção **Include events from anonymous users (Incluir eventos de usuários anônimos** ) estiver marcada.
 
 {% alert important %}
- Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+A exportação anônima de usuários está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
 {% endalert %}
 
 ![Lista de todos os eventos de engajamento com mensagens disponíveis na página Segment Currents na Braze.][2]
