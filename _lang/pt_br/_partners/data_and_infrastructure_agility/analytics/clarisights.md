@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Clarisights][2] é uma plataforma de relatórios de marketing de performance de autoatendimento para organizações orientadas por dados. Ela integra, processa e visualiza automaticamente todos os seus dados de fontes de marketing, analíticas e de atribuição.
 
-
+_Essa integração é mantida pela Clarisights._
 
 ## Sobre a integração
 
@@ -24,7 +24,7 @@ A integração entre o Braze e a Clarisights permite que você importe dados de 
 | ----------- | ----------- |
 | Conta Clarisights | É necessário ter um espaço de trabalho da Clarisights para usar a parceria |
 | chave da API REST Braze | Uma chave da API REST do Braze com as seguintes permissões:  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 | Nome do espaço de trabalho do Braze | O nome do espaço de trabalho associado à chave de API do Braze. Esse nome será usado para identificar a integração do espaço de trabalho no Clarisights. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
