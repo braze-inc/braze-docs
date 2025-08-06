@@ -10,7 +10,7 @@ description: "Dieser Artikel enthält Versionshinweise für Oktober 2020."
 
 ## Berichts-Builder
 
-![Kampagne Vergleich Beispiel][5]{: style="max-width:80%;"}
+![Kampagnen Vergleich Beispiel]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 Der [Report-Builder]({{site.baseurl}}/report_builder) erlaubt es Ihnen, die Ergebnisse mehrerer Kampagnen in einer einzigen Ansicht zu vergleichen, so dass Sie leicht feststellen können, welche Engagement-Strategien Ihre wichtigsten Metriken am meisten beeinflusst haben.
 
@@ -20,7 +20,7 @@ Die Upgrade-Anleitung für iOS 14 beschreibt die Braze-bezogenen Änderungen, di
 
 ## Android 11 Upgrade-Anleitung
 
-Der Android 11-Leitfaden beschreibt die relevanten Änderungen, die mit Android 11 eingeführt wurden, sowie die erforderlichen Upgrade-Schritte für Ihre Braze Android SDK-Integration. Einige Änderungen beziehen sich auf Deeplinks, In-App-Nachrichten im HTML-Format und Standort-Berechtigungen. Lesen Sie unseren [Upgrade-Leitfaden]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/), um mehr zu erfahren.
+Der Android 11-Leitfaden beschreibt die relevanten Änderungen, die mit Android 11 eingeführt wurden, sowie die erforderlichen Upgrade-Schritte für Ihre Braze Android SDK-Integration. Einige Änderungen beziehen sich auf Deeplinks, In-App-Nachrichten im HTML-Format und Standort-Berechtigungen. Lesen Sie unseren [Upgrade-Leitfaden]({{site.baseurl}}/developer_guide/platforms/android/android_13/), um mehr zu erfahren.
 
 ## Attribution Partner - Leitfaden für das Tracking von Klicks
 
@@ -38,4 +38,3 @@ Es wurde eine neue Dokumentation hinzugefügt, die das erwartete Verhalten von [
 
 Braze hat seine APIs so verbessert, dass Kunden nicht nur die Endnutzerprofile der betroffenen Personen, die die Löschung ihrer Daten beantragen, sondern auch alle Abo-Status, die mit der Telefonnummer oder der E-Mail-Adresse der betroffenen Person verbunden sind, gleichzeitig und ohne zusätzliche Kundenaktionen löschen können. Die aktualisierte Dokumentation finden Sie [hier]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 
