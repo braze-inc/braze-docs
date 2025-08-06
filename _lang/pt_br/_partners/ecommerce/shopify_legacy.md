@@ -38,4 +38,4 @@ guide_featured_list:
 ---
 <br><br>
 
-{% multi_lang_include alerts.md alert='Shopify deprecation' (depreciação da Shopify) %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
