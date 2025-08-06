@@ -14,7 +14,7 @@ search_tag: Partner
 
 > A [Survicate][1] é uma plataforma de feedback do cliente que ajuda a coletar, analisar e agir com base nos insights do cliente em vários canais e durante toda a jornada do usuário.  
 
-
+_Esta integração é mantida pela Survicate._
 
 ## Sobre a integração
 
