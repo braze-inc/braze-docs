@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [A Dynamic Yield](https://www.dynamicyield.com/), uma empresa da Mastercard, ajuda empresas de todos os setores a oferecer experiências digitais aos clientes que são personalizadas, otimizadas e sincronizadas. Com o [Experience OS](http://www.dynamicyield.com/experience-os) da Dynamic Yield, profissionais de marketing, gerentes de produtos, desenvolvedores e equipes digitais podem combinar algoritmicamente conteúdo, produtos e ofertas com cada cliente para acelerar a receita e a fidelidade do cliente.
 
-
+_Essa integração é mantida pela Dynamic Yield._
 
 ## Sobre a integração
 
