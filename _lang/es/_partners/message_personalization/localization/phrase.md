@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) es un software basado en la nube para la gestión de la localización. Phrase permite automatizar los flujos de trabajo de traducción y facilita la localización continua para equipos ágiles.
 
-
+_Esta integración está mantenida por Phrase._
 
 ## Sobre la integración
 
@@ -24,7 +24,7 @@ La integración de Phrase y Braze permite traducir plantillas de correo electró
 | --- | --- |
 | Cuenta Phrase TMS | Se requiere una cuenta Phrase TMS Ultimate o Enterprise para beneficiarse de esta alianza. |
 | Clave de API REST de Braze | Una clave Braze REST API con todos los permisos. <br><br> Puede crearse en el panel Braze desde **Configuración** > **Claves API**. |
-| Punto final REST Braze |  Tu punto final dependerá de la URL Braze de tu instancia. |
+| Punto final REST Braze | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integración
