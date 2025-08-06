@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Storyly](https://www.storyly.io/) é um SDK leve que leva histórias para seu app ou site. Com um estúdio de design intuitivo, análises relevantes e conectividade prática, o Storyly é uma ferramenta poderosa para enriquecer a experiência do público. 
 
-
+_Essa integração é mantida pela Storyly._
 
 ## Sobre a integração
 
@@ -27,7 +27,7 @@ A integração entre o Braze e o Storyly permite que você use seus segmentos no
 | Conta Storyly | É necessário ter uma conta no Storyly para aproveitar essa parceria. |
 | Storyly SDK | Você deve instalar o [Storyly SDK](https://integration.storyly.io/). |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com as seguintes permissões <br><br> `users.export.ids`<br> `users.export.segments`<br> `segments.list`<br> `segments.details` <br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
