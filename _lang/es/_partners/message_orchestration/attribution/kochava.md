@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Kochava ofrece soluciones de análisis y atribución móvil para ayudarte a potenciar tus datos para crecer. La plataforma de audiencia de Kochava te permite planificar, direccionar, activar, medir y optimizar tus campañas de aplicaciones.
 
+
+
+## Sobre la integración
+
 La integración de Braze y Kochava ayuda a impulsar una comprensión más holística de sus campañas mediante el envío de datos de atribución a Braze para comprender mejor qué campañas están impulsando las instalaciones, la actividad dentro de la aplicación y mucho más.
 
 ## Requisitos previos
@@ -60,15 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 En Braze, vaya a **Integraciones de socios** > **Socios tecnológicos** y seleccione **Kochava**. 
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará a **los socios tecnológicos** en **Integraciones**.
-{% endalert %}
-
-Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puede crear una nueva o invalidar una existente. La clave de importación de datos y el punto final REST se utilizan en el siguiente paso al configurar un postback en el panel de control de Kochava.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología de Kochava. En este cuadro, se te muestra la clave de importación de datos y el punto final REST.][4]{: style="max-width:90%;"}
+Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puede crear una nueva o invalidar una existente. La clave de importación de datos y el punto final REST se utilizan en el siguiente paso al configurar un postback en el panel de control de Kochava.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología de Kochava. 
 
 ### Paso 3: Configurar un postback desde Kochava
 
-[Añade un postback][18] en tu panel Kochava. Se le pedirá la clave de importación de datos y el punto final REST que encontró en el panel de Braze.
+ 
 
 ### Paso 4: Confirmar la integración
 
@@ -117,7 +117,3 @@ Si actualmente no utiliza ningún identificador de dispositivo -como el IDFV o e
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Postbacks Kochava"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
-[4]: {% image_buster /assets/img/attribution/kochava.png %}
