@@ -25,11 +25,11 @@ jobs:
             const pr = context.payload.pull_request;
             const title = pr.title;
 
-            // Match BD-NUM (no brackets required, number can be long)
-            const match = title.match(/BD-(\d+)/);
+            // Require [BD-####] in the title (strict, with brackets)
+            const match = title.match(/\[BD-(\d+)\]/);
             if (!match) return;
 
-            const tag = `BD-${match[1]}`;
+            const tag = `[BD-${match[1]}]`;
 
             // Step 1 – find the matching open issue
             const { data: issues } = await github.rest.issues.listForRepo({
@@ -60,3 +60,4 @@ jobs:
               issue_number: pr.number,
               body: `Fixes #${issue.number}`
             });
+
