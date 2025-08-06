@@ -12,7 +12,7 @@ search_tag: Partner
 
 > La integración de [Worthy](https://worthy.ai/) y Braze te permite crear fácilmente experiencias ricas y personalizadas dentro de la aplicación utilizando el editor de arrastrar y soltar de Worthy y entregarlas a través de Braze. Además, Worthy hará automáticamente lo siguiente:
 
-
+_Esta integración está mantenida por Worthy._
 
 ## Sobre la integración
 
