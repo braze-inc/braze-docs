@@ -14,9 +14,9 @@ description: "Este artículo contiene notas de la versión de diciembre de 2018.
 Con los bloques de contenido, puedes:
  - Crea un aspecto coherente para tus campañas de correo electrónico utilizando bloques de contenido como encabezados y pies de página.
  - Distribuye los mismos códigos de oferta a través de distintos canales.
- - Crea activos predefinidos que puedan utilizarse para construir mensajes con información y activos coherentes.
+ - Cree activos predefinidos que puedan utilizarse para construir mensajes con información y activos coherentes.
  - Copia el cuerpo completo de los mensajes en otros mensajes.
 
 ## Herramienta promocional de Gmail
 
-Gmail ha actualizado la pestaña Promociones del móvil para permitir a los especialistas en marketing enviar más información mediante anotaciones en una "tarjeta", en lugar de limitarse a la línea del asunto o a la información preencabezada. Con la [herramienta promocional de Gmail]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/), Braze puede ayudarte a crear la tarjeta a partir de nuestro producto.
+Gmail ha actualizado la pestaña Promociones del móvil para permitir a los especialistas en marketing enviar más información mediante anotaciones en una "tarjeta", en lugar de limitarse a la línea del asunto o a la información preencabezada. Con la [herramienta promocional de Gmail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/), Braze puede ayudarte a crear la tarjeta a partir de nuestro producto.
