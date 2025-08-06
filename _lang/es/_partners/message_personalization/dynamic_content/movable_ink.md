@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Movable Ink](https://www.movableink.com/) es una plataforma de software basada en la nube que ofrece a los especialistas en marketing digital una forma de crear experiencias visuales atractivas y únicas que emocionen a los clientes. La plataforma Movable Ink proporciona valiosas opciones de personalización que pueden insertarse fácilmente en tus campañas. 
 
-
+_Esta integración está mantenida por Movable Ink._
 
 ## Sobre la integración
 
