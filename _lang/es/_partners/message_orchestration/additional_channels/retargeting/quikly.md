@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Quikly][1], una plataforma de marketing de urgencia, aprovecha la psicología para motivar a los consumidores, de modo que las marcas puedan aumentar inmediatamente la respuesta en torno a sus iniciativas de marketing clave.
 
-
+_Esta integración está mantenida por Quikly._
 
 ## Sobre la integración
 
@@ -56,7 +56,7 @@ Aquí tienes un esquema de cómo Quikly ejecuta este flujo de trabajo.
     - No cree un nuevo perfil.
     - Si lo desea, Quikly puede registrar un atributo personalizado en el perfil del usuario para indicar que el usuario participó en la activación.
   - Si el usuario no existe:
-    - 
+    - Quikly crea un perfil de sólo alias a través del [punto final]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Braze [`/users/track`, estableciendo el correo electrónico del usuario como alias de usuario para hacer referencia a ese usuario en el futuro (ya que el usuario no tendrá un ID externo).]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
     - Si lo desea, Quikly puede registrar eventos personalizados para indicar que este perfil participó en la activación de Quikly.
 
 {% details /usuarios/solicitud de seguimiento %}
@@ -94,7 +94,7 @@ Quikly realizará una búsqueda de suscripciones utilizando el número de teléf
 
 Este es el flujo de trabajo completo cuando un cliente proporciona su número de móvil y su consentimiento a través de Quikly:
 1. Quikly realiza una búsqueda de suscripciones utilizando el [estado del grupo de suscripción]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) para ver si un determinado `phone` está suscrito a un `subscription_group_id`. Si existe una suscripción, acredite al usuario en la activación de Quikly. No es necesario adoptar ninguna otra medida.
-2. Quikly realiza una búsqueda de usuarios utilizando el [endpoint Exportar perfil de usuario por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) para ver si existe un perfil de usuario con un determinado `email_address`. 
+2. Quikly realiza una búsqueda de usuarios utilizando el [endpoint Exportar perfil de usuario por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) para ver si existe un perfil de usuario con un determinado `email_address`. Si no existe ningún usuario, crea un perfil de sólo alias a través del [punto final]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Braze [`/users/track`, configurando el correo electrónico del usuario como alias de usuario para hacer referencia a ese usuario en el futuro (ya que el usuario no tendrá un ID externo).]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 3. Actualiza el estado de la suscripción utilizando el [punto final Actualizar el estado del grupo de suscripción del usuario.]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)
 
 Para admitir los flujos de trabajo de suscripción por SMS de opt-in doble existentes, Quikly puede enviar un evento personalizado a Braze en lugar del flujo de trabajo anterior. En ese caso, en lugar de actualizar el estado de la suscripción directamente, el [evento personalizado activa el proceso de doble opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/) y el estado de la suscripción se controla periódicamente para verificar que el usuario ha optado plenamente antes de acreditarlo en la activación de Quikly.
