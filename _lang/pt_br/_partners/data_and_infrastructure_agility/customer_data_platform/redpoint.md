@@ -11,7 +11,7 @@ search_tag: Redpoint
 
 > [A Redpoint][2] é uma plataforma de tecnologia que fornece aos profissionais de marketing uma plataforma de orquestração de campanhas totalmente integrada. Aproveite os recursos de segmentação, programação e automação do Redpoint para controlar como e quando os dados do CDP são importados para o Braze.
 
-
+_Essa integração é mantida pela Redpoint._
 
 ## Sobre a integração
 
@@ -31,7 +31,7 @@ Você configurará um modelo de exportação e um canal de saída para cada modo
 | Requisito | Descrição |
 | ----------- | ----------- |
 | chave da API REST Braze | Uma chave da API REST da Braze com permissões `users.track`. <br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Endpoint REST do Braze | [Seu URL do ponto de extremidade REST][1]. Seu endpoint dependerá da URL do Braze para sua instância. |
+| Endpoint REST do Braze | [Sua URL de endpoint REST.][1] Seu endpoint dependerá da URL do Braze para sua instância. |
 | Artefatos de gerenciamento de dados do Redpoint | A integração da Braze é suportada por um conjunto de artefatos do Redpoint Data Management. Entre em contato com o [suporte da Redpoint][3] para solicitar os artefatos para a sua versão do Redpoint Data Management. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
