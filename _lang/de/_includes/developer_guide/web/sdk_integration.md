@@ -1,6 +1,6 @@
 ## Über das Internet Braze SDK
 
-Mit dem Web Braze SDK können Sie Analytics sammeln und Ihren Nutzer:innen In-App-Nachrichten, Push- und Content-Card-Nachrichten anzeigen. Weitere Informationen finden Sie in der [Braze ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JavaScript-ReferenzdokumentationJSDocs").
+Mit dem Web Braze SDK können Sie Analytics sammeln und Ihren Nutzer:innen In-App-Nachrichten, Push- und Content-Card-Nachrichten anzeigen. Weitere Informationen finden Sie in der [Braze JavaScript referenzierenden Dokumentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -55,7 +55,7 @@ Fügen Sie das Braze Web SDK direkt in den HTML-Code ein, indem Sie auf das auf 
 {% endtab %}
 {% endtabs %}
 
-### Schritt 2: Initialisieren Sie das SDK (optional)
+### Schritt 2: Initialisieren Sie das SDK
 
 Wenn Sie die Braze-Initialisierungsoptionen in einem Tag Manager konfiguriert haben, können Sie diesen Schritt überspringen.
 
@@ -64,7 +64,9 @@ Andernfalls initialisieren Sie die Bibliothek mit dem API-Schlüssel und der [SD
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
-    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE",
+    enableLogging: false, // set to `true` for debugging
+    allowUserSuppliedJavascript: false, // set to `true` to support custom HTML messages
 });
 
 // optionally show all in-app messages without custom handling
@@ -174,7 +176,7 @@ Mit dem [Google Tag Manager (GTM)](https://support.google.com/tagmanager/answer/
 |Tag Typ|Anwendungsfall|
 |--------|--------|
 | **Tag der Initialisierung:** | Das Initialisierungs-Tag kann für die [Initialisierung des Internet Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/initialization/?sdktabs=web) verwendet werden.|
-| **Action Tag:** | Der Action Tag kann für die [Verwaltung von Content-Cards]({{site.baseurl}}/docs/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) und die [Protokollierung von Analytics]({{site.baseurl}}/docs/developer_guide/analytics/) verwendet werden.|
+| **Action Tag:** | Der Action Tag kann zur [Verwaltung von Content-Cards]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) und zur [Protokollierung von Analytics]({{site.baseurl}}/developer_guide/analytics/) verwendet werden.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Beide Tags können Sie Ihrem Arbeitsbereich über die [Community-Galerie von Google](https://tagmanager.google.com/gallery/#/?filter=braze) hinzufügen oder indem Sie beim Hinzufügen eines neuen Tags über die Community-Vorlagen nach Braze suchen.
@@ -200,7 +202,7 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 </script>
 ```
 
-Weitere Informationen finden Sie unter [Zielgruppen-Synchronisierung mit Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/).
+Weitere Informationen finden Sie unter [Zielgruppen-Synchronisierung mit Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 
 ## Andere Methoden der Integration
 
