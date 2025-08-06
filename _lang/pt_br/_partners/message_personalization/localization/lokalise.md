@@ -12,7 +12,7 @@ search_tag: Partner
 
 > O [Lokalise](https://lokalise.com) é um serviço de gerenciamento de tradução para equipes ágeis.
 
-
+_Esta integração é mantida pelo Lokalise._
 
 ## Sobre a integração
 
@@ -51,11 +51,11 @@ Por exemplo, vamos criar um código de tradução simples, `description`:
 3. Adicione "Web" no menu suspenso **Platforms (Plataformas** ). 
 4. Quando estiver pronto, clique em **Salvar**.
 
-
+![]({% image_buster /assets/img/lokalise/1_add_key.png %}){: style="max-width:60%"}
 
 Seu código de tradução deve aparecer no editor de projetos:
 
-
+![]({% image_buster /assets/img/lokalise/2_translation_key_added.png %}){: style="max-width:90%"}
 
 #### Problemas conhecidos
 
@@ -66,7 +66,7 @@ Seu código de tradução deve aparecer no editor de projetos:
 
 Abra seu projeto do Lokalise e clique em **Apps**. Procure e instale o app da Braze. Você verá a seguinte tela:
 
-
+![Configuração do Braze na lista do Lokalise com o ID do projeto e a URL dos arquivos de tradução.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
 No **URL do arquivo de tradução**, o Lokalise publica um arquivo JSON contendo todas as traduções para suas chaves no projeto. Você obterá um URL de arquivo de tradução para cada idioma-alvo do projeto. É por isso que os URLs de arquivo de tradução resultantes têm duas partes:
 
@@ -79,7 +79,7 @@ O URL do arquivo de tradução é o URL de que você precisará ao configurar um
 
 Para testar esse URL, copie-o e substitua {% raw %}`{{${language}}}`{% endraw %} por um código de idioma (por exemplo, `en`) e abra esse URL no seu navegador. Você verá um arquivo JSON com suas chaves e traduções:
 
-
+![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
 ### Etapa 4: Uso de traduções na campanha do Braze
 
@@ -108,7 +108,7 @@ Agora use a variável translations para exibir as traduções desejadas por suas
 Por exemplo, para exibir a chave `description`, use`{{ translations.description }}`.
 
 {% endraw %}
-
+![]({% image_buster /assets/img/lokalise/6_integration_usage_sample.png %})
 
 Por fim, salve o modelo de e-mail e faça uma prévia. Você deverá ver sua tradução sendo exibida.
 
