@@ -156,31 +156,31 @@ Selecciona el socio como **LinkedIn**, tu cuenta de publicidad y la audiencia pa
 
 ## Preguntas más frecuentes
 
-### 
+### ¿Cuánto tardarán en poblarse los tamaños de audiencia en LinkedIn?
 
 Hay un retraso de hasta 48 horas para ver las audiencias dentro de tu cuenta de LinkedIn.
 
-### 
+### ¿Cuál es el tamaño mínimo de audiencia para que LinkedIn lo incluya en tu cuenta publicitaria?
 
 La audiencia debe incluir al menos 300 miembros para poblar el tamaño de la audiencia dentro de tu cuenta de LinkedIn.
 
-### 
+### ¿Qué debo hacer si recibo un error de token no válido?
 
 Puedes desconectar y volver a conectar tu cuenta de LinkedIn en la página del socio de LinkedIn. Confirma con tu administrador de LinkedIn que tienes los permisos adecuados para la cuenta de publicidad con la que deseas sincronizar.
 
-### 
+### ¿Por qué no se puede iniciar mi Canvas?
 
- 
+Confirma que tu cuenta publicitaria de LinkedIn se ha conectado correctamente a Braze en la página del socio de LinkedIn. A continuación, asegúrate de haber seleccionado una cuenta de publicidad, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
 
 ### ¿Cómo sé si los usuarios se han emparejado después de pasar los usuarios a LinkedIn?
 
- Puedes consultarlo en LinkedIn, en la sección **Audiencias**. 
+LinkedIn proporciona información sobre las tasas de coincidencia en su panel. Puedes consultarlo en LinkedIn, en la sección **Audiencias**. Puedes revisar la tasa de coincidencia de tu audiencia de LinkedIn en los detalles del paso en Canvas de tu paso Sincronización de audiencia.
 
-### 
+### ¿A cuántas audiencias puede dar soporte LinkedIn?
 
 Actualmente, no hay límite en el número de audiencias en tu cuenta de anuncios de LinkedIn.
 
-### 
+### ¿Por qué un segmento está atascado en estado CONSTRUIDO y no se actualiza?
 
 Un segmento se considera no utilizado y se establece en ARCHIVADO después de que no se utilice de forma continuada durante 30 días en un borrador o en una campaña activa. Por ello, un segmento puede aparecer "atascado" en CONSTRUCCIÓN cuando se transmiten actualizaciones a un segmento ARCHIVADO, empujándolo así al estado de CONSTRUCCIÓN, y justo antes de que se archive de nuevo, se transmiten nuevas actualizaciones al segmento no utilizado.
 
