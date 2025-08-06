@@ -4,23 +4,70 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Conector Currents personalizado para socios
+# 
 
-## Serialización y formato de los datos
+> 
 
-El formato de datos de destino es JSON sobre HTTPS. Los eventos se agruparán por predeterminado en lotes de 100 eventos, y se enviarán al punto final como una matriz JSON que contiene todos los eventos. Los lotes se enviarán en el siguiente formato:
+## Requisitos previos
 
-`{"events": [event1, event2, event3, etc...]}`
 
-Habrá un objeto JSON de nivel superior con la clave "events" que se asigna a una matriz de otros objetos JSON, cada uno de los cuales representa un único evento.
 
-Los siguientes ejemplos son para eventos _individuales_ (tal y como formarían parte de la matriz más grande de objetos JSON, con cada objeto JSON representando un único evento en el lote).
+ 
+
+## 
+
+### 
+
+
+
+  
+
+### 
+
+ 
+
+ 
+
+{% alert tip %}
+
+{% endalert %}
+
+## 
+
+El formato de datos de destino es JSON sobre HTTPS. 
+
+-  
+-   
+
+
+
+```json
+{"events": [event1, event2, event3, etc...]}
+```
+
+
+
+## 
+
+
+
+ 
+
+|Apellidos|Descripción|
+|----|-----------|
+|`"user"`||
+|`"properties"`||
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+  
 
 ### Actos relacionados con la campaña
 
 A continuación se muestran algunos ejemplos de cargas útiles para varios eventos, tal y como aparecerían si estuvieran asociados a una campaña:
 
-```
+#### Clic en mensaje dentro de la aplicación
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -47,7 +94,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### 
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -72,7 +121,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Apertura del correo electrónico
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -96,7 +147,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Entrega de SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -124,7 +177,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 
 A continuación se muestran algunos ejemplos de cargas útiles para varios eventos, tal y como aparecerían si se asociaran a un Canvas:
 
-```
+#### Clic en mensaje dentro de la aplicación
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -151,7 +206,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### 
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -176,7 +233,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Apertura del correo electrónico
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -200,7 +259,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Entrega de SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -228,7 +289,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 
 A continuación se muestran algunos ejemplos de cargas útiles para otros eventos que no están asociados ni a campañas ni a lienzos:
 
-```
+#### Evento personalizado
+
+```json
 // Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
@@ -258,7 +321,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 }
 ```
 
-```
+#### Evento de compra
+
+```json
 // Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
@@ -290,7 +355,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 }
 ```
 
-```
+#### Comienzo de sesión
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -313,50 +380,105 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 
 ## Autenticación
 
-Si es necesario, la autenticación se realizará pasando un token en la cabecera de `Authorization` HTTP, mediante el esquema de autorización `Bearer`, tal y como se especifica en [el RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). En el futuro, Braze puede optar por utilizar el encabezado `Authorization` para implantar un esquema de autorización personalizado (único para Braze) de par clave-valor conforme [al RFC 7235](https://tools.ietf.org/html/rfc7235) (que es como funciona, por ejemplo, el esquema de autenticación personalizado de AWS).
+  
 
-Según la RFC 6750, el token será un valor codificado en Base64 de al menos un carácter. Una peculiaridad notable del RFC 6750 es que permite que el token contenga los siguientes caracteres además de los caracteres normales de Base64: '-', '.', '_' y '~'. Los socios y clientes son libres de decidir si incluyen o no estos personajes en su token. Ten en cuenta que los clientes deben proporcionar este token en formato Base64; Braze no realizará esta codificación por nuestra parte.
+  
 
-Según el RFC 6750, la cabecera se construirá con el siguiente formato:
 
-`"Authorization: Bearer " + <token>`
 
-Así, por ejemplo, si el token de la API es `0p3n5354m3==`, la cabecera de autorización tendrá el siguiente aspecto:
+```plaintext
+"Authorization: Bearer " + <token>
+```
 
-`Authorization: Bearer 0p3n5354m3==`
+
+
+```plaintext
+Authorization: Bearer 0p3n5354m3==
+```
+
+{% alert note %}
+ 
+{% endalert %}
 
 ## Control de versiones
 
-Todas las solicitudes de nuestros Conectores HTTP integrables se enviarán con un encabezado personalizado que designa la versión de la solicitud de Currents que se está realizando:
 
-`Braze-Currents-Version: 1`
 
-La versión siempre será `1` a menos que realicemos cambios gravemente incompatibles con el pasado en la carga útil o la semántica de la solicitud. No tenemos previsto incrementar este número muy a menudo, si es que lo hacemos alguna vez.
+```plaintext
+Braze-Currents-Version: 1
+```
 
-Los eventos individuales seguirán las mismas reglas de evolución que nuestros esquemas S3 Avro existentes para la Exportación de Datos Currents. Es decir, se garantizará que los campos de cada evento sean compatibles con versiones anteriores de las cargas útiles de los eventos según la definición Avro de compatibilidad con versiones anteriores, incluidas las siguientes reglas:
 
-- Se garantiza que los campos de eventos específicos tengan siempre el mismo tipo de datos a lo largo del tiempo.
-- Cualquier nuevo campo que se añada a la carga útil con el tiempo debe ser considerado opcional por todas las partes.
-- Los campos obligatorios nunca se eliminarán.
+
+
+
+1. Se garantiza que los campos de eventos específicos tengan siempre el mismo tipo de datos a lo largo del tiempo.
+2. Cualquier nuevo campo que se añada a la carga útil con el tiempo debe ser considerado opcional por todas las partes.
+3. Los campos obligatorios nunca se eliminarán.
 
 ## Tratamiento de errores y mecanismo de reintento
 
-En caso de error, Braze pondrá en cola y reintentará la solicitud en función del código de retorno HTTP recibido. Cualquier código de error HTTP que no figure a continuación se tratará como un error HTTP 5XX.
+   
 
-{% alert important %}
-Si nuestro mecanismo de reintento no consigue entregar eventos a su punto final durante más de 24 horas, se producirá una pérdida de datos.
+
+
+
+
+{% alert warning %}
+
 {% endalert %}
 
 Los siguientes códigos de estado HTTP serán reconocidos por nuestro cliente conector:
-- **2XX** \- Éxito
-  - Los datos del evento no se reenviarán.<br><br>
-- **5XX** \- Error del servidor
-  - Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si los datos no se envían correctamente en 24 horas, se descartarán.<br><br>
-- **400** \- Error del lado del cliente
-  - Nuestro conector de alguna manera envió al menos un evento malformado. Si esto ocurre, los datos del evento se dividirán en lotes de tamaño 1 y se volverán a enviar. Todos los eventos de estos lotes de tamaño 1 que reciban una respuesta HTTP 400 adicional se eliminarán de forma permanente. Animamos a nuestros socios y/o clientes a que nos informen si detectan que esto está ocurriendo.<br><br>
-- **401** (No autorizado), **403** (Prohibido), **404**
-  - El conector se ha configurado con credenciales no válidas. Los datos del suceso se reenviarán tras un retraso de entre 2 y 5 minutos. Si el cliente no resuelve este problema en un plazo de 48 horas, se eliminarán los datos del evento.<br><br>
-- **413** \- Carga útil demasiado grande
-  - Los datos del evento se dividirán en lotes más pequeños y se volverán a enviar.<br><br>
-- **429** \- Demasiadas peticiones
-  - Indica el límite de velocidad. Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si los datos no se envían correctamente en 24 horas, se descartarán.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Respuesta</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2XX</code></td>
+      <td>Correcto</td>
+      <td>Los datos del evento no se reenviarán.</td>
+    </tr>
+    <tr>
+      <td><code>5XX</code></td>
+      <td></td>
+      <td>Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si los datos no se envían correctamente en 24 horas, se descartarán.</td>
+    </tr>
+    <tr>
+      <td><code>400</code></td>
+      <td></td>
+      <td>   <code>400</code>  </td>
+    </tr>
+    <tr>
+      <td><code>401</code></td>
+      <td></td>
+      <td>El conector se ha configurado con credenciales no válidas.  </td>
+    </tr>
+    <tr>
+      <td><code>403</code></td>
+      <td></td>
+      <td>El conector se ha configurado con credenciales no válidas.  </td>
+    </tr>
+    <tr>
+      <td><code>404</code></td>
+      <td></td>
+      <td>El conector se ha configurado con credenciales no válidas.  </td>
+    </tr>
+    <tr>
+      <td><code>413</code></td>
+      <td>Payload demasiado grande</td>
+      <td>Los datos del evento se dividirán en lotes más pequeños y se volverán a enviar.</td>
+    </tr>
+    <tr>
+      <td><code>429</code></td>
+      <td></td>
+      <td>Indica el límite de velocidad. Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. </td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
