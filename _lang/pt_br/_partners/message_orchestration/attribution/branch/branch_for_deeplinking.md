@@ -14,7 +14,7 @@ search_tag: Partner
 
 > A [Branch][1] é uma plataforma de deeplinking móvel que ajuda a adquirir, engajar e medir em todos os dispositivos, canais e plataformas por meio de uma visão holística de todos os pontos de contato dos usuários.
 
-
+_Esta integração é mantida pela Branch._
 
 ## Sobre a integração
 
