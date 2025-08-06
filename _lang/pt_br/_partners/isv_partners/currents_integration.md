@@ -4,23 +4,70 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Conector do Conector personalizado para parceiros
+# 
 
-## Serialização e formato de dados
+> 
 
-O formato de dados alvo é JSON sobre HTTPS. Os eventos serão agrupados em lotes de 100 eventos por padrão e enviados para o endpoint como um array JSON contendo todos os eventos. Os lotes serão enviados no seguinte formato:
+## Pré-requisitos
 
-`{"events": [event1, event2, event3, etc...]}`
 
-Haverá um objeto JSON de nível superior com a chave "events" que mapeia para uma matriz de outros objetos JSON, cada um representando um único evento.
 
-Os seguintes exemplos são para eventos _individuais_ (como se fossem parte de um conjunto maior de objetos JSON, com cada objeto JSON representando um único evento no lote).
+ 
+
+## 
+
+### 
+
+
+
+  
+
+### 
+
+ 
+
+ 
+
+{% alert tip %}
+
+{% endalert %}
+
+## 
+
+O formato de dados alvo é JSON sobre HTTPS. 
+
+-  
+-   
+
+
+
+```json
+{"events": [event1, event2, event3, etc...]}
+```
+
+
+
+## 
+
+
+
+ 
+
+|Nome|Descrição|
+|----|-----------|
+|`"user"`||
+|`"properties"`||
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+  
 
 ### Eventos associados à campanha
 
 Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, como apareceriam se estivessem associados a uma campanha:
 
-```
+#### Clique em mensagem no app
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -47,7 +94,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 }
 ```
 
-```
+#### 
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -72,7 +121,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 }
 ```
 
-```
+#### Abertura de e-mail
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -96,7 +147,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 }
 ```
 
-```
+#### Entrega de SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -124,7 +177,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 
 Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, como apareceriam se associados a uma canva:
 
-```
+#### Clique em mensagem no app
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -151,7 +206,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 }
 ```
 
-```
+#### 
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -176,7 +233,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 }
 ```
 
-```
+#### Abertura de e-mail
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -200,7 +259,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 }
 ```
 
-```
+#### Entrega de SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -228,7 +289,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários eventos, co
 
 Aqui estão alguns exemplos de cargas úteis de eventos para vários outros eventos que não estão associados nem a campanhas nem a canvas:
 
-```
+#### Evento personalizado
+
+```json
 // Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
@@ -258,7 +321,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários outros even
 }
 ```
 
-```
+#### Evento de compra
+
+```json
 // Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
@@ -290,7 +355,9 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários outros even
 }
 ```
 
-```
+#### Início de sessão
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -313,50 +380,105 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários outros even
 
 ## Autenticação
 
-Se necessário, a autenticação será realizada passando um token no cabeçalho HTTP `Authorization`, via o esquema de autorização `Bearer`, conforme especificado em [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). No futuro, Braze pode optar por usar o `Authorization` cabeçalho para implementar um esquema de autorização de par chave-valor personalizado (único para Braze) em conformidade com [RFC 7235](https://tools.ietf.org/html/rfc7235) (que é como, por exemplo, o esquema de autenticação personalizado da AWS funciona).
+  
 
-De acordo com a RFC 6750, o token deve ser um valor codificado em Base64 com pelo menos um caractere Uma peculiaridade notável da RFC 6750 é que ela permite que o token contenha os seguintes caracteres além dos caracteres normais da Base64: "-", ".", "_", e "~". Os parceiros e clientes são livres para decidir se incluem ou não esses caracteres em seu token. Nota que os clientes são obrigados a fornecer este token em formato Base64; Braze não realizará essa codificação do nosso lado.
+  
 
-De acordo com a RFC 6750, o cabeçalho, se houver, será construído usando o seguinte formato:
 
-`"Authorization: Bearer " + <token>`
 
-Então, por exemplo, se o token da API for `0p3n5354m3==`, o cabeçalho de autorização ficará assim:
+```plaintext
+"Authorization: Bearer " + <token>
+```
 
-`Authorization: Bearer 0p3n5354m3==`
+
+
+```plaintext
+Authorization: Bearer 0p3n5354m3==
+```
+
+{% alert note %}
+ 
+{% endalert %}
 
 ## Versão
 
-Todas as solicitações de nossos Conectores HTTP Integráveis serão enviadas com um cabeçalho personalizado designando a versão da solicitação Currents que está sendo feita:
 
-`Braze-Currents-Version: 1`
 
-A versão será sempre `1`, a menos que façamos alterações severamente incompatíveis com versões anteriores na carga útil ou na semântica da solicitação. Nós não esperamos incrementar esse número com muita frequência, se é que isso vai acontecer.
+```plaintext
+Braze-Currents-Version: 1
+```
 
-Os eventos individuais seguirão as mesmas regras de evolução que nossos esquemas Avro S3 existentes para Currents Data Export. Ou seja, os campos de cada evento serão garantidos para serem compatíveis com versões anteriores dos payloads de eventos de acordo com a definição Avro de compatibilidade retroativa, incluindo as seguintes regras:
 
-- Campos de eventos específicos são garantidos para sempre ter o mesmo tipo de dado ao longo do tempo.
-- Qualquer novo campo que seja adicionado à carga útil ao longo do tempo deve ser considerado opcional por todas as partes.
-- Os campos obrigatórios nunca serão removidos.
+
+
+
+1. Campos de eventos específicos são garantidos para sempre ter o mesmo tipo de dado ao longo do tempo.
+2. Qualquer novo campo que seja adicionado à carga útil ao longo do tempo deve ser considerado opcional por todas as partes.
+3. Os campos obrigatórios nunca serão removidos.
 
 ## Mecanismo de tratamento de erros e novas tentativas
 
-No caso de um erro, a Braze colocará a solicitação na fila e tentará repeti-la com base no código de retorno HTTP recebido. Qualquer código de erro HTTP não listado abaixo será tratado como um erro HTTP 5XX.
+   
 
-{% alert important %}
-Se o nosso mecanismo de repetição falhar em entregar eventos ao seu endpoint por mais de 24 horas, haverá perda de dados.
+
+
+
+
+{% alert warning %}
+
 {% endalert %}
 
 Os seguintes códigos de status HTTP serão reconhecidos pelo nosso cliente conector:
-- **2XX** — Sucesso
-  - Os dados do evento não serão reenviados.<br><br>
-- **5XX** — Erro no servidor
-  - Os dados do evento serão reenviados em um padrão de recuo exponencial com jitter. Se os dados não forem enviados com sucesso dentro de 24 horas, eles serão descartados.<br><br>
-- **400** — Erro do lado do cliente
-  - Nosso conector de alguma forma enviou pelo menos um evento malformado. Se isso ocorrer, os dados do evento serão divididos em lotes de tamanho 1 e reenviados. Qualquer evento nesses lotes de tamanho 1 que receber uma resposta HTTP 400 adicional será descartado permanentemente. Os parceiros e/ou clientes devem nos informar se detectarem isso ocorrendo no lado deles.<br><br>
-- **401** (Não autorizado), **403** (Proibido), **404**
-  - O conector foi configurado com credenciais inválidas. Os dados do evento serão reenviados após uma postergação de entre 2 e 5 minutos. Se o problema não for resolvido pelo cliente dentro de 48 horas, os dados do evento serão descartados.<br><br>
-- **413** — Carga Útil Muito Grande
-  - Os dados do evento serão divididos em lotes menores e reenviados.<br><br>
-- **429** — Muitas Solicitações
-  - Indica limitação de taxa. Os dados do evento serão reenviados em um padrão de recuo exponencial com jitter. Se os dados não forem enviados com sucesso dentro de 24 horas, eles serão descartados.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Resposta</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2XX</code></td>
+      <td>Deu certo</td>
+      <td>Os dados do evento não serão reenviados.</td>
+    </tr>
+    <tr>
+      <td><code>5XX</code></td>
+      <td></td>
+      <td>Os dados do evento serão reenviados em um padrão de recuo exponencial com jitter. Se os dados não forem enviados com sucesso dentro de 24 horas, eles serão descartados.</td>
+    </tr>
+    <tr>
+      <td><code>400</code></td>
+      <td></td>
+      <td>   <code>400</code>  </td>
+    </tr>
+    <tr>
+      <td><code>401</code></td>
+      <td></td>
+      <td>O conector foi configurado com credenciais inválidas.  </td>
+    </tr>
+    <tr>
+      <td><code>403</code></td>
+      <td></td>
+      <td>O conector foi configurado com credenciais inválidas.  </td>
+    </tr>
+    <tr>
+      <td><code>404</code></td>
+      <td></td>
+      <td>O conector foi configurado com credenciais inválidas.  </td>
+    </tr>
+    <tr>
+      <td><code>413</code></td>
+      <td></td>
+      <td>Os dados do evento serão divididos em lotes menores e reenviados.</td>
+    </tr>
+    <tr>
+      <td><code>429</code></td>
+      <td></td>
+      <td>Indica limitação de taxa. Os dados do evento serão reenviados em um padrão de recuo exponencial com jitter. </td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
