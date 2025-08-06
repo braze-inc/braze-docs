@@ -12,7 +12,7 @@ page_order: 1
 
 > In diesem Artikel erfahren Sie, wie Sie das Braze Web SDK auf Ihrer Shopify Website implementieren. Nach der Implementierung lesen Sie [Shopify einrichten]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview), um zu erfahren, wie Sie die Integration von Shopify mit Braze abschließen.
 
-{% multi_lang_include alerts.md alert='Shopify Verwerfung' %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Checkliste für die Einrichtung der Integration
 
