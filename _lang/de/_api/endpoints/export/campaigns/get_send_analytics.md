@@ -24,7 +24,7 @@ Braze speichert die gesendeten Analytics für 14 Tage nach dem Versand. Konversi
 
 Dieser Endpunkt ist nur für API-Kampagnen gedacht. Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `sends.data_series`.
 
-## Rate-Limit
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
