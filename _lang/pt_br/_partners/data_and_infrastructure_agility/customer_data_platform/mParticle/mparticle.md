@@ -1,6 +1,6 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: mParticle por Rokt
+article_title: mParticle por Rokt
 alias: /partners/mparticle/
 description: "Este artigo de referência descreve a parceria entre o Braze e a mParticle, uma plataforma de dados do cliente que coleta e encaminha informações entre fontes em sua pilha de marketing."
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# 
+# mParticle por Rokt
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
@@ -24,7 +24,7 @@ A integração entre a Braze e o mParticle permite que você controle com pratic
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Conta mParticle | É necessário ter uma [conta mParticle](https://app.mparticle.com/login) para usar essa parceria. |
-| Instâncias da Braze |  |
+| Instâncias da Braze | Sua instância do Braze pode ser encontrada na [página de visão geral da API]({{site.baseurl}}/api/basics/#endpoints) (por exemplo, `US-01` ou `US-02`). |
 | Chave do identificador do app Braze | A chave do identificador de seu app. <br><br>Ela pode ser encontrada em **Dashboard da Braze > Gerenciar configurações > Chave de API**. |
 | Chave da API REST do espaço de trabalho | (Servidor para servidor) Uma chave da API REST do Braze<br><br>Isso pode ser criado no **Dashboard da Braze > Console de desenvolvedor > Configurações de API > Chave de API**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -154,7 +154,7 @@ Na mParticle, navegue até **Setup > Outputs > Add Outputs** (Configuração > S
 
 ### Integração de kits incorporados
 
-O SDK da mParticle e da Braze estará presente em seu aplicativo por meio da integração do kit incorporado. No entanto, ao contrário de uma integração direta da Braze, a mParticle se encarrega de chamar a maioria dos métodos do SDK da Braze para você.  
+O SDK da mParticle e da Braze estará presente em seu aplicativo por meio da integração do kit incorporado. No entanto, ao contrário de uma integração direta da Braze, a mParticle se encarrega de chamar a maioria dos métodos do SDK da Braze para você. Os métodos do mParticle usados para rastrear dados de usuários serão automaticamente mapeados para os métodos do SDK do Braze. 
 
 Esses mapeamentos do SDK da mParticle para [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) e [Web](https://github.com/Appboy/integration-appboy) são de código aberto e podem ser encontrados na [página da mParticle no GitHub](https://github.com/mparticle-integrations). 
 
