@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Lytics][1] es la plataforma de datos de los clientes (CDP) elegida por la próxima generación de empresas centradas en el cliente. Las soluciones Lytics Decision Engine, Conductor y Cloud Connect ofrecen a los especialistas en marketing y a los equipos de datos la oportunidad de llevar a cabo la resolución de identidades, la orquestación y la optimización de campañas en tiempo real y respetando la privacidad.
 
-
+_Esta integración está mantenida por Lytics._
 
 ## Sobre la integración
 
