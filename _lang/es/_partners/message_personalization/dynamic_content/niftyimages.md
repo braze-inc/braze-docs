@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [NiftyImages](https://niftyimages.com) es un software de personalización de correo electrónico en tiempo real que permite a los profesionales del marketing enviar comunicaciones por correo electrónico relevantes y actualizadas de forma más eficaz, al tiempo que aumenta la participación y los ingresos. Es una herramienta fácil de usar y de autoservicio que permite a los profesionales del marketing añadir contenido dinámico a sus correos electrónicos de forma fácil y rápida.
 
-
+_Esta integración está mantenida por NiftyImages._
 
 ## Requisitos previos
 
