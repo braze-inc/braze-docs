@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [eduMe](https://edume.com) es una herramienta de formación móvil que proporciona a tus trabajadores los conocimientos que necesitan para triunfar, cuando los necesitan y dondequiera que estén. 
 
-
+_Esta integración está mantenida por eduMe._
 
 ## Sobre la integración
 
