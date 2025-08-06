@@ -1,72 +1,72 @@
 ---
-nav_title: ""
-article_title: ""
-description: ""
+nav_title: Typeform
+article_title: Typeform
+description: "Este artículo describe la asociación entre Braze y Typeform, una herramienta fácil de usar para recopilar datos, comentarios y mucho más."
 alias: /partners/typeform/
 page_type: partner
 search_tag: Partner
 ---
 
-# 
+# Typeform
 
-> 
+> [Typeform](https://www.typeform.com/) es una herramienta fácil de usar para recopilar datos, opiniones y mucho más.
 
+Integrando Braze y Typeform, puedes:
 
+- Actualizar los perfiles de usuario en Braze con los datos recogidos de su respuesta a Typeform.
+- Desencadenar mensajería en Braze en función de la interacción de un usuario con una forma tipográfica
+- Personalización de la mensajería Braze en función de las respuestas de un usuario a Typeform
 
-- 
-- 
-- 
+## Requisitos previos
 
-## 
-
-|  |  |
+| Requisito | Descripción |
 | ----------- | ----------- |
-|  |  |
-|  |  |
+| Cuenta Typeform | Se requiere una cuenta Typeform con acceso a webhooks para aprovechar esta asociación. |
+| Transformación de datos Braze | Es necesaria una [URL de Transformación de Datos]({{site.baseurl}}/data_transformation/) para recibir datos de Typeform. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Integración
 
-## 
+### Paso 1: Configura la transformación de datos Braze para que acepte los webhooks de Typeform {#step-1}
 
-###  
+{% multi_lang_include create_transformation.md location="typeform" %}
 
+### Paso 2: Configurar webhooks de Typeform
 
+Sigue los pasos de la [documentación sobre webhooks de Typeform](https://www.typeform.com/help/a/webhooks-360029573471/) para configurar un webhook.
 
-###  
+Para el paso 4, añade la URL de tu webhook de Transformación de Datos como **URL de Destino**
 
+![]({% image_buster /assets/img/typeform/typeform_add_webhook.png %}){: style="max-width:50%" }
 
+Envía un evento de prueba a tu Transformación de Datos haciendo clic en **Ver entregas** y luego en **Enviar solicitud de prueba**.
 
+![]({% image_buster /assets/img/typeform/typeform_test_request.png %})
 
+### Paso 3: Escribe el código de transformación para aceptar los eventos Typeform que elijas
 
+En este paso, transformarás la carga útil del webhook que se enviará desde Typeform en un valor de retorno de objeto JavaScript.
 
+1. Actualiza tu Transformación de datos y asegúrate de que puedes ver la carga útil de prueba de Typeform en **los Detalles del webhook**.
+2. Actualiza tu código de Transformación de Datos para que sea compatible con los eventos de Typeform que hayas elegido.
+3. Haz clic en **Validar** para obtener una vista previa de la salida de tu código y comprobar si se trata de una solicitud aceptable de `/users/track`.
+4. Guarda y activa tu Transformación de Datos.
 
+![]({% image_buster /assets/img/typeform/typeform_test_result.png %})
 
+#### Formato del cuerpo de la solicitud
 
+Este valor de retorno debe ajustarse al formato del cuerpo de la solicitud de Braze `/users/track`:
 
+- El código de transformación se acepta en el lenguaje de programación JavaScript. Se admite cualquier flujo de control estándar de JavaScript, como la lógica if/else.
+- El código de transformación accede al cuerpo de la petición del webhook a través de la variable payload. Esta variable es un objeto poblado por el análisis del cuerpo de la solicitud JSON.
+- Se admite cualquier característica de nuestro punto final `/users/track`, incluidos:
+    - Objetos de atributos de usuario, objetos de evento y objetos de compra
+    - Atributos anidados y propiedades anidadas de eventos personalizados
+    - Actualizaciones de grupos de suscripción
+    - Dirección de correo electrónico como identificador
 
-###  
-
-
-
-1. 
-2. 
-3. 
-4. 
-
-
-
-#### 
-
-
-
--  
--  
-- 
-    - 
-    - 
-    - 
-    - 
-
-## 
+## Ejemplo de carga útil de webhook de Typeform
 
 ```json
 Content-Type: application/json
@@ -322,22 +322,22 @@ Content-Type: application/json
 }
 ```
 
-## 
+## Casos de uso de la Transformación de Datos
 
-  
+Las siguientes son plantillas de ejemplo creadas utilizando nuestro [ejemplo de carga útil de webhook de Typeform](#example-typeform-webhook-payload). Estas plantillas pueden servirte de punto de partida. Puedes empezar desde cero o eliminar componentes específicos según te convenga.
 
-  
+En estas plantillas de ejemplo, estamos registrando un evento personalizado en el perfil Braze. El título del Typeform se pasará como nombre del evento personalizado, y los resultados del Typeform se pasarán como propiedades del evento. Estas plantillas de ejemplo no tienen en cuenta los tipos de pregunta Calendly, Carga de archivos o Pago en Typeform.
 
-###  
+### Casos de uso: Correo electrónico como identificador
 
+En esta plantilla de ejemplo, estamos utilizando una dirección de correo electrónico (capturada de una pregunta de dirección de correo electrónico dentro del formulario) como identificador.
 
+{% alert note %}
+Si tienes intención de utilizar una dirección de correo electrónico como identificador, consulta nuestras [preguntas frecuentes]({{site.baseurl}}/api/endpoints/user_data/post_user_track#frequently-asked-questions) sobre el punto final `/users/track` para obtener más información sobre el comportamiento esperado.
+{% endalert %}
 
-
-
-
-
-
-
+{% tabs local %}
+{% tab Entrada %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -408,8 +408,8 @@ let brazecall = {
 return brazecall;
 ```
 
-
-
+{% endtab %}
+{% tab Salida %}
 
 ```json
 {
@@ -467,17 +467,17 @@ return brazecall;
 }
 ```
 
+{% endtab %}
+{% endtabs %}
 
+### Casos de uso: Utilizar identificador pasado en Campos ocultos
 
+Puedes utilizar los campos ocultos de Typeform para pasar datos en la carga útil del webhook de Typeform, como el ID de un usuario, sin tener que pasar esta información en la respuesta de Typeform.
 
-###  
+En esta plantilla de ejemplo, utilizamos un campo oculto "user_id" y lo pasamos a la carga útil de la solicitud `/users/track` como `external_id`. Aunque estamos utilizando "user_id", los campos se pueden modificar para adaptarlos a tus necesidades.
 
-
-
- 
-
-
-
+{% tabs local %}
+{% tab Entrada %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -548,8 +548,8 @@ let brazecall = {
 return brazecall;
 ```
 
-
-
+{% endtab %}
+{% tab Salida %}
 
 ```json
 {
@@ -607,16 +607,17 @@ return brazecall;
 }
 ```
 
+{% endtab %}
+{% endtabs %}
 
+### Paso 4: Publica tu webhook de Typeform
 
+Después de haber escrito tu transformación de datos, haz clic en **Validar** para asegurarte de que tu código de Transformación de Datos está formateado correctamente y funcionará como se espera. A continuación, guarda y activa tu Transformación de Datos.
 
-###  
+Una vez activados, los datos del evento personalizado se registrarán en el perfil de un usuario cuando complete tu formulario.
 
- 
+![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 
+## Supervisión y solución de problemas
 
-
-
-
-## 
-
+Consulta la sección [Supervisar tu transformación]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#step-5-monitor-your-transformation) para obtener más información sobre la supervisión y solución de problemas de tu transformación.
