@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Gamificación
 config_only: true
 ---
