@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [DataGrail](https://www.datagrail.io/), uma plataforma de gerenciamento de privacidade, ajuda a criar a confiança do consumidor e a eliminar negócios arriscados. Com a detecção contínua do sistema e o atendimento automatizado de solicitações de titulares de dados (DSR), a DataGrail potencializa os programas de privacidade, apoiando a conformidade com as leis e regulamentos de privacidade em evolução, como GDPR, CCPA e CPRA. 
 
-
+_Essa integração é mantida pelo DataGrail._
 
 ## Sobre a integração
 
