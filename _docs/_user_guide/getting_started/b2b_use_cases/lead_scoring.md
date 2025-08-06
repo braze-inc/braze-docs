@@ -83,7 +83,7 @@ Add the following groups to your Action Path:
 - **Group 3:** All events that count for a 1-point decrement.
 - **Everyone Else:** Action Paths allow you to define the window to wait and see if a user takes an action, before dropping them into an “everyone else” group. For lead scoring, this is an opportunity to decrement the score for “inactivity”.
 
-![Action Path containing Action Groups for adding one point, five points, and ten points; subtracting one point and ten points; and “Everyone Else”.]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
+![Action Path containing Action Groups for adding one point, five points, and ten points; subtracting one point and ten points; and “Everyone Else”.]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Step 4c: Configure each group to include the relevant events
 
