@@ -105,7 +105,7 @@ Una vez que hayas configurado la sincronización de tu audiencia con Snapchat, �
 
 Puedes ver la audiencia en Snapchat entrando en tu cuenta de administrador de anuncios y seleccionando **Audiencias** en la sección Activos de la navegación. En la página **Audiencias**, puedes ver el tamaño de cada audiencia cuando alcance ~1.000.
 
-
+![Detalles de la audiencia de una determinada audiencia de Snapchat que incluye el nombre de la audiencia, el tipo de audiencia, el tamaño de la audiencia y la retención de la audiencia en días.][9]
 
 ## Consideraciones sobre la sincronización de usuarios y el límite de velocidad
 
@@ -134,23 +134,23 @@ Recuerda que habrá un retraso en los informes de los usuarios sincronizados y d
 
 ## Preguntas más frecuentes
 
-### 
+### ¿Cuántas audiencias puede soportar Snapchat?
 
 En este momento, solo puedes tener 1000 audiencias en tu cuenta de Snapchat. 
 
- 
+Si superas este límite, Braze te notificará que no podemos crear nuevas audiencias. Tendrás que eliminar las audiencias que ya no utilices en tu cuenta de anuncios de Snapchat.
 
-### 
+### ¿Cómo sé si los usuarios se han emparejado después de pasar usuarios a Snapchat?
 
+Snapchat no proporciona esta información para sus políticas de privacidad de datos.
 
+### ¿Qué debo hacer si recibo un error de token no válido?
 
-### 
+Puedes desconectar y volver a conectar tu cuenta de Snapchat en la página del socio de Snapchat. Confirma con tu administrador de Snapchat Business Manager que tienes los permisos adecuados para la cuenta publicitaria con la que deseas sincronizar.
 
-Puedes desconectar y volver a conectar tu cuenta de Snapchat en la página del socio de Snapchat. 
+### ¿Por qué no se puede iniciar mi Canvas?
 
-### 
-
- 
+Asegúrate de que tu cuenta de anuncios de Snapchat se conecta correctamente a Braze en la página del socio de Snapchat. Comprueba que has seleccionado una cuenta de publicidad, introducido un nombre para la nueva audiencia y seleccionado los campos que coinciden.
 
 
 [1]: {% image_buster /assets/img/snapchat/snapchat1.png %}
