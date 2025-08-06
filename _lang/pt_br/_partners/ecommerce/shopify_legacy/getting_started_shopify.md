@@ -12,7 +12,7 @@ page_order: 1
 
 > Este artigo descreve como implementar o SDK da Braze para Web no seu site da Shopify. Após a implementação, veja [Configurando o Shopify]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview) para aprender como finalizar a configuração da integração do Shopify com o Braze.
 
-{% multi_lang_include alerts.md alert='Shopify deprecation' (depreciação da Shopify) %}
+{% multi_lang_include alerts.md alert='Shopify deprecation' %}
 
 ## Lista de verificação de configuração de integração
 
