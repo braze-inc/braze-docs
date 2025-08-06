@@ -13,7 +13,7 @@ search_tag: OfferFit
 
 > [O OfferFit](https://www.offerfit.ai/) substitui os testes A/B manuais por testes IA. Os profissionais de marketing de ciclo de vida usam os testes de IA do OfferFit para tomar a melhor decisão 1:1 para cada cliente, testar todas as variáveis simultaneamente e detectar e se adaptar às mudanças do mercado.
 
-
+_Esta integração é mantida pela OfferFit._
 
 ## Sobre a integração
 
