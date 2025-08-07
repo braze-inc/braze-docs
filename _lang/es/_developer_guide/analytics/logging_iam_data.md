@@ -12,22 +12,22 @@ description: "Aprende a registrar datos de mensajes dentro de la aplicación (IA
 
 {% sdktabs %}
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/logging_iam_data.md %}
+ developer_guide/web/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/analytics/logging_iam_data.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/analytics/logging_iam_data.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/analytics/logging_iam_data.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/analytics/logging_iam_data.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 {% endsdktabs %}
