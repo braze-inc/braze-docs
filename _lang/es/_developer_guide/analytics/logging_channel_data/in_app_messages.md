@@ -12,7 +12,7 @@ noindex: true
 
 {% sdktabs %}
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/logging_iam_data.md %}
+ developer_guide/web/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
