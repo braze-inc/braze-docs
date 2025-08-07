@@ -70,7 +70,7 @@ The second scenario is if the `app_id` field is populated when using the `/users
 
 ### Target audience is too complex to launch
 
-This rare error means your target audience contains too many regex values, very long regex values, or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
+This rare error occurs if your target audience contains too many regex values, excessively long regex values, or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
 
 If you receive this error, simplify your target audience before launching again, including:
 
