@@ -25,7 +25,7 @@ Essas são as versões mínimas do SDK necessárias para começar a usar os cart
 
 ## Incorporação de um cartão de banner
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md %}
 
 ### Etapa 2: Atualize os canais em seu app {#requestBannersRefresh}
 
