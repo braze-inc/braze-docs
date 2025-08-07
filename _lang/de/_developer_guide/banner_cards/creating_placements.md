@@ -30,7 +30,7 @@ Das sind die Mindestversionen des SDK, um Banner Cards zu verwenden:
 
 Gehen Sie zu **Einstellungen** > **Bannerkarten-Platzierungen** und wählen Sie dann **Platzierung erstellen**.
 
-![Abschnitt "Banner-Card-Platzierungen" zum Erstellen von Platzierungs-IDs.]({% image_buster /assets/img/banner_cards/create_placement.png %})
+![Abschnitt "Banner-Card-Platzierungen" zum Erstellen von Platzierungs-IDs.]({% image_buster /assets/img/banners/create_placement.png %})
 
 ### Schritt 2: Details ausfüllen
 
@@ -42,7 +42,7 @@ Arbeiten Sie mit Ihrem Marketing Team zusammen, um diese ID zu erstellen. Dies i
 Vermeiden Sie es, Ihre Platzierungs-ID nach dem Start zu bearbeiten, da dies die Integration mit Ihrer App oder Website unterbrechen kann.
 {% endalert %}
 
-![Platzierungsdetails, die eine Banner-Card bezeichnen, in der linken Seitenleiste für einen Frühjahrsabverkauf]({% image_buster /assets/img/banner_cards/placement_details_example.png %})
+![Platzierungsdetails, die eine Banner-Card bezeichnen, in der linken Seitenleiste für einen Frühjahrsabverkauf]({% image_buster /assets/img/banners/placement_details_example.png %})
 
 Wie Sie eine Kampagne einführen können, erfahren Sie unter [Erstellen einer]({{site.baseurl}}/create_banner_card/) Bannerkarte.
 
