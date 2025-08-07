@@ -12,7 +12,7 @@ layout: scrolly
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/banners/tutorial_displaying_banners.md %}
+ developer_guide/android/banners/tutorial_displaying_banners.md %}
 {% endsdktab %}
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/banners/tutorial_displaying_banners.md %}
