@@ -19,18 +19,18 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
