@@ -1,7 +1,7 @@
 ---
 nav_title: Configuração de IDs de usuário
 article_title: Configuração de IDs de usuário por meio do Braze SDK
-page_order: 1.2
+page_order: 1.1
 description: "Saiba como definir IDs de usuário por meio do SDK do Braze."
 
 ---
@@ -102,7 +102,7 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### Como eles funcionam
 
-{% multi_lang_include anonymous_users/about_user_aliases.md %}
+{% multi_lang_include anonymous_users/sobre_aliases_de_usuário.md %}
 
 ### Definição de um alias de usuário
 
