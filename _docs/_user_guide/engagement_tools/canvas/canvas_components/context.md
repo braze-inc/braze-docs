@@ -47,7 +47,7 @@ Each time a user enters the Canvas&#8212;even if they have entered it before&#82
 
 ## Timezone consistency standardization
 
-With the addition of Canvas Context, all timestamps with a datetimes type from trigger event properties in action-based Canvases will always be normalized to UTC. Previously, timestamps for event properties were normalized to UTC with some exceptions. Now, this will provide a more consistent experience for editing Canvas steps and messages.
+With the addition of Canvas Context, all timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). Previously, timestamps for event properties were normalized to UTC with [some exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know). Now, this will provide a more consistent experience for editing Canvas steps and messages.
 
 Consider this example of how this change might affect a timestamp in Canvas. Let's say we have an action-based Canvas that uses an event property in the first step of the Canvas with the following Message step: 
 
