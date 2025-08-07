@@ -16,18 +16,18 @@ noindex: true
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
