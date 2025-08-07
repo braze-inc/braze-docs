@@ -8,11 +8,11 @@ channel:
 
 # Beispiele für fortgeschrittene Push-Benachrichtigungen
 
-> Der folgende Leitfaden enthält einige Beispiele für vorgebrachte Push-Benachrichtigungen für das Braze SDK.
+> Im folgenden Leitfaden finden Sie einige Beispiele für fortgeschrittene Push-Benachrichtigungen für das Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/push_notifications/examples.md%}
+{% multi_lang_include Entwickler_guide/android/push_notifications/examples.md%}
 {% endsdktab %}
 
 {% sdktab swift %}
