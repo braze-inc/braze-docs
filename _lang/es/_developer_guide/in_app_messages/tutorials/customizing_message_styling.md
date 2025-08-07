@@ -12,7 +12,7 @@ layout: scrolly
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include desarrollador_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Android
 
@@ -152,7 +152,7 @@ Implementa [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-androi
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include desarrollador_guide/prerequisites/swift.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Swift
 
@@ -267,7 +267,7 @@ Utiliza [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab web %}
-{% multi_lang_include desarrollador_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Web
 
