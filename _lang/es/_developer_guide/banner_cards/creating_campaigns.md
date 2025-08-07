@@ -8,7 +8,7 @@ page_type: reference
 
 # Creación de campañas de tarjetas Banner
 
-> Aprende a crear tarjetas de presentación cuando crees una campaña en Braze. Para más información general, consulta [Acerca de las tarjetas Banner]({{site.baseurl}}/developer_guide/banner_cards/).
+> Aprende a crear tarjetas de presentación cuando crees una campaña en Braze. Para más información general, consulta [Acerca de las tarjetas Banner]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
 Las tarjetas de estandarte están actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
@@ -22,7 +22,7 @@ Estas son las versiones mínimas del SDK para empezar a utilizar las tarjetas Ba
 
 ## Crear una campaña de Tarjeta Banner
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md %}
 
 ### Paso 2: Crear una campaña
 
@@ -41,7 +41,7 @@ Para componer tu tarjeta de presentación, selecciona **Editar mensaje**. Aquí 
 
 Puedes arrastrar y soltar bloques y filas en el área del lienzo para empezar a construir tu mensaje. Para personalizar las propiedades del fondo de tu mensaje, la configuración de los bordes y mucho más, selecciona **Estilos**. Si sólo quieres personalizar el estilo de un bloque o fila concretos, selecciónalo para realizar los cambios.
 
-![Panel de estilo del compositor de la tarjeta Banner.]({% image_buster /assets/img/banner_cards/banner_card_styles.png %})
+![Panel de estilo del compositor de la tarjeta Banner.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
 #### Paso 2.2: Definir el comportamiento al hacer clic
 
