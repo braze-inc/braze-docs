@@ -30,12 +30,12 @@ Não recomendamos o envio de valores JSON aninhados como pares de valores-chave.
 Os pares de valores-chave são armazenados em objetos <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Chamada <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> para acessar esses valores.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Os pares de valores-chave são armazenados em objetos <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Chamada <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> para acessar esses valores.
 
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Os pares de valores-chave são armazenados em objetos <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Ligue para `card.extras` para acessar esses valores.
 
@@ -107,7 +107,7 @@ Em seguida, você pode usar essas informações para exibir um emblema que indic
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 O exemplo a seguir usa `braze.contentCards` para solicitar e exibir o número de cartões de conteúdo não lidos. Depois que o app é fechado e a sessão do usuário termina, esse código solicita uma contagem de cartões, filtrando o número de cartões com base na propriedade `viewed`.
 
@@ -147,7 +147,7 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Você pode solicitar o número de cartões não lidos a qualquer momento, ligando para o telefone:
 
