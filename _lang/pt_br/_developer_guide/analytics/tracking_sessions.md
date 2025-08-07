@@ -14,31 +14,7 @@ description: "Saiba como rastrear sessões por meio do SDK do Braze."
 Para SDKs de wrapper não listados, use o método nativo relevante do Android ou Swift.
 {% endalert %}
 
-## Sobre o ciclo de vida da sessão
-
-Uma sessão refere-se ao período de tempo em que o SDK do Braze rastreia a atividade do usuário em seu app depois que ele é iniciado. Você também pode forçar uma nova sessão [chamando o método `changeUser()` ]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
-
-{% tabs %}
-{% tab Android %}
-{% alert note %}
-Se você tiver configurado o [retorno de chamada do ciclo de vida da atividade]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) para Android, o Braze chamará automaticamente `openSession()` e `closeSession()` para cada atividade em seu app.
-{% endalert %}
-
-Por padrão, uma sessão é iniciada quando `openSession()` é chamado pela primeira vez. Se o seu app for colocado em segundo plano, a sessão permanecerá ativa por `10` segundos (a menos que você [altere o tempo limite padrão da sessão](#changing-the-default-session-timeout)) ou o usuário fechará o aplicativo. Lembre-se de que, se o usuário fechar o aplicativo enquanto ele estiver em segundo plano, os dados da sessão poderão não ser definidos no Braze até que ele reabra o aplicativo. 
-
-A chamada para `closeSession()` não encerrará imediatamente a sessão. Em vez disso, ele encerrará a sessão após 10 segundos se o `openSession()` não for chamado novamente pelo usuário para iniciar outra atividade.
-{% endtab %}
-
-{% tab swift %}
-Por padrão, uma sessão é iniciada quando você chama `Braze.init(configuration:)`. Isso ocorre quando a notificação `UIApplicationWillEnterForegroundNotification` é disparada, o que significa que o app entrou em primeiro plano.
-
-Se o seu app ficar em segundo plano, o `UIApplicationDidEnterBackgroundNotification` será disparado. A sessão permanecerá ativa por `10` segundos (a menos que você [altere o tempo limite padrão da sessão](#changing-the-default-session-timeout)) ou o usuário fechará o app.
-{% endtab %}
-
-{% tab web %}
-Por padrão, uma sessão é iniciada quando você chama `braze.openSession()` pela primeira vez. A sessão permanecerá ativa por até `30` minutos de inatividade (a menos que você [altere o tempo limite padrão da sessão](#change-session-timeout)) ou que o usuário feche o app.
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
 
 ## Inscrever-se para receber atualizações de sessões
 
@@ -139,7 +115,7 @@ No momento, a assinatura de atualizações de sessão não é compatível com o 
 
 ### Etapa 2: Rastreamento de sessões de teste (opcional)
 
-Para testar o rastreamento de sessão, inicie uma sessão em seu dispositivo, abra o dashboard do Braze e pesquise o usuário relevante. No perfil do usuário, selecione **Sessions Overview (Visão geral das sessões**). Se as métricas forem atualizadas conforme o esperado, o rastreamento da sessão está funcionando corretamente.
+Para testar o rastreamento de sessão, inicie uma sessão em seu dispositivo, abra o dashboard do Braze e pesquise o usuário relevante. No perfil do usuário, selecione **Sessions Overview (Visão geral das sessões**). Se as métricas forem atualizadas conforme o esperado, o rastreamento de sessão está funcionando corretamente.
 
 ![A seção de visão geral das sessões de um perfil de usuário mostrando o número de sessões, a data da última utilização e a data da primeira utilização.]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:50%;"}
 
@@ -194,7 +170,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 
 {% tab web %}
-Por padrão, o tempo limite da sessão é definido como `30` segundos. Para alterar isso, passe a opção `sessionTimeoutInSeconds` para sua função [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) função. Ele pode ser definido como qualquer número inteiro maior ou igual a `1`. 
+Por padrão, o tempo limite da sessão é definido como `30` minutos. Para alterar isso, passe a opção `sessionTimeoutInSeconds` para sua função [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) função. Ele pode ser definido como qualquer número inteiro maior ou igual a `1`. 
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30
