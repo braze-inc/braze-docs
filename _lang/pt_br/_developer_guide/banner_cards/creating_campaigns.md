@@ -8,7 +8,7 @@ page_type: reference
 
 # Criação de campanhas de cartões de banner
 
-> Saiba como criar cartões de banner ao criar uma campanha no Braze. Para saber mais sobre informações gerais, consulte [Sobre cartões de banner]({{site.baseurl}}/developer_guide/banner_cards/).
+> Saiba como criar cartões de banner ao criar uma campanha no Braze. Para saber mais sobre informações gerais, consulte [Sobre cartões de banner]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
 Os cartões de banner estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
@@ -22,7 +22,7 @@ Essas são as versões mínimas do SDK para começar a usar os cartões de banne
 
 ## Criação de uma campanha de cartão de banner
 
-{% multi_lang_include banner_cards/creating_placements.md %}
+{% multi_lang_include banners/creating_placements.md %}
 
 ### Etapa 2: Criar uma campanha
 
@@ -41,7 +41,7 @@ Para criar seu Banner Card, selecione **Editar mensagem**. Aqui, você pode esti
 
 Você pode arrastar e soltar blocos e linhas na área da tela para começar a criar sua mensagem. Para personalizar as propriedades do plano de fundo da mensagem, as configurações de borda e muito mais, selecione **Styles (Estilos**). Se você quiser personalizar apenas o estilo de um bloco ou linha específica, selecione-o para fazer alterações.
 
-![Painel de estilo do criador do cartão de banner.]({% image_buster /assets/img/banner_cards/banner_card_styles.png %})
+![Painel de estilo do criador do cartão de banner.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
 #### Etapa 2.2: Definir o comportamento ao clicar
 
