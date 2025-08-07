@@ -22,7 +22,7 @@ Estas son las versiones mínimas del SDK para empezar a utilizar las tarjetas Ba
 
 ## Crear una campaña de Tarjeta Banner
 
-{% multi_lang_include banner_cards/crear_colocaciones.md %}
+{% multi_lang_include banner_cards/creating_placements.md %}
 
 ### Paso 2: Crear una campaña
 
