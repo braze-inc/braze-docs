@@ -33,6 +33,6 @@ O novo recurso [de espelhamento do iPhone](https://www.apple.com/newsroom/2024/0
 
 Como usuário do Braze, o novo recurso mais importante que você deve conhecer são os [resumos de notificação](https://support.apple.com/en-us/108781), que usam o processamento no dispositivo para agrupar e gerar automaticamente resumos de texto para notificações por push relacionadas enviadas de um único app. Os usuários finais podem tocar para expandir um resumo e visualizar cada notificação por push como foi enviada originalmente.
 
-Devido à forma como esses resumos são gerados, você não terá controle sobre o comportamento específico deles ou sobre o texto gerado. No entanto, isso não afetará nenhum recurso de análise de dados ou relatórios, como o rastreamento por push-click.
+Devido à forma como esses resumos são gerados, você não terá controle sobre o comportamento específico deles ou sobre o texto gerado. No entanto, isso não afetará nenhum recurso de análise de dados ou de relatórios, como o rastreamento por push-click.
 
 ![Um exemplo de captura de tela de um resumo de prévia de notificação por push.]({% image_buster /assets/img/apple/apple_intelligence/notification_preview_summary.png %})
