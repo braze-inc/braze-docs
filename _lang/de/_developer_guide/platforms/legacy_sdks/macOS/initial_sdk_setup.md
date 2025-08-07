@@ -31,6 +31,3 @@ Beachten Sie, dass Push-Storys, Rich-Push-Benachrichtigungen und Geofences unter
 
 [1]:https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.32.0
 [2]:https://developer.apple.com/mac-catalyst/
-[3]:{{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/
-[4]:{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[5]:{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
