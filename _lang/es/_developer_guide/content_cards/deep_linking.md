@@ -18,11 +18,11 @@ platform:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/_global/deep_linking.md %}
+ developer_guide/android/_global/deep_linking.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/deep_linking.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab web %}
