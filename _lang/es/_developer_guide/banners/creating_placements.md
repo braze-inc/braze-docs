@@ -17,7 +17,7 @@ platform:
 
 ## Solicitudes de colocación {#requests}
 
-{% multi_lang_include banners/solicitudes_de_colocación.md %}
+{% multi_lang_include banners/placement_requests.md %}
 
 ## Crear una colocación
 
@@ -27,7 +27,7 @@ Estas son las versiones mínimas del SDK necesarias para Banners:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
-{% multi_lang_include banners/creating_placements.md section="desarrollador" %}
+{% multi_lang_include banners/creating_placements.md section="developer" %}
 
 ### Paso 2: Actualiza las ubicaciones en tu aplicación {#requestBannersRefresh}
 
