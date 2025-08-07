@@ -8,4 +8,3 @@ channel:
 ---
 
 {% multi_lang_include banners/about.md %}
-
