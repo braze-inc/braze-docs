@@ -12,7 +12,7 @@ layout: scrolly
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include desarrollador_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Visualización condicional de mensajes dentro de la aplicación para Android
 
@@ -107,7 +107,7 @@ Devuelve un `InAppMessageOperation` con `DISPLAY_NOW` para mostrar el mensaje, o
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include desarrollador_guide/prerequisites/swift.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Visualización condicional de mensajes dentro de la aplicación para Swift
 
@@ -198,7 +198,7 @@ Anula [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/b
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab web %}
-{% multi_lang_include desarrollador_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
 
 ## Visualización condicional de mensajes dentro de la aplicación para Web
 
