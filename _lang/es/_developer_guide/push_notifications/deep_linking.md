@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/deep_linking.md%} developer_
+{% multi_lang_include developer_
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/deep_linking.md%} developer_
+{% multi_lang_include developer_
 {% endsdktab %}
 {% endsdktabs %}
