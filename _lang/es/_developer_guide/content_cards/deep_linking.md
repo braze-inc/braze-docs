@@ -18,14 +18,14 @@ platform:
 
 {% sdktabs %}
 {% sdktab android %}
- developer_guide/android/_global/deep_linking.md %}
+{% multi_lang_include developer_guide/android/_global/deep_linking.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/swift/deep_linking.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-En este momento, los vínculos profundos de la tarjeta de contenido no son compatibles con el SDK de Web Braze.
+At this time, Content Card deep links are not supported for the Web Braze SDK.
 {% endsdktab %}
 {% endsdktabs %}
