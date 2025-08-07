@@ -16,7 +16,7 @@ layout: scrolly
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+guide/_shared/tutorial_feedback.md developer_ %}
 
 {% scrolly %}
 
@@ -156,7 +156,7 @@ Implementa [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-androi
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+guide/_shared/tutorial_feedback.md developer_ %}
 
 {% scrolly %}
 
@@ -271,7 +271,7 @@ Utiliza [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift
 
 ## Personalización del estilo de los mensajes mediante pares clave-valor para Web
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+guide/_shared/tutorial_feedback.md developer_ %}
 
 {% scrolly %}
 
