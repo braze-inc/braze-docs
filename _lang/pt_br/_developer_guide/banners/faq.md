@@ -10,4 +10,4 @@ tool:
 noindex: true
 ---
 
-{% multi_lang_include banners/faq.md seção="developer" %}
+{% multi_lang_include banners/faq.md section="developer" %}
