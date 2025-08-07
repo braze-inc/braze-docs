@@ -127,7 +127,7 @@ You set:
 
 When the user opens your app, Braze sees their session count is now 1—and they no longer qualify for the audience. The entry event happens after they’re eligible, so the message won’t send.
 
-To make this work, the user needs to qualify for the audience before the session begins (flip the target audience and entry trigger)
+To make this work, the user needs to qualify for the audience before the session begins (flip the target audience and entry trigger).
 
 ### Example 2
 
