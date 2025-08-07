@@ -11,7 +11,7 @@ description: "Erfahren Sie mehr über die Versionsverwaltung für das Braze SDK.
 
 ## Empfehlungen zur Versionierung
 
-Alle Braze SDKs halten sich an die [Semantic Versioning Specification (SemVer](https://semver.org/)). Daher empfehlen wir bei einer Versionsnummer `MAJOR.MINOR.PATCH` Folgendes:
+Alle Braze SDKs halten sich an die [Semantic Versioning Specification (SemVer](https://semver.org/)). Daher empfehlen wir bei einer Versionsnummer `MAJOR.MINOR.PATCH` folgendes:
 
 |Version|Über diese Version|Empfehlung|
 |-------|------------------|--------------|
@@ -26,6 +26,6 @@ Manchmal erfordern neue Android oder Apple OS Updates Änderungen am Braze SDK. 
 
 ## Über bekannte Probleme
 
-Um sicherzustellen, dass unsere Änderungen nicht Ihre Build-Pipelines stören, **werden wir niemals eine Version ändern oder entfernen, nachdem sie in einem Distributionssystem veröffentlicht wurde - auch**dann nicht, wenn diese bestimmte Version bekannte Probleme aufweist.
+Um sicherzustellen, dass unsere Änderungen Ihre Build-Pipelines nicht zerstören, **werden wir niemals eine Version ändern oder entfernen, nachdem sie in einem Distributionssystem veröffentlicht wurde - selbst**wenn diese bestimmte Version bekannte Probleme aufweist.
 
 In diesen Fällen dokumentieren wir das Problem im [Changelog des Braze SDK]({{site.baseurl}}/developer_guide/changelogs/) und veröffentlichen dann so schnell wie möglich einen neuen Patch für die betroffenen Haupt- oder Nebenversionen.
