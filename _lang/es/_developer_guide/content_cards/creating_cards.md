@@ -14,19 +14,19 @@ platform:
 
 # Crear tarjetas de contenido
 
-> Este artículo analiza el enfoque básico que utilizarás al implementar tarjetas de contenido personalizadas, así como tres casos de uso comunes: imágenes de banners, un buzón de entrada de mensajes y un carrusel de imágenes. Asume que ya has leído los demás artículos de la guía de personalización de la tarjeta de contenido para comprender qué se puede hacer de forma predeterminada y qué requiere código personalizado. Es especialmente útil saber cómo [registrar los análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de tus tarjetas de contenido personalizadas. 
+> Este artículo analiza el enfoque básico que utilizarás al implementar tarjetas de contenido personalizadas, así como tres casos de uso comunes. Asume que ya has leído los demás artículos de la guía de personalización de la tarjeta de contenido para comprender qué se puede hacer de forma predeterminada y qué requiere código personalizado. Es especialmente útil saber cómo [registrar los análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de tus tarjetas de contenido personalizadas. 
 
 ## Crear una tarjeta
 
 ### Paso 1: Crea una interfaz de usuario personalizada 
 
 {% tabs local %}
-{% tab Android %}
+{% tab android %}
 
-Primero, crea tu propio fragmento personalizado. El [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
+Primero, crea tu propio fragmento personalizado. El [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Primero, crea tu propio componente de controlador de vista personalizado. El [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
 
@@ -58,7 +58,7 @@ Para probar tu tarjeta de contenido:
 
 ## Colocación de tarjetas de contenido
 
-Las tarjetas de contenido pueden utilizarse de muchas formas distintas. Tres implementaciones comunes son utilizarlos como centro de mensajes, banner publicitario o carrusel de imágenes. Para cada una de estas colocaciones, asignarás [pares clave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (la propiedad `extras` del modelo de datos) a tus tarjetas de contenido y, en función de los valores, ajustarás dinámicamente el comportamiento, el aspecto o la funcionalidad de la tarjeta durante el tiempo de ejecución. 
+Las tarjetas de contenido pueden utilizarse de muchas formas distintas. Tres implementaciones comunes son utilizarlos como centro de mensajes, anuncio de imagen dinámico o carrusel de imágenes. Para cada una de estas colocaciones, asignarás [pares clave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (la propiedad `extras` del modelo de datos) a tus tarjetas de contenido y, en función de los valores, ajustarás dinámicamente el comportamiento, el aspecto o la funcionalidad de la tarjeta durante el tiempo de ejecución. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -237,8 +237,8 @@ Para implementar un carrusel de tarjetas de contenido:
 Si estás implementando un carrusel como fuente secundaria de tarjetas de contenido, asegúrate de [ordenar las tarjetas en la fuente correcta utilizando pares clave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 {% endalert %}
 
-### Banner
+### Sólo imagen
 
-Las tarjetas de contenido no tienen por qué parecer "tarjetas". Por ejemplo, las tarjetas de contenido pueden aparecer como un banner dinámico que se muestra de forma persistente en tu página de inicio o en la parte superior de las páginas designadas.
+Las tarjetas de contenido no tienen por qué parecer "tarjetas". Por ejemplo, las tarjetas de contenido pueden aparecer como una imagen dinámica que se muestra de forma persistente en tu página de inicio o en la parte superior de las páginas designadas.
 
 Para conseguirlo, tus especialistas en marketing crearán una campaña o paso en Canvas con una tarjeta de contenido de tipo **Sólo imagen**. A continuación, establece los pares clave-valor adecuados para utilizar [las tarjetas de contenido como contenido complementario]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).
