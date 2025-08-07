@@ -15,7 +15,7 @@ description: "Este artículo explica cómo utilizar el SDK Web de Braze para la 
 Para una referencia técnica completa, consulta nuestra [Documentación de JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) o nuestras [aplicaciones de ejemplo](https://github.com/Appboy/smart-tv-sample-apps) para ver el SDK Web funcionando en un televisor.
 {% endalert %}
 
- %} developer_guide/prerequisites/web.md
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## Configuración del SDK Braze Web
 
