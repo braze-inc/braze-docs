@@ -7,26 +7,34 @@ description: "This page provides an overview of how to sync account data."
 
 ---
 
-# Sync and delete accounts data
+# Syncing account data using CDI
 
-> This page discusses how to sync account data.
+> Learn how to sync your Braze account data using CDI.
 
 {% alert important %}
 [Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, and only beta particpants can configure an Accounts sync through CDI. Contact your Braze account manager if you’re interested in participating in this beta.
 {% endalert %}
 
-## Syncing accounts data
+## How syncing works
+
+- Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
+- The data fetched from the integration will be used to create or update accounts based on the `id` provided.
+- If `DELETED` is set to `true`, the corresponding account item will be deleted.
+- The sync won't consume data points, but all data synced will count toward your total accounts usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
+- Any fields that exist in your source data but not in the accounts schema will be dropped before they're synced to Braze; to add new fields, update the accounts schema and then sync the new data
+
+## Syncing your account data
  
-### Step 1: Configure Accounts Schema
+### Step 1: Configure your accounts schema
 
 Any changes to the accounts schema in your workspace (for example, adding new fields or changing field type) must be made through the accounts dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
-### Step 2: Integrate your data source with CDI and Accounts
-
-The setup for an Accounts sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+### Step 2: Integrate your data source
 
 {% tabs local %}
 {% tab Data Warehouse Integrations %}
+To integrate your data source with your data warehouse:
+
 {% subtabs %}
 {% subtab Snowflake %}
 
@@ -101,40 +109,45 @@ The setup for an Accounts sync closely follows the process for [user-data CDI in
 {% subtab BigQuery %}
 
 1. Optionally, set up a new project or dataset to hold your source table. 
+    ```json
+    CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+    ```
 
-```json
-CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
-```
+    Create one or more tables to use for your CDI integration with the following fields:
 
-Create one or more tables to use for your CDI integration with the following fields:
+    ```json
+    CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
+    (
+      updated_at TIMESTAMP DEFAULT current_timestamp,
+      id STRING,
+      name STRING,
+      payload JSON,
+      deleted BOOLEAN
+    );
+    ```
 
-```json
-CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
-(
-  updated_at TIMESTAMP DEFAULT current_timestamp,
-  id STRING,
-  name STRING,
-  payload JSON,
-  deleted BOOLEAN
-);
-```
-
-| FIELD NAME | TYPE | MODE |
-| --- | --- | --- |
-| UPDATED_AT | TIMESTAMP | REQUIRED |
-| PAYLOAD | JSON | REQUIRED |
-| ID | STRING | REQUIRED |
-| NAME | STRING | REQUIRED |
-| DELETED | BOOLEAN | OPTIONAL |
+    | FIELD NAME | TYPE | MODE |
+    | --- | --- | --- |
+    | UPDATED_AT | TIMESTAMP | REQUIRED |
+    | PAYLOAD | JSON | REQUIRED |
+    | ID | STRING | REQUIRED |
+    | NAME | STRING | REQUIRED |
+    | DELETED | BOOLEAN | OPTIONAL |
+    {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {:start="2"}
 
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;but make sure to extend access to the accounts source table. 
-The service account should have the below permissions:
-- BigQuery Connection User: This will allow Braze to make connections.
-- BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
-- BigQuery Data Viewer: This will provide Braze access to view datasets and their contents.
-- BigQuery Job User: This will provide Braze access to run jobs<br><br>After creating the service account and granting permissions, generate a JSON key. Refer to [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for more information. You'll update this to the Braze dashboard later.
+2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;but make sure to extend access to the accounts source table.
+
+    | Permission | Purpose |
+    |------------|---------|
+    | BigQuery Connection User | Allows Braze to make connections. |
+    | BigQuery User | Provides Braze access to run queries, read dataset metadata, and list tables. |
+    | BigQuery Data Viewer | Provides Braze access to view datasets and their contents. |
+    | BigQuery Job User | Provides Braze access to run jobs. |
+    {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+    After creating the service account and granting permissions, generate a JSON key. Refer to [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for more information. You'll update this to the Braze dashboard later.
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -143,40 +156,38 @@ The service account should have the below permissions:
 {% subtab Databricks %}
 
 1. Set up a source table in Databricks. You can use the names in the following example or choose your catalog, schema, and table names. You can also use a view or a materialized view instead of a table.
+    ```json
+    CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+    ```
 
-```json
-CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
-```
+    ```json
+    CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
+    (
+      updated_at TIMESTAMP DEFAULT current_timestamp(),
+      id STRING,
+      name STRING,
+      deleted BOOLEAN,
+      payload STRING, STRUCT, or MAP
+    );
+    ```
 
-```json
-CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
-(
-  updated_at TIMESTAMP DEFAULT current_timestamp(),
-  id STRING,
-  name STRING,
-  deleted BOOLEAN,
-  payload STRING, STRUCT, or MAP
-);
-```
-
-| FIELD NAME | TYPE | MODE |
-| --- | --- | --- |
-| UPDATED_AT | TIMESTAMP | REQUIRED |
-| PAYLOAD | STRING, STRUCT, or MAP | REQUIRED |
-| ID | STRING | REQUIRED |
-| NAME | STRING | REQUIRED |
-| DELETED | BOOLEAN | NULLABLE |
+    | FIELD NAME | TYPE | MODE |
+    | --- | --- | --- |
+    | UPDATED_AT | TIMESTAMP | REQUIRED |
+    | PAYLOAD | STRING, STRUCT, or MAP | REQUIRED |
+    | ID | STRING | REQUIRED |
+    | NAME | STRING | REQUIRED |
+    | DELETED | BOOLEAN | NULLABLE |
+    {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {:start="2"}
-
-2. Create a personal access token in your Databricks workspace.
-
-- a. Select your Databricks username, then select **User Settings** from the dropdown menu.
-- b. On the **Access tokens** tab, select **Generate new token**.
-- c. Enter a comment that helps you to identify this token, such as "Braze CDI". 
-- d. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.
-- e. Copy the displayed token, and then select **Done**. 
-- f. Keep the token in a safe place until you need to enter it during the credential creation step in the Braze dashboard.
+2. Create a personal access token in your Databricks workspace:
+    1. Select your Databricks username, then select **User Settings** from the dropdown menu.  
+    2. On the **Access tokens** tab, select **Generate new token**.  
+    3. Enter a comment that helps you to identify this token, such as "Braze CDI".  
+    4. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.  
+    5. Copy the displayed token, and then select **Done**.  
+    6. Keep the token in a safe place until you need to enter it during the credential creation step in the Braze dashboard.
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your Databricks instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page.
@@ -184,22 +195,20 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
 {% endsubtab %}
 {% subtab Microsoft Fabric %}
 
-Create one or more tables to use for your CDI integration with the following fields:
-
-```json
-CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
-(
-  UPDATED_AT DATETIME2(6) NOT NULL,
-  PAYLOAD VARCHAR NOT NULL,
-  ID VARCHAR NOT NULL,
-  NAME VARCHAR NOT NULL,
-  DELETED BIT
-)
-GO
-```
+1. Create one or more tables to use for your CDI integration with the following fields:
+    ```json
+    CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+    (
+      UPDATED_AT DATETIME2(6) NOT NULL,
+      PAYLOAD VARCHAR NOT NULL,
+      ID VARCHAR NOT NULL,
+      NAME VARCHAR NOT NULL,
+      DELETED BIT
+    )
+    GO
+    ```
 
 {:start="2"}
-
 2. Set up a service principal and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the accounts source table. To learn more about how to create a new service principal and credentials, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page. 
 
 {:start="3"}
@@ -209,9 +218,9 @@ GO
 {% endtab %}
 
 {% tab File Storage Integration %}
-For more details on setting up an S3 sync, see the [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations) page. 
+There are no additional filename requirements other than what's enforced by AWS. Filenames must be unique, so we recommend appending timestamps to your filenames.
 
-Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
+For more information about Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations). 
 
 **Files should include the below fields:**
 
@@ -221,7 +230,7 @@ Braze doesn’t enforce any additional filename requirements beyond what's enfor
 | `NAME` | YES | Name of the Account |  
 |`PAYLOAD` | YES | This is a JSON string of the fields you want to sync to the user in Braze. |  
 |`DELETED` | NO | Boolean indicating to delete the Account from Braze. |  
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert note %}
 Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported. 
@@ -258,21 +267,11 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Usage Notes
-
-### Sync Operations
-
-- Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
-- The data fetched from the integration will be used to create or update accounts based on the `id` provided.
-- If DELETED is set to `true`, the corresponding account item will be deleted.
-- The sync won't consume data points, but all data synced will count toward your total accounts usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
-- Any fields that exist in your source data but not in the accounts schema will be dropped before they're synced to Braze; to add new fields, update the accounts schema and then sync the new data
-
-### Data Formatting
+## About data formats
 
 We recommend creating a view in your data warehouse from your account data to set up a source that will refresh each time a sync runs. With views, you won't need to rewrite the query each time.
 
-For example, if you have a table of accounts data called `account_details_1` with `account_id`, `account_name` and three additional attributes, you could sync the below view:
+For example, if you have a table of account data called `account_details_1` with `account_id`, `account_name` and three additional attributes, you could sync the below view:
 
 {% tabs %}
 {% tab Snowflake %}
