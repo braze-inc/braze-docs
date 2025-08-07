@@ -19,6 +19,6 @@ platform:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/network.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
