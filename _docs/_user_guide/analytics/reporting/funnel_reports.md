@@ -84,3 +84,7 @@ In your funnel report, you can directly compare the control group alongside the 
 
 **For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count toward multiple different variants if they received multiple variants during the time window for the funnel.
 
+{% alert important %}
+Orphaned users are not tracked in funnel reports. When an anonymous user enters a Canvas or campaign and later becomes identified through the `changeUser()` method, their Braze ID changes. Funnel reports only track follow-up events that match the user ID at the time of entry and do not account for events performed by the user after their ID changes. This means that conversion events performed by the user after becoming identified will not be included in the funnel report.
+{% endalert %}
+
