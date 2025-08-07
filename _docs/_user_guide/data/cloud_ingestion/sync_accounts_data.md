@@ -15,18 +15,20 @@ description: "This page provides an overview of how to sync account data."
 [Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, and only beta particpants can configure an Accounts sync through CDI. Contact your Braze account manager if you’re interested in participating in this beta.
 {% endalert %}
 
+## Syncing accounts data
  
-## Step 1: Configure Accounts Schema
+### Step 1: Configure Accounts Schema
 
 Any changes to the accounts schema in your workspace (for example, adding new fields or changing field type) must be made through the accounts dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
-## Step 2: Integrate your data sourcee with CDI and Accounts
+### Step 2: Integrate your data source with CDI and Accounts
+
 The setup for an Accounts sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
 
-### Data Warehouse Integrations
-
-{% tabs %}
-{% tab Snowflake %}
+{% tabs local %}
+{% tab Data Warehouse Integrations %}
+{% subtabs %}
+{% subtab Snowflake %}
 
 1. Set up a source table in Snowflake. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
   ```json
@@ -66,8 +68,8 @@ The setup for an Accounts sync closely follows the process for [user-data CDI in
 8. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you will need someone with `SECURITYADMIN` access or higher in Snowflake. 
 9. Select **Test Connection** so that everything works as expected. 
 10. Save the sync, and use the synced account data for all your personalization or segmentation use cases. 
-{% endtab %}
-{% tab Redshift %}
+{% endsubtab %}
+{% subtab Redshift %}
 
 1. Set up a source table in Redshift. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
     ```json
@@ -95,8 +97,8 @@ The setup for an Accounts sync closely follows the process for [user-data CDI in
     {% endraw %}
 3. If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard’s region. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
-{% endtab %}
-{% tab BigQuery %}
+{% endsubtab %}
+{% subtab BigQuery %}
 
 1. Optionally, set up a new project or dataset to hold your source table. 
 
@@ -137,8 +139,8 @@ The service account should have the below permissions:
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
-{% endtab %}
-{% tab Databricks %}
+{% endsubtab %}
+{% subtab Databricks %}
 
 1. Set up a source table in Databricks. You can use the names in the following example or choose your catalog, schema, and table names. You can also use a view or a materialized view instead of a table.
 
@@ -179,8 +181,8 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your Databricks instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page.
 
-{% endtab %}
-{% tab Microsoft Fabric %}
+{% endsubtab %}
+{% subtab Microsoft Fabric %}
 
 Create one or more tables to use for your CDI integration with the following fields:
 
@@ -202,12 +204,11 @@ GO
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your Microsoft Fabric instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
-{% endtabs %}
-
-### File Storage Integrations
+{% tab File Storage Integration %}
 For more details on setting up an S3 sync, see the [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations) page. 
 
 Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
@@ -226,45 +227,49 @@ Braze doesn’t enforce any additional filename requirements beyond what's enfor
 Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported. 
 {% endalert %}
 
-{% tabs %}
-{% tab JSON Accounts %}
+{% subtabs %}
+{% subtab JSON Accounts %}
 ```json  
 {"id":"s3-qa-0","name":"account0","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
 {"id":"s3-qa-1","name":"account1","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":true}
 {"id":"s3-qa-2","name":"account2","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":false}
-{"id":"s3-qa-3","name":"account3","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}```  
+{"id":"s3-qa-3","name":"account3","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
+```  
+
 {% alert important %}
 Every line in your source file must contain valid JSON, or the file will be skipped. 
 {% endalert %}
-{% endtab %}
-{% tab CSV Accounts with Delete  %}
+{% endsubtab %}
+{% subtab CSV Accounts with Delete  %}
 ```plaintext  
 ID,NAME,PAYLOAD,DELETED
 85,"ACCOUNT_1","{""region"": ""APAC"", ""employees"": 850}",TRUE 
 1,"ACCOUNT_2","{""region"": ""EMEA"", ""employees"": 10000}",FALSE
 ```
-{% endtab %}
-{% tab CSV Accounts without Delete  %}
+{% endsubtab %}
+{% subtab CSV Accounts without Delete  %}
 ```plaintext  
 ID,NAME,PAYLOAD
 85,"ACCOUNT_1","{""region"": ""APAC"", ""employees"": 850}"
 1,"ACCOUNT_2","{""region"": ""EMEA"", ""employees"": 10000}"
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}  
-
-
+{% endtabs %}
 
 ## Usage Notes
+
 ### Sync Operations
+
 - Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
 - The data fetched from the integration will be used to create or update accounts based on the `id` provided.
 - If DELETED is set to `true`, the corresponding account item will be deleted.
 - The sync won't consume data points, but all data synced will count toward your total accounts usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
 - Any fields that exist in your source data but not in the accounts schema will be dropped before they're synced to Braze; to add new fields, update the accounts schema and then sync the new data
 
-
 ### Data Formatting
+
 We recommend creating a view in your data warehouse from your account data to set up a source that will refresh each time a sync runs. With views, you won't need to rewrite the query each time.
 
 For example, if you have a table of accounts data called `account_details_1` with `account_id`, `account_name` and three additional attributes, you could sync the below view:
@@ -351,5 +356,3 @@ FROM [braze].[account_details_1] ;
 ```
 {% endtab %}
 {% endtabs %}
-
-
