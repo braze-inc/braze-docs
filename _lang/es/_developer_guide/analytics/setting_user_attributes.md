@@ -1,7 +1,7 @@
 ---
 nav_title: Configuración de atributos de usuario
 article_title: Configuración de los atributos del usuario a través del SDK de Braze
-page_order: 1.1
+page_order: 1.2
 description: "Aprende a configurar atributos de usuario a través del SDK de Braze."
 ---
 
