@@ -7,7 +7,6 @@ guide_top_header: "Data Activation"
 guide_top_text: "Lorem ipsum."
 page_type: landing
 description: "Lorem ipsum."
-tool: Reports
 
 guide_featured_title: "Section articles"
 guide_featured_list:
