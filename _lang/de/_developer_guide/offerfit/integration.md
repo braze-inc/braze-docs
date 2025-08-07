@@ -7,4 +7,4 @@ description: "Erfahren Sie, wie Sie OfferFit in Braze integrieren können, damit
 noindex: true
 ---
 
-{% multi_lang_include Angebotfit/integration.md %}
+{% multi_lang_include offerfit/integration.md %}
