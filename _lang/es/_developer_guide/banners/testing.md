@@ -20,4 +20,4 @@ Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_g
 
 ## Probar un banner
 
-{% multi_lang_include banners/testing.md page="probando" %}
+{% multi_lang_include banners/testing.md page="testing" %}
