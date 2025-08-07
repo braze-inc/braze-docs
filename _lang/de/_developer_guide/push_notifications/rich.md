@@ -12,14 +12,14 @@ channel:
 
 {% sdktabs %}
 {% sdktab swift %}
-{% multi_lang_include Entwickler_guide/swift/push_notifications/rich.md%}
+{% multi_lang_include developer_guide/swift/push_notifications/rich.md%}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/push_notifications/rich.md%} Entwickler_
+guide/cordova/push_notifications/rich.md%} developer_
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/push_notifications/rich.md%} Entwickler_
+guide/react_native/push_notifications/rich.md%} developer_
 {% endsdktab %}
 {% endsdktabs %}
