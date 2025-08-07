@@ -7,4 +7,4 @@ description: "¡Empieza con OfferFit de Braze para tomar decisiones 1:1 con IA q
 noindex: true
 ---
 
-{% multi_lang_include oferta/about.md %}
+{% multi_lang_include offerfit/about.md %}
