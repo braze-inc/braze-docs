@@ -12,7 +12,7 @@ layout: scrolly
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include desarrollador_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Aplazar y restaurar mensajes desencadenados para Android
 
@@ -168,7 +168,7 @@ Para mostrar el mensaje aplazado previamente, llama a `showDeferredMessage(true)
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include desarrollador_guide/prerequisites/swift.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que [habilitar los mensajes dentro de la aplicación para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Aplazamiento y restablecimiento de mensajes desencadenados para Swift
 
@@ -303,7 +303,7 @@ Para mostrar el mensaje aplazado previamente, llama a `showDeferredMessage(true)
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab web %}
-{% multi_lang_include desarrollador_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Sin embargo, no es necesaria ninguna configuración adicional.
 
 ## Aplazar y restaurar mensajes desencadenados para Web
 
