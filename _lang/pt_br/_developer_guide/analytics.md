@@ -22,7 +22,7 @@ platform:
 > Saiba mais sobre a análise de dados do SDK Braze, para que você possa entender melhor quais dados o Braze coleta, a diferença entre eventos personalizados e atributos personalizados, e as melhores práticas para gerenciar a análise de dados.
 
 {% alert tip %}
-Durante a sua implementação do Braze, certifique-se de discutir as metas de marketing com sua equipe, para que você possa decidir da melhor forma quais dados deseja rastrear e como deseja rastreá-los com o Braze. Como exemplo, veja nosso estudo de caso de [Aplicativo de Táxi/Viagem por Aplicativo](#example-case) no final deste guia.
+Durante a sua implementação do Braze, certifique-se de discutir as metas de marketing com sua equipe, para que você possa decidir da melhor forma quais dados deseja rastrear e como deseja rastreá-los com o Braze. Como exemplo, veja nosso estudo de caso de [Taxi/Viagem por aplicativo](#example-case) no final deste guia.
 {% endalert %}
 
 ## Dados coletados automaticamente
@@ -65,7 +65,7 @@ Todos os dados do perfil do usuário (eventos personalizados, atributo personali
 
 Com propriedades de evento personalizado, a Braze permite que você defina propriedades em eventos personalizados e compras. Essas propriedades podem então ser usadas para qualificar ainda mais as condições de disparo, aumentar a personalização no envio de mensagens e gerar análises de dados mais sofisticadas por meio da exportação de dados brutos. Os valores das propriedades podem ser string, número, booleano ou objetos de tempo. No entanto, os valores das propriedades não podem ser objetos de vetor.
 
-Por exemplo, se um aplicativo de eCommerce quisesse enviar uma mensagem a um usuário quando ele abandonar o carrinho, poderia ainda melhorar seu público-alvo e permitir uma maior personalização da campanha ao adicionar uma propriedade de evento personalizada do `cart_value` dos carrinhos dos usuários.
+Por exemplo, se um aplicativo de eCommerce quisesse enviar uma mensagem a um usuário quando ele abandona o carrinho, poderia ainda melhorar seu público-alvo e permitir uma maior personalização da campanha ao adicionar uma propriedade de evento personalizada do `cart_value` dos carrinhos dos usuários.
 
 ![Um exemplo de evento personalizado que enviará uma campanha a um usuário que abandonou seu carrinho e deixou o valor do carrinho em mais de 100 e menos de 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
