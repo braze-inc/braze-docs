@@ -111,14 +111,14 @@ Necesitarás desarrolladores que estén familiarizados con:
 
 ### Socios de integración de CDP
 
-Muchos clientes utilizan la incorporación a Braze como una oportunidad para integrarse también con una plataforma de datos de los clientes (CDP) como socio de integración. Braze proporciona seguimiento y análisis de datos, mientras que un CDP puede proporcionar enrutamiento y orquestación de datos adicionales. Braze ofrece una integración sin problemas con muchos CDP, como [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) y [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/). 
+Muchos clientes utilizan la incorporación a Braze como una oportunidad para integrarse también con una plataforma de datos de los clientes (CDP) como socio de integración. Braze proporciona seguimiento y análisis de datos, mientras que un CDP puede proporcionar enrutamiento y orquestación de datos adicionales. Braze ofrece una integración sin problemas con muchos CDP, como [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle/) y [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/). 
 
 Si realizas una integración en paralelo con un CDP, mapearás las llamadas del SDK de tu CDP al SDK de Braze. Esencialmente, harás lo siguiente:
 * Mapea las llamadas identificadoras a `changeUser` [(Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/), [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)) y establece atributos.
 * Llamadas de datos mapeados a `requestImmediateDataFlush` [(Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-immediate-data-flush.html?query=abstract%20fun%20requestImmediateDataFlush()), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/requestimmediatedataflush()), [web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestimmediatedataflush)).
 * Registra eventos personalizados o compras.
 
-Puede haber ejemplos de integración entre el SDK de Braze y el CDP que elijas, dependiendo de la plataforma que hayas elegido. Consulta nuestra [lista de socios tecnológicos de CDP]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform) para obtener más información. 
+Puede haber ejemplos de integración entre el SDK de Braze y el CDP que elijas, dependiendo de la plataforma que hayas elegido. Consulta nuestra [lista de socios tecnológicos de CDP]({{site.baseurl}}/partners/data_and_analytics/) para obtener más información. 
 
 ### Integración de SDK Braze
 
