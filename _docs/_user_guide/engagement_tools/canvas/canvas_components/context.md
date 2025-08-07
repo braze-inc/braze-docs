@@ -57,7 +57,7 @@ Consider this example of how this change might affect a timestamp in Canvas. Let
 
 ![Context journey with a Message step as the first step.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
 
-The step will also have an event's payload like: 
+The step will also have an event payload like: 
 
 ```
 {
