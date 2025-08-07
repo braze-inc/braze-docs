@@ -26,7 +26,7 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/gifs.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
