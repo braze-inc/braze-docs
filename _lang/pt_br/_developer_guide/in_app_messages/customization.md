@@ -1,8 +1,8 @@
 ---
 nav_title: Personalizando Mensagens
-article_title: Personalizando mensagens no aplicativo para o SDK Braze
+article_title: Personalizando mensagens no aplicativo para o Braze SDK
 page_order: 0.1
-description: "Aprenda como configurar mensagens no aplicativo para o SDK Braze."
+description: "Aprenda como configurar mensagens no aplicativo para o Braze SDK."
 platform: 
   - Android
   - FireOS
@@ -12,7 +12,7 @@ platform:
 
 # Personalizando mensagens no aplicativo
 
-> Aprenda como personalizar mensagens no aplicativo para o SDK Braze.
+> Aprenda como personalizar mensagens no aplicativo para o Braze SDK.
 
 {% sdktabs %}
 {% sdktab android %}
