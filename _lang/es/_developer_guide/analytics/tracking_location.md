@@ -12,14 +12,14 @@ description: "Aprende a hacer un seguimiento de la ubicación mediante el SDK de
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/analytics/tracking_location.md %}
+ developer_guide/android/analytics/tracking_location.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/tracking_location.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/tracking_location.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 {% endsdktabs %}
