@@ -21,6 +21,9 @@ Bevor Sie Nutzerdaten im Experiment tracken können, muss Ihre App aufzeichnen, 
 
 Weitere Informationen zur Protokollierung von Feature-Flag-Impression finden Sie unter [Erstellen von Feature-Flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions).
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,36 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Ein Feature Flag Experiment erstellen
 
@@ -56,7 +87,7 @@ Um zusätzliche Standardeigenschaften zu bearbeiten, hinzuzufügen oder zu entfe
 
 ### Schritt 4: Zielgruppe auswählen
 
-Verwenden Sie eines Ihrer Segmente oder Filter, um Ihre [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) auszuwählen. Sie können zum Beispiel den Filter **Received Feature-Flag Variant** verwenden, um Nutzer:innen, die bereits einen A/B-Test erhalten haben, erneut zu retargeten.
+Verwenden Sie eines Ihrer Segmente oder Filter, um Ihre [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) auszuwählen. Sie können zum Beispiel den Filter **Received Feature-Flag Variant** verwenden, um Nutzer:innen, die bereits einen A/B-Test erhalten haben, erneut zu retargeten.
 
 ![Die Seite 'Target' in einem Feature-Flag Experiment mit 'Received Feature-Flag Variante' in der Suchleiste der Filtergruppe hervorgehoben.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
