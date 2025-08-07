@@ -12,10 +12,10 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include Entwickler_guide/android/_global/deep_linking.md%}
+{% multi_lang_include developer_guide/android/_global/deep_linking.md%}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/deep_linking.md%} Entwickler_
+guide/swift/deep_linking.md%} developer_
 {% endsdktab %}
 {% endsdktabs %}
