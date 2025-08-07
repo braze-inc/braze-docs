@@ -101,7 +101,7 @@ In the following example, visiting `www.braze.com/docs/brazeai/liquid` will poin
 nav_title: Liquid Code
 article_title: Generating Liquid code with BrazeAI
 description: "Learn about the AI Liquid Assistant and how you can use it to generate Liquid snippets for your messaging."
-alias: "brazeai/liquid"
+alias: "/brazeai/liquid"
 ---
 ```
 {% endtab %}
