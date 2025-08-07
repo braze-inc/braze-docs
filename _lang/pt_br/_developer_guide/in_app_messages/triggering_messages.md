@@ -400,7 +400,7 @@ braze.requestInAppMessageDisplay();
 
 ### Envio de mensagens em tempo real 
 
-Também é possível criar e exibir mensagens locais no app em tempo real, usando as mesmas opções de personalização disponíveis no dashboard. Para isso:
+Você também pode criar e exibir mensagens locais no app em tempo real, usando as mesmas opções de personalização disponíveis no dashboard. Para isso:
 
 {% tabs %}
 {% tab Android %}
