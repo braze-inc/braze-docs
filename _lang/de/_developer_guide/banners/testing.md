@@ -20,4 +20,4 @@ Um einen Test entweder an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/admin
 
 ## Testen eines Banners
 
-{% multi_lang_include banner/testing.md page="testing" %}
+{% multi_lang_include banners/testing.md page="testing" %}
