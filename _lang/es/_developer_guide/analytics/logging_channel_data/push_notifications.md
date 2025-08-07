@@ -12,10 +12,10 @@ noindex: true
 
 {% sdktabs %}
 {% sdktab android %}
- developer_guide/android/analytics/logging_push_data.md %}
+{% multi_lang_include developer_guide/android/analytics/logging_push_data.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
- developer_{% multi_lang_include %}
+guide/swift/analytics/logging_push_data.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
