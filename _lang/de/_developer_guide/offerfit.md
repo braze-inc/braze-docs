@@ -7,4 +7,4 @@ description: "Starten Sie mit OfferFit by Braze und treffen Sie 1:1 KI-Entscheid
 noindex: true
 ---
 
-{% multi_lang_include Angebotfit/about.md %}
+{% multi_lang_include offerfit/about.md %}
