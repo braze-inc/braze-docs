@@ -67,13 +67,13 @@ The step will also have an event payload like:
 
 Historically, the message would be: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
 
-With the Canvas Context early access, the message will now be: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` This is due to the timestamp being in UTC, which is 8 hours ahead of Pacific Time (the timezone specified in the original payload with `-08:00`).
+With the Canvas Context early access, the message will now be: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` This is due to the timestamp being in UTC, which is 8 hours ahead of Pacific Time (the time zone specified in the original payload with `-08:00`).
 
 {% alert important %}
-To account for this timestamp change, in all circumstances, we strongly recommend [using Liquid filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps are represented in the desired timezone.
+To account for this timestamp change, in all circumstances, we strongly recommend [using Liquid filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps are represented in the desired time zone.
 {% endalert %}
 
-### Using Liquid to denote a timestamp in your preferred timezone
+### Using Liquid to denote a timestamp in your preferred time zone
 
 Consider the following Liquid snippet:
 
@@ -85,7 +85,7 @@ Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} 
 
 This logic results in the following output: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
 
-The preferred timezone can also be sent in the event properties payload and used in Liquid logic: 
+The preferred time zone can also be sent in the event properties payload and used in Liquid logic: 
 
 ```
 {
@@ -228,9 +228,9 @@ This also applies across multiple Context steps. For example, imagine this seque
 
 Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
 
-### Does the Canvas Context timezone consistency standardization impact API-triggered Canvases?
+### Does the Canvas Context time zone consistency standardization impact API-triggered Canvases?
 
-No, this change only impacts action-triggered Canvases. All API trigger properties have the string type, not the time type, so the original timezone is always preserved. However, we still recommend using an explicit timezone filter in Liquid when the property is used.
+No, this change only impacts action-triggered Canvases. All API trigger properties have the string type, not the time type, so the original time zone is always preserved. However, we still recommend using an explicit time zone filter in Liquid when the property is used.
 
 ### How does this relate to the exceptions noted in Canvas entry properties and event properties?
 
