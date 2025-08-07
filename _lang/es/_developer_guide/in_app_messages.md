@@ -16,46 +16,46 @@ description: "Más información sobre los mensajes dentro de la aplicación y c�
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/in_app_messages.md %}
+ developer_guide/android/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab android ott %}
-guide/android_ott/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab tvos %}
-guide/tvos/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/in_app_messages.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 {% endsdktabs %}
