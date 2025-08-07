@@ -12,10 +12,10 @@ description: "Aprende a registrar datos de notificaciones push a través del SDK
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/analytics/logging_push_data.md %}
+ developer_guide/android/analytics/logging_push_data.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/logging_push_data.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 {% endsdktabs %}
