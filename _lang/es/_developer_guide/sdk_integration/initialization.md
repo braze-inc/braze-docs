@@ -20,14 +20,14 @@ description: "Aprende a inicializar el SDK de Braze utilizando métodos como la 
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/sdk_initialization.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/sdk_initialization.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/sdk_initialization.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
