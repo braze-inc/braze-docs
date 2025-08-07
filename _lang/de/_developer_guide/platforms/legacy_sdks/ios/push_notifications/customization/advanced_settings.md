@@ -40,7 +40,7 @@ Geben Sie die Zahl ein, auf die Sie die Anzahl Ihrer Badges aktualisieren möcht
 
 ## Töne
 
-Hier können Sie einen Pfad zu einer Tondatei in Ihrem App-Bundle eingeben, um einen Sound festzulegen, der beim Empfang der Push-Nachricht abgespielt wird. Wenn die angegebene Audiodatei nicht vorhanden ist oder das Schlüsselwort "default" eingegeben werden soll, verwendet Braze den Standard-Gerätealarmton. Weitere Informationen zur Anpassung von [Sounds]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/custom_sounds/) finden Sie in unserem Artikel über [angepasste Sounds]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/custom_sounds/).
+Hier können Sie einen Pfad zu einer Tondatei in Ihrem App-Bundle eingeben, um einen Sound festzulegen, der beim Empfang der Push-Nachricht abgespielt wird. Wenn die angegebene Audiodatei nicht vorhanden ist oder das Schlüsselwort "default" eingegeben werden soll, verwendet Braze den Standard-Gerätealarmton. Weitere Informationen zur Anpassung von Sounds finden Sie in unserem Artikel über [angepasste Sounds]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/custom_sounds/).
 
 ## Reduzierungs-ID
 
