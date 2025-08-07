@@ -114,7 +114,7 @@ android.permission.POST_NOTIFICATIONS
 
 ## 6단계: 전환 이벤트
 
-Braze는 전환에 대한 기본 설정을 제안하지만, 푸시 프라이머를 둘러싼 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 설정할 수도 있습니다.
+Braze는 전환에 대한 기본 설정을 제안하지만, 푸시 프라이머를 둘러싼 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 설정할 수도 있습니다.
 
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/

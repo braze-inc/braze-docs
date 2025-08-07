@@ -85,14 +85,18 @@ Before sending SMS messages containing URLs to users in certain countries (for e
 
 ### What happens if multiple users have the same phone number?
 
-When multiple user profiles that share one phone number (enabled for SMS) are eligible for a campaign or Canvas component at the same time, triggered by the event of an inbound SMS, Braze will de-dupe users on the Canvas component level. This will ensure users do not receive more than one SMS text for a Canvas component, even if multiple users share the same phone number.
+When multiple user profiles that share one phone number (enabled for SMS) are eligible for an action-based campaign or Canvas component at the same time, triggered by the event of an inbound SMS, Braze will dedupe users on the Canvas component level. This will prevent users from receiving more than one SMS text for a Canvas component, even if multiple users share the same phone number. 
+
+{% alert note %} 
+Braze doesn't dedupe by phone number for scheduled Canvases.
+{% endalert %}
 
 Braze will use the following flow to determine the recipient profile:
 - Check which profile received SMS most recently (up to 7 days ago); if one exists, send it to that user.
 - If neither had received SMS up to 7 days ago, send to the user who has a user alias of "phone" that matches the phone number.
 - If neither exists, send to a random profile between the ones available. 
 
-If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed. This also applies to API state changes. For example, if multiple profiles with different external IDs have the same phone numbers, a subscription group state change via the API will update all profiles with that phone number, even if only one external ID is specified.
+If you receive a "START" or "STOP" keyword from the shared phone number, all user profiles will be subscribed and enabled for SMS or unsubscribed. This also applies to API state changes. For example, if multiple profiles with different external IDs have the same phone numbers, a subscription group state change through the API will update all profiles with that phone number, even if only one external ID is specified.
 
 {% alert important %} 
 If you stagger your users into a Canvas and have different schedule times for each Canvas component, you can send a user with the same email or phone duplicate messages. 

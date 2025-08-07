@@ -15,6 +15,7 @@ gem "rack-rewrite"
 gem "sinatra"
 gem "uglifier"
 gem "rackup", "~> 2.1"
+gem "filewatcher"
 
 #gem "japr" #Jekyll Asset Pipeline Reborn https://github.com/janosrusiczki/japr
 gem "jekyll_asset_pipeline"

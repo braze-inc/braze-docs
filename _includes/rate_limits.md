@@ -44,6 +44,15 @@ See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details,
 {% elsif include.endpoint == "users export ids" %}
 If you onboarded with Braze on or after August 22, 2024, this endpoint has a rate limit of 250 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+You can also increase this endpoint's rate limit to 40 requests per second by meeting the following requirements:
+
+- Your workspace has the default rate limit (250 requests per minute) enabled. Contact your Braze account manager for further assistance with removing any pre-existing rate limit you may have.
+- Your request includes the `fields_to_export` parameter to list out all the fields you want to receive.
+
+{% alert important %}
+If you include `canvases_received` or `campaigns_received` in the `fields_to_export` parameter, your request will be ineligible for the faster rate limit. We recommend only including these in your request if you have a specific use case for them.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
@@ -134,6 +143,15 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
+- An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}
+
+{% if include.category == "send messages endpoints" %}
+
+Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/#batching-api-requests). A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`, each with individual message parameters
 - An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}

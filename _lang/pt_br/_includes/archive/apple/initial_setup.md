@@ -1,12 +1,12 @@
 A instalação do SDK da Braze  fornecerá a você a funcionalidade básica de análise de dados{% if include.platform == 'iOS' %}, bem como mensagens no app com as quais você pode engajar seus usuários{% endif %}.
 
-O SDK {{include.platform}} da Braze deve ser instalado ou atualizado usando o [CocoaPods][apple_initial_setup_1], um gerenciador de dependências para projetos Objective C e Swift. O CocoaPods oferece mais simplicidade para integração e atualização.
+O SDK {{include.platform}} da Braze deve ser instalado ou atualizado usando o [CocoaPods](http://cocoapods.org/), um gerenciador de dependências para projetos Objective C e Swift. O CocoaPods oferece mais simplicidade para integração e atualização.
 
 ## {{include.platform}} Integração de SDK CocoaPods
 
 ### Etapa 1: Instalar o CocoaPods
 
-A instalação do SDK por meio do {{include.platform}} [CocoaPods][apple_initial_setup_1] automatiza a maior parte do processo de instalação para você. Antes de iniciar esse processo, verifique se você está usando a [versão 2.0.0][apple_initial_setup_2] ou superior do Ruby. Note que não é necessário ter conhecimento da sintaxe do Ruby para instalar esse SDK.
+A instalação do SDK por meio do {{include.platform}} [CocoaPods](http://cocoapods.org/) automatiza a maior parte do processo de instalação para você. Antes de iniciar esse processo, verifique se você está usando a [versão 2.0.0](https://www.ruby-lang.org/en/installation/) ou superior do Ruby. Note que não é necessário ter conhecimento da sintaxe do Ruby para instalar esse SDK.
 
 Para começar, basta executar o seguinte comando:
 
@@ -14,9 +14,9 @@ Para começar, basta executar o seguinte comando:
 $ sudo gem install cocoapods
 ```
 
-**Nota**: Se for solicitado que você substitua o executável `rake`, consulte as [instruções de introdução em CocoaPods.org][apple_initial_setup_3] para obter mais detalhes.
+**Nota**: Se for solicitado que você substitua o executável `rake`, consulte as [instruções de introdução em CocoaPods.org](http://guides.cocoapods.org/using/getting-started.html) para obter mais detalhes.
 
-**Nota**: Se você tiver problemas relacionados ao CocoaPods, consulte o [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
+**Nota**: Se você tiver problemas com o CocoaPods, consulte o [Guia de solução de problemas do CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Etapa 2: Construindo o arquivo de pod
 
@@ -43,7 +43,7 @@ pod install
 
 Nesse ponto, você deve conseguir abrir o novo espaço de trabalho do projeto Xcode criado pelo CocoaPods. Use esse espaço de trabalho do Xcode em vez de seu projeto do Xcode. 
 
-![Novo espaço de trabalho][apple_initial_setup_15]
+![Novo espaço de trabalho]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ### Etapa 4: Atualização do delegate do seu app
 
@@ -173,25 +173,10 @@ Esse método é chamado com os seguintes parâmetros:
 - `launchOptions` - As opções `NSDictionary` que você obtém de `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` - Um site opcional `NSDictionary` com valores de configuração de inicialização para a Braze
 
-Veja [Appboy.h][apple_initial_setup_5] para obter uma lista das teclas de inicialização da Braze.
+Veja [Appboy.h](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) para obter uma lista das teclas de inicialização da Braze.
 
 ## Appboy.sharedInstance() e a anulabilidade do Swift
 Diferentemente da prática comum, o singleton `Appboy.sharedInstance()` é opcional. Isso ocorre porque `sharedInstance` é `nil` antes da chamada de `startWithApiKey:`, e há algumas implementações não padronizadas, mas ainda válidas, nas quais uma inicialização postergada pode ser utilizada.
 
 Se você chamar `startWithApiKey:` em seu delegado `didFinishLaunchingWithOptions:` antes de qualquer acesso ao `sharedInstance` do Appboy (a implementação padrão), poderá usar o encadeamento opcional, como `Appboy.sharedInstance()?.changeUser("testUser")`, para evitar verificações complicadas. Isso terá paridade com uma implementação em Objective-C que assume um `sharedInstance` não nulo.
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "Instruções de instalação do CocoaPods"
-[apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
-[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_8]: #manual-sdk-integration
-[apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
-[apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
-[apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "Guia de solução de problemas do CocoaPods"
-[apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[apple_initial_setup_32]: {{ site.baseurl }}/support_contact/

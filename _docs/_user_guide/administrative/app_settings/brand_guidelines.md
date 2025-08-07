@@ -10,7 +10,7 @@ description: "This reference article describes how to create, manage, and use br
 
 > Tailor the style of your AI-generated copy to match your brand’s voice, tone, and personality with customized brand guidelines.
 
-You can create and manage your brand guidelines by going to **Settings** > **Brand Guidelines**. You can also create them in the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
+You can create and manage your brand guidelines by going to **Settings** > **Brand Guidelines**. You can also create them in the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines/).
 
 ## Creating brand guidelines
 
@@ -58,7 +58,7 @@ You can edit brand guidelines by selecting them on the **Brand Guidelines** page
 
 ## Using brand guidelines
 
-When composing a message, open the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, it will automatically be selected in the dropdown, but you can choose a different guideline. 
+When composing a message, open the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, it will automatically be selected in the dropdown, but you can choose a different guideline. 
 
 !["AI copywriting assistant with "Important Alerts!!" selected as the brand guideline.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 

@@ -32,6 +32,9 @@ guide_featured_list:
 - name: 제품 포털
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Braze 고객지원팀
+  link: /docs/user_guide/administrative/access_braze/support/
+  image: /assets/img/braze_icons/mail-01.svg
 ---
 
 ## 지원되는 브라우저

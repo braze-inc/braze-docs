@@ -46,7 +46,7 @@ When you've submitted your completed forms to Braze, we will complete the regist
 
 ### Step 2.1: Set up SMS fallbacks for RCS subscription groups
 
-Because current carrier coverage varies by country, and user hardware and software support varies by individual, SMS fallback is a key component of having a successful RCS program today. If a carrier doesn’t support RCS or a user’s device is unable to receive RCS messages, SMS fallback will send your message regardless, so that you never miss an important moment with your users.
+Because current carrier coverage varies by country, and user hardware and software support vary by individual, SMS fallback is a key component of having a successful RCS program today. We recommend setting up SMS fallback. If a carrier doesn’t support RCS or a user’s device is unable to receive RCS messages, SMS fallback will send your message regardless, so that you never miss an important moment with your users.
 
 We highly recommend reviewing your current SMS opt-in experience, subscription groups, and audience segmentation before deploying your first RCS campaign. If needed, your customer success manager is always available to provide guidance and help you navigate the setup process.
 

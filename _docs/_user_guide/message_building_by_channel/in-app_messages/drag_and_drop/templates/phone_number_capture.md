@@ -62,7 +62,7 @@ We have provided a placeholder disclaimer in the template solely as an exampleâ€
 This documentation is not intended to provide, nor may it be relied fully upon, as providing legal advise.
 {% endalert %}
 
-For more information about SMS and RCS compliance, see [Laws and regulations for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/).
+For more information about SMS and RCS compliance, see [Laws and regulations for SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/).
 
 ### Step 5: Style your message
 

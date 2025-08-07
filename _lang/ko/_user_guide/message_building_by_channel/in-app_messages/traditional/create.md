@@ -22,15 +22,9 @@ search_rank: 4.8
 {% tab 캠페인 %}
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
-{% endalert %}
-
-{:start="2"}
-2\. **인앱 메시지**를 선택합니다. 멀티채널 캠페인에서는 인앱 메시지를 사용할 수 없습니다.
-3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+2. **인앱 메시지**를 선택합니다. 멀티채널 캠페인에서는 인앱 메시지를 사용할 수 없습니다.
+3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -210,7 +204,7 @@ Braze에서 코드에 닫기 또는 종료 버튼이 포함되어 있지 않다�
 
 ##### Creating right-to-left messages
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### 버튼 텍스트 {#buttons}
 
@@ -273,7 +267,7 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 | 서식 지정 | 입력 | 설명 |
 |---|---|---|
-|색 프로필 | 앱 내 메시지 템플릿 갤러리에서 신청하세요. | **템플릿 적용**을 클릭하고 갤러리에서 선택합니다. 그런 다음 **저장**을 클릭합니다. |
+|[색 프로필]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | 앱 내 메시지 템플릿 갤러리에서 신청하세요. | **템플릿 적용을** 선택하고 갤러리에서 선택합니다. 그런 다음 **저장**을 선택합니다. |
 |텍스트 정렬 | 왼쪽, 가운데 또는 오른쪽.  | 최신 Braze SDK 버전에서만 사용할 수 있습니다. |
 |헤더 | HEX 색상 코드. | 원하는 HEX 색상이 표시됩니다. 색상의 불투명도를 선택할 수도 있습니다.  |
 |텍스트 | HEX 색상 코드. | 원하는 HEX 색상이 표시됩니다. 색상의 불투명도를 선택할 수도 있습니다. |
@@ -324,7 +318,7 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 시작 날짜와 시간은 반드시 선택해야 하지만 종료 날짜는 선택 사항입니다. 종료 날짜를 설정하면 지정된 날짜/시간 이후에는 특정 인앱 메시지가 기기에 표시되지 않습니다.
 
-Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### 온라인 트리거와 오프라인 트리거
 
@@ -374,7 +368,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 {% endtab %}
 {% tab 캔버스 %}

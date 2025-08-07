@@ -49,3 +49,29 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
+## Accessibility scanner
+
+To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standards. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities.
+
+![Accessibility scan results]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+The in-app message accessibility scanner only runs on messages built with custom HTML. 
+{% endalert %}
+
+### How it works
+
+The scanner runs automatically on custom HTML messages and evaluates your entire HTML message against the full [WCAG 2.1 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). For each flagged issue, it shows:
+
+- The specific HTML element involved
+- A description of the accessibility issue
+- A link to additional context or remediation guidance
+
+### Understanding automated accessibility testing
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
+
+
+
+

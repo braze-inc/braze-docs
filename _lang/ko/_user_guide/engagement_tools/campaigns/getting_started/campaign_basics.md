@@ -56,7 +56,7 @@ tool: Campaigns
 
 > 이 캠페인을 구축하는 이유는 무엇인가요? 
 
-항상 명확한 목표를 염두에 두는 것이 중요하며, 캠페인은 세션 인게이지먼트, 구매 및 커스텀 이벤트와 같은 핵심 성과 지표(KPI)에 대한 성과를 파악하는 데 도움이 됩니다. [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 하나 이상 선택하면 캠페인 성과를 파악할 수 있습니다.
+항상 명확한 목표를 염두에 두는 것이 중요하며, 캠페인은 세션 인게이지먼트, 구매 및 커스텀 이벤트와 같은 핵심 성과 지표(KPI)에 대한 성과를 파악하는 데 도움이 됩니다. [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) 하나 이상 선택하면 캠페인 성과를 파악할 수 있습니다.
 
 ### '어디': 내 잠재 고객 찾기
 

@@ -325,7 +325,7 @@ These should not be used as user IDs:
 - Email address
 - Another 3rd party vendor's user ID
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### Give custom events and attributes readable names
 

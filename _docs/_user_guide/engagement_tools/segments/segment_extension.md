@@ -80,7 +80,7 @@ We also support segmentation based on [nested event properties]({{site.baseurl}}
 Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years. Using event properties within Segment Extensions does not impact data point usage.
 
 {% alert note %}
-You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a segment. You can create a real-time [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to trigger in real time based on an event property—no Segment Extension required. 
+You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a default segment. You can create a real-time default [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to trigger in real time based on an event property—no Segment Extension required. 
 {% endalert %}
 
 ### Step 4: Designate refresh settings (optional)
@@ -89,25 +89,25 @@ You don't need Segment Extensions to use event properties or nested custom attri
 
 ### Step 5: Save your Segment Extension
 
-After you select **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
+After you select **Save**, your Segment Extension will begin processing. The length of time it takes to generate your Segment Extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
 
-While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
+While your Segment Extension is processing, you will see a small animation next to the name of the Segment Extension, and the word "Processing" in the **Last Processed** column on the Segment Extension list. Note that you will not be able to edit a Segment Extension while it is processing.
 
 !["Segment Extensions" page with two active extensions.]({% image_buster /assets/img/segment/segment_extension5.png %})
 
-When a Segment Extension is processing, Braze will continue to use the version history of the segment from before the processing began for audience segmentation purposes. Processing takes place each time a save or refresh occurs, and involves querying and updating user profiles - in other words, your segment's membership does not update instantaneously. This means that unless a user's action is performed before the refresh begins processing, we can't guarantee that the user will be included in the Segment Extension once that particular refresh is complete. Conversely, users who were in the Segment Extension before the refresh that  no longer meet the criteria will continue to match your segment until the refresh process is complete and updates are applied.
+When a Segment Extension is processing, Braze will continue to use the version history of the default segment from before the processing began for audience segmentation purposes. Processing takes place each time a save or refresh occurs, and involves querying and updating user profiles—in other words, your default segment's membership does not update instantaneously. This means that unless a user's action is performed before the refresh begins processing, we can't guarantee that the user will be included in the Segment Extension once that particular refresh is complete. Conversely, users who were in the Segment Extension before the refresh that no longer meet the criteria will continue to match your deafult segment until the refresh process is complete and updates are applied.
 
 ### Step 6: Use your extension in a segment
 
-After you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
+After you have created a Segment Extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
 !["Filters" section with a filter dropdown showing "Braze Segment Extensions".]({% image_buster /assets/img/segment/segment_extension7.png %})
 
-From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
+From the Braze Segment Extension filter list, choose the Segment Extension you wish to include or exclude in this segment.
 
 ![A "Braze Segment Extensions" filter that includes a segment "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension6.png %})
 
-To view the extension criteria, select **View Extension Details** to show the details in a new window.
+To view the Segment Extension criteria, select **View Extension Details** to show the details in a new window.
 
 ![Extension for "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
@@ -119,7 +119,7 @@ Now you can proceed as usual with [creating your segment]({{site.baseurl}}/user_
 
 Yes. You can add multiple events or reference multiple Snowflake tables when using [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
 
-When using **Simple extension** Segment Extensions, you can select one custom event, one purchase event, or one channel interaction. However, you can combine multiple segment extensions with an AND or OR when creating the segment.
+When using **Simple extension** Segment Extensions, you can select one custom event, one purchase event, or one channel interaction. However, you can combine multiple Segment Extensions with an AND or OR when creating the default segment.
 
 ### Can I archive Segment Extensions if they exist in an active campaign?
 
@@ -129,7 +129,7 @@ No. Before you can archive a Segment Extension, you need to remove it from all a
 
 Yes. To use arrays, append brackets (`[]`) to your property name. If your property is `location_code`,  you would enter `location_code[]`. 
 
-Braze uses `[]` to traverse arrays and check if any item in the traversed array matches the event property. For example, you could create a segment of users who match at least one value of an array property.
+Braze uses `[]` to traverse arrays and check if any item in the traversed array matches the event property. For example, you could create a Segment Extension of users who match at least one value of an array property.
 
 ### How does Braze calculate the time period for a relative time period of "last __ days"?
 

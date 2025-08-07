@@ -41,13 +41,13 @@ Hi Valued User, thanks for using the App!
 The following values can be substituted into a message, depending on their availability:
 
 - [Basic user information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (for example, `first_name`, `last_name`, `email_address`)
-- [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)
+- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
     - [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
-- [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+- [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - [Most recently used device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
 - [Target device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-You can also pull content directly from a web server through Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/).
+You can also pull content directly from a web server through Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/).
 
 {% alert important %}
 Braze currently supports Liquid up to and including Liquid 5 from Shopify.
@@ -90,19 +90,15 @@ If you use Liquid in your email messages, be sure to:
 
 {% endalert %}
 
-{% raw %}
-
 ### Inserting pre-formatted variables
 
 You can insert pre-formatted variables with defaults through the **Add Personalization** modal located near any templated text field.
 
-![The Add Personalization modal that appears after selecting insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![The Add Personalization modal that appears after selecting insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified by the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
+The modal will insert Liquid with your specified default value at the point where your cursor was. The insertion point is also specified by the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
 
 ![A GIF of the Add Personalization modal that shows the user inserting "fellow traveler" as a default value, and the modal replacing the highlighted text "name" in the composer with the Liquid snippet.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
-
-{% endraw %}
 
 ### Assigning variables
 

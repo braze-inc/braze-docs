@@ -12,7 +12,7 @@ page_order: 1
 
 > This article outlines how to implement the Braze Web SDK onto your Shopify website. After implementation, view [Setting up Shopify]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview) to learn how to finish setting up the Shopify integration with Braze.
 
-{% multi_lang_include alerts.md alert='Shopify deprecation' %}
+{% multi_lang_include alerts/important_alerts.md alert='Shopify deprecation' %}
 
 ## Integration setup checklist
 
@@ -365,7 +365,7 @@ As soon as a customer visits your Shopify site, an anonymous user is created. Th
 4. In your Canvas entry criteria, target only unidentified user profiles, meaning that they don’t have an external ID and `do_not_merge` is not true. <br><br>![The "Entry Audience" step in the Canvas composer with `do_not_merge` as a filter.]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_entrycriteria.png %})
 
 {: start="5"}
-5. After configuring your Canvas entry criteria, you can create your Canvas Flow. Make the first step of your Canvas a **Delay** step to prevent possible race conditions during processing.<br><br>![Delay step in the Canvas composer.]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_delay.png %})
+5. After configuring your Canvas entry criteria, you can create your Canvas. Make the first step of your Canvas a **Delay** step to prevent possible race conditions during processing.<br><br>![Delay step in the Canvas composer.]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_delay.png %})
 
 {: start="6"}
 6. You can create a **User Update** step to update `do_not_merge` custom attribute to “true” as these users will be merged in the next step. <br><br>![User update step in the Canvas composer with `do_not_merge` selected as an attribute.]({% image_buster /assets/img/Shopify/shop_usermerge_canvas_userupdate.png %})

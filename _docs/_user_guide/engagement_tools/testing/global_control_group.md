@@ -21,7 +21,9 @@ By comparing the behaviors of users that receive messaging to those that don't, 
 
 With the Global Control Group, you can set a percentage of all users as a control group. When saved, users in the group will not receive any campaigns or Canvases. 
 
-Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of [API campaigns]({{site.baseurl}}/api/api_campaigns#api-campaigns). Users in your control group will still receive API campaigns. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
+{% alert important %}
+Your Global Control Group applies to all channels, campaigns, and Canvases, except for [API campaigns]({{site.baseurl}}/api/api_campaigns). This means users in your control group will still receive API campaigns. However, this exception doesn't apply to Content Cards. If you're using an API-triggered Content Card campaign, users in your control group won't receive them.
+{% endalert %}
 
 ### Assign users randomly to the Global Control Group
 
@@ -38,6 +40,10 @@ Your treatment group will be similar in size as your Global Control Group, but i
 ### Exclude users from feature flags
 
 You can't enable [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
+
+### Exclude users from the Global Control Group
+
+You can't remove specific users from the Global Control Group, but you can add [exclusion settings]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings) so that campaigns and Canvases with specified tags **don't** use the Global Control Group. You can also disable and re-enable your Global Control Group to shuffle membership. The ideal duration for shuffling users varies based on the type of test that you're running, but we encourage you to shuffle no more than once a month.
 
 ## Create a Global Control Group
 

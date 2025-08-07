@@ -91,5 +91,5 @@ You can further refine your segments by using [Segment Extensions]({{site.baseur
 - **Events and message interactions:** Segment users by whether they made a purchase in the last thirty days and also interacted with a specific in-app message.
 - **Query data:** 
   - **Query Snowflake:** Segment users with data combined from Braze and external sources, such as a CRM or a data warehouse, by using [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) to query Snowflake.
-  - **Sync from data warehouse:** Segment users with data directly synced from your data warehouse or file storage system to Braze by using [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+  - **Sync from data warehouse:** Segment users with data directly synced from your data warehouse or file storage system to Braze by using [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 

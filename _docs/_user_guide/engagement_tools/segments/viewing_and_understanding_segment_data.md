@@ -22,7 +22,7 @@ The **Segments** page of your Braze dashboard contains a summary of all of your 
 
 After selecting the name of a segment, you can view segment statistics and filters, and edit the segment by adding or deleting filters. Be sure to save any changes!
 
-When you turn on [analytics tracking for a segment]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/), you can view sessions, custom events, and revenue over time for this segment.
+When you turn on [analytics tracking for a segment]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/), you can view sessions, custom events, and revenue over time for this segment.
 
 ![Analytics tracking toggle for a segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
@@ -58,7 +58,7 @@ You can view the following segment statistics, which update in real-time as you 
         </tr>
         <tr>
             <td class="no-split">Emailable (Opted-In)</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Push Enabled (Opted-In)</td>

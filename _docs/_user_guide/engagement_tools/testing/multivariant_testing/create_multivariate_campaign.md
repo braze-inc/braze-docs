@@ -124,7 +124,7 @@ Users are assigned to message variants, Canvas variants, or their respective con
 
 There are some common mistakes to avoid creating the appearance of differences based on the messaging channel if audiences are not filtered correctly.
 
-For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include both users who do have a push token and users who don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, subscribed, etc.
+For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include both users who do have a push token and users who don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Foreground Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, subscribed, etc.
 
 {% alert note %}
 If you manually use random bucket numbers for control groups, check out [things to watch for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.

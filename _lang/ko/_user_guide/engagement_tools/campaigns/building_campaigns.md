@@ -15,18 +15,9 @@ guide_featured_list:
   - name: 캠페인 만들기
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
-  - name: 시간 기반 기능
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/
-    image: /assets/img/braze_icons/clock.svg
   - name: 캠페인 예약하기
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: 사용자 타겟팅
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-    image: /assets/img/braze_icons/target-04.svg
-  - name: 전환 이벤트
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 속도 제한 및 빈도 제한
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
     image: /assets/img/braze_icons/alert-triangle.svg
@@ -36,5 +27,13 @@ guide_menu_list:
   - name: AI 카피라이팅 어시스턴트
     link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
     image: /assets/img/braze_icons/edit-05.svg
-
+  - name: 승인 워크플로우
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: 전환 이벤트
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
+    image: /assets/img/braze_icons/edit-05.svg
+  - name: 사용자 타겟팅
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---

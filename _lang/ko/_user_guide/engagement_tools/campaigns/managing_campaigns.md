@@ -12,25 +12,28 @@ description: "이 랜딩 페이지에서는 캠페인 관리에 대해 설명합
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-  - name: 캠페인 승인
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval
-    image: /assets/img/braze_icons/check-square-broken.svg
   - name: 워크스페이스 간 복사
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
     image: /assets/img/braze_icons/copy-04.svg
   - name: 론칭 후 캠페인 변경
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: 캠페인 아카이빙
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/
-    image: /assets/img/braze_icons/archive.svg
-  - name: 캠페인 복제
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/
-    image: /assets/img/braze_icons/copy-04.svg
   - name: 캠페인 알림
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
     image: /assets/img/braze_icons/bell-03.svg
   - name: 캠페인 검색
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
     image: /assets/img/braze_icons/search-refraction.svg
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: 승인 워크플로우
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: 캠페인 아카이빙
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
+    image: /assets/img/braze_icons/archive.svg
+  - name: 캠페인 복제
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    image: /assets/img/braze_icons/copy-04.svg
 ---

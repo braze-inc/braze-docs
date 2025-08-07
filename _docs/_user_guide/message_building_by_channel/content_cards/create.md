@@ -168,12 +168,12 @@ Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_bui
 
 ## Things to know
 
-### Message field sizes
+### Size limitations for Content Cards
 
-Content Card message fields can be up to 2&nbsp;KB in total size. This is calculated by adding the byte-size length of the following fields: **Title**, **Message**, **Image URL**, **Link Text**, **Link URL(s)**, and **Key-Value Pairs** (names and values). Messages that exceed 2&nbsp;KB will not be sent. Note that this does not include the size of the image but rather the length of the image URL.
+The size of a Content Card payload can be up to a 2 KB after Liquid rendering. This includes the **Title**, **Message**, **Image URL**, **Link Text**, **Link URL(s)**, and **Key-Value Pairs** (names and values). However, this limit does not include the size of the image&#8212;only the length of the image URL.
 
 {% alert important %}
-During test sends, Content Cards that exceed 2&nbsp;KB can still be delivered and displayed properly.
+Messages larger than 2 KB will not be sent. During test sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
 {% endalert %}
 
 ### Number of cards in feed

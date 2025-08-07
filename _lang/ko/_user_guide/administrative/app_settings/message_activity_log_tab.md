@@ -15,10 +15,6 @@ API 캠페인 트랜잭션을 확인하고, 실패한 메시지에 대한 세부
 
 로그에 액세스하려면 **설정** > **메시지 활동 로그로** 이동합니다.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find the **Message Activity Log** under **Settings** > **Developer Console**.
-{% endalert %}
-
 ![메시지 활동 로그][2]
 
 {% alert tip %}

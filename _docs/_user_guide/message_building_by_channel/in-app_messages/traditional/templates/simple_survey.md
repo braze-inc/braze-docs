@@ -30,7 +30,7 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 ## Creating a survey {#create}
 
-When creating an [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), select **Simple Survey** for your **Message Type**.
+When creating an [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), select **Simple Survey** for your **Message Type**.
 
 This survey template is supported for both mobile apps and web browsers. Remember to check that your SDKs are on the [minimum SDK versions](#supported-sdk-versions) required for this feature.
 
@@ -58,7 +58,7 @@ Then, determine if you will [collect custom attributes](#custom-attributes) or [
 
 Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a [satisfaction survey](#user-satisfaction), you could send a follow-up email to all users who were not happy.
 
-To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can also create a new custom attribute in your [Settings Page]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data).
+To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can also create a new custom attribute in your [Settings Page]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
 
 The data type of your custom attributes matters depending on how you've set up your survey.
 
@@ -71,7 +71,7 @@ When custom attribute collection is enabled, choices that share the same custom 
 
 ##### Example 
 
-For example, in a [notification preferences survey](#notification-preferences), you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+For example, in a [notification preferences survey](#notification-preferences), you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 You can then use the `Custom Attribute` filter to create a segment for users with the custom attribute `Promotions Topic` `is` `true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
@@ -117,7 +117,7 @@ You can find your survey performance metrics by expanding the **Results** dropdo
 - **Survey results** display a breakdown of how many users selected each response option, along with the percentage of total submissions each choice represents.
 - **Confirmation page metrics** (if enabled) include how many users viewed the confirmation screen, clicked its button, or dismissed it without interacting.
 
-For definitions of survey metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by "In-App Message".
+For definitions of survey metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by "In-App Message".
 
 Check out [In-app message reporting]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) for a breakdown of your campaign metrics.
 

@@ -1,6 +1,6 @@
 # Casos de uso: Sistema de recordatorio de reservas por correo electrónico
 
-> Braze es una plataforma integral de interacción con los clientes diseñada para ser altamente controlable mediante programación. En este caso de uso, demostraremos sólo algunas formas en las que Braze proporciona funcionalidad que puedes integrar en casos de uso que se encuentran en la intersección del producto y el marketing, como los sistemas de reservas.
+> Braze es una plataforma integral de interacción con los clientes diseñada para ser altamente controlable mediante programación. En este caso de uso, demostraremos sólo algunas formas en las que Braze proporciona funciones que puedes integrar en casos de uso que se encuentran en la intersección del producto y el marketing, como los sistemas de reservas.
 
 Este caso de uso muestra cómo puedes utilizar las características de Braze para crear un servicio de mensajería por correo electrónico de recordatorio de reserva. El servicio permitirá a los usuarios reservar citas y enviará mensajes a los usuarios recordándoles sus próximas citas. Aunque este caso de uso utiliza mensajes de correo electrónico, puedes enviar mensajes en cualquier canal, o en varios, basándote en una única actualización de un perfil de usuario.
 
@@ -42,7 +42,7 @@ Cuando un usuario crea una reserva, utiliza la siguiente estructura para la matr
 
 El atributo personalizado anidado "viajes" se mostrará así en el perfil de usuario.
 
-![Dos atributos personalizados anidados para un viaje a Londres y otro a Sidney.][1]{: style="max-width:70%;"}
+![Dos atributos personalizados anidados para un viaje a Londres y otro a Sidney.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### Actualizar reserva
 Cuando un usuario actualiza una reserva, utiliza la siguiente estructura para la matriz de objetos para enviar los datos a Braze a través del punto final `/users/track`.
@@ -132,7 +132,7 @@ Crea una audiencia objetivo para recibir recordatorios utilizando la segmentaci�
 - Una fecha de inicio **en más de 1 día** y
 - Una fecha de inicio **en menos de 2 días** 
 
-![Un atributo personalizado anidado "viajes" con criterios para una fecha de inicio superior a un día e inferior a dos días.][3]
+![Un atributo personalizado anidado "viajes" con criterios para una fecha de inicio superior a un día e inferior a dos.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### Paso 2b: Crea tu mensaje
 
@@ -256,7 +256,7 @@ Si el usuario de este caso de uso actualizara su viaje a Sydney, utilizarías el
 
 #### Reserva anulada
 
-Si el usuario de este caso de uso cancelara su viaje Syndey, enviarías la siguiente llamada al punto final `/users/track`:
+Si el usuario de este caso de uso cancelara su viaje en Syndey, enviarías la siguiente llamada al punto final `/users/track`:
 
 {% raw %}
 ```json
@@ -280,5 +280,3 @@ Si el usuario de este caso de uso cancelara su viaje Syndey, enviarías la sigui
 
 Una vez enviadas estas llamadas y actualizado el perfil de usuario, los mensajes de recordatorio de reserva reflejarán los datos más recientes sobre las fechas de reserva del usuario.
 
-[1]: {% image_buster /assets/img/use_cases/2_nested_attributes.png %}
-[3]: {% image_buster /assets/img/use_cases/custom_nested_attribute.png %}

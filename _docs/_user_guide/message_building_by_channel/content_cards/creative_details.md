@@ -63,7 +63,7 @@ If you want more creative control, the image-only card is for you. Create your i
 
 ## Global creative details {#general}
 
-Content Cards come with great functionality from the very beginning. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards) for more information.
+Content Cards come with great functionality from the very beginning. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards]({{site.baseurl}}/developer_guide/content_cards/) for more information.
 
 ### Dismissal behavior
 

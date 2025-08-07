@@ -57,7 +57,7 @@ Select **Create New Catalog**, then choose to either **Upload CSV** or **Create 
 - Must be unique
 - Maximum of 250 characters
 - Can only include numbers, letters, hyphens, and underscores<br><br>
-4. (optional) Add a description for the catalog.
+4. (Optional) Add a description for the catalog.
 5. Select **Process Catalog** to create the catalog.
 
 {% alert note %}
@@ -88,7 +88,7 @@ To edit or create catalogs in the browser, you'll need "Manage Catalogs Dashboar
 - Must be unique
 - Up to 250 characters
 - Can only include numbers, letters, hyphens, and underscores <br> ![A catalog named "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
-2. (optional) Type a description for your catalog.
+2. (Optional) Type a description for your catalog.
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
 4. Select **Update Catalog** > **Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![Two example fields "rating" and "name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
 5. Select **Update Catalog** > **Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, select **Save Item** or **Save and Add Another** to continue adding your items. <br> ![Add a catalog item.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}

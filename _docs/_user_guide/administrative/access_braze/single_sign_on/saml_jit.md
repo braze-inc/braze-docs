@@ -11,10 +11,6 @@ description: "This article will walk you through how to configure SAML just-in-t
 
 > Just-in-time provisioning works with [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) to allow new dashboard users to create a Braze account on their first sign in. This eliminates the need for administrators to manually create an account for a new dashboard user, choose their permissions, assign them to a workspace, and wait for them to activate their account.
 
-{% alert note %}
-SAML just-in-time provisioning is currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites
 
 This feature requires that SAML SSO is set up and integrated, and is not compatible with Google SSO.

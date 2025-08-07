@@ -277,7 +277,7 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 
 ## Frequently asked questions
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### What happens when multiple profiles with the same email address are found?
 If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.

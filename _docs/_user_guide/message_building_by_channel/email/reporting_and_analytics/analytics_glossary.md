@@ -25,7 +25,7 @@ channel:
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Variation' %}
+{% multi_lang_include analytics/metrics.md metric='Variation' %}
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -39,7 +39,7 @@ Count
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Emailable' %}
+{% multi_lang_include analytics/metrics.md metric='Emailable' %}
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -53,7 +53,7 @@ Count
 Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Audience' %}
+{% multi_lang_include analytics/metrics.md metric='Audience' %}
 
 <span class="calculation-line">Calculation: (Number of Recipients in Variant) / (Unique Recipients)</span>
 
@@ -67,7 +67,7 @@ Percentage
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Recipients' %} This number is received from Braze.
+{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} This number is received from Braze.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -81,7 +81,7 @@ Count
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Sends' %}  This metric is provided by Braze.
+{% multi_lang_include analytics/metrics.md metric='Sends' %}  This metric is provided by Braze.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -95,7 +95,7 @@ Count
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Messages Sent' %}  This metric is provided by Braze.
+{% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  This metric is provided by Braze.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -109,7 +109,7 @@ Count
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Deliveries' %} For emails, *Deliveries* is the total number of messages (Sends) successfully sent to and received by emailable parties.
+{% multi_lang_include analytics/metrics.md metric='Deliveries' %} For emails, *Deliveries* is the total number of messages (Sends) successfully sent to and received by emailable parties.
 
 <span class="calculation-line">Calculation: (Sends) - (Bounces) </span>
 
@@ -123,7 +123,7 @@ Count
 Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Deliveries %' %}
+{% multi_lang_include analytics/metrics.md metric='Deliveries %' %}
 
 <span class="calculation-line">Calculation: (Sends - Bounces) / (Sends) </span>
 
@@ -137,7 +137,7 @@ Percentage
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Bounces' %} 
+{% multi_lang_include analytics/metrics.md metric='Bounces' %} 
 
 For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.
 
@@ -163,7 +163,7 @@ An email bounce for customers using SendGrid consists of hard bounces, spam (`sp
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Hard Bounce' %} 
+{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
 
 <span class="calculation-line">Calculation: Count </span>
 
@@ -177,7 +177,7 @@ Count
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Soft Bounce' %} If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver. 
+{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver. 
 
 While soft bounces aren’t tracked in your campaign analytics, you can monitor the soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) or exclude these users from your sending with the [Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). In the Message Activity Log, you can also see the reason for the soft bounces and understand possible discrepancies between the “sends” and “deliveries” for your email campaigns.
 
@@ -193,7 +193,7 @@ While soft bounces aren’t tracked in your campaign analytics, you can monitor 
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Spam' %}
+{% multi_lang_include analytics/metrics.md metric='Spam' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -215,7 +215,7 @@ Count, Percentage
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period.
+{% multi_lang_include analytics/metrics.md metric='Unique Opens' %} For email, this is tracked over a 7 day period.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -237,7 +237,7 @@ Count, Percentage
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email and measured by <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. This includes clicks on Braze-provided unsubscribe links.
+{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email and measured by <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. This includes clicks on Braze-provided unsubscribe links.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -259,7 +259,7 @@ Count, Percentage
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}
+{% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -281,7 +281,7 @@ Count, Percentage
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Revenue' %}
+{% multi_lang_include analytics/metrics.md metric='Revenue' %}
 
 <span class="calculation-line">Calculation: Count </span>
 
@@ -295,7 +295,7 @@ Count
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} For email, push, and webhooks, we start tracking conversions after the initial send.
+{% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} For email, push, and webhooks, we start tracking conversions after the initial send.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -317,7 +317,7 @@ Count, Percentage
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Confidence' %}
+{% multi_lang_include analytics/metrics.md metric='Confidence' %}
 
 {% endapi %}
 
@@ -325,7 +325,7 @@ Count
 
 ### Machine Opens
   
-{% multi_lang_include metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
+{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
 
 <span class="calculation-line">Calculation: Count </span>
 
@@ -339,7 +339,7 @@ Count
 Count
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Other Opens' %} Note that a user can also open an email (such as the open counts toward <i>Other Opens</i>) before a <i>Machine Opens</i> count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated toward <i>Other Opens</i> and only once toward <i>Unique Opens</i>.
+{% multi_lang_include analytics/metrics.md metric='Other Opens' %} Note that a user can also open an email (such as the open counts toward <i>Other Opens</i>) before a <i>Machine Opens</i> count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated toward <i>Other Opens</i> and only once toward <i>Unique Opens</i>.
 
 <span class="calculation-line">Calculation: Count </span>
 
@@ -353,7 +353,7 @@ Count
 Percentage
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}
+{% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}
 
 <span class="calculation-line">Calculation: (Unique Clicks) / (Unique Opens) (for Email)</span>
 

@@ -45,7 +45,7 @@ Braze will only recognize URLs that start with `http://` or `https://`. When a U
 
 ### Adding UTM parameters
 
-{% multi_lang_include click_tracking.md section='UTM parameters' %}
+{% multi_lang_include analytics/click_tracking.md section='UTM parameters' %}
 
 ## Liquid personalization in URLs
 
@@ -118,9 +118,9 @@ The **Historical Performance** and **SMS/MMS/RCS Performance** tables also inclu
 
 For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### Do I know which individual users are clicking on a URL?
 
@@ -134,4 +134,15 @@ At this time, RCS Click events are not available through Currents.
 
 Link shortening doesn't work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
 
+### Are `send_ids` associated with SMS click events?
 
+No. However, if you have advanced tracking enabled, you can generally attribute `send_ids` with click events by using [Query Builder]({{site.baseurl}}/query_builder/) to query Currents data with this query:
+
+```sql
+SELECT c.*, s.send_id
+FROM USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED AS c
+  INNER JOIN USERS_MESSAGES_SMS_SEND_SHARED AS s
+    ON s.user_id = c.user_id 
+      AND (s.message_variation_id = c.message_variation_id OR s.canvas_step_message_variation_id = c.canvas_step_message_variation_id)
+WHERE s.send_id IS NOT NULL; 
+```

@@ -57,12 +57,12 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 
 ### Step 2: Create the database in Snowflake
 
-1. After a few minutes, you should receive the inbound datashare in your Snowflake acccount.
+1. After a few minutes, you should receive the inbound datashare in your Snowflake account.
 2. Using the inbound datashare, create a database to view and query the tables. For example:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. Grant priviliges to query the new database.
+3. Grant privileges to query the new database.
 
 {% alert warning %}
 If you delete and recreate a share in the Braze dashboard, you must drop the previously-created database and recreate it using `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` to query the inbound share.
@@ -117,9 +117,9 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 
 Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
-### Data Retention
+### Data retention
 
-#### Retention Policy
+#### Retention policy
 
 Any data older than two years will be archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
 

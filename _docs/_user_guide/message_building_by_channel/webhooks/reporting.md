@@ -14,4 +14,4 @@ tool:
 
 > Learn about the different webhook reporting metrics and analytics options provided in the Braze dashboard.
 
-{% multi_lang_include campaign_analytics.md channel="webhook" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="webhook" %}

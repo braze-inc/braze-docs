@@ -27,6 +27,8 @@ With link aliasing, you can:
 
 Braze uniquely identifies links within emails by appending an extra parameter called the `lid` (also known as the link identifier) to every link URL. This `lid` value allows Braze to track, monitor, and aggregate user interactions with the link even if the rest of the URL parameters may differ. This helps to provide insights into how users engage with the content in your email campaigns.
 
+Link identifiers will also be updated if an email campaign, Canvas with an email message, or Content Block is duplicated.
+
 ## Creating a link alias
 
 To create a link alias, follow these steps: 
@@ -161,9 +163,9 @@ The following segmentation filters apply to click events that are tracked at the
 
 #### Untracking links
 
-Untracking a link won't reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it’s replaced by newer data.
+Untracking a link won't reallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until it’s replaced by newer data. 
 
-For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
+Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
 ![Campaign Analytics tab that displays three link aliases and their total clicks.]({% image_buster /assets/img/link_aliasing_click_table.png %})
 

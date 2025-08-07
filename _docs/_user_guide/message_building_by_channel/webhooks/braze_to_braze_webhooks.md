@@ -45,7 +45,7 @@ For example, you might want to count how many times a user has seen an active in
 
 Follow the general steps for creating a Braze-to-Braze webhook, and refer to the following when configuring your webhook:
 
-- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances) followed by `/users/track`. For example, for the `US-06` instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
+- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) followed by `/users/track`. For example, for the `US-06` instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
 - **Request Body:** Raw Text
 
 #### Request headers and method
@@ -97,7 +97,7 @@ For this use case, you'll create two Canvases and use a webhook to trigger the s
 
 Refer to the following when configuring your webhook:
 
-- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances) followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **Webhook URL:** Your [REST endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) followed by `canvas/trigger/send`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/canvas/trigger/send`.
 - **Request Body:** Raw Text
 
 #### Request headers and method

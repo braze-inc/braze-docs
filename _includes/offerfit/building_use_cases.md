@@ -55,7 +55,7 @@ Next, the AI Expert Service team will help you set up your marketing automation 
 {% tab Braze %}
 To set up Braze:
 
-1. Create a [campaign]({{site.baseurl}}//user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=api-triggered%20delivery#step-2b-determine-your-canvas-entry-schedule). OfferFit will use this delivery method to send 1:1 personalized activation events to the users in your defined audience.
+1. Create a [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=api-triggered%20delivery#step-2b-determine-your-canvas-entry-schedule). OfferFit will use this delivery method to send 1:1 personalized activation events to the users in your defined audience.
 2. Be sure you don't include a Braze [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign#including-a-control-group), so OfferFit can be the dedicated control group instead.
 3. Depending on your dimensions, you can configure Liquid tags in your creative content to dynamically populate your messaging with OfferFit recommendations. OfferFit will pass customer-specific content to the Liquid tags in your templates using the Braze API.
 {% endtab %}

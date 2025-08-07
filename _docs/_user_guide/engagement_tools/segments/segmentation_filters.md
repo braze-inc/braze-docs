@@ -71,7 +71,7 @@ glossaries:
     tags:
       - Custom events
   - name: Last Did Custom Event 
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+    description: Determines the latest time that a user has performed a specially recorded event. This filter supports decimals, such as 0.25 hours. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom events
   - name: X Custom Event In Y Days
@@ -127,11 +127,11 @@ glossaries:
     tags:
       - Sessions
   - name: Received Message from Campaign
-    description: Segments your users by whether or not they have received a specific campaign.<br><br> For Content Cards and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
+    description: Segments your users by whether or not they have received a specific campaign.<br><br> For Content Cards, Banners, and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
     tags:
       - Retargeting
   - name: Received Campaign Variant
-    description: Segments your users by which variant of a multivariate campaign they have received.<br><br> For Content Cards and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
+    description: Segments your users by which variant of a multivariate campaign they have received.<br><br> For Content Cards, Banners, and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
     tags:
       - Retargeting
   - name: Received Message from Canvas Step
@@ -147,7 +147,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Received Message from Campaign or Canvas with Tag
-    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.<br><br> For Content Cards and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
+    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.<br><br> For Content Cards, Banners (Campaigns only), and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
     tags:
       - Retargeting
   - name: Last Received Message from Campaign or Canvas With Tag
@@ -251,11 +251,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Any Message
-    description: Segments your users by determining the last message that was received. (24-hour period)<br><br> For Content Cards and in-app messages, this is when a user last logged an impression, not when the card or in-app message was last sent.<br><br>For push and webhooks, this is when any message was sent to the user.<br><br> For WhatsApp, this is when the last message API request was sent to WhatsApp, not when the message was delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by determining the last message that was received. (24-hour period)<br><br> For Content Cards, Banners, and in-app messages, this is when a user last logged an impression, not when the card or in-app message was last sent.<br><br>For push and webhooks, this is when any message was sent to the user.<br><br> For WhatsApp, this is when the last message API request was sent to WhatsApp, not when the message was delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Last Engaged With Message
-    description: Segments your users by the last time they have clicked or opened one of your messaging channels (Content Card, email, in-app, SMS, push, WhatsApp). For email messaging, the open event includes both machine opens and non-machine opens. (24-hour period)<br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). This also includes the option to filter by "opened any email (machine opens)" and "opened any email (other opens)". When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the user last selected any shortened link in a message that has user click tracking turned on.<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time they have clicked or opened one of your messaging channels (Banners, Content Card, email, in-app, SMS, push, WhatsApp). For email messaging, the open event includes both machine opens and non-machine opens. (24-hour period)<br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). This also includes the option to filter by "opened any email (machine opens)" and "opened any email (other opens)". When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address will appear to have received the message.<br><br>For SMS, this is when the user last selected any shortened link in a message that has user click tracking turned on.<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Clicked card 
@@ -286,16 +286,16 @@ glossaries:
     description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
       - Channel subscription behavior
-  - name: Push Enabled
-    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your workspace. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+  - name: Foreground Push Enabled
+    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who are foreground push enabled and whose push subscription status is not unsubscribed, for any of your apps. For these users, this count includes only foreground push.<br><br>Foreground Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - Channel subscription behavior
-  - name: Push Enabled For App
-    description: Segments by whether users have push enabled for your app on their device. These users are reachable via push but might not be opted in. This count includes users who have provisionally authorized foreground and background push tokens.
+  - name: Foreground Push Enabled for App
+    description: Segments by whether users have push enabled for your app on their device. Users who are foreground push enabled for an app. This does not take push subscription status into account. This count includes users who have provisionally authorized foreground and background push tokens.
     tags:
       - Channel subscription behavior
-  - name: Background Push Enabled
-    description: Segments your users on whether they have enabled background push or not.<br><br>Background Push Enabled does not include users who have unsubscribed.
+  - name: Background or Foreground Push Enabled
+    description: Segments by whether users have a push token and haven't unsubscribed. Users who are background or foreground push enabled for any of your apps.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date
@@ -395,11 +395,11 @@ glossaries:
     tags:
       - App
   - name: Most Recent App Version Name
-    description: Segments by the recent name of the user's app.
+    description: Segments by the recent name of the user's app.<br><br>When using "less than" or "less than or equal to", if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.
     tags:
       - App 
   - name: Most Recent App Version Number
-    description: Segments by the recent app version number of the user's app.
+    description: Segments by the recent app version number of the user's app.<br><br>When using “less than” or “less than or equal to”, if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.<br><br>It may take time for the current app versions to populate. The app version on the user profile updates when the information is captured by the SDK, which relies on when users open their apps. If the user doesn't open the app, the current version won't be updated. These filters also won't apply retroactively. It's good to use "greater than" or "equal" to current and future versions, but using past version filters may cause unexpected behaviors.
     tags:
       - App 
   - name: Uninstalled

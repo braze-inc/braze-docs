@@ -19,6 +19,10 @@ module Jekyll
         (?<params>.*)
       !mx.freeze
 
+      LANGUAGE_MAP = {
+        'fr' => 'fr_fr',
+        'pt-br' => 'pt_br',
+      }
       FULL_VALID_SYNTAX = %r!\A\s*(?:#{VALID_SYNTAX}(?=\s|\z)\s*)*\z!.freeze
       VALID_FILENAME_CHARS = %r!^[\w/.\-()+~\#@]+$!.freeze
 			INVALID_SEQUENCES = %r![./]{2,}!.freeze
@@ -103,10 +107,15 @@ module Jekyll
 
       def render(context)
         site = context.registers[:site]
-	      lang = site.config['language'] || 'en'
+	      lang = (
+          LANGUAGE_MAP[site.config['language']] ?
+            LANGUAGE_MAP[site.config['language']] :
+            site.config['language']
+        ) || 'en'
 				include_prefix = ''
         lang_prefix = ''
 				if (lang != 'en')
+
 					lang_prefix = MULTI_LANG_PATH.gsub('[LANG]', lang)
           include_prefix = lang_prefix + '_includes/'
         else
@@ -122,9 +131,7 @@ module Jekyll
         if (!File.exist?(path))
           path.gsub!(lang_prefix, '/')
         end
-
         return unless path
-
         partial = Liquid::Template.parse(read_file(path, context))
 
         context.stack do

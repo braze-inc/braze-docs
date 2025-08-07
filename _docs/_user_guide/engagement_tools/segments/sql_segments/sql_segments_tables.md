@@ -40,6 +40,7 @@ Table | Description
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a campaign
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue within the primary conversion period
+[USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | When a user progresses to a Canvas step
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | When a user converts for a Canvas conversion event
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | When a user enters a Canvas
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | When a user exits a Canvas because they match audience exit criteria
@@ -480,6 +481,30 @@ Field | Type | Description
 
 ## Canvas
 
+### USERS_CANVASSTEP_PROGRESSION_SHARED {#USERS_CANVASSTEP_PROGRESSION_SHARED}
+
+| Field                                  | Type                     | Description                                                                                                     |
+| -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                                                               |
+| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                                                                   |
+| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                                                              |
+| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous                                            |
+| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                                                                   |
+| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                                                                    |
+| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                                                      |
+| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                                                     |
+| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to        |         
+| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                                                            |
+| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                                                                 |
+| `progression_type`                     | `string`,&nbsp;`null`    | Type of step progression event |
+| `is_canvas_entry`                      | `boolean`,&nbsp;`null`   | Whether this is entry into a first step in a Canvas        |
+| `exit_reason`                          | `string`,&nbsp;`null`    | If this is an exit, the reason a user exited the canvas during the step                  |
+| `canvas_entry_id`                      | `string`,&nbsp;`null`    | Unique identifier for this instance of a user in a Canvas  |
+| `next_step_id`                         | `string`,&nbsp;`null`    | BSON ID of the next step in the canvas |
+| `next_step_api_id`                     | `string`,&nbsp;`null`    | API ID of the next step in the Canvas |
+| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
 | Field                                  | Type                     | Description                                                                                                     |
@@ -679,7 +704,7 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -850,7 +875,7 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1146,7 +1171,7 @@ Field | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1252,7 +1277,7 @@ Field | Type | Description
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1332,7 +1357,7 @@ Field | Type | Description
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `string` | Platform of the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1530,7 +1555,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `subscription_group_api_id` | `null,`&nbsp;`string` | External ID of the subscription group
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1756,7 +1781,7 @@ Field | Type | Description
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1809,7 +1834,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

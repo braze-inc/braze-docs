@@ -85,7 +85,7 @@ Workspaces have independent access and user permission definitions. [User permis
 
 #### Currents connectors
 
-The [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) tool is a real-time data stream of your engagement events that is the most robust yet granular export out of the Braze platform. Currents connectors are included with certain Braze packages, and you might have initially received one, assuming a single workspace.
+The [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) tool is a real-time data stream of your engagement events that is the most robust yet granular export out of the Braze platform. Currents connectors are included with certain Braze packages, and you might have initially received one, assuming a single workspace.
 
 When you're deciding between creating separate or combined workspaces, it's important to think about the number of Currents connectors you have, as Currents connectors are not shared across workspaces. 
 
