@@ -192,6 +192,12 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 
 Braze needs a certain amount of engagement data to make a good estimate. If there isn't enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
 
+### Impact of time zone on Intelligent Timing delivery
+
+Intelligent Timing relies on the specified local time zone of each user, so the scheduled delivery date and time may vary across users.
+
+If users don't receive messages as expected, check that the time zone field in their profile is populated correctly. If the time zone field is empty, the user may receive messages that align with the company's time zone instead of their local time.
+
 ### Sending past the scheduled date
 
 Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.

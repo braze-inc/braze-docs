@@ -213,7 +213,7 @@ braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds
 
 ## Manuelles Auslösen von Nachrichten
 
-Standardmäßig werden In-App-Nachrichten automatisch getriggert, wenn das SDK ein angepasstes Event protokolliert. Darüber hinaus können Sie Nachrichten jedoch auch manuell triggern, indem Sie die folgenden Methoden verwenden.
+Standardmäßig werden In-App-Nachrichten automatisch getriggert, wenn das SDK ein angepasstes Event protokolliert. Darüber hinaus können Sie Nachrichten aber auch manuell triggern, indem Sie die folgenden Methoden verwenden.
 
 ### Ein serverseitiges Ereignis verwenden
 
@@ -223,7 +223,7 @@ Um eine In-App-Nachricht über ein vom Server gesendetes Ereignis auszulösen, s
 
 #### Schritt 1: Erstellen Sie einen Push-Callback, um den stillen Push zu empfangen
 
-Registrieren Sie Ihren angepassten Push-Callback, um auf eine bestimmte stille Push-Benachrichtigung zu warten. Weitere Informationen finden Sie unter [Standard Android Push Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback).
+Registrieren Sie Ihren angepassten Push-Callback, um auf eine bestimmte stille Push-Benachrichtigung zu warten. Weitere Informationen finden Sie unter [Standard Android Push-Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback).
 
 Für die zuzustellende In-App-Nachricht werden zwei Events protokolliert, eines vom Server und eines von Ihrem angepassten Push-Callback. Um sicherzustellen, dass dasselbe Event nicht doppelt vorkommt, sollte das von Ihrem Push Callback protokollierte Event einer generischen Namenskonvention folgen, z. B. "In-App-Nachricht triggern", und nicht denselben Namen tragen wie das vom Server gesendete Event. Andernfalls können die Segmentierung und die Nutzerdaten dadurch beeinträchtigt werden, dass für eine einzelne Nutzer:innen-Aktion doppelte Ereignisse protokolliert werden.
 
