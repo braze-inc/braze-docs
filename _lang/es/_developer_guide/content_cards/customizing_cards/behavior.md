@@ -25,12 +25,12 @@ No recomendamos enviar valores JSON anidados como pares clave-valor. En su lugar
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Los pares clave-valor se almacenan en objetos <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> como `extras`. Se pueden utilizar para enviar datos hacia abajo junto con una tarjeta para su posterior manipulación por la aplicación. Llama a <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> para acceder a estos valores.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Los pares clave-valor se almacenan en objetos <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> como `extras`. Se pueden utilizar para enviar datos hacia abajo junto con una tarjeta para su posterior manipulación por la aplicación. Llama a <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> para acceder a estos valores.
 
@@ -82,7 +82,7 @@ Las señales son pequeños iconos ideales para llamar la atención del usuario. 
 Puedes mostrar el número de tarjetas de contenido no leídas que tiene tu usuario como una señal en el icono de tu aplicación. 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Puedes solicitar el número de tarjetas no leídas en cualquier momento llamando por teléfono:
 
@@ -107,7 +107,7 @@ Puedes utilizar esta información para mostrar una señal que indique cuántas t
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 El siguiente ejemplo utiliza `braze.contentCards` para solicitar y mostrar el número de tarjetas de contenido no leídas. Una vez cerrada la aplicación y finalizada la sesión del usuario, este código solicita un recuento de tarjetas, filtrando el número de tarjetas en función de la propiedad `viewed`.
 
