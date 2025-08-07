@@ -12,18 +12,18 @@ description: "Aprende a gestionar la recopilación de datos para el SDK de Braze
 
 {% sdktabs %}
 {% sdktab android %}
- developer_guide/android/analytics/managing_data_collection.md %}
+{% multi_lang_include developer_guide/android/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/swift/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab web %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/unreal_engine/analytics/managing_data_collection.md %}
 {% endsdktab %}
 {% endsdktabs %}
