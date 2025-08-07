@@ -18,10 +18,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/in_app_messages/troubleshooting.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/in_app_messages/troubleshooting.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
