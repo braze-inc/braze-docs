@@ -1,7 +1,7 @@
 ---
 nav_title: Configuración de ID de usuario
 article_title: Configuración de ID de usuario a través del SDK de Braze
-page_order: 1.2
+page_order: 1.1
 description: "Aprende a configurar ID de usuario a través del SDK de Braze."
 
 ---
@@ -16,7 +16,7 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 
 ## Acerca de los usuarios anónimos
 
-{% multi_lang_include anonymous_users/about_anonymous_users.md %}
+{% multi_lang_include usuarios_anonimos/sobre_usuarios_anonimos.md %}
 
 ## Configuración de un ID de usuario
 
@@ -102,7 +102,7 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### Cómo funcionan
 
-% multi_lang_include anonymous_users/about_user_aliases.md %}
+{% multi_lang_include usuarios_anonimos/sobre_alias_usuario.md %}
 
 ### Configuración de un alias de usuario
 
