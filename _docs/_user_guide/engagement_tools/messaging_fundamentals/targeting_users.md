@@ -153,6 +153,6 @@ This way, a qualifying purchase both meets the filter and triggers the message�
 - Make sure the audience segment includes users before the entry criteria occurs
 - Avoid using audience filters that only apply after your event. If a filter depends on something that happens at the time of the trigger (like “session count = 0”), the user may no longer qualify by the time Braze checks.
 - Use time-based logic thoughtfully. For example, if you want to target new users:
-    - Set your target audience to “first used app within the last 7 days”
-    - Set your entry event to “session start”
+    - Set your target audience to “first used app within the last 7 days”.
+    - Set your entry event to “session start”.
     - That way, only users who are still within their first week will qualify and enter when they start a session.
