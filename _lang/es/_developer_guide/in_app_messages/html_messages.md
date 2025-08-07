@@ -17,6 +17,6 @@ description: "Aprende a añadir la interfaz JavaScript de Braze a tu aplicación
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/in_app_messages/html_messages.md %}
+guide/swift/in_app_messages/html_messages.md developer_ %}
 {% endsdktab %}
 {% endsdktabs %}
