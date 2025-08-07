@@ -8,7 +8,7 @@ page_type: reference
 
 # Erstellen von Banner Card Kampagnen
 
-> Lernen Sie, wie Sie Bannerkarten erstellen, wenn Sie eine Kampagne in Braze erstellen. Weitere allgemeine Informationen finden Sie unter [Über Bannerkarten]({{site.baseurl}}/developer_guide/banner_cards/).
+> Lernen Sie, wie Sie Bannerkarten erstellen, wenn Sie eine Kampagne in Braze erstellen. Weitere allgemeine Informationen finden Sie unter [Über Bannerkarten]({{site.baseurl}}/developer_guide/banners/).
 
 {% alert important %}
 Banner-Cards befinden sich derzeit in der Early Access-Phase. Wenden Sie sich an Ihren Braze Account Manager, wenn Sie an der Early-Access-Phase teilnehmen möchten.
@@ -41,7 +41,7 @@ Um Ihre Bannerkarte zu verfassen, wählen Sie **Nachricht bearbeiten**. Hier kö
 
 Sie können Blöcke und Zeilen per Drag-and-Drop in den Canvas-Bereich ziehen, um mit der Erstellung Ihrer Nachricht zu beginnen. Um die Eigenschaften des Hintergrunds Ihrer Nachricht, die Einstellungen für den Rahmen und mehr anzupassen, wählen Sie **Stile**. Wenn Sie nur den Stil für einen bestimmten Block oder eine bestimmte Zeile anpassen möchten, wählen Sie ihn aus, um Änderungen vorzunehmen.
 
-![Style Panel des Banner Card Composers.]({% image_buster /assets/img/banner_cards/banner_card_styles.png %})
+![Style Panel des Banner Card Composers.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
 #### Schritt 2.2: Verhalten beim Klicken definieren
 
