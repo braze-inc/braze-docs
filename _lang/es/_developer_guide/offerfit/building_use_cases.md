@@ -7,4 +7,4 @@ description: "Aprende a construir un caso de uso de OfferFit, para que puedas au
 noindex: true
 ---
 
-{% multi_lang_include ofertfit/construccion_casos_de_uso.md %}
+{% multi_lang_include offerfit/building_use_cases.md %}
