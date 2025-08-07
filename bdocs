@@ -101,9 +101,23 @@ require_yarn() {
 }
 
 # Stop commands that are unsupported in the hidden repository.
+# Add more commands to this list as needed.
+readonly UNSUPPORTED_HIDDEN_COMMANDS="release,ulinks,mredirects,fblinks,lredirects"
+
 not_supported_for_hidden() {
-    echo "error: '$1' is not supported in the braze-docs-hidden repository."
-    exit 1
+  local cmd="$1"
+  local repo_url
+  repo_url="$(git config --get remote.origin.url)"
+
+  if [[ "$repo_url" == *"braze-inc/braze-docs-hidden"* ]]; then
+    IFS=',' read -ra blocked_cmds <<< "$UNSUPPORTED_HIDDEN_COMMANDS"
+    for blocked in "${blocked_cmds[@]}"; do
+      if [[ "$cmd" == "$blocked" ]]; then
+        echo "error: '$cmd' is not supported in the braze-docs-hidden repository."
+        exit 1
+      fi
+    done
+  fi
 }
 
 # Fetch the latest changes from the remote quietly.
@@ -150,6 +164,9 @@ logger() {
 
     return $exit_code
 }
+
+# Always check if the command is unsupported in hidden repo
+not_supported_for_hidden "$1"
 
 # Argument parsing
 case $1 in

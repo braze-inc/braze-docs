@@ -82,7 +82,7 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | --- | --- |
 | Conversion metrics | Available for Campaigns, Canvases, Campaigns and Canvases. |
 | Entries | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
-| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. |
+| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. Only displays for scheduled campaigns—does not populate for action-based or API-triggered campaigns. |
 | Sends | Available for each relevant channel. |
 | Messages Sent | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Subject line | Available for email Campaigns with **Variant** drilldown, Canvases, and Canvases with **Variant** drilldown. |

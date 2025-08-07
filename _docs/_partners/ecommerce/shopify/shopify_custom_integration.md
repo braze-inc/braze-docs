@@ -39,7 +39,7 @@ The shop must be named “Shopify” or the integration may not work properly.
 
 ### Step 2: Add subdomain and environmental variables {#step-2}
 
-1. Set up your Shopify subdomain to [redirect traffic from your online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic/).  
+1. Set up your Shopify subdomain to [redirect traffic from your online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic).  
 2. Add a [callback URI](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen#step-2-set-up-the-environment) for login. (The URI will automatically be added when the domain is added.)
 3. Set up your [Shopify environment variables](https://shopify.dev/docs/storefronts/headless/hydrogen/environments#create-a-new-environment-variable):
   - Create two environment variables using the values from the website app you created in [Step 1](#step-1).

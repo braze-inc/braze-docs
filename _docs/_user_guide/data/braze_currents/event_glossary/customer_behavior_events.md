@@ -1267,4 +1267,20 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 {% endtab %}
 {% endtabs %}
 
+#### Property details
+
+- The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push.
+  - If the user explicitly allowed push notification permission on their device, this will be `false`, and the token is able to receive foreground push notifications.
+  - If the user explicitly denied push notification permission on their device, this will be `true`, and the token is only allowed with background push notifications.
+  - If the push permission is unknown, this will be empty. By default, Braze will attempt to send foreground push notifications to the token.
+- The `push_token_provisionally_opted_in` field only applies to iOS push tokens. 
+  - If you have [Provisional Authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) set up, provisional tokens will have this field set to `true`. All other push tokens will be `false`.
+- Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events ("add", "update", and "remove") recorded in the `push_token_state_change_type` field. Note the following details:
+  - For a new token that hasn't existed before, this ingests one "add" event.
+  - For updating the token with the same token string on the same user (gateway or `foreground_push_disabled` or other "secondary" fields changed), this will ingest one "update" event on the same token.
+  - If a token moved from one user to another user, this will ingest one "remove" event for the old user and one "add" event for the new user.
+  - If the same user or device generates a new token, this will ingest one "remove" event for the old token and one "add" event for the new token.
+  - If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one "remove" event for the token.
+
+
 {% endapi %}
