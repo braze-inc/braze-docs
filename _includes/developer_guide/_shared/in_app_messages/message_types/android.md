@@ -1,3 +1,4 @@
+
 {% tab android %}
 Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2) icons, click actions, analytics, color schemes, and more.
 

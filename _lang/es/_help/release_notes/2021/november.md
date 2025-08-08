@@ -8,7 +8,7 @@ description: "Este artículo contiene notas de la versión de noviembre de 2021.
 # Noviembre de 2021
 
 ## Métrica de informe de la tasa de clics abiertos
-Braze ha añadido una nueva métrica de correo electrónico, la tasa de clics abiertos, disponible en el [generador de informes]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/). Esta métrica representa el porcentaje de correos electrónicos abiertos en los que se ha hecho clic.
+Braze ha añadido una nueva métrica de correo electrónico, la tasa de clics abiertos, disponible en el [generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/). Esta métrica representa el porcentaje de correos electrónicos abiertos en los que se ha hecho clic.
 
 ## Métrica de notificación de aperturas de máquina
 

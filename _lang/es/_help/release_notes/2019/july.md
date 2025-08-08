@@ -48,7 +48,7 @@ Ahora puedes elegir [cuándo un usuario avanza]({{site.baseurl}}/user_guide/enga
 
 ### Mensajes dentro de la aplicación en Canvas
 
-¡[Los mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) ya están disponibles en Canvas! Añade un paso en Canvas y explora los canales disponibles para añadir un mensaje dentro de la aplicación.
+¡[Los mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) ya están disponibles en Canvas! Añade un paso en Canvas y explora los canales disponibles para añadir un mensaje dentro de la aplicación.
 
 # A principios de este mes
 
@@ -58,7 +58,7 @@ Estamos eliminando las fotos de perfil de usuario que aparecen en los perfiles d
 
 ## Contenido conectado en tarjetas de contenido
 
-Ahora puedes utilizar cadenas y funciones de [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) en las [tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/).
+Ahora puedes utilizar cadenas y funciones de [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) en las [tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/).
 
 Las llamadas de Contenido conectado a servidores externos se producirán cuando se envíe realmente una tarjeta, no cuando el usuario vea la tarjeta. Al igual que en el correo electrónico, el contenido dinámico se calculará y determinará en el momento del envío, y no cuando se visualice realmente una tarjeta.
 
@@ -70,7 +70,7 @@ Para establecer un valor `null` para la dirección "responder a" de un mensaje e
 
 ## Comparaciones de campañas
 
-Mira [varias campañas a la vez para comparar su rendimiento relativo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), una al lado de la otra en Braze, ¡en una sola ventana!
+Mira [varias campañas a la vez para comparar su rendimiento relativo]({{site.baseurl}}/report_builder/), una al lado de la otra en Braze, ¡en una sola ventana!
 
 ## Plantilla del ID de envío en mensajes con Liquid
 
@@ -92,4 +92,4 @@ El filtro "Mostrar sólo las mías" de la parrilla de campañas permanecerá act
 
 ## Actualizaciones de las pruebas A/B
 
-Puedes enviar una única [prueba A/B]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) con hasta ocho variantes (y un control opcional) a un porcentaje especificado por el usuario de la audiencia de una campaña, y luego enviar la mejor variante a la audiencia restante a una hora programada previamente.
+Puedes enviar una única [prueba A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) con hasta ocho variantes (y un control opcional) a un porcentaje especificado por el usuario de la audiencia de una campaña, y luego enviar la mejor variante a la audiencia restante a una hora programada previamente.

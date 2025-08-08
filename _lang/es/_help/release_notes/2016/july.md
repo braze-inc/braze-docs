@@ -14,9 +14,9 @@ Esta actualización te facilita el uso del Registro de mensajes de error de la c
 
 ## Añadida marca de tiempo para el último push de seguimiento de desinstalación enviado
 
-Braze detecta las desinstalaciones enviando un push silencioso a las aplicaciones de un cliente para ver qué dispositivos responden. Esta característica añade una marca de tiempo discreta que indica cuándo se ejecutó por última vez el seguimiento de la desinstalación. Esta marca de tiempo se encuentra en tu página de Configuración, donde está configurado el seguimiento de desinstalaciones. Más información sobre [Uninstall Tracking]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking).
+Braze detecta las desinstalaciones enviando un push silencioso a las aplicaciones de un cliente para ver qué dispositivos responden. Esta característica añade una marca de tiempo discreta que indica cuándo se ejecutó por última vez el seguimiento de la desinstalación. Esta marca de tiempo se encuentra en tu página de Configuración, donde está configurado el seguimiento de desinstalaciones. Más información sobre [Uninstall Tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
-![Casilla Uninstall Tracking][6]
+![Casilla Uninstall Tracking]({% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %})
 
 ## Añadidas mejoras en las pruebas de webhooks
 
@@ -24,13 +24,11 @@ Ahora puedes probar el envío de un mensaje de webhook en vivo desde Braze antes
 
 ## Añadida la variación de mensajes recibidos a la exportación CSV de destinatarios de campaña
 
-Hemos añadido una columna que indica la variación del mensaje recibido a la exportación CSV de Destinatarios de campaña. Más información sobre la [exportación de datos]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data) desde Braze.
+Hemos añadido una columna que indica la variación del mensaje recibido a la exportación CSV de Destinatarios de campaña. Más información sobre la [exportación de datos]({{site.baseurl}}/user_guide/data/export_braze_data/) desde Braze.
 
 ## Límite aproximado del número de impresiones
 
 Una vez que un mensaje dentro de la aplicación haya recibido un determinado número de impresiones, Braze dejará de permitir que los usuarios sean elegibles para recibir el mensaje. Más información sobre la configuración de [límites de impresiones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap) aproximados.
 
-![Tapa de impresión IAM][11]
+![Gorra de impresión IAM]({% image_buster /assets/img_archive/approx_limit_for_IAM.png %})
 
-[6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
-[11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

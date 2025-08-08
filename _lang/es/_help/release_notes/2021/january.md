@@ -17,7 +17,7 @@ Esta guía detallada explica cómo aprovechar las subclases para crear mensajes 
 
 ## Categorías de palabras clave personalizadas por SMS y opciones de reorientación
 
-Braze ha ampliado nuestras capacidades nativas de SMS para incluir la posibilidad de añadir palabras clave personalizadas para mensajería bidireccional, categorías personalizadas para palabras clave, compatibilidad con varios idiomas y opciones de reorientación y filtrado de palabras clave. Para saber más sobre el procesamiento de palabras clave por SMS, visita nuestra [documentación sobre SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/). 
+Braze ha ampliado nuestras capacidades nativas de SMS para incluir la posibilidad de añadir palabras clave personalizadas para mensajería bidireccional, categorías personalizadas para palabras clave, compatibilidad con varios idiomas y opciones de reorientación y filtrado de palabras clave. Para saber más sobre el procesamiento de palabras clave por SMS, visita nuestra [documentación sobre SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/). 
 
 ## La asociación con Playable está en vivo
 
