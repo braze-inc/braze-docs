@@ -20,7 +20,7 @@ Before you start, you'll need the following:
 | MCP Client | An MCP client to connect with Braze. Recommended options: Claude Desktop (marketers) or Cursor (technical roles). |
 | Base URL | Your REST endpoint URL, available on your API key page in the Braze dashboard. |
 | API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
-| Terminal | DESCRIPTION. |
+| Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that comes pre-installed on your computer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Setting up Braze MCP server
