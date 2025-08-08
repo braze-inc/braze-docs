@@ -29,13 +29,13 @@ Para añadir un nuevo usuario:
 El departamento que figura en el perfil de un usuario determina los tipos de comunicaciones que recibe de Braze. De este modo, todo el mundo recibe únicamente las comunicaciones y alertas que son relevantes para su uso de Braze.
 {% endalert %}
 
-![][2]
+![Campos de detalles del usuario.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. Para los usuarios que no son administradores, seleccione los [permisos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) a nivel de empresa y a nivel de espacio de trabajo que desea que tenga este usuario.
 
-![][3]
+![Permisos a nivel de espacio de trabajo con una sección para campos de permisos personalizados.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Requisitos de la dirección de correo electrónico
 
@@ -53,11 +53,11 @@ Al suspender a un usuario, su cuenta pasa a un estado inactivo, en el que el usu
 
 Para suspender a un usuario, ve a **Configuración** > **Usuarios de la empresa**, busca su nombre de usuario y selecciona <i class="fa-solid fa-user-lock"></i> **Suspender**.
 
-![Suspender un usuario][4]
+![Opción de suspender a un usuario.]({% image_buster /assets/img_archive/suspend_user.png %})
 
 Los administradores también pueden suspender a un usuario seleccionando su nombre en la lista y haciendo clic en **Suspender usuario** en el pie de página.
 
-![Suspender un usuario al editar los detalles del usuario.][5]
+![Suspender a un usuario al editar los detalles del usuario.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Asignar acceso y responsabilidades a los usuarios
 
@@ -67,7 +67,7 @@ Los administradores también pueden suspender a un usuario seleccionando su nomb
 
 Para eliminar un usuario, vaya a **Configuración** > **Usuarios de la empresa**, busque su nombre de usuario y seleccione <i class="fa fa-trash-can"></i> **Eliminar usuario**.
 
-![Eliminar un usuario][34]
+![Borrar un usuario]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 Una vez eliminado un usuario, Braze no conserva ninguno de los siguientes datos de cuenta:
 
@@ -98,10 +98,3 @@ Para crear este nuevo usuario, puedes hacer una de las dos cosas siguientes:
 
 Si no recibes la activación del mensaje en tu buzón de entrada al utilizar `testing+01@braze.com`, confirma con tu equipo de TI que puedes aceptar mensajes de ese tipo de dirección de correo electrónico. Algunos administradores filtran los mensajes enviados a direcciones de correo electrónico con una dirección `+`.
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-[27]: {% image_buster /assets/img/add-user.gif %} "Añadir un nuevo proceso de usuario"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}

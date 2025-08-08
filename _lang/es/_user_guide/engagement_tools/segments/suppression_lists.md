@@ -76,7 +76,7 @@ Sólo los administradores pueden guardar o activar listas de supresión. Puedes 
 
 Puedes desactivar o archivar las listas de supresión cuando ya no las necesites. 
 - Para desactivarla, selecciona una lista de supresión activa y elige **Desactivar**. Las listas de supresión desactivadas pueden reactivarse más tarde.
-- Para archivar, hazlo desde la página **Listas de supresión**.
+- Para archivar, hazlo desde la página **Listas de Supresión**.
 
 ## Uso de la lista de supresión
 

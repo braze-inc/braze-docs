@@ -20,10 +20,10 @@ Los segmentos de catálogo utilizan SQL para unir datos de catálogos y datos de
 
 ## Creación de un segmento de catálogo
 
-1. Vaya a **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con plantilla** y seleccione la plantilla **Segmento de catálogo**. <br>![Modal con "Segmento de catálogo" seleccionado como plantilla a crear.][1]{: style="max-width:70%" }
+1. Ve a **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con plantilla** y selecciona una plantilla. <br>![Modal con la opción de crear un segmento de catálogo para eventos o compras.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
-2\. El editor SQL se rellena automáticamente con una plantilla. <br>![Editor SQL con una plantilla pregenerada.][2]{: style="max-width:70%" }<br>Esta plantilla une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que han interactuado con determinados artículos del catálogo.
+2\. El editor SQL se rellena automáticamente con una plantilla. <br>![Editor SQL con una plantilla pregenerada.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>Esta plantilla une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que han interactuado con determinados artículos del catálogo.
 
 3. Utilice la pestaña **Variables** para proporcionar los campos necesarios para su plantilla antes de generar su segmento. <br>Para que Braze identifique a los usuarios en función de su compromiso con los artículos del catálogo, debe hacer lo siguiente: <br> \- Seleccione un catálogo que contenga un campo de catálogo <br> \- Seleccione un evento personalizado que contenga una propiedad de evento <br> \- Haga coincidir los valores de las propiedades de los campos y eventos de su catálogo
 
@@ -43,6 +43,28 @@ Estas son las pautas para seleccionar las variables:
 - `Value`: Un valor específico dentro de ese campo o columna <br><br> Usando la aplicación de salud como ejemplo, digamos que dentro del catálogo de cada médico que podrías reservar, hay un campo llamado `specialty` que contiene un valor como `vision` o `dental`. Para segmentar a los usuarios que han visitado algún médico con el valor `dental`, puede seleccionar `specialty` como el `Catalog field`, y seleccionar `dental` como el `Value`.
 
 5. Después de crear un Segmento SQL, recomendamos hacer clic en **Ejecutar Vista Previa** para ver si su consulta devuelve usuarios o si hay errores. Para obtener más información sobre [la vista previa de los resultados de las consultas]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), la gestión de [las extensiones de segmentos SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), etc., consulta [Extensiones de segmentos SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+
+{% alert note %}
+Si vas a crear un segmento SQL que utilice la tabla `CATALOGS_ITEMS_SHARED`, debes especificar un ID de catálogo. Por ejemplo:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
+
+## Actualizar la membresía de segmentos
+
+Para actualizar la pertenencia a un segmento de cualquier segmento del catálogo, abre el segmento del catálogo y selecciona **Acciones** > **Actualizar** > **Sí, Actualizar**.
+
+{% alert tip %}
+Si has creado un segmento en el que esperas que los usuarios entren y salgan con regularidad, actualiza manualmente el segmento del catálogo que utiliza antes de dirigirte a ese segmento en una campaña o Canvas.
+{% endalert %}
+
+### Designar configuración de actualización
+
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## Casos de uso
 
@@ -100,5 +122,3 @@ Sí. Del mismo modo que las Extensiones de Segmento SQL cuentan para su asignaci
 
 Póngase en contacto con su gestor de atención al cliente o con [el servicio de asistencia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obtener más información.
 
-[1]: {% image_buster /assets/img/catalog-segments-template.png %}
-[2]: {% image_buster /assets/img/catalog-segments-editor.png %}

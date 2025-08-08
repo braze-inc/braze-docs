@@ -15,7 +15,6 @@ channel:
 
 > Obtenga información sobre Push Max y cómo puede utilizar esta función para mejorar potencialmente la capacidad de entrega de las notificaciones push de Android a los [dispositivos OEM chinos]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
-
 ## ¿Qué es Push Max?
 
 Push Max amplifica las notificaciones push de Android siguiendo las notificaciones push fallidas y reenviando la notificación push cuando el usuario tenga más probabilidades de recibirla.
@@ -26,7 +25,7 @@ Algunos dispositivos Android fabricados por fabricantes chinos de equipos origin
 
 - Disponible sólo para las notificaciones push de Android
 - No compatible con mensajes basados en acciones o activados por la API
-- No se admite cuando se selecciona la opción de [enviar sólo al último dispositivo utilizado por el usuario]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options).
+- No se admite cuando se selecciona la opción de [enviar sólo al último dispositivo utilizado por el usuario]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options).
 
 ## Requisitos previos
 
@@ -75,7 +74,7 @@ Time to Live (TTL) puede rastrear notificaciones push fallidas a Firebase Cloud 
 
 Por defecto, el tiempo de vida está fijado en 28 días, que es el máximo. Puede reducir el TTL predeterminado para todos los nuevos mensajes push de Android desde **Configuración** > **Configuración del área de trabajo** > **Tiempo de vida (TTL) de push**, o puede configurar el número de días por mensaje en la pestaña **Configuración** al redactar una notificación push de Android.
 
-![Campo Tiempo de vida configurado a 28 días.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+![Campo Tiempo de vida configurado a 28 días.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## Lo que hay que saber
 

@@ -77,11 +77,17 @@ Al seleccionar un campo para una de estas transformaciones, dicha transformació
 
 ### Paso 6: Pruebe su integración
 
-Puedes probar tu integración o echar un vistazo a los datos de muestra de Currents en nuestro [repositorio GitHub](https://github.com/Appboy/currents-examples) de ejemplos de Currents.
-
 {% alert important %}
 Currents eliminará los eventos con cargas útiles excesivamente grandes, superiores a 900 KB.
 {% endalert %}
+
+Antes de probar, considera la posibilidad de consultar nuestros [datos Currents de muestra en GitHub](https://github.com/Appboy/currents-examples). Cuando estés listo para hacer la prueba, elige una opción a continuación:
+
+#### Envío de eventos de prueba
+
+Para probar tu integración, puedes seleccionar **Enviar Eventos de Prueba** para enviar un evento de cada uno de los tipos de evento seleccionados a esta Corriente. Para obtener información detallada sobre cada tipo de evento, consulta nuestras bibliotecas [Eventos de comportamiento del cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) y [Eventos de interacción con los]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) [clientes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/).
+
+![La página "Prueba de Currents" en el panel de Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Comprobación de los conectores Currents
 
@@ -92,7 +98,7 @@ Los conectores Test Currents son versiones gratuitas de nuestros conectores exis
 
 Después de que sus conectores Test Currents alcancen el límite de envío, su conector no enviará eventos hasta el siguiente periodo de siete días.
 
-Para actualizar tu conector de prueba Currents, edita la integración en el panel y selecciona **Actualizar**.
+Para actualizar tu conector de Test Currents, edita la integración en el panel y selecciona **Actualizar integración de Test**.
 
 ## Actualizar corrientes
 

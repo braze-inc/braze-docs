@@ -38,7 +38,7 @@ Para crear un alias de enlace, siga estos pasos:
 
 También puede establecer un alias que se utilizará para hacer referencia a un enlace específico cuando se trate de informes o segmentación. 
 
-![Página de gestión de enlaces con cuatro aliasing de enlaces.][2]
+![Página de administración de enlaces con cuatro aliasing de enlaces.]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 El alias de enlace sólo se admite en los atributos `href` dentro de las etiquetas de anclaje HTML, donde es seguro añadir un parámetro de consulta. Es una buena práctica incluir un signo de interrogación (?) al final de tu enlace para que Braze pueda añadir fácilmente el valor `lid`. Sin añadir el valor `lid`, Braze no reconocerá la URL para el alias de enlace.
@@ -57,7 +57,7 @@ Si utiliza la [navegación anterior]({{site.baseurl}}/user_guide/administrative/
 
 Aquí puedes ordenar, buscar y desactivar el seguimiento de aliasing de enlaces.
 
-![Página de aliasing de enlaces con seguimiento que muestra dos aliasing de enlaces llamados "TechPartners" y "Ayuda" que están asociados a una campaña llamada "Email_Survey".][8]
+![Página de aliasing de enlaces con seguimiento que muestra dos aliasing de enlaces llamados "TechPartners" y "Help" que están asociados a una campaña llamada "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Utiliza el [alias de enlace de lista para campaña]({{site.baseurl}}/get_campaign_link_alias/) y el [ alias de enlace de lista para puntos finales de Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extraer el conjunto `alias` en cada variante de mensaje de una campaña o de un componente Canvas específico de correo electrónico.
@@ -147,7 +147,7 @@ Braze sólo rastrea hasta los últimos 100 alias de enlaces en los que se ha hec
  
 Puedes crear mensajes basados en acciones dirigidos a cualquier enlace (con o sin seguimiento) o reorientar a los usuarios en función de si han hecho clic en un alias a través de cualquier campaña de correo electrónico o componente de Canvas.
 
-![Opciones basadas en acciones para dirigirse a usuarios que han hecho clic en un alias de un componente Canvas o han interactuado con una campaña.][6]
+![Opciones basadas en acciones para dirigirse a usuarios que han hecho clic en un alias de un componente Canvas o han interactuado con una campaña.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### Filtros de segmentación
 
@@ -161,11 +161,11 @@ Los siguientes filtros de segmentación se aplican a los eventos de clic que son
 
 #### Enlaces no rastreables
 
-Al eliminar el seguimiento de un enlace no se reasignarán los segmentos existentes con el filtro al alias no rastreado. Los datos antiguos permanecerán en los perfiles de usuario hasta que sean sustituidos por datos más recientes.
+Al eliminar el seguimiento de un enlace no se reasignarán los segmentos existentes con el filtro al alias no rastreado. Los datos antiguos permanecerán en los perfiles de usuario hasta que sean sustituidos por datos más recientes. 
 
-A efectos de segmentación, por defecto sólo se pueden rastrear 100 enlaces por área de trabajo. Los enlaces de los mensajes archivados se anulan automáticamente. Sin embargo, si los mensajes archivados se desarchivan, será necesario volver a rastrear los enlaces. Cuando se rastrean los alias de enlaces, los informes de enlaces se indexan por el alias en lugar de por los dominios de nivel superior o las URL completas.
+Los enlaces de los mensajes archivados se anulan automáticamente. Sin embargo, si los mensajes archivados se desarchivan, será necesario volver a rastrear los enlaces. Cuando se rastrean los alias de enlaces, los informes de enlaces se indexan por el alias en lugar de por los dominios de nivel superior o las URL completas.
 
-![Pestaña de análisis de campaña que muestra tres aliasing de enlaces y sus clics totales.][1]
+![Pestaña de análisis de campaña que muestra tres aliasing de enlaces y sus clics totales.]({% image_buster /assets/img/link_aliasing_click_table.png %})
 
 ### Evento de clics de correo electrónico
 
@@ -224,7 +224,7 @@ Para las URL generadas por Liquid, como las declaraciones `assign` en el HTML o 
 
 ### Ejemplo
 
-Consulta este ejemplo de aliasing de enlaces para ver el formato recomendado del enlace:
+Consulta este ejemplo de aliasing de enlaces para ver el formato recomendado para el enlace:
 
 {% raw %}
 ```liquid
@@ -245,8 +245,3 @@ Si el enlace tiene parámetros que contienen un signo de interrogación (`?`), p
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}

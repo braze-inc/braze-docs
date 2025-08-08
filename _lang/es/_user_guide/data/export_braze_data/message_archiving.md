@@ -16,14 +16,14 @@ El archivado de mensajes está disponible como característica adicional. Para e
 
 ## Cómo funciona
 
-Cuando esta función está activada, si ha conectado un bucket de almacenamiento en la nube a Braze y lo ha marcado como destino predeterminado de exportación de datos, Braze escribirá un archivo JSON comprimido con gzip en su bucket de almacenamiento en la nube por cada mensaje enviado a un usuario a través de sus canales seleccionados (correo electrónico, SMS o push). 
+Cuando esta característica está activada, si has conectado un contenedor de almacenamiento en la nube a Braze y lo has marcado como destino predeterminado de exportación de datos, Braze escribirá un archivo JSON comprimido con gzip en tu contenedor de almacenamiento en la nube por cada mensaje enviado a un usuario a través de tus canales seleccionados (correo electrónico, SMS/MMS o push). 
 
 Este fichero contendrá los campos definidos en [Referencias de ficheros](#file-references) y reflejará los mensajes finales planificados enviados al usuario. Cualquier valor de plantilla definido en su campaña (por ejemplo, {% raw %}`{{${first_name}}}`{% endraw %}) mostrará el valor final que el usuario recibió basado en la información de su perfil. Esto te permite conservar una copia del mensaje enviado para satisfacer requisitos de cumplimiento, auditoría o atención al cliente.
 
 Si configuras credenciales para varios proveedores de almacenamiento en la nube, el archivado de mensajes sólo se exportará al marcado explícitamente como destino predeterminado de exportación de datos. Si no se proporciona ningún valor predeterminado explícito y se conecta un bucket de AWS S3, el archivado de mensajes se cargará en ese bucket.
 
 {% alert important %}
-Activar esta característica afectará a la velocidad de entrega de tus mensajes, ya que la carga del archivo se realiza inmediatamente antes del envío del mensaje para mantener la precisión. Esto introduce una latencia adicional en el canal de envío de Braze, lo que afecta a la velocidad de envío.
+Activar esta característica afectará a la velocidad de entrega de tus mensajes, ya que la carga del archivo se realiza inmediatamente antes de enviar el mensaje para mantener la precisión. La latencia introducida por el archivado de mensajes dependerá del proveedor de almacenamiento en la nube y del rendimiento y tamaño de los documentos guardados.
 {% endalert %}
 
 El JSON se guardará en su cubo de almacenamiento utilizando la siguiente estructura de claves:
@@ -49,7 +49,7 @@ Esta sección te guía en la configuración del archivo de mensajes para tu espa
 
 ### Paso 1: Conecta un contenedor de almacenamiento en la nube
 
-Si aún no lo has hecho, conecta un contenedor de almacenamiento en la nube a Braze. Para conocer los pasos, consulte la documentación de nuestros socios sobre [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) o [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/).
+Si aún no lo has hecho, conecta un contenedor de almacenamiento en la nube a Braze. Para conocer los pasos, consulte la documentación de nuestros socios sobre [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) o [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 ### Paso 2: Seleccionar canales para archivar mensajes
 
@@ -61,7 +61,7 @@ Para seleccionar canales:
 2. Selecciona tus canales.
 3. Seleccione **Guardar cambios**.
 
-![La página Archivado de mensajes tiene tres canales para seleccionar: Correo electrónico, Push y SMS.][1]
+![La página Archivado de mensajes tiene tres canales para seleccionar: Email, Push, and SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 Si no ve el **Archivo de mensajes** en **Configuración**, confirme que su empresa ha adquirido y activado el archivo de mensajes.
@@ -107,7 +107,7 @@ El campo `extras` al que se hace referencia en esta carga útil procede de los p
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab SMS %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -116,7 +116,7 @@ El campo `extras` al que se hace referencia en esta carga útil procede de los p
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
   "provider": StringOfProviderName,
-  "media_urls": ArrayOfString,
+  "media_urls": ArrayOfString, // indicates a message is MMS
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiId, // may not be available
@@ -168,7 +168,7 @@ Las modificaciones realizadas después de que el mensaje salga de Braze no se re
 
 ### ¿Qué mensajes hay bajo el valor "no asociado" en la ruta de la campaña?
 
-Cuando un mensaje se envía fuera de una campaña o Canvas, el ID de la campaña en el nombre del archivo será "no asociado". Esto ocurrirá cuando envíe mensajes de prueba desde el panel de control, cuando Braze envíe respuestas automáticas por SMS o cuando los mensajes enviados a través de la API no especifiquen un ID de campaña.
+Cuando un mensaje se envía fuera de una campaña o Canvas, el ID de la campaña en el nombre del archivo será "no asociado". Esto ocurrirá cuando envíes mensajes de prueba desde el panel, cuando Braze envíe autorespuestas SMS/MMS o cuando los mensajes enviados a través de la API no especifiquen un ID de campaña.
 
 ### ¿Cómo puedo encontrar más información sobre este envío?
 
@@ -186,4 +186,11 @@ Si tus credenciales de almacenamiento en la nube dejan de ser válidas en algún
 
 La copia renderizada se carga inmediatamente antes de enviar el mensaje al usuario. Debido a los tiempos de carga del almacenamiento en la nube, puede haber un retraso de unos segundos entre la marca de tiempo `sent_at` de la copia renderizada y el momento real en que se produce el envío.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}
+### ¿Puedo crear un nuevo contenedor específico para archivar mensajes manteniendo el contenedor actual utilizado para los datos de Currents?
+
+No. Si estás interesado en crear estos contenedores específicos, envía [tus comentarios sobre el producto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+### ¿Se escriben los datos archivados en una carpeta específica de un contenedor existente, de forma similar a como se estructuran las exportaciones de datos de Currents?
+
+Los datos se escriben en una sección `sent_messages` del contenedor. Consulta [Cómo funciona](#how-it-works) para más detalles.
+

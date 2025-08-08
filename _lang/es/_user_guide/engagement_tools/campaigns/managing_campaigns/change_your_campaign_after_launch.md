@@ -58,7 +58,7 @@ Esto restablece la elegibilidad de las personas que ya recibieron la campaña or
 
 ## Guardar borradores de campañas activas {#campaign-drafts}
 
-Los borradores son estupendos para hacer cambios a gran escala en las campañas activas. Al crear un borrador, puedes pilotar los cambios previstos antes de tu próximo lanzamiento.
+Los borradores son estupendos para hacer cambios a gran escala en campañas activas. Al crear un borrador, puedes pilotar los cambios previstos antes de tu próximo lanzamiento.
 
 {% alert note %}
 Una campaña sólo puede tener un borrador a la vez. Además, los análisis no están disponibles, ya que los cambios redactados aún no se han puesto en marcha.

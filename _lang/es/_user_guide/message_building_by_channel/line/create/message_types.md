@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 Cuando redactas un mensaje de LINE, puedes arrastrar y soltar tipos de mensajes en el compositor y luego personalizarlos.
 
-![Panel de tipos de mensaje con tipos de mensaje para arrastrar al editor compositor, incluyendo texto, imagen, mensaje enriquecido y mensaje basado en tarjeta.][5]{: style="max-width:40%;"}
+![Panel de tipos de mensajes con tipos de mensajes para arrastrar al editor del compositor, incluyendo texto, imagen, mensajes enriquecidos y mensajes basados en tarjetas.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## Texto
 
@@ -28,7 +28,7 @@ Los casos de uso incluyen:
 - Envía felicitaciones de cumpleaños personalizadas con tarjetas de promoción únicas
 - Comparte actualizaciones rápidas sobre próximos eventos
 
-![Un mensaje de texto que recuerda al usuario que no se olvide de la fiesta del Black Friday y de la posibilidad de ahorrar hasta un 80% antes de medianoche.][1]{: style="max-width:40%;"}
+![Un mensaje de texto que recuerda al usuario que no se olvide de la fiesta del Viernes Negro y de la posibilidad de ahorrar hasta un 80% antes de medianoche.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Imagen
 
@@ -39,7 +39,7 @@ Los casos de uso incluyen:
 - Destaca las promociones de final de temporada para animar a los usuarios a abastecerse de la ropa de invierno del año que viene con grandes ofertas
 - Inicia una cuenta atrás visual para una venta anual en toda la tienda
 
-![Un mensaje de imagen promocionando la venta de una tostadora.][2]{: style="max-width:40%;"}
+![Un mensaje de imagen promocionando la venta de una tostadora.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### Imagen URL
 
@@ -64,7 +64,7 @@ Los casos de uso incluyen:
 - Presenta un menú interactivo que inicie un pedido combinado seleccionando un artículo
 - Presenta varias promociones para que los usuarios las elijan seleccionando un cuadrado de la cuadrícula
 
-![Un mensaje rico en cuatro cuadrados con fotos de diferentes bocadillos en el editor compositor.][3]
+![Un mensaje enriquecido de seis cuadrados con una foto de una cuadrícula en blanco y negro que los usuarios pueden tocar para recibir una oferta aleatoria.]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### Mapa de imagen 
 
@@ -97,7 +97,7 @@ Los casos de uso incluyen:
 - Destaca las chaquetas más vendidas de esta temporada
 - Presentar una muestra de los utensilios y aparatos de cocina que se incluyen en un kit
 
-![Un mensaje basado en tarjetas con al menos dos tarjetas que promocionan pan y bocadillos en el editor del compositor.][4]
+![Un mensaje basado en tarjetas con al menos dos tarjetas que promueven bocadillos en el editor del compositor.]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### Mensaje
 
@@ -129,8 +129,3 @@ Los casos de uso incluyen:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
-[1]: {% image_buster /assets/img/line/line_text_message.png %}
-[2]: {% image_buster /assets/img/line/line_image_message.png %}
-[3]: {% image_buster /assets/img/line/line_rich_message.png %}
-[4]: {% image_buster /assets/img/line/line_card_message.png %}
-[5]: {% image_buster /assets/img/line/line_message_types.png %}

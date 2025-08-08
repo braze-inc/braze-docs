@@ -23,7 +23,7 @@ Con los bloques de contenido, puede:
 
 ## Crear un bloque de contenido
 
-Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y administrar tus bloques de contenido [utilizando la API][5].
+Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y gestionar tus bloques de contenido [utilizando la API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
 {% tab Arrastrar y soltar %}
@@ -80,7 +80,7 @@ Si quieres actualizar un Content Block para un solo mensaje o hacer una copia pa
 
 Después de editar un bloque de contenido, puedes guardar e iniciar el bloque de contenido actualizado seleccionando **Iniciar bloque de contenido**. También puede seleccionar **Más** > **Duplicar** para crear un duplicado de su Bloque de contenido.
 
-![Un bloque de contenido que diga "Bienvenido a nuestro boletín".][2]
+![Un bloque de contenido que dice "Bienvenido a nuestro boletín".]({% image_buster /assets/img/copy-content-block.png %})
 
 También puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) un Bloque de contenido. Esto crea una copia borrador del Bloque de Contenido.
 
@@ -90,7 +90,7 @@ Después de añadir un Bloque de Contenido en una campaña o Lienzo activo, pued
 
 Esta vista previa incluye información sobre el bloque de contenido, como quién lo creó, etiquetas, fecha de creación, fecha de la última edición, descripción, tipo de editor, recuento de inclusiones con detalles y una vista previa real del bloque de contenido.
 
-![Vista previa de un bloque de contenido "Entrenamiento_Promo" para ciclismo y baile que tiene seis inclusiones.][7]{: style="max-width:60%;"} 
+![Una vista previa de un bloque de contenido "Workout_Promo" para ciclismo y baile que tiene seis inclusiones.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Anidamiento de bloques de contenido
 
@@ -104,7 +104,7 @@ Además, los bloques de contenido no pueden utilizarse dentro de un pie de pági
 
 ### Archivar bloques de contenido
 
-![Menú desplegable de Configuración ampliado que muestra tres opciones: Archivar, Duplicar y Copiar en espacio de trabajo.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![Menú desplegable de Configuración ampliado que muestra tres opciones: Archivar, Duplicar y Copiar en el espacio de trabajo.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
 Una vez que haya terminado de utilizar un Bloque de contenido, puede archivarlo desde la página [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Los bloques de contenido archivados son de sólo lectura, así que desarchívelos antes de editarlos. Los bloques de contenido no pueden archivarse si se utilizan en algún mensaje.
 
@@ -115,11 +115,5 @@ Una vez que haya terminado de utilizar un Bloque de contenido, puede archivarlo 
 - Cuando tu bloque se utiliza en más mensajes de los que puedes gestionar razonablemente con la primera sugerencia de esta lista, te recomendamos eliminar todo el contenido del bloque y archivarlo. Esto garantizará que no se incluya información obsoleta en los nuevos correos electrónicos enviados.
 - Si accidentalmente archivas un bloque de contenido, puedes desarchivarlo.
 
-![Panel de bloques de contenido guardados en el que el menú desplegable de configuración de "Test_32" se amplía para mostrar tres opciones: Desarchivar, duplicar y copiar en el espacio de trabajo][4]
+![Panel de bloques de contenido guardados en el que el menú desplegable de configuración de "Test_32" se amplía para mostrar tres opciones: Desarchivar, Duplicar y Copiar en el espacio de trabajo]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

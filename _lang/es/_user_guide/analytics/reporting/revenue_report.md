@@ -16,7 +16,7 @@ Para ver un informe de sus ingresos desde el panel de control, vaya a **Análisi
 
 Puede personalizar su informe de ingresos seleccionando un intervalo de fechas, las aplicaciones sobre las que informar y los parámetros.
 
-![La página "Informe de ingresos" muestra el gráfico "Rendimiento en el tiempo" con "Ingresos" como parámetro.][1]
+![La página "Informe de ingresos" muestra el gráfico "Rendimiento en el tiempo" con "Ingresos" configurado como parámetro.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtrado por fecha y aplicaciones
 
@@ -80,8 +80,6 @@ Puedes ver los siguientes datos en el **Gráfico de rendimiento en el tiempo**:
 
 Consulte la tabla **Desglose de productos** para obtener una lista de los productos adquiridos durante el intervalo de fechas seleccionado, cuántos productos de cada tipo se adquirieron y cuántos ingresos generó cada producto.
 
-![La tabla "Desglose de productos" muestra las columnas "Nombre del producto", "Comprado" e "Ingresos".][2]
+![La tabla "Desglose de productos" que muestra las columnas "Nombre del producto", "Comprado" e "Ingresos".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

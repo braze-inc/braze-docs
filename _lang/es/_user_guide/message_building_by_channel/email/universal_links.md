@@ -265,7 +265,7 @@ A continuación, asegúrate de que tu aplicación está configurada para gestion
 
 ### Desactivar el seguimiento de clics enlace a enlace
 
-Puedes desactivar el seguimiento de clics para enlaces específicos añadiendo código HTML a tu mensaje de correo electrónico en el editor HTML o a los componentes en el editor de arrastrar y soltar.
+Puedes desactivar el seguimiento de clics para enlaces específicos añadiendo código HTML a tu mensaje de correo electrónico para el editor HTML o a un bloque HTML para el editor de arrastrar y soltar.
 
 #### SendGrid
 
@@ -281,6 +281,14 @@ Si tu proveedor de servicios de correo electrónico es SparkPost, utiliza el có
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+Si tu proveedor de servicios de correo electrónico es Amazon SES, utiliza el código HTML `ses:no-track` de la siguiente manera:
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### Editor de arrastrar y soltar
@@ -303,7 +311,7 @@ Selecciona lo siguiente para el atributo personalizado:
 - **Nombre:** `data-msys-clicktrack`
 - **Valor:** `0`
 
-![Un atributo personalizado para un enlace de texto.][2]{: style="max-width:60%;"}
+![Un atributo personalizado para un enlace de texto.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Atributo personalizado para un botón o una imagen
 
@@ -323,7 +331,7 @@ Selecciona lo siguiente para el atributo personalizado:
 - **Valor:** `0`
 - **Tipo:** Enlace
 
-![Un atributo personalizado para un botón.][1]{: style="max-width:60%;"}
+![Un atributo personalizado para un botón.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Solución de problemas de enlaces universales con seguimiento de clics
 
@@ -345,5 +353,3 @@ Asegúrate de que tienes las definiciones correctas de los dominios que tu aplic
 - **iOS:** Revisa los dominios asociados configurados en Xcode para tu aplicación[(paso 1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c)). Comprueba que el dominio de seguimiento de clics está incluido en esa lista.
 - **Android:** Abre la página de información de la aplicación (pulsa prolongadamente el icono de la aplicación y haz clic en ⓘ). Dentro del menú de información de la aplicación, localiza **Abrir de forma predeterminada** y tócalo. Esto debería mostrar una pantalla con todos los enlaces verificados que la aplicación puede abrir. Comprueba que el dominio de seguimiento de clics está incluido en esa lista.
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

@@ -24,7 +24,7 @@ Identifica una plataforma externa que quieras conectar a Braze y comprueba que l
 
 A continuación se muestra un ejemplo de [webhook de Typeform](https://www.typeform.com/help/a/webhooks-360029573471/), que se puede configurar iniciando sesión en su plataforma:
 
-![][9]
+![]({% image_buster /assets/img/data_transformation/data_transformation8.png %})
 
 ## Paso 2: Crear una transformación
 
@@ -43,7 +43,7 @@ Este paso es opcional, pero recomendamos enviar un webhook de prueba desde su pl
 
 Esto es lo que parece para Typeform:
 
-![Ejemplo de código de transformación de datos que asigna el webhook a los perfiles de usuario Braze.][12]
+![Ejemplo de código de transformación de datos que mapea el webhook a perfiles de usuario Braze.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
 Es posible que Braze Data Transformation aún no admita plataformas externas que requieran una verificación o autenticación especial para los webhooks. Considere la posibilidad de dejar [comentarios sobre el producto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) si está interesado en utilizar este tipo de plataforma con Braze Data Transformation.
@@ -235,11 +235,3 @@ Si no hay entregas, comprueba que tu código de transformación no contenga erro
 Las entregas inferiores al número de solicitudes entrantes indican que al menos algunos webhooks se entregan correctamente. Consulte los registros de transformación para ver ejemplos de errores y compruebe si la salida de la transformación es la esperada. Es posible que su código de transformación no tenga en cuenta todas las variaciones de los webhooks recibidos.
 
 
-[4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
-[5]: {% image_buster /assets/img/data_transformation/data_transformation4.png %}
-[6]: {% image_buster /assets/img/data_transformation/data_transformation5.png %}
-[7]: {% image_buster /assets/img/data_transformation/data_transformation6.jpg %}
-[8]: {% image_buster /assets/img/data_transformation/data_transformation7.png %}
-[9]: {% image_buster /assets/img/data_transformation/data_transformation8.png %}
-[10]: {% image_buster /assets/img/data_transformation/data_transformation9.png %}
-[12]: {% image_buster /assets/img/data_transformation/data_transformation11.png %}

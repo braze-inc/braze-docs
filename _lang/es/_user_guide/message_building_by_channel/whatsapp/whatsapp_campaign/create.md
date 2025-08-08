@@ -1,7 +1,7 @@
 ---
 nav_title: Crear un mensaje de WhatsApp
 article_title: Crear un mensaje de WhatsApp
-page_order: 4
+page_order: 0
 description: "Este artículo de referencia cubre los pasos necesarios para crear un mensaje de WhatsApp."
 page_type: reference
 tool:
@@ -71,7 +71,7 @@ Si un Canvas basado en acciones es desencadenado por un mensaje entrante de What
 
 Selecciona si quieres crear un [mensaje de plantilla de](#template-messages) WhatsApp o un mensaje de respuesta, dependiendo de tu caso de uso. Cualquier conversación iniciada por la empresa debe partir de una plantilla aprobada, mientras que los mensajes de respuesta pueden utilizarse en respuestas a mensajes entrantes de usuarios dentro de un plazo de 24 horas.
 
-![La sección Variantes de mensajes le permite seleccionar un grupo de suscripción y uno de los dos tipos de mensajes: Plantilla de mensaje de WhatsApp y mensaje de respuesta.][5]{: style="max-width:80%;"}
+![La sección Variantes de mensajes le permite seleccionar un grupo de suscripción y uno de los dos tipos de mensajes: Plantilla de mensaje y mensaje de respuesta de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 #### Mensajes de plantilla
 
@@ -84,7 +84,7 @@ Los campos de texto deshabilitados (resaltados en gris) no pueden editarse, ya q
 
 Cada plantilla tiene un idioma asignado, por lo que es necesario crear una campaña o paso de Canvas para cada idioma para configurar correctamente la correspondencia de usuarios. Por ejemplo, si está creando un lienzo que utiliza plantillas asignadas con el indonesio y el inglés, necesita crear un paso de lienzo para la plantilla indonesia y un paso de lienzo para la plantilla inglesa.
 
-![Lista de plantillas con previsualización de sus mensajes, idiomas asignados y estado de aprobación.][8]{: style="max-width:80%;"}
+![Lista de plantillas que incluye vistas previas de sus mensajes, sus idiomas asignados y su estado de aprobación.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 Si añades texto en un idioma escrito de derecha a izquierda, ten en cuenta que el aspecto final de los mensajes escritos de derecha a izquierda depende en gran medida de cómo los rendericen los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -100,7 +100,7 @@ Si piensa utilizar Liquid, asegúrese de incluir un valor predeterminado para la
 {% endraw %}
 {% endalert %}
 
-![La herramienta Añadir Personalización con el atributo "first_name" y el valor por defecto "you".][2]{: style="max-width:80%;"}
+![La herramienta Añadir personalización con el atributo "nombre_nombre" y el valor predeterminado "tú".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 #### Enlaces dinámicos 
 
@@ -110,24 +110,26 @@ Las URL de llamada a la acción pueden contener variables, aunque Meta exige que
 
 Puedes utilizar los mensajes de respuesta para contestar a los mensajes entrantes de tus usuarios. Estos mensajes se crean in-app en Braze durante tu experiencia de composición y pueden editarse en cualquier momento. Puede utilizar Liquid para adaptar el idioma de los mensajes de respuesta a los usuarios adecuados.
 
-Puede utilizar tres diseños de mensaje de respuesta:
+Hay cinco diseños de mensajes de respuesta que puedes utilizar:
 - Respuesta rápida
 - Mensaje de texto
 - Mensaje con medios
+- Botón de llamada a la acción
+- Mensaje de la lista
 
-![El compositor del mensaje de respuesta para un Mensaje de Respuesta que da la bienvenida a nuevos usuarios con un código de descuento.][6]{: style="max-width:80%;"}
+![El creador de mensajes de respuesta para un mensaje de respuesta que da la bienvenida a nuevos usuarios con un código de descuento.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 ### Paso 3: Vista previa y prueba de tu mensaje
 
 Braze recomienda siempre previsualizar y probar el mensaje antes de enviarlo. Cambie a la pestaña **Prueba** para enviar un mensaje de WhatsApp de prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) o a usuarios individuales, o previsualice el mensaje como usuario directamente en Braze.
 
-![Un mensaje de vista previa para un usuario existente llamado Suzanne.][3]{: style="max-width:80%;"}
+![Un mensaje de vista previa para un usuario personalizado llamado Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 Se necesita una ventana de conversación para enviar mensajes de respuesta, incluidos los mensajes de prueba. Para iniciar una ventana de conversación, envía un mensaje de WhatsApp al número de teléfono asociado al grupo de suscripción que estás utilizando para este mensaje. El número de teléfono asociado aparece en la alerta de la pestaña **Prueba**.
 {% endalert %}
 
-![Una alerta que dice: "Para probar, abre primero una ventana de conversación enviando un mensaje de WhatsApp al +1 631-202-0907. Luego, envía tu mensaje de respuesta al usuario de prueba."][7]{: style="max-width:80%;"}
+![Una alerta que dice: "Para probar, abre primero una ventana de conversación enviando un mensaje de WhatsApp al +1 217-582-9414. A continuación, envía tu mensaje de respuesta al usuario de prueba"]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### Paso 4: Construye el resto de tu campaña o Canvas
 
@@ -146,7 +148,7 @@ En este paso también puede especificar controles de entrega, como permitir que 
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. Ya deberías haber elegido el grupo de suscripción, que restringe a los usuarios según el nivel o categoría de comunicación que desean tener contigo. En este paso, seleccionará la audiencia más amplia de sus segmentos y reducirá aún más ese segmento con nuestros filtros. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Recuerde que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
+A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. Ya deberías haber elegido el grupo de suscripción, que restringe a los usuarios según el nivel o categoría de comunicación que desean tener contigo. En este paso, seleccionará la audiencia más amplia de sus segmentos y reducirá aún más ese segmento con nuestros filtros. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Recuerde que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
 
 #### Elegir eventos de conversión
 
@@ -184,12 +186,10 @@ Las siguientes características son compatibles con los mensajes salientes de Wh
 | Texto a pie de página | Se admiten cadenas y parámetros variables. | - | - |
 | Enlaces CTA | Se admiten varios tipos de llamada a la acción (CTA). Para más detalles, consulta [Tipos de llamada a la acción](#ctas). | - | - |
 | Imágenes | Las imágenes pueden incrustarse dentro del cuerpo del texto. Deben ser de 8 bits y utilizar un modelo de color RGB o RGBA. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
-| Documentación | Los documentos pueden incrustarse en el cuerpo del texto. Los archivos deben alojarse a través de la URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| Videos | Los videos se pueden incrustar en el cuerpo del texto. Los archivos deben estar alojados a través de URL o en la [biblioteca multimedia de Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
-| Audio\*. | El audio sólo se admite a través de la mensajería de respuesta. Los archivos deben alojarse a través de la URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
+| Documentos | Los documentos pueden incrustarse en el cuerpo del texto. Los archivos deben alojarse a través de la URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
+| Vídeos | Los videos se pueden incrustar en el cuerpo del texto. Los archivos deben estar alojados a través de URL o en la [biblioteca multimedia de Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
+| Audio | El audio sólo se admite a través de la mensajería de respuesta. Los archivos deben alojarse a través de la URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
-
-<sup>_\*Actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas Braze si estás interesado en participar._</sup>
 
 ### Mensajes entrantes
 
@@ -199,7 +199,7 @@ Las siguientes características son compatibles con los mensajes entrantes de Wh
 | ------- | ------- | ------------------ |
 | Cuerpo del texto | Sólo se admiten cadenas estándar. | - |
 | Imágenes | Las imágenes deben ser de 8 bits y utilizar un modelo de color RGB o RGBA. Los archivos deben tener menos de 5 MB. | `.jpg`, `.png` |
-| Audio | Sólo se admiten archivos Ogg codificados con el códec Opus. Otros formatos Ogg no lo son. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
+| Audio | Sólo son compatibles los archivos Ogg codificados con el códec Opus. Otros formatos Ogg no lo son. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
 | Documentos | Los documentos se pueden adjuntar mediante mensajes. | `.txt`, `.pdf`, `.ppt`, `.doc`, `.xls`, `.docx`, `.pptx`, `.xlsx` |
 | Video | Solo admite el códec de video H.264 y el códec de audio AAC. Los videos deben tener un único flujo de audio o no tener flujo de audio. | `.mp4`, `.3gp` |
 | Enlaces CTA | Se admiten varios tipos de llamada a la acción (CTA). Para más detalles, consulta [Tipos de llamada a la acción](#ctas). | - |
@@ -217,13 +217,6 @@ Los siguientes tipos de llamada a la acción son compatibles con los mensajes de
 | Botón de cancelación de marketing | Por defecto, los estados de suscripción no se actualizan automáticamente. Para obtener más información, consulta [Adhesión voluntaria y exclusión voluntaria]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). |
 | Plantillas de mensajes de código de cupón | Disponible sólo para plantillas de mensajes. <br>Se pueden abrir y editar como otras plantillas de mensajes, y son compatibles con los códigos promocionales Liquid y Braze. |
 | Mensajes de respuesta CTA  | Crea un mensaje de respuesta que incluya un botón de llamada a la acción. |
+| [Lista de mensajes de respuesta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | Crea un mensaje de respuesta que incluya una lista de hasta 10 opciones para que los usuarios elijan. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}

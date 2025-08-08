@@ -15,11 +15,11 @@ description: "Este artículo de referencia repasa el objeto evento, qué es y c�
 
 Un objeto de evento es un objeto que se pasa a través de la API cuando se produce un evento específico. Los objetos de eventos se alojan en una matriz de eventos. Cada objeto evento de la matriz de eventos representa una única ocurrencia de un evento personalizado por un usuario concreto en el valor de tiempo designado. El objeto evento tiene muchos campos diferentes que te permiten personalizar mediante la configuración y el uso de propiedades del evento en los mensajes, la recopilación de datos y la personalización.
 
-Para saber cómo configurar eventos personalizados para una plataforma concreta, consulta la Guía de integración de plataformas en la [Guía del desarrollador][1]. Consulta el artículo correspondiente según tu plataforma:
+Para saber cómo configurar eventos personalizados para una plataforma concreta, consulta la Guía de integración de plataformas en la [Guía del desarrollador]({{site.baseurl}}/developer_guide/home/). Consulta el artículo correspondiente según tu plataforma:
 
-- [Android][2]
-- [iOS][3]
-- [Web][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### Cuerpo del objeto
 
@@ -44,7 +44,7 @@ Para saber cómo configurar eventos personalizados para una plataforma concreta,
 
 - [ID usuario externo]({{site.baseurl}}/api/basics/#user-ids)
 - [Identificador de la aplicación]({{site.baseurl}}/api/identifier_types/)
-- [Código de tiempo ISO 8601][22]
+- [Código de tiempo ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### Actualizar solo los perfiles existentes
 
@@ -74,7 +74,7 @@ Los objetos de propiedades del evento que contienen valores de matrices u objeto
 
 ### Persistencia de las propiedades del evento
 
-Las propiedades del evento están diseñadas para filtrar los mensajes desencadenados por sus eventos principales y para personalizarlos con Liquid. De forma predeterminada, no persisten en el perfil de usuario de Braze. Para utilizar los valores de las propiedades del evento en la segmentación, consulta los [eventos personalizados][5], donde se detallan los distintos enfoques para almacenar los valores de las propiedades del evento a largo plazo.
+Las propiedades del evento están diseñadas para filtrar los mensajes desencadenados por sus eventos principales y para personalizarlos con Liquid. De forma predeterminada, no persisten en el perfil de usuario de Braze. Para utilizar los valores de las propiedades del evento en la segmentación, consulta los [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), donde se detallan los distintos enfoques para almacenar los valores de las propiedades del evento a largo plazo.
 
 #### Solicitud de ejemplo de evento
 
@@ -109,19 +109,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [Wiki de código de hora ISO 8601][19]
+- [Wiki de código de hora ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)
 
 ## Objetos de evento
 
 Utilizando el ejemplo proporcionado, podemos ver que alguien vio recientemente un tráiler y después alquiló una película. Aunque no podemos entrar en una campaña y segmentar a los usuarios en función de estas propiedades, sí podemos utilizarlas estratégicamente utilizándolas en forma de recibo, para enviar un mensaje personalizado a través de un canal utilizando Liquid. Por ejemplo, "Hola **Beth**, Gracias por alquilar **El huevo triste** de **Dan Alexander**, aquí tienes algunas películas recomendadas basadas en tu alquiler..."
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "Wiki de código de horario ISO 8601"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "Código de horario ISO 8601"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

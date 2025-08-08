@@ -35,7 +35,7 @@ Los siguientes datos pueden verse en el gráfico **Rendimiento a lo largo del ti
     - (Opcional) Ingresos por hora por segmento
 - Ingresos por usuario
 
-![Gráfico de ingresos][9]
+![Gráfico de ingresos]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## Ingresos totales
 
@@ -51,12 +51,12 @@ Los informes de ingresos no se pueden exportar a través de la API. Para obtener
 
 ## Ingresos directos
 
-Puede ver las siguientes métricas de ingresos adicionales generando un Informe de Comparación de Campañas utilizando el [Generador de Informes][1]:
+Puede ver las siguientes métricas de ingresos adicionales generando un Informe de Comparación de Campañas utilizando el [Generador de Informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/):
 
-- [Total de ingresos directos][2]
-- [Total de compras directas][3]
-- [Compras directas únicas][4]
-- [Ingresos por destinatario][5]
+- [Total de ingresos directos]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
+- [Total de compras directas]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)
+- [Compras directas únicas]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases)
+- [Ingresos por destinatario]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient)
 
 Estas métricas se basan en la atribución al último clic, lo que significa que los ingresos se atribuirán a una campaña si esa campaña:
 
@@ -66,12 +66,6 @@ Estas métricas se basan en la atribución al último clic, lo que significa que
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}

@@ -104,11 +104,11 @@ Las tablas siguientes tienen carácter ilustrativo. Para conocer las convencione
 | Atribución de instalación | Anuncio |
 | Varios | Número de contenedor aleatorio |
 | Mensajes recibidos en Canvas | Mensajes recibidos en Canvas |
+| Interacción con los mensajes | Todos los eventos de interacción (como aperturas, clics, impresiones y rechazos) |
 | X | Seguidores |
 | X | Siguiendo |
 | X | Número de tweets |
 | Facebook | Me gusta |
-
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -156,6 +156,7 @@ table td {
 | Eventos personalizados | Todos los eventos personalizados | |
 | Propiedades personalizadas de los eventos | Todas las propiedades de eventos personalizados | Las propiedades de eventos personalizados habilitadas para la segmentación con los filtros `X Custom Event Property in Y Days` o `X Purchase Property in Y Days` se contabilizan como puntos de datos independientes, además del punto de datos contabilizado por el propio evento personalizado.
 | Compras | Todas las compras | |
+| Propiedades de la compra | Todas las propiedades de la compra | |
 | Asignación de cohortes de amplitud | Todas las asignaciones | |
 | Asignación de cohortes Mixpanel | Todas las asignaciones | |
 | Asignación de cohortes Hightouch | Todas las asignaciones | |

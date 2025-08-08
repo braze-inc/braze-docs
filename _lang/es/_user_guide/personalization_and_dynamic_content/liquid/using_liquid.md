@@ -10,7 +10,7 @@ search_rank: 2
 
 > Este artículo mostrará cómo puedes utilizar diversos atributos de usuario para insertar dinámicamente información personal en tu mensajería.
 
-Liquid es un lenguaje de plantillas de código abierto desarrollado por Shopify y escrito en Ruby. Puedes utilizarlo en Braze para introducir datos de perfil de usuario en tus mensajes y personalizar esos datos. Por ejemplo, puedes utilizar etiquetas de Liquid para crear mensajes condicionales, como enviar ofertas diferentes en función de la fecha de aniversario de la suscripción de un usuario. Además, los filtros pueden manipular datos, como formatear la fecha de registro de un usuario de una marca de tiempo a un formato más legible, como "15 de enero de 2022". Para más detalles sobre la sintaxis de Liquid y sus capacidades, consulta [Etiquetas de personalización compatibles][1].
+Liquid es un lenguaje de plantillas de código abierto desarrollado por Shopify y escrito en Ruby. Puedes utilizarlo en Braze para introducir datos de perfil de usuario en tus mensajes y personalizar esos datos. Por ejemplo, puedes utilizar etiquetas de Liquid para crear mensajes condicionales, como enviar ofertas diferentes en función de la fecha de aniversario de la suscripción de un usuario. Además, los filtros pueden manipular datos, como formatear la fecha de registro de un usuario de una marca de tiempo a un formato más legible, como "15 de enero de 2022". Para más detalles sobre la sintaxis de Liquid y sus capacidades, consulta [Etiquetas de personalización compatibles]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 ## Cómo funciona
 
@@ -40,14 +40,14 @@ Hi Valued User, thanks for using the App!
 
 Los siguientes valores pueden sustituirse en un mensaje, en función de su disponibilidad:
 
-- [Información básica del usuario][1] (por ejemplo, `first_name`, `last_name`, `email_address`)
-- [Atributos personalizados][2]
-    - [Atributos personalizados anidados][3]
-- [Propiedades personalizadas de los eventos][11]
-- [Información sobre el dispositivo utilizado más recientemente][39]
-- [Información del dispositivo de destino][40]
+- [Información básica del usuario]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (por ejemplo, `first_name`, `last_name`, `email_address`)
+- [Atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
+    - [Atributos personalizados anidados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
+- [Propiedades personalizadas de los eventos]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- [Información sobre el dispositivo utilizado más recientemente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
+- [Información del dispositivo de destino]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-También puedes extraer contenido directamente de un servidor Web a través de [Contenido Conectado][9] Braze.
+También puedes extraer contenido directamente de un servidor Web a través de [Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) Braze.
 
 {% alert important %}
 Actualmente, Braze es compatible con Liquid, incluido Liquid 5 de Shopify.
@@ -55,7 +55,7 @@ Actualmente, Braze es compatible con Liquid, incluido Liquid 5 de Shopify.
 
 ## Utilizar Liquid
 
-Con [las etiquetas de Liquid][1], puedes elevar la calidad de tus mensajes enriqueciéndolos con un toque personal. 
+Con [las etiquetas de Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), puedes elevar la calidad de tus mensajes enriqueciéndolos con un toque personal. 
 
 ### Sintaxis líquida
 
@@ -90,19 +90,15 @@ Si utilizas Liquid en tus mensajes de correo electrónico, asegúrate de:
 
 {% endalert %}
 
-{% raw %}
-
 ### Insertar variables preformateadas
 
-Puedes insertar variables preformateadas con valores predeterminados a través del modal **Añadir personalización** situado en la parte superior derecha de cualquier campo de texto de la plantilla.
+Puedes insertar variables preformateadas con valores predeterminados a través del modal **Añadir personalización**, situado cerca de cualquier campo de texto de la plantilla.
 
-![El modal Añadir personalización que aparece tras seleccionar insertar personalización. El modal tiene campos para el tipo de personalización, atributo, valor predeterminado opcional y muestra una vista previa de la sintaxis de Liquid][44]{: style="max-width:70%;"}
+![El modal Añadir personalización que aparece tras seleccionar insertar personalización. El modal tiene campos para el tipo de personalización, atributo, valor predeterminado opcional y muestra una vista previa de la sintaxis de Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-El modal insertará Liquid con el valor por defecto especificado en el punto en el que se encontraba el cursor. El punto de inserción también se especifica mediante el cuadro de vista previa, que tiene el texto anterior y posterior. Si se resalta un bloque de texto, se sustituirá el texto resaltado.
+El modal insertará Liquid con el valor predeterminado que hayas especificado en el punto donde estaba el cursor. El punto de inserción también se especifica mediante el cuadro de vista previa, que tiene el texto anterior y posterior. Si se resalta un bloque de texto, se sustituirá el texto resaltado.
 
-![Un GIF del modal Añadir personalización que muestra al usuario insertando "compañero de viaje" como valor predeterminado, y al modal sustituyendo el texto resaltado "nombre" en el compositor por el fragmento de código de Liquid.][45]
-
-{% endraw %}
+![Un GIF del modal Añadir personalización que muestra al usuario insertando "compañero de viaje" como valor predeterminado, y al modal sustituyendo el texto resaltado "nombre" en el compositor por el fragmento de código de Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Asignación de variables
 
@@ -159,12 +155,3 @@ You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
 Mientras el bloque de contenido esté en la parte superior del mensaje, cada vez que la variable se inserte en el mensaje como un objeto, hará referencia al atributo personalizado que hayas elegido.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating
-[9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information
-[40]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information
-[44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}
-[45]: {% image_buster /assets/img_archive/insert_var_shot.gif %}

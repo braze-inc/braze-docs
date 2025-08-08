@@ -15,9 +15,9 @@ channel:
 
 Tenga en cuenta que los usuarios deben optar por recibir notificaciones push para recibir sus mensajes, lo que significa que es una buena idea utilizar mensajes dentro de la aplicación para explicar a sus clientes por qué desea enviarles notificaciones push y en qué les beneficiará activarlas. Este proceso se llama [preparación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
-![Ejemplo de mensaje push en los productos Apple.][1]{: height="400px"}  ![Ejemplo de mensaje push de Cronómetro en una pantalla de inicio de iPhone que dice: "¡Hola! Esto es un push de iOS".][2]{: height="400px"}
+![Ejemplo de mensaje push entre productos Apple.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Ejemplo de mensaje push de Stopwatch en la pantalla de inicio de un iPhone que dice: "¡Hola! Esto es un push de iOS".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
-Para ver más ejemplos de notificaciones push, consulte nuestros [Estudios de casos][8].
+Para ver más ejemplos de notificaciones push, consulta nuestros [Casos de estudio](https://www.braze.com/customers).
 
 ## Posibles casos de uso
 
@@ -31,7 +31,7 @@ Las notificaciones push son una gran herramienta para atraer a nuevos usuarios y
 | Ofertas sensibles al tiempo | Si una oferta tiene fecha de caducidad, a veces los mensajes push son una buena forma de informar a los usuarios antes de que caduque. Estos mensajes generalmente tienen un alto sentido de urgencia y son óptimos para recordar su aplicación a los usuarios que la han abandonado recientemente.<br><br> Por ejemplo, supongamos que tu aplicación es un juego y ofreces a tus usuarios una bonificación en moneda del juego si mantienen una racha de juego diario. Avisar a un usuario de que esa racha está en peligro de romperse podría ser un empujón razonable si ha superado un determinado número de días. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para más información sobre la reactivación de la interacción de los usuarios inactivos, consulta nuestra página [Quick Wins][23] sobre el tema.
+Para obtener más información sobre la reactivación de la interacción de los usuarios que han dejado de serlo, consulta nuestra página de [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) sobre el tema.
 
 ## Requisitos previos para utilizar push
 
@@ -53,21 +53,13 @@ Tus mensajes push deben ajustarse a las directrices de las políticas de la App 
 
 |Políticas de Apple App Store|
 |---|
-|[3.2.2][9] Inaceptable: (i) Crear una interfaz para mostrar aplicaciones, extensiones o complementos de terceros similar a la App Store o como una colección de interés general.| 
-|[4.5.4][7] Las notificaciones push no deben ser necesarias para el funcionamiento de la aplicación y no deben utilizarse para enviar información personal sensible o confidencial. Las notificaciones push no deben utilizarse con fines promocionales o de marketing directo a menos que los clientes hayan optado explícitamente por recibirlas a través de un lenguaje de consentimiento que aparezca en la interfaz de usuario de su aplicación, y usted proporcione un método en su aplicación para que un usuario pueda optar por no recibir tales mensajes.|
+|[3.2.2](https://developer.apple.com/app-store/review/guidelines/#unacceptable) Inaceptable: (i) Crear una interfaz para mostrar aplicaciones, extensiones o complementos de terceros similar a la App Store o como una colección de interés general.| 
+|[4.5.4](https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services) Las notificaciones push no deben ser necesarias para que la aplicación funcione, y no deben utilizarse para enviar información personal sensible o confidencial. Las notificaciones push no deben utilizarse con fines promocionales o de marketing directo a menos que los clientes hayan optado explícitamente por recibirlas a través de un lenguaje de consentimiento que aparezca en la interfaz de usuario de su aplicación, y usted proporcione un método en su aplicación para que un usuario pueda optar por no recibir tales mensajes.|
 |[4.10](https://developer.apple.com/app-store/review/guidelines/#monetizing-built-in-capabilities) No podrá monetizar las capacidades integradas proporcionadas por el hardware o el sistema operativo, como las notificaciones Push, la cámara o el giroscopio; o los servicios y tecnologías de Apple, como el acceso a Apple Music, el almacenamiento en iCloud o las API de Screen Time.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 |Política de Google Play Store|
 |---|
-|[Uso no autorizado o imitación de la funcionalidad del sistema][10] No permitimos aplicaciones o anuncios que imiten o interfieran con la funcionalidad del sistema, como notificaciones o avisos. Las notificaciones a nivel de sistema sólo pueden utilizarse para las funciones integrales de una aplicación, como una aplicación de aerolínea que notifica a los usuarios ofertas especiales, o un juego que notifica a los usuarios promociones dentro del juego.|
+|[Uso no autorizado o imitación de la funcionalidad del sistema](https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories) No permitimos aplicaciones o anuncios que imiten o interfieran con la funcionalidad del sistema, como notificaciones o advertencias. Las notificaciones a nivel de sistema sólo pueden utilizarse para las funciones integrales de una aplicación, como una aplicación de aerolínea que notifica a los usuarios ofertas especiales, o un juego que notifica a los usuarios promociones dentro del juego.|
 {: .reset-td-br-1 role="presentation" }
 
-[1]: {% image_buster /assets/img/red-dress.gif %}
-[2]: {% image_buster /assets/img/ios_push.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[8]: https://www.braze.com/customers
-[7]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
-[9]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
-[10]: https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories
-[23]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users

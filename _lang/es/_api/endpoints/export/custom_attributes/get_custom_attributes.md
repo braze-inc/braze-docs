@@ -22,7 +22,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='atributos_personalizados' %}
+{% multi_lang_include rate_limits.md endpoint='custom_attributes' %}
 
 ## Parámetros de consulta
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Correo electrónico
 article_title: Correo electrónico
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "Correo electrónico"
 guide_top_text: "Con el correo electrónico en Braze, puede crear mensajes de correo electrónico completamente personalizados y adaptados a sus necesidades, ya sea en campañas o en Canvas, que captarán rápidamente la atención de sus usuarios. Consulte los siguientes artículos para saber más."
@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Identificador Cifrado a nivel de campo
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Herramienta de promoción de Gmail
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/

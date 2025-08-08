@@ -14,7 +14,7 @@ description: "En este artículo de referencia se explica cómo establecer valore
 
 ## Cómo funcionan
 
-Se pueden añadir valores por defecto especificando un filtro [Liquid][3] (utilice `|` para distinguir el filtro en línea, como se muestra) con el nombre "default".
+Se pueden añadir valores por defecto especificando un filtro [Liquid](http://docs.shopify.com/themes/liquid-documentation/filters) (utilice `|` para distinguir el filtro en línea, como se muestra) con el nombre "default".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

@@ -43,6 +43,5 @@ Al visualizar un perfil de usuario en el panel de Braze, puedes ver si tiene el 
 
 Si se ha configurado `native_line_id`, aparecerá en **ID de usuario de LÍNEA**. De lo contrario, no aparecerá.
 
-![Configuración del contacto de línea en la pestaña Interacción.][1]{: style="max-width:60%;"}
+![Configuración del contacto de línea en la pestaña de interacción.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

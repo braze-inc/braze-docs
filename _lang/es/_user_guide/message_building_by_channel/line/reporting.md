@@ -6,8 +6,7 @@ description: "Este artículo de referencia cubre las métricas LINE utilizadas e
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # Informes LINE
@@ -40,7 +39,7 @@ Para medir el impacto de un mensaje LINE individual, puede añadir un [grupo de 
 
 El panel **LINE Performance** muestra el rendimiento de su mensaje en varias dimensiones. Las métricas de este panel varían en función del canal de mensajería elegido y de si está realizando o no una prueba multivariante. Puede hacer clic en el icono <i class="fa fa-eye preview-icon"></i> **Vista previa** para ver su mensaje para cada variante o canal.
 
-![El panel "Rendimiento de la línea" muestra las métricas de dos variantes.][1]
+![El panel "Rendimiento de la LÍNEA" muestra las métricas de dos variantes.]({% image_buster /assets/img/line/line_performance.png %})
 
 Si desea simplificar la vista, seleccione **\+ Añadir/Eliminar columnas** y borre las métricas que desee. Por defecto, se muestran todas las métricas.
 
@@ -72,4 +71,3 @@ El panel **Detalles del evento de conversión** le muestra el rendimiento de sus
 El panel **Correlación de conversiones** le ofrece información sobre qué atributos y comportamientos de los usuarios favorecen o perjudican los resultados que establece para las campañas. Para más información, consulta los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

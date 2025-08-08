@@ -17,7 +17,7 @@ A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utili
 
 > La función **Comportamiento de avance** le permite elegir los criterios de avance a través de su [componente Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
-![Configuración del Comportamiento de avance con dos opciones: hacer avanzar a la audiencia cuando se envía el mensaje o hacer avanzar a la audiencia inmediatamente.][1]
+![Configuración del Comportamiento de Avance con dos opciones para hacer avanzar a la audiencia cuando se envía el mensaje, o hacer avanzar a la audiencia inmediatamente.]({% image_buster /assets/img/push-advancement-behavior.png %} "Comportamiento de Avance")
 
 Los usuarios deben cumplir los criterios del paso para poder avanzar en él. Con Pasos de [mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), puede activar las validaciones de entrega para comprobar que su público cumple los criterios de entrega en el momento de enviar el mensaje. Esto contará para los criterios del paso cuando se utilice el Canvas Flow. Así, si un usuario no cumple los criterios de validación de entrega, saldrá del Canvas.
 
@@ -41,7 +41,7 @@ Cuando se selecciona **Audiencia Avanzar Inmediatamente**, los usuarios avanzar�
 
 ### Pasos programados
 
-Para un componente programado, los usuarios deben cumplir con las opciones de audiencia para el paso con el fin de avanzar a través del paso. Si el paso tiene un [evento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) de excepción, los usuarios que realicen el evento de excepción no avanzarán por el paso.
+Para un componente programado, los usuarios deben cumplir con las opciones de audiencia para el paso con el fin de avanzar a través del paso. Si el paso tiene un [evento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) de excepción, los usuarios que realicen el evento de excepción no avanzarán por el paso.
 
 Al enviar un componente multicanal con [sincronización inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), podemos enviar o intentar enviar mensajes a horas diferentes para canales diferentes. Braze adelantará automáticamente a los usuarios en el momento en que el primer mensaje de un componente intente enviarse.
 
@@ -77,4 +77,3 @@ A los clientes de Braze que sí participaron en la primera ronda de la beta de m
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Comportamiento de avance"

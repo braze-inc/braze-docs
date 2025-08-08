@@ -53,10 +53,9 @@ Estas características podrían etiquetarse como los siguientes atributos person
 Estos atributos te permiten enviar campañas a usuarios como:
 
 1. Recordar a los usuarios que no han utilizado la aplicación en siete días y tienen crédito promocional en su cuenta que vuelvan a la aplicación y utilicen el crédito.
-2. Utilizar nuestras plantillas de mensajes y [funciones de personalización][13] para arrastrar el atributo de código promocional único a los mensajes dirigidos a los usuarios.
+2. Utilizar nuestras plantillas de mensajes y [funciones de personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) para arrastrar el atributo de código promocional único a los mensajes dirigidos a los usuarios.
 
 {% alert important %}
 Braze prohibirá o bloqueará a los usuarios ("usuarios ficticios") con más de 5.000.000 de sesiones y dejará de ingerir sus eventos SDK porque suelen ser el resultado de una mala integración. Si descubre que esto le ha ocurrido a un usuario legítimo, póngase en contacto con su gestor de cuenta Braze.
 {% endalert %}
 
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

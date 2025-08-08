@@ -18,10 +18,10 @@ Para rellenar previamente eventos y atributos personalizados, haz lo siguiente:
 
 1. Vaya a **Configuración de Datos** > **Eventos Personalizados** o **Atributos Personalizados** o **Productos**.
 
-![Navegue hasta Atributos personalizados o Eventos o productos personalizados.][21]{: style="max-width:90%;" }
+![Navega hasta Atributos personalizados o Eventos personalizados o Productos.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\. Para añadir un atributo personalizado, un evento o un producto, ve a la página correspondiente y selecciona **Añadir atributos personalizados** o **Añadir eventos personalizados** o **Añadir productos**.<br><br>Para los atributos personalizados, selecciona un [tipo de datos][20] para este atributo (por ejemplo, booleano o cadena). El tipo de datos de un atributo determinará los filtros de segmentación disponibles para ese atributo. <br><br>![Añadir nuevo atributo o evento][22]{: style="max-width:80%;" }
+2\. Para añadir un atributo personalizado, un evento o un producto, ve a la página correspondiente y selecciona **Añadir atributos personalizados** o **Añadir eventos personalizados** o **Añadir productos**.<br><br>Para los atributos personalizados, selecciona un [tipo de datos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para este atributo (por ejemplo, booleano o cadena). El tipo de datos de un atributo determinará los filtros de segmentación disponibles para ese atributo. <br><br>![Añadir nuevo atributo o evento]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3\. Seleccione **Guardar**.
 
 ### Nombrar eventos y atributos personalizados
@@ -32,7 +32,7 @@ Los eventos y atributos personalizados distinguen entre mayúsculas y minúscula
 
 Después de crear un evento personalizado o un producto, selecciona **Gestionar propiedades** de ese evento o producto para añadir nuevas propiedades, bloquear propiedades existentes y ver qué campañas o Lienzos utilizan esta propiedad en un [evento desencadenante]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
-![Propiedades personalizadas para un evento personalizado.][73]{: style="max-width:80%"}
+![Propiedades personalizadas para un evento personalizado.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
 Para que estos atributos personalizados, eventos, productos o propiedades del evento añadidos sean trazables, debes pedir a tu equipo desarrollador que los cree en el SDK utilizando el nombre exacto que utilizaste para añadirlos anteriormente. O puedes utilizar [la API]({{site.baseurl}}/api/basics/) de Braze para importar datos sobre ese atributo. Después de eso, el atributo personalizado, evento u otro será accionable y se aplicará a sus usuarios.
 
@@ -66,7 +66,11 @@ Para detener el seguimiento de un atributo personalizado, evento o producto espe
 
 ![Múltiples atributos personalizados seleccionados que aparecen bloqueados en la página Atributos personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-Puedes bloquear hasta 300 atributos personalizados y 300 eventos personalizados. Para evitar que se recopilen determinados atributos de los dispositivos, consulta nuestra [Guía SDK][88].
+Puedes bloquear hasta 300 atributos personalizados y 300 eventos personalizados. Para evitar que se recojan determinados atributos de los dispositivos, consulta nuestra [guía del SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
+
+{% alert important %}
+Los atributos personalizados o eventos personalizados con un estado de **Eliminado** contarán para el límite de la lista de bloqueados hasta que se eliminen.
+{% endalert %}
 
 Cuando se bloquea un evento o atributo personalizado, se aplica lo siguiente:
 
@@ -127,7 +131,7 @@ Braze reconoce automáticamente los tipos de datos de los atributos que se nos e
 Forzar tipos de datos no se aplica a las propiedades del evento, ni a las propiedades de la compra.
 {% endalert %}
 
-![Desplegable de tipo de datos de atributos personalizados][75]
+![Desplegable de tipo de datos de atributos personalizados]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
 Si eliges forzar el tipo de datos de un atributo, cualquier dato que entre que no sea del tipo especificado será forzado a ese tipo. Si tal coacción es imposible (por ejemplo, que una cadena que contiene letras se convierta en un número), se ignorarán los datos. Cualquier dato ingestado antes del cambio de tipo seguirá almacenándose como el tipo antiguo (y, por tanto, puede no ser segmentable), y aparecerá una advertencia junto al atributo en los perfiles de los usuarios afectados.
@@ -142,19 +146,10 @@ Si eliges forzar el tipo de datos de un atributo, cualquier dato que entre que n
 | Número | Los números enteros o flotantes (como `1`, `1.5`) se almacenarán como números |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obtener más información sobre las opciones de filtrado específicas expuestas por las diferentes comparaciones de tipos de datos, consulte [Configuración de informes][43]. Para más información sobre los distintos tipos de datos disponibles, consulta [Tipos de datos de atributos personalizados][44].
+Para obtener más información sobre las opciones específicas de filtrar expuestas por las diferentes comparaciones de tipos de datos, consulta [Configurar informes]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). Para más información sobre los distintos tipos de datos disponibles, consulta [Tipos de datos de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
 Los datos enviados a Braze son inmutables y no pueden borrarse ni modificarse después de que los hayamos recibido. Sin embargo, puede utilizar cualquiera de los pasos enumerados en las secciones anteriores para ejercer control sobre lo que está rastreando en su tablero.
 {% endalert %}
 
 
-[1]: {% image_buster/assets/img_archive/blocklist_warning.png %}
-[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[21]: {% image_buster /assets/img_archive/prepopulate_page.png %}
-[22]: {% image_buster /assets/img_archive/prepopulate_add.png %}
-[43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[75]: {% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %}
-[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

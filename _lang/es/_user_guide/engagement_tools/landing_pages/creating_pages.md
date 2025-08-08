@@ -55,10 +55,10 @@ Puedes utilizar estos bloques para añadir contenido y personalizar el diseño d
 |-------------|-------------|
 | Título       | Un bloque de texto para añadir un encabezamiento o título a tu contenido. Útil para estructurar secciones y mejorar la legibilidad. |
 | Párrafo   | Un bloque de texto para descripciones más largas o contexto adicional. Admite formato de texto enriquecido. |
-| Botón      | Un elemento en el que se puede hacer clic y que dirige a los usuarios a una acción específica, como abrir un enlace o enviar un formulario. |
+| Botón      | Elemento en el que se puede hacer clic y que dirige a los usuarios a una acción específica, como abrir un enlace o enviar un formulario. |
 | Imagen       | Un bloque para mostrar imágenes. Puedes subir una imagen o proporcionar una URL para hacer referencia a una fuente externa. |
 | Enlace        | Un hipervínculo en el que los usuarios pueden hacer clic para navegar a una URL especificada. Puede incrustarse dentro de un texto o ser independiente. |
-| Espaciador      | Un bloque invisible que añade espaciado vertical entre elementos para mejorar el diseño y la legibilidad. |
+| Espaciador      | Un bloque invisible que añade espacio vertical entre los elementos para mejorar el diseño y la legibilidad. |
 | Código personalizado | Un bloque que te permite insertar y ejecutar HTML, CSS o JavaScript personalizados para una personalización avanzada. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

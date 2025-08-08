@@ -37,7 +37,7 @@ Para añadir un Bloque de Contenido en el editor, haga lo siguiente:
 
 1. Vaya a la pestaña **Filas** del editor y seleccione **Bloques de contenido**. 
 2. Arrastre y suelte su Bloque de contenido en el editor de correo electrónico. 
-3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. La anchura predeterminada es 100%. <br><br>![Una flecha de doble cara con una opción para editar la anchura.][1]{: style="max-width:30%;" }<br><br>
+3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. La anchura predeterminada es 100%. <br><br>![Una flecha de doble cara con una opción para editar la anchura.]({% image_buster /assets/img_archive/content_block_width.png %}){: style="max-width:30%;" }<br><br>
 
 Después de añadir el Bloque de contenido al editor de correo electrónico, puedes realizar ediciones en el Bloque de contenido que no afectarán al Bloque de contenido original que creaste en **Plantillas y medios.** Esto se debe a que los Bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al Bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
 
@@ -51,7 +51,7 @@ Para añadir un bloque de contenido mediante Liquid, haga lo siguiente:
 2. Haga clic en <i class="fas fa-plus"></i> **Personalización**.
 3. Localice la pestaña **Añadir personalización** y seleccione **Bloques de contenido** en el desplegable **Tipo de personalización**.
 4. Seleccione el nombre de su Bloque de Contenido en el campo **Atributo**. El campo del fragmento de código de Liquid se rellenará con tu etiqueta de Liquid del bloque de contenido. 
-5. Copie y pegue el fragmento de Liquid en un bloque del editor de texto. <br>![La pestaña Añadir personalización con opciones.][2]{: style="max-width:30%;"}
+5. Copie y pegue el fragmento de Liquid en un bloque del editor de texto. <br>![La pestaña Añadir personalización con opciones.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 Cuando previsualice su mensaje de correo electrónico, el fragmento de Liquid se mostrará como Bloque de contenido del editor de arrastrar y soltar. 
 
@@ -65,5 +65,3 @@ Para actualizar un Bloque de Contenido existente, puedes editar el Bloque de Con
 
 Para archivar un bloque de contenido, vaya a **Plantillas** > **Bloques de contenido**, seleccione el icono de elipsis vertical <i class="fas fa-ellipsis-vertical"></i> del bloque de contenido y haga clic en **Archivar**. Cuando archivas un Bloque de Contenido, tus mensajes seguirán incluyendo el contenido del bloque archivado. Sin embargo, los bloques de contenido archivados son de sólo lectura, por lo que debe desarchivarlos antes de editarlos. 
 
-[1]: {% image_buster /assets/img_archive/content_block_width.png %}
-[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

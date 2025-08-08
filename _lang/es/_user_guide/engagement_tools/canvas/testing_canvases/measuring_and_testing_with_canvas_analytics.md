@@ -22,7 +22,7 @@ La parte superior de la página **Detalles de Canvas** contiene las estadística
 
 Este es un buen lugar para obtener una visión general de alto nivel para comprobar cómo está funcionando su lienzo en comparación con su objetivo.
 
-![][24]
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### cambios desde la última visualización
 
@@ -38,7 +38,7 @@ Para el Canvas Flow, un usuario saldrá del Canvas después de entrar y recibir 
 
 Las métricas también incluyen impresiones, destinatarios únicos, recuento de conversiones e ingresos generados. Puede hacer clic en un componente para desglosar más los datos y ver el rendimiento específico de cada canal.
 
-![Dos ejemplos de detalles de rendimiento de los componentes de Canvas. A la izquierda se muestran los detalles de rendimiento de una ruta de usuario con un componente Canvas. A la derecha se muestran los detalles de rendimiento de un componente Canvas expandido y un paso anidado que muestra el recuento de impresiones de mensajes in-app.][25]
+![Dos ejemplos de detalles de rendimiento de los componentes de Canvas. A la izquierda se muestran los detalles de rendimiento de una ruta de usuario con un componente Canvas. A la derecha se muestran los detalles de rendimiento de un componente Canvas ampliado y un paso anidado que muestra el recuento de impresiones de mensajes dentro de la aplicación.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Desglose del rendimiento por variante
 
@@ -54,7 +54,7 @@ En la pestaña **Analizar variantes**, puede ver un desglose del rendimiento por
 
 Puedes deducir rápidamente variantes eficaces e identificar las cadencias, contenidos, desencadenantes, tiempos adecuados y mucho más.
 
-![][26]
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 Las métricas básicas son las siguientes:  
 
@@ -77,14 +77,9 @@ Además, puede ver un desglose más explícito de los [eventos de conversión]({
 
 ### Informe de embudo
 
-Los informes de embudo ofrecen un informe visual que le permite analizar los recorridos que realizan sus clientes después de recibir un Canvas. Si su Canvas utiliza un grupo de control o múltiples variantes, podrá comprender cómo las diferentes variantes han impactado en el embudo de conversión a un nivel más granular y optimizar en base a estos datos. Para más información sobre los informes de embudo, consulta [Informes de embudo][2].
+Los informes de embudo ofrecen un informe visual que le permite analizar los recorridos que realizan sus clientes después de recibir un Canvas. Si su Canvas utiliza un grupo de control o múltiples variantes, podrá comprender cómo las diferentes variantes han impactado en el embudo de conversión a un nivel más granular y optimizar en base a estos datos. Para más información sobre los informes de embudo, consulta [Informes de embudo]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ### Informe de retención
 
-La retención de usuarios es una de las métricas más importantes para cualquier profesional del marketing. Mantener a los usuarios comprometidos volviendo a por más indica que el negocio va viento en popa. Braze ahora le permite medir la retención de usuarios directamente en la página **de Canvas Analytics**. Para más información sobre cómo leer e interpretar su informe de retención, consulte [Informes de retención][1].
+La retención de usuarios es una de las métricas más importantes para cualquier profesional del marketing. Mantener a los usuarios comprometidos volviendo a por más indica que el negocio va viento en popa. Braze ahora le permite medir la retención de usuarios directamente en la página **de Canvas Analytics**. Para más información sobre cómo leer e interpretar su informe de retención, consulte [Informes de retención]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
-[24]:{% image_buster /assets/img_archive/Journey_5.png %}
-[25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[26]:{% image_buster /assets/img_archive/analyze_variants.png %}

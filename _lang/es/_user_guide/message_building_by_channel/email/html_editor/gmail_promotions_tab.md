@@ -10,7 +10,7 @@ channel:
 
 # Configuración de la promoción de Gmail
 
-> La [pestaña Promociones de Gmail para móviles][1] permite a los profesionales del marketing enviar más información mediante anotaciones en una "tarjeta", en lugar de limitarse a la línea de asunto o a la información del preencabezado. Braze tiene una herramienta integrada que le ayuda a crear la tarjeta de su campaña de correo electrónico.
+> La [pestaña Promociones de Gmail para móviles](https://developers.google.com/gmail/promotab/) permite a los profesionales del marketing enviar más información mediante anotaciones en una "tarjeta", en lugar de limitarse a la línea de asunto o a la información del preencabezado. Braze tiene una herramienta integrada que le ayuda a crear la tarjeta de su campaña de correo electrónico.
 
 ## Requisito previo
 
@@ -20,10 +20,10 @@ En primer lugar, envía tus dominios y subdominios al equipo de difusión de la 
 
 Sigue estos pasos para crear una tarjeta promocional de Gmail para una campaña de correo electrónico. Ten en cuenta que al salir de la sección **Contenido** del editor se restablecerán los campos y la información de la pestaña **Promoción de Gmail**. Complete la configuración de su tarjeta promocional y copie el HTML generado para no perder su código HTML.
 
-1. [Crea tu campaña de correo electrónico][7], y selecciona el **editor HTML** como experiencia de edición.
+1. [Crea tu campaña de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) y selecciona el **editor** HTML como experiencia de edición.
 2. Ve a la sección **Contenido** del editor HTML y selecciona la pestaña **Promoción de Gmail**.
-3. Rellene los campos de **Información básica** y, a continuación, haga clic en **Generar código HTML**. Esto ayudará a generar la secuencia de comandos para su tarjeta Gmail Promo Tab en la sección **Copiar y pegar código HTML en `<Head>`**. <br> ![Un ejemplo de cómo construir una tarjeta.][2]
-4. Elige si deseas incluir solo una oferta de descuento, tarjetas de promoción o ambas para tu tarjeta de promoción de Gmail. <br> ![Opciones para incluir una oferta de descuento y tarjetas de promoción.][10]{: style="max-width:50%;"}
+3. Rellene los campos de **Información básica** y, a continuación, haga clic en **Generar código HTML**. Esto ayudará a generar la secuencia de comandos para su tarjeta Gmail Promo Tab en la sección **Copiar y pegar código HTML en `<Head>`**. <br> ![Un ejemplo de cómo construir una tarjeta.]({% image_buster /assets/img/create-gmail-promo.png %})
+4. Elige si deseas incluir solo una oferta de descuento, tarjetas de promoción o ambas para tu tarjeta de promoción de Gmail. <br> ![Opciones para incluir una oferta de descuento y tarjetas de promoción.]({% image_buster /assets/img_archive/gmail_promo_discount.png %}){: style="max-width:70%;"}
 5. Copie y pegue el script en el elemento `<head>` del HTML de su correo electrónico.
 
 {% alert warning %}
@@ -34,13 +34,13 @@ La secuencia de comandos Promociones sólo aparece si tu correo electrónico apa
 
 Configurar una oferta de descuento le permite especificar las fechas válidas para un descuento. Tras determinar tu oferta de descuento, selecciona una fecha y hora de inicio. Tiene la opción de finalizar la oferta de descuento en un momento determinado o de no finalizarla nunca.
 
-![Opciones para especificar el valor de la oferta, el código y la fecha y hora de inicio de una oferta de descuento.][11]{: style="max-width:50%;"}
+![Opciones para especificar el valor de la oferta, el código y la fecha y hora de inicio de una oferta de descuento.]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
 ### Personalizar el carrusel de productos
 
 Las tarjetas de promoción en tu carrusel de productos son útiles para proporcionar imágenes a tu oferta. También puede personalizar las variables de su carrusel de productos e incluir hasta diez vistas previas de imágenes, donde cada imagen es única.
 
-![Un ejemplo de carrusel de productos de una empresa llamada Motto con el encabezado de correo electrónico "Nuestros calcetines más vendidos están de oferta", con tres imágenes de calcetines y sus precios rebajados.][9]{: style="max-width:40%;"}
+![Un ejemplo de carrusel de productos de una empresa llamada Motto con el encabezamiento de correo electrónico "Nuestros calcetines más vendidos están de rebajas", con tres imágenes de calcetines y sus precios rebajados.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 | Variable personalizable | Descripción |
 |---|---|
@@ -58,7 +58,7 @@ Le recomendamos que cargue las imágenes de sus productos en la mediateca y, a c
 
 ### Buenas prácticas
 
-En general, sigue estas [buenas prácticas recomendadas por Gmail][8]. 
+En general, sigue estas [prácticas recomendadas por Gmail](https://developers.google.com/gmail/promotab/best-practices). 
 
 {% alert tip %}
 Aunque puede utilizar Liquid dentro de este script, le recomendamos encarecidamente que pruebe su mensajería tanto como sea posible para evitar un error.
@@ -92,14 +92,3 @@ Braze o cualquier otro ESP no son capaces de insertar el seguimiento de enlaces 
 
 Gmail determina cuándo y a quién mostrar la tarjeta, por lo que no se garantiza que todos los destinatarios vean el carrusel de productos.
 
-[1]: https://developers.google.com/gmail/promotab/
-[2]: {% image_buster /assets/img/create-gmail-promo.png %}
-[3]: {% image_buster /assets/img/copy-gmail-promo-script.png %}
-[4]: {% image_buster /assets/img/promocardmap.png %}
-[5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
-[6]: {% image_buster /assets/img/gmail_preview.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-[8]: https://developers.google.com/gmail/promotab/best-practices
-[9]: {% image_buster /assets/img_archive/product_carousel.png %}
-[10]: {% image_buster /assets/img_archive/gmail_promo_discount.png %}
-[11]: {% image_buster /assets/img/gmail_promo_discount_details.png %}

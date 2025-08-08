@@ -1,21 +1,19 @@
 ---
 nav_title: Notificaciones de existencias
-article_title: Notificaciones de existencias
+article_title: Configurar las notificaciones de reposición de existencias
 page_order: 2
-description: "Este artículo de referencia describe cómo crear notificaciones de falta de existencias en los catálogos Braze."
+description: "Aprende a configurar las notificaciones de reposición de existencias utilizando tu catálogo y eventos personalizados, para que puedas suscribir automáticamente a los clientes para que reciban notificaciones cuando un artículo vuelva a estar disponible."
 ---
 
 # Notificaciones de existencias
 
-> Utiliza una combinación de notificaciones de reposición de existencias a través de los catálogos Braze y un Canvas para notificar a los clientes cuándo un artículo vuelve a estar disponible. Cada vez que un cliente realiza un evento personalizado seleccionado, puede suscribirse automáticamente para recibir una notificación cuando se reponga el artículo.<br><br>Esta página explica cómo funcionan las notificaciones de agotamiento de existencias y cómo puedes configurarlas y utilizarlas.
+> Aprende a configurar las notificaciones de reposición de existencias utilizando tu catálogo y eventos personalizados, para que puedas suscribir automáticamente a los clientes para que reciban notificaciones cuando un artículo vuelva a estar disponible. Ten en cuenta que esto sólo se aplica a los usuarios que ya han optado por la adhesión voluntaria a las notificaciones.
 
-Cuando un usuario active un evento personalizado para un artículo, lo suscribiremos automáticamente para que reciba notificaciones de reposición de existencias de ese artículo. Cuando la cantidad de inventario del artículo cumpla tu regla de inventario (como un inventario superior a 100), todos los suscriptores serán elegibles para recibir notificaciones a través de una campaña o Canvas. Sin embargo, sólo los usuarios que hayan optado por recibir notificaciones las recibirán. 
+## Cómo funciona
 
-## Cómo funcionan las notificaciones de reposición de existencias
+Puedes configurar un evento personalizado para utilizarlo como evento de suscripción, como un evento de `product_clicked`. Este evento debe contener una propiedad del ID del artículo (ID de artículos del catálogo). Le sugerimos que incluya un nombre de catálogo, pero no es obligatorio. También proporcionará el nombre de un campo de cantidad de inventario, que debe ser de tipo dato numérico. 
 
-Configurará un evento personalizado para utilizarlo como evento de suscripción, como por ejemplo `product_clicked`. Este evento debe contener una propiedad del ID del artículo (ID de artículos del catálogo). Le sugerimos que incluya un nombre de catálogo, pero no es obligatorio. También proporcionará el nombre de un campo de cantidad de inventario, que debe ser de tipo dato numérico. 
-
-Ten en cuenta que el stock de un artículo del catálogo debe estar a cero para que un usuario pueda suscribirse a él con éxito. Cuando un artículo tiene una cantidad de inventario que cumple su regla de inventario, buscaremos a todos sus usuarios suscritos a ese artículo (usuarios que realizaron el evento de suscripción) y enviaremos un evento personalizado Braze que puede utilizar para activar una campaña o Canvas.
+Ten en cuenta que el stock de un artículo del catálogo debe estar a cero para que un usuario pueda suscribirse a él con éxito. Cuando un artículo tenga una cantidad de inventario superior a cero, Braze buscará a todos los usuarios suscritos a ese artículo y enviará un evento personalizado que puedes utilizar para desencadenar una campaña o Canvas.
 
 Las propiedades del evento se envían junto con tu usuario, por lo que puedes introducir la plantilla con los detalles del elemento en la campaña o Canvas que envía.
 
@@ -26,11 +24,11 @@ Siga estos pasos para configurar las notificaciones de agotado en un catálogo e
 1. Vaya a su catálogo y seleccione la pestaña **Configuración**.
 2. Seleccione la opción **Volver a existencias**.
 3. Si no se han configurado los ajustes globales de reposición de existencias, se le pedirá que configure los eventos y propiedades personalizados que se utilizarán para activar las notificaciones de reposición de existencias:
-    <br> ![Cajón de configuración del catálogo.][2]{: style="max-width:70%;"}
+    <br> ![Cajón de configuración del catálogo.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
     - **Catálogo alternativo** Éste es el catálogo que se utilizará para la suscripción de reserva, si no hay ninguna propiedad `catalog_name` presente en el evento personalizado.
     - **Evento personalizado para suscripciones** es el evento personalizado Braze que se utilizará para suscribir a un usuario a las notificaciones de reposición de existencias. Cuando se produzca este evento, se suscribirá el usuario que lo haya realizado.
     - **Evento personalizado para darse de baja** es el evento personalizado Braze que se utilizará para dar de baja a un usuario de las notificaciones de reposición de existencias. Este evento es opcional. Si el usuario no realiza este evento, se le cancelará la suscripción transcurridos 90 días o cuando se desencadene el evento de reposición de existencias, lo que ocurra primero.
-    - **La propiedad del evento ID del artículo** es la propiedad del evento personalizado anterior que se utilizará para determinar el artículo para una suscripción o desuscripción de nuevo en stock. Esta propiedad del evento personalizado debe contener un ID de artículo, que esté presente en un catálogo. El evento personalizado también debe contener una propiedad `catalog_name`, para especificar en qué catálogo se encuentra este artículo.
+    - **La propiedad del evento ID del artículo** es la propiedad del evento personalizado anterior que se utilizará para determinar el artículo para una suscripción o desuscripción de nuevo en stock. Esta propiedad del evento personalizado debe contener un ID de artículo (`id`) que esté presente en un catálogo. El ID del artículo debe enviarse como una cadena para que coincida con el tipo de datos `id` almacenado en el catálogo de destino. El evento personalizado también debe contener una propiedad `catalog_name`, para especificar en qué catálogo se encuentra este artículo.
     
     - Un ejemplo de evento personalizado sería el siguiente
     ```json
@@ -61,7 +59,7 @@ Los desencadenantes de reposición de existencias y de bajada de precios utiliza
 6\. Establezca el **campo Inventario en el catálogo**. Este campo del catálogo se utilizará para determinar si el artículo está agotado. El campo debe ser de tipo numérico.
 7\. Selecciona **Guardar configuración**.
 
-![Configuración del catálogo que muestra la función de reposición de existencias activada. Las reglas de notificación consisten en notificar a mil usuarios cada diez minutos.][1]
+![Configuración del catálogo que muestra la función de reposición de existencias activada. Las reglas de notificación consisten en notificar a mil usuarios cada diez minutos.]({% image_buster /assets/img/back_in_stock_settings.png %})
 
 {% alert important %}
 Las reglas de notificación de estos ajustes no sustituyen a los ajustes de notificación de Canvas, como Horas de silencio.
@@ -92,5 +90,3 @@ Utilice esta etiqueta Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{
 - Cuando se utiliza la regla de notificación **Notificar a todos los usuarios suscritos**, Braze notificará a 100.000 en 10 minutos.
 - Braze procesará como máximo 10 actualizaciones de elementos en un minuto. Si actualizas 11 artículos en un minuto, solo los 10 primeros pueden desencadenar una notificación de reposición de existencias.
 
-[1]: {% image_buster /assets/img/back_in_stock_settings.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

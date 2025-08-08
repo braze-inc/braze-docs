@@ -8,7 +8,7 @@ description: "Este artículo de referencia trata sobre la cancelación de mensaj
 
 # Anular mensajes
 
-> Opcionalmente, puede abortar mensajes Líquidos dentro de condicionales. Este artículo de referencia enumera algunos ejemplos de cómo puede utilizarse esta función en campañas de marketing.
+> Opcionalmente, puedes utilizar la etiqueta de mensaje `abort_message("optional reason for aborting")` Liquid dentro de condicionales para impedir el envío de un mensaje a un usuario. Este artículo de referencia enumera algunos ejemplos de cómo puede utilizarse esta función en campañas de marketing.
 
 {% alert note %}
 Si se cancela un paso de mensaje en un lienzo, el usuario **no** saldrá del lienzo **y** pasará al siguiente paso.
@@ -59,15 +59,12 @@ También puede hacer que el mensaje de cancelación registre algo en el registro
 ```
 {% endraw %}
 
-![Registro de error de mensaje en la consola para desarrolladores con un mensaje de cancelación de "el idioma era nulo".][26]
+![Registro de error de mensaje en la consola para desarrolladores con un mensaje de cancelación de "el idioma era nulo".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Consulta de mensajes de cancelación
 
 Puedes utilizar [el Generador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) o tu propio almacén de datos, si está conectado a Braze, para consultar mensajes específicos de interrupción que se desencadenan cuando la lógica de Liquid hace que se interrumpa un mensaje.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:[31]:
-[32]:[32]:
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+## Consideraciones
+
+La etiqueta de mensaje `abort_message()` Liquid impide el envío de mensajes a los usuarios, lo que significa que el mensaje no se mostrará en los perfiles de usuario y no contará para las entregas o la limitación de frecuencia.

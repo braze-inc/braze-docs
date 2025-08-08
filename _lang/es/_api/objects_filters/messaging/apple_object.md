@@ -17,7 +17,7 @@ description: "Este artículo de referencia enumera y explica los diferentes obje
 
 ```json
 {
-   "badge": (optional, int) the badge count after this message,
+   "badge": (optional, integer) the badge count after this message,
    "alert": (required unless content-available is true, string or Apple Push Alert Object) the notification message,
    // Specifying "default" in the sound field will play the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
@@ -36,7 +36,8 @@ description: "Este artículo de referencia enumera y explica los diferentes obje
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display,
+   "apns_priority": (optional, integer) override the default apns_priority value using an integer between 1 and 10; use 10 for immediate delivery, 5 for power-aware delivery, and 1 to minimize power impact and avoid waking the device,
 }
 ```
 

@@ -34,7 +34,7 @@ Cuando un usuario introduce contenido a través de un formulario web, compruebe 
 - **Si un usuario no existe:**
   - Crea un perfil sólo para alias a través del [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Este punto final aceptará un [objeto`user_alias` ]({{site.baseurl}}/api/objects_filters/user_alias_object/) y creará un perfil de solo alias cuando `update_existing_only` esté configurado como `false`. Establezca el correo electrónico del usuario como el alias del usuario para hacer referencia a ese usuario en el futuro (ya que el usuario no tendrá un `external_id`).
 
-![Diagrama que muestra el proceso para actualizar un perfil de usuario de sólo alias. Un usuario introduce su dirección de correo electrónico y un atributo personalizado, su código postal, en una página de destino de marketing. Una flecha que apunta desde la colección de la página de destino a un perfil de usuario de sólo alias muestra una solicitud de la API Braze al punto final Track user, con el cuerpo de la solicitud que contiene el nombre de alias del usuario, la etiqueta de alias, el correo electrónico y el código postal. El perfil tiene la etiqueta "Alias Sólo usuario creado en Braze" con los atributos del cuerpo de la solicitud para mostrar los datos que se reflejan en el perfil recién creado.][3]{: style="max-width:90%;"}
+![Diagrama que muestra el proceso para actualizar un perfil de usuario de sólo alias. Un usuario introduce su dirección de correo electrónico y un atributo personalizado, su código postal, en una página de destino de marketing. Una flecha que apunta desde la colección de la página de destino a un perfil de usuario de sólo alias muestra una solicitud de la API Braze al punto final Track user, con el cuerpo de la solicitud que contiene el nombre de alias del usuario, la etiqueta de alias, el correo electrónico y el código postal. El perfil tiene la etiqueta "Alias Sólo usuario creado en Braze" con los atributos del cuerpo de la solicitud para mostrar los datos que se reflejan en el perfil recién creado.]({% image_buster /assets/img/user_profile_process3.png %}){: style="max-width:90%;"}
 
 ## Captura de correos electrónicos de usuarios a través de un formulario de captura de correo electrónico
 
@@ -67,6 +67,3 @@ Una vez fusionados los perfiles de usuario, esta acción no puede deshacerse.
 - Consulta nuestro artículo sobre el [ciclo de vida del perfil de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) Braze para obtener más información.<br>
 - Consulta nuestra documentación sobre la configuración de ID de usuario y la llamada al método `changeUser()` para [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) y [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web).
 
-[1]: {% image_buster /assets/img/user_profile_process.png %}
-[2]: {% image_buster /assets/img/user_profile_process2.png %}
-[3]: {% image_buster /assets/img/user_profile_process3.png %}

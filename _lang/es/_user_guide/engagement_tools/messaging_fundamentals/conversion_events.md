@@ -11,7 +11,7 @@ tool:
 
 # Eventos de conversión
 
-> Un evento de conversión es un tipo de métrica de éxito que realiza un seguimiento de si un destinatario de tu mensajería realiza una acción de alto valor en un tiempo determinado después de recibir tu interacción. Utiliza estos eventos para asegurarte de que estás recopilando información relevante y útil que luego puedas utilizar para obtener información para tu campaña o Canvas.
+> Un evento de conversión es un tipo de métrica de éxito que realiza un seguimiento de si un destinatario de tu mensajería realiza una acción de alto valor en un tiempo determinado tras recibir tu interacción. Utiliza estos eventos para asegurarte de que estás recopilando información relevante y útil que luego puedas utilizar para obtener información para tu campaña o Canvas.
 
 ## Cómo funciona
 
@@ -41,7 +41,7 @@ El evento de conversión principal es el primer evento añadido durante la creac
 Si los mensajes se cancelan utilizando la etiqueta de Liquid `abort`, solo se cancelan potencialmente los usuarios que pasan por variantes. Esto significa que los mensajes a los usuarios que pasen por el grupo de control no se abortarán, lo que puede dar lugar a porcentajes de conversión sesgados entre las variantes y los grupos de control. Como solución, utilice [la segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) para dirigirse a sus usuarios en la campaña y en la entrada de Canvas.
 {% endalert %}
 
-## Crear una campaña con seguimiento de la conversión
+## Crear una campaña con seguimiento de conversiones
 
 ### Paso 1: Configura tu campaña
 
@@ -79,6 +79,6 @@ Si no hay eventos de conversión seleccionados durante la creación de la campa�
 
 Además, para los mensajes multivariantes, puede ver el número de conversiones y los porcentajes de conversión de su grupo de control y de cada variante.
 
-![Cuatro eventos de conversión que realizan un seguimiento de las conversiones en función de cuándo se realizó una compra en un plazo de tres horas, cuándo se realizó una compra en un plazo de dos horas, cuándo se inició una sesión en un plazo de 30 minutos y cuándo se inició una sesión en un plazo de 25 minutos.]({% image_buster /assets/img_archive/conversion_event_details.png %})
+![Cuatro eventos de conversión que realizan un seguimiento de las conversiones en función de cuándo se realizó una compra en un plazo de tres horas, se realizó una compra en un plazo de dos horas, se inició una sesión en un plazo de 30 minutos y se inició una sesión en un plazo de 25 minutos.]({% image_buster /assets/img_archive/conversion_event_details.png %})
 
 
