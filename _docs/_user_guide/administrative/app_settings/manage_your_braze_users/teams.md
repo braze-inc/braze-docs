@@ -23,7 +23,7 @@ Teams are not available on all Braze contracts. If you'd like to access this fea
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
-![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %})
+![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
 
 Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#testing-with-Teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on product.
 
@@ -86,24 +86,24 @@ Consider the following two scenarios for a marketer in Braze named Michelle. Mic
 {% tabs %}
 {% tab Scenario 1 - Only Team permissions %}
 
-In this scenario, Michelle is a limited user that has no workspace-level permissions. Her permissions look something like this:
+In this scenario, Michelle is a limited user who has no workspace-level permissions. Her permissions look something like this:
 
-![]({% image_buster /assets/img_archive/scenario1.png %})
+![Custom permissions with no workspace-level permissions and 16 team-based permissions.]({% image_buster /assets/img_archive/scenario1.png %})
 
 Based on Michelle's assigned permissions, whenever she creates a campaign, she can only assign the "Development" Team to that campaign. She can't launch the campaign unless the Team is assigned, and she can't view or access any other Team tags.
 
-![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
+![Campaign Team tag dropdown that only displays the "Development" Team tag.]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
 {% tab Scenario 2 - Team permissions and workspace permissions %}
 
 In this scenario, Michelle is still a member of the Development Team, but she also has an additional workspace-level permission.
 
-![]({% image_buster /assets/img_archive/scenario2.png %})
+![Custom permissions with one workspace-level permission and 15 team-based permissions.]({% image_buster /assets/img_archive/scenario2.png %})
 
 Because Michelle has the workspace-level permission of "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers", she can view and assign other Team filters to the campaign she creates.
 
-![]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
+![Campaign Team tag dropdown with multiple Team tags]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
 
 Similar to the first scenario, Michelle must add the Development Team tag to the campaign before she can launch it.
 
