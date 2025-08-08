@@ -23,7 +23,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='seleções de catálogo assíncronas' %}
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog selections' %}
 
 ## Parâmetros da jornada
 

@@ -10,7 +10,7 @@ tool:
 
 # Status da campanha e do Canva
 
-> Saiba mais sobre os status de campanhas e Canvas e como usá-los no dashboard.
+> Saiba mais sobre status para campanhas e Canvas e como usá-los no dashboard.
 
 ## Filtragem por status
 

@@ -21,7 +21,7 @@ As mensagens no app em HTML permitem maior controle sobre a aparência de uma me
 - Componentes interativos
 - Animações personalizadas
 
-As mensagens HTML personalizadas podem usar os métodos [do JavaScript Bridge](#javascript-bridge) para registrar eventos, definir atributos personalizados, fechar a mensagem e muito mais! Confira nosso [repositório no GitHub][2], que contém instruções detalhadas sobre como usar e personalizar mensagens no app em HTML para suas necessidades, e um conjunto de modelos de mensagens no app em HTML5 para ajudá-lo a começar.
+As mensagens HTML personalizadas podem usar os métodos [do JavaScript Bridge](#javascript-bridge) para registrar eventos, definir atributos personalizados, fechar a mensagem e muito mais! Confira nosso [repositório no GitHub](https://github.com/braze-inc/in-app-message-templates), que contém instruções detalhadas sobre como usar e personalizar mensagens no app em HTML para suas necessidades, e um conjunto de modelos de mensagens no app em HTML5 para ajudá-lo a começar.
 
 {% alert note %}
 Para ativar mensagens no app HTML através do Web SDK, você deve fornecer a opção de inicialização `allowUserSuppliedJavascript` para a Braze, por exemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Isso ocorre por motivos de segurança, pois as mensagens HTML no app podem executar JavaScript, portanto, exigimos que um mantenedor de site as ative.
@@ -207,7 +207,7 @@ Você pode pressionar <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows) ou <kbd>Command</
 
 ### Rastreamento de botões {#button-tracking-improvements}
 
-Você pode rastrear a performance em sua mensagem no app com código personalizado usando o método [`brazeBridge.logClick(button_id)`][1] JavaScript. Isso permite rastrear programaticamente o "Botão 1", o "Botão 2" e os "Cliques no corpo" usando `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")` ou `brazeBridge.logClick()`, respectivamente.
+Você pode rastrear a performance em sua mensagem no app com código personalizado usando o método [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript. Isso permite rastrear programaticamente o "Botão 1", o "Botão 2" e os "Cliques no corpo" usando `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")` ou `brazeBridge.logClick()`, respectivamente.
 
 | Cliques     | Método                       |
 | ---------- | ---------------------------- |
@@ -246,10 +246,8 @@ Você também pode rastrear novos nomes de botões personalizados - até 100 nom
 
    | Antes | Após |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_025ed491-df5c-4b29-aa5a-a0735bfa357f/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_e4b4798f-15ef-4f83-9ef3-1613c8d2a64c/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_77ee1ba0-c058-44d8-8762-e45726e86721/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_1e8dff7f-65cf-4178-b7b9-80ae67a70b47/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_9a3e3934-0cc5-4a78-968f-23d7f5d9bcc6/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_c7d3c0bd-674f-41cd-a486-6b1e6d88b2c4/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_dd2d56d3-01b2-4125-8f3d-fe87b6b5dd85/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_d4d4a757-1957-4637-94a2-7b72503cf587/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_1fc1669c-8db8-452d-b609-574609d541cb/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_8772e922-7354-4949-b62f-0823657bbdee/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/braze-inc/in-app-message-templates

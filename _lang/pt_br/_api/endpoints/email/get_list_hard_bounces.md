@@ -30,22 +30,22 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | ----------|-----------| ----------|----- |
-| `start_date` | Opcional<br>(ver nota) | String no formato YYYY-MM-DD| A data de início do intervalo para recuperar hard bounce deve ser anterior a `end_date`. Isso é tratado como meia-noite no horário UTC pela API. |
-| `end_date` | Opcional<br>(ver nota) | String no formato YYYY-MM-DD | Data final do intervalo para recuperar hard bounces. Isso é tratado como meia-noite no horário UTC pela API. |
+| `start_date` | Opcional* | String no formato YYYY-MM-DD| \*É necessário um dos sites `start_date` ou `email`. Essa é a data de início do intervalo para recuperar hard bounces e deve ser anterior a `end_date`. Isso é tratado como meia-noite no horário UTC pela API. |
+| `end_date` | Obrigatória | String no formato YYYY-MM-DD | Data final do intervalo para recuperar hard bounces. Isso é tratado como meia-noite no horário UTC pela API. |
 | `limit` | Opcional | Inteiro | Campo opcional para limitar o número de resultados retornados. O padrão é 100, o máximo é 500. |
 | `offset` | Opcional | Inteiro | Ponto inicial opcional na lista a ser recuperado. |
-| `email` | Opcional<br>(ver nota) | String | Se fornecido, retornaremos se o usuário sofreu hard bounce ou não. Verifique se as strings de e-mail estão formatadas corretamente. |
+| `email` | Opcional* | String | \*É necessário um dos sites `start_date` ou `email`. Se fornecido, retornaremos se o usuário sofreu hard bounce ou não. Verifique se as strings de e-mail estão formatadas corretamente. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Você precisa fornecer um `start_date` e `end_date`, OU um `email`. Se você fornecer todos os três, `start_date`, `end_date`, e um `email`, priorizaremos os e-mails fornecidos e desconsideraremos o intervalo de datas.
+{% alert important %}
+Você deve fornecer um `end_date`, e um `email` ou um `start_date`. Se você fornecer todos os três, `start_date`, `end_date`, e um `email`, priorizaremos os e-mails fornecidos e desconsideraremos o intervalo de datas.
 {% endalert %}
 
 Se o seu intervalo de datas tiver mais do que o número `limit` de hard bounces, será necessário fazer várias chamadas à API, aumentando a cada vez o `offset` até que uma chamada retorne menos do que `limit` ou zero resultados. A inclusão dos parâmetros `offset` e `limit` com `email` pode retornar uma resposta vazia.
 
 ## Exemplo de solicitação
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=example@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

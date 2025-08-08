@@ -68,7 +68,7 @@ Em outras palavras, você já tem um perfil de usuário para esse usuário. Ness
 
 Se o usuário anônimo e o usuário conhecido tiverem um primeiro nome, o primeiro nome do usuário conhecido será mantido. Se o usuário conhecido tiver um valor nulo e o usuário anônimo tiver um valor, o valor do usuário anônimo será mesclado no perfil do usuário conhecido se o valor se enquadrar nesses [campos específicos do perfil do usuário]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
-Para obter informações sobre como definir um `external_id` em relação a um perfil de usuário, consulte nossa documentação ([iOS][24], [Android][30], [Web][31]).
+Para obter informações sobre como definir um `external_id` em relação a um perfil de usuário, consulte nossa documentação[(iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
 ## Alias do usuário
 
@@ -78,9 +78,9 @@ Cada alias funciona como um par chave-valor que consiste em duas partes: um `ali
 
 ### Atualização de aliases de usuário
 
-Ao contrário de `external_id`, um alias pode ser atualizado com um novo nome para um determinado rótulo depois de definido, seja usando nossos [User Data endpoints][32] ou passando um novo nome pelo SDK. O alias do usuário ficará visível ao exportar os dados desse usuário.
+Ao contrário de `external_id`, um alias pode ser atualizado com um novo nome para um determinado rótulo depois de definido, seja usando nossos [endpoints de dados de usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) ou passando um novo nome pelo SDK. O alias do usuário ficará visível ao exportar os dados desse usuário.
 
-![Dois perfis de usuário diferentes para usuários distintos com o mesmo rótulo de alias de usuário, mas com nomes de alias diferentes][29]
+![Dois perfis de usuário diferentes para usuários separados com o mesmo rótulo de alias de usuário, mas com nomes de alias diferentes]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
 ### Tag de usuários anônimos
 
@@ -94,9 +94,9 @@ Se um perfil de usuário anônimo com um pseudônimo for posteriormente reconhec
 
 Um alias de usuário também pode ser definido em um perfil de usuário conhecido para fazer referência a um usuário conhecido por outra ID conhecida externamente. Por exemplo, um usuário pode ter um ID de ferramenta de business intelligence (como um ID do Amplitude) que você deseja referenciar na Braze.
 
-Para obter informações sobre como definir um alias de usuário, consulte nossa documentação para cada plataforma[(iOS][1], [Android][2], [Web][3]).
+Para obter informações sobre como definir um alias de usuário, consulte nossa documentação para cada plataforma[(iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users)).
 
-![Um fluxograma do ciclo de vida de um perfil de usuário no Braze. Quando changeUser() é chamado para um usuário anônimo, esse usuário se torna um usuário identificado e os dados de usuários são migrados para seu perfil de usuário identificado. O usuário identificado tem uma ID Braze e uma ID externa. Nesse ponto, se um segundo usuário anônimo tiver changeUser() chamado, os campos de dados de usuários que ainda não existem no usuário identificado serão mesclados. Se o usuário identificado tiver um alias adicionado ao seu perfil de usuário existente, nenhum dado será afetado, mas ele se tornará um usuário identificado com alias. Se um terceiro usuário anônimo com o mesmo rótulo de alias que o usuário identificado, mas com um nome de alias diferente, tiver a função changeUser() chamada, todos os campos que não existirem no usuário identificado serão mesclados e o rótulo de alias no perfil do usuário identificado será mantido.][26]
+![Um fluxograma do ciclo de vida de um perfil de usuário no Braze. Quando changeUser() é chamado para um usuário anônimo, esse usuário se torna um usuário identificado e os dados de usuários são migrados para seu perfil de usuário identificado. O usuário identificado tem uma ID Braze e uma ID externa. Nesse ponto, se um segundo usuário anônimo tiver changeUser() chamado, os campos de dados de usuários que ainda não existem no usuário identificado serão mesclados. Se o usuário identificado tiver um alias adicionado ao seu perfil de usuário existente, nenhum dado será afetado, mas ele se tornará um usuário identificado com alias. Se um terceiro usuário anônimo com o mesmo rótulo de alias que o usuário identificado, mas com um nome de alias diferente, tiver o changeUser() chamado, todos os campos que não existirem no usuário identificado serão mesclados e o rótulo de alias no perfil do usuário identificado será mantido.]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
 
 {% alert tip %}
 Está com dificuldades para imaginar como isso pode ser visto no ciclo de vida do perfil do usuário de seus clientes? Visite [Práticas recomendadas]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/) para ver as práticas recomendadas de coleta de dados de usuários.
@@ -104,7 +104,7 @@ Está com dificuldades para imaginar como isso pode ser visto no ciclo de vida d
 
 ## Caso de uso avançado
 
-É possível definir um novo alias de usuário para perfis de usuários identificados existentes por meio do nosso SDK e da nossa API usando os [endpoints de dados de usuários][27]. No entanto, os aliases de usuário não podem ser definidos por meio da API para um perfil de usuário desconhecido existente.
+É possível definir um novo alias de usuário para perfis de usuários identificados existentes por meio do nosso SDK e da nossa API usando os [endpoints de dados de usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint). No entanto, os aliases de usuário não podem ser definidos por meio da API para um perfil de usuário desconhecido existente.
 
 Os aliases de usuário também são mesclados no processo. No entanto, se tanto o usuário órfão quanto o usuário de destino tiverem um alias com o mesmo rótulo, apenas o alias do usuário de destino será mantido.
 
@@ -112,23 +112,10 @@ Desinstalar e reinstalar um app gerará um novo `braze_id` anônimo para esse us
 
 ### Solução de problemas com IDs de usuário
 
-Todos os IDs de usuário podem ser usados para encontrar e identificar usuários no dashboard para testes. Para encontrar seu usuário no dashboard da Braze, consulte [Adicionando usuários teste][28].
+Todos os IDs de usuário podem ser usados para encontrar e identificar usuários no dashboard para testes. Para encontrar seu usuário no dashboard do Braze, consulte [Adicionar usuários de teste]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
 O Braze banirá ou bloqueará os usuários com mais de 5.000.000 de sessões ("usuários fictícios") e não ingerirá mais seus eventos SDK, pois esses usuários geralmente são o resultado de uma integração incorreta. Se achar que isso aconteceu com um usuário legítimo, entre em contato com o gerente da sua conta Braze.
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[25]: {{site.baseurl}}/developer_guide/home/
-[26]: {% image_buster /assets/img_archive/Braze_User_flowchart.png %}
-[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint
-[28]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[29]: {% image_buster /assets/img_archive/Braze_User_aliases.png %}
-[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[31]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[32]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint

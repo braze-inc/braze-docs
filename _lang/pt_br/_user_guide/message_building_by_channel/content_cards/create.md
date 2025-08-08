@@ -2,7 +2,7 @@
 nav_title: Criação de um cartão de conteúdo
 article_title: Criação de um cartão de conteúdo
 page_order: 0
-description: "Este artigo de referência aborda como criar, criar, configurar e enviar cartões de conteúdo usando campanhas e canvas da Braze."
+description: "Este artigo de referência aborda como criar, criar, configurar e enviar cartões de conteúdo usando campanhas e canvas do Braze."
 tool:
   - Canvas
   - Campaigns
@@ -66,15 +66,15 @@ Para saber mais sobre o comportamento e a aparência esperados de cada tipo, con
 
 É possível editar todos os aspectos do conteúdo e do comportamento de sua mensagem na guia **Compose (Compor)** do editor de mensagens.
 
-![Detalhes do cartão de conteúdo de amostra na guia de composição do editor de mensagens.][24]
+![Detalhes do cartão de conteúdo de amostra na guia Compor do criador de mensagens.]({% image_buster /assets/img/content_card_compose.png %})
 
 O conteúdo aqui varia de acordo com o **tipo de cartão** escolhido na etapa anterior, mas pode incluir qualquer uma das seguintes opções:
 
 #### Idioma
 
-Selecione **Adicionar Idiomas** para adicionar os idiomas desejados da lista fornecida. Isso inserirá o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para nossa lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados][18].
+Selecione **Adicionar Idiomas** para adicionar os idiomas desejados da lista fornecida. Isso inserirá o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) em sua mensagem. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para nossa lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-![Uma janela com inglês, espanhol e francês selecionados para os idiomas, e título, descrição e texto do link selecionados para os campos a serem internacionalizados.][2]{: style="max-width:70%;"}
+![Uma janela com inglês, espanhol e francês selecionados para os idiomas e título, descrição e texto do link selecionados para os campos a serem internacionalizados.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
 ##### Criação de mensagens da direita para a esquerda
 
@@ -92,7 +92,7 @@ Adicione uma imagem ao seu cartão de conteúdo selecionando **Add Image** ou fo
 
 Um cartão fixado será exibido na parte superior do feed de um usuário e não poderá ser descartado pelo usuário. Se mais de um cartão no feed de um usuário for fixado, os cartões fixados serão exibidos em ordem cronológica. Depois que um cartão foi enviado, você não pode atualizar retroativamente sua opção fixada. A alteração dessa opção após o envio de uma campanha afetará apenas os envios futuros.
 
-![Lado a lado da prévia do cartão de conteúdo na Braze para Mobile e Web com a opção "Fixar este cartão no topo do feed" selecionada.][1]{:style="border:none"}
+![Lado a lado da prévia do cartão de conteúdo no Braze para celular e Web com a opção "Fixar este cartão na parte superior do feed" selecionada.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### Comportamento ao clicar
 
@@ -108,21 +108,13 @@ As seguintes ações estão disponíveis para os links do cartão de conteúdo:
 | Registrar atributo personalizado | Escolha um [atributo personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) a ser definido para o usuário atual. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-**Nota**: As opções __Registrar evento personalizado__ e __Registrar atributo personalizado__ exigem a seguinte compatibilidade com a versão do SDK:
+As opções **Registrar evento personalizado** e **Registrar atributo personalizado** exigem a seguinte compatibilidade de versão do SDK:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-{% alert warning %}
-Os campos de mensagem do cartão de conteúdo são limitados a 2 KB de tamanho total, calculado pela adição do tamanho em bytes dos seguintes campos: Título, Mensagem, URL da Imagem, Texto do Link, URL(s) do Link, e Pares Chave-Valor (nomes + valores). As mensagens que excederem esse tamanho não serão enviadas. Observe que isso não inclui o tamanho da imagem, mas sim o comprimento do URL da imagem.
-{% endalert %}
-
-{% alert warning %}
-Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Os cartões descartados também contam para esse limite de 250 cartões, o que significa que um grande número de cartões descartados pode reduzir o espaço disponível para novos cartões.
-{% endalert %}
-
 ## Etapa 4: Configurar definições adicionais (opcional)
 
-Você pode usar [pares-chave-valor][19] para criar categorias para seus Cartões, criar [vários feeds de Cartão de Conteúdo]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) e personalizar como os cartões são classificados.
+Você pode usar [pares-chave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) para criar categorias para seus Cartões, criar [vários feeds de Cartão de Conteúdo]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) e personalizar como os cartões são classificados.
 
 Para adicionar pares de valores-chave à sua mensagem, acesse a guia **Settings (Configurações)** e selecione **Add New Pair (Adicionar novo par)**.
 
@@ -133,7 +125,7 @@ Para adicionar pares de valores-chave à sua mensagem, acesse a guia **Settings 
 
 Crie o restante de sua campanha. Continue para as próximas seções para mais detalhes sobre como usar melhor nossas ferramentas para construir Cartões de Conteúdo.
 
-#### Escolha a programação ou o disparo da entrega
+#### Escolha uma programação ou disparo de entrega
 
 Os Cartões de Conteúdo podem ser entregues com base em um horário agendado, uma ação ou um disparo de API. Para obter mais informações, consulte [Agendamento de sua campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -149,7 +141,7 @@ Para campanhas de cartão de conteúdo com entrega programada, você pode escolh
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, [usuários-alvo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+Em seguida, [usuários-alvo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
 
 #### Selecionar eventos de conversão
 
@@ -176,15 +168,27 @@ Em seguida, confira [os relatórios do Content Card]({{site.baseurl}}/user_guide
 
 ## Coisas para saber
 
+### Tamanhos de campos de mensagens
+
+Os campos de mensagem do cartão de conteúdo podem ter até 2 KB de tamanho total. Isso é calculado pela adição do comprimento do tamanho de byte dos seguintes campos: **Título**, **Mensagem**, **URL da imagem**, **Texto do link**, **URL(s) do link** e **Pares de chave-valor** (nomes e valores). As mensagens que excederem 2 KB não serão enviadas. Observe que isso não inclui o tamanho da imagem, mas sim o comprimento do URL da imagem.
+
+{% alert important %}
+Durante os envios de teste, os cartões de conteúdo que excedem 2 KB ainda podem ser entregues e exibidos corretamente.
+{% endalert %}
+
+### Número de cartões no feed
+
+Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Os cartões descartados também contam para esse limite, o que significa que um grande número de cartões descartados pode reduzir o espaço disponível para novos cartões.
+
 ### Comportamento de envio
 
-Após os Cartões de Conteúdo serem enviados, eles ficam aguardando em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante ao que acontece com os e-mails). Depois que o conteúdo é inserido no cartão de conteúdo (no momento da exibição), o conteúdo não pode ser alterado durante sua vida útil. Isso se aplica mesmo que você esteja chamando uma API através do Conteúdo Conectado, e os dados do endpoint mudem. Esses dados não serão atualizados. Ele só pode ser impedido de ser enviado a novos usuários e removido dos feeds dos usuários. Se você modificar uma campanha, somente os cartões futuros que forem enviados terão a atualização.
+Após os Cartões de Conteúdo serem enviados, eles ficam aguardando em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante ao que acontece com os e-mails). Depois que o conteúdo é inserido no cartão de conteúdo (no momento da exibição), ele não pode ser alterado durante sua vida útil. Isso se aplica mesmo que você esteja chamando uma API através do Conteúdo Conectado, e os dados do endpoint mudem. Esses dados não serão atualizados. Ele só pode ser impedido de ser enviado a novos usuários e removido dos feeds dos usuários. Se você modificar uma campanha, somente os cartões futuros que forem enviados terão a atualização.
 
 Se você precisar remover cartões antigos, primeiro deve parar a campanha. Para interromper uma campanha, abra sua campanha do Content Card e selecione **Stop Campaign (Interromper campanha)** A interrupção da campanha solicitará que você decida como lidar com os usuários que já receberam o cartão. 
 
 Se você quiser remover o cartão de conteúdo dos feeds dos seus usuários, selecione **Remover cartão do feed**. O cartão será então ocultado pelo SDK na próxima sincronização.
 
-![Caixa de diálogo para confirmar a desativação do cartão de conteúdo][25]{: style="max-width:75%" }
+![Caixa de diálogo para confirmar a desativação do cartão de conteúdo]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
 Você quer que seus Cartões de Conteúdo pareçam durar mais do que o máximo de 30 dias? Uma maneira de realizar isso é fazer o seguinte:<br><br>
@@ -196,9 +200,11 @@ Você quer que seus Cartões de Conteúdo pareçam durar mais do que o máximo d
 
 ### Eventos de remoção de cartões {#action-based-card-removal}
 
-Alguns cartões de conteúdo só são relevantes até que o usuário execute alguma ação. Por exemplo, um cartão que incentiva os usuários a ativar sua conta não deve ser exibido depois que o usuário concluir essa tarefa de integração.
+Alguns cartões de conteúdo só são relevantes até que o usuário realize alguma ação. Por exemplo, um cartão que incentiva os usuários a ativar sua conta não deve ser exibido depois que o usuário concluir essa tarefa de integração.
 
-Dentro de uma campanha ou mensagem de canva, você pode opcionalmente adicionar um **Evento de Remoção** para especificar quais eventos ou compras personalizados devem causar a remoção de cartões enviados anteriormente do feed desse usuário—ativado pelo SDK ou API REST.
+Em uma campanha ou mensagem do Canvas, você pode adicionar opcionalmente um **evento de remoção** para especificar quais eventos personalizados ou compras devem fazer com que os cartões enviados anteriormente sejam removidos do feed do usuário, disparados pelo SDK ou pela API REST.
+
+Os cartões serão removidos nas atualizações subsequentes depois que o Braze tiver processado o evento especificado.
 
 {% alert tip %}
 É possível especificar vários eventos personalizados e compras que devem remover um cartão do feed de um usuário. Quando **qualquer uma** dessas ações for executada pelo usuário, todos os cartões existentes enviados pelos cartões da campanha serão removidos. Todos os cartões elegíveis futuros continuarão a ser enviados de acordo com a programação da mensagem.
@@ -225,7 +231,7 @@ Uma abordagem é arquivar a campanha e remover os cartões ativos do feed. Em se
 
 ##### Caso de uso
 
-Vamos supor que você tenha configurado uma campanha para ser acionada pelo início de uma sessão e que tenha a re-eligibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, você arquivaria a campanha e removeria os cartões do feed. Em segundo lugar, você duplicaria a campanha e relançaria com o novo texto. Se o usuário tiver outra sessão, ele receberá imediatamente o novo cartão.
+Digamos que você tenha definido uma campanha para ser disparada pelo início de uma sessão e que a reelegibilidade esteja definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, você arquivaria a campanha e removeria os cartões do feed. Em segundo lugar, você duplicaria a campanha e relançaria com o novo texto. Se o usuário tiver outra sessão, ele receberá imediatamente o novo cartão.
 
 ##### Impacto
 
@@ -238,14 +244,14 @@ Recomendamos esta opção para mensagens onde você está mostrando o conteúdo 
 
 #### Opção 2: Parar e reiniciar
 
-Se um cartão tiver a reelegibilidade ativada, você poderá optar por isso:
+Se um cartão tiver a reelegibilidade ativada, você poderá optar por:
 
 1. Interrompa sua campanha.
 2. Remova os cartões de conteúdo ativos dos feeds dos usuários.
 3. Edite sua campanha conforme necessário.
 4. Reinicie sua campanha.
 
-Com essa abordagem, os usuários recém-elegíveis receberão o novo cartão e os destinatários anteriores receberão o novo cartão quando voltarem a ser elegíveis.
+Com essa abordagem, os usuários recém-elegíveis receberão o novo cartão, e os destinatários anteriores receberão o novo cartão quando forem novamente elegíveis.
 
 ##### Caso de uso
 
@@ -257,16 +263,10 @@ Vamos supor que você tenha uma campanha que é acionada pelo início de uma ses
 * **Destinatários existentes:** Os usuários que já receberam o cartão não receberão os cartões atualizados até que se tornem elegíveis novamente. Se a reelegibilidade for desativada, eles nunca receberão o novo cartão.
 
 {% alert tip %}
-Recomendamos usar esta opção para mensagens únicas em uma central de notificações ou caixa de mensagens (como promoções), quando é importante que a análise de dados seja unificada, ou quando a pontualidade da mensagem não é uma preocupação (como destinatários existentes podem esperar pela janela de elegibilidade antes de ver os cartões atualizados).
+Recomendamos o uso dessa opção para mensagens exclusivas em uma central de notificações ou caixa de entrada de mensagens (como promoções), quando for importante que a análise de dados seja unificada ou quando a pontualidade da mensagem não for uma preocupação (por exemplo, os destinatários existentes podem aguardar a janela de elegibilidade antes de ver os cartões atualizados).
 {% endalert %}
 
 #### Manter os cartões nos feeds dos usuários
 
-Se desejar, você pode manter uma campanha de cartão de conteúdo ativa nos feeds dos usuários e não removê-los. Quando a campanha ativa é editada, a versão anterior não editada do cartão da campanha ainda estará ativa, e apenas os usuários que atendem aos critérios após as edições verão a nova versão. No entanto, os usuários já expostos à campanha poderão ver duas versões do cartão.
+Se desejar, é possível manter uma campanha de cartão de conteúdo ativa nos feeds dos usuários e não removê-la. Quando a campanha ativa for editada, a versão anterior não editada do cartão da campanha ainda estará ativa, e somente os usuários que atenderem aos critérios após as edições verão a nova versão. No entanto, os usuários já expostos à campanha poderão ver duas versões do cartão.
 
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/content_card_compose.png %}
-[25]: {% image_buster /assets/img/cc_remove.png %}
-[1]: {% image_buster /assets/img/cc_pin_to_top.png %}
-[2]: {% image_buster /assets/img/add_languages.png %}

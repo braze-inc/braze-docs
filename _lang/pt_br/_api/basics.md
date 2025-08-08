@@ -34,7 +34,7 @@ A seguir, uma visão geral dos termos que você poderá ver na documentação da
 
 ### Endpoints
 
-A Braze gerencia várias instâncias diferentes para nosso dashboard e endpoints REST. Quando sua conta for provisionada, você fará o registro em um dos seguintes URLs. Use o endpoint REST correto com base na instância para a qual você está provisionado. Se não tiver certeza, abra um [ticket de suporte][suporte] ou use a tabela a seguir para fazer a correspondência entre o URL do dashboard que você usa e o endpoint REST correto.
+A Braze gerencia várias instâncias diferentes para nosso dashboard e endpoints REST. Quando sua conta for provisionada, você fará o registro em um dos seguintes URLs. Use o endpoint REST correto com base na instância para a qual você está provisionado. Se não tiver certeza, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/) ou use a tabela a seguir para fazer a correspondência entre o URL do dashboard que você usa e o endpoint REST correto.
 
 {% alert important %}
 Ao usar endpoints para chamadas de API, use o endpoint REST.
@@ -53,7 +53,7 @@ Para a maioria das APIs, a Braze tem um limite de frequência padrão de 250.000
 - **ID de usuário externo**: O endereço `external_id` serve como um identificador exclusivo do usuário para o qual você está enviando dados. Esse identificador deve ser o mesmo que você definiu no SDK do Braze para evitar a criação de vários perfis para o mesmo usuário.
 - **Braze user ID**: `braze_id` serve como um identificador de usuário exclusivo que é definido pela Braze. Esse identificador pode ser usado para excluir usuários por meio da API REST, além de external_ids.
 
-Para saber mais, consulte os seguintes artigos com base em sua plataforma: [iOS][9], [Android][10] e [Web][13].
+Para saber mais, consulte os seguintes artigos com base em sua plataforma: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) e [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## Sobre as chaves da API REST
 
@@ -63,7 +63,7 @@ Os espaços de trabalho e as chaves de API andam de mãos dadas no Braze. Os esp
 
 Referimo-nos tanto à chave da API REST quanto à chave da API do espaço de trabalho como `api_key`. O `api_key` é incluído em cada solicitação como um cabeçalho de solicitação e atua como uma chave de autenticação que lhe permite usar nossas APIs REST. Essas APIs REST são usadas para rastrear usuários, enviar mensagens, exportar dados de usuários e muito mais. Ao criar uma nova chave da API REST, você precisará dar a ela acesso a endpoints específicos. Ao atribuir permissões específicas a uma chave de API, você pode limitar exatamente quais chamadas uma chave de API pode autenticar.
 
-![Painel de chaves da API REST na guia Chaves da API.][27]
+![Painel de chaves da API REST na guia Chaves da API.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 Além das chaves da API REST, também existe um tipo de chave chamado Chaves de identificador que pode ser usado para fazer referência a itens específicos, como aplicativos, modelos, Canvas, campanhas, cartões de conteúdo e segmentos da API. Para saber mais, consulte [Tipos de identificadores da API]({{site.baseurl}}/api/identifier_types/).
@@ -195,18 +195,6 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Feed de notícias %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| Permissão | Endpoint | Descrição |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | Faça uma consulta para obter uma lista de cartões de feeds de notícias. |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | Faça uma consulta para obter análise de dados do feed de notícias em um período. |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | Faça uma consulta para obter informações de um feed de notícias específico. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
 {% tab Sessões %}
 
 | Permissão | Endpoint | Descrição |
@@ -306,6 +294,17 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
+{% tab Autenticação do SDK %}
+
+| Permissão | Endpoint | Descrição |
+|---|---|---|
+| `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | Crie uma nova chave de autenticação do SDK para seu app. |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | Marque uma chave de autenticação do SDK como a chave primária do seu app. |
+| `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | Exclua uma chave de autenticação do SDK para seu app. |
+| `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | Obtenha todas as chaves de autenticação do SDK para seu app. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
 {% endtabs %}
 
 ### Gerenciamento de chaves da API REST
@@ -325,11 +324,11 @@ A guia **Chaves de API** inclui as seguintes informações para cada chave:
 
 Para visualizar os detalhes de uma chave de API, passe o mouse sobre a chave e selecione <i class="fa-solid fa-eye" alt="View"></i> **View**. Isso inclui todas as permissões que essa chave tem, IPs na lista de permissões (se houver) e se essa chave foi aceita na lista de permissões de IP do Braze.
 
-![A lista de permissões da chave de API no dashboard do Braze.][30]
+![A lista de permissões da chave de API no dashboard do Braze.]({% image_buster /assets/img_archive/view-api-key.png %})
 
 Note que, ao [excluir um usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), as chaves de API associadas que o usuário criou não serão excluídas. Para excluir uma chave, passe o mouse sobre a chave e selecione <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![Uma chave de API chamada "Last Seen" com o ícone de lixeira destacado, mostrando "Delete".][29]{: style="max-width:30%;"}
+![Uma chave de API denominada 'Last Seen' com o ícone da lixeira destacado, mostrando 'Delete'.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### Segurança da chave da API REST
 
@@ -343,13 +342,13 @@ Uma boa prática de segurança é atribuir a um usuário apenas o acesso necess�
 Como as chaves da API REST permitem o acesso a endpoints da API REST potencialmente confidenciais, certifique-se de que elas sejam armazenadas e usadas com segurança. Por exemplo, não use essa chave para fazer chamadas AJAX em seu site nem a exponha de qualquer outra forma pública.
 {% endalert %}
 
-Se ocorrer a exposição acidental de uma chave, ela poderá ser excluída do console de desenvolvedor. Para obter ajuda com esse processo, abra um [tíquete de suporte][suporte].
+Se ocorrer a exposição acidental de uma chave, ela poderá ser excluída do console de desenvolvedor. Para obter ajuda com esse processo, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
 
 ### Lista de permissões de IP da API
 
 Para maior segurança, você pode especificar uma lista de endereços IP e sub-redes que têm permissão para fazer solicitações de API REST para uma determinada chave de API REST. Isso é chamado de lista de permissões. Para permitir endereços IP ou sub-redes específicos, adicione-os à seção **Lista de permissões de IPs** ao criar uma nova chave da API REST:
 
-![Opção para permitir a lista de IPs ao criar uma chave de API.][26]
+![Opção para permitir a lista de IPs ao criar uma chave de API.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Se você não especificar nenhum, as solicitações poderão ser enviadas de qualquer endereço IP.
 
@@ -369,18 +368,3 @@ A biblioteca do cliente Ruby é compatível com os [endpoints do usuário]({{sit
 Essa biblioteca de clientes está atualmente na versão beta. Quer nos ajudar a melhorar esta biblioteca? Envie-nos seu feedback em [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[support]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

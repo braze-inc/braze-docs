@@ -109,12 +109,12 @@ COPY INTO
 
 1. Na AWS, navegue até o bucket correspondente do novo estágio do Snowflake. Em seguida, na guia **Properties (Propriedades** ), acesse **Events (Eventos**).
 
-![Guia Propriedades da AWS][1]{: height="50%" width="50%"}
+![Guia Propriedades da AWS]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\. Crie novos eventos para cada conjunto de Currents Data, conforme necessário [(envio de mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [comportamento do usuário]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)), ou ambos.
 
-![Criação de um novo evento na AWS][2]{: height="50%" width="50%"}
+![Criação de um novo evento na AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\. Marque a caixa apropriada para as notificações de criação de objeto, bem como o ARN na parte inferior do formulário (da coluna do canal de notificação no Snowflake).
@@ -278,5 +278,3 @@ Para ver os tipos de análise de dados que você pode realizar usando o Braze Cu
 Entre em contato com seu gerente de conta Braze se tiver alguma dúvida ou se estiver interessado em ser orientado pelo Braze durante esse processo.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/aws-properties.png %}
-[2]: {% image_buster /assets/img/aws-events.png %}

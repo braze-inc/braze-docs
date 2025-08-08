@@ -34,7 +34,7 @@ Também é importante entender seus [usuários ativos]({{site.baseurl}}/user_gui
 
 ### Reconhecimento de recursos
 
-Se o seu objetivo é atrair os usuários para um novo recurso ou versão do app, use uma estratégia multicanal com foco nos canais no app. As [mensagens no app][5] ] e os [cartões de conteúdo][7] ] geralmente são menos perturbadores se o usuário não quiser fazer a atualização imediatamente. 
+Se o seu objetivo é atrair seus usuários para um novo recurso ou versão do app, use uma estratégia multicanal com foco em canais dentro do app. [Mensagens dentro do app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) e [Cartões de Conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) são geralmente menos disruptivos se um usuário não deseja atualizar imediatamente. 
 
 Não se esqueça de incluir [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) para a loja de aplicativos apropriada.
 
@@ -44,7 +44,7 @@ Persuadir os usuários a atualizar o aplicativo ou a mudar a forma como usam o a
 
 O momento certo é fundamental! Quando seu objetivo for convencer os usuários a atualizar seu app, espere até que eles tenham uma experiência positiva no app para perguntar aos usuários. Para manter o público engajado, evite o envio repetitivo de mensagens que possam parecer intrusivas.
 
-Com o tempo, seus usuários podem esquecer certos recursos ou não perceber novos recursos. Quando novos recursos forem adicionados, não deixe de informar seus usuários por meio de [mensagens no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). Se os usuários não estiverem se engajando com os principais recursos do aplicativo, talvez seja melhor lembrá-los quando estiverem se engajando com seu app e quando esse novo recurso seria útil. Nosso artigo sobre [data opt-in][7] tem mais informações sobre como garantir que sua solicitação esteja de acordo com as expectativas de fluxo de trabalho dos usuários. 
+Com o tempo, seus usuários podem esquecer certos recursos ou não perceber novos recursos. Quando novos recursos forem adicionados, não deixe de informar seus usuários por meio de [mensagens no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). Se os usuários não estiverem se engajando com os principais recursos do aplicativo, talvez seja melhor lembrá-los quando estiverem se engajando com seu app e quando esse novo recurso seria útil. Nosso artigo sobre [aceitação de dados]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) tem mais informações sobre como garantir que seu pedido esteja de acordo com as expectativas de fluxo de trabalho dos usuários. 
 
 ## Classificações altas
 
@@ -62,7 +62,7 @@ Para garantir classificações mais altas, peça aos usuários avançados que av
 - Usou esses apps mais de 10 vezes nos últimos 14 dias
 - Gastou mais de 50 dólares
 
-![Um exemplo de um segmento que direciona os usuários avançados de um app.][6]
+![Um exemplo de um segmento que visa usuários avançados de um app.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Visitar a app store leva tempo por parte dos seus usuários. Para maximizar a probabilidade de que eles façam um esforço extra, solicite uma classificação ou avaliação depois que eles tiverem uma experiência positiva com seu app. Por exemplo, pergunte a eles depois de terem superado um nível de jogo ou feito uma compra usando um código de desconto. Nosso artigo sobre [aceitação de dados]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) tem mais informações sobre maneiras de garantir que sua solicitação esteja de acordo com as expectativas de fluxo de trabalho dos usuários.
 
@@ -79,6 +79,3 @@ Ao editar programações de campanhas ou públicos, observe as seguintes prátic
 Editar uma campanha ativa e mudar a entrega para o **Tempo de envio local** fará com que um novo lote de mensagens seja enfileirado, o que significa que seus usuários receberão a mensagem duas vezes devido à mensagem sendo enfileirada duas vezes. Para evitar isso, primeiro pare a campanha original, depois lance uma duplicata após atualizar o cronograma.
 {% endalert %}
 
-[6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/

@@ -13,6 +13,10 @@ description: "Este artigo fornece etapas sobre como usar localidades em seu envi
 
 Para editar e gerenciar [o suporte a vários idiomas]({{site.baseurl}}/multi_language_support/), é necessário ter a permissão de usuário "Manage Multi-Language Settings" (Gerenciar configurações de vários idiomas). Para adicionar a localização a uma mensagem, você precisará de permissões para editar campanhas.
 
+{% alert important %}
+O suporte a vários idiomas e as localizações nas mensagens estão atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado.
+{% endalert %}
+
 ## Uso de localidades
 
 Para usar localidades em seu envio de mensagens, crie uma campanha de e-mail ou canva. Selecione o editor de HTML ou o editor de arrastar e soltar e siga as etapas de acordo com seu editor.
@@ -71,32 +75,6 @@ Para usar a [API multilíngue com o Canvas]({{site.baseurl}}/api/endpoints/trans
 
 #### Etapas do canva adicionadas aos rascunhos pós-lançamento
 
-Ao usar a API multilíngue com etapas do Canva que foram criadas após o lançamento do Canvas, o endereço `message_variation_id` que você passar para a API estará vazio ou em branco.
-
-## Perguntas frequentes
-
-#### Quero fazer uma alteração no texto traduzido em uma de minhas localizações. Como posso fazer isso?
-Faça a edição no arquivo CSV e, em seguida, faça upload do arquivo novamente para fazer uma alteração no texto traduzida.
-
-#### Posso aninhar tags de tradução?
-Não.
-
-#### Posso usar localidades em meus modelos de e-mail?
-Não. As localidades são compatíveis apenas com o editor de e-mail para campanhas e etapas de mensagens no Canva.
-
-#### Posso adicionar estilo HTML nas tags de tradução?
-Sim. No entanto, confira se o estilo HTML não está traduzido com o conteúdo.
-
-#### Que validações ou verificações extras o Braze faz para as traduções?
-
-| Cenário                                                                                                                                                 | Validação em Braze                                                                                            |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Um arquivo de tradução não tem localidades associadas à mensagem atual.                                                                               | Esse arquivo de tradução não será carregado.                                                                       |
-| Um arquivo de tradução está sem alguns blocos de texto, como um texto dentro de tags de tradução Liquid, da mensagem de e-mail atual.                                | Esse arquivo de tradução não será carregado.                                                                       |
-| O arquivo de tradução inclui o texto padrão que não corresponde aos blocos de texto da mensagem de e-mail atual.                                          | Esse arquivo de tradução não será carregado. Corrija isso em seu CSV antes de tentar fazer upload novamente.               |
-| O arquivo de tradução inclui localizações que não existem nas configurações **do Suporte multilíngue**.                                                           | Essas localizações não serão salvas no Braze.                                                                      |
-| O arquivo de tradução inclui blocos de texto que não existem na mensagem atual (como o rascunho atual no momento em que as traduções são feitas upload). | Os blocos de texto que não existirem em sua mensagem atual não serão salvos do arquivo de tradução para o Braze. |
-| Remoção de uma localização da mensagem depois que essa localização já tiver sido carregada para a mensagem como parte do arquivo de tradução.                           | A remoção da localidade removerá todas as traduções associadas à localidade em sua mensagem.                   |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Ao usar a API multilíngue com etapas do Canva que foram criadas após o lançamento do Canva, o endereço `message_variation_id` que você passar para a API estará vazio ou em branco.
 
 {% multi_lang_include locales.md section="Frequently Asked Questions" %}

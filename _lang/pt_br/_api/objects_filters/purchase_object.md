@@ -43,8 +43,8 @@ Um objeto de compra é um objeto que é passado pela API quando uma compra é fe
 
 - [ID de usuário externo]({{site.baseurl}}/api/basics/#user-ids)
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
-- [Wiki do código de moeda ISO 4217][20]
-- [Wiki do código de tempo ISO 8601][22]
+- [Wiki do código de moeda ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
+- [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
 ## ID do produto de compra
 
@@ -177,5 +177,3 @@ Usando o exemplo fornecido, podemos ver que alguém comprou uma mochila com as p
 Se quiser salvar, armazenar e rastrear propriedades para segmentar, será necessário configurá-las como atributos personalizados. Isso pode ser feito usando [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), que permitem o direcionamento de usuários com base em eventos personalizados ou comportamento de compra armazenado durante toda a vida útil desse perfil de usuário.
 
 
-[20]: http://en.wikipedia.org/wiki/ISO_4217 "Código de moeda ISO 4217"
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "Código de tempo ISO 8601"

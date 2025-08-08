@@ -23,7 +23,7 @@ Quando a Personalização de Jornadas está ativada em uma etapa da jornada expe
 
 Adicione uma [jornada experimental]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) ao seu canva, depois ative **Jornadas personalizadas**.
 
-![][1]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### Etapa 2: Configurar configurações de Caminhos Personalizados
 
@@ -31,7 +31,7 @@ Especifique o evento de conversão que deve determinar o vencedor. Se não houve
 
 Em seguida, defina a **Janela de Experimento**. A **Janela de Experimento** determina quanto tempo os usuários serão enviados por todas as jornadas antes de escolher o melhor caminho para cada usuário no grupo de postergação. A janela começa quando o primeiro usuário entra na etapa.
 
-![][2]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### Etapa 3: Determine fallback
 
@@ -39,11 +39,11 @@ Por padrão, se os resultados do teste não forem suficientes para determinar um
 
 Alternativamente, você pode selecionar **Continue enviando os futuros usuários para essa mistura de jornadas**.
 
-![][3]
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 Esta opção enviará futuros usuários por uma mistura de jornadas de acordo com as porcentagens especificadas na distribuição da jornada experimental.
 
-![][4]
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### Etapa 4: Adicione seus caminhos e lance a canva
 
@@ -145,9 +145,3 @@ Não recomendamos usar entrega no horário local em canvas com Caminhos Personal
 
 Alternativamente, se você deseja usar a entrega local, use uma janela de experimento de 24-48 ou mais horas. Dessa forma, os usuários em fusos horários iniciais entram na canva e disparam o experimento para começar, mas ainda resta bastante tempo na janela do experimento. Os usuários em fusos horários posteriores ainda terão tempo suficiente para entrar na canva e na etapa do experimento com caminhos personalizados e possivelmente converter antes que a janela do experimento expire.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_personalized_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}

@@ -43,4 +43,3 @@ Se você usar a API para chamadas de servidor para servidor, pode ser necessári
 
 As respostas do endpoint de agendamento de mensagens incluirão a `dispatch_id` da mensagem para referência ao despacho da mensagem. O `dispatch_id` é o ID do despacho da mensagem (ID único para cada 'transmissão' enviada pela Braze).
 
-[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/

@@ -13,11 +13,11 @@ description: "Este artigo de referência aborda como exportar dados de segmento 
 
 Para exportar dados de segmento para um CSV, selecione o menu suspenso **User Data (Dados do usuário)** ao editar um segmento e selecione para exportar os dados do usuário ou os endereços de e-mail do segmento.
 
-![Seção Detalhes do segmento com o menu suspenso Dados de usuários mostrando opções de exportação.][1]
+![Seção Detalhes do segmento com o menu suspenso Dados de usuários mostrando opções de exportação.]({% image_buster /assets/img_archive/csvexport.png %})
 
 Você também pode solicitar uma exportação CSV na página principal de **Segmentos**, selecionando o menu suspenso <i class="fas fa-gear"></i>** Configurações** para um segmento:
 
-![Configurações no menu suspenso da página principal Segmentos.][2]
+![Menu suspenso de configurações na página principal de Segmentos.]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 Para exportar dados de todos os seus perfis de usuários, crie um segmento sem filtros e solicite uma exportação CSV.
@@ -29,7 +29,7 @@ A saída CSV contém os dados de cada perfil de usuário capturado no segmento n
 Devido a restrições de tamanho de arquivo, sua exportação poderá falhar se o tamanho estimado do seu segmento for superior a 500.000 usuários. Note que essa restrição usa o tamanho estimado de seu segmento, e não o cálculo exato. Para obter mais detalhes, consulte [Exportação de segmentos grandes]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).
 {% endalert %}
 
-Se você tiver vinculado suas [credenciais do Amazon S3][26] à Braze, o CSV carregado em seu bucket S3 com a chave `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. O link enviado por e-mail expirará após um dia da exportação e exige que você esteja registrado no dashboard para ter acesso.
+Se você tiver vinculado suas [credenciais do Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) ao Braze, o CSV será feito upload em seu bucket S3 com a chave `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. O link enviado por e-mail expirará após um dia da exportação e exige que você esteja registrado no dashboard para ter acesso.
 
 ## Dados incluídos na exportação
 
@@ -95,6 +95,3 @@ Os itens a seguir estão incluídos em sua exportação, dependendo de sua sele�
 Para obter ajuda com exportações CSV e API, visite nosso artigo [de solução de problemas]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %} 
 
-[1]: {% image_buster /assets/img_archive/csvexport.png %}
-[2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

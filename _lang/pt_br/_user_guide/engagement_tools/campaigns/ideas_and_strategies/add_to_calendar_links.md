@@ -14,7 +14,7 @@ channel: email
 
 Para isso, faça um rascunho de seu e-mail e determine onde deseja que seus links estejam. Em seguida, adicione duas opções: uma para o Google Calendar e outra para outros calendários (como o iCal ou o Outlook). Por exemplo, "Adicionar ao Google Agenda" e "Adicionar ao iCal ou Outlook".
 
-![Diálogo de link ao adicionar um link no dashboard. A guia "Informação do link" é selecionada e o texto é definido como "Adicionar ao Google Agenda".][1]{: style="max-width:50%"}
+![Diálogo de link ao adicionar um link no dashboard. A guia "Link Info" é selecionada e o texto é definido como "Add to Google Calendar".]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## Formato do URL
 
@@ -79,27 +79,22 @@ Por exemplo, se você abrir o link de exemplo "Adicionar ao Google Agenda" e sua
 
 Quando clicado, o Google Agenda é aberto em uma nova guia ou janela com os detalhes do evento pré-preenchidos no convite e prontos para serem salvos pelo usuário. Isso acontece tanto no celular quanto no computador.
 
-![Caixa de diálogo do Google Calendar para adicionar um evento com os detalhes do evento adicionados e prontos para serem salvos.][2]{: style="max-width:75%"}
+![Caixa de diálogo do Google Calendar para adicionar um evento com os detalhes do evento adicionados e prontos para serem salvos.]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal ou Outlook
 
 Quando clicado na área de trabalho, um arquivo ICS é baixado. O usuário precisa então abrir o arquivo ICS, que abrirá o iCal ou o Outlook e solicitará que o usuário adicione o evento ao seu calendário.
 
-![Calendário do iCal com uma caixa de diálogo para adicionar um novo evento, que solicita que o usuário selecione um calendário e confirme.][3]{: style="max-width:75%"}
+![Calendário do iCal com uma caixa de diálogo para adicionar um novo evento, que solicita ao usuário que selecione um calendário e confirme.]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-![Calendário do iCal com o evento adicionado.][4]{: style="max-width:81%"}
+![Calendário do iCal com o evento adicionado.]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 No celular, os usuários precisam pressionar e manter pressionado o link, o que os leva a adicioná-lo ao calendário.
 
-![pop-up do iOS quando você pressiona e segura um link de calendário, que inclui um botão para "Adicionar ao Calendário".][5]{: style="max-width:50%"}
+![Pop-up do iOS quando você pressiona e mantém pressionado um link de calendário, que inclui um botão para "Add to Calendar".]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 Para saber mais, consulte:
 * [Criar eventos para o Google Calendar](https://developers.google.com/calendar/api/guides/create-events)
 * [Criar um link Adicionar ao calendário em uma mensagem de e-mail](https://support.microsoft.com/en-us/office/create-an-add-to-calendar-link-in-an-email-message-34f8ea28-322a-4867-b423-2998f9634e59)
 
 
-[1]: {% image_buster /assets/img_archive/calendar_1.png %}
-[2]: {% image_buster /assets/img_archive/calendar_2.png %}
-[3]: {% image_buster /assets/img_archive/calendar_3.png %}
-[4]: {% image_buster /assets/img_archive/calendar_4.png %}
-[5]: {% image_buster /assets/img_archive/calendar_5.png %}

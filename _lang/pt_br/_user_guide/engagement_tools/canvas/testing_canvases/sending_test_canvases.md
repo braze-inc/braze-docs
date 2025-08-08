@@ -35,7 +35,7 @@ Há duas maneiras de testar seu Canva.
 
 - **Método 1:** No Canvas duplicado, edite a parte **Entry Audience (Público de entrada)** do construtor do Canvas para que apenas os usuários de teste sejam elegíveis para o Canvas. Também é possível inserir seu próprio endereço de e-mail como usuário teste, adicionando o filtro de teste **Endereço de e-mail**. No exemplo abaixo, limitamos o Canva a dois usuários teste que usaram o app pela primeira vez há menos de três dias.
 
-![][2]
+![Um canva com um público de "Usou esses aplicativos pela primeira vez há menos de 3 dias" e os endereços de e-mail de dois usuários de teste.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **Método 2:** [Faça uma prévia das jornadas do usuário]({{site.baseurl}}/preview_user_paths/) selecionando o botão **Test Canvas** no rodapé do construtor do Canvas.
 
@@ -84,5 +84,3 @@ Quando estiver testando um Canva com várias ramificações que direcionam os us
 1. Para cada ramo, identifique as atribuições e os eventos que o usuário deve ter para ser incluído na jornada do Canva.
 2. Crie-os em uma carga útil JSON a ser postada usando o endpoint `/users/track`.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}

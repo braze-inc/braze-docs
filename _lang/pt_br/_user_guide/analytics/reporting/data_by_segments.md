@@ -18,7 +18,7 @@ tool:
 
 Para executar esses relatórios, faça o seguinte:
 1. No **Criador de consultas**, escolha criar um novo relatório SQL com um modelo. 
-2. Filtre os modelos para aqueles em que as métricas incluem detalhamentos de segmento, que são:
+2. Selecione **Detalhamentos de segmento** para a métrica, que filtra modelos para aqueles em que as métricas incluem detalhamentos de segmento, que são:
 - Métricas de performance de e-mail por segmento
 - Métricas de engajamento de e-mail para variantes ou etapas, por segmento
 - Compras e receita por segmento

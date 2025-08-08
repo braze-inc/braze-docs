@@ -60,6 +60,10 @@ Os endereços de e-mail direcionados por meio dos servidores Braze devem ser val
 
 Ao definir seus endereços no campo "de", confira se o domínio de e-mail do campo "de" corresponde ao domínio de envio (como `marketing.yourdomain.com`). Não fazer isso pode resultar em desalinhamento de SPF e DKIM. Todos os e-mails de resposta podem ser definidos para seu domínio raiz.
 
+{% alert note %}
+A codificação Unicode não é compatível com os endereços "from".
+{% endalert %}
+
 ### Verificação de detalhes HTML
 
 Lembre-se de que algumas tags e atribuições HTML não são permitidas, pois podem permitir a execução de códigos maliciosos no navegador.
@@ -229,5 +233,4 @@ Confira as seguintes listas de tags e atribuições HTML que não são permitida
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

@@ -11,10 +11,6 @@ description: "Este artigo o orientará sobre como configurar o provisionamento S
 
 > O provisionamento just-in-time funciona com o [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) para permitir que novos usuários do dashboard criem uma conta Braze em seu primeiro login. Isso elimina a necessidade de os administradores criarem manualmente uma conta para um novo usuário do dashboard, escolherem suas permissões, atribuírem a ele um espaço de trabalho e esperarem que ele ative sua conta.
 
-{% alert note %}
-O provisionamento just-in-time SAML está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente da Braze se quiser em participar do acesso antecipado.
-{% endalert %}
-
 ## Pré-requisitos
 
 Esse recurso requer que o SAML SSO esteja configurado e integrado e não é compatível com o Google SSO.

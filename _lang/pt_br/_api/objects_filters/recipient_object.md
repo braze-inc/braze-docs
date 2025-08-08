@@ -11,7 +11,7 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 
 > O objeto recipients permite que você solicite ou grave informações em nossos endpoints.
 
-É necessário que `external_user_id`, `user_alias` ou `email` estejam presentes neste objeto. **As solicitações devem especificar apenas uma.**
+É necessário que `external_user_id`, `user_alias`, `braze_id` ou `email` estejam presentes neste objeto. **As solicitações devem especificar apenas uma.**
 
 O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/), o [objeto de propriedades do disparador]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) e o [objeto de propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
@@ -21,6 +21,7 @@ O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.
 [{
   "user_alias": (optional, User Alias Object) User alias of user to receive message,
   "external_user_id": (optional, string) see External user ID,
+  "braze_id": (optional, string) see Braze ID,
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
@@ -30,6 +31,7 @@ O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.
 
 Quando `send_to_existing_only` for `true`, a Braze enviará a mensagem apenas para os usuários existentes. No entanto, esse sinalizador não pode ser usado com aliases de usuário. Quando `send_to_existing_only` é `false`, uma atribuição precisa ser incluída. A Braze criará um usuário com o endereço `id` e as atribuições antes de enviar a mensagem.
 
+- [ID da Braze]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 - [Alias do usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Priorização]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)

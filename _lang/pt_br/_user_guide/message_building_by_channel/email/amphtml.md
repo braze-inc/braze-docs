@@ -15,7 +15,7 @@ channel:
 
 ## Solicitações
 
-A Braze não é responsável pelo registro dos usuários no Google ou pelo cumprimento dos requisitos de segurança necessários.
+A Braze não é responsável pelo registro dos usuários no Google ou pelo cumprimento dos requisitos de segurança necessários. O AMP para e-mail está disponível apenas para SparkPost e SendGrid.
 
 | Requisito   | Descrição |
 | --------------| ----------- |
@@ -42,7 +42,7 @@ Para obter uma lista completa dos clientes de e-mail compatíveis, consulte a [d
 
 Acesse as configurações do Gmail e selecione **Ativar e-mail dinâmico** em **Geral**.
 
-![Um exemplo das configurações do Gmail com a caixa de seleção "Ativar envio de e-mail dinâmico" marcada.][1]
+![Um exemplo das configurações do Gmail com a caixa de seleção "Ativar e-mail dinâmico" marcada.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## Uso da API
 
@@ -243,7 +243,7 @@ Para que seu e-mail AMP seja entregue a qualquer conta do Gmail, o e-mail deve a
 - O e-mail deve incluir a parte AMP MIME antes da parte HTML MIME.
 - A parte AMP MIME deve ser menor que 100 KB.
 
-Se nenhuma dessas condições estiver causando o erro, entre em contato com [o Suporte]({{site.baseurl}}/support_contact/).
+Se nenhuma dessas condições estiver causando o erro, entre em contato com [o suporte]({{site.baseurl}}/support_contact/).
 
 ### Perguntas frequentes
 
@@ -252,4 +252,3 @@ Se nenhuma dessas condições estiver causando o erro, entre em contato com [o S
 Defendemos a não segmentação para enviar a todos os tipos diferentes de usuários. Isso ocorre porque enviamos mensagens AMP em multipartes, com diferentes versões incluídas no e-mail original. Se um usuário não puder ver a versão AMP, ela voltará ao padrão HTML. 
 
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}

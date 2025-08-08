@@ -211,7 +211,7 @@ Sua recomendação extrairá itens de um catálogo. Siga as etapas para Criar um
 ### Etapa 2: Configure sua recomendação
 
 1. Em seu catálogo, selecione **Criar recomendação**.
-2. Siga as etapas de [Criação de uma recomendação de item IA][3]. 
+2. Siga as etapas de [Criação de uma recomendação de item de IA][3]. 
 3. Para o tipo de recomendação, selecione **IA Personalizada**.
 4. Use o catálogo que você acabou de criar para treinar a recomendação. Isso pode levar algum tempo - você receberá um e-mail quando o treinamento for concluído.
 

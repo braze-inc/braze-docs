@@ -72,20 +72,68 @@ Não há como instanciar um hash como uma variável (como uma expressão) no Liq
 | nome do filtro | descrição do filtro | exemplo de entrada | exemplo de saída |
 |---|---|---|---|
 | `number_with_delimiter` | Formata um número com vírgulas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Filtro de escape JSON / escape de string
 
 | nome do filtro | descrição do filtro |
-|---|---|---|---|
+|---|---|
 | `json_escape` | Escapa todos os caracteres especiais em uma string (como aspas duplas `""` e barra invertida ''). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Esse filtro deve ser sempre usado ao personalizar uma string em um dicionário JSON e é útil principalmente para webhooks.
+
+## filtros de formatação JSON
+
+| nome do filtro | descrição do filtro |
+|---|---|
+| `json_parse` | Converte uma string JSON em uma estrutura de dados correspondente, como um objeto ou array. | 
+| `as_json_string` | Converte uma estrutura de dados, como um objeto ou array, em uma string JSON correspondente. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details exemplo de entrada e saída json_parse %}
+
+### Entrada 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Resultado
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details exemplo de entrada e saída as_json_string %}
+
+### Entrada
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Resultado
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

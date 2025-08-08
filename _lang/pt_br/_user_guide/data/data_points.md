@@ -104,11 +104,11 @@ As tabelas a seguir têm caráter ilustrativo. Para conhecer as convenções exa
 | Atribuição da instalação | Anúncio |
 | Diversos | Número aleatório do bucket |
 | Envio de mensagens do Canva recebidas | Envio de mensagens do Canva recebidas |
+| Engajamento com mensagens | Todos os eventos de engajamento (como aberturas, cliques, impressões e recusas) |
 | X (antigo Twitter) | Seguidores |
 | X (antigo Twitter) | Seguindo |
 | X (antigo Twitter) | Número de tweets |
 | Facebook | Gostos |
-
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -156,6 +156,7 @@ table td {
 | Eventos personalizados | Todos os eventos personalizados | |
 | Propriedades de eventos personalizados | Todas as propriedades de eventos personalizados | As propriedades de eventos personalizados ativadas para segmentação com os filtros `X Custom Event Property in Y Days` ou `X Purchase Property in Y Days` são todas contadas como pontos de dados separados, além do ponto de dados contado pelo próprio evento personalizado.
 | Compras | Todas as compras | |
+| Propriedades de compra | Todas as propriedades de compra | |
 | Atribuição de coorte de Amplitude | Todas as atribuições | |
 | Atribuição de coorte Mixpanel | Todas as atribuições | |
 | Atribuição de coorte Hightouch | Todas as atribuições | |

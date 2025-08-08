@@ -24,3 +24,4 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 ```
 
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
+  - Qualquer `app_id` válido de um aplicativo configurado em seu espaço de trabalho funcionará para todos os usuários em seu espaço de trabalho, independentemente de o usuário ter ou não o aplicativo específico em seu perfil.

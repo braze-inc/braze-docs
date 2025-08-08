@@ -50,7 +50,7 @@ guide_featured_list:
 
 > O Liquid é uma linguagem de modelo de código aberto desenvolvida pela Shopify e escrita em Ruby. Na Braze, Liquid é usado para modelar dados do perfil de um usuário em mensagens. 
 
-Por exemplo, você pode recuperar um atributo personalizado de um perfil de usuário que é um tipo de dado inteiro e arredondar esse valor para o número inteiro mais próximo. Para mais informações sobre a sintaxe e uso do Liquid, consulte [**Tags de personalização compatíveis**][1].
+Por exemplo, você pode recuperar um atributo personalizado de um perfil de usuário que é um tipo de dado inteiro e arredondar esse valor para o número inteiro mais próximo. Para mais informações sobre a sintaxe e uso do Liquid, consulte [**Tags de personalização compatíveis**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 A linguagem de modelo Liquid é compatível com o uso de objetos, tags e filtros.
 
@@ -109,4 +109,3 @@ Estes termos são reinterpretados a partir da [**documentação da Shopify**](ht
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

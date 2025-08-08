@@ -6,17 +6,17 @@ page_type: reference
 channel:
   - WhatsApp
 page_order: 5.1
-alias: /user_guide/message_building_by_channel/whatsapp/quick_replies/
+alias: /whatsapp_quick_replies/
 
 ---
 
 # Envio de mensagens do usuário
 
-> O WhatsApp é um canal de comunicação bidirecional. Sua marca não só pode enviar mensagens aos usuários, mas eles também podem se engajar em conversas usando campanhas de modelos e Canvas. Há várias maneiras de fazer isso, incluindo as respostas rápidas do WhatsApp e as palavras disparadoras. As chamadas para ação (CTAs) de resposta rápida são uma ótima maneira de incentivar o engajamento do usuário com suas mensagens do WhatsApp.
+> O WhatsApp é um canal de comunicação bidirecional. Sua marca não só pode enviar mensagens aos usuários, mas eles também podem se engajar em conversas usando campanhas de modelos e Canvas. Existem várias maneiras de fazer isso, incluindo respostas rápidas do WhatsApp, mensagens de lista e palavras-chave. Respostas rápidas e mensagens de lista com chamadas para ação (CTAs) são uma ótima maneira de incentivar o engajamento do usuário com seu envio de mensagens do WhatsApp.
 
 ## Gatilhos baseados em ações 
 
-Tanto as campanhas quanto as telas podem começar, ramificar e sofrer alterações no meio do caminho a partir de uma mensagem de entrada do WhatsApp (um usuário enviando mensagens para o seu WhatsApp), como uma palavra disparadora. 
+Tanto campanhas quanto Canvases podem começar, ramificar e ter mudanças no meio da jornada a partir de uma mensagem de WhatsApp recebida (um usuário enviando uma mensagem para o seu WhatsApp), como uma palavra-chave. 
 
 Certifique-se de que a palavra disparadora corresponda ao que você espera dos usuários.
 
@@ -27,16 +27,13 @@ Certifique-se de que a palavra disparadora corresponda ao que você espera dos u
 {% tabs %}
 {% tab Campanha %}
 
-![]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
-
-![]({% image_buster /assets/img/whatsapp/whatsapp26.png %})
+![Opções de agendamento de campanha baseadas em ação.]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-![]({% image_buster /assets/img/whatsapp/whatsapp25.png %})
+![Opções de agendamento de Canvas baseadas em ação.]({% image_buster /assets/img/whatsapp/whatsapp25.png %})
 
-![]({% image_buster /assets/img/whatsapp/whatsapp24.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -48,19 +45,19 @@ Recomendamos que você inclua uma opção para respostas não reconhecidas nas t
 
 ## Respostas rápidas 
 
-![A tela do telefone que mostra um botão de chamada para ação responderá o texto do botão clicado.][11]{: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
+![A tela do telefone mostrando um botão de chamada para ação irá responder com o texto do botão clicado.]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 
 As respostas rápidas aparecem como opções de botões clicáveis na conversa, mas agem como se o usuário tivesse respondido com texto. Em seguida, o Braze processa essas mensagens como mensagens de entrada e pode enviar respostas definidas com base no botão clicado. Use a etapa "Ação de mensagem de entrada do WhatsApp" ao criar e filtrar respostas de seus usuários.
 
-![Uma mensagem do WhatsApp com texto e três botões de chamada para ação.][13]{: style="max-width:50%;"}
+![Uma mensagem do WhatsApp mostrando texto e três botões de chamada para ação.]({% image_buster /assets/img/whatsapp/whatsapp13.png %}){: style="max-width:50%;"}
 
-### Configure as experiências de resposta rápida no Canva
+### Configure a experiência de resposta rápida no Canvas
 
 #### Etapa 1: Crie CTAs
 
 Primeiro, crie suas CTAs de resposta rápida no [Gerenciador de modelos de mensagens do WhatsApp](https://business.facebook.com/wa/manage/message-templates/) em um modelo de mensagem. 
 
-![A interface do usuário do gerenciador de modelos de mensagens do WhatsApp mostra como criar um botão de CTA, fornecendo o tipo de botão (personalizado) e o texto do botão.][12]{: style="max-width:80%;"}
+![A interface do gerenciador de modelos de mensagem do WhatsApp mostrando como criar um botão CTA, fornecendo o tipo de botão (personalizado) e o texto do botão.]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
 
 Depois que seu modelo for enviado e aprovado pelo WhatsApp, você poderá usá-lo para criar um canva na Braze. 
 
@@ -72,15 +69,15 @@ Você pode criar o Canva antes de receber a aprovação em seu modelo de mensage
 
 Em seguida, crie um canva com uma etapa de mensagens que inclua o modelo criado. 
 
-![][14]
+![Compositor de mensagens do WhatsApp com um modelo de resposta rápida preenchido.]({% image_buster /assets/img/whatsapp/whatsapp14.png %})
 
 Crie uma etapa de ação que siga a etapa da mensagem. Crie um grupo por opção de resposta rápida nessa etapa da ação.
 
-![Uma tela em que a ação de avaliação é "enviar uma mensagem de entrada do whatsapp".][15]
+![Um Canvas onde a ação de avaliação é "enviar uma mensagem de entrada do WhatsApp".]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
 
 Para cada grupo de opções de resposta rápida, especifique o texto exato como o botão que está correspondendo. Note que as palavras-chave devem estar em letras maiúsculas. 
 
-![Uma etapa do Canva em que a ação "enviar uma mensagem de entrada do Whatsapp" é definida para ser enviada quando um corpo de mensagem específico é recebido.][16]
+![Uma etapa do Canvas onde a ação "enviar uma mensagem de entrada do WhatsApp" é configurada para enviar quando um corpo de mensagem específico é recebido.]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
 
 Se quiser uma resposta padrão para os usuários que responderem à mensagem com texto em vez de respostas rápidas, crie um grupo adicional sem corpo de mensagem correspondente.
 
@@ -90,20 +87,70 @@ Continue construindo o canva como faria de outra forma deste ponto em diante.
 
 Provavelmente, você desejará uma mensagem de resposta para cada resposta. Recomendamos ter uma opção abrangente para respostas fora dos limites das respostas rápidas (por exemplo, para clientes que respondem com uma mensagem geral em vez de uma solicitação predeterminada). Por exemplo, "Desculpe-nos, mas não reconhecemos sua resposta. Para questões de suporte, envie uma mensagem para <support channel>."
 
-![Foi criada uma tela mostrando as respostas para cada botão de call-to-action.][18]
+![Um Canvas construído mostrando as respostas para cada botão de chamada para ação.]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
 
 Note que você pode usar quaisquer ações subsequentes que o Braze Canvas oferece, como mensagens em resposta, atualizações de perfil de usuário ou webhooks Braze-to-Braze. 
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp24.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp25.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp26.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp27.png %} 
+## Mensagens de lista
 
-[11]: {% image_buster /assets/img/whatsapp/whatsapp11.png %}
-[12]: {% image_buster /assets/img/whatsapp/whatsapp12.png %}
-[13]: {% image_buster /assets/img/whatsapp/whatsapp13.png %}
-[14]: {% image_buster /assets/img/whatsapp/whatsapp14.png %}
-[15]: {% image_buster /assets/img/whatsapp/whatsapp15.png %}
-[16]: {% image_buster /assets/img/whatsapp/whatsapp16.png %}
-[17]: {% image_buster /assets/img/whatsapp/whatsapp17.png %}
-[18]: {% image_buster /assets/img/whatsapp/whatsapp18.png %}
+Mensagens de lista aparecem como uma mensagem de corpo com uma lista de opções clicáveis. Cada lista pode ter várias seções, e cada lista pode ter até 10 linhas.
+
+![Exemplo de uma mensagem de lista do WhatsApp com linhas para diferentes estilos de moda.]({% image_buster /assets/img/whatsapp/list_message_example.png %}){: style="max-width:40%;"}
+
+### Configure a experiência de mensagem de lista no Canvas
+
+#### Etapa 1: Crie ou edite um Canvas existente baseado em ação
+
+Você só pode adicionar mensagens de lista do WhatsApp a Canvases que são baseados em ação, pois precisam ser em resposta a uma mensagem do usuário.
+
+#### Etapa 2: Crie um passo de Mensagem do WhatsApp
+
+Adicione um [passo de Mensagem do WhatsApp]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) e, em seguida, selecione o layout da mensagem de resposta de **Mensagem de Lista**.
+
+![Uma coleção selecionável dos diferentes tipos de mensagens de resposta do WhatsApp que você pode criar, incluindo "Mensagem de Lista".]({% image_buster /assets/img/whatsapp/list_message_option.png %}){: style="max-width:70%;"}
+
+Adicione um nome de **botão de Lista** que os usuários selecionarão para exibir sua lista. Em seguida, use os campos em **Conteúdo da Lista** para criar sua lista:
+
+- **Seção:** Adicione até 10 seções para agrupar e organizar seus itens de lista. Por exemplo, um varejista de roupas poderia usar seções para organizar por estilos sazonais (como primavera, verão, outono e inverno) ou itens de vestuário (como blusas, calças e sapatos).
+- **Linha:** Adicione até 10 linhas, ou itens de lista, em todas as seções.
+- **Descrição da linha (opcional):** Adicione uma descrição opcional a todas as linhas (itens de lista).
+
+![A seção "Conteúdo da Lista" preenchida com duas seções e várias linhas e descrições de linha.]({% image_buster /assets/img/whatsapp/list_content.png %}){: style="max-width:60%;"}
+
+Altere a ordem das seções e linhas selecionando e arrastando o ícone ao lado de seus nomes.
+
+![Arrastando uma seção de lista para um novo local.]({% image_buster /assets/img/whatsapp/drag_list_order.png %}){: style="max-width:60%;"}
+
+De volta ao compositor do Canva, adicione um [Caminho de Ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) após o passo da Mensagem que tem um grupo para cada resposta da lista. Em cada grupo:
+
+1. Adicione um disparador para **Grupo de inscrição do WhatsApp recebido** e selecione o respectivo grupo de inscrição do WhatsApp.
+2. Marque a caixa **Onde o corpo da mensagem**.
+3. Especifique o conteúdo para uma linha (ou item de lista).
+
+![Criador para uma jornada de ação com grupos para diferentes estilos de roupa.]({% image_buster /assets/img/whatsapp/action_path_list_message.png %})
+
+Continue a construir seu canva.
+
+### Criando jornadas de ações para descrições longas
+
+Se você tiver descrições de linha, deve usar **Matches regex** para especificar uma linha. Por exemplo, se você quiser especificar uma linha com a descrição, "Nosso novo estilo que se encaixa sobre seu par favorito de botas de tornozelo", você pode usar [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) com "botas de tornozelo".
+
+![Um disparador do WhatsApp usando o filtro para "Matches regex" para capturar mensagens de resposta com "botas de tornozelo".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
+
+## Considerações para mensagens de resposta
+
+As mensagens de resposta precisam ser enviadas dentro de 24 horas após receber a mensagem de um usuário. Para ajudar a construir experiências bem-sucedidas, Braze verifica a lógica da mensagem para confirmar que há uma mensagem de usuário recebida que desbloqueia a mensagem de resposta. 
+
+Os seguintes eventos desbloqueiam mensagens de resposta: 
+
+- Mensagem recebida 
+  - [Jornada de Ação]({{site.baseurl}}/action_paths/) ou [entrada baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) com o disparador **Enviar uma mensagem recebida do WhatsApp**.
+
+![Uma etapa de entrada baseada em ação com o disparador "Enviar uma mensagem recebida do WhatsApp".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message_trigger.png %})
+
+- [Entrada acionada por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)
+- Mensagem de produto recebida 
+  - [`ecommerce.cart_updated`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated#types-of-ecommerce-recommended-events) evento
+
+![Uma Jornada de Ação com o disparador de um evento personalizado realizado `ecommerce.cart_updated`.]({% image_buster /assets/img/whatsapp/ecommerce_cart_updated.png %})
+

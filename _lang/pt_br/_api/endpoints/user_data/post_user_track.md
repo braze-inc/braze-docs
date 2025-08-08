@@ -294,10 +294,14 @@ A ferramenta de segmentação incluirá esses usuários independentemente de seu
 
 Cada objeto de evento no vetor de eventos representa uma única ocorrência de um evento personalizado por um usuário em um momento designado. Isso significa que cada evento ingerido no Braze tem seu próprio ID de evento, de modo que os eventos "duplicados" são tratados como eventos separados e exclusivos.
 
+### Como `/users/track` lida com atributos personalizados aninhados inválidos?
+
+Quando um atributo personalizado aninhado contém valores inválidos (como formatos de hora inválidos ou valores nulos), todas as atualizações de atributos personalizados aninhados na solicitação serão descartadas do processamento. Isso se aplica a todas as estruturas aninhadas dentro desse atributo específico. Para garantir um processamento bem-sucedido, verifique se todos os valores dentro dos atributos personalizados aninhados são válidos antes de enviar.
+
 ## Usuários Ativos Mensais CY 24-25
 Para os clientes que adquiriram Usuários Ativos Mensais - CY 24-25, a Braze gerencia diferentes limites de taxa em seu endpoint `/users/track`:
 - Os limites de taxa horária são definidos de acordo com a atividade esperada de ingestão de dados em sua conta, que pode corresponder ao número de usuários ativos mensais que você adquiriu, setor, sazonalidade ou outros fatores.
-- Além do limite horário, o Braze impõe um limite de explosão no número de solicitações que podem ser enviadas a cada três segundos.
+- Além do limite horário, a Braze impõe um limite de explosão no número de solicitações que podem ser enviadas a cada três segundos.
 - Cada solicitação pode agrupar até 50 atualizações combinadas entre objetos de atributo, evento ou compra.
 
 Os limites atuais com base na ingestão esperada podem ser encontrados no dashboard em **Configurações** > **APIs e Identificadores** > **Dashboard de Uso da API**. Podemos modificar os limites de taxa para proteger a estabilidade do sistema ou permitir um aumento na taxa de transferência de dados em sua conta. Por favor, entre em contato com o suporte da Braze ou com o gerente de sucesso do cliente para perguntas ou preocupações relacionadas ao limite de solicitações por hora ou por segundo e às necessidades do seu negócio.

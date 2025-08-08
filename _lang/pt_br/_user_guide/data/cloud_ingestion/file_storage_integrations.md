@@ -1,7 +1,7 @@
 ---
 nav_title: Integrações de armazenamento de arquivos
 article_title: Integrações de Armazenamento de Arquivos
-description: "Esta página aborda a ingestão de dados do Braze Cloud e como sincronizar dados relevantes do S3 para o Braze"
+description: "Esta página aborda a ingestão de dados do Braze Cloud e como sincronizar dados relevantes do S3 para o Braze."
 page_order: 3
 page_type: reference
 
@@ -15,12 +15,12 @@ page_type: reference
 
 Agora você pode usar a Ingestão de dados na nuvem (CDI) para S3 para integrar diretamente um ou mais buckets S3 em sua conta da AWS com a Braze. Quando novos arquivos são publicados no S3, uma mensagem é postada no SQS, e a Ingestão de dados para a nuvem da Braze recebe esses novos arquivos. 
 
-A ingestão de dados na nuvem é compatível com o seguinte:
+A ingestão de dados na nuvem oferece suporte ao seguinte:
 
 - Arquivos JSON
 - Arquivos CSV
 - Arquivos de parquet
-- Dados de atributos, eventos, compras e exclusão de usuários
+- Atributo personalizado, evento personalizado, evento de compra, exclusão de usuário e dados de catálogo
 
 ## Pré-requisitos
 
@@ -49,10 +49,10 @@ Crie um bucket S3 de uso geral com configurações padrão em sua conta da AWS. 
 
 As configurações padrão são:
 
-  - ACLs desativadas
-  - Bloquear todo o acesso público
-  - Desativar o controle de versão do bucket
-  - Criptografia SSE-S3
+- ACLs desativadas
+- Bloquear todo o acesso público
+- Desativar o controle de versão do bucket
+- Criptografia SSE-S3
 
 Observe em que região você criou o bucket, pois você criará uma fila SQS na mesma região na próxima etapa.
 
@@ -100,10 +100,10 @@ Anexe a seguinte declaração à política de acesso da fila, tomando cuidado pa
 
 1. No bucket criado na etapa 1, acesse **Propriedades** > **Notificações de eventos**.
 2. Dê um nome à configuração. Opcionalmente, especifique um prefixo ou sufixo para direcionamento se quiser que apenas um subconjunto de arquivos seja ingerido pela Braze.
-3. Em **Destinos**, selecione a **fila SQS** e forneça o ARN do SQS que você criou na etapa 2.
+3. Em **Destinos**, selecione **a fila SQS** e forneça o ARN do SQS que você criou na etapa 2.
 
 {% alert note %}
-Se fizer upload de seus arquivos para a pasta raiz de um bucket S3 e depois mover alguns deles para uma pasta específica no bucket, poderá ocorrer um erro inesperado. Em vez disso, você pode alterar as notificações de eventos para que sejam enviadas apenas para os arquivos no prefixo, evitar colocar arquivos no bucket S3 fora desse prefixo ou atualizar a integração sem prefixo, o que fará a ingestão de todos os arquivos.
+Se você fizer upload de seus arquivos para a pasta raiz de um bucket S3 e, em seguida, mover alguns dos arquivos para uma pasta específica no bucket, poderá encontrar um erro inesperado. Em vez disso, você pode alterar as notificações de eventos para que sejam enviadas apenas para os arquivos no prefixo, evitar colocar arquivos no bucket S3 fora desse prefixo ou atualizar a integração sem prefixo, o que fará a ingestão de todos os arquivos.
 {% endalert %}
 
 ### Etapa 5: Criar uma política de IAM
@@ -146,7 +146,7 @@ Crie uma política de IAM para permitir que o Braze interaja com seu bucket de o
 {: start="3"}
 3\. Selecione **Revisar política** quando terminar.
 
-4. Dê um nome e uma descrição à política e selecione **Criar política**.  
+4. Dê um nome e uma descrição à política e, em seguida, selecione **Criar política**.  
 
 ![Um exemplo de política chamada "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
 
@@ -160,7 +160,7 @@ Para concluir a configuração na AWS, você criará uma função de IAM e anexa
 
 <br><br>![O botão "Criar função".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
-2. Copie o ID da conta AWS do Braze do seu dashboard. Acesse **Cloud Data Ingestion (Ingestão de dados na nuvem**), selecione **Create New Data Sync (Criar nova sincronização de dados** ) e selecione **S3 Import (Importação do S3**).
+2. Copie o ID da conta AWS do Braze do seu dashboard. Acesse **Cloud Data Ingestion (Ingestão de dados na nuvem**), selecione **Create New Data Sync (Criar nova sincronização de dados**) e selecione **S3 Import (Importação do S3**).
 
 3. Na AWS, selecione **Outra conta AWS** como o tipo de seletor de entidade confiável. Forneça a ID de sua conta Braze, marque a caixa de seleção **Require external ID (Exigir ID externa** ) e insira uma ID externa para o Braze usar. Selecione **Next** quando terminar. 
 
@@ -176,7 +176,7 @@ Dê um nome e uma descrição à função e selecione **Create Role (Criar funç
 <br><br>![Um exemplo de função denominada "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5\. Note o ARN da função que você acabou de criar e o ID externo que você gerou, pois você os usará para criar a integração da ingestão de dados na nuvem.  
+5\. Note o ARN da função que acabou de criar e a ID externa que gerou, pois você os usará para criar a integração do Cloud Data Ingestion.
 
 ## Configuração da ingestão de dados na nuvem no Braze
 
@@ -193,7 +193,7 @@ Dê um nome e uma descrição à função e selecione **Create Role (Criar funç
 ![Exemplo de credenciais de segurança conforme exibidas no S3 para criar uma nova sincronização de importação.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
-3\. Dê um nome à sua integração e selecione o tipo de dados para essa integração. 
+3\. Nomeie sua integração e selecione o tipo de dados para essa integração. 
 
 <br><br>![Configuração de detalhes de sincronização para "cdi-s3-as-source-integration" com dados de usuários como o tipo de dados.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 
@@ -228,7 +228,7 @@ Seu arquivo de origem pode conter uma ou mais colunas ou chaves de identificador
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Ao contrário das fontes de data warehouse, a coluna `UPDATED_AT` não é necessária nem aceita.
+Ao contrário das fontes de data warehouse, a coluna `UPDATED_AT` não é necessária nem suportada.
 {% endalert %}
 
 {% tabs %}
@@ -266,23 +266,31 @@ Todas as linhas do seu arquivo de origem devem conter JSON válido, ou o arquivo
 
 {% endtab %}
 {% tab Atribuições CSV %}
-``` csv  
+```plaintext  
 external_id,payload
 s3-qa-load-0-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""SNXIM"", ""age"": 54, ""subscriber"": true, ""retention"": {""previous_purchases"": 19, ""vip"": true}, ""last_visit"": ""2023-08-08T16:03:26.598806""}"
 s3-qa-load-1-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""0J747"", ""age"": 73, ""subscriber"": false, ""retention"": {""previous_purchases"": 22, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598816""}"
 s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age"": 99, ""subscriber"": false, ""retention"": {""previous_purchases"": 23, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598822""}"
 ```
 {% endtab %}
+{% tab Catálogos CSV  %}
+```plaintext  
+ID,PAYLOAD
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
+```
+{% endtab %}
+
 {% endtabs %}  
 
 Para obter exemplos de todos os tipos de arquivos suportados, consulte os arquivos de amostra em [Braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
 
 ## Coisas para saber
 
-- Os arquivos adicionados ao bucket de origem S3 não devem exceder 512 MB. Arquivos maiores que 512 MB resultarão em um erro e não serão sincronizados com o Braze.
-- Não há limite adicional para o número de linhas por arquivo.
-- Não há limite adicional para o número de arquivos feitos upload em um determinado período de tempo.
-- Não é possível fazer pedidos dentro ou entre arquivos. Recomendamos a atualização em lote periodicamente se estiver monitorando quaisquer condições de corrida esperadas.
+- Os arquivos adicionados ao bucket de origem S3 não devem exceder 512 MB. Arquivos com mais de 512 MB resultarão em um erro e não serão sincronizados com o Braze.
+- Embora não haja limite adicional para o número de linhas por arquivo, recomendamos o uso de arquivos menores para aumentar a velocidade de execução das sincronizações. Por exemplo, um arquivo de 500 MB levaria muito mais tempo para ser ingerido do que cinco arquivos separados de 100 MB.
+- Não há limite adicional para o número de arquivos feitos upload em um determinado período.
+- Não há suporte para pedidos em arquivos ou entre eles. Recomendamos fazer atualizações em lote periodicamente se estiver monitorando quaisquer condições de corrida esperadas.
 
 ## Solução de problemas
 
@@ -294,6 +302,6 @@ Os arquivos existentes podem ser usados para validar a estrutura de dados na con
 
 ### Tratamento de erros de arquivo inesperados
 
-Se estiver observando um grande número de erros ou arquivos com falha, é possível que haja outro processo adicionando arquivos ao bucket S3 em uma pasta diferente da pasta de direcionamento do CDI.
+Se estiver observando um grande número de erros ou arquivos com falha, é possível que outro processo esteja adicionando arquivos ao bucket S3 em uma pasta diferente da pasta de direcionamento do CDI.
 
-Quando os arquivos são feitos upload para o bucket de origem, mas não estão na pasta de origem, o CDI processa a notificação do SQS, mas não executa nenhuma ação no arquivo, portanto, isso pode aparecer como um erro.
+Quando os arquivos são feitos upload no bucket de origem, mas não na pasta de origem, o CDI processará a notificação do SQS, mas não executará nenhuma ação no arquivo, portanto, isso pode aparecer como um erro.
