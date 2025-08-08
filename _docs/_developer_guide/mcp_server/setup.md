@@ -1,7 +1,8 @@
 ---
-nav_title: Setting up Braze MCP server
+nav_title: Braze MCP server setup
 article_title: Setting Braze MCP server
 description: "Learn how to set up Braze MCP server."
+page_order: 1.1
 ---
 
 # Setting up Braze MCP server
@@ -96,64 +97,88 @@ For more information, refer to [Astral's UV documentation](https://docs.astral.s
 
 ### Step 3: Configure your MCP client
 
+Next, configure your MCP client using our pre-provided configuration file.
+
 {% tabs local %}
 {% tab Claude %}
-{% alert note %}
-If you haven't already, [download Claude](https://claude.ai/download).
-{% endalert %}
-
-Open Claude Desktop. Within Settings > Developer > Edit Config, add the following, substituting your API key and base URL:
-
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "your-braze-api-key-here",
-        "BRAZE_BASE_URL": "https://rest.iad-01.braze.com"
+1. In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
+    ```json
+    {
+      "mcpServers": {
+        "braze": {
+          "command": "uvx",
+          "args": ["--native-tls", "braze-mcp-server@latest"],
+          "env": {
+            "BRAZE_API_KEY": "your-braze-api-key-here",
+            "BRAZE_BASE_URL": "https://rest.iad-01.braze.com"
+          }
+        }
       }
     }
-  }
-}
-```
-
-Save the configuration and restart Claude Desktop.
-
-Verify the connection by asking a question like "List my Braze campaigns".
+    ```
+2. Save the configuration and restart Claude Desktop.
+3. To verify your connection, try asking a question like "List my Braze campaigns".
 {% endtab %}
 
 {% tab Cursor %}
-{% alert note %}
-If you haven't already, [download Cursor](https://cursor.com/).
-{% endalert %}
-
-Open Cursor. Within Settings > Cursor Settings > MCP Tools > Add Custom MCP, add the following configuration:
-
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "your-braze-api-key-here",
-        "BRAZE_BASE_URL": "https://rest.iad-01.braze.com"
+1. In [Cursor](https://cursor.com/), go to **Settings** > **Cursor Settings** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
+    ```json
+    {
+      "mcpServers": {
+        "braze": {
+          "command": "uvx",
+          "args": ["--native-tls", "braze-mcp-server@latest"],
+          "env": {
+            "BRAZE_API_KEY": "your-braze-api-key-here",
+            "BRAZE_BASE_URL": "https://rest.iad-01.braze.com"
+          }
+        }
       }
     }
-  }
-}
-```
-
-Save the configuration and restart Cursor.
-
-Verify the connection by using the MCP tools to interact with your Braze data.
+    ```
+2. When you're finished, save the configuration and restart Cursor.
+3. To verify your connection, try using the provided MCP tools to interact with your Braze data.
 {% endtab %}
 {% endtabs %}
 
 ## Troubleshooting
 
-CONTENT.
+### Terminal installations
+
+#### `uvx` command not found
+
+If you receive an error that `uvx` command not found, reinstall `uv` and restart your terminal.
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+#### Package installation fails
+
+If your package installation fails, try installing a specific Python version instead.
+
+```bash
+uvx --python 3.12 braze-mcp-server@latest
+```
+
+### Client configuration
+
+#### MCP client can't find the Braze server
+
+1. Verify your MCP client configuration syntax is correct.
+2. Restart your MCP client after configuration changes.
+3. Check that `uvx` is in your system PATH.
+
+#### Authentication errors
+
+1. Verify your `BRAZE_API_KEY` is correct and active.
+2. Ensure your `BRAZE_BASE_URL` matches your Braze instance.
+3. Check that your API key has the [correct permissions](#create-api-key).
+
+#### Connection timeouts or network errors
+
+1. Verify your `BRAZE_BASE_URL` is correct for your instance
+2. Check your network connection and firewall settings
+3. Ensure you're using HTTPS in your base URL
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}

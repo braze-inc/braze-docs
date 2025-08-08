@@ -2,7 +2,7 @@
 nav_title: Braze MCP server
 article_title: About Braze MCP server
 description: "Connect AI tools like Claude and Cursor to Braze for read-only access to workspace data using the MCP protocol."
-page_order: 30
+page_order: 2.8
 alias: /mcp_server/
 ---
 
