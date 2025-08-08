@@ -9,7 +9,7 @@ description: "Este artigo contém notas de versão de maio de 2020."
 
 ## Google Tag Manager
 
-Foram adicionados documentação e exemplos de como implantar e gerenciar o SDK do Braze para Android usando o [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/).
+Foram adicionados documentação e exemplos de como implantar e gerenciar o SDK do Braze para Android usando o [Google Tag Manager]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 
 ## Novo ponto de extremidade da API de envio de e-mail de lista de proibições
 

@@ -14,7 +14,7 @@ Adicionamos recursos de segurança aprimorados à Braze, incluindo regras de exp
 > Atualizar: As **Configurações de Segurança** do Braze, acessadas na página **Configurações da Empresa**, também incluem regras para reutilização e expiração de senhas.
 
 ## Baixar CSV após a importação
-Os usuários do Braze agora podem baixar CSVs de usuários importados recentemente. Isso oferece mais visibilidade na sincronização de dados de seus sistemas. Saiba mais sobre a [importação de CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).
+Os usuários do Braze agora podem baixar CSVs de usuários importados recentemente. Isso oferece mais visibilidade na sincronização de dados de seus sistemas. Saiba mais sobre a [importação de CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
 ## Filtro de aniversário
 Além do [filtro de aniversário]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), o Braze agora suporta um filtro de aniversário que lhe permite direcionar os usuários com base em uma data do calendário para marcos de fidelidade, avisos de recarga e muito mais! Acesse esse recurso selecionando o filtro "Date of Custom Attribute" (Data do atributo personalizado) na página Segments (Segmentos). Saiba mais sobre [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).

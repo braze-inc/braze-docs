@@ -10,14 +10,14 @@ channel: email
 
 # Solução de problemas de renderização de HTML em e-mails de teste
 
-Se o [e-mail de teste][37] não parecer correto, recomendamos verificar primeiro a configuração do HTML. Em seguida, você pode verificar esses problemas:
+Se o [e-mail de teste]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa) não parecer correto, recomendamos verificar primeiro a configuração do HTML. Em seguida, você pode verificar esses problemas:
 * [Conflitos de extensão](#check-conflicts)
 * [Envio de e-mail](#check-rendering)
 * [CSS inlining](#switch-css-inlining)
 
 ### Conflitos de extensão
 
-Algumas extensões de navegador podem causar problemas com nosso editor de e-mail. Um exemplo é o [Grammarly][38]) quando usado com o Google Chrome. Se estiver usando uma dessas extensões, você deve: 
+Algumas extensões de navegador podem causar problemas com nosso editor de e-mail. Um exemplo é o [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)) quando usado com o Google Chrome. Se estiver usando uma dessas extensões, você deve: 
 - Edite os e-mails do Braze em um navegador que não tenha o Grammarly como uma extensão do navegador
 - Entre em contato com o gerente da sua conta Braze e peça para mudar seus editores de e-mail para somente HTML ou texto simples. 
 
@@ -38,7 +38,3 @@ Ainda precisa de ajuda? Abra um [tíquete de suporte]({{site.baseurl}}/braze_sup
 
 _Última atualização em 21 de dezembro de 2021_
 
-[37]: {{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa
-[38]: https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
-[39]: https://www.emailonacid.com/
-[40]: https://litmus.com/

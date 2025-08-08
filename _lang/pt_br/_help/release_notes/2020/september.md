@@ -10,7 +10,7 @@ description: "Este artigo contém notas de versão de setembro de 2020."
 
 ## Relatórios de funil
 
-O Funnel Reporting oferece um relatório visual que permite analisar as jornadas que seus clientes percorrem após receberem uma [campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou uma [tela]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports).
+O Funnel Reporting oferece um relatório visual que permite analisar as jornadas que seus clientes percorrem após receberem uma [campanha]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) ou uma [tela]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ## Guia para fazer upgrade do iOS 14
 
@@ -22,11 +22,11 @@ No iOS 14, os usuários devem decidir se querem aceitar o rastreamento de anúnc
 
 ## Validação de e-mail
 
-Esse novo processo de validação da sintaxe de e-mail é um upgrade do processo existente do Braze. Essa é uma verificação para verificar se os e-mails atualizados ou importados para o Braze estão corretos. Para saber mais, dê uma olhada [nestas diretrizes e notas]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation).
+Esse novo processo de validação da sintaxe de e-mail é um upgrade do processo existente do Braze. Essa é uma verificação para verificar se os e-mails atualizados ou importados para o Braze estão corretos. Para saber mais, dê uma olhada [nestas diretrizes e notas]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
 ## Evento de usuário de bucket aleatório no Currents
 
-O número do intervalo aleatório (como RBN) ocorre sempre que um novo usuário é criado em seu espaço de trabalho. Durante esse evento, é atribuído a cada novo usuário um número de bucket aleatório que pode ser usado para criar segmentos uniformemente distribuídos de usuários aleatórios. Use isso para agrupar uma gama de valores de números de balde aleatórios e comparar a performance entre suas campanhas e variantes de campanha. Para ver se esse evento está disponível para você, dê uma olhada no [glossário de eventos de comportamento do cliente do]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) Currents.
+O número do intervalo aleatório (como RBN) ocorre sempre que um novo usuário é criado em seu espaço de trabalho. Durante esse evento, é atribuído a cada novo usuário um número de bucket aleatório que pode ser usado para criar segmentos uniformemente distribuídos de usuários aleatórios. Use isso para agrupar uma gama de valores de números de balde aleatórios e comparar a performance entre suas campanhas e variantes de campanha. Para ver se esse evento está disponível para você, dê uma olhada no [glossário de eventos de comportamento do cliente do]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) Currents.
 
 ## Componentes de tela - Em breve!
 
@@ -36,4 +36,4 @@ A Braze adicionou quatro novos componentes de canvas para ajudar a aumentar a fl
 
 ## Eventos de entrada de SMS recebidos
 
-Um novo evento de engajamento com mensagens foi adicionado ao Currents. Esse evento ocorre quando um dos seus usuários envia um SMS para um número de telefone em um dos seus grupos de inscrições do Braze SMS. Para saber mais, consulte nosso [glossário de envios de mensagens e eventos de engajamento]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) Currents.
+Um novo evento de engajamento com mensagens foi adicionado ao Currents. Esse evento ocorre quando um dos seus usuários envia um SMS para um número de telefone em um dos seus grupos de inscrições do Braze SMS. Para saber mais, consulte nosso [glossário de envios de mensagens e eventos de engajamento]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) Currents.

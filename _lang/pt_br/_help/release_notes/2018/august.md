@@ -17,10 +17,9 @@ Agora é possível redirecionar usuários com base em cliques em páginas espec�
 
 ## Eventos de dados do S3 e do Azure de usuários anônimos
 
-Os clientes que exportam dados para o Amazon S3 e o Microsoft Azure agora podem incluir eventos de usuários anônimos. Essa funcionalidade será ativada por padrão para todas as integrações recém-criadas, mas permanecerá desativada para todas as integrações existentes. Se tiver alguma dúvida, entre em contato com seu gerente de conta ou abra um [ticket de suporte][support].
+Os clientes que exportam dados para o Amazon S3 e o Microsoft Azure agora podem incluir eventos de usuários anônimos. Essa funcionalidade será ativada por padrão para todas as integrações recém-criadas, mas permanecerá desativada para todas as integrações existentes. Se tiver alguma dúvida, entre em contato com seu gerente de conta ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/).
 
 ## Integração de coortes do Mixpanel
 
 Os clientes do Braze e do Mixpanel agora podem integrar e [enviar coortes do Mixpanel para o Braze como filtros de segmento]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import). Você pode configurar uma exportação manual única ou uma exportação dinâmica a cada duas horas. Cada usuário atualizado contará como um ponto de dados, mas o Mixpanel envia apenas as alterações desde a última sincronização.
 
-[support]: {{site.baseurl}}/braze_support/
