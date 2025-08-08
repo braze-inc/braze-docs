@@ -11,7 +11,7 @@ platform: API
 
 # Nutzer:innen über API entfernen
 
-Wenn Sie [einen Nutzer:innen über die Braze REST API entfernen][1], werden die folgenden Daten gelöscht (nulled):
+Wenn Sie [einen Nutzer:innen über die Braze REST API entfernen]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), werden die folgenden Daten gelöscht (nulled):
 - Alle Attribute, die der Benutzer hatte
 - E-Mail-Adresse
 - Telefonnummer
@@ -20,9 +20,9 @@ Wenn Sie [einen Nutzer:innen über die Braze REST API entfernen][1], werden die 
 - Land
 - Sprache
 
-Wenn Sie [einen Nutzer:innen über die Braze REST API entfernen][1], treten die folgenden Ereignisse ein:
+Wenn Sie [einen Nutzer:innen über die Braze REST API entfernen]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), treten die folgenden Ereignisse ein:
 - Das Profil des Nutzers:in ist gelöscht (nulled).
-- Die Anzahl der [Lifetime-Benutzer][2] wird aktualisiert, um die neu entfernten Nutzer:innen zu berücksichtigen.	
+- Die Anzahl der [Lifetime-Benutzer]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) wird aktualisiert, um die neu entfernten Nutzer:innen zu berücksichtigen.	
 - Der entfernte Nutzer:innen wird weiterhin für die aggregierte Konversion gezählt. Angepasste Events und Kauf-Events werden für entfernte Nutzer:innen nicht aktualisiert.
 
 ## Mehrere Profile mit einer gemeinsamen E-Mail Adresse
@@ -38,5 +38,3 @@ So führen Sie diese Nutzerprofile zusammen:
 
 _Zuletzt aktualisiert am 13\. September 2023_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

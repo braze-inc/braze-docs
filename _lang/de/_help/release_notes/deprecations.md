@@ -88,7 +88,7 @@ Wenn Sie derzeit [Apptimize mit Braze]({{site.baseurl}}/help/release_notes/depre
 ### In-App-Nachrichten im Original
 
 **Unterstützung zurückgezogen:** Februar 2019<br>
-**Ersetzt durch**: [In-App-Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**Ersetzt durch**: [In-App-Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 Braze hat das Aussehen der In-App-Nachrichten verbessert, um den neuesten UX- und UI-Best Practices zu entsprechen, und unterstützt die ursprünglichen In-App-Nachrichten nicht mehr.
 
@@ -145,4 +145,3 @@ Der Parameter Verzögerung im Leerlauf war früher Teil der [GCM Push-Optionen](
 Entfernen von angepassten Endpunkten. Wenn Sie einen angepassten Endpunkt haben, können Sie diesen weiterhin verwenden, aber Braze gibt ihn nicht mehr heraus.
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

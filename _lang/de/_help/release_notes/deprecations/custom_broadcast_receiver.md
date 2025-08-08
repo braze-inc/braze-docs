@@ -14,7 +14,7 @@ Braze sendet auch angepasste Absichten, wenn Push-Benachrichtigungen empfangen, 
 
 ## Schritt 1: Registrieren Sie Ihren BroadcastReceiver
 
-Registrieren Sie Ihre angepasste `BroadcastReceiver`, um auf geöffnete und empfangene Push-Absichten von Braze in Ihrem [`AndroidManifest.xml`][71]:
+Registrieren Sie Ihre angepasste `BroadcastReceiver`, um auf geöffnete und empfangene Push-Absichten von Braze in Ihrem [`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml):
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -30,7 +30,7 @@ Registrieren Sie Ihre angepasste `BroadcastReceiver`, um auf geöffnete und empf
 
 Ihr Empfänger sollte die von Braze gesendeten Absichten verarbeiten und Ihre Aktivität mit ihnen starten:
 
-- Sie sollte die Unterklasse [`BroadcastReceiver`][53] untergliedern und `onReceive()` außer Kraft setzen.
+- Sie sollte die Unterklasse [`BroadcastReceiver`](https://developer.android.com/reference/android/content/BroadcastReceiver.html) untergliedern und `onReceive()` außer Kraft setzen.
 - Die Methode `onReceive()` sollte auf von Braze gesendete Absichten warten.
   - Eine `NOTIFICATION_RECEIVED` Absicht wird empfangen, wenn eine Push-Benachrichtigung eintrifft.
   - Eine `NOTIFICATION_OPENED` Absicht wird empfangen, wenn der Nutzer:innen auf eine Push-Benachrichtigung klickt.
@@ -149,5 +149,3 @@ val myExtra = extras.getString("my_key")
 Die Dokumentation zu den Push-Daten von Braze finden Sie im [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants).
 {% endalert %}
 
-[53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"

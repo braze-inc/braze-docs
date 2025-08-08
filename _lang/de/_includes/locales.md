@@ -1,3 +1,18 @@
+{% if include.section == "Prerequisites" %}
+## Voraussetzungen
+
+Um die [Mehrsprachenunterstützung]({{site.baseurl}}/multi_language_support/) konfigurieren zu können, benötigen Sie die Benutzerberechtigung "Mehrsprachigkeitseinstellungen konfigurieren". Um das Gebietsschema einer Nachricht einzustellen, benötigen Sie eine Berechtigung zur Bearbeitung von Kampagnen.
+
+{% endif %}
+
+{% if include.section == "Preview" %}
+
+## Vorschau auf Gebietsschemata
+
+Wählen Sie im Dropdown-Menü **Vorschau der Nachricht als Nutzer:** in auf dem Tab **Test** die Option **Benutzer:innen** aus und geben Sie verschiedene Sprachen ein, um eine Vorschau der Nachricht anzuzeigen und zu prüfen, ob Ihre Nachricht wie erwartet übersetzt wird.
+
+{% endif %}
+
 {% if include.section == "Frequently Asked Questions" %}
 
 ## Häufig gestellte Fragen

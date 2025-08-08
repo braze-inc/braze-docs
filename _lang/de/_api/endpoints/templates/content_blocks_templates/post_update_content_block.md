@@ -21,7 +21,7 @@ description: "Dieser Artikel beschreibt Details zum Update Content-Blöcke Braze
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `content_blocks.update`.
 
-## Rate-Limit
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

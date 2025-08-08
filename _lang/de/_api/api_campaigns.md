@@ -42,8 +42,7 @@ Um Ihre Kampagne zu konfigurieren, führen Sie die folgenden Schritte aus:
 ## API-Aufrufe
 
 Nachdem Sie Ihre API Kampagne gespeichert haben, fügen Sie die folgenden Angaben in Ihre API Anfrage ein: 
-- Die generierten `campaign_id` Felder mit Ihrer API-Anfrage wurden in den [Endpunkten für das Senden von Nachrichten][2] vermerkt.
+- Die generierten `campaign_id` Felder mit Ihrer API-Anfrage wurden in den [Endpunkten für das Senden von Nachrichten]({{site.baseurl}}/api/endpoints/messaging/#send-endpoints) vermerkt.
 - Ein [Nachrichten-Objekt]({{site.baseurl}}/api/objects_filters/#messaging-objects) für jede in der Kampagne enthaltene Plattform. Geben Sie im Nachrichtenobjekt die ID der Nachrichtenvariation an. Damit legen Sie fest, dass die Statistiken unter dieser Variante gesammelt und angezeigt werden sollen. Die folgenden Nachrichten-Objekte werden unterstützt: Android, Content-Cards, E-Mail, iOS, Kindle, SMS/MMS, Web-Push und Webhook.
 
-[2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
 

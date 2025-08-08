@@ -30,7 +30,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='nutzer:innen alias neu' %}
+{% multi_lang_include rate_limits.md endpoint='users alias new' %}
 
 ## Anfragetext
 

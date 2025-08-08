@@ -11,12 +11,12 @@ description: "In diesem Hilfeartikel erfahren Sie, wie Sie den Datentyp eines an
 
 Um den Datentyp eines angepassten Attributs oder Ereignisses zu ändern, navigieren Sie vom Braze-Dashboard aus zu **Dateneinstellungen** und wählen Sie entweder **angepasste Attribute** oder **angepasste Events**.
 
-![Tab "Angepasste Attribute" zum Bearbeiten von Attributen oder Daten][1]
+![Tab "Angepasste Attribute" zum Bearbeiten von Attributen oder Daten]({% image_buster /assets/img/change_custom_attribute.png %})
 
 Wenn Sie den Datentyp eines angepassten Attributs oder Ereignisses ändern müssen (z.B. von `time` auf `string`), sollten Sie Folgendes beachten:
 
 - Relevante Filter in Segmenten, Kampagnen, Canvase oder anderen Standorten, die das geänderte Attribut oder Ereignis verwenden, werden nicht automatisch aktualisiert. Bevor Sie Attribute ändern können, müssen Sie alle Kampagnen oder Canvase stoppen, die die Attribute in Segmenten oder Filtern verwenden, und die Attribute aus Filtern entfernen, die auf sie referenzieren.
-- Nutzerdaten werden nicht rückwirkend aktualisiert. Wenn sich das geänderte Attribut vor der Änderung des Datentyps in einem Nutzerprofil befand, dann ist dieser Wert immer noch der alte Datentyp. Dies kann dazu führen, dass Nutzer:innen aus den Segmenten herausfallen, die das geänderte Attribut enthalten. Der Filter sucht aktiv nach dem neuen Datentyp, aber wenn ein Profil noch den vorherigen Datentyp hat, wird dieser Nutzer:in nun aus dem Segment ausgeschlossen. Diese Nutzer:innen müssen aktualisiert werden, damit sie in die richtigen Segmente zurückfallen. Sie können dies mit dem [Endpunkt`users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) tun.
+- Nutzerdaten werden nicht rückwirkend aktualisiert. Wenn sich das geänderte Attribut vor der Änderung des Datentyps in einem Nutzerprofil befand, dann ist dieser Wert immer noch der alte Datentyp. Dies kann dazu führen, dass Nutzer:innen aus den Segmenten herausfallen, die das geänderte Attribut enthalten. Der Filter sucht aktiv nach dem neuen Datentyp, aber wenn ein Profil noch den vorherigen Datentyp hat, wird dieser Nutzer:in nun aus dem Segment ausgeschlossen. Diese Nutzer:innen müssen aktualisiert werden, damit sie in die richtigen Segmente zurückfallen. Sie können dies mit dem [Endpunkt `users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) tun.
 - Neue Daten werden nicht akzeptiert, wenn sie nicht dem neuen Datentyp entsprechen. So wird beispielsweise ein API-Aufruf an den Endpunkt `users/track`, der den vorherigen Datentyp für ein geändertes Attribut enthält, nicht akzeptiert. Sie müssen den neuen Datentyp aufrufen.
 
 {% alert important %}
@@ -25,4 +25,3 @@ Die Möglichkeit, die automatische Erkennung am Update des Datentyps für angepa
 
 _Zuletzt aktualisiert am 8\. Februar 2024_
 
-[1]: {% image_buster /assets/img/change_custom_attribute.png %}

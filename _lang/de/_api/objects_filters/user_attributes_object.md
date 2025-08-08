@@ -11,7 +11,7 @@ description: "Dieser referenzierte Artikel erläutert die verschiedenen Komponen
 
 > Eine API-Anfrage mit einem beliebigen Feld im Attribute-Objekt erstellt oder aktualisiert ein Attribut dieses Namens mit dem angegebenen Wert im angegebenen Nutzerprofil. 
 
-Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgelistet oder alle im Abschnitt für [Braze-Benutzerprofilfelder][27] aufgelisteten), um diese speziellen Werte im Benutzerprofil im Dashboard zu aktualisieren, oder fügen Sie Ihre eigenen angepassten Attributdaten für den Benutzer hinzu.
+Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgelistet oder alle im Abschnitt für [Braze-Benutzerprofilfelder](#braze-user-profile-fields) aufgelisteten), um diese speziellen Werte im Benutzerprofil im Dashboard zu aktualisieren, oder fügen Sie Ihre eigenen angepassten Attributdaten für den Benutzer hinzu.
 
 ## Objektkörper
 
@@ -75,7 +75,7 @@ Nach dem Import, wenn jeder Nutzer die Braze-fähige Version Ihrer App startet, 
 
 Braze sucht einmal im Monat nach anonymen Profilen mit dem Kennzeichen `push_token_import`, die kein Push-Token haben. Wenn das anonyme Profil nicht mehr über einen Push-Token verfügt, löschen wir das Profil. Wenn das anonyme Profil jedoch noch einen Push-Token hat, was darauf hindeutet, dass der tatsächliche Nutzer sich noch nicht mit diesem Push-Token am Gerät angemeldet hat, unternehmen wir nichts.
 
-Weitere Informationen finden Sie unter [Migration von Push-Tokens][3].
+Weitere Informationen finden Sie unter [Migration von Push-Tokens]({{site.baseurl}}/help/help_articles/push/push_token_migration/).
 
 #### Angepasste Attribut-Datenarten
 
@@ -83,10 +83,10 @@ Die folgenden Datenarten können als angepasstes Attribut gespeichert werden:
 
 | Datentyp | Anmerkungen |
 | --- | --- |
-| Arrays | Angepasste Attribut-Arrays werden unterstützt. Wenn Sie ein Element zu einem angepassten Attribut-Array hinzufügen, wird das Element an das Ende des Arrays angehängt, es sei denn, es ist bereits vorhanden. In diesem Fall wird es von seiner aktuellen Position an das Ende des Arrays verschoben.<br><br>Wenn zum Beispiel das Array `['hotdog','hotdog','hotdog','pizza']` importiert wurde, wird es im Array-Attribut als `['hotdog', 'pizza']` angezeigt, da nur eindeutige Werte unterstützt werden.<br><br>Sie können nicht nur die Werte eines Arrays setzen, indem Sie etwas wie `"my_array_custom_attribute":[ "Value1", "Value2" ]` sagen, sondern auch Werte zu bestehenden Arrays hinzufügen, indem Sie etwas wie `"my_array_custom_attribute" : { "add" : ["Value3"] },` tun, oder Werte aus einem Array entfernen, indem Sie etwas wie `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>Die Höchstzahl an Elementen in angepassten Attribut-Arrays ist standardmäßig auf 25 festgelegt, kann aber für ein einzelnes Array auf bis zu 100 erhöht werden. Weitere Informationen finden Sie unter [Arrays][6]. |
+| Arrays | Angepasste Attribut-Arrays werden unterstützt. Wenn Sie ein Element zu einem angepassten Attribut-Array hinzufügen, wird das Element an das Ende des Arrays angehängt, es sei denn, es ist bereits vorhanden. In diesem Fall wird es von seiner aktuellen Position an das Ende des Arrays verschoben.<br><br>Wenn zum Beispiel das Array `['hotdog','hotdog','hotdog','pizza']` importiert wurde, wird es im Array-Attribut als `['hotdog', 'pizza']` angezeigt, da nur eindeutige Werte unterstützt werden.<br><br>Sie können nicht nur die Werte eines Arrays setzen, indem Sie etwas wie `"my_array_custom_attribute":[ "Value1", "Value2" ]` sagen, sondern auch Werte zu bestehenden Arrays hinzufügen, indem Sie etwas wie `"my_array_custom_attribute" : { "add" : ["Value3"] },` tun, oder Werte aus einem Array entfernen, indem Sie etwas wie `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>Die Höchstzahl an Elementen in angepassten Attribut-Arrays ist standardmäßig auf 25 festgelegt, kann aber für ein einzelnes Array auf bis zu 100 erhöht werden. Weitere Informationen finden Sie unter [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays). |
 | Array von Objekten | Array of Objects ermöglicht es Ihnen, eine Liste von Objekten zu definieren, wobei jedes Objekt eine Reihe von Attributen enthält. Dies kann nützlich sein, wenn Sie mehrere Datensätze mit verwandten Daten für einen Nutzer:innen speichern müssen, z.B. Hotelaufenthalte, Kaufverläufe oder Vorlieben. <br><br> Sie können zum Beispiel ein angepasstes Attribut für ein Nutzerprofil mit dem Namen `hotel_stays` definieren. Dieses angepasste Attribut kann als Array definiert werden, in dem jedes Objekt einen separaten Aufenthalt darstellt, mit Attributen wie `hotel_name`, `check_in_date`, `nights_stayed`. Weitere Einzelheiten finden Sie in [diesem Beispiel](#array-of-objects-example). |
 | Boolesche Werte | `true` oder `false` |
-| Daten | Muss im Format [ISO 8601][19] oder in einem der folgenden Formate gespeichert werden: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Beachten Sie, dass "T" ein Zeitbezeichner und kein Platzhalter ist und nicht geändert oder entfernt werden sollte. <br><br>Zeitattribute ohne Zeitzone sind standardmäßig auf Mitternacht UTC eingestellt (und werden auf dem Dashboard als das Äquivalent zu Mitternacht UTC in der Zeitzone des Unternehmens formatiert). <br><br> Ereignisse mit Zeitstempeln in der Zukunft werden standardmäßig auf die aktuelle Zeit gesetzt. <br><br> Bei regulären angepassten Attributen speichert Braze, wenn das Jahr kleiner als 0 oder größer als 3000 ist, diese Werte als Strings auf den Nutzer:innen. |
+| Daten | Muss im Format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) oder in einem der folgenden Formate gespeichert werden: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Beachten Sie, dass "T" ein Zeitbezeichner und kein Platzhalter ist und nicht geändert oder entfernt werden sollte. <br><br>Zeitattribute ohne Zeitzone sind standardmäßig auf Mitternacht UTC eingestellt (und werden auf dem Dashboard als das Äquivalent zu Mitternacht UTC in der Zeitzone des Unternehmens formatiert). <br><br> Ereignisse mit Zeitstempeln in der Zukunft werden standardmäßig auf die aktuelle Zeit gesetzt. <br><br> Bei regulären angepassten Attributen speichert Braze, wenn das Jahr kleiner als 0 oder größer als 3000 ist, diese Werte als Strings auf den Nutzer:innen. |
 | Gleitkommazahlen | Gleitkommazahlen für angepasste Attribute sind positive oder negative Zahlen mit einem Dezimalpunkt. Sie können beispielsweise Gleitkommazahlen verwenden, um Kontostände oder Nutzer:innen-Bewertungen für Produkte oder Dienste zu speichern. |
 | Ganze Zahlen | Ganzzahlige angepasste Attribute können um positive oder negative ganze Zahlen erhöht werden, indem Sie ihnen ein Objekt mit dem Feld "inc" und dem Wert, um den sie erhöht werden sollen, zuweisen. <br><br>Beispiel: `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Verschachtelte angepasste Attribute | Verschachtelte angepasste Attribute definieren eine Gruppe von Attributen als Eigenschaft eines anderen Attributs. Wenn Sie ein angepasstes Attribut-Objekt definieren, legen Sie eine Reihe von zusätzlichen Attributen für dieses Objekt fest. Weitere Informationen finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/). |
@@ -119,28 +119,28 @@ Bei den folgenden Feldern des Nutzerprofils wird zwischen Groß- und Kleinschrei
 | alias_name | (String) |
 | alias_label | (String) |
 | löt_id | (String, optional) Wenn ein Nutzerprofil vom SDK erkannt wird, wird ein anonyme Nutzer:in-Profil mit einem zugehörigen `braze_id` erstellt. Die `braze_id` wird von Braze automatisch zugewiesen, kann nicht bearbeitet werden und ist gerätespezifisch. | 
-| Land | (String) Wir verlangen, dass die Ländercodes im [ISO-3166-1 alpha-2 Standard][17] an Braze übergeben werden. Unsere API wird sich bemühen, die in verschiedenen Formaten empfangenen Länder abzubilden. Zum Beispiel kann "Australien" auf "AU" abgebildet werden. Wenn die Eingabe jedoch nicht mit einem bestimmten [ISO-3166-1 alpha-2 Standard][17] übereinstimmt, wird der Länderwert auf `NULL` gesetzt. <br><br>Wenn Sie `country` für einen Nutzer:innen per CSV-Import oder API einstellen, verhindert Braze, dass diese Informationen automatisch über das SDK erfasst werden. |
+| Land | (String) Wir verlangen, dass die Ländercodes im [ISO-3166-1 alpha-2 Standard](http://en.wikipedia.org/wiki/ISO_3166-1) an Braze übergeben werden. Unsere API wird sich bemühen, die in verschiedenen Formaten empfangenen Länder abzubilden. Zum Beispiel kann "Australien" auf "AU" abgebildet werden. Wenn die Eingabe jedoch nicht mit einem bestimmten [ISO-3166-1 alpha-2 Standard](http://en.wikipedia.org/wiki/ISO_3166-1) übereinstimmt, wird der Länderwert auf `NULL` gesetzt. <br><br>Wenn Sie `country` für einen Nutzer:innen per CSV-Import oder API einstellen, verhindert Braze, dass diese Informationen automatisch über das SDK erfasst werden. |
 | aktueller_Ort | (Objekt) der Form {"longitude": -73.991443, "latitude": 40.753824} |
 | Datum_der_ersten_Sitzung | (Datum, an dem der Nutzer:innen die App zum ersten Mal benutzt hat) String im Format ISO 8601 oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | Datum_der_letzten_Sitzung | (Datum, an dem der Nutzer:innen die App zuletzt benutzt hat) String im Format ISO 8601 oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
 | Geburtsdatum | (Geburtsdatum) String im Format "JJJJ-MM-TT", zum Beispiel 1980-12-21. |
 | E-Mail | (String) |
 | email_subscribe | (String) Verfügbare Werte sind "opted_in" (explizit für den Erhalt von E-Mail-Nachrichten registriert), "unsubscribed" (explizit für den Erhalt von E-Mail-Nachrichten abgemeldet) und "subscribed" (weder opted-in noch abgemeldet).  |
-| email_open_tracking_disabled |(boolesch) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um zu verhindern, dass das Tracking-Pixel für die Öffnung zu allen zukünftigen E-Mails hinzugefügt wird, die an diese Nutzer:innen gesendet werden.|
-| email_click_tracking_disabled |(boolesch) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um das Tracking von Klicks für alle Links in einer zukünftigen E-Mail an diesen Nutzer:innen zu deaktivieren.|
+| email_open_tracking_disabled |(boolesch) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um zu verhindern, dass das Tracking-Pixel für die Öffnung zu allen zukünftigen E-Mails hinzugefügt wird, die an diese Nutzer:innen gesendet werden. Nur für SparkPost und SendGrid verfügbar.|
+| email_click_tracking_disabled |(boolesch) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um das Tracking von Klicks für alle Links in einer zukünftigen E-Mail an diesen Nutzer:innen zu deaktivieren. Nur für SparkPost und SendGrid verfügbar.|
 | external_id | (String) Ein eindeutiger Bezeichner für ein Nutzerprofil. Nach Zuweisung eines `external_id` wird das Nutzerprofil auf allen Geräten eines Nutzers:innen identifiziert. Bei der ersten Instanz, in der einem unbekannten Nutzerprofil eine external_id zugewiesen wird, werden alle vorhandenen Nutzerdaten in das neue Nutzerprofil migriert. |
 | Facebook | Hash mit einem der folgenden Werte: `id` (String), `likes` (String-Array), `num_friends` (Ganzzahl). |
 | first_name | (String) |
 | Geschlecht | (String) "M", "F", "O" (andere), "N" (nicht zutreffend), "P" (lieber nicht sagen) oder nil (unbekannt). |
 | Heimat_Stadt | (String) |
-| Sprache | (String) verlangen wir, dass die Sprache im [ISO-639-1-Standard][24] an Braze übergeben wird. Die unterstützten Sprachen finden Sie in unserer [Liste der akzeptierten Sprachen][2].<br><br>Wenn Sie `language` für einen Nutzer:innen per CSV-Import oder API einstellen, verhindert Braze, dass diese Informationen automatisch über das SDK erfasst werden. |
+| Sprache | (String) verlangen wir, dass die Sprache im [ISO-639-1-Standard](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) an Braze übergeben wird. Die unterstützten Sprachen finden Sie in unserer [Liste der akzeptierten Sprachen]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>Wenn Sie `language` für einen Nutzer:innen per CSV-Import oder API einstellen, verhindert Braze, dass diese Informationen automatisch über das SDK erfasst werden. |
 | last_name | (String) |
 | markierte_email_als_spam_at | (String) Datum, an dem die E-Mail des Nutzers:in als Spam markiert wurde. Erscheint im Format ISO 8601 oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | Telefon | (String) Wir empfehlen die Angabe von Telefonnummern im [E.164](https://en.wikipedia.org/wiki/E.164) Format anzugeben. Weitere Informationen finden Sie unter [Nutzer:innen Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting).|
 | push_subscribe | (String) Verfügbare Werte sind "opted_in" (explizit für den Empfang von Push-Nachrichten registriert), "unsubscribed" (explizit von Push-Nachrichten abgemeldet) und "subscribed" (weder opt-in noch abgemeldet).  |
 | push_tokens | Array von Objekten mit `app_id` und `token` String. Sie können optional eine `device_id` für das Gerät angeben, mit dem dieses Token verbunden ist, z.B. `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Wenn keine `device_id` angegeben wird, wird eine zufällig generiert. |
 | abonnement_gruppen| Array von Objekten mit `subscription_group_id` und `subscription_state` String, zum Beispiel `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Verfügbare Werte für `subscription_state` sind "Abonnent:in" und "abgemeldet".|
-| zeit_zone | (String) Der Name der Zeitzone aus der [IANA-Zeitzonendatenbank][26] (z. B. "America/New_York" oder "Eastern Time (US & Canada)"). Es werden nur gültige Zeitzonenwerte eingestellt. |
+| zeit_zone | (String) Der Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. "America/New_York" oder "Eastern Time (US & Canada)"). Es werden nur gültige Zeitzonenwerte eingestellt. |
 | Twitter | Hash mit einem der folgenden Werte: `id` (Ganzzahl), `screen_name` (String, X (ehemals Twitter) Handle), `followers_count` (Ganzzahl), `friends_count` (Ganzzahl), `statuses_count` (Ganzzahl). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -148,7 +148,7 @@ Sprachwerte, die explizit über diese API festgelegt werden, haben Vorrang vor d
 
 ####  Beispiel für eine Anfrage zum Attribut Nutzer:in
 
-Dieses Beispiel enthält zwei Nutzer:innen-Attribute mit den zulässigen 75 Anfragen pro API-Aufruf.
+Dieses Beispiel enthält vier Attribut-Objekte für Nutzer:innen, von insgesamt 75 zulässigen Attribut-Objekten pro API-Aufruf.
 
 ```json
 POST https://YOUR_REST_API_URL/users/track
@@ -183,12 +183,3 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 Codes"
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Zeitcode Wiki"
-[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 Codes"
-[26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: #braze-user-profile-fields

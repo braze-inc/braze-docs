@@ -14,7 +14,7 @@ Canvas verfügt über neue und verbesserte Analytics, mit denen Sie sich die Per
 
 ## SMS
 
-Braze bietet jetzt SMS mit Kampagnen, Canvas und [Currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)! Schauen Sie sich unsere [Einrichtungsanleitung]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) an, um loszulegen, und unsere [Anleitung zum Versenden von SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/), um mehr zu erfahren!
+Braze bietet jetzt SMS mit Kampagnen, Canvas und [Currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)! Schauen Sie sich unsere [Einrichtungsanleitung]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) an, um loszulegen, und unsere [Anleitung zum Versenden von SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/), um mehr zu erfahren!
 
 ## Content-Block Verbesserungen
 

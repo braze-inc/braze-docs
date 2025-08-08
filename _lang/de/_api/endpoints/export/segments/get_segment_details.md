@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Export Segment
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `segments.details`.
 
-## Rate-Limit
+## Rate-Limits
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

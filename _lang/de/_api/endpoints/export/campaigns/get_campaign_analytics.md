@@ -26,7 +26,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='export campaign analytics' %}
+{% multi_lang_include rate_limits.md endpoint='export campaign analytics' %}
 
 ## Parameter der Anfrage
 

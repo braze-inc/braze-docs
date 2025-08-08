@@ -11,7 +11,7 @@ description: "Auf dieser Landing Page werden die Endpunkte für den Export von B
 page_type: landing
 
 guide_top_header: "Endpunkte exportieren"
-guide_top_text: "Mit dieser Sammlung von Endpunkten können Sie auf verschiedene Ebenen von Details zu Ihren KPIs, Newsfeed-Karten, App-Sitzungen, Nutzer:innen, Segmenten, Kampagnen und Canvase zugreifen und diese exportieren. <br> <br> Stellen Sie sicher, dass Sie Ihre <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze-Instanz</a>, Ihren <a href='/docs/api/api_key/' target='_blank'>API-Schlüssel</a> und Ihren <a href='/docs/api/identifier_types/' target='_blank'>API-Bezeichner</a> kennen, wenn Sie Ihre Parameter und Anfragen erstellen."
+guide_top_text: "Mit dieser Sammlung von Endpunkten können Sie auf verschiedene Ebenen von Details zu Ihren KPIs, App-Sitzungen, Nutzer:innen, Segmenten, Kampagnen und Canvase zugreifen und diese exportieren. <br> <br> Stellen Sie sicher, dass Sie Ihre <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze-Instanz</a>, Ihren <a href='/docs/api/api_key/' target='_blank'>API-Schlüssel</a> und Ihren <a href='/docs/api/identifier_types/' target='_blank'>API-Bezeichner</a> kennen, wenn Sie Ihre Parameter und Anfragen erstellen."
 
 guide_featured_title: "Endpunkte der Kampagne exportieren"
 guide_featured_list:
@@ -69,18 +69,6 @@ guide_menu_list3:
   - name: "GET: KPIs für Deinstallationen nach Datum"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     image: /assets/img/braze_icons/target-04.svg
-
-guide_menu_title4: "Export News Feed endpoints"
-guide_menu_list4:
-  - name: "GET: Newsfeed-Karte Engagement-Statistiken"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET: Newsfeed-Karte Details"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET: Newsfeed-Karte Liste"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:

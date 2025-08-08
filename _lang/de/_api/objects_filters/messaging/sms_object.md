@@ -24,3 +24,4 @@ description: "Dieser referenzierte Artikel erklärt die verschiedenen Komponente
 ```
 
 - [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
+  - Jede gültige `app_id` von einer App, die in Ihrem Workspace konfiguriert ist, funktioniert für alle Nutzer:innen in Ihrem Workspace, unabhängig davon, ob der Nutzer die spezifische App in seinem Profil hat oder nicht.

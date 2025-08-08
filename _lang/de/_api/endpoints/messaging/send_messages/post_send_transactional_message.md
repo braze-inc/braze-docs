@@ -33,7 +33,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berech
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='Transaktions-E-Mails' %}
+{% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
 ## Pfad-Parameter
 

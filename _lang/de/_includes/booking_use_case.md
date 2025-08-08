@@ -42,7 +42,7 @@ Wenn ein Nutzer:innen eine Buchung erstellt, verwenden Sie die folgende Struktur
 
 Das verschachtelte angepasste Attribut "Reisen" wird im Nutzerprofil wie folgt angezeigt.
 
-![Zwei verschachtelte angepasste Attribute für eine Reise nach London und eine Reise nach Sydney.][1]{: style="max-width:70%;"}
+![Zwei verschachtelte angepasste Attribute für eine Reise nach London und eine Reise nach Sydney.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### Update der Buchung
 Wenn ein Nutzer:innen eine Buchung aktualisiert, verwenden Sie die folgende Struktur für das Array von Objekten, um die Daten über den Endpunkt `/users/track` an Braze zu senden.
@@ -132,7 +132,7 @@ Erstellen Sie eine Zielgruppe, die Erinnerungen erhalten soll, indem Sie eine Se
 - Ein Startdatum **in mehr als 1 Tag** und
 - Ein Starttermin **in weniger als 2 Tagen** 
 
-![Ein verschachteltes angepasstes Attribut "Reisen" mit Kriterien für ein Startdatum, das mehr als einen Tag und weniger als zwei Tage beträgt.][3]
+![Ein verschachteltes angepasstes Attribut "Reisen" mit Kriterien für ein Startdatum, das mehr als einen Tag und weniger als zwei Tage beträgt.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### Schritt 2b: Erstellen Sie Ihre Nachricht
 
@@ -280,5 +280,3 @@ Wenn der Nutzer:innen in diesem Anwendungsfall seine Syndey-Reise storniert, wü
 
 Nach dem Versenden dieser Anrufe und dem Update des Nutzerprofils werden die Nachrichten zur Buchungserinnerung die neuesten Daten über die Buchungsdaten des Nutzers:innen wiedergeben.
 
-[1]: {% image_buster /assets/img/use_cases/2_nested_attributes.png %}
-[3]: {% image_buster /assets/img/use_cases/custom_nested_attribute.png %}

@@ -1,0 +1,1 @@
+Wenn Sie Feedback zur Zugänglichkeit von Braze oder zu den von Braze gesendeten Nachrichten haben, würden wir uns freuen, von Ihnen zu hören. Öffnen Sie das Menü **Support** in der globalen Kopfzeile und wählen Sie **Share feedback**, um uns Ihre Meinung mitzuteilen.

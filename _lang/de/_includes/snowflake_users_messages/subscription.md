@@ -1,3 +1,5 @@
+## Beziehungs-Tabellen
+
 ### `GLOBALSTATECHANGE_SHARED`
 
 ```json
@@ -29,9 +31,9 @@
         "CHANNEL": "Channel this event belongs to",
         "TIME": "UNIX timestamp at which the event happened",
         "TIMEZONE": "Time zone of the user",
+        "CHANNEL_IDENTIFIER": "[PII] The user's identifier on the channel the event is for.",
         "SF_CREATED_AT": "when this event was picked up by the Snowpipe",
         "SEND_ID": "Message send ID this message belongs to"
     }
 }
 ```
-

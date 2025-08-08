@@ -21,7 +21,7 @@ Die Dokumentation zu Braze wurde um eine Fehlerbehebung für häufige CSV- und A
 
 ## EduMe Partnerschaft
 
-EduMe ist ein mobiles Trainingstool, das Ihren Mitarbeitern das Wissen vermittelt, das sie für ihren Erfolg benötigen. Nutzen Sie Connected-Content in Braze, um Ihren Mitarbeitern oder Kund:in den Zugang zu Lektionen und Kursen in EduMe zu ermöglichen. Sie werden nahtlos auf diese Inhalte in ihrem Browser zugreifen können, und Sie werden in der Lage sein, ihre Fortschritte als Gruppe oder als Einzelpersonen mithilfe der EduMe-Berichtsfunktion zu verfolgen. Weitere Informationen finden Sie in unserer [EduMe]({{site.baseurl}}/partners/message_orchestration/learning/edume/) Dokumentation.
+EduMe ist ein mobiles Trainingstool, das Ihren Mitarbeitern das Wissen vermittelt, das sie für ihren Erfolg benötigen. Nutzen Sie Connected-Content in Braze, um Ihren Mitarbeitern oder Kund:in den Zugang zu Lektionen und Kursen in EduMe zu ermöglichen. Sie werden nahtlos auf diese Inhalte in ihrem Browser zugreifen können, und Sie werden in der Lage sein, ihre Fortschritte als Gruppe oder als Einzelpersonen mithilfe der EduMe-Berichtsfunktion zu verfolgen. Weitere Informationen finden Sie in unserer [EduMe]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/learning/edume/) Dokumentation.
 
 ## Pypestream Partnerschaft
 
@@ -29,7 +29,7 @@ Pypestream ist eine umfassende KI-Plattform, die patentiertes, umfassendes Cloud
 
 ## Dyspatch Partnerschaft
 
-Mit Dyspatch erstellen Sie mit dem intuitiven E-Mail-Builder per Drag-and-Drop schöne, responsive und engagierte E-Mails, ohne Code schreiben zu müssen. Arbeiten Sie mit Ihrem Team zusammen, um E-Mails in Dyspatch zu erstellen und zu genehmigen und sie dann zur Verwendung in Braze hochzuladen - alles in wenigen Schritten! Weitere Informationen finden Sie in unserer [Dyspatch]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/dyspatch/) Dokumentation.
+Mit Dyspatch erstellen Sie mit dem intuitiven E-Mail-Builder per Drag-and-Drop schöne, responsive und engagierte E-Mails, ohne Code schreiben zu müssen. Arbeiten Sie mit Ihrem Team zusammen, um E-Mails in Dyspatch zu erstellen und zu genehmigen und sie dann zur Verwendung in Braze hochzuladen - alles in wenigen Schritten! Weitere Informationen finden Sie in unserer [Dyspatch]({{site.baseurl}}/partners/message_orchestration/templates/dyspatch/) Dokumentation.
 
 ## Rudderstack Partnerschaft
 
@@ -37,4 +37,4 @@ RudderStack ist eine quelloffene Infrastruktur für Kundendaten zum Sammeln und 
 
 ## Jebbit Partnerschaft
 
-Jebbit ist eine PaaS, mit der Sie ansprechende Erlebnisse für Nutzer:innen erstellen können, um First-Party-Daten zu erfassen. Jebbit ist eine Partnerschaft mit Braze eingegangen, so dass Sie Nutzer:innen-E-Mails und Attribute aus Ihren Jebbit Kampagnen als Nutzerdaten in Realtime an Braze weitergeben können. Diese Daten können dann genutzt werden, um Marketing-Initiativen wie personalisierte E-Mail Kampagnen und Trigger voranzutreiben. Weitere Informationen finden Sie in unserer [Jebbit]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/#jebbit) Dokumentation.
+Jebbit ist eine PaaS, mit der Sie ansprechende Erlebnisse für Nutzer:innen erstellen können, um First-Party-Daten zu erfassen. Jebbit ist eine Partnerschaft mit Braze eingegangen, so dass Sie Nutzer:innen-E-Mails und Attribute aus Ihren Jebbit Kampagnen als Nutzerdaten in Realtime an Braze weitergeben können. Diese Daten können dann genutzt werden, um Marketing-Initiativen wie personalisierte E-Mail Kampagnen und Trigger voranzutreiben. Weitere Informationen finden Sie in unserer [Jebbit]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/jebbit) Dokumentation.

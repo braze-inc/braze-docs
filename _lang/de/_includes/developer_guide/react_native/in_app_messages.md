@@ -25,7 +25,7 @@ Das In-App-Nachricht-Modell bildet die Grundlage für alle In-App-Nachrichten.
 |`zippedAssetsUrl` | Die gezippten Assets, die für die Anzeige von HTML-Inhalten vorbereitet sind.                                                                    |
 |`useWebView`      | Gibt an, ob der Klick auf den Button über eine Webansicht umgeleitet werden soll.                                            |
 |`duration`        | Die Anzeigedauer der Nachrichten.                                                                                          |
-|`clickAction`     | Der Aktionstyp für den Klick auf den Button. Die drei Typen sind: `NEWS_FEED`, `URI`, und `NONE`.                                     |
+|`clickAction`     | Der Aktionstyp für den Klick auf den Button. Die Typen sind: `URI`, und `NONE`.                                     |
 |`dismissType`     | Die Art des Abschlusses der Nachricht. Die beiden Arten sind: `SWIPE` und `AUTO_DISMISS`.                                                 |
 |`messageType`     | Der vom SDK unterstützte Typ der In-App-Nachricht. Die vier Typen sind: `SLIDEUP`, `MODAL`, `FULL` und `HTML_FULL`.          |
 |`extras`          | Das Wörterbuch der Nachrichten-Extras. Standardwert: `[:]`.                                                                   |
@@ -44,7 +44,7 @@ In-App-Nachrichten können Buttons hinzugefügt werden, um Aktionen durchzuführ
 |`text`            | Der Text auf dem Button.                                                                                                     |
 |`uri`             | Die URI, die mit dem Klick auf den Button verbunden ist.                                                                            |
 |`useWebView`      | Gibt an, ob der Klick auf den Button über eine Webansicht umgeleitet werden soll.                                                 |
-|`clickAction`     | Die Art der Klick-Aktion, die verarbeitet wird, wenn der Nutzer auf den Button klickt. Die drei Typen sind: `NEWS_FEED`, `URI`, und `NONE`. |
+|`clickAction`     | Die Art der Klick-Aktion, die verarbeitet wird, wenn der Nutzer auf den Button klickt. Die Typen sind: `URI`, und `NONE`. |
 |`id`              | Die ID des Buttons in der Nachricht.                                                                                               |
 |`toString()`      | Der Button als String-Darstellung.                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

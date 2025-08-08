@@ -79,55 +79,6 @@ Bei Aktions-Buttons für Benachrichtigungen werden die `BRAZE_PUSH_INTENT_NOTIFI
 Erstellen Sie Ihren Listener für Push-Benachrichtigungen in `Application.onCreate`, um sicherzustellen, dass er getriggert wird, wenn auf eine Benachrichtigung getippt wird, während sich Ihre App in einem beendeten Zustand befindet.
 {% endalert %}
 
-## Anpassen von Schriftarten
-
-### Schritt 1: Eine Schriftfamilie erstellen
-
-Im Folgenden finden Sie ein Beispiel für eine angepasste Schriftfamiliendefinition unter Verwendung des [Schriftfamilienleitfadens](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family). Für dieses Beispiel verwenden wir die [Schriftart Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade).
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-Nachdem wir die Definition der Schriftfamilie in `/res/font/bungee_font_family.xml` gespeichert haben, können wir sie in XML als `@font/bungee_font_family` referenzieren.
-
-### Schritt 2: Ihre Schriftfamilie referenzieren
-
-Jetzt, da die Schriftfamilie erstellt ist, können Sie die Standardvorgaben von Braze in Ihrem `styles.xml` überschreiben, um Referenzen auf die Schriftfamilie aufzunehmen.
-
-Zum Beispiel würde die folgende Stilüberschreibung die Schriftfamilie `bungee` für alle In-App-Nachrichten von Braze verwenden.
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-Die Stilattribute `android:fontFamily` und `fontFamily` müssen gesetzt werden, um die Kompatibilität mit allen SDK-Versionen zu gewährleisten.
-{% endalert %}
-
 ## Anzeige der Benachrichtigung anpassen {#customization-display}
 
 ### Schritt 1: Angepasste Benachrichtigungs-Factory erstellen
@@ -224,9 +175,9 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## Rendering Multiplikator Text
+## Rendering von mehrfarbigem Text
 
-In Braze SDK Version 3.1.1 kann HTML an ein Gerät gesendet werden, um Multiplikatortext in Push-Benachrichtigungen zu rendern.
+In Braze SDK Version 3.1.1 kann HTML an ein Gerät gesendet werden, um mehrfarbigen Text in Push-Benachrichtigungen darzustellen.
 
 ![Die Android-Push-Nachricht "Multicolor Push Test Nachricht", bei der die Buchstaben verschiedene Farben haben, kursiv geschrieben sind und eine Hintergrundfarbe haben.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
@@ -241,7 +192,7 @@ Dieses Beispiel wird mit dem folgenden HTML-Code wiedergegeben:
 Denken Sie daran, dass Android einschränkt, welche HTML-Elemente und Tags in Ihren Push-Benachrichtigungen zulässig sind. Zum Beispiel ist `marquee` nicht zulässig.
 
 {% alert important %}
-Die Wiedergabe von mehrfarbigem Text ist gerätespezifisch und wird je nach Android-Gerät oder -Version möglicherweise nicht angezeigt.
+Die Darstellung von mehrfarbigem Text ist gerätespezifisch und wird je nach Android-Gerät oder -Version möglicherweise nicht angezeigt.
 {% endalert %}
 
 Um mehrfarbigen Text in einer Push-Benachrichtigung darzustellen, können Sie Ihr `braze.xml` oder `BrazeConfig` aktualisieren:
@@ -284,7 +235,7 @@ Braze.configure(this, brazeConfig)
 
 ### Unterstützte HTML Tags
 
-Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in seiner Dokumentation auf. Diese Informationen finden Sie nur in der [ `Html.java` Datei des Git-Repositorys.](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) Beachten Sie dies, wenn Sie sich auf die folgende Tabelle beziehen, da diese Informationen aus dieser Datei stammen und sich die unterstützten HTML-Tags noch ändern können.
+Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in der Dokumentation auf. Diese Informationen finden Sie nur in der [ `Html.java` Datei des Git-Repositorys.](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) Beachten Sie dies, wenn Sie sich auf die folgende Tabelle beziehen, da diese Informationen aus dieser Datei stammen und sich die unterstützten HTML-Tags noch ändern können.
 
 <table>
   <thead>
@@ -381,7 +332,7 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
 
 ### Funktionsweise
 
-Sie können ein größeres Bild in Ihrer Android Push-Benachrichtigung mit Hilfe von Inline-Image-Push präsentieren. Bei diesem Design müssen Nutzer die Push-Benachrichtigung nicht mehr manuell erweitern, um das Bild zu vergrößern. Im Gegensatz zu normalen Android-Push-Benachrichtigungen haben die Inline-Image-Push-Bilder ein Seitenverhältnis von 3:2.
+Sie können ein größeres Bild in Ihrer Android Push-Benachrichtigung mit Hilfe von Inline Image Push präsentieren. Bei diesem Design müssen Nutzer die Push-Benachrichtigung nicht mehr manuell erweitern, um das Bild zu vergrößern. Im Gegensatz zu normalen Android-Push-Benachrichtigungen haben die Inline-Image-Push-Bilder ein Seitenverhältnis von 3:2.
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="max-width:50%;"}
 
@@ -421,13 +372,13 @@ Im Feld **Time to Live** (TTL) können Sie eine benutzerdefinierte Zeitspanne f�
 
 Mit dem Zusammenfassungstext können Sie zusätzlichen Text in der erweiterten Benachrichtigungsansicht einstellen. Es dient auch als Beschriftung für Benachrichtigungen mit Bildern.
 
-![Android-Nachricht mit dem Titel "Grüße von Appboy!", der Nachricht "Dies ist der Nachrichtentext! Sie können sogar Emojis hinzufügen." und Zusammenfassungstext "Dies ist der Zusammenfassungstext."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt.
+Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt. 
+
+![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in der eingeklappten Ansicht angezeigt, während der Zusammenfassungstext als Bildunterschrift angezeigt wird, wenn die Benachrichtigung erweitert wird. 
-
-![Eine Android Nachricht mit dem Titel "Appboy!", der Nachricht "Dies ist der Nachrichtentext..." und dem zusammenfassenden Text "und dies ist der zusammenfassende Text."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### Benutzerdefinierte URIs {#custom-uri}
 
