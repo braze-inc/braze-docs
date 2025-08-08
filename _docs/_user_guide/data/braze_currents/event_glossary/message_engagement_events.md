@@ -6241,7 +6241,7 @@ Feature flag impressions are only logged once per session.
 In-App Messages, Abort
 {% endapitags %}
 
-This event occurs when an originally scheduled in-app message was aborted.
+This event occurs when an originally scheduled [templated in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages) was aborted.
 
 {% tabs %}
 {% tab Amplitude %}
