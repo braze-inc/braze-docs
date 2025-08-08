@@ -39,15 +39,6 @@ By setting up your MCP client with Braze’s MCP server, your LLM can answer que
 | Analyzing performance data | How did my campaigns perform yesterday? | Determines which campaigns were active yesterday, retrieves analytics for each, and compiles a performance report highlighting trends. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-## Best practices
-
-- LLMs aren’t perfect and can get things wrong.  Be sure to always double check responses.
-- If you’re looking to analyze data, be specific about the window of time you want.  Smaller time ranges generally yield more accurate responses.
-- Be specific with Braze terminology, that ensures that your LLM uses the correct function.  
-  - Examples:  Specify active or draft.  Specify if you’re looking for canvases or campaigns.
-- If you’re noticing that you’re not seeing all the data you’re looking for, you may have to prompt the LLM to continue to explore further.
-- Depending on your MCP client, you could even ask your LLM to create you a CSV file or other artifacts.  Experiment with this!
-
 ## Frequently Asked Questions (FAQ) {#faq}
 
 ### What data can MCP clients access through Braze’s MCP server?

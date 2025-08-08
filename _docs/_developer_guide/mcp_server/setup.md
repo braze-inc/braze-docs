@@ -95,7 +95,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 For more information, refer to [Astral's UV documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
-### Step 3: Configure your MCP client
+### Step 3: Configure your MCP client {#configure-client}
 
 Next, configure your MCP client using our pre-provided configuration file.
 
@@ -151,6 +151,26 @@ If you receive an error that `uvx` command not found, reinstall `uv` and restart
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+#### `spawn uvx ENOENT` error
+
+If you receive a `spawn uvx ENOENT` errors, you may need to update the filepath in your client's config file. First, open your terminal and run the following command:
+
+```bash
+which uvx
+```
+
+The command should return a message similar to the following:
+
+```bash
+/Users/alex-lee/.local/bin/uvx
+```
+
+Copy the message to your clipboard and open [your client's config file](#configure-client). Replace `"command": "uvx"` with the path you copied, then restart your client. For example:
+
+```json
+"command": "/Users/alex-lee/.local/bin/uvx"
 ```
 
 #### Package installation fails
