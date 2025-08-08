@@ -15,46 +15,46 @@ description: "Esta página de inicio es el hogar de todo lo relacionado con las 
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab android tv %}
-guide/android_tv/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab huawei %}
-guide/huawei/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab safari %}
-guide/safari/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/push_notifications.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}

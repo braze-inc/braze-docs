@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/silent.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-guide/android/push_notifications/silent.md developer_ %}
+{% multi_lang_include developer_ %}
 {% endsdktab %}
 {% endsdktabs %}

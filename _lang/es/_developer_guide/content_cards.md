@@ -21,34 +21,34 @@ platform:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/swift/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/cordova/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/flutter/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/react_native/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab tvos %}
-guide/tvos/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/tvos/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/unity/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/xamarin/content_cards.md %}
 {% endsdktab %}
 {% endsdktabs %}

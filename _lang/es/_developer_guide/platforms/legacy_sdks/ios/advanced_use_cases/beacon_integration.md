@@ -3,7 +3,7 @@ nav_title: Integración de balizas
 article_title: Integración de balizas para iOS
 platform: iOS
 page_order: 4
-description: "Este artículo trata sobre el registro de eventos personalizados utilizando Infillion Beacons para iOS."
+description: "Este artículo cubre el registro de eventos personalizados utilizando Infillion Beacons para iOS."
 
 noindex: true
 ---
@@ -16,7 +16,7 @@ Aquí veremos cómo integrar tipos específicos de balizas con Braze para permit
 
 ## Balizas Infillion
 
-Una vez que tengas tus Infillion Beacons configurados e integrados en tu aplicación, podrás registrar eventos personalizados, como el inicio o fin de una visita o el avistamiento de una baliza. También puedes registrar propiedades de estos eventos, como el nombre del lugar o el tiempo de permanencia.
+Una vez que tengas tus Infillion Beacons configurados e integrados en tu aplicación, podrás registrar eventos personalizados, como el inicio o el fin de una visita o el avistamiento de una baliza. También puedes registrar propiedades de estos eventos, como el nombre del lugar o el tiempo de permanencia.
 
 Para registrar un evento personalizado cuando un usuario entra en un lugar, introduce este código en el método `didBeginVisit`:
 

@@ -16,6 +16,6 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/examples.md developer_ %}
+ developer_{% multi_lang_include %}
 {% endsdktab %}
 {% endsdktabs %}

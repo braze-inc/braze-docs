@@ -16,6 +16,6 @@ description: "Aprende a hacer un seguimiento de las desinstalaciones a través d
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/tracking_uninstalls.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/tracking_uninstalls.md %}
 {% endsdktab %}
 {% endsdktabs %}
