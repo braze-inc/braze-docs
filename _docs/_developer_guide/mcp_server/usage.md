@@ -43,3 +43,5 @@ The agent will list all 38 available functions across campaigns, canvases, catal
   - Examples:  Specify active or draft.  Specify if you’re looking for canvases or campaigns.
 - If you’re noticing that you’re not seeing all the data you’re looking for, you may have to prompt the LLM to continue to explore further.
 - Depending on your MCP client, you could even ask your LLM to create you a CSV file or other artifacts.  Experiment with this!
+
+{% multi_lang_include mcp_server/legal_disclaimer.md %}
