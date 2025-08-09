@@ -159,7 +159,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Edit Segments|Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Workspace|Export User Data|Allows users to export their user data from segments, campaigns, and Canvases. This permission includes sensitive user information like names, email addresses, and other collected personally identifiable information (PII). |
 |Workspace|Import and Update User Data|Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules.|
-|Workspace|Launch Content Blocks|Allows users to launch [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
+|Workspace|Launch and Manage Content Blocks|Allows users to launch and manage [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
 |Workspace|Launch Preference Centers|Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Workspace|Manage Apps|Allows users to edit **App Settings**.|
 |Workspace|Manage Catalogs Dashboard Permission|Allows users to create and manage catalogs.|
