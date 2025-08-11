@@ -11,7 +11,7 @@
 {% comment %} End OneTrust {% endcomment %}
 <!-- OneTrust Cookies Consent Notice start for braze.com -->
 {%- assign domain_script = "a4189af1-fcc1-4ec1-9f51-e3bc768c6650" -%}
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment != "production" -%}
   {%- assign domain_script = domain_script | append: "-test" -%}
 {%- endif -%}
 <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="{{domain_script}}"></script>
