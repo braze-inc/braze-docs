@@ -293,8 +293,8 @@ uvx --python 3.12 braze-mcp-server@latest
 
 #### Connection timeouts or network errors
 
-1. Verify your `BRAZE_BASE_URL` is correct for your instance
-2. Check your network connection and firewall settings
-3. Ensure you're using HTTPS in your base URL
+1. Verify your `BRAZE_BASE_URL` is correct for your instance.
+2. Check your network connection and firewall settings.
+3. Ensure you're using HTTPS in your base URL.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
