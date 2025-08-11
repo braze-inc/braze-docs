@@ -3,16 +3,19 @@ nav_title: Available API functions
 article_title: Available API functions in Braze MCP server
 description: "List of read-only Braze API functions accessible through the MCP server, organized by category."
 page_order: 1.5
-alias: /mcp_server/available_functions/
 ---
 
 # Braze MCP server functions
 
-> The Braze MCP server exposes a set of read-only API functions that map to specific Braze REST API endpoints. MCP clients like Claude and Cursor can call these functions to retrieve data without accessing PII or making changes to your workspace.
+> Braze MCP server exposes a set of read-only API functions that map to specific Braze REST API endpoints. MCP clients like Claude and Cursor can call these functions to retrieve data without accessing PII or making changes to your workspace. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
+
+{% multi_lang_include mcp_server/beta_alert.md %}
+
+{% multi_lang_include mcp_server/prerequisites.md %}
 
 ## Available Braze API Functions
 
-These are the API functions that your MCP client references to interact with the Braze MCP server:
+These are the API functions that your MCP client references to interact with Braze MCP server:
 
 ### General functions
 

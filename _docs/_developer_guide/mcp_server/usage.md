@@ -7,20 +7,19 @@ page_order: 1.2
 
 # Using Braze MCP server
 
-> Learn how to interact with your Braze data through our MCP server using natural language in tools like Claude and Cursor.
+> Learn how to interact with your Braze data through our MCP server using natural language in tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
 
-## Prerequisites
+{% multi_lang_include mcp_server/beta_alert.md %}
 
-Before you can use this feature, you'll need to [set up the Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup).
+{% multi_lang_include mcp_server/prerequisites.md %}
 
 ## Best practices
 
-- LLMs aren’t perfect and can get things wrong.  Be sure to always double check responses.
-- If you’re looking to analyze data, be specific about the window of time you want.  Smaller time ranges generally yield more accurate responses.
-- Be specific with Braze terminology, that ensures that your LLM uses the correct function.  
-  - Examples:  Specify active or draft.  Specify if you’re looking for canvases or campaigns.
+- LLMs aren’t perfect and can get things wrong. Be sure to always double check responses.
+- If you’re looking to analyze data, be specific about the window of time you want. Smaller time ranges generally yield more accurate responses.
+- Be specific with Braze terminology, that ensures that your LLM uses the correct function.
 - If you’re noticing that you’re not seeing all the data you’re looking for, you may have to prompt the LLM to continue to explore further.
-- Depending on your MCP client, you could even ask your LLM to create you a CSV file or other artifacts.  Experiment with this!
+- Depending on your MCP client, you could even ask your LLM to create you a CSV file or other artifacts. Experiment with this!
 
 ## Usage examples
 

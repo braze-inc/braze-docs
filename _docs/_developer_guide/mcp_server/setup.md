@@ -7,7 +7,7 @@ page_order: 1.1
 
 # Setting up Braze MCP server
 
-> Learn how to set up Braze MCP server.
+> Learn how to set up Braze MCP server, so you can interact with your Braze data through our MCP server using natural language in tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -17,10 +17,10 @@ Before you start, you'll need the following:
 
 | Prerequisite | Description |
 |--------------|-------------|
-| MCP Client | An MCP client to connect with Braze. Recommended options: Claude Desktop (marketers) or Cursor (technical roles). |
-| Base URL | Your REST endpoint URL, available on your API key page in the Braze dashboard. |
-| API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
-| Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that comes pre-installed on your computer. |
+| MCP Client | Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are supported. You'll need an account for one of these clients to use Braze MCP server. |
+| Braze REST Endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Braze API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
+| Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that's pre-installed on your computer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Setting up Braze MCP server
@@ -93,7 +93,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %}
 For more information, refer to [Astral's UV documentation](https://docs.astral.sh/uv/getting-started/installation/).
+{% endalert %}
 
 ### Step 3: Configure your MCP client {#configure-client}
 
@@ -143,7 +145,7 @@ Next, configure your MCP client using our pre-provided configuration file.
 
 ## Troubleshooting
 
-### Terminal installations
+### Terminal errors
 
 #### `uvx` command not found
 
