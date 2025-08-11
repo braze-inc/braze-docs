@@ -10,7 +10,7 @@ Before you start, you'll need the following:
 
 | Prerequisite | Description |
 |--------------|-------------|
-| MCP Client | Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are supported. You'll need an account for one of these clients to use Braze MCP server. |
+| MCP Client | Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use Braze MCP server. |
 | Braze REST Endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Braze API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
 | Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that's pre-installed on your computer. |

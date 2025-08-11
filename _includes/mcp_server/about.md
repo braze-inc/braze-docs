@@ -43,7 +43,7 @@ You can use natural-language tools like Claude and Cursor to interact directly w
 
 ### Which MCP clients are supported?
 
-Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are supported. You'll need an account for one of these clients to use Braze MCP server.
+Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use Braze MCP server.
 
 ### What Braze data can my MCP client access?
 
