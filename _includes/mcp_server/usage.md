@@ -1,6 +1,6 @@
 # Using Braze MCP server
 
-> Learn how to interact with your Braze data using natural-language tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
+> Learn how to interact with your Braze data through natural language using tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -18,7 +18,7 @@ When using Braze MCP server through natural-language tools like Claude and Curso
 
 ## Usage examples
 
-After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup/), you can use natural-language tools like Claude and Cursor to interact with your Braze data. Here's some examples to get you started: 
+After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup/), you can interact with Braze through natural language using tools like Claude or Cursor. Here's some examples to get you started:
 
 ### What are my available Braze functions?
 

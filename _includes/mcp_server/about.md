@@ -27,7 +27,7 @@ Do not assign permissions to your API key that are **not** read-only. Agents may
 
 ## Usage example
 
-You can use natural-language tools like Claude and Cursor to interact directly with your Braze data. For other examples and best practices, see [Using Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/usage/).
+You can interact with Braze through natural language using tools like Claude or Cursor. For other examples and best practices, see [Using Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/usage/).
 
 {% tabs %}
 {% tab Claude %}
@@ -64,5 +64,9 @@ To protect data while still enabling innovation, we have built the server to be 
 ### Can I reuse my API keys?
 
 No. You'll need to create a new API key for your MCP client. Remember to only give your AI tools access to what you’re comfortable with, and avoid elevated permissions.
+
+### Is Braze MCP server hosted locally or remotely?
+
+Currently, Braze MCP server is hosted locally.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
