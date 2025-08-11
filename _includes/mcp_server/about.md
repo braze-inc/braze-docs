@@ -31,7 +31,7 @@ You can use natural-language tools like Claude and Cursor to interact directly w
 
 {% tabs %}
 {% tab Claude %}
-!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %})
+!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}

@@ -24,7 +24,7 @@ After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/
 
 {% tabs %}
 {% tab Claude %}
-!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %})
+!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
@@ -36,7 +36,7 @@ After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/
 
 {% tabs %}
 {% tab Claude %}
-!['Get details about a canvas ID' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %})
+!['Get details about a canvas ID' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
@@ -44,15 +44,15 @@ After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/
 {% endtab %}
 {% endtabs %}
 
-### Show my recent canvases
+### Show me my recent canvases
 
 {% tabs %}
 {% tab Claude %}
-!['Show my recent canvases' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %})
+!['Show my recent canvases' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Show my recent canvases' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_my_recent_canvases.png %})
+!['Show my recent canvases' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_me_my_recent_canvases.png %})
 {% endtab %}
 {% endtabs %}
 
