@@ -43,7 +43,7 @@ Re-eligibility for Canvas variants is tied to Canvas entry rather than message r
 
 Note that a user doesn't need to exit a Canvas first before re-entering if re-eligibility is set to zero seconds, meaning it's possible for a user to enter the same Canvas again. You can add additional filters to prevent users from receiving the same step or message multiple times. However, when a user re-enters a Canvas for the second time, the steps previously received during their first time in the Canvas aren't visible to the user. This means the user may still receive the same message again. To prevent this, you can configure the Canvas to prevent re-entry or set the re-eligibility for the maximum duration of the Canvas.
 
-You can also [create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#setting-up-your-braze-to-braze-webhook) for the user receiving the step to log this as a custom attribute, which can be used to filter out users who have received the step during their Canvas journey.
+You can also use a [User Update component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) for the user receiving the step to log this as a custom attribute, which can be used to filter out users who have received the step during their Canvas journey.
 
 ### Example
 
