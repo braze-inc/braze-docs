@@ -53,6 +53,16 @@ These are the API functions that your MCP client references to interact with Bra
 | `get_catalog_item` | [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details) | Return a specific catalog item and its content by ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
+### Cloud Data Ingestion
+
+| Function | Endpoint | Description |
+|----------|----------|-------------|
+| `list_integrations` | [`/cdi/integrations`]({{site.baseurl}}/api/endpoints/cdi/get_integration_list) | Return a list of existing CDI integrations. |
+| `get_integration_job_sync_status` | [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status) | Return past sync statuses for a given CDI integration. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+### CONTENT BLOCKS??
+
 ### Custom Attributes
 
 | Function | Endpoint | Description |
@@ -69,7 +79,7 @@ These are the API functions that your MCP client references to interact with Bra
 | `get_events` | [`/events`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_data) | Get detailed event data with pagination support. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-### KPI Analytics
+### KPIs
 
 | Function | Endpoint | Description |
 |----------|----------|-------------|
@@ -77,6 +87,21 @@ These are the API functions that your MCP client references to interact with Bra
 | `get_dau_data_series` | [`/kpi/dau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_dau_date) | Daily Active Users time series data. |
 | `get_mau_data_series` | [`/kpi/mau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_mau_30_days) | Monthly Active Users time series data. |
 | `get_uninstalls_data_series` | [`/kpi/uninstalls/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date) | App uninstall time series data. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+### Messages
+
+| Function | Endpoint | Description |
+|----------|----------|-------------|
+| `get_scheduled_broadcasts` | [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled) | List upcoming scheduled campaigns and Canvases. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+### Preference Centers
+
+| Function | Endpoint | Description |
+|----------|----------|-------------|
+| `get_preference_centers` | [`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center) | List your available preference centers. |
+| `get_preference_center_details` | [`/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center) | View details for a specific preference center including HTML content and options. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ### Purchases
@@ -111,34 +136,19 @@ These are the API functions that your MCP client references to interact with Bra
 | `get_session_data_series` | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics) | Time series data for app session counts. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-### Subscription Groups
-
-| Function | Endpoint | Description |
-|----------|----------|-------------|
-| `get_user_subscription_groups` | [`/subscription/user/status`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups) | List and get the subscription groups of a certain user. |
-| `get_subscription_group_status` | [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status) | Get the subscription state of a user in a subscription group. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
-
-### SDK Authentication
+### SDK Authentication Keys
 
 | Function | Endpoint | Description |
 |----------|----------|-------------|
 | `get_sdk_authentication_keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | List all SDK Authentication keys for your app. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-### Messages
+### Subscription
 
 | Function | Endpoint | Description |
 |----------|----------|-------------|
-| `get_scheduled_broadcasts` | [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled) | List upcoming scheduled campaigns and Canvases. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
-
-### Preference Centers
-
-| Function | Endpoint | Description |
-|----------|----------|-------------|
-| `get_preference_centers` | [`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center) | List your available preference centers. |
-| `get_preference_center_details` | [`/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center) | View details for a specific preference center including HTML content and options. |
+| `get_user_subscription_groups` | [`/subscription/user/status`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups) | List and get the subscription groups of a certain user. |
+| `get_subscription_group_status` | [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status) | Get the subscription state of a user in a subscription group. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ### Templates
@@ -149,14 +159,6 @@ These are the API functions that your MCP client references to interact with Bra
 | `get_content_blocks_info` | [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) | Get information on your content blocks. |
 | `get_email_templates_list` | [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates) | List your available email templates. |
 | `get_email_template_info` | [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information) | Get information on your email templates. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
-
-### CDI Integrations
-
-| Function | Endpoint | Description |
-|----------|----------|-------------|
-| `list_integrations` | [`/cdi/integrations`]({{site.baseurl}}/api/endpoints/cdi/get_integration_list) | Return a list of existing CDI integrations. |
-| `get_integration_job_sync_status` | [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status) | Return past sync statuses for a given CDI integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
