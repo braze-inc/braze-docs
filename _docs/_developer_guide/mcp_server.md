@@ -21,7 +21,7 @@ alias: /mcp/
 
 ## About Braze MCP server
 
-The Braze MCP server connects AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. Braze MCP server is great for:
+After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup/), you can connect AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. Braze MCP server is great for:
 
 - Building AI-powered tools that need Braze context.
 - CRM engineers creating multi-step agent workflows.
@@ -33,20 +33,19 @@ Braze MCP server supports 38 read-only endpoints that do not typically return Pe
 Do not assign permissions to your API key that are **not** read-only. Agents may try to write or delete data in Braze, which could cause unintended consequences.
 {% endalert %}
 
-## Usage examples
+## Usage example
 
-After you [set up your Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup/), your AI client can answer questions about your Braze workspace using natural language. Here are a few ways you might use it:
+You can use natural-language tools like Claude and Cursor to interact directly with your Braze data. For other examples and best practices, see [Using Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/usage/).
 
-| Example | Prompt | What the MCP server Does |
-|---------|--------|--------------------------|
-| Viewing recent Canvases or Campaigns | Can you show me my recent canvases? | Calls `get_canvas_list` and returns canvas IDs, names, and last edited dates. |
-| Cleaning up custom attributes | I’m working on a custom attribute clean-up project. Can you review my custom attributes and create a report for me with suggested next steps? | Pulls all custom attribute names from Braze, analyzes them, and provides a report with trends, suggestions, and best practices. |
-| Reviewing performance data | How did my campaigns perform yesterday? | Identifies campaigns active yesterday, retrieves analytics for each, and summarizes key performance trends. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{% tabs %}
+{% tab Claude %}
+!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %})
+{% endtab %}
 
-{% alert tip %}
-For more examples and use cases, see [Using Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/usage/).
-{% endalert %}
+{% tab Cursor %}
+!['What are my available Braze functions' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+{% endtab %}
+{% endtabs %}
 
 ## Frequently Asked Questions (FAQ) {#faq}
 

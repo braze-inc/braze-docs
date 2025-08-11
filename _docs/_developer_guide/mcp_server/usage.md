@@ -15,32 +15,52 @@ page_order: 1.2
 
 ## Best practices
 
-- LLMs aren’t perfect and can get things wrong. Be sure to always double check responses.
-- If you’re looking to analyze data, be specific about the window of time you want. Smaller time ranges generally yield more accurate responses.
-- Be specific with Braze terminology, that ensures that your LLM uses the correct function.
-- If you’re noticing that you’re not seeing all the data you’re looking for, you may have to prompt the LLM to continue to explore further.
-- Depending on your MCP client, you could even ask your LLM to create you a CSV file or other artifacts. Experiment with this!
+When using Braze MCP server through natural-language tools like Claude and Cursor, keep these tips in mind to get the best results:
+
+- LLMs can make mistakes, so always be sure to double-check their answers.
+- For data analysis, be clear about the time range you need. Shorter ranges often give more accurate results.
+- Use exact [Braze terminology](https://www.braze.com/resources/articles/glossary) so your LLM calls the right function.
+- If results seem incomplete, prompt your LLM to continue or dig deeper.
+- Try creative prompts! Depending on your MCP client, you may be able to export a CSV or other useful files.
 
 ## Usage examples
 
-Once installed and configured in Cursor / Claude, you can interact with your Braze data using natural language:
+After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup/), you can use natural-language tools like Claude and Cursor to interact with your Braze data. Here's some examples to get you started: 
 
-**"Show me my recent canvases"**
+### What are my available Braze functions?
 
-```
-The agent will use the MCP server to call get_canvas_list and display your canvases with their IDs, names, and last edited dates.
-```
+{% tabs %}
+{% tab Claude %}
+!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %})
+{% endtab %}
 
-**"Get details about canvas ID 401cc9b3-d9bf-4c73-ac9f-e9dca46d2a36"**
+{% tab Cursor %}
+!['What are my available Braze functions' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+{% endtab %}
+{% endtabs %}
 
-```
-The agent will retrieve detailed canvas information including steps, variants, schedule type, and current status.
-```
+### Get details about a canvas ID
 
-**"What are my available Braze API functions?"**
+{% tabs %}
+{% tab Claude %}
+!['Get details about a canvas ID' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %})
+{% endtab %}
 
-```
-The agent will list all 38 available functions across campaigns, canvases, catalogs, events, KPIs, segments, purchases, sessions, SDK authentication, messages, CDI integrations, templates, and more.
-```
+{% tab Cursor %}
+!['Get details about a canvas ID' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
+{% endtab %}
+{% endtabs %}
+
+### Show my recent canvases
+
+{% tabs %}
+{% tab Claude %}
+!['Show my recent canvases' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %})
+{% endtab %}
+
+{% tab Cursor %}
+!['Show my recent canvases' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_my_recent_canvases.png %})
+{% endtab %}
+{% endtabs %}
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
