@@ -1,13 +1,13 @@
 ---
 nav_title: Braze MCP server setup
 article_title: Setting Braze MCP server
-description: "Learn how to set up Braze MCP server."
+description: "Learn how to set up Braze MCP server, so you can interact with your Braze data using natural-language tools like Claude and Cursor."
 page_order: 1.1
 ---
 
 # Setting up Braze MCP server
 
-> Learn how to set up Braze MCP server, so you can interact with your Braze data through our MCP server using natural language in tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
+> Learn how to set up Braze MCP server, so you can interact with your Braze data using natural-language tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 

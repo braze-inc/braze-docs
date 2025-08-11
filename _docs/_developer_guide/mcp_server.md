@@ -1,14 +1,14 @@
 ---
 nav_title: Braze MCP server
 article_title: About Braze MCP server
-description: "Connect AI tools like Claude and Cursor to Braze for read-only access to workspace data using the MCP protocol."
+description: "Learn about Braze MCP server, a secure, read-only connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, and provide insights without altering data."
 page_order: 2.8
 alias: /mcp/
 ---
 
 # Braze MCP server
 
-> Learn about Braze MCP server, so you can connect Braze to AI tools like Claude and Cursor for read-only access to your workspace.
+> Learn about Braze MCP server, a secure, read-only connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, and provide insights without altering data.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 

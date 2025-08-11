@@ -1,13 +1,13 @@
 ---
 nav_title: Using Braze MCP server
 article_title: Using Braze MCP server
-description: "Learn how to interact with Braze data through the MCP server using natural language in tools like Claude and Cursor, plus recommended best practices."
+description: "Learn how to interact with your Braze data using natural-language tools like Claude and Cursor."
 page_order: 1.2
 ---
 
 # Using Braze MCP server
 
-> Learn how to interact with your Braze data through our MCP server using natural language in tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
+> Learn how to interact with your Braze data using natural-language tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
