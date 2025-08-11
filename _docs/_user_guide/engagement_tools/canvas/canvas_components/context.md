@@ -52,7 +52,7 @@ With the addition of Canvas Context, all timestamps with a [datetime type]({{sit
 Consider this example of how this change might affect a timestamp in Canvas. Let's say we have an action-based Canvas that uses an event property in the first step of the Canvas with the following Message step: 
 
 {% raw %}
-`Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
+`Your appointment is scheduled for {{context.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
 {% endraw %}
 
 ![Context journey with a Message step as the first step.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
@@ -79,7 +79,7 @@ Consider the following Liquid snippet:
 
 {% raw %}
 ```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+Your appointment is scheduled for {{context.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
 ```
 {% endraw %}
 
@@ -98,7 +98,7 @@ This is an example of the Liquid snippet:
 
 {% raw %}
 ```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+Your appointment is scheduled for {{context.${appointment_time} | time_zone: context.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
 ```
 {% endraw %}
 
