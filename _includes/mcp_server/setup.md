@@ -198,8 +198,8 @@ Next, configure your MCP client using our pre-provided configuration file.
           "command": "uvx",
           "args": ["--native-tls", "braze-mcp-server@latest"],
           "env": {
-            "BRAZE_API_KEY": "your-braze-api-key-here",
-            "BRAZE_BASE_URL": "https://rest.iad-01.braze.com"
+            "BRAZE_API_KEY": "your-braze-api-key",
+            "BRAZE_BASE_URL": "your-braze-endpoint-url"
           }
         }
       }
@@ -218,8 +218,8 @@ Next, configure your MCP client using our pre-provided configuration file.
           "command": "uvx",
           "args": ["--native-tls", "braze-mcp-server@latest"],
           "env": {
-            "BRAZE_API_KEY": "your-braze-api-key-here",
-            "BRAZE_BASE_URL": "https://rest.iad-01.braze.com"
+            "BRAZE_API_KEY": "your-braze-api-key",
+            "BRAZE_BASE_URL": "your-braze-endpoint-url"
           }
         }
       }

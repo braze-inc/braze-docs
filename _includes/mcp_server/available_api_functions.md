@@ -54,7 +54,13 @@ These are the API functions that your MCP client references to interact with Bra
 | `get_integration_job_sync_status` | [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status) | Return past sync statuses for a given CDI integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-### CONTENT BLOCKS??
+### Content Blocks
+
+| Function | Endpoint | Description |
+|----------|----------|-------------|
+| `get_content_blocks_list` | [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks) | List your available content blocks. |
+| `get_content_blocks_info` | [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) | Get information on your content blocks. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ### Custom Attributes
 
@@ -148,8 +154,6 @@ These are the API functions that your MCP client references to interact with Bra
 
 | Function | Endpoint | Description |
 |----------|----------|-------------|
-| `get_content_blocks_list` | [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks) | List your available content blocks. |
-| `get_content_blocks_info` | [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) | Get information on your content blocks. |
 | `get_email_templates_list` | [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates) | List your available email templates. |
 | `get_email_template_info` | [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information) | Get information on your email templates. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
