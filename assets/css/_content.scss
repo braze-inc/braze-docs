@@ -452,6 +452,62 @@
 		color: $black-shark;
 	}
 
+	// Heading copy button styles
+	.heading-with-copy {
+		position: relative;
+	}
+
+	.heading-copy-btn {
+		opacity: 0;
+		padding: 2px 6px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		transition: opacity 0.3s ease-in-out;
+		position: absolute;
+		left: -40px;
+    	top: -5px;
+
+		.heading-copy-icon {
+			width: 20px;
+			height: 20px;
+			font-size: 20px;
+			color: $braze-link-color;
+			border-width: 0 !important;
+		}
+
+		&:hover {
+			opacity: 1 !important;
+		}
+	}
+
+	.heading-copy-feedback {
+		opacity: 0;
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 2px 6px;
+		font-size: 12px;
+		color: #333333;
+		background-color: #f8f9fa;
+		border: 1px solid $grey-ghost;
+		border-radius: 4px;
+		white-space: nowrap;
+		z-index: 1000;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	// Show copy button on heading hover
+	h1:hover .heading-copy-btn,
+	h2:hover .heading-copy-btn,
+	h3:hover .heading-copy-btn,
+	h4:hover .heading-copy-btn,
+	h5:hover .heading-copy-btn,
+	h6:hover .heading-copy-btn {
+		opacity: 0.7;
+	}
+
 	p {
 		margin-bottom: 25px;
 
