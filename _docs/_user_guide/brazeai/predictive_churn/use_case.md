@@ -27,12 +27,13 @@ This tutorial walks through how Camila:
 Camila starts by modeling the outcome she wants to avoid: users becoming inactive. For MovieCanon, churn means not starting a stream within 14 days—so that’s the behavior she wants to predict.
 
 1. In the Braze dashboard, Camila goes to **Analytics** > **Predictive Churn**.
-2. She creates a new churn prediction and names it "Churn risk in 2 weeks" 
+2. She creates a new churn prediction and names it "Churn risk in 2 weeks".
 3. To define churn, she selects `do not` and the custom event `stream_started`, which indicates active engagement.
 4. She sets the prediction window to 14 days—meaning the model will identify users who are likely to go 14 days without starting a new stream.
 
 ![Churn definition showing churn defined as a user who does not perform a custom event "stream_started" in the last 14 days.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
 
+{:start="5"}
 5. She selects a prediction audience that includes all users who have triggered relevant events in the past 30 days—giving the model enough recent behavior to learn from.
 6. She sets the prediction update schedule to weekly so scores stay current.
 7. She selects **Create prediction**.
@@ -41,7 +42,7 @@ The model then begins training, analyzing behaviors like recent sessions, freque
 
 ## Step 2: Segment users by churn risk
 
-Once the model finishes training, Braze assigns each eligible user a [Churn Risk Score]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/#churn_score) between 0–100. 
+After the model finishes training, Braze assigns each eligible user a [Churn Risk Score]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/#churn_score) between 0–100. 
 
 To determine a starting threshold for targeting, Camila uses the prediction audience slider to preview how many users fall into each score range and how accurate the prediction is at that level. She balances coverage and precision based on expected true positives. Based on this, she decides to target risk scores higher than 70. 
 
@@ -81,7 +82,7 @@ She sees:
 - *Click Rate:* 15%
 - *Conversion Rate* (started stream within 48 hours): 11%
 
-Compared to the old “We miss you” campaign (where conversion rates hovered around 3%) this new flow reduces churn in the target group by 28%. She digs into the [funnel report]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) to spot where users drop off. While open and click rates are strong, she notices slight friction between click and conversion—prompting her to consider testing CTA copy or experimenting with layout.
+Compared to the old “We miss you” campaign (where conversion rates hovered around 3%), this new flow reduces churn in the target group by 28%. She digs into the [funnel report]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) to spot where users drop off. While open and click rates are strong, she notices slight friction between click and conversion—prompting her to consider testing CTA copy or experimenting with layout.
 
 To understand long-term impact, Camila also tracks the volume of users entering the “Likely to churn” segment week over week. This helps her assess the overall health of the lifecycle and inform retention strategy at a broader level. Finally, she revisits the [Prediction Analytics]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/) page for her churn prediction to compare predicted versus actual churners—a useful check to make sure the model is performing as expected.
 

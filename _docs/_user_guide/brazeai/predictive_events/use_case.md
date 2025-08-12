@@ -20,7 +20,7 @@ This tutorial walks through how Jordan created:
 
 ## Step 1: Create a predictive model for upgrades
 
-Jordan starts by defining the outcome that matters most for his upgrade strategy: a user moving from the free tier to Pro. Rather than relying on generic triggers like “time since signup,” he wants to forecast which users are actually likely to convert. This way his team can act on real signals, not just assumptions.
+Jordan starts by defining the outcome that matters most for his upgrade strategy: a user moving from the free tier to Pro. Rather than relying on generic triggers like “time since signup,” he wants to forecast which users are actually likely to convert. This way, his team can act on real signals, not just assumptions.
 
 1. In the Braze dashboard, Jordan goes to **Analytics** > **Predictive Events**.
 2. He [creates a new event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/creating_an_event_prediction/) and names it "Upgrade to Pro in 7 days"
@@ -31,7 +31,7 @@ Jordan starts by defining the outcome that matters most for his upgrade strategy
 
 ## Step 2: Segment users based on upgrade probability
 
-Once training is complete, Braze assigns an [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0–100) to each eligible user. Jordan uses this score to create actionable segments—one for high-intent users who may not need a discount, and another for users who likely won’t convert without support.
+After training is complete, Braze assigns an [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0–100) to each eligible user. Jordan uses this score to create actionable segments—one for high-intent users who may not need a discount, and another for users who likely won’t convert without support.
 
 1. Jordan navigates to Segments in Braze.
 2. He creates two [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) and selects the prediction he created. The two segments are:

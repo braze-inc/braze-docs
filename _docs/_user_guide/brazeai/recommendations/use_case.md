@@ -36,7 +36,7 @@ Camila starts by creating a recommendation that will surface relevant titles whe
 
 ## Step 2: Set up an in-app message
 
-Once the recommendation has finished training, Camila builds a messaging flow that reaches the user at the right moment: immediately after they finish a title. The message includes a list of three personalized suggestions pulled directly from the catalog.
+After the recommendation has finished training, Camila builds a messaging flow that reaches the user at the right moment: immediately after they finish a title. The message includes a list of three personalized suggestions pulled directly from the catalog.
 
 1. Camila creates an in-app message campaign using the drag-and-drop editor.
 2. She sets the trigger to her custom event: `Watched Content`.
@@ -80,7 +80,7 @@ With the campaign live, Camila monitors open rates, CTRs, and follow-up viewing 
 
 She also plans to A/B test:
 
-- Timing (immediate vs. 10 minutes post-watch)
+- Timing (immediate versus 10 minutes post-watch)
 - Content layout (carousel versus list)
 - CTA variations (“Watch now” versus “Add to queue”)
 
