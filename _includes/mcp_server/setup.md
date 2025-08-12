@@ -171,7 +171,7 @@ Do not reuse an existing API key&#8212;create one specifically for your MCP clie
 
 ### Step 2: Install `uv`
 
-You'll need to install `uv`, a [command-line tool by Astral](https://docs.astral.sh/uv/getting-started/installation/) for dependency management and Python package handling.
+Next, you'll need to install `uv`, a [command-line tool by Astral](https://docs.astral.sh/uv/getting-started/installation/) for dependency management and Python package handling.
 
 {% tabs local %}
 {% tab MacOS and Linux %}
