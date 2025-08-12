@@ -10,17 +10,66 @@ Before you start, you'll need the following:
 
 | Prerequisite | Description |
 |--------------|-------------|
-| MCP Client | Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use the Braze MCP server. |
-| Braze REST Endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Braze API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
+| MCP Client | Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use the Braze MCP server. |
 | Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that's pre-installed on your computer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Setting up the Braze MCP server
 
-### Step 1: Create an API key {#create-api-key}
+### Step 1: Install `uv`
 
-The Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data. Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
+First, install `uv`&#8212;a [command-line tool by Astral](https://docs.astral.sh/uv/getting-started/installation/) for dependency management and Python package handling.
+
+{% tabs local %}
+{% tab MacOS and Linux %}
+Open your terminal application, paste the following command, then press <kbd>Enter</kbd>.
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+The output will be similar to the following:
+
+```bash
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+
+downloading uv 0.8.9 aarch64-apple-darwin
+no checksums to verify
+installing to /Users/Isaiah.Robinson/.local/bin
+  uv
+  uvx
+everything's installed!
+```
+{% endtab %}
+
+{% tab Windows %}
+ Open Windows PowerShell, paste the following command, then press <kbd>Enter</kbd>.
+
+```powershell
+irm https://astral.sh/uv/install.ps1 | iex
+```
+
+The output will be similar to the following:
+
+```powershell
+PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
+
+Downloading uv 0.8.9 (x86_64-pc-windows-msvc)
+no checksums to verify
+installing to C:\Users\YourUser\.local\bin
+  uv.exe
+  uvx.exe
+everything's installed!
+```
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Create an API key {#create-api-key}
+
+The Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data.
+
+Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
 
 {% details List of read-only, non-PII permissions %}
 #### Campaigns
@@ -169,59 +218,17 @@ The Braze MCP server supports 38 read-only endpoints that do not typically retur
 Do not reuse an existing API key&#8212;create one specifically for your MCP client. Additionally, only assign read-only, non-PII permissions, as agents may try to write or delete data in Braze.
 {% endalert %}
 
-### Step 2: Install `uv`
+### Step 3: Get your key ID and endpoint
 
-Next, you'll need to install `uv`, a [command-line tool by Astral](https://docs.astral.sh/uv/getting-started/installation/) for dependency management and Python package handling.
+To configure your MCP client, you'll need your key's identifier and your workspace's REST endpoint. In the dashboard, go back to the **API Keys** page. Keep this page open&#8212;you'll reference it in [the next step](#configure-client).
 
-{% tabs local %}
-{% tab MacOS and Linux %}
-Open your terminal application, paste the following command, then press <kbd>Enter</kbd>.
+![ALT_TEXT]()
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-The output will be similar to the following:
-
-```bash
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
-
-downloading uv 0.8.9 aarch64-apple-darwin
-no checksums to verify
-installing to /Users/Isaiah.Robinson/.local/bin
-  uv
-  uvx
-everything's installed!
-```
-{% endtab %}
-
-{% tab Windows %}
- Open Windows PowerShell, paste the following command, then press <kbd>Enter</kbd>.
-
-```powershell
-irm https://astral.sh/uv/install.ps1 | iex
-```
-
-The output will be similar to the following:
-
-```powershell
-PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
-
-Downloading uv 0.8.9 (x86_64-pc-windows-msvc)
-no checksums to verify
-installing to C:\Users\YourUser\.local\bin
-  uv.exe
-  uvx.exe
-everything's installed!
-```
-{% endtab %}
-{% endtabs %}
-
-### Step 3: Configure your MCP client {#configure-client}
+### Step 4: Configure your MCP client {#configure-client}
 
 Configure your MCP client using our pre-provided configuration file.
 
-{% tabs local %}
+{% tabs %}
 {% tab Claude %}
 In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
 
@@ -232,8 +239,25 @@ In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Develope
       "command": "uvx",
       "args": ["--native-tls", "braze-mcp-server@latest"],
       "env": {
-        "BRAZE_API_KEY": "your-braze-api-key",
-        "BRAZE_BASE_URL": "your-braze-endpoint-url"
+        "BRAZE_API_KEY": "key-identifier",
+        "BRAZE_BASE_URL": "rest-endpoint"
+      }
+    }
+  }
+}
+```
+
+Replace `key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. Your configuration should be similar to the following:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
+        "BRAZE_BASE_URL": "https://torchie.braze.com"
       }
     }
   }
@@ -261,11 +285,28 @@ In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations*
 }
 ```
 
+Replace `key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. Your configuration should be similar to the following:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
+        "BRAZE_BASE_URL": "https://torchie.braze.com"
+      }
+    }
+  }
+}
+```
+
 When you're finished, save the configuration and restart Cursor.
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Send a test prompt
+### Step 5: Send a test prompt
 
 Now that you've set up the Braze MCP server, try sending a test prompt. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
