@@ -6,7 +6,7 @@ layout: dev_guide
 guide_top_header: "Data Unification"
 guide_top_text: "Bring your user data together into one place in Braze using Cloud Data Ingestion or Data Transformation. No matter the source of your data, you can unify it all to get a complete picture of who your users are, including their behaviors, preferences, and actions."
 page_type: landing
-description: "Lorem ipsum."
+description: "This section includes articles related to Data Unification, such as Cloud Data Ingestion, Data Transformation, user data collection, and more."
 
 guide_featured_title: "Section articles"
 guide_featured_list:
