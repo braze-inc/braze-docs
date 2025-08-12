@@ -39,7 +39,7 @@
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
-<i>ボディ・クリックは</i>、従来のエディターで作成されたボタン（ボタン1、ボタン2）のないメッセージをユーザーがクリックしたとき、また、HTMLエディターやドラッグ＆ドロップ・エディターで作成されたメッセージが引数のない  <code>brazeBridge.logClick()</code>  を使用したときに発生します。
+<i>ボディ・クリックは</i>、従来のエディターで作成されたボタン（ボタン1、ボタン2）のないメッセージをユーザーがクリックしたとき、また、HTMLエディターやドラッグ＆ドロップ・エディターで作成されたメッセージが引数のない <code>brazeBridge.logClick()</code>  を使用したときに発生します。
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}
@@ -106,6 +106,10 @@
 <i>配信の失敗とは</i>、キューがオーバーフローしたためにSMSを送信できなかった場合である（ロングコードまたはショートコードが処理できる以上のレートでSMSを送信した）。
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+<i>配信失敗</i>とは、キューがオーバーフローしたために RCS を送信できなかった (RCS を検証済みの送信者が処理できる以上の速度で RCS を送信した) 場合です。
+{% endif %}
+
 {% if include.metric == "Failed Delivery Rate" %}
 <i>配信失敗率</i>は、メッセージが送信できなかったために失敗した送信の割合です。これは、キューのオーバーフロー、アカウントの停止、MMSの場合のメディアエラーなど、さまざまな理由で起こりうる。
 {% endif %}
@@ -131,7 +135,7 @@
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>生涯収益</i>とは開始以降に受け取った  <code>PurchaseEvents</code>  価格の合計 (USD) です。
+<i>生涯収益</i>とは開始以降に受け取った <code>PurchaseEvents</code>  価格の合計 (USD) です。
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
@@ -143,7 +147,7 @@
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-[<i>日割り購入数</i>] は、期間中のユニークの合計  <code>PurchaseEvents</code>  を平均した数です。
+[<i>日割り購入数</i>] は、期間中のユニークの合計 <code>PurchaseEvents</code>  を平均した数です。
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
@@ -163,7 +167,7 @@
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-<i>オプトアウトとは</i>、ユーザーがあなたのメッセージに<a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">オプトアウトキーワードで</a>返信し、あなたのSMSプログラムから配信停止された場合である。
+<i>オプトアウト</i>とは、ユーザーがあなたのメッセージに<a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">オプトアウトキーワード</a>で返信し、あなたの SMS または RCS プログラムから購読解除された時のことをいいます。
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -175,7 +179,7 @@
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>既読</i>とは、ユーザーが WhatsApp メッセージを読んだ時のことをいいます。Braze が既読数を追跡するには、ユーザーの既読レシートが「オン」になっている必要があります。
+<i>既読</i>とは、ユーザーがメッセージを読んだ時のことを言います。Braze が既読数を追跡するには、ユーザーの既読レシートが「オン」になっている必要があります。
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -187,7 +191,7 @@
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>拒否とは</i>、SMSがキャリアによって拒否された場合である。これは、通信事業者のコンテンツフィルタリング、宛先デバイスの可用性、電話番号の使用停止など、さまざまな理由から発生する可能性があります。
+<i>拒否</i>とは、SMS またはRCS がキャリアによって拒否された時のことをいいます。これは、通信事業者のコンテンツフィルタリング、宛先デバイスの可用性、電話番号の使用停止など、さまざまな理由から発生する可能性があります。
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -199,7 +203,7 @@
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>送信済みとは</i>、キャンペーンまたはキャンバスステップが開始またはトリガーされ、BrazeからSMSが送信されるたびに送信される。エラーによってSMSがユーザーの端末に届かなかった可能性もある。
+<i>送信済み</i>とは、キャンペーンまたはキャンバスステップが開始またはトリガーされ、Braze から SMS または RCS が送信されることをいいます。エラーによって SMS または RCS がユーザーの端末に届かなかった可能性もあります。
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -215,7 +219,7 @@
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>スパムは</i>、受信者によって「スパム」とマークされたメールの総数である。Brazeはこれらのユーザーのサブスクリプション状態を変更しないが、「配信停止を含むすべてのユーザーに送信する」ように設定されているトランザクションメールを送信しない限り、これらのユーザーは今後のメールで自動的に除外される。
+<i>スパム</i>は、受信者によって「スパム」とマークされたメールの総数です。Braze はこれらのユーザーの購読状態を変更しませんが、「購読解除を含むすべてのユーザーに送信する」ように設定されているトランザクションメールを送信しない限り、これらのユーザーは今後のメールで自動的に除外されます。
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
@@ -227,7 +231,7 @@
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>クリック数の合計</i>は、配信されたメール内のリンクをクリックしたユニークな受信者の数です。
+<i>クリック数の合計</i>は、配信されたメッセージ内のリンクをクリックしたユニークな受信者の数です。
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -257,11 +261,11 @@
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>ユニークインプレッション数</i>とは、1日に特定のメッセージを受信して表示したユーザーの総数です。
+<i>ユニークインプレッション数</i>とは、特定のキャンペーンからメッセージを受信して表示したユーザーの総数です。
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>ユニーク受信者数</i>とは、1日のユニーク受信者数、つまり、1日に特定のメッセージを受信したユーザーの数です。
+<i>ユニーク受信者数</i>とは、1日のユニーク受信者数、つまり、1日に新しいメッセージを受信したユーザーの数です。このカウントが1人のユーザーに対して複数回増分されるためには、そのユーザーが別の日に新しいメッセージを受け取る必要があります。
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
