@@ -217,7 +217,7 @@ Next, configure your MCP client using our pre-provided configuration file.
 {% endtab %}
 
 {% tab Cursor %}
-1. In [Cursor](https://cursor.com/), go to **Settings** > **Cursor Settings** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
+1. In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
     ```json
     {
       "mcpServers": {
