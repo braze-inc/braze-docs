@@ -8,7 +8,7 @@ description: "Este artículo de ayuda describe cómo utilizar el registro de eve
 
 # Utilizar el registro de eventos
 
-Para ayudar a solucionar problemas con tu integración Braze, puedes configurar un perfil de usuario anónimo y un [registro de usuarios del evento][1]. Para saber cómo configurar un perfil anónimo, consulta [Añadir usuarios de prueba][2].
+Para ayudar a solucionar problemas con tu integración Braze, puedes configurar un perfil de usuario anónimo y un [registro de usuarios del evento]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab). Para saber cómo configurar un perfil anónimo, consulta [Añadir usuarios de prueba]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 ## Sobre los registros
 
@@ -20,5 +20,3 @@ Es una buena forma de encontrar usuarios anónimos. También puedes utilizar est
 
 _Última actualización: 16 de noviembre de 2022_
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

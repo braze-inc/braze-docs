@@ -19,7 +19,7 @@ description: "Este artículo contiene notas de la versión de octubre de 2018."
 
 ## Calcula las estadísticas exactas de audiencia de las campañas
 
-Ahora puedes ir a **Análisis de campaña** y calcular las estadísticas exactas de tu audiencia. Haz clic en **Calcular estadísticas exactas** en el pie de página de la sección **Usuarios objetivo**, y se rellenarán las estadísticas exactas de audiencia. Tendrás que guardar la campaña antes de calcularla (los borradores de campaña se guardarán como borradores).
+Ahora puedes ir a **Análisis de campaña** y calcular las estadísticas exactas de tu audiencia. Haz clic en **Calcular estadísticas exactas** en el pie de página de la sección **Audiencias objetivo**, y aparecerán las estadísticas exactas de la audiencia. Tendrás que guardar la campaña antes de calcularla (los borradores de campaña se guardarán como borradores).
 
 ## Windows 8 obsoleto
 
@@ -43,7 +43,7 @@ Se han renovado los controles del Creador de mensajes para incluir texto asociad
 
 ## Azure para Currents
 
-Los clientes de Braze que utilicen Currents pueden ver ahora [Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) como una integración potencial.
+Los clientes de Braze que utilicen Currents pueden ver ahora [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage) como una integración potencial.
 
 ## Ampliaciones del campo de entrada
 

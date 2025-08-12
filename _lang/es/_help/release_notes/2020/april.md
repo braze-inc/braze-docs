@@ -11,7 +11,7 @@ description: "Este artículo contiene notas de la versión de abril de 2020."
 
 Movable Ink ofrece a los clientes de Braze la posibilidad de utilizar características de Intelligent Creative como temporizadores de cuenta atrás, encuestas y rasca y gana en sus campañas push, de mensajes dentro de la aplicación y de tarjetas de contenido. Movable Ink y Braze potencian un enfoque más completo de los mensajes dinámicos basados en datos, proporcionando a los usuarios elementos en tiempo real sobre las cosas que importan.
 
-¡Empieza a [integrar Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) en tus campañas!
+¡Empieza a [integrar Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/) en tus campañas!
 
 ## Intelligent Timing
 
@@ -41,6 +41,5 @@ Los puntos finales de las API [template/email/list]({{site.baseurl}}/api/endpoin
 
 Al crear un mensaje de correo electrónico en Braze, ahora puedes personalizar la Dirección del remitente del mensaje en la sección **Información de envío** de la composición del correo electrónico. Puedes utilizar cualquiera de nuestras [etiquetas de personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) compatibles
 
-![Personalización de la dirección del remitente][0]{: style="max-width:80%"}
+![Personalización de la dirección]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}

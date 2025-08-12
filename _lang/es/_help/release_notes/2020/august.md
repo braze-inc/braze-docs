@@ -23,11 +23,11 @@ En determinados eventos de interacción de mensajes de Currents, se han añadido
 
 ## Asociación con Amazon Personalize
 
-Amazon Personalize utiliza el aprendizaje automático para ayudarte a crear recomendaciones de alta calidad para tu sitio web y tus aplicaciones. Amazon Personalize te habilita para mejorar la interacción con los clientes mediante recomendaciones personalizadas de productos y contenidos en tiempo real, y promociones de marketing dirigidas. Para obtener más información, consulta nuestra documentación [sobre Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/).
+Amazon Personalize utiliza el aprendizaje automático para ayudarte a crear recomendaciones de alta calidad para tu sitio web y tus aplicaciones. Amazon Personalize te habilita para mejorar la interacción con los clientes mediante recomendaciones personalizadas de productos y contenidos en tiempo real, y promociones de marketing dirigidas. Para obtener más información, consulta nuestra documentación [sobre Amazon Personalize]({{site.baseurl}}/partners/amazon_personalize/).
 
 ## Asociación Vizbee
 
-Vizbee habilita todos los teléfonos inteligentes y televisores inteligentes de tu casa para que funcionen juntos como un único dispositivo sin fisuras, para que el usuario disfrute de una gran experiencia. Vizbee ayuda a aprovechar los canales de marketing de aplicaciones móviles existentes, como notificaciones, vínculos en profundidad y correos electrónicos, para captar e interactuar con los espectadores en todos los dispositivos de CTV (como Roku, FireTV, Samsung TV, LG TV, etc.). Para más información, consulta nuestra documentación [sobre Vizbee]({{site.baseurl}}/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/). 
+Vizbee habilita todos los teléfonos inteligentes y televisores inteligentes de tu casa para que funcionen juntos como un único dispositivo sin fisuras, para que el usuario disfrute de una gran experiencia. Vizbee ayuda a aprovechar los canales de marketing de aplicaciones móviles existentes, como notificaciones, vínculos en profundidad y correos electrónicos, para captar e interactuar con los espectadores en todos los dispositivos de CTV (como Roku, FireTV, Samsung TV, LG TV, etc.). Para más información, consulta nuestra documentación [sobre Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/). 
 
 ## Asociación Bluedot
 
@@ -35,4 +35,4 @@ Bluedot es una plataforma de ubicación que proporciona un geovallado preciso y 
 
 ## Iterar la asociación
 
-Iterate facilita el aprendizaje de tus clientes, ofreciendo herramientas de cuestionario inteligentes y fáciles de usar que se parecen a tu marca. Para más información, consulta nuestra documentación [sobre Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/). 
+Iterate facilita el aprendizaje de tus clientes, ofreciendo herramientas de cuestionario inteligentes y fáciles de usar que se parecen a tu marca. Para más información, consulta nuestra documentación [sobre Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/). 
