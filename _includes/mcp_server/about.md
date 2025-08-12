@@ -11,7 +11,7 @@
 - **MCP client:** The application where the AI agent runs, such as Cursor or Claude.
 - **MCP server:** A service provided by another platform, like Braze, that defines which tools the AI can use and what data it can access.
 
-## About theBraze MCP server
+## About the Braze MCP server
 
 After [setting up the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, you can connect AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. The Braze MCP server is great for:
 
@@ -53,9 +53,9 @@ MCP clients can only access read-only endpoints that are not built to retrieve P
 
 No. The MCP server only exposes tools that handle non-PII, read-only data.
 
-### Can I use a third-party The Braze MCP server?
+### Can I use a third-party MCP server for Braze?
 
-Using a third-party The Braze MCP servers is not recommend. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
+Using a third-party MCP server for Braze data is not recommend. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
 
 ### Why doesn’t the Braze MCP server offer PII or write access?
 

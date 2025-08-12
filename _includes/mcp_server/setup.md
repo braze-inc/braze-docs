@@ -1,6 +1,6 @@
-# Setting up The Braze MCP server
+# Setting up the Braze MCP server
 
-> Learn how to set up the Braze MCP server, so you can interact with your Braze data through natural language using tools like Claude and Cursor. For more general information, see [The Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Learn how to set up the Braze MCP server, so you can interact with your Braze data through natural language using tools like Claude and Cursor. For more general information, see [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -18,7 +18,7 @@ Before you start, you'll need the following:
 
 ## Setting up the Braze MCP server
 
-### Step 1: Create API key {#create-api-key}
+### Step 1: Create an API key {#create-api-key}
 
 The Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data. Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
 
