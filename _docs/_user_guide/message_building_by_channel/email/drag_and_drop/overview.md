@@ -285,28 +285,28 @@ Anything added outside of `<head>` tags will be added after the `<body>` tag in 
 ##### Allowed tags and attributes by tag
 
 | Tag name | Description | Example |
-| --- | --- |
+| --- | --- | --- |
 | `base` | Specifies the base URL for all relative URLs in the message. | `<base href="https://example.com" target="_blank">` |
 | `link`| Defines relationships between the message and external resources. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
 | `meta` | Provides metadata such as page description or keywords. | `<meta name="description" content="Free Web tutorials">` |
 | `style` | Embeds internal CSS styles. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
 | `title` | Sets the title of the document shown in browser tabs. | `<title>StyleRyde</title>` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 | Tag | Attribute | Description | Example |
-| --- | --- |
-| `base` | `href` | Base URL to use for relative URLs. | `<base href="https://braze.com">` |
-| `base` | `target`| Default target for all hyperlinks and forms. | `<base target="_blank">` |
-| `link` | `href` | URL to the external resource. | `  <link href="style.css">` |
-| `link` | `rel` | Defines relationships between the current and linked message. |
-| `link` | `type` | Type of linked resource. | `<link type="text/css">` |
-| `link` | `sizes` | Specifies the sizes of icons. | `<link rel="icon" sizes="32x32" href="favicon-32.png">` |
-| `link` | `media` | Specifies the media or device for which styles apply. | `<link rel="stylesheet" media="screen" href="style.css">` |
-| `meta` | `name` | Sets the title of the document shown in browser tabs. | `<meta name="viewport" content="width=device-width, initial-scale=1">` |
-| `meta` | `content` | Sets the title of the document shown in browser tabs. | `<meta name="description" content="Page about our newest products">` |
-| `meta` | `charset` | Declares the character encoding. | `<meta charset="UTF-8">` |
-| `meta` | `property` | Sets the title of the document shown in browser tabs. | `<meta property="og:title" content="Website title">` |
-| `style` | `type` | MIME type of the style content. | `<style type="text/css">p { color: red; }</style>` |
-| `style` | `media` | Specifies the media or device for which styles apply. | `<style media="print">body { font-size: 12pt; }</style>` |
-| `title` | No attributes | The `title` tag doesn't accept any attributes. | `<title>Kitchenerie</title>` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+| --- | --- | --- | --- |
+| `base` | `href` | Base URL to use for relative URLs. | ```<base href="https://braze.com">``` |
+| `base` | `target`| Default target for all hyperlinks and forms. | ```<base target="_blank">``` |
+| `link` | `href` | URL to the external resource. | ```<link href="style.css">``` |
+| `link` | `rel` | Defines relationships between the current and linked message. | ```<link rel="stylesheet">``` |
+| `link` | `type` | Type of linked resource. | ```<link type="text/css">``` |
+| `link` | `sizes` | Specifies the sizes of icons. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
+| `link` | `media` | Specifies the media or device for which styles apply. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `meta` | `name` | Sets the title of the document shown in browser tabs. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
+| `meta` | `content` | Sets the title of the document shown in browser tabs. | ```<meta name="description" content="Page about our newest products">``` |
+| `meta` | `charset` | Declares the character encoding. | ```<meta charset="UTF-8">``` |
+| `meta` | `property` | Sets the title of the document shown in browser tabs. | ```<meta property="og:title" content="Website title">``` |
+| `style` | `type` | MIME type of the style content. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
+| `style` | `media` | Specifies the media or device for which styles apply. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `title` | No attributes | The `title` tag doesn't accept any attributes. | ```<title>Kitchenerie</title>``` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
