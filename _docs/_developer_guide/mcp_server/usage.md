@@ -6,4 +6,4 @@ page_order: 1.2
 noindex: true
 ---
 
-{% multi_lang_include mcp_server/usage.md %}
+{% multi_lang_include mcp_server/usage.md section="developer" %}

@@ -1,6 +1,6 @@
 # Setting up Braze MCP server
 
-> Learn how to set up Braze MCP server, so you can interact with your Braze data through natural language using tools like Claude and Cursor. For more general information, see [Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/).
+> Learn how to set up Braze MCP server, so you can interact with your Braze data through natural language using tools like Claude and Cursor. For more general information, see [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -217,7 +217,7 @@ Next, configure your MCP client using our pre-provided configuration file.
 {% endtab %}
 
 {% tab Cursor %}
-1. In [Cursor](https://cursor.com/), go to **Settings** > **Cursor Settings** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
+1. In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
     ```json
     {
       "mcpServers": {

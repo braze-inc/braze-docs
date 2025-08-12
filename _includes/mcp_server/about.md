@@ -13,7 +13,7 @@
 
 ## About Braze MCP server
 
-After [setting up Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/setup/), you can connect AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. Braze MCP server is great for:
+After [setting up Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, you can connect AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. Braze MCP server is great for:
 
 - Building AI-powered tools that need Braze context.
 - CRM engineers creating multi-step agent workflows.
@@ -27,7 +27,7 @@ Do not assign permissions to your API key that are **not** read-only. Agents may
 
 ## Usage example
 
-You can interact with Braze through natural language using tools like Claude or Cursor. For other examples and best practices, see [Using Braze MCP server]({{site.baseurl}}/developer_guide/mcp_server/usage/).
+You can interact with Braze through natural language using tools like Claude or Cursor. For other examples and best practices, see [Using Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}

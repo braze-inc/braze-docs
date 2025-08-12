@@ -5,4 +5,4 @@ description: "Learn how to set up Braze MCP server, so you can interact with you
 page_order: 1.1
 ---
 
-{% multi_lang_include mcp_server/setup.md %}
+{% multi_lang_include mcp_server/setup.md section="user" %}

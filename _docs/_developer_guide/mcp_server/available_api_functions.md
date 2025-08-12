@@ -6,4 +6,4 @@ page_order: 1.5
 noindex: true
 ---
 
-{% multi_lang_include mcp_server/available_api_functions.md %}
+{% multi_lang_include mcp_server/available_api_functions.md section="developer" %}
