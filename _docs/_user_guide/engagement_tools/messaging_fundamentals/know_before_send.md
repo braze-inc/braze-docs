@@ -3,7 +3,7 @@ nav_title: Know Before You Send
 article_title: Know Before You Send
 description: "After visiting our pre-launch guide, refer to this final list of checks or 'gotchas' for Content Cards, email, in-app messages, push, and SMS."
 alias: /know_before_send/
-page_order: 10
+page_order: 10.2
 tool:
     - Campaigns
     - Canvas

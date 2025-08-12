@@ -1,7 +1,7 @@
 ---
 nav_title: "Benutzer:innen Attribute einstellen"
 article_title: "Festlegen von Nutzer:innen-Attributen über das Braze SDK"
-page_order: 1.1
+page_order: 1.2
 description: "Lernen Sie, wie Sie Nutzer:innen-Attribute mit dem Braze SDK festlegen können."
 ---
 

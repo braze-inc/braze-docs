@@ -8,7 +8,7 @@ description: "Erfahren Sie, wie Sie Einkäufe über das Braze SDK protokollieren
 
 # Einkäufe protokollieren
 
-> Erfahren Sie, wie Sie In-App-Käufe über das Braze SDK protokollieren können, damit Sie Ihre Einnahmen im Laufe der Zeit und über verschiedene Quellen hinweg ermitteln können. Damit können Sie Nutzer:innen [anhand ihres Lifetime-Value]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) mit angepassten Events, angepassten Attributen und Kauf-Events segmentieren.
+> Erfahren Sie, wie Sie In-App-Käufe über das Braze SDK protokollieren können, damit Sie Ihre Einnahmen im Laufe der Zeit und über verschiedene Quellen hinweg bestimmen können. Damit können Sie Nutzer:innen [anhand ihres Lifetime-Value]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) mit angepassten Events, angepassten Attributen und Kauf-Events segmentieren.
 
 {% alert note %}
 Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die entsprechende native Android- oder Swift-Methode.
@@ -70,7 +70,7 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 {% endtab %}
 
 {% tab Internet %}
-Für eine standardmäßige Internet SDK-Implementierung können Sie die folgende Methode verwenden:
+Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity);
@@ -192,7 +192,7 @@ NSDictionary *purchaseProperties = @{@"key": @"value"};
 {% endtab %}
 
 {% tab Internet %}
-Für eine standardmäßige Internet SDK-Implementierung können Sie die folgende Methode verwenden:
+Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
@@ -277,7 +277,7 @@ UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quanti
 
 ### Menge hinzufügen
 
-Standardmäßig ist `quantity` auf `1` eingestellt. Sie können jedoch eine Menge zu Ihren Einkäufen hinzufügen, wenn Kund:innen denselben Einkauf mehrmals in einer einzigen Kasse tätigen. Um eine Menge hinzuzufügen, übergeben Sie einen `Int` Wert an `quantity`, der innerhalb des Bereichs von `[0, 100]` liegt.
+Standardmäßig ist `quantity` auf `1` eingestellt. Sie können jedoch eine Menge zu Ihren Einkäufen hinzufügen, wenn Kund:innen denselben Einkauf mehrmals in einer einzigen Kasse tätigen. Um eine Menge hinzuzufügen, übergeben Sie einen `Int` Wert an `quantity`.
 
 ### Verwendung der REST API
 
