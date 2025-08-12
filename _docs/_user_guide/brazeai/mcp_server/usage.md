@@ -5,4 +5,4 @@ description: "Learn how to interact with your Braze data using natural-language 
 page_order: 1.2
 ---
 
-{% multi_lang_include mcp_server/usage.md %}
+{% multi_lang_include mcp_server/usage.md section="user" %}

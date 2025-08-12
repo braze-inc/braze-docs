@@ -6,4 +6,4 @@ page_order: 30
 alias: /mcp/
 ---
 
-{% multi_lang_include mcp_server/about.md %}
+{% multi_lang_include mcp_server/about.md section="user" %}
