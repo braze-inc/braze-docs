@@ -1,4 +1,4 @@
-# Braze MCP server
+# The Braze MCP server
 
 > Learn about the Braze MCP server, a secure, read-only connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, and provide insights without altering data.
 
