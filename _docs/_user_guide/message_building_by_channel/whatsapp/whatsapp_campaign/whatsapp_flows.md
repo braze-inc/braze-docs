@@ -3,6 +3,7 @@ nav_title: WhatsApp Flows
 article_title: WhatsApp Flows
 page_order: 1
 description: "This reference article covers the steps involved in building out and creating a WhatsApp Flows message."
+alias: /whatsapp_flows/
 page_type: reference
 tool:
   - Canvas
@@ -127,7 +128,7 @@ When composing your WhatsApp message, select the plus icon to open the **Add Per
 
 In the UI editor, select the following: 
 
-- **Attribute Name:** YOUR_CUSTOM_ATTRIBUTE (in this example: “flow_1”)
+- **Attribute Name:** YOUR_CUSTOM_ATTRIBUTE (in this example: “First_name”)
 - **Action:** Update
 - **Key Value:** {% raw %} ```{% assign parsed_json = {{whats_app.${inbound_flow_response}}} | json_parse %}{{ parsed_json.FIELDS_THAT_APPLY }}```{% endraw %}
 
