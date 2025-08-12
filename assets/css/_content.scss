@@ -464,9 +464,9 @@
 		border: none;
 		cursor: pointer;
 		transition: opacity 0.3s ease-in-out;
-		position: absolute;
-		left: -40px;
-    	top: -5px;
+		position: relative;
+		margin-left: 4px;
+		vertical-align: bottom;
 
 		.heading-copy-icon {
 			width: 20px;
