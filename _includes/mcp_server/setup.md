@@ -171,69 +171,111 @@ Do not reuse an existing API key&#8212;create one specifically for your MCP clie
 
 ### Step 2: Install `uv`
 
-You'll need to install `uv`, a tool for dependency management and Python package handling. To install, open your terminal and run the following command:
+Next, you'll need to install `uv`, a [command-line tool by Astral](https://docs.astral.sh/uv/getting-started/installation/) for dependency management and Python package handling.
 
 {% tabs local %}
 {% tab MacOS and Linux %}
+Open your terminal application, paste the following command, then press <kbd>Enter</kbd>.
+
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+The output will be similar to the following:
+
+```bash
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+
+downloading uv 0.8.9 aarch64-apple-darwin
+no checksums to verify
+installing to /Users/Isaiah.Robinson/.local/bin
+  uv
+  uvx
+everything's installed!
 ```
 {% endtab %}
 
 {% tab Windows %}
+ Open Windows PowerShell, paste the following command, then press <kbd>Enter</kbd>.
+
 ```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+irm https://astral.sh/uv/install.ps1 | iex
+```
+
+The output will be similar to the following:
+
+```powershell
+PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
+
+Downloading uv 0.8.9 (x86_64-pc-windows-msvc)
+no checksums to verify
+installing to C:\Users\YourUser\.local\bin
+  uv.exe
+  uvx.exe
+everything's installed!
 ```
 {% endtab %}
 {% endtabs %}
 
-{% alert tip %}
-For more information, refer to [Astral's UV documentation](https://docs.astral.sh/uv/getting-started/installation/).
-{% endalert %}
-
 ### Step 3: Configure your MCP client {#configure-client}
 
-Next, configure your MCP client using our pre-provided configuration file.
+Configure your MCP client using our pre-provided configuration file.
 
 {% tabs local %}
 {% tab Claude %}
-1. In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
-    ```json
-    {
-      "mcpServers": {
-        "braze": {
-          "command": "uvx",
-          "args": ["--native-tls", "braze-mcp-server@latest"],
-          "env": {
-            "BRAZE_API_KEY": "your-braze-api-key",
-            "BRAZE_BASE_URL": "your-braze-endpoint-url"
-          }
-        }
+In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "your-braze-api-key",
+        "BRAZE_BASE_URL": "your-braze-endpoint-url"
       }
     }
-    ```
-2. Save the configuration and restart Claude Desktop.
-3. To verify your connection, try asking a question like "List my Braze campaigns".
+  }
+}
+```
+
+When you're finished, save the configuration and restart Claude Desktop.
 {% endtab %}
 
 {% tab Cursor %}
-1. In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
-    ```json
-    {
-      "mcpServers": {
-        "braze": {
-          "command": "uvx",
-          "args": ["--native-tls", "braze-mcp-server@latest"],
-          "env": {
-            "BRAZE_API_KEY": "your-braze-api-key",
-            "BRAZE_BASE_URL": "your-braze-endpoint-url"
-          }
-        }
+In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "your-braze-api-key",
+        "BRAZE_BASE_URL": "your-braze-endpoint-url"
       }
     }
-    ```
-2. When you're finished, save the configuration and restart Cursor.
-3. To verify your connection, try using the provided MCP tools to interact with your Braze data.
+  }
+}
+```
+
+When you're finished, save the configuration and restart Cursor.
+{% endtab %}
+{% endtabs %}
+
+### Step 4: Send a test prompt
+
+Now that you've set up Braze MCP server, try sending a test prompt. For other examples and best practices, see [Using Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+
+{% tabs %}
+{% tab Claude %}
+!['What are my available Braze functions?' being asked and answered in Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+{% endtab %}
+
+{% tab Cursor %}
+!['What are my available Braze functions' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
