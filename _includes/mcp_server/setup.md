@@ -215,6 +215,7 @@ installing to C:\Users\YourUser\.local\bin
 everything's installed!
 ```
 {% endtab %}
+{% endtabs %}
 
 ### Step 3: Configure your MCP client {#configure-client}
 
