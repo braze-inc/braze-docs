@@ -175,7 +175,7 @@ You'll need to install `uv`, a [command-line tool by Astral](https://docs.astral
 
 {% tabs local %}
 {% tab MacOS and Linux %}
- To install, open your terminal application, paste the following command, then press <kbd>Enter</kbd>.
+Open your terminal application, paste the following command, then press <kbd>Enter</kbd>.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -196,7 +196,7 @@ everything's installed!
 {% endtab %}
 
 {% tab Windows %}
- To install, open the PowerShell application, paste the following command, then press <kbd>Enter</kbd>.
+ Open Windows PowerShell, paste the following command, then press <kbd>Enter</kbd>.
 
 ```powershell
 irm https://astral.sh/uv/install.ps1 | iex
@@ -265,7 +265,7 @@ Next, configure your MCP client using our pre-provided configuration file.
 
 ### Step 4: Send a test prompt
 
-Now that Braze MCP server is set up, send a test prompt. For other examples and best practices, see [Using Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Now that you've set up Braze MCP server, try sending a test prompt. For other examples and best practices, see [Using Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
