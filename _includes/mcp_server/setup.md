@@ -218,7 +218,7 @@ Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new ke
 Do not reuse an existing API key&#8212;create one specifically for your MCP client. Additionally, only assign read-only, non-PII permissions, as agents may try to write or delete data in Braze.
 {% endalert %}
 
-### Step 3: Get your key ID and endpoint
+### Step 3: Get your identifer and endpoint
 
 When you configure your MCP client, you'll need your API key's identifier and your workspace's REST endpoint. To get this information, go back to the **API Keys** page in the dashboard&#8212;keep this page open, as you'll need it in [the next step](#configure-client).
 
