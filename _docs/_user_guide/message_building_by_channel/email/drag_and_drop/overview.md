@@ -221,7 +221,13 @@ To adjust padding, scroll down to **Block Options** and select **More Options**.
 
 You can add a background image to your row configuration, allowing you to incorporate more design and visual content in your email campaign.
 
-### Add personalization
+### Language attribute
+
+You can set the language attribute by going to the **Settings** tab and selecting the desired language. You can also target the user attribute {%raw%} `{{${language}}}` {%endraw%} if the message is intended for users with dynamic language values.
+
+![Setting the "Language" value for an email.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+
+### Personalization
 
 ![Options for adding personalization for the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -238,7 +244,7 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 You can choose to include dynamic images in your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
-### Change text direction
+### Text direction
 
 When composing your message, you can toggle the text direction between left-to-right to right-to-left by selecting the respective **Text direction** button. You might use this option when creating messages in languages like Arabic and Hebrew.
 
@@ -246,7 +252,9 @@ When composing your message, you can toggle the text direction between left-to-r
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
-### Add HTML attributes to links
+### HTML
+
+#### HTML attributes to links
 
 ![The "Attributes" section with the attribute "clicktracking" turned off for a link.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
@@ -268,9 +276,37 @@ Alternatively, you can integrate with one of our attribution partners, such as [
 
 Lastly, predefined attributes are available to help make your message accessible. Learn more at our dedicated [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility) article.
 
-### Setting a language for email
+#### Custom head tags
 
-You can set the language attribute by going to the **Settings** tab and selecting the desired language. You can also target the user attribute {%raw%} `{{${language}}}` {%endraw%} if the message is intended for users with dynamic language values.
+Use `<head>` tags to add CSS and metadata in your email message. For example, you can use these tags to add a stylesheet or favicon. Liquid is supported in `<head>` tags.
 
-![Setting the "Language" value for an email.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+Anything added outside of `<head>` tags will be added after the `<body>` tag in your email. This means the added content will display in the email.
 
+##### Allowed tags and attributes by tag
+
+| Tag name | Description | Example |
+| --- | --- | --- |
+| `base` | Specifies the base URL for all relative URLs in the message. | `<base href="https://example.com" target="_blank">` |
+| `link`| Defines relationships between the message and external resources. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
+| `meta` | Provides metadata such as page description or keywords. | `<meta name="description" content="Free Web tutorials">` |
+| `style` | Embeds internal CSS styles. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
+| `title` | Sets the title of the document shown in browser tabs. | `<title>StyleRyde</title>` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+| Tag | Attribute | Description | Example |
+| --- | --- | --- | --- |
+| `base` | `href` | Base URL to use for relative URLs. | ```<base href="https://braze.com">``` |
+| `base` | `target`| Default target for all hyperlinks and forms. | ```<base target="_blank">``` |
+| `link` | `href` | URL to the external resource. | ```<link href="style.css">``` |
+| `link` | `rel` | Defines relationships between the current and linked message. | ```<link rel="stylesheet">``` |
+| `link` | `type` | Type of linked resource. | ```<link type="text/css">``` |
+| `link` | `sizes` | Specifies the sizes of icons. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
+| `link` | `media` | Specifies the media or device for which styles apply. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `meta` | `name` | Sets the title of the document shown in browser tabs. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
+| `meta` | `content` | Sets the title of the document shown in browser tabs. | ```<meta name="description" content="Page about our newest products">``` |
+| `meta` | `charset` | Declares the character encoding. | ```<meta charset="UTF-8">``` |
+| `meta` | `property` | Sets the title of the document shown in browser tabs. | ```<meta property="og:title" content="Website title">``` |
+| `style` | `type` | MIME type of the style content. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
+| `style` | `media` | Specifies the media or device for which styles apply. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `title` | No attributes | The `title` tag doesn't accept any attributes. | ```<title>Kitchenerie</title>``` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
