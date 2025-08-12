@@ -31,7 +31,7 @@ Para usar completamente nossa estratégia de sincronização de geofences, você
 
 Por padrão, as geofences são ativadas se a coleta automática de localização estiver ativada. Você pode ativar geofences usando o arquivo `Info.plist`. Adicione o dicionário `Braze` ao seu arquivo `Info.plist`. No dicionário `Braze`, adicione a subentrada booleana `EnableGeofences` e defina o valor como `YES`. Note que, antes do SDK da Braze para iOS v4.0.2, a chave do dicionário `Appboy` deve ser usada no lugar de `Braze`.
 
-Você também pode ativar geofences no momento da inicialização do app usando o [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) método. No dicionário `appboyOptions`, defina `ABKEnableGeofencesKey` como `YES`. Por exemplo:
+Você também pode ativar geofences no momento da inicialização do app usando o método [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24). No dicionário `appboyOptions`, defina `ABKEnableGeofencesKey` como `YES`. Por exemplo:
 
 {% tabs %}
 {% tab OBJECTIVE C %}

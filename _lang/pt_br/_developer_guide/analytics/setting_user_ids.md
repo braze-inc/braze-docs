@@ -1,7 +1,7 @@
 ---
 nav_title: Configuração de IDs de usuário
 article_title: Configuração de IDs de usuário por meio do Braze SDK
-page_order: 1.2
+page_order: 1.1
 description: "Saiba como definir IDs de usuário por meio do SDK do Braze."
 
 ---

@@ -71,8 +71,8 @@ sequenceDiagram
 #{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará completar o seguinte:
 
 - Certifique-se de que seu projeto está direcionado para iOS 16.1 ou posterior.
-- Adicione a `Push Notification` autorização em **Assinatura & Capacidades** no seu projeto Xcode.
-- Certifique-se de que `.p8` chaves são usadas para enviar notificações. Não há suporte para arquivos mais antigos, como `.p12` ou `.pem`.
+- Adicione a `Push Notification` autorização em **Assinatura e Capacidades** no seu projeto Xcode.
+- Certifique-se de que as chaves `.p8` são usadas para enviar notificações. Não há suporte para arquivos mais antigos, como `.p12` ou `.pem`.
 - A partir da versão 8.2.0 do Braze Swift SDK, é possível [registrar remotamente uma Live Activity](#swift_step-2-start-the-activity). Para usar esse recurso, é necessário o iOS 17.2 ou posterior.
 
 {% alert note %}
@@ -142,7 +142,7 @@ Em seu projeto do Xcode, selecione o nome do aplicativo e, em seguida, **General
 Na sua implementação `ActivityAttributes`, adicione conformidade ao protocolo `BrazeLiveActivityAttributes`, e então adicione a propriedade `brazeActivityId` ao seu modelo de atributos.
 
 {% alert important %}
-iOS mapeará a propriedade `brazeActivityId` para o campo correspondente no seu payload de push-to-start da Atividade Ao Vivo, portanto, não deve ser renomeada ou atribuída a qualquer outro valor.
+iOS mapeará a propriedade `brazeActivityId` para o campo correspondente no seu payload de push-to-start da Atividade Ao Vivo, então não deve ser renomeada ou atribuída a qualquer outro valor.
 {% endalert %}
 
 ```swift
@@ -297,7 +297,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-### Etapa 4: Atualizar a atividade {#update-the-activity}
+### Etapa 4: Atualize a atividade {#update-the-activity}
 
 ![Uma atividade ao vivo em uma tela de bloqueio do iPhone com as pontuações de duas equipes. A equipe Wild Bird Fund tem 2 pontos, e o Owl Rehab tem 4 pontos.]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
@@ -307,7 +307,7 @@ Ao atualizar `ContentState`, o widget Live Activity exibirá as novas informaç�
 
 Consulte nosso artigo sobre [endpoints em`/messages/live_activity/update` ]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) para obter detalhes completos.
 
-### Etapa 5: Encerrar a atividade {#end-the-activity}
+### Etapa 5: Finalize a atividade {#end-the-activity}
 
 Quando uma Live Activity está ativa, ela é exibida na tela de bloqueio do usuário e no Dynamic Island. Há algumas maneiras diferentes de uma Live Activity terminar e ser removida da interface do usuário. 
 
@@ -370,7 +370,7 @@ Para verificar se a notificação por push chegou com sucesso ao dispositivo, ma
 
 Verifique se você implementou corretamente as instruções descritas [acima](#swift_brazeActivityAttributes). Seu `ActivityAttributes` deve conter tanto a conformidade do protocolo `BrazeLiveActivityAttributes` quanto a propriedade `brazeActivityId`.
 
-Após receber uma notificação de push-to-start de Atividade Ao Vivo, verifique se você pode ver uma solicitação de rede de saída para o endpoint `/push_token_tag` da sua URL do Braze e se contém o ID da atividade correta no campo `"tag"`.
+Após receber uma notificação de push-to-start de Atividade Ao Vivo, verifique se você pode ver uma solicitação de rede de saída para o endpoint `/push_token_tag` da sua URL Braze e se contém o ID da atividade correto no campo `"tag"`.
 
 #### Estou recebendo uma resposta de acesso negado quando tento usar o endpoint `live_activity/update`. Por quê?
 
