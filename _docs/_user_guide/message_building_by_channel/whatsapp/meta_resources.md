@@ -35,7 +35,7 @@ Any attempts to send a template to a WhatsApp user with a US phone number will r
 
 Meta will limit the number of marketing template messages a user can receive across all businesses in a given period of time, starting with messages that are less likely to be read. 
 
-One exception is, if a person responds to a marketing message it will start a 24-hour customer service window. Marketing messages sent within this window will not count towards a person’s limit.
+One exception is, if a person responds to a marketing message, it will start a 24-hour customer service window. Marketing messages sent within this window will not count towards a person’s limit.
 
 The specific limit varies by user, depending on their engagement level. Learn more about WhatsApp's per-user marketing template message limits [here](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits). 
 
