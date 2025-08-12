@@ -223,43 +223,45 @@ Next, configure your MCP client using our pre-provided configuration file.
 
 {% tabs local %}
 {% tab Claude %}
-1. In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
-    ```json
-    {
-      "mcpServers": {
-        "braze": {
-          "command": "uvx",
-          "args": ["--native-tls", "braze-mcp-server@latest"],
-          "env": {
-            "BRAZE_API_KEY": "your-braze-api-key",
-            "BRAZE_BASE_URL": "your-braze-endpoint-url"
-          }
-        }
+In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "your-braze-api-key",
+        "BRAZE_BASE_URL": "your-braze-endpoint-url"
       }
     }
-    ```
-2. Save the configuration and restart Claude Desktop.
-3. To verify your connection, try asking a question like "List my Braze campaigns".
+  }
+}
+```
+
+When you're finished, save the configuration and restart Claude Desktop.
 {% endtab %}
 
 {% tab Cursor %}
-1. In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
-    ```json
-    {
-      "mcpServers": {
-        "braze": {
-          "command": "uvx",
-          "args": ["--native-tls", "braze-mcp-server@latest"],
-          "env": {
-            "BRAZE_API_KEY": "your-braze-api-key",
-            "BRAZE_BASE_URL": "your-braze-endpoint-url"
-          }
-        }
+In [Cursor](https://cursor.com/), go to **Settings** > **Tools and Integrations** > **MCP Tools** > **Add Custom MCP**, then add the following snippet:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "your-braze-api-key",
+        "BRAZE_BASE_URL": "your-braze-endpoint-url"
       }
     }
-    ```
-2. When you're finished, save the configuration and restart Cursor.
-3. To verify your connection, try using the provided MCP tools to interact with your Braze data.
+  }
+}
+```
+
+When you're finished, save the configuration and restart Cursor.
 {% endtab %}
 {% endtabs %}
 
