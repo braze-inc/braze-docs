@@ -9,7 +9,7 @@ page_type: tutorial
 
 > This example shows how a fictional brand uses Braze Predictive Events to define the outcomes that matter to their business—like upgrading to a pro membership—and build targeted strategies that improve results. 
 
-Jordan is a lifecycle strategist at Steppington, a fake health and fitness app with free and paid tiers. Jordan’s team has a goal to increase Pro plan upgrades without bombarding their entire free user base with discount messages. Currently, they send a “Try Pro for 50% off” promo to every free-tier user after seven days. While it drives some conversions (about 5% over 7 days), it also results in excessive outreach—including discounting users who were likely to upgrade anyway.
+Let's say Jordan is a lifecycle strategist at Steppington, a health and fitness app with free and paid tiers. Jordan’s team has a goal to increase Pro plan upgrades without bombarding their entire free user base with discount messages. Currently, they send a “Try Pro for 50% off” promo to every free-tier user after seven days. While it drives some conversions (about 5% over 7 days), it also results in excessive outreach—including discounting users who were likely to upgrade anyway.
 
 To improve targeting and reduce messaging fatigue, Jordan uses Predictive Events to model the likelihood that a user will upgrade to Pro within the next 7 days. He defines a custom event: `upgraded_to_pro`, then uses that to train a prediction model and segment users into smart, action-oriented groups. 
 

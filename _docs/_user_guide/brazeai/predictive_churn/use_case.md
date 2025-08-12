@@ -9,7 +9,7 @@ page_type: tutorial
 
 > This example shows how a fictional brand uses Predictive Churn to proactively reduce user drop-off. Instead of waiting for churn to happen, predict which users are at risk and deliver tailored messages while they’re still active.
 
-Camila is a CRM manager at MovieCanon, a fake streaming platform for indie films, documentaries, and international series.
+Let's say Camila is a CRM manager at MovieCanon, a streaming platform for indie films, documentaries, and international series.
 
 Camila’s team has spotted a troubling trend: users sign up, stream a movie or two, and then disappear. Historically, they’ve tried sending a generic “We miss you” email a week later—but with only a 3% conversion rate, it’s too little, too late. Most users don’t re-engage, and churn becomes inevitable.
 

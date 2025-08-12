@@ -9,7 +9,7 @@ page_type: tutorial
 
 > This example shows how a fictional brand uses Braze AI item recommendations to deliver personalized content and product suggestions across key customer moments. Learn how recommendation logic can improve engagement, increase conversions, and reduce manual effort.
 
-Camila is a CRM manager at MovieCanon, a fake streaming platform featuring curated films and series. 
+Let's say Camila is a CRM manager at MovieCanon, a streaming platform featuring curated films and series. 
 
 Camila’s goal is to keep viewers engaged after they finish watching something. Historically, MovieCanon’s "You might also like" messages were based on broad genre matching and sent at arbitrary times—often hours or days after a session. Engagement was low, and her team knew they could do better.
 
