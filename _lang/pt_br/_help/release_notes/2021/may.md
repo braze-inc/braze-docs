@@ -18,7 +18,7 @@ Atualizamos as métricas do relatório [Global Control Groups]({{site.baseurl}}/
 
 ## Visão geral dos relatórios
 
-Não sabe por onde começar a analisar suas campanhas ou Canvas? A [visão geral dos Relatórios]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) fornece orientação sobre quais relatórios e análises de dados você pode usar para responder a perguntas comuns de estratégia de marketing.
+Não sabe por onde começar a analisar suas campanhas ou Canvas? A [visão geral dos Relatórios]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/) fornece orientação sobre quais relatórios e análises de dados você pode usar para responder a perguntas comuns de estratégia de marketing.
 
 ## Novo cluster US-05
 

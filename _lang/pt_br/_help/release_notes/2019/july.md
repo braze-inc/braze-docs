@@ -48,7 +48,7 @@ Agora é possível escolher [quando um usuário avança]({{site.baseurl}}/user_g
 
 ### Mensagens no app no Canva
 
-[As mensagens no app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) agora estão disponíveis no Canvas! Adicione uma etapa do Canva e procure os canais disponíveis para adicionar uma mensagem no app.
+[As mensagens no app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) agora estão disponíveis no Canvas! Adicione uma etapa do Canva e procure os canais disponíveis para adicionar uma mensagem no app.
 
 # No início deste mês
 
@@ -58,7 +58,7 @@ Estamos removendo as fotos de perfil de usuário exibidas nos perfis e nas pesqu
 
 ## Conteúdo conectado em cartões de conteúdo
 
-Agora você pode usar as strings e a funcionalidade do [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) nos [cartões de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/).
+Agora você pode usar as strings e a funcionalidade do [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) nos [cartões de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/).
 
 As chamadas do Connected Content para servidores externos ocorrerão quando um cartão for realmente enviado, não quando o cartão for visualizado pelo usuário. Semelhante ao e-mail, o conteúdo dinâmico será calculado e determinado no momento do envio, e não quando um cartão for realmente visualizado.
 
@@ -70,7 +70,7 @@ Para definir um valor `null` para o endereço de resposta de uma mensagem de e-m
 
 ## Comparações de campanhas
 
-Analise [várias campanhas ao mesmo tempo para comparar a performance relativa delas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), lado a lado no Braze - em uma única janela!
+Analise [várias campanhas ao mesmo tempo para comparar a performance relativa delas]({{site.baseurl}}/report_builder/), lado a lado no Braze - em uma única janela!
 
 ## Modelo de ID de despacho em mensagens com Liquid
 
@@ -92,4 +92,4 @@ O filtro "Show Only Mine" (Mostrar somente as minhas) na grade da campanha perma
 
 ## Atualizações dos Testes A/B
 
-É possível enviar um [teste A/B]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) único com até oito variantes (e controle opcional) para uma porcentagem especificada pelo usuário do público de uma campanha e, em seguida, enviar a melhor variante para o público restante em um horário pré-agendado.
+É possível enviar um [teste A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) único com até oito variantes (e controle opcional) para uma porcentagem especificada pelo usuário do público de uma campanha e, em seguida, enviar a melhor variante para o público restante em um horário pré-agendado.

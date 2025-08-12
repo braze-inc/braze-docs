@@ -13,7 +13,7 @@ description: "Este artigo contém notas de versão para fevereiro de 2019."
 
 Por exemplo, se você enviar várias categorias de campanhas de e-mail, poderá oferecer aos seus clientes a opção de assinar ou cancelar a inscrição nesses grupos em massa a partir de uma única página, usando nossa [Central de Preferências de e-mail](#email-preference-center).
 
-Use as [APIs REST do Grupo de inscrições]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) para gerenciar programaticamente os grupos de inscrições que você armazenou no dashboard do Braze na página **Grupo de inscrições**.
+Use as [APIs REST do Grupo de inscrições]({{site.baseurl}}/api/endpoints/subscription_groups/) para gerenciar programaticamente os grupos de inscrições que você armazenou no dashboard do Braze na página **Grupo de inscrições**.
 
 ## Central de Preferências de E-mail
 

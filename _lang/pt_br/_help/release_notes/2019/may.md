@@ -45,13 +45,13 @@ Esta [nova notificação]({{site.baseurl}}/user_guide/administrative/company_set
 
 A Jampp é uma plataforma de marketing de performance para aquisição e redirecionamento de clientes móveis. Combina dados comportamentais com tecnologia preditiva e programática para gerar receita para os anunciantes, mostrando anúncios pessoais e relevantes que inspiram os consumidores a comprar pela primeira vez ou com mais frequência.
 
-Os clientes da Braze podem [integrar-se com a Jampp]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/jampp/) configurando o canal de webhook da Braze para transmitir eventos para a Jampp. Como resultado, os clientes conseguem adicionar conjuntos de dados mais ricos às suas iniciativas de redirecionamento com a Jampp dentro do ecossistema de publicidade móvel.
+Os clientes da Braze podem [integrar-se com a Jampp]({{site.baseurl}}/partners/jampp/) configurando o canal de webhook da Braze para transmitir eventos para a Jampp. Como resultado, os clientes conseguem adicionar conjuntos de dados mais ricos às suas iniciativas de redirecionamento com a Jampp dentro do ecossistema de publicidade móvel.
 
 ## Seletor de plataforma para mensagens no app
 
 Tornamos mais fácil selecionar para onde suas mensagens no app estão indo e para quais plataformas elas são construídas com nosso seletor de plataforma, que enfatiza esta etapa no processo de criação da campanha.
 
-![Seletor de Plataforma][1]
+![Selecionador de Plataforma]({% image_buster /assets/img/iam_platforms.gif %})
 
 ## Campo de Correntes de ID de despacho para e-mail
 
@@ -102,6 +102,5 @@ A partir do [lançamento do produto de novembro de 2019]({{site.baseurl}}/help/r
 
 O filtro de Canal Mais Engajado seleciona a parte do seu público para quem o canal de envio de mensagens selecionado é o seu "melhor" canal. Neste caso, "melhor" significa "tem a maior probabilidade de engajamento, dado o histórico do usuário". Você pode selecionar e-mail, web push ou push móvel (que inclui qualquer sistema operacional móvel ou dispositivo disponível) como um canal.
 
-Confira este novo filtro em nossa [Biblioteca de Filtros de Segmentação]({{site.baseurl }}/user_guide/engajamento_tools/segments/segmentation_filters/).
+Confira este novo filtro em nossa [Biblioteca de Filtros de Segmentação]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[1]: {% image_buster /assets/img/iam_platforms.gif %}

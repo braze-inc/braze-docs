@@ -19,7 +19,7 @@ description: "Este artigo contém notas de versão de outubro de 2018."
 
 ## Calcular estatísticas exatas de público para campanhas
 
-Agora você pode acessar o **Campaign Analytics** e calcular as estatísticas exatas de seu público. Clique em **Calculate Exact Stats (Calcular estatísticas exatas** ) no rodapé da seção **Target Users (Usuários-alvo** ), e as estatísticas exatas do público serão preenchidas. Você terá de salvar a campanha antes de calcular (as campanhas de rascunho serão salvas como rascunhos).
+Agora você pode acessar o **Campaign Analytics** e calcular as estatísticas exatas de seu público. Clique em **Calculate Exact Stats (Calcular estatísticas exatas** ) no rodapé da seção **Target Audiences (Públicos-alvo** ), e as estatísticas exatas do público serão preenchidas. Você terá de salvar a campanha antes de calcular (as campanhas de rascunho serão salvas como rascunhos).
 
 ## Descontinuidade do Windows 8
 
@@ -43,7 +43,7 @@ Os controles do criador de mensagens foram atualizados para incluir palavras ass
 
 ## Azure para Currents
 
-Os clientes do Braze que usam o Currents agora podem ver [o Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) como uma possível integração.
+Os clientes do Braze que usam o Currents agora podem ver [o Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage) como uma possível integração.
 
 ## Expansões do campo de entrada
 

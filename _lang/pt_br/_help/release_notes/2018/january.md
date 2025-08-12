@@ -9,7 +9,7 @@ description: "Este artigo contém notas de versão de janeiro de 2018."
 
 ## CSS inlining
 
-Agora você pode ativar ou desativar [o CSS inlining][84] para mensagens de e-mail individuais acessando **as Configurações de e-mail**.
+Agora você pode ativar ou desativar [o CSS inlining]({{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining) para mensagens de e-mail individuais acessando **as Configurações de e-mail**.
 
 ## Novos filtros de segmento
 
@@ -24,20 +24,16 @@ A partir de março de 2019, `Received Canvas Step` foi renomeado para `Received 
 
 ## Exportação de usuários usando o ID do dispositivo
 
-Esse endpoint agora aceita um identificador de dispositivo como parâmetro, o que permite [exportar perfis de usuários anônimos][82].
+Esse endpoint agora aceita um identificador de dispositivo como parâmetro, o que permite [exportar perfis de usuários anônimos]({{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint).
 
 É possível usar o ID do dispositivo para exportar todos os perfis de usuário desse dispositivo.
 
 ## Atualização dos relatórios de engajamento
 
-Estatísticas adicionais, como **a taxa de abertura de push** e **a taxa de conversão**, agora estão disponíveis nos [relatórios de engajamento][81].
+Estatísticas adicionais, como **a taxa de abertura de push** e **a taxa de conversão**, agora estão disponíveis nos [relatórios de engajamento]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports).
 
 ## Certificados push da Apple: Uso de arquivos .p8
 
-Agora é possível usar um [arquivo p8][80] ao fazer upload de um certificado Apple Push, garantindo que suas credenciais push do iOS nunca expirem.
+Agora é possível usar um [arquivo p8]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens) ao fazer upload de um certificado Apple Push, garantindo que suas credenciais push do iOS nunca expirem.
 
 
-[80]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
-[81]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
-[82]: {{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint
-[84]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining
