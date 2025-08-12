@@ -70,14 +70,14 @@ In the advanced JSON editor, enter {% raw %}`{"attributes": [{"flow_1": {{whats_
 {% endtab %}
 {% tab UI editor %}
 
-1. Confirm that you have already created a custom attribute with the object data type ("flow_4" in this example) inside of your workspace data settings.
+1. Confirm that you have already created a custom attribute with the object data type ("flow_1" in this example) inside of your workspace data settings.
 2. In the UI editor, use the Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` to populate the custom attribute and save the entire user’s flow response to it. You need to populate the Key Value as ```{{whats_app.${inbound_flow_response}}}```{% endraw %} before selecting the custom attribute you created.
 
 ![User Update step that uses the UI editor.]({% image_buster /assets/img/whatsapp/flows/user_update_ui_editor.png %})
 
 After Braze recieves a Flow response, we will save the nested custom attribute with the prescribed naming to the user profile. That custom attribute can be pulled when building Canvases. 
 
-![A window displaying the contents of a "flow_4" custom attribute.]({% image_buster /assets/img/whatsapp/flows/user_attribute_flow.png %})
+![A window displaying the contents of a "flow_1" custom attribute.]({% image_buster /assets/img/whatsapp/flows/user_attribute_flow.png %})
 
 {% endtab %}
 {% endtabs %}
