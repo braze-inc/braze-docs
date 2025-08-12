@@ -222,7 +222,7 @@ Do not reuse an existing API key&#8212;create one specifically for your MCP clie
 
 To configure your MCP client, you'll need your key's identifier and your workspace's REST endpoint. In the dashboard, go back to the **API Keys** page. Keep this page open&#8212;you'll reference it in [the next step](#configure-client).
 
-![ALT_TEXT]()
+![The 'API Keys' in Braze showing a newly created API key and the user's REST endpoint.]({% image_buster /assets/img/mcp_server/get_indentifer_and_endpoint.png %}){: style="max-width:85%;"}
 
 ### Step 4: Configure your MCP client {#configure-client}
 
