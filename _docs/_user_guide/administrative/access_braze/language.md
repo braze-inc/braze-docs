@@ -18,7 +18,7 @@ The Braze dashboard is available in [multiple languages](#supported-languages). 
 1. In the global header, select <i class="fa-solid fa-globe" aria-label="Select your language"></i>.
 2. Choose your language from the list.
 
-![English selected for the Braze dashboard language.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
+![English selected for the Braze dashboard language.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 It may take a few moments for the dashboard to reload.
 
