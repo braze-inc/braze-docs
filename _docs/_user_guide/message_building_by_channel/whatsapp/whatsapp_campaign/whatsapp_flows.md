@@ -17,7 +17,7 @@ channel:
 
 ## Setting up WhatsApp Flows
 
-1. Log into your Meta account.
+1. Log in to your Meta account.
 2. Create Flows from one of two main locations:
     - **Account tools:** Go to the **Flows** tab to view the Flow ID and create a new Flow.
     - **Manage templates:** This is the recommended method for creating Flows. Here, you can generate templates and select a Flow option during the template creation process.
@@ -37,7 +37,7 @@ channel:
 ![WhatsApp message composer using a WhatsApp Flow template.]({% image_buster /assets/img/whatsapp/flows/composer_flow_template.png %}){: style="max-width:80%;"}
 
 {% alert important %}
-Flow preview is not yet available in the early access, but you can preview the Flow by sending yourself a test message with the flow button. 
+Flow preview is not yet available in the early access, but you can preview the Flow by sending yourself a test message. 
 {% endalert %}
 
 ## Saving the full Flow response {#full-flow}
@@ -47,12 +47,12 @@ Flow preview is not yet available in the early access, but you can preview the F
 Create an [Action Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) with **Send a WhatsApp inbound message** trigger to process the Flow information.
 
 {% alert note %}
-You'll be able to specify the flow when additional features are released during the early access. 
+You'll be able to specify the Flow when additional features are released during early access. 
 {% endalert %}
 
 ### Step 2: Compose your WhatsApp message
 
-When composing your WhatsApp message, select the plus icon to open the **Add Personalization** window, then select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This will save information to user profiles or forward it to other services, like Webhooks.
+When composing your WhatsApp message, select the plus icon to open the **Add Personalization** window, then select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This will save information to user profiles or forward it to other services, like webhooks.
 
 ![WhatsApp message composer with an "Add Personalization" component to insert a WhatsApp properties personalization with the custom attribute `inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:60%;"}
 
@@ -65,28 +65,28 @@ You can use the advanced JSON editor to save attributes from the Flow response t
 
 In the advanced JSON editor, enter {% raw %}`{"attributes": [{"flow_1": {{whats_app.${inbound_flow_response}}}}]}`{% endraw %}, where “flow_1” is the custom attribute you’d like the flow to be saved to.
 
-![User Update step with an Advanced JSON editor.]({% image_buster /assets/img/whatsapp/flows/user_update_advanced_json_editor.png %})
+![User Update step with an advanced JSON editor.]({% image_buster /assets/img/whatsapp/flows/user_update_advanced_json_editor.png %})
 
 {% endtab %}
 {% tab UI editor %}
 
 1. Confirm that you have already created a custom attribute with the object data type ("flow_1" in this example) inside of your workspace data settings.
-2. In the UI editor, use the Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` to populate the custom attribute and save the entire user’s flow response to it. You need to populate the Key Value as ```{{whats_app.${inbound_flow_response}}}```{% endraw %} before selecting the custom attribute you created.
+2. In the UI editor, use the Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` to populate the custom attribute and save the entire user’s Flow response to it. You need to populate the key value as ```{{whats_app.${inbound_flow_response}}}```{% endraw %} before selecting the custom attribute you created.
 
 ![User Update step that uses the UI editor.]({% image_buster /assets/img/whatsapp/flows/user_update_ui_editor.png %})
 
-After Braze recieves a Flow response, we will save the nested custom attribute with the prescribed naming to the user profile. That custom attribute can be pulled when building Canvases. 
+After Braze receives a Flow response, we will save the nested custom attribute with the prescribed naming to the user profile. That custom attribute can be pulled when building Canvases. 
 
 ![A window displaying the contents of a "flow_1" custom attribute.]({% image_buster /assets/img/whatsapp/flows/user_attribute_flow.png %})
 
 {% endtab %}
 {% endtabs %}
 
-When you’re ready, send a test message to test the flow. Then, launch the Canvas!
+When you’re ready, send a test message to test the Flow. Then, launch the Canvas!
 
 ## Saving specific fields from Flow responses to a specific custom attribute 
 
-You can use nested custom attributes or the `json_parse` Liquid tag to extra specific fields from Flow responses.
+You can use nested custom attributes or the `json_parse` Liquid tag to extract specific fields from Flow responses.
 
 {% tabs %}
 {% tab Nested custom attributes %}
@@ -105,7 +105,7 @@ To save specific parts of the user's Flow response, complete all the steps in [S
 
 {: start="4" }
 4. Choose the attribute where you want to store it.
-5. Send a test message to test the flow.
+5. Send a test message to test the Flow.
 
 {% endtab %}
 {% tab Parse function %}
@@ -117,12 +117,12 @@ Use the `json_parse` Liquid tag to extract specific responses from the flow. For
 Create an [Action Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) with **Send a WhatsApp inbound message** trigger to process the Flow information.
 
 {% alert note %}
-You'll be able to specify the flow when additional features are released during the early access. 
+You'll be able to specify the Flow when additional features are released during early access. 
 {% endalert %}
 
 ### Step 2: Compose your WhatsApp message
 
-When composing your WhatsApp message, select the plus icon to open the **Add Personalization** window, then select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This will save information to user profiles or forward it to other services, like Webhooks.
+When composing your WhatsApp message, select the plus icon to open the **Add Personalization** window, then select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This will save information to user profiles or forward it to other services, like webhooks.
 
 ### Step 3: Save specific fields from the Flow response
 
@@ -135,15 +135,15 @@ In the UI editor, select the following:
 ![WhatsApp message composer with an "Add Personalization" component to insert a WhatsApp properties personalization with the custom attribute `inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/parsed_json.png %})
 
 {% alert note %}
-A new WhatsApp message “clears” the Canvas’s ability to use (and reuse) the Liquid Flow response, so make sure that follow up messages are after all User Update steps, webhooks, or other steps that use the Liquid Flow response. 
+A new WhatsApp message “clears” the Canvas’s ability to use (and reuse) the Liquid Flow response, so make sure that follow-up messages are after all User Update steps, webhooks, or other steps that use the Liquid Flow response. 
 {% endalert %}
 
-When you’re ready, send a test message to test the flow. Then, launch the Canvas!
+When you’re ready, send a test message to test the Flow. Then, launch the Canvas!
 
 {% endtab %}
 {% endtabs %}
 
-{% alert update %}
+{% alert note %}
 Additional Flow functionalities will be introduced, including advanced action step filters and response messages that incorporate Flow elements.
 {% endalert %}
 
