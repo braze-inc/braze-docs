@@ -219,7 +219,7 @@ everything's installed!
 
 ### Step 3: Configure your MCP client {#configure-client}
 
-Next, configure your MCP client using our pre-provided configuration file.
+Configure your MCP client using our pre-provided configuration file.
 
 {% tabs local %}
 {% tab Claude %}
