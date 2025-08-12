@@ -5,4 +5,4 @@ description: "List of read-only Braze API functions accessible through the MCP s
 page_order: 1.5
 ---
 
-{% multi_lang_include mcp_server/available_api_functions.md %}
+{% multi_lang_include mcp_server/available_api_functions.md section="user" %}
