@@ -159,7 +159,7 @@ Braze SDK는 특정 기능 및 속성을 기반으로 사용자를 세분화하�
 - 다각형 지역의 경우 세그먼트에 포함할 영역을 보다 구체적으로 지정할 수 있습니다.
 
 {% alert tip %}
-Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신가요? 사용 가능한 Braze [컨텍스트 기반 위치 파트너를]({{site.baseurl}}/partners/message_personalization/location) 확인하세요.
+Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신가요? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/).
 {% endalert %}
 
 {% endapi %}
