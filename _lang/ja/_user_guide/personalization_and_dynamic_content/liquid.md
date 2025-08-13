@@ -50,7 +50,7 @@ guide_featured_list:
 
 > Liquid は、Shopify が開発した Ruby で書かれているオープンソースのテンプレート言語です。Braze では、Liquid を使用してユーザーのプロファイルからデータをメッセージにテンプレート化します。 
 
-例えば、整数データ型のユーザープロファイルからカスタム属性を取得し、その値を最も近い整数に丸めることができます。Liquid の構文と使用方法については、[**サポートされているパーソナライゼーションタグ**][1]を参照してください。
+例えば、整数データ型のユーザープロファイルからカスタム属性を取得し、その値を最も近い整数に丸めることができます。Liquid の構文と使用方法については、[**サポートされているパーソナライゼーションタグ**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を参照してください。
 
 リキッドテンプレーティング言語は、オブジェクト、タグs、およびフィルターs の使用をサポートします。
 
@@ -109,4 +109,3 @@ Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートしま�
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
