@@ -164,11 +164,9 @@ Lorsque vous effectuez une segmentation à l'aide du filtre **DOES NOT MATCH REG
 
 Les attributs de tableau sont appropriés pour stocker les listes d’informations associées à vos utilisateurs. Par exemple, le stockage en tableau des 100 derniers morceaux de contenu qu’un utilisateur a regardé permettrait une segmentation spécifique basée sur les intérêts.
 
-Par défaut, la longueur maximale d'un tableau pour un attribut est fixée à 25, et peut être portée à 100 pour un tableau individuel. Par exemple, si vous envoyez un attribut tel que "Films regardés" et qu'il est défini sur 100, lorsqu'un utilisateur regarde un 101e film, le premier film sera supprimé du tableau et le film le plus récent sera ajouté.
+Par défaut, la longueur d'un tableau pour un attribut est de 500 éléments maximum. Par exemple, si vous envoyez un attribut tel que "Films regardés" et qu'il est défini sur 500, lorsqu'un utilisateur regarde le 501e film, le premier film sera supprimé du tableau et le film le plus récent sera ajouté.
 
-Si vous souhaitez que cette limite soit augmentée, contactez votre gestionnaire du succès des clients. L'administrateur de votre tableau de bord peut ensuite augmenter la longueur maximale des tableaux individuels à plus de 100 à partir de l'onglet **Attributs personnalisés** de la page **Gérer les paramètres**.
-
-Prenez en compte le fait que, si vous saisissez des valeurs comprenant des espaces entre, avant ou après les mots, Braze cherchera à trouver ces espaces.
+Notez que si vous saisissez des valeurs avec des espaces entre, avant ou après les mots, Braze vérifiera également la présence de ces mêmes espaces.
 
 {% alert note %}
 L'option permettant d'augmenter la longueur maximale n'est pas disponible si l'attribut est configuré pour détecter automatiquement le type de données ; le type de données doit être défini comme étant un tableau.
