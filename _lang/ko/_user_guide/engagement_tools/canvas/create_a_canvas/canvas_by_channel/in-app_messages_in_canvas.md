@@ -38,9 +38,9 @@ To add an in-app message to your Canvas, do the following:
 
 ## 인앱 메시지 만료
 
-인앱 메시지 작성기에서 인앱 메시지가 만료되는 시기를 선택할 수 있습니다. 이 기간 동안 인앱 메시지는 만료 날짜에 도달할 때까지 표시되지 않고 대기합니다. 인앱 메시지가 전송된 후에는 한 번만 볼 수 있습니다.
+You can choose when the in-app message will expire. 이 기간 동안 인앱 메시지는 만료 날짜에 도달할 때까지 표시되지 않고 대기합니다. 인앱 메시지가 전송된 후에는 한 번만 볼 수 있습니다.
 
-![]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:85%"}
+![The Message Controls section of a Message step for an in-app message. The in-app message will expire three days after the step is available.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | 옵션 | 설명 | 예시 |
 |---|---|---|
@@ -167,7 +167,7 @@ Braze는 프로모션 및 온보딩 캔버스에 이 기능을 사용할 것을 
 
 **정확한 우선순위 설정을** 선택하고 다른 캔버스 단계를 드래그하여 캔버스의 우선순위를 재정렬합니다. 기본적으로 캔버스 배리언트의 이전 단계는 이후 단계보다 먼저 표시하도록 설정되어 있습니다. 원하는 우선순위에 따라 단계를 수행한 후 **정렬 적용을** 선택합니다.
 
-!["첫 번째 IAM" 및 "다른 IAM" 두 단계의 우선순위 정렬기]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![The priority sorter with two steps "Welcome IAM" and "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
 ### 활성 캔버스의 초안 변경하기
 
@@ -185,7 +185,7 @@ Braze는 프로모션 및 온보딩 캔버스에 이 기능을 사용할 것을 
 
 You can no longer create or duplicate Canvases using the original editor. 이 섹션은 인앱 메시지가 있는 단계의 진행 동작이 어떻게 작동하는지 이해할 때 참조할 수 있습니다.
 
-원본 편집기에서 만든 캔버스는 캔버스 구성 요소를 통해 발전하는 기준인 진행 동작을 지정해야 합니다. [인앱 메시지만 있는 단계는](#steps-iam-only) [여러 메시지 유형](#steps-multiple-channels) (예: 푸시 또는 이메일) [이 있는 단계와](#steps-multiple-channels) 다른 진행 옵션이 있습니다. 캔버스 플로우 워크플로우의 인앱 메시지의 경우, 이 옵션은 항상 오디언스에게 즉시 전달되도록 설정됩니다.
+원본 편집기에서 만든 캔버스는 캔버스 구성 요소를 통해 발전하는 기준인 진행 동작을 지정해야 합니다. [인앱 메시지만 있는 단계는](#steps-iam-only) 푸시 또는 이메일 같이 [여러 메시지 유형이 있는 단계](#steps-multiple-channels)와 다른 진행 옵션이 있습니다. 캔버스 플로우 워크플로우의 인앱 메시지의 경우, 이 옵션은 항상 오디언스에게 즉시 전달되도록 설정됩니다.
 
 인앱 메시지가 있는 캔버스 단계에서는 실행 기반 전달을 사용할 수 없습니다. 인앱 메시지가 포함된 캔버스 단계는 예약해야 합니다. 대신 캔버스 구성 요소에서 예약된 메시지가 사용자에게 전송된 후 사용자가 앱을 처음 열 때(시작 세션에 의해 트리거됨) 캔버스 인앱 메시지가 표시됩니다.
 
@@ -221,7 +221,7 @@ You can no longer create or duplicate Canvases using the original editor. 이 �
 
 사용자는 캔버스 단계로 들어가 세션을 시작한 다음 트리거를 수행해야 인앱 메시지를 수신할 수 있습니다. 즉, 세션 중간 업데이트는 지원되지 않습니다. 예를 들어 트리거가 세션 시작인 경우 사용자는 캔버스 단계로 들어가 세션을 시작하기만 하면 인앱 메시지를 수신할 수 있습니다. 트리거가 세션을 시작하지 않는 경우, 사용자는 캔버스 단계로 들어가 세션을 시작한 다음 트리거를 수행해야 인앱 메시지를 수신할 수 있습니다.
 
-!["트리거 동작으로 '특정 구매하기'를 선택했습니다.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
+!["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 다음 캔버스 기능은 인앱 메시지에서 사용할 수 없으므로 해당 기능이 켜져 있어도 인앱 메시지에 적용되지 않습니다.
 
@@ -235,7 +235,7 @@ You can no longer create or duplicate Canvases using the original editor. 이 �
 
 캔버스용 인앱 메시지의 사용자 지정 이벤트 속성이 지원됩니다. 그러나 이러한 속성은 인앱 메시지를 트리거하는 사용자 지정 이벤트 또는 구매에서 비롯되며, 이는 앞의 작업 경로가 아닌 메시지 단계에 있습니다.
 
-## 고려 사항
+## Considerations
 
 다음은 캔버스에서 인앱 메시지를 보낼 때 고려해야 할 몇 가지 사항입니다.
 
