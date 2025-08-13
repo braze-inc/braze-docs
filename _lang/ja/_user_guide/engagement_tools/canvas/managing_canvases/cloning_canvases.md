@@ -21,12 +21,12 @@ tool: Canvas
 2. キャンバスフローのワークフローでコピーを作成するキャンバスを特定します。**下書き**、**アクティブ**、または**停止**ステータスのキャンバスを複製できます。 
 3. [<i class="fas fa-ellipsis-vertical"></i>**その他のアクション**] をクリックし、[**キャンバスフローに複製**] を選択します。
 
-![][1]{: style="max-width:25%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_workflow.png %}){: style="max-width:25%;"}
 
 {: start="4"}
 4\.新しいキャンバスの名前を入力し、[**キャンバスフローに複製**] をクリックします。 
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_modal.png %}){: style="max-width:70%;"}
 
 これで、キャンバスには元のキャンバスとキャンバスフローの 2 つのバージョンができました。元のキャンバスのステータスは元のままで、複製したキャンバスのステータスは**下書き**になります。元のキャンバスには引き続きアクセスできますが、キャンバスの構築はキャンバスフローのワークフローを使用することをお勧めします。
 
@@ -36,7 +36,7 @@ tool: Canvas
 アクティブなキャンバスを複製した場合は、引き続き元のキャンバスを通じてユーザーを送ります。両方のキャンバスからユーザーにメッセージを重複して送信しないように、複製を作成する前にキャンバスを停止することをお勧めします。
 {% endalert %}
 
-![2 つのキャンバスがリストされたキャンバスダッシュボード:キャンバス V1 とその V2 コピー。キャンバス V1 の V2 コピーには、キャンバスフローのワークフローを使用していることを示すアイコンが表示されます。][3]
+![2 つのキャンバスがリストされたキャンバスダッシュボード:キャンバス V1 とその V2 コピー。キャンバスV1 のV2 コピーには、キャンバスフローワークフローを使用していることを示すアイコンがあります。]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 これで、キャンバスの複製をキャンバスフローのワークフローに作成できました。では、このアップデートされたエクスペリエンスでキャンバスのビルドを続けていきましょう。
 
@@ -53,7 +53,3 @@ API トリガーのキャンバスについては、エンジニアリングチ�
 元のキャンバスエディターとキャンバスフローのエクスペリエンスの違いについては、[キャンバス FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor) をご覧ください。
 
 
-[1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}
-[2]: {% image_buster /assets/img_archive/clone_to_v2_modal.png %}
-[3]: {% image_buster /assets/img_archive/clone_to_v2_dashboard.png %}
-[4]: {% image_buster /assets/img_archive/clone_to_flow_variant.png %}
