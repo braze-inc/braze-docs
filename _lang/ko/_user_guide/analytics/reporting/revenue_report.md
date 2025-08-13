@@ -16,7 +16,7 @@ tool: Reports
 
 날짜 범위, 보고할 앱, 매개변수를 선택하여 수익 보고서를 사용자 지정할 수 있습니다.
 
-!["매출 보고서" 페이지에 "매출"을 매개변수로 설정한 "시간 경과에 따른 실적" 그래프가 표시됩니다.][1]
+![The "Revenue Report" page showing the "Performance Over Time" graph with "Revenue" set as the parameter.]({% image_buster /assets/img/revenue_report.png %})
 
 ### 날짜 및 앱별로 필터링하기
 
@@ -80,8 +80,6 @@ tool: Reports
 
 선택한 기간 동안 구매한 제품 목록, 각 제품의 구매 수량, 각 제품이 창출한 매출은 **제품 분석** 표를 참조하세요.
 
-!["제품 분석" 테이블에는 "제품 이름", "구매한 제품", "매출" 열이 표시됩니다.][2]
+![The "Product Breakdown" table showing the columns "Product Name", "Purchased", and "Revenue".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}
