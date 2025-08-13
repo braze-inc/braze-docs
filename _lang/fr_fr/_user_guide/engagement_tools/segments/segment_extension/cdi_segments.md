@@ -31,11 +31,11 @@ Avant de créer votre premier segment CDI, configurez une nouvelle source connec
 
 Tout d'abord, créez une nouvelle [Extension de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), puis sélectionnez **Actualisation complète**.
 
-![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 Pour votre source de données, choisissez **Tables de données CDI**.
 
-![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 Dans le cadre de votre configuration CDI, vous pouvez choisir parmi différentes connexions à utiliser dans les segments CDI. Chaque connexion dispose d'un ensemble spécifique de tables de données. Votre équipe de développement peut configurer vos connexions et vos tables de données lors de la configuration de CDI.
 
