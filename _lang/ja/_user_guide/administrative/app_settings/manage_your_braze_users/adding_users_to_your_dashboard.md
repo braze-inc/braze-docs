@@ -29,13 +29,13 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 ユーザーのプロフィールに記載されている部署によって、Brazeから受け取る通信の種類が決まる。これにより、誰もがBrazeの使い方に関連したコミュニケーションやアラートだけを受け取ることができる。
 {% endalert %}
 
-![][2]
+![ユーザーの詳細のフィールド。]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. 管理者でないユーザーについては、このユーザーに付与する会社レベルとワークスペースレベルの[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions)を選択します。
 
-![][3]
+![カスタム権限のフィールドのセクションがある [ワークスペースレベルの権限]。]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### 電子メールアドレスの要件
 
@@ -53,11 +53,11 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 
 ユーザーをサスペンドするには、**Settings**> **Company Users**に移動し、ユーザー名を見つけて<i class="fa-solid fa-user-lock"></i>**Suspend**を選択します。
 
-![ユーザーを一時停止する][4]
+![ユーザーをサスペンドするオプション。]({% image_buster /assets/img_archive/suspend_user.png %})
 
 管理者は、リストからユーザー名を選択し、フッターの [**ユーザーを一時停止**] をクリックしてユーザーを一時停止することもできます。
 
-![ユーザー詳細の編集時にユーザーを一時停止する。][5]
+![ユーザー詳細の編集時にユーザーを一時停止する。]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## ユーザーアクセスと責任の割り当て
 
@@ -67,7 +67,7 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 
 ユーザーを削除するには、**「Settings（設定）**」＞「**Company Users（会社ユーザー）**」と進み、ユーザー名を見つけ、「<i class="fa fa-trash-can"></i> **Delete user（ユーザーを削除）**」を選択する。
 
-![ユーザーを削除する][34]
+![ユーザーを削除する]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 ユーザが削除された後、Braze は次のアカウントデータを保持しません。
 
@@ -87,7 +87,7 @@ Braze は次のアカウントデータを保持します。
 
 ## トラブルシューティング
 
-### "メールは既に&quot で取得されています。ユーザを追加しようとすると
+### ユーザーを追加しようとすると「メールはすでに使用されている」というエラーが表示される
 
 新しいユーザーを追加しようとしたときに、メールがすでに作成されているというエラーが表示されても、そのユーザーがユーザーリストで見つからない場合、そのユーザーは同じBrazeダッシュボードクラスタの別のインスタンス内に存在する可能性が高くなります。
 
@@ -96,12 +96,5 @@ Braze は次のアカウントデータを保持します。
 1. 新しいインスタンスでユーザーを作成する前に、他のインスタンスからユーザーを削除します
 2. 別の電子メール文字列(`testing+01@braze.com` など)または別の電子メールエイリアスを使用してユーザーを作成します。 
 
-`testing+01@braze.com` を使用しているときに受信ボックスでメッセージアクティベーションを受信しない場合は、IT チームに、その種のメールアドレスからのメッセージを受け入れることを確認します。一部の管理者は、`+` で電子メールアドレスに送信されたメッセージをフィルタリングします。
+`testing+01@braze.com` を使用しているときに受信トレイにメッセージアクティベーションが届かない場合は、IT チームに、そのような種類のメールアドレスからのメッセージを受信できるかどうかを確認します。一部の管理者は、`+` で電子メールアドレスに送信されたメッセージをフィルタリングします。
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-[27]: {% image_buster /assets/img/add-user.gif %} 「新規ユーザープロセスの追加」
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}
