@@ -1,7 +1,7 @@
 ---
 nav_title: 세그먼트 만들기
 article_title: 세그먼트 만들기
-page_order: 1
+page_order: 0
 page_type: tutorial
 description: "이 사용 방법 기사는 Braze를 사용하여 세그먼트를 설정하고 생성하는 방법을 안내합니다."
 tool: Segments
@@ -25,7 +25,7 @@ search_rank: 3
 - 세그먼트에 [팀]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)을 추가하세요.
 - [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)를 세그먼트에 추가하여 더 잘 정리하세요.
 
-![세그먼트 모달을 생성하여 세그먼트 이름을 "이탈 사용자"로 지정하고 세그먼트 설명을 "이것은 지난 14일 동안 비활성 사용자들을 타겟으로 하는 주요 비활성 사용자 세그먼트입니다."로 설정한 후 두 개의 버튼을 추가합니다: 취소 및 세그먼트 생성.][2]{: style="max-width:70%;"}
+![세그먼트 모달을 생성하여 세그먼트 이름을 "이탈 사용자"로 지정하고 세그먼트 설명을 "이것은 지난 14일 동안 비활성 사용자들을 타겟으로 하는 주요 비활성 사용자 세그먼트입니다."로 설정한 후 두 개의 버튼을 추가합니다: Cancel and Create Segment.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## 3단계: 앱 또는 플랫폼을 선택하세요
 
@@ -33,7 +33,7 @@ search_rank: 3
 
 예를 들어, iOS 기기에만 인앱 메시지를 보내려면 iOS 앱을 선택하세요. 이렇게 하면 iOS와 Android 기기를 모두 사용하는 사용자가 iOS 기기에서만 메시지를 받도록 할 수 있습니다. 특정 앱 목록에서 **앱이 없는 사용자** 옵션을 사용하면 세션이 없고 앱 데이터가 없는 사용자를 포함할 수 있습니다(일반적으로 사용자 가져오기 또는 REST API를 통해 생성됨).
 
-![세그먼트 세부 정보 패널에서 앱 사용 섹션의 "모든 앱의 사용자" 옵션이 선택되었습니다.][5]{: style="max-width:70%;"}
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## 4단계: 세그먼트에 필터 추가
 
@@ -47,11 +47,9 @@ Braze는 사용자가 앱을 처음 사용할 때까지 프로필을 생성하�
 
 필터는 필터 그룹으로 구성됩니다. 모든 필터는 최소한 하나의 필터를 포함하는 필터 그룹의 일부여야 합니다. 세그먼트는 여러 필터 그룹을 가질 수 있습니다. 하나를 추가하려면 **필터 그룹 추가**를 선택하십시오. 편집 필터 그룹 이름을 선택하여 아이콘을 선택하여 나타나는 아이콘을 선택하세요.
 
-![필터 그룹 이름 옆에 편집 아이콘이 있습니다.][14]{: style="max-width:70%;"}
+![Filter group with an editing icon next to its name.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
-각 필터 옆의 아이콘을 선택하여 필터 편집기를 축소하거나, 필터를 복제하거나, 필터를 제거하세요. 필터를 복제한 후 각 드롭다운 내에서 값을 조정할 수 있습니다.
-
-또한 각 필터 그룹 내의 아이콘을 사용하여 해당 필터 그룹과 그 안에 있는 필터를 복제하거나 세그먼트에서 해당 필터 그룹을 삭제할 수도 있습니다.
+Select the icons next to each filter to collapse the filter editor or duplicate individual filters. 필터를 복제한 후 각 드롭다운 내에서 값을 조정할 수 있습니다.
 
 #### AND 및 OR 세분화 논리 사용
 
@@ -73,7 +71,7 @@ Braze는 사용자가 앱을 처음 사용할 때까지 프로필을 생성하�
 Braze는 사용자가 앱을 처음 사용할 때까지 프로필을 생성하지 않으므로 아직 앱을 열지 않은 사용자를 타겟팅할 수 없습니다.
 {% endalert %}
 
-![세그먼트 필터 그룹은 AND 연산자와 함께 사용됩니다.][9]{: style="max-width:70%;"}
+![Segmenter filter groups with the AND operator.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 이미 **세그먼트 멤버십** 필터를 사용 중인 세그먼트는 다른 세그먼트에 추가되거나 중첩될 수 없습니다. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it.
@@ -91,13 +89,13 @@ Also, nesting segments like this adds complexity and can slow things down. Inste
 
 제외된 사용자는 세그먼트의 _도달 가능한 사용자 수_ 통계에 포함되지 않습니다.
 
-![두 개의 필터가 있는 제외 그룹입니다.][12]{: style="max-width:70%;"}
+![An exclusion group with two filters.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
 #### 세그먼트 테스트
 
 세그먼트에 앱과 필터를 추가한 후, 사용자가 세그먼트 기준에 맞는지 확인하기 위해 사용자를 조회하여 세그먼트가 예상대로 설정되었는지 테스트할 수 있습니다. 그렇게 하려면 **User Lookup** 섹션에서 사용자의 `external_id` 또는 `braze_id`를 검색하십시오.
 
-![사용자 조회 섹션에 검색 필드가 있습니다.][6]{: style="max-width:80%;"}
+![User Lookup section with a search field.]({% image_buster /assets/img_archive/user_lookup.png %})
 
 사용자 조회는 다음의 경우에 가능합니다:
 - 세그먼트 만들기
@@ -106,11 +104,11 @@ Also, nesting segments like this adds complexity and can slow things down. Inste
 
 사용자가 세그먼트, 필터 및 앱 기준과 일치하면 경고가 이를 나타냅니다.
 
-!["user007"의 사용자 조회는 "user007이 모든 세그먼트, 필터 및 앱과 일치합니다"라는 경고를 트리거합니다.][7]{: style=" max-width:80%;"}
+![A user lookup of "testuser" triggers an alert stating, "testuser matches all of the segments, filters, and apps.]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 사용자가 세그먼트, 필터 또는 앱 기준의 일부 또는 전체와 일치하지 않는 경우, 문제 해결을 위해 누락된 기준이 나열됩니다.
 
-!["user1234"의 사용자 조회는 "user1234가 다음 타겟팅 기준과 일치하지 않습니다:"라는 알림을 트리거하고 두 가지 누락된 기준을 표시합니다: 1년 이상의 근속 기간과 오늘이 기념일입니다.][8]{: style=" max-width:80%;"}
+![A user lookup with an alert stating, "test1 does not match the following targeting criteria:" and displays missing criteria.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### 단일 사용자 세그먼트
 
@@ -150,7 +148,7 @@ Braze에는 사용자 ID 또는 이메일 주소로 특정 사용자를 타겟�
 
 각 사용자에게 하나의 푸시 알림만 전송되도록 지정할 수 있습니다. [메시지를 작성할 때]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), **사용자가 마지막으로 사용한 기기로만 보내기**를 **추가 설정**에서 선택하십시오.
 
-![][13]{: style="max-width:60%;"}
+!["Addional settings" with a checkbox for only sending to the user's last used device.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### 고려사항
 
@@ -160,15 +158,3 @@ Braze에는 사용자 ID 또는 이메일 주소로 특정 사용자를 타겟�
     - 사용자가 전송 시점에 타겟 세그먼트에 포함되었을 수 있지만, 기기와 관련된 행동으로 인해 이후에는 해당 세그먼트에 포함되지 않을 수 있습니다. 이로 인해 사용자가 현재 필터 기준에 맞지 않더라도 캠페인 또는 캔버스를 받을 수 있습니다. <br><br>예를 들어, 사용자가 현재 OS 13.0을 사용 중이지만 가장 최신 앱 버전인 OS 10.0을 사용하는 사용자를 대상으로 하는 메시지를 받을 수 있습니다. 이 경우 사용자는 메시지를 보낼 당시 OS 10.0을 사용 중이었고 이후 OS 13.0으로 업그레이드했습니다.<br><br> 마찬가지로 사용자가 나중에 다른 앱 버전이 설치된 기기를 사용하는 경우 고객 프로필이 새로운 최신 앱 버전으로 업데이트됩니다. 이로 인해 사용자가 메시지를 보낼 때 자격을 갖추었음에도 불구하고 메시지를 받을 자격이 없는 것처럼 보일 수 있습니다.
 
 
-[1]: {% image_buster /assets/img_archive/Segment1.png %}
-[2]: {% image_buster /assets/img_archive/Segment2.png %}
-[3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
-[6]: {% image_buster /assets/img_archive/user_lookup.png %}
-[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
-[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
-[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
-[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
-[13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
-[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}
