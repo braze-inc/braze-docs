@@ -16,14 +16,14 @@ L'archivage des messages est disponible en tant que fonctionnalité supplémenta
 
 ## Fonctionnement
 
-Lorsque cette fonctionnalité est activée, si vous avez connecté un seau de stockage cloud à Braze et l'avez marqué comme destination d'exportation de données par défaut, Braze écrira un fichier JSON compressé au format gzip dans votre seau de stockage cloud pour chaque message envoyé à un utilisateur via vos canaux sélectionnés (email, SMS ou push). 
+Lorsque cette fonctionnalité est activée, si vous avez connecté un compartiment de stockage dans le cloud à Braze et l'avez marqué comme destination d'exportation de données par défaut, Braze écrira un fichier JSON gzippé dans votre compartiment de stockage dans le cloud pour chaque message envoyé à un utilisateur par le biais des canaux que vous avez sélectionnés (e-mail, SMS/MMS ou push). 
 
 Ce fichier contiendra les champs définis sous [Références de fichier](#file-references) et reflétera les messages finaux modélisés envoyés à l'utilisateur. Toutes les valeurs modélisées définies dans votre campagne (par exemple, {% raw %}`{{${first_name}}}`{% endraw %}) afficheront la valeur finale que l'utilisateur a reçue en fonction des informations de son profil. Vous pouvez ainsi conserver une copie du message envoyé pour satisfaire aux exigences de conformité, d'audit ou d'assistance à la clientèle.
 
 Si vous configurez des identifiants pour plusieurs fournisseurs de stockage cloud, l'archivage des messages n'exportera que vers celui explicitement marqué comme destination d'exportation de données par défaut. Si aucun défaut explicite n'est fourni et qu'un compartiment AWS S3 est connecté, l'archivage des messages sera chargé dans ce compartiment.
 
 {% alert important %}
-L'activation de cette fonctionnalité aura une incidence sur la vitesse de réception/distribution de vos messages, car le téléchargement du fichier est effectué immédiatement avant l'envoi du message afin d'en préserver l'exactitude. Cela introduit une latence supplémentaire dans le pipeline d’envoi de Braze, ce qui affecte la vitesse d’envoi.
+L'activation de cette fonctionnalité aura une incidence sur la vitesse de réception/distribution de vos messages, car le téléchargement du fichier est effectué immédiatement avant l'envoi du message afin d'en préserver l'exactitude. La latence introduite par l'archivage des messages dépendra du fournisseur de stockage en nuage ainsi que du débit et de la taille des documents enregistrés.
 {% endalert %}
 
 Le JSON sera enregistré dans votre compartiment de stockage en utilisant la structure de clé suivante :
@@ -49,7 +49,7 @@ Cette section vous guide dans la configuration de l'envoi de messages pour votre
 
 ### Étape 1 : Connecter un compartiment de stockage Cloud
 
-Si vous ne l'avez pas encore fait, connectez un compartiment de stockage Cloud à Braze. Pour les étapes, consultez la documentation de notre partenaire sur [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/).
+Si vous ne l'avez pas encore fait, connectez un compartiment de stockage Cloud à Braze. Pour les étapes, consultez la documentation de notre partenaire sur [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 ### Étape 2 : Sélectionnez les canaux pour l'archivage des messages
 
@@ -61,7 +61,7 @@ Pour sélectionner des chaînes :
 2. Sélectionnez vos chaînes.
 3. Sélectionnez **Enregistrer les modifications**.
 
-![La page d'archivage des messages propose trois canaux à sélectionner : Email, Push et SMS.][1]
+![La page d'archivage des messages propose trois canaux à sélectionner : E-mail, Push et SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 Si vous ne voyez pas **Archivage des messages** dans **Paramètres**, confirmez que votre entreprise a acheté et activé l'archivage des messages.
@@ -107,7 +107,7 @@ Le champ `extras` mentionné dans cette charge utile provient des paires clé-va
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab SMS %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -116,7 +116,7 @@ Le champ `extras` mentionné dans cette charge utile provient des paires clé-va
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
   "provider": StringOfProviderName,
-  "media_urls": ArrayOfString,
+  "media_urls": ArrayOfString, // indicates a message is MMS
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiId, // may not be available
@@ -168,7 +168,7 @@ Les modifications effectuées après que l'envoi de messages a quitté Braze ne 
 
 ### Quels sont les messages sous la valeur « non associé » dans le parcours de campagne ?
 
-Lorsqu'un message est envoyé en dehors d'une campagne ou d'un Canvas, l'ID de la campagne dans le nom du fichier sera "non associé". Cela se produit lorsque vous envoyez des messages tests à partir du tableau de bord, lorsque Braze envoie des réponses automatiques SMS, ou lorsque les messages envoyés via l’API ne spécifient pas d’ID de campagne.
+Lorsqu'un message est envoyé en dehors d'une campagne ou d'un Canvas, l'ID de la campagne dans le nom du fichier sera "non associé". Cela se produit lorsque vous envoyez des messages de test à partir du tableau de bord, lorsque Braze envoie des réponses automatiques par SMS/MMS ou lorsque les messages envoyés via l'API ne spécifient pas d'ID de campagne.
 
 ### Comment faire pour en savoir plus sur cet envoi ?
 
@@ -186,4 +186,11 @@ Si vos identifiants de stockage sur le cloud deviennent invalides à un moment d
 
 La copie rendue est téléchargée immédiatement avant l'envoi du message à l'utilisateur. En raison des délais de téléchargement du stockage en nuage, il peut y avoir un décalage de quelques secondes entre l'horodatage `sent_at` de la copie rendue et l'heure réelle de l'envoi.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}
+### Puis-je créer un nouveau compartiment spécifiquement pour l'archivage des messages tout en conservant le compartiment actuel utilisé pour les données de Currents ?
+
+Non. Si vous souhaitez créer ces compartiments spécifiques, soumettez vos [commentaires sur le produit]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+### Les données archivées sont-elles écrites dans un dossier dédié dans un compartiment existant, de la même manière que les exportations de données de Currents sont structurées ?
+
+Les données sont écrites dans une section du compartiment ( `sent_messages` ). Reportez-vous à la section [Fonctionnement](#how-it-works) pour plus de détails.
+
