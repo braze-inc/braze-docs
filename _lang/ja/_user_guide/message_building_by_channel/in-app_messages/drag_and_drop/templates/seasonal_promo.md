@@ -18,7 +18,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートとして [**背景画像付きの季節限定プロモーション**] を選択し、その後 [**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方をサポートしている。
 
-![アプリ内メッセージエディターと季節プロモーションのテンプレート][img1]
+![アプリ内メッセージエディターと季節プロモーションのテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %})
 
 ### ステップ2:メッセージスタイルを設定する
 
@@ -28,23 +28,19 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 季節限定プロモーションを作り始めるには、エディターでボタンコンポーネントを選択します。次に、サイドメニューを使って、ユーザーがボタンを選択したときに移動する場所を選択します。テンプレートのデフォルトはメッセージを閉じることだが、アプリ内の特定のページ（宣伝している商品など）に移動することもできる。
 
-![ボタンエレメントをカスタマイズするためのサイドメニューを備えたアプリ内メッセージエディター][img2]
+![ボタンエレメントをカスタマイズするためのサイドメニューを備えたアプリ内メッセージエディター]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %})
 
 また、**「ページ」**セクションで製品アナウンスに追加のメッセージを追加し、それらをリンクさせて連続した流れを作ることもできる。例えば、製品の機能を簡単に説明し、ユーザーを製品ページに誘導するボタンで終わる一連のメッセージをまとめることができる。その方法については、[ページを接続する]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together)を参照してください。
 
 ### ステップ 4:メッセージにスタイルを設定する
 
-ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、季節限定プロモーションの外観と感触をカスタマイズします。**メッセージコンテナー**メニューでデフォルトの背景画像 URL を置き換えて独自の背景画像を追加するか、URL を削除して[メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)から画像を選択します。
+ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、季節限定プロモーションの外観と感触をカスタマイズします。**メッセージコンテナー**メニューでデフォルトの背景画像 URL を置き換えて独自の背景画像を追加するか、URL を削除して[メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)から画像を選択します。
 
-![][img3] 背景画像を選択するサイドメニューを備えたアプリ内メッセージエディター。]
+![背景画像を選択するサイドメニューを備えたアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %})
 
 ## 結果の分析
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %}
-[img3]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %} 
 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components
