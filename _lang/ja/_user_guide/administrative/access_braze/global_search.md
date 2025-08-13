@@ -10,7 +10,7 @@ description: "Braze のグローバル検索について学習しましょう。
 
 検索バーを使用して、Braze ダッシュボード内で作業やその他の情報を検索できます。検索バーは Braze ダッシュボードの最上部にあります。検索バーをクリックするか、Windows の場合は <kbd>Ctrl</kbd>+<kbd>K</kbd> キー、Mac の場合は <kbd>⌘</kbd>+<kbd>K</kbd> を押すと、検索バーに直接ジャンプします。
 
-![キーワード"promo"を検索し、キャンペーンと、ページプロモーションコードを含む用語プロモーションを含むアイテムを表示します。][1]
+![キーワード「promo」の検索結果。「Promotion Codes」というページなど、「promo」という用語を含むキャンペーンとアイテムを示す。]({% image_buster /assets/img/navigation/global_search_new.png %})
 
 ## 検索できる項目
 
@@ -66,13 +66,13 @@ table td {
 
 検索メニューから、最近アクセスしたコンテンツに再度アクセスできます。検索インターフェイスに、Braze プラットフォーム全体にわたって操作したアイテムを含め、最近開いた結果が検索バーの下に表示されます。これにより、以前に表示したページ、キャンペーン、キャンバス、セグメント、またはメールテンプレートに戻ることができるため、少ないクリック回数で、中断したところから再開できます。
 
-![展開されたページを検索し、ユーザの最近開いたページとBraze コンテンツを表示します。][2]
+![展開された検索。ユーザーの最近開いたページと Braze コンテンツが表示される。]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
 ### 名前が変更されたページの検索
 
 検索では、[更新されたナビゲーション]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)で名前が変更されたページの同義語が認識されます。例えば、「Currents」を検索すると、そのページの名前が変更されたため、「データのエクスポート」が表示されます。
 
-!["Data Export"ユーザが"Currents.&quot を検索した場所。][3]
+![ユーザーが「Currents」を検索した検索結果に「Data Export」が表示されている。]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 <!---
 
@@ -88,15 +88,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 **Show active and 下書き only**を選択すると、検索結果にアクティブコンテンツと下書きコンテンツを含めることができます。デフォルトでは、切り替えが有効になっており、アーカイブ済みの内容を含むすべてのコンテンツが表示されます。
 
-!["有効と下書きのみを表示"を切り替えます。][4]
+![[アクティブおよび下書きのみを表示] トグル。]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
 
 ### 絵文字の検索
 
 Braze で作業に名前を付けるときに絵文字を使用している場合、絵文字を検索できます。絵文字を検索クエリとして使用できます。😎
 
-[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
-[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
-[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
-[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
 
