@@ -77,15 +77,15 @@ Vous devez créer des instances d’application distinctes pour chaque version d
 
 #### Équipes
 
-Les [équipes][1] peuvent être constituées en fonction de l'emplacement/localisation de la base de clients, de la langue et d'attributs personnalisés, de sorte que les membres de l'équipe et les non-membres aient un accès différent aux fonctionnalités d'envoi de messages et aux données des clients.
+Les [équipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) peuvent être constituées en fonction de l'emplacement/localisation de la base de clients, de la langue et d'attributs personnalisés, de sorte que les membres de l'équipe et les non-membres aient un accès différent aux fonctionnalités d'envoi de messages et aux données des clients.
 
 #### Autorisations pour les utilisateurs de Braze
 
-Les espaces de travail ont des définitions indépendantes en termes d’accès et d’autorisations pour les utilisateurs. Les [autorisations utilisateur][2] vous permettent de créer des contrôles granulaires concernant l'accès d'un utilisateur ou d'une équipe au tableau de bord au sein d'un espace de travail unique.
+Les espaces de travail ont des définitions indépendantes en termes d’accès et d’autorisations pour les utilisateurs. Les [autorisations utilisateur]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) vous permettent de créer des contrôles granulaires concernant l'accès d'un utilisateur ou d'une équipe au tableau de bord au sein d'un espace de travail unique.
 
 #### Connecteurs de courant
 
-L'outil [Braze Currents][3] est un flux de données en temps réel de vos événements d'engagement qui constitue l'exportation la plus robuste mais aussi la plus granulaire de la plateforme Braze. Les connecteurs Currents sont inclus dans certains forfaits Braze, et vous en avez peut-être reçu un au départ, dans l'hypothèse d'un espace de travail unique.
+L'outil [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) est un flux de données en temps réel de vos événements d'engagement qui constitue l'exportation la plus robuste mais aussi la plus granulaire de la plateforme Braze. Les connecteurs Currents sont inclus dans certains forfaits Braze, et vous en avez peut-être reçu un au départ, dans l'hypothèse d'un espace de travail unique.
 
 Lorsque vous décidez de créer des espaces de travail séparés ou combinés, il est important de tenir compte du nombre de connecteurs Currents dont vous disposez, car les connecteurs Currents ne sont pas partagés entre les espaces de travail. 
 
@@ -93,7 +93,7 @@ Par exemple, si vous disposez d'espaces de travail distincts pour les environnem
 
 #### Profils utilisateur
 
-Toutes les données persistantes associées à un utilisateur sont stockées dans son [profil utilisateur][4]. Cependant, les profils d'utilisateurs sont également une ressource formidable pour la résolution des problèmes et les tests, car vous pouvez facilement accéder à des informations sur l'historique d'engagement d'un utilisateur, son appartenance à un segment, son appareil et son système d'exploitation.
+Toutes les données persistantes associées à un utilisateur sont stockées dans son [profil utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Cependant, les profils d'utilisateurs sont également une ressource formidable pour la résolution des problèmes et les tests, car vous pouvez facilement accéder à des informations sur l'historique d'engagement d'un utilisateur, son appartenance à un segment, son appareil et son système d'exploitation.
 
 #### Segments, campagnes et canevas
 
@@ -205,7 +205,7 @@ Le tableau suivant décrit les avantages et les inconvénients de ces deux appro
         <td>Duplication de contenu</td>
         <td>S.O.</td>
         <td>Vous ne pouvez pas dupliquer des segments, des campagnes de cartes de contenu ou de push, ou des canevas dans les espaces de travail.</td>
-        <td>Vous pouvez [dupliquer des campagnes dans les espaces de travail]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
+        <td>Vous pouvez [dupliquer des campagnes dans les espaces de travail]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
         <td>S.O.</td>
     </tr>
     <tr>
@@ -240,10 +240,5 @@ Vous devez avoir plus d'un utilisateur Braze avec des droits d'administrateur po
 
 ## Étapes suivantes
 
-Après avoir déterminé votre plan d'espace de travail, il est temps de créer votre espace de travail et d'ajouter des instances d'apps. Pour connaître la marche à suivre, consultez la rubrique [Création et gestion des espaces de travail][5].
+Après avoir déterminé votre plan d'espace de travail, il est temps de créer votre espace de travail et d'ajouter des instances d'apps. Pour connaître la marche à suivre, consultez la rubrique [Création et gestion des espaces de travail]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/workspaces/
