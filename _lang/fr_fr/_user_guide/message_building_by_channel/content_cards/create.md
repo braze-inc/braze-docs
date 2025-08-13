@@ -2,7 +2,7 @@
 nav_title: Création d’une carte de contenu
 article_title: Création d’une carte de contenu
 page_order: 0
-description: "Le présent article de référence explique comment créer, composer, configurer et envoyer des cartes de contenu via des campagnes Braze et des Canvas."
+description: "Cet article de référence explique comment créer, composer, configurer et envoyer des cartes de contenu à l'aide de campagnes et de canevas Braze."
 tool:
   - Canvas
   - Campaigns
@@ -66,15 +66,15 @@ Pour en savoir plus sur le comportement et l'aspect attendus de chaque type, rep
 
 Vous pouvez modifier tous les aspects du contenu et du comportement de votre message dans l'onglet **Composer de** l'éditeur de message.
 
-![Exemple de carte de contenu dans l'onglet Composer de l'éditeur de message.][24]
+![Exemple de carte de contenu dans l'onglet Composer de l'éditeur de messages.]({% image_buster /assets/img/content_card_compose.png %})
 
 Le contenu de cette section varie en fonction du **Content-Type** choisi à l'étape précédente, mais peut inclure l'une des options suivantes :
 
 #### Langue
 
-Sélectionnez **Ajouter des langues** pour ajouter les langues de votre choix dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Pour obtenir la liste complète des langues que vous pouvez utiliser, reportez-vous à la section [Langues prises en charge.][18]
+Sélectionnez **Ajouter des langues** pour ajouter les langues de votre choix dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Pour obtenir la liste complète des langues que vous pouvez utiliser, reportez-vous à la section [Langues prises en charge.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)
 
-![Une fenêtre avec l'anglais, l'espagnol et le français sélectionnés pour les langues, et le titre, la description et le texte du lien sélectionnés pour les champs à internationaliser.][2]{: style="max-width:70%;"}
+![Une fenêtre avec l'anglais, l'espagnol et le français sélectionnés pour les langues, et le titre, la description et le texte du lien sélectionnés pour les champs à internationaliser.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
 ##### Création d'envois de messages de droite à gauche
 
@@ -92,13 +92,13 @@ Ajoutez une image à votre carte de contenu en sélectionnant **Ajouter une imag
 
 Une carte épinglée s’affiche en haut d’un flux d’un utilisateur et ne peut pas être rejetée par l’utilisateur. Si plus d’une carte est épinglée dans le flux d’un utilisateur, les cartes épinglées sont affichées dans l’ordre chronologique. Une fois qu'une carte a été envoyée, vous ne pouvez pas mettre à jour rétroactivement son option épinglée. Modifier cette option après l’envoi d’une campagne n’affectera que les futurs envois .
 
-![Aperçu côte à côte de la carte de contenu dans Braze pour mobile et Web avec l’option « Épingler cette carte en haut du fil » sélectionnée.][1]{:style="border:none"}
+![Aperçu côte à côte de la carte de contenu dans Braze pour mobile et Web avec l'option "Épingler cette carte en haut du flux" sélectionnée.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### Comportement lors du clic
 
 Lorsque votre client clique sur un lien présenté dans la carte, votre lien peut les amener plus en profondeur dans votre application, ou vers un autre site. Si vous choisissez un comportement "on-click" pour votre carte de contenu, n'oubliez pas de mettre à jour votre **texte de lien** en conséquence.
 
-Les actions suivantes sont disponibles pour les liens de carte de contenu :
+Les actions suivantes sont disponibles pour les liens de la carte de contenu :
 
 | Action | Description |
 |---|---|
@@ -108,21 +108,13 @@ Les actions suivantes sont disponibles pour les liens de carte de contenu :
 | Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) à définir pour l'utilisateur actuel. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-**Remarque** : Les options __Log Custom Event__ et __Log Custom Attribute__ requièrent la compatibilité avec la version suivante du SDK :
+Les options **Log Custom Event** et **Log Custom Attribute** nécessitent la compatibilité avec la version suivante du SDK :
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-{% alert warning %}
-La taille totale des champs des messages de la carte de contenu est limitée à 2 Ko, calculée en additionnant la longueur en octets des champs suivants : Titre, message, URL de l'image, texte du lien, URL du ou des liens et paires clé-valeur (noms + valeurs). Les messages qui dépassent cette taille ne seront pas envoyés. Notez que cela ne concerne pas la taille de l’image mais plutôt la longueur de l’URL de l’image.
-{% endalert %}
-
-{% alert warning %}
-Chaque utilisateur peut avoir jusqu'à 250 cartes de contenu non expirées dans son flux à un moment donné. Lorsque cette limite est dépassée, Braze cesse de renvoyer les cartes les plus anciennes, même si elles ne sont pas lues. Les cartes retirées sont également prises en compte dans cette limite de 250 cartes, ce qui signifie qu'un nombre élevé de cartes retirées peut réduire l'espace disponible pour les nouvelles cartes.
-{% endalert %}
-
 ## Étape 4 : Configurer des paramètres supplémentaires (facultatif)
 
-Vous pouvez utiliser des [paires clé-valeur][19] pour créer des catégories pour vos cartes, créer [plusieurs flux de cartes de contenu]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) et personnaliser la façon dont les cartes sont triées.
+Vous pouvez utiliser des [paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) pour créer des catégories pour vos cartes, créer [plusieurs flux de cartes de contenu]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) et personnaliser la façon dont les cartes sont triées.
 
 Pour ajouter des paires clé-valeur à votre message, accédez à l'onglet **Paramètres** et sélectionnez **Ajouter une nouvelle paire.**
 
@@ -133,7 +125,7 @@ Pour ajouter des paires clé-valeur à votre message, accédez à l'onglet **Par
 
 Construisez le reste de votre campagne. Vous trouverez dans les sections suivantes des informations complémentaires sur la manière d'utiliser au mieux nos outils pour créer des cartes de contenu.
 
-#### Choisir un calendrier ou un déclencheur pour la livraison
+#### Choisir une planification ou un déclencheur pour la livraison
 
 Les cartes de contenu peuvent être diffusées en fonction d'une heure planifiée, d'une action ou d'un déclencheur API. Pour en savoir plus, reportez-vous à la section [Planification de votre campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -149,7 +141,7 @@ Pour les campagne de cartes de contenu avec une livraison planifiée, vous pouve
 
 #### Choisir les utilisateurs à cibler
 
-Ensuite, [ciblez les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) en choisissant des segments ou des filtres pour réduire votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
+Ensuite, [ciblez les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) en choisissant des segments ou des filtres pour réduire votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
 
 #### Sélectionner des événements de conversion
 
@@ -176,15 +168,27 @@ Ensuite, consultez la section [Rapports sur les cartes de contenu]({{site.baseur
 
 ## Choses à savoir
 
+### Taille des champs de messages
+
+Les champs des messages de la carte de contenu peuvent avoir une taille totale maximale de 2 Ko. Elle est calculée en additionnant la longueur en octets des champs suivants : **Titre**, **message**, **URL de l'image**, **texte du lien**, **URL du ou des liens** et **paires clé-valeur** (noms et valeurs). Les messages qui dépassent 2 KB ne seront pas envoyés. Notez que cela n’inclut pas la taille de l’image, mais plutôt la longueur de l’URL de l’image.
+
+{% alert important %}
+Lors des envois de test, les cartes de contenu qui dépassent 2 Ko peuvent encore être livrées et s'afficher correctement.
+{% endalert %}
+
+### Nombre de cartes dans le flux
+
+Chaque utilisateur peut avoir jusqu'à 250 cartes de contenu non expirées dans son flux à un moment donné. Lorsque cette limite est dépassée, Braze cesse de renvoyer les cartes les plus anciennes, même si elles ne sont pas lues. Les cartes retirées sont également prises en compte dans cette limite, ce qui signifie qu'un nombre élevé de cartes retirées peut réduire l'espace disponible pour les nouvelles cartes.
+
 ### Comportement d’envoi
 
-Une fois que les cartes de contenu ont été envoyées, elles attendent dans une "boîte de réception", prêtes à être remises à l'utilisateur (comme c'est le cas pour les e-mails). Une fois que le contenu a été introduit dans la carte de contenu (au moment de l'affichage), le contenu ne peut pas être modifié pendant sa durée de vie. Cela s'applique même si vous appelez une API par l'intermédiaire du contenu connecté et que les données de l'endpoint changent. Ces données ne seront pas mises à jour. On peut seulement arrêter de les envoyer à des nouveaux utilisateurs et les retirer des flux des utilisateurs. Si vous modifiez une campagne, seules les futures cartes envoyées auront la mise à jour.
+Une fois que les cartes de contenu ont été envoyées, elles attendent dans une "boîte de réception", prêtes à être remises à l'utilisateur (comme c'est le cas pour les e-mails). Une fois que le contenu a été introduit dans la carte de contenu (au moment de l'affichage), il ne peut plus être modifié pendant sa durée de vie. Cela s'applique même si vous appelez une API par l'intermédiaire du contenu connecté et que les données de l'endpoint changent. Ces données ne seront pas mises à jour. On peut seulement arrêter de les envoyer à des nouveaux utilisateurs et les retirer des flux des utilisateurs. Si vous modifiez une campagne, seules les futures cartes envoyées auront la mise à jour.
 
-Si vous devez retirer d'anciennes cartes, vous devez d'abord arrêter la campagne. Pour arrêter une campagne, ouvrez votre campagne de carte de contenu et sélectionnez **Arrêter la campagne**. Lors de l’arrêt de la campagne, vous serez invité(e) à décider comment gérer les utilisateurs qui ont déjà reçu votre carte. 
+Si vous devez retirer d'anciennes cartes, vous devez d'abord arrêter la campagne. Pour arrêter une campagne, ouvrez votre campagne de carte de contenu et sélectionnez **Arrêter la campagne**. En arrêtant la campagne, vous devrez décider comment traiter les utilisateurs qui ont déjà reçu votre carte. 
 
 Si vous souhaitez supprimer la carte de contenu des flux de vos utilisateurs, sélectionnez **Supprimer la carte du flux.** La carte sera alors masquée par le SDK lors de la prochaine synchronisation.
 
-![Dialogue de confirmation de la désactivation de la carte de contenu][25]{: style="max-width:75%" }
+![Dialogue de confirmation de la désactivation de la carte de contenu]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
 Vous voulez que vos cartes de contenu donnent l'impression de durer plus longtemps que les 30 jours maximum ? Une façon d'y parvenir est de procéder comme suit :<br><br>
@@ -196,9 +200,11 @@ Vous voulez que vos cartes de contenu donnent l'impression de durer plus longtem
 
 ### Événements de retrait de carte {#action-based-card-removal}
 
-Certaines cartes de contenu sont pertinentes jusqu’à ce que l’utilisateur effectue une action. Par exemple, une carte incitant les utilisateurs à activer leur compte ne doit pas être affichée une fois que l'utilisateur a terminé cette tâche d'onboarding.
+Certaines cartes de contenu ne sont pertinentes que jusqu'à ce que l'utilisateur effectue une action. Par exemple, une carte incitant les utilisateurs à activer leur compte ne doit pas être affichée une fois que l'utilisateur a terminé cette tâche d'onboarding.
 
-Dans une campagne ou un message Canvas, vous pouvez éventuellement ajouter un **événement de retrait** pour spécifier les événements personnalisés ou les achats qui doivent entraîner le retrait des cartes précédemment envoyées du flux de cet utilisateur - déclenché par le SDK ou l'API REST.
+Dans une campagne ou un message Canvas, vous pouvez éventuellement ajouter un **événement de retrait** pour spécifier les événements personnalisés ou les achats qui doivent entraîner le retrait des cartes précédemment envoyées du flux de cet utilisateur, déclenché par le SDK ou l'API REST.
+
+Les cartes seront supprimées lors des actualisations suivantes, une fois que Braze aura traité l'événement spécifié.
 
 {% alert tip %}
 Vous pouvez spécifier plusieurs événements personnalisés ou achats avant qu’une carte soit retirée du flux des utilisateurs. Lorsque l'utilisateur effectue l' **une de** ces actions, toutes les cartes existantes envoyées par les cartes de la campagne sont supprimées. Toutes les futures cartes éligibles continueront d’être envoyées conformément au calendrier du message.
@@ -218,7 +224,7 @@ Notez également que les cartes de contenu utilisant la [première impression]({
 
 #### Option 1 : Duplication de la campagne
 
-Une approche consiste à archiver la campagne et à supprimer les cartes actives du flux. Vous pouvez ensuite dupliquer la campagne et la lancer avec des mises à jour afin que tous les utilisateurs éligibles reçoivent les cartes mises à jour.
+Une approche consiste à archiver la campagne et à supprimer les cartes actives du flux. Vous pouvez ensuite dupliquer la campagne et la lancer avec des mises à jour afin que tous les utilisateurs éligibles reçoivent les cartes actualisées.
 
 * Si les utilisateurs ne doivent jamais être rééligibles pour une carte de contenu, vous pouvez filtrer les utilisateurs qui n'ont pas reçu la version précédente de la carte de contenu en réglant le filtre `Received Message from Campaign` sur la condition `Has Not`.
 * Si les utilisateurs qui ont reçu la carte précédente doivent être rééligibles dans X jours, vous pouvez définir le filtre pour `Last Received Message from specific campaign` à plus de X jours **OU** `Received Message from Campaign` avec la condition `Has Not`.
@@ -238,14 +244,14 @@ Nous recommandons cette option pour les messages dans lesquels vous affichez le 
 
 #### Option 2 : Arrêter et relancer
 
-Si la rééligibilité d'une carte est activée, vous pouvez choisir de :
+Si la rééligibilité d'une carte est activée, vous pouvez choisir de.. :
 
 1. Arrêter votre campagne.
 2. Supprimer les cartes de contenu actives des flux des utilisateurs.
 3. Modifier votre campagne si nécessaire.
 4. Redémarrer votre campagne.
 
-Avec cette approche, les utilisateurs nouvellement éligibles recevront la nouvelle carte et les anciens destinataires recevront la nouvelle carte lorsqu'ils seront à nouveau éligibles.
+Selon cette approche, les utilisateurs nouvellement éligibles recevront la nouvelle carte, et les anciens destinataires recevront la nouvelle carte lorsqu'ils seront à nouveau éligibles.
 
 ##### Cas d’utilisation
 
@@ -257,16 +263,10 @@ Imaginons que vous ayez une campagne déclenchée par le démarrage d'une sessio
 * **Destinataires actuels :** Les utilisateurs qui ont déjà reçu la carte ne recevront pas les cartes mises à jour tant qu'ils ne seront pas rééligibles. Si la rééligibilité est désactivée, ils ne recevront jamais la nouvelle carte.
 
 {% alert tip %}
-Nous vous recommandons d'utiliser cette option pour les messages uniques dans un centre de notification ou une boîte de réception (comme les promotions), lorsqu'il est important que les analyses/analytiques soient unifiées, ou lorsque l'actualité du message n'est pas un problème (par exemple, les destinataires existants peuvent attendre la fenêtre d'éligibilité avant de voir les cartes adjectives mises à jour).
+Nous vous recommandons d'utiliser cette option pour les messages uniques dans un centre de notification ou une boîte de réception (comme les promotions), lorsqu'il est important que les analyses/analytiques soient unifiées, ou lorsque l'actualité du message n'est pas un problème (par exemple, les destinataires existants peuvent attendre la fenêtre d'éligibilité avant de voir les cartes mises à jour).
 {% endalert %}
 
 #### Garder les cartes dans les fils d'actualité des utilisateurs
 
-Si vous le souhaitez, vous pouvez conserver une campagne de cartes de contenu active dans le fil d'actualité des utilisateurs et ne pas la supprimer. Lorsque la campagne en ligne est modifiée, la version précédente non modifiée de la fiche de campagne reste en ligne, et seuls les utilisateurs qui répondent aux critères après les modifications verront la nouvelle version. Cependant, les utilisateurs déjà exposés à la campagne peuvent voir deux versions de la carte.
+Si vous le souhaitez, vous pouvez conserver une campagne cartes de contenu active dans le flux des utilisateurs et ne pas la supprimer. Lorsque la campagne en ligne est modifiée, la version précédente non modifiée de la fiche de campagne reste en ligne, et seuls les utilisateurs qui répondent aux critères après les modifications verront la nouvelle version. Cependant, les utilisateurs déjà exposés à la campagne peuvent voir deux versions de la carte.
 
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/content_card_compose.png %}
-[25]: {% image_buster /assets/img/cc_remove.png %}
-[1]: {% image_buster /assets/img/cc_pin_to_top.png %}
-[2]: {% image_buster /assets/img/add_languages.png %}
