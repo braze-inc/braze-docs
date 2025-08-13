@@ -25,7 +25,7 @@ Dans le tableau de bord de Braze, allez dans **Messagerie** > **Canvas** et sél
 
 Dans l'éditeur de canvas, sélectionnez **Modifier le canvas** ou **Modifier le brouillon**, selon que votre canvas est actif ou en brouillon. Développez le menu déroulant **Enregistrer comme brouillon** dans le pied de page et sélectionnez **Enregistrer comme modèle**.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Étape 3 : Enregistrer votre modèle
 
@@ -45,7 +45,7 @@ Si vous utilisez l'ancienne navigation, vous trouverez cette page sous **Engagem
 
 Sélectionnez **Créer un modèle** et commencez à configurer les détails de votre Canvas. Vous pouvez commencer par donner un nom à votre modèle Canvas.
 
-![Exemple de canvas nommé « Modèle Canvas pour ventes annuelles » avec la description « Utilisation pour la promotion annuelle du printemps ».][1]
+![Un exemple de canvas nommé "Annual sale Canvas template" avec la description "Use for annual spring promotion".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Étape 3 : Personnaliser votre modèle
 
@@ -66,7 +66,7 @@ Il existe deux façons d'utiliser votre modèle lors de la composition d'un canv
 
 Braze met à votre disposition une sélection de modèles de Canvas que vous pouvez référencer et utiliser comme meilleures pratiques pour les cas d'utilisation courants. Bien que ces modèles ne puissent pas être modifiés, vous pouvez les visualiser dans **Modèles** > **Modèles Braze** ou les utiliser dans vos canvas.
 
-![Les modèles de Braze dans la section Modèles de canevas avec six modèles disponibles.][3]
+![Modèles de Braze dans la section Modèles de canevas avec six modèles disponibles.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Sélectionnez l'un des modèles suivants pour vous y référer ou l'utiliser comme canevas.
 
@@ -162,6 +162,3 @@ Oui, vous pouvez enregistrer les étapes incomplètes en tant que modèle de can
 
 Oui, vous pouvez enregistrer les paramètres du générateur de canvas dans un modèle de canvas. Par exemple, si vous prévoyez d'utiliser souvent une combinaison de segments et de filtres, vous pouvez enregistrer ces paramètres d'**audience cible** dans le cadre de votre modèle Canvas.
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}
-[3]: {% image_buster /assets/img/braze_canvas_templates.png %}
