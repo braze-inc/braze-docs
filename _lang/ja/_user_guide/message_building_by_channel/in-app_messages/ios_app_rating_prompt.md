@@ -24,7 +24,7 @@ Apple のガイドラインによると、アプリのレビュープロンプ�
 
 このアプローチでは、ユーザーがApp Storeを訪れてレビューを追加するよう促したい。そのためには、App Storeに[ディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)するアプリ内メッセージキャンペーンを作成する。
 
-![2 つのモバイル画面を並べて表示。1つ目は、App Storeでアプリを評価するようユーザーに求めるアプリ内メッセージだ。もうひとつは、そのアプリのiOS App Storeページだ。][1]
+![2 つのモバイル画面を並べて表示。1つ目は、App Storeでアプリを評価するようユーザーに求めるアプリ内メッセージだ。2つ目は、そのアプリの iOS App Store ページである。]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### アプローチ2：ソフトプライミング
 
@@ -32,7 +32,7 @@ Apple のガイドラインによると、アプリのレビュープロンプ�
 
 詳しい手順については、[カスタム App Store レビュープロンプト]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt)を参照してください。
 
-![2 つのアプリ内メッセージを並べて表示。1 つ目は、アプリを評価する時間があるかどうかを尋ね、ユーザーにアプリを評価してもらうよう促します。2 つ目は、iOS App Store のネイティブレビューメッセージで、ユーザーがアプリを評価するために選択できる 5 つ星のスケールが表示されます。][2]
+![2 つのアプリ内メッセージを並べて表示。1 つ目は、アプリを評価する時間があるかどうかを尋ね、ユーザーにアプリを評価してもらうよう促します。2つ目はiOSのApp Storeのネイティブレビューメッセージで、ユーザーがアプリを評価するために選択できる5つ星のスケールが表示される。]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 ユーザーはネイティブの App Store レビュープロンプトを介して評価を提出し、アプリを離れることなく、レビューを書き込んで提出することができます。
 
@@ -44,5 +44,3 @@ Apple のガイドラインによると、アプリのレビュープロンプ�
 iOS ネイティブのアプリレーティングプロンプトを模倣したカスタムの HTML アプリ内メッセージは作成しないでください。これは Apple のガイドラインに違反する行為です。
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}
