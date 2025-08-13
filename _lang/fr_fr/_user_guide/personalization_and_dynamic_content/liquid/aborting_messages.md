@@ -8,7 +8,7 @@ description: "Cet article de référence présente l’abandon des messages Liqu
 
 # Abandonner des messages
 
-> Vous pouvez, de manière facultative, abandonner des messages Liquid au sein de conditionnelles. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
+> En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
 
 {% alert note %}
 Si une étape du message est annulée dans un canvas, l'utilisateur **ne quitte pas** le canvas et **passe** à l’étape suivante.
@@ -59,15 +59,12 @@ Vous pouvez également faire en sorte que le message d'abandon enregistre quelqu
 ```
 {% endraw %}
 
-![Le journal des erreurs de message dans la console de développement avec un message d’abandon de « langue était nulle ».][26]
+![Message d'erreur dans la console de développement avec un message d'abandon "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Demande d'envoi de messages d'annulation
 
 Vous pouvez utiliser [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou votre propre entrepôt de données, s'il est connecté à Braze, pour rechercher des messages d'abandon spécifiques qui sont déclenchés lorsque la logique Liquid entraîne l'abandon d'un message.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+## Considérations
+
+L'étiquette Liquid `abort_message()` empêche l'envoi de messages aux utilisateurs, ce qui signifie que le message ne s'affichera pas sur le profil des utilisateurs et ne sera pas pris en compte dans les envois ou la limite de fréquence.
