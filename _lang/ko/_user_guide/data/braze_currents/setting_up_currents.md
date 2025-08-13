@@ -77,11 +77,17 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 ### 6단계: 통합을 테스트하세요
 
-통합을 테스트하거나 커런츠 예제 [GitHub 저장소](https://github.com/Appboy/currents-examples)에서 샘플 커런츠 데이터를 확인할 수 있습니다.
-
 {% alert important %}
 현재 페이로드가 900KB를 초과하는 지나치게 큰 이벤트는 삭제됩니다.
 {% endalert %}
+
+Before you test, consider checking out our [sample Currents data in GitHub](https://github.com/Appboy/currents-examples). When you're ready to test, you choose an option below:
+
+#### Sending test events
+
+To test your integration, you can select **Send Test Events** to send one event from each of your selected event types to this Current. For detailed information about each event type, refer to our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
+
+![The "Currents Test" page in the Braze dashboard.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### 전류 커넥터 테스트
 
@@ -92,7 +98,7 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 테스트 커런츠 커넥터가 전송 한도에 도달하면, 커넥터는 다음 7일 기간까지 이벤트를 전송하지 않습니다.
 
-테스트 커런츠 커넥터를 업그레이드하려면 대시보드에서 통합을 편집하고 **업그레이드**를 선택하세요.
+To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 
 ## 커런츠 업데이트 중
 
