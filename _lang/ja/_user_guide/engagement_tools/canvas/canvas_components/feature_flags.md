@@ -11,15 +11,17 @@ local_redirect:
 
 # フィーチャーフラグ
 
-> フィーチャーフラグを使用して、新しいフィーチャーに関する仮説を実験で確認することができます。マーケターはフィーチャーフラグを使用して、[キャンバス][1]でオーディエンスをセグメント化し、フィーチャーの展開がコンバージョンに与える影響を追跡できます。さらに、[実験パス][2]では、異なるメッセージやパスを対比させてテストし、どれが最も効果的かを判断することで、コンバージョンを最適化することができます。フィーチャーを徐々により多くのユーザーに展開していく際には、勝者パスを使用します。
+> フィーチャーフラグを使用して、新しいフィーチャーに関する仮説を実験で確認することができます。マーケターはフィーチャーフラグを使用して、[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)でオーディエンスをセグメント化し、フィーチャーの展開がコンバージョンに与える影響を追跡できます。さらに、[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths)では、異なるメッセージやパスを対比させてテストし、どれが最も効果的かを判断することで、コンバージョンを最適化することができます。フィーチャーを徐々により多くのユーザーに展開していく際には、勝者パスを使用します。
 
 フィーチャーフラグと Braze での使用方法の詳細については、[フィーチャーフラグ]({{site.baseurl}}/developer_guide/feature_flags/)の記事を参照してください。
 
 ## フィーチャー・フラッグを作成する
 
-![][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![ライブチャットボタン機能のフィーチャーフラグステップの例。]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 フィーチャーフラグコンポーネントを作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの下にある <i class="fas fa-plus-circle"></i> プラスのボタンをクリックし、[**フィーチャーフラグ**] を選択します。次に、ドロップダウンからフィーチャーフラグを選択します。ここにはアーカイブされていないフィーチャーフラグが表示されます。
+
+## このステップの仕組み
 
 キャンバスが停止またはアーカイブされたり、ステップが削除されたりすると、そのステップを実行したユーザーはそのステップのフィーチャーフラグとそのプロパティを受け取ることができなくなります。ユーザーには、そのフィーチャーフラグとまだアクティブな可能性のある他のキャンバスのデフォルトのロールアウトパーセンテージとオーディエンスセグメンテーションが引き続き適用されます。
 
@@ -29,7 +31,7 @@ local_redirect:
 
 フィーチャーフラグを作成するとき、デフォルトのプロパティを指定します。フィーチャーフラグのキャンバスステップを設定する際は、デフォルト値を維持するか、このステップに入るユーザー用に値を上書きすることができます。
 
-![][4]{: style="max-width:85%"}
+![プロパティが「文字列」、プロパティキーが「url」のフィーチャーフラグ [ユーザー設定センター]。]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 [**メッセージング**] > [**フィーチャーフラグ**] に移動して、追加のプロパティを編集、追加、または削除します。
 
@@ -39,7 +41,3 @@ local_redirect:
 
 同様に、ユーザーが特定のプロパティを持つフィーチャーフラグのロールアウトの資格を得て、キャンバスステップにも入った場合、そのキャンバスステップから上書きされた値を受け取ります。
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths
-[3]: {% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}
-[4]: {% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %} 
