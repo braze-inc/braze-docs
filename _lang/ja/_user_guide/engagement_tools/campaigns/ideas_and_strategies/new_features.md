@@ -20,7 +20,7 @@ tool: Campaigns
 
 Braze SDK は、ユーザーの最新のアプリバージョンを自動的に追跡します。これらのバージョンをフィルターやセグメントで使用して、どのユーザーがメッセージやキャンペーンを受信するかを決定できます。
 
-![キャンペーン構築ワークフローのターゲットユーザーステップのターゲティングオプションパネル。[追加のフィルター] セクションには、「Android ストップウォッチ (Android) の最新のアプリのバージョン番号は 3.7.0 (134.0.0.0) 未満」というフィルターがあります。][1]
+![キャンペーン構築ワークフローのターゲットユーザーステップのターゲティングオプションパネル。[追加のフィルター] セクションには、「Android ストップウォッチ (Android) の最新のアプリのバージョン番号は 3.7.0 (134.0.0.0) 未満」というフィルターがあります。]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
 
 ### アプリのバージョン番号
 
@@ -37,7 +37,7 @@ Braze SDK は、ユーザーの最新のアプリバージョンを自動的に�
 
 **重要**
 
-* Androidアプリには、人間が読める[`versionName`][7] ]と内部の[`versionCode`][9]]の両方がある。アプリのバージョン番号フィルターは、`versionCode` を使用します。これは、アプリストアのリリースごとに番号が確実に増えるためです。
+* Android アプリには、人間が読める [`versionName`](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) と内部の [`versionCode`](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) の両方があります。アプリのバージョン番号フィルターは、`versionCode` を使用します。これは、アプリストアのリリースごとに番号が確実に増えるためです。
 * これにより、アプリの `versionName` と `versionCode` が非同期になり、この両方のフィールドを Braze ダッシュボードで表示できるため、混乱が生じる可能性があります。ベストプラクティスとして、アプリの `versionName` と `versionCode` が必ず一緒にインクリメントされるようにします。
 * 人間が理解できる (一般的でない) `versionName` フィールドでフィルタリングする必要がある場合、アプリバージョン名フィルターを使用してください。
 
@@ -45,9 +45,9 @@ Braze SDK は、ユーザーの最新のアプリバージョンを自動的に�
 
 このフィルターの値は、Braze の Android SDK v3.6.0 以降および iOS SDK v3.21.0 以降で収集されます。このフィルターには SDK 要件がありますが、この機能を使用して、アプリの下位 (古い) バージョンを使っているユーザーをターゲットにすることができます。
 
-Android の場合、このバージョン番号はアプリの[パッケージのロングバージョンコード][9]に基づきます。
+Android の場合、このバージョン番号はアプリの[Package Long Version Code](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) に基づきます。
 
-iOS の場合、このバージョン番号はアプリの[ショートバージョン文字列][8]に基づきます。
+iOS の場合、このバージョン番号はアプリの[ショートバージョン文字列](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring)に基づきます。
 
 {% alert tip %}
 このフィルターは、ユーザーがアプリをサポートされている Braze SDK バージョンにアップグレードした後に値が設定されます。それまでは、フィルターを選択してもバージョンは表示されません。
@@ -73,22 +73,14 @@ Braze がアプリのバージョン 2.0.0 からデータを受信した後、�
 
 このフィルターは、「is」、「is not」、および正規表現を使ったマッチングをサポートします。例えば、バージョンが「1.2.3-test-build」ではないアプリを所有するユーザーをターゲットにすることができます。
 
-Android の場合、このバージョン名はアプリの[パッケージバージョン名][7]に基づきます。iOS の場合、このバージョン名はアプリの[ショートバージョン文字列][8]に基づきます。
+Android の場合、このバージョン名はアプリの[Package Version Name](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) に基づきます。iOS の場合、このバージョン名はアプリの[ショートバージョン文字列](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring)に基づきます。
 
 ### 機能を使用したことがない
 
-新しいアプリバージョンをリリースして新機能を導入する際に、ユーザーが新しいコンテンツに気付かない可能性があります。機能の認知度キャンペーンを実施することは、新しい機能やまだ使用したことのない機能についてユーザーに伝えるための優れた方法です。そのためには、アプリ内で特定のアクションを完了したことがないユーザーに割り当てる [カスタム属性][3]を作成するか、[カスタムイベント][4]を使用して特定のアクションを追跡する必要があります。この属性 (またはイベント) を使用して、キャンペーンを送信するユーザーをセグメント化できます。
+新しいアプリバージョンをリリースして新機能を導入する際に、ユーザーが新しいコンテンツに気付かない可能性があります。機能の認知度キャンペーンを実施することは、新しい機能やまだ使用したことのない機能についてユーザーに伝えるための優れた方法です。そのためには、アプリ内で特定のアクションを完了していないユーザーに割り当てられる[カスタム属性]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) を作成するか、[カスタムイベント]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) を使用して特定のアクションを追跡する必要があります。この属性 (またはイベント) を使用して、キャンペーンを送信するユーザーをセグメント化できます。
 
 {% alert tip %}
 オーディエンスの特定の部分をリターゲティングしたいとお考えですか?ユーザーの以前のアクションを活用してキャンペーンをリターゲティングする方法については、「[キャンペーンのリターゲティング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/)」をご覧ください。
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img_archive/new_app_version.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/
-[7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
-[8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
-[9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()
