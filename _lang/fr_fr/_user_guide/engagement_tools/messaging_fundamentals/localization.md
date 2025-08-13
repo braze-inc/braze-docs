@@ -38,7 +38,7 @@ Dans cette approche, la localisation est appliquée à un seul modèle dans Braz
 
 ### Un modèle par pays 
 
-Cette approche permet de séparer les modèles en différents lieux d'envoi. Après l'envoi, le tableau de bord présente des analyses d'envoi basées sur chaque pays séparément, et tout événement [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) au niveau de l'utilisateur en aval sera également lié à une campagne spécifique.
+Cette approche sépare les modèles en différents lieux d'envoi. Après l'envoi, le tableau de bord présente des analyses d'envoi basées sur chaque pays séparément, et tout événement [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) au niveau de l'utilisateur en aval sera également lié à une campagne spécifique.
 
 - Les modèles bénéficient de la mise en place de [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) à des fins de maintenance et de suivi.
 - Les campagnes peuvent hériter des configurations du même [modèle Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) et des [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (tels que les [modèles d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) qui contiennent Liquid).
@@ -55,7 +55,7 @@ Cette approche permet de séparer les modèles en différents lieux d'envoi. Apr
 
 Dans cette approche, la localisation est gérée au sein de [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) et Liquid pour définir les envois de messages pour chaque utilisateur. 
 
-Après l'envoi d'un canvas, le tableau de bord fournit une [analyse agrégée du canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), tandis que l'engagement au niveau de l'utilisateur peut être mesuré via des [entonnoirs de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/) personnalisés, tels que la combinaison des filtres [**Pays**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) et [**Étape du canvas reçu**.
+Après l'envoi d'un canvas, le tableau de bord fournit une [analyse agrégée du canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), tandis que l'engagement au niveau de l'utilisateur peut être mesuré via des [entonnoirs de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) personnalisés, tels que la combinaison des filtres [**Pays**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) et [**Étape du canvas reçu**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step).
 
 | Avantages | Considérations |
 | --- | --- |
