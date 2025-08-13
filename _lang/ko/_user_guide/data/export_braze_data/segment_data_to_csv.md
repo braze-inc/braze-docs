@@ -13,11 +13,11 @@ description: "이 참조 문서에서는 세그먼트 데이터를 CSV로 내보
 
 세그먼트 데이터를 CSV로 내보내려면 세그먼트를 편집하는 동안 **사용자 데이터** 드롭다운을 선택하고 세그먼트의 사용자 데이터 또는 이메일 주소 중 하나를 선택하여 내보내도록 선택합니다.
 
-![사용자 데이터 드롭다운이 있는 세그먼트 세부 정보 섹션에 내보내기 옵션이 표시됩니다.][1]
+![Segment Details section with User Data dropdown showing export options.]({% image_buster /assets/img_archive/csvexport.png %})
 
 메인 **세그먼트** 페이지에서 <i class="fas fa-gear"></i> **설정** 드롭다운을 선택하여 세그먼트의 CSV 내보내기를 요청할 수도 있습니다.
 
-![기본 세그먼트 페이지의 설정 드롭다운을 클릭합니다.][2]
+![Settings dropdown on the main Segments page.]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 모든 고객 프로필에서 데이터를 내보내려면 필터가 없는 세그먼트를 생성한 다음 CSV 내보내기를 요청하세요.
@@ -29,7 +29,7 @@ CSV 출력에는 내보내기 시점에 세그먼트에서 캡처된 각 고객 
 파일 크기 제한으로 인해 세그먼트의 예상 크기가 500,000명 이상의 사용자일 경우 내보내기가 실패할 수 있습니다. 이 제한은 정확한 계산이 아닌 세그먼트의 예상 크기를 사용한다는 점에 유의하십시오. 자세한 내용은 [큰 세그먼트 내보내기]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/)를 참조하세요.
 {% endalert %}
 
-Amazon S3 인증정보][26]를 Braze에 연결한 경우 CSV는 대신 키 `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip` 아래 S3 버킷에 업로드됩니다. 이메일로 전송된 링크는 내보내기 하루 후에 만료되며, 대시보드에 로그인해야 액세스할 수 있습니다.
+If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. 이메일로 전송된 링크는 내보내기 하루 후에 만료되며, 대시보드에 로그인해야 액세스할 수 있습니다.
 
 ## 데이터 포함 내보내기
 
@@ -95,6 +95,3 @@ Amazon S3 인증정보][26]를 Braze에 연결한 경우 CSV는 대신 키 `segm
 CSV 및 API 내보내기에 대한 도움말은 [문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) 기사를 참조하십시오.
 {% endalert %} 
 
-[1]: {% image_buster /assets/img_archive/csvexport.png %}
-[2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration
