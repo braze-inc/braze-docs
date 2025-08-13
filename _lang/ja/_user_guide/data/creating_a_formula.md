@@ -25,9 +25,9 @@ tool: Reports
 
 ## 式の作成
 
-式には、ダッシュボードの [[ホーム][9]]、[[収益レポート][10]]、[[カスタムイベントレポート][11]] の各ページにある統計パネルからアクセスできます。このパネルを表示するには、**Performance Over Time** チャートに移動し、**Statistics For** ドロップダウンを**KPI Formulas** に変更してから、少なくとも1 つのKPI 数式を選択してチャートに入力します。
+式には、ダッシュボードの [[ホーム]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)]、[[収益レポート]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/)]、[[カスタムイベントレポート]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)] の各ページにある統計パネルからアクセスできます。このパネルを表示するには、**Performance Over Time** チャートに移動し、**Statistics For** ドロップダウンを**KPI Formulas** に変更してから、少なくとも1 つのKPI 数式を選択してチャートに入力します。
 
-![Braze ダッシュボードでのKPI 数式の統計の表示][16]
+![Braze ダッシュボードでの KPI 数式の統計の表示]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 新規の式を作成するには、次の手順に従います。
 
@@ -84,11 +84,6 @@ table td {
 | --- | --- |
 | カスタムイベントカウント | MAU |
 |  | DAU |
-|  | セグメントサイズ ([分析の追跡][17] が有効になっているセグメントのみが使用可能) |
+|  | セグメントサイズ([アナリティクストラッキング]({{site.baseurl}}/viewing_and_understanding_segment_data/)が有効なセグメントのみ使用できます) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[16]: {% image_buster /assets/img_archive/kpi_forms.png %}
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
