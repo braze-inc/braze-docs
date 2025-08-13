@@ -14,11 +14,11 @@ tool: Canvas
 
 ## 勝者パスを使用する
 
-### ステップ 1: 実験パスを追加する
+### ステップ 1: 実験パスステップを追加する
 
 キャンバスに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を追加し、[**勝者パス**] をオンにします。
 
-![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。][1]
+![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがある。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### ステップ2:勝者パスを設定する
 
@@ -26,19 +26,15 @@ tool: Canvas
 
 次に、**実験期間**を設定します。**実験期間**では、勝者パスが決定され、その後のすべてのユーザーがそのパスに送られる前に、実験を行う時間を指定します。最初のユーザーがステップに入ると、期間が開始されます。
 
-![][2]
+![実験期間が 12 時間でコンバージョンイベント [クリック数] が選択されている勝者パス設定。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
 ### ステップ 3: フォールバックを決定する {#statistical-significance}
 
 デフォルトでは、テストの結果が統計的に有意な勝者を決定するのに十分でない場合、将来のすべてのユーザーがベストパフォーマンスのパスに送信されます。
 
-または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。
+または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
-![][6]
-
-このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
-
-![実験分布で指定されたパーセンテージ][3]
+![テスト結果が統計的に有意ではない場合にユーザーに対する動作として [すべての将来のユーザーにパスの組み合わせの送信を続行] が選択されている。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 遅延グループがパス配分に表示されるのは、キャンバスが 1 回限りの入力に設定されていて、実験ステップのパスが 3 つ以下の場合のみです。勝者パスがオンになっている場合、繰り返し発生するキャンバスやトリガーされたキャンバスには遅延グループが表示されません。
@@ -65,11 +61,11 @@ tool: Canvas
 
 ユーザーのエントリが 1 回に限定されているキャンバスで勝者パスを使用する場合、遅延グループが自動的に含められます。実験期間中、一部のユーザーが遅延グループに保持され、残りのユーザーは実験パスに入ります。
 
-![勝者パスの遅延グループを使用した実験ステップ][4]{: style="max-width:75%"}
+![勝者パスの遅延グループを使用した実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 テストが完了して勝者パスが決まると、遅延グループに割り当てられたユーザーは選択されたパスに誘導され、キャンバスを進みます。
 
-![勝者パスに送られる遅延グループのある実験ステップ][5]{: style="max-width:75%"}
+![勝者パスに送られる遅延グループのある実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### ローカルタイム配信
 
@@ -77,9 +73,3 @@ tool: Canvas
 
 ローカルタイム配信を使用したい場合は、24 ～ 48 時間以上の実験期間を使用してください。これにより、初期のタイムゾーンのユーザーがキャンバスに入って実験の開始がトリガーされた後でも実験期間に十分な時間を残すことができます。それ以降のタイムゾーンにいるユーザーが、キャンバスと勝者パスを使った実験ステップに入り、実験期間が期限切れになる前にコンバージョンに至るのに十分な時間があります。
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_winning_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
