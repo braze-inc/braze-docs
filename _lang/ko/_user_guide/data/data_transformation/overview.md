@@ -43,7 +43,7 @@ description: "이 참조 문서에서는 Braze 데이터 변환에 대한 개요
 
 ### 요금 제한
 
-Braze 데이터 변환의 사용량 제한은 분당 1,000건의 수신 요청입니다. 데이터 변환 프로를 사용 중이고 더 높은 사용량 제한이 필요한 경우 Braze 계정 매니저에게 문의하세요.
+The rate limit for Braze Data Transformations is 1,000 incoming requests per minute per workspace. 데이터 변환 프로를 사용 중이고 더 높은 사용량 제한이 필요한 경우 Braze 계정 매니저에게 문의하세요.
 
 ## 자주 묻는 질문
 
@@ -74,5 +74,3 @@ Braze 데이터 변환의 사용량 제한은 분당 1,000건의 수신 요청�
 추가 지원이 필요하면 Braze 계정 관리자에게 문의하세요.
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}
