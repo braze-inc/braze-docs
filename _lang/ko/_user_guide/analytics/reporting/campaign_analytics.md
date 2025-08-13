@@ -28,7 +28,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
     image: /assets/img/braze_icons/phone-01.svg
   - name: SMS
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+    link: /docs/sms_mms_rcs_reporting/
     image: /assets/img/braze_icons/phone-02.svg
   - name: 웹훅
     link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
