@@ -19,7 +19,7 @@ Procédez comme suit pour prévisualiser votre parcours utilisateur :
 1. Allez dans votre générateur de canvas. Enregistrez les modifications non sauvegardées et résolvez les éventuelles erreurs.
 2. Sélectionnez **Test Canvas** dans le pied de page.
 3. Sélectionnez un utilisateur test.
-4. (facultatif) Sélectionnez un destinataire pour le test.
+4. (Facultatif) Sélectionnez un destinataire pour le test.
 5. Sélectionnez **Exécuter le test**.
 
 Vous pouvez lancer un aperçu si vous n'avez pas l'autorisation de modifier un canvas, mais cet aperçu sera exécuté avec les modifications non enregistrées s'il y en a.
@@ -101,11 +101,9 @@ Les webhooks s'exécutent lors de l'envoi des messages de test, mais pas pendant
 
 Dans ce scénario, le Canvas est mis en place pour cibler les utilisateurs qui n'ont pas eu de session dans une app. Ce parcours comprend une étape Message avec un e-mail de bienvenue, une étape Délai fixée à un jour et une étape Parcours d'audience qui se divise en deux parcours : les utilisateurs ayant au moins une session et tous les autres. En fonction du parcours d'audience dans lequel se trouve l'utilisateur, l'étape Message suivante sera envoyée.
 
-![Exemple de canvas avec une étape de message, une étape de délai, une étape de parcours audience et deux étapes de message.][1]{:style="max-width:70%"}
+![Exemple d'un canvas avec une étape de message, une étape de délai, une étape de parcours audience et deux étapes de message.]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
 Comme notre utilisateur test répond aux critères d'entrée du Canvas, il peut entrer dans le Canvas et suivre le parcours de l'utilisateur. Cependant, comme notre utilisateur test n'a pas ouvert l'application au cours du dernier jour calendrier, il continuera à suivre le chemin "Tous les autres" et recevra une notification push libellée comme suit : "Dernière chance ! Terminez votre première tâche pour obtenir un bonus exclusif".
 
-![La section "Résultats du test" qui montre que l'utilisateur test a satisfait aux critères d'entrée et fournit un résumé de son parcours, y compris les étapes qui lui ont été envoyées.][2]
+![La section "Résultats du test" montre que l'utilisateur test a satisfait aux critères d'entrée et fournit un résumé de son parcours, y compris les étapes auxquelles il a été envoyé.]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
-[1]: {% image_buster /assets/img/preview_user_path_example.png %}
-[2]: {% image_buster /assets/img/preview_user_path_results_example.png %}
