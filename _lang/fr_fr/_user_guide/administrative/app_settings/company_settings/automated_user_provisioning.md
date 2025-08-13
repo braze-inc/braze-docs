@@ -10,24 +10,32 @@ alias: /scim/automated_user_provisioning/
 
 # Provisionnement automatisé des utilisateurs
 
-> Découvrez ce que vous devez fournir pour le provisionnement automatisé des utilisateurs et comment et où utiliser votre jeton SCIM (System for Cross-domain Identity Management) généré et l'endpoint de l'API SCIM. Vous pouvez ensuite appeler cet endpoint avec votre API pour approvisionner automatiquement les nouveaux utilisateurs du tableau de bord.
+> Utilisez le provisionnement SCIM pour créer et gérer automatiquement les utilisateurs de Braze via l'API. Cet article vous explique quelles informations fournir, comment générer votre jeton SCIM et où trouver votre endpoint API SCIM.
 
-Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'administration** > **Provisionnement SCIM.**
+## Étape 1 : Accéder aux paramètres de privioning du SCIM
 
-## Comment obtenir votre jeton SCIM ?
+Dans le tableau de bord de Braze, accédez à **Paramètres** > **Paramètres d'administration** > **Provisionnement SCIM**.
 
-Vous devrez fournir les informations suivantes pour obtenir votre jeton SCIM :
+## Étape 2 : Configurez vos paramètres SCIM
 
-1. Sélectionnez un espace de travail par défaut auquel seront ajoutés les nouveaux développeurs de tableaux de bord. Si vous ne spécifiez pas d'espace de travail dans l'[appel API SCIM de création d'utilisateurs]({{site.baseurl}}/post_create_user_account/), ils seront ajoutés ici.
-2. Fournir une origine de service. L’origine du service est la façon dont Braze identifie l’origine de la demande.
-3. Vous pouvez éventuellement fournir une liste séparée par des virgules ou une plage d’adresses IP autorisées pour les demandes SCIM. Les en-têtes `X-Origin-Request` dans chaque demande seront utilisés pour vérifier l’adresse IP par rapport à la liste des autorisations.<br><br>
+Pour activer le provisionnement du SCIM, fournissez les informations suivantes :
+
+- **Espace de travail par défaut :** Sélectionnez l'espace de travail dans lequel les nouveaux utilisateurs seront ajoutés par défaut. Si vous ne spécifiez pas d'espace de travail dans votre [demande d'API SCIM]({{site.baseurl}}/post_create_user_account/), Braze affecte les utilisateurs à cet espace de travail.
+- **Origine du service :** Saisissez le domaine d'origine de vos demandes SCIM. Braze l'utilise dans l'en-tête `X-Request-Origin` pour vérifier l'origine des demandes.
+- **IP Allowlisting (optionnel) :** Vous pouvez limiter les requêtes SCIM à des adresses IP spécifiques.
+Saisissez une liste ou une plage d'adresses IP à autoriser, séparées par des virgules. Les en-têtes `X-Request-Origin` dans chaque demande seront utilisés pour vérifier l’adresse IP par rapport à la liste des autorisations.
 
 {% alert note %}
 Cet endpoint SCIM ne s'intègre pas directement aux fournisseurs d'identité.
 {% endalert %}
 
-![][1]
+![Formulaire de paramétrage du provisionnement du SCIM avec trois champs : Espace de travail par défaut, Origine du service, et liste d'autorisations IP en option. Le bouton "Générer un jeton SCIM" est désactivé.]({% image_buster /assets/img/scim_unfilled.png %})
 
-Après avoir rempli les champs obligatoires, vous pouvez générer un jeton SCIM et voir votre endpoint API SCIM. **Ce jeton ne sera présenté qu'une seule fois.** Braze attend de toutes les requêtes SCIM qu’elles contiennent le jeton de porteur de l’API SCIM joint via un en-tête `Authorization` HTTP.
+## Étape 3 : Obtenez votre jeton SCIM et votre endpoint
 
-[1]: {% image_buster /assets/img/scim.png %}
+Après avoir rempli les champs obligatoires, appuyez sur **Generate SCIM token** pour générer un jeton SCIM et voir votre endpoint API SCIM. Veillez à copier le jeton SCIM avant de naviguer. **Ce jeton ne sera présenté qu'une seule fois.** 
+
+![Champs SCIM API Endpoint et SCIM Token affichés avec des valeurs masquées et des boutons de copie. Sous le champ du jeton se trouve un bouton "Réinitialiser le jeton".]({% image_buster /assets/img/scim.png %})
+
+Braze attend de toutes les requêtes SCIM qu’elles contiennent le jeton de porteur de l’API SCIM joint via un en-tête `Authorization` HTTP.
+
