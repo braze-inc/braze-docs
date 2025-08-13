@@ -35,7 +35,7 @@ tool: Canvas
 
 - **방법 1:** 복제된 캔버스에서 캔버스 빌더의 **참가 대상** 부분을 편집하여 테스트 사용자만 캔버스를 사용할 수 있도록 합니다. **이메일 주소** 테스트 필터를 추가하여 자신의 이메일 주소를 테스트 사용자로 입력할 수도 있습니다. 아래 예시에서는 앱을 처음 사용한 지 3일이 채 되지 않은 두 명의 테스트 사용자로 캔버스를 제한했습니다.
 
-![][2]
+![A Canvas with an entry audience of "First used these apps less than 3 days ago" and the email addresses of two test users.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **방법 2:** 캔버스 빌더의 바닥글에서 **캔버스 테스트** 버튼을 선택하여 [사용자 경로를 미리 봅니다]({{site.baseurl}}/preview_user_paths/).
 
@@ -84,5 +84,3 @@ Postman과 [Braze Postman 컬렉션으로]({{site.baseurl}}/api/postman_collecti
 1. 각 브랜치에 대해 사용자가 캔버스 여정에 포함되기 위해 반드시 갖춰야 하는 속성과 이벤트를 식별합니다.
 2. 이를 JSON 페이로드로 빌드하여 `/users/track` 엔드포인트를 사용하여 게시합니다.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}
