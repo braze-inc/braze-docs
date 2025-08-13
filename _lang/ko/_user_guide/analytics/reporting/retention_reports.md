@@ -19,7 +19,7 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 
 ### 1단계: 날짜 범위 선택
 
-![보고 날짜][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Report Date]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 시작하려면 Braze 대시보드에서 캠페인이나 캔버스를 방문하여 보고서의 날짜 범위를 선택하세요. 적절한 날짜 범위를 선택하는 것은 유지 리포트에 영향을 미치기 때문에 매우 중요합니다. 
 
@@ -42,13 +42,13 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 {% endtab %}
 {% endtabs %}
 
-![리텐션 이벤트 선택][1]{: style="max-width:80%"}
+![Select a Retention event]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### 3단계: 보고서 생성
 
 보존 이벤트를 선택한 후 **보고서 실행을** 선택하여 쿼리를 시작합니다.
 
-![보고서 실행][2]{: style="max-width:80%"}
+![Run Report]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 이 쿼리는 결과를 생성하기 위해 검색해야 하는 데이터의 양에 따라 실행하는 데 몇 분 정도 걸릴 수 있습니다. 시간이 너무 오래 걸리면 보고서를 다시 로드해 보라는 알림이 표시됩니다. 보고서가 로드될 때까지 최대 5분 정도 기다려야 할 수 있습니다.
 
@@ -97,7 +97,7 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 
 범위 보고서는 가장 직관적으로 읽을 수 있는 보고서 중 하나입니다. 코호트의 모든 사용자 중 지정된 날짜 범위 내에서 유지 이벤트를 수행한 사용자의 비율을 명확하게 명시합니다. 예를 들어, 다음 이미지에서 모든 사용자 코호트를 참조하는 날짜 범위 "0일(0-24시간)"의 경우 코호트 중 35.71%가 유지 리포트를 수행했습니다. 사용자가 여러 날짜 범위 내에서 여러 개의 유지 이벤트를 수행하면 각 범위에 대해 유지된 것으로 계산됩니다.
 
-![리텐션 보고서][5]
+![Retention Report]({% image_buster /assets/img/range_retention.png %})
 
 ### 리텐션 보고서 구성 요소
 
@@ -151,9 +151,5 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 - 메시징 피로를 느끼고 계신가요?
 - 며칠 전에 캠페인이나 캔버스에 적용한 특정 최적화가 긍정적인 영향을 미쳤나요?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 
