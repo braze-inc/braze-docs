@@ -104,11 +104,11 @@ Les tableaux suivants sont donnés à titre d'exemple. Pour connaître les conve
 | Attribution d’installation | Publicité |
 | Divers | Numéro de compartiment aléatoire |
 | Messages Canvas reçus | Messages Canvas reçus |
+| L'envoi de messages | Tous les événements d'engagement (tels que les ouvertures, les clics, les impressions et les renvois) |
 | Twitter | Abonnés |
 | Twitter | Abonnement |
 | Twitter | Nombre de tweets |
 | Facebook | Mentions j’aime |
-
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -156,6 +156,7 @@ table td {
 | Événements personnalisés | Tous les événements personnalisés | |
 | Propriétés de l'événement  personnalisé | Toutes les propriétés de l'événement  personnalisé | Les propriétés d’événement personnalisé activées pour la segmentation avec les filtres `X Custom Event Property in Y Days` ou `X Purchase Property in Y Days` sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données comptabilisé par l’événement personnalisé lui-même.
 | Achats | Tous les achats | |
+| Propriétés d'achat | Toutes les propriétés d'achat | |
 | Affectation de cohorte Amplitude | Toutes les affectations | |
 | Affectation de cohorte Mixpanel | Toutes les affectations | |
 | Affectation de cohorte Hightouch | Toutes les affectations | |
