@@ -18,7 +18,7 @@ Le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/se
 
 Pour exécuter ces rapports, procédez comme suit :
 1. Dans le **générateur de requêtes**, choisissez de créer un nouveau rapport SQL avec un modèle. 
-2. Filtrez les modèles pour ceux dont les indicateurs comprennent des ventilations par segment :
+2. Sélectionnez **Segment breakdowns** for the metric, ce qui permet de filtrer les modèles pour ceux dont les indicateurs incluent des ventilations de segment, à savoir
 - Indicateurs de performance de l'e-mail par segmentation
 - Indicateurs d'engagement par e-mail pour les variantes ou les étapes, par segmentation.
 - Achats et revenus par segment
