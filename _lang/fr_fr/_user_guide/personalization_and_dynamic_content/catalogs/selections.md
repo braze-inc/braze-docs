@@ -11,13 +11,13 @@ description: "Le présent article de référence explique comment créer et util
 
 Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), vous pouvez référencer davantage les données de votre catalogue en incorporant des sélections dans vos campagnes ou recommandations Braze.
 
-![La section Sélections dans un exemple de catalogue.][1]
+![La section Sélections dans un exemple de catalogue.]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## Choses à savoir
 
 - Vous pouvez créer jusqu'à 30 sélections par catalogue.
-- Vous pouvez ajouter jusqu'à quatre filtres par sélection.
-- Les sélections sont idéales pour affiner les recommandations à partir des données du catalogue Braze. Si vous êtes à la recherche d'inspiration, consultez [À propos des recommandations de produits]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) pour obtenir des exemples de cas d'utilisation.
+- Vous pouvez ajouter jusqu'à 10 filtres par sélection.
+- Les sélections sont idéales pour affiner les recommandations à partir des données du catalogue Braze. Si vous êtes à la recherche d'inspiration, consultez [À propos des recommandations de produits]({{site.baseurl}}/user_guide/brazeai/recommendations/) pour obtenir des exemples de cas d'utilisation.
 
 ## Création d'une sélection
 
@@ -41,10 +41,10 @@ Après avoir créé une sélection, vous pouvez utiliser la section **Prévisual
 L'utilisation de tout liquide dans les catalogues, comme les attributs personnalisés et les événements personnalisés, peut donner lieu à des résultats différents pour chaque utilisateur de votre sélection. 
 
 {% alert note %}
-Le contenu connecté liquid n'est pas pris en charge dans ces paramètres de filtrage.
+Le contenu connecté Liquid n'est pas pris en charge dans ces paramètres de filtrage.
 {% endalert %}
 
-![Paramètres de filtrage pour la sélection du catalogue lorsque l'attribut est défini sur un attribut personnalisé Liquid.][7]
+![Paramètres de filtrage pour la sélection du catalogue lorsque l'attribut est défini comme un attribut personnalisé Liquid.]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## Utilisation de sélections dans l'envoi de messages
 
@@ -58,7 +58,7 @@ Après avoir créé votre sélection, personnalisez vos messages avec Liquid pou
 5. Pour les **informations à afficher**, sélectionnez les champs du catalogue à inclure pour chaque article.
 6. Sélectionnez l'icône **Copier** et collez le liquide à l'endroit voulu dans votre message.
 
-![Fenêtre modale de personnalisation avec les sélections suivantes : "Articles du catalogue" pour "Type de personnalisation", "Jeux" pour "Nom du catalogue", "Sélections" pour "Type de sélection", "game_selection" pour "Sélection", et "titre" et "description_fr" pour "Informations à afficher".][6]{: style="max-width:70%;"}
+![Fenêtre modale de personnalisation avec les sélections suivantes : " Articles du catalogue " pour " Type de personnalisation ", " Jeux " pour " Nom du catalogue ", " Sélections " pour " Type de sélection ", " sélection_jeu " pour " Sélection ", et " titre " et " description_fr " pour " Informations à afficher ".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## Cas d’utilisation
 
@@ -66,25 +66,18 @@ Imaginons que vous possédiez un service de livraison de repas et désiriez envo
 
 En utilisant un catalogue avec les informations de votre service de réception/distribution pour le nom du repas, le prix, l'image et la catégorie du repas, vous pouvez créer une sélection pour recommander trois repas en fonction de la catégorie la plus récemment consultée par un utilisateur.
 
-![Un exemple d’une sélection pour un service de livraison de repas avec deux filtres : un qui identifie un type de produit comme étant un repas et l’autre identifiant la catégorie que l’utilisateur a visualisée le plus récemment. La sélection est définie de manière à rendre aléatoire l'ordre dans lequel les trois résultats sont renvoyés.][2]{: style="max-width:90%;"}
+![Un exemple d’une sélection pour un service de livraison de repas avec deux filtres : un qui identifie un type de produit comme étant un repas et l’autre identifiant la catégorie que l’utilisateur a visualisée le plus récemment. La sélection est définie de manière à rendre aléatoire l'ordre dans lequel les trois résultats sont renvoyés.]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 Pour utiliser ce catalogue et cette sélection dans une campagne, utilisez la fenêtre modale/boîte de dialogue **Ajouter une personnalisation** dans la section de composition des messages de la création d'une campagne. Dans cet exemple, nous avons sélectionné le catalogue avec les informations de votre service de livraison de repas et la sélection pour les recommandations de repas basées sur la catégorie visualisée le plus récemment. Ceci nous permet d’afficher le nom du plat et son prix. Pour créer davantage votre message, vous pouvez utiliser la sélection pour ajouter également une image du premier repas recommandé.
 
-![Carte de contenu avec l'en-tête « Vous allez ADORER ces repas très appréciés ! », avec la sélection « recommandations_par_catégorie_récente » dans la section de composition du message.][3]{: style="max-width:90%;"}
+![Une carte de contenu avec l'en-tête "Vous allez adorer ces repas très bien notés !" avec la sélection "recommendations_be_recent_category" dans la section de composition du message.]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 Par exemple, si vous avez un utilisateur pour lequel la catégorie visualisée le plus récemment est « Poulet ». En utilisant la personnalisation définie et une campagne de cartes de contenu, vous pouvez envoyer trois recommandations de repas incluant du poulet à cet utilisateur.
 
-![Une carte de contenu avec une image de poulet au citron grillé et une liste de trois recommandations de repas incluant du poulet, basées sur la dernière catégorie consultée par l'utilisateur.][4]{: style="max-width:90%;"}
+![Une carte de contenu avec une image de poulet au citron grillé et une liste de trois recommandations de repas incluant du poulet, basées sur la dernière catégorie consultée par l'utilisateur.]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 En utilisant la même personnalisation, vous pouvez également envoyer trois recommandations de repas à un utilisateur dont la catégorie la plus récemment consultée est "Bœuf".
 
-![Une carte de contenu avec une image de bœuf stroganoff et une liste de deux recommandations de repas incluant du bœuf, sur la base de la catégorie la plus récemment consultée par l'utilisateur.][5]{: style="max-width:90%;"}
+![Une carte de contenu avec une image de bœuf stroganoff et une liste de deux recommandations de repas incluant du bœuf sur la base de la dernière catégorie consultée par l'utilisateur.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
-[6]: {% image_buster /assets/img_archive/catalog_selections6.png %}
-[7]: {% image_buster /assets/img_archive/catalog_selections7.png %}
