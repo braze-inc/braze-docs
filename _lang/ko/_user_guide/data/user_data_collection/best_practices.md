@@ -34,7 +34,7 @@ description: "다음 문서에서는 신규 및 기존 사용자 데이터를 �
 - **사용자가 존재하지 않는 경우:**
   - [`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 통해 별칭 전용 프로필을 만듭니다. 이 엔드포인트는 `update_existing_only`가 `false`로 설정된 경우 [`user_alias` 개체]({{site.baseurl}}/api/objects_filters/user_alias_object/)를 수락하고 별칭 전용 프로필을 생성합니다. 사용자의 이메일을 사용자 별칭으로 설정하면 나중에 해당 사용자를 참조할 수 있습니다(사용자에게 `external_id`가 없기 때문).
 
-![별칭 전용 사용자 프로필을 업데이트하는 프로세스를 보여주는 다이어그램입니다. 사용자가 마케팅 랜딩 페이지에서 이메일 주소와 사용자 지정 속성인 우편 번호를 제출합니다. 랜딩 페이지 컬렉션에서 별칭 전용 사용자 프로필을 가리키는 화살표는 사용자의 별칭 이름, 별칭 라벨, 이메일 및 우편번호가 포함된 요청 본문과 함께 사용자 추적 엔드포인트에 대한 Braze API 요청을 표시합니다. 프로필에는 새로 생성된 프로필에 반영되는 데이터를 표시하기 위해 요청 본문의 속성과 함께 "Braze에서 생성된 별칭 전용 사용자"라는 레이블이 있습니다.][3]{: style="max-width:90%;"}
+![별칭 전용 사용자 프로필을 업데이트하는 프로세스를 보여주는 다이어그램입니다. 사용자가 마케팅 랜딩 페이지에서 이메일 주소와 사용자 지정 속성인 우편 번호를 제출합니다. 랜딩 페이지 컬렉션에서 별칭 전용 사용자 프로필을 가리키는 화살표는 사용자의 별칭 이름, 별칭 라벨, 이메일 및 우편번호가 포함된 요청 본문과 함께 사용자 추적 엔드포인트에 대한 Braze API 요청을 표시합니다. The profile has the label "Alias Only user created in Braze" with the attributes from the request body to show the data being reflected on the newly-created profile.]({% image_buster /assets/img/user_profile_process3.png %}){: style="max-width:90%;"}
 
 ## 이메일 캡처 양식을 통해 사용자 이메일 캡처하기
 
@@ -67,6 +67,3 @@ description: "다음 문서에서는 신규 및 기존 사용자 데이터를 �
 - 자세한 내용은 Braze [사용자 프로필 수명주기]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)에 대한 도움말을 참조하세요.<br>
 - [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention) 및 [웹용]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) 사용자 ID 설정 및 `changeUser()` 메서드 호출에 대한 설명서를 참조하세요.
 
-[1]: {% image_buster /assets/img/user_profile_process.png %}
-[2]: {% image_buster /assets/img/user_profile_process2.png %}
-[3]: {% image_buster /assets/img/user_profile_process3.png %}
