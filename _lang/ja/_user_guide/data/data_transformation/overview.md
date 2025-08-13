@@ -43,7 +43,7 @@ Data Transformation Pro へのアップグレードを依頼するには、Braze
 
 ### レート制限
 
-Braze Data Transformation のレート制限は、リクエスト 1,000 件 / 分です。Data Transformation Pro を使用していて、レート制限を上げる必要がある場合は、Braze アカウントマネージャーにお問い合わせください。
+Braze Data Transformation のレート制限は、ワークスペースあたりリクエスト1,000 件 / 分です。Data Transformation Pro を使用していて、レート制限を上げる必要がある場合は、Braze アカウントマネージャーにお問い合わせください。
 
 ## よくある質問
 
@@ -74,5 +74,3 @@ Braze Data Transformation のレート制限は、リクエスト 1,000 件 / �
 追加のサポートが必要な場合は、Braze アカウントマネージャーにお問い合わせください。
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}
