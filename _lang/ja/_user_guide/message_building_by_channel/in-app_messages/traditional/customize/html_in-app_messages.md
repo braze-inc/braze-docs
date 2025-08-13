@@ -21,7 +21,7 @@ HTMLアプリ内メッセージでは、以下のようにメッセージのル�
 - インタラクティブコンポーネント
 - カスタム・アニメーション
 
-カスタムHTMLメッセージは、[JavaScript Bridgeの](#javascript-bridge)メソッドを使って、イベントのログを取ったり、カスタム属性を設定したり、メッセージを閉じたりすることができる！HTML アプリ内メッセージの使用方法と、必要に応じてカスタマイズする方法の詳細手順、および開始に役立つ HTML5 アプリ内メッセージのテンプレートのセットについては、当社の [GitHub リポジトリ][2] を参照してください。
+カスタムHTMLメッセージは、[JavaScript Bridgeの](#javascript-bridge)メソッドを使って、イベントのログを取ったり、カスタム属性を設定したり、メッセージを閉じたりすることができる！HTML アプリ内メッセージの使用方法と、必要に応じてカスタマイズする方法の詳細手順、および開始に役立つ HTML5 アプリ内メッセージのテンプレートのセットについては、当社の [GitHub リポジトリ](https://github.com/braze-inc/in-app-message-templates) を参照してください。
 
 {% alert note %}
 Web SDK を介して HTML アプリ内メッセージを有効にするには、初期化オプション `allowUserSuppliedJavascript` を Braze に指定する必要があります。例: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`。これはセキュリティ上の理由によるもので、HTML のアプリ内メッセージは JavaScript を実行できるため、サイト管理者が有効にする必要があります。
@@ -207,7 +207,7 @@ HTMLエディター内で<kbd>Ctrl</kbd>+<kbd>F</kbd>（Windows）または<kbd>
 
 ### ボタンの追跡{#button-tracking-improvements}
 
-カスタム・コードのアプリ内メッセージでパフォーマンスを追跡するには [`brazeBridge.logClick(button_id)`][1]JavaScriptメソッドを使う。これにより、`brazeBridge.logClick("0")` 、`brazeBridge.logClick("1")` 、`brazeBridge.logClick()` を使用して、「ボタン 1」、「ボタン 2」、「本文クリック」をそれぞれプログラムで追跡できます。
+カスタム・コードのアプリ内メッセージでパフォーマンスを追跡するには [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/)JavaScriptメソッドを使う。これにより、`brazeBridge.logClick("0")` 、`brazeBridge.logClick("1")` 、`brazeBridge.logClick()` を使用して、「ボタン 1」、「ボタン 2」、「本文クリック」をそれぞれプログラムで追跡できます。
 
 | クリック数     | 方法                       |
 | ---------- | ---------------------------- |
@@ -246,10 +246,8 @@ HTMLエディター内で<kbd>Ctrl</kbd>+<kbd>F</kbd>（Windows）または<kbd>
 
    | 前 | その後 |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_e190c958-9413-497e-a8d4-e85c7bad2671/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_a6f1276f-d4d7-4cdb-b2ca-54afeea8fa59/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_72d93e8b-7f35-40f4-84b6-17fa8123450c/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_e40c50fb-b4c3-4ce9-a3c0-658dcee7b4c4/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_25c2b721-5550-4b80-8857-985ffe253351/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_728f3584-ebe2-414f-8ece-02c996ff7e34/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_215da01d-37e0-4157-a52f-6c754db38a42/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_fa6bf04e-5185-4b6e-bb75-a41ec56144ff/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_2d290450-dcae-4960-95cd-f0f99e5c97de/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_7876780a-23da-44ad-9efa-cf531283bdbb/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/braze-inc/in-app-message-templates
