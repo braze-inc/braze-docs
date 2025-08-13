@@ -38,7 +38,7 @@ Braze는 모든 링크 URL에 `lid` (링크 식별자라고도 함)라는 추가
 
 보고 또는 세분화를 다룰 때 특정 링크를 참조하는 데 사용할 별칭을 설정할 수도 있습니다. 
 
-![네 개의 링크 별칭이 있는 링크 관리 페이지입니다.][2]
+![네 개의 링크 별칭이 있는 링크 관리 페이지]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 링크 별칭 지정은 쿼리 매개변수를 추가하는 것이 안전한 HTML 앵커 태그의 `href` 속성 내에서만 지원됩니다. 링크 끝에 물음표(?)를 넣어 Braze가 `lid` 값을 쉽게 추가할 수 있도록 하는 것이 가장 좋습니다. `lid` 값을 추가하지 않으면 Braze는 링크 별칭 지정을 위한 URL을 인식하지 못합니다.
@@ -57,7 +57,7 @@ Braze는 모든 링크 URL에 `lid` (링크 식별자라고도 함)라는 추가
 
 여기에서 링크 별칭을 정렬, 검색 및 추적 해제할 수 있습니다.
 
-![추적된 링크 별칭 페이지에는 "Email_Survey"라는 캠페인과 연결된 "TechPartners" 및 "Help"라는 두 개의 링크 별칭이 표시됩니다.][8]
+![추적된 링크 별칭 페이지에는 "Email_Survey"라는 캠페인과 연결된 "TechPartners" 및 "Help"라는 두 개의 링크 별칭이 표시됩니다.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 [캠페인의 경우 목록 링크 별칭]({{site.baseurl}}/get_campaign_link_alias/) 및 [캔버스 엔드포인트의 경우 목록 링크 별칭을]({{site.baseurl}}/get_canvas_link_alias/) 사용하여 캠페인 또는 이메일별 캔버스 구성 요소의 각 메시지 변형에 설정된 `alias` 을 추출합니다.
@@ -147,7 +147,7 @@ Braze는 프로필 수준에서 마지막으로 클릭된 100개의 링크 별�
  
 모든 링크(추적 또는 미추적)를 타겟팅하는 액션 기반 메시지를 만들거나 이메일 캠페인 또는 캔버스 구성 요소에서 별칭을 클릭했는지 여부에 따라 사용자를 리타겟팅할 수 있습니다.
 
-![캔버스 구성 요소에서 별칭을 클릭하거나 캠페인과 상호 작용한 사용자를 타겟팅하는 액션 기반 옵션입니다.][6]
+![캔버스 구성 요소에서 별칭을 클릭하거나 캠페인과 상호 작용한 사용자를 타겟팅하는 액션 기반 옵션.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### 세분화 필터
 
@@ -161,11 +161,11 @@ Braze에서는 이메일에 링크 별칭이 있고 사용자가 해당 별칭�
 
 #### 링크 추적 해제
 
-링크 추적을 해제해도 필터가 있는 기존 세그먼트가 추적되지 않은 별칭으로 재할당되지는 않습니다. 이전 데이터는 최신 데이터로 교체될 때까지 사용자 프로필에 남아 있습니다.
+링크 추적을 해제해도 필터가 있는 기존 세그먼트가 추적되지 않은 별칭으로 재할당되지는 않습니다. 이전 데이터는 최신 데이터로 교체될 때까지 사용자 프로필에 남아 있습니다. 
 
-세분화 목적을 위해 기본적으로 작업 공간당 100개의 링크만 추적할 수 있습니다. 보관된 메시지의 링크는 자동으로 추적되지 않습니다. 그러나 보관된 메시지가 보관 해제되면 링크를 다시 추적해야 합니다. 링크 별칭이 추적되면 링크 보고는 최상위 도메인이나 전체 URL 대신 별칭으로 색인됩니다.
+보관된 메시지의 링크는 자동으로 추적되지 않습니다. 그러나 보관된 메시지가 보관 해제되면 링크를 다시 추적해야 합니다. 링크 별칭이 추적되면 링크 보고는 최상위 도메인이나 전체 URL 대신 별칭으로 색인됩니다.
 
-![캠페인 분석 탭에는 3개의 링크 별칭과 해당 링크의 총 클릭 수가 표시됩니다.][1]
+![3개의 링크 별칭과 총 클릭 수를 표시하는 캠페인 애널리틱스 탭.]({% image_buster /assets/img/link_aliasing_click_table.png %})
 
 ### 이메일 클릭 이벤트
 
@@ -245,8 +245,3 @@ HTML 또는 콘텐츠 블록의 `assign` 문과 같이 Liquid에서 생성한 UR
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}
