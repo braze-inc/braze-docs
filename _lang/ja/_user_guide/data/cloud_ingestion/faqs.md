@@ -41,7 +41,7 @@ CDI の認証情報が正しくないか、データウェアハウスの設定�
 
 ### Snowflakeインスタンスへの接続エラー：IP を含む着信リクエストが Snowflake へのアクセスを許可されていない
 
-IP許可リストにBrazeの公式IPを追加してみる。詳細については、[Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/)を参照するか、関連するIP を許可してください。
+IP許可リストにBrazeの公式IPを追加してみる。詳細については、[データウェアハウスの連携]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/)を参照するか、該当する IP を許可してください。
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
