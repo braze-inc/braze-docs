@@ -12,9 +12,6 @@ description: "Cette page d’accueil couvre la gestion des campagnes. Ici, vous 
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: "Copie d'un espace de travail à l'autre"
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
-    image: /assets/img/braze_icons/copy-04.svg
   - name: Modifier votre campagne après son lancement
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
@@ -30,9 +27,15 @@ guide_menu_list:
   - name: Flux de travail d’approbation
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
+  - name: "Règles d'envoi de messages pour approbation"
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
   - name: Archiver des campagnes
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: "Copie d'un espace de travail à l'autre"
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Dupliquer des campagnes
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
