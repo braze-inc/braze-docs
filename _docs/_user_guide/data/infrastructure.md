@@ -4,9 +4,9 @@ article_title: Infrastructure
 page_order: 2
 layout: dev_guide
 
-guide_top_header: "Infrastructure"
-guide_top_text: "Lorem ipsum."
-description: "Lorem ipsum." 
+guide_top_header: "Data Infrastructure"
+guide_top_text: "Data infrastructure at Braze includes several data centers located in different regions around the world. "
+description: "This section includes articles related to the data infrastructure in Braze." 
 
 guide_featured_title: "Section articles"
 guide_featured_list:
