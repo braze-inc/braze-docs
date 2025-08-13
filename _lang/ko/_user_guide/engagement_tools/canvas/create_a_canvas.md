@@ -46,7 +46,7 @@ guide_featured_list:
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI 카피라이팅 어시스턴트
-    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
+    link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: 배달 유형
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
