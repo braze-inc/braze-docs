@@ -12,22 +12,22 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
- developer_guide/android/push_notifications/troubleshooting.md %}
+{% multi_lang_include developer_guide/android/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/swift/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab web %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/web/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/android/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
- developer_{% multi_lang_include %}
+{% multi_lang_include developer_guide/xamarin/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}
