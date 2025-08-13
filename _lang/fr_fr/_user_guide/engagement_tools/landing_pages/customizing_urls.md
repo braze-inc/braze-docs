@@ -13,6 +13,8 @@ page_order: 1
 
 Lorsque vous [connectez votre domaine à Braze](#connecting-your-domain-to-braze), il sera utilisé comme domaine par défaut pour toutes les pages de destination. Par exemple, si vous connectez le sous-domaine `forms.example.com`, l'URL de votre page d'atterrissage sera désormais `forms.example.com/holiday-sale`.
 
+Le nombre de domaines personnalisés que vous pouvez connecter à votre compte Braze dépend de votre [niveau d'abonnement]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Pour augmenter votre limite, contactez votre gestionnaire de compte Braze.
+
 ## Connecter votre domaine à Braze
 
 Pour connecter un domaine à votre compte Braze, demandez à un administrateur de suivre les étapes ci-dessous.
@@ -22,7 +24,7 @@ Pour connecter un domaine à votre compte Braze, demandez à un administrateur d
 3. Copiez et collez les enregistrements **TXT** et **CNAME** dans les paramètres DNS de votre fournisseur de domaine.
 4. Retournez au tableau de bord de Braze pour vérifier la connexion.
 
-![Page des paramètres de la page d'atterrissage avec un enregistrement TXT et deux enregistrements CNAME répertoriés avec leurs noms et valeurs respectifs.][1]
+![Page de configuration de la page d'atterrissage avec un enregistrement TXT et deux enregistrements CNAME répertoriés avec leurs noms et valeurs respectifs.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Selon votre fournisseur de domaine, la connexion peut prendre jusqu'à 48 heures. Une fois le processus terminé, nous commencerons à utiliser votre domaine personnalisé pour vos pages de destination dans le tableau de bord de Braze.
@@ -71,4 +73,3 @@ Non, vous ne pouvez actuellement connecter qu'un seul sous-domaine à un espace 
 
 Non, vous ne pouvez pas utiliser des sous-domaines déjà utilisés. Bien que ces sous-domaines soient valides, ils ne peuvent pas être utilisés pour les pages de destination s'ils sont déjà affectés à d'autres fins ou s'ils ont des enregistrements DNS qui entrent en conflit avec les enregistrements CNAME requis.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}
