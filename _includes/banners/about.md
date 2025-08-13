@@ -93,3 +93,4 @@ Now that you know about Banners, you're ready for the next steps:
 
 1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/)
 2. [Creating Banner campaigns in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
+3. [Tutorial: Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
