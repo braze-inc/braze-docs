@@ -43,7 +43,7 @@ Ajoutez les campagnes et les messages Canvas que vous souhaitez compiler dans vo
 - Sélection manuelle des campagnes et des toiles
 - Sélectionner automatiquement les campagnes et les canevas en fonction de règles spécifiques
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### Sélection manuelle des campagnes ou des Canvas
 
@@ -57,7 +57,7 @@ Cette option vous permet d'inclure automatiquement tous les messages contenant u
 
 L'étape **Ajouter des statistiques** vous montre les statistiques pour les types de campagnes ou de canevas que vous avez sélectionnés. Par exemple, si vous avez sélectionné les messages e-mail, vous ne pouvez consulter que les statistiques pertinentes relatives aux e-mails. Si vous avez choisi une combinaison d'e-mail et de push, vous pouvez consulter les statistiques pour ces deux canaux.
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | Canal | Statistiques disponibles |
 | ------| --------------|
@@ -94,7 +94,7 @@ Par défaut, la plage de données affichée est basée sur le fuseau horaire de 
 
 Par défaut, les données affichées dans les rapports d'engagement sont quotidiennes (un jour). Pour visualiser ces données sur différents intervalles, choisissez un nombre explicite de jours ou de semaines pour agréger les données pour le rapport. Ainsi, au lieu de voir des indicateurs quotidiens, vous pouvez visualiser votre engagement par semaine, mois, trimestre ou autre. Si une agrégation centrée sur le temps ne suffit pas, vous pouvez également choisir d’exporter des données au niveau de la campagne ou du Canvas.
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### Programmer votre rapport
 
@@ -103,7 +103,7 @@ Vous avez deux options lors de la planification de votre rapport :
 - **Envoyer immédiatement :** Une fois le rapport lancé, Braze l'enverra immédiatement.
 - **Envoyer à un moment spécifié :** Cette option vous permet de choisir la fréquence de réception de ce rapport. Vous pouvez choisir d'envoyer ce rapport tous les X jours, semaines ou mois. Vous pouvez également définir le moment où l'envoi du rapport doit cesser.
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### Étape 5 : Vérifier et lancer le test
 
@@ -116,7 +116,3 @@ Vous recevrez un e-mail contenant des liens vers vos rapports à l'heure ou à l
 Le rapport contient toutes les statistiques sélectionnées dans la section [Ajouter des statistiques de](#add-statistics-to-your-reports) la procédure de configuration.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}
