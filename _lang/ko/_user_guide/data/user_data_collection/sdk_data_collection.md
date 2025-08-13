@@ -82,7 +82,7 @@ Braze는 SDK 데이터, 비 SDK 메시지와 관련된 메시지 상호작용 �
 | 사용자 에이전트              | 웹               | [사용자 에이전트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | 이 속성은 호환되는 디바이스로만 메시지를 보내는 데 사용됩니다. 세분화 내에서도 사용할 수 있습니다.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-디바이스 수준 속성(디바이스 무선 통신사, 시간대, 해상도 등) 추적에 대해 자세히 알아보려면 플랫폼별 설명서를 참조하세요: [Android안드로이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "허용 목록 문서"), [iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "허용 목록 문서"), [웹]({{site.baseurl}}/developer_guide/storage/#cookies).
+디바이스 수준 속성(디바이스 무선 통신사, 시간대, 해상도 등) 추적에 대해 자세히 알아보려면 플랫폼별 설명서를 참조하세요: [Android]({{site.baseurl}}/developer_guide/storage/?tab=android), [iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
 
 ## 데이터는 기본값으로 수집되지 않습니다
 
@@ -111,4 +111,3 @@ Braze는 세션 수가 5,000,000개가 넘는 사용자("더미 사용자")를 �
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android 기기 수준 필드"
