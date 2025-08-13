@@ -76,7 +76,7 @@ Braze 메시지 작성기는 **alert** 및 **its properties**, **content-availab
 
 이 값들은 푸시 메시지를 만들 때 **설정** 탭에 입력할 수 있습니다. **알림 옵션**을 선택하고 새 키-값 항목에 자동으로 채워질 키에 대한 알림 사전 키를 선택합니다.
 
-![][16]
+![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 Braze가 APNs에 푸시 알림을 보낼 때, 페이로드는 JSON 형식으로 작성됩니다.
 
@@ -111,9 +111,9 @@ Braze가 APNs에 푸시 알림을 보낼 때, 페이로드는 JSON 형식으로 
 
 ```aps``` 라이브러리 페이로드 값 외에도 사용자 기기에 커스텀 키-값 페어를 보낼 수 있습니다. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and boolean.
 
-![][17]
+![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
-Use cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used through your application within the [extras key][1]. If you prefer to use another key, confirm that your app can handle this custom key.
+Use cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used through your application within the [extras key]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs). If you prefer to use another key, confirm that your app can handle this custom key.
 
 {% alert warning %}
 응용 프로그램에서 ab라는 최상위 키 또는 사전을 다루는 것을 피해야 합니다.
@@ -149,15 +149,15 @@ Braze를 사용하면 `extras`로 알려진 커스텀 정의 문자열 키-값 �
 
 ##### FCM 메시징 옵션
 
-Android 푸시 알림은 FCM 메시지 옵션으로 더욱 맞춤 설정할 수 있습니다. 여기에는 [알림 우선순위][8], [소리][10], 지연, 수명 및 접을 수 있는 기능이 포함됩니다. 이 값들은 푸시 메시지를 만들 때 **설정** 탭에서 지정할 수 있습니다. Braze 메시지 작성기에서 이러한 옵션을 설정하는 방법에 대한 자세한 지침은 [고급 푸시 알림 설정][7]을 참조하세요.
+Android 푸시 알림은 FCM 메시지 옵션으로 더욱 맞춤 설정할 수 있습니다. These include [notification priority]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority), [sound]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds), delay, lifespan, and collapsibility. 이 값들은 푸시 메시지를 만들 때 **설정** 탭에서 지정할 수 있습니다. Refer to [Advanced push notification settings]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_settings) for further instructions on how to set these options in the Braze message composer.
 
-![][18]
+![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### 조용한 푸시 알림
 
-무음 푸시 알림은 경고 메시지나 소리 없이 푸시 알림으로, 백그라운드에서 앱의 인터페이스나 콘텐츠를 업데이트하는 데 사용됩니다. 이 알림은 키-값 쌍을 사용하여 이러한 백그라운드 앱 동작을 트리거합니다. 푸시 알림은 또한 우리의 [제거 추적][4]을 지원합니다.
+무음 푸시 알림은 경고 메시지나 소리 없이 푸시 알림으로, 백그라운드에서 앱의 인터페이스나 콘텐츠를 업데이트하는 데 사용됩니다. 이 알림은 키-값 쌍을 사용하여 이러한 백그라운드 앱 동작을 트리거합니다. Silent push notifications also power our [uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
-마케터는 푸시 알림이 앱 사용자에게 전송되기 전에 예상되는 동작을 트리거하는지 테스트해야 합니다. [iOS][2] 또는 [Android][13] 무음 푸시 알림을 작성한 후 [외부 사용자 ID][14] 또는 [이메일 주소][15]로 필터링하여 테스트 사용자만 타겟팅하도록 하십시오.
+마케터는 푸시 알림이 앱 사용자에게 전송되기 전에 예상되는 동작을 트리거하는지 테스트해야 합니다. After you compose your [iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) or [Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) silent push notification, ensure that you only target a test user by filtering on [external user ID]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) or [email address]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 캠페인 시작 시, 테스트 기기에서 푸시 알림을 받지 않았는지 확인해야 합니다.
 
@@ -169,7 +169,7 @@ iOS 운영 체제는 일부 기능(제거 추적, 지오펜스 및 푸시 스토
 
 To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, select **Add New Pair**, and specify your key-value pairs.
 
-![][21]
+![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### API로 트리거된 캠페인
 
@@ -177,39 +177,18 @@ Braze를 사용하면 `extras`로 알려진 커스텀 정의 문자열 키-값 �
 
 ## 이메일
 
-SparkPost와 SendGrid는 이메일에서 키-값 페어를 지원합니다. SendGrid를 사용하면 키-값 쌍이 [고유 인수][11]로 전송됩니다. SendGrid는 최대 10,000바이트의 데이터에 대해 무제한의 키-값 페어를 첨부할 수 있습니다. 이러한 키-값 쌍은 SendGrid [이벤트 웹훅][12]의 게시물에서 볼 수 있습니다.
+SparkPost와 SendGrid는 이메일에서 키-값 페어를 지원합니다. If you use SendGrid, key-value pairs will be sent as [unique arguments](https://docs.sendgrid.com/for-developers/sending-email/unique-arguments). SendGrid는 최대 10,000바이트의 데이터에 대해 무제한의 키-값 페어를 첨부할 수 있습니다. These key-value pairs can be seen in posts from the SendGrid [Event Webhook](https://sendgrid.com/docs/for-developers/tracking-events/event/).
 
 {% alert note %}
 반송된 이메일은 SparkPost 또는 SendGrid에 키-값 페어를 전달하지 않습니다.
 {% endalert %}
 
-![Braze의 이메일 메시지 작성기의 보내기 정보 탭.][22]
+![Sending Info tab of the email message composer in Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## 콘텐츠 카드
 
 To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and select **Add New Pair**.
 
-![콘텐츠 카드에 키-값 페어 추가][24]{: style="max-width:70%;"}
+![Add key-value pair to Content Card]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds
-[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
-[12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
-[15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
-[17]: {% image_buster /assets/img_archive/keyvalue_enterpairs.png %}
-[18]: {% image_buster /assets/img_archive/keyvalue_androidkeys.png %}
-[19]: {% image_buster /assets/img_archive/keyvalue_android.png %}
-[20]: {% image_buster /assets/img_archive/keyvalue_web.png %}
-[21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
-[22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
-[23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {% image_buster /assets/img_archive/kvp_content_cards.png %}
