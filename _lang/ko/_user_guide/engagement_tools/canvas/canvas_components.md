@@ -38,7 +38,7 @@ guide_featured_list:
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: 캔버스 오디언스 동기화
-    link: /docs/partners/canvas_steps/
+    link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
 ---
 
@@ -50,24 +50,17 @@ guide_featured_list:
 
 ![의사 결정 분할 단계와 지연 단계 및 메시지 단계가 있는 캔버스 사용자 여정의 예.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
-[작업 경로][1]를 사용하여 구매와 같은 행동 및 인게이지먼트 이벤트를 기반으로 사용자 여정을 분할할 수 있습니다. 오디언스를 필터링하고 타겟팅하려는 경우, [오디언스 경로][2]를 사용하면 오디언스 기준에 따라 사용자를 다양한 캔버스 경로로 전송하여 사용자 타겟팅을 간소화할 수 있습니다.
+[작업 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)를 사용하여 구매와 같은 행동 및 인게이지먼트 이벤트를 기반으로 사용자 여정을 분할할 수 있습니다. 오디언스를 필터링하고 타겟팅하려는 경우, [오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths)를 사용하면 오디언스 기준에 따라 사용자를 다양한 캔버스 경로로 전송하여 사용자 타겟팅을 간소화할 수 있습니다.
 
-[의사 결정 분할][3] 구성 요소는 간단한 "예 또는 아니오" 논리를 사용하여 작업 또는 사용자 속성을 기반으로 사용자 여정에 대한 두 개의 상호 배타적인 경로를 만듭니다. 이를 통해 사용자 그룹을 식별하고 타겟팅할 수 있습니다.
+[의사 결정 분할]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) 구성 요소는 간단한 "예 또는 아니오" 논리를 사용하여 작업 또는 사용자 속성을 기반으로 사용자 여정에 대한 두 개의 상호 배타적인 경로를 만듭니다. 이를 통해 사용자 그룹을 식별하고 타겟팅할 수 있습니다.
 
-[지연][4] 구성 요소를 사용하면 캔버스에서 단일 단계를 지연시킬 수 있습니다. 캔버스의 이 독립형 지연 단계는 특정 시간에 사용자에게 메시지를 전달하는 데 가장 적합합니다. 또한 지연 구성 요소를 사용하면 오디언스가 구성 요소의 기준을 충족하는 데 더 많은 시간을 허용하여 잠재고객 도달 범위를 늘릴 수도 있습니다.
+[지연]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step) 구성 요소를 사용하면 캔버스에서 단일 단계를 지연시킬 수 있습니다. 캔버스의 이 독립형 지연 단계는 특정 시간에 사용자에게 메시지를 전달하는 데 가장 적합합니다. 또한 지연 구성 요소를 사용하면 오디언스가 구성 요소의 기준을 충족하는 데 더 많은 시간을 허용하여 잠재고객 도달 범위를 늘릴 수도 있습니다.
 
 ### 테스트
 
-사용자 여정을 만들 때 가장 효과적인 캔버스 경로를 테스트할 수도 있습니다. [실험 경로를][5] 사용하면 어느 단계에서나 여러 캔버스 경로를 테스트할 수 있습니다. 단계 간 연결을 개략적인 미리보기로 사용할 수도 있습니다. 주황색 연결은 이전 단계에서 사용자가 즉시 다음 단계로 넘어가는 것을 나타냅니다.
+사용자 여정을 만들 때 가장 효과적인 캔버스 경로를 테스트할 수도 있습니다. [실험 경로를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) 사용하면 어느 단계에서나 여러 캔버스 경로를 테스트할 수 있습니다. 단계 간 연결을 개략적인 미리보기로 사용할 수도 있습니다. 주황색 연결은 이전 단계에서 사용자가 즉시 다음 단계로 넘어가는 것을 나타냅니다.
 
 ### 통합
 
-브랜드의 퍼스트 파티 사용자 데이터와 동기화하고 싶으신가요? [Facebook][6] 및 [Google에서][7] 사용 가능한 오디언스 동기화 옵션을 활용하세요.
+브랜드의 퍼스트 파티 사용자 데이터와 동기화하고 싶으신가요? [Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) 및 [Google에서]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) 사용 가능한 오디언스 동기화 옵션을 활용하세요.
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split
-[4]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {{site.baseurl}}/partners/canvas_steps/facebook_audience_sync
-[7]: {{site.baseurl}}/partners/canvas_steps/google_audience_sync
