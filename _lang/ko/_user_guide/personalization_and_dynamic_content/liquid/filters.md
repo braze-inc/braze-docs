@@ -70,28 +70,28 @@ SALE
 
 | 필터               | 정의                                                                                                         | 지원 |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
-| [join][1.1]          | 매개변수로 전달된 문자를 사용하여 배열의 요소를 조인합니다. 결과는 단일 문자열입니다.          | ✅ 예   |
-| [첫 번째][1.2]         | 배열의 첫 번째 요소를 반환합니다. 사용자 지정 속성 배열에서 이것은 가장 오래된 추가 값입니다.                | ✅ 예   |
-| [마지막][1.3]          | 배열의 마지막 요소를 반환합니다. 사용자 지정 속성 배열에서 가장 최근에 추가된 값입니다.          | ✅ 예   |
-| [컴팩트][1.4]       | 배열에서 `nil` 항목을 제거합니다.                                                                             | ✅ 예   |
-| [concat][1.5]        | 배열을 다른 배열과 결합합니다.                                                                              | ✅ 예   |
-| [색인][1.6]         | 배열에서 지정된 인덱스 위치에 있는 항목을 반환합니다. 배열의 첫 번째 항목은 `[0]` 로 참조됩니다. | ✅ 예   |
-| [지도][1.7]           | 배열 요소의 속성을 매개변수로 받아들이고 각 배열 요소의 값으로 배열을 생성합니다.        | ✅ 예   |
-| [역방향][1.8]       | 배열에 있는 항목의 순서를 반대로 바꿉니다.                                                                       | ✅ 예   |
-| [크기][1.9]          | 문자열(문자 수) 또는 배열(요소 수)의 크기를 반환합니다.                      | ✅ 예   |
-| [정렬][1.10]         | 배열에 있는 요소의 지정된 속성을 기준으로 배열의 요소를 정렬합니다.                                    | ✅ 예   |
-| [정렬_자연][1.11] | 배열의 항목을 대소문자를 구분하지 않는 알파벳 순서로 정렬합니다.                                                | ✅ 예   |
-| [고유][1.12]         | 배열에 있는 요소의 중복 인스턴스를 제거합니다.                                                           | ✅ 예   |
-| [어디][1.13]        | 특정 속성 값을 가진 항목만 포함하도록 배열을 필터링합니다.                                             | ✅ 예   |
+| [join](https://shopify.dev/api/liquid/filters/array-filters#join)          | 매개변수로 전달된 문자를 사용하여 배열의 요소를 조인합니다. 결과는 단일 문자열입니다.          | ✅ 예   |
+| [first](https://shopify.dev/api/liquid/filters/array-filters#first)         | 배열의 첫 번째 요소를 반환합니다. 사용자 지정 속성 배열에서 이것은 가장 오래된 추가 값입니다.                | ✅ 예   |
+| [last](https://shopify.dev/api/liquid/filters/array-filters#last)          | 배열의 마지막 요소를 반환합니다. 사용자 지정 속성 배열에서 가장 최근에 추가된 값입니다.          | ✅ 예   |
+| [compact](https://shopify.dev/api/liquid/filters#compact)       | 배열에서 `nil` 항목을 제거합니다.                                                                             | ✅ 예   |
+| [concat](https://shopify.dev/api/liquid/filters/array-filters#concat)        | 배열을 다른 배열과 결합합니다.                                                                              | ✅ 예   |
+| [index](https://shopify.dev/api/liquid/filters/array-filters#index)         | 배열에서 지정된 인덱스 위치에 있는 항목을 반환합니다. 배열의 첫 번째 항목은 `[0]` 로 참조됩니다. | ✅ 예   |
+| [map](https://shopify.dev/api/liquid/filters/array-filters#map)           | 배열 요소의 속성을 매개변수로 받아들이고 각 배열 요소의 값으로 배열을 생성합니다.        | ✅ 예   |
+| [reverse](https://shopify.dev/api/liquid/filters/array-filters#reverse)       | 배열에 있는 항목의 순서를 반대로 바꿉니다.                                                                       | ✅ 예   |
+| [size](https://shopify.dev/api/liquid/filters/array-filters#size)          | 문자열(문자 수) 또는 배열(요소 수)의 크기를 반환합니다.                      | ✅ 예   |
+| [sort](https://shopify.dev/api/liquid/filters/array-filters#sort)         | 배열에 있는 요소의 지정된 속성을 기준으로 배열의 요소를 정렬합니다.                                    | ✅ 예   |
+| [sort_natural](https://shopify.dev/api/liquid/filters#sort_natural) | 배열의 항목을 대소문자를 구분하지 않는 알파벳 순서로 정렬합니다.                                                | ✅ 예   |
+| [uniq](https://shopify.dev/api/liquid/filters/array-filters#uniq)         | 배열에 있는 요소의 중복 인스턴스를 제거합니다.                                                           | ✅ 예   |
+| [where](https://shopify.dev/api/liquid/filters#where)        | 특정 속성 값을 가진 항목만 포함하도록 배열을 필터링합니다.                                             | ✅ 예   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 컬러 필터
 
-Braze에서는 [컬러 필터가][2.1] 지원되지 않습니다.
+[Color filters](https://shopify.dev/api/liquid/filters/color-filters) are not supported in Braze.
 
 ## 글꼴 필터
 
-Braze에서는 [글꼴 필터가][3.1] 지원되지 않습니다.
+[Font filters](https://shopify.dev/api/liquid/filters/font-filters) are not supported in Braze.
 
 ## 수학 필터
 
@@ -99,17 +99,17 @@ Braze에서는 [글꼴 필터가][3.1] 지원되지 않습니다.
 
 | 필터  | 정의      | 지원 |
 | :------ |:----------------| :-------- |
-| [절대값][4.1]        | 숫자의 절대값을 반환합니다.     | ✅ 예   |
-| [at_most][4.2]    | 숫자를 최대값으로 제한합니다.   | ✅ 예   |
-| [at_least][4.3]   | 숫자를 최소값으로 제한합니다.   | ✅ 예   |
-| [ceil][4.4]       | 출력을 가장 가까운 정수로 반올림합니다.  | ✅ 예   |
-| [divided_by][4.5] | 출력을 숫자로 나눕니다. 출력은 가장 가까운 정수로 반내림됩니다. 반올림을 방지하려면 다음 팁을 확인하세요. | ✅ 예   |
-| [floor][4.6]      | 출력을 가장 가까운 정수로 반내림합니다.        | ✅ 예   |
-| [마이너스][4.7]      | 출력에서 숫자를 뺍니다.          | ✅ 예   |
-| [플러스][4.8]       | 출력에 숫자를 추가합니다.     | ✅ 예   |
-| [반올림][4.9]      | 출력을 가장 가까운 정수 또는 지정된 소수점 이하로 반올림합니다.  | ✅ 예   |
-| [곱하기][4.10]     | 출력에 숫자를 곱합니다.       | ✅ 예   |
-| [모듈][4.11]    | 출력을 숫자로 나누고 나머지를 반환합니다.   | ✅ 예   |
+| [abs](https://shopify.dev/api/liquid/filters/math-filters#abs)        | 숫자의 절대값을 반환합니다.     | ✅ 예   |
+| [at_most](https://shopify.dev/api/liquid/filters/math-filters#at_most)    | 숫자를 최대값으로 제한합니다.   | ✅ 예   |
+| [at_least](https://shopify.dev/api/liquid/filters/math-filters#at_least)   | 숫자를 최소값으로 제한합니다.   | ✅ 예   |
+| [ceil](https://shopify.dev/api/liquid/filters/math-filters#ceil)       | 출력을 가장 가까운 정수로 반올림합니다.  | ✅ 예   |
+| [divided_by](https://shopify.dev/api/liquid/filters/math-filters#divided_by) | 출력을 숫자로 나눕니다. 출력은 가장 가까운 정수로 반내림됩니다. 반올림을 방지하려면 다음 팁을 확인하세요. | ✅ 예   |
+| [floor](https://shopify.dev/api/liquid/filters/math-filters#floor)      | 출력을 가장 가까운 정수로 반내림합니다.        | ✅ 예   |
+| [minus](https://shopify.dev/api/liquid/filters/math-filters#minus)      | 출력에서 숫자를 뺍니다.          | ✅ 예   |
+| [plus](https://shopify.dev/api/liquid/filters/math-filters#plus)       | 출력에 숫자를 추가합니다.     | ✅ 예   |
+| [round](https://shopify.dev/api/liquid/filters/math-filters#round)      | 출력을 가장 가까운 정수 또는 지정된 소수점 이하로 반올림합니다.  | ✅ 예   |
+| [times](https://shopify.dev/api/liquid/filters/math-filters#times)     | 출력에 숫자를 곱합니다.       | ✅ 예   |
+| [modulo](https://shopify.dev/api/liquid/filters/math-filters#modulo)    | 출력을 숫자로 나누고 나머지를 반환합니다.   | ✅ 예   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -171,9 +171,9 @@ You have $35 to spend!
 
 | 필터         | 정의          | 지원 |
 | :--------------- | :--------------- | :-------- |
-| [머니][5.1]      | 소수점이 올바른 위치에 있고 숫자 끝에서 0이 빠지지 않도록 숫자 서식을 지정합니다.   | ✅ 예   |
-| [money_with_currency][5.2]    | 통화 기호로 숫자 서식을 지정합니다.     | ⛔ 아니요    |
-| [money_without_currency][5.4]     | 통화 기호 없이 숫자의 서식을 지정합니다.      | ⛔ 아니요    |
+| [money](https://shopify.dev/api/liquid/filters/money-filters#money)      | 소수점이 올바른 위치에 있고 숫자 끝에서 0이 빠지지 않도록 숫자 서식을 지정합니다.   | ✅ 예   |
+| [money_with_currency](https://shopify.dev/api/liquid/filters/money-filters#money_with_currency)    | 통화 기호로 숫자 서식을 지정합니다.     | ⛔ 아니요    |
+| [money_without_currency](https://shopify.dev/api/liquid/filters/money-filters#money_without_currency)     | 통화 기호 없이 숫자의 서식을 지정합니다.      | ⛔ 아니요    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
@@ -202,7 +202,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | 머니 필터 사용                       | 머니 필터 미사용                    |
 | :------------------------------------------ | :------------------------------------------ |
-| ![돈 필터 사용][1]                     | ![돈 필터 없음][2]                  |
+| ![With money filter]({% image_buster /assets/img/with_money_filter.png %})                     | ![Without money filter]({% image_buster /assets/img/without_money_filter.png %})                  |
 | 여기서 `account_balance`는 `17.8`에 입력합니다. | 여기서 `account_balance`는 `17.8`에 입력합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -225,7 +225,7 @@ $145.00
 {% endtab %}
 {% endtabs %}
 
-Shopify의 [머니][5.1] 필터에 따르면 `$1.45` 으로 출력되어야 하지만 Braze에서는 `$145.00` 으로 출력됩니다. 해결 방법으로 `divided_by` 필터를 사용하여 숫자를 10진수로 조작한 후 돈 필터를 적용할 수 있습니다:
+According to Shopify's [money](https://shopify.dev/api/liquid/filters/money-filters#money) filter, this should have an output of `$1.45`, however in Braze, this will have an output of `$145.00`. 해결 방법으로 `divided_by` 필터를 사용하여 숫자를 10진수로 조작한 후 돈 필터를 적용할 수 있습니다:
 
 {% tabs local %}
 {% tab 입력 %}
@@ -254,34 +254,34 @@ Liquid에서 직선 따옴표는 곡선 따옴표와 다릅니다. 텍스트 편
 
 | 필터          | 설명     | 지원 |
 | :--------------- | ------------- | --------- |
-| [추가][6.1]     | 문자열에 문자를 추가합니다.           | ✅ 예   |
-| [카멜케이스][6.2]     | 문자열을 카멜케이스로 변환합니다.             | ⛔ 아니요    |
-| [대문자][6.3]     | 문자열의 첫 단어는 대문자로 표시하고 나머지 문자는 소문자로 표시합니다.         | ✅ 예   |
-| [소문자][6.4]      | 문자열을 소문자로 변환합니다.         | ✅ 예   |
-| [이스케이프][6.5]    | 문자열을 이스케이프합니다.             | ✅ 예   |
-| [핸들/핸들화][6.6]        | 문자열의 형식을 핸들로 지정합니다.        | ⛔ 아니요    |
-| [md5][6.7]    | 문자열을 MD5 해시로 변환합니다. 자세한 내용은 [인코딩 필터][3] ]를 참조하세요.   | ✅ 예   |
-| [sha1][6.8]    | 문자열을 SHA-1 해시로 변환합니다. 자세한 내용은 [인코딩 필터][3] ]를 참조하세요.  | ✅ 예   |
-| HMAC_SHA1_HEX<br>(이전 [hmac_sha_1][6.10]) | 해시 메시지 인증 코드(HMAC)를 사용하여 문자열을 SHA-1 해시로 변환합니다. 메시지의 비밀 키를 필터에 매개변수로 전달합니다. 자세한 내용은 [인코딩 필터][3] ]를 참조하세요. | ✅ 예   |
-| [hmac_sha256][6.11]    | 해시 메시지 인증 코드(HMAC)를 사용하여 문자열을 SHA-256 해시로 변환합니다. 메시지의 비밀 키를 필터에 매개변수로 전달합니다.       | ✅ 예   |
+| [append](https://shopify.dev/api/liquid/filters/string-filters#append)     | 문자열에 문자를 추가합니다.           | ✅ 예   |
+| [camelcase](https://shopify.dev/api/liquid/filters/string-filters#camelcase)     | 문자열을 카멜케이스로 변환합니다.             | ⛔ 아니요    |
+| [capitalize](https://shopify.dev/api/liquid/filters/string-filters#capitalize)     | 문자열의 첫 단어는 대문자로 표시하고 나머지 문자는 소문자로 표시합니다.         | ✅ 예   |
+| [downcase](https://shopify.dev/api/liquid/filters/string-filters#downcase)      | 문자열을 소문자로 변환합니다.         | ✅ 예   |
+| [escape](https://shopify.dev/api/liquid/filters/string-filters#escape)    | 문자열을 이스케이프합니다.             | ✅ 예   |
+| [handle/handleize](https://shopify.dev/api/liquid/filters/string-filters#handle-handleize)        | 문자열의 형식을 핸들로 지정합니다.        | ⛔ 아니요    |
+| [md5](https://shopify.dev/api/liquid/filters/string-filters#md5)    | 문자열을 MD5 해시로 변환합니다. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more.   | ✅ 예   |
+| [sha1](https://shopify.dev/api/liquid/filters/string-filters#sha1)    | 문자열을 SHA-1 해시로 변환합니다. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more.  | ✅ 예   |
+| HMAC_SHA1_HEX<br>(previously [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | 해시 메시지 인증 코드(HMAC)를 사용하여 문자열을 SHA-1 해시로 변환합니다. 메시지의 비밀 키를 필터에 매개변수로 전달합니다. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more. | ✅ 예   |
+| [hmac_sha256](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256)    | 해시 메시지 인증 코드(HMAC)를 사용하여 문자열을 SHA-256 해시로 변환합니다. 메시지의 비밀 키를 필터에 매개변수로 전달합니다.       | ✅ 예   |
 | hmac_sha512 | 해시 메시지 인증 코드(HMAC)를 사용하여 문자열을 SHA-512 해시로 변환합니다. 메시지의 비밀 키를 필터에 매개변수로 전달합니다. | ✅ 예  |
-| [newline_to_br][6.12]     | 문자열의 각 줄 바꿈 앞에 `<br>` 줄 바꿈 HTML 태그를 삽입합니다.        | ✅ 예   |
-| [복수화][6.13]   | 숫자 값에 따라 단수 또는 복수 버전의 영어 문자열을 출력합니다.      | ⛔ 아니요    |
-| [prepend][6.14]     | 문자열에 문자를 추가합니다.      | ✅ 예   |
-| [제거][6.15]      | 문자열에서 부분 문자열의 모든 항목을 제거합니다.       | ✅ 예   |
-| [remove_first][6.16]    | 문자열에서 부분 문자열의 첫 번째 항목만 제거합니다.      | ✅ 예   |
-| [대체][6.17]        | 문자열의 모든 항목을 부분 문자열로 바꿉니다.   | ✅ 예   |
-| [replace_first][6.18]        | 문자열의 첫 번째 문자열을 부분 문자열로 바꿉니다.      | ✅ 예   |
-| [슬라이스][6.19]       | 슬라이스 필터는 지정된 인덱스에서 시작하여 하위 문자열을 반환합니다.       | ✅ 예   |
-| [분할][6.20]  | 분할 필터는 하위 문자열을 매개변수로 사용합니다. 하위 문자열은 문자열을 배열로 나누는 구분 기호로 사용됩니다.            | ✅ 예   |
-| [스트립][6.21]   | 문자열의 왼쪽과 오른쪽에서 탭, 공백, 줄 바꿈(모두 공백)을 제거합니다.                                                                                                    | ✅ 예   |
-| [lstrip][6.22]     | 문자열의 왼쪽에서 탭, 공백, 줄 바꿈(모두 공백)을 제거합니다.    | ⛔ 아니요    |
-| [rstrip][6.23]             | 문자열의 오른쪽에서 탭, 공백, 줄 바꿈(모두 공백)을 제거합니다.          | ⛔ 아니요    |
-| [strip_html][6.24]         | 문자열에서 모든 HTML 태그를 제거합니다.        | ✅ 예   |
-| [스트립_뉴라인][6.25]  | 문자열에서 줄 바꿈/새 줄을 제거합니다.        | ✅ 예   |
-| [잘라내기][6.26]    | 첫 번째 매개 변수로 전달된 문자 수만큼 문자열을 잘라냅니다. 잘린 문자열에는 줄임표(...)가 추가되며 문자 수에 포함됩니다.    | ✅ 예   |
-| [잘라낸 단어][6.27]   | 첫 번째 매개변수로 전달된 단어 수만큼 문자열을 잘라냅니다. 잘린 문자열에는 줄임표(...)가 추가됩니다.    | ✅ 예   |
-| [업케이스][6.28]   | 문자열을 대문자로 변환합니다.      | ✅ 예   |
+| [newline_to_br](https://shopify.dev/api/liquid/filters/string-filters#newline_to_br)     | 문자열의 각 줄 바꿈 앞에 `<br>` 줄 바꿈 HTML 태그를 삽입합니다.        | ✅ 예   |
+| [pluralize](https://shopify.dev/api/liquid/filters/string-filters#pluralize)   | 숫자 값에 따라 단수 또는 복수 버전의 영어 문자열을 출력합니다.      | ⛔ 아니요    |
+| [prepend](https://shopify.dev/api/liquid/filters/string-filters#prepend)     | 문자열에 문자를 추가합니다.      | ✅ 예   |
+| [remove](https://shopify.dev/api/liquid/filters/string-filters#remove)      | 문자열에서 부분 문자열의 모든 항목을 제거합니다.       | ✅ 예   |
+| [remove_first](https://shopify.dev/api/liquid/filters/string-filters#remove_first)    | 문자열에서 부분 문자열의 첫 번째 항목만 제거합니다.      | ✅ 예   |
+| [replace](https://shopify.dev/api/liquid/filters/string-filters#replace)        | 문자열의 모든 항목을 부분 문자열로 바꿉니다.   | ✅ 예   |
+| [replace_first](https://shopify.dev/api/liquid/filters/string-filters#replace_first)        | 문자열의 첫 번째 문자열을 부분 문자열로 바꿉니다.      | ✅ 예   |
+| [slice](https://shopify.dev/api/liquid/filters/string-filters#slice)       | 슬라이스 필터는 지정된 인덱스에서 시작하여 하위 문자열을 반환합니다.       | ✅ 예   |
+| [split](https://shopify.dev/api/liquid/filters/string-filters#split)  | 분할 필터는 하위 문자열을 매개변수로 사용합니다. 하위 문자열은 문자열을 배열로 나누는 구분 기호로 사용됩니다.            | ✅ 예   |
+| [strip](https://shopify.dev/api/liquid/filters/string-filters#strip)   | 문자열의 왼쪽과 오른쪽에서 탭, 공백, 줄 바꿈(모두 공백)을 제거합니다.                                                                                                    | ✅ 예   |
+| [lstrip](https://shopify.dev/api/liquid/filters/string-filters#lstrip)     | 문자열의 왼쪽에서 탭, 공백, 줄 바꿈(모두 공백)을 제거합니다.    | ⛔ 아니요    |
+| [rstrip](https://shopify.dev/api/liquid/filters/string-filters#rstrip)             | 문자열의 오른쪽에서 탭, 공백, 줄 바꿈(모두 공백)을 제거합니다.          | ⛔ 아니요    |
+| [strip_html](https://shopify.dev/api/liquid/filters/string-filters#strip_html)         | 문자열에서 모든 HTML 태그를 제거합니다.        | ✅ 예   |
+| [strip_newlines](https://shopify.dev/api/liquid/filters/string-filters#strip_newlines)  | 문자열에서 줄 바꿈/새 줄을 제거합니다.        | ✅ 예   |
+| [truncate](https://shopify.dev/api/liquid/filters/string-filters#truncate)    | 첫 번째 매개 변수로 전달된 문자 수만큼 문자열을 잘라냅니다. 잘린 문자열에는 줄임표(...)가 추가되며 문자 수에 포함됩니다.    | ✅ 예   |
+| [truncatewords](https://shopify.dev/api/liquid/filters/string-filters#truncatewords)   | 첫 번째 매개변수로 전달된 단어 수만큼 문자열을 잘라냅니다. 잘린 문자열에는 줄임표(...)가 추가됩니다.    | ✅ 예   |
+| [upcase](https://shopify.dev/api/liquid/filters/string-filters#upcase)   | 문자열을 대문자로 변환합니다.      | ✅ 예   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 추가 필터
@@ -290,10 +290,10 @@ Liquid에서 직선 따옴표는 곡선 따옴표와 다릅니다. 텍스트 편
 
 | 필터                | 설명                                                                                                                      | 지원 |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [날짜][7.1]           | 타임스탬프를 다른 날짜 형식으로 변환합니다. 자세한 내용은 [날짜 필터를](#date-filter) 참조하세요.         | ✅ 예   |
-| [기본값][7.2]        | 값이 할당되지 않은 변수의 기본값을 설정합니다. 문자열, 배열 및 해시와 함께 사용할 수 있습니다.      | ✅ 예   |
-| [형식_주소][7.3] | 주소의 요소를 로캘에 따라 순서대로 인쇄하도록 주소 형식을 지정합니다.        | ⛔ 아니요    |
-| [하이라이트][7.4]      | 제출된 검색어와 일치하는 경우 검색 결과 내의 단어를 HTML `<strong>` 태그와 함께 클래스 하이라이트로 감싸줍니다. | ⛔ 아니요    |
+| [date](https://shopify.dev/api/liquid/filters/additional-filters#date)           | 타임스탬프를 다른 날짜 형식으로 변환합니다. 자세한 내용은 [날짜 필터를](#date-filter) 참조하세요.         | ✅ 예   |
+| [default](https://shopify.dev/api/liquid/filters/additional-filters#default)        | 값이 할당되지 않은 변수의 기본값을 설정합니다. 문자열, 배열 및 해시와 함께 사용할 수 있습니다.      | ✅ 예   |
+| [format_address](https://shopify.dev/api/liquid/filters/additional-filters#format_address) | 주소의 요소를 로캘에 따라 순서대로 인쇄하도록 주소 형식을 지정합니다.        | ⛔ 아니요    |
+| [highlight](https://shopify.dev/api/liquid/filters/additional-filters#highlight)      | 제출된 검색어와 일치하는 경우 검색 결과 내의 단어를 HTML `<strong>` 태그와 함께 클래스 하이라이트로 감싸줍니다. | ⛔ 아니요    |
 | `time_zone`             | 표준 [시간대 필터를](#time-zone-filter) 참조하세요.     | ✅ 예   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -386,74 +386,10 @@ Wed August 4 2:00:00
 {% endtabs %}
 
 
-[1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
-[1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
-[1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters#compact
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
-[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
-[1.13]: https://shopify.dev/api/liquid/filters#where
-
-[2.1]: https://shopify.dev/api/liquid/filters/color-filters
-[3.1]: https://shopify.dev/api/liquid/filters/font-filters
-
-[4.1]: https://shopify.dev/api/liquid/filters/math-filters#abs
-[4.2]: https://shopify.dev/api/liquid/filters/math-filters#at_most
-[4.3]: https://shopify.dev/api/liquid/filters/math-filters#at_least
-[4.4]: https://shopify.dev/api/liquid/filters/math-filters#ceil
-[4.5]: https://shopify.dev/api/liquid/filters/math-filters#divided_by
-[4.6]: https://shopify.dev/api/liquid/filters/math-filters#floor
-[4.7]: https://shopify.dev/api/liquid/filters/math-filters#minus
-[4.8]: https://shopify.dev/api/liquid/filters/math-filters#plus
-[4.9]: https://shopify.dev/api/liquid/filters/math-filters#round
-[4.10]: https://shopify.dev/api/liquid/filters/math-filters#times
-[4.11]: https://shopify.dev/api/liquid/filters/math-filters#modulo
-
-[5.1]: https://shopify.dev/api/liquid/filters/money-filters#money
-[5.2]: https://shopify.dev/api/liquid/filters/money-filters#money_with_currency
-[5.3]: https://shopify.dev/api/liquid/filters/money-filters#money_without_trailing_zeros
-[5.4]: https://shopify.dev/api/liquid/filters/money-filters#money_without_currency
-
-[6.1]: https://shopify.dev/api/liquid/filters/string-filters#append
-[6.2]: https://shopify.dev/api/liquid/filters/string-filters#camelcase
-[6.3]: https://shopify.dev/api/liquid/filters/string-filters#capitalize
-[6.4]: https://shopify.dev/api/liquid/filters/string-filters#downcase
-[6.5]: https://shopify.dev/api/liquid/filters/string-filters#escape
-[6.6]: https://shopify.dev/api/liquid/filters/string-filters#handle-handleize
-[6.7]: https://shopify.dev/api/liquid/filters/string-filters#md5
-[6.8]: https://shopify.dev/api/liquid/filters/string-filters#sha1
-[6.10]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1
-[6.11]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256
-[6.12]: https://shopify.dev/api/liquid/filters/string-filters#newline_to_br
-[6.13]: https://shopify.dev/api/liquid/filters/string-filters#pluralize
-[6.14]: https://shopify.dev/api/liquid/filters/string-filters#prepend
-[6.15]: https://shopify.dev/api/liquid/filters/string-filters#remove
-[6.16]: https://shopify.dev/api/liquid/filters/string-filters#remove_first
-[6.17]: https://shopify.dev/api/liquid/filters/string-filters#replace
-[6.18]: https://shopify.dev/api/liquid/filters/string-filters#replace_first
-[6.19]: https://shopify.dev/api/liquid/filters/string-filters#slice
-[6.20]: https://shopify.dev/api/liquid/filters/string-filters#split
-[6.21]: https://shopify.dev/api/liquid/filters/string-filters#strip
-[6.22]: https://shopify.dev/api/liquid/filters/string-filters#lstrip
-[6.23]: https://shopify.dev/api/liquid/filters/string-filters#rstrip
-[6.24]: https://shopify.dev/api/liquid/filters/string-filters#strip_html
-[6.25]: https://shopify.dev/api/liquid/filters/string-filters#strip_newlines
-[6.26]: https://shopify.dev/api/liquid/filters/string-filters#truncate
-[6.27]: https://shopify.dev/api/liquid/filters/string-filters#truncatewords
-[6.28]: https://shopify.dev/api/liquid/filters/string-filters#upcase
-
-[7.1]: https://shopify.dev/api/liquid/filters/additional-filters#date
-[7.2]: https://shopify.dev/api/liquid/filters/additional-filters#default
-[7.3]: https://shopify.dev/api/liquid/filters/additional-filters#format_address
-[7.4]: https://shopify.dev/api/liquid/filters/additional-filters#highlight
 
 
-[1]: {% image_buster /assets/img/with_money_filter.png %}
-[2]: {% image_buster /assets/img/without_money_filter.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters
+
+
+
+
+
