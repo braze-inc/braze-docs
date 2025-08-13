@@ -13,60 +13,68 @@ description: "Learn about the Braze SDK's intelligent, client-side rate limiting
 
 Braze SDKs implement adaptive client-side rate limiting designed to protect both your users' experience and your app's performance. Our SDKs automatically batch events and adapt flush intervals based on network quality to provide the best user experience while maintaining data integrity.
 
-### Token bucket rate limiting
+### Asynchronous processing
 
-Braze SDKs use a token bucket algorithm for rate limiting. This approach allows for bursts of activity while maintaining long-term rate control. The token bucket mechanism works by:
+Braze SDKs use a token bucket algorithm for rate limiting. This approach allows for bursts of activity while maintaining long-term rate control. Instead of processing requests in a strict queue, the token bucket operates asynchronously:
 
-- **Token generation**: Tokens are replenished to the bucket at a steady rate
-- **Request consumption**: Each SDK call consumes a token from the bucket
-- **Burst handling**: Short bursts of activity are allowed if tokens are available
-- **Rate control**: Long-term rate is controlled by the token generation rate
+- **Token generation**: Tokens are replenished at a steady rate into the bucket.
+- **Request handling**: Any SDK call that arrives when a token is available proceeds immediately, regardless of when other calls arrived.
+- **No strict ordering**: Requests don’t wait in line; multiple calls may compete for the next available token.
+- **Burst handling**: Short bursts of activity are allowed if enough tokens are available at the time of the requests.
+- **Rate control**: Long-term throughput is limited by the steady token replenishment rate.
 
-### Remote rate limit adaptation
+This asynchronous flow helps the SDK respond quickly to available network capacity while maintaining predictable overall traffic levels.
 
-Braze can dynamically adjust rate limits remotely to protect our network infrastructure and ensure optimal performance for all customers. This means:
+### Adaptive rate limiting
 
-- **Network protection**: Rate limits can be adjusted in real-time to prevent network overload
-- **Performance optimization**: Dynamic adjustments help maintain optimal SDK performance
-- **Infrastructure protection**: Remote control allows Braze to respond to network conditions
+Braze can adjust rate limits in real time to protect network infrastructure and maintain optimal performance. This approach:
+
+- **Prevents overload**: Adjusts limits to avoid network congestion.
+- **Optimizes performance**: Maintains smooth SDK operation under varying conditions.
+- **Responds to conditions**: Adapts based on current network and usage patterns.
 
 {% alert note %}
-Because rate limits can be adjusted remotely to protect our network infrastructure, we cannot provide exact bucket numbers or static rate limit values. The limits are designed to be adaptive and may change based on network conditions and usage patterns.
+Because limits adapt in real time, exact bucket sizes and static values are not provided. They may change depending on network conditions and usage.
 {% endalert %}
 
-### Key networking features of the SDKs
+### Networking optimizations
 
-- **Automatic batching**: Events are queued and sent in efficient batches
-- **Network-aware behavior**: Flush rates automatically adjust based on connectivity
-- **Battery optimization**: Reduces radio wake-ups and network calls
-- **Graceful degradation**: Handles poor network conditions seamlessly
-- **Background/foreground awareness**: Optimizes behavior during app lifecycle transitions
+Braze SDKs include several built-in behaviors to improve efficiency, reduce battery usage, and handle varying network conditions:
 
-## Review your integration approach
+- **Automatic batching**: Queues events and sends them in efficient batches.
+- **Network-aware behavior**: Adjusts flush rates based on connectivity quality.
+- **Battery optimization**: Minimizes radio wake-ups and network calls.
+- **Graceful degradation**: Maintains functionality during poor network conditions.
+- **Background/foreground awareness**: Optimizes behavior as the app’s lifecycle changes.
+
+## Best practices
 
 If you're experiencing rate limit issues, review your SDK integration and consider these do's and don'ts:
 
-**DO:**
-- Track meaningful user actions and milestones
-- Refresh content only when necessary
-- Let the SDK handle batching automatically
-- Focus on events that provide value to your analytics
+| Do this | Not this |
+| --- | --- |
+| Track meaningful user actions and milestones | Track every minor interaction or UI event |
+| Refresh content only when necessary | Refresh content on every user action (like scroll events) |
+| Let the SDK handle batching automatically | Force immediate data transmission unless absolutely necessary |
+| Focus on events that add value to analytics | Call SDK methods in rapid succession without considering frequency |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-**DON'T:**
-- Track every minor interaction or UI event
-- Refresh content on every user action (like scroll events)
-- Force immediate data transmission unless absolutely necessary
-- Call SDK methods in rapid succession without considering frequency
+## Getting Help
 
-### Getting Help
+When contacting [support@braze.com](mailto:support@braze.com) about SDK rate limit issues, please include the following information:
 
-When contacting Support about rate limit issues, please provide:
-- Which networking SDK methods you're calling. In particular:
-  - **`requestImmediateDataFlush()`**: Forces immediate data transmission
-  - **`requestContentCardsRefresh()`**: Refreshes Content Cards from the server
-  - **`refreshFeatureFlags()`**: Refreshes Feature Flags from the server
-  - **`logCustomEvent()`**: Logs custom events
-  - **`logPurchase()`**: Logs purchase events
-- How frequently each method is being called
-- The context in which these calls are being made (e.g., scroll events, button clicks, etc.)
-- Any patterns in your app's user flow that might trigger excessive calls
+```plaintext
+Call frequency for each networking SDK method:
+- requestImmediateDataFlush(): [frequency]
+- requestContentCardsRefresh(): [frequency]
+- refreshFeatureFlags(): [frequency]
+- logCustomEvent(): [frequency]
+- logPurchase(): [frequency]
+- Other: [method and frequency]
+
+Context in which these calls occur (e.g., scroll events, button clicks):
+[describe]
+
+Patterns in user flow that may trigger excessive calls:
+[describe]
+```
