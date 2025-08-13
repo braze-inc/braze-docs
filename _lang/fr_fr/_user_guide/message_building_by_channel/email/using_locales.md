@@ -13,6 +13,10 @@ description: "Cet article explique comment utiliser les paramètres locaux dans 
 
 Pour modifier et gérer la [prise en charge multilingue]({{site.baseurl}}/multi_language_support/), vous devez disposer de l’autorisation « Gérer les paramètres multilingues ». Pour ajouter le paramètre régional à un message, vous devez disposer des autorisations nécessaires pour modifier les campagnes.
 
+{% alert important %}
+La prise en charge du multilinguisme et des langues locales dans les messages est actuellement en phase d'accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
+
 ## Utilisation des paramètres régionaux
 
 Pour utiliser les paramètres régionaux dans vos messages, composez une campagne e-mail ou un canvas. Sélectionnez l'éditeur HTML ou l'éditeur par glisser-déposer, puis suivez les étapes en fonction de votre éditeur.
@@ -72,31 +76,5 @@ Pour utiliser l ['API multilingue avec Canvases]({{site.baseurl}}/api/endpoints/
 #### Les étapes du canvas ont été ajoutées aux versions préliminaires après le lancement.
 
 Lorsque vous utilisez l'API multilingue avec des étapes du canvas qui ont été créées après le lancement du canvas, le site `message_variation_id` que vous transmettez à l'API sera vide ou vierge.
-
-## Foire aux questions
-
-#### Je souhaite apporter une modification à la version traduite dans l'un de mes pays. Comment faire ?
-Modifiez le fichier CSV, puis chargez à nouveau le fichier pour apporter une modification à la copie traduite.
-
-#### Puis-je imbriquer des tags de traduction ?
-Non.
-
-#### Puis-je utiliser des langues locales dans mes modèles d'e-mail ?
-Non. Les langues ne sont prises en charge que dans l'éditeur d'e-mail pour les campagnes et les étapes du message dans Canvas.
-
-#### Puis-je ajouter un style HTML dans les étiquettes de traduction ?
-Oui. Toutefois, veillez à vérifier que le style HTML n'est pas traduit avec le contenu.
-
-#### Quelles validations ou vérifications supplémentaires Braze effectue-t-elle pour les traductions ?
-
-| Scénario                                                                                                                                                 | Validation en Braze                                                                                            |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Il manque, dans un fichier de traduction, les paramètres régionaux associés au message en cours.                                                                               | Ce fichier de traduction ne sera pas téléchargé.                                                                       |
-| Il manque, dans un fichier de traduction, des blocs de texte, par exemple un texte à l'intérieur des tags Liquid, provenant du message e-mail en cours.                                | Ce fichier de traduction ne sera pas téléchargé.                                                                       |
-| Le fichier de traduction inclut le texte par défaut qui ne correspond pas aux blocs de texte du message e-mail actuel.                                          | Ce fichier de traduction ne sera pas téléchargé. Corrigez ce problème dans votre CSV avant d'essayer de le télécharger à nouveau.               |
-| Le fichier de traduction inclut des langues qui n'existent pas dans les paramètres de **prise en charge multilingue**.                                                           | Ces paramètres régionaux ne seront pas enregistrés dans Braze.                                                                      |
-| Le fichier de traduction comprend des blocs de texte qui n'existent pas dans le message actuel (comme le brouillon actuel au moment où les traductions sont chargées). | Les blocs de texte qui n'existent pas dans votre message actuel ne seront pas enregistrés du fichier de traduction vers Braze. |
-| Suppression d'un paramètre régional du message alors que ce paramètre régional a déjà été chargé dans le message en tant que partie du fichier de traduction.                           | En supprimant le paramètre régional, vous supprimez toutes les traductions associées à celui-ci dans votre message.                   |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% multi_lang_include locales.md section="Questions fréquemment posées" %}
