@@ -15,13 +15,13 @@ tool: Canvas
 
 ## 前提条件
 
-失効したユーザーテンプレートを正常に使用するには、[Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) を使用するパートナーとオーディエンスに設定する必要があります。
+失効したユーザーテンプレートを正常に使用するには、[Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) を使用するパートナーとオーディエンスに設定する必要があります。
 
 ## 必要に応じてテンプレートをカスタマイズする
 
 映画やショー専用コンテンツを提供するストリーミングサービス「ムービーキヤノン」に取り組んでいるとしよう。失効したユーザーテンプレートを使用して、30日以内にアプリを訪れていないユーザーの特典やプレミアムコンテンツをプロモートできます。
 
-キャンバスを作成する前に、[Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) 統合を設定し、Braze からGoogle Audiences にユーザーデータを追加して、ビヘイビアートリガー、セグメンテーションなどに基づいて広告を送信できるようにします。
+キャンバスを作成する前に、[Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) 統合を設定し、Braze からGoogle Audiences にユーザーデータを追加して、ビヘイビアートリガー、セグメンテーションなどに基づいて広告を送信できるようにします。
 
 離脱ユーザーテンプレートにアクセスするには、新しいキャンバスを作成するときに [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択します。次に、**Lapsing User**の横にある**Apply Template**を選択します。これで、テンプレートを使用して、ニーズに合わせてテンプレートを調整できます。
 
@@ -38,13 +38,13 @@ tool: Canvas
 3\.このキャンバスにパークとプロモーションが含まれていることを説明する説明を更新します。
 4. **Lapsing/Retention** というタグを追加して、キャンバスのホームページでこのキャンバスをフィルターできるようにします。
 
-![キャンバス名が「Lapsed User - Visit App」で簡単なキャンバスの説明がある「キャンバスの詳細を設定」ステップ][1]
+![キャンバス名が「Lapsed User - Visit App」で簡単なキャンバスの説明がある [キャンバスの詳細を設定] ステップ]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### ステップ2:コンバージョンイベントを割り当てる
 
-**Primary Conversion Event - アプリ(MovieCanon)からターゲットユーザーにA** を更新し、**Primary Conversion Event - B** を購入のデフォルトとして残します。
+[**1次コンバージョンイベント - A**] を更新してアプリ (MovieCanon) のユーザーをターゲットに設定し、[**1次コンバージョンイベント - B**] はデフォルトの購入のままにしておきます。
 
-![特定のアプリでセッションを開始するユーザーの1次コンバージョンイベントが示されている「コンバージョンイベントを割り当てる」セクション。][2]
+![特定のアプリでセッションを開始するユーザーの1次コンバージョンイベントが示されている [コンバージョンイベントを割り当てる] セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### ステップ 3:エントリスケジュールを調整する
 
@@ -55,13 +55,13 @@ tool: Canvas
 1. 開始日時を選択する。
 2. [**特定の日**] の終了パラメーターと、2か月後の日付を選択します。このキャンバスの後に開始する別の離脱ユーザーキャンバスがあるとします。
 
-![指定した時刻にユーザーをエントリさせるスケジュールされたキャンバスの「エントリスケジュール」ステップ。][3]
+![指定した時刻にユーザーをエントリさせるスケジュールされたキャンバスの [エントリスケジュール] ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### ステップ4:ターゲットオーディエンスを選択する
 
 エントリーオーディエンスのデフォルト設定は、30 日以上アプリを使用していないユーザーに設定されています。また、4週間後にユーザーがキャンバスに再びエントリできるように、デフォルトのエントリコントロールを保持します。これは、ユーザーが30 日以上連続してアプリにアクセスしないたびに、キャンバスに入力されることを意味します。
 
-![アプリを最後に使用した時点が30日以内のユーザーをターゲット設定する「ターゲットオーディエンス」ステップ。][4]
+![アプリを最後に使用した時点が30日以内のユーザーをターゲット設定する [ターゲットオーディエンス] ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### ステップ 5: 送信設定を選択する
 
@@ -73,7 +73,7 @@ tool: Canvas
 
 ここで変更する唯一の設定は、静かな時間帯にメッセージがトリガーされたときに行うことです。メッセージをキャンセルする代わりに、**次回利用可能時間に送信**を選択して、ユーザーがプロモーションを見逃さないようにします。
 
-![" Quiet Hours" 開始時刻が午前12 時で終了時刻が午前8 時のセクション。][5]
+![開始時刻が午前12時で終了時刻が午前8時の[サイレント時間] セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### ステップ 6:キャンバスをカスタマイズする
 
@@ -81,12 +81,12 @@ tool: Canvas
 
 1. 30日間以上アプリを訪問していないすべてのユーザーに送信する最初のメールをカスタマイズします。このユースケースでは、本日アプリにアクセスしたときに新しい特典のロックを解除するようにユーザーに伝えるメールをカスタマイズします。 
 
-![ユーザが今日訪問したときに新しい特典のロックを解除するように指示するメールのキャンバスメッセージステップ。][6]
+![ユーザーが今日訪問すると、新しい特典のロックが解除されることを伝えるメールのキャンバスメッセージステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\.**Started Session**パスのアプリを選択して、"Start Session?"というアクションパスコンポーネントをカスタマイズします。 
 
-![特定のアプリで開始されたセッションのアクションパス。][7]
+![特定のアプリで開始されたセッションのアクションパス。]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\.「Sessions?」と呼ばれるDecision Splitステップのデフォルトを維持します。このステップでは、「>1 Session」グループを、最後のカレンダー日にアプリを複数回使用したユーザーとして定義します。
@@ -95,7 +95,7 @@ tool: Canvas
 6. [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths)コンポーネントのデフォルトを"A/B Test"のままにします。これにより、2つのプロモーションのうちの1つ(次のステップでカスタマイズします)が、セッション数が2つ未満のユーザーにランダムに送信されます。
 7. 実験パスの一部としてユーザーに送信する2つのプロモーションをカスタマイズします。ユースケースでは、1つは3ヶ月のサブスクリプションで20%のプロモーションを行い、もう1つは1ヶ月のサブスクリプションで10%のプロモーションを行います。
 
-![ユーザーが行ったセッションの数に基づく分岐パスがあるキャンバスステップ。][8]{: style="max-width:70%;"}
+![ユーザーが行ったセッションの数に基づく分岐パスがあるキャンバスステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
 
 ### ステップ 7:キャンバスをテストして起動する
 
@@ -105,11 +105,3 @@ tool: Canvas
 キャンバスの起動前後に考慮すべき点については、[起動前と起動後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/lapsing_user_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/lapsing_user_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/lapsing_user_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/lapsing_user_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/lapsing_user_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}
