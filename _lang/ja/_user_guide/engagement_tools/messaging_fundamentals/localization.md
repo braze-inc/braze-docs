@@ -22,13 +22,13 @@ tool:
 
 ## 翻訳管理
 
-翻訳を管理するには、次の方法を考慮してください。
+次の翻訳管理方法を検討してください。
 
 {% tabs local %}
 {% tab キャンペーン %}
 ### すべてに対して1つのテンプレート
 
-このアプローチでは、ローカライズは、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid)を使用して、ブレーズ内の単一テンプレートに適用されます。送信後、ダッシュボードは集計されたキャンペーン分析を提供する。ユーザーレベルのエンゲージメントは、例えば**国**と**受信キャンペーン**のフィルターを組み合わせるなど、カスタムのセグメントファネルを使用して測定できます。
+このアプローチでは、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を使用して Braze が1つのテンプレートにローカライゼーションが適用されます。送信後、ダッシュボードは集計されたキャンペーン分析を提供する。ユーザーレベルのエンゲージメントは、例えば**国**と**受信キャンペーン**のフィルターを組み合わせるなど、カスタムのセグメントファネルを使用して測定できます。
 
 | メリット | 考慮事項 |
 | --- | --- |
@@ -38,7 +38,7 @@ tool:
 
 ### 国ごとに1つのテンプレート 
 
-このアプローチでは、テンプレートを異なる送信ロケールに分割します。送信後、ダッシュボードは国別に送信分析を報告し、下流のユーザーレベルの[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents)イベントも特定のキャンペーンに関連付けられる。
+このアプローチでは、テンプレートをさまざまな送信ロケールに分けます。送信後、ダッシュボードは国別に送信分析を報告し、下流のユーザーレベルの[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents)イベントも特定のキャンペーンに関連付けられる。
 
 - テンプレートは、メンテナンスとトラッキングの目的で[タグを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags)実装することで恩恵を受ける。
 - キャンペーンは、同じ[Brazeテンプレートや]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) [コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks)（Liquidを含む[メールテンプレートなど]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template)）の設定を継承できる。
@@ -51,22 +51,22 @@ tool:
 {% endtab %}
 
 {% tab キャンバス %}
-### 万人のための一旅
+### 1つのジャーニーですべてに対応
 
 このアプローチでは、ローカライズは[Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey)およびLiquid内で処理され、各ユーザのメッセージングを定義します。 
 
-キャンバスが送信された後、ダッシュボードには集計された[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)が表示され、ユーザーレベルのエンゲージメントは、カスタムの[セグメントファネル]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/) ([**国**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country)と[**受信キャンバスステップ**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step)のフィルターの組み合わせなど) で測定できます。
+キャンバスが送信された後、ダッシュボードには集計された[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)が表示され、ユーザーレベルのエンゲージメントは、カスタムの[セグメントファネル]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) ([**国**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country)と[**受信キャンバスステップ**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step)のフィルターの組み合わせなど) で測定できます。
 
 | メリット | 考慮事項 |
 | --- | --- |
 | \- 集中アプローチ<br>\- メール作成時間の短縮 - 何度もメールを作成する必要はありません。 | \- マニュアル・レポート作成<br>\- キャンバスレポートには、国ごとの指標ではなく、集計された指標が表示される<br>\- Liquid を徹底的にテストして、期待どおりに事前入力されることを確認する必要がある<br>\- 国の値をどのように引き出すか、または設定した国の数によっては、各国のテストが難しい場合がある<br>\- 複数のタイムゾーンで特定の時間に送信をスケジュールするのが難しくなる<br>\- 国ごとに別々のコンテンツを送信したい場合は使いにくい |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### 一国につき一行
+### 国ごとに1つのジャーニー
 
 このアプローチでは、[Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)ジャーニービルダーは、複数の[Canvas コンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を介してユーザジャーニーを作成する柔軟性を提供します。これらのコンポーネントは、コンポーネントレベルおよびジャーニー全体で[複製]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating)できます。
 
-ローカライズは、次の方法で行うことができます。
+ローカライゼーションは、次の方法で実行できます。
 
 - 国ごとにキャンバスを分けることで、複雑なユーザージャーニーがオーディエンスフィルターを使用してファネルの一番上に定義されるようにする。
 - 国ごとに特注のユーザージャーニーを作成し、[Audience Pathsを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/)実装することで、1つのCanvasに国ごとに個別のメッセージスレッドを作成することで、ジャーニーごとに大規模にユーザーを直感的にセグメント化する。
@@ -86,10 +86,10 @@ tool:
 
 {% tabs local %}
 {% tab 手動 %}
-メッセージの本文にコンテンツを手動で貼り付け、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/)を使用して[条件付きで]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic)正しい言語を受信者に表示できます。これを行うには:
+メッセージの本文にコンテンツを手動で貼り付け、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/)を使用して[条件付きで]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic)正しい言語を受信者に表示できます。これを行う方法:
 
-1. メッセージを作成し、**Language** を選択して、選択した言語ごとに液体条件付きロジックを生成します。
-2. 次の Liquid テンプレートを使用すると、メッセージを作成できます。テンプレートを使用するフィールドごとに、テンプレートの中括弧内のセグメントの後にバリエーションを入力する必要があります。バリエーションは、その前の中括弧で参照されている言語コードに対応していなければなりません。
+1. メッセージを作成し、[**言語**] を選択して、選択した言語ごとに Liquid の条件付きロジックを生成します。
+2. メッセージの作成には次の Liquid テンプレートを使用できます。テンプレートを使用するフィールドごとに、テンプレートの中括弧内のセグメントの後にバリエーションを入力する必要があります。バリエーションは、その前の中括弧で参照されている言語コードに対応していなければなりません。
     {% raw %}
     ```liquid
     {% if ${language} == 'en' %}
@@ -234,14 +234,14 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% endtab %}
 
 {% tab ロケールメッセージ %}
-メッセージにロケールを追加して使用し、1 つのキャンペーン内のすべての異なる言語のユーザーをターゲットにするか、メールまたはプッシュチャネルのキャンバスをターゲットにします。詳細なウォークスルーについては、[メールメッセージのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/)または[プッシュメッセージのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/)を参照してください。
+メッセージにロケールを追加して使用することで、メールキャンペーンやプッシュチャネルのキャンバスまたは1つのキャンペーン内で異なる言語のユーザーをターゲットにすることができます。詳細なウォークスルーについては、[メールメッセージのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/)または[プッシュメッセージのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/)を参照してください。
 
 {% alert important %}
 この機能は現在早期アクセス段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
 {% endalert %}
 {% endtab %}
 
-{% tab ろう付けパートナー %}
+{% tab Braze のパートナー %}
 [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) や [Crowdin](https://crowdin.com/) など、多くの Braze パートナーがローカライゼーションソリューションを提供しています。通常、ユーザーは社内チームや翻訳業者と一緒にプラットフォームを使用します。これらの翻訳はそこにアップロードされ、REST API 経由でアクセスできるようになります。これらのサービスでは多くの場合、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)を活用して、ユーザーが API 経由で翻訳を取得できるようにしています。
 
 例えば、次のコネクテッドコンテンツの呼び出しでは、Transifex と Crowdin を呼び出して翻訳を取得し、{% raw %}`{{${language}}}`{% endraw %} を利用して特定のユーザー用に正しい翻訳を特定します。その後、この翻訳が JSON ブロックの「文字列」に保存され、参照されます。
@@ -271,7 +271,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 
 {% subtabs local %}
 {% subtab Connected Content %}
-翻訳機関と一緒にGoogleスプレッドシートに翻訳を保存し、[Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)を使用してこのコンテンツをクエリすることができます。メッセージを送信すると、選択した言語に基づいて、各ユーザの関連する翻訳がキャンペーン本文に取り込まれます。 
+翻訳エージェントと協力して Google スプレッドシートに翻訳を保存し、[Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) を使用してこのコンテンツに対してクエリを実行できます。メッセージを送信すると、ユーザーが選択した言語に基づいて、各ユーザーに対して適切な翻訳がキャンペーン本文に取り込まれます。 
 
 {% alert note %}
 Google スプレッドシート API には、1 プロジェクトあたり 100 秒間に 500 リクエストという制限があります。コネクテッドコンテンツの通話はキャッシュできますが、このソリューションはトラフィックの多いキャンペーンには拡張できません。
@@ -296,7 +296,7 @@ Liquid とコネクテッドブロックの依存関係が少ない SheetDB を�
 | de | Hallo | 4 | Hallo2 | 8 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 
-#### ステップ2: コネクテッドコンテンツ呼び出しで Liquid の言語タグを使用する
+#### ステップ2:コネクテッドコンテンツ呼び出しで Liquid の言語タグを使用する
 
 次に、コネクテッドコンテンツの呼び出しに Liquid タグ {% raw %}`{{${language}}}`{% endraw %} を実装します。ここで SheetDB はスプレッドシートの作成時に `sheet_id` を自動生成することに注意してください。
 
