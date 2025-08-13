@@ -1,4 +1,4 @@
-# Using Braze MCP server
+# Using the Braze MCP server
 
 > Learn how to interact with your Braze data through natural language using tools like Claude and Cursor. For more general information, see [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
@@ -6,11 +6,11 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [set up Braze MCP Server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+Before you can use this feature, you'll need to [set up the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Best practices
 
-When using Braze MCP server through natural-language tools like Claude and Cursor, keep these tips in mind to get the best results:
+When using the Braze MCP server through natural-language tools like Claude and Cursor, keep these tips in mind to get the best results:
 
 - LLMs can make mistakes, so always be sure to double-check their answers.
 - For data analysis, be clear about the time range you need. Shorter ranges often give more accurate results.
@@ -20,7 +20,7 @@ When using Braze MCP server through natural-language tools like Claude and Curso
 
 ## Usage examples
 
-After [setting up Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, you can interact with Braze through natural language using tools like Claude or Cursor. Here's some examples to get you started:
+After [setting up the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, you can interact with Braze through natural language using tools like Claude or Cursor. Here's some examples to get you started:
 
 ### What are my available Braze functions?
 
