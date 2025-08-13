@@ -4,7 +4,7 @@ article_title: SAML 및 싱글 사인온
 page_order: 5
 layout: dev_guide
 guide_top_header: "SAML 및 싱글 사인온"
-guide_top_text: "싱글사인온(SSO)은 기업이 Braze 대시보드에 대한 액세스를 안전하고 중앙 집중식으로 제어할 수 있는 방법을 제공합니다. 즉, 하나의 자격 증명 세트를 사용하여 Braze를 포함한 다양한 애플리케이션에 액세스할 수 있습니다. <br> <br> Braze는 최신 SAML 2.0(보안 어설션 마크업 언어) 업계 표준을 지원하는 SAML SSO를 지원하며 Azure 액티브 디렉토리, Okta 및 OneLogin도 지원합니다."
+guide_top_text: "싱글사인온(SSO)은 기업이 Braze 대시보드에 대한 액세스를 안전하고 중앙 집중식으로 제어할 수 있는 방법을 제공합니다. 즉, 하나의 자격 증명 세트를 사용하여 Braze를 포함한 다양한 애플리케이션에 액세스할 수 있습니다. <br> <br> Braze supports SAML SSO, which supports the latest Security Assertion Markup Language (SAML 2.0) industry standards, and also supports Microsoft Entra ID (formerly Azure Active Directory), Okta, and OneLogin."
 
 page_type: landing
 description: "이 랜딩 페이지에는 싱글 사인온(SSO)에 관한 문서가 있습니다. 여기에서 지원되는 ID 공급자를 설정하거나 사용자 지정 설정을 수행하는 데 도움이 되는 도움말을 찾을 수 있습니다."
