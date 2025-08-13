@@ -32,7 +32,7 @@ noindex: true
 
 ## Paso 1: Sube tu token de APNs
 
-{% multi_lang_include developer_guide/swift/apns_token.md
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## Paso 2: Habilitar las capacidades push
 
