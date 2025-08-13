@@ -5,7 +5,7 @@ alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "この記事では、競合状態がメッセージングキャンペーンに影響を与えないようにするためのベストプラクティスを紹介します。"
-
+toc_headers: h2
 ---
 
 # 競合状態
@@ -43,7 +43,7 @@ Braze で最も一般的な競合状態の1つは、新しく作成されたユ�
 
 例えば、ユーザーがアプリに登録した後、24時間後にプロモーションオファーを送ることができます。あるいは、ユーザーを作成したり、カスタム属性をログに記録している場合は、この競合状態を避けるために、処理を進める前に1分間の遅延を加えることができます。
 
-新規ユーザーがキャンバスに入るトリガーとなる特定のカスタムイベントに対して、[Braze SDKで]({{site.baseurl}}/developer_guide/sdk_integration)このディレイを追加することもできる。 
+新しいユーザーがキャンバスにエントリするトリガーとなる特定のカスタムイベントに対して、[Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration) でこの遅延を追加することもできます。 
 
 ## シナリオ2：複数の API エンドポイントを使用する
 
@@ -52,7 +52,7 @@ Braze で最も一般的な競合状態の1つは、新しく作成されたユ�
 - 別々の API エンドポイントを使用してユーザーを作成し、キャンバスやキャンペーンをトリガーする
 - カスタム属性、イベント、または購入を更新するために、`/users/track` エンドポイントに複数の個別の呼び出しを行う
 
-ユーザー情報が []({{site.baseurl}}/api/endpoints/user_data/post_user_track)`/users/track`エンドポイント[を使用して Braze に送信される場合、処理に数秒かかることがあります。つまり、`/users/track` と `/campaign/trigger/send` のようなメッセージングエンドポイントに対して同時に要求が行われた場合、メッセージが送信される前にユーザー情報が更新される保証はありません。
+ユーザー情報が [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track)を使用して Braze に送信される場合、処理に数秒かかることがあります。つまり、`/users/track` と `/campaign/trigger/send` のようなメッセージングエンドポイントに対して同時に要求が行われた場合、メッセージが送信される前にユーザー情報が更新される保証はありません。
 
 {% alert note %}
 ユーザー属性とイベントが同じリクエストで送信される場合 (`/users/track` または SDK から)、Braze は、イベントやメッセージの送信を試みる前に属性を処理します。
@@ -72,7 +72,7 @@ Braze で最も一般的な競合状態の1つは、新しく作成されたユ�
 
 これらのオブジェクトがトリガーに含まれている場合、メッセージがトリガーされる前に属性が最初に処理されるため、競合状態になる可能性がなくなります。トリガープロパティはユーザープロファイルを更新するのではなく、メッセージのコンテキストの中だけで使われることに注意してください。
 
-#### POST を使用する：ユーザー (一括) エンドポイントの追跡
+#### POST を使用する：ユーザーをトラッキング(同期)するエンドポイント
 
 この[`/users/track/sync/`エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous)を使用して、カスタムイベントと購入を記録し、ユーザープロファイル属性を同期的に更新します。このエンドポイントを使用して、1回の呼び出しでユーザープロファイルを同時に更新すると、競合状態の可能性を防ぐのに役立ちます。
 
@@ -118,7 +118,3 @@ Braze で最も一般的な競合状態の1つは、新しく作成されたユ�
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
