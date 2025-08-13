@@ -31,4 +31,3 @@ Toutes les modifications apportées dans la section **Paramètres d'administrati
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/
