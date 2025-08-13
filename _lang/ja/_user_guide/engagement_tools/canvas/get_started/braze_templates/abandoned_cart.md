@@ -18,13 +18,13 @@ tool: Canvas
 このテンプレートをうまく使うには、以下のものが必要だ：
 
 - 個別の購入後のユーザージャーニーのキャンバス (このキャンバスで購入が行われると、ユーザーはこのキャンバスを離脱するため)。
-- 使用するパートナーとオーディエンスとの [Braze オーディエンス同期]({{site.baseurl}}/partners/canvas_steps)が設定されていること。
+- 使用するパートナーとオーディエンスとの [Braze オーディエンス同期]({{site.baseurl}}/partners/canvas_audience_sync/)が設定されていること。
 
 ## テンプレートをニーズに合わせる
 
 例えば、キッチン用品の小売（店）ブランドであるKitchenerieで、最新の商品「巨大な紙皿」をカートに入れたものの、購入に至っていないユーザーを再び獲得することが目標だとしよう。
 
-キャンバスを作成する前に、[Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) インテグレーションを設定し、Braze のユーザーデータを Facebook オーディエンスに追加して、行動トリガーやセグメンテーションなどに基づいて広告を送信できるようにした。
+キャンバスを作成する前に、[Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) インテグレーションを設定し、Braze のユーザーデータを Facebook オーディエンスに追加して、行動トリガーやセグメンテーションなどに基づいて広告を送信できるようにした。
 
 放棄されたインテント・テンプレートにアクセスするには、新しいキャンバスを作成する際に、「**キャンバス・テンプレートを使用する**」＞「**Brazeテンプレート**」を選択する。次に、**「放棄された意図**」の隣にある「**テンプレートを適用**」を選択する。あとは、テンプレートを見ながら、自分たちのニーズに合わせていくだけだ。
 
@@ -51,7 +51,7 @@ tool: Canvas
 2. [**特定の購入**] を選択します。これにより、特定の製品名を選択できるようになります。
 3. [**Enormous Paper Plate**] を選択します。
 
-![「1次コンバージョンイベント - A」でコンバージョンタイプとして「購入」、製品名として「Enormous Paper Plate」が選択されている。コンバージョンの期限は3日間である。][1]
+![「1次コンバージョンイベント - A」でコンバージョンタイプとして「購入」、製品名として「Enormous Paper Plate」が選択されている。コンバージョン期限は3日間。]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### ステップ 3:エントリスケジュールを設定する
 
@@ -62,19 +62,19 @@ tool: Canvas
 3. エントリ期間の開始日時を選択します。
 4. ユーザーがローカルタイムゾーンでエントリできるようにするオプションを選択します。最適なタイミングでメッセージを送ることで、メッセージングの関連性を保ち、エンゲージメントを高めることができる。
 
-![カートを放棄したユーザーをターゲットにするアクションベースのキャンバス。エントリ期間には、ユーザーのローカルタイムゾーンで2024年10月15日午後3時20分が設定されている。][2]
+![カートを放棄したユーザーをターゲットにしたアクションベースのキャンバス。エントリウィンドウはユーザーのローカルタイムゾーンで2024年10月15日15時20分。]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### ステップ 4:キャンバスにエントリするユーザーを決定する
 
 次に、ターゲット・オーディエンスを、過去90日以内に当社でオンラインショッピングをしたことがあるユーザーと定義しよう。これにより、当社の製品にエンゲージメントがあるとわかっているユーザーにオーディエンスを絞り込むことができる。 
 
-![このキャンバスのターゲットとするユーザーのセグメントとして「Online Shoppers Segment - 90 Days」が設定されている。][3]
+![このキャンバスのターゲットとするユーザーのセグメントとして「Online Shoppers Segment - 90 Days」が設定されている。]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 エントリのコントロールは変更しません。このためユーザーはこのキャンバスに再度エントリできません。このキャンバスにエントリできるユーザーの数に制限はありません。
 
 終了条件として、ユーザーは「Enormous Paper Plate」を購入した場合にキャンバスを離脱します。これにより、すでに購入した商品に関するメッセージを今後受け取ることがなくなります。
 
-![Enormous Paper Plate を購入したユーザーがキャンバスから離脱することを指定する終了条件。][4]
+![Enormous Paper Plate を購入したユーザーがキャンバスから離脱することを指定する終了条件。]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### ステップ 5: 送信設定を選択する
 
@@ -87,14 +87,14 @@ tool: Canvas
 1. アクションパスのステップを選択し、**Made purchase**アクショングループ名を選択する。
 2. ［**購入**] で ［**特定の購入**] を選択し、製品として ［**Enormous Paper Plate**] を選択します。終了基準と同様に、この商品を購入したユーザーはキャンバスから退出する。
 
-![ユーザーが Enormous Paper plate を購入するとキャンバスを離脱する「購入しました」アクショングループ。][5]
+![ユーザーが Enormous Paper plate を購入するとキャンバスを離脱する「購入しました」アクショングループ。]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3\.メッセージステップで [**メッセージを編集**] を選択し、ユーザーに送信するメールをカスタマイズして、放棄カートに商品があることを通知する内容にします。
 4. 遅延ステップはそのままにしておきます。
 5. オーディエンスパスのステップに続くメッセージのステップでは、ユーザーが受け取るメールとSMSメッセージをカスタマイズする。そこで、パーソナライズされたメッセージングでユーザーに商品の購入を促したい。
 
-![ユーザーが受け取るSMSメッセージのプレビュー："こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。会計時にコード「MYPLATE」を使用すると、注文が20％オフになる！"][6]
+![ユーザーが受け取るSMSメッセージのプレビュー："こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。チェックアウト時にコード「MYPLATE」を使用すると、注文が 20％ 割引になります！"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6. 次のアクションパスステップで、[**購入済み**] アクショングループを選択します。［**特定の購入**] を選択し、製品として ［**Enormous Paper Plate**] を選択します。このステップでは、製品を購入したユーザーを退出させ、これらのユーザーが今後メッセージを受け取らないようにすることで、最初のアクションパスステップをミラーリングします。
@@ -112,9 +112,3 @@ tool: Canvas
 キャンバスの起動前後に考慮すべき点については、[起動前と起動後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/abandoned_intent2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/abandoned_intent3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/abandoned_intent4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/abandoned_intent5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/abandoned_intent6.png %}
