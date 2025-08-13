@@ -16,7 +16,7 @@ tool: Campaigns
 
 캠페인이 시작되는 즉시 메시지를 보내도록 선택하면 캠페인 생성을 완료하는 즉시 메시지 전송이 시작됩니다.
 
-!['전송' 섹션에서 '예약됨'을 선택하면 캠페인이 시작되는 즉시 전송하는 시간 기반 예약 옵션이 표시됩니다.][10]
+![The "Delivery" section with "Scheduled" selected and the time-based scheduling option of sending as soon as the campaign is launched.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
 이 유형의 일정은 현재 이벤트에 대한 메시지와 같이 즉시 전송하려는 일회성 캠페인을 위해 설계되었습니다. 예를 들어 스포츠 앱에서는 이 옵션을 사용하여 점수 업데이트에 대한 푸시 알림을 예약할 수 있습니다. 또한, 본인 또는 팀만을 대상으로 테스트 메시지를 보낼 때 이 옵션을 사용하면 즉시 메시지를 전달할 수 있습니다. 
 
@@ -28,11 +28,11 @@ tool: Campaigns
 
 **예약 전송**을 선택하고 사용자 현지 시간에 전송하도록 선택하지 않으면 **회사 설정** 페이지에서 지정한 시간대에 따라 캠페인이 전송됩니다.
 
-![지정된 시간에 캠페인을 전송하기 위한 시간 기반 예약 옵션입니다.][9]
+![The time-based scheduling options for sending a campaign at a designated time.]({% image_buster /assets/img_archive/schedule_designated.png %})
 
 ### 현지 시간대 캠페인
 
-사용자의 현지 시간대로 메시지를 전달하여 전 세계 오디언스들이 불편한 시간에 알림을 받지 않도록 할 수 있습니다. 현지 시간대 캠페인은 모든 시간대의 적격 사용자가 캠페인을 받을 수 있도록 24시간 전에 예약해야 합니다. 현지 시간대 캠페인의 작동 방식과 관련 전달 규칙에 대한 자세한 내용은 [캠페인 FAQ][25]를 참조하세요.
+사용자의 현지 시간대로 메시지를 전달하여 전 세계 오디언스들이 불편한 시간에 알림을 받지 않도록 할 수 있습니다. 현지 시간대 캠페인은 모든 시간대의 적격 사용자가 캠페인을 받을 수 있도록 24시간 전에 예약해야 합니다. Check out [Campaign FAQ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/) to understand how local time zone campaigns work and the associated delivery rules.
 
 현지 시간대 캠페인을 타겟팅하는 세그먼트에는 모든 시간대의 사용자를 통합할 수 있도록 최소 2일의 기간이 포함되어야 합니다. 예를 들어, 캠페인이 저녁에 전송되도록 예약되어 있지만 기간이 1일밖에 남지 않은 경우, 일부 사용자가 해당 시간대에 도달했을 때 세그먼트에서 제외되었을 수 있습니다. 2일 기간을 만드는 필터의 예로는 "1일 이상 전에 마지막으로 사용" 및 "3일 전에 마지막으로 사용" 또는 "7일 이상 전에 처음 구매" 및 "9일 전에 처음 구매" 등이 있습니다.
 
@@ -42,9 +42,9 @@ tool: Campaigns
 
 ## 옵션 3: Intelligent Timing
 
-[Intelligent Timing][8]을 사용하면 각 사용자에게 다른 시간에 캠페인을 전달할 수 있습니다. Braze는 사용자가 일반적으로 앱과 알림에 참여하는 시간을 기준으로 각 개인의 시간을 계산합니다. 선택적으로 Intelligent Timing 캠페인이 하루 중 특정 시간대에만 전송되도록 지정할 수 있습니다. 예를 들어 자정에 종료되는 프로모션을 사용자에게 알리는 경우 늦어도 오후 10시까지 메시지를 보내도록 할 수 있습니다.
+[Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) allows you to deliver a campaign to each user at a different time. Braze는 사용자가 일반적으로 앱과 알림에 참여하는 시간을 기준으로 각 개인의 시간을 계산합니다. 선택적으로 Intelligent Timing 캠페인이 하루 중 특정 시간대에만 전송되도록 지정할 수 있습니다. 예를 들어 자정에 종료되는 프로모션을 사용자에게 알리는 경우 늦어도 오후 10시까지 메시지를 보내도록 할 수 있습니다.
 
-![지능형 타이밍을 사용하여 모든 사용자가 앱을 가장 많이 사용하는 시간에 캠페인을 보낼 수 있는 시간 기반 예약 옵션입니다.][14]
+![The time-based scheduling options for using Intelligent Timing to send a campaign at the most popular time to use the app among all users.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
 
 ### 전달 규칙
 
@@ -56,10 +56,3 @@ tool: Campaigns
 
 Intelligent Timing 캠페인은 뉴스 속보나 시간 제한이 있는 공지 등 전달 시간에 유연성이 필요한 일회성 및 반복 메시지에 가장 적합합니다.
 
-[3]: {% image_buster /assets/img_archive/time_based.png %}
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[9]: {% image_buster /assets/img_archive/schedule_designated.png %}
-[10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
-[14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}
