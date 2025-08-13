@@ -32,15 +32,15 @@ description: "이 문서에서는 Braze의 미디어 라이브러리에 대해 �
 
 미디어 라이브러리에서 이미지를 선택하고 **새 이미지 자르기 및 저장**을 클릭하여 기존 이미지를 자를 수 있습니다. 
 
-![][2]{: height="75%" width="75%"}
+![Preview of media library image.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
 그러면 비율 유형을 선택하고 새 이미지의 이름을 편집할 수 있는 자르기 컴포저로 리디렉션됩니다. **저장을** 누르면 새 이미지를 사용할 수 있습니다.
 
-![][3]{: height="75%" width="75%"}
+![Window to crop and save media library image.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
 ### 이미지를 업로드하려고 할 때 시간이 계속 초과됩니다. 어떻게 하면 되나요?
 
-여러 가지 이유로 이러한 문제가 발생할 수 있지만 일반적인 해결책은 이미지를 업로드하기 전에 이미지가 최적화되었는지 확인하는 것입니다. 즉, 이미지 최적화 프로그램(예: ImageOptim][5])을 통해 이미지를 실행합니다.
+여러 가지 이유로 이러한 문제가 발생할 수 있지만 일반적인 해결책은 이미지를 업로드하기 전에 이미지가 최적화되었는지 확인하는 것입니다. This means running your image through an image optimizer such as [ImageOptim](https://imageoptim.com/mac).
 
 또한 포토샵(또는 유사한 소프트웨어)으로 만든 이미지에 레이어가 많은 경우 레이어 수를 병합하고 줄이는 것도 도움이 될 수 있습니다.
 
@@ -48,6 +48,3 @@ description: "이 문서에서는 Braze의 미디어 라이브러리에 대해 �
 
 이는 대부분의 작성기들이 허용되는 이미지 비율 크기에 제한이 있기 때문입니다.
 
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[5]:https://imageoptim.com/mac
