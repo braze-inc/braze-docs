@@ -464,9 +464,9 @@
 		border: none;
 		cursor: pointer;
 		transition: opacity 0.3s ease-in-out;
-		position: absolute;
-		left: -40px;
-    	top: -5px;
+		position: relative;
+		margin-left: 4px;
+		vertical-align: bottom;
 
 		.heading-copy-icon {
 			width: 20px;
@@ -1216,4 +1216,8 @@ svg[id^="mermaid"] {
   height: auto;
   max-height: 100%;
   font-size: 1rem !important;
+}
+
+.toc_container .heading-copy-btn {
+	display: none;
 }

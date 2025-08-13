@@ -1,8 +1,6 @@
 // Add copy link buttons to headings with IDs
   function addHeadingCopyButtons() {
-    const headings = $('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]');
-
-    const copyIcon = '/docs/assets/img/copy_icon.png';
+    const headings = $('#main_content #article-main h1[id],#main_content #article-main h2[id], #main_content #article-main h3[id], #main_content #article-main h4[id], #main_content #article-main h5[id], #main_content #article-main h6[id]');
     
     headings.each(function() {
       const $heading = $(this);
