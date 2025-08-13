@@ -22,7 +22,7 @@ Les déclencheurs d’attributs sont disponibles pour les scénarios suivants :
 
 Pour commencer à utiliser les déclencheurs d'attributs, créez une campagne ou un composant Canvas et sélectionnez la **livraison par événement** comme méthode de livraison. Sélectionnez ensuite le déclencheur d’attribut que vous souhaitez utiliser.
 
-![][1]
+![]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Mettre à jour le statut d’abonnement
 
@@ -66,7 +66,7 @@ Examinez le prochain exemple de cas d’utilisation avec une notification de mis
 Les déclencheurs d’attributs ne sont pas actuellement disponibles pour les attributs de tableaux.
 {% endalert %}
 
-![N’importe quelle nouvelle valeur][2]
+![Toute nouvelle valeur]({% image_buster /assets/img_archive/any_value.png %})
 
 Vous pouvez également utiliser Liquid pour personnaliser le corps du message avec le nouveau niveau de fidélité du client et lui fournir plus d’informations sur le changement.
 
@@ -82,7 +82,7 @@ Utilisez le déclencheur `Change Custom Attribute Value` avec l’option `specif
 
 Par exemple, cibler les utilisateurs lorsque leur niveau de fidélité passe au niveau le plus haut. Pour cet exemple, disons que le niveau de fidélité le plus haut est Super VIP. Vous pouvez configurer une campagne pour qu’elle se déclenche lorsque l’attribut personnalisé de niveau de fidélité d’un utilisateur passe à `Super VIP` afin que vous puissiez le féliciter d’être devenu un Super VIP.
 
-![][4]
+![]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Les déclencheurs d’attributs pour des valeurs d’attribut personnalisé spécifiques ne sont pas disponibles pour les attributs personnalisés de tableau et de date.
@@ -91,6 +91,3 @@ Par exemple, cibler les utilisateurs lorsque leur niveau de fidélité passe au 
 - Le déclencheur de changement de valeurs d’attribut personnalisé s’applique également aux nouveaux utilisateurs créés.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}
