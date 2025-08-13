@@ -42,13 +42,13 @@ Consultez ces ressources supplémentaires pour en savoir plus sur les campagnes 
 
 Plutôt que d'envoyer des messages sporadiques au cours de plusieurs campagnes, Canvases crée une conversation fluide et continue avec les utilisateurs. En effet, le parcours d'un utilisateur dans un Canvas peut se scinder en différents parcours en fonction de ses actions (ou inactions) avec votre marque, ce qui vous permet de faire avancer automatiquement les utilisateurs dans un flux spécifique en temps réel.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 De cette façon, les Canvas sont parfaits pour jeter un filet afin de capturer les utilisateurs qui tombent sur le chemin de la conversion et de les placer dans les initiatives de sensibilisation les plus efficaces.
 
 Lorsque vous créez un Canvas, vous suivez en grande partie les mêmes étapes que pour la mise en place d'une campagne : spécification d'une audience globale, des conditions de participation et des paramètres d'envoi. Votre Canvas démarre lorsque quelqu'un correspond à votre condition de déclenchement. Ils progressent ensuite dans le canvas jusqu'à remplir vos conditions de sortie.
 
-Votre Canvas peut comporter n'importe quelle combinaison de [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), de [délais]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), d'[expériences]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), etc. Vous pouvez envoyer sur n'importe quel canal de communication pris en charge, et même [intégrer des plateformes sociales et publicitaires]({{site.baseurl}}/partners/canvas_steps/overview/) telles que Facebook, Google ou TikTok.
+Votre Canvas peut comporter n'importe quelle combinaison de [messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), de [délais]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), d'[expériences]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), etc. Vous pouvez envoyer sur n'importe quel canal de communication pris en charge, et même [intégrer des plateformes sociales et publicitaires]({{site.baseurl}}/partners/canvas_audience_sync/overview/) telles que Facebook, Google ou TikTok.
 
 Consultez ces ressources supplémentaires pour en savoir plus sur Canvas Flow :
 
@@ -60,7 +60,7 @@ Consultez ces ressources supplémentaires pour en savoir plus sur Canvas Flow :
 
 Les canaux d'envoi de messages sont les différents canaux de communication par lesquels vous pouvez vous engager avec vos clients et diffuser des messages ciblés. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 Le tableau suivant présente les canaux que nous soutenons.
 
@@ -70,11 +70,13 @@ Le tableau suivant présente les canaux que nous soutenons.
 | [Notification push mobile]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | Envoyez des messages directement sur les appareils mobiles des utilisateurs sous forme de notifications.                                                                                   |
 | [Push Web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Envoyez des notifications aux navigateurs web des utilisateurs, même lorsqu'ils ne sont pas activement sur votre site web.                                                         |
 | [in-app Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Affichez des messages au sein de votre application mobile pendant que les utilisateurs l'utilisent activement.                                                                             |
-| [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)                   | Envoyez des messages textuels aux téléphones portables des utilisateurs.                                                                                                            |
+| [SMS, MMS et RCS\*.]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/)                   | Envoyez des messages textuels aux téléphones portables des utilisateurs.                                                                                                            |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)              | Envoyez des messages par le biais de la populaire plateforme d'envoi de messages, WhatsApp, pour atteindre et engager vos utilisateurs.                                                   |
+| [Bannières*]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)       | Intégrez des messages directement dans votre application ou votre site web. |
 | [Cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | Proposez une boîte de réception au sein de votre application ou site web où les utilisateurs peuvent recevoir des messages et interagir avec eux, ou affichez des messages dans un carrousel, sous forme de bannière, et plus encore. |
 | [Télévision connectée]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Dialoguez avec les utilisateurs sur les plates-formes de télévision connectées.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Permettez la communication et l'intégration en temps réel avec des systèmes externes grâce à des rappels HTTP personnalisés.                                                    |
+| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Engagez-vous avec les utilisateurs sur LINE, l'envoi de messages le plus populaire au Japon.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>\*\*Disponible en tant que fonctionnalité supplémentaire.</sup>
@@ -83,5 +85,3 @@ Le tableau suivant présente les canaux que nous soutenons.
 Pour les messages courts et urgents qui peuvent être communiqués par la plupart des canaux (e-mail, SMS, push), profitez du filtre de [canal intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) pour envoyer automatiquement le message par le meilleur canal pour chaque utilisateur.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/getting_started/channels.png %}
-[2]: {% image_buster /assets/img/getting_started/canvas_flow.png %}
