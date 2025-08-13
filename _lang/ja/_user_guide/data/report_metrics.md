@@ -64,15 +64,11 @@ tool: Reports
 
 {% multi_lang_include metrics.md metric='Bounces' %} これは、有効なプッシュトークンが存在しないか、キャンペーン開始後にユーザーが配信停止したか、メールアドレスが間違っているかまたは無効化されているために発生する可能性があります。
 
-#### メール
-
-SendGrid を使用している顧客のメールバウンスには、ハードバウンス、スパム (`spam_report_drops`)、および無効なアドレスに送信されたメール (`invalid_emails`) があります。
-
-メールの場合、[*バウンス率 (%)*] または [*バウンス率*] は、使用した送信サービスが送信に失敗した、または「返送された」や「受信されなかった」が示されたメッセージ、あるいは目的のメール可能なユーザーが受信しなかったメッセージの割合です。
-
-#### プッシュ
-
-これらのユーザーに対し、今後のすべてのプッシュ通知が自動的に配信停止されています。 
+|チャネル|追加情報|
+|-------|-----------------------|
+|メール|SendGrid を使用している顧客のメールバウンスには、ハードバウンス、スパム (`spam_report_drops`)、および無効なアドレスに送信されたメール (`invalid_emails`) があります。<br><br>メールの場合、[*バウンス率 (%)*] または [*バウンス率*] は、使用した送信サービスが送信に失敗した、または「返送された」や「受信されなかった」が示されたメッセージ、あるいは目的のメール可能なユーザーが受信しなかったメッセージの割合です。|
+|プッシュ|これらのユーザーに対し、今後のすべてのプッシュ通知が自動的に配信停止されています。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -122,7 +118,7 @@ iOSプッシュ、Androidプッシュ
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Button 1 Clicks' %}
+{% multi_lang_include metrics.md metric='Button 1 Clicks' %} _ボタン 1 クリック数_のレポートは、アプリ内メッセージで [**レポート用の識別子**] を「0」として指定した場合にのみ機能します。
 
 <span class="calculation-line">計算式: (ボタン 1 のクリック数) / (インプレッション数)</span>
 
@@ -136,7 +132,7 @@ iOSプッシュ、Androidプッシュ
 アプリ内メッセージ
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Button 2 Clicks' %}
+{% multi_lang_include metrics.md metric='Button 2 Clicks' %} _ボタン 2 クリック数_のレポートは、アプリ内メッセージで [**レポート用の識別子**] を「1」として指定した場合にのみ機能します。
 
 <span class="calculation-line">計算式: (ボタン 2 のクリック数) / (インプレッション数)</span>
 
@@ -182,10 +178,10 @@ iOSプッシュ、Androidプッシュ
 
 {% api %}
 
-### 確認済み配信数
+### RCS 確認済み配信数または SMS 確認済み配信数
 
 {% apitags %}
-SMS
+SMS/MMS、RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Confirmed Deliveries' %} Braze を利用する顧客の場合、配信数は SMS 割り当てに対して請求されます。 
@@ -207,7 +203,7 @@ SMS
 ### 信頼度
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、Webhook、SMS、WhatsApp
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Confidence' %}
@@ -243,16 +239,17 @@ SMS
 ### コンバージョン (B、C、D)
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、Webhook、SMS
+コンテンツカード、電子メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webフック、SMS/MMS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} この定義済みイベントは、キャンペーンを作成するときにあなたが決定します。Eメール、プッシュ、ウェブフックについては、最初の送信後にコンバージョンのトラッキングを開始する。コンテンツカードの場合、このカウントはコンテンツカードを初めて閲覧した時点から始まります。
+{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %} この定義済みイベントは、キャンペーンを作成するときにあなたが決定します。 
 
-#### アプリ内メッセージ
-
-アプリ内メッセージの場合、ユーザーがアプリ内メッセージキャンペーンを受信して表示し、その後定義されているコンバージョン期間内に特定のコンバージョンイベントを実行した場合、メッセージをクリックしたかどうかに関係なく、コンバージョンがカウントされます。
-
-変換は、最後に受信したメッセージに起因します。再適格性が有効な場合、定義されているコンバージョン期間内にコンバージョンが行われる限り、コンバージョンは受信した最新のアプリ内メッセージに割り当てられます。ただし、アプリ内メッセージに変換がすでに割り当てられている場合、その新しい変換はその特定のメッセージについてログに記録できません。これは、各アプリ内メッセージ配信が1つのコンバージョンにのみ関連付けられていることを意味します。
+|チャネル|追加情報|
+|-------|-----------------------|
+|電子メール、プッシュ、Webhook|コンバージョンは初回送信後に追跡されます。|
+|コンテンツカード|ユーザーが初めてコンテンツカードを表示したときに、変換がカウントされます。|
+|アプリ内メッセージ|ユーザーがアプリ内メッセージキャンペーンを受信して表示し、その後定義されているコンバージョン期間内に特定のコンバージョンイベントを実行した場合、メッセージをクリックしたかどうかに関係なく、コンバージョンがカウントされます。<br><br>変換は、最後に受信したメッセージに起因します。再適格性が有効な場合、定義されているコンバージョン期間内にコンバージョンが行われる限り、コンバージョンは受信した最新のアプリ内メッセージに割り当てられます。ただし、アプリ内メッセージに変換がすでに割り当てられている場合、その新しい変換はその特定のメッセージについてログに記録できません。これは、各アプリ内メッセージ配信が1つのコンバージョンにのみ関連付けられていることを意味します。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
@@ -289,16 +286,15 @@ SMS
 ### コンバージョン率
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、Webhook、SMS
+コンテンツカード、電子メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webフック、SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
-#### アプリ内メッセージ
-
-毎日の<i>ユニークインプレッション数</i>の指標は、アプリ内メッセージの<i>コンバージョン率</i>を計算するために使用されます。
-
-アプリ内メッセージのインプレッションは1日あたり1回だけカウントできます。一方、ユーザーが目的のアクションを完了する回数("conversion") は、24 時間以内に増加します。1日に複数回のコンバージョンが発生することもありますが、インプレッションはこのように発生することはありません。したがって、ユーザが1 日に複数回変換を完了した場合、<i>変換レート</i> はそれに応じて増加することができますが、印象は1 回だけカウントされます。
+|チャネル|追加情報|
+|-------|-----------------------|
+|アプリ内メッセージ|毎日の<i>ユニークインプレッション数</i>の指標は、アプリ内メッセージの<i>コンバージョン率</i>を計算するために使用されます。<br><br>アプリ内メッセージのインプレッションは1日あたり1回だけカウントできます。一方、ユーザーが目的のアクションを完了する回数("conversion") は、24 時間以内に増加します。1日に複数回のコンバージョンが発生することもありますが、インプレッションはこのように発生することはありません。したがって、ユーザが1 日に複数回変換を完了した場合、<i>変換レート</i> はそれに応じて増加することができますが、印象は1 回だけカウントされます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -332,7 +328,12 @@ SMS
 メール、Web プッシュ、iOS プッシュ、Android プッシュ、WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Deliveries' %} メールの場合、*Deliveries* は、メール利用可能な相手に正常に送受信されたメッセージ(送信)の総数です。
+{% multi_lang_include metrics.md metric='Deliveries' %}
+
+|チャネル|追加情報|
+|-------|-----------------------|
+|メール|メール可能な相手に正常に送受信されたメール (送信) の総数です。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -348,10 +349,10 @@ SMS
 
 {% api %}
 
-### 配信失敗数
+### RCS 配信失敗数または SMS 配信失敗数
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Delivery Failures' %}
@@ -364,10 +365,26 @@ SMS
 
 {% api %}
 
+### 配信失敗数
+
+{% apitags %}
+RCS
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Delivery Failures RCS' %}
+
+<a href="/docs/braze_support/">Braze Support</a>に連絡し、配送失敗の理由を理解するための支援を行ってください。
+
+<span class="calculation-line">計算式: (送信数) - (通信事業者への送信数)</span>
+
+{% endapi %}
+
+{% api %}
+
 ### 配信失敗率
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Failed Delivery Rate' %}
@@ -475,7 +492,7 @@ Feature Flag 実験でのメッセージのパフォーマンスメトリクス�
 ### ヘルプ
 
 {% apitags %}
-SMS
+SMS/MMS、RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Help' %} ユーザー返信は、メッセージ受信から 4 時間以内にユーザーがインバウンドメッセージを送信するたびに測定されます。
@@ -501,7 +518,7 @@ iOSプッシュ、Androidプッシュ
 ### 生涯収益
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Lifetime Revenue' %}
@@ -513,7 +530,7 @@ iOSプッシュ、Androidプッシュ
 ### ユーザーあたりの生涯価値
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Lifetime Value Per User' %}
@@ -525,7 +542,7 @@ iOSプッシュ、Androidプッシュ
 ### 平均日次収益
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Average Daily Revenue' %}
@@ -537,7 +554,7 @@ iOSプッシュ、Androidプッシュ
 ### 日々の購入
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Daily Purchases' %}
@@ -549,7 +566,7 @@ iOSプッシュ、Androidプッシュ
 ### ユーザーあたりの日割り収益
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Daily Revenue Per User' %}
@@ -564,7 +581,7 @@ iOSプッシュ、Androidプッシュ
 メール
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Machine Opens' %}この指標の追跡は、SendGrid の場合は 2021年11月11日から、SparkPost の場合は 2021年12月2日から開始されます。
+{% multi_lang_include metrics.md metric='Machine Opens' %}この指標の追跡は、SendGrid の場合は 2021年11月11日から、SparkPost の場合は 2021年12月2日から開始されます。Amazon SES の場合、分析は_開封数_として表示されます。ただし、クリックに対するボットフィルターはサポートされる予定です。
 
 {% endapi %}
 
@@ -585,7 +602,7 @@ Webプッシュ、iOSプッシュ、Androidプッシュ
 ### オプトアウト
 
 {% apitags %}
-SMS
+SMS/MMS、RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Opt-Out' %} ユーザー返信は、メッセージ受信から 4 時間以内にユーザーがインバウンドメッセージを送信するたびに測定されます。
@@ -621,10 +638,16 @@ SMS
 ### 1 次コンバージョン (A) または 1 次コンバージョンイベント
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、Webhook、SMS、WhatsApp
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、WhatsApp
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}メール、プッシュ、Webhook については、最初の送信後にコンバージョンのトラッキングを開始します。コンテンツカードやアプリ内メッセージの場合、このカウントはコンテンツカードやメッセージを初めて閲覧した時点から始まる。
+{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
+
+|チャネル|追加情報|
+|-------------|----------------------|
+|電子メール、プッシュ、Webhook|初回送信後。|
+|コンテンツカード、アプリ内メッセージ|ユーザーがコンテンツカードまたはメッセージを初めて閲覧したとき。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -669,26 +692,29 @@ WhatsApp
 ### 受信済み
 
 {% apitags %}
-メール、コンテンツカード、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、SMS、WhatsApp
+Eメール、コンテンツカード、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、SMS/MMS、WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Received' %} 
 
-- コンテンツカード:ユーザーがアプリ内でカードを表示すると「受信済み」になります。
-- プッシュ: メッセージが Braze サーバーからプッシュプロバイダーに送信されると「受信済み」になります。
-- メール: メッセージが Braze サーバーからメールサービスプロバイダー (ESP) に送信されると「受信済み」になります。
-- SMS/MMS: SMS プロバイダーが上流の通信事業者と宛先デバイスから確認を受け取ると「配信済み」になります。
-- アプリ内メッセージ：定義されたトリガーアクションに基づいて表示したときに「受信済み」になります。
-- WhatsApp:定義されたトリガーアクションに基づいて表示したときに「受信済み」になります。
+|チャネル|追加情報|
+|-------|-------|
+|コンテンツカード|ユーザーがアプリ内でカードを表示すると「受信済み」になります。|
+|プッシュ|メッセージが Braze サーバーからプッシュプロバイダーに送信されると「受信済み」になります。|
+|メール|メッセージが Braze サーバーからメールサービスプロバイダー (ESP) に送信されると「受信済み」になります。|
+|SMS/MMS|SMS プロバイダーが上流の通信事業者と宛先デバイスから確認を受け取ると「配信済み」になります。|
+|アプリ内メッセージ|定義されたトリガーアクションに基づいて表示したときに「受信済み」になります。|
+|WhatsApp|定義されたトリガーアクションに基づいて表示したときに「受信済み」になります。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
 
-### 拒否数
+### RCS 拒否数または SMS 拒否数
 
 {% apitags %}
-SMS
+SMS/MMS、RCS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Rejections' %}Braze を利用する顧客の場合、拒否数は SMS 割り当てに対して請求されます。
@@ -722,7 +748,7 @@ SMS
 ### 送信済み
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Sent' %}
@@ -736,7 +762,7 @@ SMS
 ### 送信数
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、WhatsApp、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、RCS、WhatsApp、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Sends' %} この指標は Braze によって提供されます。スケジュールされた キャンペーンを起動すると、このメトリクスには、レート制限のためにまだ送信されたかどうかに関係なく、送信されたすべてのメッセージが含まれることに注意してください。
@@ -757,7 +783,7 @@ SMS
 ### 送信済みメッセージ
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS、WhatsApp、LINE
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、WhatsApp、LINE
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Messages Sent' %}  この指標は Braze によって提供されます。スケジュールされた キャンペーンを起動すると、このメトリクスには、レート制限のためにまだ送信されたかどうかに関係なく、送信されたすべてのメッセージが含まれることに注意してください。
@@ -778,7 +804,7 @@ SMS
 ### キャリアへの送信数
 
 {% apitags %}
-SMS
+SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Sends to Carrier' %} 
@@ -805,7 +831,7 @@ SMS
 
 {% multi_lang_include metrics.md metric='Soft Bounce' %} メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側ごとに異なります。
 
-ソフトバウンスはキャンペーンアナリティクスでは追跡されませんが、[Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) でソフトバウンスをモニタリングできます。また、これらのユーザーを送信から除外したり、[Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) で過去30 日間のソフトバウンスの量を振り返ったりすることもできます。メッセージアクティビティログでは、ソフトバウンスの理由を確認し、メールキャンペーンの「送信」と「配信」の間に発生する可能性のある不一致を理解することもできます。
+ソフトバウンスはキャンペーン分析では追跡されませんが、[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)で監視できます。また、これらのユーザーを送信から除外したり、[ソフトバウンスのセグメントフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced)で過去30日間のソフトバウンスの量を確認することもできます。メッセージアクティビティログでは、ソフトバウンスの理由を確認し、メールキャンペーンの「送信」と「配信」の間に発生する可能性のある不一致を理解することもできます。
 
 {% endapi %}
 
@@ -818,6 +844,10 @@ SMS
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Spam' %}
+
+{% alert note %}
+スパムの苦情は、電子メールサービスプロバイダによって直接処理され、フィードバックループを通じてBraze に中継されます。ほとんどのフィードバックループは、実際の苦情の一部のみを報告するため、_Spam_メトリクスは、多くの場合、実際の合計の割合を表します。メールサービスプロバイダのみがスパム苦情の本当のボリュームを表示できます。つまり、_スパム_ は、すべてを網羅するメトリックではなく、指標と見なす必要があります。
+{% endalert %}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -860,10 +890,16 @@ SMS
 ### クリック数の合計
 
 {% apitags %}
-Eメール、コンテンツカード、SMS、LINE
+電子メール、コンテンツカード、SMS/MMS、LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Clicks' %} LINE の場合、1 日あたり20 メッセージの最小しきい値に達した後、これが追跡されます。AMPの電子メールには、HTMLとプレーンテキストの両方のバージョンで記録されたクリックが含まれます。この数字は、スパム対策ツールによって人為的に膨らませる可能性があります。 
+{% multi_lang_include metrics.md metric='Total Clicks' %}
+
+|チャネル|追加情報|
+|-------|-------|
+|LINE|1日20通の最小しきい値に達した後に追跡されます。AMPの電子メールには、HTMLとプレーンテキストの両方のバージョンで記録されたクリックが含まれます。この数字は、スパム対策ツールによって人為的に膨らませる可能性があります。|
+|バナー|同じユーザーが複数回クリックしたかどうかに関係なく、配信されたメッセージ内でクリックしたユーザーの総数 (およびパーセンテージ)。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -908,9 +944,13 @@ Eメール、コンテンツカード、SMS、LINE
 アプリ内メッセージ、コンテンツカード
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Impressions' %}この値は、Braze が SDK から受け取ったインプレッションイベント数の合計です。コンテンツカードの場合、これは特定のコンテンツカードで記録されたインプレッションの合計数です。これは、同じユーザに対して複数回インクリメントできます。
+{% multi_lang_include metrics.md metric='Total Impressions' %}この値は、Braze が SDK から受け取ったインプレッションイベント数の合計です。
 
-アプリ内メッセージの場合、複数のデバイスがあり、再適格性が無効になっている場合、ユーザーに対してアプリ内メッセージが1回だけ表示されます。ユーザーが複数のデバイスを使用している場合でも、ターゲットとなる最初のデバイスでのみ表示されます。これは、プロファイルによりデバイスが統合されており、ユーザーは1つのユーザー ID でこれらのデバイスにログインすることを前提としています。再適格性が有効になっている場合、ユーザーがアプリ内メッセージを表示するたびにインプレッションが記録されます。
+|チャネル|追加情報|
+|-------|-----------------------|
+|コンテンツカード|特定のコンテンツカードについて記録されたインプレッションの合計数。これは、同じユーザに対して複数回インクリメントできます。|
+|アプリ内メッセージ|複数のデバイスがあり、再適格性が無効になっている場合、ユーザーに対してアプリ内メッセージが1回だけ表示されます。ユーザーが複数のデバイスを使用している場合でも、ターゲットとなる最初のデバイスでのみ表示されます。これは、プロファイルによりデバイスが統合されており、ユーザーは1つのユーザー ID でこれらのデバイスにログインすることを前提としています。再適格性が有効になっている場合、ユーザーがアプリ内メッセージを表示するたびにインプレッションが記録されます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 <span class="calculation-line">計算式: カウント</span>
 
@@ -924,15 +964,24 @@ Eメール、コンテンツカード、SMS、LINE
 メール, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Total Opens' %} LINE の場合、1 日あたり20 メッセージの最小しきい値に達した後、これが追跡されます。AMP メールの場合、これはHTML およびプレーンテキストバージョンの合計オープン数です。 
+{% multi_lang_include metrics.md metric='Total Opens' %}
+
+|チャネル|追加情報|
+|-------|-----------------------|
+|LINE|1日20通の最小しきい値に達した後に追跡されます。|
+|AMP メール|HTMLとプレーンテキストバージョンの合計が開きます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     計算式: 
     <ul>
-        <li><b>メール: </b>(開封数) / (配信数)</li>
-        <li><b>Web プッシュ:</b>(直接開封数) / (配信数)</li>
-        <li><b>iOS、Android、および Kindle のプッシュ:</b>(ユニーク開封数) / (配信数)</li>
+        <li><b>メール <i>開封数の合計</i>:</b>カウント</li>
+        <li><b>メール <i>合計開封率</i>:</b>(開封数) / (配信数)</li>
+        <li><b>Web プッシュ <i>開封数の合計</i>:</b><i>直接開封数</i>の数</li>
+        <li><b>Web プッシュ <i>合計開封率</i>:</b>(開封数の合計) / (配信数)</li>
+        <li><b>iOS、Android、および Kindle のプッシュ<i>開封数の合計</i>:</b>(直接開封数) + (誘発された開封数)</li>
+        <li><b>iOS、Android、およびKindle プッシュ<i>合計開放率</i>:</b>(開封数の合計) / (配信数)</li>
     </ul>
 </span>
 {:/}
@@ -944,7 +993,7 @@ Eメール、コンテンツカード、SMS、LINE
 ### 総収益
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、Webhook、SMS、WhatsApp
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Total Revenue' %} このメトリクスは、<a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>を通じてキャンペーン比較レポートでのみ使用できます。
@@ -959,7 +1008,15 @@ Eメール、コンテンツカード、SMS、LINE
 メール, コンテンツカード, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Clicks' %} これには、Braze が提供する登録解除リンクのクリックが含まれます。メールの場合、これは7日間にわたって追跡されます。LINE の場合、1 日 20 通の最小しきい値に達した後、これが追跡されます。
+{% multi_lang_include metrics.md metric='Unique Clicks' %}
+
+これには、Brazeが提供する配信停止リンクのクリックも含まれる。
+
+|チャネル|追加情報|
+|-------|-----------------------|
+|メール|7日間にわたって追跡されます。|
+|LINE|1日20通の最小しきい値に達した後に追跡されます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -996,7 +1053,13 @@ Eメール、コンテンツカード、SMS、LINE
 アプリ内メッセージ、コンテンツカード
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Impressions' %} アプリ内メッセージのユニークインプレッション数は、再適格性が有効で、かつユーザーがトリガーアクションを実行した場合、24時間後に再び加算できます。再適格性がオンの場合、<i>固有印象</i>=<i>固有受信者</i>。<br><br>コンテンツカードの場合、ユーザーがコンテンツカードを2回目に表示したときには、カウントは増加しません。 
+{% multi_lang_include metrics.md metric='Unique Impressions' %} 
+
+|チャネル|追加情報|
+|-------|-----------------------|
+|アプリ内メッセージ|ユニークインプレッション数は、再適格性が有効になり、ユーザーがトリガーアクションを実行した場合、24時間後に再び加算できます。再適格性が有効になっている場合は、<i>ユニークインプレッション数</i> = <i>ユニーク受信者数</i>です。|
+|コンテンツカード|ユーザーがコンテンツカードを 2 回目に表示したときには、カウントは増加しません。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 <span class="calculation-line">計算式: カウント</span>
 
@@ -1010,7 +1073,13 @@ Eメール、コンテンツカード、SMS、LINE
 メール, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Unique Opens' %} メールの場合、これは7日間にわたって追跡されます。LINE の場合、1 日 20 通の最小しきい値に達した後、これが追跡されます。
+{% multi_lang_include metrics.md metric='Unique Opens' %}
+
+|チャネル|追加情報|
+|-------|-----------------------|
+|メール|7日間にわたって追跡されます。|
+|LINE|1日20通の最小しきい値に達した後に追跡されます。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -1034,7 +1103,7 @@ Eメール、コンテンツカード、SMS、LINE
 
 {% multi_lang_include metrics.md metric='Unique Recipients' %}
 
-閲覧者は毎日のユニーク受信者となる可能性があるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。この番号は、Braze から受信され、`user_id` に基づいています。一意の受信者は、<a href='https://braze.com/docs/api/identifier_types/#send-identifier'>送信識別子</a>レベルではなく、キャンペーンまたはキャンバスのステップレベルでカウントされます。
+閲覧者は毎日のユニーク受信者となる可能性があるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。コンテンツカードの場合、各コンテンツカードは1回しか受信できません。そのため、同じコンテンツカードを2回目に表示しても、その日に関係なく、このカウントは増分されません。<br><br>この番号は、Braze から受信され、`user_id` に基づいています。一意の受信者は、<a href='https://braze.com/docs/api/identifier_types/#send-identifier'>送信識別子</a>レベルではなく、キャンペーンまたはキャンバスのステップレベルでカウントされます。
 
 <span class="calculation-line">計算式: カウント</span>
 
@@ -1081,7 +1150,7 @@ Eメール、コンテンツカード、SMS、LINE
 ### バリエーション
 
 {% apitags %}
-コンテンツカード、メール、アプリ内メッセージ、Web プッシュ、iOS プッシュ、Android プッシュ、Webhook、SMS、WhatsApp
+コンテンツカード、メール、アプリ内メッセージ、Webプッシュ、iOSプッシュ、Androidプッシュ、Webhook、SMS/MMS、WhatsApp
 {% endapitags %}
 
 {% multi_lang_include metrics.md metric='Variation' %}
