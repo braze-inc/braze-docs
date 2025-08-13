@@ -25,10 +25,10 @@ Pour créer une campagne ciblant plusieurs plateformes et appareils :
 3. Sélectionnez les plateformes souhaitées (Mobile, Web, Kindle) et les appareils mobiles (iOS, Android). Si vous sélectionnez plusieurs appareils, les tests multivariés ne seront pas disponibles pour votre campagne.
 
 ### Sélection des plateformes pour une campagne
-![Options permettant de sélectionner plusieurs plateformes pour une campagne de notifications push, telles que Mobile, Web et Kindle, et plusieurs appareils, tels que iOS et Android.][1]
+![Options permettant de sélectionner plusieurs plateformes pour une campagne push, telles que Mobile, Web et Kindle, et plusieurs appareils, tels que iOS et Android.]({% image_buster /assets/img_archive/quick_push_1.png %})
 
 ### Sélection des plates-formes pour une étape du canvas
-![Options permettant de sélectionner plusieurs plateformes pour une étape de message push, telles que Mobile, Web et Kindle, et plusieurs appareils, tels que iOS et Android.][8]
+![Options permettant de sélectionner plusieurs plateformes pour une étape d'envoi de messages, telles que Mobile, Web et Kindle, et plusieurs appareils, tels que iOS et Android.]({% image_buster /assets/img_archive/quick_push_4.png %})
 
 {:start="4"}
 4\. Sélectionnez **Confirmer**. Après avoir sélectionné **Confirmer**, vous ne pourrez plus modifier les plateformes ou appareils sélectionnés.
@@ -42,13 +42,13 @@ Dans l'onglet **Composer**, vous pouvez spécifier un titre, un message et un co
 
 Le volet de prévisualisation affiche une approximation de ce à quoi ressemblera votre message pour chaque plateforme. Bien qu'il puisse vous donner un bon indicateur des endroits où vous pourriez atteindre les limites de caractères, n'oubliez pas de toujours tester vos messages sur un appareil réel avant d'envoyer votre campagne.
 
-![Vue d’édition unique avec un seul champ de titre, de message et de comportement lors du clic pour trois types de notifications push : iOS, Android et Web.][2]
+![Vue d'édition unique avec un seul champ de titre, d'envoi de messages et de comportement au clic pour trois types de push : iOS, Android et Web.]({% image_buster /assets/img_archive/quick_push_2.png %}).
 
-Dans la section **Ressources**, sélectionnez ou téléchargez les images que vous souhaitez voir apparaître pour chaque plateforme. Gardez à l'esprit que les appareils ont des spécifications différentes en matière d'images et de nombre de caractères. Pour obtenir de l'aide, reportez-vous à la rubrique [Formats d'envoi de messages et d'images][3].
+Dans la section **Ressources**, sélectionnez ou téléchargez les images que vous souhaitez voir apparaître pour chaque plateforme. Gardez à l'esprit que les appareils ont des spécifications différentes en matière d'images et de nombre de caractères. Pour obtenir de l'aide, reportez-vous à la rubrique [Formats d'envoi de messages et d'images]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/).
 
-![Section Ressources de la vue d'édition unique avec des champs pour l'image de l'icône Push, l'image de la notification iOS, l'image de la notification Android et l'image de la notification Web.][4]{:style="max-width:50%"}
+![Section Ressources de la vue d'édition unique avec des champs pour l'image de l'icône Push, l'image de la notification iOS, l'image de la notification Android et l'image de la notification Web.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
 
-Terminez ensuite la création de votre campagne de notifications push comme d'habitude. Pour plus d'informations, consultez la section [Créer une campagne de push][5].
+Terminez ensuite la création de votre campagne de notifications push comme d'habitude. Pour plus d'informations, consultez la section [Créer une campagne de push.]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) 
 
 ## Choses à savoir
 
@@ -66,15 +66,7 @@ Vous pouvez modifier les paramètres spécifiques à la plate-forme dans l'édit
 
 Notez que les boutons d'action push ne sont pas pris en charge lorsque vous ciblez à la fois iOS et Android à l'aide de campagnes quick push. Pour plus d'informations sur les réglages spécifiques aux appareils, reportez-vous aux collections d'articles suivantes :
 
-- [Options iOS][6]
-- [Options Android][7]
+- [Options iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios)
+- [Options Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android)
 
 
-[1]: {% image_buster /assets/img_archive/quick_push_1.png %}
-[2]: {% image_buster /assets/img_archive/quick_push_2.png %}
-[4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android
