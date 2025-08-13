@@ -38,7 +38,7 @@ Pour créer un alias de lien, suivez ces étapes :
 
 Vous pouvez également définir un alias qui sera utilisé pour référencer un lien spécifique lors de la gestion des rapports ou de la segmentation. 
 
-![Page de gestion des liens avec quatre alias de liens.][2]
+![Page de gestion des liens avec quatre alias de liens.]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 L'aliasing de lien est uniquement pris en charge dans les attributs `href` des balises HTML où il est possible d’ajouter sans risque un paramètre de requête. La meilleure pratique consiste à inclure un point d'interrogation ( ?) à la fin de votre lien afin que Braze puisse facilement ajouter la valeur `lid`. Sans l’ajout de la valeur `lid`, Braze ne reconnaît pas l’URL pour l’aliasage de lien.
@@ -57,7 +57,7 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrat
 
 Vous pouvez y effectuer des tris, des recherches et désactiver le suivi des aliasages de liens.
 
-![La page Alias de liens suivis montre deux alias de liens nommés "TechPartners" et "Help" qui sont associés à une campagne nommée "Email_Survey".][8]
+![La page Alias de liens suivis qui montre deux alias de liens nommés "TechPartners" et "Help" qui sont associés à une campagne nommée "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Utilisez les endpoints [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) et [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) pour extraire l'ensemble `alias` dans chaque variante du message d'une campagne ou d'un composant Canvas spécifique à l'e-mail.
@@ -147,7 +147,7 @@ Braze suit uniquement les 100 derniers alias de liaison cliqués au niveau du p
  
 Vous pouvez créer des messages basés sur des actions ciblant n'importe quel lien (suivi ou non) ou recibler les utilisateurs selon qu'ils ont cliqué ou non sur un alias dans n'importe quelle campagne e-mail ou composant Canvas.
 
-![Options basées sur l'action pour cibler les utilisateurs qui ont cliqué sur un alias dans un composant Canvas ou qui ont interagi avec une campagne.][6]
+![Options basées sur l'action pour cibler les utilisateurs qui ont cliqué sur un alias dans un composant Canvas ou qui ont interagi avec une campagne.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### Filtres de segmentation
 
@@ -161,11 +161,11 @@ Les filtres de segmentation suivants s'appliquent aux événements de clics qui 
 
 #### Abandon du suivi des liens
 
-La suppression d'un lien n'entraînera pas la réaffectation des segments existants avec le filtre à l'alias supprimé. Les anciennes données resteront dans les profils utilisateurs jusqu'à ce qu'elles soient remplacées par des données plus récentes.
+La suppression d'un lien n'entraînera pas la réaffectation des segments existants avec le filtre à l'alias supprimé. Les anciennes données resteront dans les profils utilisateurs jusqu'à ce qu'elles soient remplacées par des données plus récentes. 
 
-Par défaut et à des fins de segmentation, seuls 100 liens peuvent faire l’objet d’un suivi par espace de travail. Les liens dans les messages archivés ne seront automatiquement plus suivis. Cependant, si les messages archivés sont désarchivés, les liens devront être resuivis. Lorsque des alias de liaison sont suivis, les rapports de liens sont indexés par l’alias plutôt que par des domaines de niveau supérieur ou des URL complètes.
+Les liens dans les messages archivés ne seront automatiquement plus suivis. Cependant, si les messages archivés sont désarchivés, les liens devront être resuivis. Lorsque des alias de liaison sont suivis, les rapports de liens sont indexés par l’alias plutôt que par des domaines de niveau supérieur ou des URL complètes.
 
-![L'onglet Analyse/analytique de la campagne qui affiche trois aliasages de lien et le nombre total de clics qu'ils ont générés.][1]
+![L'onglet Analyse/analytique de la campagne affiche trois alias de lien et le nombre total de clics.]({% image_buster /assets/img/link_aliasing_click_table.png %})
 
 ### Événement de clic sur un e-mail
 
@@ -245,8 +245,3 @@ Si le lien contient des paramètres avec un point d'interrogation (`?`), vous po
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}
