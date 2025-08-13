@@ -1,7 +1,7 @@
 ---
 nav_title: 이메일
 article_title: 이메일
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "이메일"
 guide_top_text: "Braze의 이메일을 사용하면 캠페인이나 캔버스에서 사용자의 관심을 빠르게 끌 수 있는 완전히 맞춤화되고 개인화된 이메일 메시지를 만들 수 있습니다. 자세한 내용은 다음 문서를 참조하세요."
@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: 식별자 필드 수준 암호화
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Gmail 프로모션 도구
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
