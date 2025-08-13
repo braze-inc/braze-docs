@@ -1,7 +1,7 @@
 ---
 nav_title: メール
 article_title: メール
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "メール"
 guide_top_text: "Braze のメールでは、キャンペーンとキャンバスのいずれかで、十分にカスタマイズとパーソナライゼーションを行ってメールメッセージを作成でき、ユーザーの関心をただちに引くことができます。詳しくは以下の記事をご覧いただきたい。"
@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: 識別子フィールドレベル暗号化
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Gmailプロモーションツール
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
