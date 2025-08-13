@@ -11,7 +11,7 @@ tool: Media
 
 # コンテンツ・カードのクリエイティブ詳細
 
-> キャンペーンの作成プロセス中に、コンテンツカードとそれらが配置されるフィードをカスタマイズすることはできません。カードの作成とカスタマイズを行うには、エンジニアおよび開発者との共同作業が必要です。技術的な詳細については、[開発者向けドキュメント][7] を参照してください。
+> キャンペーンの作成プロセス中に、コンテンツカードとそれらが配置されるフィードをカスタマイズすることはできません。カードの作成とカスタマイズを行うには、エンジニアおよび開発者との共同作業が必要です。技術的な詳細については、[開発者向けドキュメント]({{site.baseurl}}/developer_guide/getting_started/customization_overview)を参照してください。
 
 ## コンテンツカードのタイプ
 
@@ -46,11 +46,11 @@ tool: Media
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab バナー %}
+{% tab 画像のみ %}
 
-趣向を凝らした演出にはバナーカードが向いています。これは必要に応じて完全にカスタマイズすることができます。別の場所でコンテンツを作成し、それをアップロードするだけで、あなただけの美しいカードが完成する。
+よりクリエイティブなコントロールが必要な場合は、画像のみのカードを使用します。任意のツールを使用して画像を作成し、このカードタイプに画像をアップロードします。
 
-![推奨される詳細とバナーのサンプルを持つ、バナーの画像]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![推奨される内容の詳細と画像のみの例を含むコンテンツカードの画像]({% image_buster /assets/img/content_card_banner.png %})){: style="max-width:45%;border:0;"}
 
 | カード機能 | 詳細 |
 | --- | ---|
@@ -63,17 +63,17 @@ tool: Media
 
 ## グローバル・クリエイティブの詳細 {#general}
 
-コンテンツカードは、最初から素晴らしい機能を備えています。現時点では、カードのスタイリングを Braze アカウントでネイティブに行うことはできませんが、統合時にタイプやコンテンツカードフィードによってコンテンツカードをスタイリングすることができます。詳しくは、[コンテンツカードのカスタマイズ][4]] を参照してください。
+コンテンツカードは、最初から素晴らしい機能を備えています。現時点では、カードのスタイリングを Braze アカウントでネイティブに行うことはできませんが、統合時にタイプやコンテンツカードフィードによってコンテンツカードをスタイリングすることができます。詳細については、[コンテンツカードのカスタマイズ]({{site.baseurl}}/developer_guide/content_cards/)を参照してください。
 
 ### 破棄の動作
 
 ユーザーがカードを破棄するには、次のスクリーンショットのようにモバイルでスワイプするか、`close X` 機能を使用します。Web SDK のみ、カーソルを合わせると `x` が表示されます。
 
-![カードのスワイプまたはクローズ解除の動作を示す画像][5]
+![カードのスワイプまたはクローズ解除の動作を示す画像]({% image_buster /assets/img/dismissal-cc.png %})
 
 もしユーザーがすべてのカードを退会していたり、新しいアップデートをプッシュしていない場合、そのユーザーのフィードは通常このようになる：
 
-![空のコンテンツ・カード・フィードのイメージ][6]{: style="max-width:45%"}
+![空のコンテンツカードフィードの画像]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 コンテンツカードの関連性を維持できるよう、ユーザーが関連するアクションを起こしたときに破棄されるように設定します。例えば、プロモーション用のコンテンツカードは、ユーザーが購入するとすぐに破棄されるように設定し、すでに購入した商品のオファーが表示され続けないようにします。
@@ -88,10 +88,3 @@ tool: Media
 
 <br><br>
 
-[1]: {% image_buster /assets/img/content_card_classic.png %}
-[2]: {% image_buster /assets/img/content_card_captioned.png %}
-[3]: {% image_buster /assets/img/content_card_banner.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {% image_buster /assets/img/dismissal-cc.png %}
-[6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview
