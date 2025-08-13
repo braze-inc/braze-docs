@@ -23,7 +23,7 @@ description: "이 참조 문서에서는 중첩 커스텀 속성을 커스텀 �
 
 이 중첩된 데이터를 사용하면 사용자 지정 속성 개체의 정보를 사용하여 세그먼트를 만들고, 사용자 지정 속성 개체와 Liquid를 사용하여 메시지를 개인화할 수 있습니다.
 
-사용자 지정 속성 개체에는 다음과 같은 [데이터 유형이][1] 포함될 수 있습니다:
+Custom attribute objects can contain [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types), such as:
 
 - 숫자
 - 문자열
@@ -249,7 +249,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 날짜를 개체 속성으로 캡처하려면 `$time` 키를 사용해야 합니다. 다음 예제에서는 "중요 날짜" 개체를 사용하여 개체 속성 집합인 `birthday` 및 `wedding_anniversary`를 캡처합니다. 이 날짜의 값은 `$time` 키가 있는 객체이며 null 값이 될 수 없습니다.
 
 {% alert note %}
-처음에 날짜를 개체 속성으로 캡처하지 않았다면 모든 사용자에 대해 `$time` 키를 사용하여 이 데이터를 다시 전송하는 것이 좋습니다. 그렇지 않으면 `$time` 속성을 사용할 때 불완전한 세그먼트가 발생할 수 있습니다.
+처음에 날짜를 개체 속성으로 캡처하지 않았다면 모든 사용자에 대해 `$time` 키를 사용하여 이 데이터를 다시 전송하는 것이 좋습니다. 그렇지 않으면 `$time` 속성을 사용할 때 불완전한 세그먼트가 발생할 수 있습니다. However, if the value for `$time` in a nested custom attribute isn't formatted correctly, the entire nested custom attribute won't be updated.
 {% endalert %}
 
 ```json
@@ -282,7 +282,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
 {% endraw %}
 
-![Liquid를 사용하여 노래 이름과 청취자가 해당 노래를 재생한 횟수를 메시지로 템플릿화할 수 있습니다.][5]
+![Using Liquid to template a song name and the number of times a listener has played that song into a message]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## 세분화
 
@@ -290,15 +290,15 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 속성에 경로를 추가한 후 **유효성** 검사를 선택하여 경로 필드의 값이 유효한지 확인합니다.
 
-![청취자가 지정된 횟수 이상 노래를 재생한 경우 가장 많이 재생한 노래 커스텀 속성을 기준으로 필터링합니다][6]
+![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 중첩 커스텀 속성으로 세그먼트하려면 **중첩** 커스텀 속성 필터를 선택하여 특정 중첩 커스텀 속성을 선택할 수 있는 드롭다운을 표시합니다.
 
-![][17]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
 중첩된 사용자 지정 속성 세분화로 작업할 때 데이터 유형별로 그룹화된 새로운 비교기에 액세스할 수 있습니다. 예를 들어 `play_analytics.count` 는 숫자이므로 **숫자** 카테고리에서 비교기를 선택할 수 있습니다.
 
-![중첩된 사용자 지정 속성의 데이터 유형에 따라 연산자를 선택하는 사용자][7]
+![A user choosing an operator based on the data type for the nested custom attribute]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### 시간 데이터 유형에 대한 필터링
 
@@ -312,7 +312,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 **세그먼트에 대한 리퀴드 복사** 기능을 사용하여 이 세그먼트에 대한 리퀴드 코드를 생성하고 이를 메시지에 사용할 수도 있습니다. 예를 들어 계정 개체 배열과 활성 과세 대상 계정을 가진 고객을 타겟팅하는 세그먼트가 있다고 가정해 보겠습니다. 고객이 활성 및 과세 대상 계정 중 하나와 연결된 계정 목표에 기여하도록 하려면 메시지를 작성하여 고객을 넛지하는 것이 좋습니다. 
 
-![다중 기준 세분화 확인란이 선택된 세그먼트의 예시입니다.][14]
+![An example segment with the selected checkbox for Multi-Criteria Segmentation.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 **세그먼트에 대해 Liquid 복사를** 선택하면 Braze는 활성 상태이고 과세 대상인 계정만 포함된 개체 배열을 반환하는 Liquid 코드를 자동으로 생성합니다.
 
@@ -361,7 +361,7 @@ Braze 대시보드에서 **데이터 설정** > **사용자 지정 속성으로*
 
 개체 또는 개체 배열을 검색합니다. **속성 이름** 열에서 **스키마 생성을** 선택합니다.
 
-![][8]
+![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
 {% alert tip %}
 전송한 데이터의 양에 따라 스키마가 생성되는 데 몇 분 정도 걸릴 수 있습니다.
@@ -377,7 +377,7 @@ Braze 대시보드에서 **데이터 설정** > **사용자 지정 속성으로*
 - 키가 `balance` (계정의 잔액)인 숫자 유형입니다.
 - 키가 `type` (비과세 또는 과세 계정)인 문자열 유형입니다.
 
-![][10]{: style="max-width:50%" }
+![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
 이제 데이터를 분석하고 데이터 표현을 구축했으니 세그먼트를 만들어 보겠습니다.
 
@@ -387,15 +387,15 @@ Braze 대시보드에서 **데이터 설정** > **사용자 지정 속성으로*
 
 세그먼트를 만들고 필터 `Nested Custom Attribute`를 추가한 다음 개체 또는 오브젝트 배열을 검색하고 선택합니다. 여기에 `accounts` 객체 배열을 추가했습니다. 
 
-![][11]
+![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
 경로 필드에서 <i class="fas fa-plus"></i> 더하기 버튼을 선택합니다. 그러면 객체 또는 객체 배열의 표현이 나타납니다. 나열된 항목 중 원하는 항목을 선택하면 Braze가 경로 필드에 해당 항목을 삽입해 줍니다. 이 예제에서는 균형을 맞춰야 합니다. 잔액을 선택하면 경로(이 경우 `[].balance`)가 경로 필드에 자동으로 채워집니다.
 
-![][12]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
 **유효성** 검사를 선택하여 경로 필드의 콘텐츠가 유효한지 확인한 다음 필요에 따라 나머지 필터를 작성할 수 있습니다. 여기서는 잔액이 100 미만이어야 한다고 지정했습니다.
 
-![][13]
+![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
 끝입니다! 데이터 구조에 대한 지식 없이도 중첩된 사용자 지정 속성을 사용하여 세그먼트를 만들 수 있습니다. Braze의 중첩 개체 탐색기는 데이터의 시각적 표현을 생성하고 세그먼트를 만드는 데 필요한 것을 정확하게 탐색하고 선택할 수 있게 해줍니다.
 
@@ -403,11 +403,11 @@ Braze 대시보드에서 **데이터 설정** > **사용자 지정 속성으로*
 
 중첩된 사용자 지정 속성 개체가 변경될 때 트리거할 수 있습니다. 이 옵션은 객체 배열을 변경하는 데 사용할 수 없습니다. 경로 탐색기를 볼 수 있는 옵션이 표시되지 않으면 스키마를 생성했는지 확인하세요. 
 
-![][16]
+![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
 예를 들어, 다음 동작기반 캠페인에서 **커스텀 속성 값 변경**에 대한 새 트리거 동작을 추가하여 동네 사무실 기본 설정을 변경한 사용자를 타겟팅할 수 있습니다. 
 
-![][15]
+![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### 개인화
 
@@ -415,7 +415,7 @@ Braze 대시보드에서 **데이터 설정** > **사용자 지정 속성으로*
 
 예를 들어 아래 개인화 모달에서는 사용자의 기본 설정에 따라 지역 동네 사무실의 중첩 커스텀 속성을 삽입합니다.
 
-![][9]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
 중첩 커스텀 속성을 삽입하는 옵션이 표시되지 않으면 스키마가 생성되었는지 확인합니다.
@@ -469,18 +469,3 @@ Any key that is sent consumes a data point. 예를 들어, 고객 프로필에�
 사용자 지정 속성 개체를 `null` 로 업데이트하면 데이터 포인트도 소모됩니다.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
-[5]: {% image_buster /assets/img_archive/nca_liquid_2.png %}
-[6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
-[7]: {% image_buster /assets/img_archive/nca_comparator.png %}
-[8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
-[9]:{% image_buster /assets/img_archive/nca_personalization.png %}
-[10]: {% image_buster /assets/img_archive/nca_schema.png %}
-[11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
-[12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
-[13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
-[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
-[15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
-[16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
-[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}
