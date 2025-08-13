@@ -107,7 +107,7 @@ C’est l’endroit où nous déterminons quels canaux de communication sont les
 * [Notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [in-app Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [Cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS ou MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS ou MMS]({{site.baseurl}}/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### Le « comment » : Créer l’expérience complète
