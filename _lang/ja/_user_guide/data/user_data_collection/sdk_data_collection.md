@@ -25,7 +25,7 @@ Braze は、柔軟にデータ収集ができるように設計されていま�
 | 属性 | 説明 | なぜ収集されるのか |
 | --------- | ----------- | ------------------ |
 | アプリのバージョン名 / <br> アプリのバージョンコード | アプリの最新バージョン | この属性は、アプリのバージョン互換性に関連するメッセージを適切なデバイスに送信するために使用される。サービスの中断やバグをユーザーに通知するために使用できます。 |
-| 国 | IP アドレスの地理位置情報によって識別される国。IP アドレスの地理位置情報が使用できない場合は、[デバイスロケール](#optional-data-collected-by-default) で識別されます。代わりに、この値は`setCountry` で直接設定されたSDK になりますが、SDK またはAPI で属性値を渡すとデータポイントが消費されることに注意してください。| この属性は、位置に基づいてメッセージをターゲット化するために使用される。 |
+| 国 | IP アドレスのジオロケーションによって識別される国。IP アドレスの地理位置情報が使用できない場合は、[デバイスロケール](#optional-data-collected-by-default) で識別されます。代わりに、この値は SDK が `setCountry` で直接設定した値になりますが、SDK またはAPI で属性値を渡すとデータポイントが消費されることに注意してください。| この属性は、位置に基づいてメッセージをターゲット化するために使用される。 |
 | デバイス ID | デバイス識別子、ランダムに生成される文字列 | この属性は、ユーザーのデバイスを区別し、正しいデバイスにメッセージを送信するために使用される。 |
 | OS と OS バージョン | 現在レポートされているデバイスまたはブラウザと、デバイスまたはブラウザのバージョン | この属性は、互換性のあるデバイスにのみメッセージを送信するために使用される。また、アプリのバージョンをアップグレードするユーザーをターゲットとするセグメンテーションにも使用できます。 |
 | セッション開始とセッション終了 | ユーザーが統合されたアプリやサイトを使い始めるとき | Braze SDK では、ユーザーエンゲージメントやユーザーの理解に不可欠なその他の分析を計算するため、Braze ダッシュボードで使用されるセッションデータがレポートされます。アプリやサイトからセッション開始とセッション終了が呼び出される正確なタイミングは、開発者が設定できる[（Android]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android)、[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift)、[Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)）。 |
@@ -71,7 +71,7 @@ SDK 連携を初期化すると、Braze によって、最小限の連携デー�
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ブラウザ名            | Web               | ブラウザ名                                                                | この属性は、互換性のあるブラウザにのみメッセージを送信するために使用される。また、ブラウザベースのセグメンテーションにも使用できる。                                     |
 | デバイスロケール           | Android、iOS      | デバイスのデフォルトロケール                                                   | この属性は、メッセージをユーザーの好みの言語に翻訳するために使われる。                                                                                            |
-| 最新のデバイスロケール           | Android、iOS      | デバイスの最新のデフォルトロケール                                                   | この属性は、ユーザのデバイス設定から取得され、ユーザの好みの言語にメッセージを変換するために使用されます。これは、`Most Recent Location` 属性とは独立しています。                                                                                            |
+| 最新のデバイスロケール           | Android、iOS      | デバイスの最新のデフォルトロケール                                                   | この属性はユーザーのデバイス設定から取得され、メッセージをユーザーの優先言語に翻訳するために使用されます。これは、`Most Recent Location` 属性とは独立しています。                                                                                            |
 | デバイスモデル            | Android、iOS      | 機器固有のハードウェア                                                | この属性は、互換性のあるデバイスにのみメッセージを送信するために使用される。また、セグメンテーション内でも使用できます。                                                 |
 | デバイスブランド            | Android           | デバイスのブランド (例: Samsung)                                         | この属性は、互換性のあるデバイスにのみメッセージを送信するために使用される。                                                                                          |
 | デバイスの通信事業者 | Android、iOS      | 携帯キャリア                                                                 | この属性は、オプションでメッセージのターゲティングに使われる。<br><br>**注:**このフィールドはiOS 16で非推奨となり、将来のiOSバージョンではデフォルトで`--` 。 |
@@ -82,7 +82,7 @@ SDK 連携を初期化すると、Braze によって、最小限の連携デー�
 | ユーザーエージェント              | Web               | [ユーザーエージェント](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | この属性は、互換性のあるデバイスにのみメッセージを送信するために使用される。また、セグメンテーション内でも使用できます。                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-デバイスの通信事業者、タイムゾーン、解像度など、デバイスレベルの属性の追跡の詳細については、対応するプラットフォームのドキュメントを参照してください。[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
+デバイスの通信事業者、タイムゾーン、解像度など、デバイスレベルの属性の追跡の詳細については、対応するプラットフォームのドキュメントを参照してください。[Android]({{site.baseurl}}/developer_guide/storage/?tab=android)、[iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift)、[Web]({{site.baseurl}}/developer_guide/storage/#cookies) の各プラットフォームの統合記事を参照してください。
 
 ## デフォルトでは収集されないデータ
 
@@ -93,7 +93,7 @@ SDK 連携を初期化すると、Braze によって、最小限の連携デー�
 | デバイス広告のトラッキングを有効にする | Android、iOS | iOSの場合：<br>[`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:))<br><br> Android の場合: <br>[`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) | このプロパティには、追加のアプリケーションレベルの権限が必要です。この権限は、インテグレータによって付与される必要があります。                                                                                                                                                                                      |
 | デバイス IDFA                | iOS          | 広告主のデバイス識別子                                                                                                                                                                                                                                                                                         | これにはAd Tracking Transparencyフレームワークが必要で、App Storeによる追加のプライバシー審査が行われる。詳細は以下を参照のこと。 [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)) |
 | Google 広告 ID      | Android      | Google Playアプリ内の広告用識別子                                                                                                                                                                                                                                                                        | これには、アプリが GAID を取得して Braze に渡す必要があります。詳細については、「[Google広告IDのオプション]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id)」を参照のこと。                                         |
-| 最新の場所 | Android、iOS | これは、ユーザのデバイスの最後の既知のGPS 位置です。これはセッションの開始時に更新され、ユーザーのプロファイルに保存されます。 | これには、ユーザがアプリにロケーション権限を付与する必要があります。 |
+| 最新の場所 | Android、iOS | これは、ユーザのデバイスの最後の既知のGPS 位置です。これはセッションの開始時に更新され、ユーザーのプロファイルに保存されます。 | このためには、ユーザーがアプリにロケーション権限を付与する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -111,4 +111,3 @@ Brazeは、5,000,000セッションを超えるユーザー（「ダミーユー
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android のデバイスレベルのフィールド"
