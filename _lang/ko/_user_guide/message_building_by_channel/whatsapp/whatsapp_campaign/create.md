@@ -1,7 +1,7 @@
 ---
 nav_title: WhatsApp 메시지 생성
 article_title: WhatsApp 메시지 생성
-page_order: 4
+page_order: 0
 description: "이 참조 문서에서는 WhatsApp 메시지를 작성하고 만드는 데 필요한 단계를 다룹니다."
 page_type: reference
 tool:
@@ -71,7 +71,7 @@ WhatsApp은 각 언어에 대해 다른 [메시지 템플릿](#template-messages
 
 WhatsApp [템플릿 메시지](#template-messages) 또는 응답 메시지를 생성할지 선택하세요, 사용 사례에 따라 다릅니다. 모든 비즈니스 시작 대화는 승인된 템플릿에서 시작해야 하며, 응답 메시지는 사용자로부터 24시간 이내에 수신된 메시지에 대한 응답으로 사용할 수 있습니다.
 
-![메시지 변형 섹션에서는 구독 그룹과 두 가지 메시지 유형 중 하나를 선택할 수 있습니다: WhatsApp 템플릿 메시지 및 응답 메시지.][5]{: style="max-width:80%;"}
+![메시지 변형 섹션에서는 구독 그룹과 두 가지 메시지 유형 중 하나를 선택할 수 있습니다: WhatsApp Template Message and Response Message.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 #### 템플릿 메시지
 
@@ -84,7 +84,7 @@ WhatsApp [템플릿 메시지](#template-messages) 또는 응답 메시지를 �
 
 각 템플릿에는 할당된 언어가 있으므로 사용자 매칭을 올바르게 설정하려면 각 언어에 대해 캠페인 또는 캔버스 단계를 생성해야 합니다. 예를 들어, 인도네시아어와 영어로 지정된 템플릿을 사용하는 캔버스를 만드는 경우, 인도네시아어 템플릿을 위한 캔버스 단계를 만들고 영어 템플릿을 위한 캔버스 단계를 만들어야 합니다.
 
-![템플릿 목록에는 메시지 미리보기, 할당된 언어 및 승인 상태가 포함됩니다.][8]{: style="max-width:80%;"}
+![List of templates including previews of their messages, their assigned languages, and their approved status.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -100,7 +100,7 @@ Liquid을 사용하려는 경우 선택한 개인화를 위한 기본값을 포�
 {% endraw %}
 {% endalert %}
 
-![개인화 추가 도구는 속성 "first_name"과 기본값 "you"를 사용합니다.][2]{: style="max-width:80%;"}
+![The Add Personalization tool with the attribute "first_name" and the default value "you".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 #### 동적 링크 
 
@@ -110,24 +110,26 @@ Liquid을 사용하려는 경우 선택한 개인화를 위한 기본값을 포�
 
 사용자에게서 들어오는 메시지에 응답 메시지를 사용할 수 있습니다. 이 메시지는 작성 경험 중에 Braze에서 앱 내에서 작성되며 언제든지 편집할 수 있습니다. Liquid을 사용하여 응답 메시지 언어를 적절한 사용자에게 맞출 수 있습니다.
 
-사용할 수 있는 세 가지 응답 메시지 레이아웃이 있습니다:
+There are five response message layouts you can use:
 - 빠른 회신
 - 메시지 입력
 - 미디어 메시지
+- Call-to-action Button
+- List Message
 
-![새 사용자에게 할인 코드를 제공하는 환영 메시지에 대한 응답 메시지 작성기.][6]{: style="max-width:80%;"}
+![The response message composer for a Reply Message that welcomes new users with a discount code.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 ### 3단계: 메시지 미리보기 및 테스트
 
 Braze는 메시지를 보내기 전에 항상 미리보기 및 테스트를 권장합니다. **테스트** 탭으로 전환하여 [콘텐츠 테스트 그룹]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) 또는 개별 사용자에게 테스트 WhatsApp 메시지를 보내거나 Braze에서 사용자로 메시지를 직접 미리보기 합니다.
 
-![기존 사용자 Suzanne에게 보낼 미리보기 메시지입니다.][3]{: style="max-width:80%;"}
+![A preview message for a custom user named Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 응답 메시지(테스트 메시지 포함)를 보내려면 대화 창이 필요합니다. 대화 창을 시작하려면, 이 메시지에 사용 중인 구독 그룹과 연결된 전화번호로 WhatsApp 메시지를 보내세요. 연관된 전화번호는 **테스트** 탭의 경고에 나열되어 있습니다.
 {% endalert %}
 
-![경고: "테스트하려면 먼저 WhatsApp 메시지를 +1 631-202-0907로 보내 대화 창을 여세요." 그런 다음, 테스트 사용자에게 응답 메시지를 보내십시오."][7]{: style="max-width:80%;"}
+![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 217-582-9414. Then, send your response message to the test user."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### 4단계: 나머지 캠페인 또는 캔버스 구축하기
 
@@ -146,7 +148,7 @@ WhatsApp 메시지는 예약된 시간, 작업 또는 API 트리거를 기반으
 
 #### 타겟팅할 사용자 선택
 
-다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 이미 구독 그룹을 선택했어야 하는데, 이 그룹은 사용자와 소통하고자 하는 수준이나 카테고리에 따라 사용자 범위를 좁혀줍니다. 이 단계에서는 세그먼트에서 더 큰 오디언스를 선택하고 필터를 사용하여 해당 세그먼트를 더 좁힙니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 것을 기억하십시오.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. 이미 구독 그룹을 선택했어야 하는데, 이 그룹은 사용자와 소통하고자 하는 수준이나 카테고리에 따라 사용자 범위를 좁혀줍니다. 이 단계에서는 세그먼트에서 더 큰 오디언스를 선택하고 필터를 사용하여 해당 세그먼트를 더 좁힙니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 것을 기억하십시오.
 
 #### 전환 이벤트 선택
 
@@ -184,12 +186,10 @@ Braze를 통해 전송하는 아웃바운드 WhatsApp 메시지에 대해 지원
 | 바닥글 텍스트 | 문자열 및 변수 매개변수가 지원됩니다. | — | — |
 | CTA 링크 | 다양한 클릭 유도 문안(CTA) 유형이 지원됩니다. 자세한 내용은 [클릭 유도 문안 유형](#ctas)을 참조하십시오. | — | — |
 | 이미지 | 이미지는 본문 텍스트 내에 삽입할 수 있습니다. 이미지는 8비트여야 하며 RGB 또는 RGBA 색상 모델을 사용해야 합니다. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
-| 문서* | 문서는 본문 텍스트 내에 삽입할 수 있습니다. 파일은 URL을 통해 호스팅되어야 합니다. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| 비디오* | 비디오는 본문 텍스트 내에 삽입될 수 있습니다. 파일은 URL 또는 [Braze 미디어 라이브러리]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library)에 호스팅되어야 합니다. | < 16 MB | `.3gp`, `.mp4` |
-| 오디오* | 오디오는 응답 메시징을 통해서만 지원됩니다. 파일은 URL을 통해 호스팅되어야 합니다. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
+| 문서 | 문서는 본문 텍스트 내에 삽입할 수 있습니다. 파일은 URL을 통해 호스팅되어야 합니다. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
+| Videos | 비디오는 본문 텍스트 내에 삽입될 수 있습니다. 파일은 URL 또는 [Braze 미디어 라이브러리]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library)에 호스팅되어야 합니다. | < 16 MB | `.3gp`, `.mp4` |
+| 오디오 | 오디오는 응답 메시징을 통해서만 지원됩니다. 파일은 URL을 통해 호스팅되어야 합니다. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
-
-<sup>_\*현재 초기 액세스 중입니다. 참여에 관심이 있으시면 Braze 계정 매니저에게 문의하십시오._</sup>
 
 ### 수신 메시지
 
@@ -217,13 +217,6 @@ Braze를 통해 전송하는 WhatsApp 메시지에 대해 지원되는 행동 �
 | 마케팅 옵트아웃 버튼 | 기본적으로 구독 상태는 자동으로 업데이트되지 않습니다. 전체 안내는 [옵트인 및 옵트아웃]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)을 참조하세요. |
 | 쿠폰 코드 메시지 템플릿 | 메시지 템플릿에서만 사용 가능합니다. <br>이들은 다른 메시지 템플릿처럼 열고 편집할 수 있으며, Liquid 및 Braze 프로모션 코드와 호환됩니다. |
 | CTA 응답 메시지  | 응답 메시지를 생성하여 실행 버튼을 포함합니다. |
+| [List response messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | Create a response message that includes a list of up to 10 options for users to pick from. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}
