@@ -484,17 +484,17 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 
 新規のセグメントを作成し、フィルターとして [**階層化カスタム属性**] を選択します。次に、オブジェクト配列の名前を検索して選択します。
 
-![オブジェクトの配列でフィルターをかける。][1]
+![オブジェクトの配列でフィルターをかける。]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 ドット表記を使用して、使用するオブジェクト配列内のフィールドを指定します。テキストフィールドは空の大かっこのセット (`[]`) で始まり、これはオブジェクト配列の内部を見ていることを Braze に伝えます。その後にピリオド (`.`) と、使用するフィールドの名前を入力します。
 
 例えば、`type` フィールドを基準にしてオブジェクト配列 `pets` にフィルターを適用する場合は、`[].type` を選択して、フィルターを適用する `snake` などのペットのタイプを選択します。
 
-![ペットの種類イコールヘビでフィルターをかける。][3]
+![「ペットのタイプがヘビに等しい」でフィルターをかける。]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 または、`type` が `dog` であるペットのフィルターを適用することもできます。ここで、あるユーザーは少なくとも 1 頭の犬を飼っているため、ユーザーは「タイプが犬のペットを少なくとも 1 頭飼っているユーザー」のセグメントに該当します。
 
-![ペットの種類イコール犬でフィルターをかける。][2]
+![ペットの種類イコール犬でフィルターをかける]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### 階層化のレベル
 
@@ -635,6 +635,3 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
-[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
-[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}
