@@ -26,7 +26,7 @@ La nouvelle option Mode sombre, située dans l'onglet Style lors de la [créatio
 
 ![Utilisateur basculant entre les modes sombre et clair dans l’onglet Style lors de la création d’un message in-app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-Lorsque cette option est activée, vous pouvez choisir des couleurs de thème sombres pour votre message in-app à l'aide du sélecteur de couleurs, ou en sélectionnant les [profils de couleurs][2] existants pour réutiliser les thèmes sombres ou clairs existants.
+Lorsque cette option est activée, vous pouvez choisir des couleurs de thème sombres pour votre message in-app à l'aide du sélecteur de couleurs, ou en sélectionnant les [profils de couleurs]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) existants pour réutiliser les thèmes sombres ou clairs existants.
 
 {% alert note %}
 Vous pouvez utiliser cette fonctionnalité même si votre application n’offre pas son propre thème sombre. Toutefois, les appareils qui ne prennent pas en charge le mode sombre affichent par défaut le thème clair. Changer le thème de l’appareil sur Android alors qu’un message in-app est affiché ne change pas le thème utilisé pour ce message in-app.
@@ -36,7 +36,7 @@ Vous pouvez utiliser cette fonctionnalité même si votre application n’offre 
 
 Pour utiliser le mode sombre pour tous les messages in-app, accédez à **Modèles** > **Modèles de messages in-app.**
 
-Sélectionnez ensuite [Créer un profil de couleur][2] dans la liste déroulante. Créez un profil de couleur qui correspond à votre thème du mode sombre. Puis, chaque fois que vous créez une version en mode sombre d’un message in-app, vous pouvez sélectionner ce profil de couleur et conserver la cohérence de l’apparence de vos messages in-app.
+Sélectionnez ensuite [Créer un profil de couleur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) dans la liste déroulante. Créez un profil de couleur qui correspond à votre thème du mode sombre. Puis, chaque fois que vous créez une version en mode sombre d’un message in-app, vous pouvez sélectionner ce profil de couleur et conserver la cohérence de l’apparence de vos messages in-app.
 
 ## Compatibilité
 
@@ -69,4 +69,3 @@ Par exemple :
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
