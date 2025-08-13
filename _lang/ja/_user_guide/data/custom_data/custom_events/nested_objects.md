@@ -33,7 +33,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 2. 階層化プロパティを持つイベントについて、[**プロパティの管理**] を選択します。
 3. スキーマを生成するには、<i class="fas fa-arrows-rotate"></i> ボタンを選択する。スキーマを表示するには、<i class="fas fa-plus"></i> プラスボタンを選択する。
 
-![][6]{: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 今後新しいプロパティが送信される場合、それらは再生成されるまでスキーマには含まれません。スキーマは24 時間ごとに再生成できます。
 
@@ -169,7 +169,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 階層化イベントプロパティに基づいてユーザーをセグメント化するには、[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用する必要があります。スキーマを生成すると、階層化オブジェクトエクスプローラーが [セグメンテーション] セクションに表示されます。 
 
-![][4]
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 セグメンテーションでは、トリガーと同じ表記法を使用します (「[メッセージのトリガー](#message-triggering)」を参照)。
 
@@ -179,7 +179,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 [**パーソナライゼーションの追加**] モーダルを使用して、[パーソナライゼーションタイプ] として [**イベントの詳細プロパティ**] を選択します。これにより、スキーマの生成後に階層化イベントプロパティを追加するオプションを使用できます。
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## よくある質問
 
@@ -191,6 +191,3 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 1 つ以上のイベントのプロパティにネストされたデータが含まれている場合、1 つのイベントのすべての組み合わせプロパティの最大ペイロードは100KB です。そのサイズ制限を超えたリクエストは拒否されます。
 
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
