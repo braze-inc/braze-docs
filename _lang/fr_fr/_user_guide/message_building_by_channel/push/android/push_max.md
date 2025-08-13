@@ -15,7 +15,6 @@ channel:
 
 > Découvrez Push Max et apprenez comment utiliser cette fonctionnalité pour améliorer la livrabilité des notifications push Android sur les [appareils OEM chinois]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
-
 ## Qu'est-ce que Push Max ?
 
 L’option Maximiser les notifications push amplifie les notifications push Android en suivant celles qui ont échoué pour les renvoyer lorsque les utilisateurs ont le plus de chances de les recevoir.
@@ -26,7 +25,7 @@ Certains appareils Android fabriqués par des équipementiers chinois, tels que 
 
 - Disponible uniquement pour les notifications push Android
 - Non pris en charge pour les messages basés sur une action ou déclenchés par l'API.
-- Non pris en charge lorsque l'option d' [envoi uniquement vers le dernier appareil utilisé par l'utilisateur]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options) est sélectionnée.
+- Non pris en charge lorsque l'option d' [envoi uniquement vers le dernier appareil utilisé par l'utilisateur]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options) est sélectionnée.
 
 ## Conditions préalables
 
@@ -75,7 +74,7 @@ La durée de vie peut assurer le suivi des échecs des notifications push vers F
 
 Par défaut, la durée de vie est fixée à 28 jours, soit le maximum. Vous pouvez réduire la durée TTL par défaut pour tous les nouveaux messages push Android à partir de **Paramètres** > **Paramètres de l'espace de travail** > **Push Time to Live (TTL)**, ou vous pouvez configurer le nombre de jours par message dans l'onglet **Paramètres** lors de la composition d'une notification push Android.
 
-![La durée en ligne/en vie est fixée à 28 jours.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+![La durée en ligne/en vie est fixée à 28 jours.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## Choses à savoir
 
