@@ -183,7 +183,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Segment Data (Données du segment) %}
 **Données du segment**
 
-Si vous avez activé le [suivi des analyses]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour voir les [données du segment]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
+Si vous avez activé le [suivi des analyses]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour voir les [données du segment]({{site.baseurl}}/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
 
 Consultez cette page pour connaître ces statistiques :
 
@@ -289,7 +289,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Predictive Churn (Prédiction du taux d’attrition) %}
 **Prédiction de l’attrition**
 
-[Prévision de l'attrition]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) est le premier modèle de la [Suite Prédictive Braze]({{site.baseurl}}/user_guide/brazeai/predictive_suite/). Utilisez la Prédiction du taux d’attrition pour définir et générer des prédictions, dans une approche proactive visant à réduire l'attrition future.
+[Prévision de l'attrition]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) est le premier modèle de la [Suite Prédictive Braze]({{site.baseurl}}/user_guide/brazeai/). Utilisez la Prédiction du taux d’attrition pour définir et générer des prédictions, dans une approche proactive visant à réduire l'attrition future.
 
 Comme chaque entreprise définit l'attrition et la rétention différemment, vous pouvez simplement saisir vos définitions dans la prédiction du taux d’attrition et Braze fera le reste. Vous pouvez également créer des campagnes ou des Canvases pour agir sur les prédictions ou créer des segments pour une analyse plus approfondie.
 
