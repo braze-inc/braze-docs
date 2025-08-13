@@ -10,7 +10,7 @@ search_rank: 2
 
 > この記事では、さまざまなユーザー属性を使用して、メッセージングにダイナミックな個人情報を挿入する方法を紹介する。
 
-Liquid は、Shopify が開発した Ruby で書かれているオープンソースのテンプレート言語です。Brazeでこれを使えば、ユーザープロファイルのデータをメッセージングに取り込んだり、そのデータをカスタマイズしたりすることができる。例えば、ユーザーのサブスクリプションアニバーサリーの日付に基づいて異なるオファーを送信するなど、条件付きメッセージを作成するためにLiquidタグを使用することができる。さらに、フィルターを使用してデータを操作できます。例えばユーザーの登録日をタイムスタンプから「January 15, 2022」のような読みやすい形式にフォーマットできます。Liquid の構文とその機能の詳細については、「[サポートされているパーソナライゼーションタグ][1]」を参照してください。
+Liquid は、Shopify が開発した Ruby で書かれているオープンソースのテンプレート言語です。Brazeでこれを使えば、ユーザープロファイルのデータをメッセージングに取り込んだり、そのデータをカスタマイズしたりすることができる。例えば、ユーザーのサブスクリプションアニバーサリーの日付に基づいて異なるオファーを送信するなど、条件付きメッセージを作成するためにLiquidタグを使用することができる。さらに、フィルターを使用してデータを操作できます。例えばユーザーの登録日をタイムスタンプから「January 15, 2022」のような読みやすい形式にフォーマットできます。Liquid の構文とその機能の詳細については、「[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」を参照してください。
 
 ## 仕組み
 
@@ -40,14 +40,14 @@ Hi Valued User, thanks for using the App!
 
 次の項目の値が利用できる場合、メッセージ内で値に置き換えることができます。
 
-- [基本的なユーザー情報][1] (`first_name`、`last_name`、`email_address` など)。
-- [カスタム属性][2]
-    - [階層化カスタム属性][3]
-- [カスタムイベントプロパティ][11]
-- [最近使用したデバイスの情報][39]
-- [ターゲットデバイス情報][40]
+- [基本的なユーザー情報]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (`first_name`、`last_name`、`email_address` など)。
+- [カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
+    - [階層化カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
+- [カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- [最近使用したデバイスの情報]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
+- [ターゲットデバイス情報]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-また、Braze の[コネクテッドコンテンツ][9]を使用して、Web サーバーから直接コンテンツを取得することもできます。
+また、Braze の[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)を使用して、Web サーバーから直接コンテンツを取得することもできます。
 
 {% alert important %}
 Brazeは現在、ShopifyのLiquid 5までのLiquidをサポートしている。
@@ -55,7 +55,7 @@ Brazeは現在、ShopifyのLiquid 5までのLiquidをサポートしている。
 
 ## Liquid の使用
 
-[Liquid のタグ][1]を使用して、メッセージに親しみやすいタッチを加えて、メッセージの品質を高めることができます。 
+[Liquid のタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用して、メッセージに親しみやすいタッチを加えて、メッセージの品質を高めることができます。 
 
 ### Liquid 構文
 
@@ -90,19 +90,15 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 
 {% endalert %}
 
-{% raw %}
-
 ### あらかじめフォーマットされた変数を挿入する
 
-テンプレート化されたテキストフィールドの右上にある**パーソナライゼーションの追加**モーダルから、あらかじめデフォルトでフォーマットされた変数を挿入することができる。
+テンプレート化されたテキストフィールドの付近にある**パーソナライゼーション追加**モーダルから、事前にデフォルト値でフォーマットされた変数を挿入できます。
 
-![パーソナライゼーションの挿入を選択すると表示されるパーソナライゼーションの追加モーダル。このモーダルには、[パーソナライゼーションタイプ]、[属性]、[デフォルト値 (オプション)] のフィールドがあり、Liquid 構文のプレビューが表示される][44]{: style="max-width:70%;"}
+![パーソナライゼーションの挿入を選択すると表示されるパーソナライゼーションの追加モーダル。このモーダルには、[パーソナライゼーションタイプ]、[属性]、[デフォルト値 (オプション)] のフィールドがあり、Liquid 構文のプレビューが表示される]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 モーダルにより、カーソルがあった位置に、指定したデフォルト値をもつ Liquid が挿入されます。挿入位置は [プレビュー] ボックスでも指定でき、挿入位置の前後のテキストが表示されます。テキストブロックがハイライトされている場合、ハイライトされたテキストは置き換えられる。
 
-![パーソナライゼーションを追加するモーダルのGIF。ユーザーがデフォルト値として "fellow traveler "を挿入し、モーダルがコンポーザーのハイライトされたテキスト "name "をLiquidのスニペットで置き換えている。][45]
-
-{% endraw %}
+![パーソナライゼーション追加モーダルの GIF。この GIF は、ユーザーがデフォルト値として「fellow traveler」を挿入すると、モーダルが作成画面で強調表示されているテキスト「name」が Liquid スニペットに置き換えられ様子を示す。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### 変数への代入
 
@@ -159,12 +155,3 @@ You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
 コンテンツ・ブロックがメッセージの先頭にある限り、変数がオブジェクトとしてメッセージに挿入されるたびに、選択したカスタム属性を参照することになる！
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating
-[9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information
-[40]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information
-[44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}
-[45]: {% image_buster /assets/img_archive/insert_var_shot.gif %}
