@@ -30,7 +30,7 @@ Braze doesn't support using a wrapper like Flutter to send deep links. 이 기�
 
 ### UTM 태그란 무엇인가요?
 
-[UTM(어치 트래픽 매니저) 태그][4]를 사용하면 링크 내에 캠페인 기여도 세부 정보를 바로 포함할 수 있습니다. UTM 태그는 Google 애널리틱스에서 캠페인 어트리뷰션 데이터를 수집하는 데 사용되며, 다음 속성을 추적하는 데 사용할 수 있습니다:
+[UTM (Urchin Traffic Manager) tags](https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article) allow you to include campaign attribution details directly within links. UTM 태그는 Google 애널리틱스에서 캠페인 어트리뷰션 데이터를 수집하는 데 사용되며, 다음 속성을 추적하는 데 사용할 수 있습니다:
 
 - `utm_source`: The identifier for the source of the traffic (for example,`my_app`)
 - `utm_medium`: The campaign medium (for example,`newsfeed`)
@@ -42,9 +42,9 @@ UTM 태그는 일반 HTTP(웹) 링크와 딥링크에 모두 임베드할 수 �
 
 ### Braze에서 UTM 태그 사용
 
-If you want to use UTM tags with regular HTTP (web) links (for example, to do campaign attribution for your email campaigns) and your organization already uses Google Analytics, you can use [Google's URL builder][6] to generate UTM links. 이러한 링크는 다른 링크와 마찬가지로 Braze 캠페인 카피에 쉽게 삽입할 수 있습니다.
+If you want to use UTM tags with regular HTTP (web) links (for example, to do campaign attribution for your email campaigns) and your organization already uses Google Analytics, you can use [Google's URL builder](https://ga-dev-tools.google/ga4/campaign-url-builder/) to generate UTM links. 이러한 링크는 다른 링크와 마찬가지로 Braze 캠페인 카피에 쉽게 삽입할 수 있습니다.
 
-앱에 대한 딥 링크에서 UTM 태그를 사용하려면, 귀하의 앱에 관련된 [Google Analytics SDK][5]가 통합되어 있고 딥 링크를 처리하도록 올바르게 구성되어 있어야 합니다. 확실하지 않은 경우 개발자에게 문의하세요.
+To use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK](https://developers.google.com/analytics/devguides/collection/) integrated and correctly configured to handle deep links. 확실하지 않은 경우 개발자에게 문의하세요.
 
 Analytics SDK가 통합되고 구성된 후, UTM 태그는 Braze 캠페인에서 딥 링크와 함께 사용할 수 있습니다. 캠페인을 위한 UTM 태그를 설정하려면, 대상 URL 또는 딥 링크에 필요한 UTM 태그를 포함하세요. 다음 예는 푸시 알림 및 인앱 메시지에서 UTM 태그를 사용하는 방법을 보여줍니다.
 
@@ -56,7 +56,7 @@ Analytics SDK가 통합되고 구성된 후, UTM 태그는 Braze 캠페인에서
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![][8]
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### UTM 태그를 사용한 인앱 메시지 클릭 어트리뷰션
 
@@ -66,15 +66,5 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-![][10]
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article
-[5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://ga-dev-tools.google/ga4/campaign-url-builder/
-[8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
-[9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
-[10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
-[11]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
