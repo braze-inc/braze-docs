@@ -33,7 +33,7 @@ description: "이 문서에서는 중첩된 JSON 데이터를 사용자 지정 �
 2. 중첩된 속성정보 가 있는 이벤트의 **속성정보 관리**를 선택합니다.
 3. <i class="fas fa-arrows-rotate"></i> 버튼을 선택하여 스키마를 생성합니다. 스키마를 보려면 <i class="fas fa-plus"></i> 더하기 버튼을 선택합니다.
 
-![][6]{: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 If new properties are sent in the future, they won't be in the schema until it is regenerated. Schemas can be regenerated every 24 hours.
 
@@ -169,7 +169,7 @@ For nested custom event properties, if the year is less than 0 or greater than 3
 
 중첩된 이벤트 속성정보를 기반으로 사용자를 세분화하려면 [세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)을 사용해야 합니다. 스키마를 생성한 후에는 중첩된 개체 탐색기가 세분화 섹션에 표시됩니다. 
 
-![][4]
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 세분화는 트리거링과 동일한 표기법을 사용합니다( [메시지 트리거링](#message-triggering) 참조).
 
@@ -179,7 +179,7 @@ To edit or create Segment Extensions, you'll need "Edit Segments" permission.
 
 **개인화 추가** 모달을 사용하여 개인화 유형으로 **고급 이벤트 속성을** 선택합니다. 이 옵션을 사용하면 스키마가 생성된 후 중첩된 이벤트 속성정보를 추가할 수 있습니다.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## 자주 묻는 질문
 
@@ -191,6 +191,3 @@ To edit or create Segment Extensions, you'll need "Edit Segments" permission.
 
 이벤트의 속성 중 하나 이상에 중첩된 데이터가 포함된 경우, 이벤트의 모든 결합된 속성에 대한 최대 페이로드는 100KB입니다. 이 크기 제한을 초과하는 요청은 거부됩니다.
 
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
