@@ -18,13 +18,13 @@ tool:
 
 1. データを表示する期間とアプリを設定します。デフォルトでは、ダッシュボードにすべてのアプリの過去 30 日間のデータが表示されます。
 
-![ホームダッシュボードの期間とアプリフィールド。][1]{: style="max-width:60%;"}
+![ホームダッシュボードの期間とアプリフィールド。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\.[**経時的なパフォーマンス**] グラフまで 下にスクロールします。
 3. [**次に関する統計**] フィールドでエクスポートするデータを選択します。エクスポートに「[利用可能なデータ](#available-data)」を参照してください。
 
-![ホーム・ダッシュボードの「パフォーマンス・オーバー・タイム」グラフ。][2]
+![ホームダッシュボードの [経時的なパフォーマンス] グラフ。]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4. <i class="fas fa-bars" title="Chart コンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。
@@ -51,7 +51,6 @@ tool:
     - 開封されたアプリ内メッセージ数
 - 日付別 MAU
 - 日付別新規ユーザー数
-- 日付別ニュースフィードのインプレッション数
 - 日付別プッシュ通知数
     - (オプション) さまざまアプリプラットフォームのプッシュ通知数
     - プッシュ通知の送信数
@@ -66,5 +65,3 @@ tool:
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」の記事を参照してください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}
