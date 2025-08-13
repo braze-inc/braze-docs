@@ -37,13 +37,13 @@ Brazeはリッチプッシュの設定方法を提供しているが、リッチ
 
 ### ステップ1:プッシュキャンペーンを作成する
 
-Android用のプッシュ通知を作成するための[キャンペーンを作成][3]するためのステップに従う。リッチコンテンツを含まないプッシュ通知の設定には、同じコンポーザーを使うことになる。
+Android用のプッシュ通知を作成するための[キャンペーンを作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)するためのステップに従う。リッチコンテンツを含まないプッシュ通知の設定には、同じコンポーザーを使うことになる。
 
 ### ステップ 2: キャプションを追加する
 
 通知の画像の前に表示する **要約テキスト / 画像キャプション**を追加します。
 
-![画像を追加したり、画像のURLを入力したりすることができる、拡張された通知画像セクションです。][9]
+![画像を追加したり、画像URLを入力したりできる拡張通知画像セクション。]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### ステップ 3:メディアを追加する
 
@@ -51,13 +51,9 @@ Android用のプッシュ通知を作成するための[キャンペーンを作
 
 サポートしている画像の詳細については、「[画像の仕様]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)」を参照してください。
 
-![ユーザーが iOS のプッシュ通知を受け取る。タイトルは「Hi there」、テキストは「Thanks for joining out loyalty program!」である。][8]
+![ユーザーが iOS のプッシュ通知を受け取る。タイトルは「Hi there」、テキストは「Thanks for joining out loyalty program!」である。]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### ステップ4:キャンペーンの作成を続ける
 
-リッチプッシュ通知がダッシュボードにアップロードされたら、[キャンペーンのスケジューリング][6]を続行できます。
+リッチプッシュ通知がダッシュボードにアップロードされたら、[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を続行できます。
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[8]: {% image_buster /assets/img_archive/android_rich_image.png %}
-[9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}
