@@ -24,7 +24,7 @@ Cliquez sur **Enregistrer le profil de couleur** lorsque vous avez terminé.
 
 ### Gestion des profils de couleur
 
-Vous pouvez également [dupliquer][6] et [archiver des][7] modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.][8]
+Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 ## Modèle CSS {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Comme vous le constatez, vous pouvez tout modifier, de la couleur d’arrière-p
 
 ### Gestion des modèles CSS
 
-Vous pouvez également [dupliquer][6] et [archiver des][7] modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.][8]
+Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 ## Modal avec CSS (Web uniquement) {#web-modal-css}
 
@@ -93,6 +93,3 @@ Si vous choisissez d’utiliser un message modal Web avecCSS, vous pouvez appliq
 Si vous choisissez d'appliquer votre propre modèle, cliquez sur **Appliquer un modèle** et choisissez dans la galerie de modèles de messages in-app. Si vous n'avez pas d'options, vous pouvez télécharger un [modèle CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) à l'aide du générateur de modèles CSS.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
