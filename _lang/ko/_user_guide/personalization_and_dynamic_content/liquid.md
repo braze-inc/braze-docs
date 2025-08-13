@@ -50,7 +50,7 @@ guide_featured_list:
 
 > Liquid는 Shopify에서 개발한 오픈 소스 템플릿 언어이며 Ruby로 작성되었습니다. Braze에서 Liquid는 사용자 프로필의 데이터를 메시지로 템플릿화하는 데 사용됩니다. 
 
-예를 들어 정수 데이터 유형인 고객 프로필에서 커스텀 속성을 검색하고 해당 값을 가장 가까운 정수로 반올림할 수 있습니다. Liquid 구문 및 사용법에 대한 자세한 내용은 [**지원되는 개인화 태그**][1]를 참조하세요.
+예를 들어 정수 데이터 유형인 고객 프로필에서 커스텀 속성을 검색하고 해당 값을 가장 가까운 정수로 반올림할 수 있습니다. For more on Liquid syntax and usage, refer to [**Supported personalization tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 Liquid 템플릿 언어는 개체, 태그 및 필터 사용을 지원합니다.
 
@@ -109,4 +109,3 @@ Braze는 **Shopify의 Liquid 5까지** Liquid를 지원합니다. Liquid 구현�
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
