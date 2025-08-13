@@ -37,13 +37,13 @@ Braze는 리치 푸시 설정 방법에 대한 지침을 제공하지만, 리치
 
 ### 1단계: 푸시 캠페인 만들기
 
-단계를 따라 [캠페인을 생성][3]하여 Android용 푸시 알림을 작성하세요. 푸시 알림을 설정할 때 동일한 작곡가를 사용하게 됩니다. 이 알림에는 풍부한 콘텐츠가 포함되지 않습니다.
+Follow the steps to [create a campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) to compose a push notification for Android. 푸시 알림을 설정할 때 동일한 작곡가를 사용하게 됩니다. 이 알림에는 풍부한 콘텐츠가 포함되지 않습니다.
 
 ### 2단계: 자막 추가
 
 알림에서 이미지 앞에 표시할 **요약 텍스트/이미지 캡션**을 추가합니다.
 
-![이미지를 추가하거나 이미지 URL을 입력할 수 있는 확장된 알림 이미지 섹션입니다.][9]
+![The Expanded notification image section where you can add an image or enter an image URL.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### 3단계: 미디어 추가
 
@@ -51,13 +51,9 @@ Braze는 리치 푸시 설정 방법에 대한 지침을 제공하지만, 리치
 
 자세한 내용은 [이미지 사양]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)을 확인하세요.
 
-![사용자는 "안녕하세요"라는 제목과 "로열티 프로그램에 가입해 주셔서 감사합니다!"라는 텍스트가 포함된 iOS용 푸시 알림을 받게 됩니다.][8]
+![A user receives a push notification for iOS with "Hi there" as the title and "Thanks for joining out loyalty program!" as the text.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### 4단계: 캠페인을 계속 만드세요
 
-리치 알림 콘텐츠가 대시보드에 업로드된 후, [캠페인을 예약][6]할 수 있습니다.
+After your rich notification content is uploaded to the dashboard, you can continue [scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[8]: {% image_buster /assets/img_archive/android_rich_image.png %}
-[9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}
