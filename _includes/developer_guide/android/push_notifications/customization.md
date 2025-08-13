@@ -338,7 +338,7 @@ You can showcase a larger image within your Android push notification using inli
 
 ### Compatibility
 
-While you can send inline images to any device, devices and SDKs that don't meet the minimum versions will display a standard image instead. For inline images to display properly, both the Android Braze SDK v10.0.0+ and a device running Android M+ are required.
+While you can send inline images to any device, devices and SDKs that don't meet the minimum versions will display a standard image instead. For inline images to display properly, both the Android Braze SDK v10.0.0+ and a device running Android M+ are required. The SDK must also be enabled for the image to render.
 
 {% alert note %}
 Devices running Android 12 will render differently due to changes in custom push notification styles.

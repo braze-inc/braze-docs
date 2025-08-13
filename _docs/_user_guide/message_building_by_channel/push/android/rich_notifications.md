@@ -28,6 +28,7 @@ Before you create a rich push notification for Android, note the following detai
   - **Large:** 2048x1024
 - Currently, Android rich notifications only allow for static images, including JPEG and PNG image formats. GIF and other image formats are not yet supported.
 - Adding action buttons to your push notification may affect the area of the image that is displayable. Test with the dashboard preview and live devices to confirm that results are as expected.
+- The Braze Android SDK must be enabled for the image to render.
 
 {% alert note %}
 While Braze provides instructions on how to set up rich push, the actual rendering of rich push notifications can vary depending on outside factors such as device aspect ratio, Android version, OEM-specific constraints, and others. We recommend doing a send test to multiple Android devices to make sure your rich push notifications appear as you intend them to.
