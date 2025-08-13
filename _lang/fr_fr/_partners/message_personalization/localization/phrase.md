@@ -24,7 +24,7 @@ L'intégration de Phrase et de Braze vous permet de traduire des modèles d'e-ma
 | --- | --- |
 | Compte Phrase TMS | Un compte Phrase TMS Ultimate ou Enterprise est nécessaire pour bénéficier de ce partenariat. |
 | Clé API REST de Braze | Une clé API REST Braze avec toutes les permissions. <br><br> Cette clé peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
-| Endpoint REST de Braze | [L'URL de votre endpoint REST.][1] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+| Endpoint REST de Braze |  Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
@@ -86,4 +86,3 @@ Dans Phrase, accédez à **Paramètres > Intégrations > Connecteurs > Nouveau**
 L'[API du connecteur](https://cloud.memsource.com/web/docs/api#) permet d'automatiser des étapes qui, autrement, seraient effectuées manuellement via l'interface utilisateur. Les [webhooks](https://support.phrase.com/hc/en-us/articles/5709693398812) peuvent être utilisés pour que Phrase TMS informe des systèmes tiers de certains événements (par exemple, un changement de statut d'un travail).
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
