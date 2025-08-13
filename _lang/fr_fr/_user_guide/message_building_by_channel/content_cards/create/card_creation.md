@@ -89,7 +89,7 @@ Cette section décrit les principales différences entre la création de cartes 
   <tr>
     <td class="leftHeader">Audience</td>
     <td class="tg-0pky">Braze évalue l’appartenance à l’audience lorsque la campagne s’envoie.<br><br>L’éligibilité des utilisateurs nouveaux ou anonymes ne sera pas évaluée s’ils essaient d’afficher la carte après l’envoi de la campagne. Pour les campagnes récurrentes, cela se fera à l’intervalle de récurrence suivant.</td>
-    <td class="tg-0pky">Braze évalue l'adhésion lors de la prochaine ouverture de votre appli par l'utilisateur (démarrage d'une session, <a href="#campaign_note">campagnes uniquement*</a>).<br><br> Ce paramètre aura une portée d’audience plus large car l’éligibilité de l’utilisateur nouveau ou anonyme sera toujours évaluée lorsqu’il essaiera d’afficher la carte. En outre, la limite de débit (limitation du nombre de personnes qui recevront la campagne) n'est pas applicable lorsqu'elle est définie sur « À la première impression » (<a href="#campaign_note">campagnes uniquement*</a>).</td>
+    <td class="tg-0pky">Braze évalue l'adhésion lors de la prochaine ouverture de votre appli par l'utilisateur (démarrage d'une session, <a href="#campaign_note">campagnes uniquement*</a>).<br><br> Ce paramètre aura une portée d’audience plus large car l’éligibilité de l’utilisateur nouveau ou anonyme sera toujours évaluée lorsqu’il essaiera d’afficher la carte. <br><br>En outre, la limite de débit (limitation du nombre de personnes qui recevront la campagne) n'est pas applicable lorsqu'elle est définie sur « À la première impression » (<a href="#campaign_note">campagnes uniquement*</a>).</td>
   </tr>
   <tr>
     <td class="leftHeader">Personnalisation</td>
@@ -127,6 +127,3 @@ Lorsque les cartes sont créées à la première impression, leur traitement peu
 
 Si l’application d’un utilisateur exécute une version antérieure du SDK, il recevra toujours des cartes de contenu envoyées avec une création de carte spécifiée. Cependant, les cartes prendront plus de temps à apparaître pour ces utilisateurs et peuvent ne pas apparaître avant la prochaine synchronisation de la carte de contenu.
 
-[1]: {% image_buster /assets/img_archive/card_creation.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/content_cards/create/
-Il y a [3]: https://www.braze.com/resources/articles/whats-an-app-session-anyway
