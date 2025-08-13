@@ -35,7 +35,7 @@ tool:
     - (オプション) セグメント別 1 時間あたりの収益
 - ユーザーあたりの収益
 
-![収益グラフ][9]
+![収益グラフ]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## 総収益
 
@@ -51,12 +51,12 @@ tool:
 
 ## 直接収益
 
-[レポートビルダー][1]を使用してキャンペーン比較レポートを作成すると、収益に関する以下の追加指標を確認できます。
+[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)を使用してキャンペーン比較レポートを作成すると、収益に関する以下の追加指標を確認できます。
 
-- [直接収益の合計][2]
-- [直接購入数の合計][3]
-- [ユニーク直接購入数][4]
-- [受信者あたりの収益][5]
+- [直接収益の合計]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
+- [直接購入数の合計]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)
+- [ユニーク直接購入数]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases)
+- [受信者あたりの収益]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient)
 
 これらのメトリクスは、最後のクリック属性に基づいています。つまり、収益は、そのキャンペーンの場合はキャンペーンに帰属されます。
 
@@ -66,12 +66,6 @@ tool:
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}
