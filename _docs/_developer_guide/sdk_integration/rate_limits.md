@@ -9,9 +9,9 @@ description: "Learn about the Braze SDK's intelligent, client-side rate limiting
 
 > Learn about the Braze SDK's intelligent, client-side rate limiting that optimizes battery life, reduces bandwidth usage, and ensures reliable data delivery.
 
-## How it works
+## Understanding SDK rate limits
 
-Braze SDKs implement adaptive client-side rate limiting designed to protect both your users' experience and your app's performance. Our SDKs automatically batch events and adapt flush intervals based on network quality to provide the best user experience while maintaining data integrity.
+Braze SDK rate limiting uses the following features to optimize performance, minimize battery drain, reduce data usage, and ensure reliable data delivery:
 
 ### Asynchronous processing
 
