@@ -47,4 +47,6 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/seasonal_promo/
   image: /assets/img/braze_icons/snowflake-01.svg
 ---
-<br><br>
+
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
