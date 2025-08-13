@@ -23,7 +23,7 @@ Supposons que vous souhaitiez définir un attribut personnalisé sur le profil u
 
 Ces données imbriquées vous permettent de créer des segments à l’aide d’informations à partir d’un objet d’attribut personnalisé, et de personnaliser vos messages avec un objet d’attribut personnalisé et Liquid.
 
-Les objets d'attribut personnalisé peuvent contenir des [types de données][1], tels que :
+Les objets d'attribut personnalisé peuvent contenir des [types de données]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types), tels que :
 
 - Chiffres
 - Chaînes de caractères
@@ -249,7 +249,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 Pour capturer des dates en tant que propriétés d’objet, vous devez utiliser la clé `$time`. Dans l’exemple suivant, un objet « Dates importantes » est utilisé pour capturer l’ensemble des propriétés d’objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé `$time`, qui ne peut pas être une valeur nulle.
 
 {% alert note %}
-Si vous n'avez pas capturé les dates en tant que propriétés de l'objet au départ, nous vous recommandons de renvoyer ces données à l'aide de la clé `$time` pour tous les utilisateurs. Dans le cas contraire, l'utilisation de l'attribut `$time` peut donner lieu à des segments incomplets.
+Si vous n'avez pas capturé les dates en tant que propriétés de l'objet au départ, nous vous recommandons de renvoyer ces données à l'aide de la clé `$time` pour tous les utilisateurs. Dans le cas contraire, l'utilisation de l'attribut `$time` peut donner lieu à des segments incomplets. Toutefois, si la valeur de `$time` dans un attribut personnalisé imbriqué n'est pas formatée correctement, l'ensemble de l'attribut personnalisé imbriqué ne sera pas mis à jour.
 {% endalert %}
 
 ```json
@@ -282,7 +282,7 @@ Utilisez la balise de personnalisation `custom_attribute` et la notation par poi
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
 {% endraw %}
 
-![Utiliser Liquid pour utiliser dans un message le nom du morceau et le nombre de fois que l’utilisateur l’a écouté ][5]
+![Utilisation de Liquid pour insérer dans un message le nom d'une chanson et le nombre de fois qu'un auditeur a écouté cette chanson]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentation
 
@@ -290,15 +290,15 @@ Vous pouvez créer des segments basés sur des attributs personnalisés imbriqu�
 
 Après avoir ajouté un chemin d'accès à votre propriété, sélectionnez **Valider** pour vérifier que la valeur du champ chemin d'accès est valide.
 
-![Filtrage basé sur un attribut personnalisé de la chanson la plus jouée, où un auditeur a écouté une chanson plus d’un nombre de fois spécifié][6]
+![Filtrage basé sur un attribut personnalisé de la chanson la plus écoutée lorsqu'un auditeur a écouté une chanson plus d'un certain nombre de fois]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 Pour segmenter avec des attributs personnalisés imbriqués, sélectionnez le filtre **Attributs personnalisés imbriqués** pour afficher une liste déroulante dans laquelle vous pouvez sélectionner un attribut personnalisé imbriqué spécifique.
 
-![][17]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
 Quand vous travaillez sur la segmentation d’attributs personnalisés imbriqués, vous avez accès à un nouveau comparateur regroupé par type de données. Par exemple, comme `play_analytics.count` est un nombre, vous pouvez sélectionner un comparateur dans la catégorie **Nombre.** 
 
-![Un utilisateur choisissant un opérateur basé sur le type de données pour l’attribut personnalisé imbriqué][7]
+![Un utilisateur choisissant un opérateur basé sur le type de données de l'attribut personnalisé imbriqué]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### Filtrage des types de données temporelles
 
@@ -312,7 +312,7 @@ Utilisez la **segmentation multicritères** pour créer un segment correspondant
 
 Vous pouvez également utiliser la fonctionnalité **Copier le liquide pour le segment** pour générer un code liquide pour ce segment et l'utiliser dans un message. Par exemple, supposons que vous ayez un tableau d’objets de compte et un segment qui cible les clients avec des comptes imposables actifs. Pour que les clients contribuent à l’objectif du compte associé à l’un de leurs comptes actifs et imposables, vous devrez créer un message pour les encourager. 
 
-![Un exemple de segment avec la case pour la segmentation sur plusieurs critères sélectionnée.][14]
+![Exemple de segment avec la case à cocher sélectionnée pour la segmentation multicritères.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 Lorsque vous sélectionnez **Copier Liquid pour le segment**, Braze génère automatiquement un code Liquid qui renvoie un tableau d'objets ne contenant que des comptes actifs et imposables.
 
@@ -361,7 +361,7 @@ Dans le tableau de bord de Braze, accédez à **Paramètres des données** > **A
 
 Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Nom de l'attribut**, sélectionnez **Générer un schéma.**
 
-![][8]
+![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
 {% alert tip %}
 La génération du schéma peut prendre quelques minutes, en fonction de la quantité de données que vous nous avez envoyées.
@@ -377,7 +377,7 @@ Pour notre tableau d’objets `accounts`, vous pouvez voir que dans le tableau d
 - Un type de numéro avec une clé `balance` (solde du compte)
 - Un type de chaîne avec une clé `type` (compte imposable ou non imposable)
 
-![][10]{: style="max-width:50%" }
+![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
 Maintenant que nous avons analysé et créé une représentation des données, créons un segment.
 
@@ -387,15 +387,15 @@ Ciblons les clients qui ont un solde inférieur à 100 pour leur envoyer un mes
 
 Créer un segment et ajouter le filtre `Nested Custom Attribute`, puis recherchez et sélectionnez votre objet ou votre tableau d’objets. Ici, nous avons ajouté le tableau d’objets `accounts`. 
 
-![][11]
+![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
 Sélectionnez le bouton <i class="fas fa-plus"></i> plus dans le champ du chemin d'accès. Cela affichera une représentation de votre objet ou de votre tableau d’objets. Vous pouvez sélectionner un ou plusieurs des éléments répertoriés et Braze les insérera dans le champ de chemin pour vous. Dans cet exemple, nous devons obtenir le solde. Sélectionnez le solde et le chemin (dans ce cas, `[].balance`) est automatiquement renseigné dans le champ du chemin.
 
-![][12]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
 Vous pouvez sélectionner **Valider** pour vérifier que le contenu du champ chemin d'accès est valide, puis créer le reste du filtre si nécessaire. Nous avons indiqué que le solde doit être inférieur à 100.
 
-![][13]
+![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
 Et voilà ! Vous venez de créer un segment à l’aide d’un attribut personnalisé imbriqué, sans avoir besoin de savoir comment les données sont structurées. L'explorateur d'objets imbriqués de Braze a généré une représentation visuelle de vos données et vous a permis d'explorer et de sélectionner exactement ce dont vous aviez besoin pour créer un segment.
 
@@ -403,11 +403,11 @@ Et voilà ! Vous venez de créer un segment à l’aide d’un attribut personn
 
 Vous pouvez déclencher lorsqu’un objet d’attribut personnalisé imbriqué est modifié. Cette option n'est pas disponible pour les modifications apportées aux tableaux d'objets. Si vous ne voyez pas l’option pour afficher l’explorateur de chemin, vérifiez que vous avez généré un schéma. 
 
-![][16]
+![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
 Par exemple, dans la campagne par action suivante, vous pouvez ajouter une nouvelle action de déclenchement pour **Modifier la valeur de l'attribut personnalisé** afin de cibler les utilisateurs qui ont modifié leurs préférences en matière de bureau de quartier. 
 
-![][15]
+![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### Personnalisation
 
@@ -415,7 +415,7 @@ Grâce à la fenêtre modale/boîte de **personnalisation**, vous pouvez égalem
 
 Par exemple, dans le modal de personnalisation ci-dessous, cela insère l’attribut personnalisé imbriqué d’un bureau de quartier local basé sur les préférences d’un utilisateur.
 
-![][9]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
 Vérifiez qu’un schéma a été généré si vous ne voyez pas l’option d’insérer des attributs personnalisés imbriqués.
@@ -469,18 +469,3 @@ Toute clé envoyée consomme un point de données. Par exemple, cet objet initia
 La mise à jour d’un objet d’attribut personnalisé vers `null` consomme également un point de données.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
-[5]: {% image_buster /assets/img_archive/nca_liquid_2.png %}
-[6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
-[7]: {% image_buster /assets/img_archive/nca_comparator.png %}
-[8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
-[9]:{% image_buster /assets/img_archive/nca_personalization.png %}
-[10]: {% image_buster /assets/img_archive/nca_schema.png %}
-[11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
-[12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
-[13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
-[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
-[15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
-[16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
-[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}
