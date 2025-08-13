@@ -8,7 +8,7 @@ description: "이 참고 문서에서는 Liquid 메시지 중단과 몇 가지 �
 
 # 메시지 중단하기
 
-> 선택적으로 조건부 내에서 Liquid 메시지를 중단할 수 있습니다. 이 참고 문서에는 마케팅 캠페인에서 이 기능을 사용할 수 있는 몇 가지 예가 나와 있습니다.
+> 선택적으로 조건부 내에 `abort_message("optional reason for aborting")` Liquid 메시지 태그를 사용하여 사용자에게 메시지를 보내지 않도록 할 수 있습니다. 이 참고 문서에는 마케팅 캠페인에서 이 기능을 사용할 수 있는 몇 가지 예가 나와 있습니다.
 
 {% alert note %}
 캔버스에서 메시지 단계가 중단되면 사용자는 캔버스를 **종료하지 않고** 다음 단계로 **진행합니다**.
@@ -59,15 +59,12 @@ Send this message in English!
 ```
 {% endraw %}
 
-!["언어가 없음"이라는 중단 메시지와 함께 개발자 콘솔에 메시지 오류 로그가 표시됩니다.][26]
+![개발자 콘솔에 "언어가 없음"이라는 중단 메시지가 포함된 메시지 오류 로그가 표시됩니다.]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## 중단 메시지 쿼리
 
 [쿼리 빌더]({{site.baseurl}}/user_guide/analytics/query_builder/) 또는 자체 데이터 웨어하우스(Braze에 연결된 경우)를 사용하여 Liquid 로직으로 인해 메시지가 중단될 때 트리거되는 특정 중단 메시지를 쿼리할 수 있습니다.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:[31]:
-[32]:[32]:
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#null 속성 값에 대한 회계 처리
+## 고려 사항
+
+`abort_message()` Liquid 메시지 태그는 사용자에게 메시지를 보내지 못하게 하므로 사용자 프로필에 메시지가 표시되지 않으며, 전달 또는 횟수 제한에 포함되지 않습니다.
