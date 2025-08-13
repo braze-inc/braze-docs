@@ -2,9 +2,9 @@
 nav_title: 퀴리 빌더
 article_title: 퀴리 빌더
 page_order: 15
-page_type: reference
 description: "이 참조 문서에서는 Query Builder에서 Snowflake의 Braze 데이터를 사용하여 보고서를 구축하는 방법을 설명합니다."
 tool: Reports
+alias: /query_builder/
 ---
 
 # 퀴리 빌더
@@ -37,13 +37,40 @@ tool: Reports
 
 ### 데이터 기간
 
-모든 쿼리는 지난 60일 동안의 데이터를 표시합니다. 
+모든 쿼리는 지난 60일 동안의 데이터를 표시합니다.
+
+### Query Builder time zone
+
+The default time zone for querying our Snowflake database is UTC. As a result, there may be some data discrepancies between your **Email Channel Engagement** page (which follows your company's time zone) and your Query Builder results.
+
+To convert the time zone in your query results, add the following SQL to your query and customize it for your company's time zone:
+
+{% raw %}
+```sql
+SELECT
+DATE_TRUNC(
+'day',
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME))
+) AS send_date_sydney,
+COUNT(ID) AS emails_sent
+USERS_MESSAGES_EMAIL_SEND_SHARED
+WHERE
+-- Apply the date range in Sydney time as well
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) >= '2025-03-25 00:00:00'
+AND CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) < '2025-03-29 00:00:00'
+AND APP_GROUP_ID = 'your app group ID'
+GROUP BY
+send_date_sydney
+ORDER BY
+send_date_sydney;
+```
+{% endraw %}
 
 ## AI 쿼리 빌더로 SQL 생성
 
 AI 쿼리 빌더는 [GPT](https://openai.com/gpt-4)를 활용하여 OpenAI에서 제공하는 SQL을 추천합니다.
 
-![][2]{: style="max-width:60%;" }
+![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 AI 쿼리 빌더를 사용하여 SQL을 생성하는 방법:
 
@@ -107,6 +134,16 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 LIMIT 100
 ```
 
+### Automatically populate the campaign variant name
+
+If you want the campaign variant name to automatically populate, include the column name `MESSAGE_VARIATION_API_ID` in your query, such as in this example:
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID, MESSAGE_VARIATION_API_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
+```
+
 ### 문제 해결
 
 다음과 같은 이유로 쿼리가 실패할 수 있습니다:
@@ -119,8 +156,6 @@ LIMIT 100
 ## 변수 사용
 
 변수를 사용하여 SQL에서 미리 정의된 변수 유형을 사용하여 값을 참조하고 값을 수동으로 복사할 필요가 없습니다. 예를 들어, 캠페인의 ID를 SQL 편집기에 수동으로 복사하는 대신, {% raw %}`{{campaign.${My campaign}}}`{% endraw %}을 사용하여 **변수** 탭의 드롭다운에서 캠페인을 직접 선택할 수 있습니다.
-
-![][3]
 
 변수가 생성된 후에는 쿼리 빌더 보고서의 **변수** 탭에 나타납니다. SQL 변수를 사용하는 이점은 다음과 같습니다:
 
@@ -159,8 +194,6 @@ LIMIT 100
 
 #### 날짜 범위
 
-![][4]{: style="max-width:50%;"}
-
 둘 다 `start_date` 및 `end_date`를 사용하는 경우 날짜 범위로 사용할 수 있도록 동일한 이름을 가져야 합니다.
 
 ##### 예시 값
@@ -185,8 +218,6 @@ LIMIT 100
 #### 메시징
 
 모든 메시징 변수는 하나의 그룹에서 상태를 결합하려면 동일한 식별자를 공유해야 합니다.
-
-![][5]{: style="max-width:50%;"}
 
 ##### 캔버스
 
@@ -230,221 +261,16 @@ LIMIT 100
 - **대체 값:** 캔버스 배리언트 API ID, `api-id1, api-id2`와 같이 쉼표로 구분된 문자열.
 - **사용 예:** {% raw %}`canvas_variation_api_id IN ({{canvas_variants.${some name}}})`{% endraw %}
 
-##### 캔버스 단계
+##### Canvas step
 
 선택한 캔버스에 속하는 캔버스 단계를 선택하기 위해서. 캔버스 변수와 함께 사용해야 합니다.
 
 - **대체 값:** 캔버스 단계 API ID
 - **사용 예:** {% raw %}`canvas_step_api_id = ‘{{canvas_step.${some name}}}’`{% endraw %}
 
-##### 캔버스 단계 수
+##### Canvas steps
 
 선택한 캔버스에 속하는 캔버스 단계를 선택하기 위해. 캔버스 또는 캔버스 변수를 사용해야 합니다.
 
 - **대체 값:** 캔버스 단계 API ID
 - **사용 예:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-
-#### 제품
-
-제품 이름 목록을 선택하기 위해.
-
-- **대체 값:** 제품 names are surrounded by single quotes and separated by commas, such as in `product1, product2`
-- **사용 예:** {% raw %}`product_id IN ({{products.${product name (optional)}}})`{% endraw %}
-
-#### 사용자 지정 이벤트
-
-커스텀 이벤트 목록을 선택하기 위해.
-
-- **대체 값:** 커스텀 이벤트 속성정보 이름은 `event1, event2`와 같이 쉼표로 구분됩니다.
-- **사용 예:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
-
-#### 커스텀 이벤트 속성
-
-커스텀 이벤트 속성정보 이름 목록을 선택하기 위해. 커스텀 이벤트 변수와 함께 사용해야 합니다.
-
-- **대체 값:** 커스텀 이벤트 속성정보 이름은 `property1, property2`와 같이 쉼표로 구분됩니다.
-- **사용 예:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
-
-#### 워크스페이스
-
-워크스페이스를 선택하기 위해서.
-
-- **대체 값:** 워크스페이스 BSON ID
-- **사용 예:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
-
-#### 카탈로그
-
-카탈로그 선택을 위해.
-
-- **대체 값:** 카탈로그 BSON ID
-- **사용 예:** {% raw %}`catalog_id = ‘{{catalogs.${catalog}}}’`{% endraw %}
-
-#### 카탈로그 필드
-
-카탈로그 필드를 선택하기 위해서. 카탈로그 변수와 함께 사용해야 합니다.
-
-- **대체 값:** 카탈로그 필드 이름
-- **사용 예:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
-
-#### 옵션 {#options}
-
-옵션 목록에서 선택하기 위해.
-
-- **대체 값:** 선택한 옵션의 값
-- **사용 예:**
-    - 선택 드롭다운의 경우: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select`를 이용하면여러 옵션을 선택할 수 있는지 여부를 지정할 수 있습니다
-    - 라디오 버튼의 경우: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-
-#### 세그먼트
-
-세그먼트를 선택하려면 [분석 추적]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)이(가) 켜져 있어야 합니다.
-
-- **대체 값:** 세그먼트 분석 ID, 이는 이 열이 사용 가능한 테이블의 `user_segment_membership_ids` 열에 저장된 ID에 해당합니다.
-- **사용 예:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
-
-#### 문자열
-
-보고서 실행 간 반복적인 문자열 값을 변경하기 위해. 이 변수를 사용하여 SQL에서 값을 여러 번 하드코딩하는 것을 피하십시오.
-
-- **대체 값:** 문자열 그대로 따옴표 없이
-- **사용 예:** {% raw %}`{{string.${some name}}}`{% endraw %}
-
-#### 태그
-
-캠페인 및 캔버스를 위한 태그 선택.
-
-- **대체 값:** 선택한 태그와 연관된 단일 인용 부호로 묶인 쉼표로 구분된 BSON ID를 가진 캠페인 및 캔버스
-- **사용 예:** {% raw %}`{{tags.${some tags}}}`{% endraw %}
-
-### 변수 메타데이터
-
-메타데이터는 변수 이름 뒤에 파이프( | ) 문자를 추가하여 변수에 메타데이터를 첨부하여 동작을 변경할 수 있습니다. 메타데이터의 순서는 중요하지 않으며 원하는 만큼 추가할 수 있습니다. 또한 모든 유형의 메타데이터는 특정 변수에만 해당하는 특수 메타데이터를 제외하고는 모든 변수에 사용할 수 있습니다(이 경우에는 해당 사항이 표시됩니다). 모든 메타데이터의 사용은 선택 사항이며 기본값의 변수 동작을 변경하는 데 사용됩니다.
-
-**사용 예:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
-
-#### 표시 여부
-
-변수가 보이는지 여부에 따라. 모든 변수는 **변수** 탭에서 기본값으로 표시되며, 값을 입력할 수 있습니다.
-
-다른 변수가 값을 가지고 있는지 여부와 같은 다른 변수에 따라 값이 달라지는 여러 특수 변수가 있습니다. 이 특수 변수는 표시되지 않도록 표시되어 **변수** 탭에 표시되지 않습니다.
-
-**사용 예:** `visible: ‘false’`
-
-#### 필수
-
-변수가 기본값으로 필요한지 여부에 대해. 변수의 값이 비어 있으면 일반적으로 잘못된 쿼리가 발생합니다.
-
-**사용 예:** `required: ‘false’`
-
-#### 주문
-
-**변수** 탭에서 변수의 위치를 선택합니다.
-
-**사용 예:** `order: ‘1’`
-
-#### 작은따옴표 포함
-
-변수의 값을 작은따옴표로 둘러싸기 위해서입니다.
-
-**사용 예:** `include_quotes: ‘true’`
-
-#### Include double quotes
-
-변수의 값을 큰따옴표로 둘러싸기 위해서입니다.
-
-**사용 예:** `include_double_quotes: ‘true’`
-
-#### 다중 선택
-
-선택 드롭다운이 단일 선택 또는 다중 선택을 허용하는지 여부에 따라 다릅니다. 지금은 [옵션](#options) 변수를 사용하는 경우에만 이 메타데이터를 포함할 수 있습니다.
-
-**사용 예:** `is_multi_select: ‘true’`
-
-![][7]{: style="max-width:50%;"}
-
-#### 라디오 버튼
-
-**변수** 탭에서 드롭다운을 선택하는 대신 라디오 버튼으로 옵션을 표시합니다. 이 메타데이터는 [옵션](#options) 변수를 사용하는 경우에만 포함할 수 있습니다.
-
-**사용 예:** `is_radio_button: ‘true’`
-
-![][6]{: style="max-width:50%;"}
-
-#### 옵션 
-
-레이블과 값의 형태로 선택 가능한 옵션 목록을 제공하기 위해. 레이블은 표시되는 것이고 값은 옵션이 선택될 때 변수로 대체되는 것입니다. 이 메타데이터는 [옵션](#options) 변수를 사용하는 경우에만 포함할 수 있습니다.
-
-**사용 예:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
-
-#### 입력 안내
-
-변수의 입력 필드에 표시되는 입력 안내 텍스트를 지정하기 위해서입니다.
-
-**사용 예:** `placeholder: ‘enter some value’`
-
-#### 설명
-
-변수의 입력 필드 아래에 표시되는 설명 텍스트를 지정하기 위해.
-
-**사용 예:** `description: ‘some description’`
-
-#### 기본값
-
-변수에 값이 지정되지 않았을 때 기본값을 지정하기 위해서입니다.
-
-**사용 예:** `default_value: ‘5’`
-
-#### 레이블 숨기기
-
-변수 이름 레이블을 숨기기 위해. 변수의 이름은 기본값 레이블로 사용됩니다.
-
-**사용 예:** `hide_label: ‘true’`
-
-### 특수 변수
-
-다음 변수는 다른 변수와 함께 사용할 수 있습니다:
-
-#### 다른 변수의 값의 존재 여부
-
-변수의 값이 채워져 있는지 여부를 알기 위해서. 이것은 변수가 채워지지 않은 경우 조건을 단락하고자 할 때 선택적 변수에 유용합니다.
-
-- **대체 값:** `true` 또는 `false` 다른 변수의 값에 따라 다릅니다
-- **사용 예:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
-
-`type` 및 `name`는 참조된 변수를 나타냅니다. 예를 들어, 다음 선택적 변수를 단축하려면 {% raw %}`{{campaigns.${messaging}}`, 다음을 사용할 수 있습니다.
-`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
-
-## 보고서 시간 초과
-
-6분 이상 실행되는 보고서는 시간 초과됩니다. 이것이 오랜만에 실행하는 첫 번째 쿼리라면 처리하는 데 시간이 더 걸릴 수 있으며, 따라서 시간 초과될 가능성이 더 높습니다. 이런 일이 발생하면 보고서를 다시 실행해 보십시오.
-
-보고서가 시간 초과되거나 다시 시도한 후에도 오류가 발생하면 [지원]({{site.baseurl}}/help/support#braze-support)에 문의하십시오.
-
-## 데이터 및 결과
-
-결과 및 결과 내보내기는 최대 1,000개의 행을 포함할 수 있는 테이블입니다. 더 많은 양의 데이터가 필요한 보고서의 경우, [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) 또는 [내보내기 API 엔드포인트와]({{site.baseurl}}/api/endpoints/export) 같은 도구를 사용할 수 있습니다.
-
-## 쿼리 빌더 사용 모니터링
-
-각 Braze 워크스페이스에는 매월 5개의 Snowflake 크레딧이 제공됩니다. 쿼리를 실행하거나 테이블을 미리 볼 때마다 Snowflake 크레딧의 작은 부분이 사용됩니다.
-
-{% alert note %}
-Snowflake 크레딧은 기능 간에 공유되지 않습니다. 예를 들어 SQL 세그먼트 확장 프로그램과 쿼리 빌더의 크레딧은 서로 독립적입니다.
-{% endalert %}
-
-크레딧 사용량은 SQL 쿼리의 실행 시간과 상관관계가 있습니다. 실행 시간이 길수록 쿼리에 소요되는 Snowflake 크레딧의 비율이 높아집니다. 실행 시간은 시간이 지남에 따라 쿼리의 복잡성과 크기에 따라 달라질 수 있습니다. 더 복잡하고 빈번한 쿼리를 실행할수록 리소스 할당이 커지고 실행 시간이 빨라집니다.
-
-크레딧은 Braze SQL 편집기에서 보고서를 작성, 편집 또는 저장할 때 사용되지 않습니다. 크레딧은 매월 1일 한국 시간 09:00에 5로 초기화됩니다. 쿼리 빌더 페이지 상단에서 월간 크레딧 사용량을 모니터링할 수 있습니다.
-
-![쿼리 빌더는 이번 달에 사용된 크레딧 양을 보여줍니다.][1]{: style="max-width:60%;"}
-
-크레딧 한도에 도달하면 쿼리를 실행할 수 없지만 SQL 보고서를 생성, 편집 및 저장할 수 있습니다. 쿼리 빌더 크레딧을 더 구매하려면 계정 매니저에게 문의하세요.
-
-[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
-[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
-[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
-[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
-[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
-[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
-[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}
