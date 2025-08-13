@@ -40,5 +40,4 @@ guide_featured_list:
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values
