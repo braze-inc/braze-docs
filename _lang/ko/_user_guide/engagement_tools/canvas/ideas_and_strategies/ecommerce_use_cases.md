@@ -11,8 +11,8 @@ toc_headers: h2
 
 > Braze Canvas는 이커머스 마케터를 위해 특별히 맞춤화된 여러 가지 사전 구축 템플릿을 제공하므로 필수 전략을 쉽게 구현할 수 있습니다. 이 페이지에서는 고객 여정을 개선하는 데 사용할 수 있는 몇 가지 주요 템플릿을 제공합니다.
 
-{% alert note %}
-Braze는 데이터 계획에는 시간이 걸린다는 사실을 잘 알고 있습니다. 지금 바로 개발팀에 이커머스 이벤트 전송 방법을 숙지하고 시작하시길 권장합니다. 전자상거래 추천 이벤트에서 일부 기능을 즉시 사용할 수 없는 경우도 있지만, 2025년에 전자상거래 기능을 향상시킬 새로운 제품이 출시될 예정이니 기대해도 좋습니다.
+{% alert important %}
+[전자상거래 추천 이벤트는]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) 현재 얼리 액세스 중입니다. 이번 얼리 액세스에 참여하려면 Braze 고객 성공 관리자에게 문의하세요. <br><br>새로운 Shopify 커넥터를 사용하는 경우 통합을 통해 전자상거래 추천 이벤트를 자동으로 사용할 수 있습니다.
 {% endalert %}
 
 ## 캔버스 템플릿 사용
@@ -21,7 +21,7 @@ Braze는 데이터 계획에는 시간이 걸린다는 사실을 잘 알고 있�
 1. **메시징** > **캔버스로** 이동합니다.
 2. **캔버스 만들기** > **캔버스 템플릿 사용을** 선택합니다.
 3. **Braze 템플릿** 탭에서 사용하려는 템플릿을 찾아봅니다. 템플릿의 이름을 선택하여 미리 볼 수 있습니다.
-4. 사용하려는 템플릿에 대해 **템플릿 적용을** 선택합니다.<br><br>!['캔버스 템플릿' 페이지가 'Braze 템플릿' 탭으로 열리고 최근에 사용한 템플릿과 선택 가능한 Braze 템플릿 목록이 표시됩니다.][2]{: style="max-width:80%;"}
+4. 사용하려는 템플릿에 대해 **템플릿 적용을** 선택합니다.<br><br>!['캔버스 템플릿' 페이지가 'Braze 템플릿' 탭으로 열리고 최근에 사용한 템플릿과 선택 가능한 Braze 템플릿 목록이 표시됩니다.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## 전자상거래 템플릿
 
@@ -34,7 +34,7 @@ Braze는 데이터 계획에는 시간이 걸린다는 사실을 잘 알고 있�
 
 제품을 탐색했지만 장바구니에 추가하거나 주문하지 않은 사용자의 참여를 유도하려면 **포기한 탐색** 템플릿을 사용하세요.
 
-!['항목 규칙'이 확장된 '버려진 찾아보기' 캔버스 템플릿이 적용됩니다.][3]
+!['항목 규칙'이 확장된 '포기된 찾아보기' 캔버스 템플릿이 적용된 경우]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### 설정
 
@@ -57,7 +57,7 @@ Braze는 데이터 계획에는 시간이 걸린다는 사실을 잘 알고 있�
     - 항목 제어
         - 사용자는 캔버스의 전체 기간이 완료된 후 이 캔버스에 다시 입장할 수 있습니다.
     - 종료 기준 
-        - 수행 `ecommerce.cart_updated`, `ecommerce.checkout started`, 또는 `ecommerce.order_placed`<br><br>![캔버스에 대한 항목 제어 및 종료 기준]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - 수행 `ecommerce.cart_updated`, `ecommerce.checkout_started`, 또는 `ecommerce.order_placed`<br><br>![캔버스에 대한 항목 제어 및 종료 기준]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - 보내기 설정 
     - 구독 또는 옵트인한 사용자 
 - 지연 단계
@@ -97,7 +97,7 @@ Braze는 데이터 계획에는 시간이 걸린다는 사실을 잘 알고 있�
 
 **중단된 카트** 템플릿을 사용하여 장바구니에 제품을 추가했지만 결제나 주문을 계속하지 않은 고객의 잠재적인 매출 손실에 대응하세요. 
 
-!['항목 규칙'이 확장된 '버려진 카트' 캔버스 템플릿이 적용됩니다.][4]
+![확장된 '항목 규칙'이 적용된 '버려진 카트' 캔버스 템플릿.]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### 설정
 
@@ -130,7 +130,7 @@ Braze는 데이터 계획에는 시간이 걸린다는 사실을 잘 알고 있�
 
 ### 이메일용 버려진 장바구니 제품 개인화 {#abandoned-cart-checkout}
 
-이탈한 장바구니 사용자 여정에는 제품 개인화를 위한 특별한 `shopping_cart` 리퀴드 태그가 필요합니다. 
+이탈한 카트 사용자 여정에는 제품 개인화를 위한 특별한 `shopping_cart` 리퀴드 태그가 필요합니다. 
 
 다음은 `shopping_cart` Liquid 태그가 포함된 HTML 블록을 추가하여 이메일에 제품을 추가하는 방법의 예시입니다. 
 
@@ -184,7 +184,7 @@ Shopify를 사용하는 경우 이 Liquid 템플릿을 사용하여 카트 URL�
 
 **중단된 결제** 템플릿을 사용하여 결제 프로세스를 시작했지만 주문하기 전에 이탈한 고객을 타겟팅할 수 있습니다. 
 
-![확장된 "입력 규칙"이 적용된 "중단된 결제" 캔버스 템플릿.][5]
+![확장된 '입력 규칙'이 적용된 '중단된 결제' 캔버스 템플릿.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### 설정
 
@@ -257,7 +257,7 @@ Shopify를 사용하는 경우 이 Liquid 템플릿을 사용하여 카트 URL�
 
 **주문 확인 및 피드백 설문조사** 템플릿을 사용하여 성공적인 주문을 확인하고 고객 만족도를 높일 수 있습니다.
 
-!['입력 규칙'이 확장된 '주문 확인' 캔버스 템플릿이 적용됩니다.][6]
+![확장된 '입력 규칙'이 적용된 '주문 확인' 캔버스 템플릿.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### 설정
 
@@ -287,7 +287,7 @@ Shopify를 사용하는 경우 이 Liquid 템플릿을 사용하여 카트 URL�
 - 메시지 단계 
     - 이메일 템플릿과 HTML 블록을 Liquid 템플릿 예시와 함께 검토하여 미리 작성된 템플릿에서 메시지에 제품을 추가하세요. 자체 이메일 템플릿을 사용하는 경우 다음 섹션에서 설명하는 것처럼 [Liquid 변수를](#message-personalization) 참조할 수도 있습니다.
 
-### 이메일 주문 확인 맞춤 설정
+### 이메일 주문 확인 개인화
 
 다음은 주문이 접수된 후 주문 확인에 HTML 제품 블록을 추가하는 방법의 예시입니다.
 
@@ -347,6 +347,16 @@ Braze 세그먼트를 사용하여 특정 속성 및 행동을 기반으로 타�
 이커머스 이벤트는 [추천 이벤트를]({{site.baseurl}}/recommended_events/) 기반으로 합니다.
 추천 이벤트는 사용자 지정 이벤트이므로 [사용자 지정 이벤트 필터를]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#segmentation-filters) 선택하여 추천 이커머스 이벤트 이름을 검색할 수 있습니다.
 
+### 전자상거래 필터
+
+세분화 도구 내의 **전자상거래** 섹션으로 이동하여 **전자상거래 소스** 및 **총 수익과** 같은 전자상거래 필터를 사용하여 사용자를 세분화합니다.
+
+!['전자상거래' 필터가 있는 세그먼트 필터 드롭다운]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+
+{% alert important %}
+구매 이벤트는 결국 더 이상 사용되지 않으며 [전자상거래 추천 이벤트로]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) 대체될 예정입니다. 이 경우 세그먼트 필터는 더 이상 구매 행동 아래에 채워지지 않습니다. 구매 이벤트의 전체 목록은 [구매 이벤트 로깅하기를]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events) 참조하세요.
+{% endalert %}
+
 ## 중첩된 이벤트 속성
 
 중첩된 이벤트 속성을 기준으로 [세그먼트하려면 세그먼트 확장을]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#why-use-segment-extensions) 활용하면 됩니다. 예를 들어 세그먼트 확장을 사용하여 지난 90일 동안 'SKU-123' 제품을 구매한 사람을 찾을 수 있습니다.
@@ -361,10 +371,5 @@ Braze 세그먼트를 사용하여 특정 속성 및 행동을 기반으로 타�
 
 론칭한 캔버스에서 발생한 주문과 관련된 트렌드에 대한 인사이트를 얻으려면 [전환 대시보드를]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) 설정하고 캔버스를 지정해야 합니다.
 
-고급 보고 사용 사례의 경우, Braze [쿼리 빌더를]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) 사용하여 사용자 지정 보고서를 생성할 수 있습니다. 
+고급 보고 사용 사례의 경우, Braze [쿼리 빌더를]({{site.baseurl}}/user_guide/analytics/query_builder/) 사용하여 사용자 지정 보고서를 생성할 수 있습니다. 
 
-[2]: {% image_buster /assets/img_archive/apply_template.png %}
-[3]: {% image_buster /assets/img_archive/abandoned_browse.png %}
-[4]: {% image_buster /assets/img_archive/abandoned_cart.png %}
-[5]: {% image_buster /assets/img_archive/abandoned_checkout.png %}
-[6]: {% image_buster /assets/img_archive/order_confirmation_feedback.png %}
