@@ -1,7 +1,7 @@
 ---
 nav_title: クリエイティブの詳細
 article_title: クリエイティブの詳細
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "クリエイティブの詳細"
 guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>メッセージをテストする</a>ことをお勧めする。"
