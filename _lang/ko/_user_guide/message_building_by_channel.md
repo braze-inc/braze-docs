@@ -10,6 +10,9 @@ description: "이 랜딩 페이지는 Braze 메시징 채널을 다룹니다. �
 
 guide_featured_title: "사용 가능한 채널"
 guide_featured_list:
+- name: Banners
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: 콘텐츠 카드
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: 푸시 메시징
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS 및 MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: "SMS, MMS, and RCS"
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: 웹훅
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## Accessibility resources
+
+Braze를 사용하여 각 채널에서 접근성 높은 메시지 캠페인을 만들 수 있습니다. 엔지니어와 협력하여 구현 시 접근성 표준을 충족하는지 확인하세요. If you’d like additional guidance, we recommend:
+
+- [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
+- [Building Accessible Messages]({{site.baseurl}}/help/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+
+{% multi_lang_include accessibility/feedback.md %}
 
 ## 메시지 채널 선택하기
 
