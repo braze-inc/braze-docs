@@ -82,7 +82,7 @@ Braze は LINE ユーザーのサブスクリプションステータスを後�
 1. LINE の [**メッセージング API**] タブで、[**Webhook の設定**] を編集します。
    - [**Webhook URL**] を [`https://anna.braze.com/line/events`] に設定します。
       - これは、Braze により、ダッシュボードのクラスターに基づいて、統合時に別の URL に自動的に変更されます。
-   - [**Webhook を使用**] と [**Webhook の再配信**] をオンにします。<br><br> ![Webhook 設定ページでは、Webhook URL の確認や編集、[webhook を使用]、[Webhook の再配信]、[エラー統計の集約]のオンとオフを切り替えることができます。][1]{: style="max-width:70%;"}
+   - [**Webhook を使用**] と [**Webhook の再配信**] をオンにします。<br><br> ![Webhook 設定ページでは、Webhook URL の確認や編集、[webhook を使用]、[Webhook の再配信]、[エラー統計の集約]のオンとオフを切り替えることができます。]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. [**プロバイダー**] タブに表示される以下の情報をメモしておきます。
 
 | 情報タイプ | ロケーション |
@@ -99,7 +99,7 @@ Braze は LINE ユーザーのサブスクリプションステータスを後�
    - [**自動応答メッセージ**] をオフにする。トリガーメッセージはすべて Braze 経由で送信されます。これにより、LINE コンソールから直接送信できなくなることはありません。
    - [**Webhook**] をオンにする。
 
-![アカウントがチャットを処理する方法を切り替えられる、応答設定ページ。][2]{: style="max-width:80%;"}
+![アカウントでのチャットの処理方法を切り替えるレスポンス設定ページ。]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### ステップ 2.2:BrazeでLINEサブスクリプショングループを作成する
 
@@ -109,16 +109,18 @@ Braze は LINE ユーザーのサブスクリプションステータスを後�
    - チャネルシークレット
    - チャネルアクセストークン
 
+LINE アカウントにIP ホワイトリストを追加する場合は、[IP allowlisting]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) にあるクラスタにリストされているすべてのIP アドレスをallowlist に追加します。
+
 {% alert important %}
 統合中は、チャネルシークレットが正しいことを確認してください。間違っている場合は、サブスクリプションステータスに不整合がある可能性があります。
 {% endalert %}
 
-![LINE 統合セクションが掲載された、LINE メッセージング統合ページ。][3]{: style="max-width:80%;"}
+![LINE 統合セクションが掲載された、LINE メッセージング統合ページ。]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2\.接続後、Brazeによって、ワークスペースに正常に追加された LINE 統合ごとに Braze サブスクリプショングループが自動的に生成されます。<br><br> フォロワーリストの変更 (新しいフォロワーやフォロー解除など) は、自動的に Braze にプッシュされます。
 
-![「LINE」チャネルに 1 つのサブスクリプショングループを表示する LINE サブスクリプショングループセクション。][4]{: style="max-width:80%;"}
+![「LINE」チャネルに1つのサブスクリプショングループを表示する LINE サブスクリプショングループセクション。]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## ステップ 3:ユーザーIDを照合する
 
@@ -172,7 +174,7 @@ Braze にユーザー更新を提供する方法がすでに確立されてい�
 
 ## ステップ 5: プロファイルをマージする (省略可）
 
-前述のように、同じ`native_line_id` で複数のユーザープロファイルが存在する可能性があります。更新方法によって重複するユーザープロファイルが作成される場合は、`/user/merge` エンドポイントを使用して、未確認ユーザープロファイルを識別されているユーザープロファイルにマージできます。 
+前述したように、同じ `native_line_id` を持つユーザープロファイルが複数存在する可能性があります。更新方法によって重複するユーザープロファイルが作成される場合は、`/user/merge` エンドポイントを使用して、未確認ユーザープロファイルを識別されているユーザープロファイルにマージできます。 
 
 以下に、ユーザーエイリアス `line_id` により未確認ユーザープロファイルをターゲットに設定する `/users/merge` のペイロードの例を示します。
 
@@ -318,7 +320,7 @@ LINE IDと既存のBrazeユーザープロファイルを組み合わせるに�
 
 この方法によって、ユーザーはLINEアカウントとアプリのユーザーアカウントをリンクさせることができる。その後、Braze で {% raw %}`{{line_id}}`{% endraw %} などの Liquid を使用して、ユーザーの LINE ID を Web サイトまたはアプリに渡すユーザーのためにパーソナライズされた URL を作成します。渡された LINE ID は、既知のユーザーに関連付けることができます。
 
-1. サブスクリプションの状態変化に基づき、ユーザーがLINEチャネルにサブスクライブしたときにトリガーされるアクションベースのキャンバスを作成する。<br>![][9]
+1. サブスクリプションの状態変化に基づき、ユーザーがLINEチャネルにサブスクライブしたときにトリガーされるアクションベースのキャンバスを作成する。<br>![ユーザがLINE チャネルにサブスクライブするとトリガーされるキャンバス。]({% image_buster /assets/img/line/account_link_1.png %})
 2. (Liquid を使用して) ユーザーの LINE ID をクエリパラメーターとして渡し、Web サイトやアプリへのログインを促す次のようなメッセージを作成します。
 
 ```
@@ -327,7 +329,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\.クーポンコードを配信するフォローアップメッセージを作成する。
-4. (オプション) LINEユーザーが識別子されたときにトリガーして、ユーザーにクーポンコードを送信するアクションベースのキャンペーンまたはキャンバスを作成する。<br>![][10]
+4. (オプション) LINEユーザーが識別子されたときにトリガーして、ユーザーにクーポンコードを送信するアクションベースのキャンペーンまたはキャンバスを作成する。<br>![LINE ユーザーが識別されたときにトリガーされるアクションベースのキャンペーン。]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### 仕組み
 
@@ -373,7 +375,7 @@ if (user && isLoggedIn && lineUserId) {
 
 [ユーザー照合を](#user-id-reconciliation)設定する前に、「私は誰」キャンバスやキャンペーンを作成することで、LINEチャネルをテストすることができる。
 
-1. 特定のトリガーワードでユーザーの Braze ユーザー ID を返すキャンバスを設定します。<br><br>トリガーの例 <br><br>![特定のサブスクリプショングループにインバウンド LINE を送信したユーザーにキャンペーンを送信するトリガー。][7]{: style="max-width:80%;"}<br><br>メッセージの例<br><br>![Braze ユーザー ID を記載した LINE メッセージ。][8]{: style="max-width:40%;"}<br><br>
+1. 特定のトリガーワードでユーザーの Braze ユーザー ID を返すキャンバスを設定します。<br><br>トリガーの例 <br><br>![特定のサブスクリプショングループにインバウンド LINE を送信したユーザーにキャンペーンを送信するトリガー。]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>メッセージの例<br><br>![Braze ユーザー ID を記載した LINE メッセージ。]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. Braze で、Braze ID を使用して特定のユーザーを検索し、必要に応じて変更します。
 
@@ -382,13 +384,3 @@ if (user && isLoggedIn && lineUserId) {
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/line/webhook_settings.png %}
-[2]: {% image_buster /assets/img/line/response_settings.png %}
-[3]: {% image_buster /assets/img/line/integration.png %}
-[4]: {% image_buster /assets/img/line/line_subscription_groups.png %}
-[5]: {% image_buster /assets/img/line/filter_group.png %}
-[6]: {% image_buster /assets/img/line/csv_export_user_data.png %}
-[7]: {% image_buster /assets/img/line/trigger.png %}
-[8]: {% image_buster /assets/img/line/message.png %}
-[9]: {% image_buster /assets/img/line/account_link_1.png %}
-[10]: {% image_buster /assets/img/line/account_link_2.png %}
