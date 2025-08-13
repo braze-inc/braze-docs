@@ -24,7 +24,7 @@ Braze に接続する外部プラットフォームを特定し、プラット�
 
 以下に [Typeform webhook](https://www.typeform.com/help/a/webhooks-360029573471/) の例を示します。これは、Typeform のプラットフォームにログインすることで設定できます。
 
-![][9]
+![]({% image_buster /assets/img/data_transformation/data_transformation8.png %})
 
 ## ステップ 2: 変換の作成
 
@@ -43,7 +43,7 @@ Braze に接続する外部プラットフォームを特定し、プラット�
 
 Typeform の場合は以下のようになります。
 
-![WebhookをBrazeユーザープロファイルにマッピングするデータ変換コードの例。][12]
+![WebhookをBrazeユーザープロファイルにマッピングするデータ変換コードの例]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
 Braze Data Transformation は、Webhook に特別な検証や認証を必要とする外部プラットフォームをまだサポートしていない可能性があります。Braze Data Transformation でこのタイプのプラットフォームを使用することに関心がある場合は、[製品フィードバック]({{site.baseurl}}/user_guide/administrative/access_braze/portal/)を残すことを検討してください。
@@ -235,11 +235,3 @@ return brazecall;
 受信リクエスト数より少ない配信数は、少なくともいくつかのWebhookが正常に配信されていることを示す。エラー例については変換ログを参照し、変換出力が意図どおりかを確認します。変換コードが、受信した Webhook の個々のバリエーションに対応していない可能性があります。
 
 
-[4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
-[5]: {% image_buster /assets/img/data_transformation/data_transformation4.png %}
-[6]: {% image_buster /assets/img/data_transformation/data_transformation5.png %}
-[7]: {% image_buster /assets/img/data_transformation/data_transformation6.jpg %}
-[8]: {% image_buster /assets/img/data_transformation/data_transformation7.png %}
-[9]: {% image_buster /assets/img/data_transformation/data_transformation8.png %}
-[10]: {% image_buster /assets/img/data_transformation/data_transformation9.png %}
-[12]: {% image_buster /assets/img/data_transformation/data_transformation11.png %}
