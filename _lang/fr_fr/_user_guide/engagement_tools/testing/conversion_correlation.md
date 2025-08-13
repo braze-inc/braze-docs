@@ -21,7 +21,7 @@ Pour chaque campagne, Braze vérifie une liste d'attributs et de comportements d
 
 Pour effectuer une analyse de corrélation de conversion, sélectionnez l'événement de conversion qui vous intéresse dans le menu déroulant.
 
-![Le panneau Conversion Correlation (Corrélation de conversion) qui montre un exemple où l’option « Select a conversion event (Sélectionner un événement de conversion) » est définie sur « Primary Conversion Event - A (Événement de conversion primaire - A) » et le paramètre d’événement est défini sur « Made Purchase within 12 hours (Any product) (Achat effectué dans les 12 heures [tout produit]) ».][1]
+![Le panneau de corrélation des conversions montre un exemple où l'option "Sélectionner un événement de conversion" est réglée sur "Événement de conversion principal - A" et où le paramètre de l'événement est "Achat effectué dans les 12 heures (tout produit)".]({% image_buster /assets/img/convcorr.png %})
 
 ## Quels éléments Braze vérifie-t-il ?
 
@@ -52,4 +52,3 @@ Nous vérifions la signification statistique en utilisant l'[intervalle de confi
 
 Ensuite, pour chacune des variables, nous calculons également le taux auquel les utilisateurs avec cet attribut ou comportement particulier sont convertis avec un niveau de confiance de 95 %. En divisant ce taux par le taux de base, nous sommes en mesure de mesurer le ratio. Si le ratio est beaucoup plus grand que 1, les utilisateurs ayant cet attribut ou comportement particulier sont plus susceptibles d’être convertis. Si le ratio est nettement inférieur à 1, ces utilisateurs sont moins susceptibles d’être convertis. Nous affichons la valeur du ratio lui-même dans le tableau. La valeur n’est affichée que si elle est assez loin de 1 pour être pertinente avec un niveau de confiance de 95 %.
 
-[1]: {% image_buster /assets/img/convcorr.png %}
