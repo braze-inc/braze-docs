@@ -37,13 +37,13 @@ Bien que Braze fournisse des instructions sur la manière de configurer le push 
 
 ### Étape 1 : Créer une campagne de notification push
 
-Suivez les étapes pour [créer une campagne][3] afin de composer une notification push pour Android. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
+Suivez les étapes pour [créer une campagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) afin de composer une notification push pour Android. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
 
 ### Étape 2 : Ajouter une légende
 
 Ajoutez le **texte récapitulatif/la légende de l'image** que vous souhaitez afficher avant l'image dans la notification.
 
-![La section de l'image de notification étendue dans laquelle vous pouvez ajouter une image ou entrer une URL d'image.][9]
+![La section de l'image de la notification étendue où vous pouvez ajouter une image ou entrer l'URL d'une image.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Étape 3 : Ajouter des médias
 
@@ -51,13 +51,9 @@ Ajoutez votre image dans le champ **Image de la notification élargie** dans le 
 
 Pour plus d'informations sur les images prises en charge, consultez la rubrique [Spécifications des images.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)
 
-![Un utilisateur reçoit une notification push pour iOS avec pour titre "Bonjour" et pour texte "Merci d'avoir adhéré à notre programme de fidélité !".][8]
+![Un utilisateur reçoit une notification push pour iOS avec pour titre "Bonjour" et pour texte "Merci d'avoir adhéré à notre programme de fidélité !".]({% image_buster /assets/img_archive/android_rich_image.png %}).
 
 ### Étape 4 : Continuer à créer votre campagne
 
-Une fois que le contenu de votre notification enrichie est téléchargé dans le tableau de bord, vous pouvez continuer à [planifier votre campagne][6].
+Une fois que le contenu de votre notification enrichie est téléchargé dans le tableau de bord, vous pouvez continuer à [planifier votre campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[8]: {% image_buster /assets/img_archive/android_rich_image.png %}
-[9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}
