@@ -5,7 +5,7 @@ page_order: 2
 layout: dev_guide
 
 guide_top_header: "Data Infrastructure"
-guide_top_text: "Data infrastructure at Braze includes several data centers located in different regions around the world. "
+guide_top_text: "Data infrastructure at Braze includes data centers that help to minimize latency, which is the time it takes for data to travel between the server and the user. This allows our services to be reliable and scalable. This also includes field-level encryption to help protect sensitive data to minimize personally identifiable information (PII) shared in Braze."
 description: "This section includes articles related to the data infrastructure in Braze." 
 
 guide_featured_title: "Section articles"
