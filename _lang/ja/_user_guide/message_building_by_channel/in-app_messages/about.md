@@ -13,7 +13,7 @@ search_rank: 4.9
 
 > アプリ内メッセージは多くの面で優れています。これらのメッセージはユーザーのアプリ外に配信されず、ホームスクリーンに侵入することもないため、コンテンツは豊富で、切迫感も低い。アプリ内メッセージはアプリ内に存在し (名前の由来)、コンテキストがあり、不快に思われることはほとんどありません。ユーザーがアプリ内で有効になると、必ず配信されます。
 
-アプリ内メッセージの例については、[ケーススタディ][1]を参照してください。
+アプリ内メッセージの例については、[ケーススタディ](https://www.braze.com/customers)を参照してください。
 
 ## 潜在ユースケースs
 
@@ -21,10 +21,10 @@ search_rank: 4.9
 
 | ユースケース | 説明 |
 | --- | --- |
-| プッシュプライミング | リッチなアプリ内メッセージを使用して[プッシュプライミング][2]キャンペーンを実行して、自社のアプリまたはサイトのプッシュ通知にオプトインするメリットを顧客に提示し、プッシュアクセス許可を付与するためのプロンプトを表示します。
+| プッシュプライミング | リッチなアプリ内メッセージを使用して[プッシュプライミング]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)キャンペーンを実行して、自社のアプリまたはサイトのプッシュ通知にオプトインするメリットを顧客に提示し、プッシュアクセス許可を付与するためのプロンプトを表示します。
 | 販売・プロモーション | モーダルのアプリ内メッセージを使用して、静的なプロモーションコードまたはオファーを含み、視覚的に魅力的なメディアで顧客を出迎えます。そのとき以外では得られないインセンティブを提供して、購入やコンバージョンを行うように促します。 |
 | 機能導入の促進 | アプリの他の部分を使用したり、サービスを活用したりするように顧客に促します。 |
-| 高パーソナライズされた キャンペーンs | 顧客がアプリまたはサイトに入るときに最初に表示されるものとして、アプリ内メッセージs を配置します。Braze の一部のパーソナライゼーション機能 ([コネクテッドコンテンツ][3]など) を追加して、ユーザーのアクションを起こしたいという意欲を促進し、自社のアウトリーチをより効果的なものにします。
+| 高パーソナライズされた キャンペーンs | 顧客がアプリまたはサイトに入るときに最初に表示されるものとして、アプリ内メッセージs を配置します。Braze の一部のパーソナライゼーション機能 ([コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)など) を追加して、ユーザーのアクションを起こしたいという意欲を促進し、自社のアウトリーチをより効果的なものにします。
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 考慮すべき他のユースケースには、次のものがあります。
@@ -69,16 +69,10 @@ search_rank: 4.9
 {% endtab %}
 {% endtabs %}
 
-これらのデフォルトのメッセージテンプレートに加えて、カスタム HTML のアプリ内メッセージ、CSS を使用した Web モーダル、または Web のメールキャプチャフォームを使用して、メッセージングをさらにカスタマイズすることもできます。詳細については、[カスタマイズ][4]を参照してください。
+これらのデフォルトのメッセージテンプレートに加えて、カスタム HTML のアプリ内メッセージ、CSS を使用した Web モーダル、または Web のメールキャプチャフォームを使用して、メッセージングをさらにカスタマイズすることもできます。詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)を参照してください。
 
 ## その他のリソース
 
-独自のアプリ内メッセージキャンペーンを作成したり、アプリ内メッセージをマルチチャネルキャンペーンで使用したりする前に、「[アプリ内メッセージ準備ガイド][5]」を確認することを強くお勧めします。このガイドでは、アプリ内メッセージを作成するときに考慮すべきターゲット設定、コンテンツ、およびコンバージョンに関する疑問について説明しています。
+独自のアプリ内メッセージキャンペーンを作成したり、アプリ内メッセージをマルチチャネルキャンペーンで使用したりする前に、「[アプリ内メッセージ準備ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/)」を確認することを強くお勧めします。このガイドでは、アプリ内メッセージを作成するときに考慮すべきターゲット設定、コンテンツ、およびコンバージョンに関する疑問について説明しています。
 
 
-[1]: https://www.braze.com/customers
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
-[6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/
