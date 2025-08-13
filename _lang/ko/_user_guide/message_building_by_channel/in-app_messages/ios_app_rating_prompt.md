@@ -24,7 +24,7 @@ Apple은 기본 프롬프트를 사용하도록 요구하지만, Braze 캠페인
 
 이 접근 방식을 사용하면 사용자가 앱 스토어를 방문하여 리뷰를 추가하도록 유도할 수 있습니다. 이렇게 하려면 앱 스토어에 [딥링크로]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) 연결되는 인앱 메시지 캠페인을 생성하세요.
 
-![두 개의 모바일 화면을 나란히 배치합니다. 첫 번째는 앱 스토어에서 앱에 대한 평가를 요청하는 인앱 메시지입니다. 두 번째는 해당 앱의 iOS 앱 스토어 페이지입니다.][1]
+![두 개의 모바일 화면을 나란히 배치합니다. 첫 번째는 앱 스토어에서 앱에 대한 평가를 요청하는 인앱 메시지입니다. The second is the iOS App Store page for that app.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### 접근 방식 2: 소프트 프라이밍
 
@@ -32,7 +32,7 @@ Apple은 기본 프롬프트를 사용하도록 요구하지만, Braze 캠페인
 
 For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![두 개의 인앱 메시지를 나란히 표시합니다. 첫 번째는 앱을 평가할 시간이 있는지 물어봄으로써 사용자가 앱을 평가하도록 유도합니다. 두 번째는 기본 iOS 앱 스토어 리뷰 메시지로, 사용자가 앱을 평가하기 위해 선택할 수 있는 별 5개 등급을 표시합니다.][2]
+![두 개의 인앱 메시지를 나란히 표시합니다. 첫 번째는 앱을 평가할 시간이 있는지 물어봄으로써 사용자가 앱을 평가하도록 유도합니다. The second is the native iOS App Store review message, displaying a scale of five stars the user can select to rate the app.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 사용자는 기본 App Store 리뷰 프롬프트를 통해 평점을 제출하며, 앱에서 나가지 않고도 리뷰를 작성하고 제출할 수 있습니다.
 
@@ -44,5 +44,3 @@ For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/d
 기본 iOS 앱 평점 메시지를 모방하는 사용자 지정 HTML 인앱 메시지는 Apple의 가이드라인에 위배되므로 만들지 마세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}
