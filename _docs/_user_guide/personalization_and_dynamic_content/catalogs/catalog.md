@@ -149,6 +149,28 @@ Note that you won't be able to edit this name after the catalog is created. You 
 
 After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/).
 
+## Supported data types by ingestion method
+
+The data types you can use in your catalog depend on how you create and populate the catalog:
+
+### CSV upload
+When uploading a CSV file, you can select from the following data types for each column:
+- **Boolean**: True/false values
+- **Number**: Numeric values (integers and decimals)
+- **String**: Text values
+- **Time**: Date and time values
+
+{% alert note %}
+Complex data types such as arrays and objects are not supported in CSV uploads. These can only be added through API methods.
+{% endalert %}
+
+### API ingestion
+When using the [catalog API endpoints]({{site.baseurl}}/api/endpoints/catalogs/), you can use all the data types supported by CSV uploads, plus:
+- **Arrays**: Lists of values, such as `["item1", "item2", "item3"]`
+- **Objects**: Nested data structures, such as `{"key1": "value1", "key2": "value2"}`
+
+For examples of complex data types in API requests, see the [catalog item endpoints]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/).
+
 ## Managing catalogs through API
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.

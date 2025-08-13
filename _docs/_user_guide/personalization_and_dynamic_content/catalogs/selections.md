@@ -19,6 +19,13 @@ After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynam
 - You can add up to 10 filters per selection.
 - Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/) for example use cases.
 
+### Filtering limitations by data type
+
+The filtering capabilities in selections depend on the data types in your catalog:
+
+- **Selection filters**: You can create selection filters on arrays, but not on objects.
+- **Preview filters**: Preview filters are not supported for arrays or objects.
+
 ## Creating a selection
 
 To create a selection, do the following.
