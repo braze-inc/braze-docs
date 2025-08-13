@@ -58,7 +58,7 @@ Les messages in-app plein écran remplissent toute la hauteur d’un appareil et
 
 Lors de la prévisualisation d’un message in-app plein écran dans la plateforme Braze, vous pouvez activer la zone de sécurité d’image dans la zone du message, sans danger à l’affichage d’un message sur divers appareils. En plus de tester la zone de sécurité de l'image dans le volet de prévisualisation, nous vous recommandons de [tester votre message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) comme d'habitude.
 
-![Aperçu d’un message in-app en Braze avec l’option « Show Image Safe Zone » (Afficher la zone sécurisée d’image) activée. La zone sécurisée d’image est une incrustation sur l’image qui montre les parties de l’image non sujettes au rognage.][3c]
+![Aperçu d’un message in-app en Braze avec l’option « Show Image Safe Zone » (Afficher la zone sécurisée d’image) activée. La zone de sécurité de l'image est un recouvrement de l'image qui visualise les parties de l'image qui ne seront pas recadrées.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## Écrans plus grands
 
@@ -77,5 +77,3 @@ Sur une tablette ou un navigateur de bureau, un message in-app plein écran s’
 {% endtab %}
 {% endtabs %}
 
-[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}
