@@ -67,6 +67,10 @@ tool:
 
 **行は**、列を使ってメッセージのセクションの水平方向の構成を定義する構造単位である。行を空にすることも、[コンテンツブロック]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/)を空にすることもできます。複数のカラムを使うことで、異なるコンテンツ要素を並べることができる。こうすることで、開始時に選択したテンプレートに関係なく、メッセージに必要なすべての構造要素を追加することができる。
 
+#### カードスタイル
+
+**カード・**スタイルは行のプロパティで、列と列の間隔を空けたり、角を丸くしたりすることができる。カードスタイルのエンゲージメントを使えば、新製品の特徴、お客様の声、特別オファー、ニュースの更新など、最も重要なコンテンツを強調するために、より視覚的に魅力的なレイアウトを作成することができる。
+
 ## ドラッグ＆ドロップ・エディターを使う
 
 メールメッセージをキャンペーンとキャンバスのどちらで送るべきか迷っている？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
@@ -91,7 +95,7 @@ tool:
 
 [**メール本文を編集**] を選択して、ドラッグ＆ドロップエディターでメール構造のデザインを開始します。 
 
-![メールのバリアント」セクションには、メール本文の例が掲載されている。][8]
+![[メールのバリアント] セクションには、メール本文の例が表示されている。]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
 
 ### ステップ2:メールの作成
 
@@ -111,7 +115,7 @@ tool:
 メールを作成する際、デスクトップとモバイルのビューを切り替えて、ユーザーグループに対してどのようにメールメッセージが表示されるかをプレビューすることができる。これにより、コンテンツがレスポンシブであることが確認され、随時必要な調整ができます。
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
 ![[コピーライター] ボタン。ドラッグ＆ドロップエディターで、 [コンテンツ] パネルの [スタイルの設定] の横にあります。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -152,12 +156,18 @@ tool:
 **Preview as a User**タブでは、以下のユーザータイプを選択してメッセージをプレビューすることができる。
 
 - **ランダムユーザー:**Brazeはデータベースからランダムにユーザーを選択し、その属性やイベント情報に基づいてメールをプレビューする。
-- **ユーザーの選択:**電子メールアドレスまたは外部IDに基づいて特定のユーザーを選択することができる。メールは、そのユーザーの属性とイベント情報に基づいてプレビューされる。
+- **ユーザーの選択:**電子メールアドレスまたは外部IDに基づいて特定のユーザーを選択することができる。メールは、そのユーザーの属性とイベント情報に基づいてプレビューされます。
 - **カスタムユーザー:**ユーザーをカスタマイズできます。Brazeは、利用可能なすべての属性とイベントの入力を提供します。プレビューメールに表示する情報を入力できます。
 
 {% alert note %}
 ランダムユーザーは、セグメンテーション基準を満たしている場合も、満たしていない場合もあります。セグメンテーションはその後に選択されるため、Brazeはこの時点ではターゲットとするオーディエンスを知らない。
 {% endalert %}
+
+また、「**プレビューリンクをコピー**」を選択すると、ランダムなユーザーにメールがどのように見えるかを示す共有可能なプレビューリンクを生成してコピーすることもできる。リンクは7日間有効であり、それ以降は再生成が必要になります。 
+
+メールテンプレートに加えられた編集は、以前に生成されたリンクには反映されないことにご注意ください。編集内容を確認するには、新しいリンクプレビューを生成する必要がある。
+
+![生成されるリンクをコピーする [プレビューリンクをコピー] ボタンがあるメールプレビュー。]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### 受信トレイビジョンの使用
 
@@ -167,7 +177,7 @@ tool:
 メールメッセージの背景画像は、画像と画像の間に白い線や途切れが生じることがあるため、メールメッセージの細かい部分をテストして確認することが重要である。
 {% endalert %}
 
-ドラッグ＆ドロップエディターを使用してメールメッセージのデザインと作成を行ったら、引き続き、キャンペーンまたはキャンバスの残りの部分を[作成][12]します。
+ドラッグ＆ドロップエディターでメールメッセージをデザインしたら、引き続きキャンペーンやキャンバスを[作成]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas)しよう。
 
 {% details 更新されたHTMLエンジンについて %}
 ドラッグ＆ドロップ・エディターからHTMLを生成する基礎となるエンジンが最適化され、更新された結果、HTMLファイルの圧縮とレンダリングに関する利点がもたらされた。
@@ -176,8 +186,8 @@ tool:
 
 HTMLレンダリングは、条件コメントとCSSメディアクエリの数を最小限に抑える以下の更新に基づいて改善された。その結果、HTMLファイルはより小さく、より効率的にコーディングされる。
 - `<div>` 要素ベースのデザインから、標準的な`<table>` フォーマットのコードベースへの移行。
-- [エディターブロック][7]が簡潔に再コード化されました。
-- 最終的なHTMLコードは圧縮され、タグ間の空白が取り除かれる。
+- [エディターブロック]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)が簡潔に再コード化されました。
+- 最終的なHTMLコードは圧縮され、タグ間の空白が取り除かれます。
 - 透明な仕切りは自動的にコンテンツ・パディングに変換される
 {% enddetails %}
 
@@ -193,17 +203,17 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 メールに追加された画像は、自動的に [**自動幅**] に設定されます。この設定を調整するには、[**自動幅**] をオフに切り替え、必要に応じて幅の割合を調整します。
 
-![ドラッグ・アンド・ドロップ・エディターのコンテンツ・タブにある自動幅オプション。][2]
+![ドラッグ＆ドロップエディターの [コンテンツ] タブにある [自動幅] オプション。]({% image_buster /assets/img/dnd/dnd1.png %})
 
 ### カラーレイヤー
 
 カラーレイヤーを使用すると、メールの背景、コンテンツ領域、およびさまざまなコンテンツコンポーネントの色を変更できます。色の順序は、前面から背面に向かってコンテンツコンポーネントの色、コンテンツ領域の背景色、背景色です。
 
-![ドラッグ＆ドロップ・エディターでのカラー・レイヤリングの例。][3]
+![ドラッグ＆ドロップエディターでのカラーレイヤーの例。]({% image_buster /assets/img/dnd/dnd2.png %})
 
 ### コンテンツ・パディング
 
-![ドラッグアンドドロップエディターのブロックオプション。][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![ドラッグ＆ドロップエディターのブロックオプション。]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 埋め込みを調整するには、[**ブロックのオプション**] まで下にスクロールして、[**その他のオプション**] を選択します。パディングを微調整することで、Eメールの見栄えを整えることができる。
 
@@ -213,7 +223,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 ### パーソナライズを追加する
 
-![ドラッグ＆ドロップ・エディターにパーソナライズを追加するオプション。][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![ドラッグ＆ドロップエディターにパーソナライゼーションを追加するためのオプション。]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 基本的な Liquid は、ドラッグ＆ドロップメールエディターでサポートされています。メールにパーソナライゼーションを追加するには、次の手順に従います。
 
@@ -232,13 +242,13 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 メッセージを作成するときに、それぞれの [**テキストの方向**] ボタンを選択して、テキストの方向を左から右または右から左に切り替えることができます。このオプションは、アラビア語やヘブライ語などのメッセージを作成するときに使うことができる。
 
-![ドラッグ＆ドロップでテキストの配置を右から左、または左から右に切り替えるボタンが付いたメールエディタメニュー。][1]{: style="max-width:50%;"}
+![メールのドラッグ＆ドロップエディタメニューに、テキストの配置を右から左、または左から右に切り替えるボタンが追加された。]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
 
 右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
 ### リンクにHTML属性を追加する
 
-![アトリビューション」セクションで、リンクの属性「clicktracking」がオフになっている。][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+![リンクの属性「clicktracking」がオフになった「属性」セクション。]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ドラッグ・アンド・ドロップ・エディターでリンク、ボタン、画像、動画を使用する場合、**コンテンツ・**セクションの**属性で** **新しい属性を追加を**選択し、EメールのHTMLタグに追加情報を追加する。これは、メッセージのパーソナライズ、セグメンテーション、スタイリングに特に役立つ。
 
@@ -254,19 +264,13 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 ユニバーサルリンクを設定する方法については、[ユニバーサルリンクとアプリリンク]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/)を参照してください。
 
-あるいは、[Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) や[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) などのアトリビューションパートナーのいずれかと連携して、ユニバーサルリンクを管理することもできます。
+あるいは、[Branch]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/) や[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking) などのアトリビューションパートナーのいずれかと連携して、ユニバーサルリンクを管理することもできます。
 
-[1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
-[2]: {% image_buster /assets/img/dnd/dnd1.png %}
-[3]: {% image_buster /assets/img/dnd/dnd2.png %}
-[4]: {% image_buster /assets/img/dnd/dnd3.png %}
-[5]: {% image_buster /assets/img/dnd/dnd4.png %}
-[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
-[8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
-[9]: {% image_buster /assets/img/dnd/dnd_content.png %}
-[10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
-[11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
-[14]: {% image_buster /assets/img/rtl_button.png %}
+最後に、メッセージをアクセシブルにする目的であらかじめ定義された属性が用意されています。詳しくは、「[Braze でアクセシブルなメッセージを作成する]({{site.baseurl}}/help/accessibility)」を参照してください。
+
+### メールの言語設定
+
+言語属性を設定するには、[**設定**] タブで使用する言語を選択します。ダイナミックな言語値が設定されているユーザーを対象としているメッセージの場合は、ユーザー属性 {%raw%} `{{${language}}}` {%endraw%} もターゲットにできます。
+
+![メールの [言語] の値の設定]({% image_buster /assets/img/dnd/language_setting_dnd.png %})
+
