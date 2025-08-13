@@ -67,7 +67,7 @@ everything's installed!
 
 ### Step 2: Create an API key {#create-api-key}
 
-Braze MCP server supports 38 read-only endpoints that do not return data from Braze User Profiles. Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
+Braze MCP server supports 38 read-only endpoints that do not return data from Braze user profiles. Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
 
 {% details List of read-only, non-PII permissions %}
 #### Campaigns
