@@ -10,7 +10,7 @@ channel: push
 
 # アプリ内メッセージのプッシュプライマー
 
-![ストリーミングアプリのアプリ内メッセージのプッシュプライマー。この通知は、「Movie Cannon からプッシュ通知を受け取りますか? 通知には新作映画やテレビ番組、その他のお知らせが含まれることがあり、いつでもオフにすることができます」というものです。][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![ストリーミングアプリのアプリ内メッセージのプッシュプライマー。この通知は、「Movie Cannon からプッシュ通知を受け取りますか? 通知には新作映画やテレビ番組、その他のお知らせが含まれることがあり、いつでもオフにすることができます」というものです。]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > ユーザーにプッシュ許可を求めるチャンスは一度しかないため、プッシュ登録を最適化することは、プッシュメッセージのリーチを最大化するために極めて重要である。これを実現するには、アプリ内メッセージを使って、ユーザーがオプトインを選択した場合、どのようなメッセージを受け取ることが期待できるかを、ネイティブのプッシュプロンプトを表示する前に説明すればよい。これはプッシュ・プライマーと呼ばれる。
 
@@ -18,60 +18,67 @@ Braze でプッシュプライマーのアプリ内メッセージを作成す�
 
 ## 前提条件
 
-このガイドでは、新しいSDKバージョンでのみサポートされている、ボタンの[クリック時の動作を](#button-actions)使用している。これらのSDKの中には、まだリリースされていないものもある。現在のバージョンを確認するには、以下のリンクを参照のこと：
+この機能には[ボタンのクリック時動作](#button-actions)が必要です。これは、以下の最小バージョン以降でサポートされています。
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-### 開発チームへの注意事項
+さらに、以下で説明するプラットフォーム固有の詳細に注意してください。
 
-#### Android
+{% tabs local %}
+{% tab android %}
+|OS バージョン|追加情報|
+\|----------|----------------------|
+| **Android 12 以前** | プッシュプライマーの実装は推奨されません。プッシュはデフォルトでオプトインされているためです。|
+| **Android 13+** | ユーザーがプッシュアクセス許可プロンプトを2回拒否した場合、Android は Braze プッシュプライマーメッセージを含むそれ以降のプロンプトをブロックします。この後に権限を付与するには、ユーザーはデバイス設定でアプリのプッシュを手動で有効にする必要があります。|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
 
-- **Android 12 以下: **プッシュはデフォルトでオプトインされているため、プッシュプライマーの実装は推奨しません。
-- **Android 13 以上: **テスト中にプロンプトを何度か表示したい場合は、デバイス設定に入り、アプリのプッシュを無効にして、プライマーを再度表示できるようにします。
+{% tab swift %}
+### 一般情報
 
-#### iOS
-
-- iOSプロンプトは、オペレーティングシステムによって強制され、1回のインストー ルにつき1回しか表示できない。
+- プッシュプロンプトは、オペレーティングシステムによって強制されるインストールごとに1 回のみ表示できます。
 - アプリのプッシュ設定が明示的にオンまたはオフの場合、プロンプトは表示されません。プロンプトは[暫定承認](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375)を得たユーザーにのみ表示されます。
-  - アプリのプッシュ設定がオンになっている場合、ユーザーがすでにオプトインしているため、Braze はアプリ内メッセージを表示しません。
-  - アプリのプッシュ設定がオフになっている場合は、設定アプリでアプリの通知設定にユーザーを転送する必要がある。
+  - **アプリのプッシュ設定がオンになっている:**ユーザが既にオプトインしているため、Braze はアプリ内メッセージを表示しません。
+  - **アプリのプッシュ設定がオフ:**ユーザーをデバイス設定内のアプリのプッシュ通知設定にリダイレクトする必要があります。
 
-##### 手動でコードを除去する
+### 手動でコードを除去する
 
 このチュートリアルを使って設定したアプリ内メッセージは、ユーザーがアプリ内メッセージボタンをクリックすると、ネイティブのプッシュ・プロンプト・コードを自動的に呼び出す。プッシュ通知の許可を 2 回要求したり、間違った時間に要求したりしないようにするには、開発者は、実装されている既存のプッシュ通知統合を変更して、アプリ内メッセージがユーザーに表示される最初のプッシュ通知プライマーであることを確認する必要があります。
 
-開発者は、アプリやサイトのプッシュ通知の実装を見直し、プッシュ許可を要求するようなコードを手動で削除すべきである。例えば、以下のコードへの参照を探し、削除する：
+開発チームは、アプリまたはサイトのプッシュ通知の実装を確認し、プッシュ許可を要求するコードを手動で削除する必要があります。例えば、以下のコードへの参照を削除します。
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
 ```objc
 requestAuthorizationWithOptions
 ```
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 ```swift
 requestAuthorization
 ```
-{% endtab %}
-{% tab JavaScript %}
+{% endsubtab %}
+{% subtab JavaScript %}
 ```javascript
 braze.requestPushPermission()
 // or
 appboy.registerAppboyPushMessages()
 ```
-{% endtab %}
-{% tab Java %}
+{% endsubtab %}
+{% subtab Java %}
 ```java
 android.permission.POST_NOTIFICATIONS
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
 ## ステップ 1:アプリ内メッセージを作成する
 
-通常どおり [アプリ内メッセージを作成][2] します。
+まず、[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/)を作成し、メッセージタイプとレイアウトを選択します。
 
-メッセージの種類とレイアウトを選択する。ユーザーが期待するプッシュ通知の内容を説明するのに十分なスペースを確保するため（そしてボタンが使えるようにするため）、Brazeはフルスクリーンかモーダルメッセージのどちらかを提案する。全画面のアプリ内メッセージの場合は画像が必要なことに注意してください。 
+メッセージとボタンの両方に十分なスペースを確保するには、フルスクリーンまたはモーダルメッセージレイアウトを使用します。全画面を選択した場合は、画像が必要であることに注意してください。
 
 ## ステップ 2:メッセージを構築する
 
@@ -79,24 +86,28 @@ android.permission.POST_NOTIFICATIONS
 
 例えば、あるニュースアプリは次のようなプッシュ・プライマーを使うかもしれない：
 
-> 外出先でニュース速報プッシュ通知を有効にすると、重要なストーリーやトピックに関するアラートが表示されます。
+```plaintext
+Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
+```
 
 ストリーミングアプリでは、次が使用される場合があります。
 
-> Movie Cannon からプッシュ通知を取得しますか?通知には新作映画やテレビ番組、その他のお知らせが含まれることがあり、いつでもオフにすることができる。
+```plaintext
+Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
+```
 
-ベストプラクティスとその他のリソースについては、[カスタムオプトインプロンプトの作成][3] を参照してください。
+ベストプラクティスおよびその他のリソースについては、[カスタムオプトインプロンプトの作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を参照してください。
 
 ## ステップ 3:ボタン動作を指定する {#button-actions}
 
-アプリ内メッセージにボタンを追加するには、[**ボタン 1**] と [**ボタン 2**] のテキストフィールドにテキストを追加します。これらがアプリ内メッセージのプライマリボタンとセカンダリボタンになります。ボタンテキストには「通知を許可する」と「今は許可しない」をお勧めしますが、割り当てることのできるボタンプロンプトはたくさんあります。
+アプリ内メッセージにボタンを追加するには、2 つの**Button** ブロックをメッセージにドラッグします。メッセージはアプリ内メッセージのプライマリボタンとセカンダリボタンとして機能します。また、メッセージに行をドラッグし、ボタンを行にドラッグして、ボタンが同じ水平の行にあるようにすることもできます(上下に重なっているのとは対照的です)。ボタンテキストには「通知を許可する」と「今は許可しない」をお勧めしますが、割り当てることのできるボタンプロンプトはたくさんあります。
 
 ボタンコピーを追加したら、各ボタンのクリック時の動作を指定する：
 
 - **ボタン 1:**これを「メッセージを閉じる」に設定します。これはセカンダリーボタンで「今は許可しない」オプションです。
 - **ボタン 2: **これを「プッシュ通知の権限を要求」に設定します。これはプライマリボタンで「通知を許可する」オプションです。
 
-![][4]
+![アプリ内メッセージ作成画面。2つのボタン「Allow notifications」と「Not now」が表示されている。]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## ステップ 4:配信のスケジュール
 
@@ -104,7 +115,7 @@ android.permission.POST_NOTIFICATIONS
 
 理想的なタイミングはさまざまだが、Brazeは、ユーザーが何らかの[価値の高いアクションを](https://www.braze.com/resources/videos/mapping-high-value-actions)完了するまで待つことを提案している。これは、ユーザーがアプリやサイトに価値を見出し始めていることを示すか、プッシュ通知で対応できる切実なニーズがある場合だ（例えば、ユーザーが注文をした後で、配送追跡情報を提供したい場合など）。こうすることで、プロンプトはあなたのブランドにとってだけでなく、顧客にとっても有益なものとなる。
 
-![][5]
+!["Add to Watch List".]({% image_buster /assets/img_archive/push_primer_trigger.png %})のカスタムイベントを実行したユーザーに送信するアクションベースの配信設定
 
 ## ステップ 5: ユーザーのターゲット設定
 
@@ -116,8 +127,3 @@ android.permission.POST_NOTIFICATIONS
 
 Brazeは、コンバージョンのデフォルト設定を提案しているが、プッシュ・プライマーを取り巻く[コンバージョンイベントを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)設定したい場合もあるだろう。
 
-[1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[4]: {% image_buster /assets/img_archive/push_primer_button_behavior.png %}
-[5]: {% image_buster /assets/img_archive/push_primer_trigger.png %}
