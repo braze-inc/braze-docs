@@ -14,7 +14,7 @@ description: "이 참조 문서에서는 슬라이드업 인앱 메시지의 메
 
 > 슬라이드업은 일반적으로 앱 화면의 상단 또는 하단에 표시됩니다(메시지를 작성할 때 설정할 수 있음). 새로운 서비스 약관, 쿠키 및 기타 정보 스니펫에 대해 사용자에게 알리는 데 유용합니다. 이러한 메시지는 눈에 거슬리지 않으며 사용자가 메시지가 표시되는 동안 앱과 계속 상호 작용할 수 있습니다.
 
-![두 개의 슬라이드업 인앱 메시지가 화면 상단과 하단에 표시되며, 이미지와 텍스트 추천을 자세히 설명합니다. 자세한 내용은 다음 섹션을 참조하세요.][2a]{: style="max-width: 40%; border: none;"}
+![두 개의 슬라이드업 인앱 메시지가 화면 상단과 하단에 표시되며, 이미지와 텍스트 추천을 자세히 설명합니다. See following sections for details.]({% image_buster /assets/img/slideup-spec.png %}){: style="max-width: 40%; border: none;"}
 
 ## 이미지 및 복사 동작
 
@@ -56,4 +56,3 @@ description: "이 참조 문서에서는 슬라이드업 인앱 메시지의 메
 {% endtab %}
 {% endtabs %}
 
-[2a]: {% image_buster /assets/img/slideup-spec.png %}
