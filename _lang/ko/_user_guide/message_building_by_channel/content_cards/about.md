@@ -14,10 +14,6 @@ search_rank: 4
 
 콘텐츠 카드는 추가 기능이며 반드시 구매해야 합니다. 콘텐츠 카드를 시작하려면 Braze 고객 성공 매니저 또는 지원팀에 문의하세요.
 
-{% alert note %}
-뉴스피드 도구를 사용 중인 경우 보다 유연하고 맞춤 설정이 가능하며 안정적인 콘텐츠 카드 메시징 채널로 전환하는 것이 좋습니다. 뉴스피드도 더 이상 사용되지 않습니다. 자세한 내용은 [마이그레이션 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 참조하거나 Braze 계정 관리자에게 문의하세요.
-{% endalert %}
-
 ## 콘텐츠 카드 사용의 이점
 
 다음은 개발자가 앱에 콘텐츠를 빌드하는 것과 콘텐츠 카드를 사용하는 것의 몇 가지 이점입니다:
@@ -176,9 +172,9 @@ search_rank: 4
 
 개발자는 Braze SDK를 통합할 때 콘텐츠 카드를 통합하게 됩니다. 콘텐츠 카드와 통합하는 방법에 대한 자세한 내용은 해당 플랫폼의 개발자 가이드 문서를 참조하세요.
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "iOS Content Card Integration Guide")
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android 콘텐츠 카드 통합 가이드")
-- [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "웹 콘텐츠 카드 통합 가이드")
+- [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web)
 
 ## 출처
 
