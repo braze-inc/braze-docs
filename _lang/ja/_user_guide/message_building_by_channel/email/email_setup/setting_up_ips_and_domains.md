@@ -63,7 +63,7 @@ IP、ドメイン、サブドメイン、IPプールの設定が完了したら�
 
 次に、ページの下にあるTXTレコードとCNAMEレコードをDNSプロバイダーに追加する。その後、Braze ダッシュボードに戻って、[**確認**] をクリックします。
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 送信ドメインは、所有するドメインの下位ドメインである必要があります。例えば、「example.com」を所有している場合、サブドメインは「mail.example.com」になり、送信アドレス「@mail.example.com」を使用できます。
@@ -85,4 +85,3 @@ Brazeは、リバースDNS（rDNS）と呼ばれるセットアップで、あ�
 
 送信者認証が完了したら、IPウォーミングを推奨し、メッセージが宛先の受信トレイに高い確率で届くようにする。このセットアップが完了したら、Brazeオンボーディングチームに相談し、ドメインと[IPアドレスが]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)機能しているかどうかも確認すること。
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}
