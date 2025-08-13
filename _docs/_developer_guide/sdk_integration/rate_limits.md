@@ -49,7 +49,7 @@ Braze SDKs include several built-in behaviors to improve efficiency, reduce batt
 
 ## Best practices
 
-If you're experiencing rate limit issues, review your SDK integration and consider these do's and don'ts:
+Follow these best practices to help avoid rate limit issues:
 
 | Do this | Not this |
 | --- | --- |
