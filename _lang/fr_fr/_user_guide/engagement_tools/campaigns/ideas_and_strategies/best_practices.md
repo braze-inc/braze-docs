@@ -34,7 +34,7 @@ Il est également important de comprendre vos [utilisateurs actifs]({{site.baseu
 
 ### Connaissance des fonctionnalités
 
-Si votre objectif est d'attirer vos utilisateurs vers une nouvelle fonctionnalité ou une nouvelle version de l'appli, utilisez une stratégie multicanal en privilégiant les canaux in-app. Les [messages in-app][5] et les [cartes contenu][7] ] sont généralement moins perturbants si un utilisateur ne souhaite pas effectuer une mise à jour immédiatement. 
+Si votre objectif est d'attirer vos utilisateurs vers une nouvelle fonctionnalité ou une nouvelle version de l'appli, utilisez une stratégie multicanal en privilégiant les canaux in-app. Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) et les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) sont généralement moins perturbants si un utilisateur ne souhaite pas effectuer une mise à jour immédiate. 
 
 Veillez à inclure des [liens profonds]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) vers le magasin d'applications approprié.
 
@@ -44,7 +44,7 @@ Il peut être difficile de persuader les utilisateurs de mettre à jour leur app
 
 Le timing est la clé ! Lorsque votre objectif est de convaincre les utilisateurs de mettre à jour leur application, attendez qu’ils aient une expérience positive à l’intérieur avant de leur demander. Pour garder l’engagement de votre audience, évitez les envois de messages répétitifs qui peuvent sembler intrusifs.
 
-Au fil du temps, vos utilisateurs peuvent oublier certaines fonctionnalités ou ne pas en remarquer de nouvelles. Lorsque de nouvelles fonctionnalités sont ajoutées, veillez à en informer vos utilisateurs à l'aide de [messages in-app.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) Si les utilisateurs n’interagissent pas avec des fonctionnalités fondamentales dans l’application, il peut être bon de les leur rappeler quand ils utilisent votre application et quand il existe de nouvelles fonctionnalités qui pourraient être utiles. Notre article sur [l'abonnement aux données][7] ] contient plus d'informations sur la manière de s'assurer que votre demande correspond aux attentes des utilisateurs en matière de flux de travail. 
+Au fil du temps, vos utilisateurs peuvent oublier certaines fonctionnalités ou ne pas en remarquer de nouvelles. Lorsque de nouvelles fonctionnalités sont ajoutées, veillez à en informer vos utilisateurs à l'aide de [messages in-app.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) Si les utilisateurs n’interagissent pas avec des fonctionnalités fondamentales dans l’application, il peut être bon de les leur rappeler quand ils utilisent votre application et quand il existe de nouvelles fonctionnalités qui pourraient être utiles. Notre article sur l' [abonnement aux données]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) contient plus d'informations sur la manière de s'assurer que votre demande correspond aux attentes des utilisateurs en matière de flux de travail. 
 
 ## Évaluations élevées
 
@@ -62,7 +62,7 @@ Pour garantir des évaluations plus élevées, demandez à vos utilisateurs prin
 - A utilisé ces applications plus de 10 fois au cours des 14 derniers jours
 - A dépensé plus de 50 dollars
 
-![Un exemple de segmentation qui cible les utilisateurs intensifs d'une appli.][6]
+![Exemple de segmentation ciblant les utilisateurs intensifs d'une application.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Le fait de visiter l’App Store prend du temps de la part de vos utilisateurs. Pour maximiser la probabilité qu’ils fournissent cet effort supplémentaire, demandez une évaluation ou une critique après qu’ils aient eu une expérience positive avec votre application. Par exemple, demandez-leur une fois qu’ils ont battu un niveau de jeu ou effectué un achat à l’aide d’un code de réduction. Notre article sur l' [abonnement aux données]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) contient plus d'informations sur les moyens de s'assurer que votre demande correspond aux attentes des utilisateurs en matière de flux de travail.
 
@@ -79,6 +79,3 @@ Lorsque vous modifiez des planifications de campagne ou des audiences, tenez com
 Si vous modifiez une campagne en ligne et que vous changez la réception/distribution en **heure locale**, un nouveau lot de messages sera mis en file d'attente, ce qui signifie que vos utilisateurs recevront le message deux fois en raison de la double mise en file d'attente. Pour éviter cela, arrêtez d'abord la campagne originale, puis lancez-en une copie après avoir mis à jour la planification.
 {% endalert %}
 
-[6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/
