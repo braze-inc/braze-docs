@@ -13,16 +13,16 @@ channel:
 
 # Réglementations relatives aux courriers indésirables
 
-> Il existe un certain nombre de lois qui réglementent les expéditeurs de communications électroniques, y compris les e-mails, les notifications push et les SMS. Vous devez toujours être au courant des [réglementations locales][4] qui peuvent vous concerner ou concerner vos utilisateurs. 
+> Il existe un certain nombre de lois qui réglementent les expéditeurs de communications électroniques, y compris les e-mails, les notifications push et les SMS. Vous devez toujours être au courant des [réglementations locales](https://en.wikipedia.org/wiki/Email_spam_legislation_by_country) qui peuvent vous concerner ou concerner vos utilisateurs. 
 
 Braze fournit des informations pertinentes sur la base de nos propres recherches, mais vous devez également consulter le texte intégral de ces lois pour obtenir des détails complets et actualisés.
 
-- [CAN-SPAM][1]
-- [Loi canadienne anti-spam][2]
+- [CAN-SPAM](#can-spam)
+- [Loi canadienne anti-spam](#casl)
 
 ## CAN-SPAM
 
-La loi CAN-SPAM de 2003 réglemente les expéditeurs d'e-mails à l'adresse U.S. L'envoi de "tout message électronique dont l'objet principal est la publicité commerciale ou la promotion d'un produit ou d'un service commercial". Pour plus d’informations, consultez le site officiel de la [Federal Trade Commission][5].
+La loi CAN-SPAM de 2003 réglemente les expéditeurs d'e-mails à l'adresse U.S. L'envoi de "tout message électronique dont l'objet principal est la publicité commerciale ou la promotion d'un produit ou d'un service commercial". Pour plus d’informations, consultez le site officiel de la [Federal Trade Commission](http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business).
 
 Il existe sept exigences clés pour CAN-SPAM :
 
@@ -38,7 +38,7 @@ Les e-mails transactionnels sont exemptés de ces règles à l’exception de la
 
 ## Loi canadienne anti-spam (CASL) {#casl}
 
-Le 1er juillet 2014, la Loi canadienne anti-spam (CASL) entrera en vigueur pour les e-mails envoyés aux résidents canadiens. Vous pouvez lire le texte intégral de la loi sur le site Web du gouvernement du Canada consacré aux [lois sur la justice][3]. La loi stipule essentiellement que les destinataires canadiens des courriels et des notifications push doivent donner un consentement « explicite ou implicite » à votre communication avec eux.
+Le 1er juillet 2014, la Loi canadienne anti-spam (CASL) entrera en vigueur pour les e-mails envoyés aux résidents canadiens. Vous pouvez lire le texte intégral de la loi sur le site Web du gouvernement du Canada consacré aux [lois sur la justice](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html). La loi stipule essentiellement que les destinataires canadiens des courriels et des notifications push doivent donner un consentement « explicite ou implicite » à votre communication avec eux.
 
 ### CASL versus CAN-SPAM
 
@@ -62,7 +62,7 @@ Les types de messages suivants sont exemptés des exigences de l’agent de manu
 - Messages fournissant une notification d’informations factuelles sur l’abonnement, l’adhésion ou le compte
 - Messages fournissant un produit ou service, y compris des mises à jour ou mises à niveau de produits
 
->  Il ne s’agit pas de la liste complète des exemptions. Consultez le [texte complet de la loi][3] pour plus de détails.
+>  Il ne s’agit pas de la liste complète des exemptions. Consultez le [texte complet de la loi](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) pour plus de détails.
 
 ### Contenu du message
 
@@ -112,11 +112,5 @@ Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifi
 
 ### Android {#spam-android}
 
-Dans Android, vos utilisateurs peuvent présumer être abonnés par l’abonnement implicite qui est mentionné dans votre politique de confidentialité ou contrat de licence d’utilisateur final. Vous pouvez souhaiter mettre en œuvre un processus d’abonnement explicité, peut-être sur un écran initial, quand l’utilisateur démarre l’application pour la première fois. Consultez l'article sur les [meilleures pratiques de Push][6] pour plus de détails. Vous pouvez également orienter l’utilisateur vers les types de notifications push qu’il recevra, augmentant ainsi le taux d’abonnement.
+Dans Android, vos utilisateurs peuvent présumer être abonnés par l’abonnement implicite qui est mentionné dans votre politique de confidentialité ou contrat de licence d’utilisateur final. Vous pouvez souhaiter mettre en œuvre un processus d’abonnement explicité, peut-être sur un écran initial, quand l’utilisateur démarre l’application pour la première fois. Consultez l'article sur les [meilleures pratiques de Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) pour plus de détails. Vous pouvez également orienter l’utilisateur vers les types de notifications push qu’il recevra, augmentant ainsi le taux d’abonnement.
 
-[1]: #can-spam
-[2]: #casl
-[3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia : Législation sur le spam par e-mail par pays"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "Loi CAN-SPAM : Guide de conformité pour les entreprises"
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
