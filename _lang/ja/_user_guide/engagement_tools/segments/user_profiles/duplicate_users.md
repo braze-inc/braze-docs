@@ -21,21 +21,21 @@ Braze REST API を使用して重複ユーザーをマージするには、[ ポ
 
 Braze で、[**オーディエンス**] > [**ユーザー検索**] を選択します。
 
-![ナビゲーションメニューで強調表示された「ユーザー検索」タイル]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
+![ナビゲーションメニューで強調表示された「ユーザー検索」タイル]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 メールアドレスや電話番号など、重複プロファイルの一意の識別子を入力し、「**検索**」を選択します。
 
-![検索バーにEメールを入力したBrazeダッシュボードの「ユーザー検索」ページ]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![Braze ダッシュボードの [ユーザー検索] ページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### ステップ2:重複をマージする
 
 マージ処理を開始するには、[**重複をマージする**] を選択します。
 
-![重複するユーザープロファイルの 1 つ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:55%;"}
+![重複するユーザープロファイルの 1 つ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 保持するユーザープロファイルとマージするユーザープロファイルを選択し、[**プロファイルをマージする**] を選択します。重複するプロファイルをすべて統合するまで、このプロセスを繰り返します。
 
-![個人の重複するプロファイルのマージページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![個人の重複するプロファイルのマージページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 マージ後、重複したユーザープロファイルを復元できません。
@@ -49,7 +49,7 @@ Braze で、[**オーディエンス**] > [**ユーザー検索**] を選択し�
 
 Braze ダッシュボードで、[**オーディエンス**] > [**オーディエンスを管理**] を選択します。
 
-![ナビゲーションメニューの強調表示された [オーディエンスを管理] タイル。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
+![ナビゲーションメニューの強調表示された [オーディエンスを管理] タイル。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### ステップ2:結果をプレビューする (オプション)
 
@@ -100,7 +100,7 @@ Brazeは、保持しているプロファイルの空のフィールドを、統
 - **解決に使用**: 作成日、更新日、最終セッション
 - **優先基準**: 最新、最古
 
-![[保持するプロファイル] と [同点の解決] のオプションを選択するセクションを持つ [ルールを編集] パネル。]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+![[保持するプロファイル] と [同点の解決] のオプションを選択するセクションを持つ [ルールを編集] パネル。]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 例えば、電話番号を持つプロファイルを保持できます。複数のユーザーが同じ電話番号を持っている場合、**更新日**フィールドを使用して結びつきを解決し、最も最近更新されたユーザーを優先することができる。
 
@@ -120,13 +120,9 @@ Brazeは、保持しているプロファイルの空のフィールドを、統
 
 ルールベースのマージと同様に、スケジュールされたマージでは、事前設定されたルールを使用して、ユーザープロファイルのマージを毎日自動化できます。
 
-{% alert important %}
-スケジュールされたマージは早期アクセス中です。この初期のアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
-{% endalert %}
-
 ![[スケジュール] ボタンのある [オーディエンスの管理] ページ。]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %}
 
-この機能をオンにすると、Braze はマージ処理を毎日実行するタイムスロットを自動的に割り当てます。スケジュールされたマージはいつでもオフにできます。Braze は、スケジュールされたマージが発生する24時間前にワークスペースの管理者に通知し、設定を確認するためのリマインダーと時間を提供します。
+この機能をオンにすると、Braze はユーザーの会社が位置するタイムゾーンの時刻で午前 12 時にマージ処理を毎日実行するタイムスロットを自動的に割り当てます。スケジュールされたマージはいつでもオフにできます。Braze は、スケジュールされたマージが発生する24時間前にワークスペースの管理者に通知し、設定を確認するためのリマインダーと時間を提供します。
 
 {% alert warning %}
 マージ後、重複したユーザープロファイルを復元できません。
