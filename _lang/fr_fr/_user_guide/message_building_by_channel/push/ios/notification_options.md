@@ -19,15 +19,15 @@ channel:
 
 Si vous souhaitez catégoriser vos messages et les regrouper dans la zone de notification de votre utilisateur, vous pouvez utiliser la fonctionnalité Groupes de notification d’iOS via Braze.
 
-Créez votre campagne push iOS, puis regardez en haut de l'onglet **Composer** pour le menu déroulant **Groupes de notifications**.
+Créez votre campagne push iOS, puis vers l'onglet **Paramètres** et ouvrez le menu déroulant **Groupe de notification**.
 
-![][26]{: style="max-width:60%;" }
+![L'onglet "Paramètres" avec un menu déroulant "Groupe de notification" qui a sélectionné la valeur "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 Sélectionnez vos Groupes de notification dans la liste déroulante. Si les paramètres de votre groupe de notifications ne fonctionnent pas correctement ou si vous sélectionnez **Aucun** dans le menu déroulant, le message sera automatiquement envoyé normalement à tous les utilisateurs définis dans l'espace de travail.
 
 Si vous n’avez aucun Groupe de notification listé, vous pouvez en ajouter un à l’aide de l’ID de thread iOS. Vous aurez besoin d’un ID de thread iOS pour chaque groupe de notification que vous souhaitez ajouter. Ensuite, ajoutez-le à vos groupes de notification en cliquant sur **Gérer les groupes de notification** dans le menu déroulant et en remplissant les champs requis dans la fenêtre **Gérer les groupes de notification push iOS** qui apparaît.
 
-![][27]
+![Fenêtre pour gérer les groupes de notification push d'iOS.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 Créez votre campagne de notification push iOS, puis regardez en haut du volet de composition. Là, vous verrez un menu déroulant intitulé **Groupes de notification**.
 
@@ -82,7 +82,7 @@ L’autorisation provisoire a le potentiel d’augmenter considérablement votre
 
 Quelle que soit l'option choisie par l'utilisateur, elle ajoutera le jeton approprié ou [statut d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) à leurs [Paramètres de contact]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) sous l'onglet **Engagement** dans leur profil utilisateur.
 
-![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Paramètres de contact avec un statut abonné push.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 Vous pourrez cibler vos utilisateurs en fonction de leur autorisation provisoire ou non en utilisant nos [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -132,11 +132,17 @@ if (@available(iOS 12.0, *)) {
 
 ### Niveau d’interruption (iOS 15+) {#interruption-level}
 
-![Page des paramètres de notification iOS qui montre les notifications activées pour une livraison immédiate et avec les notifications sensibles au temps activées.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
 Avec le nouveau mode Focus d’iOS 15, les utilisateurs contrôlent mieux le moment où les notifications des applications peuvent les « interrompre » par un son ou une vibration.
 
+![Page des paramètres de notification iOS qui montre les notifications activées pour une livraison immédiate et avec les notifications sensibles au temps activées.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+
 Les applications peuvent maintenant spécifier le niveau d’interruption d’une notification, en fonction de son urgence.
+
+Pour changer le niveau d'interruption pour une notification push iOS, sélectionnez l'onglet **Paramètres** et choisissez le niveau souhaité dans le menu déroulant **Niveau d'interruption**.
+
+![Liste déroulante permettant de sélectionner le niveau d'interruption.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+
+Cette fonctionnalité n’a pas de configuration minimale requise pour la version SDK, mais est uniquement appliquée pour les appareils exécutant iOS 15+.
 
 Gardez à l’esprit que les utilisateurs sont en fin de compte les maîtres de leur intérêt, et même si une notification temporelle (Time Sensitive) est livrée, ils peuvent spécifier quelles applications ne sont pas autorisées à interrompre leur intérêt.
 
@@ -150,12 +156,6 @@ Reportez-vous au tableau suivant pour connaître les niveaux d’interruption et
 |[Critical (Critique)](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Émettra un son, vibrera et allumera l'écran même si le commutateur **Ne Pas Déranger** du téléphone est activé. Ceci [nécessite l'approbation explicite d'Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Urgences telles que des alertes météorologiques ou de sécurité graves|Oui|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-Pour changer le niveau d'interruption pour une notification push iOS, sélectionnez l'onglet **Paramètres** et choisissez le niveau souhaité dans le menu déroulant **Niveau d'interruption**.
-
-![Niveau d’interruption défini sur Active (Actif, par défaut) et développé pour afficher tous les niveaux d’interruption disponibles : Passive (Passif), Active (Actif, par défaut), Time Sensitive (Temporel) et Critical (Critique).][28]
-
-Cette fonctionnalité n’a pas de configuration minimale requise pour la version SDK, mais est uniquement appliquée pour les appareils exécutant iOS 15+.
-
 ### Score de pertinence (iOS 15+) {#relevance-score}
 
 ![Un résumé des notifications pour iOS intitulé "Votre résumé du soir" avec trois notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -168,7 +168,7 @@ Toutes les notifications seront toujours accessibles dans le centre de notificat
 
 Pour définir le score de pertinence d'une notification iOS, entrez une valeur entre `0.0` et `1.0` dans l'onglet **Paramètres**. Par exemple, le message le plus important doit être envoyé avec `1.0`, alors qu’un message d’importance moyenne peut être envoyé avec `0.5`.
 
-![][29]
+![Score de pertinence de "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 Cette fonctionnalité n’a pas de configuration minimale requise pour la version SDK, mais est uniquement appliquée pour les appareils exécutant iOS 15+.
 
@@ -177,7 +177,3 @@ Pour plus d’informations sur les longueurs maximales des messages selon les di
 - [Spécifications de l’image et du texte]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [Directives de comptage des caractères iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption-level.png %}
-[29]: {% image_buster /assets/img/ios/relevance-score.png %}
