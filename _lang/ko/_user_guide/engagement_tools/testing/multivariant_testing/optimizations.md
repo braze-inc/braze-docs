@@ -8,7 +8,7 @@ description: "다변량 및 A/B 테스트를 만들 때 위닝 배리언트 또�
 
 # 승리한 배리언트 또는 개인화된 배리언트로 A/B 테스트 최적화
 
-이메일, 푸시, 웹훅, SMS 및 WhatsApp 캠페인에 대해 한 번만 보내도록 예약된 [A/B 테스트를 생성할 때][1], 최적화를 선택할 수 있습니다. 최적화 옵션은 두 가지가 있습니다: **배리언트 위닝** 및 **개인화된 배리언트**.
+When [creating an A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. 최적화 옵션은 두 가지가 있습니다: **배리언트 위닝** 및 **개인화된 배리언트**.
 
 ![타겟 오디언스를 선택할 때 A/B 테스트 섹션에 나열된 최적화 옵션을 선택합니다. 세 가지 옵션이 나열되어 있습니다: 최적화 없음, 이기는 변형 및 개인화된 변형. 개인화된 배리언트가 선택되었습니다.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
@@ -50,7 +50,5 @@ description: "다변량 및 A/B 테스트를 만들 때 위닝 배리언트 또�
 
 ## 분석
 
-귀하의 A/B 테스트 결과를 최적화와 함께 알아보려면 [다변량 및 A/B 테스트 분석][2]을 참조하십시오.
+To learn about the results of your A/B test with an optimization, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/
