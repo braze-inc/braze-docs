@@ -22,8 +22,8 @@ tool:
 3. 분석할 캠페인 또는 캔버스(또는 둘 다)를 선택합니다. 
    - (선택 사항) 태그를 선택하여 캠페인과 캔버스를 필터링합니다.  
 4. 메시지에 대해 분석할 **채널을** 선택합니다.
-5. (선택 사항) **분석** 레이어를 선택하여 이형 상품, 캔버스 단계, 국가 또는 언어별로 데이터의 다양한 차원을 볼 수 있습니다.
-6. (선택 사항) 캠페인 또는 캔버스에서 전환 이벤트로 설정되지 않은 이벤트의 전환을 계산하려면 [사용자 지정 이벤트 사용을](#using-custom-events) 켭니다.
+5. Select a **Breakdown by** layer to view different dimensions of data, such as by variant, Canvas step, country, or language.
+6. (Optional) If you want to calculate conversions of an event that wasn't set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
 7. 선택한 메시지를 분석할 [어트리뷰션 방법을](#attribution-methods) 선택합니다.
 
 {% alert note %}
@@ -59,7 +59,11 @@ tool:
 
 ### 전환 세부 정보
 
-전환 세부 정보 테이블에는 항상 *수신자* 열과 *전환* (비율 및 합계)에 대한 열이 표시됩니다. 표시되는 나머지 두 개의 테이블 열은 보고서를 설정할 때 선택한 옵션에 따라 달라집니다. 다음 표에서는 가능한 메트릭에 대해 설명합니다.
+전환 세부 정보 테이블에는 항상 *수신자* 열과 *전환* (비율 및 합계)에 대한 열이 표시됩니다. 표시되는 나머지 두 개의 테이블 열은 보고서를 설정할 때 선택한 옵션에 따라 달라집니다. 
+
+![Conversion details table showing Touches as the attribution method for columns three and four.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+
+다음 표에서는 가능한 메트릭에 대해 설명합니다.
 
 | 표시된 메트릭 | 설명 |
 | --- | --- |
@@ -68,8 +72,6 @@ tool:
 | 기여도 방법 | 보고서를 설정할 때 선택한 [어트리뷰션 방법에](#attribution-methods) 따라 정의됩니다. 라스트 터치 어트리뷰션의 경우 또는 여러 채널을 선택한 경우 [터치로](#terms-to-know) 표시됩니다. |
 | 전환율(어트리뷰션 방식) | 보고서를 설정할 때 선택한 [어트리뷰션 방법에](#attribution-methods) 따라 정의됩니다. 여러 채널을 선택한 경우 기본적으로 라스트 터치 어트리뷰션으로 설정됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 [보고서를 설정할](#setting-up-your-report) 때 캠페인 또는 캔버스에 대한 분류 수준 세부 정보를 선택한 경우(5단계) <i class="fas fa-angle-down"></i> 을 클릭하여 표를 확장할 수 있습니다.
 
@@ -85,7 +87,7 @@ tool:
 이 그래프는 한 번에 하나의 채널에 대한 데이터만 표시합니다. 차트의 **채널** 드롭다운을 사용하여 단일 채널을 선택합니다.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
+![Conversions funnel bar graph for two email campaigns showing similar results for Email Delivered, Email Opened, Email Clicked, and Conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### 시간 경과에 따른 전환 수
 
@@ -93,7 +95,7 @@ tool:
 
 시계열 데이터를 다운로드하려면 <i class="fas fa-bars"></i> 을 선택한 다음 다운로드 옵션을 선택합니다. 사용 가능한 옵션은 PNG, JPEG, PDF, SVG 또는 CSV입니다.
 
-![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+![Conversions over time time series graph for two email campaigns, showing conversions by day.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### 기여도 방법
 
