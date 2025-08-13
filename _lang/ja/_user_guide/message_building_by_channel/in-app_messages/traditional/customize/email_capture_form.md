@@ -44,10 +44,8 @@ channel:
 
 このオプションに移動するには、アプリ内メッセージングキャンペーンを作成する必要があります。そこから、ユースケースに応じて、「**送信**先」を「**ウェブブラウザ**」、「**モバイルアプリ**」、「**モバイルアプリとウェブブラウザの両方**」のいずれかに設定し、**メッセージタイプとして**「**メールキャプチャフォーム**」を選択する。
 
-![][4]
-
 {% alert note %}
-Web SDK を介して HTML アプリ内メッセージを有効にするには、`allowUserSuppliedJavascript` 初期化オプションを Braze に指定する必要があります。例: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`。これはセキュリティ上の理由によるもので、HTML のアプリ内メッセージは JavaScript を実行できるため、サイト管理者が有効にする必要があります。
+**Web ユーザーをターゲットに設定できますか?**<br>Web SDK を介して HTML アプリ内メッセージを有効にするには、`allowUserSuppliedJavascript` 初期化オプションを Braze に指定する必要があります。例: `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`。これはセキュリティ上の理由によるもので、HTML のアプリ内メッセージは JavaScript を実行できるため、サイト管理者が有効にする必要があります。
 {% endalert %}
 
 ## ステップ2:フォームをカスタマイズする {#customizable-features}
@@ -61,32 +59,24 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 - キーと値のペア
 - ヘッダーとボディのテキスト、ボタン、ボタンのボーダーカラー、背景、オーバーレイのスタイル
 
-![メールキャプチャフォーム作成画面。][5]
+![メールキャプチャフォーム作成画面。]({% image_buster /assets/img/email_capture.png %})
 
 さらにカスタマイズが必要な場合は、[**メッセージタイプ**] に [**カスタムコード**] を選択します。[Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub リポジトリにあるこの[メールキャプチャモーダルテンプレート](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal)をスターターコードとして使用できます。
 
 ## ステップ 3:エントリーオーディエンスを設定する
 
-このフォームを、既存のメールアドレスを持たないユーザーにだけ送信したい場合は、フィルター`Email Available is false` を使用する。
+アプリ内メッセージを使用してユーザーメールをキャプチャする場合は、この情報をまだ提供していないユーザーにオーディエンスを制限できます。
 
-![利用可能な電子メールによるフィルタリングはfalseである][10]{: style="max-width:50%"}
+- **メールアドレスのないユーザーをターゲットにするには:**フィルター `Email Available` is`false` を使用します。これにより、メールが登録されていないユーザーのみにフォームが表示されるようになり、既知のユーザーに対して冗長なプロンプトを表示することを回避できます。
+- **external ID を持たない匿名ユーザーをターゲットにするには:**フィルター `External User ID` `is blank` を使用します。これは、まだ認証または登録されていないユーザーを識別する場合に便利です。
 
-このフォームを外部IDを持たないユーザー（匿名ユーザー）にのみ送信したい場合は、フィルター`External User ID is blank` を使用する。
-
-![外部ユーザーIDによるフィルタリングが空白][11]{: style="max-width:50%"}
-
-必要であれば、`AND` のロジックを使って2つのフィルターを組み合わせることもできる。
+必要であれば、`AND` のロジックを使って2つのフィルターを組み合わせることもできる。これにより、メールアドレスと外部ユーザー ID の両方が欠落しているユーザーのみに対して表示されます。これは、新規リードをキャプチャする場合やアカウントの作成を促す場合に最適です。
 
 ## ステップ 4:フォームに記入したユーザーを対象とする（オプション）
 
-メールキャプチャフォームを起動して、ユーザーからメールアドレスを収集したら、フィルター `Clicked/Opened Campaign` を使用してこれらのユーザーをターゲットに設定できます。 
+メールキャプチャフォームを起動して、ユーザーからメールアドレスを収集したら、フォームに入力したユーザーをターゲットに設定できます。
 
-キャンペーン`<CAMPAIGN_NAME>` のフィルタを`Has clicked in-app message button 1` に設定する。`<CAMPAIGN_NAME>` をメールキャプチャフォームのキャンペーン名に置き換える。
+1. Braze のセグメントフィルターで、フィルター `Clicked/Opened Campaign` を選択します。 
+2. ドロップダウンから `clicked in-app message button 1` を選択します。
+3. メールキャプチャフォームキャンペーンを選択します。
 
-![ウェブメールキャプチャフォームのキャンペーンで、アプリ内メッセージボタン1をクリックした人をフィルタリングする。][12]
-
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}
