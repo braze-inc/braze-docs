@@ -114,47 +114,6 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 ![コンテンツカードのテスト]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
-{% tab ニュースフィード %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-テスト用のニュースフィードカードを送信するには、テストセグメントを設定してからテストキャンペーンを送信する必要があります。
-
-##### ステップ 1: 指定のテストセグメントを作成する
-
-テスト・セグメントを設定したら、これらのメッセージング・チャンネルを使うことができる。このプロセスにはいくつかの簡単な手順が必要で、適切に設定されていれば、一度実行するだけで済みます。
-
-1. [**セグメント**] ページに移動して、[新しいセグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)します。 
-2. [**フィルターを追加**] の下のドロップダウンメニューをクリックし、リストの下部にあるテストフィルターを探します。 <br><br>![フィルターのテスト]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. テストフィルターを使用して、特定のメールアドレスまたは外部 [ユーザー ID]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) を持つユーザーを選択します。<br><br>![フィルター・オプションのテスト]({% image_buster /assets/img_archive/testmessages2.png %})
-<br><br>これらのフィルターには次のオプションがあります。
-- **完全一致**: 指定したメールアドレスまたはユーザー ID と完全に一致するものを探します。これは、1 つのメールまたはユーザー ID に関連付けられたデバイスにのみテストキャンペーンを送信する場合に使用します。
-- **一致しない**: 特定のメールまたはユーザー ID をテストキャンペーンから除外します。
-- **一致する**: 指定した検索語の一部と一致するメールアドレスまたはユーザー ID を持つユーザーを検索します。これを使えば、"@yourcompany.com" のアドレスを持つユーザーだけを検索し、チーム全員にメッセージを送ることができる。
-<br><br>
-これらのフィルターを組み合わせて使用すると、テストユーザーのリストを絞り込むこともできます。例えば、テストセグメントには、`matches` "@braze.com" を指定したメールアドレスフィルターと、`does not equal` "sales@braze.com" を指定した別のフィルターを含めることができます。`matches` オプションを使用し、メールアドレスを「|」文字で区切ることにより、特定のメールアドレスを複数選択することもできます (例: `matches` "email1@braze.com|email2@braze.com"）。
-<br><br>
-4. テストフィルターをテストセグメントに追加します。
-5. セグメントエディターの上部にある [**プレビュー**] をクリックするか、そのセグメントのユーザーデータを CSV にエクスポートして、目的のユーザーのみを選択したことを確認します。
-6. セグメントのユーザーデータをエクスポートするには、[**ユーザーデータ**] ドロップダウンをクリックし、[**すべてのユーザーデータを CSV 形式でエクスポート**] を選択します。 
-
-![テストセグメントの検証]({% image_buster /assets/img_archive/testmessages3.png %})
-
-> セグメントのユーザーデータを CSV にエクスポートすると、そのセグメントに該当するユーザーを最も正確に把握できます。[**プレビュー**] タブはセグメント内のユーザーのサンプルにすぎないため、目的のメンバーがすべて選択されていないように見える場合があります。詳細については、「[セグメントデータの表示と理解][7]」を参照してください。
-
-テストメッセージを送りたいユーザーのみをターゲットにしていることを確認したら、テストしたい既存のキャンペーンでこのセグメントを選択するか、セグメントメニューの [**キャンペーンを開始**] ボタンをクリックします。
-
-##### ステップ 2: テストキャンペーンを送信する
-
-テストニュースフィードカードを送信するには、以前に作成したテストセグメントをターゲットにする必要があります。まず、マルチチャネルキャンペーンを作成し、通常の手順に従います。[**ターゲットユーザー**] ステップに到達したら、次の画像のようにテストセグメントを選択します。
-
-![テストセグメント]({% image_buster /assets/img_archive/test_segment.png %})
-
-キャンペーンの確認が完了したら、キャンペーンを開始してニュースフィードカードをテストします。
-
-> 1 つのキャンペーンを使用して自分自身にテストメッセージを複数回送信する場合は、キャンペーンコンポーザーの [**スケジュール**] 部分にある [ユーザーがキャンペーンを再度受信できるようにする] というタイトルのチェックボックスをオンにします。
-
-{% endtab %}
 {% endtabs %}
 
 ## パーソナライズされたキャンペーンのテスト 
@@ -163,48 +122,48 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 ### ユーザー属性でパーソナライズされたキャンペーンのテスト
 
-メッセージに[パーソナライゼーション][26] ]を使用している場合は、キャンペーンを適切にプレビューし、ユーザーデータがコンテンツに適切に入力されていることを確認するために、追加のステップを踏む必要がある。
+メッセージに[パーソナライゼーションを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/)使用している場合は、キャンペーンを適切にプレビューし、ユーザーデータがコンテンツに正しく入力されているかチェックするための追加ステップが必要になる。
 
 テストメッセージを送信するときは、必ず [**既存のユーザーを選択**] オプションか、[**カスタムユーザー**] としてプレビューするオプションを選択します。
 
-![パーソナライズされたメッセージをテストする][23]{: style="max-width:70%;" }
+![パーソナライズされたメッセージのテスト]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### 既存のユーザーの選択
 
 既存のユーザーを選択する場合は、検索フィールドに特定のユーザー ID またはメールを入力します。次に、ダッシュボードプレビューを使用してメッセージがそのユーザーにどのように表示されるかを確認し、そのユーザーに表示される内容を反映したテストメッセージをデバイスに送信します。
 
-![ユーザーを選択する][24]
+![ユーザーを選択する]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### カスタムユーザーの選択
 
 カスタムユーザーとしてプレビューする場合は、ユーザーの名やカスタム属性など、パーソナライズできるさまざまなフィールドにテキストを入力します。繰り返しになりますが、自分のメールアドレスを入力して、デバイスにテストを送信できます。
 
-![カスタムユーザー][25]
+![カスタムユーザー]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### カスタムイベントプロパティでパーソナライズされたキャンペーンのテスト
 
-[カスタムイベントプロパティ][19]でパーソナライズされたキャンペーンのテストは、ここで説明する他のタイプのキャンペーンのテストとは少し異なります。カスタムイベントプロパティを使用してパーソナライズされたキャンペーンをテストする最も確実な方法は、以下を実行してキャンペーンを自分でトリガーすることです。
+[カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties)でパーソナライズされたキャンペーンのテストは、ここで説明する他のタイプのキャンペーンのテストとは少し異なります。カスタムイベントプロパティを使用してパーソナライズされたキャンペーンをテストする最も確実な方法は、以下を実行してキャンペーンを自分でトリガーすることです。
 
-1. イベント・プロパティを含むコピーを書き上げる。![プロパティを使ってテストメッセージを作成する][15]
-2. [アクションベースの配信][21]を使用して、イベントの発生時にキャンペーンを配信します。
+1. イベント・プロパティを含むコピーを書き上げる。![プロパティを使ってテストメッセージを作成する]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+2. [アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)を使用して、イベントの発生時にキャンペーンを配信します。
 
 {% alert note %}
 iOS のプッシュキャンペーンをテストする場合、iOS は現在開いているアプリに関するプッシュ通知を配信しないため、アプリの終了にかかる時間を確保するために 1 分の遅延を設定する必要があります。他のタイプのキャンペーンは、即座に配信するように設定できます。
 {% endalert %}
 
-![テスト・メッセージ配信][16]
+![テストメッセージ配信]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3. テストフィルターを使用したり、自分のメールアドレスをターゲットにしたりして、通常どおりにテスト用のユーザーをターゲットにして、キャンペーンの作成を完了します。 
 
-![テスト・メッセージのターゲティング][17]
+![テストメッセージのターゲティング設定]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4. アプリを開いて、カスタムイベントを完了します。
 
 キャンペーンがトリガーされ、イベントプロパティでカスタマイズされたメッセージが表示されます。
 
-![テストメッセージの例][18]
+![テストメッセージ例]({% image_buster /assets/img_archive/testeventproperties-message.PNG %})
 
 また、カスタムユーザー ID を保存する場合は、カスタマイズされたテストメッセージを自分に送信してキャンペーンをテストすることもできます。
 
@@ -213,19 +172,5 @@ iOS のプッシュキャンペーンをテストする場合、iOS は現在開
 3. ページの下部にカスタムイベントプロパティを追加し、上部のボックスに自分のユーザー ID またはメールアドレスを追加します。
 4. [**テストを送信**] をクリックすると、プロパティでパーソナライズされたメッセージが届きます。
 
-![カスタマイズされたユーザーを使ったテスト][22]
+![カスタマイズされたユーザーを使ったテスト]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview
-[13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
-[15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}
-[16]: {% image_buster /assets/img_archive/testeventproperties-delivery.png %}
-[17]: {% image_buster /assets/img_archive/testeventproperties-target.png %}
-[18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
-[19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
-[23]: {% image_buster /assets/img_archive/personalized_testing.png %}
-[24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}
-[25]: {% image_buster /assets/img_archive/personalized_testing_custom.png %}
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/
