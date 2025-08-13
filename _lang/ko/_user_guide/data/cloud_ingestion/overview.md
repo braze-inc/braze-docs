@@ -359,7 +359,7 @@ Braze 클라우드 데이터 수집은 사용 가능한 속도 제한에 포함�
 
 ### `UPDATED_AT` 시간이 동기화 시간과 같지 않은지 확인하세요.
 
-`UPDATED_AT` 필드가 이전 동기화 시간과 정확히 같은 시간인 경우 CDI 동기화에 데이터가 중복될 수 있습니다. 이는 CDI가 이전 동기화와 같은 시간대에 있는 행을 발견하면 '포괄적 경계'를 선택하여 해당 행을 동기화할 수 있도록 하기 때문입니다. CDI는 해당 행을 다시 수집하여 중복 데이터를 생성합니다. 
+`UPDATED_AT` 필드가 이전 동기화 시간과 정확히 같은 시간인 경우 CDI 동기화에 데이터가 중복될 수 있습니다. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
 
 ### `EXTERNAL_ID` 열과 `PAYLOAD` 열을 구분합니다.
 
@@ -386,7 +386,7 @@ Braze 클라우드 데이터 수집은 사용 가능한 속도 제한에 포함�
 - 크기: "대형"
 
 그러나 요청 2가 발생하면 Braze는 원래 속성 값("녹색" 및 "대형")으로 시작한 다음 사용자의 속성을 다음과 같이 업데이트합니다:
-- 색상: "Red"
+- 색상: "녹색"
 - 크기: "Medium"
 
 요청이 완료되면 요청 2가 요청 1의 업데이트를 덮어쓰게 되므로 요청이 덮어쓰이지 않도록 시차를 두고 업데이트를 진행하는 것이 가장 좋습니다.
@@ -617,12 +617,12 @@ Braze `/users/track` 엔드포인트를 통해 가능한 모든 작업은 클라
 
 ## 제품 제한
 
-| 제한 사항            | 설명                                                                                                                                                                        |
+| Limitation            | 설명                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 통합 수 | 통합 설정의 수에는 제한이 없습니다. 그러나 테이블 또는 보기당 하나의 통합만 설정할 수 있습니다.                                             |
-| 행 수         | 동기화할 수 있는 행의 수에는 제한이 없습니다. 각 행은 `UPDATED` 열을 기준으로 한 번만 동기화됩니다.                                                            |
+| 행 수         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows will be stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
 | 행별 속성     | 각 행에는 단일 사용자 ID와 최대 250개의 속성을 포함하는 JSON 객체가 포함되어야 합니다. JSON 객체의 각 키는 하나의 속성으로 간주됩니다 (즉, 배열은 하나의 속성으로 간주됩니다). |
-| 페이로드 크기           | 각 행에는 최대 1MB의 페이로드가 포함될 수 있습니다. 페이로드가 1MB를 초과하면 거부되며, "페이로드가 1MB를 초과했습니다"라는 오류가 동기화 로그에 관련된 외부 ID 및 잘린 페이로드와 함께 기록됩니다. |
+| 페이로드 크기           | 각 행에는 최대 1MB의 페이로드가 포함될 수 있습니다. Payloads greater than 1 MB will be rejected, and the error "Payload was greater than 1MB" will be logged to the sync log along with the associated external ID and truncated payload. |
 | 데이터 유형              | 클라우드 데이터 수집을 통해 사용자 속성, 이벤트 및 구매를 동기화할 수 있습니다.                                                                                                  |
 | Braze 지역           | 이 제품은 모든 Braze 지역에서 사용할 수 있습니다. 어떤 Braze 지역이든 어떤 소스 데이터 지역에든 연결할 수 있습니다.                                                                              |
 | 출처 지역       | Braze는 모든 지역 또는 클라우드 제공업체의 데이터 웨어하우스 또는 클라우드 환경에 연결됩니다.                                                                                        |
