@@ -79,13 +79,13 @@ tool:
 **사용자 데이터** 버튼이 보이지 않나요? 사용자 데이터를 내보내려면 해당 워크스페이스에 대한 **사용자 데이터 내보내기** [권한]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions)이 필요합니다.
 {% endalert %}
 
-![캠페인 세부 정보 페이지의 사용자 데이터 드롭다운][6]
+![User Data dropdown on the Campaign Details page]({% image_buster /assets/img/campaign_export_example.png %})
 
 CSV 출력에는 캠페인의 모든 수신자에 대한 고객 프로필 데이터가 포함됩니다. Braze는 백그라운드에서 보고서를 생성하여 현재 로그인한 사용자에게 이메일로 전송합니다.
 
-Amazon S3 자격증명][26] ]을 Braze에 연결한 경우, CSV도 S3 버킷에 업로드됩니다. 그렇지 않으면 이메일로 전송된 링크가 몇 시간 후에 만료됩니다.
+If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) to Braze, then the CSV will also be uploaded in your S3 bucket. 그렇지 않으면 이메일로 전송된 링크가 몇 시간 후에 만료됩니다.
 
-내보낸 파일에는 [세그먼트의 사용자 데이터를 내보낼 때 포함된 것과 동일한 사용자 데이터 필드][40]. 이러한 데이터 필드 외에도 "모든 수신자 데이터 내보내기"를 선택하면 내보낸 파일에 각 사용자에 대한 다음 데이터도 포함됩니다.
+The exported file includes the same user data fields that are included when you [export user data for a segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data). 이러한 데이터 필드 외에도 "모든 수신자 데이터 내보내기"를 선택하면 내보낸 파일에 각 사용자에 대한 다음 데이터도 포함됩니다.
 
 - 수신된 캠페인 배리언트 이름
 - 수신된 캠페인 배리언트의 API ID
@@ -95,6 +95,3 @@ Amazon S3 자격증명][26] ]을 Braze에 연결한 경우, CSV도 S3 버킷에 
 CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
-[6]: {% image_buster /assets/img/campaign_export_example.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
-[40]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
