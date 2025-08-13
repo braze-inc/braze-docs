@@ -12,7 +12,7 @@ tool: Canvas
 
 > Les commentaires dans les Canvases peuvent constituer un excellent espace de collaboration pour votre équipe marketing afin d'identifier, de discuter et de revoir les détails les plus fins de vos Canvases. Au fur et à mesure que vous créez un Canvas, vous pouvez faire et gérer des commentaires afin d'identifier les domaines qui pourraient nécessiter un retour d'information supplémentaire de la part de vos collègues.
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## Avantages
 
@@ -48,7 +48,7 @@ Vous ne pourrez pas supprimer les commentaires ou les fils de discussion d'un au
 
 ## Gestion des notifications
 
-![][2]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 Pour gérer les notifications par e-mail pour un canvas, ouvrez la barre latérale et cliquez sur <i class="fa-solid fa-bell"></i> **Notifications.** Ici, vous pouvez sélectionner vos préférences en matière de notification.
 
@@ -59,5 +59,3 @@ Pour désactiver les notifications de commentaires pour un canvas, sélectionnez
 Notez que la bascule **Commentaires dans les canevas** sous ces préférences de notification permet de contrôler si vous êtes abonné ou non aux notifications dans tous les canevas. Ainsi, si vous désactivez ce paramètre, vous ne recevrez pas d'e-mail de notification concernant les actions liées aux commentaires.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}
