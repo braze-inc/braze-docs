@@ -11,10 +11,6 @@ description: "이 문서에서는 새로운 대시보드 사용자가 처음 로
 
 > Just-in-time 프로비저닝은 [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)와 함께 작동하여 새로운 대시보드 사용자가 처음 로그인할 때 Braze 계정을 생성할 수 있도록 합니다. 따라서 관리자가 새 대시보드 사용자의 계정을 수동으로 만들고, 권한을 선택하고, 워크스페이스에 할당하고, 사용자가 계정을 활성화할 때까지 기다릴 필요가 없습니다.
 
-{% alert note %}
-SAML 즉시 프로비저닝은 현재 초기 액세스 중입니다. 초기 액세스에 참여하고 싶다면 Braze 고객 성공 매니저에게 문의하십시오.
-{% endalert %}
-
 ## 필수 조건
 
 이 기능은 SAML SSO가 설정되고 통합되어야 하며 Google SSO와 호환되지 않습니다.
