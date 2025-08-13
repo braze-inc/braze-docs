@@ -6,8 +6,7 @@ description: "이 참고 문서에서는 Braze에서 사용하는 LINE 지표와
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # LINE 보고
@@ -40,7 +39,7 @@ To measure the impact of an individual LINE message, you can add a [control grou
 
 **LINE 성과** 패널에는 다양한 측면에서 메시지의 성과가 얼마나 잘 나타났는지 요약되어 있습니다. 이 패널의 측정기준은 선택한 메시징 채널과 다변량 테스트를 실행하는지 여부에 따라 달라집니다. <i class="fa fa-eye preview-icon"></i> **미리보기** 아이콘을 클릭하여 각 이형 상품 또는 채널에 대한 메시지를 확인할 수 있습니다.
 
-!['LINE 성과' 패널에는 두 가지 변형에 대한 지표가 표시됩니다.][1]
+![The "LINE Performance" panel show metrics for two variants.]({% image_buster /assets/img/line/line_performance.png %})
 
 보기를 단순화하려면 **\+ 열 추가/제거**를 선택하고 원하는 대로 측정기준을 지우세요. 기본적으로 모든 메트릭이 표시됩니다.
 
@@ -72,4 +71,3 @@ To measure the impact of an individual LINE message, you can add a [control grou
 **전환 상관관계** 패널은 어떤 사용자 속성과 행동이 캠페인에 대해 설정한 결과에 도움이 되거나 해가 되는지에 대한 인사이트를 제공합니다. 자세한 내용은 [전환 상관관계]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation)를 참조하세요.
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}
