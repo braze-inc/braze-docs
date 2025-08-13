@@ -18,13 +18,13 @@ tool:
 
 1. 데이터를 볼 기간과 앱을 설정합니다. 기본적으로 대시보드에는 모든 앱의 최근 30일간의 데이터가 표시됩니다.
 
-![홈 대시보드의 기간 및 앱 필드.][1]{: style="max-width:60%;"}
+![Time period and app fields on the Home dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. **시간 경과에 따른 성능** 그래프까지 아래로 스크롤합니다.
 3\. **통계** 대상 필드에서 내보내려는 데이터를 선택합니다. 내보낼 수 있는 [데이터를](#available-data) 확인하세요.
 
-![홈 대시보드의 시간 경과에 따른 실적 그래프입니다.][2]
+![Performance Over Time graph on the Home dashboard.]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4\. 선택 <i class="fas fa-bars" title="차트 컨텍스트 메뉴"></i> 을 선택한 다음 내보내기 옵션을 선택합니다.
@@ -51,7 +51,6 @@ tool:
     - 열린 인앱 메시지 수
 - 날짜별 MAU
 - 날짜별 신규 사용자 수
-- 날짜별 뉴스피드 노출 수
 - 날짜별 푸시 알림
     - (선택 사항) 다양한 앱 플랫폼에 대한 푸시 알림
     - 푸시 알림 전송 횟수
@@ -66,5 +65,3 @@ tool:
 CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) 도움말 문서를 참조하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}
