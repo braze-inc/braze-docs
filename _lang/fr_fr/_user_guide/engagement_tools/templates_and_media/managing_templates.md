@@ -19,7 +19,7 @@ tool:
 
 ### Modèle individuel
 
-![][8]{: style="float:right;max-width:15%;margin-left:15px;"}
+![Menu déroulant avec option de duplication.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 Pour dupliquer un modèle individuel, sélectionnez l'icône <i class="fas fa-cog"></i> du modèle individuel et sélectionnez **Dupliquer** dans le menu déroulant.
 <br><br>
@@ -32,17 +32,17 @@ Pour les modèles de [blocs de contenu]({{site.baseurl}}/user_guide/engagement_t
 
 {% raw %}
 
-Vous pouvez dupliquer plusieurs modèles à la fois en cochant la case à côté du nom de chaque modèle que vous souhaitez dupliquer. Sélectionnez d'abord les modèles, puis le bouton **Dupliquer** qui apparaît.
+Vous pouvez dupliquer plusieurs modèles à la fois en cochant la case à côté du nom de chaque modèle que vous souhaitez dupliquer. Sélectionnez d'abord les modèles, puis sélectionnez **Dupliquer**.
 
 Les modèles dupliqués peuvent être trouvés en triant la colonne **Dernière modification.**  Par défaut, les nouveaux modèles seront nommés `Copy of ORIGINAL_TEMPLATE_NAME`.
 
 {% endraw %}
 
-![GIF montrant un utilisateur qui sélectionne deux modèles et clique sur « Duplicate (Dupliquer) », créant ainsi un total de quatre modèles, triés par la dernière date de modification des modèles.][9]
+![Trois modèles classés en fonction de l'heure à laquelle ils ont été modifiés pour la dernière fois, le modèle copié figurant en tête de liste.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## Modèles d'archivage
 
-![Menu déroulant des paramètres étendus qui affiche trois options : Modifier, Archiver et Dupliquer, où l'option Archiver est mise en évidence.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
+![Menu déroulant des paramètres étendus qui affiche trois options : "Archiver", "Dupliquer" et "Copier dans l'espace de travail" avec l'option "Archiver" en surbrillance.]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 Pour archiver un modèle individuel, sélectionnez l'icône des paramètres dans l'écran de la grille des modèles et sélectionnez **Archiver**. Lorsqu'un modèle est archivé, notez les différents scénarios suivants :
 
@@ -50,15 +50,11 @@ Pour archiver un modèle individuel, sélectionnez l'icône des paramètres dans
 - Les brouillons de campagne conservent le contenu du modèle archivé et peuvent être modifiés et lancés.
 - Pour modifier un modèle archivé, vous devez d'abord le sortir des archives. De même, pour utiliser un modèle archivé pour une campagne, vous devez d'abord sortir le modèle des archives.
 
-Pour archiver plusieurs modèles, cochez la case à côté de chaque modèle que vous souhaitez archiver. Après avoir sélectionné plusieurs modèles, sélectionnez **Archiver la sélection**. Vous pouvez retrouver vos modèles archivés en sélectionnant **Archivé** sous **Afficher** dans la grille des modèles.
+Pour archiver plusieurs modèles, cochez la case à côté de chaque modèle que vous souhaitez archiver. Après avoir sélectionné plusieurs modèles, sélectionnez **Archiver**. Vous pouvez retrouver vos modèles archivés en sélectionnant **Archivé** sous **Afficher** dans la grille des modèles.
 
-![La section Saved Drop & Drop Email Templates (Modèles d’e-mail envoyés et enregistrés) qui montre deux modèles sélectionnés : « Try Premium Template (Essayer le modèle Premium » et « Welcome Template (Modèle de bienvenue) ». Le bouton « Archive Selected (Archiver la sélection) » est mis en surbrillance par l’utilisateur.][11]
+![Section "Drop & Drop Email Templates" enregistrée qui montre deux modèles sélectionnés et une barre d'outils avec l'option d'archivage.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 L'archivage n'est pas disponible actuellement pour les [modèles de liens]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-[10]: {% image_buster /assets/img/template_archive_cog.png %}
-[11]: {% image_buster /assets/img/archive_multiple_template.png %}
-[8]: {% image_buster /assets/img/template_duplicate_cog.png %}
-[9]: {% image_buster /assets/img/duplicate_multiple_template.gif %}
