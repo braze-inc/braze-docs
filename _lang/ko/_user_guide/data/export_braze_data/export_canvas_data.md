@@ -30,10 +30,9 @@ tool:
 
 캔버스 결과물은 원래의 캔버스 워크플로우를 위해 개별 구성 요소 단위로 내보낼 수 있습니다. 이렇게 하려면 특정 컴포넌트를 선택한 다음 **캔버스 단계 세부 정보** 페이지에서 **사용자 데이터** 드롭다운을 선택합니다. 
 
-![캔버스 세부 정보 페이지의 사용자 데이터 드롭다운을 클릭합니다.][1]
+![User Data dropdown on the Canvas Details page.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
 CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) 도움말 문서를 참조하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_csv_export.png %}
