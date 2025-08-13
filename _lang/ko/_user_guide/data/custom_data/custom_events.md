@@ -105,11 +105,11 @@ Braze는 사용자 지정 이벤트가 발생한 횟수와 세분화를 위해 �
 
 대시보드의 **사용자 지정 이벤트 보고서** 페이지에서 각 사용자 지정 이벤트가 얼마나 자주 발생하는지 집계하여 볼 수 있습니다. 시계열에 겹쳐진 회색 선은 캠페인이 마지막으로 전송된 시간을 나타내며, 캠페인이 사용자 지정 이벤트 활동에 어떤 영향을 미쳤는지 확인하는 데 유용합니다.
 
-![대시보드의 커스텀 이벤트 페이지에 있는 커스텀 이벤트 수 그래프는 커스텀 이벤트의 추세를 보여줍니다][8]
+![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 **필터**를 사용하여 시간, 월평균 사용자 수(MAU), 세그먼트 또는 KPI 공식에 따라 커스텀 이벤트를 세분화할 수도 있습니다. 
 
-![사용자 지정 이벤트 그래프 필터][9]{: style="max-width:40%;"}
+![Custom event graph filters]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 사용자 지정 [속성을 증가시켜]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) 사용자 지정 이벤트와 유사한 사용자 행동에 대한 카운터를 유지합니다. 그러나 사용자 지정 속성 데이터는 시계열로 볼 수 없습니다. 시계열로 분석할 필요가 없는 사용자 행동은 이 방법을 사용하여 기록해야 합니다.
@@ -142,7 +142,6 @@ Braze는 사용자 지정 이벤트가 발생한 횟수와 세분화를 위해 �
 | 데이터 시간 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식의 문자열로 포맷됩니다. 배열 내에서는 지원되지 않습니다. |
 | 문자열 | 255자 이하. |
 | 배열 | 배열에는 날짜/시간을 포함할 수 없습니다. |
-| 개체 | 오브젝트는 문자열로 수집됩니다. |
 | 중첩된 개체 | 다른 객체 안에 있는 객체. 자세한 내용은 이 문서의 [중첩된 객체](#nested-objects)에 대한 섹션을 참조하세요.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -156,19 +155,19 @@ Braze는 사용자 지정 이벤트가 발생한 횟수와 세분화를 위해 �
 
 #### 트리거 메시지
 
-사용자 지정 이벤트 속성을 사용하여 특정 캠페인 또는 캔버스의 대상 범위를 더욱 좁힐 수 있습니다. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `cart value` to improve your target audience and allow for increased campaign personalization.
+사용자 지정 이벤트 속성을 사용하여 특정 캠페인 또는 캔버스의 대상 범위를 더욱 좁힐 수 있습니다. For example, if you have an eCommerce application and want to send a message to a user when they abandon their cart, you can add a custom event property of `item price` to improve your target audience and allow for increased campaign personalization.
 
-![버려진 카드에 대한 사용자 지정 이벤트 속성 필터. 두 개의 필터를 AND 연산자와 결합하여 장바구니 금액이 100~200달러인 카드를 포기한 사용자에게 이 캠페인을 보냅니다.][16]
+![버려진 카드에 대한 사용자 지정 이벤트 속성 필터. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a item price between 100 and 200 dollars]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-중첩된 사용자 지정 이벤트 속성은 [액션 기반 전달][19] 에서도 지원됩니다.
+Nested custom event properties are also supported in [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
-![버려진 카드에 대한 사용자 지정 이벤트 속성 필터. 장바구니에 있는 품목의 가격이 100달러 이상인 경우 하나의 필터가 선택됩니다.][20]
+![버려진 카드에 대한 사용자 지정 이벤트 속성 필터. One filter is selected if any items in the cart have a price more than 100 dollars.]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### 메시지 개인화
 
-메시징 템플릿 내에서 사용자 지정 이벤트 속성을 사용하여 개인화할 수도 있습니다. 트리거 이벤트가 있는 [액션 기반 전달][19] ]을 사용하는 모든 캠페인은 해당 이벤트의 사용자 지정 이벤트 속성을 사용하여 메시징 개인화를 수행할 수 있습니다.
+메시징 템플릿 내에서 사용자 지정 이벤트 속성을 사용하여 개인화할 수도 있습니다. Any campaign using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) with a trigger event can use custom event properties from that event for messaging personalization.
 
-예를 들어 게임 앱이 있고 레벨을 완료한 사용자에게 메시지를 보내려는 경우, 사용자가 해당 레벨을 완료하는 데 걸린 시간 속성을 사용하여 메시지를 더욱 맞춤화할 수 있습니다. 이 예제에서는 [조건 로직][18] 을 사용하여 세 가지 세그먼트에 대해 메시지를 개인화합니다. `time_spent`라는 커스텀 이벤트 속성은 ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``를 호출하여 메시지에 포함할 수 있습니다.
+예를 들어 게임 앱이 있고 레벨을 완료한 사용자에게 메시지를 보내려는 경우, 사용자가 해당 레벨을 완료하는 데 걸린 시간 속성을 사용하여 메시지를 더욱 맞춤화할 수 있습니다. In this example, the message is personalized for three different segments using [conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). `time_spent`라는 커스텀 이벤트 속성은 ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``를 호출하여 메시지에 포함할 수 있습니다.
 
 {% raw %}
 ```liquid
@@ -216,7 +215,7 @@ To add event properties for segmentation, do the following:
 - 지난 Y일 동안 B값의 속성 A를 X회 구매한 적이 있습니다.
 - 1일에서 30일 이내에 세분화할 수 있는 기능이 추가되었습니다.
 
-!["지난 '30일' 동안 '테마 수' 속성이 '2'이고 값이 '1'인 '버려진 카트'가 있는 필터 그룹입니다.][3]
+![A filter group that has 'Abandoned Cart' with property 'number of itmes' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
 
 고객 성공 관리자가 해당 이벤트 속성을 사용 설정한 후에만 해당 이벤트 속성에 대한 데이터가 기록되며, 이벤트 속성은 해당 날짜 이후부터만 사용할 수 있습니다.
 
@@ -229,69 +228,7 @@ To add event properties for segmentation, do the following:
 
 ### 캔버스 항목 속성 및 이벤트 속성
 
-Canvas 사용자 여정에서 `canvas_entry_properties` 및 `event_properties` 을 사용할 수 있습니다. 자세한 정보와 예시는 [캔버스 항목 속성 및 이벤트 속성을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) 참조하세요.
-
-{% tabs local %}
-{% tab 캔버스 항목 속성 %}
-
-[캔버스 진입 속성]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)은 실행 기반 또는 API로 트리거되는 캔버스에 매핑하는 속성입니다. `canvas_entry_properties` 객체의 최대 크기 제한은 50KB입니다.
-
-{% alert note %}
-특히 인앱 메시지 채널의 경우, 이전 얼리 액세스의 일부로 원래 편집기에서 영구 진입 속성을 활성화한 경우에만 캔버스 흐름 및 원래 캔버스 편집기에서 `canvas_entry_properties`를 참조할 수 있습니다.
-{% endalert %}
-
-캔버스 플로우 메시징의 경우, `canvas_entry_properties` 는 모든 메시지 단계에서 이 Liquid 형식을 사용할 수 있습니다: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. 이 방법을 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다. 
-
-#### 사용 사례
-
-{% raw %}
-소매점인 RetailApp에 다음과 같은 요청이 있다고 가정해 보겠습니다: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. 리테일앱은 리퀴드 `{{canvas_entry_properties.${product_name}}}` 를 사용하여 제품 이름(신발)을 메시지로 가져올 수 있습니다.
-{% endraw %}
-
-또한 RetailApp은 구매 이벤트를 트리거한 사용자를 대상으로 하는 캔버스의 다양한 `product_name` 속성에 대해 특정 메시지를 전송하도록 트리거할 수 있습니다. 예를 들어, 신발을 구매한 사용자와 다른 제품을 구매한 사용자에게 각각 다른 메시지를 보낼 수 있도록 다음 Liquid를 메시지 단계에 추가할 수 있습니다.
-
-{% raw %}
-```markdown
-{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
-  Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
-{% else %}
-  Your order will be on its way shortly. If you missed something, you have until the end of the week to add more items to your cart for the same discounts.
-{% endif %}
-
-```
-{% endraw %}
-
-{% details 원본 캔버스 편집기를 위한 확장 %}
-
-2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 섹션은 참고용으로만 제공됩니다.
-
-원본 편집기로 제작한 캔버스의 경우 `canvas_entry_properties`는 캔버스의 첫 번째 전체 단계에서만 참조할 수 있습니다.
-
-{% enddetails %}
-{% endtab %}
-
-{% tab 이벤트 속성 %}
-
-{% alert important %}
-리드 메시지 단계에서는 `event_properties` 을 사용할 수 없습니다. 대신 `canvas_entry_properties`를 사용하거나 `event_properties`를 포함하는 메시지 단계 **앞에** 해당 이벤트가 포함된 작업 경로 단계를 추가해야 합니다.
-{% endalert %}
-
-이벤트 속성은 사용자 지정 이벤트 및 구매에 대해 설정한 속성을 나타냅니다. 이러한 `event_properties`는 실행 기반 전달 및 캔버스가 있는 캠페인에서 사용할 수 있습니다.
-
-캔버스 플로우에서 커스텀 이벤트 및 구매 이벤트 속성정보는 행동 경로 단계에 이어지는 메시지 단계에서 Liquid에서 사용할 수 있습니다. `event_properties`을 참조하는 경우 {% raw %} ``{{event_properties.${property_name}}}``{% endraw %}을 사용해야 합니다. 이러한 이벤트는 메시지 구성 요소에서 이러한 방식으로 사용하려면 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
-
-행동 경로에 이어지는 첫 번째 메시지 단계에서 해당 행동 경로에 참조된 이벤트와 관련된 `event_properties`를 사용할 수 있습니다. 이러한 `event_properties` 은 사용자가 실제로 작업을 수행한 경우에만 사용할 수 있습니다(다른 모든 사용자 그룹으로 이동하지 않은 경우). 이 작업 경로와 메시지 단계 사이에 다른 작업 경로 또는 메시지 단계가 아닌 다른 단계를 가질 수 있습니다.
-
-{% details 원본 캔버스 편집기를 위한 확장 %}
-
-2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 섹션은 참고용으로만 제공됩니다.
-
-원래 캔버스 편집기의 경우 `event_properties`를 예약된 전체 단계에서 사용할 수 없습니다. 그러나 전체 단계가 예약되어 있더라도 실행 기반 캔버스의 첫 번째 전체 단계에서는 `event_properties`를 사용할 수 있습니다.
-
-{% enddetails %}
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### 중첩된 개체 {#nested-objects}
 
@@ -310,15 +247,3 @@ Canvas 사용자 여정에서 `canvas_entry_properties` 및 `event_properties` �
 
 특정 요구 사항에 따라 가장 적합한 접근 방식에 대한 권장 사항은 Braze 고객 성공 관리자에게 문의하세요.
 
-[1]: {% image_buster /assets/img/nested_object1.png %}
-[2]: {% image_buster /assets/img/nested_object2.png %}
-[3]: {% image_buster /assets/img/nested_object3.png %}
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
-[16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"
