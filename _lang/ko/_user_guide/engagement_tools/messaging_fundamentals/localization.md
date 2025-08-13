@@ -53,9 +53,9 @@ tool:
 {% tab 캔버스 %}
 ### 모두를 위한 하나의 여정
 
-이 접근 방식에서는 [캔버스 여정과]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) Liquid 내에서 로컬라이제이션이 처리되어 각 사용자에 대한 메시징을 정의합니다. 
+이 접근 방식에서는 [캔버스 여정과]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) Liquid 내에서 로컬라이제이션을 처리하여 각 사용자에 대한 메시지를 정의합니다. 
 
-캔버스가 전송된 후 대시보드는 집계된 [캔버스 분석]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)을 제공하며, 사용자 수준 인게이지먼트는 [**국가**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) 및 [**수신된 캔버스 단계**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) 필터를 결합하는 등의 커스텀 [세그먼트 퍼널]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/)을 통해 측정할 수 있습니다.
+캔버스가 전송된 후 대시보드는 집계된 [캔버스 분석]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)을 제공하며, 사용자 수준 인게이지먼트는 [**국가**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) 및 [**수신된 캔버스 단계**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) 필터를 결합하는 등의 커스텀 [세그먼트 퍼널]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/)을 통해 측정할 수 있습니다.
 
 | 장점 | 고려사항 |
 | --- | --- |
@@ -234,7 +234,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% endtab %}
 
 {% tab 로캘 메시지 %}
-메시지에 로캘을 추가하고 사용하여 이메일 또는 푸시 채널의 단일 캠페인 또는 캔버스 내에서 다양한 언어의 사용자를 타겟팅할 수 있습니다. 전체 안내는 [이메일 메시지의 로캘]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) 또는 [푸시 메시지의 로캘을]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/) 참조하세요.
+메시지에 로캘을 추가하고 사용하여 이메일 또는 푸시 채널의 단일 캠페인 또는 캔버스 내에서 다양한 언어의 사용자를 타겟팅할 수 있습니다. 전체 안내는 [이메일 메시지의 로캘]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) 또는 [푸시 메시지의 로]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/)캘을 참조하세요.
 
 {% alert important %}
 이 기능은 현재 얼리 액세스 중입니다. 초기 액세스에 참여하고 싶다면 Braze 계정 매니저에게 문의하세요.
