@@ -83,11 +83,9 @@ url -X POST \
 
 ユーザーが e コマースサイトでアイテムをブラウズした後に、そのアイテムをカートに追加しないときにトリガーされるキャンバスがある場合、キャンバスの最初のステップを、アイテムの購入に興味があるかどうかを尋ねるプッシュ通知にすることができます。製品名は、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 2 番目のステップでは、ユーザーがカートにアイテムを追加したにもかかわらず、まだ購入していない場合、別のプッシュ通知を送信してチェックアウトするように促すことができます。`product_name` エントリプロパティは、引き続き {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}
