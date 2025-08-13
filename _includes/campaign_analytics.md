@@ -22,7 +22,7 @@ By default, the time range for **Campaign Analytics** will display the last 90 d
 
 ### Campaign details
 
-The **Campaign Details** panel shows a high-level overview of the entire performance for your
+The first panel for **Campaign Analytics** shows a high-level overview of the entire performance for your
   {% if include.channel == "banner" %}Banner. 
   {% elsif include.channel == "Content Card" %}Content Card.
   {% elsif include.channel == "email" %}email.
@@ -42,29 +42,29 @@ The WhatsApp channel includes read rate. This metric is only delivered for users
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/cc-campaign-details.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/cc-campaign-details.png %})
 
 {% elsif include.channel == "banner" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/banners/campaign_details.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_email.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_push.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_sms.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_iam.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_iam.png %})
 
 In Canvas, you'll see in-app message performance mapped onto the Canvas you've created. You can use the control panel at the top of the page to clear other messaging types (channels) and only view the in-app messages in your Canvas.
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_webhook.png %})
+![Panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 

@@ -3,6 +3,7 @@ nav_title: Referenzen &amp; Beispiel-Apps
 article_title: "Braze SDK Referenzen, Repositories und Beispiel-Apps"
 page_order: 5.5
 description: "Dies ist eine Liste der referenzierten Dokumentationen, GitHub-Repositories und Beispiel-Apps, die zu jedem Braze SDK gehören."
+toc_headers: h2
 ---
 
 # Referenzen, Repositories und Beispiel-Apps
@@ -35,7 +36,7 @@ Derzeit haben einige SDKs keine spezielle referenzierte Dokumentation - aber wir
 {% tab android %}
 ### Gebäude "Droidboy"
 
-Unsere Testanwendung im [Android SDK GitHub Repository ](https://github.com/braze-inc/braze-android-sdk "Braze Android GitHub Repository") heißt Droidboy. Folgen Sie diesen Anweisungen, um eine voll funktionsfähige Kopie davon zusammen mit Ihrem Projekt zu erstellen.
+Unsere Testanwendung im [Android SDK GitHub Repository](https://github.com/braze-inc/braze-android-sdk) heißt Droidboy. Folgen Sie diesen Anweisungen, um eine voll funktionsfähige Kopie davon zusammen mit Ihrem Projekt zu erstellen.
 
 1. Erstellen Sie einen neuen [Arbeitsbereich]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration) und notieren Sie sich den Braze-API-Kennungsschlüssel.<br><br>
 2. Kopieren Sie Ihre FCM-Absender-ID und Ihren Braze-API-Kennungsschlüssel an die entsprechenden Stellen in `/droidboy/res/values/braze.xml` (zwischen den Tags für die Strings mit den Namen `com_braze_push_fcm_sender_id` bzw. `com_braze_api_key`).<br><br>

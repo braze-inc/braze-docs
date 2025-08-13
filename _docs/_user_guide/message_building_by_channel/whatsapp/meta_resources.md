@@ -23,6 +23,22 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp product updates
 
+### April 2025: Pause of marketing messages to US phone numbers
+*Last Updated August 2025*
+
+Meta will pause the delivery of all marketing template messages to WhatsApp users who have a United States phone number (a number composed of a `+1` dialing code and a US area code). There is no current scheduled date when this pause will be lifted. 
+
+Any attempts to send a template to a WhatsApp user with a US phone number will result in the error `131049`.
+
+### March 2025: Per-user marketing template message limits
+*Last Updated August 2025*
+
+Meta will limit the number of marketing template messages a user can receive across all businesses in a given period of time, starting with messages that are less likely to be read. 
+
+One exception is, if a person responds to a marketing message, it will start a 24-hour customer service window. Marketing messages sent within this window will not count towards a person’s limit.
+
+The specific limit varies by user, depending on their engagement level. Learn more about WhatsApp's per-user marketing template message limits [here](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits). 
+
 ### January 2025: WhatsApp pausing marketing message sending to US users starting April 1
 *Last Updated January 2025*
 

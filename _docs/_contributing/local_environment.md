@@ -52,6 +52,11 @@ table td {
         <td><a href="https://brew.sh/">Homebrew</a></td>
         <td>A package manager that allows you to install and manage the various command-line interface (CLI) tools used for contributing to Braze Docs.</td>
     </tr>
+     <tr>
+        <td>Tool manager</td>
+        <td><a href="https://asdf-vm.com/guide/getting-started.html">asdf</a></td>
+        <td>A tool manager for installing and switching between multiple versions of Node.js. You can install this <a href="#install-dependencies">during set up later</a>.</td>
+    </tr>
     <tr>
         <td>Ruby version manager</td>
         <td><a href="https://github.com/rbenv/rbenv#using-package-managers">rbenv</a></td>
@@ -141,12 +146,18 @@ If this version isn't installed, use a [supported version manager](https://www.r
 rbenv install 3.3.0
 ```
 
-### Step 6: Install dependencies
+### Step 6: Install dependencies {#install-dependencies}
+
+If you have multiple versions of Node.js installed, use `asdf` for version management.
+
+```bash
+brew install asdf
+```
 
 Next, install the dependencies for Braze Docs. These are small programs used to generate your local Braze Docs site.
 
 ```bash
-bundle install
+bundle install && asdf install
 ```
 
 ### Step 7: Start your local server
