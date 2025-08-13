@@ -82,7 +82,7 @@ You can import or update users using any of the methods that Braze supports, inc
 1. LINE에서 **메시징 API** 탭으로 이동하여 **웹훅 설정을** 편집합니다:
    - **웹훅 URL을** `https://anna.braze.com/line/events` 으로 설정합니다.
       - Braze는 통합 시 대시보드 클러스터에 따라 자동으로 이 URL을 다른 URL로 변경합니다.
-   - **웹훅 사용** 및 **웹훅 재전송**을 켭니다. <br><br> ![웹훅 설정 페이지에서 "웹훅 사용", "웹훅 재전송" 및 "오류 통계 집계"를 켜거나 끄면서 웹훅 URL을 확인하거나 편집할 수 있습니다.][1]{: style="max-width:70%;"}
+   - **웹훅 사용** 및 **웹훅 재전송**을 켭니다. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. **제공업체** 탭에서 다음 정보를 참고하세요:
 
 | 정보 유형 | 위치 |
@@ -99,7 +99,7 @@ You can import or update users using any of the methods that Braze supports, inc
    - **자동 응답 메시지**를 끕니다. 트리거된 모든 메시징은 Braze를 통해 이루어져야 합니다. 그렇다고 해서 LINE 콘솔에서 직접 전송하는 것을 막지는 않습니다.
    - **웹훅**을 켭니다.
 
-![응답 설정 페이지에서 계정에서 채팅을 처리하는 방법에 대한 토글을 설정할 수 있습니다.][2]{: style="max-width:80%;"}
+![Response settings page with toggles for how your account will handle chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### 2.2 단계: Braze에서 LINE 구독 그룹 생성
 
@@ -109,16 +109,18 @@ You can import or update users using any of the methods that Braze supports, inc
    - 채널 비밀
    - 채널 액세스 토큰
 
+If you want to add IP whitelisting in your LINE account, add all of the IP addresses listed for your cluster in [IP allowlisting]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) to your allowlist.
+
 {% alert important %}
 통합 중에 채널 비밀이 올바른지 확인하십시오. 잘못된 경우 구독 상태에 불일치가 있을 수 있습니다.
 {% endalert %}
 
-![LINE 메시징 통합 페이지와 LINE 통합 섹션.][3]{: style="max-width:80%;"}
+![LINE messaging integration page with LINE integration section.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2\. 연결 후, Braze는 워크스페이스에 성공적으로 추가된 각 LINE 연동 서비스에 대해 자동으로 Braze 구독 그룹을 생성합니다. <br><br> 팔로워 목록의 모든 변경 사항(예: 새 팔로워 또는 언팔로워)은 자동으로 Braze에 푸시됩니다.
 
-![LINE 구독 그룹 섹션에 'LINE' 채널에 대한 하나의 구독 그룹이 표시됩니다.][4]{: style="max-width:80%;"}
+![LINE subscription groups section displaying one subscription group for the "LINE" channel.]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## 3단계: 사용자 ID 조정
 
@@ -318,7 +320,7 @@ LINE ID를 기존 Braze 고객 프로필과 결합하는 두 가지 방법이 �
 
 이 방법은 사용자가 LINE 계정을 귀하의 앱 사용자 계정에 연결할 수 있도록 합니다. 그런 다음, 예를 들어 {% raw %}`{{line_id}}`{% endraw %} 과 같은 Braze의 Liquid를 사용하여 사용자의 LINE ID를 웹사이트나 앱에 전달하는 사용자 맞춤 URL을 생성하고, 이를 알려진 사용자와 연결할 수 있습니다.
 
-1. 구독 상태 변경을 기반으로 하고 사용자가 LINE 채널에 구독할 때 트리거되는 액션 기반 캔버스를 생성하세요.<br>![][9]
+1. 구독 상태 변경을 기반으로 하고 사용자가 LINE 채널에 구독할 때 트리거되는 액션 기반 캔버스를 생성하세요.<br>![Canvas that triggers when a user subscribes to the LINE channel.]({% image_buster /assets/img/line/account_link_1.png %})
 2. 사용자가 웹사이트나 앱에 로그인하도록 유도하는 메시지를 생성하고, 사용자의 LINE ID를 쿼리 매개변수(리퀴드)를 통해 전달합니다. 예를 들어:
 
 ```
@@ -327,7 +329,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. 쿠폰 코드를 전달하는 후속 메시지를 작성하세요.
-4\. (선택 사항) LINE 사용자가 확인될 때 사용자에게 쿠폰 코드를 전송하는 작업 기반 캠페인 또는 캔버스를 생성합니다. <br>![][10]
+4\. (선택 사항) LINE 사용자가 확인될 때 사용자에게 쿠폰 코드를 전송하는 작업 기반 캠페인 또는 캔버스를 생성합니다. <br>![Action-based campaign that triggers when the LINE user is identified.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### 작동 방식
 
@@ -373,7 +375,7 @@ if (user && isLoggedIn && lineUserId) {
 
 사용자 조정을 설정하기 전에 "나는 누구인가" 채널 또는 캔버스를 생성하여 LINE 채널을 테스트할 수 있습니다.
 
-1. 특정 트리거 단어에 대해 사용자의 Braze 사용자 ID를 반환하는 캔버스를 설정합니다. <br><br>트리거 예시 <br><br>![특정 구독 그룹에 인바운드 라인을 보낸 사용자에게 캠페인을 전송하는 트리거입니다.][7]{: style="max-width:80%;"}<br><br>메시지 예시<br><br>![Braze 사용자 ID가 표시된 LINE 메시지입니다.][8]{: style="max-width:40%;"}<br><br>
+1. 특정 트리거 단어에 대해 사용자의 Braze 사용자 ID를 반환하는 캔버스를 설정합니다. <br><br>트리거 예시 <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>메시지 예시<br><br>![LINE message stating the Braze user ID.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. Braze에서는 Braze ID를 사용하여 특정 사용자를 검색하고 필요에 따라 수정할 수 있습니다.
 
@@ -382,13 +384,3 @@ if (user && isLoggedIn && lineUserId) {
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/line/webhook_settings.png %}
-[2]: {% image_buster /assets/img/line/response_settings.png %}
-[3]: {% image_buster /assets/img/line/integration.png %}
-[4]: {% image_buster /assets/img/line/line_subscription_groups.png %}
-[5]: {% image_buster /assets/img/line/filter_group.png %}
-[6]: {% image_buster /assets/img/line/csv_export_user_data.png %}
-[7]: {% image_buster /assets/img/line/trigger.png %}
-[8]: {% image_buster /assets/img/line/message.png %}
-[9]: {% image_buster /assets/img/line/account_link_1.png %}
-[10]: {% image_buster /assets/img/line/account_link_2.png %}
