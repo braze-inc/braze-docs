@@ -10,7 +10,7 @@ description: "このリファレンス記事では、一般的なユースケー
 
 # [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}Webhook について
 
-> このリファレンス記事では、Webhook の基礎を説明し、独自に作成する必要のある構成要素を示します。BrazeでWebhookを作成する手順をお探し？[ウェブフックの作成][1]」を参照のこと。
+> このリファレンス記事では、Webhook の基礎を説明し、独自に作成する必要のある構成要素を示します。BrazeでWebhookを作成する手順をお探し？[ウェブフックの作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)」を参照のこと。
 
 Webhook は、アプリケーションがリアルタイムでデータを共有するための一般的な通信方法です。今の時代、1つのスタンドアローン・アプリケーションですべてをこなせることはほとんどない。ほとんどの場合、特定のタスクを実行するために特化した多くの異なるアプリやシステムで作業しており、これらのアプリはすべて互いに通信できる必要がある。そこでウェブフックの出番だ。
 
@@ -30,16 +30,14 @@ Webhook は、複数のシステムを接続するための優れた方法です
 
 - ユーザーがメール配信を停止した場合、WebhookでアナリティクスデータベースやCRMに同じ情報を更新させることができ、ユーザーの行動を全体的に把握することができる。
 - FacebookメッセンジャーやLINE内でユーザーに[トランザクションメッセージを]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/)送信する。
-- Webhook を使用して[Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/) などのサードパーティサービスと通信し、アプリ内および Web のアクティビティに応じて顧客にダイレクトメールを送信する。
+- Webhook を使用して[Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/) などのサードパーティサービスと通信し、アプリ内および Web のアクティビティに応じて顧客にダイレクトメールを送信する。
 - ゲーマーのレベルが一定に達したり、ポイントが一定数に達したら、ウェブフックと既存のAPIセットアップを使って、キャラクターのアップグレードやコインを直接アカウントに送る。マルチチャネルメッセージングキャンペーンの一環として Webhook を送信する場合は、プッシュ通知やその他のメッセージを送信して、同時にゲーマーに報酬を通知できる。
 - もしあなたが航空会社なら、ウェブフックと既存のAPIセットアップを利用して、顧客が一定数のフライトを予約した後、顧客のアカウントに割引をクレジットすることができる。
 - 無限の "If This Then That"[（IFTTT](https://ifttt.com/about)）レシピ-例えば、顧客がEメールでアプリにサインインすると、そのアドレスが自動的にSalesforceに設定される。
 
 ## ウェブフックの構造
 
-ウェブフックは以下の3つの部分から構成される：
-
-![HTTPメソッド、HTTP URL、リクエスト・ボディに分割されたウェブフックの例。詳細は以下の表を参照のこと。][2]
+Webhookを構成する要素を以下に示します。
 
 | Webhookの一部 | 説明 |
 | --- | --- |
@@ -47,6 +45,8 @@ Webhook は、複数のシステムを接続するための優れた方法です
 | HTTP URL | ウェブフック・エンドポイントのURLアドレス。エンドポイントは、Webhook でキャプチャしている情報の送信先にする場所です。 |
 | Request body | Webhookのこの部分には、エンドポイントに伝える情報が含まれている。リクエスト本文には、JSON キーと値のペア、または生のテキストを使用できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![HTTP メソッド、HTTP URL、リクエストボディを含む Webhook の例]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 ### HTTPメソッド {#methods}
 
@@ -93,6 +93,17 @@ Braze では、Webhook を、Webhook キャンペーン、API キャンペーン
 {% endtab %}
 {% endtabs %}
 
+## Webhook のエラー処理とレート制限
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[2]: {% image_buster /assets/img_archive/webhook_anatomy.png %}
+Braze は、Webhook コールからのエラー応答を受信すると、以下の応答ヘッダーに基づいて Webhook の送信動作を自動的に調整します。
+
+- `Retry-After`
+- `X-Rate-Limit-Limit`
+- `X-Rate-Limit-Remaining`
+- `X-Rate-Limit-Reset`
+
+これらのヘッダーは、レート制限を解釈し、それに応じて送信速度を調整し、今後エラーが発生しないようにするうえで役立ちます。また、再試行には指数バックオフ戦略を採用しており、再試行の間隔を広げることでサーバーに負荷がかかるリスクを軽減できます。
+
+特定のホストへの Webhook リクエストの大部分が失敗していることが検出された場合には、そのホストへのすべての送信試行を一時的に延期します。その後、定義されているクールダウン期間を経過したら送信を再開し、システムを回復させます。
+
+
