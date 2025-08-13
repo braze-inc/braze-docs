@@ -78,7 +78,7 @@ Dans Braze, naviguez vers **Intégrations partenaires** > **Partenaires technolo
 
 Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. 
 
-Vous devrez fournir la clé d'importation des données et l'endpoint REST à votre gestionnaire de compte Singular pour terminer l'intégration.<br><br>![Cette image montre la boîte "Importation de données pour l'attribution d'installation" qui se trouve sur la page de la technologie Singular. Cette section affiche la clé d'importation des données et l'endpoint REST.][4]{: style="max-width:90%;"}
+Vous devrez fournir la clé d'importation des données et l'endpoint REST à votre gestionnaire de compte Singular pour terminer l'intégration.<br><br>![Cette image montre la boîte "Importation de données pour l'attribution d'installation" qui se trouve sur la page de la technologie Singular. 
 
 ### Étape 3 : Confirmer l'intégration
 
@@ -127,4 +127,3 @@ Si vous n'utilisez actuellement aucun identifiant d'appareil - tel que l'IDFV ou
 {% endalert %}
 
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
