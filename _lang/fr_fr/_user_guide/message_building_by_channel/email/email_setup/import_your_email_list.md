@@ -26,7 +26,7 @@ Les services de nettoyage des listes d’e-mails peuvent faire cela pour vous en
 
 Afin d’identifier vos utilisateurs les plus engagés, supprimez d’abord les utilisateurs inactifs depuis longtemps. Il est recommandé de ne pas envoyer de courrier électronique à des utilisateurs qui n’ont pas fait l’objet d’un e-mail dans plus de six mois, car cela peut endommager votre réputation d’expéditeur de courrier électronique. Lors de l'importation de votre liste d'e-mails, veillez à n'inclure que les utilisateurs qui ont ouvert un e-mail de votre part au cours des six derniers mois.
 
-À long terme, vous devriez également envisager de mettre en œuvre une [politique de temporisation][60].
+À long terme, vous devriez également envisager de mettre en œuvre une [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### Éviter les listes de suppression
 
@@ -36,4 +36,3 @@ Si vous mettez en transition un fournisseur d’e-mails existant, assurez-vous d
 
 Une fois que vous avez préparé votre liste d’e-mails, il existe plusieurs façons d’importer des utilisateurs dans Braze, par exemple via l’API REST de Braze ou des fichiers CSV. Pour en savoir plus, consultez notre article consacré à l ['importation d'utilisateurs]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
