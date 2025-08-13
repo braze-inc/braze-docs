@@ -93,13 +93,13 @@ Excluded users will not be counted as part of your segment’s _Total reachable 
 
 #### Viewing funnel statistics
 
-Select **View funnel statistics** to see how each added filter impacts your segment statistics. You'll see an estimated count and percentage for users who are targeted by all filters up to that point.
+Select **View funnel statistics** to display the statistics for that filter group and see how each added filter impacts your segment statistics. You'll see an estimated count and percentage for users who are targeted by all filters up to that point. Once the statistics are displayed for a filter group, they will update automatically whenever you change the filters. These statistics are estimated and may take a moment to generate.
+
+Keep in mind that if you use AND in between your filters, the funnel statistics will decrease; if you use OR in between your filters, the funnel statistics will increase.
 
 ![Two filters with segment funnel statistics.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
 
 By adding filters that document your user flow, you can see the points where users fall off. For example, if you're a social networking app and you want to see where you might be losing users during your onboarding process, you may want to add custom data filters for signing up, adding friends, and sending the first message. If you find that 85% of users are signing up and adding friends, but only 45% sent the first message, then you'll know to focus on encouraging more message sends during your onboarding and marketing campaigns.
-
-You can also analyze how LTV changes as you add filters. For example, do users who connect to Facebook or those who connect to X (formerly Twitter) have a higher LTV? Or is LTV significantly higher for those who have connected to both? If you find, for instance, that connecting to X (formerly Twitter) has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
 
 #### Testing segments
 
