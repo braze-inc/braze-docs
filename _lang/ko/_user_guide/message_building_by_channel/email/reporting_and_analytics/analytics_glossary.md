@@ -179,7 +179,7 @@ SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`s
 
 {% multi_lang_include metrics.md metric='소프트 바운스' %} 이메일이 소프트 바운스를 받으면, 우리는 보통 72시간 이내에 재시도를 하지만, 재시도 횟수는 수신자마다 다릅니다. 
 
-소프트 반송은 캠페인 분석에서 추적되지 않지만, [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)에서 소프트 반송을 모니터링하거나 [소프트 반송 세그먼트 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced)로 이러한 사용자를 발송에서 제외할 수 있습니다. 메시지 활동 로그에서 소프트 반송의 이유를 확인하고 이메일 캠페인의 '발송'과 '전달' 간의 가능한 불일치를 이해할 수 있습니다.
+소프트 반송은 캠페인 분석에서 추적되지 않지만, [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)에서 소프트 반송을 모니터링하거나 [소프트 반송 세그먼트 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced)를 사용하여 이러한 사용자를 발송에서 제외할 수 있습니다. 메시지 활동 로그에서 소프트 반송의 이유를 확인하고 이메일 캠페인의 "발송"과 "전달" 간의 가능한 불일치를 이해할 수 있습니다.
 
 <span class="calculation-line">계산: 카운트 </span>
 
