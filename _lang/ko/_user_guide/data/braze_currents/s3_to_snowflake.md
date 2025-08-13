@@ -109,12 +109,12 @@ COPY INTO
 
 1. AWS에서 새 Snowflake 단계의 해당 버킷으로 이동합니다. 그런 다음 **속성** 탭에서 **이벤트로** 이동합니다.
 
-![AWS 속성 탭][1]{: height="50%" width="50%"}
+![AWS Properties tab]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\. 필요에 따라 각 커런츠 데이터 세트[(메시징]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [사용자 행동]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)) 또는 둘 다에 대해 새 이벤트를 생성합니다.
 
-![AWS에서 새 이벤트 만들기][2]{: height="50%" width="50%"}
+![Creating a new event in AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\. 양식 하단(Snowflake의 알림 채널 열에서)에 있는 ARN과 개체 만들기 알림에 해당하는 상자를 선택합니다.
@@ -278,5 +278,3 @@ Braze 커런츠를 사용하여 수행할 수 있는 분석의 유형을 확인�
 궁금한 점이 있거나 이 과정을 안내받고 싶다면 Braze 계정 매니저에게 문의하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/aws-properties.png %}
-[2]: {% image_buster /assets/img/aws-events.png %}
