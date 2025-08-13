@@ -8,16 +8,13 @@
     {%- if include.title -%}
     <div id="feedback_title">{{ include.title | upcase }} </div>
     {%- else -%}
-    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "HOW HELPFUL WAS THIS PAGE?" }} </div>
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default: "WAS THIS PAGE HELPFUL?" }} </div>
     {%- endif -%}
 
     <div id="feedback_answer">
       <ul class="list-inline rating-list">
-        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i></li>
-        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="Helpful"></i></li>
-        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i></li>
-        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i></li>
-        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i></li>
+        <li class="inline-thumb" tabindex="0"><i class="far fa-thumbs-up" data-value="Very Helpful" title="Very Helpful"></i></li>
+        <li class="inline-thumb" tabindex="0"><i class="far fa-thumbs-down" data-value="Very Unhelpful" title="Very Unhelpful"></i></li>
       </ul>
     </div>
     <div id="feedback_comment_div">
