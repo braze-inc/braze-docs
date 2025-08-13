@@ -79,13 +79,13 @@ Vous pouvez exporter des données utilisateur pour tous les destinataires d’un
 Le bouton **Données utilisateur** n’apparaît pas ? Pour exporter les données utilisateur, vous avez besoin des [autorisations]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) **Exporter les données utilisateur** pour cet espace de travail.
 {% endalert %}
 
-![Menu déroulant Données utilisateur sur la page Détails de la campagne][6]
+![Liste déroulante des données de l'utilisateur sur la page des détails de la campagne]({% image_buster /assets/img/campaign_export_example.png %})
 
 La sortie CSV contient des données de profil utilisateur pour chaque destinataire de la campagne. Braze génère le rapport en arrière-plan et l’envoie par e-mail à l’utilisateur actuellement connecté.
 
-Si vous avez lié vos [identifiants Amazon S3][26] ] à Braze, le CSV sera également téléchargé dans votre compartiment S3. Sinon, le lien envoyé par e-mail expirera au bout de quelques heures.
+Si vous avez lié vos [identifiants Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) à Braze, le fichier CSV sera également téléchargé dans votre compartiment S3. Sinon, le lien envoyé par e-mail expirera au bout de quelques heures.
 
-Le fichier exporté comprend les mêmes champs de données utilisateur que ceux inclus lorsque vous [exportez les données utilisateur d'un segment][40]. En plus des champs de données, si vous choisissez « Exporter toutes les données du destinataire », le fichier exporté contiendra également les données suivantes pour chaque utilisateur :
+Le fichier exporté comprend les mêmes champs de données utilisateur que ceux inclus lorsque vous [exportez les données utilisateur d'un segment.]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data) En plus des champs de données, si vous choisissez « Exporter toutes les données du destinataire », le fichier exporté contiendra également les données suivantes pour chaque utilisateur :
 
 - Nom de la variation de campagne reçue
 - ID API de la variation de campagne reçue
@@ -95,6 +95,3 @@ Le fichier exporté comprend les mêmes champs de données utilisateur que ceux 
 Pour obtenir de l'aide sur les exportations CSV et API, consultez la [résolution des problèmes d'exportation.]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)
 {% endalert %}
 
-[6]: {% image_buster /assets/img/campaign_export_example.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
-[40]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
