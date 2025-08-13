@@ -143,9 +143,11 @@ Specify your delivery controls, such as allowing users to become re-eligible to 
 
 #### Step 5.2: Choose users to target
 
-Target users by choosing segments or filters to narrow down your audience. You should have already selected the subscription group, which narrows users by the level or category of communication they want to have with you. 
+Target users by choosing segments or filters to narrow down your audience. You should have already selected the subscription group, which narrows users by the level or category of communication they want to have with you.
 
-Next, you'll select the larger audience from your segments and narrow that segment further with optional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You’ll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+{% multi_lang_include target_audiences.md %}
+
+Next, you'll select the larger audience from your segments and narrow that segment further with optional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 {% alert tip %}
 Interested in using RCS retargeting to target users based on their SMS and RCS interactions? Refer to [Retargeting]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).

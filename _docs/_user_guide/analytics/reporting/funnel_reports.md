@@ -38,13 +38,23 @@ You can select a time frame for your report (within the past six months), and re
 If you set the window to complete the funnel to one day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is counted as calendar days in the company time zone.
 {% endalert %}
 
-![Funnel Report 5]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
+![Funnel report for a Canvas with "Last 7 Days" selected in the time frame dropdown.]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
 ### Step 2: Select events for funnel steps
 
-For every funnel report, the first event is when the user receives your message. From there, the subsequent events you choose funnel the number of users who performed those events, as well as the previous events. Funnel report events for both campaign and Canvases funnels allow for start session, make a purchase, and custom events, while only campaign funnels include message engagement events.
+For every funnel report, the first event is when the user receives your message. From there, the subsequent events you choose funnel the number of users who performed those events, as well as the previous events. 
 
-![Funnel Report 3]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
+#### Available funnel report events
+
+| Campaign | Started Session, Made Purchase, Performed Custom Event, Message Engagement Event |
+| Canvas | Started Session, Made Purchase, Performed Custom Event, Received Canvas Step, Interacted with Step |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert note %}
+The **Interacted with Step** report event can only be used with Canvas steps that use the Email or push messaging channels.
+{% endalert %}
+
+![Funnel report for a Canvas with a dropdown of the available report events.]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 Funnel reports allow you to compare the success of your messages beyond just the conversion events or message engagement events you initially set up. So if there's a conversion event you didn't add initially, you can still track conversions for that event using a funnel.
 
@@ -65,7 +75,7 @@ In your funnel report, you can directly compare the control group alongside the 
 - **Regenerate Option**: Allows you to regenerate your report and indicates when the current report was last generated. 
 - **Variants**: Denoted by colored columns, funnel reporting allows up to 8 variants and a control group. By default, the **chart** will only show three variants. To see more, you can manually select the rest of the variants.
 
-![Funnel Report 4]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
+![Funnel report chart.]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **For campaigns with multiple variants**: Braze will show a table with metrics for each event and variant and the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipient.
 
@@ -73,4 +83,8 @@ In your funnel report, you can directly compare the control group alongside the 
 - Note that there may be a discrepancy between the funnel and standard conversion values, as users can convert more than once with re-eligibility, but funnel reports will convert a maximum of one time even if a user performs the event more than once. 
 
 **For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count toward multiple different variants if they received multiple variants during the time window for the funnel.
+
+{% alert important %}
+Orphaned users are not tracked in funnel reports. When an anonymous user enters a Canvas or campaign and later becomes identified through the `changeUser()` method, their Braze ID changes. Funnel reports only track follow-up events that match the user ID at the time of entry and do not account for events performed by the user after their ID changes. This means that conversion events performed by the user after becoming identified will not be included in the funnel report.
+{% endalert %}
 

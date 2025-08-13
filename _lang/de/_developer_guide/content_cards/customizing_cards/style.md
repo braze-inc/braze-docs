@@ -28,7 +28,7 @@ Eigenschaften von Content-Cards wie `title`, `cardDescription`, `imageUrl` usw. 
 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Standardmäßig entsprechen die Android und FireOS SDK Content Cards den Standardrichtlinien für die Android-Benutzeroberfläche, um ein nahtloses Erlebnis zu bieten. Sie können diese Standardstile in der Datei [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) in der Braze SDK-Distribution sehen:
 
@@ -80,7 +80,7 @@ Um den Stil Ihrer Content-Cards anzupassen, können Sie dieses Standardstile ein
 
 Standardmäßig entsprechen die Android und FireOS SDK Content Cards den Standardrichtlinien für die Android-Benutzeroberfläche, um ein nahtloses Erlebnis zu bieten.
 
-Es gibt zwei Möglichkeiten, einen Stil anzuwenden. Die erste besteht darin, `ContentCardListStyling` und `ContentCardStyling` wie im folgenden Beispiel an `ContentCardsList()` zu übergeben:
+Es gibt zwei Möglichkeiten, einen Stil anzuwenden. Die erste ist die Übergabe eines [`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) und [`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) an [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html)zu übergeben, wie in dem folgenden Beispiel:
 
 ```kotlin
 ContentCardsList(
@@ -98,7 +98,7 @@ ContentCardsList(
 )
 ```
 
-Die zweite Möglichkeit ist, BrazeStyle zu verwenden, um einen globalen Stil für Braze-Komponenten zu erstellen. Siehe hierzu das folgende Beispiel:
+Die zweite Möglichkeit ist die Verwendung von [`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) um ein globales Styling für Braze-Komponenten zu erstellen, wie im folgenden Beispiel:
 
 ```kotlin
 BrazeStyle(
@@ -118,7 +118,7 @@ BrazeStyle(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab schnell %}
 
 Mit dem View Controller für Content-Cards können Sie das Aussehen und Verhalten aller Zellen über die Struktur [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) anpassen. Die Konfiguration von Content Cards mit `Attributes` ist eine einfache Option, mit der Sie Ihre Content Cards-Benutzeroberfläche mit minimaler Einrichtung starten können. 
 
@@ -198,7 +198,7 @@ Die Anpassung von Content-Cards über `Attributes` wird von Objective-C nicht un
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Die Standardstile von Braze sind im Braze SDK in CSS definiert. Indem Sie ausgewählte Stile in Ihrer Anwendung außer Kraft setzen, können Sie unseren Standard-Feed mit Ihren eigenen Hintergrundbildern, Schriftfamilien, Stilen, Größen, Animationen und vielem mehr anpassen. Das folgende Beispiel ist eine Überschreibung, die bewirkt, dass Content-Cards mit einer Breite von 800 Pixeln angezeigt werden:
 
@@ -218,7 +218,7 @@ body .ab-feed {
 Durch die Anpassung der in Ihren Content Cards verwendeten Schriftart können Sie Ihre Markenidentität wahren und ein visuell ansprechendes Erlebnis für Ihre Benutzer schaffen. Wenden Sie diese Vorgehensweisen an, wenn Sie die Schriftart für alle Content-Cards programmatisch festlegen möchten. 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Um die Standardschriftart programmatisch zu ändern, legen Sie einen Stil für Karten fest und verwenden das Attribut `fontFamily`, um Braze anzuweisen, Ihre eigene Schriftfamilie zu verwenden.
 
@@ -238,9 +238,9 @@ Hier ist ein verkürztes Beispiel mit einer benutzerdefinierten Schriftfamilie, 
 Weitere Informationen zur Anpassung von Schriftarten im Android SDK finden Sie in der [Anleitung zur Schriftfamilie]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab Jetpack Compose %}
-Um die Standardschriftart programmatisch zu ändern, können Sie `titleTextStyle` von `ContentCardStyling` festlegen.
+Um die Standard-Schriftart programmatisch zu ändern, können Sie die Option [`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) von `ContentCardStyling` verwenden.
 
-Sie können auch `titleTextStyle` für einen bestimmten Kartentyp einstellen, indem Sie es auf `BrazeShortNewsContentCardStyling` einstellen und an `shortNewsContentCardStyle` von `ContentCardStyling` übergeben.
+Sie können auch `titleTextStyle` für einen bestimmten Kartentyp einstellen, indem Sie ihn auf [`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html) setzen und ihn an die [`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721) von `ContentCardStyling` übergeben.
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -254,7 +254,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab schnell %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -279,7 +279,7 @@ In der [Beispielanwendung Examples](https://github.com/braze-inc/braze-swift-sdk
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Sie können das Aussehen von Content-Cards wie jedes andere Web-Element ganz einfach über CSS anpassen. Verwenden Sie in Ihrer CSS-Datei oder in Inline-Styles die Eigenschaft `font-family` und geben Sie den gewünschten Schriftnamen oder den Schriftstapel an.
 
@@ -300,7 +300,7 @@ Bei der Erstellung einer Content-Card haben Marketer die Möglichkeit, die Karte
 ![Side-by-Side-Vorschau der Content-Cards in Braze für Mobilgeräte und Web mit aktivierter Option "Diese Karte oben im Feed pinnen".]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Um ein angepasstes gepinntes Symbol festzulegen, überschreiben Sie den Stil `Braze.ContentCards.PinnedIcon`. Ihr benutzerdefiniertes Bild-Asset sollte in dem Element `android:src` deklariert werden. Zum Beispiel:
 
@@ -320,7 +320,7 @@ Um ein angepasstes gepinntes Symbol festzulegen, überschreiben Sie den Stil `Br
 {% endtab %}
 {% tab Jetpack Compose %}
 
-Um das standardmäßige gepinnte Symbol zu ändern, können Sie `pinnedResourceId` von `ContentCardStyling` festlegen.  Zum Beispiel:
+Um das standardmäßig angeheftete Symbol zu ändern, können Sie die Option [`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721) von `ContentCardStyling` ändern.  Zum Beispiel:
 
 ```kotlin
 ContentCardStyling(
@@ -329,7 +329,7 @@ ContentCardStyling(
 )
 ```
 
-Sie können auch einen Composable in `pinnedComposable` von `ContentCardStyling` angeben. Wenn `pinnedComposable` angegeben wird, wird der Wert `pinnedResourceId` überschrieben.
+Sie können auch ein Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) von `ContentCardStyling` angeben. Wenn `pinnedComposable` angegeben wird, wird der Wert `pinnedResourceId` überschrieben.
 
 ```kotlin
 ContentCardStyling(
@@ -346,7 +346,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab schnell %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -377,7 +377,7 @@ Das Anpassen der Pin-Anzeige über `Attributes` wird in Objective-C nicht unters
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Die Struktur des gepinnten Symbols für Content-Cards lautet wie folgt:
 
@@ -415,7 +415,7 @@ Inhaltskarten enthalten eine blaue Linie am unteren Rand der Karte, die anzeigt,
 ![Zwei Inhaltskarten werden nebeneinander angezeigt. Die erste Karte hat eine blaue Linie am unteren Rand, was bedeutet, dass sie nicht gesehen wurde. Die zweite Karte hat keine blaue Linie, was bedeutet, dass sie bereits gesehen wurde.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Ändern Sie die Farbe des Balkens für die Ungelesen-Anzeige, indem Sie den Wert in `com_braze_content_cards_unread_bar_color` in Ihrer `colors.xml` Datei ändern:
 
@@ -430,7 +430,7 @@ Inhaltskarten enthalten eine blaue Linie am unteren Rand der Karte, die anzeigt,
 {% endtab %}
 {% tab Jetpack Compose %}
 
-Um die Farbe des Balkens für die Ungelesen-Anzeige zu ändern, ändern Sie den Wert von `unreadIndicatorColor` in `ContentCardStyling`:
+Um die Farbe des Balkens für die Ungelesen-Anzeige zu ändern, ändern Sie den Wert von [`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) in `ContentCardStyling`:
 
 ```kotlin
 ContentCardStyling(
@@ -439,7 +439,7 @@ ContentCardStyling(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab schnell %}
 
 {% subtabs %}
 {% subtab Swift %}
@@ -479,7 +479,7 @@ Es ist nicht möglich, in Objective-C über `Attributes` nur die Nicht-aufgerufe
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Um die Farbe der Ungelesen-Anzeige einer Karte zu ändern, fügen Sie Ihrer Webseite ein benutzerdefiniertes CSS hinzu. So setzen Sie beispielsweise die Farbe der Nicht-aufgerufen-Anzeige auf Grün:
 
@@ -493,7 +493,7 @@ Um die Farbe der Ungelesen-Anzeige einer Karte zu ändern, fügen Sie Ihrer Webs
 ### Ungelesen-Anzeige deaktivieren
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Blenden Sie die Leiste für die Anzeige ungelesener Dokumente aus, indem Sie [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) auf `ContentCardViewHolder` auf `false` setzen. 
 
@@ -503,7 +503,7 @@ Blenden Sie die Leiste für die Anzeige ungelesener Dokumente aus, indem Sie [`s
 Die Deaktivierung der Anzeige für ungelesene Nachrichten wird in Jetpack Compose nicht unterstützt.
 {% endtab %}
 
-{% tab iOS %}
+{% tab schnell %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -517,7 +517,7 @@ Es ist nicht möglich, in Objective-C über `Attributes` nur die Nicht-aufgerufe
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Blenden Sie die Leiste für die Anzeige ungelesener Dokumente aus, indem Sie den folgenden Stil zu Ihrem `css` hinzufügen:
 
