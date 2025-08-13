@@ -35,17 +35,11 @@ guide_featured_list:
 
 次の機能の [**テンプレート」**] セクションで、テンプレートとクリエイティブコンテンツを使用および管理できます。
 
-- **[メールテンプレート][2]**
-- **[コンテントブロック][7]**
-- **[Webhook テンプレート][3]**
-- **[リンクテンプレート][6]**
-- **[アプリ内メッセージのカラープロファイルと CSS テンプレート][4]**
-- **[メディアライブラリ内のアセットを管理する][5]**
+- **[メールテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
+- **[コンテントブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Webhook テンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[リンクテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[アプリ内メッセージのカラープロファイルと CSS テンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[メディアライブラリ内のアセットを管理する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/
