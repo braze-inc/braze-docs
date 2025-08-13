@@ -8,7 +8,7 @@ description: "이 참조 페이지에는 Liquid가 지원하는 연산자와 관
 
 # 연산자
 
-> Liquid는 조건문에 사용할 수 있는 다양한 [연산자][25]를 지원합니다. 이 페이지에서는 Liquid가 지원하는 연산자를 다루고, 메시지에서 어떻게 사용할 수 있는지에 대한 사용 사례를 제공합니다.
+> Liquid supports many [operators](https://docs.shopify.com/themes/liquid/basics/operators) that can be used in your conditional statements. 이 페이지에서는 Liquid가 지원하는 연산자를 다루고, 메시지에서 어떻게 사용할 수 있는지에 대한 사용 사례를 제공합니다.
 
 이 표에는 지원되는 연산자가 나열되어 있습니다. 괄호는 Liquid에서 유효하지 않은 문자이며 태그가 작동하지 않도록 합니다.
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![A push notification composer with the full Liquid code from the tutorial.][13]{: width="100%"}
+![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Full Liquid code %}
 {% raw %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![A push notification composer with the full Liquid code from the tutorial.][14]
+![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Now, if a user last played *Awkward Dinner Party*, they'll receive this message:
 
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![A push notification composer with the full Liquid code from the tutorial.][26]
+![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-연결된 콘텐츠를 기반으로 [메시지를 중단할][1] 수도 있습니다.
+You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) based on Connected Content.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-[25]:https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}
