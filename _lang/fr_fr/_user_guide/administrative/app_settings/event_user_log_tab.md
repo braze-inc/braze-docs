@@ -32,11 +32,13 @@ Chaque journal est divisé en plusieurs sections, qui peuvent inclure :
 * Événements de campagne
 * Données de réponse
 
-Cliquez sur le bouton **Données brutes** pour afficher les données JSON brutes pour ce journal spécifique.
+Sélectionnez l'icône **Développer les données** pour afficher les données JSON brutes de ce journal spécifique.
 
-![Journaux bruts pour les événements][10]
+![L'"icône d'expansion des données" à côté d'un journal spécifique.]({% image_buster /assets/img_archive/expand_data.png %})
 
 Les journaux d’événements utilisateurs resteront dans le tableau de bord pendant 30 jours après leur enregistrement.
+
+![Journaux bruts pour les événements]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## Résolution des problèmes
 
@@ -67,4 +69,3 @@ En ce qui concerne les sessions utilisateur, vous pouvez utiliser Braze pour sur
 
 Ces comportements ne sont pas impactés par l’événement de fin de session qui est supprimé lors de la prochaine session.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}
