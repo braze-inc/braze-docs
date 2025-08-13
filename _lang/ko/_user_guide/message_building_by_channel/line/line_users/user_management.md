@@ -43,6 +43,5 @@ Braze 대시보드에서 사용자 프로필을 볼 때, **참여** 탭 > **연�
 
 `native_line_id` 이 설정되어 있다면 **LINE 사용자 아이디** 아래에 표시됩니다. 그렇지 않으면 표시되지 않습니다.
 
-![참여 탭의 회선 연락처 설정으로 이동합니다.][1]{: style="max-width:60%;"}
+![Line Contact Settings in the Engagment tab.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}
