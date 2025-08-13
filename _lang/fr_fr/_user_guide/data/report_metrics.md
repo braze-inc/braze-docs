@@ -371,7 +371,7 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 RCS
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Delivery Failures RCS' (échecs de réception/distribution) %}
+{% multi_lang_include metrics.md metric='Delivery Failures RCS' %}
 
 Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour obtenir de l'aide afin de comprendre les raisons des échecs de réception/distribution.
 
@@ -641,7 +641,7 @@ E-mail
 Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, MMS.
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Conversions primaires (A) ou événement de conversion principal' %} 
+{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
 |Canal|Informations supplémentaires|
 |-------------|----------------------|
