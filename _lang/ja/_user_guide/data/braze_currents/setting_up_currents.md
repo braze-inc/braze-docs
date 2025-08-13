@@ -77,11 +77,17 @@ Currents フィールド変換を使用して、文字列フィールドを削�
 
 ### ステップ 6:連携のテスト
 
-連携をテストしたり、Currents の例の [GitHub リポジトリ](https://github.com/Appboy/currents-examples)にあるサンプルの Currents データを確認したりできます。
-
 {% alert important %}
 Currents は、900 KB を超える過度に大きなペイロードを持つイベントをドロップします。
 {% endalert %}
+
+テストする前に、[GitHub のサンプル Currents データ](https://github.com/Appboy/currents-examples)をご確認ください。テストの準備ができたら、以下のオプションを選択します。
+
+#### テストイベントの送信
+
+連携をテストするには、[**テストイベントを送信**] を選択して、選択した各イベントタイプからこの Current に 1 つのイベントを送信します。各イベントタイプの詳細については、[顧客行動イベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)ライブラリと[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)ライブラリを参照してください。
+
+![Braze ダッシュボードの [Currents Test (Currents テスト)] ページ]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### 電流コネクタのテスト
 
@@ -92,7 +98,7 @@ Currents のテストコネクターは、弊社の既存のコネクターの�
 
 Currents のテストコネクターが送信制限に達すると、コネクターは次の 7 日間まで、イベントを送信しません。
 
-Currents のテストコネクターをアップグレードするには、ダッシュボードで連携を編集し、[**アップグレード**] を選択します。
+Currents のテストコネクターをアップグレードするには、ダッシュボードで連携を編集し、[**テスト連携をアップグレード**] を選択します。
 
 ## Currents の更新
 
