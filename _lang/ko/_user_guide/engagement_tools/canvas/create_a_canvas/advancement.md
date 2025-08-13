@@ -17,7 +17,7 @@ tool: Canvas
 
 > The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). 
 
-![진행 동작 설정에는 메시지가 전송될 때 오디언스를 진행시키거나 즉시 오디언스를 진행시키는 두 가지 옵션이 있습니다.][1]
+![Advancement Behavior settings with two options to either advance the audience when the message is sent, or to immediately advance the audience.]({% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior")
 
 사용자가 해당 단계를 진행하려면 해당 단계의 기준을 충족해야 합니다. [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) 단계를 사용하면 전달 유효성 검사를 켜서 메시지 전송 시 대상 그룹이 전달 기준을 충족하는지 확인할 수 있습니다. 이는 캔버스 흐름을 사용할 때 단계의 기준에 포함됩니다. 따라서 사용자가 배달 유효성 검사 기준을 충족하지 못하면 캔버스에서 종료됩니다.
 
@@ -41,7 +41,7 @@ tool: Canvas
 
 ### 예약된 단계
 
-예약된 구성 요소의 경우 사용자가 단계를 진행하려면 해당 단계의 오디언스 옵션을 충족해야 합니다. 단계에 [예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)가 있는 경우 예외 이벤트를 수행하는 사용자는 단계를 진행하지 못합니다.
+예약된 구성 요소의 경우 사용자가 단계를 진행하려면 해당 단계의 오디언스 옵션을 충족해야 합니다. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events), users who perform the exception event will not be advanced through the step.
 
 [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)을 사용하여 멀티채널 구성요소를 보낼 때 채널별로 서로 다른 시간에 메시지를 보내거나 보내려고 시도할 수 있습니다. Braze는 구성요소의 첫 번째 메시지가 전송을 시도할 때 사용자에게 자동 전진합니다.
 
@@ -77,4 +77,3 @@ tool: Canvas
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "진행 동작"
