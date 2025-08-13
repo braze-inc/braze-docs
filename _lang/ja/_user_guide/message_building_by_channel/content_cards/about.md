@@ -14,10 +14,6 @@ search_rank: 4
 
 コンテンツカードはアドオン機能であり、購入する必要があります。コンテンツカードの使用を開始するには、Braze カスタマーサクセスマネージャーまたはサポートチームにお問い合わせください。
 
-{% alert note %}
-ニュースフィードツールを使用している場合は、より柔軟でカスタマイズ可能で信頼性の高いコンテンツカードメッセージングチャネルに移行することが推奨されます。ニュースフィードも非推奨となる。詳細については、[移行ガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) 参照するか、Braze アカウントマネージャーにお問い合わせください。
-{% endalert %}
-
 ## コンテンツカードを使うメリット
 
 開発者がアプリにコンテンツを組み込むのと比較して、コンテンツカードを使用するメリットをいくつか挙げてみよう：
@@ -176,9 +172,9 @@ search_rank: 4
 
 開発者は、Braze SDK を統合するときにコンテンツカードを統合します。コンテンツカードと統合する方法の詳細については、お使いのプラットフォームの開発者ガイドの記事を参照してください。
 
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "iOS コンテンツカード統合ガイド")
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android コンテンツカード統合ガイド")
-- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Web コンテンツカード統合ガイド")
+- [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web)
 
 ## 情報源
 
