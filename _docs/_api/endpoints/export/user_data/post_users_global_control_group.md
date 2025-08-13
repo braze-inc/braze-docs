@@ -16,7 +16,9 @@ description: "This article outlines details about the Export users in Global Con
 
 > Use this endpoint to export all users within a Global Control Group.
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group.
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group. 
+
+To locate the segment identifier of your Global Control Group, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -30,7 +32,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. 
+
+Generally, we will create one file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP format:**
@@ -56,7 +60,7 @@ We strongly suggest setting up your own S3 or Azure credentials when using this 
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (for example, create a segment where random bucket number is less than 1,000 or between 1,000 and 2,000).
 
-In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added your cloud storage credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
+In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be `"success":true`. If you haven't added your cloud storage credentials to Braze, the body of the post will additionally have the attribute `url` with the download URL as the value.
 
 Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
 
@@ -151,7 +155,7 @@ After the URL is made available, it will only be valid for a few hours. As such,
 
 ### Example user export file output
 
-User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):
+User export object (we will include the least data possible—if a field is missing from the object it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}
@@ -310,8 +314,5 @@ User export object (we will include the least data possible - if a field is miss
 
 {% endtab %}
 {% endtabs %}
-
-[1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3
-[2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 
 {% endapi %}

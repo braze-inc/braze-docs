@@ -16,6 +16,6 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/deep_linking.md%}
+guide/swift/deep_linking.md%} developer_
 {% endsdktab %}
 {% endsdktabs %}

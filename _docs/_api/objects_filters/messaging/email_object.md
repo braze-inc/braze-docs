@@ -68,10 +68,6 @@ An `email_template_id` can be retrieved from the bottom of any email template cr
 
 ## Authentication for email file attachments
 
-{% alert important %}
-Authentication for email file attachments in this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 1. Navigate to **Settings** > **Connected Content** and click **Add Credential** to add your authentication credentials.
 2. Enter a name, and add a username and password.
 3. In email object of the `/messages/send` endpoint, include a `basic_auth_credential` property specifying the credential name in the attachment details. Refer to the following example with the credential name `company_basic_auth_credential_name`:
@@ -82,7 +78,7 @@ Authentication for email file attachments in this endpoint is currently in early
   "messages":{
     "email":{
       "app_id": "153e8a29-fd6d-4f77-ade7-1a4ca08d457a",
-      "subject": "Basis auth attachement test",
+      "subject": "Basis auth attachment test",
       "from": "mail <mail@e.company.com>",
       "body": "my attachment test",
       "attachments":[

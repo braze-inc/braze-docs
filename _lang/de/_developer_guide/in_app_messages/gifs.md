@@ -16,6 +16,6 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-{% multi_lang_include developer_guide/swift/gifs.md%}
+guide/swift/gifs.md%} developer_
 {% endsdktab %}
 {% endsdktabs %}
