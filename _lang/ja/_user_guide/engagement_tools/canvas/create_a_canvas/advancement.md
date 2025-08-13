@@ -17,7 +17,7 @@ tool: Canvas
 
 > **ユーザー昇進の動作**機能を使用すると、[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を進ませる基準を選択できます。 
 
-![オーディエンスをメッセージの送信時に進めるか、すぐに進めるかの 2 つのオプションを持つ「昇進動作」の設定。][1]
+![オーディエンスをメッセージの送信時に進めるか、すぐに進めるかの 2 つのオプションを持つ「昇進動作」の設定。]({% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior")
 
 ステップを進むには、ステップの基準を満たす必要があります。[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)ステップでは、配信検証をオンにして、オーディエンスがメッセージ送信時に配信基準を満たしていることを確認できます。これは、キャンバスフローを使用する場合にステップの基準として考慮されます。そのため、配信検証の基準を満たさないユーザーはキャンバスから退出します。
 
@@ -41,7 +41,7 @@ tool: Canvas
 
 ### スケジュールされたステップ
 
-スケジュールされたコンポーネントの場合、ユーザーがステップを進むには、ステップのオーディエンスのオプションを満たす必要があります。ステップに[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)がある場合、例外イベントを実行したユーザーはステップを進みません。
+スケジュールされたコンポーネントの場合、ユーザーがステップを進むには、ステップのオーディエンスのオプションを満たす必要があります。ステップに[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events)がある場合、例外イベントを実行したユーザーはステップを進みません。
 
 [インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)でマルチチャネルコンポーネントを送信する場合、異なるチャネルに対して異なる時間にメッセージを送信したり、送信しようとすることがあります。Braze は、コンポーネント内の最初のメッセージが送信を試みる時点でユーザーを自動的に進めます。
 
@@ -77,4 +77,3 @@ tool: Canvas
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} 「昇進動作」
