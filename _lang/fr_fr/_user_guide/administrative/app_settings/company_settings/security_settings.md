@@ -2,6 +2,7 @@
 nav_title: Paramètres de sécurité
 article_title: Paramètres de sécurité
 page_order: 2
+toc_headers: h2
 page_type: reference
 description: "Cet article de référence traite des paramètres génériques de sécurité inter-entreprises, y compris des règles d’authentification, de la liste des adresses IP autorisées, des données d'identification et de l’authentification à deux facteurs."
 
@@ -37,13 +38,13 @@ Utilisez ce champ pour définir quand vous souhaitez que les utilisateurs de vot
 
 ### Règles de durée de session
 
-Utilisez ce champ pour définir la durée pendant laquelle Braze gardera votre session active. Après que Braze considère votre session comme inactive (aucune activité pendant le nombre de minutes défini), l'utilisateur sera déconnecté. Le nombre maximum de minutes que vous pouvez entrer est de 10 080 (équivalent à une semaine) si l'authentification à deux facteurs est appliquée pour votre entreprise, sinon la durée maximale de session sera de 1 440 minutes (équivalent à 24 heures).
+Utilisez ce champ pour définir la durée pendant laquelle Braze gardera votre session active. Après que Braze considère votre session comme inactive (aucune activité pendant le nombre de minutes défini), l'utilisateur sera déconnecté. Le nombre maximal de minutes que vous pouvez saisir est de 10 080 (soit une semaine) si l'authentification à deux facteurs est appliquée dans votre entreprise. Dans le cas contraire, la durée maximale de la session sera de 1 440 minutes (soit 24 heures).
 
 ### Authentification par authentification unique (SSO)
 
 Vous pouvez restreindre vos utilisateurs à la connexion à l’aide d’un mot de passe ou d’une Authentification unique (SSO).
 
-Pour [l’authentification unique SAML][15], les clients doivent configurer leurs paramètres SAML avant application. Si les clients utilisent l’authentification unique de Google, ils n'ont qu'à appliquer la page des paramètres de sécurité sans aucune action supplémentaire.
+Pour l'[authentification unique (SSO) SAM]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/)L, les clients doivent configurer leurs paramètres SAML avant de procéder à l'application. Si les clients utilisent l’authentification unique de Google, ils n'ont qu'à appliquer la page des paramètres de sécurité sans aucune action supplémentaire.
 
 ## Liste des IP autorisées du tableau de bord
 
@@ -53,23 +54,28 @@ Utilisez le champ affiché pour autoriser des adresses IP spécifiques et des so
 
 L'authentification à deux facteurs est requise pour tous les utilisateurs de Braze. Il ajoute un deuxième niveau de vérification d'identité à une connexion de compte, la rendant plus sécurisée qu'un simple nom d'utilisateur et mot de passe. Si votre tableau de bord ne peut pas prendre en charge l'authentification à deux facteurs, contactez votre gestionnaire du succès des clients. 
 
-Lorsque l'authentification à deux facteurs est activée, en plus de saisir un mot de passe, les utilisateurs devront entrer un code de vérification lors de la connexion à leur compte Braze. Le code peut être envoyé via une application d'authentification, un e-mail ou un SMS.
+Lorsque l'authentification à deux facteurs est activée :
+
+- Outre la saisie d'un mot de passe, les utilisateurs devront saisir un code de vérification lorsqu'ils se connecteront à leur compte Braze. Le code peut être envoyé par l'intermédiaire d'une appli d'authentification, d'un e-mail ou d'un SMS. 
+- La case à cocher **Se souvenir de ce compte pendant 30 jours** devient disponible pour les utilisateurs.
 
 Les utilisateurs qui ne configurent pas leur authentification à deux facteurs seront exclus de leur compte Braze. Les utilisateurs de compte Braze peuvent également configurer l'authentification à deux facteurs eux-mêmes dans **Paramètres du compte**, même si cela n'est pas requis par l'administrateur.
 
-### Se souvenir de moi
+Assurez-vous d’enregistrer vos modifications avant de quitter la page !
 
-![Case à cocher Se souvenir de ce compte pendant 30 jours][04]{: style="float:right;max-width:40%;margin-left:15px;"}
+### Gardez ce compte en mémoire pendant 30 jours {#remember-me}
 
-Après avoir activé l'authentification à deux facteurs pour votre entreprise, la case à cocher **Se souvenir de moi** devient disponible pour les utilisateurs. Cette fonctionnalité stocke un cookie sur votre appareil, ne nécessitant que de vous connecter avec une authentification à deux facteurs une seule fois au cours de 30 jours.
+Cette fonctionnalité est disponible lorsque l'authentification à deux facteurs est activée.
+
+Lorsque vous sélectionnez **Se souvenir de ce compte pendant 30 jours**, un cookie est stocké sur votre appareil, ne vous demandant de vous connecter avec l'authentification à deux facteurs qu'une seule fois sur une période de 30 jours. 
+
+![Case à cocher "Se souvenir de ce compte pendant 30 jours"]({% image_buster /assets/img/remember_me.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Les clients ayant plusieurs comptes sous une entreprise de tableau de bord peuvent rencontrer des problèmes en utilisant cette fonctionnalité en raison du fait que le cookie est lié à un appareil spécifique. Si les utilisateurs utilisent le même appareil pour se connecter à plusieurs comptes, le cookie sera remplacé pour les comptes précédemment autorisés sur cet appareil. Braze prévoit qu’un seul appareil soit associé à un compte, et non pas un seul appareil pour plusieurs comptes.
 
-Assurez-vous d’enregistrer vos modifications avant de quitter la page !
-
 ### Réinitialisation de l'authentification de l'utilisateur
 
-Les utilisateurs qui rencontrent des problèmes de connexion avec l'authentification à deux facteurs peuvent contacter les administrateurs de leur entreprise pour réinitialiser leur authentification à deux facteurs. Pour ce faire, demandez à un administrateur d'effectuer les opérations suivantes :
+Si vous rencontrez des problèmes pour vous connecter avec l'authentification à deux facteurs, contactez les administrateurs de votre entreprise pour réinitialiser votre authentification à deux facteurs. Les administrateurs peuvent effectuer les opérations suivantes :
 
 1. Allez dans **Paramètres** > **Utilisateurs de l'entreprise**.
 2. Sélectionnez l'utilisateur dans la liste fournie.
@@ -83,7 +89,7 @@ L'accès renforcé ajoute une couche de sécurité supplémentaire pour les acti
 
 Si un utilisateur ne peut pas revérifier, il sera redirigé à l'endroit où il s'est arrêté et ne pourra pas poursuivre l'action sensible. Une fois qu'ils ont réussi à s'identifier à nouveau, ils n'ont plus besoin de le faire pendant l'heure qui suit, à moins qu'ils ne se déconnectent avant.
 
-![Basculer l'accès renforcé.][5]
+![Basculer l'accès en hauteur.]({% image_buster /assets/img/elevated_access.png %})
 
 ## Téléchargement d'un rapport d'événement de sécurité
 
@@ -98,16 +104,20 @@ Pour télécharger ce rapport, procédez comme suit :
 Ce rapport contient uniquement les 10 000 événements de sécurité les plus récents pour votre compte. Si vous avez besoin de données d’événements spécifiques, contactez l’assistance technique.
 
 {% details Événements signalés en matière de sécurité %}
+
 ### Identifiant et compte 
-- Développeur supprimé
-- Ajout d'un développeur supplémentaire
 - Signé en
 - Échec de l'identifiant
 - Configuration de l'authentification à deux facteurs terminée
 - Réinitialisation de l'authentification à deux facteurs terminée
 - Autorisé Développeur 2FA
+- Ajout d'un développeur supplémentaire
 - Suspension du développeur
 - Développeur non suspendu
+- Développeur mis à jour
+- Développeur supprimé
+- Mise à jour de l'état de l'abonnement des utilisateurs
+- Utilisateur mis à jour
 
 ### Accès surélevé
 - Début de l'accès en hauteur
@@ -144,6 +154,7 @@ Ce rapport contient uniquement les 10 000 événements de sécurité les plus 
 ### Paramètres de l’entreprise
 - Ajout d'un groupe d'applications
 - Ajout d'une application
+- Modification des paramètres de l'entreprise
 
 ### Modèle d'e-mail
 - Ajout d'un modèle d'e-mail
@@ -160,9 +171,9 @@ Ce rapport contient uniquement les 10 000 événements de sécurité les plus 
 
 ## Affichage des données d'identification {#view-pii}
 
-L'autorisation **Afficher les IIP** n'est accessible qu'à quelques utilisateurs Braze sélectionnés. Pour connaître les possibilités existantes en matière de droits d'équipe, reportez-vous à la section [Définition des droits d'utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+L'autorisation **Afficher les IIP** n'est accessible qu'à quelques utilisateurs Braze sélectionnés. Par défaut, tous les administrateurs ont l'autorisation de **voir les informations confidentielles** activée dans les permissions de l'utilisateur. Ceci signifie qu’ils peuvent voir les attributs personnalisés et standard sur tous les tableaux de bord. Lorsque cette autorisation est désactivée pour des utilisateurs, ces derniers ne pourront pas voir ces informations.
 
-Par défaut, tous les administrateurs ont l'autorisation de **voir les informations confidentielles** activée dans les [permissions de l'utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). Ceci signifie qu’ils peuvent voir les attributs personnalisés et standard sur tous les tableaux de bord. Lorsque cette autorisation est désactivée pour des utilisateurs, ces derniers ne pourront pas voir ces informations.
+Pour connaître les possibilités existantes en matière de droits d'équipe, reportez-vous à la section [Définition des droits d'utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
 ### Définition des données d'identification
 
@@ -177,7 +188,7 @@ Les champs suivants peuvent être masqués aux utilisateurs de Braze qui n'ont p
 
 ### Zones restreintes
 
-Le texte suivant suppose que tous les champs sont définis comme PII et que les utilisateurs mentionnés sont ceux qui utilisent la plateforme Braze.
+Ce qui suit suppose que tous les champs sont définis comme des IIP et que les utilisateurs mentionnés sont ceux qui utilisent la plateforme de Braze.
 
 | Navigation sur le tableau de bord | Résultat | Remarques |
 | -------------------- | ------ | ----- |
@@ -194,9 +205,9 @@ Lors de la prévisualisation d'un message, l'autorisation **Voir les IIP** n'est
 
 ## Préférences en matière de suppression des données 
 
-Vous pouvez utiliser ce paramètre pour définir des préférences quant à la suppression de certains champs lors du processus de suppression d'un utilisateur pour les événements. Ces préférences n'affectent que les données des utilisateurs qui ont été supprimés de Braze. 
+Vous pouvez utiliser ce paramètre pour définir des préférences quant à la suppression de certains champs lors du processus de suppression d'un utilisateur pour les événements. Ces préférences n'ont d'impact que sur les données des utilisateurs qui ont été supprimés de Braze. 
 
-Lorsqu'un utilisateur est supprimé, Braze supprime toutes les informations personnelles des données d'événements mais conserve les données anonymisées à des fins d'analyse. Certains champs définis par l'utilisateur peuvent contenir des IIP si vous envoyez des informations sur les utilisateurs finaux à Braze. Si ces champs contiennent des informations personnelles (PII), vous pouvez choisir de supprimer les données lorsque les données d'événement sont anonymisées pour les utilisateurs supprimés ; si les champs ne contiennent pas de PII, ils peuvent être conservés pour l'analyse.
+Lorsqu'un utilisateur est supprimé, Braze supprime toutes les IPI des données d'événement mais conserve les données anonymes à des fins d'analyse/analytique. Certains champs définis par l'utilisateur peuvent contenir des IIP si vous envoyez des informations sur les utilisateurs finaux à Braze. Si ces champs contiennent des informations personnelles (PII), vous pouvez choisir de supprimer les données lorsque les données d'événement sont anonymisées pour les utilisateurs supprimés ; si les champs ne contiennent pas de PII, ils peuvent être conservés pour l'analyse.
 
 Vous êtes responsable de déterminer les préférences correctes pour votre espace de travail. La meilleure façon de déterminer les paramètres appropriés est de consulter les équipes internes envoyant des données d'événements à Braze et les équipes utilisant des extras de message dans Braze pour confirmer si les champs peuvent contenir des informations personnelles identifiables (PII).  
 
@@ -206,7 +217,8 @@ Vous êtes responsable de déterminer les préférences correctes pour votre esp
 | -------------------- | ------ | ----- |
 | Événement personnalisé | propriétés |  |
 | Événement d’achat | propriétés |  |
-| Message envoyé | suppléments_de_messages | Plusieurs types d'événements contiennent un champ message_extras. La préférence s'applique à tous les types d'événements d'envoi de message qui prennent en charge message_extras, y compris les types d'événements ajoutés à l'avenir. |
+| Message envoyé | suppléments_de_messages | Plusieurs types d'événements contiennent un champ `message_extras`. La préférence s'applique à tous les types d'événements d'envoi de messages qui prennent en charge `message_extras`, y compris les types d'événements qui seront ajoutés à l'avenir. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
 **La suppression est permanente !** Si vous choisissez de supprimer des champs de Snowflake pour les utilisateurs supprimés, le paramètre s'appliquera à toutes les données historiques de vos espaces de travail et à tous les événements pour les utilisateurs supprimés à l'avenir. Après que Braze a exécuté le processus pour appliquer les paramètres aux données d'événements historiques pour les utilisateurs supprimés, les données **ne peuvent pas être restaurées**.
@@ -221,9 +233,3 @@ Pour personnaliser les préférences par espace de travail, vous pouvez ajouter 
 ![La section Préférences de suppression des données est basculée pour personnaliser les préférences de suppression des données par espace de travail.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
-[1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "profil utilisateur obfusqué1"
-[2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "profil utilisateur obfusqué2"
-[3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "profil utilisateur obfusqué3"
-[5]: {% image_buster /assets/img/elevated_access.png %}
-[04]: {% image_buster /assets/img/remember_me.png %}
-[15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
