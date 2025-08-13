@@ -88,7 +88,7 @@ Sélectionnez **\+ Add New Header** pour chacun des en-têtes de requête suivan
 {: start="4" }
 4\. Sélectionnez **Enregistrer le modèle**.
 
-![Un modèle de webhook rempli pour créer un lead.][6]{: style="max-width:70%;"}
+![Un modèle de webhook rempli pour créer une piste.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Mise à jour d'une piste dans Salesforce Sales Cloud {#updating-lead}
 
@@ -141,7 +141,7 @@ Sélectionnez **\+ Add New Header** pour chacun des en-têtes de requête suivan
 {: start="4"}
 4\. Sélectionnez **Enregistrer le modèle**.
 
-![Un modèle de webhook rempli pour mettre à jour un lead.][7]{: style="max-width:70%;"}
+![Un modèle de webhook rempli pour mettre à jour une piste.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Utilisation de ces webhooks dans un flux de travail opérationnel
 
@@ -154,7 +154,7 @@ Vous pouvez rapidement ajouter vos modèles à vos flux de travail opérationnel
 
 Pour créer un lead dans Salesforce lorsqu'un utilisateur fournit son adresse e-mail, vous pouvez créer une campagne qui utilise le modèle de webhook "Update Lead" et se déclenche lorsqu'un utilisateur ajoute son adresse e-mail (par exemple, lorsqu'il remplit un formulaire Web).
 
-![Étape 2 de la création d'une campagne basée sur des actions et dont l'action déclencheur est "Ajouter une adresse e-mail".][1]{: style="max-width:70%;"}
+![Étape 2 de la création d'une campagne basée sur des actions et dont l'action déclencheur est "Ajouter une adresse e-mail".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Canevas de notation des prospects pour le franchissement du seuil de prospects qualifiés en marketing (MQL). {#lead-scoring}
 
@@ -167,21 +167,21 @@ Ajoutez une étape ultérieure à votre mise à jour des utilisateurs pour véri
 1. Ajoutez une étape de **parcours d'audience** avec deux groupes : "Seuil MQL" et "Tous les autres".
 2. Dans le groupe "Seuil MQL", recherchez les utilisateurs dont le statut n'est pas "MQL" (par exemple, `lead_stage` est égal à "Lead"), mais dont le score est supérieur au seuil que vous avez défini (par exemple, `lead_score` supérieur à 50). Si c'est le cas, ils passent à l'étape suivante, sinon ils sortent.
 
-![Le groupe "MQL Threshold" Audience Path avec des filtres pour un `lead_stage` égal à "Lead" et un `lead_score` supérieur à "50".][2]{: style="max-width:70%;"}
+![Le groupe "MQL Threshold Audience Path" avec des filtres pour un `lead_stage` égal à "Lead" et un `lead_score` supérieur à "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Ajoutez une étape de **mise à jour de l'** utilisateur qui met à jour la valeur de l'attribut `lead_stage` de l'utilisateur à "MQL".
 
-![L'étape de mise à jour de l'utilisateur "Update to MQL" qui met à jour l'attribut `lead_stage` avec la valeur "MQL".][3]{: style="max-width:70%;"}
+![L'étape de mise à jour de l'utilisateur "Update to MQL" qui met à jour l'attribut `lead_stage` avec la valeur "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. Ajoutez une étape webhook qui met à jour Salesforce avec la nouvelle étape MQL.
 
-![L'étape du webhook "Mise à jour de Salesforce" avec les détails complétés.][4]{: style="max-width:70%;"}
+![L'étape du webhook "Update Salesforce" avec les détails complétés.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 Désormais, votre flux Canvas mettra à jour les utilisateurs qui ont franchi votre seuil MQL !
 
-![Une étape de mise à jour de l'utilisateur Canvas qui vérifie si un utilisateur franchit le seuil MQL et, si l'utilisateur le franchit, met à jour Salesforce.][5]{: style="max-width:50%;"}
+![Une étape de mise à jour de l'utilisateur Canvas qui vérifie si un utilisateur franchit le seuil MQL et, si c'est le cas, met à jour Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Résolution des problèmes
 
@@ -189,13 +189,5 @@ Ces flux de travail ont une capacité de débogage limitée dans Salesforce, nou
 
 Par exemple, une erreur causée par une URL invalide utilisée pour la récupération du jeton oAuth s'affichera sous la forme suivante : `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 
-![Un corps de réponse d'erreur indiquant que l'URL n'est pas valide.][8]
+![Un corps de réponse d'erreur indiquant que l'URL n'est pas valide.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
-[1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
-[2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
-[3]: {% image_buster /assets/img/b2b/salesforce_update_mql.png %}
-[4]: {% image_buster /assets/img/b2b/salesforce_webhook.png %}
-[5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
-[6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
-[7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
-[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}
