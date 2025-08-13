@@ -15,7 +15,7 @@ Braze SDK rate limiting uses the following features to optimize performance, min
 
 ### Asynchronous processing
 
-Braze SDKs use a token bucket algorithm for rate limiting. This approach allows for bursts of activity while maintaining long-term rate control. Instead of processing requests in a strict queue, the token bucket operates asynchronously:
+The Braze SDK uses a token bucket algorithm for rate limiting. This approach allows for bursts of activity while maintaining long-term rate control. Instead of processing requests in a strict queue, the token bucket operates asynchronously:
 
 - **Token generation**: Tokens are replenished at a steady rate into the bucket.
 - **Request handling**: Any SDK call that arrives when a token is available proceeds immediately, regardless of when other calls arrived.
@@ -27,7 +27,7 @@ This asynchronous flow helps the SDK respond quickly to available network capaci
 
 ### Adaptive rate limiting
 
-Braze can adjust rate limits in real time to protect network infrastructure and maintain optimal performance. This approach:
+The Braze SDK can adjust rate limits in real time to protect network infrastructure and maintain optimal performance. This approach:
 
 - **Prevents overload**: Adjusts limits to avoid network congestion.
 - **Optimizes performance**: Maintains smooth SDK operation under varying conditions.
@@ -39,7 +39,7 @@ Because limits adapt in real time, exact bucket sizes and static values are not 
 
 ### Networking optimizations
 
-Braze SDKs include several built-in behaviors to improve efficiency, reduce battery usage, and handle varying network conditions:
+The Braze SDK includes several built-in behaviors to improve efficiency, reduce battery usage, and handle varying network conditions:
 
 - **Automatic batching**: Queues events and sends them in efficient batches.
 - **Network-aware behavior**: Adjusts flush rates based on connectivity quality.
