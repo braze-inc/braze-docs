@@ -26,11 +26,11 @@ channel:
 
 캠페인의 분석 페이지로 이동하여 알림 설정을 시작하세요. **Set Up Alert**을 선택하면 상한 및 하한 경고 임계값뿐만 아니라 경고 수신자 및 채널을 지정할 수 있습니다.
 
-![캠페인 모니터링 대화 상자에는 두 개의 버튼이 있습니다: 취소 및 저장.][2]
+![캠페인 모니터링 대화 상자에는 두 개의 버튼이 있습니다: 취소 및 저장]({% image_buster /assets/img_archive/campaign_alerts.png %})
 
 예약된 반복 캠페인의 경우, 캠페인이 보낼 때마다 전송되는 메시지의 상한선과 하한선을 설정할 수 있습니다. 트리거된 캠페인의 경우 시간당 및 일일로 전송되는 메시지 수에 대한 상한 및 하한 임계값을 설정할 수 있습니다.
 
-이메일 알림, 웹훅 알림 또는 둘 다 설정할 수 있습니다. 웹훅 알림은 매우 유용할 수 있습니다. 슬랙 채널에 알림을 보낼 수 있기 때문입니다. Slack과 캠페인 알림을 통합하는 방법에 대한 자세한 내용은 [설명서][1]를 참조하세요.
+이메일 알림, 웹훅 알림 또는 둘 다 설정할 수 있습니다. 웹훅 알림은 매우 유용할 수 있습니다. 슬랙 채널에 알림을 보낼 수 있기 때문입니다. Slack과 캠페인 알림을 통합하는 방법에 대한 자세한 내용은 [설명서]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration)를 참조하세요.
 
 {% alert note %}
 미래 캠페인에 대한 캠페인 알림을 설정할 때 캠페인이 시작되기 전과 종료된 후에 업데이트를 받을 수 있습니다. 이것은 캠페인 알림이 캠페인이 수동으로 중지될 때까지 계속 전송되기 때문입니다.
@@ -48,5 +48,3 @@ channel:
 "campaign_api_id":"fe787bc5-d13f-4123-b22f-3bd48f9fc407","upper_threshold":0,"lower_threshold":500,"value":4}}
 ```
 
-[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration
-[2]: {% image_buster /assets/img_archive/campaign_alerts.png %}
