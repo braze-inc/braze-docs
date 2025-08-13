@@ -27,7 +27,7 @@ channel:
 3. **작성** 섹션에서 바닥글을 편집합니다.
 4. 테스트 메시지를 보냅니다. 
 
-![사용자 지정 바닥글의 예입니다.][20]
+![사용자 지정 바닥글의 예.]({% image_buster /assets/img_archive/custom_footer.png %})
 
 기본값 바닥글은 {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} 속성과 실제 우편 주소를 사용합니다. 이 기본값을 사용하는 경우 **프로토콜에** **<기타>를** 선택해야 합니다.
 
@@ -35,7 +35,7 @@ channel:
 CAN-SPAM 규정을 준수하려면 커스텀 바닥글에 {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}을 포함해야 합니다. 이 속성이 없으면 커스텀 바닥글을 저장할 수 없습니다.
 {% endalert %}
 
-![프로토콜 및 URL 값은 커스텀 바닥글에 필요합니다.][24]{: style="max-width:50%;"}
+![사용자 지정 바닥글에 필요한 프로토콜 및 URL 값.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## 탈퇴 링크가 없는 바닥글
 
@@ -43,11 +43,11 @@ CAN-SPAM 규정을 준수하려면 커스텀 바닥글에 {% raw %}`{{${set_user
 
 이메일 작성기에는 다음과 같은 경고가 표시됩니다:
 
-![예시 이메일은 바닥글 없이 작성되었습니다.][21]
+![바닥글 없이 작성된 이메일 예시]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 캠페인 작성기에는 다음과 같은 경고가 표시됩니다:
 
-![바닥글이 없는 캠페인 작성.][22]
+![노풋터 캠페인 구성]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### 사용자 지정 수신 거부 링크 추가하기
 
@@ -89,10 +89,5 @@ CAN-SPAM 규정을 준수하려면 커스텀 바닥글에 {% raw %}`{{${set_user
 
 플레인 텍스트 바닥글을 포함하지 않으면 Braze에서 HTML 바닥글을 자동으로 구축합니다. 사용자 정의 바닥글이 원하는 대로 완성되면 **저장을** 선택합니다.
 
-![커스텀 일반 텍스트 바닥글 설정 옵션이 선택된 이메일.][23]{: style="max-width:70%" }
+![사용자 지정 일반 텍스트 바닥글 설정 옵션이 선택된 이메일]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}
