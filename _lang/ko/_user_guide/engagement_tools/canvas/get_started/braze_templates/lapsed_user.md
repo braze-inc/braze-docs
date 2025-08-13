@@ -15,13 +15,13 @@ tool: Canvas
 
 ## 필수 조건
 
-만료된 사용자 템플릿을 성공적으로 사용하려면 사용하는 파트너 및 오디언스와 [Braze 오디언스 동기화를]({{site.baseurl}}/partners/canvas_steps) 구성해야 합니다.
+To successfully use the lapsed user template, you need to configure [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) with the partners and audiences you use.
 
 ## 귀하의 필요에 맞게 템플릿을 조정하기
 
 영화와 쇼에 대한 독점 콘텐츠를 제공하는 스트리밍 서비스인 MovieCanon을 위해 일하고 있다고 가정해 보겠습니다. 우리는 30일 동안 우리 앱을 방문하지 않은 사용자에게 혜택과 프리미엄 콘텐츠를 홍보하기 위해 이탈 사용자 템플릿을 사용할 수 있습니다.
 
-캔버스를 만들기 전에, 우리는 Braze 오디언스 동기화를 Google 통합으로 설정하여 Braze에서 사용자 데이터를 Google 오디언스에 추가하여 행동 트리거, 세분화 등을 기반으로 광고를 보낼 수 있도록 합니다.
+Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
 새 캔버스를 만들 때, 만료되는 사용자 템플릿에 접근하려면 캔버스 템플릿 사용 > 브레이즈 템플릿을 선택하세요. 그런 다음, Lapsing User 옆에서 Apply Template을 선택합니다. 이제 우리는 템플릿을 살펴보고 우리의 필요에 맞게 조정할 수 있습니다.
 
@@ -38,13 +38,13 @@ tool: Canvas
 3\. 설명을 업데이트하여 이 캔버스에 특전과 프로모션이 포함되어 있음을 설명합니다.
 4\. Lapsing/Retention 태그를 추가하여 캔버스 홈 페이지에서 이 캔버스를 필터링할 수 있도록 하세요.
 
-"캔버스 세부정보 설정" 단계에서 캔버스 이름은 "이탈한 사용자 - 앱 방문"이며 간단한 캔버스 설명이 있습니다.
+!["Set Up Canvas Details" step with Canvas name of "Lapsed User - Visit App" and a brief Canvas description]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### 2단계: 전환 이벤트를 할당하세요
 
 **주요 전환 이벤트 - A**를 우리 앱(MovieCanon)의 사용자 대상으로 업데이트하고, **주요 전환 이벤트 - B**는 기본값인 모든 구매로 남겨둡니다.
 
-"사용자 세션 시작"이 특정 앱에서의 주요 전환 이벤트인 "전환 이벤트 할당" 섹션.
+!["Assign Conversion Events" section with a primary conversion even of a user starting a session in a specific app.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### 3단계: 입회 일정을 조정하다
 
@@ -55,13 +55,13 @@ tool: Canvas
 1. 시작 날짜와 시간을 선택하세요.
 2. 특정 날짜와 두 달 후의 날짜의 종료 매개변수를 선택하십시오. 다른 이탈 사용자 캔버스가 있다고 가정해 보겠습니다. 이 캔버스가 끝난 후 시작하고 싶습니다.
 
-"입장 일정" 단계는 지정된 시간에 사용자를 입장시키는 예약된 캔버스입니다.
+!["Entry Schedule" step for a scheduled Canvas that enters users at a designated time.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### 4단계: 우리의 목표 오디언스를 선택하세요
 
 우리는 30일 이상 우리 앱을 사용하지 않은 사용자로 설정된 기본값 설정을 유지할 것입니다. 우리는 또한 사용자가 4주 후에 캔버스에 다시 들어갈 수 있도록 기본값 입력 제어를 유지할 것입니다. 이것은 사용자가 30일 이상 연속으로 우리 앱을 방문하지 않을 때마다 그들이 캔버스에 들어간다는 것을 의미합니다.
 
-"타겟 오디언스" 단계는 마지막으로 앱을 사용한 지 30일이 지난 사용자들을 타겟팅합니다.
+!["Target Audience" step targeting users who last used the apps in 30 days.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### 5단계: 전송 설정을 선택하세요
 
@@ -73,7 +73,7 @@ tool: Canvas
 
 우리가 변경할 유일한 설정은 방해금지 시간 동안 메시지가 발생할 때 무엇을 할지입니다. 메시지를 취소하는 대신, 다음 가능한 시간에 보내기를 선택하여 우리 사용자들이 어떤 프로모션도 놓치지 않도록 하세요.
 
-"방해금지 시간" 섹션은 시작 시간이 12시(자정)이고 종료 시간이 8시(오전)입니다.
+!["Quiet Hours" section with a start time of 12 am and end time of 8 am.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### 6단계: 당신의 캔버스를 사용자 정의하세요
 
@@ -81,12 +81,12 @@ tool: Canvas
 
 1. 모든 사용자가 30일 이상 우리 앱을 방문하지 않은 경우에 보낼 첫 번째 이메일을 사용자 정의하세요. 우리의 사용 사례를 위해, 우리는 사용자에게 오늘 우리 앱을 방문하면 새로운 혜택을 잠금 해제할 것이라는 내용을 담은 이메일을 맞춤 설정할 것입니다. 
 
-캔버스 메시지 단계는 오늘 방문할 때 사용자에게 새로운 특전을 잠금 해제하라는 이메일을 보냅니다.
+![Canvas Message step for an email that tells users to unlock new perks when they visit today.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\. "Start Session?"라는 행동 경로 구성 요소를 시작된 세션 경로에 대해 우리의 앱을 선택하여 사용자 정의하십시오. 
 
-특정 앱에서 시작된 세션에 대한 행동 경로.
+![Action path for sessions that are started in a specific app.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\. "Sessions?"라는 결정 분할 단계의 기본값을 유지하세요. 이는 지난 캘린더 일에 우리 앱을 한 번 이상 사용한 사용자들을 ">1 Session" 그룹으로 정의합니다.
@@ -95,7 +95,7 @@ tool: Canvas
 6\. "A/B Test"라는 실험 경로 구성 요소의 기본값을 유지하십시오. 이것은 두 개의 프로모션 중 하나(다음 단계에서 사용자 정의할 예정)를 세션이 두 개 미만인 사용자에게 무작위로 전송합니다.
 7\. 사용자에게 실험 경로의 일환으로 전송될 두 가지 프로모션을 사용자 정의하십시오. 우리의 사용 사례에서, 우리는 하나는 3개월 구독에 대한 20% 프로모션으로 만들고, 다른 하나는 1개월 구독에 대한 10% 프로모션으로 만들 것입니다.
 
-세션 수에 따라 분기 경로가 있는 캔버스 단계.
+![Canvas steps with branching paths based on how many sessions a user had.]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
 
 ### 7단계: 테스트하고 캔버스를 시작하세요.
 
@@ -105,11 +105,3 @@ tool: Canvas
 캔버스 출시 전후에 고려해야 할 사항에 대한 체크리스트를 확인하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/lapsing_user_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/lapsing_user_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/lapsing_user_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/lapsing_user_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/lapsing_user_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}
