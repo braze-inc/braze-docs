@@ -17,7 +17,7 @@ Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas 
 
 > La fonctionnalité **Comportement d'avancement** vous permet de choisir les critères d'avancement par le biais de votre [composant Canvas.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) 
 
-![Paramètres Comportement d’avancement avec deux options pour avancer l’audience lorsque le message est envoyé ou avancer immédiatement l’audience.][1]
+![Paramètres de comportement d'avancement avec deux options : soit l'avancement de l'audience lors de l'envoi du message, soit l'avancement immédiat de l'audience.]({% image_buster /assets/img/push-advancement-behavior.png %} "Comportement d'avancement")
 
 Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. Avec les étapes du [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), vous pouvez activer les validations de réception/distribution pour vérifier que votre audience répond à vos critères de livraison lors de l'envoi du message. Cette étape sera prise en compte dans les critères de l'étape lors de l'utilisation de Canvas Flow. Ainsi, si un utilisateur ne répond pas aux critères de validation de livraison, il quittera le Canvas.
 
@@ -41,7 +41,7 @@ Lorsque l'option **Avancer immédiatement l'audience** est sélectionnée, les u
 
 ### Étapes planifiées
 
-Pour un comportement planifié, les utilisateurs doivent respecter les options d’audience de l’étape pour avancer dans l’étape. Si l'étape comporte un [événement d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), les utilisateurs qui effectuent l'événement d'exception ne seront pas avancés dans l'étape.
+Pour un comportement planifié, les utilisateurs doivent respecter les options d’audience de l’étape pour avancer dans l’étape. Si l'étape comporte un [événement d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events), les utilisateurs qui effectuent l'événement d'exception ne seront pas avancés dans l'étape.
 
 Lors de l’envoi d’un composant multicanal avec [Timing Intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), nous pouvons envoyer ou essayer d’envoyer des messages à différents moments pour différents canaux. Braze avancera automatiquement des utilisateurs lors de la tentative d’envoi du premier message dans un composant.
 
@@ -77,4 +77,3 @@ Les clients Braze qui n’ont pas participé aux premières étapes de la versio
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} « Comportement d'avancement »
