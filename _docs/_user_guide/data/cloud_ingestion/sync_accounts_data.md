@@ -27,7 +27,11 @@ description: "This page provides an overview of how to sync account data."
  
 ### Step 1: Configure your accounts schema
 
-Any changes to the accounts schema in your workspace (for example, adding new fields or changing field type) must be made through the accounts dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
+Any changes to the accounts schema in your workspace (such as, adding new fields or changing field type) must be made through the accounts dashboard before updated data is synced through CDI.
+
+{% alert important %}
+Only make updates to your account schema when the sync is paused or not scheduled, so you can avoid conflicts between your data warehouse data and the schema in Braze.
+{% endalert %}
 
 ### Step 2: Integrate your data source
 
@@ -69,13 +73,13 @@ To integrate your data source with your data warehouse:
     GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
     ```
 3. If your Snowflake account has network policies, allowlist the Braze IPs so the CDI service can connect. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
-4. In the Braze dashboard, navigate to **Data Settings** > **Cloud Data Ingestion**, and create a new sync.
-5. Enter connection details (or reuse existing credentials) and the source table.
-6. Proceed to step 2 of the setup flow, select the “Accounts” sync type, and input the integration name and schedule. 
-7. Choose a sync frequency and proceed to the next step.
-8. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you will need someone with `SECURITYADMIN` access or higher in Snowflake. 
-9. Select **Test Connection** so that everything works as expected. 
-10. Save the sync, and use the synced account data for all your personalization or segmentation use cases. 
+4. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion**, and create a new sync.
+5. Enter connection details (or reuse existing credentials), then enter the source table.
+6. For the sync type, select **Accounts**, then enter the integration name and schedule. 
+7. Choose a sync frequency.
+8. Add the public key shown in the dashboard to the user you previously created. Note that you'll need to choose a user with `SECURITYADMIN` access or higher in Snowflake. 
+9. Select **Test Connection** and verify the sync. 
+10. When you're finished, save your sync. 
 {% endsubtab %}
 {% subtab Redshift %}
 
@@ -218,23 +222,20 @@ To integrate your data source with your data warehouse:
 {% endtab %}
 
 {% tab File Storage Integration %}
-There are no additional filename requirements other than what's enforced by AWS. Filenames must be unique, so we recommend appending timestamps to your filenames.
+There are no additional filename requirements other than what's enforced by AWS. Filenames must be unique, so we recommend appending timestamps to your filenames. For more information about Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations).
 
-For more information about Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations). 
+Refer to the following table when integrating with a file storage:
 
-**Files should include the below fields:**
-
-| Field | Required | Description |  
+| Field | Required? | Description |  
 | --- | --- | --- |  
-| `ID` | YES | ID of the Account to update or create |  
-| `NAME` | YES | Name of the Account |  
-|`PAYLOAD` | YES | This is a JSON string of the fields you want to sync to the user in Braze. |  
-|`DELETED` | NO | Boolean indicating to delete the Account from Braze. |  
+| `ID` | Yes | ID of the Account to update or create |  
+| `NAME` | Yes | Name of the Account |  
+| `PAYLOAD` | Yes | This is a JSON string of the fields you want to sync to the user in Braze. |  
+| `DELETED` | Optional | Boolean indicating to delete the Account from Braze. |  
+| `UPDATED_AT` | _*Unsupported_ | Unlike data warehouses, file storage doesn't support `UPDATED_AT` columns. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-{% alert note %}
-Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported. 
-{% endalert %}
+The following examples show valid JSON and CSV formats for syncing account data from file storage.
 
 {% subtabs %}
 {% subtab JSON Accounts %}
@@ -267,11 +268,11 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## About data formats
+## Creating a sync view
 
-We recommend creating a view in your data warehouse from your account data to set up a source that will refresh each time a sync runs. With views, you won't need to rewrite the query each time.
+Creating a sync view in your data warehouse lets the source refresh automatically without needing to rewrite additional queries.
 
-For example, if you have a table of account data called `account_details_1` with `account_id`, `account_name` and three additional attributes, you could sync the below view:
+For example, if you have a table of account data called `account_details_1` with `account_id`, `account_name`, and three additional attributes, you could create a sync view like the following:
 
 {% tabs %}
 {% tab Snowflake %}
