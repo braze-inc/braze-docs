@@ -28,6 +28,8 @@ Pour utiliser cet endpoint, vous devrez effectuer les opérations suivantes :
 - Générez une clé API avec l’autorisation `messages.live_activity.update`.
 - Enregistrez une activité en direct [à distance]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) ou [localement]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) à l'aide du SDK Braze Swift.
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
