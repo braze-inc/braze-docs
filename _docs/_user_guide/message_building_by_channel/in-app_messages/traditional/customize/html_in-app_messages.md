@@ -194,7 +194,7 @@ Otherwise, hover over an asset from the list and select <i class="fas fa-copy"><
 Changes you make in the HTML automatically render in the preview panel as you type. Any [`brazeBridge` JavaScript](#bridge) methods you use in your HTML won't update user profiles while previewing in the dashboard.
 
 {% alert tip %}
-You can select the magnifying glass icon within the HTML editor to search within your code!
+You can select <i class="fa-solid fa-magnifying-glass"></i> **Search** within the HTML editor to search within your code!
 {% endalert %}
 
 ### Button tracking {#button-tracking-improvements}
