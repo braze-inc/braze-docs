@@ -42,7 +42,7 @@ To integrate your data source with your data warehouse:
 {% subtabs %}
 {% subtab Snowflake %}
 
-1. Set up a source table in Snowflake. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+1. Create a source table in Snowflake. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
   ```json
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -58,7 +58,7 @@ To integrate your data source with your data warehouse:
          DELETED BOOLEAN
     );
     ```
-2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the accounts source table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -72,18 +72,19 @@ To integrate your data source with your data warehouse:
     CREATE USER BRAZE_INGESTION_USER;
     GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
     ```
-3. If your Snowflake account has network policies, allowlist the Braze IPs so the CDI service can connect. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
-4. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion**, and create a new sync.
-5. Enter connection details (or reuse existing credentials), then enter the source table.
-6. For the sync type, select **Accounts**, then enter the integration name and schedule. 
-7. Choose a sync frequency.
-8. Add the public key shown in the dashboard to the user you previously created. Note that you'll need to choose a user with `SECURITYADMIN` access or higher in Snowflake. 
-9. Select **Test Connection** and verify the sync. 
-10. When you're finished, save your sync. 
+3. If you use network policies, allowlist the Braze IPs so the CDI service can connect. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+4. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion** and create a new sync.
+5. Enter connection details (or reuse existing ones), then add the source table.
+6. Select the **Accounts** sync type, then enter the integration name and schedule. 
+7. Choose the sync frequency.
+8. Add the public key from the dashboard to the user you created. This requires a user with `SECURITYADMIN` access or higher in Snowflake. 
+9. Select **Test Connection** to confirm the setup. 
+10. When you're finished, save the sync.
+
 {% endsubtab %}
 {% subtab Redshift %}
 
-1. Set up a source table in Redshift. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+1. Create a source table in Redshift. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
     ```json
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -99,7 +100,7 @@ To integrate your data source with your data warehouse:
        deleted boolean
     )
     ```
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the accounts source table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -107,18 +108,17 @@ To integrate your data source with your data warehouse:
     GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
     ```
     {% endraw %}
-3. If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard’s region. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. If you have a firewall or network policies, allow Braze access to your Redshift instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% subtab BigQuery %}
 
-1. Optionally, set up a new project or dataset to hold your source table. 
+1. (Optional) Create a new project or dataset for your source table.  
     ```json
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
-    Create one or more tables to use for your CDI integration with the following fields:
-
+2. Create the source table for your CDI integration:  
     ```json
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
@@ -130,76 +130,79 @@ To integrate your data source with your data warehouse:
     );
     ```
 
-    | FIELD NAME | TYPE | MODE |
-    | --- | --- | --- |
-    | UPDATED_AT | TIMESTAMP | REQUIRED |
-    | PAYLOAD | JSON | REQUIRED |
-    | ID | STRING | REQUIRED |
-    | NAME | STRING | REQUIRED |
-    | DELETED | BOOLEAN | OPTIONAL |
+    Refer to the following when creating your source table:
+
+    | Field Name | Type | Required? |
+    | ---------- | ---- | --------- |
+    | `UPDATED_AT` | Timestamp | Yes |
+    | `PAYLOAD` | JSON | Yes |
+    | `ID` | String | Yes |
+    | `NAME` | String | Yes |
+    | `DELETED` | Boolean | Optional |
     {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-{:start="2"}
-
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;but make sure to extend access to the accounts source table.
+{:start="3"}
+3. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them as long as they have access to the accounts table.
 
     | Permission | Purpose |
     |------------|---------|
-    | BigQuery Connection User | Allows Braze to make connections. |
-    | BigQuery User | Provides Braze access to run queries, read dataset metadata, and list tables. |
-    | BigQuery Data Viewer | Provides Braze access to view datasets and their contents. |
-    | BigQuery Job User | Provides Braze access to run jobs. |
+    | BigQuery Connection User | Allows Braze to connect. |
+    | BigQuery User | Allows Braze to run queries, read metadata, and list tables. |
+    | BigQuery Data Viewer | Allows Braze to view datasets and contents. |
+    | BigQuery Job User | Allows Braze to run jobs. |
     {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-    After creating the service account and granting permissions, generate a JSON key. Refer to [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for more information. You'll update this to the Braze dashboard later.
+    After granting permissions, generate a JSON key. See [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for instructions. You’ll upload it in the Braze dashboard later.
 
-{:start="3"}
-3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, refer to the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+{:start="4"}
+4. If you use network policies, allow Braze IPs to access your BigQuery instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% subtab Databricks %}
 
-1. Set up a source table in Databricks. You can use the names in the following example or choose your catalog, schema, and table names. You can also use a view or a materialized view instead of a table.
+1. Create a catalog or schema for your source table.  
     ```json
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
+2. Create the source table for your CDI integration:  
     ```json
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp(),
       id STRING,
       name STRING,
-      deleted BOOLEAN,
-      payload STRING, STRUCT, or MAP
+      payload STRING, STRUCT, or MAP,
+      deleted BOOLEAN
     );
     ```
 
-    | FIELD NAME | TYPE | MODE |
-    | --- | --- | --- |
-    | UPDATED_AT | TIMESTAMP | REQUIRED |
-    | PAYLOAD | STRING, STRUCT, or MAP | REQUIRED |
-    | ID | STRING | REQUIRED |
-    | NAME | STRING | REQUIRED |
-    | DELETED | BOOLEAN | NULLABLE |
+    Refer to the following when creating your source table:
+
+    | Field Name | Type | Required? |
+    | ---------- | ---- | --------- |
+    | `UPDATED_AT` | Timestamp | Yes |
+    | `PAYLOAD` | String, Struct, or Map | Yes |
+    | `ID` | String | Yes |
+    | `NAME` | String | Yes |
+    | `DELETED` | Boolean | Optional |
     {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-{:start="2"}
-2. Create a personal access token in your Databricks workspace:
-    1. Select your Databricks username, then select **User Settings** from the dropdown menu.  
-    2. On the **Access tokens** tab, select **Generate new token**.  
-    3. Enter a comment that helps you to identify this token, such as "Braze CDI".  
-    4. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.  
-    5. Copy the displayed token, and then select **Done**.  
-    6. Keep the token in a safe place until you need to enter it during the credential creation step in the Braze dashboard.
-
 {:start="3"}
-3. If you have network policies in place, you must give Braze network access to your Databricks instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page.
+3. Create a personal access token in Databricks:
+    1. Select your username, then select **User Settings**.  
+    2. On the **Access tokens** tab, select **Generate new token**.  
+    3. Add a comment to identify the token, such as "Braze CDI".  
+    4. Leave **Lifetime (days)** blank for no expiration, then select **Generate**.  
+    5. Copy and save the token securely for use in the Braze dashboard.
+
+{:start="4"}
+4. If you use network policies, allow Braze IPs to access your Databricks instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% subtab Microsoft Fabric %}
 
-1. Create one or more tables to use for your CDI integration with the following fields:
+1. Create one or more tables for your CDI integration with these fields:
     ```json
     CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
     (
@@ -213,10 +216,11 @@ To integrate your data source with your data warehouse:
     ```
 
 {:start="2"}
-2. Set up a service principal and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the accounts source table. To learn more about how to create a new service principal and credentials, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page. 
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
 
 {:start="3"}
-3. If you have network policies in place, you must give Braze network access to your Microsoft Fabric instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
