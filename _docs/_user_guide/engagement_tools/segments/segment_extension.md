@@ -23,15 +23,6 @@ For example, Braze default segmentation will find users that fit specific criter
 There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
 {% endalert %}
 
-### SQL credit usage
-
-The following Segment Extension types consume SQL credits:
-
-- SQL Segment Extensions (both incremental and full refresh)
-- Catalog Segments
-- CDI Segments 
-    - Credits are consumed within your own data warehouse
-
 ## Creating a Segment Extension
 
 To create a Segment Extension, you will create a filter to refine a segment of your users based on custom event properties. When creating a Segment Extension, you will choose whether the segment will be static or dynamically refreshed at a set interval.
@@ -46,13 +37,20 @@ From the Segment Extensions table, select  **Create New Extension**, then select
 Best for when you don't want to use SQL.
 - **Start with a template:** Create a SQL segment with a customizable template using Snowflake data.
 - **Incremental refresh:** Write a Snowflake SQL segment that automatically refreshes the last 2 days of data or manually refresh as needed. Best for balancing accuracy and cost-efficiency.
-- **Full refresh:** Write a Snowflake SQL segment that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
+- **Full refresh:** Write a SQL segment with Snowflake data or any [CDI connected source]({{site.baseurl}}/cdi_segment_extensions/) that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
 
 ![Table with different Segment Extension creation experiences to select from.]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
-If you select an experience that uses SQL, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) for further information.
+If you select an experience that uses SQL, refer to [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) for further information. If you select **Simple extension**, continue to step 2.
 
-If you select **Simple extension**, continue to the steps below.
+#### SQL credit usage
+
+The following Segment Extension types consume SQL credits:
+
+- SQL Segment Extensions (both incremental and full refresh)
+- Catalog Segments
+- CDI Segments 
+    - Credits are consumed within your own data warehouse
 
 ### Step 2: Name your Segment Extension
 
