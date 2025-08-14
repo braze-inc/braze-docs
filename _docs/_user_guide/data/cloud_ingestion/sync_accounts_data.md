@@ -25,11 +25,11 @@ Only make updates to your account schema when the sync is paused or not schedule
 
 ## How syncing works
 
-- Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
-- The data fetched from the integration will be used to create or update accounts based on the `id` provided.
-- If `DELETED` is set to `true`, the corresponding account item will be deleted.
-- The sync won't consume data points, but all data synced will count toward your total accounts usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
-- Any fields that exist in your source data but not in the accounts schema will be dropped before they're synced to Braze; to add new fields, update the accounts schema and then sync the new data
+- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp.
+- Data from the integration creates or updates accounts based on the provided `id`.
+- If `DELETED` is `true`, the account is deleted.
+- Syncing doesn’t consume data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
+- Fields not in your accounts schema are dropped; update the schema before syncing new fields.
 
 ## Syncing your account data
 
