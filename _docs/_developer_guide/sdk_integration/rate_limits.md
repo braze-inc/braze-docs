@@ -59,22 +59,30 @@ Follow these best practices to help avoid rate limit issues:
 | Focus on events that add value to analytics | Call SDK methods in rapid succession without considering frequency |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Getting Help
+## Getting help
 
-When contacting [support@braze.com](mailto:support@braze.com) about SDK rate limit issues, please include the following information:
+If you're experiencing SDK rate limit issues, review the following networking methods:
+
+- `requestImmediateDataFlush()`
+- `requestContentCardsRefresh()`
+- `refreshFeatureFlags()`
+- `logCustomEvent()`
+- `logPurchase()`
+
+When contacting [support@braze.com](mailto:support@braze.com), please include the following details for each of the networking SDK methods you use:
 
 ```plaintext
-Call frequency for each networking SDK method:
-- requestImmediateDataFlush(): [frequency]
-- requestContentCardsRefresh(): [frequency]
-- refreshFeatureFlags(): [frequency]
-- logCustomEvent(): [frequency]
-- logPurchase(): [frequency]
-- Other: [method and frequency]
+Method name:
 
-Context in which these calls occur (e.g., scroll events, button clicks):
-[describe]
+Frequency:
+[Describe how often this is called, e.g., at every app launch, once per session]
 
-Patterns in user flow that may trigger excessive calls:
-[describe]
+Trigger/context:
+[Describe what causes it to be called, e.g., button click, scroll event]
+
+Code snippet:  
+[Paste the exact code where this method is called]
+
+Patterns in user flow that may cause bursts or excessive calls:
+[Describe here]
 ```
