@@ -22,14 +22,14 @@ Ce contenu est destiné à servir d'orientation générale et ne garantit pas la
 
 Soutenir la communication accessible signifie rester ouvert, curieux et désireux d'apprendre. Chez Braze, nous avons à cœur d'aider les gens à se connecter, et nous savons que faire de la place à tout le monde fait partie d'un bon travail. L'accessibilité n'est pas une chose que nous considérons comme acquise et nous nous réjouissons de pouvoir continuer à apprendre.
 
-{% multi_lang_include l'accessibilité/feedback.md %}
+{% multi_lang_include accessibility/feedback.md %}
 
 ## Domaines d’invalidité à envisager
 
 *Cette section est partiellement adaptée de [W3C : Capacités et obstacles divers](https://www.w3.org/WAI/people-use-web/abilities-barriers/).*
 
 {% tabs local %}
-{% tab Visuel %}
+{% tab Visual %}
 
 Les handicaps visuels peuvent varier d’une perte de vision légère ou modérée dans un œil ou les deux yeux, à une perte de vision importante ou complète dans les deux yeux. Certaines personnes ont une sensibilité réduit ou absente pour certaines couleurs ou ont une sensibilité plus fortes aux couleurs vives.
 
@@ -468,7 +468,7 @@ Incluez des sous-titres codés dans vos vidéos afin que les utilisateurs puisse
 
 Les sous-titres peuvent être basculés, ce qui permet aux utilisateurs de choisir ce qui leur convient le mieux.
 
-{% multi_lang_include l'accessibilité/video.md %}
+{% multi_lang_include accessibility/video.md %}
 
 #### Fournir des contrôles de lecture {#playback-controls}
 
@@ -497,7 +497,7 @@ Un contraste de couleurs suffisant permet de s'assurer que vos messages sont fac
 
 Vous pouvez tester vos choix de couleurs à l'aide de l'[outil de vérification du contraste de WebAim](https://webaim.org/resources/contrastchecker/).
 
-{% multi_lang_include l'accessibilité/color.md %}
+{% multi_lang_include accessibility/color.md %}
 
 ### HTML personnalisé
 
