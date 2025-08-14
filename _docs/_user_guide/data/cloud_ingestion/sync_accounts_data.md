@@ -12,7 +12,15 @@ description: "This page provides an overview of how to sync account data."
 > Learn how to sync your Braze account data using CDI.
 
 {% alert important %}
-[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, and only beta particpants can configure an Accounts sync through CDI. Contact your Braze account manager if you’re interested in participating in this beta.
+[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, which is required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
+{% endalert %}
+
+## Prerequisites
+
+Before you can sync your account data using CDI, you'll need to [configure your accounts schema](https://braze.com/unlisted_docs/account_opportunity_object/).
+
+{% alert note %}
+Only make updates to your account schema when the sync is paused or not scheduled to avoid conflicts between your data warehouse data and the schema in Braze.
 {% endalert %}
 
 ## How syncing works
@@ -24,19 +32,11 @@ description: "This page provides an overview of how to sync account data."
 - Any fields that exist in your source data but not in the accounts schema will be dropped before they're synced to Braze; to add new fields, update the accounts schema and then sync the new data
 
 ## Syncing your account data
- 
-### Step 1: Configure your accounts schema
 
-Any changes to the accounts schema in your workspace (such as, adding new fields or changing field type) must be made through the accounts dashboard before updated data is synced through CDI.
-
-{% alert important %}
-Only make updates to your account schema when the sync is paused or not scheduled, so you can avoid conflicts between your data warehouse data and the schema in Braze.
-{% endalert %}
-
-### Step 2: Integrate your data source
+You can sync your account data using CDI through a data warehouse or a file storage.
 
 {% tabs local %}
-{% tab Data Warehouse Integrations %}
+{% tab Data Warehouse %}
 To integrate your data source with your data warehouse:
 
 {% subtabs %}
@@ -225,19 +225,21 @@ To integrate your data source with your data warehouse:
 {% endsubtabs %}
 {% endtab %}
 
-{% tab File Storage Integration %}
-There are no additional filename requirements other than what's enforced by AWS. Filenames must be unique, so we recommend appending timestamps to your filenames. For more information about Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations).
-
-Refer to the following table when integrating with a file storage:
+{% tab File Storage %}
+To sync account data from file storage, create a source file with the following fields.
 
 | Field | Required? | Description |  
 | --- | --- | --- |  
 | `ID` | Yes | ID of the Account to update or create |  
 | `NAME` | Yes | Name of the Account |  
-| `PAYLOAD` | Yes | This is a JSON string of the fields you want to sync to the user in Braze. |  
-| `DELETED` | Optional | Boolean indicating to delete the Account from Braze. |  
-| `UPDATED_AT` | _*Unsupported_ | Unlike data warehouses, file storage doesn't support `UPDATED_AT` columns. |
+| `PAYLOAD` | Yes | JSON string of the fields to sync to the account in Braze |  
+| `DELETED` | Optional | Boolean indicating to delete the account from Braze |  
+| `UPDATED_AT` | _*Unsupported_ | File storage doesn't support `UPDATED_AT` columns |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+{% alert note %}
+Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations).
+{% endalert %}
 
 The following examples show valid JSON and CSV formats for syncing account data from file storage.
 
@@ -251,17 +253,17 @@ The following examples show valid JSON and CSV formats for syncing account data 
 ```  
 
 {% alert important %}
-Every line in your source file must contain valid JSON, or the file will be skipped. 
+Each line in your source file must contain valid JSON or the file will be skipped. 
 {% endalert %}
 {% endsubtab %}
-{% subtab CSV Accounts with Delete  %}
+{% subtab CSV Accounts with Delete %}
 ```plaintext  
 ID,NAME,PAYLOAD,DELETED
 85,"ACCOUNT_1","{""region"": ""APAC"", ""employees"": 850}",TRUE 
 1,"ACCOUNT_2","{""region"": ""EMEA"", ""employees"": 10000}",FALSE
 ```
 {% endsubtab %}
-{% subtab CSV Accounts without Delete  %}
+{% subtab CSV Accounts without Delete %}
 ```plaintext  
 ID,NAME,PAYLOAD
 85,"ACCOUNT_1","{""region"": ""APAC"", ""employees"": 850}"
