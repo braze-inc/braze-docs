@@ -19,7 +19,7 @@ Brazeを使って[アップルの通知グループ機能に]({{site.baseurl}}/u
 
 ## 顧客を調整する
 
-[Adjust]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/) を使用している Braze のお客様が、Braze API キーと Braze インスタンス URL を確認できるようになりました。これらは、Adjust プラットフォームで統合に使用できます。
+[Adjust]({{site.baseurl}}/partners/message_orchestration/attribution/adjust/) を使用している Braze のお客様が、Braze API キーと Braze インスタンス URL を確認できるようになりました。これらは、Adjust プラットフォームで統合に使用できます。
 
 ## セグメントフィルターにない
 
@@ -27,7 +27,7 @@ Brazeを使って[アップルの通知グループ機能に]({{site.baseurl}}/u
 
 ## キャンバス受信者のCSVエクスポート
 
-キャンバスにエントリーしたユーザーの[データをエクスポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/)できるようになった。生成されるCSVはキャンペーンCSVと同様のものになる。
+キャンバスにエントリーしたユーザーの[データをエクスポート]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/)できるようになった。生成されるCSVはキャンペーンCSVと同様のものになる。
 
 ## iOS12のセグメントフィルターが暫定的に認可される
 
