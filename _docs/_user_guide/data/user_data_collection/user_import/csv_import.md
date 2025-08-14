@@ -269,7 +269,7 @@ When importing CSV data, customer information will overwrite existing values on 
 | Subscription states | Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` doesn't consume data points. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-{% alert note %}
+{% alert important %}
 Setting `language` or `country` on a user through CSV import or API will prevent Braze from automatically capturing this information through the SDK.
 {% endalert %}
 
