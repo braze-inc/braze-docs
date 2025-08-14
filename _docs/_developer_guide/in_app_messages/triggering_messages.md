@@ -113,14 +113,14 @@ By default, in-app messages are triggered automatically. To disable this:
     <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
     ```
 
-For more advanced control over message timing, including deferring and restoring triggered messages, see our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab swift %}
-1. Implement the `BrazeInAppMessageUIDelegate` delegate in your app. For a full walkthrough, see [Tutorial: In-App Message UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+1. Implement the `BrazeInAppMessageUIDelegate` delegate in your app. For a full walkthrough, refer to [Tutorial: In-App Message UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
 
-For more advanced control over message timing, including deferring and restoring triggered messages, see our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab web %}
@@ -150,7 +150,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 If you call `braze.showInAppMessage` without removing `braze.automaticallyShowInAppMessages()`, messages may display twice.
 {% endalert %}
 
-For more advanced control over message timing, including deferring and restoring triggered messages, see our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab unity %}
