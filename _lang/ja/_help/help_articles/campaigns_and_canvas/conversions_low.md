@@ -20,22 +20,17 @@ tool:
 
 ## イベントトラッキング
 
-キャンペーンがセッション開始またはカスタムイベントをトリガーするとき、このイベントまたはセッションがメッセージをトリガーするのに十分な頻度で発生していることを確認したい。[概要][1](セッション情報の場合)または[カスタムイベント][2]ページでこのデータを確認します。
+キャンペーンがセッション開始またはカスタムイベントをトリガーするとき、このイベントまたはセッションがメッセージをトリガーするのに十分な頻度で発生していることを確認したい。このデータを[概要]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/)（セッションデータの場合）または[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting)ページで確認してください。
 
-![カスタムイベント数の統計を含む [カスタムイベント] ページ。][43]
+![カスタムイベント数の統計を含む [カスタムイベント] ページ。]({% image_buster /assets/img_archive/trouble5.png %})
 
 ## コンバージョンの期限
 
-キャンペーンごとに選択したコンバージョンイベントごとに、[期限][44] を設定する。つまり、コンバージョンが各キャンペーンでカウントされるための発生時間の制限を設定します。
+キャンペーンごとに選択したコンバージョンイベントごとに、[期限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events)設定します。つまり、コンバージョンが各キャンペーンでカウントされるための発生時間の制限を設定します。
 
-キャンペーン指標を理解するために、[コンバージョンの計算][45] に関する情報を確認しておきます。キャンバスのユーザーコンバージョンについては、[キャンバスに関する FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas) を参照してください。 
+キャンペーンの指標を理解するために、[コンバージョンの計算に関する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule)情報を確認しておくこと。キャンバスのユーザーコンバージョンについては、[キャンバスに関する FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas) を参照してください。 
 
 サポートが必要な場合は、[サポートチケット]({{site.baseurl}}/braze_support/)を登録してください。
 
 _最終更新日：2021年5月6日_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[43]: {% image_buster /assets/img_archive/trouble5.png %}
-[44]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events
-[45]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule
