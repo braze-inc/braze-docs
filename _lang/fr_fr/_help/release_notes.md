@@ -73,7 +73,7 @@ Chaque didacticiel du SDK de Braze propose des instructions étape par étape ai
 
 #### Approvisionnement SAML juste-à-temps
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Utilisez le [provisionnement SAML en flux tendu]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit) pour permettre aux nouveaux utilisateurs du tableau de bord de créer un compte Braze lors de leur première connexion. Cela élimine le besoin pour les administrateurs de créer manuellement un compte pour un nouvel utilisateur de tableau de bord, de choisir leurs autorisations, de les affecter à un espace de travail et d'attendre qu'ils activent leur compte.
 
@@ -95,7 +95,7 @@ Reportez-vous aux [limitations du produit Cloud Data Ingestion]({{site.baseurl}}
 
 #### Tests d'accessibilité dans Inbox Vision
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Utilisez les [tests d'accessibilité]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) dans Inbox Vision pour mettre en évidence les problèmes d'accessibilité que peut présenter votre e-mail. 
 
@@ -103,13 +103,13 @@ Les tests d'accessibilité analysent le contenu de vos e-mails en fonction de ce
 
 #### Suivi des clics pour WhatsApp
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez activer le [suivi des clics]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking) dans les messages de réponse et les messages modèles pour voir les données relatives aux clics dans vos rapports de performance WhatsApp et être en mesure de segmenter les utilisateurs en fonction de qui a cliqué sur quoi.
 
 #### Vidéos pour WhatsApp
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez [intégrer des vidéos]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#supported-whatsapp-features) dans le corps du texte pour les envois WhatsApp sortants. Ces fichiers doivent être hébergés par URL ou dans la [bibliothèque multimédia de Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library).
 
@@ -137,13 +137,13 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 
 #### Copier des toiles dans différents espaces de travail
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez désormais copier des toiles dans différents espaces de travail. Cela vous permet de démarrer la composition de votre message en commençant par une copie d'un canvas dans un espace de travail différent. Pour plus d'informations sur ce qui est copié, reportez-vous à la section [Copier des campagnes et des toiles dans les espaces de travail]({{site.baseurl}}/copying_to_workspaces/).
 
 #### Règles d'envoi de messages pour le flux de travail d'approbation 
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Utilisez des [règles d'envoi de messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules) dans votre flux de travail d'approbation pour limiter le nombre d'utilisateurs atteignables avant qu'une approbation supplémentaire ne soit requise. De cette façon, vous pouvez revoir vos campagnes et vos canevas avant de cibler un public plus large.
 
@@ -163,19 +163,19 @@ Les [événements recommandés]({{site.baseurl}}/user_guide/data/custom_data/rec
 
 #### Canal des bannières
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Avec les [bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners), vous pouvez créer des envois de messages personnalisés pour vos utilisateurs, tout en étendant la portée de vos autres canaux, tels que l'e-mail ou les notifications push. Vous pouvez intégrer des bannières directement dans votre application ou votre site web, ce qui vous permet d'engager le dialogue avec les utilisateurs à travers une expérience qui semble naturelle.
 
 #### Canal Rich Communication Services (RCS)
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Les [services de communication riches (RCS)]({{site.baseurl}}/about_rcs/) améliorent les SMS traditionnels en permettant aux marques d'envoyer des messages non seulement informatifs, mais aussi beaucoup plus attrayants. Désormais pris en charge sur Android et iOS, RCS apporte des fonctionnalités telles que des médias de haute qualité, des boutons interactifs et des profils d'expéditeur de marque directement dans les applications d'envoi de messages préinstallées des utilisateurs, éliminant ainsi le besoin de télécharger une application distincte.
 
 #### Page des paramètres de poussée
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Utilisez la [page**Paramètres de push**]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings) pour configurer les paramètres clés de vos notifications push, notamment la durée en vie (TTL) de push et la priorité FCM par défaut pour les campagnes Android. Ces paramètres permettent d'optimiser la réception/distribution de vos notifications push et leur efficacité, garantissant ainsi une meilleure expérience à vos utilisateurs.
 
@@ -223,7 +223,7 @@ Nous avons mis à jour notre article [Créer des messages accessibles dans Braze
 
 Cette mise à jour fait partie de notre effort plus large pour soutenir des expériences d'envoi de messages plus accessibles dans Braze. Nous savons que l'accessibilité est un domaine en constante évolution et nous continuerons à partager ce que nous apprenons.
 
-{% multi_lang_include l'accessibilité/feedback.md %}
+{% multi_lang_include accessibility/feedback.md %}
 
 ### Mises à jour SDK
 
@@ -684,19 +684,19 @@ Nous avons migré et réécrit tout le contenu du README du dépôt GitHub du SD
 
 #### Tableau de bord de l'utilisation de l'API
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Le [tableau de bord de l'utilisation de l'API]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard) vous permet de surveiller le trafic de votre API REST entrant dans Braze afin de comprendre les tendances de votre utilisation de nos API REST et de résoudre les problèmes éventuels.
 
 #### Ajout d'étiquettes aux attributs personnalisés
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez [ajouter des étiquettes à un attribut personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes#adding-tags) après sa création si vous disposez de l'autorisation "Gérer les événements et les attributs, les clients". Les étiquettes peuvent ensuite être utilisées pour filtrer la liste des attributs.
 
 #### Sélections de catalogue et endpoints de champs de catalogue asynchrones 
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Les endpoints suivants sont désormais généralement disponibles :
 * [POST : Créer des champs de catalogue]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields)
@@ -706,13 +706,13 @@ Les endpoints suivants sont désormais généralement disponibles :
 
 #### Utilisation d'une adresse e-mail pour déclencher des campagnes ou des canevas
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez désormais spécifier un destinataire par adresse e-mail pour déclencher vos [campagnes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) et [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
 
 #### Utilisation d'un numéro de téléphone pour identifier un utilisateur via l'API
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez désormais utiliser un numéro de téléphone, en plus d'un alias et d'une adresse e-mail, pour identifier un utilisateur via l'[endpoint de l'API`/users/identify` ]({{site.baseurl}}/api/endpoints/user_data/post_user_identify).
 
@@ -726,7 +726,7 @@ Comme Braze se développe pour desservir de nouvelles régions, nous avons ajout
  
 #### Notifications de baisse de prix et de retour en stock
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez désormais avertir les clients lorsqu'un article est de nouveau en stock en configurant des [notifications de retour en stock]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) par le biais d'un Canvas et d'un catalogue.
 
@@ -734,13 +734,13 @@ Vous pouvez également créer des [notifications de baisse de]({{site.baseurl}}/
 
 #### Aperçu de la sélection 
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Après avoir créé une sélection, vous pouvez [voir ce qu'elle donnerait]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#test-and-preview) pour un utilisateur aléatoire ou pour un utilisateur spécifique.
 
 #### Modélisation de produits de catalogue comprenant des étiquettes Liquid 
 
-{% multi_lang_include release_type.md release="Disponibilité générale" %}
+{% multi_lang_include release_type.md release="General availability" %}
 
 Vous pouvez [créer des modèles d'articles de catalogue qui incluent le liquide]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
 
