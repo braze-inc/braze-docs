@@ -19,7 +19,7 @@ After [setting up the Braze MCP server]{% if include.section == "user" %}({{site
 - CRM engineers creating multi-step agent workflows.
 - Technical marketers experimenting with natural language queries.
 
-The Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data. You can choose to assign only some of these endpoints to your Braze API key to further restrict which data an agent can access.
+The Braze MCP server supports 38 read-only endpoints that do not return data from Braze user profiles. You can choose to assign only some of these endpoints to your Braze API key to further restrict which data an agent can access.
 
 {% alert warning %}
 Do not assign permissions to your API key that are **not** read-only. Agents may try to write or delete data in Braze, which could cause unintended consequences.

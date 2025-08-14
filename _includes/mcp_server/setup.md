@@ -67,9 +67,7 @@ everything's installed!
 
 ### Step 2: Create an API key {#create-api-key}
 
-The Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data.
-
-Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
+Braze MCP server supports 38 read-only endpoints that do not return data from Braze user profiles. Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
 
 {% details List of read-only, non-PII permissions %}
 #### Campaigns
@@ -220,7 +218,7 @@ Do not reuse an existing API key&#8212;create one specifically for your MCP clie
 
 ### Step 3: Get your identifer and endpoint
 
-When you configure your MCP client, you'll need your API key's identifier and your workspace's REST endpoint. To get this information, go back to the **API Keys** page in the dashboard&#8212;keep this page open, as you'll need it in [the next step](#configure-client).
+When you configure your MCP client, you'll need your API key's identifier and your workspace's REST endpoint. To get these details, go back to the **API Keys** page in the dashboard&#8212;keep this page open, so you can reference it during [the next step](#configure-client).
 
 ![The 'API Keys' in Braze showing a newly created API key and the user's REST endpoint.]({% image_buster /assets/img/mcp_server/get_indentifer_and_endpoint.png %}){: style="max-width:85%;"}
 
@@ -308,7 +306,7 @@ When you're finished, save the configuration and restart Cursor.
 
 ### Step 5: Send a test prompt
 
-Now that you've set up the Braze MCP server, try sending a test prompt. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Now that you've set up the Braze MCP server, try sending a test prompt to your MCP client. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
@@ -366,7 +364,7 @@ uvx --python 3.12 braze-mcp-server@latest
 
 1. Verify your MCP client configuration syntax is correct.
 2. Restart your MCP client after configuration changes.
-3. Check that `uvx` is in your system PATH.
+3. Check that `uvx` is in your system `PATH`.
 
 #### Authentication errors
 

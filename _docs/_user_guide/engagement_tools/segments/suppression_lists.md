@@ -81,7 +81,7 @@ While creating a campaign or Canvas, use **User Lookup** within the **Target Aud
 
 ### Campaign 
 
-If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Messages not affected by suppression lists](#messages-not-affected-by-suppression-lists) for cases when a suppression list won't apply.
+If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Message types and channels affected by suppression lists](#message-types-and-channels-affected-by-suppression-lists) for cases when a suppression list won't apply.
 
 ![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".]({% image_buster /assets/img/active_suppression_list.png %})
 
