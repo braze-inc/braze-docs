@@ -1,6 +1,6 @@
 ---
 nav_title: Sync and Delete Account Data
-article_title: Sync and Delete Account Data
+article_title: Syncing account data using CDI
 page_order: 4
 page_type: reference
 description: "This page provides an overview of how to sync account data."
