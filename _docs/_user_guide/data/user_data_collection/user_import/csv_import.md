@@ -258,9 +258,9 @@ If there's no issues, the status will update to **Complete** and the number of r
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 {% endalert %}
 
-### Data point considerations
+## Data point considerations
 
-When importing CSV data, customer information will overwrite existing values on user profiles and may count as data points, with some exceptions for external IDs and blank values.
+When importing CSV data, customer information will overwrite existing values on user profiles and count as data points, with some exceptions for external IDs and blank values.
 
 | Consideration | Details |
 |---|---|
