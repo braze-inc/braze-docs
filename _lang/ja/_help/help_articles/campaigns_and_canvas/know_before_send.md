@@ -34,7 +34,7 @@ alias: /know_before_send/
 ## メール
 
 #### 確認事項
-- **顧客の同意**: 最初のメールを送信する前に、まず顧客の許可を得ることが重要です。[同意とアドレスの収集]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/)および当社の[Braze許容使用ポリシー](https://www.braze.com/company/legal/aup)についての詳細をご参照ください。
+- **顧客の同意**: 最初のメールを送信する前に、まず顧客の許可を得ることが重要です。[同意とアドレスの収集]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/)および当社の[Braze許容使用ポリシー](https://www.braze.com/company/legal/aup)についての詳細をご参照ください。
 - **推奨ボリューム**: [適切にウォームアップされている]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming#ip-warming)場合、1つのIPに対して1日あたり200万通のメールが一般的な推奨値になります。 
   - これよりも大量のメールを継続的に送信する予定がある場合は、プロバイダーがメールの受信を制限して大量のソフトバウンスや配信可能性および IP レピュテーションの低下が発生しないよう、複数の IP アドレスを IP プールにバンドルすることを検討してください。 
   - より短い期間内でのみ送信する予定の場合は、さまざまなプロバイダーがメールを受け入れる速度を調べ、送信元として適切な IP の数を判断することをお勧めします。 
@@ -48,7 +48,7 @@ alias: /know_before_send/
 ## プッシュ
 
 #### 確認事項
-- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/):ユーザーが Braze からプッシュメッセージを受信するには、サブスクリプションステータスがオプトイン済み (iOS) またはサブスクリプション登録済み (Android) および `Push Enabled = True` になっている必要があります。Android 13では、ユーザーsがプッシュ通知sを送信するアプリsを管理する方法に大きな変更を導入していることに注意してください。Braze [Android 13 SDK アップグレードガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/) は、新しい Android 13 ベータ版がリリースされるたびに更新され続けます。
+- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/):ユーザーが Braze からプッシュメッセージを受信するには、サブスクリプションステータスがオプトイン済み (iOS) またはサブスクリプション登録済み (Android) および `Push Enabled = True` になっている必要があります。Android 13では、ユーザーsがプッシュ通知sを送信するアプリsを管理する方法に大きな変更を導入していることに注意してください。Braze [Android 13 SDK アップグレードガイド]({{site.baseurl}}/developer_guide/platforms/android/android_13/) は、新しい Android 13 ベータ版がリリースされるたびに更新され続けます。
 
 #### 知っておくべきこと
 - **Web プッシュ**:Braze [Web SDK のセットアップ]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) がある場合は、ユーザーを引き付けるために Web プッシュを利用することを検討してください。Web プッシュは、スマートフォンでのアプリのプッシュ通知と同様に機能します。Web プッシュの作成に関する詳細については、[プッシュ通知の作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)をチェックしてください。
@@ -92,5 +92,6 @@ alias: /know_before_send/
 #### 知っておくべきこと
 - **アプリ内メッセージトリガー**: セッションの開始時に、SDK は、すべての適格アプリ内メッセージをトリガーとともにデバイスに送信するように要求します。そのため、セッション中にイベントを実行すると、アプリ内メッセージを迅速かつ確実に受信できます。このため、キャンバスのカスタムイベントによってアプリ内メッセージをトリガーすることはできません。
 - **送信済みとインプレッション**: アプリ内メッセージの場合、「送信済み」の概念は他の利用可能なチャネルとは異なります。アプリ内メッセージを表示するには、ユーザーがセッションを開始し、適格オーディエンスに含まれ、トリガーを実行する必要があります。このため、「インプレッション」を追跡しています。これはより明確です。
-- **トリガー**:デフォルトでは、アプリ内メッセージは SDK によって記録されるイベントによってトリガーされます。サーバー送信イベントによってアプリ内メッセージをトリガーしたい場合、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/)および[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization)向けのこれらのガイドを通じてこれを達成することもできます。
-- [**キャンバスのアプリ内メッセージ**]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): キャンバスコンポーネントでスケジュールされたメッセージがユーザーに送信された後、ユーザーが (開始セッションによってトリガーされて) 初めてアプリを開いたときに、これらのメッセージが表示されます。
+- **トリガー**:デフォルトでは、アプリ内メッセージは SDK によって記録されるイベントによってトリガーされます。サーバー送信イベントによってアプリ内メッセージをトリガーしたい場合、[iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift)および[Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android)向けのこれらのガイドを通じてこれを達成することもできます。
+- [キャンバスのアプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): キャンバスコンポーネントでスケジュールされたメッセージがユーザーに送信された後、ユーザーが (開始セッションによってトリガーされて) 初めてアプリを開いたときに、これらのメッセージが表示されます。
+- **Connected Content の呼び出し**: Connected Content を使えば、メッセージングでダイナミックなコンテンツを送ることができます。アプリ内メッセージのようなチャネルを通じてメッセージを送信する場合、ユーザーのデバイスにより多くの同時接続を作り出すことができる（メッセージはバッチではなく1つずつ送信される）。これを管理するには、メッセージの[レート制限をする]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting)ことをお勧めする。
