@@ -59,3 +59,11 @@ description: "Learn about in-app messages and how to set them up for the Braze S
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Next steps
+
+Ready to dive deeper? Check out our step-by-step tutorials:
+
+- [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages) - Advanced timing control for message delivery
+- [Tutorial: Conditionally displaying in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages) - Control when and where messages are displayed
+- [Tutorial: Customizing message styling using key-value pairs]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling) - Customize message appearance
