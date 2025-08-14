@@ -55,7 +55,7 @@ Follow these best practices to help avoid rate limit issues:
 | --- | --- |
 | Track meaningful user actions and milestones | Track every minor interaction or UI event |
 | Refresh content only when necessary | Refresh content on every user action (like scroll events) |
-| Let the SDK handle batching automatically | Force immediate data transmission unless absolutely necessary |
+| Let the SDK handle batching automatically | Force immediate data transmission (unless absolutely necessary) |
 | Focus on events that add value to analytics | Call SDK methods in rapid succession without considering frequency |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
