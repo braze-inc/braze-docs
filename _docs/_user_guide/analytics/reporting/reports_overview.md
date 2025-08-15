@@ -1,5 +1,5 @@
 ---
-nav_title: Reports Overview
+nav_title: Reports overview
 article_title: Reports Overview
 page_order: 0
 page_type: reference

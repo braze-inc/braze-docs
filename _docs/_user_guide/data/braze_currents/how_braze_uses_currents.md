@@ -1,5 +1,5 @@
 ---
-nav_title: How Braze Uses Currents
+nav_title: How Braze uses Currents
 article_title: How Braze Uses Currents
 page_order: 6
 page_type: tutorial

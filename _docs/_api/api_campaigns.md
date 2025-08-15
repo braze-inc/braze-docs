@@ -1,5 +1,5 @@
 ---
-nav_title: API Campaigns
+nav_title: API campaigns
 article_title: API Campaigns
 page_order: 5
 description: "This reference article covers how to generate a campaign_id to include in your API calls and how to configure that campaign."

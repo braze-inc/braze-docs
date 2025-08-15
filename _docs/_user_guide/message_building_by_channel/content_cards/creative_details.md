@@ -1,5 +1,5 @@
 ---
-nav_title: Creative Details
+nav_title: Creative details
 article_title: Creative Details for Content Cards
 page_order: 1
 description: "This article covers creative details such as image size recommendations and dismissal behavior across the three standard Content Card types."

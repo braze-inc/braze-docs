@@ -1,5 +1,5 @@
 ---
-nav_title: Delivery and Entry Types
+nav_title: Delivery and entry types
 article_title: Delivery and Entry Types
 page_order: 5
 page_type: reference

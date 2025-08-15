@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Replace Multiple Catalog Items"
+nav_title: "PUT: Replace multiple catalog items"
 article_title: "PUT: Replace Multiple Catalog Items"
 search_tag: Endpoint
 page_order: 4

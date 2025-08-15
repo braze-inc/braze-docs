@@ -1,5 +1,5 @@
 ---
-nav_title: "Webhook Object"
+nav_title: "Webhook object"
 article_title: Webhook Messaging Object
 page_order: 13
 page_type: reference

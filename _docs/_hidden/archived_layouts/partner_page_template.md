@@ -1,5 +1,5 @@
 ---
-nav_title: Partner Page
+nav_title: Partner page
 
 page_order: 4
 

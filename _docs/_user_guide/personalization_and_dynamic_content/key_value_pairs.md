@@ -1,5 +1,5 @@
 ---
-nav_title: Key-Value Pairs
+nav_title: Key-value pairs
 article_title: Key-Value Pairs
 page_order: 4
 description: "This reference article covers key-value pairs and how to use them to send extra data payloads to user devices."

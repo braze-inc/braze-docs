@@ -1,5 +1,5 @@
 ---
-nav_title: Nested Objects
+nav_title: Nested objects
 article_title: Nested Objects in Custom Events
 page_order: 1
 page_type: reference

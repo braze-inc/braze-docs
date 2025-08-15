@@ -1,5 +1,5 @@
 ---
-nav_title: Message Orchestration
+nav_title: Message orchestration
 article_title: Message Orchestration Partners
 page_order: 2
 

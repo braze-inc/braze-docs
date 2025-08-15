@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Content
+nav_title: Managing content
 article: Managing Content
 description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 

@@ -1,5 +1,5 @@
 ---
-nav_title: Innovation Statement
+nav_title: Innovation statement
 article_title: Innovation Statement
 description: "This reference article is home to Braze's innovation statement."
 noindex: true

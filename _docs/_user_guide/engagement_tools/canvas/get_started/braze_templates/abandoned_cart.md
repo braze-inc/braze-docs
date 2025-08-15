@@ -1,5 +1,5 @@
 ---
-nav_title: Abandoned Cart
+nav_title: Abandoned cart
 article_title: Abandoned Cart
 page_order: 1
 page_type: reference

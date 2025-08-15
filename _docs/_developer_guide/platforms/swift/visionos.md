@@ -1,5 +1,5 @@
 ---
-nav_title: visionOS support
+nav_title: Visionos support
 article_title: visionOS support
 page_order: 7.2
 platform: 

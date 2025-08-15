@@ -1,5 +1,5 @@
 ---
-nav_title: Security Settings
+nav_title: Security settings
 article_title: Security Settings
 page_order: 2
 toc_headers: h2

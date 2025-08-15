@@ -1,5 +1,5 @@
 ---
-nav_title: Style Settings
+nav_title: Style settings
 article_title: "In-App Message Style Settings"
 description: "This reference article covers the styling options available when creating an in-app message with the drag-and-drop editor."
 page_order: 3

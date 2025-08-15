@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Canvas List"
+nav_title: "GET: Export Canvas list"
 article_title: "GET: Export Canvas List"
 search_tag: Endpoint
 page_order: 4

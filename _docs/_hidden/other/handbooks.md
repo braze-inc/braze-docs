@@ -1,5 +1,5 @@
 ---
-nav_title: Entitlements Handbook
+nav_title: Entitlements handbook
 permalink: /handbooks/
 ---
 

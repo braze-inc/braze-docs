@@ -1,5 +1,5 @@
 ---
-nav_title: User Archival
+nav_title: User archival
 article_title: User Archival
 permalink: /user_archival/
 page_order: 0

@@ -1,5 +1,5 @@
 ---
-nav_title: "Catalog Segments"
+nav_title: "Catalog segments"
 article_title: Catalog Segments
 page_order: 1
 page_type: reference

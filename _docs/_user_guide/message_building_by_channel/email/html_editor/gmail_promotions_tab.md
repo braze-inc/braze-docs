@@ -1,5 +1,5 @@
 ---
-nav_title: Gmail Promotions Setup
+nav_title: Gmail promotions setup
 article_title: Gmail Promotions Setup
 page_order: 8
 description: "This reference article covers how to use Braze to help you build the Gmail mobile promotions card from your email campaign."

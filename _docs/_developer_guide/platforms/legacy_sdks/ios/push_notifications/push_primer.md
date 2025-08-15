@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Primer"
+nav_title: "Push primer"
 article_title: Push Primer for iOS
 page_order: 6
 page_type: reference

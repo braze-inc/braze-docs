@@ -1,5 +1,5 @@
 ---
-nav_title: Architectural Overview
+nav_title: Architectural overview
 article_title: Architectural Overview
 page_order: 3
 description: "This article discusses the different parts and pieces of the Braze technology stack, with links to relevant articles."

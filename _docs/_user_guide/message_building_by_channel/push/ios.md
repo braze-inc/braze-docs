@@ -1,5 +1,5 @@
 ---
-nav_title: "iOS Options"
+nav_title: "iOS options"
 article_title: iOS Push Options
 page_order: 8
 layout: dev_guide

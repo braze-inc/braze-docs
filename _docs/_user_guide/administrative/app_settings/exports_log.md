@@ -1,5 +1,5 @@
 ---
-nav_title: Exports Log
+nav_title: Exports log
 article_title: Exports Log
 page_order: 15
 page_type: reference

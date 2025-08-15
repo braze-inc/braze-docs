@@ -1,5 +1,5 @@
 ---
-nav_title: Collection Best Practices
+nav_title: Collection best practices
 article_title: Collection Best Practices
 page_order: 3.1
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: "In-App Messages"
+nav_title: "In-app messages"
 article_title: In-App Messages
 page_order: 2
 alias: /in-app_messages/

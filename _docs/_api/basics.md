@@ -1,5 +1,5 @@
 ---
-nav_title: "API Overview"
+nav_title: "API overview"
 article_title: API Overview
 page_order: 2.1
 description: "This reference article covers the API basics including what a REST API is, the terminology, and an overview of API keys."

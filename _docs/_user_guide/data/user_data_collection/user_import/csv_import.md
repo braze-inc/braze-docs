@@ -1,5 +1,5 @@
 ---
-nav_title: CSV Import
+nav_title: CSV import
 article_title: "CSV Import"
 description: "Learn how to record and update user attributes and custom events using CSV import."
 page_order: 1.2

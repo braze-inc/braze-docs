@@ -1,5 +1,5 @@
 ---
-nav_title: Measuring Segment Size
+nav_title: Measuring segment size
 article_title: Measuring Segment Size
 page_order: 5
 page_type: reference

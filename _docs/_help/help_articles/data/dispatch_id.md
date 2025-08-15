@@ -1,5 +1,5 @@
 ---
-nav_title: Dispatch ID Behavior
+nav_title: Dispatch ID behavior
 article_title: Dispatch ID Behavior
 page_order: 0
 

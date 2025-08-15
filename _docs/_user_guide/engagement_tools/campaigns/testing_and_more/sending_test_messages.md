@@ -1,5 +1,5 @@
 ---
-nav_title: Sending Test Messages
+nav_title: Sending test messages
 article_title: Sending Test Messages
 page_order: 0
 tool: 

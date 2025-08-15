@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Delete Catalog"
+nav_title: "DELETE: Delete catalog"
 article_title: "DELETE: Delete Catalog"
 search_tag: Endpoint
 page_order: 1

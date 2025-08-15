@@ -1,5 +1,5 @@
 ---
-nav_title: Location Tracking
+nav_title: Location tracking
 article_title: Location Tracking for iOS
 platform: iOS
 page_order: 6

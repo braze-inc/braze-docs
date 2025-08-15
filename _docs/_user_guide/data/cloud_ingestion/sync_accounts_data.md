@@ -1,5 +1,5 @@
 ---
-nav_title: Sync and Delete Account Data
+nav_title: Sync and delete account data
 article_title: Syncing account data using CDI
 page_order: 4
 page_type: reference

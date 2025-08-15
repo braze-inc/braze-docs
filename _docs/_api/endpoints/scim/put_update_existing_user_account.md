@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Update Dashboard User Account"
+nav_title: "PUT: Update dashboard user account"
 article_title: "PUT: Update Dashboard User Account"
 alias: /post_update_existing_user_account/
 search_tag: Endpoint

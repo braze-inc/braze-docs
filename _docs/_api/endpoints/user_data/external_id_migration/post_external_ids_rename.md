@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Rename External ID"
+nav_title: "POST: Rename external ID"
 article_title: "POST: Rename External ID"
 search_tag: Endpoint
 page_order: 1

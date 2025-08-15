@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Available Content Blocks"
+nav_title: "GET: List available content blocks"
 article_title: "GET: List Available Content Blocks"
 search_tag: Endpoint
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Scheduled Messages"
+nav_title: "POST: Create scheduled messages"
 article_title: "POST: Create Scheduled Messages"
 search_tag: Endpoint
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: Link Aliasing
+nav_title: Link aliasing
 article_title: Link Aliasing
 alias: /link_aliasing/
 page_order: 3

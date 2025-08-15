@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Track Users (Synchronous)"
+nav_title: "POST: Track users (synchronous)"
 article_title: "POST: Track Users (Synchronous)"
 alias: /post_user_track_synchronous/
 layout: api_page

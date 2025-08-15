@@ -1,5 +1,5 @@
 ---
-nav_title: "Best Practices"
+nav_title: "Best practices"
 article_title: Best Practices for SMS, MMS, and RCS 
 page_order: 15
 description: "This reference article covers best practices for SMS/MMS."

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Catalog
+nav_title: Creating a catalog
 article_title: Creating a Catalog
 alias: "/catalogs/"
 page_order: 1

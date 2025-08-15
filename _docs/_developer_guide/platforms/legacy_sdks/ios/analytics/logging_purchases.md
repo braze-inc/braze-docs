@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Purchases
+nav_title: Logging purchases
 article_title: Logging Purchases for iOS
 platform: iOS
 page_order: 4

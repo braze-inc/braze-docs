@@ -1,5 +1,5 @@
 ---
-nav_title: Recommended Events
+nav_title: Recommended events
 article_title: Recommended Events
 alias: /recommended_events/
 page_type: reference

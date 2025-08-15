@@ -1,5 +1,5 @@
 ---
-nav_title: Segment Analytics Tracking
+nav_title: Segment analytics tracking
 article_title: Segment Analytics Tracking
 page_order: 8
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Billing Calculator
+nav_title: Billing calculator
 article_title: SMS and RCS Billing Calculators
 page_order: 5
 description: "This reference article covers what an SMS segment is, how they are counted for billing, as well as things to keep in mind when creating SMS and RCS message copy."

@@ -1,5 +1,5 @@
 ---
-nav_title: LINE Users
+nav_title: LINE users
 config_only: true
 noindex: true
 layout: blank_config

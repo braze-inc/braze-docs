@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Transformation
+nav_title: Creating a transformation
 article_title: Creating a Transformation
 page_order: 1
 page_type: reference

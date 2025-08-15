@@ -1,5 +1,5 @@
 ---
-nav_title: User Data Collection
+nav_title: User data collection
 article_title: User Data Collection
 page_order: 3.5
 layout: dev_guide

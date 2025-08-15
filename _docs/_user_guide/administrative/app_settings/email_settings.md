@@ -1,5 +1,5 @@
 ---
-nav_title: Email Preferences
+nav_title: Email preferences
 article_title: Email Preferences
 page_type: reference
 page_order: 14

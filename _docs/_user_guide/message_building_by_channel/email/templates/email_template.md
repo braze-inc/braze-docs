@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an Email Template
+nav_title: Creating an email template
 article_title: Creating an Email Template
 page_order: 0
 description: "This reference article covers how to create, customize, and manage email templates."

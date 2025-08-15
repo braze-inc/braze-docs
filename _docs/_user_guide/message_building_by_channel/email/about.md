@@ -1,5 +1,5 @@
 ---
-nav_title: About Email
+nav_title: About email
 article_title: About Email
 page_order: 0
 description: "This reference article provides an overview of the Braze Email channel and common use cases."

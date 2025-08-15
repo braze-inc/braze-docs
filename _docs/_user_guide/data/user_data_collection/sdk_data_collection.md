@@ -1,5 +1,5 @@
 ---
-nav_title: SDK Data Collection
+nav_title: SDK data collection
 article_title: SDK Data Collection
 page_order: 1
 page_type: reference

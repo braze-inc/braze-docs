@@ -1,5 +1,5 @@
 ---
-nav_title: Upgrading to Android 13
+nav_title: Upgrading to android 13
 article_title: Android 13 Upgrade Guide
 page_order: 9
 platform: 

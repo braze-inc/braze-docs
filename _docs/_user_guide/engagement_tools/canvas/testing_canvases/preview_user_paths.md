@@ -1,5 +1,5 @@
 ---
-nav_title: Preview User Paths
+nav_title: Preview user paths
 article_title: Preview User Paths
 page_order: 0.3
 alias: /preview_user_paths/

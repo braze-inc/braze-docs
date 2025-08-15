@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Placements
+nav_title: Creating placements
 article_title: Creating Banner placements for the Braze SDK
 description: "Learn how to create Banner placements for the Braze SDK."
 page_order: 2

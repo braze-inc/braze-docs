@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update User's Subscription Group Status V2"
+nav_title: "POST: Update users subscription group status v2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp Phone Number Migration
+nav_title: WhatsApp phone number migration
 article_title: WhatsApp Phone Number Migration
 page_order: 2
 description: "This reference article covers how to migrate your WhatsApp phone number."

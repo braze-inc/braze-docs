@@ -1,5 +1,5 @@
 ---
-nav_title: Event Naming Conventions
+nav_title: Event naming conventions
 article_title: Event Naming Conventions
 page_order: 10
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: eCommerce Recommended Events
+nav_title: eCommerce recommended events
 article_title: eCommerce Recommended Events
 page_type: reference
 alias: /ecommerce_events/

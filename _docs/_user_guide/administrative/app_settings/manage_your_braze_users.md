@@ -1,5 +1,5 @@
 ---
-nav_title: Company Users
+nav_title: Company users
 article_title: Company Users
 page_order: 23
 layout: dev_guide

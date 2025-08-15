@@ -1,5 +1,5 @@
 ---
-nav_title: Product Announcement
+nav_title: Product announcement
 article_title: Product Announcement
 alias: "/product_announcement/"
 page_order: 7

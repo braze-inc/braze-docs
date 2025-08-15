@@ -1,5 +1,5 @@
 ---
-nav_title: Email Validation 
+nav_title: Email validation
 article_title: Email Validation
 alias: "/email_validation/"
 page_order: 3

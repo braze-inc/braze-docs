@@ -1,5 +1,5 @@
 ---
-nav_title: Styling Examples
+nav_title: Styling examples
 article: Styling examples
 description: "This is how pages are styled on Braze Docs, including headers, tabs, codeblocks, and more."
 page_order: 8 

@@ -1,5 +1,5 @@
 ---
-nav_title: Experiment Paths 
+nav_title: Experiment Paths
 article_title: Experiment Paths 
 alias: /experiment_step/
 page_order: 4

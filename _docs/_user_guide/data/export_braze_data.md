@@ -1,5 +1,5 @@
 ---
-nav_title: Exporting Braze Data
+nav_title: Exporting Braze data
 article_title: Exporting Braze Data
 page_order: 6
 layout: dev_guide

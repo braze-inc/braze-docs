@@ -1,5 +1,5 @@
 ---
-nav_title: Your Analytics Dashboards
+nav_title: Your analytics dashboards
 article_title: Your Analytics Dashboards
 page_order: 6.5
 layout: dev_guide

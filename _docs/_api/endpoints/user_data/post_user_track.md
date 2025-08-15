@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Track Users"
+nav_title: "POST: Track users"
 article_title: "POST: Track Users"
 search_tag: Endpoint
 page_order: 4

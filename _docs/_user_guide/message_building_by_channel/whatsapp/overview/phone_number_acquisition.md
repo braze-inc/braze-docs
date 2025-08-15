@@ -1,5 +1,5 @@
 ---
-nav_title: Phone Number Acquisition
+nav_title: Phone number acquisition
 article_title: Phone Number Acquisition
 page_order: 3
 description: "This reference article covers how to acquire a phone number from Twilio and Infobip."

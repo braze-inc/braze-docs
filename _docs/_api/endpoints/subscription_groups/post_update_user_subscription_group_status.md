@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update User's Subscription Group Status"
+nav_title: "POST: Update users subscription group status"
 article_title: "POST: Update User's Subscription Group Status"
 search_tag: Endpoint
 page_order: 4

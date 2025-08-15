@@ -1,5 +1,5 @@
 ---
-nav_title: Liquid Code
+nav_title: Liquid code
 article_title: Generating Liquid code with BrazeAI
 description: "This article will cover how the AI Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
 page_type: reference

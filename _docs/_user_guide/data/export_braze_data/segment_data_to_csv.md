@@ -1,5 +1,5 @@
 ---
-nav_title: Export Segment Data to CSV
+nav_title: Export segment data to CSV
 article_title: Export Segment Data to CSV
 page_order: 2
 page_type: reference

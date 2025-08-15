@@ -1,5 +1,5 @@
 ---
-nav_title: Multi-Language Settings
+nav_title: Multi-language settings
 article_title: Multi-Language Settings
 alias: "/multi_language_support/"
 page_order: 5.5

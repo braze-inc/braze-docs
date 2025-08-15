@@ -1,5 +1,5 @@
 ---
-nav_title: Prep Guide
+nav_title: Prep guide
 article_title: In-App Message Prep Guide
 page_order: 0.5
 

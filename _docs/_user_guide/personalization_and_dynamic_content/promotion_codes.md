@@ -1,5 +1,5 @@
 ---
-nav_title: Promotion Codes
+nav_title: Promotion codes
 article_title: Promotion Codes
 page_order: 5
 toc_headers: h2

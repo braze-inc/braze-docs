@@ -1,5 +1,5 @@
 ---
-nav_title: Scroll Bar Overlap
+nav_title: Scroll bar overlap
 article_title: Scroll Bar Overlap
 page_order: 0
 

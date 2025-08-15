@@ -1,5 +1,5 @@
 ---
-nav_title: Apptimize Partnership
+nav_title: Apptimize partnership
 page_order: 0
 
 page_type: update

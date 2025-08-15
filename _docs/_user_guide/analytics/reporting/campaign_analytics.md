@@ -1,5 +1,5 @@
 ---
-nav_title: Campaign Analytics
+nav_title: Campaign analytics
 article_title: Campaign Analytics
 page_order: 4.5
 layout: dev_guide

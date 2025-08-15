@@ -1,5 +1,5 @@
 ---
-nav_title: "Advanced Push Campaign Settings"
+nav_title: "Advanced push campaign settings"
 article_title: Advanced Push Campaign Settings
 page_order: 5
 page_layout: reference

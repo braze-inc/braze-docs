@@ -1,6 +1,6 @@
 ---
 page_order: 20
-nav_title: Best Practices
+nav_title: Best practices
 article_title: Content Card Best Practices
 layout: dev_guide
 guide_top_header: "Content Card Best Practices"

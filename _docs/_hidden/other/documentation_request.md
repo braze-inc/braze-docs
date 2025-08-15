@@ -1,5 +1,5 @@
 ---
-nav_title: Documentation Request
+nav_title: Documentation request
 permalink: "/request/"
 hide_nav: true
 layout: basic

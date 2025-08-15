@@ -1,5 +1,5 @@
 ---
-nav_title: Key-Value Pairs
+nav_title: Key-value pairs
 article_title: In-App Message Key-Value Pairs for iOS
 platform: iOS
 page_order: 30

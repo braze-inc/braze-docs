@@ -1,5 +1,5 @@
 ---
-nav_title: Deliverability for Chinese Android Devices
+nav_title: Deliverability for Chinese Android devices
 article_title: Push deliverability for Chinese Android Devices
 page_order: 10
 

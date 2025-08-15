@@ -1,5 +1,5 @@
 ---
-nav_title: Filter Options Changed
+nav_title: Filter options changed
 article_title: Filter Options Changed
 page_order: 0
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Content Card
+nav_title: Creating a content card
 article_title: Creating a Content Card
 page_order: 0
 description: "This reference article covers how to create, compose, configure, and send Content Cards using Braze campaigns and Canvases."

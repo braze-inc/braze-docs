@@ -1,5 +1,5 @@
 ---
-nav_title: CDI Segment Extensions
+nav_title: CDI segment extensions
 article_title: CDI Segment Extensions
 page_order: 0
 page_type: reference

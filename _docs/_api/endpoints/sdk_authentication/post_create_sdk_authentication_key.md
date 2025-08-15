@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create SDK Authentication Key"
+nav_title: "POST: Create SDK authentication key"
 article_title: "POST: Create SDK Authentication Key"
 search_tag: Endpoint
 page_order: 0

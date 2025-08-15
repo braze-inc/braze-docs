@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an Email
+nav_title: Creating an email
 article_title: Creating an Email with Custom HTML
 page_order: 1
 description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."

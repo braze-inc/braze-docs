@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a LINE Message
+nav_title: Creating a LINE message
 article_title: Creating a LINE Message
 page_order: 1
 description: "This article covers how to create a LINE message campaign or Canvas."

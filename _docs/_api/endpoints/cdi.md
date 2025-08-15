@@ -1,5 +1,5 @@
 ---
-nav_title: Cloud Data Ingestion
+nav_title: Cloud data ingestion
 article_title: Cloud Data Ingestion Endpoints
 search_tag: Endpoint
 page_order: 0.5

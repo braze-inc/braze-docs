@@ -1,5 +1,5 @@
 ---
-nav_title: Dark Mode Themes
+nav_title: Dark mode themes
 article_title: Dark Mode for In-App Messages
 page_order: 5
 description: "This reference article covers Braze in-app message dark mode support, including how to set a dark mode theme and compatibility considerations."

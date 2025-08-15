@@ -1,5 +1,5 @@
 ---
-nav_title: MacOS (legacy)
+nav_title: macOS (legacy)
 config_only: true
 noindex: true
 layout: redirect

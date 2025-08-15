@@ -1,5 +1,5 @@
 ---
-nav_title: Segmentation Logic
+nav_title: Segmentation logic
 article_title: Segmentation Logic 
 page_order: 3
 

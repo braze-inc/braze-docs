@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Segment
+nav_title: Creating a segment
 article_title: Creating a Segment
 page_order: 0
 page_type: tutorial

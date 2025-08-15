@@ -1,5 +1,5 @@
 ---
-nav_title: Live Updates for Android
+nav_title: Live updates for android
 article_title: Live Updates for the Android Braze SDK
 page_order: 0.1
 description: "Learn how to set up Live Updates for the Android Braze SDK."

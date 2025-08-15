@@ -1,5 +1,5 @@
 ---
-nav_title: User Update 
+nav_title: User update
 article_title: User Update 
 alias: "/user_update/"
 page_order: 6

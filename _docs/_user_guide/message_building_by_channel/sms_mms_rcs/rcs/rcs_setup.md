@@ -1,5 +1,5 @@
 ---
-nav_title: "RCS Setup"
+nav_title: "RCS setup"
 article_title: RCS Setup
 page_order: 1
 alias: /rcs_setup/

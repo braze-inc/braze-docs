@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Campaigns
+nav_title: Managing campaigns
 article_title: Managing Campaigns
 layout: dev_guide
 guide_top_header: "Managing Campaigns"

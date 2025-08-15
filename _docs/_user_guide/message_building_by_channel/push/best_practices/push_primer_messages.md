@@ -1,5 +1,5 @@
 ---
-nav_title: Push Primer In-App Messages
+nav_title: Push primer in-app messages
 article_title: Push Primer In-App Messages
 page_order: 1
 page_type: reference

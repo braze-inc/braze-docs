@@ -1,5 +1,5 @@
 ---
-nav_title: Customizing Feed
+nav_title: Customizing feed
 article_title: Customizing Content Card Feed for iOS
 platform: iOS
 page_order: 2

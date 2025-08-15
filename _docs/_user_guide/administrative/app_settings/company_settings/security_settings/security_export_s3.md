@@ -1,5 +1,5 @@
 ---
-nav_title: Security Events Export with S3
+nav_title: Security events export with S3
 article_title: Security Settings Export with S3
 page_order: 1
 page_type: reference

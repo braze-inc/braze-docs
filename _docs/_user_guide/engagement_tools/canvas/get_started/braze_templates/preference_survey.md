@@ -1,5 +1,5 @@
 ---
-nav_title: Onboarding with Preferences Survey
+nav_title: Onboarding with preferences survey
 article_title: Onboarding with Preferences Survey
 page_order: 5.5
 page_type: reference

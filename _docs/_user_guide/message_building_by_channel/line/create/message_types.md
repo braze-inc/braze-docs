@@ -1,5 +1,5 @@
 ---
-nav_title: Message Types
+nav_title: Message types
 article_title: LINE Message Types
 page_order: 0
 description: "This article covers the different types of LINE messages."

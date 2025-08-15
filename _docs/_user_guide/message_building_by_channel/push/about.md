@@ -1,5 +1,5 @@
 ---
-nav_title: "About Push Notifications"
+nav_title: "About push notifications"
 article_title: About Push notifications
 page_order: 0
 page_type: reference

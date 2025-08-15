@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Subscription State with Email Address or Phone Number"
+nav_title: "GET: List subscription state with email address or phone number"
 article_title: "GET: List Subscription State with Email Address or Phone Number"
 search_tag: Endpoint
 page_order: 2

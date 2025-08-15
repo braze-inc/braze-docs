@@ -1,5 +1,5 @@
 ---
-nav_title: Lapsed User
+nav_title: Lapsed user
 article_title: Lapsed User
 page_order: 4
 page_type: reference

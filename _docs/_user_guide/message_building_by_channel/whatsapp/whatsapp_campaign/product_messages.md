@@ -1,5 +1,5 @@
 ---
-nav_title: Product Messages
+nav_title: Product messages
 article_title: Product Messages
 page_order: 2
 description: "This page covers how to use WhatsApp product messages to send interactive WhatsApp messages that showcase products from your Meta catalog."

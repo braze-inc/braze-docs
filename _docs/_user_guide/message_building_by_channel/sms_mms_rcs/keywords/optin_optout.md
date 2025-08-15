@@ -1,5 +1,5 @@
 ---
-nav_title: Opt-In & Opt-Out Keywords
+nav_title: Opt-in & opt-out keywords
 article_title: SMS Opt-In/Opt-Out Keywords
 page_order: 0
 description: "This reference article covers how Braze processes basic opt-in and opt-out keywords for SMS messaging."

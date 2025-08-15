@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export App Sessions by Time"
+nav_title: "GET: Export app sessions by time"
 article_title: "Get: Export App Sessions by Time"
 search_tag: Endpoint
 page_order: 4

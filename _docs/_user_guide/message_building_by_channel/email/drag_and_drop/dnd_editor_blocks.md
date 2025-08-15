@@ -1,5 +1,5 @@
 ---
-nav_title: Editor Blocks
+nav_title: Editor blocks
 article_title: Drag-and-Drop Editor Blocks
 alias: "/dnd/editor_blocks/"
 channel: email

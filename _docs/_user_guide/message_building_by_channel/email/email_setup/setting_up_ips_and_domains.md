@@ -1,5 +1,5 @@
 ---
-nav_title: Setting Up IPs & Domains
+nav_title: Setting up IPs & domains
 article_title: Setting Up IPs & Domains
 page_order: 0
 page_type: tutorial

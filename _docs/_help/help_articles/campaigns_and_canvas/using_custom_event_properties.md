@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Custom Event Properties
+nav_title: Logging custom event properties
 article_title: Logging Custom Event Properties
 page_order: 3
 page_type: solution

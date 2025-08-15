@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export KPIs for Daily App Uninstalls by Date"
+nav_title: "GET: Export KPIs for daily app uninstalls by date"
 article_title: "GET: Export KPIs for Daily App Uninstalls by Date"
 search_tag: Endpoint
 page_order: 4

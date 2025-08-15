@@ -1,5 +1,5 @@
 ---
-nav_title: Multiple Feeds
+nav_title: Multiple feeds
 article_title: Using Multiple Content Card Feeds for iOS
 platform: iOS
 page_order: 6

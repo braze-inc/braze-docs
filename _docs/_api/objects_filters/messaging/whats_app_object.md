@@ -1,5 +1,5 @@
 ---
-nav_title: "WhatsApp Object"
+nav_title: "WhatsApp object"
 article_title: WhatsApp Messaging Object
 page_order: 15
 page_type: reference

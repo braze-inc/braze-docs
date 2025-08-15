@@ -1,5 +1,5 @@
 ---
-nav_title: Beacon Integration
+nav_title: Beacon integration
 article_title: Beacon Integration for iOS
 platform: iOS
 page_order: 4

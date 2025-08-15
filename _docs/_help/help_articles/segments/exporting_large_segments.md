@@ -1,5 +1,5 @@
 ---
-nav_title: Exporting Large Segments
+nav_title: Exporting large segments
 article_title: Exporting Large Segments
 page_order: 4
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Editing Canvases After Launch
+nav_title: Editing Canvases after launch
 article_title: Editing Canvases After Launch
 page_order: 0
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."

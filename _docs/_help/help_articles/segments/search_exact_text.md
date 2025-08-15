@@ -1,5 +1,5 @@
 ---
-nav_title: Search Exact Text
+nav_title: Search exact text
 article_title: Search for exact text in search fields
 page_order: 5
 

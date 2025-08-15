@@ -1,5 +1,5 @@
 ---
-nav_title: Rules-Based Recommendations
+nav_title: Rules-based recommendations
 article_title: Creating Rules-Based Item Recommendations
 description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 page_order: 2

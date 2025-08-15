@@ -1,5 +1,5 @@
 ---
-nav_title: Defining Push Enablement
+nav_title: Defining push enablement
 article_title: Defining Push Enablement
 page_order: 1
 

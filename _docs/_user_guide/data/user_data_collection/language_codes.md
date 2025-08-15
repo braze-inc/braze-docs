@@ -1,5 +1,5 @@
 ---
-nav_title: Language Codes
+nav_title: Language codes
 article_title: Supported language codes
 page_type: reference
 description: "These are the user language codes that are currently supported by Braze." 

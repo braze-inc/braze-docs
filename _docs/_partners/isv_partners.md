@@ -1,5 +1,5 @@
 ---
-nav_title: ISV Partners
+nav_title: ISV partners
 layout: dev_guide
 page_order: 9
 hidden: true

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Custom Events"
+nav_title: "GET: Export custom events"
 article_title: "GET: Export Custom Events"
 search_tag: Endpoint
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: Drag-And-Drop Editor
+nav_title: Drag-and-drop editor
 article_title: Drag-And-Drop Editor for In-App Messages
 alias: /iam_drag_and_drop/
 page_order: 2

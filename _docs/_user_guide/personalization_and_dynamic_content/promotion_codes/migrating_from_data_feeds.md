@@ -1,5 +1,5 @@
 ---
-nav_title: Migrating from Data Feeds to Promotion Codes
+nav_title: Migrating from data feeds to promotion codes
 article_title: Migrating from Data Feeds to Promotion Codes
 page_order: 0
 description: "This reference article provides guidance on migrating from Data Feeds to promotion codes."

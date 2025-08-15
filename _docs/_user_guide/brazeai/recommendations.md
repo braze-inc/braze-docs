@@ -1,5 +1,5 @@
 ---
-nav_title: Item Recommendations
+nav_title: Item recommendations
 article_title: Item recommendations in Braze
 page_order: 15
 search_rank: 1

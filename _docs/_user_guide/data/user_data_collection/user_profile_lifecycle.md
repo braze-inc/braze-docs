@@ -1,5 +1,5 @@
 ---
-nav_title: User Profile Lifecycle
+nav_title: User profile lifecycle
 article_title: User Profile Lifecycle
 page_order: 2
 page_type: reference

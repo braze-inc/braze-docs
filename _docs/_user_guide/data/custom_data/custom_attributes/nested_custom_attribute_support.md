@@ -1,5 +1,5 @@
 ---
-nav_title: Nested Custom Attributes
+nav_title: Nested custom attributes
 article_title: Nested Custom Attributes
 alias: "/nested_custom_attribute_support/"
 page_order: 1

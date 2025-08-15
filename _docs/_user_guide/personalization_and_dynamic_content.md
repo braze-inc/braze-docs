@@ -1,5 +1,5 @@
 ---
-nav_title: "Personalization & Dynamic Content"
+nav_title: "Personalization & dynamic content"
 article_title: "Personalization & Dynamic Content"
 page_order: 6
 layout: dev_guide

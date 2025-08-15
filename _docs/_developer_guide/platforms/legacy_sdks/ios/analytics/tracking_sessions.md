@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Sessions
+nav_title: Tracking sessions
 article_title: Tracking Sessions for iOS
 platform: iOS
 page_order: 0

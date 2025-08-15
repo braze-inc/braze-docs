@@ -1,5 +1,5 @@
 ---
-nav_title: Segment Insights
+nav_title: Segment insights
 article_title: Segment Insights
 page_order: 8
 page_type: tutorial

@@ -1,5 +1,5 @@
 ---
-nav_title: Suppression Lists
+nav_title: Suppression lists
 article_title: Suppression Lists
 page_order: 3
 page_type: reference

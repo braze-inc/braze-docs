@@ -1,5 +1,5 @@
 ---
-nav_title: Postman and Sample Requests
+nav_title: Postman and sample requests
 article_title: Postman and Sample Requests
 page_order: 3
 description: "This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests."

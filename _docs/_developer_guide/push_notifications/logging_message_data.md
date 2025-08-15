@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Message Data
+nav_title: Logging message data
 article_title: Logging push notification data through the Braze SDK
 page_order: 7.2
 description: "Learn how to log push notification data through the Braze SDK."

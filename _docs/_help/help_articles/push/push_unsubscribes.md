@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Push Unsubscribes
+nav_title: Tracking push unsubscribes
 article_title: Tracking Push Unsubscribes
 page_type: solution
 description: "This help article provides some tips to track push unsubscribes."

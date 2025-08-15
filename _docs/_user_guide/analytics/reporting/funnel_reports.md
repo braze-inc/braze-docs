@@ -1,5 +1,5 @@
 ---
-nav_title: Funnel Reports
+nav_title: Funnel reports
 article_title: Funnel Reports for Campaigns and Canvases
 page_order: 6
 page_type: reference

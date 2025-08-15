@@ -1,5 +1,5 @@
 ---
-nav_title: "Event Object"
+nav_title: "Event object"
 article_title: API Event Object
 page_order: 6
 page_type: reference

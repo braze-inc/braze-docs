@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Query List of Unsubscribed Email Addresses"
+nav_title: "GET: Query list of unsubscribed email addresses"
 article_title: "GET: Query List of Unsubscribed Email Addresses"
 search_tag: Endpoint
 page_order: 3

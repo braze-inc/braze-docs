@@ -1,5 +1,5 @@
 ---
-nav_title: API Use Cases
+nav_title: API use cases
 article_title: API Use Cases
 description: "Whether you’re a proficient developer or a marketer with minimal developer resources, this reference article is designed to help you understand how to leverage the power of the Braze REST API to accomplish various tasks and enhance your customer engagement strategy."
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: HTML Rendering in Test Emails
+nav_title: HTML rendering in test emails
 article_title: HTML Rendering in Test Emails
 page_order: 2
 

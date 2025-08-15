@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention reports
 page_order: 3
 noindex: true
 layout: redirect

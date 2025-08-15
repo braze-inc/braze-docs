@@ -1,5 +1,5 @@
 ---
-nav_title: Your Reports
+nav_title: Your reports
 article_title: Your Reports
 page_order: 7
 layout: dev_guide

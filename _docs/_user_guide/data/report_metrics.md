@@ -1,5 +1,5 @@
 ---
-nav_title: Report Metrics Glossary
+nav_title: Report metrics glossary
 article_title: Report Metrics Glossary
 layout: report_metrics
 page_order: 0

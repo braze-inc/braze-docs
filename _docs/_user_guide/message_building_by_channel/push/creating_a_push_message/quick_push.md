@@ -1,5 +1,5 @@
 ---
-nav_title: Quick Push Messages
+nav_title: Quick push messages
 article_title: Quick Push Messages
 alias: "/quick_push/"
 description: "This article describes things to know when creating a push campaign or Canvas using the quick push editing experience."

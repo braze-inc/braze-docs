@@ -1,5 +1,5 @@
 ---
-nav_title: Export Canvas Data
+nav_title: Export Canvas data
 article_title: Export Canvas Data
 page_order: 1
 page_type: reference

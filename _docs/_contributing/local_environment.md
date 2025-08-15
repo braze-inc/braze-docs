@@ -1,5 +1,5 @@
 ---
-nav_title: Setting Up Environment
+nav_title: Setting up environment
 article: Setting up your local Braze Docs environment
 description: "Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes."
 page_order: 0.1 

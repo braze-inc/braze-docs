@@ -1,5 +1,5 @@
 ---
-nav_title: Best Practices
+nav_title: Best practices
 article_title: Campaign Best Practices
 page_order: 0
 description: "This article provides best practices for creating and customizing your campaigns."

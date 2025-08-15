@@ -1,5 +1,5 @@
 ---
-nav_title: Sunset Policies
+nav_title: Sunset policies
 article_title: Sunset Policies for Email
 page_order: 8
 page_type: reference

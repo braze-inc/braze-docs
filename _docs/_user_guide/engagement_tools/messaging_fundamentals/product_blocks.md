@@ -1,5 +1,5 @@
 ---
-nav_title: Product Blocks
+nav_title: Product blocks
 article_title: Drag-and-Drop Product Blocks
 page_order: 7
 description: "This reference article covers drag-and-drop product blocks, which allow users to quickly add and configure dynamic or static showcases of catalog items."

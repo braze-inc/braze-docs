@@ -1,6 +1,6 @@
 ---
 page_order: 10
-nav_title: Version Management
+nav_title: Version management
 article_title: About version management for the Braze SDK
 description: "Learn about version management for the Braze SDK."
 ---

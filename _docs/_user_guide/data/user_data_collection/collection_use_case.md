@@ -1,5 +1,5 @@
 ---
-nav_title: Collection Use Case
+nav_title: Collection use case
 article_title: Collection Use Case
 page_order: 3
 page_type: reference

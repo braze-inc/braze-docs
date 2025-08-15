@@ -1,5 +1,5 @@
 ---
-nav_title: Fuzzy Opt-Out
+nav_title: Fuzzy opt-out
 article_title: Fuzzy Opt-Out
 description: "This reference article covers how to configure fuzzy opt-out, a setting that attempts to recognize when an inbound message does not match an opt-out keyword."
 page_type: reference

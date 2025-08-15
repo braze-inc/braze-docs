@@ -1,5 +1,5 @@
 ---
-nav_title: "Simple Survey"
+nav_title: "Simple survey"
 article_title: Simple Survey In-App Message
 page_order: 1.5
 page_type: reference

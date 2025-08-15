@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Attributes
+nav_title: Custom attributes
 article_title: Custom Attributes
 page_order: 10
 page_type: reference

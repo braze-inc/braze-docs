@@ -1,5 +1,5 @@
 ---
-nav_title: "Trigger Properties Object"
+nav_title: "Trigger properties object"
 article_title: API Trigger Properties Object
 page_order: 11
 page_type: reference

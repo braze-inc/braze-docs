@@ -1,5 +1,5 @@
 ---
-nav_title: Handling Increases in Click Rates
+nav_title: Handling increases in click rates
 article_title: Handling Increases in Click Rates
 page_order: 1
 

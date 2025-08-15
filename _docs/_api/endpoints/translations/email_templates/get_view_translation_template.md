@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: View All Translations and Locales for Email Template"
+nav_title: "GET: View all translations and locales for email template"
 article_title: "GET: View All Translations and Locales for Email Template"
 search_tag: Endpoint
 page_order: 3
