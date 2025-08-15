@@ -1,5 +1,5 @@
 ---
-nav_title: Rcs
+nav_title: RCS
 config_only: true
 noindex: true
 layout: blank_config

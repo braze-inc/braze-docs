@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an In-App message
+nav_title: Creating an in-app message
 article_title: Creating an In-App Message
 page_order: 1
 description: "This reference article covers how to create an in-app message using the Braze platform using campaigns or Canvas."

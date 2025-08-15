@@ -1,5 +1,5 @@
 ---
-nav_title: Making a connected content call
+nav_title: Making a Connected Content call
 article_title: Making a Connected Content API Call
 page_order: 0
 description: "This reference article covers how to make a Connected Content API call, as well as helpful examples and advanced Connected Content use cases."

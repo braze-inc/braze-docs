@@ -1,5 +1,5 @@
 ---
-nav_title: "Ads that click to WhatsApp"
+nav_title: "Ads That Click to WhatsApp"
 article_title: Ads That Click to WhatsApp
 page_order: 1
 description: "This reference article provides a step-by-step guide for setting up and using Ads That Click to WhatsApp."

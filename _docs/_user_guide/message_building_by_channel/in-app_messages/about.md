@@ -1,5 +1,5 @@
 ---
-nav_title: "About In-App messages"
+nav_title: "About in-app messages"
 article_title: About In-App Messages
 page_order: 0
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Connected content
+nav_title: Connected Content
 article_title: Connected Content
 page_order: 1
 layout: dev_guide

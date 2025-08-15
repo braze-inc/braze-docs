@@ -1,5 +1,5 @@
 ---
-nav_title: Deep linking to In-App content
+nav_title: Deep linking to in-app content
 article_title: Deep Linking to In-App Content
 page_order: 3
 description: "This reference article covers guidance on how to add deep linking to your in-app message content."

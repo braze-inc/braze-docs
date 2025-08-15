@@ -1,5 +1,5 @@
 ---
-nav_title: "SMS and rcs senders"
+nav_title: "SMS and RCS senders"
 article_title: SMS and RCS Senders
 noindex: true
 page_order: 9
