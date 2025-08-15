@@ -26,12 +26,12 @@ With [Passkit]({{site.baseurl}}/partners/additional_channels_and_extensions/addi
 ## Dispatch ID value return via messaging endpoints
 
 A message's `dispatch_id` will be included in the following messaging endpoint responses:
-- [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-via-api-triggered-delivery)
+- [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-via-API-triggered-delivery)
 - [`/campaigns/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#create-schedule-endpoint)
 - [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-immediately-via-api-only)
 - [`/messages/schedule`]({{site.baseurl}}/api/endpoints/messaging/#create-schedule-endpoint)
 - [`/canvases/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#canvas)
-- [`/canvases/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#api-triggered-canvases)
+- [`/canvases/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#API-triggered-canvases)
 
 This way, customers who use transactional messaging can trace the call back through Currents.
 

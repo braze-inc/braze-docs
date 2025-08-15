@@ -1,5 +1,5 @@
 ---
-nav_title: Transferring data from amazon S3 to snowflake
+nav_title: Transferring Data from Amazon S3 to Snowflake
 article_title: Transferring Data from Amazon S3 to Snowflake
 page_order: 7
 page_type: tutorial

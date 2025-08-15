@@ -1,5 +1,5 @@
 ---
-- nav_title: 10DLC application
+nav_title: 10DLC application
 article_title: Required Information for 10DLC application
 alias: /10dlc_application/
 page_type: reference

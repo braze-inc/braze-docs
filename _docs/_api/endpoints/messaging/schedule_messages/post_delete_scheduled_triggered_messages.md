@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Delete scheduled api-triggered campaigns"
+nav_title: "POST: Delete scheduled API-triggered campaigns"
 article_title: "POST: Delete Scheduled API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4

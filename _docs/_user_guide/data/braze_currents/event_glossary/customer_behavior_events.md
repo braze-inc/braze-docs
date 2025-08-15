@@ -1,5 +1,5 @@
 ---
-nav_title: Customer behavior and user events
+nav_title: Customer Behavior and User Events
 layout: customer_behavior_events_glossary
 page_order: 4
 excerpt_separator: ""

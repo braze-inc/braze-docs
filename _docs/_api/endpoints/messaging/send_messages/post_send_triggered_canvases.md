@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Canvas messages using api-triggered delivery"
+nav_title: "POST: Send Canvas messages using API-triggered delivery"
 article_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4

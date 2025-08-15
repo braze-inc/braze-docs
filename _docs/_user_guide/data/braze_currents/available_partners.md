@@ -1,5 +1,5 @@
 ---
-nav_title: Available partners
+nav_title: Available Partners
 article_title: Available Currents Partners
 page_order: 2
 page_type: reference

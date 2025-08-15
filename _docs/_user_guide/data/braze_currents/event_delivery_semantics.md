@@ -1,5 +1,5 @@
 ---
-nav_title: Event delivery semantics
+nav_title: Event Delivery Semantics
 article_title: Event Delivery Semantics
 page_order: 3
 page_type: reference
