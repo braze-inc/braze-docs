@@ -30,22 +30,22 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format YYYY-MM-DD| Date de début de la période pour récupérer les échecs d'envoi définitifs. Doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `end_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format YYYY-MM-DD | Date de fin de la période d'extraction des échecs d'envoi définitifs. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `start_date` | En option* | Chaîne de caractères au format YYYY-MM-DD| \*L'un des sites `start_date` ou `email` est requis. Il s'agit de la date de début de la plage de récupération des échecs d'envoi définitifs, qui doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `end_date` | Requis | Chaîne de caractères au format YYYY-MM-DD | Date de fin de la période d'extraction des échecs d'envoi définitifs. Ce traitement est effectué à minuit (UTC) par l’API. |
 | `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
-| `email` | Facultatif<br>(voir la note) | Chaîne de caractères | S’il est fourni, nous enverrons un message indiquant si l’utilisateur a reçu un échec d'envoi définitif ou non. Vérifiez que les chaînes d'e-mails sont correctement formatées. |
+| `email` | En option* | Chaîne de caractères | \*L'un des sites `start_date` ou `email` est requis. Si cette information est fournie, nous indiquerons si l'utilisateur a fait l'objet d'un échec d'envoi définitif. Vérifiez que les chaînes d'e-mails sont correctement formatées. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Vous devez fournir une `start_date` et une `end_date`, OU un `email`. Si vous fournissez les trois, une `start_date`, une `end_date`, et un `email`, nous donnerons la priorité aux e-mails communiqués et ignorerons la plage de dates.
+{% alert important %}
+Vous devez fournir un `end_date` et un `email` ou un `start_date`. Si vous fournissez les trois, une `start_date`, une `end_date`, et un `email`, nous donnerons la priorité aux e-mails communiqués et ignorerons la plage de dates.
 {% endalert %}
 
 Si votre plage de dates dépasse le nombre `limit` d'échecs d'envoi définitifs, vous devrez effectuer plusieurs appels d’API, en augmentant à chaque fois le `offset` jusqu’à ce qu’un appel renvoie un résultat inférieur à `limit` ou égal à zéro. L'inclusion des paramètres `offset` et `limit` avec `email` peut renvoyer une réponse vide.
 
 ## Exemple de demande
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=example@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

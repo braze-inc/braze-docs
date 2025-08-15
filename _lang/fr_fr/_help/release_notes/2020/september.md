@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version de septembre 2020."
 
 ## Rapports d’entonnoir
 
-Le rapport d'entonnoir offre un rapport visuel qui vous permet d'analyser les parcours de vos clients après avoir reçu une [campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou un [canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports).
+Le rapport d'entonnoir offre un rapport visuel qui vous permet d'analyser les parcours de vos clients après avoir reçu une [campagne]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) ou un [canvas]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ## Guide de mise à niveau iOS 14
 
@@ -22,11 +22,11 @@ Dans iOS 14, les utilisateurs doivent décider s’ils souhaitent s’abonner a
 
 ## Validation de l’e-mail
 
-Ce nouveau processus de validation de syntaxe d’e-mail est une mise à niveau du processus de Braze. C’est pour vérifier que les adresses e-mail mises à jour ou importées dans Braze sont correctes. Pour plus d'informations, consultez [les lignes directrices et les notes suivantes.]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation)
+Ce nouveau processus de validation de syntaxe d’e-mail est une mise à niveau du processus de Braze. C’est pour vérifier que les adresses e-mail mises à jour ou importées dans Braze sont correctes. Pour plus d'informations, consultez [les lignes directrices et les notes suivantes.]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)
 
 ## Événement utilisateur «compartiment aléatoire » dans Currents
 
-Le numéro de compartiment aléatoire (tel que RBN) se produit chaque fois qu'un nouvel utilisateur est créé dans son espace de travail. Au cours de cet événement, chaque nouvel utilisateur reçoit un numéro de compartiment aléatoire que vous pouvez ensuite utiliser pour créer des segments  d’utilisateurs aléatoires distribués uniformément Utilisez cette option pour regrouper une série de valeurs de numéro de compartiment aléatoire et comparer les performances à travers vos campagnes et variantes de campagne. Pour savoir si vous pouvez bénéficier de cet événement, consultez le [glossaire des événements de comportement des clients de]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) Currents.
+Le numéro de compartiment aléatoire (tel que RBN) se produit chaque fois qu'un nouvel utilisateur est créé dans son espace de travail. Au cours de cet événement, chaque nouvel utilisateur reçoit un numéro de compartiment aléatoire que vous pouvez ensuite utiliser pour créer des segments  d’utilisateurs aléatoires distribués uniformément Utilisez cette option pour regrouper une série de valeurs de numéro de compartiment aléatoire et comparer les performances à travers vos campagnes et variantes de campagne. Pour savoir si vous pouvez bénéficier de cet événement, consultez le [glossaire des événements de comportement des clients de]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) Currents.
 
 ## Composants Canvas - Prochainement !
 
@@ -36,4 +36,4 @@ Braze a ajouté quatre nouveaux composants Canvas pour améliorer la flexibilit�
 
 ## Événements de réception de SMS entrant
 
-Un nouvel événement d’engagement de messagerie a été ajouté à Currents. Cet événement se produit lorsque l’un de vos utilisateurs envoie un SMS à un numéro de téléphone dans l’un de vos groupes d’abonnement SMS Braze. Pour plus d'informations, consultez le [glossaire Currents des événements d’envoi de messages et d’engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
+Un nouvel événement d’engagement de messagerie a été ajouté à Currents. Cet événement se produit lorsque l’un de vos utilisateurs envoie un SMS à un numéro de téléphone dans l’un de vos groupes d’abonnement SMS Braze. Pour plus d'informations, consultez le [glossaire Currents des événements d’envoi de messages et d’engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

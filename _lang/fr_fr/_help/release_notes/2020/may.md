@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de mai 2020."
 
 ## Google Tag Manager
 
-Ajout de documentation et d'exemples sur le déploiement et la gestion du SDK Android de Braze à l'aide de [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/).
+Ajout de documentation et d'exemples sur le déploiement et la gestion du SDK Android de Braze à l'aide de [Google Tag Manager]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 
 ## Nouvel endpoint de l’API pour blacklister des adresses 
 

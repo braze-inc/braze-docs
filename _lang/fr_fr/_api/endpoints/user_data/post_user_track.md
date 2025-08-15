@@ -294,6 +294,10 @@ L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’
 
 Chaque objet d'événement du tableau d'objets représente une occurrence unique d'un événement personnalisé par un utilisateur à un moment donné. Cela signifie que chaque événement intégré dans Braze possède son propre ID, de sorte que les événements "dupliqués" sont traités comme des événements distincts et uniques.
 
+### Comment `/users/track` gère-t-il les attributs personnalisés imbriqués non valides ?
+
+Lorsqu'un attribut personnalisé imbriqué contient des valeurs non valides (telles que des formats d'heure non valides ou des valeurs nulles), toutes les mises à jour de l'attribut personnalisé imbriqué dans la demande seront exclues du traitement. Cela s'applique à toutes les structures imbriquées dans cet attribut spécifique. Pour garantir un traitement réussi, vérifiez que toutes les valeurs des attributs personnalisés imbriqués sont valides avant l'envoi.
+
 ## Utilisateurs actifs par mois CY 24-25
 Pour les clients qui ont acheté Utilisateurs actifs par mois - CY 24-25, Braze gère différentes limites de débit sur son endpoint `/users/track`:
 - Les limites de débit horaire sont fixées en fonction de l'activité d'ingestion de données prévue sur votre compte, qui peut correspondre au nombre d'utilisateurs actifs par mois que vous avez achetés, au secteur d'activité, à la saisonnalité ou à d'autres facteurs.

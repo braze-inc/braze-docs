@@ -34,7 +34,7 @@ La prise en charge de Shopify `checkout.liquid` commencera à être obsolète en
 
 **Soutien retiré**: Octobre 2022
 
-L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. Utilisez plutôt [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) à la place.
+L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. Utilisez plutôt [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) à la place.
 
 ### Partenariat avec Grouparoo
 
@@ -88,7 +88,7 @@ Si vous utilisez actuellement [Apptimize avec Braze]({{site.baseurl}}/help/relea
 ### Messages in-app originaux
 
 **Soutien retiré :** Février 2019<br>
-**Remplacé par**: [in-app Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**Remplacé par**: [in-app Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 Braze a amélioré le look and feel des messages in-app pour se conformer aux meilleures pratiques en termes d’UX et d’IU, et Braze ne prend plus en charge les messages in-app originaux.
 
@@ -128,9 +128,9 @@ Si vous avez besoin d'aide pour l'intégration d'Eclipse avant la migration, con
 ### Raw Event Stream (RES)
 
 **Soutien retiré**: Juillet 2018<br>
-**Remplacé par**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**Remplacé par**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-Le flux d'événements bruts était le prédécesseur de [Braze Currents]({{site.baseurl}}/partners/braze_currents/about/) et a été supprimé pour faire place à l'avenir des données à Braze.
+Le flux d'événements bruts était le prédécesseur de [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) et a été supprimé pour faire place à l'avenir des données à Braze.
 
 ### Delay while idle - Fonctionnalité GCM
 
@@ -145,4 +145,3 @@ Le paramètre Délai au repos faisait auparavant partie des [options de poussée
 Suppression des Endpoints personnalisés. Si vous avez un endpoint personnalisé, vous pouvez continuer à l’utiliser, mais Braze n’en crée plus de nouveaux.
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

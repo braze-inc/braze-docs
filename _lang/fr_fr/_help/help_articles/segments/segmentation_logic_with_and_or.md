@@ -34,7 +34,7 @@ Dans cet exemple, imaginons une promotion valable pour les utilisateurs aux Éta
 
 Il peut y avoir des situations de ciblage de l’utilisateur où l’utilisation de l’opérateur `OR` doit être évitée. L’opérateur `OR` crée une instruction qui évalue si un utilisateur répond aux critères d’un ou plusieurs filtres d’une instruction. Par exemple, si vous souhaitez créer un segment d’utilisateurs qui appartiennent au segment « gastronomes » mais qui n’appartiennent pas soit au segment « non gastronomes » soit au segment « amateurs de bonbons », l’opérateur `OR` peut alors fonctionner.
 
-![][1]
+![]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
 Cependant, si votre objectif est de segmenter les utilisateurs qui appartiennent au segment « gastronomes » et qui ne sont dans aucun des segments « non gastronomes » et « amateurs de bonbons », utilisez l’opérateur `AND`. De cette manière, les utilisateurs qui reçoivent la campagne ou le canvas appartiennent au segment visé ("foodies") et non aux autres segments ("non-foodies" et "candy-lovers") en même temps. 
 
@@ -50,14 +50,11 @@ Si `is not`, `does not equal` ou `does not match regex` sont utilisés avec l’
 
 Dans l’exemple suivant, nous utiliserons les deux opérateurs `AND` et `OR`. Ici, l'audience cible comprend les utilisateurs qui ont acheté des baskets Nike ou des baskets Adidas, et qui ont accepté de recevoir des notifications par e-mail.
 
-![Créer un segment pour Amateurs de Sneakers pour les utilisateurs dont la marque préférée est égale à Nike ou Adidas, et qui ont accepté de recevoir des e-mails][33]
+![Créer un segment pour les acheteurs de chaussures de sport lorsque la marque préférée de l'utilisateur est Nike ou Adidas et qu'il a choisi d'être abonné à l'e-mail]({% image_buster /assets/img_archive/NikeSneakers.png %}).
 
-Une autre façon de vous assurer que vous créez la bonne logique est de créer votre segment et [de prévisualiser les utilisateurs][35] qui en font partie en fonction de vos filtres. Ainsi, vous pouvez vous assurer que leurs attributs, version d’application ou toute autre segmentation correspondent à ce que vous voyez.
+Une autre façon de vous assurer que vous créez la bonne logique est de créer votre segment et de [prévisualiser les utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) qui y tombent en fonction de vos filtres. Ainsi, vous pouvez vous assurer que leurs attributs, version d’application ou toute autre segmentation correspondent à ce que vous voyez.
 
 Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 
 _Dernière mise à jour le 3 juin 2022_
 
-[1]: {% image_buster /assets/img_archive/or_operator_segment.png %}
-[33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
-[35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/

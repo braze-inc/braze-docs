@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de janvier 2018."
 
 ## Inclusion CSS
 
-Vous pouvez maintenant activer ou désactiver [l'intégration CSS][84] pour des messages électroniques individuels en allant dans vos **Paramètres de messagerie**.
+Vous pouvez maintenant activer ou désactiver [l'intégration CSS]({{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining) pour des messages électroniques individuels en allant dans vos **Paramètres de messagerie**.
 
 ## Nouveaux filtres pour la segmentation
 
@@ -24,20 +24,16 @@ En mars 2019, `Received Canvas Step` a été renommé `Received Message from Ca
 
 ## Exportation des utilisateurs via l’ID d’appareil
 
-Ce point de terminaison accepte désormais un identifiant de périphérique en tant que paramètre, ce qui vous permet [d'exporter des profils d'utilisateurs anonymes][82].
+Ce point de terminaison accepte désormais un identifiant de périphérique en tant que paramètre, ce qui vous permet [d'exporter des profils d'utilisateurs anonymes]({{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint).
 
 Vous pouvez utiliser l’ID d’appareil pour exporter tous les profils utilisateur présents sur un appareil.
 
 ## Mise à jour des rapports d'engagement
 
-Des statistiques supplémentaires, comme le **taux d'ouverture des push** et le **taux de conversion**, sont désormais disponibles dans les [rapports d'engagement][81].
+Des statistiques supplémentaires, comme le **taux d'ouverture des push** et le **taux de conversion**, sont désormais disponibles dans les [rapports d'engagement]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports).
 
 ## Certificats push pour Apple : Utilisation des fichiers.p8
 
-Vous pouvez maintenant utiliser un fichier [p8][80] lors du téléchargement d'un certificat Apple Push, garantissant que vos identifiants push iOS ne seront jamais expirés.
+Vous pouvez maintenant utiliser un fichier [p8]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens) lors du téléchargement d'un certificat Apple Push, garantissant que vos identifiants push iOS ne seront jamais expirés.
 
 
-[80]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
-[81]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
-[82]: {{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint
-[84]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining

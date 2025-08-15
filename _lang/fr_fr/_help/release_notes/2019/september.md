@@ -14,14 +14,14 @@ Les clients pourront simplement rechercher et sélectionner Braze dans [OneLogin
 
 ## Partenariat Rokt Calendar
 
-[Rokt Calendar]({{site.baseurl}}/partners/additional_channels/calendar/rokt_calendar/) offre aux clients de Braze la possibilité d'aligner leurs initiatives de marketeur personnalisé et d'étendre le contenu personnalisé au calendrier de l'utilisateur final. Ce qui rend l’expérience encore plus harmonieuse pour l’utilisateur final, et développe davantage l’Adhérence aux services de nos clients. Les clients pourront...
+[Rokt Calendar]({{site.baseurl}}/partners/home/) offre aux clients de Braze la possibilité d'aligner leurs initiatives de marketeur personnalisé et d'étendre le contenu personnalisé au calendrier de l'utilisateur final. Ce qui rend l’expérience encore plus harmonieuse pour l’utilisateur final, et développe davantage l’Adhérence aux services de nos clients. Les clients pourront...
 
 - Envoyer une invitation du calendrier via la plateforme Braze pour « noter cette date » et étendre notre communication
 - Mettez à jour une invitation existante si le contenu de l’événement change.
 
 ## Partenariat avec Passkit
 
-Avec [Passkit]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/), les clients de Braze pourront étendre leur engagement client au portefeuille mobile. Ils pourront personnaliser les campagnes de leur portefeuille en utilisant la segmentation puissante  de Braze et en orchestrant les divers canaux, comme push, les messages in-app, etc.
+Avec [Passkit]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/mobile_wallet/passkit/), les clients de Braze pourront étendre leur engagement client au portefeuille mobile. Ils pourront personnaliser les campagnes de leur portefeuille en utilisant la segmentation puissante  de Braze et en orchestrant les divers canaux, comme push, les messages in-app, etc.
 
 ## Retour de la valeur d’ID d’expédition via les endpoints de messagerie
 

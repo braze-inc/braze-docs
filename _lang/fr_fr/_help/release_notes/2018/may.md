@@ -15,7 +15,7 @@ Une fois activé, vous pouvez vous connecter à l’application Braze en utilisa
 
 ## Modèles d’e-mails mobiles réactifs
 
-Braze propose 16 nouveaux [modèles d'e-mail][97] mobile responsive qui répondent aux besoins courants en matière de marketing mobile. Elles comprennent différentes versions des modèles thématiques suivants :
+Braze propose 16 nouveaux [modèles d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template) mobile responsive qui répondent aux besoins courants en matière de marketing mobile. Elles comprennent différentes versions des modèles thématiques suivants :
 
 - Message de bienvenue
 - Merci
@@ -29,4 +29,3 @@ Braze propose 16 nouveaux [modèles d'e-mail][97] mobile responsive qui réponde
 Vous remarquerez que les icônes représentant chaque modèle montrent désormais la mise en page.
 
 
-[97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

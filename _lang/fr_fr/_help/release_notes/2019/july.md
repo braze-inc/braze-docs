@@ -48,7 +48,7 @@ Vous pouvez désormais choisir le [moment où un utilisateur passe]({{site.baseu
 
 ### Messages in-app de Canvas
 
-Les [messages in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) sont désormais disponibles dans Canvas ! Ajoutez une étape de Canvas et parcourez les canaux disponibles pour ajouter un message in-app.
+Les [messages in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) sont désormais disponibles dans Canvas ! Ajoutez une étape de Canvas et parcourez les canaux disponibles pour ajouter un message in-app.
 
 # Plus tôt ce mois-ci
 
@@ -58,7 +58,7 @@ Nous avons supprimé les images de profil utilisateur affichées dans les profil
 
 ## Contenu connecté dans les Cartes de contenu
 
-Vous pouvez désormais utiliser les chaînes de caractères et les fonctionnalités du [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) dans les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/).
+Vous pouvez désormais utiliser les chaînes de caractères et les fonctionnalités du [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) dans les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/).
 
 Les appels de contenu connectés vers des serveurs externes se produisent lorsqu’une carte est réellement envoyée, et non lorsque la carte est vue par l’utilisateur. Comme pour l’e-mail, le contenu dynamique sera calculé et déterminé au moment de l’envoi, et non pas au moment où la carte est visualisée.
 
@@ -70,7 +70,7 @@ Pour définir une valeur `null` pour l'adresse "reply-to-" d'un message e-mail p
 
 ## Comparaisons de campagne
 
-Examinez [plusieurs campagnes en même temps pour comparer leurs performances relatives]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), côte à côte dans Braze - dans une seule fenêtre !
+Examinez [plusieurs campagnes en même temps pour comparer leurs performances relatives]({{site.baseurl}}/report_builder/), côte à côte dans Braze - dans une seule fenêtre !
 
 ## Templater le dispatch_ID dans les messages avec Liquid
 
@@ -92,4 +92,4 @@ Le filtre "Afficher uniquement les miens" de la grille de campagne restera activ
 
 ## Mises à jour des tests A/B
 
-Vous pouvez envoyer un [test A/B]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) unique comprenant jusqu'à huit variantes (et un contrôle facultatif) à un pourcentage spécifié par l'utilisateur de l'audience d'une campagne, puis envoyer la meilleure variante à l'audience restante à une date planifiée à l'avance.
+Vous pouvez envoyer un [test A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) unique comprenant jusqu'à huit variantes (et un contrôle facultatif) à un pourcentage spécifié par l'utilisateur de l'audience d'une campagne, puis envoyer la meilleure variante à l'audience restante à une date planifiée à l'avance.

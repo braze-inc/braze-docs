@@ -19,4 +19,4 @@ Avec les blocs de contenu, vous pouvez :
 
 ## Outil promotionnel Gmail
 
-Gmail a mis à jour l'onglet mobile Promotions pour permettre aux marketeurs d'envoyer davantage d'informations via des annotations dans une "carte", plutôt que de se contenter de la ligne d'objet ou des informations de l'accroche. Avec l'[outil de promotion Gmail]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/), Braze peut vous aider à créer la carte de notre produit.
+Gmail a mis à jour l'onglet mobile Promotions pour permettre aux marketeurs d'envoyer davantage d'informations via des annotations dans une "carte", plutôt que de se contenter de la ligne d'objet ou des informations de l'accroche. Avec l'[outil de promotion Gmail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/), Braze peut vous aider à créer la carte de notre produit.

@@ -47,14 +47,14 @@ Les webhooks sont des outils puissants et flexibles, mais ils peuvent être un p
 
 Amazon Personalize, c'est comme si vous disposiez de votre propre système de recommandation Amazon machine learning ouvert toute la journée. Avec ses 20 ans et plus d’expérience en recommandation, Amazon Personalize vous permet d’améliorer l’engagement client en mettant en œuvre des recommandations personnalisées en temps réel sur les produits et le contenu et les promotions marketing ciblées. 
 
-Si vous souhaitez en savoir plus, consultez notre nouvel article [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/) pour comprendre les cas d'utilisation qu'Amazon Personalize propose, les données avec lesquelles il fonctionne, comment configurer le service et comment l'intégrer avec Braze.
+Si vous souhaitez en savoir plus, consultez notre nouvel article [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/personalized_recommendations/amazon_personalize) pour comprendre les cas d'utilisation qu'Amazon Personalize propose, les données avec lesquelles il fonctionne, comment configurer le service et comment l'intégrer avec Braze.
 
 ## Nouveaux partenariats Braze
 
 ### Yotpo – eCommerce
 
-L'intégration [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) et Braze vous permet de récupérer et d'afficher dynamiquement les évaluations par étoiles, les meilleures critiques et le contenu visuel généré par les utilisateurs sur les produits dans les e-mails et autres canaux de communication au sein de Braze. Vous pouvez également inclure les données de fidélisation des clients dans les e-mails et autres méthodes de communication pour créer une interaction plus personnalisée, ce qui stimule les ventes et la fidélisation.
+L'intégration [Yotpo]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/yotpo/) et Braze vous permet de récupérer et d'afficher dynamiquement les évaluations par étoiles, les meilleures critiques et le contenu visuel généré par les utilisateurs sur les produits dans les e-mails et autres canaux de communication au sein de Braze. Vous pouvez également inclure les données de fidélisation des clients dans les e-mails et autres méthodes de communication pour créer une interaction plus personnalisée, ce qui stimule les ventes et la fidélisation.
 
 ### Zeotap – Plateforme de données client
 
-Avec l'intégration de [Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) et Braze, vous pouvez étendre l'échelle et la portée de vos campagnes en synchronisant les segments de clients Zeotap pour mapper les données utilisateur de Zeotap aux comptes utilisateurs de Braze. Vous pouvez ensuite vous servir de ces données pour offrir des expériences personnalisées et ciblées à vos utilisateurs.
+Avec l'intégration de [Zeotap]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/zeotap/) et Braze, vous pouvez étendre l'échelle et la portée de vos campagnes en synchronisant les segments de clients Zeotap pour mapper les données utilisateur de Zeotap aux comptes utilisateurs de Braze. Vous pouvez ensuite vous servir de ces données pour offrir des expériences personnalisées et ciblées à vos utilisateurs.

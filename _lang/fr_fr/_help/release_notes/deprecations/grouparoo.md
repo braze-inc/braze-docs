@@ -12,7 +12,7 @@ page_type: update
 La prise en charge de Grouparo a été arrêtée en avril 2022.
 {% endalert %}
 
-> [Grouparoo][1] est un outil d'ETL inverse open-source qui permet d'alimenter facilement vos outils de marketing, de vente et de support en utilisant les données de votre entrepôt. La configuration est effectuée dans une interface utilisateur centrée sur les modèles, ce qui permet aux collaborateurs non techniques de configurer et planifier des synchronisations de données dans le cadre des opérations.
+> [Grouparoo](https://www.grouparoo.com/) est un outil d'ETL inverse open-source qui permet d'alimenter facilement vos outils de marketing, de vente et de support en utilisant les données de votre entrepôt. La configuration est effectuée dans une interface utilisateur centrée sur les modèles, ce qui permet aux collaborateurs non techniques de configurer et planifier des synchronisations de données dans le cadre des opérations.
 
 L’intégration entre Braze et Grouparoo facilite l’opérationnalisation des données stockées dans un entrepôt en les envoyant à Braze. En configurant des calendriers de synchronisation automatique, vous pouvez constamment améliorer vos communications client grâce à des informations actualisées.
 
@@ -22,7 +22,7 @@ L’intégration entre Braze et Grouparoo facilite l’opérationnalisation des 
 | ----------- | ----------- |
 | Compte et projet Grouparoo | Un compte Grouparoo est requis pour profiter de ce partenariat.<br><br>Cette intégration peut être utilisée avec l’édition gratuite pour la communauté et les solutions d’entreprise fournies par Grouparoo. La configuration se fait dans l’interface utilisateur de configuration Grouparoo. |
 | Clé API REST Braze | Une clé API REST Braze avec des utilisateurs et autorisations de suivi. <br><br> Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**. |
-| Endpoint REST de Braze | [L'URL de votre endpoint REST.][1] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+| Endpoint REST de Braze | [L'URL de votre endpoint REST.](https://www.grouparoo.com/) Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
@@ -31,7 +31,7 @@ L’intégration entre Braze et Grouparoo facilite l’opérationnalisation des 
 
 Dans Grouparoo, naviguez vers **Apps** et sélectionnez **Braze** pour créer une nouvelle application Braze. Sur l’écran modal qui apparaît, entrez votre clé API Braze et votre point de terminaison REST.
 
-![][2]
+![]({% image_buster /assets/img/grouparoo/add-app.png %})
 
 ### Étape 2 : Configurer un modèle et une source de données
 
@@ -52,7 +52,7 @@ Ensuite, sélectionnez l'application **Braze** que vous avez créée, nommez la 
 
 Ensuite, vous devez mapper les champs de propriété de Grouparoo vers les champs de propriété de Braze. 
 
-![Exemple de champs de mappage de propriété. L'identifiant de l'utilisateur Grouparoo est mappé sur l'identifiant externe. L'e-mail, le prénom et le nom de famille sont définis comme les champs équivalents "e-mail", "prénom" et "nom de famille" de Grouparoo.][3]{: style="max-width:80%;"}
+![Exemple de champs de mappage de propriété. L'identifiant de l'utilisateur Grouparoo est mappé sur l'identifiant externe. L'e-mail, le prénom et le nom de famille sont définis comme des champs grouparoo équivalents "e-mail", "prénom" et "nom de famille".]({% image_buster /assets/img/grouparoo/mapping.png %}){: style="max-width:80%;"}
 
 Assurez-vous que le champ Braze `external_id` est mappé sur la clé primaire dans votre table source. Mappez le reste des champs si nécessaire pour votre cas d’utilisation.
 
@@ -64,13 +64,9 @@ La section **Champs du profil utilisateur de Braze est facultative**: Créer des
 
 Outre le mappage, vous pouvez également choisir d’ajouter des groupes Grouparoo aux groupes d’abonnement Braze. 
 
-![Sous " Groupes d'abonnement Braze " dans la fenêtre de configuration de la destination Grouparoo, le groupe Grouparoo " Valeur élevée avec achat automobile récent " sera ajouté au groupe d'abonnement Braze " Valeur élevée avec achat automobile récent ".][4]{: style="max-width:80%;"}
+![Dans la fenêtre de configuration de la destination Grouparoo, sous "Groupes d'abonnement Braze", le groupe Grouparoo "Valeur élevée avec achat automobile récent" sera ajouté au groupe d'abonnement Braze "Valeur élevée avec achat automobile récent".]({% image_buster /assets/img/grouparoo/lists.png %}){: style="max-width:80%;"}
 
 {% alert important %}
 Vous trouverez plus de détails et de mises à jour sur cette intégration dans la [documentation de Grouparoo](https://www.grouparoo.com/docs/integrations/grouparoo-braze).
 {% endalert %}
 
-[1]: https://www.grouparoo.com/
-[2]: {% image_buster /assets/img/grouparoo/add-app.png %}
-[3]: {% image_buster /assets/img/grouparoo/mapping.png %}
-[4]: {% image_buster /assets/img/grouparoo/lists.png %}

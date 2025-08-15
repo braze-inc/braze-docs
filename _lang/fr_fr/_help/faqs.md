@@ -24,17 +24,14 @@ guide_featured_list:
   - name: "FAQ sur les messages in-app"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     image: /assets/img/braze_icons/channel-in-app-messages.svg
-  - name: "FAQ sur les emplacements/localisations et les géorepérages"
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "FAQ sur la bibliothèque multimédia"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     image: /assets/img/braze_icons/image-01.svg
   - name: "FAQ MMS"
-    link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
+    link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs/
     image: /assets/img/braze_icons/message-circle-01.svg
   - name: "FAQ SMS"
-    link: /docs/user_guide/message_building_by_channel/sms/faqs/
+    link: /docs/sms_faq/
     image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: "FAQ WhatsApp"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/

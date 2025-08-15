@@ -18,7 +18,7 @@ Nous avons mis à jour les indicateurs du rapport sur les [groupes de contrôle 
 
 ## Présentation des rapports
 
-Vous ne savez pas où commencer avec l’analyse de vos campagnes ou Canvas ? L'[aperçu des rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) fournit des indications sur les rapports et analyses que vous pouvez utiliser pour répondre à des questions courantes en matière de stratégie marketing.
+Vous ne savez pas où commencer avec l’analyse de vos campagnes ou Canvas ? L'[aperçu des rapports]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/) fournit des indications sur les rapports et analyses que vous pouvez utiliser pour répondre à des questions courantes en matière de stratégie marketing.
 
 ## Nouveau cluster US-05
 

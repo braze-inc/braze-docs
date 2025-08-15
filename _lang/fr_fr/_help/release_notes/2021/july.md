@@ -30,7 +30,7 @@ Apprenez-en plus sur le SSL chez Braze, pourquoi le SSL est important et comment
 
 ## Endpoints de l’API des profils utilisateur d’Amplitude
 
-L’API des profils d'utilisateur Amplitude est utilisée pour les profils utilisateur Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations. Pour en savoir plus, reportez-vous à la section [Points d'extrémité de l'API du profil utilisateur d'Amplitude.]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) 
+L’API des profils d'utilisateur Amplitude est utilisée pour les profils utilisateur Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations. Pour en savoir plus, reportez-vous à la section [Points d'extrémité de l'API du profil utilisateur d'Amplitude.]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/) 
 
 ## Endpoint Informations relatives à la campagne 
 

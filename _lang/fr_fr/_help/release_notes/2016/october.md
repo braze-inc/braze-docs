@@ -14,7 +14,7 @@ Nous avons ajouté des fonctionnalités de sécurité améliorées à Braze, not
 > Mise à jour : Les **paramètres de sécurité** de Braze, accessibles depuis la page **Paramètres de l’entreprise**, comprennent également des règles de réutilisation et d'expiration des mots de passe.
 
 ## Téléchargement d’un CSV après importation
-Les utilisateurs de Braze peuvent désormais télécharger un CSV des utilisateurs récemment importés. Cela vous donne plus de visibilité sur la synchronisation des données dans vos systèmes. En savoir plus sur l'[importation de fichiers CSV.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)
+Les utilisateurs de Braze peuvent désormais télécharger un CSV des utilisateurs récemment importés. Cela vous donne plus de visibilité sur la synchronisation des données dans vos systèmes. En savoir plus sur l'[importation de fichiers CSV.]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)
 
 ## Filtre d’anniversaire
 En plus du [filtre d'anniversaire]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), Braze prend désormais en charge un filtre d'anniversaire qui vous donne la possibilité de cibler les utilisateurs en fonction d'une date de calendrier pour les jalons de fidélité, les avis de recharge, et bien plus encore ! Accédez à cette fonction en sélectionnant le filtre « Date of Custom Attribute » (Date de l’attribut personnalisé) sur la page Segments. En savoir plus sur les [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).

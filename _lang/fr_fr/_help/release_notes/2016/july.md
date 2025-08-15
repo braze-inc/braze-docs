@@ -14,9 +14,9 @@ Cette mise à niveau facilite l’utilisation du journal d’erreurs des message
 
 ## Horodatage ajouté pour la dernière notification push de suivi de désinstallation envoyée
 
-Braze détecte les désinstallations en envoyant un push silencieux aux applications d’un client pour voir quels appareils répondent. Cette fonction ajoute un horodatage discret indiquant la dernière exécution du suivi de désinstallation. Cet horodatage est disponible sur la page Paramètres où le suivi de désinstallation est configuré. En savoir plus sur la [désinstallation du suivi.]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)
+Braze détecte les désinstallations en envoyant un push silencieux aux applications d’un client pour voir quels appareils répondent. Cette fonction ajoute un horodatage discret indiquant la dernière exécution du suivi de désinstallation. Cet horodatage est disponible sur la page Paramètres où le suivi de désinstallation est configuré. En savoir plus sur la [désinstallation du suivi.]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking)
 
-![Case à cocher Suivi des désinstallations][6]
+![Désinstaller la case à cocher de suivi]({% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %})
 
 ## Améliorations des tests de webhook
 
@@ -24,13 +24,11 @@ Vous pouvez maintenant envoyer un webhook en direct à partir de Braze avant de 
 
 ## Ajout de la variation de message reçue à l’exportation CSV des destinataires de campagne
 
-Dans l’exportation des destinataires de campagne vers CSV, nous avons ajouté une colonne indiquant la variation de message reçue. En savoir plus sur l'[exportation de données]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data) depuis Braze.
+Dans l’exportation des destinataires de campagne vers CSV, nous avons ajouté une colonne indiquant la variation de message reçue. En savoir plus sur l'[exportation de données]({{site.baseurl}}/user_guide/data/export_braze_data/) depuis Braze.
 
 ## Limite approximative sur le nombre d’impressions
 
 Une fois qu’un message in-app a reçu un certain nombre d’impressions, Braze arrête de permettre aux utilisateurs de devenir éligibles à la réception du message. En savoir plus sur la définition de [limites approximatives pour les impressions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap).
 
-![Limite d’impression IAM][11]
+![Capuchon d'impression IAM]({% image_buster /assets/img_archive/approx_limit_for_IAM.png %})
 
-[6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
-[11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}
