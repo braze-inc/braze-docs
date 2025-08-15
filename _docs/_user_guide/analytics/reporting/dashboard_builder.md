@@ -117,6 +117,37 @@ Touches include _Email Click_ (link click), _Content Card Click_, _In-App Messag
 | Device Screen Size | Count of users in the selected date range who opened a push notification, grouped by device screen resolution (size). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+#### Segment Insights - Email
+
+| Metric  | Definition  |
+|---|---|
+| Weekly Email Metrics (Rates) | Email engagement rates (delivery, bounce, open, click, unsubscribe rates) grouped by segment and displayed as weekly time series.|
+| Weekly Email Metrics (Counts) | Email engagement counts (sent, delivered, bounces, opens, clicks, unsubscribes) grouped by segment and displayed as weekly time series.|
+| Weekly Purchase Metrics (Rates) | Purchase conversion rates (revenue per recipient) from email opens and clicks, grouped by segment and displayed as weekly time series.|
+| Weekly Purchase Metrics (Counts) | Purchase counts and revenue totals from email opens and clicks, grouped by segment and displayed as weekly time series.|
+| Email Engagement by Segment | Summary table showing total email engagement metrics (sent, delivered, bounces, opens, clicks, unsubscribes and their rates) aggregated by segment.|
+| Purchases & Revenue by Segment | Summary table showing total purchase metrics (purchases, revenue, and revenue per recipient) from email opens and clicks, aggregated by segment.|
+| Top 10 Campaigns for Engagement Metrics | Ranked list of campaigns with highest email engagement metrics (configurable metric for ranking).|
+| Bottom 10 Campaigns for Engagement Metrics | Ranked list of campaigns with lowest email engagement metrics (configurable metric for ranking).|
+| Top 10 Canvases for Engagement Metrics | Ranked list of canvases with highest email engagement metrics (configurable metric for ranking).|
+| Bottom 10 Canvases for Engagement Metrics | Ranked list of canvases with lowest email engagement metrics (configurable metric for ranking).|
+| Top 10 Campaigns for Purchase Metrics | Ranked list of campaigns with highest purchase conversion metrics from email engagement (configurable metric for ranking).|
+| Bottom 10 Campaigns for Purchase Metrics | Ranked list of campaigns with lowest purchase conversion metrics from email engagement (configurable metric for ranking).|
+| Top 10 Canvases for Purchase Metrics | Ranked list of canvases with highest purchase conversion metrics from email engagement (configurable metric for ranking).|
+| Bottom 10 Canvases for Purchase Metrics | Ranked list of canvases with lowest purchase conversion metrics from email engagement (configurable metric for ranking).|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Session Analytics
+
+| Metric | Definition  |
+|---|---|
+| # of sessions by day (time series) | Count of unique sessions grouped by day within the selected date range, displayed as a time series.|
+| Avg # of sessions per user | Average number of sessions per user calculated as total sessions divided by unique users within the selected date range.|
+| campaigns convert to sessions | Count of unique sessions that occurred at the same time as campaign conversions, grouped by campaign ID and ranked by session count.|
+| canvases convert to sessions | Count of unique sessions that occurred at the same time as canvas conversions, grouped by canvas ID and ranked by session count.|
+| Total # of sessions per user | List of top 1,000 users by their total session count within the selected date range.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Share your feedback with us
 
 Select the **Send feedback** button or contact your customer success manager to share your feedback with us.
