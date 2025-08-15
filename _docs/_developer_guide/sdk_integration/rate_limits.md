@@ -81,7 +81,7 @@ Trigger/context:
 [Describe what causes it to be called, e.g., button click, scroll event]
 
 Code snippet:  
-[Paste the exact code where this method is called]
+[Paste the exact code where this method is called, one snippet for each time it is called]
 
 Patterns in user flow that may cause bursts or excessive calls:
 [Describe here]
