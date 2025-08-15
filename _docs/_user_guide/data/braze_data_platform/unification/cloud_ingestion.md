@@ -13,25 +13,25 @@ guide_top_text: "<h2>What is it?</h2>Braze Cloud Data Ingestion (CDI) allows you
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
-    link: /docs/user_guide/data/cloud_ingestion/overview/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
   - name: Connected Sources
-    link: /docs/user_guide/data/cloud_ingestion/connected_sources/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/connected_sources/
     image: /assets/img/braze_icons/server-01.svg
   - name: Data Warehouse Integrations
-    link: /docs/user_guide/data/cloud_ingestion/integrations/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/integrations/
     image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: File Storage Integrations
-    link: /docs/user_guide/data/cloud_ingestion/file_storage_integrations/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/file_storage_integrations/
     image: /assets/img/braze_icons/folder.svg 
   - name: Sync Catalogs Data
-    link: /docs/user_guide/data/cloud_ingestion/sync_catalogs_data/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/sync_catalogs_data/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: Delete Users with CDI
-    link: /docs/user_guide/data/cloud_ingestion/delete_users/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/delete_users/
     image: /assets/img/braze_icons/trash-01.svg
   - name: Frequently Asked Questions
-    link: /docs/user_guide/data/cloud_ingestion/faqs/
+    link: /docs/user_guide/braze/data_platform/unification/cloud_ingestion/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 
