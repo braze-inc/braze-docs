@@ -47,6 +47,10 @@ You can also add this delay in the [Braze SDK]({{site.baseurl}}/developer_guide/
 
 ## Scenario 2: Using multiple API endpoints
 
+{% alert important %}
+We use asynchronous processing to maximize speed and flexibility. This means when API calls are sent to us separately, we cannot guarantee that they will be processed in the order that was sent.
+{% endalert %}
+
 There are a few scenarios where multiple API endpoints can also result in this race condition, such as when:
 
 - Using separate API endpoints to create users and trigger Canvases or campaigns
@@ -117,4 +121,8 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 ```
 {% endraw %}
 
+#### Confirm how user data is being managed
 
+If there is a race condition during the Canvas entry evaluation, users may enter a Canvas that they weren't meant to enter. For example, the user's profile could be set to be included in the audience and subsequently updated after the Canvas has enqueued the users to no longer be eligible in the audience. 
+
+We recommend confirming how user data is managed and updated, specifically when and how specific attributes are updated, such as by SDK, API, batch API, and other methods. This can help identify and clarify why a user has entered a campaign or Canvas versus when a user's profile was updated.

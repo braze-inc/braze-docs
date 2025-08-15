@@ -14,14 +14,14 @@ tool: Canvas
 > Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
 {% alert important %}
-Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
+Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.<br><br>Note that opting into the Canvas Context step early access will make changes to how timestamps are handled across all your Canvases. To learn more about this, refer to [Time zone consistency standardization](#time-zone-consistency-standardization).
 {% endalert %}
 
 ## How it works
 
 ![A Context step as the first step of a Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Context steps allows you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
+Context steps allow you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
 Within this framework, each Context step can define multiple context variables&mdash;temporary pieces of data that enable you to personalize delays, segment users dynamically, and enrich messaging without permanently altering a user's profile information.
 
@@ -44,6 +44,63 @@ For example,
 {% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
+
+## Time zone consistency standardization
+
+With the addition of Canvas Context, all timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). Previously, timestamps for event properties were normalized to UTC with [some exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know). Now, this will provide a more consistent experience for editing Canvas steps and messages.
+
+Consider this example of how this change might affect a timestamp in Canvas. Let's say we have an action-based Canvas that uses an event property in the first step of the Canvas with the following Message step: 
+
+{% raw %}
+`Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
+{% endraw %}
+
+![Context journey with a Message step as the first step.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
+
+The step will also have an event payload like: 
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+}
+```
+
+Historically, the message would be: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
+
+With the Canvas Context early access, the message will now be: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` This is due to the timestamp being in UTC, which is 8 hours ahead of Pacific Time (the time zone specified in the original payload with `-08:00`).
+
+{% alert important %}
+To account for this timestamp change, in all circumstances, we strongly recommend [using Liquid filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps are represented in the desired time zone.
+{% endalert %}
+
+### Using Liquid to denote a timestamp in your preferred time zone
+
+Consider the following Liquid snippet:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+This logic results in the following output: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
+
+The preferred time zone can also be sent in the event properties payload and used in Liquid logic: 
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+  "user_timezone": "America/Los_Angeles"
+}
+```
+
+This is an example of the Liquid snippet:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
 
 ## Creating a Context step
 
@@ -88,9 +145,13 @@ Context variables have the same expected formats for data types as [custom event
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
-|Time| last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
+|Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+By default, the time data type is in UTC. If you use a string data type to store a time value, you can define the time as a different time zone like PST. 
+
+For example, if you're sending a message to a user the day before their birthday, you would save the context variable as a time data type because there's Liquid logic associated with sending the day before. However, if you're sending a holiday message on Christmas Day (December 25), you wouldn't need to reference the time as a dynamic variable, so using a string data type would be preferable.
 
 ## Using context variables {#using-context-variables}
 
@@ -156,7 +217,7 @@ Yes. All variables in a Context step are evaluated in a sequence, meaning you co
 |---|---|---|
 |`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | A user's favorite type of cuisine. |
 |`promo_code`| {% raw %}`EATFRESH`{% endraw %} | The available discount code for a user. |
-|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{promo_code}} "on delivery from your favorite" {{favorite_cuisine}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user. You could also use a Context step to save the [promo code]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) value and template it in other steps throughout a Canvas. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.promo_code}} "on delivery from your favorite" {{context.favorite_cuisine}} restaurants!"`{% endraw %} | A personalized message that combines the previous variables. In a Message step, you could use the Liquid snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} to reference the context variable to deliver a personalized message to each user. You could also use a Context step to save the [promo code]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) value and template it in other steps throughout a Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 This also applies across multiple Context steps. For example, imagine this sequence:
@@ -167,4 +228,10 @@ This also applies across multiple Context steps. For example, imagine this seque
 
 Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
 
+### Does the Canvas Context time zone consistency standardization impact API-triggered Canvases?
 
+No, this change only impacts action-triggered Canvases. All API trigger properties have the string type, not the time type, so the original time zone is always preserved. However, we still recommend using an explicit time zone filter in Liquid when the property is used.
+
+### How does this relate to the exceptions noted in Canvas entry properties and event properties?
+
+Participating in the Canvas Context early access removes [those exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know), regardless if you're using a Canvas Context step.

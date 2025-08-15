@@ -23,15 +23,11 @@ search_rank: 2
 - [퍼널]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) 및 [리텐션]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) 보고서를 사용하여 추가 분석 찾기
 - [영구 항목 속성을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) 활용하여 고객 이벤트의 메타데이터를 Canvas 단계의 개인화에 활용하기
 - [Currents로]({{site.baseurl}}/user_guide/data/braze_currents/) 더욱 정교한 분석 생성하기
-- 캔버스 [예외 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) 설정하여 사용자가 캔버스의 다음 단계로 진행하지 않아야 하는 시기를 정의합니다.
+- [종료 기준을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) 설정하여 사용자가 캔버스를 종료해야 하는 시점을 정의합니다.
 
 ## 사용자 지정 이벤트 관리
 
 대시보드에서 **데이터 설정** > **사용자** 지정 이벤트로 이동하여 사용자 지정 이벤트를 관리, 생성 또는 차단 목록에 추가할 수 있습니다.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정 관리에서** **사용자 지정 이벤트를** 찾을 수 있습니다.
-{% endalert %}
 
 사용자 지정 이벤트 옆의 메뉴를 선택하여 다음 작업을 수행합니다:
 
@@ -71,13 +67,13 @@ You can view up to 100 usage reports at a time by selecting the checkboxes for m
 
 {% details 플랫폼별 설명서 확장 %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_custom_events/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_custom_events/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_custom_events/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
 
@@ -106,10 +102,6 @@ You can view up to 100 usage reports at a time by selecting the checkboxes for m
 ## 분석
 
 Braze는 사용자 지정 이벤트가 발생한 횟수와 세분화를 위해 각 사용자가 마지막으로 수행한 시간을 기록합니다. **애널리틱스** > **사용자 지정 이벤트 보고서로** 이동하여 이러한 애널리틱스를 볼 수 있습니다.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **데이터에서** **사용자 지정 이벤트** 보고서를 찾을 수 있습니다.
-{% endalert %}
 
 대시보드의 **사용자 지정 이벤트 보고서** 페이지에서 각 사용자 지정 이벤트가 얼마나 자주 발생하는지 집계하여 볼 수 있습니다. 시계열에 겹쳐진 회색 선은 캠페인이 마지막으로 전송된 시간을 나타내며, 캠페인이 사용자 지정 이벤트 활동에 어떤 영향을 미쳤는지 확인하는 데 유용합니다.
 
@@ -210,6 +202,8 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 ##### Adding event properties for segmentation
 
 You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+기본적으로 워크스페이스당 20개의 세그먼트 가능한 이벤트 속성을 가질 수 있습니다. 이 한도를 늘리려면 Braze 계정 관리자에게 문의하세요.
 
 To add event properties for segmentation, do the following:
 

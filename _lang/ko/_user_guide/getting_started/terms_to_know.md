@@ -51,7 +51,7 @@ glossaries:
   - name: 엔드포인트
     description: "API <a href=\"https://www.braze.com/docs/api/endpoints/\">엔드포인트</a>라고도 하는 커뮤니케이션 채널의 끝은 메시지를 전송하고 예약하기 위해 Braze 메시징 API 내에서 사용됩니다."
   - name: 예외 이벤트
-    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/\">예외 이벤트</a>는 사용자가 원하는 목표에 도달했지만 트리거된 메시지를 받지 못했을 때 발생합니다. This way, the triggered message is still relevant to the user."
+    description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events\">예외 이벤트</a>는 사용자가 원하는 목표에 도달했지만 트리거된 메시지를 받지 못했을 때 발생합니다. This way, the triggered message is still relevant to the user."
   - name: 최대 게재빈도 설정
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping\">최대 게재빈도 설정</a>을 통해 오디언스를 압도하지 않으면서도 커뮤니케이션을 관리할 수 있습니다. It's an automated limit on messages to prevent users from receiving too many communications in a short period of time."
   - name: HIPAA(미국의료정보보호법)

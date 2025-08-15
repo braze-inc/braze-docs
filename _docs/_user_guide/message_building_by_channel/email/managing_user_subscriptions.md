@@ -41,7 +41,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 ### Bounces and invalid emails
 
-{% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
+{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
 When an email address hard bounces, the user's subscription state isn't automatically set to "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
 
@@ -75,7 +75,7 @@ If available, the user profile also displays a timestamp for when the user's sub
 There are two ways you can check a user's email subscription state with Braze:
 
 1. **REST API export:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
-2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state. 
+2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
 
 When a user updates their email address, their subscription state will be set to subscribed, unless the updated email address already exists elsewhere in a Braze workspace.
 
@@ -89,7 +89,7 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 
 ### Creating a subscription group
 
-1. Go to **Audience** > **Subscriptions**.
+1. Go to **Audience** > **Subscription Group Management**.
 2. Select **Create email subscription group**. 
 3. Give your subscription group a name and description.
 4. Select **Save**. 
@@ -102,7 +102,7 @@ All subscription groups are automatically added to your preference center.
 
 When creating your segments, set the subscription group name as a filter. This will confirm that users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more.
 
-![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
+![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Weekly Emails" subscription group.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### Archiving subscription groups
 
@@ -113,7 +113,7 @@ To archive your group from the **Subscription Groups** page, do the following:
 1. Find your group in the list of subscription groups. 
 2. Select **Archive** from the <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;dropdown menu.
 
-Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is subscribed to it, they will remain "subscribed" to this group, even if they click an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
+Braze will not process any state changes for users in archived groups. For example, if you archive Subscription Group 1 while Susie is subscribed to it, they will remain "subscribed" to this group, even if they click an unsubscribe link (this shouldn't matter to Susie because Subscription Group 1 is archived and you can't send any messages using it).
 
 #### Viewing subscription group sizes
 
@@ -129,6 +129,11 @@ You can see the number of users who changed their subscription state (subscribed
 2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
 ![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
+
+### Checking a user's email subscription group
+
+- **User profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. You can also view a user's email subscription groups in the **Engagement** tab.
+- **Braze REST API:** Use the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to view individual user profile's subscription groups. 
 
 ## Email preference center
 
@@ -163,7 +168,7 @@ To create a custom landing page that users will be directed to (instead of the d
 
 We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
-![Custom unsubscribe email in the Custom Unsubscribe Page panel.]({% image_buster /assets/img/custom_unsubscribe.png %})
+![Custom unsubscribe page with a preview "Sorry to see you go!".]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### Creating a custom opt-in page
 
@@ -173,9 +178,13 @@ Instead of immediately subscribing a user to your email campaigns, creating a cu
 2. Select **Subscription Pages and Footers**.
 3. Customize the styling in the **Custom opt-in page** section to see how that indicates to your users that they've been subscribed.
 
+Users will be directed to this page through the {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} tag.
+
 {% alert tip %}
 Braze recommends using a double opt-in process to help your email outreach. This process sends an additional confirmation email where a user would confirm their notification preferences again via a link in the email. At this point, the user is considered opted-in.
 {% endalert %}
+
+![Custom opt-in email with a message "Glad to see you still want to hear from us".]({% image_buster /assets/img/custom_optin.png %})
 
 ## Subscriptions and campaign targeting {#subscriptions-and-campaign-targeting}
 

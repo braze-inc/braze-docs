@@ -15,7 +15,7 @@ Purchase events are purchase actions taken by your users, and are used to record
 
 ## Logging purchase events
 
-You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), or using one of our SDK libraries listed below.
 
 The following lists methods across various platforms that are used to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 
@@ -127,23 +127,23 @@ You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Lifetime Revenue</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Lifetime Value Per User</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Average Daily Revenue</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">Daily Purchases</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Daily Revenue Per User</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>

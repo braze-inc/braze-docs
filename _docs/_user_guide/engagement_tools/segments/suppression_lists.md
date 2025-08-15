@@ -10,7 +10,7 @@ description: "This page covers how to use suppression lists to specify which use
 
 # Suppression lists
 
-> Suppression lists specify groups of users who will never receive messages. Admins can create dynamic suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
+> Suppression lists are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users will enter and exit suppression lists as they meet filter criteria. You can also set exception tags so that the suppression list won’t apply to campaigns or Canvases with those tags. Messages from campaigns or Canvases with exception tags will still reach suppression list users who are in the target segments.
 
 {% alert important %}
 Suppression lists are currently in beta. If you're interested in being part of this beta, reach out to your customer success manager. During the beta, functionality may change, and you can have up to five active suppression lists at a time, but let your customer success manager know if you need more. 
@@ -18,40 +18,26 @@ Suppression lists are currently in beta. If you're interested in being part of t
 
 ## Why use suppression lists?
 
-Suppression lists are dynamic and automatically apply to certain forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
+Suppression lists are dynamic and automatically apply to all forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
 
-### Messages not affected by suppression lists
+### Message types and channels affected by suppression lists
 
-As part of the beta, suppression lists will not apply to the following message types (in other words, suppression list users **will still** receive messages that belong to the following):
-- [Feature Flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/)
-- [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)
-- [API campaigns]({{site.baseurl}}/api/api_campaigns/)
+Suppression lists will apply to all message types and message channels except for [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/). This means that:
 
-You don't need to add an exception tag for any of these use cases, as suppression lists automatically won't apply to them. To exclude a group of users from a message within these use cases, you need to create a target segment that excludes these users.
-
-{% alert important %}
-During the beta, we collect customer feedback to help improve our product. Tell your customer success manager if you plan to apply suppression lists to transactional emails.
-{% endalert %}
-
-### Channels affected by suppression lists
-
-Suppression lists are dynamic and will automatically apply to all of the following channels (unless the campaign or Canvas contains an exception tag): 
-- SMS
-- Email
-- Push
-- In-app messages
-- Content Card
-- Banner
-- SMS/MMS
-- Webhook
-- WhatsApp
-- LINE
-
-By default, suppression lists will apply to any API-triggered campaigns and API-triggered Canvases. You can change this by checking **Do not apply this suppression list to all API-triggered campaigns and API-triggered Canvases** in the **Exception Settings** section.
+- Suppression lists apply to all message types, including:
+    - [API campaigns]({{site.baseurl}}/api/api_campaigns/)
+    - API-triggered campaigns and Canvases
+    - [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)
+- Users in a suppression list won't be suppressed from feature flags, but will be suppressed from all other channels. 
+- You use exception tags so that suppression list users are still targeted by particular campaigns and Canvases. For details, refer to step 4 in [Setting up suppression lists](#setup).
 
 ![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
 
-## Setting up suppression lists
+{% alert note %}
+Suppression lists are applied to API campaigns that are created in the Braze dashboard with a `campaign_id`. Suppression lists don't apply to messages sent through [Braze messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) without an associated `campaign_id`. 
+{% endalert %}
+
+## Setting up suppression lists {#setup}
 
 Because suppression lists can significantly impact the messages you send, only admins can edit, save, active, and deactivate suppression lists (all users can view suppression lists).
 
@@ -93,23 +79,14 @@ While creating a campaign or Canvas, use **User Lookup** within the **Target Aud
 
 !["User Lookup" window showing that a user is in a suppression list.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
-{% tabs local %}
-{% tab campaign %}
-If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Messages not affected by suppression lists](#messages-not-affected-by-suppression-lists) for cases when a suppression list won't apply.
+### Campaign 
+
+If a user is in a suppression list, they won't receive a campaign for which that suppression list applies. Refer to [Message types and channels affected by suppression lists](#message-types-and-channels-affected-by-suppression-lists) for cases when a suppression list won't apply.
 
 ![The "Suppression Lists" section with one active suppression list, called "Low marketing health scores".]({% image_buster /assets/img/active_suppression_list.png %})
-{% endtab %}
-{% tab canvas %}
-If a user is in a suppression list, they will still enter the Canvas but won't be able to receive Message steps within the Canvas. When they advance to a Message step, they will be exited from the Canvas. However, a user in a suppression list is still able to receive non-Message steps prior to a Message step. 
 
-#### Preventing segments from entering a Canvas
+### Canvas 
 
-For a segment to not be entered into a Canvas **at all**, you can configure that Canvas' Target settings to exclude that segment by following these steps:
+From the moment a user is added to a suppression list, they will not enter Canvases. If they have already entered a Canvas, they won't receive Message steps. This means that if a user is already inside a Canvas when they are added to a suppression list, they will advance through the Canvas until the next Message step, at which point they will exit without receiving the Message step. 
 
-1. Build a segment using the same filters and criteria as your suppression list.
-2. In the **Target** step, use the **Segment Membership** filter to target users who aren't included in your segment.
-
-For example, let’s say you have a Canvas with an applied suppression list. The Canvas has a User Update step followed by a Message step. In this scenario, suppression list users will enter the Canvas, proceed through the User Update step (where the user may be updated, based on how that step is configured), and then exit at the Message step (at which point the user will be included in the “Exited” metrics). 
-{% endtab %}
-{% endtabs %}
-
+For example, let's say a Canvas has a User Update step followed by a Message step. If a user enters the Canvas and then is added to a suppression list, that user will still proceed through the User Update step (where they may be updated), and then exit at the Message step, at which point they will be included in the exited metrics.

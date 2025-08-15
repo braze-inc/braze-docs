@@ -25,14 +25,9 @@ search_rank: 1
 **단계:**
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
-{% endalert %}
-
-{: start="2"}
-2\. **SMS를** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
-3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+2. **SMS를** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
+3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
+4. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 6. [구독 그룹을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) 선택하여 적절한 사용자에게 메시지를 보낼 수 있도록 하세요. 구독 그룹을 선택할 때 Braze는 자동으로 세그먼트 필터를 추가하여 구독한 사용자만 캠페인을 수신할 수 있도록 합니다. 해당 구독 그룹에 속하는 긴 코드와 짧은 코드만 대상 사용자에게 SMS를 보내는 데 사용됩니다.
@@ -86,7 +81,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 #### Creating right-to-left messages
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## 3단계: 메시지 미리보기 및 테스트
 
@@ -123,7 +118,7 @@ SMS 리타겟팅에 관심이 있으신가요? 자세한 내용은 SMS [리타�
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 전환 이벤트는 캠페인의 성공 여부를 측정하는 데 도움이 됩니다. 예를 들어, 다음과 같습니다.
 

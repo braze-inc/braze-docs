@@ -13,7 +13,9 @@ channel:
 
 # 링크 단축
 
-> 링크 단축 및 클릭 추적을 사용하면 SMS 메시지에 포함된 URL을 자동으로 단축하고 클릭률 분석을 수집하여 사용자가 SMS 캠페인에 어떻게 참여하는지 파악하는 데 도움이 되는 추가 참여 지표를 제공할 수 있습니다. <br><br> 이 페이지에서는 SMS 메시지에서 링크 단축을 켜고, 단축 링크를 테스트하고, 단축 링크에 사용자 지정 도메인을 사용하는 방법 등에 대해 설명합니다.
+> 이 페이지에서는 SMS 메시지에서 링크 단축을 켜고, 단축 링크를 테스트하고, 단축 링크에 사용자 지정 도메인을 사용하는 방법 등에 대해 설명합니다.
+
+링크 단축 및 클릭 추적을 사용하면 SMS 메시지에 포함된 URL을 자동으로 단축하고 클릭률 분석을 수집하여 사용자가 SMS 캠페인에 어떻게 참여하는지 파악하는 데 도움이 되는 추가 참여 지표를 제공할 수 있습니다.
 
 링크 단축 및 클릭 추적은 캠페인과 캔버스 모두에서 [메시지 변형 수준에서]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) 설정할 수 있습니다. 
 
@@ -41,15 +43,7 @@ Braze는 `http://` 또는 `https://` 로 시작하는 URL만 인식합니다. UR
 
 ### UTM 매개변수 추가
 
-링크 단축을 사용하면 URL을 자동으로 추적할 수 있지만, URL에 UTM 매개변수를 추가하여 Google 애널리틱스와 같은 타사 분석 도구에서 캠페인의 성과를 추적할 수도 있습니다.
-
-URL에 UTM 매개변수를 추가하려면 다음과 같이 하세요:
-
-1. 기본 URL로 시작하세요. 추적하려는 페이지의 URL(예: `https://www.example.com`)입니다.
-2. 기본 URL 뒤에 물음표(?)를 추가합니다.
-3. 각 UTM 매개변수를 앰퍼샌드(&)로 구분하여 추가합니다.
-
-예는 `https://www.example.com?utm_source=newsletter&utm_medium=sms` 입니다.
+{% multi_lang_include click_tracking.md section='UTM parameters' %}
 
 ## URL의 유동적 개인화
 
@@ -122,35 +116,15 @@ Liquid에서 렌더링하는 URL은 API 트리거 프로퍼티에 포함된 URL�
 
 리타겟팅에 대한 안내는 [SMS 리타겟팅을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links) 참조하세요.
 
-## 사용자 지정 도메인
+{% multi_lang_include click_tracking.md section='Custom Domains' %}
 
-또한 링크 단축을 사용하면 자체 도메인을 사용하여 단축 URL의 모양과 느낌을 맞춤화할 수 있으므로 일관된 브랜드 이미지를 표현하는 데 도움이 됩니다. 자세한 내용은 [사용자 정의 도메인을]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/) 참조하세요.
+{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
 
-## 자주 묻는 질문
-
-### 링크 단축
-
-#### 테스트 전송 시 받은 링크가 실제 URL인가요?
-
-테스트 전송 전에 캠페인을 초안으로 저장한 경우, 예. 그렇지 않으면 플레이스홀더 링크입니다. 실행된 캠페인에서 전송된 정확한 URL은 테스트 전송에서 전송된 URL과 다를 수 있습니다.
-
-#### 링크를 단축하려면 Braze SDK를 설치해야 하나요?
-
-아니요. 링크 단축은 SDK 통합 없이 작동합니다.
-
-#### 어떤 개별 사용자가 URL을 클릭하는지 알 수 있나요?
+### 어떤 개별 사용자가 URL을 클릭하는지 알 수 있나요?
 
 예. **고급 추적이** 켜져 있는 경우, [SMS 리타겟팅 필터]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) 또는 커런츠에서 전송한 SMS 클릭 이벤트(`users.messages.sms.ShortLinkClick`)를 활용하여 URL을 클릭한 사용자를 리타겟팅할 수 있습니다.
 
-#### URL이 단축되기 전에 UTM 매개변수를 추가할 수 있나요?
-
-예. 정적 및 동적 매개변수를 모두 추가할 수 있습니다. 
-
-#### 단축 URL은 얼마 동안 유효하나요?
-
-정적 URL은 최초 전송과 같은 URL 등록 시점부터 1년간 유효합니다. 동적 URL은 URL 등록 시점부터 2개월 동안 유효합니다.
-
-#### 링크 단축은 딥링크 또는 유니버설 링크에서 작동하나요?
+### 링크 단축은 딥링크 또는 유니버설 링크에서 작동하나요?
 
 링크 단축은 딥링크에서는 작동하지 않습니다. Branch나 앱스플라이어와 같은 제공업체의 유니버설 링크를 단축할 수는 있지만, 이 과정에서 발생할 수 있는 문제(어트리뷰션이 깨지거나 리디렉션이 발생하는 등의 문제)는 Braze가 해결해드릴 수 없습니다.
 

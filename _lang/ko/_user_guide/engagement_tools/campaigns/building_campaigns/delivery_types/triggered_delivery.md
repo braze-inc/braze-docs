@@ -12,10 +12,6 @@ tool: Campaigns
 
 > 실행 기반 전달 캠페인 또는 이벤트 트리거 캠페인은 트랜잭션 또는 업적 기반 메시지에 매우 효과적입니다. 특정 날짜에 캠페인을 전송하는 대신 사용자가 특정 이벤트를 완료한 후에 캠페인을 전송하도록 트리거할 수 있습니다. 
 
-{% alert important %}
-Action-based delivery is not available for [Canvas components with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/). 이러한 단계는 반드시 예약해야 합니다.
-{% endalert %}
-
 ## 트리거된 캠페인 설정하기
 
 ### 1단계: 트리거 이벤트 선택
@@ -96,7 +92,7 @@ Action-based delivery is not available for [Canvas components with in-app messag
 
 ### 3단계: 예외 이벤트 선택
 
-사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. 예외 이벤트는 구매, 세션 시작, 캠페인에서 지정한 [전환 이벤트][18]를 수행하거나 커스텀 이벤트를 수행하는 것일 수 있습니다. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
+사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. [예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events)는 구매하기, 세션 시작하기, 캠페인의 지정된 [전환 이벤트][18] 수행하기, 또는 커스텀 이벤트 수행하기일 수 있습니다. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
 
 ![][20]
 
@@ -126,7 +122,7 @@ Action-based delivery is not available for [Canvas components with in-app messag
 
 ![][31]
 
-사용자가 기간을 놓쳐서 메시지를 받지 못한 경우에는 사용자가 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/)을 얻도록 선택하지 않았더라도 다음에 트리거 이벤트를 완료할 때 메시지를 받을 수 있는 자격을 얻게 됩니다. 사용자가 다시 자격을 갖추도록 선택한 경우, 지정된 기간 동안 자격을 갖추었다고 가정하여 사용자가 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
+사용자가 기간을 놓쳐서 메시지를 받지 못한 경우에는 사용자가 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)을 얻도록 선택하지 않았더라도 다음에 트리거 이벤트를 완료할 때 메시지를 받을 수 있는 자격을 얻게 됩니다. 사용자가 다시 자격을 갖추도록 선택한 경우, 지정된 기간 동안 자격을 갖추었다고 가정하여 사용자가 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
 
 캠페인에 특정 기간도 지정한 경우 사용자는 해당 기간과 하루 중 특정 시간대에 자격을 갖추어야 메시지를 받을 수 있습니다.
 

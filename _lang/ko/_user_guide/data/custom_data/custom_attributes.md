@@ -17,10 +17,6 @@ Braze에 저장된 사용자 지정 속성을 사용하여 오디언스 세그�
 
 대시보드에서 사용자 지정 속성을 만들고 관리하려면 **데이터 설정** > **사용자 지정 속성으로** 이동합니다. 
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정 관리에서** **사용자 지정 속성을** 찾을 수 있습니다.
-{% endalert %}
-
 ![부울인 네 가지 사용자 지정 속성.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 **마지막으로 업데이트된** 열에는 사용자 지정 속성을 마지막으로 편집한 시간(예: 차단 목록 또는 활성화로 마지막으로 설정한 시간)이 나열됩니다.
@@ -70,13 +66,13 @@ You can view up to 100 usage reports at a time by selecting the checkboxes next 
 
 {% details 플랫폼별 설명서 확장 %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 

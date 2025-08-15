@@ -38,7 +38,7 @@ iOS 푸시 메시지에서 액션 버튼을 사용하려면 다음과 같이 하
 ![iOS 알림 카테고리 드롭다운 메뉴]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platforms/swift/push_notifications/customization/action_buttons/). 특히 iOS 카테고리를 구성하거나 특정 기본 버튼 옵션 중에서 선택해야 합니다. Android 통합의 경우 이러한 버튼은 자동으로 작동합니다.
+Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). 특히 iOS 카테고리를 구성하거나 특정 기본 버튼 옵션 중에서 선택해야 합니다. Android 통합의 경우 이러한 버튼은 자동으로 작동합니다.
 {% endalert %}
 
 ### Android {#android}
@@ -46,12 +46,12 @@ Due to iOS's handling of buttons, you need to perform additional integration ste
 Android 푸시 메시지에서 액션 버튼을 사용하려면 다음과 같이 하세요:
 
 1. Android [푸시 캠페인]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)을 만들고 **작성** 탭에서 알림 버튼을 활성화합니다.
-2. <i class="fas fa-plus-circle"></i> **버튼 추가**를 클릭하고 버튼 텍스트와 **클릭 시 동작**을 지정합니다. 다음 사용 가능한 작업 중에서 선택할 수 있습니다:
+2. <i class="fas fa-plus-circle"></i> **버튼 추가를** 선택하고 버튼 텍스트와 **클릭 시 동작을** 지정합니다. 다음 사용 가능한 작업 중에서 선택할 수 있습니다:
   - 앱 열기
   - 웹 URL로 리디렉션
   - 애플리케이션으로의 [딥링크]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)
 
-![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![알림 버튼의 클릭 동작으로 '앱 열기'를 선택합니다.]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 푸시 버튼은 최대 3개까지 추가할 수 있습니다.
 
@@ -59,7 +59,7 @@ Android 푸시 메시지에서 액션 버튼을 사용하려면 다음과 같이
 
 쌓아 올리는 iOS 버튼과 달리 Android 버튼은 일렬로 나란히 표시됩니다. 즉, 버튼을 더 많이 추가할수록(최대 3개까지) 버튼 복사 공간이 줄어듭니다. 
 
-![텍스트가 잘린 Android 푸시 동작 버튼]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
+![텍스트가 잘린 Android 푸시 동작 버튼]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 다음 표에는 버튼 복사본이 잘리기 전에 추가할 수 있는 문자 수가 버튼 수에 따라 간략하게 나와 있습니다.
 

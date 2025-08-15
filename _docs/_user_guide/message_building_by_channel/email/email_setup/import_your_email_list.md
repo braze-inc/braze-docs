@@ -14,13 +14,21 @@ channel: email
 
 ## Considerations before importing
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### Validate your email lists
 
 Before importing your email list into Braze, validate that your list includes only genuine email addresses. A high bounce rate can damage your email sender reputation. 
 
 Email list cleaning services can do this for you by determining if the email address follows the correct syntax and has the physical properties of an email address, verifying the email domain, and connecting to the email server to authenticate if the email address exists there.
+
+### Check if an email address is already associated with a user
+
+Before creating a user through the API or SDK, call the [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint and specify the user's `email_address`. If it returns a user profile, that Braze user is already associated with that email address.
+
+We strongly recommend that you look for unique email addresses when new users are created, and avoid passing or importing users with the same email address. Otherwise, you may have unintended consequences that impact message sending, targeting, reporting, and other features.
+
+For example, let's say you have duplicate profiles, but certain custom attributes or events reside on only one profile. When you try to trigger campaigns or Canvases with multiple criteria, Braze can't identify the user as eligible because there are two user profiles. Or, if a campaign targets an email address shared by two users, the **Search Users** page will show both user profiles as having received the campaign.
 
 ### Identify your engaged users
 

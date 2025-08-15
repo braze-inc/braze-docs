@@ -52,7 +52,9 @@ You can no longer create or duplicate Canvases using the original editor. This a
 
 ### Timestamps for event properties
 
-If you're using `event_properties` in a Canvas, timestamps are normalized to UTC, with some exceptions detailed below. Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
+If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases, timestamps are normalized to UTC. Some exceptions are detailed below.
+
+Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 
 {% raw %}
 ```liquid

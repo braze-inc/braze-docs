@@ -59,10 +59,6 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 
 `YOUR_API_KEY`를 `users.track` 권한이 있는 Braze API 키로 바꿉니다. Braze 대시보드의 **설정** > **API 키**에서 API 키를 생성할 수 있습니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **개발자 콘솔** > **API 설정**에서 API 키를 만들 수 있습니다.
-{% endalert %}
-
 ![웹훅에 대한 요청 헤더가 있는 '설정' 탭입니다.][1]
 
 #### 요청 본문
@@ -114,10 +110,6 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 - **HTTP 메서드:** POST
 
 `YOUR_API_KEY`를 `canvas.trigger.send` 권한이 있는 Braze API 키로 바꿉니다. Braze 대시보드의 **설정** > **API 키**에서 API 키를 생성할 수 있습니다.
-
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **개발자 콘솔** > **API 설정**에서 API 키를 만들 수 있습니다.
-{% endalert %}
 
 ![웹훅에 대한 요청 헤더가 있는 '설정' 탭입니다.][1]
 

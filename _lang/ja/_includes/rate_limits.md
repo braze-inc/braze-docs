@@ -44,55 +44,59 @@
 {% elsif include.endpoint == "users export ids" %}
 2024年8月22日以降に Braze にオンボーディングした場合、このエンドポイントには、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、1分あたり250リクエストのレート制限が適用されます。
 
+また、以下の条件を満たすことで、このエンドポイントのレート制限を毎秒40リクエストに増やすこともできる：
+
+- ワークスペースでは、デフォルトのレート制限（250リクエスト/分）が有効になっている。既存のレート制限の解除については、Brazeアカウントマネージャーにお問い合わせください。
+- リクエストには、受け取りたいすべてのフィールドをリストアップするための`fields_to_export` パラメータが含まれている。
+
+{アラート重要 %}
+`fields_to_export` パラメータに`canvases_received` または`campaigns_received` を含めると、リクエストは高速レート制限の対象外となる。具体的なユースケースがある場合のみ、リクエストに含めることをお勧めする。
+{エンドアラート｝
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1分あたり20,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/users/alias/new`、`/users/identify`、および `/users/merge` エンドポイントと共有されます。
+このエンドポイントには、毎分20,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/users/identify`、`/users/merge`、`/users/alias/update`、および `/users/merge` エンドポイントと共有されます。
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1分あたり20,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/users/delete`、`/users/identify`、`/users/merge`、および `/users/alias/update` エンドポイントと共有されます。
+このエンドポイントには、毎分20,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/users/identify`、`/users/merge`、`/users/alias/update`、および `/users/merge` エンドポイントと共有されます。
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1分あたり20,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/users/delete`、`/users/identify`、`/users/merge`、および `/users/alias/new` エンドポイントと共有されます。
-
-<!---/users/alias/update-->
-
-{% elsif include.endpoint == "users alias update" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1分あたり20,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/users/delete`、`/users/identify`、および `/users/merge` エンドポイントと共有されます。
+このエンドポイントには、毎分20,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/users/alias/new`、`/users/identify`、`/users/merge`、および `/users/identify` エンドポイントと共有されます。
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1分あたり20,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/users/delete`、`/users/alias/new`、`/users/merge`、および `/users/alias/update` エンドポイントと共有されます。
+このエンドポイントには、毎分20,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/users/alias/new`、`/users/merge`、`/users/alias/update`、および `/users/merge` エンドポイントと共有されます。
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1分あたり20,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/users/delete`、`/users/alias/new`、`/users/identify`、および `/users/alias/update` エンドポイントと共有されます。
+このエンドポイントには、毎分20,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/users/alias/new`、`/users/identify`、`/users/alias/update`、および `/users/identify` エンドポイントと共有されます。
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1時間あたり1,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/events`、`/events/list`、および `/purchases/product_list` エンドポイントと共有されます。
+このエンドポイントには、1時間あたり1,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/events/list`、`/purchases/product_list`、および `/events/list` エンドポイントと共有されます。
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1時間あたり1,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/custom_attributes`、`/events/list`、および `/purchases/product_list` エンドポイントと共有されます。
+このエンドポイントには、1時間あたり1,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/events/list`、`/purchases/product_list`、および `/events/list` エンドポイントと共有されます。
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1時間あたり1,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/custom_attributes`、`/events`、および `/purchases/product_list` エンドポイントと共有されます。
+このエンドポイントには、1時間あたり1,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/events`、`/purchases/product_list`、および `/events` エンドポイントと共有されます。
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-2021年9月16日以降に Braze にオンボーディングした顧客の場合、このエンドポイントには、1時間あたり1,000リクエストの共有レート制限が適用されます。このレート制限は、[API レート制限]({{site.baseurl}}/api/api_limits/)に記載されているように、`/custom_attributes`、`/events`、および `/events/list` エンドポイントと共有されます。
+このエンドポイントには、1時間あたり1,000リクエストの共有レート制限を適用する。このレート制限は、API レート制限に記載されているように、`/events`、`/events/list`、および `/events` エンドポイントと共有されます。
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
@@ -143,6 +147,14 @@ Braze エンドポイントは[API リクエストのバッチ処理]({{site.bas
 
 {% endif %}
 
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "翻訳エンドポイント" %}
+
+このエンドポイントには、毎分250,000リクエストのレート制限がある。
+
+{% endif %}
+
 <!---Additional if statement for /messages/send endpoint-->
 
 {% if include.category == "メール送信エンドポイント" %}
@@ -184,3 +196,4 @@ Braze エンドポイントは[API リクエストのバッチ処理]({{site.bas
 このエンドポイントには、1分あたり、50,000リクエストというレート制限があります。
 
 {% endif %}
+

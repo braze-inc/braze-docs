@@ -4,7 +4,7 @@ Welcome to Braze Docs!
 ===
 
 [![GitHub Release](https://img.shields.io/github/v/release/braze-inc/braze-docs)](https://github.com/braze-inc/braze-docs/releases)
-[![GitHub branch status](https://img.shields.io/github/checks-status/braze-inc/braze-docs/master)](https://github.com/braze-inc/braze-docs/deployments)
+[![GitHub branch status](https://img.shields.io/github/checks-status/braze-inc/braze-docs/main)](https://github.com/braze-inc/braze-docs/deployments)
 [![Static Badge](https://img.shields.io/badge/License-Creative_Commons-lightgrey)](/LICENSE.md)
 [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/braze)](https://x.com/braze)
 
@@ -34,10 +34,16 @@ If this version isn't installed, use a [supported version manager](https://www.r
 rbenv install 3.3.0
 ```
 
+If you have multiple versions of Node.js installed, use `asdf` for version management.
+
+```bash
+brew install asdf
+```
+
 Next, install project dependencies.
 
 ```bash
-bundle install
+bundle install && asdf install
 ```
 
 To start your local docs server on localhost `http://127.0.0.1:4000`, run the following command. To stop your server, reopen the terminal and press **Control**+**C**.

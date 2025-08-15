@@ -155,11 +155,7 @@ Because this message type can only be received by certain later SDK versions, us
 
 ### Creating a campaign {#instructions}
 
-When creating a **Custom Code** in-app message, choose **HTML Upload with Preview** as the custom type. If you haven't previously created custom code in-app messages (live or drafts), this option is automatically applied and you won't need to make a selection.
-
-![Creating an in-app message that sends to both Mobile and Web browsers where "Message Type" is Custom Code and "Custom Type" is HTML Upload with Preview.]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
-
-Keep in mind that your mobile app users need to upgrade to the supported SDK versions to receive this message. We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
+Your mobile app users need to upgrade to the supported SDK versions to receive a **Custom Code** in-app message. We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
 
 #### Asset files
 
@@ -197,24 +193,20 @@ Otherwise, hover over an asset from the list and select <i class="fas fa-copy"><
 
 Changes you make in the HTML automatically render in the preview panel as you type. Any [`brazeBridge` JavaScript](#bridge) methods you use in your HTML won't update user profiles while previewing in the dashboard.
 
-You can configure **Editor Settings** to toggle wrap text, change the font size, or choose a color theme. The code editor includes different color themes for syntax highlighting, which helps you spot potential code errors directly in the message composer and better organize your code (using spaces or tabs—whichever side of that argument you're on).
-
-![Syntax highlighting options in the "Editor Settings" dropdown when composing an HTML in-app message.]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
-
 {% alert tip %}
-You can press <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows) or <kbd>Command</kbd> + <kbd>F</kbd> (Mac) within the HTML editor to search within your code!
+You can select <i class="fa-solid fa-magnifying-glass"></i> **Search** within the HTML editor to search within your code!
 {% endalert %}
 
 ### Button tracking {#button-tracking-improvements}
 
-You can track performance within your custom code in-app message using the [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript method. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")`, or `brazeBridge.logClick()`, respectively.
+You can track performance within your custom code in-app message using the [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript method. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')`, or `brazeBridge.logClick()`, respectively.
 
 | Clicks     | Method                       |
 | ---------- | ---------------------------- |
-| Button 1   | `brazeBridge.logClick("0")` |
-| Button 2   | `brazeBridge.logClick("1")` |
+| Button 1   | `brazeBridge.logClick('0')` |
+| Button 2   | `brazeBridge.logClick('1')` |
 | Body click | `brazeBridge.logClick()`    |
-| Custom button tracking |`brazeBridge.logClick("your custom name here")`|
+| Custom button tracking |`brazeBridge.logClick('your custom name here')`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -227,7 +219,11 @@ You can track multiple button click events per impression. For example, to close
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
 ``` 
 
-You can also track new custom button names—up to 100 unique names per campaign. For example, `brazeBridge.logClick("blue button")` or `brazeBridge.logClick("viewed carousel page 3")`.
+You can also track new custom button names—up to 100 unique names per campaign. For example, `brazeBridge.logClick('blue button')` or `brazeBridge.logClick('viewed carousel page 3')`.
+
+{% alert tip %}
+When using JavaScript methods inside an `onclick` attribute, wrap string values in single quotes to avoid conflicts with the double-quoted HTML attribute.
+{% endalert %}
 
 #### Limitations
 

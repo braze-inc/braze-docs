@@ -51,7 +51,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
-{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='email html editor' %}
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
@@ -232,7 +232,9 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that segment population looks like right now, including how many users within that segment are reachable through email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to email.
 
