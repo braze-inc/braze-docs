@@ -62,8 +62,8 @@ description: "Learn about in-app messages and how to set them up for the Braze S
 
 ## Next steps
 
-Ready to dive deeper? Check out our step-by-step tutorials:
+Ready to dive deeper? Check out these step-by-step tutorials:
 
-- [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages) - Advanced timing control for message delivery
-- [Tutorial: Conditionally displaying in-app messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages) - Control when and where messages are displayed
-- [Tutorial: Customizing message styling using key-value pairs]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling) - Customize message appearance
+- Fine-tune message delivery timing by [deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Refine message targeting by [setting conditional display rules]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Match your brand’s look by [customizing message styling with key-value pairs]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
