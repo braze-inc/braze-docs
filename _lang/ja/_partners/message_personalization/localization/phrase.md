@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) はローカライゼーション管理のためのクラウドベースのソフトウェアです。句は自動化された翻訳ワークフローを有効にし、アジャイルチームの継続的なローカライゼーションをサポートします。
 
-_この統合はPhraseによって維持されている。_
+_この統合は Phrase によって管理されます。_
 
 ## 統合について
 
@@ -24,7 +24,7 @@ Phrase と Braze の統合により、Braze インターフェイスを離れる
 | --- | --- |
 | Phrase TMS アカウント | この提携を利用するには、Phrase TMS Ultimate または Enterprise アカウントが必要です。 |
 | Braze REST API キー | すべての権限を持つBraze REST APIキー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
-| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
@@ -86,4 +86,3 @@ Phraseで、**[Settings] > [Integrations] > [Connectors] > [New]** の順に進�
 [Connector API](https://cloud.memsource.com/web/docs/api#) は、ステップを自動化できます。それ以外の場合は、UI を使用して手動で実行します。[webhook](https://support.phrase.com/hc/en-us/articles/5709693398812) を使用して、Phrase TMS が特定のイベント (ジョブのステータス変更など) についてサードパーティのシステムに通知するようにできます。
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

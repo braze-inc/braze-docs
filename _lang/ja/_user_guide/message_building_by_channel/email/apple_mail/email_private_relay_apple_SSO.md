@@ -23,8 +23,9 @@ SendGrid をメールプロバイダーとして使用している場合、DNS �
 
 1. [Apple Developer Portalにログインします](https://developer.apple.com/)
 2. **Certificates, Identifiers & Profiles** ページに移動します。
-3. **Services**> **Apple でサインインしてE メール通信を行います**。
-4. **Email Sources** セクションで、ドメインとサブドメインを追加します。
+3. [**Services**] > [**Sign in with Apple for Email Communication**] を選択します。
+4. [**Email Sources**] セクションで、ドメインとサブドメインを追加します。
+- アドレスは、`bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (例: `bounces+1234567@braze.online.docs.com`) の形式にする必要があります。 
 
 希望する "From "アドレスが`abmail` の場合、サブドメインにそのアドレスを含める。例えば、`docs.braze.com` の代わりに`abmail.docs.braze.com` を使う。
 
@@ -49,7 +50,7 @@ SparkPost用のApple Private Relayを設定するには、以下の手順に従�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert important %}
-SPF の障害を回避するには、MX レコードとTXT レコードを作成し、CNAME レコードを削除する前にDNS ** に伝播させる必要があります。
+SPF 失敗を回避するには、MX レコードとTXT レコードを作成し、CNAME レコードを削除する**前に** DNS に反映する必要があります。
 {% endalert %}
 
 {:start="2"}

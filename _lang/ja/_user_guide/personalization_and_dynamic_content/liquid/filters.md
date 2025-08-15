@@ -70,28 +70,28 @@ SALE
 
 | フィルター               | 定義                                                                                                         | サポート |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
-| [join][1.1]          | 配列の要素を、パラメータとして渡された文字で結合する。結果は単一の文字列である。          | はい   |
-| [first][1.2]         | 配列の最初の要素を返す。カスタム属性配列では、これは最も古く追加された値である。                | はい   |
-| [last][1.3]          | 配列の最後の要素を返す。カスタム属性配列では、これは最近追加された値である。          | はい   |
-| [compact][1.4]       | 配列から `nil` の項目を削除する。                                                                             | はい   |
-| [concat][1.5]        | 配列を別の配列と結合する。                                                                              | はい   |
-| [index][1.6]         | 配列の指定されたインデックスの位置にある項目を返す。配列の最初の項目は`[0]` で参照される。 | はい   |
-| [map][1.7]           | 配列要素の属性をパラメーターとして受け取り、各配列要素の値から配列を作成する。        | はい   |
-| [reverse][1.8]       | 配列の項目の順序を逆にする。                                                                       | はい   |
-| [size][1.9]          | 文字列のサイズ（文字数）または配列のサイズ（要素数）を返す。                      | はい   |
-| [sort][1.10]         | 配列の要素を、その配列の要素の指定された属性でソートする。                                    | はい   |
-| [sort_natural][1.11] | 大文字小文字を区別せずにアルファベット順に配列の項目をソートする。                                                | はい   |
-| [uniq][1.12]         | 配列内の要素の重複したインスタンスを削除する。                                                           | はい   |
-| [where][1.13]        | 特定のプロパティ値を持つ項目のみを含むように配列をフィルタリングする。                                             | はい   |
+| [join](https://shopify.dev/api/liquid/filters/array-filters#join)          | 配列の要素を、パラメータとして渡された文字で結合する。結果は単一の文字列である。          | はい   |
+| [first](https://shopify.dev/api/liquid/filters/array-filters#first)         | 配列の最初の要素を返す。カスタム属性配列では、これは最も古く追加された値である。                | はい   |
+| [last](https://shopify.dev/api/liquid/filters/array-filters#last)          | 配列の最後の要素を返す。カスタム属性配列では、これは最近追加された値である。          | はい   |
+| [compact](https://shopify.dev/api/liquid/filters#compact)       | 配列から `nil` の項目を削除する。                                                                             | はい   |
+| [concat](https://shopify.dev/api/liquid/filters/array-filters#concat)        | 配列を別の配列と結合する。                                                                              | はい   |
+| [index](https://shopify.dev/api/liquid/filters/array-filters#index)         | 配列の指定されたインデックスの位置にある項目を返す。配列の最初の項目は`[0]` で参照される。 | はい   |
+| [map](https://shopify.dev/api/liquid/filters/array-filters#map)           | 配列要素の属性をパラメーターとして受け取り、各配列要素の値から配列を作成する。        | はい   |
+| [reverse](https://shopify.dev/api/liquid/filters/array-filters#reverse)       | 配列の項目の順序を逆にする。                                                                       | はい   |
+| [size](https://shopify.dev/api/liquid/filters/array-filters#size)          | 文字列のサイズ（文字数）または配列のサイズ（要素数）を返す。                      | はい   |
+| [sort](https://shopify.dev/api/liquid/filters/array-filters#sort)         | 配列の要素を、その配列の要素の指定された属性でソートする。                                    | はい   |
+| [sort_natural](https://shopify.dev/api/liquid/filters#sort_natural) | 大文字小文字を区別せずにアルファベット順に配列の項目をソートする。                                                | はい   |
+| [uniq](https://shopify.dev/api/liquid/filters/array-filters#uniq)         | 配列内の要素の重複したインスタンスを削除する。                                                           | はい   |
+| [where](https://shopify.dev/api/liquid/filters#where)        | 特定のプロパティ値を持つ項目のみを含むように配列をフィルタリングする。                                             | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## カラーフィルター
 
-[カラーフィルター][2.1]は Braze でサポートされていません。
+[カラーフィルター](https://shopify.dev/api/liquid/filters/color-filters)は Braze でサポートされていません。
 
 ## フォントフィルター
 
-[フォントフィルター][3.1]は Braze でサポートされていません。
+[フォントフィルター](https://shopify.dev/api/liquid/filters/font-filters)は Braze でサポートされていません。
 
 ## 数学フィルター
 
@@ -99,17 +99,17 @@ SALE
 
 | フィルター  | 定義      | サポート |
 | :------ |:----------------| :-------- |
-| [abs][4.1]        | 数値の絶対値を返す。     | はい   |
-| [at_most][4.2]    | 数値を最大値に制限する。   | はい   |
-| [at_least][4.3]   | 数値を最小値に制限する。   | はい   |
-| [ceil][4.4]       | 出力を最も近い整数に丸める。  | はい   |
-| [divided_by][4.5] | 出力を数値で割る。出力は最も近い整数に切り捨てられる。四捨五入を防ぐために、以下のヒントをチェックしよう。 | はい   |
-| [floor][4.6]      | 出力を最も近い整数に丸める。        | はい   |
-| [minus][4.7]      | 出力から数値を引く。          | はい   |
-| [plus][4.8]       | 出力に数値を追加する。     | はい   |
-| [round][4.9]      | 出力を最も近い整数または指定した小数点以下の桁数に丸める。  | はい   |
-| [回][4.10]     | 出力に数値を掛ける。       | はい   |
-| [modulo][4.11]    | 出力を数値で割り、余りを返す。   | はい   |
+| [abs](https://shopify.dev/api/liquid/filters/math-filters#abs)        | 数値の絶対値を返す。     | はい   |
+| [at_most](https://shopify.dev/api/liquid/filters/math-filters#at_most)    | 数値を最大値に制限する。   | はい   |
+| [at_least](https://shopify.dev/api/liquid/filters/math-filters#at_least)   | 数値を最小値に制限する。   | はい   |
+| [ceil](https://shopify.dev/api/liquid/filters/math-filters#ceil)       | 出力を最も近い整数に丸める。  | はい   |
+| [divided_by](https://shopify.dev/api/liquid/filters/math-filters#divided_by) | 出力を数値で割る。出力は最も近い整数に切り捨てられる。四捨五入を防ぐために、以下のヒントをチェックしよう。 | はい   |
+| [floor](https://shopify.dev/api/liquid/filters/math-filters#floor)      | 出力を最も近い整数に丸める。        | はい   |
+| [minus](https://shopify.dev/api/liquid/filters/math-filters#minus)      | 出力から数値を引く。          | はい   |
+| [plus](https://shopify.dev/api/liquid/filters/math-filters#plus)       | 出力に数値を追加する。     | はい   |
+| [round](https://shopify.dev/api/liquid/filters/math-filters#round)      | 出力を最も近い整数または指定した小数点以下の桁数に丸める。  | はい   |
+| [回](https://shopify.dev/api/liquid/filters/math-filters#times)     | 出力に数値を掛ける。       | はい   |
+| [modulo](https://shopify.dev/api/liquid/filters/math-filters#modulo)    | 出力を数値で割り、余りを返す。   | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -171,9 +171,9 @@ You have $35 to spend!
 
 | フィルター         | 定義          | サポート |
 | :--------------- | :--------------- | :-------- |
-| [money][5.1]      | すべての数値について、確実に小数が正しく配置され、末尾にあるゼロが欠落しないように数値をフォーマットする。   | はい   |
-| [money_with_currency][5.2]    | 数字を通貨記号で表示する。     | いいえ    |
-| [money_without_currency][5.4]     | 通貨記号を除いた数値をフォーマットする。      | いいえ    |
+| [money](https://shopify.dev/api/liquid/filters/money-filters#money)      | すべての数値について、確実に小数が正しく配置され、末尾にあるゼロが欠落しないように数値をフォーマットする。   | はい   |
+| [money_with_currency](https://shopify.dev/api/liquid/filters/money-filters#money_with_currency)    | 数字を通貨記号で表示する。     | いいえ    |
+| [money_without_currency](https://shopify.dev/api/liquid/filters/money-filters#money_without_currency)     | 通貨記号を除いた数値をフォーマットする。      | いいえ    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
@@ -202,7 +202,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | マネーフィルター付き                       | マネーフィルターなし                    |
 | :------------------------------------------ | :------------------------------------------ |
-| ![マネーフィルター付き][1]                     | ![マネーフィルターなし][2]                  |
+| ![マネーフィルタあり]({% image_buster /assets/img/with_money_filter.png %})                     | ![マネーフィルタなし]({% image_buster /assets/img/without_money_filter.png %})                  |
 | ここで、`account_balance` は`17.8` で入力される。 | ここで、`account_balance` は`17.8` で入力される。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -225,7 +225,7 @@ $145.00
 {% endtab %}
 {% endtabs %}
 
-Shopifyの[マネー][5.1]フィルターによると、これは`$1.45` の出力となるはずだが、Brazeでは`$145.00` の出力となる。回避策として、マネーフィルターを適用する前に、`divided_by` フィルターを使用して数値を小数に変換することができます。
+Shopifyの[マネー](https://shopify.dev/api/liquid/filters/money-filters#money)フィルターによると、これは`$1.45` の出力となるはずだが、Brazeでは`$145.00` の出力となる。回避策として、マネーフィルターを適用する前に、`divided_by` フィルターを使用して数値を小数に変換することができます。
 
 {% tabs local %}
 {% tab インプット %}
@@ -254,34 +254,34 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 
 | フィルター          | 説明     | サポート |
 | :--------------- | ------------- | --------- |
-| [append][6.1]     | 文字列に文字を追加する。           | はい   |
-| [camelcase][6.2]     | 文字列をキャメルケースに変換する。             | いいえ    |
-| [capitalize][6.3]     | 文字列の最初の単語を大文字にし、残りの文字を小文字にする。         | はい   |
-| [downcase][6.4]      | 文字列を小文字に変換する。         | はい   |
-| [escape][6.5]    | 文字列をエスケープする。             | はい   |
-| [handle / handleize][6.6]        | 文字列をハンドルにフォーマットする。        | いいえ    |
-| [MD5][6.7]    | 文字列をMD5ハッシュに変換する。詳細については、[エンコーディングフィルター][3]を参照。   | はい   |
-| [sha1][6.8]    | 文字列をSHA-1ハッシュに変換する。詳細については、[エンコーディングフィルター][3]を参照。  | はい   |
-| hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | ハッシュメッセージ認証コード（HMAC）を使って文字列をSHA-1ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。詳細については、[エンコーディングフィルター][3]を参照。 | はい   |
-| [hmac_sha256][6.11]    | ハッシュメッセージ認証コード（HMAC）を使用して、文字列をSHA-256ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。       | はい   |
+| [append](https://shopify.dev/api/liquid/filters/string-filters#append)     | 文字列に文字を追加する。           | はい   |
+| [camelcase](https://shopify.dev/api/liquid/filters/string-filters#camelcase)     | 文字列をキャメルケースに変換する。             | いいえ    |
+| [capitalize](https://shopify.dev/api/liquid/filters/string-filters#capitalize)     | 文字列の最初の単語を大文字にし、残りの文字を小文字にする。         | はい   |
+| [downcase](https://shopify.dev/api/liquid/filters/string-filters#downcase)      | 文字列を小文字に変換する。         | はい   |
+| [escape](https://shopify.dev/api/liquid/filters/string-filters#escape)    | 文字列をエスケープする。             | はい   |
+| [handle / handleize](https://shopify.dev/api/liquid/filters/string-filters#handle-handleize)        | 文字列をハンドルにフォーマットする。        | いいえ    |
+| [MD5](https://shopify.dev/api/liquid/filters/string-filters#md5)    | 文字列をMD5ハッシュに変換する。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。   | はい   |
+| [sha1](https://shopify.dev/api/liquid/filters/string-filters#sha1)    | 文字列をSHA-1ハッシュに変換する。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。  | はい   |
+| hmac_sha1_hex<br>(previously [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | ハッシュメッセージ認証コード（HMAC）を使って文字列をSHA-1ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。 | はい   |
+| [hmac_sha256](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256)    | ハッシュメッセージ認証コード（HMAC）を使用して、文字列をSHA-256ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。       | はい   |
 | hmac_sha512 | ハッシュメッセージ認証コード（HMAC）を使って文字列をSHA-512ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。 | はい  |
-| [newline_to_br][6.12]     | 文字列内の各改行の前に改行 HTML タグ `<br>` を挿入する。        | はい   |
-| [pluralize][6.13]   | 数字の値に基づいて、英語の文字列の単数形または複数形を出力する。      | いいえ    |
-| [prepend][6.14]     | 文字列の先頭に文字 (複数可) を追加する。      | はい   |
-| [remove][6.15]      | 文字列から部分文字列をすべて削除する。       | はい   |
-| [remove_first][6.16]    | 文字列から、最初に出現した部分文字列のみを削除する。      | はい   |
-| [replace][6.17]        | 文字列のすべての出現回数を部分文字列で置き換える。   | はい   |
-| [replace_first][6.18]        | 文字列の最初に現れる部分を部分文字列で置き換える。      | はい   |
-| [slice][6.19]       | スライスフィルターは、指定されたインデックスから始まる部分文字列を返す。       | はい   |
-| [split][6.20]  | スプリット・フィルターは部分文字列をパラメーターとして受け取る。部分文字列は、文字列を配列に分割する際の区切り文字として使われる。            | はい   |
-| [strip][6.21]   | 文字列の左右からタブ、スペース、改行（すべての空白）を取り除く。                                                                                                    | はい   |
-| [lstrip][6.22]     | 文字列の左側からタブ、スペース、改行（すべての空白）を取り除く。    | いいえ    |
-| [rstrip][6.23]             | 文字列の右側からタブ、スペース、改行（すべての空白）を取り除く。          | いいえ    |
-| [strip_html][6.24]         | 文字列からすべてのHTMLタグを取り除く。        | はい   |
-| [strip_newlines][6.25]  | 文字列から改行/改段を削除する。        | はい   |
-| [truncate][6.26]    | 文字列を、最初のパラメータとして渡された文字数まで切り詰める。省略記号（...）は切り捨てられた文字列に付加され、文字数に含まれる。    | はい   |
-| [truncatewords][6.27]   | 文字列を、最初のパラメータとして渡された語数まで切り詰める。切り詰められた文字列の末尾に省略記号 (...) を付加する。    | はい   |
-| [upcase][6.28]   | 文字列を大文字に変換する。      | はい   |
+| [newline_to_br](https://shopify.dev/api/liquid/filters/string-filters#newline_to_br)     | 文字列内の各改行の前に改行 HTML タグ `<br>` を挿入する。        | はい   |
+| [pluralize](https://shopify.dev/api/liquid/filters/string-filters#pluralize)   | 数字の値に基づいて、英語の文字列の単数形または複数形を出力する。      | いいえ    |
+| [prepend](https://shopify.dev/api/liquid/filters/string-filters#prepend)     | 文字列の先頭に文字 (複数可) を追加する。      | はい   |
+| [remove](https://shopify.dev/api/liquid/filters/string-filters#remove)      | 文字列から部分文字列をすべて削除する。       | はい   |
+| [remove_first](https://shopify.dev/api/liquid/filters/string-filters#remove_first)    | 文字列から、最初に出現した部分文字列のみを削除する。      | はい   |
+| [replace](https://shopify.dev/api/liquid/filters/string-filters#replace)        | 文字列のすべての出現回数を部分文字列で置き換える。   | はい   |
+| [replace_first](https://shopify.dev/api/liquid/filters/string-filters#replace_first)        | 文字列の最初に現れる部分を部分文字列で置き換える。      | はい   |
+| [slice](https://shopify.dev/api/liquid/filters/string-filters#slice)       | スライスフィルターは、指定されたインデックスから始まる部分文字列を返す。       | はい   |
+| [split](https://shopify.dev/api/liquid/filters/string-filters#split)  | スプリット・フィルターは部分文字列をパラメーターとして受け取る。部分文字列は、文字列を配列に分割する際の区切り文字として使われる。            | はい   |
+| [strip](https://shopify.dev/api/liquid/filters/string-filters#strip)   | 文字列の左右からタブ、スペース、改行（すべての空白）を取り除く。                                                                                                    | はい   |
+| [lstrip](https://shopify.dev/api/liquid/filters/string-filters#lstrip)     | 文字列の左側からタブ、スペース、改行（すべての空白）を取り除く。    | いいえ    |
+| [rstrip](https://shopify.dev/api/liquid/filters/string-filters#rstrip)             | 文字列の右側からタブ、スペース、改行（すべての空白）を取り除く。          | いいえ    |
+| [strip_html](https://shopify.dev/api/liquid/filters/string-filters#strip_html)         | 文字列からすべてのHTMLタグを取り除く。        | はい   |
+| [strip_newlines](https://shopify.dev/api/liquid/filters/string-filters#strip_newlines)  | 文字列から改行/改段を削除する。        | はい   |
+| [truncate](https://shopify.dev/api/liquid/filters/string-filters#truncate)    | 文字列を、最初のパラメータとして渡された文字数まで切り詰める。省略記号（...）は切り捨てられた文字列に付加され、文字数に含まれる。    | はい   |
+| [truncatewords](https://shopify.dev/api/liquid/filters/string-filters#truncatewords)   | 文字列を、最初のパラメータとして渡された語数まで切り詰める。切り詰められた文字列の末尾に省略記号 (...) を付加する。    | はい   |
+| [upcase](https://shopify.dev/api/liquid/filters/string-filters#upcase)   | 文字列を大文字に変換する。      | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 追加フィルター
@@ -290,10 +290,10 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 
 | フィルター                | 説明                                                                                                                      | サポート |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [date][7.1]           | タイムスタンプを別の日付フォーマットに変換する。詳細については、[日付フィルター](#date-filter)を参照。         | はい   |
-| [default][7.2]        | 値が割り当てられていない変数にデフォルト値を設定する。文字列、配列、ハッシュで使用できる。      | はい   |
-| [format_address][7.3] | 住所のロケールに応じた順序で住所の要素をフォーマットして、住所を出力する。        | いいえ    |
-| [highlight][7.4]      | 送信された検索語に一致する場合、検索結果内の語を highlight クラスの HTML タグ `<strong>` で囲む。 | いいえ    |
+| [date](https://shopify.dev/api/liquid/filters/additional-filters#date)           | タイムスタンプを別の日付フォーマットに変換する。詳細については、[日付フィルター](#date-filter)を参照。         | はい   |
+| [default](https://shopify.dev/api/liquid/filters/additional-filters#default)        | 値が割り当てられていない変数にデフォルト値を設定する。文字列、配列、ハッシュで使用できる。      | はい   |
+| [format_address](https://shopify.dev/api/liquid/filters/additional-filters#format_address) | 住所のロケールに応じた順序で住所の要素をフォーマットして、住所を出力する。        | いいえ    |
+| [highlight](https://shopify.dev/api/liquid/filters/additional-filters#highlight)      | 送信された検索語に一致する場合、検索結果内の語を highlight クラスの HTML タグ `<strong>` で囲む。 | いいえ    |
 | `time_zone`             | 「[タイムゾーンフィルター](#time-zone-filter)」を参照してください。     | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -386,74 +386,10 @@ Wed August 4 2:00:00
 {% endtabs %}
 
 
-[1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
-[1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
-[1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters#compact
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
-[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
-[1.13]: https://shopify.dev/api/liquid/filters#where
-
-[2.1]: https://shopify.dev/api/liquid/filters/color-filters
-[3.1]: https://shopify.dev/api/liquid/filters/font-filters
-
-[4.1]: https://shopify.dev/api/liquid/filters/math-filters#abs
-[4.2]: https://shopify.dev/api/liquid/filters/math-filters#at_most
-[4.3]: https://shopify.dev/api/liquid/filters/math-filters#at_least
-[4.4]: https://shopify.dev/api/liquid/filters/math-filters#ceil
-[4.5]: https://shopify.dev/api/liquid/filters/math-filters#divided_by
-[4.6]: https://shopify.dev/api/liquid/filters/math-filters#floor
-[4.7]: https://shopify.dev/api/liquid/filters/math-filters#minus
-[4.8]: https://shopify.dev/api/liquid/filters/math-filters#plus
-[4.9]: https://shopify.dev/api/liquid/filters/math-filters#round
-[4.10]: https://shopify.dev/api/liquid/filters/math-filters#times
-[4.11]: https://shopify.dev/api/liquid/filters/math-filters#modulo
-
-[5.1]: https://shopify.dev/api/liquid/filters/money-filters#money
-[5.2]: https://shopify.dev/api/liquid/filters/money-filters#money_with_currency
-[5.3]: https://shopify.dev/api/liquid/filters/money-filters#money_without_trailing_zeros
-[5.4]: https://shopify.dev/api/liquid/filters/money-filters#money_without_currency
-
-[6.1]: https://shopify.dev/api/liquid/filters/string-filters#append
-[6.2]: https://shopify.dev/api/liquid/filters/string-filters#camelcase
-[6.3]: https://shopify.dev/api/liquid/filters/string-filters#capitalize
-[6.4]: https://shopify.dev/api/liquid/filters/string-filters#downcase
-[6.5]: https://shopify.dev/api/liquid/filters/string-filters#escape
-[6.6]: https://shopify.dev/api/liquid/filters/string-filters#handle-handleize
-[6.7]: https://shopify.dev/api/liquid/filters/string-filters#md5
-[6.8]: https://shopify.dev/api/liquid/filters/string-filters#sha1
-[6.10]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1
-[6.11]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256
-[6.12]: https://shopify.dev/api/liquid/filters/string-filters#newline_to_br
-[6.13]: https://shopify.dev/api/liquid/filters/string-filters#pluralize
-[6.14]: https://shopify.dev/api/liquid/filters/string-filters#prepend
-[6.15]: https://shopify.dev/api/liquid/filters/string-filters#remove
-[6.16]: https://shopify.dev/api/liquid/filters/string-filters#remove_first
-[6.17]: https://shopify.dev/api/liquid/filters/string-filters#replace
-[6.18]: https://shopify.dev/api/liquid/filters/string-filters#replace_first
-[6.19]: https://shopify.dev/api/liquid/filters/string-filters#slice
-[6.20]: https://shopify.dev/api/liquid/filters/string-filters#split
-[6.21]: https://shopify.dev/api/liquid/filters/string-filters#strip
-[6.22]: https://shopify.dev/api/liquid/filters/string-filters#lstrip
-[6.23]: https://shopify.dev/api/liquid/filters/string-filters#rstrip
-[6.24]: https://shopify.dev/api/liquid/filters/string-filters#strip_html
-[6.25]: https://shopify.dev/api/liquid/filters/string-filters#strip_newlines
-[6.26]: https://shopify.dev/api/liquid/filters/string-filters#truncate
-[6.27]: https://shopify.dev/api/liquid/filters/string-filters#truncatewords
-[6.28]: https://shopify.dev/api/liquid/filters/string-filters#upcase
-
-[7.1]: https://shopify.dev/api/liquid/filters/additional-filters#date
-[7.2]: https://shopify.dev/api/liquid/filters/additional-filters#default
-[7.3]: https://shopify.dev/api/liquid/filters/additional-filters#format_address
-[7.4]: https://shopify.dev/api/liquid/filters/additional-filters#highlight
 
 
-[1]: {% image_buster /assets/img/with_money_filter.png %}
-[2]: {% image_buster /assets/img/without_money_filter.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters
+
+
+
+
+

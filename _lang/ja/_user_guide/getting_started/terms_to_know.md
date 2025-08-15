@@ -83,7 +83,7 @@ glossaries:
   - name: プッシュ・トークン
     description: "プッシュトークンは、アプリと iOS、Android、またはWeb デバイス間の接続を作成するために、Apple または Google によって作成され、割り当てられた一意のキーです。<a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">プッシュトークンの移行とは</a>、すでに生成されたキーをBrazeにインポートすることである。"
   - name: プッシュ有効時間 (TTL)
-    description: "この有効時間は<a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/\">プッシュ TTL</a> とも呼ばれ、キャンペーンがオフラインのユーザーへの配信試行を続ける期間を示します。"
+    description: "この有効時間は<a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">プッシュ TTL</a> とも呼ばれ、キャンペーンがオフラインのユーザーへの配信試行を続ける期間を示します。"
   - name: 競合状態
     description: "<a href=\"http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/\">レースコンディションとは</a>、ソフトウェア工学の概念であり、システムが複数の操作を同時に実行しようとしたときに発生する望ましくない状況を説明するものであるが、システムの性質上、操作を正しく実行するには正しい順序で実行しなければならない。<br><br>Brazeプラットフォームでは、イベント発生時に記録されたユーザーデータに基づいてトリガーキャンペーンをセグメント化すると、レースコンディションが発生する可能性がある。これは、セグメントメンバーシップが決定され、キャンペーンが送信された時点で、キャンペーンがセグメントされたユーザー属性の変更がまだユーザーに対して処理されていない場合に起こり、ユーザーがキャンペーンを受け取らないことにつながる。"
   - name: レート制限

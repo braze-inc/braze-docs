@@ -72,20 +72,68 @@ Liquid 内の Braze では、ハッシュを変数 （式など） としてイ�
 | フィルター名 | フィルター 説明 | 例の入力 | 例の出力 |
 |---|---|---|---|
 | `number_with_delimiter` | コンマで数字をフォーマットします | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## JSONエスケープ / 文字列エスケープフィルター
 
 | フィルター名 | フィルター 説明 |
-|---|---|---|---|
+|---|---|
 | `json_escape` | 文字列内の特殊文字（ダブルクォート`""`やバックスラッシュ''など）をエスケープします。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 このフィルターは、JSON辞書で文字列をパーソナライズする際に常に使用する必要があり、特にwebhookに便利です。
+
+## JSON フォーマットフィルター
+
+| フィルター名 | フィルター 説明 |
+|---|---|
+| `json_parse` | JSON 文字列を、オブジェクトや配列などの対応するデータ構造に変換します。 | 
+| `as_json_string` | オブジェクトや配列などのデータ構造を対応する JSON 文字列に変換します。 | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details json_parse の入力と出力の例 %}
+
+### インプット 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### 出力
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string の入力と出力の例 %}
+
+### インプット
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### 出力
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

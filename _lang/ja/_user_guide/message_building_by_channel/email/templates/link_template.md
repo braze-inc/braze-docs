@@ -34,8 +34,8 @@ channel:
 1. [**テンプレート**] > [**メールリンクテンプレート**] に移動します。 
 2. **メールリンクテンプレートの作成**を選択します。
 3. リンクテンプレートに名前を付けます。
-4. (オプション) 説明、チーム、またはタグを追加して、リンクテンプレートに関する詳細を追加します。
-5. (オプション)メールキャンペーンとキャンバスのリンクにリンクテンプレートを自動的に追加するには、トグルを選択します。これは、新規または既存のメールに新しいリンクを追加する場合に適用されます。
+4. (オプション) リンクテンプレートに関する詳細を追加するための説明、チーム、またはタグを追加します。
+5. (オプション) メールキャンペーンとキャンバスのリンクにリンクテンプレートを自動的に追加するには、トグルを選択します。これは、新規または既存のメールに新しいリンクを追加する場合に適用されます。
 
 作成できるリンクテンプレートには2種類ある：
 
@@ -78,7 +78,7 @@ channel:
 
 - **ドラッグ＆ドロップ・エディター：****コンテンツ**＞**リンク管理**タブを選択する。次に、**Add a Link Template**を選択します。ドラッグ＆ドロップ・エディターでリンクテンプレートにアクセスするには、[リンクのエイリアシングを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)オンにしておく必要がある。
 
-![ドラッグ・アンド・ドロップ・エディターの「リンク管理」タブには、リンク・テンプレートの例がリストアップされている。][1]
+![ドラッグ＆ドロップエディターの「リンク管理」タブにリンクテンプレートの例がリストアップされている。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 リンクテンプレートはプレーンテキストには適用されません。つまり、「現在」には、リンクテンプレートのパラメータを含まないクリックが表示される場合があります。これは、これらのクリックは、電子メールのプレーンテキストバージョンから取得される可能性があるためです。
@@ -96,11 +96,5 @@ channel:
 
 ## よくある質問
 
-リンクテンプレートに関するよくある質問については、[テンプレート FAQ][10] ] ページをチェックしよう。
+リンクテンプレートに関するよくある質問への回答については、[Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) ページをご覧ください。
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

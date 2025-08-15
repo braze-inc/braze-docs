@@ -18,7 +18,7 @@ description: "このリファレンスページでは、アプリ内メッセー
 
 ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートの** welcome discount** を使用したメールサインアップを選択し、**Build message** を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![discount.][img1] を使用したメールサインアップフォームのテンプレートを含むアプリ内メッセージエディタ]
+![割引を含むメールサインアップフォームのテンプレートが表示されているアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
 ### ステップ2:メッセージスタイルを設定する
 
@@ -30,7 +30,7 @@ description: "このリファレンスページでは、アプリ内メッセー
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。][img2]
+![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
 
 #### メール検証
 
@@ -42,7 +42,7 @@ description: "このリファレンスページでは、アプリ内メッセー
 
 ### ステップ 5: メッセージにスタイルを設定する
 
-ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、サインアップフォームと割引の外観と感触をカスタマイズします。
+ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、サインアップフォームと割引の外観と感触をカスタマイズします。
 
 ## 結果の分析
 
@@ -53,7 +53,4 @@ description: "このリファレンスページでは、アプリ内メッセー
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

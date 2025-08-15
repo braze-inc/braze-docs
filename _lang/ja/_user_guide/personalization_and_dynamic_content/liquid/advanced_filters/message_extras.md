@@ -30,8 +30,18 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 ## `message_extras` タグの使い方
 
-1. チャネルのメッセージ本文に、`message_extras` Liquidタグを入力する。または、**パーソナライゼーションを追加**モーダルを使用して、パーソナライゼーションタイプとして**メッセージエクストラ**を選択できます。<br>![パーソナライゼーションタイプとして [メッセージエクストラ] が選択された [パーソナライゼーションを追加] モーダル。][1]{: style="max-width:70%;"}
-2. 各`message_extras`タグの[キーと値のペア]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)を入力してください。<br>![メッセージエクストラタグのキーと値のペアの例。[タイトル] フィールドには「あなたの新しいお気に入り」と表示されています。メッセージはメッセージエクストラのタグのキーと値のペアと、次の文を読み取ります。「当社は、あなたの新しいお気に入りになること間違いなしの新鮮で心躍る製品のサイドセレクションをお知らせできることを嬉しく思います」][2]{: style="max-width:70%;"}
+1. チャネルのメッセージ本文に、`message_extras` Liquidタグを入力する。または、**パーソナライゼーションを追加**モーダルを使用して、パーソナライゼーションタイプとして**メッセージエクストラ**を選択できます。 
+
+![パーソナライゼーションのタイプとしてメッセージエクストラが選択されたパーソナライゼーションの追加モーダル]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+
+{: start="2"}
+
+2. 各`message_extras`タグの[キーと値のペア]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)を入力してください。 
+
+![メッセージエクストラタグのキーと値のペアの例。[タイトル] フィールドには「あなたの新しいお気に入り」と表示されています。メッセージはメッセージエクストラのタグのキーと値のペアと、次の文を読み取ります。]{% image_buster /assets/img_archive/message_extras2.png %}「新鮮でエキサイティングな商品の数々をお届けできることを大変嬉しく思っています。{: style="max-width:70%;"}
+
+{: start="3"}
+
 3. キャンペーンまたはキャンバスが送信された後、Brazeは送信時にダイナミックなデータをCurrentsまたはSnowflake Data Sharingの送信イベントを介して`message_extras`フィールドに添付します。
 
 ## 構文の確認
@@ -64,5 +74,3 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}

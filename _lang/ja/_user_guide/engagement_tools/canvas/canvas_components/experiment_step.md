@@ -14,7 +14,7 @@ tool: Canvas
 
 ユーザージャーニーにExperiment Pathsステップを含めると、作成した異なるパス(またはオプションのコントロールグループ)にユーザーがランダムに割り当てられます。オーディエンスの一部は、選択したパーセンテージに応じて異なるパスに割り当てられます。これにより、異なるメッセージまたはパスを互いにテストし、どのパスが最も効果的かを判断できます。 
 
-![Path 1、Path 2、Control に分岐する実験パスステップ。][0]{: style="float:right;max-width:50%;margin-left:15px;"}
+![Path 1、Path 2、Controlに分岐する実験パスステップ。]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ## ユースケース
 
@@ -33,7 +33,7 @@ tool: Canvas
 
 実験パスを使用するには、キャンバスにコンバージョンイベントが含まれている必要があります。キャンバスの開始後はコンバージョンイベントを追加できませんが、実験パスを追加するために、開始したキャンバスを複製してコンバージョンイベントを追加することができます。
 
-## 実験パスを作成する
+## 実験パスの作成
 
 実験パスコンポーネントを作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの一番下にある <i class="fas fa-plus-circle"></i> プラスのボタンをクリックし、[**実験パス**] を選択します。 
 
@@ -45,7 +45,7 @@ tool: Canvas
 
 また、コントロールグループのユーザーをキャンバスで次に進めるか、**コントロールグループの動作**のコンバージョントラッキング期間の経過後に退出させるかを選択することもできます。オプションで、このテストパスで何をテストするのかを他の人に伝える説明を追加したり、役に立つ注意事項などの追加情報を含めたりできます。
 
-![実験設定（Experiment Settings）では、パスを追加し、各パスにおけるユーザーの割合を分配することができる。][1]
+![[実験設定 (Experiment Settings)] では、パスを追加し、各パスにおけるユーザーの割合を分配することができる。]({% image_buster /assets/img/experiment_step/exp_settings.png %})
 
 {% alert note %}
 キャンバスの再適格性が有効になっている場合、キャンバスに入ってランダムに選択されたパスを進んだユーザーは、再適格となりキャンバスに再び入ると、もう一度同じパスを進みます。これにより、実験とその分析の有効性が維持されます。ステップで常にパスの割り当てをランダム化するには、[**実験パスのランダムパス**] を選択します。このオプションは、勝者パスまたはパーソナライズされたパスを用いる場合は使用できません。
@@ -53,18 +53,18 @@ tool: Canvas
 
 ### ステップ 2: 勝者パスまたはパーソナライズされたパスを有効にする (オプション) {#step-2}
 
-[[勝者パス][WP]] または [[パーソナライズされたパス][PP]] をオンにして、テストを最適化することができます。どちらの方法も、最初にオーディエンスの一部を対象としてパスをテストすることで機能します。実験が終了すると、それ以降の残りのユーザーは、全体的に最もパフォーマンスの高いパス (勝者パス) か、各ユーザーの最もパフォーマンスの高いパス (パーソナライズされたパス) のいずれかに送られます。
+[[勝者パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path)] または [[パーソナライズされたパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths)] をオンにして、テストを最適化することができます。どちらの方法も、最初にオーディエンスの一部を対象としてパスをテストすることで機能します。実験が終了すると、それ以降の残りのユーザーは、全体的に最もパフォーマンスの高いパス (勝者パス) か、各ユーザーの最もパフォーマンスの高いパス (パーソナライズされたパス) のいずれかに送られます。
 
 ### ステップ 3:パスを作成する
 
 最後に、ダウンストリームのパスを構築する必要があります。[**完了**] を選択し、キャンバスビルダーに戻ります。各パスの下にある <i class="fas fa-plus-circle"></i> プラスボタンをクリックして、必要に応じて通常のキャンバスツールを使用してジャーニーの作成を開始し、準備ができたらキャンバスを開始します。
 
-![実験パスコンポーネントから分岐する各パスにステップを追加。][3]{: style="max-width:75%"}
+![実験パスコンポーネントから分岐する各パスにステップを追加。]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
 
 パスとそのダウンストリームのステップは、一度作成するとキャンバスから削除できないことに注意してください。ただし、開始後、必要に応じてパス間のオーディエンス配分を変更できます。例えば、キャンバスを開始した翌日に、分析に基づいて 1 つのパスの方が他のパスよりも優れていることがわかった場合は、そのパスを 100% に設定し、他のパスを 0% に設定することができます。あるいは、必要な場合は、引き続きユーザーを複数のパスに送り続けることもできます。
 
-{% alert note %}
-キャンバスの開始後は、実験パスを編集できなくなります。実験が送信途中でメッセージを編集した場合、テストは無駄になり、実験結果はすべて削除される。また、実験パスステップのあるすでにアクティブなキャンバスで、[パーソナライズされたパス] または [勝者パス] のステップをオンにすることはできません。<br><br> 詳細については、「[開始後のキャンバスの編集]({{site.baseurl}}/post-launch_edits/)」を参照してください。
+{% alert important %}
+実験の汚染を防ぐため、キャンバスにアクティブな実験または進行中の実験があり、アクティブなキャンバスを更新した場合 (それが実験パスステップでなくても)、進行中の実験は終了します。実験を再開するには、既存の実験パスをを解除して新しい実験パスを開始するか、キャンバスを複製して新しいキャンバスを起動します。また、実験パスステップのあるすでにアクティブなキャンバスで、[パーソナライズされたパス] または [勝者パス] のステップをオンにすることはできません。<br><br>詳細については、「[開始後のキャンバスの編集]({{site.baseurl}}/post-launch_edits/)」を参照してください。
 {% endalert %}
 
 ## パフォーマンスのトラッキング
@@ -77,18 +77,10 @@ tool: Canvas
 
 勝者パスを活用して一定期間にわたるパフォーマンスを追跡し、それ以降のユーザーを最高のパフォーマンスが得られるパスに自動的に送ることができます。テストで [**勝者パス**] または [**パーソナライズされたパス**] が有効になっている場合の分析の詳細については、以下を参照してください。
 
-- [勝者パス][WP_analytics]
-- [パーソナライズされたパス][PP_analytics]
+- [勝者パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics)
+- [パーソナライズされたパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/#analytics)
 
 ### 追加の設定
 
 実験パスは、各ステップに入り、割り当てられたパスにいる間にコンバージョンに至ったユーザーを記録します。これにより、キャンバスの設定で指定されたすべてのコンバージョンイベントが追跡されます。[**その他の設定**] タブで、このテストでコンバージョンを追跡したい日数 (1 ～ 30 日) を入力します。ここで指定する時間枠によって、テストでコンバージョンイベント (キャンバスの設定で選択したもの) を追跡する期間が決まります。キャンバス設定で指定されたイベントごとの変換ウィンドウは、このステップの追跡には適用されず、この変換ウィンドウに置き換えられます。
 
-[0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
-[1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}
-
-[WP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path
-[WP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics
-[PP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths
-[PP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/#analytics

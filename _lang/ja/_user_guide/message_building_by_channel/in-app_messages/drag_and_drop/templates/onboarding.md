@@ -18,7 +18,7 @@ description: "このページでは、魅力的なアクションプランを使
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートに [**オンボーディングフロー**] を選択し、[**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![オンボーディング・フローのテンプレートを使ったアプリ内メッセージエディター][img1]
+![オンボーディングフローのテンプレートを使ったアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### ステップ2:メッセージスタイルを設定する
 
@@ -32,12 +32,10 @@ description: "このページでは、魅力的なアクションプランを使
 
 ### ステップ 4:メッセージにスタイルを設定する
 
-ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、オンボーディングフローの外観と感触をカスタマイズします。
+ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、オンボーディングフローの外観と感触をカスタマイズします。
 
 ## 結果の分析
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

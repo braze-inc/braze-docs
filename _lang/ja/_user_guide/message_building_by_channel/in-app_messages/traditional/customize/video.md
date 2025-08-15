@@ -10,7 +10,7 @@ channel:
 
 # ビデオ {#video}
 
-> HTML アプリ内メッセージでビデオを再生するには、HTML に次の `<video>` 要素を含め、動画名を実際のファイル名 (またはリモートアセットの URL) に置き換えます。他の可能な`<video>`オプションは[MDN Web Docs][9]で見つけることができます。
+> HTML アプリ内メッセージでビデオを再生するには、HTML に次の `<video>` 要素を含め、動画名を実際のファイル名 (またはリモートアセットの URL) に置き換えます。他の可能な`<video>`オプションは[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)で見つけることができます。
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -38,4 +38,3 @@ iOS デバイスをサポートするには:
 - iOSはデフォルトで自動再生をサポートしていません。このデフォルトオプションを更新するには、[`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)を変更できます。
 
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

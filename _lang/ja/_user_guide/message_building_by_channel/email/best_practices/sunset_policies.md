@@ -12,7 +12,7 @@ channel: email
 
 > できる限り多くのユーザーにキャンペーンを送りたくなるかもしれないが、実際には、エンゲージメントの低いユーザーへのメッセージを止めた方が有利な状況もある。 
 
-Eメールの場合、送信IPはエンゲージメント、スパム報告、ブロックリストなどを考慮したレピュテーション・スコアを持っている。[Sender Score](https://www.senderscore.org/ "Sender Score") や [Outlook's Smart Network Data Service](https://postmaster.live.com/snds/ "Outlook's Smart Network Data Service") などのツールを使用して、自社の信頼度スコアを監視できます。信頼度スコアが一貫して低い場合、ISP とメールボックスフィルターによって、すべての受信者 (エンゲージしている受信者も含む) について、お客様のメールが自動的にスパムフォルダーまたは低優先度フォルダーに移動する可能性があります。サンセットポリシーを作成することで、アクティブな受信者だけにメールを配信することができる。 
+Eメールの場合、送信IPはエンゲージメント、スパム報告、ブロックリストなどを考慮したレピュテーション・スコアを持っている。[Sender Score](https://www.senderscore.org/) や [Outlook の Smart Network Data Service](https://postmaster.live.com/snds/) などのツールを使用して、自社の信頼度スコアを監視できます。信頼度スコアが一貫して低い場合、ISP とメールボックスフィルターによって、すべての受信者 (エンゲージしている受信者も含む) について、お客様のメールが自動的にスパムフォルダーまたは低優先度フォルダーに移動する可能性があります。サンセットポリシーを作成することで、アクティブな受信者だけにメールを配信することができる。 
 
 セグメンテーションフィルターを使用すると、メール、プッシュ通知、アプリ内通知のサンセットポリシーを簡単に実装できるため、メッセージングがスパムのように表示されることを抑制できます。サンセット・ポリシーを作成する際に考慮すべき点をいくつか挙げてみよう：
 
@@ -24,18 +24,15 @@ Eメールの場合、送信IPはエンゲージメント、スパム報告、�
 
 例えば、[Apple の Mail Privacy Protection (MPP)]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/) にオプトインしているユーザーがいる場合、これがメールキャンペーンや配信到達性の指標にどのような影響を与えるかを検討し、サンセットポリシーの最適な構成方法を決定します。
 
-サンセットポリシーをキャンペーンに組み込むには、お客様のメールをスパムとしてマークしたユーザーや、一定期間お客様のメッセージに反応しなかったユーザーを自動的に除外する[セグメント][19]を作成します。  
+サンセットポリシーをキャンペーンに組み込むには、お客様のメールをスパムとしてマークしたユーザーや、一定期間お客様のメッセージに反応しなかったユーザーを自動的に除外する[セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)を作成します。  
 
-これらのセグメントを設定するには、フィルタードロップダウンの**マーケティング活動**セクションの下にある`Has Marked You As Spam` と`Last Engaged With Message` フィルタを選択する。 
+これらのセグメントを設定するには、フィルタードロップダウンの [**リターゲット**] セクションの下にある `Has Marked You As Spam` フィルターと `Last Engaged With Message` フィルターを選択します。 
 
 `Last Engaged With Message` フィルターを適用する場合は、ユーザーが最後に対話してから経過した日数だけでなく、対話した、または対話していないメッセージングのタイプ (プッシュ通知、メール、またはアプリ内通知) を指定します。セグメントを作成したら、このセグメントを選択して任意の[メッセージングチャネル]({{site.baseurl}}/user_guide/message_building_by_channel/)のターゲットにします。
 
-![フィルター「メッセージへの最終エンゲージ」が選択された [セグメントの詳細] ページ。][20]
+![「最後にエンゲージしたメッセージ」フィルターが選択されている [セグメントの詳細] ページ]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
 
-Brazeは、スパムとしてマークしたユーザーへのメール送信を自動的に停止するが、`Has Marked You As Spam` フィルタを使えば、これらのユーザーにもターゲットを絞ったプッシュメッセージやアプリ内通知を送ることができる。このフィルターは、[リターゲティングキャンペーン][21]で便利です。例えば、メールを開封していないユーザーに対して、彼らが見逃している機能やお得な情報を思い出させるメッセージを送ることができる。
+Brazeは、スパムとしてマークしたユーザーへのメール送信を自動的に停止するが、`Has Marked You As Spam` フィルタを使えば、これらのユーザーにもターゲットを絞ったプッシュメッセージやアプリ内通知を送ることができる。このフィルターは、[リターゲティングキャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns)で便利です。例えば、メールを開封していないユーザーに対して、彼らが見逃している機能やお得な情報を思い出させるメッセージを送ることができる。
 
 サンセット・ポリシーは、特に周回遅れのユーザーをターゲットにしたEメールキャンペーンに役立つ。このようなキャンペーンは、一定期間アプリと接触していないセグメントに焦点を当てるが、未関与の受信者を繰り返し含めると、メールの配信性を危険にさらす可能性がある。サンセットポリシーを使えば、スパムフォルダに入ることなく、周回遅れのユーザーをターゲットにすることができる。
 
-[19]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[20]: {% image_buster /assets/img_archive/email_sunset_policies_new.png %}
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns

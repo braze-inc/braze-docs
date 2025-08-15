@@ -34,7 +34,7 @@ description: "次の記事は、新しいユーザーデータと既存のユー
 - **ユーザが存在しない場合:**
   - [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を使用してエイリアスのみのプロファイルを作成します。このエンドポイントは [`user_alias` オブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)を受け入れ、`update_existing_only` が `false` に設定されている場合にエイリアスのみを持つプロファイルを作成します。ユーザーのメールアドレスをユーザーエイリアスとして設定し、今後そのユーザーを参照します (ユーザーには `external_id` がないため)。
 
-![エイリアスのみのユーザープロファイルを更新するプロセスを示す図。あるユーザーが、マーケティングのランディングページでメールアドレスとカスタム属性 (郵便番号) を送信します。ランディングページの収集からエイリアスのみを持つユーザープロファイルを指す矢印は、ユーザー追跡エンドポイントに対する Braze の API リクエストを示します。リクエスト本文には、ユーザーのエイリアス名、エイリアスラベル、メールアドレス、および郵便番号が含まれます。プロファイルには「Braze で作成されたエイリアスのみを持つユーザー」ラベルとリクエスト本文から取得した属性があり、その属性は新規に作成されたプロファイルを反映するデータを示します。][3]{: style="max-width:90%;"}
+![エイリアスのみのユーザープロファイルを更新するプロセスを示す図。あるユーザーが、マーケティングのランディングページでメールアドレスとカスタム属性 (郵便番号) を送信します。ランディングページの収集からエイリアスのみを持つユーザープロファイルを指す矢印は、ユーザー追跡エンドポイントに対する Braze の API リクエストを示します。リクエスト本文には、ユーザーのエイリアス名、エイリアスラベル、メールアドレス、および郵便番号が含まれます。プロファイルには「Braze で作成されたエイリアスのみを持つユーザー」ラベルとリクエスト本文から取得した属性があり、その属性は新規に作成されたプロファイルを反映するデータを示します。]({% image_buster /assets/img/user_profile_process3.png %}){: style="max-width:90%;"}
 
 ## メールアドレスのキャプチャフォームを使用したユーザーのメールアドレスのキャプチャ
 
@@ -67,6 +67,3 @@ description: "次の記事は、新しいユーザーデータと既存のユー
 - 追加のコンテキストについては、Braze の「[ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)」の記事を参照してください。<br>
 - [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention)、および [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) でのユーザー ID の設定および `changeUser()` メソッドの呼び出しに関するドキュメントを参照してください。
 
-[1]: {% image_buster /assets/img/user_profile_process.png %}
-[2]: {% image_buster /assets/img/user_profile_process2.png %}
-[3]: {% image_buster /assets/img/user_profile_process3.png %}

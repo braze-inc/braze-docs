@@ -105,11 +105,11 @@ Braze はセグメンテーション用として、カスタムイベントが�
 
 ダッシュボードの**Custom Events Report** ページで、各カスタムイベントの発生頻度を集約して表示できます。時系列にオーバーレイされた灰色の線は、キャンペーンが最後に送信された時刻を示します。これは、キャンペーンがカスタムイベントアクティビティにどのような影響を与えたかを表示するのに役立ちます。
 
-![ダッシュボードの [カスタムイベント] ページのカスタムイベント数グラフ (カスタムイベントの傾向を示す)][8]
+![ダッシュボードの [カスタムイベント] ページのカスタムイベント数グラフ (カスタムイベントの傾向を示す)]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 **フィルター**を使用して、カスタムイベントを時間、月間平均ユーザー数 (MAU)、セグメント、または KPI 式別に分類することもできます。 
 
-![カスタムイベントのグラフフィルター][9]{: style="max-width:40%;"}
+![カスタムイベントグラフのフィルター]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 [カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) をインクリメントして、カスタムイベントに似たユーザアクションのカウンタを保持します。ただし、カスタム属性データを時系列で表示することはできません。時系列で分析する必要のないユーザーアクションは、この方法を使用して記録する必要があります。
@@ -142,7 +142,6 @@ Braze はセグメンテーション用として、カスタムイベントが�
 | 日時 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の文字列としてフォーマットされる。アレイ内ではサポートされていない。 |
 | 文字列 | 255 文字以下。 |
 | 配列 | 配列に日時を含めることはできない。 |
-| オブジェクト | オブジェクトは文字列として取り込まれる。 |
 | ネストされたオブジェクト | 他のオブジェクトの中にあるオブジェクト。詳細については、この記事の「[階層化オブジェクト](#nested-objects)」のセクションを参照してください。
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -156,19 +155,19 @@ Braze はセグメンテーション用として、カスタムイベントが�
 
 #### トリガーメッセージ
 
-カスタムイベントプロパティを使用して、特定のキャンペーンまたはキャンバスの対象をさらに絞り込むことができます。例えば、eコマース・アプリケーションを持っていて、ユーザーがカートを放棄したときにメッセージを送りたい場合、`cart value` のカスタムイベントプロパティを追加することで、ターゲットオーディエンスを改善し、キャンペーンのパーソナライゼーションを高めることができる。
+カスタムイベントプロパティを使用して、特定のキャンペーンまたはキャンバスの対象をさらに絞り込むことができます。例えば、eコマース・アプリケーションを持っていて、ユーザーがカートを放棄したときにメッセージを送りたい場合、`item price` のカスタムイベントプロパティを追加することで、ターゲットオーディエンスを改善し、キャンペーンのパーソナライゼーションを高めることができる。
 
-![放置カードのカスタムイベントプロパティフィルタ。2つのフィルターをAND演算子で組み合わせ、カート金額が100ドルから200ドルの間にあるカードを放棄したユーザーにこのキャンペーンを送信する。][16]
+![放置カードのカスタムイベントプロパティフィルタ。2 つのフィルターを AND 演算子と組み合わせて、商品価格が 100 ～ 200ドルのカードを放棄したユーザーにこのキャンペーンを送信します]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-階層化されたカスタムイベントプロパティは [アクションベースの配信][19] でもサポートされています。
+階層化されたカスタムイベントプロパティは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)でもサポートされています。
 
-![放置カードのカスタムイベントプロパティフィルタ。カート内のいずれかの商品価格が 100 ドルを超える場合は、1 つのフィルターが選択されます。][20]
+![放置カードのカスタムイベントプロパティフィルタ。カート内のいずれかの商品価格が 100 ドルを超える場合は、1 つのフィルターが選択されます。]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### メッセージのパーソナライゼーション
 
-カスタムイベントプロパティは、メッセージングテンプレート内でパーソナライゼーションに使用することもできます。トリガーイベントを持つ[アクションベースの配信][19] ]を使用するすべてのキャンペーンは、メッセージングパーソナライゼーションのために、そのイベントからカスタムイベントプロパティを使用することができる。
+カスタムイベントプロパティは、メッセージングテンプレート内でパーソナライゼーションに使用することもできます。トリガーイベントを持つ[アクションベース配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)を使用するキャンペーンは、メッセージングパーソナライゼーションのために、そのイベントのカスタムイベントプロパティを使用することができます。
 
-たとえば、ゲームアプリがあり、レベルを完了したユーザーにメッセージを送信する場合、ユーザーがそのレベルを完了するのにかかった時間のために、プロパティを使用してメッセージをさらにパーソナライズできます。この例では、[条件付きロジック][18]]を使って、3つの異なるセグメントに対してメッセージをパーソナライズしている。カスタムイベントプロパティ `time_spent` は、``{% raw %} {{event_properties.${time_spent}}} {% endraw %}`` を呼び出すことでメッセージに含めることができます。
+たとえば、ゲームアプリがあり、レベルを完了したユーザーにメッセージを送信する場合、ユーザーがそのレベルを完了するのにかかった時間のために、プロパティを使用してメッセージをさらにパーソナライズできます。この例では、メッセージは[条件付きロジック]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/)を使用して3つの異なるセグメントに対してパーソナライズされています。カスタムイベントプロパティ `time_spent` は、``{% raw %} {{event_properties.${time_spent}}} {% endraw %}`` を呼び出すことでメッセージに含めることができます。
 
 {% raw %}
 ```liquid
@@ -203,7 +202,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 
 イベントプロパティの再帰性と頻度に基づいてセグメンテーションを作成するには、「カスタムイベントプロパティのセグメンテーションを管理する」[ユーザー権限が]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage)必要です。
 
-デフォルトでは、1つのワークスペースにつき20のセグメンテーション可能なイベント・プロパティを持つことができる。この制限を増やすには、Brazeアカウントマネージャーに連絡する。
+デフォルトでは、1 つのワークスペースにつき 20 個のセグメンテーション可能なイベントプロパティを設定できます。この制限を増やすには、Brazeアカウントマネージャーに連絡する。
 
 セグメンテーションのためにイベントプロパティを追加するには、以下のようにする：
 
@@ -216,7 +215,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 - 過去 Y 日間に、値 B のプロパティ A を持ついずれかの購入を行った。
 - 1～30日以内のセグメンテーション機能を追加。
 
-![過去30日間にプロパティー「アイテム数」が「2つ」以上の放棄カートが1回以上発生したというユーザーを対象にするフィルターグループ。][3]
+![過去 30 日間にプロパティ「Number of items (商品数)」が「2」で、2 回以上行われた「カート放棄」を対象とするフィルターグループ。]({% image_buster /assets/img/nested_object3.png %})
 
 特定のイベントプロパティのデータは、カスタマーサクセスマネージャーによって有効にされた後にのみ記録されます。イベントプロパティは、その日付以降にのみ利用可能です。
 
@@ -229,69 +228,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 
 ### キャンバスエントリのプロパティとイベントプロパティ
 
-キャンバスのユーザージャーニーで `canvas_entry_properties` と `event_properties` を使用できます。詳細と例については、[キャンバスのエントリプロパティとイベントプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/)を参照してください。
-
-{% tabs local %}
-{% tab キャンバスエントリのプロパティ %}
-
-[キャンバスエントリのプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)は、アクションベースまたは API でトリガーされるキャンバスにマップするプロパティです。`canvas_entry_properties` オブジェクトのサイズ上限は 50 KB であることに注意してください。
-
-{% alert note %}
-特にアプリ内メッセージチャネルでは、以前の早期アクセスの一環として元のエディターで永続的なエントリプロパティを有効にしている場合、キャンバスフローと元のキャンバスエディターでのみ `canvas_entry_properties` を参照できます。
-{% endalert %}
-
-キャンバスフローメッセージングでは、いずれのメッセージステップでも `canvas_entry_properties` を Liquid 形式 (``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``) で使用できます。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければならないことに注意してください。 
-
-#### ユースケース
-
-{% raw %}
-小売店である RetailApp に対してリクエスト `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` があるとします。RetailApp では、Liquid `{{canvas_entry_properties.${product_name}}}` を使用して、メッセージに製品名 (shoes) を取り込むことができます。
-{% endraw %}
-
-RetailApp は、ユーザーが購入イベントをトリガーした後に、キャンバス内の異なる `product_name` プロパティに対して特定のメッセージをトリガーして送信することもできます。たとえば、次の Liquid をメッセージステップに追加することで、靴を購入したユーザーと別のものを購入したユーザーに異なるメッセージを送ることができます。
-
-{% raw %}
-```markdown
-{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
-  Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
-{% else %}
-  Your order will be on its way shortly. If you missed something, you have until the end of the week to add more items to your cart for the same discounts.
-{% endif %}
-
-```
-{% endraw %}
-
-{% details 元のキャンバスエディターの拡張 %}
-
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは参照のみを目的としています。
-
-元のエディターで作成されたキャンバスの場合、`canvas_entry_properties` はキャンバスの最初のフルステップでのみ参照できます。
-
-{% enddetails %}
-{% endtab %}
-
-{% tab イベントのプロパティ %}
-
-{% alert important %}
-`event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前**に、対応するイベントを含むアクションパスを追加する必要があります。
-{% endalert %}
-
-イベントプロパティとは、カスタムイベントと購入に設定したプロパティを指します。これらの `event_properties` は、アクションベースの配信やキャンバスを含むキャンペーンで使用できます。
-
-キャンバスフローでは、カスタムイベントと購入イベントのプロパティを、アクションパスステップに続く任意のメッセージステップで Liquid で使用できます。これらの `event_properties` を参照する場合は、必ず{% raw %} ``{{event_properties.${property_name}}}``{% endraw %} を使用してください。メッセージコンポーネントでこのように使用するには、これらのイベントがカスタムイベントまたは購入イベントである必要があります。
-
-アクションパスに続く最初のメッセージステップでは、そのアクションパスで参照されるイベントに関連する `event_properties` を使用できます。これらの `event_properties` は、ユーザーが実際にアクションを実行した場合 (その他のユーザーグループに移動していない) にのみ使用できます。このアクションパスとメッセージステップの間に、他のステップ (別のアクションパスやメッセージステップではない) があってもかまいません。
-
-{% details 元のキャンバスエディターの拡張 %}
-
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは参照のみを目的としています。
-
-元のキャンバスエディターでは、スケジュールされたフルステップで `event_properties` を使用できません。ただし、アクションベースのキャンバスの最初のフルステップでは、フルステップがスケジュールされている場合でも `event_properties` を使用できます。
-
-{% enddetails %}
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### 階層化オブジェクト {#nested-objects}
 
@@ -310,15 +247,3 @@ RetailApp は、ユーザーが購入イベントをトリガーした後に、�
 
 お客様の特定のニーズに応じた最適なアプローチの推奨事項については、Braze カスタマーサクセスマネージャーにお問い合わせください。
 
-[1]: {% image_buster /assets/img/nested_object1.png %}
-[2]: {% image_buster /assets/img/nested_object2.png %}
-[3]: {% image_buster /assets/img/nested_object3.png %}
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
-[16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

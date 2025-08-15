@@ -14,7 +14,7 @@ tool: Reports
 
 **カスタムイベントレポート**は [**分析**] の下にあります。
 
-![カスタムイベント][14]
+![カスタムイベント]({% image_buster /assets/img_archive/Export_events.png %})
 
 次の CSV をエクスポートできます。
 
@@ -31,4 +31,3 @@ tool: Reports
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
-[14]: {% image_buster /assets/img_archive/Export_events.png %}

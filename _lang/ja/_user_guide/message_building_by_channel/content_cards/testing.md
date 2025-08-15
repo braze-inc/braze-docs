@@ -26,7 +26,7 @@ channel:
 
 **テスト**タブからメッセージをプレビューすることも、ユーザーとして行うことができます。特定のユーザーやランダムなユーザーを選択するか、カスタムユーザーを作成できます。
 
-![Custom_User_Preview][3]
+![[テスト] タブのコンテンツカードプレビュー]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### テストチェックリスト
 
@@ -52,7 +52,7 @@ channel:
         "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
         "data": {
           "ids": [
-            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
           ]
         },
         "name": "cci",
@@ -64,16 +64,14 @@ channel:
 5. [Base64 Decode and Encode](https://www.base64decode.org/)のようなデコードツールを使用して、Base64形式から`id`をデコードし、関連する`campaign_id`を見つけます。この例では、次のようになります。
 
     ```
-    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    ここで、`6185005a9d9bee79387cce43` は `campaign_id` です。<br><br>
+    ここで、`4861692e-6fce-4215-bd05-3254fb9e9057` は `campaign_id` です。<br><br>
 
 6. **キャンペーン**ページに移動し、`campaign_id`を検索します。
 
-![[キャンペーン] ページでの campaign_id の検索][1]
+![[キャンペーン] ページでの campaign_id の検索]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 そこから、メッセージ設定とコンテンツを確認して、ユーザーが特定のコンテンツカードを見られない理由を詳しく調べることができます。
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

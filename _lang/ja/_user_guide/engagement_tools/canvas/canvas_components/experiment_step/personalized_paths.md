@@ -23,7 +23,7 @@ tool: Canvas
 
 [実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)をキャンバスに追加し、[**パーソナライズされたパス**] をオンにします。
 
-![][1]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### ステップ2:パーソナライズされたパスを設定する
 
@@ -31,7 +31,7 @@ tool: Canvas
 
 次に、**実験期間**を設定します。[**実験期間**] は、遅延グループ内の各ユーザーに最適なパスを選択する前に、ユーザーがすべてのパスに送られる時間の長さを決定します。期間は、最初のユーザーがステップに入ったときに始まります。
 
-![][2]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### ステップ 3:フォールバックを決定する
 
@@ -39,11 +39,11 @@ tool: Canvas
 
 または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。
 
-![][3]
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
-![][4]
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### ステップ 4:パスを追加してキャンバスを開始する
 
@@ -145,9 +145,3 @@ tool: Canvas
 
 ローカルタイム配信を使用したい場合は、24 ～ 48 時間以上の実験期間を使用してください。これにより、初期のタイムゾーンのユーザーがキャンバスに入って実験の開始がトリガーされた後でも実験期間に十分な時間を残すことができます。それ以降のタイムゾーンにいるユーザーが、キャンバスとパーソナライズされたパスを使った実験ステップに入り、実験期間が期限切れになる前にコンバージョンに至るのに十分な時間があります。
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_personalized_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}

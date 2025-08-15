@@ -31,11 +31,11 @@ description: "この記事では、ロケーションターゲティングを設
 
 まず、新しい[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を作成し、[**完全に更新**] を選択します。
 
-![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 データソースには [**CDI データテーブル**] を選択します。
 
-![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 CDI セットアップの一環として、CDI セグメントで使用する接続を選択できます。各接続は特定のデータテーブルのセットを持っている。開発チームは、CDI のセットアップ中に接続とデータテーブルを設定することができます。
 

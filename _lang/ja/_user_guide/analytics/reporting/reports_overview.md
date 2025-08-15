@@ -183,7 +183,7 @@ search_rank: 1
 {% tab セグメントデータ %}
 **セグメントデータ**
 
-セグメントの[分析の追跡]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)を有効にしている場合は、そのセグメントを開いて[セグメントデータ]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/)を表示します。セグメントデータは、該当するユーザーの経時的なセッション数、カスタムイベント数、および収益を追跡します。
+セグメントの[分析の追跡]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)を有効にしている場合は、そのセグメントを開いて[セグメントデータ]({{site.baseurl}}/viewing_and_understanding_segment_data/)を表示します。セグメントデータは、該当するユーザーの経時的なセッション数、カスタムイベント数、および収益を追跡します。
 
 このページには、以下の統計情報があります。
 
@@ -289,7 +289,7 @@ search_rank: 1
 {% tab 解約予測 %}
 **解約予測**
 
-[解約予測]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) は [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/) の最初のモデルです。解約予測を使用して予測の定義と生成を行うと、将来の解約を最小限に抑えるための先を見越したアプローチを提供できます。
+[解約予測]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) は [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/) の最初のモデルです。解約予測を使用して予測の定義と生成を行うと、将来の解約を最小限に抑えるための先を見越したアプローチを提供できます。
 
 それぞれのビジネスで解約とリテンションの定義が異なるため、定義を解約予測に入力するだけで済み、あとは Braze が行います。また、予測を改善するキャンペーンまたはキャンバスを作成したり、詳細な分析のためにセグメントを構成したりできます。
 

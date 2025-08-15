@@ -11,13 +11,13 @@ description: "この記事では、Braze キャンペーンでデータを参照
 
 [カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)を作成した後、Braze キャンペーンや推奨事項にセレクションを組み込むことで、カタログデータをさらに参照することができます。
 
-![カタログ例の「セレクション」セクション。][1]
+![カタログ例の「セレクション」セクション。]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## 知っておくべきこと
 
 - カタログごとに最大 30 個のセレクションを作成できます。
-- 選択項目ごとに最大4つのフィルターを追加できる。
-- セレクションは、Braze のカタログデータから推奨事項を絞り込むのに最適です。インスピレーションをお探しの場合、「[アイテムのおすすめについて]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/)」にあるユースケースの例を参照してください。
+- セレクションごとに最大10個のフィルターを追加できます。
+- セレクションは、Braze のカタログデータから推奨事項を絞り込むのに最適です。インスピレーションをお探しの場合、「[アイテムのおすすめについて]({{site.baseurl}}/user_guide/brazeai/recommendations/)」にあるユースケースの例を参照してください。
 
 ## セレクションを作成する
 
@@ -41,10 +41,10 @@ description: "この記事では、Braze キャンペーンでデータを参照
 カスタム属性やカスタムイベントなど任意のカタログ内で Liquid を使用すると、セレクションにあるユーザーごとに異なる結果が返される可能性があります。 
 
 {% alert note %}
-コネクテッドコンテンツLiquidはこれらのフィルター設定ではサポートされていない。
+これらのフィルター設定ではコネクテッドコンテンツLiquidはサポートされていません。
 {% endalert %}
 
-![属性がリキッドカスタム属性に設定されているカタログ選択のフィルタ設定。][7]
+![属性が Liquid カスタム属性に設定されているカタログ選択のフィルター設定。]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## メッセージングで選択範囲を使用する
 
@@ -58,7 +58,7 @@ description: "この記事では、Braze キャンペーンでデータを参照
 5. **表示する情報**」では、カタログのどのフィールドを各アイテムに含めるかを選択する。
 6. [**コピー**] アイコンを選択し、メッセージ内の必要な場所に Liquid を貼り付けます。
 
-![以下のセレクションがある「パーソナライゼーションの追加」モーダル: 「パーソナライズ・タイプ」は「カタログ・アイテム」、「カタログ名」は「ゲーム」、「セレクション・タイプ」は「セレクション」、「セレクション」は「game_selection」、「表示する情報」は「title」と「description_ja」である。][6]{: style="max-width:70%;"}
+![以下のセレクションがある「パーソナライゼーションの追加」モーダル: 「パーソナライズ・タイプ」は「カタログ・アイテム」、「カタログ名」は「ゲーム」、「セレクション・タイプ」は「セレクション」、「セレクション」は「game_selection」、「表示する情報」は「title」と「description_ja」である。]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## ユースケース
 
@@ -66,25 +66,18 @@ description: "この記事では、Braze キャンペーンでデータを参照
 
 食事宅配サービスの食事名、価格、画像、食事のカテゴリーなどの情報をカタログに使用し、ユーザーが最近閲覧したカテゴリーに基づいて3つの食事を推薦するセレクションを作成することができる。
 
-![食事宅配サービスの選択例で、2つのフィルターがある。1つは商品タイプを食事として識別するもの、もう1つはカテゴリーを最近閲覧されたものとして識別するものである。セレクションは、3つの結果が返される順番がランダムになるように設定されている。][2]{: style="max-width:90%;"}
+![食事宅配サービスの選択例で、2つのフィルターがある。1つは商品タイプを食事として識別するもの、もう1つはカテゴリーを最近閲覧されたものとして識別するものである。セレクションは、3つの結果が返される順番がランダムになるように設定されている。]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 このカタログと選択をキャンペーンで使用するには、キャンペーンを構築する際のメッセージ構成セクションで**パーソナライゼーションの追加**モーダルを使用する。この例では、食事宅配サービスの情報が掲載されたカタログと、最近閲覧したカテゴリーに基づく食事の推薦を選択した。これにより、食事名と価格を表示することができます。メッセージをさらに構築するには、セレクションを使って最初のおすすめ料理の画像を追加することもできます。
 
-![コンテンツカード。ヘッダーは「高評価の食事がきっと気に入るはず！」、メッセージの構成セクションは「recommendations_be_recent_category」を選択する。][3]{: style="max-width:90%;"}
+![コンテンツカード。ヘッダーは「高評価の食事がきっと気に入るはず！」、メッセージの構成セクションで「recommendations_be_recent_category」が選択されている。]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 例えば、最近見たカテゴリーが「チキン」であるユーザーがいるとする。設定されたパーソナライゼーションとコンテンツカードキャンペーンを使って、このユーザーにチキンを含む3つのおすすめ料理を送ることができる。
 
-![炭火で焼いたレモンチキンの画像、およびユーザーの最近閲覧したカテゴリーに基づくチキンを含む3つのおすすめ料理のリストが表示されたコンテンツカード。][4]{: style="max-width:90%;"}
+![炭火で焼いたレモンチキンの画像と、ユーザーが最近閲覧したカテゴリーに基づくチキンを使った3種類のおすすめ料理のリストが表示されたコンテンツカード。]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 同じパーソナライゼーションを使えば、最近見たカテゴリーが「牛肉」であるユーザーに対して、おすすめの食事を3つ送ることもできる。
 
-![ビーフ・ストロガノフの画像を使ったコンテンツ・カードと、ユーザーが最近見たカテゴリーに基づいた、ビーフを含むおすすめ料理2品のリスト。][5]{: style="max-width:90%;"}
+![ビーフ・ストロガノフの画像を使ったコンテンツ・カードと、ユーザーが最近見たカテゴリーに基づいた、ビーフを含むおすすめ料理2品のリスト。]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
-[6]: {% image_buster /assets/img_archive/catalog_selections6.png %}
-[7]: {% image_buster /assets/img_archive/catalog_selections7.png %}

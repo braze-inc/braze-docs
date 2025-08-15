@@ -30,10 +30,9 @@ tool:
 
 キャンバスの結果は、元のキャンバスワークフローのコンポーネント単位でエクスポートできます。これを行うには、特定のコンポーネントを選択し、**キャンバス・ステップの詳細**ページで**User Data**ドロップダウンを選択する。 
 
-![[キャンバスの詳細] ページの [ユーザーデータ] ドロップダウン。][1]
+![[キャンバスの詳細] ページの [ユーザーデータ] ドロップダウン。]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」の記事を参照してください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_csv_export.png %}

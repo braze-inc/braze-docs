@@ -8,7 +8,7 @@ description: "このリファレンス記事では、リキッドメッセージ
 
 # メッセージの中止
 
-> 必要に応じて、条件内のリキッドメッセージを中止できます。この記事では、この機能をマーケティングキャンペーンで使用する方法の例をいくつか紹介します。
+> オプションで、条件内で`abort_message("optional reason for aborting")` Liquid メッセージタグを使用して、ユーザーへのメッセージ送信を中止できます。この記事では、この機能をマーケティングキャンペーンで使用する方法の例をいくつか紹介します。
 
 {% alert note %}
 キャンバスでメッセージステップが中止された場合、ユーザーはキャンバスを**終了せず**、**次のステップに進みます**。
@@ -59,15 +59,12 @@ Send this message in English!
 ```
 {% endraw %}
 
-![「language was nil」という中止メッセージのある開発者コンソールのメッセージエラーログ][26]
+![「language was nil」という中止メッセージが表示されている開発者コンソールのメッセージエラーログ]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## アボートメッセージのクエリ
 
 Braze に接続されている場合は、[Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) または独自のデータウェアハウスを使用して、Liquid ロジックがメッセージをアボートさせたときにトリガーされる特定のアボートメッセージをクエリーできます。
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+## 考慮事項
+
+`abort_message()` Liquid メッセージタグは、ユーザーへのメッセージ送信を中止します。つまり、メッセージはユーザープロファイルに表示されず、配信やフリークエンシーキャップにカウントされません。

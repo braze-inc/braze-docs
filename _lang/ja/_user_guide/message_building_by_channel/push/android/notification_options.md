@@ -25,7 +25,7 @@ channel:
 
 まず、Androidプッシュ通知キャンペーンを作成し、[**メール作成]**タブの一番上にある[**通知チャネル**]ドロップダウンを探す。
 
-![][28]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
 
 ドロップダウンから通知チャンネルを選択する。また、[通知チャネル] 設定で不具合が生じた場合に備えて、フォールバックチャネルを選択する必要があります。
 
@@ -33,8 +33,6 @@ channel:
 
 通知 ID を通知チャネル に追加するには、[**通知チャネル**] ドロップダウンメニューの [**通知チャネルを管理**] をクリックし、必須フィールドに入力します。通知チャネルを Braze プラットフォームで使用するには、アプリ上で通知チャネルを定義する必要があります。
 
-![][29]{: style="max-width:80%;" }
+![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
-[28]: {% image_buster /assets/img_archive/notification_channel_dropdown.png %}
-[29]: {% image_buster /assets/img_archive/notification_channels.png %}

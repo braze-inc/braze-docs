@@ -13,7 +13,7 @@ description: "この参考記事では、Liquidを通してBrazeのキャンペ�
 
 選択したメッセージコンポーザーで、<i class="fas fa-plus-circle"></i> プラスアイコンを選択して**パーソナライズの追加**モーダルを開き、**パーソナライズのタイプに** **カタログアイテムを**選択する。次に、**カタログ名**を選択します。先ほどの例を使って、「ゲーム」カタログを選択する。
 
-![][1]
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 以下の Liquid プレビューがすぐに表示されます。
 
@@ -48,7 +48,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 - **Catalogs** セクションのカタログ行にカーソルを合わせます。次に、**Export catalog**ボタンを選択します。
 - カタログを選択します。次に、カタログの**Preview**タブで**Export catalog**ボタンを選択します。
 
-エクスポートを開始すると、CSV ファイルをダウンロードするための電子メールが送信されます。このファイルを取得するのに最大4 時間かかります。
+エクスポートを開始すると、CSV ファイルをダウンロードするための電子メールが送信されます。このファイルを取得するには最大 4 時間かかります。
 
 ## その他の使用例
 
@@ -58,7 +58,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 この例では、Tales、Teslagrad、Acaratus の 3 つのゲームの `id` を**カタログアイテム**に追加し、[**表示する情報**] のために `title` を選択します。
 
-![][2]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Liquid の周りにテキストを追加することで、メッセージをさらにパーソナライズできます。
 
@@ -114,11 +114,11 @@ Message if the venue name's size is less than 10 characters.
 ```
 {% endraw %}
 
-![画像フィールドで使用されるカタログの Liquid タグを含むコンテンツカード作成画面。][3]
+![画像フィールドで使用されるカタログの Liquid タグを含むコンテンツカード作成画面。]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Liquid がレンダリングされると、次のように表示されます。
 
-![カタログのリキッドタグをレンダリングしたコンテンツカードの例。][4]{: style="max-width:50%" }
+![カタログの Liquid タグをレンダリングしたコンテンツカードの例。]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### カタログ項目をテンプレート化する
 
@@ -139,7 +139,7 @@ Liquid がレンダリングされると、次のように表示されます。
 カタログ内のJSONオブジェクトは、APIを介してのみ取り込まれます。CSV ファイルを使用してJSON オブジェクトをアップロードすることはできません。
 {% endalert %}
 
-Liquid テンプレートを使用することで、ウィッシュリストから ID をダイナミックに取り出し、メッセージで使用できます。そのためには、[変数][10] をカスタム属性に割り当て、**パーソナライゼーションの追加**モーダルを使用して、配列から特定のアイテムを取り出す。
+Liquid テンプレートを使用することで、ウィッシュリストから ID をダイナミックに取り出し、メッセージで使用できます。そのためには、カスタム属性に[変数を割り当て]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables)、**パーソナライゼーションの追加**モーダルを使用して、配列から特定のアイテムを取り出す。カタログアイテム ID として参照する変数が適切に参照されるようにするため、`{{result}}` のように、変数を中かっこで囲む必要があります。
 
 {% alert tip %}
 配列は`1` ではなく`0` から始まることを忘れないでほしい。
@@ -167,7 +167,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 
 ### Liquid の使用
 
-Liquid ロジックを手動で作成することもできます。ただし、存在しないIDを入力しても、Brazeはオブジェクトのないitems配列を返すことに注意。配列のサイズをチェックしたり、`if` ステートメントを使用して配列が空の場合を考慮するなど、エラー処理を含めることを推奨する。
+Liquid ロジック使用してカタログを手動で作成することもできます。ただし、存在しないIDを入力しても、Brazeはオブジェクトのないitems配列を返すことに注意。配列のサイズをチェックしたり、`if` ステートメントを使用して配列が空の場合を考慮するなど、エラー処理を含めることを推奨する。
 
 {% alert note %}
 現在、カタログ内で Liquid を使用することはできません。リキッドパーソナライゼーションがカタログのセル内にリストされている場合、ダイナミック値はレンダリングされず、実際のリキッドのみが表示される。
@@ -211,6 +211,3 @@ Welcome to our store, Peter!
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
-[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
-[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

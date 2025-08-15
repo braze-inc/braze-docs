@@ -18,10 +18,10 @@ description: "このリファレンス記事では、キャンペーンやセグ
 
 1. [**データ設定**] > [**カスタムイベント**] または [**カスタム属性**] または [**製品**] に移動します。
 
-![[カスタム属性]、[カスタムイベント] または [製品] に移動します。][21]{: style="max-width:90%;" }
+![[カスタム属性]、[カスタムイベント] または [製品] に移動する。]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\.カスタム属性、カスタムイベント、または製品を追加するには、それぞれのページに移動して、[**カスタム属性を追加**]、[**カスタムイベントを追加**]、または [**製品を追加**] を選択します。<br><br>カスタム属性の場合は、この属性の[データ型][20] (ブール型、文字列など) を選択します。属性のデータ型によって、その属性に使用できるセグメンテーションフィルターが決まります。<br><br>![新しい属性またはイベントの追加][22]{: style="max-width:80%;" }
+2\.カスタム属性、カスタムイベント、または製品を追加するには、それぞれのページに移動して、[**カスタム属性を追加**]、[**カスタムイベントを追加**]、または [**製品を追加**] を選択します。<br><br>カスタム属性の場合は、この属性の[データ型]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) (ブール型、文字列など) を選択します。属性のデータ型によって、その属性に使用できるセグメンテーションフィルターが決まります。<br><br>![新しい属性またはイベントの追加]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3\.[**保存**] を選択します。
 
 ### カスタムイベントとカスタム属性の命名
@@ -32,7 +32,7 @@ description: "このリファレンス記事では、キャンペーンやセグ
 
 カスタムイベントまたは製品を作成した後、そのイベントまたは製品の [**プロパティの管理**] を選択して、新しいプロパティの追加、禁止リストへの既存のプロパティの追加、および[トリガーイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)でこのプロパティを使用するキャンペーンまたはキャンバスの表示ができます。
 
-![カスタムイベントのカスタムプロパティ。][73]{: style="max-width:80%"}
+![カスタムイベントのカスタムプロパティ。]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
 これらの追加されたカスタム属性、カスタムイベント、製品、またはカスタムイベントプロパティを追跡可能にするには、以前の追加時に使用した正確な名前を使用して SDK でそれらを作成するように、開発チームに依頼する必要があります。または、Braze [API]({{site.baseurl}}/api/basics/) を使用してその属性のデータをインポートすることもできます。その後、カスタム属性、カスタムイベントなどのアクションが可能になり、ユーザーに適用されます。
 
@@ -66,7 +66,11 @@ description: "このリファレンス記事では、キャンペーンやセグ
 
 ![[カスタム属性] ページで選択され、禁止リストに追加された複数のカスタム属性。]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-禁止リストには、最大で 300 個のカスタム属性と 300 個のカスタムイベントを追加できます。特定のデバイス属性の収集を停止する方法については、[SDKガイド][88]を参照してください。
+禁止リストには、最大で 300 個のカスタム属性と 300 個のカスタムイベントを追加できます。特定のデバイス属性の収集を停止する方法については、[SDK ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection)を参照してください。 
+
+{% alert important %}
+ステータスが [**削除済み**] のカスタム属性またはカスタムイベントは、削除されるまではブロックリストの制限の対象としてカウントされます。
+{% endalert %}
 
 カスタムイベントやカスタム属性を禁止リストに追加すると、以下のことが適用されます。
 
@@ -127,7 +131,7 @@ Braze は、受信した属性データのデータ型を自動的に認識し�
 データ型の強制は、イベントプロパティや購入プロパティには適用されない。
 {% endalert %}
 
-![カスタム属性のデータタイプ・ドロップダウン][75]
+![カスタム属性のデータタイプのドロップダウン]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
 属性のデータ型を強制することを選択した場合、指定された型ではないデータがその型に強制的に取り込まれます。そのような強制が不可能な場合(例えば、数字に強制される文字を含む文字列)、データは無視されます。型の変更前に取り込まれたデータは、古い型として引き続き保存され(したがって、セグメント化できない場合があります)、影響を受けるユーザのプロファイルの属性の横に警告が表示されます。
@@ -142,19 +146,10 @@ Braze は、受信した属性データのデータ型を自動的に認識し�
 | 数値 | 整数または浮動小数点数(`1`、`1.5` など) は数値として保存されます |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-さまざまなデータ型の比較によって公開される特定のフィルターオプションの詳細については、[レポートの設定][43]] を参照してください。また、利用可能な他のデータ型の詳細については、「カスタム属性のデータ型」][44]を参照してください。
+異なるデータ型の比較によって表示される特定のフィルターオプションの詳細については、[レポートの設定]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting)を参照してください。また、利用可能な他のデータ型の詳細については、[カスタム属性のデータ型]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)を参照してください。
 
 {% alert note %}
 Braze に送信されたデータは不変であり、受信後の削除または変更ができません。ただし、ダッシュボードで追跡しているものをコントロールするために、前のセクションに挙げたステップのいずれかを使用できます。
 {% endalert %}
 
 
-[1]: {% image_buster/assets/img_archive/blocklist_warning.png %}
-[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[21]: {% image_buster /assets/img_archive/prepopulate_page.png %}
-[22]: {% image_buster /assets/img_archive/prepopulate_add.png %}
-[43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[75]: {% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %}
-[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

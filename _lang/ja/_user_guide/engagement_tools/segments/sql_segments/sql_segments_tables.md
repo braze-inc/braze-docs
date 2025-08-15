@@ -40,6 +40,7 @@ table td {
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | ユーザーがキャンペーンのコントロールグループに登録された場合
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | ユーザーがキャンペーンで回数制限を受けた場合
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | ユーザーが一次コンバージョン期間内に収益を上げた場合
+[USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | ユーザーがキャンバスステップに進むとき
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | キャンバスのコンバージョンイベントでユーザーがコンバージョンした場合
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | ユーザーがキャンバスに入るとき
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | ユーザーがオーディエンスの終了条件に一致してキャンバスを出たとき
@@ -480,6 +481,30 @@ table td {
 
 ## キャンバス
 
+### USERS_CANVASSTEP_PROGRESSION_SHARED {#USERS_CANVASSTEP_PROGRESSION_SHARED}
+
+| フィールド                                  | タイプ                     | 説明                                                                                                     |
+| -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                                   | `string`, `null`    | このイベントのグローバルな一意の ID                                                                               |
+| `user_id`                              | `string`, `null`    | このイベントを実行したユーザーのBraze ID                                                                   |
+| `external_user_id`                     | `string`, `null`    | [PII] ユーザーの外部ユーザーID                                                                              |
+| `device_id`                            | `string`, `null`    | ユーザーが匿名の場合、このユーザーに紐づくデバイスのID                                            |
+| `app_group_id`                         | `string`, `null`    | このユーザーが所属するワークスペースのBraze ID                                                                   |
+| `app_group_api_id`                     | `string`, `null`    | このユーザーが所属するワークスペースのAPI ID                                                                    |
+| `time`                                 | `int`, `null`       | イベントが発生したUnixタイムスタンプ                                                                      |
+| `canvas_id`                            | `string`, `null`    | (Braze専用）このイベントが属するキャンバスのID                                                     |
+| `canvas_api_id`                        | `string`, `null`    | このイベントが属するキャンバスのAPI ID        |         
+| `canvas_variation_api_id`              | `string`, `null`    | このイベントが属するキャンバスのバリエーションのAPI ID                                                            |
+| `canvas_step_api_id`                   | `string`, `null`    | このイベントが属するキャンバスステップのAPI ID                                                                 |
+| `progression_type`                     | `string`, `null`    | ステップ進行イベントのタイプ |
+| `is_canvas_entry`                      | `boolean`, `null`   | これがキャンバスの最初のステップへのエントリーであるかどうか        |
+| `exit_reason`                          | `string`, `null`    | これが離脱である場合、ステップ中にユーザーがキャンバスを離脱した理由                  |
+| `canvas_entry_id`                      | `string`, `null`    | キャンバス内のこのユーザーインスタンスの一意の識別子  |
+| `next_step_id`                         | `string`, `null`    | キャンバスの次のステップの BSON ID |
+| `next_step_api_id`                     | `string`, `null`    | キャンバスの次のステップの API ID |
+| `sf_created_at`                        | `timestamp`, `null` | このイベントが Snowpipe に検出されたとき                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
 | フィールド                                  | タイプ                     | 説明                                                                                                     |
@@ -679,7 +704,7 @@ table td {
 `country` | `null,` `string` | [PII] ユーザーの国
 `timezone` | `null,` `string` | ユーザーのタイムゾーン
 `language` | `null,` `string` | [PII] ユーザーの言語
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -850,7 +875,7 @@ table td {
 `language` | `null,` `string` | [PII] ユーザーの言語
 `email_address` | `string` | [PII] ユーザーのメールアドレス
 `ip_pool` | `null,` `string` | メール送信元のIPプール
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -882,7 +907,7 @@ table td {
 `sending_ip` | `null,` `string` | メール送信元のIPアドレス
 `ip_pool` | `null,` `string` | メール送信元のIPプール
 `bounce_reason` | `null,` `string` | [PII] このバウンスイベントで受信したSMTP理由コードとユーザーフレンドリーメッセージ
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 `is_drop` | `null, boolean` | このイベントがドロップイベントとしてカウントされることを示す。
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -917,7 +942,7 @@ table td {
 `ip_pool` | `null,` `string` | メール送信元のIPプール
 `link_id` | `null,` `string` | Brazeが作成した、クリックされたリンクのユニークID。
 `link_alias` | `null,` `string` | このリンクIDに関連するエイリアス
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 `is_amp` | `null, boolean` | AMPイベントであることを示す
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -949,7 +974,7 @@ table td {
 `email_address` | `string` | [PII] ユーザーのメールアドレス
 `sending_ip` | `null,` `string` | メールの送信元IPアドレス
 `ip_pool` | `null,` `string` | メール送信元のIPプール
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -980,7 +1005,7 @@ table td {
 `email_address` | `string` | [PII] ユーザーのメールアドレス
 `user_agent` | `null,` `string` | スパム報告が発生したユーザーエージェント
 `ip_pool` | `null,` `string` | メール送信元のIPプール
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1012,7 +1037,7 @@ table td {
 `user_agent` | `null,` `string` | オープンが発生したユーザーエージェント
 `ip_pool` | `null,` `string` | メール送信元のIPプール
 `machine_open` | `null,` `string` | 例えば、メールのプライバシー保護が有効になっているAppleデバイスによって、ユーザーの関与なしに開封イベントがトリガーされた場合、'true'が入力される。値は、より詳細な情報を提供するために、時間の経過とともに変化する可能性があります。
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 `is_amp` | `null, boolean` | AMPイベントであることを示す
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1044,7 +1069,7 @@ table td {
 `email_address` | `string` | [PII] ユーザーのメールアドレス
 `ip_pool` | `null,` `string` | メール送信元のIPプール
 `message_extras` | `null,` `string` | [PII] リキッドレンダリング時にタグ付けされたキーと値のペアのJSON文字列
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 `sf_created_at` | `timestamp`, `null` | このイベントが Snowpipe に検出されたとき
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1077,7 +1102,7 @@ table td {
 `sending_ip` | `null,` `string` | メール送信元のIPアドレス
 `ip_pool` | `null,` `string` | メール送信元のIPプール
 `bounce_reason` | `null,` `string` | [PII] このバウンスイベントで受信したSMTP理由コードとユーザーフレンドリーメッセージ
-`esp` | `null,` `string` | イベントに関連するESP（SparkPostまたはSendGrid）
+`esp` | `null,` `string` | イベントに関連する ESP (SparkPost、SendGrid、または Amazon SES)
 `from_domain` | `null,` `string` | メールの送信ドメイン
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1146,7 +1171,7 @@ table td {
 `ad_id` | `null,` `string` | [PII] 広告識別子
 `ad_id_type` | `null,` `string` | `ios_idfa`、`google_ad_id`、`windows_ad_id`、`roku_ad_id` のいずれか
 `ad_tracking_enabled` | `null, boolean` | デバイスの広告トラッキングが有効かどうか
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1252,7 +1277,7 @@ table td {
 `resolution` | `null,` `string` | デバイスの解像度
 `carrier` | `null,` `string` | デバイスの通信事業者
 `browser` | `null,` `string` | デバイスのブラウザ
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1332,7 +1357,7 @@ table td {
 `timezone` | `null,` `string` | ユーザーのタイムゾーン
 `language` | `null,` `string` | [PII] ユーザーの言語
 `platform` | `string` | デバイスのプラットフォーム
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1530,7 +1555,7 @@ table td {
 `canvas_step_api_id` | `null,` `string` | このイベントが属するキャンバスステップのAPI ID
 `canvas_step_message_variation_api_id` | `null,` `string` | このユーザーが受け取ったキャンバスステップメッセージのバリエーションのAPI ID
 `subscription_group_api_id` | `null,` `string` | サブスクリプショングループの外部 ID
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1756,7 +1781,7 @@ table td {
 `country` | `null,` `string` | [PII] ユーザーの国
 `timezone` | `null,` `string` | ユーザーのタイムゾーン
 `language` | `null,` `string` | [PII] ユーザーの言語
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1809,7 +1834,7 @@ table td {
 `canvas_step_api_id` | `null,` `string` | このイベントが属するキャンバスステップのAPI ID
 `canvas_step_message_variation_api_id` | `null,` `string` | このユーザーが受け取ったキャンバスステップメッセージのバリエーションのAPI ID
 `dispatch_id` | `null,` `string` | このメッセージが属するディスパッチの ID
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message`、`quiet_hours`、`rate_limit` のいずれか
+`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
 `abort_log` | `null,` `string` | [PII] 中止の詳細を記述するログメッセージ (最大 128 文字)
 `sf_created_at` | `timestamp`, `null` | このイベントが Snowpipe に検出されたとき      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

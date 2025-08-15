@@ -10,7 +10,7 @@ channel:
 
 # Gmailプロモーション設定
 
-> [Gmail モバイルの [プロモーション] タブ][1]を使用すると、マーケターは件名やプリヘッダーの情報だけでなく、「カード」の注釈をを使用してより多くの情報を送信できます。Braze には、メールキャンペーンからカードを作成するためのツールが組み込まれています。
+> [Gmail モバイルの [プロモーション] タブ](https://developers.google.com/gmail/promotab/)を使用すると、マーケターは件名やプリヘッダーの情報だけでなく、「カード」の注釈をを使用してより多くの情報を送信できます。Braze には、メールキャンペーンからカードを作成するためのツールが組み込まれています。
 
 ## 前提条件
 
@@ -20,10 +20,10 @@ channel:
 
 次のステップに従い、メール キャンペーンのGmail プロモーションカードを構築します。エディタの**Content** セクションから移動すると、**Gmail Promotion** タブのフィールドs とインフォメーションがリセットされます。プロモーションカードの設定を完了し、HTML コードを失わないように生成されたHTMLを複製します。
 
-1. [メールキャンペーンを作成][7]し、編集体験として **HTML エディター**を選択します。
+1. [メールキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)を作成し、編集経験として**HTML Editor**を選択します。
 2. HTMLエディタの**Content**セクションに移動し、**Gmail Promotion**タブを選択します。
-3. **Basic Information**にフィールドを入力し、**Generate HTML Code**をクリックします。これにより、**HTML コードを`<Head>`**にコピー&ペーストする、Gmail Promoタブカードのスクリプトが生成されます。<br> ![カードのビルド方法のサンプル。][2]
-4. Gmail のプロモーションカードに、割引オファーとプロモーションカードのいずれかを含めるか、または両方を含めるかを選択します。<br> ![割引オファーとプロモーションカードを含めるオプション。][10]{: style="max-width:50%;"}
+3. **Basic Information**にフィールドを入力し、**Generate HTML Code**をクリックします。これにより、**HTML コードを`<Head>`**にコピー&ペーストする、Gmail Promoタブカードのスクリプトが生成されます。<br> ![カードのビルド方法の例。]({% image_buster /assets/img/create-gmail-promo.png %})
+4. Gmail のプロモーションカードに、割引オファーとプロモーションカードのいずれかを含めるか、または両方を含めるかを選択します。<br> ![割引オファーとプロモーションカードを含めるオプション。]({% image_buster /assets/img_archive/gmail_promo_discount.png %}){: style="max-width:70%;"}
 5. スクリプトをコピーして、メールの HTML の `<head>` 要素に貼り付けます。
 
 {% alert warning %}
@@ -34,13 +34,13 @@ channel:
 
 割引オファーを設定すると、割引の有効な日付を指定できます。割引オファーを決定したら、開始日時を選択します。特定の時点で割引オファーを終了するか、決して終了しないように選択するかの選択肢があります。
 
-![割引オファーのオファー値、コード、および開始日時を指定するオプション。][11]{: style="max-width:50%;"}
+![割引オファーのオファー値、コード、および開始日時を指定するオプション。]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
 ### 製品カルーセルのカスタマイズ
 
 製品カルーセルのプロモーションカードは、オファーに画像を表示する場合に役立ちます。また、製品カルーセルの変数をカスタマイズして、画像のプレビュー (各画像が固有) を最大 10 枚含めることもできます。
 
-![Motto という名前の会社の製品カルーセルの例。メールの見出しは「当社で最も売れているソックスがセール中です」。さらに、ソックスとその割引価格が示された 3 枚の画像があります。][9]{: style="max-width:40%;"}
+![Motto という名前の会社の製品カルーセルの例。メールの見出しは「当社で最も売れているソックスがセール中です」。さらに、ソックスとその割引価格が示された 3 枚の画像があります。]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 | カスタマイズ可能な変数 | 説明 |
 |---|---|
@@ -58,7 +58,7 @@ channel:
 
 ### ベストプラクティス
 
-通常は、以下に示す [Gmail が推奨するベストプラクティス][8]に従います。 
+通常は、以下に示す [Gmail が推奨するベストプラクティス](https://developers.google.com/gmail/promotab/best-practices)に従います。 
 
 {% alert tip %}
 このスクリプト内で Liquid を使用できますが、エラーを回避するために、メッセージングをできるだけ多くテストすることを強くお勧めします。
@@ -92,14 +92,3 @@ Braze や他のメールサービスプロバイダー (ESP) がヘッダーセ�
 
 いつ誰にカードを表示するかは、Gmail が決定します。したがって、すべての受信者に製品カルーセルが表示されるとは限りません。
 
-[1]: https://developers.google.com/gmail/promotab/
-[2]: {% image_buster /assets/img/create-gmail-promo.png %}
-[3]: {% image_buster /assets/img/copy-gmail-promo-script.png %}
-[4]: {% image_buster /assets/img/promocardmap.png %}
-[5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
-[6]: {% image_buster /assets/img/gmail_preview.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-[8]: https://developers.google.com/gmail/promotab/best-practices
-[9]: {% image_buster /assets/img_archive/product_carousel.png %}
-[10]: {% image_buster /assets/img_archive/gmail_promo_discount.png %}
-[11]: {% image_buster /assets/img/gmail_promo_discount_details.png %}

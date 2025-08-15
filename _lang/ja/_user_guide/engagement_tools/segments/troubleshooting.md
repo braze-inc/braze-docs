@@ -1,7 +1,7 @@
 ---
 nav_title: トラブルシューティング
 article_title: トラブルシューティング セグメント
-page_order: 10
+page_order: 12
 page_type: reference
 tool: 
   - Segments

@@ -35,7 +35,7 @@ tool: Canvas
 
 - **方法1:**複製されたキャンバスで、キャンバスビルダーの [**エントリオーディエンス**] の部分を編集し、テストユーザーのみがキャンバスに適格になるようにします。また、**メールアドレス**のテストフィルターを追加することで、自分のメールアドレスをテストユーザーとして入力することもできます。以下の例では、キャンバスを、アプリを初めて使ってから 3 日以内の 2 人のテストユーザーに限定しています。
 
-![][2]
+![エントリオーディエンスが「アプリの初回仕様が過去 3 日間以内」であり、2 人のテストユーザーのメールアドレスが設定されているキャンバス。]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **方法2:**キャンバスビルダーのフッターで [**テストキャンバス**] ボタンを選択して、[ユーザーパスをプレビュー]({{site.baseurl}}/preview_user_paths/)します。
 
@@ -84,5 +84,3 @@ Postman と [Braze Postman Collection]({{site.baseurl}}/api/postman_collection/)
 1. 各ブランチについて、Canvas ジャーニーに含まれるためにユーザーが持つ必要がある属性とイベントを特定します。
 2. それらを JSON ペイロードにビルドし、`/users/track` エンドポイントを使用して投稿します。
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}

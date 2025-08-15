@@ -41,11 +41,11 @@ Braze の [**パートナー連携**] > [**テクノロジーパートナー**] 
 
 WhatsApp パートナーページで、[**統合を開始**] を選択します。
 
-![][1]
+![統合を開始するボタンが付いたWhatsAppパートナーページ。]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 開いたウィンドウで [**次へ**] を選択し、[**統合を開始**] ボタンが表示されるまで続けます。ボタンを選択し、統合プロセスを開始します。
 
-![BrazeとWhatsAppの接続方法。][7]
+![BrazeとWhatsAppの接続方法。]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
 ### ステップ 2: WhatsAppのセットアップ
 
@@ -64,16 +64,16 @@ WhatsApp パートナーページで、[**統合を開始**] を選択します�
 
 1. [**[テンプレートマネージャー](https://business.facebook.com/wa/manage/message-templates)**] に移動します。<br>
 Meta Business Manager で、**Account Tools** の下にある [**メッセージテンプレート**] を選択します。
-次に、[**テンプレートを作成**] を選択します。<br><br>![][3]{: style="max-width:100%;"}<br><br>
+次に、[**テンプレートを作成**] を選択します。<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **メッセージの設定**<br>
 新しいメッセージ・テンプレート・コンポーザーで、メッセージのカテゴリーを選択し、テンプレートに名前を付け、サポートしたい言語を選択する。後で言語を削除したり追加したりすることもできる。<br><br> 
 	利用可能なメッセージテンプレートのカテゴリーには以下のものがある：
 	- マーケティング: キャンペーンや製品情報などを配信し、認知度とエンゲージメントを高める
 	- ユーティリティ: アカウント更新、注文更新、アラートなどを送信し、重要な情報を共有する
 	- 認証: 顧客がアカウントにアクセスできるようにするコードを送信する<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **テンプレートを編集する**<br>
-次に、メッセージ・テンプレートを作成するよう促される。<br><br>ここでは、テキストまたはメディアヘッダー、テキスト本文、メッセージフッター、およびボタンを指定できます。現在、ビデオとドキュメントのヘッダーは使用できず、ヘッダーはテキストまたは画像のいずれかでなければなりません。メッセージのプレビューが右側に表示される。<br><br>Meta は Liquid をサポートしていませんが、後で Braze で Liquid 変数に置き換えることができる変数をテンプレート化することができます。[**\+ 変数を追加**] ボタンを選択します。<br><br>![][5]{: style="max-width:100%;"}<br><br>テンプレートが完成したら、[**送信**] をクリックします。 
+次に、メッセージ・テンプレートを作成するよう促される。<br><br>ここでは、テキストまたはメディアヘッダー、テキスト本文、メッセージフッター、およびボタンを指定できます。現在、ビデオとドキュメントのヘッダーは使用できず、ヘッダーはテキストまたは画像のいずれかでなければなりません。メッセージのプレビューが右側に表示される。<br><br>Meta は Liquid をサポートしていませんが、後で Braze で Liquid 変数に置き換えることができる変数をテンプレート化することができます。[**\+ 変数を追加**] ボタンを選択します。<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>テンプレートが完成したら、[**送信**] をクリックします。 
 
 #### テンプレート承認時間
 
@@ -104,10 +104,3 @@ WhatsApp Business Account が作成されると、Meta によって初期のメ�
 
 Braze は WhatsApp の [Cloud API ローカルストレージ](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5)をサポートしています。これを有効にするには、Brazeカスタマーサポートマネージャーに連絡すること。
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %}
-[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

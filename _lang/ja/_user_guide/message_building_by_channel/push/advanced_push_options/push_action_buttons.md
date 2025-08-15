@@ -11,23 +11,24 @@ channel:
 
 # プッシュアクションボタン
 
-![2つのプッシュアクションボタンを備えたiOSのプッシュ通知：受諾と拒否][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![2つのプッシュアクションボタンを備えたiOSのプッシュ通知：受諾と拒否。]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > プッシュアクションボタンを使用すると、BrazeのiOSおよびAndroidプッシュ通知を使用する際に、ボタンのコンテンツとアクションを設定できる。アクションボタンを使用すると、ユーザーはアプリエクスペリエンスをクリックすることなく、通知からアプリと直接対話できます。
 
 ## アクションボタンを作成する
 
-各操作ボタンは、Web ページやディープリンクにリンクしたり、アプリを開いたりできます。プッシュアクションボタンは、ダッシュボードのプッシュメッセージコンポーザーの**On-Click Behavior**セクションで指定できる。
+各操作ボタンは、Web ページやディープリンクにリンクしたり、アプリを開いたりできます。 
 
-{% alert important %}
-1つのキャンペーンでiOSとAndroidの両方をターゲットにしたい場合は、マルチチャネルキャンペーンを作成する。[クイックプッシュキャンペーンを]({{site.baseurl}}/quick_push)使用してiOSとAndroidの両方をターゲットにする場合、プッシュアクションボタンはサポートされない。
-{% endalert %}
+- 標準的なプッシュキャンペーンでは、プッシュアクションボタンは、ダッシュボードのプッシュメッセージ作成画面の [**クリック時動作**] セクションで指定できます。
+- [クイックプッシュキャンペーン]({{site.baseurl}}/quick_push)では、アクションボタンは [**設定**] タブでプラットフォーム別に個別に設定できます。
 
+{% tabs %}
+{% tab iOS %}
 ### iOS{#ios}
 
 iOSのプッシュ・メッセージでアクション・ボタンを使うには、以下のようにする：
 
-1. iOS の[プッシュキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)を作成し、[**作成**] タブでアクションボタンを有効にします。
+1. 標準的なキャンペーンの場合は [**作成**] タブで、クイックプッシュの場合は [**設定**] タブでアクションボタンをオンにします。
 2. 以下の利用可能なボタンの組み合わせから、**iOSの通知カテゴリーを**選択する：
  - 受諾する／拒否する
  - はい／いいえ
@@ -40,18 +41,19 @@ iOSのプッシュ・メッセージでアクション・ボタンを使うに�
 {% alert note %}
 iOS でのボタンの処理に起因して、プッシュアクションボタンを設定するときには追加の連携手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories)で概説しています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。Android との連携の場合、これらのボタンは自動的に機能します。
 {% endalert %}
-
+{% endtab %}
+{% tab Android %}
 ### Android{#android}
 
 Androidのプッシュ・メッセージでアクション・ボタンを使うには、以下のようにする：
 
-1. Android の[プッシュキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)を作成し、[**作成**] タブで通知ボタンを有効にします。
-2. <i class="fas fa-plus-circle"></i> **Add Buttonを**選択し、ボタンテキストと**On-Click Behaviorを**指定する。次の使用できるアクションを選択できます。
+1. 標準的なキャンペーンの場合は [**作成**] タブで、クイックプッシュの場合は [**設定**] タブでアクションボタンをオンにします。
+2. **[追加] ボタン** <i class="fas fa-plus-circle"></i> を選択し、ボタンテキストと [**クリック時動作**] を指定します。次の使用できるアクションを選択できます。
   - アプリを開く
   - ウェブURLにリダイレクトする
   - [アプリケーションへのディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)
 
-![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}) 通知ボタンのクリック時の動作として「アプリ開封」を選択する。{: style="max-width:70%"}
+![通知ボタンのクリック時の動作として [アプリを開く] を選択する。]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 プッシュのボタンは3つまで追加できる。
 
@@ -69,6 +71,6 @@ Androidのプッシュ・メッセージでアクション・ボタンを使う�
 | 2 | 20文字 |
 | 3 | 11文字 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% endtab %}
+{% endtabs %}
 
-
-[1]: {% image_buster /assets/img_archive/push_action_example.png %}

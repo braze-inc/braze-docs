@@ -10,6 +10,9 @@ description: "このランディングページは、Braze メッセージング
 
 guide_featured_title: "使用可能なチャネル"
 guide_featured_list:
+- name: バナー
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: コンテンツカードによって促進された
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: プッシュメッセージング
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS &amp; MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: SMS、MMS、RCS
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## アクセシビリティに関するリソース
+
+Braze を使えば、各チャネルでアクセスしやすいメッセージングキャンペーンを作成できます。エンジニアと協力して、実装においてアクセシビリティ基準を満たすようにしてください。追加のガイダンスが必要な場合は、以下をお勧めします。
+
+- [アクセシブルなメッセージの基礎](https://learning.braze.com/accessible-messaging-foundations):この Braze ラーニングコースでは、ブランドコミュニケーションに適用される基本的なアクセシビリティの原則を学びます。
+- [アクセシブルなメッセージを作成する]({{site.baseurl}}/help/accessibility/):代替テキストを追加し、Braze 内で支援技術向けのコンテンツを直接構造化する方法について説明します。
+
+{% multi_lang_include accessibility/feedback.md %}
 
 ## メッセージチャネルの選択
 

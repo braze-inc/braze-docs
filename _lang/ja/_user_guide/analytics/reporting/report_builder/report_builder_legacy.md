@@ -12,9 +12,9 @@ tool:
 
 # レポートビルダー (レガシー)
 
-> レポートビルダーを使用すると、複数のキャンペーンまたはキャンバスの結果を 1 つのビューで比較できるため、主要な指標に最も影響を与えたエンゲージメント戦略を簡単に判断できます。キャンペーンとキャンバスの両方で、データをエクスポートしてレポートを保存し、将来閲覧することができる。<br><br>レポートに表示されるメトリックの説明リストについては、[レポートメトリック用語集][16]を参照してください。
+> レポートビルダーを使用すると、複数のキャンペーンまたはキャンバスの結果を 1 つのビューで比較できるため、主要な指標に最も影響を与えたエンゲージメント戦略を簡単に判断できます。キャンペーンとキャンバスの両方で、データをエクスポートしてレポートを保存し、将来閲覧することができる。<br><br>レポートに表示されるメトリックの説明リストについては、[レポートメトリック用語集]({{site.baseurl}}/user_guide/data/report_metrics/)を参照してください。
 
-![キャンペーン比較例][5]{: style="max-width:80%;"}
+![キャンペーン比較例]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 このレポートを使用して、主要なエンゲージメントに関する質問の答えを求めます。以下に例を示します。
 
@@ -41,7 +41,7 @@ tool:
 
 キャンペーンに関するレポートを実行する場合は、**手動**レポートまたは**自動**レポートを選択できます。レポートには、キャンペーンまたはキャンバスのいずれかを含めることができますが、両方を含めることはできません。過去12 か月以内に最後にメッセージを送信したキャンペーンおよびキャンバスは、レポートの対象となります。
 
-![キャンペーン・ダッシュボード][6]{: style="max-width:80%;"}
+![キャンペーンダッシュボード]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 この 2 つのオプションの違いを以下に示します。
 
@@ -62,9 +62,9 @@ tool:
 
 レポートを作成すると、各行にキャンペーンを含む空白の表が表示される。[**列を編集**] を選択し、追加する指標を選択すると、テーブルにデータが読み込まれます。
 
-![キャンペーンのオプション][15]{: style="max-width:80%;"}
+![キャンペーンオプション]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
-選択した指標がテーブルに読み込まれます。指標の定義については、「[レポート指標の用語集][16]」を参照してください。一部の指標は、キャンペーン比較レポートでのみ使用できます。
+選択した指標がテーブルに読み込まれます。指標の定義については、「[レポート指標の用語集]({{site.baseurl}}/user_guide/data/report_metrics/)」を参照してください。一部の指標は、キャンペーン比較レポートでのみ使用できます。
 
 また、任意の比率指標または数値指標の**平均**と、任意の数値指標の**合計**の計算を切り替えることもできます。
 
@@ -72,13 +72,13 @@ tool:
 
 特定の期間を選択して、レポートのデータを表示できます。特定のキャンペーン、キャンバス、キャンバスバリアント、またはキャンバスコンポーネントに選択した期間のデータがない場合、その行の結果は空白になる。 
 
-![キャンペーンの数値指標][4]{: style="max-width:60%;"}
+![キャンペーンの数値指標]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### ステップ 4:レポートに名前を付けて保存
 
 レポートを保存する前に、レポートに名前を付けます。レポートに名前を付けずに保存すると、Braze によりデフォルトの名前である「キャンペーン比較レポート」が適用されます。
 
-![キャンペーンノート][7]{: style="max-width:60%;"}
+![キャンペーンノート]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
 
 準備ができたら、[**保存**] を選択します。保存されたレポートは、後で [**レポートビルダー**] ページに表示できます。
 
@@ -86,7 +86,7 @@ tool:
 
 多変量キャンペーンの場合、キャンペーン名の横にある矢印をクリックして、指標をバリアント別、およびコントロールグループ別に表示できます。バリアントを含む行にはそのバリアントのパフォーマンス結果が含まれ、コントロールを含む行にはコンバージョンイベントの結果のみが含まれます。 
 
-![キャンペーンノート][3]{: style="float:right;max-width:15%;margin-left:15px;"}
+![キャンペーンノート]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 キャンペーン全体の行に入力されるメトリクスは、そのバリアントのパフォーマンスを反映するが、コントロールのパフォーマンスは含まれない。例えば、キャンペーン全体の1次コンバージョンイベント A は、バリアントの1次コンバージョンイベント A の合計になり、コントロールの1次コンバージョンイベント A は含まれません。
 
@@ -102,19 +102,19 @@ tool:
 
 **バリアント別の内訳を**選択すると、キャンバス全体のハイレベルな統計と、キャンバス名の横にある矢印を選択すると拡大できるバリアントごとの統計を見ることができる。
 
-![バリアント][12]{: style="max-width:90%;"}
+![バリアント]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
 
 ### ステップ 
 
 **ステップごとの内訳を**選択すると、レポートの各行がステップの行を含む、ステップ・レベルのメトリクスを表示できる。
 
-![ステップ][13]{: style="max-width:90%;"}
+![ステップ]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
 
 ### メッセージ
 
 ステップレベルの内訳と同様に、[**メッセージごとの内訳**] を選択すると各行にステップ名が表示されます。ただし、[**列を編集**] では、メールクリック数やプッシュ通知の開封数など、チャネル固有の統計情報のようなメッセージレベルの指標にアクセスできます。
 
-![レポート][14]{: style="max-width:90%;"}
+![レポート]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
 
 なお、Braze ダッシュボードでは、キャンバスレポートの最初の 50 行をプレビューできます。CSV をエクスポートすると、レポート全体にアクセスできます。
 
@@ -141,7 +141,7 @@ tool:
 
 バリアントの指標を含むファイルでは、その名前の先頭に `variant_` が付け加えられます。自動レポートを初めてエクスポートするときに、複数ファイルのダウンロードの許可を求めるポップアップが表示されます。[**許可**] をクリックします。
 
-![キャンペーンダウンロード][8]{: style="max-width:60%;"}
+![キャンペーンダウンロード]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### キャンバス比較レポートのエクスポート
 
@@ -156,7 +156,7 @@ CSVエクスポートには、**エクスポートを**選択したときに表�
 
 レポートで選択した指標を可視化するには、チャートを使用します。チャートは、キャンペーンに関するレポートで、その列に少なくとも 1 つの指標が追加されている場合に使用できます。
 
-![[送信済みメッセージ] 指標が選択されたキャンペーンパフォーマンスのチャート][17]
+![メトリックメッセージ付きのキャンペーンパフォーマンスチャートが送信されました]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 デフォルトでは、各レポートのチャートに、レポートの最初の列の指標が表示されます。チャートに表示する別の指標を選択するには、ドロップダウンから指標を選択します。レポートのテーブルにある任意の指標をチャートに表示できます。
 
@@ -167,16 +167,4 @@ CSVエクスポートには、**エクスポートを**選択したときに表�
 現在、レポートの保存時にチャートは保存されません。
 
 
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

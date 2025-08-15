@@ -2,9 +2,9 @@
 nav_title: クエリビルダー
 article_title: クエリビルダー
 page_order: 15
-page_type: reference
 description: "このリファレンス記事では、クエリビルダーで Snowflake からの Braze データを使用してレポートを作成する方法について説明します。"
 tool: Reports
+alias: /query_builder/
 ---
 
 # クエリビルダー
@@ -37,13 +37,40 @@ tool: Reports
 
 ### データの期間
 
-すべてのクエリーは過去60日間のデータを表示する。 
+すべてのクエリーは過去60日間のデータを表示する。
+
+### クエリビルダーのタイムゾーン
+
+Snowflake データベースへのクエリ実行のデフォルトタイムゾーンは UTC です。その結果、**メールチャネルエンゲージメントの**ページ（貴社のタイムゾーンに従っている）とクエリビルダーの結果の間にデータの不一致が生じる可能性がある。
+
+クエリ結果のタイムゾーンを変換するには、以下の SQL をクエリに追加して、会社のタイムゾーンに合わせてカスタマイズします。
+
+{% raw %}
+```sql
+SELECT
+DATE_TRUNC(
+'day',
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME))
+) AS send_date_sydney,
+COUNT(ID) AS emails_sent
+USERS_MESSAGES_EMAIL_SEND_SHARED
+WHERE
+-- Apply the date range in Sydney time as well
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) >= '2025-03-25 00:00:00'
+AND CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) < '2025-03-29 00:00:00'
+AND APP_GROUP_ID = 'your app group ID'
+GROUP BY
+send_date_sydney
+ORDER BY
+send_date_sydney;
+```
+{% endraw %}
 
 ## AI Query Builderを使用したSQLの生成
 
 AI クエリビルダーは OpenAI を搭載した [GPT](https://openai.com/gpt-4) を活用して、クエリの SQL を提案します。
 
-![][2]{: style="max-width:60%;" }
+![SQL AI クエリビルダー。]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 AI クエリビルダーで SQL を生成するには、次の手順に従います。
 
@@ -107,6 +134,16 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 LIMIT 100
 ```
 
+### キャンペーンバリアント名を自動的に入力する
+
+キャンペーンバリアント名を自動的に入力するには、次の例のように、クエリに列名`MESSAGE_VARIATION_API_ID` を含めます。
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID, MESSAGE_VARIATION_API_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
+```
+
 ### トラブルシューティング
 
 クエリは次のいずれかの理由で失敗する可能性があります。
@@ -119,8 +156,6 @@ LIMIT 100
 ## 変数の使用
 
 変数を使用すると、SQL に値を手動でコピーせずに、事前定義されている変数型を使用して値を参照できます。例えば、キャンペーン ID を SQL エディターに手動でコピーする代わりに、{% raw %}`{{campaign.${My campaign}}}`{% endraw %} を使用して [**変数**] タブのドロップダウンからキャンペーンを直接選択できます。
-
-![][3]
 
 変数を作成すると、その変数がクエリビルダーレポートの [**変数**] タブに表示されます。SQL 変数を使用する利点を以下に示します。
 
@@ -159,8 +194,6 @@ LIMIT 100
 
 #### 期間
 
-![][4]{: style="max-width:50%;"}
-
 `start_date` と`end_date` の両方を使用する場合は、日付範囲として使用できるように、同じ名前を使用する必要があります。
 
 ##### 値の例
@@ -185,8 +218,6 @@ LIMIT 100
 #### メッセージング
 
 1 つのグループでステートを結合する場合は、すべてのメッセージング変数が同じ識別子を共有する必要があります。
-
-![][5]{: style="max-width:50%;"}
 
 ##### キャンバス
 
@@ -237,214 +268,9 @@ LIMIT 100
 - **置換する値:**キャンバスステップの API ID
 - **使用例:** {% raw %}`canvas_step_api_id = ‘{{canvas_step.${some name}}}’`{% endraw %}
 
-##### キャンバスステップ
+##### キャンバスのステップ
 
 選択した複数のキャンバスに属するキャンバスステップを複数選択する場合に使用します。canvas 変数または canvases 変数と組み合わせて使用する必要があります。
 
 - **置換する値:**各キャンバスステップの API ID
 - **使用例:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-
-#### 製品
-
-製品名のリストを選択する場合に使用します。
-
-- **置換する値:**製品名は、一重引用符で囲み、コンマで区切ります (`product1, product2` など)。
-- **使用例:** {% raw %}`product_id IN ({{products.${product name (optional)}}})`{% endraw %}
-
-#### カスタムイベント
-
-カスタムイベントのリストを選択する場合に使用します。
-
-- **置換する値:**カスタムイベントのプロパティ名はコンマで区切ります(`event1, event2` など)。
-- **使用例:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
-
-#### カスタムイベントプロパティ
-
-カスタムイベントプロパティ名のリストを選択する場合に使用します。カスタムイベント変数とともに使用する必要があります。
-
-- **置換する値:**カスタムイベントのプロパティ名はコンマで区切ります(`property1, property2` など)。
-- **使用例:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
-
-#### ワークスペース
-
-ワークスペースを選択する場合に使用します。
-
-- **置換する値:**ワークスペースの BSON ID
-- **使用例:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
-
-#### カタログ
-
-カタログを選択する場合に使用します。
-
-- **置換する値:**カタログの BSON ID
-- **使用例:** {% raw %}`catalog_id = ‘{{catalogs.${catalog}}}’`{% endraw %}
-
-#### カタログフィールド
-
-カタログのフィールドを選択する場合に使用します。catalogs 変数とともに使用する必要があります。
-
-- **置換する値:**カタログフィールド名
-- **使用例:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
-
-#### オプション {#options}
-
-オプションのリストから選択する場合に使用します。
-
-- **置換する値:**選択したオプションの値
-- **使用例:**
-    - 選択肢を持つドロップダウンの場合: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select` を使用すると、エンドユーザーが複数のオプションを選択できるかどうかを指定できます
-    - ラジオボタンの場合: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-
-#### セグメント
-
-[Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)が有効になっているSegmentを選択します。
-
-- **置換する値:**この列が使用可能なテーブルの`user_segment_membership_ids` 列に格納されているID に対応するSegment 分析 ID。
-- **使用例:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
-
-#### 文字列
-
-繰り返される文字列値をレポート実行の合間に変更する場合に使用します。この変数を使用すると、SQL 内の値を複数回ハードコーディングする必要がなくなります。
-
-- **置換する値:**引用符で囲まないそのままの文字列
-- **使用例:** {% raw %}`{{string.${some name}}}`{% endraw %}
-
-#### タグ
-
-キャンペーンやキャンバスのタグを選択する場合に使用します。
-
-- **置換する値:**選択したタグに関連付けられているキャンペーンとキャンバスの BSON ID。一重引用符で囲み、コンマで区切ります。
-- **使用例:** {% raw %}`{{tags.${some tags}}}`{% endraw %}
-
-### 変数のメタデータ
-
-変数にメタデータをアタッチして変数の動作を変更するには、変数名の後にパイプ (|) 文字を付けてメタデータを追加します。メタデータの順序は関係なく、いくつでも追加できます。さらに、特定の変数に固有の特殊なメタデータを除き、すべてのタイプのメタデータを任意の変数に使用できます。特殊なメタデータについてはそのセクションで説明します。メタデータの使用はすべて任意であり、デフォルトの変数の動作を変更するために使用されます。
-
-**使用例:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
-
-#### 可視
-
-変数が表示されるかどうかを指定します。すべての変数はデフォルトで [**変数**] タブに表示され、値を入力できます。
-
-他の変数に値があるかどうかなど、値が他の変数に依存する特殊変数がいくつかあります。これらの特殊変数は、**Variables**タブに表示されないように、非表示としてマークされます。
-
-**使用例:** `visible: ‘false’`
-
-#### 必須
-
-変数がデフォルトで必須かどうかを指定します。変数の値が空の場合、通常は正しくないクエリになります。
-
-**使用例:** `required: ‘false’`
-
-#### order
-
-[**変数**] タブでの変数の位置を選択する場合に使用します。
-
-**使用例:** `order: ‘1’`
-
-#### 単一引用符を含める
-
-変数の値を一重引用符で囲む場合に使用します。
-
-**使用例:** `include_quotes: ‘true’`
-
-#### 二重引用符を含める
-
-変数の値を二重引用符で囲む場合に使用します。
-
-**使用例:** `include_double_quotes: ‘true’`
-
-#### マルチセレクト
-
-選択肢を持つドロップダウンで単一選択または複数選択のいずれを許可するかを指定します。現在、[options](#options) 変数を使用する場合にのみ、このメタデータを含めることができます。
-
-**使用例:** `is_multi_select: ‘true’`
-
-![][7]{: style="max-width:50%;"}
-
-#### ラジオボタン
-
-[**変数**] タブの選択肢を持つドロップダウンの代わりに、ラジオボタンとしてオプションを表示します。[options](#options) 変数を使用する場合にのみ、このメタデータを含めることができます。
-
-**使用例:** `is_radio_button: ‘true’`
-
-![][6]{: style="max-width:50%;"}
-
-#### オプション 
-
-選択可能なオプションのリストをラベルと値の形式で提供する場合に使用します。ラベルが表示され、オプションが選択されたときに変数が値に置き換えられます。[options](#options) 変数を使用する場合にのみ、このメタデータを含めることができます。
-
-**使用例:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
-
-#### プレースホルダー 
-
-変数の入力フィールドに表示されるプレースホルダーのテキストを指定します。
-
-**使用例:** `placeholder: ‘enter some value’`
-
-#### 説明
-
-変数の入力フィールドの下に表示される説明テキストを指定します。
-
-**使用例:** `description: ‘some description’`
-
-#### デフォルト値
-
-値が指定されていない場合の変数のデフォルト値を指定します。
-
-**使用例:** `default_value: ‘5’`
-
-#### ラベルを隠す
-
-変数名のラベルを非表示にします。変数名はデフォルトのラベルとして使用されます。
-
-**使用例:** `hide_label: ‘true’`
-
-### 特殊変数
-
-次の変数は他の変数とともに使用できます。
-
-#### 他の変数の値の有無
-
-変数の値が入力されているかどうかを知る場合に使用します。これは、オプションの変数に値が入力されていない場合に条件を短絡評価する場合に便利です。
-
-- **置換する値:** 他の変数の値に応じて `true` または `false`
-- **使用例:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
-
-`type` と `name` は参照先の変数のものです。例えば、オプション変数 {% raw %}`{{campaigns.${messaging}}` を短絡評価するには、次の文を使用できます。
-`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
-
-## レポートのタイムアウト
-
-実行に6 分以上かかるレポートはタイムアウトになります。これが、ある時点で実行する最初のクエリである場合、処理に時間がかかるため、タイムアウトする可能性が高くなります。タイムアウトした場合は、レポートをもう一度実行してみてください。
-
-リトライ後もレポートタイムアウトやエラーが発生した場合は、[サポート]({{site.baseurl}}/help/support#braze-support)までお問い合わせください。
-
-## データと結果
-
-結果および結果のエクスポートは、最大 1,000 行のテーブルです。より大量のデータを必要とするレポートについては、[Currentsや]({{site.baseurl}}/user_guide/data/braze_currents/) [エクスポートAPIエンドポイントなどの]({{site.baseurl}}/api/endpoints/export)ツールを使用することができる。
-
-## クエリービルダーの使用量の監視
-
-Braze の各ワークスペースには、1 か月あたり 5 の Snowflake クレジットがあります。Snowflake クレジットのごく一部が、クエリを実行したりテーブルをプレビューしたりするたびに使用されます。
-
-{% alert note %}
-Snowflake クレジットは機能間で共有されません。例えば、SQL セグメントエクステンションとクエリビルダーのクレジットは互いに独立しています。
-{% endalert %}
-
-クレジット使用量は SQL クエリの実行時間と関係しています。実行時間が長いほど、クエリで消費される Snowflake クレジットの量が多くなります。実行時間は、時間の経過に伴うクエリの複雑さとサイズによって異なります。実行するクエリが複雑で頻繁になるほど、リソースの割り当てが大きくなり、実行時間が短縮されます。
-
-Braze の SQL エディターでレポートの作成、編集、保存を行う場合、クレジットは使用されません。クレジットは、毎月 1 日午前 12 時 (UTC) に 5 にリセットされます。[クエリビルダー] ページの上部で、月次クレジット使用量を監視できます。
-
-![今月のクレジット使用量を表示するクエリビルダー。][1]{: style="max-width:60%;"}
-
-クレジット上限に達すると、クエリの実行はできませんが、SQL レポートの作成、編集、および保存はできます。クエリビルダーのクレジットをさらに購入する場合は、アカウントマネージャーにお問い合わせください。
-
-[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
-[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
-[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
-[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
-[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
-[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
-[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}

@@ -10,13 +10,15 @@ page_order: 2
 
 > ドラッグ＆ドロップエディターを使用すると、ユーザー設定センターの作成およびカスタマイズを行って、特定タイプの通信を受信するユーザーの管理に役立てることができます。ワークスペースあたりのユーザー設定センターは最大 50 です。
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ## ステップ 1:メールユーザー設定センターの作成
 
 **Audience** > **Subscriptions** > **E メールユーザー設定センター** に移動して、ユーザー設定センターを作成します。
 
 ここには、カスタムユーザー設定センターが一覧表示されます。**Create New**を選択して新しいユーザー設定センターを作成するか、既存の名前を選択して変更します。
 
-![名前、説明、タイプ、ステータス、最終編集日、および作成者が含まれるカスタムユーザー設定センターのリスト。][1]
+![名前、説明、タイプ、ステータス、最終編集日、ユーザーが作成したカスタム設定センターのリスト。]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
 ## ステップ 2:メールユーザー設定センターの命名
 
@@ -24,7 +26,7 @@ page_order: 2
 
 このリキッドタグは、任意の送信メール キャンペーンs またはキャンバスステップs に含めることができ、ユーザーをユーザー設定センターに送信します。
 
-![ユーザー設定センターの Liquid の例。][2]
+![ユーザー設定センターのLiquidの例。]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
 ## ステップ 3:ユーザー設定センターへの購読グループの追加
 
@@ -41,7 +43,7 @@ page_order: 2
 - [**すべてを購読**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループに登録されます。
 - [**すべて購読解除**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループから削除されます。
 
-![ユーザー設定センターの例で、すべてのメッセージ、マーケティング、ニュースレター、ウィークリーメールの購読、またはすべての配信停止のオプションがある。][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}) 全てのメッセージ、マーケター、ニュースレター、ウィークリーメールの購読、 または全ての配信停止を選択できるユーザー設定センターの例。{: style="max-width:45%;"}
 
 テンプレートの下部にある [**すべて購読解除**] ボタンは削除できず、ユーザーが受信しているすべてのメールメッセージを[グローバルに購読解除]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)します。
 
@@ -51,7 +53,7 @@ page_order: 2
 
 [**共通のスタイル**] タブから、ユーザー設定センター内の関連するすべてのブロックに適用する特定のスタイルを設定できます。この項で設定したスタイルは、指定したブロックで上書きする場合を除き、メッセージ内のあらゆる場所で使用されます。より簡単にデザインするために、ページレベルのスタイルを設定してから、ブロックレベルでスタイルをカスタマイズすることをお勧めします。
 
-![テキスト、ボタン、リンクの一般的なスタイル設定の例。][5]{: style="max-width:45%;"}
+![テキスト、ボタン、リンクの一般的なスタイル設定の例。]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
 
 {% alert tip %}
 [共通のスタイル] に戻るには、個々のブロックプロパティにある [X] ボタンを選択します。次に、メッセージコンテナー、メッセージの [X] ボタン、またはエディターの背景を選択します。
@@ -92,7 +94,7 @@ page_order: 2
 
 確認ページをカスタマイズするのを忘れないでください!ドラッグアンドドロップエディタウィンドウの上部にある**Confirmation Page**を選択すると、このページを編集できます。このページは、ユーザー設定センターを使用してユーザーが自分の設定を更新すると表示されます。上記と同じスタイル設定機能は、このページにもアプリします。
 
-![ユーザーの好みが更新されたことを伝える確認ページの例。][9]{: style="max-width:65%;"}
+![ユーザーの好みが更新されたことを伝える確認ページの例。]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
 ## ステップ 6:ユーザー設定センターのプレビューと起動
 
@@ -108,7 +110,7 @@ page_order: 2
 
 ユーザー設定センターへのリンクをメールs に配置するには、**Copy Liquid** アイコンを選択して、目的のユーザー設定センターのLiquid タグをコピーします。
 
-![ユーザー設定センターの行にある [Liquid をコピー] オプション。][10]{: style="max-width:75%;"}
+![ユーザー設定センターの行にある [Liquid をコピー] オプション。]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
 [ 配信停止 URL]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link) の挿入方法と同様に、リキッドタグをメールの任意の位置に追加します。
 
@@ -116,16 +118,5 @@ page_order: 2
 
 ユーザーがユーザー設定センターで**Save**を選択したときにエラーが発生すると、次のデフォルト エラーが表示されます。これは、エディタでカスタマイズまたはスタイル設定できません。ただし、これらのページでは、エラーメッセージのローカライゼーションが引き続きサポートされています。 
 
-![エラーメッセージ「ユーザー設定の保存中に問題が発生しました。もう一度やり直してください。][11]{: style="max-width:55%;"}
+![エラーメッセージ「ユーザー設定の保存中に問題が発生しました。もう一度やり直してください。」]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 
-[1]: {% image_buster /assets/img/preference_center/preference_center1.png %}
-[2]: {% image_buster /assets/img/preference_center/preference_center2.png %}
-[3]: {% image_buster /assets/img/preference_center/preference_center3.png %}
-[4]: {% image_buster /assets/img/preference_center/preference_center4.png %}
-[5]: {% image_buster /assets/img/preference_center/preference_center5.png %}
-[6]: {% image_buster /assets/img/preference_center/preference_center6.png %}
-[7]: {% image_buster /assets/img/preference_center/preference_center7.png %}
-[8]: {% image_buster /assets/img/preference_center/preference_center8.png %}
-[9]: {% image_buster /assets/img/preference_center/preference_center9.png %}
-[10]: {% image_buster /assets/img/preference_center/preference_center10.png %}
-[11]: {% image_buster /assets/img/preference_center/preference_center11.png %} 

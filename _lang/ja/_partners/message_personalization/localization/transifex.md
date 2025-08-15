@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Transifex は、あらゆる言語で、ユーザー群にわたる強力なローカライゼーションを支援しています。
 
-_この統合はTransifexによって維持されている。_
+_この統合は Transifex によって管理されます。_
 
 ## 統合について
 
@@ -76,4 +76,3 @@ curl --request GET \
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[31]: https://docs.transifex.com/api/translation-strings

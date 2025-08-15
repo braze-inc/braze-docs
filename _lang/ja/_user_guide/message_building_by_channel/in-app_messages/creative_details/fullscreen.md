@@ -58,7 +58,7 @@ tool:
 
 Brazeプラットフォームでフルスクリーンのアプリ内メッセージをプレビューする際、デバイス間で表示される際にトリミングから保護されるメッセージの領域に対して、イメージセーフゾーンを有効にすることができる。プレビューペインでイメージセーフゾーンをテストするだけでなく、いつも通り[メッセージをテスト]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)することをお勧めする。
 
-![「画像セーフゾーンを表示」を有効にした Braze で、アプリ内メッセージをプレビュー。画像のセーフゾーンは、画像のどの部分が切り抜きから保護されるかを視覚化する画像上のオーバーレイである。][3c]
+![「画像セーフゾーンを表示」を有効にした Braze で、アプリ内メッセージをプレビュー。画像のセーフゾーンは、画像のどの部分が切り抜きから保護されるかを視覚化する画像上のオーバーレイである。]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## 大型スクリーン
 
@@ -77,5 +77,3 @@ Brazeプラットフォームでフルスクリーンのアプリ内メッセー
 {% endtab %}
 {% endtabs %}
 
-[3b] ： {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c] ： {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

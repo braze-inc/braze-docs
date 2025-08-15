@@ -16,9 +16,9 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ### ステップ1:テンプレートを選ぶ
 
-ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートの**確認ページ**のメールサインアップを選択し、**メッセージの作成**を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
+ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートとして [**確認ページ付きメールサインアップ**] を選択し、その後 [**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![確認ページが付いたメールサインアップフォームのテンプレートを含むアプリ内メッセージエディタ。][img1]
+![確認ページがあるメールサインアップフォームのテンプレートを含むアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %})
 
 ### ステップ2: メッセージスタイルを設定する
 
@@ -30,7 +30,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。][img2]
+![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %})
 
 #### メール検証
 
@@ -42,7 +42,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ### ステップ 5: メッセージにスタイルを設定する
 
-ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、メールサインアップフォームと確認ページのルックアンドフィールをカスタマイズします。
+ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、メールサインアップフォームと確認ページのルックアンドフィールをカスタマイズします。
 
 ## 結果の分析
 
@@ -52,7 +52,4 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

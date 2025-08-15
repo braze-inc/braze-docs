@@ -15,7 +15,6 @@ channel:
 
 > Push Max について、およびこの機能を使用して、[中国のOEM デバイス]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/) へのAndroid プッシュ通知の配信性を向上させる方法について説明します。
 
-
 ## 最大限にプッシュ通知
 
 [最大限にプッシュ通知] は、失敗したプッシュ通知をトラッキングし、ユーザーがプッシュ通知を受信する可能性が高いときにプッシュ通知を再送信することで、Android プッシュ通知を強化します。
@@ -26,7 +25,7 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 
 - Android のプッシュ通知にのみ使用できます
 - アクション ベースまたはAPI トリガーメッセージではサポートされません
-- [ユーザーの最後に使用したデバイス]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options)にのみ送信するオプションが選択されている場合はサポートされません
+- [ユーザーの最後に使用したデバイス]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options)にのみ送信するオプションが選択されている場合はサポートされません
 
 ## 前提条件
 
@@ -75,7 +74,7 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 
 デフォルトで、[有効時間] は最長の 28 日に設定されています。すべての新しいAndroidプッシュメッセージのデフォルト TTL を**設定**> **ワークスペース設定**> **存続期間へのプッシュ時間(TTL)**から減らすことができます。または、Android プッシュ通知を作成するときに**設定**タブでメッセージごとの日数を設定することができます。
 
-![28 日に設定されている [有効時間] フィールド。]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+![28 日に設定されている [有効時間] フィールド。]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## 知っておくべきこと
 
