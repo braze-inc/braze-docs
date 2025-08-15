@@ -1,7 +1,7 @@
 ---
 nav_title: Configuración de ID de usuario
 article_title: Configuración de ID de usuario a través del SDK de Braze
-page_order: 1.2
+page_order: 1.1
 description: "Aprende a configurar ID de usuario a través del SDK de Braze."
 
 ---
@@ -102,7 +102,7 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### Cómo funcionan
 
-% multi_lang_include anonymous_users/about_user_aliases.md %}
+{% multi_lang_include anonymous_users/about_user_aliases.md %}
 
 ### Configuración de un alias de usuario
 
@@ -141,13 +141,13 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Web %}
+{% tab web %}
 ```javascript
 braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 ```
 {% endtab %}
 
-{% tab API REST %}
+{% tab rest api %}
 ```json
 {
   "alias_name" : (required, string),
@@ -169,7 +169,7 @@ Aunque es esencial que nombres correctamente tus ID de usuario desde el principi
 | ------------ | ----------- |
 | 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
 | 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | NombreEmpresa-1-2-19 |
+| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
 | 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
 {: .reset-td-br-1 .reset-td-br-2}
 

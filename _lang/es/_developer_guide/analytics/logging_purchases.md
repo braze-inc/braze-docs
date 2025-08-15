@@ -277,7 +277,7 @@ UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quanti
 
 ### Añadir cantidad
 
-Por predeterminado, `quantity` está configurado como `1`. Sin embargo, puedes añadir una cantidad a tus compras si los clientes realizan la misma compra varias veces en un mismo proceso de pago. Para añadir una cantidad, pasa un valor `Int` a `quantity` que esté dentro del rango de `[0, 100]`.
+Por predeterminado, `quantity` está configurado como `1`. Sin embargo, puedes añadir una cantidad a tus compras si los clientes realizan la misma compra varias veces en un mismo proceso de pago. Para añadir una cantidad, pasa un valor `Int` a `quantity`.
 
 ### Utilizar la API REST
 

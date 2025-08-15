@@ -120,7 +120,7 @@ braze.initialize("API-KEY", {
 Para saber más sobre las propiedades del dispositivo recopiladas automáticamente, consulta [Recopilación de datos del SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
 {% endalert %}
 
-## Almacenar cookies (sólo Web) {#cookies}
+## Almacenamiento de cookies (sólo Web) {#cookies}
 
 Tras [inicializar el SDK de Web Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), éste creará y almacenará cookies con una caducidad de 400 días que se renueva automáticamente en las nuevas sesiones.
 

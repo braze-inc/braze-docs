@@ -5,7 +5,7 @@ description: "Aprende a integrar el SDK de Braze."
 page_order: 2.0
 ---
 
-# Integración del SDK de Braze
+# ![Logo Braze]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integración del SDK Braze
 
 > Aprende a integrar el SDK de Braze en tu aplicación móvil. Cada SDK está alojado en su propio repositorio público de GitHub, que incluye aplicaciones de muestra totalmente compilables que puedes utilizar para probar las características de Braze o implementarlas junto con tus propias aplicaciones. Para saber más, consulta [Referencias, Repositorios y Ejemplos de aplicaciones]({{site.baseurl}}/developer_guide/references/). Para más información general sobre el SDK, consulta [Introducción: Visión general de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
@@ -53,7 +53,6 @@ page_order: 2.0
 {% sdktab xamarin %}
 {% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
-
 {% endsdktabs %}
 
 {% alert note %}
