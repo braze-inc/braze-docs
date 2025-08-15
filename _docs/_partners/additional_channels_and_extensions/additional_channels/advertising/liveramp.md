@@ -1,5 +1,5 @@
 ---
-nav_title: Liveramp
+nav_title: LiveRamp
 article_title: LiveRamp
 description: "Learn how to connect LiveRamp, Snowflake, and Braze, so you can create highly personalized and relevant marketing campaigns."
 alias: /partners/liveramp/

@@ -1,5 +1,5 @@
 ---
-nav_title: Initial SDK setup with eclipse
+nav_title: Initial SDK setup with Eclipse
 page_order: 1
 
 page_type: update

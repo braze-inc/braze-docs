@@ -1,5 +1,5 @@
 ---
-nav_title: January --- may
+nav_title: January — May
 page_order: 8
 noindex: true
 page_type: update

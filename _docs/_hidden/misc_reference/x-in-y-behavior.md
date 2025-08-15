@@ -1,5 +1,5 @@
 ---
-nav_title: X in y filter behavior
+nav_title: X in Y filter behavior
 permalink: /x-in-y-behavior/
 ---
 
