@@ -1,5 +1,5 @@
 ---
-nav_title: AI Recommendations
+nav_title: Ai recommendations
 article_title: Creating AI Item Recommendations
 description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 page_order: 1

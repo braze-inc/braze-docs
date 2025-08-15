@@ -1,5 +1,5 @@
 ---
-nav_title: optilyz
+nav_title: Optilyz
 article_title: optilyz
 description: "This reference article outlines the partnership between Braze and optilyz, which enables you to run more customer-centric, sustainable, and profitable direct mail campaigns."
 alias: /partners/optilyz/

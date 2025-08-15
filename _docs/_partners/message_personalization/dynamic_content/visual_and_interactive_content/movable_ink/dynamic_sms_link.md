@@ -1,5 +1,5 @@
 ---
-nav_title: Dynamic SMS Link Preview
+nav_title: Dynamic SMS link preview
 article_title: Dynamic SMS Link Preview
 description: "This reference article outlines how to turn on and use Movable Ink's SMS link preview feature."
 page_type: partner

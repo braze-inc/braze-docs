@@ -1,5 +1,5 @@
 ---
-nav_title: Amplitude for Currents
+nav_title: Amplitude for currents
 article_title: Amplitude for Currents
 page_order: 0
 description: "This reference article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."

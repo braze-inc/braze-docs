@@ -1,5 +1,5 @@
 ---
-nav_title: Cohort Import Integration
+nav_title: Cohort import integration
 alias: /cohort_import/
 hidden: true
 ---

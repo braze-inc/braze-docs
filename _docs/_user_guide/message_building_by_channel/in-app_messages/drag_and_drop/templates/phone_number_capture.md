@@ -1,5 +1,5 @@
 ---
-nav_title: SMS, RCS, and WhatsApp Sign-up Form
+nav_title: SMS, rcs, and WhatsApp sign-up form
 article_title: SMS, RCS, and WhatsApp Sign-up Form
 alias: "/phone_number_capture/"
 page_order: 1

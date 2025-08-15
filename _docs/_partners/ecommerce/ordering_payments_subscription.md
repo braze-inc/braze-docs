@@ -1,4 +1,4 @@
 ---
-nav_title: Ordering, Payments, and Subscription Management
+nav_title: Ordering, payments, and subscription management
 config_only: true
 ---

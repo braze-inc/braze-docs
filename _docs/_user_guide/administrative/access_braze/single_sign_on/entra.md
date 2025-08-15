@@ -1,5 +1,5 @@
 ---
-nav_title: Microsoft Entra SSO
+nav_title: Microsoft entra SSO
 article_title: Microsoft Entra SSO
 page_order: 3
 page_type: tutorial

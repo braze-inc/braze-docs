@@ -1,5 +1,5 @@
 ---
-nav_title: MyPostcard
+nav_title: Mypostcard
 article_title: MyPostcard
 page_order: 1
 description: "This reference article outlines the partnership between Braze and MyPostcard, which allows you to use direct mail as an additional channel for your CRM workflow."

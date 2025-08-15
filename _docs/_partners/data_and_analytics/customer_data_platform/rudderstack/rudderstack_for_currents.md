@@ -1,5 +1,5 @@
 ---
-nav_title: RudderStack for Currents
+nav_title: Rudderstack for currents
 article_title: RudderStack for Currents
 description: "This article outlines the partnership between Braze Currents and RudderStack, an open-source customer data infrastructure that offers a seamless Braze integration for your Android, iOS, and web applications."
 page_type: partner

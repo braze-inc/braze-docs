@@ -1,5 +1,5 @@
 ---
-nav_title: Inbox Vision
+nav_title: Inbox vision
 article_title: Inbox Vision
 page_order: 9
 description: "This page covers how to set up Inbox Vision, a feature that allows marketers to view their emails from the perspective of various email clients and mobile devices."

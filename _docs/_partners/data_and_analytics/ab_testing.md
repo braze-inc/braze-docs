@@ -1,4 +1,4 @@
 ---
-nav_title: A/B Testing
+nav_title: Ab testing
 config_only: true
 ---

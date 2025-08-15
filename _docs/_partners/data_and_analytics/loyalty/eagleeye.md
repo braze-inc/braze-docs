@@ -1,5 +1,5 @@
 ---
-nav_title: Eagle Eye
+nav_title: Eagle eye
 article_title: Eagle Eye
 description: Learn how to integrate Eagle Eye with Braze.
 alias: /partners/eagle_eye/

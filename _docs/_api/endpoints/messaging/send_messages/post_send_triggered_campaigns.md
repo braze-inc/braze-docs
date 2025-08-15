@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Campaigns Using API-Triggered Delivery"
+nav_title: "POST: Send campaigns using api-triggered delivery"
 article_title: "POST: Send Campaigns Using API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4

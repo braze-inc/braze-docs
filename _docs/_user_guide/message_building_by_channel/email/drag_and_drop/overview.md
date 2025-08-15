@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an Email
+nav_title: Creating an email
 article_title: Creating an Email with Drag-and-Drop
 alias: "/dnd/overview/"
 channel: email

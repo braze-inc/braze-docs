@@ -1,5 +1,5 @@
 ---
-nav_title: Amazon Personalize
+nav_title: Amazon personalize
 noindex: true
 layout: dev_guide
 alias: /partners/amazon_personalize/

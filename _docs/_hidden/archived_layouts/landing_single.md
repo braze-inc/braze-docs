@@ -1,5 +1,5 @@
 ---
-nav_title: SS LP with FA Icons
+nav_title: Ss lp with fa icons
 layout: dev_guide
 
 page_order: 1.2

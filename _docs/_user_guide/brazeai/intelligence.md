@@ -1,5 +1,5 @@
 ---
-nav_title: Intelligence Suite
+nav_title: Intelligence suite
 article_title: About the Braze Intelligence Suite
 page_order: 1
 search_rank: 12

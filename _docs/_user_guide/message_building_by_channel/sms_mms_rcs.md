@@ -1,5 +1,5 @@
 ---
-nav_title: SMS, MMS, and RCS
+nav_title: SMS, MMS, and rcs
 article_title: SMS, MMS, and RCS
 page_order: 4
 layout: dev_guide

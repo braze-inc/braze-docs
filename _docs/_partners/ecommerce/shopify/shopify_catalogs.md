@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify Product Sync
+nav_title: Shopify product sync
 article_title: Shopify Product Sync
 alias: /shopify_catalogs/
 page_order: 4

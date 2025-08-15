@@ -1,5 +1,5 @@
 ---
-nav_title: Zeotap for Currents
+nav_title: Zeotap for currents
 article_title: Zeotap for Currents
 description: "This reference article outlines the partnership between Braze Currents and Zeotap, a next-generation customer data platform that helps you discover and understand your mobile audience by providing identity resolution, insights, and data enrichment."
 page_type: partner

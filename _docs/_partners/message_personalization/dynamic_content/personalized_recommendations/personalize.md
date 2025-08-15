@@ -1,5 +1,5 @@
 ---
-nav_title: Personalize.AI
+nav_title: Personalizeai
 article_title: Personalize.AI
 description: "This reference article outlines the partnership between Braze and Personalize.AI, an AI-based SaaS business platform that drives revenue growth from personalized recommendations."
 alias: /partners/personalize_ai/

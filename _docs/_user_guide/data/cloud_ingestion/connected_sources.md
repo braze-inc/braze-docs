@@ -1,5 +1,5 @@
 ---
-nav_title: Connected Sources
+nav_title: Connected sources
 article_title: Connected Sources
 description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2

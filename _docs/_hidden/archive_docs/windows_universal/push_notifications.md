@@ -1,5 +1,5 @@
 ---
-nav_title: Push Notifications
+nav_title: Push notifications
 article_title: Push Notifications for Windows Universal
 platform: Windows Universal
 page_order: 1

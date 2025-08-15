@@ -1,5 +1,5 @@
 ---
-nav_title: Event Forwarding Extension
+nav_title: Event forwarding extension
 article_title: Adobe
 description: "This reference article covers the Braze event forward extension that allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to Braze in the form of server-side events."
 page_type: partner

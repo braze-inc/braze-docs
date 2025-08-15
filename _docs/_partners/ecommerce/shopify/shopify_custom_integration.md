@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify Custom Integration Setup
+nav_title: Shopify custom integration setup
 article_title: "Shopify Custom Integration Setup"
 description: "This reference article covers how to connect with a Shopify Hydrogen store or any headless Shopify store by using a custom storefront."
 page_type: partner

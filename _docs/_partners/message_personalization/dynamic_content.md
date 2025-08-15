@@ -1,4 +1,4 @@
 ---
-nav_title: Dynamic Content
+nav_title: Dynamic content
 config_only: true
 ---

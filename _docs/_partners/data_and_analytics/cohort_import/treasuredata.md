@@ -1,5 +1,5 @@
 ---
-nav_title: Treasure Data
+nav_title: Treasure data
 article_title: Treasure Data Cohort Import
 description: "This reference article outlines the cohort import functionality of Treasure Data."
 alias: /partners/treasure_data_cohort_import/

@@ -1,5 +1,5 @@
 ---
-nav_title: Testing Banners
+nav_title: Testing banners
 article_title: Testing Banners
 page_order: 2
 description: "Learn how to test your Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes render correctly."

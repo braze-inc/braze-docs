@@ -1,5 +1,5 @@
 ---
-nav_title: "Sample Queries"
+nav_title: "Sample queries"
 article_title: Snowflake Sample Queries
 page_order: 1
 description: "This partner page offers some sample queries of possible use cases to reference when setting up your Snowflake queries."

@@ -1,5 +1,5 @@
 ---
-nav_title: ThoughtSpot
+nav_title: Thoughtspot
 article_title: ThoughtSpot
 description: "This reference article outlines the partnership between Braze and ThoughtSpot, a next-generation analytics platform that enables users to limitlessly search across their Braze interaction data and uncover actionable insights."
 alias: /partners/thoughtspot/

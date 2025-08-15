@@ -1,5 +1,5 @@
 ---
-nav_title: Email Analytics Glossary
+nav_title: Email analytics glossary
 article_title: Email Analytics Glossary
 layout: email_report_metrics
 page_order: 0

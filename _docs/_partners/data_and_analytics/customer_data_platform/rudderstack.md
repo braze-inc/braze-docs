@@ -1,5 +1,5 @@
 ---
-nav_title: RudderStack
+nav_title: Rudderstack
 noindex: true
 alias: /partners/rudderstack/
 layout: dev_guide

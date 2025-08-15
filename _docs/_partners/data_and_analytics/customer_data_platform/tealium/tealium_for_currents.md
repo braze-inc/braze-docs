@@ -1,5 +1,5 @@
 ---
-nav_title: Tealium for Currents
+nav_title: Tealium for currents
 article_title: Tealium for Currents
 page_order: 3
 alias: /partners/tealium_for_currents/

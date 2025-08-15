@@ -1,5 +1,5 @@
 ---
-nav_title: Treasure Data for Currents
+nav_title: Treasure data for currents
 article_title: Treasure Data for Currents
 description: "This reference article outlines the partnership between Braze Currents and Treasure Data, an enterprise customer data platform that allows you to write job results directly to Braze."
 page_type: partner

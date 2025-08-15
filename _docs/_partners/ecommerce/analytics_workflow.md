@@ -1,4 +1,4 @@
 ---
-nav_title: eCommerce Analytics & Workflow
+nav_title: Ecommerce analytics & workflow
 config_only: true
 ---

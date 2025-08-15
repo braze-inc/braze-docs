@@ -1,5 +1,5 @@
 ---
-nav_title: Amplitude and Connected Content
+nav_title: Amplitude and connected content
 article_title: Amplitude and Connected Content
 page_order: 0
 alias: /partners/amplitude_api_endpoints/

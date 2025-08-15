@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Schedule API-Triggered Canvases"
+nav_title: "POST: Schedule api-triggered Canvases"
 article_title: "POST: Schedule API-Triggered Canvases"
 search_tag: Endpoint
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Campaigns List"
+nav_title: "GET: Export campaigns list"
 article_title: "GET: Export Campaigns List"
 search_tag: Endpoint
 page_order: 4

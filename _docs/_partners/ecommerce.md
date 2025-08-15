@@ -1,5 +1,5 @@
 ---
-nav_title: eCommerce
+nav_title: Ecommerce
 article_title: eCommerce Partners
 page_order: 10
 

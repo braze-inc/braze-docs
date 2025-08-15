@@ -1,5 +1,5 @@
 ---
-nav_title: SalesWings
+nav_title: Saleswings
 article_title: SalesWings
 description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting."
 alias: /partners/saleswings/

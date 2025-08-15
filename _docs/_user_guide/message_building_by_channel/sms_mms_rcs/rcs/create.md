@@ -1,5 +1,5 @@
 ---
-nav_title: "Creating an RCS Message"
+nav_title: "Creating an rcs message"
 article_title: Creating an RCS Message
 page_order: 2
 alias: /create_rcs_message/

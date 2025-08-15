@@ -1,5 +1,5 @@
 ---
-nav_title: IAM Studio
+nav_title: Iam studio
 article_title: IAM Studio
 description: "This reference article outlines the partnership between Braze and IAM Studio, a message personalization platform which allows you to create personalized, rich in-app experiences and deliver them through Braze."
 alias: /partners/iam_studio/

@@ -1,5 +1,5 @@
 ---
-nav_title: Best Practices
+nav_title: Best practices
 hidden: true
 ---
 

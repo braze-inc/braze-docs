@@ -1,5 +1,5 @@
 ---
-nav_title: About Content Cards
+nav_title: About content cards
 article_title: About Content Cards
 page_order: 0
 description: "This reference article provides an overview of the Braze Content Card channel and common use cases."

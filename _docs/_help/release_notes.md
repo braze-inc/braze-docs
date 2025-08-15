@@ -1,5 +1,5 @@
 ---
-nav_title: Release Notes
+nav_title: Release notes
 article_title: Release Notes
 page_order: 4
 layout: dev_guide

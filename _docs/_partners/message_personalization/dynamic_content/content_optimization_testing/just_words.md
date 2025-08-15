@@ -1,5 +1,5 @@
 ---
-nav_title: Just Words
+nav_title: Just words
 article_title: Just Words
 description: "This reference article outlines the partnership between Braze and Just Words, an AI-based SaaS business platform that creates personalized versions of existing campaigns and optimizes subject lines, creative content, and HTML email layouts over time."
 alias: /partners/just_words/

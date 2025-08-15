@@ -1,5 +1,5 @@
 ---
-nav_title: Configuring Reporting
+nav_title: Configuring reporting
 article_title: Configuring Reporting
 page_order: 1.1
 page_type: reference

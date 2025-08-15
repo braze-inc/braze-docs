@@ -1,5 +1,5 @@
 ---
-nav_title: eCommerce Use Cases
+nav_title: Ecommerce use cases
 article_title: eCommerce Use Cases
 alias: /ecommerce_use_cases/
 page_order: 4

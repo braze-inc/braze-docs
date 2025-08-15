@@ -1,5 +1,5 @@
 ---
-nav_title: Predictive Events
+nav_title: Predictive events
 article_title: Predictive Events
 description: "This article covers Predictive Events (previously Predictive Purchases), a tool that gives marketers the ability to identify and message users based on their likelihood to perform an event."
 page_order: 2.1

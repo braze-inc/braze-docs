@@ -1,5 +1,5 @@
 ---
-nav_title: "Subscription Groups"
+nav_title: "Subscription groups"
 article_title: SMS and RCS Subscription Groups
 page_order: 1
 description: "This reference article covers subscription groups, subscription states, and the subscription group setup process for SMS, MMS, and RCS channels."

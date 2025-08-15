@@ -1,4 +1,4 @@
 ---
-nav_title: Business Intelligence
+nav_title: Business intelligence
 config_only: true
 ---

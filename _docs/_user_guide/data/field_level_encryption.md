@@ -1,5 +1,5 @@
 ---
-nav_title: Identifier Field-Level Encryption
+nav_title: Identifier field-level encryption
 article_title: Identifier Field-Level Encryption
 page_order: 101
 alias: "/field_level_encryption/"

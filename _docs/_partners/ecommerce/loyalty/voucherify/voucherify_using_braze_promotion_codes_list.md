@@ -1,5 +1,5 @@
 ---
-nav_title: Voucherify and Promotion Codes List
+nav_title: Voucherify and promotion codes list
 article_title: Voucherify and Braze Promotion Codes List
 page_order: 4
 alias: /partners/voucherify/promotion/

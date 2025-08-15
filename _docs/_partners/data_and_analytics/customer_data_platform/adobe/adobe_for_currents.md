@@ -1,5 +1,5 @@
 ---
-nav_title: Adobe for Currents
+nav_title: Adobe for currents
 article_title: Adobe for Currents
 alias: /partners/adobe_for_currents/
 description: "This reference article outlines the partnership between Braze Currents and Adobe, a customer data platform that allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time."

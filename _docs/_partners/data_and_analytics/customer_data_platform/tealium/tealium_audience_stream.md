@@ -1,5 +1,5 @@
 ---
-nav_title: Tealium AudienceStream
+nav_title: Tealium audiencestream
 article_title: Tealium AudienceStream
 page_order: 2
 alias: /partners/tealium_audience_stream/

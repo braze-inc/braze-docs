@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Currents Connector
+nav_title: Custom currents connector
 alias: /currents_connector/
 hidden: true
 ---

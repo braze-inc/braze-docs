@@ -1,5 +1,5 @@
 ---
-nav_title: Pre and Post-Launch Checklist
+nav_title: Pre and post-launch checklist
 article_title: Pre and Post-Launch Checklist
 page_order: 2
 description: "This article provides a guideline for things to check before and after you launch a Canvas."

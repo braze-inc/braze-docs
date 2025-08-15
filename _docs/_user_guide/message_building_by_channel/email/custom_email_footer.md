@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Email Footer
+nav_title: Custom email footer
 article_title: Custom Email Footer
 page_order: 6.5
 description: "This article describes how to set up a workspace-wide custom email footer."

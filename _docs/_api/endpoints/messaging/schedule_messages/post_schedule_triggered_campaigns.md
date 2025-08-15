@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Schedule API-Triggered Campaigns"
+nav_title: "POST: Schedule api-triggered campaigns"
 article_title: "POST: Schedule API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4

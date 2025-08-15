@@ -1,5 +1,5 @@
 ---
-nav_title: SmarterSends
+nav_title: Smartersends
 article_title: SmarterSends
 description: "This reference article outlines the partnership between Braze and SmarterSends, an easy-to-use interface designed for non-marketers to create, schedule, and deploy brand compliant emails campaigns."
 alias: /partners/smartersends/

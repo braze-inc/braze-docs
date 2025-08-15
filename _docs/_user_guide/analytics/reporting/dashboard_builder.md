@@ -1,5 +1,5 @@
 ---
-nav_title: Dashboard Builder
+nav_title: Dashboard builder
 article_title: Dashboard Builder
 alias: "/dashboard_builder/"
 description: "This reference article covers how to use Dashboard Builder to create dashboards and visualizations using reports created in Query Builder."

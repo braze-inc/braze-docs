@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify checkout&#46;liquid
+nav_title: Shopify checkout46liquid
 page_order: 7
 description: "This article explains the deprecation of Shopify checkout&#46;liquid, including the impact to your Shopify integration and guidance for developers."
 page_type: update

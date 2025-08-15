@@ -1,5 +1,5 @@
 ---
-nav_title: Dynamic Code Generation
+nav_title: Dynamic code generation
 article_title: Punchh Dynamic Code Generation
 page_order: 2
 description: "This reference article outlines how to use Punchh dynamic code generation in Braze."

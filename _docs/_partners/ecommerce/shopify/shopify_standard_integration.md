@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify Standard Integration Setup
+nav_title: Shopify standard integration setup
 article_title: "Shopify Standard Integration Setup"
 description: "This reference article outlines how to set up the standard Shopify integration."
 page_type: partner

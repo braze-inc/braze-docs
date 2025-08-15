@@ -1,5 +1,5 @@
 ---
-nav_title: WSC Sports
+nav_title: Wsc sports
 article_title: WSC Sports
 description: "This reference article outlines the partnership between Braze and WSC Sports, a sports video platform that allows you to include rich and robust sports media in your Braze push notifications."
 alias: /partners/wsc_sports/

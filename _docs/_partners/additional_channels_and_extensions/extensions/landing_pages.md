@@ -1,4 +1,4 @@
 ---
-nav_title: Landing Pages
+nav_title: Landing pages
 config_only: true
 ---

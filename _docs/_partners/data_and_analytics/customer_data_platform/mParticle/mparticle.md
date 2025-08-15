@@ -1,5 +1,5 @@
 ---
-nav_title: mParticle by Rokt
+nav_title: mParticle by rokt
 article_title: mParticle by Rokt
 alias: /partners/mparticle/
 description: "This reference article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."

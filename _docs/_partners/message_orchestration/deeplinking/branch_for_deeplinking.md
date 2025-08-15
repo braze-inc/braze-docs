@@ -1,5 +1,5 @@
 ---
-nav_title: Branch for Deep Linking
+nav_title: Branch for deep linking
 article_title: Branch for Deep Linking
 alias: /partners/branch_for_deeplinking/
 page_type: partner

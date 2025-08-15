@@ -1,5 +1,5 @@
 ---
-nav_title: Color Profiles and CSS Templates
+nav_title: Color profiles and css templates
 article_title: Color Profiles and CSS Templates for In-App Messages
 page_order: 4
 page_type: reference

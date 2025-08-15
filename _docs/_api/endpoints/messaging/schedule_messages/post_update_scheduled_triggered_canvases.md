@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update Scheduled API-Triggered Canvases"
+nav_title: "POST: Update scheduled api-triggered Canvases"
 article_title: "POST: Update Scheduled API-Triggered Canvases"
 search_tag: Endpoint
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: Media Library
+nav_title: Media library
 article_title: Media Library
 page_order: 0
 page_type: reference

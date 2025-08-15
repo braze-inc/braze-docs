@@ -1,5 +1,5 @@
 ---
-nav_title: Content Cards
+nav_title: Content cards
 article_title: Content Cards
 page_order: 1
 layout: dev_guide

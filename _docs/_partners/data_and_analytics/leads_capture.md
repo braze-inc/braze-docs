@@ -1,4 +1,4 @@
 ---
-nav_title: Leads Capture
+nav_title: Leads capture
 config_only: true
 ---

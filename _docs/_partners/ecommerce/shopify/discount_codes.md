@@ -1,5 +1,5 @@
 ---
-nav_title: Unique Discount Codes 
+nav_title: Unique discount codes
 article_title: Sending Unique Discount Codes
 alias: /shopify_discount_codes/
 page_order: 6

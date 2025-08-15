@@ -1,5 +1,5 @@
 ---
-nav_title: Connecting Multiple Stores
+nav_title: Connecting multiple stores
 article_title: Shopify Multiple Store Support
 alias: /shopify_connecting_multiple_stores/
 page_order: 5

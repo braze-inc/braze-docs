@@ -1,5 +1,5 @@
 ---
-nav_title: Message Activity Log
+nav_title: Message activity log
 article_title: Message Activity Log
 page_order: 5
 page_type: reference

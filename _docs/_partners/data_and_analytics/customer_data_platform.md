@@ -1,4 +1,4 @@
 ---
-nav_title: Customer Data Platform
+nav_title: Customer data platform
 config_only: true
 ---

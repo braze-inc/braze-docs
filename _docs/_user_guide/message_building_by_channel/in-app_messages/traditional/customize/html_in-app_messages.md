@@ -1,5 +1,5 @@
 ---
-nav_title: HTML In-App Messages
+nav_title: HTML In-App messages
 article_title: Custom HTML In-App Messages
 page_order: 0
 page_type: reference

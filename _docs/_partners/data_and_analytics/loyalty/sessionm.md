@@ -1,5 +1,5 @@
 --- 
-nav_title: SessionM
+nav_title: Sessionm
 article_title: SessionM
 description: "This reference article outlines the partnership between Braze and SessionM, a customer engagement and loyalty platform."
 alias: /partners/sessionm/

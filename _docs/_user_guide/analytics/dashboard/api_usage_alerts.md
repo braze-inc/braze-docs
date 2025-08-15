@@ -1,5 +1,5 @@
 ---
-nav_title: API Usage Alerts
+nav_title: API usage alerts
 article_title: API Usage Alerts
 description: "This article provides an overview of the API usage alerts, which allows you to proactively detect unexpected traffic."
 page_order: 3.6

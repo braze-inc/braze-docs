@@ -1,5 +1,5 @@
 ---
-nav_title: About Audience Sync
+nav_title: About audience sync
 article_title: About Audience Sync
 alias: /partners/about_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation, and more."

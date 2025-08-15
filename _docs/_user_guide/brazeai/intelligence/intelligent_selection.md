@@ -1,5 +1,5 @@
 ---
-nav_title: Intelligent Selection
+nav_title: Intelligent selection
 article_title: Intelligent Selection
 page_order: 1.0
 description: "This article covers Intelligent Selection, a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant."

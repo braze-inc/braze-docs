@@ -1,5 +1,5 @@
 ---
-nav_title: "A2P 10DLC"
+nav_title: "A2p 10dlc"
 article_title: A2P 10DLC
 page_order: 2.9
 description: "This article covers A2P 10DLC, why 10DLC registration is necessary for US long code customers, helpful costs and throughput information, and how to get started with registration."

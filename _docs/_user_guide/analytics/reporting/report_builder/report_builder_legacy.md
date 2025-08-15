@@ -1,5 +1,5 @@
 ---
-nav_title: Report Builder (Legacy)
+nav_title: Report builder (legacy)
 article_title: Report Builder (Legacy)
 alias: /report_builder_legacy/
 page_order: 0

@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify User Identity Management
+nav_title: Shopify user identity management
 article_title: "Shopify User Identity Management"
 description: "This reference article outlines the Shopify user identity management feature."
 page_type: partner

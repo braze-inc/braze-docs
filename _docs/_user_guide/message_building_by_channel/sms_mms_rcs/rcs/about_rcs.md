@@ -1,5 +1,5 @@
 ---
-nav_title: "About RCS"
+nav_title: "About rcs"
 article_title: About Rich Communication Services (RCS)
 alias: /about_rcs/
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an Event Prediction
+nav_title: Creating an event prediction
 article_title: Creating an Event Prediction
 page_order: 1.1
 description: "This article covers how to create an event prediction within the Braze dashboard."

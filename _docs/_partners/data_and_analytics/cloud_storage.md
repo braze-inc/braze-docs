@@ -1,4 +1,4 @@
 ---
-nav_title: Cloud Storage
+nav_title: Cloud storage
 config_only: true
 ---

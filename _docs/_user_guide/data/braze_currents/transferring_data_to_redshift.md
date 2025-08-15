@@ -1,5 +1,5 @@
 ---
-nav_title: Transferring Data to Redshift
+nav_title: Transferring data to redshift
 article_title: Transferring Data to Redshift
 page_order: 8
 page_type: tutorial

@@ -1,4 +1,4 @@
 ---
-nav_title: Personalized Recommendations
+nav_title: Personalized recommendations
 config_only: true
 ---

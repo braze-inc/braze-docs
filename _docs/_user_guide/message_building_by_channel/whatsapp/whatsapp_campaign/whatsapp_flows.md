@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp Flows
+nav_title: WhatsApp flows
 article_title: WhatsApp Flows
 page_order: 1
 description: "This reference article covers the steps involved in building out and creating a WhatsApp Flows message."

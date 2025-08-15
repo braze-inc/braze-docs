@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify Data in Braze
+nav_title: Shopify data in Braze
 article_title: "Using Shopify Data in Braze"
 description: "This reference article outlines how to use Shopify data in Braze for personalization and segmentation."
 page_type: partner

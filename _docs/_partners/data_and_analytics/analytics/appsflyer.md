@@ -1,5 +1,5 @@
 ---
-nav_title: AppsFlyer
+nav_title: Appsflyer
 article: AppsFlyer
 layout: redirect
 redirect_to: /docs/partners/appsflyer/

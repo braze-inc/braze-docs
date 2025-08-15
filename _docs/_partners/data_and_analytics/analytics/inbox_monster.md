@@ -1,5 +1,5 @@
 ---
-nav_title: Inbox Monster
+nav_title: Inbox monster
 article_title: Inbox Monster
 alias: /partners/inbox_monster/
 description: "This reference article outlines the partnership between Braze and Inbox Monster, an online email marketing tool that allows Braze customers to unlock powerful deliverability insights and creative analysis to supercharge inbox performance."

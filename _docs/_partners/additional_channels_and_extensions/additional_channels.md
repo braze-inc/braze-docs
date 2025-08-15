@@ -1,4 +1,4 @@
 ---
-nav_title: Additional Channels
+nav_title: Additional channels
 config_only: true
 ---

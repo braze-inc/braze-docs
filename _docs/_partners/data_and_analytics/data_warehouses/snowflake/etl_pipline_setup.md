@@ -1,5 +1,5 @@
 ---
-nav_title: "ETL Event Pipeline Setup"
+nav_title: "ETL event pipeline setup"
 article_title: Snowflake ETL Event Pipeline Setup
 page_order: 2
 description: "This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries."

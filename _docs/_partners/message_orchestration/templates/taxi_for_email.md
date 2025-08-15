@@ -1,5 +1,5 @@
 ---
-nav_title: Taxi for Email
+nav_title: Taxi for email
 article_title: Taxi for Email
 alias: /partners/taxi_for_email
 description: "This reference article outlines the partnership between Braze and Taxi for Email, an online email marketing tool that allows Braze customers to create intelligent email templates using their drag-and-drop interface and simple yet powerful syntax."

@@ -1,5 +1,5 @@
 ---
-nav_title: Getting Started
+nav_title: Getting started
 article_title: "Getting started with Shopify"
 description: "This reference article outlines how to implement the Braze Web SDK onto your Shopify website."
 page_type: partner

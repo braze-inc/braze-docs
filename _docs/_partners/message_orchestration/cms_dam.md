@@ -1,4 +1,4 @@
 ---
-nav_title: CMS & DAM
+nav_title: Cms & dam
 config_only: true
 ---

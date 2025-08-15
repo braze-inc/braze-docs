@@ -1,5 +1,5 @@
 ---
-nav_title: Export Custom Event Aggregates
+nav_title: Export custom event aggregates
 article_title: Export Custom Event Aggregates
 page_order: 6
 page_type: reference

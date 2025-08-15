@@ -1,5 +1,5 @@
 ---
-nav_title: Winning Path 
+nav_title: Winning path
 article_title: Winning Path in Experiment Paths 
 page_type: reference
 description: "This reference article covers Winning Path, a feature that lets you automate your A/B tests when turned on for an Experiment Path step."

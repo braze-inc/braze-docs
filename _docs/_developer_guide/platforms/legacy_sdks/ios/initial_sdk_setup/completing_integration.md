@@ -1,5 +1,5 @@
 ---
-nav_title: Completing the Integration
+nav_title: Completing the integration
 article_title: Completing the iOS SDK Integration
 platform: iOS
 description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."

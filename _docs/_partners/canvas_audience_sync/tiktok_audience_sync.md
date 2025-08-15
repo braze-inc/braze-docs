@@ -1,5 +1,5 @@
 ---
-nav_title: TikTok
+nav_title: Tiktok
 article_title: Canvas Audience Sync to TikTok
 alias: /tiktok_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to TikTok to deliver advertisements based upon behavioral triggers, segmentation, and more."

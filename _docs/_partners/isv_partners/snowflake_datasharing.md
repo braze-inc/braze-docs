@@ -1,5 +1,5 @@
 ---
-nav_title: Snowflake Data Sharing
+nav_title: Snowflake data sharing
 hidden: true
 ---
 

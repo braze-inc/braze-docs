@@ -1,4 +1,4 @@
 ---
-nav_title: Contextual Location
+nav_title: Contextual location
 config_only: true
 ---

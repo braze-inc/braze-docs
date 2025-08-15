@@ -1,5 +1,5 @@
 ---
-nav_title: Distributions with Custom Attributes
+nav_title: Distributions with custom attributes
 article_title: Distributions with Custom Attributes with Voucherify
 page_order: 3
 alias: /partners/voucherify/custom_attributes/
