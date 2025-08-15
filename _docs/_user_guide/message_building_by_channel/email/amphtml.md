@@ -1,5 +1,5 @@
 ---
-nav_title: Amp for email
+nav_title: AMP for email
 article_title: AMP for Email
 alias: /amphtml/
 page_order: 11

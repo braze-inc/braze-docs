@@ -1,5 +1,5 @@
 ---
-nav_title: Channel performance dashboard
+nav_title: Channel Performance Dashboard
 article_title: Channel Performance Dashboard
 page_order: 2
 page_type: reference

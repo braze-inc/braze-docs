@@ -1,5 +1,5 @@
 ---
-nav_title: Apple mail
+nav_title: Apple Mail
 article_title: Apple Mail
 page_order: 7
 layout: dev_guide

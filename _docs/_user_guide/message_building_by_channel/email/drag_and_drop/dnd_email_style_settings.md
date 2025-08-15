@@ -1,5 +1,5 @@
 ---
-nav_title: Email global style settings
+nav_title: Email Global Style Settings
 article_title: Email Global Style Settings
 alias: "/dnd/global_style_settings/"
 channel: email

@@ -1,5 +1,5 @@
 ---
-nav_title: Cloud data ingestion
+nav_title: Cloud Data Ingestion
 article_title: Braze Cloud Data Ingestion
 alias: /cloud_ingestion/
 description: "This reference article covers Braze Cloud Data Ingestion sources and data setup recommendations."

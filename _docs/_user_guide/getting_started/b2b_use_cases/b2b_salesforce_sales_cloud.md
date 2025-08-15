@@ -1,5 +1,5 @@
 ---
-nav_title: Salesforce sales cloud
+nav_title: Salesforce Sales Cloud
 article_title: Managing leads with Salesforce Sales Cloud
 page_order: 3
 page_type: reference

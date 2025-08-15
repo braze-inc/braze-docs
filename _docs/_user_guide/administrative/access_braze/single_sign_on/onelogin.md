@@ -1,5 +1,5 @@
 ---
-nav_title: Onelogin
+nav_title: OneLogin
 article_title: OneLogin
 page_order: 5
 page_type: tutorial

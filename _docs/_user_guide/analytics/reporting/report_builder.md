@@ -1,5 +1,5 @@
 ---
-nav_title: Report builder
+nav_title: Report Builder
 article_title: Report Builder
 alias: /report_builder/
 page_type: reference

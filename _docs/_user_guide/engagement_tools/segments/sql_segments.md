@@ -1,5 +1,5 @@
 ---
-nav_title: "SQL segment extensions"
+nav_title: "SQL Segment Extensions"
 article_title: SQL Segment Extensions
 page_order: 3.2
 page_type: reference

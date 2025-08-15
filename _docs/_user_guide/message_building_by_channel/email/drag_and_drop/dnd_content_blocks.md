@@ -1,5 +1,5 @@
 ---
-nav_title: Content blocks
+nav_title: Content Blocks
 article_title: Drag-and-Drop Editor Content Blocks
 alias: "/dnd/content_blocks/"
 channel: email

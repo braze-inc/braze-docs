@@ -1,5 +1,5 @@
 ---
-nav_title: Push max
+nav_title: Push Max
 article_title: Push Max
 page_type: reference
 description: "Push Max amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it."

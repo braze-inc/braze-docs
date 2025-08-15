@@ -1,5 +1,5 @@
 ---
-nav_title: Content blocks library
+nav_title: Content Blocks Library
 article_title: Content Blocks Library
 page_order: 1
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Content qa
+nav_title: Content QA
 article_title: Content QA with AI
 page_order: 4
 description: "This reference article covers how to perform quality assurance on your message content with AI directly from the message composer."

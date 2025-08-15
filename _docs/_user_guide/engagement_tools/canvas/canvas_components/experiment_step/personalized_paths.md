@@ -1,5 +1,5 @@
 ---
-nav_title: Personalized paths
+nav_title: Personalized Paths
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
 description: "Personalized Paths lets you personalize any point of a Canvas journey for individual users based on conversion likelihood."

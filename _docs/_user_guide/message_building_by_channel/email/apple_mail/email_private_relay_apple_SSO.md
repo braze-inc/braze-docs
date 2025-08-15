@@ -1,5 +1,5 @@
 ---
-nav_title: Sending emails to apple private relay
+nav_title: Sending emails to Apple Private Relay
 article_title: Sending Emails to Apple Private Relay
 alias: /email_relay/
 page_order: 0

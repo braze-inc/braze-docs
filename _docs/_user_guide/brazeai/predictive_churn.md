@@ -1,5 +1,5 @@
 ---
-nav_title: Predictive churn
+nav_title: Predictive Churn
 article_title: Predictive Churn
 description: "This landing page covers Predictive Churn, a tool that allows you to define what churn means for your business as well as the users you'd like to prevent from churning."
 page_order: 2.0

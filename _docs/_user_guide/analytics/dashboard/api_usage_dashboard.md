@@ -1,5 +1,5 @@
 ---
-nav_title: API usage dashboard
+nav_title: API Usage Dashboard
 article_title: API Usage Dashboard
 alias: "/api_usage/"
 page_order: 3.5

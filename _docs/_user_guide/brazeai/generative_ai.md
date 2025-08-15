@@ -1,5 +1,5 @@
 ---
-nav_title: Generative ai
+nav_title: Generative AI
 article_title: Generative AI
 page_order: 20
 layout: dev_guide
