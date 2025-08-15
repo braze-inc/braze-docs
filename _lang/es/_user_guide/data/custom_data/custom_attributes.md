@@ -164,11 +164,9 @@ Al segmentar utilizando el filtro **DOES NOT MATCH REGEX**, debe tener ya un atr
 
 Los atributos de matriz son buenos para almacenar listas relacionadas de información sobre sus usuarios. Por ejemplo, almacenar en una matriz los últimos 100 contenidos vistos por un usuario permitiría segmentar por intereses específicos.
 
-Por defecto, la longitud máxima de una matriz para un atributo está fijada en 25, y puede aumentarse hasta 100 para una matriz individual. Por ejemplo, si envías un atributo como "Películas vistas" y está establecido en 100, cuando un usuario vea la película 101, se eliminará la primera película de la matriz y se añadirá la película más reciente.
+Por defecto, la longitud de una matriz para un atributo es de hasta 500 elementos. Por ejemplo, si envías un atributo como "Películas vistas" y está establecido en 500, cuando un usuario vea la película 501, se eliminará la primera película de la matriz y se añadirá la película más reciente.
 
-Si quieres aumentar este máximo, ponte en contacto con tu administrador del éxito del cliente. A continuación, el administrador del cuadro de mandos puede aumentar la longitud máxima de las matrices individuales a más de 100 desde la pestaña **Atributos personalizados** de la página **Gestionar configuración**.
-
-Tenga en cuenta que si introduce valores con espacios entre, antes o después de las palabras, Braze también comprobará si existen los mismos espacios.
+Ten en cuenta que si introduces algún valor con espacios entre, antes o después de las palabras, Braze también comprobará si existen los mismos espacios.
 
 {% alert note %}
 La opción de aumentar la longitud máxima no estará disponible si el atributo está configurado para detectar automáticamente el tipo de datos; el tipo de datos debe estar configurado como array.

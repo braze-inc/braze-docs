@@ -18,6 +18,8 @@ description: "Esta página explica cómo crear un formulario de registro por cor
 
 Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro por correo electrónico** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
+![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de captura de correo electrónico.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
+
 ### Paso 2: Configura tus estilos de mensaje
 
 {% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
@@ -27,6 +29,8 @@ Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecci
 Para empezar a crear su formulario de suscripción por correo electrónico, seleccione el elemento de captura de correo electrónico en el editor. Por defecto, las direcciones de correo electrónico recopiladas tendrán el grupo de suscripción global **Suscrito**. Para incluir usuarios en grupos de suscripción específicos, consulte [Actualización de los estados de suscripción de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
 Puede personalizar el texto del marcador de posición y el texto de la etiqueta del elemento de captura de correo electrónico.
+
+![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
 
 #### Validación del correo electrónico
 
@@ -38,7 +42,7 @@ Si el usuario introduce una dirección de correo electrónico que incluye caract
 
 ### Paso 5: Estiliza tu mensaje
 
-Personaliza el aspecto de tu formulario de registro utilizando los [componentes de arrastrar y soltar de mensajes dentro de la aplicación][3].
+Personaliza el aspecto de tu formulario de registro utilizando los [componentes de arrastrar y soltar de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analizar los resultados
 
@@ -48,4 +52,3 @@ Personaliza el aspecto de tu formulario de registro utilizando los [componentes 
 
 {% multi_lang_include drag_and_drop/templates.md section='correo electrónico doble adhesión voluntaria' %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

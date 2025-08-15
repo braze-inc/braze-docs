@@ -18,7 +18,7 @@ En el paso **Público objetivo** del constructor de Canvas, puede establecer cri
 
 Los criterios de salida incluyen un evento de excepción, que es la acción específica que puede provocar que los usuarios salgan del Canvas.
 
-![Los criterios de salida configurados para reactivar la interacción de los usuarios que han navegado por los productos pero aún no los han añadido a su cesta ni han realizado un pedido.][1]{: style="max-width:90%;"}
+![Los criterios de salida configurados para reactivar la interacción de los usuarios que han navegado por los productos pero aún no los han añadido a su cesta o no han realizado un pedido.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### Seleccionar eventos de excepción {#exception-events}
 
@@ -46,7 +46,7 @@ Otros eventos de excepción son:
 - Realización de un evento de pago completado
 - Realización de un evento de salida iniciada
 
-### Utilización de segmentos y filtros
+### Utilizar segmentos y filtros
 
 También puedes añadir segmentos y filtros en los criterios de salida. Esto significa que los usuarios que coincidan con el segmento o el filtro saldrán del Canvas y no recibirán más mensajería. 
 
@@ -66,8 +66,6 @@ Supongamos que queremos dirigirnos a usuarios que aún no han realizado ninguna 
 4. Para **filtrar**, selecciona **Comportamiento de compra** > **Número de compras** > **Producto comprado**.
 5. Configura el grupo de filtrado en `backpack-example exactly 1`. Esto significa que los usuarios que han comprado nuestro producto mochila saldrían del Canvas.
 
-![Configuración de los Criterios de Salida con "Realiza cualquier compra" como evento de excepción, de modo que si un usuario realiza cualquier compra, entonces saldrá de este Canvas.][2]{: style="max-width:80%;"}
+![Configuración de los Criterios de Salida con "Realiza Cualquier Compra" como evento de excepción, de forma que si un usuario realiza cualquier compra, entonces saldrá de este Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 
-[1]: {% image_buster /assets/img/exit_criteria.png %}
-[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}

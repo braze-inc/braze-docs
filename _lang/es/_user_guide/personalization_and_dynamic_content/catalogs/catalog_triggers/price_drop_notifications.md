@@ -14,16 +14,16 @@ description: "Este artículo de referencia describe cómo crear notificaciones d
 
 Cuando un usuario active un evento personalizado para un artículo, le suscribiremos automáticamente para que reciba notificaciones de bajadas de precio de ese artículo. Cuando el precio del artículo cumpla tu regla de inventario (como una caída superior al 50 %), todos los suscriptores serán elegibles para recibir notificaciones a través de una campaña o Canvas. Sin embargo, sólo los usuarios que hayan optado por recibir notificaciones las recibirán. 
 
-## Configuración de un evento personalizado para notificaciones de bajada de precios
+## Configuración de un evento personalizado para las notificaciones de bajada de precios
 
 Configurará un evento personalizado para utilizarlo como evento de suscripción, como por ejemplo `product_clicked`. Este evento debe contener una propiedad del ID del artículo (ID de artículos del catálogo). Recomendamos incluir un nombre de catálogo, pero no es obligatorio. También proporcionarás el nombre de un campo de precio, que debe ser un tipo de dato numérico. 
 
-Puedes crear una suscripción de caída de precio para un usuario y un artículo de catálogo para el que se haya producido cuando ocurra lo siguiente:
+Puedes crear una suscripción de caída de precio para un usuario y un artículo de catálogo cuando ocurra lo siguiente:
 
 - Un usuario realiza un evento personalizado seleccionado
 - El evento personalizado tiene una propiedad `type` que incluye `price_drop` (`type` debe ser una matriz)
 
-Para establecer notificaciones tanto de bajada de precio como de reposición de existencias en el mismo evento, puedes utilizar la propiedad `type` que debe ser una matriz. Cuando un artículo tenga un cambio de precio que cumpla su regla de precios, buscaremos a todos sus usuarios suscritos a ese artículo (usuarios que realizaron el evento de suscripción) y enviaremos un evento personalizado Braze que puede utilizar para activar una campaña o Canvas. 
+Para establecer notificaciones tanto de bajada de precio como de reposición de existencias en el mismo evento, puedes utilizar la propiedad `type`, que debe ser una matriz. Cuando un artículo tenga un cambio de precio que cumpla su regla de precios, buscaremos a todos sus usuarios suscritos a ese artículo (usuarios que realizaron el evento de suscripción) y enviaremos un evento personalizado Braze que puede utilizar para activar una campaña o Canvas. 
 
 Las propiedades del evento se envían junto con tu usuario, por lo que puedes introducir la plantilla con los detalles del elemento en la campaña o Canvas que envía.
 
@@ -33,7 +33,7 @@ Siga estos pasos para configurar las notificaciones de bajada de precios en un c
 
 1. Vaya a su catálogo y seleccione la pestaña **Configuración**.
 2. Selecciona el botón alternativo **Caída de precios**.
-3. Si no se han configurado los ajustes globales del catálogo, se te pedirá que configures los eventos personalizados y las propiedades que se utilizarán para desencadenar las notificaciones. <br><br> ![Cajón de configuración del catálogo.][2]{: style="max-width:70%;"}
+3. Si no se han configurado los ajustes globales del catálogo, se te pedirá que configures los eventos personalizados y las propiedades que se utilizarán para desencadenar las notificaciones. <br><br> ![Cajón de configuración del catálogo.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
 
 | Campo | Descripción |
 | --- | --- |
@@ -74,18 +74,18 @@ Aquí tienes un ejemplo de evento personalizado:
     - **Configura los límites de notificación:** Notifica a un número determinado de clientes según el periodo de notificación que hayas configurado. Braze notificará al número especificado de clientes en incrementos hasta que no haya más clientes a los que notificar, o hasta que el precio del artículo vuelva a subir. El ritmo de notificación no puede superar los 10.000 usuarios por minuto.<br>
 
 2. Configura el **campo Precio en el catálogo**. Es el campo del catálogo que se utilizará para determinar el precio del artículo. Debe ser de tipo numérico.
-3. Configura la **regla de caída de precios**. Esta es la lógica utilizada para determinar si se debe enviar una notificación. Una bajada de precio puede configurarse como un cambio de precio porcentual o en cuánto ha cambiado el valor del campo de precio.
+3. Configura la **regla de caída de precios**. Esta es la lógica utilizada para determinar si se debe enviar una notificación. Una bajada de precio puede configurarse como un cambio de precio porcentual o por el cambio de valor del campo de precio.
 4. Selecciona **Guardar configuración**.
 
-![Configuración del catálogo que muestra la función de bajada de precios activada. La regla de bajada de precios es un cambio del tres por ciento del precio original.][1]
+![Configuración del catálogo que muestra la función de bajada de precios activada. La regla de la caída del precio es un cambio del tres por ciento del precio original.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Las reglas de notificación de estos ajustes no sustituyen a los ajustes de notificación de Canvas, como Horas de silencio.
 {% endalert %}
 
-## Uso de las notificaciones de bajada de precios en Canvas
+## Utilizar notificaciones de bajada de precios en un Canvas
 
-Después de configurar las notificaciones de bajada de precios en un catálogo, siga estos pasos para utilizar estas notificaciones en un Canvas.
+Después de configurar las notificaciones de bajada de precios en un catálogo, sigue estos pasos para utilizar estas notificaciones para un Canvas.
 
 1. Establezca un lienzo basado en acciones.
 2. Seleccione **Realizar evento de caída de precio** como desencadenante.
@@ -98,7 +98,7 @@ Ahora, sus clientes recibirán una notificación cuando baje el precio de un art
 
 Para crear una plantilla con detalles sobre el artículo del catálogo que ha bajado de precio, puedes utilizar la etiqueta de Liquid `canvas_entry_properties` para acceder a `item_id`. 
 
-El uso de {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} devolverá el ID del artículo que ha bajado de precio. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} devolverá el valor del precio del artículo antes de la actualización, y {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} devolverá el nuevo valor del precio después de la actualización. 
+Si utilizas {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%}, obtendrás el ID del artículo cuyo precio ha bajado. Si utilizas {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%}, obtendrás el valor del precio del artículo antes de la actualización, y si utilizas {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%}, obtendrás el nuevo valor del precio después de la actualización. 
 
 Utilice esta etiqueta Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} en la parte superior de su mensaje y, a continuación, utilice {%raw%}`{{items[0].<field_name>}}`{%endraw%} para acceder a los datos sobre ese elemento a lo largo de todo el mensaje.
 
@@ -106,7 +106,5 @@ Utilice esta etiqueta Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{
 
 - Los usuarios se suscriben por 90 días. Si un artículo no baja de precio en 90 días, el usuario se da de baja de la suscripción.
 - Cuando se utiliza la regla de notificación **Notificar a todos los usuarios suscritos**, Braze notificará a 100.000 usuarios en 10 minutos.
-- Braze procesará hasta 10 actualizaciones de artículos por minuto. Esto significa que si actualizas 11 artículos en un minuto, solo los 10 primeros pueden desencadenar una notificación de bajada de precio.
+- Braze procesará 10 solicitudes de actualización de elementos del catálogo por minuto. Los puntos finales de actualización permiten 50 actualizaciones de artículos por solicitud, soportando hasta 500 actualizaciones de artículos por minuto que pueden desencadenar notificaciones de reposición de existencias
 
-[1]: {% image_buster /assets/img/price_drop_notifications.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

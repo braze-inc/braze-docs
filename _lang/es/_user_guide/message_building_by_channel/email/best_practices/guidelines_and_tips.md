@@ -60,6 +60,10 @@ Las direcciones de correo electrónico dirigidas a través de los servidores Bra
 
 Cuando configure sus direcciones "de", asegúrese de que su dominio de correo electrónico "de" coincide con su dominio de envío (como `marketing.yourdomain.com`). Si no lo hace, puede producirse una desalineación entre SPF y DKIM. Todos los correos electrónicos de respuesta se pueden configurar en tu dominio raíz.
 
+{% alert note %}
+No se admite la codificación Unicode en las direcciones "de".
+{% endalert %}
+
 ### Comprobación de los detalles HTML
 
 Tenga en cuenta que algunas etiquetas y atributos HTML no están permitidos, ya que pueden permitir la ejecución de código malicioso en el navegador.
@@ -229,5 +233,4 @@ Consulte las siguientes listas de etiquetas y atributos HTML que no están permi
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/privacy/spam_regulations
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: Legislación y normativa sobre SMS
-  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: Gestión del consentimiento
   link: /docs/user_guide/administrative/privacy/managing_consent

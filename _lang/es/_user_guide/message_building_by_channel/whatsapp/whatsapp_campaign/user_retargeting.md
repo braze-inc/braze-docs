@@ -1,13 +1,11 @@
 ---
 nav_title: Reorientación de usuarios
 article_title: Reorientación de usuarios
-page_order: 1
+page_order: 3
 description: "Este artículo de referencia cubre cómo los usuarios pueden reorientar sus mensajes por las interacciones de WhatsApp de los usuarios."
 page_type: reference
 channel:
   - WhatsApp
-page_order: 4.1
-
 ---
 
 # Reorientación de usuarios 
@@ -25,11 +23,11 @@ Al crear audiencias con retargeting de usuarios, es posible que desee incluir o 
 Los usuarios pueden ser filtrados por cuándo recibieron un WhatsApp por última vez o si han recibido un WhatsApp de una campaña de WhatsApp específica. Los filtros pueden establecerse en el paso Usuarios objetivo del generador de campañas.
 
 **Filtrar por último WhatsApp recibido**<br>
-![][5]{: style="max-width:75%"}
+![Filtrar la última vez que se recibió un mensaje de WhatsApp el 22 de abril de 2025.]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **Filtrar por mensajes recibidos de la campaña de WhatsApp**<br>
 Filtra los usuarios que han recibido un mensaje de una campaña específica de WhatsApp. Con este filtro, también tienes la opción de filtrar a aquellos que no han recibido mensajes de una campaña de WhatsApp.<br>
-![][4]
+![Filtrar para recibir una campaña de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### Filtrar por compromiso
 Vuelva a dirigirse a los usuarios que hayan leído o no una campaña de WhatsApp o un paso de Canvas. 
@@ -39,21 +37,17 @@ Vuelva a dirigirse a los usuarios que hayan leído o no una campaña de WhatsApp
 2. Selecciona **leer mensaje de WhatsApp**.
 3. Elija la campaña deseada.<br>
 
-![][3]
+![Filtrar por haber leído un mensaje de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
 **Reorientar a los usuarios que han abierto/leído un Paso en Canvas específico**
 1. Cree un segmento utilizando el filtro **Paso pulsado/abierto**.
 2. Selecciona **leer mensaje de WhatsApp**.
 3. Elija el lienzo y los pasos de lienzo deseados.<br>
 
-![][2]
+![Filtrar para leer un paso de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
 **Filtrar por campaña o atribución Canvas**<br>
 Filtro para usuarios que han abierto/leído una campaña de WhatsApp o un componente o etiqueta de Canvas específicos.
-![][1]
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp19.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp20.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp21.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp22.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp23.png %} 
+![Filtrar para abrir un mensaje concreto de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+

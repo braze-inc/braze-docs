@@ -8,7 +8,7 @@ description: "En esta página de referencia se anotan los operadores que admite 
 
 # Operadores
 
-> Liquid admite muchos [operadores][25] que pueden utilizarse en sus sentencias condicionales. Esta página cubre los operadores que admite Liquid y proporciona casos de uso de cómo puedes utilizarlos en tus mensajes.
+> Liquid admite muchos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que puedes utilizar en tus sentencias condicionales. Esta página cubre los operadores que admite Liquid y proporciona casos de uso de cómo puedes utilizarlos en tus mensajes.
 
 Esta tabla enumera los operadores compatibles. Ten en cuenta que los paréntesis son caracteres no válidos en Liquid e impiden que tus etiquetas funcionen.
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Un compositor de notificaciones push con el código completo de Liquid del tutorial.][13]{: width="100%"}
+![Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Código completo de Liquid %}
 {% raw %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Un compositor de notificaciones push con el código completo de Liquid del tutorial.][14]
+![Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Ahora, si un usuario ha jugado por última vez *a Awkward Dinner Party*, recibirá este mensaje:
 
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Un compositor de notificaciones push con el código completo de Liquid del tutorial.][26]
+![Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-También puede [abortar mensajes][1] basados en Contenido conectado.
+También puede [abortar mensajes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) basados en Contenido conectado.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-[25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

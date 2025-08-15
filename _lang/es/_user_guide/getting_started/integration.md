@@ -47,7 +47,7 @@ Asegúrese de indicar a sus desarrolladores qué canales desea utilizar para gar
 | Push | Requiere la implementación del SDK para proporcionar una gestión adecuada de las credenciales de mensajería y los tokens push. |
 | Correo electrónico | Se trata de un proceso totalmente distinto. Consulte la sección [Configuración del correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) para obtener más información sobre la integración. |
 | Tarjetas de contenido | Para empezar a utilizar [las tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), póngase en contacto con su gestor de éxito de clientes de Braze. |
-| SMS Y MMS | Consulta la sección [Configuración de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) para obtener más detalles sobre la integración. |
+| SMS Y MMS | Consulta la sección [Configuración de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) para obtener más detalles sobre la integración. |
 | Webhooks | Requiere la implementación del SDK, así como estos pasos específicos del canal. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

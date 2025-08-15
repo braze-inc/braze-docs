@@ -484,17 +484,17 @@ Cuando se segmentan usuarios basándose en matrices de objetos, un usuario cumpl
 
 Cree un nuevo segmento y seleccione **Atributo personalizado anidado** como filtro. A continuación, busque y seleccione el nombre de su matriz de objetos.
 
-![Filtrar por matriz de objetos.][1]
+![Filtrar por matriz de objetos.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 Utilice la notación por puntos para especificar qué campo de la matriz de objetos desea utilizar. Inicie el campo de texto con un conjunto vacío de corchetes `[]` para indicar a Braze que está buscando dentro de una matriz de objetos. Después, añade un punto `.`, seguido del nombre del campo que quieras utilizar.
 
 Por ejemplo, si desea filtrar la matriz de objetos `pets` basándose en el campo `type`, introduzca `[].type` y elija el tipo de mascota por el que desea filtrar, como `snake`.
 
-![Filtrar por tipo de mascota es igual a serpiente.][3]
+![Filtrar por tipo de mascota igual a serpiente.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 O puedes filtrar por mascotas que tengan un `type` de `dog`. En este caso, un usuario tiene al menos un perro, por lo que entra en el segmento de "cualquier usuario que tenga al menos una mascota de tipo perro".
 
-![Filtrar por tipo de mascota igual a perro.][2]
+![Filtrar por tipo de mascota igual a perro.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Niveles de anidamiento
 
@@ -635,6 +635,3 @@ Eliminar un objeto de un array consume un punto de datos por cada criterio de el
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
-[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
-[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}

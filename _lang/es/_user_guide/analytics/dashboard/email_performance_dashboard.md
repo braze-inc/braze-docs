@@ -13,7 +13,7 @@ tool:
 
 > Los paneles de rendimiento del canal muestran métricas de rendimiento agregadas de todo un canal, tanto de campañas como de Canvases. Estos paneles están actualmente disponibles para correo electrónico y SMS.
 
-![Panel de rendimiento del correo electrónico que muestra la participación en el canal de correo electrónico de los últimos treinta días.][1]
+![Panel de rendimiento del correo electrónico que muestra la interacción del canal de correo electrónico en los últimos treinta días.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Puedes ver los siguientes paneles:
 - [Panel de rendimiento del correo electrónico](#email-performance-dashboard)
@@ -26,7 +26,7 @@ Para ver tu panel de rendimiento del correo electrónico, ve a **Análisis** > *
 
 ### Cómo se calculan las métricas
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Los cálculos para las diferentes métricas en el panel de rendimiento del correo electrónico son los mismos que los que se realizan a nivel de mensaje individual (como los análisis de campaña). En este panel, las métricas se agregan a todas las campañas y Canvases para el intervalo de fechas que haya seleccionado. Para saber más sobre estas definiciones, consulta [Métricas del correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
@@ -73,19 +73,19 @@ Para las aperturas de correo electrónico, Braze separará Google Image Proxy, A
 
 El informe **Compromiso por proveedor de buzón** muestra los principales proveedores de buzones que contribuyen a sus clics o aperturas. Puedes hacer clic en proveedores de buzones premier específicos para profundizar en dominios receptores concretos. Por ejemplo, si Microsoft aparece en este informe como uno de sus principales proveedores de buzones de correo métricos, puedes ver más detalles de sus dominios de recepción como "outlook.com", "hotmail.com", "live.com", y más.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Hora de participación
 
 El informe **Tiempo de interacción** muestra datos sobre el momento en que los usuarios interactúan con sus mensajes de correo electrónico. Esto puede ayudar a responder preguntas como qué día de la semana o a qué hora se produce la mayor participación de sus clientes. Con esta información, puede experimentar con el mejor día u hora para enviar sus mensajes y conseguir una mayor participación. Ten en cuenta que estas horas se basan en la zona horaria de tu empresa.
 
-El informe de compromiso **del día de la semana** desglosa las aperturas o los clics por día de la semana. 
+El informe de interacción **del Día de la** semana desglosa las aperturas o los clics por día de la semana. 
 
-![][6]
+![]({% image_buster /assets/img_archive/time_engagement.png %})
 
-El informe sobre **la hora del día** desglosa las aperturas o los clics por cada hora en un intervalo de 24 horas.
+El informe de interacción **Hora del día** desglosa las aperturas o clics por cada hora en una ventana de tiempo de 24 horas.
 
-![][7]
+![]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Para obtener más información sobre el análisis de sus mensajes de correo electrónico, consulte [Informes de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -95,9 +95,9 @@ Para utilizar tu panel de rendimiento de SMS, ve a **Análisis** > **Rendimiento
 
 ### Cómo se calculan las métricas
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-Los cálculos para las diferentes métricas en el panel de rendimiento de SMS son los mismos que los que se realizan a nivel de mensaje individual (como los análisis de campaña). En este panel, las métricas se agregan a todas las campañas y Canvases para el intervalo de fechas que haya seleccionado. Para saber más sobre estas definiciones, consulta las [métricas SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+Los cálculos para las diferentes métricas en el panel de rendimiento de SMS son los mismos que los que se realizan a nivel de mensaje individual (como los análisis de campaña). En este panel, las métricas se agregan a todas las campañas y Canvases para el intervalo de fechas que haya seleccionado. Para saber más sobre estas definiciones, consulta las [métricas SMS]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 Cada mosaico muestra primero la métrica de tasa, seguida de la métrica de recuento (con la excepción de _Envíos_, que muestra la métrica de recuento seguida de la media por día). Cada mosaico muestra también la [comparación con el último periodo](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -120,7 +120,7 @@ Puedes filtrar los datos de tu panel utilizando las siguientes opciones de filtr
 - **Canvas:** Elija hasta 10 lienzos. Cuando se aplique, el panel de control mostrará las métricas sólo de los lienzos seleccionados. Si selecciona primero un filtro de etiqueta, las opciones de filtros de lienzo sólo incluirán los lienzos que tengan la etiqueta seleccionada.
 - **Campaña:** Elija hasta 10 campañas. Cuando se aplique, el panel de control mostrará las métricas sólo de las campañas seleccionadas. Si selecciona primero un filtro de etiqueta, las opciones de filtros de campaña sólo incluirán las campañas que tengan la etiqueta seleccionada.
 
-![Opciones de filtrado en el panel de rendimiento del canal, donde puede seleccionar una etiqueta y una lista de lienzos por los que filtrar.][3]
+![Opciones de filtrado en el panel de rendimiento del canal, donde puedes seleccionar una etiqueta y una lista de Lienzos por los que filtrar.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Comparar periodos de tiempo
 
@@ -132,7 +132,7 @@ La comparación es el cambio porcentual entre el último periodo y el actual, ca
 
 Puede cambiar entre **Mostrar cambio en totales**, que compara los recuentos totales (como el número de correos electrónicos entregados) entre los dos períodos, y **Mostrar cambio en tasas**, que compara las tasas (como la tasa de entrega).
 
-![Botones de radio para cambiar entre mostrar el cambio en los totales o el cambio en las tasas para el Panel de Rendimiento del Canal.][4]
+![Botones de radio para cambiar entre mostrar el cambio en los totales o el cambio en las tasas para el panel de rendimiento del canal.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
 ## Preguntas más frecuentes
 
@@ -168,10 +168,3 @@ This means Braze hasn't recorded any data for that metric during the time you se
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

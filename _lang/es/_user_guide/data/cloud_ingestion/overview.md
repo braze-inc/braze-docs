@@ -359,7 +359,7 @@ La columna `UPDATED_AT` debe estar en UTC para evitar problemas con el horario d
 
 ### Asegúrate de que la hora de `UPDATED_AT` no coincide con la hora de tu sincronización.
 
-Tu sincronización CDI podría tener datos duplicados si algún campo de `UPDATED_AT` está exactamente a la misma hora que tu hora de sincronización anterior. Esto se debe a que el CDI elegirá un "límite inclusivo" cuando detecte cualquier fila que coincida en el tiempo con la sincronización anterior, y hará que las filas sean viables para sincronizar. El CDI volverá a analizar esas filas y creará datos duplicados. 
+Tu sincronización CDI podría tener datos duplicados si algún campo de `UPDATED_AT` está exactamente a la misma hora que tu hora de sincronización anterior. Esto se debe a que CDI elegirá un "límite inclusivo" cuando identifique cualquier fila que coincida en el tiempo con la sincronización anterior, y hará que las filas puedan sincronizarse. CDI volverá a analizar esas filas y creará datos duplicados.
 
 ### Separa `EXTERNAL_ID` de la columna `PAYLOAD` 
 
@@ -386,7 +386,7 @@ Como la Petición 1 se produce en primer lugar, los atributos del usuario se act
 - Talla: "Grande"
 
 Sin embargo, cuando se produce la Petición 2, Braze comienza con los valores originales de los atributos ("Verde" y "Grande") y, a continuación, actualiza los atributos del usuario a los siguientes:
-- Color: "Rojo"
+- Color: "Verde"
 - Talla: "Medio"
 
 Cuando finalicen las solicitudes, la Solicitud 2 sobrescribirá la actualización de la Solicitud 1, por lo que es mejor escalonar las actualizaciones para evitar que se sobrescriban las solicitudes.
@@ -617,12 +617,12 @@ Recomendamos que las consultas se realicen en el plazo de una hora para obtener 
 
 ## Limitaciones del producto
 
-| Limitaciones            | Descripción                                                                                                                                                                        |
+| Limitación            | Descripción                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Número de integraciones | No hay límite en el número de integraciones que puedes configurar. Sin embargo, sólo podrá configurar una integración por tabla o vista.                                             |
-| Cantidad de filas         | No hay límite en el número de filas que puedes sincronizar. Cada fila sólo se sincronizará una vez, en función de la columna `UPDATED`.                                                            |
+| Cantidad de filas         | Por defecto, cada ejecución puede sincronizar hasta 500 millones de filas. Se detendrán las sincronizaciones con más de 500 millones de filas nuevas. Si necesitas un límite superior, ponte en contacto con tu administrador del éxito del cliente de Braze o con el soporte de Braze. |
 | Atributos por fila     | Cada fila debe contener un único ID de usuario y un objeto JSON con un máximo de 250 atributos. Cada clave del objeto JSON cuenta como un atributo (es decir, un array cuenta como un atributo). |
-| Tamaño de la carga útil           | Cada fila puede contener una carga útil de hasta 1 MB. Las cargas superiores a 1 MB se rechazarán y el error "La carga era superior a 1 MB" se registrará en el registro de sincronización junto con el ID externo asociado y la carga truncada. |
+| Tamaño de la carga útil           | Cada fila puede contener una carga útil de hasta 1 MB. Las cargas útiles superiores a 1 MB serán rechazadas, y el error "La carga útil era superior a 1 MB" se registrará en el registro de sincronización junto con el ID externo asociado y la carga útil truncada. |
 | Tipo de datos              | Puedes sincronizar atributos de usuario, eventos y compras a través de la ingesta de datos en la nube.                                                                                                  |
 | Región de Braze           | Este producto está disponible en todas las regiones Braze. Cualquier región Braze puede conectarse a cualquier región de datos de origen.                                                                              |
 | Región de origen       | Braze se conectará a su almacén de datos o entorno de nube en cualquier región o proveedor de nube.                                                                                        |

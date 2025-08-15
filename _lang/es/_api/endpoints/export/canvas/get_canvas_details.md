@@ -31,6 +31,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Obligatoria | Cadena | Ver [Identificador API de Canvas]({{site.baseurl}}/api/identifier_types/) |
+| `post_launch_draft_version` | Opcional | Booleano | Para los lienzos que tienen un borrador posterior al lanzamiento, si lo configuras en `true` se mostrarán los cambios disponibles en el borrador. Predeterminado a `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -58,6 +59,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "description": (string) the Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
+  "enabled": (boolean) whether this Canvas is active or not,
+  "has_post_launch_draft": (boolean) whether this Canvas has a post-launch draft,
   "schedule_type": (string) the type of scheduling action,
   "first_entry": (string) the date of first entry as ISO 8601 date,
   "last_entry": (string) the date of last entry as ISO 8601 date,
@@ -114,6 +117,8 @@ A continuación se muestra un ejemplo de respuesta que incluye mensajes Canvas e
   "description": "Complete profile reminder via multiple channels",
   "archived": false,
   "draft": false,
+  "enabled": true,
+  "has_post_launch_draft": true,
   "schedule_type": "date",
   "first_entry": "2023-01-01T12:00:00Z",
   "last_entry": "2023-01-10T12:00:00Z",

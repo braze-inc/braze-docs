@@ -22,7 +22,7 @@ Ten en cuenta las [condiciones de carrera]({{site.baseurl}}/user_guide/engagemen
 
 Para entrar en un lienzo, los usuarios deben estar en la audiencia de entrada antes de que se produzca el horario de entrada, independientemente de si el lienzo está programado, basado en acciones o activado por la API. 
 
-![][1]{: style="max-width:75%;"}
+![Un Canvas basado en acciones que introduce a los usuarios cuando realizan cualquier compra durante la hora local de un usuario desde el 30 de abril de 2025 a las 12 pm hasta el 7 de mayo de 2025 a las 12 pm.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Tenga en cuenta que los usuarios que reúnan los requisitos para formar parte de su público de entrada después del lanzamiento del lienzo no entrarán en el lienzo.
 
@@ -102,4 +102,3 @@ Después de revisar los detalles de su lienzo, consulte [Enviar lienzos de prueb
 - Confirma que el paso en Canvas estaba conectado al paso anterior en el momento del envío.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

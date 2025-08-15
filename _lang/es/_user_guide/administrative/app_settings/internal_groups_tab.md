@@ -12,7 +12,7 @@ description: "Este artículo de referencia trata de los grupos internos, una for
 > Los grupos internos son una forma estupenda de crear y organizar grupos de prueba internos o de terceros. Proporcionan información sobre los registros de tu SDK o API y son útiles para probar tu integración de SDK. Puedes crear un número ilimitado de grupos internos personalizados con hasta 1.000 usuarios.
 
 {% alert tip %}
-También te recomendamos que eches un vistazo a nuestro curso de Braze Learning [sobre Herramientas de depuración y control de calidad](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), que trata sobre cómo utilizar grupos internos para llevar a cabo tu propia solución de problemas y depuración.
+También te recomendamos que eches un vistazo a nuestro curso de Braze Learning [Pruebas y solución de problemas](https://learning.braze.com/path/developer/testing-and-troubleshooting), que explica cómo utilizar grupos internos para llevar a cabo tu propia solución de problemas y depuración.
 {% endalert %}
 
 ## Requisitos previos
@@ -25,7 +25,7 @@ Para crear un grupo interno, haz lo siguiente:
 
 1. Vaya a **Configuración** > **Grupos internos**.
 2. Selecciona **Crear grupo interno**.
-3. Dale un nombre a tu grupo, como "Grupo de prueba de correo electrónico".
+3. Dale a tu grupo un nombre, como "Grupo de prueba de correo electrónico".
 4. Elige uno o varios tipos de grupo, como se indica en la tabla siguiente.
 
 | Tipo de grupo         | Descripción                                                                                 |
@@ -58,7 +58,7 @@ Después de crear tu grupo interno, puedes añadir usuarios de prueba como miemb
 Similar al envío de una prueba de vista previa de un mensaje, el Grupo de prueba de contenido le ahorra tiempo y le permite lanzar pruebas a una lista predefinida de usuarios de Braze simultáneamente. Está disponible para push, mensajes dentro de la aplicación, SMS, correo electrónico y tarjetas de contenido en Braze. Sólo los grupos etiquetados como Grupos de prueba de contenido estarán disponibles en la sección de vista previa de un mensaje.
 
 {% alert note %}
-Los mensajes [SMS de]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) prueba sólo pueden enviarse a números de teléfono válidos de la base de datos.
+Los mensajes [SMS de]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) prueba sólo pueden enviarse a números de teléfono válidos de la base de datos.
 {% endalert %}
 
 Puedes seleccionar usuarios individuales de Braze o tantos grupos internos a los que enviar el mensaje. Si su mensaje incluye algún líquido u otra personalización dinámica, Braze utilizará los atributos disponibles para cada usuario para personalizar el contenido del mensaje. Para los usuarios que no tengan atributos, Braze utilizará el valor predeterminado establecido.

@@ -37,6 +37,6 @@ Etiquete un evento y luego identifique las diferencias mediante el uso de propie
 Supongamos que formas parte de una empresa de comercio electrónico y te interesa hacer un seguimiento de cuándo los clientes se han registrado en tu aplicación y cuándo se han suscrito a tu boletín de noticias. Aquí tienes ejemplos de nombres de eventos eficaces:
 
 - `user_signup`
-- `newsletter_sunscribed`
+- `newsletter_subscribed`
 
 Estos dos nombres de evento indican claramente el evento que están siguiendo. A medida que crees más eventos personalizados, asegúrate de que tus convenciones de nomenclatura sean comprensibles. Por ejemplo, evita utilizar nombres de eventos como `signup_event_1`, ya que carece de claridad y no transmite lo que el evento está siguiendo, en comparación con `user_signup`.

@@ -18,12 +18,18 @@ Tener varias cuentas de WhatsApp Business es útil si desea enviar mensajes de W
 
 Las cuentas de empresa anidadas dentro del mismo Meta Business Manager también compartirán la gestión de permisos de acceso de los usuarios y los catálogos (aún no soportado en Braze).
 
+![Diagrama del ecosistema de Braze y WhatsApp, que muestra cómo se conectan entre sí los espacios de trabajo y las cuentas de WhatsApp Business: puedes conectar un grupo de suscripción a un número de teléfono, varias cuentas de WhatsApp Business a un espacio de trabajo y un espacio de trabajo a varias carteras Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+
 ### Añadir una cuenta de WhatsApp Business
 
-Puedes añadir hasta 10 cuentas de WhatsApp Business por espacio de trabajo. Para añadir una cuenta:
+Puedes añadir hasta 10 cuentas de WhatsApp Business por espacio de trabajo. Las cuentas de empresa pueden estar anidadas en distintos Metaadministradores de empresa. Para añadir una cuenta:
 
-1. Vaya a **Socios tecnológicos** > **WhatsApp** y seleccione **Añadir cuenta de WhatsApp Business**. ![Sección de integración de mensajería WhatsApp con opciones para añadir una cuenta de empresa o añadir un grupo y un número de suscripción.][1]<br>
-2. Siga el proceso de inscripción. Para obtener información detallada paso a paso, consulta [el registro integrado de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
+1. Ve a **Socios tecnológicos** > **WhatsApp** y selecciona **Añadir cuenta de WhatsApp Business**. 
+
+![Sección de integración de mensajería WhatsApp con opciones para añadir una cuenta de empresa o añadir un grupo de suscripción y un número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. Siga el proceso de inscripción. Para obtener información detallada paso a paso, consulta [el registro integrado de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
 
 {% alert important %}
 Tu número de teléfono debe cumplir todos los requisitos de cualquier número de teléfono de WhatsApp, incluido el de no estar registrado en ninguna otra cuenta de WhatsApp.
@@ -43,12 +49,14 @@ Cada número de teléfono de WhatsApp aparecerá como un chat de WhatsApp indepe
 
 Puedes añadir hasta 20 grupos de suscripción (y números de teléfono de envío) por cuenta de WhatsApp Business. Para añadir un grupo de suscripción y un número de teléfono:
 
-1. Vaya a **Socios tecnológicos** > **WhatsApp** y seleccione **Añadir** grupo y número de suscripción.![Sección Integración de mensajería WhatsApp con opciones para añadir una cuenta de empresa o añadir un grupo y número de suscripción.][1]<br>
-2. Siga el proceso de inscripción. <br><br> En el paso **Seleccione su cuenta de WhatsApp** Business, seleccione su cuenta de WhatsApp Business existente y añada un nuevo número de teléfono. Este número debe cumplir todos los requisitos de cualquier número de teléfono de WhatsApp, incluido el de no estar registrado en ninguna otra cuenta de WhatsApp.
+1. Ve a **Socios tecnológicos** > **WhatsApp** y selecciona **Añadir grupo de suscripción y número**.
+
+![Sección de integración de mensajería WhatsApp con opciones para añadir una cuenta de empresa o añadir un grupo de suscripción y un número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. Siga el proceso de inscripción. <br><br> En el paso **Seleccione su cuenta de WhatsApp** Business, seleccione su cuenta de WhatsApp Business existente y añada un nuevo número de teléfono. Este número debe cumplir todos los requisitos de cualquier número de teléfono de WhatsApp, incluido el de no estar registrado en ninguna otra cuenta de WhatsApp.
 
 ### Eliminar un grupo de suscripción y un número de teléfono 
 
 1. Vaya a **Audiencia** > **Suscripciones** y archive el grupo de suscripciones.
 2. Ve a tu gestor de Meta Business y elimina el número de teléfono.
-
-[1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 

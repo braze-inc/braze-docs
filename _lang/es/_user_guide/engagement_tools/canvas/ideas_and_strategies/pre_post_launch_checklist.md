@@ -27,7 +27,7 @@ Si está introduciendo usuarios según su zona horaria local utilizando un horar
 Verás una alerta si no has programado un buffer suficiente. Una solución rápida es ajustar la hora de envío para garantizar que los usuarios puedan permanecer en el segmento objetivo durante 24 horas completas.
 {% endalert %}
 
-![][1]
+![Un Canvas programado para que los usuarios entren a la vez a partir de las 10 de la mañana del 30 de abril de 2025, en su hora local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Considere el uso de expresiones regulares para los filtros de audiencia
 
@@ -109,4 +109,3 @@ En general, elija la Temporización Inteligente o las Horas de Silencio para su 
 
 Cuando el volumen de envíos entre dos o más rutas (ya sean rutas de audiencia o rutas de acción) no es el esperado, puede ser una oportunidad para revisar sus segmentos, filtros o acciones de activación. Asegúrese también de identificar y eliminar los filtros superpuestos.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

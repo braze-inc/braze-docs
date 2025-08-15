@@ -38,7 +38,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='conjunto de estados de suscripción' %}
+{% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
 ## Cuerpo de la solicitud
 

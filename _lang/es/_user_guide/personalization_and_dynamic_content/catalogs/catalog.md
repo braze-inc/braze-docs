@@ -50,14 +50,14 @@ Selecciona **Crear nuevo catálogo** y, a continuación, elige **Cargar CSV** o 
 
 ### Método 1: Cargar CSV
 
-1. Arrastra y suelta tu archivo en la zona de carga, o selecciona **Cargar CSV** y elige tu archivo. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Arrastra y suelta tu archivo en la zona de carga, o selecciona **Cargar CSV** y elige tu archivo. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. Seleccione uno de los siguientes tipos de datos para cada columna: booleano, número, cadena o tiempo.
-<br> ![][9]{: style="max-width:80%;"} <br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. Dale un nombre a tu catálogo. Tenga en cuenta los siguientes requisitos para un nombre de catálogo:
 - Debe ser único
 - 250 caracteres como máximo
 - Sólo puede incluir números, letras, guiones y guiones bajos.<br><br>
-4. (opcional) Añada una descripción para el catálogo.
+4. (Opcional) Añade una descripción para el catálogo.
 5. Selecciona **Procesar Catálogo** para crear el catálogo.
 
 {% alert note %}
@@ -87,11 +87,11 @@ Para editar o crear catálogos en el navegador, necesitarás el permiso "Gestion
 1. Introduzca un nombre para su catálogo. Ten en cuenta los siguientes requisitos para el nombre de tu catálogo:
 - Debe ser único
 - Hasta 250 caracteres
-- Sólo puede incluir números, letras, guiones y guiones bajos. <br> ![Un catálogo llamado "my_catalog".][14]{: style="max-width:80%;"} <br><br>
-2. (opcional) Escriba una descripción para su catálogo.
+- Sólo puede incluir números, letras, guiones y guiones bajos. <br> ![Un catálogo llamado "mi_catálogo".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
+2. (Opcional) Escribe una descripción para tu catálogo.
 3. Seleccione el catálogo que acaba de crear en la página de **catálogos** de la lista para actualizar su catálogo.
-4. Selecciona **Actualizar Catálogo** > **Añadir campos** para añadir tus campos. A continuación, introduzca el **Nombre del campo** y utilice el desplegable para seleccionar el tipo de datos. Repita la operación según sea necesario.<br> ![Dos campos de ejemplo "tasa" y "nombre".][12]{: style="max-width:50%;"}<br><br>
-5. Selecciona **Actualizar catálogo** > **Añadir elementos** para añadir un elemento a tu catálogo introduciendo la información en función de los campos que hayas añadido previamente. A continuación, selecciona **Guardar elemento** o **Guardar y añadir otro** para seguir añadiendo tus elementos. <br> ![Añade un elemento del catálogo.][13]{: style="max-width:50%;"}
+4. Selecciona **Actualizar Catálogo** > **Añadir campos** para añadir tus campos. A continuación, introduzca el **Nombre del campo** y utilice el desplegable para seleccionar el tipo de datos. Repita la operación según sea necesario.<br> ![Dos campos de ejemplo "tasa" y "nombre".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. Selecciona **Actualizar catálogo** > **Añadir elementos** para añadir un elemento a tu catálogo introduciendo la información en función de los campos que hayas añadido previamente. A continuación, selecciona **Guardar elemento** o **Guardar y añadir otro** para seguir añadiendo tus elementos. <br> ![Añade un elemento del catálogo.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 También puede cargar un archivo CSV después de seleccionar crear un catálogo en el navegador.
 
@@ -139,11 +139,11 @@ Crearemos el catálogo cargando un archivo CSV. Los tipos de datos de `id`, `tit
 Este tipo de datos no se puede editar una vez configurado el catálogo.
 {% endalert %}
 
-![Cuatro nombres de columna de catálogo: "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
+![Cuatro nombres de columnas de catálogo: "id", "title", "price", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 A continuación, llamaremos a este catálogo "catálogo_juegos" y seleccionaremos el botón **Procesar catálogo**. Braze comprobará si hay errores en tu catálogo antes de crearlo.
 
-![Un catálogo llamado "games_catalog".][11]{: style="max-width:85%;"}
+![Un catálogo llamado "catálogo_juegos".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Tenga en cuenta que no podrá editar este nombre una vez creado el catálogo. Puede eliminar un catálogo y volver a cargar una versión actualizada utilizando el mismo nombre de catálogo.
 
@@ -171,17 +171,9 @@ El derecho a paquete que se muestra en el panel de Braze se redondea a la unidad
 
 #### Versión gratuita
 
-El tamaño de almacenamiento para la versión gratuita de los catálogos es de hasta 100 MB. Puedes tener un número ilimitado de elementos siempre que no superen los 100 MB. Las selecciones contribuirán a su almacenamiento. Cuanto más compleja sea una selección, más espacio ocupará. También habrá un desajuste de tamaño entre los datos del catálogo CSV y la representación de esos datos en nuestro almacén de datos.
+El tamaño de almacenamiento para la versión gratuita de los catálogos es de hasta 100 MB. Puedes tener un número ilimitado de objetos, siempre que no superen los 100 MB. 
 
 #### Catálogos Pro
 
 A nivel de empresa, el almacenamiento máximo para Catálogos Pro se basa en el tamaño de los datos del catálogo. Las opciones de tamaño de almacenamiento son: 5 GB, 10 GB o 15 GB. Ten en cuenta que el almacenamiento de la versión gratuita (100 MB) está incluido en cada uno de estos planes.
 
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
-[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
-[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
-[12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
-[13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
-[14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}

@@ -21,7 +21,7 @@ Para cada campaña, Braze comprueba una lista de atributos y comportamientos de 
 
 Para ejecutar un análisis de correlación de conversiones, seleccione el evento de conversión de interés en el menú desplegable.
 
-![Panel de Correlación de Conversiones que muestra un ejemplo con "Seleccionar un evento de conversión" establecido en "Evento de Conversión Principal - A" con la Configuración de Evento como "Realizada Compra en 12 horas (Cualquier producto)".][1]
+![Panel de correlación de conversiones que muestra un ejemplo con "Seleccionar un evento de conversión" establecido en "Evento de conversión primaria - A" con la configuración de evento como "Realizada la compra en 12 horas (Cualquier producto)".]({% image_buster /assets/img/convcorr.png %})
 
 ## ¿Qué se comprueba?
 
@@ -52,4 +52,3 @@ Comprobamos la significación estadística utilizando el [intervalo de confianza
 
 A continuación, para cada una de las variables, calculamos también la tasa de conversión de los usuarios con ese atributo o comportamiento de interés concreto con un 95% de confianza. Dividiéndolo por la tasa básica, podemos medir la relación. Si es mucho mayor que 1, los usuarios con ese atributo o comportamiento tienen más probabilidades de convertir. Si es mucho menor, tienen menos probabilidades. En la tabla mostramos el valor del propio coeficiente. El valor sólo se muestra si está lo suficientemente lejos de 1 como para ser significativo con un nivel de confianza del 95%.
 
-[1]: {% image_buster /assets/img/convcorr.png %}

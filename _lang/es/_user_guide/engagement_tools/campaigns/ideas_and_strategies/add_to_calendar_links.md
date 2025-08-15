@@ -14,7 +14,7 @@ channel: email
 
 Para ello, redacte su correo electrónico y determine dónde quiere que estén sus enlaces. A continuación, añade dos opciones: una para Google Calendar y otra para otros calendarios (como iCal o Outlook). Por ejemplo, "Añadir a Google Calendar" y "Añadir a iCal o Outlook".
 
-![Diálogo de enlace al añadir un enlace en el panel. Se selecciona la pestaña "Información del enlace" y el texto se establece en "Añadir a Google Calendar".][1]{: style="max-width:50%"}
+![Diálogo de enlace al añadir un enlace en el panel. Se selecciona la pestaña "Información del enlace" y se establece el texto "Añadir a Google Calendar".]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## Formato URL
 
@@ -79,27 +79,22 @@ Por ejemplo, si abres el enlace de ejemplo "Añadir a Google Calendar" y tu cale
 
 Al hacer clic, Google Calendar se abre en una nueva pestaña o ventana con los detalles del evento rellenados previamente en la invitación y listos para que el usuario los guarde. Esto ocurre tanto en el móvil como en el ordenador.
 
-![Diálogo de Google Calendar para añadir un evento con los detalles del evento añadidos y listo para guardar.][2]{: style="max-width:75%"}
+![Diálogo de Google Calendar para añadir un evento con los detalles del evento añadidos y listo para guardar.]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal o Outlook
 
 Al hacer clic en el escritorio, se descarga un archivo ICS. A continuación, el usuario debe abrir el archivo ICS, que abrirá iCal o Outlook y le pedirá que añada el evento a su calendario.
 
-![Calendario iCal con un cuadro de diálogo para añadir un nuevo evento, que pide al usuario que seleccione un calendario y confirme.][3]{: style="max-width:75%"}
+![Calendario iCal con un cuadro de diálogo para añadir un nuevo evento, que pide al usuario que seleccione un calendario y confirme.]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-![Calendario iCal con el evento añadido.][4]{: style="max-width:81%"}
+![Calendario iCal con el evento añadido.]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 En el móvil, los usuarios tienen que mantener pulsado el enlace, que les pide que lo añadan a su calendario.
 
-![Ventana emergente de iOS cuando mantienes pulsado un enlace de calendario, que incluye un botón para "Añadir al calendario".][5]{: style="max-width:50%"}
+![Ventana emergente de iOS cuando mantienes pulsado un enlace de calendario, que incluye un botón para "Añadir al calendario".]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 Para más información, consulte:
 * [Crear eventos para Google Calendar](https://developers.google.com/calendar/api/guides/create-events)
 * [Crear un enlace Añadir al calendario en un mensaje de correo electrónico](https://support.microsoft.com/en-us/office/create-an-add-to-calendar-link-in-an-email-message-34f8ea28-322a-4867-b423-2998f9634e59)
 
 
-[1]: {% image_buster /assets/img_archive/calendar_1.png %}
-[2]: {% image_buster /assets/img_archive/calendar_2.png %}
-[3]: {% image_buster /assets/img_archive/calendar_3.png %}
-[4]: {% image_buster /assets/img_archive/calendar_4.png %}
-[5]: {% image_buster /assets/img_archive/calendar_5.png %}

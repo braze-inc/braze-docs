@@ -31,7 +31,7 @@ Los [eventos]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_stra
 - `ecommerce.checkout_started`
 - `ecommerce.order_placed`
 
-#### Plantillas Canvas para comercio electrónico
+#### Plantillas eCommerce Canvas
 
 Consulta nuestros [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) dedicados [al comercio electrónico]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) para obtener más ideas sobre cómo utilizar las plantillas prediseñadas de Braze Canvas para poner en práctica estrategias esenciales.
 

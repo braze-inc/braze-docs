@@ -10,7 +10,7 @@ channel:
 
 # Video {#video}
 
-> Para reproducir un video en un mensaje HTML dentro de la aplicación, incluye el siguiente elemento `<video>` en tu HTML, y sustituye los nombres de los videos por el nombre de tu archivo (o la URL del activo remoto). Puedes encontrar otras opciones posibles de `<video>` en [MDN Web Docs][9].
+> Para reproducir un video en un mensaje HTML dentro de la aplicación, incluye el siguiente elemento `<video>` en tu HTML, y sustituye los nombres de los videos por el nombre de tu archivo (o la URL del activo remoto). Puedes encontrar otras opciones posibles de `<video>` en [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -38,4 +38,3 @@ Para ser compatible con dispositivos iOS:
 - iOS no admite la reproducción automática por defecto. Para actualizar esta opción por defecto, puede modificar la opción [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

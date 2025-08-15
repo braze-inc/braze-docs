@@ -7,11 +7,11 @@ description: "Este artículo explica cómo almacenar en caché las respuestas de
 
 # Almacenamiento en caché de respuestas de contenido conectado
 
-> Las respuestas del Contenido conectado pueden almacenarse en caché en diferentes campañas o mensajes (en el mismo espacio de trabajo) para optimizar la velocidad de envío.
+> Las respuestas del contenido conectado pueden almacenarse en caché en diferentes campañas o mensajes (en el mismo espacio de trabajo) para optimizar la velocidad de envío.
 
 Braze no registra ni almacena permanentemente las respuestas de Contenido conectado. Si eliges explícitamente almacenar una respuesta a una llamada de Contenido conectado como una variable Liquid, Braze sólo la almacena en memoria, es decir, en un almacenamiento temporal que se elimina tras un breve periodo de tiempo, para renderizar la variable Liquid y enviar el mensaje.
 
-Para evitar el almacenamiento en caché, puedes especificar `:no_cache`, lo que puede provocar un aumento del tráfico de red. Para ayudar a solucionar problemas y supervisar la salud del sistema, Braze también puede registrar las llamadas a Contenido conectado que fallan (como `404` y `429`). Estos registros se conservan hasta 30 días.
+Para evitar el almacenamiento en caché, puedes especificar `:no_cache`, lo que puede provocar un aumento del tráfico de red. Para ayudar a solucionar problemas y controlar la salud del sistema, Braze también puede registrar las llamadas a Contenido conectado que fallan (como `404` y `429`). Estos registros se conservan hasta 30 días.
 
 ## Configuración predeterminada de la caché
 

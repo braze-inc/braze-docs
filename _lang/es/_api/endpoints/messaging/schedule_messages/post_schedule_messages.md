@@ -30,7 +30,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='default' category='puntos_de_mensaje' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Cuerpo de la solicitud
 
@@ -76,15 +76,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
+|`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado en `false`. <br><br> Si `broadcast` está configurado como `true`, no se puede incluir una lista de destinatarios. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
 | `external_user_ids` | Opcional | Matriz de cadenas | Ver [identificador de usuario externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Opcional | Matriz de objetos alias de usuario | Ver [objeto alias de usuario]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Opcional | Objeto de audiencia conectado | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Opcional | Cadena | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Opcional|Cadena| Ver [identificador de campaña]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Opcional | Matriz de objetos destinatarios | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/). |
-| `override_messaging_limits` | Opcional | Booleano | Ignora los límites de velocidad globales para las campañas, predeterminado a falso |
+| `override_messaging_limits` | Opcional | Booleano | Ignora la limitación de frecuencia para las campañas, predeterminado a falso |
 |`recipient_subscription_state`| Opcional | Cadena | Utiliza esta opción para enviar mensajes solo a los usuarios que se hayan adherido voluntariamente (`opted_in`), solo a los usuarios que se hayan suscrito o estén adheridos voluntariamente (`subscribed`) o a todos los usuarios, incluidos los que hayan cancelado la suscripción (`all`). <br><br>El uso de `all` usuarios es útil para la mensajería transaccional por correo electrónico. De forma predeterminada, `subscribed`. |
 | `schedule` | Obligatoria | Objeto de programación | Ver [objeto de programación]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Opcional | Objeto de mensajería | Consulta [los objetos de mensajería disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

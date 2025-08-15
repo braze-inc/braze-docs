@@ -89,7 +89,7 @@ En esta sección se describen las principales diferencias entre la creación de 
   <tr>
     <td class="leftHeader">Audiencia</td>
     <td class="tg-0pky">Braze evalúa los miembros de la audiencia cuando se envía la campaña.<br><br>No se evaluará la elegibilidad de los usuarios nuevos o anónimos si intentan ver la tarjeta después del envío de la campaña. Para las campañas recurrentes, será en el siguiente intervalo de recurrencia.</td>
-    <td class="tg-0pky">Braze evalúa la afiliación la próxima vez que el usuario abre su aplicación (inicia una sesión, <a href="#campaign_note">sólo campañas*</a>).<br><br> Esta configuración tendrá un alcance de público más amplio porque siempre se evaluará la elegibilidad de cualquier usuario nuevo o anónimo cuando intente ver la tarjeta. Además, el límite de velocidad (limitar el número de personas que recibirán la campaña) no es aplicable cuando se establece en la primera impresión (<a href="#campaign_note">solo campañas*</a>).</td>
+    <td class="tg-0pky">Braze evalúa la afiliación la próxima vez que el usuario abre su aplicación (inicia una sesión, <a href="#campaign_note">sólo campañas*</a>).<br><br> Esta configuración tendrá un alcance de público más amplio porque siempre se evaluará la elegibilidad de cualquier usuario nuevo o anónimo cuando intente ver la tarjeta. <br><br>Además, el límite de velocidad (limitar el número de personas que recibirán la campaña) no es aplicable cuando se establece en la primera impresión (<a href="#campaign_note">solo campañas*</a>).</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalización</td>
@@ -127,6 +127,3 @@ Cuando las tarjetas se crean en la primera impresión, pueden tardar entre 1 y 2
 
 Si la aplicación de un usuario ejecuta una versión anterior del SDK, seguirá recibiendo las tarjetas de contenido enviadas con una creación de tarjeta especificada. Sin embargo, las tarjetas tardarán más en aparecer para estos usuarios, y puede que no aparezcan hasta la próxima sincronización de tarjetas de contenido.
 
-[1]: {% image_buster /assets/img_archive/card_creation.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/
-[3]: https://www.braze.com/resources/articles/whats-an-app-session-anyway
