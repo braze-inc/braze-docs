@@ -1,5 +1,5 @@
 ---
-nav_title: Api-triggered delivery
+nav_title: API-triggered delivery
 article_title: API-Triggered Delivery
 page_order: 2
 page_type: reference

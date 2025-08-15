@@ -31,7 +31,7 @@ A message's `dispatch_id` will be included in the following messaging endpoint r
 - [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/#sending-messages-immediately-via-api-only)
 - [`/messages/schedule`]({{site.baseurl}}/api/endpoints/messaging/#create-schedule-endpoint)
 - [`/canvases/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/#canvas)
-- [`/canvases/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#API-triggered-canvases)
+- [`/canvases/trigger/schedule`]({{site.baseurl}}/api/endpoints/messaging/#api-triggered-canvases)
 
 This way, customers who use transactional messaging can trace the call back through Currents.
 
