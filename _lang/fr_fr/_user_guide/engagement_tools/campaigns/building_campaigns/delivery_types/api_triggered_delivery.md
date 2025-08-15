@@ -23,14 +23,14 @@ Une campagne déclenchée par API est différente d'une [campagne API]({{site.ba
 
 Ensuite, configurez votre copie et vos notifications de la même manière que vous le feriez normalement pour les notifications planifiées et sélectionnez **API-Triggered Delivery**. Pour plus d'informations sur le déclenchement de ces campagnes à partir de votre serveur, consultez cet article sur l'[envoi de campagnes déclenché par l'API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 
-![][37]
+![]({% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %})
 
 ## Utiliser le contenu modélisé compris dans une demande API
 
 En plus de déclencher le message, vous pouvez également inclure du contenu avec la demande API à modéliser dans le message avec l’objet `trigger_properties`. Ce contenu peut être référencé dans le corps du message. Par exemple, vous pouvez inclure :
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. Consultez l'exemple de notification sociale suivant pour plus de détails :
 
-![Les propriétés de déclenchement mentionnées ci-dessus sont comprises dans le message pour remplir automatiquement le nom de l’utilisateur, suivi du texte : « a aimé votre photo ! Cliquez ici pour voir ce qu'ils ont fait".][38]{: style="max-width:70%;"}
+![Les propriétés de déclenchement mentionnées ci-dessus sont comprises dans le message pour remplir automatiquement le nom de l’utilisateur, suivi du texte : « a aimé votre photo ! Cliquez ici pour voir ce qu'ils ont fait".]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## Rééligibilité aux campagnes déclenchées par les API
 
@@ -38,11 +38,6 @@ Le nombre de fois où un utilisateur reçoit une campagne déclenchée par API p
 
 Supposons par exemple que vous utilisiez une campagne déclenchée par API pour envoyer à l’utilisateur une campagne sur un élément qu’il a récemment consulté. Dans ce cas, vous pouvez limiter la campagne pour envoyer au maximum un message par jour, quel que soit le nombre d’éléments qu’ils ont vus tout en activant le déclencheur API pour chaque élément. D’autre part, si votre campagne déclenchée par API est transactionnelle, vous devez vous assurer que l’utilisateur reçoive la campagne chaque fois qu’il effectue la transaction en définissant le délai sur zéro minute.
 
-![][43]
+![]({% image_buster /assets/img_archive/api_triggered_reeligible.png %})
 
 
-[37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
-[38]: {% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}
-[39]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[42]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[43]: {% image_buster /assets/img_archive/api_triggered_reeligible.png %}

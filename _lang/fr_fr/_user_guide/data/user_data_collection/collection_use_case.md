@@ -53,10 +53,9 @@ Ces caractéristiques peuvent ensuite être des balises  pour les attributs pers
 Ces attributs vous permettent d'envoyer des campagnes à des utilisateurs tels que :
 
 1. Rappeler aux utilisateurs qui n'ont pas utilisé l'application depuis sept jours et qui disposent d'un crédit promotionnel sur leur compte de revenir sur l'application et d'utiliser ce crédit.
-2. En utilisant nos modèles de message et [les fonctionnalités de personnalisation][13] pour glisser l'attribut de code de promotion unique dans les messages destinés aux utilisateurs.
+2. En utilisant nos modèles de message et [les fonctionnalités de personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) pour glisser l'attribut de code de promotion unique dans les messages destinés aux utilisateurs.
 
 {% alert important %}
 Braze bannira ou bloquera les utilisateurs ("utilisateurs fictifs") ayant plus de 5 000 000 de sessions et n'ingérera plus leurs événements SDK car ils sont généralement le résultat d'une mauvaise intégration. Si vous constatez que cela s’est produit pour un utilisateur légitime, contactez votre gestionnaire de compte Braze.
 {% endalert %}
 
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

@@ -21,7 +21,7 @@ Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'admini
 
 Cette page est l'endroit où vous pouvez gérer les informations de contact de votre entreprise et le fuseau horaire. Assurez-vous de cliquer sur **Enregistrer** avant de quitter la page !
 
-### Conséquences du changement de fuseau horaire
+## Conséquences du changement de fuseau horaire
 
 {% alert warning %}
 

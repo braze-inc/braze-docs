@@ -33,6 +33,9 @@ guide_featured_list:
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
+  - name: Résolution des problèmes des toiles
+    link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 {% alert important %}

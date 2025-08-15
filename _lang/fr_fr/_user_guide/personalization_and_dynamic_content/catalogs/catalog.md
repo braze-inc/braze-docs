@@ -50,14 +50,14 @@ Sélectionnez **Créer un catalogue**, puis choisissez de **charger un fichier C
 
 ### Méthode 1 : Charger un fichier CSV
 
-1. Glissez-déposez votre fichier dans la zone de téléchargement ou sélectionnez **Télécharger CSV** et choisissez votre fichier. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Glissez-déposez votre fichier dans la zone de téléchargement ou sélectionnez **Télécharger CSV** et choisissez votre fichier. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. Sélectionnez l’un des types de données suivants pour chaque colonne : booléen, nombre, chaîne de caractères ou temps.
-<br> ![][9]{: style="max-width:80%;"} <br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. Nommez votre catalogue. Gardez à l’esprit les exigences suivantes pour le nom du catalogue :
 - Doit être unique
 - Maximum de 250 caractères
 - Peut uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement<br><br>
-4. (facultatif) Ajoutez une description pour le catalogue.
+4. (Facultatif) Ajoutez une description pour le catalogue.
 5. Sélectionnez **Process Catalog** pour créer le catalogue.
 
 {% alert note %}
@@ -87,11 +87,11 @@ Pour modifier ou créer des catalogues dans le navigateur, vous devez disposer d
 1. Saisissez un nom pour votre catalogue. Gardez à l’esprit les exigences suivantes pour le nom de votre catalogue :
 - Doit être unique
 - Jusqu’à 250 caractères
-- Peut uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement <br> ![Un catalogue nommé "mon_catalogue".][14]{: style="max-width:80%;"} <br><br>
-2. (facultatif) Saisissez une description de votre catalogue.
+- Peut uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement <br> ![Un catalogue nommé "mon_catalogue".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
+2. (Facultatif) Saisissez une description pour votre catalogue.
 3. Sélectionnez le catalogue que vous venez de créer dans la page **Catalogues** de la liste pour mettre à jour votre catalogue.
-4. Sélectionnez **Mettre à jour le catalogue** > **Ajouter des champs** pour ajouter vos champs. Saisissez ensuite le **nom du champ** et utilisez le menu déroulant pour sélectionner le type de données. Répétez l’opération en fonction de vos besoins.<br> ![Deux exemples de champs "rating" et "name".][12]{: style="max-width:50%;"}<br><br>
-5. Sélectionnez **Mettre à jour le catalogue** > **Ajouter des éléments** pour ajouter un élément à votre catalogue en saisissant les informations basées sur les champs que vous avez précédemment ajoutés. Ensuite, sélectionnez **Enregistrer l'élément** ou **Enregistrer et ajouter un autre** élément pour continuer à ajouter vos éléments. <br> ![Ajouter un article de catalogue.][13]{: style="max-width:50%;"}
+4. Sélectionnez **Mettre à jour le catalogue** > **Ajouter des champs** pour ajouter vos champs. Saisissez ensuite le **nom du champ** et utilisez le menu déroulant pour sélectionner le type de données. Répétez l’opération en fonction de vos besoins.<br> ![Deux exemples de champs "rating" et "name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. Sélectionnez **Mettre à jour le catalogue** > **Ajouter des éléments** pour ajouter un élément à votre catalogue en saisissant les informations basées sur les champs que vous avez précédemment ajoutés. Ensuite, sélectionnez **Enregistrer l'élément** ou **Enregistrer et ajouter un autre** élément pour continuer à ajouter vos éléments. <br> ![Ajouter un article au catalogue.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 Vous pouvez également télécharger un fichier CSV après avoir choisi de créer un catalogue dans le navigateur.
 
@@ -139,11 +139,11 @@ Nous allons créer le catalogue en téléchargeant un fichier CSV. Les types de 
 Ce type de données ne peut pas être modifié après la configuration de votre catalogue.
 {% endalert %}
 
-![Quatre noms de colonnes de catalogue : "id", "title", "price", "image_link".][9]{: style="max-width:85%;"}
+![Quatre noms de colonnes de catalogue : "ID", "title", "price", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Ensuite, nous nommerons ce catalogue "games_catalog" et nous sélectionnerons le bouton **Traiter le catalogue.**  Braze vérifie alors que le catalogue ne contient pas d'erreurs avant de le créer.
 
-![Un catalogue nommé "games_catalog".][11]{: style="max-width:85%;"}
+![Un catalogue nommé "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Notez que vous ne pourrez pas modifier ce nom après la création du catalogue. Vous pouvez supprimer un catalogue et télécharger à nouveau une version mise à jour en utilisant le même nom de catalogue.
 
@@ -171,17 +171,9 @@ Les droits d’utilisation des packages indiqués dans le tableau de bord de Bra
 
 #### Version gratuite
 
-La taille de stockage pour la version gratuite des catalogues est de 100 Mo maximum. Vous disposez d’un nombre illimité de produits, tant que cela ne dépasse pas 100 Mo. Les sélections contribueront à votre stockage. Plus une sélection est complexe, plus elle occupera de place. Il y aura également un décalage de taille entre les données du catalogue CSV et la représentation de ces données dans notre magasin de données.
+La taille de stockage pour la version gratuite des catalogues est de 100 Mo maximum. Vous pouvez avoir un nombre illimité d'articles tant qu'ils ne dépassent pas 100 Mo. 
 
 #### Catalogues Pro
 
 Au niveau de l'entreprise, le stockage maximum pour Catalogues Pro est basé sur la taille des données du catalogue. Les options de taille de stockage sont les suivantes : 5 Go, 10 Go ou 15 Go. Notez que l'espace de stockage de la version gratuite (100 Mo) est inclus dans chacun de ces plans.
 
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
-[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
-[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
-[12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
-[13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
-[14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}

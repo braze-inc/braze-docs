@@ -15,17 +15,17 @@ description: "Cet article de référence explique comment créer des listes de c
 
 Les codes de promotion également appelés codes promo, sont un excellent moyen de maintenir l’engagement des utilisateurs en conduisant des interactions en soulignant les achats. Vous pouvez créer des messages à partir de votre liste de codes de promotion. 
 
-Chaque code de promotion a une date d'expiration pouvant aller jusqu'à six mois. Vous pouvez stocker et gérer jusqu'à 20 millions de codes par liste. En gérant et en analysant les performances de vos codes de promotion, vous pouvez prendre des décisions ciblées pour vos stratégies promotionnelles et vos envois de messages.
+Chaque code de promotion a une date d'expiration pouvant aller jusqu'à six mois et peut être supprimé avant son expiration en contactant le [service d'assistance.]({{site.baseurl}}/user_guide/administrative/access_braze/support/) Vous pouvez stocker et gérer jusqu'à 20 millions de codes par liste. En gérant et en analysant les performances de vos codes de promotion, vous pouvez prendre des décisions ciblées pour vos stratégies promotionnelles et vos envois de messages.
 
 {% alert important %}
-Les codes de promotion ne peuvent pas être envoyés dans des messages in-app.
+Les codes de promotion ne peuvent pas être envoyés dans les messages in-app dans Canvas. Si vous participez à l' [accès anticipé](#promotion-codes-iam-campaigns), des codes de promotion peuvent être envoyés dans des campagnes de messages in-app.
 {% endalert %}
 
 ## Créer une liste de codes de promotion
 
 ### Étape 1 : Accédez à la section Code de promotion
 
-![Bouton permettant de créer un code de promotion.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Bouton permettant de créer un code de promotion.]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 1. Dans le tableau de bord, allez dans **Paramètres des données** > **Codes de promotion**.
 2. Sélectionnez **Créer une liste de codes de promotion**.
@@ -42,7 +42,7 @@ Voici quelques détails à prendre en compte lors de la création d'un extrait d
 - Utilisez le nom de l'extrait dans Liquid pour référencer cet ensemble de codes de promotion.
 - Assurez-vous que l'extrait de code n'est pas déjà utilisé dans une autre liste.
 
-![Une liste de codes de promotion nommée "SpringSale2025" avec l'extrait de code "spring25".][3]{: style="max-width:80%"}
+![Une liste de codes de promotion nommée "SpringSale2025" avec l'extrait de code "spring25".]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:80%"}
 
 ### Étape 3 : Choisissez les options du code de promotion
 
@@ -50,11 +50,11 @@ Chaque liste de codes de promotion est assortie d'une date et d'une heure d'expi
 
 Dans ce délai, vous pouvez modifier et mettre à jour la date d’expiration à plusieurs reprises. Cette date d’expiration s’applique à tous les codes ajoutés à cette liste. À l’expiration, les codes sont supprimés du système Braze et tous les messages appelant l’extrait de code de cette liste ne sont pas envoyés.
 
-![Les paramètres d'expiration de la liste indiquent que tous les codes restants expireront le 30 avril 2025 à 12 heures.][4]{: style="max-width:80%"}
+![Les paramètres d'expiration de la liste indiquent que tous les codes restants expireront le 30 avril 2025 à 12 heures.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
 Vous avez également la possibilité de mettre en place des alertes de seuil facultatives et personnalisées. Si cette option est définie, ces alertes envoient un e-mail au destinataire désigné, soit lorsque la liste est en cours de fonctionnement sur les codes de promotion disponibles dans cette liste, soit lorsque votre liste de codes de promotion est proche de l’expiration. Le destinataire est notifié une fois par jour.
 
-![Exemple de seuil d'alerte permettant d'avertir "marketeur@abc.com" lorsque la liste des codes promotionnels expire dans 5 jours.][5]{: style="max-width:80%"}
+![Exemple de seuil d'alerte permettant d'avertir "marketing@abc.com" lorsque la liste des codes de promotion expire dans 5 jours.]({% image_buster /assets/img/promocodes/promocode5.png %}){: style="max-width:80%"}
 
 ### Étape 4 : Télécharger des codes de promotion
 
@@ -65,7 +65,7 @@ Veillez à ce que votre fichier CSV respecte ces directives :
 - Comprend une colonne pour les codes de promotion.
 - Chaque ligne contient un code de promotion.
 
-Vous pouvez utiliser notre intégration intégrée avec [Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) pour créer et exporter des codes de promotion.
+Vous pouvez utiliser notre intégration intégrée avec [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) pour créer et exporter des codes de promotion.
 
 {% alert important %}
 La taille maximale du fichier est de 100 Mo et la taille maximale de la liste est de 20 MM de codes non utilisés. Si vous constatez que le fichier téléchargé n'est pas le bon, téléchargez-en un nouveau et le précédent sera remplacé.
@@ -73,13 +73,13 @@ La taille maximale du fichier est de 100 Mo et la taille maximale de la liste e
 
 1. Une fois le téléchargement terminé, sélectionnez **Enregistrer la liste** pour enregistrer tous les détails et codes que vous venez de saisir.
 
-![Fichier CSV nommé "springsale" qui a été téléchargé avec succès.][7]
+![Fichier CSV nommé "springsale" qui a été téléchargé avec succès.]({% image_buster /assets/img/promocodes/promocode7.png %})
 
 {:start="2"}
 2\. Lorsque vous cliquez sur Enregistrer, une nouvelle ligne apparaît dans l'**historique des importations**.
 3\. Pour actualiser le tableau afin de savoir si votre importation est terminée, sélectionnez <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** en haut du tableau.
 
-![Les codes de promotion sont en cours de téléchargement.][8]
+![Les codes de promotion sont en cours de téléchargement.]({% image_buster /assets/img/promocodes/promocode8.png %})
 
 {% alert note %}
 Les fichiers plus volumineux prendront quelques minutes à importer. Pendant que vous attendez, vous pouvez quitter la page et travailler sur autre chose pendant que l'importation est en cours. Lorsque l'importation est terminée, le statut devient **Complet** dans le tableau.
@@ -97,12 +97,12 @@ Pour envoyer des codes de promotion dans les messages :
 
 1. Sélectionnez **Copier l'** extrait de code pour copier l'extrait de code que vous avez défini lors de la création de votre liste de codes de promotion.
 
-![Une option permettant de copier l'extrait de code pour le coller dans votre message.][9]{: style="max-width:70%"}
+![Option permettant de copier l'extrait de code pour le coller dans votre message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
 {:start="2"}
 2\. À partir de là, vous pouvez coller ce code dans un message du tableau de bord.
 
-![Un exemple de message "Offrez-vous quelque chose de beau ce printemps avec notre offre exclusive" suivi de l'extrait de code.][10]{: style="max-width:70%"}
+![Un exemple de message "Offrez-vous quelque chose de beau ce printemps avec notre offre exclusive" suivi de l'extrait de code.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
 À l'aide de [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), vous pouvez insérer dans un message l'un des codes de promotion uniques du fichier CSV téléchargé. Ce code sera marqué comme envoyé sur le backend Braze pour s’assurer qu’aucun autre message n’envoie ce même code.
 
@@ -124,11 +124,21 @@ Les envois de tests et les envois d'e-mails de groupes initiateurs utiliseront l
 
 Vous trouverez le nombre de codes restants dans la colonne **Reste de** la liste des codes de promotion sur la page **Codes de promotion**.
 
-![Un exemple de code de promotion avec des codes non utilisés.][12]
+![Exemple de code de promotion avec des codes non utilisés.]({% image_buster /assets/img/promocodes/promocode11.png %})
 
 Ce nombre de codes peut également être trouvé en revisitant une page de liste de codes de promotion préexistante. Vous pouvez également exporter les codes d'exportation sous la forme d'un fichier CSV. 
 
-![Un code de promotion nommé "Black Friday Sale" avec 992 codes restants.][13]{: style="max-width:70%"}
+![Un code de promotion nommé "Black Friday Sale" avec 992 codes restants.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+
+### Utilisation de codes de promotion dans les campagnes de messages in-app. {#promotion-codes-iam-campaigns}
+
+{% alert important %}
+L'utilisation de codes de promotion dans les campagnes de messages in-app est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
+
+Après avoir créé une [campagne de messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), vous pouvez insérer un [extrait de liste de codes de promotion]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) dans le corps de votre message in-app. 
+
+Les codes promotionnels dans les messages in-app seront déduits et utilisés uniquement lorsqu'un utilisateur déclenche l'affichage du message in-app.
 
 ## Envois multicanaux et monocanaux
 
@@ -191,13 +201,3 @@ Si le message contient une logique conditionnelle d'insertion d'un code promotio
 
 Pour référencer le même code de promotion dans les messages suivants, le code doit être enregistré dans le profil de l'utilisateur en tant qu'attribut personnalisé. Pour ce faire, vous pouvez attacher un [webhook Braze à Braze à]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) la même campagne ou à la même étape du message canvas.
 
-[1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[3]:{% image_buster /assets/img/promocodes/promocode3.png %}
-[4]:{% image_buster /assets/img/promocodes/promocode4.png %}
-[5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[7]:{% image_buster /assets/img/promocodes/promocode7.png %}
-[8]:{% image_buster /assets/img/promocodes/promocode8.png %}
-[9]:{% image_buster /assets/img/promocodes/promocode9.png %}
-[10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[12]: {% image_buster /assets/img/promocodes/promocode11.png %}
-[13]: {% image_buster /assets/img/promocodes/promocode12.png %}

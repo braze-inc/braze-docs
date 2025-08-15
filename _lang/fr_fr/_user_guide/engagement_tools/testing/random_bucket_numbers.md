@@ -33,7 +33,7 @@ Si vous souhaitez segmenter les utilisateurs pour des essais au sein d'une même
 
 Lors de la [création d'un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), ajoutez le filtre "Random Bucket #". Ensuite, indiquez un nombre ou une plage de nombres à inclure dans votre segmentation.
 
-![][2]
+![Un filtre de segmentation pour les numéros de compartiment aléatoires ne dépassant pas "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Vous voudrez peut-être utiliser ces types de segments si vous souhaitez exécuter un test de trois variantes différentes et inclure également un groupe de contrôle. Observez le plan d’échantillonnage suivant pour la création de segments de taille égale pour trois variantes et un groupe de contrôle :
 
@@ -57,4 +57,3 @@ La réinscription aléatoire d'une audience peut être utile pour les [tests A/B
 5. Lancez votre campagne et surveillez les performances de chaque compartiment. Vous pouvez analyser des indicateurs tels que les taux d'engagement et les taux de conversion pour déterminer l'efficacité de la réinscription aléatoire de l'audience dans le cadre de votre cas d'utilisation.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

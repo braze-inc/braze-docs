@@ -13,11 +13,11 @@ description: "Cet article de référence explique comment exporter les données 
 
 Pour exporter les données d'un segment vers un fichier CSV, sélectionnez le menu déroulant **Données utilisateur** lorsque vous modifiez un segment et choisissez d'exporter soit les données utilisateur, soit les adresses e-mail pour le segment.
 
-![La section Détails du segment avec la liste déroulante Données de l'utilisateur affichant les options d'exportation.][1]
+![La section Détails du segment avec la liste déroulante Données de l'utilisateur affichant les options d'exportation.]({% image_buster /assets/img_archive/csvexport.png %})
 
 Vous pouvez également demander une exportation CSV à partir de la page principale **Segments** en sélectionnant le menu déroulant <i class="fas fa-gear"></i> **Settings** pour un segment :
 
-![dans le menu déroulant Paramètres de la page principale des segments.][2]
+![Liste déroulante des paramètres sur la page principale des segments.]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 Pour exporter les données de tous vos profils utilisateurs, créez une segmentation sans filtre, puis demandez une exportation CSV.
@@ -29,7 +29,7 @@ Le fichier CSV contient les données de chaque profil utilisateur capturé dans 
 En raison des limites de taille de fichier, votre exportation peut échouer si la taille estimée de votre segment fait plus de 500 000 utilisateurs. Notez que cette restriction est basée sur la taille estimée de votre segment, et non sur la taille exacte. Pour plus de détails, voir [Exporter des segments volumineux]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).
 {% endalert %}
 
-Si vous avez lié vos [identifiants Amazon S3][26] à Braze, le CSV sera chargé dans votre compartiment S3 sous la clé `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Le lien qui vous est envoyé par e-mail expirera après un jour d'exportation et vous devrez être connecté au tableau de bord pour y accéder.
+Si vous avez lié vos [identifiants Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) à Braze, le fichier CSV sera téléchargé dans votre compartiment S3 sous la clé `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Le lien qui vous est envoyé par e-mail expirera après un jour d'exportation et vous devrez être connecté au tableau de bord pour y accéder.
 
 ## Données incluses dans l'exportation
 
@@ -95,6 +95,3 @@ Les éléments suivants sont inclus dans votre exportation en fonction de votre 
 Pour obtenir de l'aide sur les exportations CSV et API, consultez notre article de [résolution des problèmes]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %} 
 
-[1]: {% image_buster /assets/img_archive/csvexport.png %}
-[2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

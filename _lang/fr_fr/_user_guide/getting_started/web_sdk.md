@@ -24,31 +24,31 @@ Un kit de développement logiciel (SDK) est un ensemble d'outils préfabriqués 
 
 Pour intégrer un SDK dans votre application ou votre site, quelqu’un devra ajouter le code du SDK à la base de code globale qui alimente cette application. Votre équipe d’ingénierie sera donc impliquée pour, en somme, relier nos applications ensemble afin que les informations et les actions circulent entre elles. Mais bien que vos développeurs soient impliqués, le SDK est conçu pour être léger et facile à intégrer. 
 
-Pour vous faire gagner du temps et assurer une intégration fluide, nous vous recommandons, à vous et à votre équipe d’ingénierie, de configurer vos événements personnalisés, vos attributs personnalisés et le SDK en même temps. Découvrez les étapes auxquelles vos équipes de marketing et d'ingénierie devront réfléchir ensemble en lisant notre [article sur la mise en œuvre][4]. 
+Pour vous faire gagner du temps et assurer une intégration fluide, nous vous recommandons, à vous et à votre équipe d’ingénierie, de configurer vos événements personnalisés, vos attributs personnalisés et le SDK en même temps. Découvrez les étapes auxquelles vos équipes de marketing et d'ingénierie devront réfléchir ensemble en lisant notre [article sur la mise en œuvre]({{site.baseurl}}/user_guide/getting_started/integration/). 
 
 ## Agrégation des données
 
-Le SDK Braze capture automatiquement d’immenses quantités de données au niveau de l’utilisateur, ce qui facilite la visualisation des indicateurs clés pour votre application et votre base d’utilisateurs. Vous regrouperez les applications similaires dans un même espace de travail sur votre tableau de bord. Par exemple, vous regrouperez les versions iOS et Android de votre appli dans le même espace de travail, ce qui vous permettra de voir les données collectées auprès des utilisateurs sur les deux plateformes. Cela vous donne une vue plus complète de vos utilisateurs sur les canaux web et mobiles. Voir l'article sur la [page d'accueil][3] pour plus d'informations.
+Le SDK Braze capture automatiquement d’immenses quantités de données au niveau de l’utilisateur, ce qui facilite la visualisation des indicateurs clés pour votre application et votre base d’utilisateurs. Vous regrouperez les applications similaires dans un même espace de travail sur votre tableau de bord. Par exemple, vous regrouperez les versions iOS et Android de votre appli dans le même espace de travail, ce qui vous permettra de voir les données collectées auprès des utilisateurs sur les deux plateformes. Cela vous donne une vue plus complète de vos utilisateurs sur les canaux web et mobiles. Voir l'article sur la [page d'accueil]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) pour plus d'informations.
 
 ## Envoi de messages in-app
 
-Le SDK permet de composer et d'envoyer facilement des messages in-app pour communiquer directement avec les utilisateurs. Vous pouvez choisir d’envoyer des messages slideup, modal ou plein écran en fonction de votre stratégie de campagne. Pour plus d'informations sur la composition d'un message in-app, consultez notre page sur la [création d'un message in-app][8].
+Le SDK permet de composer et d'envoyer facilement des messages in-app pour communiquer directement avec les utilisateurs. Vous pouvez choisir d’envoyer des messages slideup, modal ou plein écran en fonction de votre stratégie de campagne. Pour plus d'informations sur la composition d'un message in-app, consultez notre page sur la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
-![Push affiché sur un navigateur web][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Push affiché sur un web navigateur]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Notifications push
 
-Les notifications push sont une autre excellente option pour engager le dialogue avec vos utilisateurs et sont particulièrement utiles pour gérer les appels à l'action sensibles au temps. Les notifications push mobiles apparaissent sur les appareils de vos utilisateurs, et les notifications push web apparaissent même lorsque votre site n'est pas ouvert. Pour en savoir plus sur l'utilisation des notifications push, consultez notre [article sur les notifications push.][5]
+Les notifications push sont une autre excellente option pour engager le dialogue avec vos utilisateurs et sont particulièrement utiles pour gérer les appels à l'action sensibles au temps. Les notifications push mobiles apparaissent sur les appareils de vos utilisateurs, et les notifications push web apparaissent même lorsque votre site n'est pas ouvert. Pour en savoir plus sur l'utilisation des notifications push, consultez notre [article sur les notifications push.]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 
-Les utilisateurs de votre application ou de votre site Internet doivent s’abonner pour recevoir des notifications push. Pour plus de détails, voir [amorçage de notifications push][13]. 
+Les utilisateurs de votre application ou de votre site Internet doivent s’abonner pour recevoir des notifications push. Voir l'[amorçage de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) pour plus de détails. 
 
 ## Règles de segmentation et de livraison
 
 Par défaut, une campagne contenant des messages in-app sera envoyée à toutes les versions de l'application dans cet espace de travail. Par exemple, le message sera envoyé aux utilisateurs Web et mobiles. Pour envoyer un message in-app exclusivement sur Internet ou mobile, vous devez segmenter votre campagne en conséquence, ce qui est pris en charge par défaut sur le SDK Braze. 
 
-Vous pouvez créer un segment de vos utilisateurs Web en sélectionnant uniquement l'icône de l'application de votre site Web dans la section **Applications utilisées** d’un segment.
+Vous pouvez créer un segment de vos internautes en définissant des **Apps et des sites web ciblés** sur les **Utilisateurs d'apps spécifiques**, puis sélectionner uniquement votre site web pour les **Apps spécifiques.**
 
-![Page Détails du segment avec application Web sélectionnée][10]
+![Page de détails du segment avec l'application web au premier plan]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Cela vous permet de cibler de façon intelligente les utilisateurs en fonction de leur comportement. Si vous souhaitez cibler des utilisateurs Web pour les encourager à télécharger votre application mobile, vous pouvez créez ce segment comme votre audience cible. Si vous souhaitez envoyer une campagne de communication comprenant un message mobile in-app mais pas de message web, vous décochez l'icône de votre site Web dans votre segment.
 
@@ -81,11 +81,3 @@ Toutes les intégrations   |    |   
 [![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin) 
 [![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine)
 
-[3]: {{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/
-[4]: {{site.baseurl}}/user_guide/getting_started/integration/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[7]: {% image_buster /assets/img_archive/app_group_list.png %}
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/
-[10]: {% image_buster /assets/img_archive/web-users-segment.png %}
-[11]: {% image_buster /assets/img_archive/web_push_macbook.png %}
-[13]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/push/best_practices/push_primer_messages/

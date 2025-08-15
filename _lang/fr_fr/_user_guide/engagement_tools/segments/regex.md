@@ -1,7 +1,7 @@
 ---
 nav_title: "Expressions régulières"
 article_title: Expressions régulières
-page_order: 6
+page_order: 10
 
 description: "Cet article de référence explique ce que sont les expressions régulières et comment les utiliser, tout en proposant des solutions pour valider et tester des expressions régulières."
 page_type: reference
@@ -16,13 +16,13 @@ tool:
 
 > Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous exploitons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.<br><br>Cette page traite des expressions régulières (regex), de leur utilisation, des questions fréquemment posées et propose un débogueur regex pour tester les expressions régulières.
 
-Dans le cours d'apprentissage de Braze lié, nous vous montrons comment les expressions régulières peuvent être utilisées et testées sur [Regex101\.][regex] Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), une page de références utiles, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
+Dans le cours d'apprentissage de Braze lié, nous vous montrons comment les expressions régulières peuvent être utilisées et testées sur [Regex101\.](https://regex101.com/) Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), une page de références utiles, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
 
 ## Ressources
 
 - [Les bases des expressions régulières](https://learning.braze.com/regular-expression-basics-for-braze) Cours d'apprentissage de Braze
 - [Aide-mémoire sur les expressions régulières]({{site.baseurl}}/regex_cheat_sheet/)
-- [Exemple de données RTF][dummydata]
+- [Exemple de données RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## Débogueur des expressions régulières
 
@@ -194,7 +194,7 @@ Par exemple, si vous essayez de cibler des utilisateurs qui vivent dans des vill
 
 #### Comment filtrer des numéros de téléphone spécifiques ?
 
-Avant d'utiliser une expression régulière pour filtrer les numéros de téléphone, n'oubliez pas que les numéros enregistrés pour les profils utilisateurs doivent être au format [E.164](https://en.wikipedia.org/wiki/E.164) comme spécifié dans [Numéros de téléphone des utilisateurs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
+Avant d'utiliser une expression régulière pour filtrer les numéros de téléphone, n'oubliez pas que les numéros enregistrés pour les profils utilisateurs doivent être au format [E.164](https://en.wikipedia.org/wiki/E.164) comme spécifié dans [Numéros de téléphone des utilisateurs]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/).
 
 En supposant que vous recherchez des numéros de téléphone aux États-Unis, utilisez le format d’expression régulière `1?\d\d\d\d\d\d\d\d\d\d`, dans lequel chaque répétition de `\d` est un chiffre que vous souhaitez spécifier. Les trois premiers chiffres correspondent à l’indicatif régional.
 
@@ -209,5 +209,3 @@ Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro d
 ![Filtre pour un numéro de téléphone qui correspond à l'expression régulière "^1?718d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
-[regex]: https://regex101.com/
-[dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

@@ -13,7 +13,7 @@ tool: Currents
 
 ### Comment obtenir des données historiques ?
 
-Currents est un flux de données en continu et en temps réel, ce qui signifie que les événements ne peuvent pas être rejoués. Toutefois, vous pouvez stocker les données Currents dans un entrepôt de données tel qu'[Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/) ou [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/), afin de pouvoir agir sur les événements passés comme bon vous semble. Les données sont conservées pendant 30 jours, mais pour obtenir des données plus historiques, vous pouvez interroger [Snowflake]({{site.baseurl}}/user_guide/data/braze_currents/s3_to_snowflake/).
+Currents est un flux de données en continu et en temps réel, ce qui signifie que les événements ne peuvent pas être rejoués. Toutefois, vous pouvez stocker les données Currents dans un entrepôt de données tel qu'[Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) ou [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/), afin de pouvoir agir sur les événements passés comme bon vous semble. Les données sont conservées pendant 30 jours, mais pour obtenir des données plus historiques, vous pouvez interroger [Snowflake]({{site.baseurl}}/user_guide/data/braze_currents/s3_to_snowflake/).
 
 ### Pourquoi Currents fournit-il des données au format Avro et non JSON ?
 
@@ -26,6 +26,6 @@ Nous créons un processus d'extraction, de transformation et de chargement (ETL)
 ### Où dois-je stocker ces données pour pouvoir les interroger ?
 
 Braze est partenaire de plusieurs entrepôts de données dans lesquels vous pouvez stocker vos données pour les interroger. Nous vous recommandons d'utiliser :
-- [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/)
-- [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/)
-- [Google cloud storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/).
+- [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)
+- [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/)
+- [Google cloud storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).

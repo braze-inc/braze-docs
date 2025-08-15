@@ -15,8 +15,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Avec l’éditeur par glisser-déposer, vous pouvez créer des messages in-app entièrement personnalisés dans les campagnes ou les canvas à l’aide de l’expérience de modification par glisser-déposer.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
-
 Si vous souhaitez utiliser vos modèles HTML personnalisés existants ou des modèles créés par un tiers, ils doivent être recréés dans l'éditeur par glisser-déposer.
 
 Vous ne savez pas si votre message in-app doit être envoyé à l'aide d'une campagne ou d'un [canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes. Une fois que vous avez choisi l'endroit où créer votre message, passons aux étapes permettant de créer un message in-app par glisser-déposer.
@@ -69,7 +67,7 @@ Après avoir sélectionné l'éditeur par glisser-déposer comme expérience d'�
 
 Sélectionnez **Créer un message** pour commencer à concevoir votre message in-app dans l'éditeur glisser-déposer.
 
-![La section Modèles de Braze vous permet de choisir un modèle de base, une image d'arrière-plan, une capture de numéro de téléphone ou un modèle vierge.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![La section Modèles de Braze vous permet de choisir un modèle de base, une image d'arrière-plan, une capture de numéro de téléphone ou un modèle vierge.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 Vous pouvez également accéder à tous les modèles à partir de la section **Modèles** du tableau de bord.
 
@@ -175,6 +173,8 @@ Les clics du corps ne sont pas automatiquement collectés pour les messages in-a
 
 Oui, vous pouvez segmenter en fonction des clics de bouton pour un maximum de deux boutons dans votre message. Pour ce faire, définissez l'**Identifiant pour le reporting** de vos boutons sur "0" et "1", qui correspondront respectivement aux filtres de segmentation "Clic sur le bouton 1 du message in-app" et "Clic sur le bouton 2 du message in-app".
 
+![Le champ "Identifiant pour le rapport" avec une valeur de "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### Puis-je personnaliser mon message in-app à l'aide de HTML ou de JavaScript personnalisés ou transférer des messages HTML existants dans l'éditeur ?
 
 Vous ne pouvez pas transférer directement des messages HTML existants dans l'éditeur, mais vous pouvez insérer du HTML brut, du CSS et du JavaScript dans un bloc de code personnalisé. Vous pouvez utiliser les blocs de code personnalisé pour intégrer des vidéos de tiers et des liquides avancés, tels que le contenu connecté ou les instructions conditionnelles.
@@ -187,6 +187,6 @@ Actuellement, l'éditeur est limité aux messages modaux et plein écran. Vous p
 
 Oui. Pour tout message in-app que vous souhaitez réutiliser dans une prochaine campagne ou étape du canvas, vous pouvez l'enregistrer en tant que modèle personnalisé à l'aide du bouton **Enregistrer en tant que modèle**, disponible après avoir quitté l'éditeur. Avant de pouvoir l'enregistrer en tant que modèle, vous devez d'abord lancer la campagne OU l'enregistrer en tant que brouillon.
 
-![Aperçu d'un message in-app pour l'inscription à des mises à jour textuelles.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![Aperçu d'un message in-app pour une visite de produit.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 Vous pouvez également créer et enregistrer des modèles de messages in-app en naviguant vers **Modèles** > **Modèles de messages in-app.**

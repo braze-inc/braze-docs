@@ -14,10 +14,6 @@ search_rank: 4
 
 Les cartes de contenu sont une fonctionnalité supplémentaire et doivent être achetées. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients ou l’équipe support de Braze.
 
-{% alert note %}
-Nous recommandons aux clients qui utilisent notre fil d'actualité de passer à notre canal de communication de Cartes de contenu. Il est plus flexible, plus personnalisable et plus fiable. Le fil d'actualité est également supprimé. Consultez notre [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou contactez votre gestionnaire de compte Braze pour plus d'informations.
-{% endalert %}
-
 ## Avantages de l'utilisation des cartes de contenu
 
 Voici quelques avantages de l'utilisation des cartes de contenu par rapport au fait de demander à vos développeurs de créer du contenu dans votre application :
@@ -176,9 +172,9 @@ Les utilisateurs peuvent afficher le contenu le plus pertinent auquel ils sont �
 
 Vos développeurs intégreront les cartes de contenu lorsqu’ils intégreront le SDK Braze. Pour plus de détails sur l’intégration avec les cartes de contenu, consultez les articles du guide du développeur pour votre plateforme :
 
-- [ sous iOS]({{site.baseurl}}/developer_guide/platforms/swift/content_cards/ "Guide d’intégration des cartes de contenu")
-- [ sous Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Guide d'intégration des cartes de contenu")
-- [ Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Guide d'intégration des cartes de contenu")
+- [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web)
 
 ## Sources
 

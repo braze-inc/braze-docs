@@ -15,7 +15,7 @@ channel:
 
 ## Conditions
 
-Braze n'est pas responsable de l'enregistrement des utilisateurs auprès de Google ou du respect des exigences de sécurité nécessaires.
+Braze n'est pas responsable de l'enregistrement des utilisateurs auprès de Google ou du respect des exigences de sécurité nécessaires. AMP pour les e-mails est disponible uniquement pour SparkPost et SendGrid.
 
 | Condition   | Description |
 | --------------| ----------- |
@@ -42,7 +42,7 @@ Pour une liste complète des clients e-mail pris en charge, consultez la [docume
 
 Accédez à vos paramètres Gmail et sélectionnez **Activer l'e-mail dynamique** dans la rubrique **Général.**
 
-![Exemple de paramètres Gmail avec la case « Activer la messagerie dynamique » cochée.][1]
+![Exemple de paramètres Gmail avec la case "Activer l'e-mail dynamique" cochée.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## Utilisation de l’API
 
@@ -252,4 +252,3 @@ Si aucune de ces conditions n'est à l'origine de l'erreur, contactez le [servic
 Nous vous recommandons de ne pas segmenter pour envoyer à tous les types d’utilisateurs. La raison en est que nous envoyons les messages AMP en plusieurs parties en ayant les différentes versions comprises dans l’e-mail d’origine. Si un utilisateur ne peut pas voir la version AMP, il reviendra par défaut à la version HTML. 
 
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}

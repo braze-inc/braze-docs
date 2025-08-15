@@ -1,7 +1,7 @@
 ---
 nav_title: Créer un segment
 article_title: Créer un segment
-page_order: 1
+page_order: 0
 page_type: tutorial
 description: "Cet article pratique vous explique comment configurer et créer un segment avec Braze."
 tool: Segments
@@ -25,7 +25,7 @@ Si vous le souhaitez, vous pouvez effectuer les opérations suivantes :
 - Ajoutez une [équipe]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) à votre segmentation.
 - Ajoutez des [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) à votre segmentation pour mieux l'organiser.
 
-![Créez une fenêtre modale/boîte de dialogue où le segment est nommé "Utilisateurs déchus" et la description du segment est la suivante : "Il s'agit de notre principal segment d'utilisateurs déchus pour cibler les non-actifs au cours des quatorze derniers jours", avec deux boutons, etc : Annuler et Créer un segment.][2]{: style="max-width:70%;"}
+![Créez une fenêtre modale/boîte de dialogue où le segment est nommé "Utilisateurs déchus" et la description du segment est la suivante : "Il s'agit de notre principal segment d'utilisateurs déchus pour cibler les non-actifs au cours des quatorze derniers jours", avec deux boutons, etc : Annuler et créer un segment.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## Étape 3 : Choisissez votre application ou plateforme
 
@@ -33,7 +33,7 @@ Choisissez les applications ou plateformes que vous souhaitez cibler en sélecti
 
 Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareils iOS, sélectionnez votre application iOS. Cela permettra aux utilisateurs qui peuvent utiliser à la fois un appareil iOS et Android de recevoir uniquement le message sur leur appareil iOS. Dans la liste des apps spécifiques, l'option **Utilisateurs ne provenant d'aucune app** vous permet d'inclure des utilisateurs sans sessions ni données d'apps (généralement créés via l'importation d'utilisateurs ou l'API REST).
 
-![Panneau Détails du segment avec l'option "Utilisateurs de toutes les applications" sélectionnée dans la section Apps utilisées.][5]{: style="max-width:70%;"}
+![Panneau Détails du segment avec l'option "Utilisateurs de toutes les applications" sélectionnée dans la section Applications utilisées.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## Étape 4 : Ajoutez des filtres à votre segment
 
@@ -47,11 +47,9 @@ Braze ne crée pas de profils pour les utilisateurs tant qu’ils n’ont pas ut
 
 Les filtres sont organisés en groupes de filtres. Chaque filtre doit faire partie d'un groupe de filtres comprenant au minimum un filtre. Un segment peut avoir plusieurs groupes de filtres. Pour en ajouter un, sélectionnez **Ajouter un groupe de filtres**. Modifiez le nom du groupe de filtres en sélectionnant l'icône qui apparaît lorsque vous passez la souris à côté.
 
-![Groupe de filtres avec une icône de modification à côté de son nom.][14]{: style="max-width:70%;"}
+![Groupe interne avec une icône de modification à côté de son nom.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
-Sélectionnez les icônes en regard de chaque filtre pour réduire l'éditeur de filtres, dupliquer le filtre ou le supprimer. Après avoir dupliqué un filtre, vous pouvez ajuster ses valeurs dans chaque liste déroulante.
-
-Vous pouvez également utiliser l'icône à l'intérieur de chaque groupe de filtres pour dupliquer ce groupe de filtres et les filtres qu'il contient, ou pour supprimer ce groupe de filtres de votre segmentation.
+Sélectionnez les icônes situées à côté de chaque filtre pour réduire l'éditeur de filtres ou dupliquer des filtres individuels. Après avoir dupliqué un filtre, vous pouvez ajuster ses valeurs dans chaque liste déroulante.
 
 #### Logique de segmentation utilisant AND et OR
 
@@ -73,7 +71,7 @@ Selon le filtre spécifique que vous sélectionnez, vous disposerez de différen
 Braze ne crée pas de profils pour les utilisateurs tant qu’ils n’ont pas utilisé l’application une première fois, ce qui signifie que vous ne pouvez pas cibler des utilisateurs qui n’ont pas encore ouvert votre application.
 {% endalert %}
 
-![Les groupes de filtres du segmenteur avec l'opérateur AND.][9]{: style="max-width:70%;"}
+![Filtre de segmentation des groupes avec l'opérateur AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 Les segments utilisant déjà le filtre d'**appartenance à un segment** ne peuvent pas être inclus ou imbriqués dans d'autres segments. Cela permet d'éviter un cycle dans lequel le segment A inclut le segment B, qui essaie ensuite d'inclure à nouveau le segment A. Dans ce cas, la segmentation ne cesserait de se référer à elle-même, ce qui rendrait impossible le calcul de la personne qui en fait partie.
@@ -91,13 +89,13 @@ Créez un groupe d'exclusion en ajoutant des filtres comme vous le feriez pour l
 
 Les utilisateurs exclus ne seront pas comptabilisés dans les statistiques du _nombre total d'utilisateurs joignables_ de votre segmentation.
 
-![Un groupe d'exclusion avec deux filtres.][12]{: style="max-width:70%;"}
+![Un groupe interne avec deux filtres.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
 #### Tester des segments
 
 Après avoir ajouté des applications et des filtres à votre segment, vous pouvez tester si votre segment est configuré comme prévu en recherchant un utilisateur pour confirmer s'il correspond aux critères de segmentation. Pour ce faire, recherchez le `external_id` ou le `braze_id` d'un utilisateur dans la section **Recherche d'utilisateurs**.
 
-![Section de recherche d'utilisateurs avec un champ de recherche.][6]{: style="max-width:80%;"}
+![Section de recherche d'utilisateurs avec un champ de recherche.]({% image_buster /assets/img_archive/user_lookup.png %})
 
 La recherche d’utilisateur est disponible lors de :
 - La création d’un segment
@@ -106,11 +104,11 @@ La recherche d’utilisateur est disponible lors de :
 
 Lorsqu'un utilisateur correspond aux critères de segment, de filtre et d'application, une alerte l'indique.
 
-![La recherche de l'utilisateur "user007" déclenche une alerte indiquant que "user007 correspond à tous les segments, filtres et applications".][7]{: style=" max-width:80%;"}
+![La consultation de l'utilisateur "testuser" déclenche une alerte indiquant que "testuser correspond à tous les segments, filtres et applications".]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Lorsqu'un utilisateur ne correspond pas à tout ou partie des critères de segmentation, de filtrage ou d'application, les critères manquants sont répertoriés à des fins de résolution des problèmes.
 
-![Une recherche de l'utilisateur "user1234" déclenche une alerte indiquant "user1234 ne correspond pas aux critères de ciblage suivants :" et affiche deux critères manquants : une ancienneté supérieure à un an et la date d'aujourd'hui qui est un anniversaire.][8]{: style=" max-width:80%;"}
+![Une recherche utilisateur avec une alerte indiquant "test1 ne correspond pas aux critères de ciblage suivants :" et affichant les critères manquants.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### Segments mono-utilisateur
 
@@ -150,7 +148,7 @@ Lorsque vous effectuez une segmentation avec des filtres dépendant de l'apparei
 
 Vous pouvez spécifier qu'une seule notification push est envoyée à chaque utilisateur. Lorsque vous [rédigez votre message]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), sélectionnez l'option **N'envoyer qu'au dernier appareil utilisé par l'utilisateur** sous **Paramètres supplémentaires.**
 
-![][13]{: style="max-width:60%;"}
+!["Paramètres supplémentaires" avec une case à cocher permettant de n'envoyer les données qu'au dernier appareil utilisé par l'utilisateur.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Considérations
 
@@ -160,15 +158,3 @@ Vous pouvez spécifier qu'une seule notification push est envoyée à chaque uti
     - Un utilisateur peut avoir fait partie de votre segmentation cible au moment de l'envoi, mais en raison de comportements associés à l'un ou l'autre de ses appareils, il peut ne plus faire partie de ce segment par la suite. Un utilisateur peut ainsi recevoir une campagne ou un canvas alors qu'il ne correspond pas aux critères de filtre. <br><br>Par exemple, un utilisateur pourrait recevoir un message ciblant les utilisateurs dont la version la plus récente de l'application est OS 10.0, même s'ils utilisent actuellement OS 13.0. Dans ce cas, l'utilisateur disposait du système d'exploitation 10.0 au moment de l'envoi du message et a ensuite effectué une mise à niveau vers le système d'exploitation 13.0.<br><br> De même, si un utilisateur utilise ultérieurement un appareil avec une version d'application différente, son profil utilisateur sera mis à jour avec une nouvelle version d'application la plus récente. Ceci peut donner l'impression que l'utilisateur n'aurait pas dû être éligible pour recevoir le message, même s'il l’était au moment de l'envoi.
 
 
-[1]: {% image_buster /assets/img_archive/Segment1.png %}
-[2]: {% image_buster /assets/img_archive/Segment2.png %}
-[3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
-[6]: {% image_buster /assets/img_archive/user_lookup.png %}
-[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
-[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
-[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
-[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
-[13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
-[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}

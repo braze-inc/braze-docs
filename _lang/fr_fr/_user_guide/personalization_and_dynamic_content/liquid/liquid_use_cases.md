@@ -60,7 +60,7 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Explication :** Ici, nous utilisons la variable réservée `now` pour modéliser la date et l'heure actuelles au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "Wiki de l’horodatage ISO 8601"). Les filtres `%B` (mois comme « mai ») et `%d` (jour comme « 18 ») formatent le mois et le jour actuels. Nous utilisons ensuite les mêmes filtres de date et de temps sur les valeurs `signup_date` pour nous assurer de comparer les deux valeurs à l’aide des balises conditionnelles et de la logique.
+**Explication :** Ici, nous utilisons la variable réservée `now` pour introduire la date et l'heure actuelles au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601). Les filtres `%B` (mois comme « mai ») et `%d` (jour comme « 18 ») formatent le mois et le jour actuels. Nous utilisons ensuite les mêmes filtres de date et de temps sur les valeurs `signup_date` pour nous assurer de comparer les deux valeurs à l’aide des balises conditionnelles et de la logique.
 
 Ensuite, nous renouvelons trois autres instructions variables pour obtenir `%B` et `%d` pour la `signup_date`, mais ajoutons également `%Y` (année comme « 2021 »). Ceci compose la date et de l’heure de la `signup_date` sous forme d’année. Connaître le jour et le mois nous permet de vérifier si l’anniversaire de l’utilisateur est aujourd’hui, et en sachant que l’année nous dit combien d’années ont passées, ce qui nous permet de savoir pour combien d’années le féliciter !
 

@@ -18,13 +18,13 @@ Pour exporter des données au format CSV à partir de cette page :
 
 1. Définissez la période et les applications pour lesquelles vous souhaitez afficher les données. Par défaut, le tableau de bord affiche les données des 30 derniers jours pour toutes les applications.
 
-![Champs de période et des applications dans le tableau de bord d'accueil.][1]{: style="max-width:60%;"}
+![Période et champs d'application sur le tableau de bord de l'accueil.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Faites défiler vers le bas jusqu'au graphique **Performance au fil du temps**.
 3\. Sélectionnez les données que vous souhaitez exporter dans le champ **Statistiques Pour**. Consultez les [données disponibles](#available-data) pour votre exportation.
 
-![Graphique de performance au fil du temps sur le tableau de bord d'accueil.][2]
+![Graphique des performances au fil du temps sur le tableau de bord de l'accueil.]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4\. Sélectionnez <i class="fas fa-bars" title="Menu contextuel Graphique"></i> puis sélectionnez votre option d'exportation.
@@ -51,7 +51,6 @@ Vous pouvez exporter les CSV avec les données suivantes :
     - Nombre de messages in-app ouverts
 - MAU par date
 - Nombre de nouveaux utilisateurs par date
-- Impressions de Fil d'actualité par date
 - Notifications push par date
     - (En option) Notifications Push pour différentes plateformes d’applications
     - Nombre de notifications Push envoyées
@@ -66,5 +65,3 @@ Vous pouvez exporter les CSV avec les données suivantes :
 Pour obtenir de l'aide sur les exportations CSV et API, consultez notre article [Résolution des problèmes d'exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}

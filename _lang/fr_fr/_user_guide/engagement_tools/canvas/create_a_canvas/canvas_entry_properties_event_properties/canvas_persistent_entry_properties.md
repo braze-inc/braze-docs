@@ -83,11 +83,9 @@ Dans cette demande, la valeur globale pour « allergies alimentaires » est «
 
 Si vous avez un Canvas qui se déclenche lorsqu'un utilisateur parcourt un article sur votre site eCommerce mais ne l'ajoute pas à son panier, la première étape du Canvas pourrait être une notification push lui demandant s'il est intéressé par l'achat de l'article. Vous pourriez faire référence au nom du produit en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 Dans la seconde étape, une autre notification push pourrait être envoyée, invitant l’utilisateur à vérifier s’il a ajouté l’article dans le panier mais ne l’a pas encore acheté. Vous pouvez continuer à faire référence à la propriété d'entrée `product_name` en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

@@ -29,13 +29,13 @@ Pour ajouter un nouvel utilisateur :
 Le service indiqué dans le profil d'un utilisateur détermine les types de communications qu'il reçoit de Braze. Ainsi, chacun ne reçoit que les communications et les alertes qui correspondent à la manière dont il utilise Braze.
 {% endalert %}
 
-![][2]
+![Champs de détails de l'utilisateur.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. Pour les utilisateurs qui ne sont pas des administrateurs, sélectionnez les [autorisations]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) au niveau de l'entreprise et de l'espace de travail dont vous souhaitez que cet utilisateur dispose.
 
-![][3]
+![Autorisations au niveau de l'espace de travail avec une section pour les champs d'autorisations personnalisés.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Exigences en matière d'adresse e-mail
 
@@ -53,11 +53,11 @@ La suspension d'un utilisateur met son compte dans un état inactif, où l'utili
 
 Pour suspendre un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa-solid fa-user-lock"></i> **Suspendre**.
 
-![Suspendre un utilisateur][4]
+![Option de suspension d'un utilisateur.]({% image_buster /assets/img_archive/suspend_user.png %})
 
 Les administrateurs peuvent également suspendre un utilisateur en sélectionnant son nom dans la liste et en cliquant sur **Suspendre l'utilisateur** dans le pied de page.
 
-![Suspendez un utilisateur lorsque vous modifiez ses coordonnées.][5]
+![Suspendez un utilisateur lorsque vous modifiez ses coordonnées.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Attribution de l'accès et des responsabilités des utilisateurs
 
@@ -67,7 +67,7 @@ Les administrateurs peuvent également suspendre un utilisateur en sélectionnan
 
 Pour supprimer un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa fa-trash-can"></i> **Supprimer l'utilisateur**.
 
-![Supprimer un utilisateur][34]
+![Supprimer un utilisateur]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 Après la suppression d’un utilisateur, Braze ne conserve aucune des données de compt suivantes :
 
@@ -98,10 +98,3 @@ Pour créer ce nouvel utilisateur, vous pouvez effectuer l'une des opérations s
 
 Si vous ne recevez pas l'activation du message dans votre boîte de réception lorsque vous utilisez `testing+01@braze.com`, vérifiez auprès de votre équipe informatique que vous pouvez accepter des messages provenant de ce type d'adresse e-mail. Certains administrateurs filtrent les messages envoyés à des adresses e-mail comportant un `+`.
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-[27]: {% image_buster /assets/img/add-user.gif %} "Processus d'ajout d'un nouvel utilisateur"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}

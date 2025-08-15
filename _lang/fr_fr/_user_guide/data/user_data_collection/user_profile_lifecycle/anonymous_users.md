@@ -44,7 +44,7 @@ Supposons que vous attribuiez l'attribut personnalisé "is_lead_profile" à chaq
 - **L'ID utilisateur externe est vide**
 - "is_lead_profile" **est vrai**
 
-![Filtres de segmentation pour un ID externe vierge et un attribut personnalisé "is_lead_profile" vrai.][1]
+![Filtres de segmentation pour un ID externe vide et un attribut personnalisé "is_lead_profile" vrai.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Capturez les données de paiement d'un utilisateur anonyme.
 
@@ -76,4 +76,3 @@ Voici un exemple de charge utile qui sera générée lorsque le formulaire de ca
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img/getting_started/anonymous_users.png %}

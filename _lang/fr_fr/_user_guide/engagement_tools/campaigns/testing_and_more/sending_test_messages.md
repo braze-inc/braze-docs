@@ -114,47 +114,6 @@ Après avoir créé votre webhook, vous pouvez effectuer un envoi de test pour v
 ![Test de carte de contenu]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
-{% tab Fil d'actualité %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-L’envoi d’un test de carte de fil d’actualité nécessite de configurer un segment d’essai et d’envoyer ensuite une campagne de test.
-
-##### Étape 1 : Créer un segment d’essai spécifié
-
-Une fois que vous avez mis en place un segment d'essai, vous pouvez utiliser ces canaux de communication. Le processus prend quelques courtes étapes et, s’il est configuré correctement, ne doit être effectué qu’une seule fois.
-
-1. Accédez à la page **Segments** et [créez un nouveau segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
-2. Cliquez sur le menu déroulant sous **Ajouter un filtre** et localisez les filtres de test au bas de la liste. <br><br>![Test des filtres]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Utilisez les filtres de test pour sélectionner les utilisateurs ayant des adresses e-mail ou des [ID]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) externes spécifiques.<br><br>![Test des options de filtre]({% image_buster /assets/img_archive/testmessages2.png %})
-<br><br>Ces filtres ont les options suivantes :
-- **Équivaut**: recherche l’e-mail ou l’ID utilisateur exact que vous fournissez. Utilisez cette option si vous souhaitez envoyer les campagnes de test uniquement aux appareils associés à un seul e-mail ou ID utilisateur.
-- **N'est pas égal à**: exclut un e-mail ou un ID utilisateur particulier des campagnes de test.
-- **Correspond** : trouve les utilisateurs qui ont des adresses e-mail ou des ID d’utilisateur qui correspondent à une partie du terme que vous fournissez. Vous pourriez utiliser cette fonction pour trouver uniquement les utilisateurs ayant une adresse "@yourcompany.com", ce qui vous permettrait d'envoyer des messages à tous les membres de votre équipe.
-<br><br>
-Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d'essai pourrait inclure un filtre d'adresse e-mail qui `matches` à « @braze.com » et un autre filtre qui `does not equal` à « sales@braze.com ». Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l'option `matches` et en séparant les adresses e-mail par le caractère "|" (par exemple, `matches` "email1@braze.com|email2@braze.com").
-<br><br>
-4. Ajoutez les filtres de test à votre segment d'essai.
-5. Cliquez sur **Aperçu** en haut de l'éditeur de segment ou exportez les données utilisateur de ce segment au format CSV pour vérifier que vous n'avez sélectionné que les utilisateurs voulus.
-6. Cliquez sur le menu déroulant **Données utilisateur** et sélectionnez **CSV Exporter toutes les données** utilisateur pour exporter les données utilisateur des segments. 
-
-![Vérifier le segment d'essai]({% image_buster /assets/img_archive/testmessages3.png %})
-
-> L’exportation des données utilisateur du segment en CSV vous donnera l’image la plus précise de ceux qui dont partie de ce segment. L'onglet " **Aperçu"** ne représente qu'un échantillon des utilisateurs du segment et peut donc donner l'impression de ne pas avoir sélectionné tous les membres prévus. Pour plus d'informations, consultez la section [Afficher et comprendre les données de segmentation][7].
-
-Après avoir confirmé que vous ne ciblez que les utilisateurs qui doivent recevoir le message de test, vous pouvez soit sélectionner ce segment dans une campagne existante que vous souhaitez tester, soit cliquer sur le bouton **Démarrer la campagne** dans le menu du segment.
-
-##### Étape 2 : Envoyer une campagne de test
-
-Pour envoyer des tests de cartes de fil d’actualité, vous devez cibler votre segment d’essai précédemment créé. Commencez par créer une campagne multicanale et suivez les étapes habituelles. Lorsque vous arrivez à l'étape **Utilisateurs ciblés**, sélectionnez votre segmentation d'essai comme indiqué dans l'image suivante.
-
-![Segment d'essai]({% image_buster /assets/img_archive/test_segment.png %})
-
-Achevez de confirmer votre campagne et lancez-la pour tester vos cartes de fil d’actualité.
-
-> Si vous avez l'intention d'utiliser une seule campagne pour vous envoyer un message test plus d'une fois, cochez la case intitulée "Permettre aux utilisateurs de redevenir éligibles pour recevoir la campagne" dans la partie **Planification** du compositeur de la campagne.
-
-{% endtab %}
 {% endtabs %}
 
 ## Tester des campagnes personnalisées 
@@ -163,48 +122,48 @@ Si vous testez des campagnes qui alimentent les données de l'utilisateur ou uti
 
 ### Test de campagnes personnalisées en fonction des attributs de l'utilisateur
 
-Si vous utilisez [la personnalisation][26] dans votre message, vous devrez prendre des mesures supplémentaires pour prévisualiser correctement votre campagne et vérifier que les données de l'utilisateur alimentent correctement le contenu.
+Si vous utilisez la [personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) dans votre message, vous devrez prendre des mesures supplémentaires pour bien prévisualiser votre campagne et vérifier que les données des utilisateurs alimentent correctement le contenu.
 
 Lors de l'envoi d'un message test, veillez à choisir l'option **Sélectionner un utilisateur existant** ou **Prévisualiser en tant qu'utilisateur personnalisé**.
 
-![Test d'un message personnalisé][23]{: style="max-width:70%;" }
+![Test d'un message personnalisé]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Sélection d'un utilisateur existant
 
 Si vous sélectionnez un utilisateur existant, saisissez l’ID utilisateur ou l’e-mail de l’utilisateur spécifique dans le champ de recherche. Utilisez ensuite l’aperçu du tableau de bord pour voir comment votre message s’affiche à cet utilisateur et envoyer un message test à votre appareil qui reflète ce que l’utilisateur verra.
 
-![Sélectionner un utilisateur][24]
+![Sélectionnez un utilisateur]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### Sélection d'un utilisateur personnalisé
 
 Si vous prévisualisez en tant qu'utilisateur personnalisé, saisissez le texte des différents champs disponibles pour la personnalisation, tels que le prénom de l'utilisateur et tout attribut personnalisé. Une fois encore, vous pouvez saisir votre propre adresse e-mail pour envoyer un test à votre appareil.
 
-![Utilisateur personnalisé][25]
+![Utilisateur personnalisé]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### Campagnes de test personnalisées avec des propriétés d'événement personnalisées
 
-Le test des campagnes personnalisées à l'aide de [propriétés d'événement personnalisé][19] ] diffère légèrement du test des autres types de campagnes décrites. La manière la plus robuste de tester des campagnes personnalisées à l'aide de propriétés d'événements personnalisés consiste à déclencher vous-même la campagne en procédant comme suit :
+Le test des campagnes personnalisées avec des [propriétés d'événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties) diffère légèrement du test des autres types de campagnes décrites. La manière la plus robuste de tester des campagnes personnalisées à l'aide de propriétés d'événements personnalisés consiste à déclencher vous-même la campagne en procédant comme suit :
 
-1. Rédigez la copie impliquant les propriétés d'événement. ![Composer un message de test avec des propriétés][15]
-2. Utilisez la [livraison par événement][21] pour diffuser la campagne lorsque l'événement se produit.
+1. Rédigez la copie impliquant les propriétés d'événement. ![Composition d'un message de test avec les propriétés]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+2. Utilisez la [livraison par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) pour diffuser la campagne au moment où l'événement se produit.
 
 {% alert note %}
 Si vous testez une campagne de notification push iOS, vous devez régler le délai à 1 minute pour vous laisser le temps de quitter l’application car iOS n’envoie pas de notifications push à une application actuellement ouverte. D’autres types de campagnes peuvent être définis pour être envoyés immédiatement.
 {% endalert %}
 
-![Tester la livraison d’un message][16]
+![Test de réception/distribution des messages]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3\. Ciblez les utilisateurs comme vous le feriez pour les tests en utilisant un filtre de test ou en ciblant votre propre adresse e-mail, et terminez la création de la campagne. 
 
-![Tester le ciblage d’un message][17]
+![Test du message de ciblage]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4\. Accédez à votre application et finalisez l’événement personnalisé.
 
 La campagne se déclenchera et affichera le message personnalisé avec la propriété event.
 
-![Tester l’exemple de message][18]
+![Exemple de message de test]({% image_buster /assets/img_archive/testeventproperties-message.PNG %})
 
 Sinon, si vous enregistrez des ID utilisateur personnalisés, vous pouvez également tester la campagne en envoyant un message de test personnalisé à vous-même.
 
@@ -213,19 +172,5 @@ Sinon, si vous enregistrez des ID utilisateur personnalisés, vous pouvez égale
 3. Ajoutez la propriété d'événement personnalisé au bas de la page, et ajoutez votre ID utilisateur ou votre adresse e-mail dans la case supérieure.
 4. Cliquez sur **Envoyer le test** pour recevoir un message personnalisé avec la propriété.
 
-![Tester en utilisant un utilisateur personnalisé][22]
+![Test à l'aide d'un utilisateur personnalisé]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview
-[13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
-[15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}
-[16]: {% image_buster /assets/img_archive/testeventproperties-delivery.png %}
-[17]: {% image_buster /assets/img_archive/testeventproperties-target.png %}
-[18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
-[19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
-[23]: {% image_buster /assets/img_archive/personalized_testing.png %}
-[24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}
-[25]: {% image_buster /assets/img_archive/personalized_testing_custom.png %}
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/

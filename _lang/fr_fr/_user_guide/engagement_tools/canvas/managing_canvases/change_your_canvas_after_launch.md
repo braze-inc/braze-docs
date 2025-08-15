@@ -25,7 +25,7 @@ Vous pouvez modifier vos toiles après leur lancement :
 La répartition de variante de contrôle peut être uniquement réduite après le lancement.
 {% endalert %}
 
-Gardez à l’esprit les éditions Canvas après lancement autorisées en fonction du flux de travail avec lequel votre Canvas a été créé. Si votre Canvas utilise le flux de travail Canvas d’origine, vous devrez le dupliquer vers Canvas Flow pour pouvoir effectuer des éditions après le lancement.
+Gardez à l'esprit les modifications suivantes autorisées après le lancement du canvas, en fonction du flux de travail avec lequel votre canvas a été créé. Si votre Canvas utilise le flux de travail Canvas d’origine, vous devrez le dupliquer vers Canvas Flow pour pouvoir effectuer des éditions après le lancement.
 
 Vous pouvez supprimer tous les éléments suivants au sein de votre parcours utilisateur :
 
@@ -51,17 +51,18 @@ Consultez la section " [Meilleures pratiques"](#best-practices) pour connaître 
 Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
 {% endalert %}
 
-Vous ne pouvez pas modifier ou supprimer les connexions existantes, ni insérer une étape entre des étapes connectées existantes. Si vous souhaitez modifier ou ajouter des étapes à votre parcours utilisateur Canvas, les détails suivants s'appliquent :
+Vous ne pouvez pas modifier ou supprimer les connexions existantes, et vous ne pouvez pas insérer une étape entre des étapes connectées existantes. Si vous souhaitez modifier ou ajouter des étapes à votre parcours utilisateur Canvas, les détails suivants s'appliquent :
 
 - Les utilisateurs qui ne sont pas encore entrés dans le Canvas sont éligibles pour toutes les étapes nouvellement créées. 
 - Si vos paramètres d’entrée Canvas autorisent les utilisateurs à pouvoir accéder à nouveau aux étapes, les utilisateurs ayant déjà dépassé les étapes nouvellement créées y seront à nouveau éligibles.
 - Les utilisateurs d’un Canvas actuellement déployé, mais n’ayant pas atteint les points du parcours utilisateur où ont été ajoutées de nouvelles étapes, seront éligibles pour recevoir les nouvelles étapes.
+- Si une étape de délai est la dernière étape du canvas, les utilisateurs qui atteignent cette étape sont automatiquement avancés hors du canvas et ne recevront pas de nouvelles étapes créées.
 
-Si vous mettez à jour les paramètres de **délai** ou de **fenêtre** pour une étape du canvas, seuls les nouveaux utilisateurs entrant dans le canvas et les utilisateurs qui n'ont pas encore été mis en file d'attente pour cette étape recevront le message dans le délai mis à jour. Si une étape de délai est la dernière étape du canvas, les utilisateurs qui atteignent cette étape sont automatiquement avancés hors du canvas et ne recevront pas de nouvelles étapes créées. 
-
-{% alert note %}
-Arrêter un Canvas ne fera pas sortir les utilisateurs qui attendent de recevoir un message. Si vous activez à nouveau le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (à moins que le temps d’envoi du message se soit écoulé, dans ce cas, ils ne le recevront pas).
+{% alert important %}
+Si vous mettez à jour les paramètres de **délai** ou de **fenêtre** pour une étape du canvas, les utilisateurs qui se trouvent actuellement dans cette étape au moment de la mise à jour respecteront le délai qui leur a été attribué lorsqu'ils y sont entrés à l'origine. Seuls les nouveaux utilisateurs entrant dans le Canvas et ceux qui n'ont pas encore été mis en file d'attente pour cette étape recevront le message au moment de la mise à jour.
 {% endalert %}
+
+Arrêter un Canvas ne fera pas sortir les utilisateurs qui attendent de recevoir un message. Si vous activez à nouveau le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (à moins que le temps d’envoi du message se soit écoulé, dans ce cas, ils ne le recevront pas).
 
 {% enddetails %}
 
@@ -144,7 +145,7 @@ En créant ou en modifiant des étapes déconnectées, vous pouvez apporter des 
 
 ### Étape Chemin d’expérience
 
-Si votre canvas comporte une étape Chemin d’expérience active ou en cours et que vous mettez à jour le canvas actif (même si ce n'est pas à l'étape Chemin d’expérience), l'expérience en cours redémarre. Pour éviter que vos utilisateurs ne réintègrent le chemin d'expérience, vous pouvez dupliquer et créer un nouveau Canvas au lieu de mettre à jour le Canvas.
+Si votre Canvas comporte une expérience active ou en cours et que vous mettez à jour le Canvas actif (même si ce n'est pas à l'étape des chemins chemins d'expérience), l'expérience en cours prendra fin. Pour redémarrer l'expérience, vous pouvez déconnecter le chemin d'expérience existant et en lancer un nouveau, ou dupliquer le Canvas et en lancer un nouveau.
 
 ### Délais temporels
 

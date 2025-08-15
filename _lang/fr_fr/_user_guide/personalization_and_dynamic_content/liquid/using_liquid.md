@@ -10,7 +10,7 @@ search_rank: 2
 
 > Cet article montre comment vous pouvez utiliser une variété d'attributs d'utilisateur pour insérer dynamiquement des informations personnelles dans votre envoi de messages.
 
-Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Vous pouvez l'utiliser dans Braze pour intégrer les données du profil utilisateur dans vos messages et personnaliser ces données. Par exemple, vous pouvez utiliser les étiquettes Liquid pour créer des messages conditionnels, comme l'envoi d'offres différentes en fonction de la date anniversaire de l'abonnement d'un utilisateur. En outre, les filtres peuvent manipuler les données, par exemple en formatant la date d'inscription d'un utilisateur à partir d'un horodatage dans un format plus lisible, tel que "15 janvier 2022". Pour plus de détails sur la syntaxe Liquid et ses possibilités, reportez-vous à la section [Tags de personnalisation pris en charge.][1]
+Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Vous pouvez l'utiliser dans Braze pour intégrer les données du profil utilisateur dans vos messages et personnaliser ces données. Par exemple, vous pouvez utiliser les étiquettes Liquid pour créer des messages conditionnels, comme l'envoi d'offres différentes en fonction de la date anniversaire de l'abonnement d'un utilisateur. En outre, les filtres peuvent manipuler les données, par exemple en formatant la date d'inscription d'un utilisateur à partir d'un horodatage dans un format plus lisible, tel que "15 janvier 2022". Pour plus de détails sur la syntaxe Liquid et ses possibilités, reportez-vous à la section [Tags de personnalisation pris en charge.]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
 
 ## Fonctionnement
 
@@ -40,14 +40,14 @@ Hi Valued User, thanks for using the App!
 
 Les valeurs suivantes peuvent être remplacées par un message, selon leur disponibilité :
 
-- [Informations de base sur l'utilisateur][1] (par exemple, `first_name`, `last_name`, `email_address`)
-- [Attributs personnalisés][2]
-    - [Attributs personnalisés imbriqués][3]
-- [Propriétés de l'événement  personnalisé][11]
-- [Informations sur les appareils les plus récemment utilisées][39]
-- [Informations sur l'appareil cible][40]
+- [Informations de base sur l'utilisateur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (par exemple, `first_name`, `last_name`, `email_address`)
+- [Attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
+    - [Attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
+- [Propriétés de l'événement  personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- [Informations sur les appareils les plus récemment utilisées]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
+- [Informations sur l'appareil cible]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-Vous pouvez également extraire du contenu directement d'un serveur web grâce au [contenu connecté][9] de Braze.
+Vous pouvez également extraire du contenu directement d'un serveur web grâce au [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) de Braze.
 
 {% alert important %}
 Braze prend actuellement en charge Liquid jusqu'à et y compris Liquid 5 de Shopify.
@@ -55,7 +55,7 @@ Braze prend actuellement en charge Liquid jusqu'à et y compris Liquid 5 de Shop
 
 ## Utilisation de Liquid
 
-Grâce aux [étiquettes Liquid][1], vous pouvez rehausser la qualité de vos messages en les enrichissant d'une touche de personnalisation. 
+Grâce aux [étiquettes Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), vous pouvez rehausser la qualité de vos messages en les enrichissant d'une touche de personnalisation. 
 
 ### Syntaxe en Liquid
 
@@ -90,19 +90,15 @@ Si vous utilisez Liquid dans vos messages e-mail, veillez à le faire :
 
 {% endalert %}
 
-{% raw %}
-
 ### Insérer des variables préformatées
 
-Vous pouvez insérer des variables préformatées avec des valeurs par défaut par le biais de la fenêtre modale/boîte de dialogue **Ajouter une personnalisation** située en haut à droite de n'importe quel champ de texte modélisé.
+Vous pouvez insérer des variables préformatées avec des valeurs par défaut dans la fenêtre modale/boîte de dialogue **Ajouter une personnalisation** située à proximité de n'importe quel champ de texte modèle.
 
-![La fenêtre modale/boîte de dialogue de personnalisation qui apparaît après avoir sélectionné insérer une personnalisation. La fenêtre modale comporte des champs pour le type de personnalisation, l'attribut, la valeur par défaut facultative, et affiche un aperçu de la syntaxe du dialogue modal etc.][44]{: style="max-width:70%;"}
+![La fenêtre modale/boîte de dialogue de personnalisation qui apparaît après avoir sélectionné insérer une personnalisation. La fenêtre modale comporte des champs pour le type de personnalisation, l'attribut, la valeur par défaut facultative et affiche un aperçu de la syntaxe Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-Le message modal insère votre valeur par défaut spécifiée dans Liquid à l’endroit où se trouvait votre curseur. Le point d'insertion est également spécifié par la boîte de prévisualisation, qui contient le texte avant et après. Si un bloc de texte est mis en surbrillance, le texte mis en surbrillance sera remplacé.
+La fenêtre modale insère Liquid avec la valeur par défaut que vous avez spécifiée à l'endroit où se trouvait votre curseur. Le point d'insertion est également spécifié par la boîte de prévisualisation, qui contient le texte avant et après. Si un bloc de texte est mis en surbrillance, le texte mis en surbrillance sera remplacé.
 
-![Une image GIF de la fenêtre modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la fenêtre modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.][45]
-
-{% endraw %}
+![Une image GIF de la fenêtre modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la fenêtre modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Attribution des variables
 
@@ -159,12 +155,3 @@ Vous envoyez les mêmes variables dans chaque message ? Au lieu d’écrire la 
 Tant que le bloc de contenu est en haut de votre message, chaque fois que la variable est insérée dans votre message comme objet, elle se rapporte à l’attribut personnalisé que vous avez choisi !
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating
-[9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information
-[40]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information
-[44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}
-[45]: {% image_buster /assets/img_archive/insert_var_shot.gif %}

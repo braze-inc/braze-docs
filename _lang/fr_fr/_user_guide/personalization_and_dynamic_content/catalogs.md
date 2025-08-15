@@ -29,6 +29,12 @@ guide_featured_list:
 - name: Endpoints des API de catalogues
   link: /docs/api/endpoints/catalogs/
   image: /assets/img/braze_icons/server-01.svg
+
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: Blocs de produits à glisser-déposer
+  link: /docs/dnd_product_blocks/
+  image: /assets/img/braze_icons/columns-01.svg
 ---
 <br><br>
 
@@ -36,7 +42,7 @@ guide_featured_list:
 
 Vous pouvez ajouter n’importe quel type de données à un catalogue. Généralement, les données sont des métadonnées sur les offres, telles que les produits, les remises, les promotions, les événements, etc. Consultez les cas d'utilisation ci-dessous pour obtenir quelques exemples de la façon dont vous pouvez utiliser ces données pour cibler les utilisateurs avec des messages très pertinents.
 
-### Vente au détail et e-commerce
+### Retail et e-commerce
 
 - **Promotions saisonnières :** Importez des collections de produits saisonniers et personnalisez les messages en fonction des tendances actuelles.
 - **Messages localisés :** Importez les adresses, heures et services de vos emplacements, puis personnalisez les notifications en fonction des emplacements des utilisateurs.
