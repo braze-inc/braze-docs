@@ -2,9 +2,9 @@
 nav_title: Criador de consultas
 article_title: Criador de consultas
 page_order: 15
-page_type: reference
 description: "Este artigo de referência descreve como criar relatórios usando dados da Braze do Snowflake no Query Builder."
 tool: Reports
+alias: /query_builder/
 ---
 
 # Criador de consultas
@@ -37,13 +37,40 @@ Consulte [Modelos de consulta]({{site.baseurl}}/user_guide/analytics/query_build
 
 ### Período de dados
 
-Todas as consultas apresentam dados dos últimos 60 dias. 
+Todas as consultas apresentam dados dos últimos 60 dias.
+
+### Fuso horário do Query Builder
+
+O fuso horário padrão para consultas ao nosso banco de dados Snowflake é UTC. Como resultado, pode haver algumas discrepâncias de dados entre a página de **engajamento do canal de e-mail** (que segue o fuso horário de sua empresa) e os resultados do Query Builder.
+
+Para converter o fuso horário nos resultados da consulta, adicione o seguinte SQL à consulta e personalize-o de acordo com o fuso horário de sua empresa:
+
+{% raw %}
+```sql
+SELECT
+DATE_TRUNC(
+'day',
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME))
+) AS send_date_sydney,
+COUNT(ID) AS emails_sent
+USERS_MESSAGES_EMAIL_SEND_SHARED
+WHERE
+-- Apply the date range in Sydney time as well
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) >= '2025-03-25 00:00:00'
+AND CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) < '2025-03-29 00:00:00'
+AND APP_GROUP_ID = 'your app group ID'
+GROUP BY
+send_date_sydney
+ORDER BY
+send_date_sydney;
+```
+{% endraw %}
 
 ## Geração de SQL com o Criador de consultas com IA
 
 O Criador de consultas com IA usa o [GPT](https://openai.com/gpt-4), desenvolvido pela OpenAI, para recomendar SQL para sua consulta.
 
-![][2]{: style="max-width:60%;" }
+![O construtor de consultas de IA SQL.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 Para gerar SQL com o Criador de consultas com IA:
 
@@ -107,6 +134,16 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 LIMIT 100
 ```
 
+### Preencher automaticamente o nome da variante da campanha
+
+Se quiser que o nome da variante de campanha seja preenchido automaticamente, inclua o nome da coluna `MESSAGE_VARIATION_API_ID` em sua consulta, como neste exemplo:
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID, MESSAGE_VARIATION_API_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
+```
+
 ### Solução de problemas
 
 Sua consulta pode falhar por qualquer um dos seguintes motivos:
@@ -119,8 +156,6 @@ Sua consulta pode falhar por qualquer um dos seguintes motivos:
 ## Uso de variáveis
 
 Use variáveis para usar tipos de variáveis predefinidas no SQL para fazer referência a valores sem precisar copiar manualmente o valor. Por exemplo, em vez de copiar manualmente o ID de uma campanha para o editor SQL, você pode usar {% raw %}`{{campaign.${My campaign}}}`{% endraw %} para selecionar diretamente uma campanha em um menu suspenso na guia **Variables (Variáveis** ).
-
-![][3]
 
 Depois que uma variável for criada, ela aparecerá na guia **Variáveis** de seu relatório do Criador de consultas. Os benefícios do uso de variáveis SQL incluem:
 
@@ -159,8 +194,6 @@ Os seguintes tipos de variáveis são aceitos:
 
 #### Período
 
-![][4]{: style="max-width:50%;"}
-
 Se estiver usando `start_date` e `end_date`, eles devem ter o mesmo nome para que você possa usá-los como um intervalo de datas.
 
 ##### Valores de exemplo
@@ -185,8 +218,6 @@ Todos os quatro tipos são mostrados se `start_date` e `end_date` forem usados c
 #### Envio de mensagens
 
 Todas as variáveis de envio de mensagens devem compartilhar o mesmo identificador quando você quiser unir o estado delas em um grupo.
-
-![][5]{: style="max-width:50%;"}
 
 ##### Canva
 
@@ -243,208 +274,3 @@ Para selecionar as etapas do Canvas que pertencem aos Canvases escolhidos. Ele d
 
 - **Valor de substituição:** IDs da API das etapas do canva
 - **Exemplo de uso:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-
-#### Produtos
-
-Para selecionar uma lista de nomes de produtos.
-
-- **Valor de substituição:** Os nomes dos produtos são colocados entre aspas simples e separados por vírgulas, como em `product1, product2`
-- **Exemplo de uso:** {% raw %}`product_id IN ({{products.${product name (optional)}}})`{% endraw %}
-
-#### Eventos personalizados
-
-Para selecionar uma lista de eventos personalizados.
-
-- **Valor de substituição:** Os nomes de propriedades de eventos personalizados são separados por vírgulas, como em `event1, event2`
-- **Exemplo de uso:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
-
-#### Propriedades de eventos personalizados
-
-Para selecionar uma lista de nomes de propriedades de eventos personalizados. Ela deve ser usada com a variável de eventos personalizados.
-
-- **Valor de substituição:** Os nomes de propriedades de eventos personalizados são separados por vírgulas, como em `property1, property2`
-- **Exemplo de uso:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
-
-#### Espaço de trabalho
-
-Para selecionar um espaço de trabalho.
-
-- **Valor de substituição:** ID BSON do espaço de trabalho
-- **Exemplo de uso:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
-
-#### Catálogos
-
-Para selecionar catálogos.
-
-- **Valor de substituição:** IDs BSON do catálogo
-- **Exemplo de uso:** {% raw %}`catalog_id = ‘{{catalogs.${catalog}}}’`{% endraw %}
-
-#### Campos do catálogo
-
-Para selecionar os campos do catálogo. Ela deve ser usada com a variável catalogs.
-
-- **Valor de substituição:** Nomes de campos do catálogo
-- **Exemplo de uso:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
-
-#### Opções {#options}
-
-Para selecionar em uma lista de opções.
-
-- **Valor de substituição:** O valor das opções selecionadas
-- **Exemplo de uso:**
-    - Para selecionar o menu suspenso: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select` permite especificar se o usuário final pode selecionar mais de uma opção
-    - Para o botão de rádio: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-
-#### Segmentos
-
-Para selecionar segmentos que tenham [a análise de dados]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ativada.
-
-- **Valor de substituição:** A ID de análise de dados do segmento, que corresponde às IDs armazenadas na coluna `user_segment_membership_ids` nas tabelas em que essa coluna está disponível.
-- **Exemplo de uso:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
-
-#### String
-
-Para alterar os valores repetitivos da string entre as execuções do relatório. Use essa variável para evitar a codificação de um valor várias vezes em seu SQL.
-
-- **Valor de substituição:** A string como está, sem as aspas ao redor
-- **Exemplo de uso:** {% raw %}`{{string.${some name}}}`{% endraw %}
-
-#### Tags
-
-Para selecionar tags para campanhas e telas.
-
-- **Valor de substituição:** Campanhas e telas com IDs BSON separadas por vírgula e com aspas simples que estão associadas às tags selecionadas
-- **Exemplo de uso:** {% raw %}`{{tags.${some tags}}}`{% endraw %}
-
-### Metadados variáveis
-
-Os metadados podem ser anexados a uma variável para alterar seu comportamento, anexando os metadados com um caractere pipe ( | ) após o nome da variável. A ordem dos metadados não importa e você pode anexar qualquer número deles. Além disso, todos os tipos de metadados podem ser usados para qualquer variável, exceto os metadados especiais que são específicos para determinadas variáveis (isso será indicado nesses casos). O uso de todos os metadados é opcional e é usado para alterar o comportamento da variável padrão.
-
-**Exemplo de uso:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
-
-#### Visível
-
-Para saber se as variáveis estão visíveis. Todas as variáveis são visíveis por padrão na guia **Variables (Variáveis** ), onde você pode inserir valores.
-
-Há diversas variáveis especiais cujo valor depende de outra variável, como, por exemplo, se outra variável tem um valor. Essas variáveis especiais são marcadas como não visíveis para que não sejam exibidas na guia **Variáveis**.
-
-**Exemplo de uso:** `visible: ‘false’`
-
-#### Obrigatória
-
-Para saber se as variáveis são obrigatórias por padrão. Um valor vazio para uma variável geralmente leva a uma consulta incorreta.
-
-**Exemplo de uso:** `required: ‘false’`
-
-#### Pedido
-
-Para selecionar a posição da variável na guia **Variáveis**.
-
-**Exemplo de uso:** `order: ‘1’`
-
-#### Incluir aspas simples
-
-Para cercar os valores de uma variável com aspas simples.
-
-**Exemplo de uso:** `include_quotes: ‘true’`
-
-#### Incluir aspas duplas
-
-Para envolver os valores de uma variável com aspas duplas.
-
-**Exemplo de uso:** `include_double_quotes: ‘true’`
-
-#### Seleção múltipla
-
-Para saber se o menu suspenso de seleção permite uma seleção única ou múltipla. Por enquanto, você pode incluir esses metadados somente se usar a variável [Options](#options).
-
-**Exemplo de uso:** `is_multi_select: ‘true’`
-
-![][7]{: style="max-width:50%;"}
-
-#### Botão de rádio
-
-Para mostrar opções como botões de rádio em vez de um menu suspenso de seleção na guia **Variables (Variáveis** ). Você pode incluir esses metadados somente se usar a variável [Options](#options).
-
-**Exemplo de uso:** `is_radio_button: ‘true’`
-
-![][6]{: style="max-width:50%;"}
-
-#### Opções 
-
-Para fornecer a lista de opções selecionáveis na forma de um rótulo e valor. O rótulo é o que é exibido e o valor é o que substitui a variável quando a opção é selecionada. Você pode incluir esses metadados somente se usar a variável [Options](#options).
-
-**Exemplo de uso:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
-
-#### Espaço reservado
-
-Para especificar o texto do espaço reservado mostrado no campo de entrada da variável.
-
-**Exemplo de uso:** `placeholder: ‘enter some value’`
-
-#### Descrição
-
-Para especificar o texto de descrição mostrado no campo de entrada da variável.
-
-**Exemplo de uso:** `description: ‘some description’`
-
-#### Valor padrão
-
-Para especificar o valor padrão da variável quando nenhum valor for especificado.
-
-**Exemplo de uso:** `default_value: ‘5’`
-
-#### Ocultar rótulo
-
-Para ocultar o rótulo do nome da variável. O nome da variável é usado como um rótulo padrão.
-
-**Exemplo de uso:** `hide_label: ‘true’`
-
-### Variáveis especiais
-
-As seguintes variáveis podem ser usadas com outras variáveis:
-
-#### Presença ou ausência do valor de outra variável
-
-Para saber se o valor de uma variável está preenchido. Isso é útil para variáveis opcionais em que você deseja interromper uma condição se o valor de uma variável não for preenchido.
-
-- **Valor de substituição:** `true` ou `false`, dependendo do valor da outra variável
-- **Exemplo de uso:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
-
-`type` e `name` referem-se à variável referenciada. Por exemplo, para causar curto-circuito na seguinte variável opcional: {% raw %}`{{campaigns.${messaging}}`, você pode usar o seguinte:
-`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
-
-## Tempo limite do relatório
-
-Os relatórios que demorarem mais de seis minutos para serem executados serão encerrados. Se esta for a primeira consulta que você está executando em algum tempo, ela poderá levar mais tempo para ser processada e, portanto, terá uma probabilidade maior de atingir o tempo limite. Se isso acontecer, tente executar o relatório novamente.
-
-Se um relatório expirar ou apresentar erros mesmo após uma nova tentativa, entre em contato com [o Suporte]({{site.baseurl}}/help/support#braze-support).
-
-## Dados e resultados
-
-Os resultados e as exportações de resultados são tabelas que podem conter até 1.000 linhas. Para relatórios que exigem grandes quantidades de dados, você pode usar ferramentas como o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) ou o [endpoint da API de exportação]({{site.baseurl}}/api/endpoints/export).
-
-## Monitoramento do uso do Query Builder
-
-Cada espaço de trabalho da Braze tem 5 créditos Snowflake disponíveis por mês. Uma pequena parte de um crédito do Snowflake é usada sempre que você executa uma consulta ou prévia uma tabela.
-
-{% alert note %}
-Os créditos do Snowflake não são compartilhados entre os recursos. Por exemplo, os créditos nas extensões de segmento do SQL e no Criador de Consultas são independentes um do outro.
-{% endalert %}
-
-O uso de crédito está correlacionado ao tempo de execução de sua consulta de SQL. Quanto maior for o tempo de execução, maior será a porção de crédito do Snowflake que uma consulta custará. O tempo de execução pode variar de acordo com a complexidade e o tamanho de suas consultas ao longo do tempo. Quanto mais complexas e frequentes forem as consultas executadas, maior será a alocação de recursos e mais rápido será o tempo de execução.
-
-Os créditos não são usados ao escrever, editar ou salvar relatórios no editor Braze SQL. Seus créditos serão redefinidos para 5 no primeiro dia de cada mês, às 12 horas UTC. Você pode monitorar o uso de seu crédito mensal na parte superior da página do Criador de consultas.
-
-![O Construtor de consultas mostra a quantidade de créditos usados no mês atual.][1]{: style="max-width:60%;"}
-
-Quando você atinge o limite de crédito, não pode executar consultas, mas pode criar, editar e salvar relatórios de SQL. Se quiser comprar mais créditos do Criador de consultas, entre em contato com o gerente da sua conta.
-
-[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
-[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
-[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
-[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
-[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
-[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
-[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}

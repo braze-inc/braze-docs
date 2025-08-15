@@ -15,7 +15,7 @@ channel:
 
 | Exemplo de Android (expandido) | Exemplo de IOS (expandido) |
 | :-----: | :----------: |
-| ![][1] | ![][2] |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -31,7 +31,7 @@ As seguintes versões do SDK são necessárias para receber o Push Stories:
 
 ## Como usar o Push Stories
 
-![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Para usar o Push Stories, faça o seguinte:
 
@@ -44,13 +44,13 @@ Para usar o Push Stories, faça o seguinte:
 Para criar uma página, execute as seguintes etapas:
 
 1. Clique em **Gerenciar páginas** no criador principal.
-    <br><br>![][4]{: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. Insira uma imagem para cada página, juntamente com o comportamento de clique para essa imagem.
 3. Se desejar, adicione um **título** e uma **descrição** para cada página. Se você usar um título e uma descrição para uma página, eles deverão ser inseridos em todas as páginas.
 
 As prévias serão refletidas e são interativas.
 
-![][3]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 Se estiver extraindo imagens com [conteúdo conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), certifique-se de que o URL da imagem comece com `https://`. O uso do `http://` causará falha no app.
@@ -89,7 +89,7 @@ Ao criar uma campanha ou uma tela, é possível filtrar os usuários que deseja 
 
 A análise de dados será muito semelhante à seção de análise atual para notificações por push. Para a análise de dados de "Push Stories", você pode abrir a métrica de **aberturas diretas** para visualizar os cliques por página.
 
-![Tabela de performance de push do iOS com exemplos de análises de dados e detalhes expandidos para a métrica de aberturas diretas.][5]
+![Tabela de performance de push do iOS com análise de dados de amostra e detalhes expandidos para a métrica de aberturas diretas.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Solução de problemas
 
@@ -111,9 +111,3 @@ Em determinadas situações em que todas as páginas não forem carregadas, por 
 
 Por padrão, as Push Stories não são descartadas no Android depois que o usuário clica na imagem. Se você quiser ignorar a notificação, ligue para [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
 
-[1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
-[2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}
-[3]: {% image_buster /assets/img_archive/pushstories_composer.png %}
-[4]: {% image_buster /assets/img_archive/pushstories_add_pages.png %}
-[5]: {% image_buster /assets/img_archive/pushstories_analytics.png %}
-[6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}

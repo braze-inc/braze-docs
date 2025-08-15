@@ -70,28 +70,28 @@ Os filtros de matriz são usados para alterar a saída das matrizes.
 
 | Filtrar               | Definição                                                                                                         | Com suporte |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
-| [join][1.1]          | Une os elementos de uma matriz com o caractere passado como parâmetro. O resultado é uma única string.          | ✅ Sim   |
-| [first][1.2]         | Retorna o primeiro elemento de uma matriz. Em uma matriz de atributos personalizados, esse é o valor adicionado mais antigo.                | ✅ Sim   |
-| [last][1.3]          | Retorna o último elemento de uma matriz. Em uma matriz de atributos personalizados, esse é o valor adicionado mais recentemente.          | ✅ Sim   |
-| [compacto][1.4]       | Remove todos os itens `nil` de uma matriz.                                                                             | ✅ Sim   |
-| [concat][1.5]        | Combina uma matriz com outra matriz.                                                                              | ✅ Sim   |
-| [index][1.6]         | Retorna o item no local de índice especificado em uma matriz. O primeiro item em uma matriz é referenciado com `[0]`. | ✅ Sim   |
-| [map][1.7]           | Aceita a atribuição de um elemento da matriz como parâmetro e cria uma matriz a partir do valor de cada elemento da matriz.        | ✅ Sim   |
-| [reverse][1.8]       | Inverte a ordem dos itens em uma matriz.                                                                       | ✅ Sim   |
-| [size][1.9]          | Retorna o tamanho de uma string (o número de caracteres) ou de uma matriz (o número de elementos).                      | ✅ Sim   |
-| [sort][1.10]         | Classifica os elementos de uma matriz por uma determinada atribuição de um elemento da matriz.                                    | ✅ Sim   |
-| [sort_natural][1.11] | Classifica os itens de uma matriz em ordem alfabética sem distinção entre maiúsculas e minúsculas.                                                | ✅ Sim   |
-| [uniq][1.12]         | Remove quaisquer instâncias duplicadas de elementos em uma matriz.                                                           | ✅ Sim   |
-| [onde][1.13]        | Filtra uma matriz para incluir apenas itens com um valor de propriedade específico.                                             | ✅ Sim   |
+| [join](https://shopify.dev/api/liquid/filters/array-filters#join)          | Une os elementos de uma matriz com o caractere passado como parâmetro. O resultado é uma única string.          | ✅ Sim   |
+| [first](https://shopify.dev/api/liquid/filters/array-filters#first)         | Retorna o primeiro elemento de uma matriz. Em uma matriz de atributos personalizados, esse é o valor adicionado mais antigo.                | ✅ Sim   |
+| [last](https://shopify.dev/api/liquid/filters/array-filters#last)          | Retorna o último elemento de uma matriz. Em uma matriz de atributos personalizados, esse é o valor adicionado mais recentemente.          | ✅ Sim   |
+| [compacto](https://shopify.dev/api/liquid/filters#compact)       | Remove todos os itens `nil` de uma matriz.                                                                             | ✅ Sim   |
+| [concat](https://shopify.dev/api/liquid/filters/array-filters#concat)        | Combina uma matriz com outra matriz.                                                                              | ✅ Sim   |
+| [index](https://shopify.dev/api/liquid/filters/array-filters#index)         | Retorna o item no local de índice especificado em uma matriz. O primeiro item em uma matriz é referenciado com `[0]`. | ✅ Sim   |
+| [map](https://shopify.dev/api/liquid/filters/array-filters#map)           | Aceita a atribuição de um elemento da matriz como parâmetro e cria uma matriz a partir do valor de cada elemento da matriz.        | ✅ Sim   |
+| [reverse](https://shopify.dev/api/liquid/filters/array-filters#reverse)       | Inverte a ordem dos itens em uma matriz.                                                                       | ✅ Sim   |
+| [size](https://shopify.dev/api/liquid/filters/array-filters#size)          | Retorna o tamanho de uma string (o número de caracteres) ou de uma matriz (o número de elementos).                      | ✅ Sim   |
+| [sort](https://shopify.dev/api/liquid/filters/array-filters#sort)         | Classifica os elementos de uma matriz por uma determinada atribuição de um elemento da matriz.                                    | ✅ Sim   |
+| [sort_natural](https://shopify.dev/api/liquid/filters#sort_natural) | Classifica os itens de uma matriz em ordem alfabética sem distinção entre maiúsculas e minúsculas.                                                | ✅ Sim   |
+| [uniq](https://shopify.dev/api/liquid/filters/array-filters#uniq)         | Remove quaisquer instâncias duplicadas de elementos em uma matriz.                                                           | ✅ Sim   |
+| [onde](https://shopify.dev/api/liquid/filters#where)        | Filtra uma matriz para incluir apenas itens com um valor de propriedade específico.                                             | ✅ Sim   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Filtros coloridos
 
-[Os filtros de cores][2.1] não são suportados no Braze.
+[Os filtros de cores](https://shopify.dev/api/liquid/filters/color-filters) não são suportados no Braze.
 
 ## Filtros de fonte
 
-[Os filtros de fonte][3.1] não são suportados no Braze.
+[Os filtros de fonte](https://shopify.dev/api/liquid/filters/font-filters) não são suportados no Braze.
 
 ## Filtros matemáticos
 
@@ -99,17 +99,17 @@ Os filtros matemáticos permitem que você realize operações matemáticas. Se 
 
 | Filtrar  | Definição      | Com suporte |
 | :------ |:----------------| :-------- |
-| [abs][4.1]        | Retorna o valor absoluto de um número.     | ✅ Sim   |
-| [at_most][4.2]    | Limita um número a um valor máximo.   | ✅ Sim   |
-| [pelo menos][4.3]   | Limita um número a um valor mínimo.   | ✅ Sim   |
-| [teto][4.4]       | Arredonda uma saída até o número inteiro mais próximo.  | ✅ Sim   |
-| [dividido_por][4.5] | Divide uma saída por um número. A saída é arredondada para o número inteiro mais próximo. Confira a dica a seguir para evitar o arredondamento. | ✅ Sim   |
-| [floor][4.6]      | Arredonda uma saída para o número inteiro mais próximo.        | ✅ Sim   |
-| [minus][4.7]      | Subtrai um número de uma saída.          | ✅ Sim   |
-| [plus][4.8]       | Adiciona um número a uma saída.     | ✅ Sim   |
-| [round][4.9]      | Arredonda a saída para o número inteiro mais próximo ou para o número especificado de casas decimais.  | ✅ Sim   |
-| [vez][4.10]     | Multiplica uma saída por um número.       | ✅ Sim   |
-| [módulo][4.11]    | Divide uma saída por um número e retorna o restante.   | ✅ Sim   |
+| [abs](https://shopify.dev/api/liquid/filters/math-filters#abs)        | Retorna o valor absoluto de um número.     | ✅ Sim   |
+| [at_most](https://shopify.dev/api/liquid/filters/math-filters#at_most)    | Limita um número a um valor máximo.   | ✅ Sim   |
+| [pelo menos](https://shopify.dev/api/liquid/filters/math-filters#at_least)   | Limita um número a um valor mínimo.   | ✅ Sim   |
+| [teto](https://shopify.dev/api/liquid/filters/math-filters#ceil)       | Arredonda uma saída até o número inteiro mais próximo.  | ✅ Sim   |
+| [dividido_por](https://shopify.dev/api/liquid/filters/math-filters#divided_by) | Divide uma saída por um número. A saída é arredondada para o número inteiro mais próximo. Confira a dica a seguir para evitar o arredondamento. | ✅ Sim   |
+| [floor](https://shopify.dev/api/liquid/filters/math-filters#floor)      | Arredonda uma saída para o número inteiro mais próximo.        | ✅ Sim   |
+| [minus](https://shopify.dev/api/liquid/filters/math-filters#minus)      | Subtrai um número de uma saída.          | ✅ Sim   |
+| [plus](https://shopify.dev/api/liquid/filters/math-filters#plus)       | Adiciona um número a uma saída.     | ✅ Sim   |
+| [round](https://shopify.dev/api/liquid/filters/math-filters#round)      | Arredonda a saída para o número inteiro mais próximo ou para o número especificado de casas decimais.  | ✅ Sim   |
+| [vez](https://shopify.dev/api/liquid/filters/math-filters#times)     | Multiplica uma saída por um número.       | ✅ Sim   |
+| [módulo](https://shopify.dev/api/liquid/filters/math-filters#modulo)    | Divide uma saída por um número e retorna o restante.   | ✅ Sim   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -171,9 +171,9 @@ Se estiver atualizando um usuário sobre uma compra, um saldo de conta ou qualqu
 
 | Filtrar         | Definição          | Com suporte |
 | :--------------- | :--------------- | :-------- |
-| [dinheiro][5.1]      | Formata números para garantir que os decimais estejam no lugar correto e que não haja zeros na ponta de nenhum número.   | ✅ Sim   |
-| [money_with_currency][5.2]    | Formata números com o símbolo de moeda.     | ⛔ Não    |
-| [money_without_currency][5.4]     | Formata números sem o símbolo de moeda.      | ⛔ Não    |
+| [dinheiro](https://shopify.dev/api/liquid/filters/money-filters#money)      | Formata números para garantir que os decimais estejam no lugar correto e que não haja zeros na ponta de nenhum número.   | ✅ Sim   |
+| [money_with_currency](https://shopify.dev/api/liquid/filters/money-filters#money_with_currency)    | Formata números com o símbolo de moeda.     | ⛔ Não    |
+| [money_without_currency](https://shopify.dev/api/liquid/filters/money-filters#money_without_currency)     | Formata números sem o símbolo de moeda.      | ⛔ Não    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
@@ -202,7 +202,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | COM O FILTRO DE DINHEIRO                       | SEM O FILTRO DE DINHEIRO                    |
 | :------------------------------------------ | :------------------------------------------ |
-| ![Com filtro de dinheiro][1]                     | ![Sem filtro de dinheiro][2]                  |
+| ![Com filtro de dinheiro]({% image_buster /assets/img/with_money_filter.png %})                     | ![Sem filtro de dinheiro]({% image_buster /assets/img/without_money_filter.png %})                  |
 | Onde `account_balance` é a entrada em `17.8`. | Onde `account_balance` é a entrada em `17.8`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -225,7 +225,7 @@ $145.00
 {% endtab %}
 {% endtabs %}
 
-De acordo com o filtro de [dinheiro][5.1] da Shopify, isso deveria ter uma saída de `$1.45`, no entanto, na Braze, isso terá uma saída de `$145.00`. Como solução alternativa, podemos usar o filtro `divided_by` para manipular o número em um decimal, antes de aplicar o filtro de dinheiro:
+De acordo com o filtro de [dinheiro](https://shopify.dev/api/liquid/filters/money-filters#money) da Shopify, isso deveria ter uma saída de `$1.45`, no entanto, na Braze, isso terá uma saída de `$145.00`. Como solução alternativa, podemos usar o filtro `divided_by` para manipular o número em um decimal, antes de aplicar o filtro de dinheiro:
 
 {% tabs local %}
 {% tab Entrada %}
@@ -254,34 +254,34 @@ As aspas retas são diferentes das aspas curvas no Liquid. Tenha cuidado ao copi
 
 | Filtrar          | Descrição     | Com suporte |
 | :--------------- | ------------- | --------- |
-| [append][6.1]     | Acrescenta caracteres a uma string.           | ✅ Sim   |
-| [camelcase][6.2]     | Converte uma string em CamelCase.             | ⛔ Não    |
-| [capitalize][6.3]     | Coloca a primeira palavra em maiúscula em uma string e reduz a minúscula dos caracteres restantes.         | ✅ Sim   |
-| [downcase][6.4]      | Converte uma string em letras minúsculas.         | ✅ Sim   |
-| [escape][6.5]    | Escapa uma string.             | ✅ Sim   |
-| [handle/handleize][6.6]        | Formata uma string em um identificador.        | ⛔ Não    |
-| [md5][6.7]    | Converte uma string em um hash MD5. Consulte Filtros de codificação][3] para saber mais.   | ✅ Sim   |
-| [sha1][6.8]    | Converte uma string em um hash SHA-1. Consulte Filtros de codificação][3] para saber mais.  | ✅ Sim   |
-| hmac_sha1_hex<br>(anteriormente [hmac_sha_1][6.10]) | Converte uma string em um hash SHA-1 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro. Consulte Filtros de codificação][3] para saber mais. | ✅ Sim   |
-| [hmac_sha256][6.11]    | Converte uma string em um hash SHA-256 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro.       | ✅ Sim   |
+| [append](https://shopify.dev/api/liquid/filters/string-filters#append)     | Acrescenta caracteres a uma string.           | ✅ Sim   |
+| [camelcase](https://shopify.dev/api/liquid/filters/string-filters#camelcase)     | Converte uma string em CamelCase.             | ⛔ Não    |
+| [capitalize](https://shopify.dev/api/liquid/filters/string-filters#capitalize)     | Coloca a primeira palavra em maiúscula em uma string e reduz a minúscula dos caracteres restantes.         | ✅ Sim   |
+| [downcase](https://shopify.dev/api/liquid/filters/string-filters#downcase)      | Converte uma string em letras minúsculas.         | ✅ Sim   |
+| [escape](https://shopify.dev/api/liquid/filters/string-filters#escape)    | Escapa uma string.             | ✅ Sim   |
+| [handle/handleize](https://shopify.dev/api/liquid/filters/string-filters#handle-handleize)        | Formata uma string em um identificador.        | ⛔ Não    |
+| [md5](https://shopify.dev/api/liquid/filters/string-filters#md5)    | Converte uma string em um hash MD5. Consulte [Filtros de codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obter mais informações.   | ✅ Sim   |
+| [sha1](https://shopify.dev/api/liquid/filters/string-filters#sha1)    | Converte uma string em um hash SHA-1. Consulte [Filtros de codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obter mais informações.  | ✅ Sim   |
+| hmac_sha1_hex<br>(anteriormente [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Converte uma string em um hash SHA-1 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro. Consulte [Filtros de codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obter mais informações. | ✅ Sim   |
+| [hmac_sha256](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256)    | Converte uma string em um hash SHA-256 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro.       | ✅ Sim   |
 | hmac_sha512 | Converte uma string em um hash SHA-512 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro. | ✅ Sim  |
-| [newline_to_br][6.12]     | Insere uma tag HTML de quebra de linha `<br>` na frente de cada quebra de linha em uma string.        | ✅ Sim   |
-| [pluralize][6.13]   | Emite a versão singular ou plural de uma string em inglês com base no valor de um número.      | ⛔ Não    |
-| [prepend][6.14]     | Anexa caracteres a uma string.      | ✅ Sim   |
-| [remover][6.15]      | Remove todas as ocorrências de uma substring de uma string.       | ✅ Sim   |
-| [remove_first][6.16]    | Remove apenas a primeira ocorrência de uma substring de uma string.      | ✅ Sim   |
-| [replace][6.17]        | Substitui todas as ocorrências de uma string por uma substring.   | ✅ Sim   |
-| [replace_first][6.18]        | Substitui a primeira ocorrência de uma string por uma substring.      | ✅ Sim   |
-| [slice][6.19]       | O filtro de fatia retorna uma substring, começando no índice especificado.       | ✅ Sim   |
-| [split][6.20]  | O filtro de divisão recebe uma substring como parâmetro. A substring é usada como um delimitador para dividir uma string em uma matriz.            | ✅ Sim   |
-| [strip][6.21]   | Remove guias, espaços e novas linhas (todos os espaços em branco) dos lados esquerdo e direito de uma string.                                                                                                    | ✅ Sim   |
-| [lstrip][6.22]     | Retira guias, espaços e novas linhas (todos os espaços em branco) do lado esquerdo de uma string.    | ⛔ Não    |
-| [rstrip][6.23]             | Retira guias, espaços e novas linhas (todos os espaços em branco) do lado direito de uma string.          | ⛔ Não    |
-| [strip_html][6.24]         | Retira todas as tags HTML de uma string.        | ✅ Sim   |
-| [strip_newlines][6.25]  | Remove todas as quebras de linha/novas linhas de uma string.        | ✅ Sim   |
-| [truncate][6.26]    | Trunca uma string até o número de caracteres passado como primeiro parâmetro. Uma elipse (...) é anexada à string truncada e é incluída na contagem de caracteres.    | ✅ Sim   |
-| [truncatewords][6.27]   | Trunca uma string até o número de palavras passadas como primeiro parâmetro. Uma elipse (...) é anexada à string truncada.    | ✅ Sim   |
-| [upcase][6.28]   | Converte uma string em maiúsculas.      | ✅ Sim   |
+| [newline_to_br](https://shopify.dev/api/liquid/filters/string-filters#newline_to_br)     | Insere uma tag HTML de quebra de linha `<br>` na frente de cada quebra de linha em uma string.        | ✅ Sim   |
+| [pluralize](https://shopify.dev/api/liquid/filters/string-filters#pluralize)   | Emite a versão singular ou plural de uma string em inglês com base no valor de um número.      | ⛔ Não    |
+| [prepend](https://shopify.dev/api/liquid/filters/string-filters#prepend)     | Anexa caracteres a uma string.      | ✅ Sim   |
+| [remover](https://shopify.dev/api/liquid/filters/string-filters#remove)      | Remove todas as ocorrências de uma substring de uma string.       | ✅ Sim   |
+| [remove_first](https://shopify.dev/api/liquid/filters/string-filters#remove_first)    | Remove apenas a primeira ocorrência de uma substring de uma string.      | ✅ Sim   |
+| [replace](https://shopify.dev/api/liquid/filters/string-filters#replace)        | Substitui todas as ocorrências de uma string por uma substring.   | ✅ Sim   |
+| [replace_first](https://shopify.dev/api/liquid/filters/string-filters#replace_first)        | Substitui a primeira ocorrência de uma string por uma substring.      | ✅ Sim   |
+| [slice](https://shopify.dev/api/liquid/filters/string-filters#slice)       | O filtro de fatia retorna uma substring, começando no índice especificado.       | ✅ Sim   |
+| [split](https://shopify.dev/api/liquid/filters/string-filters#split)  | O filtro de divisão recebe uma substring como parâmetro. A substring é usada como um delimitador para dividir uma string em uma matriz.            | ✅ Sim   |
+| [strip](https://shopify.dev/api/liquid/filters/string-filters#strip)   | Remove guias, espaços e novas linhas (todos os espaços em branco) dos lados esquerdo e direito de uma string.                                                                                                    | ✅ Sim   |
+| [lstrip](https://shopify.dev/api/liquid/filters/string-filters#lstrip)     | Retira guias, espaços e novas linhas (todos os espaços em branco) do lado esquerdo de uma string.    | ⛔ Não    |
+| [rstrip](https://shopify.dev/api/liquid/filters/string-filters#rstrip)             | Retira guias, espaços e novas linhas (todos os espaços em branco) do lado direito de uma string.          | ⛔ Não    |
+| [strip_html](https://shopify.dev/api/liquid/filters/string-filters#strip_html)         | Retira todas as tags HTML de uma string.        | ✅ Sim   |
+| [strip_newlines](https://shopify.dev/api/liquid/filters/string-filters#strip_newlines)  | Remove todas as quebras de linha/novas linhas de uma string.        | ✅ Sim   |
+| [truncate](https://shopify.dev/api/liquid/filters/string-filters#truncate)    | Trunca uma string até o número de caracteres passado como primeiro parâmetro. Uma elipse (...) é anexada à string truncada e é incluída na contagem de caracteres.    | ✅ Sim   |
+| [truncatewords](https://shopify.dev/api/liquid/filters/string-filters#truncatewords)   | Trunca uma string até o número de palavras passadas como primeiro parâmetro. Uma elipse (...) é anexada à string truncada.    | ✅ Sim   |
+| [upcase](https://shopify.dev/api/liquid/filters/string-filters#upcase)   | Converte uma string em maiúsculas.      | ✅ Sim   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Filtros adicionais
@@ -290,10 +290,10 @@ Os filtros gerais a seguir têm muitas finalidades, inclusive a formatação ou 
 
 | Filtrar                | Descrição                                                                                                                      | Com suporte |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [data][7.1]           | Converte um registro de data e hora em outro formato de data. Consulte [Filtro de data](#date-filter) para obter mais informações.         | ✅ Sim   |
-| [default][7.2]        | Define um valor padrão para qualquer variável sem valor atribuído. Pode ser usado com strings, matrizes e hashes.      | ✅ Sim   |
-| [format_address][7.3] | Formata um endereço para imprimir os elementos do endereço em ordem, de acordo com sua localização.        | ⛔ Não    |
-| [highlight][7.4]      | Envolve as palavras dentro dos resultados da pesquisa com uma tag HTML `<strong>` com o destaque da classe se corresponder aos termos de pesquisa enviados. | ⛔ Não    |
+| [data](https://shopify.dev/api/liquid/filters/additional-filters#date)           | Converte um registro de data e hora em outro formato de data. Consulte [Filtro de data](#date-filter) para obter mais informações.         | ✅ Sim   |
+| [default](https://shopify.dev/api/liquid/filters/additional-filters#default)        | Define um valor padrão para qualquer variável sem valor atribuído. Pode ser usado com strings, matrizes e hashes.      | ✅ Sim   |
+| [format_address](https://shopify.dev/api/liquid/filters/additional-filters#format_address) | Formata um endereço para imprimir os elementos do endereço em ordem, de acordo com sua localização.        | ⛔ Não    |
+| [highlight](https://shopify.dev/api/liquid/filters/additional-filters#highlight)      | Envolve as palavras dentro dos resultados da pesquisa com uma tag HTML `<strong>` com o destaque da classe se corresponder aos termos de pesquisa enviados. | ⛔ Não    |
 | `time_zone`             | Consulte [Filtro de fuso horário](#time-zone-filter).     | ✅ Sim   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -386,74 +386,10 @@ Também é possível usar a variável reservada `now` para acessar a data e a ho
 {% endtabs %}
 
 
-[1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
-[1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
-[1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters#compact
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
-[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
-[1.13]: https://shopify.dev/api/liquid/filters#where
-
-[2.1]: https://shopify.dev/api/liquid/filters/color-filters
-[3.1]: https://shopify.dev/api/liquid/filters/font-filters
-
-[4.1]: https://shopify.dev/api/liquid/filters/math-filters#abs
-[4.2]: https://shopify.dev/api/liquid/filters/math-filters#at_most
-[4.3]: https://shopify.dev/api/liquid/filters/math-filters#at_least
-[4.4]: https://shopify.dev/api/liquid/filters/math-filters#ceil
-[4.5]: https://shopify.dev/api/liquid/filters/math-filters#divided_by
-[4.6]: https://shopify.dev/api/liquid/filters/math-filters#floor
-[4.7]: https://shopify.dev/api/liquid/filters/math-filters#minus
-[4.8]: https://shopify.dev/api/liquid/filters/math-filters#plus
-[4.9]: https://shopify.dev/api/liquid/filters/math-filters#round
-[4.10]: https://shopify.dev/api/liquid/filters/math-filters#times
-[4.11]: https://shopify.dev/api/liquid/filters/math-filters#modulo
-
-[5.1]: https://shopify.dev/api/liquid/filters/money-filters#money
-[5.2]: https://shopify.dev/api/liquid/filters/money-filters#money_with_currency
-[5.3]: https://shopify.dev/api/liquid/filters/money-filters#money_without_trailing_zeros
-[5.4]: https://shopify.dev/api/liquid/filters/money-filters#money_without_currency
-
-[6.1]: https://shopify.dev/api/liquid/filters/string-filters#append
-[6.2]: https://shopify.dev/api/liquid/filters/string-filters#camelcase
-[6.3]: https://shopify.dev/api/liquid/filters/string-filters#capitalize
-[6.4]: https://shopify.dev/api/liquid/filters/string-filters#downcase
-[6.5]: https://shopify.dev/api/liquid/filters/string-filters#escape
-[6.6]: https://shopify.dev/api/liquid/filters/string-filters#handle-handleize
-[6.7]: https://shopify.dev/api/liquid/filters/string-filters#md5
-[6.8]: https://shopify.dev/api/liquid/filters/string-filters#sha1
-[6.10]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1
-[6.11]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256
-[6.12]: https://shopify.dev/api/liquid/filters/string-filters#newline_to_br
-[6.13]: https://shopify.dev/api/liquid/filters/string-filters#pluralize
-[6.14]: https://shopify.dev/api/liquid/filters/string-filters#prepend
-[6.15]: https://shopify.dev/api/liquid/filters/string-filters#remove
-[6.16]: https://shopify.dev/api/liquid/filters/string-filters#remove_first
-[6.17]: https://shopify.dev/api/liquid/filters/string-filters#replace
-[6.18]: https://shopify.dev/api/liquid/filters/string-filters#replace_first
-[6.19]: https://shopify.dev/api/liquid/filters/string-filters#slice
-[6.20]: https://shopify.dev/api/liquid/filters/string-filters#split
-[6.21]: https://shopify.dev/api/liquid/filters/string-filters#strip
-[6.22]: https://shopify.dev/api/liquid/filters/string-filters#lstrip
-[6.23]: https://shopify.dev/api/liquid/filters/string-filters#rstrip
-[6.24]: https://shopify.dev/api/liquid/filters/string-filters#strip_html
-[6.25]: https://shopify.dev/api/liquid/filters/string-filters#strip_newlines
-[6.26]: https://shopify.dev/api/liquid/filters/string-filters#truncate
-[6.27]: https://shopify.dev/api/liquid/filters/string-filters#truncatewords
-[6.28]: https://shopify.dev/api/liquid/filters/string-filters#upcase
-
-[7.1]: https://shopify.dev/api/liquid/filters/additional-filters#date
-[7.2]: https://shopify.dev/api/liquid/filters/additional-filters#default
-[7.3]: https://shopify.dev/api/liquid/filters/additional-filters#format_address
-[7.4]: https://shopify.dev/api/liquid/filters/additional-filters#highlight
 
 
-[1]: {% image_buster /assets/img/with_money_filter.png %}
-[2]: {% image_buster /assets/img/without_money_filter.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters
+
+
+
+
+

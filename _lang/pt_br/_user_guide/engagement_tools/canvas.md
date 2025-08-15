@@ -33,6 +33,9 @@ guide_featured_list:
   - name: Perguntas frequentes
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
+  - name: Solução de problemas com telas
+    link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 {% alert important %}

@@ -24,9 +24,9 @@ As notificações por push da Web fornecem atualizações urgentes e acionáveis
 - Leve as pessoas de volta ao seu site com botões simples de chamada para ação
 - Personalize seu push com informações sobre produtos e clientes para tornar sua mensagem relevante
 
-O web push funciona da mesma forma que as notificações por push de app funcionam em seu telefone. Para saber mais sobre como criar um web push, consulte [Criação de uma notificação por push][11].
+O web push funciona da mesma forma que as notificações por push de app funcionam em seu telefone. Para saber mais sobre como criar um web push, consulte [Criação de uma notificação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
-![Exemplo de web push com a mesma mensagem push exibida em um laptop e em um telefone.][12]{: style="border:none"}
+![web push exemplo com a mesma mensagem push exibida em um laptop e telefone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## Casos de uso em potencial
 
@@ -70,6 +70,3 @@ Para saber mais sobre os padrões do protocolo push e o suporte do navegador, co
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
 
-[11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
-[13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}

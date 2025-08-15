@@ -1,7 +1,7 @@
 ---
 nav_title: E-mail
 article_title: E-mail
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "E-mail"
 guide_top_text: "Com o e-mail na Braze, você pode criar mensagens de e-mail completamente personalizadas e customizadas em campanhas ou canva que chamarão a atenção do seu usuário rapidamente. Confira os seguintes artigos para saber mais."
@@ -57,7 +57,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Criptografia do campo de identificador
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Ferramenta de Promoção do Gmail
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/

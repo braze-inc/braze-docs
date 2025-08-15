@@ -11,8 +11,8 @@ toc_headers: h2
 
 > O Braze Canvas oferece vários modelos pré-construídos adaptados especificamente para profissionais de marketing de comércio eletrônico, facilitando a implementação de estratégias essenciais. Esta página oferece alguns modelos importantes que podem ser usados para aprimorar as jornadas de seus clientes.
 
-{% alert note %}
-A Braze reconhece que o planejamento de dados leva tempo. Incentivamos nossos clientes a familiarizarem suas equipes de desenvolvimento e começarem a enviar eventos de comércio eletrônico agora. Embora alguns recursos possam não estar disponíveis imediatamente com os eventos recomendados para comércio eletrônico, você pode esperar a introdução de novos produtos ao longo de 2025 que aprimorarão seus recursos de comércio eletrônico.
+{% alert important %}
+[Os eventos recomendados para comércio eletrônico]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) estão atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente Braze se estiver interessado em participar desse acesso antecipado. <br><br>Se estiver usando o novo conector do Shopify, os eventos recomendados para comércio eletrônico estarão automaticamente disponíveis por meio da integração.
 {% endalert %}
 
 ## Usando um modelo do Canvas
@@ -21,7 +21,7 @@ Para usar um modelo do Canva:
 1. Acesse **Envio de mensagens** > **Canva**.
 2. Selecione **Criar tela** > **Usar um modelo de tela**.
 3. Procure na guia **Braze templates** o modelo que deseja usar. Você pode fazer uma prévia de um modelo selecionando seu nome.
-4. Selecione **Apply Template (Aplicar modelo** ) para o modelo que você deseja usar.<br><br>![A página "Modelos de tela" foi aberta na guia "Modelos do Braze" e mostra uma lista de modelos usados recentemente e modelos do Braze selecionáveis.][2]{: style="max-width:80%;"}
+4. Selecione **Apply Template (Aplicar modelo** ) para o modelo que deseja usar.<br><br>![A página "Modelos de tela" foi aberta na guia "Modelos do Braze" e mostra uma lista de modelos usados recentemente e modelos do Braze selecionáveis.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## Modelos de comércio eletrônico
 
@@ -34,7 +34,7 @@ Para usar um modelo do Canva:
 
 Use o modelo **Abandono de carrinho** para engajar os usuários que navegaram pelos produtos, mas não os adicionaram ao carrinho ou fizeram um pedido.
 
-![Um modelo de Canva "Abandoned Browse" aplicado com "Entry Rules" expandidas.][3]
+![Um modelo aplicado do Canva "Abandoned Browse" com "Entry Rules" expandidas.]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### Configuração
 
@@ -53,13 +53,13 @@ As seguintes configurações são pré-configuradas em seu Canva:
 - Público alvo 
     - Público de entrada 
         - O e-mail **não está em branco**
-        - Também é possível modificar os critérios de público-alvo de entrada para atender às suas necessidades comerciais
+        - Também é possível modificar os critérios do público de entrada para atender às suas necessidades comerciais
     - Controles de entrada
         - Os usuários são elegíveis para entrar novamente neste Canva após a conclusão da duração total do Canvas
     - Critérios de saída 
-        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout started`, ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Enviar configurações 
-    - Usuários que se inscreveram ou aceitaram 
+    - Usuários inscritos ou que aceitaram 
 - Etapa de postergação
     - 1 hora de postergação
 - Etapa da mensagem 
@@ -97,7 +97,7 @@ Aqui está um exemplo de como você adicionaria um bloco de produto HTML para se
 
 Use o modelo **Abandono de carrinho** para cobrir possíveis vendas perdidas de clientes que adicionaram produtos ao carrinho, mas não continuaram a finalizar a compra ou a fazer um pedido. 
 
-![Um modelo de Canva "Abandoned Cart" aplicado com "Entry Rules" expandidas.][4]
+![Um modelo de tela "Abandono de carrinho" aplicado com "Regras de entrada" expandidas.]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### Configuração
 
@@ -122,7 +122,7 @@ As seguintes configurações são pré-configuradas em seu Canva:
     - Critérios de saída 
         - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
 - Enviar configurações 
-    - Usuários que se inscreveram ou aceitaram 
+    - Usuários inscritos ou que aceitaram 
 - Etapa de postergação
      - 4 horas de postergação
 - Etapa da mensagem 
@@ -184,7 +184,7 @@ Se você usa o Shopify, crie o URL do carrinho usando esse modelo Liquid:
 
 Use o modelo **Abandoned checkout** para direcionar os clientes que iniciaram o processo de checkout, mas saíram antes de fazer o pedido. 
 
-![Um modelo de Canva "Abandoned Checkout" aplicado com "Regras de entrada" expandidas.][5]
+![Um modelo de Canva "Abandoned Checkout" aplicado com "Entry Rules" expandidas.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### Configuração
 
@@ -199,7 +199,7 @@ As seguintes configurações são pré-configuradas em seu Canva:
     - Evento de conversão: `ecommerce.order_placed`
         - Prazo de conversão: 3 dias 
 - Cronograma de entrada 
-    - Gatilho baseado em ação quando um usuário realiza o evento `ecommerce.checkout_started` 
+    - Disparo baseado em ação quando um usuário executa o evento `ecommerce.checkout_started` 
     - A hora de início é quando você cria o modelo do Canva<br><br>!["Opções baseadas em ações" para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
 - Público alvo 
     - Público de entrada 
@@ -210,7 +210,7 @@ As seguintes configurações são pré-configuradas em seu Canva:
         - Critérios de saída 
             - Executa os eventos do site `ecommerce.order_placed` <br><br>![Controles de entrada e critérios de saída para o Canva.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
 - Enviar configurações 
-    - Usuários que se inscreveram ou aceitaram 
+    - Usuários inscritos ou que aceitaram 
 - Etapa de postergação
     - 4 horas de postergação
 - Etapa da mensagem 
@@ -257,7 +257,7 @@ Aqui está um exemplo de como adicionar um bloco HTML com a tag `shopping_cart` 
 
 Use o modelo **de pesquisa de confirmação de pedido e feedback** para confirmar pedidos bem-sucedidos e aumentar a satisfação do cliente.
 
-![Um modelo de Canva de "Confirmação de pedido" aplicado com "Regras de entrada" expandidas.][6]
+![Um modelo de Canva de "Confirmação de pedido" aplicado com "Regras de entrada" expandidas.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### Configuração
 
@@ -272,7 +272,7 @@ As seguintes configurações são pré-configuradas em seu Canva:
     - Evento de conversão: `ecommerce.session_start`
         - Prazo de conversão: 10 dias 
 - Cronograma de entrada 
-    - Gatilho baseado em ação quando um usuário realiza o evento `ecommerce.cart_updated` 
+    - Disparo baseado em ação quando um usuário executa o evento `ecommerce.cart_updated` 
     - A hora de início é quando você cria o modelo do Canva<br><br>!["Opções baseadas em ações" para o Canva.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
 - Público alvo 
     - Público de entrada 
@@ -283,7 +283,7 @@ As seguintes configurações são pré-configuradas em seu Canva:
     - Critérios de saída 
         - Não se aplica<br><br>![Filtros e controles de entrada adicionais para o Canva.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
 - Enviar configurações 
-    - Usuários que se inscreveram ou aceitaram 
+    - Usuários inscritos ou que aceitaram 
 - Etapa da mensagem 
     - Revise o modelo de e-mail e o bloco HTML com um exemplo de modelo Liquid para adicionar produtos à sua mensagem no modelo pré-criado. Se você usar seu próprio modelo de e-mail, também poderá fazer referência a [variáveis Liquid](#message-personalization), conforme demonstrado na seção a seguir.
 
@@ -347,6 +347,16 @@ Para saber mais sobre como começar a usar segmentos, consulte [Sobre os segment
 Os eventos de comércio eletrônico são baseados em [eventos recomendados]({{site.baseurl}}/recommended_events/).
 Como os eventos recomendados são eventos personalizados mais opinativos, você pode pesquisar os nomes dos eventos de comércio eletrônico recomendados selecionando qualquer [filtro de evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#segmentation-filters).
 
+### Filtros de comércio eletrônico
+
+Segmente seus usuários com filtros de comércio eletrônico, como **Fonte de comércio eletrônico** e **Receita total**, acessando a seção **Comércio eletrônico** no segmentador.
+
+![Filtros de segmento suspensos com filtros de "Comércio eletrônico".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+
+{% alert important %}
+O evento de compra será descontinuado e substituído por [eventos recomendados pelo comércio eletrônico]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/). Quando isso acontecer, os filtros de segmento não serão mais preenchidos no comportamento de compra. Para obter uma lista completa de eventos de compra, consulte [Registro de eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
 ## Propriedades de eventos aninhados
 
 Para segmentar por propriedades de eventos aninhados, você pode aproveitar [as extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#why-use-segment-extensions). Por exemplo, você pode usar as extensões de segmento para descobrir quem comprou o produto "SKU-123" nos últimos 90 dias.
@@ -361,10 +371,5 @@ Para criar um [relatório de eventos personalizados]({{site.baseurl}}/user_guide
 
 Para obter insights sobre as tendências relacionadas aos pedidos feitos a partir de seus Canvases lançados, será necessário configurar um [Conversions Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) e especificar seus Canvases.
 
-Para casos de uso de relatórios mais avançados, você pode usar o Braze [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) para gerar relatórios personalizados. 
+Para casos de uso de relatórios mais avançados, você pode usar o Braze [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) para gerar relatórios personalizados. 
 
-[2]: {% image_buster /assets/img_archive/apply_template.png %}
-[3]: {% image_buster /assets/img_archive/abandoned_browse.png %}
-[4]: {% image_buster /assets/img_archive/abandoned_cart.png %}
-[5]: {% image_buster /assets/img_archive/abandoned_checkout.png %}
-[6]: {% image_buster /assets/img_archive/order_confirmation_feedback.png %}

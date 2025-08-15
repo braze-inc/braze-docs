@@ -159,7 +159,7 @@ Depois de criar seu segmento, adicione um `Most Recent Location` filtro para seg
 - Para regiões poligonais, você pode designar mais especificamente quais áreas deseja incluir em seu segmento.
 
 {% alert tip %}
-Interessado em aproveitar o direcionamento de local com a ajuda de um parceiro Braze? Confira nossos [parceiros de localização contextual]({{site.baseurl}}/partners/message_personalization/location).
+Interessado em aproveitar o direcionamento de local com a ajuda de um parceiro Braze? Confira nossos [parceiros de localização contextual]({{site.baseurl}}/partners/message_personalization/).
 {% endalert %}
 
 {% endapi %}

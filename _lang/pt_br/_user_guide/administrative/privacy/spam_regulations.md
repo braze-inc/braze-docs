@@ -13,16 +13,16 @@ channel:
 
 # Regulamentações de spam
 
-> Há várias leis que regulam os remetentes de comunicações eletrônicas, incluindo e-mail, notificações por push e SMS. Você deve estar sempre ciente das [regulamentações locais][4] que podem afetar você ou seus usuários. 
+> Há várias leis que regulam os remetentes de comunicações eletrônicas, incluindo e-mail, notificações por push e SMS. Você deve estar sempre ciente das [regulamentações locais](https://en.wikipedia.org/wiki/Email_spam_legislation_by_country) que podem afetar você ou seus usuários. 
 
 A Braze está fornecendo informações relevantes com base em nossa própria pesquisa, mas você também deve consultar o texto completo dessas leis para obter detalhes completos e atualizados.
 
-- [CAN-SPAM][1]
-- [Lei anti-spam canadense][2]
+- [CAN-SPAM](#can-spam)
+- [Lei anti-spam canadense](#casl)
 
 ## CAN-SPAM
 
-A Lei CAN-SPAM de 2003 regulamenta os remetentes de e-mail no site U.S. enviando "qualquer mensagem de e-mail cujo objetivo principal seja o anúncio comercial ou a promoção de um produto ou serviço comercial". Você pode ler mais detalhes no site oficial [da Federal Trade Commission][5].
+A Lei CAN-SPAM de 2003 regulamenta os remetentes de e-mail no site U.S. enviando "qualquer mensagem de e-mail cujo objetivo principal seja o anúncio comercial ou a promoção de um produto ou serviço comercial". Você pode ler mais detalhes no site oficial [da Federal Trade Commission](http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business).
 
 Há sete requisitos principais para a CAN-SPAM:
 
@@ -38,7 +38,7 @@ Os e-mails de transação estão isentos dessas regras, com exceção do item 1.
 
 ## Lei Anti-Spam Canadense (CASL) {#casl}
 
-Em 1º de julho de 2014, a Lei Anti-Spam do Canadá (CASL) entra em vigor para os e-mails enviados a residentes canadenses. Você pode ler o texto completo da lei no [site de Leis de Justiça][3] do Governo do Canadá. Basicamente, a lei diz que os destinatários canadenses de notificações por e-mail e push precisam fornecer consentimento "expresso ou implícito" para a sua comunicação com eles.
+Em 1º de julho de 2014, a Lei Anti-Spam do Canadá (CASL) entra em vigor para os e-mails enviados a residentes canadenses. Você pode ler o texto completo da lei no [site de Leis de Justiça](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) do Governo do Canadá. Basicamente, a lei diz que os destinatários canadenses de notificações por e-mail e push precisam fornecer consentimento "expresso ou implícito" para a sua comunicação com eles.
 
 ### CASL versus CAN-SPAM
 
@@ -62,7 +62,7 @@ Os seguintes tipos de mensagens estão isentos dos requisitos da CASL:
 - Envio de mensagens com notificações de informações factuais sobre inscrição, associação ou conta
 - Envio de mensagens que fornecem um produto ou serviço, incluindo atualizações ou upgrades de produtos
 
->  Essa não é a lista completa de isenções. Veja o [texto completo da lei][3] para obter mais detalhes.
+>  Essa não é a lista completa de isenções. Veja o [texto completo da lei](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) para obter mais detalhes.
 
 ### Consentimento de mensagens
 
@@ -112,11 +112,5 @@ No iOS, seus usuários sempre foram solicitados a aceitar as notificações por 
 
 ### Android {#spam-android}
 
-No Android, seus usuários podem presumir a aceitação pela aceitação implícita declarada na sua política de privacidade ou no contrato de licença do usuário final. Talvez você queira implementar um processo de aceitação expressa, talvez em uma tela inicial, assim que o usuário iniciar o app pela primeira vez. Acesse o artigo de [práticas recomendadas do Push][6] para obter mais detalhes. Também é possível orientar o usuário quanto aos tipos de notificações por push que ele receberá, aumentando assim a taxa de aceitação.
+No Android, seus usuários podem presumir a aceitação pela aceitação implícita declarada na sua política de privacidade ou no contrato de licença do usuário final. Talvez você queira implementar um processo de aceitação expressa, talvez em uma tela inicial, assim que o usuário iniciar o app pela primeira vez. Acesse o artigo de [práticas recomendadas do Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) para obter mais detalhes. Também é possível orientar o usuário quanto aos tipos de notificações por push que ele receberá, aumentando assim a taxa de aceitação.
 
-[1]: #can-spam
-[2]: #casl
-[3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: Legislação sobre spam de e-mail por país"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "Lei CAN-SPAM: Um Guia de Conformidade para Empresas"
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

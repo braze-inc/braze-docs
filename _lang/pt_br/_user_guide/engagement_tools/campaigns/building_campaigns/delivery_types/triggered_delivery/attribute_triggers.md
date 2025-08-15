@@ -22,7 +22,7 @@ Os disparadores de atribuição estão disponíveis para os seguintes cenários:
 
 Para começar a usar os disparos de atribuição, crie uma campanha ou um componente do Canvas e selecione **Entrega baseada em ação** como seu método de entrega. Em seguida, selecione o disparador de atribuição que você gostaria de usar.
 
-![][1]
+![]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Atualizar o status da inscrição
 
@@ -66,7 +66,7 @@ Considere o próximo exemplo de caso de uso com uma notificação de atualizaç�
 Os disparadores de atributos não estão disponíveis atualmente para atributos de matriz.
 {% endalert %}
 
-![Qualquer novo valor][2]
+![Qualquer novo valor]({% image_buster /assets/img_archive/any_value.png %})
 
 Você também pode usar o Liquid para personalizar o corpo da mensagem com o novo nível de fidelidade do cliente e fornecer a ele mais informações sobre a mudança.
 
@@ -82,7 +82,7 @@ Use o disparador `Change Custom Attribute Value` com a opção `specific value` 
 
 Por exemplo, direcione os usuários quando o nível de fidelidade deles mudar para o melhor nível. Para este exemplo, digamos que o melhor nível de fidelidade seja o Super VIP. É possível configurar uma campanha para disparar quando o atributo personalizado de nível de fidelidade de um usuário mudar para `Super VIP`, para que você possa parabenizar o usuário por se tornar um Super VIP.
 
-![][4]
+![]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Os disparadores de atributos para valores específicos de atributos personalizados não estão disponíveis para atributos personalizados de matriz e data.
@@ -91,6 +91,3 @@ Por exemplo, direcione os usuários quando o nível de fidelidade deles mudar pa
 - O disparo de alteração de valores de atributos personalizados também se aplica a novos usuários criados.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

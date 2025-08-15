@@ -265,7 +265,7 @@ Em seguida, confira se seu app está configurado para lidar corretamente com a j
 
 ### Desativar o rastreamento de cliques em uma base de link a link
 
-É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail no editor de HTML ou aos componentes no editor de arrastar e soltar.
+É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail para o editor de HTML ou a um bloco HTML para o editor de arrastar e soltar.
 
 #### SendGrid
 
@@ -281,6 +281,14 @@ Se o seu provedor de serviço de e-mail for o SparkPost, use o código HTML `dat
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+Se o seu provedor de serviço de e-mail for o Amazon SES, use o código HTML `ses:no-track` desta forma:
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### Editor de arrastar e soltar
@@ -303,7 +311,7 @@ Selecione o seguinte para o atributo personalizado:
 - **Nome:** `data-msys-clicktrack`
 - **Valor:** `0`
 
-![Um atributo personalizado para um link de texto.][2]{: style="max-width:60%;"}
+![Um atributo personalizado para um link de texto.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Atributo personalizado para um botão ou imagem
 
@@ -323,7 +331,7 @@ Selecione o seguinte para o atributo personalizado:
 - **Valor:** `0`
 - **Tipo:** Link
 
-![Um atributo personalizado para um botão.][1]{: style="max-width:60%;"}
+![Um atributo personalizado para um botão.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Solução de problemas de links universais com rastreamento de cliques
 
@@ -345,5 +353,3 @@ Certifique-se de ter as definições corretas para os domínios que seu app tem 
 - **iOS:** Revise os domínios associados configurados no Xcode para seu app[(etapa 1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c)). Verifique se o domínio de rastreamento de cliques está incluído nessa lista.
 - **Android:** Abra a página de informações do aplicativo (mantenha pressionado o ícone do aplicativo e clique em ⓘ). No menu de informações do app, localize **Abrir por padrão** e toque nele. Isso deve mostrar uma tela com todos os links verificados que o app tem permissão para abrir. Verifique se o domínio de rastreamento de cliques está incluído nessa lista.
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

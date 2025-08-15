@@ -21,7 +21,7 @@ Para cada campanha, o Braze verifica uma lista de atribuições e comportamentos
 
 Para executar uma análise de correlação de conversão, selecione o evento de conversão de interesse no menu suspenso.
 
-![Painel Conversion Correlation (Correlação de conversão) que mostra um exemplo com "Select a conversion event" (Selecionar um evento de conversão) definido como "Primary Conversion Event - A" (Evento de conversão primária - A) com a configuração de evento como "Made Purchase within 12 hours (Any product)" (Compra efetuada em 12 horas (Qualquer produto)).][1]
+![Painel Correlação de conversão que mostra um exemplo com "Selecionar um evento de conversão" definido como "Evento de conversão primária - A" com a configuração de evento como "Compra efetuada em 12 horas (qualquer produto)".]({% image_buster /assets/img/convcorr.png %})
 
 ## O que é verificado?
 
@@ -52,4 +52,3 @@ Verificamos a significância estatística usando o [intervalo de confiança de W
 
 Em seguida, para cada uma das variáveis, também calculamos a taxa na qual os usuários com essa atribuição específica ou comportamento de interesse converteram com 95% de confiança. Ao dividir esse valor pela taxa básica, podemos medir a proporção. Se for muito maior que 1, os usuários com a atribuição ou o comportamento têm maior probabilidade de conversão. Se for muito menor, é menos provável. Exibimos o valor da própria proporção na tabela. O valor só é exibido se estiver longe o suficiente de 1 para ser significativo no nível de confiança de 95%.
 
-[1]: {% image_buster /assets/img/convcorr.png %}

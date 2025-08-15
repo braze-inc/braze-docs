@@ -27,7 +27,7 @@ Se você estiver inserindo usuários de acordo com seu fuso local usando um cron
 Você verá um alerta se não tiver agendado um buffer suficiente. Uma solução rápida é ajustar o tempo de envio para garantir que os usuários possam permanecer no segmento alvo por um período completo de 24 horas.
 {% endalert %}
 
-![][1]
+![Uma tela programada para entrar nos usuários de uma só vez a partir das 10 horas do dia 30 de abril de 2025, em seu fuso local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Considere usar expressões regulares para filtros de público
 
@@ -109,4 +109,3 @@ Em geral, escolha Intelligent Timing ou horário de silêncio para o seu canva, 
 
 Quando o volume de envios entre duas ou mais jornadas (sejam Jornadas de público ou Jornadas de ação) não é o que você espera, isso pode ser uma oportunidade para verificar seus segmentos, filtros ou ações de gatilho. Além disso, certifique-se de identificar e remover quaisquer filtros sobrepostos.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

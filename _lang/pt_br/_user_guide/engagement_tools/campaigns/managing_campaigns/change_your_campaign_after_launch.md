@@ -16,8 +16,8 @@ description: "Este artigo de referência apresenta uma visão geral do resultado
 
 Para parar uma campanha, abra sua página de **Detalhes da Campanha** e selecione **Parar Campanha**. Quando uma campanha é interrompida:
 
-- As mensagens agendadas para serem enviadas serão canceladas.
-- Os testes A/B onde o teste inicial já foi enviado serão cancelados permanentemente.
+- Mensagens agendadas para serem enviadas serão canceladas.
+- Testes A/B onde o teste inicial já foi enviado serão cancelados permanentemente.
 - Eventos para mensagens que já foram enviadas (por exemplo, cliques abertos) ainda serão rastreados.
 
 Para reiniciar sua campanha, selecione **Retomar**. Sua campanha continuará enviando mensagens e testes A/B, mas quaisquer mensagens perdidas não serão reenviadas ou reprogramadas.
@@ -34,7 +34,7 @@ Se precisar fazer alterações em uma campanha após o lançamento, observe os s
 
 ### Conteúdo das mensagens
 
-Quaisquer alterações no conteúdo da mensagem (incluindo títulos, corpos e imagens) entram em vigor imediatamente ao salvar para todos os envios de mensagens futuros. Não é possível alterar o conteúdo das mensagens que já foram despachadas.
+Quaisquer alterações no conteúdo da mensagem (incluindo títulos, corpos e imagens) entram em vigor imediatamente ao salvar para todos os envios de mensagens futuros. Não é possível alterar o conteúdo de mensagens que já foram despachadas.
 
 ### Programação e público
 
@@ -58,7 +58,7 @@ Isso redefine a elegibilidade para as pessoas que já receberam a campanha origi
 
 ## Salvando rascunhos de campanhas ativas {#campaign-drafts}
 
-Rascunhos são ótimos para fazer alterações em larga escala em campanhas ativas. Ao criar um rascunho, você pode testar as alterações planejadas antes do seu próximo lançamento.
+Rascunhos são ótimos para fazer alterações em larga escala em campanhas ativas. Ao criar um rascunho, você pode testar alterações planejadas antes do seu próximo lançamento.
 
 {% alert note %}
 Uma campanha só pode ter um rascunho por vez. Além disso, análises não estão disponíveis, pois as alterações rascunhadas ainda não foram lançadas.
@@ -70,7 +70,7 @@ Para criar um rascunho, faça o seguinte:
 2. Faça suas alterações.
 3. Selecione **Salvar como Rascunho**. Observe que, após criar um rascunho, você não pode editar a campanha ativa até que você lance ou descarte seu rascunho.
 
-![Um rascunho de uma campanha ativa com a opção de visualizar a campanha ativa.]({% image_buster /assets/img/campaign_draft.png %})
+![Um rascunho de uma campanha ativa com uma opção para visualizar a campanha ativa.]({% image_buster /assets/img/campaign_draft.png %})
 
 Enquanto você faz edições no rascunho, você também pode consultar a campanha ativa no cabeçalho do rascunho da campanha ou no rodapé da análise da campanha. 
 

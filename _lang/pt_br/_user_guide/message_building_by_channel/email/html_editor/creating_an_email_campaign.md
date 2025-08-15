@@ -40,7 +40,7 @@ Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de
 Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conteúdo, crie sua mensagem antes de adicionar variantes adicionais. Em seguida, você pode selecionar **Copiar da variante** no menu suspenso **Adicionar variante**.
 {% endalert %}
 {% endtab %}
-{% tab Canva %}
+{% tab Canvas %}
 
 1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Depois de configurar seu canvas, adicione uma etapa no construtor do canva. Dê um nome claro e significativo à sua etapa.
@@ -51,13 +51,15 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endtab %}
 {% endtabs %}
 
+{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
+
 ## Etapa 2: Selecione sua experiência de edição {#step-2-choose-your-template-and-compose-your-email}
 
 O Braze oferece duas experiências de edição ao criar uma campanha de e-mail: nosso [editor de arrastar e soltar]({{site.baseurl}}/dnd/) e nosso editor de HTML padrão. Escolha o tile apropriado para a experiência de edição que você prefere. 
 
-![Escolhendo entre o editor de arrastar e soltar, editor de HTML ou modelos para sua experiência de edição de e-mail.][3]{: style="max-width:75%" }
+![Escolhendo entre o editor de arrastar e soltar, editor de HTML ou modelos para sua experiência de edição de e-mail.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-Em seguida, você pode selecionar um [modelo de e-mail][10] existente], [fazer upload de um modelo][18] de um arquivo (somente no editor de HTML) ou usar um modelo em branco. 
+Então, você pode selecionar um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template) existente, [fazer upload de um modelo]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) de um arquivo (somente editor de HTML), ou usar um modelo em branco. 
 
 {% alert tip %}
 Recomendamos selecionar uma experiência de edição por campanha de e-mail. Por exemplo, escolha o **HTML Clássico** ou **Editor de Blocos** em uma única campanha de e-mail em vez de alternar entre editores.
@@ -67,7 +69,7 @@ Recomendamos selecionar uma experiência de edição por campanha de e-mail. Por
 
 Depois de selecionar o modelo, você verá uma visão geral do e-mail, onde poderá ir diretamente para o editor de tela cheia para redigir o e-mail, alterar as informações de envio e visualizar avisos sobre entregabilidade ou conformidade com a lei. Você pode alternar entre as guias HTML, clássica, texto simples e [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) enquanto compõe. 
 
-![O botão "Regenerar a partir do HTML".][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+![O botão "Regenerar a partir do HTML".]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 A versão em texto simples do seu e-mail será sempre atualizada automaticamente a partir da versão em HTML até que uma edição na versão em texto simples seja detectada. Quando uma edição é detectada, a Braze não atualizará mais o texto simples, pois assumimos que você fez alterações intencionais que não devem ser sobrescritas. Você pode reverter para a sincronização automática na guia **Texto simples** selecionando o ícone **Regenerar a partir do HTML**, que só aparece se o texto simples não estiver sincronizando.
 
@@ -75,14 +77,14 @@ A versão em texto simples do seu e-mail será sempre atualizada automaticamente
 Para adicionar movimento em um e-mail com uma prévia precisa, use GIFs em vez de elementos que exijam JavaScript, pois a maioria das caixas de entrada não oferece suporte a JavaScript.
 {% endalert %}
 
-![Painel Variantes de e-mail para o envio de seu e-mail.][14]{: style="max-width:75%" }
+![Painel de Variantes de E-mail para compor seu e-mail.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 O Braze removerá automaticamente os manipuladores de eventos HTML referenciados como atribuições. Isso modificará o HTML, portanto, é recomendável verificar novamente o e-mail depois que ele for concluído. Saiba mais sobre [os manipuladores de HTML](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Inicie o botão AI Copywriter, localizado no campo "Corpo" do criador de e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
@@ -172,7 +174,9 @@ Os valores extras de e-mail não são publicados no Currents ou no Snowflake. Se
 
 Depois de terminar de criar o e-mail perfeito, você precisa testá-lo antes de enviá-lo. Do fundo da tela de visão geral, selecione **Prévia e Teste**. 
 
-Aqui, você pode fazer uma prévia de como seu e-mail aparecerá na caixa de entrada do cliente. Com a opção **Preview as User** selecionada, é possível fazer a prévia do e-mail como um usuário aleatório, selecionar um usuário específico ou criar um usuário personalizado. Isso permite que você teste se o Connected Content e as chamadas de personalização estão funcionando como deveriam.
+Aqui, você pode fazer uma prévia de como seu e-mail aparecerá na caixa de entrada do cliente. Com a opção **Preview as User** selecionada, é possível fazer a prévia do e-mail como um usuário aleatório, selecionar um usuário específico ou criar um usuário personalizado. Isso permite que você teste se o Connected Content e as chamadas de personalização estão funcionando como deveriam. 
+
+Então, você pode **Copiar link de prévia** para gerar e copiar um link de prévia compartilhável que mostra como o e-mail ficará para um usuário aleatório. O link durará sete dias antes de precisar ser regenerado.
 
 Também é possível alternar entre as visualizações de desktop, celular e texto simples para ter uma ideia de como sua mensagem aparecerá em diferentes contextos.
 
@@ -182,7 +186,7 @@ Quer saber como é o seu e-mail para os usuários no modo escuro? Selecione o bo
 
 Quando estiver pronto para uma verificação final, selecione **Test Send (Envio de teste)** e envie uma mensagem de teste para você mesmo ou para um grupo de testadores de conteúdo para garantir que seu e-mail seja exibido corretamente em uma variedade de dispositivos e clientes de e-mail.
 
-![Teste a opção Enviar e a prévia do e-mail de exemplo ao criar seu e-mail.][15]
+![Opção de Testar Envio e exemplo de prévia de e-mail ao compor seu e-mail.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 Se você ver algum problema com seu e-mail, ou quiser fazer alguma alteração, selecione **Editar E-mail** para voltar ao editor.
 
@@ -205,7 +209,7 @@ O editor indicará todos os problemas que encontrar em sua mensagem antes de env
 - Endereços **de** **resposta** e **de** **remetente** inválidos
 - Chaves **de cabeçalho** duplicadas
 - Problemas de sintaxe do Liquid
-- Corpos de e-mail maiores que 400kb (é altamente recomendável que os corpos sejam [menores que 102kb][16])
+- Corpos de e-mail maiores que 400kb (corpos são altamente recomendados para serem [menores que 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size))
 - E-mails com um **corpo** ou **assunto** em branco
 - E-mails sem um link de cancelamento de inscrição
 - O e-mail do qual está enviando não está na lista de permissões (os envios serão altamente limitados para garantir a entregabilidade)
@@ -228,7 +232,7 @@ Você também pode definir a duração da campanha, especificar o [Horário de s
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar os [usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como está a população desse segmento no momento, incluindo quantos usuários desse segmento podem ser contatados por e-mail. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+Em seguida, é necessário direcionar os [usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como está a população desse segmento no momento, incluindo quantos usuários desse segmento podem ser contatados por e-mail. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
 
 Também é possível optar por enviar a campanha somente para usuários que tenham um [status de inscrição]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) específico, como aqueles que estão inscritos e aceitaram o envio de e-mail.
 
@@ -245,7 +249,7 @@ Para campanhas em vários canais direcionadas tanto para e-mail quanto para cana
 Para fazer isso, em **Resumo do público**, selecione enviar essa campanha apenas para "usuários com aceitação". Essa opção verificará se apenas os usuários com aceitação receberão seu e-mail, e o Braze enviará seu push apenas para os usuários que têm a capacitação push ativada por padrão.
 
 {% alert important %}
-Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usuários-alvo** ) que limite o público a um único canal (por exemplo, `Push Enabled = True` ou `Email Subscription = Opted-In`).
+Com esta configuração, não inclua filtros na etapa **Públicos Alvo** que limitem o público a um único canal (por exemplo, `Push Enabled = True` ou `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Selecionar eventos de conversão
@@ -271,17 +275,3 @@ A seção final fornecerá um resumo da campanha que você acabou de criar. Conf
 
 Para aprender como você pode acessar os resultados de suas campanhas de e-mail, confira [Relatório de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
-[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
-[3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
-[5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
-[6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[14]: {% image_buster /assets/img/email.png %}
-[15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
-[19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
-[20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[22]: {{site.baseurl}}/user_guide/engajamento_tools/campaigns/testing_and_more/conversion_events/

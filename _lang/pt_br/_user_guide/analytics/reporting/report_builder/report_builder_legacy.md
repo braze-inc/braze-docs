@@ -12,9 +12,9 @@ tool:
 
 # Criador de relatórios (antigo)
 
-> O Construtor de Relatórios permite que você compare os resultados de várias campanhas ou canvas em uma única visualização, para que você possa determinar facilmente quais estratégias de engajamento mais impactaram suas métricas principais. Tanto para campanhas quanto para Canvas, você pode exportar seus dados e salvar seu relatório para visualização futura.<br><br>Para obter uma lista descritiva das métricas que você encontrará em seus relatórios, consulte o [Glossário de métricas de relatórios][16].
+> O Construtor de Relatórios permite que você compare os resultados de várias campanhas ou canvas em uma única visualização, para que você possa determinar facilmente quais estratégias de engajamento mais impactaram suas métricas principais. Tanto para campanhas quanto para Canvas, você pode exportar seus dados e salvar seu relatório para visualização futura.<br><br>Para obter uma lista descritiva das métricas que você encontrará em seus relatórios, consulte o [Glossário de métricas de relatórios]({{site.baseurl}}/user_guide/data/report_metrics/).
 
-![Exemplo de comparação de campanhas][5]{: style="max-width:80%;"}
+![Exemplo de comparação de campanhas]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 Use esse relatório para responder às principais perguntas de engajamento, por exemplo:
 
@@ -41,7 +41,7 @@ Selecione **Criar novo relatório** e selecione um relatório de comparação de
 
 Se você optar por executar um relatório sobre campanhas, poderá selecionar entre um relatório **manual** ou **automatizado**. Os relatórios podem conter campanhas ou canvas, mas não os dois juntos. Todas as campanhas e Canvas que tenham enviado mensagens pela última vez nos últimos 12 meses serão elegíveis para um relatório.
 
-![Painel de controle da campanha][6]{: style="max-width:80%;"}
+![Painel de controle da campanha]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 Veja a seguir as diferenças entre essas duas opções:
 
@@ -62,9 +62,9 @@ Os relatórios do Canva funcionam de forma semelhante a um relatório de campanh
 
 Depois de criar o relatório, você encontrará uma tabela em branco com campanhas em cada linha. A tabela será preenchida depois que você selecionar **Edit Columns (Editar colunas** ) e escolher as métricas que deseja adicionar.
 
-![Opções de campanha][15]{: style="max-width:80%;"}
+![Opções de campanha]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
-Sua tabela será preenchida com as métricas que você escolher. Para obter as definições dessas métricas, consulte o [Glossário de métricas do relatório][16]. Algumas métricas estão disponíveis apenas para relatórios de comparação de campanhas.
+Sua tabela será preenchida com as métricas que você escolher. Para obter as definições dessas métricas, consulte o [Glossário de métricas do relatório]({{site.baseurl}}/user_guide/data/report_metrics/). Algumas métricas estão disponíveis apenas para relatórios de comparação de campanhas.
 
 Você também pode alternar os cálculos da **média** de qualquer taxa ou métrica numérica e do **total** de qualquer métrica numérica.
 
@@ -72,13 +72,13 @@ Você também pode alternar os cálculos da **média** de qualquer taxa ou métr
 
 Você pode selecionar um período de tempo específico para visualizar os dados do seu relatório. Se uma determinada campanha, tela, variante de tela ou componente de tela não tiver dados para o período de tempo selecionado, os resultados dessa linha ficarão em branco. 
 
-![Métrica numérica da campanha][4]{: style="max-width:60%;"}
+![Métrica numérica da campanha]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### Etapa 4: Dê um nome e salve seu relatório
 
 Dê um nome ao seu relatório antes de salvá-lo. Se um relatório for salvo sem ser nomeado, o Braze aplicará um nome padrão de "Relatório de comparação de campanhas".
 
-![Nota da campanha][7]{: style="max-width:60%;"}
+![Nota da campanha]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
 
 Quando estiver pronto, selecione **Salvar**. Os relatórios salvos podem ser visualizados posteriormente na página **do Report Builder**.
 
@@ -86,7 +86,7 @@ Quando estiver pronto, selecione **Salvar**. Os relatórios salvos podem ser vis
 
 Para quaisquer campanhas multivariantes, é possível visualizar essas métricas divididas por suas variantes e grupo de controle clicando na seta ao lado do nome da campanha. As linhas que contêm suas variantes incluirão resultados de performance para essa variante, e a linha que contém seu controle incluirá apenas os resultados dos seus eventos de conversão. 
 
-![Nota da campanha][3]{: style="float:right;max-width:15%;margin-left:15px;"}
+![Nota da campanha]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 As métricas que preenchem a linha da sua campanha geral refletirão o desempenho de suas variantes, mas não incluirão o desempenho do controle. Por exemplo, o Evento de Conversão Primária A da sua campanha geral será a soma do Evento de Conversão Primária A das suas variantes, e isso não incluirá o Evento de Conversão Primária A do seu controle.
 
@@ -102,19 +102,19 @@ Em um relatório do Canvas, você pode visualizar seus Canvas divididos por vari
 
 A seleção do **detalhamento por variante** permite visualizar as estatísticas de alto nível de suas Canvas gerais, bem como as estatísticas de cada variante, que podem ser expandidas selecionando a seta ao lado do nome da Canvas.
 
-![Variantes][12]{: style="max-width:90%;"}
+![Variantes]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
 
 ### Etapas 
 
 A seleção do **detalhamento por etapas** permite visualizar as métricas em nível de etapa, com cada linha do relatório contendo a linha de uma etapa.
 
-![Etapas][13]{: style="max-width:90%;"}
+![Etapas]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
 
 ### Mensagem
 
 Semelhante a um detalhamento em nível de etapa, a seleção do **detalhamento por mensagem** mostra o nome das etapas em cada linha. No entanto, nas **colunas de edição**, você terá acesso a métricas no nível da mensagem, como estatísticas específicas do canal, como cliques em e-mails e aberturas de push.
 
-![Relatório][14]{: style="max-width:90%;"}
+![Relatório]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
 
 Note que, no dashboard da Braze, é possível ver as primeiras 50 linhas do seu relatório do canva. Você pode acessar o relatório completo ao exportar um CSV.
 
@@ -141,7 +141,7 @@ Se o relatório contiver campanhas multivariantes, sua exportação incluirá do
 
 O nome do arquivo que contém métricas de variantes começará com `variant_`. Na primeira vez que exportar um relatório automatizado, você receberá uma janela pop-up solicitando permissão para baixar vários arquivos - clique em **Permitir**.
 
-![Baixar a campanha][8]{: style="max-width:60%;"}
+![Baixar a campanha]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### Exportação de relatórios de comparação de telas
 
@@ -156,7 +156,7 @@ Se baixar um relatório do Canva de detalhamento de variantes, você receberá d
 
 Use gráficos para visualizar uma métrica selecionada em seu relatório. Os gráficos estão disponíveis para relatórios que apresentam campanhas e têm pelo menos uma métrica adicionada às suas colunas.
 
-![Gráfico de performance da campanha com a métrica Mensagem enviada selecionada][17]
+![Gráfico de performance da campanha com a métrica Mensagem enviada selecionada]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 Por padrão, o gráfico em cada relatório exibirá a métrica na primeira coluna do relatório. Para selecionar uma métrica diferente para o gráfico, escolha sua métrica no menu suspenso. Qualquer métrica em sua tabela de relatório estará disponível para exibição em seu gráfico.
 
@@ -167,16 +167,4 @@ Se o seu gráfico contiver apenas uma métrica, ele exibirá até 30 campanhas e
 No momento, os gráficos não são salvos quando você salva o relatório.
 
 
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

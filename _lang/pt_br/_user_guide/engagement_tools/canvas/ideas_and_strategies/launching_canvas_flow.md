@@ -22,7 +22,7 @@ Considere as [condições de corrida]({{site.baseurl}}/user_guide/engagement_too
 
 Para entrar em uma canva, os usuários devem estar no público de entrada antes que o horário de entrada ocorra, independentemente de a canva estar agendada, baseada em ação ou acionada por API. 
 
-![][1]{: style="max-width:75%;"}
+![Um Canvas Baseado em Ação que entra os usuários quando eles fazem qualquer compra durante o fuso local de um usuário de 30 de abril de 2025 às 12h até 7 de maio de 2025 às 12h.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Observe que os usuários que se qualificarem para seu público de entrada após o lançamento do canva não entrarão no canva.
 
@@ -86,20 +86,19 @@ Depois de revisar os detalhes mais finos da sua canva, confira [Enviando canvas 
 ## Solução de problemas
 
 {% details Por que meus usuários não estão recebendo minhas mensagens do canva? %}
-**Verifique a disponibilidade do usuário**
+**Verificar a disponibilidade do usuário**
 - Certifique-se de que eles atendem aos seus critérios de segmentação.
-- Confirme se o estado da inscrição por push deles é "inscrito" ou "optado por" **e** o status de **Push Habilitado** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
-- Confirme se eles correspondem às suas configurações de envio do Canvas. (Se os usuários estiverem "inscritos", mas as configurações forem "Optado por", os usuários não serão habilitados para o canal.)
-- Se o limite de frequência global estiver habilitado para o seu Canvas, verifique se suas regras estão limitando quantas vezes cada usuário pode receber uma mensagem de um canal específico. 
-- Se o Horário de Silêncio estiver habilitado, o horário de envio da sua mensagem pode ser afetado, o que significa que sua mensagem pode ser enviada no próximo horário disponível (quando o Horário de Silêncio terminar) ou cancelada completamente.
+- Confirme se o estado da inscrição de push deles é "inscrito" ou "optado" **e** o status de **Push Habilitado** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
+- Confirme se eles correspondem às suas configurações de envio do Canvas. (Se os usuários estão "inscritos" mas as configurações estão "Optado", os usuários não serão habilitados para o canal.)
+- Se a limitação de frequência global estiver habilitada para o seu Canvas, verifique se suas regras estão limitando quantas vezes cada usuário pode receber uma mensagem de um canal específico. 
+- Se o horário de silêncio estiver habilitado, o horário de envio da sua mensagem pode ser afetado, significando que sua mensagem pode ser enviada no próximo horário disponível (quando o horário de silêncio terminar) ou cancelada completamente.
 
-**Verifique a disponibilidade do usuário para filtros adicionais na etapa do Canvas**
-- Confirme que eles realizaram o evento personalizado ou a compra pré-requisito.
-- Verifique se há uma [condição de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), que impacta as mensagens que os usuários recebem se eles acionarem várias ações ao mesmo tempo.
+**Verificar a disponibilidade do usuário para filtros adicionais na etapa do Canvas**
+- Confirme que eles realizaram o evento personalizado ou compra pré-requisito.
+- Verifique se há uma [condição de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), que impacta as mensagens que os usuários recebem se eles dispararem várias ações ao mesmo tempo.
 - Certifique-se de que não há filtros específicos na etapa que poderiam ter bloqueado os usuários de receber a mensagem.
-- Procure por conflitos entre diferentes etapas dentro do mesmo Canvas. Por exemplo, usuários que não receberam a mensagem podem ter sido impedidos por um filtro que requer a conclusão de outra etapa em um ramo diferente.
+- Procure por conflitos entre diferentes etapas dentro do mesmo Canvas. Por exemplo, usuários que não receberam a mensagem podem ter sido parados por um filtro que requer a conclusão de outra etapa em um ramo diferente.
 - Confirme que os usuários atendem a regras de validação adicionais.
 - Confirme que a etapa do Canvas estava conectada à etapa anterior no momento do envio.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

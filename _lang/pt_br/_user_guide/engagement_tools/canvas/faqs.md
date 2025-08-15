@@ -48,7 +48,7 @@ A interrupção de um Canva não fará com que os usuários que estão esperando
 
 ### Quando um evento de exceção é disparado?
 
-Os eventos de exceção só disparam enquanto o usuário está esperando para receber o componente canva com o qual está associado. Se um usuário executar uma ação antecipadamente, o evento de exceção não será disparado. Se quiser excluir usuários que tenham realizado um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+Eventos de exceção só disparam enquanto o usuário está esperando para receber o componente canva com o qual está associado. Se um usuário executar uma ação antecipadamente, o evento de exceção não será disparado. Se quiser excluir usuários que tenham realizado um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 ### Como a edição de um Canvas afeta os usuários que já estão no Canvas?
 

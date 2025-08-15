@@ -43,7 +43,7 @@ Adicione as campanhas e as mensagens do Canva que você gostaria de compilar em 
 - Selecionar manualmente campanhas e telas
 - Selecione automaticamente campanhas e telas com base em regras específicas
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### Selecione manualmente campanhas ou telas
 
@@ -57,7 +57,7 @@ Essa opção permite que você inclua automaticamente todas as mensagens que inc
 
 A etapa **Add Stats (Adicionar estatísticas** ) mostra estatísticas para os tipos de campanhas ou Canvas que você selecionou. Por exemplo, se você selecionou mensagens de e-mail, só poderá visualizar as estatísticas de e-mail relevantes. Se você escolheu uma combinação de e-mail e push, poderá visualizar as estatísticas desses dois canais.
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | Canal | Estatísticas disponíveis |
 | ------| --------------|
@@ -94,7 +94,7 @@ Por padrão, o intervalo de dados mostrado é baseado no fuso horário da sua em
 
 Por padrão, os dados exibidos nos relatórios de engajamento são diários (um dia). Para visualizar esses dados em diferentes intervalos, escolha um número explícito de dias ou semanas para agregar os dados ao relatório. Portanto, em vez de ver métricas diárias, você pode visualizar seu engajamento por semana, mês, trimestre ou algo semelhante. Se uma agregação centrada no tempo não for suficiente, você também pode optar por exportar dados no nível da campanha ou do Canva.
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### Agende seu relatório
 
@@ -103,7 +103,7 @@ Há duas opções para agendar seu relatório:
 - **Enviar imediatamente:** Depois que o relatório for lançado, a Braze enviará esse relatório imediatamente.
 - **Enviar em um horário determinado:** Essa opção lhe dá a flexibilidade de escolher a frequência com que você recebe esse relatório. Você pode optar por enviar esse relatório a cada número definido de dias, semanas ou meses. Você também pode definir quando interromper o envio do relatório.
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### Etapa 5: Revisão e lançamento
 
@@ -116,7 +116,3 @@ Você receberá um e-mail com links para seus relatórios no horário ou na prog
 O relatório contém todas as estatísticas selecionadas na seção [Add Stats (Adicionar estatísticas](#add-statistics-to-your-reports) ) do processo de configuração.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

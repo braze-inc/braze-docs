@@ -20,7 +20,7 @@ Os eventos recomendados estão atualmente em acesso antecipado. Entre em contato
 
 O Braze aplica uma validação especial a todos os eventos recomendados, e alguns eventos recomendados têm ações especiais de pós-processamento. Para determinados eventos recomendados pelo setor, o Braze poderá oferecer suporte a um tratamento especial, como novos gatilhos baseados em ações para campanhas e canvas.
 
-Os eventos recomendados funcionam de forma semelhante aos [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events). Você pode exportar eventos recomendados do Currents, colocá-los em uma lista de bloqueio e usá-los em relatórios. Você também pode enviar dados para o Braze para rastreamento desses eventos usando o [Braze SDK]({{site.baseurl}}/developer_guide/getting_started/sdk_overview) ou o [endpoint de`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track).
+Os eventos recomendados funcionam de forma semelhante aos [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events). Você pode exportar eventos recomendados do Currents, colocá-los em listas de bloqueio e usá-los em relatórios. Você também pode enviar dados para o Braze para rastreamento desses eventos usando o [Braze SDK]({{site.baseurl}}/developer_guide/getting_started/sdk_overview) ou o [endpoint de`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track).
 
 ### Eventos recomendados para comércio eletrônico
 

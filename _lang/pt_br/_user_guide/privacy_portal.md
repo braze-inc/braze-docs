@@ -31,10 +31,10 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/preference_center
   image: /assets/img/braze_icons/list.svg
 - name: Grupos de inscrição de SMS
-  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
+  link: /docs/sms_rcs_subscription_groups/
   image: /assets/img/braze_icons/users-01.svg
 - name: Leis e regulamentos de SMS
-  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: Grupos de inscrições de WhatsApp
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription

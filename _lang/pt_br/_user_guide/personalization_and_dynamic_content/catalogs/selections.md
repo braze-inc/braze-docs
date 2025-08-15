@@ -11,13 +11,13 @@ description: "Este artigo de referência aborda como criar e usar seleções com
 
 Depois de criar um [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), você pode fazer referência adicional aos dados do catálogo incorporando seleções em suas campanhas ou recomendações do Braze.
 
-![A seção Seleções em um catálogo de exemplo.][1]
+![A seção Seleções em um catálogo de exemplo.]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## Coisas para saber
 
 - Você pode criar até 30 seleções por catálogo.
-- Você pode adicionar até quatro filtros por seleção.
-- As seleções são ótimas para refinar as recomendações dos dados do catálogo da Braze. Se estiver procurando inspiração, consulte [as recomendações do item Sobre]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) para ver exemplos de casos de uso.
+- Você pode adicionar até 10 filtros por seleção.
+- As seleções são ótimas para refinar as recomendações dos dados do catálogo da Braze. Se estiver procurando inspiração, consulte [as recomendações do item Sobre]({{site.baseurl}}/user_guide/brazeai/recommendations/) para ver exemplos de casos de uso.
 
 ## Criação de uma seleção
 
@@ -44,7 +44,7 @@ O uso de qualquer Liquid em catálogos, como atributos personalizados e eventos 
 O Connected Content Liquid não é compatível com essas configurações de filtro.
 {% endalert %}
 
-![Configurações de filtro para seleção de catálogo em que o atributo está definido como um atributo personalizado Liquid.][7]
+![Configurações de filtro para seleção de catálogo em que o atributo está definido como um atributo personalizado Liquid.]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## Uso de seleções no envio de mensagens
 
@@ -58,7 +58,7 @@ Depois de criar sua seleção, personalize suas mensagens com o Liquid para inse
 5. Em **Informações a serem exibidas**, selecione quais campos do catálogo devem ser incluídos para cada item.
 6. Selecione o ícone **Copiar** e cole o Liquid onde quer que ele seja necessário em sua mensagem.
 
-![O modal Add Personalization com as seguintes seleções: "Catalog Items" (Itens do catálogo) para "Personalization Type" (Tipo de personalização), "Games" (Jogos) para "Catalog Name" (Nome do catálogo), "Selections" (Seleções) para "Selection Type" (Tipo de seleção), "game_selection" (Seleção_do_jogo) para "Selection" (Seleção) e "title" (Título) e "description_en" (Descrição) para "Information to Display" (Informações a serem exibidas).][6]{: style="max-width:70%;"}
+![O modal Add Personalization com as seguintes seleções: "Catalog Items" para "Personalization Type", "Games" para "Catalog Name", "Selections" para "Selection Type", "game_selection" para "Selection" e "title" e "description_en" para "Information to Display".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## Caso de uso
 
@@ -66,25 +66,18 @@ Digamos que você tenha um serviço de entrega de refeições e queira enviar um
 
 Usando um catálogo com as informações do seu serviço de entrega de refeições para o nome da refeição, o preço, a imagem e a categoria da refeição, é possível criar uma seleção para recomendar três refeições com base na categoria visualizada mais recentemente por um usuário.
 
-![Um exemplo de uma seleção para um serviço de entrega de refeições com dois filtros: um que identifica um tipo de produto como uma refeição e outro que identifica a categoria como a mais recentemente visualizada. A seleção é definida para randomizar a ordem em que os três resultados são retornados.][2]{: style="max-width:90%;"}
+![Um exemplo de uma seleção para um serviço de entrega de refeições com dois filtros: um que identifica um tipo de produto como uma refeição e outro que identifica a categoria como a mais recentemente visualizada. A seleção é definida para randomizar a ordem em que os três resultados são retornados.]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 Para usar esse catálogo e essa seleção em uma campanha, use o modal **Adicionar personalização** na seção de composição de mensagens da criação de uma campanha. Neste exemplo, selecionamos o catálogo com as informações do seu serviço de entrega de refeições e a seleção para recomendações de refeições com base na categoria visualizada mais recentemente. Isso nos permite exibir o nome e o preço da refeição. Para reforçar ainda mais sua mensagem, você pode usar a seleção para adicionar também uma imagem da primeira refeição recomendada.
 
-![Um cartão de conteúdo com o cabeçalho "Você vai AMAR essas refeições altamente avaliadas!" com a seleção "recommendations_be_recent_category" na seção de composição da mensagem.][3]{: style="max-width:90%;"}
+![Um cartão de conteúdo com o cabeçalho "You will LOVE these highly rated meals!" (Você vai adorar essas refeições bem avaliadas!) com a seleção "recommendations_be_recent_category" na seção de composição da mensagem.]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 Por exemplo, digamos que você tenha um usuário cuja categoria visualizada mais recentemente seja "Frango". Usando a personalização definida e uma campanha de cartão de conteúdo, é possível enviar três recomendações de refeições que incluam frango para esse usuário.
 
-![Um cartão de conteúdo com uma imagem de frango grelhado com limão e uma lista de três recomendações de refeições que incluem frango com base na categoria visualizada mais recentemente pelo usuário.][4]{: style="max-width:90%;"}
+![Um cartão de conteúdo com uma imagem de frango grelhado com limão e uma lista de três recomendações de refeições que incluem frango com base na categoria visualizada mais recentemente pelo usuário.]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 Usando a mesma personalização, você também pode enviar três recomendações de refeições para um usuário cuja categoria visualizada mais recentemente seja "Carne bovina".
 
-![Um cartão de conteúdo com uma imagem de estrogonofe de carne e uma lista de duas recomendações de refeições que incluem carne com base na categoria visualizada mais recentemente pelo usuário.][5]{: style="max-width:90%;"}
+![Um cartão de conteúdo com uma imagem de estrogonofe de carne e uma lista de duas recomendações de refeições que incluem carne com base na categoria visualizada mais recentemente pelo usuário.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
-[6]: {% image_buster /assets/img_archive/catalog_selections6.png %}
-[7]: {% image_buster /assets/img_archive/catalog_selections7.png %}

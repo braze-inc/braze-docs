@@ -48,7 +48,6 @@ Selecione um evento de gatilho. Isso pode incluir qualquer um dos seguintes iten
     - Exibir cartão de conteúdo
     - Clique no cartão de conteúdo
     - Descarte de cartão de conteúdo
-- Interação com cartões do feed de notícias (consulte [Campaign Connector][33]])
 - Inserção de um local
 - Performar o evento de exceção para outra campanha
 - Interagindo com uma etapa do Canva
@@ -56,17 +55,17 @@ Selecione um evento de gatilho. Isso pode incluir qualquer um dos seguintes iten
 - Envio de mensagens SMS de entrada
 - Envio de mensagens de entrada do WhatsApp
 
-Você também pode filtrar ainda mais os eventos disparados por meio do Braze [propriedades de eventos personalizados][32], permitindo propriedades de eventos personalizadas para eventos personalizados e propriedades de compra no aplicativo. Esse recurso permite personalizar ainda mais os usuários que recebem uma mensagem com base nos atributos específicos do evento personalizado, permitindo maior personalização da campanha e coleta de dados mais sofisticada. 
+Você também pode filtrar ainda mais os eventos de disparo através das propriedades de evento personalizado do Braze, permitindo propriedades de evento personalizáveis para eventos personalizados e compras dentro do app. Esse recurso permite personalizar ainda mais os usuários que recebem uma mensagem com base nos atributos específicos do evento personalizado, permitindo maior personalização da campanha e coleta de dados mais sofisticada. 
 
 Por exemplo, digamos que temos uma campanha com um evento personalizado de carrinho abandonado que é direcionado ainda mais pelo filtro de propriedade "valor do carrinho". Essa campanha atingirá apenas os usuários que deixaram entre US$ 100 e US$ 200 em mercadorias em seus carrinhos. 
 
-![][34]
+![]({% image_buster /assets/img_archive/customEventProperties.png %})
 
 {% alert note %}
 O evento de gatilho "iniciar sessão" pode ser a primeira abertura de app do usuário se o segmento da sua campanha se aplicar a novos usuários. (por exemplo, se seu segmento consistir naqueles sem sessões).
 {% endalert %}
 
-Lembre-se de que ainda é possível enviar uma campanha disparada para um segmento específico de usuários, portanto, os usuários que não fazem parte do segmento não receberão a campanha, mesmo que concluam o evento de gatilho. Se notar que os usuários não estão recebendo a campanha, embora tenham se qualificado para o segmento, consulte nossa seção sobre [por que um usuário pode não ter recebido uma campanha disparada][49].
+Lembre-se de que ainda é possível enviar uma campanha disparada para um segmento específico de usuários, portanto, os usuários que não fazem parte do segmento não receberão a campanha, mesmo que concluam o evento de gatilho. Se você notar que os usuários não estão recebendo a campanha, mesmo tendo se qualificado para o segmento, veja nossa seção sobre por que um usuário pode não ter recebido uma campanha disparada.
 
 Com relação ao evento de gatilho para quando um usuário adiciona um endereço de e-mail ao seu perfil, aplicam-se as seguintes regras:
 
@@ -75,7 +74,7 @@ Com relação ao evento de gatilho para quando um usuário adiciona um endereço
 
 Além disso, as mensagens no app disparadas ainda obedecem às regras de entrega de mensagens no app e aparecem no início de uma sessão do aplicativo.
 
-![][17]
+![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
 ### Etapa 2: Selecione a duração da postergação
 
@@ -83,18 +82,18 @@ Selecione o tempo de espera antes de enviar a campanha depois que os critérios 
 
 Além disso, os usuários que concluírem o evento de gatilho após o lançamento da campanha serão os primeiros a começar a receber a mensagem após o término da postergação. Os usuários que tiverem concluído o evento de gatilho antes do lançamento da campanha não se qualificarão para receber a campanha.
 
-![][19]
+![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
-Você também pode optar por enviar a campanha em um dia específico da semana (escolhendo "no próximo" e, em seguida, selecionando um dia) ou em um número específico de dias (selecionando "em") no futuro. Como alternativa, você pode optar por enviar sua mensagem usando o recurso [Intelligent Timing][8] em vez de selecionar manualmente um horário de entrega.
+Você também pode optar por enviar a campanha em um dia específico da semana (escolhendo "no próximo" e, em seguida, selecionando um dia) ou em um número específico de dias (selecionando "em") no futuro. Como alternativa, você pode optar por enviar sua mensagem usando o recurso [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) em vez de selecionar manualmente um horário de entrega.
 
-![][41]
-![][50]
+![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
 ### Etapa 3: Selecionar eventos de exceção
 
-Selecione um evento de exceção que desqualificará os usuários para receberem essa campanha. Isso só pode ser feito se a mensagem disparada for enviada após uma postergação. [Eventos de exceção]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) podem ser fazer uma compra, iniciar uma sessão, realizar um dos eventos de conversão designados de uma campanha][18], ou realizar um evento personalizado. Se um usuário concluir o evento de gatilho, mas depois concluir o evento de exceção antes do envio das mensagens devido à postergação, ele não receberá a campanha. Os usuários que não receberem a campanha devido ao evento de exceção serão automaticamente elegíveis para recebê-la no futuro, na próxima vez que concluírem o evento de gatilho, mesmo que você não opte por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
+Selecione um evento de exceção que desqualificará os usuários para receberem essa campanha. Isso só pode ser feito se a mensagem disparada for enviada após uma postergação. Eventos de exceção podem ser fazer uma compra, iniciar uma sessão, realizar um dos eventos de conversão designados de uma campanha, ou realizar um evento personalizado. Se um usuário concluir o evento de gatilho, mas depois concluir o evento de exceção antes do envio das mensagens devido à postergação, ele não receberá a campanha. Os usuários que não receberem a campanha devido ao evento de exceção serão automaticamente elegíveis para recebê-la no futuro, na próxima vez que concluírem o evento de gatilho, mesmo que você não opte por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
-![][20]
+![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
 Você pode ler mais sobre como empregar eventos de exceção em nossa seção sobre [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
@@ -108,7 +107,7 @@ Não é possível fazer de um "início de sessão" tanto o evento de gatilho qua
 
 Atribua a duração da campanha especificando uma hora de início e uma hora de término opcional.
 
-![][21]
+![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
 Se um usuário concluir um evento de gatilho durante o período de tempo especificado, mas se qualificar para a mensagem fora do período de tempo devido a uma postergação programada, ele não receberá a campanha. Portanto, se você definir uma postergação maior do que o período de tempo da mensagem, nenhum usuário receberá sua campanha. Além disso, é possível optar por enviar a mensagem nos [fusos locais dos usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
@@ -116,11 +115,11 @@ Se um usuário concluir um evento de gatilho durante o período de tempo especif
 
 Selecione se o usuário receberá a campanha durante uma parte específica do dia. Se você der à mensagem um período de tempo e o usuário concluir o evento de gatilho fora do período de tempo ou se a postergação da mensagem fizer com que ele perca o período de tempo, então, por padrão, o usuário não receberá sua mensagem.
 
-![][27]
+![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
 
 No caso de um usuário concluir o evento de gatilho dentro do período de tempo, mas a postergação da mensagem fizer com que o usuário saia do período de tempo, é possível marcar a caixa a seguir para que esses usuários ainda recebam a campanha.
 
-![][31]
+![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
 Se um usuário não receber a mensagem porque perdeu o prazo, ele ainda estará qualificado para recebê-la na próxima vez que concluir o evento de gatilho, mesmo que você não tenha optado por tornar os usuários [novamente elegíveis]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). Se optar pela reelegibilidade dos usuários, eles poderão receber a campanha sempre que concluírem o evento de gatilho, desde que se qualifiquem durante o período de tempo especificado.
 
@@ -128,9 +127,9 @@ Se também tiver atribuído à campanha uma determinada duração, o usuário de
 
 ### Etapa 6: Determinar a reelegibilidade
 
-Determine se os usuários podem se tornar [reelegíveis][24] para a campanha. Se você permitir que os usuários se tornem novamente elegíveis, poderá especificar uma postergação de tempo antes que o usuário possa receber a campanha novamente. Isso evitará que suas campanhas disparadas se tornem "spam".
+Determine se os usuários podem se tornar [novamente elegíveis]({% image_buster /assets/img_archive/ReEligible.png %}) para a campanha. Se você permitir que os usuários se tornem novamente elegíveis, poderá especificar uma postergação de tempo antes que o usuário possa receber a campanha novamente. Isso evitará que suas campanhas disparadas se tornem "spam".
 
-![][28]
+![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
 ## Casos de uso
 
@@ -155,7 +154,7 @@ Qualquer uma dessas coisas impedirá que um usuário que tenha concluído o even
 
 Por exemplo, imagine que você queira enviar uma campanha disparada por evento para usuários do sexo masculino que acabaram de se registrar. Quando o usuário se registra, você grava um evento personalizado `registration` e, simultaneamente, define o atributo `gender` do usuário. O evento pode disparar a campanha antes que o Braze tenha processado o gênero do usuário, impedindo-o de receber a campanha.
 
-Como prática recomendada, certifique-se de que a atribuição na qual a campanha é segmentada seja liberada para os servidores do Braze antes do evento. Se isso não for possível, a melhor maneira de garantir a entrega é usar [custom event properties][48] para anexar as propriedades relevantes do usuário ao evento e aplicar um filtro de propriedade para a propriedade específica do evento em vez de um filtro de segmentação. No nosso exemplo, você adicionaria uma propriedade `gender` ao evento personalizado `registration` para garantir que o Braze tenha os dados de que você precisa quando sua campanha for disparada.
+Como prática recomendada, certifique-se de que a atribuição na qual a campanha é segmentada seja liberada para os servidores do Braze antes do evento. Se isso não for possível, a melhor maneira de garantir a entrega é usar as propriedades de evento personalizado para anexar as propriedades relevantes do usuário ao evento e aplicar um filtro de propriedade para a propriedade de evento específica em vez de um filtro de segmentação. No nosso exemplo, você adicionaria uma propriedade `gender` ao evento personalizado `registration` para garantir que o Braze tenha os dados de que você precisa quando sua campanha for disparada.
 
 Além disso, se uma campanha for baseada em ação e tiver uma postergação, é possível marcar a opção **Reavaliar associação de segmento no momento do envio** para garantir que os usuários ainda façam parte do público-alvo quando a mensagem for enviada.
 
@@ -166,27 +165,20 @@ Se a sua campanha for disparada por um evento personalizado específico e você 
 
 Recomendamos alterar o público-alvo para incluir todos os usuários ou verificar se os usuários que deverão realizar o evento já fazem parte do público da campanha para que a mensagem seja disparada.
 
-![][51]
+![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
-[5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
-[18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
-[20]: {% image_buster /assets/img_archive/schedule_triggered32.png %}
-[21]: {% image_buster /assets/img_archive/schedule_triggered43.png %}
-[22]: \#use-cases-2
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
-[28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
-[31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
-[32]: {{site.baseurl}}/user_guide/data_e_analytics/custom_data/custom_events/
-[33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}
-[41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
-[48]: {{site.baseurl}}/user_guide/data_e_analytics/custom_data/custom_events/#custom-event-properties
-[49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
-[50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
-[51]: {% image_buster /assets/img_archive/reevaluate_segment_membership.png %}
+### Solução de problemas de eventos personalizados
+
+Primeiro, confirme se o evento personalizado está sendo enviado para o Braze. Acesse Análise > Relatório de Eventos Personalizados, e então selecione o respectivo evento personalizado e intervalo de datas. Se o evento não for exibido, confirme se está configurado corretamente e se o usuário realizou a ação correta.
+
+Se o evento personalizado for exibido, faça mais verificações fazendo o seguinte:
+
+- Verifique o download do perfil do usuário para confirmar se eles dispararam o evento e quando o fizeram. Se o evento foi disparado, compare o timestamp de quando o evento foi disparado com o momento em que a campanha foi ao ar. O evento pode ter sido disparado antes da campanha ir ao ar.
+- Revise os logs de alterações da campanha e quaisquer segmentos usados no direcionamento para determinar se o usuário estava no segmento quando seu evento personalizado foi disparado. Se eles não estavam no segmento, não teriam recebido a campanha.
+- Verifique se o usuário foi inserido em um grupo de controle através da segmentação e, consequentemente, impedido de receber a campanha.
+- Se houver um atraso programado, verifique se o evento personalizado do usuário foi disparado antes do atraso. Se o evento foi disparado antes do atraso, eles não teriam recebido a campanha.
+
+{% alert note %}
+Mensagens dentro do app só podem ser disparadas por eventos enviados através do SDK, não pela API REST.
+{% endalert %}
+

@@ -37,6 +37,6 @@ Tag um evento e, em seguida, identifique as diferenças usando as propriedades. 
 Digamos que você faça parte de uma empresa de comércio eletrônico e esteja interessado em rastrear quando os clientes inscreveram-se em seu app e quando assinaram seu boletim informativo. Aqui estão alguns exemplos de nomes de eventos eficazes:
 
 - `user_signup`
-- `newsletter_sunscribed`
+- `newsletter_subscribed`
 
 Esses dois nomes de eventos indicam claramente o evento que estão rastreando. Ao criar mais eventos personalizados, certifique-se de manter suas convenções de nomenclatura compreensíveis. Por exemplo, evite usar nomes de eventos como `signup_event_1`, pois isso não é claro e não transmite o que o evento está rastreando, em comparação com `user_signup`.

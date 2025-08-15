@@ -28,7 +28,7 @@ Obter respostas fora do escritório pode, na verdade, fornecer informações val
 
 O texto do pré-cabeçalho em um e-mail comunica o ponto principal da mensagem de forma eficiente para atrair o interesse do leitor e incentivar a abertura. O texto do pré-cabeçalho também é frequentemente usado por profissionais de marketing de e-mail para fornecer informações adicionais sobre o conteúdo de um e-mail. Um pré-cabeçalho é o texto de prévia exibido imediatamente após o assunto de um e-mail. No exemplo a seguir, o pré-cabeçalho é `- Brand. New. Lounge Shorts`.
 
-![Texto de pré-cabeçalho em uma caixa de entrada do Gmail com o texto "Brand. Novo. Lounge Shorts".][61]
+![Texto de pré-cabeçalho em uma caixa de entrada do Gmail com o texto "Brand. Novo. Lounge Shorts".]({% image_buster /assets/img_archive/preheader_example.png %})
 
 A quantidade de texto visível do pré-cabeçalho depende do cliente de e-mail do usuário e do tamanho da linha de assunto do e-mail. Em geral, sugerimos que os pré-cabeçalhos de e-mail tenham entre 50 e 100 caracteres.
 
@@ -79,7 +79,7 @@ Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrev
 
 ## Tamanho do e-mail
 
-Certifique-se de limitar o tamanho de seu e-mail. Corpos de e-mail com mais de 102 KB não só são extremamente pesados para os servidores da Braze e do SendGrid, como também são cortados pelo Gmail e outros clientes de e-mail. Tente manter o tamanho de seu e-mail abaixo de 25 KB apenas para texto ou 60 KB com imagens. Recomendamos enfaticamente que você use nosso carregador de imagens para hospedar imagens e fazer referência a essas imagens pelo endereço `href`.
+Certifique-se de limitar o tamanho de seu e-mail. Os corpos de e-mail com mais de 102 KB não só são extremamente pesados para os servidores do Braze, como também são cortados pelo Gmail e outros clientes de e-mail. Tente manter o tamanho de seu e-mail abaixo de 25 KB apenas para texto ou 60 KB com imagens. Recomendamos enfaticamente que você use nosso carregador de imagens para hospedar imagens e fazer referência a essas imagens pelo endereço `href`.
 
 |   Apenas texto   | Texto com imagens |     Largura do e-mail    |
 |:-------------:|:----------------:|:------------------:|
@@ -112,4 +112,3 @@ Uma alta porcentagem de e-mails é lida em dispositivos móveis. O uso de [deep 
 
 No entanto, os e-mails não oferecem a clareza de saber se os destinatários têm o app instalado. Portanto, evitar o deep linking ajuda a evitar mensagens de erro para esses destinatários de e-mail que não têm o app.
 
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}

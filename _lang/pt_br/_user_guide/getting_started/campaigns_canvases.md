@@ -42,13 +42,13 @@ Confira estes recursos adicionais para saber mais sobre as campanhas no Braze:
 
 Em vez de enviar mensagens esporádicas em várias campanhas, o Canvas cria uma conversa fluida e contínua com os usuários. Isso ocorre porque a jornada de um usuário por um Canvas pode se dividir em diferentes jornadas, dependendo de suas ações (ou inação) com sua marca, permitindo que você avance automaticamente os usuários por um fluxo específico em tempo real.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 Dessa forma, as telas são ótimas para lançar uma rede para capturar os usuários que estão fora da jornada para a conversão e colocá-los nas iniciativas de alcance mais eficazes.
 
 Ao criar um Canva, você segue muitas das mesmas etapas da configuração de uma campanha: especificação de um público geral, condições de entrada e configurações de envio. Seu Canva começa quando alguém corresponde à sua condição de disparo. Em seguida, eles se movem por uma jornada no canva até atenderem às suas condições de saída.
 
-Seu Canva pode ter qualquer combinação de [mensagens]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [postergações]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) e muito mais. Você pode enviar em qualquer canal de envio de mensagens compatível e até mesmo [integrar-se a plataformas sociais e de anúncios]({{site.baseurl}}/partners/canvas_steps/overview/), como Facebook, Google ou TikTok.
+Seu Canva pode ter qualquer combinação de [mensagens]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [postergações]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) e muito mais. Você pode enviar em qualquer canal de envio de mensagens compatível e até mesmo [integrar-se a plataformas sociais e de anúncios]({{site.baseurl}}/partners/canvas_audience_sync/overview/), como Facebook, Google ou TikTok.
 
 Confira estes recursos adicionais para saber mais sobre o Canvas Flow:
 
@@ -60,7 +60,7 @@ Confira estes recursos adicionais para saber mais sobre o Canvas Flow:
 
 Os canais de envio de mensagens são os vários canais de comunicação por meio dos quais você pode se engajar com seus clientes e enviar mensagens direcionadas. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 A tabela a seguir descreve nossos canais suportados.
 
@@ -70,11 +70,13 @@ A tabela a seguir descreve nossos canais suportados.
 | [Push móvel]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | Envie mensagens diretamente para os dispositivos móveis dos usuários como notificações.                                                                                   |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Envie notificações para os navegadores da Web dos usuários, mesmo quando eles não estiverem ativamente no seu site.                                                         |
 | [Mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Exiba mensagens no app móvel enquanto os usuários estiverem usando-o ativamente.                                                                             |
-| [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)                   | Envie mensagens de texto para os telefones celulares dos usuários.                                                                                                            |
+| [SMS, MMS e RCS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/)                   | Envie mensagens de texto para os telefones celulares dos usuários.                                                                                                            |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)              | Envie mensagens por meio da popular plataforma de envio de mensagens, o WhatsApp, para alcançar e se engajar com seus usuários.                                                   |
+| [Banners*]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)       | Incorpore mensagens diretamente em seu app ou site. |
 | [Cartões de conteúdo*]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)       | Forneça uma caixa de entrada em seu app ou site onde os usuários possam receber e interagir com as mensagens, ou exiba mensagens em um carrossel, como um banner e muito mais. |
 | [TV conectada]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Engajamento com usuários em plataformas de televisão conectadas.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Ative a comunicação e a integração em tempo real com sistemas externos por meio de retornos de chamada HTTP personalizados.                                                    |
+| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Engajamento com usuários no LINE, o app de mensagens mais popular do Japão.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>\*\*Disponível como um recurso complementar.</sup>
@@ -83,5 +85,3 @@ A tabela a seguir descreve nossos canais suportados.
 Para mensagens curtas e urgentes que podem ser comunicadas pela maioria dos canais (e-mail, SMS, push), aproveite o filtro [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) para enviar automaticamente a mensagem pelo melhor canal para cada usuário.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/getting_started/channels.png %}
-[2]: {% image_buster /assets/img/getting_started/canvas_flow.png %}

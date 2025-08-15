@@ -1,7 +1,7 @@
 ---
 nav_title: Como criar um envio de mensagens do WhatsApp
 article_title: Como criar um envio de mensagens do WhatsApp
-page_order: 4
+page_order: 0
 description: "Este artigo de referência aborda as etapas envolvidas na construção e criação de uma mensagem do WhatsApp."
 page_type: reference
 tool:
@@ -17,7 +17,7 @@ search_rank: 1
 
 ## Pré-requisitos
 
-Antes de criar mensagens do WhatsApp, você precisa revisar e concluir o seguinte na [visão geral do WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/):
+Antes de poder criar mensagens do WhatsApp, você precisa revisar e concluir o seguinte na [visão geral do WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/):
   - Reconhecer políticas, limites e regras de conteúdo
   - Configure sua conexão com o WhatsApp
   - Crie modelos iniciais no Meta para usar em seus envios de mensagens
@@ -71,7 +71,7 @@ Se um Canvas baseado em ação for disparado por uma mensagem recebida do WhatsA
 
 Selecione se deseja criar uma [mensagem modelo](#template-messages) do WhatsApp ou uma mensagem de resposta, dependendo do seu caso de uso. Qualquer conversa iniciada pela empresa deve começar com um modelo aprovado, enquanto as mensagens de resposta podem ser usadas em respostas a mensagens recebidas de usuários dentro de um período de 24 horas.
 
-![A seção Variantes de mensagem permite selecionar um grupo de inscrições e um dos dois tipos de mensagem: Mensagem modelo do WhatsApp e mensagem de resposta.][5]{: style="max-width:80%;"}
+![A seção Variantes de mensagem permite selecionar um grupo de inscrições e um dos dois tipos de mensagem: Modelo de mensagem e mensagem de resposta do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 #### Envio de mensagens de modelo
 
@@ -84,7 +84,7 @@ Os campos de texto desativados (destacados em cinza) não podem ser editados, po
 
 Cada modelo tem um idioma atribuído, portanto, é necessário criar uma campanha ou etapa do Canva para cada idioma para configurar corretamente a correspondência de usuários. Por exemplo, se estiver criando um canva que usa modelos atribuídos com indonésio e inglês, será necessário criar uma etapa do canva para o modelo indonésio e uma etapa do canvas para o modelo inglês.
 
-![Lista de modelos, incluindo prévias de suas mensagens, idiomas atribuídos e status de aprovação.][8]{: style="max-width:80%;"}
+![Lista de modelos, incluindo prévias de suas mensagens, seus idiomas atribuídos e seu status de aprovação.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -100,7 +100,7 @@ Se planeja usar o Liquid, certifique-se de incluir um valor padrão para a perso
 {% endraw %}
 {% endalert %}
 
-![A ferramenta Adicionar personalização com a atribuição "first_name" e o valor padrão "you".][2]{: style="max-width:80%;"}
+![A ferramenta Adicionar personalização com a atribuição "first_name" e o valor padrão "you" (você).]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 #### Links dinâmicos 
 
@@ -110,24 +110,26 @@ Os URLs de chamada para ação podem conter variáveis, embora o Meta exija que 
 
 É possível usar mensagens de resposta para responder às mensagens recebidas de seus usuários. Essas mensagens são criadas no app do Braze durante sua experiência de composição e podem ser editadas a qualquer momento. É possível usar o Liquid para fazer a correspondência entre o idioma da mensagem de resposta e os usuários apropriados.
 
-Há três layouts de mensagens de resposta que você pode usar:
+Há cinco layouts de mensagens de resposta que você pode usar:
 - Resposta rápida
 - Mensagem
 - Mensagem de mídia
+- Botão de chamada para ação
+- Mensagem de lista
 
-![O criador da mensagem de resposta para uma Reply Message que dá as boas-vindas a novos usuários com um código de desconto.][6]{: style="max-width:80%;"}
+![O criador da mensagem de resposta para uma mensagem de resposta que dá as boas-vindas a novos usuários com um código de desconto.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 ### Etapa 3: Pré-visualize e teste sua mensagem
 
 O Braze sempre recomenda que você faça uma prévia e teste sua mensagem antes de enviá-la. Mude para a guia **Test (Teste** ) para enviar uma mensagem de teste do WhatsApp para [grupos de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou usuários individuais, ou faça uma prévia da mensagem como um usuário diretamente no Braze.
 
-![Uma mensagem prévia para um usuário existente chamado Suzanne.][3]{: style="max-width:80%;"}
+![Uma mensagem prévia para um usuário personalizado chamado Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 É necessária uma janela de conversação para enviar mensagens de resposta, inclusive mensagens de teste. Para iniciar uma janela de conversa, envie uma mensagem do WhatsApp para o número de telefone associado ao grupo de inscrições que está usando para essa mensagem. O número de telefone associado é listado no alerta na guia **Teste**.
 {% endalert %}
 
-![Um alerta que diz: "Para testar, primeiro abra uma janela de conversa enviando uma mensagem do WhatsApp para +1 631-202-0907. Em seguida, envie sua mensagem de resposta para o usuário teste."][7]{: style="max-width:80%;"}
+![Um alerta que diz: "Para testar, primeiro abra uma janela de conversa enviando uma mensagem do WhatsApp para +1 217-582-9414. Em seguida, envie sua mensagem de resposta para o usuário teste."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### Etapa 4: Crie o restante de sua campanha ou Canva
 
@@ -146,7 +148,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você já deve ter escolhido o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você. Nessa etapa, você selecionará o público maior de seus segmentos e restringirá ainda mais esse segmento com nossos filtros. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento é sempre calculada imediatamente antes do envio da mensagem.
+Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você já deve ter escolhido o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você. Nessa etapa, você selecionará o público maior de seus segmentos e restringirá ainda mais esse segmento com nossos filtros. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento é sempre calculada imediatamente antes do envio da mensagem.
 
 #### Selecionar eventos de conversão
 
@@ -184,22 +186,20 @@ Os recursos a seguir são compatíveis com as mensagens do WhatsApp que você en
 | Texto do rodapé | Há suporte para strings e parâmetros variáveis. | - | - |
 | Links de CTA | Há suporte para vários tipos de CTA (call-to-action). Para obter mais detalhes, consulte [Tipos de call-to-action](#ctas). | - | - |
 | Imagens | As imagens podem ser incorporadas no corpo do texto. Eles devem ser de 8 bits e usar um modelo de cor RGB ou RGBA. | < 5 MB | `.png`, `.jpg`, `.jpeg` |
-| Documentos* | Os documentos podem ser incorporados ao corpo do texto. Os arquivos devem ser hospedados por meio de URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
-| Vídeos* | Os vídeos podem ser incorporados no corpo do texto. Os arquivos devem ser hospedados por meio de URL ou na [biblioteca de mídia do Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
-| Áudio* | O áudio só é compatível com o envio de mensagens de resposta. Os arquivos devem ser hospedados por meio de URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
+| Documentos | Os documentos podem ser incorporados ao corpo do texto. Os arquivos devem ser hospedados por meio de URL. | < 100 MB | `.txt`, `.xls`, `.xlsx`, `.doc`, `.docx`, `.ppt`, `.pttx`, `.pdf` |
+| Vídeos | Os vídeos podem ser incorporados no corpo do texto. Os arquivos devem ser hospedados por meio de URL ou na [biblioteca de mídia do Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
+| Áudio | O áudio só é compatível com o envio de mensagens de resposta. Os arquivos devem ser hospedados por meio de URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
-
-<sup>_\*Atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar._</sup>
 
 ### Envios de mensagens de entrada
 
-Os seguintes recursos são compatíveis com as mensagens recebidas do WhatsApp que você recebe por meio do Braze:
+Os seguintes recursos são compatíveis com as mensagens recebidas do WhatsApp que você recebe pelo Braze:
 
 | Recurso | Informações | Formatos suportados |
 | ------- | ------- | ------------------ |
 | Texto do corpo | Somente as strings padrão são suportadas. | - |
 | Imagens | As imagens devem ser de 8 bits e usar um modelo de cor RGB ou RGBA. Os arquivos devem ter menos de 5 MB. | `.jpg`, `.png` |
-| Áudio | Somente arquivos Ogg codificados com o codec Opus são compatíveis. Outros formatos Ogg não são. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
+| Áudio | Somente os arquivos Ogg codificados com o codec Opus são compatíveis. Outros formatos Ogg não são. | `.aac`, `.mp4`, `.mpeg`, `.amr`, `.ogg (Opus only)` |
 | Documentos | Os documentos são suportados por meio de anexos de mensagens. | `.txt`, `.pdf`, `.ppt`, `.doc`, `.xls`, `.docx`, `.pptx`, `.xlsx` |
 | Vídeo | Somente o codec de vídeo H.264 e o codec de áudio AAC são compatíveis. Os vídeos devem ter um único fluxo de áudio ou nenhum fluxo de áudio. | `.mp4`, `.3gp` |
 | Links de CTA | Há suporte para vários tipos de CTA (call-to-action). Para obter mais detalhes, consulte [Tipos de call-to-action](#ctas). | - |
@@ -217,13 +217,6 @@ Os seguintes tipos de call-to-action são compatíveis com as mensagens do Whats
 | Botão de cancelamento de inscrição para comunicações de marketing | Por padrão, os status da inscrição não são atualizados automaticamente. Para obter um passo a passo completo, consulte [Opt-ins & Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection). |
 | Modelos de mensagens de código de cupom | Disponível apenas para modelos de mensagens. <br>Eles podem ser abertos e editados como outros modelos de mensagens e são compatíveis com os códigos promocionais do Liquid e do Braze. |
 | Envio de mensagens de resposta de CTA  | Crie uma mensagem de resposta que inclua um botão de chamada para ação. |
+| [Listar envios de mensagens de resposta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | Crie uma mensagem de resposta que inclua uma lista de até 10 opções para os usuários escolherem. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}

@@ -1,7 +1,7 @@
 ---
 nav_title: Perfis de usuário
 article_title: Perfis de usuário
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -26,13 +26,13 @@ Para acessar o perfil de um usuário, acesse a página **Pesquisar usuários** e
 
 Se for encontrada uma correspondência, você poderá visualizar as informações que registrou para esse usuário com o Braze SDK. Caso contrário, se a pesquisa retornar vários perfis de usuário, será possível mesclar cada perfil individualmente ou realizar uma mesclagem de usuários em massa. Para obter um passo a passo completo, consulte [Usuários duplicados]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Resultados da pesquisa com um banner que diz "Vários usuários correspondem aos seus critérios de pesquisa" e dois botões denominados Anterior e Próximo.][1]
+![Resultados da pesquisa com um banner que diz "Vários usuários correspondem aos seus critérios de pesquisa" e dois botões denominados Anterior e Próximo.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Casos de uso
 
 Os perfis de usuário são um ótimo recurso para solução de problemas e testes, pois é possível acessar facilmente informações sobre o histórico de engajamento de um usuário, a associação ao segmento, o dispositivo e o sistema operacional.
 
-Por exemplo, se um usuário relatar um problema e você não tiver certeza de qual dispositivo e sistema operacional ele está usando, poderá usar a [guia Overview (Visão geral](#overview-tab) ) para encontrar essas informações (desde que tenha o e-mail ou a ID do usuário). Também é possível visualizar o idioma de um usuário, o que pode ser útil se você estiver solucionando problemas de uma [campanha multilíngue][13] que não se comportou como esperado.
+Por exemplo, se um usuário relatar um problema e você não tiver certeza de qual dispositivo e sistema operacional ele está usando, poderá usar a [guia Overview (Visão geral](#overview-tab) ) para encontrar essas informações (desde que tenha o e-mail ou a ID do usuário). Também é possível visualizar o idioma de um usuário, o que pode ser útil se você estiver solucionando problemas de uma [campanha multilíngue]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) que não se comportou como esperado.
 
 É possível usar a [guia Engajamento](#engagement-tab) para verificar se um determinado usuário recebeu uma campanha. Além disso, se esse usuário específico tiver recebido a campanha, você poderá ver quando ele a recebeu. Também é possível verificar se um usuário está em um determinado segmento e se há aceitação de push, e-mail ou ambos. Essas informações são úteis para fins de solução de problemas. Por exemplo, você deve verificar essas informações se um usuário não receber uma campanha que você esperava que ele recebesse ou se receber uma campanha que você não esperava que ele recebesse.
 
@@ -43,6 +43,7 @@ Há quatro seções principais no perfil de um usuário.
 - **Visão geral:** Informações básicas sobre o usuário, dados de sessão, atributos personalizados, eventos personalizados, compras e o dispositivo mais recente no qual o usuário se registrou.
 - **Engajamento:** Informações sobre as configurações de contato do usuário, campanhas recebidas, segmentos, estatísticas de comunicação, atribuição da instalação e número aleatório do bucket.
 - **Histórico de mensagens:** Eventos recentes relacionados a envio de mensagens para esse usuário nos últimos 30 dias.
+- **Elegibilidade dos Feature Flags:** Valide para quais sinalizadores de recursos um usuário é elegível no momento em implementações, etapas do canva e experimentos. 
 
 ### Guia Visão geral {#overview-tab}
 
@@ -58,9 +59,9 @@ A guia **Visão geral** contém informações básicas sobre um usuário e suas 
 | Compras | Receita vitalícia atribuída a esse usuário, sua última compra, número total de compras e uma lista de cada compra. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para saber mais sobre esses dados, consulte [Coleta de dados de usuários][12].
+Para saber mais sobre esses dados, consulte [Coleta de dados de usuários]({{site.baseurl}}/user_guide/data/user_data_collection/).
 
-![A guia Visão geral de um perfil de usuário.][2]
+![A guia Visão geral de um perfil de usuário.]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### Guia Engajamento {#engagement-tab}
 
@@ -68,17 +69,17 @@ A guia **Engajamento** contém informações sobre as interações de um usuári
 
 | Categoria de engajamento | Contém |
 | --- | --- |
-| Configurações de contato | Status da inscrição para e-mail, SMS e push, e os grupos de inscrições aos quais esse usuário está associado para esses três canais. Esta seção também inclui informações de changelog para tokens por push. Consulte [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) e [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) para saber como configurar inscrições e aceitações. |
+| Configurações de contato | Status da inscrição para e-mail, SMS e push, e os grupos de inscrições aos quais esse usuário está associado para esses três canais. Esta seção também inclui informações de changelog para tokens por push. Consulte [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) e [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) para saber como configurar inscrições e aceitações. |
 | Campanhas recebidas | As campanhas recebidas são marcadas quando o usuário recebe a campanha ou quando detectamos pela primeira vez os dados de interação de um usuário. Selecione uma campanha na lista para visualizá-la. |
 | Segmentos | Segmentos em que esse usuário está incluído. Selecione um segmento da lista para visualizá-lo. |
 | Estatísticas de comunicação | Quando esse usuário recebeu as últimas mensagens suas de cada canal. |
 | Atribuição da instalação | Informações sobre como e quando um usuário instalou seu app. Saiba mais sobre [como entender as instalações do usuário]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Diversos | O [número do balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) do usuário. |
 | Envio de mensagens do Canva recebidas | Mensagens de canvas que esse usuário recebeu e quando. Selecione uma mensagem da lista para visualizá-la. |
-| Previsões | Pontuações de [previsão de churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) e [previsão de eventos]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) para esse usuário. |
+| Previsões | Pontuações de [previsão de churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) e [previsão de eventos]({{site.baseurl}}/user_guide/brazeai/predictive_events/) para esse usuário. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![A guia Engajamento de um perfil de usuário exibe suas configurações de contato e estatísticas de comunicação.][3]
+![A guia Engajamento de um perfil de usuário que exibe suas configurações de contato e estatísticas de comunicação.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### Guia Histórico de mensagens
 
@@ -88,7 +89,7 @@ A guia **Histórico de mensagens** do perfil do usuário mostra eventos recentes
 Se tiver comentários sobre essa tabela ou quiser ver eventos específicos, envie um e-mail para [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) com a linha de assunto "Feedback sobre a Guia Histórico de mensagens".
 {% endalert %}
 
-![A guia Histórico de mensagens mostra quais campanhas e Canvas um usuário recebeu.][5]
+![A guia Histórico de mensagens mostra quais campanhas e Canvas um usuário recebeu.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### Visualização e compreensão de eventos
 
@@ -106,6 +107,7 @@ Os seguintes eventos de engajamento com mensagens estão disponíveis para e-mai
 | Mensagem no app | Clique<br>Impressão |
 | Cartões de conteúdo | Clique<br>Descartar<br>Impressão<br>Enviar |
 | Webhooks | Enviar |
+| WhatsApp | Interromper<br>Entrega<br>Falha<br>Limite de frequência<br>Mensagem recebida<br>Ler<br>Enviar |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### Eventos de interrupção de mensagens
@@ -138,9 +140,3 @@ O rastreamento de abertura de e-mails é propenso a erros em qualquer ferramenta
 Embora as estatísticas de abertura de e-mail possam ser úteis de forma agregada, por exemplo, para comparar a eficácia de diferentes linhas de assunto, não se deve presumir que um evento de abertura individual para um usuário individual seja significativo.
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engajamento_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

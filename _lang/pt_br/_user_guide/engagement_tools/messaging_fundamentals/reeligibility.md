@@ -16,7 +16,7 @@ toc_headers: h2
 
 ## Como funciona?
 
-Por padrão, o Braze envia uma mensagem a um usuário apenas uma vez, mesmo que ele se requalifique várias vezes, pois a reelegibilidade precisa ser ativada separadamente. Depois de ativada, os membros qualificados poderão receber mensagens novamente depois de terem recebido a primeira instância da campanha ou do Canva. Você pode indicar a linha do tempo em que os usuários se tornariam elegíveis novamente.
+Por padrão, o Braze envia uma mensagem a um usuário apenas uma vez, mesmo que ele se requalifique várias vezes, pois a reelegibilidade precisa ser ativada separadamente. Depois de ativada, os membros qualificados terão permissão para receber mensagens novamente depois de receberem a primeira instância da campanha ou do Canva. Você pode indicar a linha do tempo em que os usuários se tornariam elegíveis novamente.
 
 ## Ativação da reelegibilidade
 
@@ -24,7 +24,7 @@ Por padrão, o Braze envia uma mensagem a um usuário apenas uma vez, mesmo que 
 {% tab campanha %}
 Para ativar a reelegibilidade para uma campanha, marque a caixa de seleção **Permitir que os usuários se tornem reelegíveis para receber a campanha** na seção **Controles de entrega**. O tempo máximo de reelegibilidade para uma campanha é de 720 dias.
 
-Para campanhas de mensagens disparadas com a reelegibilidade ativada, os usuários que [não receberam a mensagem da campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (apesar de terem concluído o evento de gatilho) serão automaticamente elegíveis para a mensagem na próxima vez que concluírem o evento de gatilho. Isso ocorre porque a reelegibilidade se baseia no recebimento de mensagens e não na entrada na campanha. Ao tornar os usuários novamente elegíveis para uma campanha de mensagens disparadas, você permite que eles realmente recebam (e não simplesmente disparem) a mensagem mais de uma vez.
+Para campanhas de mensagens disparadas com a reelegibilidade ativada, os usuários que [não receberam a mensagem da campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (apesar de terem concluído o evento de gatilho) se qualificarão automaticamente para a mensagem na próxima vez que concluírem o evento de gatilho. Isso ocorre porque a reelegibilidade se baseia no recebimento de mensagens e não na entrada na campanha. Ao tornar os usuários novamente elegíveis para uma campanha de mensagens disparadas, você permite que eles realmente recebam (e não simplesmente disparem) a mensagem mais de uma vez.
 
 Além disso, se estiver tentando enviar uma mensagem imediatamente com uma reelegibilidade de zero minutos, sempre tentaremos agendá-la imediatamente, independentemente de como o usuário tenha recebido versões anteriores da campanha ou do Canva.
 
@@ -35,7 +35,7 @@ O número de vezes que um usuário recebe uma campanha acionada por API pode ser
 Por exemplo, digamos que você esteja usando uma campanha disparada pela API para enviar ao usuário uma campanha sobre um item que ele visualizou recentemente. Neste caso, você pode limitar a campanha para enviar no máximo uma mensagem por dia, independentemente de quantos itens eles visualizaram enquanto disparavam o gatilho da API para cada item. Por outro lado, se sua campanha acionada por API for transacional, você vai querer garantir que o usuário receba a campanha toda vez que fizer a transação, definindo a postergação para zero minutos.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Para ativar a reelegibilidade de um Canvas, selecione **Permitir que os usuários entrem novamente nesse Canvas** na seção **Controles de entrada**. É possível escolher entre permitir que os usuários entrem novamente após a duração máxima do Canva ou após uma janela especificada.
 
 A reelegibilidade para as variantes do Canvas está vinculada à entrada no Canvas e não ao recebimento de mensagens. Os usuários que entrarem em um Canvas e não receberem nenhuma mensagem não poderão entrar novamente no Canvas, a menos que a reelegibilidade esteja ativada.

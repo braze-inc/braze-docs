@@ -67,6 +67,10 @@ Embora o editor de arrastar e soltar simplifique seu fluxo de trabalho com esses
 
 **As linhas** são unidades estruturais que definem a composição horizontal de uma seção da mensagem por meio de colunas. Você pode esvaziar as linhas ou [os blocos de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). O uso de mais de uma coluna permite que você coloque diferentes elementos de conteúdo lado a lado. Dessa forma, você pode adicionar todos os elementos estruturais necessários à sua mensagem, independentemente do modelo selecionado no início.
 
+#### Estilo dos cartões
+
+**O estilo dos cartões** é uma propriedade de linha que permite adicionar espaçamento entre as colunas e arredondar seus cantos. Com a formatação em estilo de cartão, é possível criar layouts com maior engajamento visual para ajudar a destacar seu conteúdo mais importante, como novos recursos de produtos, depoimentos, ofertas especiais, atualizações de notícias e muito mais.
+
 ## Usando o editor de arrastar e soltar
 
 Não tem certeza se sua mensagem de e-mail deve ser enviada usando uma campanha ou um Canva? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
@@ -91,7 +95,7 @@ Depois de selecionar o modelo, você verá uma visão geral do e-mail em **Varia
 
 Em seguida, selecione **Edit Email Body (Editar corpo do e-mail)** para começar a projetar a estrutura do e-mail no editor de arrastar e soltar. 
 
-![A seção "Email Variants" (Variantes de e-mail) com um exemplo de corpo de e-mail.][8]
+![A seção "Variantes de e-mail" com um exemplo de corpo de e-mail.]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
 
 ### Etapa 2: Crie seu e-mail
 
@@ -101,7 +105,7 @@ Quando estiver pronto, use os blocos de conteúdo do tipo arrastar e soltar para
 
 1. Selecione o painel **Rows**. Arraste e solte as configurações de linha no editor principal. Isso mapeará o layout do conteúdo de seu e-mail.
 - Note que as novas configurações devem ser arrastadas para a parte superior ou inferior de uma seção existente.
-- Quando você seleciona uma configuração de linha, as configurações de **Propriedades de linha** são exibidas para personalização adicional de cores de fundo de linha, imagens e tamanhos de coluna personalizados.
+- Quando você seleciona uma configuração de linha, as configurações de **Propriedades da linha** são exibidas para personalização adicional das cores de fundo da linha, imagens e tamanhos de coluna personalizados.
 2. Selecione o painel **Content (Conteúdo** ). Arraste e solte os blocos de conteúdo desejados nos componentes da linha.
 - Você também pode arrastar qualquer um dos blocos de **conteúdo** para o editor principal. Isso cria uma linha para o bloco.
 - Você pode refinar ainda mais o bloco selecionando-o e ajustando os campos em **Propriedades do conteúdo** e **Opções do bloco**. Isso inclui a edição do espaçamento entre letras, preenchimento, altura da linha e muito mais.
@@ -111,7 +115,7 @@ Consulte [Outras personalizações](#other-customizations) para ver outras manei
 Ao criar seu e-mail, é possível alternar entre a visualização para desktop e para dispositivos móveis para fazer uma prévia de como será o envio de mensagens por e-mail para seus grupos de usuários. Isso verificará se o seu conteúdo é responsivo e você poderá fazer os ajustes necessários ao longo do processo.
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto, e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Botão Copywriter, localizado no painel Content (Conteúdo) ao lado de Style Settings (Configurações de estilo) no editor de arrastar e soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -159,6 +163,12 @@ Na guia **Preview as a User (Visualizar como usuário** ), é possível selecion
 O usuário aleatório pode ou não fazer parte dos seus critérios de segmentação. A segmentação é selecionada posteriormente, portanto o Braze não tem conhecimento de seu público-alvo nesse momento.
 {% endalert %}
 
+Também é possível selecionar **Copiar link de visualização** para gerar e copiar um link de visualização compartilhável que mostre como será o e-mail para um usuário aleatório. O link terá duração de sete dias antes de precisar ser regenerado. 
+
+Observe que as edições feitas em um modelo de e-mail não se refletirão em um link gerado anteriormente. Você precisará gerar uma nova prévia do link para ver as edições.
+
+![Envio de e-mail com um botão para "Copiar link da prévia" e copiar o link gerado.]({% image_buster /assets/img/dnd_email_link_preview.png %})
+
 #### Use o Inbox Vision
 
 O Inbox Vision permite que você visualize suas campanhas de e-mail a partir da perspectiva de clientes de e-mail e dispositivos móveis. Para testar sua mensagem de e-mail usando o Inbox Vision, selecione **Inbox Vision** na seção **Preview & Test** e selecione **Run Inbox Vision**.
@@ -167,7 +177,7 @@ O Inbox Vision permite que você visualize suas campanhas de e-mail a partir da 
 As imagens de fundo em envios de mensagens por e-mail podem, às vezes, causar linhas brancas ou desconexões entre as imagens, por isso é importante testar e verificar os detalhes da sua mensagem de e-mail.
 {% endalert %}
 
-Depois de usar o editor de arrastar e soltar para projetar e criar sua mensagem de e-mail, continue a [construir][12] o restante de sua campanha ou Canvas.
+Depois de usar o editor de arrastar e soltar para projetar e criar sua mensagem de e-mail, continue a [criar]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) o restante de sua campanha ou Canvas.
 
 {% details Sobre o mecanismo HTML atualizado %}
 O mecanismo subjacente que produz HTML a partir do editor de arrastar e soltar foi otimizado e atualizado, resultando em benefícios relacionados à compactação e à renderização de arquivos HTML.
@@ -176,7 +186,7 @@ Nosso tamanho médio de pegada de dados HTML exportados foi reduzido, levando a 
 
 A renderização de HTML foi aprimorada com base nas seguintes atualizações que minimizam o número de comentários condicionais e consultas de mídia CSS. Como resultado, os arquivos HTML são menores e codificados com mais eficiência.
 - Migração de um design baseado em elementos do site `<div>` para uma base de código formatada padrão do site `<table>` 
-- [Blocos do editor][7] foram recodificados para maior concisão
+- [Os blocos do editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) foram recodificados para maior concisão
 - O código HTML final é compactado para remover os espaços em branco entre as tags
 - Divisores transparentes são automaticamente convertidos em preenchimento de conteúdo
 {% enddetails %}
@@ -193,17 +203,17 @@ Você pode criar um tema personalizado para o editor de arrastar e soltar usando
 
 As imagens adicionadas ao seu e-mail serão automaticamente definidas como **largura automática**. Para ajustar essa configuração, desative a opção **Largura automática** e ajuste a porcentagem de largura conforme necessário.
 
-![Opção de largura automática na guia Content (Conteúdo) do editor de arrastar e soltar.][2]
+![Opção de largura automática na guia Conteúdo do editor de arrastar e soltar.]({% image_buster /assets/img/dnd/dnd1.png %})
 
 ### Camadas de cores
 
 Usando camadas de cores, você pode alterar a cor do plano de fundo do e-mail, da área de conteúdo e de diferentes componentes de conteúdo. A ordem de cores da frente para trás é: cor do componente de conteúdo, cor de fundo da área de conteúdo e cor de fundo.
 
-![Exemplo de camadas de cores no editor de arrastar e soltar.][3]
+![Exemplo de camadas de cores no editor de arrastar e soltar.]({% image_buster /assets/img/dnd/dnd2.png %})
 
 ### Preenchimento de conteúdo
 
-![Opções de bloco para o editor de arrastar e soltar.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Opções de bloco para o editor de arrastar e soltar.]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 Para ajustar o preenchimento, role para baixo até **Block Options (Opções de bloco** ) e selecione **More Options (Mais opções**). É possível ajustar o preenchimento para que o e-mail tenha a aparência ideal.
 
@@ -213,7 +223,7 @@ Para ajustar o preenchimento, role para baixo até **Block Options (Opções de 
 
 ### Adicionar personalização
 
-![Opções para adicionar personalização ao editor de arrastar e soltar.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Opções para adicionar personalização ao editor de arrastar e soltar.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 O Liquid básico é compatível com o editor de arrastar e soltar de e-mails. Para adicionar personalização ao seu e-mail:
 
@@ -232,13 +242,13 @@ Você pode optar por incluir imagens dinâmicas em seu envio de mensagens por e-
 
 Ao ser o criador da mensagem, você pode alternar a direção do texto entre a esquerda para a direita e a direita para a esquerda selecionando o respectivo botão **Direção do texto**. Você pode usar essa opção ao criar mensagens em idiomas como árabe e hebraico.
 
-![Menu do editor de arrastar e soltar do e-mail com botão para alternar o alinhamento do texto entre direita para esquerda e esquerda para direita.][1]{: style="max-width:50%;"}
+![Menu do editor de arrastar e soltar de e-mail com botão para alternar o alinhamento do texto entre direita para esquerda e esquerda para direita.]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
 
 A aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ### Adicionar atribuições HTML a links
 
-![A seção "Atribuições" com o atributo "clicktracking" desativado para um link.][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+![A seção "Attributes" com o atributo "clicktracking" desativado para um link.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Ao usar links, botões, imagens e vídeos no editor de arrastar e soltar, selecione **Adicionar novo atributo** em **Atributos** na seção **Conteúdo** para anexar informações adicionais às tags de HTML nos e-mails. Isso pode ser especialmente útil para personalização, segmentação e estilização de mensagens.
 
@@ -254,19 +264,13 @@ Outro caso de uso comum é sinalizar links específicos como links universais. O
 
 Para configurar links universais, consulte [Links universais e links de apps]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
-Como alternativa, você pode fazer a integração com um de nossos parceiros de atribuição, como a [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) ou [a AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), para gerenciar links universais.
+Como alternativa, você pode fazer a integração com um de nossos parceiros de atribuição, como a [Branch]({{site.baseurl}}/partners/message_orchestration/deeplinking/branch_for_deeplinking/) ou [a AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), para gerenciar links universais.
 
-[1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
-[2]: {% image_buster /assets/img/dnd/dnd1.png %}
-[3]: {% image_buster /assets/img/dnd/dnd2.png %}
-[4]: {% image_buster /assets/img/dnd/dnd3.png %}
-[5]: {% image_buster /assets/img/dnd/dnd4.png %}
-[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
-[8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
-[9]: {% image_buster /assets/img/dnd/dnd_content.png %}
-[10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
-[11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/
-[14]: {% image_buster /assets/img/rtl_button.png %}
+Por fim, estão disponíveis atribuições predefinidas para ajudar a tornar sua mensagem acessível. Saiba mais em nosso artigo dedicado [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility).
+
+### Definição de um idioma para envio de e-mail
+
+Você pode definir a atribuição do idioma acessando a guia **Configurações** e selecionando o idioma desejado. Também é possível direcionar a atribuição do usuário {%raw%} `{{${language}}}` {%endraw%} se a mensagem for destinada a usuários com valores de idioma dinâmicos.
+
+![Configuração do valor "Language" (Idioma) para um e-mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %})
+

@@ -5,7 +5,7 @@ alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "Este artigo aborda as práticas recomendadas para evitar que as condições de corrida afetem suas campanhas de mensagens."
-
+toc_headers: h2
 ---
 
 # Condições de corrida
@@ -72,7 +72,7 @@ Em vez de usar vários pontos de extremidade, é possível incluir as [atribuiç
 
 Quando esses objetos forem incluídos no disparador, as atribuições serão processadas primeiro, antes que a mensagem seja disparada, eliminando possíveis condições de corrida. Note que as propriedades do disparador não atualizam o perfil do usuário, mas são usadas apenas no contexto da mensagem.
 
-#### Use o POST: Ponto de extremidade de rastreamento de usuários (em massa)
+#### Use o POST: Ponto de extremidade de rastreamento de usuários (sincronização)
 
 Use o [endpoint `/users/track/sync/`]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) para registrar eventos e compras personalizados e atualizar os atributos do perfil do usuário de forma síncrona. O uso desse endpoint para atualizar os perfis de usuário ao mesmo tempo e em uma única chamada pode ajudar a evitar possíveis condições de corrida.
 
@@ -118,7 +118,3 @@ Nesse caso, é possível implementar uma postergação de disparo em uma campanh
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

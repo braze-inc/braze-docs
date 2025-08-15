@@ -47,7 +47,7 @@ Ao se comunicar com o suporte, você pode descobrir que precisa acessar seu cons
   3. Tire uma captura de tela da guia do console.<br><br>
 - Safari
   1. Acessar Safari na barra de menu no topo do seu canva e então selecionar **Preferências**.
-  2. Selecione **Avançado** e marque a caixa de seleção ao lado de **Mostrar menu Desenvolver na barra de menus**. Você pode então sair da janela.
+  2. Selecione **Advanced** e marque a caixa de seleção ao lado de **Show Develop menu in menu bar**. Você pode então sair da janela.
   3. Clique com o botão direito do mouse na página da Web e selecione **Inspecionar elemento**.
   4. Selecione a guia **Console** na janela que se abre.
   5. Tire uma captura de tela da guia do console.
@@ -60,17 +60,17 @@ Quanto mais insights você puder oferecer, melhor. Inclua detalhes como o espaç
 
 ### Forneça uma amostra de usuários
 
-Compartilhe uma amostra de usuários em vez de todo o segmento afetado. Fornecer uma quantidade menor de usuários nos ajuda a restringir nosso escopo e acelerar nossas investigações.
+Compartilhe uma amostra de usuários em vez de todo o segmento afetado. O fornecimento de um número menor de usuários nos ajuda a restringir nosso escopo e acelerar nossas investigações.
 
 ### Anexe os registros de rede (registros HAR)
 
-Se entrar em contato com o Suporte, será útil que o usuário afetado colete registros de rede (registros HAR) do navegador enquanto o problema ocorre. Isso mostrará as solicitações de rede entre o navegador e o servidor, para os componentes individuais de uma página da Web e o dashboard do Braze que o usuário está tentando abrir.
+Se entrar em contato com o Suporte, será útil que o usuário afetado colete registros de rede (registros HAR) do navegador enquanto o problema ocorre. Isso exibirá as solicitações de rede entre o navegador e o servidor para os componentes individuais de uma página da Web, bem como o dashboard do Braze que o usuário está tentando abrir.
 
 Peça para o usuário afetado fazer o seguinte:
 
 1. Abra suas ferramentas de desenvolvedor. Se estiver usando o Chrome, isso pode ser feito usando o atalho de teclado `option` + `⌘` + `J` (no MacOS). Se estiver usando o Windows ou o Linux, isso pode ser feito usando o atalho `shift` + `CTRL` + `J`.
 2. Selecione **Rede** > **Fetch/XHR** ou **XHR**.
-3. Faça uma gravação ou captura de tela mostrando o **nome**, o **status**, o **tamanho** e **a hora** dos elementos.<br><br>![A guia "Fetch/XHR" em um navegador Chrome.][1]{: style="max-width:60%;"}
+3. Faça uma gravação ou captura de tela mostrando o **nome**, o **status**, o **tamanho** e **a hora** dos elementos.<br><br>![A guia "Fetch/XHR" em um navegador Chrome.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 Em seguida, anexe a gravação ou a captura de tela do usuário ao tíquete de suporte. Essas informações podem ajudar na investigação do Support.
 
@@ -87,7 +87,6 @@ Considere anexar uma captura de tela para ilustrar o problema. Fornecer essas im
 Selecione o nível de severidade apropriado para nos ajudar a atribuir os recursos certos para resolver o problema. 
 
 {% alert important %}
-Marcar um problema como "Crítico" significa que sua instância de produção está inativa e todo o trabalho dentro da Braze foi interrompido.
+Marcar um problema como "Crítico" significa que sua instância de produção está inativa e todo o trabalho no Braze foi interrompido.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}

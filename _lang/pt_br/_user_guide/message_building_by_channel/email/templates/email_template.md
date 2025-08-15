@@ -23,9 +23,9 @@ Acesse **Modelos** > **Modelos de e-mail**.
 
 Selecione entre o **editor de arrastar e soltar** ou **o editor de HTML** para sua experiência de edição. 
 
-Em seguida, você pode escolher entre modelos pré-concebidos do Braze, criar um novo modelo ou editar um modelo existente (simples ou [responsivo a dispositivos móveis][8]]).
+Em seguida, você pode escolher entre modelos pré-concebidos do Braze, criar um novo modelo ou editar um modelo existente (simples ou [responsivo para dispositivos móveis]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)).
 
-![Um modelo de e-mail para uma promoção de primavera de uma empresa com opções para selecionar o editor de arrastar e soltar ou o editor de HTML, ou para selecionar modelos do Braze.][2]
+![Um modelo de e-mail para uma promoção de primavera de uma empresa com opções para selecionar o editor de arrastar e soltar ou o editor de HTML, ou para selecionar modelos do Braze.]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 Todos os modelos HTML personalizados existentes precisarão ser recriados usando o editor de arrastar e soltar.
@@ -43,12 +43,12 @@ Ao criar seu modelo de e-mail, se você não incluir um link de cancelamento de 
 
 Os erros de e-mail são apresentados na guia **Compose (Criar** ) do fluxo de trabalho da mensagem. Os erros impedem que você avance. "Avisos" indicam lembretes para ajudá-lo a seguir as práticas recomendadas. Dependendo do seu negócio, você pode optar por ignorá-los.
 
-![Lista de erros e avisos de um exemplo de e-mail.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Lista de erros e avisos de um exemplo de e-mail.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Aqui está uma lista de erros que são contabilizados em nosso editor:
 
 - Sintaxe incorreta do Liquid
-- [Corpos de e-mail maiores que 400kb; é altamente recomendável que os corpos sejam menores que 102kb][7]
+- [Corpos de e-mail maiores que 400kb; é altamente recomendável que os corpos sejam menores que 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/)
 - Modelos sem um link de cancelamento de inscrição
 - E-mails com um **corpo** ou **assunto** em branco
 - E-mails sem link de cancelamento de inscrição
@@ -57,19 +57,25 @@ Aqui está uma lista de erros que são contabilizados em nosso editor:
 
 Depois de terminar de criar seu modelo, você pode testá-lo antes de enviá-lo.
 
-Na parte inferior da tela de visão geral, clique em **Preview and Test (Pré-visualização e teste**). Aqui, você pode fazer uma prévia de como seu e-mail aparecerá na caixa de entrada do cliente. Com a opção **Preview as User** selecionada, é possível fazer a prévia do e-mail como um usuário aleatório, selecionar um usuário específico ou criar um usuário personalizado. Isso permite que você teste se o Connected Content e as chamadas de personalização estão funcionando como deveriam.
+Do fundo da tela de visão geral, selecione **Prévia e Teste**. Aqui, você pode fazer uma prévia de como seu e-mail aparecerá na caixa de entrada do cliente. Com a opção **Preview as User** selecionada, é possível fazer a prévia do e-mail como um usuário aleatório, selecionar um usuário específico ou criar um usuário personalizado. Isso permite que você teste se o Connected Content e as chamadas de personalização estão funcionando como deveriam. 
+
+Em seguida, você pode **Copiar link de visualização** para gerar e copiar um link de visualização compartilhável que mostre como será o e-mail para um usuário aleatório. O link terá duração de sete dias antes de precisar ser regenerado.
 
 Também é possível alternar entre as visualizações de desktop, celular e texto simples para ter uma ideia de como sua mensagem aparecerá em diferentes contextos.
 
+{% alert tip %}
+Quer saber como é o seu e-mail para os usuários no modo escuro? Selecione o botão de alternância **Pré-visualização do modo escuro**, localizado na seção **Pré-visualização e teste** (somente no editor de arrastar e soltar).
+{% endalert %}
+
 Quando estiver pronto para uma verificação final, selecione **Test Send (Envio de teste)** e envie uma mensagem de teste para você mesmo ou para um grupo de testadores de conteúdo para garantir que seu e-mail seja exibido corretamente em uma variedade de dispositivos e clientes de e-mail.
 
-![Exemplo de prévia de e-mail a ser enviado para teste.][6]
+![Exemplo de prévia de e-mail a ser enviada para teste.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
-Se encontrar algum problema com seu modelo ou quiser fazer alterações, clique em **Edit Email (Editar e-mail)** para retornar ao editor.
+Se houver algum problema com seu modelo ou se quiser fazer alterações, selecione **Edit Email (Editar e-mail)** para retornar ao editor.
 
 ## Etapa 6: Salve seu modelo
 
-Certifique-se de salvar seu modelo clicando em **Save Template (Salvar modelo**). Agora você está pronto para usar esse modelo em qualquer campanha ou componente do Canva que escolher. Para acessar seu modelo, selecione a experiência de edição com a qual o criou e, em seguida, selecione-o na lista de modelos disponíveis.
+Certifique-se de salvar seu modelo selecionando **Save Template (Salvar modelo)**. Agora você está pronto para usar esse modelo em qualquer campanha ou componente do Canva que escolher. Para acessar seu modelo, selecione a experiência de edição com a qual o criou e, em seguida, selecione-o na lista de modelos disponíveis.
 
 {% alert note %}
 Se você fizer qualquer edição em um modelo existente, essas alterações não serão refletidas nas campanhas criadas usando versões anteriores desse modelo.
@@ -83,31 +89,21 @@ Se você fizer qualquer edição em um modelo existente, essas alterações não
 
 Para usar seu e-mail em uma campanha da API, você precisa de um `email_template_id`, que pode ser encontrado na parte inferior de qualquer modelo de e-mail criado no Braze.
 
-![Identificador da API localizado na parte inferior de um modelo de e-mail.][5]
+![Identificador de API localizado na parte inferior de um modelo de e-mail.]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### Comentários sobre modelos de e-mail
 
 Você pode colaborar e comentar em modelos de e-mail no editor de arrastar e soltar. 
 
-1. Clique no bloco de conteúdo ou na linha do corpo do e-mail que você deseja comentar.
+1. Selecione o bloco de conteúdo ou a linha no corpo do e-mail que você deseja comentar.
 2. Selecione o ícone de comentário <i class="fas fa-comment"></i>.
-3. Digite seu comentário na barra lateral e clique em **Submit (Enviar**).
-4. Depois de inserir seus comentários, clique em **Concluído**.
-5. Clique em **Save Template (Salvar modelo** ) para salvar seus comentários.
+3. Digite seu comentário na barra lateral e selecione **Submit (Enviar**).
+4. Depois de inserir seus comentários, selecione **Concluído**.
+5. Selecione **Save Template (Salvar modelo** ) para salvar seus comentários.
 
 Depois que o modelo for salvo, os usuários poderão ver ícones sobre os comentários não abordados. Selecione **Resolver** para resolver esses comentários.
 
-![Um comentário de modelo de e-mail que diz "Parece bom para mim".][10]
+![Um comentário de modelo de e-mail que diz "Parece bom para mim".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
-Para obter respostas às perguntas mais frequentes sobre modelos de e-mail, consulte nossas [Perguntas frequentes sobre modelos][9].
+Para obter respostas às perguntas mais frequentes sobre modelos de e-mail, consulte nossas Perguntas [frequentes sobre modelos]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
-[1]: {% image_buster /assets/img/dnd_compose_error.png %}
-[2]: {% image_buster /assets/img/email_templates/template2.png %}
-[3]: {% image_buster /assets/img/email_templates/template3.png %}
-[4]: {% image_buster /assets/img/email_templates/template4.png %}
-[5]: {% image_buster /assets/img/email_templates/template5.png %}
-[6]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[10]: {% image_buster /assets/img/email_templates/template_comment.png %}

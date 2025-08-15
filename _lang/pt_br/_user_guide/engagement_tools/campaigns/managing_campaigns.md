@@ -12,9 +12,6 @@ description: "Esta landing page aborda o gerenciamento de campanhas. Aqui, você
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-  - name: Cópia entre espaços de trabalho
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
-    image: /assets/img/braze_icons/copy-04.svg
   - name: Como alterar sua campanha após o lançamento
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
@@ -30,9 +27,15 @@ guide_menu_list:
   - name: Fluxo de aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
+  - name: Regras de envio de mensagens para aprovação
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
   - name: Arquivamento de campanhas
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Cópia entre espaços de trabalho
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicação de campanhas
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg

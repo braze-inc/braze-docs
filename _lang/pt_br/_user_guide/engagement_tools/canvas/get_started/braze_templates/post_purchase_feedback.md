@@ -18,13 +18,13 @@ Este artigo o guiará por um caso de uso do modelo **Post-Purchase Feedback**, q
 Para usar esse modelo com sucesso, você precisará do seguinte:
 
 - Um [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) para fazer referência aos resultados da pesquisa de feedback.
-- Um [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) configurado com os parceiros e públicos que você usa.
+- Um [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) configurado com os parceiros e públicos que você usa.
 
 ## Adaptar o modelo às suas necessidades
 
 Digamos que estejamos trabalhando para a Decorumsoft, uma desenvolvedora de videogames para celular. Usaremos o modelo de feedback pós-compra para avaliar o feedback do nosso mais recente lançamento de videogame, o Proxy War 3: Guerra da sede. Usando esse feedback, informaremos nossos planos de desenvolvimento para o pacote de expansão, Liquid Mirage.
 
-Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
+Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
 
 Para acessar o modelo de feedback pós-compra, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Post-Purchase Feedback**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 

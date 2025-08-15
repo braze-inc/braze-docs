@@ -29,6 +29,12 @@ guide_featured_list:
 - name: Endpoints da API de catálogos
   link: /docs/api/endpoints/catalogs/
   image: /assets/img/braze_icons/server-01.svg
+
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: Blocos de produtos de arrastar e soltar
+  link: /docs/dnd_product_blocks/
+  image: /assets/img/braze_icons/columns-01.svg
 ---
 <br><br>
 

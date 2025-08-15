@@ -25,9 +25,9 @@ A seguir, alguns exemplos dos tipos de padrões de comportamento que podem ser d
 
 ## Criação de fórmulas
 
-As fórmulas podem ser acessadas nos painéis de estatísticas nas páginas [Página inicial][9], [Relatório de receitas][10] e [Relatório de eventos personalizados][11] no dashboard. Para visualizar esse painel, acesse o gráfico **Performance Over Time**, altere o menu suspenso **Statistics For (Estatísticas para** ) para **KPI Formulas (Fórmulas de KPI**) e selecione pelo menos uma fórmula de KPI para preencher o gráfico.
+As fórmulas podem ser acessadas nos painéis de estatísticas nas páginas [Página inicial]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/), [Relatório de receitas]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/) e [Relatório de eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) no dashboard. Para visualizar esse painel, acesse o gráfico **Performance Over Time**, altere o menu suspenso **Statistics For (Estatísticas para** ) para **KPI Formulas (Fórmulas de KPI**) e selecione pelo menos uma fórmula de KPI para preencher o gráfico.
 
-![Exibir estatísticas para fórmulas de KPI no dashboard do Braze][16]
+![Exibir estatísticas para fórmulas de KPI no dashboard do Braze]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 Para criar uma nova fórmula:
 
@@ -84,11 +84,6 @@ table td {
 | --- | --- |
 | Contagem de eventos personalizados | MAU |
 |  | DAU |
-|  | Tamanho do segmento (somente os segmentos que têm [análise de dados de rastreamento][17] ativada podem ser usados) |
+|  | Tamanho do segmento (somente segmentos que tenham [a análise de dados]({{site.baseurl}}/viewing_and_understanding_segment_data/) ativada podem ser usados) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[16]: {% image_buster /assets/img_archive/kpi_forms.png %}
-[17]: {{site.baseurl}}/user_guide/data_e_analytics/reporting/viewing_and_understanding_segment_data/
