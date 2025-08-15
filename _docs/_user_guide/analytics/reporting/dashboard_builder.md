@@ -13,7 +13,7 @@ page_order: 6.1
 
 > Use Dashboard Builder to create dashboards and visualizations using reports created in Report Builder or Query Builder.
 
-Dashboard Builder empowers you to compose and visualize custom analytic dashboards from scratch and from Braze-supplied templates. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze templates.
+Dashboard Builder empowers you to compose and visualize custom analytic dashboards from scratch and from Braze-supplied dashboards. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze-provided dashboards.
 
 ## Creating a custom dashboard
 
@@ -74,19 +74,19 @@ Make a copy of your tile by selecting **Duplicate Tile** at the bottom of the ti
 
 Adjust the tile size by dragging the bottom-right corner of the tile, and adjust the tile position on the dashboard by dragging the handle at the top right corner of the tile.
 
-## Running a dashboard template
+## Running a dashboard
 
-1. Go to **Analytics** > **Dashboard Builder**. The home page lists all existing dashboards within your workspace, with Braze-created templates at the top. These are denoted with "(Braze)" in the title.
+1. Go to **Analytics** > **Dashboard Builder**. The home page lists all existing dashboards within your workspace, with Braze-created dashboards at the top. These are denoted with "(Braze)" in the title.
 2. Select the dashboard you’re interested in.
-3. Select **Run Dashboard** to load the respective dashboard using that template.
+3. Select **Run Dashboard** to load the respective dashboard using that dashboard.
 
-### Available dashboard templates
+### Available dashboards
 
-Braze provides pre-built dashboard templates for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a template dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard templates in future template releases.
+Braze provides pre-built dashboards for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard in the future.
 
 #### Revenue - Last Touch Attribution
 
-The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
+The **Revenue - Last Touch Attribution** dashboard provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
 
 Touches include _Email Click_ (link click), _Content Card Click_, _In-App Message Click_ (excluding close buttons), _Push Opens_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
 
