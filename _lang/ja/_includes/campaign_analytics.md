@@ -1,16 +1,17 @@
-## キャンペーン分析
+## 分析を表示する
 
-キャンペーンを開始したら、そのキャンペーンの詳細ページに戻って主要な指標を見ることができる。**キャンペーン**ページに移動し、キャンペーンを選択して詳細ページを開封する。キャンバスで送信される{% if include.channel == "Content Card" %}コンテンツカード{% elsif include.channel == "email" %}メール{% elsif include.channel == "in-app message" %}アプリ内メッセージ{% elsif include.channel == "push" %}プッシュメッセージ{% elsif include.channel == "SMS" %}SMS メッセージ{% elsif include.channel == "whatsapp" %}WhatsApp メッセージ{% elsif include.channel == "webhook" %}Webhooks{% endif %}については、[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)を参照してください。
+キャンペーンを開始したら、そのキャンペーンの詳細ページに戻って主要な指標を見ることができる。[**キャンペーン**] ページに移動し、キャンペーンを選択して詳細ページを開く。{% if include.channel != "banner" %}キャンバス内で送信された{% if include.channel == "Content Card" %}コンテンツカード{% elsif include.channel == "banner" %}バナー{% elsif include.channel == "email" %}メール{% elsif include.channel == "in-app message" %}アプリ内メッセージ{% elsif include.channel == "push" %}プッシュメッセージ{% elsif include.channel == "SMS" %} SMS メッセージ{% elsif include.channel == "whatsapp" %} WhatsApp メッセージ{% elsif include.channel == "webhook" %} Webhook {% endif %}については、[キャンバス分析]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/)を参照してください。{% endif %}
 
 {% alert tip %}
 レポートに記載されている用語や指標の定義をお探しですか？以下を参照してください。
   {% if include.channel == "email" %}[メール分析用語集]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)コンテンツカードによるフィルター
-  {% elsif include.channel == "in-app message" %}[レポートメトリクス用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)アプリ内メッセージによるフィルター
-  {% elsif include.channel == "push" %}[レポート指標 用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)フィルター 押す
-  {% elsif include.channel == "SMS" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)SMSによるフィルター
-  {% elsif include.channel == "whatsapp" %}[レポート指標用語集と]({{site.baseurl}}/user_guide/data/report_metrics/)WhatsAppによるフィルター
-  {% elsif include.channel == "webhook" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/)and filter by Webhook{% endif %}.
+  {% elsif include.channel == "banner" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)とバナーによるフィルタリング。
+  {% elsif include.channel == "Content Card" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)とコンテンツカードによるフィルタリング。
+  {% elsif include.channel == "in-app message" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)とアプリ内メッセージによるフィルタリング。
+  {% elsif include.channel == "push" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)とプッシュによるフィルタリング。
+  {% elsif include.channel == "SMS" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)と SMS / MMS および RCS によるフィルタリング。
+  {% elsif include.channel == "whatsapp" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)と WhatsApp によるフィルタリング。
+  {% elsif include.channel == "webhook" %}[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)と Webhook によるフィルタリング。{% endif %}
 {% endalert %}
 
 **キャンペーン分析**タブから、一連のパネルでレポートを見ることができる。以下のセクションに列挙されているものよりも多く見たり少なく見たりするかもしれないが、それぞれに有用な目的がある。
@@ -18,11 +19,12 @@
 ### キャンペーンの詳細
 
 **キャンペーンの詳細**パネルには、キャンペーン全体のパフォーマンスのハイレベルな概要が表示される。
-  {% if include.channel == "Content Card" %}コンテンツカード
+  {% if include.channel == "banner" %}バナー。
+  {% elsif include.channel == "Content Card" %}コンテンツカード
   {% elsif include.channel == "email" %}メール。
   {% elsif include.channel == "in-app message" %}アプリ内メッセージ.
   {% elsif include.channel == "push" %}プッシュメッセージ
-  {% elsif include.channel == "SMS" %}SMS
+  {% elsif include.channel == "SMS" %}SMS、MMS、RCS。
   {% elsif include.channel == "whatsapp" %}WhatApp メッセージ。
   {% elsif include.channel == "webhook" %}Webhook。
   {% endif %}
@@ -36,26 +38,29 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![]({% image_buster /assets/img/cc-campaign-details.png %}) キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/cc-campaign-details.png %})
+
+{% elsif include.channel == "banner" %}
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_email.png %}) 
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_push.png %}) 
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_sms.png %}) 
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_iam.png %}) 
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_iam.png %})
 
 キャンバスでは、作成したキャンバスにアプリ内メッセージのパフォーマンスがマッピングされます。ページ上部にあるコントロールパネルを使って、他のメッセージングタイプ（チャネル）を消去し、キャンバス内のアプリ内メッセージのみを表示することができる。
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_webhook.png %}) 
+![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 
@@ -63,25 +68,25 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 
 #### コントロールグループ {#cc-control-group}
 
-個々のコンテンツカードの影響を測定するには、AB テストに[コントロールグループ][2]を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
+個々のコンテンツカードの影響を測定するには、AB テストに[コントロールグループ]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants)を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
 
 {% elsif include.channel == "SMS" %}
 
 #### コントロールグループ {#sms-control-group}
 
-個々のSMSメッセージのインパクトを測定するには、A/Bテストに[コントロールグループを][2]追加することができる。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
+個々のSMS、MMS、または RCS メッセージの効果を測定するには、AB テストに[コントロールグループ]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants)を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
 
 {% elsif include.channel == "whatsapp" %}
 
 #### コントロールグループ {#whatsapp-control-group}
 
-個々のWhatsAppメッセージのインパクトを測定するには、A/Bテストに[コントロールグループを][2]追加する。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
+個々のWhatsAppメッセージのインパクトを測定するには、A/Bテストに[コントロールグループを]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants)追加する。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
 
 {% elsif include.channel == "webhook" %}
 
 #### コントロールグループ {#webhook-control-group}
 
-個々の Webhook メッセージの影響を測定するには、AB テストに[コントロールグループ][2]を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
+個々の Webhook メッセージの影響を測定するには、AB テストに[コントロールグループ]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants)を追加できます。トップレベルの**キャンペーン詳細**パネルには、コントロールグループのバリアントのメトリクスが含まれない。
 
 {% endif %}
 
@@ -123,11 +128,18 @@ The **Message Performance** panel outlines how well your message has performed a
 ![プッシュ・メッセージのパフォーマンス分析]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
-### SMSパフォーマンス
+### SMS/MMS/RCSのパフォーマンス
 
-**SMSパフォーマンス・**パネルでは、様々な側面からメッセージのパフォーマンスを概説する。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
+[**SMS/MMS/RCS のパフォーマンス**] パネルでは、さまざまな角度からメッセージのパフォーマンスを確認できます。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![コントロールグループ、バリアント1、バリアント2の指標の表を含む SMS/MMS パフォーマンスパネル。]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![コントロールグループ、バリアント1、バリアント2の指標の表を含む [SMS/MMS/RCS パフォーマンス] パネル。]({% image_buster /assets/img_archive/sms_message_performance.png %})
+
+{% elsif include.channel == "banner" %}
+### バナーのパフォーマンス
+
+[**バナーのパフォーマンス]** パネルでは、さまざまな角度からメッセージのパフォーマンスを確認できます。これらの指標は、メッセージングチャネルや多変量テストを実施しているかどうかによって異なります。
+
+![コントロールグループ、バリアント1、バリアント2の指標の表を含む SMS/MMS パフォーマンスパネル。]({% image_buster /assets/img/banners/banner_performance.png %})
 
 {% elsif include.channel == "webhook" %}
 ### Webhook のパフォーマンス
@@ -167,7 +179,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### コンテンツカードの指標
 
-以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのコンテンツカード指標の完全な定義については、[レポート指標の用語集][1]を参照し、コンテンツカードでフィルタリングを行います。
+以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのコンテンツカード指標の完全な定義については、[レポート指標の用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)を参照し、コンテンツカードでフィルタリングを行います。
 
 <style>
     .no-split {
@@ -184,7 +196,7 @@ The **Message Performance** panel outlines how well your message has performed a
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">送信済みメッセージ</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">送信済みメッセージ</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %}<br><br>
                 この計算方法は、選択した項目によって異なる。 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">カード作成</a>：<br><br>
@@ -195,23 +207,23 @@ The **Message Performance** panel outlines how well your message has performed a
             </td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">インプレッション数の合計</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">インプレッション数の合計</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} これは同じユーザーに対して複数回インクリメントできる。</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">このカウントは</span>、ユーザーがカードを閲覧した2回目以降は増加しない。</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">このカウント</span>は、ユーザーがコンテンツカードを表示した2回目以降は増加しません。</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> 視聴者は毎日ユニーク受信者になることができるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> コンテンツカードは1枚につき1回しか受け取れないため、同じコンテンツカードを2回目以降に表示しても、日にちに関係なくカウントは増加しません。閲覧者は毎日のユニーク受信者となる可能性があるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">ユニーククリック数</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Brazeが提供する配信停止リンクのクリックも含まれる。</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">ユニーク却下数</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">ユニーク却下数</a></td>
             <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
@@ -225,7 +237,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 メッセージの可視性をカバーする指標はいくつかある。これには、_送信メッセー数_、_ユニーク受信者数_、_ユニークインプレッション数_が含まれます。特に、_ユニーク受信者数_と_ユニークインプレッション数_の違いは、少し分かりにくいかもしれません。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみよう。
 
-たとえば、今日コンテンツカードを表示し、明日、明後日に同じカードを表示すると、_ユニーク受信者_として3回カウントされます。ただし、_ユニークインプレッション_は1回のみカウントされます。また、あなたのデバイスでカードが利用可能だったため、「_送信済みメッセージ_」の数にも含まれる。
+例えば、今日コンテンツカードを表示し、明日、明後日も同じキャンペーンから新しいカードを受け取ると、_ユニーク受信者_として3回カウントされることになります。ただし、_ユニークインプレッション_は1回のみカウントされます。また、そのカードがお使いのデバイスで使用可能であったため、_送信済みメッセージ_の数にもカウントされます。
 
 別の例として、15万件の_メッセージが送信された_ことを示すコンテンツカードキャンペーンに5つの_ユニークインプレッション_があるとします。つまり、カードは (バックエンドで) 15万人のユーザーに利用可能になったが、その送信後に以下のステップをすべて実行したのは、わずか5人のユーザーのデバイスだけだったということです。
 
@@ -234,6 +246,77 @@ The **Message Performance** panel outlines how well your message has performed a
 3. SDK がインプレッションを記録し、サーバーにログを記録しました
 
 _送信済みメッセージ_」は閲覧可能なコンテンツカードを指し、「_ユニーク受信者_」は実際に閲覧されたコンテンツカードを指します。
+
+{% elsif include.channel == "banner" %}
+
+### バナー指標
+
+これらは、バナーキャンペーンのパフォーマンスを確認する際に追跡すべき重要な指標です。バナーのクリック数とインプレッション数は SDK で自動的に追跡されます。 
+
+すべてのバナー指標の完全な定義については、[レポート指標用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)を参照し、バナーでフィルタリングしてください。
+
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>指標</th>
+            <th>定義</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">インプレッション数の合計</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">各ユーザーは1回のみカウントされます。</span></td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">クリック数の合計</a></td>
+            <td class="no-split"><i>Total Clicksは</i>、同じユーザーが複数回クリックしたかどうかにかかわらず、配信されたメッセージ内でクリックしたユーザーの総数（および割合）である。</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Each user is only counted once.</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">1 次コンバージョン数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> 閲覧者は毎日のユニーク受信者となる可能性があるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">収益</a></td>
+            <td>{% multi_lang_include metrics.md metric='Revenue' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">信頼度</a></td>
+            <td>{% multi_lang_include metrics.md metric='Confidence' %}</td>
+        </tr>
+    </tbody>
+</table>
+
+#### ユニーク受信者数とユニークインプレッション数
+
+メッセージの可視性をカバーする指標はいくつかある。これには、_送信メッセー数_、_ユニーク受信者数_、_ユニークインプレッション数_が含まれます。特に、_ユニーク受信者数_と_ユニークインプレッション数_の違いは、少し分かりにくいかもしれません。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみましょう。
+
+例えば、今日バナーを表示し、明日、明後日も同じバナーを表示すると、_ユニーク受信者_として3回カウントされることになります。ただし、_ユニークインプレッション_は1回のみカウントされます。また、そのカードがお使いのデバイスで使用可能であったため、_送信済みメッセージ_の数にもカウントされます。
+
+別の例として、150,000件の_メッセージが送信された_ことを示すバナーキャンペーンに5つの_ユニークインプレッション_があるとします。つまり、バナーは (バックエンドで) 150,000人のユーザーに利用可能になったが、その送信後に以下のステップをすべて実行したのは、わずか5人のユーザーのデバイスだけだったということです。
+
+1. セッションを開始した、またはアプリが明示的にバナーの同期を要求した（またはその両方）
+2. バナービューに移動した
+3. SDK がインプレッションを記録し、サーバーにログを記録しました
+
+[_送信済みメッセージ_] は表示可能なバナーを指し、[_ユニーク受信者_] は実際に表示されたバナーを指します。
 
 {% elsif include.channel == "email" %}
 
@@ -336,7 +419,13 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
 
 #### アプリ内メッセージ指標
 
-分析に表示される主なアプリ内メッセージの指標を一部ご紹介します。Braze で使用されているすべてのアプリ内メッセージ指標の完全な定義については、[レポート指標の用語][1]を参照してください。
+分析に表示される主なアプリ内メッセージの指標を一部ご紹介します。Braze で使用されているすべてのアプリ内メッセージ指標の完全な定義については、[レポート指標の用語]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)を参照してください。
+
+{% alert note %}
+_ボタン1のクリック数_と_ボタン2のクリック数_のレポートは、アプリ内メッセージで [**レポート用の識別子**] をそれぞれ「0」と「1」に指定した場合にのみ機能します。
+
+![値が「0」の [レポート用の識別子] フィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+{% endalert %}
 
 <style>
     .no-split {
@@ -395,7 +484,7 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
 
 #### プッシュ指標
 
-以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのプッシュ・メトリクスの完全な定義については、[レポート・メトリクス用語集を][1]参照し、プッシュでフィルターをかける。
+以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのプッシュ・メトリクスの完全な定義については、[レポート・メトリクス用語集を]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)参照し、プッシュでフィルターをかける。
 
 <style>
     .no-split {
@@ -473,9 +562,9 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
 
 {% elsif include.channel == "SMS" %}
 
-#### SMSメトリックス
+#### SMS、MMS、RCS 指標
 
-以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのSMS指標の完全な定義については、[レポート指標用語集を][1]参照し、SMSでフィルターをかける。
+以下は、メッセージのパフォーマンスを確認する際に目にする可能性のある主な指標の内訳である。すべてのSMS、MMS、RCS 指標の完全な定義については、[レポート指標用語集を]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)参照し、SMS / MMS および RCS でフィルタリングしてください。
 
 <style>
     .no-split {
@@ -494,10 +583,6 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">送信済み</a></td>
             <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
-        </tr>
-        <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends-to-carrier">キャリアへの送信数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends to Carrier' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">配信失敗数</a></td>
@@ -530,7 +615,7 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
 
 #### Webhook メトリクス
 
-以下は、あなたが分析で目にする可能性のある主なWebhookのメトリクスである。Brazeで使用されるすべてのWebhookメトリクスの完全な定義については、[レポートメトリクス用語集を][1]参照。
+以下は、あなたが分析で目にする可能性のある主なWebhookのメトリクスである。Brazeで使用されるすべてのWebhookメトリクスの完全な定義については、[レポートメトリクス用語集を]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)参照。
 
 <style>
     .no-split {
@@ -565,7 +650,7 @@ Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する
 
 #### WhatsApp メトリクス
 
-WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用されているすべてのWhatsApp 指標の完全な定義については、[レポート指標の用語][1]を参照してください。
+WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用されているすべてのWhatsApp 指標の完全な定義については、[レポート指標の用語]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)を参照してください。
 
 <style>
     .no-split {
@@ -628,7 +713,7 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用さ
 
 **キーワード応答**パネルには、メッセージ受信後にユーザーが返信した受信キーワードのタイムラインが表示されます。  
 
-![キャンペーンレベルのSMS/MMSキーワードレスポンスパネルには、経時的なキーワード分布の折れ線グラフと、オプトイン、オプトアウト、ヘルプ、その他、その他、コーチングのチェックボックスが選択されたキーワードカテゴリーセクションが含まれている。]({% image_buster /assets/img/sms/keyword_responses.png %}).
+![キャンペーンレベルの [SMS/MMS/RCS キーワードレスポンス] パネル。経時的なキーワード分布の折れ線グラフと、オプトイン、オプトアウト、ヘルプ、その他、追加、コーチングのチェックボックスが選択されたキーワードカテゴリーセクションが含まれています。]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 ここでは、[リターゲティング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns)するための次のステップを決定し、便利に[セグメンテーションを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment)するために、各キーワードカテゴリのレスポンシブ分布を表示することもできる。
 
@@ -672,15 +757,13 @@ Brazeの分析に加え、WhatsAppビジネスマネージャーではテンプ�
 
 ## リテンションレポート
 
-リテンションレポートには、特定のキャンペーンまたはキャンバスにおいて、指定した期間に選択したリテンションイベントをユーザーが実行した割合が表示されます。詳しくは[リテンションレポートを]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/)参照のこと。
+リテンションレポートには、特定のキャンペーン{% if include.channel != "banner" %}またはキャンバス{% endif %}において、指定した期間に選択したリテンションイベントをユーザーが実行した割合が表示されます。詳細については、「[リテンションレポート]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/)」を参照してください。
 
 ## 目標到達プロセスレポート
 
-ファネルレポートは、キャンペーンやキャンバスを受け取った後の顧客のジャーニーを分析できるビジュアルレポートを提供する。キャンペーンやキャンバスでコントロールグループや複数のバリアントを使用している場合、異なるバリアントがコンバージョンファネルにどのような影響を与えたかをより細かいレベルで理解し、このデータに基づいて最適化することができる。
+目標到達プロセスレポートは、キャンペーン{% if include.channel != "banner" %}またはキャンバス{% endif %}を受け取った後の顧客のジャーニーを分析できるビジュアルレポートを提供します。キャンペーン{% if include.channel != "banner" %}またはキャンバス{% endif %}でコントロールグループや複数のバリアントを使用している場合、異なるバリアントがコンバージョンの目標到達にどのような影響を与えたかをより細かいレベルで理解し、このデータに基づいて最適化することができます。
 
-詳細は[ファンネルレポートを]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/)参照のこと。
+詳細については、「[目標到達プロセスレポート]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/)」を参照してください。
 
 {% endif %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
