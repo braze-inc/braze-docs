@@ -1,5 +1,5 @@
 ---
-nav_title: Passkit
+nav_title: PassKit
 article_title: PassKit
 alias: /partners/passkit/
 description: "This reference article outlines the partnership between Braze and Passkit. This partnership enables you to extend your mobile reach by integrating Apple Wallet and Google Pay passes into your customer's experience."

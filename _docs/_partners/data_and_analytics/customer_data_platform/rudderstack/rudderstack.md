@@ -1,5 +1,5 @@
 ---
-nav_title: Rudderstack
+nav_title: RudderStack
 article_title: RudderStack
 description: "This article outlines the partnership between Braze and RudderStack, an open-source customer data infrastructure offering seamless Braze integration for your Android, iOS, and web applications. With RudderStack, you can send your in-app customer event data directly to Braze for contextual analysis."
 page_type: partner

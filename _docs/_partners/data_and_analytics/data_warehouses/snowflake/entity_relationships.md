@@ -1,5 +1,5 @@
 ---
-nav_title: "Entity relationships"
+nav_title: "Entity Relationships"
 article_title: Entity Relationships for Snowflake and Braze
 page_order: 10
 search_tag: Partner

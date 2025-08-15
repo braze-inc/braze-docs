@@ -1,4 +1,4 @@
 ---
-nav_title: Data warehouse
+nav_title: Data Warehouse
 config_only: true
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: Npaw
+nav_title: NPAW
 article_title: NPAW
 alias: /partners/npaw/
 description: "This reference article outlines the partnership between Braze and NPAW, an intelligent data analytics platform that provides actionable insights to leading online media professionals."

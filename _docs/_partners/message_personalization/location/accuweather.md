@@ -1,5 +1,5 @@
 ---
-nav_title: Accuweather
+nav_title: AccuWeather
 article_title: AccuWeather
 alias: /partners/accuweather/
 description: "This reference article outlines the partnership between Braze and AccuWeather, a weather API you can use to personalize your marketing campaigns."

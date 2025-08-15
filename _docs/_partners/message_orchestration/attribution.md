@@ -1,4 +1,4 @@
 ---
-nav_title: Deeplinking & attribution
+nav_title: Deeplinking & Attribution
 config_only: true
 ---

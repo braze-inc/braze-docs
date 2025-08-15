@@ -1,5 +1,5 @@
 ---
-nav_title: API partner integration
+nav_title: API Partner Integration
 alias: /api_partner_integration/
 hidden: true
 ---

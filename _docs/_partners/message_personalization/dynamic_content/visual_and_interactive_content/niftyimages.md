@@ -1,5 +1,5 @@
 ---
-nav_title: Niftyimages
+nav_title: NiftyImages
 article_title: NiftyImages
 description: "Learn how to integrate NiftyImages with Braze."
 alias: /partners/niftyimages/

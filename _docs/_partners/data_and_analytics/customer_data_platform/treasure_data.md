@@ -1,5 +1,5 @@
 ---
-nav_title: Treasure data
+nav_title: Treasure Data
 noindex: true
 layout: dev_guide
 guide_top_header: "Treasure Data"

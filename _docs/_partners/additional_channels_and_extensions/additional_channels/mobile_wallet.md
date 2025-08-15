@@ -1,4 +1,4 @@
 ---
-nav_title: Mobile wallet
+nav_title: Mobile Wallet
 config_only: true
 ---

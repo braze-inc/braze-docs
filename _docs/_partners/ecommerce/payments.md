@@ -1,4 +1,4 @@
 ---
-nav_title: Dynamic pricing & promotions
+nav_title: Dynamic Pricing & Promotions
 config_only: true
 ---

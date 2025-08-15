@@ -1,5 +1,5 @@
 ---
-nav_title: Linkedin
+nav_title: LinkedIn
 article_title: Canvas Audience Sync to LinkedIn
 alias: /linkedin_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to LinkedIn to deliver advertisements based upon behavioral triggers, segmentation, and more."

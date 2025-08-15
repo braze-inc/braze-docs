@@ -1,5 +1,5 @@
 ---
-nav_title: "Email love"
+nav_title: "Email Love"
 article_title: Email Love
 description: "Learn how to integrate Braze with Email Love, a Figma plugin that enables you to design and export responsive and accessible HTML emails directly from Figma."
 alias: /partners/email_love/

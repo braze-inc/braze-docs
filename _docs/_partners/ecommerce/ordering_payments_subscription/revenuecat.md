@@ -1,5 +1,5 @@
 ---
-nav_title: Revenuecat
+nav_title: RevenueCat
 article_title: RevenueCat
 description: "The RevenueCat and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues."
 alias: /partners/revenuecat/

@@ -1,5 +1,5 @@
 ---
-nav_title: Vwo
+nav_title: VWO
 article_title: Integrating VWO with Braze
 description: "Learn how to integrate VWO with Braze."
 alias: /partners/vwo/

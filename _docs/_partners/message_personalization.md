@@ -1,5 +1,5 @@
 ---
-nav_title: Message personalization
+nav_title: Message Personalization
 article_title: Message Personalization Partners
 page_order: 1
 

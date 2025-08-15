@@ -1,5 +1,5 @@
 ---
-nav_title: Mention me
+nav_title: Mention Me
 article_title: Integrating Mention Me with Braze
 description: Mention Me Integration Setup Guide
 alias: /partners/mention_me/

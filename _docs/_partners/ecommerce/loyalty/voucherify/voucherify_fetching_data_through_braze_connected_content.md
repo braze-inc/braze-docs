@@ -1,5 +1,5 @@
 ---
-nav_title: Fetching data through connected content
+nav_title: Fetching data through Connected Content
 article_title: Fetching data through Connected Content with Voucherify
 page_order: 2
 alias: /partners/voucherify/connected_content/

@@ -1,5 +1,5 @@
 ---
-nav_title: "User profile attributes"
+nav_title: "User Profile Attributes"
 article_title: User Attribute Views in Snowflake 
 page_order: 10
 page_type: partner

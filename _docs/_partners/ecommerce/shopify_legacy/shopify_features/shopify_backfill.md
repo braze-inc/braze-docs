@@ -1,5 +1,5 @@
 ---
-nav_title: "Shopify historical backfill"
+nav_title: "Shopify Historical Backfill"
 article_title: "Shopify Historical Backfill"
 alias: "/shopify_historical_backfill_legacy/"
 description: "This reference article outlines how to set up Shopify historical backfill, including risks and supported data."

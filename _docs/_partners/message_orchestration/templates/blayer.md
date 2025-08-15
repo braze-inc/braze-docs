@@ -1,5 +1,5 @@
 ---
-nav_title: Blayer
+nav_title: B.Layer
 article_title: B.Layer
 description: "This reference article outlines the partnership between Braze and B.Layer, an in-app message builder, you can use to create custom-designed in-app messages simply, rapidly, and without coding."
 alias: /partners/blayer-inapps/

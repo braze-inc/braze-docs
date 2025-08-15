@@ -1,5 +1,5 @@
 ---
-nav_title: Growthloop
+nav_title: GrowthLoop
 article_title: GrowthLoop
 description: "This reference article outlines the partnership between Braze and GrowthLoop, a platform that allows you to segment customer data directly from data warehouses and send it to Braze."
 alias: /partners/growthloop/

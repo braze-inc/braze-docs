@@ -1,5 +1,5 @@
 ---
-nav_title: Simon data
+nav_title: Simon Data
 article_title: Simon Data
 description: "Use the Braze and Simon Data integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code."
 alias: /partners/simon_data/

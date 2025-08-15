@@ -1,5 +1,5 @@
 ---
-nav_title: Sisu data
+nav_title: Sisu Data
 article_title: Sisu Data
 description: "This reference article outlines the partnership between Braze and Sisu Data, a  leader in cloud decision intelligence, that allow you to understand across all campaigns or at a campaign level why metrics are changing and what drives the most optimal outcomes."
 alias: /partners/sisu_data

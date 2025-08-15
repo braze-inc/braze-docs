@@ -1,4 +1,4 @@
 ---
-nav_title: Personalization engines
+nav_title: Personalization Engines
 config_only: true
 ---

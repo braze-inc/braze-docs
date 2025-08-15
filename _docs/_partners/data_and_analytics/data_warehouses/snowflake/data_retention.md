@@ -1,5 +1,5 @@
 ---
-nav_title: "Data retention"
+nav_title: "Data Retention"
 article_title: Snowflake Data Retention
 page_order: 3
 description: "This page covers how to retain full events data when the Braze retention policy is applied."

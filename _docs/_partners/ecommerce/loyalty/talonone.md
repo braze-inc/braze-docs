@@ -1,5 +1,5 @@
 ---
-nav_title: Talonone
+nav_title: Talon.One
 article_title: Talon.One
 alias: /partners/talonone/
 description: "This reference article outlines the partnership between Braze and Talon.One, a promotion engine that allows you to launch contextual 1-to-1 coupon, referral, discount, and loyalty campaigns quickly and efficiently."

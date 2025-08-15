@@ -1,4 +1,4 @@
 ---
-nav_title: Customer relationship management
+nav_title: Customer Relationship Management
 config_only: true
 ---

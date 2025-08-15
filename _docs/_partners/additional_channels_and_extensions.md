@@ -1,5 +1,5 @@
 ---
-nav_title: "Additional channels & extensions"
+nav_title: "Additional Channels & Extensions"
 article_title: Additional Channels & Extensions
 page_order: 11
 

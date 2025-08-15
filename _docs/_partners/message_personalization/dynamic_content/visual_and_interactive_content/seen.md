@@ -1,5 +1,5 @@
 ---
-nav_title: Seen
+nav_title: SEEN
 article_title: SEEN
 description: "This reference article outlines the partnership between Braze and SEEN, a platform to design personalized videos to increase engagement throughout the customer journey."
 alias: /partners/seen/

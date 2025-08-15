@@ -1,5 +1,5 @@
 ---
-nav_title: Datagrail
+nav_title: DataGrail
 article_title: DataGrail
 description: "This reference article outlines the partnership between Braze and DataGrail, a privacy management platform, that allows you to detect consumer data collected and stored within Braze to quickly process DSRs."
 alias: /partners/datagrail/

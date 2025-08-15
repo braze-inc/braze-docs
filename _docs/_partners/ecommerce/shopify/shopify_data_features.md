@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify data features
+nav_title: Shopify Data Features
 article_title: "Shopify Data Features"
 description: "This reference article covers Shopify data features."
 page_type: partner

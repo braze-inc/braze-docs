@@ -1,5 +1,5 @@
 ---
-nav_title: Shopify (legacy)
+nav_title: Shopify (Legacy)
 article_title: Shopify (Legacy)
 alias: /shopify/
 alias: /partners/shopify_legacy/

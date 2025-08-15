@@ -1,5 +1,5 @@
 ---
-nav_title: Setting up Shopify
+nav_title: Setting Up Shopify
 article_title: "Setting up Shopify"
 description: "This reference article outlines how to set up Shopify after integrating it into your Braze Web SDK."
 page_type: partner

@@ -1,5 +1,5 @@
 ---
-nav_title: Segment engage
+nav_title: Segment Engage
 article_title: Segment Engage
 page_order: 3
 alias: /partners/segment_personas/

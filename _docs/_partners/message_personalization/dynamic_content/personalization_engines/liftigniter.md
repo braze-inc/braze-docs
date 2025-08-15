@@ -1,5 +1,5 @@
 ---
-nav_title: Liftigniter
+nav_title: LiftIgniter
 article_title: LiftIgniter
 alias: /partners/liftigniter/
 description: "This reference article outlines the partnership between Braze and LiftIgniter, a leading personalization platform, helping enterprises transform their customer experiences."

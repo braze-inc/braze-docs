@@ -1,5 +1,5 @@
 ---
-nav_title: Future anthem
+nav_title: Future Anthem
 article_title: Future Anthem
 description: "Learn how to integrate Future Anthem with Braze."
 alias: /partners/future_anthem/

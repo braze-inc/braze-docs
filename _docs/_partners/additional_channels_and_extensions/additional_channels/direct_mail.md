@@ -1,4 +1,4 @@
 ---
-nav_title: Direct mail
+nav_title: Direct Mail
 config_only: true
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas audience sync
+nav_title: Canvas Audience Sync
 article_title: Canvas Audience Sync
 page_order: 8
 

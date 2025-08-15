@@ -1,5 +1,5 @@
 ---
-nav_title: Segment for currents
+nav_title: Segment for Currents
 article_title: Segment for Currents
 page_order: 2
 alias: /partners/segment_for_currents/

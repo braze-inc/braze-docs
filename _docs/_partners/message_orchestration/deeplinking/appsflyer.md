@@ -1,5 +1,5 @@
 ---
-nav_title: Appsflyer
+nav_title: AppsFlyer
 noindex: true
 layout: dev_guide
 guide_top_header: "AppsFlyer"

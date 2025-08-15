@@ -1,4 +1,4 @@
 ---
-nav_title: Workflow automation
+nav_title: Workflow Automation
 config_only: true
 ---

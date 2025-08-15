@@ -1,5 +1,5 @@
 ---
-nav_title: Zeotap symphony
+nav_title: Zeotap Symphony
 description: "This reference article outlines the partnership between Braze and Zeotap, a next-generation customer data platform that provides identity resolution, insights, and enrichment."
 page_type: partner
 search_tag: Partner

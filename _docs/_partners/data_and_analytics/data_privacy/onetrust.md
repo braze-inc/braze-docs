@@ -1,5 +1,5 @@
 ---
-nav_title: Onetrust
+nav_title: OneTrust
 article_title: OneTrust
 description: "This reference article outlines the partnership between Braze and OneTrust, a data privacy and security software provider, allowing you to use the OneTrust workflow builder to create security workflows for your product."
 alias: /partners/onetrust/

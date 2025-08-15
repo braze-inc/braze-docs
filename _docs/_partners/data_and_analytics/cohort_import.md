@@ -1,4 +1,4 @@
 ---
-nav_title: Cohort import
+nav_title: Cohort Import
 config_only: true
 ---
