@@ -16,7 +16,7 @@ layout: scrolly
 
 ## Customizing message styling using key-value pairs for Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Android" %}
 
 {% scrolly %}
 
@@ -156,7 +156,7 @@ Implement [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android
 
 ## Customizing message styling using key-value pairs for Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Swift" %}
 
 {% scrolly %}
 
@@ -271,7 +271,7 @@ Use [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk
 
 ## Customizing message styling using key-value pairs for Web
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Web" %}
 
 {% scrolly %}
 

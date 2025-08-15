@@ -222,6 +222,10 @@ This feature is not currently supported on Roku.
 
 ### Step 4: Insert using the placement ID {#insertBanner}
 
+{% alert tip %
+For a complete step-by-step tutorial, check out [Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
+{% endalert %}
+
 {% tabs %}
 {% tab Web %}
 
