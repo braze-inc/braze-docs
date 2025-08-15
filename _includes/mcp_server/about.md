@@ -69,12 +69,14 @@ No. You'll need to create a new API key for your MCP client. Remember to only gi
 
 Currently, the Braze MCP server is hosted locally.
 
-### I am using Cursor and it looks like it's just listing out functions. What's going on?
+### Why is Cursor only listing functions?
 
-Check to see if you are in ask mode or agent mode. To use the MCP server, you need to be in agent mode.
+Check if you're in ask mode or agent mode. To use the MCP server, you need to be in agent mode.
 
-### The answer from the agent returned looks a little off or incorrect. What troubleshooting steps should I take?
+### What do I do when the agent returns an answer that looks incorrect?
 
-When working with tools like Cursor, you may want to try changing the model it's using. For instance, if you have it set to auto, try to change it to a specific model and experiment to see what model performs best to your use case. You can also try starting a new chat and retrying the prompt. If issues persist, you can email us at mcp-product@braze.com to let us know. If possible, include a video and expand the call functions so we can see what calls the agent attempted.
+When working with tools like Cursor, you may want to try changing the model used. For example, if you have it set to auto, try changing it to a specific model and experiment to find which model performs best for your use case. You can also try starting a new chat and retrying the prompt. 
+
+If issues persist, you can email us at `mcp-product@braze.com` to let us know. If possible, include a video and expand the call functions so we can see what calls the agent attempted.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}
