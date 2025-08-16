@@ -9,9 +9,9 @@ description: "この記事には2020年2月のリリースノートが含まれ�
 
 ## リテンションレポート
 
-Brazeは、キャンペーンの[リテンションレポートを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)提供できることを誇りに思う。この機能は、特定のキャンペーンで何らかのメッセージを受け取ったユーザーのリテンションを測定するのに役立つ。リテンションレポートは、ダッシュボード内の [**キャンペーン分析**] ページで簡単に見つけることができます。 
+Brazeは、キャンペーンの[リテンションレポートを]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/)提供できることを誇りに思う。この機能は、特定のキャンペーンで何らかのメッセージを受け取ったユーザーのリテンションを測定するのに役立つ。リテンションレポートは、ダッシュボード内の [**キャンペーン分析**] ページで簡単に見つけることができます。 
 
-![フルレポート][4]
+![フルレポート]({% image_buster /assets/img/retention_report_full_report.png %})
 
 {% alert important %}
 2020年1月13日現在、この機能は、EU地域またはHIPPA準拠クラスターに展開されている当社のクライアントではまだ使用できません。プラットフォーム全体への機能配備を進めながら、これらの地域でもこのレポートを利用できるようにする予定だ。
@@ -21,4 +21,3 @@ Brazeは、キャンペーンの[リテンションレポートを]({{site.baseu
 
 API経由でメールコンテンツブロックを[更新]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)できるようになった！
 
-[4]: {% image_buster /assets/img/retention_report_full_report.png %}

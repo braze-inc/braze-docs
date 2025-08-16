@@ -10,14 +10,14 @@ channel: email
 
 # テストメールのHTMLレンダリングのトラブルシューティング
 
-[テストメールが][37]おかしいと感じたら、まずHTMLの設定をチェックすることをお勧めする。次に、次の問題を確認できます。
+[テストメールが]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa)おかしいと感じたら、まずHTMLの設定をチェックすることをお勧めする。次に、次の問題を確認できます。
 * [拡張機能の競合](#check-conflicts)
 * [メールレンダリング](#check-rendering)
 * [CSSインライン展開](#switch-css-inlining)
 
 ### 拡張機能の競合
 
-ブラウザの拡張機能によっては、Eメールエディタに問題が生じる場合がある。その一例が、Google Chromeで使用される[Grammarly][38]である）。これらの拡張機能のいずれかを使用している場合は、次のいずれかを実行する必要があります。 
+ブラウザの拡張機能によっては、Eメールエディタに問題が生じる場合がある。その一例が、Google Chromeで使用される[Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)である）。これらの拡張機能のいずれかを使用している場合は、次のいずれかを実行する必要があります。 
 - Grammarlyがブラウザ拡張機能としてインストールされていないブラウザでBrazeのメールを編集する
 - Brazeのアカウントマネージャーに連絡し、メールエディタをHTMLのみまたはプレーンテキストに切り替えるよう依頼する。 
 
@@ -38,7 +38,3 @@ channel: email
 
 _最終更新日：2021年12月21日_
 
-[37]: {{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa
-[38]: https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
-[39]: https://www.emailonacid.com/
-[40]: https://litmus.com/

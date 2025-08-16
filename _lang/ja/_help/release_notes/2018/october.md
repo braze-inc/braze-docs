@@ -19,7 +19,7 @@ description: "この記事には2018年10月のリリースノートが含まれ
 
 ## キャンペーンの正確なオーディエンス統計を計算する
 
-**キャンペーン分析**に移動して、オーディエンスの正確な統計を計算できます。フッターの**正確な統計を計算**をクリックすると、**ターゲットユーザー**セクションに正確なオーディエンス統計が表示されます。計算する前にキャンペーンを保存する必要があります（下書きキャンペーンは下書きとして保存されます）。
+**キャンペーン分析**に移動して、オーディエンスの正確な統計を計算できます。[**Target Audiences (ターゲットオーディエンス)**] セクションのフッターにある [**Calculate Exact Stats (正確な統計を計算)**] をクリックすると、正確なオーディエンス統計が入力されます。計算する前にキャンペーンを保存する必要があります（下書きキャンペーンは下書きとして保存されます）。
 
 ## Windows 8の非推奨化
 
@@ -43,7 +43,7 @@ Brazeは現在、メール送信パートナー（メールサービスプロバ
 
 ## Currents の Azure
 
-Currents を使用する Braze のお客様にとって、[Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) の統合が可能になりました。
+Currents を使用する Braze のお客様にとって、[Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage) の統合が可能になりました。
 
 ## 入力フィールドの拡張
 

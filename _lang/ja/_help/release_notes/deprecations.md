@@ -34,7 +34,7 @@ Shopify `checkout.liquid` は、2024年8月に非推奨になり、2025年8月�
 
 **サポートの撤回**: 2022年10月
 
-プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)で代用する。
+プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events)で代用する。
 
 ### Grouparoo のパートナーシップ
 
@@ -88,7 +88,7 @@ Factual のサポートは、2020年6月に終了しました。Factualは最近
 ### アプリ内オリジナルメッセージ
 
 **サポートの終了:**2019年2月<br>
-**置換**: [アプリ内メッセージング]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**置換**: [アプリ内メッセージング]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 Brazeは、最新のUXとUIのベストプラクティスに準拠するため、アプリ内メッセージのルック＆フィールを改善し、オリジナルのアプリ内メッセージのサポートは終了した。
 
@@ -128,9 +128,9 @@ Google が Eclipse Android Developer Tools (ADT) プラグインの[サポート
 ### Raw Event Stream (RES)
 
 **サポートの撤回**: 2018年7月<br>
-**置換**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**置換**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-Raw Event Stream は [Currents]({{site.baseurl}}/partners/braze_currents/about/) の前身であり、Braze データの将来に備えて廃止されました。
+Raw Event Stream は [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) の前身であり、Braze データの将来に備えて廃止されました。
 
 ### アイドル時のディレイ - GCM機能
 
@@ -145,4 +145,3 @@ Delay While Idleパラメータは、以前は[GCMプッシュオプション](h
 カスタムエンドポイントの削除。カスタムエンドポイントを持っている場合は、それを使い続けることができるが、Brazeはもうそれを提供しない。
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

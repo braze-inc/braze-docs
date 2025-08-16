@@ -17,25 +17,21 @@ Braze は CSV X フィルターを更新し、以前の10件ではなく、ユ�
 
 ## Android アプリのアンインストール追跡がデフォルトでオン
 
-すべての新しいAndroidアプリの[アンインストール追跡][94]機能はデフォルトで「オン」になります。すべての既存のAndroidアプリでアンインストール追跡がオフになっているものは、今後「オン」に変更されます。Android のアンインストール追跡でデバイスにプッシュが送信されなくなり、ユーザー側で他の更新やアクションを実行する必要もありません。
+すべての新しいAndroidアプリの[アンインストール追跡]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/)機能はデフォルトで「オン」になります。すべての既存のAndroidアプリでアンインストール追跡がオフになっているものは、今後「オン」に変更されます。Android のアンインストール追跡でデバイスにプッシュが送信されなくなり、ユーザー側で他の更新やアクションを実行する必要もありません。
 
 ## 更新され、改善された検索機能
 
-Braze は、[カスタムイベントと属性][92]、テンプレートなどを検索しながら、Braze の大規模な展開を管理するエクスペリエンスを向上させるために、タグ付けを追加し、検索機能を改善しました。
+Braze は、[カスタムイベントと属性]({{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management)、テンプレートなどを検索しながら、Braze の大規模な展開を管理するエクスペリエンスを向上させるために、タグ付けを追加し、検索機能を改善しました。
 
 ## プッシュ通知ストーリー
 
-[複数のページ、画像、クリック動作、およびオプションのタイトルとサブタイトルを含む通知を作成します][95]プッシュメッセージを作成し、ドロップダウンから**Push Story**を選択するだけです。
+[複数のページ、画像、クリック動作、およびオプションのタイトルとサブタイトルを含む通知を作成します]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories)プッシュメッセージを作成し、ドロップダウンから**Push Story**を選択するだけです。
 
 この機能を使用するには、Android（バージョン2.2.0+）およびiOS（バージョン3.2.0+）の最新バージョンに更新する必要があることに注意してください。
 
 
 ## 受信トレイビジョン
 
-サムネイルの概要ページ、または大きなスクリーンショットと各クライアントの HTML レンダリングに存在する可能性のある問題のより詳細な分析を含むリストビューのいずれかを使用し、顧客のプラットフォームに基づいて[メールをプレビュー][96]できるようになりました。詳細についてはカスタマーサクセスマネージャーまたはアカウントマネージャーにお問い合わせください。
+サムネイルの概要ページ、または大きなスクリーンショットと各クライアントの HTML レンダリングに存在する可能性のある問題のより詳細な分析を含むリストビューのいずれかを使用し、顧客のプラットフォームに基づいて[メールをプレビュー]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision)できるようになりました。詳細についてはカスタマーサクセスマネージャーまたはアカウントマネージャーにお問い合わせください。
 
 
-[92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management
-[94]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking-for-campaigns
-[95]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories
-[96]: {{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision

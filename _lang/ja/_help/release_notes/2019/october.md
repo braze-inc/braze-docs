@@ -14,7 +14,7 @@ description: "この記事には2019年10月のリリースノートが含まれ
 
 ## SMS
 
-Brazeは現在、SMSにキャンペーンs、キャンバス、および[currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)を提供しています!詳しくは、[セットアップガイドと]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) [SMS送信ガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)ご覧いただきたい！
+Brazeは現在、SMSにキャンペーンs、キャンバス、および[currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)を提供しています!詳しくは、[セットアップガイドと]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) [SMS送信ガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)ご覧いただきたい！
 
 ## コンテンツ・ブロックの改善
 

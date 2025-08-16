@@ -25,7 +25,7 @@ description: "この記事には2019年5月のリリースノートが含まれ�
 - Android :2.6.0以降
 - Web:2.2.0以降
 
-[コンテンツカードについて詳しくはこちら]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
+[コンテンツカードについて詳しくはこちら]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
 
 {% alert update %}
 Currents のコンテンツカードとコンテンツカードの API ドキュメントは、今週後半にリリースされる予定です。お楽しみに！
@@ -35,7 +35,7 @@ Currents のコンテンツカードとコンテンツカードの API ドキュ
 
 Brazeは私たちの機能に新しいチャネルを追加しました！新しいチャネルに拡大することで、お客様は表示行動を理解してデータを充実させたり、関連するすべてのチャネルを通じて消費者に有意義な体験を提供したりできるようになります。
 
-Rokuデバイスからデータを[取得して]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)、データの強化およびカスタムイベントのトラッキングが可能になりました。
+Rokuデバイスからデータを[取得して]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=roku)、データの強化およびカスタムイベントのトラッキングが可能になりました。
 
 ## キャンバスまたはキャンペーンの更新に関する通知の設定
 
@@ -45,13 +45,13 @@ Rokuデバイスからデータを[取得して]({{site.baseurl}}/developer_guid
 
 Jamppは、モバイル顧客の獲得とリターゲティングのためのパフォーマンスマーケティングプラットフォームです。これは、行動データと予測およびプログラム技術を組み合わせて、消費者が初めて購入する、またはより頻繁に購入するように促す個人的な関連性のある広告を表示することで、広告主のための収益を生み出す。
 
-Braze のお客様は、Braze Webhook チャネルを構成してイベントを Jampp にストリーミングすることで、[Jampp と統合]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/)できます。その結果、顧客はモバイル広告エコシステム内でJamppを使用してリターゲティングの取り組みにより豊富なデータセットを追加することができます。
+Braze のお客様は、Braze Webhook チャネルを構成してイベントを Jampp にストリーミングすることで、[Jampp と統合]({{site.baseurl}}/partners/jampp/)できます。その結果、顧客はモバイル広告エコシステム内でJamppを使用してリターゲティングの取り組みにより豊富なデータセットを追加することができます。
 
 ## アプリ内メッセージ用プラットフォームピッカー
 
 キャンペーン作成プロセスのこのステップを強調するプラットフォームピッカーを使用することで、アプリ内メッセージの送信先と対象プラットフォームの選択が簡単になりました。
 
-![プラットフォームピッカー][1]
+![プラットフォームピッカー]({% image_buster /assets/img/iam_platforms.gif %})
 
 ## メールのディスパッチ ID Currents フィールド
 
@@ -85,7 +85,7 @@ Currents の機能を継続的に強化する取り組みの一環として、�
 
 Mailjet も使用しているユーザーは、以前のユニーク時間枠が30日間を超えていたため、これらの数値が急増します。この変更については3週間前にお知らせしておくべきでした。 SendGridの顧客は違いを感じないはずです。
 
-これらの更新された用語は、当社の[レポートメトリクス用語集]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)で検索できます。
+これらの更新された用語は、当社の[レポートメトリクス用語集]({{site.baseurl}}/user_guide/data/report_metrics/)で検索できます。
 
 {% alert update %}
 キャンバスとキャンペーンの間での`dispatch_id`の動作は異なります。なぜなら、Brazeはキャンバスのステップ（スケジュール可能なエントリステップを除く）を「スケジュールされた」場合でもトリガーイベントとして扱うからです。 [キャンバスとキャンペーンにおける[`dispatch_id`の動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)について詳しくはこちらをご覧ください。]
@@ -97,11 +97,10 @@ _更新は2019年8月に記録されました。_
 ## 最もエンゲージされたチャネル
 
 {% alert update %}
-[2019年11月の製品リリース]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite)時点で、「最もエンゲージメントの高いチャネル」は[「インテリジェントチャネル」]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/)に改名されました。
+[2019年11月の製品リリース]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite)時点で、「最もエンゲージメントの高いチャネル」は[「インテリジェントチャネル」]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)に改名されました。
 {% endalert %}
 
 最もエンゲージされたチャネルフィルターは、選択されたメッセージングチャネルが「最適な」チャネルであるオーディエンスの一部を選択します。この場合、「ベスト」とは「ユーザーの履歴を考慮した場合、エンゲージメントの可能性が最も高い」という意味です。メール、Web プッシュ、またはモバイルプッシュ（利用可能なモバイルOSやデバイスを含む）をチャネルとして選択できます。
 
 この新しいフィルターについては [セグメンテーションフィルターライブラリ]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/). で確認してください。
 
-[1]: {% image_buster /assets/img/iam_platforms.gif %}

@@ -7,14 +7,14 @@ description: "この参考記事では、Android プッシュ通知用のカス�
 # ブロードキャストレシーバー {#android-push-listener-broadcast-receiver} を介したプッシュの受信、開封、却下、およびキーと値のペアのカスタム処理
 
 {% alert important %}
-プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)で代用する。
+プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events)で代用する。
 {% endalert %}
 
 また、Braze は、プッシュ通知が受信、開封、または却下されたときにカスタムインテントをブロードキャストします。これらのシナリオに特定のユースケースがある場合 (カスタムのキーと値のペアをリッスンする必要がある場合や、ディープリンクを独自に処理する必要がある場合など)、カスタム `BroadcastReceiver` を作成してこれらのインテントをリッスンする必要があります。
 
 ## ステップ 1:BroadcastReceiverを登録する
 
-カスタム`BroadcastReceiver` を登録して、[`AndroidManifest.xml`][71] でBrazeプッシュ開封をリッスンし、インテントを受信します。
+カスタム`BroadcastReceiver` を登録して、[`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml) でBrazeプッシュ開封をリッスンし、インテントを受信します。
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -30,7 +30,7 @@ description: "この参考記事では、Android プッシュ通知用のカス�
 
 レシーバーは、Brazeからブロードキャストされたインテントを処理し、それを使ってアクティビティを起動する：
 
-- これは [`BroadcastReceiver`][53] をサブクラス化し、`onReceive()` をオーバーライドする必要があります。
+- これは [`BroadcastReceiver`](https://developer.android.com/reference/android/content/BroadcastReceiver.html) をサブクラス化し、`onReceive()` をオーバーライドする必要があります。
 - `onReceive()` メソッドは、Braze でインテントブロードキャストをリッスンする必要があります。
   - プッシュ通知が届くと、`NOTIFICATION_RECEIVED` インテントを受信する。
   - ユーザーがプッシュ通知をクリックすると、`NOTIFICATION_OPENED` インテントが受信されます。
@@ -149,5 +149,3 @@ val myExtra = extras.getString("my_key")
 Braze のプッシュデータキーに関するドキュメントは、[Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants) を参照してください。
 {% endalert %}
 
-[53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"

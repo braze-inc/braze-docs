@@ -12,7 +12,5 @@ description: "この記事には、2016年11月のリリースノートが含ま
 
 接続オーディエンスを使用すると、Braze で事前設定を行うことなく、ユーザー群のサブセットをターゲットにしたメッセージを即時に送信できます。例えば、メディアアプリは、カスタム属性配列を使用して、顧客がお気に入りに登録したすべてのカテゴリーやテレビ番組をトラッキングできます。接続オーディエンスを使用することで、カスタム CMS と Braze を接続し、新しいエピソードがリリースされるたびに、番組をお気に入りに登録したユーザーに自動的にプッシュ通知やメールを送信できます。
 
-「[接続オーディエンスオブジェクト][12]」を参照するか、[接続オーディエンス][13]に関する当社のブログをご確認ください。
+「[接続オーディエンスオブジェクト]({{site.baseurl}}/api/objects_filters/connected_audience/)」を参照するか、[接続オーディエンス](https://www.braze.com/blog/connected-audiences/)に関する当社のブログをご確認ください。
 
-[12]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[13]: https://www.braze.com/blog/connected-audiences/

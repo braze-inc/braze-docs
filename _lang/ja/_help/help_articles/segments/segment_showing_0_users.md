@@ -18,15 +18,15 @@ tool: Segments
 
 セグメント統計は推定値を示している可能性があります。推定値はランダムなサンプルに基づいて計算され、95% の信頼区間で結果が `+/- 1%` に含まれることを意味します。ユーザー群が小さいほど、セグメントのサイズは推定である可能性が高くなります。**[セグメントの詳細]** パネルで **[正確な統計を計算]** をクリックします。これにより、セグメントの正確なユーザー数が計算されます。
 
-![[正確な統計を計算] オプションが表示される [セグメントの詳細] パネル][28]
+![[正確な統計を計算] オプションが表示されている [セグメントの詳細] パネル]({% image_buster /assets/img_archive/trouble8.png %})
 
 ## データ転送を確認する
 
-フィルタリングしているデータが Braze に送信されていない可能性があります。Braze に送信されているカスタムイベントを確認するには、[カスタムイベントレポート][1]を参照してください。
+フィルタリングしているデータが Braze に送信されていない可能性があります。Braze に送信されているカスタムイベントを確認するには、[カスタムイベントレポート]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics)を参照してください。
 
 カスタムイベントを特定の日付およびアプリとともに選択して、Braze に実際に転送されているデータを確認します。`0` データが Braze に送信されていることを確認したら、次のステップでは Braze へのイベントの送信方法を評価します。
 
-![カスタムイベント数がゼロと表示されるグラフ][29]
+![カスタムイベント数がゼロと表示されているグラフ]({% image_buster /assets/img_archive/trouble9.png %})
 
 {% alert important %}
 Braze ダッシュボードに表示されるデータと、Braze に送信しているデータの構文が同じでない可能性があります。これら 2 つが正確に一致していることを確認してください。
@@ -36,6 +36,3 @@ Braze ダッシュボードに表示されるデータと、Braze に送信し�
 
 _最終更新日: 2021年1月5日_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics
-[28]: {% image_buster /assets/img_archive/trouble8.png %}
-[29]: {% image_buster /assets/img_archive/trouble9.png %}

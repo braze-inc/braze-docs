@@ -10,17 +10,23 @@ channel: push
 
 # プッシュトークンを移行する
 
-[プッシュトークン]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) は、アプリの通知の送信先を指定する一意の匿名識別子です。Brazeは、AndroidのFirebase Cloud Messaging Service（FCM）やiOSのApple Push Notification Service（APN）のようなプッシュサービスプロバイダーと接続し、これらのプロバイダーは、あなたのアプリを識別するユニークなデバイストークンを送信する。Brazeを統合する前に、自社または他のプロバイダー経由でプッシュ通知を送信していた場合、プッシュトークンの移行により、プッシュトークンを登録したユーザーにプッシュ通知を送信し続けることができる。
+> [プッシュトークン]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) は、アプリの通知の送信先を指定する一意の匿名識別子です。Brazeは、AndroidのFirebase Cloud Messaging Service（FCM）やiOSのApple Push Notification Service（APN）のようなプッシュサービスプロバイダーと接続し、これらのプロバイダーは、あなたのアプリを識別するユニークなデバイストークンを送信する。Brazeを統合する前に、自社または他のプロバイダー経由でプッシュ通知を送信していた場合、プッシュトークンの移行により、プッシュトークンを登録したユーザーにプッシュ通知を送信し続けることができる。
 
 ## SDKによる自動移行
 
-Braze SDKは、過去にプッシュ通知をオプトインしたユーザーのプッシュトークンを、Brazeと統合されたアプリやサイトに初めてサインインした時に自動的に移行する。Braze SDKを統合すれば、APIを使用してプッシュトークンを移行する必要はない。
+[Braze SDK を統合]({{site.baseurl}}/developer_guide/sdk_integration/)すると、オプトインしたユーザーのプッシュトークンは、ユーザーが次にアプリを開いたときに自動的に移行されます。それまでは、Braze を通じてそれらのユーザーにプッシュ通知を送ることはできません。
 
-ただし、プッシュトークンはユーザーがアプリに最初にログインしたときに移行するため、SDK統合後にログインしていないユーザーにはBrazeからプッシュ通知を送信できないことに注意。これらのユーザーを再エンゲージする手段として、Android および iOS プッシュトークンを手動で移行することもできます。
+あるいは、[プッシュトークンを手動で移行する](#manual-migration-via-api)ことで、ユーザーへの再エンゲージをより迅速に行うことができます。
 
-{% alert note %}
-ウェブプッシュトークンs の性質上、トークンは約60 日間ごとに失効し、再設定されます。その期間内にセッションがないユーザーには、アクティブな Web プッシュトークンがありません。Brazeは期限切れのWebプッシュトークンを移行しない。これらのユーザーは、[プッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages)を使用して再エンゲージする必要があります。
-{% endalert %}
+### Webトークンに関する考察
+
+Web プッシュトークンの性質上、Web プッシュを実装する際には以下の点を考慮してください。
+
+|検討|詳細|
+|----------------------|------------|
+| **サービスワーカー**  | デフォルトでは、Web SDK は `manageServiceWorkerExternally` や `serviceWorkerLocation` のような別のオプションが指定されない限り、`./service-worker` でサービスワーカーを探します。サービスワーカーの設定が適切でないと、ユーザーのプッシュトークンが期限切れになる可能性があります。 |
+| **期限切れトークン**   | ユーザーが60日以内にWebセッションを開始しなかった場合、そのプッシュトークンは失効する。Braze は期限切れのプッシュトークンを移行できないので、再エンゲージするには[プッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages)を送信する必要があります。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## API経由の手動移行
 
@@ -39,7 +45,8 @@ API を使用してウェブプッシュトークンを移行することはで�
 APIマイグレーションの代わりに、SDKを統合し、トークン基盤が自然に再集積できるようにすることをお勧めします。
 {% endalert %}
 
-### 外部IDが存在する場合は移行する
+{% tabs local %}
+{% tab external ID が存在する %}
 識別されたユーザーの場合は、`push_token_import` フラグを`false` に設定 (またはパラメーターを省略) して、`external_id`、`app_id`、`token` の値をユーザー `attributes` オブジェクトで指定します。 
 
 以下に例を示します。
@@ -63,8 +70,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
   ]
 }'
 ```
+{% endtab %}
 
-### 外部IDが存在しない場合の移行
+{% tab external ID が見つからない %}
 他のシステムからプッシュトークンをインポートする場合、`external_id` が利用できるとは限らない。この状況では、`push_token_import` フラグを`true` に設定し、`app_id` と`token` の値を指定します。Braze は、トークンごとに一時的な匿名ユーザープロファイルを作成し、これらの個人にメッセージを送信し続けられるようにします。トークンがすでにBrazeに存在する場合、リクエストは無視される。
 
 以下に例を示します。
@@ -104,6 +112,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 インポート後、匿名ユーザーがBraze対応バージョンのアプリを起動すると、Brazeは自動的にインポートしたプッシュトークンをBrazeユーザープロファイルに移動し、一時的なプロファイルをクリーンアップする。
 
 Braze は月に1回チェックを実行し、プッシュトークンがない `push_token_import` フラグが設定された匿名プロファイルを見つけます。匿名プロフィールにプッシュトークンがなくなった場合、プロフィールを削除する。しかし、匿名プロファイルがまだプッシュトークンを持っていて、実際のユーザーがまだそのプッシュトークンでデバイスにログインしていないことを示唆している場合は、何もしない。
+{% endtab %}
+{% endtabs %}
 
 ## Androidのプッシュトークンをインポートする
 

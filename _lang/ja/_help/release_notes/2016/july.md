@@ -14,9 +14,9 @@ description: "この記事には2016年7月のリリースノートが含まれ�
 
 ## 最後に送信されたアンインストール追跡プッシュのタイムスタンプを追加した。
 
-Brazeは、顧客のアプリにサイレント・プッシュを送信し、どのデバイスが反応するかを確認することで、アンインストールを検知する。この機能により、アアンインストール追跡が最後に実行された日時を示す、目立たないタイムスタンプが追加されます。このタイムスタンプは、アンインストール追跡が設定されている「設定」ページで確認できる。詳細については、[トラッキングのアンインストール]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)を参照してください。
+Brazeは、顧客のアプリにサイレント・プッシュを送信し、どのデバイスが反応するかを確認することで、アンインストールを検知する。この機能により、アアンインストール追跡が最後に実行された日時を示す、目立たないタイムスタンプが追加されます。このタイムスタンプは、アンインストール追跡が設定されている「設定」ページで確認できる。詳細については、[トラッキングのアンインストール]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking)を参照してください。
 
-![トラッキング・チェックボックスをアンインストールする][6]
+![トラッキングのアンインストールチェックボックス]({% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %})
 
 ## ウェブフック・テストの機能強化
 
@@ -24,13 +24,11 @@ Brazeは、顧客のアプリにサイレント・プッシュを送信し、ど
 
 ## キャンペーン受信者のCSVエクスポートに受信メッセージのバリエーションを追加
 
-キャンペーン受信者CSVエクスポートに、受信したメッセージのバリエーションを示すカラムを追加した。Brazeからの[データエクスポートについて]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data)詳しく知る。
+キャンペーン受信者CSVエクスポートに、受信したメッセージのバリエーションを示すカラムを追加した。Brazeからの[データエクスポートについて]({{site.baseurl}}/user_guide/data/export_braze_data/)詳しく知る。
 
 ## インプレッション数のおおよその制限
 
 アプリ内メッセージが一定数のインプレッションを獲得すると、Brazeはユーザーにメッセージを受け取る資格を与えることを停止する。インプレッションのおおよその制限の設定について詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap)をご覧ください。
 
-![IAM インプレッション上限][11]
+![IAM インプレッションキャップ]({% image_buster /assets/img_archive/approx_limit_for_IAM.png %})
 
-[6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
-[11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

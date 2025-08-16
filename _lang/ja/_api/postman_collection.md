@@ -19,7 +19,7 @@ Postmanは、APIリクエストの構築とテストのための、無料で使�
 
 ## Braze Postman コレクションを使用する
 
-Postmanアカウント（macOS版、Windows版、Linux版を[Postmanウェブサイトから][1]ダウンロードできる）を持っていれば、オレンジ色の「**Postmanで実行**」ボタンをクリックすることで、自分のPostmanアプリでPostmanドキュメントを開くことができる。その後、[環境を作成](#setting-up-your-postman-environment)するか、Braze REST API環境をテンプレートとして使用し、利用可能な`POST` 、`GET` リクエストを独自のニーズに合わせて編集することができる。
+Postmanアカウント（macOS版、Windows版、Linux版を[Postmanウェブサイトから](https://www.getpostman.com)ダウンロードできる）を持っていれば、オレンジ色の「**Postmanで実行**」ボタンをクリックすることで、自分のPostmanアプリでPostmanドキュメントを開くことができる。その後、[環境を作成](#setting-up-your-postman-environment)するか、Braze REST API環境をテンプレートとして使用し、利用可能な`POST` 、`GET` リクエストを独自のニーズに合わせて編集することができる。
 
 ### Postmanの環境をセットアップする
 
@@ -31,14 +31,14 @@ Braze Postman Collection は、テンプレート変数 `{{instance_url}}` を�
 
 1. [**ワークスペース**] タブで ［**環境**］ を選択します。
 2. 新しい環境を作成するには**＋**プラスボタンをクリックする。
-3. この環境に名前を付け (たとえば、「Braze API リクエスト」)、`instance_url` と　`api_key` のキーを追加し、Braze インスタンス ][7] と Braze REST API キー ][8] に対応する値を指定します。
+3. この環境に名前を付け (たとえば、「Braze API リクエスト」)、`instance_url` と　`api_key` のキーを追加し、[Braze インスタンス ]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) と [Braze REST API キー]({{site.baseurl}}/api/api_key/)に対応する値を指定します。
 4. [**保存**] をクリックします。
 
 {% alert note %}
 `POST` リクエストの本文では、`api_key` は引用符で囲む必要があります: `"MY-API-KEY-EXAMPLE"`。`GET` URLでは、このようにしないでください。この書式は、このドキュメントの `POST` リクエストボディ、`GET` URL、および `YOUR-API-KEY-HERE` の環境テンプレートですでに提供しています。
 {% endalert %}
 
-![Postman の Braze REST API 環境に API キーとインスタンス URL の変数を追加する。][3]
+![Postman の Braze REST API 環境に API キーとインスタンス URL の変数を追加する。]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### コレクションからビルド済みのリクエストを使う
 
@@ -50,24 +50,17 @@ Braze Postman Collection は、テンプレート変数 `{{instance_url}}` を�
 
 `POST` リクエストを編集する場合、リクエストを開き、リクエストエディターの**Body**セクションに移動する。読みやすくするために、`JSON` リクエストボディをフォーマットする**raw**ラジオボタンを選択する。
 
-![Postman で POST User Track リクエストを編集する際の本文タブ][4]
+![Postman で POST User Track リクエストを編集する際の本文タブ]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### GETリクエストを編集する
 
 `GET` リクエストを編集する場合は、リクエスト URL で渡されるパラメーターを編集します。そのためには、**Params**タブを選択し、表示されるフィールドのキーと値のペアを編集する。
 
-![Postman で GET Query List of Unsubscribed Email Addresses (配信停止済みメールアドレスのクエリリストの取得) リクエストを編集するときの「パラメータ」タブ。][5]
+![Postman で GET Query List of Unsubscribed Email Addresses (配信停止済みメールアドレスのクエリリストの取得) リクエストを編集するときの「パラメーター」タブ。]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### リクエストを送信する
 
 API リクエストの準備ができたら、[**送信**] をクリックします。リクエストは送信され、レスポンスデータはリクエストエディタの下のセクションに入力される。ここから、Braze APIから返された生データを見たり、HTTPレスポンスコードを見たり、リクエストの処理にかかった時間を見たり、ヘッダー情報を見たりすることができる。
 
-![ステータスが「201 Created」、応答時間が「269ミリ秒」の POST リクエストからの本文応答データの例。][6]
+![ステータスが「201 Created」、応答時間が「269 ミリ秒」の POST リクエストからの本文応答データの例。]({% image_buster /assets/img_archive/postman_response.png %})
 
-[1]: https://www.getpostman.com
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
-[4]: {% image_buster /assets/img_archive/postman_post.png %}
-[5]: {% image_buster /assets/img_archive/postman_get.png %}
-[6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {{site.baseurl}}/api/api_key/

@@ -19,4 +19,4 @@ description: "この記事には2018年12月のリリースノートが含まれ
 
 ## Gmailプロモーションツール
 
-Gmail でモバイルの [プロモーション] タブが更新され、マーケターが件名やプリヘッダー情報だけでなく、「カード」の注釈をを使用してより多くの情報を送信できるようになりました。[Gmailプロモーションツール]({{site.baseurl}}/user_guide/message_building_by_channel/email/gmail_promotions_tab/)で、Brazeは弊社商品からのカード構築をお手伝いします。
+Gmail でモバイルの [プロモーション] タブが更新され、マーケターが件名やプリヘッダー情報だけでなく、「カード」の注釈をを使用してより多くの情報を送信できるようになりました。[Gmailプロモーションツール]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/)で、Brazeは弊社商品からのカード構築をお手伝いします。

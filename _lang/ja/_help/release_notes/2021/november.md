@@ -8,7 +8,7 @@ description: "この記事には、2021年11月のリリースノートが含ま
 # 2021年11月
 
 ## クリック開封率レポートメトリック
-Brazeは、[レポートビルダーで]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)利用可能な新しいメール指標「クリック・ツー・オープン率」を追加した。このメトリックは、クリックされた開封メールの割合を表します。
+Brazeは、[レポートビルダーで]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)利用可能な新しいメール指標「クリック・ツー・オープン率」を追加した。このメトリックは、クリックされた開封メールの割合を表します。
 
 ## マシン開封レポートメトリック
 

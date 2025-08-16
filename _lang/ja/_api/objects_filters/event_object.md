@@ -15,11 +15,11 @@ description: "この参考記事では、イベント・オブジェクトとは
 
 イベント・オブジェクトは、特定のイベントが発生したときにAPIを通じて渡されるオブジェクトである。イベント・オブジェクトはイベント配列に格納される。events配列の各イベントオブジェクトは、指定された時間値における、特定のユーザーによるカスタムイベントの単一の発生を表す。イベント・オブジェクトにはさまざまなフィールドがあり、それらを使用して、メッセージ、データ収集、パーソナライゼーションにおいてイベントプロパティを設定し、使用することでカスタマイズすることができます。
 
-特定のプラットフォームにカスタムイベントを設定する手順については、[開発者ガイド][1]の『Platform Integration Guide』を参照してください。ご使用のプラットフォームに基づいて、関連記事を参照してください。
+特定のプラットフォームにカスタムイベントを設定する手順については、[開発者ガイド]({{site.baseurl}}/developer_guide/home/)の「プラットフォーム総合ガイド」を参照してください。ご使用のプラットフォームに基づいて、関連記事を参照してください。
 
-- [Android][2]
-- [iOS][3]
-- [Web][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### オブジェクト本体
 
@@ -44,11 +44,11 @@ description: "この参考記事では、イベント・オブジェクトとは
 
 - [外部ユーザ ID]({{site.baseurl}}/api/basics/#user-ids)
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601タイムコード][22]
+- [ISO 8601タイムコード](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### 既存のプロファイルのみを更新する
 
-Braze で既存のユーザープロファイルのみを更新するには、`_update_existing_only` キーをリクエストの本文内に`true` の値で渡す必要があります。この値を省略すると、`external_id` がまだ存在しない場合、Brazeは新しいユーザープロファイルを作成する。
+Braze で既存のユーザープロファイルのみを更新するには、`_update_existing_only` キーをリクエストの本文内に `true` の値で渡す必要があります。この値を省略すると、`external_id` がまだ存在しない場合、Brazeは新しいユーザープロファイルを作成する。
 
 {% alert note %}
 `/users/track` エンドポイントを使用してエイリアスのみのユーザープロファイルを作成する場合は、`_update_existing_only` を`false` に設定する必要があります。この値が省略された場合、エイリアスのみのプロファイルは作成されない。
@@ -64,7 +64,7 @@ Braze で既存のユーザープロファイルのみを更新するには、`_
 | --- | --- |
 | 数値 | [整数](https://en.wikipedia.org/wiki/Integer)または[浮動小数点数として](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | ブール値 | `true` または `false` |
-| 日時 | 文字列として[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) 形式または以下のいずれかの形式でフォーマットする必要があります。<br>- `yyyy-MM-ddTHH:mm:ss:SSSZ`<br>- `yyyy-MM-ddTHH:mm:ss`<br>- `yyyy-MM-dd HH:mm:ss`<br>- `yyyy-MM-dd`<br>- `MM/dd/yyyy`<br>- `ddd MM dd HH:mm:ss.TZD YYYY`<br><br>アレイ内ではサポートされていない。<br><br>「T」は時間指定子であり、プレースホルダーではないことに注意してください。変更または削除しないでください。<br><br>タイムゾーンのないタイム属性は、デフォルトではUTC の午前0 時になります(また、ダッシュボードでは、会社のタイムゾーンのUTC の午前0 時に相当する形式になります)。<br><br> タイムスタンプが未来のイベントはデフォルトで現在の時刻になります。  |
+| 日時 | 文字列として [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) 形式または以下のいずれかの形式でフォーマットする必要があります。<br>- `yyyy-MM-ddTHH:mm:ss:SSSZ`<br>- `yyyy-MM-ddTHH:mm:ss`<br>- `yyyy-MM-dd HH:mm:ss`<br>- `yyyy-MM-dd`<br>- `MM/dd/yyyy`<br>- `ddd MM dd HH:mm:ss.TZD YYYY`<br><br>アレイ内ではサポートされていない。<br><br>「T」は時間指定子であり、プレースホルダーではないことに注意してください。変更または削除しないでください。<br><br>タイムゾーンのない時間属性はデフォルトで UTC の真夜中になります（ダッシュボード上では会社のタイムゾーンの UTC の真夜中に相当する形式で表示されます）。<br><br> タイムスタンプが未来のイベントはデフォルトで現在の時刻になります。  |
 | 文字列 | 255 文字以下。 |
 | 配列 | 配列に日時を含めることはできない。 |
 | オブジェクト | オブジェクトは文字列として取り込まれます。 |
@@ -74,7 +74,7 @@ Braze で既存のユーザープロファイルのみを更新するには、`_
 
 ### イベント・プロパティの永続性
 
-イベント・プロパティは、親イベントによってトリガーされるメッセージのフィルタリングと、リキッド・パーソナライゼーションのために設計されている。デフォルトでは、Braze ユーザープロファイルでは永続化されません。セグメンテーションでイベントプロパティ値を使用するには、イベントプロパティ値を長期的に保存するための様々なアプローチについて詳述している[カスタム][5]イベントを参照のこと。
+イベント・プロパティは、親イベントによってトリガーされるメッセージのフィルタリングと、リキッド・パーソナライゼーションのために設計されている。デフォルトでは、Braze ユーザープロファイルでは永続化されません。セグメンテーションでイベントプロパティ値を使用するには、イベントプロパティ値を長期的に保存するための様々なアプローチについて詳述している[カスタム]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)イベントを参照のこと。
 
 #### イベント依頼例
 
@@ -109,19 +109,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 時間コード Wiki][19]
+- [ISO 8601 時間コード Wiki](http://en.wikipedia.org/wiki/ISO_8601)
 
 ## イベント・オブジェクト
 
 提供された例を使えば、誰かが最近予告編を見て、映画をレンタルしたことがわかる。キャンペーンに入り、これらのプロパティに基づいてユーザーをセグメントすることはできませんが、Liquid を使用してチャネルを介し、カスタムメッセージを送信するために、受け取りの形でこれらのプロパティを使用することで、戦略的に使用することができます。例えば、『こんにちは、**Beth**。**Dan Alexander** の **The Sad Egg** をレンタルしていただき、ありがとうございます。お客様のレンタル状況に基づいて、お勧めの映画をご紹介いたします...』のように使用できます。
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 タイムコード ウィキ"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 時間コード"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

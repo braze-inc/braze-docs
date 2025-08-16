@@ -14,7 +14,7 @@ description: "この記事には2016年10月のリリースノートが含まれ
 > 更新:Braze の**Security Settings** は、**Company Settings** ページからアクセスでき、パスワードの再利用と有効期限の規則も含まれています。
 
 ## インポート後のCSV ダウン読み込む
-Braze ユーザーが、最近インポートしたユーザーの CSV を読み込めるようになりました。これにより、システムからのデータ同期の可視性が向上します。CSV インポートについて詳しくは、[こちら]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)をご覧ください。
+Braze ユーザーが、最近インポートしたユーザーの CSV を読み込めるようになりました。これにより、システムからのデータ同期の可視性が向上します。CSV インポートについて詳しくは、[こちら]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)をご覧ください。
 
 ## 記念日フィルター
 [バースデーフィルター]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/)に加えて、Brazeは記念日フィルターをサポートするようになりました。これにより、ロイヤルティのマイルストーンのカレンダー日に基づいてユーザーの目標を設定したり、通知を補充したりすることができます!この機能にアクセスするには、[セグメント] ページで [カスタム属性の日付] フィルターを選択します。フィルターについて詳しくは、[こちら]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters)をご覧ください。

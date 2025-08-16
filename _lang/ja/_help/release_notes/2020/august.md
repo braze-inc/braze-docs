@@ -13,21 +13,21 @@ Braze は、2つの新しい external ID 移行エンドポイントをリリー
 
 ## 解約予測
 
-Braze の Predictive Suite では、機械学習を直接的に利用できます。[Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/)から始めると、Braze プラットフォーム内のデータシームレスにを効果的に活用し、行動することは、今まで以上に簡単です。これを使えば、特定の顧客ベースの解約リスクを予測するためにカスタマイズされた機械学習モデルを作成し、手遅れになる前に機械学習がリスクがあると判断したユーザーにメッセージを送ることができる。 
+Braze の Predictive Suite では、機械学習を直接的に利用できます。[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)から始めると、Braze プラットフォーム内のデータシームレスにを効果的に活用し、行動することは、今まで以上に簡単です。これを使えば、特定の顧客ベースの解約リスクを予測するためにカスタマイズされた機械学習モデルを作成し、手遅れになる前に機械学習がリスクがあると判断したユーザーにメッセージを送ることができる。 
 
 この機能のプレビューは、8月初旬に、要件を満たす Braze のお客様のダッシュボードに表示されます。完全な機能については、アカウントマネージャーにお問い合わせください。
 
 ## Currents トラッキングプロパティの更新
 
-特定の Currents メッセージエンゲージメントイベント内に、トラッキングプロパティ `canvas_variation_name` および `canvas_step_name` が追加されました。全リストは、[メッセージ・エンゲージメント・イベント用語集と]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) [カレントのChangelogを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/)チェックしてほしい。
+特定の Currents メッセージエンゲージメントイベント内に、トラッキングプロパティ `canvas_variation_name` および `canvas_step_name` が追加されました。全リストは、[メッセージ・エンゲージメント・イベント用語集と]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) [カレントのChangelogを]({{site.baseurl}}/user_guide/data/braze_currents/)チェックしてほしい。
 
 ## Amazon Personalizeパートナーシップ
 
-Amazon Personalizeは、機械学習を利用して、ウェブサイトやアプリケーションに高品質なレコメンデーションを作成する。Amazonパーソナライズは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、ターゲットを絞ったマーケティングプロモーションを可能にし、顧客エンゲージメントを向上させる。詳しくは、[Amazon Personalizeの]({{site.baseurl}}/partners/data_augmentation/recommendation/amazon_personalize/)ドキュメントをご覧いただきたい。
+Amazon Personalizeは、機械学習を利用して、ウェブサイトやアプリケーションに高品質なレコメンデーションを作成する。Amazonパーソナライズは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、ターゲットを絞ったマーケティングプロモーションを可能にし、顧客エンゲージメントを向上させる。詳しくは、[Amazon Personalizeの]({{site.baseurl}}/partners/amazon_personalize/)ドキュメントをご覧いただきたい。
 
 ## Vizbeeパートナーシップ
 
-Vizbeeは、家庭内のすべてのスマートフォンとスマートテレビを1つのシームレスなデバイスとして連携させ、優れたユーザー体験を可能にする。Vizbeeは、すべてのCTVデバイス（Roku、FireTV、Samsung TV、LG TVなど）で視聴者を獲得し、エンゲージするために、通知、ディープリンク、電子メールなどの既存のモバイルアプリ・マーケティング・チャンネルを活用するのに役立つ。詳細については、[Vizbee]({{site.baseurl}}/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/) ドキュメントを参照してください。 
+Vizbeeは、家庭内のすべてのスマートフォンとスマートテレビを1つのシームレスなデバイスとして連携させ、優れたユーザー体験を可能にする。Vizbeeは、すべてのCTVデバイス（Roku、FireTV、Samsung TV、LG TVなど）で視聴者を獲得し、エンゲージするために、通知、ディープリンク、電子メールなどの既存のモバイルアプリ・マーケティング・チャンネルを活用するのに役立つ。詳細については、[Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/) ドキュメントを参照してください。 
 
 ## Bluedot パートナーシップ
 
@@ -35,4 +35,4 @@ Bluedot は、アプリのための正確でわかりやすいジオフェンシ
 
 ## Iterate パートナーシップ
 
-Iterate は、スマートで使いやすく、ブランドに合わせてルックアンドフィールをカスタマイズした調査ツールを提供し、顧客から簡単に学べるようにしています。詳細については、[Iterate]({{site.baseurl}}/partners/additional_channels/surveys/iterate/) ドキュメントを参照してください。 
+Iterate は、スマートで使いやすく、ブランドに合わせてルックアンドフィールをカスタマイズした調査ツールを提供し、顧客から簡単に学べるようにしています。詳細については、[Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/) ドキュメントを参照してください。 

@@ -34,7 +34,7 @@ tool: Segments
 
 ユーザーをターゲットにする状況では、`OR`演算子の使用を避けるべき場合があります。`OR` 演算子は、ユーザーがステートメント内の1つ以上のフィルターの基準を満たす場合にtrueと評価されるステートメントを作成します。たとえば、"foodies"に属するが、"non-foodies"または"candy-lovers"のいずれにも属さないユーザーのSegmentを作成する場合は、`OR`演算子を使用します。
 
-![][1]
+![]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
 ただし、「foodies」セグメントに属し、「non-foodies」および「candy-lovers」セグメントのいずれにも属さないユーザーをセグメント化することが目的の場合は、`AND` 演算子を使用します。このようにして、キャンペーンまたはキャンバスを受け取るユーザーは、意図されたセグメント（「フーディーズ」）に属し、同時に他のセグメント（「非フーディーズ」および「キャンディー愛好家」）には属しません。 
 
@@ -50,14 +50,11 @@ tool: Segments
 
 次の例では、`AND`と`OR`の両方の演算子を使用します。ここで、ターゲットオーディエンスには、Nike スニーカーまたは Adidas スニーカーを購入し、メール通知を受信するためにオプトインしたユーザーが含まれます。
 
-![ユーザーの好きなブランドが Nike か Adidas で、メールにオプトインしているスニーカー購入者のセグメントを構築する][33]
+![ユーザーのお気に入りのブランドがナイキやアディダスと等しく、]({% image_buster /assets/img_archive/NikeSneakers.png %})にメールを送ることを選択したスニーカーショッパーのセグメントの構築
 
-正しいロジックを構築する別の方法は、Segmentを作成し、フィルターs に基づいてそれに分類される[ユーザーs][35] をプレビューする] ことです。この方法を使用すると、属性、アプリバージョン、またはその他のセグメンテーションが表示されている内容と一致していることを確認できます。
+適切なロジックを構築する別の方法は、セグメントを作成し、フィルターに基づいてそのセグメントに分類される[ユーザーをプレビュー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/)することです。この方法を使用すると、属性、アプリバージョン、またはその他のセグメンテーションが表示されている内容と一致していることを確認できます。
 
 それでもサポートが必要な場合は、[サポートチケットを]({{site.baseurl}}/braze_support/)を登録してください。
 
 _最終更新日：2022年6月3日_
 
-[1]: {% image_buster /assets/img_archive/or_operator_segment.png %}
-[33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
-[35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/

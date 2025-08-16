@@ -17,7 +17,7 @@ guide_featured_list:
   - name: "POST:ダッシュボードユーザーアカウントを作成"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "取得:リソースIDで既存のダッシュボードユーザーアカウントを検索する"
+  - name: "取得:リソース ID で既存のダッシュボードユーザーアカウントを検索する"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
   - name: "取得:既存のダッシュボードユーザーアカウントをメールで検索"
