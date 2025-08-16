@@ -2,7 +2,7 @@
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 >
-> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
+> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension. Unlike standard Segment Extensions, SQL Segment Extensions [consume credits](#credits).
 
 ## Prerequisites
 
@@ -208,7 +208,7 @@ Select a SQL Segment Extension to view where the extension is being used, archiv
 
 {% multi_lang_include segments.md section='Refresh settings' %}
 
-## Snowflake credits
+## Snowflake credits {#credits}
 
 Each Braze workspace has 5 Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
 
