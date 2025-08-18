@@ -964,7 +964,7 @@ Message in-app, cartes de contenu
 E-mail, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md indicateurs='Total Opens' %}
+{% multi_lang_include metrics.md metric='Total Opens' %}
 
 |Canal|Informations supplémentaires|
 |-------|-----------------------|
