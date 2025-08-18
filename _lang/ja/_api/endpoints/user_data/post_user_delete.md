@@ -16,9 +16,9 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 
 > 既知のユーザー識別子を指定してユーザー・プロファイルを削除するには、このエンドポイントを使用する。
 
-1 つのリクエストには、最大 50 個の `external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または `phone_numbers` を含めることができます。単一のリクエストに含めることができるのは、`external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または`phone_numbers`のいずれか1つだけです。 
+1 つのリクエストには、最大 50 個の `external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または `phone_numbers` を含めることができます。単一のリクエストに含めることができるのは、`external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または`phone_numbers` のいずれか1つだけです。 
 
-API を使用した一括ユーザ削除では解決できないユースケースがある場合は、[ブレーズサポートチーム]({{site.baseurl}}/user_guide/administrative/access_braze/support/) にお問い合わせください。
+API 経由でユーザーを一括削除しても解決できないユースケースがある場合は、[Braze サポートチーム]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 
 {% alert warning %}
 ユーザープロファイルの削除は元に戻せません。ユーザーを完全に削除するため、データの矛盾が発生する可能性があります。[API を使用してユーザープロファイルを削除する]({{site.baseurl}}/help/help_articles/api/delete_user/)場合の詳細については、ヘルプドキュメントを参照してください。
@@ -55,19 +55,23 @@ Authorization: Bearer YOUR_REST_API_KEY
 | パラメーター         | required | データ型                  | 説明                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
 | `external_ids`    | オプション | 文字列の配列           | 削除する外部識別子。                                                    |
-| `user_aliases`    | オプション | ユーザー別名オブジェクトの配列 | [削除するユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
-| `braze_ids`       | オプション | 文字列の配列           | 削除するブレーズユーザー識別子。                                                  |
-| `email_addresses` | オプション | 文字列の配列           | 削除するユーザメール。詳細については、[電子メールによるユーザーの削除](#deleting-users-by-email)を参照してください。                                                             |
-| `phone_numbers` | オプション | 文字列の配列 | 削除するユーザー電話番号。 |
+| `user_aliases`    | オプション | ユーザー別名オブジェクトの配列 | 削除する[ユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
+| `braze_ids`       | オプション | 文字列の配列           | 削除する Braze ユーザー ID。                                                  |
+| `email_addresses` | オプション | 文字列の配列           | 削除するユーザーのメール。詳細については、[電子メールによるユーザーの削除](#deleting-users-by-email)を参照してください。                                                             |
+| `phone_numbers` | オプション | 文字列の配列 | 削除するユーザーの電話番号。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### メールでユーザーを削除する
+### メールアドレスと電話番号によるユーザーの削除
 
-識別子として`email` が指定された場合、識別子にはさらに`prioritization` の値が必要となる。`prioritization` は順序付き配列で、複数のユーザーが見つかった場合、どのユーザーを削除するかを指定する。つまり、複数のユーザーが優先順位に一致する場合、ユーザーの削除は起こらない。
+メールアドレスまたは電話番号が識別子として指定されている場合、追加の `prioritization` 値が識別子に必要です。`prioritization` は順序付けされた配列である必要があり、複数のユーザーがいる場合に削除するユーザーを指定する必要があります。つまり、複数のユーザーが優先順位に一致する場合、ユーザーの削除は起こらない。
 
-配列に使用できる値は、`identified`、`unidentified`、`most_recently_updated` です。`most_recently_updated` は、最も最近更新されたユーザーを優先することを意味します。
+配列に指定できる値は次のとおりです。
 
-優先配列には、一度に以下のオプションのうち1つしか存在できません。
+- `identified`
+- `unidentified`
+- `most_recently_updated` (最近更新されたユーザーを優先することを意味します）
+
+`prioritization` 配列には、一度に次のオプションのいずれかが存在する場合があります。
 
 - `identified` を持つユーザーを優先することである。 `external_id`
 - `unidentified` のないユーザーを優先することである。 `external_id`
