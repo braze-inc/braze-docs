@@ -1,5 +1,5 @@
 ---
-nav_title: Live activities for swift
+nav_title: Live activities for Swift
 article_title: Live Activities for the Swift Braze SDK
 page_order: 0.2
 description: "Learn how to set up Live Activities for the Swift Braze SDK."
