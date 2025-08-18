@@ -5,8 +5,7 @@ page_order: 3
 layout: dev_guide
 
 guide_top_header: "Data"
-guide_top_text: "Braze offers a breadth of metrics to measure your campaign performance. We also provide multiple reporting and tracking capabilities to get you the numbers you need.<br><br>Leverage Braze data to supplement your business intelligence (BI) and analytics efforts in other best-in-class reporting platforms using <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>, a data streaming export tool that your team can use to act on large amounts of granular customer data."
-description: "Braze offers a wide breadth of metrics for you to use when measuring the success of your campaigns. We also provide multiple reports and tracking capabilities to ensure you get the numbers you need." 
+guide_top_text: "Data plays a crucial role in enhancing your customer engagement strategy by enabling you to create personalized experiences, understand customer behavior, and optimize messaging strategies. At Braze, we build all data capabilities with three core things in mind: <br><br>**1.** <a href='/docs/user_guide/data/#making-customer-data-work-harder/'>Make customer data work harder.</a><br> **2.** <a href='/docs/user_guide/data/#enhancing-data-agility-to-drive-performance/'>Enhance data agility to drive performance.</a><br>**3.** <a href='/docs/user_guide/data/#keeping-brands-data-secure-safe-and-compliant/'>Keep brands’ data secure, safe, and compliant.</a>" 
 
 guide_featured_title: "Braze Data Platform"
 guide_featured_list:
@@ -35,4 +34,20 @@ guide_menu_list2:
     link: /docs/user_guide/data/infrastructure/data_points/
     image: /assets/img/braze_icons/check-square-broken.svg
 ---
-<br><br>
+
+### Making customer data work harder
+
+- **Flexible and component-based:** Our overarching goal is to help brands utilize their data more effectively (and fully). Built with a composable architecture, brands can leverage the technologies they need to make their data work harder, without unnecessary middleware. 
+- **Partner integrations:** We prioritize integrations with best of breed ecosystem technologies (and offer APIs) that make real-time, bi-directional data sharing easy.
+- **Stream-processing architecture:** Customers can trigger actions on any data point ingested into Braze for segmentation, orchestration, and personalization.
+
+### Enhancing data agility to drive performance 
+
+- **Easy audience construction:** Reduce reliance on technical teams to create audiences and deliver personalized customer engagement at scale. 
+- **Speed and performance:** Engagement data and insights are delivered in real-time, which supports iterative, effective customer engagement, as well as broader business decision-making.
+
+### Keeping brands’ data secure, safe, and compliant
+
+- **Industry leading security practices:** Conduct regular third-party audits, including SOC 2 Type 2 and ISO 27001, to ensure compliance with the highest industry standards. Maintain a public bug bounty program to proactively address potential vulnerabilities and have a dedicated security team committed to safeguarding customer data.
+- **Industry compliance:** Provide tools that promote adherence to data protection regulations, including GDPR and CCPA.
+- **Data privacy:** Enable customers to manage end-user consent, process requests, and action consumer rights.
