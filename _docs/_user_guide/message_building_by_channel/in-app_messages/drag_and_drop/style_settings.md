@@ -52,7 +52,7 @@ For Modal and Fullscreen in-app messages, you can customize the close button dis
 
 ![Options to customize the close x button in in-app messages including button size, fill color, background color, border style, and border radius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
 
-### Span Styling
+### Span styling
 
 Adding span styling to text within in-app messages allows for enhanced customization of message appearance, enabling the use of different text colors, fonts, and sizes. Span styling gives your users a more engaging and visually appealing experience by drawing their attention to key information and improving overall message clarity.
 
