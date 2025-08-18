@@ -1,5 +1,5 @@
 ---
-nav_title: Google tag manager
+nav_title: Google Tag Manager
 article_title: Google Tag Manager for iOS
 platform: iOS
 page_order: 7
