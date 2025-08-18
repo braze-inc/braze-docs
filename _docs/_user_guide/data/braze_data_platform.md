@@ -5,7 +5,7 @@ page_order: 1
 layout: dev_guide
 
 guide_top_header: "Braze Data Platform"
-guide_top_text: "Braze Data Platform empowers you to use your data and create personalized, impactful messaging experiences across your business with three comprehensive steps: Data Unification, Data Activation, and Data Distribution.<br><br>**Unifying your data** in Braze means consolidating first-party data from any source using Cloud Data Ingestion and Data Transformation. This way, you can aggregate and transform your event data from Braze into a format that can be analyzed in a data warehouse. <br><br>**Activate your data** by cleaning, organizing, and preparing your data for use. This involves understanding your customers' behaviors and preferences in real-time with user profile and segments. <br><br> Lastly, **distribute your data** by streaming it to external systems for next-step insights and decisions. By using a combination of features in the Braze Data Platform, you can leverage your data to create meaningful, targeted messages that respond to what your customers do in teal-time."
+guide_top_text: "Braze Data Platform is a set of comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized, impactful experiences across the customer lifecycle based on three data related jobs to be done: Data Unification, Data Activation, and Data Distribution.<br><br>**Unifying your data** in Braze means consolidating first-party data from any source using APIs, SDKs, and built-in ingestion tools like Cloud Data Ingestion and Data Transformation. <br><br>**Activate your data** by cleaning, organizing, and preparing your data for use. This involves understanding your customers' behaviors and preferences in real-time with user profile and segments. <br><br> Lastly, **distribute your data** by streaming it to external systems for next-step insights and decisions. By using a combination of features in the Braze Data Platform, you can leverage your data to create meaningful, targeted messages that respond to what your customers do in teal-time."
 description: "This section includes articles related to the Braze Data Platform." 
 
 guide_featured_title: "Data Unification"
@@ -22,6 +22,12 @@ guide_featured_list:
   - name: Data Transformation
     link: /docs/user_guide/data/braze_data_platform/unification/data_transformation/
     image: /assets/img/braze_icons/database-01.svg
+  - name: Braze REST API
+    link: /docs/api/home/
+    image: /assets/img/braze_icons/code-02.svg
+  - name: Integrating the SDK
+    link: /docs/developer_guide/sdk_integration/
+    image: /assets/img/braze_icons/code-square-01.svg    
 
 guide_menu_title2: "Data Activation"
 guide_menu_list2:

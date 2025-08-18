@@ -10,35 +10,29 @@ description: "Braze offers a wide breadth of metrics for you to use when measuri
 
 guide_featured_title: "Braze Data Platform"
 guide_featured_list:
-  - name: Cloud Data Ingestion
-    link: /docs/user_guide/data/cloud_ingestion/
+  - name: Data Unification
+    link: /docs/user_guide/data/braze_data_platform/unification/
     image: /assets/img/braze_icons/upload-cloud-01.svg
-  - name: Currents
-    link: /docs/user_guide/data/braze_currents/
-    image: /assets/img/braze_icons/waves.svg
-  - name: User Data Collection
-    link: /docs/user_guide/data/user_data_collection/
+  - name: Data Activation
+    link: /docs/user_guide/data/braze_data_platform/activation/
+    image: /assets/img/braze_icons/zap.svg
+  - name: Data Distribution
+    link: /docs/user_guide/data/braze_data_platform/distribution/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Custom Data
-    link: /docs/user_guide/data/custom_data/
-    image: /assets/img/braze_icons/tool-01.svg
-  - name: Exporting Braze Data
-    link: /docs/user_guide/data/export_braze_data/
-    image: /assets/img/braze_icons/file-download-01.svg
-  - name: Data Transformation
-    link: /docs/user_guide/data/data_transformation/
-    image: /assets/img/braze_icons/database-01.svg
+  - name: Technology Partners
+    link: /docs/partners/data_and_analytics/
+    image: /assets/img/braze_icons/settings-02.svg
 
 guide_menu_title2: "Data Infrastructure"
 guide_menu_list2:
-  - name: Data Points Overview
-    link: /docs/user_guide/data/infrastructure/data_points/
-    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Data Centers
     link: /docs/user_guide/data/infrastructure/data_centers/
     image: /assets/img/braze_icons/database-02.svg
   - name: Field-Level Encryption
     link: /docs/user_guide/data/infrastructure/field_level_encryption/
     image: /assets/img/braze_icons/book-closed.svg
+  - name: Data Points
+    link: /docs/user_guide/data/infrastructure/data_points/
+    image: /assets/img/braze_icons/check-square-broken.svg
 ---
 <br><br>
