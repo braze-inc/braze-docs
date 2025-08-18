@@ -26,7 +26,21 @@ When configuring your email settings, your outbound email settings identify whic
 {% tabs local %}
 {% tab Display Name Address %}
 
-In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends. 
+In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends.
+
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the From address field to dynamically template this field based on custom attributes. For example, you can add if/else logic based on a custom attribute to send from different brands or regions:
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${brand}}} == 'Company A' %}
+support@companya.com
+{% elsif {{custom_attribute.${brand}}} == 'Company B' %}
+support@companyb.com
+{% else %}
+support@defaultcompany.com
+{% endif %}
+```
+{% endraw %}
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
@@ -34,6 +48,20 @@ In this section, you can add the names and email addresses that can be used when
 {% tab Reply-To Address %}
 
 Adding an email address in this section allows you to select it as a reply-to address for your email campaign. You can also make an email address the default one by selecting **Make Default**. These email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
+
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the Reply-to address field to dynamically template this field based on custom attributes. For example, you can add if/else logic based on a custom attribute to send replies to different regions or departments:
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${region}}} == 'US' %}
+us-support@company.com
+{% elsif {{custom_attribute.${region}}} == 'EU' %}
+eu-support@company.com
+{% else %}
+global-support@company.com
+{% endif %}
+```
+{% endraw %}
 
 ![]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
 

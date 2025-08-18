@@ -100,6 +100,10 @@ After you've finished designing and building your email message, it's time to ad
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
 4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
 
+{% alert tip %}
+You can use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name + Address** and **Reply-To Address** fields to dynamically template these based on custom attributes. This allows you to send from different brands, regions, or departments using a single email campaign or Canvas step.
+{% endalert %}
+
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
 
 #### Advanced
