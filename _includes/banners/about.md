@@ -58,9 +58,9 @@ If multiple Banners are set to the same priority, the newest Banner that user is
 
 ### Message delivery
 
-Banner messages are delivered to your app or website as HTML content, typically rendered inside an iFrame. This ensures that your Banners will render consistently across devices, and helps you keep their styles and scripts separate from the rest of your code.
+Banner messages are delivered to your app or website as HTML content, typically rendered inside an iframe. This ensures that your Banners will render consistently across devices, and helps you keep their styles and scripts separate from the rest of your code.
 
-iFrames allow for dynamic and personalized content updates that don't require changes to your codebase. Each iFrame retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
+Iframes allow for dynamic and personalized content updates that don't require changes to your codebase. Each iframe retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
 
 ### Dimensions and sizing
 
