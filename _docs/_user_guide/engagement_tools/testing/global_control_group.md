@@ -1,5 +1,5 @@
 ---
-nav_title: Global control group
+nav_title: Global Control Group
 article_title: Global Control Group
 alias: /global_control_group/
 page_order: 0
