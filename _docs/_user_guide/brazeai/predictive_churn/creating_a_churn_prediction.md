@@ -45,14 +45,16 @@ Here's an example of a simple definition based on lapsing sessions in the last 7
 For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the following section on [Sample churn definitions](#sample-definitions).
 
 {% alert note %}
-For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped.
+For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped. <br><br>**Example:** If churn is defined as "has not purchased in the past 60 days", we consider active users those who did purchase in the past 60 days. As a result, anybody who didn't make a purchase in the last 60 days is not considered an active user. This means a churn audience created from this churn definition would only include users who have purchased in the past 60 days. This may make the resulting predictive churn audience look significantly smaller than the original population—most users in a workspace might already meet the definition of churned and therefore not be active in the churn prediction.
 {% endalert %}
 
 Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the prediction has enough data to learn from.
 
 ## Step 3: Filter your prediction audience
 
-Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you'd like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
+Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the above note for who is considered active for a churn model).
+
+Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who are relevant for this use case. As an example, if you're a ride-sharing app with drivers and riders in your user base, and you're building a churn model for drivers that may stop driving for you, you'll want to filter your prediction audience to just drivers so that riders don't enter the model.
 
 {% alert note %}
 The prediction audience cannot exceed 100 million users.
