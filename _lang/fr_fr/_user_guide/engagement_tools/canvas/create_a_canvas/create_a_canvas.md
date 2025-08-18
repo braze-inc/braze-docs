@@ -177,7 +177,7 @@ Pour afficher des statistiques supplémentaires, telles que le chiffre d'affaire
 
 ##### Pourquoi le nombre d'audiences cibles peut-il différer du nombre d'utilisateurs atteignables ?
 
-{% multi_lang_include segments.md section='Différentes tailles d'audience' %}
+{% multi_lang_include segments.md section='Differing audience size' %}
 
 #### Étape 1.4 : Sélectionner vos paramètres d’envoi
 
