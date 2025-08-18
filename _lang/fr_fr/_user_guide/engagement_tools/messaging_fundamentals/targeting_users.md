@@ -98,7 +98,7 @@ Braze fournit des statistiques d’audience détaillées pour les canaux ciblés
 
 ##### Pourquoi le nombre d'audiences cibles peut-il différer du nombre d'utilisateurs atteignables ?
 
-{% multi_lang_include segments.md section='Différentes tailles d'audience' %}
+{% multi_lang_include segments.md section='Differing audience size' %}
 
 ![La section "Population totale" avec le nombre estimé d'utilisateurs joignables dans chaque canal ciblé.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
