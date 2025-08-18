@@ -14,7 +14,7 @@ platform:
 
 # Criação de cartões de conteúdo
 
-> Este artigo discute a abordagem básica que você usará ao implementar cartões de conteúdo personalizados, bem como três casos de uso comuns: imagens de banner, uma caixa de entrada de mensagens e um carrossel de imagens. Ele pressupõe que você já tenha lido os outros artigos do guia de personalização do Content Card para entender o que pode ser feito por padrão e o que requer código personalizado. É especialmente útil entender como [registrar a análise]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de dados dos seus cartões de conteúdo personalizados. 
+> Este artigo discute a abordagem básica que você usará ao implementar cartões de conteúdo personalizados, bem como três casos de uso comuns. Ele pressupõe que você já tenha lido os outros artigos do guia de personalização do Content Card para entender o que pode ser feito por padrão e o que requer código personalizado. É especialmente útil entender como [registrar a análise]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de dados dos seus cartões de conteúdo personalizados. 
 
 ## Criação de um cartão
 
@@ -23,15 +23,15 @@ platform:
 {% tabs local %}
 {% tab Android %}
 
-Primeiro, crie seu próprio fragmento personalizado. O padrão [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) foi projetado apenas para lidar com nossos tipos de cartão de conteúdo padrão, mas é um bom ponto de partida.
+Primeiro, crie seu próprio fragmento personalizado. O padrão [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) foi projetado apenas para lidar com nossos tipos de cartão de conteúdo padrão, mas é um bom ponto de partida.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Primeiro, crie seu próprio componente personalizado de view controller. O padrão [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) foi projetado apenas para lidar com nossos tipos de cartão de conteúdo padrão, mas é um bom ponto de partida.
 
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Primeiro, crie seu componente HTML personalizado que será usado para renderizar os cartões. 
 
@@ -58,7 +58,7 @@ Para testar seu cartão de conteúdo:
 
 ## posicionamentos de cartão de conteúdo
 
-Os cartões de conteúdo podem ser usados de muitas maneiras diferentes. Três implementações comuns são usá-los como um centro de mensagens, um anúncio em banner ou um carrossel de imagens. Para cada um desses posicionamentos, você atribuirá [pares de valores-chave]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (a propriedade `extras` no modelo de dados) aos seus cartões de conteúdo e, com base nos valores, ajustará dinamicamente o comportamento, a aparência ou a funcionalidade do cartão durante o tempo de execução. 
+Os cartões de conteúdo podem ser usados de muitas maneiras diferentes. Três implementações comuns são usá-las como um centro de mensagens, um anúncio de imagem dinâmico ou um carrossel de imagens. Para cada um desses posicionamentos, você atribuirá [pares de valores-chave]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (a propriedade `extras` no modelo de dados) aos seus cartões de conteúdo e, com base nos valores, ajustará dinamicamente o comportamento, a aparência ou a funcionalidade do cartão durante o tempo de execução. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -68,7 +68,7 @@ Os cartões de conteúdo podem ser usados para simular um centro de mensagens. N
 
 #### Exemplo
 
-Por exemplo, talvez você queira criar dois cartões de mensagens: uma chamada para ação para os usuários ativarem as recomendações de leitura e um código de cupom dado ao seu novo segmento de assinantes.
+Por exemplo, talvez queira criar dois cartões de mensagens: uma chamada para ação para que os usuários ativem as recomendações de leitura e um código de cupom dado ao seu novo segmento de assinantes.
 
 Chaves como `body`, `title` e `buttonText` podem ter valores simples de string que seus profissionais de marketing podem definir. Chaves como `terms` podem ter valores que fornecem uma pequena coleção de frases aprovadas por seu departamento jurídico. Chaves como `style` e `class_type` têm valores de string que podem ser definidos para determinar como o cartão será renderizado no app ou site.
 
@@ -237,8 +237,8 @@ Para implementar um carrossel de cartões de conteúdo:
 Se estiver implementando um carrossel como um feed secundário de cartões de conteúdo, certifique-se de [classificar os cartões no feed correto usando pares de valores-chave]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 {% endalert %}
 
-### Banner
+### Somente imagem
 
-Os cartões de conteúdo não precisam se parecer com "cartões". Por exemplo, os cartões de conteúdo de banner podem aparecer como um banner dinâmico que é exibido persistentemente em sua página inicial ou na parte superior de páginas designadas.
+Os cartões de conteúdo não precisam se parecer com "cartões". Por exemplo, os cartões de conteúdo podem aparecer como uma imagem dinâmica que é exibida persistentemente em sua página inicial ou na parte superior de páginas designadas.
 
 Para conseguir isso, seus profissionais de marketing criarão uma campanha ou etapa do Canva com um cartão de conteúdo do tipo **Somente imagem**. Em seguida, defina os pares de valores-chave apropriados para usar [os cartões de conteúdo como conteúdo suplementar]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).
