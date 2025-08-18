@@ -67,7 +67,7 @@ HAVING COUNT(DISTINCT id) > 3
 イベント、時間範囲
 {% endapitags %}
 
-過去4四半期ごとに購入したユーザーを選択します。このユーザーセグメントは、[audience sync]({{site.baseurl}}/partners/canvas_steps) で使用して、獲得する価値の高い類似顧客を識別できます。
+過去4四半期ごとに購入したユーザーを選択します。このユーザーセグメントは、[audience sync]({{site.baseurl}}/partners/canvas_audience_sync/) で使用して、獲得する価値の高い類似顧客を識別できます。
 
 ```sql
 ELECT DISTINCT user_id
