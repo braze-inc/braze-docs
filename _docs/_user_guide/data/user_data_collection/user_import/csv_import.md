@@ -260,7 +260,7 @@ You can import more than one CSV at the same time. CSV imports run concurrently,
 
 ## Data point considerations
 
-When importing CSV data, customer information will overwrite existing values on user profiles and count as data points, with some exceptions for external IDs and blank values.
+If your Braze pricing includes data points, keep in mind that importing CSV data will overwrite existing values on user profiles and count as data points, with some exceptions for external IDs and blank values.
 
 | Consideration | Details |
 |---|---|
