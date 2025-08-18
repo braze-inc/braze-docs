@@ -1,5 +1,5 @@
 ---
-nav_title: "Tutorial: Displaying banners"
+nav_title: "Tutorial: Displaying Banners"
 article_title: "Tutorial: Displaying a Banner by Placement ID"
 description: "New to Banners in the Braze SDK? Start with this tutorial on displaying Banners by placement ID."
 page_order: 10
