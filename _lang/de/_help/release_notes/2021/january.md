@@ -17,7 +17,7 @@ In dieser detaillierten Anleitung erfahren Sie, wie Sie die Unterklassen nutzen 
 
 ## SMS angepasste Schlüsselwortkategorien und Retargeting-Optionen
 
-Braze hat seine nativen SMS-Funktionen um die Möglichkeit erweitert, angepasste Schlüsselwörter für Two-Way Messaging, angepasste Kategorien für Schlüsselwörter, mehrsprachige Unterstützung sowie Optionen für Retargeting und Filterung von Schlüsselwörtern hinzuzufügen. Wenn Sie mehr über die Schlüsselwortverarbeitung bei SMS erfahren möchten, besuchen Sie unsere [SMS-Dokumentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/). 
+Braze hat seine nativen SMS-Funktionen um die Möglichkeit erweitert, angepasste Schlüsselwörter für Two-Way Messaging, angepasste Kategorien für Schlüsselwörter, mehrsprachige Unterstützung sowie Optionen für Retargeting und Filterung von Schlüsselwörtern hinzuzufügen. Wenn Sie mehr über die Schlüsselwortverarbeitung bei SMS erfahren möchten, besuchen Sie unsere [SMS-Dokumentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/). 
 
 ## Playable Partnerschaft ist live
 
