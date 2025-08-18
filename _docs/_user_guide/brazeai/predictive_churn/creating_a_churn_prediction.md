@@ -24,7 +24,7 @@ There is a limit of five concurrently active churn predictions. Prior to purchas
 
 On the **Basics** page, give your new prediction a unique name. You can also provide an optional description to take any notes on this particular prediction.
 
-Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker on the top.
+Select **Forward** to move to the next step. Optionally, you can select **Build Now** to use all the default settings and skip to the last step of creation. You'll have an opportunity to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker.
 
 ## Step 2: Define churn
 
@@ -84,7 +84,7 @@ Preview and demo prediction will never update users' risk of churn. Additionally
 
 ## Step 5: Build prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you select **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
