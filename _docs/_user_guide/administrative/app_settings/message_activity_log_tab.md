@@ -72,18 +72,38 @@ For example, some potential "Block" messages, in addition to the one listed in t
 
 ## Storage retention period
 
-Errors from the last 60 hours are available in the Message Activity Logs. Logs that are more than 60 hours old are cleaned and no longer accessible. 
+Errors from the last 60 hours are available in the Message Activity Logs. Logs that are more than 60 hours old are cleaned and no longer accessible.
 
 ### Number of error logs stored
 
 The number of saved logs is influenced by several conditions. For example, if a scheduled campaign is sent to thousands of users, we would potentially see a sample of the errors in the Message Activity Log instead of all errors.
 
 Here's an overview of conditions affecting how many logs will be saved:
-- Up to 20 Connected Content error logs will be saved for the same campaign within one fixed clock hour.
-- Up to 100 error logs of the same error type will be saved within one fixed clock hour per workspace for the following error types:
-    - Aborted message errors
+- Up to 20 error logs of the same error type will be saved for the same Campaign/Canvas Step within one fixed clock hour for the following error types:
+    - Connected Content errors
+    - Abort Message errors
     - Webhook errors
-    - Push notification errors
-    - Live Activity errors
-    - Bad user trigger errors
+    - SMS Rejection errors
+    - SMS Delivery Failure errors
+    - WhatsApp Failure errors
+    - A/B Testing errors
+- Up to 20 Push Notification error logs of the same error type will be saved for the same Campaign/Canvas Step + App combination for the following error types:
+    - Invalid Push Credential
+    - Invalid Push Token
+    - No Push Credential
+    - Token Errors
+    - Quota Exceeded
+    - Retries Timed Out
+    - Invalid Payload
+    - Unexpected Error
+- Up to 100 error logs of the same error type will be saved for the same App within one fixed clock hour for the following error types:
+    - Live Activity error (No Push credential)
+    - Live Activity error (Invalid Push credential)
+    - Other Live Activity errors
+    - APNS Feedback Removed Token errors
+- Up to 100 error logs of the same error type will be saved for the same Campaign/Canvas Step within one fixed clock hour for the following error types:
+    - Email Soft Bounce errors
+    - Email Hard Bounce errors
+    - Email Block errors
+- Up to 100 User Aliasing error logs will be saved for the same Workspace within one fixed clock hour.
 
