@@ -43,7 +43,7 @@ Vous pouvez utiliser Braze pour créer des campagnes de communication accessible
 - [Fondements de l'envoi de messages accessibles](https://learning.braze.com/accessible-messaging-foundations): Apprenez les principes fondamentaux de l'accessibilité qui s'appliquent aux communications de marque dans ce cours d'apprentissage de Braze.
 - [Créer des messages accessibles]({{site.baseurl}}/help/accessibility/): Apprenez à ajouter du texte alt et à structurer votre contenu pour les technologies d'assistance directement dans Braze.
 
-{% multi_lang_include l'accessibilité/feedback.md %}
+{% multi_lang_include accessibility/feedback.md %}
 
 ## Choisir un canal de communication
 
