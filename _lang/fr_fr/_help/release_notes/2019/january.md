@@ -11,7 +11,7 @@ Bienvenue dans une nouvelle année !
 
 ## Durée de vie (TTL) des notifications push
 
-Dans votre compte, sous **Gérer les paramètres**, cliquez sur l'onglet [Paramètres TTL push]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) pour gérer la durée des tentatives de réexpédition dans le cas où un appareil est hors ligne.
+Dans votre compte, sous **Gérer les paramètres**, cliquez sur l'onglet [Paramètres TTL push]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) pour gérer la durée des tentatives de réexpédition dans le cas où un appareil est hors ligne.
 
 ## Whitelist d’IP de contenu connecté
 
@@ -21,6 +21,5 @@ Braze est heureux d’annoncer qu’en raison de plusieurs mises à niveau d’i
 
 Nous avons ajouté l’option de pouvoir envoyer immédiatement n’importe quelle étape de Canvas.
 
-![Canvas Delay][1]
+![Canvas Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
 
-[1]: {% image_buster /assets/img/canvas_delay_immediate.png %}

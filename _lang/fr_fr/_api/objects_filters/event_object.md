@@ -15,11 +15,11 @@ description: "Cet article de référence explique l’objet Événement, ce qu�
 
 Un objet Événement est un objet qui passe par l’API lorsqu’un événement spécifique se produit. Les objets Événements sont hébergés dans un tableau d’événements. Chaque objet Événement du tableau d’événements représente l’occurrence unique d’un événement personnalisé par un utilisateur particulier à la valeur de temps désignée. L’objet Événement comporte plusieurs champs qui vous permettent de le personnaliser en définissant et en utilisant les propriétés de l’événement dans les messages, la collecte de données et la personnalisation.
 
-Pour savoir comment configurer des événements personnalisés pour une plateforme spécifique, reportez-vous au Guide d'intégration des plateformes dans le [Guide du développeur][1]. Reportez-vous à l'article correspondant à votre plate-forme :
+Pour savoir comment configurer des événements personnalisés pour une plateforme spécifique, reportez-vous au Guide d'intégration des plateformes dans le [Guide du développeur]({{site.baseurl}}/developer_guide/home/). Reportez-vous à l'article correspondant à votre plate-forme :
 
-- [Android][2]
-- [iOS][3]
-- [Web][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### Corps de l’objet
 
@@ -44,7 +44,7 @@ Pour savoir comment configurer des événements personnalisés pour une platefor
 
 - [ID utilisateur externe]({{site.baseurl}}/api/basics/#user-ids)
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
-- [Code temporel ISO 8601][22]
+- [Code temporel ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### Mettre à jour les profils existants uniquement
 
@@ -74,7 +74,7 @@ Les objets de propriété d'événement qui contiennent des valeurs de tableau o
 
 ### Persistance des propriétés de l’événement
 
-Les propriétés de l’événement sont conçues pour filtrer et personnaliser avec Liquid les messages déclenchés par leurs événements parents. Par défaut, elles ne sont pas persistantes sur le profil utilisateur Braze. Pour utiliser les valeurs des propriétés d'événement dans la segmentation, reportez-vous aux [événements personnalisés][5], qui détaillent les différentes approches de stockage à long terme des valeurs des propriétés d'événement.
+Les propriétés de l’événement sont conçues pour filtrer et personnaliser avec Liquid les messages déclenchés par leurs événements parents. Par défaut, elles ne sont pas persistantes sur le profil utilisateur Braze. Pour utiliser les valeurs des propriétés d'événement dans la segmentation, reportez-vous aux [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), qui détaillent les différentes approches de stockage à long terme des valeurs des propriétés d'événement.
 
 #### Demande d’exemple d’événement
 
@@ -109,19 +109,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 Time Code Wiki][19]
+- [ISO 8601 Time Code Wiki](http://en.wikipedia.org/wiki/ISO_8601)
 
 ## Objets Événement
 
 À l’aide de l’exemple fourni, nous pouvons voir que quelqu’un a regardé une bande-annonce récemment, puis a loué un film. Bien que nous ne puissions pas accéder à une campagne et segmenter les utilisateurs en fonction de ces propriétés, nous pouvons utiliser ces propriétés stratégiquement en les exploitant sous forme de reçu, pour envoyer un message personnalisé via un canal grâce à Liquid. Par exemple, "Hello **Beth**, Thanks for renting **The Sad Egg** by **Dan Alexander**, here are some recommended movies based on your rental..." (Bonjour **Beth**, Merci d'avoir loué **The Sad Egg** de **Dan Alexander**, voici quelques films recommandés en fonction de votre location).
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "Code temporel ISO 8601"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation
