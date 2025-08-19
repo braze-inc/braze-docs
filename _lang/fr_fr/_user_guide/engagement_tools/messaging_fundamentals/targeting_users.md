@@ -31,13 +31,38 @@ Pour cibler des utilisateurs appartenant à plusieurs segments créés précéde
 {% tab filtres multiples %}
 Pour cibler les utilisateurs sans ajouter un segment, vous pouvez utiliser une série de filtres. Il s'agit d'une audience improvisée lors de la création du message, qui vous permet d'ignorer la création de segments lors de l'envoi à des audiences ponctuelles.
 
-![Filtres supplémentaires pour un message qui cible les utilisateurs qui ont ouvert une application pour la dernière fois dans la journée, qui n'ont jamais reçu de campagne ou d'étape du canvas et qui ont effectué un achat il y a moins de 30 jours.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:70%;"}
+![Filtres supplémentaires pour un message qui cible les utilisateurs qui ont ouvert une application pour la dernière fois dans la journée, qui n'ont jamais reçu de campagne ou d'étape du canvas et qui ont effectué un achat il y a moins de 30 jours.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segments et filtres %}
 Vous pouvez également cibler les utilisateurs d’un ou plusieurs segments créés précédemment qui appartiennent également à des filtres supplémentaires. Après avoir sélectionné vos segments, vous pouvez affiner votre audience dans la section **Additional Filters (Filtres supplémentaires)**. La capture d'écran suivante en témoigne : elle cible les utilisateurs qui font partie du segment "Utilisateurs actifs par jour", du segment "N'ont jamais ouvert d'e-mail" et qui ont effectué un achat il y a plus de 30 jours.
 
-![Options de ciblage pour un message comprenant deux segments et un filtre supplémentaire pour un dernier achat effectué il y a moins de 30 jours.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:70%;"}
+![Options de ciblage pour un message comprenant deux segments et un filtre supplémentaire pour un dernier achat effectué il y a moins de 30 jours.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
+{% endtab %}
+
+{% tab Applications spécifiques %}
+
+Vous pouvez diffuser un message de campagne ou une étape du canvas à des apps spécifiques, par exemple en envoyant un message in-app ou une notification push uniquement aux apps Android ou iOS.
+
+Toutefois, n'oubliez pas qu'un utilisateur peut utiliser plusieurs applications. Le filtre "Has app" identifie tous les utilisateurs qui possèdent l'application sélectionnée, mais ne contrôle pas les applications qui reçoivent les messages. Par exemple, si vous appliquez un filtre de segment où "A l'app" est défini sur Android, tous les utilisateurs qui ont également l'app iOS recevront également le message sur leur app iOS.
+
+![Un filtre pour les utilisateurs qui ont l'application "Hello, World (Android)".]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+
+Imaginons que vous souhaitiez envoyer un message in-app uniquement aux applications Android.
+
+1. Créez un segment et définissez **Apps et sites web ciblés** sur les **Utilisateurs d'apps spécifiques**, puis sélectionnez votre app Android.
+
+![Un segment ciblant les utilisateurs d'une application spécifique, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+
+{: start="2"}
+2\. Dans votre campagne ou Canvas, allez à l'étape des **audiences cibles** et confirmez que votre segment est ajouté dans la section **Utilisateurs ciblés par segment.**  
+
+![L'étape "Audiences cibles" avec un exemple de segmentation sélectionné.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+
+{% alert note %}
+Cela ne fonctionnera pas si vous ajoutez votre segment dans la section **Filtres supplémentaires** par le biais d'un filtre d'appartenance à un segment. Vous devez faire directement référence à votre segment dans **Cibler les utilisateurs par segment** pour que votre message ne soit envoyé qu'à cette application.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -49,11 +74,11 @@ Pour les campagnes d'e-mails, vous pouvez cibler les groupes initiateurs dans la
 
 Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer s'il correspond aux critères de l'audience.
 
-![La section "Recherche d'un utilisateur" avec un bouton "Recherche d'un utilisateur".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%"}
+![La section "Recherche d'un utilisateur" avec un bouton "Recherche d'un utilisateur".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Résumé de l’audience
 
-Le **résumé de l'audience** donne un aperçu des personnes qui font partie de votre audience cible. Ici, vous pouvez limiter davantage votre audience en fixant un nombre maximum d'utilisateurs ou en [limitant la]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) vitesse de [réception/distribution]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/).
+Le **résumé de l'audience** donne un aperçu des personnes qui font partie de votre audience cible. Ici, vous pouvez limiter davantage votre audience en fixant un nombre maximum d'utilisateurs ou en [limitant]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) la vitesse de réception/distribution.
 
 ![La section "Résumé de l'audience" contient des options permettant de fixer un plafond d'utilisateurs ou une limite de débit pour la réception/distribution.]({% image_buster /assets/img_archive/audience_summary.png %})
 
@@ -70,6 +95,10 @@ Braze fournit des statistiques d’audience détaillées pour les canaux ciblés
 - Pour déterminer le nombre exact d'utilisateurs joignables, sélectionnez [Calculer les statistiques exactes]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics), car vous effectuerez une recherche parmi tous les utilisateurs de votre base.
 - Pour connaître le pourcentage de votre base d'utilisateurs ciblé ou la valeur vie client (LTV) de ce segment, sélectionnez **Afficher les statistiques supplémentaires.**
 - Pour connaître le pourcentage de votre base d'utilisateurs ciblé ou la valeur vie client (LTV) de ce segment, sélectionnez **Afficher les statistiques supplémentaires.**
+
+##### Pourquoi le nombre d'audiences cibles peut-il différer du nombre d'utilisateurs atteignables ?
+
+{% multi_lang_include segments.md section='Différentes tailles d'audience' %}
 
 ![La section "Population totale" avec le nombre estimé d'utilisateurs joignables dans chaque canal ciblé.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
