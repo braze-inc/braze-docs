@@ -1,7 +1,7 @@
 ---
 nav_title: Responsabilité civile
 article_title: Responsabilité civile
-page_order: 12
+page_order: 8
 page_type: reference
 description: "Cet article de référence détaille les politiques de responsabilité de Braze à l'égard des tiers qui lui sont associés."
 

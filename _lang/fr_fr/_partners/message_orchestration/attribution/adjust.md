@@ -33,10 +33,10 @@ L'intégration de Braze et Adjust vous permet d'importer des données d'attribut
 
 #### Android
 
-Si vous disposez d'une application Android, vous devez transmettre un ID unique de l'appareil Braze à Adjust.  
+Si vous disposez d'une application Android, vous devez transmettre un ID unique de l'appareil Braze à Adjust. Cet ID peut être défini dans la méthode `addSessionPartnerParameter()` du SDK Adjust. L’extrait de code suivant doit être inclus avant d'initialiser le SDK sur `Adjust.onCreate.`
 
 ```
-Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
@@ -74,7 +74,7 @@ Si vous prévoyez d'envoyer des événements post-installation d'Adjust vers Bra
 
 Dans Braze, accédez à **Intégrations** > **Partenaires technologiques** et sélectionnez **Adjust**. 
 
-Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés dans l'étape suivante lors de la configuration d'un postback dans le tableau de bord d'Adjust.<br><br>![Cette image montre la boîte "Importation de données pour attribution d'installation" disponible dans la page de la technologie Adjust. 
+Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés dans l'étape suivante lors de la configuration d'un postback dans le tableau de bord d'Adjust.<br><br>![Cette image montre la boîte "Importation de données pour attribution d'installation" disponible dans la page de la technologie Adjust. Dans cette zone, vous pouvez voir la clé d'importation des données et l’endpoint REST.][1]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer Braze dans Adjust
 
@@ -141,3 +141,5 @@ Si vous n'utilisez pas actuellement d'identifiants d'appareil (tels que l'IDFV o
 {% endalert %}
 
 
+[1]: {% image_buster /assets/img/attribution/adjust.png %}
+[2]: {% image_buster /assets/img/attribution/adjust2.png %}
