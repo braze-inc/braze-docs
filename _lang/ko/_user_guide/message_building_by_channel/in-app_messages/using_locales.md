@@ -10,7 +10,7 @@ description: "이 문서에서는 인앱 메시지에서 로케일을 사용하�
 
 > 작업 공간에 로케일을 추가한 후, 단일 인앱 메시지 내에서 다양한 언어로 사용자에게 타겟팅할 수 있습니다.
 
-{% multi_lang_include locales.md 섹션="전제 조건" %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 ## 로캘 사용
 
@@ -25,18 +25,18 @@ description: "이 문서에서는 인앱 메시지에서 로케일을 사용하�
 ![번역 ID가 있는 전통적인 편집기.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
 
 {: start="3"}
-3\. 태그를 추가한 후 메시지를 초안으로 저장합니다.
-4\. **언어 관리**를 선택하고 드롭다운을 사용하여 메시지에 대한 로케일을 추가하십시오.
+3. 태그를 추가한 후 메시지를 초안으로 저장합니다.
+4. **언어 관리**를 선택하고 드롭다운을 사용하여 메시지에 대한 로케일을 추가하십시오.
 
 !["언어 관리" 모달에 선택된 로케일이 하나 있습니다.]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
 
 {: start="5"}
-5\. **템플릿 다운로드를** 선택하여 번역 템플릿을 CSV 파일로 다운로드합니다. 그런 다음 CSV 파일에 번역을 입력합니다.
+5. **템플릿 다운로드를** 선택하여 번역 템플릿을 CSV 파일로 다운로드합니다. 그런 다음 CSV 파일에 번역을 입력합니다.
 
 ![번역 CSV 파일의 예.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 
 {: start="6"}
-6\. 번역 **업로드**를 선택하여 번역이 완료된 CSV 파일을 업로드합니다.
+6. 번역 **업로드**를 선택하여 번역이 완료된 CSV 파일을 업로드합니다.
 
 {% endtab %}
 {% tab 드래그 앤 드롭 편집기 %}
@@ -47,15 +47,15 @@ description: "이 문서에서는 인앱 메시지에서 로케일을 사용하�
 ![번역 ID가 두 개 있는 드래그 앤 드롭 편집기.]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. 태그를 추가한 후, 메시지를 초안으로 저장하고 편집기를 다시 열어보십시오.
-4\. **구축** 패널에서 **다국어**를 선택하고 드롭다운을 사용하여 메시지에 대한 로케일을 추가하십시오.
-5\. **템플릿 다운로드를** 선택하여 번역 템플릿을 CSV 파일로 다운로드합니다. 
+3. 태그를 추가한 후, 메시지를 초안으로 저장하고 편집기를 다시 열어보십시오.
+4. **구축** 패널에서 **다국어**를 선택하고 드롭다운을 사용하여 메시지에 대한 로케일을 추가하십시오.
+5. **템플릿 다운로드를** 선택하여 번역 템플릿을 CSV 파일로 다운로드합니다. 
 
 !["다국어" 패널에 템플릿 다운로드 버튼이 있습니다.]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
 
 {: start="6"}
-6\. CSV 파일에 번역을 입력합니다. 1단계에서 번역 태그를 직접 복사하여 붙여넣은 경우에는 CSV 파일의 **번역 태그** 열에서 `<code>` 을 제거해야 할 수 있습니다.
-7\. 번역 **업로드**를 선택하여 번역이 완료된 CSV 파일을 업로드합니다.
+6. CSV 파일에 번역을 입력합니다. 1단계에서 번역 태그를 직접 복사하여 붙여넣은 경우에는 CSV 파일의 **번역 태그** 열에서 `<code>` 을 제거해야 할 수 있습니다.
+7. 번역 **업로드**를 선택하여 번역이 완료된 CSV 파일을 업로드합니다.
 
 !["다국어" 패널에 템플릿 다운로드 및 번역 업로드 버튼이 있습니다.]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
 
@@ -68,6 +68,6 @@ CSV 파일의 ID 또는 로캘에 대한 변경 사항은 메시지에서 자동
 [번역 API를]({{site.baseurl}}/api/endpoints/translations) 확인하여 캠페인과 캔버스에서 번역을 관리하고 업데이트하세요.
 {% endalert %}
 
-{% multi_lang_include locales.md 섹션="미리 보기" %}
+{% multi_lang_include locales.md section="Preview" %}
 
-{% multi_lang_include locales.md 섹션="자주 묻는 질문" %}
+{% multi_lang_include locales.md section="Frequently Asked Questions" %}
