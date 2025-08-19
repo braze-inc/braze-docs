@@ -50,7 +50,7 @@ Select **Create New Catalog**, then choose to either **Upload CSV** or **Create 
 
 ### Method 1: Upload CSV
 
-Supported data types for uploading a CSV file include: string, integer, float, boolean, or or date/time.
+Supported data types for uploading a CSV file include: string, integer, float, boolean, or datetime.
 
 1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. Select a data type for each column.
