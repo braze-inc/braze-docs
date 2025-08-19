@@ -25,6 +25,7 @@ Si vous utilisez SendGrid comme fournisseur de messagerie, vous pouvez envoyer d
 2. Accédez à la page **Certificats, identifiants et profils.** 
 3. Sélectionnez **Services** > **Se connecter avec Apple pour la communication par e-mail**.
 4. Dans la section **Sources d'e-mail**, ajoutez les domaines et sous-domaines.
+- L'adresse doit être formatée comme suit : `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (par exemple : `bounces+1234567@braze.online.docs.com`). 
 
 Si l’adresse d’expédition souhaitée est une adresse `abmail`, y compris dans votre sous-domaine. Par exemple, utilisez `abmail.docs.braze.com` au lieu de `docs.braze.com`.
 
