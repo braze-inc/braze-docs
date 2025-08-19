@@ -25,13 +25,13 @@ description: "이 참조 문서에서는 Braze 데이터 변환의 몇 가지 �
 
 ## Braze와 통합
 
-Braze는 고객 인사이트 및 설문조사 플랫폼인 [Iterate와]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) 통합되어 있습니다. 데이터 변환을 사용하면 여러 개의 사용자 지정 속성을 저장하는 기존 통합 대신 하나의 중첩된 사용자 지정 속성 아래에 여러 개의 설문조사 응답을 저장할 수 있습니다.
+Braze has an integration with [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/), a customer insights and survey platform. 데이터 변환을 사용하면 여러 개의 사용자 지정 속성을 저장하는 기존 통합 대신 하나의 중첩된 사용자 지정 속성 아래에 여러 개의 설문조사 응답을 저장할 수 있습니다.
 
 ## 변환 코드 예시
 
 설문조사 응답이 수신될 때마다 전송하는 설문조사 플랫폼인 Typeform의 페이로드 샘플을 살펴보세요.
 
-![][1]
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab 기본 변환 %}
