@@ -84,11 +84,11 @@ If the URL requires basic authentication, Braze can store a basic authentication
 
 To add a new credential, select **Add credential** > **Basic authentication**. 
 
-!["Add credential" dropdown with the option to use basic authentication or token authentication.]({% image_buster /assets/img_archive/add_credential_button.png %})
+!["Add credential" dropdown with the option to use basic authentication or token authentication.]({% image_buster /assets/img_archive/add_credential_button.png %}){: style="max-width:60%"}
 
 Give your credential a name and enter the username and password.
 
-![The 'Create New Credential' window with the option to enter a name, username, and password.]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:30%" }
+![The 'Create New Credential' window with the option to enter a name, username, and password.]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:60%"}
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
@@ -108,7 +108,7 @@ When using Braze Connected Content, you may find that certain APIs require a tok
 
 To add a new credential that holds token values, select **Add credential** > **Token authentication**. Then, include the key-value pairs to be included in your API call headers and the domain of the API endpoint this credential can be used for.
 
-![An example token "token_credential_abc" with token authentication details.]({% image_buster /assets/img_archive/token_auth.png %})
+![An example token "token_credential_abc" with token authentication details.]({% image_buster /assets/img_archive/token_auth.png %}){: style="max-width:60%"}
 
 You can then use this credential in your API calls by referencing the credential name:
 
