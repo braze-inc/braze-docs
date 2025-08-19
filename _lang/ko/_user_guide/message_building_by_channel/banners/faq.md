@@ -9,4 +9,4 @@ tool:
   - Reports
 ---
 
-{% multi_lang_include 배너/faq.md 섹션="user" %}
+{% multi_lang_include banners/faq.md section="user" %}
