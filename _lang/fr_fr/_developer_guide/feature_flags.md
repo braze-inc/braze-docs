@@ -57,6 +57,9 @@ Pour déployer progressivement cette fonctionnalité, nous pouvons [créer un in
 
 Dans le code de notre application, nous n'afficherons le bouton **Start Live Chat** que lorsque l’indicateur de fonctionnalité Braze sera activé :
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import {useState} from "react";
 import * as braze from "@braze/web-sdk";
@@ -76,8 +79,56 @@ return (<>
   Need help? <button>Email Our Team</button>
   {liveChatEnabled && <button>Start Live Chat</button>}
 </>)
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Get the initial value from the Braze SDK
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_live_chat");
+Boolean liveChatEnabled = featureFlag != null && featureFlag.getEnabled();
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  FeatureFlag newFeatureFlag = braze.getFeatureFlag("enable_live_chat");
+  Boolean newValue = newFeatureFlag != null && newFeatureFlag.getEnabled();
+  liveChatEnabled = newValue;
+});
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Get the initial value from the Braze SDK
+val featureFlag = braze.getFeatureFlag("enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates() { event ->
+  val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
 
 ```
+
+{% endtab %}
+{% endtabs %}
 
 ### Contrôle à distance des variables d’application
 
@@ -92,6 +143,9 @@ Pour configurer à distance cette fonctionnalité, nous allons créer un indicat
 ![Indicateur de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente générique.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 Dans notre application, nous utiliserons les méthodes getter de Braze pour récupérer les propriétés de cet indicateur de fonctionnalité et créer les liens de navigation en fonction de ces valeurs :
+
+{% tabs %}
+{% tab JavaScript %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -114,6 +168,40 @@ return (<>
   </div>
 </>)
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// liveChatView is the View container for the Live Chat UI
+FeatureFlag featureFlag = braze.getFeatureFlag("navigation_promo_link");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+liveChatView.setPromoLink(featureFlag.getStringProperty("link"));
+liveChatView.setPromoText(featureFlag.getStringProperty("text"));
+
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// liveChatView is the View container for the Live Chat UI
+val featureFlag = braze.getFeatureFlag("navigation_promo_link")
+if (featureFlag?.enabled == true) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
+liveChatView.promoLink = featureFlag?.getStringProperty("link")
+liveChatView.promoText = featureFlag?.getStringProperty("text")
+```
+
+{% endtab %}
+{% endtabs %}
 
 Aujourd'hui, veille de Thanksgiving, il nous suffit de modifier ces valeurs de propriété dans le tableau de bord de Braze.
 
@@ -149,6 +237,9 @@ Pour commencer, nous allons créer un nouvel indicateur de fonctionnalité appel
 
 Dans notre application, nous vérifierons si l’indicateur de fonctionnalité est activé ou non et en annulant le flux de paiement en fonction de la réponse :
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -160,6 +251,35 @@ if (featureFlag?.enabled) {
   return <OldCheckoutFlow />
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_checkout_v2");
+braze.logFeatureFlagImpression("enable_checkout_v2");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewCheckoutFlow();
+} else {
+  return new OldCheckoutFlow();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
+braze.logFeatureFlagImpression("enable_checkout_v2")
+if (featureFlag?.enabled == true) {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 Nous mettrons en place notre test A/B dans le cadre d'une [expérience d’indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
