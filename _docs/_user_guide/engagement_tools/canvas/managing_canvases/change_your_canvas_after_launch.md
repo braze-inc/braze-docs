@@ -145,7 +145,7 @@ By creating or editing disconnected steps, you can make changes to these indepen
 
 ### Experiment Path step
 
-If your Canvas has an active or in progress experiment and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will end. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas.
+If your Canvas has an active or in-progress Winning Path or Personalized Path experiment and you update the active Canvas, regardless if you update the Experiment Path step itself, the in-progress experiment will end and the experiment step will not determine a winning path or personalized paths. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas. Otherwise, users will flow through the experiment path as if no optimization method was selected.
 
 ### Time delays
 
