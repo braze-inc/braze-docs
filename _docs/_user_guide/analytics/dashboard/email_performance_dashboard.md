@@ -30,7 +30,7 @@ View your email performance dashboard by going to **Analytics** > **Email Perfor
 
 The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Each tile shows the rate metric first, followed by the count metric (with the exception of *Sends*, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the *Unique click rate* from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
+Each tile shows the rate metric first, followed by the count metric (with the exception of *Sends*, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the *Unique click rate* from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparing-time-periods).
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |
