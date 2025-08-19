@@ -1,7 +1,7 @@
 ---
 nav_title: Definição de atribuições do usuário
 article_title: Configuração das atribuições do usuário por meio do Braze SDK
-page_order: 1.1
+page_order: 1.2
 description: "Saiba como definir as atribuições do usuário por meio do Braze SDK."
 ---
 

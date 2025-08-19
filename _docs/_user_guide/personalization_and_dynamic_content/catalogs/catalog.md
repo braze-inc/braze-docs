@@ -50,8 +50,10 @@ Select **Create New Catalog**, then choose to either **Upload CSV** or **Create 
 
 ### Method 1: Upload CSV
 
+Supported data types for uploading a CSV file include: string, integer, float, boolean, or datetime.
+
 1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
-2. Select one of the following data types for each column: boolean, number, string, or time.
+2. Select a data type for each column.
 <br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. Give your catalog a name. Keep in mind the following requirements for a catalog name:
 - Must be unique
@@ -152,6 +154,8 @@ After creating the catalog, you can begin referencing the [catalog in a campaign
 ## Managing catalogs through API
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
+
+Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
 
 ### Managing catalog items
 

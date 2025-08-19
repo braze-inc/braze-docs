@@ -109,12 +109,12 @@ COPY INTO
 
 1. AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
 
-![AWS の [プロパティ] タブ][1]{: height="50%" width="50%"}
+![AWS の [プロパティ] タブ]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\.必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
 
-![AWSで新しいイベントを作成する][2]{: height="50%" width="50%"}
+![AWS で新しいイベントを作成する]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\.オブジェクト作成通知のチェックボックスをオンにして、フォーム下部の ARN (Snowflake の通知チャンネル列) を確認します。
@@ -278,5 +278,3 @@ Braze Currents を使用して実行できる分析のタイプについては�
 質問がある場合や、Braze によるこのプロセスのガイドに興味がある場合は、Braze のアカウントマネージャーにお問い合わせください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img/aws-properties.png %}
-[2]: {% image_buster /assets/img/aws-events.png %}

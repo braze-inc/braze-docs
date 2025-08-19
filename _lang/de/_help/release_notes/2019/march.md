@@ -17,7 +17,7 @@ Braze freut sich, Ihnen mitteilen zu können, dass wir das Erscheinungsbild unse
 - Verbessertes responsives Verhalten für alle Nachrichtentypen zur besseren Anpassung an Ansichtsfenster
 - Umrandung von Buttons, um angepasste Kontraste zwischen Buttons zu schaffen
 
-Mit unseren [neuen In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/) wird die Interaktion mit Ihren Nutzer:innen von gut zu App-verblüffend!
+Mit unseren [neuen In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) wird die Interaktion mit Ihren Nutzer:innen von gut zu App-verblüffend!
 
 ![Vollbild-Verhalten]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
@@ -37,4 +37,4 @@ Sie können [Inkit]({{site.baseurl}}/partners/inkit/) jetzt als vorgefertigte We
 
 ## Google-Cloudspeicher
 
-[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/) ist nicht mehr in der Beta-Phase! Braze ist stolz darauf, bekannt geben zu können, dass Google Cloud Storage für interessierte Kund:innen innerhalb der Braze-Plattform verfügbar ist. Gehen Sie in Ihrem Braze-Konto zu **Technologiepartner** und suchen Sie nach Google Cloud Storage.
+[Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) ist nicht mehr in der Beta-Phase! Braze ist stolz darauf, bekannt geben zu können, dass Google Cloud Storage für interessierte Kund:innen innerhalb der Braze-Plattform verfügbar ist. Gehen Sie in Ihrem Braze-Konto zu **Technologiepartner** und suchen Sie nach Google Cloud Storage.

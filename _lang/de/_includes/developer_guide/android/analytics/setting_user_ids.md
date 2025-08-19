@@ -44,5 +44,5 @@ Weitere Informationen finden Sie in der Dokumentation zu [`changeUser`](https://
 
 ## User:innen Aliasing
 
-{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md plattform="Android" %}
 

@@ -20,10 +20,10 @@ tool: Segments
 
 ## カタログセグメントの作成
 
-1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレート [**カタログセグメント**] を選択します。<br>![作成するテンプレートとして「カタログセグメント」を選択したモーダル。][1]{: style="max-width:70%" }
+1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレートを選択します。<br>![イベントまたは購入のカタログセグメントを作成するオプションがあるモーダル。]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
-2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前生成されたテンプレートを持つSQL エディタ。][2]{: style="max-width:70%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
+2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前に生成されたテンプレートが表示されている SQL エディター。]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
 
 3. [**変数**] タブを使用して、セグメントを生成する前にテンプレートに必要なフィールドを指定します。<br>Braze がカタログアイテムへのエンゲージメントに基づいてユーザーを識別するには、次のことを行う必要があります。<br> \- カタログフィールドを含むカタログを選択します <br> \- イベントプロパティを含むカスタムイベントを選択します <br> \- カタログフィールドとイベントプロパティの値を一致させる
 
@@ -43,6 +43,28 @@ tool: Segments
 - `Value`:そのフィールドまたは列内の特定の値 <br><br> ヘルスケアアプリを例にとると、予約できる各医師のカタログ内に、`vision` や `dental` などの値を含む `specialty` というフィールドがあるとします。値が `dental` の医師を受診したユーザーをセグメント化するには、`Catalog field` として `specialty` を選択し、`Value` として `dental` を選択します。
 
 5. SQL セグメントを作成したら、[**プレビューの実行**] をクリックして、クエリがユーザーを返すかどうか、またはエラーがあるかどうかを確認することをお勧めします。[クエリ結果のプレビュー]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results)、[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions)の管理などの詳細については、「[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)」を参照してください。 
+
+{% alert note %}
+テーブル `CATALOGS_ITEMS_SHARED` を使用する SQL セグメントを作成する場合は、カタログ ID を指定する必要があります。以下に例を示します。
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
+
+## セグメントのメンバーシップの更新
+
+カタログセグメントのセグメントメンバーシップを更新するには、カタログセグメントを開き、[**アクション**] > [**最新の情報に更新**] > [**はい、更新します**] を選択します。
+
+{% alert tip %}
+ユーザーが頻繁に出入りすることが予想されるセグメントを作成した場合は、キャンペーンまたはキャンバスでそのセグメントをターゲットにする前に、使用するカタログセグメントを手動で更新してください。
+{% endalert %}
+
+### 更新設定の指定
+
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## ユースケース
 
@@ -100,5 +122,3 @@ tool: Segments
 
 追加のガイダンスについては、カスタマーサポートマネージャーまたは [Brazeサポート]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 
-[1]: {% image_buster /assets/img/catalog-segments-template.png %}
-[2]: {% image_buster /assets/img/catalog-segments-editor.png %}

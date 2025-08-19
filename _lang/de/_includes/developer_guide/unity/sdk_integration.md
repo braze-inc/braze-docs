@@ -214,7 +214,7 @@ Starten Sie zunächst Unity und lassen Sie es im Hintergrund laufen. Führen Sie
 {% endtabs %}
 
 {% alert tip %}
-Wenn Sie nach der Ausführung dieser Befehle Probleme haben, lesen Sie [Unity: Befehlszeilenargumente](https://docs.unity3d.com/2017.2/Documentation/Manual/CommandLineArguments.html).
+Wenn nach der Ausführung dieser Befehle Probleme auftreten, lesen Sie bitte [Unity: Befehlszeilenargumente](https://docs.unity3d.com/2017.2/Documentation/Manual/CommandLineArguments.html).
 {% endalert %}
 
 ### Schritt 3: Paket in Unity importieren
