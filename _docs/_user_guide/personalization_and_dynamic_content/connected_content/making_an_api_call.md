@@ -106,7 +106,7 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
 
-To add a new credential that holds token values, select **Add credential** > **Token authentication**. Then, include the key-value pairs to be included in your API call headers and the domain of the API endpoint this credential can be used for.
+To add a new credential that holds token values, select **Add credential** > **Token authentication**. Then, add the key-value pairs for your API call headers and the allowed domain.
 
 ![An example token "token_credential_abc" with token authentication details.]({% image_buster /assets/img_archive/token_auth.png %}){: style="max-width:60%"}
 
