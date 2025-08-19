@@ -30,10 +30,9 @@ Vous pouvez également exporter les données de tous les participants à une toi
 
 Les résultats de Canvas peuvent être exportés sur la base de composants individuels pour le flux de travail Canvas d'origine. Pour ce faire, sélectionnez le composant spécifique, puis le menu déroulant **Données de l'utilisateur** dans la page **Détails de l'étape du canvas.**  
 
-![Menu déroulant Données utilisateur sur la page Détails Canvas.][1]
+![Liste déroulante des données de l'utilisateur sur la page Détails du canvas.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
 Pour obtenir de l'aide sur les exportations CSV et API, consultez notre article [Résolution des problèmes d'exportation]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_csv_export.png %}
