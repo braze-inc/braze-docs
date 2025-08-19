@@ -22,11 +22,9 @@ description: "この記事には2016年6月のリリースノートが含まれ�
 
 ## データAPIエンドポイントをアンインストールする
 
-エクスポート API からアンインストール追跡データを直接取得できるようになりました。詳細については、[エクスポート・エンドポイントを][4]チェックしてほしい。
+エクスポート API からアンインストール追跡データを直接取得できるようになりました。詳細については、[エクスポート・エンドポイントを]({{site.baseurl}}/developer_guide/rest_api/export/#kpi-export)チェックしてほしい。
 
 ## エラーログの改善
 
-メッセージエラーログ][5] 】で、エラーの種類別にソートできるようになった！
+[メッセージエラーログ]({% image_buster /assets/img_archive/improved_error_log.png %})でエラータイプ別にソートできるようになりました。
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
-[5]: {% image_buster /assets/img_archive/improved_error_log.png %}
