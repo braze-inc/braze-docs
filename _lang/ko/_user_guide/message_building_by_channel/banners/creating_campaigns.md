@@ -70,7 +70,7 @@ channel:
 
 ### 6단계: 메시지 테스트(선택 사항)
 
-{% multi_lang_include 배너/testing.md page="캠페인" %}
+{% multi_lang_include banners/testing.md page="campaigns" %}
 
 ### 7단계: 캠페인 구축 완료
 
