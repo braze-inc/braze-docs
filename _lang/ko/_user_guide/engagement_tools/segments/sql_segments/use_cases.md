@@ -67,7 +67,7 @@ HAVING COUNT(DISTINCT id) > 3
 이벤트, 시간 범위
 {% endapitags %}
 
-지난 4분기 각각에 구매를 한 사용자를 선택합니다. 이 사용자 세그먼트는 [잠재 고객 동기화와]({{site.baseurl}}/partners/canvas_steps) 함께 사용하여 가치가 높은 유사 고객을 식별하여 고객 확보에 활용할 수 있습니다.
+지난 4분기 각각에 구매를 한 사용자를 선택합니다. This user segment can be used with [audience sync]({{site.baseurl}}/partners/canvas_audience_sync/) to identify high-value lookalike customers for acquisition.
 
 ```sql
 ELECT DISTINCT user_id
