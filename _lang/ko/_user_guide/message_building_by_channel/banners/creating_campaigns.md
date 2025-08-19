@@ -19,7 +19,7 @@ channel:
 
 ## 배너 캠페인 만들기
 
-{% multi_lang_include 배너/창설_배치.md 섹션="사용자" %}
+{% multi_lang_include banners/creating_placements.md section="user" %}
 
 ### 2단계: 캠페인을 생성하세요
 
