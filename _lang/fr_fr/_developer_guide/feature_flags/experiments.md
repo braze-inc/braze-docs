@@ -21,6 +21,9 @@ Avant de pouvoir suivre les données des utilisateurs dans l'expérience sur l'a
 
 Pour en savoir plus sur l'enregistrement des impressions de drapeaux de fonctionnalité, reportez-vous à la section [Création de drapeaux de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions).
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,36 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Création d'une expérience de drapeau de fonctionnalité
 
@@ -56,7 +87,7 @@ Pour modifier, ajouter ou supprimer des propriétés par défaut supplémentaire
 
 ### Étape 4 : Choisir les utilisateurs à cibler
 
-Utilisez l'un de vos segments ou filtres pour choisir vos [utilisateurs cibles]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/). Par exemple, vous pouvez utiliser le filtre **Variante d'indicateur de fonctionnalité reçue** pour recibler les utilisateurs qui ont déjà reçu un test A/B.
+Utilisez l'un de vos segments ou filtres pour choisir vos [utilisateurs cibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Par exemple, vous pouvez utiliser le filtre **Variante d'indicateur de fonctionnalité reçue** pour recibler les utilisateurs qui ont déjà reçu un test A/B.
 
 ![La page "Cible" d'une expérience de drapeau de fonctionnalité avec "Variante de drapeau de fonctionnalité reçue" en surbrillance dans la barre de recherche du groupe interne.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
