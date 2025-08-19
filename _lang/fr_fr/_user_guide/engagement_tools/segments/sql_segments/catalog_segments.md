@@ -20,10 +20,10 @@ Les segments de catalogue utilisent SQL pour joindre les données des catalogues
 
 ## Création d'un segment de catalogue
 
-1. Accédez à **Extensions de segment** > **Créer une nouvelle extension** > **Commencer avec un modèle** et sélectionnez le modèle **Segment de catalogue**. <br>![Modale avec "Segment de catalogue" sélectionné comme modèle à créer.][1]{: style="max-width:70%" }
+1. Allez dans **Extensions de segments** > **Créer une nouvelle extension** > **Commencer par un modèle** et sélectionnez un modèle. <br>![Fenêtre modale avec possibilité de créer un segment de catalogue pour des événements ou des achats.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
-2\. L'éditeur SQL se remplit automatiquement avec un modèle. <br>![Éditeur SQL avec un modèle pré-généré.][2]{: style="max-width:70%" }<br>Ce modèle combine les données d'événements utilisateur avec les données du catalogue pour segmenter les utilisateurs qui ont interagi avec certains articles du catalogue.
+2\. L'éditeur SQL se remplit automatiquement avec un modèle. <br>![Editeur SQL avec un modèle pré-généré.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>Ce modèle combine les données d'événements utilisateur avec les données du catalogue pour segmenter les utilisateurs qui ont interagi avec certains articles du catalogue.
 
 3. Utilisez l'onglet **Variables** pour fournir les champs nécessaires à votre modèle avant de générer votre segment. <br>Pour que Braze identifie les utilisateurs en fonction de leur engagement avec les articles du catalogue, vous devez faire ce qui suit : <br> \- Sélectionnez un catalogue contenant un champ de catalogue <br> \- Sélectionnez un événement personnalisé contenant une propriété d'événement <br> Faites correspondre votre champ de catalogue et les valeurs de propriété de l'événement
 
@@ -43,6 +43,28 @@ Voici des directives pour sélectionner les variables :
 - `Value` : Une valeur spécifique dans ce champ ou cette colonne <br><br> En utilisant l'application de santé comme exemple, disons que dans le catalogue de chaque médecin que vous pourriez réserver, il y a un champ appelé `specialty` qui contient une valeur telle que `vision` ou `dental`. Pour segmenter les utilisateurs qui ont visité des médecins avec la valeur `dental`, vous pouvez sélectionner `specialty` comme `Catalog field`, et sélectionner `dental` comme `Value`.
 
 5. Après avoir créé un segment SQL, nous vous recommandons de cliquer sur **Exécuter l'aperçu** pour voir si votre requête renvoie des utilisateurs ou s'il y a des erreurs. Pour plus d'informations sur [l'aperçu des résultats de la requête]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), la gestion des [extensions de segment SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions), et plus encore, consultez les [extensions de segment SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+
+{% alert note %}
+Si vous créez un segment SQL qui utilise la table `CATALOGS_ITEMS_SHARED`, vous devez spécifier un ID de catalogue. Par exemple :
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
+
+## Actualiser l’effectif du segment
+
+Pour actualiser la composition d'un segment de catalogue, ouvrez ce segment et sélectionnez **Actions** > **Actualiser** > **Oui, actualiser**.
+
+{% alert tip %}
+Si vous avez créé un segment dans lequel vous vous attendez à ce que les utilisateurs entrent et sortent régulièrement, actualisez manuellement le segment de catalogue qu'il utilise avant de cibler ce segment dans une campagne ou un Canvas.
+{% endalert %}
+
+### Désigner les paramètres d'actualisation
+
+{% multi_lang_include segments.md section='Actualiser les paramètres' %}
 
 ## Cas d’utilisation
 
@@ -100,5 +122,3 @@ Oui. De la même manière que les extensions de segment SQL comptent pour votre 
 
 Contactez votre responsable du support client ou [Support Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) pour des conseils supplémentaires.
 
-[1]: {% image_buster /assets/img/catalog-segments-template.png %}
-[2]: {% image_buster /assets/img/catalog-segments-editor.png %}
