@@ -17,4 +17,4 @@ Braze에서 배너 메시지를 테스트하려면 먼저 [Braze에서 배너 �
 
 ## 배너 테스트
 
-{% multi_lang_include 배너/testing.md page="testing" %}
+{% multi_lang_include banners/testing.md page="testing" %}
