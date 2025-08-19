@@ -3,7 +3,7 @@ page_order: 0
 nav_title: Accueil
 layout: dev_guide
 guide_top_header: "Guide du développeur Braze"
-guide_top_text: "C'est ici que les développeurs trouveront tout ce qu'ils ont besoin de savoir sur le SDK de Braze. Chaque SDK est hébergé dans son propre dépôt public GitHub, qui comprend des exemples d'applications entièrement constructibles que vous pouvez utiliser pour tester les fonctionnalités de Braze ou mettre en œuvre parallèlement à vos propres applications. Pour en savoir plus, consultez les <a href='{{site.baseurl}}/developer_guide/references/'>références, les référentiels et les exemples d'applications.</a><br><br>Vous souhaitez vous connecter, apprendre et être inspiré par d'autres développeurs qui créent avec Braze ? Rejoignez la <a href='https://www.braze.com/dev-portal'>communauté des développeurs de Braze</a>!"
+guide_top_text: "C'est ici que les développeurs trouveront tout ce qu'ils doivent savoir sur le SDK de Braze. Chaque SDK est hébergé dans son propre dépôt public GitHub, qui comprend des exemples d'applications entièrement constructibles que vous pouvez utiliser pour tester les fonctionnalités de Braze ou mettre en œuvre parallèlement à vos propres applications. Pour en savoir plus, consultez les <a href='{{site.baseurl}}/developer_guide/references/'>références, les référentiels et les exemples d'applications.</a><br><br>Vous souhaitez vous connecter, apprendre et être inspiré par d'autres développeurs qui créent avec Braze ? Rejoignez la <a href='https://www.braze.com/dev-portal'>communauté des développeurs de Braze</a>!"
 article_title: Guide du développeur Braze
 description: "Cette page d’accueil est l’endroit où les développeurs peuvent trouver toutes les intégrations disponibles pour Braze."
 
