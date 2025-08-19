@@ -109,7 +109,7 @@ Imaginons que vous deviez déployer un nouveau type de profil utilisateur pour v
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -121,7 +121,7 @@ if (featureFlag.enabled) {
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-if featureFlag.enabled {
+if featureFlag?.enabled == true {
   print("expanded_user_profile is enabled")
 } else {
   print("expanded_user_profile is not enabled")
@@ -131,7 +131,7 @@ if featureFlag.enabled {
 {% tab Java %}
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.getEnabled()) {
+if (featureFlag != null && featureFlag.getEnabled()) {
   Log.i(TAG, "expanded_user_profile is enabled");
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled");
@@ -143,7 +143,7 @@ if (featureFlag.getEnabled()) {
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
-if (featureFlag.enabled) {
+if (featureFlag?.enabled == true) {
   Log.i(TAG, "expanded_user_profile is enabled.")
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled.")
@@ -155,7 +155,7 @@ if (featureFlag.enabled) {
 
 ```javascript
 const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -166,7 +166,7 @@ if (featureFlag.enabled) {
 {% tab Unity %}
 ```csharp
 var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
-if (featureFlag.Enabled) {
+if (featureFlag != null && featureFlag.Enabled) {
   Console.WriteLine("expanded_user_profile is enabled");
 } else {
   Console.WriteLine("expanded_user_profile is not enabled");
@@ -177,7 +177,7 @@ if (featureFlag.Enabled) {
 {% tab Cordova %}
 ```javascript
 const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);  
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -186,8 +186,8 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% tab Flutter %}
 ```dart
-BrazeFeatureFlag featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
-if (featureFlag.enabled) {
+BrazeFeatureFlag? featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
+if (featureFlag?.enabled == true) {
   print("expanded_user_profile is enabled");
 } else {
   print("expanded_user_profile is not enabled");
@@ -198,7 +198,7 @@ if (featureFlag.enabled) {
 {% tab Roku %}
 ```brightscript
 featureFlag = m.braze.getFeatureFlag("expanded_user_profile")
-if featureFlag.enabled
+if featureFlag <> invalid and featureFlag.enabled
   print "expanded_user_profile is enabled"
 else
   print "expanded_user_profile is not enabled"
@@ -277,7 +277,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 Pour accéder aux propriétés d’un indicateur de fonctionnalité, utilisez l’une des méthodes suivantes en fonction du type que vous avez défini dans le tableau de bord.
 
-Si un indicateur de fonctionnalité n’est pas activé, ou si une propriété que vous référencez n’existe pas, ces méthodes reviendront `null`.
+Si une propriété que vous avez référencée n'existe pas, ces méthodes renvoient `null`.
 
 {% tabs %}
 {% tab JavaScript %}
@@ -825,7 +825,7 @@ Pour afficher le journal des modifications d'un indicateur de fonctionnalité, o
 
 ![Page "Modifier" d'un drapeau de fonctionnalité, avec le bouton "Journal des modifications" en surbrillance.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
-Vous pouvez y consulter la date d'une modification, l'auteur de la modification, la catégorie à laquelle elle appartient, etc.
+Vous pouvez y consulter la date d'une modification, son auteur, la catégorie à laquelle elle appartient, et bien d'autres choses encore.
 
 ![Le journal des modifications de l'indicateur de fonctionnalité sélectionné.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
