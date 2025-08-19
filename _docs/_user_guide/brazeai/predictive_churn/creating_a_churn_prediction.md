@@ -52,7 +52,7 @@ Underneath the definition, you will see estimates of how many users (in the past
 
 ## Step 3: Filter your prediction audience
 
-Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the above note for who is considered active for a churn model).
+Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the previous note for who is considered active for a churn model).
 
 The model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who are relevant for this use case. As an example, if you're a ride-sharing app with drivers and riders in your user base, and you're building a churn model for drivers that may stop driving for you, you'll want to filter your prediction audience to just drivers so that riders don't enter the model.
 
