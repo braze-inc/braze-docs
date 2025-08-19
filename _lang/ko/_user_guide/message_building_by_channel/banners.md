@@ -7,4 +7,4 @@ channel:
   - banners
 ---
 
-{% multi_lang_include 배너/about.md %}
+{% multi_lang_include banners/about.md %}
