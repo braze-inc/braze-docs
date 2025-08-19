@@ -30,8 +30,18 @@ L'étiquette `message_extras` est prise en charge pour tous les types de message
 
 ## Comment utiliser l'étiquette `message_extras`?
 
-1. Dans le corps du message pour le canal, entrez l'étiquette Liquid `message_extras`. Vous pouvez également utiliser la fenêtre modale/boîte de dialogue de l'**ajout de personnalisation** et sélectionner " **Message Extras"** pour le type de personnalisation. <br>![Fenêtre modale Ajouter une personnalisation avec Suppléments de message sélectionné comme type de personnalisation.][1]{: style="max-width:70%;"}
-2. Saisissez la [paire clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) pour chaque étiquette `message_extras`. <br>![Un exemple de paires clé-valeur pour la balise de suppléments de message. Le champ de titre indique « Vos nouveaux favoris ». Le message indique les paires clé-valeur pour la balise des suppléments de message ainsi que la phrase suivante : « Nous sommes ravis de vous proposer une sélection de produits frais et passionnants qui deviendront à coup sûr vos nouveaux favoris. »][2]{: style="max-width:70%;"}
+1. Dans le corps du message pour le canal, entrez l'étiquette Liquid `message_extras`. Vous pouvez également utiliser la fenêtre modale/boîte de dialogue de l'**ajout de personnalisation** et sélectionner " **Message Extras"** pour le type de personnalisation. 
+
+![La fenêtre modale/boîte de dialogue de la personnalisation avec Message Extras sélectionné comme type de personnalisation.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+
+{: start="2"}
+
+2. Saisissez la [paire clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) pour chaque étiquette `message_extras`. 
+
+![Un exemple de paires clé-valeur pour la balise de suppléments de message. Le champ de titre indique « Vos nouveaux favoris ». Le message indique les paires clé-valeur pour la balise des suppléments de message ainsi que la phrase suivante : "Nous sommes ravis de vous proposer une sélection de produits frais et passionnants qui deviendront certainement vos nouveaux favoris."]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+
+{: start="3"}
+
 3. Après l'envoi de votre campagne ou de votre canvas, Braze joint les données dynamiques au moment de l'envoi, via les événements d'envoi de Currents ou le partage de données Snowflake, au champ `message_extras`.
 
 ## Vérifier la syntaxe
@@ -64,5 +74,3 @@ Oui, vous pouvez utiliser `message_extras` dans vos messages in-app à condition
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}
