@@ -30,6 +30,9 @@ Un indicateur de fonctionnalité peut être créé et intégré en quelques minu
 
 La plupart des efforts impliqués seront liés à la création par votre équipe d’ingénieurs de la nouvelle fonctionnalité que vous prévoyez de déployer. Mais lorsqu’il s’agit d’ajouter un indicateur de fonctionnalité, il s’agit simplement d’un énoncé `IF`/`ELSE` dans le code de votre application ou de votre site Web :
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Comment les indicateurs de fonctionnalité peuvent-ils bénéficier aux équipes marketing ? {#marketing-teams}
 
