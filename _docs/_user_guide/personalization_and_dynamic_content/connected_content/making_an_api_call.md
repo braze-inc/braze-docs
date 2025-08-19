@@ -94,7 +94,7 @@ You can then use this basic authentication credential in your API calls by refer
 
 {% raw %}
 ```
-Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia  :auth_credential credential_name %}
+Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :auth_credential credential_name %}
 ```
 {% endraw %}
 
