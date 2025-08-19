@@ -37,10 +37,6 @@ The number of published landing pages and custom domains you can use depends on 
 
 ## Frequently asked questions
 
-### What's the maximum size for landing pages?
-
-The landing page body size can be up to 1 MB.
-
 ### Are there any technical requirements to publish a landing page?
 
 No, there aren't any technical requirements.
