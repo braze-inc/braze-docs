@@ -10,24 +10,32 @@ alias: /scim/automated_user_provisioning/
 
 # 자동화된 사용자 프로비저닝
 
-> 자동화된 사용자 프로비저닝을 위해 제공해야 하는 사항과 생성된 SCIM(System for Cross-domain Identity Management) 토큰 및 SCIM API 엔드포인트의 사용 방법 및 위치에 대해 알아보세요. 그런 다음 API로 이 엔드포인트를 호출하여 새 대시보드 사용자를 자동으로 프로비저닝할 수 있습니다.
+> Use SCIM provisioning to automatically create and manage Braze users through API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
-이 페이지에 액세스하려면 **설정** > **관리자 설정** > **SCIM 프로비저닝으로** 이동하세요.
+## Step 1: Access SCIM privioning settings
 
-## SCIM 토큰을 받는 방법
+In the Braze dashboard, go to **Settings** > **Admin Settings** > **SCIM Provisioning**.
 
-SCIM 토큰을 받으려면 다음 정보를 제공해야 합니다:
+## Step 2: Configure your SCIM settings
 
-1. 새 대시보드 개발자를 추가할 기본 작업 영역을 선택합니다. [사용자 만들기 SCIM API 호출]({{site.baseurl}}/post_create_user_account/)에서 워크스페이스를 지정하지 않으면 여기에 워크스페이스가 추가됩니다.
-2. 서비스 출처를 입력합니다. 서비스 출처는 Braze가 요청의 출처를 식별하는 방법입니다.
-3. 선택 사항으로 쉼표로 구분된 목록 또는 SCIM 요청에 허용되는 IP 주소 범위를 입력합니다. 각 요청의 `X-Origin-Request` 헤더는 허용 목록에서 요청 IP 주소를 확인하는 데 사용됩니다.<br><br>
+To enable SCIM provisioning, provide the following information:
+
+- **Default Workspace:** Select the workspace where new users will be added by default. If you don’t specify a workspace in your [SCIM API request]({{site.baseurl}}/post_create_user_account/), Braze assigns users to this workspace.
+- **Service Origin:** Enter the origin domain of your SCIM requests. Braze uses this in the `X-Request-Origin` header to verify where requests are coming from.
+- **IP Allowlisting (optional):** You can restrict SCIM requests to specific IP addresses.
+Enter a comma-separated list or range of IP addresses to allow. The `X-Request-Origin` header in each request will be used to check the request IP address against the allowlist.
 
 {% alert note %}
 이 SCIM 엔드포인트는 ID 공급자와 직접 통합되지 않습니다.
 {% endalert %}
 
-![][1]
+![SCIM Provisioning settings form with three fields: Default Workspace, Service Origin , and optional IP Allowlisting. The “Generate SCIM Token” button is disabled.]({% image_buster /assets/img/scim_unfilled.png %})
 
-필수 필드를 완료하면 SCIM 토큰을 생성하고 SCIM API 엔드포인트를 확인할 수 있습니다. **이 토큰은 한 번만 증정됩니다.** Braze는 모든 SCIM 요청에 HTTP `Authorization` 헤더를 통해 첨부된 SCIM API 베어러 토큰이 포함될 것으로 예상합니다.
+## Step 3: Get your SCIM token and endpoint
 
-[1]: {% image_buster /assets/img/scim.png %}
+After completing the required fields, press **Generate SCIM token** to generate a SCIM token and see your SCIM API endpoint. Make sure to copy the SCIM token before you navigate away. **This token will only be presented once.** 
+
+![SCIM API Endpoint and SCIM Token fields displayed with masked values and copy buttons. Below the token field is a “Reset Token” button.]({% image_buster /assets/img/scim.png %})
+
+Braze expects all SCIM requests to contain the SCIM API bearer token attached via an HTTP `Authorization` header.
+
