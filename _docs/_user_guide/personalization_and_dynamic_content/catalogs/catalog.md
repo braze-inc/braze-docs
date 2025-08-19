@@ -155,7 +155,7 @@ After creating the catalog, you can begin referencing the [catalog in a campaign
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
-Supported data types for using API include: string, integer, float, boolean, or or date/time. You can also upload arrays and objects when managing your catalogs with the API.
+Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
 
 ### Managing catalog items
 
