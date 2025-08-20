@@ -14,7 +14,7 @@ Hemos añadido funciones de seguridad mejoradas a Braze, como reglas de caducida
 > Actualización: La **configuración de seguridad** de Braze, a la que se accede desde la página **de configuración de tu empresa**, también incluye reglas para la reutilización y caducidad de contraseñas.
 
 ## Descarga CSV tras la importación
-Ahora los usuarios de Braze pueden descargar CSV de usuarios importados recientemente. Esto te da más visibilidad en la sincronización de datos de tus sistemas. Más información sobre [la importación de CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).
+Ahora los usuarios de Braze pueden descargar CSV de usuarios importados recientemente. Esto te da más visibilidad en la sincronización de datos de tus sistemas. Más información sobre [la importación de CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
 ## Filtro de aniversario
 Además del [filtro de cumpleaños]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), Braze ahora admite un filtro de aniversario que te ofrece la posibilidad de dirigirte a usuarios en función de una fecha del calendario para hitos de fidelización, avisos de recarga, ¡y mucho más! Accede a esta característica seleccionando el filtro "Fecha del atributo personalizado" en la página Segmentos. Más información sobre [los filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).
