@@ -20,10 +20,10 @@ Os segmentos de catálogo usam SQL para unir dados de catálogos e dados de even
 
 ## Criação de um segmento de catálogo
 
-1. Acesse **Extensões de segmento** > **Criar nova extensão** > **Iniciar com modelo** e selecione o modelo de **segmento Catálogo**. <br>![Modal com "Catalog segment" selecionado como o modelo a ser criado.][1]{: style="max-width:70%" }
+1. Acesse **Extensões de segmento** > **Criar nova extensão** > **Iniciar com modelo** e selecione um modelo. <br>![Modal com a opção de criar um segmento de catálogo para eventos ou compras.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
-2\. O editor SQL é preenchido automaticamente com um modelo. <br>![Editor SQL com um modelo pré-gerado.][2]{: style="max-width:70%" }<br>Esse modelo une os dados de eventos do usuário com os dados do catálogo para segmentar os usuários que se engajaram com determinados itens do catálogo.
+2\. O editor SQL é preenchido automaticamente com um modelo. <br>![Editor SQL com um modelo pré-gerado.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>Esse modelo une os dados de eventos do usuário com os dados do catálogo para segmentar os usuários que se engajaram com determinados itens do catálogo.
 
 3. Use a guia **Variables (Variáveis** ) para fornecer os campos necessários para seu modelo antes de gerar seu segmento. <br>Para que o Braze identifique os usuários com base no engajamento deles com os itens do catálogo, é necessário fazer o seguinte: <br> \- Selecione um catálogo que contenha um campo de catálogo <br> \- Selecione um evento personalizado que contenha uma propriedade de evento <br> \- Corresponder os valores de propriedade do campo e do evento de seu catálogo
 
@@ -43,6 +43,28 @@ Aqui estão as diretrizes para selecionar as variáveis:
 - `Value`: Um valor específico dentro desse campo ou coluna <br><br> Usando o app de integridade como exemplo, digamos que dentro do catálogo de cada médico que você pode marcar, há um campo chamado `specialty` que contém um valor como `vision` ou `dental`. Para segmentar os usuários que visitaram qualquer médico com o valor `dental`, você pode selecionar `specialty` como `Catalog field` e `dental` como `Value`.
 
 5. Depois de criar um segmento SQL, recomendamos clicar em **Run Preview (Executar prévia** ) para ver se a consulta retorna usuários ou se há erros. Para saber mais sobre [a prévia dos resultados da consulta]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#previewing-results), o gerenciamento de [extensões de segmento de SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#managing-sql-segment-extensions) e muito mais, consulte [Extensões de segmento de SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). 
+
+{% alert note %}
+Se estiver criando um segmento SQL que use a tabela `CATALOGS_ITEMS_SHARED`, será necessário especificar uma ID de catálogo. Por exemplo:
+
+```sql
+SELECT * FROM CATALOGS_ITEMS_SHARED
+WHERE CATALOG_ID = 'XYZ'
+LIMIT 10
+```
+{% endalert %}
+
+## Atualização da associação de segmentos
+
+Para atualizar a associação de segmentos de qualquer segmento do catálogo, abra o segmento do catálogo e selecione **Actions** > **Refresh** > **Yes, Refresh**.
+
+{% alert tip %}
+Se tiver criado um segmento no qual espera que os usuários entrem e saiam regularmente, atualize manualmente o segmento do catálogo que ele usa antes de direcionar esse segmento em uma campanha ou Canva.
+{% endalert %}
+
+### Designar configurações de atualização
+
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ## Casos de uso
 
@@ -100,5 +122,3 @@ Sim. Da mesma forma que as extensões de segmento do SQL contam para sua cota de
 
 Entre em contato com seu gerente de suporte ao cliente ou com o [suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obter orientação adicional.
 
-[1]: {% image_buster /assets/img/catalog-segments-template.png %}
-[2]: {% image_buster /assets/img/catalog-segments-editor.png %}

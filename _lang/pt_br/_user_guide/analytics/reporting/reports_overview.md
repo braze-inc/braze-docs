@@ -183,7 +183,7 @@ Você pode responder a mais perguntas com este relatório:
 {% tab Dados do segmento %}
 **Dados do segmento**
 
-Se você tiver ativado [o rastreamento de análises]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) para um segmento, abra esse segmento para visualizar [Segment Data (Dados do segmento]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/)). O Segment Data rastreia sessões, eventos personalizados e receita ao longo do tempo para os usuários aplicáveis.
+Se você tiver ativado [o rastreamento de análises]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) para um segmento, abra esse segmento para visualizar [Segment Data (Dados do segmento]({{site.baseurl}}/viewing_and_understanding_segment_data/)). O Segment Data rastreia sessões, eventos personalizados e receita ao longo do tempo para os usuários aplicáveis.
 
 Dê uma olhada nesta página para ver essas estatísticas:
 
@@ -289,7 +289,7 @@ Você pode responder a mais perguntas com este relatório:
 {% tab Previsão de churn %}
 **Churn previsto**
 
-[O Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) é o primeiro modelo do [pacote preditivo da Braze]({{site.baseurl}}/user_guide/brazeai/predictive_suite/). Use o Predictive Churn para definir e gerar previsões, fornecendo uma abordagem proativa para minimizar o churn futuro.
+[O Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) é o primeiro modelo do [pacote preditivo da Braze]({{site.baseurl}}/user_guide/brazeai/). Use o Predictive Churn para definir e gerar previsões, fornecendo uma abordagem proativa para minimizar o churn futuro.
 
 Como cada empresa define churn e retenção de forma diferente, basta inserir suas definições no Predictive Churn, e a Braze fará o resto. Você também pode criar campanhas ou canvas para agir com base nas previsões ou criar segmentos para análise posterior.
 
