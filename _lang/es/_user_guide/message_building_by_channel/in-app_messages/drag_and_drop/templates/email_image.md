@@ -18,7 +18,7 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro por correo electrónico con imagen de fondo** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
-![El editor de mensajes dentro de la aplicación con la plantilla de un formulario de registro por correo electrónico con una imagen de fondo.][img1]
+![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de registro por correo electrónico con una imagen de fondo.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
 
 ### Paso 2: Configura tus estilos de mensaje
 
@@ -30,7 +30,7 @@ Para empezar a crear su formulario de suscripción por correo electrónico, sele
 
 Puede personalizar el texto del marcador de posición y el texto de la etiqueta del elemento de captura de correo electrónico.
 
-![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.][img2]
+![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
 
 #### Validación del correo electrónico
 
@@ -42,7 +42,7 @@ Puede personalizar el texto del marcador de posición y el texto de la etiqueta 
 
 ### Paso 5: Estiliza tu mensaje
 
-Personaliza el aspecto de tu formulario de registro utilizando los [componentes de arrastrar y soltar de mensajes dentro de la aplicación][3]. Añade tu propia imagen de fondo sustituyendo la URL predeterminada de la imagen de fondo en el menú **contenedor de mensajes** o elimina la URL y selecciona tu imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
+Personaliza el aspecto de tu formulario de registro utilizando los [componentes de arrastrar y soltar de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components). Añade tu propia imagen de fondo sustituyendo la URL predeterminada de la imagen de fondo en el menú **contenedor de mensajes** o elimina la URL y selecciona tu imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
 
 ## Analizar los resultados
 
@@ -53,8 +53,5 @@ Personaliza el aspecto de tu formulario de registro utilizando los [componentes 
 {% multi_lang_include drag_and_drop/templates.md section='correo electrónico doble adhesión voluntaria' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %} 
 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

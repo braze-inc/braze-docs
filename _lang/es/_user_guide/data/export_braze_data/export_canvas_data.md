@@ -30,10 +30,9 @@ También puede exportar los datos de usuario de todos los participantes de un Li
 
 Los resultados del lienzo se pueden exportar por componentes individuales para el flujo de trabajo original del lienzo. Para ello, seleccione el componente específico y, a continuación, seleccione el desplegable **Datos de usuario** en la página **Detalles del paso del lienzo**. 
 
-![Datos del usuario en la página Detalles del lienzo.][1]
+![Desplegable de datos de usuario en la página de detalles del Canvas.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
 Para obtener ayuda con las exportaciones CSV y API, visite nuestro artículo [sobre resolución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_csv_export.png %}
