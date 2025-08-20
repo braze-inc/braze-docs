@@ -107,6 +107,13 @@ By default, in-app messages are triggered automatically. To disable this:
 
 {% tabs %}
 
+{% tab android %}
+1. Implement the [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) to set a custom listener.
+2. Update your [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) method to return [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
+
+For more advanced control over message timing, including displaying later and re-enqueuing, refer to our [Customizing Messages](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener) page.
+{% endtab %}
+
 {% tab swift %}
 1. Implement the `BrazeInAppMessageUIDelegate` delegate in your app. For a full walkthrough, refer to [Tutorial: In-App Message UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
