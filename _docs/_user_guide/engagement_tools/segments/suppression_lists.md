@@ -22,14 +22,14 @@ Suppression lists are dynamic and automatically apply to all forms of messaging,
 
 ### Message types and channels affected by suppression lists
 
-Suppression lists will apply to all message types and message channels except for [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/). This means that:
-
-- Suppression lists apply to all message types, including:
+Suppression lists will apply to all message types and channels except for [feature flags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/). This means that suppression lists by default apply to all channels, all campaigns, and all Canvases, including:
     - [API campaigns]({{site.baseurl}}/api/api_campaigns/)
     - API-triggered campaigns and Canvases
     - [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)
-- Users in a suppression list won't be suppressed from feature flags, but will be suppressed from all other channels. 
-- You use exception tags so that suppression list users are still targeted by particular campaigns and Canvases. For details, refer to step 4 in [Setting up suppression lists](#setup).
+
+The only message type that suppression lists do not apply to is feature flags. Users in a suppression list won't be suppressed from feature flags, but will be suppressed from all other channels. 
+
+You can use exception tags so that suppression list users are still targeted by particular campaigns and Canvases. For details, refer to step 4 in [Setting up suppression lists](#setup). If you do not add exception tags to a suppression list, then users in that suppression list will not be targeted with any messaging besides feature flags. 
 
 ![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
 
