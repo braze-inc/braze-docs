@@ -100,6 +100,8 @@ After you've finished designing and building your email message, it's time to ad
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
 4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
 
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
+
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
 
 #### Advanced
