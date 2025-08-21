@@ -19,7 +19,7 @@ Sigue estos pasos para obtener una vista previa de tu recorrido de usuario:
 1. Ve a tu constructor de Canvas. Guarde los cambios no guardados y resuelva los errores.
 2. Seleccione **Lienzo de prueba** en el pie de página.
 3. Seleccione un usuario de prueba.
-4. (opcional) Seleccione un destinatario para la prueba.
+4. (Opcional) Selecciona un destinatario para la prueba.
 5. Seleccione **Ejecutar prueba**.
 
 Puede ejecutar una vista previa si no tiene permiso para editar un Lienzo, pero esta vista previa se ejecutará con los cambios no guardados si los hubiera.
@@ -101,11 +101,9 @@ Los webhooks se ejecutarán cuando se envíen los mensajes de prueba, pero no du
 
 En este escenario, el Canvas está configurado para dirigirse a usuarios que no han tenido una sesión en una app. Este recorrido incluye un paso de Mensaje con un correo electrónico de bienvenida, un paso de Retraso fijado en un día y un paso de Rutas de audiencia que se divide en dos rutas: usuarios con al menos una sesión y todos los demás. Dependiendo de la ruta de audiencia en la que se encuentre el usuario, se enviará el siguiente paso de Mensaje.
 
-![Un ejemplo de Canvas con un paso de Mensaje, un paso de Retraso, un paso de Rutas de audiencia y dos pasos de Mensaje.][1]{:style="max-width:70%"}
+![Un ejemplo de Canvas con un paso de Mensaje, un paso de Retraso, un paso de Rutas de audiencia y dos pasos de Mensaje.]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
 Dado que nuestro usuario de prueba cumple los criterios de entrada del Canvas, puede entrar en el Canvas y recorrer el recorrido del usuario. Sin embargo, como nuestro usuario de prueba no ha abierto la aplicación en el último día natural, seguirá por el camino "Todos los demás" y recibirá una notificación push con el texto siguiente: "¡Última oportunidad! Completa tu primera tarea para obtener una bonificación exclusiva".
 
-![La sección "Resultados de la prueba" que muestra que el usuario de prueba ha cumplido los criterios de entrada y proporciona un resumen de su recorrido, incluidos los pasos que se le enviaron.][2]
+![La sección "Resultados de la prueba" que muestra que el usuario de prueba ha cumplido los criterios de entrada y proporciona un resumen de su recorrido, incluidos los pasos que se le han enviado.]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
-[1]: {% image_buster /assets/img/preview_user_path_example.png %}
-[2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

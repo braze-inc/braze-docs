@@ -9,7 +9,7 @@ description: "Este artículo contiene notas de la versión de mayo de 2020."
 
 ## Google Tag Manager
 
-Se ha añadido documentación y ejemplos sobre cómo desplegar y gestionar el SDK de Android de Braze mediante [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/).
+Se ha añadido documentación y ejemplos sobre cómo desplegar y gestionar el SDK de Android de Braze mediante [Google Tag Manager]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android).
 
 ## Nuevo punto final API de correo electrónico de lista negra
 

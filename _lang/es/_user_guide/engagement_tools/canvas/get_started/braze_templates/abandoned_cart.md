@@ -18,13 +18,13 @@ En este artículo, te guiaremos a través de un caso de uso de la plantilla **In
 Para utilizar correctamente esta plantilla, necesitarás lo siguiente:
 
 - Un Canvas de recorrido del usuario posterior a la compra separado, ya que realizar una compra en este Canvas hará que los usuarios salgan del Canvas.
-- Una [Sincronización de Audiencias Braze]({{site.baseurl}}/partners/canvas_steps) configurada con los socios y audiencias que utilices.
+- Una [Sincronización de Audiencias Braze]({{site.baseurl}}/partners/canvas_audience_sync/) configurada con los socios y audiencias que utilices.
 
 ## Adaptar la plantilla a tus necesidades
 
 Digamos que trabajamos en Kitchenerie, una marca de comercio minorista especializada en utensilios de cocina, y nuestro objetivo es volver a captar usuarios que han añadido el último producto "Plato de papel enorme" a sus carritos, pero no han realizado sus compras.
 
-Antes de crear el Canvas, configuramos la integración de [Braze Audience Sync con Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) para que podamos añadir datos de usuarios de Braze a Facebook Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
+Antes de crear el Canvas, configuramos la integración de [Braze Audience Sync con Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) para que podamos añadir datos de usuarios de Braze a Facebook Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
 
 Para acceder a la plantilla de intención abandonada, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. A continuación, junto a **Intención abandonada**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
 
@@ -51,7 +51,7 @@ A continuación, vamos a asignar nuestro evento de conversión. Como nos centram
 2. Selecciona **Hacer una compra específica**. Esto nos permite seleccionar un nombre de producto concreto.
 3. Selecciona **Plato de Papel Enorme**.
 
-![Evento de conversión primaria - A con el tipo de conversión "Realiza compra" con el nombre de producto "Enorme plato de papel". Hay un plazo de conversión de 3 días.][1]
+![Evento de conversión primaria - A con el tipo de conversión "Realiza compra" con el nombre de producto "Enorme plato de papel". Hay un plazo de 3 días para la conversión.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### Paso 3: Establecer un horario de entrada
 
@@ -62,19 +62,19 @@ Aunque el programa de entrada de esta plantilla está configurado como **Activad
 3. Para la ventana de entrada, selecciona la fecha de la hora de inicio.
 4. Selecciona la opción que permite a los usuarios introducir su zona horaria local. Esto puede mantener la relevancia de nuestros mensajes y conseguir una mayor interacción si los mensajes se envían en momentos óptimos.
 
-![Un Canvas basado en acciones que se dirige a los usuarios que han abandonado su carrito, con la ventana de entrada 15 de octubre de 2024 15:20 h en la zona horaria local de los usuarios.][2]
+![Un Canvas basado en acciones que se dirige a los usuarios que han abandonado su carrito, con la ventana de entrada 15 de octubre de 2024 15:20 h en la zona horaria local de los usuarios.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### Paso 4: Determina quién entra en el Canvas
 
 A continuación, definamos nuestra audiencia objetivo como usuarios que han comprado exclusivamente en línea con nosotros en los últimos 90 días. Esto nos ayuda a limitar nuestra audiencia a los usuarios que sabemos que tienen interacción con nuestros productos. 
 
-!["Segmento de compradores online - 90 días" como segmento de usuarios al que dirigirse para este Canvas.][3]
+!["Segmento de compradores online - 90 días" como segmento de usuarios al que dirigirnos para este Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 Dejaremos los controles de entrada como están, para que los usuarios no puedan volver a entrar en este Canvas y no haya límite en el número de personas que potencialmente pueden entrar en este Canvas.
 
 Para los criterios de salida, los usuarios saldrán del Canvas si han comprado el "Plato de Papel Enorme". De este modo, no recibirán más mensajes sobre un artículo que ya han comprado.
 
-![Criterios de salida que determinan que los usuarios que realicen una compra específica para el enorme plato de papel saldrán del Canvas.][4]
+![Criterio de salida que determina que los usuarios que realizan una compra específica para el enorme plato de papel saldrán del Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### Paso 5: Selecciona tu configuración de envío
 
@@ -87,14 +87,14 @@ Ahora, construiremos nuestro Canvas personalizando los pasos de la plantilla:
 1. Selecciona el paso Rutas de acción y, a continuación, el nombre del grupo de acción **Compras realizadas**.
 2. Para **Hacer una compra**, selecciona **Hacer una compra específica** y elige **Plato de papel enorme** para el producto. De forma similar a los criterios de salida, los usuarios que compren este producto saldrán del Canvas.
 
-![Grupo de acción "Hecho compra" que saldrá del Canvas si el usuario compra el enorme plato de papel.][5]
+![Grupo de acción "Hecho compra" que saldrá del Canvas si el usuario compra el enorme plato de papel.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3\. En el paso Mensaje, selecciona **Editar mensaje** para personalizar el correo electrónico que se enviará a nuestros usuarios, notificándoles los artículos de su carrito abandonado.
 4\. Mantén el paso Retraso como está.
 5\. En los pasos de Mensaje posteriores al paso de Ruta de audiencia, personalizaremos el correo electrónico y el mensaje SMS que recibirán nuestros usuarios. Aquí es donde queremos animar a nuestros usuarios a comprar productos con mensajes personalizados.
 
-![Una vista previa del mensaje SMS que recibirán los usuarios: "¡Hola, te has dejado el enorme plato de papel en el carrito! Completa tu compra ahora e intensifica tu juego de alojamiento. Utiliza el código MYPLATE al pasar por caja para obtener un 20% de descuento en tu pedido!"][6]
+![Una vista previa del mensaje SMS que recibirán los usuarios: "¡Hola, te has dejado el enorme plato de papel en el carrito! Completa tu compra ahora e intensifica tu juego de alojamiento. Utiliza el código MYPLATE al pasar por caja para obtener un 20% de descuento en tu pedido!"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6\. En el siguiente paso Rutas de acción, selecciona el grupo de acciones **Hecho compra**. A continuación, selecciona **Hacer una compra específica** y elige **Enorme plato de papel** como producto. Este paso reflejará el primer paso de las Rutas de acción saliendo de los usuarios que hayan comprado nuestro producto para que no reciban más mensajería.
@@ -112,9 +112,3 @@ Después de probar y revisar nuestro Canvas para asegurarnos de que funciona com
 Consulta nuestra [Lista de comprobación previa y posterior al lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber qué cosas debes tener en cuenta antes y después de lanzar un Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/abandoned_intent2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/abandoned_intent3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/abandoned_intent4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/abandoned_intent5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/abandoned_intent6.png %}
