@@ -52,7 +52,7 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 {:/}
 {% endalert %}
 
-#### Step 3.3: Add custom properties (optional)
+#### Step 3.3: Add custom properties (optional) {#custom-properties}
 
 // to do: add image
 
