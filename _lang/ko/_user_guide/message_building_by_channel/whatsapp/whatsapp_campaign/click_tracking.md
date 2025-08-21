@@ -59,7 +59,7 @@ channel:
 
 !["버튼 이름, 웹사이트 URL, 클릭 추적 URL 필드가 있는 '버튼' 섹션]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md 섹션='사용자 정의 도메인' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## URL의 유동적 개인화
 
@@ -111,7 +111,7 @@ Braze는 API 트리거 프로퍼티에 포함된 URL을 포함하여 Liquid에�
 
 !["클릭한 추적된 WhatsApp 링크"에 대한 필터가 있는 필터 그룹.]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='자주 묻는 질문' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### 어떤 개별 사용자가 URL을 클릭하는지 알 수 있나요?
 
