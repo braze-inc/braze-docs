@@ -118,10 +118,10 @@ import BrazeKit
 class BrazeInboxViewController: UITableViewController {
     private var cards: [Braze.ContentCard] = []
     private var subscription: Any?
+    private var loggedImpressions = Set<String>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Content Cards Inbox"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CardCell")
         tableView.rowHeight = 100
 
@@ -146,13 +146,7 @@ class BrazeInboxViewController: UITableViewController {
         // Work with the content card's title and description
         cell.textLabel?.numberOfLines = 2
         cell.textLabel?.text = [card.title, card.description].compactMap { $0 }.joined(separator: "\n")
-
-        // Load image (if present)
-        if let imageURL = card.imageURL {
-            // custom logic
-        }
-
-        card.logImpression(using: AppDelegate.braze)
+        
         return cell
     }
 
@@ -164,14 +158,16 @@ class BrazeInboxViewController: UITableViewController {
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-    private func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            completion(data.flatMap { UIImage(data: $0) })
-        }.resume()
+    
+    override func tableView(_ tableView: UITableView,
+                            willDisplay cell: UITableViewCell,
+                            forRowAt indexPath: IndexPath) {
+        let card = cards[indexPath.row]
+        if loggedImpressions.insert(card.id).inserted {
+            card.logImpression(using: AppDelegate.braze)
+        }
     }
 }
-
 ```
 
 !!step
@@ -189,25 +185,34 @@ lines-AppDelegate.swift=15
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
+lines-BrazeInboxView.swift=5
+
+#### 3. Create the UI View
+
+We're using Swift's [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller) in this tutorial, but we recommend building a UI with classes and components that suit your use case(s).
+
+!!step
 lines-BrazeInboxView.swift=15-20
 
-#### 3. Subscribe to & refresh Content Cards
+#### 4. Subscribe to & refresh Content Cards
 
 Subscribe to the content cards listener to receive the latest updates, and then call `requestRefresh()` to request the latest content cards for that user.
 
 !!step
-lines-BrazeInboxView.swift=34-40
+lines-BrazeInboxView.swift=34-35
 
-#### 4. Build a custum inbox UI
+#### 5. Build a custom inbox UI
 
 Using the content card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build content cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
 
 !!step
-lines-BrazeInboxView.swift=42,48
+lines-BrazeInboxView.swift=8,43,49-56
 
-#### 5. Track impressions and clicks
+#### 6. Track impressions and clicks
 
-You can log impressions and clicks using the [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>) and [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>) methods available for a content card. Impressions should be logged once when the card UI is rendered. [`logDismissed`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) is also available.
+You can log impressions and clicks using the [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>) and [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>) methods available for a content card.
+
+Impressions should only be logged once when viewed by the user. Here, a naive mechanism using a `Set` and `willDisplay` is used to achieve this. Note that you may need to think through the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
 {% endscrolly %}
 {% endsdktab %}
