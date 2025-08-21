@@ -41,6 +41,6 @@ The following table lists the events and attributes logged by Braze Pilot.
 | `st_most_recent_completed_class` | Steppington | Attribute | `string` | When the user completes a workout |
 | `st_favorited_class` | Steppington | Event | `class_type: string` | When the user favorites a class |
 | `st_unfavorited_class` | Steppington | Event | `class_type: string` | When the user unfavories a class |
-| `st_started_free_trial` | Steppington | Event |  | When the user selects the **Start Free Trial** button. |
+| `st_started_free_trial` | Steppington | Event |  | When the user selects the **Start Free Trial** button |
 | `st_set_goal` | Steppington | Event | `goal_name: string`<br>`goal: number`<br>`units: string` | When the user selects the **Start Free Trial** button. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
