@@ -20,14 +20,14 @@ description: "Braze SDK를 런타임 초기화, 지연 초기화 또는 Google T
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/sdk_initialization.md developer_ %}
+{% multi_lang_include developer_guide/swift/sdk_initialization.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/sdk_initialization.md developer_ %}
+{% multi_lang_include developer_guide/web/sdk_initialization.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/sdk_initialization.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/sdk_initialization.md %}
 {% endsdktab %}
 {% endsdktabs %}
