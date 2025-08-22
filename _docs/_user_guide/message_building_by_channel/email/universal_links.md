@@ -1,5 +1,5 @@
 ---
-nav_title: Universal Links and App Links
+nav_title: Universal links and app links
 article_title: Universal Links and App Links
 page_order: 6.4
 page_type: reference

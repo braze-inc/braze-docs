@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Placements
+nav_title: Creating placements
 article_title: Creating Banner placements for the Braze SDK
 description: "Learn how to create Banner placements for the Braze SDK."
 page_order: 2
@@ -221,6 +221,10 @@ This feature is not currently supported on Roku.
 {% endtabs %}
 
 ### Step 4: Insert using the placement ID {#insertBanner}
+
+{% alert tip %}
+For a complete step-by-step tutorial, check out [Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
+{% endalert %}
 
 {% tabs %}
 {% tab Web %}

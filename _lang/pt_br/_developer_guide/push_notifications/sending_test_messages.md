@@ -5,4 +5,4 @@ page_order: 10.0
 description: "Saiba como enviar uma mensagem de teste para o Braze SDK."
 ---
 
- %} developer_guide/_shared/sending_test_messages.md
+{% multi_lang_include developer_guide/_shared/sending_test_messages.md %}

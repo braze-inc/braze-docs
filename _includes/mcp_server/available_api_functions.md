@@ -1,16 +1,16 @@
 # Braze MCP server functions
 
-> Braze MCP server exposes a set of read-only API functions that map to specific Braze REST API endpoints. MCP clients like Claude and Cursor can call these functions to retrieve data without accessing PII or making changes to your workspace. For more general information, see [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> The Braze MCP server exposes a set of read-only API functions that map to specific Braze REST API endpoints. MCP clients like Claude and Cursor can call these functions to retrieve data without accessing PII or making changes to your workspace. For more general information, see [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [set up Braze MCP Server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+Before you can use this feature, you'll need to [set up the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Available Braze API Functions
 
-These are the API functions that your MCP client references to interact with Braze MCP server:
+These are the API functions that your MCP client references to interact with The Braze MCP server:
 
 ### General functions
 

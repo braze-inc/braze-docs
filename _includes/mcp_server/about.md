@@ -1,6 +1,6 @@
-# Braze MCP server
+# The Braze MCP server
 
-> Learn about Braze MCP server, a secure, read-only connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, and provide insights without altering data.
+> Learn about the Braze MCP server, a secure, read-only connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, and provide insights without altering data.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -11,15 +11,15 @@
 - **MCP client:** The application where the AI agent runs, such as Cursor or Claude.
 - **MCP server:** A service provided by another platform, like Braze, that defines which tools the AI can use and what data it can access.
 
-## About Braze MCP server
+## About the Braze MCP server
 
-After [setting up Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, you can connect AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. Braze MCP server is great for:
+After [setting up the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, you can connect AI tools like agents, assistants, and chatbots directly to Braze, allowing them to read aggregated data such as Canvas and Campaign analytics, custom attributes, segments, and more. The Braze MCP server is great for:
 
 - Building AI-powered tools that need Braze context.
 - CRM engineers creating multi-step agent workflows.
 - Technical marketers experimenting with natural language queries.
 
-Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data. You can choose to assign only some of these endpoints to your Braze API key to further restrict which data an agent can access.
+The Braze MCP server supports 38 read-only endpoints that do not return data from Braze user profiles. You can choose to assign only some of these endpoints to your Braze API key to further restrict which data an agent can access.
 
 {% alert warning %}
 Do not assign permissions to your API key that are **not** read-only. Agents may try to write or delete data in Braze, which could cause unintended consequences.
@@ -27,7 +27,7 @@ Do not assign permissions to your API key that are **not** read-only. Agents may
 
 ## Usage example
 
-You can interact with Braze through natural language using tools like Claude or Cursor. For other examples and best practices, see [Using Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+You can interact with Braze through natural language using tools like Claude or Cursor. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
@@ -43,7 +43,7 @@ You can interact with Braze through natural language using tools like Claude or 
 
 ### Which MCP clients are supported?
 
-Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use Braze MCP server.
+Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use the Braze MCP server.
 
 ### What Braze data can my MCP client access?
 
@@ -53,11 +53,11 @@ MCP clients can only access read-only endpoints that are not built to retrieve P
 
 No. The MCP server only exposes tools that handle non-PII, read-only data.
 
-### Can I use a third-party Braze MCP server?
+### Can I use a third-party MCP server for Braze?
 
-Using a third-party Braze MCP servers is not recommend. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
+Using a third-party MCP server for Braze data is not recommend. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
 
-### Why doesn’t Braze MCP server offer PII or write access?
+### Why doesn’t the Braze MCP server offer PII or write access?
 
 To protect data while still enabling innovation, we have built the server to be limited to endpoints that are read-only and do not typically return PII. This reduces risk while supporting valuable use cases.
 
@@ -65,8 +65,8 @@ To protect data while still enabling innovation, we have built the server to be 
 
 No. You'll need to create a new API key for your MCP client. Remember to only give your AI tools access to what you’re comfortable with, and avoid elevated permissions.
 
-### Is Braze MCP server hosted locally or remotely?
+### Is the Braze MCP server hosted locally or remotely?
 
-Currently, Braze MCP server is hosted locally.
+Currently, the Braze MCP server is hosted locally.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}

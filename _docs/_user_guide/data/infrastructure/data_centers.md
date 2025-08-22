@@ -1,5 +1,5 @@
 ---
-nav_title: Data Centers
+nav_title: Data centers
 article_title: Data Centers
 page_order: 1
 page_type: reference

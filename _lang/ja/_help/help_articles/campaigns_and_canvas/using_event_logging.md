@@ -8,7 +8,7 @@ description: "このヘルプ記事では、イベントログを使用してBra
 
 # イベント ログの使用
 
-Braze統合の問題のトラブルシューティングを支援するために、匿名のユーザープロファイルと[イベントユーザーログ][1]を設定できます。匿名プロファイルの設定手順については、[テストユーザーの追加][2]を参照してください。
+Braze統合の問題のトラブルシューティングを支援するために、匿名のユーザープロファイルと[イベントユーザーログ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab)を設定できます。匿名プロファイルの設定手順については、[テストユーザーの追加]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users)を参照してください。
 
 ## ログについて
 
@@ -20,5 +20,3 @@ Braze統合の問題のトラブルシューティングを支援するために
 
 _最終更新日: 2022年11月16日_
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

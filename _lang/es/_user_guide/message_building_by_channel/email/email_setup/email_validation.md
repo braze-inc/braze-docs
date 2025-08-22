@@ -112,10 +112,9 @@ El nombre de dominio debe seguir estos parámetros:
 
 ### Se requiere validación adicional
 
-La etiqueta final del dominio debe ser un dominio de nivel superior (TLD) válido, que viene determinado por todo lo que aparece después del punto final (.). Este TLD debería estar en [la lista de TLD de ICANN][2]. El validador de correo electrónico Braze sólo comprueba que la sintaxis del correo electrónico sea correcta según la expresión regular indicada en esta sección. No detecta errores tipográficos ni direcciones que no existen.
+La etiqueta final del dominio debe ser un dominio de nivel superior (TLD) válido, que viene determinado por todo lo que aparece después del punto final (.). Este TLD debería estar en [la lista de TLD de ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). El validador de correo electrónico Braze sólo comprueba que la sintaxis del correo electrónico sea correcta según la expresión regular indicada en esta sección. No detecta errores tipográficos ni direcciones que no existen.
 
 {% alert important %}
 Unicode sólo se acepta para la parte local de la dirección de correo electrónico. No se acepta Unicode para la parte del dominio, pero puede codificarse en Punycode.
 {% endalert %}
 
-[2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt

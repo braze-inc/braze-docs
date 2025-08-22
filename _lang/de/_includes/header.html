@@ -36,6 +36,7 @@ function OptanonWrapper() { }
 							<label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
 							<select class="lang-select" id="lang_select" aria-label="Sprache auswählen">
                 <option value="en">DE</option>
+                <option value="de">DE</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
                 <option value="ja">JA</option>
@@ -57,6 +58,7 @@ function OptanonWrapper() { }
         <label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
         <select class="lang-select" id="lang_select_responsive" aria-label="Sprache auswählen">
           <option value="en">DE</option>
+          <option value="de">DE</option>
           <option value="es">ES</option>
           <option value="fr">FR</option>
           <option value="ja">JA</option>
@@ -73,7 +75,7 @@ function OptanonWrapper() { }
            <div class="dropdown-menu" aria-labelledby="nav_responsive_dropdown">
              {%- for cl in collect -%} {%- if cl.title -%} {%- unless cl.hidden -%} {%- if cl.label == 'home' -%} {%- assign nav_url = site.baseurl | append: '/' -%} {%- sonst -%} {%- assign nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%} {%- endif -%} {%- if cl.default_nav_url -%} {%- assign nav_url = nav_url | append: cl.default_nav_url -%} {%- assign isactive = '' -%} {%- if (cl.label == page.collection) oder (cl.label == page.custom_collection) -%} {%- assign isactive = 'aktiv' -%} {%- assign active_url = nav_url -%} {%- assign active_title = cl.title -%} {%- endif -%} <a class="dropdown-item {{isactive}}" href="{{nav_url}}"><div>{{cl.title}}</div></a> {%- endif -%} {%- endunless -%} {%- endif -%} {%- endfor -%}
              <hr />
-                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>Braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a>
+                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a>
            </div>
          </li>
       </ul>
@@ -81,7 +83,7 @@ function OptanonWrapper() { }
     </div>
     <div id="navbar-search">
        {% include header_search.html %}
-    <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>Braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
+    <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
     </div>
 
       {%- unless hide_nav %} {%- if active_title != "Startseite" -%} <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="Navigation umschalten" id="header_toggle"> <span class="burger burger-1"></span><span class="burger burger-2"></span><span class="burger burger-3"></span><span class="burger burger-4"></span> </button> {% endif %} {% endunless %}

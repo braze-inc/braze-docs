@@ -1,5 +1,5 @@
 ---
-nav_title: Price Drop Notifications
+nav_title: Price drop notifications
 article_title: Price Drop Notifications
 page_order: 3
 alias: "/price_drop_notifications/"

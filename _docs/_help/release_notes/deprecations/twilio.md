@@ -1,5 +1,5 @@
 ---
-nav_title: Twilio Partnership
+nav_title: Twilio partnership
 alias: /partners/twilio/
 
 description: "This article outlines the partnership between Braze and Twilio."

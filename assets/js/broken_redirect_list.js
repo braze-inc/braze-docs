@@ -2750,5 +2750,9 @@ validurls['/docs/user_guide/data/export_braze_data/export_troubleshooting'] = '/
 validurls['/docs/user_guide/data/export_braze_data/faqs'] = '/docs/user_guide/data/braze_data_platform/distribution/export_braze_data/faqs';
 validurls['/docs/user_guide/data/field_level_encryption'] = '/docs/user_guide/data/infrastructure/field_level_encryption';
 
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/catalog_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/use_cases/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/use_cases/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/';
 
 // validurls['OLD'] = 'NEW';

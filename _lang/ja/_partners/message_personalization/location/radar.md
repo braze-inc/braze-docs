@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。Braze業界をリードするエンゲージメントプラットフォームと、レーダー業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い製品やサービス体験を通じて、収益とロイヤルティを推進することができます。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
+> [Radar](https://www.onradar.com/) は、業界をリードするジオフェンシングおよび位置情報追跡プラットフォームです。Radar プラットフォームには3つの主力商品があります。[Geofences](https://radar.io/product/geofencing)、[Trip Tracking](https://radar.io/product/trip-tracking)、および [Geo APIs](https://radar.io/product/api)。Braze の業界屈指のエンゲージメントプラットフォームと Radar の業界をリードするジオフェンシング機能を組み合わせることで、ロケーションベースの幅広い商品/サービスエクスペリエンスを通じて収益とロイヤルティを向上させることができます。これには、集荷と配送の追跡、ロケーショントリガー通知、コンテキストパーソナライゼーション、ロケーション検証、ストアロケーター、住所オートコンプリートなどが含まれます。
 
-_この統合はレーダーによって維持されます。_
+_この統合は Radar によって管理されます。_
 
 ## 統合について
 
@@ -72,7 +72,7 @@ Braze SDK と Radar SDK 間でデータをマッピングするには、両方�
 
 次の例は、デジタルオファーを使用して近くにいるユーザーを店舗に引き付けるプロモーションを実行する方法を示しています。 
 
-![Android に表示されている「New In Store Deals, Walmart and target near you」というコネクテッドコンテンツプッシュメッセージ。][1]{: style="float:right;max-width:30%;border:0;"}
+![「New In Store Deals, Walmart and target near you」というコネクテッドコンテンツプッシュメッセージが表示された Android の画像。]{% image_buster /assets/img/radar_example.png %}{: style="float:right;max-width:30%;border:0;"}
 
 開始するには、リクエスト URL 内で使用するために、Radar が公開可能な API キーを手元に用意しておく必要があります。
 
@@ -184,4 +184,3 @@ near you!
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/radar_example.png %}

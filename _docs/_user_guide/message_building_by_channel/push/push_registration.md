@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Registration"
+nav_title: "Push registration"
 article_title: Push Registration
 page_order: 2
 page_type: reference

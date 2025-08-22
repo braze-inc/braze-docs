@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Audience Sync
+nav_title: Canvas audience sync
 page_order: 10
 noindex: true
 tool: Canvas

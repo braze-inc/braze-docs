@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Change Email Subscription Status"
+nav_title: "POST: Change email subscription status"
 article_title: "POST: Change Email Subscription Status"
 search_tag: Endpoint
 page_order: 5
