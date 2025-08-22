@@ -1,10 +1,9 @@
 #!/bin/bash
 #
-# Prints all the unique Braze Docs syntax to the terminal. It doesn't include
-# standard Markdown syntax, only unique syntax. The full list is found here:
-#   https://www.braze.com/docs/contributing/styling_examples
+# Prints all supported parameters for 'rake', which includes each language,
+# as well as markdown and partner APIs.
 # 
-# Usage: ./bdocs syntax
+# Usage: ./bdocs rake
 
 cat << EOF
 These are all the supported parameters for 'rake':
