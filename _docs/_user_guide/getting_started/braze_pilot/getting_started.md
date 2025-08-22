@@ -12,7 +12,7 @@ description: "This reference article briefly covers the integration steps requir
 
 ## Step 1: Download Braze Pilot
 
-To start using Braze Pilot, you’ll first need to download the app from either the Apple app store or the Google Play store. You can search for the app in the app store or scan the QR codes below to visit the app page for your device.
+To start using Braze Pilot, you’ll first need to download the app from either the Apple App Store or the Google Play Store app. You can search for the app in the app store or scan the QR codes below to visit the app page for your device.
 
 ## Step 2: Accept the terms and conditions
 
@@ -52,7 +52,7 @@ Finally, it’s recommended that you allow the app to send you push permissions 
 {% tabs %}
 {% tab Update the settings for the app %}
 
-Open your device settings and locate Braze Pilot. Update the settings to allow notifications to appear on your lock screen.
+Open your device settings and locate Braze Pilot. Then, update the settings to allow notifications to appear on your lock screen.
 
 <style>
   .imgDiv {
@@ -68,7 +68,7 @@ Open your device settings and locate Braze Pilot. Update the settings to allow n
 {% endtab %}
 {% tab Launch a push primer message %}
 
-You can use a Braze in-app message to request push permissions for the app, just like you would for your own consumers! To learn how to build this type of message in Braze, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
+You can use a Braze in-app message to request push permissions for the app, just like you would for your own consumers. To learn how to build this type of message in Braze, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/push_primer1.png %}" style="max-width:40%">
@@ -77,7 +77,6 @@ You can use a Braze in-app message to request push permissions for the app, just
 
 {% endtab %}
 {% endtabs %}
-
 
 ## Step 5: Experience Braze messaging in Pilot
 

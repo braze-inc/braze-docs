@@ -71,7 +71,7 @@ To check what type of connection you have, you can check the connection status a
 {% tabs %}
 {% tab Anonymous user  %}
 
-If you see **Anonymous**, this means you're logging data as an anonymous user.
+**Anonymous** indicates you're logging data as an anonymous user.
 
 <style>
   .imgDiv {
@@ -87,7 +87,7 @@ If you see **Anonymous**, this means you're logging data as an anonymous user.
 {% endtab %}
 {% tab Identified user %}
 
-A purple user icon will display next to your external id if you are logging data as an identified user.
+If you're logging data as an identified user, a user icon will display next to your external ID.
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/status_identified_user.png %}" style="max-width:40%">
@@ -97,7 +97,7 @@ A purple user icon will display next to your external id if you are logging data
 {% endtab %}
 {% tab Not connected %}
 
-**Not connected** means you haven’t yet initialized the Braze SDK connection with Pilot.
+**Not connected** indicates you haven't yet initialized the Braze SDK connection with Pilot.
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/status_not_connected.png %}" style="max-width:40%">
