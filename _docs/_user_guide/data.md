@@ -37,7 +37,7 @@ guide_menu_list2:
 
 ### Making customer data work harder
 
-- **Flexible and component-based:** Our overarching goal is to help brands utilize their data more effectively (and fully). Built with a composable architecture, brands can leverage the technologies they need to make their data work harder, without unnecessary middleware. 
+- **Flexible and component-based:** Our overarching goal is to help brands utilize their data more effectively and fully. Built with a composable architecture, brands can leverage the technologies they need to make their data work harder, without unnecessary middleware. 
 - **Partner integrations:** We prioritize integrations with best of breed ecosystem technologies (and offer APIs) that make real-time, bi-directional data sharing easy.
 - **Stream-processing architecture:** Customers can trigger actions on any data point ingested into Braze for segmentation, orchestration, and personalization.
 
