@@ -1,5 +1,5 @@
 ---
-nav_title: Sending Test Canvases
+nav_title: Sending test Canvases
 article_title: Sending Test Canvases
 page_order: 1
 description: "This reference article covers how to test a Canvas before launch and best practices."

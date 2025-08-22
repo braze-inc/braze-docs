@@ -1,5 +1,5 @@
 ---
-nav_title: User Management
+nav_title: User management
 article_title: LINE User Management
 page_order: 0
 description: "This article covers the LINE user ID and how to set it."

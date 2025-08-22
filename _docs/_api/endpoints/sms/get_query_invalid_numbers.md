@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Query Invalid Phone Numbers"
+nav_title: "GET: Query invalid phone numbers"
 article_title: "GET: Query Invalid Phone Numbers"
 search_tag: Endpoint
 page_order: 1

@@ -1,5 +1,5 @@
 ---
-nav_title: "Creating a Push Message"
+nav_title: "Creating a push message"
 article_title: Creating a Push Campaign
 page_order: 4
 page_type: tutorial

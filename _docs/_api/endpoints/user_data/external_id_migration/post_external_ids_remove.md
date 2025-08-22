@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Remove External ID"
+nav_title: "POST: Remove external ID"
 article_title: "POST: Remove External ID"
 search_tag: Endpoint
 page_order: 2

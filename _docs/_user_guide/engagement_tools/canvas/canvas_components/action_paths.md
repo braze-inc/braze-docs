@@ -1,5 +1,5 @@
 ---
-nav_title: Action Paths 
+nav_title: Action paths
 article_title: Action Paths 
 alias: /action_paths/
 page_order: 0.1

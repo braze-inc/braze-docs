@@ -1,5 +1,5 @@
 ---
-nav_title: Customizing Message Styling
+nav_title: Customizing message styling
 article_title: "Tutorial: Customizing styling using key-value pairs"
 description: ""
 page_order: 1

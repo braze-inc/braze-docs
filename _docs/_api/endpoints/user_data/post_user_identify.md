@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Identify Users"
+nav_title: "POST: Identify users"
 article_title: "POST: Identify Users"
 search_tag: Endpoint
 page_order: 3

@@ -1,5 +1,5 @@
 ---
-nav_title: Exit Criteria 
+nav_title: Exit criteria
 article_title: Exit Criteria 
 page_order: 4.1
 alias: /exit_criteria/

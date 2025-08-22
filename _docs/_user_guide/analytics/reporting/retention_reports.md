@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention reports
 article_title: Retention Reports for Campaigns and Canvases
 page_order: 5
 tool: Reports

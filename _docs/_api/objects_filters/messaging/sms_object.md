@@ -1,5 +1,5 @@
 ---
-nav_title: "SMS Object"
+nav_title: "SMS object"
 article_title: SMS Messaging Object
 page_order: 10
 page_type: reference

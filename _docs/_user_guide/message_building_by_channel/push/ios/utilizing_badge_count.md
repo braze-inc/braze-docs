@@ -1,5 +1,5 @@
 ---
-nav_title: Utilizing Badge Count
+nav_title: Utilizing badge count
 article_title: Utilizing Badge Count
 page_order: 8
 
