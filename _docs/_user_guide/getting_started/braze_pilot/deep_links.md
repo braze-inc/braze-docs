@@ -73,12 +73,12 @@ These are the deep links for the Steppington fictional brand app in Pilot.
 
 | Icon | Image |
 | --- | --- |
-| `RUNNING_HOME` | ![]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}) |
-| `HEART_DETAILS` | ![]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}) |
-| `TIMER_DETAILS` | ![]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}) |
-| `YOGA_HOME` | ![]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}) |
-| `BICYCLE_HOME` | ![]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}) |
-| `DUMBBELL_HOME` | ![]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}) |
+| `RUNNING_HOME` | ![A running shoe icon.]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
+| `HEART_DETAILS` | ![A heart icon.]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
+| `TIMER_DETAILS` | ![A stopwatch icon.]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
+| `YOGA_HOME` | ![An icon of person in a yoga pose.]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
+| `BICYCLE_HOME` | ![A bicycle icon.]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
+| `DUMBBELL_HOME` | ![A dumbbell icon.]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## PantsLabyrinth
