@@ -17,6 +17,10 @@ tool:
 
 Depois de duplicar uma campanha ou um Canva, a nova mensagem será automaticamente intitulada `"Copy of [Original Name]"` e você será levado à sua página de edição. Essas duplicatas permanecerão como rascunhos até que você as edite e inicie.
 
+{% alert tip %}
+Você também pode [copiar sua campanha]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) entre espaços de trabalho. A cópia permanecerá como rascunho até que você edite e inicie.
+{% endalert %}
+
 {% tabs %}
 {% tab campanha %}
 Para duplicar uma campanha:
@@ -26,14 +30,12 @@ Para duplicar uma campanha:
 3. Selecione **Duplicar**.
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 Para duplicar uma tela:
 
 1. Acesse **Envio de mensagens** > **Canva**.
 2. Passe o mouse sobre a linha do canva e selecione <i class="fas fa-ellipsis-vertical"></i> **Mais ações**.
 3. Selecione **Duplicar**.
-
-![Página da lista de Canvases com a opção de duplicar um Canva chamado "api_triggered_canvas 3".]({% image_buster /assets/img_archive/duplicate_canvas.png %})
 
 {% details Editor de tela original %}
 

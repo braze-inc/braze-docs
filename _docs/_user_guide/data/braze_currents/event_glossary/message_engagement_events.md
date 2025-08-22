@@ -1628,7 +1628,7 @@ This event occurs when a user has exited a Canvas by performing an event.
 ## Experiment Step Conversion events {#experiment-step-conversion-events}
 
 {% apitags %}
-Experiment Step, Canvas
+Canvas
 {% endapitags %}
 
 This event occurs when a user convert for a Canvas experiment step.
@@ -1797,7 +1797,7 @@ This event occurs when a user convert for a Canvas experiment step.
 ## Experiment Split Entry events {#experiment-split-entry-events}
 
 {% apitags %}
-Experiment Step, Canvas
+Canvas
 {% endapitags %}
 
 This event occurs when a user enters a Canvas experiment step path.
@@ -1957,7 +1957,7 @@ This event occurs when a user enters a Canvas experiment step path.
 ## Canvas Step Progression events {#canvas-step-progression-events}
 
 {% apitags %}
-CanvasStep, Progression
+Canvas, Progression
 {% endapitags %}
 
 This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
@@ -2341,7 +2341,7 @@ This event occurs when an originally scheduled banner message was aborted for so
 ## Banner Click events {#banner-click-events}
 
 {% apitags %}
-Banner, Click
+Banner, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a banner.
@@ -6025,7 +6025,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ## Feature Flag Experiment Impression events {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-FeatureFlags, Impression
+Feature Flags, Impressions
 {% endapitags %}
 
 This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
@@ -6241,7 +6241,7 @@ Feature flag impressions are only logged once per session.
 In-App Messages, Abort
 {% endapitags %}
 
-This event occurs when an originally scheduled in-app message was aborted.
+This event occurs when an originally scheduled [templated in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages) was aborted.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -6958,7 +6958,7 @@ This event occurs when a user views an in-app message.
 ## Live Activity Outcome events {#live-activity-outcome-events}
 
 {% apitags %}
-Live Activity, Outcome
+Live Activity
 {% endapitags %}
 
 This event occurs when Braze receives a response from a third party provider (e.g. APNs) after the Live Activity send
@@ -9083,7 +9083,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 ## SMS Inbound Received events {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, InboundReceived
+SMS, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.
@@ -10714,7 +10714,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 ## WhatsApp Tracked Link Click events {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp, Click
+WhatsApp, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
@@ -11322,7 +11322,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 ## WhatsApp Inbound Received events {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, InboundReceived
+WhatsApp, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.

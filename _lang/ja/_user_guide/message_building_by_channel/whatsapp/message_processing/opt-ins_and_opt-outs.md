@@ -98,11 +98,11 @@ Braze SDK とのインターフェイスに、[HTML アプリ内メッセージ]
 
 #### ステップ 1:「インバウンドの WhatsApp メッセージ」のトリガーを持つキャンバスの作成
  
-![WhatsApp インバウンドメッセージを送信するユーザーをエントリさせるアクションベースのキャンバスエントリステップ。][6]{: style="max-width:85%;"}
+![WhatsApp インバウンドメッセージを送信したユーザーをエントリーするアクションベースのキャンバスエントリーステップ。]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 キーワードトリガーを選択する際には、「Stop」や「No Message」といった単語を含める。この方法を選択した場合は、必ず顧客にオプトアウトの言葉を伝えてください。例えば、最初のオプトインを受信した後、「これらのメッセージからオプトアウトするには、いつでも『Stop』のメッセージを送信してください」などのフォローアップ応答を含めます。 
 
-![メッセージ本文が"STOP"または"NO MESSAGE"のWhatsApp受信メッセージを送信するメッセージステップ。][7]
+![メッセージ本文が「STOP」または「NO MESSAGE」である WhatsApp 受信メッセージを送信するメッセージステップ]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### ステップ 2: ユーザーのプロフィールを更新する
 
@@ -112,7 +112,7 @@ Braze SDK とのインターフェイスに、[HTML アプリ内メッセージ]
 
 WhatsApp のメッセージテンプレート作成画面で、[marketing opt-out] オプションを含めることができます。これを含むときはいつでも、テンプレートがサブスクリプショングループ変更のための後続ステップを持つキャンバスで使用されていることを確認すること。 
 
-1. マーケティングオプトアウト」クイック返信でメッセージテンプレートを作成する。<br>!["Marketing opt-out"のフッターオプションを持つメッセージテンプレート。][11]<br><br>![マーケティングオプトアウトボタンを設定するセクション。][12]<br><br>
+1. マーケティングオプトアウト」クイック返信でメッセージテンプレートを作成する。<br>!["Marketing opt-out"のフッターオプションを持つメッセージテンプレート。]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![マーケティングオプトアウトボタンを設定するセクション。]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. このメッセージテンプレートを使ってキャンバスを作成する。<br><br>
 3. 前述の例のステップに従うが、トリガーテキストは "STOP PROMOTIONS "とする。<br><br>
 4. [購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)で説明されている方法のいずれかを使用して、ユーザーの購読ステータスを更新します。
@@ -136,10 +136,10 @@ WhatsAppのキーワード応答ワークフローは、この2つの方法で�
 「STOP」メッセージの場合は、オプトアウトを確認するメッセージステップと、ユーザー更新ステップの順序を逆にします。そうしないと、ユーザーはまず購読グループからオプトアウトされ、確認メッセージを受け取る資格がなくなる。
 {% endalert %}
 
-![メッセージ本文が「START」であるWhatsApp メッセージステップ。][13]{: style="max-width:70%;"}
+![WhatsApp メッセージステップ。メッセージ本文は「START」である。]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\.キャンバスで、[**ユーザーの更新を設定**] ステップを作成し、[**アクション**] で [**高度な JSON エディター**] を選択します。<br><br>![アクションが「高度なJSONエディター」であるユーザー更新ステップ。][14]<br><br>
+2\.キャンバスで、[**ユーザーの更新を設定**] ステップを作成し、[**アクション**] で [**高度な JSON エディター**] を選択します。<br><br>![アクションが「高度なJSONエディター」であるユーザー更新ステップ。]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
 3\.**ユーザー更新オブジェクト**に次の JSON ペイロードを入力し、`XXXXXXXXXXX` を購読グループ ID に置き換えます。
 
 {% raw %}
@@ -160,7 +160,7 @@ WhatsAppのキーワード応答ワークフローは、この2つの方法で�
 {% endraw %}
 
 {: start="4"}
-4\.後続のWhatsAppメッセージステップを追加する。<br><br>![キャンバスの「ユーザの更新」ステップ][15]{: style="max-width:20%;"}
+4\.後続のWhatsAppメッセージステップを追加する。<br><br>![キャンバスの「ユーザの更新」ステップ]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
 
 #### 考慮事項
 
@@ -174,10 +174,22 @@ Webhookキャンペーンは、ユーザーの電話番号をWhatsApp購読グ�
 STOPメッセージにこの方法を使う必要はない。確認メッセージは、ユーザーが購読グループから削除される前に送信されるため、他の 2つのステップのいずれかを使用できます。
 {% endalert %}
 
-1. アクションベースのステップ [**WhatsApp インバウンドメッセージを送信**] を含むキャンペーンまたはキャンバスを作成します。[**メッセージ本文の場所**] をオンにして、[**次に該当する**] に「START」と入力します。<br><br>![メッセージ本文が「START」であるWhatsApp メッセージステップ。][13]{: style="max-width:70%;"}<br><br>
-2. キャンペーンまたはキャンバスで、Webhook メッセージステップを作成し、[**リクエスト本文**] を [**生のテキスト**] に変更します。<br><br>![Webhook のメッセージステップ。][16]<br><br>
-3. [**Webhook URL**] に顧客の[エンドポイント URL ]({{site.baseurl}}/api/basics/)を入力し、その後にエンドポイントのリンク `campaigns/trigger/send` を付加します。たとえば `https://dashboard-02.braze.eu/campaigns/trigger/send` です。<br><br>![「Webhook を作成」セクションの下のWebhook URL フィールド。][19]{: style="max-width:70%;"}<br><br>
-4. [生のテキスト] に次の JSON ペイロードを入力し、`XXXXXXXXXXX` を購読グループ ID に置き換えます。2 つ目のキャンペーンの作成後に、`campaign_id` を置き換える必要があります。
+1. アクションベースのステップ [**WhatsApp インバウンドメッセージを送信**] を含むキャンペーンまたはキャンバスを作成します。[**メッセージ本文の場所**] をオンにして、[**次に該当する**] に「START」と入力します。
+
+![メッセージ本文が「START」であるWhatsAppメッセージステップ]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+
+{: start="2"}
+2\.キャンペーンまたはキャンバスで、Webhook メッセージステップを作成し、[**リクエスト本文**] を [**生のテキスト**] に変更します。
+
+![Webhook のメッセージステップ。]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+
+{: start="3"}
+3\.[**Webhook URL**] に顧客の[エンドポイント URL ]({{site.baseurl}}/api/basics/)を入力し、その後にエンドポイントのリンク `campaigns/trigger/send` を付加します。たとえば `https://dashboard-02.braze.eu/campaigns/trigger/send` です。
+
+![[Webhook を作成] セクションの下の[Webhook URL] フィールド。]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+
+{: start="4"}
+4\.[生のテキスト] に次の JSON ペイロードを入力し、`XXXXXXXXXXX` を購読グループ ID に置き換えます。2 つ目のキャンペーンの作成後に、`campaign_id` を置き換える必要があります。
 
 {% raw %}
 ```json
@@ -219,22 +231,3 @@ STOPメッセージにこの方法を使う必要はない。確認メッセー�
 | `Matches regex` | `(?i)STOP(?-i)` | 大文字と小文字に関係なく「STOP」の使用をすべて検出します。例えば 「stop」、「please stop」、「never stop sending me messages」を検出します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp114.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp115.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp116.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp117.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp118.png %}
-[9]: {% image_buster /assets/img/whatsapp/whatsapp119.png %}
-[10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %}
-[11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %}
-[12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %}
-[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}
-[14]: {% image_buster /assets/img/whatsapp/user_update.png %}
-[15]: {% image_buster /assets/img/whatsapp/message_step.png %}
-[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %}
-[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %}
-[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %}
-[19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 

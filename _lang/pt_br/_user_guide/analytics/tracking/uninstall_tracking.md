@@ -33,17 +33,17 @@ Quando o rastreamento de desinstalação estiver ativado para um app, mensagens 
 
 ### Configuração
 
-Para configurar o rastreamento de desinstalação para seu aplicativo iOS, use um [método utilitário][documentos do iOS]. Para seu aplicativo Android, use [`isUninstallTrackingPush()`][8]. Quando o Braze detectar uma desinstalação, seja por rastreamento de desinstalação ou por entrega normal de campanha push, registraremos o melhor horário estimado da desinstalação para o usuário. Esse tempo é armazenado no perfil do usuário como uma atribuição padrão e pode ser usado para definir um segmento de usuários para campanhas de recuperação.
+Para configurar o rastreamento de desinstalação do seu aplicativo iOS, use um [método utilitário]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift). Para seu aplicativo Android, use [`isUninstallTrackingPush()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html). Quando o Braze detectar uma desinstalação, seja por rastreamento de desinstalação ou por entrega normal de campanha push, registraremos o melhor horário estimado da desinstalação para o usuário. Esse tempo é armazenado no perfil do usuário como uma atribuição padrão e pode ser usado para definir um segmento de usuários para campanhas de recuperação.
 
 ## Filtragem de segmentos por desinstalações
 
-O filtro **Uninstalled (Desinstalado)** na página **Segmentos** seleciona os usuários que desinstalaram seu app dentro de um intervalo de tempo. Como é difícil determinar a hora exata de uma desinstalação, recomendamos que os filtros de desinstalação tenham intervalos de tempo mais amplos para garantir que todos os que desinstalam sejam incluídos no segmento em algum momento.
+O filtro **Uninstalled (Desinstalado** ) seleciona os usuários que desinstalaram seu app dentro de um intervalo de tempo. Como é difícil determinar a hora exata de uma desinstalação, recomendamos que os filtros de desinstalação tenham intervalos de tempo mais amplos para garantir que todos os que desinstalam sejam incluídos no segmento em algum momento.
 
-![Desinstalar segmento.][5]
+As estatísticas diárias sobre desinstalações estão na página **inicial**. 
 
-### Análise em nível de app
+![Desinstale o segmento.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
-As estatísticas diárias sobre desinstalações estão na página **inicial**. O gráfico pode ser dividido por app e segmento, semelhante a outras estatísticas que a Braze fornece. Na seção **Visão geral da performance**, selecione o intervalo de datas e, se desejar, um app. Em seguida, role a tela para baixo até o gráfico **Performance Over Time** e faça o seguinte:
+O gráfico pode ser dividido por app e segmento, semelhante a outras estatísticas que a Braze fornece. Na seção **Visão geral da performance**, selecione o intervalo de datas e, se desejar, um app. Em seguida, role a tela para baixo até o gráfico **Performance Over Time** e faça o seguinte:
 
 1. No menu suspenso **Statistics For (Estatísticas para)**, selecione **Uninstalls (Desinstalações)**.
 2. No menu suspenso **Detalhamento**, selecione **Por segmento**.
@@ -53,15 +53,13 @@ As estatísticas diárias sobre desinstalações estão na página **inicial**. 
 Os apps sem rastreamento de desinstalação ativado reportarão desinstalações de apenas um subconjunto de seus usuários (aqueles que foram direcionados com notificações por push), portanto, os totais diários de desinstalação podem ser maiores do que o mostrado.
 {% endalert %}
 
-![Desinstalar a seleção de gráficos.][2]
-
 ## Desinstalar o rastreamento de campanhas
 
 O rastreamento de desinstalação de campanhas mostra o número de usuários que receberam uma campanha específica e, posteriormente, desinstalaram seu app dentro do período de tempo selecionado. Essa ferramenta fornece insight sobre como as campanhas podem estar incentivando comportamentos negativos não intencionais dos usuários e ajuda a medir a eficácia geral da campanha.
 
 As estatísticas de desinstalação de campanhas estão localizadas em uma página específica de **análise de dados da campanha**. Para campanhas multicanais e multivariantes, as desinstalações podem ser divididas por canal e variante, respectivamente.
 
-![Desinstale no nível da campanha.][6]
+![Desinstale em nível de campanha.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### Como funciona?
 
@@ -73,7 +71,7 @@ O Braze rastreia as desinstalações observando quando as mensagens push enviada
 
 O rastreamento de desinstalação está sujeito a restrições impostas a essas informações pela FCM e pelos APNs. O Braze só aumenta a contagem de desinstalações quando o FCM ou os APNs nos informam que um usuário desinstalou, mas esses sistemas de terceiros se reservam o direito de nos notificar sobre desinstalações a qualquer momento. Como resultado, o rastreamento de desinstalação deve ser usado para detectar tendências direcionais em vez de estatísticas precisas.
 
-Para saber mais sobre como usar o rastreamento de desinstalação, consulte nossa postagem no blog [Rastreamento de desinstalação]: Uma análise do setor sobre seus pontos fortes e limitações][7].
+Para saber mais sobre como usar o rastreamento de desinstalação, consulte nossa postagem no blog [Uninstall Tracking: Uma análise do setor sobre seus pontos fortes e limitações](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## Solução de problemas
 
@@ -83,13 +81,7 @@ Se você observar um aumento nas desinstalações de aplicativos, isso pode ser 
 
 ### Por que o número de desinstalações de aplicativos é diferente do que está nos APNs?
 
-A diferença é esperada. Os APNs começarão a retornar um status 410 para esses tokens em um cronograma impreciso.
+A diferença é esperada. 
 
-[1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Caixa de seleção Desinstalar rastreamento"
-[2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Desinstalar a seleção do gráfico"
-[4]: {% image_buster /assets/img_archive/User_Profile.png %} Desinstalar atributo
-[5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment" (Desinstalar segmento)
-[6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
-Daqui a [7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[Documentos do iOS]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-Daqui a [8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html
+A Apple usa uma programação aleatória para postergar a comunicação quando um token por push se torna inválido, o que significa que, mesmo depois que um usuário desinstala um app, os APNs podem continuar a retornar respostas bem-sucedidas às notificações por push por um período de tempo. Essa postergação é intencional e foi projetada para proteger a privacidade do usuário. Nenhum bounce ou falha será relatado até que o APNs retorne um status `410` para um token inválido.
+

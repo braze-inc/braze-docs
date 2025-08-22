@@ -3,6 +3,7 @@ nav_title: CDI segment extensions
 article_title: CDI Segment Extensions
 page_order: 0
 page_type: reference
+alias: /cdi_segment_extensions/
 tool: 
 - Segments
 description: "This how-to article will walk you through how to set up Location targeting, allowing you to segment users by location."

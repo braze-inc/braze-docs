@@ -17,13 +17,13 @@ Braze se enorgullece de anunciar que hemos mejorado el aspecto de nuestros mensa
 - Se ha mejorado el comportamiento receptivo de todos los tipos de mensajes para que se ajusten mejor a los viewports.
 - Bordes de botones para crear contrastes personalizados entre botones
 
-Nuestros [nuevos mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/) harán que tus interacciones con el usuario pasen de ser buenas a ser increíbles para la aplicación.
+Nuestros [nuevos mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) harán que tus interacciones con el usuario pasen de ser buenas a ser increíbles para la aplicación.
 
 ![Comportamiento a pantalla completa]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 ### Lo que tienes que hacer
 
-Recomendamos encarecidamente actualizar a las últimas versiones de los SDK de Braze para [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) y [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
+Recomendamos encarecidamente actualizar a las últimas versiones de los SDK de Braze para [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) y [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android).
 
 Después de eso, ¡ya puedes empezar!
 
@@ -37,4 +37,4 @@ Ahora puedes utilizar [Inkit]({{site.baseurl}}/partners/inkit/) como plantilla p
 
 ## Google Cloud Storage
 
-¡[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/) ya no está en fase beta! Braze se enorgullece de anunciar que Google Cloud Storage está disponible para los clientes interesados dentro de la plataforma Braze. Ve a **Socios tecnológicos** en tu cuenta Braze y busca Google Cloud Storage.
+¡[Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) ya no está en fase beta! Braze se enorgullece de anunciar que Google Cloud Storage está disponible para los clientes interesados dentro de la plataforma Braze. Ve a **Socios tecnológicos** en tu cuenta Braze y busca Google Cloud Storage.

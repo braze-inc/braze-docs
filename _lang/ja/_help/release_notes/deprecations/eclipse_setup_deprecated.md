@@ -13,7 +13,7 @@ Google が Eclipse Android Developer Tools プラグインの[サポートを終
 {% endalert %}
 
 ## ステップ 1
-コマンドラインで、[Braze Android GitHub リポジトリ][03]を複製します。
+コマンドラインで、[Braze Android GitHub リポジトリ](https://github.com/braze-inc/braze-android-sdk)を複製します。
 
 ```bash
 $ git clone git@github.com:braze-inc/braze-android-sdk.git
@@ -26,16 +26,16 @@ Eclipse の場合:
 
   - [ファイル] > [インポート] に移動します。
 
-    ![ファイルインポート][04]
+    ![ファイルインポート]({{site.baseurl}}/assets/img_archive/file_import.png)
   - [Android] > [ワークスペースに存在する Android コード] を選択します。
 
-    ![Androidドインポート][05]
+    ![Androidドインポート]({{site.baseurl}}/assets/img_archive/android_import.png)
   - [参照] をクリックします。
 
-    ![参照][06]
+    ![参照]({{site.baseurl}}/assets/img_archive/click_browse.png)
   - Braze UI プロジェクトフォルダーを確認し、「プロジェクトをワークスペースにコピー」して、[終了] をクリックします。
 
-    ![Android UI プロジェクトを選択する][07]
+    ![Android UI プロジェクトを選択する]({{site.baseurl}}/assets/img_archive/select_project_android.png)
 
 ## ステップ 3
 自分のプロジェクトでBrazeを参照する。
@@ -43,10 +43,10 @@ Eclipse の場合:
 
   - プロジェクトを右クリックし、"Properties "を選択する。
 
-    ![プロパティをクリックする][08]
+    ![プロパティをクリックする]({{site.baseurl}}/assets/img_archive/click_properties.png)
   - [Android] で、[ライブラリー] セクションの [追加...]" をクリックし、android-sdk-ui をライブラリーとしてアプリに追加します。
 
-    ![Braze 追加][09]
+    ![Braze 追加]({{site.baseurl}}/assets/img_archive/add_appboy_ui.png)
 
 ## ステップ 4
 依存性エラーを解決し、ビルドターゲットを修正する。
@@ -55,10 +55,10 @@ Eclipse の場合:
 
    - Braze UI プロジェクトを右クリックし、[プロパティ] -> [Android] を選択して、ビルドターゲットが Braze の最新ビルドツールバージョンに設定されていることを確認します。
 
-      ![ビルドターゲット][10]
+      ![ビルドターゲット]({{site.baseurl}}/assets/img_archive/build_target.png)
    - Braze UI プロジェクトを右クリックし、[プロパティ] -> [Java ビルドパス] -> [JAR を追加...] を選択して、メインアプリケーションから「android-support-v4.jar」をライブラリーとして追加します。
 
-      ![サポート][11]
+      ![サポート]({{site.baseurl}}/assets/img_archive/android_support_v4.png)
 
 ## ステップ5
 
@@ -70,12 +70,3 @@ Eclipse の場合:
 
   - SDK バージョン1.7.0以降では、「assets/fontawesome-webfont.ttf」をライブラリープロジェクトからアプリケーションにコピーする必要があります。Eclipse には、ライブラリーのアセットフォルダは自動的には含まれません。
 
-[03]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHubリポジトリ"
-[04]: {{site.baseurl}}/assets/img_archive/file_import.png
-[05]: {{site.baseurl}}/assets/img_archive/android_import.png
-[06]: {{site.baseurl}}/assets/img_archive/click_browse.png
-[07]: {{site.baseurl}}/assets/img_archive/select_project_android.png
-[08]: {{site.baseurl}}/assets/img_archive/click_properties.png
-[09]: {{site.baseurl}}/assets/img_archive/add_appboy_ui.png
-[10]: {{site.baseurl}}/assets/img_archive/build_target.png
-[11]: {{site.baseurl}}/assets/img_archive/android_support_v4.png

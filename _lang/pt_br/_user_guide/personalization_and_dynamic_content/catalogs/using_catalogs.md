@@ -13,7 +13,7 @@ description: "Este artigo de referência aborda como usar catálogos para fazer 
 
 No criador de mensagens de sua escolha, selecione o ícone de adição <i class="fas fa-plus-circle"></i> para abrir o modal **Add Personalization (Adicionar personalização** ) e selecione **Catalogs Items (Itens de catálogos** ) para o **tipo de personalização**. Em seguida, selecione o **nome do catálogo**. Usando nosso exemplo anterior, selecionaremos o catálogo "Games" (Jogos).
 
-![][1]
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 Podemos ver imediatamente a prévia do Liquid a seguir:
 
@@ -58,7 +58,7 @@ Você não está limitado a apenas um item em uma única mensagem. Você pode us
 
 Veja este exemplo em que adicionamos o endereço `id` de três jogos, Tales, Teslagrad e Acaratus, para **Catalog Items** e selecionamos `title` para **Information to Display**.
 
-![][2]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Podemos personalizar ainda mais nossa mensagem adicionando algum texto ao redor de nosso Liquid:
 
@@ -114,11 +114,11 @@ Por exemplo, para adicionar o `image_link` do nosso catálogo de jogos à nossa 
 ```
 {% endraw %}
 
-![Cartão de conteúdo do criador com a tag Liquid do catálogo usada no campo de imagem.][3]
+![Criador do cartão de conteúdo com a tag Liquid do catálogo usada no campo de imagem.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Veja como isso se parece quando o Liquid é renderizado:
 
-![Exemplo de cartão de conteúdo com tags Liquid do catálogo renderizadas.][4]{: style="max-width:50%" }
+![Exemplo de cartão de conteúdo com as tags Liquid do catálogo renderizadas.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### Modelo de itens de catálogo
 
@@ -139,7 +139,7 @@ Você também pode usar modelos para extrair dinamicamente itens do catálogo co
 Os objetos JSON nos catálogos só são ingeridos por meio da API. Não é possível fazer upload de um objeto JSON usando um arquivo CSV.
 {% endalert %}
 
-Usando o envio de mensagens Liquid, você pode extrair dinamicamente os IDs da lista de desejos e usá-los em sua mensagem. Para isso, atribua uma variável][10] ao seu atributo personalizado e, em seguida, use o modal **Add Personalization** para extrair um item específico da matriz.
+Usando o envio de mensagens Liquid, você pode extrair dinamicamente os IDs da lista de desejos e usá-los em sua mensagem. Para fazer isso, [atribua uma variável]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) ao seu atributo personalizado e, em seguida, use o modal **Add Personalization** para extrair um item específico da matriz. As variáveis referenciadas como ID do item de catálogo devem ser colocadas entre colchetes para serem referenciadas corretamente, como `{{result}}`.
 
 {% alert tip %}
 Lembre-se de que as matrizes começam em `0`, e não em `1`.
@@ -167,7 +167,7 @@ Você pode fazer upload de um CSV de novos itens de catálogo a serem adicionado
 
 ### Usando Liquid
 
-Você também pode reunir manualmente os catálogos Liquid logic. No entanto, note que se você digitar um ID que não existe, a Braze ainda retornará um vetor de itens sem objetos. Recomendamos que você inclua o tratamento de erros, como a verificação do tamanho da matriz e o uso de uma instrução `if` para considerar o caso de uma matriz vazia.
+Você também pode reunir manualmente os catálogos com a lógica Liquid. No entanto, note que se você digitar um ID que não existe, a Braze ainda retornará um vetor de itens sem objetos. Recomendamos que você inclua o tratamento de erros, como a verificação do tamanho da matriz e o uso de uma instrução `if` para considerar o caso de uma matriz vazia.
 
 {% alert note %}
 Atualmente, o Liquid não pode ser usado dentro de catálogos. Se a personalização Liquid estiver listada dentro de uma célula em seu catálogo, o valor dinâmico não será renderizado e somente o Liquid real será exibido.
@@ -211,6 +211,3 @@ As Liquid tags do catálogo não podem ser usadas recursivamente dentro de catá
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
-[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
-[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

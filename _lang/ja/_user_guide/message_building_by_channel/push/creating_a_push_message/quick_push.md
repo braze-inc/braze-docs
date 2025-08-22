@@ -25,10 +25,10 @@ Braze でプッシュキャンペーンまたはキャンバスを作成する�
 3. 希望のプラットフォーム（モバイル、ウェブ、Kindle）とモバイルデバイス（iOS、Android）を選択する。複数のデバイスを選択した場合、キャンペーンで多変量テストは利用できない。
 
 ### キャンペーンのプラットフォームの選択
-![モバイル、ウェブ、Kindleなど、プッシュ・キャンペーン用の複数のプラットフォームや、iOSやAndroidなど複数のデバイスを選択できるオプションがある。][1]
+![Mobile、Web、Kindle などのプッシュキャンペーン用の複数のプラットフォーム、およびiOS やAndroid などの複数のデバイスを選択するオプション。]({% image_buster /assets/img_archive/quick_push_1.png %})
 
 ### キャンバスステップのプラットフォームの選択
-![モバイル、ウェブ、Kindleなど、プッシュメッセージステップ用の複数のプラットフォームや、iOSやAndroidなど複数のデバイスを選択できるオプション。][8]
+![Mobile、Web、Kindle などのプッシュメッセージステップと、iOS やAndroid.]({% image_buster /assets/img_archive/quick_push_4.png %}) などの複数のデバイス用に複数のプラットフォームを選択するオプション
 
 {:start="4"}
 4\.**確認**を選択します。**Confirm**を選択すると、選択したプラットフォームまたはデバイスを変更できなくなります。
@@ -42,13 +42,13 @@ Braze でプッシュキャンペーンまたはキャンバスを作成する�
 
 [プレビュー] ペインには、作成したメッセージが各プラットフォームで、だいたいどのように表示されるかが表示されます。文字数制限の目安にはなるが、キャンペーンを送る前に必ず実機でメッセージをテストすることを忘れずに。
 
-![iOS、Android、Webの3つのプッシュタイプに対応した、1つのタイトル、メッセージ、クリック時の動作フィールドを持つ単一の編集ビュー。][2]
+![iOS、Android、Web の3つのプッシュタイプに対応した、1つのタイトル、メッセージ、クリック時の動作フィールドを持つ単一の編集ビュー。]({% image_buster /assets/img_archive/quick_push_2.png %})
 
-[**アセット**] セクションで、各プラットフォームに表示する画像を選択するか、アップロードします。デバイスによって、画像や文字数の仕様が異なることに留意してほしい。ヘルプについては、「プッシュメッセージと画像の形式][3]」を参照してください。
+[**アセット**] セクションで、各プラットフォームに表示する画像を選択するか、アップロードします。デバイスによって、画像や文字数の仕様が異なることに留意してほしい。ヘルプについては、「[プッシュメッセージと画像の形式]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)」を参照してください。
 
-![[プッシュアイコン画像]、[iOS 通知画像]、[Android 通知画像]、および [Web 通知画像] のフィールドを含む、単一編集ビューの [アセット] セクション。][4]{:style="max-width:50%"}
+![[プッシュアイコン画像]、[iOS 通知画像]、[Android 通知画像]、および [Web 通知画像] のフィールドを含む、単一編集ビューの [アセット] セクション。]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
 
-その後、通常通りプッシュキャンペーンの設定を終える。詳しくはプッシュ・キャンペーンの作成を][5]参照のこと。
+その後、通常通りプッシュキャンペーンの設定を終える。詳しくは[プッシュ・キャンペーンの作成を]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)参照のこと。
 
 ## 知っておくべきこと
 
@@ -66,15 +66,7 @@ iOSとAndroidの両方など、モバイルプラットフォームで複数の�
 
 クイックプッシュキャンペーンを使用してiOS とAndroid の両方をターゲットにする場合、プッシュアクションボタンはサポートされないことに注意してください。デバイス固有の設定の詳細については、以下の記事集を参照のこと：
 
-- [iOS オプション][6]
-- [Android オプション][7]
+- [iOS オプション]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios)
+- [Android オプション]({{site.baseurl}}/user_guide/message_building_by_channel/push/android)
 
 
-[1]: {% image_buster /assets/img_archive/quick_push_1.png %}
-[2]: {% image_buster /assets/img_archive/quick_push_2.png %}
-[4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android

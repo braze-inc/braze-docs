@@ -16,14 +16,14 @@ description: "このリファレンス記事では、ユーザーに送信する
 
 ## 仕組み
 
-この機能がオンになっている場合、クラウドストレージバケットを Braze に接続し、それをデフォルトのデータエクスポート先としてマークすると、Braze は、選択したチャネルを通じてユーザーに送信されるメッセージ (メール、SMS、またはプッシュ) ごとに gzip 圧縮された JSON ファイルをクラウドストレージバケットに書き込みます。 
+この機能をオンにすると、クラウドストレージバケットをBrazeに接続し、デフォルトのデータ送信先としてマークしている場合、Brazeは、選択したチャネル（メール、SMS/MMS、またはプッシュ）を通じてユーザーに送信された各メッセージについて、gzip圧縮されたJSONファイルをクラウドストレージバケットに書き込む。 
 
 このファイルには、[[ファイル参照](#file-references)] で定義されたフィールドが含まれており、ユーザーに送信されるテンプレート化された最終的なメッセージが反映されます。キャンペーンで定義されたテンプレートの値 ({% raw %}`{{${first_name}}}`{% endraw %} など) が、プロファイル情報に基づいてユーザーが受け取った最終的な値を示します。これにより、送信したメッセージのコピーを保持して、コンプライアンス、監査、またはカスタマーサポートの要件を満たすことができます。
 
 複数のクラウドストレージプロバイダーの認証情報を設定した場合、メッセージのアーカイブ機能では、デフォルトのデータエクスポート先として明示的にマークされたプロバイダーにのみエクスポートされます。明示的なデフォルトが提供されておらず、AWS S3バケットが接続されている場合、メッセージアーカイブはそのバケットにアップロードされます。
 
 {% alert important %}
-この機能をオンにすると、正確性を保つためにメッセージ送信の直前にファイルのアップロードが行われるため、メッセージの配信速度に影響が出る。これにより、Braze 送信パイプラインに追加の遅延が発生し、送信速度に影響します。
+この機能をオンにすると、メッセージの配信速度に影響が出る。正確性を保つため、アップロードはメッセージ送信の直前に行われるからだ。メッセージのアーカイブによって生じる遅延は、クラウドストレージプロバイダーと、保存されているドキュメントのスループットとサイズに応じて異なります。
 {% endalert %}
 
 JSON は、次のキー構造を使用してストレージバケットに保存されます。
@@ -49,7 +49,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 
 ### ステップ 1: クラウドストレージバケットの接続
 
-まだクラウドストレージバケットを接続していない場合は、Braze に接続します。手順については、[Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/)、[Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) または [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/) に関するパートナーのドキュメントを参照してください。
+まだクラウドストレージバケットを接続していない場合は、Braze に接続します。手順については、[Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)、[Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) または [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) に関するパートナーのドキュメントを参照してください。
 
 ### ステップ 2: メッセージをアーカイブするチャネルの選択
 
@@ -61,7 +61,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 2. チャネルを選択します。
 3. **変更の保存**を選択します。
 
-![[メッセージのアーカイブ] ページには、選択できるチャネルとして、メール、プッシュ、SMS の 3 つがあります。][1]
+![[メッセージのアーカイブ] ページには、選択できるチャネルとして、メール、プッシュ、SMS。]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 [**設定**] に [**メッセージのアーカイブ**] が表示されない場合は、会社がメッセージのアーカイブ機能を購入して有効にしていることを確認してください。
@@ -107,7 +107,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab SMS %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -116,7 +116,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
   "provider": StringOfProviderName,
-  "media_urls": ArrayOfString,
+  "media_urls": ArrayOfString, // indicates a message is MMS
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiId, // may not be available
@@ -168,7 +168,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 
 ### キャンペーンパスの「unassociated」の値の下にあるメッセージは何ですか?
 
-メッセージがキャンペーンまたはキャンバス以外で送信される場合、ファイル名のキャンペーン ID は「unassociated」になります。これは、ダッシュボードからテストメッセージを送信する場合、Braze が SMS 自動応答を送信する場合、または API 経由で送信されるメッセージにキャンペーン ID が指定されていない場合に発生します。
+メッセージがキャンペーンまたはキャンバス以外で送信される場合、ファイル名のキャンペーン ID は「unassociated」になります。ダッシュボードからテストメッセージを送信した場合、BrazeがSMS/MMS自動レスポンスを送信した場合、またはAPI経由で送信したメッセージにキャンペーンIDが指定されていない場合に発生する。
 
 ### この送信に関する詳細情報を見つけるにはどうすればよいですか?
 
@@ -186,4 +186,11 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 
 レンダリングされたコピーは、ユーザーにメッセージを送る直前にアップロードされる。クラウドストレージのアップロード時刻により、レンダリングされたコピーの `sent_at` タイムスタンプと実際の送信時刻との間には、数秒の遅延が発生する可能性があります。
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}
+### 現在のバケットを引き続き Currents データ用に使用して、メッセージアーカイブ専用に新しいバケットを作成できますか？
+
+できません。このような特定のバケットの作成に関心がある場合には、[製品フィードバック]({{site.baseurl}}/user_guide/administrative/access_braze/portal/)をお送りください。
+
+### Currents データエクスポートの仕組みと同様に、アーカイブされたデータは既存のバケット内の専用フォルダーに書き込まれるのですか?
+
+データはバケットの`sent_messages` セクションに書き込まれます。詳しくは「[仕組み](#how-it-works)」を参照のこと。
+

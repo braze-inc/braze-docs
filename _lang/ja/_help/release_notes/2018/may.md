@@ -15,7 +15,7 @@ description: "この記事には2018年5月のリリースノートが含まれ�
 
 ## モバイル対応Eメールテンプレート
 
-Brazeは、一般的なメールマーケティングのニーズに対応する16種類の新しいモバイル対応[メールテンプレートを][97]用意している。これらには、以下のテンプレートテーマの異なるバージョンが含まれる：
+Brazeは、一般的なメールマーケティングのニーズに対応する16種類の新しいモバイル対応[メールテンプレートを]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template)用意している。これらには、以下のテンプレートテーマの異なるバージョンが含まれる：
 
 - ようこそ
 - ありがとう
@@ -29,4 +29,3 @@ Brazeは、一般的なメールマーケティングのニーズに対応する
 各テンプレートを表すアイコンは、そのレイアウトを示していることに気づくだろう。
 
 
-[97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

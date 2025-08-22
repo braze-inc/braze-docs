@@ -12,7 +12,7 @@ tool:
 
 # Criação de uma mensagem push
 
-> As notificações por push são excelentes para chamadas à ação sensíveis ao tempo, bem como para o reengajamento de usuários que não acessam o app há algum tempo. Campanhas push bem-sucedidas levam o usuário diretamente ao conteúdo e demonstram o valor do seu app. Para ver exemplos de notificações por push, confira nossos [estudos de caso][8].
+> As notificações por push são excelentes para chamadas à ação sensíveis ao tempo, bem como para o reengajamento de usuários que não acessam o app há algum tempo. Campanhas push bem-sucedidas levam o usuário diretamente ao conteúdo e demonstram o valor do seu app. Para ver exemplos de notificações por push, confira nossos [estudos de caso](https://www.braze.com/customers).
 
 ## Etapa 1: Escolha onde construir sua mensagem {#create-new-campaign-push}
 
@@ -23,10 +23,16 @@ Não tem certeza se deve usar uma campanha ou um Canva? As campanhas são melhor
 {% tabs %}
 {% tab Campanha %}
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-2. Para campanhas com direcionamento para vários canais, selecione **Multicanal**. Caso contrário, selecione **Notificações por push**. Se ainda não tiver certeza, consulte a seção **Decidir entre uma campanha push regular ou multicanal** abaixo.
+2. Para campanhas com direcionamento para vários canais, selecione **Multicanal**. Caso contrário, selecione **Notificação por push**. Se ainda não tiver certeza, consulte a seção **Decidir entre uma campanha push regular ou multicanal** abaixo.
 3. Dê à sua campanha um nome claro e significativo.
-4. Adicione [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário. **Dica:** As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
-5. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+4. Adicione [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário. 
+
+{% alert tip %}
+As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
+{% endalert %}
+
+{: start="5"}
+5\. Adicione e nomeie quantas variantes forem necessárias para sua campanha. Você pode escolher diferentes plataformas, tipos de mensagens e layouts para cada uma de suas variantes adicionadas. Para saber mais sobre esse tópico, consulte [Testes multivariantes e testes A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details Decidir entre uma campanha push regular ou multicanal %}
 
@@ -44,7 +50,7 @@ Se você selecionar **Notificação por push** e optar pelo direcionamento para 
 - Prioridade de exibição
 - Sons
 
-Consulte [Campanhas push rápidas]({{site.baseurl}}/quick_push) para entender o que há de diferente nessa experiência de edição antes de continuar.
+Antes de continuar, consulte [as campanhas Quick push]({{site.baseurl}}/quick_push) para entender o que há de diferente nessa experiência de edição.
 
 {% enddetails %}
 
@@ -64,9 +70,9 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endtab %}
 {% endtabs %}
 
-## Etapa 2: Especificar plataformas de entrega
+## Etapa 2: Selecione plataformas push
 
-Comece escolhendo qual combinação de dispositivo e plataforma deve receber o push. Use essa seleção para limitar a entrega de uma notificação por push a um conjunto específico de aplicativos.
+Em seguida, escolha qual combinação de plataforma e dispositivo móvel deve receber o push. Use essa seleção para limitar a entrega de uma notificação por push a um conjunto específico de aplicativos.
 
 Há algumas maneiras diferentes de fazer isso, dependendo de suas seleções anteriores:
 
@@ -79,9 +85,9 @@ Há algumas maneiras diferentes de fazer isso, dependendo de suas seleções ant
 
 ## Etapa 3: Selecione o tipo de notificação (iOS e Android)
 
-Se estiver criando uma campanha de push rápido, o tipo de notificação será automaticamente definido como Push padrão e não poderá ser alterado.
+Se estiver criando uma campanha de push rápido, o tipo de notificação será automaticamente definido como **Standard push** e não poderá ser alterado.
 
-![Tipo de notificação com Push padrão selecionado como exemplo.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Tipo de notificação com Push padrão selecionado como exemplo.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Caso contrário, para iOS e Android, selecione seu tipo de notificação:
 
@@ -105,7 +111,7 @@ Para saber mais sobre as opções de notificação específicas da plataforma, c
 
 #### Idioma
 
-Adicione textos em vários idiomas usando o botão **Adicionar idiomas**. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para obter a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados][18].
+Adicione textos em vários idiomas usando o botão **Adicionar idiomas**. Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para nossa lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -130,7 +136,7 @@ Para tornar seu push personalizado e direcionado, você pode incluir o [Liquid](
 {% endtabs %}
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
 ![Inicie o botão AI Copywriter, localizado no campo "Corpo" do criador do push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -155,11 +161,11 @@ Aqui, você também pode configurar avisos de botão na notificação por push, 
 - Confirmar/Cancelar
 - Mais 
 
-#### Opções de dispositivos
+#### Opções de envio
 
-Se um usuário tiver seu app instalado em vários dispositivos, por padrão, sua mensagem no app será enviada a todos os dispositivos com um token push válido atribuído. Se desejar, é possível selecionar **Enviar esse push apenas para o dispositivo usado mais recentemente pelo usuário**.
+Se um usuário tiver seu app instalado em vários dispositivos, por padrão, sua mensagem no app será enviada a todos os dispositivos com um token push válido atribuído. Se desejar, você pode selecionar **o dispositivo usado mais recentemente**.
 
-![Caixa de seleção de opções de dispositivo para enviar esse push apenas para o dispositivo usado mais recentemente pelo usuário.][9]{: style="max-width:70%;" }
+![Caixa de seleção das opções do dispositivo para enviar esse push apenas para o dispositivo usado mais recentemente pelo usuário.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
 Há algumas nuances para essa configuração. Se essa opção for selecionada, a Braze limitará a ocorrência de vários envios, exceto quando uma campanha direcionar para várias plataformas, como iOS e Android. Se o usuário tiver seu app em um dispositivo iOS e Android, ele receberá um push para ambas as plataformas. Se o dispositivo usado mais recentemente por um usuário não estiver [ativado para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), a mensagem não será enviada.
 
@@ -167,9 +173,7 @@ No iOS, você pode limitar ainda mais o envio de mensagens enviando notificaçõ
 
 ## Etapa 5: Pré-visualize e teste sua mensagem (opcional)
 
-![Teste de envio de mensagens][7]{: style="float:right;max-width:30%;margin-left:15px;"}
-
-O teste é, sem dúvida, uma das etapas mais críticas. Depois de terminar de criar sua mensagem push perfeita, teste-a antes de enviá-la. Selecione a guia **Test (Teste** ) e use **Preview Message as User (Prévia da mensagem como usuário** ) para ter uma ideia de como sua mensagem pode ser exibida no celular. Use **Send Test** para enviar um push de teste e garantir que sua mensagem seja exibida corretamente.
+O teste é, sem dúvida, uma das etapas mais críticas. Depois de terminar de criar sua mensagem push perfeita, teste-a antes de enviá-la. Selecione a guia **Teste** para escolher entre as opções de como testar sua mensagem push. Em **Test Recipients (Destinatários do teste**), é possível selecionar um grupo de teste de conteúdo ou usuários individuais. Também é possível usar **Pré-visualizar mensagem como usuário** para ter uma ideia de como sua mensagem pode ser exibida no celular para um usuário aleatório, um usuário existente, um usuário personalizado ou um usuário multilíngue.
 
 ## Etapa 6: Crie o restante de sua campanha ou Canva
 
@@ -188,7 +192,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
+Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
 
 {% details Por que minha métrica Total Reachable Users não corresponde à soma de todos os canais? %}
 
@@ -215,7 +219,7 @@ Para campanhas em vários canais direcionadas tanto para e-mail quanto para cana
 Para fazer isso, em **Resumo do público**, selecione enviar essa campanha apenas para "usuários com aceitação". Essa opção garantirá que apenas os usuários com aceitação receberão seu e-mail, e o Braze enviará seu push apenas para os usuários que estiverem ativados para push por padrão.
 
 {% alert important %}
-Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usuários-alvo** ) que limite o público a um único canal (por exemplo, `Push Enabled = True` ou `Email Subscription = Opted-In`).
+Com essa configuração, não inclua nenhum filtro na etapa **Target Audiences (Públicos-alvo** ) que limite o público a um único canal (por exemplo, `Push Enabled = True` ou `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Selecionar eventos de conversão
@@ -237,16 +241,3 @@ Depois de terminar de criar a última campanha ou Canva, revise seus detalhes. P
 
 Em seguida, confira [Relatórios push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) para saber como acessar os resultados de sua campanha push. Para notificações por push, você poderá visualizar as estatísticas do número de mensagens enviadas, entregues, devolvidas, abertas e abertas diretamente.
 
-[1]: {% image_buster /assets/img_archive/new_campaign_push.png %}
-[2]: {% image_buster /assets/img_archive/push_1.png %}
-[3]: {% image_buster /assets/img_archive/push_2.png %}
-[4]: {% image_buster /assets/img_archive/schedule.png %}
-[5]: {% image_buster /assets/img_archive/confirmation_page.png %}
-[6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/push_3.png %}
-[8]: https://www.braze.com/customers
-[9]: {% image_buster /assets/img_archive/push_recent_device.png %}
-[15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
-[25]: {% image_buster /assets/img_archive/target_segmenter.png %} 
