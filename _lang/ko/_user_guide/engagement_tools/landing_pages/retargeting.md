@@ -24,7 +24,7 @@ Braze는 사용자가 랜딩 페이지 양식을 제출하는 시점을 자동�
 {% tab 세그먼트 사용 %}
 [세그먼트를 생성할]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) 때 '리타겟팅' 그룹 아래에서 **랜딩 페이지에 제출된 양식을** 선택합니다.
 
-![필터 그룹을 '랜딩 페이지에 제출된 양식'으로 선택한 세그먼트 생성]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
+![필터 그룹을 '랜딩 페이지에 제출된 양식'으로 선택하여 세그먼트를 생성합니다.]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
 여기에서 랜딩 페이지에 대한 랜딩 페이지 양식을 제출했는지 여부에 따라 사용자를 세분화할 수 있습니다.
 {% endtab %}
@@ -35,5 +35,10 @@ Braze는 사용자가 랜딩 페이지 양식을 제출하는 시점을 자동�
 이 랜딩 페이지 양식을 통해 양식을 제출하는 모든 사용자는 선택한 메시징 채널을 통해 메시지를 받거나 선택한 캔버스에 입력됩니다.
 
 ![메시징의 랜딩 페이지 트리거 액션]({% image_buster /assets/img/landing_pages/trigger.png %})
+
+{% alert note %}
+랜딩 페이지의 액션 기반 전달 옵션은 인앱 메시지에는 사용할 수 없습니다. 인앱 메시지로 랜딩 페이지에서 양식을 제출한 사용자를 타겟팅하려면 캠페인의 **타겟팅 옵션에서** **랜딩 페이지에 제출된 양식** 필터를 선택합니다.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}

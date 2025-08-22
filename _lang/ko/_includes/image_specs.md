@@ -90,47 +90,52 @@ table td {
 </style>
 
 <table>
-  <tr>
-    <th>이미지 유형</th>
-    <th>종횡비</th>
-    <th>이미지 품질</th>
-    <th>최대 이미지 크기</th>
-    <th>파일 유형</th>
-    <th>참고</th>
-  </tr>
-  <tr>
-    <td>iOS</td>
-    <td>2:1(권장)</td>
-    <td>최대 1038 x 1038 픽셀</td>
-    <td>5 MB</td>
-    <td>PNG, JPEG, GIF</td>
-    <td>2020년 1월부터 iOS 리치 푸시 알림은 1038 x 1038 픽셀의 이미지가 10MB 미만인 경우 처리할 수 있지만, 가능한 한 작은 파일 크기를 사용하는 것이 좋습니다. 실제로 대용량 파일을 전송하면 불필요한 네트워크 스트레스가 발생하고 다운로드 시간 초과가 더 자주 발생할 수 있습니다.<br><br>자세한 내용은 <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS 리치 알림</a>을 참조하세요.</td>
-  </tr>
-  <tr>
-    <td>Android 푸시 아이콘</td>
-    <td>1:1</td>
-    <td>N/A</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Android 확장 알림 이미지</td>
-    <td>2:1</td>
-    <td>작음: 512 x 256 픽셀<br>중간: 1024 x 512 픽셀<br>큼: 2048 x 1024 픽셀</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android 리치 알림에</a> 사용됩니다.</td>
-  </tr>
-  <tr>
-    <td>안드로이드 경사 이미지</td>
-    <td>3:2</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>PNG, JPEG</td>
-    <td>자세한 내용은 <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android 인라인 이미지 푸시</a>를 참조하세요.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>이미지 유형</th>
+      <th>종횡비</th>
+      <th>최대 픽셀</th>
+      <th>최대 이미지 크기</th>
+      <th>파일 유형</th>
+      <th>참고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>2:1(권장)</td>
+      <td>1038 x 1038</td>
+      <td>5 MB</td>
+      <td>PNG, JPEG, GIF</td>
+      <td>2020년 1월부터 iOS 리치 푸시 알림은 1038 x 1038 픽셀의 이미지가 10MB 미만인 경우 처리할 수 있지만, 가능한 한 작은 파일 크기를 사용하는 것이 좋습니다. 실제로 대용량 파일을 전송하면 불필요한 네트워크 스트레스가 발생하고 다운로드 시간 초과가 더 자주 발생할 수 있습니다.<br><br>자세한 내용은 <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS 리치 알림</a>을 참조하세요.</td>
+    </tr>
+    <tr>
+      <td>Android 푸시 아이콘</td>
+      <td>1:1</td>
+      <td>N/A</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Android 확장 알림 이미지</td>
+      <td>2:1</td>
+      <td><b>작음:</b><br>512 x 256<br><br><b>중간:</b><br>1024 x 512<br><br><b>큼:</b><br>2048 x 1024</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android 리치 알림에</a> 사용됩니다.</td>
+    </tr>
+    <tr>
+      <td>안드로이드 경사 이미지</td>
+      <td>3:2</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>PNG, JPEG</td>
+      <td>자세한 내용은 <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android 인라인 이미지 푸시</a>를 참조하세요.</td>
+    </tr>
+  </tbody>
 </table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4  .reset-td-br-5 .reset-td-br-6 role="presentation"}
 
 {% endif %}
 

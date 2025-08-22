@@ -16,7 +16,7 @@ tool: Canvas
 
 ## 버전 관리
 
-![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 새 버전을 만들려면 **캔버스 업데이트**를 클릭하십시오. 이렇게 하면 캔버스의 이전 설정을 덮어쓰지 않고도 변경할 수 있습니다. 새로운 캔버스 버전이 생성되면, 이미 캔버스에 있는 사용자들은 새로운 버전의 워크플로를 진행하게 됩니다. 사용자가 캔버스에 들어가면 새 버전에도 들어갑니다. 
 
@@ -32,7 +32,7 @@ tool: Canvas
 
 버전 기록 수가 증가함에 따라 사이드바에서 각 버전의 이름을 변경하여 정리할 수 있습니다. 기본적으로, 버전 이름은 이전에 생성된 버전 수를 기준으로 숫자로 생성됩니다. 버전이 더 이상 활성 상태가 아닐 때 이름을 변경하면, 이는 캔버스 체인지로그에 나타나지만 버전 기록 보기 내의 버전 체인지로그에는 나타나지 않습니다.
 
-![캔버스 체인지로그 예시로 두 개의 새로운 캔버스 버전이 생성되었음을 보여줍니다.][2]{: style="max-width:85%" }
+![두 개의 새 캔버스 버전이 생성되었음을 보여주는 캔버스 변경 로그 예제]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### 버전 폐기
 
@@ -44,5 +44,3 @@ tool: Canvas
 
 버전 기록 내에서 캔버스 수준 및 단계 수준 분석을 볼 수 있습니다. 캔버스 버전 보기에서는 데이터가 해당 버전의 날짜 범위가 아닌 전체 날짜 범위에 대해 채워집니다. 그러나 단계 수준에서는 해당 버전이 활성 상태였을 때 존재했던 단계에 대해서만 분석이 표시됩니다. 이 분석은 사용자의 시간대에 해당하는 캘린더 날짜를 사용하여 채워지므로, 분석은 버전이 생성된 정확한 시간에 특정되지 않습니다.
 
-[1]: {% image_buster /assets/img_archive/canvas_version_history.png %}
-[2]: {% image_buster /assets/img_archive/canvas_version_history_changelog.png %}

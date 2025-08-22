@@ -11,24 +11,24 @@ tool: Canvas
 
 # 결정 분할 
 
-> 캔버스의 의사 결정 분할 구성 요소를 사용하면 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다. 
+> 캔버스의 의사 결정 분할 구성 요소를 사용하면 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다.
+
+![A Decision Split step named "Push enabled?" for users who aren't push enabled and users who are push enabled.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 이 구성 요소는 사용자가 쿼리와 일치하는지 여부에 따라 캔버스 분기를 만드는 데 사용할 수 있습니다.
 
-![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
-
 ## 의사 결정 분할 만들기 
 
-워크플로에서 의사 결정 분할을 만들려면 먼저 캔버스에 단계를 추가하세요. 사이드바에서 구성 요소를 끌어다 놓거나 단계 하단의 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **결정 분할**을 선택합니다.
+To create a decision split in your workflow, add a step to your Canvas. Then, drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Decision Split**.
 
 ### 분할 정의
 
-사용자를 어떻게 분할하고 싶으신가요? 세그먼트][5] 및 필터를 사용하여 선을 그릴 수 있습니다. 기본적으로 `true` 또는 `false` 쿼리를 만들어 사용자를 평가한 다음 사용자를 한 단계 또는 다른 단계로 유도하는 것입니다. 하나 이상의 세그먼트 또는 하나의 필터를 사용해야 합니다. 세그먼트와 필터를 모두 사용할 필요는 없습니다.
+사용자를 어떻게 분할하고 싶으신가요? You can use [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) and filters to draw the line. 기본적으로 `true` 또는 `false` 쿼리를 만들어 사용자를 평가한 다음 사용자를 한 단계 또는 다른 단계로 유도하는 것입니다. 하나 이상의 세그먼트 또는 하나의 필터를 사용해야 합니다. 세그먼트와 필터를 모두 사용할 필요는 없습니다.
 
-![][2]{: style="max-width:90%;"}
+![A Decision Split step with the filter "Push Enabled is true" selected.]({% image_buster /assets/img/define-split-2.png %}){: style="max-width:90%;"}
 
 {% alert note %}
-기본적으로 의사 결정 분할 구성 요소의 세그먼트와 필터는 지연을 추가하지 않는 한 이전 단계를 수신한 직후에 확인됩니다.
+By default, segments and filters for a Decision Split step are checked right after receiving a previous step, unless you add a delay.
 {% endalert %} 
 
 ## 분할 사용
@@ -37,15 +37,9 @@ tool: Canvas
 
 온보딩 플로우를 만든다고 가정해 보겠습니다. 가입 시 환영 이메일로 시작하게 될 것입니다. 그런 다음 이틀 후 푸시를 사용하도록 설정한 사용자에게만 푸시 메시지를 보내려고 합니다. 그 후 모든 사용자는 가입한 지 3일 후에 또 다른 이메일을 받게 됩니다. 또한 결정 분할을 사용하여 푸시를 사용 설정하지 않은 사용자에게 인앱 메시지를 보내 푸시를 사용 설정하도록 유도할 수도 있습니다.
 
-![][3]{: style="max-width:60%;"}
-
 경로 중 하나를 따라가는 단계가 없는 경우 해당 경로로 이동한 사용자는 캔버스를 종료합니다. 
 
-{% alert important %}
-의사 결정 분할에는 전체 단계의 형제 단계를 가질 수 없습니다. 즉, 필터 단계와 전체 단계로 분기되는 전체 단계를 만들 수 없습니다. 이러한 제한이 존재하는 이유는 필터 단계와 전체 단계가 있는 브랜치가 있는 경우 사용자가 어떤 브랜치로 내려갈지 명확하지 않기 때문입니다.
-<br>
-필터 단계는 다음 단계에 하나만 연결할 수 있습니다.
-{% endalert %}
+![A Decision Split step named "Push enabled?" for users who aren't push enabled and those who are. For users who aren't push enabled, they'll experience a 3-day delay then receive an email message. For users who are push enabled, they will experience a 1-day delay, receive a push notification followed by a 2-day delay, then they'll receive the same email message as the users who aren't push enabled.]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
 
 ## 분석
 
@@ -53,12 +47,8 @@ tool: Canvas
 
 | 측정기준 | 설명 |
 |---|---|
-| 진입함 | 단계를 입력한 총 횟수입니다. 캔버스에 재자격이 있고 사용자가 결정 분할 단계를 두 번 입력하는 경우 두 개의 항목이 기록됩니다. |
-| 예 | 지정된 기준을 충족하고 '예' 경로로 진행된 항목의 수입니다. |
-| 아니요 | 지정된 기준을 충족하지 못하고 "아니오" 경로로 진행된 항목 수입니다. |
+| _Entered_ | 단계를 입력한 총 횟수입니다. 캔버스에 재자격이 있고 사용자가 결정 분할 단계를 두 번 입력하는 경우 두 개의 항목이 기록됩니다. |
+| _Yes_ | 지정된 기준을 충족하고 '예' 경로로 진행된 항목의 수입니다. |
+| _No_ | 지정된 기준을 충족하지 못하고 "아니오" 경로로 진행된 항목 수입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[1]: {% image_buster /assets/img/decision-split-1.png %}
-[2]: {% image_buster /assets/img/define-split-2.png %}
-[3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/

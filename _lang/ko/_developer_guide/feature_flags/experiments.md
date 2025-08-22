@@ -21,6 +21,9 @@ platform:
 
 기능 플래그 노출 횟수 로깅에 대해 자세히 알아보려면 [기능 플래그 생성]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions)을 참조하세요.
 
+{% tabs %}
+{% tab 자바스크립트 %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,36 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## 기능 플래그 실험 만들기
 
@@ -56,7 +87,7 @@ if (featureFlag?.enabled) {
 
 ### 4단계: 타겟팅할 사용자 선택
 
-세그먼트 또는 필터 중 하나를 사용하여 [타겟 사용자를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 선택합니다. 예를 들어, **수신된 기능 플래그 변형** 필터를 사용하여 이미 A/B 테스트를 수신한 사용자를 리타겟팅할 수 있습니다.
+세그먼트 또는 필터 중 하나를 사용하여 [타겟 사용자를]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) 선택합니다. 예를 들어, **수신된 기능 플래그 변형** 필터를 사용하여 이미 A/B 테스트를 수신한 사용자를 리타겟팅할 수 있습니다.
 
 ![필터 그룹 검색창에 '수신된 기능 플래그 변형'이 강조 표시된 기능 플래그 실험의 '대상' 페이지.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 

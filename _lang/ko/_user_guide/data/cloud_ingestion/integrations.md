@@ -721,9 +721,3 @@ Braze와 여러 통합을 설정할 수 있지만, 각 통합은 다른 테이�
 
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/cloud_ingestion/ingestion_6.png %}
-[2]: {% image_buster /assets/img/cloud_ingestion/ingestion_7.png %}
-[3]: {% image_buster /assets/img/cloud_ingestion/ingestion_8.png %}
-[4]: {% image_buster /assets/img/cloud_ingestion/ingestion_9.png %}
-[5]: {% image_buster /assets/img/cloud_ingestion/ingestion_10.png %}
-[6]: {% image_buster /assets/img/cloud_ingestion/ingestion_5.png %}

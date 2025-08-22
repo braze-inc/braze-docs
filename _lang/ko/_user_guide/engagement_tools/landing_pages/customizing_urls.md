@@ -13,6 +13,8 @@ page_order: 1
 
 [브레이즈에 도메인을 연결하면](#connecting-your-domain-to-braze) 모든 랜딩 페이지의 기본 도메인으로 사용됩니다. 예를 들어, 서브도메인 `forms.example.com`를 연결하면 랜딩 페이지 URL은 이제 `forms.example.com/holiday-sale`이 됩니다.
 
+Braze 계정에 연결할 수 있는 사용자 정의 도메인의 수는 [요금제]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers)에 따라 다릅니다. 제한을 늘리려면 Braze 계정 관리자에게 문의하세요.
+
 ## Braze에 도메인 연결하기
 
 관리자에게 아래 단계를 따라 도메인을 Braze 계정에 연결하도록 요청하세요.
@@ -22,10 +24,10 @@ page_order: 1
 3. **TXT** 및 **CNAME** 레코드를 복사하여 도메인 공급업체의 DNS 설정에 붙여넣습니다.
 4. Braze 대시보드로 돌아와 연결을 확인합니다.
 
-![TXT 하나와 CNAME 두 개의 레코드가 각각의 이름과 값과 함께 나열된 랜딩 페이지 설정 페이지입니다.][1]
+![랜딩 페이지 설정 페이지에는 각각의 이름과 값이 나열된 TXT 레코드 1개와 CNAME 레코드 2개가 있습니다.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
-도메인 제공업체에 따라 연결하는 데 최대 48시간이 걸릴 수 있습니다. 프로세스가 완료되면 Braze 대시보드에서 랜딩 페이지에 대해 사용자 정의 도메인을 사용하기 시작합니다.
+도메인 제공자에 따라 연결하는 데 최대 48시간이 걸릴 수 있습니다. 프로세스가 완료되면 Braze 대시보드에서 랜딩 페이지에 사용자 정의 도메인을 사용하기 시작합니다.
 {% endalert %}
 
 ## 도메인 제거
@@ -46,13 +48,13 @@ Braze 관리자라면 다음 단계를 완료하여 이전에 구성된 도메�
 
 아래 목록은 일반적으로 사용되는 도메인 공급업체에서 DNS 레코드를 만들고 관리하기 위한 리소스입니다. 다른 제공업체를 사용하는 경우 해당 제공업체의 설명서를 참조하거나 해당 지원팀에 문의하여 정보를 확인하세요.
 
-| 도메인 제공업체 | 리소스 |
+| 도메인 제공자 | 리소스 |
 | --- | --- |
-| Bluehost | [DNS 레코드 설명](https://my.bluehost.com/hosting/help/508)<br> [DNS 관리 추가, 편집 또는 DNS 항목 삭제](https://my.bluehost.com/hosting/help/559) |
-| Dreamhost | [사용자 정의 DNS 레코드를 추가하려면 어떻게 하나요?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
-| GoDaddy | [CNAM 기록 추가](https://www.godaddy.com/help/add-a-cname-record-19236?) |
+| 블루호스트 | [DNS 레코드 설명](https://my.bluehost.com/hosting/help/508)<br> [DNS 관리 추가, 편집 또는 DNS 항목 삭제](https://my.bluehost.com/hosting/help/559) |
+| 드림호스트 | [커스텀 DNS 레코드를 어떻게 추가하나요?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
+| 고대디 | [CNAM 레코드를 추가하기](https://www.godaddy.com/help/add-a-cname-record-19236?) |
 | 클라우드플레어 | [DNS 레코드 관리](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
-| 스퀘어스페이스 | [커스텀 DNS 설정 추가](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
+| 스퀘어스페이스 | [커스텀 DNS 설정 추가하기](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 문제 해결 
@@ -71,4 +73,3 @@ Braze 관리자라면 다음 단계를 완료하여 이전에 구성된 도메�
 
 아니요, 이미 사용 중인 하위 도메인은 사용할 수 없습니다. 이러한 하위 도메인은 유효하지만 이미 다른 용도로 할당되었거나 필수 CNAME 레코드와 충돌하는 DNS 레코드가 있는 경우 랜딩 페이지에 사용할 수 없습니다.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}

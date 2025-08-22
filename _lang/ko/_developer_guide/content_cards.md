@@ -13,7 +13,7 @@ platform:
 
 # 콘텐츠 카드
 
-> Braze SDK의 콘텐츠 카드에 대해 배우고, 애플리케이션에서 사용할 수 있는 다양한 데이터 모델과 카드별 속성을 포함합니다.
+> Braze SDK의 콘텐츠 카드에 대해 배우고, 애플리케이션에 사용할 수 있는 다양한 데이터 모델과 카드별 속성을 포함합니다.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -21,34 +21,34 @@ platform:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/swift/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/cordova/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/flutter/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/react_native/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab tvos %}
-guide/tvos/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/tvos/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/unity/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/xamarin/content_cards.md %}
 {% endsdktab %}
 {% endsdktabs %}

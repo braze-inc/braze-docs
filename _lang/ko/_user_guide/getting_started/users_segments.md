@@ -126,15 +126,13 @@ Visit our dedicated article to learn more about [data points]({{site.baseurl}}/u
 
 온라인 의류 스토어를 운영하면서 장바구니에 상품을 추가했지만 구매를 완료하지 않은 사용자에게 일련의 이메일을 보내는 메시징 플로우를 설정했다고 가정해 보겠습니다. 이 유기한 장바구니 흐름에는 초기 알림 이메일, 할인을 제공하는 후속 이메일, 최종 알림 이메일이 포함될 수 있습니다.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 커스텀 이벤트 "장바구니에 품목 추가됨"은 트리거했지만 커스텀 이벤트 "구매 완료"는 트리거하지 않은 사용자 세그먼트를 만들 수 있습니다. 그런 다음 이 세그먼트 내에서 초기 알림 이메일을 열었지만(특정 메시지에 인게이지먼트) 구매를 하지 않은 사용자를 추가로 식별할 수 있습니다.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 이 세그먼트는 보다 공격적인 캠페인으로 타겟팅하여 이러한 사용자를 구매자로 전환할 수 있습니다. 예를 들어, 장바구니에 있는 품목을 기반으로 특별 혜택이나 개인화된 추천을 보낼 수 있습니다.
 
 이는 사용자 행동 및 비활동, 사용자 지정 이벤트, 참여 데이터를 사용하여 Braze에서 세그먼트를 생성하고 마케팅 전략을 맞춤화하는 방법의 한 예에 불과합니다.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

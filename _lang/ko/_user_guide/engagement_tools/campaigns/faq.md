@@ -34,7 +34,7 @@ tool: Campaigns
 
 ### 특정 캠페인 또는 캔버스에 대해 고유 수신자 수와 전송 횟수에 차이가 있는 이유는 무엇인가요?
 
-이 차이에 대한 한 가지 가능한 설명은 캠페인 또는 캔버스의 재인증이 켜져 있기 때문일 수 있습니다. 이 기능을 켜면 세그먼트 및 전달 설정에 해당하는 사용자가 메시지를 한 번 이상 받을 수 있습니다. 재인증이 켜져 있지 않은 경우 발신자와 고유 수신자 간의 차이에 대한 가능한 설명은 사용자가 프로필과 연결된 플랫폼에 여러 개의 기기를 가지고 있기 때문일 수 있습니다. 
+One potential explanation could be the campaign or Canvas has re-eligibility turned on, which means users who qualify for the segment and delivery settings will be able to receive the message more than once. 재인증이 켜져 있지 않은 경우 발신자와 고유 수신자 간의 차이에 대한 가능한 설명은 사용자가 프로필과 연결된 플랫폼에 여러 개의 기기를 가지고 있기 때문일 수 있습니다. 
 
 예를 들어, iOS 및 웹 푸시 알림이 모두 포함된 캔버스가 있는 경우, 모바일 및 데스크톱 장치를 모두 사용하는 사용자는 둘 이상의 메시지를 받을 수 있습니다.
 
@@ -46,7 +46,7 @@ tool: Campaigns
 
 현지 시간대 전달을 통해 사용자의 개별 시간대를 기준으로 메시징 캠페인을 세그먼트에 전달할 수 있습니다. 현지 시간대 배송을 사용하지 않는 캠페인은 Braze에서 회사의 시간대 설정에 따라 예약됩니다. 
 
-예를 들어, 런던에 본사를 둔 회사가 오후 12시에 캠페인을 보내면 미국 서부 해안의 사용자에게 새벽 4시에 도달하게 됩니다. 앱이 특정 국가에서만 사용 가능한 경우 위험하지 않을 수 있지만, 그렇지 않은 경우 사용자 기반에 이른 아침 푸시 알림을 보내지 않는 것이 좋습니다!
+예를 들어, 런던에 본사를 둔 회사가 오후 12시에 캠페인을 보내면 미국 서부 해안의 사용자에게 새벽 4시에 도달하게 됩니다. If your app is only available in certain countries, this may not be a risk for you. Otherwise, we highly recommend avoiding sending early morning push notifications to your user base.
 
 ### Braze는 사용자의 시간대를 어떻게 인식합니까?
 
@@ -68,7 +68,7 @@ You can check your company's time zone in your [company settings]({{site.baseurl
 
 사용자는 출시 24시간 전에 세그먼트에 있어야 합니다. 사용자가 첫 번째 검사에서 자격이 없는 경우 Braze는 두 번째 검사를 시도하지 않습니다.
 
-예를 들어, 캠페인이 오후 7시 UTC에 전달되도록 예약된 경우, 시간대(예: 사모아)가 식별되면 캠페인 전송을 즉시 대기열에 추가하기 시작합니다. 이는 캠페인을 보내는 것이 아니라 메시지를 보낼 준비를 하고 있다는 의미입니다. 자격을 확인할 때 사용자가 필터와 일치하지 않으면 타겟 오디언스에 포함되지 않습니다.
+예를 들어, 캠페인이 오후 7시 UTC에 전달되도록 예약된 경우, 시간대(예: 사모아)가 식별되면 캠페인 전송을 즉시 대기열에 추가하기 시작합니다. 이는 캠페인을 보내는 것이 아니라 메시지를 보낼 준비를 하고 있다는 의미입니다. If users don't match any filters when we check eligibility, they won't fall into the target audience.
 
 또 다른 예로, 같은 날 발송될 두 개의 캠페인을 만들고 싶다고 가정해 보겠습니다. 하나는 아침에, 하나는 저녁에 발송되며, 사용자가 첫 번째 캠페인을 이미 받은 경우에만 두 번째 캠페인을 받을 수 있도록 필터를 추가합니다. 현지 시간대 전달을 사용하면 일부 사용자가 두 번째 캠페인을 받지 못할 수 있습니다. 이는 사용자의 시간대가 확인될 때 자격을 확인하기 때문에 해당 시간대에 아직 예약된 시간이 발생하지 않았다면 첫 번째 캠페인을 받지 못한 것이므로 두 번째 캠페인에 참여할 수 없습니다.
 
@@ -76,9 +76,9 @@ You can check your company's time zone in your [company settings]({{site.baseurl
 
 캠페인을 예약할 때 지정된 시간에 캠페인을 보내도록 선택한 다음 **현지 시간대의 사용자에게 캠페인 보내기를** 선택합니다.
 
-Braze는 모든 현지 시간대 캠페인이 24시간 전에 예약되기를 강력히 권장합니다. 이러한 캠페인은 하루 종일 보내야 하므로 24시간 전에 예약하면 전체 세그먼트에 메시지가 도달할 수 있습니다. 그러나 필요한 경우 24시간 전에 이러한 캠페인을 예약할 수 있습니다. Braze는 발송 시간에서 1시간 이상 경과한 사용자에게 메시지를 보내지 않습니다. 
+Braze highly recommends that all local time zone campaigns be scheduled 24 hours in advance. Since such a campaign needs to send over an entire day, scheduling it 24 hours in advance ensures that your message will reach your entire segment. 그러나 필요한 경우 24시간 전에 이러한 캠페인을 예약할 수 있습니다. Keep in mind that Braze will not send messages to any users who have missed the send time by more than 1 hour. 
 
-예를 들어 오후 1시에 현지 시간대 캠페인을 오후 3시로 예약하면 현지 시간이 오후 3시에서 4시 사이인 모든 사용자에게는 캠페인이 즉시 전송되지만 현지 시간이 오후 5시인 사용자에게는 캠페인이 전송되지 않습니다. 또한 캠페인에 대해 선택한 전송 시간은 회사 시간대에 아직 발생하지 않은 시간이어야 합니다.
+For example, if it is 1 pm and you schedule a local time zone campaign for 3 pm, then the campaign will immediately send to all users whose local time is between 3 pm and 4 pm, but not to users whose local time is 5 pm. 또한 캠페인에 대해 선택한 전송 시간은 회사 시간대에 아직 발생하지 않은 시간이어야 합니다.
 
 24시간 전에 예약된 현지 시간대 캠페인을 수정해도 메시지의 일정은 변경되지 않습니다. 현지 시간대 캠페인을 편집하여 나중에 전송하기로 결정한 경우(예: 오후 6시 대신 오후 7시), 원래 전송 시간을 선택할 때 타겟 세그먼트에 있던 사용자는 여전히 원래 시간(오후 6시)에 메시지를 받게 됩니다. 현지 시간대를 편집하여 더 이른 시간(예: 오후 5시 대신 오후 4시)에 전송하는 경우 캠페인은 여전히 원래 시간(오후 5시)에 모든 세그먼트 멤버에게 전송됩니다. 
 
@@ -107,25 +107,19 @@ Braze는 모든 현지 시간대 캠페인이 24시간 전에 예약되기를 �
 
 ### 예약된 캠페인에서 메시지가 대기열에 추가되기 전의 "안전 구역"은 무엇입니까?
 
-다음 안전 영역 내에서 메시지를 안전하게 변경할 수 있습니다.
+We recommend making changes to messages within the following times:
 
-- **일회성 예약 캠페인**은 예약된 발송 시간까지 편집할 수 있습니다.
-- **반복성의 스케줄된 캠페인** \- 스케줄된 발송 시간 직전까지 수정 가능
-- **현지 전송 시간 캠페인은** 예약된 전송 시간 최대 24시간 전까지 수정할 수 있습니다.
-- **최적의 전송 시간 캠페인은** 캠페인 전송 예정일 24시간 전까지 수정할 수 있습니다.
+- **One-time scheduled campaigns:** Edit up until the scheduled send time.
+- **Recurring scheduled campaigns:** Edit up until the scheduled send time.
+- **Local send time campaigns:** Edit up to 24 hours before the scheduled send time.
+- **Optimal send time campaigns:** Edit up to 24 hours before the day the campaign is scheduled to send.
 
-### "안전 지대" 내에서 전송 시간을 편집하면 어떻게 되나요?
-
-이 시간 내에 캠페인의 발송 시간을 변경하면 원하지 않는 동작이 발생할 수 있습니다. 예:
+If you make changes to your message outside of these recommendations, you may not see the updates reflected in the message sent. For example, if you edit the send time three hours before a campaign is scheduled to send at 12 pm local time, the following may occur:
 
 - Braze는 발송 시간이 1시간 이상 지난 사용자에게 메시지를 보내지 않습니다.
-- 사전에 대기열에 추가된 메시지는 조정된 시간보다 원래 대기열에 추가된 시간에 여전히 전송될 수 있습니다.
+- Pre-enqueued messages may still be sent at the originally enqueued time, rather than the adjusted time.
 
-### "안전 구역"이 이미 지나갔다면 어떻게 해야 하나요?
-
-캠페인이 원하는 대로 작동하도록 하려면 현재 캠페인을 중지하는 것이 좋습니다(이렇게 하면 대기 중인 모든 메시지가 취소됩니다). 그런 다음 캠페인을 복제하고 필요에 따라 변경한 다음 새 캠페인을 시작할 수 있습니다. 이미 첫 번째 캠페인을 받은 사용자를 이 캠페인에서 제외해야 할 수도 있습니다.
-
-시간대 전송이 가능하도록 캠페인 일정 시간을 다시 조정해야 합니다.
+If you need to make changes, we recommend stopping the current campaign (this will cancel any enqueued messages). 그런 다음 캠페인을 복제하고 필요에 따라 변경한 다음 새 캠페인을 시작할 수 있습니다. 이미 첫 번째 캠페인을 받은 사용자를 이 캠페인에서 제외해야 할 수도 있습니다. 시간대 전송이 가능하도록 캠페인 일정 시간을 다시 조정해야 합니다.
 
 ### 캠페인에 참여하는 사용자 수가 예상 수와 일치하지 않는 이유는 무엇입니까?
 
@@ -147,7 +141,7 @@ Braze는 모든 현지 시간대 캠페인이 24시간 전에 예약되기를 �
 
 API 트리거 캠페인을 사용하면 자체 서버 및 시스템에서 해당 콘텐츠의 전송을 트리거하면서 Braze 대시보드 내에서 캠페인 카피, 다변량 테스트 및 재자격 규칙을 관리할 수 있습니다. 이러한 메시지에는 실시간으로 메시지에 템플릿을 적용할 추가 데이터를 포함할 수도 있습니다.
 
-API 캠페인은 API를 사용하여 보낸 메시지를 추적하는 데 사용됩니다. 대부분의 캠페인과 달리 메시지, 수신자 또는 일정을 지정하지 않고 대신 식별자를 API 호출에 전달합니다. 
+API campaigns are used to track the messages sent using the API. 대부분의 캠페인과 달리 메시지, 수신자 또는 일정을 지정하지 않고 대신 식별자를 API 호출에 전달합니다. 
 
 ### 액션 기반 캠페인과 API 트리거 캠페인의 차이점은 무엇인가요?
 
@@ -173,7 +167,7 @@ table th:nth-child(3) {
 
 API 트리거 및 서버 트리거 캠페인은 자체 서버 및 시스템에서 캠페인 콘텐츠 전송을 트리거할 수 있어 고급 트랜잭션을 처리하는 데 이상적입니다. 메시지를 트리거하는 API 요청에는 실시간으로 메시지에 템플릿화할 추가 데이터를 포함할 수도 있습니다.
 
-| 장점 | 단점 | 
+| Benefits | Considerations | 
 | ---- | ---- |
 | • 데이터 포인트를 소비하지 않습니다<br><br>\- 개인화 요소는 JSON 페이로드 속성에 포함됩니다 | • JSON 페이로드 속성에서 메시지에 적합한 사용자 세그먼트를 생성할 수 없습니다.<br><br>- **메시지 활동 로그로** 들어오는 JSON 페이로드를 볼 수 없음|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

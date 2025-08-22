@@ -22,7 +22,7 @@ tool: Canvas
 
 캔버스에 들어가려면 사용자는 캔버스가 예약되었는지, 동작 기반인지, API로 트리거되었는지에 관계없이 입장 일정이 발생하기 전에 입장 오디언스에 있어야 합니다. 
 
-![][1]{: style="max-width:75%;"}
+![An Action-Based Canvas that enters users when they make any purchase during a user's local time from April 30, 2025 at 12 pm to May 7, 2025 at 12 pm.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 캔버스가 출시된 후에 오디언스에 해당하는 사용자는 캔버스에 들어가지 않습니다.
 
@@ -102,4 +102,3 @@ Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/us
 - 전송할 때 캔버스 단계가 이전 단계에 연결되었는지 확인합니다.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

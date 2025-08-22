@@ -1,7 +1,7 @@
 ---
 nav_title: 파일 스토리지 통합
 article_title: 파일 저장 통합
-description: "이 페이지에서는 Braze 클라우드 데이터 수집과 S3에서 Braze로 관련 데이터를 동기화하는 방법을 다룹니다."
+description: "This page covers Braze Cloud Data Ingestion and how to sync relevant data from S3 to Braze."
 page_order: 3
 page_type: reference
 
@@ -20,7 +20,7 @@ S3용 클라우드 데이터 수집(CDI)을 사용하여 AWS 계정에 있는 �
 - JSON 파일
 - CSV 파일
 - 마루 파일
-- 속성, 이벤트, 구매 및 사용자 삭제 데이터
+- Attribute, custom event, purchase event, user delete, and catalog data
 
 ## Prerequisites
 
@@ -45,14 +45,14 @@ S3용 클라우드 데이터 수집(CDI)을 사용하여 AWS 계정에 있는 �
 
 ### 1단계: 소스 버킷 만들기
 
-AWS 계정에서 기본 설정으로 범용 S3 버킷을 생성하세요. S3 버킷은 폴더가 고유한 한 여러 동기화에서 재사용할 수 있습니다.
+Create a general-purpose S3 bucket with default settings in your AWS account. S3 버킷은 폴더가 고유한 한 여러 동기화에서 재사용할 수 있습니다.
 
 기본 설정은 다음과 같습니다:
 
-  - ACL 사용 안 함
-  - 모든 공개 액세스 차단
-  - 버킷 버전 관리 비활성화
-  - SSE-S3 암호화
+- ACL 사용 안 함
+- 모든 공개 액세스 차단
+- 버킷 버전 관리 비활성화
+- SSE-S3 암호화
 
 다음 단계에서 같은 지역에 SQS 대기줄을 만들 것이므로 버킷을 만든 지역을 기록해 두세요.
 
@@ -63,7 +63,7 @@ AWS 계정에서 기본 설정으로 범용 S3 버킷을 생성하세요. S3 버
 SQS 대기열은 전 세계적으로 고유해야 합니다(예: CDI 동기화에는 하나만 사용할 수 있고 다른 작업 공간에서 재사용할 수 없음).
 
 {% alert important %}
-버킷을 만든 지역과 동일한 지역에서 이 SQS를 만들어야 합니다.
+Be sure to create this SQS in the same region as the one you created the bucket in.
 {% endalert %}
 
 이 구성 중에 자주 사용하게 되므로 ARN과 SQS의 URL을 메모해 두세요.
@@ -100,10 +100,10 @@ SQS 대기열은 전 세계적으로 고유해야 합니다(예: CDI 동기화�
 
 1. 1단계에서 만든 버킷에서 **속성** > **이벤트 알림으로** 이동합니다.
 2. 구성에 이름을 지정합니다. 선택 사항으로 Braze가 파일의 하위 집합만 수집하도록 하려면 접두사 또는 접미사를 지정하여 대상을 지정합니다.
-3. **대상**에서 **SQS 대기줄**을 선택하고 2단계에서 생성한 SQS의 ARN을 입력합니다.
+3. Under **Destination**, select **SQS queue** and provide the ARN of the SQS you created in step 2.
 
 {% alert note %}
-S3 버킷의 루트 폴더에 파일을 업로드한 후 일부 파일을 버킷의 특정 폴더로 옮기면 예기치 않은 오류가 발생할 수 있습니다. 대신 접두사 안에 있는 파일에 대해서만 이벤트 알림을 보내도록 변경하거나, 해당 접두사 밖에 있는 S3 버킷에 파일을 넣지 않도록 하거나, 접두사 없이 통합을 업데이트하여 모든 파일을 수집할 수 있습니다.
+If you upload your files to the root folder of an S3 bucket and then move some of the files to a specific folder in the bucket, you may encounter an unexpected error. 대신 접두사 안에 있는 파일에 대해서만 이벤트 알림을 보내도록 변경하거나, 해당 접두사 밖에 있는 S3 버킷에 파일을 넣지 않도록 하거나, 접두사 없이 통합을 업데이트하여 모든 파일을 수집할 수 있습니다.
 {% endalert %}
 
 ### 5단계: IAM 정책 만들기
@@ -146,7 +146,7 @@ Braze가 소스 버킷과 상호 작용할 수 있도록 IAM 정책을 만듭니
 {: start="3"}
 3\. 완료하면 **정책 검토**를 선택합니다.
 
-4. 정책의 이름 및 설명을 입력하고 **정책 만들기**를 선택합니다.  
+4. Give the policy a name and description, then select **Create Policy**.  
 
 !["new-policy-name"이라는 이름의 정책 예시]({% image_buster /assets/img/create_policy_3_name.png %})
 
@@ -160,7 +160,7 @@ AWS에서 설정을 완료하려면 IAM 역할을 만들고 4단계의 IAM 정�
 
 <br><br>!['역할 만들기' 버튼]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
-2. Braze 대시보드에서 Braze AWS 계정 ID를 복사합니다. **클라우드 데이터 수집으로** 이동하여 **새 데이터 동기화 만들기를** 선택한 다음 **S3 가져오기를** 선택합니다.
+2. Braze 대시보드에서 Braze AWS 계정 ID를 복사합니다. Go to **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import**.
 
 3. AWS에서 신뢰할 수 있는 엔터티 선택기 유형으로 **다른 AWS 계정**을 선택합니다. Braze 계정 ID를 입력하고 **외부 ID 필요** 확인란을 선택한 다음, Braze에서 사용할 외부 ID를 입력합니다. 완료되면 **다음**을 선택합니다. 
 
@@ -176,7 +176,7 @@ AWS에서 설정을 완료하려면 IAM 역할을 만들고 4단계의 IAM 정�
 <br><br>!["new-role-name"이라는 역할의 예.]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5\. 클라우드 데이터 수집 통합을 만드는 데 사용할 것이므로 방금 만든 역할의 ARN과 생성한 외부 ID를 기록해 두세요.  
+5\. Take note of the ARN of the role you just created and the external ID you generated, as you’ll use them to create the Cloud Data Ingestion integration.
 
 ## Braze에서 클라우드 데이터 수집 설정하기
 
@@ -209,7 +209,7 @@ AWS에서 설정을 완료하려면 IAM 역할을 만들고 4단계의 IAM 정�
 
 ## 필수 파일 형식
 
-클라우드 데이터 수집은 JSON, CSV 및 Parquet 파일을 지원합니다. 각 파일에는 지원되는 식별자 열이 하나 이상 포함되어야 하며 페이로드 열은 JSON 문자열로 포함되어야 합니다.
+클라우드 데이터 수집은 JSON, CSV 및 Parquet 파일을 지원합니다. Each file must contain one or more of the supported identifier columns and a payload column as a JSON string.
 
 Braze는 AWS에서 시행하는 것 외에 추가적인 파일 이름 요구 사항을 적용하지 않습니다. 파일 이름은 고유해야 합니다. 고유성을 위해 타임스탬프를 추가하는 것이 좋습니다.
 
@@ -220,7 +220,7 @@ Braze는 AWS에서 시행하는 것 외에 추가적인 파일 이름 요구 사
 | 식별자 | 설명 |
 | --- | --- |
 | `EXTERNAL_ID` | 업데이트하려는 사용자를 식별합니다. 이 값은 Braze에서 사용하는 `external_id` 값과 일치해야 합니다. |
-| `ALIAS_NAME` and `ALIAS_LABEL` | `alias_name` 은 고유 식별자이고 `alias_label` 은 별칭의 유형을 지정해야 하며, 이 두 열은 사용자 별칭 개체를 만듭니다. 사용자는 여러 레이블이 있는 여러 별칭을 가질 수 있지만 `alias_label`당 하나의 `alias_name`만 가질 수 있습니다. |
+| `ALIAS_NAME` and `ALIAS_LABEL` | `alias_name` 은 고유 식별자이고 `alias_label` 은 별칭의 유형을 지정해야 하며, 이 두 열은 사용자 별칭 개체를 만듭니다. Users may have multiple aliases with different labels, but only one `alias_name` per `alias_label`. |
 | `BRAZE_ID` | Braze 사용자 식별자입니다. 이것은 Braze SDK에 의해 생성되었으며, 새로운 사용자는 Braze ID를 통해 클라우드 데이터 수집을 사용하여 생성될 수 없습니다. 새 사용자를 만들려면 외부 사용자 ID 또는 사용자 별칭을 지정합니다. |
 | `EMAIL` | 사용자의 이메일 주소입니다. 동일한 이메일 주소를 가진 여러 프로필이 존재하는 경우, 가장 최근에 업데이트된 프로필이 업데이트 우선순위가 됩니다. 이메일과 전화번호를 모두 포함하면 이메일을 기본 식별자로 사용하겠습니다. |
 | `PHONE` | 사용자의 전화번호입니다. 동일한 전화번호를 가진 여러 프로필이 존재하는 경우, 가장 최근에 업데이트된 프로필이 업데이트에 우선됩니다. |
@@ -228,7 +228,7 @@ Braze는 AWS에서 시행하는 것 외에 추가적인 파일 이름 요구 사
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-데이터 웨어하우스 소스와 달리 `UPDATED_AT` 열은 필요하지 않으며 지원되지도 않습니다.
+Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported.
 {% endalert %}
 
 {% tabs %}
@@ -266,23 +266,31 @@ Braze는 AWS에서 시행하는 것 외에 추가적인 파일 이름 요구 사
 
 {% endtab %}
 {% tab CSV 속성 %}
-``` csv  
+```plaintext  
 external_id,payload
 s3-qa-load-0-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""SNXIM"", ""age"": 54, ""subscriber"": true, ""retention"": {""previous_purchases"": 19, ""vip"": true}, ""last_visit"": ""2023-08-08T16:03:26.598806""}"
 s3-qa-load-1-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""0J747"", ""age"": 73, ""subscriber"": false, ""retention"": {""previous_purchases"": 22, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598816""}"
 s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age"": 99, ""subscriber"": false, ""retention"": {""previous_purchases"": 23, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598822""}"
 ```
 {% endtab %}
+{% tab CSV Catalogs  %}
+```plaintext  
+ID,PAYLOAD
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
+```
+{% endtab %}
+
 {% endtabs %}  
 
 지원되는 모든 파일 형식의 예는 [braze-examples의](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage) 샘플 파일을 참조하세요.  
 
 ## 알아두어야 할 사항
 
-- S3 소스 버킷에 추가된 파일은 512MB를 초과하지 않아야 합니다. 512MB보다 큰 파일은 오류가 발생하며 Braze에 동기화되지 않습니다.
-- 파일당 행 수에 대한 추가 제한은 없습니다.
-- 특정 기간 동안 업로드할 수 있는 파일 수에는 별도의 제한이 없습니다.
-- 파일 내 또는 파일 간에는 순서가 지원되지 않습니다. 예상되는 레이스 조건을 모니터링하는 경우 주기적으로 업데이트를 일괄 처리하는 것이 좋습니다.
+- Files added to the S3 source bucket should not exceed 512 MB. Files larger than 512 MB will result in an error and won't be synced to Braze.
+- While there is no additional limit on the number of rows per file, we recommend using smaller files to improve how fast your syncs run. For example, a 500 MB file would take considerably longer to ingest than five separate 100 MB files.
+- There's no additional limit on the number of files uploaded in a given time.
+- Ordering isn't supported in or between files. We recommend batching updates periodically if you're monitoring for any expected race conditions.
 
 ## 문제 해결
 
@@ -290,10 +298,10 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 
 CDI는 동기화가 생성된 후에 추가된 파일만 처리합니다. 이 과정에서 Braze는 추가할 새 파일을 찾아 SQS에 새 메시지를 트리거합니다. 그러면 새 파일을 처리하기 위한 새 동기화가 시작됩니다.
 
-기존 파일은 테스트 연결에서 데이터 구조를 검증하는 데 사용할 수 있지만 Braze와 동기화되지는 않습니다. 동기화해야 하는 기존 파일은 CDI에서 처리하기 위해 S3에 다시 업로드해야 합니다.
+Existing files can be used to validate the data structure in the test connection, but they will not be synced to Braze. Any existing files that should be synced must be reuploaded to S3 to be processed by CDI.
 
 ### 예기치 않은 파일 오류 처리
 
-많은 수의 오류 또는 실패한 파일이 관찰되는 경우, 다른 프로세스가 CDI의 대상 폴더가 아닌 다른 폴더에 있는 S3 버킷에 파일을 추가하고 있을 수 있습니다.
+If you're observing a high number of errors or failed files, you may have another process adding files to the S3 bucket in a folder other than the target folder for CDI.
 
-파일이 소스 버킷에 업로드되었지만 소스 폴더에 없는 경우 CDI는 SQS 알림을 처리하지만 파일에 대해서는 아무런 조치를 취하지 않으므로 오류로 표시될 수 있습니다.
+When files are uploaded to the source bucket but not in the source folder, CDI will process the SQS notification, but it does not take any action on the file, so this may appear as an error.

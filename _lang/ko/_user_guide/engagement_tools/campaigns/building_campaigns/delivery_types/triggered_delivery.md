@@ -48,7 +48,6 @@ tool: Campaigns
     - 콘텐츠 카드 보기
     - 콘텐츠 카드 클릭
     - 콘텐츠 카드 해제
-- 뉴스피드 카드와 상호 작용하기([캠페인 커넥터][33] 참고)
 - 위치 입력
 - 다른 캠페인에 대한 예외 이벤트 수행
 - 캔버스 단계와 상호 작용하기
@@ -56,17 +55,17 @@ tool: Campaigns
 - SMS 인바운드 메시지 보내기
 - WhatsApp 인바운드 메시지 보내기
 
-또한 Braze [커스텀 이벤트 속성정보][32]를 통해 트리거 이벤트를 추가로 필터링하여 커스텀 이벤트 및 인앱 구매에 대한 이벤트 속성을 커스텀할 수 있습니다. 이 기능을 사용하면 사용자 지정 이벤트의 특정 속성을 기반으로 메시지를 수신할 사용자를 더욱 맞춤화할 수 있으므로 캠페인 개인화를 강화하고 데이터를 더욱 정교하게 수집할 수 있습니다. 
+You can also further filter trigger events through Braze [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), allowing for customizable event properties for custom events and in-app purchases. 이 기능을 사용하면 사용자 지정 이벤트의 특정 속성을 기반으로 메시지를 수신할 사용자를 더욱 맞춤화할 수 있으므로 캠페인 개인화를 강화하고 데이터를 더욱 정교하게 수집할 수 있습니다. 
 
 예를 들어, '장바구니 값' 속성 필터로 추가 타겟팅되는 버려진 장바구니 사용자 지정 이벤트가 있는 캠페인이 있다고 가정해 보겠습니다. 이 캠페인은 장바구니에 100달러에서 200달러 상당의 상품을 남긴 사용자에게만 도달합니다. 
 
-![][34]
+![]({% image_buster /assets/img_archive/customEventProperties.png %})
 
 {% alert note %}
 캠페인의 세그먼트가 신규 사용자에게 적용되는 경우 트리거 이벤트 "세션 시작"은 사용자의 첫 번째 앱 실행이 될 수 있습니다. (예를 들어, 세그먼트가 세션이 없는 사용자로 구성된 경우).
 {% endalert %}
 
-특정 사용자 세그먼트에 트리거된 캠페인을 보낼 수 있으므로 해당 세그먼트에 속하지 않은 사용자는 트리거 이벤트를 완료하더라도 캠페인을 받지 못합니다. 세그먼트 자격을 갖추었음에도 불구하고 사용자가 캠페인을 받지 못하는 경우 [사용자가 트리거된 캠페인을 받지 못한 이유][49] 섹션을 참조하세요.
+특정 사용자 세그먼트에 트리거된 캠페인을 보낼 수 있으므로 해당 세그먼트에 속하지 않은 사용자는 트리거 이벤트를 완료하더라도 캠페인을 받지 못합니다. If you notice users not receiving the campaign even though they qualified for the segment, see our section on [why a user might not have received a triggered campaign]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
 
 사용자가 프로필에 이메일 주소를 추가할 때의 트리거 이벤트와 관련하여 다음 규칙이 적용됩니다:
 
@@ -75,7 +74,7 @@ tool: Campaigns
 
 또한 트리거된 인앱 메시지는 여전히 인앱 메시지 전달 규칙을 준수하며 앱 세션이 시작될 때 표시됩니다.
 
-![][17]
+![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
 ### 2단계: 지연 길이 선택
 
@@ -83,18 +82,18 @@ tool: Campaigns
 
 또한 캠페인이 시작된 후 트리거 이벤트를 완료한 사용자는 지연 시간이 지난 후 가장 먼저 메시지를 받기 시작합니다. 캠페인이 시작되기 전에 트리거 이벤트를 완료한 사용자는 캠페인을 받을 자격이 없습니다.
 
-![][19]
+![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
-또한 향후 특정 요일("다음날"을 선택한 다음 하루를 선택)이나 특정 일수("다음날"을 선택)에 캠페인을 보내도록 선택할 수도 있습니다. 또는 배달 시간을 수동으로 선택하는 대신 [지능형 타이밍][8] 기능을 사용하여 메시지를 보낼 수도 있습니다.
+또한 향후 특정 요일("다음날"을 선택한 다음 하루를 선택)이나 특정 일수("다음날"을 선택)에 캠페인을 보내도록 선택할 수도 있습니다. Alternatively, you may choose to send your message using the [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) feature instead of manually selecting a delivery time.
 
-![][41]
-![][50]
+![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
 ### 3단계: 예외 이벤트 선택
 
-사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. [예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events)는 구매하기, 세션 시작하기, 캠페인의 지정된 [전환 이벤트][18] 수행하기, 또는 커스텀 이벤트 수행하기일 수 있습니다. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
+사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. [Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) can be making a purchase, starting a session, performing one of a campaign's designated [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events), or performing a custom event. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
 
-![][20]
+![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
 예외 이벤트를 사용하는 방법에 대한 자세한 내용은 [사용 사례]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases) 섹션에서 확인할 수 있습니다.
 
@@ -108,7 +107,7 @@ tool: Campaigns
 
 시작 시간과 종료 시간(선택 사항)을 지정하여 캠페인 기간을 지정합니다.
 
-![][21]
+![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
 사용자가 지정된 기간 동안 트리거 이벤트를 완료했지만 예정된 지연으로 인해 해당 기간 외에는 메시지를 받을 자격이 없는 경우 캠페인을 받지 못합니다. 따라서 메시지 시간보다 긴 시간 지연을 설정하면 캠페인을 수신할 사용자가 없습니다. 또한 사용자의 [현지 시간]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns)대로 메시지를 보내도록 선택할 수 있습니다.
 
@@ -116,11 +115,11 @@ tool: Campaigns
 
 사용자가 하루 중 특정 시간대에 캠페인을 수신할지 여부를 선택합니다. 메시지에 시간 프레임을 지정했는데 사용자가 이 시간 프레임 전에 트리거 이벤트를 완료하거나 메시지 지연으로 인해 시간 프레임을 놓친 경우 기본적으로 사용자는 메시지를 받지 못합니다.
 
-![][27]
+![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
 
 사용자가 기간 내에 트리거 이벤트를 완료했지만 메시지 지연으로 인해 사용자가 기간에서 벗어난 경우 다음 확인란을 선택하여 해당 사용자가 캠페인을 계속 받을 수 있도록 할 수 있습니다.
 
-![][31]
+![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
 사용자가 기간을 놓쳐서 메시지를 받지 못한 경우에는 사용자가 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)을 얻도록 선택하지 않았더라도 다음에 트리거 이벤트를 완료할 때 메시지를 받을 수 있는 자격을 얻게 됩니다. 사용자가 다시 자격을 갖추도록 선택한 경우, 지정된 기간 동안 자격을 갖추었다고 가정하여 사용자가 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
 
@@ -128,9 +127,9 @@ tool: Campaigns
 
 ### 6단계: 재적격 여부 결정
 
-사용자가 캠페인에 [재적격][24]이 될 수 있는지 여부를 결정합니다. 사용자가 다시 캠페인을 받을 수 있도록 허용하는 경우, 사용자가 캠페인을 다시 받을 수 있는 기간을 지정할 수 있습니다. 이렇게 하면 트리거된 캠페인이 "스팸성"이 되는 것을 방지할 수 있습니다.
+Determine whether users can become [re-eligible]({% image_buster /assets/img_archive/ReEligible.png %}) for the campaign. 사용자가 다시 캠페인을 받을 수 있도록 허용하는 경우, 사용자가 캠페인을 다시 받을 수 있는 기간을 지정할 수 있습니다. 이렇게 하면 트리거된 캠페인이 "스팸성"이 되는 것을 방지할 수 있습니다.
 
-![][28]
+![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
 ## 사용 사례
 
@@ -155,7 +154,7 @@ tool: Campaigns
 
 예를 들어 방금 등록한 남성 사용자에게 이벤트 트리거 캠페인을 보내고 싶다고 가정해 보겠습니다. 사용자가 등록하면 커스텀 이벤트 `registration`을 기록하는 동시에 사용자의 `gender` 속성을 설정합니다. Braze가 사용자의 성별을 처리하기 전에 이벤트가 트리거되어 캠페인을 받지 못할 수도 있습니다.
 
-모범 사례로, 이벤트 전에 캠페인이 세분화되는 속성이 Braze 서버로 플러시되는지 확인하세요. 이것이 불가능하다면 [사용자 지정 이벤트 속성][48] ]을 사용하여 관련 사용자 속성을 이벤트에 첨부하고 세분화 필터 대신 특정 이벤트 속성에 대한 속성 필터를 적용하는 것이 배달을 보장하는 가장 좋은 방법입니다. 예를 들어, 커스텀 이벤트 `registration`에 `gender` 속성정보를 추가하면 캠페인이 트리거될 때 필요한 데이터를 Braze가 확보할 수 있습니다.
+모범 사례로, 이벤트 전에 캠페인이 세분화되는 속성이 Braze 서버로 플러시되는지 확인하세요. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. 예를 들어, 커스텀 이벤트 `registration`에 `gender` 속성정보를 추가하면 캠페인이 트리거될 때 필요한 데이터를 Braze가 확보할 수 있습니다.
 
 또한 캠페인이 액션 기반이고 지연이 있는 경우, **전송 시 세그먼트 멤버십 재평가** 옵션을 선택하여 메시지를 전송할 때 사용자가 여전히 타겟 오디언스에 속해 있는지 확인할 수 있습니다.
 
@@ -166,27 +165,20 @@ tool: Campaigns
 
 모든 사용자를 포함하도록 대상 그룹을 변경하거나 이벤트를 수행할 것으로 예상되는 사용자가 이미 캠페인의 대상 그룹에 포함되어 있는지 확인하여 메시지를 트리거하는 것이 좋습니다.
 
-![][51]
+![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
-[5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
-[18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
-[20]: {% image_buster /assets/img_archive/schedule_triggered32.png %}
-[21]: {% image_buster /assets/img_archive/schedule_triggered43.png %}
-[22]: \#use-cases-2
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
-[28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
-[31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
-[32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}
-[41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
-[48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
-[50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
-[51]: {% image_buster /assets/img_archive/reevaluate_segment_membership.png %}
+### Troubleshooting custom events
+
+First, confirm that the custom event is being passed to Braze. Go to **Analytics** > **Custom Events Report**, and then select the respective custom event and date range. If the event doesn't display, confirm that it's set up correctly and that the user performed the correct action.
+
+If the custom event displays, further troubleshoot by doing the following:
+
+- Check the user's profile download to confirm they triggered the event and when they did it. If the event was triggered, compare the timestamp for when the event was triggered to the time the campaign went live. The event may have been triggered before the campaign went live.
+- Review changelogs for the campaign and any segments used in targeting to determine if the user was in the segment when their custom event was triggered. If they weren't in the segment, they wouldn't have received the campaign.
+- Verify whether the user was entered into a control group through segmentation and consequently prevented from receiving the campaign.
+- If there is a scheduled delay, check if the user's custom event was triggered before the delay. If the event was triggered before the delay, they wouldn't have received the campaign.
+
+{% alert note %}
+In-app messages can only be triggered by events sent through the SDK, not the REST API.
+{% endalert %}
+

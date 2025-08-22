@@ -40,6 +40,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | 사용자가 캠페인의 컨트롤 그룹에 등록된 경우
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | 사용자가 캠페인에 대해 빈도 제한을 받는 경우
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | 사용자가 기본 전환 기간 내에 수익을 창출하는 경우
+[USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | When a user progresses to a Canvas step
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | 사용자가 캔버스 전환 이벤트에 대해 전환하는 경우
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | 사용자가 캔버스에 들어가면
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | 사용자가 오디언스 종료 기준과 일치하여 캔버스를 종료하는 경우
@@ -480,6 +481,30 @@ This page is a reference of tables and columns available to be queried in the [Q
 
 ## 캔버스
 
+### USERS_CANVASSTEP_PROGRESSION_SHARED {#USERS_CANVASSTEP_PROGRESSION_SHARED}
+
+| 필드                                  | 유형                     | 설명                                                                                                     |
+| -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                                   | `string`, `null`    | 이 이벤트의 글로벌 고유 ID                                                                               |
+| `user_id`                              | `string`, `null`    | 이 이벤트를 수행한 사용자의 브레이즈 ID                                                                   |
+| `external_user_id`                     | `string`, `null`    | [PII] 사용자의 외부 사용자 ID                                                                              |
+| `device_id`                            | `string`, `null`    | 사용자가 익명인 경우 이 사용자와 연결된 디바이스의 ID입니다.                                            |
+| `app_group_id`                         | `string`, `null`    | 이 사용자가 속한 워크스페이스의 Braze ID                                                                   |
+| `app_group_api_id`                     | `string`, `null`    | 이 사용자가 속한 워크스페이스의 API ID                                                                    |
+| `time`                                 | `int`, `null`       | 이벤트가 발생한 유닉스 타임스탬프                                                                      |
+| `canvas_id`                            | `string`, `null`    | (Braze 전용) 이 이벤트가 속한 캔버스의 ID                                                     |
+| `canvas_api_id`                        | `string`, `null`    | 이 이벤트가 속한 캔버스의 API ID        |         
+| `canvas_variation_api_id`              | `string`, `null`    | 이 이벤트가 속한 캔버스 변형의 API ID                                                            |
+| `canvas_step_api_id`                   | `string`, `null`    | 이 이벤트가 속한 캔버스 단계의 API ID                                                                 |
+| `progression_type`                     | `string`, `null`    | Type of step progression event |
+| `is_canvas_entry`                      | `boolean`, `null`   | Whether this is entry into a first step in a Canvas        |
+| `exit_reason`                          | `string`, `null`    | If this is an exit, the reason a user exited the canvas during the step                  |
+| `canvas_entry_id`                      | `string`, `null`    | Unique identifier for this instance of a user in a Canvas  |
+| `next_step_id`                         | `string`, `null`    | BSON ID of the next step in the canvas |
+| `next_step_api_id`                     | `string`, `null`    | API ID of the next step in the Canvas |
+| `sf_created_at`                        | `timestamp`, `null` | 이 이벤트가 Snowpipe에 포착되었을 때                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
 | 필드                                  | 유형                     | 설명                                                                                                     |
@@ -679,7 +704,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `country` | `null,` `string` | [PII] 사용자 국가
 `timezone` | `null,` `string` | 사용자의 표준 시간대
 `language` | `null,` `string` | [PII] 사용자 언어
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -850,7 +875,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `language` | `null,` `string` | [PII] 사용자 언어
 `email_address` | `string` | [PII] 사용자의 이메일 주소
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -882,7 +907,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `sending_ip` | `null,` `string` | 이메일 전송이 이루어진 IP 주소
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
 `bounce_reason` | `null,` `string` | [PII] 이 반송 이벤트에 대해 수신된 SMTP 사유 코드 및 사용자 친화적인 메시지입니다.
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 `is_drop` | `null, boolean` | 이 이벤트가 드롭 이벤트로 계산됨을 나타냅니다.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -917,7 +942,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
 `link_id` | `null,` `string` | 클릭한 링크의 고유 ID(Braze에서 생성)
 `link_alias` | `null,` `string` | 이 링크 ID와 연결된 별칭
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 `is_amp` | `null, boolean` | AMP 이벤트임을 나타냅니다.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -949,7 +974,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `email_address` | `string` | [PII] 사용자의 이메일 주소
 `sending_ip` | `null,` `string` | 이메일이 전송된 IP 주소
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -980,7 +1005,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `email_address` | `string` | [PII] 사용자의 이메일 주소
 `user_agent` | `null,` `string` | 스팸 신고가 발생한 사용자 에이전트
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1012,7 +1037,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `user_agent` | `null,` `string` | 오픈이 발생한 사용자 에이전트
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
 `machine_open` | `null,` `string` | 예를 들어 MPP가 활성화된 Apple 기기에서 사용자 인게이지먼트 없이 열기 이벤트가 트리거되는 경우 'true'로 채워집니다. 보다 세분화된 정보를 제공하기 위해 시간이 지남에 따라 값이 변경될 수 있습니다.
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 `is_amp` | `null, boolean` | AMP 이벤트임을 나타냅니다.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1044,7 +1069,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `email_address` | `string` | [PII] 사용자의 이메일 주소
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
 `message_extras` | `null,` `string` | [PII] Liquid 렌더링 중 태그가 지정된 키-값 페어의 JSON 문자열
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 `sf_created_at` | `timestamp`, `null` | 이 이벤트가 Snowpipe에 포착되었을 때
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1077,7 +1102,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `sending_ip` | `null,` `string` | 이메일 전송이 이루어진 IP 주소
 `ip_pool` | `null,` `string` | 이메일 전송이 이루어진 IP 풀
 `bounce_reason` | `null,` `string` | [PII] 이 반송 이벤트에 대해 수신된 SMTP 사유 코드 및 사용자 친화적인 메시지입니다.
-`esp` | `null,` `string` | 이벤트와 관련된 ESP(SparkPost 또는 SendGrid)
+`esp` | `null,` `string` | ESP related to the event (SparkPost, SendGrid, or Amazon SES)
 `from_domain` | `null,` `string` | 이메일용 도메인 보내기
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1146,7 +1171,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `ad_id` | `null,` `string` | [PII] 광고 식별자
 `ad_id_type` | `null,` `string` | `ios_idfa`, `google_ad_id`, `windows_ad_id`, 또는 `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | 디바이스에 대한 광고 추적 활성화 여부
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1252,7 +1277,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `resolution` | `null,` `string` | 기기의 해상도
 `carrier` | `null,` `string` | 기기의 통신사
 `browser` | `null,` `string` | 기기의 브라우저
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1332,7 +1357,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `timezone` | `null,` `string` | 사용자의 표준 시간대
 `language` | `null,` `string` | [PII] 사용자 언어
 `platform` | `string` | 디바이스 플랫폼
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1530,7 +1555,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `canvas_step_api_id` | `null,` `string` | 이 이벤트가 속한 캔버스 단계의 API ID
 `canvas_step_message_variation_api_id` | `null,` `string` | 이 사용자가 받은 캔버스 단계 메시지 변형의 API ID
 `subscription_group_api_id` | `null,` `string` | 구독 그룹의 외부 ID
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1756,7 +1781,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `country` | `null,` `string` | [PII] 사용자 국가
 `timezone` | `null,` `string` | 사용자의 표준 시간대
 `language` | `null,` `string` | [PII] 사용자 언어
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1809,7 +1834,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 `canvas_step_api_id` | `null,` `string` | 이 이벤트가 속한 캔버스 단계의 API ID
 `canvas_step_message_variation_api_id` | `null,` `string` | 이 사용자가 받은 캔버스 단계 메시지 변형의 API ID
 `dispatch_id` | `null,` `string` | 이 메시지가 속한 발송의 ID
-`abort_type` | `null,` `string` | 중단 유형은 `liquid_abort_message`, `quiet_hours`, `rate_limit` 중 하나입니다
+`abort_type` | `null,` `string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
 `abort_log` | `null,` `string` | [PII] 중단 세부 정보를 설명하는 로그 메시지(최대 128자)
 `sf_created_at` | `timestamp`, `null` | 이 이벤트가 Snowpipe에 포착되었을 때      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

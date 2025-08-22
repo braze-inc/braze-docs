@@ -33,7 +33,7 @@ tool:
 
 [세그먼트를 만들]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) 때 '랜덤 버킷 #' 필터를 추가합니다. 그런 다음 세그먼트에 포함할 숫자 또는 숫자 범위를 지정합니다.
 
-![][2]
+![A segment filter that is for random bucket numbers no more than "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 세 가지 배리언트에 대한 테스트를 실행하고 대조군도 포함하려는 경우 이러한 유형의 세그먼트를 사용할 수 있습니다. 세 가지 이형 상품과 대조 그룹에 대해 동일한 크기의 세그먼트를 만드는 다음 샘플 계획을 고려하세요:
 
@@ -57,4 +57,3 @@ tool:
 5. 캠페인을 시작하고 각 버킷의 성과를 모니터링하세요. 참여율 및 전환율과 같은 지표를 분석하여 무작위 오디언스 재진입이 사용 사례에 얼마나 효과적인지 확인할 수 있습니다.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

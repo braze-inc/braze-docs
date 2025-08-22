@@ -20,7 +20,7 @@ Braze는 이메일 및 푸시 캠페인에서 데이터를 필터링하여 비�
 
 ## 2단계: 이벤트 데이터를 데이터 저장 파트너에게 전송
 
-우리는 커런츠를 설정하여 Braze 이벤트 데이터를 Amazon S3로 전송하여 저장 및 추출합니다. 이제 [Athena를][2] 사용하여 S3 위에 앉아 쿼리를 실행할 수 있다는 것을 알고 있습니다. 단기적으로 훌륭한 솔루션입니다. 하지만 저희는 관계형 데이터베이스와 비즈니스 인텔리전스/분석 도구를 사용하는 장기적인 솔루션을 원했습니다. (여러분에게도 동일한 방법을 권장합니다.)
+우리는 커런츠를 설정하여 Braze 이벤트 데이터를 Amazon S3로 전송하여 저장 및 추출합니다. Now, we do know that you can use [Athena](https://aws.amazon.com/athena/) to sit on top of S3 and run queries. 단기적으로 훌륭한 솔루션입니다. 하지만 저희는 관계형 데이터베이스와 비즈니스 인텔리전스/분석 도구를 사용하는 장기적인 솔루션을 원했습니다. (여러분에게도 동일한 방법을 권장합니다.)
 
 Braze는 S3를 성의 열쇠로 생각합니다! 이것은 Braze가 데이터를 이동, 피벗 및 분석할 수 있는 수많은 가능성을 열어줍니다. 하지만 Braze는 S3의 데이터를 변환하지 않도록 주의합니다. 데이터에 대해 매우 구체적인 구조를 가지고 있기 때문입니다.
 
@@ -48,4 +48,3 @@ Snowflake Reader Accounts는 사용자에게 Snowflake 계정이나 Snowflake와
 - [사용자 행동 차단](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 - [메시지 인게이지먼트 블록](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 
-[2]: https://aws.amazon.com/athena/

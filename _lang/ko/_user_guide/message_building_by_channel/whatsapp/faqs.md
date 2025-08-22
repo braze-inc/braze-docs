@@ -34,7 +34,9 @@ Braze 대시보드에 내장된 가입 절차를 통해 WhatsApp 비즈니스 �
 임베드된 가입 절차를 완료한 후, [WhatsApp 섹션으로](https://business.facebook.com/wa/manage/home) 이동하여 business.facebook.com에서 계정에 액세스할 수 있습니다. 
 
 #### 여러 WABA를 Braze에 연결할 수 있나요? 
-예, 워크스페이스당 하나의 WABA를 연결할 수 있습니다. 따라서 여러 개의 WABA를 여러 개의 Braze 워크스페이스에 연결할 수 있습니다. 예를 들어, 브랜드별로 서로 다른 워크스페이스가 있거나 국가별로 서로 다른 워크스페이스가 있는 경우, 각 워크스페이스에 자체 WABA를 연결할 수 있습니다.
+Yes, you can add up to 10 WhatsApp Business accounts per workspace, and each business account can be nested under a different Meta Business Manager.
+
+![Diagram of the Braze and WhatsApp ecosystem, showing how workspaces and WhatsApp Business accounts connect to each other: you can connect one subscription group to one phone number, multiple WhatsApp Business accounts to one workspace, and one workspace to multiple Meta Business Portfolios.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### WhatsApp 비즈니스 계정 전화번호 
 

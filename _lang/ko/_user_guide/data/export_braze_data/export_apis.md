@@ -10,7 +10,7 @@ platform: API
 
 # API 내보내기
 
-> 이 페이지에서는 대시보드 데이터의 JSON 파일을 프로그래밍 방식으로 내보낼 수 있는 Braze 내보내기 API에 대해 설명합니다. 내보내기에 대한 지침 및 샘플 코드를 포함하여 액세스할 수 있는 데이터 목록은 [엔드포인트 내][24] 보내기를 참조하세요.
+> 이 페이지에서는 대시보드 데이터의 JSON 파일을 프로그래밍 방식으로 내보낼 수 있는 Braze 내보내기 API에 대해 설명합니다. Refer to [Export endpoints]({{site.baseurl}}/api/endpoints/export/) for a list of data that you can access, including instructions and sample code for the export.
 
 ## CVS 다운로드 대신 내보내기 API를 사용해야 하는 경우
 
@@ -23,4 +23,3 @@ platform: API
 CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
-[24]: {{site.baseurl}}/api/endpoints/export/

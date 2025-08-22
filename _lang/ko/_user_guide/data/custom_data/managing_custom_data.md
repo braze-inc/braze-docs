@@ -18,11 +18,11 @@ description: "이 참조 문서는 캠페인 및 세그먼트를 미리 채우�
 
 1. **데이터 설정** > **커스텀 이벤트** 또는 **커스텀 속성** 또는 **제품**로 이동합니다.
 
-![커스텀 속성 또는 커스텀 이벤트 또는 제품으로 이동합니다.][21]{: style="max-width:90%;" }
+![Navigate to Custom Attributes or Custom Events or Products.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\. 사용자 지정 속성, 이벤트 또는 제품을 추가하려면 해당 페이지로 이동하여 **사용자 지정 속성 추가** 또는 **사용자 지정 이벤트 추가** 또는 **제품 추가를** 선택합니다.<br><br>커스텀 속성의 경우, 이 속성에 대한 [데이터 유형][20]을 선택합니다(예: 부울 또는 문자열). 속성의 데이터 유형은 해당 속성에 사용할 수 있는 세분화 필터를 결정합니다. <br><br>![새 속성 또는 이벤트 추가][22]{: style="max-width:80%;" }
-3\. **저장**을 선택하십시오.
+2\. 사용자 지정 속성, 이벤트 또는 제품을 추가하려면 해당 페이지로 이동하여 **사용자 지정 속성 추가** 또는 **사용자 지정 이벤트 추가** 또는 **제품 추가를** 선택합니다.<br><br>For custom attributes, select a [data type]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for this attribute (for instance, boolean or string). 속성의 데이터 유형은 해당 속성에 사용할 수 있는 세분화 필터를 결정합니다. <br><br>![Add new attribute or event]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
+3\. Select **Save**.
 
 ### 커스텀 이벤트 및 커스텀 속성 명명
 
@@ -32,7 +32,7 @@ description: "이 참조 문서는 캠페인 및 세그먼트를 미리 채우�
 
 사용자 지정 이벤트 또는 제품을 만든 후 해당 이벤트 또는 제품에 대한 **속성 관리를** 선택하여 새 속성을 추가하고 기존 속성을 차단 목록에 추가하고 [트리거 이벤트에서]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) 이 속성을 사용하는 캠페인 또는 캔버스를 확인합니다.
 
-![커스텀 properties for a 커스텀 event.][73]{: style="max-width:80%"}
+![Custom properties for a custom event.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
 이러한 추가된 커스텀 속성, 이벤트, 제품 또는 이벤트 속성정보를 추적 가능하게 만들려면 개발 팀에 요청하여 이전에 추가한 것과 동일한 이름을 사용하여 SDK에서 생성해야 합니다. 또는 Braze [API]({{site.baseurl}}/api/basics/)를 사용하여 해당 속성에 대한 데이터를 가져올 수 있습니다. 그 후, 커스텀 속성, 이벤트 또는 기타가 실행 가능해지고 사용자에게 적용됩니다.
 
@@ -66,7 +66,11 @@ description: "이 참조 문서는 캠페인 및 세그먼트를 미리 채우�
 
 ![커스텀 속성 페이지에서 차단된 여러 선택된 커스텀 속성.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-최대 300개의 커스텀 속성과 300개의 커스텀 이벤트를 차단할 수 있습니다. 특정 기기 속성 수집을 방지하려면, 당사의 [SDK 가이드][88]를 참조하세요.
+최대 300개의 커스텀 속성과 300개의 커스텀 이벤트를 차단할 수 있습니다. To prevent collecting certain device attributes, see our [SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
+
+{% alert important %}
+Custom attributes or custom events with a **Trashed** status will count towards the blocklisting limit until they're deleted.
+{% endalert %}
 
 커스텀 이벤트 또는 속성이 차단 목록에 포함된 경우 다음이 적용됩니다:
 
@@ -127,7 +131,7 @@ Braze는 우리에게 전송된 속성 데이터의 데이터 유형을 자동�
 데이터 유형 강제 적용은 이벤트 속성정보 또는 구매 속성정보에 적용되지 않습니다.
 {% endalert %}
 
-![사용자 지정 속성 데이터 유형 드롭다운][75]
+![Custom attributes data type dropdown]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
 If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data will be ignored. Any data ingested before the type change will continue to be stored as the old type (and therefore may not be segmentable), and a warning will appear next to the attribute on the affected users' profiles.
@@ -142,19 +146,10 @@ If you choose to force the data type for an attribute, any data that comes in th
 | 숫자 | 정수 또는 플로트(`1`, `1.5`와 같은)는 숫자로 저장됩니다 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-다양한 데이터 유형 비교에 의해 노출된 특정 필터 옵션에 대한 자세한 내용은 [보고서 구성][43]을 참조하세요. For more information on the different available data types, refer to [Custom attribute data types][44].
+For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). For more information on the different available data types, refer to [Custom attribute data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
 데이터가 Braze로 전송되면 변경할 수 없으며 수신 후 삭제하거나 수정할 수 없습니다. 그러나 대시보드에서 추적하는 항목을 제어하려면 앞의 섹션에 나열된 단계를 사용할 수 있습니다.
 {% endalert %}
 
 
-[1]: {% image_buster/assets/img_archive/blocklist_warning.png %}
-[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[21]: {% image_buster /assets/img_archive/prepopulate_page.png %}
-[22]: {% image_buster /assets/img_archive/prepopulate_add.png %}
-[43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[75]: {% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %}
-[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

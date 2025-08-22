@@ -183,7 +183,7 @@ search_rank: 1
 {% tab 세그먼트 데이터 %}
 **세그먼트 데이터**
 
-세그먼트에 대한 [애널리틱스 추적을]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) 사용 설정한 경우 해당 세그먼트를 열어 [세그먼트 데이터를]({{site.baseurl}}/user_guide/analytics/reporting/viewing_and_understanding_segment_data/) 확인합니다. 세그먼트 데이터는 해당 사용자의 세션, 커스텀 이벤트 및 시간 경과에 따른 수익을 추적합니다.
+If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/viewing_and_understanding_segment_data/). 세그먼트 데이터는 해당 사용자의 세션, 커스텀 이벤트 및 시간 경과에 따른 수익을 추적합니다.
 
 이러한 통계는 이 페이지에서 확인하세요:
 
@@ -289,7 +289,7 @@ search_rank: 1
 {% tab 이탈 예측 %}
 **Predictive Churn**
 
-[예측 이탈]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/)은 [Braze 예측 제품군]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)의 첫 번째 모델입니다. 예측 이탈을 사용하여 예측을 정의하고 생성하여 향후 이탈을 최소화하기 위한 사전 예방적 접근 방식을 제공합니다.
+[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/). 예측 이탈을 사용하여 예측을 정의하고 생성하여 향후 이탈을 최소화하기 위한 사전 예방적 접근 방식을 제공합니다.
 
 비즈니스마다 이탈과 유지에 대한 정의가 다르기 때문에, 고객 예측 이탈에 정의를 입력하기만 하면 나머지는 Braze가 알아서 처리합니다. 또한 캠페인이나 캔버스를 만들어 예측에 따라 행동하거나 추가 분석을 위해 세그먼트를 구축할 수도 있습니다.
 

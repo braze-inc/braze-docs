@@ -31,13 +31,13 @@ Braze는 모든 규모의 브랜드가 다양한 채널에서 개인화된 타�
 
 사용자는 Braze를 사용하여 보내는 메시지를 받는 사람들, 즉 여러분의 고객입니다. 사용자에 대해 수집하여 Braze에 수집하는 모든 데이터는 인구 통계, 개인 정보, 선호도 및 행동과 같은 고객 프로필에 저장됩니다. 이 정보는 메시징을 강화하고 적절한 사용자에게 메시지를 맞춤화할 수 있는 기반이 됩니다.
 
-![][1]
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 세그먼트는 고객 기반을 더 작은 그룹으로 나눈 다음 특정 메시지로 타겟팅할 수 있습니다. 성별, 위치, 연령과 같은 특성부터 이전 캠페인과의 상호작용 패턴이나 고객 여정 중 어느 단계에 있는지와 같은 행동에 이르기까지 다양한 변수를 사용하여 세그먼트를 생성할 수 있습니다.
 
 세그먼트는 동적이며, 사용자는 자신의 행동과 브랜드와의 관계에 따라 실시간으로 세그먼트에 들어오고 나갈 수 있습니다. 이를 통해 고객은 언제든지 자신에게 가장 관련성이 높은 메시지를 받을 수 있습니다. 타겟팅 및 메시징 목적에 따라 필요한 만큼 세그먼트를 만들 수 있습니다.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 자세한 내용은 여기에서 확인하세요: [시작하기: 사용자 및 세그먼트]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
@@ -68,7 +68,7 @@ Braze는 모든 규모의 브랜드가 다양한 채널에서 개인화된 타�
 
 Braze는 빠르고 쉽게 시작하고 실행할 수 있도록 설계되었습니다. 수백 개의 브랜드로 구성된 고객 기반에서 평균 가치 실현 시간은 6주입니다.
 
-![][3]
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 다음은 병렬로 작업할 수 있는 네 가지 구성 요소를 기반으로 통합에 걸리는 시간을 예측하는 Braze 프레임워크입니다. 일반적인 범위는 30일에서 180일이며, 대부분의 계정은 45일에서 60일 이내에 통합을 완료합니다.
 
@@ -84,6 +84,3 @@ Braze는 빠르고 쉽게 시작하고 실행할 수 있도록 설계되었습�
 
 자세한 내용은 여기에서 확인하세요: [시작하기: 통합 개요]({{site.baseurl}}/user_guide/getting_started/integration/).
 
-[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
-[2]: {% image_buster /assets/img/getting_started/segment.png %}
-[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}

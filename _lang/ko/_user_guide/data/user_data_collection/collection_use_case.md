@@ -53,10 +53,9 @@ StyleRyde라는 택시 또는 차량 공유 앱이 어떤 사용자 데이터를
 이러한 속성을 통해 다음과 같은 사용자에게 캠페인을 보낼 수 있습니다:
 
 1. 7일 동안 앱을 사용하지 않았고 계정에 프로모션 크레딧이 있는 사용자에게 앱으로 돌아와 크레딧을 사용하도록 알림을 보냅니다.
-2. 메시지 템플릿 및 [개인화 기능을][13] 사용하여 고유 프로모션 코드 속성을 사용자를 대상으로 하는 메시지에 끌어다 놓을 수 있습니다.
+2. Using our message templates and [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) to drag the unique promotion code attribute into messaging directed at users.
 
 {% alert important %}
 Braze는 세션 수가 5,000,000개가 넘는 사용자("더미 사용자")를 금지 또는 차단하고, 일반적으로 잘못된 통합의 결과이므로 더 이상 해당 사용자의 SDK 이벤트를 수집하지 않습니다. 합법적인 사용자에게 이런 일이 발생한 경우 Braze 계정 관리자에게 문의하세요.
 {% endalert %}
 
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

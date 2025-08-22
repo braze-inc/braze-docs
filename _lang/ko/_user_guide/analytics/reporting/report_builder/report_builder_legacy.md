@@ -12,9 +12,9 @@ tool:
 
 # 보고서 작성기(레거시)
 
-> 보고서 빌더를 사용하면 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교할 수 있으므로 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 쉽게 확인할 수 있습니다. 캠페인과 캔버스 모두 데이터를 내보내고 보고서를 저장하여 나중에 볼 수 있습니다.<br><br>보고서에 표시되는 메트릭에 대한 설명 목록은 보고서 [메트릭 용어집을][16] 참조하세요.
+> 보고서 빌더를 사용하면 여러 캠페인 또는 캔버스의 결과를 단일 보기에서 비교할 수 있으므로 어떤 참여 전략이 주요 지표에 가장 큰 영향을 미쳤는지 쉽게 확인할 수 있습니다. 캠페인과 캔버스 모두 데이터를 내보내고 보고서를 저장하여 나중에 볼 수 있습니다.<br><br>보고서에 표시되는 메트릭에 대한 설명 목록은 보고서 [메트릭 용어집을]({{site.baseurl}}/user_guide/data/report_metrics/) 참조하세요.
 
-![캠페인 비교 예시][5]{: style="max-width:80%;"}
+![캠페인 비교 예시]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 예를 들어, 이 보고서를 사용하여 주요 참여 관련 질문에 답하세요:
 
@@ -41,7 +41,7 @@ tool:
 
 캠페인에 대한 보고서를 실행하기로 선택한 경우 **수동** 보고서 또는 **자동** 보고서 중에서 선택할 수 있습니다. 보고서에는 캠페인 또는 캔버스 중 하나만 포함할 수 있지만 둘 다 함께 포함할 수는 없습니다. 지난 12개월 이내에 마지막으로 메시지를 보낸 캠페인과 캔버스는 모두 신고 대상이 됩니다.
 
-![캠페인 대시보드][6]{: style="max-width:80%;"}
+![캠페인 대시보드]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 다음은 이 두 옵션의 차이점입니다:
 
@@ -62,9 +62,9 @@ tool:
 
 보고서를 만든 후에는 각 행에 캠페인이 포함된 빈 표가 표시됩니다. **열 편집**을 선택하고 추가하려는 측정기준을 선택하면 테이블이 채워집니다.
 
-![캠페인 옵션][15]{: style="max-width:80%;"}
+![캠페인 옵션]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
-선택한 지표로 테이블이 채워집니다. 이러한 측정기준의 정의는 [보고서 측정기준 용어집][16]을 참조하세요. 일부 지표는 캠페인 비교 보고서에만 사용할 수 있습니다.
+선택한 지표로 테이블이 채워집니다. 이러한 측정기준의 정의는 [보고서 측정기준 용어집]({{site.baseurl}}/user_guide/data/report_metrics/)을 참조하세요. 일부 지표는 캠페인 비교 보고서에만 사용할 수 있습니다.
 
 비율 또는 숫자 지표의 **평균**과 숫자 지표의 **합계**에 대한 계산을 토글할 수도 있습니다.
 
@@ -72,13 +72,13 @@ tool:
 
 보고서의 데이터를 볼 특정 기간을 선택할 수 있습니다. 특정 캠페인, 캔버스, 캔버스 변형 또는 캔버스 구성 요소에 선택한 기간에 대한 데이터가 없는 경우 해당 행의 결과는 비어 있습니다. 
 
-![캠페인 수치 지표][4]{: style="max-width:60%;"}
+![캠페인 수치 지표]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### 4단계: 보고서 이름 지정 및 저장
 
 보고서를 저장하기 전에 보고서의 이름을 지정합니다. 보고서의 이름을 지정하지 않고 저장하면 Braze는 기본 이름인 "캠페인 비교 보고서"를 적용합니다.
 
-![캠페인 노트][7]{: style="max-width:60%;"}
+![캠페인 노트]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
 
 준비가 완료되면 **저장을** 선택합니다. 저장된 보고서는 나중에 **보고서 빌더** 페이지에서 볼 수 있습니다.
 
@@ -86,7 +86,7 @@ tool:
 
 다변량 캠페인의 경우 캠페인 이름 옆의 화살표를 클릭하여 배리언트 상품 및 대조군별로 이러한 지표를 세분화하여 볼 수 있습니다. 이형 상품이 포함된 행에는 해당 이형 상품의 실적 결과가 포함되며, 컨트롤이 포함된 행에는 전환 이벤트에 대한 결과만 포함됩니다. 
 
-![캠페인 노트][3]{: style="float:right;max-width:15%;margin-left:15px;"}
+![캠페인 노트]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 전체 캠페인의 행을 채우는 지표에는 이형 상품의 성과가 반영되지만 컨트롤의 성과는 포함되지 않습니다. 예를 들어, 전체 캠페인의 기본 전환 이벤트 A는 이형 상품에 대한 기본 전환 이벤트 A의 합이 되며, 여기에는 컨트롤에 대한 기본 전환 이벤트 A는 포함되지 않습니다.
 
@@ -102,19 +102,19 @@ tool:
 
 이형 **상품별 분석을** 선택하면 전체 캔버스에 대한 상위 수준의 통계와 각 이형 상품의 통계를 볼 수 있으며, 캔버스 이름 옆의 화살표를 선택하면 확장할 수 있습니다.
 
-![변형][12]{: style="max-width:90%;"}
+![변형]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
 
 ### 단계 
 
 **단계별** 분석을 선택하면 보고서의 각 행에 단계 행이 포함된 단계 수준 지표를 볼 수 있습니다.
 
-![단계][13]{: style="max-width:90%;"}
+![단계]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
 
 ### 메시지
 
 단계별 분석과 마찬가지로 **메시지별 분석**을 선택하면 각 행에 단계 이름이 표시됩니다. 그러나 **편집 열**에서는 이메일 클릭 수 및 푸시 열기와 같은 채널별 통계와 같은 메시지 수준 측정기준에 액세스할 수 있습니다.
 
-![신고][14]{: style="max-width:90%;"}
+![신고]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
 
 Braze 대시보드 내에서 캔버스 보고서의 처음 50개 행을 미리 볼 수 있습니다. CSV를 내보낼 때 전체 보고서에 액세스할 수 있습니다.
 
@@ -141,7 +141,7 @@ Braze 대시보드 내에서 캔버스 보고서의 처음 50개 행을 미리 �
 
 배리언트 측정기준이 포함된 파일은 이름 앞에 `variant_`가 추가됩니다. 자동화된 보고서를 처음 내보내면 여러 파일을 다운로드할 수 있는 권한을 부여할지 묻는 팝업이 표시되며, **허용**을 클릭합니다.
 
-![캠페인 다운로드][8]{: style="max-width:60%;"}
+![캠페인 다운로드]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### 캔버스 비교 보고서 내보내기
 
@@ -156,7 +156,7 @@ Braze 대시보드 내에서 캔버스 보고서의 처음 50개 행을 미리 �
 
 차트를 사용하여 보고서에서 선택한 메트릭을 시각화합니다. 차트는 캠페인이 포함되어 있고 열에 측정기준이 하나 이상 추가된 보고서에서 사용할 수 있습니다.
 
-![메시지 전송 측정기준이 선택된 캠페인 실적 차트][17]
+![메트릭 메시지 전송이 선택된 캠페인 실적 차트]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 기본적으로 각 보고서의 차트에는 보고서의 첫 번째 열에 측정기준이 표시됩니다. 그래프로 표시할 다른 지표를 선택하려면 드롭다운에서 해당 지표를 선택합니다. 보고서 테이블의 모든 메트릭을 차트에 표시할 수 있습니다.
 
@@ -167,16 +167,4 @@ Braze 대시보드 내에서 캔버스 보고서의 처음 50개 행을 미리 �
 현재 보고서를 저장할 때 차트는 저장되지 않습니다.
 
 
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

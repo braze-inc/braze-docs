@@ -35,17 +35,11 @@ guide_featured_list:
 
 다음 기능에 대해 **템플릿** 섹션에서 템플릿 및 창의적인 콘텐츠를 사용할 수 있고 관리할 수 있습니다:
 
-- **[이메일 템플릿][2]**
-- **[콘텐츠 블록][7]**
-- **[웹훅 템플릿][3]**
-- **[링크 템플릿][6]**
-- **[인앱 메시지 색상 프로필 및 CSS 템플릿][4]**
-- **[미디어 라이브러리에서 자산 관리][5]**
+- **[Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
+- **[Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Webhook templates]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[In-app message color profiles and CSS templates]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Manage assets in the media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/

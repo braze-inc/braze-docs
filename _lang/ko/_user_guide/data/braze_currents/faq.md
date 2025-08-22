@@ -13,7 +13,7 @@ tool: Currents
 
 ### 기록 데이터는 어떻게 얻나요?
 
-커런츠는 실시간 라이브 데이터 스트림이므로 이벤트를 다시 재생할 수 없습니다. 하지만 [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/) 또는 [Microsoft Azure Blob Storage와]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) 같은 데이터 웨어하우스에 Currents 데이터를 저장할 수 있으므로 과거 이벤트에 대해 적절하게 조치를 취할 수 있습니다. 데이터는 30일 동안 보관되지만, 더 많은 과거 데이터를 보려면 [눈송이를]({{site.baseurl}}/user_guide/data/braze_currents/s3_to_snowflake/) 쿼리할 수 있습니다.
+커런츠는 실시간 라이브 데이터 스트림이므로 이벤트를 다시 재생할 수 없습니다. 하지만 [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) 또는 [Microsoft Azure Blob Storage와]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) 같은 데이터 웨어하우스에 Currents 데이터를 저장할 수 있으므로 과거 이벤트에 대해 적절하게 조치를 취할 수 있습니다. 데이터는 30일 동안 보관되지만, 더 많은 과거 데이터를 보려면 [눈송이를]({{site.baseurl}}/user_guide/data/braze_currents/s3_to_snowflake/) 쿼리할 수 있습니다.
 
 ### Currents가 JSON이 아닌 Avro 형식으로 데이터를 출력하는 이유는 무엇인가요?
 
@@ -26,6 +26,6 @@ Avro는 스키마가 없는 JSON과 달리 스키마 진화를 기본적으로 �
 ### 쿼리를 위해 이 데이터를 어디에 저장해야 하나요?
 
 Braze는 쿼리를 위해 데이터를 저장할 수 있는 여러 데이터 웨어하우스와 제휴하고 있습니다. 사용을 권장합니다:
-- [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/)
-- [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/)
-- [Google 클라우드 스토리지]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/).
+- [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)
+- [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/)
+- [Google 클라우드 스토리지]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).

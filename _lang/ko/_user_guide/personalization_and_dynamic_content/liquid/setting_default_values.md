@@ -14,7 +14,7 @@ description: "이 참조 문서에서는 메시지에서 사용하는 개인화 
 
 ## 작동 방식
 
-기본값은 "default"라는 이름의 [Liquid 필터][3](그림과 같이 필터를 인라인으로 구분하려면 `|` 사용)를 지정하여 추가할 수 있습니다.
+Default values can be added by specifying a [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) (use `|` to distinguish the filter inline, as shown) with the name "default."
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#null 속성 값에 대한 회계 처리
+[37]:#accounting-for-null-attribute-values

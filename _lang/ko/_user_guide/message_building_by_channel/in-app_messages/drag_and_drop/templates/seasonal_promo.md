@@ -18,7 +18,7 @@ description: "이 페이지에서는 앱 내 메시지 드래그 앤 드롭 편�
 
 드래그 앤 드롭 인앱 메시지를 만들 때 템플릿의 **배경 이미지가 있는 시즌 프로모션을** 선택한 다음 **메시지 작성을** 선택합니다. 이 템플릿은 모바일 앱과 웹 브라우저를 모두 지원합니다.
 
-![시즌 프로모션용 템플릿이 포함된 인앱 메시지 편집기][img1]
+![The in-app message editor with the template for a seasonal promotion.]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %})
 
 ### 2단계: 메시지 스타일을 설정하세요
 
@@ -28,23 +28,19 @@ description: "이 페이지에서는 앱 내 메시지 드래그 앤 드롭 편�
 
 시즌 프로모션 제작을 시작하려면 편집기에서 버튼 컴포넌트를 선택합니다. 그런 다음 사이드 메뉴를 사용하여 사용자가 버튼을 선택하면 어디로 이동하는지 선택합니다. 템플릿 기본값은 메시지를 닫는 것이지만 앱의 특정 페이지(예: 홍보 중인 제품)로 이동하도록 선택할 수 있습니다.
 
-![버튼 요소를 사용자 지정할 수 있는 사이드 메뉴가 있는 인앱 메시지 편집기.][img2]
+![The in-app message editor with a side menu for customizing the button element.]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %})
 
 **페이지** 섹션에서 제품 공지사항에 메시지를 추가한 다음 순차적인 흐름을 위해 서로 연결할 수도 있습니다. 예를 들어, 제품의 기능을 간략하게 설명하는 메시지 시퀀스를 구성하고 사용자를 제품 페이지로 이동시키는 버튼으로 끝낼 수 있습니다. [페이지 함께 연결하기에서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together) 그 방법을 알아보세요.
 
 ### 4단계: 메시지를 스타일링하세요
 
-드래그 앤 드롭 [인앱 메시지 구성 요소를][3] 사용하여 시즌 프로모션의 모양과 느낌을 맞춤 설정할 수 있습니다. **메시지 컨테이너** 메뉴에서 기본 배경 이미지 URL을 대체하여 나만의 배경 이미지를 추가하거나 URL을 제거하고 [미디어 라이브러리에서]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) 이미지를 선택합니다.
+Customize the look and feel of your seasonal promotion using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components). **메시지 컨테이너** 메뉴에서 기본 배경 이미지 URL을 대체하여 나만의 배경 이미지를 추가하거나 URL을 제거하고 [미디어 라이브러리에서]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) 이미지를 선택합니다.
 
-![배경 이미지를 선택할 수 있는 사이드 메뉴가 있는 인앱 메시지 편집기][img3]
+![The in-app message editor with a side menu for selecting the background image.]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %})
 
 ## 결과 분석
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_button.png %}
-[img3]: {% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %} 
 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

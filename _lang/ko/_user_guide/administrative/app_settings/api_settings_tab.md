@@ -21,7 +21,7 @@ description: "이 문서에서는 워크스페이스의 API 식별자를 표시�
 
 보안을 강화하기 위해 특정 REST API 키에 대해 REST API 요청을 보내도록 허용할 IP 주소와 서브넷 목록을 지정할 수 있습니다. 이를 허용 목록 또는 화이트리스트라고 합니다. 특정 IP 주소나 서브넷을 허용하려면 REST API 키를 새로 생성할 때 **화이트리스트 IP** 섹션에 추가하세요. 
 
-![새 API 키 생성의 API IP 화이트리스트 섹션][26]
+![API IP Whitelisting section of creating a new API key]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 지정하지 않으면 모든 IP 주소에서 요청을 보낼 수 있습니다.
 
@@ -35,13 +35,7 @@ Braze-Braze 웹훅을 생성하고 허용 목록을 사용하려면? [화이트�
 
 ### 기타 식별자
 
-API와 통합하려면 Braze 외부 API에서 액세스하려는 세그먼트, 캠페인, 콘텐츠 카드 등과 관련된 식별자를 검색할 수 있습니다. 모든 메시지는 [UTF-8][12] 인코딩을 따라야 합니다. 이 중 하나를 선택하면 드롭다운 메뉴 아래에 식별자가 표시됩니다.
+API와 통합하려면 Braze 외부 API에서 액세스하려는 세그먼트, 캠페인, 콘텐츠 카드 등과 관련된 식별자를 검색할 수 있습니다. All messages should follow [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding. 이 중 하나를 선택하면 드롭다운 메뉴 아래에 식별자가 표시됩니다.
 
 자세한 내용은 [API 식별자 유형]({{site.baseurl}}/api/identifier_types/)을 참조하세요.
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "위키백과: UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

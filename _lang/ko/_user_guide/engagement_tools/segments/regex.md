@@ -1,7 +1,7 @@
 ---
 nav_title: "정규식"
 article_title: 정규식
-page_order: 6
+page_order: 10
 
 description: "이 참조 문서에서는 정규표현식(정규식)이 무엇인지, 정규표현식 사용을 시작하는 방법, 정규표현식의 유효성을 검사하고 테스트하는 디버거 기능에 대해 설명합니다."
 page_type: reference
@@ -16,13 +16,13 @@ tool:
 
 > 일반적으로 정규식으로 알려진 정규표현식은 검색 패턴을 정의하는 문자 시퀀스입니다. 정규식을 사용하면 텍스트 그룹화의 유효성을 검사하고 찾기 및 바꾸기 작업을 수행할 수 있습니다. Braze에서는 정규식을 활용하여 타겟 오디언스를 위한 세분화 및 캠페인 필터링에서 보다 유연한 문자열 매칭 솔루션을 제공합니다.<br><br>이 페이지에서는 정규식(정규식), 정규식 사용 방법, 자주 묻는 질문을 다루고 정규식을 테스트할 수 있는 정규식 디버거를 제공합니다.
 
-링크된 Braze 학습 과정에서는 [정규식101][regex]에서 정규표현식을 사용하고 테스트하는 방법을 보여드립니다. 또한 [사내 정규식 테스터](#regex-debugger), 유용한 참조 페이지, 정규식 Braze 학습 동영상에 참조된 샘플 데이터, 자주 묻는 질문도 제공합니다.
+In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101](https://regex101.com/). 또한 [사내 정규식 테스터](#regex-debugger), 유용한 참조 페이지, 정규식 Braze 학습 동영상에 참조된 샘플 데이터, 자주 묻는 질문도 제공합니다.
 
 ## 리소스
 
 - [정규식 기초](https://learning.braze.com/regular-expression-basics-for-braze) Braze 학습 과정
 - [정규식 치트 시트]({{site.baseurl}}/regex_cheat_sheet/)
-- [샘플 데이터 RTF][dummydata]
+- [Sample Data RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## 정규식 디버거
 
@@ -194,7 +194,7 @@ $( document ).ready(function() {
 
 #### 특정 전화번호를 필터링하려면 어떻게 하나요?
 
-정규식을 사용하여 전화번호를 필터링하기 전에 고객 프로필에 기록된 번호는 사용자 전화번호에 지정된 [E.164](https://en.wikipedia.org/wiki/E.164) 형식이어야 합니다([사용자 전화번호에]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/) 지정된 대로).
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/).
 
 미국 전화번호를 검색한다고 가정하면 `\d`의 각 반복은 지정하려는 숫자인 `1?\d\d\d\d\d\d\d\d\d\d` 정규식 형식을 사용합니다. 처음 세 자리는 지역 번호입니다.
 
@@ -209,5 +209,3 @@ $( document ).ready(function() {
 !["^1?718\\d\\d\\d\\d\\d\\d"의 정규식과 일치하는 전화번호를 필터링합니다.]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
-[regex]: https://regex101.com/
-[dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

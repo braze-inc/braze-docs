@@ -48,7 +48,7 @@ guide_featured_list:
 커런츠 기능:
 * 데이터 웨어하우스 또는 자세한 분석을 위해 [분석 파트너]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) 중 하나로 Braze 이벤트 데이터를 스트리밍합니다.
 * 비즈니스 인텔리전스 도구, 머신 러닝 알고리즘 등을 지원하기 위해 Braze 이벤트 데이터를 지속적으로 스트리밍합니다.
-* [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [세그먼트]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) 또는 [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/)을 사용하여 Braze 이벤트 데이터 를 다양한 다른 시스템으로 라우팅합니다.
+* Route Braze event data to a variety of other systems using [Tealium]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/) or [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle_for_currents/).
 
 이벤트 데이터에 액세스하여 커런츠로 할 수 있는 일이 훨씬 더 많습니다. 믿어주세요—[Braze는 커런츠를 사용합니다]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/)!
 

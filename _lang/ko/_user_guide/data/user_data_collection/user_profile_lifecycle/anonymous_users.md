@@ -44,7 +44,7 @@ description: "이 도움말에서는 익명 사용자와 사용자 별칭에 대
 - **외부 사용자 ID가 비어 있습니다.**
 - "IS_LEAD_PROFILE" **이 참입니다**.
 
-![빈 외부 사용자 ID와 진정한 "is_lead_profile" 사용자 지정 속성에 대해 세그먼트 필터를 적용합니다.][1]
+![빈 외부 사용자 ID와 참 "is_lead_profile" 사용자 지정 속성에 대해 세그먼트 필터를 적용합니다.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### 익명 사용자의 결제 데이터 캡처
 
@@ -76,4 +76,3 @@ description: "이 도움말에서는 익명 사용자와 사용자 별칭에 대
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img/getting_started/anonymous_users.png %}

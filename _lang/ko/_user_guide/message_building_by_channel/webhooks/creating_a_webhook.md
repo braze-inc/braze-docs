@@ -28,10 +28,10 @@ search_rank: 2
 **단계:**
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-2. **웹훅**을 선택하거나, 여러 채널을 타겟팅하는 캠페인의 경우 **다채널**을 선택하세요.
+2. **웹훅**을 선택하거나, 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널**을 선택하세요.
 3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
 4. (선택 사항) 이 캠페인이 어떻게 사용될 것인지에 대한 설명을 추가하십시오.
-4. 필요에 따라 [팀]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) 및 [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)를 추가하세요.
+4. 필요에 따라 [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) 및 [태그]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)를 추가하세요.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 변형에 대해 서로 다른 웹훅 템플릿을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -65,11 +65,11 @@ search_rank: 2
 - HTTP 메서드
 - 요청 본문
 
-"작성" 탭과 예시 Facebook 메신저 웹훅 템플릿.
+![예제 웹훅 템플릿이 있는 "작성" 탭입니다.]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### 언어 {#internationalization}
 
-URL과 요청 본문에서 [국제화가][16] 지원됩니다. 메시지를 국제화하려면 언어 추가를 선택하고 필수 필드를 작성하십시오. 
+URL과 요청 본문에서 [국제화가]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) 지원됩니다. 메시지를 국제화하려면 언어 추가를 선택하고 필수 필드를 작성하십시오. 
 
 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. 사용할 수 있는 전체 언어 목록은 지원되는 언어를 참조하십시오.
 
@@ -85,7 +85,7 @@ Braze는 표준 포트 `80` (HTTP) 및 `443` (HTTPS)를 통해 통신하는 URL�
 
 ##### Liquid 사용
 
-[Liquid를][15] 사용하여 웹훅 URL을 맞춤 설정할 수 있습니다. 특정 엔드포인트에서는 사용자를 식별하거나 URL의 일부로 사용자별 정보를 제공해야 하는 경우가 있습니다. Liquid를 사용할 때는 URL에 사용하는 각 사용자별 정보에 대한 [기본값][19]을 포함해야 합니다.
+[Liquid를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 사용하여 웹훅 URL을 맞춤 설정할 수 있습니다. 특정 엔드포인트에서는 사용자를 식별하거나 URL의 일부로 사용자별 정보를 제공해야 하는 경우가 있습니다. Liquid를 사용할 때는 URL에 사용하는 각 사용자별 정보에 대한 [기본값]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)을 포함해야 합니다.
 
 #### HTTP 메서드
 
@@ -101,13 +101,13 @@ JSON 키-값 페어를 사용하면 JSON 형식을 기대하는 엔드포인트�
 
 요청 본문이 JSON 키-값 쌍으로 설정되었습니다.
 
-키-값 쌍을 Liquid를 사용하여 개인화할 수 있으며, 요청에 사용자 속성, 커스텀 속성 또는 이벤트 속성 정보를 포함할 수 있습니다. 예를 들어 요청에 고객의 이름과 이메일을 포함할 수 있습니다. 각 속성에 대한 기본값을 포함해야 합니다.
+사용자 속성, [커스텀 속성]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices) 또는 [이벤트 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)을 요청에 포함하여 Liquid를 사용하여 키-값 쌍을 개인화할 수 있습니다. 예를 들어 요청에 고객의 이름과 이메일을 포함할 수 있습니다. 각 속성에 대해 [기본값]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)을 포함해야 합니다.
 
 ##### 원시 텍스트
 
 원시 텍스트 옵션을 사용하면 모든 형식의 본문이 예상되는 엔드포인트에 대한 요청을 유연하게 작성할 수 있습니다. 예를 들어, XML 형식으로 요청을 기대하는 엔드포인트에 대한 요청을 작성하는 데 이를 사용할 수 있습니다. 
 
-Liquid를 사용한 [개인화][15] 및 [국제화는][16] 모두 원시 텍스트에서 지원됩니다.
+Liquid를 사용한 [개인화]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 및 [국제화는]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) 모두 원시 텍스트에서 지원됩니다.
 
 원시 텍스트를 사용하여 Liquid로 요청 본문의 예입니다.
 
@@ -172,7 +172,7 @@ URL 인코딩된 문자열이 포함된 요청 본문.
 
 #### 타겟팅할 사용자 선택
 
-다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 이 단계에서는 세그먼트에서 더 많은 오디언스를 선택하고 원하는 경우 필터를 사용하여 해당 세그먼트를 더 좁힐 수 있습니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
+다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 이 단계에서는 세그먼트에서 더 많은 오디언스를 선택하고 원하는 경우 필터를 사용하여 해당 세그먼트를 더 좁힐 수 있습니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
 
 #### 전환 이벤트 선택
 
@@ -195,17 +195,20 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 
 ### 오류, 재시도 로직 및 시간 초과
 
-웹훅은 외부 엔드포인트에 요청을 하는 Braze 서버에 의존하므로 구문 및 기타 오류가 발생할 수 있습니다. 웹훅 오류를 방지하는 첫 번째 단계는 웹훅 캠페인에 구문 오류가 있는지 테스트하고 개인화된 변수에 기본값이 있는지 확인하는 것입니다. 그러나 만료된 API 키, 사용량 제한 또는 예기치 않은 서버 오류 등의 문제로 인해 웹훅이 여전히 실패할 수 있습니다. 웹훅이 전송에 실패하면, 오류 메시지가 메시지 활동 로그에 기록됩니다.
+웹훅은 Braze 서버가 외부 엔드포인트에 요청을 하도록 의존하며, 오류가 발생할 수 있습니다. 가장 일반적인 오류에는 구문 오류, 만료된 API 키, 속도 제한 및 예기치 않은 서버 측 문제가 포함됩니다. 웹훅 캠페인을 보내기 전에:
 
-이 설명에는 오류가 발생한 시간, 앱 이름, 오류 메시지가 포함됩니다:
+- 구문 오류에 대해 웹훅을 테스트하세요.
+- 개인화된 변수에 기본값이 있는지 확인하세요.
+
+웹훅 전송에 실패하면 오류 메시지가 [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)에 기록되며, 오류 타임스탬프, 앱 이름 및 오류에 대한 세부정보가 포함됩니다.
 
 웹훅 오류 메시지 "현재 사용자에 대한 정보를 쿼리하려면 활성 액세스 토큰을 사용해야 합니다."
 
-메시지 본문에서 오류의 원인이 충분히 명확하지 않은 경우 사용 중인 API 엔드포인트의 설명서를 확인해야 합니다. 여기에는 일반적으로 엔드포인트에서 사용하는 오류 코드와 일반적으로 발생하는 원인에 대한 설명이 제공됩니다.
+오류 메시지가 오류의 출처에 대해 충분히 명확하지 않은 경우, 사용 중인 API 엔드포인트의 문서를 확인해야 합니다. 여기에는 일반적으로 엔드포인트에서 사용하는 오류 코드와 일반적으로 발생하는 원인에 대한 설명이 제공됩니다.
 
-다른 캠페인과 마찬가지로 Braze는 웹훅 캠페인의 전달과 그로 인한 전환을 추적합니다. 웹훅 요청이 전송되면 수신 서버는 요청에 어떤 일이 발생했는지를 나타내는 응답 코드를 반환합니다. 
+#### 응답 코드 및 재시도 로직
 
-다음 표에는 서버가 전송할 수 있는 다양한 응답, 캠페인 분석에 미치는 영향, 오류 발생 시 Braze가 캠페인을 재전송할지 여부가 요약되어 있습니다:
+웹훅 요청이 전송되면 수신 서버는 요청에 어떤 일이 발생했는지를 나타내는 응답 코드를 반환합니다. 다음 표에는 서버가 전송할 수 있는 다양한 응답, 캠페인 분석에 미치는 영향, 오류 발생 시 Braze가 캠페인을 재전송할지 여부가 요약되어 있습니다:
 
 | 응답 코드 | 수신됨으로 표시되었나요? | 다시 시도하시겠어요? |
 |---------------|-----------|----------|
@@ -218,8 +221,12 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-오류가 발생하면 Braze는 지수 백오프를 사용하여 30분 동안 최대 5회 웹훅 전송을 재시도합니다. 모든 다른 오류에 대해, Braze는 최대 24시간 동안 계속 재시도합니다.<br><br>각 웹훅은 시간 초과되기 90초까지 허용됩니다.
+Braze는 지수 백오프를 사용하여 30분 이내에 위의 상태 코드를 최대 다섯 번 재시도합니다. 엔드포인트에 도달할 수 없는 경우, 재시도가 24시간에 걸쳐 분산될 수 있습니다.<br><br>각 웹훅은 시간 초과되기 90초까지 허용됩니다.
 {% endalert %}
+
+#### 문제 해결 및 추가 오류 세부정보
+
+자세한 설명, 문제 해결 단계 및 특정 웹훅 오류 해결에 대한 안내는 [웹훅 및 연결된 콘텐츠 요청 문제 해결]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/)을 참조하세요. 우리의 불건전 호스트 감지 시스템이 작동하는 방식과 Braze가 자동 이메일 및 Braze Currents의 추가 로깅을 통해 오류 알림을 제공하는 방법에 대한 더 많은 설명도 찾을 수 있습니다.
 
 ### IP 허용 목록 {#ip-allowlisting}
 
@@ -238,15 +245,9 @@ Braze-to-Braze 웹훅을 만들고 허용 목록을 사용하는 경우 `127.0.0
 웹훅을 사용하는 방법은 다양하며, 기술 파트너(Alloys)와 함께 웹훅을 사용하여 고객 및 사용자와의 커뮤니케이션 수준을 직접 높일 수 있습니다.
 
 참고:
-* [메신저]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
-* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
-* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
+* [메신저]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/remerge/)
+* [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
 * 그리고 더 많은 [기술 파트너]({{site.baseurl}}/partners/home/)가 있습니다!
 
 
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/

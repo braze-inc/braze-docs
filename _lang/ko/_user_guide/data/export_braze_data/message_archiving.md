@@ -16,14 +16,14 @@ description: "이 참조 문서는 메시지 보관, 사용자가 보낸 메시�
 
 ## 작동 방식
 
-이 기능이 켜지면 클라우드 스토리지 버킷을 Braze에 연결하고 기본값 데이터 내보내기 대상으로 지정한 경우, Braze는 선택한 채널(이메일, SMS 또는 푸시)을 통해 사용자에게 전송된 각 메시지에 대해 gzipped JSON 파일을 클라우드 스토리지 버킷에 작성합니다. 
+When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS/MMS, or push). 
 
 이 파일은 [파일 참조](#file-references)에 정의된 필드를 포함하고 사용자에게 전송된 최종 템플릿 메시지를 반영합니다. 캠페인에 정의된 모든 템플릿 값(예: {% raw %}`{{${first_name}}}`{% endraw %})은 사용자의 프로필 정보에 따라 받은 최종 값을 표시합니다. 이를 통해 규정 준수, 감사 또는 고객 지원 요건을 충족하기 위해 보낸 메시지의 사본을 보관할 수 있습니다.
 
 여러 클라우드 스토리지 제공업체에 대한 자격 증명을 설정한 경우, 메시지 보관은 기본 데이터 내보내기 대상으로 명시적으로 표시된 제공업체에만 내보내집니다. 명시적인 기본값이 제공되지 않고 AWS S3 버킷이 연결된 경우, 메시지 보관은 해당 버킷에 업로드됩니다.
 
 {% alert important %}
-이 기능을 켜면 정확성을 유지하기 위해 메시지 전송 직전에 파일 업로드가 수행되므로 메시지 전송 속도에 영향을 미칩니다. 이로 인해 Braze 전송 파이프라인에 추가 지연이 발생하여 전송 속도에 영향을 미칩니다.
+Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message is sent to maintain accuracy. The latency introduced by message archiving will depend on the cloud storage provider and the throughput and size of the saved documents.
 {% endalert %}
 
 JSON은 다음 키 구조를 사용하여 스토리지 버킷에 저장됩니다:
@@ -49,7 +49,7 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
 
 ### 1단계: 클라우드 스토리지 버킷을 연결하십시오
 
-아직 하지 않았다면, 클라우드 스토리지 버킷을 Braze에 연결하세요. 단계는 [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) 또는 [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/)에 대한 파트너 설명서를 참조하십시오.
+아직 하지 않았다면, 클라우드 스토리지 버킷을 Braze에 연결하세요. For steps, refer to our partner documentation on [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 ### 2단계: 메시지 보관을 위한 채널 선택
 
@@ -61,7 +61,7 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
 2. 채널을 선택하세요.
 3. **변경 사항 저장**을 선택합니다.
 
-![메시지 보관 페이지에는 선택할 수 있는 세 가지 채널이 있습니다: 바로 이메일, 푸시, 그리고 SMS입니다.][1]
+![메시지 보관 페이지에는 선택할 수 있는 세 가지 채널이 있습니다: Email, Push, and SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 **메시지 보관**이 **설정**에 표시되지 않으면 회사에서 메시지 보관을 구매하고 활성화했는지 확인하세요.
@@ -107,7 +107,7 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab 문자 메시지 %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -116,7 +116,7 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
   "provider": StringOfProviderName,
-  "media_urls": ArrayOfString,
+  "media_urls": ArrayOfString, // indicates a message is MMS
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiId, // may not be available
@@ -168,7 +168,7 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
 
 ### 캠페인 경로에서 "연관되지 않은" 값 아래의 메시지는 무엇입니까?
 
-메시지가 캠페인 또는 캔버스 외부로 전송될 때, 파일 이름의 캠페인 ID는 "연결되지 않음"이 됩니다. 대시보드에서 테스트 메시지를 보낼 때, Braze가 SMS 자동 응답을 보낼 때, 또는 API를 통해 보낸 메시지가 캠페인 ID를 지정하지 않을 때 발생합니다.
+메시지가 캠페인 또는 캔버스 외부로 전송될 때, 파일 이름의 캠페인 ID는 "연결되지 않음"이 됩니다. This will happen when you send test messages from the dashboard, when Braze sends SMS/MMS auto-responses, or when messages sent through the API do not specify a campaign ID.
 
 ### 이 발송에 대한 추가 정보를 어떻게 찾을 수 있습니까?
 
@@ -186,4 +186,11 @@ Braze는 푸시 토큰을 해시하기 전에 소문자로 변환합니다. 이�
 
 렌더링된 사본은 사용자에게 메시지를 보내기 직전에 업로드됩니다. 클라우드 스토리지 업로드 시간으로 인해 렌더링된 사본의 `sent_at` 타임스탬프와 실제 전송이 발생한 시간 사이에 몇 초의 지연이 발생할 수 있습니다.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}
+### Can I create a new bucket specifically for message archiving while keeping the current bucket used for Currents data?
+
+No. If you're interested in creating these specific buckets, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+### Is archived data written to a dedicated folder in an existing bucket, similar to how Currents data exports are structured?
+
+The data is written to a `sent_messages` section of the bucket. Refer to [How it works](#how-it-works) for more details.
+

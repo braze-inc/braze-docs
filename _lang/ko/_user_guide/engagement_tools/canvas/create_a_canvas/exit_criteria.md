@@ -18,7 +18,7 @@ tool: Canvas
 
 종료 기준에는 사용자가 캔버스를 종료할 수 있는 특정 동작인 예외 이벤트가 포함됩니다.
 
-![제품을 둘러보았지만 아직 장바구니에 추가하거나 주문하지 않은 사용자의 재참여를 유도하기 위해 설정된 이탈 기준입니다.][1]{: style="max-width:90%;"}
+![The exit criteria set up to re-engage users who have browsed products but haven't added them to their cart or placed an order yet.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### 예외 이벤트 선택 {#exception-events}
 
@@ -56,7 +56,7 @@ tool: Canvas
 배열 속성은 현재 예외 이벤트의 종료 조건으로 지원되지 않습니다.
 {% endalert %}
 
-## 예시
+## Example
 
 배낭 공급 회사에서 아직 구매를 하지 않은 사용자를 타겟팅하고 싶다고 가정해 보겠습니다. 종료 기준을 설정하려면 다음과 같이 하세요:
 
@@ -66,8 +66,6 @@ tool: Canvas
 4. **필터에서** **구매 행동** > **구매 횟수** > **구매한 제품을** 선택합니다.
 5. 필터 그룹을 `backpack-example exactly 1` 으로 설정합니다. 즉, 백팩 제품을 구매한 사용자는 캔버스에서 나가게 됩니다.
 
-![예외 이벤트로 '구매 시 종료'를 설정하여 사용자가 구매를 하면 이 캔버스를 종료하도록 설정합니다.][2]{: style="max-width:80%;"}
+![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 
-[1]: {% image_buster /assets/img/exit_criteria.png %}
-[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}

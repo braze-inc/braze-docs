@@ -42,13 +42,13 @@ Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소�
 
 여러 캠페인에 걸쳐 산발적인 메시지를 보내는 대신, 캔버스는 사용자와 지속적인 유동적인 대화를 만듭니다. 이것은 사용자가 캔버스를 통해 이동하는 과정이 브랜드와의 상호작용(또는 비상호작용)에 따라 다른 경로로 나뉠 수 있기 때문에, 실시간으로 특정 흐름을 통해 사용자를 자동으로 진행시킬 수 있게 해줍니다.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 이와 같이, 캔버스는 전환 경로에서 이탈한 사용자를 포착하여 가장 효과적인 아웃리치 이니셔티브에 배치하는 데 훌륭합니다.
 
 캔버스를 만들 때 캠페인을 설정하는 것과 동일한 단계를 따릅니다: 전체 오디언스, 진입 조건 및 전송 설정을 지정합니다. 사용자의 캔버스는 누군가가 트리거 조건과 일치할 때 시작됩니다. 그런 다음 그들은 캔버스의 경로를 따라 이동하여 종료 조건을 충족할 때까지 이동합니다.
 
-캔버스는 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [지연]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [실험]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) 등 다양한 조합을 가질 수 있습니다. 지원되는 모든 메시징 채널에서 보낼 수 있으며, Facebook, Google 또는 TikTok과 같은 소셜 및 광고 플랫폼과 [통합할 수도 있습니다]({{site.baseurl}}/partners/canvas_steps/overview/).
+캔버스는 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [지연]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [실험]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) 등 다양한 조합을 가질 수 있습니다. You can send on any supported messaging channel, and even [integrate with social and ad platforms]({{site.baseurl}}/partners/canvas_audience_sync/overview/) such as Facebook, Google, or TikTok.
 
 캔버스 플로우에 대해 더 알아보려면 추가 리소스를 확인하세요.
 
@@ -60,7 +60,7 @@ Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소�
 
 메시징 채널은 고객과 소통하고 타겟 메시지를 전달할 수 있는 다양한 커뮤니케이션 채널입니다. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 다음 표는 지원되는 채널을 설명합니다.
 
@@ -70,11 +70,13 @@ Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소�
 | [모바일 푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | 사용자의 모바일 장치로 알림을 직접 전달합니다.                                                                                   |
 | [웹 푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | 사용자가 귀하의 웹사이트에 적극적으로 접속하지 않아도 웹 브라우저에 알림을 전달합니다.                                                         |
 | [인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | 사용자가 앱을 적극적으로 사용하는 동안 모바일 앱 내에 메시지를 표시합니다.                                                                             |
-| [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)*                   | 사용자의 휴대폰으로 문자 메시지를 보내세요.                                                                                                            |
+| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/)*                   | 사용자의 휴대폰으로 문자 메시지를 보내세요.                                                                                                            |
 | [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)*              | 인기 있는 메시징 플랫폼인 WhatsApp을 통해 메시지를 보내고 사용자와 소통하세요.                                                   |
+| [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)*       | Embed messages directly in your app or website. |
 | [콘텐츠 카드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)*       | 앱 또는 웹사이트 내에서 사용자가 메시지를 수신하고 상호작용할 수 있는 받은편지함을 제공하거나, 메시지를 캐러셀, 배너 등으로 표시합니다. |
 | [Connected TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | 연결된 텔레비전 플랫폼에서 사용자와 소통하세요.                                                                                                   |
 | [웹훅]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | 외부 시스템과의 실시간 통신 및 통합을 커스텀 HTTP 콜백을 통해 활성화합니다.                                                    |
+| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Engage with users on LINE, the most popular messaging app in Japan.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>\*\*추가 기능으로 제공됩니다.*</sup>
@@ -83,5 +85,3 @@ Braze에서 캠페인에 대해 자세히 알아보려면 다음 추가 리소�
 짧고 긴급한 메시지를 대부분의 채널(이메일, SMS, 푸시)을 통해 전달할 수 있는 경우, [인텔리전트 채널]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) 필터를 활용하여 각 사용자에게 가장 적합한 채널을 통해 메시지를 자동으로 전송하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/getting_started/channels.png %}
-[2]: {% image_buster /assets/img/getting_started/canvas_flow.png %}
