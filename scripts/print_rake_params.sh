@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Prints all supported parameters for 'rake', which includes each language,
-# as well as markdown and partner APIs.
+# Prints all supported parameters for 'rake', which includes:
+# non-english languages, markdown embeds, and partner tiles.
 # 
 # Usage: ./bdocs rake
 
