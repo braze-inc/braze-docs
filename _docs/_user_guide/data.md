@@ -48,6 +48,6 @@ guide_menu_list2:
 
 ### Keeping brands’ data secure, safe, and compliant
 
-- **Industry leading security practices:** Conduct regular third-party audits, including SOC 2 Type 2 and ISO 27001, to ensure compliance with the highest industry standards. Maintain a public bug bounty program to proactively address potential vulnerabilities and have a dedicated security team committed to safeguarding customer data.
+- **Industry leading security practices:** Conduct regular third-party audits, including SOC 2 Type 2 and ISO 27001, to comply with the highest industry standards. Maintain a public bug bounty program to proactively address potential vulnerabilities and have a dedicated security team committed to safeguarding customer data.
 - **Industry compliance:** Provide tools that promote adherence to data protection regulations, including GDPR and CCPA.
 - **Data privacy:** Enable customers to manage end-user consent, process requests, and action consumer rights.
