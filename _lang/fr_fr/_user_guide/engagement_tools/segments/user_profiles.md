@@ -1,7 +1,7 @@
 ---
 nav_title: Profils utilisateur
 article_title: Profils utilisateur
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -26,13 +26,13 @@ Pour accéder au profil d'un utilisateur, accédez à la page **Recherche d'util
 
 Si une correspondance est trouvée, vous pouvez consulter les informations que vous avez enregistrées pour cet utilisateur avec le SDK de Braze. Sinon, si votre recherche d'utilisateurs renvoie plusieurs profils utilisateurs, vous pouvez fusionner chaque profil individuellement ou effectuer une fusion en bloc. Pour accéder à une présentation complète, voir [Utilisateurs en double]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Résultats de recherche avec une bannière disant « Plusieurs utilisateurs correspondent à vos critères de recherche » et deux boutons libellés Previous (Précédent) et Next (Suivant).][1]
+![Les résultats de la recherche sont accompagnés d'une bannière indiquant "Plusieurs utilisateurs correspondent à vos critères de recherche" et de deux boutons intitulés Précédent et Suivant.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Cas d’utilisation
 
 Les profils utilisateur sont une excellente option pour résoudre des problèmes ou effectuer des tests, car elle permet d’accéder facilement à des informations sur l’historique d’engagement d’un utilisateur, son appartenance à un segment, son appareil et son système d’exploitation.
 
-Par exemple, si un utilisateur signale un problème et que vous n'êtes pas sûr de l'appareil et du système d'exploitation qu'il utilise, vous pouvez utiliser l' [onglet Aperçu](#overview-tab) pour trouver ces informations (à condition d'avoir son e-mail ou son ID utilisateur). Vous pouvez également afficher la langue de l'utilisateur, ce qui peut s'avérer utile lors de la résolution des problèmes d'une [campagne multilingue][13] qui ne s'est pas déroulée comme prévu.
+Par exemple, si un utilisateur signale un problème et que vous n'êtes pas sûr de l'appareil et du système d'exploitation qu'il utilise, vous pouvez utiliser l' [onglet Aperçu](#overview-tab) pour trouver ces informations (à condition d'avoir son e-mail ou son ID utilisateur). Vous pouvez également afficher la langue de l'utilisateur, ce qui peut s'avérer utile lors de la résolution des problèmes d'une [campagne multilingue]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) qui ne s'est pas déroulée comme prévu.
 
 Vous pouvez utiliser l'[onglet Engagement](#engagement-tab) pour vérifier si un certain utilisateur a reçu une campagne. De plus, si cet utilisateur a effectivement reçu la campagne, vous pouvez voir quand il l’a reçue. Vous pouvez également vérifier si un utilisateur fait partie d'un certain segment et s'il a opté pour le push, l'e-mail ou les deux. Ces informations sont utiles pour la résolution des problèmes. Par exemple, vous devez vérifier ces informations si un utilisateur n’a pas reçu une campagne qu’il devait recevoir ou s’il reçoit une campagne qui ne lui était pas destinée.
 
@@ -43,6 +43,7 @@ Un profil utilisateur a quatre sections principales.
 - **Aperçu :** Informations globales au sujet de l’utilisateur, des données de session, des attributs personnalisés, des événements personnalisés, des achats et l’appareil le plus récent sur lequel s’est connecté l’utilisateur.
 - **Engagement :** Informations concernant les paramètres de contact de l’utilisateur, ses campagnes reçues, segments, statistiques de communication, attribution d’installation et numéro de compartiment aléatoire.
 - **Historique d’envoi de messages :** Événements liés aux communications récentes pour cet utilisateur sur les 30 derniers jours.
+- **Éligibilité des drapeaux de fonctionnalité :** Validez les drapeaux de fonctionnalité auxquels un utilisateur est actuellement éligible dans les déploiements, les étapes du canvas et les expériences Canvas. 
 
 ### Onglet Overview {#overview-tab}
 
@@ -58,9 +59,9 @@ L'onglet **Aperçu** contient des informations de base sur un utilisateur et ses
 | Achats | Le revenu à vie attribué à cet utilisateur, son dernier achat, le nombre total d’achats ainsi qu’une liste de chacun de ces achats. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Pour plus d'informations sur ces données, voir [Collecte des données utilisateur][12].
+Pour plus d'informations sur ces données, voir [Collecte des données utilisateur]({{site.baseurl}}/user_guide/data/user_data_collection/).
 
-![L'onglet Aperçu d'un profil utilisateur.][2]
+![L'onglet Aperçu d'un profil utilisateur.]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### Onglet Engagement {#engagement-tab}
 
@@ -68,17 +69,17 @@ L'onglet **Engagement** contient des informations sur les interactions d'un util
 
 | Catégorie d’engagement | Contient |
 | --- | --- |
-| Paramètres de contact | Statut d’abonnement pour les e-mails, les SMS et les notifications push, ainsi que les groupes d’abonnement auxquels cet utilisateur est associé pour ces trois canaux. Cette section comprend également les informations du journal des modifications pour les jetons de notification push. Reportez-vous aux rubriques [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) et [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) pour plus d'informations sur les modalités d'abonnement et d'opt-in. |
+| Paramètres de contact | Statut d’abonnement pour les e-mails, les SMS et les notifications push, ainsi que les groupes d’abonnement auxquels cet utilisateur est associé pour ces trois canaux. Cette section comprend également les informations du journal des modifications pour les jetons de notification push. Reportez-vous aux rubriques [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) et [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) pour plus d'informations sur les modalités d'abonnement et d'opt-in. |
 | Campagnes reçues | Les campagnes reçues sont marquées lorsque l'utilisateur reçoit la campagne, ou lorsque nous détectons pour la première fois des données d'interaction pour un utilisateur. Sélectionnez une campagne dans la liste pour l’afficher. |
 | Segments | Segments dans lesquels est inclus cet utilisateur. Sélectionnez un segment dans la liste pour l’afficher. |
 | Statistiques de communication | Quand cet utilisateur a reçu des messages de votre part depuis chaque canal pour la dernière fois. |
 | Attribution d’installation | Informations concernant comment et quand un utilisateur a installé votre application. Apprenez-en plus sur [les installations par les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Divers | Le [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) de l'utilisateur. |
 | Messages Canvas reçus | Messages Canvas reçus par l’utilisateur et quand il les a reçus. Sélectionnez un message dans la liste pour l’afficher. |
-| Prédictions | Les scores de [prédiction du taux d'attrition]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) et de [prédiction des événements]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) pour cet utilisateur. |
+| Prédictions | Les scores de [prédiction du taux d'attrition]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) et de [prédiction des événements]({{site.baseurl}}/user_guide/brazeai/predictive_events/) pour cet utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![L'onglet Engagement d'un profil utilisateur affichant ses paramètres de contact et ses statistiques de communication.][3]
+![L'onglet Engagement d'un profil utilisateur affiche les paramètres de contact et les statistiques de communication.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### Onglet d’historique d’envoi de messages
 
@@ -88,7 +89,7 @@ L'onglet **Historique des messages** du profil utilisateur montre les événemen
 Si vous avez des commentaires sur ce tableau ou si vous souhaitez voir des événements spécifiques, veuillez envoyer un e-mail à [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) avec comme ligne d'objet "Messaging History Tab Feedback".
 {% endalert %}
 
-![L'onglet "Historique des messages" indique les campagnes et les canvas qu'un utilisateur a reçues.][5]
+![L'onglet de l'historique des messages indique les campagnes et les photos qu'un utilisateur a reçues.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### Afficher et comprendre les événements
 
@@ -106,6 +107,7 @@ Les événements d’engagement par message suivants sont disponibles pour l’e
 | Message in-app | Clic<br>Impression |
 | Cartes de contenu | Clic<br>Rejeter<br>Impression<br>Envoyer |
 | Webhooks | Envoyer |
+| WhatsApp | Abandonner<br>Réception<br>Échec<br>Fréquence limitée<br>Entrant reçu<br>Lue<br>Envoyer |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### Événements d’interruption de message
@@ -138,9 +140,3 @@ Le suivi de l'ouverture des e-mails est source d'erreurs, quel que soit l'outil 
 Si les statistiques d'ouverture des e-mails peuvent être utiles dans l'ensemble, par exemple pour comparer l'efficacité de différentes lignes d'objet, vous ne devez pas supposer qu'un événement d'ouverture individuel pour un utilisateur donné est significatif.
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

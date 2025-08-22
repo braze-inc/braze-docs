@@ -11,7 +11,7 @@ description: "Cet article explique comment mettre en cache les réponses de cont
 
 Braze n'enregistre ni ne stocke en permanence les réponses au contenu connecté. Si vous choisissez explicitement de stocker une réponse à un appel de contenu connecté en tant que variable Liquid, Braze ne la stocke qu'en mémoire, c'est-à-dire sur un stockage temporaire qui est supprimé après un court laps de temps, pour effectuer le rendu de la variable Liquid et envoyer le message.
 
-Pour empêcher la mise en cache, vous pouvez spécifier `:no_cache`, ce qui peut entraîner une augmentation du trafic réseau. Pour faciliter la résolution des problèmes et le suivi de l'état du système, Braze peut également enregistrer les appels au contenu connecté qui échouent (tels que `404` et `429`). Ces journaux sont conservés jusqu'à 30 jours.
+Pour empêcher la mise en cache, vous pouvez spécifier `:no_cache`, ce qui peut entraîner une augmentation du trafic réseau. Pour faciliter la résolution des problèmes et le contrôle de l'état du système, Braze peut également enregistrer les appels au contenu connecté qui échouent (tels que `404` et `429`). Ces journaux sont conservés jusqu'à 30 jours.
 
 ## Paramètres de cache par défaut
 

@@ -25,13 +25,13 @@ Lorsque les clients ouvrent des tickets de service client sur une plateforme com
 
 ## Intégration avec Braze
 
-Braze dispose d'une intégration avec [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/), une plateforme d'informations et d'enquêtes sur les clients. Grâce à la transformation des données, vous pouvez enregistrer plusieurs réponses d'enquête sous un seul attribut personnalisé imbriqué, au lieu de l'intégration existante qui enregistre plusieurs attributs personnalisés.
+Braze dispose d'une intégration avec [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/), une plateforme d'informations et d'enquêtes sur les clients. Grâce à la transformation des données, vous pouvez enregistrer plusieurs réponses d'enquête sous un seul attribut personnalisé imbriqué, au lieu de l'intégration existante qui enregistre plusieurs attributs personnalisés.
 
 ## Exemple de code de transformation
 
 Considérez cet exemple de charge utile provenant de Typeform, une plateforme d'enquête, qui est envoyée chaque fois qu'une réponse à l'enquête est reçue.
 
-![][1]
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab Transformation de base %}

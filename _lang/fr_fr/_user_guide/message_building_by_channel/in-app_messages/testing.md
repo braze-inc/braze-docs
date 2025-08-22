@@ -24,11 +24,11 @@ Dans l **'aperçu**, l'affichage de votre message peut ne pas être identique à
 
 Prévisualisez l’apparence de votre message pour un utilisateur aléatoire, un utilisateur spécifique ou un utilisateur personnalisé, les deux derniers étant particulièrement utiles si votre message inclut une personnalisation ou plusieurs langues. Vous pouvez également prévisualiser les messages pour les appareils mobiles ou les tablettes afin d’avoir une meilleure idée de l’expérience des utilisateurs.
 
-![Onglet Compose (Composer) lors de la création d’un message in-app montrant l’aperçu de son apparence. Aucun utilisateur n’étant sélectionné, la section du corps affiche Liquid tel quel après son ajout.][1]
+![Onglet Compose (Composer) lors de la création d’un message in-app montrant l’aperçu de son apparence. Aucun utilisateur n'est sélectionné, de sorte que le liquide ajouté dans la section du corps s'affiche tel quel.]({%image_buster /assets/img/in-app-message-preview.png %})
 
 Braze dispose de trois générations de messages in-app disponibles. Vous pouvez affiner les appareils auxquels vos messages doivent envoyés, en fonction de la génération qu’ils prennent en charge.
 
-![Passage d'une génération à l'autre lors de la prévisualisation d'un message in-app.][2]{: height="50%" width="50%"}
+![Passage d'une génération à l'autre lors de la prévisualisation d'un message in-app.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## Test
 
@@ -40,7 +40,7 @@ Pour envoyer un test à des [groupes de test de contenu]({{site.baseurl}}/user_g
 
 Vous pouvez également prévisualiser les messages à partir de l'onglet **Test**, comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur aléatoire ou créer un utilisateur personnalisé.
 
-![Onglet Test lors de la création d’un message in-app. L’option « Preview message as user » (Aperçu de message en tant qu’utilisateur) est définie à « Custom User » (Utilisateur personnalisé) avec les champs de profil disponibles apparaissant comme options configurables.][3]
+![Onglet Test lors de la création d’un message in-app. L'option "Prévisualiser le message en tant qu'utilisateur" est réglée sur "Utilisateur personnalisé" et les champs de profil disponibles apparaissent en tant qu'options configurables.]({% image_buster /assets/img/iam-user-preview.png %})
 
 ### Liste de contrôle des tests
 
@@ -49,6 +49,29 @@ Vous pouvez également prévisualiser les messages à partir de l'onglet **Test*
 - Votre texte est-il clair, concis et correct ?
 - Vos boutons dirigent-ils l’utilisateur à l’endroit correct ?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## Scanner d'accessibilité
+
+Pour soutenir les meilleures pratiques en matière d'accessibilité, Braze analyse automatiquement le contenu des messages in-app créés à l'aide de l'éditeur HTML traditionnel par rapport aux normes d'accessibilité. Ce scanner permet d'identifier les contenus susceptibles de ne pas répondre aux normes[WCAG (](https://www.w3.org/WAI/standards-guidelines/wcag/)Web Content Accessibility Guidelines). Les WCAG sont un ensemble de normes techniques internationalement reconnues, élaborées par le World Wide Web Consortium (W3C) pour rendre le contenu des sites web plus accessible aux personnes handicapées.
+
+![Résultats de l'analyse d'accessibilité]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+L'analyseur d'accessibilité des messages in-app ne fonctionne que sur les messages créés avec du HTML personnalisé.
+{% endalert %}
+
+### Fonctionnement
+
+Le scanner s'exécute automatiquement sur les messages HTML personnalisés et évalue l'ensemble de votre message HTML par rapport à l'[ensemble des règles WCAG 2.1 AA.](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa) Pour chaque problème signalé, il indique
+
+- L'élément HTML spécifique concerné
+- Une description du problème d'accessibilité
+- Un lien vers un contexte supplémentaire ou des conseils de remédiation
+
+### Comprendre les tests d'accessibilité automatisés
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
+
+
+
+

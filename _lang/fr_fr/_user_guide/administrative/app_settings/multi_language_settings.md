@@ -14,10 +14,14 @@ description: "Cet article donne un aperçu des paramètres multilingues du table
 
 Pour modifier et gérer la prise en charge multilingue, vous devez disposer de l’autorisation « Gérer les paramètres multilingues ». Pour ajouter le paramètre régional à un message, vous devez disposer des autorisations nécessaires pour modifier les campagnes.
 
+{% alert important %}
+La prise en charge du multilinguisme est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
+
 ## Ajouter un paramètre régional
 
 1. Allez dans **Paramètres** > **Prise en charge multilingue** sous **Paramètres de l'espace de travail**.
-2. Sélectionnez **Ajouter des paramètres régionaux**, puis sélectionnez **Paramètres régionaux par défaut** ou **Attributs personnalisés**.<br><br>![La liste déroulante "Ajouter des paramètres régionaux" avec des options pour sélectionner les paramètres régionaux par défaut ou des attributs personnalisés.][1]{: style="max-width:40%;"}
+2. Sélectionnez **Ajouter des paramètres régionaux**, puis sélectionnez **Paramètres régionaux par défaut** ou **Attributs personnalisés**.<br><br>![Le menu déroulant "Ajouter un paramètre local" permet de sélectionner le paramètre local par défaut ou des attributs personnalisés.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Saisissez un nom pour le paramètre régional.
 4. Sélectionnez les attributs de l'utilisateur correspondant à l'option locale que vous avez choisie.
 
@@ -67,4 +71,3 @@ Les fichiers de traduction sont stockés au niveau d'une campagne, ce qui signif
 
 Non. Vous pouvez utiliser la convention de dénomination de votre choix. Le nom du paramètre régional est utilisé lors de la sélection du paramètre régional dans l'éditeur et figurera dans les titres du fichier que vous téléchargez avec les ID de traduction.
 
-[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

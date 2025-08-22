@@ -33,7 +33,7 @@ Vous pouvez accéder aux données imbriquées dans votre événement personnalis
 2. Sélectionnez **Gérer les propriétés** pour les événements comportant des propriétés imbriquées.
 3. Sélectionnez le bouton <i class="fas fa-arrows-rotate"></i> pour générer le schéma. Pour visualiser le schéma, sélectionnez le bouton <i class="fas fa-plus"></i> plus.
 
-![][6]{: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 Si de nouvelles propriétés sont envoyées à l'avenir, elles ne figureront pas dans le schéma tant qu'il n'aura pas été régénéré. Les schémas peuvent être régénérés toutes les 24 heures.
 
@@ -169,7 +169,7 @@ Si votre propriété d’événement contient les caractères `[]` or `.`, faite
 
 Pour segmenter les utilisateurs en fonction des propriétés d'événements imbriqués, vous devez utiliser les [extensions de segments.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) Une fois que vous avez généré un schéma, l’explorateur d’objets imbriqués s’affiche dans la section Segmentation. 
 
-![][4]
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 La segmentation utilise la même notation que le déclenchement (voir [Déclenchement des messages](#message-triggering)).
 
@@ -179,7 +179,7 @@ Pour modifier ou créer des extensions de segments, vous devez disposer de l'aut
 
 Dans la fenêtre modale/boîte de dialogue **Ajouter une personnalisation**, sélectionnez **Propriétés d'événement avancées** comme type de personnalisation. Ceci permet d'ajouter des propriétés d'événements imbriqués après la génération d'un schéma.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## Foire aux questions
 
@@ -191,6 +191,3 @@ Il n’y a pas de changement dans la façon dont nous facturons les points de do
 
 Si une ou plusieurs propriétés de l'événement contiennent des données imbriquées, la charge utile maximale pour toutes les propriétés combinées d'un événement est de 100 Ko. Toute requête dépassant cette limite de taille sera rejetée.
 
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}

@@ -10,11 +10,13 @@ tool: Canvas
 
 # Mise à jour utilisateur 
 
-![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
-
 > Le composant User Update (Mise à jour de l’utilisateur) vous permet de mettre à jour les attributs, événements et achats d’un utilisateur dans un éditeur JSON. Il n’est donc pas nécessaire d’inclure des informations sensibles, par exemple des clés API.
 
-Avec Mise à jour utilisateur, les mises à jour ne sont pas prises en compte dans votre limite de débit de requêtes par minute `/users/track`. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant ne consomme pas de [points de données]({{site.baseurl}}/user_guide/data/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
+## Fonctionnement de ce composant
+
+![Une étape de mise à jour de l'utilisateur nommée "Mise à jour de la loyauté" qui met à jour un attribut "Est membre Premium" à "true".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+
+Lorsque vous utilisez ce composant dans votre Canvas, les mises à jour ne sont pas prises en compte dans votre limite de débit de `/users/track` requêtes par minute. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant ne consomme pas de [points de données]({{site.baseurl}}/user_guide/data/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
 
 Les utilisateurs ne passeront à l’étape Canvas suivante qu’une fois les mises à jour pertinentes de l’utilisateur effectuées. Cela signifie que tout envoi de messages ultérieurs reposant sur ces mises à jour de l'utilisateur sera à jour lors de l'exécution de l'étape suivante.
 
@@ -32,13 +34,13 @@ Vous pouvez également tester les modifications apportées à ce composant en re
 
 Pour ajouter ou mettre à jour un attribut personnalisé, sélectionnez un nom d’attribut dans votre liste d’attributs et entrez la valeur clé.
 
-![][4]{: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui met à jour les deux attributs "Membre fidèle" et "Programme de fidélité" à "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### Suppression des attributs personnalisés
 
 Pour supprimer un attribut personnalisé, sélectionnez un nom d’attribut à l’aide de la liste déroulante. Vous pouvez passer au [compositeur JSON avancé](#advanced-json-composer) pour apporter d’autres modifications. 
 
-![][5]{: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui supprime l'attribut "Membre fidèle".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Valeurs croissantes et décroissantes
 
@@ -48,7 +50,7 @@ L'étape de mise à jour par l'utilisateur peut augmenter ou diminuer la valeur 
 
 En incrémentant un attribut personnalisé qui suit un événement, vous pouvez suivre le nombre de cours qu'un utilisateur a suivis en une semaine. À l’aide de ce composant, le nombre de cours peut être réinitialisé au début de la semaine avant de recommencer le suivi. 
 
-![][7]{: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui incrémente l'attribut "class_count" d'une unité.]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### Mise à jour d'un tableau d'objets
 
@@ -60,7 +62,7 @@ L'étape de mise à jour de l'utilisateur peut ajouter ou supprimer des attribut
 
 L'ajout ou la suppression d'un élément dans un tableau met à jour la liste de souhaits de l'utilisateur.
 
-![][9]{: style="max-width:90%;"}
+![Utilisateur Mise à jour de l'étape qui ajoute un article "crème solaire" à l'attribut "articles_dans_la_liste_de_souvenirs".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### Cas d’utilisation : Calculer le total du panier d'achat
 
@@ -122,7 +124,7 @@ L'attribut `shopping_cart` contient le total de nombreux événements personnali
 
 Vous pouvez utiliser l’étape de mise à jour de l’utilisateur pour faire persister un `canvas_entry_property`. Imaginons que vous ayez un événement qui se déclenche lorsqu’un article est ajouté à un panier. Vous pouvez stocker l’ID de l’article le plus récemment ajouté au panier et l’utiliser pour une campagne de remarketing. Utilisez la fonctionnalité de personnalisation pour récupérer une propriété d’entrée Canvas et la stocker dans un attribut.
 
-![][8]{: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui met à jour l'attribut "most_recent_cart_item" avec l'ID d'un article.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### Personnalisation
 
@@ -141,11 +143,11 @@ Nous vous recommandons d'utiliser avec précaution la personnalisation du conten
 
 Ajoutez un attribut, un événement ou un objet JSON d'achat d’un maximum de 65 536 caractères à l’éditeur JSON. L'état de l'[abonnement global]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) et du [groupe d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) d’un utilisateur peut également être défini.
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
 À l'aide du compositeur avancé, vous pouvez également prévisualiser et tester que le profil utilisateur est mis à jour avec les modifications grâce à l'onglet **Prévisualisation et test.**  Vous pouvez sélectionner un utilisateur aléatoire ou rechercher un utilisateur spécifique. Ensuite, après avoir envoyé un test à un utilisateur, affichez le profil utilisateur en utilisant le lien généré.
 
-![][6]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### Considérations
 
@@ -243,12 +245,3 @@ Vous pouvez également mettre à jour les groupes d'abonnement à l'aide de cett
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %}
-[2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %}
-[3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %}
-[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %}
-[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %}
-[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}
-[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %}
-[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %}
-[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 

@@ -43,6 +43,5 @@ Lorsque vous consultez un profil utilisateur dans le tableau de bord de Braze, v
 
 Si l'adresse `native_line_id` a été définie, elle apparaît sous **LINE User ID.** Sinon, il n'apparaîtra pas.
 
-![Ligne Paramètres du contact dans l'onglet Engagement.][1]{: style="max-width:60%;"}
+![Paramètres de contact de ligne dans l'onglet Engagement.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

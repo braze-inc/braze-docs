@@ -27,7 +27,7 @@ Si vous saisissez des utilisateurs en fonction de leur fuseau horaire local à l
 Vous verrez une alerte si vous n’avez pas assez planifié un tampon. Une solution rapide consiste à ajuster l’heure d’envoi pour garantir que les utilisateurs peuvent rester dans le segment ciblé pendant 24 heures.
 {% endalert %}
 
-![][1]
+![Une toile planifiée pour entrer dans les utilisateurs en une seule fois à partir de 10 heures le 30 avril 2025, à leur heure locale.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Envisager d’utiliser des expressions régulières pour les filtres d’audiences
 
@@ -109,4 +109,3 @@ En général, choisissez le Timing intelligent ou les Heures calmes pour votre C
 
 Lorsque le volume d’envois entre deux chemins ou plus (parcours d’audience ou chemins d’action) n’est pas ce que vous attendez, cela peut être l’occasion de vérifier vos segments, filtres ou actions déclencheurs. Assurez-vous également d’identifier et de retirer les filtres qui se chevauchent.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

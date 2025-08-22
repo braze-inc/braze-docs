@@ -1,7 +1,7 @@
 ---
 nav_title: Gestion des segments
 article_title: Gestion des segments
-page_order: 1.1
+page_order: 1
 page_type: tutorial
 tool: Segments
 description: "Cet article couvre les actions que vous pouvez entreprendre pour gérer vos segments, telles que filtrer une liste de segments, créer des segments et modifier des segments."
@@ -12,7 +12,7 @@ description: "Cet article couvre les actions que vous pouvez entreprendre pour g
 
 > La section Segments vous permet d'afficher une liste complète de vos segments existants, de créer de nouveaux segments et de modifier des segments existants. Vous pouvez affiner la liste des segmentations en sélectionnant divers filtres et colonnes afin de n'afficher que les informations les plus pertinentes pour vous.
 
-![La section Segments affiche une liste des segments actifs.][1]
+![La section Segments affiche une liste des segments actifs.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Personnaliser votre vue
 
@@ -50,7 +50,7 @@ En sélectionnant **Afficher uniquement les** segments marqués d'un astérisque
 
 ## Gérer des segments spécifiques
 
-![Menu d'édition d'un segment avec les options Modifier, Dupliquer, Archiver et Ajouter aux segments étoilés.][2]{: style="float:right;max-width:25%;"}
+![Le menu de modification d'un segment présente les options "Modifier", "Dupliquer", "Archiver" et "Ajouter à la liste".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 Pour gérer un segment spécifique, survolez-le et sélectionnez l'icône de menu au bout de la ligne pour faire apparaître les options suivantes :
 - **Modifier :** Modifiez les filtres de votre segmentation.
@@ -60,7 +60,7 @@ Pour gérer un segment spécifique, survolez-le et sélectionnez l'icône de men
  
 Vous pouvez également effectuer des actions en masse, notamment l'archivage et le tagging en masse, en cochant les cases situées à côté de plusieurs noms de segments.
 
-![Plusieurs segments sélectionnés avec CRM sélectionné dans le champ déroulant Étiqueter en tant que.][3]{: style="max-width:45%;"}
+![Plusieurs segments sélectionnés avec "CRM" dans le champ déroulant "Tag As".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### modifications depuis la dernière consultation
 
@@ -71,9 +71,5 @@ Recherchez des noms de segmentation en saisissant des termes dans le champ de re
 
 Tous les termes et chaînes de caractères saisis dans ce champ feront l'objet d'une recherche. Par exemple, la recherche de « segment d'essai 1 » renverra les segments dont le nom contient « essai », « segment » ou « 1 ». Pour rechercher une chaîne de caractères exacte, ajoutez des guillemets avant et après votre terme de recherche. En recherchant ["segment d'essai 1"], vous obtiendrez tous les segments dont le nom contient l'expression exacte "segment d'essai 1".
 
-![Lorsque vous saisissez « tous les utilisateurs » dans le champ de recherche, les résultats incluent, entre autres, « Tous les utilisateurs (Test) », « Tous les utilisateurs », « Tous les utilisateurs 15 ».][4]
+![Les résultats de la recherche d'utilisateurs sont les suivants : "Tous les utilisateurs (Test)", "Tous les utilisateurs", "Tous les utilisateurs 15".]({% image_buster /assets/img/segment/segments_search.png %})
 
-[1]: {% image_buster /assets/img/segment/segments_page.png %}
-[2]: {% image_buster /assets/img/segment/segments_page_edit_menu.png %}
-[3]: {% image_buster /assets/img/segment/segments_bulk_action.png %}
-[4]: {% image_buster /assets/img/segment/segments_search.png %}

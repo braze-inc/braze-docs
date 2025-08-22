@@ -82,7 +82,7 @@ Outre les données d'intégration minimales, les attributs suivants sont automat
 | Agent utilisateur              | Web               | [Agent utilisateur](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Cet attribut est utilisé pour envoyer des messages uniquement aux appareils compatibles. Peut également être utilisé dans le cadre de la segmentation.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Pour en savoir plus sur le suivi des propriétés au niveau de l'appareil (telles que l'opérateur sans fil de l'appareil, le fuseau horaire, la résolution et autres), consultez la documentation spécifique à la plateforme : [AndroidAndroid]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "allowlist documentation"), [iOSiOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/storage/#cookies).
+Pour en savoir plus sur le suivi des propriétés au niveau de l'appareil (telles que l'opérateur sans fil de l'appareil, le fuseau horaire, la résolution et autres), consultez la documentation spécifique à la plateforme : [Android]({{site.baseurl}}/developer_guide/storage/?tab=android), [iOS]({{site.baseurl}}/developer_guide/storage/?tab=swift), [Web.]({{site.baseurl}}/developer_guide/storage/#cookies)
 
 ## Données non collectées par défaut
 
@@ -111,4 +111,3 @@ Braze interdira ou bloquera les utilisateurs ayant plus de 5 000 000 de sessions
 {% endalert %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Champs au niveau de l'appareil Android"

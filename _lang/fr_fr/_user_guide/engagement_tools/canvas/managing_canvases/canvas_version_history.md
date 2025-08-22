@@ -16,7 +16,7 @@ Se référer à l'historique des versions de votre Canvas peut être particuliè
 
 ## Gestion des versions
 
-![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Pour créer une nouvelle version, cliquez sur **Mettre à jour Canvas**. Cela vous permet d’effectuer des modifications sans écraser la configuration précédente de Canvas. Lorsqu’une nouvelle version de Canvas est créée, les utilisateurs déjà dans Canvas progressent dans le flux de travail de la nouvelle version. Les utilisateurs qui entrent dans Canvas entreront également dans la nouvelle version. 
 
@@ -32,7 +32,7 @@ Notez que si vous n'avez apporté aucune modification entre le lancement d'un Ca
 
 Au fur et à mesure que votre historique de versions augmente, vous pouvez également renommer chaque version dans la barre latérale pour rester organisé. Par défaut, les noms de version sont générés sous forme de nombre en fonction du nombre de versions précédemment créées. Si vous renommez une version alors qu’elle n’est plus active, elle apparaîtra dans le journal des modifications Canvas, mais pas dans le journal des modifications de la version dans l’affichage de l’historique des versions.
 
-![Exemple de journal des modifications de Canvas montrant que deux nouvelles versions de Canvas ont été créées.][2]{: style="max-width:85%" }
+![Exemple de journal des modifications de Canvas montrant que deux nouvelles versions de Canvas ont été créées.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Suppression des versions
 
@@ -44,5 +44,3 @@ Si vous rejetez une version, la configuration Canvas sera immédiatement perdue,
 
 Dans l’historique des versions, vous pouvez afficher l’analyse au niveau du Canvas et de ses étapes. Dans l’affichage de la version Canvas, les données seront renseignées pour toute la plage de dates, pas seulement pour la plage de dates de cette version. Cependant, au niveau de l’étape, l’analyse ne sera affichée que pour les étapes qui existaient alors que cette version était active. Ces analyses se rempliront en utilisant les jours du calendrier qui correspondent au fuseau horaire de votre entreprise, de sorte que les analyses ne seront pas spécifiques à l'heure exacte de la journée où la version a été créée.
 
-[1]: {% image_buster /assets/img_archive/canvas_version_history.png %}
-[2]: {% image_buster /assets/img_archive/canvas_version_history_changelog.png %}

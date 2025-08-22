@@ -77,11 +77,17 @@ La sélection d'un champ pour l'une de ces transformations appliquera cette tran
 
 ### Étape 6 : Tester votre intégration
 
-Vous pouvez tester votre intégration ou examiner les exemples de données Currents dans notre [référentiel GitHub](https://github.com/Appboy/currents-examples) d’exemples Currents.
-
 {% alert important %}
 Currents abandonnera les événements dont la charge utile est excessivement importante (plus de 900 Ko).
 {% endalert %}
+
+Avant de tester, pensez à consulter notre [échantillon de données Currents sur GitHub](https://github.com/Appboy/currents-examples). Lorsque vous êtes prêt à tester, vous choisissez une option ci-dessous :
+
+#### Envoi d'événements de test
+
+Pour tester votre intégration, vous pouvez sélectionner **Envoyer des événements de test** pour envoyer un événement de chacun des types d'événements sélectionnés à ce Current. Pour obtenir des informations détaillées sur chaque type d'événement, consultez nos bibliothèques [Événements liés au comportement des clients]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) et [Événements liés à l'engagement des messages.]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) 
+
+![La page "Currents Test" du tableau de bord de Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Test des connecteurs de courant
 
@@ -92,7 +98,7 @@ Les connecteurs Test Currents sont des versions gratuites de nos connecteurs exi
 
 Lorsque vos connecteurs Test Currents atteignent la limite d'envoi, votre connecteur n'enverra plus d'événements jusqu'à la prochaine période de sept jours.
 
-Pour mettre à niveau votre connecteur test Currents, modifiez l'intégration dans le tableau de bord et sélectionnez **Mettre à niveau**.
+Pour mettre à niveau votre connecteur Test Currents, modifiez l'intégration dans le tableau de bord et sélectionnez **Mettre à niveau l'intégration de test**.
 
 ## Mise à jour des courants
 

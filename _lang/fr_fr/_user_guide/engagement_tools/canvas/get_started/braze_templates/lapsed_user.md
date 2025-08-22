@@ -15,13 +15,13 @@ Cet article vous guidera à travers un cas d'utilisation du modèle **Utilisateu
 
 ## Conditions préalables
 
-Pour utiliser avec succès le modèle d'utilisateur déchu, vous devez configurer Braze [Audience Sync]({{site.baseurl}}/partners/canvas_steps) avec les partenaires et les audiences que vous utilisez.
+Pour utiliser avec succès le modèle d'utilisateur déchu, vous devez configurer Braze [Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) avec les partenaires et les audiences que vous utilisez.
 
 ## Adapter le modèle à vos besoins
 
 Disons que nous travaillons pour MovieCanon, un service de streaming qui propose des contenus exclusifs pour des films et des émissions. Nous pouvons utiliser le modèle de l'utilisateur déchu pour promouvoir des avantages et du contenu premium pour les utilisateurs qui n'ont pas visité notre application depuis 30 jours.
 
-Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) afin de pouvoir ajouter les données comportementales des utilisateurs de Braze à Google Audiences pour envoyer des publicités basées sur des déclencheurs comportementaux, la segmentation, et plus encore.
+Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) afin de pouvoir ajouter les données comportementales des utilisateurs de Braze à Google Audiences pour envoyer des publicités basées sur des déclencheurs comportementaux, la segmentation, et plus encore.
 
 Pour accéder au modèle d'utilisateur de laçage, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, en regard de **Utilisateur défaillant**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
@@ -38,13 +38,13 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 3\. Mettez à jour la description pour expliquer que ce Canvas contient des avantages et des promotions.
 4\. Ajoutez l'étiquette **Lapsing/Retention** afin de pouvoir filtrer cette toile sur la page d'accueil de la toile.
 
-![Étape "Configurer les détails du canvas" avec le nom du canvas "Lapsed User - Visit App" et une brève description du canvas.][1]
+![Étape "Set Up Canvas Details" avec le nom du canvas "Lapsed User - Visit App" et une brève description du canvas]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### Étape 2 : Attribuez vos événements de conversion
 
 Mettez à jour l'**événement de conversion principal - A** pour cibler les utilisateurs de notre application (MovieCanon), et laissez l'**événement de conversion principal - B** comme valeur par défaut pour tout achat.
 
-![" Attribuer des événements de conversion " avec un événement de conversion principal d'un utilisateur qui démarre une session dans une appli spécifique.][2]
+![Section "Attribuer des événements de conversion" avec un événement de conversion principal d'un utilisateur démarrant une session dans une application spécifique.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### Étape 3 : Adapter la planification de l'entrée
 
@@ -55,13 +55,13 @@ Nous allons apporter deux Adjust à cette étape :
 1. Sélectionnez une date et une heure de début.
 2. Sélectionnez les paramètres de fin : **à une date précise** et dans deux mois. Supposons que nous ayons un autre canevas d'utilisateur caduc que nous voulons commencer après celui-ci.
 
-!["Entry Schedule" étape d'un Canvas planifié qui entre les utilisateurs à une heure désignée.][3]
+!["Étape du canvas planifié pour l'entrée des utilisateurs à une heure donnée.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### Étape 4 : Sélectionner notre audience cible
 
 Nous conserverons les paramètres par défaut pour l'audience d'entrée, qui est définie sur les utilisateurs qui n'ont pas utilisé notre application depuis plus de 30 jours. Nous conserverons également les contrôles d'entrée par défaut afin que les utilisateurs puissent réintroduire le Canvas après quatre semaines. Cela signifie que chaque fois qu'un utilisateur ne visite pas notre application pendant plus de 30 jours d'affilée, il sera inscrit dans le Canvas.
 
-!["Target Audience" étape de ciblage des utilisateurs dont la dernière utilisation des apps remonte à 30 jours.][4]
+![L'étape "Target Audience" cible les utilisateurs dont la dernière utilisation des applications remonte à 30 jours.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### Étape 5 : Sélectionner vos paramètres d’envoi
 
@@ -73,7 +73,7 @@ Nous conserverons la plupart des paramètres d'abonnement par défaut :
 
 Le seul paramètre que nous modifierons est le comportement à adopter lorsqu'un message se déclenche pendant les heures calmes. Au lieu d'annuler le message, sélectionnez **Envoyer au prochain moment disponible** afin que nos utilisateurs ne manquent aucune promotion.
 
-![Section "Heures calmes" avec une heure de début à 12 heures et une heure de fin à 8 heures.][5]
+![Section "Heures calmes" avec une heure de début à 12 heures et une heure de fin à 8 heures.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### Étape 6 : Personnalisez votre canvas
 
@@ -81,12 +81,12 @@ Nous allons maintenant créer notre canvas en personnalisant les étapes du cane
 
 1. Personnalisez le premier e-mail qui sera envoyé à tous les utilisateurs qui n'ont pas visité notre application depuis plus de 30 jours. Pour notre cas d'utilisation, nous allons personnaliser un e-mail qui indique aux utilisateurs qu'ils débloqueront de nouveaux avantages lorsqu'ils visiteront notre application aujourd'hui. 
 
-![Étape du message canvas pour un e-mail indiquant aux utilisateurs de débloquer de nouveaux avantages lors de leur visite d'aujourd'hui.][6]
+![Canvas Étape du message pour un e-mail qui indique aux utilisateurs de débloquer de nouveaux avantages lors de leur visite aujourd'hui.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\. Personnalisez le composant du parcours d'action intitulé "Démarrer la session ?" en sélectionnant notre application pour le parcours **Démarrer la session**. 
 
-![Parcours d'action pour les sessions démarrées dans une application spécifique.][7]
+![Parcours d'action pour les sessions lancées dans une application spécifique.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\. Conservez la valeur par défaut de l'étape de l'arbre décisionnel intitulée "Sessions ?", qui définit le groupe ">1 session" comme les utilisateurs qui ont utilisé notre application plus d'une fois au cours du dernier jour calendrier.
@@ -95,7 +95,7 @@ Nous allons maintenant créer notre canvas en personnalisant les étapes du cane
 6\. Conservez la valeur par défaut du composant [Chemin d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) appelé "Test A/B". Cela permettra d'envoyer de manière aléatoire l'une des deux promotions (que nous personnaliserons à l'étape suivante) aux utilisateurs qui ont eu moins de deux sessions.
 7\. Personnalisez les deux promotions qui seront envoyées aux utilisateurs dans le cadre du chemin d'expérience. Dans notre cas d'utilisation, nous ferons une promotion de 20 % pour un abonnement de trois mois et une promotion de 10 % pour un abonnement d'un mois.
 
-![Des étapes du canvas avec des chemins d'accès basés sur le nombre de sessions d'un utilisateur.][8]{: style="max-width:70%;"}
+![Étapes du canvas avec des chemins d'accès basés sur le nombre de sessions de l'utilisateur.]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
 
 ### Étape 7 : Testez et lancez le Canvas
 
@@ -105,11 +105,3 @@ Après avoir testé et examiné notre canvas pour s'assurer qu'il fonctionne com
 Consultez notre [liste de contrôle avant]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) et après le lancement pour connaître les éléments à prendre en compte avant et après le lancement d'un Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/lapsing_user_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/lapsing_user_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/lapsing_user_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/lapsing_user_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/lapsing_user_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}

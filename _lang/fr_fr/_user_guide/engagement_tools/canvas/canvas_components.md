@@ -38,7 +38,7 @@ guide_featured_list:
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Synchronisation d’audience Canvas
-    link: /docs/partners/canvas_steps/
+    link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
 ---
 
@@ -50,24 +50,17 @@ Avec les composants Canvas, vous pouvez débloquer de nouveaux parcours utilisat
 
 ![Exemple d'un parcours utilisateur Canvas avec une étape de l'arbre décisionnel suivie d'étapes de délai et de message.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
-Utilisez les [parcours d'action][1] pour diviser votre parcours utilisateur en fonction des actions et des événements d'engagement tels que la réalisation d'un achat. Si vous souhaitez filtrer et cibler vos audiences, les [parcours d'audience][2] permettent de simplifier le ciblage des utilisateurs en leur faisant suivre différents parcours canvas en fonction de critères d'audience.
+Utilisez les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) pour diviser votre parcours utilisateur en fonction des actions et des événements d'engagement tels que la réalisation d'un achat. Si vous souhaitez filtrer et cibler vos audiences, les [parcours d'audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) permettent de simplifier le ciblage des utilisateurs en leur faisant suivre différents parcours canvas en fonction de critères d'audience.
 
-Les composants d'[arbre décisionnel][3] utilisent une simple logique "oui ou non" pour créer deux parcours mutuellement exclusifs pour vos voyages d'utilisateurs qui sont basés sur une action ou un attribut de l'utilisateur. Ce processus permet d’identifier et de cibler vos groupes d’utilisateurs.
+Les composants d'[arbre décisionnel]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) utilisent une simple logique "oui ou non" pour créer deux parcours mutuellement exclusifs pour vos voyages d'utilisateurs qui sont basés sur une action ou un attribut de l'utilisateur. Ce processus permet d’identifier et de cibler vos groupes d’utilisateurs.
 
-Les composants de [retardement][4] vous permettent de retarder une seule étape de votre canvas. Cette étape de délai indépendante dans votre Canvas est plutôt utilisée pour transmettre des messages à vos utilisateurs à un moment précis. De plus, les composants de délai peuvent également élargir votre audience en lui offrant plus de temps pour répondre aux critères du composant.
+Les composants de [retardement]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step) vous permettent de retarder une seule étape de votre canvas. Cette étape de délai indépendante dans votre Canvas est plutôt utilisée pour transmettre des messages à vos utilisateurs à un moment précis. De plus, les composants de délai peuvent également élargir votre audience en lui offrant plus de temps pour répondre aux critères du composant.
 
 ### Test
 
-Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le parcours Canvas le plus efficace. Avec les [chemins d'expérience][5], vous pouvez tester plusieurs chemins Canvas à n'importe quelle étape. Vous pouvez également utiliser les connexions entre les étapes comme un aperçu de haut niveau. Les connexions orange indiquent que l'étape précédente permet aux utilisateurs de passer immédiatement à l'étape suivante.
+Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le parcours Canvas le plus efficace. Avec les [chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step), vous pouvez tester plusieurs chemins Canvas à n'importe quelle étape. Vous pouvez également utiliser les connexions entre les étapes comme un aperçu de haut niveau. Les connexions orange indiquent que l'étape précédente permet aux utilisateurs de passer immédiatement à l'étape suivante.
 
 ### Intégration
 
-Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Tirez parti des options de synchronisation d'audience disponibles pour [Facebook][6] et [Google][7].
+Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Tirez parti des options de synchronisation d'audience disponibles pour [Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) et [Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split
-[4]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {{site.baseurl}}/partners/canvas_steps/facebook_audience_sync
-[7]: {{site.baseurl}}/partners/canvas_steps/google_audience_sync

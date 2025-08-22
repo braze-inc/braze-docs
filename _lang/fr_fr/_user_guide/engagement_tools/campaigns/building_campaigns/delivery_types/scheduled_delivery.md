@@ -16,7 +16,7 @@ tool: Campaigns
 
 Si vous choisissez d’envoyer un message dès qu’elle est lancée, il commencera à se lancer dès que vous aurez fini de créer votre campagne.
 
-![La section "Réception/distribution" avec l'option "Planifié" sélectionnée et l'option de planification temporelle d'envoi dès que la campagne est lancée.][10]
+![La section "réception/distribution" avec l'option "Planifié" sélectionnée et l'option de planification temporelle de l'envoi dès que la campagne est lancée.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
 Ce type de planification est conçu pour les campagnes ponctuelles que vous souhaitez envoyer immédiatement, telles que les messages concernant un événement en cours. Une application sportive, par exemple, peut planifier des notifications push basées sur les mises à jour des scores en utilisant cette option. En outre, lorsque vous envoyez des messages de test destinés à vous-même ou à votre équipe, cette option vous permet de les livrer immédiatement. 
 
@@ -28,11 +28,11 @@ La planification d’une campagne à un moment spécifié vous permet de stipule
 
 Si vous sélectionnez la **réception/distribution planifiée** et que vous ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur la page **Paramètres de l'entreprise**.
 
-![Les options de planification basées sur le temps permettent d'envoyer une campagne à une heure donnée.][9]
+![Options de planification basées sur le temps pour envoyer une campagne à une heure donnée.]({% image_buster /assets/img_archive/schedule_designated.png %})
 
 ### Campagnes dans le fuseau horaire local
 
-Vous pouvez envoyer le message dans les fuseaux horaires locaux des utilisateurs afin que les membres de votre audience internationale ne reçoivent pas de notification à des moments inopportuns. Les campagnes dans le fuseau horaire local doivent être planifiées 24 heures à l’avance pour garantir que les utilisateurs éligibles de tous les fuseaux horaires puissent les recevoir. Consultez [Campaign FAQ][25] ] pour comprendre le fonctionnement des campagnes sur les fuseaux horaires locaux et les règles de réception/distribution associées.
+Vous pouvez envoyer le message dans les fuseaux horaires locaux des utilisateurs afin que les membres de votre audience internationale ne reçoivent pas de notification à des moments inopportuns. Les campagnes dans le fuseau horaire local doivent être planifiées 24 heures à l’avance pour garantir que les utilisateurs éligibles de tous les fuseaux horaires puissent les recevoir. Consultez la [FAQ sur les]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/) campagnes pour comprendre le fonctionnement des campagnes sur les fuseaux horaires locaux et les règles de réception/distribution associées.
 
 Les segments ciblés par des campagnes dans le fuseau horaire local doivent comprendre une fenêtre de 2 jours au minimum pour incorporer les utilisateurs de tous les fuseaux. Par exemple, si votre campagne est planifiée pour être envoyée le soir mais qu’elle a une fenêtre de seulement 1 jour, certains utilisateurs peuvent avoir quitté le segment lorsque leur fuseau horaire est atteint. Des exemples de filtres qui créent une fenêtre de 2 jours sont « dernière utilisation il y a plus d’un jour » et « dernière utilisation il y a moins de 3 jours » ou « premier achat il y a plus de 7 jours » et « premier achat il y a moins de 9 jours ».
 
@@ -42,9 +42,9 @@ Les planifications temporelles spécifiées conviennent mieux aux messages plani
 
 ## Option 3 : Timing intelligent
 
-[Timing intelligent][8] vous permet de diffuser une campagne à chaque utilisateur à un moment différent. Braze calcule le temps pour chaque individu en fonction du moment où l’utilisateur s’engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes au timing intelligent ne soient envoyées qu’à un certain moment de la journée. Par exemple, si vous informez les utilisateurs qu’une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
+Le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) vous permet de diffuser une campagne à chaque utilisateur à un moment différent. Braze calcule le temps pour chaque individu en fonction du moment où l’utilisateur s’engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes au timing intelligent ne soient envoyées qu’à un certain moment de la journée. Par exemple, si vous informez les utilisateurs qu’une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
 
-![Les options de planification basées sur le temps pour utiliser le timing intelligent afin d'envoyer une campagne au moment où l'utilisation de l'appli est la plus populaire parmi tous les utilisateurs.][14]
+![Les options de planification basées sur le temps pour utiliser le timing intelligent afin d'envoyer une campagne au moment le plus populaire de l'utilisation de l'application parmi tous les utilisateurs.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
 
 ### Règles de livraison
 
@@ -56,10 +56,3 @@ Si le profil utilisateur ne dispose pas de suffisamment de données pour calcule
 
 Les campagnes au timing intelligent fonctionnent mieux pour les messages ponctuels et récurrents qui disposent d’une certaine flexibilité concernant le temps de livraison, par exemple lorsqu’ils ne sont pas parfaitement adaptés aux actualités ou aux annonces limitées dans le temps.
 
-[3]: {% image_buster /assets/img_archive/time_based.png %}
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[9]: {% image_buster /assets/img_archive/schedule_designated.png %}
-[10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
-[14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}

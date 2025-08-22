@@ -13,7 +13,7 @@ description: "Cet article de référence explique comment utiliser les catalogue
 
 Dans le composeur de messages de votre choix, sélectionnez l'icône <i class="fas fa-plus-circle"></i> plus pour ouvrir la fenêtre modale/boîte de dialogue de **l'ajout de personnalisation** et sélectionnez **Articles de catalogue** pour le **type de personnalisation**. Sélectionnez ensuite votre **nom de catalogue**. En reprenant l'exemple précédent, nous allons sélectionner le catalogue « Jeux ».
 
-![][1]
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 Nous pouvons immédiatement voir l’aperçu Liquid suivant :
 
@@ -58,7 +58,7 @@ Vous n'êtes pas limité à un seul élément dans un seul message. Vous pouvez 
 
 Dans cet exemple, nous ajoutons l’`id` de trois jeux, Tales, Teslagrad et Acaratus, pour les **produits du catalogue** et nous sélectionnons `title` pour les **informations à afficher**.
 
-![][2]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Nous pouvons personnaliser encore notre message en ajoutant du texte autour de notre Liquid :
 
@@ -114,11 +114,11 @@ Par exemple, pour ajouter le `image_link` de notre catalogue de jeux à notre me
 ```
 {% endraw %}
 
-![Compositeur de carte de contenu avec Balise Liquid de catalogue utilisé dans le champ d’image.][3]
+![Composant de la carte de contenu avec l'étiquette Liquid du catalogue utilisée dans le champ de l'image.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Voici à quoi cela ressemble avec Liquid  ;
 
-![Exemple de carte de contenu avec rendu des étiquettes Liquid du catalogue.][4]{: style="max-width:50%" }
+![Exemple de carte de contenu avec rendu des étiquettes Liquid du catalogue.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### Modèles d’articles de catalogue
 
@@ -139,7 +139,7 @@ Vous pouvez également utiliser les modèles pour extraire dynamiquement des él
 Les objets JSON dans les catalogues ne sont ingérés que par l'API. Vous ne pouvez pas télécharger un objet JSON à l'aide d'un fichier CSV.
 {% endalert %}
 
-À l’aide du modèle Liquid, vous pouvez extraire dynamiquement les ID de la liste d’envies, puis les utiliser dans votre message. Pour ce faire, [assignez une variable][10] à votre attribut personnalisé, puis utilisez la fenêtre modale/boîte de dialogue de **personnalisation** pour extraire un élément spécifique du tableau.
+À l’aide du modèle Liquid, vous pouvez extraire dynamiquement les ID de la liste d’envies, puis les utiliser dans votre message. Pour ce faire, [affectez une variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) à votre attribut personnalisé, puis utilisez la fenêtre modale/boîte de dialogue de **personnalisation** pour extraire un élément spécifique du tableau. Les variables référencées comme l'ID de l'article du catalogue doivent être placées entre crochets pour être référencées correctement, comme `{{result}}`.
 
 {% alert tip %}
 Souvenez-vous que les baies commencent à `0` et non pas à `1`.
@@ -167,7 +167,7 @@ Vous pouvez télécharger un fichier CSV de nouveaux éléments de catalogue à 
 
 ### Utilisation de Liquid
 
-Vous pouvez également assembler manuellement les catalogues logiques Liquides. Cependant, veuillez remarquer que si vous saisissez un ID qui n’existe pas, Braze restitue toujours un groupe d’articles sans objet. Nous vous recommandons d’inclure la gestion des erreurs, comme la vérification de la taille de la baie et d’utiliser `if` pour tenir compte d’une situation de baie vide.
+Vous pouvez également composer manuellement des catalogues avec la logique Liquid. Cependant, veuillez remarquer que si vous saisissez un ID qui n’existe pas, Braze restitue toujours un groupe d’articles sans objet. Nous vous recommandons d’inclure la gestion des erreurs, comme la vérification de la taille de la baie et d’utiliser `if` pour tenir compte d’une situation de baie vide.
 
 {% alert note %}
 Actuellement, les liquides ne peuvent pas être utilisés dans les catalogues. Si la personnalisation Liquid est listée dans une cellule de votre catalogue, la valeur dynamique ne sera pas affichée et seul le Liquid s'affichera.
@@ -211,6 +211,3 @@ Les étiquettes Liquid des catalogues ne peuvent pas être utilisées de manièr
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
-[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
-[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

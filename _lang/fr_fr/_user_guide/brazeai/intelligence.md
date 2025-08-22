@@ -1,36 +1,16 @@
 ---
 nav_title: Intelligence Suite
-article_title: Intelligence Suite
-page_order: 10
-layout: dev_guide
+article_title: À propos de la Braze Intelligence Suite
+page_order: 1
 search_rank: 12
-guide_top_header: "Intelligence Suite"
-guide_top_text: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et cross-canal, afin d’optimiser l’ensemble. <br> <br> La suite d'outils Intelligence Suite est composée de trois fonctionnalités principales : Timing Intelligent, Canal intelligent et Sélection intelligente."
 description: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et cross-canal, afin d’optimiser l’ensemble."
-
-Tool:
+tool:
   - Dashboard
-
-guide_featured_title: "Outils et fonctionnalités"
-guide_featured_list:
-- name: Timing intelligent
-  link: /docs/user_guide/brazeai/intelligence/intelligent_timing/
-  image: /assets/img/braze_icons/clock.svg
-- name: Canal intelligent
-  link: /docs/user_guide/brazeai/intelligence/intelligent_channel/
-  image: /assets/img/braze_icons/mail-04.svg
-- name: Sélection intelligente
-  link: /docs/user_guide/brazeai/intelligence/intelligent_selection/
-  image: /assets/img/braze_icons/hearts.svg
-
-guide_menu_title: "Additional resources"
-guide_menu_list:
-- name: FAQ Intelligence
-  link: /docs/user_guide/brazeai/intelligence/faqs/
-  image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
+
+# La suite d'intelligence
+
+> Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et cross-canal, afin d’optimiser l’ensemble. La suite d'outils Intelligence Suite est composée de trois fonctionnalités principales : Timing Intelligent, Canal intelligent et Sélection intelligente.
 
 ## Cas d’utilisation
 
@@ -50,30 +30,3 @@ La suite Intelligence offre des fonctionnalités puissantes pour analyser l'hist
 
 - **Promotion de nouveau contenu :** Utilisez le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) pour envoyer des notifications sur les nouveaux films, émissions, musiques et autres types de contenu lorsque les utilisateurs sont le plus susceptibles d'ouvrir votre envoi de messages.
 - **Achats dans le jeu :** Utilisez la sélection intelligente pour tester différents messages promotionnels pour les achats dans le jeu et sélectionnez automatiquement celui qui génère les taux de conversion les plus élevés.
-
-### Restaurant à service rapide
-
-Imaginons que nous travaillons au SandwichEmperor, un restaurant rapide qui propose un nouveau plat à durée limitée : le Royal Roast. Nous utiliserons deux fonctionnalités de la suite Intelligence pour envoyer des promotions personnalisées dans un Canvas.
-
-#### Utilisez le timing intelligent pour savoir quand envoyer des notifications
-
-Nous utiliserons le timing intelligent pour analyser les interactions passées de nos utilisateurs avec notre appli et chaque canal d'envoi de messages, puis nous sélectionnerons automatiquement le meilleur moment pour promouvoir le Royal Roast auprès de chaque utilisateur. Certains utilisateurs peuvent recevoir la promotion dans l'après-midi, d'autres dans la soirée. 
-
-Pour les utilisateurs qui n'ont pas suffisamment d'interactions passées à analyser, nous prévoyons un moment de repli : le moment le plus populaire de l'utilisation de l'application parmi tous les utilisateurs.
-
-![Paramètres de livraison du timing intelligent pour une étape Message.][1]
-
-#### Utilisez la sélection intelligente pour sélectionner la promotion
-
-Pour les messages promotionnels proprement dits, nous utiliserons la sélection intelligente afin de tester trois messages différents (notification push, e-mail et SMS) pour le Royal Roast. La sélection intelligente analysera la performance de tous nos messages promotionnels deux fois par jour, puis enverra progressivement davantage les messages les plus performants et moins les autres.
-
-Une fois que la sélection intelligente a recueilli suffisamment de données pour déterminer le message le plus performant, elle utilisera ce message dans 100 % des envois futurs.
-
-![Section de test A/B d'un canvas avec sélection intelligente activée.][3]
-
-#### Lancer le canvas
-
-Grâce au timing intelligent et à la sélection intelligente, nous avons mis en place nos promotions Royal Roast afin d'optimiser le timing et l'envoi des messages. Nous pouvons lancer notre canvas et observer l’adaptation de nos envois en fonction des préférences des utilisateurs.
-
-[1]: {% image_buster /assets/img/intelligence_suite1.png %}
-[3]: {% image_buster /assets/img/intelligent_selection_canvas.png %}

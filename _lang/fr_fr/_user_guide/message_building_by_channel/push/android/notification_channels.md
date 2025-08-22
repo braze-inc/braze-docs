@@ -12,13 +12,13 @@ channel:
 
 # Canaux de notification
 
-> Les [canaux de notification][1] sont un moyen d'organiser les notifications push qui ont été ajoutées avec Android O. À partir de O, toutes les notifications push doivent avoir un canal de communication qui indique le type de message (par exemple, "notifications de chat" ou "notifications de suivi"). Vos utilisateurs peuvent alors contrôler certains aspects de leur notification (par exemple, les paramètres de veille, de bruit ou de vibration, de désabonnement, etc.) en fonction des différents canaux.
+> Les [canaux de notification](https://www.braze.com/blog/android-o-push-notifications-channels/) sont un moyen d'organiser les notifications push qui ont été ajoutées avec Android O. À partir de O, toutes les notifications push doivent avoir un canal de communication qui indique le type de message (par exemple, "notifications de chat" ou "notifications de suivi"). Vos utilisateurs peuvent alors contrôler certains aspects de leur notification (par exemple, les paramètres de veille, de bruit ou de vibration, de désabonnement, etc.) en fonction des différents canaux.
 
 ## Transition vers Android O
 
 Les canaux de notification ne peuvent être créés que dans le code de votre application et ne peuvent pas être créés de façon programmatique dans le tableau de bord de Braze. Nous recommandons à votre équipe d’ingénierie de travailler avec vos spécialistes du marketing pour vous assurer que les canaux de notification souhaités sont correctement ajoutés au tableau de bord.
 
-Depuis Android O, les notifications push nécessitent un canal valide pour s’afficher. Si votre application cible Android O ou ultérieur, vous devez utiliser le SDK Braze version 2.1.0 ou ultérieur. Votre équipe de développement doit définir les canaux que vous souhaitez utiliser ainsi que les paramètres de notification suggérés (par exemple, importance, son, lumières) pour chaque canal dans le code de votre application. Vous trouverez la documentation pour les développeurs d'Android [ici][4] et la documentation pour les développeurs de Braze [ici][2].
+Depuis Android O, les notifications push nécessitent un canal valide pour s’afficher. Si votre application cible Android O ou ultérieur, vous devez utiliser le SDK Braze version 2.1.0 ou ultérieur. Votre équipe de développement doit définir les canaux que vous souhaitez utiliser ainsi que les paramètres de notification suggérés (par exemple, importance, son, lumières) pour chaque canal dans le code de votre application. Vous trouverez la documentation pour les développeurs d'Android [ici](https://developer.android.com/preview/features/notification-channels.html) et la documentation pour les développeurs de Braze [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels).
 
 {% alert note %}
 Android prend en charge la localisation pour les noms de canaux. Ainsi, dans le code de votre application, vous pouvez associer un ID de canal avec plusieurs traductions d’un nom de canal.
@@ -75,11 +75,11 @@ Pour mieux comprendre le comportement attendu pour les canaux, reportez-vous au 
 
 Lorsque vous appliquez un canal de notification à une campagne spécifique ou à une étape du canvas, votre nombre d'**utilisateurs joignables** (emplacement/localisation de l'étape Target Audience) pour Android Push ne semble pas changer. Cependant, seuls les utilisateurs abonnés au canal de communication sélectionné verront le message, et les analyses/analytiques de votre campagne (comme les clics) seront mesurées en fonction de cette audience.
 
-![][6]
+![]({% image_buster /assets/img_archive/Click_Here.png %})
 
 {:start="4"}
 4\. Cliquez sur **Ajouter un canal de notification**.
-5\. Saisissez le nom et l’ID du canal de notification que vous souhaitez ajouter.<br><br>![][8]<br><br>
+5\. Saisissez le nom et l’ID du canal de notification que vous souhaitez ajouter.<br><br>![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
 6\. Répétez les étapes 4 et 5 pour chaque canal de notification que vous souhaitez ajouter.
 7\. Appuyez sur **Enregistrer** pour enregistrer vos modifications.
 
@@ -89,7 +89,7 @@ Votre canal de repli est le canal avec lequel Braze tentera d'envoyer votre mess
 
 1. Ouvrir toute campagne ou Canvas existant.
 2. Accédez au composeur de notification push Android.
-3. Sélectionnez **Gérer les canaux de notification** après avoir développé les options de canaux de notification. <br><br>![][9]{: style="max-width:80%;"}<br><br>
+3. Sélectionnez **Gérer les canaux de notification** après avoir développé les options de canaux de notification. <br><br>![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
 4. Ajoutez le canal au tableau de bord (s’il n’a pas encore été ajouté).
 5. Sélectionnez le cadran radio à côté du canal que vous souhaitez désigner comme canal de secours.
 6. Enregistrez vos modifications. Vos modifications seront appliquées à l’échelle globale.
@@ -99,14 +99,6 @@ Votre canal de repli est le canal avec lequel Braze tentera d'envoyer votre mess
 1. Accédez au composeur de notification push Android sur n’importe quelle campagne ou Canvas.
 2. Sélectionnez le canal que vous souhaitez utiliser dans la liste déroulante. Si vous n’avez pas de liste déroulante mais que vous avez la vue suivante, vous devrez ajouter des canaux avant de les sélectionner pour les campagnes.
 
-![][10]
+![]({% image_buster /assets/img_archive/No_Select.png %})
 
-[1]: https://www.braze.com/blog/android-o-push-notifications-channels/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels
-[4]: https://developer.android.com/preview/features/notification-channels.html
-[6]: {% image_buster /assets/img_archive/Click_Here.png %}
-[8]: {% image_buster /assets/img_archive/Enter_Channel.png %}
-[9]: {% image_buster /assets/img_archive/Change_Fallback.png %}
-[10]: {% image_buster /assets/img_archive/No_Select.png %}
-[11]: {% image_buster /assets/img_archive/Select_Channel.png %}

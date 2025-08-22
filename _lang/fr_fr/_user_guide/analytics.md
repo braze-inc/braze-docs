@@ -13,18 +13,12 @@ guide_featured_list:
   - name: Suivi
     link: /docs/user_guide/analytics/tracking/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: Transformation des données
-    link: /docs/user_guide/data/data_transformation/
-    image: /assets/img/braze_icons/database-01.svg
   - name: "Votre tableau de bord d'analyse"
     link: /docs/user_guide/analytics/dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
   - name: Vos rapports
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/bar-chart-01.svg
-  - name: Catalogues
-    link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
-    image: /assets/img/braze_icons/list.svg
   - name: Générateur de requêtes
     link: /docs/user_guide/analytics/query_builder/
     image: /assets/img/braze_icons/code-02.svg

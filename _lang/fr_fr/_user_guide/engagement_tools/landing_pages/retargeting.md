@@ -24,7 +24,7 @@ Braze effectue un suivi automatique lorsqu'un utilisateur soumet le formulaire d
 {% tab Utilisation d'une segmentation %}
 Lorsque vous [créez un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), dans le groupe "Reciblage", choisissez **Formulaire soumis sur la page d'atterrissage**.
 
-![Création d'un segment avec le groupe de filtres sélectionné comme "Formulaire soumis sur la page d'atterrissage"]({% image_buster /assets/img/landing_pages/segmentation_selected.png %}).
+![Création d'un segment avec le groupe de filtres sélectionné comme "Formulaire soumis sur la page d'atterrissage".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
 À partir de là, vous pouvez segmenter les utilisateurs selon qu'ils ont ou non soumis un formulaire pour votre page d'atterrissage.
 {% endtab %}
@@ -34,6 +34,11 @@ Lorsque vous choisissez votre option de réception/distribution pour votre [camp
 
 Tous les utilisateurs qui soumettent un formulaire par l'intermédiaire de cette page de renvoi recevront un message par l'intermédiaire du canal de communication choisi ou seront inscrits dans le Canvas choisi.
 
-![Landing page trigger action dans l'envoi de messages]({% image_buster /assets/img/landing_pages/trigger.png %})
+![La page d'atterrissage déclenche l'envoi de messages.]({% image_buster /assets/img/landing_pages/trigger.png %})
+
+{% alert note %}
+L'option de livraison par événement pour les pages de renvoi n'est pas disponible pour les messages in-app. Pour cibler les utilisateurs qui ont soumis un formulaire sur une page de renvoi avec un message in-app, sélectionnez le filtre **Formulaire soumis sur la page de renvoi** dans les **options de ciblage** de votre campagne.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}

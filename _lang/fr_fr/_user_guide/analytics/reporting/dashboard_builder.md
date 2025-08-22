@@ -21,7 +21,7 @@ Le générateur de tableaux de bord vous permet de composer et de visualiser des
 2. Sélectionnez **Créer un tableau de bord**.
 3. Sélectionnez la source de données qui alimentera vos rapports :
 - **Les rapports** qui ont été créés dans le générateur de rapports
-- Les **requêtes personnalisées** qui ont été créées dans Query Builder<br><br>![pour sélectionner la source de données de votre tableau de bord.][4]<br><br>
+- Les **requêtes personnalisées** qui ont été créées dans Query Builder<br><br>![Fenêtre permettant de sélectionner la source de données pour votre tableau de bord.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Maintenant, suivez les étapes respectives pour votre source de données :
 
@@ -88,7 +88,7 @@ Braze propose des modèles prédéfinis de tableau de bord pour les cas d'utilis
 
 Le modèle **Revenus - Attribution au dernier contact** permet d'examiner les revenus pour l’ensemble des campagnes, des canvas et des canaux. Toutes les données relatives aux revenus sont attribuées au message du dernier contact pendant la fenêtre d'attribution.
 
-Les touches comprennent le _clic sur l'e-mail_, le _clic sur la carte de contenu_, le _clic sur le message in-app_, la _réception/distribution de SMS_, la _lecture de WhatsApp_ et l'_envoi de webhook_.
+Les touches comprennent le _clic sur l'e-mail_, le _clic sur la carte de contenu_, le _clic sur le message in-app_, le _clic sur le lien court SMS_, la _lecture WhatsApp_ et l'_envoi webhook_.
 
 | Indicateurs | Définition |
 | --- | --- |
@@ -121,7 +121,3 @@ Les touches comprennent le _clic sur l'e-mail_, le _clic sur la carte de contenu
 
 Sélectionnez le bouton **Envoyer un commentaire** ou contactez votre gestionnaire de satisfaction client pour nous faire part de votre commentaire.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}
-[4]: {% image_buster /assets/img/select_data_source.png %}

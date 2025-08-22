@@ -484,17 +484,17 @@ Lorsque vous segmentez des utilisateurs en fonction d’un tableau d’objets, u
 
 Créez un nouveau segment et sélectionnez **Nested Custom Attribute** comme filtre. Recherchez et sélectionnez le nom de votre tableau d’objets.
 
-![Filtre sur un tableau d'objets.][1]
+![Filtre sur un tableau d'objets.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 Utilisez la notation par points pour spécifier les champ du tableau d’objets que vous souhaitez utiliser. Commencez le champ de texte par deux crochets vides `[]` pour indiquer à Braze que vous regardez dans un tableau (array) d’objets. Ensuite, ajoutez une période `.`, suivi du nom du champ que vous souhaitez utiliser.
 
 Par exemple, si vous souhaitez filtrer un tableau d’objets`pets` basés sur le `type` champ, entrez `[].type` et filtrez sur le type d’animal de compagnie, comme `snake`.
 
-![Filtrer par type d'animal équivaut à un serpent.][3]
+![Filtrer par type d'animal équivaut à un serpent.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 Ou vous pouvez filtrer les animaux domestiques qui ont un `type` égal à  `dog`. Ici, l’utilisateur a au moins un chien donc il entre dans le segment «  tout utilisateur ayant au moins un animal de compagnie de type chien ».
 
-![Filtrer par type d'animal de compagnie équivaut à un chien.][2]
+![Filtrer par type d'animal de compagnie équivaut à chien.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Niveaux d’imbrication
 
@@ -635,6 +635,3 @@ Enlever un objet dans un tableau consomme un point de données pour chaque crit�
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
-[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
-[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}

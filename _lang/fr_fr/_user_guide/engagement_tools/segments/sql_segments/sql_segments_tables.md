@@ -40,6 +40,7 @@ Tableau | Description
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | Lorsqu’un utilisateur est inscrit dans le groupe de contrôle d’une campagne
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | Lorsqu’un utilisateur atteint une limite de fréquence pour une campagne
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | Lorsqu'un utilisateur génère des chiffres d'affaires au cours de la période de conversion primaire.
+[UTILISATEURS_CANVASSTEP_PROGRESSION_PARTAGÉE](#USERS_CANVASSTEP_PROGRESSION_SHARED) | Lorsqu'un utilisateur passe à une étape du canvas
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | Lorsqu'un utilisateur effectue une conversion dans le cadre d'un événement de conversion Canvas
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | Lorsqu'un utilisateur entre dans un Canvas
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | Lorsqu'un utilisateur quitte un canvas parce qu'il correspond aux critères de sortie de l'audience
@@ -480,6 +481,30 @@ Champ | Type | Description
 
 ## Canvas
 
+### UTILISATEURS_CANVASSTEP_PROGRESSION_PARTAGÉE {#USERS_CANVASSTEP_PROGRESSION_SHARED}
+
+| Champ                                  | Type                     | Description                                                                                                     |
+| -------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `id`                                   | `string`, `null`    | ID unique au niveau mondial pour cet événement                                                                               |
+| `user_id`                              | `string`, `null`    | ID Braze de l'utilisateur qui a réalisé cet événement                                                                   |
+| `external_user_id`                     | `string`, `null`    | [Données d'identification] ID externe de l'utilisateur                                                                              |
+| `device_id`                            | `string`, `null`    | ID de l'appareil lié à cet utilisateur, si l'utilisateur est anonyme                                            |
+| `app_group_id`                         | `string`, `null`    | ID Braze de l'espace de travail auquel cet utilisateur appartient                                                                   |
+| `app_group_api_id`                     | `string`, `null`    | ID API de l'espace de travail auquel appartient cet utilisateur                                                                    |
+| `time`                                 | `int`, `null`       | horodatage Unix du moment où l’événement s’est produit                                                                      |
+| `canvas_id`                            | `string`, `null`    | (Réservé à l'usage de Braze) ID de la toile à laquelle appartient cet événement                                                     |
+| `canvas_api_id`                        | `string`, `null`    | ID API du Canvas auquel appartient cet événement        |         
+| `canvas_variation_api_id`              | `string`, `null`    | ID API de la variation de Canvas à laquelle appartient cet événement                                                            |
+| `canvas_step_api_id`                   | `string`, `null`    | ID API de l'étape de Canvas auquel appartient cet événement                                                                 |
+| `progression_type`                     | `string`, `null`    | Type d'événement de progression d'étape |
+| `is_canvas_entry`                      | `boolean`, `null`   | Qu'il s'agisse de l'entrée dans une première étape du canvas        |
+| `exit_reason`                          | `string`, `null`    | S'il s'agit d'une sortie, la raison pour laquelle l'utilisateur a quitté la toile au cours de l'étape.                  |
+| `canvas_entry_id`                      | `string`, `null`    | Identifiant unique pour cette instance d'un utilisateur dans un Canvas  |
+| `next_step_id`                         | `string`, `null`    | BSON ID de l'étape du canvas suivante |
+| `next_step_api_id`                     | `string`, `null`    | ID API de l'étape suivante du canvas |
+| `sf_created_at`                        | `timestamp`, `null` | Lorsque cet événement a été repris par le Snowpipe                                                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
 | Champ                                  | Type                     | Description                                                                                                     |
@@ -679,7 +704,7 @@ Champ | Type | Description
 `country` | `null,` `string` | [PII] Pays de l'utilisateur
 `timezone` | `null,` `string` | Fuseau horaire de l'utilisateur
 `language` | `null,` `string` | [PII] Langue de l'utilisateur
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -850,7 +875,7 @@ Champ | Type | Description
 `language` | `null,` `string` | [PII] Langue de l'utilisateur
 `email_address` | `string` | [PII] adresse e-mail de l'utilisateur
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -882,7 +907,7 @@ Champ | Type | Description
 `sending_ip` | `null,` `string` | Adresse IP à partir de laquelle l’e-mail a été envoyé
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
 `bounce_reason` | `null,` `string` | [Données d'identification] Le code de raison SMTP et le message convivial reçus pour cet événement de rebond
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 `is_drop` | `null, boolean` | Indique que cet événement est décompté comme un événement d’abandon
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -917,7 +942,7 @@ Champ | Type | Description
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
 `link_id` | `null,` `string` | ID unique du lien sur lequel on a cliqué, tel que créé par Braze
 `link_alias` | `null,` `string` | Alias associé à cet ID de lien
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 `is_amp` | `null, boolean` | Indique qu'il s'agit d'un événement AMP
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -949,7 +974,7 @@ Champ | Type | Description
 `email_address` | `string` | [PII] adresse e-mail de l'utilisateur
 `sending_ip` | `null,` `string` | Adresse IP à partir de laquelle l’e-mail a été envoyé
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -980,7 +1005,7 @@ Champ | Type | Description
 `email_address` | `string` | [PII] adresse e-mail de l'utilisateur
 `user_agent` | `null,` `string` | Agent utilisateur sur lequel le signalement du courrier indésirable a eu lieu
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1012,7 +1037,7 @@ Champ | Type | Description
 `user_agent` | `null,` `string` | Agent utilisateur sur lequel l'ouverture s'est produite
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
 `machine_open` | `null,` `string` | La valeur "true" est indiquée si l'événement d'ouverture est déclenché sans l'intervention de l'utilisateur, par exemple, par un appareil Apple sur lequel la protection de la confidentialité du courrier est activée. La valeur peut changer au fil du temps pour fournir plus de granularité.
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 `is_amp` | `null, boolean` | Indique qu'il s'agit d'un événement AMP
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1044,7 +1069,7 @@ Champ | Type | Description
 `email_address` | `string` | [PII] adresse e-mail de l'utilisateur
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
 `message_extras` | `null,` `string` | [Données d'identification] Chaîne JSON des paires clé-valeur balisées lors du rendu Liquid
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 `sf_created_at` | `timestamp`, `null` | Lorsque cet événement a été repris par le Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -1077,7 +1102,7 @@ Champ | Type | Description
 `sending_ip` | `null,` `string` | Adresse IP à partir de laquelle l’e-mail a été envoyé
 `ip_pool` | `null,` `string` | Ensemble d’IP à partir duquel l’e-mail a été envoyé
 `bounce_reason` | `null,` `string` | [Données d'identification] Le code de raison SMTP et le message convivial reçus pour cet événement de rebond
-`esp` | `null,` `string` | ESP lié à l’événement (SparkPost ou SendGrid)
+`esp` | `null,` `string` | ESP lié à l'événement (SparkPost, SendGrid, ou Amazon SES)
 `from_domain` | `null,` `string` | Domaine d'envoi de l'e-mail
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1146,7 +1171,7 @@ Champ | Type | Description
 `ad_id` | `null,` `string` | [PII] Identifiant publicitaire
 `ad_id_type` | `null,` `string` | Un parmi `ios_idfa`, `google_ad_id`, `windows_ad_id` OU `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Si le suivi publicitaire est activé pour l’appareil ou non
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1252,7 +1277,7 @@ Champ | Type | Description
 `resolution` | `null,` `string` | résolution de l’appareil
 `carrier` | `null,` `string` | opérateur de l’appareil
 `browser` | `null,` `string` | navigateur de l’appareil
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1332,7 +1357,7 @@ Champ | Type | Description
 `timezone` | `null,` `string` | Fuseau horaire de l'utilisateur
 `language` | `null,` `string` | [PII] Langue de l'utilisateur
 `platform` | `string` | Plate-forme de l'appareil
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1530,7 +1555,7 @@ Champ | Type | Description
 `canvas_step_api_id` | `null,` `string` | ID API de l'étape de Canvas auquel appartient cet événement
 `canvas_step_message_variation_api_id` | `null,` `string` | ID API de la variation de message de l'étape de Canvas que l’utilisateur a reçue
 `subscription_group_api_id` | `null,` `string` | ID externe du groupe d'abonnement
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1756,7 +1781,7 @@ Champ | Type | Description
 `country` | `null,` `string` | [PII] Pays de l'utilisateur
 `timezone` | `null,` `string` | Fuseau horaire de l'utilisateur
 `language` | `null,` `string` | [PII] Langue de l'utilisateur
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1809,7 +1834,7 @@ Champ | Type | Description
 `canvas_step_api_id` | `null,` `string` | ID API de l'étape de Canvas auquel appartient cet événement
 `canvas_step_message_variation_api_id` | `null,` `string` | ID API de la variation de message de l'étape de Canvas que l’utilisateur a reçue
 `dispatch_id` | `null,` `string` | ID de l’envoi auquel appartient ce message
-`abort_type` | `null,` `string` | Type d'avortement, l'un des : `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_type` | `null,` `string` | Type d'abandon, l'un des suivants : `liquid_abort_message` ou `rate_limit`
 `abort_log` | `null,` `string` | [Données d'identification] Message du journal décrivant les détails de l'abandon (128 caractères maximum)
 `sf_created_at` | `timestamp`, `null` | Lorsque cet événement a été repris par le Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

@@ -27,7 +27,7 @@ Pour créer ou modifier votre pied de page personnalisé, procédez comme suit :
 3. Modifiez votre pied de page dans la section **Composer**.
 4. Envoyez un message test. 
 
-![Un exemple de pied de page personnalisé.][20]
+![Exemple de pied de page personnalisé.]({% image_buster /assets/img_archive/custom_footer.png %})
 
 Le pied de page par défaut utilise l'attribut {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} et notre adresse postale. Si vous utilisez cette option par défaut, veillez à sélectionner **<autre>** pour le **protocole**.
 
@@ -35,7 +35,7 @@ Le pied de page par défaut utilise l'attribut {% raw %}`{{${set_user_to_unsubsc
 Pour être conforme à la réglementation CAN-SPAM, votre pied de page personnalisé doit inclure {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. Vous ne pourrez pas enregistrer un pied de page personnalisé sans cet attribut.
 {% endalert %}
 
-![Valeurs de protocole et d'URL nécessaires pour le pied de page personnalisé.][24]{: style="max-width:50%;"}
+![Valeurs de protocole et d'URL nécessaires pour le pied de page personnalisé.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## Pieds de page sans liens de désabonnement
 
@@ -43,11 +43,11 @@ Soyez très prudent lorsque vous utilisez un modèle avec le pied de page person
 
 Voici un avertissement dans le compositeur de l'e-mail :
 
-![Exemple de courriel composé sans pied de page.][21]
+![Exemple d'e-mail composé sans pied de page.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 Voici un avertissement dans le compositeur de la campagne :
 
-![Composition de campagne sans pied de page.][22]
+![Composition de la campagne No-Footer.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### Ajouter un lien de désinscription personnalisé
 
@@ -89,10 +89,5 @@ Vous pouvez également choisir de définir un pied de page personnalisé pour le
 
 Si vous n’ajoutez pas de pied de page en texte brut, Braze en créera automatiquement un à partir du pied de page HTML. Lorsque vos pieds de page personnalisés sont à votre goût, sélectionnez **Enregistrer.**
 
-![E-mail avec l'option Set Custom Plaintext Footer (Définir un pied de page en texte clair personnalisé) personnalisée.][23]{: style="max-width:70%" }
+![E-mail avec l'option Set Custom Plaintext Footer sélectionnée.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}

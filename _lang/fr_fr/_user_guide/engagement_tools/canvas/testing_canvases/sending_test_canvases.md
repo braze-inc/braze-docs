@@ -35,7 +35,7 @@ Vous pouvez tester votre Canvas de deux manières.
 
 - **Méthode 1  :** Dans le canvas dupliqué, modifiez la partie **Audience d’entrée** du générateur de canvas afin que seuls les utilisateurs test soient éligibles pour le canvas. Vous pouvez également saisir votre propre adresse e-mail en tant qu'utilisateur test en ajoutant le filtre de test **Adresse e-mail.** Dans l’exemple ci-dessous, nous avons limité le Canvas à deux utilisateurs test qui ont utilisé l’application pour la première fois il y a moins de 3 jours. 
 
-![][2]
+![Un canvas dont l'audience d'entrée est "Première utilisation de ces applications il y a moins de 3 jours" et les adresses e-mail de deux utilisateurs test.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **Méthode 2 :** [Prévisualisez vos parcours utilisateurs]({{site.baseurl}}/preview_user_paths/) en sélectionnant le bouton **Test Canvas** dans le pied de page du générateur de Canvas.
 
@@ -84,5 +84,3 @@ Lorsque vous testez un Canvas avec plusieurs branches ciblant les utilisateurs s
 1. Pour chaque branche, identifiez les attributs et les événements que l’utilisateur doit posséder pour être inclus dans le parcours Canvas.
 2. Intégrez-les dans la charge utile JSON pour être publiés en utilisant l’endpoint `/users/track`.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}
