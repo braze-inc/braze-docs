@@ -30,6 +30,9 @@ Braze は、以下の SDK バージョン要件で iOS、Android、および Web
 
 必要な作業のほとんどは、ロールアウトを計画している新機能を構築する開発チームに関連するものです。しかし、機能フラグを追加するとなると、アプリやウェブサイトのコードに`IF`/`ELSE` ステートメントを記述するくらい簡単だ：
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### 機能フラグはマーケティングチームにどのようなメリットをもたらすのか？ {#marketing-teams}
 
