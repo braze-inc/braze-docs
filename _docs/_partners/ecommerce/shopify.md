@@ -15,6 +15,9 @@ guide_featured_list:
 - name: Shopify Standard Integration Setup
   link: /docs/shopify_standard_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
+- name: Shopify Standard Integration with Third-Party Tagging
+  link: /docs/shopify_standard_integration_third_party_tagging/
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Shopify Custom Integration Setup
   link: /docs/shopify_custom_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
