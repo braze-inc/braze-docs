@@ -9,9 +9,11 @@ search_rank: 6
 
 # Data points
 
-> At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. Data points help you define the most impactful information for your business. By thoughtfully considering what information to track, you ensure that you're targeting the highest-impact data for your users' experience.
+> At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. Data points help you define the most impactful information for your business. 
 
-Data points define a billing and pricing structure based on information logged against user profiles. Our Customer Success team can help recommend data best practices to fit your needs. You can find a more detailed breakdown of this definition in your Braze contract. 
+Data points are based on information logged against user profiles. You can find a more detailed breakdown of this definition in your Braze contract. 
+
+By thoughtfully considering what information to track, you ensure that you're targeting the highest-impact data for your users' experience. Our Customer Success team can help recommend data best practices to fit your needs. 
 
 ## Definition
 
