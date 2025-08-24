@@ -13,7 +13,7 @@ $(document).ready(function(){
       ID: null
     };
 
-    $('#feedback_answer li.inline-star i').on('click', function(e){
+    $('#feedback_answer li.inline-thumb i').on('click', function(e){
       e.preventDefault();
       var feedback_cookie_name = '_site_feedback';
       var last_feedback = Cookies.get(feedback_cookie_name);
