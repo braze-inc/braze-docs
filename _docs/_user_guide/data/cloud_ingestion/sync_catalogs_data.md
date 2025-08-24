@@ -110,12 +110,34 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 );
 ```
 
-| FIELD NAME | TYPE | MODE |
-| --- | --- | --- |
-| UPDATED_AT | TIMESTAMP | REQUIRED |
-| PAYLOAD | JSON | REQUIRED |
-| ID | STRING | REQUIRED |
-| DELETED | BOOLEAN | OPTIONAL |
+```json
+[
+ {
+   "name": "UPDATED_AT",
+   "type": "TIMESTAMP",
+   "mode": "REQUIRED",
+   "description": "timestamp used by Braze to check for up-to-date data"
+ },
+ {
+   "name": "PAYLOAD",
+   "type": "JSON",
+   "mode": "REQUIRED",
+   "description": "information about the product"
+ },
+ {
+   "name": "ID",
+   "type": "STRING",
+   "mode": "REQUIRED",
+   "description": "unique identifier for the product"
+ },
+ {
+   "name": "DELETED",
+   "type": "BOOLEAN",
+   "mode": "REPEATED",
+   "description": "whether or not the product should be deleted from Braze's product catalog"
+ }
+]
+```
 
 {:start="2"}
 
