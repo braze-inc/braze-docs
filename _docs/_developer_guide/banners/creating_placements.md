@@ -120,6 +120,8 @@ If you insert banners using the SDK methods in this guide, all analytics events 
 
 {% tabs %}
 {% tab Web %}
+{% subtabs %}
+{% subtab Javascript %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -131,7 +133,26 @@ braze.subscribeToBannersUpdates((banners) => {
 // always refresh after your subscriber function has been registered
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
+{% endsubtab %}
+{% subtab React %}
+```typescript
+import * as braze from "@braze/web-sdk";
 
+useEffect(() => {
+  const subscriptionId = braze.subscribeToBannersUpdates((banners) => {
+    console.log(`Banners were updated`);
+  });
+
+  // always refresh after your subscriber function has been registered
+  braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+
+  // cleanup listeners
+  return () => {
+    braze.removeSubscription(subscriptionId);
+  }
+}, []);
+```
+{% endsubtab %}
 {% endtab %}
 {% tab Swift %}
 
