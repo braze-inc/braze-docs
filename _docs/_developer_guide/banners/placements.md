@@ -23,7 +23,7 @@ platform:
 
 ### Prerequisites
 
-These are the minimum SDK versions needed for Banners:
+These are the minimum SDK versions needed to create Banner placements:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
@@ -491,15 +491,23 @@ Here's what you need to know about Banner dimensions and sizing:
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
 
-## Accessing properties {#accessing-properties}
+## Custom properties {#custom-properties}
 
-After [adding custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign, you can use them to retrieve key–value data from a Banner placement and modify your app’s behavior or appearance. For example:
+You can use custom properties from your Banner campaign to retrieve key–value data through the SDK and modify your app’s behavior or appearance. For example, you could:
 
 - Change layout or styling based on a property like `color` or `expanded`.
 - Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
 - Detect control variants and decide whether to hide a container or show alternate content.
 
-To access the properties of a banner, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type, the method returns `null`.
+### Prerequisites
+
+You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
+
+{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 %}
+
+### Accessing custom properties
+
+To access a banner's custom properties, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type, the method returns `null`.
 
 {% tabs local %}
 {% tab Android %}

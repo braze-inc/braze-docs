@@ -54,9 +54,15 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 
 #### Step 3.3: Add custom properties (optional) {#custom-properties}
 
-You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/managing_placements/#accessing-properties) to customize integrations, enable conditional logic, or pass analytics and attribution data.
+You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/managing_placements/#accessing-properties) to modify your app’s behavior or appearance. For example, you could:
 
-// to do: add image
+- Change layout or styling based on a property like `color` or `expanded`.
+- Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
+- Detect control variants and decide whether to hide a container or show alternate content.
+
+To add a custom property,...
+
+![ALT_TEXT.]()
 
 ### Step 4: Set campaign duration
 
