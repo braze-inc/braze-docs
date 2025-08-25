@@ -31,7 +31,7 @@ For more information on the data point dashboard components, refer to [Billing](
 
 {% alert tip %}
 **Don't waste data points. Only update changing data!**<br><br>
-To minimize data point consumption, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
+To minimize data point usage, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
 {% endalert %}
 
 ## Consumption count
@@ -40,7 +40,7 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 
 You can find a breakdown of how Braze accumulates data points in the following sections. If you ever have any questions about the nuances of Braze data points, your Braze account manager can answer them.
 
-The following actions do not consume data points:
+The following actions do not log data points:
 - Deleting users from Braze
 - Using Connected Content in messaging
 - Subscription state changes globally and around subscription groups
@@ -67,9 +67,9 @@ Updating a custom attribute object to `null` also consumes a data point.
 
 #### CSV
 
-Custom attributes uploaded through CSV import count toward your data points. However, CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not consume data points.
+Custom attributes uploaded through CSV import count toward your data points. However, CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not log data points.
 
-Also, as subscription state changes do not consume data points, updating the `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` fields in your CSV file will not incur charges.
+Also, as subscription state changes do not log data points, updating the `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` fields in your CSV file will not incur charges.
 
 ## Data points
 

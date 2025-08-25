@@ -30,8 +30,8 @@ The Braze and Pypestream integration allows you to seamlessly orchestrate the en
 ## Use cases
 
 The Braze and Pypestream partnership can be used in your Canvases to achieve common use cases like:
-* **Intelligent retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.
-* **Dynamic targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments, serving them with tailored conversational experiences via Pypestream.
+* **Intelligent retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected through Pypestream.
+* **Dynamic targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments, serving them with tailored conversational experiences through Pypestream.
 * **Contextual customer insights**: After an end-user (existing or prospective customer) engages on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
 
 ## Integration

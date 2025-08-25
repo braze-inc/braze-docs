@@ -349,7 +349,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily log data points. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% endalert %}
 {% endtab %}
@@ -454,7 +454,7 @@ The proper format must be followed to ensure that you input your Braze SDK endpo
 Scenarios where data will not pass as expected:
 
 1. Nested custom attributes
-  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
+  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will log [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To log only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
 
   {% alert note %}
   Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.
@@ -476,7 +476,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% details Sending deltas to Braze. %}
 
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. If your Braze pricing includes data points, this will prevent logging of unnecessary data points. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% enddetails %}
 

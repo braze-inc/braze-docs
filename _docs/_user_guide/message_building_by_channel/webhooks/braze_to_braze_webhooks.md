@@ -82,7 +82,7 @@ The following is an example of both the required Liquid and request body for thi
 {% endraw %}
 
 {% alert note %}
-Each time a custom attribute counter is updated (incremented or decremented) it will consume a [data point]({{site.baseurl}}/user_guide/data/data_points/), which counts toward your overall consumption.
+Each time a custom attribute counter is updated (incremented or decremented) it will log a [data point]({{site.baseurl}}/user_guide/data/data_points/), which counts toward your overall consumption.
 {% endalert %}
 
 ### Use case: Trigger a second Canvas from an initial Canvas
@@ -133,7 +133,7 @@ Add your `canvas/trigger/send` request in the text field. For more details, refe
 ## Things to know
 
 - Braze-to-Braze webhooks are subject to endpoint [rate limits]({{site.baseurl}}/api/api_limits/).
-- Updates to the user profile will incur additional [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count), while triggering another message through the messaging endpoints will not.
+- Updates to the user profile will log additional [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count), while triggering another message through the messaging endpoints will not.
 - If you want to target [anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), you can use `braze_id` instead of `external_id` in the request body of your webhook.
 - You can save your Braze-to-Braze webhook as a [template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) to be used again.
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) to view and troubleshoot webhook failures.

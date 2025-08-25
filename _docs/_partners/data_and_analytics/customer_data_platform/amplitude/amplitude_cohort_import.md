@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Data import integration
 
-Any integration you set up will count toward your account's data point volume.
+If your Braze pricing includes data points, any integration you set up will log data points.
 
 ### Step 1: Get the Braze data import key
 
@@ -43,7 +43,7 @@ Only users who already exist within Braze will be added or removed from a cohort
 
 #### Defining sync cadence
 
-Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/data/data_points/).
+Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. If your Braze pricing includes data points, make sure to select an option that makes sense for your business needs while also being mindful of logging [data points]({{site.baseurl}}/user_guide/data/data_points/).
 
 ### Step 4: Segment users in Braze
 

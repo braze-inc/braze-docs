@@ -194,7 +194,7 @@ These segmentation filters include:
 - Has made any purchases with property Y with value V X times in the last Y days
 - Adds 1-30 day segmentation on all purchases, events, and properties within purchases and events
 
-Unlike with [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
+Unlike with [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and log data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
 
 When approved, additional properties can be added in the dashboard under **Data Settings** > **Custom Events** by selecting **Manage Properties**. You can then use these event properties in the target step of the campaign or Canvas builder.
 
@@ -214,7 +214,7 @@ This helps make products easy to identify for segmentation and triggering.
 
 ## Blocklisting purchase events
 
-You may occasionally identify purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
+You may occasionally identify purchase events that either log too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
 
 In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) to learn more.
 

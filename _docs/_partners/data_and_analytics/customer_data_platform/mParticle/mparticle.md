@@ -33,7 +33,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 
 ### Audiences
 
-Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. Any integration you set up will count toward your account's data point volume.
+Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. If your Braze pricing includes data points, any integration you set up will log data points.
 
 #### Forwarding Audiences
 
@@ -247,11 +247,11 @@ Forward erasure requests to Braze by configuring a data subject request output t
 
 #### Enabling enrich user attributes/identities (server-to-server only) {#enriched}
 
-In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
+In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in a high volume of logged data points because mParticle will send Braze the same unchanged attributes on each call.
 
 For example, if a user adds first name, last name, and phone number during their first session and later signs up for a newsletter adding the same information, in addition to email, triggering a newsletter sign-up event:
-- If turned on (default), five data points will be incurred. (sign-up event, email address, first name, last name, and phone number)
-- If turned off, two data points will be incurred (sign-up event and email address)
+- If turned on (default), five data points will be logged. (sign-up event, email address, first name, last name, and phone number)
+- If turned off, two data points will be logged (sign-up event and email address)
 
 {% alert note %}
 Turning off this setting won't check for changing data. It will, however, prevent the integration from sending all user attributes on the user's profile that weren't received on the original inbound batch or explicitly set as an attribute for the event. It is important to still check that only deltas are passed to Braze.
@@ -261,9 +261,9 @@ Turning off this setting won't check for changing data. It will, however, preven
 
 There are a few considerations to be aware of when turning off **Include Enriched User Attributes**:
 1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (for example, a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
-  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note that with this approach, you are still logging an additional data point for the "user attribute updated" event, but data point consumption will be far less than sending all user attributes on every call with the feature enabled.
+  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note that with this approach, you are still logging an additional data point for the "user attribute updated" event, but data point logging will be far less than sending all user attributes on every call with the feature enabled.
 2. Calculated Attributes are passed to Braze as an enriched user attribute, so when "Enriched User Attributes" is turned off these will no longer be passed to Braze. To forward calculated attributes to Braze when "Enriched User Attributes" are turned off, a [calculated attribute feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) could help without pushing all the attributes. The feed will fire an update downstream to Braze when a calculated attribute changes. 
 
 ### Sending unnecessary or duplicate data to Braze
-Braze counts a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.
+Braze logs a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.
 

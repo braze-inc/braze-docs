@@ -264,9 +264,9 @@ If your Braze pricing includes data points, keep in mind that importing CSV data
 
 | Consideration | Details |
 |---|---|
-| External IDs | Uploading a CSV with only `external_id` doesn't consume data points. This allows you to segment existing Braze users. However, including additional fields like `email` or `phone` will overwrite existing user data and consume data points. <br><br>CSV imports used only for segmentation don't consume data points, such as those containing just `external_id`, `braze_id`, or `user_alias_name`. |
+| External IDs | Uploading a CSV with only `external_id` doesn't log data points. This allows you to segment existing Braze users. However, including additional fields like `email` or `phone` will overwrite existing user data and log data points. <br><br>CSV imports used only for segmentation don't log data points, such as those containing just `external_id`, `braze_id`, or `user_alias_name`. |
 | Blank values | Blank values in your CSV won't overwrite existing user profile data. You don't need to include all user attributes or custom events when importing. |
-| Subscription states | Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` doesn't consume data points. |
+| Subscription states | Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` doesn't log data points. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
