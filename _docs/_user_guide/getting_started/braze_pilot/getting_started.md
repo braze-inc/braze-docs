@@ -26,7 +26,7 @@ Braze Pilot enables you to initialize the Braze SDK against any Braze dashboard.
 
 There are two methods for configuring the SDK connection in Pilot.
 
-### Method 1: Demo QR cores
+### Method 1: Demo QR codes
 
 Scan a QR code that includes all details required to initialize the SDK, create your user profile, and deep link you to a particular app simulation in Braze Pilot. Demo QR codes are rendered in the companion drawer for particular demo campaigns in your free trial.
 
