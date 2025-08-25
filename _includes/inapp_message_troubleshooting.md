@@ -33,7 +33,7 @@
 3. Depending on circumstances, in-app messages will either download or load relevant images from disk prior to display. If you are on a slow network connection or a very low performance devices, this process may take time. Ensure that your images are optimized to be as small as possible.
 {% endcase %}
 
-For more in-depth discussion of these scenarios, visit [the advanced troubleshooting section](#troubleshooting-in-app-advanced).
+For more in-depth discussion of these scenarios, visit <a id="troubleshooting-in-app-advanced">the advanced troubleshooting section</a>.
 
 ## Issues with Impressions and Click Analytics
 
@@ -64,7 +64,7 @@ If you have set an in-app message delegate to manually handle message display or
 
 ## Advanced Troubleshooting {#troubleshooting-in-app-advanced}
 
-Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, confirm that the [in-app message was delivered to the device](#troubleshooting-in-app-message-delivery), then [troubleshoot message display](#troubleshooting-in-app-message-display).
+Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, confirm that the <a id="troubleshooting-in-app-message-delivery">in-app message was delivered to the device</a>, then <a id="troubleshooting-in-app-message-display">troubleshoot message display</a>.
 
 ### Troubleshooting delivery {#troubleshooting-in-app-message-delivery}
 

@@ -2,7 +2,7 @@
 
 ## About HTML messages
 
-With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The interface's [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
+With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) is responsible for:
 
 1. Injecting the Braze JavaScript bridge into your WebView, as outlined in [User Guide: HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
 2. Passing the bridge methods received from your WebView to the [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk).
