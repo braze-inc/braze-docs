@@ -519,19 +519,19 @@ To access a banner's custom properties, use one of the following methods based o
 // Returns the Banner instance
 const banner = braze.getBanner("placement_id_homepage_top");
 
-// Returns the String property
+// Returns the string property
 const stringProperty = banner.getStringProperty("color");
 
-// Returns the Boolean property
+// Returns the boolean property
 const booleanProperty = banner.getBooleanProperty("expanded");
 
-// Returns the Number property
+// Returns the number property
 const numberProperty = banner.getNumberProperty("height");
 
-// Returns the Timestamp property (as a Number)
+// Returns the timestamp property (as a Number)
 const timestampProperty = banner.getTimestampProperty("account_start");
 
-// Returns the Image URL property as a String of the URL
+// Returns the image URL property as a String of the URL
 const imageProperty = banner.getImageProperty("homepage_icon");
 
 // Returns the JSON object property as an object in form of JsonPropertyValue
@@ -571,19 +571,19 @@ AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner 
 // Returns the Banner instance
 Banner banner = Braze.getInstance(context).getBanner("placement_id_homepage_top");
 
-// Returns the String property
+// Returns the string property
 String stringProperty = banner.getStringProperty("color");
 
-// Returns the Boolean property
+// Returns the boolean property
 Boolean booleanProperty = banner.getBooleanProperty("expanded");
 
-// Returns the Number property
+// Returns the number property
 Number numberProperty = banner.getNumberProperty("height");
 
-// Returns the Timestamp property (as a Long)
+// Returns the timestamp property (as a Long)
 Long timestampProperty = banner.getTimestampProperty("account_start");
 
-// Returns the Image URL property as a String of the URL
+// Returns the image URL property as a String of the URL
 String imageProperty = banner.getImageProperty("homepage_icon");
 
 // Returns the JSON object property as a JSONObject
@@ -596,19 +596,19 @@ JSONObject jsonObjectProperty = banner.getJSONProperty("footer_settings");
 // Returns the Banner instance
 val banner: Banner = Braze.getInstance(context).getBanner("placement_id_homepage_top") ?: return
 
-// Returns the String property
+// Returns the string property
 val stringProperty: String? = banner.getStringProperty("color")
 
-// Returns the Boolean property
+// Returns the boolean property
 val booleanProperty: Boolean? = banner.getBooleanProperty("expanded")
 
-// Returns the Number property
+// Returns the number property
 val numberProperty: Number? = banner.getNumberProperty("height")
 
-// Returns the Timestamp property (as a Long)
+// Returns the timestamp property (as a Long)
 val timestampProperty: Long? = banner.getTimestampProperty("account_start")
 
-// Returns the Image URL property as a String of the URL
+// Returns the image URL property as a String of the URL
 val imageProperty: String? = banner.getImageProperty("homepage_icon")
 
 // Returns the JSON object property as a JSONObject
