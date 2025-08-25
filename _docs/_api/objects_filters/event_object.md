@@ -72,6 +72,17 @@ Property values can be any of the following data types:
 
 Event property objects that contain array or object values can have an event property payload of up to 100&nbsp;KB.
 
+### Reserved keys
+
+The following keys are reserved and cannot be used as custom event properties:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+Using reserved keys as custom event property names will result in API errors when sending requests to the `/users/track` endpoint.
+{% endalert %}
+
 ### Event property persistence
 
 Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), which details the various approaches to storing event property values long-term.
