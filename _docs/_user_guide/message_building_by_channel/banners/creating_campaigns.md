@@ -64,9 +64,22 @@ You can add custom properties to a Banner to attach structured metadata, such as
 - Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
 - Detect control variants and decide whether to hide a container or show alternate content.
 
-To add a custom property,...
+To add a custom property, select **Settings** > **Properties** > **Add property**.
 
-![ALT_TEXT.]()
+![The properties page showing the option to add the first custom property to a Banner campaign.]({% image_buster /assets/img/banners/add_property.png %})
+
+For each property you'd like to add, fill out the following:
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| Property type | The data type for the property. Supported types include string, boolean, number, timestamp, image URL, and JSON object. | String |
+| Property key | The unique identifier for the property. This key is used in the SDK to access the property. | `color` |
+| Value | The value assigned to the property. Must match the selected property type. | `#FF0000` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+When you're finished, select **Done**.
+
+![The properties page with a string property with a key of color and value of #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
 ### Step 4: Set campaign duration
 
