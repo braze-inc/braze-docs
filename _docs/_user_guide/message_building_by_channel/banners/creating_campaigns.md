@@ -55,7 +55,7 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 #### Step 3.3: Add custom properties (optional) {#custom-properties}
 
 {% alert important %}
-The Braze translation endpoints are currently in early access. Contact your Braze account manager if you're interested in participating.
+Custom properties for Banners are currently in early access. Contact your Braze account manager if you're interested in participating
 {% endalert %}
 
 You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/managing_placements/#accessing-properties) to modify your app’s behavior or appearance. For example, you could:
