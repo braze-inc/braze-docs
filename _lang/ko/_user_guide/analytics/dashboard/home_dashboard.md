@@ -13,10 +13,6 @@ tool:
 
 > 대시보드의 **홈** 페이지에서는 앱 또는 웹사이트의 성과를 추적하고 이해할 수 있는 주요 지표를 제공하며, 사용자층을 한눈에 파악할 수 있는 높은 수준의 정보를 제공합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지가 **개요** 페이지입니다.
-{% endalert %}
-
 ![Braze의 홈 대시보드.][1]
 
 **홈** 페이지에는 두 개의 주요 섹션이 있습니다:
@@ -62,7 +58,7 @@ tool:
 ### 평생 세션
 
 *평생 세션은* 통합 이후 Braze가 기록한 총 세션 수입니다. 간단히 말해, 세션은 사용자가 앱을 사용하거나 웹사이트를 방문할 때마다 발생합니다. 플랫폼별로 세션이 정의되는 방식에 대한 보다 정확한 정의는 해당 플랫폼의
-[iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), or [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/) session tracking developer articles.
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), or [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) session tracking developer articles.
 
 ### 월간 활성 사용자
 

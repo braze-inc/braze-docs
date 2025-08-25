@@ -63,7 +63,7 @@ WhatsApp의 클릭 추적 기능은 현재 얼리 액세스 중입니다. Contac
 
 !["버튼 이름, 웹사이트 URL, 클릭 추적 URL 필드가 있는 '버튼' 섹션입니다.][5]{: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include click_tracking.md section='사용자 정의 도메인' %}
 
 ## URL의 유동적 개인화
 
@@ -115,7 +115,7 @@ Braze는 API 트리거 프로퍼티에 포함된 URL을 포함하여 Liquid에�
 
 !['클릭한 추적된 WhatsApp 링크'에 대한 필터를 사용하여 그룹을 필터링합니다.][8]
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include click_tracking.md section='자주 묻는 질문' %}
 
 ### 어떤 개별 사용자가 URL을 클릭하는지 알 수 있나요?
 

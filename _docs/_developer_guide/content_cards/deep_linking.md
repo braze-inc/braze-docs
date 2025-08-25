@@ -1,5 +1,5 @@
 ---
-nav_title: Deep Linking
+nav_title: Deep linking
 article_title: Deep Linking in Content Cards
 page_order: 4
 description: "Learn how deep link within a Content Card using the Braze SDK."

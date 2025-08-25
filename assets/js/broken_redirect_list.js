@@ -2670,6 +2670,7 @@ validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs'] = '/
 validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#location-tracking'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking';
 validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences';
 
+validurls['/docs/help/accessibility'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/accessibility';
 validurls['/docs/home/templates/reference/'] = '/docs/contributing/content_types/#references';
 validurls['/docs/home/templates/reference_video/'] = '/docs/contributing/content_types/#references';
 validurls['/docs/user_guide/brazeai/recommendations/types_and_use_cases/'] = '/docs/user_guide/brazeai/recommendations/';
@@ -2686,5 +2687,10 @@ validurls['/docs/developer_guide/sdk_integration/initialization/'] = '/docs/deve
 
 validurls['/docs/auto_advance/'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
+
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/catalog_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/use_cases/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/use_cases/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/';
 
 // validurls['OLD'] = 'NEW';

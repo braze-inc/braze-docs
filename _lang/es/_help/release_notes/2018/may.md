@@ -15,7 +15,7 @@ Una vez activado, puedes iniciar sesión en la aplicación Braze utilizando el b
 
 ## Plantillas de correo electrónico receptivas para móviles
 
-Braze tiene 16 nuevas [plantillas de correo electrónico][97] receptivo móvil que se ajustan a las necesidades comunes de marketing por correo electrónico. Incluyen diferentes versiones de los siguientes temas de plantilla:
+Braze tiene 16 nuevas [plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template) receptivo móvil que se ajustan a las necesidades comunes de marketing por correo electrónico. Incluyen diferentes versiones de los siguientes temas de plantilla:
 
 - Te damos la bienvenida
 - Gracias
@@ -29,4 +29,3 @@ Braze tiene 16 nuevas [plantillas de correo electrónico][97] receptivo móvil q
 Verás que los iconos que representan a cada plantilla te mostrarán su diseño.
 
 
-[97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

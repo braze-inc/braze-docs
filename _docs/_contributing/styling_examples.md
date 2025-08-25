@@ -1,5 +1,5 @@
 ---
-nav_title: Styling Examples
+nav_title: Styling examples
 article: Styling examples
 description: "This is how pages are styled on Braze Docs, including headers, tabs, codeblocks, and more."
 page_order: 8 
@@ -417,6 +417,10 @@ This is a update
 #### Embedded Video/YouTube
 Defaults to YouTube embedded.
 {% multi_lang_include video.html id="9SrKbY4BV2E" source="youtube" %}
+
+#### Embedded Video/Wistia
+Embeds a Wistia video.
+{% multi_lang_include video.html id="c5lgi4xnvo" source="wistia" %}
 
 #### Embedded Video Right Align
 {% multi_lang_include video.html id="9SrKbY4BV2E" align="right" source="youtube" %}

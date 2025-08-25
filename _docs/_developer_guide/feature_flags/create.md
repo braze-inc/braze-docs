@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Feature Flags
+nav_title: Creating feature flags
 article_title: Creating Feature Flags
 page_order: 20
 description: "This reference article covers how to create feature flags to coordinate new feature rollouts."
@@ -105,7 +105,7 @@ Be sure to log [feature flag impressions](#impressions).
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
@@ -128,7 +128,9 @@ if featureFlag?.enabled == true {
 }
 ```
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
 if (featureFlag != null && featureFlag.getEnabled()) {
@@ -138,8 +140,8 @@ if (featureFlag != null && featureFlag.getEnabled()) {
 }
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
@@ -150,6 +152,8 @@ if (featureFlag?.enabled == true) {
 }
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -214,7 +218,7 @@ Track a feature flag impression whenever a user has had an opportunity to intera
 Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 braze.logFeatureFlagImpression("expanded_user_profile");
@@ -228,19 +232,23 @@ braze.featureFlags.logFeatureFlagImpression(id: "expanded_user_profile")
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 
 ```java
 braze.logFeatureFlagImpression("expanded_user_profile");
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 braze.logFeatureFlagImpression("expanded_user_profile")
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -280,7 +288,7 @@ To access the properties of a feature flag, use one of the following methods dep
 If there is no such property of the corresponding type for the key you provided, these methods will return `null`.
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 // Returns the Feature Flag instance
@@ -332,7 +340,9 @@ let jsonObjectProperty: [String: Any]? = featureFlag.jsonObjectProperty(key: "fo
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 
 ```java
 // Returns the Feature Flag instance
@@ -357,8 +367,8 @@ String imageProperty = featureFlag.getImageProperty("homepage_icon");
 JSONObject jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 // Returns the Feature Flag instance
@@ -383,6 +393,8 @@ val imageProperty: String?  = featureFlag.getImageProperty("homepage_icon")
 val jsonObjectProperty: JSONObject? = featureFlag.getJSONProperty("footer_settings")
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -513,7 +525,7 @@ footer_settings = featureFlag.getJSONProperty("footer_settings")
 ### Getting a list of all feature flags {#get-list-of-flags}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 const features = getAllFeatureFlags();
@@ -533,7 +545,9 @@ for let feature in features {
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 
 ```java
 List<FeatureFlag> features = braze.getAllFeatureFlags();
@@ -542,8 +556,8 @@ for (FeatureFlag feature: features) {
 }
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 val featureFlags = braze.getAllFeatureFlags()
@@ -552,6 +566,8 @@ featureFlags.forEach { feature ->
 }
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -608,7 +624,7 @@ Refreshing happens automatically upon session start. Refreshing is only needed p
 {% endalert %}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 braze.refreshFeatureFlags(() => {
@@ -633,19 +649,23 @@ braze.featureFlags.requestRefresh { result in
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 
 ```java
 braze.refreshFeatureFlags();
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 braze.refreshFeatureFlags()
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 
@@ -685,7 +705,7 @@ You can configure the Braze SDK to listen and update your app when the SDK refre
 This is useful if you want to update your app if a user is no longer eligible for a feature. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 
 ```javascript
 // Register an event listener
@@ -710,7 +730,9 @@ subscription.cancel()
 ```
 
 {% endtab %}
-{% tab Java %}
+{% tab Android %}
+{% subtabs local %}
+{% subtab Java %}
 
 ```java
 braze.subscribeToFeatureFlagsUpdates(event -> {
@@ -721,8 +743,8 @@ braze.subscribeToFeatureFlagsUpdates(event -> {
 });
 ```
 
-{% endtab %}
-{% tab Kotlin %}
+{% endsubtab %}
+{% subtab Kotlin %}
 
 ```kotlin
 braze.subscribeToFeatureFlagsUpdates() { event ->
@@ -733,6 +755,8 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 }
 ```
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab React Native %}
 

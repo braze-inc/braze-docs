@@ -18,15 +18,15 @@ Hay dos soluciones posibles cuando ves `0` usuarios, pero anticipaste más:
 
 Las estadísticas del segmento podrían estar proporcionando una estimación. La estimación se calcula a partir de una muestra aleatoria con un intervalo de confianza del 95 % de que el resultado está dentro de `+/- 1%`. Cuanto menor sea tu base de usuarios, más probable es que el tamaño de tu segmento sea una estimación aproximada. Haz clic en **Calcular estadísticas exactas** en el panel **Detalles del segmento**. Esto calculará el número exacto de usuarios de tu segmento.
 
-![Panel de detalles del segmento que muestra la opción Calcular estadísticas exactas][28]
+![Panel de detalles del segmento que muestra la opción Calcular estadísticas exactas]({% image_buster /assets/img_archive/trouble8.png %})
 
 ## Verifica la transferencia de datos
 
-Es posible que los datos que estás filtrando no se estén enviando a Braze. Para comprobar qué eventos personalizados se envían a Braze, consulta tu [Informe de eventos personalizados][1].
+Es posible que los datos que estás filtrando no se estén enviando a Braze. Para comprobar qué eventos personalizados se envían a Braze, consulta tu [Informe de eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics).
 
 Selecciona el evento personalizado junto con las fechas y la aplicación específicas para ver qué datos se transfieren realmente a Braze. Si observas que se están enviando datos `0` a Braze, el siguiente paso es evaluar cómo estás enviando los eventos a Braze.
 
-![Gráfico que muestra el recuento de eventos personalizados como cero][29]
+![Gráfico que muestra el recuento de eventos personalizados como cero]({% image_buster /assets/img_archive/trouble9.png %})
 
 {% alert important %}
 Los datos que ves en el panel de Braze pueden no tener la misma sintaxis que los que envías a Braze. Asegúrate de que coinciden exactamente.
@@ -36,6 +36,3 @@ Los datos que ves en el panel de Braze pueden no tener la misma sintaxis que los
 
 _Última actualización el 5 de enero de 2021_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics
-[28]: {% image_buster /assets/img_archive/trouble8.png %}
-[29]: {% image_buster /assets/img_archive/trouble9.png %}

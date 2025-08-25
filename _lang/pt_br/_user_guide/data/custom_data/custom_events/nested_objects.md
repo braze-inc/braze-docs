@@ -33,7 +33,7 @@ Você pode acessar os dados aninhados em seu evento personalizado gerando um esq
 2. Selecione **Gerenciar Propriedades** para os eventos com propriedades aninhadas.
 3. Selecione o botão <i class="fas fa-arrows-rotate"></i> para gerar o esquema. Para visualizar o esquema, selecione o botão <i class="fas fa-plus"></i> de adição.
 
-![][6]{: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 Se novas propriedades forem enviadas no futuro, elas não estarão no esquema até que seja regenerado. Os esquemas podem ser regenerados a cada 24 horas.
 
@@ -169,7 +169,7 @@ Se a propriedade do seu evento contiver os caracteres `[]` ou `.`, escape-os col
 
 Para segmentar usuários com base em propriedades de eventos aninhados, você deve usar [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Depois de gerar um esquema, o explorador de objetos aninhados será exibido na seção de segmentação. 
 
-![][4]
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 A segmentação usa a mesma notação que o gatilho (veja [Gatilho de mensagem](#message-triggering)).
 
@@ -179,7 +179,7 @@ Para editar ou criar extensões de segmento, você precisará da permissão "Edi
 
 Usando o modal **Adicionar Personalização**, selecione **Propriedades Avançadas do Evento** como o tipo de personalização. Isso permite a opção de adicionar propriedades de eventos aninhados após um esquema ter sido gerado.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## Perguntas frequentes
 
@@ -191,6 +191,3 @@ Não há mudança na forma como cobramos pontos de dados como resultado da adiç
 
 Se uma ou mais propriedades do evento contiverem dados aninhados, a carga útil máxima para todas as propriedades combinadas em um evento é de 100 KB. Qualquer solicitação acima desse limite de tamanho será rejeitada.
 
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}

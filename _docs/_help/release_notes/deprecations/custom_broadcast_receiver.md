@@ -1,5 +1,5 @@
 ---
-nav_title: Push Callback Broadcast Receiver
+nav_title: Push callback broadcast receiver
 article_title: Custom Broadcast Receiver Push Callback for Android
 description: "This reference article covers creating a custom Broadcast Receiver for Android push notifications"
 ---

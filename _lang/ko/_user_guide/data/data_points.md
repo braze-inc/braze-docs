@@ -25,10 +25,6 @@ search_rank: 6
 
 데이터 포인트 사용량을 확인하려면 **설정** > **청구로** 이동하여 **총 데이터 포인트 사용량** 탭을 선택하세요.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우, 계정 아이콘 > **구독 및 사용량** > **총 데이터 포인트 사용량을** 선택하면 이 페이지를 찾을 수 있습니다.
-{% endalert %}
-
 데이터 포인트 대시보드 구성 요소에 대한 자세한 내용은 [결제]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/)를 참조하세요.
 
 {% alert tip %}

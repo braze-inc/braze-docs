@@ -1,5 +1,5 @@
 ---
-nav_title: Export Revenue & Total Revenue Data
+nav_title: Export revenue & total revenue data
 article_title: Export Revenue & Total Revenue Data
 page_order: 4
 page_type: reference
@@ -41,7 +41,7 @@ The following data can be viewed in the **Performance Over Time** graph:
 
 You can view revenue statistics on a case-by-case basis on the [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) or [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages. 
 
-{% multi_lang_include metrics.md metric='Total Revenue' %}
+{% multi_lang_include analytics/metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
 Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

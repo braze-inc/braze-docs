@@ -19,15 +19,15 @@ Braze는 사용자가 Google에 등록하거나 필요한 보안 요건을 충�
 
 | 요구 사항   | 설명 |
 | --------------| ----------- |
-| 이메일용 AMP 사용 설정 | AMP는 누구나 사용할 수 있습니다. 이 기능을 사용하려면 계정 매니저에게 문의하세요. |
+| 이메일용 AMP 사용 설정 | AMP는 모든 사용자가 사용할 수 있습니다. |
 | Gmail 계정 활성화 | [Gmail 계정 활성화](#enabling-gmail-account)를 참조하세요. |
 | Google 발신자 인증 | Gmail은 DKIM, SPF 및 DMARC를 사용하여 AMP 이메일의 [발신자를 인증합니다](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication). 계정에 대해 설정해야 합니다. <br><br>- [도메인 키 식별 메일](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail)(DKIM) <br>- [발신자 정책 프레임워크](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [도메인 기반 메시지 인증, 보고 및 적합성](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | AMP 이메일 요소 | 매력적인 AMP 이메일에는 다양한 구성 요소를 전략적으로 사용하는 것이 포함됩니다. 아래 [구성 요소](#components) 섹션의 필수 탭을 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### 지원되는 클라이언트
+### 지원되는 이메일 클라이언트
 
-사용자에게 AMP 이메일을 보내려면 먼저 고객사에 등록해야 합니다. 등록 절차에는 승인을 받기 위해 테스트 AMP HTML 이메일을 보내는 과정이 포함됩니다. 승인 시간은 고객마다 다릅니다. 자세한 내용은 등록 링크를 참조하세요.
+사용자에게 AMP 이메일을 보내려면 먼저 이메일 클라이언트에 등록해야 합니다. 등록 절차에는 승인을 받기 위해 테스트 AMP HTML 이메일을 보내는 과정이 포함됩니다. 승인 시간은 고객마다 다릅니다. 자세한 내용은 등록 링크를 참조하세요.
 
 | 클라이언트 | 등록 링크 |
 | ------ | -------- |
@@ -36,7 +36,7 @@ Braze는 사용자가 Google에 등록하거나 필요한 보안 요건을 충�
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-지원되는 플랫폼의 전체 목록은 [AMP 설명서](https://amp.dev/support/faq/email-support)를 참조하세요. 
+지원되는 이메일 클라이언트의 전체 목록은 [AMP 설명서를](https://amp.dev/support/faq/email-support) 참조하세요.
 
 ### Gmail 계정 사용 설정
 
@@ -87,10 +87,12 @@ AMP 이메일을 작성할 때는 AMP 코드가 HTML 편집기에 추가되어�
 
 ### 구성요소
 
+AMP 요소를 구축할 때는 엔지니어링 팀과 협의하여 디자인 리소스와 요소를 추가하여 완성도를 높일 것을 권장합니다.
+
 {% tabs %}
   {% tab 필수 항목 %}
 
-이것이 바로 AMP HTML email...AMP'ed'를 만드는 요소입니다! 이러한 각 요소는 AMP 이메일 본문에 필수적으로 포함되어야 합니다.
+이러한 각 요소는 AMP 이메일 본문에 필수적으로 포함되어야 합니다.
 
 | 구성 요소 | 설명 | 예시 |
 |---------|--------------|---------|
@@ -211,11 +213,11 @@ Liquid와 마찬가지로 AMP는 고급 사용 사례를 위한 스크립팅 언
     <tbody>
         <tr>
             <td class="no-split">총 열람 수</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='총 열람 횟수' %} AMP 이메일의 경우 HTML 및 일반 텍스트 버전의 총 열람 횟수입니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} AMP 이메일의 경우 HTML 및 일반 텍스트 버전의 총 열람 횟수입니다.</td>
         </tr>
         <tr>
             <td class="no-split">총 클릭 수</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='총 클릭 수' %} AMP 이메일의 경우 HTML 및 일반 텍스트 버전의 총 클릭 수입니다.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} AMP 이메일의 경우 HTML 및 일반 텍스트 버전의 총 클릭 수입니다.</td>
         </tr>
         <tr>
             <td class="no-split">AMP 열람 수</td>
@@ -235,22 +237,19 @@ Liquid와 마찬가지로 AMP는 고급 사용 사례를 위한 스크립팅 언
 AMP 이메일을 보내기 전에 다음 [Gmail 가이드라인](https://developers.google.com/gmail/ampemail/testing-dynamic-email)에 따라 테스트하는 것이 좋습니다.
 
 AMP 이메일이 Gmail 계정으로 전달되려면 이메일이 다음 조건을 충족해야 합니다.
+
 - 이메일용 AMP 보안 요구 사항을 충족해야 합니다.
 - AMP MIME 부분에는 유효한 AMP 문서가 포함되어야 합니다.
 - 이메일에는 HTML MIME 부분 앞에 AMP MIME 부분이 포함되어야 합니다.
 - AMP MIME 부분은 100KB보다 작아야 합니다.
 
-이러한 조건 중 어느 것도 오류의 원인이 되지 않는 경우 [지원][지원]으로 문의하세요.
+이러한 조건 중 어느 것도 오류의 원인이 되지 않는 경우 [지원팀에]({{site.baseurl}}/support_contact/) 문의하세요.
 
 ### 자주 묻는 질문
 
-{% details AMP 이메일로 세분화해야 하나요? %}
-다양한 유형의 사용자에게 모두 전송하기 위해 세분화하지 않는 것을 권장합니다. 이는 원본 이메일에 여러 버전이 포함된 AMP 메시지를 여러 부분으로 전송하기 때문입니다. 사용자가 AMP 버전을 볼 수 없는 경우 기본적으로 HTML로 돌아갑니다.
-{% enddetails %}
+#### AMP 이메일로 세분화해야 하나요?
 
-{% details AMP 이메일 구축을 위한 추가 팁이 있나요? %}
-엔지니어링 팀에 문의하여 AMP 요소를 구축하세요. 이러한 요소를 설정한 후에는 디자인 리소스와 추가적으로 다듬어야 할 요소를 포함하는 것이 좋습니다.
-{% enddetails %}
+다양한 유형의 사용자에게 모두 전송하기 위해 세분화하지 않는 것을 권장합니다. 이는 원본 이메일에 여러 버전이 포함된 AMP 메시지를 여러 부분으로 전송하기 때문입니다. 사용자가 AMP 버전을 볼 수 없는 경우 기본적으로 HTML로 돌아갑니다. 
+
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}
-[지원]: {{site.baseurl}}/support_contact/

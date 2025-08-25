@@ -1,5 +1,5 @@
 ---
-nav_title: User Profiles
+nav_title: User profiles
 article_title: User Profiles
 page_order: 9
 page_type: reference
@@ -138,5 +138,14 @@ Content Cards sends are logged when the card is available to be viewed. Because 
 Email open tracking is error-prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives.
 
 While email open statistics can be useful in aggregate, for example, to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
+
+#### Why are certain fields blank in the Message History tab?
+
+Some fields may be absent in a user's **Message History** tab in the following scenarios:
+
+- When an event is missing data for **Message Sent**, this indicates that the campaign doesn't have any message variations.
+- When an event is missing data for **Campaign/Canvas** and **Message Sent**, this indicates that this message was sent from an API campaign (not API-triggered campaigns) that didn't specify the `campaign_id` and `message_variation_id`. These fields are optional and may be left out of the request body. When these fields are specified, that information is populated into the message history logs.
+   - If a particular message is missing entirely from the messaging history but appears in the **Campaigns Received** log, it's likely the user received the campaign before being identified as the current user. If an existing profile is orphaned, the **Campaigns Received** log is transferred, but the messaging history is not. 
+- When data is missing for **Campaign/Canvas**, a manual test may have been sent. Manual tests are logged in the **Messaging History** tab, but the campaign or Canvas that was sent won't be logged.
 
 

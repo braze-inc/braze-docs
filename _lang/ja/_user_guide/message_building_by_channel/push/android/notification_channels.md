@@ -12,13 +12,13 @@ channel:
 
 # 通知チャネル
 
-> [通知チャネル][1]では、Android O で追加されたプッシュ通知を整理することができます。O で始まるすべてのプッシュ通知には、メッセージの種類 (「チャット通知」や「フォロー通知」など) を示す通知チャネルが必要です。これにより、ユーザーは個々のチャネルに基づいて通知のコントロール機能 (例えば、スヌーズ、ノイズ/バイブレーション設定、オプトアウトなど) を操作できます。
+> [通知チャネル](https://www.braze.com/blog/android-o-push-notifications-channels/)では、Android O で追加されたプッシュ通知を整理することができます。O で始まるすべてのプッシュ通知には、メッセージの種類 (「チャット通知」や「フォロー通知」など) を示す通知チャネルが必要です。これにより、ユーザーは個々のチャネルに基づいて通知のコントロール機能 (例えば、スヌーズ、ノイズ/バイブレーション設定、オプトアウトなど) を操作できます。
 
 ## Android Oへの遷移
 
 通知チャネルは、アプリケーションのコード内でのみ作成でき、Braze ダッシュボードでプログラムを使って作成することはできません。必要な通知チャネルがダッシュボードに適切に追加されるように、開発チームとマーケターが協力して作業を進めるようにしてください。
 
-Android O 以降、プッシュ通知を表示するために有効なチャネルが必要になります。アプリが Android O 以降をターゲットとしている場合は、Braze SDK 2.1.0 以降を使用する必要があります。開発チームは、使用するチャネルと、推奨される通知設定 (例えば重要度、サウンド、ライトなど) を、アプリケーションコード内でチャネルごとに定義する必要があります。Android の開発者ドキュメントは[こちら][4]、Braze の開発者ドキュメントは[こちら][2]を参照してください。
+Android O 以降、プッシュ通知を表示するために有効なチャネルが必要になります。アプリが Android O 以降をターゲットとしている場合は、Braze SDK 2.1.0 以降を使用する必要があります。開発チームは、使用するチャネルと、推奨される通知設定 (例えば重要度、サウンド、ライトなど) を、アプリケーションコード内でチャネルごとに定義する必要があります。Android の開発者ドキュメントは[こちら](https://developer.android.com/preview/features/notification-channels.html)、Braze の開発者ドキュメントは[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels)を参照してください。
 
 {% alert note %}
 Android はチャネル名のローカライゼーションをサポートしているため、アプリケーションのコードで 1 つのチャネル ID を多言語によるチャネル名に関連付けることが可能です。
@@ -75,11 +75,11 @@ Braze に無効なチャネル ID が提供された場合 (開発者が SDK で
 
 通知チャネルを特定のキャンペーンまたはキャンバスステップに適用すると、Android プッシュ通知の**到達可能なユーザー数**の統計 (ターゲットオーディエンスステップにあります) は変更されません。ただし、選択した通知 チャネルにサブスクライブされているユーザーのみがメッセージを表示し、このオーディエンスに基づいてキャンペーン 分析(クリックなど) が測定されます。
 
-![][6]
+![]({% image_buster /assets/img_archive/Click_Here.png %})
 
 {:start="4"}
 4\.[**通知チャネルを追加**] をクリックします。
-5. 追加する通知 チャネルの名前とID を入力します。<br><br>![][8]<br><br>
+5. 追加する通知 チャネルの名前とID を入力します。<br><br>![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
 6. 追加する通知チャネルそれぞれについてステップ 4 と 5 を繰り返します。
 7. **Save** を押して変更を保存します。
 
@@ -89,7 +89,7 @@ Braze に無効なチャネル ID が提供された場合 (開発者が SDK で
 
 1. 既存のキャンペーンまたはキャンバスを開きます。
 2. Android のプッシュ通知作成画面に移動します。
-3. 通知 チャネル項目を展開した後、**管理通知 チャネルs**を選択します。<br><br>![][9]{: style="max-width:80%;"}<br><br>
+3. 通知 チャネル項目を展開した後、**管理通知 チャネルs**を選択します。<br><br>![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
 4. チャネルをダッシュボードに追加します(まだ追加されていない場合)。
 5. フォールバック チャネルとして指定したいチャネルの横にあるラジオダイアルを選択します。
 6. 変更を保存します。変更はグローバルに適用されます。
@@ -99,14 +99,6 @@ Braze に無効なチャネル ID が提供された場合 (開発者が SDK で
 1. 任意のキャンペーンまたはキャンバスのAndroidプッシュコンポーザーに移動します。
 2. 使用するチャネルをドロップダウンから選択します。ドロップダウンがなく、次のビューがある場合は、まずチャネルを追加してからキャンペーンを選択する必要があります。
 
-![][10]
+![]({% image_buster /assets/img_archive/No_Select.png %})
 
-[1]: https://www.braze.com/blog/android-o-push-notifications-channels/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels
-[4]: https://developer.android.com/preview/features/notification-channels.html
-[6]: {% image_buster /assets/img_archive/Click_Here.png %}
-[8]: {% image_buster /assets/img_archive/Enter_Channel.png %}
-[9]: {% image_buster /assets/img_archive/Change_Fallback.png %}
-[10]: {% image_buster /assets/img_archive/No_Select.png %}
-[11]: {% image_buster /assets/img_archive/Select_Channel.png %}

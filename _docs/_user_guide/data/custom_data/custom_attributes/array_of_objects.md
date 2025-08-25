@@ -1,5 +1,5 @@
 ---
-nav_title: Array of Objects
+nav_title: Array of objects
 article_title: Array of Objects
 alias: "/array_of_objects/"
 page_order: 0
@@ -10,6 +10,8 @@ description: "This reference article covers using an array of objects as a data 
 # Array of objects
 
 > This page covers how to use an array of objects to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
+
+{% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
 ## Limitations
 
@@ -168,12 +170,39 @@ The following example shows removing any object in the `pets` array that has an 
 {% endtab %}
 {% endtabs %}
 
+### Timestamps
+
+When including fields like timestamps in an array of objects, use the `$time` format instead of plain strings or Unix epoch integers.
+
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user123",
+      "purchases": [
+        {
+          "item_name": "T-shirt",
+          "price": 19.99,
+          "purchase_time": {
+            "$time": "2020-05-28"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+{% alert tip %}
+For more information, see [Nested Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+{% endalert %}
+
 ## SDK example
 
 {% tabs local %}
 {% tab Android SDK %}
-
-**Create**
+{% subtabs %}
+{% subtab Create %}
 ```kotlin
 val json = JSONArray()
     .put(JSONObject()
@@ -192,8 +221,9 @@ braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json)
 }
 ```
+{% endsubtab %}
 
-**Add**
+{% subtab Add %}
 ```kotlin
 val json = JSONObject()
     .put("\$add", JSONArray()
@@ -219,8 +249,9 @@ braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json, true)
 }
 ```
+{% endsubtab %}
 
-**Update**
+{% subtab Update %}
 ```kotlin
 val json = JSONObject()
     .put("\$update", JSONArray()
@@ -244,8 +275,9 @@ braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json, true)
 }
 ```
+{% endsubtab %}
 
-**Delete**
+{% subtab Delete %}
 ```kotlin
 val json = JSONObject()
     .put("\$remove", JSONArray()
@@ -267,11 +299,13 @@ braze.getCurrentUser { user ->
     user.setCustomUserAttribute("pets", json, true)
 }
 ```
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab Swift SDK %}
 
-**Create**
+{% tab Swift SDK %}
+{% subtabs %}
+{% subtab Create %}
 ```swift
 let json: [[String: Any?]] = [
   [
@@ -290,8 +324,9 @@ let json: [[String: Any?]] = [
 
 braze.user.setCustomAttribute(key: "pets", array: json)
 ```
+{% endsubtab %}
 
-**Add**
+{% subtab Add %}
 ```swift
 let json: [String: Any?] = [
   "$add": [
@@ -318,8 +353,9 @@ let json: [String: Any?] = [
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 ```
+{% endsubtab %}
 
-**Update**
+{% subtab Update %}
 ```swift
 let json: [String: Any?] = [
   "$update": [
@@ -342,8 +378,9 @@ let json: [String: Any?] = [
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 ```
+{% endsubtab %}
 
-**Delete**
+{% subtab Delete %}
 ```swift
 let json: [String: Any?] = [
   "$remove": [
@@ -364,15 +401,17 @@ let json: [String: Any?] = [
 
 braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 ```
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert important %}
 Nested custom attributes are not supported for AppboyKit.
 {% endalert %}
-
 {% endtab %}
-{% tab Web SDK %}
 
-**Create**
+{% tab Web SDK %}
+{% subtabs local %}
+{% subtab Create %}
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = [{
@@ -388,8 +427,9 @@ const json = [{
 }];
 braze.getUser().setCustomUserAttribute("pets", json);
 ```
+{% endsubtab %}
 
-**Add**
+{% subtab Add %}
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
@@ -412,8 +452,9 @@ const json = {
 };
 braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
+{% endsubtab %}
 
-**Update**
+{% subtab Update %}
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
@@ -436,8 +477,9 @@ const json = {
 };
 braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
+{% endsubtab %}
 
-**Delete**
+{% subtab Delete %}
 ```javascript
 import * as braze from "@braze/web-sdk";
 const json = {
@@ -458,7 +500,8 @@ const json = {
 };
 braze.getUser().setCustomUserAttribute("pets", json, true);
 ```
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
@@ -631,7 +674,6 @@ Removing an object from an array consumes one data point for each removal criter
   ]
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 

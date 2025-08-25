@@ -53,10 +53,9 @@ Essas características poderiam então ser marcadas como os seguintes atributos 
 Esses atributos permitem que você envie campanhas para usuários, como:
 
 1. Lembrando os usuários que não usaram o app nos últimos sete dias e têm crédito promocional em sua conta para retornar ao app e usar o crédito.
-2. Usar nossos modelos de mensagens e [recursos de personalização][13] para arrastar o atributo de código promocional exclusivo para o envio de mensagens direcionadas aos usuários.
+2. Usar nossos modelos de mensagens e [recursos de personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) para arrastar o atributo de código promocional exclusivo para o envio de mensagens direcionadas aos usuários.
 
 {% alert important %}
 Braze irá banir ou bloquear usuários ("usuários fictícios") com mais de 5.000.000 sessões e não irá mais ingerir seus eventos SDK porque geralmente são o resultado de uma má integração. Se você descobrir que isso aconteceu com um usuário legítimo, entre em contato com o gerente da sua conta Braze.
 {% endalert %}
 
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

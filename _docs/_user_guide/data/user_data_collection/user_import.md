@@ -1,5 +1,5 @@
 ---
-nav_title: User Import
+nav_title: User import
 article_title: User Import
 page_order: 4
 description: "Learn about Braze's various user import options, like CSV import, REST API, Cloud Data Ingestion, and more."
@@ -63,4 +63,4 @@ Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestio
 
 ## Legally required transactional emails
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}

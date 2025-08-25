@@ -30,7 +30,7 @@ Obtén más información sobre SSL en Braze, por qué es importante SSL y cómo 
 
 ## Puntos finales de la API del perfil de usuario de Amplitude
 
-La API de perfil de usuario de Amplitude sirve para los perfiles de usuario de Amplitude. Esto incluye propiedades del usuario, propiedades computadas del usuario, una lista de ID de cohortes de cohortes que incluyen al usuario y recomendaciones. Consulta [los puntos finales de la API del perfil de usuario de Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) para obtener más información.
+La API de perfil de usuario de Amplitude sirve para los perfiles de usuario de Amplitude. Esto incluye propiedades del usuario, propiedades computadas del usuario, una lista de ID de cohortes de cohortes que incluyen al usuario y recomendaciones. Consulta [los puntos finales de la API del perfil de usuario de Amplitude]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/) para obtener más información.
 
 ## Punto final de los detalles de la campaña 
 

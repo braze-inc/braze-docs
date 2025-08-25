@@ -14,7 +14,7 @@ page_order: 0
 
 The Shopify and Braze integration allows you to connect your Shopify store to seamlessly pass your Shopify data into Braze. You can leverage cross-channel strategies and Canvas in Braze to engage new leads, message new customers, or retarget your users with abandoned checkout messaging to nudge them to complete their purchases.
 
-{% multi_lang_include alerts.md alert='Shopify deprecation' %}
+{% multi_lang_include alerts/important_alerts.md alert='Shopify deprecation' %}
 
 ## Supported features
 

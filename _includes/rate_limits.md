@@ -147,6 +147,15 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 {% endif %}
 
+{% if include.category == "send messages endpoints" %}
+
+Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/#batching-api-requests). A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`, each with individual message parameters
+- An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}
+
 <!---Additional if statement for Translation endpoints-->
 
 {% if include.endpoint == "translation endpoints" %}

@@ -12,7 +12,7 @@ description: "Dieser Artikel enthält Versionshinweise für April 2019."
 
 Zusätzlich zu einigen Korrekturen des Abschnitts wurde ein neues [Abo-Ereignis]({{ site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#subscription-events) auf der Seite Messaging Engagement Events hinzugefügt. 
 
-Sie können jetzt Daten zur Änderung des Zustands von Abo-Gruppen aus Braze in [Segmente]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) und [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/) sowie in [Mixpanel]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/) als Attribution Events exportieren.
+Sie können jetzt Daten zur Änderung des Zustands von Abo-Gruppen aus Braze in [Segmente]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) und [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mParticle/mparticle_for_currents/) sowie in [Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/) als Attribution Events exportieren.
 
 Außerdem wurde die Eigenschaft `canvas_step_id` zu den verfügbaren [Konversions-Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events) hinzugefügt.
 

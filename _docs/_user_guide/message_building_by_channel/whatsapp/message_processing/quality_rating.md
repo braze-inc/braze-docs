@@ -1,5 +1,5 @@
 ---
-nav_title: Quality Rating and Messaging Limits
+nav_title: Quality rating and messaging limits
 article_title: Quality Rating and Messaging Limits 
 description: "This reference article covers how Meta influences your quality rating and messaging limits for the WhatsApp channel."
 page_type: partner

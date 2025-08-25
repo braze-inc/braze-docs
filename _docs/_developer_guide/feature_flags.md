@@ -1,6 +1,6 @@
 ---
 page_order: 2.5
-nav_title: Feature Flags
+nav_title: Feature flags
 article_title: Feature flags for the Braze SDK
 description: "This reference article covers an overview of feature flags including prerequisites and use cases."
 tool: Feature Flags
@@ -328,7 +328,7 @@ if let featureFlag, featureFlag.enabled {
 
 We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
-Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include metrics.md metric='Conversion Rate' %}
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
 ![A feature flag experiment splitting traffic into two 50 percent groups.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 

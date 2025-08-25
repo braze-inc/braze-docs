@@ -1,35 +1,30 @@
-# Changes need to be approved by the Braze docs team
+# CODEOWNERS file for Braze Docs
+# For details, see: https://help.github.com/articles/about-codeowners/
 
-# Lines starting with '#' are comments.
-# Each line is a file pattern followed by one or more owners.
+# SUPPORT CONTACT
+# This article is used by some customers to reach Support, so it must remain reliable.
+/_docs/_hidden/other/support_contact.md @braze-inc/docs-team
 
-# Use the Code Owners to define who has expertise for specific parts of the docs repository. 
-# Define the owners of files and directories in a repository to require owners to approve changes.
-
-# More details are here: https://help.github.com/articles/about-codeowners/
-
-# Support page: Because this article serves as access to the Support team for some customers, it is important that it functions appropriately at all times.
-
-/_docs/_hidden/other/support_contact.md @bre-fitzgerald @internetisaiah
-
-# Liquid use case library: Validate that new and updated use cases are tested before merging them in. Rachel will validate. Josh is added as code owner in case Rachel is out of office to avoid blockers.
-
+# LIQUID USE CASE LIBRARY
+# Ensure new and updated Liquid use cases are tested before merging.
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @rachel-feinberg
 
-# Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints. They are added as codeowners so they can watch for changes to these endpoints. So their codeownership doesn't block style changes to the docs, Lydia is added as a codeowner as the primary API tech writer. In case she's out, the rest of the Docs Team is also added so that changes are not inappropriately blocked.
+# INGESTION ENDPOINTS
+# The Ingestion team owns Data Transformation templates for these endpoints.
+/_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie
+/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/ingestion @lydia-xie
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item.md @braze-inc/ingestion @lydia-xie
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item.md @braze-inc/ingestion @lydia-xie
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item.md @braze-inc/ingestion @lydia-xie
+/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_campaigns.md @braze-inc/ingestion @lydia-xie
+/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_canvases.md @braze-inc/ingestion @lydia-xie
 
-/_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_campaigns.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_canvases.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-
-# Currents Event Docs: Currents owns event payload auto-generation templates for these endpoints, and are codeowners to be notified when changes are made so that the templates can be kept in-sync.
+# CURRENTS EVENTS
+# These docs are auto-generated from a separate repo, so the Currents team must verify changes to event payload templates.
 /_docs/_user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events.md @braze-inc/currents @braze-inc/docs-team
 /_docs/_user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events.md @braze-inc/currents @braze-inc/docs-team
 
-# Braze Docs scripts:
+# CUSTOM SCRIPTS
+# These scripts share global variables and interdependencies, so changes must be verified to avoid breaking other scripts.
 /bdocs @internetisaiah
 /scripts @internetisaiah
