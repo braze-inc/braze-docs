@@ -1,5 +1,5 @@
 ---
-nav_title: Creating campaigns
+nav_title: Creating Campaigns
 article_title: Creating Banner campaigns in Braze
 page_order: 1
 description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns."
@@ -15,7 +15,7 @@ channel:
 
 ## Prerequisites
 
-Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
+Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
 
 ## Creating a Banner campaign
 
@@ -42,15 +42,21 @@ To customize your message's background properties, border settings, and more, se
 
 ![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
-#### Step 3.2: Define on-click behavior
+#### Step 3.2: Define on-click behavior (optional)
 
 When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your user's profile with custom data when they click the Banner.
 
 {% alert important %}
 {::nomarkdown}
-On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
+On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
 {:/}
 {% endalert %}
+
+#### Step 3.3: Add custom properties (optional) {#custom-properties}
+
+You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/managing_placements/#accessing-properties) to customize integrations, enable conditional logic, or pass analytics and attribution data.
+
+// to do: add image
 
 ### Step 4: Set campaign duration
 

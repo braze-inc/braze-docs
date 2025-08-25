@@ -493,7 +493,7 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Accessing properties {#accessing-properties}
 
-Accessing properties lets you retrieve key–value data from a Banner placement, which you can use to modify your app’s behavior or appearance. For example:
+After [adding custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign, you can use them to retrieve key–value data from a Banner placement and modify your app’s behavior or appearance. For example:
 
 - Change layout or styling based on a property like `color` or `expanded`.
 - Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
