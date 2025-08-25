@@ -493,6 +493,12 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Accessing properties {#accessing-properties}
 
+Accessing properties lets you retrieve key–value data from a Banner placement, which you can use to modify your app’s behavior or appearance. For example:
+
+- Change layout or styling based on a property like `color` or `expanded`.
+- Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
+- Detect control variants and decide whether to hide a container or show alternate content.
+
 To access the properties of a banner, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type, the method returns `null`.
 
 {% tabs local %}
