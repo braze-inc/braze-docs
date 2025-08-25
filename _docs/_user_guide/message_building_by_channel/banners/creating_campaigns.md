@@ -15,7 +15,7 @@ channel:
 
 ## Prerequisites
 
-Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
+Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
 
 ## Creating a Banner campaign
 
