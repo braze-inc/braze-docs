@@ -1,7 +1,7 @@
 ---
-nav_title: Creating placements
-article_title: Creating Banner placements for the Braze SDK
-description: "Learn how to create Banner placements for the Braze SDK."
+nav_title: Managing placements
+article_title: Managing Banner placements for the Braze SDK
+description: "Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions."
 page_order: 2
 platform:
   - iOS
@@ -11,11 +11,11 @@ platform:
   - React Native
 ---
 
-# Creating Banner placements
+# Managing Banner placements
 
-> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
+> Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
-## Placement requests {#requests}
+## About placement requests {#requests}
 
 {% multi_lang_include banners/placement_requests.md %}
 
@@ -491,11 +491,9 @@ Here's what you need to know about Banner dimensions and sizing:
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
 
-### Accessing properties {#accessing-properties}
+## Accessing properties {#accessing-properties}
 
-To access the properties of a banner, use one of the following methods depending on the type you defined in the dashboard.
-
-If there is no such property of the corresponding type for the key you provided, these methods will return `null`.
+To access the properties of a banner, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type, the method returns `null`.
 
 {% tabs %}
 {% tab Swift %}
