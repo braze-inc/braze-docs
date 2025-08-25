@@ -493,6 +493,10 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Custom properties {#custom-properties}
 
+{% alert important %}
+Custom properties for Banners are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
 You can use custom properties from your Banner campaign to retrieve key–value data through the SDK and modify your app’s behavior or appearance. For example, you could:
 
 - Change layout or styling based on a property like `color` or `expanded`.
