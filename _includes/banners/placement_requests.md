@@ -1,4 +1,4 @@
-When you [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
+When you [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
 
 - You can request up to **10 placements per user session**.  
 - For each placement, Braze returns the **highest-priority Banner** the user is eligible to receive.  

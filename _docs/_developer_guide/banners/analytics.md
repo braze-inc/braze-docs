@@ -1,5 +1,5 @@
 ---
-nav_title: Analytics
+nav_title: Banner Analytics
 article_title: Banner Analytics
 page_order: 3
 description: "Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance."
