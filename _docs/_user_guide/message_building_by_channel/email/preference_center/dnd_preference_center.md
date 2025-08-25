@@ -14,7 +14,7 @@ page_order: 2
 
 ## Step 1: Create an email preference center
 
-Create a preference center by navigating to **Audience** > **Subscriptions** > **Email Preference Center**.
+Create a preference center by navigating to **Audience** > **Email Preference Center**.
 
 Here, a list of custom preference centers will be displayed. Select **Create New** to create a new preference center, or select the name of an existing one to make changes.
 
