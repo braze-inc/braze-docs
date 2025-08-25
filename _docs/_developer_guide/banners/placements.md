@@ -514,6 +514,56 @@ You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_build
 To access a banner's custom properties, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type, the method returns `null`.
 
 {% tabs local %}
+{% tab Web %}
+```javascript
+// Returns the Banner instance
+const banner = braze.getBanner("placement_id_homepage_top");
+
+// Returns the String property
+const stringProperty = banner.getStringProperty("color");
+
+// Returns the Boolean property
+const booleanProperty = banner.getBooleanProperty("expanded");
+
+// Returns the Number property
+const numberProperty = banner.getNumberProperty("height");
+
+// Returns the Timestamp property (as a Number)
+const timestampProperty = banner.getTimestampProperty("account_start");
+
+// Returns the Image URL property as a String of the URL
+const imageProperty = banner.getImageProperty("homepage_icon");
+
+// Returns the JSON object property as an object in form of JsonPropertyValue
+const jsonObjectProperty = banner.getJsonProperty("footer_settings");
+```
+{% endtab %}
+
+{% tab Swift %}
+```swift
+// Passes the specified banner to the completion handler
+AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner in
+  // Returns the string property
+  let stringProperty: String? = banner.stringProperty(key: "color")
+
+  // Returns the boolean property
+  let booleanProperty: Bool? = banner.boolProperty(key: "expanded")
+
+  // Returns the number property as a double
+  let numberProperty: Double? = banner.numberProperty(key: "height")
+
+  // Returns the Unix UTC millisecond timestamp property as an integer
+  let timestampProperty: Int? = banner.timestampProperty(key: "account_start")
+
+  // Returns the image property as a String of the image URL
+  let imageProperty: String? = banner.imageProperty(key: "homepage_icon")
+
+  // Returns the JSON object property as a [String: Any] dictionary
+  let jsonObjectProperty: [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
+}
+```
+{% endtab %}
+
 {% tab Android %}
 {% subtabs %}
 {% subtab Java %}
@@ -566,30 +616,5 @@ val jsonObjectProperty: JSONObject? = banner.getJSONProperty("footer_settings")
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab Swift %}
-```swift
-// Passes the specified banner to the completion handler
-AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner in
-  // Returns the string property
-  let stringProperty: String? = banner.stringProperty(key: "color")
-
-  // Returns the boolean property
-  let booleanProperty: Bool? = banner.boolProperty(key: "expanded")
-
-  // Returns the number property as a double
-  let numberProperty: Double? = banner.numberProperty(key: "height")
-
-  // Returns the Unix UTC millisecond timestamp property as an integer
-  let timestampProperty: Int? = banner.timestampProperty(key: "account_start")
-
-  // Returns the image property as a String of the image URL
-  let imageProperty: String? = banner.imageProperty(key: "homepage_icon")
-
-  // Returns the JSON object property as a [String: Any] dictionary
-  let jsonObjectProperty: [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
-}
-```
 {% endtab %}
 {% endtabs %}
