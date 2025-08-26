@@ -39,8 +39,7 @@ jobs:
               state: "open"
             });
 
-            const matchedIssue = issues.find(issue =>
-              issue.title.includes(`[${tag}]`)
+              new RegExp(`\\[${tag}\\]`).test(issue.title)
             );
 
             const issueFound = !!matchedIssue;
