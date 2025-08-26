@@ -1,5 +1,5 @@
 ---
-nav_title: Data Dictionary
+nav_title: Data dictionary
 article_title: Data Dictionary for Braze Pilot
 page_order: 3
 page_type: reference

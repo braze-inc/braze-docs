@@ -1,5 +1,5 @@
 ---
-nav_title: Navigation Deep Links
+nav_title: Navigation deep links
 article_title: Navigation Deep Links in Braze Pilot
 page_order: 4
 page_type: reference

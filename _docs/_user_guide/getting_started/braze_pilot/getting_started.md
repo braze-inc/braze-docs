@@ -1,5 +1,5 @@
 ---
-nav_title: Getting Started
+nav_title: Getting started
 article_title: Getting Started with Braze Pilot
 page_order: 2
 page_type: reference
