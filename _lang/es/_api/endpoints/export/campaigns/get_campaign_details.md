@@ -33,6 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Obligatoria | Cadena | Ver [identificador API de campaña]({{site.baseurl}}/api/identifier_types/).<br><br> Puedes encontrar la dirección `campaign_id` para las campañas API en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) y en la página **Detalles de campaña** dentro de tu panel; o puedes utilizar el [punto final Exportar lista de campañas](#campaign-list-endpoint). |
+| `post_launch_draft_version` | Opcional | Booleano | Para los mensajes que tienen un borrador posterior al lanzamiento, configurando esta opción en `true` se mostrará cualquier cambio disponible en el borrador. Predeterminado a `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -54,6 +55,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "enabled": (boolean) whether this campaign is active or not,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
@@ -81,7 +84,8 @@ La respuesta `messages` contendrá información sobre cada mensaje. A continuaci
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,

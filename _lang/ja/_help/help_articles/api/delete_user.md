@@ -11,7 +11,7 @@ platform: API
 
 # API によるユーザーの削除
 
-[Braze REST API][1]でユーザーを削除すると、以下のデータが削除(null)されます。
+[Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/)でユーザーを削除すると、以下のデータが削除(null)されます。
 - ユーザーが持っていたすべての属性
 - メールアドレス
 - 電話番号
@@ -20,9 +20,9 @@ platform: API
 - 国
 - 言語
 
-[Braze REST API][1] を使用してユーザーを削除すると、以下の事象が発生します。
+[Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/) を使用してユーザーを削除すると、以下の事象が発生します。
 - ユーザープロファイルが削除される（nulled）。
-- [[生涯ユーザー数]][2] が更新され、新たに削除されたユーザーが考慮されます。	
+- [[生涯ユーザー数]]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) が更新され、新たに削除されたユーザーが考慮されます。	
 - 削除されたユーザーは、集計コンバージョン率にカウントされます。削除されたユーザーのカスタムイベントカウントと購入カウントは更新されない。
 
 ## メールアドレスを共有する複数のプロファイル
@@ -38,5 +38,3 @@ platform: API
 
 _最終更新日2023年9月13日_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

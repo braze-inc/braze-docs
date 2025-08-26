@@ -1,5 +1,5 @@
 ---
-nav_title: eCommerce Recommended Events
+nav_title: eCommerce recommended events
 article_title: eCommerce Recommended Events
 page_type: reference
 alias: /ecommerce_events/
@@ -38,6 +38,7 @@ You can use the product viewed event to trigger when a customer views a product 
 | `currency` | Yes | String | The currency in which the product price is listed (such as "USD" or "EUR") in [ISO 4217 format](https://www.iso.org/iso-4217-currency-codes.html). |
 | `source` | Yes | String | Source the event is derived from. (For Shopify, this is storefront). |
 | `metadata` | No | Object | |
+| `type` | No | Object | Works with [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) and [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications). |
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
@@ -137,6 +138,10 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "size": "6",
           "brand": "Braze"
         }
+        "type": [
+          "price_drop",
+          "back_in_stock"
+        ]
       }
     }
   ]

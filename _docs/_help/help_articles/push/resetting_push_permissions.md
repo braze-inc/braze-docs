@@ -1,5 +1,5 @@
 ---
-nav_title: Resetting Push Permissions
+nav_title: Resetting push permissions
 article_title: Resetting Push Permissions
 page_type: solution
 description: "This help article covers how to reset browser push permissions and data."

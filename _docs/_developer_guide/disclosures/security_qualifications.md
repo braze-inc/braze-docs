@@ -1,5 +1,5 @@
 ---
-nav_title: Security Qualifications
+nav_title: Security qualifications
 article_title: Security Qualifications
 page_order: 3
 page_type: reference

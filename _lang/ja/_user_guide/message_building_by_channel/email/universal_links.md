@@ -263,13 +263,13 @@ SparkPostのクリックトラッキングリンクをユニバーサルリン�
 
 次に、アプリがカスタムパスを適切に処理するように設定されていることを確認してください。[SparkPost クリックトラッキングの使用](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links)に関する SparkPost の記事を参照してください。この記事には、[iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost)および[Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost)のサンプルコードが含まれています。
 
-### リンクごとのクリックトラッキングをオフにする
+### リンクごとのクリック追跡をオフにする
 
-HTMLエディターでメールメッセージにHTMLコードを追加するか、ドラッグ＆ドロップエディターでコンポーネントにHTMLコードを追加することで、特定のリンクのクリックトラッキングをオフにすることができる。
+HTMLエディターではメールメッセージに、ドラッグ＆ドロップエディターではHTMLブロックにHTMLコードを追加することで、特定のリンクのクリック追跡をオフにすることができる。
 
 #### SendGrid
 
-メールサービスプロバイダがSendGridの場合、HTMLコード`clicktracking=off` ：
+メールサービスプロバイダーが SendGrid の場合は、次のような HTML コード `clicktracking=off` を使用します。
 
 ```HTML
 <a clicktracking=off href="[INSERT https LINK HERE]">click here</a>
@@ -277,10 +277,18 @@ HTMLエディターでメールメッセージにHTMLコードを追加するか
 
 #### SparkPost 
 
-メールサービスプロバイダーがSparkPostの場合、HTMLコード`data-msys-clicktrack="0"` ：
+メールサービスプロバイダーが SparkPost の場合は、次のような HTML コード `data-msys-clicktrack="0"` を使用します。
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+メールサービスプロバイダーが Amazon SES の場合は、次のような HTML コード `ses:no-track` を使用します。
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### ドラッグアンドドロップエディタ
@@ -291,39 +299,39 @@ HTMLエディターでメールメッセージにHTMLコードを追加するか
 
 #### SendGrid
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `clicktracking`
-- **価値がある：** `off`
+- **名前:** `clicktracking`
+- **値:** `off`
 
 #### SparkPost
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `data-msys-clicktrack`
-- **価値がある：** `0`
+- **名前:** `data-msys-clicktrack`
+- **値:** `0`
 
-![テキストリンクのカスタム属性。][2]{: style="max-width:60%;"}
+![テキストリンクのカスタム属性。]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
-##### ボタンまたは画像, 写真のカスタム属性
+##### ボタンまたは画像のカスタム属性
 
 #### SendGrid
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `clicktracking`
-- **価値がある：** `off`
-- **タイプだ：**リンク
+- **名前:** `clicktracking`
+- **値:** `off`
+- **タイプ:**リンク
 
 #### SparkPost
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `data-msys-clicktrack`
-- **価値がある：** `0`
-- **タイプだ：**リンク
+- **名前:** `data-msys-clicktrack`
+- **値:** `0`
+- **タイプ:**リンク
 
-![ボタンのカスタム属性。][1]{: style="max-width:60%;"}
+![ボタンのカスタム属性。]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### クリックトラッキングによるユニバーサルリンクのトラブルシューティング
 
@@ -345,5 +353,3 @@ AASA ファイル(iOS) またはデジタルアセットリンクファイル (A
 - **iOS:**アプリ用に Xcode で設定された関連ドメインを確認します ([ステップ1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c))。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
 - **Android :**アプリ情報ページを開封します（アプリアイコンを長押しして、ⓘをクリックします）。アプリ情報メニュー内で、**デフォルトで開封**を見つけてタップします。これにより、アプリを開くことが許可されているすべての検証済みリンクが表示されます。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

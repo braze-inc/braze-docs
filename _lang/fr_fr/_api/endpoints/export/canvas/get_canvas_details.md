@@ -31,6 +31,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Requis | Chaîne de caractères | Voir [Identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/) |
+| `post_launch_draft_version` | Facultatif | Valeur booléenne | Pour les toiles qui ont une ébauche après le lancement, la valeur `true` permet d'afficher toutes les modifications d'ébauche disponibles. La valeur par défaut est `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
@@ -58,6 +59,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "description": (string) the Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
+  "enabled": (boolean) whether this Canvas is active or not,
+  "has_post_launch_draft": (boolean) whether this Canvas has a post-launch draft,
   "schedule_type": (string) the type of scheduling action,
   "first_entry": (string) the date of first entry as ISO 8601 date,
   "last_entry": (string) the date of last entry as ISO 8601 date,
@@ -114,6 +117,8 @@ Voici un exemple de réponse qui inclut les messages Canvas envoyés par différ
   "description": "Complete profile reminder via multiple channels",
   "archived": false,
   "draft": false,
+  "enabled": true,
+  "has_post_launch_draft": true,
   "schedule_type": "date",
   "first_entry": "2023-01-01T12:00:00Z",
   "last_entry": "2023-01-10T12:00:00Z",

@@ -10,7 +10,7 @@ description: "この記事には、2020年9月のリリースノートが含ま�
 
 ## ファンネルレポート
 
-ファネルレポートは、[キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) または[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports) を受信した後に、顧客が実行するジャーニーを分析できる視覚的なレポートを提供します。
+ファネルレポートは、[キャンペーン]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) または[キャンバス]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) を受信した後に、顧客が実行するジャーニーを分析できる視覚的なレポートを提供します。
 
 ## iOS 14アップグレードガイド
 
@@ -22,11 +22,11 @@ iOS 14では、ユーザーがアプリにアクセスしたときに広告ト�
 
 ## メール検証
 
-この新しいメールシンタックス検証プロセスは、Brazeの既存のものへのアップグレードです。これは、Brazeに更新またはインポートされたメールが正しいことを確認するための検査です。詳細については、[これらのガイドラインと注記]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation)を参照してください。
+この新しいメールシンタックス検証プロセスは、Brazeの既存のものへのアップグレードです。これは、Brazeに更新またはインポートされたメールが正しいことを確認するための検査です。詳細については、[これらのガイドラインと注記]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)を参照してください。
 
 ## Currentsにおけるランダムバケットユーザー事象
 
-ランダムバケット番号 (RBNなど) は、ワークスペース内で新しいユーザーが作成されるたびに生成されます。このイベントの間、新規ユーザーのそれぞれにランダムなバケット番号が割り当てられます。このバケット番号を使用して、ランダムなユーザーの一様分布セグメントを作成できます。これを使用して、ランダムバケット番号値の範囲をグループ化し、キャンペーンとキャンペーンバリアント間でパフォーマンスを比較します。このイベントが使用可能かどうかを確認するには、Currents [顧客行動イベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)を参照してください。
+ランダムバケット番号 (RBNなど) は、ワークスペース内で新しいユーザーが作成されるたびに生成されます。このイベントの間、新規ユーザーのそれぞれにランダムなバケット番号が割り当てられます。このバケット番号を使用して、ランダムなユーザーの一様分布セグメントを作成できます。これを使用して、ランダムバケット番号値の範囲をグループ化し、キャンペーンとキャンペーンバリアント間でパフォーマンスを比較します。このイベントが使用可能かどうかを確認するには、Currents [顧客行動イベント用語集]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)を参照してください。
 
 ## キャンバスコンポーネント - 近日提供開始
 
@@ -36,4 +36,4 @@ Braze は、キャンバスの柔軟性と機能性を向上させるために�
 
 ## SMS インバウンド受信イベント
 
-新しいメッセージングエンゲージメントが Currents に追加されました。このイベントは、ユーザーの 1 人が Braze SMS サブスクリプショングループの 1 つの電話番号に SMS を送信したときに発生します。詳細については、Currents [ メッセージングおよびエンゲージメントイベント用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) を参照してください。
+新しいメッセージングエンゲージメントが Currents に追加されました。このイベントは、ユーザーの 1 人が Braze SMS サブスクリプショングループの 1 つの電話番号に SMS を送信したときに発生します。詳細については、Currents [ メッセージングおよびエンゲージメントイベント用語集]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) を参照してください。

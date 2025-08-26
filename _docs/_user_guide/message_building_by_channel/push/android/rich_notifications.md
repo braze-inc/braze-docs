@@ -1,5 +1,5 @@
 ---
-nav_title: "Creating Rich Notifications"
+nav_title: "Creating rich notifications"
 article_title: "Creating rich push notifications for Android"
 page_order: 3
 page_layout: tutorial

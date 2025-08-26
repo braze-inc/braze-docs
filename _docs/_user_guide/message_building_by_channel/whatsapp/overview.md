@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp Setup
+nav_title: WhatsApp setup
 article_title: WhatsApp Setup
 alias: /partners/whatsapp/
 description: "This article covers how to set up the Braze WhatsApp channel, including prerequisites and suggested next steps."

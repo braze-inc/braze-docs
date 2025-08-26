@@ -22,7 +22,7 @@ tool:
 
 通知IDを割り当てるには、IDを追加したいプッシュの構成ページに移動し、**「設定」**タブを選択する。**Notification ID**セクションに整数を入力する。通知を発行した後にこの通知を更新するには、以前に使用したのと同じIDで別の通知を送信する。
 
-![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
+![通知IDフィールド。]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## 有効時間 (TTL) {#ttl}
 
@@ -30,7 +30,7 @@ tool:
 
 Android プッシュの有効時間を編集するには、作成画面に移動し、[**設定**] タブを選択します。**Time to Live**フィールドを見つけ、日、時間、または秒単位で値を入力します。
 
-有効時間のデフォルト値は、[プッシュ TTL の設定]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/)ページで管理者が定義します。デフォルトでは、Braze はプッシュ TTL を各プッシュメッセージングサービスの最大値に設定します。デフォルトの TTL 設定はグローバルに適用されますが、キャンペーンの作成時にメッセージレベルで上書きできます。これは、異なるキャンペーンで必要な緊急性や配信期間が異なる場合に役立ちます。
+有効時間のデフォルト値は、[[プッシュ設定]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/)] ページで管理者が定義します。デフォルトでは、Braze はプッシュ TTL を各プッシュメッセージングサービスの最大値に設定します。デフォルトの TTL 設定はグローバルに適用されますが、キャンペーンの作成時にメッセージレベルで上書きできます。これは、異なるキャンペーンで必要な緊急性や配信期間が異なる場合に役立ちます。
 
 たとえば、アプリが毎週トリビアコンテストを開催しているとします。開始する1時間前にプッシュ通知を送信します。TTL を1時間に設定することで、コンテスト開始後にアプリを開くユーザーが、すでに開始されているイベントに関する通知を受け取らないようにします。
 
@@ -54,23 +54,39 @@ TTL を短くすることで、ユーザーは関連性をすぐに失うイベ�
 
 ## Firebase メッセージング配信の優先順位 {#fcm-priority}
 
-**Firebase Messaging Delivery Priority** フィールドでは、「通常」または「高」のどちらの優先度でプッシュを Firebase Cloud Messaging に送信するかを制御できます。詳細については、[FCM のドキュメント](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message)を参照してください。
+**Firebase Messaging Delivery Priority** フィールドでは、「通常」または「高」のどちらの優先度でプッシュを Firebase Cloud Messaging に送信するかを制御できます。この設定は、メッセージの配信速度とデバイスのバッテリー寿命に及ぼす影響を決定します。
+
+| 優先順位 | 説明 | 最適な用途 |
+|---------|-------------|----------|
+| 通常 | バッテリー節約のために遅延する可能性があるバッテリー最適化配信 | 緊急でないコンテンツ、プロモーション・オファー、ニュースの更新 |
+| 高 | バッテリー消費量が高い即時配信 | 時間依存の通知、重要なアラート、ライブイベントの更新、アカウントアラート、ニュースの更新、緊急のリマインダー |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### 考慮事項
+
+- **デフォルト設定**:[プッシュ設定]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/)で、すべてのAndroidキャンペーンのデフォルトのFCM優先度を設定できます。このキャンペーンレベルの設定は、必要に応じてデフォルトを上書きします。
+- **優先度の格下げ**:ユーザーに表示される通知やユーザーの関与が発生しない優先度の高いメッセージがアプリから頻繁に送信されることをFCMが検出した場合、それらのメッセージは自動的に通常の優先度に廃止される可能性があります。
+- **バッテリーへの影響**:優先度の高いメッセージは、スリープ状態のデバイスをより頻繁に起動するため、バッテリー消費量が増えます。この優先度は慎重に使用してください。
+
+メッセージの処理と削除の詳細については、[FCM のドキュメント](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) および[Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize) でのメッセージの処理と削除を参照してください。
 
 ## 要約テキスト
 
-要約テキストでは、**拡張通知**ビューに追加のテキストを設定できる。要約テキストは、展開されたビューのメッセージ本文の下に表示されます。画像付きの通知のキャプションとしても機能します。
+要約テキストを使用すると、拡張通知ビューに追加のテキストを設定できます。画像付きの通知のキャプションとしても機能します。
 
-![][9]
+![タイトルが「This is the title for the notification.」、要約テキストが「This is the summary text for the notification.」の Android メッセージ。]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。この動作の例として、以下のアニメーションをご覧いただきたい。
+要約テキストは、展開されたビューのメッセージ本文の下に表示されます。 
 
-![要約 テキスト 行動][15]
+![タイトルが「This is the title for the notification.」、要約テキストが「This is the summary text for the notification.」の Android メッセージ。]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+
+画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。 
 
 ## カスタムURI
 
-**カスタム URI** 機能を使用すると、通知がクリックされたときの誘導先 Web URL または Android リソースを指定できます。カスタム URI が指定されていない場合、通知をクリックするとユーザーはアプリに誘導されます。カスタム URI を使用してアプリ内でディープリンクしたり、アプリ外部のリソースにユーザーを誘導することができます。これは、[メッセージング API][13] またはプッシュコンポーザーの [**設定**] で指定できます。
+**カスタム URI** 機能を使用すると、通知がクリックされたときの誘導先 Web URL または Android リソースを指定できます。カスタム URI が指定されていない場合、通知をクリックするとユーザーはアプリに誘導されます。カスタム URI を使用してアプリ内でディープリンクしたり、アプリ外部のリソースにユーザーを誘導することができます。これは、[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/) またはプッシュ作成画面の [**作成**] タブで指定できます。
 
-![カスタムURI][12]
+![カスタムURI フィールド。]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
 ## 通知の表示優先度
 
@@ -84,7 +100,7 @@ TTL を短くすることで、ユーザーは関連性をすぐに失うイベ�
 
 Android O では、通知の優先度が通知チャネルのプロパティになりました。開発者と協力して設定中にチャネルの優先度を定義し、ダッシュボードを使用して通知音を送信するときに適切なチャネルを選択する必要があります。Android O より前のバージョンを実行しているデバイスでは、Braze ダッシュボードとメッセージング API を介して、Android と Fire OS 通知の優先レベルを指定することができます。
 
-特定の優先度を指定したメッセージをユーザー群全体に送信するには、[通知チャネル設定][17] (O 以降のデバイスを対象とする) を通じて間接的に優先度を指定し、ダッシュボードから個別の優先度を送信する (O より前のデバイスを対象とする) ことをお勧めします。
+特定の優先度でユーザーベース全体にメッセージを送信するには、[通知チャネル設定](https://developer.android.com/training/notify-user/channels#importance) (ターゲットO+ デバイスへ) で間接的に優先度を指定し、ダッシュボード(ターゲット<O デバイスへ) から個々の優先度を送信することをお勧めします。
 
 AndroidまたはFire OSのプッシュ通知で設定できる優先度については、以下の表を参照のこと：
 
@@ -97,13 +113,13 @@ AndroidまたはFire OSのプッシュ通知で設定できる優先度につい
 | 最小 | コンテキストまたは背景情報 | `-2`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-詳細については、Google の [Android 通知][2]ドキュメントを参照してください。
+詳細については、Google の [Android 通知](http://developer.android.com/design/patterns/notifications.html)ドキュメントを参照してください。
 
 ## プッシュ・カテゴリー
 
 アンドロイドのプッシュ通知では、通知があらかじめ定義されたカテゴリーに入るかどうかを指定するオプションがある。AndroidシステムUIは、このカテゴリーを使用して、ユーザーの通知トレイのどこに通知を配置するかについて、ランキングやフィルタリングの決定を行うことができる。
 
-![「カテゴリー」が「なし」に設定されている [設定] タブ (デフォルト設定)。][52]
+![Category(カテゴリ)が None(なし)に設定された設定タブ。デフォルト設定です。]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | カテゴリー | 説明 |
 |---|-------|
@@ -138,13 +154,13 @@ AndroidまたはFire OSのプッシュ通知で設定できる優先度につい
 
 さらに、Androidユーザーは、端末の通知プライバシー設定を変更することで、プッシュ通知をロック画面に表示する方法を上書きすることができる。この設定は、プッシュ通知からの可視性を上書きする。
 
-![視認性の設定が有効で、プライベートに設定されたダッシュボードのプッシュ優先度。][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![視認性の設定が有効で、プライベートに設定されたダッシュボードのプッシュ優先度。]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 デバイスの通知プライバシー設定が「**すべてのコンテンツを表示**」（デフォルト設定）であれば、可視性にかかわらず、すべての通知がユーザーのロック画面に表示される。同様に、通知のプライバシーが「**通知を表示しない**」に設定されている場合、通知はロック画面に表示されない。可視性は、通知プライバシーが「**機密コンテンツを隠す**」に設定されている場合にのみ効果がある。
 
 Android Lollipop 5.0.0より前の端末では、この可視化は影響しない。つまり、これらの端末ではすべての通知が表示される。
 
-詳しくは[Androidドキュメント][51] ]を参照のこと。
+詳細については、[Androidドキュメント](https://developer.android.com/guide/topics/ui/notifiers/notifications)を参照してください。
 
 ## 通知音
 
@@ -152,22 +168,11 @@ Android O では、通知音は通知チャネルのプロパティになりま�
 
 Android Oより前のバージョンのAndroidを搭載したデバイスでは、Brazeはダッシュボードのコンポーザーから個々のプッシュメッセージのサウンドを設定できる。これを行うには、デバイスのローカルサウンドリソースを指定します (例: `android.resource://com.mycompany.myapp/raw/mysound`)。 
 
-このフィールドで [**デフォルト**] を選択すると、デバイスのデフォルトの通知音が再生されます。これは、[メッセージング API][13] またはプッシュコンポーザーの [**設定**] で指定できます。
+このフィールドで [**デフォルト**] を選択すると、デバイスのデフォルトの通知音が再生されます。これは、[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/) またはプッシュ作成画面の [**設定**] で指定できます。
 
-![][11]
+![[サウンド] フィールド。]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 次に、ダッシュボードのプロンプトに完全なサウンドリソース URI （例えば `android.resource://com.mycompany.myapp/raw/mysound`） を入力します。
 
-特定のサウンドでメッセージをユーザー群全体に送信するには、[通知チャネル設定][16] (O 以降のデバイスを対象とする) を通じて間接的にサウンドを指定し、ダッシュボードから個別のサウンドを送信する (O より前のデバイスを対象とする) ことをお勧めします。
+特定のサウンドでフルユーザーベースにメッセージを送るには、[通知チャネル設定](https://developer.android.com/training/notify-user/channels)(ターゲットO+ デバイスへ)でサウンドを間接的に指定し、ダッシュボードから個別のサウンド(ターゲット<O デバイスへ)を送ることをお勧めします。
 
-[2]: http://developer.android.com/design/patterns/notifications.html
-[9]: {% image_buster /assets/img_archive/summary_text.png %}
-[11]: {% image_buster /assets/img_archive/sound_android.png %}
-[12]: {% image_buster /assets/img_archive/deep_link.png %}
-[13]: {{site.baseurl}}/api/endpoints/messaging/
-[15]: {% image_buster /assets/img_archive/messagesummary.gif %}
-[17]: https://developer.android.com/training/notify-user/channels#importance
-[16]: https://developer.android.com/training/notify-user/channels
-[51]: https://developer.android.com/guide/topics/ui/notifiers/notifications
-[52]: {% image_buster /assets/img_archive/braze_category.png %}
-[53]: {% image_buster /assets/img_archive/braze_visibility.png %}

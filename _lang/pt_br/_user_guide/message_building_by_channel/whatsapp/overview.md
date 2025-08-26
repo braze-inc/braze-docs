@@ -41,11 +41,11 @@ No Braze, acessar **Integrações de Parceiros** > **Parceiros de Tecnologia** e
 
 Na página de parceiros do WhatsApp, selecione **Iniciar Integração**.
 
-![][1]
+![Página de parceiros do WhatsApp com um botão para iniciar a integração.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 Na janela aberta, selecione **Próximo** até que o botão **Iniciar Integração** apareça. Selecione o botão para iniciar o processo de integração.
 
-![Instruções para conectar Braze ao WhatsApp.][7]
+![Instruções para conectar o Braze ao WhatsApp.]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
 ### Etapa 2: Configuração do WhatsApp
 
@@ -64,16 +64,16 @@ Somente modelos de mensagens do WhatsApp aprovados podem ser usados para iniciar
 
 1. **Navegue até o [gerenciador de modelos](https://business.facebook.com/wa/manage/message-templates)**<br>
 No Meta Business Manager, em **Ferramentas de Conta**, selecione **Modelos de Mensagem**.
-Em seguida, selecione **Criar Modelos**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
+Em seguida, selecione **Criar Modelos**.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Configurações de mensagem**<br>
 No novo criador de modelo de mensagem, selecione a categoria da sua mensagem, nomeie seu modelo e escolha os idiomas que deseja suportar. Você pode excluir ou adicionar mais idiomas depois.<br><br> 
 	As categorias de modelo de mensagem disponíveis incluem as seguintes:
 	- Marketing: Envie ofertas promocionais, anúncios de produtos e mais para aumentar a conscientização e o engajamento
 	- Utilidade: Enviar atualizações de conta, atualizações de pedidos, alertas e mais para compartilhar informações importantes
 	- Autenticação: Envie códigos que permitam aos seus clientes acessar suas contas<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Editar modelo**<br>
-Em seguida, solicitaremos que você crie seu modelo de mensagem. <br><br>Aqui, você pode fornecer um cabeçalho de texto ou mídia, o corpo do texto, um rodapé de mensagem e botões. Observe que cabeçalhos de vídeo e documento não estão disponíveis atualmente, e cabeçalhos devem ser do tipo texto ou imagem. Uma prévia da sua mensagem será mostrada à direita. <br><br>Embora o Meta não seja compatível com o Liquid, você pode criar modelos em variáveis que podem ser substituídas posteriormente na Braze por variáveis Liquid. Selecione o botão **\+ Adicionar variável** para fazer isso.<br><br>![][5]{: style="max-width:100%;"}<br><br>Após concluir seu modelo, pressione **Enviar**. 
+Em seguida, solicitaremos que você crie seu modelo de mensagem. <br><br>Aqui, você pode fornecer um cabeçalho de texto ou mídia, o corpo do texto, um rodapé de mensagem e botões. Observe que cabeçalhos de vídeo e documento não estão disponíveis atualmente, e cabeçalhos devem ser do tipo texto ou imagem. Uma prévia da sua mensagem será mostrada à direita. <br><br>Embora o Meta não seja compatível com o Liquid, você pode criar modelos em variáveis que podem ser substituídas posteriormente na Braze por variáveis Liquid. Selecione o botão **\+ Adicionar variável** para fazer isso.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>Após concluir seu modelo, pressione **Enviar**. 
 
 #### Tempo de aprovação do modelo
 
@@ -104,10 +104,3 @@ Recomendamos também ler sobre [números de telefone de usuários]({{site.baseur
 
 A Braze é compatível com a [API Local de Armazenamento em Nuvem](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5) do WhatsApp. Para habilitar isso, entre em contato com o seu gerente de suporte ao cliente da Braze.
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %}
-[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

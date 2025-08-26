@@ -1,5 +1,5 @@
 ---
-nav_title: Campaign Connector
+nav_title: Campaign connector
 article_title: Campaign Connector
 page_order: 2
 tool: Campaigns

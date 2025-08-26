@@ -12,7 +12,7 @@ page_type: update
 La compatibilidad con Grouparoo se interrumpió a partir de abril de 2022.
 {% endalert %}
 
-> [Grouparoo][1] es una herramienta ETL inversa de código abierto que facilita el uso de los datos de su almacén en sus herramientas de marketing, ventas y asistencia. La configuración se realiza en una interfaz de usuario centrada en el modelo, lo que permite a los miembros no técnicos del equipo configurar y programar sincronizaciones de datos en apoyo de las operaciones.
+> [Grouparoo](https://www.grouparoo.com/) es una herramienta ETL inversa de código abierto que facilita el uso de los datos de su almacén en sus herramientas de marketing, ventas y asistencia. La configuración se realiza en una interfaz de usuario centrada en el modelo, lo que permite a los miembros no técnicos del equipo configurar y programar sincronizaciones de datos en apoyo de las operaciones.
 
 La integración de Braze y Grouparoo facilita la explotación de los datos almacenados en un almacén enviándolos a Braze. Cuando configuras programas de sincronización automática, puedes mejorar constantemente las comunicaciones con los clientes con información actualizada.
 
@@ -22,7 +22,7 @@ La integración de Braze y Grouparoo facilita la explotación de los datos almac
 | ----------- | ----------- |
 | Cuenta y proyecto Grouparoo | Para beneficiarse de esta asociación es necesario disponer de una cuenta y un proyecto de Grouparoo.<br><br>Esta integración es posible utilizarla con la edición comunitaria gratuita y las soluciones empresariales proporcionadas por Grouparoo. La configuración tendrá lugar en la interfaz de usuario de configuración de Grouparoo. |
 | Clave de API REST de Braze | Una clave de API REST de Braze con usuarios y permisos de seguimiento. <br><br> Puede crearse en el dashboard de Braze desde **Configuración** > **Claves API**. |
-| Punto final REST Braze | [La URL de tu punto final REST][1]. Tu punto final dependerá de la URL Braze de tu instancia. |
+| Punto final REST Braze | [La URL de tu punto final REST](https://www.grouparoo.com/). Tu punto final dependerá de la URL Braze de tu instancia. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integración
@@ -31,7 +31,7 @@ La integración de Braze y Grouparoo facilita la explotación de los datos almac
 
 En Grouparoo, ve a **Aplicaciones** y selecciona **Braze** para crear una nueva aplicación Braze. En el modal que aparece, proporcione su clave de API Braze y el punto final REST.
 
-![][2]
+![]({% image_buster /assets/img/grouparoo/add-app.png %})
 
 ### Paso 2: Configurar un modelo y una fuente de datos
 
@@ -52,7 +52,7 @@ A continuación, selecciona la aplicación **Braze** que has creado, asigna un n
 
 A continuación, debe asignar campos de propiedad Grouparoo a campos de propiedad Braze. 
 
-![Ejemplo de campos de asignación de propiedades. Grouparoo userID se establece para asignarse a external_id. email, firstName y lastName se establecen como campos grouparoo equivalentes a "email", "first_name" y "last_name".][3]{: style="max-width:80%;"}
+![Ejemplo de campos de asignación de propiedades. Grouparoo userID está configurado para mapeado a external_id. email, firstName y lastName están configurados como campos grouparoo equivalentes a "email", "first_name" y "last_name".]({% image_buster /assets/img/grouparoo/mapping.png %}){: style="max-width:80%;"}
 
 Asegúrese de que el campo Braze `external_id` está asignado a la clave primaria de su tabla de origen. Asigne el resto de los campos según sea necesario para su caso de uso.
 
@@ -64,13 +64,9 @@ Sección **opcional de campos de perfil de usuario de Braze**: Crear campos de p
 
 Además de la asignación, también puede optar por añadir grupos Grouparoo a los grupos de suscripción Braze. 
 
-![En "Grupos de suscripción Braze" de la ventana de configuración de destino de Grouparoo, el grupo Grouparoo "Alto valor con compra reciente de automóvil" se añadirá al grupo de suscripción Braze "Alto valor con compra reciente de automóvil".][4]{: style="max-width:80%;"}
+![En "Grupos de suscripción Braze" de la ventana de configuración del destino Grouparoo, el grupo Grouparoo "Alto valor con compra reciente de automóvil" se añadirá al grupo de suscripción Braze "Alto valor con compra reciente de automóvil".]({% image_buster /assets/img/grouparoo/lists.png %}){: style="max-width:80%;"}
 
 {% alert important %}
 Encontrará más detalles y actualizaciones sobre esta integración en [la documentación de Grouparoo](https://www.grouparoo.com/docs/integrations/grouparoo-braze).
 {% endalert %}
 
-[1]: https://www.grouparoo.com/
-[2]: {% image_buster /assets/img/grouparoo/add-app.png %}
-[3]: {% image_buster /assets/img/grouparoo/mapping.png %}
-[4]: {% image_buster /assets/img/grouparoo/lists.png %}

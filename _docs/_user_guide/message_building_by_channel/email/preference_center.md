@@ -1,5 +1,5 @@
 ---
-nav_title: Preference Center
+nav_title: Preference center
 article_title: Preference Center
 page_order: 8
 layout: dev_guide

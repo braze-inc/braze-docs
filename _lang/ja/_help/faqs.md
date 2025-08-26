@@ -19,44 +19,44 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
     image: /assets/img/braze_icons/link-03.svg
   - name: "エクスポートに関してよくある質問"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    link: /docs/user_guide/data/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "アプリ内メッセージ FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     image: /assets/img/braze_icons/channel-in-app-messages.svg
-  - name: "位置情報とジオフェンスに関する FAQ"
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "メディアライブラリに関するよくある質問"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     image: /assets/img/braze_icons/image-01.svg
   - name: "MMS FAQ"
-    link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
+    link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs/
     image: /assets/img/braze_icons/message-circle-01.svg
   - name: "SMS FAQ"
-    link: /docs/user_guide/message_building_by_channel/sms/faqs/
+    link: /docs/sms_faq/
     image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: "WhatsApp FAQ"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
     image: /assets/img/braze_icons/whatsapp.svg
   - name: "インテリジェンスFAQ"
-    link: /docs/user_guide/intelligence/faqs/
+    link: /docs/user_guide/brazeai/intelligence/faqs/
     image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "メール ドラッグ＆ドロップ エディター FAQ"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
     image: /assets/img/braze_icons/channel-email.svg
   - name: "APIとCSVエクスポートFAQ"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    link: /docs/user_guide/data/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "フィーチャーフラグに関する FAQ"
-    link: /docs/developer_guide/platform_wide/feature_flags/faq/
+    link: /docs/developer_guide/feature_flags/faq/
     image: /assets/img/braze_icons/flag-01.svg
   - name: "ライブアクティビティに関する FAQ"
-    link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
+    link: /docs/developer_guide/push_notifications/live_notifications/?sdktab=swift#swift_faq
     image: /assets/img/braze_icons/swift.svg
   - name: "Liquid に関する FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: "プッシュに関する FAQ"
+    link: /docs/user_guide/message_building_by_channel/push/faq/
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 
 guide_menu_title: "Best practices"

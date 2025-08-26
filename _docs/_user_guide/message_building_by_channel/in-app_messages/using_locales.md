@@ -1,5 +1,5 @@
 ---
-nav_title: Locales in Messages
+nav_title: Locales in messages
 article_title: Locales in Messages
 page_order: 4
 alias: /iam_locales/

@@ -1,7 +1,7 @@
 ---
 nav_title: Segmentación de ubicación
 article_title: Segmentación de ubicación
-page_order: 6.5
+page_order: 10
 page_type: tutorial
 tool: 
 - Segments
@@ -16,27 +16,27 @@ description: "En este artículo se explica cómo configurar la segmentación por
 
 ## Paso 1: Cree su segmento
 
-Vaya a la página **Segmentos**, en **Audiencia**, para ver todos sus segmentos de usuarios actuales. En esta página puede crear y nombrar nuevos segmentos. Para empezar, haga clic en **Crear segmento** y asigne un nombre a su segmento.
+Vaya a la página **Segmentos**, en **Audiencia**, para ver todos sus segmentos de usuarios actuales. En esta página puede crear y nombrar nuevos segmentos. Para empezar, selecciona **Crear segmento** y dale un nombre a tu segmento.
 
-![][1]{: style="max-width:70%;"}
+![Modal para crear un segmento.]({% image_buster /assets/img_archive/createsegment2.png %}){: style="max-width:70%;"}
 
 ## Paso 2: Personaliza tu ubicación
 
-Una vez que haya creado su segmento, añada un filtro de **Ubicación más reciente** para dirigirse a los usuarios por el último lugar en el que utilizaron su aplicación. Tiene la opción de destacar a los usuarios en una región circular estándar o en una región poligonal personalizable.
+Cuando hayas creado tu segmento, añade un filtro de **ubicación más reciente** para dirigirte a los usuarios según el último lugar en el que utilizaron tu aplicación. Tienes la opción de resaltar a los usuarios dentro o fuera de una región circular estándar o de una región poligonal personalizable.
 
-![][2]
+![Filtrar por una ubicación más reciente dentro de un círculo.]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
 ### Regiones circulares
 
 Para las regiones circulares, puede mover el origen y ajustar el radio de ubicación para su segmentación.
 
-![Un contorno circular de ciudades entre Nueva Jersey y Nueva York.][3]{: style="max-width:70%;"}
+![Un contorno circular de ciudades entre Nueva Jersey y Nueva York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
 ### Regiones poligonales
 
 Para las regiones poligonales, puede designar más específicamente qué áreas desea incluir en su segmento.
 
-![Un contorno del estado de Nueva York como región poligonal seleccionada.][4]{: style="max-width:70%;"}
+![Un contorno del estado de Nueva York como región poligonal seleccionada.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
 
 ## Apoyo a la asociación para beacon y geovallas
 
@@ -46,7 +46,3 @@ La combinación de la beacon o geovalla existente con nuestras características 
 - [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
 - [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
-[1]: {% image_buster /assets/img_archive/createsegment2.png %}
-[2]: {% image_buster /assets/img_archive/filter_recent_location.png %}
-[3]: {% image_buster /assets/img_archive/location_circle.png %}
-[4]: {% image_buster /assets/img_archive/create_polygon.png %}

@@ -10,13 +10,15 @@ page_order: 2
 
 > Usando o editor de arrastar e soltar, é possível criar e personalizar uma Central de Preferências para ajudar a gerenciar quais usuários recebem determinados tipos de comunicação. Você pode ter até 50 centrais de preferências por espaço de trabalho.
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ## Etapa 1: Crie uma Central de Preferências de e-mail
 
 Crie uma Central de  Preferências navegando até **Público** > **Inscrições** > **Central de Preferências de E-mail**.
 
 Aqui, será exibida uma lista de centros de preferências personalizados. Selecione **Create New (Criar novo)** para criar um novo centro de preferências ou selecione o nome de um já existente para fazer alterações.
 
-![Uma lista de Centrais de Preferências personalizadas com o nome, a descrição, o tipo, o status, a data da última edição e a criação pelo usuário.][1]
+![Uma lista de Centrais de Preferências personalizadas com o nome, a descrição, o tipo, o status, a data da última edição e a criação pelo usuário.]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
 ## Etapa 2: Nomear a Central de Preferências de e-mail
 
@@ -24,7 +26,7 @@ Os nomes das Centrais de Preferências só podem conter caracteres alfanumérico
 
 Essa Liquid tag pode ser incluída em qualquer campanha de envio de e-mail ou etapa do Canva e direcionará os usuários para a central de preferências.
 
-![Um exemplo de Liquid para uma Central de Preferências.][2]
+![Um exemplo de Liquid para um centro de preferências.]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
 ## Etapa 3: Adicionar grupos de inscrições à Central de Preferências
 
@@ -41,7 +43,7 @@ Você pode configurar ainda mais os grupos de inscrições selecionados selecion
 - Adicione ou remova a caixa de seleção **Assinar tudo**, que inscreverá o usuário em todos os grupos de inscrições mostrados nesse bloco
 - Adicione ou remova uma caixa de seleção **Cancelar inscrição de todos** que cancelará a inscrição do usuário em todos os grupos de inscrições mostrados nesse bloco
 
-![Um exemplo de uma Central de Preferências com as opções de assinar todas as mensagens, marketing, boletins informativos e e-mails semanais, ou cancelar a inscrição de todos.][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![Um exemplo de uma Central de Preferências com as opções de assinar todas as mensagens, marketing, boletins informativos e e-mails semanais, ou cancelar a inscrição de todos.]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
 O botão **Cancelar inscrição de todos** na parte inferior do modelo não é removível e cancelará [globalmente a inscrição]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) do usuário no recebimento de qualquer mensagem de e-mail.
 
@@ -51,7 +53,7 @@ O botão **Cancelar inscrição de todos** na parte inferior do modelo não é r
 
 É possível definir determinados estilos a serem aplicados em todos os blocos relevantes em seu centro de preferências na guia **Common Styles (Estilos comuns** ). Os estilos definidos nesta seção são usados em toda a mensagem, exceto quando são substituídos por um bloco específico. Para facilitar a experiência de design, recomendamos configurar os estilos no nível da página antes de personalizar os estilos no nível do bloco.
 
-![Um exemplo de configurações de estilo comuns para texto, botões e links.][5]{: style="max-width:45%;"}
+![Um exemplo de configurações de estilo comuns para texto, botões e links.]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
 
 {% alert tip %}
 Para retornar aos estilos comuns, selecione o botão "X" nas propriedades de blocos individuais. Em seguida, selecione o contêiner da mensagem, o botão "X" da mensagem ou o plano de fundo do editor.
@@ -92,7 +94,7 @@ Se estiver usando o bloco Código personalizado na Central de Preferências, os 
 
 Não se esqueça de personalizar a página de confirmação! Você pode editar essa página selecionando **Confirmation Page (Página de confirmação** ) na parte superior da janela do editor de arrastar e soltar. Essa página será exibida aos usuários depois de atualizarem suas preferências usando a Central de Preferências. Os mesmos recursos de estilo acima também se aplicam a essa página.
 
-![Um exemplo de uma página de confirmação para comunicar que as preferências do usuário foram atualizadas.][9]{: style="max-width:65%;"}
+![Um exemplo de página de confirmação para comunicar que as preferências do usuário foram atualizadas.]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
 ## Etapa 6: Pré-visualize e inicie sua Central de Preferências
 
@@ -108,7 +110,7 @@ Ao iniciar a Central de Preferências, você será solicitado a confirmar o nome
 
 Para colocar um link para o centro de preferências em seus e-mails, copie a Liquid tag do centro de preferências desejado selecionando o ícone **Copy Liquid**.
 
-![A opção Copy Liquid na linha de um centro de preferências.][10]{: style="max-width:75%;"}
+![A opção Copy Liquid na linha de um centro de preferências.]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
 Adicione a tag Liquid ao local desejado em seu e-mail, da mesma forma que as [URLs de cancelamento de inscrição]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link) são inseridas.
 
@@ -116,16 +118,5 @@ Adicione a tag Liquid ao local desejado em seu e-mail, da mesma forma que as [UR
 
 Se ocorrer um erro quando o usuário selecionar **Salvar** em uma Central de Preferências, será apresentada a seguinte mensagem de erro padrão, que não pode ser personalizada ou estilizada no editor. No entanto, a localização das mensagens de erro ainda é possível nessas páginas. 
 
-![Um erro de "Houve um problema ao salvar suas preferências. Por favor, tente novamente".][11]{: style="max-width:55%;"}
+![Um erro de "Houve um problema ao salvar suas preferências. Tente novamente."]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 
-[1]: {% image_buster /assets/img/preference_center/preference_center1.png %}
-[2]: {% image_buster /assets/img/preference_center/preference_center2.png %}
-[3]: {% image_buster /assets/img/preference_center/preference_center3.png %}
-[4]: {% image_buster /assets/img/preference_center/preference_center4.png %}
-[5]: {% image_buster /assets/img/preference_center/preference_center5.png %}
-[6]: {% image_buster /assets/img/preference_center/preference_center6.png %}
-[7]: {% image_buster /assets/img/preference_center/preference_center7.png %}
-[8]: {% image_buster /assets/img/preference_center/preference_center8.png %}
-[9]: {% image_buster /assets/img/preference_center/preference_center9.png %}
-[10]: {% image_buster /assets/img/preference_center/preference_center10.png %}
-[11]: {% image_buster /assets/img/preference_center/preference_center11.png %} 

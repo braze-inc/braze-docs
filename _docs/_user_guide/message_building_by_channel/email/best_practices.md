@@ -1,6 +1,6 @@
 ---
 page_order: 13
-nav_title: Best Practices
+nav_title: Best practices
 article_title: Email Best Practices
 layout: dev_guide
 guide_top_header: "Email Best Practices"

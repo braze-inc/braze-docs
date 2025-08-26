@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Remove Dashboard User Account"
+nav_title: "DELETE: Remove dashboard user account"
 article_title: "DELETE: Remove Dashboard User Account"
 alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
