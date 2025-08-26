@@ -1,5 +1,5 @@
 ---
-nav_title: Export Usage Analytics
+nav_title: Export usage analytics
 article_title: Export Usage Analytics
 page_order: 3
 

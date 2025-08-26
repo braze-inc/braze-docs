@@ -1,5 +1,5 @@
 ---
-nav_title: Message Archiving
+nav_title: Message archiving
 article_title: Message Archiving
 alias: "/message_archiving/"
 page_order: 0

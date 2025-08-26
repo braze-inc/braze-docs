@@ -1,5 +1,5 @@
 ---
-nav_title: Conditionally Displaying Messages
+nav_title: Conditionally displaying messages
 article_title: "Tutorial: Conditionally displaying in-app messages"
 description: ""
 page_order: 1

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Formula
+nav_title: Creating a formula
 article_title: Creating a Formula
 page_order: 1.2
 page_type: reference

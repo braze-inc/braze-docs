@@ -1,5 +1,5 @@
 ---
-nav_title: "Use Cases"
+nav_title: "Use cases"
 article_title: SQL Segment Extensions Use Cases
 page_order: 2
 page_type: glossary

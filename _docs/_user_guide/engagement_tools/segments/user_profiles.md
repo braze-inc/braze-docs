@@ -1,5 +1,5 @@
 ---
-nav_title: User Profiles
+nav_title: User profiles
 article_title: User Profiles
 page_order: 9
 page_type: reference

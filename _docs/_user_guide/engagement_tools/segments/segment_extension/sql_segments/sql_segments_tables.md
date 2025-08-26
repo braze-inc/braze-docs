@@ -1,5 +1,5 @@
 ---
-nav_title: "SQL Table Reference"
+nav_title: "SQL table reference"
 article_title: SQL Table Reference
 page_order: 3
 page_type: reference

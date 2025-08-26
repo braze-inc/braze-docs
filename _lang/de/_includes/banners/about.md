@@ -36,7 +36,7 @@ Zu den Features für Banner gehören:
 
 ### Platzierungs-IDs {#placement-id}
 
-Bannerplatzierungen sind bestimmte Standorte in Ihrer App oder Website, [die Sie mit dem Braze SDK erstellen]({{site.baseurl}}/developer_guide/banners/creating_placements/) und die festlegen, wo Banner erscheinen können.
+Bannerplatzierungen sind bestimmte Standorte in Ihrer App oder Website, [die Sie mit dem Braze SDK erstellen]({{site.baseurl}}/developer_guide/banners/placements/) und die festlegen, wo Banner erscheinen können.
 
 Zu den üblichen Standorten gehören der obere Teil Ihrer Homepage, die Produktdetailseiten und die Kassenabläufe. Nachdem die Platzierungen erstellt wurden, können die Banner [in Ihrer Kampagne zugewiesen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/) werden.
 
@@ -92,5 +92,5 @@ Möchten Sie bei der Festlegung der nächsten Prioritäten helfen? Kontaktieren 
 
 Da Sie nun über Banner Bescheid wissen, sind Sie bereit für die nächsten Schritte:
 
-1. [Erstellen von Bannerplatzierungen in Ihrer App oder Website]({{site.baseurl}}/developer_guide/banners/creating_placements/)
+1. [Erstellen von Bannerplatzierungen in Ihrer App oder Website]({{site.baseurl}}/developer_guide/banners/placements/)
 2. [Erstellen von Bannerkampagnen in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)

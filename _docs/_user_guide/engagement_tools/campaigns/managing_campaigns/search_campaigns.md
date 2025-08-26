@@ -1,5 +1,5 @@
 ---
-nav_title: Searching for Campaigns
+nav_title: Searching for campaigns
 article_title: Searching for Campaigns
 page_order: 10
 page_type: reference
