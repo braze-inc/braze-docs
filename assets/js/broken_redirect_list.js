@@ -2693,4 +2693,6 @@ validurls['/docs/user_guide/engagement_tools/segments/sql_segments/catalog_segme
 validurls['/docs/user_guide/engagement_tools/segments/sql_segments/use_cases/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/use_cases/';
 validurls['/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/';
 
+validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/developer_guide/banners/placements/';
+
 // validurls['OLD'] = 'NEW';
