@@ -122,12 +122,13 @@ If you insert banners using the SDK methods in this guide, all analytics events 
 {% tab Web %}
 {% subtabs %}
 {% subtab Javascript %}
+If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
-  console.log(`Banners were updated`);
+  console.log("Banners were updated");
 });
 
 // always refresh after your subscriber function has been registered
@@ -135,12 +136,14 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 {% endsubtab %}
 {% subtab React %}
+If you're using React with the Web Braze SDK, set up [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) inside a `useEffect` hook and call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) after registering your listener.
+
 ```typescript
 import * as braze from "@braze/web-sdk";
 
 useEffect(() => {
   const subscriptionId = braze.subscribeToBannersUpdates((banners) => {
-    console.log(`Banners were updated`);
+    console.log("Banners were updated");
   });
 
   // always refresh after your subscriber function has been registered
@@ -153,6 +156,7 @@ useEffect(() => {
 }, []);
 ```
 {% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab Swift %}
 
