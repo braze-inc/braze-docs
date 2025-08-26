@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case
+nav_title: Use case
 article_title: Use Case Predict Subscription Upgrades
 description: "This example shows how a fictional brand uses Braze Predictive Events to define the outcomes that matter to their business—like upgrading to a pro membership—and build targeted strategies that improve results."
 page_type: tutorial

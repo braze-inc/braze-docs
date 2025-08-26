@@ -1,7 +1,7 @@
 ---
-nav_title: Creating Placements
-article_title: Creating Banner placements for the Braze SDK
-description: "Learn how to create Banner placements for the Braze SDK."
+nav_title: Managing placements
+article_title: Managing Banner placements for the Braze SDK
+description: "Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions."
 page_order: 2
 platform:
   - iOS
@@ -11,11 +11,11 @@ platform:
   - React Native
 ---
 
-# Creating Banner placements
+# Managing Banner placements
 
-> Learn how to create Banner placements for the Braze SDK, so you can engage users with an experience that feels natural. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
+> Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
-## Placement requests {#requests}
+## About placement requests {#requests}
 
 {% multi_lang_include banners/placement_requests.md %}
 
@@ -23,7 +23,7 @@ platform:
 
 ### Prerequisites
 
-These are the minimum SDK versions needed for Banners:
+These are the minimum SDK versions needed to create Banner placements:
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
@@ -490,3 +490,131 @@ Here's what you need to know about Banner dimensions and sizing:
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
+
+## Custom properties {#custom-properties}
+
+{% alert important %}
+Custom properties for Banners are currently in early access. Contact your Braze account manager if you're interested in participating
+{% endalert %}
+
+You can use custom properties from your Banner campaign to retrieve key–value data through the SDK and modify your app’s behavior or appearance. For example, you could:
+
+- Send metadata for your third-party analytics or integrations.
+- Use metadata such as a `timestamp` or JSON object to trigger conditional logic.
+- Control the behavior of a banner based on included metadate like `ratio` or `format`.
+
+### Prerequisites
+
+You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
+
+{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 %}
+
+### Accessing custom properties
+
+To access a banner's custom properties, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type, the method returns `null`.
+
+{% tabs local %}
+{% tab Web %}
+```javascript
+// Returns the Banner instance
+const banner = braze.getBanner("placement_id_homepage_top");
+
+// Returns the string property
+const stringProperty = banner.getStringProperty("color");
+
+// Returns the boolean property
+const booleanProperty = banner.getBooleanProperty("expanded");
+
+// Returns the number property
+const numberProperty = banner.getNumberProperty("height");
+
+// Returns the timestamp property (as a Number)
+const timestampProperty = banner.getTimestampProperty("account_start");
+
+// Returns the image URL property as a String of the URL
+const imageProperty = banner.getImageProperty("homepage_icon");
+
+// Returns the JSON object property as an object in form of JsonPropertyValue
+const jsonObjectProperty = banner.getJsonProperty("footer_settings");
+```
+{% endtab %}
+
+{% tab Swift %}
+```swift
+// Passes the specified banner to the completion handler
+AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner in
+  // Returns the string property
+  let stringProperty: String? = banner.stringProperty(key: "color")
+
+  // Returns the boolean property
+  let booleanProperty: Bool? = banner.boolProperty(key: "expanded")
+
+  // Returns the number property as a double
+  let numberProperty: Double? = banner.numberProperty(key: "height")
+
+  // Returns the Unix UTC millisecond timestamp property as an integer
+  let timestampProperty: Int? = banner.timestampProperty(key: "account_start")
+
+  // Returns the image property as a String of the image URL
+  let imageProperty: String? = banner.imageProperty(key: "homepage_icon")
+
+  // Returns the JSON object property as a [String: Any] dictionary
+  let jsonObjectProperty: [String: Any]? = banner.jsonObjectProperty(key: "footer_settings")
+}
+```
+{% endtab %}
+
+{% tab Android %}
+{% subtabs %}
+{% subtab Java %}
+```java
+// Returns the Banner instance
+Banner banner = Braze.getInstance(context).getBanner("placement_id_homepage_top");
+
+// Returns the string property
+String stringProperty = banner.getStringProperty("color");
+
+// Returns the boolean property
+Boolean booleanProperty = banner.getBooleanProperty("expanded");
+
+// Returns the number property
+Number numberProperty = banner.getNumberProperty("height");
+
+// Returns the timestamp property (as a Long)
+Long timestampProperty = banner.getTimestampProperty("account_start");
+
+// Returns the image URL property as a String of the URL
+String imageProperty = banner.getImageProperty("homepage_icon");
+
+// Returns the JSON object property as a JSONObject
+JSONObject jsonObjectProperty = banner.getJSONProperty("footer_settings");
+```
+{% endsubtab %}
+
+{% subtab Kotlin %}
+```kotlin
+// Returns the Banner instance
+val banner: Banner = Braze.getInstance(context).getBanner("placement_id_homepage_top") ?: return
+
+// Returns the string property
+val stringProperty: String? = banner.getStringProperty("color")
+
+// Returns the boolean property
+val booleanProperty: Boolean? = banner.getBooleanProperty("expanded")
+
+// Returns the number property
+val numberProperty: Number? = banner.getNumberProperty("height")
+
+// Returns the timestamp property (as a Long)
+val timestampProperty: Long? = banner.getTimestampProperty("account_start")
+
+// Returns the image URL property as a String of the URL
+val imageProperty: String? = banner.getImageProperty("homepage_icon")
+
+// Returns the JSON object property as a JSONObject
+val jsonObjectProperty: JSONObject? = banner.getJSONProperty("footer_settings")
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}

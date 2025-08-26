@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Analytics
+nav_title: Canvas analytics
 article_title: Canvas Analytics
 page_order: 2
 page_type: reference
