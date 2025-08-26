@@ -60,9 +60,9 @@ Custom properties for Banners are currently in early access. Contact your Braze 
 
 You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/managing_placements/#accessing-properties) to modify your app’s behavior or appearance. For example, you could:
 
-- Change layout or styling based on a property like `color` or `expanded`.
-- Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
-- Detect control variants and decide whether to hide a container or show alternate content.
+- Send metadata for your third-party analytics or integrations.
+- Use metadata such as a `timestamp` or JSON object to trigger conditional logic.
+- Control the behavior of a banner based on included metadata like `ratio` or `format`.
 
 To add a custom property, select **Settings** > **Properties** > **Add property**.
 

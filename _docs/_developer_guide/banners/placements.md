@@ -499,9 +499,9 @@ Custom properties for Banners are currently in early access. Contact your Braze 
 
 You can use custom properties from your Banner campaign to retrieve key–value data through the SDK and modify your app’s behavior or appearance. For example, you could:
 
-- Change layout or styling based on a property like `color` or `expanded`.
-- Use metadata such as a `timestamp` or JSON object to trigger custom behavior.
-- Detect control variants and decide whether to hide a container or show alternate content.
+- Send metadata for your third-party analytics or integrations.
+- Use metadata such as a `timestamp` or JSON object to trigger conditional logic.
+- Control the behavior of a banner based on included metadate like `ratio` or `format`.
 
 ### Prerequisites
 
