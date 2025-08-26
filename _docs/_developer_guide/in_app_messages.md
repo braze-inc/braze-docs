@@ -1,5 +1,5 @@
 ---
-nav_title: In-App messages
+nav_title: In-app messages
 article_title: In-app messages for the Braze SDK
 platform: 
   - Android
