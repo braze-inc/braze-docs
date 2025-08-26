@@ -28,7 +28,7 @@ To compute the engagement rate of the SMS channel, turn on [SMS link shortening]
 
 ## The "Not enough data" option
 
-For Braze to determine which channel is "best", there needs to be enough data. This means that a user must have received at least three or more messages across at least two of the three available channels. The messages don't necessarily need to have been opened. 
+For Braze to determine which channel is "best", there needs to be enough data. This means that a user must have received at least three or more messages PER CHANNEL across at least two of the three available channels. The messages don't necessarily need to have been opened. 
 
 If users haven't received enough messages across the channels, those users will fall into the "Not Enough Data" option of this filter. This allows you to use any of the three available messaging channels to target these users.
 
