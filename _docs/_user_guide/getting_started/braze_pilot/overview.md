@@ -10,7 +10,7 @@ description: "This reference article briefly covers the integration steps requir
 
 > This page introduces the core concepts you’ll need to know when working with Braze Pilot.
 
-Braze Pilot is a mobile app that is designed to connect seamlessly with your Braze dashboard. This allows you to launch campaigns and Canvases to the app to see Braze messages come to life on your own phone. Pilot includes a library of app simulations for fictional brands representing different industries, which allows you to experience how your messaging might look from your consumers’ perspective.
+Braze Pilot is a mobile app that is designed to connect seamlessly with your Braze dashboard. This empowers you to launch campaigns and Canvases to the app, bringing Braze messages to life on your own phone. Braze Pilot includes a library of app simulations for fictional brands representing different industries, allowing you to experience how your messaging might look from your customers’ perspective.
 
 ## Pilot app simulations
 
