@@ -26,15 +26,15 @@ Braze는 이 설정이 꺼지면 회사 연락처와 생성자에게 확장을 �
 
 ### 콘텐츠 카드
 
-이 선택 사항인 고급 [구현 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)에서는 콘텐츠 카드 코드 고려사항, 유니티 팀이 구축한 세 가지 맞춤 사용 사례, 함께 제공되는 코드 스니펫, 노출 횟수, 클릭 수 및 해제 로깅에 대한 지침을 다룹니다.
+이 선택 사항인 고급 [구현 가이드]({{site.baseurl}}/developer_guide/content_cards/)에서는 콘텐츠 카드 코드 고려사항, 유니티 팀이 구축한 세 가지 맞춤 사용 사례, 함께 제공되는 코드 스니펫, 노출 횟수, 클릭 수 및 해제 로깅에 대한 지침을 다룹니다.
 
 ### 인앱 메시징
 
-이 선택적 고급 [구현 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/)는 인앱 메시지 코드 고려사항, 저희 팀이 구축한 세 가지 사용자 지정 사용 사례 및 함께 제공되는 코드 스니펫을 다룹니다.
+이 선택적 고급 [구현 가이드]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android)는 인앱 메시지 코드 고려사항, 저희 팀이 구축한 세 가지 사용자 지정 사용 사례 및 함께 제공되는 코드 스니펫을 다룹니다.
 
 ### 푸시 알림
 
-이 선택 사항인 고급 [구현 가이드에서는]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) 사용자 지정 `FirebaseMessagingService` 하위 클래스를 활용하여 푸시 메시지를 최대한 활용하는 방법에 대해 설명합니다. 저희 팀이 구축한 커스텀 사용 사례와 함께 제공되는 코드 스니펫, 로깅 분석에 대한 안내가 포함되어 있습니다.
+이 선택 사항인 고급 [구현 가이드에서는]({{site.baseurl}}/developer_guide/push_notifications/examples/?sdktab=android) 사용자 지정 `FirebaseMessagingService` 하위 클래스를 활용하여 푸시 메시지를 최대한 활용하는 방법에 대해 설명합니다. 저희 팀이 구축한 커스텀 사용 사례와 함께 제공되는 코드 스니펫, 로깅 분석에 대한 안내가 포함되어 있습니다.
 
 ## 새로운 Braze 파트너십
 
@@ -42,8 +42,8 @@ Braze는 이 설정이 꺼지면 회사 연락처와 생성자에게 확장을 �
 
 Adobe Experience Platform을 기반으로 구축된 Adobe의 실시간 고객 데이터 플랫폼(실시간 CDP)은 기업이 여러 기업 소스의 알려진 데이터와 익명 데이터를 통합하여 모든 채널과 디바이스에서 개인화된 고객 경험을 실시간으로 제공하는 데 사용할 수 있는 고객 프로필을 생성할 수 있도록 지원합니다.
 
-Braze와 [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP 통합을 통해 브랜드는 Adobe 데이터(사용자 지정 속성 및 세그먼트)를 실시간으로 Braze에 연결하고 매핑할 수 있습니다. 그런 다음 브랜드는 이 데이터를 기반으로 조치를 취하여 해당 사용자에게 개인화된 타겟팅 경험을 제공할 수 있습니다. 
+Braze와 [Adobe]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/adobe/) CDP 통합을 통해 브랜드는 Adobe 데이터(사용자 지정 속성 및 세그먼트)를 실시간으로 Braze에 연결하고 매핑할 수 있습니다. 그런 다음 브랜드는 이 데이터를 기반으로 조치를 취하여 해당 사용자에게 개인화된 타겟팅 경험을 제공할 수 있습니다. 
 
 ### Shopify - 전자상거래
 
-[Shopify는]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) 모든 규모의 소매 비즈니스를 시작, 성장, 마케팅 및 관리할 수 있는 신뢰할 수 있는 도구를 제공하는 선도적인 글로벌 상거래 기업입니다. Braze와 Shopify 통합을 통해 브랜드는 Shopify 스토어를 Braze와 원활하게 연결하여 일부 Shopify 웹훅을 Braze로 전달할 수 있습니다. Braze의 크로스채널 전략과 캔버스를 활용하여 결제 중단 메시징으로 사용자를 리타겟팅하고 고객이 구매를 완료하도록 넛지하거나 이전 구매를 기반으로 사용자를 리타겟팅할 수 있습니다.
+[Shopify는]({{site.baseurl}}/partners/shopify/) 모든 규모의 소매 비즈니스를 시작, 성장, 마케팅 및 관리할 수 있는 신뢰할 수 있는 도구를 제공하는 선도적인 글로벌 상거래 기업입니다. Braze와 Shopify 통합을 통해 브랜드는 Shopify 스토어를 Braze와 원활하게 연결하여 일부 Shopify 웹훅을 Braze로 전달할 수 있습니다. Braze의 크로스채널 전략과 캔버스를 활용하여 결제 중단 메시징으로 사용자를 리타겟팅하고 고객이 구매를 완료하도록 넛지하거나 이전 구매를 기반으로 사용자를 리타겟팅할 수 있습니다.
