@@ -1,5 +1,5 @@
 ---
-nav_title: Building Queries
+nav_title: Building queries
 article_title: Using the Query Builder
 page_order: 0
 page_type: reference

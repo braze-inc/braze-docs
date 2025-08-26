@@ -44,10 +44,8 @@ Para más información, consulte el [Ciclo de vida del perfil de usuario]({{site
 
 Para acceder a esta opción, debe crear una campaña de mensajería in-app. A partir de ahí, en función de su caso de uso, establezca **Enviar a** en **Navegadores web**, **Aplicaciones móviles** o **Aplicaciones móviles y Navegadores web**, y seleccione **Formulario de captura de correo electrónico** como **Tipo de mensaje**.
 
-![][4]
-
 {% alert note %}
-Para habilitar los mensajes HTML dentro de la aplicación a través del SDK Web, debes proporcionar la opción de inicialización `allowUserSuppliedJavascript` a Braze, por ejemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Esto es por razones de seguridad, ya que los mensajes dentro de la aplicación en HTML pueden ejecutar JavaScript, por lo que requerimos que un mantenedor del sitio los habilite.
+**¿Dirigirte a los usuarios de la Web?** <br>Para habilitar los mensajes HTML dentro de la aplicación a través del SDK Web, debes proporcionar la opción de inicialización `allowUserSuppliedJavascript` a Braze, por ejemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Esto es por razones de seguridad, ya que los mensajes dentro de la aplicación en HTML pueden ejecutar JavaScript, por lo que requerimos que un mantenedor del sitio los habilite.
 {% endalert %}
 
 ## Paso 2: Personalizar el formulario {#customizable-features}
@@ -61,32 +59,24 @@ A continuación, personalice el formulario según sea necesario. Puede personali
 - Pares clave-valor
 - Estilo para el texto del encabezado y del cuerpo, los botones, el color del borde de los botones, el fondo y la superposición.
 
-![Compositor para formulario de captura de correo electrónico.][5]
+![Compositor para formulario de captura de correo electrónico.]({% image_buster /assets/img/email_capture.png %})
 
 Si necesita una mayor personalización, elija **Código personalizado** para su **Tipo de mensaje**. Puede utilizar esta [plantilla modal de captura de correo electrónico](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) del repositorio [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub como código de inicio.
 
 ## Paso 3: Configura tu audiencia de entrada
 
-Si sólo desea enviar este formulario a usuarios sin dirección de correo electrónico, utilice el filtro `Email Available is false`.
+Si utilizas un mensaje dentro de la aplicación para capturar los correos electrónicos de los usuarios, es posible que quieras limitar la audiencia a los usuarios que aún no hayan proporcionado esta información.
 
-![Filtrar por correo electrónico disponible es falso][10]{: style="max-width:50%"}
+- **Para dirigirse a usuarios sin dirección de correo electrónico:** Utiliza el filtro `Email Available` es `false`. Esto hace que el formulario sólo aparezca a los usuarios que no tienen un correo electrónico registrado, ayudándote a evitar indicaciones redundantes para usuarios conocidos.
+- **Para dirigirte a usuarios anónimos sin ID externos:** Utiliza el filtro `External User ID` `is blank`. Es útil cuando quieres identificar a usuarios que aún no se han autentificado o registrado.
 
-Si sólo desea enviar este formulario a usuarios sin ID externo (usuarios anónimos), utilice el filtro `External User ID is blank`.
-
-![El filtro por ID de usuario externo está en blanco][11]{: style="max-width:50%"}
-
-Si lo deseas, también puedes combinar los dos filtros utilizando la lógica `AND`.
+Si lo deseas, también puedes combinar los dos filtros utilizando la lógica `AND`. Esto hace que el formulario sólo aparezca a los usuarios a los que les falta tanto una dirección de correo electrónico como un ID externo de usuario, lo que es ideal para captar nuevos clientes potenciales o solicitar la creación de una cuenta.
 
 ## Paso 4: Usuarios objetivo que rellenaron el formulario (opcional)
 
-Una vez que haya lanzado el formulario de captura de correo electrónico y recopilado las direcciones de correo electrónico de sus usuarios, puede dirigirse a esos usuarios con el filtro `Clicked/Opened Campaign`. 
+Una vez que hayas lanzado el formulario de captura de correo electrónico y recopilado las direcciones de correo electrónico de tus usuarios, puedes dirigirte a los usuarios que rellenaron el formulario.
 
-Configure el filtro en `Has clicked in-app message button 1` para la campaña `<CAMPAIGN_NAME>`. Sustituya `<CAMPAIGN_NAME>` por el nombre de su campaña de formulario de captura de correo electrónico.
+1. En cualquier filtro de segmento en Braze, selecciona el filtro `Clicked/Opened Campaign`. 
+2. En el desplegable, selecciona `clicked in-app message button 1`
+3. Selecciona tu campaña de formulario de captura de correo electrónico.
 
-![Filtro de ha hecho clic en el botón de mensaje in-app 1 para su campaña de formulario de captura de correo electrónico web][12]
-
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}

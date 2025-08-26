@@ -20,7 +20,7 @@ Después de lanzar campañas utilizando cualquiera de nuestras herramientas de i
 
 ## Paso 2: Enviar datos de eventos a un socio de almacenamiento de datos
 
-Configuramos Currents para que envíe los datos de eventos Braze a Amazon S3 para su almacenamiento y extracción. Ahora sabemos que puedes utilizar [Athena][2] para controlar el S3 y ejecutar consultas. Es una gran solución a corto plazo. Pero queríamos una solución a largo plazo utilizando una base de datos relacional y una herramienta de Business Intelligence/Analytics. (Te recomendamos que hagas lo mismo).
+Configuramos Currents para que envíe los datos de eventos Braze a Amazon S3 para su almacenamiento y extracción. Ahora sabemos que puedes utilizar [Athena](https://aws.amazon.com/athena/) para controlar el S3 y ejecutar consultas. Es una gran solución a corto plazo. Pero queríamos una solución a largo plazo utilizando una base de datos relacional y una herramienta de Business Intelligence/Analytics. (Te recomendamos que hagas lo mismo).
 
 Consideramos el S3 como nuestra llave del castillo. Abre la puerta a tantas posibilidades de mover, pivotar y analizar nuestros datos transfiriéndolos donde necesitemos que vayan. Sin embargo, tenemos cuidado de no transformar nuestros datos en S3, ya que tenemos una estructura muy específica para ellos.
 
@@ -48,4 +48,3 @@ Por último, utilizamos una herramienta de BI para analizar nuestros datos, conv
 - [Bloque de comportamiento del usuario](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 - [Bloque de interacción de mensajes](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 
-[2]: https://aws.amazon.com/athena/

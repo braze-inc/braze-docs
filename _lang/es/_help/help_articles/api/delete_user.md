@@ -11,7 +11,7 @@ platform: API
 
 # Eliminar usuarios mediante API
 
-Cuando [eliminas a un usuario a través de la API REST de Braze][1], se borran (anulan) los siguientes datos:
+Cuando [eliminas a un usuario a través de la API REST de Braze]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), se borran (anulan) los siguientes datos:
 - Cualquier atributo que tuviera el usuario
 - Dirección de correo electrónico
 - Número de teléfono
@@ -20,9 +20,9 @@ Cuando [eliminas a un usuario a través de la API REST de Braze][1], se borran (
 - País
 - Idioma
 
-Cuando [eliminas a un usuario a través de la API REST de Braze][1], se producen los siguientes eventos:
+Cuando [eliminas a un usuario a través de la API REST de Braze]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), se producen los siguientes eventos:
 - El perfil de usuario se ha borrado (anulado).
-- El recuento de [usuarios de toda la vida][2] se actualizará para tener en cuenta a los nuevos usuarios eliminados.	
+- El recuento de [usuarios de toda la vida]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) se actualizará para tener en cuenta a los nuevos usuarios eliminados.	
 - El usuario eliminado seguirá contando para el porcentaje de conversión agregado. Los recuentos de eventos personalizados y de compras no se actualizarán para los usuarios eliminados.
 
 ## Múltiples perfiles con una dirección de correo electrónico compartida
@@ -38,5 +38,3 @@ Para fusionar estos perfiles de usuario:
 
 _Última actualización: 13 de septiembre de 2023_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

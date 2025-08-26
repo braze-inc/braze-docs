@@ -1,5 +1,5 @@
 ---
-nav_title: Export Troubleshooting
+nav_title: Export troubleshooting
 article_title: Export Troubleshooting
 page_order: 10
 page_type: reference

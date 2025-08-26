@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Data Collection
+nav_title: Managing data collection
 article_title: Managing Data Collection for the Braze SDK
 page_order: 8
 description: "Learn how to manage data collection for the Braze SDK."

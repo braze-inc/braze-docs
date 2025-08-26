@@ -11,7 +11,7 @@ platform: API
 
 # Remoção de usuários via API
 
-Quando você [remove um usuário por meio da Braze REST API][1], os seguintes dados são excluídos (nulled):
+Quando você [remove um usuário por meio da Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), os seguintes dados são excluídos (nulled):
 - Quaisquer atribuições que o usuário tenha
 - Endereço de e-mail
 - Número de telefone
@@ -20,9 +20,9 @@ Quando você [remove um usuário por meio da Braze REST API][1], os seguintes da
 - País
 - Idioma
 
-Quando você [remove um usuário por meio da Braze REST API][1], ocorrem os seguintes eventos:
+Quando você [remove um usuário por meio da Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), ocorrem os seguintes eventos:
 - O perfil do usuário é excluído (anulado).
-- A contagem de [usuários vitalícios][2] será atualizada para contabilizar os usuários recém-removidos.	
+- A contagem de [usuários vitalícios]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) será atualizada para contabilizar os usuários recém-removidos.	
 - O usuário removido ainda será contabilizado na porcentagem de conversão agregada. As contagens de eventos personalizados e de compras não serão atualizadas para usuários removidos.
 
 ## Vários perfis com um endereço de e-mail compartilhado
@@ -38,5 +38,3 @@ Para mesclar esses perfis de usuário:
 
 _Última atualização em 13 de setembro de 2023_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

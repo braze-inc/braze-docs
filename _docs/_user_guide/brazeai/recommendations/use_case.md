@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case
+nav_title: Use case
 article_title: Use Case Drive Content Discovery After Viewing
 description: "This example shows how a fictional brand uses Braze AI item recommendations to deliver personalized content and product suggestions across key customer moments."
 page_type: tutorial
