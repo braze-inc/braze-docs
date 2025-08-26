@@ -1,4 +1,4 @@
-guide/prerequisites/xamarin.md developer_ %}
+{% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## メッセージの種類
 

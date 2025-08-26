@@ -12,11 +12,7 @@ tool: Segments
 
 Suas opções de filtro estão relacionadas ao formato (tipo de dados) que você está passando para o Braze para seu atributo personalizado. Para revisar o tipo de dados que a Braze está reconhecendo para seus atributos personalizados, navegue até **Configurações de dados** > **Atributos personalizados**.
 
-{% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), poderá encontrar **os atributos personalizados** em **Manage Settings (Gerenciar configurações)**.
-{% endalert %}
-
-Se as opções de filtro tiverem mudado, isso é uma indicação de que os dados estão sendo passados para o Braze em um formato (tipo de dados) diferente do anterior. Para obter descrições detalhadas de diferentes tipos de dados e suas opções de filtragem, consulte [tipos de dados de atributos personalizados][36].
+Se as opções de filtro tiverem mudado, isso é uma indicação de que os dados estão sendo passados para o Braze em um formato (tipo de dados) diferente do anterior. Para obter descrições detalhadas de diferentes tipos de dados e suas opções de filtragem, consulte [tipos de dados de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 Lembre-se de que a alteração do tipo de dados de um atributo personalizado no dashboard rejeitará os dados que forem enviados ao Braze em um formato diferente.
 
@@ -24,4 +20,3 @@ Ainda precisa de ajuda? Abra um [tíquete de suporte]({{site.baseurl}}/braze_sup
 
 _Última atualização em 5 de maio de 2021_
 
-[36]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

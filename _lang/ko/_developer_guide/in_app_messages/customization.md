@@ -20,18 +20,18 @@ platform:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/in_app_messages/customization.md developer_ %}
+{% multi_lang_include developer_guide/swift/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/in_app_messages/customization.md developer_ %}
+{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_guide/react_native/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/in_app_messages/customization.md developer_ %}
+{% multi_lang_include developer_guide/unity/in_app_messages/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

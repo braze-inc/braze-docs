@@ -1,5 +1,5 @@
 ---
-nav_title: "Data & Analytics"
+nav_title: "Data & analytics"
 article_title: Data & Analytics Partners
 page_order: 5
 

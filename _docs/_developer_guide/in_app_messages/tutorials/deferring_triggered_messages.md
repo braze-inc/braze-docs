@@ -1,5 +1,5 @@
 ---
-nav_title: Deferring Triggered Messages
+nav_title: Deferring triggered messages
 article_title: "Tutorial: Deferring and restoring triggered messages"
 description: ""
 page_order: 1

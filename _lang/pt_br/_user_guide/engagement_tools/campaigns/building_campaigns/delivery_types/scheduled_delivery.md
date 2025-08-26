@@ -16,7 +16,7 @@ tool: Campaigns
 
 Se você optar por enviar uma mensagem assim que ela for lançada, sua mensagem começará a ser enviada assim que você terminar de criar sua campanha.
 
-![A seção Entrega com a opção Programada selecionada e a opção de programação baseada em tempo de envio assim que a campanha for lançada.][10]
+![A seção "Delivery" (Entrega) com a opção "Scheduled" (Programada) selecionada e a opção de programação baseada em tempo de envio assim que a campanha for lançada.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
 Esse tipo de programação foi criado para campanhas únicas que você deseja enviar imediatamente, como mensagens sobre um evento atual. Um app de esportes, por exemplo, pode programar notificações por push sobre atualizações de pontuação usando essa opção. Além disso, ao enviar mensagens de teste destinadas apenas a você ou à sua equipe, essa opção permite que você as entregue imediatamente. 
 
@@ -28,11 +28,11 @@ O agendamento de uma campanha para um horário determinado permite que você esp
 
 Se selecionar **Entrega programada** e não optar por enviar no horário local do usuário, sua campanha será enviada de acordo com o fuso horário especificado na página **Configurações da empresa**.
 
-![As opções de agendamento baseadas em tempo para enviar uma campanha em um horário designado.][9]
+![As opções de agendamento baseadas em tempo para enviar uma campanha em um horário designado.]({% image_buster /assets/img_archive/schedule_designated.png %})
 
 ### Campanhas de fuso local
 
-É possível enviar a mensagem nos fusos locais dos usuários para que os membros do seu público internacional não recebam uma notificação em horários inconvenientes. As campanhas de fuso local precisam ser programadas com 24 horas de antecedência para garantir que os usuários elegíveis de todos os fusos horários possam recebê-las. Dê uma olhada nas [perguntas frequentes sobre campanhas][25] para entender como funcionam as campanhas de fuso local e as regras de entrega associadas.
+É possível enviar a mensagem nos fusos locais dos usuários para que os membros do seu público internacional não recebam uma notificação em horários inconvenientes. As campanhas de fuso local precisam ser programadas com 24 horas de antecedência para garantir que os usuários elegíveis de todos os fusos horários possam recebê-las. Consulte as [Perguntas frequentes sobre]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/) campanhas para entender como funcionam as campanhas de fuso local e as regras de entrega associadas.
 
 Os segmentos direcionados com campanhas de fuso local devem incluir, no mínimo, uma janela de dois dias para incorporar usuários de todos os fusos horários. Por exemplo, se a sua campanha estiver programada para ser enviada à noite, mas tiver apenas uma janela de 1 dia, alguns usuários podem ter saído do segmento quando o fuso horário deles for atingido. Exemplos de filtros que criam uma janela de 2 dias são "último uso há mais de 1 dia" e "último uso há menos de 3 dias", ou "primeira compra há mais de 7 dias" e "primeira compra há menos de 9 dias".
 
@@ -42,9 +42,9 @@ Os cronogramas designados são mais adequados para mensagens programadas com ant
 
 ## Opção 3: Intelligent Timing
 
-[Intelligent Timing][8] permite que você entregue uma campanha a cada usuário em um momento diferente. O Braze calcula o tempo de cada indivíduo com base no momento em que esse usuário normalmente se engaja com seu app e suas notificações. Você também pode especificar que as campanhas do Intelligent Timing sejam enviadas apenas durante uma determinada parte do dia. Por exemplo, se estiver notificando os usuários sobre uma promoção que termina à meia-noite, talvez queira que as mensagens sejam enviadas até as 22h, no máximo.
+[O Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) permite que você entregue uma campanha a cada usuário em um momento diferente. O Braze calcula o tempo de cada indivíduo com base no momento em que esse usuário normalmente se engaja com seu app e suas notificações. Você também pode especificar que as campanhas do Intelligent Timing sejam enviadas apenas durante uma determinada parte do dia. Por exemplo, se estiver notificando os usuários sobre uma promoção que termina à meia-noite, talvez queira que as mensagens sejam enviadas até as 22h, no máximo.
 
-![As opções de agendamento com base no tempo para usar o Intelligent Timing para enviar uma campanha no horário mais popular de uso do app entre todos os usuários.][14]
+![As opções de agendamento com base no tempo para usar o Intelligent Timing para enviar uma campanha no momento mais popular de uso do app entre todos os usuários.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
 
 ### Regras de entrega
 
@@ -56,10 +56,3 @@ Se o perfil de um usuário não tiver dados suficientes para calcular um horári
 
 As campanhas do Intelligent Timing funcionam melhor para mensagens únicas e recorrentes em que há alguma flexibilidade com relação ao tempo de entrega, como quando não são adequadas para notícias de última hora ou anúncios cronometrados.
 
-[3]: {% image_buster /assets/img_archive/time_based.png %}
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[9]: {% image_buster /assets/img_archive/schedule_designated.png %}
-[10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
-[14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}

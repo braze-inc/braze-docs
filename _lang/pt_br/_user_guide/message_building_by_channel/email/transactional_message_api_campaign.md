@@ -30,14 +30,14 @@ O tipo de campanha de mensagens de e-mail transacional foi criado especificament
 Em resumo, é possível usar e-mails de transação para enviar notificações críticas de negócios originadas do seu serviço para um único usuário, em que a velocidade é de extrema importância. 
 
 {% alert important %}
-Os e-mails de transação diferem das campanhas transacionais, que podem ser usadas para direcionamento aos seus usuários sem custos adicionais. As campanhas de mensagens transacionais, por exemplo, podem incluir mensagens enviadas depois que um usuário adiciona um item ao carrinho. Confira [as opções de direcionamento de público]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) para obter mais informações.
+Os e-mails de transação diferem das campanhas transacionais, que podem ser usadas para direcionamento aos seus usuários sem custos adicionais. As campanhas de mensagens transacionais, por exemplo, podem incluir mensagens enviadas depois que um usuário adiciona um item ao carrinho. Confira [as opções de direcionamento de público]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) para obter mais informações.
 {% endalert %}
 
 ## Etapa 1: Criar uma nova campanha
 
 Para criar uma nova campanha de e-mail transacional, crie uma campanha e selecione **E-mail transacional** como seu canal de envio de mensagens.
 
-![Crie o menu suspenso Campanha com a opção destacada para e-mail de transação.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Crie o menu suspenso Campanha com a opção destacada para e-mail de transação.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Agora, você pode prosseguir com a configuração de sua campanha de e-mail de transação.
 
@@ -48,10 +48,10 @@ O fluxo de criação de campanhas para campanhas de e-mail de transação é sim
 Como resultado, você notará que várias configurações com as quais você pode estar familiarizado em outros tipos de campanha do Braze não são necessárias ao configurar esse tipo de campanha:
 
 - A etapa **de entrega** foi simplificada para remover as opções de agendamento. Os e-mails de transação sempre serão disparados por meio da API REST do Braze usando o ID da campanha mostrado na página **Entrega**. Configurações adicionais, como controles de reelegibilidade e configurações de limite de frequência, também foram removidas para confirmar que todos os usuários estão acessíveis para esses alertas transacionais críticos quando seu serviço dispara uma solicitação de envio.
-- A etapa **Usuários-alvo** foi removida. Como os e-mails de transação inscrevem toda a sua base de usuários como elegível (incluindo usuários com inscrição cancelada), não há necessidade de especificar filtros ou segmentos. Como resultado, se você tiver alguma lógica para aplicar a quem deve receber essa mensagem, recomendamos aplicar essa lógica antes de determinar se deve fazer a solicitação da API ao Braze para disparar a mensagem para um usuário específico.
+- A etapa de **direcionamento ao público** foi removida. Como os e-mails de transação inscrevem toda a sua base de usuários como elegível (incluindo usuários com inscrição cancelada), não há necessidade de especificar filtros ou segmentos. Como resultado, se você tiver alguma lógica para aplicar a quem deve receber essa mensagem, recomendamos aplicar essa lógica antes de determinar se deve fazer a solicitação da API ao Braze para disparar a mensagem para um usuário específico.
 - A etapa **Conversões** foi removida. Os e-mails de transação não suportam o rastreamento de eventos de conversão no momento.
 
-![Crie, entregue e confirme o fluxo de trabalho para criar uma campanha de e-mail de transação.][2]{: style="max-width:80%;"}
+![Fluxo de trabalho de criação, entrega e confirmação para criar uma campanha de e-mail de transação.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Para configurar sua campanha de e-mail de transação, siga estas etapas:
 
@@ -73,5 +73,3 @@ O uso da tag `Connected Content` exige que o Braze faça uma solicitação de AP
 Como resultado, não oferecemos suporte à inclusão de tags `Connected Content` ou `Promotion Code` em nenhum campo de sua campanha de e-mail de transação.
 
 
-[1]: {% image_buster /assets/img/transactional_email_campaign.png %}
-[2]: {% image_buster /assets/img/transactional_campaign_compose.png %}

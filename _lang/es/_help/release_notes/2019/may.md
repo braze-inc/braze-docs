@@ -45,13 +45,13 @@ Esta [nueva notificación]({{site.baseurl}}/user_guide/administrative/company_se
 
 Jampp es una plataforma de marketing del rendimiento para captar y reorientar clientes móviles. Combina datos de comportamiento con tecnología predictiva y programática para generar ingresos para los anunciantes mostrando anuncios personales y relevantes que inspiran a los consumidores a comprar por primera vez, o más a menudo.
 
-Los clientes de Braze pueden [integrarse con Jampp]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/jampp/) configurando el canal webhook Braze para transmitir eventos a Jampp. Como resultado, los clientes tienen la posibilidad de añadir conjuntos de datos más ricos a sus iniciativas de reorientación con Jampp dentro del ecosistema de publicidad móvil.
+Los clientes de Braze pueden [integrarse con Jampp]({{site.baseurl}}/partners/jampp/) configurando el canal webhook Braze para transmitir eventos a Jampp. Como resultado, los clientes tienen la posibilidad de añadir conjuntos de datos más ricos a sus iniciativas de reorientación con Jampp dentro del ecosistema de publicidad móvil.
 
 ## Selector de plataforma para mensajes dentro de la aplicación
 
 Hemos facilitado la selección de dónde van tus mensajes dentro de la aplicación y para qué plataformas se han creado con nuestro selector de plataformas, que enfatiza este paso en el proceso de creación de la campaña.
 
-![Plataforma Picker][1]
+![Plataforma Picker]({% image_buster /assets/img/iam_platforms.gif %})
 
 ## Campo de ID de envío de Currents para correo electrónico
 
@@ -104,4 +104,3 @@ El filtro Canal más interactivo selecciona la parte de tu audiencia para la que
 
 Echa un vistazo a este nuevo filtro en nuestra [Biblioteca de filtros de segmentación]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[1]: {% image_buster /assets/img/iam_platforms.gif %}

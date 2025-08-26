@@ -1,5 +1,5 @@
 ---
-nav_title: Compliance Documentation for Mobile Messages Services
+nav_title: Compliance documentation for mobile messages services
 article: Compliance Documentation for Mobile Messages Services
 permalink: /compliance_documentation_sms/
 description: "Compliance documentation relating to mobile messages channels."

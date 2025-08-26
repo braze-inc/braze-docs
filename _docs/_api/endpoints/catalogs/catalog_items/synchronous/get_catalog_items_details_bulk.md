@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Multiple Catalog Item Details"
+nav_title: "GET: List multiple catalog item details"
 article_title: "GET: List Multiple Catalog Item Details"
 search_tag: Endpoint
 page_order: 3

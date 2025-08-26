@@ -1,5 +1,5 @@
 ---
-nav_title: "Notification Channels"
+nav_title: "Notification channels"
 article_title: Push Notification Channels 
 page_order: 4
 page_type: reference
