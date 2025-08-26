@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Enablement and Subscription"
+nav_title: "Push enablement and subscription"
 article_title: Push Enablement and Subscription
 page_order: 3
 page_type: reference

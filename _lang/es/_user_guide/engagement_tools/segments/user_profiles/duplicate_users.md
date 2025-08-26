@@ -21,21 +21,21 @@ Si una búsqueda de usuarios devuelve perfiles duplicados, puede fusionar cada p
 
 En Braze, seleccione **Audiencia** > **Búsqueda de usuarios**.
 
-![Azulejo "Búsqueda de usuarios" resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
+![Azulejo "Búsqueda de usuarios" resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Introduzca un identificador único, como una dirección de correo electrónico o un número de teléfono, para el perfil duplicado y, a continuación, seleccione **Buscar**.
 
-![La página "Búsqueda de usuarios" en el panel de control de Braze con un correo electrónico introducido en la barra de búsqueda.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![La página de "Búsqueda de usuarios" en el panel de Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Fusionar duplicados
 
 Para iniciar el proceso de fusión, selecciona **Fusionar duplicados**.
 
-![Uno de los perfiles del usuario duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:55%;"}
+![Uno de los perfiles del usuario duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 Elija qué perfil de usuario desea conservar y cuál fusionar y, a continuación, seleccione **Fusionar perfiles**. Repita este proceso hasta que haya fusionado todos los perfiles duplicados.
 
-![La página de fusión individual de un perfil duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![La página de fusión individual de un perfil duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Los perfiles de usuario duplicados no pueden recuperarse tras la fusión.
@@ -49,7 +49,7 @@ Al fusionar usuarios duplicados de forma masiva, Braze busca perfiles con identi
 
 En el panel de control de Braze, seleccione **Audiencia** > **Gestionar audiencia**.
 
-![El mosaico "Gestionar audiencia" aparece resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
+![El mosaico "Gestionar audiencia" aparece resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Vista previa de los resultados (opcional)
 
@@ -100,7 +100,7 @@ Puede utilizar reglas para controlar cómo se resuelven los perfiles duplicados 
 - **Resuelve los empates utilizando**: Fecha de creación, Fecha de actualización, Última sesión
 - **Priorización**: Más reciente, Más antiguo
 
-![El panel "Editar reglas" con secciones para seleccionar opciones de "Perfil a mantener" y "Resolver vínculos".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+![El panel "Editar reglas" con secciones para seleccionar opciones de "Perfil a mantener" y "Resolver vínculos".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 Por ejemplo, podrías conservar el perfil que tiene un número de teléfono. Si varios usuarios tienen el mismo número de teléfono, podría resolver los empates utilizando el campo **Fecha de actualización** y dar prioridad al usuario actualizado más recientemente.
 
@@ -120,13 +120,9 @@ Los perfiles de usuario duplicados no pueden recuperarse tras la fusión.
 
 Similar a la fusión basada en reglas, la fusión programada te permite automatizar la fusión de perfiles de usuario diariamente mediante reglas preconfiguradas.
 
-{% alert important %}
-La fusión programada está en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
-{% endalert %}
-
 ![La página "Gestionar audiencia" con el botón "programar".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
 
-Una vez activada la característica, Braze asignará automáticamente una franja horaria para realizar el proceso de fusión diariamente. Puedes desactivar la fusión programada en cualquier momento. Braze notificará a los administradores de tu espacio de trabajo 24 horas antes de que se produzca la fusión programada, proporcionando un recordatorio y tiempo para revisar la configuración.
+Una vez activada la característica, Braze asignará automáticamente una franja horaria para realizar el proceso de fusión diariamente, aproximadamente a las 12 de la mañana en la zona horaria de la empresa del usuario. Puedes desactivar la fusión programada en cualquier momento. Braze notificará a los administradores de tu espacio de trabajo 24 horas antes de que se produzca la fusión programada, proporcionando un recordatorio y tiempo para revisar la configuración.
 
 {% alert warning %}
 Los perfiles de usuario duplicados no pueden recuperarse tras la fusión.

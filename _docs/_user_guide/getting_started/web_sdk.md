@@ -1,5 +1,5 @@
 ---
-nav_title: SDK Overview 
+nav_title: SDK overview
 article_title: SDK Overview 
 page_order: 9
 page_type: reference

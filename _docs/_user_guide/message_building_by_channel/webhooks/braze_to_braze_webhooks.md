@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Braze-to-Braze Webhook
+nav_title: Creating a braze-to-braze webhook
 article_title: Creating a Braze-to-Braze Webhook
 page_order: 3
 channel:

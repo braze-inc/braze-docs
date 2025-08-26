@@ -23,7 +23,7 @@ Digamos que quieres definir un atributo personalizado en el perfil de usuario ll
 
 Estos datos anidados le permiten crear segmentos utilizando información de un objeto de atributo personalizado, y personalizar sus mensajes utilizando un objeto de atributo personalizado y Liquid.
 
-Los objetos de atributo personalizados pueden contener [tipos de datos][1], como:
+Los objetos de atributo personalizados pueden contener [tipos de datos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types), como:
 
 - Números
 - Cadenas
@@ -249,7 +249,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 Para capturar fechas como propiedades de objetos, debes utilizar la clave `$time`. En el siguiente ejemplo, se utiliza un objeto "Fechas importantes" para capturar el conjunto de propiedades del objeto, `birthday` y `wedding_anniversary`. El valor de estas fechas es un objeto con una clave `$time`, que no puede ser un valor nulo.
 
 {% alert note %}
-Si inicialmente no ha capturado las fechas como propiedades del objeto, le recomendamos que reenvíe estos datos utilizando la clave `$time` para todos los usuarios. De lo contrario, podrían aparecer segmentos incompletos al utilizar el atributo `$time`.
+Si inicialmente no ha capturado las fechas como propiedades del objeto, le recomendamos que reenvíe estos datos utilizando la clave `$time` para todos los usuarios. De lo contrario, podrían aparecer segmentos incompletos al utilizar el atributo `$time`. Sin embargo, si el valor de `$time` en un atributo personalizado anidado no tiene el formato correcto, no se actualizará todo el atributo personalizado anidado.
 {% endalert %}
 
 ```json
@@ -282,7 +282,7 @@ Utilice la etiqueta de personalización `custom_attribute` y la notación de pun
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
 {% endraw %}
 
-![Uso de Liquid para incluir en un mensaje el nombre de una canción y el número de veces que un oyente la ha reproducido][5]
+![Utilizando Liquid para crear una plantilla con el nombre de una canción y el número de veces que un oyente ha reproducido esa canción en un mensaje]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentación
 
@@ -290,15 +290,15 @@ Puede crear segmentos basados en atributos personalizados anidados para segmenta
 
 Tras añadir una ruta a tu propiedad, selecciona **Validar** para comprobar que el valor del campo de la ruta es válido.
 
-![Filtrado basado en un atributo personalizado de canción más reproducida cuando un oyente ha reproducido una canción un número determinado de veces][6]
+![Filtrado basado en un atributo personalizado de la canción más reproducida cuando un oyente ha reproducido una canción más de un número especificado de veces]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 Para segmentar con atributos personalizados anidados, seleccione el filtro **Atributos personalizados anidados** para exponer un desplegable en el que puede seleccionar un atributo personalizado anidado específico.
 
-![][17]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
 Cuando trabaje con la segmentación de atributos personalizados anidados, tendrá acceso a un nuevo comparador agrupado por tipo de datos. Por ejemplo, como `play_analytics.count` es un número, puedes seleccionar un comparador en la categoría **Número**.
 
-![Un usuario que elige un operador basado en el tipo de datos del atributo personalizado anidado][7]
+![Un usuario que elige un operador basado en el tipo de datos del atributo personalizado anidado]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### Filtrado de tipos de datos temporales
 
@@ -312,7 +312,7 @@ Utilice **la Segmentación Multicriterio** para crear un segmento que coincida c
 
 También puede utilizar la función **Copiar Liquid para segmento** para generar código Liquid para este segmento y utilizarlo en un mensaje. Por ejemplo, supongamos que tiene una matriz de objetos de cuenta y un segmento dirigido a clientes con cuentas imponibles activas. Para conseguir que los clientes contribuyan al objetivo de cuenta asociado a una de sus cuentas activas y sujetas a impuestos, deberá crear un mensaje para darles un empujón. 
 
-![Un segmento de ejemplo con la casilla seleccionada para la Segmentación Multicriterio.][14]
+![Un segmento de ejemplo con la casilla seleccionada para la Segmentación Multicriterio.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 Al seleccionar **Copiar Liquid para segmento**, Braze generará automáticamente código Liquid que devuelva una matriz de objetos que sólo contenga cuentas activas y sujetas a impuestos.
 
@@ -361,7 +361,7 @@ En el panel de Braze, ve a **Configuración de datos** > **Atributos personaliza
 
 Busca tu objeto o matriz de objetos. En la columna **Nombre del atributo**, selecciona **Generar esquema**.
 
-![][8]
+![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
 {% alert tip %}
 Su esquema puede tardar unos minutos en generarse, dependiendo de la cantidad de datos que nos haya enviado.
@@ -377,7 +377,7 @@ Para nuestro array de objetos `accounts`, puedes ver que dentro del array de obj
 - Un tipo de número con una clave de `balance` (importe del saldo en la cuenta)
 - Un tipo de cadena con una clave de `type` (cuenta no imponible o imponible)
 
-![][10]{: style="max-width:50%" }
+![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
 Ahora que hemos analizado y construido una representación de los datos, vamos a construir un segmento.
 
@@ -387,15 +387,15 @@ Dirijámonos a los clientes con un saldo inferior a 100 para enviarles un mensaj
 
 Cree un segmento y añada el filtro `Nested Custom Attribute`, después busque y seleccione su objeto o conjunto de objetos. Aquí hemos añadido la matriz de objetos `accounts`. 
 
-![][11]
+![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
 Selecciona el botón más <i class="fas fa-plus"></i> en el campo de la ruta. Esto mostrará una representación de su objeto o matriz de objetos. Puedes seleccionar cualquiera de los elementos de la lista y Braze los insertará en el campo de ruta por ti. En este ejemplo, necesitamos conseguir el equilibrio. Selecciona la balanza y la ruta (en este caso, `[].balance`) se rellenará automáticamente en el campo ruta.
 
-![][12]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
 Puedes seleccionar **Validar** para comprobar que el contenido del campo de la ruta es válido y, a continuación, construir el resto del filtro según sea necesario. Aquí hemos especificado que el saldo debe ser inferior a 100.
 
-![][13]
+![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
 Eso es todo. Acaba de crear un segmento utilizando un atributo personalizado anidado, todo ello sin necesidad de saber cómo están estructurados los datos. El explorador de objetos anidados de Braze generaba una representación visual de sus datos y le permitía explorar y seleccionar exactamente lo que necesitaba para crear un segmento.
 
@@ -403,11 +403,11 @@ Eso es todo. Acaba de crear un segmento utilizando un atributo personalizado ani
 
 Puede disparar cuando cambia un objeto de atributo personalizado anidado. Esta opción no está disponible para cambios en matrices de objetos. Si no ve una opción para ver el explorador de rutas, compruebe que ha generado un esquema. 
 
-![][16]
+![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
 Por ejemplo, en la siguiente campaña basada en acciones, puede añadir una nueva acción desencadenante para **Cambiar valor de atributo personalizado** para dirigirse a los usuarios que han cambiado sus preferencias de oficina de barrio. 
 
-![][15]
+![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### Personalización
 
@@ -415,7 +415,7 @@ Mediante el modal **Añadir personalización**, también puede insertar atributo
 
 Por ejemplo, en el modal de personalización que aparece a continuación, se inserta el atributo personalizado anidado de una oficina de barrio local basada en las preferencias de un usuario.
 
-![][9]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
 Compruebe que se ha generado un esquema si no ve la opción de insertar atributos personalizados anidados.
@@ -469,18 +469,3 @@ Cualquier clave que se envíe consume un punto de datos. Por ejemplo, este objet
 La actualización de un objeto de atributo personalizado en `null` también consume un punto de datos.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
-[5]: {% image_buster /assets/img_archive/nca_liquid_2.png %}
-[6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
-[7]: {% image_buster /assets/img_archive/nca_comparator.png %}
-[8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
-[9]:{% image_buster /assets/img_archive/nca_personalization.png %}
-[10]: {% image_buster /assets/img_archive/nca_schema.png %}
-[11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
-[12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
-[13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
-[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
-[15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
-[16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
-[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Setting Up Currents
+nav_title: Setting up Currents
 article_title: Setting Up Currents
 page_order: 0
 page_type: tutorial

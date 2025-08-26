@@ -8,7 +8,7 @@ description: "Este artigo contém notas de versão para novembro de 2021."
 # Novembro de 2021
 
 ## métrica de relatório de taxa de clique para abertura
-Braze adicionou uma nova métrica de e-mail, taxa de cliques por abertura, disponível no [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/). Esta métrica representa a porcentagem de e-mails abertos que foram clicados.
+Braze adicionou uma nova métrica de e-mail, taxa de cliques por abertura, disponível no [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/). Esta métrica representa a porcentagem de e-mails abertos que foram clicados.
 
 ## Métrica de abertura por máquina
 

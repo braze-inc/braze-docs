@@ -30,8 +30,18 @@ A tag `message_extras` é compatível com todos os tipos de mensagens com um eve
 
 ## Como usar a tag `message_extras` 
 
-1. No corpo da mensagem do canal, digite a tag `message_extras` Liquid. Ou, você pode usar o modal **Add Personalization** e selecionar **Message Extras** para o tipo de personalização. <br>![O modal Add Personalization com Message Extras selecionado como o tipo de personalização.][1]{: style="max-width:70%;"}
-2. Digite o [par chave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) para cada tag `message_extras`. <br>![Um exemplo de pares de chave-valor para a tag de extras de mensagens. O campo de título diz "Seus novos favoritos". A mensagem lê pares de chave-valor para a tag de extras da mensagem e a frase a seguir: "Estamos felizes em oferecer uma seleção de produtos novos e interessantes que certamente se tornarão seus novos favoritos".][2]{: style="max-width:70%;"}
+1. No corpo da mensagem do canal, digite a tag `message_extras` Liquid. Ou, você pode usar o modal **Add Personalization** e selecionar **Message Extras** para o tipo de personalização. 
+
+![O modal Adicionar personalização com Extras de mensagens selecionado como o tipo de personalização.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+
+{: start="2"}
+
+2. Digite o [par chave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) para cada tag `message_extras`. 
+
+![Um exemplo de pares de chave-valor para a tag de extras de mensagens. O campo de título diz "Seus novos favoritos". A mensagem lê pares de chave-valor para a tag de extras da mensagem e a frase a seguir: "Estamos entusiasmados em oferecer uma seleção de produtos novos e interessantes que certamente se tornarão seus novos favoritos"]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+
+{: start="3"}
+
 3. Após o envio da campanha ou do canva, a Braze anexará os dados dinâmicos no momento do envio por meio dos eventos de envio Currents ou Snowflake Data Sharing ao campo `message_extras`.
 
 ## Verificação da sintaxe
@@ -64,5 +74,3 @@ Sim, é possível usar o `message_extras` em suas mensagens no app, desde que os
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Custom Data
+nav_title: Managing custom data
 article_title: Managing Custom Data
 page_order: 20
 page_type: reference

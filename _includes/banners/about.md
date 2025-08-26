@@ -36,7 +36,7 @@ Features for Banners include:
 
 ### Placement IDs {#placement-id}
 
-Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/creating_placements/) that designate where Banners can appear.
+Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) that designate where Banners can appear.
 
 Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
 
@@ -91,6 +91,6 @@ Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto
 
 Now that you know about Banners, you're ready for the next steps:
 
-1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/)
+1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/)
 2. [Creating Banner campaigns in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
 3. [Tutorial: Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

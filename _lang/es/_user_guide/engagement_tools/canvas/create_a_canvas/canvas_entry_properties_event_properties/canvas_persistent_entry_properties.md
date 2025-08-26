@@ -83,11 +83,9 @@ En esta solicitud, el valor global de "alergias alimentarias" es "ninguna". Para
 
 Si tienes un Canvas que se desencadena cuando un usuario navega por un artículo en tu sitio de comercio electrónico pero no lo añade a su cesta, el primer paso del Canvas podría ser una notificación push preguntándole si está interesado en comprar el artículo. Puede hacer referencia al nombre del producto utilizando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 El segundo paso puede enviar otra notificación push para pedir al usuario que realice el pago si ha añadido el artículo a su cesta pero aún no lo ha comprado. Puede seguir haciendo referencia a la propiedad de entrada `product_name` utilizando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

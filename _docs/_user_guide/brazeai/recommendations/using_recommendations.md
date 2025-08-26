@@ -1,5 +1,5 @@
 ---
-nav_title: Using Recommendations
+nav_title: Using recommendations
 article_title: Using Item Recommendations In Your Messaging
 description: "This article describes how to use item recommendations in your message."
 page_order: 1.2
