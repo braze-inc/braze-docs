@@ -23,24 +23,166 @@ Generally, all events and attributes are prefixed with a short code that corresp
 
 The following table lists the events and attributes logged by Braze Pilot.
 
-| Name | App | Type | Properties | When it's logged |
-|---|---|---|---|---|
-| `mc_entered_app` | MovieCanon | Event |  | When the user enters the MovieCanon app |
-| `mc_watched_movie` | MovieCanon | Event | `title: string` | When the user finishes watching a video |
-| `mc_viewed_movie_page` | MovieCanon | Event | `title: string` | When the user views a movie page |
-| `pl_viewed_item` | PantsLabyrinth | Event | `item_name: string` | When the user views a product page |
-| `pl_entered_app` | PantsLabyrinth | Event |  | When the user enters the PantsLabyrinth app |
-| `pl_added_item_to_wishlist` | PantsLabyrinth | Event | `item_name: string` | When the user adds an item to their wish list |
-| `pl_added_item_to_cart` | PantsLabyrinth | Event | `item_name: string` | When the user adds an item to their cart |
-| `<purchase_event>` | PantsLabyrinth | Event | `name: string` <br> `price: number` | When the user completes a purchase |
-| `st_entered_app` | Steppington | Event |  | When the user enters the Steppington app |
-| `st_completed_class` | Steppington | Event | `class_type: string`<br>`calories_burned: number`<br>`workout_length: number` | When the user completes a workout |
-| `st_viewed_premium_benefit` | Steppington | Event | `benefit_type: string` | When the user visits the Steppington+ tab (if it's enabled with feature flag) |
-| `st_viewed_class` | Steppington | Event | `class_type: string` | When the user visits a workout page |
-| `st_completed_class` | Steppington | Event | `class_type: string` <br> `calories_burned: number` <br> `workout_length: number` | When the user completes a workout |
-| `st_most_recent_completed_class` | Steppington | Attribute | `string` | When the user completes a workout |
-| `st_favorited_class` | Steppington | Event | `class_type: string` | When the user favorites a class |
-| `st_unfavorited_class` | Steppington | Event | `class_type: string` | When the user unfavories a class |
-| `st_started_free_trial` | Steppington | Event |  | When the user selects the **Start Free Trial** button |
-| `st_set_goal` | Steppington | Event | `goal_name: string`<br>`goal: number`<br>`units: string` | When the user selects the **Start Free Trial** button. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
+Update the following table styling to make the first column 30%, the second column 15%, the third column 15%, the fourth column 20%, and the last column 20%.
+Here is the updated HTML table with the specified column widths:
+
+<style>
+table td {
+    word-break: break-word;
+}
+th:nth-child(1), td:nth-child(1) {
+    width: 32%;
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 15%;
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 10%;
+}
+th:nth-child(4), td:nth-child(4) {
+    width: 20%;
+}
+th:nth-child(5), td:nth-child(5) {
+    width: 28%;
+}
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>App</th>
+            <th>Type</th>
+            <th>Properties</th>
+            <th>When it's logged</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>mc_entered_app</code></td>
+            <td>MovieCanon</td>
+            <td>Event</td>
+            <td></td>
+            <td>When the user enters the MovieCanon app</td>
+        </tr>
+        <tr>
+            <td><code>mc_watched_movie</code></td>
+            <td>MovieCanon</td>
+            <td>Event</td>
+            <td><code>title: string</code></td>
+            <td>When the user finishes watching a video</td>
+        </tr>
+        <tr>
+            <td><code>mc_viewed_movie_page</code></td>
+            <td>MovieCanon</td>
+            <td>Event</td>
+            <td><code>title: string</code></td>
+            <td>When the user views a movie page</td>
+        </tr>
+        <tr>
+            <td><code>pl_viewed_item</code></td>
+            <td>PantsLabyrinth</td>
+            <td>Event</td>
+            <td><code>item_name: string</code></td>
+            <td>When the user views a product page</td>
+        </tr>
+        <tr>
+            <td><code>pl_entered_app</code></td>
+            <td>PantsLabyrinth</td>
+            <td>Event</td>
+            <td></td>
+            <td>When the user enters the PantsLabyrinth app</td>
+        </tr>
+        <tr>
+            <td><code>pl_added_item_to_wishlist</code></td>
+            <td>PantsLabyrinth</td>
+            <td>Event</td>
+            <td><code>item_name: string</code></td>
+            <td>When the user adds an item to their wish list</td>
+        </tr>
+        <tr>
+            <td><code>pl_added_item_to_cart</code></td>
+            <td>PantsLabyrinth</td>
+            <td>Event</td>
+            <td><code>item_name: string</code></td>
+            <td>When the user adds an item to their cart</td>
+        </tr>
+        <tr>
+            <td><code>&lt;purchase_event&gt;</code></td>
+            <td>PantsLabyrinth</td>
+            <td>Event</td>
+            <td><code>name: string</code><br><code>price: number</code></td>
+            <td>When the user completes a purchase</td>
+        </tr>
+        <tr>
+            <td><code>st_entered_app</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td></td>
+            <td>When the user enters the Steppington app</td>
+        </tr>
+        <tr>
+            <td><code>st_completed_class</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
+            <td>When the user completes a workout</td>
+        </tr>
+        <tr>
+            <td><code>st_viewed_premium_benefit</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>benefit_type: string</code></td>
+            <td>When the user visits the Steppington+ tab (if it's enabled with feature flag)</td>
+        </tr>
+        <tr>
+            <td><code>st_viewed_class</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>class_type: string</code></td>
+            <td>When the user visits a workout page</td>
+        </tr>
+        <tr>
+            <td><code>st_completed_class</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
+            <td>When the user completes a workout</td>
+        </tr>
+        <tr>
+            <td><code>st_most_recent_completed_class</code></td>
+            <td>Steppington</td>
+            <td>Attribute</td>
+            <td><code>string</code></td>
+            <td>When the user completes a workout</td>
+        </tr>
+        <tr>
+            <td><code>st_favorited_class</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>class_type: string</code></td>
+            <td>When the user favorites a class</td>
+        </tr>
+        <tr>
+            <td><code>st_unfavorited_class</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>class_type: string</code></td>
+            <td>When the user unfavorites a class</td>
+        </tr>
+        <tr>
+            <td><code>st_started_free_trial</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td></td>
+            <td>When the user selects the <strong>Start Free Trial</strong> button</td>
+        </tr>
+        <tr>
+            <td><code>st_set_goal</code></td>
+            <td>Steppington</td>
+            <td>Event</td>
+            <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
+            <td>When the user selects the <strong>Start Free Trial</strong> button.</td>
+        </tr>
+    </tbody>
+</table>

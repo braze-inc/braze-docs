@@ -37,7 +37,7 @@ Scan a QR code that includes all details required to initialize the SDK, create 
 
 ### Method 2: Setup wizard
 
-Follow a step-by-step guide for initializing the connection with your dashboard workspace from the App settings page in your Braze dashboard.
+Follow a step-by-step guide for initializing the connection with your dashboard workspace from the **App Settings** page in your Braze dashboard.
 
 ![Step 1 of the setup wizard for Braze Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 

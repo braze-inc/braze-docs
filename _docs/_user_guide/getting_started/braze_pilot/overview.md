@@ -18,7 +18,7 @@ The core of Braze Pilot is its library of app simulations. Each app is a realist
 
 ### Steppington
 
-Steppington is a fitness app with workouts, exercise goals, and a Steppington+ premium service. It offers several places to demonstrate Content Cards, a section that can be revealed with Feature Flags, and a robust library of custom event logging that make it possible to illustrate many customer journeys for this industry.
+Steppington is a fitness app with workouts, exercise goals, and a Steppington+ premium service. It offers several places to demonstrate [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), a section that can be revealed with [feature flags]({{site.baseurl}}/developer_guide/feature_flags), and a robust library of custom event logging that make it possible to illustrate many customer journeys for this industry.
 
 ![The home page for Steppington with icons for marathon training, yoga, cycling, and weights.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
@@ -60,7 +60,7 @@ This connection status represents the experience of a guest of your app or websi
 
 ### Identified
 
-This connection status means Braze recognizes your user through a unique identifier assigned to you, known as an external identifier. You can search for`` this external identifier in the **User Search** page of your dashboard to locate your user profile, which will store all user attributes and events logged from Pilot based on your activity in the app.
+This connection status means Braze recognizes your user profile through a unique identifier assigned to you, known as an external identifier. You can search for this external identifier in the **User Search** page of your dashboard to locate your user profile, which will store all user attributes and events logged from Pilot based on your activity in the app.
 
 ![An example of a Braze user profile for user "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
 
@@ -116,8 +116,6 @@ Campaigns and Canvases are how you send messages to your users.
 
 ## Supported messaging channels
 
-Braze Pilot supports the following messaging channels:
-
-- [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about): These are messages that appear in your app, delivering timely messaging while the user is actively engaging.
+Braze Pilot currently supports [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), which appear in your app, delivering timely messaging while the user is actively engaging.
 
 ![An in-app message in the MovieCanon app "Enjoying MovieCanon? Refer your friends!" with an option to enter your email address to send a referral.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}
