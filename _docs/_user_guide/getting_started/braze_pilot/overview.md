@@ -36,7 +36,7 @@ MovieCanon is a streaming service perfectly designed to illustrate common Braze 
 
 ## How Pilot connects with your Braze dashboard
 
-The Braze SDK is a package of code that collects data from your users once integrated with your app or website. When you connect Pilot to your dashboard, you initialize this connection between the Pilot app on your phone and the Braze SDK, as well as establish a unique connection with your Braze instance by giving Pilot your API key identifier for your dashboard.
+The Braze SDK is a code package that collects data from your users once it's integrated with your app or website. When you connect Pilot to your dashboard, you initialize this connection between the Pilot app on your phone and the Braze SDK, and establish a unique connection with your Braze instance by giving Pilot your API key identifier for your dashboard.
 
 ![The first step of setting up Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
