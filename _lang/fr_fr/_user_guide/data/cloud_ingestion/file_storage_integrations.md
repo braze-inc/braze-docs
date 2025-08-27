@@ -1,7 +1,7 @@
 ---
 nav_title: Intégrations de stockage de fichiers
 article_title: Intégrations de stockage de fichiers
-description: "Cette page traite de l'ingestion de données dans le cloud de Braze et explique comment synchroniser les données pertinentes de S3 vers Braze"
+description: "Cette page traite de l'ingestion de données dans le cloud Braze et de la synchronisation des données pertinentes de S3 vers Braze."
 page_order: 3
 page_type: reference
 
@@ -20,7 +20,7 @@ L'ingestion de données dans le nuage prend en charge les éléments suivants :
 - Fichiers JSON
 - fichiers CSV
 - Fichiers Parquet
-- Données d'attributs, d'événements, d'achats et de suppression d'utilisateurs
+- Attribut, événement personnalisé, événement d'achat, suppression d'utilisateur et données de catalogue.
 
 ## Conditions préalables
 
@@ -49,10 +49,10 @@ Créez un compartiment S3 à usage général avec les paramètres par défaut da
 
 Les paramètres par défaut sont les suivants :
 
-  - ACL désactivés
-  - Bloquer tout accès public
-  - Désactiver la gestion des versions des compartiments
-  - Chiffrement SSE-S3
+- ACL désactivés
+- Bloquer tout accès public
+- Désactiver la gestion des versions des compartiments
+- Chiffrement SSE-S3
 
 Prenez note de la région dans laquelle vous avez créé le compartiment, car vous allez créer une file d'attente SQS dans la même région à l'étape suivante.
 
@@ -63,7 +63,7 @@ Créez une file d'attente SQS pour suivre l'ajout d'objets dans le compartiment 
 Une file d'attente SQS doit être unique au niveau mondial (par exemple, une seule peut être utilisée pour une synchronisation CDI et ne peut pas être réutilisée dans un autre espace de travail).
 
 {% alert important %}
-Veillez à créer ce SQS dans la même région que celle où vous avez créé le compartiment.
+Veillez à créer ce SQS dans la même région que celle dans laquelle vous avez créé le compartiment.
 {% endalert %}
 
 Veillez à noter l'ARN et l'URL du SQS, car vous les utiliserez fréquemment au cours de cette configuration.
@@ -100,10 +100,10 @@ Ajoutez la déclaration suivante à la politique d'accès de la file d'attente, 
 
 1. Dans le compartiment créé à l'étape 1, allez dans **Propriétés** > **Notifications d'événements.**
 2. Donnez un nom à la configuration. Vous pouvez également spécifier un préfixe ou un suffixe à cibler si vous souhaitez que seul un sous-ensemble de fichiers soit ingéré par Braze.
-3. Sous **Destination**, sélectionnez **File d'attente SQS** et indiquez l'ARN de la file d'attente SQS que vous avez créée à l'étape 2.
+3. Sous **Destination**, sélectionnez **File d'attente SQS** et indiquez l'ARN du SQS que vous avez créé à l'étape 2.
 
 {% alert note %}
-Si vous téléchargez vos fichiers dans le dossier racine d'un compartiment S3 puis déplacez certains des fichiers vers un dossier spécifique du compartiment, vous pouvez rencontrer une erreur inattendue. Au lieu de cela, vous pouvez modifier les notifications d'événements pour qu'elles soient envoyées uniquement pour les fichiers du préfixe, éviter de placer des fichiers dans le compartiment S3 en dehors de ce préfixe, ou mettre à jour l'intégration sans préfixe, qui ingérera alors tous les fichiers.
+Si vous téléchargez vos fichiers dans le dossier racine d'un compartiment S3, puis que vous déplacez certains de ces fichiers vers un dossier spécifique du compartiment, vous risquez de rencontrer une erreur inattendue. Au lieu de cela, vous pouvez modifier les notifications d'événements pour qu'elles soient envoyées uniquement pour les fichiers du préfixe, éviter de placer des fichiers dans le compartiment S3 en dehors de ce préfixe, ou mettre à jour l'intégration sans préfixe, qui ingérera alors tous les fichiers.
 {% endalert %}
 
 ### Étape 5 : Créer une politique IAM
@@ -146,7 +146,7 @@ Créez une politique IAM pour permettre à Braze d'interagir avec votre comparti
 {: start="3"}
 3\. Sélectionnez **Réviser la politique** lorsque vous avez terminé.
 
-4. Donnez un nom et une description à la politique et sélectionnez **Créer une politique**.  
+4. Donnez un nom et une description à la politique, puis sélectionnez **Créer une politique.**  
 
 ![Exemple de politique nommée "nouveau-nom-de-politique".]({% image_buster /assets/img/create_policy_3_name.png %})
 
@@ -160,7 +160,7 @@ Pour terminer la configuration sur AWS, vous allez créer un rôle IAM et y asso
 
 <br><br>![Le bouton "Créer un rôle".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
-2. Copiez l'ID du compte AWS de Braze à partir de votre tableau de bord de Braze. Allez dans **Cloud Data Ingestion**, sélectionnez **Créer une nouvelle synchronisation de données** et sélectionnez **Importation S3**.
+2. Copiez l'ID du compte AWS de Braze à partir de votre tableau de bord de Braze. Accédez à **Cloud Data Ingestion**, sélectionnez **Create New Data Sync (Créer une nouvelle synchronisation de données)**, puis sélectionnez **S3 Import (Importer S3)**.
 
 3. Dans AWS, sélectionnez **Another AWS Account (Autre compte AWS)** comme type de sélecteur d'entité de confiance. Indiquez votre ID de compte Braze, cochez la case **Require external ID (Exiger un ID externe)** et saisissez un ID externe que Braze pourra utiliser. Sélectionnez **Suivant** lorsque vous avez terminé. 
 
@@ -176,7 +176,7 @@ Donnez un nom et une description au rôle, puis sélectionnez **Créer un rôle*
 <br><br>![Un exemple de rôle nommé "nouveau-nom-de-rôle".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5\. Prenez note de l'ARN du rôle que vous venez de créer et de l'ID externe que vous avez généré, car vous les utiliserez pour créer l'intégration de l’ingestion de données Cloud.  
+5\. Prenez note de l'ARN du rôle que vous venez de créer et de l'ID externe que vous avez généré, car vous les utiliserez pour créer l'intégration Cloud Data Ingestion.
 
 ## Configuration de Cloud Data Ingestion dans Braze
 
@@ -209,7 +209,7 @@ Donnez un nom et une description au rôle, puis sélectionnez **Créer un rôle*
 
 ## Formats de fichiers requis
 
-Cloud Data Ingestion prend en charge les fichiers JSON, CSV et Parquet. Chaque fichier doit contenir une ou plusieurs colonnes d'identifiants prises en charge, ainsi qu'une colonne de données utiles sous la forme d'une chaîne de caractères JSON.
+Cloud Data Ingestion prend en charge les fichiers JSON, CSV et Parquet. Chaque fichier doit contenir une ou plusieurs des colonnes d'identifiants prises en charge et une colonne de charge utile sous forme de chaîne de caractères JSON.
 
 Braze n'impose pas d'exigences supplémentaires en matière de noms de fichiers en plus de celles imposées par AWS. Les noms de fichiers doivent être uniques. Nous vous recommandons d'ajouter un horodatage pour garantir l'unicité.
 
@@ -220,7 +220,7 @@ Votre fichier source peut contenir une ou plusieurs colonnes ou clés d'identifi
 | Identifiant | Description |
 | --- | --- |
 | `EXTERNAL_ID` | Il identifie l'utilisateur que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `external_id` utilisée dans Braze. |
-| `ALIAS_NAME` et `ALIAS_LABEL` | Ces deux colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais seulement un `alias_name` par `alias_label`. |
+| `ALIAS_NAME` et `ALIAS_LABEL` | Ces deux colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul `alias_name` par `alias_label`. |
 | `BRAZE_ID` | L'identifiant de l'utilisateur de Braze. Celui-ci est généré par le SDK de Braze, et il n'est pas possible de créer de nouveaux utilisateurs à l'aide d'un ID de Braze par le biais de l'ingestion de données dans le cloud. Pour créer de nouveaux utilisateurs, spécifiez un ID utilisateur externe ou un alias utilisateur. |
 | `EMAIL` | L’adresse e-mail de l’utilisateur. S'il existe plusieurs profils avec la même adresse e-mail, le profil le plus récemment mis à jour sera prioritaire pour les mises à jour. Si vous indiquez à la fois l'e-mail et le téléphone, nous utiliserons l'e-mail comme identifiant principal. |
 | `PHONE` | Le numéro de téléphone de l'utilisateur. S'il existe plusieurs profils avec le même numéro de téléphone, le profil le plus récemment mis à jour sera mis à jour en priorité. |
@@ -228,7 +228,7 @@ Votre fichier source peut contenir une ou plusieurs colonnes ou clés d'identifi
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Contrairement aux sources de l'entrepôt de données, la colonne `UPDATED_AT` n'est ni nécessaire ni prise en charge.
+Contrairement aux sources de l'entrepôt de données, la colonne `UPDATED_AT` n'est ni obligatoire ni prise en charge.
 {% endalert %}
 
 {% tabs %}
@@ -266,23 +266,31 @@ Chaque ligne de votre fichier source doit contenir du JSON valide, sinon le fich
 
 {% endtab %}
 {% tab Attributs CSV %}
-``` csv  
+```plaintext  
 external_id,payload
 s3-qa-load-0-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""SNXIM"", ""age"": 54, ""subscriber"": true, ""retention"": {""previous_purchases"": 19, ""vip"": true}, ""last_visit"": ""2023-08-08T16:03:26.598806""}"
 s3-qa-load-1-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""0J747"", ""age"": 73, ""subscriber"": false, ""retention"": {""previous_purchases"": 22, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598816""}"
 s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age"": 99, ""subscriber"": false, ""retention"": {""previous_purchases"": 23, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598822""}"
 ```
 {% endtab %}
+{% tab Catalogues CSV  %}
+```plaintext  
+ID,PAYLOAD
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
+```
+{% endtab %}
+
 {% endtabs %}  
 
 Pour obtenir des exemples de tous les types de fichiers pris en charge, reportez-vous aux fichiers d'exemple figurant dans [Braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
 
 ## Choses à savoir
 
-- Les fichiers ajoutés au compartiment source S3 ne doivent pas dépasser 512 Mo. Les fichiers de plus de 512 Mo entraîneront une erreur et ne seront pas synchronisés sur Braze.
-- Il n'y a pas de limite supplémentaire au nombre de lignes par fichier.
-- Il n'y a pas de limite supplémentaire au nombre de fichiers téléchargés au cours d'une période donnée.
-- La commande n'est pas possible dans ou entre les dossiers. Nous vous recommandons de regrouper les mises à jour périodiquement si vous surveillez les conditions de concurrence attendues.
+- Les fichiers ajoutés au compartiment S3 ne doivent pas dépasser 512 Mo. Les fichiers de plus de 512 Mo entraîneront une erreur et ne seront pas synchronisés sur Braze.
+- Bien qu'il n'y ait pas de limite supplémentaire au nombre de lignes par fichier, nous vous recommandons d'utiliser des fichiers plus petits pour améliorer la rapidité de vos synchronisations. Par exemple, l'ingestion d'un fichier de 500 Mo prendrait beaucoup plus de temps que celle de cinq fichiers distincts de 100 Mo.
+- Il n'y a pas de limite supplémentaire au nombre de fichiers téléchargés dans un temps donné.
+- Il n'est pas possible de passer des commandes dans ou entre les fichiers. Nous vous recommandons de mettre périodiquement les mises à jour en lots si vous surveillez les conditions de concurrence attendues.
 
 ## Résolution des problèmes
 
@@ -290,10 +298,10 @@ Pour obtenir des exemples de tous les types de fichiers pris en charge, reportez
 
 CDI ne traitera que les fichiers ajoutés après la création de la synchronisation. Au cours de ce processus, Braze recherche de nouveaux fichiers à ajouter, ce qui déclenche un nouvel envoi déclenché à SQS. Cela déclenchera une nouvelle synchronisation pour traiter le nouveau fichier.
 
-Les fichiers existants peuvent être utilisés pour valider la structure des données dans la connexion de test, mais ils ne seront pas synchronisés avec Braze. Tous les fichiers existants qui doivent être synchronisés doivent être retéléchargés sur S3 afin d'être traités par le CDI.
+Les fichiers existants peuvent être utilisés pour valider la structure des données dans la connexion de test, mais ils ne seront pas synchronisés avec Braze. Tous les fichiers existants qui doivent être synchronisés doivent être retéléchargés sur S3 pour être traités par le CDI.
 
 ### Gestion des erreurs de fichiers inattendues
 
-Si vous observez un nombre élevé d'erreurs ou de fichiers échoués, il est possible qu'un autre processus ajoute des fichiers au compartiment S3 dans un dossier autre que le dossier cible pour CDI.
+Si vous observez un nombre élevé d'erreurs ou de fichiers échoués, il se peut qu'un autre processus ajoute des fichiers au compartiment S3 dans un dossier autre que le dossier cible pour CDI.
 
-Lorsque des fichiers sont téléchargés dans le compartiment source mais pas dans le dossier source, CDI traite la notification SQS mais n'entreprend aucune action sur le fichier, ce qui peut apparaître comme une erreur.
+Lorsque des fichiers sont téléchargés dans le compartiment source mais pas dans le dossier source, CDI traite la notification SQS, mais n'entreprend aucune action sur le fichier, ce qui peut apparaître comme une erreur.

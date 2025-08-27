@@ -61,7 +61,7 @@ La plupart des fournisseurs de services Internet stockent les données de réput
 
 Notre fonctionnalité intégrée de limitation du nombre d'utilisateurs est un outil utile pour vous aider à réchauffer votre adresse IP. Après avoir choisi les segments de messages souhaités lors de la création de la campagne, à l'étape [Utilisateurs ciblés]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), sélectionnez le menu déroulant **Options avancées** pour limiter vos utilisateurs. Au fur et à mesure que votre planification de réchauffement se poursuit, vous pouvez augmenter progressivement cette limite pour augmenter le volume d’e-mails que vous envoyez.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentation du sous-domaine
 
@@ -93,12 +93,12 @@ Reportez-vous à notre [planification du réchauffement d'adresses IP](#ip-warmi
 
 ### Nettoyez vos listes d’e-mails
 
-Assurez-vous que votre liste d'e-mails est propre et qu'elle ne contient pas d'adresses e-mail anciennes ou non vérifiées. L'idéal est de vous assurer que vous êtes à la fois [conforme à la CASL et à la CAN-SPAM][40].
+Assurez-vous que votre liste d'e-mails est propre et qu'elle ne contient pas d'adresses e-mail anciennes ou non vérifiées. L'idéal est de s'assurer que vous êtes à la fois [conforme à la CASL et à la CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/).
 
 ### Surveillez votre réputation d’expéditeur
 
 Lorsque que vous effectuez le processus de réchauffement d’adresses IP, surveillez attentivement votre réputation d’expéditeur. Il est important de surveiller ces indicateurs spécifiques :
-- **Taux de rebond :** Si le taux de rebond d'une campagne est supérieur à 3-5 %, vous devez évaluer la propreté de votre liste en suivant les recommandations de notre article [Gardez-la propre : Article sur l’importance de l’hygiène des listes d’e-mails][43]. En outre, vous devriez envisager de mettre en œuvre une [politique de temporisation][46] pour cesser d'envoyer des e-mails à des adresses non sollicitées ou inactives.
+- **Taux de rebond :** Si une campagne dépasse de 3 à 5 %, vous devez évaluer la propreté de votre liste en suivant les directives de notre [Gardez-le propre : Article sur l’importance de l’hygiène des listes d’e-mails](https://www.braze.com/blog/email-list-hygiene/). En outre, vous devriez envisager de mettre en œuvre une [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) afin de cesser d'envoyer des e-mails à des adresses non sollicitées ou inactives.
 - **Signalement de courrier indésirable :** Si une campagne est signalée comme étant du courrier indésirable à un taux supérieur à 0,08 %, vous devez réévaluer le contenu que vous envoyez, vérifier qu'il cible une audience intéressée et vous assurer que vos e-mails sont formulés de manière à susciter son intérêt.
 - **Taux d'ouverture :** Les taux d'ouverture sont un indicateur utile de l'emplacement de la boîte de réception. Si votre taux d'ouverture unique est supérieur à 25 %, vous êtes probablement bien placé dans la boîte de réception, ce qui indique une réputation positive de l'expéditeur.
 
@@ -110,9 +110,3 @@ Braze vous déconseille d'utiliser le [timing intelligent]({{site.baseurl}}/user
 Il est normal que le courrier soit envoyé dans le dossier spam pendant le réchauffement d'adresses IP, car votre domaine et votre IP n'ont pas encore acquis une réputation positive. Si le courrier arrive dans votre dossier spam, il se peut que votre administrateur de messagerie doive ajouter le domaine et l'IP d'envoi de Braze à la liste d'autorisation de votre entreprise.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-Il y a [43]: https://www.braze.com/blog/email-list-hygiene/
-Il y a [44]: https://senderscore.org/
-Il y a [45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/email/best_practices/sunset_policies/

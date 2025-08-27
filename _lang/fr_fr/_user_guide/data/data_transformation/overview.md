@@ -43,7 +43,7 @@ Pour demander une mise à niveau vers Data Transformation Pro, contactez votre g
 
 ### Limites de débit
 
-La limite de débit pour la transformation des données de Braze est de 1 000 requêtes entrantes par minute. Si vous disposez de la version Pro de la transformation des données et que vous avez besoin d'une limite de débit plus élevée, contactez votre gestionnaire de compte Braze.
+La limite de débit pour les transformations de données de Braze est de 1 000 demandes entrantes par minute et par espace de travail. Si vous disposez de la version Pro de la transformation des données et que vous avez besoin d'une limite de débit plus élevée, contactez votre gestionnaire de compte Braze.
 
 ## Foire aux questions
 
@@ -74,5 +74,3 @@ Dans la plupart des cas, oui. La transformation des données Braze crée finalem
 Contactez votre gestionnaire de compte Braze pour toute assistance supplémentaire.
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}

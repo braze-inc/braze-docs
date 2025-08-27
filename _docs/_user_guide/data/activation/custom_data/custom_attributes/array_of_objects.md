@@ -579,12 +579,12 @@ You can create a segment with up to one level of array nesting (array within ano
 
 ## Data points
 
-Data points are consumed differently depending on whether you create, update, or remove a property.
+Data points are logged differently depending on whether you create, update, or remove a property.
 
 {% tabs local %}
 {% tab Create %}
 
-Creating a new array consumes one data point for each attribute in an object. This example costs eight data points—each pet object has four attributes and there are two objects.
+Creating a new array logs one data point for each attribute in an object. This example costs eight data points—each pet object has four attributes and there are two objects.
 
 ```json
 {
@@ -612,7 +612,7 @@ Creating a new array consumes one data point for each attribute in an object. Th
 {% endtab %}
 {% tab Update %}
 
-Updating an existing array consumes one data point for each property added. This example costs two data points as it only updates one property in each of the two objects.
+Updating an existing array logs one data point for each property added. This example costs two data points as it only updates one property in each of the two objects.
 
 ```json
 {
@@ -645,7 +645,7 @@ Updating an existing array consumes one data point for each property added. This
 {% endtab %}
 {% tab Remove %}
 
-Removing an object from an array consumes one data point for each removal criteria you send. This example costs three data points, even though you may be removing multiple dogs with this statement.
+Removing an object from an array logs one data point for each removal criteria you send. This example costs three data points, even though you may be removing multiple dogs with this statement.
 
 ```json
 {

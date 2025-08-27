@@ -30,14 +30,14 @@ Le type de campagne d'e-mail transactionnel est créé pour l'envoi d'e-mails au
 En bref, vous pouvez utiliser les e-mails transactionnels pour envoyer à un seul utilisateur des notifications critiques provenant de votre service, où la vitesse est de la plus haute importance. 
 
 {% alert important %}
-Les e-mails transactionnels diffèrent des campagnes transactionnelles, qui peuvent être utilisées pour cibler vos utilisateurs sans coûts supplémentaires. Les campagnes transactionnelles, par exemple, peuvent inclure des messages envoyés après qu’un utilisateur ajoute un élément à son panier. Pour plus d’informations, consultez les [options de ciblage de l'audience]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/).
+Les e-mails transactionnels diffèrent des campagnes transactionnelles, qui peuvent être utilisées pour cibler vos utilisateurs sans coûts supplémentaires. Les campagnes transactionnelles, par exemple, peuvent inclure des messages envoyés après qu’un utilisateur ajoute un élément à son panier. Pour plus d’informations, consultez les [options de ciblage de l'audience]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/).
 {% endalert %}
 
 ## Étape 1 : Créer une nouvelle campagne
 
 Pour créer une nouvelle campagne d'e-mails transactionnels, créez une campagne et sélectionnez l'**e-mail transactionnel** comme canal d'envoi de messages.
 
-![Créez une liste déroulante de campagne avec l'option en surbrillance pour l'e-mail transactionnel.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Créez une liste déroulante de campagne avec l'option en surbrillance pour l'e-mail transactionnel.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Vous pouvez maintenant passer à la configuration de votre campagne d’e-mails transactionnels.
 
@@ -48,10 +48,10 @@ Le flux de création des campagnes d'e-mails de transaction est simplifié par r
 Par conséquent, vous remarquerez que plusieurs paramètres que vous connaissez peut-être d’autres types de campagnes Braze ne sont pas obligatoires lors de la configuration de ce type de campagne :
 
 - L'étape de **réception/distribution** a été simplifiée pour supprimer les options de planification. Les e-mails transactionnels seront toujours déclenchés via l'API REST de Braze à l'aide de l'ID de campagne indiqué sur la page de **réception/distribution**. D'autres paramètres, tels que les contrôles de rééligibilité et les paramètres de limite de fréquence, ont également été supprimés afin de confirmer que tous les utilisateurs sont joignables pour ces alertes transactionnelles critiques lorsque votre service déclenche une demande d'envoi.
-- L'étape " **Utilisateurs ciblés"** a été supprimée. Étant donné que les e-mails transactionnels enregistrent l’intégralité de votre base d’utilisateurs comme étant admissible (y compris les utilisateurs non abonnés), il n’est pas nécessaire de spécifier des filtres ou des segments. Par conséquent, si vous avez une logique à appliquer à qui doit recevoir ce message, nous vous recommandons de l’appliquer avant de déterminer si la demande d’API doit être envoyée à Braze pour déclencher le message à un utilisateur spécifique.
+- L'étape des **audiences ciblées** a été supprimée. Étant donné que les e-mails transactionnels enregistrent l’intégralité de votre base d’utilisateurs comme étant admissible (y compris les utilisateurs non abonnés), il n’est pas nécessaire de spécifier des filtres ou des segments. Par conséquent, si vous avez une logique à appliquer à qui doit recevoir ce message, nous vous recommandons de l’appliquer avant de déterminer si la demande d’API doit être envoyée à Braze pour déclencher le message à un utilisateur spécifique.
 - L'étape des **conversions** a été supprimée. Pour le moment, les e-mails transactionnels ne prennent pas en charge le suivi des événements de conversion.
 
-![Composer, réception/distribution et confirmation pour créer une campagne d'e-mails transactionnels.][2]{: style="max-width:80%;"}
+![Flux de travail de composition, réception/distribution et confirmation pour créer une campagne d'e-mails transactionnels.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Pour configurer votre campagne d'e-mails transactionnels, procédez comme suit :
 
@@ -73,5 +73,3 @@ L’utilisation de la balise `Connected Content` nécessite que Braze fasse une 
 Par conséquent, nous ne prenons pas en charge les balises `Connected Content` ou `Promotion Code` dans les champs de votre campagne d'e-mails transactionnels.
 
 
-[1]: {% image_buster /assets/img/transactional_email_campaign.png %}
-[2]: {% image_buster /assets/img/transactional_campaign_compose.png %}

@@ -20,12 +20,12 @@ Braze is designed to allow for flexible data collection, so you can integrate th
 
 ## Minimum integration
 
-The following lists the strictly necessary data generated and received by Braze when you initialize the SDK. This data is non-configurable and is essential in core platform functions. Except for session start and session end, all other automatically tracked data doesn't count toward your data point allotment.
+The following lists the strictly necessary data generated and received by Braze when you initialize the SDK. This data is non-configurable and is essential in core platform functions. Except for session start and session end, all other automatically tracked data doesn't count toward your data point usage.
 
 | Attribute | Description | Why it's collected |
 | --------- | ----------- | ------------------ |
 | App-Version-Name /<br> App-Version-Code | The most recent app version | This attribute is used to send messages related to app version compatibility to the correct devices. It can be used to notify users of service disruptions or bugs. |
-| Country | Country identified by IP address geolocation. If the IP address geolocation isn't available, this is identified by the [device locale](#optional-data-collected-by-default). The value could alternatively be whatever the SDKs set directly with `setCountry`, but note that passing an attribute value through by SDK or API will consume datapoints.| This attribute is used to target messages based on location. |
+| Country | Country identified by IP address geolocation. If the IP address geolocation isn't available, this is identified by the [device locale](#optional-data-collected-by-default). The value could alternatively be whatever the SDKs set directly with `setCountry`, but note that passing an attribute value through by SDK or API will log data points.| This attribute is used to target messages based on location. |
 | Device ID | Device identifier, a randomly generated string | This attribute is used to differentiate users' devices and send messages to the correct device. |
 | OS and OS version | Currently reported device or browser and device or browser version | This attribute is used to only send messages to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
 | Session start and session end | When the user begins using your integrated app or site | The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Exactly when the session start and session end is called by your app or site is configurable by a developer ([Android]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)). |

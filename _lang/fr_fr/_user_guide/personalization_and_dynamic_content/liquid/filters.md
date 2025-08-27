@@ -70,28 +70,28 @@ Les filtres de tableau servent à modifier leur sortie.
 
 | Filtre               | Définition                                                                                                         | Pris en charge |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
-| [join][1.1]          | Joint les éléments d’un tableau avec le caractère transmis en tant de paramètre. Il en résulte une chaîne de caractères unique.          | ✅  Oui   |
-| [first][1.2]         | Renvoie le premier élément d’un tableau. Dans un tableau d’attribut personnalisé, c’est la valeur ajoutée la plus ancienne.                | ✅  Oui   |
-| [last][1.3]          | Renvoie le dernier élément d’un tableau. Dans un tableau d’attribut personnalisé, c’est la valeur ajoutée la plus récente.          | ✅  Oui   |
-| [compact][1.4]       | Enlève tous les éléments `nil` d’un tableau.                                                                             | ✅  Oui   |
-| [concat][1.5]        | Combine un tableau avec un autre tableau.                                                                              | ✅  Oui   |
-| [index][1.6]         | Renvoie l’élément à l’emplacement d’index spécifié dans un tableau. Le premier élément d’un tableau est référencé avec `[0]`. | ✅  Oui   |
-| [map][1.7]           | Accepte l’attribut d’un élément de tableau comme paramètre et crée un tableau à partir de la valeur de chaque élément du tableau.        | ✅  Oui   |
-| [reverse][1.8]       | Inverse l’ordre des éléments dans un tableau.                                                                       | ✅  Oui   |
-| [size][1.9]          | Renvoie la taille d’une chaîne de caractères (nombre de caractères) ou un tableau (nombre d’éléments).                      | ✅  Oui   |
-| [sort][1.10]         | Trie les éléments d’un tableau par un attribut donné d’un élément dans le tableau.                                    | ✅  Oui   |
-| [trier_naturellement][1.11] | Trie les éléments d’un tableau selon un ordre alphabétique sensible à la casse.                                                | ✅  Oui   |
-| [uniq][1.12]         | Supprime les instances en doublon d’éléments dans un tableau.                                                           | ✅  Oui   |
-| [where][1.13]        | Filtre un tableau pour n’afficher que les objets ayant une valeur de propriété spécifique.                                             | ✅  Oui   |
+| [join](https://shopify.dev/api/liquid/filters/array-filters#join)          | Joint les éléments d’un tableau avec le caractère transmis en tant de paramètre. Il en résulte une chaîne de caractères unique.          | ✅  Oui   |
+| [first](https://shopify.dev/api/liquid/filters/array-filters#first)         | Renvoie le premier élément d’un tableau. Dans un tableau d’attribut personnalisé, c’est la valeur ajoutée la plus ancienne.                | ✅  Oui   |
+| [last](https://shopify.dev/api/liquid/filters/array-filters#last)          | Renvoie le dernier élément d’un tableau. Dans un tableau d’attribut personnalisé, c’est la valeur ajoutée la plus récente.          | ✅  Oui   |
+| [compact](https://shopify.dev/api/liquid/filters#compact)       | Enlève tous les éléments `nil` d’un tableau.                                                                             | ✅  Oui   |
+| [concat](https://shopify.dev/api/liquid/filters/array-filters#concat)        | Combine un tableau avec un autre tableau.                                                                              | ✅  Oui   |
+| [index](https://shopify.dev/api/liquid/filters/array-filters#index)         | Renvoie l’élément à l’emplacement d’index spécifié dans un tableau. Le premier élément d’un tableau est référencé avec `[0]`. | ✅  Oui   |
+| [map](https://shopify.dev/api/liquid/filters/array-filters#map)           | Accepte l’attribut d’un élément de tableau comme paramètre et crée un tableau à partir de la valeur de chaque élément du tableau.        | ✅  Oui   |
+| [reverse](https://shopify.dev/api/liquid/filters/array-filters#reverse)       | Inverse l’ordre des éléments dans un tableau.                                                                       | ✅  Oui   |
+| [size](https://shopify.dev/api/liquid/filters/array-filters#size)          | Renvoie la taille d’une chaîne de caractères (nombre de caractères) ou un tableau (nombre d’éléments).                      | ✅  Oui   |
+| [sort](https://shopify.dev/api/liquid/filters/array-filters#sort)         | Trie les éléments d’un tableau par un attribut donné d’un élément dans le tableau.                                    | ✅  Oui   |
+| [trier_naturellement](https://shopify.dev/api/liquid/filters#sort_natural) | Trie les éléments d’un tableau selon un ordre alphabétique sensible à la casse.                                                | ✅  Oui   |
+| [uniq](https://shopify.dev/api/liquid/filters/array-filters#uniq)         | Supprime les instances en doublon d’éléments dans un tableau.                                                           | ✅  Oui   |
+| [where](https://shopify.dev/api/liquid/filters#where)        | Filtre un tableau pour n’afficher que les objets ayant une valeur de propriété spécifique.                                             | ✅  Oui   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Filtres de couleur
 
-[Les filtres de couleur][2.1] ne sont pas pris en charge dans Braze.
+[Les filtres de couleur](https://shopify.dev/api/liquid/filters/color-filters) ne sont pas pris en charge dans Braze.
 
 ## Filtres de polices
 
-[Les filtres de police][3.1] ne sont pas pris en charge dans Braze.
+[Les filtres de police](https://shopify.dev/api/liquid/filters/font-filters) ne sont pas pris en charge dans Braze.
 
 ## Filtres mathématiques
 
@@ -99,17 +99,17 @@ Les filtres mathématiques vous permettent d’effectuer des opérations mathém
 
 | Filtre  | Définition      | Pris en charge |
 | :------ |:----------------| :-------- |
-| [abs][4.1]        | Renvoie la valeur absolue d’un nombre.     | ✅  Oui   |
-| [at_most][4.2]    | Limite un nombre à une valeur maximale.   | ✅  Oui   |
-| [at_least][4.3]   | Limite un nombre à une valeur minimale.   | ✅  Oui   |
-| [ceil][4.4]       | Arrondit une sortie au nombre entier le plus proche.  | ✅  Oui   |
-| [divisé par][4.5] | Divise une sortie par un nombre. La sortie est arrondie au nombre entier le plus proche. Pour évitez l’arrondi, suivez le conseil suivant. | ✅  Oui   |
-| [floor][4.6]      | Arrondit une sortie au nombre entier inférieur le plus proche.        | ✅  Oui   |
-| [minus][4.7]      | Soustrait un nombre à partir d’une sortie.          | ✅  Oui   |
-| [plus][4.8]       | Ajoute un numéro à une sortie.     | ✅  Oui   |
-| [round][4.9]      | Arrondit la sortie au nombre entier le plus proche ou au nombre spécifié de décimales.  | ✅  Oui   |
-| [times][4.10]     | Multiplie une sortie par un nombre.       | ✅  Oui   |
-| [modulo][4.11]    | Divise une sortie par un nombre et renvoie le reliquat.   | ✅  Oui   |
+| [abs](https://shopify.dev/api/liquid/filters/math-filters#abs)        | Renvoie la valeur absolue d’un nombre.     | ✅  Oui   |
+| [at_most](https://shopify.dev/api/liquid/filters/math-filters#at_most)    | Limite un nombre à une valeur maximale.   | ✅  Oui   |
+| [at_least](https://shopify.dev/api/liquid/filters/math-filters#at_least)   | Limite un nombre à une valeur minimale.   | ✅  Oui   |
+| [ceil](https://shopify.dev/api/liquid/filters/math-filters#ceil)       | Arrondit une sortie au nombre entier le plus proche.  | ✅  Oui   |
+| [divisé par](https://shopify.dev/api/liquid/filters/math-filters#divided_by) | Divise une sortie par un nombre. La sortie est arrondie au nombre entier le plus proche. Pour évitez l’arrondi, suivez le conseil suivant. | ✅  Oui   |
+| [floor](https://shopify.dev/api/liquid/filters/math-filters#floor)      | Arrondit une sortie au nombre entier inférieur le plus proche.        | ✅  Oui   |
+| [minus](https://shopify.dev/api/liquid/filters/math-filters#minus)      | Soustrait un nombre à partir d’une sortie.          | ✅  Oui   |
+| [plus](https://shopify.dev/api/liquid/filters/math-filters#plus)       | Ajoute un numéro à une sortie.     | ✅  Oui   |
+| [round](https://shopify.dev/api/liquid/filters/math-filters#round)      | Arrondit la sortie au nombre entier le plus proche ou au nombre spécifié de décimales.  | ✅  Oui   |
+| [times](https://shopify.dev/api/liquid/filters/math-filters#times)     | Multiplie une sortie par un nombre.       | ✅  Oui   |
+| [modulo](https://shopify.dev/api/liquid/filters/math-filters#modulo)    | Divise une sortie par un nombre et renvoie le reliquat.   | ✅  Oui   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -171,9 +171,9 @@ Si vous mettez à jour un utilisateur sur son achat, un solde de compte ou tout 
 
 | Filtre         | Définition          | Pris en charge |
 | :--------------- | :--------------- | :-------- |
-| [money][5.1]      | Formate les nombres pour s’assurer que les décimales sont à l’endroit approprié et que les zéros ne sont pas supprimés de la fin des nombres.   | ✅  Oui   |
-| [money_with_currency][5.2]    | Formate les nombre avec le symbole de devise.     | ⛔  Non    |
-| [argent_sans_monnaie][5.4]     | Formate les nombre sans le symbole de devise.      | ⛔  Non    |
+| [money](https://shopify.dev/api/liquid/filters/money-filters#money)      | Formate les nombres pour s’assurer que les décimales sont à l’endroit approprié et que les zéros ne sont pas supprimés de la fin des nombres.   | ✅  Oui   |
+| [money_with_currency](https://shopify.dev/api/liquid/filters/money-filters#money_with_currency)    | Formate les nombre avec le symbole de devise.     | ⛔  Non    |
+| [argent_sans_monnaie](https://shopify.dev/api/liquid/filters/money-filters#money_without_currency)     | Formate les nombre sans le symbole de devise.      | ⛔  Non    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
@@ -202,7 +202,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | AVEC LE FILTRE MONÉTAIRE                       | SANS LE FILTRE MONÉTAIRE                    |
 | :------------------------------------------ | :------------------------------------------ |
-| ![Avec filtre monétaire][1]                     | ![Sans filtre monétaire][2]                  |
+| ![Avec filtre à argent]({% image_buster /assets/img/with_money_filter.png %})                     | ![Filtre sans argent]({% image_buster /assets/img/without_money_filter.png %})                  |
 | Où `account_balance` est une saisie à `17.8`. | Où `account_balance` est une saisie à `17.8`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -225,7 +225,7 @@ $145.00
 {% endtab %}
 {% endtabs %}
 
-Selon le filtre [money][5.1] de Shopify, cela devrait générer `$1.45`, cependant dans Braze, cela va générer `$145.00`. En tant que solution de contournement, nous pouvons utiliser le filtre `divided_by` pour manipuler le nombre en une décimale, avant d’appliquer le filtre monétaire :
+Selon le filtre [money](https://shopify.dev/api/liquid/filters/money-filters#money) de Shopify, cela devrait générer `$1.45`, cependant dans Braze, cela va générer `$145.00`. En tant que solution de contournement, nous pouvons utiliser le filtre `divided_by` pour manipuler le nombre en une décimale, avant d’appliquer le filtre monétaire :
 
 {% tabs local %}
 {% tab Entrée %}
@@ -254,34 +254,34 @@ Les guillemets droits sont différents des guillemets courbes dans Liquid. Soyez
 
 | Filtre          | Description     | Pris en charge |
 | :--------------- | ------------- | --------- |
-| [append][6.1]     | Ajoute des caractères à une chaîne de caractères.           | ✅  Oui   |
-| [camelcase][6.2]     | Transforme une chaîne de caractères en CamelCase.             | ⛔  Non    |
-| [capitaliser][6.3]     | Met en majuscule le premier mot d'une chaîne et met en minuscule les caractères restants.         | ✅  Oui   |
-| [downcase][6.4]      | Convertit une chaîne de caractères en minuscules.         | ✅  Oui   |
-| [escape][6.5]    | Échappe une chaîne de caractères.             | ✅  Oui   |
-| [handle/handleize][6.6]        | Formate une chaîne de caractère en handle.        | ⛔  Non    |
-| [md5][6.7]    | Convertit une chaîne de caractères en hash MD5. Pour plus d’informations, consultez [Filtres d'encodage][3].   | ✅  Oui   |
-| [sha1][6.8]    | Convertit une chaîne de caractères en hash SHA-1. Pour plus d’informations, consultez [Filtres d'encodage][3].  | ✅  Oui   |
-| hmac_sha1_hex<br>(précédemment [hmac_sha_1][6.10]) | Convertit une chaîne de caractères en hash SHA-1 en utilisant un code d’authentification de message hash (HMAC). Transmet la clé secrète pour le message en tant que paramètre au filtre. Pour plus d’informations, consultez [Filtres d'encodage][3]. | ✅  Oui   |
-| [hmac_sha256][6.11]    | Convertit une chaîne de caractères en hash SHA-256 en utilisant un code d’authentification de message hash (HMAC). Transmet la clé secrète pour le message en tant que paramètre au filtre.       | ✅  Oui   |
+| [append](https://shopify.dev/api/liquid/filters/string-filters#append)     | Ajoute des caractères à une chaîne de caractères.           | ✅  Oui   |
+| [camelcase](https://shopify.dev/api/liquid/filters/string-filters#camelcase)     | Transforme une chaîne de caractères en CamelCase.             | ⛔  Non    |
+| [capitaliser](https://shopify.dev/api/liquid/filters/string-filters#capitalize)     | Met en majuscule le premier mot d'une chaîne et met en minuscule les caractères restants.         | ✅  Oui   |
+| [downcase](https://shopify.dev/api/liquid/filters/string-filters#downcase)      | Convertit une chaîne de caractères en minuscules.         | ✅  Oui   |
+| [escape](https://shopify.dev/api/liquid/filters/string-filters#escape)    | Échappe une chaîne de caractères.             | ✅  Oui   |
+| [handle/handleize](https://shopify.dev/api/liquid/filters/string-filters#handle-handleize)        | Formate une chaîne de caractère en handle.        | ⛔  Non    |
+| [md5](https://shopify.dev/api/liquid/filters/string-filters#md5)    | Convertit une chaîne de caractères en hash MD5. Pour plus d'informations, reportez-vous à la section [Filtres d'encodage]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters).   | ✅  Oui   |
+| [sha1](https://shopify.dev/api/liquid/filters/string-filters#sha1)    | Convertit une chaîne de caractères en hash SHA-1. Pour plus d'informations, reportez-vous à la section [Filtres d'encodage]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters).  | ✅  Oui   |
+| hmac_sha1_hex<br>(précédemment [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Convertit une chaîne de caractères en hash SHA-1 en utilisant un code d’authentification de message hash (HMAC). Transmet la clé secrète pour le message en tant que paramètre au filtre. Pour plus d'informations, reportez-vous à la section [Filtres d'encodage]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters). | ✅  Oui   |
+| [hmac_sha256](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256)    | Convertit une chaîne de caractères en hash SHA-256 en utilisant un code d’authentification de message hash (HMAC). Transmet la clé secrète pour le message en tant que paramètre au filtre.       | ✅  Oui   |
 | hmac_sha512 | Convertit une chaîne en un hachage SHA-512 en utilisant un code d'authentification de message de hachage (HMAC). Transmet la clé secrète pour le message en tant que paramètre au filtre. | ✅  Oui  |
-| [newline_to_br][6.12]     | Insère une balise HTML de saut de ligne `<br>` devant chaque saut de ligne dans une chaîne.        | ✅  Oui   |
-| [pluralize][6.13]   | Génère la version au singulier ou au pluriel d’une chaîne de caractères anglaise en fonction de la valeur d’un nombre.      | ⛔  Non    |
-| [prepend][6.14]     | Ajoute des caractères au début d’une chaîne de caractères.      | ✅  Oui   |
-| [supprimer][6.15]      | Supprime toutes les occurrences d’une sous-chaîne d’une chaîne de caractères.       | ✅  Oui   |
-| [remove_first][6.16]    | Supprime uniquement la première occurrence d’une sous-chaîne d’une chaîne de caractères.      | ✅  Oui   |
-| [replace][6.17]        | Remplace toutes les occurrences d’une chaîne de caractères par une sous-chaîne.   | ✅  Oui   |
-| [replace_first][6.18]        | Remplace la première occurrence d’une chaîne de caractères par une sous-chaîne.      | ✅  Oui   |
-| [slice][6.19]       | Le filtre de coupe restitue une sous-chaîne, à partir de l’index spécifié.       | ✅  Oui   |
-| [split][6.20]  | Le filtre de division prend une sous-chaîne comme paramètre. La sous-chaîne est utilisée comme séparateur pour diviser une chaîne de caractères en tableau.            | ✅  Oui   |
-| [strip][6.21]   | Découpe les tabulations, les espaces et les nouvelles lignes (tous les espaces blancs) à gauche et à droite d’une chaîne de caractères.                                                                                                    | ✅  Oui   |
-| [lstrip][6.22]     | Découpe les tabulations, les espaces et les nouvelles lignes (tous les espaces blancs) à gauche d’une chaîne de caractères.    | ⛔  Non    |
-| [rstrip][6.23]             | Découpe les tabulations, les espaces et les nouvelles lignes (tous les espaces blancs) à droite d’une chaîne de caractères.          | ⛔  Non    |
-| [strip_html][6.24]         | Permet de découper toutes les balises HTML d’une chaîne de caractères.        | ✅  Oui   |
-| [strip_newlines][6.25]  | Supprime les sauts de ligne/nouvelles lignes d’une chaîne de caractères.        | ✅  Oui   |
-| [truncate][6.26]    | Tronque une chaîne de caractères en nombre de caractères transmis comme premier paramètre. Une ellipse (…) est ajoutée à la chaîne de caractères tronquée et est incluse dans le nombre de caractères.    | ✅  Oui   |
-| [truncatewords][6.27]   | Tronque une chaîne de caractères en nombre de caractères transmis comme premier paramètre. Une ellipse (…) est ajoutée à la chaîne de caractères tronquée.    | ✅  Oui   |
-| [upcase][6.28]   | Convertit une chaîne de caractères en majuscules.      | ✅  Oui   |
+| [newline_to_br](https://shopify.dev/api/liquid/filters/string-filters#newline_to_br)     | Insère une balise HTML de saut de ligne `<br>` devant chaque saut de ligne dans une chaîne.        | ✅  Oui   |
+| [pluralize](https://shopify.dev/api/liquid/filters/string-filters#pluralize)   | Génère la version au singulier ou au pluriel d’une chaîne de caractères anglaise en fonction de la valeur d’un nombre.      | ⛔  Non    |
+| [prepend](https://shopify.dev/api/liquid/filters/string-filters#prepend)     | Ajoute des caractères au début d’une chaîne de caractères.      | ✅  Oui   |
+| [supprimer](https://shopify.dev/api/liquid/filters/string-filters#remove)      | Supprime toutes les occurrences d’une sous-chaîne d’une chaîne de caractères.       | ✅  Oui   |
+| [remove_first](https://shopify.dev/api/liquid/filters/string-filters#remove_first)    | Supprime uniquement la première occurrence d’une sous-chaîne d’une chaîne de caractères.      | ✅  Oui   |
+| [replace](https://shopify.dev/api/liquid/filters/string-filters#replace)        | Remplace toutes les occurrences d’une chaîne de caractères par une sous-chaîne.   | ✅  Oui   |
+| [replace_first](https://shopify.dev/api/liquid/filters/string-filters#replace_first)        | Remplace la première occurrence d’une chaîne de caractères par une sous-chaîne.      | ✅  Oui   |
+| [slice](https://shopify.dev/api/liquid/filters/string-filters#slice)       | Le filtre de coupe restitue une sous-chaîne, à partir de l’index spécifié.       | ✅  Oui   |
+| [split](https://shopify.dev/api/liquid/filters/string-filters#split)  | Le filtre de division prend une sous-chaîne comme paramètre. La sous-chaîne est utilisée comme séparateur pour diviser une chaîne de caractères en tableau.            | ✅  Oui   |
+| [strip](https://shopify.dev/api/liquid/filters/string-filters#strip)   | Découpe les tabulations, les espaces et les nouvelles lignes (tous les espaces blancs) à gauche et à droite d’une chaîne de caractères.                                                                                                    | ✅  Oui   |
+| [lstrip](https://shopify.dev/api/liquid/filters/string-filters#lstrip)     | Découpe les tabulations, les espaces et les nouvelles lignes (tous les espaces blancs) à gauche d’une chaîne de caractères.    | ⛔  Non    |
+| [rstrip](https://shopify.dev/api/liquid/filters/string-filters#rstrip)             | Découpe les tabulations, les espaces et les nouvelles lignes (tous les espaces blancs) à droite d’une chaîne de caractères.          | ⛔  Non    |
+| [strip_html](https://shopify.dev/api/liquid/filters/string-filters#strip_html)         | Permet de découper toutes les balises HTML d’une chaîne de caractères.        | ✅  Oui   |
+| [strip_newlines](https://shopify.dev/api/liquid/filters/string-filters#strip_newlines)  | Supprime les sauts de ligne/nouvelles lignes d’une chaîne de caractères.        | ✅  Oui   |
+| [truncate](https://shopify.dev/api/liquid/filters/string-filters#truncate)    | Tronque une chaîne de caractères en nombre de caractères transmis comme premier paramètre. Une ellipse (…) est ajoutée à la chaîne de caractères tronquée et est incluse dans le nombre de caractères.    | ✅  Oui   |
+| [truncatewords](https://shopify.dev/api/liquid/filters/string-filters#truncatewords)   | Tronque une chaîne de caractères en nombre de caractères transmis comme premier paramètre. Une ellipse (…) est ajoutée à la chaîne de caractères tronquée.    | ✅  Oui   |
+| [upcase](https://shopify.dev/api/liquid/filters/string-filters#upcase)   | Convertit une chaîne de caractères en majuscules.      | ✅  Oui   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Filtres supplémentaires
@@ -290,10 +290,10 @@ Les filtres généraux suivants ont de nombreuses fonctions, y compris le format
 
 | Filtre                | Description                                                                                                                      | Pris en charge |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [date][7.1]           | Convertit un horodatage en un autre format de date. Reportez-vous au [Filtre de date](#date-filter) pour plus d'informations.         | ✅  Oui   |
-| [default][7.2]        | Définit une valeur par défaut pour toute variable sans valeur attribuée. Peut être utilisé avec des chaînes de caractères, des tableaux et des hachages.      | ✅  Oui   |
-| [format_address][7.3] | Formate une adresse pour imprimer les éléments de l’adresse dans l’ordre selon leur emplacement.        | ⛔  Non    |
-| [highlight][7.4]      | Entoure les mots à l’intérieur des résultats de recherche d’une balise HTML `<strong>` avec la classe surlignée si elle correspond aux termes de recherche transmis. | ⛔  Non    |
+| [date](https://shopify.dev/api/liquid/filters/additional-filters#date)           | Convertit un horodatage en un autre format de date. Reportez-vous au [Filtre de date](#date-filter) pour plus d'informations.         | ✅  Oui   |
+| [default](https://shopify.dev/api/liquid/filters/additional-filters#default)        | Définit une valeur par défaut pour toute variable sans valeur attribuée. Peut être utilisé avec des chaînes de caractères, des tableaux et des hachages.      | ✅  Oui   |
+| [format_address](https://shopify.dev/api/liquid/filters/additional-filters#format_address) | Formate une adresse pour imprimer les éléments de l’adresse dans l’ordre selon leur emplacement.        | ⛔  Non    |
+| [highlight](https://shopify.dev/api/liquid/filters/additional-filters#highlight)      | Entoure les mots à l’intérieur des résultats de recherche d’une balise HTML `<strong>` avec la classe surlignée si elle correspond aux termes de recherche transmis. | ⛔  Non    |
 | `time_zone`             | Reportez-vous à la section [Filtre de fuseau horaire](#time-zone-filter).     | ✅  Oui   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -386,74 +386,10 @@ Vous pouvez également utiliser la variable réservée `now` pour accéder à la
 {% endtabs %}
 
 
-[1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
-[1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
-[1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters#compact
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
-[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
-[1.13]: https://shopify.dev/api/liquid/filters#where
-
-[2.1]: https://shopify.dev/api/liquid/filters/color-filters
-[3.1]: https://shopify.dev/api/liquid/filters/font-filters
-
-[4.1]: https://shopify.dev/api/liquid/filters/math-filters#abs
-[4.2]: https://shopify.dev/api/liquid/filters/math-filters#at_most
-[4.3]: https://shopify.dev/api/liquid/filters/math-filters#at_least
-[4.4]: https://shopify.dev/api/liquid/filters/math-filters#ceil
-[4.5]: https://shopify.dev/api/liquid/filters/math-filters#divided_by
-[4.6]: https://shopify.dev/api/liquid/filters/math-filters#floor
-[4.7]: https://shopify.dev/api/liquid/filters/math-filters#minus
-[4.8]: https://shopify.dev/api/liquid/filters/math-filters#plus
-[4.9]: https://shopify.dev/api/liquid/filters/math-filters#round
-[4.10]: https://shopify.dev/api/liquid/filters/math-filters#times
-[4.11]: https://shopify.dev/api/liquid/filters/math-filters#modulo
-
-[5.1]: https://shopify.dev/api/liquid/filters/money-filters#money
-[5.2]: https://shopify.dev/api/liquid/filters/money-filters#money_with_currency
-[5.3]: https://shopify.dev/api/liquid/filters/money-filters#money_without_trailing_zeros
-[5.4]: https://shopify.dev/api/liquid/filters/money-filters#money_without_currency
-
-[6.1]: https://shopify.dev/api/liquid/filters/string-filters#append
-[6.2]: https://shopify.dev/api/liquid/filters/string-filters#camelcase
-[6.3]: https://shopify.dev/api/liquid/filters/string-filters#capitalize
-[6.4]: https://shopify.dev/api/liquid/filters/string-filters#downcase
-[6.5]: https://shopify.dev/api/liquid/filters/string-filters#escape
-[6.6]: https://shopify.dev/api/liquid/filters/string-filters#handle-handleize
-[6.7]: https://shopify.dev/api/liquid/filters/string-filters#md5
-[6.8]: https://shopify.dev/api/liquid/filters/string-filters#sha1
-[6.10]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1
-[6.11]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256
-[6.12]: https://shopify.dev/api/liquid/filters/string-filters#newline_to_br
-[6.13]: https://shopify.dev/api/liquid/filters/string-filters#pluralize
-[6.14]: https://shopify.dev/api/liquid/filters/string-filters#prepend
-[6.15]: https://shopify.dev/api/liquid/filters/string-filters#remove
-[6.16]: https://shopify.dev/api/liquid/filters/string-filters#remove_first
-[6.17]: https://shopify.dev/api/liquid/filters/string-filters#replace
-[6.18]: https://shopify.dev/api/liquid/filters/string-filters#replace_first
-[6.19]: https://shopify.dev/api/liquid/filters/string-filters#slice
-[6.20]: https://shopify.dev/api/liquid/filters/string-filters#split
-[6.21]: https://shopify.dev/api/liquid/filters/string-filters#strip
-[6.22]: https://shopify.dev/api/liquid/filters/string-filters#lstrip
-[6.23]: https://shopify.dev/api/liquid/filters/string-filters#rstrip
-[6.24]: https://shopify.dev/api/liquid/filters/string-filters#strip_html
-[6.25]: https://shopify.dev/api/liquid/filters/string-filters#strip_newlines
-[6.26]: https://shopify.dev/api/liquid/filters/string-filters#truncate
-[6.27]: https://shopify.dev/api/liquid/filters/string-filters#truncatewords
-[6.28]: https://shopify.dev/api/liquid/filters/string-filters#upcase
-
-[7.1]: https://shopify.dev/api/liquid/filters/additional-filters#date
-[7.2]: https://shopify.dev/api/liquid/filters/additional-filters#default
-[7.3]: https://shopify.dev/api/liquid/filters/additional-filters#format_address
-[7.4]: https://shopify.dev/api/liquid/filters/additional-filters#highlight
 
 
-[1]: {% image_buster /assets/img/with_money_filter.png %}
-[2]: {% image_buster /assets/img/without_money_filter.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters
+
+
+
+
+
