@@ -6,9 +6,14 @@
 
 Banners are automatically refreshed at the start of each new user session with their latest data&#8212;there's no need to resend or update your Banner campaign.
 
-## How many placements can I request in a session?
+## How many placements can I request at a time?
 
-In a single user session, you can request a maximum of 10 placements. For each one you request, Braze will return the highest-priority Banner a user is eligible for. Additional requests will return an error.
+When you request Banner placements, the SDK sends a call to Braze to fetch Banner messages for each placement.  
+
+- Each request can include up to **10 placements** by default. For each placement, Braze returns the highest-priority Banner the user is eligible to receive. If more than 10 placements are requested, only the first 10 are returned; the rest are dropped.  
+- How often you can make these requests depends on your SDK version:  
+- - For SDK versions Android 38.0.0, Swift 13.1.0 and Web 6.1.0, placements refreshes use a token bucket algorithm. This allows multiple refreshes in a session within the defined limits (a bucket size of 5 requests with a refill rate of one per 180 seconds).
+- - For older SDK versions, placement refreshes are limited to once per session. Additional refresh calls in the same session are ignored.
 
 For more information, see [Placement requests]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 
