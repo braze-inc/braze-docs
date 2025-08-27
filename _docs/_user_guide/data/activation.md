@@ -1,5 +1,5 @@
 ---
-nav_title: Data Activation
+nav_title: Data activation
 article_title: Data Activation
 page_order: 2
 layout: dev_guide

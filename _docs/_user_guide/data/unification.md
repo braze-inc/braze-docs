@@ -1,5 +1,5 @@
 ---
-nav_title: Data Unification
+nav_title: Data unification
 article_title: Data Unification
 page_order: 1
 layout: dev_guide
