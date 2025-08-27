@@ -18,13 +18,13 @@ tool: Canvas
 이 템플릿을 성공적으로 사용하려면 다음이 필요합니다:
 
 - 피드백 설문조사 결과에 참조할 [사용자 지정 속성입니다]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).
-- 구성된 [Braze 오디언스의 동기화]({{site.baseurl}}/partners/canvas_steps) 대상은 사용하는 파트너 및 오디언스입니다.
+- A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) with the partners and audiences you use.
 
 ## 필요에 맞게 템플릿 조정하기
 
 모바일 비디오 게임 개발사인 데코룸소프트에서 일한다고 가정해 보겠습니다. 구매 후 피드백 템플릿을 사용하여 최신 비디오 게임 출시작인 프록시 워 3에 대한 피드백을 측정할 것입니다: 갈증의 전쟁. 이 피드백을 바탕으로 확장팩인 Liquid Mirage의 개발 계획에 반영할 예정입니다.
 
-캔버스를 만들기 전에, 행동 트리거, 세분화 등을 기반으로 광고를 전송하기 위해 Braze의 사용자 데이터를 Google 오디언스에 추가할 수 있도록 Braze 오디언스 [동기화를 Google에]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) 통합했습니다.
+Before creating the Canvas, we set up the [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
 구매 후 피드백 템플릿에 액세스하려면 새 캔버스를 만들 때 **캔버스 템플릿 사용** > **브레이즈 템플릿을** 선택합니다. 그런 다음 **구매 후 피드백** 옆의 **템플릿 적용을** 선택합니다. 이제 템플릿을 검토하여 필요에 맞게 조정할 수 있습니다.
 

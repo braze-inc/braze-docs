@@ -19,15 +19,15 @@ channel:
 
 메시지를 분류하여 사용자의 알림 트레이에 그룹화하려면 Braze를 통해 iOS의 알림 그룹 기능을 활용할 수 있습니다.
 
-iOS 푸시 캠페인을 만든 다음 **작성** 탭 상단에 있는 **알림 그룹** 드롭다운에서 알림 그룹을 찾습니다.
+Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
 
-![][26]{: style="max-width:60%;" }
+![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 드롭다운에서 알림 그룹을 선택합니다. 알림 그룹 설정이 잘못되었거나 드롭다운에서 **없음**을 선택하면 워크스페이스에 정의된 모든 사용자에게 정상적으로 메시지가 자동으로 전송됩니다.
 
 여기에 나열된 알림 그룹이 없는 경우 iOS 스레드 ID를 사용하여 알림 그룹을 추가할 수 있습니다. 추가하려는 모든 알림 그룹에 대해 하나의 iOS 스레드 ID가 필요합니다. 그런 다음 드롭다운에서 **알림 그룹 관리를** 클릭하고 표시되는 **iOS 푸시 알림 그룹 관리** 창에서 필수 입력란을 작성하여 알림 그룹에 추가합니다.
 
-![][27]
+![Window to manage iOS push notification groups.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 iOS 푸시 캠페인을 만든 다음 작성기 상단을 확인합니다. **알림 그룹**이라는 레이블이 붙은 드롭다운이 표시됩니다.
 
@@ -82,7 +82,7 @@ Apple은 브랜드가 공식적으로 명시적으로 옵트인하기 전에 사
 
 사용자가 어떤 옵션을 선택하든 고객 프로필의 **인게이지먼트** 탭 아래에 있는 [연락처 설정]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)에 적절한 토큰 또는 [구독 상태]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/)가 추가됩니다.
 
-![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Contact settings with a push subscribed status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 [세분화 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하여 잠정 승인 여부에 따라 사용자를 타겟팅할 수 있습니다.
 
@@ -132,11 +132,17 @@ if (@available(iOS 12.0, *)) {
 
 ### 중단 수준(iOS 15+) {#interruption-level}
 
-![알림이 즉시 전달되도록 설정되어 있고 시간에 민감한 알림이 활성화된 알림을 표시하는 iOS 알림 설정 페이지.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
 iOS 15의 새로운 집중 모드를 통해 사용자는 앱 알림이 소리나 진동으로 "방해"할 수 있는 시기를 더 잘 제어할 수 있습니다.
 
+![iOS Notification Settings page that shows notifications enabled for immediate delivery and with time sensitive notifications enabled.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+
 이제 앱에서 알림의 긴급성에 따라 알림에 포함할 중단 수준을 지정할 수 있습니다.
+
+iOS 푸시 알림의 중단 수준을 변경하려면 **설정** 탭을 선택하고 **중단 수준** 드롭다운 메뉴에서 원하는 수준을 선택합니다.
+
+![Dropdown for selecting the interruption level.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+
+이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 기기에만 적용됩니다.
 
 사용자는 궁극적으로 자신의 집중력을 제어할 수 있으며, 시간 민감 알림이 전달되더라도 집중력을 방해할 수 없는 앱을 지정할 수 있다는 점을 명심하세요.
 
@@ -150,12 +156,6 @@ iOS 15의 새로운 집중 모드를 통해 사용자는 앱 알림이 소리나
 |[중요](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|휴대폰의 **방해 금지** 스위치가 활성화되어 있어도 소리가 나고 진동이 울리며 화면이 켜집니다. 이를 위해서는 [Apple의 명시적인 승인이 필요합니다](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|악천후 또는 안전 경보와 같은 긴급 상황|예|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-iOS 푸시 알림의 중단 수준을 변경하려면 **설정** 탭을 선택하고 **중단 수준** 드롭다운 메뉴에서 원하는 수준을 선택합니다.
-
-![방해 수준을 활성(기본값)으로 설정하고 사용 가능한 모든 방해수준을 표시하도록 확장합니다. 패시브, 액티브(기본값), 시간 민감, 크리티컬.][28]
-
-이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 기기에만 적용됩니다.
-
 ### 관련성 점수(iOS 15+) {#relevance-score}
 
 ![세 개의 알림이 포함된 '저녁 요약'이라는 제목의 iOS용 알림 요약.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -168,7 +168,7 @@ iOS 15는 또한 사용자가 하루 중 지정된 시간에 여러 알림을 �
 
 iOS 알림의 관련성 점수를 설정하려면 **설정** 탭에서 `0.0` ~ `1.0` 사이의 값을 입력합니다. 예를 들어 가장 중요한 메시지는 `1.0`으로 보내고, 중간 정도의 중요도는 `0.5`로 보내면 됩니다.
 
-![][29]
+![Relevance score of "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 기기에만 적용됩니다.
 
@@ -177,7 +177,3 @@ iOS 알림의 관련성 점수를 설정하려면 **설정** 탭에서 `0.0` ~ `
 - [이미지 및 텍스트 사양]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS 문자 수 가이드라인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption-level.png %}
-[29]: {% image_buster /assets/img/ios/relevance-score.png %}

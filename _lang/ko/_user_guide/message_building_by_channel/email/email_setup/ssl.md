@@ -65,11 +65,21 @@ SSL을 클릭 및 오픈 추적을 설정할 때 나열된 CDN을 사용할 수 
 CDN 구성 문제 해결에 대한 추가 지원이 필요하면 CDN 제공업체에 문의해야 합니다.
 {% endalert %}
 
-다음 표에는 특정 CDN을 구성하는 방법에 대한 SendGrid 및 SparkPost의 단계별 가이드가 포함되어 있습니다. 특정 CDN이 나열되지 않았더라도, CDN이 SSL 인증서를 적용할 수 있는지 확인해야 합니다.
+The following table includes step-by-step guides written by ESP partners on how to configure certain CDNs. 특정 CDN이 나열되지 않았더라도, CDN이 SSL 인증서를 적용할 수 있는지 확인해야 합니다.
 
 | SendGrid | SparkPost |
 | -------- | --------- |
-| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[빠르게](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[빠르게](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[구글 클라우드 플랫폼](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[빠르게](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[빠르게](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[구글 클라우드 플랫폼](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+For Amazon SES, refer to [Option 2: Configuring an HTTPS domain](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) and specify the AWS tracking domain by your region based on your Braze cluster:
+
+- **Braze US clusters:** `r.us-east-1.awstrack.me`
+- **Braze EU clusters:** `r.eu-central-1.awstrack.me`
+
+{% alert important %}
+When configuring your CDN's click-tracking domain, make sure you enable the `X-Forwarded-Host` header. This is used to prevent potential security issues, such as host header attacks. Refer to the CDN documentation or your support team on how to do this, as this varies depending on the CDN.
+{% endalert %}
 
 #### 문제 해결
 
