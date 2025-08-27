@@ -183,9 +183,9 @@ Using the **Add Personalization** modal, select **Advanced Event Properties** as
 
 ## Frequently asked questions
 
-### Does using nested objects consume additional data points?
+### Does using nested objects log additional data points?
 
-There is no change in how we charge data points as a result of adding this capability. Segmenting based on nested objects uses Segment Extensions, which doesn't incur additional data point usage.
+There is no change in how we log data points as a result of adding this capability. Segmenting based on nested objects uses Segment Extensions, which doesn't use additional data points.
 
 ### How much nested data can be sent?
 

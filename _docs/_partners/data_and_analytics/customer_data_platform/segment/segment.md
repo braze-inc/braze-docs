@@ -349,7 +349,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily log data points. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% endalert %}
 {% endtab %}
@@ -476,7 +476,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% details Sending deltas to Braze. %}
 
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will prevent logging of unnecessary data points. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment.
 
 {% enddetails %}
 
