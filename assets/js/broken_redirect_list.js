@@ -2699,5 +2699,4 @@ validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/develop
 
 validurls['/docs/partners/data_and_analytics/business_intelligence/sisu_data/'] = '/docs/partners/';
 
-
 // validurls['OLD'] = 'NEW';
