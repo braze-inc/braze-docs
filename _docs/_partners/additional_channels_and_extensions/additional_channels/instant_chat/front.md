@@ -221,11 +221,11 @@ Then configure your filter:
 - SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages. See more information in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Long agent responses will consume more billable segments.
 
-### Data Point Logging
+### Logging data points
 
 Currently this integration requires a custom event to be written to a user profile every single time a live agent sends an SMS from Front. This may be suitable for quick exchanges that only last a couple of messages—but as conversations get lengthier so do the data point implications. If you have questions about the nuances of Braze data points, your Braze account manager can answer them.
 
-### Including Links in SMS messages
+### Including links in SMS messages
 
 Sending a link from the Front live chat will render with extra HTML tags.
 
