@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Flags
+nav_title: Feature flags
 article_title: Feature Flags
 page_order: 8
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case
+nav_title: Use case
 article_title: Use Case Reduce Churn With Timely Content
 description: "This example shows how a fictional brand uses Predictive Churn to proactively reduce user drop-off."
 page_type: tutorial

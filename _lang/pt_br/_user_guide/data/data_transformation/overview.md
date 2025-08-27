@@ -43,7 +43,7 @@ Para solicitar um fazer upgrade para Data Transformation Pro, entre em contato c
 
 ### Limites de taxa
 
-O limite de taxa para o Braze Data Transformation é de 1.000 solicitações recebidas por minuto. Se você tem o Data Transformation Pro e precisa de um limite de frequência maior, entre em contato com o seu gerente de conta da Braze.
+O limite de frequência para as transformações de dados do Braze é de 1.000 solicitações de entrada por minuto por espaço de trabalho. Se você tem o Data Transformation Pro e precisa de um limite de frequência maior, entre em contato com o seu gerente de conta da Braze.
 
 ## Perguntas frequentes
 
@@ -74,5 +74,3 @@ Na maioria dos casos, sim. O Braze Data Transformation eventualmente cria uma `/
 Entre em contato com o gerente de conta da Braze para obter assistência adicional.
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}

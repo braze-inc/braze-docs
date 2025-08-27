@@ -1,6 +1,6 @@
 ---
 page_order: 2.0
-nav_title: Rate Limits
+nav_title: Rate limits
 article_title: Braze SDK rate limits
 description: "Learn about the Braze SDK's intelligent, client-side rate limiting that optimizes battery life, reduces bandwidth usage, and ensures reliable data delivery."
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Entry Properties and Event Properties
+nav_title: Canvas entry properties and event properties
 article_title: Canvas Entry Properties and Event Properties
 page_order: 4.2
 page_type: reference

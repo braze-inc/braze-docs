@@ -31,6 +31,7 @@ description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | 필수 | 문자열 | [캔버스 API 식별자]({{site.baseurl}}/api/identifier_types/) 참조 |
+| `post_launch_draft_version` | 선택 사항 | 부울 | 출시 후 초안이 있는 캔버스의 경우, 이를 `true`로 설정하면 사용 가능한 초안 변경 사항이 표시됩니다. 기본값은 `false`입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
@@ -58,6 +59,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "description": (string) the Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
+  "enabled": (boolean) whether this Canvas is active or not,
+  "has_post_launch_draft": (boolean) whether this Canvas has a post-launch draft,
   "schedule_type": (string) the type of scheduling action,
   "first_entry": (string) the date of first entry as ISO 8601 date,
   "last_entry": (string) the date of last entry as ISO 8601 date,
@@ -114,6 +117,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "description": "Complete profile reminder via multiple channels",
   "archived": false,
   "draft": false,
+  "enabled": true,
+  "has_post_launch_draft": true,
   "schedule_type": "date",
   "first_entry": "2023-01-01T12:00:00Z",
   "last_entry": "2023-01-10T12:00:00Z",

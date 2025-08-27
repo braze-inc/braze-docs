@@ -72,20 +72,68 @@ No hay forma de instanciar un hash como variable (como una expresión) en Liquid
 | nombre del filtro | descripción del filtro | ejemplo de entrada | ejemplo de salida |
 |---|---|---|---|
 | `number_with_delimiter` | Formatea un número con comas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Filtro de escape JSON / escape de cadena
 
 | nombre del filtro | descripción del filtro |
-|---|---|---|---|
+|---|---|
 | `json_escape` | Escapa los caracteres especiales de una cadena (como las comillas dobles `""` y la barra invertida ''). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Este filtro debe utilizarse siempre que se personalice una cadena en un diccionario JSON y es útil para los webhooks en particular.
+
+## Filtros con formato JSON
+
+| nombre del filtro | descripción del filtro |
+|---|---|
+| `json_parse` | Convierte una cadena JSON en una estructura de datos correspondiente, como un objeto o una matriz. | 
+| `as_json_string` | Convierte una estructura de datos, como un objeto o una matriz, en la cadena JSON correspondiente. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details json_parse ejemplo de entrada y salida %}
+
+### Entrada de datos 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Salida
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string ejemplo de entrada y salida %}
+
+### Entrada de datos
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Salida
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

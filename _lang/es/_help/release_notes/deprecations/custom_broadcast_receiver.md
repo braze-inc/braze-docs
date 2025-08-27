@@ -7,14 +7,14 @@ description: "Este artículo de referencia trata sobre la creación de un recept
 # Gestión personalizada de las recepciones push, aperturas, rechazos y pares clave-valor mediante el receptor de difusión {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
-El uso de un `BroadcastReceiver` personalizado para las notificaciones push ha quedado obsoleto. Utiliza [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) en su lugar.
+El uso de un `BroadcastReceiver` personalizado para las notificaciones push ha quedado obsoleto. Utiliza [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) en su lugar.
 {% endalert %}
 
 Braze también difunde intenciones personalizadas cuando se reciben, abren o descartan notificaciones push. Si tienes un caso de uso específico para estos escenarios (como la necesidad de escuchar los pares clave-valor personalizados o la gestión propietaria de los vínculos profundos), tendrás que escuchar estas intenciones creando un `BroadcastReceiver` personalizado.
 
 ## Paso 1: Registra tu BroadcastReceiver
 
-Registra tu `BroadcastReceiver` personalizado para escuchar las intenciones push Braze abiertas y recibidas en tu [`AndroidManifest.xml`][71]:
+Registra tu `BroadcastReceiver` personalizado para escuchar las intenciones push Braze abiertas y recibidas en tu [`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml):
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -30,7 +30,7 @@ Registra tu `BroadcastReceiver` personalizado para escuchar las intenciones push
 
 Tu receptor debe gestionar las intenciones emitidas por Braze y lanzar tu actividad con ellas:
 
-- Debería subclasificar [`BroadcastReceiver`][53] y anular `onReceive()`.
+- Debería subclasificar [`BroadcastReceiver`](https://developer.android.com/reference/android/content/BroadcastReceiver.html) y anular `onReceive()`.
 - El método `onReceive()` debe escuchar las intenciones emitidas por Braze.
   - Se recibirá una intención `NOTIFICATION_RECEIVED` cuando llegue una notificación push.
   - Se recibirá una intención `NOTIFICATION_OPENED` cuando el usuario haga clic en una notificación push.
@@ -149,5 +149,3 @@ val myExtra = extras.getString("my_key")
 Para obtener documentación sobre las teclas de datos push de Braze, consulta el [SDK de Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants).
 {% endalert %}
 
-[53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"

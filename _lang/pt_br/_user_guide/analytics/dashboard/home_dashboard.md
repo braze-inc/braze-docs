@@ -13,11 +13,11 @@ tool:
 
 > A página **inicial** do dashboard fornece métricas importantes para que você rastreie e entenda a performance do seu app ou site, além de oferecer uma compreensão rápida e de alto nível da sua base de usuários.
 
-![Painel de controle doméstico no Braze.][1]
-
 A página **inicial** tem duas seções principais:
 - [Continuar de onde parou](#pick-up-where-you-left-off)
 - [Visão geral de performance](#peformance-overview)
+
+![Home dashboard no Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Continuar de onde parou
 
@@ -25,25 +25,25 @@ Você pode continuar de onde parou no dashboard do Braze com acesso direto aos a
 
 Você pode revisitar campanhas, Canvas e segmentos recentemente editados ou criados. Cada cartão é emparelhado com tags que indicam o tipo de conteúdo (campanha, Canva, segmento) e o status (ativo, rascunho, arquivado, parado).
 
-![Um rascunho do Canva, um segmento ativo e um rascunho de campanha na seção "Continue de onde parou".][6]
+![Um rascunho do Canva, um segmento ativo e um rascunho de campanha na seção "Continue de onde parou".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Visão geral de performance
 
 Por padrão, a seção **Visão geral da performance** mostra os últimos 30 dias de dados de todos os apps e sites. Suas métricas são todas calculadas com base no intervalo de datas selecionado.
 
-![Campos de intervalo de datas e app na página inicial do dashboard.][5]{: style="max-width:60%;"}
+![Intervalo de datas e campos de app no dashboard inicial.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Os Currents são calculados com base no intervalo de datas atual em comparação com o intervalo de datas anterior, com exceção dos *Usuários ativos mensais* (MAU), que usam o último dia do período anterior em vez de um intervalo. 
 
 Por exemplo, se você definir seu intervalo de datas como **Últimos 7 dias** e seus *Usuários ativos diários* mostrarem um aumento percentual de 1,8%, isso significa que você teve 1,8% mais usuários ativos diários nesta semana em comparação com a semana passada.
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### Mostrar detalhamento
 
 Selecione **Show Breakdown** para cada linha das estatísticas da visão geral da performance para visualizar o valor de cada estatística por dia para o intervalo de datas especificado.
 
-![Expandir][2]
+![Expandir]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Estatísticas disponíveis
 
@@ -53,7 +53,7 @@ Veja a seguir as definições de suas estatísticas disponíveis, como as calcul
 
 *Usuários* é o número total de usuários criados nesse espaço de trabalho. Isso inclui todos os usuários que registramos usando seu app ou site em qualquer momento, e aqueles que podem não estar associados a um app ou site específico. Esse número é a porcentagem de quantos dos seus usuários vitalícios são representados como *Usuários ativos mensais* (MAU), o que é útil para ver a retenção de usuários durante um longo período de tempo.
 
-Uma baixa relação MAU/usuário pode indicar que é necessário diversificar seus canais de envio de mensagens ou aumentar seus esforços para alcançar os usuários que estão perdendo tempo. Consulte nossa vitória rápida sobre [capturing lapsing users][3] para obter mais informações. Em geral, a relação MAU/vida útil inevitavelmente diminuirá com o tempo devido ao churn de usuários, mas as ferramentas do Braze podem ajudá-lo a minimizar esse efeito, mantendo os usuários engajados por mais tempo.
+Uma baixa relação MAU/usuário pode indicar que é necessário diversificar seus canais de envio de mensagens ou aumentar seus esforços para alcançar os usuários que estão perdendo tempo. Para obter mais informações, consulte nossa vitória rápida sobre a [captura de usuários com lapsos]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). Em geral, a relação MAU/vida útil inevitavelmente diminuirá com o tempo devido ao churn de usuários, mas as ferramentas do Braze podem ajudá-lo a minimizar esse efeito, mantendo os usuários engajados por mais tempo.
 
 ### Sessões vitalícias
 
@@ -108,9 +108,3 @@ O valor MAU é calculado todas as noites e não será atualizado até o dia segu
 
 *Sessões diárias por MAU* é a proporção de *sessões diárias* para MAU em um determinado dia. Essa estatística informa quantas sessões por dia podem ser registradas por MAU. Quando agregados e calculados, isso pode lhe dar uma ideia da frequência relativa de quando os usuários usam seu app ou site. Ou seja, se suas *sessões diárias por MAU* fossem, em média, 0,5, então você poderia esperar que cada MAU registrasse uma sessão a cada 2 dias.  
 
-[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
-[5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[6]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

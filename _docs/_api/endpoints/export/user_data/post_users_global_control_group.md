@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Export User Profile by Global Control Group"
+nav_title: "POST: Export user profile by global control group"
 article_title: "POST: Export User Profile by Global Control Group"
 search_tag: Endpoint
 page_order: 6

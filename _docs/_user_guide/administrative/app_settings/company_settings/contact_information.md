@@ -1,5 +1,5 @@
 ---
-nav_title: Contact Information
+nav_title: Contact information
 article_title: Contact Information
 page_order: 0
 page_type: reference
