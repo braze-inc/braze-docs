@@ -105,7 +105,7 @@ Custom events give you the flexibility to track the actions that are most releva
 
 Braze uses data points to help you define the most impactful information for your business. Data points are a crucial part of how Braze operates and are used for billing, pricing, and, most importantly, personalizing and optimizing your marketing campaigns.
 
-Data points are consumed when a user's profile data is updated or when they perform specific actions. These actions can include starting a session, ending a session, recording a custom event, or making a purchase. It's important to note that not all data collected by Braze counts as data points. For instance, data and events collected by default by the Braze Services, such as push tokens, device information, and all campaign engagement tracking events, like email opens and push notification clicks, are not counted as data points.
+Data points are logged when a user's profile data is updated or when they perform specific actions. These actions can include starting a session, ending a session, recording a custom event, or making a purchase. It's important to note that not all data collected by Braze counts as data points. For instance, data and events collected by default by the Braze Services, such as push tokens, device information, and all campaign engagement tracking events, like email opens and push notification clicks, are not counted as data points.
 
 By thoughtfully considering what information to track as data points, you're targeting the highest-impact data for your users' experience. Your Braze account manager will help recommend data best practices to fit your needs.
 

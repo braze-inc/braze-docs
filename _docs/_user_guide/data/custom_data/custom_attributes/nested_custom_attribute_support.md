@@ -423,7 +423,7 @@ If data doesn't appear as expected after regenerating the schema, the attribute 
 
 ## Data points
 
-Any key that is sent consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
+Any key that is sent logs a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
 ```json
 {
@@ -447,6 +447,6 @@ Any key that is sent consumes a data point. For example, this object initialized
 ```
 
 {% alert note %}
-Updating a custom attribute object to `null` also consumes a data point.
+Updating a custom attribute object to `null` also logs a data point.
 {% endalert %}
 

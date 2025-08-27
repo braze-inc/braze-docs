@@ -49,7 +49,7 @@ Hightouch supports syncing to both user objects and events.
 | Events | Syncs records as events to your destination; this is often in the form of a track call. | Track event or track purchase |
 
 {% alert note %}
-Refer to [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) for more information on how syncs affect your Braze data point consumption.
+If your Braze pricing includes data points, refer to [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) for more information on how syncs affect how data points are logged.
 {% endalert %}
 
 #### Syncing Braze objects

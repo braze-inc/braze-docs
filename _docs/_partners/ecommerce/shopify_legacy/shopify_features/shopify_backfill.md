@@ -14,7 +14,7 @@ page_order: 1
 
 {% multi_lang_include alerts/important_alerts.md alert='Shopify deprecation' %}
 
-As part of this backfill, Braze will import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection. Note that this feature is ideal for newer customers that don't have any active messages running, given the implications explained in the next section. This feature will also count toward your data point usage.
+As part of this backfill, Braze will import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection. Note that this feature is ideal for newer customers that don't have any active messages running, given the implications explained in the next section. If your Braze pricing includes data points, this feature will log data points.
 
 ## Risks
 

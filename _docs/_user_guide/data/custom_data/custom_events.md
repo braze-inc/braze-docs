@@ -123,7 +123,7 @@ Segments created with custom event data can't show previous historical data from
 
 Custom event properties are custom event metadata or attributes that describe a specific occurrence of an event. These properties can be used for further qualifying trigger conditions, increasing personalization in messaging, tracking conversions, and generating more sophisticated analytics through raw data export.
 
-Custom event properties aren't stored on the Braze profile and therefore don't consume data points (see [Data points](#data-points) for exceptions).
+Custom event properties aren't stored on the Braze profile and therefore don't log data points (see [Data points](#data-points) for exceptions).
 
 {% alert important %}
 Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
