@@ -8,7 +8,7 @@ description: "This section includes articles related to the Braze Data Platform.
 
 # Braze Data Platform overview
 
-> Braze Data Platform is a set of comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized, impactful experiences across the customer lifecycle based on three data related jobs to be done: Data Unification, Data Activation, and Data Distribution.
+> Braze Data Platform is a set of comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized, impactful experiences across the customer lifecycle based on three data related jobs to be done: [Data Unification]({{site.baseurl}}/user_guide/data/unification), [Data Activation]({{site.baseurl}}/user_guide/data/activation), and [Data Distribution]({{site.baseurl}}/user_guide/data/distribution).
 
 By using a combination of features in the Braze Data Platform, you can leverage your data to create meaningful, targeted messages that respond to what your customers do in real-time.
 
