@@ -8,7 +8,7 @@ description: "이 도움말 문서에서는 이벤트 로깅을 사용하여 Bra
 
 # 이벤트 로깅 사용
 
-Braze 통합 관련 문제를 해결하는 데 도움이 되도록 익명 사용자 프로필과 [이벤트 사용자 로그][1]를 설정할 수 있습니다. 익명 프로필을 설정하는 방법에 대한 단계는 [테스트 사용자 추가하기][2]를 참조하세요.
+Braze 통합 관련 문제를 해결하는 데 도움이 되도록 익명 사용자 프로필과 [이벤트 사용자 로그]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab)를 설정할 수 있습니다. 익명 프로필을 설정하는 방법에 대한 단계는 [테스트 사용자 추가하기]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users)를 참조하세요.
 
 ## 로깅 정보
 
@@ -20,5 +20,3 @@ Braze 통합 관련 문제를 해결하는 데 도움이 되도록 익명 사용
 
 _마지막 업데이트: 2022년 11월 16일_
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

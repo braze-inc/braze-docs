@@ -13,11 +13,11 @@ tool:
 
 > 대시보드의 **홈** 페이지에서는 앱 또는 웹사이트의 성과를 추적하고 이해할 수 있는 주요 지표를 제공하며, 사용자층을 한눈에 파악할 수 있는 높은 수준의 정보를 제공합니다.
 
-![Braze의 홈 대시보드.][1]
-
 **홈** 페이지에는 두 개의 주요 섹션이 있습니다:
 - [중지한 위치에서 재개](#pick-up-where-you-left-off)
 - [성능 개요](#peformance-overview)
+
+![Home dashboard in Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## 중지한 위치에서 재개
 
@@ -25,25 +25,25 @@ tool:
 
 최근에 편집하거나 생성한 캠페인, 캔버스 및 세그먼트를 다시 방문할 수 있습니다. 각 카드에는 콘텐츠 유형(캠페인, 캔버스, 세그먼트) 및 상태(활성, 초안, 보관됨, 중지됨)를 나타내는 태그가 함께 제공됩니다.
 
-![캔버스 초안, 활성 세그먼트 및 '중단한 부분 이어받기' 섹션의 캠페인 초안입니다.][6]
+![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## 성능 개요
 
 기본적으로 **성능 개요** 섹션에는 모든 앱과 사이트에 대한 최근 30일간의 데이터가 표시됩니다. 지표는 모두 선택한 날짜 범위를 기준으로 계산됩니다.
 
-![홈 대시보드의 날짜 범위 및 앱 필드.][5]{: style="max-width:60%;"}
+![Date range and app fields on the Home dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 백분율은 이전 날짜 범위와 비교한 현재 날짜 범위를 기준으로 계산되며, 범위 대신 이전 기간의 마지막 날을 사용하는 *월간 활성 사용자* 수(MAU)는 예외입니다. 
 
 예를 들어 날짜 범위를 **지난 7일로** 설정하고 *일간 활성 사용자* 증가율이 1.8%로 표시되면 이번 주 일간 활성 사용자 수가 지난 주에 비해 1.8% 증가했음을 의미합니다.
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### 내역 표시
 
 실적 개요 통계의 각 행에 대해 분석 **표시를** 선택하여 지정된 날짜 범위에 대한 각 통계의 일별 값을 확인합니다.
 
-![확장][2]
+![Expand]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## 사용 가능한 통계
 
@@ -53,7 +53,7 @@ tool:
 
 *사용자*는 해당 워크스페이스에서 생성된 총 사용자 수입니다. 여기에는 특정 시점에 앱이나 웹사이트를 사용한 기록이 있는 모든 사용자와 특정 앱이나 웹사이트와 관련이 없을 수 있는 사용자도 포함됩니다. 이 숫자는 평생 사용자 중 *월간 활성 사용자* (MAU)로 표시되는 사용자의 비율로, 장기간에 걸친 사용자 유지율을 확인하는 데 유용합니다.
 
-사용자 대비 MAU 비율이 낮다면 메시징 채널을 다양화하거나 휴면 사용자에게 도달하기 위한 노력을 강화해야 한다는 의미일 수 있습니다. 자세한 내용은 [휴면 사용자 캡처하기][3]를 참조하세요. 일반적으로 사용자 이탈로 인해 시간이 지남에 따라 MAU 대 생애 비율은 필연적으로 감소하지만, Braze 도구를 사용하면 사용자의 참여를 더 오래 유지하여 이러한 영향을 최소화할 수 있습니다.
+사용자 대비 MAU 비율이 낮다면 메시징 채널을 다양화하거나 휴면 사용자에게 도달하기 위한 노력을 강화해야 한다는 의미일 수 있습니다. See our quick win on [capturing lapsing users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) for more info. 일반적으로 사용자 이탈로 인해 시간이 지남에 따라 MAU 대 생애 비율은 필연적으로 감소하지만, Braze 도구를 사용하면 사용자의 참여를 더 오래 유지하여 이러한 영향을 최소화할 수 있습니다.
 
 ### 평생 세션
 
@@ -108,9 +108,3 @@ MAU 값은 매일 밤 계산되며 다음날까지 업데이트되지 않습니�
 
 *MAU당 일일 세션* 수는 특정 날짜의 MAU 대비 *일일 세션* 수의 비율입니다. 이 통계는 MAU당 하루에 얼마나 많은 세션이 기록될 것으로 예상되는지 알려줍니다. 이를 집계하여 평균을 내면 사용자가 앱이나 사이트를 언제 사용하는지 상대적인 빈도를 파악할 수 있습니다. 즉, *MAU당 일일 세션* 수가 평균 0.5라면 각 MAU가 2일에 한 번씩 세션을 기록할 것으로 예상할 수 있습니다.  
 
-[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
-[5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[6]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

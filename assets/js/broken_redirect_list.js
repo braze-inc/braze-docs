@@ -2695,4 +2695,9 @@ validurls['/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_
 
 validurls['/docs/partners/additional_channels_and_extensions/extensions/landing_pages/knak/'] = '/docs/partners/knak/';
 
+validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/developer_guide/banners/placements/';
+
+validurls['/docs/partners/data_and_analytics/business_intelligence/sisu_data/'] = '/docs/partners/';
+
+
 // validurls['OLD'] = 'NEW';

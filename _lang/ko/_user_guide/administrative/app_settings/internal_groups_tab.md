@@ -12,7 +12,7 @@ description: "이 참조 문서에서는 SDK 연동을 테스트할 때 테스�
 > 내부 그룹은 내부 또는 타사 테스트 그룹을 만들고 구성할 수 있는 좋은 방법입니다. SDK 또는 API 로그에 대한 인사이트를 제공하며 SDK 통합을 테스트할 때 유용합니다. 최대 1,000명의 사용자로 구성된 사용자 지정 내부 그룹을 무제한으로 만들 수 있습니다.
 
 {% alert tip %}
-또한 내부 그룹을 사용하여 직접 문제 해결 및 디버깅을 수행하는 방법을 다루는 [품질 보증 및 디버깅 도구](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze 학습 과정도 확인해 보시기 바랍니다.
+We also recommend checking out our [Testing and Troubleshooting](https://learning.braze.com/path/developer/testing-and-troubleshooting) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 {% endalert %}
 
 ## Prerequisites
@@ -58,7 +58,7 @@ description: "이 참조 문서에서는 SDK 연동을 테스트할 때 테스�
 콘텐츠 테스트 그룹은 메시지의 미리보기 테스트를 보내는 것과 유사하게 시간을 절약하고 미리 정의된 Braze 사용자 목록에 동시에 테스트를 시작할 수 있습니다. 이는 Braze의 푸시, 인앱 메시지, SMS, 이메일 및 콘텐츠 카드에 사용할 수 있습니다. 콘텐츠 테스트 그룹으로 태그된 그룹만 메시지의 미리 보기 섹션에서 사용할 수 있습니다.
 
 {% alert note %}
-[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) 테스트 메시지는 데이터베이스에 있는 유효한 전화번호로만 보낼 수 있습니다.
+[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) test messages can only be sent to valid phone numbers in the database.
 {% endalert %}
 
 개별 Braze 사용자 또는 내부 그룹을 선택하여 메시지를 보낼 수 있습니다. 메시지에 Liquid 또는 기타 동적 맞춤 설정이 포함된 경우, Braze는 각 사용자에게 제공되는 속성을 사용하여 메시지 내용을 맞춤 설정합니다. 속성이 없는 사용자의 경우 Braze는 기본값 세트를 사용합니다.

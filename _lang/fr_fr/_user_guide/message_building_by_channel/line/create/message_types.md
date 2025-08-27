@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 Lorsque vous composez un message LINE, vous pouvez glisser-déposer des types de messages dans le compositeur et les personnaliser.
 
-![Panneau des types de messages avec les types de messages à faire glisser dans l'éditeur du compositeur, y compris le texte, l'image, le message riche et le message basé sur une carte.][5]{: style="max-width:40%;"}
+![Panneau des types de messages avec les types de messages à glisser dans l'éditeur de composition, y compris le texte, l'image, le message riche et le message à base de cartes.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## Texte
 
@@ -28,7 +28,7 @@ Les cas d'utilisation sont les suivants :
 - Envoyez des vœux d'anniversaire personnalisés avec des cartes de promotion uniques
 - Partagez des mises à jour rapides sur les événements à venir
 
-![Un message texte rappelant à l'utilisateur de ne pas oublier la fête du vendredi noir et la possibilité d'enregistrer jusqu'à 80 % d'économies avant minuit.][1]{: style="max-width:40%;"}
+![Un message textuel rappelant à l'utilisateur de ne pas oublier la fête du vendredi noir et la possibilité d'enregistrer jusqu'à 80 % d'économies avant minuit.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Image
 
@@ -39,7 +39,7 @@ Les cas d'utilisation sont les suivants :
 - Mettez en avant les promotions de fin de saison pour inciter les utilisateurs à s'approvisionner en vêtements d'hiver pour l'année prochaine grâce à de bonnes affaires.
 - Lancez un compte à rebours visuel pour une vente annuelle dans tout le magasin
 
-![Un message d'image envoyant des messages pour la vente d'un grille-pain.][2]{: style="max-width:40%;"}
+![Un message d'image envoyant des messages pour la vente d'un grille-pain.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### Image URL
 
@@ -64,7 +64,7 @@ Les cas d'utilisation sont les suivants :
 - Présentez un menu interactif qui lance une commande combo en sélectionnant un article.
 - Présentez plusieurs promotions que les utilisateurs peuvent choisir en sélectionnant un carré de la grille.
 
-![Un message riche en quatre carrés avec des photos de différents sandwichs dans l'éditeur du compositeur.][3]
+![Un message riche de six cases avec une photo d'une grille en noir et blanc sur laquelle les utilisateurs peuvent appuyer pour recevoir une offre aléatoire.]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### Mappage de l'image 
 
@@ -97,7 +97,7 @@ Les cas d'utilisation sont les suivants :
 - Mettez en avant les vestes les plus vendues de la saison
 - Présenter un échantillon d'outils et de gadgets de cuisine inclus dans un kit.
 
-![Un message sous forme de cartes avec au moins deux cartes qui font la promotion du pain et des sandwichs dans l'éditeur du compositeur.][4]
+![Un message basé sur des cartes avec au moins deux cartes qui font la promotion des sandwichs dans l'éditeur du compositeur.]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### Message
 
@@ -129,8 +129,3 @@ Les cas d'utilisation sont les suivants :
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
-[1]: {% image_buster /assets/img/line/line_text_message.png %}
-[2]: {% image_buster /assets/img/line/line_image_message.png %}
-[3]: {% image_buster /assets/img/line/line_rich_message.png %}
-[4]: {% image_buster /assets/img/line/line_card_message.png %}
-[5]: {% image_buster /assets/img/line/line_message_types.png %}

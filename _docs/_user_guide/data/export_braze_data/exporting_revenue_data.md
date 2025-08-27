@@ -1,5 +1,5 @@
 ---
-nav_title: Export Revenue & Total Revenue Data
+nav_title: Export revenue & total revenue data
 article_title: Export Revenue & Total Revenue Data
 page_order: 4
 page_type: reference

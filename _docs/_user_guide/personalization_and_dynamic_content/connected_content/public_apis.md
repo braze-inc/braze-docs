@@ -1,5 +1,5 @@
 ---
-nav_title: Using Public APIs
+nav_title: Using public APIs
 article_title: Public APIs for Connected Content
 page_order: 10
 description: "This articles covers a list of publicly available APIs that can be used with Connected Content."

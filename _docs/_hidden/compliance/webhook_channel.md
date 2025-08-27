@@ -1,5 +1,5 @@
 ---
-nav_title: Compliance Documentation for Webhooks
+nav_title: Compliance documentation for webhooks
 article: Compliance Documentation for Webhooks
 permalink: /compliance_documentation_webhooks/
 description: "Compliance documentation relating to webhooks channel."

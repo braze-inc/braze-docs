@@ -1,5 +1,5 @@
 ---
-nav_title: Opening CSV Reports in Excel
+nav_title: Opening CSV reports in excel
 article_title: Opening CSV Reports in Excel 
 page_order: 9
 page_type: reference

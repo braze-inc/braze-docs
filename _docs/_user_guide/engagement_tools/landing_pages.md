@@ -1,5 +1,5 @@
 ---
-nav_title: Landing Pages
+nav_title: Landing pages
 article_title: Landing Pages
 page_order: 31
 guide_top_header: "Landing Pages"

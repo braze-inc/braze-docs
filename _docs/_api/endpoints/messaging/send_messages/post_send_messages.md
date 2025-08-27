@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Messages Immediately Using the API Only"
+nav_title: "POST: Send messages immediately using the API only"
 article_title: "POST: Send Messages Immediately Using the API Only"
 search_tag: Endpoint
 page_order: 4

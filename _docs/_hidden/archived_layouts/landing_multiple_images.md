@@ -1,5 +1,5 @@
 ---
-nav_title: MS LP with Images
+nav_title: Ms lp with images
 layout: dev_guide
 
 page_order: 1.4

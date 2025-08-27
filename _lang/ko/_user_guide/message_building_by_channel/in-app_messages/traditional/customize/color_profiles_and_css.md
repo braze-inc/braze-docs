@@ -24,7 +24,7 @@ HEX 색상 코드를 입력하거나 색상 상자를 클릭하고 색상 선택
 
 ### 색상 프로필 관리
 
-템플릿을 [복제하고][6] [보관할][7] 수도 있습니다! [템플릿 및 미디어][8]에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## CSS 템플릿 {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ CSS 템플릿의 이름을 지정하고 태그를 지정한 다음 기본 템플
 
 ### CSS 템플릿 관리
 
-템플릿을 [복제하고][6] [보관할][7] 수도 있습니다! [템플릿 및 미디어][8]에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## CSS를 사용한 모달(웹 전용) {#web-modal-css}
 
@@ -93,6 +93,3 @@ CSS 템플릿의 이름을 지정하고 태그를 지정한 다음 기본 템플
 나만의 템플릿을 적용하려면 **템플릿 적용**을 클릭하고 인앱 메시지 템플릿 갤러리에서 선택합니다. 옵션이 없는 경우 CSS 템플릿 빌더를 사용하여 [CSS 템플릿을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) 업로드할 수 있습니다.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
