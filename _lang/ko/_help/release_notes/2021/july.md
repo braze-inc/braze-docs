@@ -30,7 +30,7 @@ Braze SDK를 통합하여 유연한 데이터 수집을 가능하게 하는 방�
 
 ## 앰플리튜드 사용자 프로필 API 엔드포인트
 
-Amplitude의 고객 프로필 API는 Amplitude의 고객 프로필을 제공합니다. 여기에는 사용자 속성, 계산된 사용자 속성, 해당 사용자를 포함하는 코호트의 코호트 ID 목록 및 권장 사항이 포함됩니다. 자세한 내용은 [Amplitude 고객 프로필 API 엔드포인트]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/)를 참조하세요.
+Amplitude의 고객 프로필 API는 Amplitude의 고객 프로필을 제공합니다. 여기에는 사용자 속성, 계산된 사용자 속성, 해당 사용자를 포함하는 코호트의 코호트 ID 목록 및 권장 사항이 포함됩니다. 자세한 내용은 [Amplitude 고객 프로필 API 엔드포인트]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/)를 참조하세요.
 
 ## 캠페인 세부 정보 엔드포인트 
 

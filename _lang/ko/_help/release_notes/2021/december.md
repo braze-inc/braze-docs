@@ -47,14 +47,14 @@ alias: "/help/release_notes/2022/january/"
 
 Amazon Personalize는 나만의 아마존 머신 러닝 추천 시스템을 하루 종일 사용하는 것과 같습니다. 20년 이상의 추천 경험을 바탕으로 한 Amazon Personalize를 사용하면 실시간 개인화 상품 및 콘텐츠 추천과 타겟 마케팅 프로모션을 통해 고객 참여를 향상시킬 수 있습니다. 
 
-더 자세히 알아보려면 Amazon Personalize가 제공하는 사용 사례, 연동되는 데이터, 서비스 구성 방법, Braze와 통합하는 방법을 이해하는 새로운 [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/) 문서를 참조하세요.
+더 자세히 알아보려면 Amazon Personalize가 제공하는 사용 사례, 연동되는 데이터, 서비스 구성 방법, Braze와 통합하는 방법을 이해하는 새로운 [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/personalized_recommendations/amazon_personalize) 문서를 참조하세요.
 
 ## 새로운 Braze 파트너십
 
 ### Yotpo - 전자상거래
 
-[Yotpo와]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) Braze의 통합을 통해 이메일 및 기타 커뮤니케이션 채널 내에서 제품에 대한 별점, 인기 리뷰, 시각적 사용자 생성 콘텐츠를 동적으로 가져와서 표시할 수 있습니다. 또한 이메일 및 기타 커뮤니케이션 방법에 고객 수준 로열티 데이터를 포함시켜 보다 개인화된 상호 작용을 생성하여 매출과 로열티를 높일 수 있습니다.
+[Yotpo와]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/yotpo/) Braze의 통합을 통해 이메일 및 기타 커뮤니케이션 채널 내에서 제품에 대한 별점, 인기 리뷰, 시각적 사용자 생성 콘텐츠를 동적으로 가져와서 표시할 수 있습니다. 또한 이메일 및 기타 커뮤니케이션 방법에 고객 수준 로열티 데이터를 포함시켜 보다 개인화된 상호 작용을 생성하여 매출과 로열티를 높일 수 있습니다.
 
 ### Zeotap - 고객 데이터 플랫폼
 
-[Zeotap과]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) Braze의 통합을 통해 Zeotap 고객 세그먼트를 동기화하여 Zeotap 사용자 데이터를 Braze 사용자 계정에 매핑함으로써 캠페인의 규모와 도달 범위를 확장할 수 있습니다. 그런 다음 이 데이터를 기반으로 조치를 취하여 사용자에게 개인화된 타겟 경험을 제공할 수 있습니다.
+[Zeotap과]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/zeotap/) Braze의 통합을 통해 Zeotap 고객 세그먼트를 동기화하여 Zeotap 사용자 데이터를 Braze 사용자 계정에 매핑함으로써 캠페인의 규모와 도달 범위를 확장할 수 있습니다. 그런 다음 이 데이터를 기반으로 조치를 취하여 사용자에게 개인화된 타겟 경험을 제공할 수 있습니다.
