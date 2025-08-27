@@ -1,5 +1,5 @@
 ---
-nav_title: About Webhooks
+nav_title: About webhooks
 article_title: About Webhooks
 page_order: 0
 channel:

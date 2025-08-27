@@ -277,7 +277,7 @@ UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quanti
 
 ### Adição de quantidade
 
-Por padrão, `quantity` é definido como `1`. No entanto, você pode adicionar uma quantidade às suas compras se os clientes fizerem a mesma compra várias vezes em um único checkout. Para adicionar uma quantidade, passe um valor de `Int` para `quantity` que esteja dentro do intervalo de `[0, 100]`.
+Por padrão, `quantity` é definido como `1`. No entanto, você pode adicionar uma quantidade às suas compras se os clientes fizerem a mesma compra várias vezes em um único checkout. Para adicionar uma quantidade, passe um valor `Int` para `quantity`.
 
 ### Usando a API REST
 

@@ -19,7 +19,7 @@ After [setting up the Braze MCP server]{% if include.section == "user" %}({{site
 - CRM engineers creating multi-step agent workflows.
 - Technical marketers experimenting with natural language queries.
 
-The Braze MCP server supports 38 read-only endpoints that do not typically return Personally Identifiable Information (PII) data. You can choose to assign only some of these endpoints to your Braze API key to further restrict which data an agent can access.
+The Braze MCP server supports 38 read-only endpoints that do not return data from Braze user profiles. You can choose to assign only some of these endpoints to your Braze API key to further restrict which data an agent can access.
 
 {% alert warning %}
 Do not assign permissions to your API key that are **not** read-only. Agents may try to write or delete data in Braze, which could cause unintended consequences.
@@ -68,5 +68,15 @@ No. You'll need to create a new API key for your MCP client. Remember to only gi
 ### Is the Braze MCP server hosted locally or remotely?
 
 Currently, the Braze MCP server is hosted locally.
+
+### Why is Cursor only listing functions?
+
+Check if you're in ask mode or agent mode. To use the MCP server, you need to be in agent mode.
+
+### What do I do when the agent returns an answer that looks incorrect?
+
+When working with tools like Cursor, you may want to try changing the model used. For example, if you have it set to auto, try changing it to a specific model and experiment to find which model performs best for your use case. You can also try starting a new chat and retrying the prompt. 
+
+If issues persist, you can email us at [mcp-product@braze.com](mailto:mcp-product@braze.com) to let us know. If possible, include a video and expand the call functions so we can see what calls the agent attempted.
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}

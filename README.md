@@ -52,7 +52,8 @@ To start your local docs server on localhost `http://127.0.0.1:4000`, run the fo
 # for 'en' language:
 rake
 
-# for other langauges:
+# for other languages:
+rake de
 rake es
 rake fr
 rake ja

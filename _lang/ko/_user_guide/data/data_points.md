@@ -104,11 +104,11 @@ The following tables are intended to be illustrative. For exact naming conventio
 | 설치 속성 | 광고 |
 | 기타 | 무작위 버킷 번호 |
 | 캔버스 메시지 수신 | 캔버스 메시지 수신 |
+| Message engagement | All engagement events (such as opens, clicks, impressions, and dismissals) |
 | Twitter | 팔로워 |
 | Twitter | 팔로워 |
 | Twitter | 트윗 수 |
 | Facebook | 좋아요 |
-
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -156,6 +156,7 @@ table td {
 | 사용자 지정 이벤트 | 모든 사용자 지정 이벤트 | |
 | 사용자 지정 이벤트 속성 | 모든 사용자 지정 이벤트 속성 | `X Custom Event Property in Y Days` 또는 `X Purchase Property in Y Days` 필터를 사용하여 세분화를 위해 활성화된 커스텀 이벤트 속성정보는 모두 커스텀 이벤트 자체에서 계산되는 데이터 포인트에 추가하여 별도의 데이터 포인트로 계산됩니다.
 | 구매 | 모든 구매 | |
+| Purchase properties | All purchase properties | |
 | 진폭 코호트 할당 | 모든 과제 | |
 | 믹스패널 코호트 할당 | 모든 과제 | |
 | 하이터치 코호트 할당 | 모든 과제 | |

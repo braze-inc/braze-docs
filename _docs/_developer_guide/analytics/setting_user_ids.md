@@ -1,5 +1,5 @@
 ---
-nav_title: Setting User IDs
+nav_title: Setting user IDs
 article_title: Setting user IDs through the Braze SDK
 page_order: 1.1
 description: "Learn how to set user IDs through the Braze SDK."

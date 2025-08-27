@@ -1,5 +1,5 @@
 ---
-nav_title: Conversion Correlation
+nav_title: Conversion correlation
 article_title: Conversion Correlation
 alias: /conversion_correlation/
 page_order: 3

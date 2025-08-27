@@ -1,5 +1,5 @@
 ---
-nav_title: Exit Criteria 
+nav_title: Exit criteria
 article_title: Exit Criteria 
 page_order: 4.1
 alias: /exit_criteria/
@@ -62,7 +62,7 @@ If a Canvas step is triggered by an event, the last scheduled send enqueued from
 
 ### Using segments and filters
 
-You can also add segments and filters in the exit criteria. This means users who match the segment or filter will exit the Canvas and won't receive any further messaging. 
+You can also add segments and filters in the exit criteria. This means users who match the segment and filter will exit the Canvas and won't receive any further messaging. 
 
 For example, if the first step in a Canvas is a Delay step with a five-day delay, then the exit criteria will apply at the end of this step. So, if a user meets the exit criteria, they will exit at the end of the five days.
 

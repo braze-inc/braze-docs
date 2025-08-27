@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/privacy/spam_regulations
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: SMSの法律と規制
-  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: 同意の管理
   link: /docs/user_guide/administrative/privacy/managing_consent

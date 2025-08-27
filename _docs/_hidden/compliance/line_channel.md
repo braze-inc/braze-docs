@@ -1,5 +1,5 @@
 ---
-nav_title: Compliance Documentation for LINE Services
+nav_title: Compliance documentation for LINE services
 article: Compliance Documentation for LINE Services
 permalink: /compliance_documentation_line/
 description: "Compliance documentation relating to the LINE channel."

@@ -1,5 +1,5 @@
 ---
-nav_title: Data Models
+nav_title: Data models
 article_title: Creating a B2B Data Model
 page_order: 0
 page_type: reference

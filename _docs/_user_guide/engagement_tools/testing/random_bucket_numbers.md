@@ -1,5 +1,5 @@
 ---
-nav_title: Random Bucket Numbers
+nav_title: Random bucket numbers
 article_title: Random Bucket Numbers
 page_order: 2
 page_type: reference

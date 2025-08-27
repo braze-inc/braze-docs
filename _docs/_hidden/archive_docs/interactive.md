@@ -1,6 +1,6 @@
 ---
 platform: REST APIs
-nav_title: Interactive Endpoints
+nav_title: Interactive endpoints
 page_order: 2.5
 noindex: true
 hidden: true

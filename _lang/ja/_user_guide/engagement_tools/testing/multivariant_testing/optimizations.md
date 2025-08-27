@@ -8,7 +8,7 @@ description: "多変量テストと AB テストを作成する際に、勝者�
 
 # 勝者バリアントまたはパーソナライズされたバリアントによる AB テストの最適化
 
-1回送信するようにスケジュールされたメール、プッシュ、Webhook、SMS、WhatsApp キャンペーンの [AB テストを作成する][1]際に、最適化を選択できます。最適化には2つのオプションがあります。**勝利バリアント**と**パーソナライズされたバリアント**。
+1回送信するようにスケジュールされたメール、プッシュ、Webhook、SMS、WhatsApp キャンペーンの [AB テストを作成する]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)際に、最適化を選択できます。最適化には2つのオプションがあります。**勝利バリアント**と**パーソナライズされたバリアント**。
 
 ![目的のオーディエンスを選択するときに、AB テストの項に記載されている最適化オプション。次の3 つのオプションが表示されます。最適化なし、勝利バリアント、および個人用バリアント。パーソナライズされたバリアントが選択されています。]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
@@ -50,7 +50,5 @@ description: "多変量テストと AB テストを作成する際に、勝者�
 
 ## 分析
 
-最適化による AB テストの結果については、[多変量分析と AB テスト分析][2]を参照してください。
+最適化による AB テストの結果については、[多変量分析と AB テスト分析]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/)を参照してください。
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/

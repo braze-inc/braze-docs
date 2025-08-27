@@ -16,9 +16,9 @@ description: "Este artigo descreve detalhes sobre o endpoint Enviar mensagens im
 
 > Use esse endpoint para enviar mensagens imediatas a usuários designados usando a API do Braze.
 
-Não se esqueça de incluir objetos de envio de mensagens em seu corpo para completar suas solicitações.
-
 Se estiver direcionando a campanha para um segmento, um registro da sua solicitação será armazenado [Console de desenvolvedor](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Corpo da solicitação
+
+{% alert tip %}
+Não se esqueça de incluir [objetos de envio de mensagens]({{site.baseurl}}/api/objects_filters/#messaging-objects) em seu corpo para completar suas solicitações.
+{% endalert %}
 
 ```
 Content-Type: application/json

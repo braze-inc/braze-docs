@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 LINEメッセージを作成するときに、メッセージタイプをコンポーザーにドラッグアンドドロップしてカスタマイズできます。
 
-![テキスト、イメージ、リッチメッセージ、カードベースのメッセージなど、コンポーザーエディタにドラッグするメッセージタイプのメッセージタイプパネル。][5]{: style="max-width:40%;"}
+![テキスト、画像、リッチメッセージ、カードベースのメッセージなど、コンポーザーエディタにドラッグするメッセージタイプパネル。]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## テキスト
 
@@ -28,7 +28,7 @@ LINEテキストメッセージには、最大5000文字を含めることがで
 - 個性的なプロモーションカードでパーソナライズされた誕生日挨拶を送る
 - 今後のイベントに関するクイックアップデートを共有する
 
-![ブラック・フライデー・パーティーについて忘れず、深夜12時までに最大80%節約できる可能性があることをユーザーに知らせるテキスト・メッセージ。][1]{: style="max-width:40%;"}
+![ブラックフライデーパーティについて忘れず、深夜12時までに最大80%を節約できる可能性があることをユーザーに知らせるテキストメッセージ。]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## 画像
 
@@ -39,7 +39,7 @@ LINE イメージメッセージは、[メディアライブラリ]({{site.baseu
 - 来年の冬服を素晴らしい取引で仕入れることをユーザーに奨励するために、シーズン末のプロモーションを強調する
 - 店頭での年間販売に視覚的なカウントダウンを開始
 
-![トースターセールを宣伝するイメージメッセージ。][2]{: style="max-width:40%;"}
+![トースターセールを宣伝する画像メッセージ。]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### URL画像
 
@@ -64,7 +64,7 @@ LINEリッチメッセージは、イメージ上の特定の領域を選択し�
 - 項目を選択してコンボオーダーを開始するインタラクティブメニューを表示する
 - グリッドスクエアを選択して、ユーザが選択できる複数のプロモーションをレイアウトします
 
-![作曲者エディターで、異なるサンドイッチの写真が入った4平方のリッチメッセージ。][3]
+![ユーザーがタップしてランダムオファーを受け取ることができる白黒のグリッドの写真を含む6 平方のリッチメッセージ。]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### イメージマップ 
 
@@ -97,7 +97,7 @@ LINEカードベースのメッセージを使用すると、カルーセルな�
 - 今シーズンのベストセラージャケットをハイライト
 - キットに含まれている調理器具や機器のサンプリングを提示する
 
-![コンポーザーエディタでパンとサンドイッチを促進する少なくとも2枚のカードを含むカードベースのメッセージ。][4]
+![作成画面のエディターでサンドイッチを宣伝する2つ以上のカードを含むカードベースのメッセージ。]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### メッセージ
 
@@ -129,8 +129,3 @@ LINEカードベースのメッセージを使用すると、カルーセルな�
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 
-[1]: {% image_buster /assets/img/line/line_text_message.png %}
-[2]: {% image_buster /assets/img/line/line_image_message.png %}
-[3]: {% image_buster /assets/img/line/line_rich_message.png %}
-[4]: {% image_buster /assets/img/line/line_card_message.png %}
-[5]: {% image_buster /assets/img/line/line_message_types.png %}

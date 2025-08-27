@@ -18,7 +18,7 @@ description: "Esta página aborda como dar boas-vindas a novos usuários, guiá-
 
 Ao criar uma mensagem no app de arrastar e soltar, selecione **Fluxo de integração** para o seu modelo, e depois selecione **Montar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
-![O editor de mensagens no app com o modelo de fluxo de integração.][img1]
+![O editor de mensagens no app com o modelo de fluxo de integração.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### Etapa 2: Configure seus estilos de mensagens
 
@@ -32,12 +32,10 @@ Verifique se suas mensagens estão conectadas em ordem sequencial para que os us
 
 ### Etapa 4: Estilize sua mensagem
 
-Personalize a aparência do fluxo de integração usando os [componentes de mensagem no app][3] do tipo arrastar e soltar.
+Personalize a aparência do fluxo de integração usando os [componentes de mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) do tipo arrastar e soltar.
 
 ## Análise dos resultados
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

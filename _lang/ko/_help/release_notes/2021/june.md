@@ -22,7 +22,7 @@ description: "이 문서에는 2021년 6월의 릴리스 노트가 포함되어 
 
 ## 구매 이벤트 페이지
 
-Braze의 구매 이벤트에 대한 자세한 내용이 궁금하신가요? 자세한 내용은 전용 [구매 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) 게시글을 참조하세요.
+Braze의 구매 이벤트에 대한 자세한 내용이 궁금하신가요? 자세한 내용은 전용 [구매 이벤트]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) 게시글을 참조하세요.
 
 ## 새로운 Braze 파트너십
 

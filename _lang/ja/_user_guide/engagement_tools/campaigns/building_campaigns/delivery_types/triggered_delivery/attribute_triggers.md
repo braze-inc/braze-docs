@@ -22,7 +22,7 @@ tool:
 
 属性トリガーの使用を開始するには、キャンペーンまたはキャンバスコンポーネントを作成し、配信方法として**アクションベースの配信**を選択します。次に、使用したい属性トリガーを選択します。
 
-![][1]
+![]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### サブスクリプションのステータスを更新する
 
@@ -66,7 +66,7 @@ tool:
 属性トリガーは現在、配列属性では使用できません。
 {% endalert %}
 
-![任意の新しい値][2]
+![任意の新しい値]({% image_buster /assets/img_archive/any_value.png %})
 
 また、Liquid を使用して、顧客の新しいロイヤルティ層によりメッセージ本文をパーソナライズし、変更に関する詳細情報を顧客に提供することもできます。
 
@@ -82,7 +82,7 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 たとえば、ロイヤルティ層が最上位層に変わったユーザーをターゲットにすることができます。例として、最上位のロイヤルティ層はスーパー VIP であるとします。ユーザーのロイヤルティ層のカスタム属性が `Super VIP` に変わったときにトリガーされるようにキャンペーンを設定することで、スーパー VIP になったユーザーを祝福することができます。
 
-![][4]
+![]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - 配列および日付カスタム属性には、特定のカスタム属性値の属性トリガーは使用できません。
@@ -91,6 +91,3 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 - カスタム属性値の変更トリガーは、新しく作成されたユーザーにも適用されます。
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

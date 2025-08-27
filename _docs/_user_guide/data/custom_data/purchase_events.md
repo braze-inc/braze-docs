@@ -1,5 +1,5 @@
 ---
-nav_title: Purchase Events
+nav_title: Purchase events
 article_title: Purchase Events
 page_order: 8
 page_type: reference

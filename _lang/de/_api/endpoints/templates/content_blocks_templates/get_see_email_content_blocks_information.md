@@ -23,7 +23,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limits
 
-{% multi_lang_include rate_limits.md endpunkt='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Parameter der Anfrage
 
