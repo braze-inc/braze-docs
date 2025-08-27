@@ -14,7 +14,7 @@ tool: Reports
 
 **커스텀 이벤트 보고서**는 **분석**에서 찾을 수 있습니다.
 
-![커스텀 이벤트][14]
+![Custom events]({% image_buster /assets/img_archive/Export_events.png %})
 
 다음 CSV를 내보낼 수 있습니다:
 
@@ -31,4 +31,3 @@ tool: Reports
 CSV 및 API 내보내기에 대한 도움말은 [내보내기 문제 해결을]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) 참조하세요.
 {% endalert %}
 
-[14]: {% image_buster /assets/img_archive/Export_events.png %}

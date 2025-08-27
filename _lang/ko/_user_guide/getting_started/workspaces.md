@@ -77,15 +77,15 @@ This approach is particularly useful for companies like mobile gaming firms that
 
 #### Teams
 
-고객 기반 위치, 언어 및 커스텀 속성에 따라 [Teams][1]를 설정하여 팀원과 비팀원이 메시징 기능 및 고객 데이터에 서로 다르게 액세스할 수 있도록 할 수 있습니다.
+[Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
 
 #### Braze 사용자 권한
 
-워크스페이스에는 독립적인 액세스 및 사용자 권한 정의가 있습니다. [사용자 권한][2]을 사용하면 개별 대시보드 사용자 또는 팀이 단일 워크스페이스 내에서 액세스할 수 있는 항목에 대해 세분화된 제어를 만들 수 있습니다.
+워크스페이스에는 독립적인 액세스 및 사용자 권한 정의가 있습니다. [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
 
 #### 전류 커넥터
 
-[커런츠][3] 도구는 참여 이벤트에 대한 실시간 데이터 스트림으로, Braze 플랫폼에서 가장 강력하면서도 세분화된 내보내기 기능입니다. 커런츠 커넥터는 특정 Braze 패키지에 포함되어 있으며, 단일 워크스페이스를 가정할 때 처음에 받았을 수도 있습니다.
+The [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) tool is a real-time data stream of your engagement events that is the most robust yet granular export out of the Braze platform. 커런츠 커넥터는 특정 Braze 패키지에 포함되어 있으며, 단일 워크스페이스를 가정할 때 처음에 받았을 수도 있습니다.
 
 별도의 워크스페이스를 만들지 아니면 결합된 워크스페이스를 만들지 결정할 때는 커런츠 커넥터는 워크스페이스 간에 공유되지 않으므로 보유하고 있는 커런츠 커넥터의 수를 고려하는 것이 중요합니다. 
 
@@ -93,7 +93,7 @@ This approach is particularly useful for companies like mobile gaming firms that
 
 #### 사용자 프로필
 
-사용자와 관련된 모든 영구 데이터는 사용자 [프로필에][4] 저장됩니다. 그러나 사용자 프로필은 사용자의 참여 기록, 세그먼트 멤버십, 디바이스 및 운영 체제에 대한 정보에 쉽게 액세스할 수 있으므로 문제 해결 및 테스트에 유용한 리소스이기도 합니다.
+All persistent data associated with a user is stored in their [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). 그러나 사용자 프로필은 사용자의 참여 기록, 세그먼트 멤버십, 디바이스 및 운영 체제에 대한 정보에 쉽게 액세스할 수 있으므로 문제 해결 및 테스트에 유용한 리소스이기도 합니다.
 
 #### 세그먼트, 캠페인 및 캔버스
 
@@ -205,7 +205,7 @@ This approach is particularly useful for companies like mobile gaming firms that
         <td>콘텐츠 복제</td>
         <td>N/A</td>
         <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
-        <td>Can [duplicate campaigns across workspaces]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
+        <td>Can [duplicate campaigns across workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) for the following supported channels: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,10 +240,5 @@ This approach is particularly useful for companies like mobile gaming firms that
 
 ## 다음 단계
 
-워크스페이스 계획을 결정했으면 이제 워크스페이스를 만들고 앱 인스턴스를 추가할 차례입니다. 단계는 [워크스페이스 만들기 및 관리하기][5]를 참조하세요.
+워크스페이스 계획을 결정했으면 이제 워크스페이스를 만들고 앱 인스턴스를 추가할 차례입니다. For steps, check out [Creating and managing workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/workspaces/

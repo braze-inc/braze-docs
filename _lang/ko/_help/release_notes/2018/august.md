@@ -17,10 +17,9 @@ description: "이 문서에는 2018년 8월의 릴리스 노트가 포함되어 
 
 ## 익명 사용자의 S3 및 Azure 데이터 이벤트
 
-이제 Amazon S3 및 Microsoft Azure로 데이터를 내보내는 고객은 익명 사용자의 이벤트를 포함할 수 있습니다. 이 기능은 새로 생성된 모든 통합에 대해 기본적으로 켜짐으로 설정되지만 기존 통합에 대해서는 꺼진 상태로 유지됩니다. 궁금한 점이 있으면 계정 매니저에게 문의하거나 [지원 티켓][support]을 개설하세요.
+이제 Amazon S3 및 Microsoft Azure로 데이터를 내보내는 고객은 익명 사용자의 이벤트를 포함할 수 있습니다. 이 기능은 새로 생성된 모든 통합에 대해 기본적으로 켜짐으로 설정되지만 기존 통합에 대해서는 꺼진 상태로 유지됩니다. 궁금한 점이 있으면 계정 매니저에게 문의하거나 [지원 티켓]({{site.baseurl}}/braze_support/)을 개설하세요.
 
 ## 믹스패널 코호트 통합
 
 이제 Braze와 Mixpanel을 모두 사용하는 고객은 [Mixpanel 코호트를 통합하여 세그먼트 필터로 Braze에 보낼]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import) 수 있습니다. 한 번 수동 내보내기를 설정하거나 2시간마다 동적 내보내기를 설정할 수 있습니다. 업데이트된 각 사용자는 데이터 포인트로 계산되지만 Mixpanel은 마지막 동기화 이후의 변경 사항만 전송합니다.
 
-[support]: {{site.baseurl}}/braze_support/
