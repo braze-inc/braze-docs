@@ -107,8 +107,8 @@ No, since the user is still the same, and all their historical behavior is still
 ### Can it be run on development or staging workspaces?
 Yes. In fact, we highly recommend running a test migration on a staging or development workspace, and ensuring everything has gone smoothly before executing on production data.
 
-### Does this log data points?
-This feature does not log data points.
+### Does this consume data points?
+This feature does not cost data points.
 
 ### What is the recommended deprecation period?
 We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them after there is no longer a need to reference users by the deprecated ID.

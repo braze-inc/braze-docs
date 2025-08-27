@@ -16,7 +16,7 @@ After adding a connected source to your Braze workspace, you can create a CDI se
 For more information on creating a segment with this source, refer to [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
-Because connected sources run on your data warehouse directly, you will incur all costs associated with running these queries in your data warehouse. If your Braze pricing includes data points, connected sources don't log data points, and CDI Segment Extensions don't consume SQL segment credits.
+Because connected sources run on your data warehouse directly, you will incur all costs associated with running these queries in your data warehouse. Connected sources don't consume data points, and CDI Segment Extensions don't consume SQL segment credits.
 {% endalert %}
 
 ## Integrating connected sources

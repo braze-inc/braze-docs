@@ -160,7 +160,7 @@ Action-based delivery campaigns or event-triggered campaigns are very effective 
 
 | Pros | Cons | 
 | ---- | ---- |
-| • Visibility of incoming JSON payloads into the platform (if event triggered by test user) via the **Message Activity Log**<br><br>• Personalization elements are included in the custom event properties<br><br>• Custom event can be used to create Segments of users eligible for the message | • Logs data points |
+| • Visibility of incoming JSON payloads into the platform (if event triggered by test user) via the **Message Activity Log**<br><br>• Personalization elements are included in the custom event properties<br><br>• Custom event can be used to create Segments of users eligible for the message | • Consumes data points |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### API-triggered
@@ -169,6 +169,6 @@ API-triggered and server-triggered campaigns are ideal for handling more advance
 
 | Benefits | Considerations | 
 | ---- | ---- |
-| • Does not log data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
+| • Does not consume data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

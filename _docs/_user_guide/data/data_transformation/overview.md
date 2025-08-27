@@ -65,9 +65,9 @@ This works by using `email` or `phone` as your identifier property in the transf
 Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.
 {% endalert %}
 
-### Does Braze Data Transformation log data points?
+### Does Braze Data Transformation consume data points?
 
-If your Braze pricing includes data points, yes—in most cases. Braze Data Transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will log data points in the same way as if the `/users/track` call was made independently. You have control over how many data points are logged based on how you write your transformation.
+In most cases, yes. Braze Data Transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will consume data points in the same way as if the `/users/track` call was made independently. You have control over how many data points will be written based on how you write your transformation.
 
 ### How can I get help setting up my use case or with my transformation code?
 

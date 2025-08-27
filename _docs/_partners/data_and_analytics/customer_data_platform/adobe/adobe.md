@@ -29,7 +29,7 @@ The Adobe Experience Platform integration currently doesn't support dynamic audi
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-If your Braze pricing includes data points, sending of additional custom attributes will increase your data point usage. We suggest speaking with your customer success manager to better understand this potential data point increase.
+The sending of additional custom attributes will increase your data point usage. We suggest speaking with your customer success manager to better understand this potential data point increase.
 {% endalert %}
 
 ## Integration

@@ -221,7 +221,7 @@ Refer to Tealium's [Trace documentation](https://docs.tealium.com/server-side/co
 
 ## Potential data point overages
 
-If your Braze pricing includes data points, there are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
+There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
 #### Sending duplicate data - only send Braze deltas of attributes
 Tealium doesn't send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 

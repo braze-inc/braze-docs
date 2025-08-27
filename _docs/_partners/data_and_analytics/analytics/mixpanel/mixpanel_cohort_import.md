@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Data import integration
 
-If your Braze pricing includes data points, any integration you set up will log data points.
+Any integration you set up will count toward your account's data point volume.
 
 {% alert important %}
 In adherence to Mixpanel's data retention policies, events sent before January 1, 2010 will be removed during import.

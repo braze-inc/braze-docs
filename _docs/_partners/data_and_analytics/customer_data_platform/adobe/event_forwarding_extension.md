@@ -15,7 +15,7 @@ search_tag: Partner
 This document covers the use cases of the extension, how to install it in your event-forwarding libraries, and how to employ its capabilities in an event-forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en).
 
 {% alert note %}
-If your Braze pricing includes data points, sending attributes to Braze may increase your Braze data point usage. Consult with your Braze account manager before sending attributes. Refer to the Braze documentation on [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) for more information.
+Sending attributes to Braze may increase your Braze data point consumption. Consult with your Braze account manager before sending attributes. Refer to the Braze documentation on [billable data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) for more information.
 {% endalert %}
 
 ## Use cases

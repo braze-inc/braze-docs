@@ -26,7 +26,7 @@ Note the segmentation filters will be approximate and cannot be specifically tie
 ## Option 2: Use a custom event
 
 {% alert important %}
-Be aware that logging a custom event for subscription change will log [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Alternatively, use segment filters to identify and target users who aren't push enabled.
+Be aware that logging a custom event for subscription change will consume [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Alternatively, use segment filters to identify and target users who aren't push enabled.
 {% endalert %}
 
 For a different workaround, we also recommend creating a custom event for push unsubscribes based on whether a user's push enabled status is `true` or `false` in order to track this metric.

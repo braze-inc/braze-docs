@@ -25,7 +25,7 @@ When deciding which recommendation engine suits your available resources and use
   <thead>
     <tr>
       <th>Recommendation Engine</th>
-      <th>No data points logged</th>
+      <th>No data points consumed</th>
       <th>No-code solution</th>
       <th>No advanced Liquid</th>
       <th>Automatically updates product feed</th>

@@ -351,7 +351,7 @@ Braze Cloud Data Ingestion counts toward the available rate limit, so if you're 
 
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job will be selected and pulled into Braze, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
-Data point usage is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables—if your Braze pricing includes data points.
+Data point consumption is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables.
 
 ### Use a UTC timestamp for the `UPDATED_AT` column
 

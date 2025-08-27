@@ -32,7 +32,7 @@ Refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personaliz
 
 You can create and assign variables by using the `assign` tag. This creates a variable in the message composer that can also be referenced throughout your message.
 
-### Does using Liquid log data points?
+### Does using Liquid consume data points?
 
 No.
 
