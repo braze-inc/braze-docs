@@ -10,13 +10,13 @@ guide_top_text: "Data plays a crucial role in enhancing your customer engagement
 guide_featured_title: "Braze Data Platform"
 guide_featured_list:
   - name: Data Unification
-    link: /docs/user_guide/data/braze_data_platform/unification/
+    link: /docs/user_guide/data/unification/
     image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Data Activation
-    link: /docs/user_guide/data/braze_data_platform/activation/
+    link: /docs/user_guide/data/activation/
     image: /assets/img/braze_icons/zap.svg
   - name: Data Distribution
-    link: /docs/user_guide/data/braze_data_platform/distribution/
+    link: /docs/user_guide/data/distribution/
     image: /assets/img/braze_icons/users-01.svg
   - name: Technology Partners
     link: /docs/partners/data_and_analytics/

@@ -11,10 +11,10 @@ description: "This section includes articles related to data activation for the 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Data
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/
+    link: /docs/user_guide/data/activation/custom_data/
     image: /assets/img/braze_icons/tool-01.svg
   - name: Report Metrics Glossary
-    link: /docs/user_guide/data/braze_data_platform/activation/report_metrics/
+    link: /docs/user_guide/data/activation/report_metrics/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Braze AI
     link: /docs/user_guide/brazeai/

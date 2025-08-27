@@ -12,22 +12,22 @@ description: "This landing page is home to articles on custom data. Here, you ca
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Events
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/events/
+    link: /docs/user_guide/data/activation/custom_data/events/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Purchase Events
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/purchase_events/
+    link: /docs/user_guide/data/activation/custom_data/purchase_events/
     image: /assets/img/braze_icons/shopping-cart-03.svg
   - name: Custom Events
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/custom_events/
+    link: /docs/user_guide/data/activation/custom_data/custom_events/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Custom Attributes
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/custom_attributes/
+    link: /docs/user_guide/data/activation/custom_data/custom_attributes/
     image: /assets/img/braze_icons/table.svg
   - name: Event Naming Conventions
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/event_naming_conventions/
+    link: /docs/user_guide/data/activation/custom_data/event_naming_conventions/
     image: /assets/img/braze_icons/list.svg
   - name: Managing Custom Data
-    link: /docs/user_guide/data/braze_data_platform/activation/custom_data/managing_custom_data/
+    link: /docs/user_guide/data/activation/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Recommended Events
     link: /docs/recommended_events/

@@ -11,10 +11,10 @@ description: "This section includes articles related to data distribution in the
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Braze Currents
-    link: /docs/user_guide/data/braze_data_platform/distribution/braze_currents/
+    link: /docs/user_guide/data/distribution/braze_currents/
     image: /assets/img/braze_icons/waves.svg
   - name: Exporting Braze Data
-    link: /docs/user_guide/data/braze_data_platform/distribution/export_braze_data/
+    link: /docs/user_guide/data/distribution/export_braze_data/
     image: /assets/img/braze_icons/file-download-01.svg
 ---
 <br><br>
