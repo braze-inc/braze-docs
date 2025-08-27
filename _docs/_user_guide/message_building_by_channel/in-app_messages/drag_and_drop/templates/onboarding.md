@@ -1,5 +1,5 @@
 ---
-nav_title: "Onboarding Flow"
+nav_title: "Onboarding flow"
 article_title: Onboarding Flow
 alias: "/onboarding_flow/"
 page_order: 0

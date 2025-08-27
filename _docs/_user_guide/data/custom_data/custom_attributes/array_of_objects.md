@@ -1,5 +1,5 @@
 ---
-nav_title: Array of Objects
+nav_title: Array of objects
 article_title: Array of Objects
 alias: "/array_of_objects/"
 page_order: 0

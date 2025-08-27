@@ -25,13 +25,13 @@ description: "このリファレンス記事では、Braze Data Transformation �
 
 ## Brazeとの連携
 
-Braze は、顧客インサイトおよび調査のプラットフォームである [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) と連携しています。Data Transformation では、複数のカスタム属性を保存する既存の統合ではなく、1 つの階層化カスタム属性の下に調査の回答を複数保存できます。
+Braze は、顧客インサイトおよび調査のプラットフォームである [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/) と連携しています。Data Transformation では、複数のカスタム属性を保存する既存の統合ではなく、1 つの階層化カスタム属性の下に調査の回答を複数保存できます。
 
 ## 変換コードの例
 
 調査プラットフォームである Typeform から調査の回答を受信するたびに、次のサンプルペイロードが送信されるとします。
 
-![][1]
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab 基本変換 %}

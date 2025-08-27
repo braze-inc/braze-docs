@@ -8,7 +8,7 @@ description: "Cet article d’aide décrit comment utiliser la journalisation de
 
 # Journalisation des événements
 
-Pour faciliter la résolution des problèmes liés à votre intégration Braze, vous pouvez configurer un profil utilisateur anonyme et un [journal des événements utilisateurs.][1] Pour savoir comment configurer un profil anonyme, reportez-vous à la section [Ajout d'utilisateurs test][2].
+Pour faciliter la résolution des problèmes liés à votre intégration Braze, vous pouvez configurer un profil utilisateur anonyme et un [journal des événements utilisateurs.]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab) Pour savoir comment configurer un profil anonyme, reportez-vous à la section [Ajout d'utilisateurs test]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 ## À propos de la journalisation
 
@@ -20,5 +20,3 @@ Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseu
 
 _Dernière mise à jour le 16 novembre 2022_
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

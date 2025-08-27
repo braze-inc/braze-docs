@@ -1,5 +1,5 @@
 ---
-nav_title: Video Tutorial
+nav_title: Video tutorial
 layout: featured_video
 video_id: XY5uXoKIvFY
 video_source: youtube

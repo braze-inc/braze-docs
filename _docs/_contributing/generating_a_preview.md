@@ -1,5 +1,5 @@
 ---
-nav_title: Generating a Preview
+nav_title: Generating a preview
 article: Generating a preview
 description: "Learn how to generate a local site preview, so you can see how your work would look on Braze Docs."
 page_order: 5 

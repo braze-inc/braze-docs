@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Events
+nav_title: Custom events
 article_title: Custom Events
 page_order: 9
 page_type: reference

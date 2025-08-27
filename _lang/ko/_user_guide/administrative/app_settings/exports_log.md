@@ -12,20 +12,17 @@ description: "이 페이지에서는 내보내기 작업의 상태를 확인하�
 
 내보내기 로그는 **설정** > **내보내기 로그로** 이동하여 찾을 수 있습니다. 여기에서 이전 내보내기, 내보낸 세그먼트의 이름, 각 내보내기 상태, 각 내보내기의 출처, 각 내보내기 시작 및 완료 시점을 볼 수 있습니다. 
 
-![완료된 내보내기 목록이 포함된 내보내기 로그입니다.][1]
+![완료된 내보내기 목록이 포함된 내보내기 로그.]({% image_buster /assets/img/export_logs.png %})
 
 ## 보류 중인 내보내기 취소하기
 
 내보내기 **로그** 페이지에서 <i class="fas fa-ellipsis-vertical"></i> 메뉴를 선택한 다음 **내보내기 취소를** 선택하거나 내보내기 **ID를** 선택한 다음 내보내기 페이지에서 내보내기 **취소를** 선택하면 보류 중인 내보내기를 바로 취소할 수 있습니다.
 
-![보류 중인 내보내기 로그와 '내보내기 취소' 옵션이 표시됩니다.][2]
+![보류 중인 내보내기와 '내보내기 취소' 옵션이 표시된 내보내기 로그.]({% image_buster /assets/img/export_logs_cancel.png %})
 
 ## 특정 내보내기 로그 공유
 
 내보내기 **ID를** 선택한 다음 **로그 공유를** 선택하여 내보내기 로그를 공유합니다.
 
-![페이지 공유 링크가 있는 드롭다운 창입니다.][3]{: style="max-width:45%;"}
+![페이지 공유 링크가 있는 드롭다운 창.]({% image_buster /assets/img/export_logs_share.png %}){: style="max-width:45%;"}
 
-[1]: {% image_buster /assets/img/export_logs.png %}
-[2]: {% image_buster /assets/img/export_logs_cancel.png %}
-[3]: {% image_buster /assets/img/export_logs_share.png %}

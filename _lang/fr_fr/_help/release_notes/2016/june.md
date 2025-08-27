@@ -22,11 +22,9 @@ Les clients peuvent maintenant mettre en pause et reprendre plusieurs campagnes 
 
 ## Endpoint API pour les données de désinstallation
 
-Les clients peuvent désormais récupérer les données de suivi de désinstallation  directement depuis nos API d’exportation. Consultez les [points de terminaison d'exportation][4] pour plus de détails.
+Les clients peuvent désormais récupérer les données de suivi de désinstallation  directement depuis nos API d’exportation. Consultez les [points de terminaison d'exportation]({{site.baseurl}}/developer_guide/rest_api/export/#kpi-export) pour plus de détails.
 
 ## Journal des erreurs amélioré
 
-Nous avons amélioré votre capacité à trier par type d'erreur dans le [Journal des erreurs de message][5] !
+Nous avons amélioré votre capacité à trier par type d'erreur dans le [Message Error Log]({% image_buster /assets/img_archive/improved_error_log.png %}) !
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
-[5]: {% image_buster /assets/img_archive/improved_error_log.png %}

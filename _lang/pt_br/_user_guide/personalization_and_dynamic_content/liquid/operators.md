@@ -8,7 +8,7 @@ description: "Esta página de referência nota os operadores que o Liquid suport
 
 # Operadores
 
-> O Liquid oferece suporte a muitos [operadores][25] que podem ser usados em suas instruções condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
+> O Liquid suporta muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas declarações condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
 
 Esta tabela lista os operadores que são suportados. Nota que parênteses são caracteres inválidos em Liquid e impedem que suas tags funcionem.
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Um criador de notificações por push com o código Liquid completo do tutorial.][13]{: width="100%"}
+![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Código Liquid completo %}
 {% raw %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Um criador de notificações por push com o código Liquid completo do tutorial.][14]
+![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Agora, se um usuário jogou por último *Awkward Dinner Party*, ele receberá esta mensagem:
 
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Um criador de notificações por push com o código Liquid completo do tutorial.][26]
+![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-Você também pode [abortar mensagens][1] com base no Connected Content.
+Você também pode [abortar mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) com base no Connected Content.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-[25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

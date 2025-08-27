@@ -2688,4 +2688,16 @@ validurls['/docs/developer_guide/sdk_integration/initialization/'] = '/docs/deve
 validurls['/docs/auto_advance/'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
 
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/catalog_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/use_cases/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/use_cases/';
+validurls['/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/';
+
+validurls['/docs/partners/additional_channels_and_extensions/extensions/landing_pages/knak/'] = '/docs/partners/knak/';
+
+validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/developer_guide/banners/placements/';
+
+validurls['/docs/partners/data_and_analytics/business_intelligence/sisu_data/'] = '/docs/partners/';
+
+
 // validurls['OLD'] = 'NEW';

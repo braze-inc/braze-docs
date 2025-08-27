@@ -1,5 +1,5 @@
 ---
-nav_title: Data Points
+nav_title: Data points
 article_title: Data Points Overview
 page_order: 0
 page_type: reference

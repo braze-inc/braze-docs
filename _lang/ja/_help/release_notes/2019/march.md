@@ -17,13 +17,13 @@ Brazeは、最新のUXおよびUIのベストプラクティスに準拠する�
 - すべてのメッセージタイプに対するレスポンシブな動作が改善され、ビューポートにより適合するようになりました
 - ボタンの境界線を使用して、ボタン間のカスタムコントラストを作成する
 
-[新しいアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/)は、ユーザーとのインタラクションを劇的に改善します。
+[新しいアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)は、ユーザーとのインタラクションを劇的に改善します。
 
 ![全画面表示の動作]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 ### あなたがする必要があること
 
-最新バージョンのBraze SDKを[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk)、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)用に更新することを強くお勧めします。
+最新バージョンのBraze SDKを[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk)、[iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android)用に更新することを強くお勧めします。
 
 その後、準備完了です！
 
@@ -37,4 +37,4 @@ Brazeは、最新のUXおよびUIのベストプラクティスに準拠する�
 
 ## Google Cloud Storage
 
-[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/) はベータ版ではなくなりました！関心のあるお客様が、Braze プラットフォーム内で Google Cloud Storage をご利用いただけるようになりました。Brazeアカウントの**Technology Partners**に移動し、Google Cloud Storageを検索します。
+[Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) はベータ版ではなくなりました！関心のあるお客様が、Braze プラットフォーム内で Google Cloud Storage をご利用いただけるようになりました。Brazeアカウントの**Technology Partners**に移動し、Google Cloud Storageを検索します。

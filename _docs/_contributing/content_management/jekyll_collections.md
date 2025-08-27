@@ -1,5 +1,5 @@
 ---
-nav_title: Jekyll Collections
+nav_title: Jekyll collections
 article_title: Jekyll Collections
 description: "Learn how to create a Jekyll collection so you can add a new primary section on Braze Docs."
 page_order: 6

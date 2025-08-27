@@ -61,7 +61,7 @@ Braze saldrá de un usuario en el paso si:
 
 ### Tipos JSON y respuestas de contenido conectado
 
-Braze evalúa las variables de contexto que se espera que sean de tipo JSON (u Objeto) de las respuestas de Contenido conectado en cadenas. Para evitar que las variables de contexto se evalúen como cadenas, introduce estos resultados en este filtro de Liquid: `as_json_string`. Un ejemplo:
+Braze evalúa las variables de contexto que se espera que sean de tipo JSON (u Objeto) de las respuestas de Contenido conectado en cadenas. Para evitar que las variables de contexto se evalúen como cadenas, introduce estos resultados en este filtro Liquid: `as_json_string`. Un ejemplo:
 
 {%raw%}
 ```liquid

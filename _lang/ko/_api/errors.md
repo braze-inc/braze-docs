@@ -92,7 +92,7 @@ POST 페이로드가 서버에서 수락된 경우 성공적인 메시지에는 
 | `400 Android Push Length Exceeded` | JSON 페이로드가 4,000바이트 이상입니다.|
 | `400 Bad Request` | `send_at` 날짜 시간을 구문 분석할 수 없습니다.|
 | `400 Bad Request` | 요청에서 `in_local_time` 은 맞지만 `time` 은 회사 표준 시간대가 지났습니다.|
-| `401 Unauthorized` | 잘못된 API 키입니다. 이 오류는 다음과 같은 경우에도 발생할 수 있습니다:<br><br> \- 잘못된 [인스턴스로]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) 요청을 전송하고 있습니다. 예를 들어 계정이 EU 인스턴스(`https://dashboard-01.braze.eu`)에 있는 경우 요청은 `https://rest.fra-01.braze.eu` 으로 보내야 합니다.<br>\- API 키 구문은 작은따옴표 또는 큰따옴표를 사용하고 있습니다. 올바른 구문은 `Authorization: Bearer {YOUR-API-KEY}` 입니다. |
+| `401 Unauthorized` | 잘못된 API 키입니다. 이 오류는 다음과 같은 경우에도 발생할 수 있습니다:<br><br> \- 잘못된 [인스턴스로]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) 요청을 전송하고 있습니다. 예를 들어, 계정이 EU 인스턴스(`https://dashboard-01.braze.eu`)에 있는 경우 요청을 `https://rest.fra-01.braze.eu` 으로 보내야 합니다.<br>\- API 키 구문은 작은따옴표 또는 큰따옴표를 사용하고 있습니다. 올바른 구문은 `Authorization: Bearer {YOUR-API-KEY}` 입니다. |
 | `403 Forbidden` | 요금제를 지원하지 않거나 계정이 비활성화된 경우.|
 | `403 Access Denied` | 사용 중인 REST API 키에 충분한 권한이 없는 경우 **설정** 페이지에서 API 키 권한을 확인하세요.|
 | `404 Not Found` | 잘못된 URL입니다. |

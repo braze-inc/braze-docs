@@ -38,9 +38,9 @@ Pour les étapes du canvas dont l'entrée est déclenchée par un événement, l
 
 ## Expiration de message in-app
 
-Dans l’éditeur de messages dans l’application, vous pouvez choisir la date d’expiration du message in-app. Pendant cette période, le message in-app pourra être consulté jusqu’à la date d’expiration. Après l'envoi du message in-app, celui-ci peut être consulté une seule fois.
+Vous pouvez choisir la date d'expiration du message in-app. Pendant cette période, le message in-app pourra être consulté jusqu’à la date d’expiration. Après l'envoi du message in-app, celui-ci peut être consulté une seule fois.
 
-![]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:85%"}
+![La section Contrôles du message d'une étape de message pour un message in-app. L'envoi de messages in-app expirera trois jours après la mise à disposition de l'étape.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Option | Description | Exemple |
 |---|---|---|
@@ -167,7 +167,7 @@ Un utilisateur peut déclencher deux messages in-app dans votre Canvas en même 
 
 Sélectionnez **Définir la priorité exacte** et faites glisser différentes étapes du canvas pour réorganiser leur priorité pour le canvas. Par défaut, les étapes précédentes d'une variante de canvas s’afficheront avant les étapes postérieures. Une fois que les étapes sont classées dans l'ordre de priorité que vous avez choisi, sélectionnez **Appliquer le tri**.
 
-![Le trieur de priorité avec deux étapes "Premier IAM" et "Autre IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![Le trieur de priorités avec deux étapes "Welcome IAM" et "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
 ### Apporter des modifications aux projets de toiles actives
 
@@ -221,7 +221,7 @@ Vous pouvez choisir parmi les actions de déclenchement suivantes pour cibler vo
 
 Un utilisateur doit entrer dans l'étape du canvas, démarrer une session, puis effectuer le déclencheur pour recevoir un message in-app. Cela signifie que les mises à jour en cours de session ne sont pas prises en charge. Par exemple, si le déclencheur est le démarrage d'une session, il suffit à l'utilisateur d'entrer dans l'étape du canvas et de démarrer une session pour recevoir le message in-app. Si le déclencheur n'est pas de démarrer une session, l'utilisateur doit entrer dans l'étape du canvas, démarrer une session, puis effectuer le déclencheur pour recevoir le message in-app.
 
-!["Faire un achat spécifique" sélectionné comme action de déclenchement.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
+!["Faire un achat spécifique" sélectionné comme action de déclenchement.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 Les fonctionnalités Canvas suivantes ne sont pas disponibles avec les messages in-app, elles ne seront donc pas appliquées à vos messages in-app même si elles sont activées.
 
@@ -239,6 +239,6 @@ Les propriétés d'événement personnalisé dans les messages in-app pour Canva
 
 Voici quelques éléments à prendre en compte lors de l'envoi de messages in-app dans un canvas.
 
-- Si l'utilisateur ne redémarre jamais l'application ou ne démarre jamais une session, l'application ne pourra pas savoir si l'utilisateur est éligible pour le message in-app, ce qui signifie qu'aucun message in-app ne sera envoyé.
+- Si l'utilisateur ne redémarre jamais l'application ou ne démarre jamais une session, l'application ne sera pas en mesure de déterminer si l'utilisateur peut recevoir un message in-app, ce qui signifie qu'aucun message in-app ne sera envoyé.
 - Lorsque le premier clic a lieu et qu'il existe une variable de contexte Canvas (propriétés de l'entrée Canvas), et qu'un utilisateur réintègre un Canvas cinq fois, Braze prendra la cinquième entrée et utilisera cette variable de contexte dans le message in-app.
 - Un utilisateur ne peut avoir droit qu'à 10 messages in-app à la fois. Par exemple, si un utilisateur passe par différentes étapes du canvas pour 10 messages in-app, vous ne pouvez avoir que 10 de ces étapes.

@@ -50,14 +50,14 @@ CSV 파일을 만들 때 다음 가이드라인을 참고하세요. CSV 파일�
 
 ### 방법 1: CSV 업로드
 
-1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Drag and drop your file to the upload zone, or select **Upload CSV** and choose your file. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. 각 열에 대해 부울, 숫자, 문자열 또는 시간 중 하나의 데이터 유형을 선택합니다.
-<br> ![][9]{: style="max-width:80%;"} <br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. 카탈로그에 이름을 지정합니다. 카탈로그 이름에 대한 다음 요구 사항을 염두에 두세요:
 - 고유해야 합니다.
 - 최대 250자
 - 숫자, 문자, 하이픈, 밑줄만 포함할 수 있습니다.<br><br>
-4. (선택 사항) 카탈로그에 대한 설명을 추가합니다.
+4. (Optional) Add a description for the catalog.
 5. Select **Process Catalog** to create the catalog.
 
 {% alert note %}
@@ -87,11 +87,11 @@ To edit or create catalogs in the browser, you'll need "Manage Catalogs Dashboar
 1. 카탈로그의 이름을 입력합니다. 카탈로그 이름에 대한 다음 요구 사항을 염두에 두세요:
 - 고유해야 합니다.
 - 최대 250자
-- 숫자, 문자, 하이픈, 밑줄만 포함할 수 있습니다. <br> ![내 카탈로그라는 이름의 "my_catalog".][14]{: style="max-width:80%;"} <br><br>
-2. (선택 사항) 카탈로그에 대한 설명을 입력합니다.
+- 숫자, 문자, 하이픈, 밑줄만 포함할 수 있습니다. <br> ![A catalog named "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
+2. (Optional) Type a description for your catalog.
 3. 목록 **카탈로그** 페이지에서 방금 생성한 카탈로그를 선택하여 카탈로그를 업데이트합니다.
-4. 선택 **업데이트 카탈로그** > **필드 추가**하여 필드를 추가합니다. 그런 다음 **필드 이름을** 입력하고 드롭다운을 사용하여 데이터 유형을 선택합니다. 필요에 따라 반복합니다.<br> ![두 개의 예시 필드 "평가"와 "이름".][12]{: style="max-width:50%;"}<br><br>
-5. **카탈로그 업데이트** 선택 > **항목 추가**를 선택하여 이전에 추가한 필드를 기반으로 정보를 입력하여 카탈로그에 항목을 추가합니다. 그런 다음 **항목 저장** 또는 **저장 및 추가**를 선택하여 항목을 계속 추가합니다. <br> ![카탈로그 항목 추가.][13]{: style="max-width:50%;"}
+4. 선택 **업데이트 카탈로그** > **필드 추가**하여 필드를 추가합니다. 그런 다음 **필드 이름을** 입력하고 드롭다운을 사용하여 데이터 유형을 선택합니다. 필요에 따라 반복합니다.<br> ![Two example fields "rating" and "name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. **카탈로그 업데이트** 선택 > **항목 추가**를 선택하여 이전에 추가한 필드를 기반으로 정보를 입력하여 카탈로그에 항목을 추가합니다. 그런 다음 **항목 저장** 또는 **저장 및 추가**를 선택하여 항목을 계속 추가합니다. <br> ![Add a catalog item.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 브라우저에서 카탈로그 생성을 선택한 후 CSV 파일을 업로드할 수도 있습니다.
 
@@ -139,11 +139,11 @@ CSV 파일을 업로드하여 카탈로그를 생성합니다. `id`, `title`, `p
 이 데이터 유형은 카탈로그를 설정한 후에는 편집할 수 없습니다.
 {% endalert %}
 
-![네 개의 카탈로그 열 이름: "ID", "제목", "가격", "이미지_링크".][9]{: style="max-width:85%;"}
+![Four catalog column names: "id", "title", "price", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Next, we'll name this catalog "games_catalog" and select the **Process Catalog** button. 그러면 Braze는 카탈로그를 생성하기 전에 카탈로그에 오류가 있는지 확인합니다.
 
-![게임 카탈로그 이름 "games_catalog".][11]{: style="max-width:85%;"}
+![A catalog named "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 카탈로그가 생성된 후에는 이 이름을 편집할 수 없다는 점에 유의하세요. 카탈로그를 삭제하고 동일한 카탈로그 이름을 사용하여 업데이트된 버전을 다시 업로드할 수 있습니다.
 
@@ -171,17 +171,9 @@ Braze 대시보드에 표시되는 패키지 자격은 시각적 편의를 위�
 
 #### 무료 버전
 
-무료 버전의 카탈로그 저장 용량은 최대 100MB입니다. 100MB 미만인 경우 무제한으로 항목을 보유할 수 있습니다. 선택 항목은 스토리지에 기여합니다. 선택 항목이 복잡할수록 더 많은 스토리지를 차지하게 됩니다. CSV 카탈로그 데이터와 우리 데이터 저장소에서 해당 데이터의 표현 간에도 크기 불일치가 있을 것입니다.
+무료 버전의 카탈로그 저장 용량은 최대 100MB입니다. You can have unlimited items as long as they're under 100 MB. 
 
 #### 카탈로그 프로
 
 회사 수준에서 카탈로그 프로의 최대 저장 용량은 카탈로그 데이터의 크기에 따라 결정됩니다. 스토리지 크기 옵션은 다음과 같습니다: 5GB, 10GB 또는 15GB. 각 요금제에는 무료 버전의 저장 용량(100MB)이 포함되어 있습니다.
 
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
-[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
-[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
-[12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
-[13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
-[14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}

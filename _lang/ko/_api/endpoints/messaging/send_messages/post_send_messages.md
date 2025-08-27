@@ -16,9 +16,9 @@ description: "이 문서에서는 API 전용 Braze 엔드포인트를 사용하�
 
 > 이 엔드포인트를 사용하면 Braze API를 사용하여 지정된 사용자에게 즉시 메시지를 보낼 수 있습니다.
 
-요청을 완료하려면 메시징 객체를 본문에 포함시켜야 합니다.
-
 세그먼트를 타겟팅하는 경우 요청에 대한 기록이 [개발자 콘솔](https://dashboard.braze.com/app_settings/developer_console/activitylog/)에 저장됩니다.
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ description: "이 문서에서는 API 전용 Braze 엔드포인트를 사용하�
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## 요청 본문
+
+{% alert tip %}
+요청을 완료하려면 본문에 [메시징 객체를]({{site.baseurl}}/api/objects_filters/#messaging-objects) 포함해야 합니다.
+{% endalert %}
 
 ```
 Content-Type: application/json

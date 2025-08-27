@@ -98,11 +98,11 @@ Use o modelo de [formulário de captura de número de telefone]({{site.baseurl}}
 
 #### Etapa 1: Crie um canva com um disparo de "Mensagem de entrada do WhatsApp"
  
-![Etapa de entrada do Canva baseada em ação que entra nos usuários que enviam uma mensagem de entrada do WhatsApp.][6]{: style="max-width:85%;"}
+![Etapa de entrada do Canva baseada em ação que insere os usuários que enviam uma mensagem de entrada do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Ao selecionar disparadores de palavras-chave, inclua palavras como "Parar" ou "Nenhuma mensagem". Se você escolher esse método, certifique-se de que seus clientes conheçam as palavras de aceitação. Por exemplo, depois de receber a aceitação inicial, inclua uma resposta de acompanhamento como "Para optar por não receber essas mensagens, envie a mensagem "Parar" a qualquer momento". 
 
-![Etapa da mensagem para enviar uma mensagem de entrada do WhatsApp em que o corpo da mensagem é "STOP" ou "NO MESSAGE".][7]
+![Etapa da mensagem para enviar uma mensagem de entrada do WhatsApp em que o corpo da mensagem é "STOP" ou "NO MESSAGE".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Etapa 2: Atualizar o perfil do usuário
 
@@ -112,7 +112,7 @@ Atualize o perfil do usuário usando um dos métodos descritos em [Grupos de ins
 
 No criador de modelos de mensagens do WhatsApp, você pode incluir a opção "aceitação de marketing". Sempre que incluir isso, certifique-se de que o modelo seja usado em um Canva com uma etapa subsequente para uma alteração no grupo de inscrições. 
 
-1. Crie um modelo de mensagem com a resposta rápida "aceitação de marketing".<br>![Modelo de mensagem com uma opção de rodapé de "Aceitação de marketing"][11]<br><br>![Seção para configurar um botão de saída de marketing.][12]<br><br>
+1. Crie um modelo de mensagem com a resposta rápida "aceitação de marketing".<br>![Modelo de mensagem com uma opção de rodapé de "Aceitação de marketing"]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Seção para configurar um botão de opt-out de marketing.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. Crie um Canva que use esse modelo de mensagem.<br><br>
 3. Siga as etapas do exemplo anterior, mas com o texto do disparador "STOP PROMOTIONS".<br><br>
 4. Atualize o status da inscrição do usuário usando um dos métodos descritos em [Grupos de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
@@ -136,10 +136,10 @@ A etapa de atualização do usuário evita condições de corrida porque o usuá
 Para mensagens "STOP", inverta a etapa da mensagem que confirma a aceitação e a etapa de atualização do usuário. Caso contrário, o usuário será excluído do grupo de inscrições primeiro e, depois, não será elegível para receber a mensagem de confirmação.
 {% endalert %}
 
-![Etapa de uma mensagem do WhatsApp em que o corpo da mensagem é "START".][13]{: style="max-width:70%;"}
+![Etapa de uma mensagem do WhatsApp em que o corpo da mensagem é "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\. No Canva, crie uma etapa do tipo **Configurar atualização do usuário** e, para **Ação**, selecione **Advanced JSON Editor**. <br><br>![Etapa de atualização do usuário com uma ação de "Advanced JSON Editor".][14]<br><br>
+2\. No Canva, crie uma etapa do tipo **Configurar atualização do usuário** e, para **Ação**, selecione **Advanced JSON Editor**. <br><br>![Etapa de atualização do usuário com uma ação de "Advanced JSON Editor".]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
 3\. Preencha o **objeto User Update** com a seguinte carga útil JSON, substituindo `XXXXXXXXXXX` pelo ID do seu grupo de inscrições:
 
 {% raw %}
@@ -160,7 +160,7 @@ Para mensagens "STOP", inverta a etapa da mensagem que confirma a aceitação e 
 {% endraw %}
 
 {: start="4"}
-4\. Adicione uma etapa subsequente da mensagem do WhatsApp. <br><br>![Etapa de atualização do usuário em um Canvas.][15]{: style="max-width:20%;"}
+4\. Adicione uma etapa subsequente da mensagem do WhatsApp. <br><br>![Etapa de atualização do usuário em um Canvas.]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
 
 #### Considerações
 
@@ -174,10 +174,22 @@ Uma campanha Webhook pode disparar a entrada em uma segunda campanha depois de a
 Não é necessário usar esse método para mensagens STOP. A mensagem de confirmação será enviada antes que o usuário seja removido do grupo de inscrições, portanto, você pode usar uma das outras duas etapas.
 {% endalert %}
 
-1. Crie uma campanha ou um Canva com uma etapa baseada em ação **Envie uma mensagem de entrada do WhatsApp**. Selecione **Onde o corpo da mensagem** e digite "START" para **Is**.<br><br>![Etapa da mensagem do WhatsApp em que o corpo da mensagem é "INICIAR".][13]{: style="max-width:70%;"}<br><br>
-2. Na campanha ou no Canva, crie uma etapa do Webhook Message e altere o **Request Body (Corpo da solicitação)** para **Raw Text (Texto bruto)**.<br><br>![Etapa da mensagem para um webhook.][16]<br><br>
-3. Digite o [URL do endpoint]({{site.baseurl}}/api/basics/) do cliente no **URL do Webhook**, seguido pelo link do endpoint `campaigns/trigger/send`. Por exemplo, `https://dashboard-02.braze.eu/campaigns/trigger/send`.<br><br>![Campo URL do webhook na seção "Criador de webhook".][19]{: style="max-width:70%;"}<br><br>
-4. No texto bruto, insira a seguinte carga útil JSON e substitua `XXXXXXXXXXX` pelo ID do seu grupo de inscrições. Você precisará substituir o endereço `campaign_id` depois de criar sua segunda campanha.
+1. Crie uma campanha ou um Canva com uma etapa baseada em ação **Envie uma mensagem de entrada do WhatsApp**. Selecione **Onde o corpo da mensagem** e digite "START" para **Is**.
+
+![Etapa do envio de mensagens do WhatsApp em que o corpo da mensagem é "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+
+{: start="2"}
+2\. Na campanha ou no Canva, crie uma etapa do Webhook Message e altere o **Request Body (Corpo da solicitação)** para **Raw Text (Texto bruto)**.
+
+![Etapa da mensagem para um webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+
+{: start="3"}
+3\. Digite o [URL do endpoint]({{site.baseurl}}/api/basics/) do cliente no **URL do Webhook**, seguido pelo link do endpoint `campaigns/trigger/send`. Por exemplo, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
+
+![Campo URL do webhook na seção "Criador de webhook".]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+
+{: start="4"}
+4\. No texto bruto, insira a seguinte carga útil JSON e substitua `XXXXXXXXXXX` pelo ID do seu grupo de inscrições. Você precisará substituir o endereço `campaign_id` depois de criar sua segunda campanha.
 
 {% raw %}
 ```json
@@ -219,22 +231,3 @@ Nesta tabela, `STOP` é usado como um exemplo de palavra disparadora para demons
 | `Matches regex` | `(?i)STOP(?-i)` | Captura qualquer uso de "STOP" em qualquer caso. Por exemplo, isso captura "stop" (pare), "please stop" (por favor, pare) e "never stop sending me messages" (nunca pare de me enviar mensagens). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp114.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp115.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp116.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp117.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp118.png %}
-[9]: {% image_buster /assets/img/whatsapp/whatsapp119.png %}
-[10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %}
-[11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %}
-[12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %}
-[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}
-[14]: {% image_buster /assets/img/whatsapp/user_update.png %}
-[15]: {% image_buster /assets/img/whatsapp/message_step.png %}
-[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %}
-[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %}
-[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %}
-[19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 

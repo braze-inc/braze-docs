@@ -10,14 +10,14 @@ channel: email
 
 # 테스트 이메일에서 HTML 렌더링 문제 해결
 
-[테스트 이메일][37]이 이상해 보이면 먼저 HTML 설정을 확인하는 것이 좋습니다. 다음으로, 이러한 문제를 확인할 수 있습니다:
+[테스트 이메일]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa)이 이상해 보이면 먼저 HTML 설정을 확인하는 것이 좋습니다. 다음으로, 이러한 문제를 확인할 수 있습니다:
 * [확장 충돌](#check-conflicts)
 * [이메일 렌더링](#check-rendering)
 * [CSS 인라이닝](#switch-css-inlining)
 
 ### 확장 충돌
 
-일부 브라우저 확장 프로그램은 이메일 편집기에서 문제를 일으킬 수 있습니다. 한 가지 예는 [Grammarly][38])가 Google Chrome과 함께 사용될 때입니다. 이 확장 프로그램 중 하나를 사용 중인 경우 다음 중 하나를 수행해야 합니다. 
+일부 브라우저 확장 프로그램은 이메일 편집기에서 문제를 일으킬 수 있습니다. 한 가지 예는 [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en))가 Google Chrome과 함께 사용될 때입니다. 이 확장 프로그램 중 하나를 사용 중인 경우 다음 중 하나를 수행해야 합니다. 
 - 브라우저 확장 프로그램으로 Grammarly가 없는 브라우저에서 Braze 이메일을 편집합니다
 - 귀하의 Braze 계정 매니저에게 연락하여 이메일 편집기를 HTML 전용 또는 일반 텍스트로 전환하도록 요청하십시오. 
 
@@ -38,7 +38,3 @@ channel: email
 
 _마지막 업데이트 날짜: 2021년 12월 21일_
 
-[37]: {{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa
-[38]: https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
-[39]: https://www.emailonacid.com/
-[40]: https://litmus.com/

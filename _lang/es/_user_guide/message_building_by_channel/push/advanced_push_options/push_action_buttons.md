@@ -11,23 +11,24 @@ channel:
 
 # Botones de acción para notificación push
 
-![Una notificación push de iOS con dos botones de acción para push: Aceptar y rechazar.][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Una notificación push de iOS con dos botones de acción para push: Aceptar y Rechazar.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Los botones de acción push permiten configurar el contenido y las acciones de los botones cuando se utilizan las notificaciones push Braze de iOS y Android. Con los botones de acción, sus usuarios pueden interactuar directamente con su aplicación desde una notificación sin necesidad de hacer clic en una experiencia de aplicación.
 
 ## Crear botones de acción
 
-Cada botón interactivo puede enlazar a una página web o a un enlace profundo o abrir la aplicación. Puede especificar sus botones de acción push en la sección **Comportamiento al hacer clic** del compositor de mensajes push en el panel de control.
+Cada botón interactivo puede enlazar a una página web o a un enlace profundo o abrir la aplicación. 
 
-{% alert important %}
-Si quieres dirigirte tanto a iOS como a Android en una sola campaña, crea una campaña multicanal. Los botones de acción push no son compatibles cuando se dirigen tanto a iOS como a Android utilizando [campañas push rápidas]({{site.baseurl}}/quick_push).
-{% endalert %}
+- Para campañas push estándar, puedes especificar tus botones de acción para push en la sección **Comportamiento al hacer clic** del compositor de mensajes push en el panel.
+- Para las [campañas push rápidas]({{site.baseurl}}/quick_push), los botones de acción se pueden configurar por separado para cada plataforma en la pestaña **Configuración**.
 
+{% tabs %}
+{% tab iOS %}
 ### iOS {#ios}
 
 Para utilizar botones de acción en tus mensajes push de iOS, haz lo siguiente:
 
-1. Crea una [campaña push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) para iOS y activa los botones de acción en la pestaña **Redactar**.
+1. Activa los botones de acción en la pestaña **Redactar** para una campaña estándar o en la pestaña **Configuración** para un push rápido.
 2. Seleccione su **categoría de notificación de iOS** entre las siguientes combinaciones de botones disponibles:
  - Aceptar / Rechazar
  - Sí / No
@@ -40,12 +41,13 @@ Para utilizar botones de acción en tus mensajes push de iOS, haz lo siguiente:
 {% alert note %}
 Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos de integración adicionales al configurar botones de acción push, que se describen en nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). En concreto, es necesario configurar las categorías de iOS o seleccionar entre determinadas opciones de botones predeterminados. Para las integraciones de Android, estos botones funcionarán automáticamente.
 {% endalert %}
-
+{% endtab %}
+{% tab Android %}
 ### Android {#android}
 
 Para utilizar botones de acción en sus mensajes push de Android, haga lo siguiente:
 
-1. Cree una [campaña push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) para Android y active los botones de notificación en la pestaña **Redactar**.
+1. Activa los botones de acción en la pestaña **Redactar** para una campaña estándar o en la pestaña **Configuración** para un push rápido.
 2. Selecciona <i class="fas fa-plus-circle"></i> **Añadir botón** y especifica el texto del botón y el **Comportamiento al hacer clic**. Puede seleccionar una de las siguientes acciones disponibles:
   - Abrir aplicación
   - Redirigir a URL de página web
@@ -69,6 +71,6 @@ En la tabla siguiente se indica cuántos caracteres puede añadir antes de que s
 | 2 | 20 caracteres |
 | 3 | 11 caracteres |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% endtab %}
+{% endtabs %}
 
-
-[1]: {% image_buster /assets/img_archive/push_action_example.png %}

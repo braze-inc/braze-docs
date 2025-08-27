@@ -9,7 +9,7 @@ page_type: landing
 tool: 
     - Campaigns
     - Canvas
-description: "Cette page d'atterrissage contient des articles sur les principes fondamentaux de l'envoi de messages avec les campagnes et Canvases. Vous trouverez ici des ressources sur l'utilisation stratégique des événements de conversion et la détermination du type de réception/distribution lors de la composition de vos messages, ainsi que sur l'utilisation du flux de travail d'approbation et la compréhension des statuts lors de la gestion de vos messages."
+description: "Cette page d'atterrissage contient des articles sur les principes fondamentaux de l'envoi de messages à l'aide de campagnes et de Canvases. Vous trouverez ici des ressources sur l'utilisation stratégique des événements de conversion et la détermination du type de réception/distribution lors de la composition de vos messages, ainsi que sur l'utilisation du flux de travail d'approbation et la compréhension des statuts lors de la gestion de vos messages."
 
 guide_featured_title: "Composition"
 guide_featured_description: |
@@ -57,10 +57,16 @@ guide_menu_list:
   - name: Archivage des messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: "Copie d'un espace de travail à l'autre"
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Duplication des messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: "Statuts de l'envoi de messages"
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: "Savoir avant d'envoyer"
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---

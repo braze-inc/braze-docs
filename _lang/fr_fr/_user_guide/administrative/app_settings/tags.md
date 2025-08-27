@@ -14,27 +14,33 @@ description: "Cet article de référence couvre les balises du tableau de bord d
 
 Vous pouvez ajouter des balises lors de la création ou de la modification d’une campagne, d’un Canvas ou d’un segment. Cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** sous le nom de l'engagement et sélectionnez une étiquette existante, ou commencez à taper pour ajouter une nouvelle étiquette.
 
-![Ajout de balises pendant la création de campagnes][2]
-
-Vous pouvez également ajouter des tags à plusieurs campagnes, canevas ou segments en sélectionnant plusieurs engagements et en cliquant sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As.**
-
-![Ajout de balises à plusieurs campagnes en même temps][5]
-
-Les balises définies sur une campagne, un Canvas ou un segment sont visibles sur la page de détail à côté du nom de l’engagement.
-
-![Balises affichées sur la page Campaign Details (Détails de la campagne)][3]
-
-Ils sont également visibles dans la liste des campagnes, des toiles ou des segments, avec des tags supplémentaires pour les étiquettes d'état telles que **Archivé** et **Brouillon.**
-
-![Tags sur la liste des campagnes][4]{: style ="max-width:70%;" }
-
-Pour filtrer par une balise, sélectionnez le nom de la balise dans la liste des balises ou recherchez la balise dans le volet de recherche à l’aide du sélecteur `tag:`. Par exemple, pour rechercher la balise `Onboarding`, saisissez « tag:Onboarding ».
-
-![Recherche de toutes les campagnes marquées comme e-mail de bienvenue][6]
+![Ajout d'étiquettes lors de la création d'une campagne.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 Vous pouvez ajouter jusqu'à 175 tags à une campagne, un Canvas ou un segment.
 {% endalert %}
+
+### Étiquettes en vrac
+
+Vous pouvez également ajouter des étiquettes à plusieurs campagnes, canevas ou segments en sélectionnant plusieurs engagements et en sélectionnant <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As.**
+
+![Ajout d'étiquettes à plusieurs campagnes en même temps.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+
+{% alert important %}
+Lorsque vous utilisez le marquage en bloc pour appliquer une nouvelle étiquette à plusieurs campagnes qui ont déjà des étiquettes différentes, chaque campagne sélectionnée recevra la nouvelle étiquette, et toutes les étiquettes présentes sur une campagne seront appliquées à toutes les autres campagnes sélectionnées, même si ces étiquettes ne leur étaient pas associées à l'origine.
+{% endalert %}
+
+### Affichage des tags
+
+Les tags définis sur une campagne, un Canvas ou un segment sont visibles sur la page de détails près du nom de l'engagement. Ils apparaissent également dans les analyses/analytiques de la campagne (s'ils sont utilisés comme adjectifs).
+
+![Tags affichés sur la page d'analyse de la campagne.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+
+### Filtrage par étiquette
+
+Les étiquettes sont visibles dans la liste des campagnes, des toiles ou des segments, ainsi que des tags supplémentaires pour les étiquettes d'état telles que **Archivé** et **Brouillon**. Pour filtrer par étiquette, sélectionnez le nom de l'étiquette dans la liste des étiquettes.
+
+![Tags sur la liste des campagnes.]({% image_buster /assets/img_archive/tags_grid.png %})
 
 ## Tags de données personnalisés
 
@@ -43,6 +49,18 @@ Des étiquettes peuvent également être ajoutées aux données personnalisées 
 {% alert important %}
 Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous souhaitez participer à cet accès anticipé, contactez votre gestionnaire de la satisfaction client.
 {% endalert %}
+
+## Gestion des étiquettes
+
+Vous pouvez utiliser les mêmes balises sur les campagnes, les Canvas et les segments. Pour renommer, supprimer ou ajouter des tags de manière efficace dans votre tableau de bord, accédez à **Paramètres** > **Gestion des tags**.
+
+![Onglet Tags de la page Gérer les paramètres.]({% image_buster /assets/img_archive/tags_view.png %})
+
+Pour une meilleure organisation des balises, elles peuvent être insérées sous une balise parent. Toutes les balises de vacances peuvent par exemple être insérées sous une `Holidays`balise parent, ou toutes les balises liées à une étape de l’entonnoir marketing sous une balise parent`Funnel`. 
+
+Pour ce faire, créez un nouveau tag, sélectionnez **Nest Tag Under**, et choisissez le tag existant sous lequel vous souhaitez imbriquer votre nouveau tag. Vous pouvez également imbriquer des étiquettes existantes à partir de la page **Gestion des étiquettes**. Sur cette page, passez la souris sur une ligne contenant votre étiquette et cliquez sur **<i class="fas fa-pencil-alt"></i>Modifier**. Ensuite, suivez les mêmes étapes que précédemment.
+
+![Créez une étiquette imbriquée.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## Bonnes pratiques {#tags-best-practices}
 
@@ -80,16 +98,6 @@ table td {
 </tbody>
 </table>
 
-Vous pouvez utiliser les mêmes balises sur les campagnes, les Canvas et les segments. Pour renommer, supprimer ou ajouter des tags de manière efficace dans votre tableau de bord, accédez à **Paramètres** > **Gestion des tags**.
-
-![Onglet Balises de la page Gérer les paramètres][8]
-
-Pour une meilleure organisation des balises, elles peuvent être insérées sous une balise parent. Toutes les balises de vacances peuvent par exemple être insérées sous une `Holidays`balise parent, ou toutes les balises liées à une étape de l’entonnoir marketing sous une balise parent`Funnel`. 
-
-Pour ce faire, créez un nouveau tag, sélectionnez **Nest Tag Under**, et choisissez le tag existant sous lequel vous souhaitez imbriquer votre nouveau tag. Vous pouvez également imbriquer des étiquettes existantes à partir de la page **Gestion des étiquettes**. Sur cette page, passez la souris sur une ligne contenant votre étiquette et cliquez sur **<i class="fas fa-pencil-alt"></i>Modifier**. Ensuite, suivez les mêmes étapes que précédemment.
-
-![Créer une étiquette imbriquée][1]{: style ="max-width:70%;" }
-
 ## Cas d’utilisation
 
 Vous cherchez de l’inspiration sur la façon d’exploiter les balises pour gérer le cycle de vie de votre messagerie ? Voici quelques exemples d’utilisation courante :
@@ -105,14 +113,3 @@ Limitez la fréquence à laquelle vos clients reçoivent des campagnes d’un ce
 ### Reporting
 
 Configurez un Engagement Report pour garder un œil sur le volume de toutes les campagnes avec une certaine balise. Par exemple, si vous souhaitez surveiller toutes vos campagnes push, vous pouvez ajouter une étiquette telle que `Push Reporting` à ces campagnes, puis implémenter un [rapport d'engagement]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) qui vous enverra chaque jour un rapport sur ces campagnes étiquetées.
-
-
-
-[1]: {% image_buster /assets/img_archive/tag_nested.png %}
-[2]: {% image_buster /assets/img_archive/tags_add_tag.png %}
-[3]: {% image_buster /assets/img_archive/tag_details_page.png %}
-[4]: {% image_buster /assets/img_archive/tags_grid.png %}
-[5]: {% image_buster /assets/img_archive/tags_apply_multiple.png %}
-[6]: {% image_buster /assets/img_archive/tags_filtering.png %}
-[7]: {% image_buster /assets/img_archive/Tags-Potential_Tags.png %}
-[8]: {% image_buster /assets/img_archive/tags_view.png %}
