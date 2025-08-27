@@ -40,9 +40,7 @@ Banner placements are specific locations in your app or website [you create with
 
 Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
 
-- There is no fixed limit on the number of placements you can create per workspace. Create as many placement IDs as your experience requires. Each placement must be unique within a workspace.
-- A single placement ID can be referenced by up to 10 active campaigns at the same time.
-- The SDK limits how often you can request refreshes.
+There is no fixed limit on the number of placements you can create per workspace. Create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 10 active campaigns at the same time.
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
