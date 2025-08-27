@@ -18,7 +18,7 @@ WhatsApp base son [évaluation de la qualité des appels](https://www.facebook.c
 
 La première fois que vous envoyez un message à un utilisateur sur WhatsApp, ces options s'affichent dans le fil de discussion.
 
-![Fil de messages WhatsApp avec des options pour bloquer ou signaler une entreprise][1]{: style="max-width:30%;"}
+![Fil de messages WhatsApp avec options de blocage ou de signalement d'une entreprise]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 Pour obtenir des métriques sur vos blocs et rapports, assurez-vous que l'onglet [Insights](https://www.facebook.com/business/help/683499390267496) est activé dans votre gestionnaire WhatsApp.
@@ -46,7 +46,5 @@ Les désinscriptions n'affectent pas la qualité de votre téléphone, il est do
 
 Une pratique recommandée consiste à fournir des instructions sur la façon de se désinscrire dans le pied de page du premier message que vous envoyez aux utilisateurs. Par exemple, vous pourriez indiquer que les utilisateurs peuvent se désabonner de votre chaîne WhatsApp en répondant avec votre mot déclencheur de désinscription. Vous pourriez également inclure régulièrement le pied de page de désabonnement dans les futures campagnes. Pour savoir comment configurer cette option, voir [Abonnements et désabonnements]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
  
-![Message WhatsApp avec un pied de page indiquant de répondre STOP pour se désabonner du canal][2]{: style="max-width:35%;"}
+![Message WhatsApp avec un pied de page indiquant de répondre STOP pour se désinscrire de la communication]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}).{: style="max-width:35%;"}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}
