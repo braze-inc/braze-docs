@@ -252,7 +252,7 @@ Refer to Tealium's [Trace documentation](https://docs.tealium.com/server-side/co
 
 ## Potential data point overages
 
-If your Braze pricing includes data points, there are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
+There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
 #### Sending duplicate data - only send Braze deltas of attributes
 
@@ -263,7 +263,7 @@ Tealium does not send Braze deltas of user attributes. For example, if you have 
 
 #### Sending irrelevant data or needlessly overwriting data
 
-If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered. This could also result in data being overwritten in Braze and, if your Braze pricing includes data points, logging unnecessary data points.
+If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered, **this could also result in data being overwritten in Braze and consuming unnecessary data points.\
 
 **Solution**: <br>Set up a separate event specification or feed to track each action. <br>**OR**<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 

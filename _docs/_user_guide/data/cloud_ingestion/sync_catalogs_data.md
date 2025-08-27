@@ -281,4 +281,4 @@ FROM [braze].[product_catalog] ;
 
 - The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided.
 - If DELETED is set to `true`, the corresponding catalog item will be deleted.
-- The sync won't log data points, but all data synced will count toward your total catalog usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
+- The sync won't consume data points, but all data synced will count toward your total catalog usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.

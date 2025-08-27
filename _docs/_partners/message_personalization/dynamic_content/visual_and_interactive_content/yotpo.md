@@ -169,7 +169,7 @@ If you don't have any images for a product (such as if the endpoint response ret
 
 #### Can I customize the look and feel, or pull other data fields from Yotpo?
 
-Yes! To discover other data fields and customization options available, refer to [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). You may need some assistance from a front-end developer to do so.
+Yes! To discover other data points and customization options available, refer to [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). You may need some assistance from a front-end developer to do so.
 
 {% alert note %}
 Yotpo does not support custom requirements beyond what is described in this guide.
