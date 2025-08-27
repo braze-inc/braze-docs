@@ -1,7 +1,7 @@
 ---
 nav_title: Tarjetas de contenido
 article_title: Tarjetas de contenido
-page_order: 0
+page_order: 1
 layout: dev_guide
 guide_top_header: "Tarjetas de contenido"
 guide_top_text: "Con las tarjetas de contenido, puede enviar a sus clientes un flujo dinámico y muy específico de contenido enriquecido dentro de las aplicaciones que más les gustan, sin interrumpir su experiencia. Además, las tarjetas de contenido admiten funciones más personalizadas, como la fijación de tarjetas, el descarte de tarjetas, la entrega basada en API, el contenido conectado, los tiempos de caducidad personalizados de las tarjetas, el análisis de tarjetas y la fácil coordinación con las notificaciones push. <br><br>Las tarjetas de contenido están disponibles como característica adicional. Para empezar a utilizar las tarjetas de contenido, póngase en contacto con su gestor de éxito de clientes de Braze."
@@ -29,9 +29,6 @@ guide_featured_list:
 - name: Informe
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   image: /assets/img/braze_icons/pie-chart-01.svg
-- name: Migración desde el canal de noticias
-  link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
-  image: /assets/img/braze_icons/briefcase-01.svg
 - name: Buenas prácticas
   link: /docs/user_guide/message_building_by_channel/content_cards/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

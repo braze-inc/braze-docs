@@ -1,5 +1,5 @@
 ---
-nav_title: Advanced Filters
+nav_title: Advanced filters
 article_title: Advanced Liquid Filters
 page_order: 4
 description: "This reference article lists advanced filters, examples, and how they can be used in your campaign."

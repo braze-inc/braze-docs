@@ -55,7 +55,7 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>Click-to-Open Rate</i> is the percentage of delivered emails that have been opened by a single user or machine at least once, and is only available in the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
+<i>Click-to-Open Rate</i> is the percentage of opened emails that have been clicked by a single user or machine at least once, and is only available in the <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Report Builder</a>.
 {% endif %}
 
 {% if include.metric == "Close Message" %}

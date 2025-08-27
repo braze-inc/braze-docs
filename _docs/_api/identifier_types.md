@@ -1,5 +1,5 @@
 ---
-nav_title: "API Identifier Types"
+nav_title: "API identifier types"
 article_title: API Identifier Types
 page_order: 2.2
 toc_headers: h2

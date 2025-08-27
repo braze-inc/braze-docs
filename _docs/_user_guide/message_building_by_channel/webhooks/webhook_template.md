@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Webhook Template
+nav_title: Creating a webhook template
 article_title: Creating a Webhook Template
 page_order: 2
 tool:

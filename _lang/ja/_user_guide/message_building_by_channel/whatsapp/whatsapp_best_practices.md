@@ -18,7 +18,7 @@ WhatsAppの[電話品質評価は](https://www.facebook.com/business/help/896873
 
 WhatsAppで 初めてユーザーにメッセージを送信すると、以下のオプションがメッセージスレッド内に表示されます。
 
-![WhatsAppのメッセージスレッドには、企業をブロックしたり報告したりするオプションが用意されている。][1]{: style="max-width:30%;"}
+![WhatsApp のメッセージスレッドには、企業をブロックしたり報告したりするオプションが用意されている。]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 ブロックとレポートに関する指標については、WhatsApp Manager の [[Insights] タブ](https://www.facebook.com/business/help/683499390267496)を必ずオンにしてください。
@@ -46,7 +46,5 @@ WhatsApp でユーザーとの通信を開始する前に、必ず、すべて�
 
 推奨されるベストプラクティスは、ユーザーに送信する最初のメッセージのフッターにオプトアウトする方法の手順を記載することです。例えば、ユーザーがオプトアウトをトリガーする言葉を応答することで WhatsApp チャネルを購読解除できる、と記載できます。また、今後のキャンペーンに定期的にオプトアウトのフッターを含めることもできます。この設定方法については、[オプトインとオプトアウトを]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)参照のこと。
  
-![チャネルを購読解除するには STOP を返信するように、と記載されたフッターを持つ WhatsApp メッセージ][2]{: style="max-width:35%;"}
+![チャネルを購読解除するには STOP を返信するように、と記載されたフッターを持つ WhatsApp メッセージ]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}

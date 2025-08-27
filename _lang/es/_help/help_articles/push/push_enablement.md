@@ -16,10 +16,9 @@ La habilitación push se refiere a los usuarios que disponen de un token de noti
 
 La habilitación push en segundo plano se refiere a los usuarios que tienen habilitada la función push, pero que tienen deshabilitadas las notificaciones push en primer plano. En este caso, Braze no puede mostrar notificaciones visibles para el usuario en ese dispositivo. Sin embargo, puedes utilizar push en segundo plano para el seguimiento de las desinstalaciones, habilitar las notificaciones push silenciosas y el geovallado.  
 
-Para más información, consulta nuestro artículo [Acerca de las notificaciones push][1].
+Para más información, consulta nuestro artículo [Acerca de las notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about).
 
 ¿Aún necesitas ayuda? Abre un [ticket de soporte]({{site.baseurl}}/braze_support/).
 
 _Última actualización el 24 de enero de 2021_
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about

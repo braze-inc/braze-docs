@@ -40,8 +40,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "context": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -64,8 +65,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Obligatoria | Cadena | Ver [identificador de Canvas]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Opcional | Objeto | Consulta [las propiedades de entrada en Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Los pares clave-valor de personalización se aplicarán a todos los usuarios de esta solicitud. El objeto Propiedades de entrada del Canvas tiene un límite de tamaño máximo de 50 KB. |
+|`canvas_entry_properties`| Opcional | Objeto | Esto incluye [las propiedades de entrada al Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Los pares clave-valor de personalización se aplicarán a todos los usuarios de esta solicitud. El objeto Propiedades de entrada del Canvas tiene un límite de tamaño máximo de 50 KB. <br><br>**Nota:** Si participas en el [acceso anticipado al Contexto Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), este parámetro es `context` e incluye las propiedades de entrada al Canvas. |
 |`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
+|`segment_id `| Opcional | Cadena | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Opcional| Objeto de audiencia conectado | Ver [Audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Si no se proporciona y `broadcast` está configurado como verdadero, el mensaje se enviará a todo el segmento al que se dirige el Canvas.<br><br> La matriz `recipients` puede contener hasta 50 objetos, cada uno de los cuales contiene una única cadena `external_user_id` y un objeto `canvas_entry_properties`. Esta llamada requiere un `external_user_id`, `user_alias`, o `email`. Las solicitudes deben especificar sólo una. <br><br>Si `email` es el identificador, debes incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) en el objeto destinatario. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

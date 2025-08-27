@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Getting Started
+nav_title: Getting started
 article_title: Getting Started
 layout: dev_guide
 

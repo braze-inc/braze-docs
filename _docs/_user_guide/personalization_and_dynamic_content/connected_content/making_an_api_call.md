@@ -1,5 +1,5 @@
 ---
-nav_title: Making a Connected Content Call
+nav_title: Making a Connected Content call
 article_title: Making a Connected Content API Call
 page_order: 0
 description: "This reference article covers how to make a Connected Content API call, as well as helpful examples and advanced Connected Content use cases."
@@ -100,7 +100,7 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 ### Using token authentication
 
-When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Included in the following call is a code snippet to reference and model your messages off of.
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. For those APIs, you can reference the code snippet in the following call as a model for your message.
 
 {% raw %}
 ```

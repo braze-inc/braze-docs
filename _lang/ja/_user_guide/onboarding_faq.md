@@ -159,7 +159,7 @@ Engagementの下にある**Segments**ページに移動し、現在のユーザ�
 - 多角形領域の場合、セグメントに含めたい領域をより具体的に指定できます。
 
 {% alert tip %}
-Braze パートナーによる支援を受けながら、ロケーションターゲティングを活用することに興味がありますか?Braze の利用可能な[状況に即したロケーションパートナー]({{site.baseurl}}/partners/message_personalization/location)をご覧ください。
+Braze パートナーによる支援を受けながら、ロケーションターゲティングを活用することに興味がありますか?Braze の利用可能な[状況に即したロケーションパートナー]({{site.baseurl}}/partners/message_personalization/)をご覧ください。
 {% endalert %}
 
 {% endapi %}
@@ -436,7 +436,7 @@ Canvases
 Canvases
 {% endapitags %}
 
-例外イベントは、ユーザーが関連するキャンバス・コンポーネントの受信を待っている間だけトリガーされる。ユーザーが事前にアクションを実行した場合、例外イベントはトリガーされません。
+例外イベントがトリガーされるのは、ユーザーがそのイベントに関連するキャンバスコンポーネントの受信を待機している間だけです。ユーザーが事前にアクションを実行した場合、例外イベントはトリガーされません。
 
 事前に特定のイベントを実行したユーザーを除外したい場合は、代わりに[フィルターを]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)使用する。
 

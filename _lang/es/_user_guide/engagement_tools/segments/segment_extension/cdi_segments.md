@@ -31,11 +31,11 @@ Antes de crear su primer Segmento CDI, configure una nueva Fuente Conectada con 
 
 En primer lugar, cree una nueva [Extensión de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) y, a continuación, seleccione **Actualización completa**.
 
-![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 Para tu origen de datos, elige **Tablas de datos CDI**.
 
-![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 Como parte de su configuración CDI, puede seleccionar entre diferentes conexiones para utilizar en segmentos CDI. Cada conexión tiene un conjunto específico de tablas de datos. Su equipo de desarrollo puede configurar sus conexiones y tablas de datos durante la configuración de CDI.
 

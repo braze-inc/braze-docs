@@ -1,5 +1,5 @@
 ---
-nav_title: Message Engagement Events
+nav_title: Message engagement events
 layout: message_engagement_events_glossary
 alias: /message_events_glossary/
 page_order: 5
@@ -74,7 +74,7 @@ Certain fields might take longer to display their most recent state after a camp
 If complete consistency is required, we recommend waiting an hour from the last update to these fields before sending out your messaging to your users.
 {% endalert %}
 {% api %}
-## Uninstall events
+## Uninstall events {#uninstall-events}
 
 {% apitags %}
 Uninstall
@@ -203,7 +203,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 {% endapi %}
 
 {% api %}
-## Global Subscription State Change events
+## Global Subscription State Change events {#global-subscription-state-change-events}
 
 {% apitags %}
 Subscription
@@ -426,7 +426,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 {% endapi %}
 
 {% api %}
-## Subscription Group State Change events
+## Subscription Group State Change events {#subscription-group-state-change-events}
 
 {% apitags %}
 Subscription
@@ -668,7 +668,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 {% endapi %}
 
 {% api %}
-## Campaign Conversion events
+## Campaign Conversion events {#campaign-conversion-events}
 
 {% apitags %}
 Campaign, Conversion
@@ -841,7 +841,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {% endapi %}
 
 {% api %}
-## Campaign Control Group Enrollment events
+## Campaign Control Group Enrollment events {#campaign-control-group-enrollment-events}
 
 {% apitags %}
 Campaign, Entry
@@ -1000,7 +1000,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 {% endapi %}
 
 {% api %}
-## Canvas Conversion events
+## Canvas Conversion events {#canvas-conversion-events}
 
 {% apitags %}
 Canvas, Conversion
@@ -1170,7 +1170,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {% endapi %}
 
 {% api %}
-## Canvas Entry events
+## Canvas Entry events {#canvas-entry-events}
 
 {% apitags %}
 Canvas, Entry
@@ -1327,7 +1327,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
 {% endapi %}
 
 {% api %}
-## Exit Match Audience events
+## Exit Match Audience events {#exit-match-audience-events}
 
 {% apitags %}
 Exit, Canvas
@@ -1476,7 +1476,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
 {% endapi %}
 
 {% api %}
-## Exit Perform Event events
+## Exit Perform Event events {#exit-perform-event-events}
 
 {% apitags %}
 Exit, Canvas
@@ -1625,10 +1625,10 @@ This event occurs when a user has exited a Canvas by performing an event.
 {% endapi %}
 
 {% api %}
-## Experiment Step Conversion events
+## Experiment Step Conversion events {#experiment-step-conversion-events}
 
 {% apitags %}
-Experiment Step, Canvas
+Canvas
 {% endapitags %}
 
 This event occurs when a user convert for a Canvas experiment step.
@@ -1794,10 +1794,10 @@ This event occurs when a user convert for a Canvas experiment step.
 {% endapi %}
 
 {% api %}
-## Experiment Split Entry events
+## Experiment Split Entry events {#experiment-split-entry-events}
 
 {% apitags %}
-Experiment Step, Canvas
+Canvas
 {% endapitags %}
 
 This event occurs when a user enters a Canvas experiment step path.
@@ -1954,10 +1954,10 @@ This event occurs when a user enters a Canvas experiment step path.
 {% endapi %}
 
 {% api %}
-## Canvas Step Progression events
+## Canvas Step Progression events {#canvas-step-progression-events}
 
 {% apitags %}
-CanvasStep, Progression
+Canvas, Progression
 {% endapitags %}
 
 This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
@@ -2131,7 +2131,7 @@ This event occurs when a user progresses through a step in a Canvas with some ou
 {% endapi %}
 
 {% api %}
-## Banner Abort events
+## Banner Abort events {#banner-abort-events}
 
 {% apitags %}
 Banner, Abort
@@ -2338,10 +2338,10 @@ This event occurs when an originally scheduled banner message was aborted for so
 {% endapi %}
 
 {% api %}
-## Banner Click events
+## Banner Click events {#banner-click-events}
 
 {% apitags %}
-Banner, Click
+Banner, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a banner.
@@ -2540,7 +2540,7 @@ This event occurs when a user clicks a banner.
 {% endapi %}
 
 {% api %}
-## Banner Impression events
+## Banner Impression events {#banner-impression-events}
 
 {% apitags %}
 Banner, Impressions
@@ -2737,7 +2737,7 @@ This event occurs when a user views a banner.
 {% endapi %}
 
 {% api %}
-## Content Card Abort events
+## Content Card Abort events {#content-card-abort-events}
 
 {% apitags %}
 Abort, Content Cards
@@ -2931,7 +2931,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 {% endapi %}
 
 {% api %}
-## Content Card Click events
+## Content Card Click events {#content-card-click-events}
 
 {% apitags %}
 Content Cards, Clicks
@@ -3164,7 +3164,7 @@ This event occurs when a user clicks a Content Card.
 {% endapi %}
 
 {% api %}
-## Content Card Dismiss events
+## Content Card Dismiss events {#content-card-dismiss-events}
 
 {% apitags %}
 Content Cards, Dismissal
@@ -3397,7 +3397,7 @@ This event occurs when a user dismisses a Content Card.
 {% endapi %}
 
 {% api %}
-## Content Card Impression events
+## Content Card Impression events {#content-card-impression-events}
 
 {% apitags %}
 Content Cards, Impressions
@@ -3630,7 +3630,7 @@ This event occurs when a user views a Content Card.
 {% endapi %}
 
 {% api %}
-## Content Card Send events
+## Content Card Send events {#content-card-send-events}
 
 {% apitags %}
 Content Cards, Sends
@@ -3829,7 +3829,7 @@ This event occurs when a Content Card gets sent to a user.
 {% endapi %}
 
 {% api %}
-## Email Abort events
+## Email Abort events {#email-abort-events}
 
 {% apitags %}
 Abort, Email
@@ -4034,7 +4034,7 @@ This event occurs if an email message was aborted based on Liquid aborts, etc.
 {% endapi %}
 
 {% api %}
-## Email Bounce events
+## Email Bounce events {#email-bounce-events}
 
 {% apitags %}
 Email, Bounce
@@ -4251,7 +4251,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 {% endapi %}
 
 {% api %}
-## Email Click events
+## Email Click events {#email-click-events}
 
 {% apitags %}
 Email, Clicks
@@ -4517,7 +4517,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
 {% endapi %}
 
 {% api %}
-## Email Deferral events
+## Email Deferral events {#email-deferral-events}
 
 {% apitags %}
 Email, Deferral
@@ -4735,7 +4735,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
 {% endapi %}
 
 {% api %}
-## Email Delivery events
+## Email Delivery events {#email-delivery-events}
 
 {% apitags %}
 Email, Delivery
@@ -4942,7 +4942,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
 {% endapi %}
 
 {% api %}
-## Email Mark As Spam events
+## Email Mark As Spam events {#email-mark-as-spam-events}
 
 {% apitags %}
 Email, Spam
@@ -5153,7 +5153,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
 {% endapi %}
 
 {% api %}
-## Email Open events
+## Email Open events {#email-open-events}
 
 {% apitags %}
 Email, Opens
@@ -5404,7 +5404,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 {% endapi %}
 
 {% api %}
-## Email Send events
+## Email Send events {#email-send-events}
 
 {% apitags %}
 Email, Sends
@@ -5610,7 +5610,7 @@ This event occurs when an email send request was successfully communicated betwe
 {% endapi %}
 
 {% api %}
-## Email Soft Bounce events
+## Email Soft Bounce events {#email-soft-bounce-events}
 
 {% apitags %}
 Email, Bounce
@@ -5822,7 +5822,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
 {% endapi %}
 
 {% api %}
-## Email Unsubscribe events
+## Email Unsubscribe events {#email-unsubscribe-events}
 
 {% apitags %}
 Email, Subscription
@@ -6022,10 +6022,10 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 {% endapi %}
 
 {% api %}
-## Feature Flag Experiment Impression events
+## Feature Flag Experiment Impression events {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-FeatureFlags, Impression
+Feature Flags, Impressions
 {% endapitags %}
 
 This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
@@ -6235,13 +6235,13 @@ Feature flag impressions are only logged once per session.
 {% endapi %}
 
 {% api %}
-## In-App Message Abort events
+## In-App Message Abort events {#in-app-message-abort-events}
 
 {% apitags %}
 In-App Messages, Abort
 {% endapitags %}
 
-This event occurs when an originally scheduled in-app message was aborted.
+This event occurs when an originally scheduled [templated in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages) was aborted.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -6474,7 +6474,7 @@ This event occurs when an originally scheduled in-app message was aborted.
 {% endapi %}
 
 {% api %}
-## In-App Message Click events
+## In-App Message Click events {#in-app-message-click-events}
 
 {% apitags %}
 In-App Messages, Clicks
@@ -6712,7 +6712,7 @@ This event occurs when a user clicks on an in-app message.
 {% endapi %}
 
 {% api %}
-## In-App Message Impression events
+## In-App Message Impression events {#in-app-message-impression-events}
 
 {% apitags %}
 In-App Messages, Impressions
@@ -6955,10 +6955,10 @@ This event occurs when a user views an in-app message.
 {% endapi %}
 
 {% api %}
-## Live Activity Outcome events
+## Live Activity Outcome events {#live-activity-outcome-events}
 
 {% apitags %}
-Live Activity, Outcome
+Live Activity
 {% endapitags %}
 
 This event occurs when Braze receives a response from a third party provider (e.g. APNs) after the Live Activity send
@@ -7105,7 +7105,7 @@ This event occurs when Braze receives a response from a third party provider (e.
 {% endapi %}
 
 {% api %}
-## Live Activity Send events
+## Live Activity Send events {#live-activity-send-events}
 
 {% apitags %}
 Live Activity, Sends
@@ -7250,7 +7250,7 @@ This event occurs when Braze backend makes a request to its provider regarding L
 {% endapi %}
 
 {% api %}
-## Push Notification Abort events
+## Push Notification Abort events {#push-notification-abort-events}
 
 {% apitags %}
 Abort, Push
@@ -7454,7 +7454,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
 {% endapi %}
 
 {% api %}
-## Push Notification Bounce events
+## Push Notification Bounce events {#push-notification-bounce-events}
 
 {% apitags %}
 Push, Sends, Bounce
@@ -7669,7 +7669,7 @@ This event occurs when an error is received from either Apple Push Notification 
 {% endapi %}
 
 {% api %}
-## Push Notification iOS Foreground Open events
+## Push Notification iOS Foreground Open events {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
 Push, iOS, Sends
@@ -7838,7 +7838,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 {% endapi %}
 
 {% api %}
-## Push Notification Open events
+## Push Notification Open events {#push-notification-open-events}
 
 {% apitags %}
 Push, Opens
@@ -8066,7 +8066,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 {% endapi %}
 
 {% api %}
-## Push Notification Send events
+## Push Notification Send events {#push-notification-send-events}
 
 {% apitags %}
 Push, Sends
@@ -8293,7 +8293,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 {% endapi %}
 
 {% api %}
-## SMS Abort events
+## SMS Abort events {#sms-abort-events}
 
 {% apitags %}
 Abort, SMS
@@ -8474,7 +8474,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, etc.
 {% endapi %}
 
 {% api %}
-## SMS Carrier Send events
+## SMS Carrier Send events {#sms-carrier-send-events}
 
 {% apitags %}
 SMS, Sends
@@ -8677,7 +8677,7 @@ This event occurs when an SMS is sent to the carrier.
 {% endapi %}
 
 {% api %}
-## SMS Delivery events
+## SMS Delivery events {#sms-delivery-events}
 
 {% apitags %}
 SMS, Delivery
@@ -8876,7 +8876,7 @@ This event occurs when an SMS was successfully delivered to the user's mobile ph
 {% endapi %}
 
 {% api %}
-## SMS Delivery Failure events
+## SMS Delivery Failure events {#sms-delivery-failure-events}
 
 {% apitags %}
 SMS, Delivery
@@ -9080,10 +9080,10 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 {% endapi %}
 
 {% api %}
-## SMS Inbound Received events
+## SMS Inbound Received events {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, InboundReceived
+SMS, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.
@@ -9281,7 +9281,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
 {% endapi %}
 
 {% api %}
-## SMS Rejection events
+## SMS Rejection events {#sms-rejection-events}
 
 {% apitags %}
 SMS, Rejection
@@ -9490,7 +9490,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 {% endapi %}
 
 {% api %}
-## SMS Send events
+## SMS Send events {#sms-send-events}
 
 {% apitags %}
 SMS, Sends
@@ -9697,7 +9697,7 @@ This event occurs when a user sends an SMS.
 {% endapi %}
 
 {% api %}
-## SMS Short Link Click events
+## SMS Short Link Click events {#sms-short-link-click-events}
 
 {% apitags %}
 SMS, Clicks
@@ -9900,7 +9900,7 @@ This event occurs when a user clicks an SMS short link.
 {% endapi %}
 
 {% api %}
-## Webhook Abort events
+## Webhook Abort events {#webhook-abort-events}
 
 {% apitags %}
 Abort, Webhooks
@@ -10094,7 +10094,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, etc.
 {% endapi %}
 
 {% api %}
-## Webhook Failure events
+## Webhook Failure events {#webhook-failure-events}
 
 {% apitags %}
 Failure, Webhooks
@@ -10320,7 +10320,7 @@ This event occurs if a webhook message was delivered but failed with an error re
 {% endapi %}
 
 {% api %}
-## Webhook Send events
+## Webhook Send events {#webhook-send-events}
 
 {% apitags %}
 Webhooks, Sends
@@ -10510,7 +10510,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 {% endapi %}
 
 {% api %}
-## WhatsApp Abort events
+## WhatsApp Abort events {#whatsapp-abort-events}
 
 {% apitags %}
 WhatsApp, Abort
@@ -10711,10 +10711,10 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 {% endapi %}
 
 {% api %}
-## WhatsApp Tracked Link Click events
+## WhatsApp Tracked Link Click events {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp, Click
+WhatsApp, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
@@ -10907,7 +10907,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
 {% endapi %}
 
 {% api %}
-## WhatsApp Delivery events
+## WhatsApp Delivery events {#whatsapp-delivery-events}
 
 {% apitags %}
 WhatsApp, Delivery
@@ -11108,7 +11108,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 {% endapi %}
 
 {% api %}
-## WhatsApp Failure events
+## WhatsApp Failure events {#whatsapp-failure-events}
 
 {% apitags %}
 WhatsApp, Failure
@@ -11319,10 +11319,10 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 {% endapi %}
 
 {% api %}
-## WhatsApp Inbound Received events
+## WhatsApp Inbound Received events {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, InboundReceived
+WhatsApp, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
@@ -11529,7 +11529,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 {% endapi %}
 
 {% api %}
-## WhatsApp Read events
+## WhatsApp Read events {#whatsapp-read-events}
 
 {% apitags %}
 WhatsApp, Read
@@ -11730,7 +11730,7 @@ This event occurs when an WhatsApp message is read by the end user.
 {% endapi %}
 
 {% api %}
-## WhatsApp Send events
+## WhatsApp Send events {#whatsapp-send-events}
 
 {% apitags %}
 WhatsApp, Sends

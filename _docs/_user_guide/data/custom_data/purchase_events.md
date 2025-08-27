@@ -1,5 +1,5 @@
 ---
-nav_title: Purchase Events
+nav_title: Purchase events
 article_title: Purchase Events
 page_order: 8
 page_type: reference
@@ -15,7 +15,7 @@ Purchase events are purchase actions taken by your users, and are used to record
 
 ## Logging purchase events
 
-You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), or using one of our SDK libraries listed below.
 
 The following lists methods across various platforms that are used to log purchases. Within these pages, you'll also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 

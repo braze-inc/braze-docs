@@ -46,7 +46,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 Ensuite, attribuons nos événements de conversion. Les événements de conversion sont un type d'indicateurs qui peuvent être utilisés pour mesurer le succès du canvas. Pour **Nom de l'événement personnalisé**, sélectionnez **Clic e-mail** comme événement personnalisé.
 
-![Événement de conversion principal - Un événement dont le type de conversion est "Exécution d'un événement personnalisé" et dont le nom d'événement personnalisé est "Clic sur l'e-mail". Le délai de conversion est de 4 jours.][1]
+![Événement de conversion principal - Un événement dont le type de conversion est "Exécution d'un événement personnalisé" et dont le nom d'événement personnalisé est "Clic sur l'e-mail". Le délai de conversion est de 4 jours.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 Cela signifie que les nouveaux utilisateurs ont jusqu'à quatre jours pour cliquer sur l'e-mail de bienvenue. Dans ce cas, nous voulons que nos nouveaux utilisateurs ressentent un sentiment d'urgence à s'engager avec PantsLabyrinth et à s'abonner à une réception/distribution récurrente sur des vêtements de saison.
 
@@ -56,7 +56,7 @@ L'objectif étant de cibler les nouveaux utilisateurs de PantsLabyrinth, le Canv
 
 Ajustez ensuite la **fenêtre d'entrée** pour déterminer quand les utilisateurs peuvent entrer dans le Canvas. Supposons qu'un abonnement à PantsLabyrinth soit lancé à la fin du mois d'octobre. C'est ici que nous fixerons l'heure de début à **2024/10/28 8:00 am.** En option, nous pouvons également permettre aux utilisateurs de saisir le Canvas dans leur fuseau horaire local.
 
-![Une fenêtre d'entrée avec l'heure de début le 28 octobre 2024 à 8h. Les utilisateurs saisiront ce message dans leur fuseau horaire local.][4]
+![Une fenêtre d'entrée avec l'heure de début le 28 octobre 2024 à 8h. Les utilisateurs entreront ce message dans leur fuseau horaire local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Étape 4 : Ciblez votre audience
 
@@ -82,7 +82,7 @@ Désormais, nos utilisateurs recevront cet e-mail de bienvenue après avoir dém
 
 Dans l'étape du parcours d'audience nommée **Fractionnement de l'audience**, nous pouvons personnaliser le filtre pour nos utilisateurs engagés. Dans le modèle, le filtre est **L'e-mail cliqué pour l'étape Email de bienvenue**, ce qui signifie que les utilisateurs sont divisés en deux groupes : les utilisateurs qui ont cliqué sur l'e-mail de bienvenue et ceux qui ne l'ont pas fait.
 
-![Une étape de fractionnement de l'audience avec un parcours pour les utilisateurs engagés et un parcours pour tous les autres.][2]{: style="max-width:70%;"}
+![Une étape de fractionnement de l'audience avec un parcours pour les utilisateurs engagés et un parcours pour tous les autres.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 En tant que retailing de vêtements en ligne, PantsLabyrinth dispose également d'un groupe actif d'utilisateurs mobiles. Ainsi, dans un Canvas d'onboarding séparé, nous pouvons également sélectionner le filtre suivant pour identifier et répartir nos utilisateurs mobiles dans ces segments :
 
@@ -101,7 +101,3 @@ Après avoir testé et examiné notre canvas pour vous assurer qu'il fonctionne 
 Consultez notre [liste de contrôle avant]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) et après le lancement pour connaître les éléments à prendre en compte avant et après le lancement d'un Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}

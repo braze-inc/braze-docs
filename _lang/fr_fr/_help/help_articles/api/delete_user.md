@@ -11,7 +11,7 @@ platform: API
 
 # Suppression des utilisateurs via l'API
 
-Lorsque vous [supprimez un utilisateur via l'API REST de Braze][1], les données suivantes sont supprimées (nulles) :
+Lorsque vous [supprimez un utilisateur via l'API REST de Braze]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), les données suivantes sont supprimées (nulles) :
 - Tous les attributs de l’utilisateur
 - Adresse e-mail
 - Numéro de téléphone
@@ -20,9 +20,9 @@ Lorsque vous [supprimez un utilisateur via l'API REST de Braze][1], les données
 - Pays
 - Langue
 
-Lorsque vous [supprimez un utilisateur via l'API REST de Braze][1], les événements suivants se produisent :
+Lorsque vous [supprimez un utilisateur via l'API REST de Braze]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), les événements suivants se produisent :
 - Le profil utilisateur est supprimé (nulled).
-- Le nombre d'[utilisateurs à vie][2] sera mis à jour pour tenir compte des nouveaux utilisateurs supprimés.	
+- Le nombre d'[utilisateurs à vie]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) sera mis à jour pour tenir compte des nouveaux utilisateurs supprimés.	
 - L'utilisateur supprimé sera toujours pris en compte dans le pourcentage de conversion agrégé. Les comptes d'événements personnalisés et les comptes d'achats ne seront pas mis à jour pour les utilisateurs supprimés.
 
 ## Plusieurs profils avec une adresse e-mail partagée
@@ -38,5 +38,3 @@ Pour fusionner ces profils utilisateur :
 
 _Dernière mise à jour le 13 septembre 2023_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

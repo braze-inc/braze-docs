@@ -22,7 +22,7 @@ Se han añadido a la plataforma de Braze los nuevos [filtros de codificación`hm
 
 ## Página de eventos de compra
 
-¿Tienes curiosidad por conocer los detalles de los eventos de compra en Braze? Visita nuestro artículo dedicado [al evento de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) para saber más.
+¿Tienes curiosidad por conocer los detalles de los eventos de compra en Braze? Visita nuestro artículo dedicado [al evento de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) para saber más.
 
 ## Nuevas asociaciones Braze
 

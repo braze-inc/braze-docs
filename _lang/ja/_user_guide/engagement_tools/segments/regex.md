@@ -1,7 +1,7 @@
 ---
 nav_title: "正規表現"
 article_title: 正規表現
-page_order: 6
+page_order: 10
 
 description: "この参考記事では、正規表現（regex）とは何か、どのように正規表現を使い始めるか、そして正規表現を検証しテストするためのデバッガー機能を提供しています。"
 page_type: reference
@@ -16,13 +16,13 @@ tool:
 
 > 正規表現は、一般に「regex」として知られ、検索パターンを定義する文字のシーケンスです。正規表現では、テキストのグループ化を検証し、検索と置換を実行できます。Braze では、正規表現を活用し、ターゲットのセグメンテーションやキャンペーンのフィルタリングにおいて、より柔軟な文字列マッチングソリューションを提供します。<br><br>このページでは、正規表現(regex)、その使用方法、よくある質問、正規表現をテストするための正規表現デバッガーについて説明します。
 
-リンク先の Braze Learning コースでは、[Regex101][regex] で正規表現がどのように使用され、テストされるかを紹介しています。また、[社内の正規表現テスター](#regex-debugger)、役立つ参考ページ、正規表現 Braze ラーニングビデオで参照されているサンプルデータ、よくある質問も提供しています。
+リンク先の Braze Learning コースでは、[Regex101](https://regex101.com/) で正規表現がどのように使用され、テストされるかを紹介しています。また、[社内の正規表現テスター](#regex-debugger)、役立つ参考ページ、正規表現 Braze ラーニングビデオで参照されているサンプルデータ、よくある質問も提供しています。
 
 ## リソース
 
 - [正規表現の基礎](https://learning.braze.com/regular-expression-basics-for-braze) Braze ラーニングコース 
 - [正規表現チートシート]({{site.baseurl}}/regex_cheat_sheet/)
-- [サンプルデータ RTF][dummydata]
+- [サンプルデータ RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## 正規表現デバッガー
 
@@ -194,7 +194,7 @@ $( document ).ready(function() {
 
 #### 特定の電話番号をフィルタリングする方法を教えてください。
 
-正規表現を使用して電話番号をフィルター処理するには、ユーザープロファイルに記録されている番号が、「[ユーザーの電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/)」で指定されているように、[E.164](https://en.wikipedia.org/wiki/E.164) 形式でなければいけません。
+正規表現を使用して電話番号をフィルター処理するには、ユーザープロファイルに記録されている番号が、「[ユーザーの電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/)」で指定されているように、[E.164](https://en.wikipedia.org/wiki/E.164) 形式でなければいけません。
 
 米国の電話番号を検索すると仮定すると、正規表現フォーマット `1?\d\d\d\d\d\d\d\d\d\d` を使用します。`\d` の各繰り返しは、指定したい桁数です。最初の 3 桁は市外局番です。
 
@@ -209,5 +209,3 @@ $( document ).ready(function() {
 ![正規表現「^1?718\\d\\d\\d\\d\\d\\d\\d」に一致する電話番号のフィルター。]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
-[regex]: https://regex101.com/
-[dummydata] ： {% image_buster /assets/download_file/regex-dummy-data.rtf %}

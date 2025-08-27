@@ -71,52 +71,52 @@ Você pode atualizar o estado da inscrição de um usuário com o Braze SDK usan
 
 #### API REST
 
-É possível atualizar o estado da inscrição de um usuário com a Braze REST API usando o [endpoint `/users/track`][users-track] para atualizar o atributo [`push_subscribe`][user_attributes_object].
+Você pode atualizar o estado da inscrição de um usuário com a API Braze REST usando o [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para atualizar seu [`push_subscribe`]({{site.baseurl}}/api/objects_filters/user_attributes_object) atribuição.
 
 ### Verificação do estado da inscrição push
 
-![Perfil de usuário para John Doe com seu estado de inscrição push definido como Subscribed (Inscrito).][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Perfil de usuário para John Doe com seu estado de inscrição push definido como Subscribed (Inscrito).]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Há duas maneiras de verificar o estado da inscrição push de um usuário na Braze:
 
-1. **Perfil do usuário**: Você pode acessar perfis de usuários individuais por meio do dashboard do Braze na página **[User Search][5]** ]. Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
+1. **Perfil do usuário**: Você pode acessar perfis de usuários individuais por meio do dashboard do Braze, na seção **[Pesquisa de usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** página. Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
 <br><br>
-2. **Exportação da API Rest**: É possível exportar perfis de usuários individuais no formato JSON usando os pontos de extremidade de exportação [Users by segment][segment] ou [Users by identifier][identifier]. A Braze retornará um objeto de tokens por push que contém informações de capacitação por push por dispositivo.
+2. **Exportação da API Rest**: É possível exportar perfis de usuários individuais no formato JSON usando os pontos de extremidade Exportar [usuários por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Usuários por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). A Braze retornará um objeto de tokens por push que contém informações de capacitação por push por dispositivo.
 
 ## Permissão de push
 
 Todas as plataformas com capacitação push – iOS, Web e Android – exigem aceitação explícita por meio de um pedido de aceitação do sistema em nível de sistema operacional, com algumas pequenas diferenças descritas abaixo.
 
-Como a decisão do usuário é final e não é possível perguntar novamente depois que ele recusar, usar [push primer][push-primers] mensagens no app é uma estratégia importante para aumentar suas taxas de aceitação.
+Como a decisão de um usuário é final e não é possível perguntar novamente depois que ele recusar, o uso de mensagens no app com cartilha [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) é uma estratégia importante para aumentar suas taxas de aceitação.
 
 **Solicitações de permissão push do sistema operacional nativo**
 
 |Plataforma|Captura de tela|Descrição|
 |--|--|--|
-|iOS| ![Uma notificação por push nativa do iOS perguntando "My App would like to send you notifications" (Meu aplicativo gostaria de enviar notificações) com dois botões, "Don't Allow" (Não permitir) e "Allow" (Permitir), na parte inferior da mensagem.][ios-push-prompt]{: style="max-width:410px;"} | Isso não se aplica ao solicitar permissão provisória de push [](#provisional-push).|
-|Android| ![Uma mensagem push do Android perguntando "Allow Kitchenerie to send you notifications?" (Permitir que o Kitchenerie envie notificações para você) com dois botões, "Allow" (Permitir) e "Don't allow" (Não permitir), na parte inferior da mensagem.][android-push-prompt]{: style="max-width:410px;"} | Essa permissão push foi introduzida no Android 13. Antes do Android 13, não era necessária permissão para enviar push.|
-|Web| ![Um prompt push nativo do navegador da Web perguntando "Braze.com quer mostrar notificação com dois botões, "Bloquear" e "Permitir" na parte inferior da mensagem.][web-push-prompt]{: style="max-width:410px;"} | |
+|iOS| ![Uma notificação por push nativa do iOS perguntando "My App would like to send you notifications" (Meu app gostaria de lhe enviar notificações) com dois botões, "Don't Allow" (Não permitir) e "Allow" (Permitir), na parte inferior da mensagem.]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | Isso não se aplica ao solicitar permissão provisória de push [](#provisional-push).|
+|Android| ![Uma mensagem push do Android perguntando "Allow Kitchenerie to send you notifications?" (Permitir que o Kitchenerie envie notificações para você) com dois botões, "Allow" (Permitir) e "Don't allow" (Não permitir), na parte inferior da mensagem.]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | Essa permissão push foi introduzida no Android 13. Antes do Android 13, não era necessária permissão para enviar push.|
+|Web| ![Um prompt push nativo do navegador da Internet perguntando "Braze.com wants to show notification" ( quer mostrar notificação) com dois botões, "Block" (bloquear) e "Allow" (permitir) na parte inferior da mensagem.]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Android
 
 Antes do Android 13, não era necessária permissão para enviar notificações por push. No Android 12 e versões anteriores, todos os usuários são considerados `Subscribed` na primeira sessão, quando a Braze solicita automaticamente um token por push. Nesse ponto, o usuário está **ativado por push** com um token por push válido para esse dispositivo e um estado de inscrição padrão de `Subscribed`.
 
-A partir de [Android 13][android-13], a permissão push deve ser solicitada e concedida pelo usuário. Seu aplicativo pode solicitar manualmente a permissão do usuário em momentos oportunos, mas, caso contrário, os usuários serão solicitados automaticamente quando seu app criar um [canal de notificação](https://developer.android.com/reference/android/app/NotificationChannel).
+A partir do [Android 13]({{site.baseurl}}/developer_guide/platforms/android/android_13/), a permissão push deve ser solicitada e concedida pelo usuário. Seu aplicativo pode solicitar manualmente a permissão do usuário em momentos oportunos, mas, caso contrário, os usuários serão solicitados automaticamente quando seu app criar um [canal de notificação](https://developer.android.com/reference/android/app/NotificationChannel).
 
 ### iOS
 
-![Uma notificação na Central de notificações do sistema com uma mensagem na parte inferior perguntando: "Continuar recebendo notificações do app Yachtr?" com dois botões abaixo para "Manter" ou "Desativar"][ios-provisional-push]{: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+![Uma notificação na Central de Notificações do sistema com uma mensagem na parte inferior perguntando: "Continuar recebendo notificações do app Yachtr?" com dois botões abaixo para "Manter" ou "Desativar"]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
 
 Seu app pode solicitar push provisório ou push autorizado. 
 
-O push autorizado requer permissão explícita de um usuário antes de enviar qualquer notificação, enquanto o [provisional push][provisional-blog] permite enviar notificações __silenciosamente__, diretamente para a central de notificações, sem nenhum som ou alerta.
+O push autorizado requer permissão explícita de um usuário antes de enviar qualquer notificação, enquanto [o push provisório](https://www.braze.com/resources/articles/mastering-provisional-push) permite enviar notificações __silenciosamente__, diretamente para a central de notificações, sem nenhum som ou alerta.
 
 #### Autorização provisória e push silencioso {#provisional-push}
 
 Antes do iOS 12 (lançado em 2018), todos os usuários devem fazer a aceitação explícita para receber notificações por push.
 
-No iOS 12, a Apple introduziu a [autorização provisória][provisional-blog], permitindo que as marcas enviem notificações por push silenciosas para a central de notificações de seus usuários antes da aceitação explícita, dando-lhe a chance de demonstrar o valor de suas mensagens antecipadamente. Consulte a [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) para saber mais.
+No iOS 12, a Apple introduziu a [autorização provisória](https://www.braze.com/resources/articles/mastering-provisional-push), permitindo que as marcas enviem notificações por push silenciosas para a central de notificações de seus usuários antes da aceitação explícita, dando-lhe a chance de demonstrar o valor de suas mensagens antecipadamente. Consulte a [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) para saber mais.
 
 ### Web
 
@@ -128,9 +128,9 @@ Como resultado, você deve pedir permissão somente quando um usuário clicar em
 
 ## Tokens por push
 
-[Push tokens][push-tokens] são um identificador anônimo exclusivo gerado pelo dispositivo de um usuário e enviado ao Braze para identificar para onde enviar a notificação de cada destinatário.
+[Os tokens por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) são um identificador anônimo exclusivo gerado pelo dispositivo de um usuário e enviado ao Braze para identificar para onde enviar a notificação de cada destinatário.
 
-Há duas maneiras de classificar um [push token][push-tokens] ] que são essenciais para entender como uma notificação por push pode ser enviada aos seus usuários.
+Há duas maneiras de classificar um [token por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) que são essenciais para entender como uma notificação por push pode ser enviada aos seus usuários.
 
 1. **O push em primeiro plano** oferece a capacidade de enviar notificações por push visíveis regularmente para o primeiro plano do dispositivo do usuário.
 2. **O push em segundo plano** está disponível independentemente do fato de um dispositivo específico ter aceitado receber notificações por push dessa marca. O push em segundo plano permite que as marcas enviem notificações por push silenciosas - notificações que intencionalmente não são exibidas - aos dispositivos para oferecer suporte a funcionalidades importantes, como [rastreamento de desinstalação]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
@@ -149,7 +149,7 @@ Por exemplo, digamos que você tenha dois usuários: Charlie e Kim. Se Charlie t
 
 Um app ou site só pode ter uma inscrição push por dispositivo. Portanto, quando um usuário sai de um dispositivo ou site e um novo usuário faz o registro, o token por push é reatribuído ao novo usuário. Isso é refletido no perfil do usuário, na seção **Configurações de contato** da guia **Engajamento**:
 
-![O changelog do token por push na guia \*\*Engajamento** do perfil de um usuário, que lista quando o token por push foi movido para outro usuário e qual era o token.][4]
+![Token por push changelog na guia \*\*Engagement** do perfil de um usuário, que lista quando o token por push foi movido para outro usuário e qual era o token.]({% image_buster /assets/img/push_token_changelog.png %})
 
 Como não há uma maneira de os provedores de push (APNs/FCM) distinguirem entre vários usuários em um dispositivo, passamos o token por push para o último usuário que estava registrado para determinar qual usuário deve ser direcionado no dispositivo para push.
 
@@ -165,7 +165,7 @@ O filtro `Push Enabled` leva em conta o seguinte:
 - A capacidade do Braze de enviar uma notificação por push (token por push em primeiro plano)
 - A preferência geral do usuário para receber push em qualquer um de seus dispositivos (estado da inscrição push)
 
-![Uma captura de tela do dashboard mostrando que um usuário é "Push Registered for Marketing (iOS)"][1]{: style="float:right;max-width:50%;margin-left:15px;"}
+![Uma captura de tela do dashboard mostrando que um usuário é "Push Registered for Marketing (iOS)"]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Um usuário é considerado "ativado por push" ou "registrado por push" se tiver um token por push em primeiro plano ativo para um app no seu espaço de trabalho, o que significa que o status de capacitação por push é específico do app. 
 
@@ -225,20 +225,3 @@ As plataformas da Web não permitem push em segundo plano ou silencioso.
 
 Consulte nosso artigo dedicado às [práticas recomendadas de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices) para obter orientações detalhadas sobre como otimizar o uso do push no Braze.
 
-[1]: {% image_buster /assets/img/push_enablement.png %}
-[2]: {% image_buster /assets/img/push_changelog.png %}
-[3]: {% image_buster /assets/img/push_example.png %}
-[4]: {% image_buster /assets/img/push_token_changelog.png %}
-[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segmento]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[ios-push-prompt]: {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
-[android-push-prompt]: {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
-[web-push-prompt]: {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
-[ios-provisional-push]: {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
-[push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[android-13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
-[provisional-blog]: https://www.braze.com/resources/articles/mastering-provisional-push
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

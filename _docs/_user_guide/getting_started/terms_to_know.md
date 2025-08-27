@@ -1,6 +1,6 @@
 ---
 page_order: 10
-nav_title: Terms to Know
+nav_title: Terms to know
 article_title: Braze Terms to Know
 
 layout: glossary_page
