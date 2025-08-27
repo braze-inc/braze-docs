@@ -1,7 +1,7 @@
 ---
 nav_title: Custom data
 article_title: Custom Data
-page_order: 4
+page_order: 0
 layout: dev_guide
 guide_top_header: "Custom Data"
 guide_top_text: "One of the best parts about Braze is its flexibility—you can set up custom data in your app and have it and its associated metrics sent to Braze. Check out how by visiting the following articles."
