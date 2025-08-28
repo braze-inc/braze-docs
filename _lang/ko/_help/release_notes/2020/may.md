@@ -9,7 +9,7 @@ description: "이 문서에는 2020년 5월 릴리스 노트가 포함되어 있
 
 ## Google Tag Manager
 
-[Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/)를 사용하여 Braze의 Android 소프트웨어 개발 키트를 배포하고 관리하는 방법에 대한 설명서 및 예제가 추가되었습니다.
+[Google Tag Manager]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=android)를 사용하여 Braze의 Android 소프트웨어 개발 키트를 배포하고 관리하는 방법에 대한 설명서 및 예제가 추가되었습니다.
 
 ## 새로운 블랙리스트 이메일 API 엔드포인트
 

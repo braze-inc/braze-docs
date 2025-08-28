@@ -1,5 +1,5 @@
 ---
-nav_title: "MMS Short and Long Codes"
+nav_title: "MMS short and long codes"
 article_title: MMS Short and Long Codes
 page_order: 1
 description: "This reference article covers the differences between SMS and MMS short codes and long codes."

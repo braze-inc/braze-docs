@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create New User Alias"
+nav_title: "POST: Create new user alias"
 article_title: "POST: Create New User Alias"
 search_tag: Endpoint
 page_order: 1

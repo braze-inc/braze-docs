@@ -23,33 +23,27 @@ tool:
 - 2주 이상 전에 **마지막으로 사용한 앱** 
 - **마지막으로 사용한 앱이** 3주 미만
 
-![][1]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse1.png %}){: style="max-width:70%;"}
 
 세그먼트의 이름은 "경과된 사용자 - 2주"와 같이 기억에 남는 이름을 지정합니다. 매주 반복되도록 캠페인을 설정하고 있으므로 세그먼트에서 최소 1주일 동안 캡처된 사용자가 있는지 확인해야 합니다. 그렇기 때문에 2~3주 전에 마지막으로 앱을 사용한 사용자를 선정했습니다.
 
 ## 2단계: 캠페인 만들기
 
-다음으로 **캠페인 생성**을 클릭하고 이 세그먼트에 보낼 캠페인 유형을 선택합니다. 이 예에서는 새로운 [푸시 캠페인][6]을 생성합니다.
+Next, click **Create Campaign** and choose the type of campaign we will be sending to this segment. in this example, we'll create a new [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse2.png %}){: style="max-width:70%;"}
 
 캠페인의 이름을 "휴면 사용자에게 보내는 메시지 - 2주"로 정한 다음 메시지 내용을 작성합니다. 이 예에서는 iOS 사용자만 타겟팅하지만, Android 및 iOS 푸시 알림에 Braze를 사용할 수 있습니다. 
 
 사용자가 앱을 마지막으로 사용한 시간이 가까울수록 화제성과 연관성이 더 중요합니다. 2주 동안 앱을 사용하지 않은 사용자에게 메시지를 보낼 때는 관련 콘텐츠를 노출하고 앱 사용의 이점을 강조하는 것이 중요합니다.
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse3.png %}){: style="max-width:70%;"}
 
-다음으로 **시간 기반 예약 옵션의**[현지 시간대 배달][4] ]을 사용하여 매주 목요일 오후 5시 45분에 주간 메시지를 보내는 반복 일정을 만들겠습니다. 사용량이 많은 기간 직전에 세션 그래프를 확인하여 사용자를 타겟팅하는 것이 좋습니다. 이렇게 하면 사람들이 앱을 사용할 가능성이 가장 높을 때 재참여를 유도할 수 있습니다. 나중에 이를 변경하여 초기 가설을 테스트할 수 있습니다.
+Next, we'll create a recurring schedule to send our weekly message on Thursdays at 5:45 pm using [local time zone delivery]({{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer) in **Time-Based Scheduling Options**. 사용량이 많은 기간 직전에 세션 그래프를 확인하여 사용자를 타겟팅하는 것이 좋습니다. 이렇게 하면 사람들이 앱을 사용할 가능성이 가장 높을 때 재참여를 유도할 수 있습니다. 나중에 이를 변경하여 초기 가설을 테스트할 수 있습니다.
 
-![][3]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse4.png %}){: style="max-width:70%;"}
 
 ## 3단계: 캠페인 시작
 
 이제 캠페인을 보낼 준비가 되었습니다. 작성기의 마지막 페이지에서 설정을 확인하고 **캠페인 시작**을 클릭합니다!
 
-[1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
-[2]: {% image_buster /assets/img_archive/2weeklapse3.png %}
-[3]: {% image_buster /assets/img_archive/2weeklapse4.png %}
-[4]: {{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer
-[5]: {% image_buster /assets/img_archive/2weeklapse2.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message

@@ -1,5 +1,5 @@
 ---
-nav_title: Release Notes
+nav_title: Release notes
 article_title: Release Notes
 page_order: 4
 layout: dev_guide
@@ -723,7 +723,7 @@ Banners now support Flutter. Additionally, all Banner documentation has been ove
 
 - [About Banners]({{site.baseurl}}/developer_guide/banners/)
 - [Creating Banner campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
-- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/creating_placements/)
+- [Embedding Banners into your app]({{site.baseurl}}/developer_guide/banners/placements/)
 
 #### WhatsApp click tracking
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Action-Based Delivery
+nav_title: Action-based delivery
 article_title: Action-Based Delivery
 page_order: 1
 page_type: reference

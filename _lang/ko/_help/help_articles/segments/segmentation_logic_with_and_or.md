@@ -34,7 +34,7 @@ tool: Segments
 
 `OR` 연산자 사용을 피해야 하는 사용자 타겟팅 상황이 있을 수 있습니다. `OR` 연산자는 사용자가 문에 있는 하나 이상의 필터 기준을 충족하면 참으로 평가되는 문을 만듭니다. 예를 들어 "식도락가"에 속하지만 "비식도락가"나 "사탕 애호가"에 속하지 않는 사용자 세그먼트를 만들려면 `OR` 연산자를 사용하면 됩니다.
 
-![][1]
+![]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
 그러나 "식도락가" 세그먼트에 속하고 "비식도락가" 및 "사탕 애호가" 세그먼트에 속하지 않는 사용자를 세분화하는 것이 목표인 경우 `AND` 연산자를 사용하세요. 이렇게 하면 캠페인이나 캔버스를 수신하는 사용자가 의도한 세그먼트("식도락가")에 속하고 다른 세그먼트("비식도락가" 및 "사탕 애호가")에는 동시에 속하지 않게 됩니다. 
 
@@ -50,14 +50,11 @@ tool: Segments
 
 다음 예제에서는 `AND` 및 `OR` 연산자를 모두 사용합니다. 여기서 오디언스에는 나이키 운동화 또는 아디다스 운동화를 구매하고 이메일 알림을 수신하도록 옵트인한 사용자가 포함됩니다.
 
-![사용자가 좋아하는 브랜드가 나이키 또는 아디다스이고 이메일 수신에 동의한 스니커즈 쇼핑객을 위한 세그먼트를 구축합니다][33]
+![사용자가 가장 좋아하는 브랜드가 나이키 또는 아디다스이고 이메일 수신에 동의한 스니커즈 쇼핑객을 위한 세그먼트 구축]({% image_buster /assets/img_archive/NikeSneakers.png %})
 
-올바른 로직을 구축하고 있는지 확인하는 또 다른 방법은 세그먼트를 만들고 필터에 따라 세그먼트에 속하는 사용자][35] 를 미리 보는 것입니다. 이렇게 하면 해당 속성, 앱 버전 또는 기타 세분화가 현재 표시되는 것과 일치하는지 확인할 수 있습니다.
+올바른 로직을 구축하는 또 다른 방법은 세그먼트를 생성하고 필터를 기반으로 세그먼트에 속하는 [사용자를 미리 보는]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) 것입니다. 이렇게 하면 해당 속성, 앱 버전 또는 기타 세분화가 현재 표시되는 것과 일치하는지 확인할 수 있습니다.
 
 아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트: 2022년 6월 3일_
 
-[1]: {% image_buster /assets/img_archive/or_operator_segment.png %}
-[33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
-[35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/

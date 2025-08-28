@@ -22,7 +22,7 @@ Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselb
 
 ## Kann ich Banner in meinem bestehenden Content-Card-Feed verwenden?
 
-Banner unterscheiden sich von Content-Cards, d.h. Sie können Banner und Content-Cards nicht im selben Feed verwenden. Um bestehende Content-Card-Feeds durch Banner zu ersetzen, müssen Sie [Platzierungen in Ihrer App oder Website erstellen]({{site.baseurl}}/developer_guide/banners/creating_placements/).
+Banner unterscheiden sich von Content-Cards, d.h. Sie können Banner und Content-Cards nicht im selben Feed verwenden. Um bestehende Content-Card-Feeds durch Banner zu ersetzen, müssen Sie [Platzierungen in Ihrer App oder Website erstellen]({{site.baseurl}}/developer_guide/banners/placements/).
 
 ## Können Nutzer:innen einen Banner manuell ablehnen?
 

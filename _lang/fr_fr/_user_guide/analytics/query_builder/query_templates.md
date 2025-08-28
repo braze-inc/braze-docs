@@ -1,7 +1,7 @@
 ---
 nav_title: Modèles de requête
 article_title: Modèles de générateurs de requêtes
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "Cet article de référence répertorie les types de rapports que vous pouvez créer en utilisant les données Braze de Snowflake dans le générateur de rapports."

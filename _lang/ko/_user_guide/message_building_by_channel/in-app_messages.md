@@ -42,6 +42,9 @@ guide_menu_list:
 - name: "간단한 설문조사"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   image: /assets/img/braze_icons/bar-chart-07.svg
+- name: "Using Locales"
+  link: /docs/iam_locales/
+  image: /assets/img/braze_icons/translate-01.svg
 - name: "모범 사례"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

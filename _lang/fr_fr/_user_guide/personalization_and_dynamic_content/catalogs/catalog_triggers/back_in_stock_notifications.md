@@ -1,21 +1,19 @@
 ---
 nav_title: Notifications de rupture de stock
-article_title: Notifications de rupture de stock
+article_title: Mise en place de notifications de retour en stock
 page_order: 2
-description: "Cet article de référence décrit comment créer des notifications de rupture de stock dans les catalogues de Braze."
+description: "Découvrez comment mettre en place des notifications de rupture de stock à l'aide de votre catalogue et d'événements personnalisés, afin de pouvoir abonner automatiquement les clients à des notifications lorsqu'un article est de nouveau en stock."
 ---
 
 # Notifications de rupture de stock
 
-> Utilisez une combinaison de notifications de retour en stock par le biais des catalogues de Braze et d'un Canvas pour avertir les clients qu'un article est de nouveau en stock. Chaque fois qu'un client effectue un événement personnalisé sélectionné, il peut être automatiquement abonné pour être informé du réapprovisionnement du produit.<br><br>Cette page explique comment fonctionnent les notifications de rupture de stock et comment vous pouvez les configurer et les utiliser.
+> Découvrez comment mettre en place des notifications de rupture de stock à l'aide de votre catalogue et d'événements personnalisés, afin de pouvoir abonner automatiquement les clients à des notifications lorsqu'un article est de nouveau en stock. N'oubliez pas que cela ne s'applique qu'aux utilisateurs qui ont déjà opté pour les notifications.
 
-Lorsqu'un utilisateur déclenche un événement personnalisé pour un produit, nous l'abonnons automatiquement pour qu'il reçoive des notifications de retour en stock pour ce produit. Lorsque la quantité d'inventaire du produit correspond à votre règle d'inventaire (par exemple, un inventaire supérieur à 100), tous les abonnés pourront recevoir des notifications par le biais d'une campagne ou d’un canvas. Cependant, seuls les utilisateurs ayant opté pour les notifications recevront des notifications. 
+## Fonctionnement
 
-## Comment fonctionnent les notifications de rupture de stock ?
+Vous pouvez définir un événement personnalisé à utiliser comme événement d'abonnement, tel qu'un événement `product_clicked`. Cet événement doit contenir une propriété de l'ID de l'article (ID des articles du catalogue). Nous vous suggérons d'inclure un nom de catalogue, mais ce n'est pas obligatoire. Vous indiquerez également le nom d'un champ de quantité d’inventaire, qui doit être de type numérique. 
 
-Vous définirez un événement personnalisé à utiliser comme événement d'abonnement, tel que l'événement `product_clicked`. Cet événement doit contenir une propriété de l'ID de l'article (ID des articles du catalogue). Nous vous suggérons d'inclure un nom de catalogue, mais ce n'est pas obligatoire. Vous indiquerez également le nom d'un champ de quantité d’inventaire, qui doit être de type numérique. 
-
-Notez que le stock d'un article de catalogue doit être à zéro pour qu'un utilisateur puisse s'y abonner avec succès. Lorsqu'un produit a une quantité en stock qui correspond à votre règle d'inventaire, nous recherchons tous vos utilisateurs qui sont abonnés à ce produit (les utilisateurs qui ont effectué l'événement d'abonnement) et nous envoyons un événement personnalisé Braze que vous pouvez utiliser pour déclencher une campagne ou un canvas.
+Notez que le stock d'un article de catalogue doit être à zéro pour qu'un utilisateur puisse s'y abonner avec succès. Lorsqu'un article a une quantité en stock supérieure à zéro, Braze recherche tous les utilisateurs abonnés à cet article et envoie un événement personnalisé que vous pouvez utiliser pour déclencher une campagne ou un Canvas.
 
 Les propriétés de l'événement sont envoyées en même temps que l'utilisateur, ce qui vous permet d'intégrer les détails de l'élément dans la campagne ou le canvas qui l'envoie.
 
@@ -26,11 +24,11 @@ Suivez ces étapes pour configurer les notifications de rupture de stock dans un
 1. Accédez à votre catalogue et sélectionnez l'onglet **Paramètres.** 
 2. Sélectionnez la bascule **De retour en stock**.
 3. Si les paramètres globaux de retour en stock n'ont pas été configurés, vous serez invité à définir les événements personnalisés et les propriétés qui seront utilisés pour déclencher les notifications de retour en stock :
-    <br> ![Tiroir des paramètres du catalogue.][2]{: style="max-width:70%;"}
+    <br> ![Tiroir des paramètres du catalogue.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
     - **Catalogue de secours** Il s'agit du catalogue qui sera utilisé pour l'abonnement aux notifications de retour en stock, si aucune propriété `catalog_name` n'est présente dans l'événement personnalisé.
     - **Custom event for subscriptions** est l'événement personnalisé de Braze qui sera utilisé pour abonner un utilisateur aux notifications de rupture de stock. Lorsque cet événement se produit, l'utilisateur qui l'a effectué est abonné.
     - **Custom event for unsubscribing** est l'événement personnalisé de Braze qui sera utilisé pour désinscrire un utilisateur des notifications de retour en stock. Cet événement est facultatif. Si l'utilisateur n'effectue pas cet événement, il sera désabonné au bout de 90 jours ou lorsque l'événement de rupture de stock se déclenchera, selon ce qui se produira en premier.
-    - La **propriété d'événement de l’ID du produit** est la propriété de l'événement personnalisé ci-dessus qui sera utilisée afin de déterminer le produit pour un abonnement ou un désabonnement aux notifications de retour en stock. Cette propriété de l'événement personnalisé doit contenir un ID d'article présent dans un catalogue. L'événement personnalisé doit également contenir une propriété `catalog_name`, afin de spécifier le catalogue dans lequel se trouve cet article.
+    - La **propriété d'événement de l’ID du produit** est la propriété de l'événement personnalisé ci-dessus qui sera utilisée afin de déterminer le produit pour un abonnement ou un désabonnement aux notifications de retour en stock. Cette propriété de l'événement personnalisé doit contenir un ID d'article (`id`) présent dans un catalogue. L'ID de l'article doit être envoyé sous forme de chaîne de caractères afin qu'il corresponde au type de données `id` stocké dans le catalogue cible. L'événement personnalisé doit également contenir une propriété `catalog_name`, afin de spécifier le catalogue dans lequel se trouve cet article.
     
     - Un exemple d'événement personnalisé ressemblerait à ceci
     ```json
@@ -61,7 +59,7 @@ Les déclencheurs de rupture de stock et de baisse de prix utilisent le même é
 6\. Définissez le **champ Inventaire dans le catalogue**. Ce champ du catalogue sera utilisé pour déterminer si l'article est en rupture de stock. Le champ doit être de type numérique.
 7\. Sélectionnez **Enregistrer les paramètres**.
 
-![Paramètres du catalogue qui montrent la fonctionnalité de retour en stock activée. Les règles de notification prévoient d'avertir un millier d'utilisateurs toutes les dix minutes.][1]
+![Paramètres du catalogue qui montrent la fonctionnalité de retour en stock activée. Les règles de notification consistent à avertir un millier d'utilisateurs toutes les dix minutes.]({% image_buster /assets/img/back_in_stock_settings.png %})
 
 {% alert important %}
 Les règles de notification de ces paramètres ne remplacent pas les paramètres de notification de Canvas, tels que les heures calmes.
@@ -92,5 +90,3 @@ Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog
 - Lorsque vous utilisez la règle de notification **Notifier tous les utilisateurs abonnés**, Braze notifie 100 000 utilisateurs en 10 minutes.
 - Braze traite au maximum 10 mises à jour de produits en une minute. Cela signifie que si vous mettez à jour 11 produits en une minute, seuls les 10 premiers produits peuvent déclencher une notification de retour en stock.
 
-[1]: {% image_buster /assets/img/back_in_stock_settings.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

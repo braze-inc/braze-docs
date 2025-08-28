@@ -1,5 +1,5 @@
 ---
-nav_title: SQL Variables
+nav_title: SQL variables
 article_title: Query Builder SQL variables
 page_order: 2
 page_type: reference

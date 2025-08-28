@@ -1,5 +1,5 @@
 ---
-nav_title: Triggering Messages
+nav_title: Triggering messages
 article_title: Triggering in-app messages through the Braze SDK
 page_order: 0.2
 description: "Learn how to trigger in-app messages through the Braze SDK."
@@ -18,7 +18,7 @@ platform:
 
 In-app messages are triggered when the SDK logs one of the following custom event types: `Session Start`, `Push Click`, `Any Purchase`, `Specific Purchase`,and `Custom Event` (the last two containing robust property filters).
 
-At the start of a user's session, Braze will deliver all eligible in-app messages to their device, while simultaneously prefetching assets to minimize display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered. For more information, see [Session Lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle).
+At the start of a user's session, Braze will deliver all eligible in-app messages to their device, while simultaneously prefetching assets to minimize display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered. For more information, see [Session Lifecycle]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/#about-the-session-lifecycle).
 
 {% alert note %}
 In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
@@ -106,14 +106,12 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 By default, in-app messages are triggered automatically. To disable this:
 
 {% tabs %}
-{% tab android %}
-1. Verify you're using the automatic integration initializer, which is enabled by default in versions `2.2.0` and later.
-2. Set the in-app message operation default to `DISCARD` by adding the following line to your `braze.xml` file.
-    ```xml
-    <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
-    ```
 
-For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+{% tab android %}
+1. Implement the [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) to set a custom listener.
+2. Update your [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) method to return [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
+
+For more advanced control over message timing, including displaying later and re-enqueuing, refer to our [Customizing Messages](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener) page.
 {% endtab %}
 
 {% tab swift %}
@@ -151,6 +149,14 @@ If you call `braze.showInAppMessage` without removing `braze.automaticallyShowIn
 {% endalert %}
 
 For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+{% endtab %}
+
+{% tab flutter %}
+1. Verify you're using the automatic integration initializer, which is enabled by default in versions `2.2.0` and later.
+2. Set the in-app message operation default to `DISCARD` by adding the following line to your `braze.xml` file.
+    ```xml
+    <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
+    ```
 {% endtab %}
 
 {% tab unity %}
@@ -229,7 +235,7 @@ To trigger an in-app message using a server-sent event, send a silent push notif
 
 #### Step 1: Create a push callback to receive the silent push
 
-Register your custom push callback to listen for a specific silent push notification. For more information, refer to [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback).
+Register your custom push callback to listen for a specific silent push notification. For more information, refer to [Setting up push notifications]({{site.baseurl}}/developer_guide/push_notifications#android_setting-up-push-notifications).
 
 Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
 

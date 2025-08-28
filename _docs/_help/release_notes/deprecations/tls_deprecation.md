@@ -1,5 +1,5 @@
 ---
-nav_title: TLS 1.0 & 1.1 Deprecation
+nav_title: TLS 1.0 & 1.1 deprecation
 page_order: 2
 
 page_type: update

@@ -16,10 +16,10 @@ description: "Braze SDK를 통해 위치를 추적하는 방법을 알아보세�
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/tracking_location.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/tracking_location.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/tracking_location.md developer_ %}
+{% multi_lang_include developer_guide/web/analytics/tracking_location.md %}
 {% endsdktab %}
 {% endsdktabs %}

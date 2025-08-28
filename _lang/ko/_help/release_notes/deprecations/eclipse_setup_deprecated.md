@@ -13,7 +13,7 @@ description: "이 보관된 문서에서는 Eclipse를 사용하여 초기 SDK �
 {% endalert %}
 
 ## 1단계
-명령줄에서 [Braze Android GitHub 리포지토리][03]를 복제합니다.
+명령줄에서 [Braze Android GitHub 리포지토리](https://github.com/braze-inc/braze-android-sdk)를 복제합니다.
 
 ```bash
 $ git clone git@github.com:braze-inc/braze-android-sdk.git
@@ -26,16 +26,16 @@ Eclipse에서
 
   - 파일 > 가져오기로 이동합니다.
 
-    ![파일 가져오기][04]
+    ![파일 가져오기]({{site.baseurl}}/assets/img_archive/file_import.png)
   - Android > 기존 Android 코드를 워크스페이스로 가져오기를 선택합니다.
 
-    ![Android 가져오기][05]
+    ![Android 가져오기]({{site.baseurl}}/assets/img_archive/android_import.png)
   - "찾아보기"를 클릭합니다.
 
-    ![찾아보기][06]
+    ![찾아보기]({{site.baseurl}}/assets/img_archive/click_browse.png)
   - Braze UI 프로젝트 폴더를 확인하고 "프로젝트를 워크스페이스에 복사"를 클릭한 다음 "마침"을 클릭합니다.
 
-    ![Android UI 프로젝트 선택][07]
+    ![Android UI 프로젝트 선택]({{site.baseurl}}/assets/img_archive/select_project_android.png)
 
 ## 3단계
 자신의 프로젝트에서 Braze를 참조하세요.
@@ -43,10 +43,10 @@ Eclipse에서
 
   - 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 "속성"을 선택합니다.
 
-    ![속성 클릭][08]
+    ![속성 클릭]({{site.baseurl}}/assets/img_archive/click_properties.png)
   - "Android"의 라이브러리 섹션에서 "추가..."를 클릭하고 안드로이드-sdk-ui를 앱에 라이브러리로 추가합니다.
 
-    ![Braze 추가][09]
+    ![Braze 추가]({{site.baseurl}}/assets/img_archive/add_appboy_ui.png)
 
 ## 4단계
 종속성 오류를 해결하고 빌드 대상을 수정합니다.
@@ -55,10 +55,10 @@ Eclipse에서
 
    - Braze UI 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 속성->Android를 선택하여 빌드 대상이 Braze의 현재 빌드 도구 버전으로 설정되어 있는지 확인합니다.
 
-      ![대상 구축][10]
+      ![대상 구축]({{site.baseurl}}/assets/img_archive/build_target.png)
    - Braze UI 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 속성->Java 빌드 경로->JAR 추가...를 선택한 다음 기본 애플리케이션에서 'android-support-v4.jar'를 라이브러리로 추가합니다.
 
-      ![고객지원][11]
+      ![고객지원]({{site.baseurl}}/assets/img_archive/android_support_v4.png)
 
 ## 5단계
 
@@ -70,12 +70,3 @@ Eclipse에서
 
   - SDK 버전 1.7.0 이상의 경우, 라이브러리 프로젝트에서 "assets/fontawesome-webfont.ttf"을 애플리케이션에 복사해야 합니다. Eclipse는 라이브러리의 에셋 폴더를 자동으로 포함하지 않습니다.
 
-[03]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHub 리포지토리"
-[04]: {{site.baseurl}}/assets/img_archive/file_import.png
-[05]: {{site.baseurl}}/assets/img_archive/android_import.png
-[06]: {{site.baseurl}}/assets/img_archive/click_browse.png
-[07]: {{site.baseurl}}/assets/img_archive/select_project_android.png
-[08]: {{site.baseurl}}/assets/img_archive/click_properties.png
-[09]: {{site.baseurl}}/assets/img_archive/add_appboy_ui.png
-[10]: {{site.baseurl}}/assets/img_archive/build_target.png
-[11]: {{site.baseurl}}/assets/img_archive/android_support_v4.png

@@ -105,11 +105,11 @@ Braze note le nombre de fois où des événements personnalisés se sont produit
 
 Sur la page **Rapport sur les événements personnalisés** du tableau de bord, vous pouvez visualiser globalement la fréquence de chaque événement personnalisé. Les lignes grises superposées à la série chronologique indiquent la dernière fois qu'une campagne a été envoyée, ce qui est utile pour voir comment vos campagnes ont affecté l'activité des événements personnalisés.
 
-![Graphique du nombre d'événements personnalisés sur la page des événements personnalisés dans le tableau de bord montrant les tendances pour un événement personnalisé.][8]
+![Graphique du nombre d'événements personnalisés sur la page Événements personnalisés du tableau de bord montrant les tendances d'un événement personnalisé]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 Vous pouvez également utiliser des **filtres** pour décomposer vos événements personnalisés par heure, par moyenne mensuelle d'utilisateurs (MAU), par segment ou par formule d'indicateur clé de performance. 
 
-![Filtres personnalisés pour le graphique des événements][9]{: style="max-width:40%;"}
+![Filtres de graphe d'événements personnalisés]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 [Incrémentez les attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) pour conserver un compteur sur une action de l'utilisateur similaire à un événement personnalisé. Cependant, vous ne pouvez pas visualiser les données d'attributs personnalisés dans une série chronologique. Les actions des utilisateurs qui n'ont pas besoin d'être analysées dans une série temporelle doivent être enregistrées selon cette méthode.
@@ -142,7 +142,6 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Datetimes | Formatés sous forme de chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
 | Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
-| Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 | Objets imbriqués | Objets se trouvant à l’intérieur d’autres objets. Pour en savoir plus, consultez la section de cet article consacrée aux [objets imbriqués](#nested-objects).
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -156,19 +155,19 @@ Les propriétés d'événement personnalisé peuvent être utilisées pour quali
 
 #### Déclencher des messages
 
-Utilisez les propriétés d'événement personnalisées pour restreindre davantage votre audience dans le cadre d'une campagne ou d'un canvas particulier. Par exemple, si vous avez une application de commerce électronique et que vous souhaitez envoyer un message à un utilisateur lorsqu'il abandonne son panier, vous pouvez ajouter une propriété d'événement personnalisé de `cart value` pour améliorer votre public cible et permettre une personnalisation accrue de la campagne.
+Utilisez les propriétés d'événement personnalisées pour restreindre davantage votre audience dans le cadre d'une campagne ou d'un canvas particulier. Par exemple, si vous avez une application de commerce électronique et que vous souhaitez envoyer un message à un utilisateur lorsqu'il abandonne son panier, vous pouvez ajouter une propriété d'événement personnalisé de `item price` pour améliorer votre public cible et permettre une personnalisation accrue de la campagne.
 
-![Filtres de propriété de l’événement personnalisé pour une carte abandonnée. Deux filtres sont combinés avec un opérateur ET pour envoyer cette campagne aux utilisateurs ayant abandonné leur carte avec une valeur de panier comprise entre 100 et 200 dollars][16]
+![Filtres de propriété de l’événement personnalisé pour une carte abandonnée. Deux filtres sont combinés avec un opérateur AND pour envoyer cette campagne aux utilisateurs qui ont abandonné leur carte avec un prix d'article entre 100 et 200 dollars]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-Les propriétés d'événement personnalisé imbriquées sont également prises en charge dans la [livraison par événement]][19].
+Les propriétés d'événement personnalisé imbriquées sont également prises en charge dans la [réception/distribution par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
-![Filtres de propriété de l’événement personnalisé pour une carte abandonnée. Un filtre est sélectionné si un quelconque produit du panier a un prix supérieur à 100 dollars.][20]
+![Filtres de propriété de l’événement personnalisé pour une carte abandonnée. Un filtre est sélectionné si l'un des articles du panier a un prix supérieur à 100 dollars.]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### Personnaliser des messages
 
-Vous pouvez également utiliser des propriétés d’événement personnalisé pour personnaliser les messages. Toute campagne utilisant [livraison par événement][19] avec un événement déclencheur peut utiliser les propriétés d'événement personnalisées de cet événement pour la personnalisation des messages.
+Vous pouvez également utiliser des propriétés d’événement personnalisé pour personnaliser les messages. Toute campagne utilisant la [livraison par]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) événement avec un événement déclencheur peut utiliser les propriétés d'événement personnalisées de cet événement pour la personnalisation des messages.
 
-Par exemple, si vous avez une application de jeu et que vous souhaitez envoyer un message aux utilisateurs qui ont terminé un niveau, vous pourriez personnaliser davantage votre message avec une propriété pour le temps qu'il a fallu aux utilisateurs pour terminer ce niveau. Dans cet exemple, le message est personnalisé pour trois segments différents à l'aide de la [logique conditionnelle][18]. La propriété d'événement personnalisé appelée `time_spent` peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Par exemple, si vous avez une application de jeu et que vous souhaitez envoyer un message aux utilisateurs qui ont terminé un niveau, vous pourriez personnaliser davantage votre message avec une propriété pour le temps qu'il a fallu aux utilisateurs pour terminer ce niveau. Dans cet exemple, le message est personnalisé pour trois segments différents à l'aide de la [logique conditionnelle]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). La propriété d'événement personnalisé appelée `time_spent` peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
@@ -216,7 +215,7 @@ Les filtres de segmentation des propriétés d'événement sont les suivants :
 - A effectué des achats avec le bien A d'une valeur B, X fois au cours des Y derniers jours.
 - Ajoute la possibilité de segmentation dans un délai de 1 à 30 jours.
 
-![Un groupe de filtres qui "a 'Abandon de panier' avec la propriété 'number of itmes' et la valeur '2' 'more than' 1'1 time in the last '30' calendar days.][3]
+![Un groupe de filtre qui a 'Abandon de panier' avec la propriété 'number of itmes' et la valeur 2 plus d'une fois dans les 30 derniers jours du calendrier.]({% image_buster /assets/img/nested_object3.png %})
 
 Les données ne sont enregistrées pour une propriété d'événement donnée qu'après avoir été activées par votre gestionnaire de la satisfaction client, et les propriétés d'événement ne sont disponibles qu'à partir de cette date.
 
@@ -229,69 +228,7 @@ En ce qui concerne les inscriptions, les propriétés d’événement personnali
 
 ### Propriétés d’entrée et propriétés de l’événement Canvas
 
-Vous pouvez utiliser `canvas_entry_properties` et `event_properties` dans vos parcours utilisateurs Canvas. Reportez-vous aux [propriétés d'entrée dans le canvas et aux propriétés d'événement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) pour plus d'informations et d'exemples.
-
-{% tabs local %}
-{% tab Propriétés d'entrée de Canvas %}
-
-Les [propriétés d'entrée de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) correspondent aux propriétés que vous mappez pour les canvas basés sur des actions ou déclenchés par API. Notez que l’objet `canvas_entry_properties` a une taille maximale limite de 50 KB.
-
-{% alert note %}
-Expressément pour les canaux de communication in-app, `canvas_entry_properties` peut uniquement être référencé dans Canvas Flow et dans l’éditeur Canvas d’origine si vous avez activé les propriétés d’entrées persistantes dans l’éditeur d’origine durant l’accès anticipé précédent.
-{% endalert %}
-
-Pour l'envoi de messages par Canvas Flow, `canvas_entry_properties` peut être utilisé dans n'importe quelle étape du canvas avec le format Liquid suivant : ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Notez que les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière. 
-
-#### Cas d’utilisation
-
-{% raw %}
-Supposons qu'un magasin de détail, RetailApp, ait la demande suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. RetailApp peut intégrer le nom du produit (chaussures) dans un message avec le code Liquid `{{canvas_entry_properties.${product_name}}}`.
-{% endraw %}
-
-RetailApp peut également déclencher l'envoi de messages spécifiques pour différentes propriétés d' `product_name` dans un canvas qui cible les utilisateurs après qu'ils aient déclenché un événement d'achat. Par exemple, ils peuvent envoyer des messages différents aux utilisateurs qui ont acheté des chaussures et à ceux qui ont acheté autre chose en ajoutant le liquide suivant dans une étape Message.
-
-{% raw %}
-```markdown
-{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
-  Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
-{% else %}
-  Your order will be on its way shortly. If you missed something, you have until the end of the week to add more items to your cart for the same discounts.
-{% endif %}
-
-```
-{% endraw %}
-
-{% details Élargir pour l'éditeur original de Canvas %}
-
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cette section n'est disponible qu'à titre de référence.
-
-Pour les Canvas créés à partir de l’éditeur d’origine, `canvas_entry_properties` ne peut être référencé que dans la première étape complète d’un Canvas.
-
-{% enddetails %}
-{% endtab %}
-
-{% tab Propriétés d'événement %}
-
-{% alert important %}
-Vous ne pouvez pas utiliser les `event_properties` dans la première étape de message. Au lieu de cela, vous devez utiliser `canvas_entry_properties` ou ajouter une étape de parcours d'action avec l'événement correspondant **avant** l’étape Message qui inclut `event_properties`.
-{% endalert %}
-
-Les propriétés d'événement font référence aux propriétés que vous définissez pour les événements personnalisés et les achats. Ces `event_properties` peuvent être utilisés dans des campagnes avec livraison/distribution par événement et Canvases.
-
-Dans Canvas Flow, les événements personnalisés et les propriétés de l’événement d’achat peuvent être utilisées en Liquid dans n’importe quelle étape de message suivant une étape de parcours d’action. Veillez à utiliser {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} si vous faites référence à ces `event_properties`. Ces événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi dans le composant de message.
-
-Dans la première étape de message suivant un parcours d’action, vous pouvez utiliser les `event_properties` liées à l’événement référencé dans le parcours d’action. Ces `event_properties` ne peuvent être utilisés que si l'utilisateur a réellement effectué l'action (et n'est pas allé dans le groupe Everyone Else). Vous pouvez disposer d’autres étapes (n’étant pas un autre parcours d’action ou une étape de message) entre ce parcours d’action et l’étape de message.
-
-{% details Élargir pour l'éditeur original de Canvas %}
-
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cette section n'est disponible qu'à titre de référence.
-
-Pour l’éditeur Canvas d’origine, les `event_properties` ne peuvent pas être utilisées dans les étapes complètes planifiées. Cependant, vous pouvez utiliser les `event_properties` dans la première étape complète d’un Canvas par événement, même si l’étape complète est planifiée.
-
-{% enddetails %}
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### Objets imbriqués {#nested-objects}
 
@@ -310,15 +247,3 @@ Vous pouvez effectuer une segmentation basée sur les valeurs des propriétés d
 
 Contactez votre gestionnaire du succès des clients Braze pour obtenir des recommandations sur la meilleure approche en fonction de vos besoins spécifiques.
 
-[1]: {% image_buster /assets/img/nested_object1.png %}
-[2]: {% image_buster /assets/img/nested_object2.png %}
-[3]: {% image_buster /assets/img/nested_object3.png %}
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
-[16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

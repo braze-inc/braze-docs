@@ -1,5 +1,5 @@
 ---
-nav_title: Ideas and Strategies
+nav_title: Ideas and strategies
 article_title: Ideas and Strategies
 layout: dev_guide
 guide_top_header: "Ideas & Strategies"

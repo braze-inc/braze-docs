@@ -44,10 +44,8 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 이 옵션으로 이동하려면 인앱 메시징 캠페인을 만들어야 합니다. 여기에서 사용 사례에 따라 **받는 사람**을 **웹 브라우저**, **모바일 앱** 또는 **모바일 앱과 웹 브라우저 모두로** 설정한 다음 **메시지 유형**으로 **이메일 캡처 양식**을 선택합니다.
 
-![][4]
-
 {% alert note %}
-웹 SDK를 통해 HTML 인앱 메시지를 활성화하려면, 예를 들어 `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`와 같이 `allowUserSuppliedJavascript` 초기화 옵션을 Braze에 제공해야 합니다. 이는 보안상의 이유로, HTML 인앱 메시지는 JavaScript를 실행할 수 있으므로 사이트 관리자가 이를 활성화해야 합니다.
+**Targeting web users?** <br>To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze, for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. 이는 보안상의 이유로, HTML 인앱 메시지는 JavaScript를 실행할 수 있으므로 사이트 관리자가 이를 활성화해야 합니다.
 {% endalert %}
 
 ## 2단계: 양식 사용자 지정 {#customizable-features}
@@ -61,32 +59,24 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 - 키-값 쌍
 - 머리글 및 본문 텍스트, 버튼, 버튼 테두리 색상, 배경 및 오버레이 스타일
 
-![이메일 캡처 양식용 작성기입니다.][5]
+![Composer for email capture form.]({% image_buster /assets/img/email_capture.png %})
 
 추가 커스텀이 필요한 경우 **메시지 유형**에 대한 **커스텀 코드**를 선택합니다. 이 [이메일 캡처 모달 템플릿](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal)은 [Braze 템플릿](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub 리포지토리에서 시작 코드로 사용할 수 있습니다.
 
 ## 3단계: 참가 오디언스 설정
 
-기존 이메일 주소가 없는 사용자에게만 이 양식을 보내려면 `Email Available is false` 필터를 사용하세요.
+If you’re using an in-app message to capture user emails, you may want to limit the audience to users who haven’t already provided this information.
 
-![사용 가능한 이메일로 필터링이 거짓입니다.][10]{: style="max-width:50%"}
+- **To target users without an email address:** Use the filter `Email Available` is `false`. This makes the form only appear to users who don’t have an email on file, helping you avoid redundant prompts for known users.
+- **To target anonymous users without external IDs:** Use the filter `External User ID` `is blank`. This is useful when you want to identify users who haven’t been authenticated or registered yet.
 
-외부 ID가 없는 사용자(익명 사용자)에게만 이 양식을 보내려면 `External User ID is blank` 필터를 사용하세요.
-
-![외부 사용자 ID로 필터링이 비어 있습니다.][11]{: style="max-width:50%"}
-
-원하는 경우 `AND` 로직을 사용하여 두 필터를 결합할 수도 있습니다.
+원하는 경우 `AND` 로직을 사용하여 두 필터를 결합할 수도 있습니다. This makes the form only appear to users who are missing both an email address and an external user ID—ideal for capturing new leads or prompting account creation.
 
 ## 4단계: 양식을 작성한 사용자 타겟팅(선택 사항)
 
-이메일 캡처 양식을 실행하고 사용자로부터 이메일 주소를 수집한 후에는 `Clicked/Opened Campaign` 필터를 사용하여 해당 사용자를 타겟팅할 수 있습니다. 
+After you've launched the email capture form and collected email addresses from your users, you can target users who filled out the form.
 
-캠페인 `<CAMPAIGN_NAME>` 에 대해 필터를 `Has clicked in-app message button 1` 로 설정합니다. `<CAMPAIGN_NAME>` 을 이메일 캡처 양식 캠페인의 이름으로 바꿉니다.
+1. In any segment filter in Braze, select the filter `Clicked/Opened Campaign`. 
+2. From the dropdown, select `clicked in-app message button 1`
+3. Select your email capture form campaign.
 
-![웹 이메일 캡처 양식 캠페인의 인앱 메시지 버튼 1을 클릭한 경우 필터링하기][12]
-
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}
