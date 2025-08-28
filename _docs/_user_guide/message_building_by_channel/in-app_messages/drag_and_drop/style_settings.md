@@ -1,5 +1,5 @@
 ---
-nav_title: Style Settings
+nav_title: Style settings
 article_title: "In-App Message Style Settings"
 description: "This reference article covers the styling options available when creating an in-app message with the drag-and-drop editor."
 page_order: 3
@@ -15,7 +15,7 @@ page_order: 3
 
 You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. For example, you may want to customize the font of all the text or the color of all links in your message.
 
-The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width. If you try to apply both page-level and message-level styles, the page-level style will override the message-level style.
+The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width.
 
 For an easier design experience, we recommend setting up message-level styles before you customize styles at the block level.
 
@@ -46,6 +46,20 @@ The message-level font will only apply to the current message and any duplicated
 
 The drag-and-drop editor uses two key components for composing in-app messages: **rows** and **blocks**. All blocks must be placed in a row.
 
+### Close x button
+
+For Modal and Fullscreen in-app messages, you can customize the close button displayed as <i class="fa-solid fa-xmark"></i> in the top-right corner of your message. Customization options include button position, size, fill color, background color, border style, and border radius.
+
+![Options to customize the close x button in in-app messages including button size, fill color, background color, border style, and border radius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+
+### Span styling
+
+Adding span styling to text within in-app messages allows for enhanced customization of message appearance, enabling the use of different text colors, fonts, and sizes. Span styling gives your users a more engaging and visually appealing experience by drawing their attention to key information and improving overall message clarity.
+
+![Option shown when highlighting text in an in-app message. A small paintbrush icon shows that you can wrap with span for style.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+
+![Side panel for "Span Properties" that allows the end user to customize font family, font weight, font size, letter spacing, and text color.]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
+
 ### Rows
 
 Rows are structural units that define the horizontal composition of a section of the message by using cells.
@@ -73,10 +87,6 @@ Before you add blocks, set up [message-level styles](#set-message-level-styles) 
 Every block has its settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way.
-
-#### Span text
-
-{% multi_lang_include span_text.md %}
 
 ## Creative details
 

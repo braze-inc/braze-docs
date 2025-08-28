@@ -1,5 +1,5 @@
 ---
-nav_title: Security Settings
+nav_title: Security settings
 article_title: Security Settings
 page_order: 2
 toc_headers: h2
@@ -213,15 +213,19 @@ This report only contains the most recent 10,000 security events for your accoun
 
 ## Viewing personally identifiable information (PII) {#view-pii}
 
-The **View PII** permission is only accessible to a few select Braze users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see the following standard and custom attributes throughout the dashboard. When this permission is turned off for users, those users won't be able to see this information.
+The **View PII** permission is only accessible to a few select Braze users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see all standard and custom attributes that your company has defined as PII throughout the dashboard. When this permission is turned off for users, those users won't be able to see any of those attributes.
 
 For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
 ### Defining PII
 
-You can define which fields are designated as PII in the dashboard. To do this, go to **Company Settings** > **Security Settings**.
+{% alert important %}
+Selecting and defining certain fields as PII fields only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
+{% endalert %}
 
-The following fields can be hidden from Braze users who don't have **View PII** permissions.
+You can select the fields your company designates as PII in the dashboard. To do this, go to **Company Settings** > **Admin Settings** > **Security Settings**.
+
+The following attributes can be designated as PII and hidden from Braze users who don't have **View PII** permissions.
 
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |

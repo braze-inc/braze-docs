@@ -15,13 +15,13 @@ Este artigo o guiará por um caso de uso do modelo **Lapsed User (Usuário caduc
 
 ## Pré-requisitos
 
-Para usar com êxito o modelo de usuário expirado, é necessário configurar o [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) com os parceiros e públicos que você usa.
+Para usar com êxito o modelo de usuário expirado, é necessário configurar o [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) com os parceiros e públicos que você usa.
 
 ## Adaptar o modelo às suas necessidades
 
 Digamos que estejamos trabalhando para a MovieCanon, um serviço de streaming que tem conteúdo exclusivo para filmes e programas. Podemos usar o modelo de usuário expirado para promover vantagens e conteúdo premium para usuários que não visitam nosso app há 30 dias.
 
-Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
+Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
 
 Para acessar o modelo de usuário de lapidação, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos de Braze**. Em seguida, ao lado de **Lapsing User**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
@@ -38,13 +38,13 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 3\. Atualize a descrição para explicar que essa tela contém vantagens e promoções.
 4\. Adicione a tag **Lapsing/Retention** para que possamos filtrar esse Canvas na página inicial do Canvas.
 
-![Etapa do canva "Set Up Canvas Details" (Configurar detalhes do canvas) com o nome do canvas "Lapsed User - Visit App" (Usuário expirado - Visitar aplicativo) e uma breve descrição do canvas][1]
+![Etapa "Set Up Canvas Details" (Configurar detalhes do Canvas) com o nome do Canvas "Lapsed User - Visit App" (Usuário expirado - Visitar app) e uma breve descrição do Canva]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### Etapa 2: Atribua seus eventos de conversão
 
 Atualize o **evento de conversão primária - A** para direcionar os usuários do nosso app (MovieCanon) e deixe **o evento de conversão primária - B** como o padrão para fazer qualquer compra.
 
-![Seção "Atribuir eventos de conversão" com uma conversão primária, até mesmo de um usuário que inicia uma sessão em um app específico.][2]
+![Seção "Atribuir eventos de conversão" com uma conversão primária, mesmo de um usuário iniciando uma sessão em um app específico.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### Etapa 3: Adaptar o cronograma de entrada
 
@@ -55,13 +55,13 @@ Faremos dois ajustes nesta etapa:
 1. Selecione uma data e hora de início.
 2. Selecione os parâmetros de término de **Em uma data específica** e uma data com dois meses de defasagem. Digamos que tenhamos outro Canva de usuário caduco que queremos iniciar depois deste.
 
-![Etapa do "Entry Schedule" para um Canva programado que entra nos usuários em um horário designado.][3]
+![Etapa do "Entry Schedule" para um Canva programado que entra nos usuários em um horário designado.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### Etapa 4: Selecionar nosso público-alvo
 
 Manteremos as configurações padrão para o público de entrada, que é definido como usuários que não usam nosso app há mais de 30 dias. Também manteremos os controles de entrada padrão para que os usuários possam entrar novamente no Canva após quatro semanas. Isso significa que toda vez que um usuário não visitar nosso app por mais de 30 dias seguidos, ele será incluído no Canva.
 
-![Etapa "Público-alvo" direcionamento aos usuários que usaram os apps pela última vez em 30 dias.][4]
+![Etapa "Público-alvo" direcionada a usuários que usaram os apps pela última vez em 30 dias.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### Etapa 5: Selecione suas configurações de envio
 
@@ -73,7 +73,7 @@ Manteremos a maioria das configurações de inscrição padrão:
 
 A única configuração que mudaremos é o que fazer quando uma mensagem for disparada durante o horário de silêncio. Em vez de cancelar a mensagem, selecione **Enviar no próximo horário disponível** para que nossos usuários não percam nenhuma promoção.
 
-![Seção "Horário de silêncio" com horário de início às 12h e horário de término às 8h.][5]
+![Seção "Horário de silêncio" com horário de início às 12 horas e de ponta a ponta às 8 horas.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### Etapa 6: Personalize sua tela
 
@@ -81,12 +81,12 @@ Agora, criaremos nosso Canvas personalizando as etapas do modelo:
 
 1. Personalize o primeiro e-mail que será enviado a todos os usuários que não visitam nosso app há mais de 30 dias. Para nosso caso de uso, personalizaremos um e-mail que informa aos usuários que eles desbloquearão novas vantagens quando visitarem nosso app hoje. 
 
-![Etapa do canva Message para um e-mail que diz aos usuários para desbloquear novas vantagens quando visitarem o site hoje.][6]
+![Etapa do canva Message para um e-mail que diz aos usuários para desbloquear novas vantagens quando visitarem o site hoje.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\. Personalize o componente da jornada de ação chamado "Start Session?" selecionando nosso app para a jornada **Started Session**. 
 
-![Jornada de ação para sessões que são iniciadas em um app específico.][7]
+![Jornada de ação para sessões iniciadas em um app específico.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\. Mantenha o padrão para a etapa de divisão de decisão chamada "Sessions?", que define o grupo ">1 Session" como usuários que usaram nosso app mais de uma vez no último dia do calendário.
@@ -95,7 +95,7 @@ Agora, criaremos nosso Canvas personalizando as etapas do modelo:
 6\. Mantenha o padrão para o componente [Jornada experimental]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) chamado "Testes A/B". Isso enviará aleatoriamente uma das duas promoções (que personalizaremos na próxima etapa) aos usuários que tiveram menos de duas sessões.
 7\. Personalize as duas promoções que serão enviadas aos usuários como parte da jornada experimental. Em nosso caso de uso, faremos uma promoção de 20% para uma inscrição de três meses e a outra uma promoção de 10% para uma inscrição de um mês.
 
-![Etapas do canva com jornadas ramificadas com base em quantas sessões um usuário teve.][8]{: style="max-width:70%;"}
+![Etapas do canva com jornadas ramificadas com base em quantas sessões um usuário teve.]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
 
 ### Etapa 7: Teste e inicie o Canva
 
@@ -105,11 +105,3 @@ Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme 
 Confira nossa [lista de verificação pré e pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber o que considerar antes e depois de lançar um Canva.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/lapsing_user_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/lapsing_user_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/lapsing_user_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/lapsing_user_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/lapsing_user_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}

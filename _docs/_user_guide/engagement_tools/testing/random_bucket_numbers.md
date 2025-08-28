@@ -1,5 +1,5 @@
 ---
-nav_title: Random Bucket Numbers
+nav_title: Random bucket numbers
 article_title: Random Bucket Numbers
 page_order: 2
 page_type: reference
@@ -13,11 +13,19 @@ tool:
 
 # Random bucket numbers
 
-> A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. When a user profile is created in Braze, that user is automatically assigned a random bucket number between 0 and 9999 (inclusive). You can use these segments to test the effectiveness of multiple campaigns or Canvases on groups of users over time.
+> A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. 
 
 ## Overview
 
-Random bucket numbers are used in your Global Control Group&#8212;a group of users who don't receive any campaigns or Canvases. Braze randomly selects multiple ranges of random bucket numbers and includes users from those selected buckets. 
+When a user profile is created in Braze, that user is automatically assigned a random bucket number between 0 and 9999 (inclusive). You can use these segments to test the effectiveness of multiple campaigns or Canvases on groups of users over time.
+
+### Global Control Group usage
+
+Random bucket numbers are used in your Global Control Group&#8212;a group of users who don't receive any campaigns or Canvases. Braze randomly selects multiple ranges of random bucket numbers and includes users from those selected buckets. Random bucket numbers are assigned with no weighting or consideration of recently allocated numbers. 
+
+{% alert note %}
+When a user is deleted and re-created, the user is assigned a different random bucket number because they are considered a new user.
+{% endalert %}
 
 If you have a Global Control Group set up and want to use random bucket numbers for other use cases, check out [Things to watch out for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
 

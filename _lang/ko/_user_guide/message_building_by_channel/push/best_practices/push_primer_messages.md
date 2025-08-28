@@ -10,7 +10,7 @@ channel: push
 
 # 푸시 프라이머 인앱 메시지
 
-![스트리밍 앱용 푸시 프라이머 인앱 메시지. 알림에는 "Movie Cannon에서 푸시 알림을 받으시겠습니까? 알림에는 새 영화, TV 프로그램 또는 기타 알림이 포함될 수 있으며 언제든지 해제할 수 있습니다."라고 적혀 있습니다][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![스트리밍 앱용 푸시 프라이머 인앱 메시지. 알림에는 "Movie Cannon에서 푸시 알림을 받으시겠습니까? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > 사용자에게 푸시 권한을 요청할 수 있는 기회는 한 번뿐이므로 푸시 등록을 최적화하는 것은 푸시 메시지의 도달 범위를 극대화하는 데 매우 중요합니다. 이를 위해 기본 푸시 메시지를 표시하기 전에 인앱 메시지를 사용하여 사용자가 옵트인할 경우 수신할 수 있는 메시지 유형을 설명할 수 있습니다. 이를 푸시 프라이머라고 합니다.
 
@@ -18,60 +18,67 @@ Braze에서 푸시 프라이머 인앱 메시지를 생성하려면 iOS, Android
 
 ## 전제 조건
 
-이 가이드에서는 최신 SDK 버전에서만 지원되는 버튼 [클릭 시 동작](#button-actions)을 사용합니다. 이러한 SDK 중 일부는 아직 출시되지 않았을 수 있습니다. 현재 버전을 확인하려면 다음 링크를 방문하세요:
+This feature requires [button on-click behavior](#button-actions), which is supported in the following minimum versions or later:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-### 개발 팀을 위한 참고 사항
+Additionally, note the following platform-specific details:
 
-#### Android
+{% tabs local %}
+{% tab android %}
+|OS version|Additional information|
+\|----------|----------------------|
+| **Android 12 and earlier** | Implementing push primers is not recommended because push is opted-in by default. |
+| **Android 13+** | If a user denies your push permission prompt twice, Android blocks further prompts—including Braze push primer messages. To grant permission after this, users must manually enable push for your app in their device settings. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
 
-- **Android 12세 이하:** 푸시는 기본적으로 옵트인되어 있으므로 푸시 프라이머를 구현하는 것은 권장되지 않습니다.
-- **Android 13 이상:** 테스트하는 동안 프롬프트가 여러 번 표시되도록 하려면 기기 설정으로 이동하여 앱의 푸시를 비활성화하면 프라이머가 다시 표시되도록 할 수 있습니다.
+{% tab swift %}
+### General information
 
-#### iOS
-
-- iOS 프롬프트는 운영 체제에 따라 설치당 한 번만 표시될 수 있습니다.
+- The push prompt can be displayed only once per install, enforced by the operating system.
 - 앱의 푸시 설정이 명시적으로 켜져 있거나 꺼져 있는 경우에는 메시지가 표시되지 않으며, [임시 권한](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375)이 있는 사용자에게만 메시지가 표시됩니다.
-  - 앱의 푸시 설정이 켜져 있는 경우, 사용자가 이미 옵트인한 상태이므로 Braze는 인앱 메시지를 표시하지 않습니다.
-  - 앱의 푸시 설정이 꺼져 있는 경우 설정 앱에서 앱의 알림 설정으로 사용자를 전달해야 합니다.
+  - **App's push setting is on:** Braze will not show the in-app message, as the user has already opted-in.
+  - **App's push setting is off:** You'll need to redirect the user to your app's push notification settings within the device settings.
 
-##### 수동 코드 제거
+### 수동 코드 제거
 
 이 튜토리얼을 사용하여 설정한 인앱 메시지는 사용자가 인앱 메시지 버튼을 클릭하면 자동으로 기본 푸시 프롬프트 코드를 호출합니다. 푸시 알림 권한을 두 번 요청하거나 잘못된 시간에 요청하는 것을 방지하려면 개발자가 구현한 기존 푸시 알림 통합을 수정하여 인앱 메시지가 사용자에게 가장 먼저 표시되는 푸시 알림 프라이머가 되도록 해야 합니다.
 
-개발자는 앱 또는 사이트에 대한 푸시 알림 구현을 검토하고 푸시 권한을 요청하는 코드를 수동으로 제거해야 합니다. 예를 들어 다음 코드에 대한 참조를 찾아서 제거합니다:
+Your development team should review your implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, you would remove references to the following code:
 
-{% tabs %}
-{% tab 목표-C %}
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
 ```objc
 requestAuthorizationWithOptions
 ```
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 ```swift
 requestAuthorization
 ```
-{% endtab %}
-{% tab 자바스크립트 %}
+{% endsubtab %}
+{% subtab JavaScript %}
 ```javascript
 braze.requestPushPermission()
 // or
 appboy.registerAppboyPushMessages()
 ```
-{% endtab %}
-{% tab Java %}
+{% endsubtab %}
+{% subtab Java %}
 ```java
 android.permission.POST_NOTIFICATIONS
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
 ## 1단계: 인앱 메시지 만들기
 
-[평소와 같이 인앱 메시지][2]를 작성합니다.
+First, [create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), then select your message type and layout.
 
-메시지 유형과 레이아웃을 선택합니다. 사용자에게 푸시 알림을 설명할 수 있는 충분한 공간을 제공하기 위해(그리고 버튼을 허용하기 위해) Braze는 전체 화면 또는 모달 메시지를 제안합니다. 전체 화면 인앱 메시지의 경우 이미지가 필요합니다. 
+To ensure you have enough space for both your message and buttons, use a fullscreen or modal message layout. If you choose fullscreen, note that an image is required.
 
 ## 2단계: 메시지 작성
 
@@ -79,24 +86,28 @@ android.permission.POST_NOTIFICATIONS
 
 예를 들어 뉴스 앱은 다음과 같은 푸시 프라이머를 사용할 수 있습니다:
 
-> 이동 중에도 속보를 확인하세요! 푸시 알림을 사용 설정하여 주요 스토리 및 관심 있는 주제에 대한 알림을 받아보세요.
+```plaintext
+Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
+```
 
 스트리밍 앱은 다음을 사용할 수 있습니다:
 
-> Movie Cannon의 푸시 알림을 받고 싶으신가요? 알림에는 새 영화, TV 프로그램 또는 기타 알림이 포함될 수 있으며 언제든지 해제할 수 있습니다."라고 적혀 있습니다.
+```plaintext
+Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
+```
 
-모범 사례 및 추가 리소스는 [커스텀 옵트인 안내 만들기][3]를 참조하세요.
+For best practices and additional resources, refer to [Creating custom opt-in prompts]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 ## 3단계: 버튼 동작 지정 {#button-actions}
 
-인앱 메시지에 버튼을 추가하려면 인앱 메시지의 보조 버튼과 기본 버튼인 **버튼 1** 및 **버튼 2** 텍스트 필드에 각각 텍스트를 추가합니다. 시작 버튼으로 "알림 허용" 및 "지금은 안 함"을 권장하지만, 다양한 버튼 프롬프트를 지정할 수 있습니다.
+To add buttons to your in-app message, drag two **Button** blocks into your message, which will act as the primary and secondary buttons in your in-app message. You can also drag a row into your message, and then drag the buttons into the row, so that the buttons are on the same horizontal row (as opposed to stacked on top of each other). 시작 버튼으로 "알림 허용" 및 "지금은 안 함"을 권장하지만, 다양한 버튼 프롬프트를 지정할 수 있습니다.
 
 버튼 복사본을 추가한 후 각 버튼의 클릭 시 동작을 지정합니다:
 
 - **버튼 1:** 이를 '메시지 닫기'로 설정합니다. 이 버튼은 보조 버튼 또는 "지금 안 함" 옵션입니다.
 - **버튼 2:** 이를 "푸시 권한 요청"으로 설정합니다. 이 버튼은 기본 버튼 또는 "알림 허용" 옵션입니다.
 
-![][4]
+![In-app message composer with two buttons: "Allow notifications" and "Not now".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## 4단계: 배송 예약
 
@@ -104,7 +115,7 @@ android.permission.POST_NOTIFICATIONS
 
 이상적인 시기는 다양하지만, Braze는 사용자가 앱이나 사이트에서 가치를 느끼기 시작했거나 푸시 알림으로 해결할 수 있는 강력한 요구 [사항](https://www.braze.com/resources/videos/mapping-high-value-actions)(예: 주문 후 배송 추적 정보를 제공하려는 경우)이 있을 때까지 기다릴 것을 제안합니다. 이렇게 하면 프롬프트가 브랜드에만 도움이 되는 것이 아니라 고객에게도 도움이 됩니다.
 
-![][5]
+![Action-based delivery settings to send to users who performed the custom event of "Add to Watch List".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## 5단계: 타겟 사용자
 
@@ -114,10 +125,5 @@ android.permission.POST_NOTIFICATIONS
 
 ## 6단계: 전환 이벤트
 
-Braze는 전환에 대한 기본 설정을 제안하지만, 푸시 프라이머를 둘러싼 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 설정할 수도 있습니다.
+Braze는 전환에 대한 기본 설정을 제안하지만, 푸시 프라이머를 둘러싼 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 설정할 수도 있습니다.
 
-[1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[4]: {% image_buster /assets/img_archive/push_primer_button_behavior.png %}
-[5]: {% image_buster /assets/img_archive/push_primer_trigger.png %}

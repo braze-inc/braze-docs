@@ -12,11 +12,7 @@ tool: Segments
 
 필터 옵션은 사용자 지정 속성을 위해 Braze에 전달하는 형식(데이터 유형)과 관련이 있습니다. Braze가 사용자 지정 속성에 대해 인식하는 데이터 유형을 검토하려면 **데이터 설정** > **사용자 지정 속성으로** 이동하세요.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **설정 관리**에서 **커스텀 속성**을 찾을 수 있습니다.
-{% endalert %}
-
-필터 옵션이 변경된 경우, 이는 데이터가 이전과 다른 형식(데이터 유형)으로 Braze에 전달되고 있음을 나타냅니다. 다양한 데이터 유형과 해당 필터링 옵션에 대한 자세한 설명은 [커스텀 속성 데이터 유형][36]을 참조하세요.
+필터 옵션이 변경된 경우, 이는 데이터가 이전과 다른 형식(데이터 유형)으로 Braze에 전달되고 있음을 나타냅니다. 다양한 데이터 유형과 해당 필터링 옵션에 대한 자세한 설명은 [커스텀 속성 데이터 유형]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)을 참조하세요.
 
 대시보드에서 커스텀 속성의 데이터 유형을 변경하면 다른 형식으로 Braze에 전송된 데이터는 거부된다는 점에 유의하세요.
 
@@ -24,4 +20,3 @@ tool: Segments
 
 _마지막 업데이트: 2021년 5월 5일_
 
-[36]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

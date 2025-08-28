@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Geofences
+nav_title: Creating geofences
 article_title: Creating Geofences
 page_order: 1
 page_type: reference

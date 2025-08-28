@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: View Specific Translation and Locale for Email Template"
+nav_title: "GET: View specific translation and locale for email template"
 article_title: "GET: View Specific Translation and Locale for Email Template"
 search_tag: Endpoint
 page_order: 2
@@ -15,7 +15,7 @@ description: "This article outlines details about the View specific translation 
 /templates/translations/email?locale_id={locale_uuid}&template_id={template_id}
 {% endapimethod %}
 
-> Use this endpoint to view a specific translation and locale for email template endpoint for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
+> Use this endpoint to view a specific translation and locale for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.

@@ -1,5 +1,5 @@
 ---
-nav_title: Segment Funnels
+nav_title: Segment funnels
 permalink: /segment_funnels/
 hidden: true
 page_type: reference
@@ -45,11 +45,11 @@ For example, let's say you have a group where all users who added items to a wis
 
 Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
 
-![Segment funnel for email example with the following filters: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Push Enabled is true", and "Email Subscription Status is Opted In" to reach 2,799 users.]({% image_buster /assets/img_archive/Wish_List_Email.png %})
+![Segment funnel for email example with the following filters: "Last Made Purchase less than 30 days ago", "Last used these apps less than 30 days ago", "Foreground Push Enabled is true", and "Email Subscription Status is Opted In" to reach 2,799 users.]({% image_buster /assets/img_archive/Wish_List_Email.png %})
 
 ### iOS or Android push opt-ins
 
-This use case leverages the "Push Enabled for App" filter to target iOS or Android users that have opted-in for push.
+This use case leverages the "Foreground Push Enabled for App" filter to target iOS or Android users that have opted-in for push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/ios.png %})
 
@@ -57,13 +57,13 @@ This use case leverages the "Push Enabled for App" filter to target iOS or Andro
 
 ### Full push-enabled audience
 
-This use case leverages the "Push Enabled" filter to target users that have opted-in for push.
+This use case leverages the "Foreground Push Enabled" filter to target users that have opted-in for push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/both.png %})
 
 ### Global control group of push-enabled audience
 
-This use case leverages the "Push Enabled" and "Random Bucket #" filter to target users that are part of the global control group that have opted-in for push.
+This use case leverages the "Foreground Push Enabled" and "Random Bucket #" filter to target users that are part of the global control group that have opted-in for push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/global_control.png %})
 

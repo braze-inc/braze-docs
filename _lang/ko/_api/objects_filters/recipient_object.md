@@ -11,7 +11,7 @@ description: "이 참조 문서에서는 브레이즈 수신자 객체의 다양
 
 > 수신자 개체를 사용하면 엔드포인트에서 정보를 요청하거나 쓸 수 있습니다.
 
-이 객체에는 `external_user_id`, `user_alias` 또는 `email` 이 필요합니다. **요청은 하나만 지정해야 합니다.**
+이 개체에는 `external_user_id`, `user_alias`, `braze_id` 또는 `email` 이 필요합니다. **요청은 하나만 지정해야 합니다.**
 
 수신자 객체를 사용하면 [사용자 별칭 객체]({{site.baseurl}}/api/objects_filters/user_alias_object/), [트리거 속성 객체]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) 및 [캔버스 항목 속성 객체를]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) 결합할 수 있습니다.
 
@@ -21,6 +21,7 @@ description: "이 참조 문서에서는 브레이즈 수신자 객체의 다양
 [{
   "user_alias": (optional, User Alias Object) User alias of user to receive message,
   "external_user_id": (optional, string) see External user ID,
+  "braze_id": (optional, string) see Braze ID,
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
@@ -30,6 +31,7 @@ description: "이 참조 문서에서는 브레이즈 수신자 객체의 다양
 
 `send_to_existing_only` 이 `true` 일 경우, Braze는 기존 사용자에게만 메시지를 보냅니다. 그러나 이 플래그는 사용자 별칭과 함께 사용할 수 없습니다. `send_to_existing_only` 이 `false` 인 경우 속성을 포함해야 합니다. Braze는 메시지를 보내기 전에 `id` 및 속성을 가진 사용자를 생성합니다.
 
+- [Braze ID]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 - [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [외부 사용자 ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [우선순위 지정]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)

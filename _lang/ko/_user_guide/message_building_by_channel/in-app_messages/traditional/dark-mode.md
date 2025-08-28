@@ -26,7 +26,7 @@ The new Dark Mode option, located in the Style tab when [creating an in-app mess
 
 ![인앱 메시지 작성 시 스타일 탭에서 라이트 모드 스타일과 다크 모드 스타일 간에 전환하는 사용자]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-이 옵션을 활성화하면 색상 선택기를 사용하여 인앱 메시지의 다크 테마 색상을 선택하거나 기존 [색상 프로필][2]을 선택하여 기존의 다크 테마 또는 라이트 테마를 재사용할 수 있습니다.
+When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) to re-use existing Dark or Light themes.
 
 {% alert note %}
 앱에서 자체 어두운 테마를 제공하지 않더라도 이 기능을 사용할 수 있습니다. 그러나 다크 모드를 지원하지 않는 기기에서는 기본적으로 라이트 테마가 표시됩니다. 인앱 메시지가 표시되는 동안 Android에서 기기 테마를 변경해도 해당 인앱 메시지에 사용되는 테마는 변경되지 않습니다.
@@ -36,11 +36,7 @@ The new Dark Mode option, located in the Style tab when [creating an in-app mess
 
 모든 인앱 메시지에 다크 모드를 사용하려면 **템플릿** > **인앱 메시지 템플릿으로** 이동하세요.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **템플릿 및 미디어에서** 이 페이지를 찾을 수 있습니다.
-{% endalert %}
-
-드롭다운에서 [색상 프로필 만들기][2]를 선택합니다. 다크 모드 테마에 맞는 색상 프로필을 만듭니다. 그런 다음 인앱 메시지의 다크 모드 버전을 만들 때마다 해당 색상 프로필을 선택하여 인앱 메시지의 모양을 일관되게 유지할 수 있습니다.
+From there, select [Create Color Profile]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) from the dropdown. 다크 모드 테마에 맞는 색상 프로필을 만듭니다. 그런 다음 인앱 메시지의 다크 모드 버전을 만들 때마다 해당 색상 프로필을 선택하여 인앱 메시지의 모양을 일관되게 유지할 수 있습니다.
 
 ## 호환성
 
@@ -73,4 +69,3 @@ HTML 인앱 메시지에 대한 다크 및 라이트 테마를 만들려면 [`pr
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile

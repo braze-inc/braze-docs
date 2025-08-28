@@ -12,9 +12,9 @@ tool: Canvas
 
 > Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. 
 
-Les parcours d’action vous permettent d’effectuer les tâches suivantes :
+![Une étape des parcours d'action dans un parcours utilisateur Canvas.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![Une étape de parcours d'action comme première étape d'un parcours utilisateur Canvas.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Les parcours d’action vous permettent d’effectuer les tâches suivantes :
 
 * Personnaliser des chemins d’utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés
 * Conserver des utilisateurs pendant une certaine durée pour prioriser leur parcours suivant en fonction de leurs actions au cours de cette période d’évaluation
@@ -29,7 +29,7 @@ Dans les **paramètres de l'action**, définissez la **fenêtre d'évaluation** 
 
 Dans les **paramètres d'action**, vous pouvez également activer l'ordre de classement de vos composants en basculant sur l'option **Avancer les utilisateurs en fonction de l'ordre de classement**.
 
-![L'action Paramètres est assortie d'une fenêtre d'évaluation d'un jour.][4]
+![L'action Paramètres avec une fenêtre d'évaluation d'un jour.]({% image_buster /assets/img/actionpath_settings.png %})
 
 Par défaut, le **classement** est désactivé. Lorsqu’un utilisateur accède au parcours d’action et effectue l’événement déclencheur annexe à tout groupe d’actions, il passe automatiquement au groupe d’actions pertinent. Si un utilisateur n'effectue pas d'événement déclencheur, il avancera dans le groupe par défaut **Tous les autres** à la fin de la période d'évaluation.
 
@@ -63,7 +63,7 @@ Ajoutez un ou plusieurs déclencheurs pour définir vos groupes d’actions. Ici
 - Déclencher un géorepérage
 - Envoyer un message entrant par SMS ou WhatsApp
 
-![Un groupe d'action nommé "Groupe 1" pour les utilisateurs qui effectuent un achat.][3]
+![Un groupe d'action nommé "Groupe 1" pour les utilisateurs qui effectuent un achat.]({% image_buster /assets/img/actionpath_group.png %})
 
 Dans chaque paramètre de groupe d'action, vous avez également la possibilité de cocher la case **Je veux que ce groupe quitte le Canvas**, ce qui signifie que les utilisateurs de ce groupe quitteront le Canvas à la fin de la période d'évaluation.
 
@@ -80,6 +80,3 @@ Si les utilisateurs entrent plusieurs fois dans un parcours d'action et ont plus
 Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[3]: {% image_buster /assets/img/actionpath_group.png %}
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 

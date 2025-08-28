@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up push notifications]({{site.baseurl}}/developer_guide/in_app_messages/setup/?sdktab=android).
+{% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [set up in-app messages]({{site.baseurl}}/developer_guide/in_app_messages).
 
 ## Setting custom manager listeners
 
@@ -20,7 +20,7 @@ The Braze SDK has a default `DefaultHtmlInAppMessageActionListener` class that i
 
 Create a class that implements [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html).
 
-The callbacks in your `IInAppMessageManagerListener` will also be called at various points in the in-app message lifecycle. For example, if you set a custom manager listener when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html#27659854%2FClasslikes%2F-1725759721), that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
+The callbacks in your `IInAppMessageManagerListener` will also be called at various points in the in-app message lifecycle. For example, if you set a custom manager listener when an in-app message is received from Braze, the [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html), that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If [`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
 
 `IInAppMessageManagerListener` also includes delegate methods for message clicks and buttons, which can be used in cases like intercepting a message when a button or message is clicked for further processing.
 
@@ -72,13 +72,6 @@ public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageAc
   }
 
   @Override
-  public boolean onNewsfeedClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
-    Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show();
-    BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
-    return true;
-  }
-
-  @Override
   public boolean onOtherUrlAction(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
     Toast.makeText(mContext, "Custom url pressed: " + url + " . Ignoring", Toast.LENGTH_LONG).show();
     BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
@@ -98,12 +91,6 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 
     override fun onCustomEventFired(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
         Toast.makeText(mContext, "Custom event fired. Ignoring.", Toast.LENGTH_LONG).show()
-        return true
-    }
-
-    override fun onNewsfeedClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
-        Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show()
-        BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
         return true
     }
 
@@ -160,7 +147,7 @@ The `InAppMessageOperation()` return value can control when the message should b
 | `null` | The message will be ignored. This method should **NOT** return `null` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-See [`InAppMessageOperation.java`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html) for more details.
+See [`InAppMessageOperation`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html) for more details.
 
 {% alert tip %}
 If you choose to `DISCARD` the in-app message and replace it with your in-app message view, you will need to log in-app message clicks and impressions manually.
@@ -492,7 +479,7 @@ You can customize some colors directly in your Braze campaign without modifying 
 
 ### Customizing the font
 
-Braze allows setting a custom font using the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization). To use it, override the style for message text, headers, and button text and use the `fontFamily` attribute to instruct Braze to use your custom font family.
+You can set a custom font by locating the typeface in the `res/font` directory. To use it, override the style for message text, headers, and button text and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
 For example, to update the font on your in-app message button text, override the `Braze.InAppMessage.Button` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
@@ -577,7 +564,7 @@ BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessa
 
 ## Customizing the orientation
 
-To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
+To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Then, update the orientation on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
 
 {% tabs %}
 {% tab JAVA %}

@@ -19,7 +19,7 @@ Les campagnes utilisent désormais les périodes creuses plutôt que « envoyer
 
 ## Clients d’Adjust
 
-Les clients de Braze qui utilisent [Adjust]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/) sont désormais en mesure de voir leur clé API et leur URL d'instance Braze, qu'ils utiliseront ensuite dans la plateforme Adjust pour s'intégrer.
+Les clients de Braze qui utilisent [Adjust]({{site.baseurl}}/partners/message_orchestration/attribution/adjust/) sont désormais en mesure de voir leur clé API et leur URL d'instance Braze, qu'ils utiliseront ensuite dans la plateforme Adjust pour s'intégrer.
 
 ## Filtre « Pas dans le segment »
 
@@ -27,7 +27,7 @@ Les clients peuvent désormais créer un segment à partir des utilisateurs qui 
 
 ## Exportations des destinataires Canvas sur CSV 
 
-Les clients peuvent désormais [exporter des données]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) sur les utilisateurs qui ont saisi un Canvas. Le fichier CSV généré sera similaire à celui de la campagne.
+Les clients peuvent désormais [exporter des données]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/) sur les utilisateurs qui ont saisi un Canvas. Le fichier CSV généré sera similaire à celui de la campagne.
 
 ## Filtre de segmentation « iOS 12 » autorisé provisoirement
 

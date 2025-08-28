@@ -14,9 +14,9 @@ description: "이 문서에는 2016년 7월의 릴리스 노트가 포함되어 
 
 ## 마지막 제거 추적 푸시 전송에 대한 타임스탬프 추가
 
-Braze는 고객의 앱에 무음 푸시를 보내 응답하는 기기를 확인하여 제거를 감지합니다. 이 기능은 제거 추적이 마지막으로 실행된 시점을 나타내는 눈에 잘 띄지 않는 타임스탬프를 추가합니다. 이 타임스탬프는 제거 추적이 구성된 설정 페이지에서 찾을 수 있습니다. [제거 추적 해제]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking)에 대해 자세히 알아보세요.
+Braze는 고객의 앱에 무음 푸시를 보내 응답하는 기기를 확인하여 제거를 감지합니다. 이 기능은 제거 추적이 마지막으로 실행된 시점을 나타내는 눈에 잘 띄지 않는 타임스탬프를 추가합니다. 이 타임스탬프는 제거 추적이 구성된 설정 페이지에서 찾을 수 있습니다. [제거 추적 해제]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking)에 대해 자세히 알아보세요.
 
-![추적 제거 확인란][6]
+![추적 제거 확인란]({% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %})
 
 ## 웹훅 테스트 개선 사항 추가
 
@@ -24,13 +24,11 @@ Braze는 고객의 앱에 무음 푸시를 보내 응답하는 기기를 확인�
 
 ## 캠페인 수신자에게 수신되는 메시지 변형 CSV 내보내기 추가
 
-캠페인 수신자 CSV 내보내기에 수신된 메시지 변형을 나타내는 열을 추가했습니다. Braze에서 [데이터 내보내기]({{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data)에 대해 자세히 알아보세요.
+캠페인 수신자 CSV 내보내기에 수신된 메시지 변형을 나타내는 열을 추가했습니다. Braze에서 [데이터 내보내기]({{site.baseurl}}/user_guide/data/export_braze_data/)에 대해 자세히 알아보세요.
 
 ## 노출 수에 대한 대략적인 제한
 
 인앱 메시지가 일정 횟수 이상 노출 횟수가 다성되면 Braze는 사용자가 메시지를 수신할 수 있는 자격을 더 이상 허용하지 않습니다. [노출 횟수에 대한 대략적인 제한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap) 설정에 대해 자세히 알아보세요.
 
-![IAM 노출 한도][11]
+![IAM 노출 캡]({% image_buster /assets/img_archive/approx_limit_for_IAM.png %})
 
-[6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
-[11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

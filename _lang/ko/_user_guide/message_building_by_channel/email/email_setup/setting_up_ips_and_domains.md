@@ -57,17 +57,13 @@ IP, 도메인, 하위 도메인 및 IP 풀이 구성되면 DNS 레코드 목록�
 2. 다음으로 **발신자 인증** 탭을 선택합니다. 이 탭을 보려면 "회사 설정을 관리할 수 있음" 회사 수준 권한이 있어야 합니다.
 3. **설정 시작** 버튼을 클릭합니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)으 사용하는 경우 프로필 아이콘을 선택하여 **발신자 인증**을 찾을 수 있습니다.
-{% endalert %}
-
 ### 2단계: 보내는 도메인 추가 및 확인
 
 이메일 발송 시 ''보낸 사람'' 주소에 발신 도메인이 사용됩니다. 보내는 도메인을 입력하고 **제출**을 클릭합니다. 
 
 그런 다음 페이지 하단의 TXT 및 CNAME 레코드를 DNS 공급업체에 추가합니다. 그런 다음 Braze 대시보드로 돌아와서 **인증을** 클릭합니다.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 보내는 도메인은 소유한 도메인의 하위 도메인이어야 합니다. 예를 들어 "example.com"를 소유하고 있는 경우 하위 도메인은 "mail.example.com"으로 설정하여 "@mail.example.com"라는 발신 주소를 사용할 수 있습니다.
@@ -89,4 +85,3 @@ Braze는 역방향 DNS(rDNS)라는 설정에서 사용자의 IP 주소를 보내
 
 발신자 인증이 완료되면 메시지가 대상 받은편지함에 일관되게 빠른 속도로 도달할 수 있도록 IP 워밍을 권장합니다. 이 설정을 완료한 후에는 Braze 온보딩 팀에 문의하여 도메인과 [IP 주소]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)가 제대로 작동하는지 확인하시기 바랍니다.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

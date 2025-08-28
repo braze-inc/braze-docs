@@ -10,7 +10,7 @@ description: "この記事には2021年7月のリリースノートが含まれ�
 
 ## アプリ内の簡単なアンケートメッセージ
 
-[簡単な調査アプリ内メッセージテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/)を使用して、キャンペーン戦略を強化するユーザー属性、インサイト、および好みを収集します。例えば、ユーザーにアプリをどのように使いたいかを尋ねたり、個人的な好みについて詳しく知ったり、特定の機能に対する満足度を質問したりすることができます。このアンケートテンプレートは、モバイルアプリとウェブブラウザの両方に対応している。
+[簡単な調査アプリ内メッセージテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/)を使用して、キャンペーン戦略を強化するユーザー属性、インサイト、および好みを収集します。例えば、ユーザーにアプリをどのように使いたいかを尋ねたり、個人的な好みについて詳しく知ったり、特定の機能に対する満足度を質問したりすることができます。このアンケートテンプレートは、モバイルアプリとウェブブラウザの両方に対応している。
 
 ## 流動ユースケース ライブラリー
 
@@ -18,11 +18,11 @@ Liquid でその1つのことを実行する方法を知りたいですか?イ�
 
 ## 電子メール追跡
 
-開封ピクセル追跡とクリック追跡を、ユーザープロファイルごとに無効にできるようになりました。このような柔軟性があるため、お客様がが各自のユーザープロファイルを追跡対象外と指定したときに地域の個人情報保護法を遵守できます。詳しくは、[Eメール・トラッキングの]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/)記事をご覧いただきたい。
+開封ピクセル追跡とクリック追跡を、ユーザープロファイルごとに無効にできるようになりました。このような柔軟性があるため、お客様がが各自のユーザープロファイルを追跡対象外と指定したときに地域の個人情報保護法を遵守できます。詳しくは、[Eメール・トラッキングの]({{site.baseurl}}/user_guide/analytics/tracking/email_tracking/)記事をご覧いただきたい。
 
 ## SDK によるデータ収集のオプション
 
-Braze SDK を統合して柔軟なデータ収集を可能にする方法について詳しくは、[SDK データ収集オプション]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)に関する新しいドキュメントをご覧ください。
+Braze SDK を統合して柔軟なデータ収集を可能にする方法について詳しくは、[SDK データ収集オプション]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)に関する新しいドキュメントをご覧ください。
 
 ## SSLの概要
 
@@ -30,7 +30,7 @@ BrazeのSSLについての詳細、SSLが重要な理由、SSL証明書の取得
 
 ## AmplitudeユーザープロファイルAPIエンドポイント
 
-Amplitude のユーザープロファイル API はAmplitude ユーザープロファイル に対応しています。これには、ユーザー・プロパティ、計算されたユーザー・プロパティ、ユーザーを含むコホートのコホートIDのリスト、および推奨事項が含まれる。詳細については、[AmplitudeユーザプロファイルAPI エンドポイント]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/)を参照してください。
+Amplitude のユーザープロファイル API はAmplitude ユーザープロファイル に対応しています。これには、ユーザー・プロパティ、計算されたユーザー・プロパティ、ユーザーを含むコホートのコホートIDのリスト、および推奨事項が含まれる。詳細については、[AmplitudeユーザプロファイルAPI エンドポイント]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/)を参照してください。
 
 ## キャンペーン詳細エンドポイント 
 

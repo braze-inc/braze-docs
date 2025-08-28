@@ -1,5 +1,5 @@
 ---
-nav_title: Documentation Feedback
+nav_title: Documentation feedback
 permalink: /feedback/
 hide_toc: true
 ---

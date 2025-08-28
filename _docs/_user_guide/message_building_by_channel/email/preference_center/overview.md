@@ -11,7 +11,7 @@ channel:
 
 > Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/). This article includes steps for building an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
-In the Braze dashboard, go to **Audience** > **Subscriptions** > **Email Preference Center**.
+In the Braze dashboard, go to **Audience** > **Email Preference Centers**.
 
 This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.
 
@@ -43,7 +43,7 @@ The [Generate preference center URL endpoint]({{site.baseurl}}/api/endpoints/pre
 
 ### Step 2: Include in your email campaign
 
-{% multi_lang_include preference_center_warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
 To place a link to the preference center in your emails, use the following Liquid tag in the desired place in your email, similar to the way you would insert unsubscribe URLs.
 

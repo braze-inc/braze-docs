@@ -41,13 +41,13 @@ tool: Canvas
 3\. 설명을 업데이트하여 이 캔버스에 개인화된 메시지가 포함되어 있음을 설명합니다.
 4\. **프로모션** 태그 아래에 중첩된 **재고** 있음 태그를 추가하여 캔버스 홈 페이지에서 필터링할 수 있도록 합니다. 
 
-!["캔버스 세부 정보 설정" 단계에서 캔버스 이름 "재고 있음 - 클래식 스트레이트 다리"와 간단한 캔버스 설명을 추가합니다.][1]
+!["Set Up Canvas Details" step with a Canvas name of "Back in Stock - Classic Straight Leg" and a brief Canvas description.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
 
 ### 2단계: 전환 이벤트 할당
 
 **기본 전환 이벤트 - A를** **특정 구매로** 변경하고 제품 이름으로 **클래식 스트레이트 레그를** 선택합니다.
 
-!["전환 기한이 7일인 클래식 스트레이트 레그 제품 구매의 전환 이벤트 유형에 대한 '전환 이벤트 할당' 섹션을 선택합니다.][2]
+!["Assign Conversion Events" section for the conversion event type of purchasing the Classic Straight Leg product with a conversion deadline of 7 days.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
 
 ### 3단계: 참가 일정 맞춤 설정
 
@@ -57,12 +57,12 @@ tool: Canvas
 
 1. '스트레이트 레그 팬츠'로 명명된 클래식 스트레이트 레그 청바지에 대한 정보가 포함된 카탈로그를 선택하세요. 
 
-!["액션 기반 캔버스의 '입력 일정' 단계.][3]
+!["Entry Schedule" step for an action-based Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
 
 {: start="2"}
 2\. **시작 시간(필수)** 을 원하는 시작 날짜와 시간으로 설정합니다.
 
-!["시작 시간이 2025년 1월 2일 오전 12시로 설정된 '참가 기간' 섹션입니다.][4]
+!["Entry Window" section with a start time of January 2, 2025 at 12 am.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
 
 ### 4단계: 타겟 오디언스 선택
 
@@ -71,23 +71,23 @@ tool: Canvas
 1. 앱이나 웹사이트에서 클래식 스트레이트 레그 청바지를 즐겨찾은 사용자로 구성된 타겟 세그먼트인 '즐겨찾는 - 클래식 스트레이트 레그 청바지'를 선택합니다.
 2. '청바지'를 "0" 번 이상 구매한 사용자를 포함하려면 필터를 선택합니다.
 
-!["타겟 고객" 단계에서는 "즐겨 찾기 - 클래식 스트레이트 레그 진" 세그먼트를 사용합니다.][5]
+!["Target Audience" step with the segment of "Favorited - Classic Straight Leg Jeans".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
 
 {: start="3"}
 3\. 사용자가 캔버스의 최대 지속 시간이 지난 후 캔버스에 다시 들어갈 수 있도록 항목 컨트롤을 조정하여 사용자가 동시에 같은 단계를 트리거할 가능성을 방지합니다.
 
-!['항목 제어' 섹션에 사용자가 캔버스의 최대 지속 시간으로 이 캔버스에 다시 들어갈 수 있도록 허용하는 확인란이 있습니다.][6]
+!["Entry Controls" section with a checkbox for allowing users to re-enter this Canvas with a maximum duration of the Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4\. 클래식 스트레이트 레그 청바지에 싫어요를 누르는 사용자 지정 이벤트를 수행한 사용자를 제거하도록 종료 기준을 조정합니다.
 
-!["종료 기준" 섹션에서 '선호하지 않음'의 사용자 지정 이벤트를 수행하는 사용자에 대한 예외가 있습니다.][7]
+!["Exit Criteria" section with a exception for users that perform the custom event of "Unfavorited".]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
 
 ### 5단계: 전송 설정을 선택하세요
 
 기본 구독 설정을 유지하여 구독하거나 메시지 또는 알림 수신을 선택한 사용자에게만 전송하고 다른 설정(빈도 제한, 조용한 시간, 시드 그룹)은 건너뜁니다.
 
-!['설정 보내기' 단계는 구독 또는 옵트인한 사용자를 대상으로 합니다.][8]
+!["Send Settings" step targeting users who are subscribed or opted in.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
 
 ### 6단계: 캔버스 사용자 지정
 
@@ -106,7 +106,7 @@ tool: Canvas
     - 구매를 하지 않은 사용자에게 보내는 '푸시+이메일 알림' 메시지
 4. **구매** 작업 그룹을 선택하여 작업 경로 단계를 업데이트합니다. 그런 다음 **특정 구매를** 선택하고 제품에 대해 클래식 스트레이트 레그 청바지를 선택합니다.
 
-![모바일 푸시 캔버스 단계에서는 사용자에게 제품 재입고를 알리는 메시지를 표시합니다.][9]
+![Mobile Push Canvas step with a message notifying users that a product is back in stock.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
 
 ### 7단계: 캔버스 테스트 및 실행
 
@@ -116,12 +116,3 @@ tool: Canvas
 캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/back_in_stock_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/back_in_stock_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/back_in_stock_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/back_in_stock_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/back_in_stock_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/back_in_stock_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/back_in_stock_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/back_in_stock_8.png %}
-[9]: {% image_buster /assets/img/canvas_templates/back_in_stock_9.png %}

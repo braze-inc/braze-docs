@@ -29,25 +29,21 @@ Braze는 정기적인 푸시 캠페인에서 기본 수준의 제거 정보를 �
 
 추적하려는 각 앱의 **앱 설정** 페이지의 **설정** 아래에서 제거 추적을 사용 설정할 수 있습니다.
 
-{% alert note %}
-이전 탐색을 사용하는 경우 **앱 설정은** **설정**이며 **설정 관리** 아래에 있습니다.
-{% endalert %}
-
 앱에 대해 제거 추적이 켜져 있으면 24시간 동안 세션을 녹화하거나 푸시를 받지 않은 사용자에게 매일 밤 백그라운드 푸시 메시지가 전송됩니다.
 
 ### 구성
 
-iOS 애플리케이션에 대한 제거 추적을 구성하려면 [유틸리티 방법][iOS 설명서]를 사용하세요. Android 애플리케이션의 경우 [`isUninstallTrackingPush()`][8]를 사용합니다. 제거 추적 또는 일반 푸시 캠페인 전송을 통해 제거가 감지되면, Braze는 사용자의 제거 예상 시간을 기록합니다. 이 시간은 사용자 프로필에 표준 속성으로 저장되며 윈백 캠페인의 사용자 세그먼트를 정의하는 데 사용할 수 있습니다.
+To configure uninstall tracking for your iOS application, use a [utility method]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift). For your Android application, use [`isUninstallTrackingPush()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html). 제거 추적 또는 일반 푸시 캠페인 전송을 통해 제거가 감지되면, Braze는 사용자의 제거 예상 시간을 기록합니다. 이 시간은 사용자 프로필에 표준 속성으로 저장되며 윈백 캠페인의 사용자 세그먼트를 정의하는 데 사용할 수 있습니다.
 
 ## 제거를 기준으로 세그먼트 필터링
 
-**세그먼트** 페이지의 **제거됨** 필터는 시간 범위 내에서 앱을 제거한 사용자를 선택합니다. 제거 시점을 정확히 파악하기 어렵기 때문에 제거 필터의 시간 범위를 넓게 설정하여 제거한 모든 사람이 어느 시점에 해당 세그먼트에 속하도록 하는 것이 좋습니다.
+The **Uninstalled** filter selects users who uninstalled your app within a time range. 제거 시점을 정확히 파악하기 어렵기 때문에 제거 필터의 시간 범위를 넓게 설정하여 제거한 모든 사람이 어느 시점에 해당 세그먼트에 속하도록 하는 것이 좋습니다.
 
-![세그먼트 제거.][5]
+제거에 대한 일일 통계는 **홈** 페이지에서 확인할 수 있습니다. 
 
-### 앱 수준 분석
+![Uninstall segment.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
-제거에 대한 일일 통계는 **홈** 페이지에서 확인할 수 있습니다. 그래프는 Braze가 제공하는 다른 통계와 마찬가지로 앱과 세그먼트별로 세분화할 수 있습니다. **실적 개요** 섹션에서 날짜 범위와 원하는 경우 앱을 선택합니다. 그런 다음 **시간 경과에 따른 성능** 그래프까지 아래로 스크롤하여 다음을 수행합니다:
+그래프는 Braze가 제공하는 다른 통계와 마찬가지로 앱과 세그먼트별로 세분화할 수 있습니다. In the **Performance overview** section, select your date range and, if desired, an app. Then, scroll down to the **Performance Over Time** graph and do the following:
 
 1. **통계 대상** 드롭다운에서 **제거**를 선택합니다.
 2. **분류** 드롭다운에서 **세그먼트별을** 선택합니다.
@@ -57,15 +53,13 @@ iOS 애플리케이션에 대한 제거 추적을 구성하려면 [유틸리티 
 제거 추적이 활성화되지 않은 앱은 일부 사용자(푸시 알림이 타겟팅된 사용자)의 제거만 보고하므로 일일 제거 총계가 표시된 것보다 높을 수 있습니다.
 {% endalert %}
 
-![그래프 선택을 제거합니다.][2]
-
 ## 캠페인 추적 제거
 
 캠페인 제거 추적은 특정 캠페인을 수신한 후 선택한 기간 내에 앱을 삭제한 사용자 수를 표시합니다. 이 도구는 캠페인이 의도하지 않은 부정적인 사용자 행동을 조장할 수 있는 방법에 대한 인사이트를 제공하고 전반적인 캠페인 효과를 측정하는 데 도움이 됩니다.
 
 캠페인의 제거 통계는 특정 캠페인의 **캠페인 분석** 페이지에 있습니다. 멀티채널 및 다변량 캠페인의 경우, 설치 제거를 각각 채널 및 배리언트별로 세분화할 수 있습니다.
 
-![캠페인 수준에서 제거합니다.][6]
+![Uninstall at the campaign-level.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### 작동 방식
 
@@ -77,7 +71,7 @@ Braze는 사용자의 디바이스로 전송된 푸시 메시지가 Firebase 클
 
 제거 추적은 FCM 및 APN에 의해 이 정보에 대한 제한이 적용될 수 있습니다. Braze는 FCM 또는 APN이 사용자가 제거했다고 알려줄 때만 제거 횟수를 늘리지만, 이러한 타사 시스템은 언제든 제거 사실을 알릴 수 있는 권한을 보유합니다. 따라서 제거 추적은 정확한 통계가 아닌 방향성 추세를 감지하는 데 사용해야 합니다.
 
-제거 추적 사용에 대한 자세한 내용은 다음 블로그 게시물을 참고하세요. [제거 추적: 업계에서 바라본 강점과 한계][7].
+For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## 문제 해결
 
@@ -85,15 +79,9 @@ Braze는 사용자의 디바이스로 전송된 푸시 메시지가 Firebase 클
 
 앱 제거가 급증하는 경우, Firebase 클라우드 메시징(FCM)과 Apple 푸시 알림 서비스(APNS)가 이전 토큰을 다른 주기로 해지하기 때문일 수 있습니다.
 
-### 앱 제거 횟수가 APN의 수와 다른 이유는 무엇인가요?
+### Why are the number of app uninstalls different from what's in APNs?
 
-차이가 예상됩니다. APN은 퍼지 일정에 따라 이러한 토큰에 대해 410 상태를 반환하기 시작합니다.
+차이가 예상됩니다. 
 
-[1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "제거 추적 확인란"
-[2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "그래프 선택 제거"
-[4]: {% image_buster /assets/img_archive/User_Profile.png %} "속성 제거"
-[5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "세그먼트 제거"
-[6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
-[7]:https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[iOS 문서]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[8]:https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html
+Apple uses a randomized schedule to delay reporting when a push token becomes invalid, meaning that even after a user uninstalls an app, APNs may continue to return successful responses to push notifications for a period of time. This delay is intentional and designed to protect user privacy. No bounce or failure will be reported until APNs returns a `410` status for an invalid token.
+

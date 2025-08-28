@@ -41,13 +41,13 @@ tool: Canvas
 3\.このキャンバスにパーソナライズされたメッセージングが含まれていることを説明する説明を更新します。
 4. タグ**Back in Stock** を追加します。これはタグ**Promotional** の下にネストされているため、キャンバスのホームページでフィルタリングできます。 
 
-![「Back in Stock - Classic Straight Leg」というキャンバス名と簡単なキャンバスの説明が指定されている「キャンバスの詳細を設定」ステップ。][1]
+![「Back in Stock - Classic Straight Leg」というキャンバス名と簡単なキャンバスの説明が指定されている [キャンバスの詳細を設定] ステップ。]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
 
 ### ステップ2:変換イベントの割り当て
 
 [**1次コンバージョンイベント - A**] を [**特定の購入**] に変更し、製品名として [**Classic Straight Leg**] を選択します。
 
-![コンバージョンイベントタイプがClassic Straight Leg 製品購入、コンバージョン期限が7日間である「コンバージョンイベントを割り当てる」セクション。][2]
+![コンバージョンイベントタイプがClassic Straight Leg 製品購入、コンバージョン期限が7日間である [コンバージョンイベントを割り当てる] セクション。]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
 
 ### ステップ 3:エントリスケジュールを調整する
 
@@ -57,12 +57,12 @@ tool: Canvas
 
 1. Classic Straight Leg ジーンズの情報が含まれているカタログ (名前は「Straight Leg Pants」) を選択します。 
 
-![アクションベースのキャンバスの「エントリスケジュール」ステップ。][3]
+![アクションベースのキャンバスの [エントリスケジュール] ステップ。]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
 
 {: start="2"}
 2\.**Start Time (Required)**を希望の開始日時に設定します。
 
-![開始時刻が2025年1月2日午前12時に設定されている「エントリ期間」セクション。][4]
+![開始時刻が2025年1月2日午前12時に設定されている [エントリ期間] セクション。]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
 
 ### ステップ4:ターゲットオーディエンスを選択する
 
@@ -71,23 +71,23 @@ tool: Canvas
 1. 「Favorited - Classic Straight Leg Jeans」というターゲッセグメントを選択します。このセグメントは、アプリまたは Web サイトで Classic Straight Legジ ーンズをお気に入りに登録したユーザーで構成されています。
 2. 「Jeans」を「0」回以上購入したユーザを含めるフィルタを選択します。
 
-![セグメントが「Favorited - Classic Straight Leg Jeans」の「ターゲットオーディエンス」ステップ。][5]
+![セグメントが「Favorited - Classic Straight Leg Jeans」の [ターゲットオーディエンス] ステップ。]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
 
 {: start="3"}
 3\.ユーザーが同じステップを同時にトリガーすることを防ぐため、キャンバスの最長期間の経過後にユーザーがキャンバスに再エントリできるように、エントリコントロールを調整します。
 
-![" Entry Controls" ユーザがキャンバスの最大継続時間でこのキャンバスを再入力できるようにするチェックボックス付きのセクション。][6]
+![ユーザーがこのキャンバスに再エントリすることを許可するチェックボックスと、キャンバスの最長期間が表示されている [エントリコントロール] セクション。]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4. Classic Straight Leg ジーンズをお気に入りにならないカスタムイベントを実行したユーザーを削除するには、終了基準を調整します。
 
-![「Unfavorited」というカスタムイベントを実行するユーザーに対する例外が表示されている「終了条件」セクション。][7]
+![「Unfavorited」というカスタムイベントを実行するユーザーに対する例外が表示されている [終了条件] セクション。]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
 
 ### ステップ 5: 送信設定を選択する
 
 デフォルトのサブスクリプション設定を維持します。これにより、サブスクリプション登録したユーザーおよびメッセージまたは通知の受信を選択したユーザーのみに送信されるようになります。その他の設定 (フリークエンシーキャップ、サイレント時間、シードグループ) は省略します。
 
-![配信登録済みまたはオプトイン済みのユーザーをターゲットに設定する「送信設定」ステップ。][8]
+![配信登録済みまたはオプトイン済みのユーザーをターゲットに設定する [送信設定] ステップ。]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
 
 ### ステップ 6:キャンバスをカスタマイズする
 
@@ -106,7 +106,7 @@ tool: Canvas
     - 購入していないユーザに送信する「プッシュ+メールアラート」メッセージ
 4. アクションパスステップを更新するには、[**購入**] アクショングループを選択します。［**特定の購入**] を選択し、製品として「Classic Straight Leg jeans」を選択します。
 
-![製品の再入荷をユーザーに通知するメッセージが示されているモバイルプッシュキャンバスステップ。][9]
+![製品の再入荷をユーザーに通知するメッセージが示されているモバイルプッシュキャンバスステップ。]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
 
 ### ステップ 7:キャンバスをテストして起動する
 
@@ -116,12 +116,3 @@ tool: Canvas
 キャンバスの起動前後に考慮すべき点については、[起動前と起動後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/back_in_stock_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/back_in_stock_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/back_in_stock_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/back_in_stock_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/back_in_stock_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/back_in_stock_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/back_in_stock_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/back_in_stock_8.png %}
-[9]: {% image_buster /assets/img/canvas_templates/back_in_stock_9.png %}

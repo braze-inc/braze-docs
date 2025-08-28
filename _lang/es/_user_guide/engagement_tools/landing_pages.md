@@ -9,15 +9,21 @@ alias: /landing_pages/
 
 # Acerca de las páginas de destino
 
-> Las páginas de destino Braze son páginas web independientes que pueden impulsar su estrategia de captación y compromiso de usuarios.
+> Las páginas de destino de Braze son páginas web independientes que pueden impulsar tu estrategia de captación e interacción de usuarios.
+
+![Página de aterrizaje para el lanzamiento de un producto de cuidado de la piel, con beneficios, imágenes y un diseño con testimonios de clientes.]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
+Utiliza las páginas de destino para aumentar tu audiencia, captar datos de usuario, promocionar ofertas especiales y apoyar campañas multicanal.
 
 ## Requisitos previos
 
-Para poder acceder a las páginas de destino, crearlas y publicarlas, necesitas permisos de administrador o todos los permisos siguientes:
+Para poder acceder, crear y publicar páginas de destino, necesitas [permisos de]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrador o todos los permisos siguientes:
 
 - Acceder a páginas de inicio
 - Crear borradores de página de inicio
 - Publicar páginas de inicio
+
+{% multi_lang_include drag_and_drop_access.md variable_name='editores dnd' %}
 
 ## Niveles del plan
 
@@ -41,7 +47,7 @@ No, no hay requisitos técnicos.
 
 ### ¿Existe un editor HTML para las páginas de destino?
 
-Puedes editar el HTML de una página de destino utilizando el bloque Código personalizado.
+Sí. Utiliza el bloque de **código personalizado** en el editor de arrastrar y soltar para añadir o editar HTML.
 
 ### ¿Puedo crear un webhook dentro de una página de destino?
 

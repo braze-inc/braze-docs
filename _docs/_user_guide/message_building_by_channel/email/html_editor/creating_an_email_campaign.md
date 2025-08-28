@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an Email
+nav_title: Creating an email
 article_title: Creating an Email with Custom HTML
 page_order: 1
 description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."
@@ -51,7 +51,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
-{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='email html editor' %}
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
@@ -99,6 +99,8 @@ After you've finished designing and building your email message, it's time to ad
 2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
 4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
+
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
 
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
 
@@ -232,7 +234,9 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that segment population looks like right now, including how many users within that segment are reachable through email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to email.
 
@@ -249,7 +253,7 @@ For multichannel campaigns targeting both email and push channels, you may want 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will check that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Audiences** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Audiences** step that limit the audience to a single channel (for example, `Foreground Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Choose conversion events

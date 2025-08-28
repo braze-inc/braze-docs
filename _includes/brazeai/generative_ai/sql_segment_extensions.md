@@ -2,7 +2,7 @@
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 >
-> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
+> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension. Unlike standard Segment Extensions, SQL Segment Extensions [consume credits](#credits).
 
 ## Prerequisites
 
@@ -177,7 +177,7 @@ For incremental SQL Segment Extensions, the preview will not include the additio
 Next, determine if you need to invert SQL. While it's not possible to directly query for users with zero events, you can use **Invert SQL** to target these users.
 
 {% alert note %}
-By default, **Invert SQL** is not toggled on. However, if you generate a SQL statement for Segment Extensions that needs to be negated, ChatGPT could return an output that automatically toggles this feature on.
+By default, **Invert SQL** is not toggled on. However, if you use the AI SQL generator to generate a SQL statement that needs to be negated, ChatGPT could return an output that automatically toggles this feature on.
 {% endalert %}
 
 For example, to target users who have fewer than three purchases, first write a query to select users who have three or more purchases. Then, select the **Invert SQL** to target users with fewer than three purchases (including those with zero purchases).
@@ -208,7 +208,7 @@ Select a SQL Segment Extension to view where the extension is being used, archiv
 
 {% multi_lang_include segments.md section='Refresh settings' %}
 
-## Snowflake credits
+## Snowflake credits {#credits}
 
 Each Braze workspace has 5 Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
 

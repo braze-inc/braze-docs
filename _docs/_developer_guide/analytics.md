@@ -27,7 +27,7 @@ During your Braze implementation, be sure to discuss marketing goals with your t
 
 ## Automatically collected data
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point usage.
 
 See our [SDK primer]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) article to allowlist processes that block the default collection of certain data items.
 
@@ -325,7 +325,7 @@ These should not be used as user IDs:
 - Email address
 - Another 3rd party vendor's user ID
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### Give custom events and attributes readable names
 

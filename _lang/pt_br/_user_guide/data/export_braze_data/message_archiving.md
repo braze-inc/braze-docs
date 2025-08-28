@@ -16,14 +16,14 @@ O arquivamento de mensagens está disponível como um recurso complementar. Para
 
 ## Como funciona?
 
-Quando esse recurso estiver ativado, se você tiver conectado um bucket de armazenamento em nuvem ao Braze e o tiver marcado como o destino padrão de exportação de dados, o Braze gravará um arquivo JSON compactado em gzip no bucket de armazenamento em nuvem para cada mensagem enviada a um usuário por meio dos canais selecionados (e-mail, SMS ou push). 
+Quando esse recurso estiver ativado, se você tiver conectado um bucket de armazenamento em nuvem ao Braze e o tiver marcado como o destino padrão de exportação de dados, o Braze gravará um arquivo JSON compactado em gzip no bucket de armazenamento em nuvem para cada mensagem enviada a um usuário por meio dos canais selecionados (e-mail, SMS/MMS ou push). 
 
 Esse arquivo conterá os campos definidos em [Referências de arquivo](#file-references) e refletirá os modelos finais de mensagens enviadas ao usuário. Todos os valores de modelo definidos em sua campanha (por exemplo, {% raw %}`{{${first_name}}}`{% endraw %}) mostrarão o valor final que o usuário recebeu com base nas informações de perfil. Isso permite que você retenha uma cópia da mensagem enviada para atender aos requisitos de conformidade, auditoria ou suporte ao cliente.
 
 Se você configurar credenciais para vários provedores de armazenamento em nuvem, o arquivamento de mensagens só será exportado para aquele explicitamente marcado como o destino padrão de exportação de dados. Se nenhum padrão explícito for fornecido e um bucket S3 da AWS estiver conectado, o arquivamento de mensagens fará upload para esse bucket.
 
 {% alert important %}
-A ativação desse recurso afetará a velocidade de entrega de suas mensagens, pois o upload do arquivo é realizado imediatamente antes do envio da mensagem para manter a precisão. Isso introduz latência adicional no pipeline de envio da Braze, afetando as velocidades de envio.
+A ativação desse recurso afetará a velocidade de entrega de suas mensagens, pois o upload do arquivo é realizado imediatamente antes do envio da mensagem para manter a precisão. A latência introduzida pelo arquivamento de mensagens dependerá do provedor de armazenamento em nuvem e da taxa de transferência e do tamanho dos documentos salvos.
 {% endalert %}
 
 O JSON será salvo em seu bucket de armazenamento usando a seguinte estrutura de chave:
@@ -49,7 +49,7 @@ Esta seção o orienta na configuração do arquivamento de mensagens para o seu
 
 ### Etapa 1: Conecte um bucket de armazenamento em nuvem
 
-Se ainda não tiver feito isso, conecte um bucket de armazenamento em nuvem à Braze. Para obter etapas, consulte a documentação de nossos parceiros sobre o [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/), o [Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou o [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/).
+Se ainda não tiver feito isso, conecte um bucket de armazenamento em nuvem à Braze. Para obter etapas, consulte a documentação de nossos parceiros sobre o [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), o [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou o [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 ### Etapa 2: Selecione canais de envio de mensagens
 
@@ -61,7 +61,7 @@ Para selecionar canais:
 2. Selecione seus canais.
 3. Selecione **Salvar alterações**.
 
-![A página de Arquivamento de mensagens tem três canais para seleção: E-mail, Push e SMS.][1]
+![A página de Arquivamento de mensagens tem três canais para seleção: Envio de e-mail, push e SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 Se você não vir o **envio de mensagens** em **Configurações**, confirme se sua empresa comprou e ativou o arquivamento de mensagens.
@@ -107,7 +107,7 @@ O campo `extras` mencionado nessa carga útil é dos pares de valores chave adic
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
-{% tab SMS %}
+{% tab SMS/MMS %}
 
 ```json
 {
@@ -116,7 +116,7 @@ O campo `extras` mencionado nessa carga útil é dos pares de valores chave adic
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
   "provider": StringOfProviderName,
-  "media_urls": ArrayOfString,
+  "media_urls": ArrayOfString, // indicates a message is MMS
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
   "campaign_id": CampaignApiId, // may not be available
@@ -168,7 +168,7 @@ As modificações feitas depois que a mensagem sair do Braze não serão refleti
 
 ### O que são mensagens sob o valor "unassociated" (não associado) na jornada da campanha?
 
-Quando uma mensagem é enviada fora de uma campanha ou do Canva, a ID da campanha no nome do arquivo será "desassociada". Isso ocorrerá quando você enviar mensagens de teste do dashboard, quando o Braze enviar respostas automáticas de SMS ou quando as mensagens enviadas por meio da API não especificarem um ID de campanha.
+Quando uma mensagem é enviada fora de uma campanha ou do Canva, a ID da campanha no nome do arquivo será "desassociada". Isso ocorrerá quando você enviar mensagens de teste do dashboard, quando o Braze enviar respostas automáticas de SMS/MMS ou quando as mensagens enviadas por meio da API não especificarem um ID de campanha.
 
 ### Como faço para obter mais informações sobre esse envio?
 
@@ -186,4 +186,11 @@ Se suas credenciais de armazenamento em nuvem se tornarem inválidas em algum mo
 
 A cópia renderizada é feita upload imediatamente antes de enviar a mensagem ao usuário. Devido aos tempos de upload do armazenamento em nuvem, pode haver uma postergação de alguns segundos entre o registro de data e hora `sent_at` na cópia renderizada e a hora real em que o envio ocorre.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}
+### Posso criar um novo bucket especificamente para arquivamento de mensagens e manter o bucket atual usado para os dados do Currents?
+
+Não. Se você estiver interessado em criar esses compartimentos específicos, envie [feedback sobre o produto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+
+### Os dados arquivados são gravados em uma pasta dedicada em um bucket existente, semelhante à forma como as exportações de dados do Currents são estruturadas?
+
+Os dados são gravados em uma seção `sent_messages` do bucket. Consulte [Como funciona](#how-it-works) para obter mais detalhes.
+

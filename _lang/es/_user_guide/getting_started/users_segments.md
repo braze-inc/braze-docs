@@ -126,15 +126,13 @@ Consejos para trabajar con segmentos:
 
 Supongamos que tiene una tienda de ropa online y ha configurado un flujo de mensajería para enviar una serie de correos electrónicos a los usuarios que han añadido un artículo a su cesta pero no han completado la compra. Este flujo de carritos abandonados podría incluir un correo electrónico de recordatorio inicial, un correo electrónico de seguimiento ofreciendo un descuento y un correo electrónico de recordatorio final.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 Podría crear un segmento de usuarios que han activado el evento personalizado "Artículo añadido al carro" pero no han activado el evento personalizado "Compra completada". A continuación, dentro de este segmento, podría identificar a los usuarios que han abierto el correo electrónico recordatorio inicial (compromiso con un mensaje específico) pero que no han realizado una compra.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 Este segmento podría ser objeto de una campaña más agresiva para intentar convertir a estos usuarios en compradores. Por ejemplo, puede enviarles una oferta especial o una recomendación personalizada basada en los artículos de su cesta.
 
 Este es sólo un ejemplo de cómo puede utilizar las acciones e inacciones de los usuarios, los eventos personalizados y los datos de participación para crear segmentos y adaptar sus estrategias de marketing en Braze.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

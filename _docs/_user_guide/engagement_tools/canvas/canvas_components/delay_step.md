@@ -44,8 +44,6 @@ Let's say you want to remind your customers to purchase toothpaste 30 days from 
 
 Next, because you want to remind your customers 30 days from now, you'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from your Context step. This means your users will be delayed until the selected Context variable.
 
-![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".]({% image_buster /assets/img/context_step2.png %})
-
 #### Extended delays
 
 You can now extend Delay steps up to two years. For example, if you're onboarding new users for your app, you can add an extended delay for two months before sending a Message step to nudge the users who haven't started a session.

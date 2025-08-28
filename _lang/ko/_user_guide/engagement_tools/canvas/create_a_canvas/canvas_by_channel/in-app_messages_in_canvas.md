@@ -14,14 +14,11 @@ channel: in-app messages
 
 > You can add in-app messages as part of your Canvas journey to show rich messaging when your customer engages with your app.
 
-
 ## How it works
 
 Before you can use in-app messages in your Canvas, be sure to have a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) set up with delay and audience options.
 
-After any delays pass and the audience options are checked, the in-app message will be set live, and users will see it if they open the app. In-app messages in Canvas can only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
-
-동작 트리거 항목이 있는 캔버스 단계의 경우 사용자는 세션 중간에 캔버스에 들어갈 수 있습니다. 그러나 위에서 언급했듯이 인앱 메시지는 다음 세션이 시작될 때까지 트리거되지 않으므로 이러한 사용자는 세션이 시작되기 전에 캔버스에 입장할 자격이 없으므로 초기 인앱 메시지를 놓칠 수 있습니다.
+캔버스 빌더에서 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) 단계를 추가하고 **인앱 메시지를** **메시징 채널로** 선택합니다. [메시지가 만료되는 시기와 메시지에](#in-app-message-expiration) 어떤 [진행 동작을](#advancement-behavior) 적용할지 사용자 지정할 수 있습니다.
 
 ## Adding an in-app message to your user journey
 
@@ -31,26 +28,34 @@ To add an in-app message to your Canvas, do the following:
 2. Select **In-App Message** for your **Messaging Channel**. 
 3. Determine [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
-### 인앱 메시지 만료
+## 인앱 메시지 트리거
 
-In the in-app message editor, you can choose when the in-app message will expire. During this time, the in-app message will "sit" and wait to be viewed until it has reached the expiry date. 인앱 메시지가 전송된 후에는 한 번만 볼 수 있습니다.
+세션 시작 시 또는 사용자 지정 이벤트 및 구매에 의해 인앱 메시지가 트리거되도록 트리거를 선택할 수 있습니다.
 
-![][1]
+지연 시간이 지나고 대상 옵션이 확인되면 사용자가 메시지 단계에 도달하면 인앱 메시지가 게시되도록 설정됩니다. 사용자가 세션을 시작하고 인앱 메시지에 대한 트리거 이벤트를 수행하면 인앱 메시지가 표시됩니다. 
+
+동작 트리거 항목이 있는 캔버스 단계의 경우 사용자는 세션 중간에 캔버스에 들어갈 수 있습니다. 인앱 메시지는 세션이 시작될 때까지 실행되도록 설정되어 있지 않으므로 사용자가 메시지 단계에 도달했을 때 세션 중간에 있는 경우 다른 세션을 시작하고 관련 트리거를 수행할 때까지 인앱 메시지를 수신하지 못합니다.
+
+## 인앱 메시지 만료
+
+You can choose when the in-app message will expire. 이 기간 동안 인앱 메시지는 만료 날짜에 도달할 때까지 표시되지 않고 대기합니다. 인앱 메시지가 전송된 후에는 한 번만 볼 수 있습니다.
+
+![The Message Controls section of a Message step for an in-app message. The in-app message will expire three days after the step is available.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | 옵션 | 설명 | 예시 |
 |---|---|---|
-| 지정된 기간이 지나면 메시지가 만료됩니다. | 첫 번째 옵션을 사용하면 사용자가 단계를 사용할 수 있게 되는 시점을 기준으로 인앱 메시지를 만료할 수 있습니다. | 예를 들어, 만료일이 2일인 인앱 메시지는 해당 단계의 지연 시간이 경과하고 오디언스 옵션을 확인한 후에 사용할 수 있게 됩니다. 그러면 2일(48시간) 동안 사용할 수 있으며, 이 이틀 동안 앱을 열면 인앱 메시지를 볼 수 있습니다. |
-| 지정된 날짜에 메시지가 만료됩니다. | 두 번째 옵션에서는 인앱 메시지를 더 이상 사용할 수 없는 특정 날짜와 시간을 선택할 수 있습니다. | 예를 들어 특정 날짜 및 시간에 종료되는 세일이 있는 경우 이 옵션을 선택하면 세일이 종료될 때 사용자에게 관련 인앱 메시지가 더 이상 표시되지 않도록 할 수 있습니다. |
+| **이 단계 이후의 기간을 사용할 수 있음** | 사용자가 단계를 사용할 수 있게 된 시점을 기준으로 인앱 메시지가 만료되도록 설정합니다. | 2일이 만료되는 인앱 메시지는 해당 단계의 지연 시간이 경과하고 대상 옵션을 확인한 후에 사용할 수 있게 됩니다. 그러면 2일(48시간) 동안 사용할 수 있으며, 이 이틀 동안 앱을 열면 인앱 메시지를 볼 수 있습니다. |
+| **특정 날짜 및 시간에** | 인앱 메시지를 더 이상 사용할 수 없게 될 특정 날짜와 시간을 선택합니다. | 2024년 11월 30일에 종료되는 세일이 있는 경우 이 옵션을 선택하면 세일 종료 시 사용자에게 관련 인앱 메시지가 더 이상 표시되지 않습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 사용 사례
 
-You can use in-app messages in your promotional and onboarding Canvases.
+Braze는 프로모션 및 온보딩 캔버스에 이 기능을 사용할 것을 권장합니다.
 
 {% tabs %}
   {% tab 프로모션 %}
 
-프로모션, 쿠폰, 세일은 만료일이 정해져 있는 경우가 많습니다. 다음 캔버스는 사용자가 사용할 수 있고 구매에 영향을 줄 수 있는 프로모션이 있음을 가장 적절한 타이밍에 사용자에게 알려야 합니다. 이 프로모션은 2019년 2월 28일 오전 11시 15분(한국 시간 기준)에 만료됩니다.
+프로모션, 쿠폰, 세일은 만료일이 정해져 있는 경우가 많습니다. 다음 캔버스는 사용자가 사용할 수 있고 구매에 영향을 줄 수 있는 프로모션이 있음을 가장 적절한 타이밍에 사용자에게 알려야 합니다. 이 프로모션은 2019년 2월 28일 오전 11시 15분(회사 시간대 기준)에 만료됩니다.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -100,7 +105,7 @@ You can use in-app messages in your promotional and onboarding Canvases.
 </tbody>
 </table>
 
-보시다시피, 인앱 메시지는 프로모션이 만료되면 만료되어 메시징과 고객 경험 간의 불일치를 방지합니다.
+인앱 메시지는 프로모션이 만료되면 만료되어 메시지와 고객 경험의 불일치를 방지할 수 있습니다.
 
   {% endtab %}
   {% tab 사용자 온보딩 %}
@@ -150,32 +155,41 @@ You can use in-app messages in your promotional and onboarding Canvases.
 </tbody>
 </table>
 
-보시다시피, 푸시 메시지는 사용자가 앱을 방문하여 온보딩을 시작했는지 확인하기 위해 인앱 메시지 주위에 간격을 두고 배치됩니다. 이렇게 하면 사용자의 앱 방문을 방해할 수 있는 성가신 스팸이나 순서가 맞지 않는 메시지를 방지하고, 대신 앱의 초기 경험에 흐름이 있고 합리적인 순서를 만들 수 있습니다.
+이러한 푸시 메시지는 사용자가 앱을 방문하고 온보딩을 시작했는지 확인하기 위해 인앱 메시지 주위에 간격을 두고 배치됩니다. 이렇게 하면 사용자가 앱을 방문하지 않도록 유도할 수 있는 스팸이나 순서가 맞지 않는 메시지를 방지하고, 대신 앱의 초기 경험에 흐름이 있고 합리적인 순서를 만들 수 있습니다.
 
   {% endtab %}
 {% endtabs %}
 
-### Advancement behavior options
 
-In Canvas, Message steps automatically advance all users who enter the step. To use the **Advance when message sent** option, add a separate [Audience Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+## 인앱 메시지 우선순위 지정
 
-{% details Original Canvas editor behavior %}
+사용자는 캔버스 내에서 동시에 두 개의 인앱 메시지를 트리거할 수 있습니다. 이 경우 Braze는 다음과 같은 우선 순위에 따라 표시되는 인앱 메시지를 결정합니다. 
 
-{% alert important %}
+**정확한 우선순위 설정을** 선택하고 다른 캔버스 단계를 드래그하여 캔버스의 우선순위를 재정렬합니다. 기본적으로 캔버스 배리언트의 이전 단계는 이후 단계보다 먼저 표시하도록 설정되어 있습니다. 원하는 우선순위에 따라 단계를 수행한 후 **정렬 적용을** 선택합니다.
+
+![The priority sorter with two steps "Welcome IAM" and "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+
+### 활성 캔버스의 초안 변경하기
+
+활성 캔버스의 초안 **보내기 설정에서** 앱 내 메시지 우선순위를 변경하면 우선순위 정렬기가 닫힐 때 이러한 변경 사항이 활성 캔버스에 바로 적용됩니다. 그러나 메시지 단계에서는 캔버스 단계 설정이 단계 수준에서 적용되므로 초안이 시작될 때 우선순위 정렬기가 업데이트됩니다. 
+
+## 진급 행동
+
+메시지 단계는 단계를 입력하는 모든 사용자에게 자동으로 진행됩니다. 인앱 메시지가 트리거되거나 표시될 때까지 기다리지 않는다는 점에 유의하세요. 메시지 진행 동작을 지정할 필요가 없으므로 전체 단계를 더 간단하게 구성할 수 있습니다.
+
+사용자가 인앱 메시지 단계에 들어가면 만료 기간 동안 보류되지 않고 바로 해당 단계로 넘어갑니다. 이 경우 사용자 여정에 지연 단계를 설정하는 것이 도움이 될 수 있습니다.
+
+**메시지 전송 시 미리 알림** 옵션을 사용하려면 별도의 [대상 경로를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) 추가하여 이전 단계를 받지 않은 사용자를 필터링하세요.
+
+{% details 원래 캔버스 편집기 %}
+
 You can no longer create or duplicate Canvases using the original editor. 이 섹션은 인앱 메시지가 있는 단계의 진행 동작이 어떻게 작동하는지 이해할 때 참조할 수 있습니다.
-{% endalert %}
 
-원본 편집기에서 만든 캔버스는 캔버스 구성 요소를 통해 발전하는 기준인 진행 동작을 지정해야 합니다. [인앱 메시지만 있는 단계](#steps-iam-only)는 [여러 메시지 유형](#steps-multiple-channels)(푸시, 이메일 등)이 있는 단계와 다른 진행 옵션이 있습니다. 캔버스 플로우 워크플로우의 인앱 메시지의 경우, 이 옵션은 항상 오디언스에게 즉시 전달되도록 설정됩니다.
+원본 편집기에서 만든 캔버스는 캔버스 구성 요소를 통해 발전하는 기준인 진행 동작을 지정해야 합니다. [인앱 메시지만 있는 단계는](#steps-iam-only) 푸시 또는 이메일 같이 [여러 메시지 유형이 있는 단계](#steps-multiple-channels)와 다른 진행 옵션이 있습니다. 캔버스 플로우 워크플로우의 인앱 메시지의 경우, 이 옵션은 항상 오디언스에게 즉시 전달되도록 설정됩니다.
 
 인앱 메시지가 있는 캔버스 단계에서는 실행 기반 전달을 사용할 수 없습니다. 인앱 메시지가 포함된 캔버스 단계는 예약해야 합니다. 대신 캔버스 구성 요소에서 예약된 메시지가 사용자에게 전송된 후 사용자가 앱을 처음 열 때(시작 세션에 의해 트리거됨) 캔버스 인앱 메시지가 표시됩니다.
 
 하나의 캔버스 내에 여러 개의 인앱 메시지가 있는 경우, 사용자는 각각의 개별 메시지를 수신하기 위해 여러 세션을 시작해야 합니다.
-
-{% alert important %}
-인앱 메시지는 캔버스의 이벤트에 의해 트리거될 수 없습니다.
-{% endalert %}
-
-![][2]
 
 {% alert important %}
 **인앱 메시지 라이브 시 미리** 알림을 선택하면 사용자가 다음 단계로 이동하더라도 인앱 메시지가 만료될 때까지 해당 메시지를 사용할 수 있습니다. 캔버스의 다음 단계가 전달될 때 인앱 메시지가 실시간으로 표시되지 않도록 하려면 만료 시간을 후속 단계의 지연 시간보다 짧게 설정하세요.
@@ -188,10 +202,8 @@ You can no longer create or duplicate Canvases using the original editor. 이 �
 | 옵션 | 설명 |
 |---|---|---|
 | 메시지 전송 시 진행 | 사용자에게 이메일, 웹훅 또는 푸시 알림을 보내거나 인앱 메시지를 확인해야 캔버스에서 다음 단계로 진행할 수 있습니다.  <br> <br>  인앱 메시지가 만료되고 사용자가 이메일, 웹훅 또는 푸시를 받지 못했거나 인앱 메시지를 확인하지 않은 경우 캔버스를 종료하고 다음 단계로 진행하지 않습니다. |
-| 즉시 오디언스 진행 | 해당 단계의 모든 오디언스는 표시된 메시지를 보았는지 여부에 관계없이 지연 시간이 경과한 후 다음 단계로 이동합니다.  <br> <br> 사용자가 다음 단계로 진행하려면 해당 단계의 세그먼트 및 필터 기준과 일치해야 합니다. |
+| 즉시 오디언스 진행 | 해당 단계의 모든 오디언스는 표시된 메시지를 보았는지 여부에 관계없이 지연 시간이 경과한 후 다음 단계로 이동합니다. <br> <br> 사용자가 다음 단계로 진행하려면 해당 단계의 세그먼트 및 필터 기준과 일치해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][3]
 
 {% alert important %}
 **전체 오디언스**를 선택하면 사용자가 다음 단계로 이동한 경우에도 인앱 메시지가 만료될 때까지 사용할 수 있습니다. 캔버스의 다음 단계가 전달될 때 인앱 메시지가 실시간으로 표시되지 않도록 하려면 만료 시간을 후속 단계의 지연 시간보다 짧게 설정하세요.
@@ -199,31 +211,34 @@ You can no longer create or duplicate Canvases using the original editor. 이 �
 
 {% enddetails %}
 
-## 인앱 메시지 우선순위 지정
+## 트리거 동작
 
-고객은 캔버스 내에서 동시에 두 개의 인앱 메시지를 트리거할 수 있습니다. 이 경우 Braze는 다음과 같은 우선 순위에 따라 표시되는 인앱 메시지를 결정합니다. 여러 캔버스 단계를 드래그하여 우선 순위를 변경할 수 있습니다. 기본적으로 캔버스 배리언트의 이전 단계는 이후 단계보다 먼저 표시하도록 설정되어 있습니다.
+다음 트리거 작업 중에서 선택하여 사용자를 타겟팅할 수 있습니다:
 
-![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
+- **구매하기:** 모든 구매 또는 특정 구매를 한 사용자를 타겟팅합니다.
+- **세션 시작:** 모든 앱 또는 특정 앱에서 세션을 시작하는 사용자를 타겟팅합니다.
+- **사용자 지정 이벤트를 수행합니다:** 선택한 사용자 지정 이벤트를 수행하는 타겟 사용자
 
-Go to the **Send Settings** of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
+사용자는 캔버스 단계로 들어가 세션을 시작한 다음 트리거를 수행해야 인앱 메시지를 수신할 수 있습니다. 즉, 세션 중간 업데이트는 지원되지 않습니다. 예를 들어 트리거가 세션 시작인 경우 사용자는 캔버스 단계로 들어가 세션을 시작하기만 하면 인앱 메시지를 수신할 수 있습니다. 트리거가 세션을 시작하지 않는 경우, 사용자는 캔버스 단계로 들어가 세션을 시작한 다음 트리거를 수행해야 인앱 메시지를 수신할 수 있습니다.
 
-![]({% image_buster /assets/img_archive/canvas_send_settings.png %})
+!["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
-기본적으로 캔버스 구성 요소 우선 순위는 중간으로 설정되며, 가장 최근에 생성된 단계의 상대적 우선 순위가 가장 높습니다. 캔버스 및 캠페인 수준 우선순위도 기본적으로 중간으로 설정되며, 상대적 우선순위가 가장 높은 항목은 가장 최근에 생성된 항목으로 기본 설정됩니다.
+다음 캔버스 기능은 인앱 메시지에서 사용할 수 없으므로 해당 기능이 켜져 있어도 인앱 메시지에 적용되지 않습니다.
 
-![]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:85%"}
-
-### 활성 캔버스의 초안
-
-활성 캔버스의 초안을 편집할 때 **보내기 설정** 내에서 앱 내 메시지 우선순위에 대한 변경 사항은 초안과 함께 저장되지 않습니다. 이러한 변경 사항은 우선순위 정렬기 모달이 닫히면 활성 캔버스에 바로 적용됩니다. 그러나 메시지 단계에서는 단계 설정이 단계 수준에서 적용되므로 사용자가 초안을 시작할 때 우선순위 분류기가 업데이트됩니다.
+- Intelligent Timing
+- 사용량 제한
+- 최대 게재빈도 설정
+- 종료 기준
+- 조용한 시간
 
 ## 캔버스의 사용자 지정 이벤트 속성
 
-Action-based delivery isn't available for Canvas steps with in-app messages. This means you also can't use custom event properties for these steps. 
+캔버스용 인앱 메시지의 사용자 지정 이벤트 속성이 지원됩니다. 그러나 이러한 속성은 인앱 메시지를 트리거하는 사용자 지정 이벤트 또는 구매에서 비롯되며, 이는 앞의 작업 경로가 아닌 메시지 단계에 있습니다.
 
-To template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step and personalizing your in-app message with the custom attributes in the second step.
+## Considerations
 
+다음은 캔버스에서 인앱 메시지를 보낼 때 고려해야 할 몇 가지 사항입니다.
 
-[1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
-[2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
-[3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"
+- 사용자가 앱을 다시 시작하지 않거나 세션을 시작하지 않으면 앱에서 사용자가 인앱 메시지를 받을 자격이 있는지 확인할 수 없으므로 인앱 메시지가 전송되지 않습니다.
+- 첫 번째 클릭이 발생하고 캔버스 컨텍스트 변수(캔버스 항목 속성)가 있는 경우, 사용자가 캔버스에 5번 다시 입력하면 Braze는 다섯 번째 항목을 가져와 인앱 메시지에서 해당 컨텍스트 변수를 사용합니다.
+- 사용자는 한 번에 10개의 인앱 메시지만 받을 수 있습니다. 예를 들어 사용자가 10개의 인앱 메시지에 대해 서로 다른 캔버스 단계를 거치는 경우, 이 단계는 최대 10개까지만 사용할 수 있습니다.

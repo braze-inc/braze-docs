@@ -11,7 +11,7 @@ description: "Este artigo contém notas de versão para abril de 2020."
 
 A Movable Ink oferece aos clientes da Braze a capacidade de usar recursos do Intelligent Creative, como cronômetros de contagem regressiva, enquetes e raspadinhas em suas campanhas de mensagens no app e cartões de conteúdo. O Movable Ink e a Braze oferecem uma abordagem mais completa para mensagens dinâmicas orientadas por dados, fornecendo aos usuários elementos em tempo real sobre as coisas que importam.
 
-Comece a [integrar o Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) em suas campanhas!
+Comece a [integrar o Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/) em suas campanhas!
 
 ## Intelligent Timing
 
@@ -41,6 +41,5 @@ Os endpoints de API [template/email/list]({{site.baseurl}}/api/endpoints/templat
 
 Ao criar uma mensagem de e-mail no Braze, agora é possível personalizar o endereço do remetente da mensagem na seção **Informações de envio** da composição do e-mail. Você pode usar qualquer uma de nossas [tags de personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) compatíveis
 
-![Endereço personalizado de origem][0]{: style="max-width:80%"}
+![Personalized From Address]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}

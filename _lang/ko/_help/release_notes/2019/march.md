@@ -17,13 +17,13 @@ Braze는 최신 UX 및 UI 모범 사례를 준수하기 위해 인앱 메시지�
 - 뷰포트에 더 잘 맞도록 모든 메시지 유형에 대한 반응형 동작이 개선되었습니다.
 - 버튼 테두리로 버튼 간 사용자 지정 대비 만들기
 
-[새로운 인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/)를 통해 사용자와의 상호작용을 좋은 수준에서 앱의 미로와 같은 수준으로 끌어올릴 수 있습니다!
+[새로운 인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)를 통해 사용자와의 상호작용을 좋은 수준에서 앱의 미로와 같은 수준으로 끌어올릴 수 있습니다!
 
 ![전체 화면 동작]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 ### 해야 할 일
 
-[웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/)용 Braze SDK의 최신 버전으로 업데이트하는 것을 적극 권장합니다.
+[웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android)용 Braze SDK의 최신 버전으로 업데이트하는 것을 적극 권장합니다.
 
 그 후에는 바로 사용할 수 있습니다!
 
@@ -37,4 +37,4 @@ Braze는 최신 UX 및 UI 모범 사례를 준수하기 위해 인앱 메시지�
 
 ## Google Cloud Storage
 
-[Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/)는 더 이상 베타 버전이 아닙니다! Braze는 관심 있는 고객이 Braze 플랫폼 내에서 Google Cloud Storage를 사용할 수 있게 되었음을 자랑스럽게 발표합니다. Braze 계정에서 **기술 파트너로** 이동하여 Google 클라우드 스토리지를 검색합니다.
+[Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/)는 더 이상 베타 버전이 아닙니다! Braze는 관심 있는 고객이 Braze 플랫폼 내에서 Google Cloud Storage를 사용할 수 있게 되었음을 자랑스럽게 발표합니다. Braze 계정에서 **기술 파트너로** 이동하여 Google 클라우드 스토리지를 검색합니다.

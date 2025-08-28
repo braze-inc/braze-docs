@@ -11,7 +11,7 @@ tool: Media
 
 # 콘텐츠 카드의 크리에이티브 세부 정보
 
-> 콘텐츠 카드와 해당 카드가 위치한 피드를 사용자 지정하는 작업은 캠페인 생성 프로세스 중에는 수행할 수 없으며, 엔지니어 및 개발자와 협력하여 카드를 만들고 사용자 지정해야 합니다. 기술적인 자세한 내용은 [개발자 문서][7]]를 참조하세요.
+> 콘텐츠 카드와 해당 카드가 위치한 피드를 사용자 지정하는 작업은 캠페인 생성 프로세스 중에는 수행할 수 없으며, 엔지니어 및 개발자와 협력하여 카드를 만들고 사용자 지정해야 합니다. For technical details, visit our [developer documentation]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
 
 ## 콘텐츠 카드 유형
 
@@ -46,11 +46,11 @@ tool: Media
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 배너 %}
+{% tab Image-only %}
 
-화려한 것을 원한다면 배너 카드가 적합합니다. 원하는 대로 완전히 맞춤 설정할 수 있습니다. 다른 곳에서 콘텐츠를 만들고 업로드하면 나만의 멋진 카드가 완성됩니다.
+If you want more creative control, the image-only card is for you. Create your image using any tooling you like and upload the image to this card type.
 
-![권장 세부 정보가 포함된 배너 이미지 및 배너 예시]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Image of an image-only Content Card with recommended details and an image-only example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | 카드 기능 | 세부 정보 |
 | --- | ---|
@@ -63,17 +63,17 @@ tool: Media
 
 ## 글로벌 크리에이티브 세부 정보 {#general}
 
-콘텐츠 카드에는 처음부터 뛰어난 기능이 포함되어 있습니다. 현재로서는 Braze 계정에서 기본적으로 카드 스타일링을 할 수 없지만, 통합하는 동안 유형별 콘텐츠 카드와 콘텐츠 카드 피드에서 스타일링할 수 있습니다. 자세한 내용은 [콘텐츠 카드 커스텀하기][4]를 참조하세요.
+콘텐츠 카드에는 처음부터 뛰어난 기능이 포함되어 있습니다. 현재로서는 Braze 계정에서 기본적으로 카드 스타일링을 할 수 없지만, 통합하는 동안 유형별 콘텐츠 카드와 콘텐츠 카드 피드에서 스타일링할 수 있습니다. Refer to [Customizing Content Cards]({{site.baseurl}}/developer_guide/content_cards/) for more information.
 
 ### 해지 동작
 
 사용자가 카드를 해지하려면 다음 스크린샷과 같이 모바일에서 스와이프하거나 `close X` 기능을 사용하면 됩니다. `x`는 웹 SDK의 경우에만 마우스를 가져가면 나타납니다.
 
-![카드의 스와이프 또는 닫기 해지 동작을 보여주는 이미지][5]
+![Image that shows swipe or close dismissal behaviors for a card]({% image_buster /assets/img/dismissal-cc.png %})
 
 사용자가 모든 카드를 삭제했거나 새 업데이트를 푸시하지 않은 경우, 사용자의 피드는 일반적으로 다음과 같이 표시됩니다.
 
-![빈 콘텐츠 카드 피드 이미지][6]{: style="max-width:45%"}
+![Image of an empty Content Card feed]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 사용자가 관련 작업을 수행할 때 콘텐츠 카드가 해제되도록 설정하여 관련성을 유지하세요. 예를 들어, 사용자가 이미 구매한 제품에 대한 오퍼가 계속 표시되지 않도록 프로모션 콘텐츠 카드가 구매 즉시 해제되도록 설정할 수 있습니다.
@@ -83,15 +83,8 @@ tool: Media
 
 | Android용 콘텐츠 카드 | iOS용 콘텐츠 카드 | 웹용 콘텐츠 카드 |
 | --- | --- |---|
-| Android SDK는 기본적으로 애니메이션 GIF를 지원하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/)를 참조하세요. | Swift SDK는 기본적으로 애니메이션 GIF 지원을 제공하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF 지원 튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)을 참조하세요. | GIF 지원은 웹 SDK 통합에 기본적으로 포함되어 있습니다. |
+| Android SDK는 기본적으로 애니메이션 GIF를 지원하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android)를 참조하세요. | Swift SDK는 기본적으로 애니메이션 GIF 지원을 제공하지 않습니다. GIF 지원 활성화에 대한 자세한 내용은 [GIF 지원 튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support)을 참조하세요. | GIF 지원은 웹 SDK 통합에 기본적으로 포함되어 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 <br><br>
 
-[1]: {% image_buster /assets/img/content_card_classic.png %}
-[2]: {% image_buster /assets/img/content_card_captioned.png %}
-[3]: {% image_buster /assets/img/content_card_banner.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {% image_buster /assets/img/dismissal-cc.png %}
-[6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

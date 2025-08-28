@@ -16,13 +16,16 @@ guide_featured_list:
     link: /docs/user_guide/analytics/reporting/reports_overview/
     image: /assets/img/braze_icons/list.svg
   - name: 세그먼트 데이터
-    link: /docs/user_guide/analytics/reporting/viewing_and_understanding_segment_data/
+    link: /docs/viewing_and_understanding_segment_data/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: 참여 보고서
     link: /docs/user_guide/analytics/reporting/engagement_reports/
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: 보고서 빌더
     link: /docs/user_guide/analytics/reporting/report_builder/
+    image: /assets/img/braze_icons/tool-01.svg
+  - name: 대시보드 빌더
+    link: /docs/user_guide/analytics/reporting/dashboard_builder/
     image: /assets/img/braze_icons/tool-01.svg
 
 guide_menu_title: "More articles"

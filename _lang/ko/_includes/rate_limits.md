@@ -44,55 +44,59 @@
 {% elsif include.endpoint == "users export ids" %}
 2024년 8월 22일 이후에 Braze를 온보딩한 경우, 이 엔드포인트는 [API 속도 제한]({{site.baseurl}}/api/api_limits/)에 설명된 대로 분당 250건의 요청으로 속도 제한이 적용됩니다.
 
+또한 다음 요구 사항을 충족하여 이 엔드포인트의 요청 속도 제한을 초당 40건으로 늘릴 수도 있습니다:
+
+- 워크스페이스에 기본 속도 제한(분당 250건의 요청)이 설정되어 있습니다. 기존 요금 제한을 제거하는 데 대한 추가 지원은 Braze 계정 관리자에게 문의하세요.
+- 요청에 `fields_to_export` 매개변수를 포함하면 수신하려는 모든 필드를 나열할 수 있습니다.
+
+{% alert important %}
+`fields_to_export` 매개변수에 `canvases_received` 또는 `campaigns_received` 을 포함하면 요청에 더 빠른 속도 제한이 적용되지 않습니다. 구체적인 사용 사례가 있는 경우에만 요청에 이러한 내용을 포함할 것을 권장합니다.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/alias/new`, `/users/identify`, `/users/merge` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/alias/new`, `/users/identify`, `/users/merge`, `/users/alias/update` 엔드포인트와 공유됩니다.
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/identify`, `/users/merge`, `/users/alias/update` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/identify`, `/users/merge`, `/users/alias/update` 엔드포인트와 공유됩니다.
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/identify`, `/users/merge`, `/users/alias/new` 엔드포인트와 공유됩니다.
-
-<!---/users/alias/update-->
-
-{% elsif include.endpoint == "users alias update" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/identify`, `/users/merge` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/alias/new`, `/users/identify`, `/users/merge` 엔드포인트와 공유됩니다.
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/alias/new`, `/users/merge`, `/users/alias/update` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/alias/new`, `/users/merge`, `/users/alias/update` 엔드포인트와 공유됩니다.
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/alias/new`, `/users/identify`, `/users/alias/update` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 분당 20,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/users/delete`, `/users/alias/new`, `/users/identify`, `/users/alias/update` 엔드포인트와 공유됩니다.
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 시간당 1,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/events`, `/events/list`, `/purchases/product_list` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 시간당 1,000건의 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/events`, `/events/list`, `/purchases/product_list` 엔드포인트와 공유됩니다.
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 시간당 1,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/custom_attributes`, `/events/list`, `/purchases/product_list` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 시간당 1,000건의 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/custom_attributes`, `/events/list`, `/purchases/product_list` 엔드포인트와 공유됩니다.
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 시간당 1,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/custom_attributes`, `/events`, `/purchases/product_list` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 시간당 1,000건의 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/custom_attributes`, `/events`, `/purchases/product_list` 엔드포인트와 공유됩니다.
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-2021년 9월 16일 이후에 Braze에 온보딩한 고객의 경우, 이 엔드포인트에 시간당 1,000건의 요청 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/custom_attributes`, `/events`, `/events/list` 엔드포인트와 공유됩니다.
+이 엔드포인트에는 시간당 1,000건의 공유 속도 제한을 적용합니다. 이 요금 제한은 [API 요금 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 `/custom_attributes`, `/events`, `/events/list` 엔드포인트와 공유됩니다.
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
@@ -143,6 +147,14 @@ Braze 엔드포인트는 [API 요청 일괄 처리를]({{site.baseurl}}/api/api_
 
 {% endif %}
 
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "번역 엔드포인트" %}
+
+이 엔드포인트의 속도 제한은 분당 250,000건의 요청입니다.
+
+{% endif %}
+
 <!---Additional if statement for /messages/send endpoint-->
 
 {% if include.category == "메시지 보내기 엔드포인트" %}
@@ -155,32 +167,33 @@ Braze 엔드포인트는 [API 요청 일괄 처리를]({{site.baseurl}}/api/api_
 
 {% endif %}
 
-{% if include.endpoint == "asynchronous catalog item" %}
+{% if include.endpoint == "비동기 카탈로그 항목" %}
 
 이 엔드포인트에는 [API 속도 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 모든 비동기 카탈로그 항목 엔드포인트 간에 분당 16,000건의 요청이 공유 속도 제한으로 설정되어 있습니다.
 
 {% endif %}
 
-{% if include.endpoint == "synchronous catalog item" %}
+{% if include.endpoint == "동기식 카탈로그 항목" %}
 
-이 엔드포인트는 [API 속도 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 모든 동기식 카탈로그 항목 엔드포인트 간에 분당 50건의 요청을 공유할 수 있는 속도 제한이 있습니다.
+이 엔드포인트에는 [API 속도 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 모든 동기식 카탈로그 항목 엔드포인트 간에 분당 50건의 요청이 공유 속도 제한으로 설정되어 있습니다.
 
 {% endif %}
 
-{% if include.endpoint == "synchronous catalog" %}
+{% if include.endpoint == "동기식 카탈로그" %}
 
 이 엔드포인트에는 [API 속도 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 모든 동기식 카탈로그 엔드포인트 간에 분당 50건의 요청이 공유 속도 제한으로 설정되어 있습니다.
 
 {% endif %}
 
-{% if include.endpoint == "asynchronous catalog fields" or include.endpoint == "asynchronous catalog selections" %}
+{% if include.endpoint == "비동기 카탈로그 필드" 또는 include.endpoint == "비동기 카탈로그 선택 항목" %}
 
 이 엔드포인트에는 [API 속도 제한에]({{site.baseurl}}/api/api_limits/) 설명된 대로 모든 비동기 카탈로그 필드와 선택 엔드포인트 간에 분당 50건의 요청이 공유 속도 제한이 있습니다.
 
 {% endif %}
 
-{% if include.endpoint == "export campaign analytics" %}
+{% if include.endpoint == "캠페인 분석 내보내기" %}
 
 이 엔드포인트의 속도 제한은 분당 50,000건의 요청입니다.
 
 {% endif %}
+
