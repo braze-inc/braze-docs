@@ -23,57 +23,21 @@ description: "Cet article présente en détail l’endpoint Braze Identifier les
 
 L'appel à `/users/identify` combine un profil utilisateur identifié par un alias (profil alias seul), une adresse e-mail (profil e-mail seul) ou un numéro de téléphone (profil numéro de téléphone seul) avec un profil utilisateur possédant un `external_id` (profil identifié), puis supprime le profil alias seul. 
 
-L'identification d'un utilisateur nécessite qu'un `external_id` soit inclus dans l'objet `aliases_to_identify` ou `emails_to_identify` ou `phone_numbers_to_identify`. S'il n'existe pas d'utilisateur possédant cette adresse `external_id`, l'adresse `external_id` sera ajoutée à l'enregistrement de l'utilisateur aliasé et l'utilisateur sera considéré comme identifié.
+L'identification d'un utilisateur nécessite qu'une adresse `external_id` soit incluse dans les objets suivants :
 
-Notez ce qui suit :
+- `aliases_to_identify`
+- `emails_to_identify` 
+- `phone_numbers_to_identify`
 
-- Lorsque ces associations ultérieures sont effectuées avec le champ `merge_behavior` défini sur `none`, seuls les jetons de notification push et l’historique des messages associés à l’alias d’utilisateur sont conservés. Tous les attributs, événements ou achats deviendront « orphelins » et non disponibles pour l’utilisateur identifié. Une solution consiste à exporter les données de l'utilisateur aliasé avant l'identification à l'aide de l' [endpoint`/users/export/ids` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), puis à réassocier les attributs, les événements et les achats à l'utilisateur identifié.
-- Lorsque des associations sont faites avec le champ `merge_behavior` défini sur `merge`, cet endpoint fusionnera les [champs spécifiques](#merge) trouvés sur l'utilisateur anonyme avec ceux de l'utilisateur identifié.
-- Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne seront pas combinés.
+S'il n'existe pas d'utilisateur possédant cette adresse `external_id`, l'adresse `external_id` sera ajoutée à l'enregistrement de l'utilisateur aliasé et l'utilisateur sera considéré comme identifié. Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne seront pas combinés.
 
 {% alert tip %}
 Pour éviter toute perte inattendue de données lors de l'identification des utilisateurs, nous vous recommandons vivement de vous reporter d'abord aux [meilleures pratiques en]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) matière de [collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) pour savoir comment capturer les données des utilisateurs lorsque des informations sur les utilisateurs sous forme d'alias seulement sont déjà présentes.
 {% endalert %}
 
-## Conditions préalables
+### Comportement de fusion
 
-Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/api_key/) avec l’autorisation `users.identify`.
-
-## Limite de débit
-
-{% multi_lang_include rate_limits.md endpoint='users identify' %}
-
-## Corps de la demande
-
-```
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
-```
-
-```json
-{
-   "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of string) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of string) User phone numbers to identify,
-   "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
-}
-```
-
-### Paramètres de demande
-
-Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande. Vous pouvez associer plusieurs alias utilisateur supplémentaires à un seul `external_id`.
-
-| Paramètre                   | Requis | Type de données                           | Description                                                                                                                                                                 |
-|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `aliases_to_identify`       | Requis | Tableau d’alias pour identifier l’objet | Voir [alias pour identifier l'objet]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) et [alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify`        | Requis | Tableau d’alias pour identifier l’objet | Adresses e-mail pour identifier les utilisateurs. Voir [Identification des utilisateurs par e-mail](#identifying-users-by-email).                                                                                                              |
-| `phone_numbers_to_identify` | Requis | Tableau d’alias pour identifier l’objet | Numéros de téléphone pour identifier les utilisateurs.                                                                                                                                            |
-| `merge_behavior`            | Facultatif | Chaîne de caractères                              | `none` ou `merge` est attendu.                                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-#### Champ Merge_behavior {#merge}
-
-En attribuant la valeur `merge` au champ `merge_behavior`, l'endpoint fusionne avec l'utilisateur anonyme la liste suivante de champs trouvés **exclusivement** sur l'utilisateur identifié. Configurer le champ sur `none` ne fusionnera aucune donnée utilisateur avec le profil utilisateur identifié. Par défaut, ce champ est défini sur `merge`.
+Par défaut, cet endpoint fusionnera la liste suivante de champs trouvés **exclusivement** sur l'utilisateur anonyme vers l'utilisateur identifié.
 
 {% details Liste des champs qui sont fusionnés %}
 - Prénom
@@ -111,15 +75,55 @@ En attribuant la valeur `merge` au champ `merge_behavior`, l'endpoint fusionne a
   - Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp », mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion.
 {% enddetails %}
 
-### Identifier les utilisateurs par e-mail
+## Conditions préalables
 
-Si un `email` est spécifié comme identifiant, vous devez également inclure `prioritization` dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/api_key/) avec l’autorisation `users.identify`.
+
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
+
+## Corps de la demande
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+```json
+{
+   "aliases_to_identify" : (required, array of alias to identify objects),
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
+},
+```
+
+### Paramètres de demande
+
+Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande. Vous pouvez associer plusieurs alias utilisateur supplémentaires à un seul `external_id`.
+
+{% alert important %}
+L'un des éléments suivants est requis : `aliases_to_identify`, `emails_to_identify`, ou `phone_numbers_to_identify` par demande. Par exemple, vous pouvez utiliser cet endpoint pour identifier les utilisateurs par e-mail en utilisant `emails_to_identify` dans votre requête.
+{% endalert %}
+
+| Paramètre                   | Requis | Type de données                           | Description                                                                                                                                                                 |
+|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `aliases_to_identify`       | Requis | Tableau d’alias pour identifier l’objet | Voir [alias pour identifier l'objet]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) et [alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `emails_to_identify`        | Requis | Tableau d’alias pour identifier l’objet | Requis si `email` est spécifié comme identifiant. Adresses e-mail pour identifier les utilisateurs. Voir [Identification des utilisateurs par e-mail](#identifying-users-by-email).                                                                                                              |
+| `phone_numbers_to_identify` | Requis | Tableau d’alias pour identifier l’objet | Numéros de téléphone pour identifier les utilisateurs.                                                                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+### Identification des utilisateurs par leurs adresses e-mail et leurs numéros de téléphone
+
+Si une adresse e-mail ou un numéro de téléphone est spécifié comme identifiant, vous devez également inclure `prioritization` dans l'identifiant.
+
+`prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
 
 Les valeurs autorisées pour le tableau sont les suivantes :
 
 - `identified`
 - `unidentified`
-- `most_recently_updated` (priorité à l'utilisateur le plus récemment mis à jour)
+- `most_recently_updated` (Priorité à l'utilisateur le plus récemment mis à jour)
 - `least_recently_updated` (Priorité à l'utilisateur le moins récemment mis à jour)
 
 Une seule des options suivantes peut exister à la fois dans le tableau de priorisation :
@@ -130,6 +134,7 @@ Une seule des options suivantes peut exister à la fois dans le tableau de prior
 Si vous indiquez `identified` dans le tableau, cela signifie que l'utilisateur **doit** avoir un `external_id` pour être inscrit dans le Canvas. Si vous souhaitez que les utilisateurs disposant d'une adresse e-mail entrent dans le message, qu'ils soient identifiés ou non, utilisez plutôt le paramètre `most_recently_updated` ou `least_recently_updated`.
 
 ## Exemple de demande
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
@@ -151,7 +156,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
       "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
-  "merge_behavior": "merge"
 }'
 ```
 

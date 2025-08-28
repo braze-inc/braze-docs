@@ -10,7 +10,7 @@ platform: API
 
 # エクスポート API
 
-> このページでは、Braze のエクスポート API について説明します。エクスポート API を使用すると、ダッシュボードデータの JSON ファイルをプログラムでエクスポートできます。エクスポートの手順やサンプルコードなど、アクセスできるデータのリストについては、[エクスポートエンドポイント][24]を参照してください。
+> このページでは、Braze のエクスポート API について説明します。エクスポート API を使用すると、ダッシュボードデータの JSON ファイルをプログラムでエクスポートできます。エクスポートの手順やサンプルコードなど、アクセスできるデータのリストについては、[エクスポートエンドポイント]({{site.baseurl}}/api/endpoints/export/)を参照してください。
 
 ## CVS ダウンロードではなくエクスポートAPI を使用する場合
 
@@ -23,4 +23,3 @@ platform: API
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
-[24]: {{site.baseurl}}/api/endpoints/export/

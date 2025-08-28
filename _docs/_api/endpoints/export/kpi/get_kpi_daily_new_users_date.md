@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Daily New Users by Date"
+nav_title: "GET: Export daily new users by date"
 article_title: "GET: Export Daily News Users by Date"
 search_tag: Endpoint
 page_order: 4

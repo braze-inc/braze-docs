@@ -1,6 +1,6 @@
 ---
 page_order: 2.4
-nav_title: Live Notifications
+nav_title: Live notifications
 article_title: Live Updates and Activities for the Braze SDK
 layout: dev_guide
 guide_top_header: "Live Updates and Activities"

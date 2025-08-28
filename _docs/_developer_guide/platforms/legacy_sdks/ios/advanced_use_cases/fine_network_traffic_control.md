@@ -1,5 +1,5 @@
 ---
-nav_title: Fine Network Traffic Control
+nav_title: Fine network traffic control
 article_title: Fine Network Traffic Control for iOS
 platform: iOS
 page_order: 1

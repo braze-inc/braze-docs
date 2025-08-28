@@ -1,5 +1,5 @@
 ---
-nav_title: HTML Editor
+nav_title: HTML editor
 article_title: HTML Editor for Email
 page_order: 4
 layout: dev_guide

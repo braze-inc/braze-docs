@@ -35,7 +35,7 @@ tool:
     - (선택 사항) 세그먼트별 시간당 매출
 - 사용자당 수익
 
-![수익 그래프][9]
+![Revenue graph]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## 총 매출
 
@@ -51,12 +51,12 @@ tool:
 
 ## 직접 수익
 
-[보고서 작성기를][1] 사용하여 캠페인 비교 보고서를 생성하면 다음과 같은 추가 수익 지표를 확인할 수 있습니다:
+You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/):
 
-- [총 직접 수익][2]
-- [총 직접 구매 수][3]
-- [고유 직접 구매 수][4]
-- [수신자 당 수익][5]
+- [Total Direct Revenue]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
+- [Total Direct Purchases]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)
+- [Unique Direct Purchases]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases)
+- [Revenue per Recipient]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient)
 
 이러한 지표는 최종 클릭 어트리뷰션을 기반으로 하며, 이는 해당 캠페인의 경우 수익이 해당 캠페인에 어트리뷰션된다는 의미입니다:
 
@@ -66,12 +66,6 @@ tool:
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}

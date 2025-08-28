@@ -37,6 +37,6 @@ Sélectionnez un événement, puis identifiez les différences en utilisant les 
 Imaginons que vous fassiez partie d'une entreprise de commerce électronique et que vous souhaitiez savoir quand les clients se sont inscrits à votre application et quand ils se sont abonnés à votre lettre d'information. Voici des exemples de noms d'événements efficaces :
 
 - `user_signup`
-- `newsletter_sunscribed`
+- `newsletter_subscribed`
 
 Ces deux noms d'événements indiquent clairement l'événement qu'ils suivent. Au fur et à mesure que vous créez des événements personnalisés, veillez à ce que vos conventions d'appellation restent compréhensibles. Par exemple, évitez d'utiliser des noms d'événements tels que `signup_event_1`, car ils manquent de clarté et n'indiquent pas ce que l'événement est en train de suivre, contrairement à `user_signup`.

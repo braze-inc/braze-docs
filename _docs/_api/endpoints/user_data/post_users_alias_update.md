@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update User Alias"
+nav_title: "POST: Update user alias"
 article_title: "POST: Update User Alias"
 search_tag: Endpoint
 page_order: 2

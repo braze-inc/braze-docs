@@ -1,6 +1,6 @@
 ---
 nav_title: Statut
-article_title: Statuts de la campagne et du canvas
+article_title: Statuts des campagnes et des canvas
 page_order: 1
 description: "Découvrez les statuts des campagnes et des Canvas et comment les utiliser dans le tableau de bord."
 tool:
@@ -8,7 +8,7 @@ tool:
     - Canvas
 ---
 
-# Statuts de la campagne et du canvas
+# Statuts des campagnes et des canvas
 
 > Découvrez les statuts des campagnes et des Canvas et comment vous pouvez les utiliser dans le tableau de bord.
 
@@ -22,7 +22,7 @@ Pour filtrer vos campagnes ou Canevas par statut, sélectionnez **Tous les statu
 
 Pour modifier le statut d'une campagne ou d'un canvas, sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i>, puis choisissez un statut.
 
-![Liste des toiles dans le bord de Braze, avec le menu ouvert pour l'une des toiles.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
+![Liste des toiles dans le tableau de bord de Braze, avec le menu ouvert pour l'une des toiles.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
 
 ## Statuts disponibles
 
@@ -43,7 +43,7 @@ Lorsqu'une toile est arrêtée, il se produit ce qui suit :
 
 - **Envois planifiés :** Vos messages planifiés ne seront pas envoyés, quelle que soit la place de l'utilisateur dans le canvas. Cela inclut également les utilisateurs qui ont été mis en file d'attente en raison de la limite de débit.
 - **Envoi d'e-mails :** Les envois d'e-mails peuvent ne pas cesser immédiatement, car votre fournisseur de services d'e-mailing (ESP) peut continuer à traiter vos demandes existantes.
-- **Les étapes de la temporisation :** Les utilisateurs se trouvant dans une [étape du]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) canvas y resteront normalement, mais quitteront le canvas à la fin de la période définie.
+- **Retard par paliers :** Les utilisateurs se trouvant dans une [étape du]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) canvas y resteront normalement, mais quitteront le canvas à la fin de la période définie.
 
 Pour reprendre le canvas, sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i>, puis **Reprendre**. Lorsqu'il est réactivé, tous les messages précédemment interrompus sont envoyés conformément à la planification, tant que l'heure prévue n'est pas dépassée.
 
@@ -51,7 +51,7 @@ Pour reprendre le canvas, sélectionnez le menu <i class="fas fa-ellipsis-vertic
 
 ### Contrôlez vos messages par statut
 
-Vous pouvez surveiller vos messages par état pour examiner les détails des performances. Par exemple, si vous avez une série de campagnes actives, vous pouvez évaluer les performances de chaque campagne avec leurs indicateurs d'engagement et faire des ajustements si nécessaire. Si, au contraire, vous avez quelques toiles arrêtées, vous pouvez vous demander s'il convient de les reprendre pour l'envoi de messages ou de les archiver complètement.
+Vous pouvez surveiller vos messages par état pour examiner les détails des performances. Par exemple, si vous avez une série de campagnes actives, vous pouvez évaluer les performances de chaque campagne avec leurs indicateurs d'engagement et faire les ajustements nécessaires. Si, au contraire, vous avez quelques toiles arrêtées, vous pouvez vous demander s'il convient de les reprendre pour l'envoi de messages ou de les archiver complètement.
 
 {% alert tip %}
 Vous cherchez d'autres moyens de rester organisé ? Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags) pour fournir plus de contexte en un coup d'œil.

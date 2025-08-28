@@ -35,7 +35,7 @@ Les données suivantes peuvent être visualisées dans le graphique des **perfor
     - (Optionnel) Chiffre d'affaires par heure par segmentation
 - Chiffre d’affaires par utilisateur
 
-![Graphique des revenus][9]
+![Chiffre d'affaires]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## Total des revenus
 
@@ -51,12 +51,12 @@ Les chiffres d'affaires ne peuvent pas être exportés via l'API. Pour obtenir d
 
 ## Revenus directs
 
-Vous pouvez afficher les indicateurs de revenus supplémentaires suivants en générant un rapport de comparaison de campagnes à l'aide du [générateur de rapports][1] :
+Vous pouvez afficher les indicateurs de revenus supplémentaires suivants en générant un rapport de comparaison de campagnes à l'aide du [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) :
 
-- [Total des revenus directs][2]
-- [Total des achats directs][3]
-- [Achats directs uniques][4]
-- [Revenu par destinataire][5]
+- [Total des revenus directs]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue)
+- [Total des achats directs]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases)
+- [Achats directs uniques]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases)
+- [Revenu par destinataire]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient)
 
 Ces indicateurs sont basés sur l'attribution au dernier clic, ce qui signifie que les chiffres d'affaires seront attribués à une campagne si cette campagne :
 
@@ -66,12 +66,6 @@ Ces indicateurs sont basés sur l'attribution au dernier clic, ce qui signifie q
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}

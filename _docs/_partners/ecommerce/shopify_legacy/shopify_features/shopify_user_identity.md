@@ -12,7 +12,7 @@ page_order: 3
 
 > Braze will receive signals from your Shopify customers through their on-site behaviors and by listening to Shopify webhooks that you configured as part of your integration. For non-headless Shopify sites, Braze will assist with reconciling users from the checkout page. For headless Shopify sites, refer to our integration guidance on how to [reconcile users from checkout]({{site.baseurl}}/partners/ecommerce/shopify_legacy/getting_started_shopify/#headless-checkout).
 
-{% multi_lang_include alerts.md alert='Shopify deprecation' %}
+{% multi_lang_include alerts/important_alerts.md alert='Shopify deprecation' %}
 
 ## Capturing information for user profiles 
 

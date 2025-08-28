@@ -25,7 +25,7 @@ La création d'un flux de travail de notation des prospects dans Braze se fait e
 
 1. Allez dans **Messagerie** > **Canvas** et sélectionnez **Créer un Canvas**, puis remplissez les bases de votre Canvas.
 
-2. Donnez à votre canvas un nom pertinent, tel que « Canvas de notation des prospects » et, pour le retrouver facilement, apposez-lui une étiquette mentionnant par exemple « Gestion des prospects ».<br><br>![Étape 1 de la création d'un canvas avec le nom « Canvas de notation des prospects » et l'étiquette « Gestion des prospects ».][1]{: style="max-width:80%;"}
+2. Donnez à votre canvas un nom pertinent, tel que « Canvas de notation des prospects » et, pour le retrouver facilement, apposez-lui une étiquette mentionnant par exemple « Gestion des prospects ».<br><br>![Première étape de la création d'un canvas nommé "Lead Scoring Canvas" et portant l'étiquette "Lead Management".]({% image_buster /assets/img/b2b/step_1_simple.png %}){: style="max-width:80%;"}
 
 ### Étape 2 : Définissez vos critères d'entrée
 
@@ -35,7 +35,7 @@ La création d'un flux de travail de notation des prospects dans Braze se fait e
     - **Remplacez la valeur de l'attribut personnalisé** par le nom de votre attribut d'évaluation des prospects (par exemple `lead score`). Si vous n'avez pas encore créé d'attribut de lead scoring, suivez les étapes de la section [Attributs personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). Ceci permet aux utilisateurs d'entrer dans le canvas chaque fois que leur notation de prospect change.
     - **Ajouter une adresse e-mail**
 
-![Étape 2 de la création d'un canvas avec la planification d'entrée « Par événement » et les options par événement de modification d'un attribut personnalisé « notation des prospects » et d'ajout d'une adresse e-mail.][2]{: style="max-width:80%;"}
+![Deuxième étape de la création d'un canvas avec la planification d'entrée "Basé sur l'action" et les options basées sur l'action de modification d'un attribut personnalisé "lead score" et d'ajout d'une adresse e-mail.]({% image_buster /assets/img/b2b/step_2_simple.png %}){: style="max-width:80%;"}
 
 ### Étape 3 : Identifiez votre audience cible
 
@@ -43,7 +43,7 @@ La création d'un flux de travail de notation des prospects dans Braze se fait e
 
 Tous les utilisateurs sont éligibles pour le lead scoring, vous pouvez donc ajouter des règles spécifiques à l'entreprise concernant les personnes à scorer en sélectionnant les [segments d']({{site.baseurl}}/user_guide/engagement_tools/segments/) utilisateurs à cibler et en appliquant des [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) supplémentaires. Par exemple, vous pouvez exclure les employés, les utilisateurs qui sont déjà clients, etc. 
 
-![Étape 3 de la création d'un canvas avec des options de sélection de segments et de filtres pour restreindre l'audience d'entrée.][3]{: style="max-width:80%;"}
+![Troisième étape de la création d'un canvas avec des options de sélection de segments et de filtres pour restreindre l'audience d'entrée.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
 #### Étape 3b : Rééligibilité des toiles de canevas
 
@@ -54,7 +54,7 @@ Dans les **contrôles d'entrée**, procédez comme suit :
 - Sélectionnez **Fenêtre spécifiée**.
 - Définissez la rééligibilité sur 0 **seconde**.
 
-![Section « Contrôles d'entrée » avec des options pour « Permettre aux utilisateurs d’entrer à nouveau dans ce canvas » dans une fenêtre spécifiée de 0 seconde.][4]{: style="max-width:80%;"}
+![La section "Contrôles d'entrée" comporte des sélections pour "Autoriser les utilisateurs à entrer à nouveau dans ce canvas" dans une "fenêtre spécifiée" de 0 seconde.]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
 
 #### Étape 3c : Mettez à jour les paramètres d'envoi
 
@@ -62,7 +62,7 @@ Dans les **contrôles d'entrée**, procédez comme suit :
 
 Sous **Paramètres d'abonnement**, pour **Envoyer à ces utilisateurs :** sélectionnez **tous les utilisateurs, y compris les utilisateurs désabonnés**. 
 
-![Étape 4 de la création d'un canvas pour la définition des options d'envoi des messages.][5]{: style="max-width:80%;"}
+![Étape 4 de la création d'un Canvas pour la définition des options d'envoi des messages.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
 
 ### Étape 4 : Créer votre Canvas
 
@@ -70,7 +70,7 @@ Sous **Paramètres d'abonnement**, pour **Envoyer à ces utilisateurs :** sélec
 
 Sous votre variante, cliquez sur l'icône plus, puis sélectionnez **Parcours d'action**.
 
-![Canvas avec « Parcours d'action » s'affichant dans le menu ouvert par l'icône plus.][6]{: style="max-width:60%;"}
+![Canvas avec "parcours d'action" s'affichant dans le menu ouvert par l'icône plus.]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
 
 #### Étape 4b : Créer des groupes d'action
 
@@ -83,19 +83,19 @@ Ajoutez les groupes suivants à votre parcours d'action :
 - **Groupe 3 :** Tous les événements qui comptent pour un décrément de 1 point.
 - **Tous les autres :** Les parcours d'action vous permettent de définir la fenêtre d'attente pour voir si un utilisateur entreprend une action, avant de le placer dans un groupe "tous les autres". Pour la notation des prospects, c'est l'occasion d’abaisser le score pour « inactivité ».
 
-![Parcours d'action contenant des groupes d'action pour l'ajout d'un point, de cinq points et de dix points ; la soustraction d'un point et de dix points ; et "Tous les autres".][7]
+![Parcours d'action contenant des groupes d'action pour ajouter un point, cinq points et dix points ; soustraire un point et dix points ; et "Tous les autres".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
 
 #### Étape 4c : Configurez chaque groupe pour y inclure les événements pertinents
 
 Dans chaque groupe d'action, sélectionnez **Sélectionner un déclencheur** et choisissez l'événement qui ajoutera le nombre de points pour ce groupe d'action particulier. Ajoutez d'autres déclencheurs pour inclure tous les événements qui incrémenteront le score du lead d'une unité. Par exemple, un utilisateur pourrait incrémenter son score d'une unité lorsqu'il démarre une session dans n'importe quelle app ou effectue un événement personnalisé (comme s'inscrire ou rejoindre un webinaire). 
 
-![Groupe d'actions pour l'ajout d'un point avec les déclencheurs « Démarrer une session dans n'importe quelle application » et « Effectuer un événement personnalisé ».][8]{: style="max-width:80%;"}
+![Groupe d'applications pour l'ajout d'un point avec les déclencheurs "Démarrer une session dans n'importe quelle application" et "Effectuer un événement personnalisé".]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
 
 #### Étape 4d : Ajoutez des étapes Mise à jour utilisateur
 
 Ajoutez une étape de mise à jour de l'utilisateur à chaque parcours canvas créé sous votre chemin d'action. 
 
-![Canevas affichant le parcours d'action avec des chemins de mise à jour de l'utilisateur ramifiés pour chaque groupe d'action.][9]{: style="max-width:80%;"}
+![Canevas affichant le parcours d'action avec des chemins de mise à jour de l'utilisateur ramifiés pour chaque groupe d'action.]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
 
 {: start=”2”}
 Dans l'onglet **Composer de** chaque étape de mise à jour de l'utilisateur, procédez comme suit pour les champs respectifs :
@@ -133,7 +133,7 @@ En tant qu'outil marketing, Braze contient des données extrêmement pertinentes
 Par exemple, les données d'engagement des messages (telles que les ouvertures et les clics d'e-mail, l'engagement des pages de renvoi et autres) peuvent déterminer le niveau d'engagement d'un lead. Vous pouvez retransmettre ces données à votre entrepôt de données en nuage et les mettre à disposition en tant que données d'entrée pour vos modèles d'évaluation des prospects en utilisant les solutions de flux de données en continu de Braze :
 
 - [Currents Braze]({{site.baseurl}}/user_guide/data/braze_currents/)
-- [Partage sécurisé des données avec Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
+- [Partage sécurisé des données avec Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab Braze en tant que destination %}
@@ -182,11 +182,11 @@ Pour mettre à jour l'enregistrement du prospect dans Salesforce avec le statut 
 
 | En-tête | Contenu |
 | --- | --- |
-| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_0a5f4c0b-bf4f-49cb-80ab-17f833861c2a/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_3a6f2257-5115-4593-80a1-14f17e6384a5/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Type_de_contenu | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Webhook composé d'une URL de webhook Salesforce, d'une méthode HTTP PATCH, d'un corps de requête en texte brut et d'en-têtes de requête.][10]{: style="max-width:80%;"}
+![Webhook composé d'une URL de webhook Salesforce, d'une méthode HTTP PATCH, d'un corps de requête en texte brut et d'en-têtes de requête.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### Étape 2b : Planification des envois de webhooks
 
@@ -200,20 +200,9 @@ Dans l'étape **Planifier la réception/distribution**, sélectionnez les élém
 
 Dans l'étape **Audiences cibles**, incluez un filtre qui exclut les utilisateurs dont le statut de prospect est déjà au niveau MQL ou au-delà, par exemple « `lead_status` `is none of` `MQL` ».
 
-![Les options de ciblage du webhook avec le filtre « lead_status » n'est pas « MQL ».][11]{: style="max-width:80%;"}
+![Les options de ciblage du webhook avec le filtre "lead_status" n'est pas "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Étape 3 : Lancez la campagne
 
 Sélectionnez **Lancer** et observez l'évolution du statut de votre lead dans Salesforce à mesure que vos clients franchissent le seuil du score de lead MQL.
 
-[1]: {% image_buster /assets/img/b2b/step_1_simple.png %}
-[2]: {% image_buster /assets/img/b2b/step_2_simple.png %}
-[3]: {% image_buster /assets/img/b2b/step_3_simple.png %}
-[4]: {% image_buster /assets/img/b2b/entry_controls_simple.png %}
-[5]: {% image_buster /assets/img/b2b/step_4_simple.png %}
-[6]: {% image_buster /assets/img/b2b/action_paths_simple.png %}
-[7]: {% image_buster /assets/img/b2b/action_paths_selected_simple.png %}
-[8]: {% image_buster /assets/img/b2b/action_groups_simple.png %}
-[9]: {% image_buster /assets/img/b2b/user_update_paths_simple.png %}
-[10]: {% image_buster /assets/img/b2b/webhook.png %}
-[11]: {% image_buster /assets/img/b2b/step_3_webhook.png %}

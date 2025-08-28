@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Tests
+nav_title: Creating tests
 article_title: Creating Multivariate and A/B Tests
 page_order: 1
 page_type: reference
@@ -11,7 +11,7 @@ local_redirect: #optimizations
 
 # Creating multivariate and A/B tests {#creating-tests}
 
-> You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
+> You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel and single device. For example, if you want to use multivariate or A/B testing for a push campaign, you can target only iOS devices or only Android devices—not both device types in the same campaign.
 
 ![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 

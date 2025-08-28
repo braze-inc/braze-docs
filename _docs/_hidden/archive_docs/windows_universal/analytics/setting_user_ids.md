@@ -1,5 +1,5 @@
 ---
-nav_title: Setting User IDs
+nav_title: Setting user IDs
 article_title: Setting User IDs for Windows Universal
 platform: Windows Universal
 page_order: 1

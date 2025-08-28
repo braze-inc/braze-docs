@@ -10,13 +10,15 @@ page_order: 2
 
 > En utilisant l'éditeur de glisser-déposer, vous pouvez créer et personnaliser un centre de préférences pour aider à gérer quels utilisateurs reçoivent certains types de communication. Vous pouvez avoir jusqu'à 50 centres de préférences par espace de travail.
 
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+
 ## Étape 1 : Créer un centre de préférences d’e-mail
 
 Créez un centre de préférences en accédant à **Audience** > **Abonnements** > **Centre de préférences de messagerie**.
 
 Ici, une liste de centres de préférences personnalisés s’affiche. Sélectionnez **Créer Nouveau** pour créer un nouveau centre de préférences, ou sélectionnez le nom d'un centre existant pour apporter des modifications.
 
-![Une liste de centres de préférences personnalisés avec le nom, la description, le type, le statut, la date de dernière modification et la date de création par l'utilisateur.][1]
+![Une liste de centres de préférences personnalisés avec le nom, la description, le type, le statut, la date de dernière modification et la date de création par l'utilisateur.]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
 ## Étape 2 : Nommez le centre de préférences d’e-mail
 
@@ -24,7 +26,7 @@ Les noms des centres de préférences ne peuvent contenir que des caractères al
 
 Cette balise Liquid peut être incluse dans toutes les campagnes par e-mail sortantes ou les étapes Canvas et dirigera les utilisateurs vers le centre de préférences.
 
-![Un exemple de Liquid pour un centre de préférences.][2]
+![Un exemple de Liquid pour un centre de préférences.]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
 ## Étape 3 : Ajouter des groupes d'abonnement au centre de préférences
 
@@ -41,7 +43,7 @@ Vous pouvez configurer davantage les groupes d'abonnement sélectionnés en sél
 - Ajouter ou supprimer une case à cocher **Abonner à tout** qui abonnera l'utilisateur à tous les groupes d'abonnement affichés dans ce bloc
 - Ajouter ou supprimer une case à cocher **Se désabonner de tout** qui désabonnera l'utilisateur de tous les groupes d'abonnement affichés dans ce bloc
 
-![Un exemple de centre de préférences avec les options pour s'abonner à tous les messages, marketing, newsletter, et e-mails hebdomadaires, ou pour se désabonner de tous.][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![Exemple d'un centre de préférences offrant la possibilité de s'abonner à tous les messages, au marketing, à la lettre d'information et aux e-mails hebdomadaires, ou de se désabonner de tous.]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
 Le bouton **Désabonner de tout** en bas du modèle est non amovible et [dèsabonnera globalement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) l'utilisateur de la réception de tout message électronique.
 
@@ -51,7 +53,7 @@ Le bouton **Désabonner de tout** en bas du modèle est non amovible et [dèsabo
 
 Vous pouvez définir certains styles à appliquer à tous les blocs pertinents dans votre centre de préférences à partir de l'onglet **Styles communs**. Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique. Pour une expérience de conception plus facile, nous vous recommandons de configurer des styles au niveau de la page avant de personnaliser les styles au niveau des blocs.
 
-![Exemple de paramètres de style communs pour le texte, les boutons et les liens.][5]{: style="max-width:45%;"}
+![Exemple de paramètres de style communs pour le texte, les boutons et les liens.]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
 
 {% alert tip %}
 Pour revenir aux styles communs, cliquez sur le bouton « X » sur les propriétés de chaque bloc. Sélectionnez ensuite le conteneur du message, le bouton « X » du message ou l’arrière-plan de l’éditeur.
@@ -92,7 +94,7 @@ Si vous utilisez le bloc de code personnalisé dans votre centre de préférence
 
 N’oubliez pas de personnaliser la page de confirmation ! Vous pouvez modifier cette page en sélectionnant **Page de confirmation** en haut de la fenêtre de l'éditeur par glisser-déposer. Cette page s’affichera pour les utilisateurs après la mise à jour de leurs préférences à l’aide du centre de préférences. Les mêmes capacités de style ci-dessus s’appliquent également à cette page.
 
-![Exemple de page de confirmation indiquant que les préférences de l'utilisateur ont été mises à jour.][9]{: style="max-width:65%;"}
+![Exemple de page de confirmation pour communiquer que les préférences de l'utilisateur ont été mises à jour.]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
 ## Étape 6 : Prévisualisez et lancez votre centre de préférences
 
@@ -108,7 +110,7 @@ Lors du lancement du centre de préférences, vous serez invité à confirmer so
 
 Pour placer un lien vers le centre de préférences dans vos e-mails, copiez la balise Liquid du centre de préférences souhaité en sélectionnant l'icône **Copier Liquid**.
 
-![L'option Copier le code Liquid dans la ligne d'un centre de préférences.][10]{: style="max-width:75%;"}
+![L'option Copier le liquide dans la ligne d'un centre de préférences.]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
 Ajoutez l’étiquette Liquid à l'endroit souhaité dans votre e-mail, comme pour les [URL de désabonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link).
 
@@ -116,16 +118,5 @@ Ajoutez l’étiquette Liquid à l'endroit souhaité dans votre e-mail, comme po
 
 Si une erreur se produit lorsqu'un utilisateur sélectionne **Enregistrer** sur un centre de préférences, il recevra le message d'erreur par défaut suivant, qui ne peut pas être personnalisé ou stylé dans l'éditeur. Cependant, la localisation des messages d’erreur est toujours prise en charge sur ces pages. 
 
-![Une erreur indiquant : « Une erreur s'est produite lors de l'enregistrement de vos préférences. Veuillez réessayer."][11]{: style="max-width:55%;"}
+![Une erreur indiquant : « Une erreur s'est produite lors de l'enregistrement de vos préférences. Veuillez réessayer"]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 
-[1]: {% image_buster /assets/img/preference_center/preference_center1.png %}
-[2]: {% image_buster /assets/img/preference_center/preference_center2.png %}
-[3]: {% image_buster /assets/img/preference_center/preference_center3.png %}
-[4]: {% image_buster /assets/img/preference_center/preference_center4.png %}
-[5]: {% image_buster /assets/img/preference_center/preference_center5.png %}
-[6]: {% image_buster /assets/img/preference_center/preference_center6.png %}
-[7]: {% image_buster /assets/img/preference_center/preference_center7.png %}
-[8]: {% image_buster /assets/img/preference_center/preference_center8.png %}
-[9]: {% image_buster /assets/img/preference_center/preference_center9.png %}
-[10]: {% image_buster /assets/img/preference_center/preference_center10.png %}
-[11]: {% image_buster /assets/img/preference_center/preference_center11.png %} 

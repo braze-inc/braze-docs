@@ -35,23 +35,6 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 {% endsubtab %}
 {% endsubtabs %}
 
-Wenn Sie [Infillion Beacons](https://infillion.com/software/beacons/) in Ihre App integriert haben, können Sie zusätzlich `visit.getPlace()` verwenden, um standortspezifische Ereignisse zu protokollieren. `requestImmediateDataFlush` überprüft, ob Ihr Ereignis auch dann protokolliert wird, wenn Ihre App im Hintergrund läuft.
-
-{% subtabs %}
-{% subtab java %}
-```java
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
-Braze.getInstance(context).requestImmediateDataFlush();
-```
-{% endsubtab %}
-
-{% subtab kotlin %}
-```kotlin
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
-Braze.getInstance(context).requestImmediateDataFlush()
-```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab schnell %}
@@ -70,7 +53,7 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 {% endtab %}
 
 {% tab Internet %}
-Für eine standardmäßige Internet SDK-Implementierung können Sie die folgende Methode verwenden:
+Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
 
 ```javascript
 braze.logCustomEvent("YOUR_EVENT_NAME");
@@ -88,6 +71,26 @@ Wenn Sie stattdessen den Google Tag Manager verwenden möchten, können Sie den 
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
+{% endtab %}
+
+{% tab Infillion %}
+Wenn Sie [Infillion Beacons](https://infillion.com/software/beacons/) in Ihre Android App integriert haben, können Sie optional `visit.getPlace()` verwenden, um standortspezifische Ereignisse zu protokollieren. `requestImmediateDataFlush` überprüft, ob Ihr Ereignis auch dann protokolliert wird, wenn Ihre App im Hintergrund läuft.
+
+{% subtabs %}
+{% subtab java %}
+```java
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
+Braze.getInstance(context).requestImmediateDataFlush();
+```
+{% endsubtab %}
+
+{% subtab kotlin %}
+```kotlin
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
+Braze.getInstance(context).requestImmediateDataFlush()
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab React Native %}

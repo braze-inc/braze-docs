@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an In-App Message
+nav_title: Creating an in-app message
 article_title: "Creating an In-App Message with Drag-and-Drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequisites, creative details, and more."
 alias: "/create_dnd_iam/"
@@ -14,6 +14,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 # Creating an in-app message with drag-and-drop
 
 > With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience.
+
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Decision Split 
+nav_title: Decision Split
 article_title: Decision Split 
 alias: /decision_split/
 page_order: 2

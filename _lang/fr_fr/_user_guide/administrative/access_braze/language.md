@@ -18,7 +18,7 @@ Le tableau de bord de Braze est disponible en [plusieurs langues](#supported-lan
 1. Dans l'en-tête global, cliquez sur <i class="fa-solid fa-globe" aria-label="Sélectionner votre langue"></i>.
 2. Choisissez votre langue dans la liste.
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
 
 Le rechargement du tableau de bord peut prendre quelques instants.
 
@@ -58,4 +58,3 @@ If you have limited permissions, your notification language is set to the defaul
 
 -->
 
-[1]: {% image_buster /assets/img_archive/language_dashboard.png %}

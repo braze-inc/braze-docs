@@ -68,7 +68,7 @@ Embora o processo de configuração pareça semelhante à [criação de segmento
 4\. Determine se deseja ter exceções com base na tag marcando a caixa abaixo do nome do seu segmento (consulte [Como funciona](#how-it-works) para obter mais informações) e, em seguida, adicione as tags de campanhas ou Canvas que os usuários nessa lista de supressão ainda devem receber. <br><br>Em outras palavras, se você adicionar a tag de exceção "Shipping confirmation" (Confirmação de envio), os usuários da sua lista de supressão serão excluídos de todos os envios de mensagens, exceto aqueles que usam a tag "Shipping confirmation" (Confirmação de envio).<br><br>![A seção "Detalhes da Lista de Envio" com uma tag de exceção aplicada chamada "Confirmação de envio".][4]<br><br>
 5\. Salve ou ative sua lista de supressão.
 - Quando você salva, sua lista de supressão será salva, mas não será ativada, o que significa que não entrará em vigor. Sua lista de supressão permanecerá inativa até que você a ative, e listas de supressão inativas não impactarão o envio de mensagens (usuários não serão excluídos das mensagens).
-- Quando você ativa, sua lista de supressão será salva e entrará imediatamente em vigor, o que significa que usuários em sua lista de supressão serão imediatamente excluídos de campanhas ou Canvases (exceto aqueles que contêm uma tag de exceção).
+- Quando você ativa, sua lista de supressão será salva e entrará em vigor imediatamente, o que significa que usuários em sua lista de supressão serão imediatamente excluídos de campanhas ou Canvases (exceto aqueles que contêm uma tag de exceção).
 
 {% alert note %}
 Apenas administradores podem salvar ou ativar listas de supressão. Você pode ter até cinco listas de supressão ativas ao mesmo tempo na versão beta.
@@ -76,13 +76,13 @@ Apenas administradores podem salvar ou ativar listas de supressão. Você pode t
 
 Você pode desativar ou arquivar listas de supressão quando não precisar mais delas. 
 - Para desativar, selecione uma lista de supressão ativa e selecione **Desativar**. Listas de supressão desativadas podem ser reativadas mais tarde.
-- Para arquivar, faça isso na página **Listas de Supressão**.
+- Para arquivar, faça isso a partir da página **Listas de Supressão**.
 
 ## Uso da lista de supressão
 
 ### Para campanhas
 
-![A seção "Listas de Supressão" com uma lista de supressão ativa, chamada "Baixas pontuações de saúde de marketing".][5]
+![A seção "Listas de Supressão" com uma lista de supressão ativa, chamada "Baixas pontuações de integridade de marketing".][5]
 
 Se um usuário estiver em uma lista de supressão, ele não receberá uma campanha à qual essa lista de supressão se aplica. Consulte [Mensagens não afetadas por listas de supressão](#messages-not-affected-by-suppression-lists) para saber os casos em que uma lista de supressão não se aplica.
 

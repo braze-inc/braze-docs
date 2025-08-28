@@ -17,7 +17,7 @@ description: "이 문서에는 2021년 1월의 릴리스 노트가 포함되어 
 
 ## SMS 맞춤 키워드 카테고리 및 리타겟팅 옵션
 
-Braze는 양방향 메시징을 위한 사용자 지정 키워드 추가 기능, 사용자 지정 키워드 카테고리, 다국어 지원, 키워드 리타겟팅 및 필터링 옵션 등 기본 SMS 기능을 확장했습니다. SMS 키워드 처리에 대한 자세한 내용은 [SMS 설명서를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) 참조하세요. 
+Braze는 양방향 메시징을 위한 사용자 지정 키워드 추가 기능, 사용자 지정 키워드 카테고리, 다국어 지원, 키워드 리타겟팅 및 필터링 옵션 등 기본 SMS 기능을 확장했습니다. SMS 키워드 처리에 대한 자세한 내용은 [SMS 설명서를]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/) 참조하세요. 
 
 ## Playable 파트너십 출시
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Compliance Documentation
+nav_title: Compliance documentation
 article_title: Compliance Documentation
 page_order: 1
 layout: dev_guide

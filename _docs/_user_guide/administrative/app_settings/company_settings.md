@@ -1,5 +1,5 @@
 ---
-nav_title: Admin Settings
+nav_title: Admin settings
 article_title: Admin Settings
 page_order: 20
 layout: dev_guide

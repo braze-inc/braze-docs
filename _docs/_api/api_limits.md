@@ -1,5 +1,5 @@
 ---
-nav_title: Rate Limits
+nav_title: Rate limits
 article_title: API Rate Limits
 page_order: 4.5
 description: "This reference article covers API rate limits for the Braze API infrastructure."
