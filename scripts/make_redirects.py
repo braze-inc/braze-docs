@@ -9,6 +9,7 @@
 import os
 import re
 import subprocess
+import pathlib
 
 # Global variables
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
@@ -19,8 +20,6 @@ LOG_PATH = os.path.join(PROJECT_ROOT, "scripts", "temp", "mredirect_logs")
 #   files:       rename _docs/_contributing/{bdocs.md => test.md} (100%)
 #   directories: rename _docs/_contributing/{yaml => jekyll}/metadata.md (100%)
 def get_renamed_files():
-    import pathlib, subprocess, os
-
     # resolve upstream of current branch and fetch just that ref
     res = subprocess.run(
         ["git", "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{upstream}"],
@@ -62,7 +61,7 @@ def log_unmatched(line):
 def create_redirect(line):
     original_line = line.strip()
 
-    # strip leading 'rename' and trailing '(NN%)'
+    # strip leading 'rename' and trailing percentage like '(98%)'
     line = line.split(" ", 1)[1]
     line = re.sub(r"\s\(\d+%\)$", "", line)
 
@@ -74,7 +73,9 @@ def create_redirect(line):
 
     old_part, new_part = m.group(1), m.group(2)
 
+    # Path before { }
     prefix = line.split("{", 1)[0].strip()
+    # Portion after }
     suffix = line.split("}", 1)[1].strip()
 
     def norm(p):
@@ -84,7 +85,7 @@ def create_redirect(line):
         p = re.sub(r"//+", "/", "/"+p.lstrip("/"))
         # drop underscore only at the beginning of a segment
         p = re.sub(r"/_+", "/", p)
-        return p.rstrip("/")
+        return p.rstrip("/")  # normalized form, no trailing slash
 
     url_old = norm(f"{prefix}{old_part}{suffix}")
     url_new = norm(f"{prefix}{new_part}{suffix}")
@@ -92,20 +93,41 @@ def create_redirect(line):
     return f"validurls['{url_old}'] = '{url_new}';"
 
 
+# Regex for parsing redirect lines
+RX_LINE = re.compile(r"""^validurls\['([^']+)'\]\s*=\s*'([^']+)';\s*$""")
+
+# Normalize for duplicate comparison (ignore trailing slash)
+def norm_for_compare(path: str) -> str:
+    return path.rstrip("/")
+
+def parse_redirect(line: str):
+    m = RX_LINE.match(line.strip())
+    return (m.group(1), m.group(2)) if m else None
+
+
 # Remove duplicate lines while preserving single blank lines
 def remove_duplicates(lines):
     unique_lines = []
     double_blank = False
+    seen = set()
 
     for line in lines:
-        if line.strip() == "":          
-            if not double_blank:         
+        if line.strip() == "":
+            if not double_blank:
                 unique_lines.append(line)
                 double_blank = True
-        else:                           
-            double_blank = False
-            if line not in unique_lines:
-                unique_lines.append(line)
+            continue
+
+        double_blank = False
+        parsed = parse_redirect(line)
+        if parsed:
+            comp = (norm_for_compare(parsed[0]), norm_for_compare(parsed[1]))
+            if comp in seen:
+                continue
+            seen.add(comp)
+
+        if line not in unique_lines:
+            unique_lines.append(line)
 
     return unique_lines
 
@@ -127,11 +149,23 @@ def main():
         original_lines = f.readlines()
         lines = [l for l in original_lines if l.strip() != placeholder_comment]
 
-        # Build redirects, skip duplicates
+        # Build set of existing redirects ignoring trailing slashes
+        existing_norm = set()
+        for l in lines:
+            parsed = parse_redirect(l)
+            if parsed:
+                existing_norm.add((norm_for_compare(parsed[0]), norm_for_compare(parsed[1])))
+
+        # Build redirects, skip duplicates (ignoring trailing slashes)
         for line in changed_files:
             redirect_line = create_redirect(line)
-            if redirect_line and (redirect_line + "\n") not in lines:
+            if not redirect_line:
+                continue
+            parsed = parse_redirect(redirect_line)
+            comp = (norm_for_compare(parsed[0]), norm_for_compare(parsed[1])) if parsed else None
+            if comp and comp not in existing_norm:
                 lines.append(redirect_line + "\n")
+                existing_norm.add(comp)
                 redirects_created = True
 
         if not redirects_created:
