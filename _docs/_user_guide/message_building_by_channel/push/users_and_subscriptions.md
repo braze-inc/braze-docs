@@ -177,10 +177,6 @@ For information on how to check push registration state, visit [push registratio
 {% tabs %}
 {% tab Android %}
 
-{% alert note %}
-For Android, you can only intercept a push notification when the app is in the foreground or background (but still running). You cannot intercept notifications when the app is terminated or completely killed.
-{% endalert %}
-
 If a foreground push enabled user disables push in their OS settings, then at the start of the next session:
 - Braze marks them as foreground push disabled and no longer attempts to send them push messages.
 - The `Foreground Push Enabled for App (Android)` filter and the `Foreground Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
@@ -193,6 +189,10 @@ For Android, Braze will consider a user push disabled if:
 - A push message fails to deliver due to a bounce. This is often caused by an uninstall, but can also be due to app updates, new push token version, or format. 
 - Push registration fails to Firebase Cloud Messaging (sometimes caused by poor network connections or a failure to connect to or on FCM to return a valid token).
 - The user blocks push notifications for the app within their device settings and subsequently logs a session.
+
+{% alert note %}
+You can only intercept an Android push notification when the app is in the foreground or background (but still running). You can't intercept notifications when the app is terminated or completely killed.
+{% endalert %}
 
 {% endtab %}
 {% tab iOS %}
@@ -210,7 +210,7 @@ In the scenario that a user, who initially opted-in on the OS level disables pus
 In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background or Foreground Push Enabled = true`.
 
 {% alert note %}
-The iOS operating system doesn't allow apps to intercept a push notification prior to the push notification displaying. This means that apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for an app, but that isn't controlled by the app itself.
+iOS doesn't allow apps to intercept a push notification prior to the push notification displaying. This means that apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for an app, but that isn't controlled by the app itself.
 {% endalert %}
 
 {% endtab %}
