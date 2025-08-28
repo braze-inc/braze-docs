@@ -1,7 +1,7 @@
 ---
 nav_title: Identifier field-level encryption
 article_title: Identifier Field-Level Encryption
-page_order: 101
+page_order: 2
 alias: "/field_level_encryption/"
 description: "This reference article covers how to encrypt email addresses to minimize personally identifiable information (PII) shared in Braze."
 page_type: reference
