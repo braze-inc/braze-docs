@@ -71,7 +71,7 @@ With the release of Android M, Android switched from an install-time to a runtim
 
 To use delayed initialization, the minimum Braze SDK version is required:
 
-{% sdk_min_versions android:0.0.0 %}
+{% sdk_min_versions android:38.0.0 %}
 
 {% alert note %}
 While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass data to the Braze servers.
@@ -130,7 +130,7 @@ In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavi
 {% endtab %}
 
 {% tab At runtime %}
-Add `QUEUE` to your [`Braze.enableDelayedInitialization()`](LINK) method:
+Add `QUEUE` to your [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -165,7 +165,7 @@ In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavi
 {% endtab %}
 
 {% tab At runtime %}
-Add `DROP` to [`Braze.enableDelayedInitialization()`](LINK) method:
+Add `DROP` to [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -188,7 +188,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 
 #### Step 4.3: Manually initialize the SDK
 
-After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](LINK) method to manually initialize the SDK.
+After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-delayed-initialization.html) method to manually initialize the SDK.
 
 {% tabs local %}
 {% tab JAVA %}
