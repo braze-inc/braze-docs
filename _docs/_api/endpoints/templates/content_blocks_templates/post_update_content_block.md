@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update Content Block"
+nav_title: "POST: Update content block"
 article_title: "POST: Update Content Block"
 search_tag: Endpoint
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: Messaging Fundamentals
+nav_title: Messaging fundamentals
 article_title: Messaging Fundamentals
 layout: dev_guide
 page_order: 0

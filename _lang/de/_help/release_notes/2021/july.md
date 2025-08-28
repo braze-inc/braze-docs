@@ -30,7 +30,7 @@ Erfahren Sie mehr über SSL bei Braze, warum SSL wichtig ist und wie Sie ein SSL
 
 ## Amplitude Nutzerprofil API Endpunkte
 
-Amplitude's User Profile API dient Amplitude-Nutzer:in-Profilen. Dazu gehören die Eigenschaften des Nutzers, die berechneten Eigenschaften des Nutzers, eine Liste der IDs der Kohorten, die den Nutzer:innen enthalten, und Empfehlungen. Weitere Informationen finden Sie unter [Amplitude Nutzerprofil API Endpunkte]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
+Amplitude's User Profile API dient Amplitude-Nutzer:in-Profilen. Dazu gehören die Eigenschaften des Nutzers, die berechneten Eigenschaften des Nutzers, eine Liste der IDs der Kohorten, die den Nutzer:innen enthalten, und Empfehlungen. Weitere Informationen finden Sie unter [Amplitude Nutzerprofil API Endpunkte]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_user_profile_api/).
 
 ## Endpunkt für Kampagnendetails 
 

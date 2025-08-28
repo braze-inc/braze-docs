@@ -50,14 +50,14 @@ CSVファイルを作成する際には、以下のガイドラインに注意�
 
 ### 方法1:CSVをアップロードする
 
-1. ファイルをアップロードゾーンにドラッグ＆ドロップするか、[**CSV をアップロードする**] を選択してファイルを選択します。<br>![][1]{: style="max-width:80%;"}<br><br>
+1. ファイルをアップロードゾーンにドラッグ＆ドロップするか、[**CSV をアップロードする**] を選択してファイルを選択します。<br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"}<br><br>
 2. 各列のデータ型として、boolean、number、string、timeのいずれかを選択する。
-<br> ![][9]{: style="max-width:80%;"}<br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"}<br><br>
 3. カタログに名前をつける。カタログ名に関する以下の要件に留意すること：
 - 一意でなければなりません。
 - 最大 250 文字。
 - 数字、アルファベット、ハイフン、アンダースコアのみを含むことができる。<br><br>
-4. (オプション）カタログの説明を追加する。
+4. (オプション) カタログの説明を追加します。
 5. **プロセスカタログ**を押してカタログを作成します。
 
 {% alert note %}
@@ -87,11 +87,11 @@ CSVファイルを作成する際には、以下のガイドラインに注意�
 1. カタログの名前を入力する。カタログ名については、以下の要件に留意すること：
 - 一意でなければなりません。
 - 最大 250 文字
-- 数字、アルファベット、ハイフン、アンダースコアのみを含むことができる。 <br> ![「my_catalog」という名前のカタログ。][14]{: style="max-width:80%;"}<br><br>
-2. (オプション）カタログの説明を入力する。
+- 数字、アルファベット、ハイフン、アンダースコアのみを含むことができる。 <br> !["my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}) という名前のカタログ{: style="max-width:80%;"}<br><br>
+2. (オプション) カタログの説明を入力します。
 3. カタログを更新するには、[**カタログ**] ページのリストから、先ほど作成したカタログを選択します。
-4. [**カタログを更新**] > [**フィールドを追加**] をクリックして、フィールドを追加します。次に、**フィールド名を**入力し、ドロップダウンを使ってデータタイプを選択する。必要に応じて繰り返す。<br> ![「rating」と「name」という2つのフィールドの例。][12]{: style="max-width:50%;"}<br><br>
-5. [**カタログを更新**] > [**項目を追加**] を選択し、以前に追加したフィールドに基づいて情報を入力して、カタログに項目を追加します。次に、[**項目を保存**] または [**保存して追加**] を選択して、項目の追加を続行します。<br> ![カタログ項目を追加する。][13]{: style="max-width:50%;"}
+4. [**カタログを更新**] > [**フィールドを追加**] をクリックして、フィールドを追加します。次に、**フィールド名を**入力し、ドロップダウンを使ってデータタイプを選択する。必要に応じて繰り返す。<br> ![「rating」と「name」という2つのフィールドの例。]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. [**カタログを更新**] > [**項目を追加**] を選択し、以前に追加したフィールドに基づいて情報を入力して、カタログに項目を追加します。次に、[**項目を保存**] または [**保存して追加**] を選択して、項目の追加を続行します。<br> ![カタログアイテムを追加します。]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 ブラウザでカタログ作成を選択した後、CSVファイルをアップロードすることもできる。
 
@@ -139,11 +139,11 @@ CSVファイルをアップロードしてカタログを作成する。`id`、`
 このデータタイプは、カタログをセットアップした後は編集できない。
 {% endalert %}
 
-![4つのカタログ列名：「id」、「title」、「price」、「image_link」。][9]{: style="max-width:85%;"}
+![4 つのカタログ列名:"id"、"title"、"price"、"image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 次に、このカタログに「games_catalog」という名前を付け、「**Process Catalog」**ボタンを選択します。その後、Brazeはカタログを作成する前に、カタログにエラーがないかチェックする。
 
-![「games_catalog」という名前のカタログ。][11]{: style="max-width:85%;"}
+![「games_catalog」という名前のカタログ。]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 カタログが作成された後は、この名前を編集することはできないことに注意してほしい。カタログを削除してから、同じカタログ名を使用して更新後のバージョンを再びアップロードできます。
 
@@ -171,17 +171,9 @@ Braze ダッシュボードに表示されるパッケージの権利は、見�
 
 #### 無料版
 
-無料版カタログのストレージサイズは最大 100 MBです。100 MB 未満であれば、アイテム数に制限はありません。セレクションはストレージに影響します。セレクションが複雑になるほど、より多くのストレージが必要です。また、CSVカタログデータとデータストアのデータ表現との間にサイズの不一致が生じる。
+無料版カタログのストレージサイズは最大 100 MBです。100MB 未満であれば、アイテムに制限はありません。 
 
 #### カタログ Pro
 
 会社レベルで、カタログ Pro の最大ストレージはカタログデータのサイズに基づきます。ストレージサイズのオプションは以下の通りである：5GB、10GB、15GBのいずれか。なお、無料版のストレージ (100 MB) はこれらの各プランに含まれています。
 
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
-[9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
-[11]: {% image_buster /assets/img_archive/catalog_new_name.png %}
-[12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
-[13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
-[14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}

@@ -15,7 +15,7 @@ description: "이 문서에는 2018년 5월의 릴리스 노트가 포함되어 
 
 ## 모바일 반응형 이메일 템플릿
 
-Braze에는 일반적인 이메일 마케팅 요구 사항에 맞는 16개의 새로운 모바일 반응형 [이메일 템플릿이][97] 있습니다. 여기에는 다음 템플릿 테마의 다양한 버전이 포함됩니다:
+Braze에는 일반적인 이메일 마케팅 요구 사항에 맞는 16개의 새로운 모바일 반응형 [이메일 템플릿이]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template) 있습니다. 여기에는 다음 템플릿 테마의 다양한 버전이 포함됩니다:
 
 - 환영합니다.
 - 감사합니다
@@ -29,4 +29,3 @@ Braze에는 일반적인 이메일 마케팅 요구 사항에 맞는 16개의 �
 각 템플릿을 나타내는 아이콘에 해당 템플릿의 레이아웃이 표시되는 것을 확인할 수 있습니다.
 
 
-[97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

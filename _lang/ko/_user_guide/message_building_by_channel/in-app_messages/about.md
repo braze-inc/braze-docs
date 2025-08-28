@@ -13,7 +13,7 @@ search_rank: 4.9
 
 > 인앱 메시지는 여러모로 유용합니다. 이러한 메시지는 사용자의 앱 외부로 전달되지 않고 홈 화면을 방해하지 않기 때문에 콘텐츠가 풍부하고 긴박감이 낮습니다. 인앱 메시지는 앱 내에 존재하며(따라서 이름), 맥락과 함께 제공되며, 반갑지 않은 경우가 거의 없습니다! 사용자가 앱 내에서 활성화되어 있을 때 항상 전달됩니다.
 
-인앱 메시지의 예시를 보려면 [사례 연구][1]를 확인하세요.
+To see examples of in-app messages, check out our [Case Studies](https://www.braze.com/customers).
 
 ## 잠재적 사용 사례
 
@@ -21,10 +21,10 @@ search_rank: 4.9
 
 | 사용 사례 | 설명 |
 | --- | --- |
-| 푸시 프라이밍 | 풍부한 인앱 메시지를 사용하여 [푸시 프라이밍][2] 캠페인을 실행하여 고객에게 앱 또는 사이트에 대한 푸시 수신 동의의 이점을 보여주고 푸시 권한을 부여하라는 메시지를 표시하세요.
+| 푸시 프라이밍 | Run a [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) campaign using a rich in-app message to show your customers the benefit of opting into push for your app or site, and present them with a prompt to grant push permission.
 | 영업 및 프로모션 | 모달 인앱 메시지를 사용하여 정적 프로모션 코드 또는 오퍼가 포함된 시각적으로 매력적인 미디어로 고객을 맞이하세요. 그렇지 않았다면 구매나 전환을 하지 않았을 고객이 구매나 전환을 하도록 인센티브를 제공하세요. |
 | 기능 채택 장려 | 고객이 앱의 다른 부분을 사용하거나 서비스를 이용하도록 유도하세요. |
-| 고도로 개인화된 캠페인 | 고객이 앱이나 사이트에 들어왔을 때 가장 먼저 보게 되는 인앱 메시지를 배치하세요. [연결된 콘텐츠][3]와 같은 일부 Braze 개인화 기능을 추가하면 사용자가 행동을 취하도록 유도하여 보다 효과적인 홍보를 할 수 있습니다.
+| 고도로 개인화된 캠페인 | 고객이 앱이나 사이트에 들어왔을 때 가장 먼저 보게 되는 인앱 메시지를 배치하세요. Add in some Braze personalization features, such as [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), to compel users to take action and therefore make your outreach more effective.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 고려해야 할 다른 사용 사례는 다음과 같습니다:
@@ -69,16 +69,10 @@ search_rank: 4.9
 {% endtab %}
 {% endtabs %}
 
-이러한 기본 메시지 템플릿 외에도 커스텀 HTML 인앱 메시지, CSS가 포함된 웹 모달 또는 웹 이메일 캡처 양식을 사용하여 메시지를 추가로 사용자 지정할 수 있습니다. 자세한 내용은 [사용자 지정][4]을 참조하세요.
+이러한 기본 메시지 템플릿 외에도 커스텀 HTML 인앱 메시지, CSS가 포함된 웹 모달 또는 웹 이메일 캡처 양식을 사용하여 메시지를 추가로 사용자 지정할 수 있습니다. For more information, refer to [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 ## 추가 리소스
 
-나만의 인앱 메시지 캠페인을 만들거나 멀티채널 캠페인에서 인앱 메시지를 사용하기 전에 [인앱 메시지 준비 가이드][5]를 확인하는 것이 좋습니다. 이 가이드에서는 인앱 메시지를 작성할 때 고려해야 할 타겟팅, 콘텐츠 및 전환 관련 질문에 대해 설명합니다.
+Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). 이 가이드에서는 인앱 메시지를 작성할 때 고려해야 할 타겟팅, 콘텐츠 및 전환 관련 질문에 대해 설명합니다.
 
 
-[1]: https://www.braze.com/customers
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
-[6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/

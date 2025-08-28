@@ -1,7 +1,7 @@
 ---
 nav_title: 기능 인식 및 새 앱 버전
 article_title: 기능 인식 및 새 앱 버전
-page_order: 7
+page_order: 9
 page_type: reference
 description: "이 참고 문서에서는 새로운 기능이나 버전을 출시할 때 사용자가 이를 잘 알고 흥미를 가질 수 있도록 하는 방법에 대해 설명합니다."
 tool: Campaigns
@@ -20,7 +20,7 @@ tool: Campaigns
 
 Braze SDK는 사용자의 최신 앱 버전을 자동으로 추적합니다. 이러한 버전은 필터 및 세그먼트에서 메시지 또는 캠페인을 수신할 사용자를 결정하는 데 사용할 수 있습니다.
 
-![캠페인 구축 워크플로우의 타겟 사용자 단계에 있는 타겟팅 옵션 패널입니다. 추가 필터 섹션에는 "Android 스톱워치(Android)의 최신 앱 버전 번호가 3.7.0(134.0.0.0) 미만인 경우" 필터가 포함되어 있습니다.][1]
+![캠페인 구축 워크플로우의 타겟 사용자 단계에 있는 타겟팅 옵션 패널입니다. 추가 필터 섹션에는 "안드로이드 스톱워치(안드로이드)의 최신 앱 버전 번호가 3.7.0(134.0.0.0) 미만입니다."가 포함됩니다.]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
 
 ### 앱 버전 번호
 
@@ -37,7 +37,7 @@ Braze SDK는 사용자의 최신 앱 버전을 자동으로 추적합니다. 이
 
 **중요**
 
-* Android 앱에는 사람이 읽을 수 있는 [`versionName`][7] 및 내부 [`versionCode`][9]가 모두 있습니다. 앱 버전 번호 필터는 앱 스토어가 릴리스될 때마다 증가하기 때문에 `versionCode`를 사용합니다.
+* 안드로이드 앱은 사람이 읽을 수 있는 [`versionName`](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName)과 내부 [`versionCode`](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode())를 모두 가지고 있습니다. 앱 버전 번호 필터는 앱 스토어가 릴리스될 때마다 증가하기 때문에 `versionCode`를 사용합니다.
 * 특히 앱의 `versionName` 및 `versionCode` 필드가 모두 Braze 대시보드에서 볼 수 있기 때문에 동기화되지 않을 경우 혼란을 야기할 수 있습니다. 모범 사례로 앱의 `versionName` 및 `versionCode`가 함께 증가되는지 확인하세요.
 * 사람이 읽을 수 있는 `versionName` 필드를 기준으로 필터링해야 하는 경우(일반적이지 않음) 앱 버전 이름 필터를 사용하세요.
 
@@ -45,9 +45,9 @@ Braze SDK는 사용자의 최신 앱 버전을 자동으로 추적합니다. 이
 
 이 필터의 값은 Braze Android SDK v3.6.0+ 및 iOS SDK v3.21.0+부터 수집됩니다. 이 필터에는 SDK 요구 사항이 있지만, 이 기능을 사용하면 앱의 하위(이전) 버전을 사용하는 사용자를 타겟팅할 수 있습니다!
 
-Android의 경우 이 버전 번호는 [앱의 패키지 긴 버전 코드][9]를 기준으로 합니다.
+안드로이드의 경우, 이 버전 번호는 앱의 [패키지 롱 버전 코드](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode())를 기반으로 합니다.
 
-iOS의 경우 이 버전 번호는 [앱의 짧은 버전 문자열][8]을 기준으로 합니다.
+iOS의 경우, 이 버전 번호는 앱의 [짧은 버전 문자열](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring)을 기반으로 합니다.
 
 {% alert tip %}
 이 필터는 사용자가 지원되는 Braze SDK 버전으로 앱을 업그레이드한 후 값을 채웁니다. 그때까지는 필터를 선택해도 버전이 표시되지 않습니다.
@@ -73,22 +73,14 @@ Braze가 앱 2.0.0 버전에서 데이터를 수신하면 이전 버전 또는 �
 
 이 필터는 'is', 'is not' 및 정규식을 사용한 일치를 지원합니다. 예를 들어 "1.2.3-test-build" 버전이 아닌 앱을 보유한 사용자를 타겟팅할 수 있습니다.
 
-Android의 경우 이 버전 이름은 [앱의 패키지 버전 이름][7]을 기준으로 합니다. iOS의 경우 이 버전 이름은 [앱의 짧은 버전 문자열][8]을 기반으로 합니다.
+안드로이드의 경우, 이 버전 이름은 앱의 [패키지 버전 이름](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName)을 기반으로 합니다. iOS의 경우, 이 버전 이름은 앱의 [짧은 버전 문자열](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring)을 기반으로 합니다.
 
 ### 사용하지 않은 기능
 
-새 앱 버전을 출시하고 새로운 기능을 도입하면 사용자가 새로운 콘텐츠를 인지하지 못할 수 있습니다. 기능 인식 캠페인을 실행하면 사용자에게 새로운 기능이나 한 번도 사용해 본 적이 없는 기능에 대해 알릴 수 있는 좋은 방법입니다. 이렇게 하려면 앱 내에서 특정 작업을 완료한 적이 없는 사용자에게 할당되는 [커스텀 속성][3]을 만들거나 [커스텀 이벤트][4]를 사용하여 특정 작업을 추적해야 합니다. 이 속성(또는 이벤트)을 사용하여 캠페인을 보내려는 사용자를 세분화할 수 있습니다.
+새 앱 버전을 출시하고 새로운 기능을 도입하면 사용자가 새로운 콘텐츠를 인지하지 못할 수 있습니다. 기능 인식 캠페인을 실행하면 사용자에게 새로운 기능이나 한 번도 사용해 본 적이 없는 기능에 대해 알릴 수 있는 좋은 방법입니다. 이를 위해, 귀하는 앱 내에서 특정 작업을 완료한 적이 없는 사용자에게 할당된 [커스텀 속성]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data)을 생성하거나 특정 작업을 추적하기 위해 [커스텀 이벤트]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data)를 사용해야 합니다. 이 속성(또는 이벤트)을 사용하여 캠페인을 보내려는 사용자를 세분화할 수 있습니다.
 
 {% alert tip %}
 오디언스의 특정 부분을 리타겟팅하고 싶으신가요? 사용자의 이전 행동을 활용하여 캠페인을 리타겟팅하는 방법을 알아보려면 [캠페인 리타겟팅]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/)을 확인하세요.
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img_archive/new_app_version.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/
-[7]:https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
-[8]:https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
-[9]:https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()

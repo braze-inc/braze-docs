@@ -1,5 +1,5 @@
 ---
-nav_title: Message Usage Dashboard
+nav_title: Message usage dashboard
 article_title: Message Usage Dashboard
 page_order: 0
 page_type: reference
@@ -7,4 +7,4 @@ description: "This reference article covers the Message Usage dashboard, where y
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}

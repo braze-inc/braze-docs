@@ -23,7 +23,7 @@ description: "이 참고 문서에서는 Braze 사용자 프로필 수명주기�
 
 ## 익명 사용자 프로필
 
-지정된 `external_id` 주소가 없는 모든 사용자를 익명 사용자라고 합니다. 예를 들어 웹사이트를 방문했지만 가입하지 않은 사용자 또는 모바일 앱을 다운로드했지만 프로필을 만들지 않은 사용자 등이 이에 해당할 수 있습니다.
+지정된 `external_id` 주소가 없는 사용자를 [익명 사용자라고]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) 합니다. 예를 들어 웹사이트를 방문했지만 가입하지 않은 사용자 또는 모바일 앱을 다운로드했지만 프로필을 만들지 않은 사용자 등이 이에 해당할 수 있습니다.
 
 처음에 SDK에 의해 사용자가 인식되면, Braze에서 자동으로 할당되고 편집할 수 없으며 디바이스별로 고유한 식별자( `braze_id`)가 연결된 익명 사용자 프로필이 생성됩니다. 이 식별자는 [API를]({{site.baseurl}}/api/endpoints/user_data/) 통해 사용자 프로필을 업데이트하는 데 사용할 수 있습니다.
 
@@ -68,7 +68,7 @@ Using an email address or a hashed email address as your Braze external ID can s
 
 익명 사용자와 알려진 사용자 모두 이름이 있는 경우 알려진 사용자의 이름이 유지됩니다. 알려진 사용자에게는 null 값이 있고 익명 사용자에게는 값이 있는 경우 익명 사용자의 값이 이러한 [특정 사용자 프로필 필드에]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior) 해당하면 익명 사용자의 값이 알려진 사용자의 프로필에 병합됩니다.
 
-고객 프로필에 대해 `external_id`를 설정하는 방법에 대한 자세한 내용은 설명서[(iOS][24], [Android][30], [웹][31])를 참조하세요.
+For information on how to set an `external_id` against a user profile, see our documentation ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
 ## 사용자 별칭
 
@@ -78,9 +78,9 @@ Braze 이외의 식별자로 사용자를 지칭하려면 `external_id`, 사용�
 
 ### 사용자 별칭 업데이트
 
-`external_id` 과 달리 별칭은 [사용자 데이터 엔드포인트][32] ]를 사용하거나 SDK를 통해 새 이름을 전달하여 설정한 후 해당 레이블의 새 이름으로 업데이트할 수 있습니다. 그러면 해당 사용자의 데이터를 내보낼 때 사용자 별칭이 표시됩니다.
+Unlike an `external_id`, an alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) or passing a new name through the SDK. 그러면 해당 사용자의 데이터를 내보낼 때 사용자 별칭이 표시됩니다.
 
-![사용자 별칭 레이블은 같지만 별칭 이름이 다른 별도의 사용자를 위한 두 개의 서로 다른 사용자 프로필][29]
+![Two different user profiles for separate users with the same user alias label but different alias names]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
 ### 익명 사용자 태그 지정
 
@@ -94,9 +94,9 @@ Braze 이외의 식별자로 사용자를 지칭하려면 `external_id`, 사용�
 
 알려진 사용자 프로필에 사용자 별칭을 설정하여 외부에 알려진 다른 ID로 알려진 사용자를 참조할 수도 있습니다. 예를 들어, 사용자가 Braze 내에서 참조하고자 하는 비즈니스 인텔리전스 도구 ID(예: Amplitude ID)를 가지고 있을 수 있습니다.
 
-사용자 별칭을 설정하는 방법에 대한 자세한 내용은 각 플랫폼[(iOS][1], [Android][2], [웹][3])에 대한 설명서를 참조하세요.
+For information on how to set a user alias, see our documentation for each platform ([iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users)).
 
-![Braze에서 사용자 프로필의 라이프사이클을 보여주는 흐름도입니다. 익명 사용자에 대해 changeUser()가 호출되면 해당 사용자는 식별된 사용자가 되고 데이터는 식별된 사용자 프로필로 마이그레이션됩니다. 신원 확인된 사용자에게는 Braze ID와 외부 ID가 있습니다. 이 때 두 번째 익명 사용자가 changeUser()를 호출하면 식별된 사용자에 아직 존재하지 않는 사용자 데이터 필드가 병합됩니다. 식별된 사용자가 기존 사용자 프로필에 별칭을 추가한 경우 데이터는 영향을 받지 않지만 별칭이 있는 식별된 사용자가 됩니다. 식별된 사용자와 별칭 레이블은 같지만 별칭 이름이 다른 세 번째 익명 사용자가 changeUser()를 호출하면 식별된 사용자에 존재하지 않는 모든 필드가 병합되고 식별된 고객 프로필의 별칭 라벨이 유지됩니다.][26]
+![Braze에서 사용자 프로필의 라이프사이클을 보여주는 흐름도입니다. 익명 사용자에 대해 changeUser()가 호출되면 해당 사용자는 식별된 사용자가 되고 데이터는 식별된 사용자 프로필로 마이그레이션됩니다. 신원 확인된 사용자에게는 Braze ID와 외부 ID가 있습니다. 이 때 두 번째 익명 사용자가 changeUser()를 호출하면 식별된 사용자에 아직 존재하지 않는 사용자 데이터 필드가 병합됩니다. 식별된 사용자가 기존 사용자 프로필에 별칭을 추가한 경우 데이터는 영향을 받지 않지만 별칭이 있는 식별된 사용자가 됩니다. If a third anonymous user with the same alias label as the Identified User but a different alias name then has changeUser() called, any fields that do not exist on the Identified User will be merged and the alias label on the Identified User profile is maintained.]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
 
 {% alert tip %}
 고객의 사용자 프로필 라이프사이클에 어떤 영향을 미칠지 파악하는 데 어려움이 있으신가요? 사용자 데이터 수집 모범 사례를 보려면 [모범 사례]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/)를 방문하세요.
@@ -104,7 +104,7 @@ Braze 이외의 식별자로 사용자를 지칭하려면 `external_id`, 사용�
 
 ## 고급 사용 사례
 
-사용자 데이터 엔드포인트][27] 를 사용하여 SDK 및 API를 통해 기존에 식별된 사용자 프로필에 대한 새 사용자 별칭을 설정할 수 있습니다. 그러나 알 수 없는 기존 사용자 프로필에 대해서는 API를 통해 사용자 별칭을 설정할 수 없습니다.
+You can set a new user alias for existing identified user profiles through our SDK and our API using the [User Data endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint). 그러나 알 수 없는 기존 사용자 프로필에 대해서는 API를 통해 사용자 별칭을 설정할 수 없습니다.
 
 이 과정에서 사용자 별칭도 병합됩니다. 그러나 고아화할 사용자와 대상 사용자 모두 동일한 레이블을 가진 별칭을 가지고 있는 경우에는 대상 사용자의 별칭만 유지됩니다.
 
@@ -112,23 +112,10 @@ Braze 이외의 식별자로 사용자를 지칭하려면 `external_id`, 사용�
 
 ### 사용자 ID 관련 문제 해결
 
-모든 사용자 ID는 대시보드 내에서 테스트할 사용자를 찾고 식별하는 데 사용할 수 있습니다. Braze 대시보드에서 사용자를 찾으려면 [테스트 사용자 추가하기][28]를 참조하세요.
+모든 사용자 ID는 대시보드 내에서 테스트할 사용자를 찾고 식별하는 데 사용할 수 있습니다. To find your user in the Braze dashboard, refer to [Adding Test Users]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
 Braze는 세션 수가 5,000,000개가 넘는 사용자("더미 사용자")를 금지 또는 차단하며, 이러한 사용자는 일반적으로 잘못된 통합의 결과이므로 더 이상 해당 사용자의 SDK 이벤트를 수집하지 않습니다. 합법적인 사용자에게 이런 일이 발생한 것을 발견하면 Braze 계정 관리자에게 문의하세요.
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[25]: {{site.baseurl}}/developer_guide/home/
-[26]: {% image_buster /assets/img_archive/Braze_User_flowchart.png %}
-[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint
-[28]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[29]: {% image_buster /assets/img_archive/Braze_User_aliases.png %}
-[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[31]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[32]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint

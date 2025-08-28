@@ -14,4 +14,4 @@ tool:
 
 > This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard.
 
-{% multi_lang_include campaign_analytics.md channel="Content Card" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="Content Card" %}

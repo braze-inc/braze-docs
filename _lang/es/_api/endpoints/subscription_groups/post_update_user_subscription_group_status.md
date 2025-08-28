@@ -21,7 +21,7 @@ Si quieres ver ejemplos o probar este punto final para **Grupos de suscripción 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-Si quieres ver ejemplos o probar este punto final para **Grupos de Suscripción SMS**:
+Si quieres ver ejemplos o probar este punto final para **Grupos de suscripción SMS y RCS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -31,12 +31,12 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='conjunto de estados de suscripción' %}
+{% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
 ## Cuerpo de la solicitud
 
 {% tabs %}
-{% tab SMS %}
+{% tab SMS y RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - one of external_id or phone is required
  }
 ```
-\* Grupos de suscripción de SMS: Solo se acepta `external_id` o `phone`.
+\* Grupos de suscripción SMS y RCS: Solo se acepta `external_id` o `phone`.
 
 {% endtab %}
 {% tab Correo electrónico %}
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### SMS
+### SMS y RCS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \

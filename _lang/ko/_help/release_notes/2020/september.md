@@ -10,7 +10,7 @@ description: "이 문서에는 2020년 9월의 릴리스 노트가 포함되어 
 
 ## 퍼널 보고
 
-퍼널 리포팅은 고객이 [캠페인이나]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) [캔버스를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports) 수신한 후의 여정을 분석할 수 있는 시각적 보고서를 제공합니다.
+퍼널 리포팅은 고객이 [캠페인이나]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) [캔버스를]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) 수신한 후의 여정을 분석할 수 있는 시각적 보고서를 제공합니다.
 
 ## iOS 14 업그레이드 가이드
 
@@ -22,11 +22,11 @@ iOS 14에서는 사용자가 광고 추적에 옵트인하고 앱과 광고 네�
 
 ## 이메일 유효성 검사
 
-이 새로운 이메일 구문 유효성 검사 프로세스는 Braze의 기존 프로세스를 업그레이드한 것입니다. 이 검사는 Braze로 업데이트하거나 가져온 이메일이 올바른지 확인하기 위한 검사입니다. 자세한 내용은 [이 가이드라인과 참고 사항]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation)을 참조하세요.
+이 새로운 이메일 구문 유효성 검사 프로세스는 Braze의 기존 프로세스를 업그레이드한 것입니다. 이 검사는 Braze로 업데이트하거나 가져온 이메일이 올바른지 확인하기 위한 검사입니다. 자세한 내용은 [이 가이드라인과 참고 사항]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)을 참조하세요.
 
 ## 커런츠의 무작위 버킷 사용자 이벤트
 
-무작위 버킷 번호(예: RBN)는 워크스페이스 내에서 새 사용자가 생성될 때마다 발생합니다. 이 이벤트 기간 동안 각 신규 사용자에게는 무작위 버킷 번호가 할당되며, 이를 사용하여 균일하게 분포된 무작위 사용자 세그먼트를 생성할 수 있습니다. 이를 사용하여 다양한 임의의 버킷 번호 값을 그룹화하고 캠페인 및 캠페인 변형의 성과를 비교할 수 있습니다. 이 이벤트의 이용 가능 여부를 확인하려면 커런츠 [고객 행동 이벤트 용어집]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)을 참조하세요.
+무작위 버킷 번호(예: RBN)는 워크스페이스 내에서 새 사용자가 생성될 때마다 발생합니다. 이 이벤트 기간 동안 각 신규 사용자에게는 무작위 버킷 번호가 할당되며, 이를 사용하여 균일하게 분포된 무작위 사용자 세그먼트를 생성할 수 있습니다. 이를 사용하여 다양한 임의의 버킷 번호 값을 그룹화하고 캠페인 및 캠페인 변형의 성과를 비교할 수 있습니다. 이 이벤트의 이용 가능 여부를 확인하려면 커런츠 [고객 행동 이벤트 용어집]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)을 참조하세요.
 
 ## 캔버스 구성 요소 - 곧 출시됩니다!
 
@@ -36,4 +36,4 @@ Braze는 캔버스의 유연성과 기능을 향상시키는 데 도움이 되�
 
 ## SMS 인바운드 수신 이벤트
 
-커런츠에 새로운 메시징 인게이지먼트 이벤트가 추가되었습니다. 이 이벤트는 사용자 중 한 명이 Braze SMS 구독 그룹 중 하나에 있는 전화번호로 SMS를 보낼 때 발생합니다. 자세한 내용은 커런츠 [메시징 및 인게이지먼트 이벤트 용어집]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)에서 확인하세요.
+커런츠에 새로운 메시징 인게이지먼트 이벤트가 추가되었습니다. 이 이벤트는 사용자 중 한 명이 Braze SMS 구독 그룹 중 하나에 있는 전화번호로 SMS를 보낼 때 발생합니다. 자세한 내용은 커런츠 [메시징 및 인게이지먼트 이벤트 용어집]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)에서 확인하세요.

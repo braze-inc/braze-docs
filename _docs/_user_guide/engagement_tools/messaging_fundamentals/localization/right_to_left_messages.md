@@ -1,5 +1,5 @@
 ---
-nav_title: Right-to-Left Messages
+nav_title: Right-to-left messages
 article_title: Creating Right-to-Left Messages
 page_order: 1
 page_type: reference

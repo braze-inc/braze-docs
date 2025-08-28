@@ -29,7 +29,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='look up dashboard user email' %}
+{% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}
 
 ## Pfad-Parameter
 

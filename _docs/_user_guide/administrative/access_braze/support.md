@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Support
+nav_title: Braze support
 article_title: Support
 description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only be accessible to Braze customers."
 alias: /braze_support/

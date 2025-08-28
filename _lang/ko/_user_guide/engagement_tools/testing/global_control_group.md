@@ -21,15 +21,21 @@ search_rank: 1
 
 글로벌 제어 그룹을 사용하면 모든 사용자의 비율을 제어 그룹으로 설정할 수 있습니다. 저장하면 그룹의 사용자는 캠페인이나 캔버스를 받지 않습니다. 
 
-글로벌 컨트롤 그룹은 [API 캠페인]({{site.baseurl}}/api/api_campaigns#api-campaigns) 및 뉴스피드 카드(사용 중단됨)를 제외한 모든 채널, 캠페인 및 캔버스에 적용됩니다. 컨트롤 그룹의 사용자는 계속 API 캠페인과 뉴스피드 카드를 받게 됩니다. 이 예외는 콘텐츠 카드에는 적용되지 않으며, 콘텐츠 카드를 사용하는 경우 대조군에 속한 사용자는 콘텐츠 카드를 받지 못합니다.
+{% alert important %}
+Your Global Control Group applies to all channels, campaigns, and Canvases, except for [API campaigns]({{site.baseurl}}/api/api_campaigns). This means users in your control group will still receive API campaigns. However, this exception doesn't apply to Content Cards. If you're using an API-triggered Content Card campaign, users in your control group won't receive them.
+{% endalert %}
 
 ### 사용자를 글로벌 제어 그룹에 무작위로 할당하기
 
-Braze는 여러 범위의 무작위 [버킷 번호]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute)를 무작위로 선택하고 선택한 버킷의 사용자를 포함합니다. 현재 다른 용도로 랜덤 버킷 번호를 사용 중인 경우 [주의해야 할 사항을](#things-to-watch-for) 확인하세요. 
+Braze는 여러 범위의 무작위 [버킷 번호]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute)를 무작위로 선택하고 선택한 버킷의 사용자를 포함합니다. 현재 다른 용도로 임의의 버킷 번호를 사용하고 있다면 [주의해야 할 사항을](#things-to-watch-for) 확인하세요. 
 
-### 보고를 위한 데이터 추적
+글로벌 제어 그룹이 생성되면 임의의 버킷 번호를 가진 모든 사용자가 이 그룹에 속하게 됩니다. 또한 이 시점 이후에 가입하는 신규 사용자(글로벌 관리 그룹이 생성된 이후에 가입한 사용자)로서 이러한 무작위 버킷 번호를 가지고 있는 사용자도 글로벌 관리 그룹에 추가됩니다. 마찬가지로 많은 사용자가 삭제되면 삭제된 사용자 중 일부가 이 그룹에 속하게 되므로 글로벌 관리 그룹의 규모가 줄어들 것으로 예상할 수 있습니다. 이렇게 하면 전체 사용 기반에 비해 그룹의 크기가 일정한 비율로 유지됩니다.
 
-Braze는 대조군에 속한 사용자와 치료 샘플에 속한 사용자의 행동을 측정합니다. 치료 샘플은 동일한 무작위 버킷 번호 방법을 사용하여 생성된 대조군에 속하지 않은 사용자 중 무작위로 선택된 것입니다.
+### 보고를 위해 사용자를 치료 그룹에 무작위로 할당합니다.
+
+또한, 브라즈는 사용자가 업라이트를 보고할 수 있도록 치료 그룹을 생성합니다. 치료 그룹은 글로벌 대조군에 속하지 않은 무작위로 선택된 사용자 그룹으로, 글로벌 대조군과 동일한 무작위 버킷 번호 방법을 사용하여 생성됩니다. 
+
+치료 그룹은 글로벌 대조 그룹과 규모가 비슷하지만 정확히 같은 규모는 아닐 수 있습니다. [보고를](#reporting) 위해 Braze는 대조군에 속한 사용자와 치료 샘플에 속한 사용자의 행동을 측정합니다. 각 작업 공간에는 최대 하나의 글로벌 대조군 그룹과 하나의 치료 샘플 그룹이 있습니다. 치료 샘플 그룹은 글로벌 제어 보고를 구성하는 방법에 관계없이 동일한 사용자 그룹입니다.
 
 ### 기능 플래그에서 사용자 제외
 
@@ -41,17 +47,15 @@ Braze는 대조군에 속한 사용자와 치료 샘플에 속한 사용자의 �
 
 대시보드에서 **오디언스** > **글로벌 제어 그룹으로** 이동합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **참여** > **글로벌 메시지 설정** > **글로벌 제어 그룹 설정** 아래에 있습니다.
-{% endalert %}
-
 ### 2단계: 이 제어 그룹에 모든 사용자의 비율을 할당합니다.
 
-대조군에 대한 백분율을 입력하고 **저장을** 클릭합니다. 입력하면 Braze는 전역 제어, 치료 및 치료 샘플에 포함될 사용자 수에 대한 추정치를 표시합니다. 워크스페이스에 사용자가 많을수록 이 추정치는 더 정확해진다는 점에 유의하세요. 
+대조군에 대한 백분율을 입력하고 **저장을** 선택합니다. 입력하면 Braze는 전역 제어, 치료 및 치료 샘플에 포함될 사용자 수에 대한 추정치를 표시합니다. 워크스페이스에 사용자가 많을수록 이 추정치는 더 정확해진다는 점에 유의하세요. 
 
-글로벌 컨트롤 그룹의 사용자 수는 초기 설정 후 워크스페이스에 사용자가 추가될 때 이 오디언스 비율에 비례하여 유지되도록 자동으로 업데이트됩니다. 예를 들어, 워크스페이스의 사용자 수가 증가하면 글로벌 컨트롤 그룹의 사용자 수도 증가하여 제어군이 워크스페이스 대상의 일정한 비율을 유지하게 됩니다. 비율 가이드라인은 다음 [모범 사례 섹션](#percentage-guidelines)을 참조하세요.
+The number of users in your Global Control Group automatically updates after its initial setup to remain proportionate to this percentage when more users are added to your workspace. Additionally, users who join after the Global Control Group was set up and who have random bucket numbers will also be added to the Global Control Group. If many users are added, the size of your Global Control Group will grow to maintain a constant percentage relative to your entire use base. When the size of your Global Control Group grows, the users who were previously in the group will still remain in the group (unless you make changes to your group by disabling it and creating a new one).
 
-![오디언스 설정이 "모든 사용자의 5%를 글로벌 컨트롤 그룹에 할당"으로 설정된 글로벌 컨트롤 그룹 설정입니다.][4]
+For percentage guidelines, refer to [Testing best practices](#percentage-guidelines).
+
+![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".]({% image_buster /assets/img/control_group/control_group4.png %})
 
 ### 3단계: 제외 설정 지정
 
@@ -61,13 +65,15 @@ Braze는 대조군에 속한 사용자와 치료 샘플에 속한 사용자의 �
 모든 사용자에게 보내야 하는 트랜잭션 메시지가 있는 경우 제외 설정을 추가할 수 있습니다.
 {% endalert %}
 
-![글로벌 제어 그룹에 제외 설정을 추가하는 옵션입니다.][5]
+![The section to add or edit exclusion settings for your Global Control Group.]({% image_buster /assets/img/control_group/control_group5.png %})
 
 ### 4단계: 제어 그룹 저장
 
 이 시점에서 Braze는 무작위로 선택된 사용자 그룹을 생성하여 전체 사용자 기반에서 선택한 비율로 구성합니다. 저장하면 제외 설정에 있는 태그가 포함된 캠페인이나 캔버스를 제외하고 현재 활성화된 모든 캠페인과 향후 캔버스가 더 이상 이 그룹의 사용자에게 전송되지 않습니다.
 
-## 글로벌 제어 그룹 비활성화
+## 글로벌 제어 그룹 변경하기
+
+글로벌 제어 그룹을 비활성화하고 새 그룹을 만들어야만 변경할 수 있습니다. 예를 들어 오디언스의 10%인 글로벌 관리 그룹을 설정했는데 그 크기를 5%로 줄이려면 현재 글로벌 관리 그룹을 비활성화하고 새 글로벌 관리 그룹을 다시 활성화해야 합니다. 
 
 **글로벌 컨트롤 그룹 설정** 탭에서 언제든지 글로벌 컨트롤 그룹을 비활성화할 수 있지만, 이렇게 하면 이 그룹의 사용자가 캠페인 및 캔버스를 즉시 사용할 수 없게 됩니다.
 
@@ -75,7 +81,7 @@ Braze는 대조군에 속한 사용자와 치료 샘플에 속한 사용자의 �
 
 대조군을 비활성화한 후 새 제어 그룹을 저장할 수 있습니다. 백분율을 입력하고 저장하면 Braze에서 무작위로 선택된 새로운 사용자 그룹을 생성합니다. 이전과 동일한 비율을 입력해도 Braze는 대조군 및 치료군에 대한 새 사용자 그룹을 생성합니다.
 
-!["글로벌 메시징 설정을 변경하고 있습니다."라는 제목의 대화 상자가 다음 텍스트와 함께 표시됩니다: "글로벌 컨트롤 그룹이 비활성화되면 더 이상 신규 또는 현재 활성화된 캠페인이나 캔버스에서 제외되지 않습니다. 이 그룹의 사용자는 즉시 메시지를 받을 수 있는 자격을 얻게 됩니다. 계속 진행하시겠습니까?" 버튼을 두 번 클릭합니다. 취소하고 계속 진행합니다.][2]{: style="max-width:50%" }
+![A dialog box titled "You are making changes to Global Messaging Settings" with text warning that once your Global Control Group is disabled, it will no longer be excluded from any new or active campaigns or Canvases.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:60%" }
 
 ## 대조군 구성원 내보내기 {#export-group-members}
 
@@ -91,7 +97,7 @@ CSV 내보내기를 실행하려면 **글로벌 제어 그룹 설정** 탭으로
 
 개별 사용자 프로필의 **참여** 탭에서 **기타** 섹션으로 이동하여 글로벌 컨트롤 그룹 멤버십을 확인할 수 있습니다.
 
-!['기타' 섹션에서 사용자가 임의의 버킷 번호인 2030을 가지고 있으며 글로벌 관리 그룹에 속해 있다고 보고합니다.][1]{: style="max-width:60%;"}
+![A "Miscellaneous" section reporting that the user has a random bucket number of 6356 and is not in the Global Control Group.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
 
 ## 보고
 
@@ -169,8 +175,3 @@ Refer to [Global Control Group Reporting]({{site.baseurl}}/user_guide/analytics/
 
 가장 관심 있는 지표에 대한 기준 동작을 고려하세요. 연간 단위로만 갱신되는 구독 플랜의 구매 요금에 관심이 있으신가요? 아니면 측정하려는 이벤트에 대한 고객의 주간 습관이 있나요? 사용자가 메시징으로 인해 잠재적으로 행동을 변경하는 데 걸리는 시간을 생각해 보세요. 실험을 실행할 시간을 결정한 후에는 실험을 일찍 종료하거나 최종 결과를 기록하지 않으면 결과가 편향될 수 있으므로 주의하세요.
 
-[1]: {% image_buster /assets/img/control_group/control_group1.png %}
-[2]: {% image_buster /assets/img/control_group/control_group2.png %}
-[4]: {% image_buster /assets/img/control_group/control_group4.png %}
-[5]: {% image_buster /assets/img/control_group/control_group5.png %}
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

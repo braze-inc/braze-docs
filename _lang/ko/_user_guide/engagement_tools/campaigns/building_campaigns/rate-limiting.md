@@ -19,6 +19,8 @@ Braze를 사용하면 캠페인을 사용량 제한하고 플랫폼에서 나가
 1. 사용자 중심의 속도 제한 사용자에게 최고의 경험을 제공하는 데 중점을 둡니다.
 2. 전달 속도 비율 제한: 서버의 대역폭을 고려합니다.
 
+Braze는 메시지 전송을 분당 고르게 분배하려고 하지만 이를 보장할 수는 없습니다. 예를 들어, 분당 5,000개의 메시지 속도 제한이 있는 캠페인이 있는 경우, 5,000개의 요청을 분당 고르게 분배하려고 시도합니다(초당 약 84개의 메시지), 그러나 초당 속도에 약간의 변동이 있을 수 있습니다.
+
 ### 사용자 중심 사용량 제한조치
 
 세그먼트를 더 많이 만들면 해당 세그먼트의 멤버십이 겹치는 경우가 생길 수 있습니다. 이러한 세그먼트에 캠페인을 발송하는 경우 사용자에게 메시지를 너무 자주 보내지 않도록 주의해야 합니다. 짧은 시간 내에 너무 많은 메시지를 받으면 사용자는 지나치게 많은 메시지를 받는다고 느끼고 푸시 알림을 끄거나 앱을 삭제할 것입니다.
@@ -32,7 +34,6 @@ Braze는 사용자가 메시지를 받는 사용량를 제한할 수 있도록 �
 - 마지막으로 수신한 푸시 캠페인
 - 마지막으로 수신한 이메일 캠페인
 - 마지막으로 수신한 SMS
-- 마지막으로 본 뉴스피드
 
 #### 필터 구현하기
 
@@ -40,15 +41,15 @@ Braze는 사용자가 메시지를 받는 사용량를 제한할 수 있도록 �
 
 최근에 알림을 받는 다른 타겟 세그먼트가 더 많은 경우, 이 세그먼트를 대상으로 하는 일반 캠페인에 사용자가 타겟팅되지 않도록 할 수 있습니다. 이 세그먼트에 "마지막으로 받은 푸시 캠페인" 필터를 추가하면 사용자가 지난 24시간 동안 다른 알림을 받은 경우 다음 24시간 동안 이 세그먼트에서 빠져나가게 됩니다. 24시간이 지난 후에도 세그먼트의 다른 기준을 충족하고 더 이상 알림을 받지 못하면 해당 세그먼트로 다시 미끄러집니다.
 
-세그먼트 세부정보 섹션에서 "마지막으로 수신된 모든 메시지" 세그먼트 필터가 강조 표시됩니다.
+![Segment Details section with the "Last Received Any Message" segment filter highlighted.]({% image_buster /assets/img_archive/rate_limit_daily.png %})
 
 캠페인이 타겟팅하는 모든 세그먼트에 이 필터를 적용하면 24시간마다 사용자에게 최대 한 번의 푸시 메시지가 전송됩니다. 그러면 가장 중요한 메시지가 덜 중요한 메시지보다 먼저 전달되도록 하여 메시징의 우선순위를 지정할 수 있습니다.
 
 #### 최대 사용자 수 제한 설정
 
-캠페인 구성의 대상 사용자 단계에서, 메시지를 받을 총 사용자 수를 제한할 수도 있습니다. 이것은 귀하의 캠페인 필터와 독립적인 확인 역할을 하여, 과도한 스팸에 대한 걱정 없이 사용자를 자유롭게 세그먼트할 수 있게 해줍니다.
+In the **Target Audiences** step of your campaign composer, you can also limit the total number of users that will receive your message. 이것은 귀하의 캠페인 필터와 독립적인 확인 역할을 하여, 과도한 스팸에 대한 걱정 없이 사용자를 자유롭게 세그먼트할 수 있게 해줍니다.
 
-오디언스 요약, 캠페인을 받는 사람 수를 제한하기 위한 선택된 체크박스.
+![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.]({% image_buster /assets/img_archive/total_limit.png %})
 
 최대 사용자 제한을 선택하면 채널별로 또는 모든 메시지 유형에 대해 전체적으로 사용자가 알림을 받는 속도를 제한할 수 있습니다.
 
@@ -74,22 +75,22 @@ A/B 테스트에서 사용량 제한을 사용하는 경우, 사용량 제한은
 
 ### 전달 속도 사용량 제한조치
 
-대규모 캠페인으로 인해 사용자 활동이 급증하고 서버에 과부하가 걸릴 것으로 예상되는 경우, 메시지 전송에 분당 전송률 제한을 지정할 수 있습니다. 즉, Braze는 1분 이내에 전송률 제한 설정보다 더 많은 메시지를 보내지 않습니다.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages, which means Braze will send no more than your rate-limited setting within a minute.
 
-캠페인 생성 중 사용자 타겟팅 시, 타겟 오디언스(캠페인용) 또는 전송 설정(캔버스)으로 이동하여 다양한 증분(최소 10에서 최대 500,000 메시지/분까지)으로 속도 제한을 선택할 수 있습니다. 
+캠페인 생성 중 사용자 타겟팅 시, 타겟 오디언스(캠페인용) 또는 전송 설정(캔버스)으로 이동하여 다양한 증분(최소 10에서 최대 500,000 메시지/분까지)으로 속도 제한을 선택할 수 있습니다.
 
 사용량 제한이 없는 캠페인은 이러한 전달 한도를 초과할 수 있습니다. 그러나 메시지가 낮은 비율 제한으로 인해 72시간 이상 지연되면 중단된다는 점에 유의하십시오. 비율 제한이 너무 낮으면 캠페인의 제작자는 대시보드와 이메일로 알림을 받게 됩니다.
 
-오디언스 요약, 캠페인이 종료되는 속도를 제한하기 위해 선택된 체크박스와 속도가 분당 500,000인 경우.
+![Audience Summary with a selected checkbox for limiting the rate at which the campaign will end, and rate being 500,000 per minute.]({% image_buster /assets/img_archive/per_minute_rate_limit.png %})
 
-또 다른 예로, 만약 75,000개의 메시지를 10,000개/분의 전송 한도 내에서 보내려고 한다면, 전달은 8분에 걸쳐 분산될 것입니다. 귀하의 캠페인은 처음 7분 동안 각각 10,000개의 메시지 이상을 전달하지 않으며, 마지막 1분 동안 5,000개를 전달합니다. 
+또 다른 예로, 만약 75,000개의 메시지를 10,000개/분의 전송 한도 내에서 보내려고 한다면, 전달은 8분에 걸쳐 분산될 것입니다. 귀하의 캠페인은 처음 7분 동안 각각 10,000개의 메시지 이상을 전달하지 않으며, 마지막 1분 동안 5,000개를 전달합니다.
 
 각 분마다 비율 제한이 있는 메시지가 고르게 전송되지 않을 수 있습니다. 10,000개의 메시지 전송 속도 제한의 예를 사용하면, 이는 Braze가 분당 10,000개 이상의 메시지가 전송되지 않도록 보장한다는 의미입니다. 이것은 10,000개의 메시지 중 더 높은 비율이 마지막 30초에 비해 처음 30초 이내에 전송된다는 것을 의미할 수 있습니다. 
 
 Also, note that the rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
 
 {% alert important %}
-이러한 형태의 속도 제한으로 인해 시간에 민감한 메시지가 지연되지 않도록 주의하세요. 세그먼트에 3천만
+Be wary of delaying time-sensitive messages with this form of rate limiting in relation to the total number of users in a segment. For example, if the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
 {% endalert %}
 
 #### 단일 채널 캠페인
@@ -115,9 +116,9 @@ Also, note that the rate limit is applied at the start of the message send attem
 
 #### 속도 제한 및 커넥티드 콘텐츠 재시도
 
-[연결된 콘텐츠 재시도 기능이 켜지면, Braze는 각 재전송에 대해 설정한 비율 제한을 준수하면서 호출 실패를 재시도합니다. 75,000개의 메시지가 10,000개의 분당 전송 제한이 있는 시나리오를 고려해 보겠습니다. 처음 1분 동안은 통화가 실패하거나 느리고 4,000개의 메시지만 전송됩니다.
+When the [Connected Content retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. 10,000개의 메시지를 분당 전송하는 비율 제한으로 75,000개의 메시지를 전송하는 시나리오를 고려해 보겠습니다. 첫 번째 분에 호출이 실패하거나 느려서 4,000개의 메시지만 전송된다고 상상해 보십시오.
 
-지연을 보완하고 두 번째 분에 나머지 4,000 메시지를 보내거나 이미 전송하도록 설정된 10,000에 추가하는 대신, Braze는 실패한 6,000 메시지를 "대기줄의 뒤"로 이동하고, 필요할 경우 메시지를 보내는 데 걸리는 총 분에 추가 분을 더할 것입니다.
+지연을 보상하려고 시도하는 대신, Braze는 나머지 6,000개의 메시지를 "대기열의 뒤쪽"으로 이동시키고, 필요하다면 메시지를 전송하는 데 걸리는 총 분에 1분을 추가합니다.
 
 | 분 | 실패 없음 | 1분에 6,000번의 실패 |
 |--------|------------|---------------------------|
@@ -132,6 +133,8 @@ Also, note that the rate limit is applied at the start of the message send attem
 | 9      | 0          | 6,000                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+연결된 콘텐츠 요청은 독립적으로 비율 제한이 없으며 웹훅 비율 제한을 따릅니다. 즉, 웹훅당 고유한 엔드포인트에 대한 연결된 콘텐츠 호출이 하나 있을 경우, 분당 5,000개의 웹훅과 5,000개의 연결된 콘텐츠 호출이 예상됩니다. 캐싱이 이 영향을 미쳐 연결된 콘텐츠 호출 수를 줄일 수 있습니다. 또한, 재시도가 연결된 콘텐츠 호출을 증가시킬 수 있으므로, 연결된 콘텐츠 엔드포인트가 여기에서 약간의 변동을 처리할 수 있는지 확인하는 것이 좋습니다.
+
 ## 최대 게재빈도 설정에 대하여
 
 사용자 기반이 계속 증가하고 메시징이 라이프사이클, 트리거, 거래 및 전환 캠페인을 포함하도록 확장됨에 따라 알림이 "스팸성"으로 보이거나 방해가 되지 않도록 하는 것이 중요합니다. 빈도 제한을 통해 사용자 경험을 보다 효과적으로 제어할 수 있으므로 오디언스에게 부담을 주지 않으면서도 원하는 캠페인을 만들 수 있습니다.
@@ -140,21 +143,21 @@ Also, note that the rate limit is applied at the start of the message send attem
 
 최대 게재빈도 제한은 캠페인 또는 캔버스 구성 요소 전송 수준에서 적용되며 **설정** > **최대 게재빈도 설정**에서 각 워크스페이스에 대해 설정할 수 있습니다.
 
-{% alert note %}
-이전 탐색을 사용하고 있다면, 이 페이지는 글로벌 메시지 설정이라고 하며 참여 아래에 위치해 있습니다.
-{% endalert %}
-
 기본적으로 새 캠페인이 생성되면 최대 게재빈도 설정이 켜져 있습니다. 여기에서 다음을 선택할 수 있습니다:
 
 - 푸시, 이메일, SMS, 웹훅, WhatsApp 또는 이 다섯 가지 중 어떤 메시징 채널을 캡으로 설정할 것인지 선택하세요.
 - 각 사용자가 특정 기간 내에 채널에서 보내는 캠페인 또는 캔버스 구성 요소를 수신해야 하는 횟수입니다.
 - 각 사용자가 특정 기간 내에 [태그](#frequency-capping-by-tag)로 전송된 캠페인 또는 캔버스 구성 요소를 수신해야 하는 횟수입니다.
 
-이 기간은 분, 일, 주(7일) 또는 월 단위로 측정할 수 있으며 최대 기간은 30일입니다.
+This time frame can be measured in minutes, days, or weeks (seven days), with a maximum duration of 30 days.
 
 주파수 제한의 각 라인은 `AND` 연산자를 사용하여 연결되며, 워크스페이스당 최대 10개의 규칙을 추가할 수 있습니다. 또한 동일한 메시지 유형에 대해 여러 개의 대문자를 포함할 수 있습니다. 예를 들어, 사용자는 하루에 한 번, 일주일에 세 번 이하로 푸시 횟수를 제한할 수 있습니다.
 
-최대 게재빈도 설정 섹션과 규칙이 적용되는 캠페인 및 캔버스 목록.
+![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %})
+
+#### 사용자가 캔버스 단계에서 최대 게재빈도 설정을 적용받을 때의 동작
+
+캔버스 사용자가 전역 최대 게재빈도 설정으로 인해 최대 게재빈도 설정을 적용받는 경우, 사용자는 즉시 다음 캔버스 단계로 진행합니다. 사용자는 최대 게재빈도 설정으로 인해 캔버스를 종료하지 않습니다.
 
 ### 전달 규칙
 
@@ -162,7 +165,7 @@ Also, note that the rate limit is applied at the start of the message send attem
 
 특정 캠페인이 최대 게재빈도 설정 규칙을 무시하도록 하려면 해당 캠페인의 전송을 예약할 때 Braze 대시보드에서 **최대 게재빈도 설정**을 **끄기**로 전환하여 이를 설정할 수 있습니다. 
 
-그 후에도 이 캠페인을 최대게재 빈도에 포함할지 묻는 메시지가 표시됩니다. 최대 게재빈도 설정에 포함되는 메시지는 인텔리전트 채널 필터의 계산에 포함됩니다. 트랜잭션인 [API 캠페인][15]을 보낼 때 [API 요청][16] 내에서 `override_messaging_limits`을 `true`로 설정하여 캠페인이 최대 게재빈도 설정 규칙을 무시하도록 지정할 수 있습니다.
+그 후에도 이 캠페인을 최대게재 빈도에 포함할지 묻는 메시지가 표시됩니다. 최대 게재빈도 설정에 포함되는 메시지는 인텔리전트 채널 필터의 계산에 포함됩니다. When sending [API campaigns]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules [within the API request]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns) by setting `override_messaging_limits` to `true`.
 
 기본적으로 최대 게재빈도 설정을 준수하지 않는 새 캠페인과 캔버스도 최대 게재빈도 설정에 포함되지 않습니다. 이는 각 캠페인과 캔버스별로 구성할 수 있습니다.
 
@@ -170,7 +173,7 @@ Also, note that the rate limit is applied at the start of the message send attem
 이 동작은 캠페인 또는 캔버스에 대한 최대 게재빈도 설정을 해제할 때 기본 동작을 변경합니다. 변경 사항은 이전 버전과 호환되며 현재 게시 중인 메시지에는 영향을 미치지 않습니다.
 {% endalert %}
 
-전달 제어 섹션에서 최대 게재빈도 설정이 켜져 있습니다.
+![Delivery Controls section with Frequency Capping turned on.]({% image_buster /assets/img_archive/frequencycappingupdate.png %})
 
 다중채널 캠페인 내의 여러 채널은 개별적으로 최대 게재빈도 상한을 계산합니다. 예를 들어 푸시와 이메일이 모두 포함된 멀티채널 캠페인을 만들고 두 채널 모두에 대해 빈도 제한을 설정한 경우 푸시는 하나의 푸시 캠페인으로 계산되고 이메일 메시지는 하나의 이메일 메시지 캠페인으로 계산됩니다. 이 캠페인은 또한 하나의 "모든 유형의 캠페인"으로 계산됩니다. 하루에 하나의 푸시 및 하나의 이메일 캠페인으로 제한되어 있는 사용자가 이 멀티채널 캠페인을 수신하는 경우, 해당 사용자는 남은 하루 동안 푸시 또는 이메일 캠페인에 참여할 수 없습니다(캠페인이 빈도 제한 규칙을 무시하지 않는 한).
 
@@ -220,7 +223,7 @@ Also, note that the rate limit is applied at the start of the message send attem
 1. 모든 캠페인 및 캔버스 단계에서 일주일에 푸시 알림 캠페인 또는 캔버스 구성 요소를 3개 이상 사용할 수 없습니다. <br>**AND**
 2. `promotional` 태그가 포함된 푸시 알림 캠페인 또는 캔버스 구성 요소는 일주일에 두 개 이하로만 사용할 수 있습니다.
 
-주간 최대 게재빈도 설정 섹션으로, 사용자가 매주 받을 수 있는 푸시 알림 캠페인/캔버스의 수를 제한하는 두 가지 규칙이 있습니다.
+![Frequency Capping section with two rules limiting how many push notification campaigns/Canvases can be sent to a user every 1 week.]({% image_buster /assets/img/tag_rule_fnfn.png %} "rules")
 
 결과적으로 사용자는 모든 캠페인 및 캔버스 단계에서 일주일에 세 번 이하의 캠페인 전송을 받게 되며, `promotional` 태그가 포함된 푸시 알림 캠페인 또는 캔버스 구성 요소는 두 개 이하로 받게 됩니다.
 
@@ -235,7 +238,7 @@ Also, note that the rate limit is applied at the start of the message send attem
 1. 모든 캠페인 및 캔버스 구성 요소에서 일주일에 한 개 이상의 푸시 알림 캠페인 또는 캔버스 구성 요소를 사용할 수 없습니다. <br>**AND**
 2. `promotional` 태그가 포함된 푸시 알림 캠페인 또는 캔버스 구성 요소는 주당 3개 이하로 제한됩니다.
 
-푸시 알림 캠페인/캔버스 단계가 사용자에게 매주 얼마나 전송되는지를 제한하는 상충되는 규칙이 있는 최대 게재빈도 설정 섹션.
+![Frequency Capping section with conflicting rules to limit how many push notification campaigns/Canvas steps are sent to a user every 1 week.]({% image_buster /assets/img/global_rules.png %} "global rules")
 
 이 예에서는 사용자가 모든 캠페인 및 캔버스 구성 요소에서 푸시 알림 캠페인 또는 캔버스 구성 요소를 두 개 이상 받지 않도록 지정했기 때문에 사용자는 지정된 주에 "프로모션" 태그가 있는 푸시 알림 캠페인 또는 캔버스 구성 요소를 두 개 이상 받지 않습니다. 즉, 가장 제한적으로 적용되는 최대 게재빈도 규칙이 특정 사용자에게 적용되는 규칙입니다.
 
@@ -280,14 +283,3 @@ Also, note that the rate limit is applied at the start of the message send attem
 
 이 규칙은 사용자가 일주일에 100개 이상의 이메일을 받지 않도록 보장합니다. 사용자는 빈도 제한이 설정된 캠페인 또는 Canvas 구성 요소에서 일주일에 최대 3개의 이메일을 받게 되기 때문입니다.
 
-[11]: {% image_buster /assets/img/global_rules.png %} "글로벌 규칙"
-[12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "규칙"
-[13]: {% image_buster /assets/img/standard_rules_fnfn.png %} "규칙 표준"
-[1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
-[2]: {% image_buster /assets/img_archive/total_limit.png %}
-[3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
-[14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
-[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
-[18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/

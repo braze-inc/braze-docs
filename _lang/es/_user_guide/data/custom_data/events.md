@@ -158,4 +158,3 @@ In this example, "Purchase" is the name of the custom event, and the properties 
 -->
 
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

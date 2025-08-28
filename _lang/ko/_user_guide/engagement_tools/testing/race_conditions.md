@@ -5,7 +5,7 @@ alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "이 문서에서는 경합 조건이 메시징 캠페인에 영향을 미치지 않도록 하는 모범 사례를 다룹니다."
-
+toc_headers: h2
 ---
 
 # 경합 조건
@@ -39,9 +39,11 @@ Braze에서 가장 일반적인 경합 조건 중 하나는 새로 생성된 사
 
 #### Introduce delays
 
-After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message. 
+After a new user is created, you can add a delay before sending any targeted campaigns or Canvases. This timing delay allows the user profile to be created and for any relevant attributes to be updated that may determine their eligibility for receiving the message.
 
 For example, after a user registers for your app, you can send a promotional offer after 24 hours. Or, if you're creating a user or logging a custom attribute, you can add a one-minute delay before proceeding in your process to avoid this race condition.
+
+새 사용자가 캔버스에 입장하도록 트리거하는 특정 사용자 지정 이벤트에 대해 [Braze SDK에서]({{site.baseurl}}/developer_guide/sdk_integration) 이 지연 시간을 추가할 수도 있습니다. 
 
 ## Scenario 2: 여러 API 엔드포인트 사용
 
@@ -70,7 +72,7 @@ Instead of using multiple endpoints, you can include the [user attributes]({{sit
 
 When these objects are included with the trigger, the attributes will be processed first, before the message is triggered, eliminating potential race conditions. Note that trigger properties don't update the user profile, but are used in the context of the message only.
 
-#### Use the POST: Track users (bulk) endpoint
+#### Use the POST: Track users (sync) endpoint
 
 Use the [`/users/track/sync/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
 
@@ -116,7 +118,3 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

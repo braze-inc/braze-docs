@@ -1,5 +1,5 @@
 ---
-nav_title: "Connected Audience Filter & Object"
+nav_title: "Connected audience filter & object"
 article_title: API Connected Audience Object
 page_order: 3
 page_type: reference
@@ -160,4 +160,4 @@ This filter allows you to segment based on when was the last time the user used 
 
 ### Considerations
 
-Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the `segment_id` parameter for the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you'll need to add the segment to the API-triggered campaign or Canvas in the Braze dashboard first.

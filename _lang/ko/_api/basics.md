@@ -34,7 +34,7 @@ alias: /api/api_key/
 
 ### 엔드포인트
 
-Braze는 대시보드 및 REST 엔드포인트에 대한 다양한 인스턴스를 관리합니다. 계정이 프로비저닝되면 다음 URL 중 하나에 로그인하게 됩니다. 프로비저닝된 인스턴스에 따라 올바른 REST 엔드포인트를 사용하세요. 확실하지 않은 경우 [지원 티켓]] [지원] ]을 열거나 다음 표를 사용하여 사용 중인 대시보드의 URL을 올바른 REST 엔드포인트에 일치시키세요.
+Braze는 대시보드 및 REST 엔드포인트에 대한 다양한 인스턴스를 관리합니다. 계정이 프로비저닝되면 다음 URL 중 하나에 로그인하게 됩니다. 프로비저닝된 인스턴스에 따라 올바른 REST 엔드포인트를 사용하세요. 확실하지 않은 경우, [지원 티켓]({{site.baseurl}}/braze_support/)을 열거나 사용 중인 대시보드의 URL을 올바른 REST 엔드포인트에 맞추기 위해 다음 표를 사용하세요.
 
 {% alert important %}
 API 호출에 엔드포인트를 사용할 때는 REST 엔드포인트를 사용하세요.
@@ -53,7 +53,7 @@ SDK 통합을 위해 [SDK 엔드포인트]({{site.baseurl}}/user_guide/administr
 - **외부 사용자 ID**: `external_id`는 데이터를 제출하는 사용자에 대한 고유 식별자로 사용됩니다. 이 식별자는 동일한 사용자를 위해 여러 프로필을 생성하지 않도록 Braze SDK에 설정한 것과 같아야 합니다.
 - **브레이즈 사용자 ID**: `braze_id`는 브레이즈에 의해 설정된 고유 사용자 식별자로 사용됩니다. 이 식별자는 외부 ID 외에도 REST API를 통해 사용자를 삭제하는 데 사용할 수 있습니다.
 
-자세한 내용은 플랫폼에 따라 [iOS][9], [Android][10] 및 [웹에][13] 대한 다음 도움말 문서를 참조하세요.
+자세한 내용은 플랫폼에 따라 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) 및 [웹에]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) 대한 다음 도움말 문서를 참조하세요.
 
 ## REST API 키에 대하여
 
@@ -63,7 +63,7 @@ REST 애플리케이션 프로그래밍 인터페이스 키(REST API 키)는 API
 
 우리는 REST API 키와 작업 공간 API 키를 모두 `api_key`이라고 부릅니다. 각 `api_key`는 요청 헤더로 포함되며, REST API를 사용할 수 있도록 하는 인증 키 역할을 합니다. 이 REST API는 사용자를 추적하고, 메시지를 보내고, 사용자 데이터를 내보내는 데 사용됩니다. 새로운 REST API 키를 생성할 때, 특정 엔드포인트에 대한 액세스를 부여해야 합니다. API 키에 특정 권한을 할당하면 API 키가 인증할 수 있는 호출을 정확히 제한할 수 있습니다.
 
-![REST API 키 패널은 API 키 탭에 있습니다.][27]
+![API 키 탭의 REST API 키 패널입니다.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 REST API 키 외에도 특정 앱, 템플릿, 캔버스, 캠페인, 콘텐츠 카드 및 API의 세그먼트를 참조하는 데 사용할 수 있는 식별자 키라는 유형의 키도 존재합니다. 자세한 내용은 [API 식별자 유형]({{site.baseurl}}/api/identifier_types/)을 참조하세요.
@@ -195,18 +195,6 @@ API 키 권한은 사용자가 특정 API 호출에 대한 액세스를 제한�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab 뉴스 피드 %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| 권한 | 엔드포인트 | 설명 |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | 뉴스피드 카드의 목록을 조회합니다. |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | 일정 시간 범위에 대한 뉴스피드 분석을 조회합니다. |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | 특정 뉴스피드의 세부 정보를 조회합니다. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
 {% tab 세션 %}
 
 | 권한 | 엔드포인트 | 설명 |
@@ -306,6 +294,17 @@ API 키 권한은 사용자가 특정 API 호출에 대한 액세스를 제한�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
+{% tab SDK 인증 %}
+
+| 권한 | 엔드포인트 | 설명 |
+|---|---|---|
+| `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | 앱을 위한 새로운 SDK 인증 키를 생성하세요. |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | 앱을 위한 SDK 인증 키를 기본 키로 표시하세요. |
+| `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | 앱을 위한 SDK 인증 키를 삭제하세요. |
+| `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | 앱을 위한 모든 SDK 인증 키를 가져오세요. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
 {% endtabs %}
 
 ### REST API 키 관리
@@ -325,11 +324,11 @@ API 키 권한은 사용자가 특정 API 호출에 대한 액세스를 제한�
 
 API 키의 세부 정보를 보려면 키 위에 마우스를 올리고 <i class="fa-solid fa-eye" alt="View"></i> **보기**를 선택하십시오. 이에는 이 키가 가진 모든 권한, 화이트리스트에 등록된 IP(있는 경우), 그리고 이 키가 Braze IP 화이트리스트에 등록되었는지 여부가 포함됩니다.
 
-![Braze 대시보드의 API 키 권한 목록입니다.][30]
+![Braze 대시보드의 API 키 권한 목록입니다.]({% image_buster /assets/img_archive/view-api-key.png %})
 
 사용자를 [삭제할 때]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), 사용자가 생성한 관련 API 키는 삭제되지 않습니다. 키를 삭제하려면 키 위에 마우스를 올리고 <i class="fa-solid fa-trash-can" alt="Delete"></i> **삭제**를 선택하세요.
 
-![ '마지막으로 본'이라는 이름의 API 키가 휴지통 아이콘과 함께 강조 표시되어 있으며, '삭제'를 보여줍니다.][29]{: style="max-width:30%;"}
+![휴지통 아이콘이 강조 표시된 '마지막으로 본'이라는 이름의 API 키가 '삭제'를 보여줍니다.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### REST API 키 보안
 
@@ -343,13 +342,13 @@ REST API 키는 잠재적으로 민감한 REST API 엔드포인트에 대한 액
 REST API 키는 잠재적으로 민감한 REST API 엔드포인트에 대한 액세스를 허용하므로, 안전하게 저장하고 사용해야 합니다. 예를 들어, 이 키를 사용하여 웹사이트에서 AJAX 호출을 하거나 다른 공개적인 방식으로 노출하지 마십시오.
 {% endalert %}
 
-실수로 키가 노출된 경우 개발자 콘솔에서 키를 삭제할 수 있습니다. 이 프로세스에 대한 도움이 필요하면 [지원 티켓]] [지원]]을 열어주세요.
+실수로 키가 노출된 경우 개발자 콘솔에서 키를 삭제할 수 있습니다. 이 프로세스에 대한 도움을 받으려면 [지원 티켓]({{site.baseurl}}/braze_support/)을 열어주세요.
 
 ### API IP 허용 목록
 
 보안을 강화하기 위해 특정 REST API 키에 대해 REST API 요청을 보내도록 허용할 IP 주소와 서브넷 목록을 지정할 수 있습니다. 이를 허용 목록 또는 화이트리스트라고 합니다. 특정 IP 주소 또는 서브넷을 허용하려면 새 REST API 키를 생성할 때 **화이트리스트 IP** 섹션에 추가하세요.
 
-![API 키를 생성할 때 IP를 허용 목록에 추가하는 옵션입니다.][26]
+![API 키를 생성할 때 IP를 허용 목록에 추가하는 옵션입니다.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 지정하지 않으면 모든 IP 주소에서 요청을 보낼 수 있습니다.
 
@@ -369,18 +368,3 @@ Braze-Braze 웹훅을 생성하고 허용 목록을 사용하려면? [화이트�
 이 클라이언트 라이브러리는 현재 베타 버전입니다. 이 라이브러리를 개선하는 데 도움을 주고 싶으신가요? [smb-product@braze.com](mailto:smb-product@braze.com) 으로 피드백을 보내주세요.
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[support]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

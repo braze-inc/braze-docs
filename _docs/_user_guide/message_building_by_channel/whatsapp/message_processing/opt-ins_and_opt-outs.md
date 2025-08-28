@@ -1,5 +1,5 @@
 ---
-nav_title: Opt-Ins & Opt-Outs
+nav_title: Opt-ins & opt-outs
 article_title: WhatsApp Opt-Ins and Opt-Outs
 description: "This reference article covers different WhatsApp opt-in and opt-out methods."
 page_type: partner
@@ -227,7 +227,7 @@ In this table, `STOP` is used as an example trigger word to demonstrate how the 
 | Modifier | Trigger word | Action |
 | --- | --- | --- |
 | `Is` | `STOP` | Catches any whole word use of "stop" regardless of case. For example, this catches "stop" but not "please stop". |
-| `Matches regex` | `STOP` | Catches any use of "STOP" in that case. For example, this catches "stop" but not "PLEASE STOP". |
+| `Matches regex` | `STOP` | Catches any use of "STOP" in that exact case. For example, this catches "STOP" and "PLEASE STOP" but not "stop". |
 | `Matches regex` | `(?i)STOP(?-i)` | Catches any use of "STOP" in any case. For example, this catches "stop", "please stop", and "never stop sending me messages". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

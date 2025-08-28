@@ -1,5 +1,5 @@
 ---
-nav_title: Promotion Codes
+nav_title: Promotion codes
 article_title: Promotion Codes
 page_order: 5
 toc_headers: h2
@@ -108,9 +108,12 @@ Using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/l
 
 #### Sending promotion codes to users
 
-When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes.
+When a code snippet is used in a campaign or Canvas with multichannel messages, each user always receives a unique code. If a Canvas has multiple different steps that reference a promotion code, a user will always receive a new code for each step that they enter. If you want to assign one promotion code in a Canvas and reference the assigned value in multiple steps, we recommend doing the following:
 
-If a user is eligible to receive a code through more than one channel, they will receive the same code through each channel. For example, if a user receives two messages through two channels, they'll receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
+- Assign the promotion code as a custom attribute as a first step (User Update step)
+- Use Liquid in the subsequent steps to refer to the value of that custom attribute (not the promotion code)
+
+If a user is eligible to receive a code through more than one channel, they'll receive the same code for each channel. For example, if a user receives two messages through email and push notifications, they'll receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels.
 
 {% alert important %}
 If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promotion codes, the message will not be sent.
@@ -199,7 +202,12 @@ If the message contains Liquid logic that conditionally inserts a promotion code
 
 ### How do I save a promotion code to a user's profile so it can be used in subsequent messages?
 
-To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done by attaching a Braze-to-Braze webhook to the same campaign or Canvas Message step.
+To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
 
-To identify which promotion code was sent to each user, you can either use the [`message_extras` Liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras#message-extras-liquid-tag) in the message body, or update the custom attribute with the promotion code **before** sending it.
+First, select the following for each field in the User Update step:
 
+- **Attribute Name:** Promo Code
+- **Action:** Update
+- **Key Value:** The promotion code's Liquid code snippet, such as {% raw %}`{% promotion('spring25') %}`{% endraw %}
+
+Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) to a message. The discount code will be templated in.

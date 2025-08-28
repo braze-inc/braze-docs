@@ -11,7 +11,7 @@ tool:
 
 # Événements de conversion
 
-> Un événement de conversion est un type d'indicateur de réussite qui permet de savoir si un destinataire de votre message effectue une action à forte valeur ajoutée dans un laps de temps défini après avoir reçu votre envoi. Utilisez ces événements pour vous assurer que vous recueillez des informations pertinentes et utiles que vous pourrez utiliser ultérieurement pour obtenir des informations pour votre campagne ou votre Canvas.
+> Un événement de conversion est un type d'indicateur de réussite qui permet de savoir si un destinataire de votre message effectue une action à forte valeur ajoutée dans un laps de temps déterminé après avoir reçu votre envoi. Utilisez ces événements pour vous assurer que vous recueillez des informations pertinentes et utiles que vous pourrez ensuite utiliser pour obtenir des informations pour votre campagne ou votre Canvas.
 
 ## Fonctionnement
 

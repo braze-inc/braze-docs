@@ -32,7 +32,7 @@ Pour créer votre message de droite à gauche dans Braze :
 1. Rédigez votre message standard dans l'éditeur de Braze.
 2. Copiez le texte du message depuis Braze, puis utilisez un outil de communication individualisée pour le convertir en un message de droite à gauche.
 3. Collez votre message converti dans Braze.
-4. Vérifiez la mise en forme et l'alignement du texte. Si vous créez un message e-mail glisser-déposer ou HTML, vous pouvez le faire dans le compositeur. Sinon, vous devrez utiliser un autre traitement de texte.<br><br>![Menu de l'éditeur par glisser-déposer de l'e-mail avec bouton pour basculer l'alignement du texte de droite à gauche et de gauche à droite.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
+4. Vérifiez la mise en forme et l'alignement du texte. Si vous créez un message e-mail glisser-déposer ou HTML, vous pouvez le faire dans le compositeur. Sinon, vous devrez utiliser un autre traitement de texte.<br><br>![Menu de l'éditeur par glisser-déposer de l'e-mail avec bouton permettant de basculer l'alignement du texte de droite à gauche ou de gauche à droite.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
 
 ## Considérations
  

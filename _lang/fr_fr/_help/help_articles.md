@@ -12,7 +12,7 @@ description: "Cette page d’accueil contient des articles qui peuvent vous aide
 guide_featured_title: "Sujets"
 guide_featured_list:
   - name: Compte
-    link: /docs/help/help_articles/account/
+    link: /docs/user_guide/administrative/access_braze/troubleshooting/
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
@@ -32,9 +32,6 @@ guide_featured_list:
   - name: E-mail
     link: /docs/help/help_articles/email/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: in-app Messages
-    link: /docs/help/help_articles/in-app_messages/
-    image: /assets/img/braze_icons/phone-02.svg
   - name: Notification push
     link: /docs/help/help_articles/push/
     image: /assets/img/braze_icons/message-square-02.svg

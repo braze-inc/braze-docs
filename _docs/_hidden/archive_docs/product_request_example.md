@@ -1,5 +1,5 @@
 ---
-nav_title: Product Request Example
+nav_title: Product request example
 hidden: true
 alias: /product_request/
 
