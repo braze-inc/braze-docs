@@ -14,11 +14,16 @@ permissions:
 # If needed, add additional jobs for blocking merges here.
 jobs:
   block-do-not-merge-label:
-    # This job will only run if the PR includes the 'status: do not merge' label.
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'do not merge') }}
     name: "Check for 'do not merge' label"
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "'do not merge' label found. Merging is blocked until removed."
-          exit 1
+      - name: "Check labels"
+        run: |
+          if echo "${{ toJson(github.event.pull_request.labels.*.name) }}" | grep -q '"do not merge"'; then
+            echo "'do not merge' label found. Merging is blocked until removed."
+            exit 1
+          else
+            echo "No 'do not merge' label found. Check passed."
+            exit 0
+          fi
+          
