@@ -21,7 +21,7 @@ platform:
 
 These are the minimum SDK versions needed to create Banner placements:
 
-{% sdk_min_versions web:5.8.1 swift:11.3.0 android:33.1.0 reactnative:14.0.0 flutter:13.0.0 %}
+{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
