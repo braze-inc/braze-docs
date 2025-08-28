@@ -74,7 +74,7 @@ To use delayed initialization, the minimum Braze SDK version is required:
 {% sdk_min_versions android:38.0.0 %}
 
 {% alert note %}
-While delayed initialization is enabled, all network connections will be canceled, and the Braze SDK will not pass data to the Braze servers.
+While delayed initialization is enabled, all network connections are canceled, preventing the SDK from sending data to the Braze servers.
 {% endalert %}
 
 #### Step 4.1: Update your `braze.xml`
@@ -165,7 +165,7 @@ In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavi
 {% endtab %}
 
 {% tab At runtime %}
-Add `DROP` to [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
+Add `DROP` to the [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
 
 {% subtabs %}
 {% subtab JAVA %}
