@@ -19,7 +19,7 @@ Postman은 API 요청을 작성하고 테스트하는 데 무료로 사용할 �
 
 ## 브레이즈 우체부 컬렉션 사용
 
-Postman 계정이 있는 경우(MacOS, Windows 및 Linux 버전은 [Postman 웹사이트에서][1] 다운로드할 수 있음) 주황색 **Postman에서 실행** 버튼을 클릭하여 자신의 Postman 앱에서 **Postman** 설명서를 열 수 있습니다. 그런 다음 [환경을 만들거나](#setting-up-your-postman-environment) Braze REST API 환경을 템플릿으로 사용하여 사용 가능한 `POST` 및 `GET` 요청을 필요에 맞게 편집할 수 있습니다.
+Postman 계정이 있는 경우(MacOS, Windows 및 Linux 버전은 [Postman 웹사이트](https://www.getpostman.com)에서 다운로드할 수 있음) 주황색 **Postman에서 실행** 버튼을 클릭하여 자신의 Postman 앱에서 Postman 설명서를 열 수 있습니다. 그런 다음 [환경을 만들거나](#setting-up-your-postman-environment) Braze REST API 환경을 템플릿으로 사용하여 사용 가능한 `POST` 및 `GET` 요청을 필요에 맞게 편집할 수 있습니다.
 
 ### Postman 환경 설정하기
 
@@ -31,14 +31,14 @@ Braze 포스트맨 컬렉션은 템플릿 변수 `{{instance_url}}` 를 사용�
 
 1. **작업 공간** 탭에서 **환경을** 선택합니다.
 2. 더하기 버튼을 클릭하여 새 환경을 만듭니다.
-3. 이 환경에 이름을 지정하고(예: "Braze API 요청"), [Braze 인스턴스][7] ] 및 [Braze REST API 키][8]]에 해당하는 값으로 `instance_url` 및 `api_key` 키를 추가합니다.
+3. 이 환경에 이름을 지정하고(예: "Braze API 요청"), [Braze 인스턴스]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) 및 [Braze REST API 키에]({{site.baseurl}}/api/api_key/) 해당하는 값으로 `instance_url` 및 `api_key` 키를 추가합니다.
 4. **저장**을 클릭합니다.
 
 {% alert note %}
 `POST` 요청 본문에서 `api_key` 은 따옴표로 묶어야 합니다: `"MY-API-KEY-EXAMPLE"`. `GET` URL에서는 그렇지 않아야 합니다. 이 문서의 `POST` 요청 본문, `GET` URL, `YOUR-API-KEY-HERE` 환경 템플릿에서 이미 이 형식을 제공했습니다.
 {% endalert %}
 
-![Postman의 Braze REST API 환경에 API 키 및 인스턴스 URL에 대한 변수를 추가합니다.][3]
+![Postman의 Braze REST API 환경에 API 키 및 인스턴스 URL에 대한 변수를 추가합니다.]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### 컬렉션에서 미리 작성된 요청 사용
 
@@ -50,24 +50,17 @@ Braze 포스트맨 컬렉션은 템플릿 변수 `{{instance_url}}` 를 사용�
 
 `POST` 요청을 편집할 때는 요청을 열고 요청 편집기에서 **본문** 섹션으로 이동합니다. 가독성을 위해 **원시** 라디오 버튼을 선택하여 `JSON` 요청 본문의 형식을 지정합니다.
 
-![포스트맨에서 POST 사용자 추적 요청을 편집할 때 본문 탭][4]
+![Postman에서 POST 사용자 추적 요청을 편집할 때 본문 탭]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### GET 요청 편집
 
 `GET` 요청을 편집할 때는 요청 URL에 전달된 매개변수를 편집합니다. 이렇게 하려면 **매개변수** 탭을 선택하고 표시되는 필드에서 키-값 쌍을 편집합니다.
 
-![매개변수 탭에서 수신 거부된 이메일 주소의 쿼리 목록 가져오기 요청을 편집합니다.][5]
+![매개변수 탭에서 수신 거부된 이메일 주소의 쿼리 목록 가져오기 요청을 편집할 때]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### 요청 보내기
 
 API 요청이 준비되면 **보내기를** 클릭합니다. 요청이 전송되고 응답 데이터가 요청 편집기 아래의 섹션에 채워집니다. 여기에서 Braze API에서 반환된 원시 데이터를 보고, HTTP 응답 코드를 보고, 요청을 처리하는 데 걸린 시간을 확인하고, 헤더 정보를 볼 수 있습니다.
 
-![상태가 201 생성됨이고 응답 시간이 269밀리초인 POST 요청의 본문 응답 데이터 예시입니다.][6]
+![상태가 201 생성됨이고 응답 시간이 269밀리초인 POST 요청의 본문 응답 데이터 예시]({% image_buster /assets/img_archive/postman_response.png %})
 
-[1]: https://www.getpostman.com
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
-[4]: {% image_buster /assets/img_archive/postman_post.png %}
-[5]: {% image_buster /assets/img_archive/postman_get.png %}
-[6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {{site.baseurl}}/api/api_key/

@@ -37,7 +37,7 @@ tool: Media
 
 1. 편집기의 **행** 탭으로 이동하여 **콘텐츠 블록을** 선택합니다. 
 2. 콘텐츠 블록을 이메일 편집기로 끌어다 놓습니다. 
-3. (선택 사항) 내비게이션 메뉴에서 버튼을 선택하여 콘텐츠 블록의 너비를 조정하세요. 기본값 너비는 100%입니다. <br><br>![폭을 편집할 수 있는 양면 화살표.][1]{: style="max-width:30%;" }<br><br>
+3. (선택 사항) 내비게이션 메뉴에서 버튼을 선택하여 콘텐츠 블록의 너비를 조정하세요. 기본값 너비는 100%입니다. <br><br>![A double-sided arrow with an option to edit the width.]({% image_buster /assets/img_archive/content_block_width.png %}){: style="max-width:30%;" }<br><br>
 
 이메일 편집기에 콘텐츠 블록을 추가한 후, **템플릿 및 미디어**에서 생성한 원래 콘텐츠 블록에 영향을 주지 않는 콘텐츠 블록을 수정할 수 있습니다. 이것은 드래그 앤 드롭으로 추가된 콘텐츠 블록이 원래 콘텐츠 블록에 연결되어 있지 않기 때문입니다. 원본 콘텐츠 블록의 변경 사항을 보려면 콘텐츠 블록을 다시 이메일 편집기로 드래그합니다. 
 
@@ -51,7 +51,7 @@ Liquid를 사용하여 콘텐츠 블록을 추가하려면 다음과 같이 하�
 2. <i class="fas fa-plus"></i> **개인화**를 클릭합니다.
 3. **개인화 추가** 탭을 찾아 **개인화 유형** 드롭다운에서 **콘텐츠 블록을** 선택합니다.
 4. **속성** 필드에서 콘텐츠 블록의 이름을 선택합니다. 리퀴드 스니펫 필드에 콘텐츠 블록 리퀴드 태그가 채워집니다. 
-5. Liquid 스니펫을 복사하여 텍스트 편집기 블록에 붙여넣습니다. <br>![개인화 탭 추가 옵션.][2]{: style="max-width:30%;"}
+5. Liquid 스니펫을 복사하여 텍스트 편집기 블록에 붙여넣습니다. <br>![The Add Personalization tab with options.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 이메일 메시지를 미리 볼 때 Liquid 스니펫이 드래그 앤 드롭 편집기 콘텐츠 블록으로 표시됩니다. 
 
@@ -65,5 +65,3 @@ Liquid를 사용하여 콘텐츠 블록을 추가하려면 다음과 같이 하�
 
 콘텐츠 블록을 보관하려면 **템플릿** > **콘텐츠 블록**으로 이동하여 콘텐츠 블록의 세로 줄임표 아이콘(<i class="fas fa-ellipsis-vertical"></i>)을 선택한 다음 **보관**을 클릭합니다. 콘텐츠 블록을 보관하면 메시지에 보관된 블록의 콘텐츠가 계속 포함됩니다. 그러나 아카이브된 콘텐츠 블록은 읽기 전용이므로 편집하기 전에 콘텐츠 블록의 아카이브를 해제하세요. 
 
-[1]: {% image_buster /assets/img_archive/content_block_width.png %}
-[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

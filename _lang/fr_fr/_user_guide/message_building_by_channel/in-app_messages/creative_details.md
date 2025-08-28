@@ -1,7 +1,7 @@
 ---
 nav_title: Détails créatifs
 article_title: Détails créatifs
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "Détails créatifs"
 guide_top_text: "Avant de faire preuve de créativité avec nos messages in-app, vous devez connaître certaines directives. Tous les modèles de messages in-app sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Pour que votre message s'affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et de toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant de les lancer."

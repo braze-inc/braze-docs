@@ -15,7 +15,6 @@ channel:
 
 > 푸시 맥스에 대해 알아보고 이 기능을 사용하여 [중국 OEM 디바이스에]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/) 대한 Android 푸시 알림의 전달성을 잠재적으로 개선하는 방법을 알아보세요.
 
-
 ## 푸시 극대화란 무엇인가요?
 
 푸시 극대화는 실패한 푸시 알림을 추적하고 사용자가 푸시를 받을 가능성이 더 높은 시점에 푸시를 다시 발송함으로써 Android 푸시 알림의 효과를 증대시켜 줍니다.
@@ -26,7 +25,7 @@ Xiaomi, OPPO, Vivo 등 중국 OEM(주문자 상표 부착 생산업체)에서 �
 
 - Android 푸시 알림에만 사용 가능
 - 액션 기반 또는 API 트리거 메시지에는 지원되지 않습니다.
-- [사용자가 마지막으로 사용한 기기로만 전송하는]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options) 옵션을 선택한 경우에는 지원되지 않습니다.
+- Not supported when the option to [only send to the user's last used device]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options) is selected
 
 ## 전제 조건
 
@@ -75,7 +74,7 @@ TTL(Time to Live)은 실패한 푸시 알림을 Firebase 클라우드 메시징(
 
 기본적으로 TTL은 최대인 28일로 설정되어 있습니다. **설정** > **워크스페이스 설정** > **푸시 시간(TTL)**에서 모든 새 Android 푸시 메시지의 기본 TTL을 줄이거나, Android 푸시 알림을 작성할 때 **설정** 탭에서 메시지별로 일 수를 구성할 수 있습니다.
 
-![TTL 필드를 28일로 설정합니다.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+![Time to Live field set to 28 days.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## 알아두어야 할 사항
 

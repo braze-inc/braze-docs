@@ -19,15 +19,15 @@ tool:
 
 ## 커스텀 이벤트 속성 확인
 
-[커스텀 이벤트 속성][22]은 커스텀 이벤트를 설명하는 메타데이터입니다. 커스텀 이벤트가 기록될 때마다 여러 속성이 기록될 수 있습니다.
+[커스텀 이벤트 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)은 커스텀 이벤트를 설명하는 메타데이터입니다. 커스텀 이벤트가 기록될 때마다 여러 속성이 기록될 수 있습니다.
 
 ### 이벤트 확인
 
 개발자에게 어떤 이벤트 속성정보가 추적되고 있는지 확인하세요. 모든 이벤트 속성은 대소문자를 구분한다는 점을 명심하세요. 커스텀 이벤트 추적에 대한 추가 정보는 플랫폼에 따라 다음 기사를 확인하세요.
 
-* [Android][51]
-* [iOS][23]
-* [웹][52]
+* [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+* [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+* [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### 로그 확인
 
@@ -43,14 +43,9 @@ tool:
 
 1. 앱 내에서 커스텀 이벤트를 수행합니다.
 2. 데이터가 플러시될 때까지 약 10초 정도 기다리세요.
-3. [이벤트 사용자 로그][24]를 새로고침하여 커스텀 이벤트 및 함께 전달된 이벤트 속성정보 값을 확인하세요.
+3. [이벤트 사용자 로그]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)를 새로고침하여 커스텀 이벤트 및 함께 전달된 이벤트 속성정보 값을 확인하세요.
 
 아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트 날짜: 2023년 4월 10일_
 
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[24]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[51]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/ 
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/

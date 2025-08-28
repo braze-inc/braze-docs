@@ -8,7 +8,7 @@ description: "이 문서에는 2021년 11월의 릴리스 노트가 포함되어
 # 2021년 11월
 
 ## 클릭 투 오픈 비율 보고 지표
-Braze는 [보고서 작성기에서]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) 사용할 수 있는 새로운 이메일 지표인 클릭 후 열기 비율을 추가했습니다. 이 메트릭은 클릭된 열린 이메일의 비율을 나타냅니다.
+Braze는 [보고서 작성기에서]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) 사용할 수 있는 새로운 이메일 지표인 클릭 후 열기 비율을 추가했습니다. 이 메트릭은 클릭된 열린 이메일의 비율을 나타냅니다.
 
 ## 머신 오픈 보고 메트릭
 

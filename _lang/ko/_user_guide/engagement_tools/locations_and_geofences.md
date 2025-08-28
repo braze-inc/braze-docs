@@ -18,11 +18,8 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: 모바일 통합
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: 자주 묻는 질문
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## 위치 및 지오펜스 정보
@@ -36,4 +33,3 @@ Braze를 사용하면 현실 세계에서의 위치를 기반으로 사용자와
 
 - 사용자가 앱을 열면 위치 추적은 GPS 위치 데이터를 사용하여 가장 최근 위치를 캡처합니다. 이를 통해 사용자가 어디에 있었는지 확인하고 이 데이터를 기반으로 세분화할 수 있습니다.
 - 지오펜스는 정의된 가상 지리적 영역입니다. 사용자가 백그라운드 위치 추적을 사용하도록 설정한 경우 지오펜스를 사용하여 사용자가 지오펜스 내에 있을 때 실시간으로 캠페인을 트리거할 수 있습니다.
-<br><br><br>

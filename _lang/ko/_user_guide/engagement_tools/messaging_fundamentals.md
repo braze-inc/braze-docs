@@ -57,10 +57,16 @@ guide_menu_list:
   - name: 메시지 보관
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: 워크스페이스 간 복사
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: 메시지 복제
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: 메시징 상태
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: 보내기 전에 알아두어야 할 사항
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---
