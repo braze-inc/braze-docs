@@ -1,4 +1,3 @@
-"""""??
 When you [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
 
 - You can request up to **10 placements per refresh request** by default. If more than 10 placements are requested, only the first 10 are returned; the rest are dropped.  
