@@ -24,19 +24,18 @@ jobs:
             const pr = context.payload.pull_request;
             const prTitle = pr.title;
 
-            // Extract [BD-####] from title
             const match = prTitle.match(/\[BD-(\d+)\]/);
-            const bdNumber = match ? `BD-${match[1]}` : null;
-            core.info(`issue in title: ${bdNumber || "None"}`);
+            const bdNumber = match ? match[1] : null;
+            const fullTag = `[BD-${bdNumber}]`;
+
+            core.info(`issue in title: ${fullTag || "None"}`);
             if (!bdNumber) return;
 
-            // Check for guard label
             const labels = pr.labels.map(label => label.name);
             const tagExists = labels.includes("fixes an issue");
             core.info(`tag already exists? ${tagExists ? "yes" : "no"}`);
             if (tagExists) return;
 
-            // Look for matching open issue with exact bracketed tag
             const { data: issues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -44,14 +43,13 @@ jobs:
             });
 
             const matchedIssue = issues.find(issue =>
-              issue.title.includes(`[${bdNumber}]`)
+              issue.title.includes(fullTag)
             );
 
             const issueFound = !!matchedIssue;
             core.info(`matching issue found? ${issueFound ? "yes" : "no"}`);
             if (!issueFound) return;
 
-            // Post linking comment
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -60,7 +58,6 @@ jobs:
             });
             core.info("comment posted? yes");
 
-            // Add guard label
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
