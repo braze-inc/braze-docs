@@ -32,22 +32,32 @@ def get_renamed_files():
     remote, remote_branch = upstream_ref.split("/", 1)
     subprocess.run(["git", "fetch", "--quiet", remote, remote_branch, "develop"], check=False)
 
+    # repo-relative pathspec
     repo_root = subprocess.run(
         ["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True, check=True
     ).stdout.strip()
     docs_rel = str(pathlib.Path(repo_root, "_docs").relative_to(repo_root))
 
-    # full PR range: base...upstream
-    cmd = [
-        "git", "diff", "-M", "--summary", "--diff-filter=R",
-        "origin/develop..."+upstream_ref, "--", docs_rel
-    ]
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    def run_diff(base, head):
+        cmd = ["git","diff","-M","--summary","--diff-filter=R",f"{base}...{head}","--",docs_rel]
+        out = subprocess.run(cmd, capture_output=True, text=True)
+        return [l.strip() for l in out.stdout.splitlines() if l.lstrip().startswith("rename")]
 
-    return [
-        line.strip() for line in result.stdout.splitlines()
-        if line.lstrip().startswith("rename")
-    ]
+    # collect from both upstream and local HEAD
+    changed = []
+    changed += run_diff("origin/develop", upstream_ref)
+    changed += run_diff("origin/develop", "HEAD")
+
+    # deduplicate
+    changed = list(dict.fromkeys(changed))
+
+    if not changed:
+        print("No committed renames detected under '_docs' for either range:")
+        print(f"  - origin/develop...{upstream_ref}")
+        print(f"  - origin/develop...HEAD")
+        return []
+
+    return changed
 
 
 # Adds unmatched lines to ./scripts/temp/mredirect_logs.
@@ -143,7 +153,8 @@ def main():
         return
 
     placeholder_comment = "// validurls['OLD'] = 'NEW';"
-    redirects_created = False
+    redirects_added = 0
+    total_candidates = len(changed_files)
 
     with open(REDIRECT_FILE, "r+") as f:
         original_lines = f.readlines()
@@ -166,14 +177,11 @@ def main():
             if comp and comp not in existing_norm:
                 lines.append(redirect_line + "\n")
                 existing_norm.add(comp)
-                redirects_created = True
+                redirects_added += 1
 
-        if not redirects_created:
-            print(
-                "Error: Git can't find any renamed files committed in this branch.\n"
-                "Note that redirects are only created for renamed files if they're "
-                "'committed', not just 'added' to the branch."
-            )
+        if redirects_added == 0:
+            # Renamed files exist, but all redirects already present
+            print("All renamed files in this branch already have redirects. No additional redirects are needed.")
             return
 
         # Add placeholder and tidy file
@@ -185,10 +193,23 @@ def main():
             f.seek(0)
             f.truncate()
             f.writelines(unique_lines)
-            print("Redirects created successfully!")
+
+            if redirects_added == total_candidates:
+                # All new
+                if total_candidates == 1:
+                    print("1 redirect created successfully.")
+                else:
+                    print(f"All {total_candidates} redirects created successfully.")
+            else:
+                # Partial new
+                if redirects_added == 1:
+                    print("1 redirect created successfully. Some renamed files already had redirects set up.")
+                else:
+                    print(f"{redirects_added} redirects created successfully. Some renamed files already had redirects set up.")
+
             if os.path.getsize(LOG_PATH) > 0:
                 with open(LOG_PATH) as log_file:
-                    print("\nHowever, some redirects will need to be created manually:\n")
+                    print("\nNote: the following redirects need to be created manually:\n")
                     print(log_file.read().rstrip())
 
 
