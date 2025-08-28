@@ -21,7 +21,7 @@ For Shopify online stores, we recommend using Braze's standard integration metho
 - **Consistent SDK versions between your third-party tool and the Shopify connector:** The SDK version must be `5.4` within your third-party tool. Using an incorrect version number can cause incompatibility issues, as some SDK methods may not exist in older versions.
 
 {% alert note %}
-We recommend using the standard integration method to install and manage the Braze Web SDK, as using a third-party tool may cause conflicts between the Braze SDK and third-party tool. If you do use a third-party tool, test to confirm that everything works as expected. 
+We recommend using the standard integration method exclusively rather than using it in tandem with third-party tag managers, which may cause conflicts between the Braze SDK and third-party tool. If you do use a third-party tool, test to confirm that everything works as expected. 
 {% endalert %}
 
 ## Setting up the integration with a third-party tool
@@ -38,7 +38,7 @@ Straying from the provided steps may lead to unexpected issues, so be sure to fo
 
 ## Capturing Shopify data and syncing users
 
-As long as the Web SDK is accessible on the Braze dashboard through a third-party tool, the standard integration will capture Shopify data and sync users as expected.
+As long as the Web SDK is accessible on the frontend of the store front through a third-party tool, the standard integration will capture Shopify data and sync users as expected.
 
 ## Considerations and disclaimers
 
