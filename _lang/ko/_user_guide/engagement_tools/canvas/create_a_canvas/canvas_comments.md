@@ -12,7 +12,7 @@ tool: Canvas
 
 > 캔버스의 댓글은 마케팅 팀이 캔버스의 세부 사항을 식별, 논의 및 검토할 수 있는 훌륭한 협업 공간이 될 수 있습니다. 캔버스를 구축하면서 동료들로부터 추가 피드백이 필요할 수 있는 영역을 식별하기 위해 댓글을 작성하고 관리할 수 있습니다.
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## 혜택
 
@@ -48,7 +48,7 @@ tool: Canvas
 
 ## 알림 관리
 
-![][2]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 캔버스의 이메일 알림을 관리하려면 사이드바를 열고 <i class="fa-solid fa-bell"></i> **알림**을 클릭하십시오. 여기에서 알림 환경설정을 선택할 수 있습니다.
 
@@ -59,5 +59,3 @@ Canvas의 댓글 알림을 끄려면 **없음**을 선택하십시오. 기본값
 이 알림 환경 설정에서 **캔버스 내 댓글** 토글은 모든 캔버스에서 알림을 옵트인할지 여부를 제어합니다. 따라서 이 설정을 끄면 댓글 작업에 대한 이메일 알림을 받지 못합니다.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}

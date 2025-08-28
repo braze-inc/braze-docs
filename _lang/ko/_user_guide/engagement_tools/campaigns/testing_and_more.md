@@ -15,7 +15,7 @@ description: "이 랜딩 페이지에서는 캠페인 테스트 및 팁을 확�
 guide_featured_title: "섹션 기사"
 guide_featured_list:
   - name: 테스트 메시지 보내기
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: API 트리거 및 액션 기반 캠페인
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/

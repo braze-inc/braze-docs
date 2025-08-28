@@ -1,5 +1,5 @@
 ---
-nav_title: User Profiles
+nav_title: User profiles
 article_title: User Profiles
 page_order: 9
 page_type: reference
@@ -52,7 +52,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | Overview category | Contains |
 | --- | --- |
 | Profile | Gender, age group, location, language, locale, time zone, and birthday. |
-| Sessions overview | How many sessions they had, when their first and last session was, and on which apps. |
+| Sessions overview | How many sessions they had, when their first and last sessions were, and on which apps. |
 | Custom attributes | Which custom attributes are attributed to this user and their associated value, including nested custom attributes. |
 | Recent devices | How many devices they logged in on, details on each device, and their associated advertising IDs (if any). |
 | Custom events | Which custom events this user has performed, how many times, and when they last performed each event. |
@@ -72,7 +72,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
 | Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
-| Communication stats | When this user has last received messages from you from each channel. |
+| Communication stats | When this user last received messages from you from each channel. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
@@ -101,7 +101,7 @@ The following message engagement events are available for email, SMS, push, in-a
 
 | Channel | Engagement events available |
 | --- | --- |
-| Email | Bounce<br>Click<br>Delivery<br>Mark as spam<br>Open (see [note on email open event](#note-on-email-open-event))<br>Send<br>Soft bounce<br>Unsubscribe |
+| Email | Bounce<br>Click<br>Deferral events<br>Delivery<br>Mark as spam<br>Open (see [note on email open event](#note-on-email-open-event))<br>Send<br>Soft bounce<br>Unsubscribe |
 | SMS | Carrier send<br>Delivery<br>Delivery failure<br>Inbound receive<br>Rejection<br>Send |
 | Push | Bounce<br>Influenced open<br>iOS Foreground<br>Open<br>Send |
 | In-app message | Click<br>Impression |
@@ -138,5 +138,14 @@ Content Cards sends are logged when the card is available to be viewed. Because 
 Email open tracking is error-prone in any tool, including Braze. With a variety of privacy protection features offered by different email clients that either block the automatic loading of images or load them proactively on the server, email open events are susceptible to both false positives and false negatives.
 
 While email open statistics can be useful in aggregate, for example, to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
+
+#### Why are certain fields blank in the Message History tab?
+
+Some fields may be absent in a user's **Message History** tab in the following scenarios:
+
+- When an event is missing data for **Message Sent**, this indicates that the campaign doesn't have any message variations.
+- When an event is missing data for **Campaign/Canvas** and **Message Sent**, this indicates that this message was sent from an API campaign (not API-triggered campaigns) that didn't specify the `campaign_id` and `message_variation_id`. These fields are optional and may be left out of the request body. When these fields are specified, that information is populated into the message history logs.
+   - If a particular message is missing entirely from the messaging history but appears in the **Campaigns Received** log, it's likely the user received the campaign before being identified as the current user. If an existing profile is orphaned, the **Campaigns Received** log is transferred, but the messaging history is not. 
+- When data is missing for **Campaign/Canvas**, a manual test may have been sent. Manual tests are logged in the **Messaging History** tab, but the campaign or Canvas that was sent won't be logged.
 
 

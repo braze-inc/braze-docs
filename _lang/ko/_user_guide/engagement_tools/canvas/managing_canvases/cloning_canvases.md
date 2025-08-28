@@ -21,12 +21,12 @@ tool: Canvas
 2. 캔버스 흐름 워크플로우에서 복사할 캔버스를 식별합니다. 캔버스를 **초안**, **활성**, 또는 **중지됨** 상태로 복제할 수 있습니다. 
 3. 클릭 <i class="fas fa-ellipsis-vertical"></i> **추가 작업** 및 **캔버스 흐름으로 복제**을 선택합니다.
 
-![][1]{: style="max-width:25%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_workflow.png %}){: style="max-width:25%;"}
 
 {: start="4"}
 4\. 새 캔버스의 이름을 입력하고 **캔버스 흐름으로 복제**을 클릭하십시오. 
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_modal.png %}){: style="max-width:70%;"}
 
 이제 두 가지 버전의 캔버스가 있습니다: 원래 캔버스와 캔버스 플로우 버전입니다. 원래 캔버스는 여전히 원래 상태를 유지하고 있으며, 복제된 캔버스는 **초안** 상태입니다. 여전히 원래 캔버스에 접근할 수 있지만, Braze는 캔버스 플로우 워크플로우를 사용하여 캔버스를 계속 구축할 것을 권장합니다.
 
@@ -36,7 +36,7 @@ tool: Canvas
 활성 캔버스를 복제하면 Braze는 원래 캔버스를 통해 사용자에게 계속 전송됩니다. 캔버스를 복제하기 전에 캔버스를 중지하여 두 캔버스에서 사용자에게 중복 메시지를 보내지 않도록 하는 것이 좋습니다.
 {% endalert %}
 
-![캔버스 대시보드 with two 캔버스s listed: 캔버스 V1의 V2 사본 및 캔버스 V1. 캔버스 V1의 V2 사본에는 캔버스 플로우 워크플로우를 사용하고 있음을 나타내는 아이콘이 있습니다.][3]
+![캔버스 대시보드 with two 캔버스s listed: 캔버스 V1의 V2 사본 및 캔버스 V1. The V2 Copy of Canvas V1 has an icon that indicates it is using the Canvas Flow workflow.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 캔버스 복제를 완료하여 캔버스 플로우 워크플로우에 넣었습니다. 이제 이 업데이트된 환경에서 캔버스를 계속 만들 수 있습니다!
 
@@ -53,7 +53,3 @@ API로 트리거된 캔버스의 경우, 새로운 캔버스를 출시할 준비
 원래 캔버스 편집기와 캔버스 플로우 경험의 차이에 대한 자세한 내용은 [캔버스 FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor)를 확인하세요.
 
 
-[1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}
-[2]: {% image_buster /assets/img_archive/clone_to_v2_modal.png %}
-[3]: {% image_buster /assets/img_archive/clone_to_v2_dashboard.png %}
-[4]: {% image_buster /assets/img_archive/clone_to_flow_variant.png %}

@@ -17,6 +17,7 @@ page_order: 5
 ## 항목 속성 사용
 
 항목 속성은 작업 기반 및 API 트리거 캔버스에서 사용할 수 있습니다. 이 항목 속성은 커스텀 이벤트, 구매 또는 API 호출에 의해 캔버스가 트리거될 때 정의됩니다. 자세한 내용은 다음 기사를 참조하십시오:
+
 - [캔버스 항목 속성 객체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [이벤트 속성 객체]({{site.baseurl}}/api/objects_filters/event_object/)
 - [구매 객체]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
@@ -82,11 +83,9 @@ url -X POST \
 
 If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 제품 이름을 참조할 수 있습니다
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 두 번째 단계에서는 사용자가 장바구니에 상품을 추가했지만 아직 구매하지 않은 경우 결제를 유도하는 푸시 알림을 보낼 수 있습니다. `product_name` 항목 속성을 {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 계속 참조할 수 있습니다.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

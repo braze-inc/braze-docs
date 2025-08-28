@@ -11,7 +11,7 @@ description: "このヘルプ記事では、Brazeドキュメント内でコン�
 
 Mac を使用していて、スクロールバーがBraze Docs 内の内容とオーバーアプリしていることがわかりました。以下の例を参照してください。
 
-![スクロールバーのオーバーラップの例][1]
+![スクロールバーオーバーラップ]({% image_buster /assets/img/scroll-overlap.png %})の例
 
 スクロールバーが次のコード ブロックと重なっているかどうかを確認します。
 
@@ -21,11 +21,11 @@ Mac を使用していて、スクロールバーがBraze Docs 内の内容と�
 
 スクロールバーがコード ブロックと重なる場合は、**スクロールバーを表示する:**設定を**Always**に変更することをお勧めします(**一般設定s**)。この場合、ドキュメントの機能 (コードブロックなど) が拡張され、スクロールバーが常時表示されるため、文字を読みにくくなります。
 
-![MacOSの一般設定][2]
+![MacOS の一般設定]({% image_buster /assets/img/general-on-mac.png %})
 
 更新されたスクロールバーは、以下のように表示されます。
 
-![重複のない固定スクロールバーの例][3]
+![重複のない固定スクロールバーの例]({% image_buster /assets/img/scroll-bar-on.png %})
 
 _最終更新日: 2019年3月27日_
 
@@ -34,6 +34,3 @@ _最終更新日: 2019年3月27日_
 _スクロールバーのせいでコードが見えませんか？[ここでの修正方法]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)を参照してください。_
 {% endcomment %}
 
-[1]: {% image_buster /assets/img/scroll-overlap.png %}
-[2]: {% image_buster /assets/img/general-on-mac.png %}
-[3]: {% image_buster /assets/img/scroll-bar-on.png %}

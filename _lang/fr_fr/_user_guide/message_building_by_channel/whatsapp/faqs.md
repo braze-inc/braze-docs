@@ -34,7 +34,9 @@ Oui, vous devez toujours créer un compte professionnel WhatsApp. Nous vous reco
 Après avoir complété le flux d'inscription intégré, vous pouvez accéder à votre compte sur business.facebook.com en naviguant vers la [section WhatsApp.](https://business.facebook.com/wa/manage/home) 
 
 #### Puis-je connecter plusieurs WABAs à Braze ? 
-Oui, vous pouvez connecter un WABA par espace de travail. Vous pouvez donc avoir plusieurs WABA connectés à plusieurs de vos espaces de travail Braze. Par exemple, si vous avez différents espaces de travail pour différentes marques, ou différents espaces de travail pour différents pays, chacun peut avoir son propre WABA connecté.
+Oui, vous pouvez ajouter jusqu'à 10 comptes WhatsApp Business par espace de travail, et chaque compte business peut être imbriqué sous un gestionnaire de compte Meta Business différent.
+
+![Diagramme de l'écosystème Braze et WhatsApp, montrant comment les espaces de travail et les comptes WhatsApp Business se connectent les uns aux autres : vous pouvez connecter un groupe d'abonnement à un numéro de téléphone, plusieurs comptes WhatsApp Business à un espace de travail, et un espace de travail à plusieurs portefeuilles Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}). 
 
 ### Numéros de téléphone du compte professionnel WhatsApp 
 

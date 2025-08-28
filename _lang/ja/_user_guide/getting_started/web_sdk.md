@@ -24,31 +24,31 @@ Braze SDK を簡単に説明すると、次のとおりです。
 
 SDK をアプリまたはサイトに組み込むには、そのアプリケーションを動作させる、より大きなコードベース全体に SDK のコードを追加する必要があります。これは、お客様のエンジニアリングチームが関与し、本質的にアプリを結び付けて、情報とアクションがアプリ間で流れるようにすることを意味します。ただし、開発者が関与しているにもかかわらず、SDK は軽量でユーザーフレンドリーに統合できるように設計されています。 
 
-時間を節約し、スムーズな統合を実現するために、お客様とエンジニアリングチームがカスタムイベント、カスタム属性、SDK を同時に設定することをお勧めします。マーケティングチームとエンジニアリングチームが一緒に検討する必要があるステップについて詳しくは、[実装に関する記事][4]をご覧ください。 
+時間を節約し、スムーズな統合を実現するために、お客様とエンジニアリングチームがカスタムイベント、カスタム属性、SDK を同時に設定することをお勧めします。マーケティングチームとエンジニアリングチームが一緒に検討する必要があるステップについて詳しくは、[実装に関する記事]({{site.baseurl}}/user_guide/getting_started/integration/)をご覧ください。 
 
 ## データの集約
 
-Braze SDK はユーザーレベルで膨大な量のデータを自動的にキャプチャし、アプリとユーザーベースの主要な指標を簡単に確認できるようにします。類似したアプリをダッシュ​​ボード上の1つのワークスペースにグループ化します。たとえば、アプリの iOS バージョンと Android バージョンを同じワークスペースにグループ化すると、両方のプラットフォームのユーザーから収集されたデータを確認できるようになります。これにより、Web チャネルとモバイルチャネル全体でユーザーをより完全に把握できるようになります。詳細については、[ホームページ][3]の記事を参照してください。
+Braze SDK はユーザーレベルで膨大な量のデータを自動的にキャプチャし、アプリとユーザーベースの主要な指標を簡単に確認できるようにします。類似したアプリをダッシュ​​ボード上の1つのワークスペースにグループ化します。たとえば、アプリの iOS バージョンと Android バージョンを同じワークスペースにグループ化すると、両方のプラットフォームのユーザーから収集されたデータを確認できるようになります。これにより、Web チャネルとモバイルチャネル全体でユーザーをより完全に把握できるようになります。詳細については、[ホームページ]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)の記事を参照してください。
 
 ## アプリ内メッセージング
 
-SDK を使用すると、アプリ内メッセージを簡単に作成して送信し、ユーザーと直接やり取りすることができます。キャンペーン戦略に基づいて、スライドアップ、モーダル、または全画面メッセージの送信を選択できます。アプリ内メッセージの作成の詳細については、[アプリ内メッセージの作成][8]に関するページを参照してください。
+SDK を使用すると、アプリ内メッセージを簡単に作成して送信し、ユーザーと直接やり取りすることができます。キャンペーン戦略に基づいて、スライドアップ、モーダル、または全画面メッセージの送信を選択できます。アプリ内メッセージの作成の詳細については、[アプリ内メッセージの作成]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)に関するページを参照してください。
 
-![ウェブブラウザに表示されるプッシュ][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Web ブラウザーに表示されるプッシュ]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## プッシュ通知
 
-プッシュ通知は、ユーザーと関わるためのもう1つの優れたオプションであり、時間的制約のある行動喚起を処理する場合に特に便利です。モバイルプッシュ通知はユーザーのデバイスに表示され、Web プッシュ通知はサイトが開いていないときでも表示されます。プッシュ通知の使用方法の詳細については、[プッシュ通知の記事][5]を参照してください。
+プッシュ通知は、ユーザーと関わるためのもう1つの優れたオプションであり、時間的制約のある行動喚起を処理する場合に特に便利です。モバイルプッシュ通知はユーザーのデバイスに表示され、Web プッシュ通知はサイトが開いていないときでも表示されます。プッシュ通知の使用方法の詳細については、[プッシュ通知の記事]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)を参照してください。
 
-Web サイトまたはアプリのユーザーは、プッシュ通知を受け取るようにオプトインする必要があります。詳しくは[push priming][13] ]を参照のこと。 
+Web サイトまたはアプリのユーザーは、プッシュ通知を受け取るようにオプトインする必要があります。詳細については、[プッシュプライミング]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を参照してください。 
 
 ## セグメンテーションと配信ルール
 
 デフォルトでは、アプリ内メッセージを含むキャンペーンは、そのワークスペース内のアプリのすべてのバージョンに送信されます。たとえば、メッセージは Web ユーザーとモバイルユーザーの両方に送信されます。アプリ内メッセージを Web またはモバイルのみに送信するには、それに応じてキャンペーンをセグメント化する必要があります。これは Braze SDK を通じてデフォルトでサポートされています。 
 
-セグメントの **[使用するアプリ]** セクションで Web サイトのアプリアイコンのみを選択することで、Web ユーザーのセグメントを作成できます。
+**特定のアプリからのユーザー**を**ターゲットにしたアプリと Web サイト**を設定して Ｗｅｂ ユーザーのセグメントを作成し、**特定のアプリ**の Web サイトのみを選択できます。
 
-![ウェブアプリを選択したセグメントの詳細ページ][10]
+![Web アプリが強調表示されている [セグメントの詳細]ページ]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 これにより、インテリジェントな方法でユーザーの行動に基づいてユーザーをターゲットにすることができます。Web ユーザーをターゲットにしてモバイルアプリのダウンロードを奨励したい場合は、このセグメントをターゲットユーザーとして作成します。Web メッセージではなくモバイルアプリ内メッセージを含むメッセージングキャンペーンを送信したい場合は、セグメント内の Web サイトのアイコンのチェックを外します。
 
@@ -81,11 +81,3 @@ text-align: center;
 [![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [ユニティ アンドロイド]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [ユニティ iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin) 
 [![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine)
 
-[3]: {{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/
-[4]: {{site.baseurl}}/user_guide/getting_started/integration/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[7]: {% image_buster /assets/img_archive/app_group_list.png %}
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/
-[10]: {% image_buster /assets/img_archive/web-users-segment.png %}
-[11]: {% image_buster /assets/img_archive/web_push_macbook.png %}
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/

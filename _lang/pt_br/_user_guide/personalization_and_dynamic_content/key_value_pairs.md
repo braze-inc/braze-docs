@@ -76,7 +76,7 @@ O criador de mensagem da Braze lida automaticamente com a criação das seguinte
 
 Esses valores podem ser inseridos na guia **Configurações** ao criar uma messagem de push. Selecione **Opções de Alerta** e selecione uma chave de dicionário de alerta para que a chave seja automaticamente preenchida em uma nova entrada de chave-valor.
 
-![][16]
+![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 Quando a Braze envia uma notificação por push para a APNs, a carga útil será formatada como um JSON.
 
@@ -111,9 +111,9 @@ Quando a Braze envia uma notificação por push para a APNs, a carga útil será
 
 Além dos valores de carga útil da biblioteca ```aps```, você pode enviar pares de chave-valor personalizados para o dispositivo de um usuário. Os valores nesses pares são restritos a tipos primitivos: dicionário (objeto), array, string, número e booleano.
 
-![][17]
+![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
-Os casos de uso para pares de chave-valor personalizados incluem, mas não se limitam a, manter métricas internas e definir o contexto para a interface do usuário. O Braze permite que você envie pares de chave-valor adicionais junto com uma notificação por push para serem usados em seu aplicativo dentro da [chave extras][1]. Se você preferir usar outra chave, confirme que seu app pode lidar com essa chave personalizada.
+Os casos de uso para pares de chave-valor personalizados incluem, mas não se limitam a, manter métricas internas e definir o contexto para a interface do usuário. O Braze permite que você envie pares de chave-valor adicionais junto com uma notificação por push para serem usados em seu aplicativo dentro da [chave extras]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs). Se você preferir usar outra chave, confirme que seu app pode lidar com essa chave personalizada.
 
 {% alert warning %}
 Você deve evitar lidar com uma chave de nível superior ou dicionário chamado ab em seu aplicativo.
@@ -149,15 +149,15 @@ A Braze permite que você envie pares de chave-valor de string definidos pelo us
 
 ##### Opções de envio de mensagens do FCM
 
-As notificações por push do Android podem ser ainda mais personalizadas com as opções de mensagens do FCM. Estes incluem [prioridade de notificação][8], [som][10], postergação, vida útil e colapsabilidade. Esses valores podem ser inseridos na guia **Configurações** ao criar uma messagem de push. Consulte [Configurações avançadas de notificação por push][7] para obter mais instruções sobre como definir essas opções no criador de mensagem do Braze.
+As notificações por push do Android podem ser ainda mais personalizadas com as opções de mensagens do FCM. Estes incluem [prioridade de notificação]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority), [som]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds), postergação, vida útil e colapsabilidade. Esses valores podem ser inseridos na guia **Configurações** ao criar uma messagem de push. Consulte [Configurações avançadas de notificação por push]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_settings) para obter mais instruções sobre como definir essas opções no criador de mensagem do Braze.
 
-![][18]
+![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### Notificações por push silenciosas
 
-Uma notificação por push silenciosa é uma notificação por push que não contém mensagem de alerta ou som, usada para atualizar a interface ou o conteúdo do seu app em segundo plano. Essas notificações utilizam pares de chave-valor para disparar essas ações de app em segundo plano. Notificações por push silenciosas também alimentam nosso [rastreamento de desinstalação][4].
+Uma notificação por push silenciosa é uma notificação por push que não contém mensagem de alerta ou som, usada para atualizar a interface ou o conteúdo do seu app em segundo plano. Essas notificações utilizam pares de chave-valor para disparar essas ações de app em segundo plano. Notificações por push silenciosas também alimentam nosso [rastreamento de desinstalação]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
-Os profissionais de marketing devem testar esse comportamento esperado do disparo de notificações por push silenciosas antes de enviá-las aos usuários do app. Depois de compor sua [iOS][2] ou [Android][13] notificação por push silenciosa, certifique-se de direcionar apenas um usuário teste filtrando pelo [ID de usuário externo][14] ou [endereço de e-mail][15].
+Os profissionais de marketing devem testar esse comportamento esperado do disparo de notificações por push silenciosas antes de enviá-las aos usuários do app. Depois de compor sua [iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) ou [Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) notificação por push silenciosa, certifique-se de direcionar apenas um usuário teste filtrando pelo [ID de usuário externo]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) ou [endereço de e-mail]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 Após o lançamento da campanha, você deve verificar se não recebeu nenhuma notificação por push visível no seu dispositivo de teste.
 
@@ -169,7 +169,7 @@ O sistema operacional iOS pode [bloquear notificações]({{site.baseurl}}/develo
 
 Para adicionar um par de chave-valor a uma mensagem no app, selecione a guia **Configurações** no criador de mensagem, selecione **Adicionar novo par** e especifique seus pares de chave-valor.
 
-![][21]
+![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### campanhas acionadas por API
 
@@ -177,39 +177,18 @@ A Braze permite que você envie pares de chave-valor de string definidos pelo us
 
 ## E-mails
 
-Tanto o SparkPost quanto o SendGrid aceitas pares de chave/valor em e-mails. Se você usar o SendGrid, pares de chave/valor serão enviados como [argumentos únicos][11]. SendGrid permite que você anexe um número ilimitado de pares chave-valor até 10.000 bytes de dados. Esses pares de chave-valor podem ser vistos em postagens do [Webhook de Eventos][12] do SendGrid.
+Tanto o SparkPost quanto o SendGrid aceitas pares de chave/valor em e-mails. Se você usar o SendGrid, pares de chave/valor serão enviados como [argumentos únicos](https://docs.sendgrid.com/for-developers/sending-email/unique-arguments). SendGrid permite que você anexe um número ilimitado de pares chave-valor até 10.000 bytes de dados. Esses pares de chave-valor podem ser vistos em postagens do [Webhook de Eventos](https://sendgrid.com/docs/for-developers/tracking-events/event/) do SendGrid.
 
 {% alert note %}
 E-mails devolvidos não entregarão pares chave-valor para SparkPost ou SendGrid.
 {% endalert %}
 
-![Guia Informações de envio do criador de mensagem de e-mail na Braze.][22]
+![Enviando a guia de informações do criador de mensagem de e-mail no Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## Cartões de conteúdo
 
 Para adicionar um par de chave-valor a um cartão de conteúdo, acesse a guia **Configurações** no criador de mensagem do Braze e selecione **Adicionar novo par**.
 
-![Adicionar par chave-valor ao cartão de conteúdo][24]{: style="max-width:70%;"}
+![Adicionar par chave-valor ao cartão de conteúdo]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds
-[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
-[12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
-[15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
-[17]: {% image_buster /assets/img_archive/keyvalue_enterpairs.png %}
-[18]: {% image_buster /assets/img_archive/keyvalue_androidkeys.png %}
-[19]: {% image_buster /assets/img_archive/keyvalue_android.png %}
-[20]: {% image_buster /assets/img_archive/keyvalue_web.png %}
-[21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
-[22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
-[23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {% image_buster /assets/img_archive/kvp_content_cards.png %}

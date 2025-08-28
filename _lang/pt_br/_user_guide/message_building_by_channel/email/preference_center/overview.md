@@ -124,7 +124,7 @@ Não. No entanto, você pode usar o Liquid ao escrever o HTML para páginas pers
 
 Por exemplo, se estiver rastreando a taxa de cancelamento de inscrição de usuários de língua espanhola, será necessário usar campanhas separadas ou aproveitar a análise de dados do Currents (como observar quando um usuário cancela a inscrição e verificar o idioma preferido desse usuário).
 
-Como outro exemplo, para rastreamento das taxas de cancelamento de inscrição de usuários de língua espanhola, você poderia adicionar uma string de parâmetro de consulta como `?Spanish=true` ao URL de cancelamento de inscrição se o idioma dos usuários for alemão e usar um ink de cancelamento de inscrição normal se não for:
+Como outro exemplo, para rastreamento das taxas de cancelamento de inscrição de usuários de língua espanhola, é possível adicionar uma string de parâmetro de consulta como `?Spanish=true` ao URL de cancelamento de inscrição se o idioma dos usuários for alemão e usar um ink de cancelamento de inscrição normal se não for:
 
 {% raw %}
 ```liquid

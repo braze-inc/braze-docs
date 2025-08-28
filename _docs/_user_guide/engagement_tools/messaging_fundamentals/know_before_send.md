@@ -1,9 +1,9 @@
 ---
-nav_title: Know Before You Send
+nav_title: Know before you send
 article_title: Know Before You Send
 description: "After visiting our pre-launch guide, refer to this final list of checks or 'gotchas' for Content Cards, email, in-app messages, push, and SMS."
 alias: /know_before_send/
-page_order: 10
+page_order: 10.2
 tool:
     - Campaigns
     - Canvas
@@ -86,10 +86,10 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - **Liquid personalization:** Liquid personalization refreshes at every session start.
 - **Placement and Banner ratio:** Each Banner placement can be used in up to 10 campaigns in a workspace.  
 - **Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
-- **Limitations:**  Currently, the following features aren't supported: Canvas integration, API-triggered and action-based campaigns, Currents, Connected Content, promotion codes, user-controlled dismissals, and `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+- **Limitations:**  Currently, the following features aren't supported: Canvas integration, API-triggered and action-based campaigns, Connected Content, promotion codes, user-controlled dismissals, and `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
 - **Testing:** To display the test Banner, the device you’re using must be able to receive foreground push notifications.
 - **Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) to log clicks when using custom HTML to define click actions, like links and buttons. Click actions are only logged automatically when using the pre-built components in the drag-and-drop editor.
-- **Requesting Placements:** Up to 10 placements can be returned to the SDK per session. Each placement will include the highest priority Banner a user is eligible for.
+- **Requesting Placements:** Up to 10 placements can be returned to the SDK once per session. Each placement will include the highest priority Banner a user is eligible for.
 
 ## Content Cards
 

@@ -13,4 +13,4 @@ Bienvenue dans une nouvelle année et une nouvelle décennie !
 
 Braze vous permet désormais de [limiter la fréquence]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) des messages SMS. Vous pouvez également ajouter un [segment filtre]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
 
-Pour plus d'informations sur les paramètres et le comportement des utilisateurs, consultez le [traitement des mots-clés-clés SMS](/docs/user_guide/message_building_by_channel/sms/keywords/)
+Pour plus d'informations sur les paramètres et le comportement des utilisateurs, consultez le [traitement des mots-clés-clés SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/)

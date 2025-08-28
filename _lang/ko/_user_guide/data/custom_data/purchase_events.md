@@ -19,13 +19,13 @@ search_rank: 3
 
 다음은 구매를 기록하는 데 사용되는 다양한 플랫폼의 방법을 나열한 것입니다. 이 페이지에서는 구매 이벤트에 속성 및 수량을 추가하는 방법에 대한 설명서도 확인할 수 있습니다. 이러한 속성을 기반으로 사용자를 추가로 타겟팅할 수 있습니다.
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/logging_purchases/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/logging_purchases/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/logging_purchases/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## 구매 데이터 보기
 
@@ -59,7 +59,7 @@ Braze에서 구매 데이터를 사용할 수 있는 방법은 여러 가지가 
 
 각 필터에 대한 자세한 내용은 [세분화 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) 용어집을 참조하고 '구매 행동'으로 필터링하세요.
 
-![정확히 세 번 구매한 사용자에 대한 필터링][1]{: style="max-width:80%;"}
+![Filtering for users who made exactly three purchases]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
 특정 구매가 발생한 횟수를 기준으로 세분화하려면 해당 구매를 [증분 사용자 지정 속성으로]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage) 개별적으로 기록합니다.
@@ -179,7 +179,7 @@ For example, if you have an eCommerce application and want to message a user aft
 
 **구매 이벤트 속성을 기반으로 트리거하는 예시입니다:**
 
-![HeadphoneMart와 같은 브랜드명을 가진 헤드폰을 구매한 사용자에게 캠페인을 전송하는 실행 기반 전달 설정][2]{: style="max-width:80%;margin-left:15px;"}
+![Action-based delivery settings to send a campaign to users who purchase headphones with a brand name equal to HeadphoneMart]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 자세한 내용은 [구매 속성정보]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object)를 참조하세요.
 
@@ -187,12 +187,12 @@ For example, if you have an eCommerce application and want to message a user aft
 
 이벤트 속성 세분화를 사용하면 발생한 사용자 지정 이벤트뿐만 아니라 해당 이벤트와 관련된 속성을 기반으로 사용자를 타겟팅할 수 있습니다. 이 기능은 구매 및 사용자 지정 이벤트를 세분화할 때 추가 필터링 옵션을 추가합니다.
 
-![][6]{: style="max-width:80%;margin-left:15px;"}
+![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
 
 이러한 세분화 필터에는 다음이 포함됩니다:
 - 지난 Y일 동안 값이 V인 속성 Y로 사용자 지정 이벤트를 X회 수행했습니다.
 - 지난 Y일 동안 부동산 Y에서 가치 V의 부동산을 X회 구매한 적이 있습니다.
-- 1일, 3일, 7일, 14일, 21일, 30일 이내로 세분화할 수 있는 기능 추가
+- Adds 1-30 day segmentation on all purchases, events, and properties within purchases and events
 
 [세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)과 달리 사용되는 세그먼트는 실시간으로 업데이트되고, 세그먼트 수에 제한이 없으며, 최대 30일의 과거 기록을 제공하고, 데이터 포인트가 발생합니다. 추가 데이터 포인트 요금이 부과되므로 커스텀 이벤트에 대한 이벤트 속성정보를 사용 설정하려면 Braze 고객 성공 매니저에게 문의해야 합니다.
 
@@ -200,46 +200,7 @@ For example, if you have an eCommerce application and want to message a user aft
 
 ### 캔버스 항목 속성 및 이벤트 속성
 
-{% alert important %}
-2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 섹션은 원래 캔버스 워크플로에서 `canvas_entry_properties` 및 `event_properties`를 사용할 때 참조할 수 있습니다.
-{% endalert %}
-
-Canvas 사용자 여정에서 `canvas_entry_properties` 및 `event_properties` 을 사용할 수 있습니다. 자세한 정보와 예시는 [캔버스 항목 속성 및 이벤트 속성을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) 확인하세요.
-
-{% alert important %}
-리드 메시지 단계에서는 `event_properties` 을 사용할 수 없습니다. 대신 `canvas_entry_properties`를 사용하거나 `event_properties`를 포함하는 메시지 단계 **앞에** 해당 이벤트가 포함된 작업 경로 단계를 추가해야 합니다.
-{% endalert %}
-
-{% tabs local %}
-{% tab 캔버스 항목 속성 %}
-
-[캔버스 진입 속성]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)은 실행 기반 또는 API로 트리거되는 캔버스에 매핑하는 속성입니다. `canvas_entry_properties` 객체의 최대 크기 제한은 50KB입니다.
-
-{% alert important %}
-특히 인앱 메시지 채널의 경우, 이전 얼리 액세스의 일부로 원래 편집기에서 영구 진입 속성을 활성화한 경우에만 캔버스 흐름 및 원래 캔버스 편집기에서 `canvas_entry_properties`를 참조할 수 있습니다.
-{% endalert %}
-
-캔버스 플로우 메시징의 경우, `canvas_entry_properties`는 Liquid의 모든 메시지 단계에서 사용할 수 있습니다. ``{% raw %} canvas_entry_properties${property_name} {% endraw %}`` 속성을 참조할 때 이 Liquid를 사용하세요. 이 방법을 사용하려면 이벤트가 사용자 지정 이벤트 또는 구매 이벤트여야 합니다. 
-
-{% raw %}
-예를 들어 다음 요청을 고려해 보세요: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Liquid `{{canvas_entry_properties.${product_name}}}`를 사용하여 메시지에 "신발"이라는 단어를 추가할 수 있습니다.
-{% endraw %}
-
-원본 편집기로 제작한 캔버스의 경우 `canvas_entry_properties`는 캔버스의 첫 번째 전체 단계에서만 참조할 수 있습니다.
-
-{% endtab %}
-
-{% tab 이벤트 속성 %}
-이벤트 속성은 사용자 지정 이벤트 및 구매에 대해 설정한 속성을 나타냅니다. 이러한 `event_properties`는 실행 기반 전달 및 캔버스가 있는 캠페인에서 사용할 수 있습니다.
-
-캔버스 플로우에서 커스텀 이벤트 및 구매 이벤트 속성정보는 동작 경로 단계 뒤에 오는 모든 메시지 단계에서 Liquid에서 사용할 수 있습니다. 캔버스 흐름의 경우 `event_properties`를 참조하는 경우 {% raw %} ``{{event_properties.${property_name}}}``{% endraw %}를 사용해야 합니다. 이러한 이벤트는 메시지 구성 요소에서 이러한 방식으로 사용하려면 사용자 지정 이벤트 또는 구매 이벤트여야 합니다.
-
-원래 캔버스 편집기의 경우 `event_properties`를 예약된 전체 단계에서 사용할 수 없습니다. 그러나 전체 단계가 예약되어 있더라도 실행 기반 캔버스의 첫 번째 전체 단계에서는 `event_properties`를 사용할 수 있습니다.
-
-작업 경로 다음의 첫 번째 메시지 단계에서 해당 작업 경로에 참조된 이벤트와 관련된 `event_properties`를 사용할 수 있습니다. 이러한 `event_properties`는 사용자가 실제로 작업을 수행한 경우에만 사용할 수 있습니다(다른 모든 사용자 그룹으로 이동하지 않음). 이 작업 경로와 메시지 단계 사이에 다른 단계(다른 작업 경로나 메시지 단계가 아닌)를 배치할 수 있습니다.
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### 주문 수준에서 구매 기록
 
@@ -257,11 +218,3 @@ Braze에서는 구매 개체에 대한 몇 가지 일반적인 이름 지정 규
 
 Braze 대시보드의 **데이터 설정** > **제품**에서 차단 목록을 관리할 수 있습니다. 자세한 내용은 [사용자 지정 데이터 관리하기를]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) 참조하세요.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정 관리에서** **제품을** 찾을 수 있습니다.
-{% endalert %}
-
-[1]: {% image_buster /assets/img/purchase_filter_example.gif %}
-[2]: {% image_buster /assets/img/purchase2.png %}
-[5]: {% image_buster /assets/img/purchase5.png %}
-[6]: {% image_buster /assets/img/nested_object3.png %}

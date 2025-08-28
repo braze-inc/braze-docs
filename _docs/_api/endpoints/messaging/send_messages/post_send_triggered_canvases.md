@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
+nav_title: "POST: Send Canvas messages using API-triggered delivery"
 article_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ To use this endpoint, you'll need to generate an API key with the `canvas.trigge
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
 ## Request body
 
@@ -42,7 +42,6 @@ Authorization: Bearer YOUR-REST-API-KEY
   "canvas_id": (required, string) see Canvas identifier,
   "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
-  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -67,7 +66,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`canvas_id`| Required | String | See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
 |`canvas_entry_properties`| Optional | Object | This includes [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Personalization key-value pairs will apply to all users in this request. The Canvas entry properties object has a maximum size limit of 50 KB. <br><br>**Note:** If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), this parameter is `context` and includes Canvas entry properties. |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
-|`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to true, the message will be sent to the entire segment targeted by the Canvas.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `canvas_entry_properties` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

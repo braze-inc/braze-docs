@@ -36,10 +36,6 @@ tool:
 
 대시보드 계정에서 **애널리틱스** > **참여 보고서로** 이동합니다. 선택 **\+ 새 보고서 만들기를** 선택합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **데이터에서** **참여 보고서를** 찾을 수 있습니다.
-{% endalert %}
-
 ### 2단계: 메시지 추가
 
 보고서에 컴파일하려는 캠페인 및 캔버스 메시지를 추가하십시오. 메시지를 선택하는 두 가지 방법이 있습니다:
@@ -47,7 +43,7 @@ tool:
 - 캠페인 및 캔버스를 수동으로 선택
 - 특정 규칙에 따라 캠페인 및 캔버스를 자동으로 선택
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### 캠페인 또는 캔버스를 수동으로 선택
 
@@ -61,7 +57,7 @@ tool:
 
 **통계 추가** 단계에서는 선택한 캠페인 또는 캔버스 유형에 대한 통계를 보여줍니다. 예를 들어 이메일 메시지를 선택한 경우 관련 이메일 통계만 볼 수 있습니다. 이메일과 푸시 조합을 선택한 경우 해당 두 채널에 대한 통계를 볼 수 있습니다.
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | 채널 | 사용 가능한 통계 |
 | ------| --------------|
@@ -98,7 +94,7 @@ tool:
 
 기본적으로 참여 보고서에 표시되는 데이터는 일 단위(1일)입니다. 이 데이터를 다양한 간격으로 보려면 보고서의 데이터를 집계할 명시적인 일수 또는 주 수를 선택합니다. 따라서 일별 지표 대신 주, 월, 분기 등으로 참여도를 확인할 수 있습니다. 시간 중심의 집계가 충분하지 않은 경우 캠페인 또는 캔버스 수준에서 데이터를 내보내도록 선택할 수도 있습니다.
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### 보고서를 예약하세요
 
@@ -107,7 +103,7 @@ tool:
 - **즉시 보내기:** 보고서가 시작된 후, Braze는 이 보고서를 즉시 보낼 것입니다.
 - **지정된 시간에 보내기:** 이 옵션을 사용하면 이 보고서를 얼마나 자주 받을지 유연하게 선택할 수 있습니다. 이 보고서를 매일, 매주 또는 매월 설정된 일수마다 보낼 수 있습니다. 보고서 전송을 중지할 시점을 정의할 수도 있습니다.
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### 5단계: 검토 및 시작
 
@@ -120,7 +116,3 @@ tool:
 보고서에는 설정 프로세스의 [Add Stats](#add-statistics-to-your-reports) 섹션에서 선택한 모든 통계가 포함되어 있습니다.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

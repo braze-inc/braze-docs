@@ -24,31 +24,31 @@ description: "이 참조 문서는 Braze SDK의 기본 사항을 다룹니다."
 
 앱이나 사이트에 SDK를 통합하려면 누군가가 SDK의 코드를 해당 애플리케이션을 구동하는 전체 코드 베이스에 추가해야 합니다. 이는 엔지니어링 팀이 참여하여 본질적으로 Braze 앱을 연결하여 정보와 작업이 그들 사이에서 흐르도록 한다는 것을 의미합니다. 하지만 개발자가 참여하더라도 SDK는 통합하기 쉽고 사용자 친화적으로 설계되었습니다. 
 
-시간을 절약하고 원활한 통합을 보장하기 위해 엔지니어링 팀이 커스텀 이벤트, 커스텀 속성 및 SDK를 동시에 설정할 것을 권장합니다. 귀하의 마케팅 및 엔지니어링 Teams이(가) 함께 고려해야 할 단계에 대해 자세히 알아보려면 [implementation article][4]을(를) 읽어보십시오. 
+시간을 절약하고 원활한 통합을 보장하기 위해 엔지니어링 팀이 커스텀 이벤트, 커스텀 속성 및 SDK를 동시에 설정할 것을 권장합니다. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article]({{site.baseurl}}/user_guide/getting_started/integration/). 
 
 ## 데이터 집계
 
-Braze SDK는 사용자 수준에서 엄청난 양의 데이터를 자동으로 수집하여 앱 및 사용자 기반에 대한 주요 측정기준을 쉽게 확인할 수 있게 합니다. 유사한 앱을 대시보드의 단일 워크스페이스로 그룹화합니다. 예를 들어, iOS 및 Android 버전의 앱을 동일한 작업 공간에 그룹화하여 두 플랫폼의 사용자로부터 수집된 데이터를 볼 수 있습니다. 이것은 웹 및 모바일 채널 전반에 걸쳐 사용자에 대한 보다 완전한 뷰를 제공합니다. 자세한 내용은 [홈 페이지][3]의 기사를 참조하십시오.
+Braze SDK는 사용자 수준에서 엄청난 양의 데이터를 자동으로 수집하여 앱 및 사용자 기반에 대한 주요 측정기준을 쉽게 확인할 수 있게 합니다. 유사한 앱을 대시보드의 단일 워크스페이스로 그룹화합니다. 예를 들어, iOS 및 Android 버전의 앱을 동일한 작업 공간에 그룹화하여 두 플랫폼의 사용자로부터 수집된 데이터를 볼 수 있습니다. 이것은 웹 및 모바일 채널 전반에 걸쳐 사용자에 대한 보다 완전한 뷰를 제공합니다. See the article on the [Home page]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for more information.
 
 ## 인앱 메시징
 
-SDK는 사용자를 직접 참여시키기 위해 인앱 메시지를 작성하고 보내는 것을 쉽게 만듭니다. 캠페인 전략에 따라 슬라이드업, 모달 또는 전체 화면 메시지를 보낼 수 있습니다. 인앱 메시지 작성을 위한 자세한 내용은 인앱 메시지 작성][8]에 대한 페이지를 참조하세요.
+SDK는 사용자를 직접 참여시키기 위해 인앱 메시지를 작성하고 보내는 것을 쉽게 만듭니다. 캠페인 전략에 따라 슬라이드업, 모달 또는 전체 화면 메시지를 보낼 수 있습니다. For more information on composing an in-app message, see our page on [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
-![푸시가 웹 브라우저에 표시됨][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Push displayed on a web browser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## 푸시 알림
 
-푸시 알림은 사용자와 소통할 수 있는 또 다른 훌륭한 옵션이며, 특히 시간에 민감한 조치를 처리하는 데 유용합니다. 모바일 푸시 알림은 사용자의 기기에 나타나며, 웹 푸시 알림은 사이트가 열려 있지 않을 때에도 나타납니다. 푸시 알림을 사용하는 방법에 대한 자세한 내용은 [푸시 알림 기사][5]를 참조하십시오.
+푸시 알림은 사용자와 소통할 수 있는 또 다른 훌륭한 옵션이며, 특히 시간에 민감한 조치를 처리하는 데 유용합니다. 모바일 푸시 알림은 사용자의 기기에 나타나며, 웹 푸시 알림은 사이트가 열려 있지 않을 때에도 나타납니다. For specifics on using push notifications, see our [push notification article]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/).
 
-웹사이트 또는 앱 사용자는 푸시 알림을 받기 위해 옵트인해야 합니다. 푸시 프라이밍][13]에 대한 자세한 내용은 여기를 참조하세요. 
+웹사이트 또는 앱 사용자는 푸시 알림을 받기 위해 옵트인해야 합니다. See [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) for more details. 
 
 ## 세분화 및 전달 규칙
 
 기본값으로 캠페인에 포함된 인앱 메시지는 해당 작업 공간의 모든 버전의 앱으로 전송됩니다. 예를 들어, 메시지는 웹 및 모바일 사용자 모두에게 전송됩니다. 웹 또는 모바일에만 인앱 메시지를 보내려면 캠페인을 적절하게 세그먼트해야 하며, 이는 기본값으로 Braze SDK를 통해 지원됩니다. 
 
-세그먼트의 **사용된 앱** 섹션에서 웹 사용자의 앱 아이콘만 선택하여 웹 사용자의 세그먼트를 만들 수 있습니다.
+You can create a segment of your web users by setting **Apps and websites targeted** to **Users from specific apps**, then select only your website for the **Specific Apps**.
 
-![세그먼트 세부 정보 페이지에서 웹 앱 선택됨][10]
+![Segment Details page with web app in focus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 이것은 사용자의 행동을 지능적으로 기반으로 하여 타겟팅할 수 있게 해줍니다. 웹 사용자가 모바일 앱을 다운로드하도록 유도하려면 이 세그먼트를 타겟 오디언스로 설정해야 합니다. 메시징 캠페인을 모바일 인앱 메시지를 포함하지만 웹 메시지를 포함하지 않는 메시징 캠페인을 보내려면 세그먼트에서 웹사이트 아이콘의 선택을 해제합니다.
 
@@ -72,20 +72,12 @@ text-align: center;
 </style>
 주요 통합   |    |   
 ----------- |---------------- | --------------------
-[![Android]({% image_buster /assets/img/braze_icons/android.svg %})]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/) |[![iOS]({% image_buster /assets/img/braze_icons/apple.svg %})]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/){: style="max-width:20%;margin-right:15px;border:0" class="noimgborder"} [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/) |[![Web]({% image_buster /assets/img/braze_icons/globe-02.png %})]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/){: style="max-width:25%;margin-right:15px;border:0" class="noimgborder"} [Web]({{site.baseurl}}/developer_guide/platforms/web/sdk_integration/)  
+[![Android]({% image_buster /assets/img/braze_icons/android.svg %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) |[![iOS]({% image_buster /assets/img/braze_icons/apple.svg %})]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift){: style="max-width:20%;margin-right:15px;border:0" class="noimgborder"} [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) |[![Web]({% image_buster /assets/img/braze_icons/globe-02.png %})]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web){: style="max-width:25%;margin-right:15px;border:0" class="noimgborder"} [Web]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web)  
 
 모든 통합   |    |   
 ----------- |---------------- | --------------------
-[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=android) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=ios){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=ios) | [![Flutter Android and iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/platforms/flutter/sdk_integration/){: style="max-width:20%;margin-top:5%;border:0" class="noimgborder"}  [Flutter Android and iOS]({{site.baseurl}}/developer_guide/platforms/flutter/sdk_integration/)
-[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/)
-[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platforms/unity/sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/platforms/unity/sdk_integration/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platforms/unity/sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/platforms/unity/sdk_integration/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platforms/xamarin/sdk_integration/){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platforms/xamarin/sdk_integration/) 
-[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platforms/roku/sdk_integration/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platforms/roku/sdk_integration/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platforms/unreal_engine/sdk_integration/){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/platforms/unreal_engine/sdk_integration/)
+[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=android) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=ios){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=ios) | [![Flutter Android and iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=flutter){: style="max-width:20%;margin-top:5%;border:0" class="noimgborder"}  [Flutter Android and iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=flutter)
+[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=react%20native){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=react%20native) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/)
+[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin) 
+[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine)
 
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
-[4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/#the-technical-side-of-the-integration-process
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[7]: {% image_buster /assets/img_archive/app_group_list.png %}
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[10]: {% image_buster /assets/img_archive/web-users-segment.png %}
-[11]: {% image_buster /assets/img_archive/web_push_macbook.png %}
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/

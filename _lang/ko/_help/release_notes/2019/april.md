@@ -12,7 +12,7 @@ description: "이 문서에는 2019년 4월의 릴리스 노트가 포함되어 
 
 섹션의 일부 수정 사항과 더불어, 메시지 인게이지먼트 이벤트 페이지에 새로운 [구독 이벤트]({{ site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#subscription-events)가 추가되었습니다. 
 
-이제 구독 그룹 상태 변경 데이터를 Braze에서 [세그먼트]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) 및 [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/)로 내보낼 수 있을 뿐만 아니라 [Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents)에서 설치 경로 이벤트도 설치할 수 있습니다.
+이제 구독 그룹 상태 변경 데이터를 Braze에서 [세그먼트]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) 및 [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mParticle/mparticle_for_currents/)로 내보낼 수 있을 뿐만 아니라 [Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/)에서 설치 경로 이벤트도 설치할 수 있습니다.
 
 또한 `canvas_step_id` 속성정보가 사용 가능한 [전환 이벤트에]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events) 추가되었습니다.
 

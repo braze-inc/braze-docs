@@ -17,11 +17,11 @@ tool:
 
 ## 개요
 
-For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) you've chosen for the campaign. 또한 특정 속성이나 행동을 가진 사용자가 전환할 가능성이 얼마나 높은지 또는 낮은지도 계산하여 유의미한 경우 표의 해당 면에 표시합니다. 각 속성 또는 관심 행동을 가진 사용자를 전체 캠페인 오디언스 전체의 비율과 비교합니다. 전환과 유의미한 상관관계가 없는 행동 및 속성은 표에 표시되지 않습니다.
+For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) you've chosen for the campaign. 또한 특정 속성이나 행동을 가진 사용자가 전환할 가능성이 얼마나 높은지 또는 낮은지도 계산하여 유의미한 경우 표의 해당 면에 표시합니다. 각 속성 또는 관심 행동을 가진 사용자를 전체 캠페인 오디언스 전체의 비율과 비교합니다. 전환과 유의미한 상관관계가 없는 행동 및 속성은 표에 표시되지 않습니다.
 
 전환 상관관계 분석을 실행하려면 드롭다운 메뉴에서 관심 있는 전환 이벤트를 선택합니다.
 
-!["전환 이벤트 선택"을 "주요 전환 이벤트 - A"로 설정하고 이벤트 설정을 "12시간 이내 구매(모든 제품)"로 설정한 예를 보여주는 전환 상관관계 패널입니다.][1]
+![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".]({% image_buster /assets/img/convcorr.png %})
 
 ## 무엇을 확인하나요?
 
@@ -52,4 +52,3 @@ For every campaign, Braze checks a list of attributes and user behaviors and com
 
 그런 다음 각 변수에 대해 해당 특정 속성 또는 관심 행동을 가진 사용자가 95% 신뢰도로 전환한 비율도 계산합니다. 이를 기본 이자율로 나누면 비율을 측정할 수 있습니다. 이 값이 1보다 훨씬 크면 해당 속성이나 행동을 가진 사용자가 전환할 가능성이 높다는 뜻입니다. 그보다 훨씬 적으면 가능성이 적습니다. 비율 자체의 값을 표에 표시합니다. 이 값은 95% 신뢰 수준에서 유의미할 정도로 1에서 충분히 멀리 떨어져 있는 경우에만 표시됩니다.
 
-[1]: {% image_buster /assets/img/convcorr.png %}

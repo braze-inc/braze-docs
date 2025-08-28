@@ -25,7 +25,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 
 1. **메시징** > **캔버스**로 이동하여 **캔버스 생성**을 선택한 다음 캔버스 기본 사항을 입력합니다.
 
-2. 캔버스에 "리드 스코어링 캔버스"와 같은 관련 이름을 지정하고, 더 나은 검색을 위해 "리드 관리"와 같은 태그를 지정하세요.<br><br>![캔버스 이름을 “리드 스코어링 캔버스”로 하고 태그를 “리드 관리”로 하여 캔버스를 만드는 1단계입니다.][1]{: style="max-width:80%;"}
+2. 캔버스에 "리드 스코어링 캔버스"와 같은 관련 이름을 지정하고, 더 나은 검색을 위해 "리드 관리"와 같은 태그를 지정하세요.<br><br>![Step 1 of creating a Canvas with the name “Lead Scoring Canvas” and tag “Lead Management”.]({% image_buster /assets/img/b2b/step_1_simple.png %}){: style="max-width:80%;"}
 
 ### 2단계: 입력 기준 설정
 
@@ -35,7 +35,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
     - 리드 점수 속성 이름으로 **커스텀 속성 값 변경하기**(예: `lead score`). If you haven’t created a lead scoring attribute yet, follow the steps in [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/). 리드 점수가 변경될 때마다 사용자가 캔버스에 들어가게 됩니다.
     - **이메일 주소 추가**
 
-![“액션 기반” 입력 일정 및 사용자 정의 속성 “리드 점수” 변경 및 이메일 주소 추가의 액션 기반 옵션으로 캔버스를 만드는 2단계입니다.][2]{: style="max-width:80%;"}
+![Step 2 of creating a Canvas with the entry schedule of “Action-Based” and action-based options of changing a custom attribute “lead score” and adding an email address.]({% image_buster /assets/img/b2b/step_2_simple.png %}){: style="max-width:80%;"}
 
 ### 3단계: 타켓 오디언스 식별
 
@@ -43,9 +43,9 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 
 모든 사용자는 리드 스코어링 자격이 있으므로, 타겟팅할 사용자 [세그먼트]({{site.baseurl}}/user_guide/engagement_tools/segments/)를 선택하고 추가 [필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 적용하여 회사별 규칙을 추가할 수 있습니다. 예를 들어, 직원, 이미 고객인 사용자 등을 제외할 수 있습니다. 
 
-![옵션을 사용하여 세그먼트 및 필터를 선택하여 항목 오디언스를 좁히는 캔버스 생성의 3단계입니다.][3]{: style="max-width:80%;"}
+![Step 3 of creating a Canvas with options for selecting segments and filters to narrow down the entry audience.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
-#### 3b단계: 캔버스 재자격 설정
+#### 3b단계: 캔버스 재사용 자격 설정
 
 사용자는 귀하와의 생애주기 동안 이 캔버스를 여러 번 거치게 되므로 이전에 나갔던 것만큼 빨리 다시 들어올 수 있도록 하세요. 이것은 재적격성 설정을 통해 달성할 수 있습니다. 
 
@@ -54,7 +54,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 - **지정된 기간**을 선택하세요.
 - 재자격을 '0' **초**로 설정하십시오.
 
-![“입력 제어” 섹션에는 “지정된 기간”에서 0초 동안 사용자가 이 캔버스를 다시 입력할 수 있도록 선택할 수 있습니다.][4]{: style="max-width:80%;"}
+![“Entry Controls” section that has selections for “Allow users to re-enter this Canvas” in a “Specified Window” of 0 seconds.]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
 
 #### 3단계 c: 전송 설정 업데이트
 
@@ -62,7 +62,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 
 **구독 설정**에서, **이 사용자에게 보내기:** **모든 사용자(구독 취소한 사용자 포함)**를 선택합니다. 
 
-![메시지 전송 옵션 설정을 위한 캔버스 생성의 4단계입니다.][5]{: style="max-width:80%;"}
+![Step 4 of creating a Canvas for setting message sending options.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
 
 ### 4단계: 캔버스 구축
 
@@ -70,7 +70,7 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 
 배리언트에서 더하기 아이콘을 선택한 다음 **작업 경로**를 선택합니다.
 
-![더하기 아이콘으로 열린 메뉴에 "작업 경로"가 표시된 캔버스가 있습니다.][6]{: style="max-width:60%;"}
+![Canvas with “Action Paths” displaying in the menu opened by the plus icon.]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
 
 #### 4b단계: 작업 그룹 만들기
 
@@ -83,19 +83,19 @@ Braze에서 리드 스코어링 워크플로우를 만드는 두 가지 주요 �
 - **그룹 3:** 1점 감소에 해당하는 모든 이벤트.
 - **다른 모든 사람:** 작업 경로를 사용하면 사용자가 조치를 취하는지 확인하기 위해 기다리는 창을 정의한 다음, 그들을 "기타 모든 사람" 그룹에 넣을 수 있습니다. 리드 스코어링의 경우, 이는 "비활동"에 대한 점수를 감소시킬 수 있는 기회입니다.
 
-![행동 경로에는 1점, 5점, 10점을 추가하는 행동 그룹; 1점과 10점을 빼는 행동 그룹; 그리고 “기타 모두”가 포함됩니다.][7]
+![Action Path containing Action Groups for adding one point, five points, and ten points; subtracting one point and ten points; and “Everyone Else”.]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
 
 #### 4c 단계: 각 그룹에 관련 이벤트를 포함하도록 구성하십시오
 
 각 작업 그룹에서 **트리거 선택**을 선택하고 해당 작업 그룹에 대해 포인트 수를 추가할 이벤트를 선택합니다. 트리거를 추가하여 리드 점수를 하나씩 증가시키는 모든 이벤트를 포함하세요. 예를 들어, 사용자가 세션을 시작할 때 앱에서 점수를 하나 올리거나 커스텀 이벤트(예: 등록 또는 웨비나 참여)를 수행할 수 있습니다. 
 
-![“모든 앱에서 세션 시작” 및 “커스텀 이벤트 수행” 트리거로 포인트를 추가하기 위한 작업 그룹.][8]{: style="max-width:80%;"}
+![Action Group for adding a point with the triggers of “Starting Session in Any App” and “Performing Custom Event”.]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
 
 #### 4d 단계: 사용자 업데이트 단계 추가
 
 각 행동 경로 아래에 생성된 각 캔버스 경로에 사용자 업데이트 단계를 추가하세요. 
 
-![캔버스 행동 경로를 표시하고 각 행동 그룹에 대한 분기된 사용자 업데이트 경로를 표시합니다.][9]{: style="max-width:80%;"}
+![Canvas displaying the Action Path with branched User Update paths for each Action Group.]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
 
 {: start=”2”}
 각 사용자 업데이트 단계의 **작성** 탭에서 해당 필드에 대해 다음을 수행하십시오:
@@ -133,7 +133,7 @@ Braze를 내부 데이터 모델(리드 스코어링 모델 포함)과 다양한
 예를 들어, 메시징 참여 데이터(예: 이메일 열기 및 클릭, 랜딩 페이지 인게이지먼트 등)는 리드의 인게이지먼트를 결정할 수 있습니다. Braze 스트리밍 내보내기 데이터 솔루션을 사용하여 이 데이터를 클라우드 데이터 웨어하우스로 다시 전달하고 리드 스코어링 모델의 입력으로 사용할 수 있습니다:
 
 - [Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- [Snowflake 보안 데이터 공유]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
+- [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
 {% tab 대상으로서 Braze %}
@@ -182,11 +182,11 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 | 헤더 | 콘텐츠 |
 | --- | --- |
-| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_f133d642-d4c1-41cf-8758-5743620c7b04/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 승인 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>토큰을 검색하려면 [OAuth 2.0 클라이언트 자격 증명 흐름에 대해 연결된 앱을 구성](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)한 다음 연결된 콘텐츠를 사용하여 Salesforce에서 베어러를 검색하세요: <br><br>{% raw %}<code>{% connected_content <mem_70b95646-68e6-4df5-8acc-dcbee4994388/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![웹훅이 Salesforce 웹훅 URL, PATCH HTTP 메서드, 원시 텍스트 요청 본문 및 요청 헤더로 구성됩니다.][10]{: style="max-width:80%;"}
+![Webhook being composed with a Salesforce webhook URL, PATCH HTTP method, raw text request body, and request headers.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### 2b 단계: 웹훅 전송 예약
 
@@ -200,20 +200,9 @@ Salesforce에서 리드 상태를 Braze에서 업데이트하려면 트리거된
 
 **타겟 오디언스** 단계에서 리드 상태가 이미 MQL 이상인 사용자를 제외하는 필터를 포함하세요. 예를 들어 "`lead_status` `is none of` `MQL`"과 같습니다.
 
-![웹훅 타겟팅 옵션은 “lead_status” 필터가 “MQL”이 아닌 경우입니다.][11]{: style="max-width:80%;"}
+![Webhook targeting options with the filter of “lead_status” is none of “MQL”.]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### 3단계: 캠페인 시작
 
 **시작**을 선택하고 고객이 MQL 리드 점수 임계값을 초과할 때 Salesforce에서 리드 상태가 변경되는 것을 확인하세요.
 
-[1]: {% image_buster /assets/img/b2b/step_1_simple.png %}
-[2]: {% image_buster /assets/img/b2b/step_2_simple.png %}
-[3]: {% image_buster /assets/img/b2b/step_3_simple.png %}
-[4]: {% image_buster /assets/img/b2b/entry_controls_simple.png %}
-[5]: {% image_buster /assets/img/b2b/step_4_simple.png %}
-[6]: {% image_buster /assets/img/b2b/action_paths_simple.png %}
-[7]: {% image_buster /assets/img/b2b/action_paths_selected_simple.png %}
-[8]: {% image_buster /assets/img/b2b/action_groups_simple.png %}
-[9]: {% image_buster /assets/img/b2b/user_update_paths_simple.png %}
-[10]: {% image_buster /assets/img/b2b/webhook.png %}
-[11]: {% image_buster /assets/img/b2b/step_3_webhook.png %}

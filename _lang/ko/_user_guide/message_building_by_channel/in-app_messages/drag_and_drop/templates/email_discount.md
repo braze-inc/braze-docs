@@ -18,7 +18,7 @@ description: "이 참조 페이지에서는 앱 내 메시지 끌어서 놓기 �
 
 드래그 앤 드롭 인앱 메시지를 만들 때 템플릿에 대해 **환영 할인이 포함된 이메일 가입을** 선택한 다음 **메시지 작성을** 선택합니다. 이 템플릿은 모바일 앱과 웹 브라우저 모두에서 지원됩니다.
 
-![할인이 포함된 이메일 가입 양식 템플릿이 포함된 인앱 메시지 편집기][img1]
+![The in-app message editor with the template for an email sign-up form with discount.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
 ### 2단계: 메시지 스타일을 설정하세요
 
@@ -30,7 +30,7 @@ description: "이 참조 페이지에서는 앱 내 메시지 끌어서 놓기 �
 
 이메일 캡처 요소의 플레이스홀더 텍스트와 레이블 텍스트를 사용자 지정할 수 있습니다.
 
-![이메일 캡처 요소를 사용자 지정할 수 있는 사이드 메뉴가 있는 인앱 메시지 편집기.][img2]
+![The in-app message editor with a side menu for customizing the email capture element.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
 
 #### 이메일 유효성 검사
 
@@ -42,7 +42,7 @@ description: "이 참조 페이지에서는 앱 내 메시지 끌어서 놓기 �
 
 ### 5단계: 메시지를 스타일링하세요
 
-드래그 앤 드롭 [인앱 메시지 구성 요소를][3] 사용하여 가입 양식과 할인의 모양과 느낌을 사용자 지정하세요.
+Customize the look and feel of your sign-up form and discount using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## 결과 분석
 
@@ -53,7 +53,4 @@ description: "이 참조 페이지에서는 앱 내 메시지 끌어서 놓기 �
 {% multi_lang_include drag_and_drop/templates.md section='이메일 이중 옵트인' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

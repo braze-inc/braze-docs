@@ -1,5 +1,5 @@
 ---
-nav_title: Funnel Reports
+nav_title: Funnel reports
 page_order: 4
 noindex: true
 layout: redirect

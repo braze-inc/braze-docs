@@ -1,5 +1,5 @@
 ---
-nav_title: Drag-And-Drop Editor
+nav_title: Drag-and-drop editor
 article_title: Drag-And-Drop Editor for Email
 alias: /dnd/
 page_order: 3
