@@ -3,7 +3,7 @@ nav_title: HTML Nachrichten
 article_title: Hinzufügen der Braze JavaScript-Schnittstelle zu WebViews für Swift
 platform: Swift
 page_order: 0.5
-description: "Lernen Sie, wie Sie die Braze JavaScript Schnittstelle zu Ihrer App hinzufügen."
+description: "Lernen Sie, wie Sie die Braze JavaScript Schnittstelle zu Ihrer App hinzufügen können."
 
 ---
 

@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+layout: bare
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in site.documents -%}
+  {%- assign hide_url = page.hidden -%}
+  {%- if page.collection == 'site_pages' -%}
+    {%- assign hide_url = false -%}
+  {%- endif -%}
+  {%- if hide_url == nil  -%}
+    {%- assign col_info = site.collections | where:"label", page.collection | first -%}
+    {%- if col_info.hidden -%}
+      {%- assign hide_url = col_info.hidden -%}
+    {%- endif -%}
+  {%- endif -%}
+  {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true %}
+  <url>
+    <loc>{{site.homeurl}}{{site.baseurl}}{{ page.url }}</loc>
+    <lastmod>{{site.time | date: "%Y-%m-%d"}}</lastmod>
+  </url>
+  {%- endunless -%}
+{%- endfor -%}
+</urlset>

@@ -3,41 +3,12 @@ nav_title: 혁신을 위한 노력
 article_title: 혁신을 위한 노력
 description: "이 참조 문서는 Braze의 혁신을 위한 노력을 기술하는 기본 위치입니다."
 noindex: true
+layout: redirect
+redirect_to: https://www.braze.com/docs/developer_guide/disclosures/innovation_statement
 page_order: 9
 alias: /innovation_statement/
 ---
 
 <!--
-Warning! Don't make any changes to this document without approval from the legal department.
+This redirect page exists only to funnel users to the English version of this statement. It should exist only in English and Japanese.
 -->
-
-# 혁신을 위한 노력
-
-{% tabs %}
-{% tab 한글 %}
-_마지막 업데이트 2022년 9월._
-
-Braze는 기존 특징, 기능, 제품 및 서비스를 개선하고 새로운 특징, 기능, 제품 및 서비스를 만들어 나가고자 지속적으로 노력하고 있습니다. 이를 위해 Braze는 고객의 피드백을 구하고 고객의 요구 사항을 예측하기 위해 노력합니다.
-
-혁신 전략의 일환으로, Braze는 Braze 서비스에 포함된 정보와 Braze 서비스의 사용 방식(e.g: 대시보드에서의 사용자 클릭 및 이동 분석)을 분석합니다. 일반적으로 이를 통해 고객에게 자문 및 분석 정보를 제공하고, 서비스를 구축, 제공 또는 개선합니다. 단, 이러한 사용에는 다른 고객에게 서비스를 제공하기 위해 최종사용자의 고객 프로필 구축이나 수정 또는 다른 소스에서 Braze가 획득한 데이터의 수정이나 보강은 포함되지 않습니다.
-
-또한 Braze는 대시보드 사용자와 소통하여 서비스 사용을 최적화하는 방법을 교육하고 알리며 Braze의 혁신 노력을 공유합니다. Braze는 대시보드 사용자에게 이메일을 보내거나 대시보드를 통해 그들과 소통할 수 있습니다. 고객은 새로운 릴리스가 있을 때 알림을 받기 위해 Braze의 GitHub 리포지토리에 가입할 수도 있습니다.
-
-Braze는 이러한 활동의 결과로 생성된 모든 자료에 대해 모든 권리, 소유권 및 이익을 소유합니다.
-
-{% endtab %}
-{% tab 일본어 %}
-{% raw %}
-_최종 업데이트 날짜는 2022년 9월입니다._
-
-Brazeは、既存の機能を強化し、新しい機能、機能、製品、およびサービスを作成するよう絶えず努力しています。そのために、Brazeは顧客からのフィードバックを求めるだけでなく、顧客のニーズを予測するよう努めています。
-
-イノベーション戦略の一環として、Brazeは、顧客全般に対してコンサルティングおよび分析情報を提供するために、ならびに、そのサービスを構築、提供または改善するために、Brazeサービスに含まれる情報とBrazeサービスの使用方法（ダッシュボード全体でのユーザーのクリックや動きの分析など）を分析します（ただし、当該使用に、他の顧客に対するサービス提供の際に使用するためにエンドユーザーのプロフィールを構築もしくは修正すること、または、Brazeが他の情報源から入手したデータを訂正もしくは増強することが含まれないことを前提とします）。
-
-Brazeはまた、（ダッシュボード）ユーザーと通信して、サービスの使用を最適化する方法を教育および通知し、Brazeの革新的な取り組みを共有します。Braze는 (대시보드) 사용자에게 이메일을 보내거나 대시보드를 통해 사용자와 통신할 수 있습니다.顧客は、BrazeのGitHubリポジトリにサブスクライブして、新しいリリースが作成されたときに通知を受け取ることもできます。
-
-Brazeは、そのような活動から生じるあらゆる資料に対するすべての権利、権原、および利益を所有します。
-
-{% endraw %}
-{% endtab %}
-{% endtabs %}

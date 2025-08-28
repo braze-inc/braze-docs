@@ -115,6 +115,7 @@
 
 <script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
 
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/copy-heading-tag-links.js"></script>
 
 <script type="text/javascript">
 
@@ -183,5 +184,8 @@
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
+
+<meta name="tool" content="{{ page.tool | join: ', ' | default: '' }}" />
+<meta name="platform" content="{{ page.platform | join: ', ' | default: '' }}" />
 
 </head>

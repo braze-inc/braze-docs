@@ -23,11 +23,11 @@ Dans certains événements d’engagement des messages Currents, les propriété
 
 ## Partenariat Amazon Personalize
 
-Amazon Personalize utilise l'apprentissage automatique pour aider à créer des recommandations de haute qualité pour votre site web et vos applications. Amazon Personalize vous permet d’améliorer l’engagement client avec des recommandations personnalisées en temps réel sur les produits et le contenu, et des promotions marketing ciblées. Pour plus d'informations, consultez notre documentation [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/).
+Amazon Personalize utilise l'apprentissage automatique pour aider à créer des recommandations de haute qualité pour votre site web et vos applications. Amazon Personalize vous permet d’améliorer l’engagement client avec des recommandations personnalisées en temps réel sur les produits et le contenu, et des promotions marketing ciblées. Pour plus d'informations, consultez notre documentation [Amazon Personalize]({{site.baseurl}}/partners/amazon_personalize/).
 
 ## Partenariat avec Vizbee
 
-Vizbee permet à tous les smartphones et TV connectées de votre maison de fonctionner ensemble comme un seul appareil pour une expérience utilisateur exceptionnelle. Vizbee vous permet d’exploiter les canaux existants de marketing sur les applications mobiles comme notifications, liens profonds et e-mails, pour acquérir et engager le public sur tous les appareils de télévision connectés (comme Roku, FireTV, Samsung TV, LG TV, etc.) Pour plus d'informations, consultez notre [Vizbee]({{site.baseurl}}/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/) documentation. 
+Vizbee permet à tous les smartphones et TV connectées de votre maison de fonctionner ensemble comme un seul appareil pour une expérience utilisateur exceptionnelle. Vizbee vous permet d’exploiter les canaux existants de marketing sur les applications mobiles comme notifications, liens profonds et e-mails, pour acquérir et engager le public sur tous les appareils de télévision connectés (comme Roku, FireTV, Samsung TV, LG TV, etc.) Pour plus d'informations, consultez notre [Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/) documentation. 
 
 ## Partenariat avec Bluedot
 
@@ -35,4 +35,4 @@ Bluedot est une plateforme de localisation qui fournit des capacités de localis
 
 ## Partenariat Iterate 
 
-Iterate facilite la connaissance de vos clients, offrant des outils de sondage intelligents et conviviaux qui ressemblent à votre marque et qui la reflètent. Pour plus d'informations, consultez notre [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) documentation. 
+Iterate facilite la connaissance de vos clients, offrant des outils de sondage intelligents et conviviaux qui ressemblent à votre marque et qui la reflètent. Pour plus d'informations, consultez notre [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/) documentation. 

@@ -30,7 +30,9 @@ There are several details to consider when creating a delay in your Canvas journ
 Personalized delays and extended delays are in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
-Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by.
+Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. This will override the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
+
+Note that it's possible for a custom attribute or context variable to neither have a specific time nor a time zone if it's a string data type. If it's a time data type, you'll need to specify the time and time zone. However, if the custom attribute or context variable is an "irrelevant" string (such as "product_name"), the user will exit the Canvas.
 
 Let's say you want to remind your customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, you can select this context variable to delay by. In this case, your Context step would have the following fields:
 
@@ -41,8 +43,6 @@ Let's say you want to remind your customers to purchase toothpaste 30 days from 
 ![The "product_reminder_interval" and its value.]({% image_buster /assets/img/context_step1.png %})
 
 Next, because you want to remind your customers 30 days from now, you'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from your Context step. This means your users will be delayed until the selected Context variable.
-
-![Example of using context variables with a Delay step to delay users based on the "product_reminder_interval".]({% image_buster /assets/img/context_step2.png %})
 
 #### Extended delays
 
@@ -59,7 +59,7 @@ The **After a duration** option allows you to delay users for a set number of se
   
 Note the difference between how "days" and "calendar days" are calculated.
   
-- A "day" is 24 hours and calculated from the time the user enters the Delay step. 
+- A "day" is 24 hours and is calculated from the time the user enters the Delay step. 
 - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
 
 You can also select **At a specific time** to specify when the users will advance in the Canvas. This option takes into account the time the user entered the Delay step. If this time is beyond the time configured in the settings, we'll append more hours to the delay. As an example, let's say today is December 11, and our Delay step is set to **After a duration** of one week at 8 am UTC. If a user enters the Delay step on December 4, they would be released from the Delay step to continue their journey today if they originally entered the Delay step at a time before 8 am UTC. If they entered the Delay step after this time, the user will be delayed until the next day (the next occurrence of this time). 
@@ -80,7 +80,7 @@ If you're participating in the [Context step early access]({{site.baseurl}}/user
 {% endalert %}
 
 For example, users won't receive steps or messages in these scenarios:
-- A message is scheduled to send on May 3rd at 9 pm, but the Delay step expires on May 3rd at 9 am. 
+- A message is scheduled to be sent on May 3rd at 9 pm, but the Delay step expires on May 3rd at 9 am. 
 - A Canvas step delays until a specific time in the user's local time zone, but the users don't have a time zone set on their user profile. The delay then defaults to the company time zone for these users, which has already passed the specified time. 
   
 ##### Users will exit if a subsequent Delay step is within a prior Delay step's timeline

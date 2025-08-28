@@ -1,5 +1,5 @@
 ---
-nav_title: Innovation Statement
+nav_title: Innovation statement
 article_title: Innovation Statement
 description: "This reference article is home to Braze's innovation statement."
 noindex: true
@@ -13,21 +13,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Innovation Statement
 
-{% tabs %}
-{% tab English %}
-_Last updated 2 June 2025._
-
-Braze continually creates new features, functionality, products and services. To do so, Braze not only seeks feedback from its customers, but also endeavors to anticipate its customers’ needs.
-
-As part of its innovation strategy, Braze analyzes information contained in the Services and how the Services are used (e.g., analysis of Dashboard User clicks and movements across the dashboard), in order to provide consultative and analytical information to its customers generally, and in order to build, provide or improve the Services or any associated services, provided that this use does not include building or modifying End User profiles to use in providing services to another customer, or correcting or augmenting data acquired by Braze from another source.
-Braze also communicates with Dashboard Users to educate and inform them about ways to optimize their use of the Services and to share Braze’s innovation efforts. Braze may send emails to Dashboard Users or communicate with them through the Services. Customers can also subscribe to Braze’s GitHub repositories to receive notifications when new releases are made.
-
-Braze owns all right, title and interest in and to any material resulting from any of its innovation activities.
-
-_This page has been prepared and is incorporated into the customer’s agreement in English, which English version shall govern in all respects. Any translations of this page are for convenience and reference purposes only._
-
-{% endtab %}
-{% tab Japanese %}
+{% if site.language == 'ja' %}
 {% raw %}
 _最終更新日は2025年6月2日です。_
 
@@ -40,5 +26,18 @@ Brazeは、そのイノベーション活動から生じるあらゆる資料に
 
 _本ページは、英語で作成され、お客様との契約書の英語版に組み込まれ、当該英語版が一切の事項について優先して適用されるものとします。本ページの翻訳は、便宜上及び参照目的のためにのみ作成されています。_
 {% endraw %}
-{% endtab %}
-{% endtabs %}
+
+{% else %}
+{% multi_lang_include braze_legal/english_language_governance.md %}
+
+_Last updated 2 June 2025._
+
+Braze continually creates new features, functionality, products and services. To do so, Braze not only seeks feedback from its customers, but also endeavors to anticipate its customers’ needs.
+
+As part of its innovation strategy, Braze analyzes information contained in the Services and how the Services are used (e.g., analysis of Dashboard User clicks and movements across the dashboard), in order to provide consultative and analytical information to its customers generally, and in order to build, provide or improve the Services or any associated services, provided that this use does not include building or modifying End User profiles to use in providing services to another customer, or correcting or augmenting data acquired by Braze from another source.
+Braze also communicates with Dashboard Users to educate and inform them about ways to optimize their use of the Services and to share Braze’s innovation efforts. Braze may send emails to Dashboard Users or communicate with them through the Services. Customers can also subscribe to Braze’s GitHub repositories to receive notifications when new releases are made.
+
+Braze owns all right, title and interest in and to any material resulting from any of its innovation activities.
+
+_This page has been prepared and is incorporated into the customer’s agreement in English, which English version shall govern in all respects. Any translations of this page are for convenience and reference purposes only._
+{% endif %}

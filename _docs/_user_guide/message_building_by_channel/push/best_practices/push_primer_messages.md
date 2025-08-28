@@ -1,5 +1,5 @@
 ---
-nav_title: Push Primer In-App Messages
+nav_title: Push primer in-app messages
 article_title: Push Primer In-App Messages
 page_order: 1
 page_type: reference
@@ -18,60 +18,67 @@ To create a push primer in-app message in Braze, you can use the button on-click
 
 ## Prerequisites
 
-This guide uses a button [on-click behavior](#button-actions) that is only supported on newer SDK versions. Note that some of these SDKs may not be released yet. Visit the following links to check the current version:
+This feature requires [button on-click behavior](#button-actions), which is supported in the following minimum versions or later:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-### Notes for development teams
+Additionally, note the following platform-specific details:
 
-#### Android
+{% tabs local %}
+{% tab android %}
+|OS version|Additional information|
+|----------|----------------------|
+| **Android 12 and earlier** | Implementing push primers is not recommended because push is opted-in by default. |
+| **Android 13+** | If a user denies your push permission prompt twice, Android blocks further prompts—including Braze push primer messages. To grant permission after this, users must manually enable push for your app in their device settings. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
 
-- **Android 12 and under:** Implementing push primers is not recommended because push is opted-in by default.
-- **Android 13 and above:** If you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again.
+{% tab swift %}
+### General information
 
-#### iOS
-
-- The iOS prompt can be displayed only once per install, enforced by the operating system.
+- The push prompt can be displayed only once per install, enforced by the operating system.
 - The prompt will not display if the app's push setting is explicitly on or off, it will only display for users with [provisional authorization](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
-  - If we find the app's push setting is on, Braze does not show the in-app message as the user is already opted-in.
-  - If the app's push setting is off, you should forward the user to the app's notification settings in the settings app.
+  - **App's push setting is on:** Braze will not show the in-app message, as the user has already opted-in.
+  - **App's push setting is off:** You'll need to redirect the user to your app's push notification settings within the device settings.
 
-##### Manual code removal
+### Manual code removal
 
 The in-app message that you set up using this tutorial will call the native push prompt code automatically when a user clicks on the in-app message button. To avoid requesting push notification permission twice, or at the wrong time, a developer should modify any existing push notification integration they implemented to make sure that your in-app message is the first push notification primer your users see.
 
-The developer should review their implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, look for and remove references to the following code:
+Your development team should review your implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, you would remove references to the following code:
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
 ```objc
 requestAuthorizationWithOptions
 ```
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 ```swift
 requestAuthorization
 ```
-{% endtab %}
-{% tab JavaScript %}
+{% endsubtab %}
+{% subtab JavaScript %}
 ```javascript
 braze.requestPushPermission()
 // or
 appboy.registerAppboyPushMessages()
 ```
-{% endtab %}
-{% tab Java %}
+{% endsubtab %}
+{% subtab Java %}
 ```java
 android.permission.POST_NOTIFICATIONS
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
 ## Step 1: Create an in-app message
 
-[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) as you usually would.
+First, [create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), then select your message type and layout.
 
-Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a fullscreen in-app message, an image is required. 
+To ensure you have enough space for both your message and buttons, use a fullscreen or modal message layout. If you choose fullscreen, note that an image is required.
 
 ## Step 2: Build your message
 
@@ -79,11 +86,15 @@ Now it's time to add your copy! Remember that a push primer is supposed to prime
 
 For example, a news app might use the following push primer:
 
-> Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
+```plaintext
+Breaking news on the go! Enable push notifications to get alerts for major stories and topics that matter to you.
+```
 
 While a streaming app might use the following:
 
-> Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
+```plaintext
+Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
+```
 
 For best practices and additional resources, refer to [Creating custom opt-in prompts]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 

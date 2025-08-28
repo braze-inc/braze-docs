@@ -1,5 +1,5 @@
 ---
-nav_title: User Management
+nav_title: User management
 article_title: LINE User Management
 page_order: 0
 description: "This article covers the LINE user ID and how to set it."
@@ -41,7 +41,7 @@ There are a number of scenarios where `native_line_id` is set on the user profil
 
 When viewing a user profile in the Braze dashboard, you can see whether it has the `native_line_id` attribute set by going to the **Engagement** tab > **Contact Settings** section > **LINE** section.
 
-If the `native_line_id` has been set, it will under **LINE User ID**. Otherwise, it won't appear.
+If the `native_line_id` has been set, it will be shown under **LINE User ID**. Otherwise, it won't appear.
 
 ![Line Contact Settings in the Engagment tab.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 

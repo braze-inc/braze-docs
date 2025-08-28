@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Identify Users"
+nav_title: "POST: Identify users"
 article_title: "POST: Identify Users"
 search_tag: Endpoint
 page_order: 3
@@ -29,61 +29,15 @@ Identifying a user requires an `external_id` to be included in the following obj
 - `emails_to_identify` 
 - `phone_numbers_to_identify`
 
-If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified.
-
-Note the following:
-
-- When these subsequent associations are made with the `merge_behavior` field set to `none`, only the push tokens and message history associated with the user alias are retained; any attributes, events, or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), then re-associate the attributes, events, and purchases with the identified user.
-- When associations are made with the `merge_behavior` field set to `merge`, this endpoint will merge [specific fields](#merge) found on the anonymous user to the identified user.
-- Users can only have one alias for a specific label. If a user already exists with the `external_id` and has an existing alias with the same label as the alias-only profile, then the user profiles will not be combined.
+If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified. Users can only have one alias for a specific label. If a user already exists with the `external_id` and has an existing alias with the same label as the alias-only profile, then the user profiles will not be combined.
 
 {% alert tip %}
 To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user information is already present.
 {% endalert %}
 
-## Prerequisites
+### Merging behavior
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.identify` permission.
-
-## Rate limit
-
-{% multi_lang_include rate_limits.md endpoint='users identify' %}
-
-## Request body
-
-```
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
-```
-
-```json
-{
-   "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
-   "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
-}
-```
-
-### Request parameters
-
-You can add up to 50 user aliases per request. You can associate multiple additional user aliases with a single `external_id`.
-
-{% alert important %}
-One of the following is required: `aliases_to_identify`, `emails_to_identify`, or `phone_numbers_to_identify` per request. For example, you can use this endpoint to identify users by email by using `emails_to_identify` in your request.
-{% endalert %}
-
-| Parameter                   | Required | Data Type                           | Description                                                                                                                                                                 |
-|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `aliases_to_identify`       | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify`        | Required | Array of aliases to identify object | Required if `email` is specified as the identifier. Email addresses to identify users. See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
-| `phone_numbers_to_identify` | Required | Array of aliases to identify object | Phone numbers to identify users.                                                                                                                                            |
-| `merge_behavior`            | Optional | String                              | One of `none` or `merge` is expected.                                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-#### Merge_behavior field {#merge}
-
-Setting the `merge_behavior` field to `merge` sets the endpoint to merge the following list of fields found **exclusively** on the anonymous user to the identified user. Setting the field to `none` will not merge any user data to the identified user profile. By default, this field will set to `merge`.
+By default, this endpoint will merge the following list of fields found **exclusively** on the anonymous user to the identified user.
 
 {% details List of fields that are merged %}
 - First name
@@ -120,6 +74,44 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge the fol
 - Session data if the app exists on both user profiles
   - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
 {% enddetails %}
+
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.identify` permission.
+
+## Rate limit
+
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
+
+## Request body
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+```json
+{
+   "aliases_to_identify" : (required, array of alias to identify objects),
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
+},
+```
+
+### Request parameters
+
+You can add up to 50 user aliases per request. You can associate multiple additional user aliases with a single `external_id`.
+
+{% alert important %}
+One of the following is required: `aliases_to_identify`, `emails_to_identify`, or `phone_numbers_to_identify` per request. For example, you can use this endpoint to identify users by email by using `emails_to_identify` in your request.
+{% endalert %}
+
+| Parameter                   | Required | Data Type                           | Description                                                                                                                                                                 |
+|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `aliases_to_identify`       | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `emails_to_identify`        | Required | Array of aliases to identify object | Required if `email` is specified as the identifier. Email addresses to identify users. See [Identifying users by email](#identifying-users-by-email).                                                                                                              |
+| `phone_numbers_to_identify` | Required | Array of aliases to identify object | Phone numbers to identify users.                                                                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Identifying users by email addresses and phone numbers
 
@@ -164,7 +156,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
       "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
-  "merge_behavior": "merge"
 }'
 ```
 

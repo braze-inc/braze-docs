@@ -15,8 +15,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > 드래그 앤 드롭 편집기를 사용하면 드래그 앤 드롭 편집 경험을 통해 캠페인 또는 캔버스에서 완전히 커스텀되고 개인화된 인앱 메시지를 만들 수 있습니다.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
-
 기존 커스텀 HTML 템플릿이나 타사에서 생성한 템플릿을 사용하려면 드래그 앤 드롭 편집기에서 다시 생성해야 합니다.
 
 Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? 캠페인은 단일의 간단한 메시징 캠페인에 적합하며, 캔버스는 여러 단계의 사용자 여정에 적합합니다. 메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 인앱 메시지를 만드는 단계로 들어가 보겠습니다.
@@ -69,7 +67,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 드래그 앤 드롭 편집기에서 인앱 메시지를 디자인하기 시작하려면 **구축 메시지**를 선택하세요.
 
-![브레이즈 템플릿 섹션에서는 기본 템플릿, 배경 이미지, 전화번호 캡처 또는 빈 템플릿을 선택할 수 있습니다.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![The Braze Templates section where you can choose a basic, background image, phone number capture, or blank template.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 템플릿의 **템플릿** 섹션에서 모든 템플릿에 액세스할 수 있습니다.
 
@@ -135,7 +133,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 - 사용 가능한 편집기 블록 및 해당 속성 목록은 [편집기 블록]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)을 참조하십시오.
 - 메시지의 모양과 느낌을 사용자 정의하는 데 도움이 필요하면 [스타일 설정]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/)을 확인하세요.
-- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## 5단계: 인앱 메시지를 테스트하세요
 
@@ -175,6 +173,8 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 네, 메시지에서 최대 두 개의 버튼 클릭을 기준으로 세그먼트할 수 있습니다. 이를 위해 버튼의 **보고용 식별자**를 "0" 및 "1"로 설정하면 각각 "인앱 메시지 버튼 1 클릭" 및 "인앱 메시지 버튼 2 클릭" 세분화 필터에 해당합니다.
 
+![The "Identifier for Reporting" field with a value of "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### 내 인앱 메시지를 커스텀 HTML 또는 JavaScript를 사용하여 커스터마이징하거나 기존 HTML 메시지를 편집기로 전송할 수 있습니까?
 
 기존 HTML 메시지를 편집기로 직접 전송할 수는 없지만, 커스텀 코드 블록에 원시 HTML, CSS 및 JavaScript를 삽입할 수 있습니다. 커스텀 코드 블록을 사용하여 타사 비디오 및 연결된 콘텐츠 또는 조건문과 같은 고급 Liquid를 포함할 수 있습니다.
@@ -187,6 +187,6 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 네. 향후 캠페인 또는 캔버스 단계에서 다시 사용하려는 모든 인앱 메시지의 경우, 편집기를 종료한 후 사용할 수 있는 **템플릿으로 저장** 버튼을 사용하여 커스텀 템플릿으로 저장할 수 있습니다. 템플릿으로 저장하기 전에 먼저 캠페인을 시작하거나 초안으로 저장해야 합니다.
 
-![텍스트 업데이트를 위한 가입을 위한 인앱 메시지 미리보기.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![A preview of an in-app message for a product tour.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 **탬플릿** > **인앱 메시지 템플릿**으로 이동하여 인앱 메시지 템플릿을 생성하고 저장할 수도 있습니다.

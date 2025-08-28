@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
+nav_title: "POST: Send Canvas messages using API-triggered delivery"
 article_title: "POST: Send Canvas Messages Using API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ To use this endpoint, you'll need to generate an API key with the `canvas.trigge
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
 ## Request body
 

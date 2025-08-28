@@ -1,5 +1,5 @@
 ---
-nav_title: Personalized Paths 
+nav_title: Personalized Paths
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
 description: "Personalized Paths lets you personalize any point of a Canvas journey for individual users based on conversion likelihood."
@@ -14,7 +14,7 @@ tool: Canvas
 
 When Personalized Paths is turned on in an Experiment Path step, the behavior is slightly different depending on if your Canvas is set to send once or to recur:
 
-- **Single-send Canvas:** A group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure—at least 24 hours for best results. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
+- **Single-send Canvas:** A group of users is held back in a delay group. The remaining users pass into an initial test to train a predictive model for a duration you configure—at least 24 hours for best results. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the predictive model learned during the initial test.
 - **Recurring, action-triggered, and API-triggered Canvases:** An initial experiment is performed on all users who enter the Experiment Path during a specified window. To maintain the integrity of the experiment, if a user receives multiple messages before the window ends, they'll be assigned to the same variant each time. After the experiment window, each user is sent down the path most likely to result in conversion for them.
 
 ## Using Personalized Paths
@@ -27,7 +27,9 @@ Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/can
 
 ### Step 2: Configure Personalized Paths settings
 
-Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). If you choose a conversion event with opens or clicks to determine the winner, then only the first Message step in the path that generates opens or clicks will contribute to determining the winner. Subsequent steps in the path are not considered.
+Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). 
+
+If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
 
 Then set the **Experiment Window**. The **Experiment Window** determines how long users will be sent down all paths before choosing the best path for each user in the delay group. The window begins when the first user enters the step.
 
@@ -56,7 +58,7 @@ Finish setting up your Canvas as needed, then launch it. When the first user has
 
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
 
-When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion based on the recommendation of the look-alike model.
+When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion based on the recommendation of the predictive model.
 
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
@@ -85,9 +87,9 @@ The **Initial Experiment** tab shows the metrics for each path during the experi
 
 ![Results of an initial experiment sent to determine the best performing path for each user. A table shows the performance of each path based on various metrics for the target channel.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
-By default, the test looks for associations between user’s custom events and their path preferences. This analysis detects whether custom events increase or decrease likelihood of responding to a particular path. These relationships are then used to determine which users gets assigned which path after the experiment window passes.
+By default, the test looks for associations between user’s custom events and their path preferences, or the message variant a user best responds to. This analysis detects whether custom events increase or decrease likelihood of responding to a particular path. These relationships are then used to determine which users gets assigned which path after the experiment window passes.
 
-The relationships between custom events and message preferences are displayed in the table on the **Initial Experiment** tab.
+The relationships between custom events and path preferences are displayed in the table on the **Initial Experiment** tab.
 
 ![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 

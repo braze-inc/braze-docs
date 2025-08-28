@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: Segmentation Filters
+nav_title: Segmentation filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
@@ -286,16 +286,16 @@ glossaries:
     description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
       - Channel subscription behavior
-  - name: Push Enabled
-    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who explicitly activated push notifications for any of the apps in your workspace. For these users, this count includes only foreground push.<br><br>Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+  - name: Foreground Push Enabled
+    description: Segments your users who have provisional push authorization or are enabled for foreground push. Specifically, this count includes:<br>1. iOS users who are provisionally authorized for push. <br>2. Users who are foreground push enabled and whose push subscription status is not unsubscribed, for any of your apps. For these users, this count includes only foreground push.<br><br>Foreground Push Enabled does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - Channel subscription behavior
-  - name: Push Enabled For App
-    description: Segments by whether users have push enabled for your app on their device. These users are reachable via push but might not be opted in. This count includes users who have provisionally authorized foreground and background push tokens.
+  - name: Foreground Push Enabled for App
+    description: Segments by whether users have push enabled for your app on their device. Users who are foreground push enabled for an app. This does not take push subscription status into account. This count includes users who have provisionally authorized foreground and background push tokens.
     tags:
       - Channel subscription behavior
-  - name: Background Push Enabled
-    description: Segments by whether users have a push token and haven't unsubscribed.
+  - name: Background or Foreground Push Enabled
+    description: Segments by whether users have a push token and haven't unsubscribed. Users who are background or foreground push enabled for any of your apps.
     tags:
       - Channel subscription behavior
   - name: Push Opt In Date
@@ -395,11 +395,11 @@ glossaries:
     tags:
       - App
   - name: Most Recent App Version Name
-    description: Segments by the recent name of the user's app.
+    description: Segments by the recent name of the user's app.<br><br>When using "less than" or "less than or equal to", if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.
     tags:
       - App 
   - name: Most Recent App Version Number
-    description: Segments by the recent app version number of the user's app.
+    description: Segments by the recent app version number of the user's app.<br><br>When using “less than” or “less than or equal to”, if the main app version doesn't exist, this filter will return `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.<br><br>It may take time for the current app versions to populate. The app version on the user profile updates when the information is captured by the SDK, which relies on when users open their apps. If the user doesn't open the app, the current version won't be updated. These filters also won't apply retroactively. It's good to use "greater than" or "equal" to current and future versions, but using past version filters may cause unexpected behaviors.
     tags:
       - App 
   - name: Uninstalled

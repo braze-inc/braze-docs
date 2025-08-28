@@ -1,5 +1,5 @@
 ---
-nav_title: Accessing Your Account
+nav_title: Accessing your account
 article_title: Accessing Your Account
 page_order: 2
 page_type: reference
@@ -43,6 +43,34 @@ The Braze dashboard supports the following browsers:
 
 If your Braze dashboard says you have an unexpected error and your browser console tool shows the error `ReferenceError: structuredClone is not defined`, your browser is outdated. If this error keeps reoccurring, uninstall and reinstall your browser.
 
+## Accessing multiple Braze dashboards
+
+Braze doesn't allow you to register the same email address to multiple dashboard users in the same cluster (for example, if you have two dashboards on US-01). You can use the same email to create accounts on different clusters (for example, if you have one dashboard on US-01 and one on US-05). If you need to access multiple Braze dashboards in the same cluster, you can do the following:
+
+### Use email aliases
+
+If your email provider is Gmail, you can create aliases by adding a `+` sign followed by any text to your email address. For example:
+- **Original email:** `rocky@gmail.com`
+- **Alias email:** `rocky+1@gmail.com`
+
+Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you log in.
+
+### Create separate aliases with other providers
+
+If your email provider doesn't support `+` aliasing, you can still create separate aliases, such as setting up `rocky@braze.com` to forward to `rocky.lotito@braze.com`. This allows multiple addresses to funnel to the same inbox while being recognized as different emails by Braze.
+
+### Use multi-company developers
+
+The multi-company developers feature allows sharing of a single user account across multiple companies. Users can toggle between different company dashboards from their user profile menu.
+
+If you have SSO and want to set up multi-company developers, you need to enable a SAML Custom Entity ID by setting up a custom SAML SSO integration. Follow the steps in [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), but apply these changes:
+- Change **Entity ID** to `braze_dashboard_<companyID>` for each dashboard integration.
+- Reach out to your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
+
+### Considerations for Single Sign-On (SSO)
+
+If you use Single Sign-On (SSO), be aware that having multiple different email addresses could lead to complications. Confirm that your SSO settings are configured correctly to avoid access issues.
+
 ## Troubleshooting
 
 ### Resetting your password
@@ -79,3 +107,36 @@ The editor may experience loading issues due to the following:
 If you're still experiencing issues, [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Before doing so, check that your IT administrator has confirmed that `*.bz-rndr.com` is allowlisted on your end.
 {% endalert %}
 
+### Accessing Braze Learning
+
+If you're experiencing issues logging into Braze Learning and find yourself stuck in a loop that redirects you to the dashboard, do the following steps:
+
+1. If you have multiple Braze accounts, logging in with the wrong account twice will send you to the Braze dashboard. Confirm you're logging into the correct account. 
+2. If you have an ad blocker, confirm it is turned off. It may block cookies necessary for single sign-on functionality.
+3. Go to Company Settings > Security Settings and verify that single sign-on (SSO) is turned on.
+4. Confirm that your dashboard user profile includes both a first and last name. Not having a last name can disrupt the login process.
+5. Access Braze Learning from your dashboard by going to **Support** > **Braze Learning**. 
+6. If you continue to experience issues, consider re-creating your account. Users who accessed Braze Learning during the free trial phase may have difficulties accessing it now.
+
+### Two-factor authentication (2FA) issues
+
+If a user is experiencing issues with Two-Factor Authentication (2FA) and can't access the Braze dashboard, it may be due to several reasons. Most commonly, they may no longer have access to the registered phone number or the device where the Authy app is installed.
+
+An admin should reset the 2FA for the affected user by doing the following: 
+
+1. Go to **Manage Users**.
+2. Select **Edit User** for the user experiencing 2FA issues.
+3. Choose the option to Reset 2FA.
+4. Confirm the 2FA reset when prompted.
+5. If the reset doesn't immediately resolve the issue, clear your cookies and cache.
+
+Braze cannot reset 2FA on behalf of users for security reasons, so if the admin is unable to reset 2FA, a support ticket should be created.
+
+#### Considerations
+
+- If 2FA is enforced at the company level: After the reset, the user will be prompted to set up their 2FA again the next time they log in.
+- If 2FA is not enforced at the company level: The user will log into the dashboard without needing to set up 2FA again. If they wish to enable 2FA, they can do so in Account Settings.
+
+{% alert note %}
+This reset process also applies to users who have been locked out of their account due to requesting too many tokens within the last hour.
+{% endalert %}

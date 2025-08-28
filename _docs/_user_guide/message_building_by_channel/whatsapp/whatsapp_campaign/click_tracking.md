@@ -1,7 +1,7 @@
 ---
-nav_title: Click Tracking
+nav_title: Click tracking
 article_title: Click Tracking
-page_order: 2
+page_order: 3
 description: "This reference article covers how to turn on click tracking in your WhatsApp messages, test shortened links, use your custom domain in tracked links, and more."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -15,7 +15,7 @@ channel:
 
 > This page covers how to turn on click tracking in your WhatsApp messages, test shortened links, use your custom domain in tracked links, and more.
 
-Click tracking lets you measure when someone taps a link in your WhatsApp message—giving you a clear view into what content is driving engagement. Braze shortens your URLs, adds tracking behind the scenes, and logs click events as they happen.
+Click tracking lets you measure when someone taps a link in your WhatsApp message, giving you a clear view into what content is driving engagement. Braze shortens your URLs, adds tracking behind the scenes, and logs click events as they happen.
 
 You can turn on click tracking in both response and template messages. It works with links in buttons and body text, and supports personalized URLs and custom domains. After it's turned on, you'll see click data in your WhatsApp performance reports and be able to segment users based on who clicked what.
 
@@ -59,7 +59,7 @@ The destination URL will need to be provided for any link with a base URL that m
 
 !["Buttons" section with fields for a button name, website URL, and click tracking URL.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## Liquid personalization in URLs
 
@@ -87,17 +87,17 @@ Braze shortens URLs that are rendered by Liquid, even those included in API-trig
 
 ## Testing
 
-Before launching your campaign or Canvas, it’s a best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send a WhatsApp to content test groups or an individual user.
+Before launching your campaign or Canvas, it’s best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send a WhatsApp to content test groups or an individual user.
 
 This preview will update with relevant personalization and the shortened URL. 
 
 {% alert important %}
-If a draft is created within an active Canvas, a shortened URL won’t be generated. The actual shortened URL generates when the Canvas draft is made active.
+If a draft is created within an active Canvas, a shortened URL won’t be generated. The actual shortened URL is generated when the Canvas draft is made active.
 {% endalert %}
 
 ## Reporting
 
-When click tracking is turned on or used with supported templates, the WhatsApp performance table includes the column **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on WhatsApp metrics, refer to [WhatsApp message performance]({{site.baseurl}}/sms_mms_rcs_reporting/).
+When click tracking is turned on or used with supported templates, the WhatsApp performance table includes the column **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on WhatsApp metrics, refer to [WhatsApp message performance]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics).
 
 ![WhatsApp Message Canvas step.]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
 
@@ -111,7 +111,7 @@ You can use the `Clicked/Opened Step` filter and `clicked tracked WhatsApp link`
 
 ![Filter group with a filter for "clicked tracked WhatsApp link".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### Do I know which individual users are clicking on a URL?
 
@@ -124,5 +124,4 @@ Click tracking doesn’t work with deep links. You can shorten universal links f
 ### Do previews on the WhatsApp device count as clicks? 
 
 No, they do not contribute to the click rate for WhatsApp messages. 
-
 

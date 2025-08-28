@@ -20,14 +20,18 @@ platform:
 
 ## Refreshing the feed
 
+### Automatic refresh
+
 By default, the Content Card feed will automatically refresh when:
 
 - A new session is started
-- The feed is opened, and more than 60 seconds have passed since the last refresh. (This only applies to the default Content Card feed and occurs 1 time per feed opening).
+- The feed is opened, and more than 60 seconds have passed since the last refresh. (This only applies to the default Content Card feed and occurs once per feed opening.)
 
 {% alert tip %}
 To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed when they are available.
 {% endalert %}
+
+### Manual refresh
 
 To manually refresh the feed at a specific time:
 
@@ -62,7 +66,7 @@ Request a manual refresh of Braze Content Cards from the Swift SDK at any time b
 
 In Swift, Content Cards can be refreshed either with an optional completion handler or with an asynchronous return using the native Swift concurrency APIs.
 
-### Completion handler
+#### Completion handler
 
 ```swift
 AppDelegate.braze?.contentCards.requestRefresh { result in
@@ -70,7 +74,7 @@ AppDelegate.braze?.contentCards.requestRefresh { result in
 }
 ```
 
-### Async/Await
+#### Async/Await
 
 ```swift
 let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
@@ -104,8 +108,16 @@ function refresh() {
 {% endtab %}
 {% endtabs %}
 
+### Rate limit
+
+Braze uses a token bucket algorithm to enforce the following rate limits:
+- Up to 5 refresh calls per device, shared across users and calls to `openSession()`
+- After reaching the limit, a new call becomes available every 180 seconds (3 minutes)
+- The system will hold up to five calls for you to use at any time
+- `subscribeToContentCards()` will still return cached cards even when rate-limited
+
 {% alert important %}
-The rate limit for successive calls to `requestContentCardsRefresh()` is 5&#8212;which is also shared with calls to `openSession()`. When the limit is reached, each new call will be available after every 180 seconds. The system will hold up to five calls for you to use at any time.
+The global SDK network limit is 30 requests per 30 seconds. Keep this in mind when you run automated test or perform manual QA.
 {% endalert %}
 
 ## Customizing displayed card order

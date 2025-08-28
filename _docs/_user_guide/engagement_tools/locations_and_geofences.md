@@ -1,5 +1,5 @@
 ---
-nav_title: Locations and Geofences
+nav_title: Locations and geofences
 article_title: Locations and Geofences
 page_order: 6
 layout: dev_guide

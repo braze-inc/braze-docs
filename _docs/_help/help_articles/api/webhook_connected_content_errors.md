@@ -1,5 +1,5 @@
 ---
-nav_title: Troubleshooting Webhook and Connected Content Requests
+nav_title: Troubleshooting webhook and connected content requests
 article_title: Troubleshooting Webhook and Connected Content Requests
 page_order: 3
 channel:
@@ -187,3 +187,13 @@ To sign up to receive these emails, do the following:
 ### Message Activity Log entries
 
 There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.
+
+### Additional failure insights in Braze Currents
+
+To increase transparency into webhook-related issues, Braze streams detailed webhook failure events to Currents and Snowflake Data Sharing. These events include failed webhook requests (such as HTTP `4xx` or `5xx` responses), providing more observability into how webhook issues may impact message delivery. Note that failure events include terminal errors as well as errors that are being retried.
+
+{% alert note %}
+Connected Content requests are not included in these webhook failure events.
+{% endalert %}
+
+For more information, refer to the [Message engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

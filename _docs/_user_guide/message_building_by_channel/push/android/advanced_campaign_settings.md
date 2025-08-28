@@ -1,5 +1,5 @@
 ---
-nav_title: "Advanced Push Campaign Settings"
+nav_title: "Advanced push campaign settings"
 article_title: Advanced Push Campaign Settings
 page_order: 5
 page_layout: reference
@@ -72,13 +72,15 @@ For more detailed information on message handling and deprioritization, see [FCM
 
 ## Summary text
 
-The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display under the body of the message in the expanded view. It also serves as a caption for notifications with images.
+The summary text allows you to set additional text in the expanded notification view. It also serves as a caption for notifications with images.
 
-![Example of summary text in an expanded push notification.]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:60%;"}
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the following animation for an example of this behavior.
+The summary text will display under the body of the message in the expanded view. 
 
-![GIF showing summary text behavior.]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:60%;"}
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+
+For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. 
 
 ## Custom URIs
 

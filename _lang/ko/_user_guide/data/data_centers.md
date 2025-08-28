@@ -8,7 +8,7 @@ description: "이 참조 문서에서는 데이터 센터의 위치, 지역별 �
 
 # 데이터 센터
 
-> Braze 데이터 센터는 사용자의 데이터가 처리되고 저장되는 위치에 대한 옵션을 제공하기 위해 구축되었습니다. 이를 통해 데이터 주권, 유연성 및 관리와 관련된 위험을 효과적으로 관리할 수 있습니다. Braze 데이터 센터를 선택하면 당사의 플랫폼이 데이터 관리의 모든 현지 요구 사항을 충족하거나 능가한다는 것을 확신할 수 있습니다.
+> Braze 데이터 센터는 사용자의 데이터가 처리되고 저장되는 위치에 대한 옵션을 제공하기 위해 구축되었습니다. 이를 통해 데이터 주권, 유연성 및 관리와 관련된 위험을 효과적으로 관리할 수 있습니다.
 
 ## 작동 방식
 
@@ -20,103 +20,21 @@ Braze는 전 세계 여러 지역에 위치한 여러 데이터 센터를 운영
 
 ## 데이터 센터 목록
 
-사용 가능한 데이터 센터 목록은 다음 표를 참조하세요.
+### 호주
 
-<style>
-table th:nth-child(1) {
-    width: 10%;
-}
-table th:nth-child(2) {
-    width: 33%;
-}
-table th:nth-child(3) {
-    width: 33%;
-}
-table th:nth-child(4) {
-    width: 24%;
-}
-table td {
-    word-break: break-word;
-}
-</style>
-<table>
-  <thead>
-    <tr>
-      <th>데이터 센터 지역</th>
-      <th>대시보드 URL</th>
-      <th>REST 엔드포인트</th>
-      <th>SDK 엔드포인트</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>호주</b></td>
-      <td><code>https://dashboard.au-01.braze.com</code></td>
-      <td><code>https://rest.au-01.braze.com</code></td>
-      <td><code>sdk.au-01.braze.com</code></td>
-    </tr>
-    <tr>
-      <td><b>유럽</b></td>
-      <td>
-        <ul>
-          <li><code>https://dashboard-01.braze.eu</code></li>
-          <li><code>https://dashboard-02.braze.eu</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>https://rest.fra-01.braze.eu</code></li>
-          <li><code>https://rest.fra-02.braze.eu</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>sdk.fra-01.braze.eu</code></li>
-          <li><code>sdk.fra-02.braze.eu</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><b>미국</b></td>
-      <td>
-        <ul>
-          <li><code>https://dashboard-01.braze.com</code></li>
-          <li><code>https://dashboard-02.braze.com</code></li>
-          <li><code>https://dashboard-03.braze.com</code></li>
-          <li><code>https://dashboard-04.braze.com</code></li>
-          <li><code>https://dashboard-05.braze.com</code></li>
-          <li><code>https://dashboard-06.braze.com</code></li>
-          <li><code>https://dashboard-07.braze.com</code></li>
-          <li><code>https://dashboard-08.braze.com</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>https://rest.iad-01.braze.com</code></li>
-          <li><code>https://rest.iad-02.braze.com</code></li>
-          <li><code>https://rest.iad-03.braze.com</code></li>
-          <li><code>https://rest.iad-04.braze.com</code></li>
-          <li><code>https://rest.iad-05.braze.com</code></li>
-          <li><code>https://rest.iad-06.braze.com</code></li>
-          <li><code>https://rest.iad-07.braze.com</code></li>
-          <li><code>https://rest.iad-08.braze.com</code></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><code>sdk.iad-01.braze.com</code></li>
-          <li><code>sdk.iad-02.braze.com</code></li>
-          <li><code>sdk.iad-03.braze.com</code></li>
-          <li><code>sdk.iad-04.braze.com</code></li>
-          <li><code>sdk.iad-05.braze.com</code></li>
-          <li><code>sdk.iad-06.braze.com</code></li>
-          <li><code>sdk.iad-07.braze.com</code></li>
-          <li><code>sdk.iad-08.braze.com</code></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{% multi_lang_include data_centers.md datacenters='AU' %}
+
+### 유럽​​연합
+
+{% multi_lang_include data_centers.md datacenters='EU' %}
+
+### Indonesia
+
+{% multi_lang_include data_centers.md datacenters='ID' %}
+
+### 미국
+
+{% multi_lang_include data_centers.md datacenters='US' %}
 
 ## 지역별 데이터 센터에 가입하기
 

@@ -22,7 +22,7 @@ De nouveaux [filtres d'encodage`hmac_sha1` et `hmac_sha256` Liquid]({{site.baseu
 
 ## Page Purchase event (Événement d’achat)
 
-Vous souhaitez en savoir plus sur les événements d’achat dans Braze ? Pour en savoir plus, consultez notre article consacré à [l'événement d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
+Vous souhaitez en savoir plus sur les événements d’achat dans Braze ? Pour en savoir plus, consultez notre article consacré à [l'événement d'achat]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/).
 
 ## Nouveaux partenariats Braze
 

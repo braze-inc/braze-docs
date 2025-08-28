@@ -23,57 +23,21 @@ description: "이 문서에서는 사용자 식별 Braze 엔드포인트에 대�
 
 `/users/identify` 을 호출하면 별칭(별칭 전용 프로필), 이메일 주소(이메일 전용 프로필) 또는 전화번호(전화번호 전용 프로필)로 식별되는 사용자 프로필을 `external_id` (식별된 프로필)이 있는 사용자 프로필과 결합한 다음 별칭 전용 프로필을 제거합니다. 
 
-사용자를 식별하려면 `aliases_to_identify` 또는 `emails_to_identify` 또는 `phone_numbers_to_identify` 객체에 `external_id` 을 포함해야 합니다. `external_id` 을 가진 사용자가 없는 경우 `external_id` 이 별칭 사용자의 레코드에 추가되며 해당 사용자는 식별된 것으로 간주됩니다.
+사용자를 식별하려면 다음 객체에 `external_id` 이 포함되어야 합니다:
 
-다음 사항에 유의하세요:
+- `aliases_to_identify`
+- `emails_to_identify` 
+- `phone_numbers_to_identify`
 
-- `merge_behavior` 필드가 `none` 으로 설정된 상태에서 이러한 후속 연결이 이루어지면 사용자 별칭과 관련된 푸시 토큰 및 메시지 기록만 유지되며, 모든 속성, 이벤트 또는 구매는 '고아'가 되어 식별된 사용자에게는 사용할 수 없게 됩니다. 한 가지 해결 방법은 [`/users/export/ids`엔드포인트]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)를 사용하여 식별하기 전에 별칭이 지정된 사용자의 데이터를 내보낸 다음 속성, 이벤트 및 구매를 식별된 사용자와 다시 연결하는 것입니다.
-- `merge_behavior` 필드를 `merge` 으로 설정하여 연결하면 이 엔드포인트는 익명 사용자에서 찾은 [특정 필드를](#merge) 식별된 사용자와 병합합니다.
-- 사용자는 특정 레이블에 대해 하나의 별칭만 가질 수 있습니다. 사용자가 이미 `external_id` 계정을 가지고 있고 별칭 전용 프로필과 동일한 레이블을 가진 기존 별칭을 가지고 있는 경우에는 사용자 프로필이 결합되지 않습니다.
+`external_id` 을 가진 사용자가 없는 경우 `external_id` 이 별칭 사용자의 레코드에 추가되며 해당 사용자는 식별된 것으로 간주됩니다. 사용자는 특정 레이블에 대해 하나의 별칭만 가질 수 있습니다. 사용자가 이미 `external_id` 계정을 가지고 있고 별칭 전용 프로필과 동일한 레이블을 가진 기존 별칭을 가지고 있는 경우에는 사용자 프로필이 결합되지 않습니다.
 
 {% alert tip %}
 사용자 식별 시 예기치 않은 데이터 손실을 방지하려면 먼저 [데이터 수집 모범 사례를]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) 참조하여 별칭 전용 사용자 정보가 이미 존재하는 경우 사용자 데이터를 캡처하는 방법에 대해 알아보는 것이 좋습니다.
 {% endalert %}
 
-## 필수 구성 요소
+### 병합 동작
 
-이 엔드포인트를 사용하려면 `users.identify` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
-
-## 사용량 제한
-
-{% multi_lang_include rate_limits.md endpoint='users identify' %}
-
-## 요청 본문
-
-```
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
-```
-
-```json
-{
-   "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of string) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of string) User phone numbers to identify,
-   "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
-}
-```
-
-### 요청 매개변수
-
-요청당 최대 50개의 사용자 별칭을 추가할 수 있습니다. 하나의 `external_id` 에 여러 개의 추가 사용자 별칭을 연결할 수 있습니다.
-
-| 매개변수                   | 필수 | 데이터 유형                           | 설명                                                                                                                                                                 |
-|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `aliases_to_identify`       | 필수 | 객체를 식별하기 위한 별칭 배열 | [객체]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) 및 [사용자 별칭 객체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) [식별하려면 별칭을]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) 참조하세요. |
-| `emails_to_identify`        | 필수 | 객체를 식별하기 위한 별칭 배열 | 사용자를 식별하기 위한 이메일 주소. [이메일로 사용자 식별하기를](#identifying-users-by-email) 참조하세요.                                                                                                              |
-| `phone_numbers_to_identify` | 필수 | 객체를 식별하기 위한 별칭 배열 | 사용자를 식별하기 위한 전화번호.                                                                                                                                            |
-| `merge_behavior`            | 선택 사항 | 문자열                              | `none` 또는 `merge` 중 하나가 예상됩니다.                                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-#### 병합_행동 필드 {#merge}
-
-`merge_behavior` 필드를 `merge` 으로 설정하면 익명 **사용자에게만** 있는 다음 필드 목록을 식별된 사용자와 병합하도록 엔드포인트가 설정됩니다. 필드를 `none`으로 설정하면 사용자 데이터가 식별된 고객 프로필에 병합되지 않습니다. 기본적으로 이 필드는 `merge` 로 설정됩니다.
+기본적으로 이 엔드포인트는 익명 **사용자에게만** 있는 다음 필드 목록을 식별된 사용자에게 병합합니다.
 
 {% details 병합되는 필드 목록 %}
 - 이름
@@ -111,9 +75,49 @@ Authorization: Bearer YOUR_REST_API_KEY
   - 예를 들어, 대상 사용자에게는 "ABCApp"에 대한 앱 요약이 없지만 원래 사용자에게는 있는 경우, 병합 후 대상 사용자의 프로필에 "ABCApp" 앱 요약이 표시됩니다.
 {% enddetails %}
 
-### 이메일로 사용자 식별
+## 필수 구성 요소
 
-`email` 을 식별자로 지정한 경우 식별자에 `prioritization` 도 포함해야 합니다. `prioritization` 은 여러 사용자가 있는 경우 병합할 사용자를 지정하는 배열이어야 합니다. `prioritization` 은 정렬된 배열이므로 우선순위에서 일치하는 사용자가 두 명 이상이면 병합이 수행되지 않습니다.
+이 엔드포인트를 사용하려면 `users.identify` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
+
+## 사용량 제한
+
+{% multi_lang_include rate_limits.md endpoint='users identify' %}
+
+## 요청 본문
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+```json
+{
+   "aliases_to_identify" : (required, array of alias to identify objects),
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
+},
+```
+
+### 요청 매개변수
+
+요청당 최대 50개의 사용자 별칭을 추가할 수 있습니다. 하나의 `external_id` 에 여러 개의 추가 사용자 별칭을 연결할 수 있습니다.
+
+{% alert important %}
+다음 중 하나가 필요합니다: `aliases_to_identify`, `emails_to_identify`, 또는 요청당 `phone_numbers_to_identify`. 예를 들어, 이 엔드포인트를 사용하여 요청에 `emails_to_identify` 을 사용하여 이메일로 사용자를 식별할 수 있습니다.
+{% endalert %}
+
+| 매개변수                   | 필수 | 데이터 유형                           | 설명                                                                                                                                                                 |
+|-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `aliases_to_identify`       | 필수 | 객체를 식별하기 위한 별칭 배열 | [객체]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) 및 [사용자 별칭 객체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) [식별하려면 별칭을]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) 참조하세요. |
+| `emails_to_identify`        | 필수 | 객체를 식별하기 위한 별칭 배열 | `email` 식별자로 지정된 경우 필수입니다. 사용자를 식별하기 위한 이메일 주소. [이메일로 사용자 식별하기를](#identifying-users-by-email) 참조하세요.                                                                                                              |
+| `phone_numbers_to_identify` | 필수 | 객체를 식별하기 위한 별칭 배열 | 사용자를 식별하기 위한 전화번호.                                                                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+### 이메일 주소 및 전화번호로 사용자 식별
+
+이메일 주소나 전화번호를 식별자로 지정하는 경우 식별자에 `prioritization` 도 포함해야 합니다.
+
+`prioritization` 은 여러 사용자가 있는 경우 병합할 사용자를 지정하는 배열이어야 합니다. `prioritization` 은 정렬된 배열이므로 우선순위에서 일치하는 사용자가 두 명 이상이면 병합이 수행되지 않습니다.
 
 배열에 허용되는 값은 다음과 같습니다:
 
@@ -127,9 +131,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 - `identified` 를 가진 사용자에게 우선순위를 지정하는 것을 말합니다. `external_id`
 - `unidentified` 없는 사용자에게 우선순위를 지정하는 것을 말합니다. `external_id`
 
-배열에 `identified` 을 지정하는 경우, 이는 사용자에게 `external_id` 이 **있어야** 캔버스에 입력할 수 있다는 의미입니다. 이메일 주소가 있는 사용자가 식별 여부에 관계없이 메시지를 입력하도록 하려면 `most_recently_updated` 또는 `least_recently_updated` 매개변수만 사용하세요.
+배열에 `identified` 을 지정하는 경우, 이는 사용자에게 `external_id` 이 **있어야** 캔버스에 입력할 수 있다는 의미입니다. 이메일 주소가 있는 사용자가 본인 확인 여부와 관계없이 메시지를 입력하도록 하려면 `most_recently_updated` 또는 `least_recently_updated` 매개변수만 사용하세요.
 
 ## 요청 예시
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
@@ -151,7 +156,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
       "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
-  "merge_behavior": "merge"
 }'
 ```
 

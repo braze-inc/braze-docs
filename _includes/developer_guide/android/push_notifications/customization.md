@@ -79,55 +79,6 @@ With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intent
 Create your push notification listener in `Application.onCreate` to ensure your listener is triggered after an end-user taps a notification while your app is in a terminated state.
 {% endalert %}
 
-## Customizing fonts
-
-### Step 1: Create a font family
-
-The following is an example custom font family definition using the [font family guide](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family). For this example, we use the [Bungee Shade font](https://fonts.google.com/specimen/Bungee+Shade).
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-After storing the font family definition in `/res/font/bungee_font_family.xml`, we can refer to it in XML as `@font/bungee_font_family`.
-
-### Step 2: Reference your font family
-
-Now that the font family is created, you can override Braze style defaults in your `styles.xml` to include references to the font family.
-
-For example, the following styles override would use the `bungee` font family for all Braze in-app messages.
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
-{% endalert %}
-
 ## Customizing notification display {#customization-display}
 
 ### Step 1: Create your custom notification factory
@@ -387,7 +338,7 @@ You can showcase a larger image within your Android push notification using inli
 
 ### Compatibility
 
-While you can send inline images to any device, devices and SDKs that don't meet the minimum versions will display a standard image instead. For inline images to display properly, both the Android Braze SDK v10.0.0+ and a device running Android M+ are required.
+While you can send inline images to any device, devices and SDKs that don't meet the minimum versions will display a standard image instead. For inline images to display properly, both the Android Braze SDK v10.0.0+ and a device running Android M+ are required. The SDK must also be enabled for the image to render.
 
 {% alert note %}
 Devices running Android 12 will render differently due to changes in custom push notification styles.
@@ -421,13 +372,13 @@ The **Time to Live** (TTL) field allows you to set a custom length of time to st
 
 The summary text allows you to set additional text in the expanded notification view. It also serves as a caption for notifications with images.
 
-![An Android message with the title "Greetings from Appboy!", the message "This is the message body! You can even add emojis." and summary text "This is the summary text."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-The summary text will display under the body of the message in the expanded view.
+The summary text will display under the body of the message in the expanded view. 
+
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. 
-
-![An Android message with the title "Appboy!", the message "This is the message body.." and summary text "and this is the Summary Text."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### Custom URIs {#custom-uri}
 

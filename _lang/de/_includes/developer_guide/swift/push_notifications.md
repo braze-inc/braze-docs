@@ -376,7 +376,7 @@ Mit der dynamischen APNs-Gateway-Verwaltung haben Sie:
 
 ### Voraussetzungen
 
-Braze unterstützt die dynamische APN-Gateway-Verwaltung für Push-Benachrichtigungen unter iOS mit der folgenden SDK-Versionsanforderung:
+Braze unterstützt die dynamische APNs-Gateway-Verwaltung für Push-Benachrichtigungen unter iOS mit der folgenden SDK-Versionsanforderung:
 
 {% sdk_min_versions swift:10.0.0 %}
 

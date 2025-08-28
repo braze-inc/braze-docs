@@ -8,6 +8,7 @@ channel:
 tool:
   - Campaigns
 search_rank: 4.8
+toc_headers: h2
 ---
 
 # 인앱 메시지 만들기
@@ -22,15 +23,9 @@ search_rank: 4.8
 {% tab 캠페인 %}
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
-{% endalert %}
-
-{:start="2"}
-2\. **인앱 메시지**를 선택합니다. 멀티채널 캠페인에서는 인앱 메시지를 사용할 수 없습니다.
-3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+2. **인앱 메시지**를 선택합니다. 멀티채널 캠페인에서는 인앱 메시지를 사용할 수 없습니다.
+3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -72,9 +67,13 @@ You can find more Canvas-specific information in [In-app messages in Canvas]({{s
 
 발송 플랫폼을 선택한 후에는 메시지 유형, 레이아웃 및 이와 관련된 기타 옵션을 찾아봅니다. 이러한 각 메시지의 예상 동작 및 모양에 대한 자세한 내용은 [크리에이티브 세부 정보]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) 페이지 또는 다음 표에서 링크된 메시지 유형을 클릭하여 확인하세요.
 
-어떤 메시지 유형을 사용할지 결정할 때는 인앱 메시지 캠페인이 얼마나 방해가 되는지 고려해야 합니다. 이는 메시지가 차지하는 화면 공간과 이로 인해 고객의 앱 또는 사이트에서의 일반적인 경험을 얼마나 방해하는지 측정합니다. 전달하고자 하는 콘텐츠가 풍부할수록 메시지에 더 많은 신경을 써야 합니다.
+When deciding which message type to use, consider how much space your message will occupy and how disruptive it may feel to the user experience.
 
-![덜 방해되는 것부터 방해가 되는 것까지의 척도를 보여주는 그래픽으로, 슬라이더가 가장 방해가 적고 모달이 그 다음이며 전체 화면이 가장 방해가 됩니다]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+- **Slideup** messages are the least intrusive, appearing subtly without blocking content.
+- **Modal** messages sit in the middle—prominent enough to catch attention without fully taking over the screen.
+- **Fullscreen** messages are the most attention-grabbing and best for critical announcements or promotions.
+
+The more complex your content, the more space you’ll need—and the more likely your message will interrupt the user’s flow.
 
 ### 메시지 유형
 
@@ -182,13 +181,13 @@ Braze에서 코드에 닫기 또는 종료 버튼이 포함되어 있지 않다�
 
 **작성** 탭에서는 메시지의 콘텐츠와 동작의 모든 측면을 편집할 수 있습니다.
 
-![신규 고객을 환영하고 사용자 프로필을 설정하라는 메시지를 표시하는 브랜드의 인앱 메시지 예시입니다.][24]{: style="max-width:85%" }
+![An example brand's in-app message to welcome new customers and prompt them to set up a user profile.]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 **작성** 탭의 내용은 이전 단계에서 선택한 메시지 옵션에 따라 달라지지만 다음 옵션 중 하나를 포함할 수 있습니다:
 
 ### 언어
 
-**언어 추가를** 선택하고 제공된 목록에서 원하는 언어를 선택합니다. 이렇게 하면 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic)가 메시지에 삽입됩니다. 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. [사용 가능한 언어 전체 목록][18] 을 참조하세요.
+**언어 추가를** 선택하고 제공된 목록에서 원하는 언어를 선택합니다. 이렇게 하면 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic)가 메시지에 삽입됩니다. 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. See our [full list of available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 ### 이미지
 
@@ -204,25 +203,27 @@ Braze에서 코드에 닫기 또는 종료 버튼이 포함되어 있지 않다�
 
 ##### Generating AI copy
 
-멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![인앱 메시지 작성기의 메시지 필드에 있는 AI 카피라이터 실행 버튼입니다.(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### Creating right-to-left messages
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### 버튼 텍스트 {#buttons}
 
 메시지 유형에 사용할 수 있는 경우 텍스트 본문 아래에 최대 2개의 버튼을 표시할 수 있습니다. 사용자 지정 버튼 텍스트와 색상을 만들고 편집할 수 있습니다. 이메일 캡처 양식 내에 서비스 약관 링크를 추가할 수도 있습니다.
 
-![인앱 메시지의 기본 및 보조 버튼]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
-
 하나의 버튼만 사용하도록 선택하면 추가 버튼을 위한 공간을 남겨두는 대신 메시지 하단의 사용 가능한 공간을 차지하도록 버튼이 자동으로 조정됩니다.
 
 #### 기본 버튼 선택
 
-이러한 버튼에 자신만의 색상을 지정하려면 버튼 2를 사용하는 것이 더 좋습니다. 즉, 사용자가 한 버튼을 다른 버튼보다 더 많이 클릭하도록 하려면 해당 버튼이 오른쪽에 있는지 확인하세요. 특히 오른쪽 버튼은 나머지 메시지와 다소 대조적이거나 눈에 띄는 색상을 사용하는 경우 클릭 가능성이 더 높은 경우가 많습니다. 왼쪽의 버튼이 메시지와 시각적으로 더 잘 어우러질 때만 강조됩니다.
+이러한 버튼에 자신만의 색상을 지정하려면 버튼 2를 사용하는 것이 더 좋습니다.
+
+즉, 사용자가 한 버튼을 다른 버튼보다 더 많이 클릭하도록 하려면 해당 버튼이 오른쪽에 있는지 확인하세요. 특히 오른쪽 버튼은 나머지 메시지와 다소 대조적이거나 눈에 띄는 색상을 사용하는 경우 클릭 가능성이 더 높은 경우가 많습니다. 왼쪽의 버튼이 메시지와 시각적으로 더 잘 어우러질 때만 강조됩니다.
+
+![Primary and secondary buttons in an in-app message]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### 클릭 시 동작 {#button-actions}
 
@@ -273,7 +274,7 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 | 서식 지정 | 입력 | 설명 |
 |---|---|---|
-|색 프로필 | 앱 내 메시지 템플릿 갤러리에서 신청하세요. | **템플릿 적용**을 클릭하고 갤러리에서 선택합니다. 그런 다음 **저장**을 클릭합니다. |
+|[색 프로필]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | 앱 내 메시지 템플릿 갤러리에서 신청하세요. | **템플릿 적용을** 선택하고 갤러리에서 선택합니다. 그런 다음 **저장**을 선택합니다. |
 |텍스트 정렬 | 왼쪽, 가운데 또는 오른쪽.  | 최신 Braze SDK 버전에서만 사용할 수 있습니다. |
 |헤더 | HEX 색상 코드. | 원하는 HEX 색상이 표시됩니다. 색상의 불투명도를 선택할 수도 있습니다.  |
 |텍스트 | HEX 색상 코드. | 원하는 HEX 색상이 표시됩니다. 색상의 불투명도를 선택할 수도 있습니다. |
@@ -294,7 +295,7 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 ### 키-값 쌍
 
-[키-값 페어][19]를 추가하여 사용자 기기에 추가 커스텀 필드를 보낼 수 있습니다.
+You can add [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) to send extra custom fields to user devices.
 
 ## 7단계: 나머지 캠페인 또는 캔버스 구축하기
 
@@ -324,7 +325,7 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 시작 날짜와 시간은 반드시 선택해야 하지만 종료 날짜는 선택 사항입니다. 종료 날짜를 설정하면 지정된 날짜/시간 이후에는 특정 인앱 메시지가 기기에 표시되지 않습니다.
 
-Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platforms/web/in_app_messages/delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 ##### 온라인 트리거와 오프라인 트리거
 
@@ -350,7 +351,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 
 #### 타겟팅할 사용자 선택
 
-다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
 
 {% alert note %}
 인앱 메시지 단계에서 지연이 발생하는 경우, 세그먼트 멤버십은 지연이 발생한 후에 평가됩니다. 사용자가 자격을 갖춘 경우, 인앱 메시지는 다음 사용 가능한 세션에서 동기화됩니다.
@@ -360,7 +361,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 
 일부 시나리오에서는 인앱 메시지를 표시할 때 사용자의 자격을 다시 평가해야 할 수도 있습니다. 자주 변경되는 사용자 지정 속성을 타겟팅하는 캠페인이나 마지막 순간에 프로필 변경 사항을 반영해야 하는 메시지를 예로 들 수 있습니다.
 
-![타겟 사용자 단계의 오디언스 요약 섹션에서 "표시하기 전에 캠페인 자격 재평가" 옵션을 선택합니다.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![Checkbox for "Re-evaluate campaign eligibility before displaying" selected.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 **표시하기 전에 캠페인 자격 재평가**를 선택하면, 메시지를 보내기 전에 사용자가 여전히 이 메시지를 받을 자격이 있는지 확인하기 위해 Braze에 추가 요청이 이루어집니다. 또한 모든 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 변수 또는 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)는 메시지가 표시되기 전에 해당 순간에 템플릿이 지정됩니다.
 
@@ -374,7 +375,7 @@ Refer to our developer documentation for [server-side event triggering]({{site.b
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 {% endtab %}
 {% tab 캔버스 %}
@@ -407,11 +408,3 @@ Braze는 안정성과 속도를 중시합니다. 필요한 데이터만 Braze에
 200개에는 아직 종료 시간에 도달하지 않은 활성 인앱 메시지 캠페인과 종료 시간이 없는 캠페인이 포함됩니다. 종료 시간이 지난 활성 인앱 메시지 캠페인은 집계되지 않습니다. 평균적으로 Braze 고객은 한 번에 총 26개의 캠페인을 활성화하므로 이 제한이 영향을 미치지는 않을 것입니다.
 
 
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img_archive/iam_compose.png %}
-[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

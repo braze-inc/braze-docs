@@ -1,5 +1,5 @@
 ---
-nav_title: Live Activities for Swift
+nav_title: Live activities for Swift
 article_title: Live Activities for the Swift Braze SDK
 page_order: 0.2
 description: "Learn how to set up Live Activities for the Swift Braze SDK."
@@ -317,6 +317,15 @@ When a Live Activity is active, it is shown on both a user's lock screen and Dyn
 * **End activity**: You can set `end_activity` to `true` in a request to the `/messages/live_activity/update` endpoint to immediately end a Live Activity.
 
 See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) article for full details.
+
+## Tracking Live Activities
+
+Live Activity events are available in Currents, Snowflake Data Sharing, and Query Builder. The following events can help you understand and monitor the lifecycle of your Live Activities, track token availability, and independently diagnose issues or verify delivery statuses.
+
+- [Live Activity Push To Start Token Change]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events): Captures when a push-to-start (PTS) token is added or updated in Braze, enabling you to track token registrations and availability per user.
+- [Live Activity Update Token Change]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events): Tracks the addition, update, or removal of Live Activity Update (LAU) tokens.
+- [Live Activity Send]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events): Logs each time a Live Activity is started, updated, or ended by Braze.
+- [Live Activity Outcome]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events): Indicates the final delivery status to Apple Push Notification service (APNs) for every Live Activity sent from Braze.
 
 ## Frequently Asked Questions (FAQ) {#faq}
 

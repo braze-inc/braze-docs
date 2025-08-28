@@ -14,7 +14,7 @@ Braze에 보안 기능이 강화되었습니다. 비밀번호 만료 규칙, 비
 > 업데이트: Braze의 **보안 설정**은 **회사 설정** 페이지에서 액세스할 수 있으며, 비밀번호 재사용 및 만료에 대한 규칙도 포함됩니다.
 
 ## 가져온 후 CSV 다운로드
-Braze 사용자는 이제 최근에 가져온 사용자의 CSV를 다운로드할 수 있습니다. 이를 통해 시스템에서 데이터 동기화에 대한 가시성을 높일 수 있습니다. [CSV 가져오기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)에 대해 자세히 알아보세요.
+Braze 사용자는 이제 최근에 가져온 사용자의 CSV를 다운로드할 수 있습니다. 이를 통해 시스템에서 데이터 동기화에 대한 가시성을 높일 수 있습니다. [CSV 가져오기]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)에 대해 자세히 알아보세요.
 
 ## 기념일 필터
 생일 필터 외에도 Braze는 이제 기념일 필터를 지원하여 로열티 마일스톤, 리필 알림 등을 위한 캘린더 날짜를 기준으로 사용자를 타겟팅할 수 있는 기능을 제공합니다! 세그먼트 페이지에서 "커스텀 속성의 날짜" 필터를 선택하여 이 기능에 액세스하세요. [필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters)에 대해 자세히 알아보세요.

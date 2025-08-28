@@ -1,5 +1,5 @@
 ---
-nav_title: Email Preferences
+nav_title: Email preferences
 article_title: Email Preferences
 page_type: reference
 page_order: 14
@@ -26,16 +26,48 @@ When configuring your email settings, your outbound email settings identify whic
 {% tabs local %}
 {% tab Display Name Address %}
 
-In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends. 
+In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends.
 
-![]({% image_buster /assets/img/email_settings/display_name_address.png %})
+!["Outbound Email Settings" section with fields for different display names and domains.]({% image_buster /assets/img/email_settings/display_name_address.png %})
+
+#### Personalizing with Liquid
+
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sending email based on custom attributes. For example, you can use conditional logic to send from different brands or regions:
+
+{% raw %}
+```liquid
+{% if ${language} == 'en' %} 
+English Display Name 
+{% elsif ${language} == 'de' %} 
+German Display Name 
+{% else %} 
+Default to English Display Name
+{% endif %}
+```
+{% endraw %}
 
 {% endtab %}
 {% tab Reply-To Address %}
 
 Adding an email address in this section allows you to select it as a reply-to address for your email campaign. You can also make an email address the default one by selecting **Make Default**. These email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
 
-![]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
+!["Reply-To Address" section with fields to enter multiple reply-to addresses.]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
+
+#### Personalizing with Liquid
+
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **Reply-To Address** field to dynamically template the reply-to address based on custom attributes. For example, you can use conditional logic to send replies to different regions or departments:
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${region}}} == 'US' %}
+us-support@company.com
+{% elsif {{custom_attribute.${region}}} == 'EU' %}
+eu-support@company.com
+{% else %}
+global-support@company.com
+{% endif %}
+```
+{% endraw %}
 
 {% endtab %}
 {% tab BCC Address %}
@@ -119,7 +151,7 @@ Displaying the header is ultimately determined by the mailbox provider. To check
 1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
 2. Search for "List-Unsubscribe".
 
-If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
+If the header is in the raw version of the email but is not displayed, the mailbox provider has determined not to show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
 
 ### Email unsubscribe header in workspaces
 
@@ -164,7 +196,7 @@ The message-level one-click list-unsubscribe setting will override the email uns
 - Omit one-click unsubscribe on this message
 
 {% alert note %}
-The message-level one-click list-unsubscribe setting is only available when using the updated HTML editor. If you're using the previous HTML editor, switch to the updated HTML editor to use this feature.
+The message-level one-click list-unsubscribe setting is only available when using the drag-and-drop editor and the updated HTML editor. If you're using the previous HTML editor, switch to the updated HTML editor to use this feature.
 {% endalert %}
 
 In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
@@ -173,6 +205,11 @@ In your email editor, go to **Sending Settings** > **Sending Info**. Select from
 - **Unsubscribe globally from all emails**: Uses the Braze default one-click unsubscribe header. Users who click the unsubscribe button will have their global email subscription state set to "Unsubscribed".
 - **Unsubscribe from specific subscription group**: Uses the specified subscription group. Users who click the unsubscribe button will be unsubscribed from the selected subscription group.
     - When selecting a subscription group, add the **Subscription Group** filter in **Target Audiences** to only target users who are subscribed to this specific group. The subscription group selected for one-click unsubscribe must match the subscription group you’re targeting. If there is a mismatch in the subscription group, you may risk sending to a user who is trying to unsubscribe from a subscription group they're already unsubscribed from.
+
+{% alert important %}
+The **Unsubscribe from specific subscription group** setting only applies to the one-click list-unsubscribe header. The mailto list-unsubscribe header is not affected when selecting this option. This means a recipient who unsubscribes using this method will log a global unsubscribe, not an unsubscribe from the specific subscription group. To exclude the mailto list-unsubscribe header from globally unsubscribing users, when selecting this setting, contact [Support]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
 - **Custom:** Adds your custom one-click unsubscribe URL for you to process unsubscribes directly.
 - **Exclude unsubscribe**
 
@@ -263,13 +300,12 @@ No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo a
 A preference center is not considered an unsubscribe link. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
 {% enddetails %}
 
-
 {% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
-If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.
+If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per-message level, you'll need to update prior campaigns and Canvas steps with the email accordingly.
 {% enddetails %}
 
 {% details I can see the list-unsubscribe and one-click unsubscribe header in the original message or raw data, but why don't I see the Unsubscribe button in Gmail or Yahoo? %}
-Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button to not display. 
+Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button not to display. 
 {% enddetails %}
 
 {% details Does the custom one-click unsubscribe header support Liquid? %}
@@ -291,7 +327,7 @@ For a campaign with A/B testing, Braze will randomly send a user one of the vari
 {% enddetails %}
 
 {% details The email unsubscribe header setting is turned off in Email Preferences, but in my campaign's sending info, the one-click list-unsubscribe setting is set to "Use workspace default". Is this a bug? %}
-No. If the workspace setting is turned off and the message setting is set to **Use workspace default**, then Braze will follow what's configured in **Email Preferences**. This means, we will not add the one-click unsubscribe header for the campaign.
+No. If the workspace setting is turned off and the message setting is set to **Use workspace default**, then Braze will follow what's configured in **Email Preferences**. This means we will not add the one-click unsubscribe header for the campaign.
 {% enddetails %}
 
 {% details What happens if a subscription group is archived? Will this break the one-click unsubscribe on emails sent? %}

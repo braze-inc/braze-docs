@@ -10,10 +10,10 @@ tool: Canvas
 # Cloning Canvases to Canvas Flow
 
 {% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow.
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow, the current Canvas experience.
 {% endalert %}
 
-> If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the Canvas Flow workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). Your original Canvas will not be altered or deleted.
+> If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the current Canvas workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). Your original Canvas will not be altered or deleted.
 
 To clone your Canvas, do the following:
 
@@ -46,7 +46,7 @@ To allow existing users to continue their user journey after you've cloned your 
 
 If re-eligibility is off, add the filter "Entered Canvas Variation". If re-eligibility is on, these are the possible methods to consider to ensure that users don't enter the same Canvas twice:
 - Update the existing Canvas to include a unique tag. For the new Canvas, add a filter "Last Received Message from Campaign or Canvas with Tag". This prevents users from entering the Canvas twice after a specific entry date (total number of days after the last message is sent from the original Canvas plus the conversion window). 
-- **The following method will consume data points.** Update the original Canvas to include a Braze-to-Braze webhook that triggers a custom attribute date timestamp upon entry. This attribute can be used to prevent users from entering the new Canvas after the specified date (total number of days after the last message is sent from the original Canvas plus the conversion window).
+- **The following method will log data points.** Update the original Canvas to include a Braze-to-Braze webhook that triggers a custom attribute date timestamp upon entry. This attribute can be used to prevent users from entering the new Canvas after the specified date (total number of days after the last message is sent from the original Canvas plus the conversion window).
 
 For API-triggered Canvases, coordinate with your engineering team to ensure that these Canvases are using the new Canvas ID when the new Canvases are ready to launch.
 

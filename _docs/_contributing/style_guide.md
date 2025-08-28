@@ -1,5 +1,5 @@
 ---
-nav_title: Style Guides
+nav_title: Style guides
 article: Braze Docs Style Guide
 description: "The Braze Docs Style Guide."
 page_order: 7

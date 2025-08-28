@@ -1,5 +1,5 @@
 ---
-nav_title: Compliance Documentation for WhatsApp Services
+nav_title: Compliance documentation for WhatsApp services
 article: Compliance Documentation for WhatsApp Services
 permalink: /compliance_documentation_whatsapp/
 description: "Compliance documentation relating to the WhatsApp channel."
@@ -24,3 +24,4 @@ Customer may not use webhooks to trigger the sending of messages via the WhatsAp
 ## General terms
 Without limiting the generality of any Customer obligations under the Agreement, and for the avoidance of doubt, Customer shall be solely responsible for obtaining all necessary rights, consents, and authorizations and providing legally adequate privacy notices in connection with its use of this Channel and obtaining all legally required consents and authorizations for sending, or receiving as applicable, Messages through this Channel.
 
+{% multi_lang_include braze_legal/english_language_governance.md %}

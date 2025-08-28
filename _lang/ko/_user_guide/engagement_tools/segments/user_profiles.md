@@ -1,7 +1,7 @@
 ---
 nav_title: 사용자 프로필
 article_title: 사용자 프로필
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -24,19 +24,15 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 - 푸시 토큰
 - "[user_alias]:[alias_name]" 형식의 사용자 별칭, 예: "amplitude_id:user_123"
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **사용자 검색**은 **사용자 검색이며** **사용자** 아래에서 찾을 수 있습니다.
-{% endalert %}
-
 일치하는 항목이 발견되면 Braze SDK를 통해 해당 사용자에 대해 기록한 정보를 확인할 수 있습니다. 그렇지 않으면 검색에서 여러 사용자 프로필이 반환되는 경우 각 프로필을 개별적으로 병합하거나 일괄 사용자 병합을 수행할 수 있습니다. 전체 안내는 [중복 사용자]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)를 참조하세요.
 
-![검색 결과에는 "검색 조건과 일치하는 사용자가 여러 명입니다"라는 배너와 이전 및 다음이라고 표시된 두 개의 버튼이 표시됩니다.][1]
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## 사용 사례
 
 고객 프로필은 사용자의 인게이지먼트 기록, 세그먼트 멤버십, 기기 및 운영 체제에 대한 정보에 쉽게 액세스할 수 있기 때문에 문제 해결 및 테스트에 유용한 리소스입니다.
 
-예를 들어 사용자가 문제를 신고했는데 어떤 기기 및 운영 체제를 사용 중인지 잘 모르는 경우 [개요 탭을](#overview-tab) 사용하여 이메일이나 사용자 ID만 있으면 이 정보를 찾을 수 있습니다. 사용자의 언어를 볼 수도 있으며, 이는 예상대로 작동하지 않은 [다국어 캠페인][13]을 문제 해결하는 데 도움이 될 수 있습니다.
+예를 들어 사용자가 문제를 신고했는데 어떤 기기 및 운영 체제를 사용 중인지 잘 모르는 경우 [개요 탭을](#overview-tab) 사용하여 이메일이나 사용자 ID만 있으면 이 정보를 찾을 수 있습니다. You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) that didn't behave as expected.
 
 [참여 탭을](#engagement-tab) 사용하여 특정 사용자가 캠페인을 수신했는지 확인할 수 있습니다. 또한 이 특정 사용자가 캠페인을 수신한 경우 언제 캠페인을 수신했는지 확인할 수 있습니다. You can also verify whether a user is in a certain segment and whether a user is opted in to push, email, or both. 이 정보는 문제 해결에 유용합니다. 예를 들어, 사용자가 예상한 캠페인을 받지 못했거나 예상하지 못한 캠페인을 받은 경우 이 정보를 확인해야 합니다.
 
@@ -47,6 +43,7 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 - **개요:** 사용자, 세션 데이터, 커스텀 속성, 커스텀 이벤트, 구매 및 사용자가 가장 최근에 로그인한 기기에 대한 기본 정보입니다.
 - **참여:** 사용자의 연락처 설정, 수신한 캠페인, 세그먼트, 커뮤니케이션 통계, 설치 경로 및 무작위 버킷 번호에 대한 정보입니다.
 - **메시징 기록:** 지난 30일 동안 이 사용자의 최근 메시징 관련 이벤트입니다.
+- **Feature Flags Eligibility:** Validate which feature flags a user is currently eligible for across rollouts, canvas steps, and experiments. 
 
 ### 개요 탭 {#overview-tab}
 
@@ -62,9 +59,9 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 | 구매 | 이 사용자의 평생 매출 속성, 마지막 구매, 총 구매 횟수, 각 구매 목록이 표시됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-이 데이터에 대한 자세한 정보는 [사용자 데이터 수집][12]을 참조하십시오.
+For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/).
 
-![고객 프로필의 개요 탭.][2]
+![The Overview tab of a user profile.]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### 인게이지먼트 탭 {#engagement-tab}
 
@@ -72,17 +69,17 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 
 | 참여 카테고리 | 포함 사항 |
 | --- | --- |
-| 연락처 설정 | 이메일, SMS, 푸시의 구독 상태 및 이 사용자가 이 세 가지 채널에 대해 연결된 구독 그룹입니다. 이 섹션에는 푸시 토큰에 대한 변경 로그 정보도 포함되어 있습니다. 구독 및 옵트인 설정 방법에 대한 자세한 내용은 [이메일]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) 및 [푸시를]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) 참조하세요. |
+| 연락처 설정 | 이메일, SMS, 푸시의 구독 상태 및 이 사용자가 이 세 가지 채널에 대해 연결된 구독 그룹입니다. 이 섹션에는 푸시 토큰에 대한 변경 로그 정보도 포함되어 있습니다. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
 | 수신된 캠페인 | 캠페인은 사용자가 캠페인을 받을 때 또는 사용자의 상호작용 데이터가 처음 감지될 때 표시됩니다. 목록에서 캠페인을 선택하여 확인합니다. |
 | 세그먼트 | 이 사용자가 포함된 세그먼트입니다. 목록에서 세그먼트를 선택하면 해당 세그먼트를 볼 수 있습니다. |
 | 커뮤니케이션 통계 | 이 사용자가 각 채널에서 마지막으로 메시지를 받은 시기입니다. |
 | 설치 속성 | 사용자가 앱을 설치한 방법과 시기에 대한 정보입니다. [사용자 설치 이해]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)에 대해 자세히 알아보세요. |
 | 기타 | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
 | 캔버스 메시지 수신 | 이 사용자가 수신한 캔버스 메시지와 시기. 목록에서 메시지를 선택하면 해당 메시지를 볼 수 있습니다. |
-| 예측 | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
+| 예측 | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![사용자 프로필의 참여 탭은 연락처 설정 및 커뮤니케이션 통계를 표시합니다.][3]
+![The Engagement tab of a user profile displaying their contact settings and communication statistics.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### 메시징 내역 탭
 
@@ -92,7 +89,7 @@ The **Message History** tab of the user profile shows recent messaging-related e
 If you have feedback on this table or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
-![메시징 기록 탭은 사용자가 받은 캠페인과 캔버스를 보여줍니다.][5]
+![The Messaging History tab showing which campaigns and Canvases a user has received.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### 이벤트 보기 및 이해
 
@@ -110,6 +107,7 @@ If you have feedback on this table or would like to see specific events, please 
 | 인앱 메시지 | 클릭<br>노출 |
 | 콘텐츠 카드 | 클릭<br>무시<br>노출<br>발송 |
 | 웹훅 | 발송 |
+| WhatsApp | Abort<br>전달<br>Failure<br>Frequency capped<br>인바운드 수신<br>Read<br>발송 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### 메시지 중단 이벤트
@@ -129,10 +127,6 @@ If you have feedback on this table or would like to see specific events, please 
 
 A frequency cap event occurs when a user is qualified to receive a message, but doesn't actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. **설정** > **최대 게재빈도 설정**에서 최대 게재빈도 설정을 커스텀할 수 있습니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** > **글로벌 메시지 설정에서** 빈도 제한을 관리할 수 있습니다.
-{% endalert %}
-
 ##### 빈 대상
 
 일부 메시지 전송 내역에 빈 수신처("—"로 표시됨)가 있는 메시지 전송이 표시될 수 있습니다. 이는 콘텐츠 카드 및 웹훅과 같은 일부 채널이 메시지 전송 시 디바이스 데이터를 수집하지 않기 때문입니다.
@@ -146,9 +140,3 @@ Email open tracking is error-prone in any tool, including Braze. 다양한 이�
 While email open statistics can be useful in aggregate, for example, to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

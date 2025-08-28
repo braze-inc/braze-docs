@@ -23,7 +23,7 @@ Lorsque l'option Chemins personnalisés est activée dans une étape des chemins
 
 Ajoutez un [chemin d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) à votre canvas, puis activez les **chemins personnalisés**.
 
-![][1]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### Étape 2 : Configurer les paramètres des parcours personnalisés
 
@@ -31,7 +31,7 @@ Pour définir un chemin gagnant, spécifiez l’événement de conversion devant
 
 Définissez ensuite la **fenêtre d'expérience**. La **fenêtre d'expérience** détermine la durée pendant laquelle les utilisateurs seront envoyés sur tous les chemins avant de choisir le meilleur chemin pour chaque utilisateur du groupe de retard. Cette fenêtre débute au moment où le premier utilisateur accède à l’étape.
 
-![][2]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### Étape 3 : Déterminer une solution de secours
 
@@ -39,11 +39,11 @@ Par défaut, si les résultats du test ne sont pas suffisants pour déterminer u
 
 Vous pouvez également sélectionner **Continuer à envoyer le mélange de chemins à tous les futurs utilisateurs**.
 
-![][3]
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 Cette option enverra les futurs utilisateurs dans la combinaison de chemins selon les pourcentages spécifiés dans la distribution des chemins d'expérience.
 
-![][4]
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### Étape 4 : Ajoutez vos chemins et lancez le Canvas
 
@@ -145,9 +145,3 @@ Nous vous déconseillons d’utiliser la diffusion selon l'heure locale dans les
 
 Sinon, si vous souhaitez utiliser la diffusion selon l’heure locale, utilisez une fenêtre d’expérience de 24 à 48 heures ou plus. Ainsi, les utilisateurs situés dans les premiers fuseaux horaires entrent dans le Canvas et déclenchent le démarrage de l'expérience, mais il reste encore beaucoup de temps dans la fenêtre d'expérience. Les utilisateurs situés dans des fuseaux horaires plus tardifs auront encore suffisamment de temps pour entrer dans le Canvas et l'étape des chemins d'expérience d'une manière personnalisée et éventuellement se convertir avant que la fenêtre d'expérience n'expire.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_personalized_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}

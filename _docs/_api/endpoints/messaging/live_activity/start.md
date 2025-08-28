@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Start Live Activity"
+nav_title: "POST: Start live activity"
 article_title: "POST: Start Live Activity"
 search_tag: Endpoint
 page_order: 1
@@ -19,6 +19,8 @@ description: "This article outlines details about the Start Live Activity endpoi
 
 After you create a Live Activity, you can make a POST request to remotely start your activity for any given segment. For more information about Apple's Live Activities, see [Starting and updating Live Activities with ActivityKit push notifications](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
+If `content-available` isn't set, the default Apple Push Notification service (APNs) priority is 10. If `content-available` is set, this priority is 5. Refer to [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object) for more details. 
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
 ## Prerequisites
@@ -27,6 +29,8 @@ To use this endpoint, you'll need to complete the following:
 
 - Generate an API key with the `messages.live_activity.start` permission.
 - [Create a Live Activity]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity) using the Braze Swift SDK.
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 ## Rate limit
 
@@ -45,7 +49,7 @@ To use this endpoint, you'll need to complete the following:
   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
   "notification": "(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Should include `notification.alert.title` and `notification.alert.body`",
   // One of the following:
-  "external_user_ids": "(optional, array of strings) see external user identifier",
+  "external_user_ids": "(optional, array of strings) see external user identifier, maximum 50",
   "custom_audience": "(optional, connected audience object) see connected audience",
   "segment_id": "(optional, string) see segment identifier"
 }
@@ -62,8 +66,8 @@ To use this endpoint, you'll need to complete the following:
 | `content_state` | Required | Object  | You define the `ContentState` parameters when you create your Live Activity. Pass the updated values for your `ContentState` using this object.<br><br>The format of this request must match the shape you initially defined. |
 | `dismissal_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter defines the time to remove the Live Activity from the user's UI. |
 | `stale_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter tells the system when the Live Activity content is marked as outdated in the user's UI. |
-| `notification` | Required | Object | Include an [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) object to define a push notification. This behavior of this push notification depends on if the user is active or if the user is using a proxy device. {::nomarkdown}<ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul>{:/} |
-| `external_user_ids` | Optional if `segment_id` or `audience` is provided | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
+| `notification` | Required | Object | Include an [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. {::nomarkdown}<ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul>{:/} |
+| `external_user_ids` | Optional if `segment_id` or `audience` is provided | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). Maximum 50 external user IDs.  |
 | `segment_id `  | Optional if `external_user_ids` or `audience` is provided | String    | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Optional if `external_user_ids` or `segment_id` is provided | Connected audience object  | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

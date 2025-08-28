@@ -1,5 +1,5 @@
 ---
-nav_title: Rich Notifications
+nav_title: Rich notifications
 article_title: Rich Push Notifications for iOS
 platform: iOS
 page_order: 3

@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Users
+nav_title: Tracking users
 article_title: Tracking users through a form
 description: "Learn how to identify users who submit a form through your landing page by adding a Liquid tag to your messages."
 page_order: 2

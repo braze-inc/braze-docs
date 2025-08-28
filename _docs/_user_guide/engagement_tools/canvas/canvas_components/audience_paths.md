@@ -1,5 +1,5 @@
 ---
-nav_title: Audience Paths 
+nav_title: Audience paths
 article_title: Audience Paths 
 alias: /audience_paths/
 page_order: 1
@@ -38,6 +38,8 @@ Users are evaluated as soon as they reach the Audience Path step. After they hav
 For example, if users are sent Message A and the next step is an Audience Path that evaluates whether they interacted with that message, all users will progress to the step for those who haven't interacted with that message. This is because the users immediately progressed to the Audience Path step without time to interact with the message. In other words, users are evaluated for an interaction with the message almost immediately after the message sends.
 
 To give users time to interact with a sent message, a delay needs to be between the Message step and Audience Path. For example, a 24-hour delay would give users 24 hours after the message sends to interact with Message A before being evaluation.
+
+Note that users advance to the next step based on the first action they performed after entering the Audience Path step within the evaluation window. This means if a user performs a second custom event, they wouldn't switch audience groups.
 
 ## Creating an Audience Path
 
@@ -97,4 +99,3 @@ For example, in an Audience Paths step, you can create three audiences: Email, M
 {% alert tip %}
 Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for examples on how you can customize these pre-built templates to your advantage.
 {% endalert %}
-

@@ -1,5 +1,5 @@
 ---
-nav_title: Action Paths 
+nav_title: Action paths
 article_title: Action Paths 
 alias: /action_paths/
 page_order: 0.1
@@ -45,7 +45,7 @@ Let's say you have an action path with an evaluation period of one day with two 
 
 In the preceding example, if **Ranking** is off and when a user performs one of the trigger events ("Start Session" or "Make Purchase"), that user is advanced in the relevant action group based on the trigger action.
 
-Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas when using the original Canvas workflow. When using Canvas Flow, Persistent Entry Properties are enabled and allow the entry properties to be re-used throughout the whole Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
+Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas when using the original Canvas workflow. When using Canvas, persistent entry properties are enabled and allow the entry properties to be re-used throughout the whole Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
 
 ### Action groups
 
@@ -56,7 +56,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 - Perform a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Perform a conversion event
 - Add an email address
-- Change a custom attribute value (not nested custom attributes)
+- Change a custom attribute value (including arrays, but not nested custom attributes)
 - Update their subscription status or subscription group status
 - Interact with a campaign or Content Card
 - Enter a location

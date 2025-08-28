@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Messages Immediately Using the API Only"
+nav_title: "POST: Send messages immediately using the API only"
 article_title: "POST: Send Messages Immediately Using the API Only"
 search_tag: Endpoint
 page_order: 4
@@ -16,9 +16,9 @@ description: "This article outlines details about the Send messages immediately 
 
 > Use this endpoint to send immediate messages to designated users using the Braze API.
 
-Be sure to include Messaging Objects in your body to complete your requests.
-
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ To use this endpoint, you'll need to generate an API key with the `messages.send
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Request body
+
+{% alert tip %}
+Be sure to include [messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects) in your body to complete your requests.
+{% endalert %}
 
 ```
 Content-Type: application/json

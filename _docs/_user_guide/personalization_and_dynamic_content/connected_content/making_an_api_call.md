@@ -1,5 +1,5 @@
 ---
-nav_title: Making a Connected Content Call
+nav_title: Making a Connected Content call
 article_title: Making a Connected Content API Call
 page_order: 0
 description: "This reference article covers how to make a Connected Content API call, as well as helpful examples and advanced Connected Content use cases."
@@ -69,7 +69,7 @@ Braze systems may make the same Connected Content API call more than once per re
 
 ## Things to know
 
-* Braze does not charge for API calls and will not count toward your given data point allotment.
+* Braze does not charge for API calls and will not count toward your given data point usage.
 * There is a 1 MB limit for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
@@ -100,7 +100,7 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 ### Using token authentication
 
-When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Included in the following call is a code snippet to reference and model your messages off of.
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. For those APIs, you can reference the code snippet in the following call as a model for your message.
 
 {% raw %}
 ```
@@ -169,6 +169,18 @@ Braze will send Connected Content requests from the following IP ranges. The lis
 Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary, without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
+
+### `User-Agent` header
+
+Braze includes a `User-Agent` header in all Connected Content and webhook requests that is similar to the following:
+
+```text
+Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
+```
+
+{% alert tip %}
+Keep in mind that the hash value changes regularly. If you're filtering traffic by `User-Agent`, allow all values that start with `Braze Sender`.
+{% endalert %}
 
 ## Troubleshooting
 

@@ -24,9 +24,9 @@ channel:
 - 간단한 클릭 유도 실행 버튼으로 웹사이트 방문을 유도
 - 제품 및 고객 정보로 푸시를 개인화하여 메시지 관련성을 높입니다.
 
-웹 푸시는 앱 푸시 알림이 휴대폰에서 작동하는 방식과 동일하게 작동합니다. 웹 푸시 작성에 대한 자세한 내용은 [푸시 알림 만들기][11]를 참조하세요.
+웹 푸시는 앱 푸시 알림이 휴대폰에서 작동하는 방식과 동일하게 작동합니다. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
-![노트북과 휴대폰에 동일한 푸시 메시지가 표시되는 웹 푸시 예시입니다.][12]{: style="border:none"}
+![Web push example with the same push message displayed on a laptop and phone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## 잠재적 사용 사례
 
@@ -42,7 +42,7 @@ channel:
 
 ## 웹 푸시 사용을 위한 전제 조건
 
-Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트에 푸시를 통합해야 합니다. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/).
+Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 개발자와 협력하여 웹사이트에 푸시를 통합해야 합니다. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
 ### 푸시 권한
 
@@ -65,11 +65,8 @@ Braze를 사용하여 푸시 메시지를 생성하고 전송하려면 먼저 �
 푸시 프로토콜 표준 및 브라우저 지원에 대한 자세한 내용은 사용 중인 브라우저에 따른 리소스를 검토할 수 있습니다.
 
 - [Safari(데스크톱)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari (mobile)]({{site.baseurl}}/developer_guide/platforms/web/push_notifications/safari_push/)
+- [Safari (mobile)]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=safari)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
 
-[11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
-[13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}

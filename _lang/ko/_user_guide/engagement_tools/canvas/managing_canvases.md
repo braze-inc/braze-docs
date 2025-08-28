@@ -15,9 +15,6 @@ guide_featured_list:
   - name: 출시 후 캔버스 편집
     link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: 캔버스 승인 및 권한
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/
-    image: /assets/img/braze_icons/message-circle-01.svg
   - name: 캔버스용 초안 저장
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg
@@ -27,10 +24,22 @@ guide_featured_list:
   - name: 캔버스 복제
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: 캔버스 복제
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
-    image: /assets/img/braze_icons/copy-04.svg
-  - name: 캔버스 보관
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
+
+guide_menu_title: "Additional resources"
+guide_menu_list:
+  - name: 승인 워크플로우
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: Messaging Rules for Approval
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
+  - name: 메시지 보관
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Copying Across Workspaces
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
+  - name: 메시지 복제
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    image: /assets/img/braze_icons/copy-04.svg
 ---

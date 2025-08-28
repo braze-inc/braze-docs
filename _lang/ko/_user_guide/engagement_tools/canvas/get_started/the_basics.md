@@ -41,7 +41,7 @@ tool: Canvas
   {% endtab %}
 
   {% tab 단계 %}
-  캔버스의 한 단계는 "이 경우 저걸 한다"라는 마케팅 의사 결정 포인트입니다. [캔버스 구성 요소를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) 활용하여 사용자 여정의 단계를 구축하세요.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
+  캔버스의 한 단계는 "이 경우 저걸 한다"라는 마케팅 의사 결정 포인트입니다. [캔버스 구성 요소를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) 활용하여 사용자 여정의 단계를 구축하세요.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. 한 단계 내에서 트리거를 설정하거나 전송 일정을 예약하고, 필터를 추가하거나 예외 이벤트를 표시하여 타겟팅을 구체화하고, 푸시 알림이나 웹훅 이벤트와 같은 다양한 채널을 지정할 수 있습니다. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
 
   {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ tool: Canvas
 
 항상 명확한 목표를 염두에 두는 것이 중요하며, 캔버스는 세션 인게이지먼트, 구매 및 커스텀 이벤트와 같은 KPI에 대한 성과를 파악하는 데 도움이 됩니다.
 
-하나 이상의 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 선택하면 캔버스 내에서 성능을 최적화하는 방법을 이해할 수 있습니다. 또한 캔버스에 여러 변형 또는 대조 그룹이 있는 경우, Braze는 전환 이벤트를 사용하여 이 목표를 달성하는 데 가장 적합한 변형을 결정합니다.
+하나 이상의 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 선택하면 캔버스 내에서 성능을 최적화하는 방법을 이해할 수 있습니다. 또한 캔버스에 여러 변형 또는 대조 그룹이 있는 경우, Braze는 전환 이벤트를 사용하여 이 목표를 달성하는 데 가장 적합한 변형을 결정합니다.
 
 * **세션 시작**: 사용자가 다시 돌아와서 앱에 참여하기를 바랍니다.
 * **구매하기**: 사용자가 구매하기를 원합니다.
@@ -78,7 +78,7 @@ tool: Canvas
 답변에 따라 캔버스가 고객에게 전달되는 시기와 방법에 대한 세부 정보가 결정됩니다. 사용자는 예약 또는 액션 기반 트리거 중 한 가지 방법으로 캔버스에 입장할 수 있습니다.
 
 {% alert tip %}
-더 많은 전략과 일반적인 질문에 대한 답변은 Canvas의 [시간 기반 기능에서]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/) 확인하세요.
+더 많은 전략과 일반적인 질문에 대한 답변은 Canvas의 [시간 기반 기능에서]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/delivery_types/) 확인하세요.
 {% endalert %}
 
 예약된 전달을 사용하면 오디언스에게 즉시 캔버스를 보낼 수 있습니다. 정기적으로 보내거나 향후 특정 시간으로 예약할 수도 있습니다. 액션 기반 캔버스는 특정 고객 행동이 발생하면 그에 따라 반응합니다. 예를 들어, 액션 기반 트리거에는 앱 열기, 구매, 다른 캠페인과의 상호 작용 또는 커스텀 이벤트 트리거 등이 포함될 수 있습니다. 작업이 발생하는 시점에 캔버스가 사용자에게 전송하도록 할 수 있습니다.
@@ -107,7 +107,7 @@ tool: Canvas
 * [푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [콘텐츠 카드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS 또는 MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS or MMS]({{site.baseurl}}/about_sms/)
 * [웹훅]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### "방법": 완벽한 경험 구축

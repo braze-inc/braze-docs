@@ -26,7 +26,7 @@ channel:
 
 사용자인 것처럼 **테스트** 탭에서 메시지를 미리 볼 수도 있습니다. 특정 사용자, 무작위 사용자 또는 커스텀 사용자를 선택할 수 있습니다.
 
-![Custom_User_Preview][3]
+!['테스트' 탭의 콘텐츠 카드 미리 보기]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### 테스트 체크리스트
 
@@ -42,14 +42,9 @@ After your Content Cards are sent, you can break down or debug any issues from t
 일반적인 사용 사례는 사용자가 특정 콘텐츠 카드를 볼 수 없는 이유를 디버깅하려고 시도하는 것입니다. 이를 위해 세션 시작 시 SDK에 전달된 콘텐츠 카드를 **이벤트 사용자 로그**에서 확인하고 노출 횟수 이전에 특정 캠페인으로 추적할 수 있습니다.
 
 1. **설정** > **이벤트 사용자 로그**로 이동합니다.
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **이벤트 사용자 로그**를 **개발자 콘솔<6>에서 찾을 수 있습니다.
-{% endalert %}
-
-{:start="2"}
-2\. SDK 요청을 테스트 사용자에 대해 찾고 확장하세요.
-3\. **원시 데이터**를 클릭합니다.
-4\. 세션을 위한 `id`를 찾으세요. 다음은 예시 발췌문을 보여줍니다:
+2. SDK 요청을 테스트 사용자에 대해 찾고 확장하세요.
+3. **원시 데이터**를 클릭합니다.
+4. 세션을 위한 `id`를 찾으세요. 다음은 예시 발췌문을 보여줍니다:
 
     ```json
     [
@@ -57,7 +52,7 @@ After your Content Cards are sent, you can break down or debug any issues from t
         "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
         "data": {
           "ids": [
-            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
           ]
         },
         "name": "cci",
@@ -69,16 +64,14 @@ After your Content Cards are sent, you can break down or debug any issues from t
 5. Base64 디코드 및 인코드와 같은 [디코딩 도구](https://www.base64decode.org/)를 사용하여 `id`를 Base64 형식에서 디코딩하고 관련된 `campaign_id`를 찾으세요. 우리의 예에서, 이것은 다음과 같은 결과를 낳습니다:
 
     ```
-    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    `6185005a9d9bee79387cce43`이 `campaign_id`인 곳.<br><br>
+    `4861692e-6fce-4215-bd05-3254fb9e9057`이 `campaign_id`인 곳.<br><br>
 
 6. **캠페인** 페이지로 이동하여 `campaign_id`을 검색하세요.
 
-![Campaigns 페이지에서 campaign_id 검색][1]
+![캠페인 페이지에서 캠페인_id 검색]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 거기에서 메시지 설정 및 콘텐츠를 검토하여 사용자가 특정 콘텐츠 카드를 볼 수 없는 이유를 파악할 수 있습니다.
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

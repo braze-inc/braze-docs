@@ -61,4 +61,23 @@ If the issue occurs on all browsers, try the following:
 
 If you've solved the prior issues and your dashboard still won't load or work as expected, contact [Support]({{site.baseurl}}/braze_support/).
 
+## The user belongs to no workspace
 
+Verify this by going to **Settings** > **Company Users** and checking the user's workspace-level permissions. Add the necessary workspaces to **Workspaces**.
+
+## Troubleshooting as a new user
+
+If you're a new Braze user having trouble logging in or accessing your account for the first time, follow these steps to resolve common issues:
+
+### I never received the welcome email
+
+- Check your spam folder: Confirm that the account activation email wasn't filtered into your spam or junk folder.
+- Verify your email address: Have your admin check the email address associated with your new Braze account to confirm it's correct.
+- IT policies: Confirm with your IT team that there aren't policies in place that might prevent the activation email from being received.
+
+### I received the email, but I'm stuck setting up two-factor authentication (2FA)
+
+- Reset 2FA: If you're having trouble setting up 2FA, your admin can reset 2FA for your user account in the settings.
+- Re-add user: If issues persist, the admin can delete your user account from the dashboard and re-add you. This allows for the creation of the user with the same details.
+
+If problems continue after these steps, contact [Support]({{site.baseurl}}/braze_support/) for further assistance.

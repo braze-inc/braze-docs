@@ -35,7 +35,7 @@ Dans la section **Type de modèle**, sélectionnez **Editeur HTML** et descendez
 
 ### Étape 3 : Télécharger votre modèle
 
-Cliquez sur **Télécharger à partir d'un fichier** et sélectionnez votre modèle sur votre ordinateur. Reportez-vous à la section [Conditions préalables](#upload-requirements) pour vous assurer que votre modèle répond aux exigences de téléchargement.
+Sélectionnez **Télécharger à partir d'un fichier** et sélectionnez votre modèle sur votre ordinateur. Reportez-vous à la section [Conditions préalables](#upload-requirements) pour vous assurer que votre modèle répond aux exigences de téléchargement.
 
 #### Résoudre les problèmes liés aux erreurs de téléchargement de modèles
 
@@ -54,7 +54,7 @@ Vous pouvez recevoir différents messages d’erreur d’e-mail lors du téléch
 
 ### Étape 4 : Terminer et enregistrer votre modèle
 
-Veillez à enregistrer votre modèle en cliquant sur **Enregistrer le modèle.** Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix !
+Veillez à enregistrer votre modèle en sélectionnant **Enregistrer le modèle.** Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix !
 
 {% alert note %}
 Si vous apportez des modifications à un modèle existant, ces modifications ne seront pas reflétées dans les campagnes créées qui utilisent les versions précédentes de ce modèle.
@@ -64,7 +64,7 @@ Si vous apportez des modifications à un modèle existant, ces modifications ne 
 
 Pour utiliser votre e-mail dans une campagne API, vous avez besoin de `email_template_id`, qui se trouve au bas des modèles d’e-mails créés dans Braze.
 
-![Section Identifiant API d’un modèle d’e-mail HTML.][4]
+![Section de l'identifiant API d'un modèle d'e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## Gestion des modèles d’e-mail
 
@@ -72,8 +72,6 @@ Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_a
 
 ## Foire aux questions
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles d'e-mail, consultez notre page [FAQ sur les modèles d'e-mail et de lien][10] ].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles d'e-mail, consultez notre page [FAQ sur les modèles d'e-mail et de lien.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) 
 
 
-[4]: {% image_buster /assets/img_archive/email_template_id.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/email/templates/faq/

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Landing Pages
+nav_title: Creating landing pages
 article_title: Creating Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 0
@@ -69,6 +69,10 @@ You can use these blocks to add content and customize the layout of your landing
 | Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+##### Span text
+
+{% multi_lang_include span_text.md %}
+
 #### Form blocks
 
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
@@ -95,6 +99,12 @@ You can set styles to be applied across all relevant component blocks in your la
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 
 ![The 'Page container' section with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+
+#### Responsive to user devices
+
+You can make your landing page responsive to the size of a user's device by vertically stacking columns on smaller screens. To enable this, add a column into the row you want to make responsive, and then toggle on **Vertically stack on smaller screens** in the **Customize columns** section.
+
+![The "Vertically stack on smaller screens" toggle in the "Customize columns" section.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Optional and required fields
 

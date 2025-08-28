@@ -1,5 +1,5 @@
 ---
-nav_title: Compliance Documentation for Mobile Messages Services
+nav_title: Compliance documentation for mobile messages services
 article: Compliance Documentation for Mobile Messages Services
 permalink: /compliance_documentation_sms/
 description: "Compliance documentation relating to mobile messages channels."
@@ -50,3 +50,5 @@ Braze disclaims any representations, warranties, liability and indemnification o
 ## General Terms
 
 Without limiting the generality of any Customer obligations under the Agreement, and for the avoidance of doubt, Customer shall be solely responsible for obtaining all necessary rights, consents, and authorizations, and providing legally adequate privacy notices in connection with its use of this Channel and obtaining all legally required consents and authorizations for sending, or receiving as applicable, Messages through this Channel.
+
+{% multi_lang_include braze_legal/english_language_governance.md %}

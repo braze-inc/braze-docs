@@ -1,5 +1,5 @@
 ---
-nav_title: Link Templates
+nav_title: Link templates
 article_title: Link Templates
 page_order: 4
 description: "This article covers how to create different types of link templates in your emails."
@@ -34,8 +34,8 @@ You can create an unlimited number of link templates to support your various nee
 1. Go to **Templates** > **Email Link Templates**. 
 2. Select **Create email link template**.
 3. Give your link template a name.
-4. (optional) Add a description, team, or tag to add details about the link template.
-5. (optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
+4. (Optional) Add a description, team, or tag to add details about the link template.
+5. (Optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
 
 There are two types of link templates you can create:
 

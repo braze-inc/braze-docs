@@ -1,5 +1,5 @@
 ---
-nav_title: Editor Blocks
+nav_title: Editor blocks
 article_title: "In-App Message Editor Blocks"
 description: "This reference article describes the editor blocks available in the drag-and-drop editor for in-app messages."
 alias: "/editor_blocks_dnd_iam/"
@@ -30,6 +30,8 @@ The following table describes how you can use each editor block type.
 | Custom Code | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
 | Phone Capture | Inserts a form field for phone numbers. When submitted, the user is subscribed to the SMS or WhatsApp subscription group. |
 | Email Capture | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
+| Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
+| Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Actions

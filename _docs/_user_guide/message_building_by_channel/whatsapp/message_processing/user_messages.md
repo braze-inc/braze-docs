@@ -1,12 +1,12 @@
 ---
-nav_title: Messaging Users
+nav_title: Messaging users
 article_title: Messaging Users
 description: "This reference article covers how Braze will go about handling user messages."
 page_type: reference
 channel:
   - WhatsApp
 page_order: 5.1
-alias: /user_guide/message_building_by_channel/whatsapp/quick_replies/
+alias: /whatsapp_quick_replies/
 
 ---
 
@@ -16,7 +16,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/quick_replies/
 
 ## Action-based triggers 
 
-Both campaigns and Canvases can start, branch, and have mid-journey changes from an inbound WhatsApp message (a user messaging your WhatsApp),  such as a trigger word. 
+Both campaigns and Canvases can start, branch, and have mid-journey changes from an inbound WhatsApp message (a user messaging your WhatsApp), such as a trigger word. 
 
 Ensure that your trigger word matches what you are expecting from users.
 
@@ -137,5 +137,20 @@ If you have row descriptions, you must use **Matches regex** to specify a row. F
 
 ![A WhatsApp trigger using the filter for "Matches regex" to capture response messages with "ankle boots".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
 
+## Considerations for response messages
 
+Response messages need to be sent within 24 hours of receiving a user's message. To help build successful experiences, Braze checks the message logic to confirm there is an upstream inbound user message that unblocks the response message. 
+
+The following events unblock response messages: 
+
+- Inbound message 
+  - [Action Path]({{site.baseurl}}/action_paths/) or [action-based entry]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) with the trigger **Send a WhatsApp inbound message**.
+
+![An action-based entry step with the trigger "Send a WhatsApp inbound message".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message_trigger.png %})
+
+- [API-triggered entry]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)
+- Inbound product message 
+  - [`ecommerce.cart_updated`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated#types-of-ecommerce-recommended-events) event
+
+![An Action Path with the trigger of a performed custom event `ecommerce.cart_updated`.]({% image_buster /assets/img/whatsapp/ecommerce_cart_updated.png %})
 

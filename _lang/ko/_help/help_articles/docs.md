@@ -11,7 +11,7 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Braze 설명서에 기여하기
-    link: /docs/help/help_articles/docs/contribution/
+    link: /docs/contributing/home/
     image: /assets/img/braze_icons/edit-05.svg
   - name: 스크롤 막대 겹침
     link: /docs/help/help_articles/docs/scroll_bar_overlap/

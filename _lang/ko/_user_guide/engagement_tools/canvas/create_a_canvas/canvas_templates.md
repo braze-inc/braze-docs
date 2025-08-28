@@ -25,7 +25,7 @@ Braze 대시보드에서 **메시징** > **캔버스로** 이동하여 템플릿
 
 캔버스 편집기에서 캔버스가 활성 상태인지 초안 상태인지에 따라 **캔버스 편집** 또는 **초안 편집**을 선택합니다. 바닥글에서 **초안으로 저장** 드롭다운을 펼치고 **템플릿으로 저장을** 선택합니다.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### 3단계: 템플릿 저장
 
@@ -45,7 +45,7 @@ Braze 대시보드에서 **템플릿** > **캔버스 템플릿으로** 이동합
 
 **템플릿 만들기를** 선택하고 캔버스 세부 정보 설정을 시작합니다. 캔버스 템플릿에 이름을 지정하는 것으로 시작할 수 있습니다.
 
-!["연간 봄 프로모션에 사용"이라는 설명이 포함된 "연간 세일 캔버스 템플릿"이라는 이름의 캔버스 템플릿 예시입니다.][1]
+![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### 3단계: 템플릿 사용자 지정
 
@@ -59,14 +59,14 @@ Braze 대시보드에서 **템플릿** > **캔버스 템플릿으로** 이동합
 
 캔버스를 작성할 때 템플릿을 사용하는 방법에는 두 가지가 있습니다:
 
-- **메시징에서** **메시징** > **캔버스로** 이동합니다. **캔버스 만들기** 버튼을 선택하고 **캔버스 템플릿을 사용합니다**.
+- **메시징에서**: **메시징** > **캔버스로** 이동합니다. **캔버스 만들기** 버튼을 선택하고 **캔버스 템플릿을 사용합니다**.
 - **템플릿에서** **템플릿** > **캔버스 템플릿으로** 이동하여 원하는 템플릿을 찾습니다. 그런 다음 <i class="fas fa-ellipsis-vertical"></i> 메뉴를 선택한 다음 **템플릿 적용**을 선택합니다. 그러면 캔버스 작성기에 템플릿이 적용된 새 캔버스로 이동합니다.
 
 ### 사용 가능한 Braze 템플릿
 
 Braze에는 일반적인 사용 사례에 대한 모범 사례로 참조하고 사용할 수 있는 다양한 캔버스 템플릿이 있습니다. 이러한 템플릿은 편집할 수 없지만 **템플릿** > **브레이즈 템플릿에서** 보거나 캔버스에서 사용할 수 있습니다.
 
-![캔버스 템플릿 섹션에서 6가지 템플릿을 사용할 수 있는 브레이즈 템플릿을 만들 수 있습니다.][3]
+![Braze templates in the Canvas templates section with six available templates.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 다음 템플릿 중에서 선택하여 캔버스로 참조하거나 사용할 수 있습니다.
 
@@ -162,6 +162,3 @@ Braze에는 일반적인 사용 사례에 대한 모범 사례로 참조하고 �
 
 예, 캔버스 템플릿 내의 캔버스 빌더에서 설정을 저장할 수 있습니다. 예를 들어 세그먼트와 필터의 조합을 자주 사용하려는 경우 이러한 **타겟 오디언스** 설정을 캔버스 템플릿의 일부로 저장할 수 있습니다.
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}
-[3]: {% image_buster /assets/img/braze_canvas_templates.png %}

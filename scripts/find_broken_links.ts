@@ -54,7 +54,11 @@ const getLinks = (filePath: string): {links: LinkData[], aliases: string[], perm
 
   let content: string;
   try {
-    content = fs.readFileSync(filePath, 'utf8');
+    const raw = fs.readFileSync(filePath, 'utf8');
+    content = raw.replace(/``````[\s\S]*?``````|```[\s\S]*?```/g, '');
+    content = content.replace(/<script[\s\S]*?<\/script>/gi, '');
+    content = content.replace(/<style[\s\S]*?<\/style>/gi, '');
+    content = content.replace(/`[^`\n]+`/g, '');
   } catch (err) {
     console.error(`Error reading file: ${err}`);
     process.exit(1);
@@ -170,7 +174,7 @@ let totalFiles = 0;
 const links: LinkData[] = [];
 const aliases: string[] = [];
 const permalinks: string[] = [];
-const ignored_files = [path.join(PROJECT_ROOT, '_docs/_hidden/other/support_contact.md')];
+const ignored_files: string[] = [];
 function getLinksRecursive(dir: string) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -230,4 +234,8 @@ const deduplicated = Array.from(new Set(csv)).sort();
 
 fs.writeFileSync(path.join(PROJECT_ROOT, '/scripts/temp/broken-links.csv'), [headers, ...deduplicated].join('\n'));
 
-console.log(`${deduplicated.length - 1} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, '/scripts/temp/broken-links.csv')}\n`);
+if (deduplicated.length === 0) {
+  console.log('No broken links found.');
+} else {
+  console.log(`${deduplicated.length} broken links were found. The full list can be found at:\n  ${path.join(PROJECT_ROOT, 'scripts/temp/broken-links.csv')}\n`);
+}

@@ -1,5 +1,5 @@
 ---
-nav_title: About bdocs Wrapper
+nav_title: About bdocs wrapper
 article_title: About bdocs wrapper
 description: "Learn how to use bdocs, the Braze-Docs CLI tool, that helps you replace links, generate redirect URLs, generate deployment text, and more."
 page_order: 8.5
@@ -54,7 +54,7 @@ If you're on MacOS, you can copy the output of `bdocs` directly to your clipboar
 
 ### `deploy`
 
-This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `master` and then listing them in the proper Markdown format.
+This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `main` and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}
@@ -70,7 +70,7 @@ $ ./bdocs deploy
 
 ### `release`
 
-This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `master` since the last release and then listing them in the proper Markdown format.
+This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `main` since the last release and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}
@@ -208,7 +208,7 @@ Learn how to [log analytics]({{site.baseurl}}/developer_guides/content_cards/ana
 
 Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) should only be used to:
 
-- Redirect traffic from outside of Braze Docs to the correct content (such as those coming from Stack Overflow, [Braze Learning](https://learning.braze.com/), the [Braze Blog]({{site.baseurl}}/resources/articles), etc.).
+- Redirect traffic from outside of Braze Docs to the correct content (such as those coming from Stack Overflow, [Braze Learning](https://learning.braze.com/), the [Braze Blog](https://www.braze.com/resources/articles), and similar).
 - Prevent existing bookmarks from breaking.
 
 It should not be used to redirect URLs on an existing Braze Docs page to another existing Braze Docs page. Instead, these URLs should be updated with the newest possible link. We want to avoid cases in which someone reading an existing Braze Docs page clicks a link and is redirected from one page, to another page, to another page, and so on. `ulinks` helps solves this issue, improving the end-user experience.

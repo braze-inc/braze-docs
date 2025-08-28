@@ -30,7 +30,7 @@ The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenA
 2. Type in your prompt or select a sample prompt and select **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then select **Insert into Editor**.
 
-![]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 #### Tips
 

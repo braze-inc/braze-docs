@@ -1,6 +1,6 @@
 ---
 page_order: 2.5
-nav_title: Feature Flags
+nav_title: Feature flags
 article_title: Feature flags for the Braze SDK
 description: "This reference article covers an overview of feature flags including prerequisites and use cases."
 tool: Feature Flags
@@ -128,6 +128,24 @@ if (liveChatEnabled) {
 ```
 
 {% endtab %}
+{% tab Swift %}
+
+```swift
+// Get the initial value from the Braze SDK
+let featureFlag = braze.featureFlags.featureFlag(id: "enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled ?? false
+
+// Listen for updates from the Braze SDK
+braze.featureFlags.subscribeToUpdates() { _ in  
+  let newValue = braze.featureFlags.featureFlag(id: "enable_live_chat")?.enabled ?? false
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+liveChatView.isHidden = !liveChatEnabled
+```
+
+{% endtab %}
 {% endtabs %}
 
 ### Remotely control app variables
@@ -201,6 +219,20 @@ liveChatView.promoText = featureFlag?.getStringProperty("text")
 ```
 
 {% endtab %}
+{% tab Swift %}
+
+```swift
+let featureFlag = braze.featureFlags.featureFlag(id: "navigation_promo_link")
+if let featureFlag {
+  liveChatView.isHidden = !featureFlag.enabled
+} else {
+  liveChatView.isHidden = true
+}
+liveChatView.promoLink = featureFlag?.stringProperty("link")
+liveChatView.promoText = featureFlag?.stringProperty("text")
+```
+
+{% endtab %}
 {% endtabs %}
 
 Now, the day before Thanksgiving, we only have to change those property values in the Braze dashboard.
@@ -219,7 +251,7 @@ To effectively coordinate feature rollout and messaging, we'll create a new feat
 
 ![A feature flag with the name Loyalty Rewards Program. The ID is show_loyalty_program, and the description that this shows the new loyalty rewards program on the home screen and profile page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
-Then, in Canvas Flow, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
+Then, in Canvas, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
 
 ![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
@@ -279,11 +311,24 @@ if (featureFlag?.enabled == true) {
 ```
 
 {% endtab %}
+{% tab Swift %}
+
+```swift
+let featureFlag = braze.featureFlags.featureFlag(id: "enable_checkout_v2")
+braze.featureFlags.logFeatureFlagImpression(id: "enable_checkout_v2")
+if let featureFlag, featureFlag.enabled {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
 {% endtabs %}
 
 We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
-Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include metrics.md metric='Conversion Rate' %}
+Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
 ![A feature flag experiment splitting traffic into two 50 percent groups.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 

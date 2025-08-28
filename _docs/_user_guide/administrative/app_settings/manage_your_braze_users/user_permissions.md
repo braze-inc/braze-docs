@@ -46,6 +46,38 @@ Roles allow for more structure by bundling together your individual custom permi
 
 {% multi_lang_include permissions.md content="Differences" %}
 
+### Considerations for adding user permissions to Teams
+
+You may encounter difficulties when trying to save permissions in the Braze dashboard, particularly when adding or removing users from a workspace, or adding them to a Team. The **Save/Update Users** button may become greyed out if the permissions for the user are identical to those they already have at the workspace level. This restriction exists because there is no benefit to having a Team if all users possess the same permissions as the entire workspace.
+
+To successfully add a user to a Team while maintaining the same permissions, don't assign any permissions at the workspace level. Instead, assign permissions exclusively at the team level.
+
+## Limited users
+
+Limited users have specific permissions that allow them to manage certain aspects of the Braze dashboard while having restrictions compared to company admins and workspace admins.
+
+| Permissions | Limited users can edit the permissions of other limited users if they have the "Manage Dashboard Users" permission checked. They can also create new limited users and modify their permission sets. However, they can't create or manage company admin accounts. |
+| Role limitations | If a limited user has all permissions except "App Group Admin", they will still have access to all other permissions typically granted to an workspace admin. |
+| Visibility of permissions | If a limited user has "Manage Dashboard Users" checked for one app group (such as Dev) but not for another (such as Prod), they won't see the Prod app group permissions in their "Manage Users" profile. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Comparing limited users
+
+| Limited user type | Description |
+| --- | --- |
+| App group admin | App Group Admins have permissions specific to managing app groups but do not have the same authority as Company Admins. Limited Users can inherit permissions similar to those of App Group Admins if they have the necessary permissions checked. |
+| Company admin | Company Admins have broader permissions, including the ability to delete dashboard users. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
+| Basic read-only permission | To access certain parts of the dashboard, such as the Technology Partners page, users must have a basic read-only permission. This includes having "Manage External Integrations" enabled, along with permissions for Access Campaigns, Canvases, Cards, Segments, and Media Library. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Limited access error
+
+Users may encounter messages like "Limited Access. You do not have permissions to access this Page." In such cases, the account admin should check if they can resolve the issue by disabling and re-enabling the user's permissions.
+
+{% alert note %}
+It isn't possible to merge or import user permissions from one dashboard user to another.
+{% endalert %}
+
 ## Editing a user's permissions
 
 To edit a user's current [admin](#admin), [company](#company), or [workspace](#workspace) permissions, go to **Settings** > **Company Users**, then select their name.
@@ -127,7 +159,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Edit Segments|Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Workspace|Export User Data|Allows users to export their user data from segments, campaigns, and Canvases. This permission includes sensitive user information like names, email addresses, and other collected personally identifiable information (PII). |
 |Workspace|Import and Update User Data|Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules.|
-|Workspace|Launch Content Blocks|Allows users to launch [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
+|Workspace|Launch and Manage Content Blocks|Allows users to launch and manage [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/).|
 |Workspace|Launch Preference Centers|Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Workspace|Manage Apps|Allows users to edit **App Settings**.|
 |Workspace|Manage Catalogs Dashboard Permission|Allows users to create and manage catalogs.|

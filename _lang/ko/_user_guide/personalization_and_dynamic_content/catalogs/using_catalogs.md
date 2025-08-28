@@ -13,7 +13,7 @@ description: "이 참고 문서에서는 카탈로그를 사용하여 Liquid를 
 
 선택한 메시지 작성기에서 <i class="fas fa-plus-circle"></i> 더하기 아이콘을 선택하여 **개인화 추가** 모달을 열고 **개인화 유형에** 대한 **카탈로그 항목**을 선택합니다. 그런 다음 **카탈로그 이름을** 선택합니다. 이전 예제를 사용하여 '게임' 카탈로그를 선택하겠습니다.
 
-![][1]
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 다음과 같은 Liquid 미리 보기를 즉시 확인할 수 있습니다:
 
@@ -41,6 +41,15 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 > 테일즈를 단 7.49달러에 만나보세요!
 
+## 카탈로그 내보내기
+
+대시보드에서 카탈로그를 내보내는 방법에는 두 가지가 있습니다: 
+
+- **카탈로그** 섹션에서 카탈로그 행 위로 마우스를 가져갑니다. 그런 다음 **카탈로그 내보내기** 버튼을 선택합니다.
+- 카탈로그를 선택하세요. 그런 다음 카탈로그의 **미리 보기** 탭에서 카탈로그 **내보내기** 버튼을 선택합니다.
+
+내보내기를 시작하면 CSV 파일을 다운로드할 수 있는 이메일이 전송됩니다. 이 파일을 검색하는 데 최대 4시간이 주어집니다.
+
 ## 추가 사용 사례
 
 ### 여러 항목
@@ -49,7 +58,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 이 예제에서는 **카탈로그 항목**에 세 가지 게임인 테일즈, 테슬라그라드, 아카라투스의 `id` 을 추가하고 **표시할 정보**에 `title`을 선택합니다.
 
-![][2]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Liquid 주변에 텍스트를 추가하여 메시지를 더욱 개인화할 수 있습니다:
 
@@ -105,11 +114,11 @@ Note that you must declare the catalog list and, if applicable, the selection be
 ```
 {% endraw %}
 
-![이미지 필드에 사용되는 카탈로그 리퀴드 태그가 있는 콘텐츠 카드 작성기입니다.][3]
+![Content Card composer with catalog Liquid tag used in the image field.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Liquid가 렌더링되었을 때의 모습은 다음과 같습니다.
 
-![카탈로그 Liquid 태그가 렌더링된 콘텐츠 카드 예시.][4]{: style="max-width:50%" }
+![Example Content Card with catalog Liquid tags rendered.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### 카탈로그 항목 템플릿 지정
 
@@ -130,7 +139,7 @@ Liquid가 렌더링되었을 때의 모습은 다음과 같습니다.
 JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
 {% endalert %}
 
-Liquid 템플릿을 사용하면 위시리스트 ID를 동적으로 가져와서 메시지에서 사용할 수 있습니다. 이렇게 하려면 [사용자 지정 속성에][10] 변수를 지정한 다음 **개인화 추가** 모달을 사용하여 배열에서 특정 항목을 가져옵니다.
+Liquid 템플릿을 사용하면 위시리스트 ID를 동적으로 가져와서 메시지에서 사용할 수 있습니다. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as `{{result}}`.
 
 {% alert tip %}
 배열은 `1` 이 아닌 `0` 에서 시작한다는 점을 기억하세요.
@@ -158,7 +167,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 
 ### 액체 사용
 
-카탈로그를 수동으로 구성하여 Liquid 로직을 구성할 수도 있습니다. 그러나 존재하지 않는 ID를 입력해도 Braze는 여전히 객체가 없는 항목 배열을 반환한다는 점에 유의하세요. 배열의 크기를 확인하고 `if` 문을 사용하여 빈 배열의 경우를 고려하는 등의 오류 처리를 포함할 것을 권장합니다.
+You can also manually piece together catalogs with Liquid logic. 그러나 존재하지 않는 ID를 입력해도 Braze는 여전히 객체가 없는 항목 배열을 반환한다는 점에 유의하세요. 배열의 크기를 확인하고 `if` 문을 사용하여 빈 배열의 경우를 고려하는 등의 오류 처리를 포함할 것을 권장합니다.
 
 {% alert note %}
 현재 Liquid는 카탈로그 내에서 사용할 수 없습니다. Liquid 개인화가 카탈로그의 셀 안에 나열된 경우 동적 값은 렌더링되지 않고 실제 Liquid만 표시됩니다.
@@ -202,6 +211,3 @@ Welcome to our store, Peter!
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
-[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
-[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

@@ -1,5 +1,5 @@
 ---
-nav_title: Drag-And-Drop Editor
+nav_title: Drag-and-drop editor
 article_title: Drag-And-Drop Editor for Email
 alias: /dnd/
 page_order: 3
@@ -28,6 +28,11 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   image: /assets/img/braze_icons/inbox-01.svg
 
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: Drag-and-Drop Product Blocks
+  link: /docs/dnd_product_blocks/
+  image: /assets/img/braze_icons/columns-01.svg
 
 ---
 <br><br>

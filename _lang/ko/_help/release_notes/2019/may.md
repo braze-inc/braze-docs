@@ -45,13 +45,13 @@ Braze의 기능에 새로운 채널이 추가되었습니다! 새로운 채널�
 
 Jampp는 모바일 고객을 확보하고 리타겟팅하기 위한 퍼포먼스 마케팅 플랫폼입니다. 행동 데이터와 예측 및 프로그래매틱 기술을 결합하여 소비자가 처음 구매하거나 더 자주 구매하도록 유도하는 개인 맞춤형 관련성 광고를 표시함으로써 광고주에게 수익을 창출합니다.
 
-Braze 고객은 이벤트를 Jampp로 스트리밍하도록 Braze 웹훅 채널을 구성하여 [Jampp와 통합]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/jampp/)할 수 있습니다. 그 결과, 고객은 모바일 광고 생태계 내에서 Jampp를 통해 리타겟팅 이니셔티브에 더 풍부한 데이터 세트를 추가할 수 있습니다.
+Braze 고객은 이벤트를 Jampp로 스트리밍하도록 Braze 웹훅 채널을 구성하여 [Jampp와 통합]({{site.baseurl}}/partners/jampp/)할 수 있습니다. 그 결과, 고객은 모바일 광고 생태계 내에서 Jampp를 통해 리타겟팅 이니셔티브에 더 풍부한 데이터 세트를 추가할 수 있습니다.
 
 ## 인앱 메시지용 플랫폼 선택기
 
 캠페인 제작 과정에서 이 단계를 강조하는 플랫폼 선택 기능을 통해 인앱 메시지가 전달될 위치와 플랫폼을 쉽게 선택할 수 있습니다.
 
-![플랫폼 선택기][1]
+![플랫폼 선택기]({% image_buster /assets/img/iam_platforms.gif %})
 
 ## 이메일용 발송 ID 커런츠 필드
 
@@ -104,4 +104,3 @@ _2019년 8월에 업데이트가 기록되었습니다._
 
 이 새 필터 확인하기: [세분화 필터 라이브러리]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[1]: {% image_buster /assets/img/iam_platforms.gif %}

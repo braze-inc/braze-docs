@@ -48,10 +48,6 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 시작하려면 **파트너 통합** > **데이터 내보내기**로 이동하세요. 커런츠 통합 관리 페이지로 이동합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 이 페이지는 **통합** > **커런트에서** 찾을 수 있습니다.
-{% endalert %}
-
 ![커런츠 페이지 Braze 대시보드]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### 3단계: 파트너 추가
@@ -81,11 +77,17 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 ### 6단계: 통합을 테스트하세요
 
-통합을 테스트하거나 커런츠 예제 [GitHub 저장소](https://github.com/Appboy/currents-examples)에서 샘플 커런츠 데이터를 확인할 수 있습니다.
-
 {% alert important %}
 현재 페이로드가 900KB를 초과하는 지나치게 큰 이벤트는 삭제됩니다.
 {% endalert %}
+
+Before you test, consider checking out our [sample Currents data in GitHub](https://github.com/Appboy/currents-examples). When you're ready to test, you choose an option below:
+
+#### Sending test events
+
+To test your integration, you can select **Send Test Events** to send one event from each of your selected event types to this Current. For detailed information about each event type, refer to our [Customer Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) libraries.
+
+![The "Currents Test" page in the Braze dashboard.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### 전류 커넥터 테스트
 
@@ -96,7 +98,7 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 테스트 커런츠 커넥터가 전송 한도에 도달하면, 커넥터는 다음 7일 기간까지 이벤트를 전송하지 않습니다.
 
-테스트 커런츠 커넥터를 업그레이드하려면 대시보드에서 통합을 편집하고 **업그레이드**를 선택하세요.
+To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 
 ## 커런츠 업데이트 중
 
@@ -106,61 +108,4 @@ Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 저장소
 
 Braze는 나열된 IP에서 전류 데이터를 전송합니다:
 
-| 인스턴스 `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, 그리고 `US-07` |
-|---|
-| `127.0.0.1` |
-| `23.21.118.191` |
-| `34.206.23.173` |
-| `50.16.249.9` |
-| `52.4.160.214` |
-| `54.87.8.34` |
-| `54.156.35.251` |
-| `52.54.89.238` |
-| `18.205.178.15` |
-{: .reset-td-br-1 role="presentation"}
-
-| 인스턴스의 경우 `US-08` |
-|---|
-| `52.151.246.51` |
-| `52.170.163.182` |
-| `40.76.166.157` |
-| `40.76.166.170` |
-| `40.76.166.167` |
-| `40.76.166.161` |
-| `40.76.166.156` |
-| `40.76.166.166` |
-| `40.76.166.160` |
-| `40.88.51.74` |
-| `52.154.67.17` |
-| `40.76.166.80` |
-| `40.76.166.84` |
-| `40.76.166.85` |
-| `40.76.166.81` |
-| `40.76.166.71` |
-| `40.76.166.144` |
-| `40.76.166.145` |
-{: .reset-td-br-1 role="presentation"}
-
-| 인스턴스 `EU-01` 및 `EU-02`의 경우 |
-|---|
-| `127.0.0.1` |
-| `52.58.142.242` |
-| `52.29.193.121` |
-| `35.158.29.228` |
-| `18.157.135.97` |
-| `3.123.166.46` |
-| `3.64.27.36` |
-| `3.65.88.25` |
-| `3.68.144.188` |
-| `3.70.107.88` |
-{: .reset-td-br-1 role="presentation"}
-
-| 인스턴스의 경우 `AU-01` |
-|---|
-| `13.210.1.145` |
-| `13.211.70.159` |
-| `13.238.45.54` |
-| `52.65.73.167` |
-| `54.153.242.239` |
-| `54.206.45.213` |
-{: .reset-td-br-1 role="presentation"}
+{% multi_lang_include data_centers.md datacenters='ips' %}

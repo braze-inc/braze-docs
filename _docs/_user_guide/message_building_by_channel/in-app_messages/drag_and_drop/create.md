@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an In-App Message
+nav_title: Creating an in-app message
 article_title: "Creating an In-App Message with Drag-and-Drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequisites, creative details, and more."
 alias: "/create_dnd_iam/"
@@ -14,6 +14,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 # Creating an in-app message with drag-and-drop
 
 > With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience.
+
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor.
 
@@ -172,6 +175,8 @@ Body clicks are not automatically collected for in-app messages created with the
 #### Can I segment based on button clicks?
 
 Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.
+
+![The "Identifier for Reporting" field with a value of "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 
 #### Can I customize my in-app message using custom HTML or JavaScript or transfer existing HTML messages into the editor?
 

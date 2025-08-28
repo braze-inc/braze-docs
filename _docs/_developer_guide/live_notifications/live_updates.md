@@ -1,5 +1,5 @@
 ---
-nav_title: Live Updates for Android
+nav_title: Live updates for Android
 article_title: Live Updates for the Android Braze SDK
 page_order: 0.1
 description: "Learn how to set up Live Updates for the Android Braze SDK."
@@ -10,216 +10,65 @@ platform:
 
 # Live Updates for Android
 
-> Learn how to emulate Live Updates in the Android Braze SDK. Although Live Updates aren't officially supported, this guide will show you how to emulate their behavior, so you can display interactive lock-screen notifications similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/live_notifications/live_activities). Unlike official Live Updates, this functionality can be implemented for older Android versions.
+> Learn how to use Android Live Updates in the Braze SDK, also known as [Progress Centric Notifications](https://developer.android.com/about/versions/16/features/progress-centric-notifications). These notifications are similar to [Live Activities for the Swift Braze SDK]({{site.baseurl}}/developer_guide/live_notifications/live_activities), allowing you to display interactive lock-screen notifications. Android 16 introduces progress-centric notifications to help users seamlessly track user-initiated, start-to-end journeys.
 
 ## How it works
 
 You can use the [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) interface to customize how Braze push notifications are displayed. By extending `BrazeNotificationFactory`, Braze will call your factory's `createNotification()` method before the notification is displayed to the user. It will then pass a payload containing custom key-value pairs sent through the Braze dashboard or REST API.
 
-## Emulating a Live Update
-
-{% alert important %}
-Live Updates aren't natively supported in the Android OS. The following section only shows you how to emulate their general behavior.
-{% endalert %}
+## Displaying a Live Update
 
 In this section, you'll partner with Superb Owl, the host of a new game show where wildlife rescue teams compete to see who can save the most owls. They're looking to leverage Live Updates in their Android app, so they can display the status of an on-going match and make dynamic updates to the notification in realtime.
 
-![The Live Update that Superb Owl wants to making, displaying an on-going match between 'Wild Bird Fund' and 'Owl Rescue'. It's currently the fourth quarter and the score is 2-4 with OWL in the lead.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![An example Live Update from Android]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
-### Step 1: Add a custom layout
-
-You can add one or more custom Live Update layouts to your project. These are helpful for handling how notifications are displayed when collapsed or expanded. Your directory structure should be similar to the following:
-
-```plaintext
-.
-├── app/
-└── res/
-    └── layout/
-        ├── liveupdate_collapsed.xml
-        └── liveupdate_expanded.xml
-```
-
-In each XML file, create a custom layout. Superb Owl created the following layouts for their collapsed and expanded Live Updates:
-
-{% tabs local %}
-{% tab  Example: Collapsed layout %}
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/notification_title"
-        style="@style/TextAppearance.Compat.Notification.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-</LinearLayout>
-```
-{% endtab %}
-
-{% tab Example: Expanded layout %}
-{% details Show the sample code %}
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/team1logo"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:src="@drawable/team_default1"/>
-
-        <TextView
-            android:id="@+id/team1name"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1.6"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2-4"
-            android:textColor="#555555"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/timeInfo"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/team2logo"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:src="@drawable/team_default2"/>
-
-        <TextView
-            android:id="@+id/team2name"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-</LinearLayout>
-```
-{% enddetails %}
-{% endtab %}
-{% endtabs %}
-
-### Step 2: Create a custom notification factory
+### Step 1: Create a custom notification factory
 
 In your application, create a new file named `MyCustomNotificationFactory.kt` that extends [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) to handle how Braze Live Updates are displayed.
 
-In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the [next step](#android_step-3-map-custom-data), they'll create a new method called `getTeamInfo` to map a team's data to the activity.
+In the following example, Superb Owl created a custom notification factory to display a Live Update for on-going matches. In the next step, you'll create a new method called `getTeamInfo` to map a team's data to the activity.
 
-{% details Show the sample code %}
 ```kotlin
-import android.app.Notification
-import android.widget.RemoteViews
-import androidx.core.app.NotificationCompat
-import com.braze.models.push.BrazeNotificationPayload
-import com.braze.push.BrazeNotificationFactory
-import com.braze.push.BrazeNotificationUtils.getOrCreateNotificationChannelId
-import com.braze.support.BrazeLogger.brazelog
-
-class MyCustomNotificationFactory : BrazeNotificationFactory() {
+class MyCustomNotificationFactory : IBrazeNotificationFactory {
     override fun createNotification(payload: BrazeNotificationPayload): Notification? {
-        if (payload.extras.containsKey("live_update")) {
-            val kvp = payload.extras
-            val notificationChannelId = getOrCreateNotificationChannelId(payload)
-            val context = payload.context
+        val notificationBuilder = populateNotificationBuilder(payload)
+        val context = payload.context ?: return null
 
-            if (context == null) {
-                brazelog { "BrazeNotificationPayload has null context. Not creating notification" }
-                return null
-            }
+        if (notificationBuilder == null) {
+            brazelog { "Notification could not be built. Returning null as created notification." }
+            return null
+        }
+        notificationBuilder.setContentTitle("Android Live Updates").setContentText("Ongoing updates below")
+        setProgressStyle(notificationBuilder, context)
+        return notificationBuilder.build()
+    }
 
-            val team1 = kvp["team1"]
-            val team2 = kvp["team2"]
-            val score1 = kvp["score1"]
-            val score2 = kvp["score2"]
-            val time = kvp["time"]
-            val quarter = kvp["quarter"]
-
-            // Superb Owl will define the 'getTeamInfo' method in the next step.
-            val (team1name, team1icon) = getTeamInfo(team1)
-            val (team2name, team2icon) = getTeamInfo(team2)
-
-            // Get the layouts to use in the custom notification.
-            val notificationLayoutCollapsed = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.liveupdate_collapsed)
-            val notificationLayoutExpanded = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.liveupdate_expanded)
-
-            // Very simple notification for the small layout
-            notificationLayoutCollapsed.setTextViewText(
-                R.id.notification_title,
-                "$team1 $score1 - $score2 $team2\n$time $quarter"
+    private fun setProgressStyle(notificationBuilder: NotificationCompat.Builder, context: Context) {
+        val style = NotificationCompat.ProgressStyle()
+            .setStyledByProgress(false)
+            .setProgress(200)
+            .setProgressTrackerIcon(IconCompat.createWithResource(context, R.drawable.notification_small_icon))
+            .setProgressSegments(
+                mutableListOf(
+                    NotificationCompat.ProgressStyle.Segment(1000).setColor(Color.GRAY),
+                    NotificationCompat.ProgressStyle.Segment(200).setColor(Color.BLUE),
+                )
+            )
+            .setProgressPoints(
+                mutableListOf(
+                    NotificationCompat.ProgressStyle.Point(60).setColor(Color.RED),
+                    NotificationCompat.ProgressStyle.Point(560).setColor(Color.GREEN)
+                )
             )
 
-            notificationLayoutExpanded.setTextViewText(R.id.score, "$score1 - $score2")
-            notificationLayoutExpanded.setTextViewText(R.id.team1name, team1name)
-            notificationLayoutExpanded.setTextViewText(R.id.team2name, team2name)
-            notificationLayoutExpanded.setTextViewText(R.id.timeInfo, "$time - $quarter")
-            notificationLayoutExpanded.setImageViewResource(R.id.team1logo, team1icon)
-            notificationLayoutExpanded.setImageViewResource(R.id.team2logo, team2icon)
-
-            val customNotification = NotificationCompat.Builder(context, notificationChannelId)
-                .setSmallIcon(R.drawable.notification_small_icon)
-                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
-                .setCustomContentView(notificationLayout)
-                .setCustomBigContentView(notificationLayoutExpanded)
-                .build()
-            return customNotification
-        } else {
-            // Use the BrazeNotificationFactory for all other notifications
-            return super.createNotification(payload)
-        }
+        notificationBuilder.setStyle(style)
     }
 }
 ```
-{% enddetails %}
 
-### Step 3: Map custom data
+### Step 2: Map custom data
 
 In `MyCustomNotificationFactory.kt`, create a new method for handling data when Live Updates are displayed.
 
@@ -243,13 +92,11 @@ class CustomNotificationFactory : BrazeNotificationFactory() {
 }
 ```
 
-### Step 4: Set the custom notification factory
+### Step 3: Set the custom notification factory
 
 In your application class, use [`customBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/custom-braze-notification-factory.html?query=var%20customBrazeNotificationFactory:%20IBrazeNotificationFactory?)to set your custom notification factory.
 
 ```kotlin
-import com.braze.Braze
-
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
@@ -260,7 +107,7 @@ class MyApplication : Application() {
 }
 ```
 
-### Step 5: Send the activity
+### Step 4: Send the activity
 
 You can use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) REST API endpoint to send a push notification to a user's Android device.
 
@@ -310,6 +157,6 @@ While curl commands are helpful for testing, we recommend handling this call in 
 | `ASSIGNED_NOTIFICATION_ID`   | The notification ID you want to assign to the chosen user's live notification. The ID must be unique to this game, and must be used in order to [update their existing notification](#android_step-4-update-data-with-the-braze-rest-api) later. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Step 6: Update the activity
+### Step 5: Update the activity
 
 To update the existing Live Update with new data, modify the relevant key-value pairs assigned to `messages.extra`, then use the same `notification_id` and call the `/messages/send` endpoint again.

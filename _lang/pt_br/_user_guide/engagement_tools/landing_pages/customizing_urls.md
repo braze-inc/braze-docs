@@ -11,7 +11,9 @@ page_order: 1
 
 ## Como funciona?
 
-Quando você [conectar seu domínio ao Braze](#connecting-your-domain-to-braze), ele será usado como o domínio padrão para todas as landing pages. Por exemplo, se você conectar o subdomínio `forms.example.com`, os URLs da landing page agora serão `forms.example.com/holiday-sale`.
+Quando você [conectar seu domínio ao Braze](#connecting-your-domain-to-braze), ele será usado como o domínio padrão para todas as landing pages. Por exemplo, se você conectar o subdomínio `forms.example.com`, os URLs de sua landing page agora serão `forms.example.com/holiday-sale`.
+
+O número de domínios personalizados que você pode conectar à sua conta Braze depende do seu [nível de plano]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Para aumentar seu limite, entre em contato com o gerente de sua conta Braze.
 
 ## Conectando seu domínio ao Braze
 
@@ -22,7 +24,7 @@ Para conectar um domínio à sua conta Braze, peça a um administrador que siga 
 3. Copie e cole os registros **TXT** e **CNAME** nas configurações de DNS do seu provedor de domínio.
 4. Retorne ao dashboard do Braze para verificar a conexão.
 
-![Página Landing Page Settings com um registro TXT e dois registros CNAME listados com seus respectivos nomes e valores.][1]
+![Página Landing Page Settings com um registro TXT e dois registros CNAME listados com seus respectivos nomes e valores.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Dependendo do seu provedor de domínio, a conexão pode levar até 48 horas. Quando o processo for concluído, começaremos a usar seu domínio personalizado para suas landing pages no dashboard do Braze.
@@ -71,4 +73,3 @@ Não, atualmente só é possível conectar um subdomínio a um espaço de trabal
 
 Não, você não pode usar subdomínios que já estejam em uso. Embora esses subdomínios sejam válidos, eles não podem ser usados para landing pages se já estiverem atribuídos a outros fins ou tiverem registros DNS que entrem em conflito com os registros CNAME necessários.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}

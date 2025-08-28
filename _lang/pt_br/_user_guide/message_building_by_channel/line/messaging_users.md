@@ -23,13 +23,13 @@ Há vários métodos para conversar com os usuários pelo LINE, como o uso de pa
 
 Defina suas palavras de disparo ao programar uma campanha de entrega baseada em ação.
 
-![Disparo baseado em ação de "Enviar esta campanha aos usuários que enviaram LINE de entrada para o grupo de inscrições onde está o corpo da mensagem" e um campo em branco.][1]
+![Disparador baseado em ação de "Enviar esta campanha para usuários que enviaram LINE de entrada para o grupo de inscrições onde o corpo da mensagem é" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canva
 
 Defina suas palavras-gatilho em [jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) em seu Canva.
 
-![Jornada de ação com um disparo de "Enviar esta campanha para usuários que definirem um LINE de entrada para o grupo de inscrição em que o corpo da mensagem seja" e um campo em branco.][2]
+![Caminho de ação com um disparador de "Enviar esta campanha para usuários que enviaram LINE de entrada para o grupo de inscrições onde o corpo da mensagem é" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Solicitações
 
@@ -47,5 +47,3 @@ Depois de criar grupos de ação para as frases de filtro personalizadas, adicio
 
 Para essa mensagem, você deve enviar uma mensagem LINE informando ao usuário que esse canal não é monitorado por um humano e, se necessário, orientá-lo para um canal de suporte.
 
-[1]: {% image_buster /assets/img/line/trigger_word_campaign.png %}
-[2]: {% image_buster /assets/img/line/trigger_word_canvas.png %}

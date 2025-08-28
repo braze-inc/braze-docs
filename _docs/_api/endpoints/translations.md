@@ -11,26 +11,45 @@ page_type: landing
 guide_top_header: "Translation Endpoints"
 guide_top_text: "Use the Braze translation endpoints to manage and update translations in your campaigns and Canvases."
 
-guide_featured_title: ""
+guide_featured_title: "Campaign endpoints"
 guide_featured_list:
-  - name: "GET: View Translations for a Campaign"
-    link: /docs/api/endpoints/translations/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View Translations for a Canvas"
-    link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: View Translation for a Campaign"
-    link: /docs/api/endpoints/translations/get_translation_campaign/
+    link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View Translation for a Canvas"
-    link: /docs/api/endpoints/translations/get_translation_canvas/
+  - name: "GET: View All Translations for a Campaign"
+    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Campaign"
-    link: /docs/api/endpoints/translations/put_update_translation_campaign/
+    link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+
+guide_menu_title: "Canvas endpoints"
+guide_menu_list:
+  - name: "GET: View Translation for a Canvas"
+    link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "GET: View All Translations for a Canvas"
+    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Canvas"
-    link: /docs/api/endpoints/translations/put_update_translation_canvas/
+    link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
+  
+guide_menu_title2: "Email template endpoints"
+guide_menu_list2:
+  - name: "GET: View Source Translation"
+    link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "GET: View Specific Translation and Locale"
+    link: /docs/api/endpoints/translations/email_templates/get_view_translation_locale_template/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: "GET: View All Translations and Locales"
+    link: /docs/api/endpoints/translations/email_templates/get_view_translation_template/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: "PUT: Update Translations in an Email Template"
+    link: /docs/api/endpoints/translations/email_templates/put_update_template/
+    image: /assets/img/braze_icons/target-04.svg
+
 ---
 
 {% alert important %}
@@ -39,7 +58,7 @@ The Braze translation endpoints are currently in early access. Contact your Braz
 
 ## How our translation endpoints work
 
-Braze Translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
+Our translation endpoints work with [multi-language composition]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/), where a message can have different versions that can be rendered depending on the user receiving the message.
 
 ### Prerequisites
 

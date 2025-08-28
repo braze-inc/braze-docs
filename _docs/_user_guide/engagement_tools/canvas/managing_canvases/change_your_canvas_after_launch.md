@@ -1,5 +1,5 @@
 ---
-nav_title: Editing Canvases After Launch
+nav_title: Editing Canvases after launch
 article_title: Editing Canvases After Launch
 page_order: 0
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
@@ -45,11 +45,7 @@ Note that when you launch a Canvas initially, Braze enqueues the users for the M
 
 See the [Best practices](#best-practices) section for specific editing use cases. In general, it's best practice to avoid editing live Canvases as there may be unexpected behavior.
 
-{% details Original Canvas editor %}
-
-{% alert important %}
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It’s an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Expand for original Canvas editor details %}
 
 You can't edit or delete existing connections, and you can't insert a step between existing connected steps. If you want to edit or add more steps to your Canvas user journey, the following details will apply:
 
@@ -135,6 +131,10 @@ Canvas entry properties aren't templated into steps when sent. This means when C
 
 Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched.
 
+{% alert important %}
+In general, avoid making changes while the Canvas is active and enqueueing users.
+{% endalert %}
+
 ### Disconnected steps
 
 You can launch your Canvas with disconnected steps and also save these Canvases post-launch. Before disconnecting a step from your workflow, we recommend checking the analytics view of the steps for users pending.
@@ -145,7 +145,7 @@ By creating or editing disconnected steps, you can make changes to these indepen
 
 ### Experiment Path step
 
-If your Canvas has an active or in progress Experiment Path step and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will restart. To avoid your users from re-entering the experiment path, you can duplicate and create a new Canvas instead of updating the Canvas.
+If your Canvas has an active or in-progress Winning Path or Personalized Path experiment and you update the active Canvas, regardless if you update the Experiment Path step itself, the in-progress experiment will end and the experiment step will not determine a winning path or personalized paths. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas. Otherwise, users will flow through the experiment path as if no optimization method was selected.
 
 ### Time delays
 
@@ -164,3 +164,19 @@ Stopping a Canvas won't exit users who are waiting in a step. If you re-enable t
 For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay step with a one hour delay that goes into a Message step. 
 
 A user enters this Canvas at 2:01 pm and enters the Delay step at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message step) at 3:01 pm. If you stop the Canvas at 2:30 pm and re-enable the Canvas at 3:30 pm, the user will exit the Canvas since it's after 3:01 pm. However, if you re-enable the Canvas at 2:40 pm, the user will move on to the Message step as expected at 3:01 pm.
+
+## Things to know
+
+The following common issues can be triggered by editing or adding more components to any other component in a Canvas after launching. 
+
+{% alert important %}
+These following issues are avoidable. If you need to make edits to a Canvas after it's been launched, we recommend first confirming that all the users who have already entered the Canvas have completed their user journey. Additionally, we suggest that you don't delete steps that have already processed at least one user.
+{% endalert %}
+
+- Missing reporting data (when message variants are deleted and re-added)
+- Users aren't following the expected path
+- Messages are sent at unexpected times
+- The edits do not overwrite Currents data, so you may notice discrepancies between Canvas steps (such as `canvas_step_ids` that don't exist in the Canvas due to deletion)
+- Users can receive the same message twice
+- Users are aborted from receiving messages due to the existing rate limit
+  - When users are dispatched into a Canvas, the rate limit applied to the Canvas when a user is dispatched is applied to the user. After the Canvas is sent, the rate limit cannot be edited for that user, so increasing or decreasing the rate limit post-launch won't affect users who are already dispatched.

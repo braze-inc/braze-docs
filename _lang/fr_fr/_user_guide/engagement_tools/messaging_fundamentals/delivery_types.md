@@ -28,7 +28,7 @@ Pour les campagnes, le type de réception/distribution détermine le moment où 
 
 {% tabs %}
 {% tab campagne %}
-Vous pouvez choisir parmi les options suivantes lors de la réception/distribution :
+Vous pouvez choisir parmi les options suivantes lorsque vous utilisez la réception/distribution :
 
 - Envoyer dès que la campagne est lancée
 - Envoyer à un moment spécifié
@@ -36,7 +36,7 @@ Vous pouvez choisir parmi les options suivantes lors de la réception/distributi
 {% endtab %}
 
 {% tab canvas %}
-Avec une livraison planifiée, les utilisateurs accéderont selon un calendrier, de la même façon que vous planifieriez une campagne. Vous pouvez inscrire des utilisateurs à un Canvas dès son lancement ou à un moment déterminé.
+Avec une livraison planifiée, les utilisateurs accéderont selon un calendrier, de la même façon que vous planifieriez une campagne. Vous pouvez inscrire des utilisateurs à un Canvas dès son lancement ou à un moment précis.
 
 #### Périodes désignées
 
@@ -60,7 +60,7 @@ Les options basées sur l'action déterminent les actions (ou déclencheurs) qu'
 
 #### Fenêtre d'entrée
 
-La fenêtre d'entrée de votre Canvas détermine quels utilisateurs peuvent entrer dans le Canvas à l'heure de début désignée (et à l'heure de fin facultative). Comme pour les campagnes basées sur des actions, vous pouvez choisir d'inscrire les utilisateurs dans leur fuseau horaire local.
+La fenêtre d'entrée de votre Canvas détermine quels utilisateurs peuvent entrer dans le Canvas à l'heure de début désignée (et à l'heure de fin facultative). Comme pour les campagnes basées sur l'action, vous pouvez choisir d'inscrire les utilisateurs dans leur fuseau horaire local.
 {% endtab %}
 {% endtabs %}
 

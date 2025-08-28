@@ -1,5 +1,5 @@
 ---
-nav_title: Data Retention
+nav_title: Data retention
 article_title: Data Retention
 alias: /data_retention/
 description: "This reference article covers general Braze data retention information."

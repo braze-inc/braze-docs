@@ -24,7 +24,7 @@ guide_featured_list:
 - name: SQL Query Builder
   link: /docs/user_guide/analytics/query_builder/
   image: /assets/img/braze_icons/tool-01.svg
-- name: SQL Segments
+- name: SQL Segment Extensions
   link: /docs/sql_segments/
   image: /assets/img/braze_icons/users-01.svg
 

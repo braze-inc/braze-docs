@@ -85,6 +85,12 @@ Braze will keep the following account data:
 - Custom attributes or test data associated with their account
 - Campaigns or Canvases they created (but the user's name won't appear in them, such as appearing in the **Last edited by** column)
 
+### Impact of deleting a dashboard user
+
+When a dashboard user is deleted, there will be no significant impact on the assets they created within the dashboard, such as campaigns, segments, and Canvases. However, it's important to note that the **Created By** field for these assets will display a "null" value instead of the email address of the deleted user.
+
+If a new dashboard user is subsequently created with the same email address as the deleted user, Braze will not re-associate the assets created by the deleted user with the new user. The new dashboard user will start with a clean slate and will not be credited as the creator of any existing assets in the dashboard.
+
 ## Troubleshooting
 
 ### "Email is already taken" when trying to add a user
