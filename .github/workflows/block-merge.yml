@@ -26,4 +26,3 @@ jobs:
             echo "No 'do not merge' label found. Check passed."
             exit 0
           fi
-          
