@@ -77,7 +77,7 @@ CRM チームは、近い将来に立ち上げるメッセージングのユー�
 
 ### カスタマイズの計画
 
-マーケティング担当者に、希望するカスタマイズについて相談する。例えば、デフォルトのBraze Content Cardsを実装したいか？ブランド・ガイドラインに合うように、ルック＆フィールを少し調整したいのか？コンポーネントのために全く新しいUIを開発し、Brazeにその分析を追跡させたいか？カスタマイズのレベルが異なれば、必要な範囲も異なる。
+マーケティング担当者に、希望するカスタマイズについて相談する。例えば、デフォルトのBraze Content Cardsを実装したいか？ブランド・ガイドラインに合うように、ルック＆フィールを少し調整したいのか？コンポーネントのために全く新しいUIを開発し、Brazeにその分析を追跡させたいか？カスタマイズのレベルが異なれば、必要なスコープのレベルも異なります。
 
 ### ダッシュボードにアクセスする
 
@@ -111,14 +111,14 @@ BrazeはiOSアプリ、Androidアプリ、ウェブアプリなどをサポー�
 
 ### CDP統合パートナー
 
-多くの顧客は、Braze のオンボーディングを、統合パートナーとして顧客データプラットフォーム (CDP) とも統合する機会として利用しています。Braze はデータの追跡と分析を提供し、顧客データプラットフォームは追加のデータルーティングとオーケストレーションを提供できます。Braze は、[mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) や [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) など多くの顧客データプラットフォームとシームレスに統合できます。 
+多くの顧客は、Braze のオンボーディングを、統合パートナーとして顧客データプラットフォーム (CDP) とも統合する機会として利用しています。Braze はデータの追跡と分析を提供し、顧客データプラットフォームは追加のデータルーティングとオーケストレーションを提供できます。Braze は、[mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle/) や [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/) など多くの顧客データプラットフォームとシームレスに統合できます。 
 
 顧客データプラットフォームとサイドバイサイドの統合を行う場合は、顧客データプラットフォームの SDK からの呼び出しを Braze SDK にマッピングします。基本的に、次を実行します。
 * 識別呼び出しを `changeUser` ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html)、[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/)、[web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)) にマップし、属性を設定します。
 * データフラッシュ呼び出しを `requestImmediateDataFlush` ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-immediate-data-flush.html?query=abstract%20fun%20requestImmediateDataFlush())、[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/requestimmediatedataflush())、[web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestimmediatedataflush)) にマッピングします。
 * カスタムイベントや購入を記録する。
 
-選択したプラットフォームによっては、Braze SDK と選択した CDP の間の統合例を利用できる可能性があります。詳細は[CDPテクノロジー・パートナーのリストを]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform)参照のこと。 
+選択したプラットフォームによっては、Braze SDK と選択した CDP の間の統合例を利用できる可能性があります。詳細は[CDPテクノロジー・パートナーのリストを]({{site.baseurl}}/partners/data_and_analytics/)参照のこと。 
 
 ### Braze SDKの統合
 
@@ -132,7 +132,7 @@ SDKの実装では、以下のことを行う：
 
 * サポートしたいプラットフォームごとにSDK統合コードを書く。
 * 各プラットフォームのメッセージングチャネルを有効にし、Braze SDKがEメール、SMS、プッシュ通知、その他のチャネルにわたる顧客とのインタラクションのデータを追跡するようにする。
-* 予定されているUIコンポーネントのカスタマイズ（例えば、カスタムコンテンツカード）を作成する。完全にカスタム化されたコンテンツの場合、SDK の自動データ収集では新しいコンポーネントを認識できないため、分析のログを取る必要があります。この実装は、当社のデフォルトのコンポーネントでパターン化することができます。
+* 予定されている UI コンポーネントのカスタマイズ (例えば、カスタムコンテンツカード) を作成します。完全にカスタム化されたコンテンツの場合、SDK の自動データ収集では新しいコンポーネントを認識できないため、分析のログを取る必要があります。この実装は、当社のデフォルトのコンポーネントでパターン化することができます。
 
 ### Braze APIを使用する
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Retargeting Campaigns
+nav_title: Retargeting campaigns
 article_title: Retargeting Campaigns
 page_order: 2
 page_type: reference

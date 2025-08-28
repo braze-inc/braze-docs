@@ -25,9 +25,9 @@ tool: Reports
 
 ## 수식 만들기
 
-대시보드의 [홈][9], [수익 보고서][10] 및 [사용자 지정 이벤트 보고서][11] 페이지에 있는 통계 패널에서 수식에 액세스할 수 있습니다. 이 패널을 보려면 **기간별 성과** 차트로 이동하여 **통계 대상** 드롭다운을 **KPI 공식으로** 변경한 다음 하나 이상의 KPI 공식을 선택하여 차트를 채웁니다.
+Formulas can be accessed in the statistics panels on the [Home]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/), [Revenue Report]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/), and [Custom Events Report]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) pages in the dashboard. 이 패널을 보려면 **기간별 성과** 차트로 이동하여 **통계 대상** 드롭다운을 **KPI 공식으로** 변경한 다음 하나 이상의 KPI 공식을 선택하여 차트를 채웁니다.
 
-![Braze 대시보드에서 KPI 공식에 대한 통계 보기][16]
+![View statistics for KPI formulas in the Braze dashboard]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 새 수식을 만들려면 다음과 같이 하세요:
 
@@ -84,11 +84,6 @@ table td {
 | --- | --- |
 | 사용자 지정 이벤트 수 | MAU |
 |  | DAU |
-|  | 세그먼트 크기 ([애널리틱스 추적][17] ]이 활성화된 세그먼트만 사용 가능) |
+|  | Segment size (only segments that have [analytics tracking]({{site.baseurl}}/viewing_and_understanding_segment_data/) enabled can be used) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[16]: {% image_buster /assets/img_archive/kpi_forms.png %}
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/

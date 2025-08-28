@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: Segmentation Filters
+nav_title: Segmentation filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"

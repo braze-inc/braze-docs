@@ -125,12 +125,6 @@ To define a context variable:
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
 
-### Step 3: Test user paths (optional)
-
-If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience. Look out for common scenarios that create [invalid context variables](#troubleshooting).
-
-For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
-
 ## Context variable data types {#context-variable-types}
 
 Context variables that are created or updated in the step can be assigned the following data types.

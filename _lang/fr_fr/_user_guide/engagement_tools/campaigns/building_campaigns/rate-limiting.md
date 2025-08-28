@@ -34,7 +34,6 @@ Braze fournit les filtres suivants afin de vous aider à limiter le taux auquel 
 - Dernière campagne de notification push reçue
 - Dernière campagne e-mail reçue
 - Dernier SMS reçu
-- Dernier fil d’actualité vu
 
 #### Implémenter des filtres
 
@@ -42,15 +41,15 @@ Supposons que nous avons créé un segment nommé « Vitrine de filtres de reci
 
 Si vous avez d’autres segments plus ciblés recevant des notifications récemment, vous ne voulez peut-être pas que vos utilisateurs soient ciblés par des campagnes plus génériques dirigées vers ce segment. En ajoutant le filtre « Dernière campagne de notification push reçue » à ce segment, l’utilisateur est assuré que, s’il a reçu une autre notification au cours des dernières 24 heures, il sortira de ce segment pendant les 24 prochaines heures. S’il répond toujours aux autres critères du segment 24 heures plus tard et n’a pas reçu de notifications supplémentaires, il reprendra sa place dans le segment.
 
-![La section Détails du segment avec le filtre du segment "Dernier message reçu" en surbrillance.][1]
+![Section Détails du segment avec le filtre du segment "Dernier message reçu" en surbrillance.]({% image_buster /assets/img_archive/rate_limit_daily.png %})
 
 En ajoutant ce filtre à tous les segments ciblés par les campagnes, vos utilisateurs ne peuvent recevoir qu’une notification push toutes les 24 heures au maximum. Vous pouvez ensuite prioriser votre messagerie en vous assurant que vos messages les plus importants sont envoyés avant les moins importants.
 
 #### Fixer un plafond d'utilisateurs
 
-Dans l'étape **Utilisateurs ciblés** de la composition de votre campagne, vous pouvez également limiter le nombre total d'utilisateurs qui recevront votre message. Il s'agit d'un contrôle indépendant des filtres de votre campagne, qui vous permet de segmenter librement les utilisateurs sans vous soucier de l'envoi excessif de messages.
+Dans l'étape **Audiences cibles** du compositeur de votre campagne, vous pouvez également limiter le nombre total d'utilisateurs qui recevront votre message. Il s'agit d'un contrôle indépendant des filtres de votre campagne, qui vous permet de segmenter librement les utilisateurs sans vous soucier de l'envoi excessif de messages.
 
-![Résumé de l'audience avec une case à cocher pour limiter le nombre de personnes qui reçoivent la campagne.][2]
+![Résumé de l'audience avec une case à cocher permettant de limiter le nombre de personnes recevant la campagne.]({% image_buster /assets/img_archive/total_limit.png %})
 
 En sélectionnant la limite maximale d'utilisateurs, vous pouvez limiter le débit auquel vos utilisateurs reçoivent des notifications par canal ou globalement pour tous les types de messages.
 
@@ -76,22 +75,22 @@ Lorsque vous utilisez la limite de débit avec un test A/B, la limite de débit 
 
 ### Limiter le taux de vitesse de livraison
 
-Si vous prévoyez que de grandes campagnes entraîneront un pic d'activité des utilisateurs et une surcharge de vos serveurs, vous pouvez spécifier une limite de débit par minute pour l'envoi des messages, ce qui signifie que Braze n'enverra pas plus que la limite de débit définie en une minute.
+Si vous prévoyez que de grandes campagnes entraîneront un pic d'activité des utilisateurs et une surcharge de vos serveurs, vous pouvez spécifier une limite de débit par minute pour l'envoi des messages, ce qui signifie que Braze n'enverra pas plus que la limite de débit définie en l'espace d'une minute.
 
-Lorsque vous ciblez des utilisateurs lors de la création d'une campagne, vous pouvez accéder à **Target Audiences** (pour les campagnes) ou **Send Settings** (pour les Canvas) pour sélectionner une limite de débit (dans différents incréments allant de 10 à 500 000 messages par minute). 
+Lorsque vous ciblez des utilisateurs lors de la création d'une campagne, vous pouvez accéder à **Target Audiences** (pour les campagnes) ou **Send Settings** (pour les Canvas) pour sélectionner une limite de débit (dans différents incréments allant de 10 à 500 000 messages par minute).
 
 Notez que les campagnes sans limitation du taux peuvent dépasser ces limites de livraison. Toutefois, sachez que les messages seront interrompus s'ils sont retardés de 72 heures ou plus en raison d'une limite de débit trop basse. Si la limite de débit est trop basse, le créateur de la campagne recevra des alertes dans le tableau de bord et par e-mail.
 
-![Résumé de l'audience avec une case à cocher pour limiter le débit auquel la campagne prendra fin, le débit étant de 500 000 par minute.][3]
+![Résumé de l'audience avec une case à cocher pour limiter le débit auquel la campagne se terminera, le débit étant de 500 000 par minute.]({% image_buster /assets/img_archive/per_minute_rate_limit.png %})
 
-Autre exemple, si vous essayez d'envoyer 75 000 messages avec une limite de débit de 10 000 par minute, la réception/distribution s'étalera sur 8 minutes. Votre campagne ne diffusera pas plus de 10 000 messages pour chacune des sept premières minutes, et 5 000 au cours de la dernière minute. 
+Autre exemple, si vous essayez d'envoyer 75 000 messages avec une limite de débit de 10 000 par minute, la réception/distribution s'étalera sur 8 minutes. Votre campagne ne diffusera pas plus de 10 000 messages pour chacune des sept premières minutes, et 5 000 au cours de la dernière minute.
 
 Notez que les messages à débit limité peuvent ne pas être envoyés de manière régulière au cours de chaque minute. Si l'on prend l'exemple d'une limite de débit de 10 000 par minute, cela signifie que Braze veille à ce qu'il n'y ait pas plus de 10 000 messages envoyés par minute. Cela pourrait signifier qu'un pourcentage plus élevé des 10 000 messages est envoyé dans la première demi-minute par rapport à la dernière demi-minute. 
 
 Notez également que la limite de débit est appliquée au début de la tentative d'envoi des messages. Lorsque la durée de l'envoi varie, le nombre d'envois terminés peut légèrement dépasser la limite de débit pendant certaines minutes. Avec le temps, le nombre d'envois par minute se stabilisera au niveau de la limite de débit.
 
 {% alert important %}
-Attention à ne pas retarder les envois de messages sensibles au facteur temps avec cette forme de limite de débit. Si le segment contient 30 millions d'utilisateurs mais que nous fixons la limite de débit à 10 000 par minute, une grande partie de votre base d'utilisateurs ne recevra le message que le lendemain.
+Cette forme de limitation de débit par rapport au nombre total d'utilisateurs dans un segment permet de ne pas retarder les envois de messages sensibles au facteur temps. Par exemple, si le segment contient 30 millions d'utilisateurs mais que nous fixons la limite de débit à 10 000 par minute, une grande partie de votre base d'utilisateurs ne recevra le message que le lendemain.
 {% endalert %}
 
 #### Campagnes à canal unique
@@ -117,7 +116,7 @@ Lors de l'envoi d'un Canvas avec une limite de débit, la limite de débit est p
 
 #### Limitation du taux et nouvelles tentatives de contenu connecté
 
-Lorsque l'option [Connected Content retry][19] est activée, Braze relance les échecs d'appel en respectant la limite de débit que vous avez définie pour chaque renvoi. Prenons le cas d'un envoi de 75 000 messages avec une limite de débit de 10 000 par minute. Imaginez que dans la première minute, l'appel échoue ou est lent et n'envoie que 4 000 messages.
+Lorsque le [rappel de contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) est activé, Braze relance les échecs d'appel tout en respectant la limite de débit que vous avez définie pour chaque renvoi. Prenons le cas d'un envoi de 75 000 messages avec une limite de débit de 10 000 par minute. Imaginez que dans la première minute, l'appel échoue ou est lent et n'envoie que 4 000 messages.
 
 Au lieu d'essayer de rattraper le retard et d'envoyer les 6 000 messages restants dans la deuxième minute ou de les ajouter aux 10 000 messages déjà prêts à être envoyés, Braze déplacera ces 6 000 messages en "fin de file d'attente" et ajoutera une minute, si nécessaire, au nombre total de minutes nécessaires à l'envoi de votre message.
 
@@ -150,11 +149,11 @@ Par défaut, la limite de fréquence est activée lorsque de nouvelles campagnes
 - Combien de fois chaque utilisateur doit recevoir une campagne ou un composant Canvas envoyé depuis un canal au cours d’un certain laps de temps.
 - Combien de fois chaque utilisateur doit recevoir une campagne ou un composant Canvas envoyé par une [étiquette](#frequency-capping-by-tag) dans un certain laps de temps.
 
-Cette période peut être mesurée en minutes, jours, semaines (sept jours) ou mois, avec une durée maximale de 30 jours.
+Ce délai peut être mesuré en minutes, en jours ou en semaines (sept jours), avec une durée maximale de 30 jours.
 
 Chaque ligne de limites de fréquence sera connectée à l'aide de l'opérateur `AND`, et vous pouvez ajouter jusqu'à 10 règles par espace de travail. De plus, vous pouvez inclure plusieurs plafonds pour les mêmes types de messages. Par exemple, vous pouvez plafonner les utilisateurs pour qu’ils ne dépassent pas une notification push unique par jour et trois par semaine.
 
-![Section sur la limite de fréquence avec des listes de campagnes et de toiles auxquelles les règles s'appliqueront et ne s'appliqueront pas.][14]
+![Section de limitation de fréquence avec des listes de campagnes et de toiles auxquelles les règles s'appliquent et ne s'appliquent pas.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %})
 
 #### Comportement lorsque les utilisateurs sont limités en fréquence sur une étape du canvas
 
@@ -166,7 +165,7 @@ Il peut y avoir des campagnes, comme les messages transactionnels, que vous voul
 
 Si vous souhaitez qu'une campagne particulière ne tienne pas compte des règles de limitation de fréquence, vous pouvez le faire dans le tableau de bord de Braze lors de la planification de la réception/distribution de cette campagne en basculant la **limitation de fréquence** sur **OFF**. 
 
-Ensuite, il vous sera demandé si vous souhaitez toujours que cette campagne soit prise en compte dans votre limite de fréquence. Les messages qui comptent pour la limite de fréquence sont inclus dans les calculs du filtre du canal intelligent. Lors de l’envoi de [campagnes API][15], qui sont souvent transactionnelles, vous aurez la possibilité de spécifier qu’une campagne doit ignorer les règles de limite de fréquence [dans la requête API][16] en réglant `override_messaging_limits` sur `true`.
+Ensuite, il vous sera demandé si vous souhaitez toujours que cette campagne soit prise en compte dans votre limite de fréquence. Les messages qui comptent pour la limite de fréquence sont inclus dans les calculs du filtre du canal intelligent. Lorsque vous envoyez des [campagnes API]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), qui sont souvent transactionnelles, vous avez la possibilité de spécifier qu'une campagne doit ignorer les règles de limite fréquence [dans la demande API]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns) en définissant `override_messaging_limits` sur `true`.
 
 Par défaut, les nouvelles campagnes et les Canevas qui n'obéissent pas aux limites de fréquence ne seront pas non plus pris en compte. Ceci est configurable pour chaque campagne et Canvas.
 
@@ -174,7 +173,7 @@ Par défaut, les nouvelles campagnes et les Canevas qui n'obéissent pas aux lim
 Ce comportement modifie le comportement par défaut lorsque vous désactivez la limitation de fréquence pour une campagne ou un Canvas. Les modifications sont rétro-compatibles et n’affectent pas les messages actuellement actifs.
 {% endalert %}
 
-![Section des contrôles de réception/distribution avec la limite de fréquence activée.][18]
+![Section des contrôles de réception/distribution avec la limite de fréquence activée.]({% image_buster /assets/img_archive/frequencycappingupdate.png %})
 
 Les différents canaux d'une campagne multicanal compteront individuellement pour la limite de fréquence. Par exemple, si vous créez une campagne multicanal à la fois avec des notifications push et des e-mails et que vous disposez d’une limite de fréquence pour ces deux canaux, la notification push sera alors comptabilisée pour une campagne de notification push et le message e-mail sera comptabilisé pour une campagne de message e-mail. La campagne comptera également pour une « campagne de n’importe quel type ». Si les utilisateurs sont plafonnés à une seule campagne de notification push et d’e-mail par jour, et qu’un utilisateur reçoit cette campagne multicanal, il ne sera plus éligible aux campagnes de notification push ou d’e-mail pour le reste de la journée (sauf si une campagne ignore les règles de limite de fréquence).
 
@@ -224,7 +223,7 @@ Vous pouvez également combiner une limite de fréquence régulière avec une li
 1. Pas plus de trois campagnes de notification push ou de composant de Canvas par semaine depuis toutes les campagnes et tous les composants de Canvas. <br>**ET**
 2. Pas plus de deux campagnes de notification push ou composant de Canvas par semaine avec la balise `promotional`.
 
-![Section "Frequency Capping" avec deux règles limitant le nombre de campagnes de notification push/canvas pouvant être envoyées à un utilisateur toutes les 1 semaines.][12]
+![Section de limitation de fréquence avec deux règles limitant le nombre de campagnes de notification push/de toiles pouvant être envoyées à un utilisateur toutes les semaines.]({% image_buster /assets/img/tag_rule_fnfn.png %} "rules")
 
 Par conséquent, vos utilisateurs ne recevront pas plus de trois envois de campagnes par semaine depuis toutes les campagnes et étapes de Canvas et pas plus de deux campagnes de notification push ou de composant de Canvas avec la balise `promotional`.
 
@@ -239,7 +238,7 @@ Lorsque les règles entrent en conflit, la règle de limite de fréquence la plu
 1. Pas plus d’une campagne de notification push ou de composant Canvas par semaine depuis toutes les campagnes et tous les composants de Canvas. <br>**ET**
 2. Pas plus de trois campagnes de notification push ou de composant Canvas par semaine avec la balise `promotional`.
 
-![Section Limite de fréquence avec des règles contradictoires pour limiter le nombre de campagnes de notifications push/étapes du canvas envoyées à un utilisateur toutes les 1 semaines.][11]
+![Section "Frequency Capping" avec des règles contradictoires pour limiter le nombre de campagnes de notification push/étapes du canvas envoyées à un utilisateur toutes les 1 semaines.]({% image_buster /assets/img/global_rules.png %} "global rules")
 
 Dans cet exemple, votre utilisateur ne recevra pas plus d’une campagne de notification push ou de composants de Canvas avec la balise « promotionnel » pour une semaine donnée, car vous avez spécifié que les utilisateurs ne doivent pas recevoir plus d’une campagne de notification push ou de composant de Canvas depuis toutes les campagnes et composants de Canvas. En d’autres termes, la règle de fréquence applicable la plus restrictive est la règle qui sera appliquée à un utilisateur donné.
 
@@ -284,14 +283,3 @@ Par exemple, vous pouvez configurer la règle suivante :
 
 Cette règle garantira qu’aucun utilisateur ne reçoit plus de 100 e-mails par semaine, car, au maximum, les utilisateurs recevront trois e-mails par semaine depuis les campagnes ou les composants Canvas avec une limite de fréquence activée.
 
-[11]: {% image_buster /assets/img/global_rules.png %} « règles globales »
-[12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "règles"
-[13]: {% image_buster /assets/img/standard_rules_fnfn.png %} "norme de règles"
-[1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
-[2]: {% image_buster /assets/img_archive/total_limit.png %}
-[3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
-[14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
-[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
-[18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/

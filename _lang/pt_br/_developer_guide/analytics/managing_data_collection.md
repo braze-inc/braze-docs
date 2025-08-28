@@ -16,14 +16,14 @@ description: "Saiba como gerenciar a coleta de dados para o Braze SDK."
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/managing_data_collection.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/managing_data_collection.md developer_ %}
+{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/analytics/managing_data_collection.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/analytics/managing_data_collection.md %}
 {% endsdktab %}
 {% endsdktabs %}

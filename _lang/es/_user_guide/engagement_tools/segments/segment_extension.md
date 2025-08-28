@@ -1,7 +1,7 @@
 ---
 nav_title: Extensiones de segmento
 article_title: Extensiones de segmento
-page_order: 3.1
+page_order: 6
 page_type: reference
 description: "Este artículo le mostrará cómo configurar y utilizar una extensión de segmento para mejorar sus capacidades de segmentación."
 tool: Segments
@@ -39,7 +39,7 @@ Lo mejor para cuando no se quiere utilizar SQL.
 - **Actualización incremental:** Escribe un segmento SQL de Snowflake que automáticamente actualice los últimos 2 días de datos, o puedes actualizar manualmente en caso de ser necesario. Esta es la mejor opción para equilibrar precisión y eficiencia de costos.
 - **Actualización completa:** Escribe un segmento SQL de Snowflake que recalcule toda la audiencia después de actualizar manualmente. La mejor opción cuando necesitas una actualización total de la vista de tu audiencia.
 
-![Tabla con diferentes experiencias de creación de extensiones de segmento para seleccionar.][20]{: style="max-width:50%"}
+![Tabla con diferentes experiencias de creación de extensiones de segmento para seleccionar.]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
 Si seleccionas una experiencia que utiliza SQL, consulta [Extensiones de segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) para más información.
 
@@ -49,15 +49,15 @@ Si selecciona la **extensión Simple**, continúe con los pasos siguientes.
 
 Nombre su Extensión de Segmento describiendo el tipo de usuarios que pretende filtrar. Esto garantizará que esta extensión pueda descubrirse fácilmente y con precisión al aplicarla como filtro en su segmento.
 
-![Extensión de segmento denominada "Extensión Compradores Online - 90 Días" con la casilla "Regenerar extensión diariamente" seleccionada.][2]
+![Extensión de segmento denominada "Extensión Compradores Online - 90 Días".]({% image_buster /assets/img/segment/segment_extension2.png %})
 
 ### Paso 3: Elija sus criterios
 
 Seleccione entre criterios de compra, participación en mensajes o eventos personalizados para la segmentación. Una vez que haya seleccionado los criterios de tipo de evento deseados, elija el artículo comprado, la interacción de mensaje o el evento personalizado específico al que desea dirigir su lista de usuarios. A continuación, elija cuántas veces (más, menos o igual) el usuario tendría que haber completado el evento, y el período de tiempo-para las Extensiones de Segmento específicamente, puede retroceder hasta los últimos 730 días (2 años).
 
-La segmentación basada en datos de eventos de más de 730 días puede realizarse utilizando otros filtros situados en **Segmentos**. Al elegir el periodo de tiempo, puede especificar un intervalo de fechas relativo (por ejemplo, los últimos X días), una fecha de inicio, una fecha final o un intervalo de fechas exacto (de la fecha A a la fecha B).
+La segmentación basada en datos de eventos de más de 730 días puede realizarse utilizando otros filtros situados en **Segmentos**. Cuando elijas tu periodo de tiempo, puedes especificar un intervalo de fechas relativo para seleccionar el último X número de días, una fecha de inicio, una fecha final o un intervalo de fechas exacto (fecha A a fecha B).
 
-![Criterios de segmentación para usuarios que realizaron un evento personalizado, "# de aaa", más de 0 veces en el intervalo de fechas del 1 de agosto de 2023 al 10 de agosto de 2023.][3]
+![Criterios de segmentación para usuarios que realizaron un evento personalizado más de 2 veces en el intervalo de fechas del 1 de marzo de 2025 al 31 de marzo de 2025.]({% image_buster /assets/img/segment/segment_extension1.png %})
 
 #### Segmentación de propiedades de eventos
 
@@ -65,17 +65,17 @@ Para aumentar la precisión de la orientación, seleccione la casilla **Añadir 
 
 Para las propiedades de cadena, puede introducir varios valores a la vez. En el ejemplo siguiente, este filtro busca usuarios con un estado igual a cualquiera de los siguientes: oro, plata o bronce.
 
-![Segmentación basada en las propiedades de las cadenas.][13.5]
+![Segmentación basada en las propiedades de las cadenas.]({% image_buster /assets/img/segment/property5.png %})
 
-![Segmentación basada en propiedades numéricas.][13]
+![Segmentación basada en propiedades numéricas.]({% image_buster /assets/img/segment/property2.png %})
 
-![Segmentación basada en propiedades booleanas.][14]
+![Segmentación basada en propiedades booleanas.]({% image_buster /assets/img/segment/property3.png %})
 
-![Segmentación basada en objetos de fecha y hora.][15]
+![Segmentación basada en objetos fecha-hora.]({% image_buster /assets/img/segment/property4.png %})
 
 También admitimos la segmentación basada en [propiedades de eventos anidados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
-![Segmentación basada en propiedades de eventos anidados.][18]
+![Segmentación basada en propiedades de eventos anidados.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 Las extensiones de segmento se basan en el almacenamiento a largo plazo de las propiedades de los eventos y no tienen un límite de almacenamiento de propiedades con marca de tiempo. Puede echar un vistazo a las propiedades de eventos rastreadas en los últimos dos años. El uso de propiedades de eventos dentro de las Extensiones de Segmento no afecta al uso de puntos de datos.
 
@@ -85,86 +85,33 @@ No necesitas extensiones de segmento para utilizar propiedades de eventos o atri
 
 ### Paso 4: Designar configuración de actualización (opcional)
 
-Si no necesitas que tu extensión se actualice de forma periódica, puedes guardarla sin utilizar la configuración de actualización, y Braze generará por defecto tu Extensión de segmento basándose en tu número de usuarios en ese momento. Utiliza el comportamiento predeterminado si sólo quieres generar la audiencia una vez y luego dirigirte a ella con una campaña puntual.
-
-Tu segmento siempre empezará a procesarse después del guardado inicial. Cada vez que se actualice tu segmento, Braze volverá a ejecutar el segmento y actualizará la pertenencia al mismo para reflejar los usuarios de tu segmento en el momento de la actualización. Esto puede ayudar a que tus campañas recurrentes lleguen a los usuarios más relevantes.
-
-#### Configurar una actualización periódica
-
-Para establecer una programación recurrente, selecciona **Actualizar configuración** en la esquina superior derecha de tu extensión específica. La opción de designar la configuración de actualización está disponible para todos los tipos de extensiones de segmento, incluidos los segmentos SQL, los segmentos CDI y las extensiones de segmento simples basadas en formularios.
-
-{% alert important %}
-Para optimizar tu gestión de datos, la configuración de actualización se desactiva automáticamente para las extensiones de segmento no utilizadas. Las extensiones de segmento se consideran no utilizadas cuando lo están:
-
-- No se utiliza en ninguna campaña, lienzo o segmento activo o inactivo (borrador, detenido, archivado).
-- No tuvo modificaciones en los últimos 7 días
-
-Braze notificará al contacto de la empresa y al creador de la extensión si se desactiva esta configuración. La opción de regenerar las extensiones diariamente puede volver a activarse en cualquier momento.
-{% endalert %}
-
-#### Seleccionar tu configuración de actualización
-
-![Configuración del intervalo de actualización con una frecuencia de actualización semanal, hora de inicio a las 10 de la mañana y lunes seleccionado como día.][21]{: style="max-width:60%;"}
-
-En el panel **Configuración de actualización**, puedes seleccionar la frecuencia con la que se actualizará esta extensión de segmento: cada hora, cada día, cada semana o cada mes. También se te pedirá que selecciones la hora concreta (que esté en la zona horaria de tu empresa) a la que se produciría la actualización, por ejemplo:
-
-- Si tienes una campaña de correo electrónico que se envía todos los lunes a las 11 de la mañana, hora de la empresa, y quieres asegurarte de que tu segmento se actualiza justo antes de enviarlo, debes elegir un programa de actualización semanal a las 10 de la mañana de los lunes.
-- Si quieres que tu segmento se actualice todos los días, selecciona la frecuencia de actualización diaria y, a continuación, elige la hora del día en que se actualizará.
-
-{% alert note %}
-La posibilidad de establecer un programa de actualización por horas no está disponible para las extensiones de segmento basadas en formularios (pero puedes establecer programas diarios, semanales o mensuales).
-{% endalert %}
-
-#### Consumo de créditos y costes adicionales
-
-Como las actualizaciones vuelven a ejecutar la consulta de tu segmento, cada actualización para segmentos SQL consumirá créditos de segmentos SQL, y cada actualización para segmentos CDI supondrá un coste dentro de tu almacén de datos de terceros.
-
-{% alert note %}
-La actualización de los segmentos podría requerir hasta 60 minutos debido a los tiempos de procesamiento de los datos. Los segmentos que estén actualmente en proceso de actualización tendrán un estado de "Procesando" dentro de tu lista de Extensiones de segmento. Esto tiene un par de implicaciones:
-
-- Para terminar de procesar tu segmento antes de una hora determinada, elige una hora de actualización que sea 60 minutos antes. 
-- Sólo puede producirse una actualización a la vez para una extensión de segmento específica. Si hay un conflicto en el que se inicia una nueva actualización cuando una actualización existente ya ha comenzado a procesarse, Braze cancelará la nueva solicitud de actualización y continuará el procesamiento en curso.
-{% endalert %}
-
-#### Criterios para desactivar automáticamente las extensiones obsoletas
-
-Las actualizaciones programadas se desactivan automáticamente cuando una extensión de segmento caduca. Una extensión de segmento es antigua si cumple los siguientes criterios:
-
-- No se ha utilizado en ninguna campaña o Canvas activos
-- No se utiliza en ningún segmento que esté en una campaña o Canvas activos
-- No se utiliza en ningún segmento que tenga activado el [seguimiento de análisis]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) 
-- No se ha modificado en más de siete días
-- No se ha añadido a una campaña o Canvas (incluidos borradores), o segmento en más de siete días
-
-Si la actualización programada está desactivada para una extensión de segmento, dicha extensión tendrá una notificación que así lo indique.
-
-![Una notificación que dice que "Las actualizaciones programadas se han desactivado para esta extensión porque no se utiliza en ninguna campaña, lienzo o segmento activos". La extensión de segmento se desactivó el 23 de febrero de 2025 a las 12:00 AM."][1]
-
-Cuando estés listo para utilizar una Extensión de segmento obsoleta, [revisa la configuración de](#step-4-designate-refresh-settings-optional) actualización, selecciona el programa de actualización que se ajuste a tu caso de uso y, a continuación, guarda las modificaciones.
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ### Paso 5: Guarda tu extensión de segmento
 
-Una vez que selecciones **Guardar**, tu extensión comenzará a procesarse. El tiempo que se tarda en generar la extensión depende del número de usuarios que tengas, de cuántos eventos personalizados o de compra estés capturando y de cuántos días estés mirando hacia atrás en el historial.
+Después de seleccionar **Guardar**, tu extensión comenzará a procesarse. El tiempo que se tarda en generar la extensión depende del número de usuarios que tengas, de cuántos eventos personalizados o de compra estés capturando y de cuántos días estés mirando hacia atrás en el historial.
 
 Mientras su extensión se está procesando, verá una pequeña animación junto al nombre de la extensión, y la palabra "Procesando" en la columna **Último Procesado** de la lista de extensiones. Tenga en cuenta que no podrá editar una extensión mientras se esté procesando.
 
-![Página "Extensiones de segmento" con dos extensiones activas.][5]
+![Página "Extensiones de segmento" con dos extensiones activas.]({% image_buster /assets/img/segment/segment_extension5.png %})
+
+Cuando se esté procesando una extensión de segmento, Braze seguirá utilizando el historial de versiones del segmento de antes de que comenzara el procesamiento a efectos de segmentación de la audiencia. El procesamiento tiene lugar cada vez que se guarda o actualiza, e implica la consulta y actualización de los perfiles de usuario; en otras palabras, la pertenencia a tu segmento no se actualiza instantáneamente. Esto significa que, a menos que la acción de un usuario se realice antes de que la actualización comience a procesarse, no podemos garantizar que el usuario se incluya en la extensión de segmento una vez que se complete esa actualización concreta. Por el contrario, los usuarios que estaban en la extensión de segmento antes de la actualización y que ya no cumplan los criterios seguirán coincidiendo con tu segmento hasta que se complete el proceso de actualización y se apliquen las actualizaciones.
 
 ### Paso 6: Utilice su extensión en un segmento
 
-Una vez creada una extensión, puede utilizarla como filtro al crear un segmento o definir un público para una campaña o Canvas. Para empezar, seleccione **Extensión de segmento Braze** en la lista de filtros de la sección **Atributos de usuario**.
+Después de crear una extensión, puedes utilizarla como filtro al crear un segmento o definir una audiencia para una campaña o Canvas. Para empezar, seleccione **Extensión de segmento Braze** en la lista de filtros de la sección **Atributos de usuario**.
 
-![Sección "Filtros" con un desplegable de filtros que muestra "Extensiones de segmento Braze".][6]
+![Sección "Filtros" con un desplegable de filtros que muestra "Extensiones de segmento Braze".]({% image_buster /assets/img/segment/segment_extension7.png %})
 
 En la lista de filtros Extensión de segmento Braze, elija la extensión que desea incluir o excluir en este segmento.
 
-![Un filtro "Extensiones de segmento Braze" que incluye un segmento "Compradores en línea Ext...".][7]
+![Un filtro "Extensiones de segmento Braze" que incluye un segmento "1 clic de correo electrónico en los últimos 56 días".]({% image_buster /assets/img/segment/segment_extension6.png %})
 
-Para ver los criterios de la extensión, selecciona **Ver detalles de la extensión** para mostrar los detalles en una ventana emergente modal.
+Para ver los criterios de la extensión, selecciona **Ver detalles de la extensión** para mostrar los detalles en una nueva ventana.
 
-![Detalles de la extensión "Extensión para compradores online - 90 días".][8]{: style="max-width:70%;"}
+![Extensión para "1 clic de correo electrónico en los últimos 56 días".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
-Ahora puedes proceder como de costumbre con [la creación de tu segmento][11].
+Ahora puedes proceder como de costumbre a [crear tu segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 ## Preguntas más frecuentes
 
@@ -178,22 +125,15 @@ Al utilizar **la extensión Simple** Extensiones de segmento, puedes seleccionar
 
 No. Antes de archivar una extensión de segmento, tienes que eliminarla de toda la mensajería activa.
 
-[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13,5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
+### ¿Puedo utilizar matrices en las extensiones de segmento?
+
+Sí. Para utilizar matrices, añade corchetes (`[]`) al nombre de tu propiedad. Si tu propiedad es `location_code`, introducirías `location_code[]`. 
+
+Braze utiliza `[]` para recorrer matrices y comprobar si algún elemento de la matriz recorrida coincide con la propiedad del evento. Por ejemplo, puedes crear un segmento de usuarios que coincidan al menos con un valor de una propiedad de la matriz.
+
+### ¿Cómo calcula Braze el periodo de tiempo para un periodo de tiempo relativo de "últimos \__ días"?
+
+Cuando las extensiones de segmento calculan el periodo de tiempo relativo ("últimos X días"), la hora de inicio se establece en medianoche UTC. Por ejemplo, para una Extensión de segmento que se actualiza a las 2024-09-16 21:00 UTC y especifica 10 días, la hora de inicio se establece en 2024-09-06 00:00 UTC, no en 2024-09-06 21:00 UTC. 
+
+Sin embargo, puedes especificar las zonas horarias utilizando segmentos SQL para identificar a los usuarios que realizaron el evento personalizado hace 10 días basándote en la medianoche de la hora de la empresa, o a los usuarios que realizaron el evento hace 10 días basándose en la hora actual.
+

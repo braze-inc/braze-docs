@@ -71,7 +71,6 @@ Die Eigenschaft `clickAction` auf Ihrem `Braze.InAppMessage` ist standardmäßig
 | `ClickAction` | On-Click-Verhalten |
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | Öffnet die angegebene URL in einem externen Browser. Wenn `useWebView` auf `true` festgelegt ist, wird sie in einer Webansicht geöffnet. |
-| `.newsFeed` | Wenn auf die Nachricht geklickt wird, wird der Newsfeed angezeigt und die Nachricht ausgeblendet.<br><br>**Hinweis:** Der Newsfeed ist veraltet. Weitere Einzelheiten finden Sie in der [Migrationsanleitung]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/). |
 | `.none` | Die Nachricht wird ausgeblendet, wenn sie angeklickt wird. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -12,7 +12,7 @@ description: "Este artigo contém notas de versão para abril de 2019."
 
 Além de algumas correções na seção, um novo [Evento de inscrição]({{ site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#subscription-events) foi adicionado à página Eventos de engajamento com mensagens. 
 
-Agora você pode exportar os dados de alteração de estado do grupo de inscrições da Braze para o [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) e [o mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/), bem como para os eventos de atribuição de instalação no [Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents).
+Agora você pode exportar os dados de alteração de estado do grupo de inscrições da Braze para o [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) e [o mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mParticle/mparticle_for_currents/), bem como para os eventos de atribuição de instalação no [Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/).
 
 Além disso, a propriedade `canvas_step_id` foi adicionada aos [eventos de conversão]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events) disponíveis.
 

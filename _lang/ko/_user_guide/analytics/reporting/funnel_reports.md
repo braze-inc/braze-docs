@@ -9,15 +9,15 @@ tool: Reports
 
 # 퍼널 보고서
 
-> 퍼널 리포팅은 고객이 캠페인이나 캔버스를 수신한 후의 여정을 분석할 수 있는 시각적 보고서를 제공합니다. ![퍼널 보고서 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> 퍼널 리포팅은 고객이 캠페인이나 캔버스를 수신한 후의 여정을 분석할 수 있는 시각적 보고서를 제공합니다. ![Funnel Report 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 캠페인이나 캔버스에서 대조군 또는 여러 변형을 사용하는 경우, 다양한 변형이 전환 퍼널에 미치는 영향을 보다 세분화된 수준에서 파악하고 이 데이터를 기반으로 최적화할 수 있습니다.
 
-![퍼널 보고서 1][1]{: style="max-width:80%;"}
+![Funnel Report 1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
 
 ## 퍼널 보고서 설정
 
-![퍼널 보고서 5][5]{: style="float:right;max-width:40%;border:0;margin-left:15px;"}
+![Funnel Report 5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
 기존 활성 캠페인 및 캔버스에 대한 퍼널 보고서를 실행할 수 있습니다. 이 보고서에는 캠페인 수신자가 캔버스 또는 캠페인에 참여한 날로부터 1~30일 동안 진행한 일련의 이벤트가 표시됩니다. 사용자가 지정된 순서대로 이벤트를 수행하면 퍼널의 한 단계를 통해 전환된 것으로 간주됩니다.
 
@@ -38,13 +38,13 @@ tool: Reports
 퍼널을 완료하는 기간을 하루로 설정한 경우 퍼널 이벤트는 메시지 수신 후 24시간 이내에 발생해야 합니다. 단, 여러 날짜를 선택하면 타이밍 기간은 회사 표준 시간대의 달력 일수로 계산됩니다.
 {% endalert %}
 
-![퍼널 보고서 5][6]{: style="max-width:90%;"}
+![Funnel Report 5]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
 ### 2단계: 퍼널 단계에 대한 이벤트 선택
 
 모든 퍼널 보고서의 첫 번째 이벤트는 사용자가 메시지를 수신할 때입니다. 여기에서 선택한 후속 이벤트는 이전 이벤트뿐만 아니라 해당 이벤트를 수행한 사용자 수를 퍼널링합니다. 캠페인 및 캔버스 퍼널 모두에 대한 퍼널 보고서 이벤트는 세션 시작, 구매하기 및 커스텀 이벤트를 허용하며, 캠페인 퍼널에만 메시지 인게이지먼트 이벤트가 포함됩니다.
 
-![퍼널 보고서 3][3]{: style="max-width:80%;"}
+![Funnel Report 3]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 퍼널 보고서를 사용하면 처음 설정한 전환 이벤트나 메시지 참여 이벤트뿐만 아니라 메시지의 성공 여부를 비교할 수 있습니다. 따라서 처음에 추가하지 않은 전환 이벤트가 있는 경우에도 퍼널을 사용하여 해당 이벤트의 전환을 추적할 수 있습니다.
 
@@ -65,7 +65,7 @@ tool: Reports
 - **재생성 옵션**: 보고서를 다시 생성할 수 있으며 현재 보고서가 마지막으로 생성된 시점을 표시합니다. 
 - **배리언트**: 색상 열로 표시되는 퍼널 보고서는 최대 8개의 배리언트와 대조군을 허용합니다. 기본적으로 **차트에는** 세 가지 변형만 표시됩니다. 자세한 내용을 보려면 나머지 이형 상품을 수동으로 선택할 수 있습니다.
 
-![퍼널 보고서 4][4]
+![Funnel Report 4]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **여러 이형 상품이 있는 캠페인의 경우**: Braze는 각 이벤트 및 배리언트에 대한 측정기준과 대조군 대비 변화율이 포함된 표를 표시합니다. 전환율은 메시지 수신자당 이벤트(및 후속 이벤트)를 수행한 사용자 수입니다.
 
@@ -74,9 +74,3 @@ tool: Reports
 
 **재적격성이 있는 다변량 캠페인의 경우**: 사용자가 보고 기간 동안 캠페인에서 여러 배리언트를 수신하는 경우, Braze는 이 사용자가 캠페인 배리언트를 처음 수신한 후 취한 행동에 따라 배리언트를 퍼널에 포함할지 여부를 결정합니다. 즉, 동일한 사용자가 퍼널의 기간 동안 여러 가지 배리언트를 수신한 경우 여러 가지 다른 배리언트를 포함할 수 있습니다.
 
-[1]:{% image_buster /assets/img/funnel_report/funnel_report1.jpg %}
-[2]:{% image_buster /assets/img/funnel_report/funnel_report2.png %}
-[3]:{% image_buster /assets/img/funnel_report/funnel_report3.png %}
-[4]:{% image_buster /assets/img/funnel_report/funnel_report4.jpg %}
-[5]:{% image_buster /assets/img/funnel_report/canvas_campaign.png %}
-[6]:{% image_buster /assets/img/funnel_report/funnel_report5.png %}

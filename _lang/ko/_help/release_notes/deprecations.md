@@ -34,7 +34,7 @@ Shopify 에 대한 지원`checkout.liquid` 은 2024년 8월에 중단되기 시�
 
 **지원 철회**: 2022년 10월
 
-푸시 알림에 사용자 지정 `BroadcastReceiver` 사용은 더 이상 사용되지 않습니다. 대신 [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) 대신 사용하세요.
+푸시 알림에 사용자 지정 `BroadcastReceiver` 사용은 더 이상 사용되지 않습니다. 대신 [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) 대신 사용하세요.
 
 ### Grouparoo 파트너십
 
@@ -88,7 +88,7 @@ Factual에 대한 지원은 2020년 6월부로 중단되었습니다. 최근 Fou
 ### 인앱 메시지 원본
 
 **지원 철회:** 2019년 2월<br>
-**대체됨**: [인앱 메시징]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**대체됨**: [인앱 메시징]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 Braze는 최신 UX 및 UI 모범 사례를 준수하도록 인앱 메시지의 모양과 느낌을 개선했으며, 더 이상 기존 인앱 메시지를 지원하지 않습니다.
 
@@ -128,9 +128,9 @@ Braze는 Eclipse Android 개발자 도구(ADT) 플러그인에 대한 Google의 
 ### 원시 이벤트 스트림(RES)
 
 **지원 철회**: 2018년 7월<br>
-**대체됨**: [커런츠]({{site.baseurl}}/partners/braze_currents/about/)
+**대체됨**: [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-원시 이벤트 스트림은 [커런츠]({{site.baseurl}}/partners/braze_currents/about/)의 전신으로, 향후 Braze 데이터를 위한 공간을 마련하기 위해 더 이상 사용되지 않습니다.
+원시 이벤트 스트림은 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/)의 전신으로, 향후 Braze 데이터를 위한 공간을 마련하기 위해 더 이상 사용되지 않습니다.
 
 ### 유휴 상태에서의 지연 - GCM 기능
 
@@ -145,4 +145,3 @@ Braze는 Eclipse Android 개발자 도구(ADT) 플러그인에 대한 Google의 
 사용자 지정 엔드포인트 제거. 사용자 지정 엔드포인트가 있는 경우 계속 사용할 수 있지만 Braze에서는 더 이상 제공하지 않습니다.
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

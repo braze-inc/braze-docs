@@ -15,8 +15,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Con el editor de arrastrar y soltar, puedes crear mensajes dentro de la aplicación completamente personalizados, tanto en campañas como en Canvas, utilizando la experiencia de edición de arrastrar y soltar.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
-
 Si desea utilizar sus plantillas HTML personalizadas existentes o plantillas creadas por terceros, deberá volver a crearlas en el editor de arrastrar y soltar.
 
 ¿No estás seguro de si tu mensaje in-app debe enviarse utilizando una campaña o un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos. Una vez que hayas seleccionado dónde crear tu mensaje, vamos a ver los pasos para crear un mensaje in-app de arrastrar y soltar.
@@ -69,7 +67,7 @@ Después de seleccionar el editor de arrastrar y soltar como su experiencia de e
 
 Selecciona **Crear mensaje** para empezar a diseñar tu mensaje dentro de la aplicación en el editor de arrastrar y soltar.
 
-![La sección de plantillas de Braze donde puedes elegir una plantilla básica, de imagen de fondo, de captura de número de teléfono o en blanco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![La sección de plantillas de Braze donde puedes elegir una plantilla básica, de imagen de fondo, de captura de número de teléfono o en blanco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 También puede acceder a todas las plantillas desde la sección **Plantillas** del panel de control.
 
@@ -175,6 +173,8 @@ Los clics en el cuerpo no se recopilan automáticamente para los mensajes in-app
 
 Sí, puede segmentar en función de los clics de hasta dos botones de su mensaje. Para ello, establezca el **Identificador para informes** para sus botones en "0" y "1", que corresponderán a los filtros de segmentación "Botón de mensaje dentro de la aplicación pulsado 1" y "Botón de mensaje dentro de la aplicación pulsado 2" respectivamente.
 
+![El campo "Identificador para informes" con valor "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### ¿Puedo personalizar mi mensaje in-app utilizando HTML o JavaScript personalizado o transferir mensajes HTML existentes al editor?
 
 No puede transferir directamente mensajes HTML existentes al editor, pero puede insertar HTML, CSS y JavaScript sin procesar en un bloque de código personalizado. Puede utilizar bloques de Código personalizado para incrustar vídeos de terceros y Líquido avanzado, como Contenido conectado o sentencias condicionales.
@@ -187,6 +187,6 @@ Actualmente, el editor está limitado únicamente a los mensajes modales y a pan
 
 Sí. Para cualquier mensaje in-app que desee reutilizar en una futura campaña o paso de Canvas, puede guardarlo como una plantilla personalizada utilizando el botón **Guardar como plantilla**, disponible después de salir del editor. Antes de poder guardarla como plantilla, primero debe lanzar la campaña O guardarla como borrador.
 
-![Una vista previa de un mensaje dentro de la aplicación para registrarse en las actualizaciones de texto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![Una vista previa de un mensaje dentro de la aplicación para la visita de un producto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 También puedes crear y guardar plantillas de mensajes dentro de la aplicación accediendo a **Plantillas** > **Plantillas de mensajes dentro de la aplicación**.

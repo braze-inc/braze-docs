@@ -10,7 +10,7 @@ description: "이 참조 문서에서는 AI 카피라이팅 도우미를 통해 
 
 > 맞춤형 브랜드 가이드라인을 사용하여 브랜드의 목소리, 어조, 개성에 맞게 AI가 생성한 카피의 스타일을 조정하세요.
 
-**설정** > **브랜드 가이드라인**으로 이동하여 브랜드 가이드라인을 만들고 관리할 수 있습니다. [AI 카피라이팅 도]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/)우미에서 만들 수도 있습니다.
+**설정** > **브랜드 가이드라인**으로 이동하여 브랜드 가이드라인을 만들고 관리할 수 있습니다. [AI 카피라이팅 도]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines/)우미에서 만들 수도 있습니다.
 
 ## 브랜드 가이드라인 만들기
 
@@ -36,7 +36,7 @@ description: "이 참조 문서에서는 AI 카피라이팅 도우미를 통해 
 
 **제외사항**의 경우, 귀하의 브랜드와 맞지 않는 언어나 스타일을 나열하세요. 예를 들어, "비꼬는 것," "부정적인 태도," 또는 "거만한" 어조를 피하고 싶을 수 있습니다.
 
-![이름, 설명, 성격, 제외 사항, 톤을 입력할 수 있는 필드가 있는 '브랜드 가이드라인 만들기' 창이 나타납니다.][1]
+![이름, 설명, 성격, 제외 사항, 어조를 입력할 수 있는 필드가 있는 '브랜드 가이드라인 만들기' 창이 표시됩니다.]({% image_buster /assets/img/guidelines_create.png %})
 
 ### 4단계: 가이드라인 테스트
 
@@ -54,18 +54,12 @@ description: "이 참조 문서에서는 AI 카피라이팅 도우미를 통해 
 
 **브랜드** 가이드라인 페이지에서 브랜드 가이드라인을 선택하여 편집할 수 있습니다. 브랜드 가이드라인을 보관하여 비활성화하고 AI 카피라이팅 도우미에서 제거합니다. 브랜드 가이드라인을 다시 활성화하고 선택할 수 있게 하려면 보관된 브랜드 가이드라인을 필터링한 다음 보관을 해제하면 됩니다.
 
-!['브랜드 가이드라인' 페이지에서 보관된 브랜드 가이드라인을 필터링합니다.][4]
+!['브랜드 가이드라인' 페이지에서 보관된 브랜드 가이드라인을 필터링합니다.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## 브랜드 가이드라인 사용
 
-메시지를 작성할 때 [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) 열고 **브랜드 가이드라인 적용** 드롭다운에서 브랜드 가이드라인을 선택합니다. 특정 브랜드 가이드라인을 기본값으로 지정하면 드롭다운에서 해당 가이드라인이 자동으로 선택되지만 다른 가이드라인을 선택할 수도 있습니다. 
+메시지를 작성할 때 [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) 열고 **브랜드 가이드라인 적용** 드롭다운에서 브랜드 가이드라인을 선택합니다. 특정 브랜드 가이드라인을 기본값으로 지정하면 드롭다운에서 해당 가이드라인이 자동으로 선택되지만 다른 가이드라인을 선택할 수도 있습니다. 
 
-!["중요 알림!!"을 브랜드 가이드라인으로 선택한 AI 카피라이팅 도우미.][2]
+!["중요 알림!!"을 브랜드 가이드라인으로 선정한 인공지능 카피라이팅 도우미]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
-## 내 데이터는 어떻게 사용되어 OpenAI로 전송되나요?
-
-브랜드 가이드라인을 사용하여 카피를 생성하려면 Braze에서 가이드라인의 내용을 포함한 쿼리를 OpenAI로 전송합니다. Braze에서 OpenAI로 전송되는 모든 쿼리는 익명으로 처리되므로, "과거 캠페인 데이터 참조" 옵션을 활성화할 때 입력한 정보나 과거 캠페인 데이터에 고유 식별 정보를 포함하지 않으면 OpenAI가 해당 쿼리가 누구로부터 전송되었는지 확인할 수 없습니다. [OpenAI의 정책에](https://openai.com/policies/api-data-usage-policies) 따라 Braze를 사용하여 OpenAI의 API로 전송된 데이터는 모델을 학습하거나 개선하는 데 사용되지 않으며 30일 후에 삭제됩니다. 고객님과 Braze 사이에서 GPT를 사용하여 생성된 모든 콘텐츠는 고객님의 지적 재산입니다. Braze는 해당 콘텐츠에 대한 저작권 소유권을 주장하지 않으며, AI가 생성한 콘텐츠와 관련하여 어떠한 종류의 보증도 하지 않습니다.
-
-[1]: {% image_buster /assets/img/guidelines_create.png %}
-[2]: {% image_buster /assets/img/guidelines_ai_assistant.png %}
-[4]: {% image_buster /assets/img/unarchive_brand_guideline.png %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

@@ -10,11 +10,13 @@ tool: Canvas
 
 # Atualização de usuário 
 
-![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
-
 > O componente atualização de usuários permite atualizar as atribuições, os eventos e as compras de um usuário em um criador de JSON, portanto, não há necessidade de incluir informações confidenciais, como chaves de API.
 
-Com a atualização de usuário, as atualizações não contam para o limite de frequência de `/users/track` solicitações por minuto. Em vez disso, essas atualizações são agrupadas para que o Braze possa processá-las com mais eficiência do que um webhook de Braze para Braze. Note que esse componente não consome [pontos de dados]({{site.baseurl}}/user_guide/data/data_points/) quando está sendo usado para atualizar pontos de dados não faturáveis (como grupos de inscrições).
+## Como esse componente funciona
+
+![Uma etapa de atualização de usuário chamada "Atualizar fidelidade" que atualiza uma atribuição "Is Premium Member" para "true".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+
+Ao usar esse componente em seu Canva, as atualizações não contam para o limite de frequência de `/users/track` solicitações por minuto. Em vez disso, essas atualizações são agrupadas para que o Braze possa processá-las com mais eficiência do que um webhook de Braze para Braze. Note que esse componente não consome [pontos de dados]({{site.baseurl}}/user_guide/data/data_points/) quando está sendo usado para atualizar pontos de dados não faturáveis (como grupos de inscrições).
 
 Os usuários só avançarão para as próximas etapas do Canva depois que as atualizações relevantes do usuário tiverem sido concluídas. Isso significa que qualquer envio de mensagens subsequente que dependa dessas atualizações do usuário estará atualizado quando a próxima etapa for executada.
 
@@ -32,13 +34,13 @@ Também é possível testar as alterações feitas com esse componente pesquisan
 
 Para adicionar ou atualizar um atributo personalizado, selecione um nome de atributo em sua lista de atributos e digite o valor da chave.
 
-![][4]{: style="max-width:90%;"}
+![Etapa de atualização do usuário que atualiza as duas atribuições "Loyalty Member" e "Loyalty Program" para "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### Remoção de atributos personalizados
 
 Para remover um atributo personalizado, selecione o nome do atributo usando o menu suspenso. Você pode mudar para o [criador JSON avançado](#advanced-json-composer) para fazer edições mais complexas. 
 
-![][5]{: style="max-width:90%;"}
+![Etapa de atualização do usuário que remove uma atribuição "Membro de fidelidade".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Valores crescentes e decrescentes
 
@@ -48,7 +50,7 @@ A etapa de atualização do usuário pode aumentar ou diminuir um valor de atrib
 
 Ao incrementar um atributo personalizado que rastreia um evento, é possível rastrear o número de aulas que um usuário teve em uma semana. Usando esse componente, a contagem de classes pode ser redefinida no início da semana e começar o rastreamento novamente. 
 
-![][7]{: style="max-width:90%;"}
+![Etapa de atualização do usuário que incrementa a atribuição "class_count" em um.]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### Atualização de um vetor de objetos
 
@@ -60,7 +62,7 @@ A etapa de atualização do usuário pode adicionar ou remover atribuições a e
 
 Adicionar ou remover um item a uma matriz atualiza a lista de desejos do usuário.
 
-![][9]{: style="max-width:90%;"}
+![Etapa de atualização do usuário que adiciona um item "sunblock" ao atributo "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### Caso de uso: Cálculo do total do carrinho de compras
 
@@ -122,7 +124,7 @@ O atributo `shopping_cart` contém o total de muitos eventos personalizados: o c
 
 É possível usar a etapa de atualização do usuário para manter um `canvas_entry_property`. Digamos que você tenha um evento que dispara quando um item é adicionado a um carrinho. Você pode armazenar o ID do item mais recente adicionado ao carrinho e usá-lo em uma campanha de remarketing. Use o recurso de personalização para recuperar uma propriedade de entrada do Canva e armazená-la em uma atribuição.
 
-![][8]{: style="max-width:90%;"}
+![Etapa de atualização do usuário que atualiza a atribuição "most_recent_cart_item" com um ID de item.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### Personalização
 
@@ -141,11 +143,11 @@ Recomendamos o uso cuidadoso da personalização do conteúdo conectado Liquid n
 
 Adicione um objeto JSON de atribuição, evento ou compra com até 65.536 caracteres ao criador do JSON. A [inscrição global]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) de um usuário e o estado [do grupo de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) também podem ser definidos.
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
 Usando o criador avançado, também é possível fazer uma prévia e testar se o perfil do usuário está atualizado com as alterações na guia **Preview and test (Prévia e teste** ). Você pode selecionar um usuário aleatório ou procurar um usuário específico. Em seguida, depois de enviar um teste a um usuário, visualize o perfil do usuário usando o link gerado.
 
-![][6]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### Considerações
 
@@ -243,12 +245,3 @@ Você também pode atualizar os grupos de inscrições usando essa etapa do canv
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %}
-[2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %}
-[3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %}
-[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %}
-[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %}
-[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}
-[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %}
-[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %}
-[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 

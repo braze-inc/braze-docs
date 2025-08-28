@@ -22,7 +22,7 @@ Prenez en compte les [conditions de concurrence]({{site.baseurl}}/user_guide/eng
 
 Pour entrer dans un Canvas, les utilisateurs doivent se trouver dans l’audience d’entrée avant que sa planification n’arrive, que le Canvas soit planifié, par événement ou déclenché par API. 
 
-![][1]{: style="max-width:75%;"}
+![Un canvas basé sur l'action qui saisit les utilisateurs lorsqu'ils effectuent un achat pendant l'heure locale de l'utilisateur, du 30 avril 2025 à 12 heures au 7 mai 2025 à 12 heures.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Notez que les utilisateurs qui se qualifient pour votre audience d’entrée après le lancement du Canvas n’y entreront pas.
 
@@ -102,4 +102,3 @@ Après avoir passé en revue les détails de votre Canvas, consultez la rubrique
 - Confirmez que l'étape du canvas était connectée à l'étape précédente au moment de l'envoi.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

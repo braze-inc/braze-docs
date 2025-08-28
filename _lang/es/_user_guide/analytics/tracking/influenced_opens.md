@@ -24,9 +24,7 @@ Esto difiere de establecer las aperturas de aplicaciones como un evento de conve
 
 Las aperturas influidas se suman a las aperturas directas de una campaña para obtener un número de aperturas totales. Se muestra en la página **de análisis de campaña** de una campaña push. Las aperturas totales y las aperturas directas se muestran en las secciones Rendimiento de los mensajes y **Rendimiento histórico**. Las Influenced Opens son la diferencia entre las dos medidas.
 
-![Influenced abre las estadísticas en la página Detalles de campaña de una campaña][1]
+![Influenced Opens abre las estadísticas en la página Detalles de campaña de una campaña]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
 
-Para más información sobre el seguimiento de aperturas, consulta la sección de seguimiento de conversiones de nuestras [mejores prácticas para push][bp].
+Para más información sobre el seguimiento de aperturas, consulta la sección de seguimiento de conversiones de nuestras [mejores prácticas para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
-[bp]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[1]: {% image_buster /assets/img_archive/Influenced_Opens2.png %}

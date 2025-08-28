@@ -1,7 +1,7 @@
 ---
 nav_title: Cartes de contenu
 article_title: Cartes de contenu
-page_order: 0
+page_order: 1
 layout: dev_guide
 guide_top_header: "Cartes de contenu"
 guide_top_text: "Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l’épinglage des cartes, la fermeture de carte de contenu, la diffusion par API, un contenu connecté, des délais d’expiration de carte personnalisés, des indicateurs des performances et une coordination aisée avec les notifications push. <br><br>Les cartes de contenu sont une fonctionnalité complémentaire. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients Braze."
@@ -29,9 +29,6 @@ guide_featured_list:
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   image: /assets/img/braze_icons/pie-chart-01.svg
-- name: "Migration du fil d'actualité"
-  link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
-  image: /assets/img/braze_icons/briefcase-01.svg
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/content_cards/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

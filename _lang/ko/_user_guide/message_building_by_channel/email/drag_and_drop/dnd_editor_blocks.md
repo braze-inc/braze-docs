@@ -37,7 +37,7 @@ tool: Media
 |`Video`| 동영상 콘텐츠에 대한 링크를 생성합니다. |
 |`Social`| 소셜 미디어 플랫폼 아이콘을 삽입합니다. 브랜드별 아이콘에 대한 사용자 지정 이미지를 업로드할 수 있습니다. |
 |`Icons`| 아이콘을 삽입합니다. 사용자 지정 이미지를 업로드할 수 있습니다. 이미지가 업로드될 때까지 대형 플레이스홀더 아이콘이 사용됩니다. |
-|`HTML`| 원시 HTML을 삽입합니다. 연결된 콘텐츠 또는 조건문과 같은 고급 Liquid에 적합합니다. | 
+|`HTML`| 원시 HTML을 삽입합니다. Recommended for Liquid, such as Connected Content or conditional statements. | 
 |`Menu`| 디자인 중인 메시지에 맞는 유연한 메뉴를 만듭니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -109,6 +109,8 @@ tool: Media
 |---|---|
 |`Link Type`| 버튼을 클릭할 때의 동작을 결정하고 적절한 링크 프로토콜을 설정합니다. |
 |`URL`| 선택한 `Link Type`에 따라 동적으로 변경됩니다.|
+|`Button options`| Sets various button options, such as font, width, color, etc.|
+|`Button Hover`| The style of the button when a user hovers over it using a mouse or trackpad. This includes the button's background color, font color, and border styles.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 구분선
@@ -138,10 +140,14 @@ tool: Media
 
 | 등록정보 | 설명 |
 |---|---|
-|`Auto Width`| 이미지의 픽셀을 수정합니다. |
-|`Align`| 이미지를 왼쪽, 가운데 또는 오른쪽 방향으로 이동합니다. |
-|`URL`| 이미지의 호스팅 주소입니다. |
-|`Alternate text`| 이미지가 로드되지 않을 때 이미지 대신 표시되는 서면 사본입니다. |
+|`Auto Width`| Modifies the width of the image in pixels. |
+|`Align`| Orients the image to either the left, center or right of the block. |
+|`Image with Liquid`| Use Liquid logic to dynamically set different images within the same block of content. |
+|`URL`| Set an image using the address to where it's hosted. |
+|`Alternate text`| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessability or when the image fails to load. |
+|`Image with Rounded Corners`| Render the image with rounded corners. By default, images are rendered with squared corners. |
+|`Action`| Triggers an action when the user clicks the image.|
+|`Block Options`| Sets padding around the image block. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}

@@ -35,3 +35,4 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-square-02.svg
 ---
 
+{% multi_lang_include drag_and_drop_access.md variable_name='editores dnd' %}
