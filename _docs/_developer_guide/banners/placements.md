@@ -15,10 +15,6 @@ platform:
 
 > Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
-## About placement requests {#requests}
-
-{% multi_lang_include banners/placement_requests.md %}
-
 ## Creating a placement
 
 ### Prerequisites
@@ -31,21 +27,7 @@ These are the minimum SDK versions needed to create Banner placements:
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements are cached automatically when a user's session expires or when you change identified users using the `changeUser` method. The refresh limit depends on your SDK version.
-
-{% tabs local %}
-{% tab multiple refreshes %}
-These minimum SDK versions use a token bucket system for refreshing placements: up to 5 requests per session, with 1 request refilled every 180 seconds.
-
-{% sdk_min_versions web:6.1.0 swift:13.1.0 android:38.0.0 %}
-{% endtab %}
-
-{% tab one refresh %}
-Older SDK versions allow only one refresh per session; additional calls are ignored.
-
-{% sdk_min_versions web:5.8.1 swift:11.3.0 android:33.1.0 reactnative:14.0.0 flutter:13.0.0 %}
-{% endtab %}
-{% endtabs %}
+Placements are cached automatically when a user's session expires or the `changeUser` method is called. {% multi_lang_include banners/refresh_limit.md %}
 
 Use `requestBannersRefresh` to fetch Banner content for one or more placements. Call it early in the session to avoid delays in downloading or displaying Banners.
 
