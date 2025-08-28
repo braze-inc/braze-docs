@@ -31,7 +31,12 @@ These are the minimum SDK versions needed to create Banner placements:
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements can be requested once per session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method. The SDK will not re-fetch placements if you call the refresh method again during the same session. Instead, it will log an error and return an error message to the caller.
+How often placements can be refreshed depends on the SDK version:
+
+- For SDK versions Android 38.0.0, Swift 13.1.0 and Web 6.1.0, placements refreshes use a token bucket algorithm. This allows multiple refreshes in a session within the defined limits (a bucket size of 5 requests with a refill rate of one per 180 seconds).
+- For older SDK versions, placement refreshes are limited to once per session. Additional refresh calls in the same session are ignored.
+
+Placements are cached automatically when a user's session expires or when you change identified users using the `changeUser` method. 
 
 {% alert tip %}
 Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
