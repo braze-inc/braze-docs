@@ -25,6 +25,14 @@ API 트리거 캠페인은 오디언스가 정의된 위치에 따라 중복을 
 - **시나리오 2: 수신자 개체 내 서로 다른 `user_ids`의 중복된 이메일:** `recipients`\` 객체가 참조하는 여러 개의 `External_user_IDs` 내에 동일한 이메일이 표시되는 경우 이메일이 두 번 전송됩니다.
 - **시나리오 3: 수신자 개체 내 중복된 user_ids로 인해 이메일 중복:** 동일한 사용자 프로필을 두 번 추가하려고 하면 프로필 중 하나만 이메일을 받게 됩니다.
 
+### 이메일 주소가 이미 사용자와 연결되어 있는지 확인하려면 어떻게 해야 하나요?
+
+API 또는 SDK를 통해 사용자를 생성하기 전에 엔드포인트의 [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) 엔드포인트를 호출하고 사용자의 `email_address` 을 지정합니다. 사용자 프로필을 반환하면 해당 Braze 사용자는 이미 해당 이메일 주소와 연결되어 있는 것입니다.
+
+새 사용자를 만들 때는 고유한 이메일 주소를 찾고, 동일한 이메일 주소를 가진 사용자를 전달하거나 가져오지 않는 것이 좋습니다. 그렇지 않으면 메시지 전송, 타겟팅, 보고 및 기타 기능에 영향을 미치는 의도하지 않은 결과가 발생할 수 있습니다.
+
+예를 들어 프로필이 중복되어 있지만 특정 사용자 지정 속성이나 이벤트가 하나의 프로필에만 있는 경우를 가정해 보겠습니다. 여러 기준이 있는 캠페인이나 캔버스를 트리거하려고 할 때, 사용자 프로필이 두 개이기 때문에 Braze에서 해당 사용자를 적격 사용자로 식별할 수 없습니다. 또는 두 명의 사용자가 공유하는 이메일 주소를 대상으로 하는 캠페인의 경우 **사용자 검색** 페이지에 두 사용자 프로필이 모두 캠페인을 수신한 것으로 표시됩니다.
+
 ### 아웃바운드 이메일 설정에 대한 업데이트가 소급 적용되나요?
 
 아니요. 발신 이메일 설정에 대한 업데이트는 기존 전송에 소급 적용되지 않습니다. 예를 들어 이메일 설정에서 기본 표시 이름을 변경해도 활성 캠페인이나 캔버스에서 기존 기본 표시 이름이 자동으로 대체되지는 않습니다. 
@@ -37,7 +45,7 @@ API 트리거 캠페인은 오디언스가 정의된 위치에 따라 중복을 
 
 또한 메시지가 전달되어 스팸으로 분류되어 심각한 평판 문제를 일으킬 수 있습니다. 전송되는 메시지의 수뿐만 아니라 사용자가 실제로 받은편지함에서 메시지를 보고 있는지 확인하기 위해 열람률과 클릭률도 모니터링하는 것이 중요합니다. 일반적으로 제공업체가 모든 스팸 사례를 보고하지는 않기 때문에 스팸률이 1%라도 발생하면 우려와 추가 분석이 필요할 수 있습니다.
 
-마지막으로, 비즈니스와 보내는 이메일 유형도 배달에 영향을 미칠 수 있습니다. 예를 들어, [거래 관련 이메일을][1] 주로 보내는 사람은 마케팅 메시지를 많이 보내는 사람보다 더 높은 수신율을 기대할 수 있습니다.
+마지막으로, 비즈니스와 보내는 이메일 유형도 배달에 영향을 미칠 수 있습니다. For example, someone sending mostly [transactional emails]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) should expect to see a better rate than someone sending many marketing messages.
 
 ### 이메일 전송 측정기준이 100% 합산되지 않는 이유는 무엇인가요?
 
@@ -60,6 +68,12 @@ API 트리거 캠페인은 오디언스가 정의된 위치에 따라 중복을 
 - 사용자는 휴대폰의 미리 보기 창에서 일부 이메일 링크를 클릭합니다. 이 경우 Braze는 이 이메일을 클릭했지만 열지 않은 것으로 기록합니다.
 - 사용자가 이전에 미리 본 이메일을 다시 엽니다.
 
+### 이메일 열기 및 클릭이 0건인 이유는 무엇인가요?
+
+추적 도메인을 잘못 구성한 경우 이메일 열기 및 클릭 수가 0으로 표시될 수 있습니다. 이는 다음과 같은 이유 때문일 수 있습니다:
+- 추적 URL이 `https` 이 아닌 `http` 인 SSL 문제가 있습니다.
+- 열린 이벤트, 클릭 이벤트 또는 둘 다에 대한 사용자 에이전트 문자열이 채워지지 않는 CDN에 문제가 있습니다.
+
 ### 서버 클릭 트리거의 잠재적 위험은 무엇인가요?
 
 지나치게 긴 메시지나 느낌표가 너무 많은 메시지 등 이메일 메시지의 특정 요소는 이메일 보안 응답을 트리거할 가능성이 있습니다. 이러한 응답은 신고 및 IP 평판에 영향을 미칠 수 있으며 사용자가 구독을 취소할 수 있습니다. 
@@ -75,7 +89,7 @@ API 트리거 캠페인은 오디언스가 정의된 위치에 따라 중복을 
 ### 사용자의 이메일 수신 그룹을 확인하려면 어떻게 해야 하나요?
 
 - **사용자 프로필:** 개별 사용자 프로필은 [사용자 검색]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) 페이지의 Braze 대시보드를 통해 액세스할 수 있습니다. 여기에서 이메일 주소, 전화번호 또는 외부 사용자 아이디로 사용자 프로필을 조회할 수 있습니다. 고객 프로필의 인게이지먼트 탭에서 사용자의 이메일 구독 그룹을 볼 수 있습니다.
-- **Rest API:** 개별 사용자 프로필 구독 그룹은 [사용자의 구독 그룹 목록 엔드포인트][9] 또는 [사용자의 구독 그룹 상태 목록 엔드포인트에서][8] Braze REST API를 사용하여 볼 수 있습니다. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) by using the Braze REST API. 
 
 ### 사용자의 이메일 수신 그룹을 업데이트하려면 어떻게 해야 하나요?
 
@@ -91,6 +105,3 @@ API 트리거 캠페인은 오디언스가 정의된 위치에 따라 중복을 
 
 **해결 방법:** 이와 동일한 결과를 얻으려면 이메일 본문을 편집할 때 **링크** 도구를 사용하여 구축 중인 이메일 캠페인에서 링크할 수 있는 외부 랜딩 페이지(예: 웹사이트)에 이메일 콘텐츠를 호스팅할 수 있습니다.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

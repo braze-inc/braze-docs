@@ -72,11 +72,17 @@ The report may take up to a few minutes to run, depending on the date range and 
 
 Your selection for **Rows** affects the metrics you can select.
 
+{% alert tip %}
+If you want to report on Canvas variants or steps, select **Canvases** for rows and either leave the field empty or select **Date** as the drilldown. This creates a **Canvas View** dropdown to view metrics for the Canvas only, or group metrics by variant, step, or message. 
+
+![The opened "Canvas View" dropdown.]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
+{% endalert %}
+
 | Metric | Description |
 | --- | --- |
 | Conversion metrics | Available for Campaigns, Canvases, Campaigns and Canvases. |
 | Entries | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
-| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. |
+| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. Only displays for scheduled campaigns—does not populate for action-based or API-triggered campaigns. |
 | Sends | Available for each relevant channel. |
 | Messages Sent | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Subject line | Available for email Campaigns with **Variant** drilldown, Canvases, and Canvases with **Variant** drilldown. |
@@ -105,7 +111,20 @@ To create a line chart, select **Date** as a drilldown option when configuring t
 
 To download an image of the report chart, select the dotted icon then choose a download option.
 
-![A menu with download options for different file formats.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:30%;"}
+![A menu with download options for different file formats.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:70%;"}
+
+## Sharing a report
+
+You can share a dashboard link to the report by selecting **Share** and one of these options:
+- **Share a link:** Copy and share the link.
+
+!["Share a link" dropdown with a link to the report.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
+
+- **Send or schedule an email:** Send an email immediately or at a designated time that contains a download link that expires after one hour. You can select recipients from the dashboard users listed in the **Email Recipients** dropdown or enter any other email address.
+
+!["Schedule an email" window with fields to choose how the report is formatted, who should receive it, and when it should send.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
+
+- **Download CSV:** Download a CSV of the report.
 
 ## Adding a report to a dashboard
 

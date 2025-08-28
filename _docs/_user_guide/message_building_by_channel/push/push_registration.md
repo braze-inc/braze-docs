@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Registration"
+nav_title: "Push registration"
 article_title: Push Registration
 page_order: 2
 page_type: reference
@@ -33,10 +33,10 @@ Push tokens are used to send both foreground and background push notifications.
 | Background push | No        | A notification is silently delivered in the background without being displayed. Often used for functionality like uninstall tracking. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-When a user opts-in to push notifications for your app, they'll be considered "push registered", meaning they can now be targeted using the `Push enabled for App` segmentation filter in Braze.
+When a user opts-in to push notifications for your app, they'll be considered "push registered", meaning they can now be targeted using the `Foreground Push Enabled for App` segmentation filter in Braze.
 
 {% alert note %}
-This is different from the `Push Enabled` segmentation filter, which is used to identify users who have opted-in to at least one of your apps&#8212;not one specific app. For more information, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#push-enabled).
+This is different from the `Foreground Push Enabled` segmentation filter, which is used to identify users who have opted-in to at least one of your apps—not one specific app. For more information, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#foreground-push-enabled).
 {% endalert %}
 
 ### Multiple users on a device

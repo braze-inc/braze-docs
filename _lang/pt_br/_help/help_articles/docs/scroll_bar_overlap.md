@@ -11,7 +11,7 @@ description: "Este artigo de ajuda orienta os usuários de Mac sobre como resolv
 
 Você está usando um Mac e acha que suas barras de rolagem estão sobrepondo o conteúdo dentro dos documentos do Braze como no exemplo a seguir?
 
-![Exemplo de sobreposição da barra de rolagem][1]
+![Exemplo de sobreposição da barra de rolagem]({% image_buster /assets/img/scroll-overlap.png %})
 
 Verifique se a sua barra de rolagem sobrepõe o seguinte bloco de código:
 
@@ -21,11 +21,11 @@ Verifique se a sua barra de rolagem sobrepõe o seguinte bloco de código:
 
 Se a barra de rolagem sobrepor o bloco de código, sugerimos alterar a configuração **Mostrar barras de rolagem:** para **Sempre** em suas **Configurações Gerais**. Isso expandirá os recursos em documentos (como blocos de código) para sempre mostrar a barra de rolagem e evitar a ilegibilidade.
 
-![Configurações Gerais para MacOS][2]
+![Configurações gerais do MacOS]({% image_buster /assets/img/general-on-mac.png %})
 
 Veja como sua barra de rolagem atualizada deve ser:
 
-![Exemplo de barra de rolagem fixa sem sobreposição][3]
+![Exemplo de barra de rolagem fixa sem sobreposição]({% image_buster /assets/img/scroll-bar-on.png %})
 
 _Última atualização em 27 de março de 2019_
 
@@ -34,6 +34,3 @@ Insira isso onde há uma única LINE de código longo que pode causar problemas:
 _Não consegue ver o código por causa da barra de rolagem? Veja como corrigir isso [aqui]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)._
 {% endcomment %}
 
-[1]: {% image_buster /assets/img/scroll-overlap.png %}
-[2]: {% image_buster /assets/img/general-on-mac.png %}
-[3]: {% image_buster /assets/img/scroll-bar-on.png %}

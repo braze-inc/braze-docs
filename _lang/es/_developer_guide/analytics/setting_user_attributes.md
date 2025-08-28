@@ -1,7 +1,7 @@
 ---
 nav_title: Configuración de atributos de usuario
 article_title: Configuración de los atributos del usuario a través del SDK de Braze
-page_order: 1.1
+page_order: 1.2
 description: "Aprende a configurar atributos de usuario a través del SDK de Braze."
 ---
 
@@ -19,18 +19,26 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab flutter %}
+{% multi_lang_include developer_guide/flutter/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab roku %}
+{% multi_lang_include developer_guide/roku/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 {% endsdktabs %}

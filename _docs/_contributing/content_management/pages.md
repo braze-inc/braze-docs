@@ -31,7 +31,7 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 
 ### Step 2: Add a template
 
-Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
+Copy and paste one of the following templates into your Markdown file, and then customize it. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
 {% tabs local %}
 {% tab Basic template %}
@@ -43,6 +43,9 @@ Copy and paste one of the following templates into your Markdown file. For more 
 {% multi_lang_include contributing/templates/technology_partner.md %}
 {% endtab %}
 {% endtabs %}
+
+![Diagram showing the components of a page, such as breadcrumbs, article title, description, and table of contents.]({% image_buster /assets/img/contributing/article_anatomy.png %})
+<sup>*The [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) page uses the [how-to guide]({{site.baseurl}}/contributing/content_types/#how-to-guides) and [reference]({{site.baseurl}}/contributing/content_types/#references) templates.*</sup>
 
 ## Writing content
 

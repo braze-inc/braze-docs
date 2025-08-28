@@ -1,0 +1,68 @@
+# Links PRs to matching issues if [BD-####] is in title, with label guard
+name: Link PR to Matching Issue
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  link-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Link issue if PR title matches
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const prTitle = pr.title;
+
+            const match = prTitle.match(/\[BD-(\d+)\]/);
+            if (!match) {
+              core.info("Issue in title: None");
+              return;
+            }
+
+            const bdNumber = match[1];
+            const fullTag = `[BD-${bdNumber}]`;
+            core.info(`Issue in title: ${fullTag}`);
+
+            const labels = pr.labels.map(label => label.name);
+            const tagExists = labels.includes("fixes an issue");
+            core.info(`Tag already exists? ${tagExists ? "yes" : "no"}`);
+            if (tagExists) return;
+
+            const { data } = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${fullTag}"`
+            });
+
+            const matchedIssue = data.items.find(issue =>
+              issue.title.includes(fullTag)
+            );
+
+            const issueFound = !!matchedIssue;
+            core.info(`Matching issue found? ${issueFound ? "yes" : "no"}`);
+            if (!issueFound) return;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: `Fixes #${matchedIssue.number}`
+            });
+            core.info("Comment posted? yes");
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              labels: ["fixes an issue"]
+            });
+            core.info("Tag added? yes");

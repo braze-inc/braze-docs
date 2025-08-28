@@ -1,6 +1,6 @@
 ---
 page_order: 2.2
-nav_title: Content Cards
+nav_title: Content cards
 article_title: Content Cards in the Braze SDK
 channel:
   - content cards
@@ -14,6 +14,8 @@ platform:
 # Content Cards
 
 > Learn about Content Cards for the Braze SDK, including the different data models and card-specific properties available for your application.
+
+{% multi_lang_include banners/content_card_alert.md %}
 
 {% sdktabs %}
 {% sdktab android %}

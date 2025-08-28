@@ -14,7 +14,7 @@ description: "Le présent article de référence donne un aperçu du résultat d
 
 ## Arrêter votre campagne
 
-Pour arrêter une campagne, ouvrez la page des **détails de** votre **campagne** et sélectionnez **Arrêter la campagne**. Lorsqu’une campagne est arrêtée :
+Pour arrêter une campagne, ouvrez la page des **détails de votre campagne** et sélectionnez **Arrêter la campagne**. Lorsqu’une campagne est arrêtée :
 
 - Les messages dont l'envoi est planifié sont annulés.
 - Les tests A/B dont le test initial a déjà été envoyé seront définitivement annulés.

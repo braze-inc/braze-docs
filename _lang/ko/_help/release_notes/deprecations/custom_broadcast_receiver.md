@@ -7,14 +7,14 @@ description: "이 참조 문서에서는 Android 푸시 알림을 위한 커스�
 # 브로드캐스트 수신기를 통한 푸시 수신, 열기, 해지 및 키-값 페어에 대한 커스텀 처리 {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
-푸시 알림에 사용자 지정 `BroadcastReceiver` 사용은 더 이상 사용되지 않습니다. 대신 [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) 대신 사용하세요.
+푸시 알림에 사용자 지정 `BroadcastReceiver` 사용은 더 이상 사용되지 않습니다. 대신 [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) 대신 사용하세요.
 {% endalert %}
 
 또한 Braze는 푸시 알림을 수신, 열거나 해제할 때 커스텀 의도를 브로드캐스트합니다. 이러한 시나리오에 대한 특정 사용 사례(예: 커스텀 키-값 페어를 수신해야 하거나 딥링크를 독점적으로 처리해야 하는 경우)가 있는 경우 커스텀 `BroadcastReceiver`를 생성하여 이러한 의도를 수신해야 합니다.
 
 ## 1단계: BroadcastReceiver 등록하기
 
-커스텀 `BroadcastReceiver`를 등록하여 [`AndroidManifest.xml`][71]에서 Braze 푸시 열기 및 수신 의도를 수신하기 위한 조건:
+커스텀 `BroadcastReceiver`를 등록하여 [`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml)에서 Braze 푸시 열기 및 수신 의도를 수신하기 위한 조건:
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -30,7 +30,7 @@ description: "이 참조 문서에서는 Android 푸시 알림을 위한 커스�
 
 수신기는 Braze가 브로드캐스트한 의도를 처리하고 활동을 시작해야 합니다:
 
-- [`BroadcastReceiver`][53] 하위크래스에 포함하고 `onReceive()`를 재정의해야 합니다.
+- [`BroadcastReceiver`](https://developer.android.com/reference/android/content/BroadcastReceiver.html) 하위크래스에 포함하고 `onReceive()`를 재정의해야 합니다.
 - `onReceive()` 메서드는 Braze가 브로드캐스트하는 인텐트를 수신해야 합니다.
   - 푸시 알림이 도착하면 `NOTIFICATION_RECEIVED` 인텐트가 수신됩니다.
   - 사용자가 푸시 알림을 클릭하면 `NOTIFICATION_OPENED` 인텐트가 수신됩니다.
@@ -149,5 +149,3 @@ val myExtra = extras.getString("my_key")
 Braze 푸시 데이터 키에 대한 설명서는 [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants)를 참조하세요.
 {% endalert %}
 
-[53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"

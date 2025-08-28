@@ -1,4 +1,4 @@
-Puedes utilizar esta plantilla para crear documentación de socio tecnológico. Para ver un ejemplo, consulta [Análisis de Scuba]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/).
+Puedes utilizar esta plantilla para crear documentación de socio tecnológico. Para ver un ejemplo, consulta [Análisis de Scuba]({{site.baseurl}}/partners/data_and_analytics/business_intelligence/scuba/).
 
 {% details Mostrar plantilla %}
 {% raw %}
@@ -18,6 +18,10 @@ search_tag: Partner
 <!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a concise overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
 > DESCRIPTION.
 
+*This integration is maintained by PARTNER_NAME.*
+
+## Overview
+
 ADDITIONAL_INFORMATION.
 
 <!-- Most partner integrations will require the following prerequisites. However, you may add additional prerequisites as needed. -->
@@ -31,10 +35,6 @@ Before you start, you'll need the following:
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.                                                 |
 {: .reset-td-br-1 .reset-td-br-2}
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
-{% endalert %}
 
 <!-- An optional section you can use to outline the typical or atypical use cases for your integration. -->
 ## Use cases

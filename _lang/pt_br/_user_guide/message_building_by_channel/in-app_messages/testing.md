@@ -24,11 +24,11 @@ Na **Prévia**, a visualização da sua mensagem pode não ser idêntica à rend
 
 Faça uma prévia de como sua mensagem será exibida para um usuário aleatório, um usuário específico ou um usuário personalizado - os dois últimos são especialmente úteis se sua mensagem contiver personalização ou vários idiomas. Também é possível fazer uma prévia das mensagens em dispositivos móveis ou tablets para ter uma ideia melhor da experiência dos usuários.
 
-![Guia "Criar" ao criar uma mensagem no app mostrando a prévia de como será a mensagem. Um usuário não é selecionado, portanto, o Liquid adicionado na seção do corpo é exibido como está.][1]
+![Guia "Criar" ao criar uma mensagem no app mostrando a prévia de como será a mensagem. Um usuário não é selecionado, portanto, o Liquid adicionado na seção do corpo é exibido como está.]({%image_buster /assets/img/in-app-message-preview.png %})
 
 O Braze tem três gerações de mensagens no app disponíveis. Você pode ajustar para quais dispositivos suas mensagens devem ser enviadas, com base na geração que eles suportam.
 
-![Alternância entre gerações ao visualizar uma mensagem no app.][2]{: height="50%" width="50%"}
+![Alternância entre gerações ao visualizar uma mensagem no app.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## Testar
 
@@ -40,7 +40,7 @@ Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_g
 
 Também é possível fazer a prévia das mensagens na guia **Teste**, como se fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado.
 
-![Guia Teste ao criar uma mensagem no app. A opção "Pré-visualizar mensagem como usuário" está definida como "Usuário personalizado", com os campos de perfil disponíveis aparecendo como opções configuráveis.][3]
+![Guia Teste ao criar uma mensagem no app. "Preview message as user" (Visualizar mensagem como usuário) está definido como "Custom User" (Usuário personalizado), com os campos de perfil disponíveis aparecendo como opções configuráveis.]({% image_buster /assets/img/iam-user-preview.png %})
 
 ### Lista de verificação de teste
 
@@ -49,6 +49,29 @@ Também é possível fazer a prévia das mensagens na guia **Teste**, como se fo
 - Seu texto é claro, conciso e correto?
 - Seus botões direcionam o usuário para onde ele deve acessar?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## Scanner de acessibilidade
+
+Para dar suporte às práticas recomendadas de acessibilidade, o Braze verifica automaticamente o conteúdo das mensagens no app criadas usando o editor de HTML tradicional em relação aos padrões de acessibilidade. Esse scanner ajuda a identificar o conteúdo que pode não atender aos padrões[das WCAG (](https://www.w3.org/WAI/standards-guidelines/wcag/)Web Content Accessibility Guidelines). As WCAG são um conjunto de padrões técnicos reconhecidos internacionalmente e desenvolvidos pelo World Wide Web Consortium (W3C) para tornar o conteúdo da Web mais acessível a pessoas com deficiências.
+
+![Resultados da varredura de acessibilidade]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+O scanner de acessibilidade de mensagens no app só funciona em mensagens criadas com HTML personalizado.
+{% endalert %}
+
+### Como funciona?
+
+O scanner é executado automaticamente em mensagens HTML personalizadas e avalia toda a sua mensagem HTML em relação ao [conjunto](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa) completo [de regras WCAG 2.1 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). Para cada problema sinalizado, ele mostra:
+
+- O elemento HTML específico envolvido
+- Uma descrição do problema de acessibilidade
+- Um link para contexto adicional ou orientação de correção
+
+### Compreensão dos testes automatizados de acessibilidade
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
+
+
+
+

@@ -1,5 +1,5 @@
 ---
-nav_title: Measuring Segment Size
+nav_title: Measuring segment size
 article_title: Measuring Segment Size
 page_order: 5
 page_type: reference
@@ -102,6 +102,8 @@ For all segments, you can view a historical membership chart that shows the esti
 ![Use the Historical Membership dropdown to filter segment membership by date range.]({% image_buster /assets/img_archive/historical_membership2.png %})
 
 Because the goal of this chart is to give you a sense of overall segment membership trends, the daily count is an estimate, similar to how the segment size is an estimate before you select **Calculate Exact Statistics**. And because this graph shows estimates, it's possible that your segment’s size appears as "0" in this chart, even though its actual size (which can be determined after selecting **Calculate Exact Stats**) is not "0". It is especially likely for the chart to show an estimate of "0" if your segment is very small relative to the size of your workspace population.
+
+For example, let's say your workspace contains 100 million users and your segment has about 700 users. It's possible that on some days, no users are in the segment, and no users land in the random bucket range used for the historical membership estimate, resulting in a one-day membership count of 0.
 
 Braze estimates the segment membership count by querying a subset of your users, and then extrapolating those results to your entire audience. This means that the chart's results provide only an estimate of what segment membership might be on that day, and is expected to also fluctuate from day-to-day because a different sample of users may get queried for this estimate each day.
 

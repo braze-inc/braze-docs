@@ -1,5 +1,5 @@
 ---
-nav_title: Segment Data
+nav_title: Segment data
 article_title: Viewing and Understanding Segment Data
 page_order: 4
 page_type: reference
@@ -58,7 +58,7 @@ You can view the following segment statistics, which update in real-time as you 
         </tr>
         <tr>
             <td class="no-split">Emailable (Opted-In)</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Push Enabled (Opted-In)</td>

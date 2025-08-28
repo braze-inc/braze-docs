@@ -1,5 +1,5 @@
 ---
-nav_title: Accessing Your Account
+nav_title: Accessing your account
 article_title: Accessing Your Account
 page_order: 2
 page_type: reference

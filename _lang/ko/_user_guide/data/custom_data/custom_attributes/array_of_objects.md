@@ -484,17 +484,17 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 
 새 세그먼트를 만들고 **중첩 커스텀 속성**을 필터로 선택합니다. 그런 다음 개체 배열의 이름을 검색하고 선택합니다.
 
-![개체 배열을 기준으로 필터링합니다.][1]
+![Filter by array of objects.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 점 표기법을 사용하여 개체 배열에서 사용할 필드를 지정합니다. 빈 대괄호(`[]`)로 텍스트 필드를 시작하여 Braze에 객체 배열 내부를 보고 있음을 알립니다. 그런 다음 마침표 `.`를 추가한 다음 사용하려는 필드 이름을 입력합니다.
 
 예를 들어 `type` 필드를 기준으로 `pets` 개체 배열을 필터링하려면 `[].type`을 입력하고 필터링할 애완동물 유형(예: `snake`)을 선택합니다.
 
-![반려동물 유형별 필터링은 뱀과 같습니다.][3]
+![Filter by pet type equals snake.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 또는 `dog` 의 `type`을 가진 반려동물을 필터링할 수도 있습니다. 여기서 사용자는 반려견을 한 마리 이상 키우고 있으므로 '반려견을 한 마리 이상 키우는 모든 사용자'라는 세그먼트에 해당합니다.
 
-![반려동물 유형별로 필터링하면 개가 됩니다.][2]
+![Filter by pet type equals dog.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### 중첩 수준
 
@@ -635,6 +635,3 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
-[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
-[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}

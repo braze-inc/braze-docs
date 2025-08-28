@@ -30,7 +30,7 @@ Braze では、Flutter のようなラッパーを使ってディープリンク
 
 ### UTMタグとは何か？
 
-[UTM（Urchin Traffic Manager）タグを][4]使えば、キャンペーンのアトリビューションの詳細をリンクに直接含めることができる。UTMタグは、Googleアナリティクスがキャンペーンのアトリビューションデータを収集するために使用され、以下のプロパティを追跡するために使用することができる：
+[UTM（Urchin Traffic Manager）タグを](https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article)使えば、キャンペーンのアトリビューションの詳細をリンクに直接含めることができる。UTMタグは、Googleアナリティクスがキャンペーンのアトリビューションデータを収集するために使用され、以下のプロパティを追跡するために使用することができる：
 
 - `utm_source`:トラフィックの送信元の識別子 (`my_app` など)
 - `utm_medium`:キャンペーンメディア(`newsfeed` など)
@@ -42,9 +42,9 @@ UTMタグは、通常のHTTP（ウェブ）リンクとディープリンクの�
 
 ### BrazeでUTMタグを使う
 
-通常のHTTP (ウェブ) リンクでUTM タグを使用する場合(たとえば、メールキャンペーンのキャンペーン属性を行う場合)、組織でGoogle Analytics がすでに使用されている場合は、[Google のURL ビルダー][6] を使用してUTM リンクを生成できます。これらのリンクは、他のリンクと同様に、Brazeのキャンペーンコピーに簡単に埋め込むことができる。
+通常のHTTP (ウェブ) リンクでUTM タグを使用する場合(たとえば、メールキャンペーンのキャンペーン属性を行う場合)、組織でGoogle Analytics がすでに使用されている場合は、[Google のURL ビルダー](https://ga-dev-tools.google/ga4/campaign-url-builder/) を使用してUTM リンクを生成できます。これらのリンクは、他のリンクと同様に、Brazeのキャンペーンコピーに簡単に埋め込むことができる。
 
-アプリへのディープリンクでUTMタグを使用するには、関連する[Google Analytics SDK][5]が統合され、ディープリンクを処理するように正しく設定されている必要があります。不明な点は開発者に確認すること。
+アプリへのディープリンクでUTMタグを使用するには、関連する[Google Analytics SDK](https://developers.google.com/analytics/devguides/collection/)が統合され、ディープリンクを処理するように正しく設定されている必要があります。不明な点は開発者に確認すること。
 
 Analytics SDK が統合および設定された後、UTM タグはBraze キャンペーンのディープリンクで使用できます。キャンペーンのUTM タグを設定するには、宛先URL またはディープリンクに必要なUTM タグを含めます。以下の例は、プッシュ通知やアプリ内メッセージでUTMタグを使う方法を示している。
 
@@ -56,7 +56,7 @@ Analytics SDK が統合および設定された後、UTM タグはBraze キャ�
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![][8]
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### UTM タグによるアプリ内メッセージのクリックのアトリビュート指定
 
@@ -66,15 +66,5 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-![][10]
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article
-[5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://ga-dev-tools.google/ga4/campaign-url-builder/
-[8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
-[9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
-[10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
-[11]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/

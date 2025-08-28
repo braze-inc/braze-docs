@@ -14,7 +14,7 @@ description: "Este artículo de referencia trata del mensaje y los requisitos de
 
 > Nuestros slideups suelen aparecer en la parte superior o inferior de la pantalla de la aplicación (puedes configurarlo al crear tu mensaje). Son ideales para alertar a los usuarios sobre nuevas condiciones de servicio, cookies y otros fragmentos de información. No son molestos y permiten a los usuarios seguir interactuando con la aplicación mientras se muestra el mensaje.
 
-![Dos mensajes in-app deslizables, uno que aparece desde la parte superior de la pantalla y otro desde la inferior, en los que se detallan las recomendaciones de imagen y texto. Véanse los detalles en las secciones siguientes.][2a]{: style="max-width: 40%; border: none;"}
+![Dos mensajes in-app deslizables, uno que aparece desde la parte superior de la pantalla y otro desde la inferior, en los que se detallan las recomendaciones de imagen y texto. Consulte las secciones siguientes para obtener más información.]({% image_buster /assets/img/slideup-spec.png %}){: style="max-width: 40%; border: none;"}
 
 ## Comportamiento de la imagen y la copia
 
@@ -56,4 +56,3 @@ En una tableta, aparece un mensaje deslizamiento de hacia arriba dentro de la ap
 {% endtab %}
 {% endtabs %}
 
-[2a]: {% image_buster /assets/img/slideup-spec.png %}

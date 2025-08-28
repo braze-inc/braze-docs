@@ -12,7 +12,7 @@ description: "Cet article de référence traite des groupes internes, un excelle
 > Les groupes internes sont un excellent moyen de créer et d'organiser des groupes de test internes ou tiers. Ils fournissent des informations sur les journaux de votre SDK ou de votre API et sont utiles pour tester l'intégration de votre SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés comprenant jusqu'à 1 000 utilisateurs.
 
 {% alert tip %}
-Nous vous recommandons également de consulter notre cours d'apprentissage sur l ['assurance qualité et les outils de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze, qui explique comment utiliser les groupes internes pour effectuer vos propres opérations de dépannage et de débogage.
+Nous vous recommandons également de consulter notre cours d'apprentissage sur [les tests et le dépannage de](https://learning.braze.com/path/developer/testing-and-troubleshooting) Braze, qui explique comment utiliser les groupes internes pour effectuer vos propres opérations de dépannage et de débogage.
 {% endalert %}
 
 ## Conditions préalables
@@ -58,7 +58,7 @@ Après avoir créé votre groupe interne, vous pouvez ajouter des utilisateurs t
 Semblable à l'envoi d'un test de prévisualisation d'un message, le groupe de test de contenu vous fait gagner du temps et vous permet de lancer simultanément des tests auprès d'une liste prédéfinie d'utilisateurs de Braze. Ceci est disponible pour les messages in-app, les messages in-app, les SMS, les e-mails et les cartes de contenu dans Braze. Seuls les groupes étiquetés comme groupes de test de contenu seront disponibles dans la section de prévisualisation d'un message.
 
 {% alert note %}
-Les messages de test [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) ne peuvent être envoyés qu'à des numéros de téléphone valides figurant dans la base de données.
+Les messages de test [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) ne peuvent être envoyés qu'à des numéros de téléphone valides figurant dans la base de données.
 {% endalert %}
 
 Vous pouvez sélectionner des utilisateurs individuels de Braze ou autant de groupes internes auxquels envoyer le message. Si votre message comprend un liquide ou une autre personnalisation dynamique, Braze utilisera les attributs disponibles pour chaque utilisateur afin de personnaliser le contenu du message. Pour les utilisateurs qui n’ont aucun attribut, Braze utilisera la valeur par défaut définie.

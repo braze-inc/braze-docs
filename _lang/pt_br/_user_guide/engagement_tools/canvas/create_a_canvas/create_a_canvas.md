@@ -16,11 +16,11 @@ search_rank: 1
 Não é mais possível criar ou duplicar Canvas usando a experiência original do Canvas. A Braze recomenda a [clonagem de suas telas para o Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% enddetails %}
 
-## Etapa 1: Criar uma nova tela 
+## Criando uma tela
 
-Acesse **Envio** **de mensagens** > **Canvas** e selecione **Criar Canvas**.
+### Etapa 1: Configurar um novo Canvas 
 
-## Etapa 2: Configure seu Canvas
+Primeiro, acesse Envio **de mensagens** > **Canvas** e selecione **Criar Canvas**.
 
 O construtor do Canvas o guiará passo a passo na configuração do Canva, desde a nomeação até a definição de eventos de conversão e a inclusão dos usuários certos na jornada do cliente. Selecione cada uma das guias a seguir para visualizar as configurações que podem ser ajustadas para cada etapa do construtor.
 
@@ -64,12 +64,12 @@ O construtor do Canvas o guiará passo a passo na configuração do Canva, desde
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Resumo %}
-    Aqui, você encontrará o resumo dos detalhes do seu Canva. Se o [fluxo de trabalho de aprovação do Canvas]({{site.baseurl}}/canvas_approval/) estiver ativado, você poderá aprovar os detalhes do Canva listados antes do lançamento.
+    Aqui, você encontrará o resumo dos detalhes do seu Canva. Se o [fluxo de trabalho de aprovação do Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) estiver ativado, você poderá aprovar os detalhes do Canva listados antes do lançamento.
 
   {% endtab %}
 {% endtabs %}
 
-### Etapa 2a: Comece com o básico do canva
+#### Etapa 1.1: Comece com o básico do canva
 
 Aqui, você nomeará seu Canvas, atribuirá [equipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) e criará ou adicionará [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Você também pode atribuir eventos de conversão para o Canva.
 
@@ -77,21 +77,21 @@ Aqui, você nomeará seu Canvas, atribuirá [equipes]({{site.baseurl}}/user_guid
 Coloque tags em suas telas para que seja fácil encontrá-las e criar relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
 {% endalert %}
 
-![A página de detalhes do Canvas, com campos para o nome, a descrição, o local e as tags do Canvas.][53]{: style="max-width:70%;"}
+![A página de detalhes do Canvas, com campos para o nome, a descrição, o local e as tags do Canvas.]({% image_buster /assets/img/canvas_details.png %}){: style="max-width:70%;"}
 
-#### Selecionar eventos de conversão
+##### Selecionar eventos de conversão
 
 Escolha o tipo de evento de conversão e, em seguida, selecione as conversões a serem registradas. Esses [eventos de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) medirão a eficiência de seu Canva. 
 
-![Evento de conversão primária A com o tipo de evento de conversão Makes Purchase para registrar conversas de usuários que fazem qualquer compra dentro de um prazo de conversão de três dias.][52]
+![Evento de conversão primária A com o tipo de evento de conversão Makes Purchase para registrar conversas de usuários que fazem qualquer compra dentro de um prazo de conversão de três dias.]({% image_buster /assets/img/add_canvas_conversions.png %})
 
 Se a sua tela tiver várias variantes ou um grupo de controle, o Braze usará esse evento de conversão para determinar a melhor variação para atingir essa meta de conversão. Usando a mesma lógica, você pode criar vários eventos de conversão.
 
-### Etapa 2b: Determine seu cronograma de entrada no Canva
+#### Etapa 1.2: Determine seu cronograma de entrada no Canva
 
 Você pode escolher uma das três maneiras pelas quais os usuários podem entrar no seu Canva. 
 
-#### Tipos de programação de entrada
+##### Tipos de programação de entrada
 
 {% tabs local %}
   {% tab Entrega programada %}
@@ -130,7 +130,7 @@ Se a janela de reelegibilidade for menor do que a duração máxima do Canva, um
 Se um usuário entrar novamente no Canvas, chegar ao mesmo componente da entrada anterior e for elegível para uma mensagem no app para cada entrada, ele receberá a mensagem duas vezes (dependendo da prioridade da mensagem no app), desde que reabra a sessão duas vezes.
 {% enddetails %}
 
-### Etapa 2c: Defina seu público-alvo de entrada
+#### Etapa 1.3: Defina seu público-alvo de entrada
 
 Você pode definir o público-alvo do seu canva na etapa **Público-alvo** do canva. Somente os usuários que correspondem aos critérios definidos podem entrar na jornada, o que significa que o Braze avalia a elegibilidade do público-alvo antes que os usuários entrem na jornada do Canva. Por exemplo, se quiser direcionar novos usuários, poderá selecionar um segmento de usuários que usaram seu app pela primeira vez há menos de uma semana.
 
@@ -140,17 +140,17 @@ Em **Controles de entrada**, é possível limitar o número de usuários sempre 
 Evite configurar uma campanha baseada em ação ou o Canva com o mesmo disparo do filtro de público (como um atributo alterado ou a realização de um evento personalizado). Pode ocorrer uma condição de corrida em que o usuário não esteja no público no momento em que executar o evento de gatilho, o que significa que ele não receberá a campanha nem entrará no Canva.  
 {% endalert %}
 
-#### Testar seu público
+##### Testar seu público
 
 Depois de adicionar segmentos e filtros ao seu público-alvo, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se ele corresponde aos critérios do público.
 
 ![O campo "User Lookup", que permite pesquisar por ID de usuário externo ou ID do Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
-#### Seleção de controles de entrada
+##### Seleção de controles de entrada
 
 Os controles de entrada determinam se os usuários têm permissão para entrar novamente em um Canva. Você também pode limitar o número de pessoas que potencialmente entrariam nesse Canva por uma cadência selecionada (diariamente, durante toda a vida do Canvas ou sempre que o Canvas for programado). 
 
-Por exemplo, se você selecionar **Limite de volume de** **envios** e definir o campo **Máximo de entradas** como 5.000 usuários com **Diário** como a cadência limite, o Canva só enviará para 5.000 usuários por dia.
+Por exemplo, se você selecionar **Limitar volume de** **envios** e definir o campo **Máximo de entradas** como 5.000 usuários com **Diário** como a cadência limite, o Canva enviará apenas para 5.000 usuários por dia.
 
 ![A página "Entry Controls" (Controles de entrada) exibe caixas de seleção para "Allow users to re-enter Canva" (Permitir que os usuários entrem novamente no Canvas) e "Limit entrance volume" (Limitar volume de envios). O último permite que você defina o máximo de entradas e se deseja limitar diariamente, durante toda a vida do Canvas ou toda vez que o Canvas for agendado.]({% image_buster /assets/img_archive/entry_controls.png %})
 
@@ -158,11 +158,11 @@ Por exemplo, se você selecionar **Limite de volume de** **envios** e definir o 
 Braze não recomenda o uso do recurso **Toda vez que o Canva for programado** para aquecimento de IP, pois isso pode levar a um aumento nos volumes de envio.
 {% endalert %}
 
-#### Definição de critérios de saída
+##### Definição de critérios de saída
 
 A configuração dos [critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) determina quais usuários devem sair de um Canva. Se um usuário executar o evento de exceção ou corresponder aos segmentos e filtros, ele não receberá mais mensagens.
 
-#### Cálculo do público-alvo
+##### Cálculo do público-alvo
 
 Na seção **Público-alvo**, é possível visualizar um resumo do seu público, como os segmentos selecionados e os filtros adicionais, e um detalhamento de quantos usuários podem ser alcançados por canal de envio de mensagens. Para calcular o número exato de usuários alcançáveis em seu público-alvo em vez da estimativa padrão, selecione [Calcular estatísticas exatas]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
 
@@ -173,11 +173,15 @@ Note que:
 
 Para visualizar estatísticas adicionais, como a receita média vitalícia dos usuários direcionados, selecione **Show Additional Statistics (Mostrar estatísticas adicionais)**.
 
-![Detalhamento do público-alvo com opção de calcular estatísticas exatas.][2]
+![Detalhamento do público-alvo com opção de calcular estatísticas exatas.]({% image_buster /assets/img_archive/canvas_exact_stats.png %})
 
-### Etapa 2d: Selecione suas configurações de envio
+##### Por que a contagem do público-alvo pode ser diferente da contagem de usuários alcançáveis
 
-Selecione **Send Settings (Configurações de envio** ) para editar suas configurações de inscrição, ativar o limite de frequência e ativar o Horário de silêncio. Ao ativar [limite de frequência][6b] ou [limite de frequência][6c], é possível aliviar a pressão de marketing exercida sobre os usuários e garantir que não haja envio excessivo de mensagens.
+{% multi_lang_include segments.md section='Diferentes tamanhos de público' %}
+
+#### Etapa 1.4: Selecione suas configurações de envio
+
+Selecione **Send Settings (Configurações de envio** ) para editar suas configurações de inscrição, ativar o limite de frequência e ativar o Horário de silêncio. Ao ativar o [limite]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components) [de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping) ou [o teto de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping), é possível aliviar a pressão de marketing exercida sobre os usuários e garantir que não haja envio excessivo de mensagens a eles.
 
 Para Canvas direcionados a canais de envio de e-mail e push, talvez você queira limitar seu Canvas para que somente os usuários com aceitação explícita recebam a mensagem (excluindo usuários inscritos ou cancelados). Por exemplo, digamos que você tenha três usuários com status de aceitação diferentes:
 
@@ -190,28 +194,28 @@ Para fazer isso, defina as **Configurações de inscrição** para enviar esse c
 Essas configurações de inscrição são aplicadas por etapa, o que significa que não há efeito sobre o público de entrada. Portanto, essa configuração é usada para avaliar a elegibilidade de um usuário para receber cada etapa do Canva.
 
 {% alert important %}
-Com essa configuração, não inclua nenhum filtro na etapa **Target Users (Usuários-alvo** ) que limite o público a um único canal (por exemplo, `Push Enabled = True` ou `Email Subscription = Opted-In`).
+Com essa configuração, não inclua nenhum filtro na etapa **Target Audience** que limite o público a um único canal (por exemplo, `Push Enabled = True` ou `Email Subscription = Opted-In`).
 {% endalert %}
 
 Se desejar, especifique o Horário de silêncio (o tempo durante o qual as mensagens não serão enviadas) para o canva. Marque **Ativar Horário de Silêncio** em suas **Configurações de Envio**. Em seguida, selecione o Horário de silêncio no fuso local do usuário e a ação a ser seguida se a mensagem for disparada dentro desse Horário de silêncio.
 
-![A página "Quiet Hours" exibe uma caixa de seleção para ativar o horário de silêncio. Se ativada, a hora de início, a hora de término e o comportamento de fallback podem ser definidos.][50]
+![A página "Quiet Hours" exibe uma caixa de seleção para ativar o horário de silêncio. Se ativada, a hora de início, a hora de término e o comportamento de fallback podem ser definidos.]({% image_buster /assets/img/quiet_hours.png %})
 
-## Etapa 3: Crie seu canva
+### Etapa 2: Crie seu canva
 
 {% alert tip %}
 Economize tempo e agilize sua criação de telas usando os [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Navegue em nossa biblioteca de modelos pré-criados para encontrar um que se adapte ao seu caso de uso e personalize-o para atender às suas necessidades específicas.
 {% endalert %}
 
-### Adição de uma variante
+#### Etapa 2.1: Adicionar uma variante
 
-![O botão "Add Variant" (Adicionar variante) foi selecionado para mostrar um menu de contexto com a opção "Add Variant" (Adicionar variante).][11]{: style="float:right;max-width:40%;margin-left:15px;"}
+![O botão "Add Variant" (Adicionar variante) selecionado para mostrar um menu de contexto com a opção "Add Variant" (Adicionar variante).]({% image_buster /assets/img_archive/canvas_add_variant.gif %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Selecione **Add Variant (Adicionar variante**) e adicione uma nova variante ao seu Canva. As variantes representam uma jornada que seus usuários farão e podem conter várias etapas e ramificações.
 
 Você pode adicionar outras variantes selecionando o botão de mais <i class="fas fa-plus-circle"></i>. Ao adicionar novas variantes, você poderá ajustar como seus usuários serão distribuídos entre elas para que possa comparar e analisar a eficácia de diferentes estratégias de engajamento.
 
-![Dois exemplos de variantes em um Braze Canvas.][12]
+![Dois exemplos de variantes em um Braze Canvas.]({% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %})
 
 {% alert tip %}
 Por padrão, a atribuição da variante do Canvas é bloqueada quando os usuários entram no Canvas, o que significa que, se um usuário inserir uma variante pela primeira vez, essa será sua variante sempre que ele entrar novamente no Canvas. No entanto, há maneiras de contornar esse comportamento. <br><br>Para isso, é possível criar um gerador de números aleatórios usando o Liquid, executá-lo no início da entrada de cada usuário no Canva, armazenar o valor como um atributo personalizado e usar esse atributo para dividir os usuários aleatoriamente.
@@ -220,14 +224,14 @@ Por padrão, a atribuição da variante do Canvas é bloqueada quando os usuári
 
 1. Crie um atributo personalizado para armazenar seu número aleatório. Dê a ele um nome fácil de localizar, como "lottery_number" ou "random_assignment". Você pode criar a atribuição [em seu dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) ou por meio de chamadas de API para nosso [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. Crie uma campanha de webhook no início de seu Canva. Essa campanha será o meio no qual você criará seu número aleatório e o armazenará como um atributo personalizado. Para obter mais informações, consulte [Criação de um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook). Defina o URL para nosso endpoint `/users/track`.<br><br>
-3. Crie o gerador de números aleatórios. Você pode fazer isso com o código [ descrito aqui](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aproveita a hora de entrada exclusiva de cada usuário para criar um número aleatório. Defina o número resultante como uma variável Liquid em sua campanha de webhook.<br><br>
+3. Crie o gerador de números aleatórios. Você pode fazer isso com o código [descrito aqui](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aproveita a hora de entrada exclusiva de cada usuário para criar um número aleatório. Defina o número resultante como uma variável Liquid em sua campanha de webhook.<br><br>
 4. Formate a chamada `/users/track` em sua campanha webhook de modo que ela defina o atributo personalizado criado na etapa 1 como o número aleatório gerado no perfil do usuário atual. Quando essa etapa for executada, você terá criado com sucesso um número aleatório que muda cada vez que um usuário entra na sua campanha.<br><br>
 5. Ajuste as ramificações de seu Canva para que, em vez de serem divididas por variantes escolhidas aleatoriamente, elas sejam divididas com base nas regras do público. Nas regras de público de cada filial, defina o filtro de público de acordo com seu atributo personalizado. <br><br>Por exemplo, um ramo pode ter "lottery_number is less than 3" como filtro de público, enquanto outro ramo pode ter "lottery_number is more than 3 and less than 6" como filtro de público.
 
 {% enddetails %}
 {% endalert %}
 
-### Adição de etapas
+#### Etapa 2.2: Adicionar etapas do Canva
 
 Você pode adicionar mais etapas ao seu fluxo de trabalho do Canva arrastando e soltando componentes da barra lateral **Components (Componentes** ). Ou selecione o botão <i class="fas fa-plus-circle"></i> plus para adicionar um componente com o menu popover.
 
@@ -241,11 +245,11 @@ Você pode adicionar mais etapas ao seu fluxo de trabalho do Canva arrastando e 
 Um canva criado com o Canvas Flow pode conter até 200 etapas. Se seu canva exceder 200 etapas, ocorrerão problemas de carregamento.
 {% endalert %}
 
-#### Duração máxima
+##### Duração máxima
 
 À medida que a jornada do seu Canvas aumenta em etapas, a duração máxima é o tempo mais longo possível que um usuário pode levar para concluir esse Canvas. Isso é calculado pela adição das janelas de postergação e disparo de cada etapa para cada variante da jornada mais longa. Por exemplo, se seu canva tiver uma etapa de atraso com uma postergação de 3 dias e uma etapa de Mensagem, a duração máxima de seu canva será de 3 dias.
 
-### Edição de uma etapa
+##### Edição de uma etapa
 
 Deseja editar uma etapa da jornada do usuário? Veja como fazer isso de acordo com seu fluxo de trabalho do Canva!
 
@@ -259,7 +263,7 @@ Ou pode editar e ajustar rapidamente as **configurações de ação** da etapa [
 
 Os componentes leves do canva permitem uma experiência de edição simples, portanto, o ajuste dos detalhes mais finos do canva é facilitado. 
 
-#### Envio de mensagens no Canva
+##### Envio de mensagens no Canva
 
 Edite as mensagens em um componente do Canva para controlar as mensagens que uma etapa específica enviará. O canva pode enviar mensagens de e-mail, push para mobile e web, além de webhooks para integração com outros sistemas. Da mesma forma que as campanhas, você pode usar determinados modelos [do Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) para personalizar suas mensagens.
 
@@ -297,11 +301,11 @@ Na primeira etapa de mensagem após uma jornada de ação, você pode usar `even
 {% endtab %}
 {% endtabs %}
 
-### Edição de conexões
+#### Etapa 2.3: Editar conexões
 
 Para mover uma conexão entre etapas, selecione a seta que conecta os dois componentes e selecione um componente diferente. Para remover a conexão, selecione a seta seguida de **Cancelar conexão** no rodapé do criador do canva.
 
-## Etapa 4: Use testes multivariantes usando o Canva
+### Etapa 3: Adicionar um grupo de controle
 
 É possível adicionar um grupo de controle ao seu Canva selecionando o botão <i class="fas fa-plus-circle"></i> plus para adicionar uma nova variante. 
 
@@ -313,45 +317,27 @@ Neste exemplo, temos nosso canva dividido em duas variantes. A variante 1 tem 70
 
 ![Um exemplo de variante em um Braze Canvas, em que 70% acessam a "Variante 1", que posterga por 1 dia na primeira etapa e, em seguida, envia uma mensagem na segunda etapa. Os outros 30% acessam um "Controle" que não tem nenhuma etapa de acompanhamento.]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
-### Seleção inteligente para o Canva
+#### Seleção inteligente para o Canva
 
-Os recursos de Seleção Inteligente agora estão disponíveis em Canvas multivariantes. Semelhante ao recurso [Intelligent Selection][18a] para campanhas multivariantes, o Intelligent Selection for Canvas analisa a performance de cada variante do Canvas e ajusta a porcentagem de usuários que estão sendo canalizados por meio de cada variante. Essa distribuição é baseada nas métricas de performance de cada variante para maximizar o número total esperado de conversões.
+Os recursos de Seleção Inteligente agora estão disponíveis em Canvas multivariantes. Semelhante ao recurso [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) para campanhas multivariantes, o Intelligent Selection for Canvas analisa a performance de cada variante do Canvas e ajusta a porcentagem de usuários que estão sendo canalizados por meio de cada variante. Essa distribuição é baseada nas métricas de performance de cada variante para maximizar o número total esperado de conversões.
 
 Lembre-se de que as telas multivariantes permitem que você teste mais do que o texto, mas também o tempo e os canais. Por meio do Intelligent Selection, é possível testar Canvas com mais eficiência e ter a certeza de que seus usuários serão enviados para a melhor jornada de Canvas possível.
 
-![A opção "Intelligent Selection" (Seleção inteligente) está ativada na página "Edit Variant Distribution" (Editar distribuição de variantes). Ao analisar e otimizar o Canva, ele exibe uma barra horizontal na página que é dividida em várias seções, cada uma variando em cor e tamanho. Essa é apenas uma representação visual e não está correlacionada a nenhuma análise de dados específica.][18b]
+![A opção "Intelligent Selection" (Seleção inteligente) está ativada na página "Edit Variant Distribution" (Editar distribuição de variantes). Ao analisar e otimizar o Canva, ele exibe uma barra horizontal na página que é dividida em várias seções, cada uma variando em cor e tamanho. Essa é apenas uma representação visual e não está correlacionada a nenhuma análise de dados específica.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 O Intelligent Selection for Canvas otimiza os resultados do Canvas, fazendo ajustes graduais em tempo real na distribuição de usuários classificados em cada variante. Quando o algoritmo estatístico determinar um vencedor decisivo entre suas variantes, ele excluirá as variantes de baixo desempenho e incluirá todos os futuros destinatários elegíveis do Canva nas Variantes vencedoras. 
 
 Por esse motivo, o Intelligent Selection funciona melhor em Canvas que têm novos usuários entrando com frequência.
 
-## Etapa 5: Salve e inicie seu canva
+### Etapa 4: Salvar e lançar
 
 Quando terminar de criar o canva, selecione **Lançar canva** para salvar e iniciar o canvas. Depois de lançar o Canvas, você poderá visualizar a análise de dados da sua jornada à medida que eles chegam na página **Detalhes do Canvas**. 
 
 Você também pode salvar seu Canva como rascunho se precisar voltar a ele.
 
-![Um exemplo é o Canva no Braze.][19]
+![Um exemplo de tela em Braze.]({% image_buster /assets/img_archive/Canvas_Analytics.png %})
 
 {% alert tip %}
 Precisa fazer edições em seu Canva após o lançamento? Bem, você pode! Para saber mais, dê [uma]({{site.baseurl}}/post-launch_edits/) olhada no [Editing Canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
-
-[1]: {% image_buster /assets/img_archive/canvas_dropdown.png %}
-[2]: {% image_buster /assets/img_archive/canvas_exact_stats.png %}
-[3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
-[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
-[11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
-[12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
-[13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
-[14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
-[15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
-[17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
-[19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
-[50]: {% image_buster /assets/img/quiet_hours.png %}
-[52]: {% image_buster /assets/img/add_canvas_conversions.png %}
-[53]: {% image_buster /assets/img/canvas_details.png %}

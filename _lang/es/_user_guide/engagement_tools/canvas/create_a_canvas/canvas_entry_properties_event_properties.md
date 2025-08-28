@@ -22,15 +22,25 @@ Consulta la tabla siguiente para ver un resumen de las diferencias entre las pro
 | | Propiedades de entrada de Canvas | Propiedades del evento
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
-| **Persistencia** | Puede ser referenciado por todos los pasos [del Mensaje][1] durante la duración de un Canvas construido usando el Flujo del Canvas. | \- Solo puede referenciarse una vez. <br> \- No puede ser referenciado por ningún paso de Mensaje posterior. |
-| **Comportamiento original en lienzo** | \- Debe tener activadas las propiedades de entrada persistente. <br> \- Sólo puede hacer referencia a `canvas_entry_properties` en el primer paso completo de un Canvas. El Canvas debe estar basado en acciones o activado por la API. | \- Puede hacer referencia a `event_properties` en cualquier paso completo que utilice la entrega basada en acciones en un lienzo. <br> \- No puede utilizarse en pasos completos programados que no sean el primer paso completo de un Canvas basado en acciones. Sin embargo, si un usuario está utilizando un [componente Canvas][2], el comportamiento sigue las reglas de Canvas Flow para `event_properties`. |
-| **Comportamiento de Canvas Flow** | Puede hacer referencia a `canvas_entry_properties` en cualquier paso de un Canvas. Para el comportamiento posterior al lanzamiento, consulta [Editar lienzos después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | \- Puede hacer referencia a `event_properties` en el primer paso de Mensaje **después de** un paso de [Rutas de acción][3] en el que la acción realizada es un evento personalizado o un evento de compra. <br> \- No puede estar después de la ruta Todos los demás del paso Vías de acción. <br> \- Puede tener otros componentes que no sean del Lienzo de Mensajes entre las Rutas de Acción y los pasos de Mensajes. Si uno de estos componentes que no son Mensajes es un paso de Ruta de Acción, el usuario puede ir a través de la ruta Todos los demás de esa ruta de acción. | 
+| **Persistencia** | Puede ser referenciado por todos los pasos [del Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) durante la duración de un Canvas construido usando el Flujo del Canvas. | \- Solo puede referenciarse una vez. <br> \- No puede ser referenciado por ningún paso de Mensaje posterior. |
+| **Comportamiento en Canvas** | Puede hacer referencia a `canvas_entry_properties` en cualquier paso de un Canvas. Para el comportamiento posterior al lanzamiento, consulta [Editar lienzos después del lanzamiento]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties). | \- Puede hacer referencia a `event_properties` en el primer paso de Mensaje **después de** un paso de [Rutas de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) en el que la acción realizada es un evento personalizado o un evento de compra. <br> \- No puede estar después de la ruta Todos los demás del paso Vías de acción. <br> \- Puede tener otros componentes que no sean de Mensaje entre las rutas de acción y los pasos de Mensaje. Si uno de estos componentes que no son Mensajes es un paso de Ruta de Acción, el usuario puede ir a través de la ruta Todos los demás de esa ruta de acción. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% details Detalles del editor Original Canvas %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este artículo está disponible como referencia cuando se utiliza `canvas_entry_properties` y `event_properties`para el flujo de trabajo original de Canvas.
 
-Para el editor de lienzo original y el flujo de lienzo, no se puede utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`.
+Ya no puedes crear o duplicar Lienzos utilizando el editor original. Este artículo está disponible como referencia cuando utilices las propiedades de entrada y las propiedades del evento de Canvas para el flujo de trabajo anterior de Canvas.
+
+**Propiedades de entrada al Canvas:**
+- Debe tener activadas las propiedades de entrada persistente. 
+- Sólo puede hacer referencia a `canvas_entry_properties` en el primer paso completo de un Canvas. El Canvas debe estar basado en acciones o activado por la API.
+
+**Propiedades de entrada:**
+- Puede hacer referencia a `event_properties` en cualquier paso completo que utilice la entrega basada en acciones en un Canvas.
+- No puede utilizarse en pasos completos programados que no sean el primer paso completo de un Canvas basado en acciones. Sin embargo, si un usuario está utilizando un [componente Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/), el comportamiento sigue las reglas de Canvas Flow para `event_properties`.
+
+**Propiedades del evento:**
+- No se puede utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`.
+
 {% enddetails %}
 
 ### Lo que hay que saber
@@ -53,11 +63,11 @@ Si utilizas `event_properties` en un Canvas, las marcas de tiempo se normalizan 
 #### Excepciones
 
 - Las marcas de tiempo no se normalizan a UTC en el primer paso de un Canvas si ese paso es un paso de Mensaje.
-- Las marcas de tiempo no se normalizan a UTC en ningún paso de Mensaje que utilice el canal de mensajería dentro de la aplicación, independientemente de su orden en el Canvas.
+- Las marcas de tiempo no están normalizadas a UTC en ningún paso de Mensaje que utilice el canal de mensajería dentro de la aplicación, independientemente de su orden en el Canvas.
 
 ## Caso de uso
 
-![Un paso de Ruta de acción seguido de un paso de Retraso y un paso de Mensaje para los usuarios que han añadido un artículo a su lista de deseos, y una ruta para todos los demás.][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Un paso de Ruta de acción seguido de un paso de Retraso y un paso de Mensaje para los usuarios que han añadido un artículo a su lista de deseos, y una ruta para todos los demás.]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Para entender mejor las diferencias entre `canvas_entry_properties` y `event_properties`, consideremos este escenario en el que los usuarios entrarán en un Canvas basado en acciones si realizan el evento personalizado "añadir artículo a la lista de deseos". 
 
@@ -67,10 +77,5 @@ En este Canvas, tenemos un recorrido de usuario que comienza con un paso de Acti
 
 El primer paso de Mensaje en un recorrido de usuario tendrá acceso al `event_properties` personalizado de su paso Rutas de acción. En este caso, podemos incluir ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` en este paso de Mensaje como parte del contenido de nuestro mensaje. Si un usuario no añade un artículo a su lista de deseos, pasa por la ruta Todos los demás, lo que significa que no se puede hacer referencia a `event_properties` y reflejará un error de configuración no válida.
 
-Tenga en cuenta que sólo tendrá acceso a `event_properties` si su paso Mensaje puede remontarse a una ruta que no sea Todos los demás en un paso Rutas de acción. Si el paso Mensaje está conectado a una ruta Todos los demás, pero puede remontarse a un paso Rutas de acción en el recorrido del usuario, entonces también seguirás teniendo acceso a `event_properties`. Para más información sobre estos comportamientos, consulta [Paso de mensajes][8].
+Tenga en cuenta que sólo tendrá acceso a `event_properties` si su paso Mensaje puede remontarse a una ruta que no sea Todos los demás en un paso Rutas de acción. Si el paso Mensaje está conectado a una ruta Todos los demás, pero puede remontarse a un paso Rutas de acción en el recorrido del usuario, entonces también seguirás teniendo acceso a `event_properties`. Para más información sobre estos comportamientos, consulta el [paso Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-[7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
-[8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/

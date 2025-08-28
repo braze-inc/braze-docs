@@ -42,11 +42,11 @@ glossary_tags:
   - name: Liste d’e-mails
   - name: Modèles d’e-mail
   - name: Indicateur clé de performance
-  - name: Fil d’actualité
   - name: Achats
   - name: Centre de préférences
   - name: Planifier les messages
   - name: SCIM
+  - name: Authentification SDK
   - name: Segments
   - name: Envoyer les messages
   - name: SMS
@@ -312,18 +312,6 @@ glossaries:
     description: Récupérer une série quotidienne du nombre total de désinstallations à chaque date.
     tags:
       - KPI
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>"
-    description: Récupérer une série quotidienne de statistiques d’engagement pour une carte au fil du temps.
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>"
-    description: Récupérer les informations pertinentes sur une carte.
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>"
-    description: "Exporter une liste de cartes de fil d’actualité, chacune incluant son nom et son identifiant API de carte."
-    tags:
-      - News Feed
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
     description: "Supprimez les numéros de téléphone \"non valides\" de la liste des numéros non valides dans Braze. Cela peut être utilisé pour revalider les numéros de téléphone après avoir été marqués comme non valides."
     tags:
@@ -464,4 +452,20 @@ glossaries:
     description: Retourne une liste des états de synchronisation.
     tags:
       - Cloud Data Ingestion
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>"
+    description: "Créez une nouvelle clé d'authentification SDK pour votre application."
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>"
+    description: "Liste des clés d'authentification du SDK pour votre application."
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>"
+    description: "Définissez une clé d'authentification SDK comme clé principale pour votre application."
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
+    description: "Supprimez une clé d'authentification SDK pour votre application."
+    tags:
+      - SDK Authentication  
 ---

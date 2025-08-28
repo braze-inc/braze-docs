@@ -2,27 +2,93 @@
 
 ## Default user attributes
 
-To set user attributes, you need to call the appropriate method on the `BrazeBinding` object. The following is a list of built-in attributes that can be called using this method.
+### Predefined methods
 
-| Attribute                 | Code Sample |
-|---------------------------|-------------|
-| First name                | `AppboyBinding.SetUserFirstName("first name");` |
-| Last name                 | `AppboyBinding.SetUserLastName("last name");` |
-| User email                | `AppboyBinding.SetUserEmail("email@email.com");` |
-| Gender                    | `AppboyBinding.SetUserGender(Appboy.Models.Gender);` |
-| Birth date                | `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");` |
-| User country              | `AppboyBinding.SetUserCountry("country name");` |
-| User home city            | `AppboyBinding.SetUserHomeCity("city name");` |
-| User email subscription   | `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| User push subscription    | `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| User phone number         | `AppboyBinding.SetUserPhoneNumber("phone number");` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Braze provides predefined methods for setting the following user attributes using the `BrazeBinding` object. For more information, see [Braze Unity declaration file](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
+
+- First name
+- Last name
+- User email
+- Gender
+- Birth date
+- User country
+- User home city
+- User email subscription
+- User push subscription
+- User phone number
+
+### Setting default attributes
+
+To set a default attribute, call the relevant method on the `BrazeBinding` object.
+
+{% tabs local %}
+{% tab First name %}
+```csharp
+BrazeBinding.SetUserFirstName("first name");
+```
+{% endtab %}
+{% tab Last name %}
+```csharp
+BrazeBinding.SetUserLastName("last name");
+```
+{% endtab %}
+{% tab Email %}
+```csharp
+BrazeBinding.SetUserEmail("email@email.com");
+```
+{% endtab %}
+{% tab Gender %}
+```csharp
+BrazeBinding.SetUserGender(Appboy.Models.Gender);
+```
+{% endtab %}
+{% tab Birth date %}
+```csharp
+BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
+```
+{% endtab %}
+{% tab Country %}
+```csharp
+BrazeBinding.SetUserCountry("country name");
+```
+{% endtab %}
+{% tab Home city %}
+```csharp
+BrazeBinding.SetUserHomeCity("city name");
+```
+{% endtab %}
+{% tab Email subscription %}
+```csharp
+BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Push subscription %}
+```csharp
+BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Phone number %}
+```csharp
+BrazeBinding.SetUserPhoneNumber("phone number");
+```
+{% endtab %}
+{% endtabs %}
+
+### Unsetting default attributes
+
+To unset a default user attribute, pass `null` to the relevant method.
+
+```csharp
+BrazeBinding.SetUserFirstName(null);
+```
 
 ## Custom user attributes
 
 In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection]({{site.baseurl}}/developer_guide/analytics).
 
 ### Setting custom attributes
+
+To set a custom attribute, use the corresponding method for the attribute type: 
 
 {% tabs %}
 {% tab String %}
@@ -93,7 +159,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 ### Unsetting custom attributes
 
-To unset a custom user attribute, use the following method:
+To unset a custom attribute, pass the relevant attribute key to the `UnsetCustomUserAttribute` method. 
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");

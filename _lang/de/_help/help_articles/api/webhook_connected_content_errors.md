@@ -141,7 +141,11 @@ Hier finden Sie Tipps für die Fehlerbehebung bei häufigen `5XX` Fehlern:
 
 Braze-Webhooks und Connected-Content verwenden einen Mechanismus zur Erkennung von ungesunden Hosts, um zu erkennen, wenn der Zielhost eine hohe Rate an signifikanter Verlangsamung oder Überlastung aufweist, die zu Timeouts, zu vielen Anfragen oder anderen Ergebnissen führt, die Braze daran hindern, erfolgreich mit dem Ziel-Endpunkt zu kommunizieren. Diese Funktion dient als Schutzmaßnahme, um unnötige Belastungen zu reduzieren, die dem Zielhost Probleme bereiten könnten. Es dient auch der Stabilisierung der Braze-Infrastruktur und der Aufrechterhaltung schneller Nachrichtenübertragungsgeschwindigkeiten.
 
-Wenn die Anzahl der **Ausfälle 3.000 in einem einminütigen gleitenden Zeitfenster übersteigt** (pro eindeutiger Kombination aus Hostname und App-Gruppe - **nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an und simuliert stattdessen Antworten mit einem `598` Fehlercode, um den schlechten Zustand anzuzeigen. Nach einer Minute nimmt Braze die Anfragen mit voller Geschwindigkeit wieder auf, wenn sich der Host als gesund erweist. Wenn der Host immer noch ungesund ist, wartet Braze eine weitere Minute, bevor es erneut versucht wird.
+Die Schwellenwerte für die Erkennung unterscheiden sich zwischen Webhooks und Connected-Content:
+- **Für Webhooks**: Wenn die Anzahl der **Fehlschläge 3.000 in einem beliebigen einminütigen Zeitfenster überschreitet** (pro eindeutiger Kombination von Hostname und App-Gruppe - **nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an.
+- **Für Connected-Content**: Wenn die Anzahl der **Fehlschläge 3.000 übersteigt UND die Fehlerrate 90% in einem beliebigen einminütigen gleitenden Zeitfenster übersteigt** (pro eindeutiger Kombination von Hostname und App-Gruppe - **nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an.
+
+Wenn Anfragen gestoppt werden, simuliert Braze Antworten mit einem `598` Fehlercode, um den schlechten Zustand anzuzeigen. Nach einer Minute nimmt Braze die Anfragen mit voller Geschwindigkeit wieder auf, wenn sich der Host als gesund erweist. Wenn der Host immer noch ungesund ist, wartet Braze eine weitere Minute, bevor es erneut versucht wird.
 
 Die folgenden Fehlercodes tragen zur Anzahl der Ausfälle des Unhealthy Host Detectors bei: `408`, `429`, `502`, `503`, `504`, `529`.
 
@@ -183,3 +187,13 @@ Um sich für den Erhalt dieser E-Mails zu registrieren, gehen Sie wie folgt vor:
 ### Einträge im Nachrichten-Aktivitätsprotokoll
 
 Es gibt mindestens einen Eintrag im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab), der sich auf den Fehler bezieht, der die automatisierte E-Mail ausgelöst hat.
+
+### Zusätzliche Insights zum Versagen in Braze Currents
+
+Um die Transparenz bei Webhook-Problemen zu erhöhen, streamt Braze detaillierte Webhook-Ausfallereignisse an Currents und Snowflake Data Sharing. Zu diesen Ereignissen gehören auch fehlgeschlagene Webhook-Anfragen (z.B. HTTP `4xx` oder `5xx` Antworten), so dass Sie besser beobachten können, wie sich Webhook-Probleme auf die Zustellung von Nachrichten auswirken können. Beachten Sie, dass Fehlerereignisse sowohl Terminalfehler als auch Fehler, die erneut versucht werden, umfassen.
+
+{% alert note %}
+Connected-Content-Anfragen sind in diesen Webhook-Fehlerereignissen nicht enthalten.
+{% endalert %}
+
+Weitere Informationen finden Sie im [Glossar der Ereignisse des Messaging-Engagements]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

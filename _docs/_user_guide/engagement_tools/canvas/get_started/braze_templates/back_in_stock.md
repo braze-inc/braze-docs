@@ -1,5 +1,5 @@
 ---
-nav_title: Back In Stock
+nav_title: Back in stock
 article_title: Back In Stock
 page_order: 2
 page_type: reference

@@ -10,7 +10,7 @@ description: "Découvrez la recherche globale dans Braze."
 
 Vous pouvez utiliser la barre de recherche pour trouver votre travail et d'autres informations dans votre tableau de bord Braze. La barre de recherche se trouve en haut de votre tableau de bord de Braze. Cliquez sur la barre de recherche ou appuyez sur <kbd>Ctrl</kbd> + <kbd>K</kbd> sous Windows ou <kbd>⌘</kbd> + <kbd>K</kbd> sur un Mac pour accéder directement à la barre de recherche.
 
-![Résultats de la recherche pour le mot-clé "promo", montrant les campagnes et les articles qui incluent le terme promo, y compris la page Codes promotionnels.][1]
+![Résultats de la recherche pour le mot-clé "promo", montrant les campagnes et les articles qui incluent le terme promo, y compris la page Codes de promotion.]({% image_buster /assets/img/navigation/global_search_new.png %})
 
 ## Que pouvez-vous rechercher ?
 
@@ -66,13 +66,13 @@ Chaque résultat de recherche est associé à des balises qui indiquent le type 
 
 Vous pouvez revoir le contenu récemment consulté depuis le menu de recherche. L'interface de recherche affiche vos résultats récemment ouverts sous la barre de recherche, y compris les éléments avec lesquels vous avez interagi sur l'ensemble de la plateforme Braze. Cela vous permet de revenir aux pages, campagnes, Canvases, segments ou modèles d'e-mails précédemment consultés afin que vous puissiez reprendre exactement là où vous vous étiez arrêté avec moins de clics.
 
-![La recherche d'utilisateurs s'est élargie, affichant les pages récemment ouvertes et le contenu de Braze pour l'utilisateur.][2]
+![Recherche d'utilisateurs élargie, affichant les pages récemment ouvertes et le contenu de Braze pour l'utilisateur.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
 ### Trouver des pages qui ont été renommées
 
 La recherche comprend les synonymes pour les pages qui ont été renommées dans notre [navigation mise à jour]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). Par exemple, elle trouvera « Exportation de données » lorsque vous recherchez « Currents », étant donné que cette page a été renommée.
 
-![Résultats de la recherche "Data Export" pour laquelle l'utilisateur a recherché "Currents".][3]
+![Résultats de la recherche "Data Export" pour laquelle l'utilisateur a recherché "Currents".]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 <!---
 
@@ -88,15 +88,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 Vous pouvez inclure du contenu actif et en brouillon dans vos résultats de recherche en sélectionnant **Afficher uniquement les actifs et les brouillons**. Par défaut, le bouton-bascule est activé et tout le contenu, y compris le contenu archivé, est affiché.
 
-![Le bouton bascule « Afficher uniquement les actifs et les brouillons ».][4]
+![La bascule "Afficher uniquement les actifs et les brouillons".]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
 
 ### Rechercher des emojis
 
 Utilisez-vous des emojis lorsque vous nommez votre travail dans Braze ? Recherchez-les ! Vous pouvez utiliser des emojis comme requêtes de recherche. 😎
 
-[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
-[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
-[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
-[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
 

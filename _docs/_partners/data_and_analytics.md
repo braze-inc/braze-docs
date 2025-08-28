@@ -1,5 +1,5 @@
 ---
-nav_title: "Data & Analytics"
+nav_title: "Data & analytics"
 article_title: Data & Analytics Partners
 page_order: 5
 
@@ -163,4 +163,6 @@ valid_partner_list:
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
 ---

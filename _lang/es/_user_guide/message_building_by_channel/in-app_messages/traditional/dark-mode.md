@@ -26,7 +26,7 @@ La nueva opción Modo oscuro, situada en la pestaña Estilo al [crear un mensaje
 
 ![Cambio de usuario entre los estilos Modo claro y Modo oscuro en la pestaña Estilo al crear un mensaje dentro de la aplicación.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-Cuando esta opción está activada, puedes elegir colores oscuros para tu mensaje dentro de la aplicación utilizando el selector de color, o seleccionando los [perfiles de color][2] existentes para reutilizar los temas oscuros o claros.
+Cuando esta opción está activada, puedes elegir colores oscuros para tu mensaje dentro de la aplicación utilizando el selector de color, o seleccionando los [perfiles de color]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) existentes para reutilizar los temas oscuros o claros.
 
 {% alert note %}
 Puedes utilizar esta función aunque tu aplicación no ofrezca su propio tema oscuro. Sin embargo, los dispositivos que no admitan el modo oscuro mostrarán el tema claro por defecto. Cambiar el tema del dispositivo en Android mientras se muestra un mensaje de la aplicación no cambiará el tema que se utiliza para ese mensaje de la aplicación.
@@ -36,7 +36,7 @@ Puedes utilizar esta función aunque tu aplicación no ofrezca su propio tema os
 
 Para utilizar el modo oscuro en todos los mensajes de la aplicación, ve a **Plantillas** > **Plantillas de mensajes de la aplicación**.
 
-Desde allí, seleccione [Crear perfil de color][2] en el menú desplegable. Crea un Perfil de Color que se alinee con tu tema de Modo Oscuro. A continuación, cada vez que crees una versión en modo oscuro de un mensaje integrado en la aplicación, podrás seleccionar ese perfil de color y mantener la coherencia del aspecto de tus mensajes integrados en la aplicación.
+Desde allí, seleccione [Crear perfil de color]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) en el menú desplegable. Crea un Perfil de Color que se alinee con tu tema de Modo Oscuro. A continuación, cada vez que crees una versión en modo oscuro de un mensaje integrado en la aplicación, podrás seleccionar ese perfil de color y mantener la coherencia del aspecto de tus mensajes integrados en la aplicación.
 
 ## Compatibilidad
 
@@ -69,4 +69,3 @@ Por ejemplo:
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile

@@ -11,8 +11,8 @@ toc_headers: h2
 
 > Braze Canvas propose plusieurs modèles préconstruits spécialement conçus pour les marketeurs de l'e-commerce, ce qui facilite la mise en œuvre de stratégies essentielles. Cette page propose quelques modèles clés que vous pouvez utiliser pour améliorer vos parcours clients.
 
-{% alert note %}
-Braze reconnaît que la planification des données prend du temps. Nous encourageons nos clients à familiariser leurs équipes de développement et à commencer à envoyer des événements de commerce électronique dès maintenant. Bien que certaines fonctionnalités ne soient pas disponibles immédiatement avec les événements recommandés pour le commerce électronique, vous pouvez vous attendre à l'introduction de nouveaux produits tout au long de l'année 2025 qui amélioreront vos capacités de commerce électronique.
+{% alert important %}
+Les [événements recommandés pour le commerce électronique]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) sont actuellement en accès anticipé. Contactez votre gestionnaire satisfaction client Braze si vous souhaitez participer à cet accès anticipé. <br><br>Si vous utilisez le nouveau connecteur Shopify, les événements recommandés pour le commerce électronique seront automatiquement disponibles via l'intégration.
 {% endalert %}
 
 ## Utilisation d'un modèle Canvas
@@ -21,7 +21,7 @@ Pour utiliser un modèle Canvas :
 1. Allez dans **Messagerie** > **Canvas.**
 2. Sélectionnez **Créer un canvas** > **Utiliser un modèle de canvas**.
 3. Recherchez dans l'onglet **Modèles de Braze** le modèle que vous souhaitez utiliser. Vous pouvez prévisualiser un modèle en sélectionnant son nom.
-4. Sélectionnez **Appliquer** le modèle pour le modèle que vous souhaitez utiliser.<br><br>![La page "Canvas templates" s'ouvre sur l'onglet "Braze templates" et affiche une liste des modèles récemment utilisés et des modèles de Braze sélectionnables.][2]{: style="max-width:80%;"}
+4. Sélectionnez **Appliquer** le modèle pour le modèle que vous souhaitez utiliser.<br><br>![La page "Canvas templates" s'ouvre sur l'onglet "Braze templates" et affiche une liste des modèles récemment utilisés et des modèles Braze sélectionnables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## Modèles eCommerce
 
@@ -32,9 +32,9 @@ Pour utiliser un modèle Canvas :
 
 ## Parcourir Abandonné
 
-Utilisez le modèle **Abandon** de **navigation** pour engager les utilisateurs qui ont parcouru des produits mais ne les ont pas ajoutés à leur panier ou n'ont pas passé de commande.
+Utilisez le modèle **Abandon de navigation** pour engager les utilisateurs qui ont parcouru des produits mais ne les ont pas ajoutés à leur panier ou n'ont pas passé de commande.
 
-![Un modèle de canvas "Abandoned Browse" appliqué avec des "règles d'entrée" élargies.][3]
+![Un modèle de canvas "Abandoned Browse" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### Configuration
 
@@ -49,7 +49,7 @@ Les paramètres suivants sont préconfigurés dans votre Canvas :
         - Date limite de conversion : 3 jours 
 - Planification d’entrée 
     - Basé sur l'action lorsqu'un utilisateur effectue l'événement `ecommerce.product_viewed` 
-    - L'heure de début correspond au moment où vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
 - Audience cible 
     - Audience entrant 
         - L'e-mail **n'est pas vide**
@@ -57,7 +57,7 @@ Les paramètres suivants sont préconfigurés dans votre Canvas :
     - Contrôles d'entrée
         - Les utilisateurs sont autorisés à se réinscrire à ce Canvas une fois que la durée totale de ce dernier est terminée
     - Critère de sortie 
-        - Effectue les opérations suivantes : `ecommerce.cart_updated`, `ecommerce.checkout started`, ou `ecommerce.order_placed`<br><br>![Contrôles d'entrée et critères de sortie pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Effectue les opérations suivantes : `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Contrôles d'entrée et critères de sortie pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Paramètres d'envoi 
     - Utilisateurs abonnés ou opt-in 
 - Pas de retard
@@ -97,7 +97,7 @@ Voici un exemple de la manière dont vous pouvez ajouter un bloc de produit HTML
 
 Utilisez le modèle de **panier abandonné** pour couvrir les ventes potentielles perdues par les clients qui ont ajouté des produits à leur panier mais n'ont pas continué à passer à la caisse ou n'ont pas passé de commande. 
 
-![Un modèle de canvas "panier abandonné" appliqué avec des "règles d'entrée" étendues.][4]
+![Un modèle de canvas "Abandon de panier" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### Configuration
 
@@ -112,7 +112,7 @@ Les paramètres suivants sont préconfigurés dans votre Canvas :
         - Date limite de conversion : 3 jours 
 - Planification d’entrée 
     - Déclencheur basé sur une action lorsqu'un utilisateur déclenche l'**événement Perform Cart Updated** (situé dans la liste déroulante).
-    - L'heure de début correspond au moment où vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
 - Audience cible 
     - Audience entrant 
         - A utilisé ces applications **plus de 0** fois 
@@ -184,7 +184,7 @@ Si vous utilisez Shopify, créez l'URL de votre panier en utilisant ce modèle L
 
 Utilisez le modèle **Abandoned checkout** pour cibler les clients qui ont commencé le processus de paiement mais qui sont partis avant de passer leur commande. 
 
-![Un modèle de canvas "Abandoned Checkout" appliqué avec des "règles d'entrée" étendues.][5]
+![Un modèle de canvas "Abandoned Checkout" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### Configuration
 
@@ -200,7 +200,7 @@ Les paramètres suivants sont préconfigurés dans votre Canvas :
         - Date limite de conversion : 3 jours 
 - Planification d’entrée 
     - Déclencheur basé sur une action lorsqu'un utilisateur effectue l'événement `ecommerce.checkout_started` 
-    - L'heure de début correspond au moment où vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
 - Audience cible 
     - Audience entrant 
         - A utilisé ces applications **plus de 0** fois 
@@ -245,7 +245,7 @@ Voici un exemple de la façon dont vous ajouteriez un bloc HTML avec votre étiq
 ```
 {% endraw %}
 
-#### URL de paiement
+#### URL de la caisse
 
 {% raw %}
 ```liquid
@@ -257,7 +257,7 @@ Voici un exemple de la façon dont vous ajouteriez un bloc HTML avec votre étiq
 
 Utilisez le modèle de **confirmation de commande et d'enquête de feedback** pour confirmer les commandes réussies et améliorer la satisfaction des clients.
 
-![Un modèle de canvas de "confirmation de commande" appliqué avec des "règles d'entrée" étendues.][6]
+![Un modèle Canvas de "confirmation de commande" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### Configuration
 
@@ -273,7 +273,7 @@ Les paramètres suivants sont préconfigurés dans votre Canvas :
         - Date limite de conversion : 10 jours 
 - Planification d’entrée 
     - Déclencheur basé sur une action lorsqu'un utilisateur effectue l'événement `ecommerce.cart_updated` 
-    - L'heure de début correspond au moment où vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
 - Audience cible 
     - Audience entrant 
         - A utilisé ces applications **plus de 0** fois 
@@ -345,7 +345,17 @@ Pour plus d'informations sur l'utilisation des segments, consultez la rubrique [
 ### Événements recommandés
 
 Les événements liés au commerce électronique sont basés sur les [événements recommandés]({{site.baseurl}}/recommended_events/).
-Étant donné que les événements recommandés sont des événements personnalisés plus proches de l'opinion, vous pouvez rechercher les noms d'événements eCommerce recommandés en sélectionnant n'importe quel [filtre d'événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#segmentation-filters).
+Parce que les événements recommandés sont des événements personnalisés plus proches de l'opinion, vous pouvez rechercher les noms d'événements eCommerce recommandés en sélectionnant n'importe quel [filtre d'événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#segmentation-filters).
+
+### Filtres pour le commerce électronique
+
+Segmentez vos utilisateurs avec des filtres de commerce électronique, comme la **source de commerce électronique** et le **chiffre d'affaires total**, en allant à la section **Commerce électronique** dans le segmenteur.
+
+![Segmenter la liste déroulante des filtres avec des filtres "Ecommerce".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+
+{% alert important %}
+L'événement d'achat sera finalement abandonné et remplacé par des [événements recommandés par le commerce électronique.]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) Dans ce cas, les filtres de segmentation ne s'afficheront plus sous le comportement d'achat. Pour obtenir une liste complète des événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
 
 ## Propriétés d'événement imbriquées
 
@@ -357,14 +367,9 @@ Pour segmenter par propriétés d'événement imbriquées, vous pouvez utiliser 
 Pour l'instant, l'intégration de Shopify ne permet pas de renseigner l'[événement d'achat de]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) Braze. Par conséquent, les filtres d'achat, les étiquettes Liquid, les déclencheurs basés sur l'action et les analyses doivent utiliser l'événement order_placed de ecommerce..
 {% endalert %}
 
-Pour créer un [rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) en fonction des personnes qui ont effectué un événement pris en charge par l'intégration, vous pouvez spécifier le [nom de]({{site.baseurl}}/shopify_data_features/) l'[événement]({{site.baseurl}}/shopify_data_features/) spécifique.
+Pour créer un [rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) en fonction des personnes qui ont effectué un événement pris en charge par l'intégration, vous pouvez spécifier le [nom de l'événement]({{site.baseurl}}/shopify_data_features/) spécifique.
 
 Pour obtenir des informations sur les tendances liées aux commandes passées à partir de vos Canevas lancés, vous devrez configurer un [tableau de bord des conversions]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) et spécifier vos Canevas.
 
-Pour des cas d'utilisation plus avancés, vous pouvez utiliser le [générateur de rapports de]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) Braze pour générer des rapports personnalisés. 
+Pour des cas d'utilisation plus avancés, vous pouvez utiliser le [générateur de rapports de]({{site.baseurl}}/user_guide/analytics/query_builder/) Braze pour générer des rapports personnalisés. 
 
-[2]: {% image_buster /assets/img_archive/apply_template.png %}
-[3]: {% image_buster /assets/img_archive/abandoned_browse.png %}
-[4]: {% image_buster /assets/img_archive/abandoned_cart.png %}
-[5]: {% image_buster /assets/img_archive/abandoned_checkout.png %}
-[6]: {% image_buster /assets/img_archive/order_confirmation_feedback.png %}

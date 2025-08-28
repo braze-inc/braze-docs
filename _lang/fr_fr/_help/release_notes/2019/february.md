@@ -13,7 +13,7 @@ Les [groupes d'abonnement]({{site.baseurl}}/user_guide/message_building_by_chann
 
 Par exemple, si vous envoyez plusieurs catégories de campagnes e-mail, vous pouvez offrir à vos clients la possibilité de s'abonner ou de se désabonner de ces groupes en masse à partir d'une seule page, en utilisant notre [centre de préférences e-mail.](#email-preference-center)
 
-Utilisez les [API REST de groupe d'abonnement]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) pour gérer de manière programmatique les groupes d'abonnement que vous avez stockés sur le tableau de bord de Braze vers la page **Groupe d'abonnement**.
+Utilisez les [API REST de groupe d'abonnement]({{site.baseurl}}/api/endpoints/subscription_groups/) pour gérer de manière programmatique les groupes d'abonnement que vous avez stockés sur le tableau de bord de Braze vers la page **Groupe d'abonnement**.
 
 ## Centre de préférence des e-mails
 

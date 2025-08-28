@@ -16,10 +16,9 @@ Push activé désigne les utilisateurs qui disposent d’un jeton push disponibl
 
 La notification push en arrière-plan fait référence aux utilisateurs qui sont activés, mais qui ont désactivé les notifications push lorsque l’application est au premier plan. Dans ce cas, Braze ne peut pas afficher des notifications visibles par l’utilisateur sur cet appareil. Cependant, vous pouvez utiliser les notifications push en arrière-plan pour le suivi des désinstallations, ce qui permet des notifications push silencieuses et le geofencing.  
 
-Pour plus d'informations, consultez notre article sur [À propos des notifications push][1].
+Pour plus d'informations, consultez notre article sur [À propos des notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about).
 
 Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 
 _Dernière mise à jour le 24 janvier 2021_
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about

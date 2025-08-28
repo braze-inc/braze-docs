@@ -1,5 +1,5 @@
 ---
-nav_title: Handling a Large Control Group
+nav_title: Handling a large control group
 article_title: Handling a Large Control Group
 page_order: 2
 
@@ -15,7 +15,7 @@ When creating your Canvas, you may have expected your audience to split evenly b
 The group that a user joins depends on their settings. This can be either the control group or variant group. A user will enter a Canvas when they fit all of your criteria defined in the [Entry Step]({{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas). When setting up your Canvas, you define what percentage of users will enter each variant and the control group.
 
 If your control group is large compared to your variant group (and this is not your intent), we recommend the following:
-1. Set your entry audience filter to "Is Push Enabled".
+1. Set your entry audience filter to "Is Foreground Push Enabled".
 2. Set your entry audience filter to "is Opted In or Subscribed".
 
 When creating a Canvas with a control group, ensure that all users in the Entry Audience are able to receive messages within the Canvas (such as the Canvas contains push and email messages).

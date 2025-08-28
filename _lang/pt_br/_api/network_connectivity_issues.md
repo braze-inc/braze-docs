@@ -17,20 +17,14 @@ Percebemos que alguns firewalls tentam modificar ou proteger o tráfego HTTPS/TL
 
 Ocasionalmente, as configurações do iptables que filtram os pacotes SYN/ACK/RST também podem causar problemas; portanto, se estiver usando o iptables no seu host, você também poderá listar o tráfego de saída para nossos provedores de CDN (Fastly.com) para ver se isso resolve o problema.
 
-Se ainda estiver tendo problemas de rede com a conexão aos endpoints da Braze API, forneça um [teste MTR][1] e os resultados do [Fastly Debug][2] enquanto estiver enfrentando um problema e envie-os com sua solicitação de suporte. Note que os resultados do teste devem ser obtidos de um servidor que esteja tendo problemas para se conectar aos endpoints da API do Braze, e não de uma máquina de desenvolvimento. Uma captura de rede (tcpdump ou arquivo .pcap) também será útil se puder ser obtida.
+Se ainda estiver tendo problemas de rede com a conexão aos endpoints da Braze API, forneça um [teste MTR](https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2) e os resultados do [Fastly Debug](http://www.fastly-debug.com/) enquanto estiver enfrentando um problema e envie-os com sua solicitação de suporte. Note que os resultados do teste devem ser obtidos de um servidor que esteja tendo problemas para se conectar aos endpoints da API do Braze, e não de uma máquina de desenvolvimento. Uma captura de rede (tcpdump ou arquivo .pcap) também será útil se puder ser obtida.
 
 Para saber mais sobre o MTR, consulte estes recursos com base em seu sistema operacional:
 
-- [GNU/Linux][4]
-- [MacOS][5]
+- [GNU/Linux](https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues)
+- [MacOS](https://formulae.brew.sh/formula/mtr)
 
 ## Permitir a listagem dos intervalos de IP dos pontos de extremidade da Braze API
 
-Para permitir que os endpoints da API do Braze passem pelo seu firewall, nossa CDN fornece acesso à lista de intervalos de IP atribuídos por meio de um dump JSON. Para obter uma lista dos intervalos de IPs do Braze API, consulte [a lista de IPs públicos da Fastly][3] e a [lista de IPs públicos da Cloudflare][6]. Note que esses IPs podem mudar.
+Para permitir que os endpoints da API do Braze passem pelo seu firewall, nossa CDN fornece acesso à lista de intervalos de IP atribuídos por meio de um dump JSON. Para obter uma lista dos intervalos de IPs do Braze API, consulte [a lista de IPs públicos da Fastly](https://api.fastly.com/public-ip-list) e a [lista de IPs públicos da Cloudflare](https://api.cloudflare.com/client/v4/ips). Note que esses IPs podem mudar.
 
-[1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2
-[2]: http://www.fastly-debug.com/
-[3]: https://api.fastly.com/public-ip-list
-[4]: https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues
-[5]: https://formulae.brew.sh/formula/mtr
-[6]: https://api.cloudflare.com/client/v4/ips

@@ -1,5 +1,5 @@
 ---
-nav_title: "Apple Object"
+nav_title: "Apple object"
 article_title: Apple Messaging Object
 page_order: 1
 page_type: reference

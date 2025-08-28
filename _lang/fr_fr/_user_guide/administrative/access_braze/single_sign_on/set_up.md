@@ -52,9 +52,9 @@ Sur la même page, saisissez les données suivantes :
 
 | Condition | Détails |
 |---|---|
-| `SAML Name` | Cela apparaîtra comme le texte du bouton sur l’écran de connexion.<br>Il s'agit généralement du nom de votre fournisseur d'identité, comme « Okta ». |
-| `Target URL` | Ceci est fourni après la configuration de Braze au sein de votre IdP.<br> Certains IdP font référence à l’URL d’authentification unique ou à l’endpoint SAML 2.0. |
-| `Certificate` | Le certificat `x.509` fourni par votre fournisseur d'identité.|
+| Nom SAML | Cela apparaîtra comme le texte du bouton sur l’écran de connexion.<br>Il s'agit généralement du nom de votre fournisseur d'identité, comme « Okta ». |
+| URL cible | Ceci est fourni après la configuration de Braze au sein de votre IdP.<br> Certains IdP font référence à l’URL d’authentification unique ou à l’endpoint SAML 2.0. |
+| Certificat | Le certificat `x.509` fourni par votre fournisseur d'identité.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Assurez-vous que votre certificat `x.509` respecte ce format lorsque vous l'ajoutez au tableau de bord :
@@ -65,13 +65,13 @@ Assurez-vous que votre certificat `x.509` respecte ce format lorsque vous l'ajou
 -----END CERTIFICATE-----
 ```
 
-![Ouverture des paramètres de sécurité et ajout des détails de l'authentification unique (SSO) SAML]({% image_buster /assets/img/samlsso.gif %})
+![Paramètres SAML SSO avec la bascule sélectionnée.]({% image_buster /assets/img/samlsso.png %})
 
 ### Étape 3 : Se connecter à Braze
 
 Enregistrez vos paramètres de sécurité et déconnectez-vous. Ensuite, reconnectez-vous avec votre fournisseur d'identité.
 
-![Écran de connexion du tableau de bord avec authentification unique activée]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Écran de connexion du tableau de bord avec authentification unique activée]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Mise en place de votre RelayState
 
@@ -91,7 +91,7 @@ Les membres qui choisissent d’utiliser l’authentification unique ne pourront
 
 Vous pouvez également choisir de limiter les membres de votre organisation pour qu’ils se connectent uniquement avec l’authentification unique de Google ou l’authentification unique (SSO) SAML. Pour activer les restrictions, allez dans **Paramètres de sécurité** et sélectionnez soit **Appliquer la connexion Google SSO unique**, soit **Appliquer la connexion SAML SSO personnalisée (SSO SAML) unique.**
 
-![Section Règles d'authentification de la page Paramètres de sécurité]({% image_buster /assets/img/sso3.png %})
+![Exemple de configuration de la section "Règles d'authentification" avec un mot de passe d'une longueur minimale de 8 caractères et une possibilité de réutilisation du mot de passe de 3 fois. Les mots de passe expireront après 180 jours et les utilisateurs seront déconnectés après 1 440 minutes d'inactivité.]({% image_buster /assets/img/sso3.png %})
 
 En activant les restrictions, les utilisateurs de Braze de votre entreprise ne pourront plus se connecter à l'aide d'un mot de passe, même s'ils se sont déjà connectés avec un mot de passe auparavant.
 
@@ -126,9 +126,9 @@ Sélectionnez **Exporter**. Pour **Sélectionner un profil de filtrage des cooki
 
 ### L'adresse e-mail de l'utilisateur est-elle correctement configurée ?
 
-Si vous obtenez l'erreur `ERROR_CODE_SSO_INVALID_EMAIL`, l'adresse e-mail de l'utilisateur n'est pas valide. Confirmez dans la trace SAML que le champ `saml2:Attribute Name="email"` correspond à l'adresse e-mail utilisée par l'utilisateur pour se connecter. Si vous utilisez Microsoft Entra ID, le mappage des attributs est `email = user.userprincipalname`.
+Si vous obtenez l'erreur `ERROR_CODE_SSO_INVALID_EMAIL`, l'adresse e-mail de l'utilisateur n'est pas valide. Confirmez dans la trace SAML que le champ `saml2:Attribute Name="email"` correspond à l'adresse e-mail utilisée par l'utilisateur pour se connecter. Si vous utilisez Microsoft ID (anciennement Azure active directory), le mappage des attributs est `email = user.userprincipalname`.
 
-L'adresse e-mail est sensible à la casse et doit correspondre exactement à celle qui a été configurée dans Braze, y compris celle configurée dans votre fournisseur d'identité (comme Okta, OneLogin, Azure Active Directory et autres).
+L'adresse e-mail est sensible à la casse et doit correspondre exactement à celle qui a été configurée dans Braze, y compris celle configurée dans votre fournisseur d'identité (comme Okta, OneLogin, Microsoft Entra ID, et autres).
 
 D'autres erreurs indiquent que vous avez des problèmes avec l'adresse e-mail de l'utilisateur :
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST` : L'adresse e-mail de l'utilisateur ne figure pas dans le tableau de bord.

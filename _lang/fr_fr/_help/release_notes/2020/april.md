@@ -11,7 +11,7 @@ description: "Cet article contient les notes de version d’avril 2020."
 
 Movable Ink permet aux clients de Braze d’utiliser des fonctionnalités créatives intelligentes telles que des comptes à rebours, des sondages et des surfaces à gratter dans leurs campagnes de notification push, messages in-app et cartes de Contenu. L’intégration entre Movable Ink et Braze permet une approche plus complète pour les messages dynamiques axés sur les données, en offrant aux utilisateurs des éléments en temps réel sur les  choses importantes.
 
-Commencez à [intégrer Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/) dans vos campagnes !
+Commencez à [intégrer Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/) dans vos campagnes !
 
 ## Timing intelligent
 
@@ -41,6 +41,5 @@ Les [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templat
 
 Lors de la création d'un message électronique dans Braze, vous pouvez désormais personnaliser l'adresse de l'expéditeur du message dans la section **Informations d'envoi** de la composition de l'e-mail. Vous pouvez utiliser n'importe lequel de nos [tags de personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) pris en charge
 
-![Adresse d'expéditeur personnalisée][0]{: style="max-width:80%"}
+![Adresse personnalisée de]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}

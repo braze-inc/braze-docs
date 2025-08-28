@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Merge Users"
+nav_title: "POST: Merge users"
 article_title: "POST: Merge Users"
 search_tag: Endpoint
 page_order: 6
@@ -60,7 +60,7 @@ This endpoint will merge the following fields if they're not found on the target
 
 - First name
 - Last name
-- Email
+- Email addresses (unless they are [encrypted]({{site.baseurl}}/user_guide/data/field_level_encryption/))
 - Gender
 - Date of birth
 - Phone number
