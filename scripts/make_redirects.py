@@ -19,15 +19,36 @@ LOG_PATH = os.path.join(PROJECT_ROOT, "scripts", "temp", "mredirect_logs")
 #   files:       rename _docs/_contributing/{bdocs.md => test.md} (100%)
 #   directories: rename _docs/_contributing/{yaml => jekyll}/metadata.md (100%)
 def get_renamed_files():
-    cmd = f"git diff -M --summary develop HEAD -- {os.path.join(PROJECT_ROOT, '_docs')}"
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-    changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
+    import pathlib, subprocess, os
 
-    if not changed_files:
-        print("Error: Git can't find any renamed files committed in this branch.\nNote that redirects are only created for renamed files if they're 'committed', not just 'added' to the branch.")
-        return []
-    
-    return changed_files
+    # resolve upstream of current branch and fetch just that ref
+    res = subprocess.run(
+        ["git", "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{upstream}"],
+        capture_output=True, text=True
+    )
+    if res.returncode != 0 or not res.stdout.strip():
+        raise RuntimeError("No upstream set for current branch. Run `git push -u origin <branch>`.")
+
+    upstream_ref = res.stdout.strip()
+    remote, remote_branch = upstream_ref.split("/", 1)
+    subprocess.run(["git", "fetch", "--quiet", remote, remote_branch, "develop"], check=False)
+
+    repo_root = subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True, check=True
+    ).stdout.strip()
+    docs_rel = str(pathlib.Path(repo_root, "_docs").relative_to(repo_root))
+
+    # full PR range: base...upstream
+    cmd = [
+        "git", "diff", "-M", "--summary", "--diff-filter=R",
+        "origin/develop..."+upstream_ref, "--", docs_rel
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    return [
+        line.strip() for line in result.stdout.splitlines()
+        if line.lstrip().startswith("rename")
+    ]
 
 
 # Adds unmatched lines to ./scripts/temp/mredirect_logs.
@@ -41,28 +62,32 @@ def log_unmatched(line):
 def create_redirect(line):
     original_line = line.strip()
 
-    # Remove 'rename ' and trailing percentage like '(98%)'
+    # strip leading 'rename' and trailing '(NN%)'
     line = line.split(" ", 1)[1]
     line = re.sub(r"\s\(\d+%\)$", "", line)
 
-    # Extract {old => new}
-    regex_group = re.search(r"{([^}]+) => ([^}]*)}", line)
-    if not regex_group:
+    # allow empty old/new inside braces
+    m = re.search(r"{([^}]*)\s=>\s([^}]*)}", line)
+    if not m:
         log_unmatched(original_line)
         return None
-    
-    subgroup_old = regex_group.group(1)
-    subgroup_new = regex_group.group(2)
-    
-    # Path before { }
-    path = line.split("{")[0].strip()
 
-    # Portion after }
-    renamed_dir_file = line.split("}")[1].strip()
-    
-    # Build URLs
-    url_old = f"/{path}{subgroup_old}{renamed_dir_file}".replace("/_", "/").replace(".md", "")
-    url_new = f"/{path}{subgroup_new}{renamed_dir_file}".replace("/_", "/").replace(".md", "")
+    old_part, new_part = m.group(1), m.group(2)
+
+    prefix = line.split("{", 1)[0].strip()
+    suffix = line.split("}", 1)[1].strip()
+
+    def norm(p):
+        # strip extension
+        p = p.replace(".md", "")
+        # collapse multiple slashes and enforce leading slash
+        p = re.sub(r"//+", "/", "/"+p.lstrip("/"))
+        # drop underscore only at the beginning of a segment
+        p = re.sub(r"/_+", "/", p)
+        return p.rstrip("/")
+
+    url_old = norm(f"{prefix}{old_part}{suffix}")
+    url_new = norm(f"{prefix}{new_part}{suffix}")
 
     return f"validurls['{url_old}'] = '{url_new}';"
 
