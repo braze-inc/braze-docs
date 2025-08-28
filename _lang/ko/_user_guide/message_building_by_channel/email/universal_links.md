@@ -265,7 +265,7 @@ SparkPost 클릭 추적 링크를 범용 링크로 처리하려면 이메일의 
 
 ### 링크 대 링크 기준으로 클릭 추적 끄기
 
-HTML 편집기에서 이메일 메시지에 HTML 코드를 추가하거나 끌어서 놓기 편집기에서 컴포넌트에 추가하여 특정 링크에 대한 클릭 추적을 해제할 수 있습니다.
+HTML 편집기의 경우 이메일 메시지에 HTML 코드를 추가하거나 드래그 앤 드롭 편집기의 경우 HTML 블록에 추가하여 특정 링크에 대한 클릭 추적을 해제할 수 있습니다.
 
 #### SendGrid
 
@@ -281,6 +281,14 @@ HTML 편집기에서 이메일 메시지에 HTML 코드를 추가하거나 끌�
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+이메일 서비스 제공업체가 Amazon SES인 경우 다음과 같이 HTML 코드 `ses:no-track` 를 사용합니다:
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### 드래그 앤 드롭 편집기
@@ -303,7 +311,7 @@ HTML 편집기에서 이메일 메시지에 HTML 코드를 추가하거나 끌�
 - **이름:** `data-msys-clicktrack`
 - **가치:** `0`
 
-![텍스트 링크의 사용자 지정 속성입니다.][2]{: style="max-width:60%;"}
+![텍스트 링크의 사용자 지정 속성입니다.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### 버튼 또는 이미지의 사용자 지정 속성
 
@@ -323,7 +331,7 @@ HTML 편집기에서 이메일 메시지에 HTML 코드를 추가하거나 끌�
 - **가치:** `0`
 - **유형:** 링크
 
-![버튼의 사용자 지정 속성입니다.][1]{: style="max-width:60%;"}
+![버튼의 사용자 지정 속성입니다.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### 클릭-추적으로 유니버셜 링크 문제 해결
 
@@ -345,5 +353,3 @@ AASA 파일(iOS) 또는 Digital Asset Links 파일(Android)이 올바른 위치�
 - **iOS:** Xcode에서 앱([1단계 c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c))에 대한 관련 도메인 설정을 검토하세요. 해당 목록에 클릭 추적 도메인이 포함되어 있는지 확인하십시오.
 - **Android:** 앱 정보 페이지를 여세요 (앱 아이콘을 길게 누르고 ⓘ를 클릭하세요). 앱 정보 메뉴에서 **기본값으로 열기**를 찾아 탭하세요. 이것은 앱이 열 수 있도록 허용된 모든 검증된 링크가 있는 화면을 표시해야 합니다. 해당 목록에 클릭 추적 도메인이 포함되어 있는지 확인하십시오.
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

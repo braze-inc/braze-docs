@@ -1,5 +1,5 @@
 ---
-nav_title: Copying Across Workspaces
+nav_title: Copying across workspaces
 article_title: Copying Across Workspaces
 page_order: 4.5
 alias: "/copying_to_workspaces/"
@@ -20,10 +20,10 @@ When you copy a campaign or Canvas to a different workspace, the copy will remai
 {% tab campaigns %}
 
 {% alert important %}
-Copying campaigns across workspaces is generally available. Channel support for push and Content Cards isn't currently available.
+Copying campaigns across workspaces is generally available. Channel support for Content Cards isn't currently available.
 {% endalert %}
 
-You can copy campaigns across workspaces for these supported channels: SMS, in-app messages, email, email templates, and Content Blocks. Note that multi-channel campaigns with unsupported channels can't be copied over to a different workspace.
+You can copy campaigns across workspaces for these supported channels: SMS, in-app messages, push notifications, email, and webhooks. You can also copy across email templates, feature flags, and Content Blocks. Note that multi-channel campaigns with unsupported channels can't be copied over to a different workspace.
 
 To copy a campaign to a different workspace:
 
@@ -46,14 +46,14 @@ To copy a Canvas to a different workspace:
 2. Select **Copy to workspace**. 
 3. After copying, review and test your Canvas to confirm that all fields work properly.
 
-When copying a Canvas with Audience Sync steps, the settings will not be copied over to the destination workspace, but the step in the journey will be.
+When copying a Canvas with Audience Sync steps, the settings will not be copied over to the destination workspace, but the steps in the journey will be.
 
 {% endtab %}
 {% endtabs %}
 
 ## What's copied across workspaces
 
-Note the following is not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign and Canvas details and test to confirm your message works as expected.
+Note that the following is not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign and Canvas details and test to confirm your message works as expected.
 
 ### Details
 
@@ -92,7 +92,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 {% endtab %}
 {% endtabs %}
 
-### Conversion beheaviors
+### Conversion behaviors
 
 {% tabs local %}
 {% tab campaigns %}
@@ -186,6 +186,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Title |  BCC | 
 | Subject |  Link template | 
 |  |  Link aliasing |
+|  | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -198,6 +199,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Title |  BCC | 
 | Subject |  Link template | 
 |  |  Link aliasing |
+|  | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -211,7 +213,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Copied | Omitted |
 |---|---|
 | Plain text | Link aliasing |
-| HTML and drag-and-drop content |  | 
+| HTML and drag-and-drop content | Translations | 
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
@@ -223,7 +225,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Copied | Omitted |
 |---|---|
 | Plain text | Link aliasing |
-| HTML and drag-and-drop content |  | 
+| HTML and drag-and-drop content | Translations | 
 | Preheader |  | 
 | Inline CSS |  | 
 | AMP HTML |  |
@@ -243,6 +245,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
+| | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -254,6 +257,7 @@ Note the following is not a comprehensive list of what is copied across workspac
 | Description | Image IDs | 
 | Subject | Territories | 
 | Headers | Tags | 
+| | Translations |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}

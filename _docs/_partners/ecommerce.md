@@ -52,4 +52,6 @@ valid_partner_list:
   url: /docs/partners/shopify/
 - name: Stripe
   url: /docs/partners/stripe/
+- name: Okendo
+  url: /docs/partners/okendo/
 ---

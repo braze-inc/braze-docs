@@ -44,7 +44,7 @@ Supongamos que asignas el atributo personalizado "is_lead_profile" a cada perfil
 - **El ID de usuario externo está en blanco**
 - "is_lead_profile" **es verdadero**
 
-![Filtros de segmento para un ID externo de usuario en blanco y un atributo personalizado "is_lead_profile" verdadero.][1]
+![Filtros de segmento para un ID externo de usuario en blanco y un atributo personalizado "is_lead_profile" verdadero.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Capturar datos de pago de un usuario anónimo
 
@@ -76,4 +76,3 @@ Aquí tienes un ejemplo de carga útil que se generará cuando se envíe el form
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img/getting_started/anonymous_users.png %}

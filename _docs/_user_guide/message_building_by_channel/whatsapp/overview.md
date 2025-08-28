@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp Setup
+nav_title: WhatsApp setup
 article_title: WhatsApp Setup
 alias: /partners/whatsapp/
 description: "This article covers how to set up the Braze WhatsApp channel, including prerequisites and suggested next steps."
@@ -64,16 +64,18 @@ Only approved WhatsApp message templates can be used to initiate conversations w
 
 1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
-Next, select **Create Templates**.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
+Next, select **Create Templates**.<br><br>![WhatsApp Manager with a list of message templates.]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
 In the new message template composer, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
 	The available message template categories include the following:
 	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement
 	- Utility: Send account updates, order updates, alerts, and more to share important information
 	- Authentication: Send codes that allow your customers to access their accounts<br><br> 
-	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
+	![Message template composer with categories for marketing, utility, and authentication.]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Edit template**<br>
-Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
+Next, create your message template. <br><br>You can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. Any media you add serves as an example for the review process and **is not** included in the template message. Media needs to be added in Braze. A preview of your message will display in a panel. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![Template composer.]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
+
+Once you have completed your template, press **Submit**. 
 
 #### Template approval time
 

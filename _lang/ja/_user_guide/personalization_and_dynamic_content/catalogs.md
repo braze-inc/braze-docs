@@ -29,6 +29,12 @@ guide_featured_list:
 - name: カタログ API エンドポイント
   link: /docs/api/endpoints/catalogs/
   image: /assets/img/braze_icons/server-01.svg
+
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: 製品ドラッグ＆ドロップブロック
+  link: /docs/dnd_product_blocks/
+  image: /assets/img/braze_icons/columns-01.svg
 ---
 <br><br>
 
@@ -52,7 +58,7 @@ guide_featured_list:
 ### 旅行とホスピタリティ
 
 - **目的地:**旅行先と、その旅行先で最も人気のあるアトラクション、レストラン、アクティビティをインポートし、過去の旅行に基づいて、ユーザーにパーソナライズされたレコメンデーションを提供する。
-- **宿泊施設だ：**ホテルの特徴とそのアメニティ、客室のタイプ、料金をインポートし、ユーザーの選択した好みに基づいてプロモーションをユーザーに送信します。
+- **宿泊施設:**ホテルの特徴とそのアメニティ、客室のタイプ、料金をインポートし、ユーザーの選択した好みに基づいてプロモーションをユーザーに送信します。
 - **旅行手段**: 航空券、鉄道、レンタカーなど、旅行形態のお得なキャンペーン情報をインポートし、最近の検索履歴に基づいてユーザーに送信する。
 - **食事の嗜好:**食事の提供に関する情報をインポートし、[セレクション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)を使用して、最近表示した食品カテゴリに基づき、特定の食事を嗜好するユーザーにパーソナライズされたメッセージを送信します。
 

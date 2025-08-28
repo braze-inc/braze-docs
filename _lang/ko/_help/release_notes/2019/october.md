@@ -14,7 +14,7 @@ description: "이 문서에는 2019년 10월의 릴리스 노트가 포함되어
 
 ## SMS
 
-이제 Braze에서 캠페인, 캔버스, [커런트가]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) 포함된 SMS를 제공합니다! 시작하기 위한 [설정 가이드와]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) 자세한 내용은 [SMS 전송 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) 확인하세요!
+이제 Braze에서 캠페인, 캔버스, [커런트가]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) 포함된 SMS를 제공합니다! 시작하기 위한 [설정 가이드와]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) 자세한 내용은 [SMS 전송 가이드를]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) 확인하세요!
 
 ## 콘텐츠 블록 개선 사항
 

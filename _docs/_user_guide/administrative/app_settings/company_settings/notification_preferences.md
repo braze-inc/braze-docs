@@ -1,5 +1,5 @@
 ---
-nav_title: Notification Preferences
+nav_title: Notification preferences
 article_title: Notification Preferences
 page_order: 1
 page_type: reference

@@ -141,9 +141,6 @@ The chart shows users who had enough data to calculate an optimal time in blue a
 {% endtab %}
 
 {% tab Canvas %}
-{% alert important %}
-As of February 28, 2023, Canvases using original editor can no longer be created or duplicated. To learn how to move over to the new Canvas Flow, refer to [Cloning Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Step 1: Add Intelligent Timing
 
@@ -194,6 +191,12 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 ### Preview chart showing few users with optimal times
 
 Braze needs a certain amount of engagement data to make a good estimate. If there isn't enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
+
+### Impact of time zone on Intelligent Timing delivery
+
+Intelligent Timing relies on the specified local time zone of each user, so the scheduled delivery date and time may vary across users.
+
+If users don't receive messages as expected, check that the time zone field in their profile is populated correctly. If the time zone field is empty, the user may receive messages that align with the company's time zone instead of their local time.
 
 ### Sending past the scheduled date
 

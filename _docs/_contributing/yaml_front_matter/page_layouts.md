@@ -1,5 +1,5 @@
 ---
-nav_title: Page Layouts
+nav_title: Page layouts
 article: Page layouts
 description: "These are the page layouts that can be assigned to the `page_layout` key in a page's YAML front matter."
 page_order: 2

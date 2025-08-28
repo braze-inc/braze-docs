@@ -17,10 +17,6 @@ Braze에 저장된 사용자 지정 속성을 사용하여 오디언스 세그�
 
 대시보드에서 사용자 지정 속성을 만들고 관리하려면 **데이터 설정** > **사용자 지정 속성으로** 이동합니다. 
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **설정 관리에서** **사용자 지정 속성을** 찾을 수 있습니다.
-{% endalert %}
-
 ![부울인 네 가지 사용자 지정 속성.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 **마지막으로 업데이트된** 열에는 사용자 지정 속성을 마지막으로 편집한 시간(예: 차단 목록 또는 활성화로 마지막으로 설정한 시간)이 나열됩니다.
@@ -70,13 +66,13 @@ You can view up to 100 usage reports at a time by selecting the checkboxes next 
 
 {% details 플랫폼별 설명서 확장 %}
 
-- [Android and FireOS]({{site.baseurl}}/developer_guide/platforms/android/analytics/setting_custom_attributes/)
-- [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_custom_attributes/)
-- [Web]({{site.baseurl}}/developer_guide/platforms/web/analytics/setting_custom_attributes/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku]({{site.baseurl}}/developer_guide/platforms/roku/analytics/setting_custom_attributes/)
+- [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
 
@@ -168,11 +164,9 @@ You can view up to 100 usage reports at a time by selecting the checkboxes next 
 
 배열 속성은 사용자에 대한 관련 정보 목록을 저장하는 데 유용합니다. 예를 들어, 사용자가 마지막으로 시청한 100개의 콘텐츠를 배열에 저장하면 특정 관심사를 세분화할 수 있습니다.
 
-기본적으로 속성에 대한 배열의 최대 길이는 25로 설정되어 있으며 개별 배열의 경우 100까지 늘릴 수 있습니다. 예를 들어 '영화 시청 횟수'와 같은 속성을 100으로 설정하여 전송하는 경우 사용자가 101번째 영화를 시청하면 배열에서 첫 번째 영화가 제거되고 가장 최근 영화가 추가됩니다.
+By default, the length of an array for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added.
 
-이 최대치를 늘리려면 고객 성공 관리자에게 문의하세요. 그런 다음 대시보드 관리자는 **설정 관리** 페이지의 **사용자 지정 속성** 탭에서 개별 배열의 최대 길이를 100 이상으로 늘릴 수 있습니다.
-
-단어 사이, 앞, 뒤에 공백이 있는 값을 입력하면 Braze에서도 동일한 공백이 있는지 확인합니다.
+Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
 
 {% alert note %}
 속성이 데이터 유형을 자동으로 감지하도록 설정된 경우 최대 길이를 늘리는 옵션은 사용할 수 없으며 데이터 유형을 배열로 설정해야 합니다.

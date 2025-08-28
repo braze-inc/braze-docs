@@ -13,7 +13,7 @@ page_order: 6.1
 
 > Use Dashboard Builder to create dashboards and visualizations using reports created in Report Builder or Query Builder.
 
-Dashboard Builder empowers you to compose and visualize custom analytic dashboards from scratch and from Braze-supplied templates. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze templates.
+Dashboard Builder empowers you to compose and visualize custom analytic dashboards from scratch and from Braze-supplied dashboards. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze-supplied dashboards.
 
 ## Creating a custom dashboard
 
@@ -41,7 +41,7 @@ Now, follow the respective steps for your data source:
 4. Select **+ Add Tile** and then choose a query you’ve run in Query Builder.
 5. To edit how the query results display in the tile, select the pencil icon to change the title and chart type.
     - You can toggle between different chart types below the default visualization. Current options include tables, bar charts (horizontal or vertical), and line charts.<br><br>![Toggles for different chart types.]({% image_buster /assets/img/query_builder_types.png %})<br><br>
-        - If you choose one of the chart options, use the **X-axis** dropdown to select a single column from your query results to use as your x axis.
+        - If you choose one of the chart options, use the **X-axis** dropdown to select a single column from your query results to use as your x-axis.
         - Use the **Y-axis** dropdown to select which metrics to include in your visualization. By default, all columns from your query results will display, so de-select the columns you’re not interested in viewing.<br><br>![Toggles for different chart types.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
         - (Optional) You can use the **Grouping** dropdown to group together your query results. For example, if you have campaign ID as a column result and you want to add together all the rows with that value, use the **Grouping** dropdown.  
         - (Optional) To edit the data being displayed, select the query that is attached to the visual and make your edits in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/). 
@@ -72,25 +72,25 @@ Make a copy of your tile by selecting **Duplicate Tile** at the bottom of the ti
 
 ### Adjust tile size and position
 
-Adjust the tile size by dragging the bottom right corner of the tile, and adjust the tile position on the dashboard by dragging the handle at the top right corner of the tile.
+Adjust the tile size by dragging the bottom-right corner of the tile, and adjust the tile position on the dashboard by dragging the handle at the top right corner of the tile.
 
-## Running a dashboard template
+## Running a dashboard
 
-1. Go to **Analytics** > **Dashboard Builder**. The home page lists all existing dashboards within your workspace, with Braze-created templates at the top. These are denoted with "(Braze)" in the title.
+1. Go to **Analytics** > **Dashboard Builder**. The home page lists all existing dashboards within your workspace, with Braze-created dashboards at the top. These are denoted with "(Braze)" in the title.
 2. Select the dashboard you’re interested in.
-3. Select **Run Dashboard** to load the respective dashboard using that template.
+3. Select **Run Dashboard** to load the respective dashboard using that dashboard.
 
-### Available dashboard templates
+### Available dashboards
 
-Braze provides pre-built dashboard templates for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a template dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard templates in future template releases.
+Braze provides pre-built dashboards for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard in the future.
 
 #### Revenue - Last Touch Attribution
 
-The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
+The **Revenue - Last Touch Attribution** dashboard provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
 
-Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
+Touches include _Email Click_ (link click), _Content Card Click_, _In-App Message Click_ (excluding close buttons), _Push Opens_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
 
-| Metrics | Definition |
+| Metric | Definition |
 | --- | --- |
 | Total Last Touch Revenue | A sum of all campaign and Canvas revenue events with a last-touch event within the selected date range and attribution window. |
 | Total Purchase Conversions | A count of all campaign and Canvas revenue events with a qualifying last-touch event. |
@@ -109,12 +109,43 @@ Touches include _Email Click_, _Content Card Click_, _In-App Message Click_, _SM
 
 #### Devices and carriers
 
-| Metrics | Definition |
+| Metric | Definition |
 | --- | --- |
 | Device Carriers | Count of users in the selected date range who opened a push notification, grouped by device carrier. |
 | Device Model | Count of users in the selected date range who opened a push notification, grouped by device model. |
 | Device Operating System | Count of users in the selected date range who opened a push notification, grouped by device operating system. |
 | Device Screen Size | Count of users in the selected date range who opened a push notification, grouped by device screen resolution (size). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Segment Insights - Email
+
+| Metric  | Definition  |
+|---|---|
+| Weekly Email Metrics (Rates) | Email engagement rates (delivery, bounce, open, click, unsubscribe rates) grouped by segment and displayed as weekly time series.|
+| Weekly Email Metrics (Counts) | Email engagement counts (sent, delivered, bounces, opens, clicks, unsubscribes) grouped by segment and displayed as weekly time series.|
+| Weekly Purchase Metrics (Rates) | Purchase conversion rates (revenue per recipient) from email opens and clicks, grouped by segment and displayed as a weekly time series.|
+| Weekly Purchase Metrics (Counts) | Purchase counts and revenue totals from email opens and clicks, grouped by segment and displayed as a weekly time series.|
+| Email Engagement by Segment | Summary table showing total email engagement metrics (sent, delivered, bounces, opens, clicks, unsubscribes, and their rates) aggregated by segment.|
+| Purchases & Revenue by Segment | Summary table showing total purchase metrics (purchases, revenue, and revenue per recipient) from email opens and clicks, aggregated by segment.|
+| Top 10 Campaigns for Engagement Metrics | Ranked list of campaigns with the highest email engagement metrics (configurable metric for ranking).|
+| Bottom 10 Campaigns for Engagement Metrics | Ranked list of campaigns with the lowest email engagement metrics (configurable metric for ranking).|
+| Top 10 Canvases for Engagement Metrics | Ranked list of Canvases with the highest email engagement metrics (configurable metric for ranking).|
+| Bottom 10 Canvases for Engagement Metrics | Ranked list of Canvases with the lowest email engagement metrics (configurable metric for ranking).|
+| Top 10 Campaigns for Purchase Metrics | Ranked list of campaigns with the highest purchase conversion metrics from email engagement (configurable metric for ranking).|
+| Bottom 10 Campaigns for Purchase Metrics | Ranked list of campaigns with the lowest purchase conversion metrics from email engagement (configurable metric for ranking).|
+| Top 10 Canvases for Purchase Metrics | Ranked list of Canvases with the highest purchase conversion metrics from email engagement (configurable metric for ranking).|
+| Bottom 10 Canvases for Purchase Metrics | Ranked list of Canvases with the lowest purchase conversion metrics from email engagement (configurable metric for ranking).|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Session Analytics
+
+| Metric | Definition  |
+|---|---|
+| # of sessions by day (time series) | Count of unique sessions grouped by day within the selected date range, displayed as a time series.|
+| Avg # of sessions per user | Average number of sessions per user calculated as total sessions divided by unique users within the selected date range.|
+| Campaigns convert to sessions | Count of unique sessions that occurred at the same time as campaign conversions, grouped by campaign ID and ranked by session count.|
+| Canvases convert to sessions | Count of unique sessions that occurred at the same time as Canvas conversions, grouped by Canvas ID and ranked by session count.|
+| Total # of sessions per user | List of top 1,000 users by their total session count within the selected date range.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Share your feedback with us

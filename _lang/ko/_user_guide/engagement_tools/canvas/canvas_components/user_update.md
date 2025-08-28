@@ -10,13 +10,15 @@ tool: Canvas
 
 # 사용자 업데이트 
 
-![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
-
 > 사용자 업데이트 구성요소를 사용하면 JSON 작성기에서 사용자의 속성, 이벤트 및 구매를 업데이트할 수 있으므로 API 키와 같은 민감한 정보를 포함할 필요가 없습니다.
 
-사용자 업데이트를 사용하면 업데이트는 분당 `/users/track` 요청 사용량 제한에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
+## 이 구성 요소의 작동 방식
 
-사용자는 관련 사용자 업데이트가 완료된 후에만 다음 캔버스 단계로 진행할 수 있습니다. 후속 메시징이 사용자 업데이트에 의존하는 경우 메시지를 보내기 전에 이러한 업데이트가 완료되었는지 확인할 수 있습니다.
+!["프리미엄 회원임" 속성을 "true"로 업데이트하는 "충성도 업데이트"라는 이름의 사용자 업데이트 단계]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+
+캔버스에서 이 구성 요소를 사용하는 경우 업데이트는 분당 요청 수 제한( `/users/track` )에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
+
+사용자는 관련 사용자 업데이트가 완료된 후에만 다음 캔버스 단계로 진행할 수 있습니다. 즉, 이러한 사용자 업데이트에 의존하는 모든 후속 메시징은 다음 단계가 실행될 때 최신 상태로 유지됩니다.
 
 ## 사용자 업데이트 만들기
 
@@ -32,13 +34,13 @@ tool: Canvas
 
 사용자 지정 속성을 추가하거나 업데이트하려면 속성 목록에서 속성 이름을 선택하고 키 값을 입력합니다.
 
-![][4]{: style="max-width:90%;"}
+![사용자 업데이트 단계에서는 '로열티 회원' 및 '로열티 프로그램' 두 속성을 'true'로 업데이트합니다.]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### 사용자 지정 속성 제거하기
 
 사용자 지정 속성을 제거하려면 드롭다운을 사용하여 속성 이름을 선택합니다. [고급 JSON 작성기로](#advanced-json-composer) 전환하여 추가로 편집할 수 있습니다. 
 
-![][5]{: style="max-width:90%;"}
+!['로열티 회원' 속성을 제거하는 사용자 업데이트 단계]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### 값 증가 및 감소
 
@@ -48,7 +50,7 @@ tool: Canvas
 
 이벤트를 추적하는 사용자 지정 속성을 증분하여 사용자가 일주일 동안 수강한 수업 수를 추적할 수 있습니다. 이 구성 요소를 사용하면 한 주가 시작될 때 수업 수를 재설정하고 추적을 다시 시작할 수 있습니다. 
 
-![][7]{: style="max-width:90%;"}
+!["class_count" 속성을 1씩 증가시키는 사용자 업데이트 단계]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### 개체 배열 업데이트하기
 
@@ -60,7 +62,7 @@ An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attrib
 
 배열에 항목을 추가하거나 제거하면 사용자의 위시리스트가 업데이트됩니다.
 
-![][9]{: style="max-width:90%;"}
+!["items_in_wishlist" 속성에 "선블록" 항목을 추가하는 사용자 업데이트 단계.]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### 사용 사례: 장바구니 총액 계산
 
@@ -122,7 +124,7 @@ An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attrib
 
 사용자 업데이트 단계를 사용하여 `canvas_entry_property`를 지속할 수 있습니다. 카트에 품목이 추가될 때 트리거되는 이벤트가 있다고 가정해 보겠습니다. 가장 최근에 장바구니에 추가한 품목의 ID를 저장하여 리마케팅 캠페인에 사용할 수 있습니다. 개인화 기능을 사용하여 캔버스 항목 속성정보를 검색하고 속성정보에 저장합니다.
 
-![][8]{: style="max-width:90%;"}
+![사용자 업데이트 단계에서는 "most_recent_cart_item" 속성을 항목 ID로 업데이트합니다.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### 개인화
 
@@ -141,11 +143,11 @@ An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attrib
 
 JSON 작성기에 속성, 이벤트 또는 구매 JSON 개체를 최대 65,536자까지 추가할 수 있습니다. 사용자의 [글로벌 구독]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) 및 [구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) 상태도 설정할 수 있습니다.
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
 고급 작성기를 사용하면 **미리보기 및 테스트** 탭을 사용하여 사용자 프로필이 변경 사항으로 업데이트되었는지 미리 보고 테스트할 수도 있습니다. 무작위 사용자를 선택하거나 특정 사용자를 검색할 수 있습니다. 그런 다음 사용자에게 테스트를 보낸 후 생성된 링크를 사용하여 사용자 프로필을 확인합니다.
 
-![][6]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### 고려 사항
 
@@ -243,12 +245,3 @@ JSON 작성기 내에서 사용자의 구독 상태를 편집할 수도 있습�
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %}
-[2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %}
-[3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %}
-[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %}
-[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %}
-[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}
-[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %}
-[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %}
-[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 

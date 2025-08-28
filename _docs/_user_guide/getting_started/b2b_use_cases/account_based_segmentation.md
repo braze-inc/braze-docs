@@ -1,5 +1,5 @@
 ---
-nav_title: Account-Based Segmentation
+nav_title: Account-based segmentation
 article_title: Setting Up Account-Based Segmentation
 page_order: 2
 page_type: reference
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2: When using connected sources for your business objects
 
-For the basics on how to use connected sources in segmentation, refer to [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use the templates covered in [When using catalogs](#option-1-when-using-catalogs-for-your-business-objects) for inspiration on how to format the source tables, as you can format them any way you want.
+For the basics on how to use connected sources in segmentation, refer to [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use the templates covered in [When using catalogs](#option-1-when-using-catalogs-for-your-business-objects) for inspiration on how to format the source tables, as you can format them any way you want.
 
 ## Using your account-based extension in a segment
 

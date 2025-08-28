@@ -30,7 +30,7 @@ alias: /user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
 ## Braze WhatsApp 채널에 옵트인을 설정하세요
 
 WhatsApp 옵트인에 대해서는 [WhatsApp의 요구 사항](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/)을 준수해야 합니다. 다음 정보를 Braze에 제공해야 합니다:
-- [전화번호]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)인 `external_id` 및 모든 사용자의 업데이트된 가입 상태. This can be done by using the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) or through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status.
+- [전화번호]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/)인 `external_id` 및 모든 사용자의 업데이트된 가입 상태. This can be done by using the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) or through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status.
 
 {% alert note %}
 Braze는 `/users/track` 엔드포인트에 대한 개선 사항을 발표하여 [구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)에서 배울 수 있는 구독 상태 업데이트를 허용합니다. 그러나 [`/v2/subscription/status/set` 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)를 사용하여 이미 옵트인 프로토콜을 생성한 경우 계속해서 해당 엔드포인트를 사용할 수 있습니다.
@@ -98,11 +98,11 @@ Braze는 `/users/track` 엔드포인트에 대한 개선 사항을 발표하여 
 
 #### 1단계: "인바운드 WhatsApp 메시지"의 트리거로 캔버스를 만드세요
  
-액션 기반 캔버스 입력 단계로, WhatsApp 수신 메시지를 보내는 사용자를 입력합니다.
+![Action-based Canvas entry step that that enters users who send a WhatsApp inbound message.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 키워드 트리거를 선택할 때 "중지" 또는 "메시지 없음"과 같은 단어를 포함하세요. 이 방법을 선택하면 고객이 옵트아웃 단어를 알고 있는지 확인하세요. 예를 들어, 초기 옵트인을 받은 후에 "이 메시지를 옵트아웃하려면 언제든지 "중지"라고 메시지를 보내세요."와 같은 후속 응답을 포함하세요. 
 
-메시지 단계에서 WhatsApp 수신 메시지를 보내는 방법은 메시지 본문이 "STOP" 또는 "NO 메시지"인 경우입니다.
+![Message step to send a WhatsApp inbound message where the message body is "STOP" or "NO MESSAGE".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### 2단계: 사용자의 프로필을 업데이트하십시오
 
@@ -112,7 +112,7 @@ Braze는 `/users/track` 엔드포인트에 대한 개선 사항을 발표하여 
 
 WhatsApp 메시지 템플릿 생성기 내에서 "마케팅 옵트아웃" 옵션을 포함할 수 있습니다. 이것을 포함할 때마다 템플릿이 캔버스에서 사용되고 구독 그룹 변경을 위한 후속 단계가 있는지 확인하십시오. 
 
-1. "마케팅 옵트아웃" 빠른 응답과 함께 메시지 템플릿을 만드세요.<br>마케팅 수신 거부 옵션이 있는 메시지 템플릿<br><br>마케팅 옵트아웃 버튼을 구성하는 섹션.<br><br>
+1. "마케팅 옵트아웃" 빠른 응답과 함께 메시지 템플릿을 만드세요.<br>![Message template with a footer option of "Marketing opt-out"]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Section to configure a marketing oopt-out button.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. 이 메시지 템플릿을 사용하는 캔버스를 만드십시오.<br><br>
 3. 앞의 예에서와 같이 단계를 따르되 트리거 텍스트 "STOP PROMOTIONS"를 사용하십시오.<br><br>
 4. [구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)에 설명된 방법 중 하나를 사용하여 사용자의 구독 상태를 업데이트하십시오.
@@ -136,10 +136,10 @@ WhatsApp에 대해 "시작" 및 "중지" 키워드 응답 워크플로를 구성
 "중지" 메시지의 경우 메시지 단계를 반전하여 옵트아웃 확인 및 사용자 업데이트 단계를 수행합니다. 사용자가 그렇지 않으면 먼저 구독 그룹에서 선택 해제되고 확인 메시지를 받을 자격이 없게 됩니다.
 {% endalert %}
 
-WhatsApp 메시지 단계에서 메시지 본문은 "START"입니다.
+![A WhatsApp message step where the message body is "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\. 캔버스에서 **사용자 업데이트 설정** 단계를 만들고 **작업**에 대해 **고급 JSON 편집기**를 선택합니다. <br><br>사용자 업데이트 단계에서 "고급 JSON 편집기" 작업.<br><br>
+2\. 캔버스에서 **사용자 업데이트 설정** 단계를 만들고 **작업**에 대해 **고급 JSON 편집기**를 선택합니다. <br><br>![User Update step with an action of "Advanced JSON Editor".]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
 3\. 다음 JSON 페이로드로 **사용자 업데이트 개체**를 채우고 `XXXXXXXXXXX`를 구독 그룹 ID로 바꿉니다:
 
 {% raw %}
@@ -160,7 +160,7 @@ WhatsApp 메시지 단계에서 메시지 본문은 "START"입니다.
 {% endraw %}
 
 {: start="4"}
-4\. WhatsApp 메시지 단계를 추가합니다. <br><br>사용자 업데이트 단계 in a 캔버스.
+4\. WhatsApp 메시지 단계를 추가합니다. <br><br>![User Update step in a Canvas.]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
 
 #### 고려 사항
 
@@ -174,10 +174,22 @@ WhatsApp 메시지 단계에서 메시지 본문은 "START"입니다.
 STOP 메시지에는 이 방법을 사용할 필요가 없습니다. 확인 메시지는 사용자가 구독 그룹에서 제거되기 전에 전송되므로 다른 두 단계 중 하나를 사용할 수 있습니다.
 {% endalert %}
 
-1. 캠페인 또는 캔버스를 생성하고 액션 기반 단계 **WhatsApp 인바운드 메시지 보내기**를 추가하세요. **메시지 본문**을 선택하고 **Is**에 "START"를 입력합니다.<br><br>WhatsApp 메시지 단계에서 메시지 본문은 "START"입니다.<br><br>
-2. 캠페인 또는 캔버스에서 웹훅 메시지 단계를 만들고 **요청 본문**을 **원시 텍스트**로 변경합니다.<br><br>웹훅을 위한 메시지 단계.<br><br>
-3. 고객의 [엔드포인트 URL]({{site.baseurl}}/api/basics/)을 **웹훅 URL**에 입력한 다음 엔드포인트 링크 `campaigns/trigger/send`를 입력하세요. 예를 들어, `https://dashboard-02.braze.eu/campaigns/trigger/send`입니다.<br><br>웹훅 URL 필드 "웹훅 작성" 섹션 아래.<br><br>
-4. 원시 텍스트에 다음 JSON 페이로드를 입력하고 `XXXXXXXXXXX`를 구독 그룹 ID로 교체하세요. 두 번째 캠페인을 만든 후 `campaign_id`을(를) 교체해야 합니다.
+1. 캠페인 또는 캔버스를 생성하고 액션 기반 단계 **WhatsApp 인바운드 메시지 보내기**를 추가하세요. **메시지 본문**을 선택하고 **Is**에 "START"를 입력합니다.
+
+![WhatsApp message step where the message body is "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+
+{: start="2"}
+2\. In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text**.
+
+![Message step for a webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+
+{: start="3"}
+3\. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `campaigns/trigger/send`. For example, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
+
+![Webhook URL field under the "Compose Webhook" section.]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+
+{: start="4"}
+4\. In the raw text, enter the following JSON payload and replace `XXXXXXXXXXX` with your subscription group ID. You will need to replace the `campaign_id` after creating your second campaign.
 
 {% raw %}
 ```json
@@ -219,22 +231,3 @@ STOP 메시지에는 이 방법을 사용할 필요가 없습니다. 확인 메�
 | `Matches regex` | `(?i)STOP(?-i)` | "STOP"의 모든 사용을 대소문자 구분 없이 포착합니다. 예를 들어, 이것은 "멈춰" , "제발 멈춰" , 그리고 "절대 나에게 메시지를 보내는 것을 멈추지 마"를 잡습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp114.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp115.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp116.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp117.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp118.png %}
-[9]: {% image_buster /assets/img/whatsapp/whatsapp119.png %}
-[10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %}
-[11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %}
-[12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %}
-[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}
-[14]: {% image_buster /assets/img/whatsapp/user_update.png %}
-[15]: {% image_buster /assets/img/whatsapp/message_step.png %}
-[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %}
-[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %}
-[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %}
-[19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 

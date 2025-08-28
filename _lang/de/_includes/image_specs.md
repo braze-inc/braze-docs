@@ -90,47 +90,52 @@ table td {
 </style>
 
 <table>
-  <tr>
-    <th>Bildtyp</th>
-    <th>Seitenverhältnis</th>
-    <th>Bildqualität</th>
-    <th>Maximale Bildgröße</th>
-    <th>Dateitypen</th>
-    <th>Anmerkungen</th>
-  </tr>
-  <tr>
-    <td>iOS</td>
-    <td>2:1 (empfohlen)</td>
-    <td>1038 x 1038 px maximal</td>
-    <td>5 MB</td>
-    <td>PNG, JPEG, GIF</td>
-    <td>Ab Januar 2020 können iOS Rich-Push-Benachrichtigungen Bilder mit einer Größe von 1038 x 1038 px verarbeiten, solange sie unter 10 MB liegen. Wir empfehlen jedoch, eine möglichst kleine Dateigröße zu verwenden. In der Praxis kann das Versenden großer Dateien sowohl unnötigen Stress für das Netzwerk verursachen als auch dazu führen, dass es häufiger zu Timeouts beim Herunterladen kommt.<br><br>Weitere Informationen finden Sie unter <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS Rich Notifications</a>.</td>
-  </tr>
-  <tr>
-    <td>Android Push-Symbol</td>
-    <td>1:1</td>
-    <td>--</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Android erweitertes Benachrichtigungsbild</td>
-    <td>2:1</td>
-    <td>Klein: 512 x 256 px<br>Medium: 1024 x 512 px<br>Groß: 2048 x 1024 px</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td>Wird in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android Rich Notifications</a> verwendet.</td>
-  </tr>
-  <tr>
-    <td>Android Neigungsbild</td>
-    <td>3:2</td>
-    <td>--</td>
-    <td>--</td>
-    <td>PNG, JPEG</td>
-    <td>Weitere Einzelheiten finden Sie unter <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android-Inline-Image-Push</a>.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Bildtyp</th>
+      <th>Seitenverhältnis</th>
+      <th>Maximale Pixel</th>
+      <th>Maximale Bildgröße</th>
+      <th>Dateitypen</th>
+      <th>Anmerkungen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>2:1 (empfohlen)</td>
+      <td>1038 x 1038</td>
+      <td>5 MB</td>
+      <td>PNG, JPEG, GIF</td>
+      <td>Ab Januar 2020 können iOS Rich-Push-Benachrichtigungen Bilder mit einer Größe von 1038 x 1038 px verarbeiten, solange sie unter 10 MB liegen. Wir empfehlen jedoch, eine möglichst kleine Dateigröße zu verwenden. In der Praxis kann das Versenden großer Dateien sowohl unnötigen Stress für das Netzwerk verursachen als auch dazu führen, dass es häufiger zu Timeouts beim Herunterladen kommt.<br><br>Weitere Informationen finden Sie unter <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS Rich Notifications</a>.</td>
+    </tr>
+    <tr>
+      <td>Android Push-Symbol</td>
+      <td>1:1</td>
+      <td>--</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Android erweitertes Benachrichtigungsbild</td>
+      <td>2:1</td>
+      <td><b>Klein:</b><br>512 x 256<br><br><b>Medium:</b><br>1024 x 512<br><br><b>Groß:</b><br>2048 x 1024</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td>Wird in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android Rich Notifications</a> verwendet.</td>
+    </tr>
+    <tr>
+      <td>Android Neigungsbild</td>
+      <td>3:2</td>
+      <td>--</td>
+      <td>--</td>
+      <td>PNG, JPEG</td>
+      <td>Weitere Einzelheiten finden Sie unter <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android-Inline-Image-Push</a>.</td>
+    </tr>
+  </tbody>
 </table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4  .reset-td-br-5 .reset-td-br-6 role="presentation"}
 
 {% endif %}
 

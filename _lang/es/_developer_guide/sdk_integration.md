@@ -5,7 +5,7 @@ description: "Aprende a integrar el SDK de Braze."
 page_order: 2.0
 ---
 
-# Integración del SDK de Braze
+# ![Logo Braze]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integración del SDK Braze
 
 > Aprende a integrar el SDK de Braze en tu aplicación móvil. Cada SDK está alojado en su propio repositorio público de GitHub, que incluye aplicaciones de muestra totalmente compilables que puedes utilizar para probar las características de Braze o implementarlas junto con tus propias aplicaciones. Para saber más, consulta [Referencias, Repositorios y Ejemplos de aplicaciones]({{site.baseurl}}/developer_guide/references/). Para más información general sobre el SDK, consulta [Introducción: Visión general de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
@@ -19,39 +19,39 @@ page_order: 2.0
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/swift/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/cordova/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/flutter/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/react_native/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/roku/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/unity/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/sdk_integration.md developer_ %}
+{% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
 {% endsdktabs %}
 

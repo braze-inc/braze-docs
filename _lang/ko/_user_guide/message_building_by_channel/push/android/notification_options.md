@@ -17,7 +17,7 @@ channel:
 
 ## 무음 알림
 
-[푸시 알림 메시지를 작성할]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message) 때 제목이 없는 Android 푸시 메시지는 보낼 **수** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) 참조하세요.
+[푸시 알림 메시지를 작성할]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message) 때 제목이 없는 Android 푸시 메시지는 보낼 **수** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) 참조하세요.
 
 ## 알림 그룹
 
@@ -25,7 +25,7 @@ channel:
 
 먼저 Android 푸시 캠페인을 만든 다음 **작성** 탭의 상단에서 **알림 채널** 드롭다운을 찾습니다.
 
-![][28]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
 
 드롭다운에서 알림 채널을 선택합니다. 또한 알림 채널 설정이 오작동하는 경우를 대비하여 대체 채널을 선택해야 합니다.
 
@@ -33,8 +33,6 @@ channel:
 
 알림 채널에 알림 ID를 추가하려면 **알림 채널** 드롭다운 메뉴에서 알림 **채널 관리를** 클릭하고 필수 입력란을 작성합니다. 알림 채널은 앱에서 정의해야만 Braze 플랫폼에서 사용할 수 있습니다.
 
-![][29]{: style="max-width:80%;" }
+![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
-[28]: {% image_buster /assets/img_archive/notification_channel_dropdown.png %}
-[29]: {% image_buster /assets/img_archive/notification_channels.png %}

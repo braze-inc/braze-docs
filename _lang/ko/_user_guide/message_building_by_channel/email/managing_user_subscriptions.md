@@ -33,7 +33,7 @@ Braze는 데이터 포인트, 전 세계 및 구독 그룹에 대한 구독 상�
 
 Braze는 [커스텀 바닥글]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer)을 통해 수동으로 이메일 구독을 취소하는 모든 사용자의 구독을 자동으로 취소합니다. 사용자가 이메일 주소를 업데이트하고 **전송 구성** 설정에서 **이메일 업데이트 시 사용자 재구독이** 활성화되어 있으면 정상적인 이메일 전송이 재개됩니다.
 
-사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 이 경우 트랜잭션 이메일은 **대상 고객** 단계에서 **수신 거부한 사용자를 포함한 모든 사용자에게 보내기** 옵션을 선택한 것을 의미합니다.
+사용자가 하나 이상의 이메일을 스팸으로 표시한 경우 Braze는 해당 사용자에게만 트랜잭션 이메일을 보냅니다. 이 경우 트랜잭션 이메일은 **대상 고객** 단계에서 **수신 거부한 사용자를 포함한 모든 사용자에게 보내기** 옵션을 선택한 것을 참조합니다.
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
@@ -41,7 +41,7 @@ Refer to our [IP warming]({{site.baseurl}}/user_guide/message_building_by_channe
 
 ### 반송 및 유효하지 않은 이메일
 
-{% multi_lang_include metrics.md metric='하드 바운스' %} {% multi_lang_include metrics.md metric='소프트 바운스' %} 
+{% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='소프트 바운스' %} 
 
 When an email address hard bounces, the user's subscription state isn't automatically set to "unsubscribed". If an email address hard bounces (such as when an email is invalid or doesn't exist), we'll mark the user's email address as invalid and will not attempt to send further emails to that email address. 해당 사용자의 이메일 주소가 변경되면 새 이메일이 유효할 수 있으므로 이메일 전송을 재개합니다. 소프트 바운스는 72시간 동안 자동으로 재시도됩니다.
 
@@ -70,7 +70,7 @@ Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_
 
 ### 이메일 구독 상태 확인
 
-![User profile for John Doe with their email subscription state set to Subscribed.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their email subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze에서 사용자의 이메일 구독 상태를 확인할 수 있는 방법은 두 가지가 있습니다:
 
@@ -90,25 +90,19 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 ### 구독 그룹 만들기
 
 1. **오디언스** > **구독**으로 이동합니다.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Users** > **Subscription Groups**.
-{% endalert %}
-
-{: start="2"}
-2\. Select **Create email subscription group**.
-3\. Give your subscription group a name and description.
-4\. Select **Save**. 
+2. Select **Create email subscription group**. 
+3. Give your subscription group a name and description.
+4. Select **Save**. 
 
 모든 구독 그룹은 환경설정 센터에 자동으로 추가됩니다.
 
-![Fields to create a subscription group.][2]{: style="max-width:75%"}
+![Fields to create a subscription group.]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### 구독 그룹으로 세분화하기
 
 세그먼트를 만들 때 구독 그룹 이름을 필터로 설정합니다. 이렇게 하면 그룹에 옵트인한 사용자가 내 이메일을 받을 수 있습니다. 월간 뉴스레터, 쿠폰, 멤버십 등급 등에 유용하게 사용할 수 있습니다.
 
-![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.][3]{: style="max-width:90%"}
+![Example of targeting users in the "Lapsed Users" segment with the filter for users in the "Stable Alerts" subscription group.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### 구독 그룹 아카이브
 
@@ -125,7 +119,7 @@ Braze는 보관된 그룹의 사용자에 대한 상태 변경을 처리하지 �
 
 You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to view the subscription group size based on the number of users over a period of time. 이러한 구독 그룹 크기는 세그먼트 크기 계산과 같은 Braze의 다른 영역과도 일치합니다.
 
-![12월 2일부터 11일까지의 '구독 그룹 시계열' 그래프 예시입니다. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.][4]
+![12월 2일부터 11일까지의 '구독 그룹 시계열' 그래프 예시입니다. The graph shows a ~10 million increase in the number of users from the 6th to the 7th.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### 캠페인 분석에서 구독 그룹 보기
 
@@ -134,7 +128,7 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 1. From the **Campaign Analytics** page for your campaign, scroll down to the **Email Message Performance** section.
 2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
-![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.][5]
+![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
 ## 이메일 환경설정 센터
 
@@ -169,7 +163,7 @@ To create a custom landing page that users will be directed to (instead of the d
 
 We recommend including a resubscribe link (such as {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) on the landing page so that users have the option to resubscribe in case they unsubscribed by accident.
 
-![Custom unsubscribe email in the Custom Unsubscribe Page panel.][6]
+![Custom unsubscribe email in the Custom Unsubscribe Page panel.]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### 사용자 지정 옵트인 페이지 만들기
 
@@ -203,13 +197,5 @@ The "Email Subscription Status" and "Push Subscription Status" filters allow you
 
 This can be useful if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. 이 경우 "이메일/푸시 구독 상태가 구독됨"에 대한 필터를 사용하여 세그먼트를 생성하면 이 세그먼트에 대한 캠페인이 구독 중이지만 옵트인하지 않은 사용자에게 전달됩니다.
 
-![Email Subscription Status used as a segment filter.][8]
+![Email Subscription Status used as a segment filter.]({% image_buster /assets/img_archive/not_optin.png %})
 
-[1]: {% image_buster /assets/img/push_example.png %}
-[2]: {% image_buster /assets/img/sub_group_create.png %}
-[3]: {% image_buster /assets/img/segment_sub_group.png %}
-[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[8]: {% image_buster /assets/img_archive/not_optin.png %}

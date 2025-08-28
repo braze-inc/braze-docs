@@ -1,5 +1,5 @@
 ---
-nav_title: Internal Groups
+nav_title: Internal groups
 article_title: Internal Group
 page_order: 10
 page_type: reference
@@ -32,7 +32,7 @@ To create an internal group, do the following:
 |--------------------|---------------------------------------------------------------------------------------------|
 | **User Event Group**   | Used for verifying events or logs from your test device.                                    |
 | **Content Test Group** | Can be used across push, email, and in-app messages to send a rendered copy of the message. |
-| **Seed Group**         | Automatically sends a copy of the email to everyone the Seed Group upon send.               |
+| **Seed Group**         | Automatically sends a copy of the email to everyone in the Seed Group upon send.               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![An internal group named "Email test group".]({% image_buster /assets/img_archive/internal_group.png %})
@@ -48,7 +48,7 @@ After you create your internal group, you can add test users as members of that 
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Add identified user** | Search for the user by their external user ID, email address, phone number, or push token.                                                                                                                                                           |
 | **Add anonymous user**  | Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) page. |
-| **Bulk add users**      | Copy and paste a list of email addresses or external IDs. You can only add users that are already known in the dashboard. For more information, refer to [User import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).          |
+| **Bulk add users**      | Copy and paste a list of email addresses or external IDs. You can only add users who are already known in the dashboard. For more information, refer to [User import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).          |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Internal Group Settings when creating a new internal group]({% image_buster /assets/img_archive/internal_group_add_user.png %})
@@ -63,7 +63,7 @@ Similar to sending a preview test of a message, the Content Test Group saves you
 
 You can select individual Braze users or as many internal groups to send the message to. If your message includes any Liquid or other dynamic personalization, Braze will use the attributes available for each user to personalize the message contents. For users who have no attributes, Braze will use the default value set.
 
-Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each user's attributes versus the previewed version.
+Additionally, if you preview the message as a random user, a custom user, or an existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each user's attributes versus the previewed version.
 
 If you use an IP pool to send out an email, you can select which IP pool you would like the email to be sent from by selecting the pool from the dropdown available.
 
@@ -79,10 +79,11 @@ After creating an internal group and tagging it to be used as a Seed Group, you 
 
 Seed emails will have `[SEED]` appended to the start of the email subject line. Note that seed emails **do not**:
 
-- Increment sends in dashboard analytics.
+- Increment sends in the dashboard analytics.
 - Impact email analytics or retargeting. 
 - Update a user profile's **Campaign Received** list.
 - Impact frequency capping.
+- Account for or impact the delivery speed rate limits.
 
 {% alert tip %}
 If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their spam folders.
@@ -104,7 +105,7 @@ If you have a recurring campaign and any one of the variants is updated, you can
 
 #### For Canvas
 
-Seed groups in Canvas work similarly to that of any triggered campaign. Braze automatically detects all steps that contain an email message and will send to these when your user first reaches that particular email step.
+Seed groups in Canvas work similarly to any triggered campaign. Braze automatically detects all steps that contain an email message and will send to these when your user first reaches that particular email step.
 
 If an email step was updated after the Seed Group was mailed, the option to only send to updated steps, all steps, or turn off seeds will be presented.
 

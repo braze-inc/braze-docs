@@ -112,10 +112,9 @@ O nome do domínio deve seguir esses parâmetros:
 
 ### Validação adicional necessária
 
-O rótulo final do domínio deve ser um domínio de nível superior (TLD) válido, que é determinado por qualquer coisa após o ponto final (.). Esse TLD deve estar na [lista de TLDs da ICANN][2]. O validador de e-mail do Braze verifica apenas se a sintaxe do e-mail está correta de acordo com a expressão regular listada nesta seção. Ele não captura erros de digitação ou endereços que não existem.
+O rótulo final do domínio deve ser um domínio de nível superior (TLD) válido, que é determinado por qualquer coisa após o ponto final (.). Esse TLD deve estar na [lista de TLDs da ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). O validador de e-mail do Braze verifica apenas se a sintaxe do e-mail está correta de acordo com a expressão regular listada nesta seção. Ele não captura erros de digitação ou endereços que não existem.
 
 {% alert important %}
 O Unicode é aceito apenas para a parte local do endereço de e-mail. O Unicode não é aceito para a parte do domínio, mas pode ser codificado em Punycode.
 {% endalert %}
 
-[2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt

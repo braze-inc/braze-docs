@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
   - name: Identificador Cifrado a nivel de campo
-    link: /docs/user_guide/analytics/field_level_encryption/
+    link: /docs/user_guide/data/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
@@ -38,8 +38,8 @@ guide_menu_list:
   - name: Preferencias de correo electrónico
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Configuración de TTL de notificaciones push
-    link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
+  - name: Configuración de push
+    link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Configuración multilingüe
     link: /docs/multi_language_support/

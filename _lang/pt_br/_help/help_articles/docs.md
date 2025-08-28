@@ -11,7 +11,7 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Contribuição para a documentação da Braze
-    link: /docs/help/help_articles/docs/contribution/
+    link: /docs/contributing/home/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Sobreposição da Barra de Rolagem
     link: /docs/help/help_articles/docs/scroll_bar_overlap/

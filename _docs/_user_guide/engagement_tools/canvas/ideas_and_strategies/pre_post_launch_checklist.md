@@ -1,5 +1,5 @@
 ---
-nav_title: Pre and Post-Launch Checklist
+nav_title: Pre and post-launch checklist
 article_title: Pre and Post-Launch Checklist
 page_order: 2
 description: "This article provides a guideline for things to check before and after you launch a Canvas."
@@ -14,10 +14,6 @@ tool: Canvas
 ## Things to consider before launch
 
 Before you launch a Canvas, there are several details you can check to ensure that your messaging and send times align with your audience's preferences. Things to consider include any variations in time zones, entry settings, and more. Using this checklist as a guide, finetune these areas based on your use case to help contribute to the success of your Canvas. 
-
-{% alert important %}
-As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Review time zone settings
 

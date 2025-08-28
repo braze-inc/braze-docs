@@ -25,7 +25,7 @@ description: "このランディングページには、Braze メッセージン
 page_type: landing
 
 guide_top_header: "メッセージングエンドポイント"
-guide_top_text: "Braze メッセージング API でユーザーにメッセージを送信する方法は、2 種類あります。および `/messages/schedule` エンドポイントを使用して、API リクエストで <code class='highlighter-rouge'>/messages/send</code> メッセージの内容と構成を指定できます。あるいは、Braze ダッシュボードで API トリガーのキャンペーンを使用してメッセージの詳細を管理し、`/campaigns/trigger/send` および `/campaigns/trigger/schedule` エンドポイントを使用してメッセージを送信するタイミングと送信者をコントロールすることもできます。以下のセクションでは、両方のメソッドのリクエスト指定について詳しく説明します。<br> <br> 他のキャンペーンと同様に、特定のユーザがメッセージングAPI キャンペーンを受信できる回数を制限するには、Braze ダッシュボードで[re-eligibility settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-apBraze は、送信されたAPI リクエスト数に関係なく、キャンペーンの再受信を設定していないユーザーには API メッセージを配信しません。<br> <br> 「メッセージを送信」エンドポイントでは、指定したユーザーに即時メッセージを送信できます。セグメントをターゲットにしている場合、リクエストの記録は **メッセージアクティビティログ** に保存されます。「メッセージをスケジュール」エンドポイントを使用して、指定した時間にメッセージを送信するか、すでにスケジュールしたメッセージを変更またはキャンセルします。"
+guide_top_text: "Braze メッセージング API でユーザーにメッセージを送信する方法は、2 種類あります。および `/messages/schedule` エンドポイントを使用して、API リクエストで <code class='highlighter-rouge'>/messages/send</code> メッセージの内容と構成を指定できます。あるいは、Braze ダッシュボードで API トリガーのキャンペーンを使用してメッセージの詳細を管理し、`/campaigns/trigger/send` および `/campaigns/trigger/schedule` エンドポイントを使用してメッセージを送信するタイミングと送信者をコントロールすることもできます。以下のセクションでは、両方のメソッドのリクエスト指定について詳しく説明します。<br> <br> 他のキャンペーンと同様に、Braze ダッシュボードで [再資格設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) を構成することで、特定のユーザーがメッセージング API キャンペーンを受信できる回数を制限できます。Braze は、送信されたAPI リクエスト数に関係なく、キャンペーンの再受信を設定していないユーザーには API メッセージを配信しません。<br> <br> 「メッセージを送信」エンドポイントでは、指定したユーザーに即時メッセージを送信できます。セグメントをターゲットにしている場合、リクエストの記録は **メッセージアクティビティログ** に保存されます。「メッセージをスケジュール」エンドポイントを使用して、指定した時間にメッセージを送信するか、すでにスケジュールしたメッセージを変更またはキャンセルします。"
 
 guide_featured_title: "「メッセージをスケジュール」エンドポイント"
 guide_featured_list:
@@ -75,8 +75,17 @@ guide_menu_list:
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     image: /assets/img/braze_icons/inbox-01.svg
 
-guide_menu_title2: "Live Activity endpoints"
+guide_menu_title2: "Duplicate message endpoints"
 guide_menu_list2:
+  - name: "POST:重複キャンペーン"
+    link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/
+    image: /assets/img/braze_icons/copy-04.svg
+  - name: "POST:キャンバスの複製"
+    link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/
+    image: /assets/img/braze_icons/copy-04.svg
+
+guide_menu_title3: "Live Activity endpoints"
+guide_menu_list3:
   - name: "POST:ライブアクティビティを更新"
     link: /docs/api/endpoints/messaging/live_activity/update/
     image: /assets/img/braze_icons/tablet-01.svg

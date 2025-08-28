@@ -2,7 +2,23 @@
 
 ## Default user attributes
 
-To set user attributes, you need to set the appropriate field on the shared `ABKUser` object. The following is an example of setting the first name attribute:
+### Supported attributes
+
+The following attributes should be set on the `Braze.User` object:
+
+- `firstName`
+- `lastName`
+- `email`
+- `dateOfBirth`
+- `country`
+- `language`
+- `homeCity`
+- `phone`
+- `gender`
+
+### Setting default attributes
+
+To set a default user attribute, set the appropriate field on the shared `Braze.User` object. The following is an example of setting the first name attribute:
 
 {% tabs %}
 {% tab swift %}
@@ -21,17 +37,26 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 {% endtab %}
 {% endtabs %}
 
-The following attributes should be set on the `Braze.User` object:
+### Unsetting default attributes
 
-- `firstName`
-- `lastName`
-- `email`
-- `dateOfBirth`
-- `country`
-- `language`
-- `homeCity`
-- `phone`
-- `gender`
+To unset a default user attribute, pass `nil` to the relevant method.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+AppDelegate.braze?.user.set(firstName: nil)
+```
+
+{% endtab %}
+{% tab objective-c %}
+
+```objc
+[AppDelegate.braze.user setFirstName:nil];
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Custom user attributes
 
@@ -188,12 +213,11 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 {% endtab %}
 {% endtabs %}
 
-### Unsetting a custom attribute
-
-Custom attributes can also be unset using the following method:
+### Unsetting custom attributes
 
 {% tabs %}
 {% tab swift %}
+To unset a custom attribute, pass the relevant attribute key to the `unsetCustomAttribute` method.
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
@@ -201,11 +225,42 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 {% endtab %}
 {% tab objective-c %}
+To unset a custom attribute, pass the relevant attribute key to the `unsetCustomAttributeWithKey` method.
 
 ```objc
 [AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
 ```
 
+{% endtab %}
+{% endtabs %}
+
+### Nesting custom attributes
+
+You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab swift %}
+```swift
+let favoriteBook: [String: Any?] = [
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "publishing_date": "1937"
+]
+
+braze.user.setCustomAttribute(key: "favorite_book", dictionary: favoriteBook)
+```
+{% endtab %}
+
+{% tab objective-c %}
+```objc
+NSDictionary *favoriteBook = @{
+  @"title": @"The Hobbit",
+  @"author": @"J.R.R. Tolkien",
+  @"publishing_date": @"1937"
+};
+
+[AppDelegate.braze.user setCustomAttributeWithKey:@"favorite_book" dictionary:favoriteBook];
+```
 {% endtab %}
 {% endtabs %}
 

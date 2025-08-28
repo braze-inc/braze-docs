@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Webhook
+nav_title: Creating a webhook
 article_title: Creating a Webhook
 page_order: 1
 channel:
@@ -172,7 +172,9 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. In this step, you will select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. In this step, you will select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 #### Choose conversion events
 
@@ -195,17 +197,20 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+Webhooks rely on Braze servers making requests to an external endpoint, and errors can occasionally occur. The most common errors include syntax errors, expired API keys, rate limits, and unexpected server-side issues. Before sending a webhook campaign:
 
-This description contains the time the error occurred, the app name, and the error message:
+- Test your webhook for syntax errors
+- Ensure personalized variables have default values
+
+If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), and includes details like the error timestamp, app name, and details about the error.
 
 ![Webhook error with the message "An active access token must be used to query information about the current user".]({% image_buster /assets/img_archive/webhook-error.png %})
 
-If the message body is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
+If the error message is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
 
-Like other campaigns, Braze tracks the delivery of your webhook campaigns and the conversions resulting from them. When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. 
+#### Response codes and retry logic
 
-The following table summarizes the different responses the server may send, how they impact campaign analytics, and whether, in the case of errors, Braze will try to redeliver the campaign:
+When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. The following table summarizes the different responses the server may send, how they impact campaign analytics, and whether, in the case of errors, Braze will try to redeliver the campaign:
 
 | Response code | Marked as received? | Retries? |
 |---------------|-----------|----------|
@@ -220,6 +225,10 @@ The following table summarizes the different responses the server may send, how 
 {% alert note %}
 Braze retries the above status codes up to five times within 30 minutes using exponential backoff. If we can't reach your endpoint, retries may be spread over a 24-hour period.<br><br>Each webhook is allowed 90 seconds before it times out.
 {% endalert %}
+
+#### Troubleshooting and additional error details
+
+For detailed explanations, troubleshooting steps, and guidance on resolving specific webhook errors, refer to [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/). You'll also find more explanations on how our unhealthy host detection system works and how Braze provides error notifications through automated emails and additional logging in Braze Currents.
 
 ### IP allowlisting {#ip-allowlisting}
 

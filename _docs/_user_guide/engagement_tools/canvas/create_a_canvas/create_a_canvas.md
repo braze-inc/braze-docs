@@ -13,7 +13,7 @@ search_rank: 1
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
 {% details Original Canvas editor %}
-You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) to the most current editor.
 {% enddetails %}
 
 ## Creating a Canvas
@@ -35,7 +35,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn more about the [Basics step](#step-2a-set-up-your-canvas-basics).
   {% endtab %}
   {% tab Entry Schedule %}
-    Here, you will decide how your users will enter your Canvas:
+    Here, you will decide how and when your users will enter your Canvas:
     - Scheduled: This is a time-based Canvas entry
     - Action-Based: Your user will enter your Canvas after they perform a defined action
     - API-Triggered: Use an API request to enter users into your Canvas
@@ -132,12 +132,12 @@ If a user re-enters the Canvas, reaches the same component as their previous ent
 
 #### Step 1.3: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
+Only the users who match your defined criteria can enter the journey in the **Target Audience** step, meaning Braze evaluates the target audience for eligibility first **before** users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
 
-Under **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
+In **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
-{% alert warning %}
-Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
+{% alert important %}
+Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
 {% endalert %}
 
 ##### Testing your audience
@@ -194,7 +194,7 @@ To do so, set the **Subscription Settings** to send this Canvas to "opted-in use
 These subscription settings are applied on a per-step basis, meaning that there is no effect on the entry audience. So, this setting is used to evaluate a user's eligibility to receive each Canvas step.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Audience** step that limits the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Audience** step that limits the audience to a single channel (for example, `Foreground Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 If desired, specify Quiet Hours (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
@@ -241,8 +241,8 @@ As you begin to add more steps, you can switch up the zoom level to focus in on 
 
 ![The component search window adding a delay step to the Braze Canvas.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
-{% alert warning %}
-A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
+{% alert important %}
+You can add up to 200 steps in a Canvas. If your Canvas exceeds 200 steps, loading issues may occur.
 {% endalert %}
 
 ##### Maximum duration
@@ -253,7 +253,7 @@ As your Canvas journey increases in steps, the maximum duration is the longest p
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
 
-You can edit any step in your Canvas Flow workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
 ![An example "Delay" step with the delay set to "Until a specific day."]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
@@ -294,7 +294,7 @@ For example, consider the following request: `\"canvas_entry_properties\" : {\"p
 {% tab Event Properties %}
 Event properties are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+In Canvas, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step
 

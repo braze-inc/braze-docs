@@ -19,15 +19,15 @@ channel:
 
 メッセージを分類し、ユーザーの通知トレイにグループ分けしたい場合は、Brazeを通じてiOSの通知グループ機能を利用できる。
 
-iOSプッシュ・キャンペーンを作成し、**[メール送信]**タブの一番上にある[**通知グループ]**ドロップダウンを探す。
+iOS プッシュ通知のキャンペーンを作成し、[**設定**] タブに移動して、[**通知グループ**] ドロップダウンを開きます。
 
-![][26]{: style="max-width:60%;" }
+![[設定] タブの [通知グループ] ドロップダウンで「Coupons」という値が選択されている。]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 ドロップダウンから通知グループを選択する。通知グループの設定に不具合がある場合、またはドロップダウンから [**なし**] を選択した場合、メッセージはワークスペース内のすべての定義済みユーザーに通常どおり自動的に送信されます。
 
 ここに通知グループがない場合は、iOSのスレッドIDを使って追加できる。追加したい通知グループごとに、iOSスレッドIDが1つ必要だ。次に、ドロップダウンの [**通知グループを管理**] をクリックし、表示される [**iOS プッシュ通知グループを管理**] ウィンドウの必須フィールドに入力して、iOS スレッド ID を通知グループに追加します。
 
-![][27]
+![iOS プッシュ通知グループを管理するためのウィンドウ。]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 iOS プッシュキャンペーンを作成したら、作成画面の上部を確認します。そこに、**Notification Groups（通知グループ**）と書かれたドロップダウンがある。
 
@@ -82,7 +82,7 @@ Apple は、ユーザーが明示的にオプトインする前に、ユーザ�
 
 ユーザーがどちらのオプションを選択しても、ユーザープロフィールの**Engagement**タブにある[Contact Settingsに]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)適切なトークンまたは[サブスクリプションステータスが]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/)追加される。
 
-![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![プッシュ通知のステータスが [購読登録済み] の連絡先の設定。]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 [セグメンテーション・フィルターを使って]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)、仮承認か否かに基づいてユーザーをターゲティングすることができる。
 
@@ -132,11 +132,17 @@ if (@available(iOS 12.0, *)) {
 
 ### 割り込みレベル (iOS 15以降){#interruption-level}
 
-![iOSの通知設定ページでは、即時配信が有効な通知と、時間指定通知が有効な通知が表示される。]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
 iOS 15の新しいフォーカス・モードでは、ユーザーはアプリの通知を音や振動で「中断」させるタイミングをより自由にコントロールできる。
 
+![iOSの通知設定ページでは、即時配信が有効な通知と、時間指定通知が有効な通知が表示される。]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+
 緊急度に基づいて、通知に含める必要がある割り込みのレベルをアプリで指定できるようになりました。
+
+iOSプッシュ通知の中断レベルを変更するには、**「設定」**タブを選択し、「**中断レベル」**ドロップダウンメニューから希望のレベルを選択する。
+
+![中断レベルを選択するためのドロップダウン。]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+
+この機能にはSDKの最小バージョン要件はないが、iOS 15以上を搭載したデバイスにのみ適用される。
 
 最終的にフォーカスをコントロールできるのはユーザーであり、たとえTime Sensitive通知が配信されても、フォーカスを突破することを許さないアプリを指定できることを心に留めておいてほしい。
 
@@ -150,12 +156,6 @@ iOS 15の新しいフォーカス・モードでは、ユーザーはアプリ�
 |[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|携帯電話の**Do Not Disturb**スイッチが有効になっていても、音が鳴り、バイブレーションが鳴り、画面がオンになる。これには、[Apple による明示的な承認](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/)が必要です。|悪天候や安全警告などの緊急事態|はい|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-iOSプッシュ通知の中断レベルを変更するには、**「設定」**タブを選択し、「**中断レベル」**ドロップダウンメニューから希望のレベルを選択する。
-
-![[Active] (デフォルト) に設定され、使用可能なすべての割り込みレベルが表示されるように展開された [Interruption Level]。パッシブ、アクティブ（デフォルト）、タイムセンシティブ、クリティカル。][28]
-
-この機能にはSDKの最小バージョン要件はないが、iOS 15以上を搭載したデバイスにのみ適用される。
-
 ### 関連性スコア（iOS 15以上） {#relevance-score}
 
 ![]({% image_buster /assets/img/ios/ios15-notification-summary.png %}) "Your Evening Summary "と題されたiOS用の通知サマリーと3つの通知。{: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -168,7 +168,7 @@ iOSプッシュ通知の中断レベルを変更するには、**「設定」**�
 
 iOS通知の関連性スコアを設定するには、**設定**タブで`0.0` から`1.0` の間の値を入力する。例えば、最重要メッセージは `1.0` で送信する必要があり、重要度が中のメッセージは `0.5` で送信できます。
 
-![][29]
+![「0.5」の関連性スコア。]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 この機能にはSDKの最小バージョン要件はないが、iOS 15以上を搭載したデバイスにのみ適用される。
 
@@ -177,7 +177,3 @@ iOS通知の関連性スコアを設定するには、**設定**タブで`0.0` �
 - [画像とテキストの仕様]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS の文字数ガイドライン]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption-level.png %}
-[29]: {% image_buster /assets/img/ios/relevance-score.png %}

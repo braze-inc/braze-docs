@@ -33,6 +33,7 @@ description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
+| `post_launch_draft_version` | 선택 사항 | 부울 | 출시 후 초안이 있는 메시지의 경우 이 값을 `true` 으로 설정하면 사용 가능한 모든 초안 변경 사항이 표시됩니다. 기본값은 다음과 같습니다. `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
@@ -54,6 +55,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "enabled": (boolean) whether this campaign is active or not,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
@@ -81,7 +84,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,

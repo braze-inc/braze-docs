@@ -1,5 +1,5 @@
 ---
-nav_title: Data Models
+nav_title: Data models
 article_title: Creating a B2B Data Model
 page_order: 0
 page_type: reference
@@ -139,7 +139,7 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
 
 ### Option 2: Use connected sources for accounts and opportunities
 
-Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Unlike catalogs, instead of duplicating your business objects (accounts and opportunities) in Braze, you’d be keeping them in your data warehouse and using your warehouse as the source of truth.
+Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Unlike catalogs, instead of duplicating your business objects (accounts and opportunities) in Braze, you’d be keeping them in your data warehouse and using your warehouse as the source of truth.
 
 To set up connected sources, refer to [Integrating connected sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 

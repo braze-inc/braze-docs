@@ -9,11 +9,9 @@ description: "この記事には2018年3月のリリースノートが含まれ�
 
 ## リンクテンプレート
 
-これで、[エンドパラメータ をアプリするテンプレート][91]を作成したり、メール メッセージ内のすべてのリンクにURI をプレエンドすることができます。すべてのリンクにGoogle Analyticsのクエリパラメータを追加したい。やってみましょう。
+これで、[エンドパラメータ をアプリするテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)を作成したり、メール メッセージ内のすべてのリンクにURI をプレエンドすることができます。すべてのリンクにGoogle Analyticsのクエリパラメータを追加したい。やってみましょう。
 
 ## 開発ビルド用のユニバーサルAPN証明書
 
-これで、開発環境で使用する[APNs証明書を設定][90]できる。
+これで、開発環境で使用する[APNs証明書を設定]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/#step-1-configuring-the-push-certificate-and-provisioning-profile)できる。
 
-[90]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting//#step-1-configuring-the-push-certificate-and-provisioning-profile
-[91]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates

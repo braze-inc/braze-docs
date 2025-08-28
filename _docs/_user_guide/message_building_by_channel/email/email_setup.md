@@ -1,5 +1,5 @@
 ---
-nav_title: Email Setup
+nav_title: Email setup
 article_title: Onboarding Email Setup
 layout: dev_guide
 page_order: 1

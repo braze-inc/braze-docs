@@ -15,10 +15,6 @@ search_rank: 5
 
 **청구** 페이지로 이동하려면 **설정** > **청구**로 이동하십시오.
 
-{% alert note %}
-[오래된 탐색]({{site.baseurl}}/navigation)를 사용하고 있다면, 계정 아이콘을 선택한 다음 **구독 및 사용**을 선택하여 이 페이지를 찾을 수 있습니다.
-{% endalert %}
-
 **청구** 페이지에는 다음 탭이 포함됩니다:
 
 - [구독 및 사용량](#subscriptions-and-usage)
@@ -33,7 +29,7 @@ search_rank: 5
 
 여기에서 귀하의 작업 공간에 적용되는 사용 그래프를 찾을 수 있습니다. 구매한 제품에 따라 대시보드에 표시되는 사용 측정기준이 다를 수 있습니다. 
 
-![월간 고유 방문자 수를 보여주는 사용량 그래프][3]{: style="max-width:90%;"}
+![Usage graph showing Monthly Unique Visitors]({% image_buster /assets/img/subscription_and_billing4.png %}){: style="max-width:90%;"}
 
 이 그래프는 월간 활성 사용자, 월간 고유 방문자 및 이메일 전송을 보여줄 수 있습니다. 이와 같은 사용 그래프는 사용량을 예산하고 워크스페이스가 전체 사용량에 기여하는 바를 더 깊이 이해하려고 할 때 특히 유용합니다.
 
@@ -45,11 +41,11 @@ search_rank: 5
 
 **최다 사용 이벤트 및 앱별 속성**에서, 속성과 커스텀 이벤트 데이터 포인트 소비의 원인을 확인할 수 있습니다. 
 
-![최다 사용 이벤트 and Attributes By 앱][4]
+![Most Used Events and Attributes By App]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 각 앱에 대해 **세부 사항 보기**를 선택하여 선택한 기간 동안 각 특정 커스텀 속성, 프로필 속성 및 커스텀 이벤트의 예상 수를 볼 수 있으며, 해당 앱의 속성 및 이벤트 업데이트 중 해당 속성 또는 이벤트에 의해 유도된 비율도 확인할 수 있습니다. 
 
-![최다 사용 이벤트 및 속성별 앱 분석 탭][1]
+![Most Used Events and Attributes By App breakdown tab]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
 데이터 분석은 특정 데이터 포인트가 할당량의 큰 비율을 차지하는지 이해하는 데 도움이 될 수 있습니다. 이 정보를 수시로 모니터링하여 데이터 포인트를 실수로 불필요하게 사용하지 않도록 하는 것이 좋습니다. 고객 성공 매니저는 현재 계획을 최대한 활용하거나 더 큰 유연성을 위한 옵션을 제공하는 데 도움을 줄 수 있습니다. 
 
@@ -57,7 +53,7 @@ search_rank: 5
 
 **총 데이터 포인트 사용량** 탭은 데이터 포인트 소비에 대한 심층적인 분석을 제공합니다. 이 섹션에서 모든 데이터를 주 또는 월별로 집계하여 볼 수 있습니다.
 
-![주별 데이터 포인트 사용량 필터링][2]
+![Filtering Data Point Usage by weeks]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### 연락처 세부 정보
 
@@ -70,7 +66,7 @@ search_rank: 5
 - **할당된 데이터 포인트:** 청구 기간당 계약에 할당된 데이터 포인트의 양.
 - **계약 데이터 포인트 사용량:** 계약 기간 동안 소비된 모든 데이터 포인트의 누적 합계이며, 다음 청구 기간에 초기화되지 않습니다.
 
-![계약 세부 정보 섹션의 총 데이터 포인트 사용량 탭][5]
+![Contract Details section of Total Data Point Usage tab]({% image_buster /assets/img/contract_details.png %})
 
 ### 회사 청구 데이터
 
@@ -78,42 +74,27 @@ search_rank: 5
 
 이 그래프는 앱 전반에 걸쳐 데이터 포인트 사용량을 보여줍니다.
 
-![앱 레벨 총 데이터 포인트 사용량은 각 앱에 사용된 데이터 포인트를 보여줍니다.][14]
+![App Level Total Data Point Usage shows data points used for each app.]({% image_buster /assets/img/app_level_total.png %})
 
 총계 중 하나를 선택하여 **데이터 포인트 사용량** 테이블을 확인하세요. 이 테이블은 각 작업 공간에 대한 주간 데이터 포인트 총계를 보여줍니다.  빈 **앱 이름** 열이 있는 행은 어떤 앱과도 연결되지 않은 데이터 포인트를 나타냅니다(예: `app_id`을(를) 지정하지 않은 요청에 사용되는 데이터 포인트).
 
-![시간에 따른 데이터 포인트 사용량, 두 개의 작업 공간에 대한 총 주간 데이터 포인트를 보여줍니다.][15]
+![Data Point Usage Over Time showing total weekly data points for two workspaces.]({% image_buster /assets/img/data_point_usage_time.png %})
 
 #### 작업 공간 데이터 포인트 사용량
 
 이 그래프를 통해 워크스페이스별로 회사의 총 데이터 포인트 사용량을 평가할 수 있습니다. 이 그래프는 각 워크스페이스가 회사의 데이터 포인트 사용량에 어떻게 기여하고 있는지 평가할 수 있는 기능을 제공합니다.
 
-![워크스페이스 데이터 포인트 사용량 그래프 두 개의 워크스페이스][7]{: style="max-width:90%;"}
+![Workspace Data Point Usage graph for two workspaces]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
 
 #### 이벤트 소스별 청구 주기 데이터 포인트 사용량
 
 이 그래프는 데이터 포인트 사용량이 다양한 이벤트 소스, 예를 들어 다양한 API 속성, 커스텀 이벤트 및 세션에 걸쳐 어떻게 분포되어 있는지를 볼 수 있게 해줍니다.
 
-![이벤트 소스별 청구 주기 데이터 포인트 사용량은 다양한 이벤트 소스 간의 데이터 포인트 할당을 표시합니다.][13]
+![Billing Cycle Data Point Usage by Event Source displaying the data point allocation among different event sources.]({% image_buster /assets/img/event_source_stats.png %})
 
 #### 시간 경과에 따른 데이터 포인트 사용량
 
 이 그래프는 할당된 데이터 포인트 양에 비해 총 데이터 포인트 사용량을 빠르게 확인할 수 있는 기능을 제공합니다.
 
-![현재 청구 주기에 할당된 데이터 포인트와 누계 데이터 포인트 사용량을 비교하는 시간 경과에 따른 데이터 포인트 사용량][8]{: style="max-width:90%;"}
+![Data Point Usage over time contrasting current billing cycle allotted data points with running total]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
 
-[1]: {% image_buster /assets/img/most_used_events_attributes_2.png %}
-[2]: {% image_buster /assets/img/subscription_and_billing2.png %}
-[3]: {% image_buster /assets/img/subscription_and_billing4.png %}
-[4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
-[5]: {% image_buster /assets/img/contract_details.png %}
-[6]: {% image_buster /assets/img/current_billing_cycle.png %}
-[7]: {% image_buster /assets/img/appgroup_datapoint_usage.png %}
-[8]: {% image_buster /assets/img/company_data_point_usage_time.png %}
-[9]: {% image_buster /assets/img/appgroup_drilldown.png %}
-[10]: {% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory.png %}
-[11]: {% image_buster /assets/img/appgroup_level_usage_time.png %}
-[12]: {% image_buster /assets/img/app_level_stats.png %}
-[13]: {% image_buster /assets/img/event_source_stats.png %}
-[14]: {% image_buster /assets/img/app_level_total.png %}
-[15]: {% image_buster /assets/img/data_point_usage_time.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Canvas Details"
+nav_title: "GET: Export Canvas details"
 article_title: "GET: Export Canvas Details"
 search_tag: Endpoint
 page_order: 4
@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Responses
 
 {% alert note %}
-All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For full steps and Message steps, the `next_step_ids` field will be present, but will not contain data for other Canvas Flow steps.
+All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For Message steps, the `next_step_ids` field will be present, but will not contain data for other Canvas steps.
 {% endalert %}
 
 ```json

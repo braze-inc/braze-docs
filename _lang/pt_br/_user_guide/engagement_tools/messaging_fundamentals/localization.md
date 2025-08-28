@@ -50,12 +50,12 @@ Essa abordagem separa os modelos em diferentes localidades de envio. Após o env
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab canva %}
+{% tab canvas %}
 ### Uma viagem para todos
 
 Nessa abordagem, a localização é tratada no [Canva Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) e no Liquid para definir o envio de mensagens para cada usuário. 
 
-Depois que um canva é enviado, o dashboard fornece [análise de dados do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) agregada, enquanto o engajamento ao nível do usuário pode ser medido através de [funis de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/) personalizados, como a combinação de [**país**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) e filtros de [**etapa do canva recebida**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step).
+Depois que um canva é enviado, o dashboard fornece [análise de dados do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) agregada, enquanto o engajamento ao nível do usuário pode ser medido através de [funis de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) personalizados, como a combinação de [**país**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) e filtros de [**etapa do canva recebida**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step).
 
 | Vantagens | Considerações |
 | --- | --- |
@@ -86,7 +86,7 @@ Para enviar mensagens personalizadas com base no idioma ou na localização de u
 
 {% tabs local %}
 {% tab Manualmente %}
-Você pode colar manualmente seu conteúdo no corpo da mensagem e usar [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para exibir [condicionalmente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) o idioma correto para o destinatário. Para fazer isso:
+Você pode colar manualmente seu conteúdo no corpo da mensagem e usar [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para exibir [condicionalmente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) o idioma correto para o destinatário. Para isso:
 
 1. Crie sua mensagem e selecione **Idioma** para gerar a lógica condicional Liquid para cada um dos idiomas selecionados.
 2. Você pode usar o modelo Liquid a seguir para ajudar a construir sua mensagem. Para cada campo com modelo, você deve inserir as variações após o segmento entre colchetes do modelo. A variação deve corresponder ao código de idioma referenciado entre colchetes antes dele.

@@ -18,7 +18,7 @@ tool: Canvas
 
 Les critères de sortie comprennent un événement d'exception, c'est-à-dire l'action spécifique qui peut amener les utilisateurs à quitter le Canvas.
 
-![Les critères de sortie mis en place pour réengager les utilisateurs qui ont parcouru des produits mais ne les ont pas encore ajoutés à leur panier ou passé une commande.][1]{: style="max-width:90%;"}
+![Les critères de sortie mis en place pour réengager les utilisateurs qui ont consulté des produits mais ne les ont pas encore ajoutés à leur panier ou n'ont pas encore passé de commande.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### Sélection des événements d'exception {#exception-events}
 
@@ -58,7 +58,7 @@ Les attributs de tableau ne sont pas actuellement pris en charge en tant que cri
 
 ## Exemple
 
-Disons que nous voulons cibler les utilisateurs qui n'ont pas encore effectué d'achats dans notre entreprise de fourniture de sacs à dos. Pour définir les critères de sortie, nous devrions.. :
+Disons que nous voulons cibler les utilisateurs qui n'ont pas encore effectué d'achats dans notre entreprise de fourniture de sacs à dos. Pour définir les critères de sortie, nous devrions :
 
 1. Sélectionnez **Faire un achat** comme événement d'exception.
 2. Sélectionnez **Ajouter un déclencheur**. 
@@ -66,8 +66,6 @@ Disons que nous voulons cibler les utilisateurs qui n'ont pas encore effectué d
 4. Pour les **filtres**, sélectionnez **Comportement d'achat** > **Nombre d'achats** > **Produit acheté.**
 5. Réglez le groupe interne sur `backpack-example exactly 1`. Cela signifie que les utilisateurs qui ont acheté notre produit de sac à dos quitteront le Canvas.
 
-![Paramètres des critères de sortie avec "Effectue un achat" comme événement d'exception, de sorte que si un utilisateur effectue un achat, il quittera ce Canvas.][2]{: style="max-width:80%;"}
+![Paramètres des critères de sortie avec "Effectue un achat" comme événement d'exception, de sorte que si un utilisateur effectue un achat, il quittera ce Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 
-[1]: {% image_buster /assets/img/exit_criteria.png %}
-[2]: {% image_buster /assets/img_archive/exit_criteria_example.png %}

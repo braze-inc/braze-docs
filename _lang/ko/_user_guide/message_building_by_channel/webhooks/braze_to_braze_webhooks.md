@@ -10,17 +10,17 @@ description: "이 문서에서는 주요 사용 사례에 대한 Braze-to-Braze 
 
 # Braze-to-Braze 웹훅 만들기
 
-> 웹훅을 사용하여 Braze와 통신할 수 있습니다[REST API][2], 기본적으로 API가 허용하는 모든 작업을 수행할 수 있습니다. Braze는 이를 Braze에서 Braze로 통신하는 웹훅인 Braze 대 Braze 웹훅이라고 부릅니다. 이 페이지의 사용 사례는 [웹훅의 작동 방식][4] ]과 [Braze에서 웹훅][5] ]을 만드는 방법을 잘 알고 있다고 가정합니다.
+> 웹훅을 사용하여 Braze [REST API와]({{site.baseurl}}/api/basics/) 통신할 수 있으며, 기본적으로 API가 허용하는 모든 작업을 수행할 수 있습니다. Braze는 이를 Braze에서 Braze로 통신하는 웹훅인 Braze 대 Braze 웹훅이라고 부릅니다. 이 페이지의 사용 사례는 사용자가 [웹훅의 작동 방식과]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) Braze에서 [웹훅을 만드는]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) 방법에 익숙하다고 가정합니다.
 
 ## 필수 조건
 
-Braze 대 Braze 웹훅을 만들려면 도달하려는 엔드포인트에 대한 권한이 있는 [API 키][3]가 필요합니다.
+Braze-to-Braze 웹훅을 만들려면 연결하려는 엔드포인트에 대한 권한이 있는 [API 키가]({{site.baseurl}}/api/api_key/) 필요합니다.
 
 ## Braze-to-Braze 웹훅 설정하기
 
 웹훅 요청의 세부 사항은 사용 사례마다 다르지만, Braze 대 Braze 웹훅을 만드는 일반적인 워크플로는 동일하게 유지됩니다.
 
-1. [캠페인 또는 캔버스 구성요소로 웹훅][5]을 만듭니다. 
+1. 캠페인 또는 캔버스 구성 요소로 [웹훅]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)을 만듭니다. 
 2. **빈 템플릿**을 선택합니다.
 3. **작성** 탭에서 사용 사례에 명시된 대로 **웹훅 URL과** **요청 본문을** 지정합니다.
 4. **설정** 탭에서 사용 사례에 명시된 대로 **HTTP 메서드** 및 **요청 헤더를** 지정합니다.
@@ -45,7 +45,7 @@ Braze 대 Braze 웹훅을 만들려면 도달하려는 엔드포인트에 대한
 
 Braze 대 Braze 웹훅을 만드는 일반적인 단계를 따르고, 웹훅을 구성할 때 다음을 참조하세요:
 
-- **웹훅 URL:** 다음에 `/users/track`이 따르는 [REST 엔드포인트 URL][7]. 예를 들어 `US-06` 인스턴스의 경우 URL은 `https://rest.iad-06.braze.com/users/track` 이 됩니다.
+- **웹훅 URL:** [REST 엔드포인트 URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) 뒤에 `/users/track` 을 입력합니다. 예를 들어 `US-06` 인스턴스의 경우 URL은 `https://rest.iad-06.braze.com/users/track` 이 됩니다.
 - **요청 본문:** 원시 텍스트
 
 #### 요청 헤더 및 방법
@@ -59,15 +59,11 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 
 `YOUR_API_KEY`를 `users.track` 권한이 있는 Braze API 키로 바꿉니다. Braze 대시보드의 **설정** > **API 키**에서 API 키를 생성할 수 있습니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **개발자 콘솔** > **API 설정**에서 API 키를 만들 수 있습니다.
-{% endalert %}
-
-![웹훅에 대한 요청 헤더가 있는 '설정' 탭입니다.][1]
+![웹훅의 요청 헤더.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### 요청 본문
 
-요청 본문에 사용자 추적 요청을 추가하고 Liquid에 카운터 변수를 할당합니다. 자세한 내용은 [`/users/track` 엔드포인트][8]]를 참조하세요.
+요청 본문에 사용자 추적 요청을 추가하고 Liquid에 카운터 변수를 할당합니다. 자세한 내용은 [`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 참조하세요.
 
 다음은 이 엔드포인트에 필요한 Liquid와 요청 본문의 예시이며, 여기서 `your_attribute_count` 은 사용자가 메시지를 본 횟수를 계산하는 데 사용하는 속성입니다:
 
@@ -101,7 +97,7 @@ Each time a custom attribute counter is updated (incremented or decremented) it 
 
 웹훅을 구성할 때 다음을 참조하세요:
 
-- **웹훅 URL:** 다음에 `canvas/trigger/send`이 따르는 [REST 엔드포인트 URL][7]. 예를 들어 US-06 인스턴스의 경우 URL은 `https://rest.iad-06.braze.com/canvas/trigger/send`입니다.
+- **웹훅 URL:** [REST 엔드포인트 URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) 뒤에 `canvas/trigger/send` 을 입력합니다. 예를 들어 US-06 인스턴스의 경우 URL은 `https://rest.iad-06.braze.com/canvas/trigger/send`입니다.
 - **요청 본문:** 원시 텍스트
 
 #### 요청 헤더 및 방법
@@ -115,15 +111,11 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 
 `YOUR_API_KEY`를 `canvas.trigger.send` 권한이 있는 Braze API 키로 바꿉니다. Braze 대시보드의 **설정** > **API 키**에서 API 키를 생성할 수 있습니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **개발자 콘솔** > **API 설정**에서 API 키를 만들 수 있습니다.
-{% endalert %}
-
-![웹훅에 대한 요청 헤더가 있는 '설정' 탭입니다.][1]
+![웹훅의 요청 헤더.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### 요청 본문
 
-텍스트 필드에 `canvas/trigger/send` 요청을 추가합니다. 자세한 내용은 [API 트리거 전달을 통해 캔버스 메시지 보내기][9]를 참조하세요. 다음은 이 엔드포인트의 요청 본문 예시이며, `your_canvas_id`는 두 번째 캔버스의 캔버스 ID입니다: 
+텍스트 필드에 `canvas/trigger/send` 요청을 추가합니다. 자세한 내용은 [API 트리거 배달을 통해 캔버스 메시지 보내기를]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) 참조하세요. 다음은 이 엔드포인트의 요청 본문 예시이며, `your_canvas_id`는 두 번째 캔버스의 캔버스 ID입니다: 
 
 {% raw %}
 ```json
@@ -147,12 +139,3 @@ Braze는 인증을 위해 API 키가 포함된 HTTP 헤더와 `content-type`을 
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 
-[1]: {% image_buster /assets/img_archive/webhook_settings.png %}
-[2]: {{site.baseurl}}/api/basics/
-[3]: {{site.baseurl}}/api/api_key/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-[7]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/

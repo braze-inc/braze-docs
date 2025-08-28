@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Support
+nav_title: Braze support
 article_title: Support
 description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only be accessible to Braze customers."
 alias: /braze_support/
@@ -90,3 +90,6 @@ Select the appropriate severity level to help us assign the right resources to a
 Marking an issue as "Critical" means your production instance is down, and all work within Braze has stopped.
 {% endalert %}
 
+## Troubleshooting access
+
+If you receive an error when logging into the Braze Support Portal, such as `Check your entry`, make sure you followed the link in your welcome email to set a password for the portal. If you've done that or were previously able to log into the portal, create a Support ticket.

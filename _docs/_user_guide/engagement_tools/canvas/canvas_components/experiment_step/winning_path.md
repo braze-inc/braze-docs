@@ -1,5 +1,5 @@
 ---
-nav_title: Winning Path 
+nav_title: Winning Path
 article_title: Winning Path in Experiment Paths 
 page_type: reference
 description: "This reference article covers Winning Path, a feature that lets you automate your A/B tests when turned on for an Experiment Path step."
@@ -22,7 +22,9 @@ Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/can
 
 ### Step 2: Configure Winning Path settings
 
-Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Note that if you determine the winner with opens and clicks, only the first message in the path that generates opens or clicks will contribute to determining the winner.
+Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). 
+
+If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
 
 Next, set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
 

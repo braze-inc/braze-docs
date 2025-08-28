@@ -30,22 +30,22 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | ----------|-----------| ----------|----- |
-| `start_date` | Opcional<br>(ver nota) | Cadena en formato AAAA-MM-DD| Fecha de inicio del rango para recuperar rebotes duros, debe ser anterior a `end_date`. La API lo considera medianoche en hora UTC. |
-| `end_date` | Opcional<br>(ver nota) | Cadena en formato AAAA-MM-DD | Fecha de finalización del intervalo para recuperar rebotes duros. La API lo considera medianoche en hora UTC. |
+| `start_date` | Opcional\*. | Cadena en formato AAAA-MM-DD| \*Se requiere uno de `start_date` o `email`. Es la fecha de inicio del intervalo para recuperar rebotes duros y debe ser anterior a `end_date`. La API lo considera medianoche en hora UTC. |
+| `end_date` | Obligatoria | Cadena en formato AAAA-MM-DD | Fecha de finalización del intervalo para recuperar rebotes duros. La API lo considera medianoche en hora UTC. |
 | `limit` | Opcional | Entero | Campo opcional para limitar el número de resultados devueltos. De forma predeterminada, 100, el máximo es 500. |
 | `offset` | Opcional | Entero | Punto de inicio opcional de la lista a recuperar. |
-| `email` | Opcional<br>(ver nota) | Cadena | Si se proporciona, devolveremos si el usuario es un rebote duro o no. Comprueba que las cadenas de correo electrónico tienen el formato adecuado. |
+| `email` | Opcional\*. | Cadena | \*Se requiere uno de `start_date` o `email`. Si se proporciona, devolveremos si el usuario ha rebotado duro o no. Comprueba que las cadenas de correo electrónico tienen el formato adecuado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Debes proporcionar o bien un `start_date` y un `end_date`, O bien un `email`. Si proporcionas los tres, `start_date`, `end_date` y un `email`, damos prioridad a los correos electrónicos proporcionados y no tenemos en cuenta el intervalo de fechas.
+{% alert important %}
+Debes proporcionar un `end_date`, y un `email` o un `start_date`. Si proporcionas los tres, `start_date`, `end_date` y un `email`, damos prioridad a los correos electrónicos proporcionados y no tenemos en cuenta el intervalo de fechas.
 {% endalert %}
 
 Si tu intervalo de fechas tiene más del número `limit` de rebotes duros, tendrás que hacer varias llamadas a la API, aumentando cada vez el `offset` hasta que una llamada devuelva menos de `limit` o cero resultados. Incluir los parámetros `offset` y `limit` con `email` puede devolver una respuesta vacía.
 
 ## Ejemplo de solicitud
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=example@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

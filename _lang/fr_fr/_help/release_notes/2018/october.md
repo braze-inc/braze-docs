@@ -19,7 +19,7 @@ description: "Cet article contient les notes de version d’octobre 2018."
 
 ## Calculer les statistiques exactes de l'audience des campagnes
 
-Vous pouvez maintenant vous rendre dans **Campaign Analytics** et calculer les statistiques exactes pour votre audience. Cliquez sur **Calculer les statistiques exactes** dans le pied de page de la section **Utilisateurs cibles**, et les statistiques exactes de l'audience s'afficheront. Vous devrez enregistrer la campagne avant le calcul (les ébauches de campagnes seront enregistrées sous forme de brouillons).
+Vous pouvez maintenant vous rendre dans **Campaign Analytics** et calculer les statistiques exactes pour votre audience. Cliquez sur **Calculer les statistiques exactes** dans le pied de page de la section **Audiences cibles**, et les statistiques exactes de l'audience s'afficheront. Vous devrez enregistrer la campagne avant le calcul (les ébauches de campagnes seront enregistrées sous forme de brouillons).
 
 ## Obsolescence de Windows 8
 
@@ -43,7 +43,7 @@ Les commandes du Message Composer ont été actualisées en ajoutant du texte au
 
 ## Azure pour Currents
 
-Les clients de Braze qui utilisent Currents peuvent désormais considérer [Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) comme une intégration potentielle.
+Les clients de Braze qui utilisent Currents peuvent désormais considérer [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage) comme une intégration potentielle.
 
 ## Extensions des champs d’entrée
 

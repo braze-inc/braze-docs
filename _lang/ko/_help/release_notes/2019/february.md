@@ -13,7 +13,7 @@ description: "이 문서에는 2019년 2월의 릴리스 노트가 포함되어 
 
 예를 들어, 여러 카테고리의 이메일 캠페인을 발송하는 경우 [이메일 환경설정 센터를](#email-preference-center) 사용하여 고객에게 단일 페이지에서 해당 그룹을 일괄적으로 구독하거나 구독을 취소할 수 있는 옵션을 제공할 수 있습니다.
 
-[구독 그룹 REST API를]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) 사용하여 Braze 대시보드에 저장한 구독 그룹을 프로그래밍 방식으로 관리하려면 **구독 그룹** 페이지로 이동합니다.
+[구독 그룹 REST API를]({{site.baseurl}}/api/endpoints/subscription_groups/) 사용하여 Braze 대시보드에 저장한 구독 그룹을 프로그래밍 방식으로 관리하려면 **구독 그룹** 페이지로 이동합니다.
 
 ## 이메일 환경설정 센터
 

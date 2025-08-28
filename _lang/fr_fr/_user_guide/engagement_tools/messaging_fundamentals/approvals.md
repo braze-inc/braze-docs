@@ -33,7 +33,7 @@ Pour lancer une campagne, vous devez approuver ces éléments clés :
 Pour lancer un canvas, vous devez approuver ces éléments clés :
 
 - **Événements de conversion :** Il s'agit de l'indicateur que vous suivez à des fins d'engagement et de rapports.
-- **Planification d’entrée :** Il s'agit notamment du type de planification des entrées et du moment où les utilisateurs doivent entrer dans le Canvas.
+- **Planification d’entrée :** Il s'agit notamment du type de planification de la saisie et du moment où les utilisateurs doivent entrer dans le Canvas.
 - **Audience cible :** Cela permet de déterminer qui entrera dans cette toile.
 - **Envoyer les paramètres :** Il s'agit des options d'envoi pour toutes les étapes du canvas. 
 - **Créer un canvas :** Il s'agit du parcours de l'utilisateur de Canvas.

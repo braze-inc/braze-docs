@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Messages
+nav_title: In-app messages
 article_title: In-App Messages in Canvas
 alias: "/canvas_in-app_messages/"
 page_order: 2
@@ -44,7 +44,7 @@ You can choose when the in-app message will expire. During this time, the in-app
 
 | Option | Description | Example |
 |---|---|---|
-| **A duration after the step is available** | Sets the in-app message to expire relative to when the step becomes available to the user. | An in-app message with a two-day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days, users may see the in-app message if they open the app. |
+| **A duration after the step is available** | Sets the in-app message to expire relative to when the step becomes available to the user. | An in-app message with a two-day expiration would become available when the user enters the Message step and audience options are checked. Any delays before reaching this step would come from preceding Delay steps in your Canvas. The in-app message would then be available for 2 days (48 hours) from when the user enters the step, and during those two days, users may see the in-app message if they open the app. |
 | **On a specific date and time** | Select a specific date and time when the in-app message will be no longer available. | If you have a sale that ends on November 30, 2024, select this option so that users no longer see the associated in-app message when the sale ends. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -185,7 +185,7 @@ To use the **Advance when message sent** option, add a separate [audience path](
 
 You can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with in-app messages.
 
-Canvases created in the original editor need to specify an advancement behavior—the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (such as push or email). For in-app messages in a Canvas Flow workflow, this option is set to always immediately advance the audience.
+Canvases created in the original editor need to specify an advancement behavior—the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (such as push or email). For in-app messages in the current Canvas workflow, this option is set to always immediately advance the audience.
 
 Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
 

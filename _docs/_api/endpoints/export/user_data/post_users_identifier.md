@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Export User Profile by Identifier"
+nav_title: "POST: Export user profile by identifier"
 article_title: "POST: Export User Profile by Identifier"
 search_tag: Endpoint
 page_order: 4
@@ -16,7 +16,7 @@ description: "This article outlines details about the Export users by identifier
 
 > Use this endpoint to export data from any user profile by specifying a user identifier.
 
-Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of any identifier can be included per request.
+Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of these identifiers can be included per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,8 +61,10 @@ For customers who have onboarded with Braze on or after August 22, 2024, the req
 | `braze_id`         | Optional | String                                                        | Braze identifier for a particular user.                                                      |
 | `email_address`    | Optional | String                                                        | Email address of user.                                                                       |
 | `phone`            | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user.                                                                        |
-| `fields_to_export` | Required | Array of strings                                              | Name of user data fields to export.                                                          |
+| `fields_to_export` | Optional* | Array of strings                                              | Name of user data fields to export.<br><br>*This field is required to use the faster rate limit of 40 requests per second. If omitted, the default rate limit of 250 requests per min will be used instead. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+*Required for customers who have onboarded with Braze on or after August 22, 2024.
 
 ## Example request
 ```

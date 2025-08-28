@@ -12,7 +12,7 @@ tool:
 
 # 푸시 메시지 만들기
 
-> 푸시 알림은 시간에 민감한 클릭 유도 문안과 한동안 앱에 접속하지 않았던 사용자의 재참여를 유도하는 데 유용합니다. 성공적인 푸시 캠페인은 사용자를 콘텐츠로 직접 유도하고 앱의 가치를 입증합니다. 푸시 알림의 예시를 보려면 [사례 연구][8]]를 참조하세요.
+> 푸시 알림은 시간에 민감한 클릭 유도 문안과 한동안 앱에 접속하지 않았던 사용자의 재참여를 유도하는 데 유용합니다. 성공적인 푸시 캠페인은 사용자를 콘텐츠로 직접 유도하고 앱의 가치를 입증합니다. To see examples of push notifications, check out our [case studies](https://www.braze.com/customers).
 
 ## 1단계: 메시지를 작성할 위치 선택 {#create-new-campaign-push}
 
@@ -22,11 +22,17 @@ tool:
 
 {% tabs %}
 {% tab 캠페인 %}
-1. **메시징** > **캠페인으로** 이동한 다음 **캠페인 만들기를** 선택합니다.
-2. 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다. 그렇지 않으면 **푸시 알림을** 선택합니다. 그래도 잘 모르겠다면 아래의 **일반 푸시 캠페인과 멀티채널 푸시 캠페인 중 결정하기를** 참조하세요.
+1. Go to **Messaging** > **Campaigns**, then select **Create campaign**.
+2. 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다. Otherwise, select **Push notification**. 그래도 잘 모르겠다면 아래의 **일반 푸시 캠페인과 멀티채널 푸시 캠페인 중 결정하기를** 참조하세요.
 3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. **팁:** 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
-5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
+4. Add [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. 
+
+{% alert tip %}
+태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+{% endalert %}
+
+{: start="5"}
+5\. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 추가된 각 배리언트에 대해 서로 다른 플랫폼, 메시지 유형 및 레이아웃을 선택할 수 있습니다. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% details 일반 푸시 캠페인과 멀티채널 푸시 캠페인 중 결정하기 %}
 
@@ -44,7 +50,7 @@ tool:
 - 우선순위 표시
 - 소리
 
-계속하기 전에 [빠른 푸시 캠페인을]({{site.baseurl}}/quick_push) 참조하여 이 편집 환경의 달라진 점을 이해하세요.
+Before continuing, refer to [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what's different for this editing experience.
 
 {% enddetails %}
 
@@ -64,9 +70,9 @@ tool:
 {% endtab %}
 {% endtabs %}
 
-## 2단계: 전달 플랫폼 지정
+## 2단계: Select push platforms
 
-먼저 푸시를 수신할 기기와 플랫폼 조합을 선택합니다. 이 선택을 사용하면 푸시 알림을 특정 앱 집합으로 제한할 수 있습니다.
+Next, choose which platform and mobile device combination should receive the push. 이 선택을 사용하면 푸시 알림을 특정 앱 집합으로 제한할 수 있습니다.
 
 이전 선택 항목에 따라 몇 가지 다른 방법으로 이 작업을 수행할 수 있습니다:
 
@@ -79,15 +85,15 @@ tool:
 
 ## 3단계: 알림 유형 선택(iOS 및 Android)
 
-빠른 푸시 캠페인을 생성하는 경우 알림 유형은 자동으로 표준 푸시로 설정되며 변경할 수 없습니다.
+If you're creating a quick push campaign, the notification type is automatically set to **Standard push** and cannot be changed.
 
-![표준 푸시를 선택한 알림 유형을 예로 들어 설명합니다.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Notification Type with Standard Push selected as an example.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 그렇지 않으면 iOS 및 Android의 경우 알림 유형을 선택합니다:
 
-- 표준 푸시
-- [푸시 스토리]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
-- 인라인 이미지(Android 전용)
+- Standard push
+- [Push stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
+- Inline image (Android only)
 
 푸시 캠페인에 이미지를 포함하려면 다음 [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) 또는 [Android용]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/) 리치 알림 만들기에 대한 가이드를 참조하세요.
 
@@ -105,9 +111,9 @@ For more information on platform-specific notification options, see [iOS Notific
 
 #### 언어
 
-**언어 추가** 버튼을 사용하여 여러 언어로 사본을 추가합니다. 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. 사용 가능한 전체 언어 목록은 [지원 언어][18] 를 참조하세요.
+**언어 추가** 버튼을 사용하여 여러 언어로 사본을 추가합니다. 콘텐츠를 작성하기 전에 언어를 선택하여 Liquid에서 원하는 위치에 텍스트를 채울 수 있도록 하는 것이 좋습니다. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### 제목 및 본문
 
@@ -124,13 +130,13 @@ If you're adding copy in a language that is written right-to-left, note that the
 푸시를 개인화 및 타겟팅하기 위해 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 포함할 수 있습니다.
 
 {% alert important %}
-제목 없이 Android 푸시 메시지를 보낼 **수는** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/silent/) 참조하세요.
+제목 없이 Android 푸시 메시지를 보낼 **수는** 없지만, 대신 공백 하나를 입력할 수 있습니다. 메시지에 공백이 하나만 포함되어 있으면 무음 푸시 알림으로 전송된다는 점에 유의하세요. 자세한 내용은 [무음 푸시 알림을]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) 참조하세요.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시징에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![푸시 작성기의 본문 필드에 있는 AI 카피라이터 실행 버튼을 누릅니다.(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -155,21 +161,19 @@ If you're adding copy in a language that is written right-to-left, note that the
 - 확인/취소
 - 더 보기 
 
-#### 기기 옵션
+#### Sending options
 
-사용자가 여러 기기에 앱을 설치한 경우 기본적으로 유효한 푸시 토큰이 할당된 모든 기기에 푸시 메시지가 전송됩니다. 원하는 경우 **사용자가 가장 최근에 사용한 기기로만 푸시 전송**을 선택할 수 있습니다.
+사용자가 여러 기기에 앱을 설치한 경우 기본적으로 유효한 푸시 토큰이 할당된 모든 기기에 푸시 메시지가 전송됩니다. If desired, you can select **Most recently used device**.
 
-![기기 옵션 확인란을 선택하면 사용자가 가장 최근에 사용한 기기로만 푸시를 보낼 수 있습니다.][9]{: style="max-width:70%;" }
+![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
-이 설정에는 약간의 뉘앙스가 있습니다. 이 옵션을 선택하면 캠페인이 iOS와 Android 등 여러 플랫폼을 타겟팅하는 경우를 제외하고는 Braze에서 다중 전송이 발생하지 않도록 제한합니다. 사용자가 iOS와 Android 기기 모두에 앱을 설치한 경우 두 플랫폼 모두에 대한 푸시를 받게 됩니다. 사용자가 가장 최근에 사용한 기기가 [푸시를 사용하도록]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled) 설정되어 있지 않으면 메시지가 전송되지 않습니다.
+이 설정에는 약간의 뉘앙스가 있습니다. 이 옵션을 선택하면 캠페인이 iOS와 Android 등 여러 플랫폼을 타겟팅하는 경우를 제외하고는 Braze에서 다중 전송이 발생하지 않도록 제한합니다. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. 사용자가 가장 최근에 사용한 기기가 [푸시를 사용하도록]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled) 설정되어 있지 않으면 메시지가 전송되지 않습니다.
 
 iOS의 경우 푸시 알림을 iPad 기기로만 보내거나 iPhone 및 iPod 기기로만 보내도록 설정하여 메시징을 더욱 제한할 수 있습니다.
 
 ## 5단계: 메시지 미리보기 및 테스트(선택 사항)
 
-![푸시 메시지 테스트][7]{: style="float:right;max-width:30%;margin-left:15px;"}
-
-테스트는 가장 중요한 단계 중 하나입니다. 완벽한 푸시 메시지 작성을 완료한 후에는 보내기 전에 테스트해 보세요. **테스트** 탭을 선택하고 **사용자로서 메시지 미리 보기**를 사용하여 모바일에서 메시지가 어떻게 표시되는지 파악할 수 있습니다. **테스트 보내기를** 사용하여 테스트 푸시를 보내고 메시지가 제대로 표시되는지 확인합니다.
+테스트는 가장 중요한 단계 중 하나입니다. 완벽한 푸시 메시지 작성을 완료한 후에는 보내기 전에 테스트해 보세요. Select the **Test** tab to choose from options on how to test your push message. In **Test Recipients**, you can select a content test group or individual users. You can also use **Preview message as user** to get a sense of how your message may view on mobile for a random user, existing user, custom user, or multi-language user.
 
 ## 6단계: 나머지 캠페인 또는 캔버스 구축하기
 
@@ -188,7 +192,7 @@ iOS의 경우 푸시 알림을 iPad 기기로만 보내거나 iPhone 및 iPod �
 
 #### 타겟팅할 사용자 선택
 
-다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 캠페인이 타겟팅하는 채널에 대한 자세한 오디언스 통계는 바닥글에서 확인할 수 있습니다. 타겟팅 중인 사용자층의 비율과 이 세그먼트의 평생 가치를 확인하려면 **추가 통계 표시를** 선택합니다.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. 대략적인 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 캠페인이 타겟팅하는 채널에 대한 자세한 오디언스 통계는 바닥글에서 확인할 수 있습니다. 타겟팅 중인 사용자층의 비율과 이 세그먼트의 평생 가치를 확인하려면 **추가 통계 표시를** 선택합니다.
 
 {% details 총 도달 가능한 사용자 수 지표가 모든 채널의 합계와 일치하지 않는 이유는 무엇인가요? %}
 
@@ -215,12 +219,12 @@ iOS의 경우 푸시 알림을 iPad 기기로만 보내거나 iPhone 및 iPod �
 이렇게 하려면 **오디언스 요약**에서 "옵트인한 사용자에게만" 이 캠페인을 보내도록 선택합니다. 이 옵션을 선택하면 옵트인한 사용자만 이메일을 받게 되며, Braze는 기본적으로 푸시를 사용하도록 설정한 사용자에게만 푸시를 보냅니다.
 
 {% alert important %}
-이 구성에서는 **대상 사용자** 단계에 대상을 단일 채널로 제한하는 필터(예: `Push Enabled = True` 또는 `Email Subscription = Opted-In`)를 포함하지 마세요.
+With this configuration, don't include any filters in the **Target Audiences** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 사용자가 지정된 작업을 수행하면 최대 30일 동안 전환이 카운트되도록 허용하는 옵션이 있습니다.
 
 {% endtab %}
 
@@ -237,16 +241,3 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 
 다음으로 푸시 캠페인의 결과에 액세스하는 방법을 알아보려면 [푸시 보고]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/)를 확인하세요. 푸시 알림의 경우 전송, 전달, 반송, 열람 및 직접 열어본 메시지 수에 대한 통계를 볼 수 있습니다.
 
-[1]: {% image_buster /assets/img_archive/new_campaign_push.png %}
-[2]: {% image_buster /assets/img_archive/push_1.png %}
-[3]: {% image_buster /assets/img_archive/push_2.png %}
-[4]: {% image_buster /assets/img_archive/schedule.png %}
-[5]: {% image_buster /assets/img_archive/confirmation_page.png %}
-[6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/push_3.png %}
-[8]:https://www.braze.com/customers
-[9]: {% image_buster /assets/img_archive/push_recent_device.png %}
-[15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
-[25]: {% image_buster /assets/img_archive/target_segmenter.png %} 

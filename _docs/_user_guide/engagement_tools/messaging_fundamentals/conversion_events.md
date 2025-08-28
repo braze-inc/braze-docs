@@ -1,5 +1,5 @@
 ---
-nav_title: Conversion Events
+nav_title: Conversion events
 article_title: Conversion Events
 page_order: 4
 page_type: reference
@@ -28,6 +28,7 @@ Conversion events allow you to attribute user action back to a point of engageme
 - Conversions occur on a per-user basis, not a per-device basis. This means a user can only convert once, even if a message is sent to multiple devices. As another example, assume a campaign has only one conversion event which is "Makes any purchase". If a user who receives this campaign makes two separate purchases within the conversion deadline, then only one conversion will be counted.
 - If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, then the conversion will register on both.
 - A user will count as converted if they performed the specific conversion event in the window even if they did not open or click the message.
+- For Canvases, conversion tracking works based on the final conversion deadline that begins when a user enters the Canvas, not individual message timing. This means conversions can be counted even during delay periods between messages in Canvas.
 
 ### Primary conversion event
 

@@ -2,7 +2,7 @@
 nav_title: Crear una tarjeta de contenido
 article_title: Crear una tarjeta de contenido
 page_order: 0
-description: "Este artículo de referencia explica cómo crear, componer, configurar y enviar tarjetas de contenido mediante campañas Braze y lienzos."
+description: "Este artículo de referencia explica cómo crear, componer, configurar y enviar tarjetas de contenido utilizando campañas y lienzos Braze."
 tool:
   - Canvas
   - Campaigns
@@ -66,15 +66,15 @@ Para saber más sobre el comportamiento esperado y el aspecto de cada tipo, cons
 
 Puedes editar todos los aspectos del contenido y el comportamiento de tu mensaje en la pestaña **Redactar** del editor de mensajes.
 
-![Muestra los detalles de la tarjeta de contenido en la pestaña Redactar del editor de mensajes.][24]
+![Detalles de la tarjeta de contenido de muestra en la pestaña Redactar del editor de mensajes.]({% image_buster /assets/img/content_card_compose.png %})
 
 El contenido aquí varía en función del **Tipo de Tarjeta** elegido en el paso anterior, pero puede incluir cualquiera de las siguientes opciones:
 
 #### Idioma
 
-Selecciona **Añadir idiomas** para añadir los idiomas que desees de la lista proporcionada. Esto insertará [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) en tu mensaje. Le recomendamos que seleccione sus idiomas antes de escribir el contenido para que pueda rellenar el texto donde corresponda en el Líquido. Para consultar nuestra lista completa de idiomas disponibles que puedes utilizar, consulta [Idiomas admitidos][18].
+Selecciona **Añadir idiomas** para añadir los idiomas que desees de la lista proporcionada. Esto insertará [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) en tu mensaje. Le recomendamos que seleccione sus idiomas antes de escribir el contenido para que pueda rellenar el texto donde corresponda en el Líquido. Para consultar nuestra lista completa de idiomas disponibles que puedes utilizar, consulta [Idiomas admitidos]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-![Una ventana con el inglés, el español y el francés seleccionados para los idiomas, y el título, la descripción y el texto del enlace seleccionados para los campos a internacionalizar.][2]{: style="max-width:70%;"}
+![Una ventana con el inglés, el español y el francés seleccionados para los idiomas, y el título, la descripción y el texto del enlace seleccionados para los campos a internacionalizar.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
 ##### Crear mensajes de derecha a izquierda
 
@@ -92,7 +92,7 @@ Añade una imagen a tu tarjeta de contenido seleccionando **Añadir imagen** o p
 
 Una tarjeta anclada se mostrará en la parte superior del feed de un usuario y no podrá ser descartada por el usuario. Si hay más de una tarjeta anclada en el feed de un usuario, las tarjetas ancladas se mostrarán en orden cronológico. Después de enviar una tarjeta, no puedes actualizar retroactivamente su opción anclada. Cambiar esta opción después de haber enviado una campaña sólo afectará a futuros envíos.
 
-![Vista en paralelo de la vista previa de la tarjeta de contenido en Braze para móvil y Web con la opción "Anclar esta tarjeta a la parte superior del feed" seleccionada.][1]{:style="border:none"}
+![Vista previa, lado a lado, de la tarjeta de contenido en Braze para Móvil y Web con la opción "Anclar esta tarjeta a la parte superior de la fuente" seleccionada.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### Comportamiento al hacer clic
 
@@ -108,21 +108,13 @@ Las siguientes acciones están disponibles para los enlaces de la tarjeta de con
 | Registrar atributo personalizado | Elija un [atributo personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) para establecer para el usuario actual. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-**Nota**: Las opciones __Log Custom Event__ y __Log Custom Attribute__ requieren la compatibilidad con la siguiente versión del SDK:
+Las opciones **Registrar evento personalizado** y **Registrar atributo** personalizado requieren la compatibilidad con la siguiente versión del SDK:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-{% alert warning %}
-El tamaño total de los campos de mensaje de la tarjeta de contenido está limitado a 2 KB, calculado sumando la longitud en bytes de los siguientes campos: Título, mensaje, URL de la imagen, texto del enlace, URL(s) del enlace y pares clave-valor (nombres + valores). Los mensajes que superen este tamaño no se enviarán. Tenga en cuenta que esto no incluye el tamaño de la imagen, sino la longitud de la URL de la imagen.
-{% endalert %}
-
-{% alert warning %}
-Cada usuario puede tener hasta 250 tarjetas de contenido no caducadas en su fuente en un momento dado. Cuando se supere este límite, Braze dejará de devolver las tarjetas más antiguas, aunque no se hayan leído. Las tarjetas descartadas también cuentan para este límite de 250 tarjetas, lo que significa que un número elevado de tarjetas descartadas puede reducir el espacio disponible para las nuevas.
-{% endalert %}
-
 ## Paso 4: Configurar ajustes adicionales (opcional)
 
-Puedes utilizar [pares clave-valor][19] para crear categorías para tus tarjetas, crear [múltiples fuentes de tarjetas de contenido]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) y personalizar cómo se ordenan las tarjetas.
+Puedes utilizar [pares clave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) para crear categorías para tus tarjetas, crear [múltiples fuentes de tarjetas de contenido]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) y personalizar cómo se ordenan las tarjetas.
 
 Para añadir pares clave-valor a tu mensaje, ve a la pestaña **Configuración** y selecciona **Añadir nuevo par**.
 
@@ -149,7 +141,7 @@ Para las campañas de tarjetas de contenido con entrega programada, puede elegir
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, [dirígete a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) eligiendo segmentos o filtros para acotar tu audiencia. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Tenga en cuenta que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
+A continuación, [dirígete a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para acotar tu audiencia. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Tenga en cuenta que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
 
 #### Elegir eventos de conversión
 
@@ -176,15 +168,27 @@ A continuación, consulte [los informes de Content Card]({{site.baseurl}}/user_g
 
 ## Lo que hay que saber
 
+### Tamaño de los campos de los mensajes
+
+Los campos de mensaje de la tarjeta de contenido pueden tener un tamaño total de hasta 2 KB. Se calcula sumando la longitud en bytes de los siguientes campos: **Título**, **mensaje**, **URL de la imagen**, **texto del enlace**, **URL(s) del enlace** y **pares clave-valor** (nombres y valores). Los mensajes que superen los 2 KB no se enviarán. Ten en cuenta que esto no incluye el tamaño de la imagen, sino la longitud de la URL de la imagen.
+
+{% alert important %}
+Durante los envíos de prueba, las tarjetas de contenido que superen los 2 KB pueden seguir entregándose y mostrándose correctamente.
+{% endalert %}
+
+### Número de tarjetas en la fuente
+
+Cada usuario puede tener hasta 250 tarjetas de contenido no caducadas en su fuente en un momento dado. Cuando se supere este límite, Braze dejará de devolver las tarjetas más antiguas, aunque no se hayan leído. Las tarjetas descartadas también cuentan para este límite, lo que significa que un número elevado de tarjetas descartadas puede reducir el espacio disponible para las nuevas.
+
 ### Comportamiento de envío
 
-Una vez enviadas las tarjetas de contenido, quedan en espera en un "buzón de entrada" listas para ser entregadas al usuario (de forma similar a lo que ocurre con los correos electrónicos). Una vez introducido el contenido en la tarjeta de contenido (en el momento de la visualización), el contenido no puede modificarse durante su vida útil. Esto se aplica incluso si estás llamando a una API a través de Contenido conectado, y los datos del punto final cambian. Estos datos no se actualizarán. Sólo se puede impedir el envío a nuevos usuarios y eliminarlo de los feeds de los usuarios. Si modifica una campaña, sólo las futuras tarjetas que se envíen tendrán la actualización.
+Una vez enviadas las tarjetas de contenido, quedan en espera en un "buzón de entrada" listas para ser entregadas al usuario (de forma similar a lo que ocurre con los correos electrónicos). Después de introducir el contenido en la tarjeta de contenido (en el momento de la visualización), no se puede cambiar durante su vida útil. Esto se aplica incluso si estás llamando a una API a través de Contenido conectado, y los datos del punto final cambian. Estos datos no se actualizarán. Sólo se puede impedir el envío a nuevos usuarios y eliminarlo de los feeds de los usuarios. Si modifica una campaña, sólo las futuras tarjetas que se envíen tendrán la actualización.
 
-Si necesitas eliminar tarjetas antiguas, primero debes detener la campaña. Para detener una campaña, abra la campaña de la tarjeta de contenido y seleccione **Detener campaña**. Si detiene la campaña, deberá decidir cómo tratar a los usuarios que ya hayan recibido su tarjeta. 
+Si necesitas eliminar tarjetas antiguas, primero debes detener la campaña. Para detener una campaña, abra la campaña de la tarjeta de contenido y seleccione **Detener campaña**. Si detienes la campaña, deberás decidir cómo tratar a los usuarios que ya hayan recibido tu tarjeta. 
 
 Si quieres eliminar la tarjeta de contenido de las fuentes de tus usuarios, selecciona **Eliminar tarjeta de la fuente**. El SDK ocultará la tarjeta en la siguiente sincronización.
 
-![Diálogo para confirmar la desactivación de la tarjeta de contenido][25]{: style="max-width:75%" }
+![Diálogo para confirmar la desactivación de la tarjeta de contenido]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
 ¿Quieres que parezca que tus tarjetas de contenido duran más que el máximo de 30 días? Una forma de conseguirlo es hacer lo siguiente:<br><br>
@@ -199,6 +203,8 @@ Si quieres eliminar la tarjeta de contenido de las fuentes de tus usuarios, sele
 Algunas tarjetas de contenido sólo son relevantes hasta que el usuario realiza alguna acción. Por ejemplo, una tarjeta que inste a los usuarios a activar su cuenta no debería mostrarse después de que el usuario complete esa tarea de incorporación.
 
 Dentro de una campaña o mensaje Canvas, puedes añadir opcionalmente un **Evento de eliminación** para especificar qué eventos personalizados o compras deben hacer que las tarjetas enviadas previamente se eliminen de la fuente de ese usuario, desencadenado por el SDK o la API REST.
+
+Las tarjetas se eliminarán en las siguientes actualizaciones, una vez que Braze haya procesado el evento especificado.
 
 {% alert tip %}
 Puede especificar varios eventos personalizados y compras que deben eliminar una tarjeta del feed de un usuario. Cuando el usuario realice **cualquiera** de estas acciones, se eliminarán todas las tarjetas enviadas por las tarjetas de la campaña. Las futuras tarjetas que cumplan los requisitos seguirán enviándose de acuerdo con la programación del mensaje.
@@ -218,14 +224,14 @@ Ten en cuenta también que las tarjetas de contenido que se utilizan [en la prim
 
 #### Opción 1: Duplicar la campaña
 
-Un método consiste en archivar la campaña y eliminar las tarjetas activas del feed. A continuación, puede duplicar la campaña y lanzarla con actualizaciones para que todos los usuarios que cumplan los requisitos reciban las tarjetas actualizadas.
+Un método consiste en archivar la campaña y eliminar las tarjetas activas del feed. Luego puedes duplicar la campaña y lanzarla con actualizaciones para que todos los usuarios elegibles reciban las tarjetas actualizadas.
 
 * Si los usuarios no deben volver a ser elegibles para una tarjeta de contenido, puedes filtrar a los usuarios que no hayan recibido la versión anterior de la tarjeta de contenido configurando el filtro `Received Message from Campaign` a la condición de `Has Not`.
 * Si los usuarios que recibieron la tarjeta anterior deben volver a ser elegibles en X días, puede establecer el filtro para `Last Received Message from specific campaign` en hace más de X días **O** `Received Message from Campaign` con la condición `Has Not`.
 
 ##### Casos de uso
 
-Digamos que has configurado una campaña para que se desencadene con el inicio de una sesión y que tiene la reelegibilidad establecida en 30 días. Un usuario recibió la campaña hace dos días y usted quiere cambiar la copia. Primero, archivarías la campaña y eliminarías las tarjetas de la fuente. En segundo lugar, duplicarías la campaña y la relanzarías con el nuevo texto. Si el usuario tiene otra sesión, recibirá inmediatamente la nueva tarjeta.
+Digamos que has configurado una campaña para que se desencadene con el inicio de una sesión, y que tiene la reelegibilidad establecida en 30 días. Un usuario recibió la campaña hace dos días y usted quiere cambiar la copia. Primero, archivarías la campaña y eliminarías las tarjetas de la fuente. En segundo lugar, duplicarías la campaña y la relanzarías con el nuevo texto. Si el usuario tiene otra sesión, recibirá inmediatamente la nueva tarjeta.
 
 ##### Impacto
 
@@ -238,14 +244,14 @@ Recomendamos esta opción para mensajes en los que muestres el contenido más re
 
 #### Opción 2: Parar y relanzar
 
-Si una tarjeta tiene activada la reelegibilidad, podría optar por:
+Si una tarjeta tiene activada la reelegibilidad, puedes optar por:
 
 1. Detén tu campaña.
 2. Eliminar las tarjetas de contenido activas de los feeds de los usuarios.
 3. Edite su campaña según sea necesario.
 4. Reinicia tu campaña.
 
-Con este planteamiento, los nuevos usuarios que cumplan los requisitos recibirán la nueva tarjeta y los anteriores la recibirán cuando vuelvan a cumplir los requisitos.
+Con este planteamiento, los nuevos usuarios elegibles obtendrán la nueva tarjeta, y los anteriores destinatarios obtendrán la nueva tarjeta cuando vuelvan a ser elegibles.
 
 ##### Casos de uso
 
@@ -262,11 +268,5 @@ Recomendamos utilizar esta opción para mensajes únicos en un centro de notific
 
 #### Mantener las tarjetas en los feeds de los usuarios
 
-Si lo desea, puede mantener una campaña de Tarjetas de contenido activa en los feeds de los usuarios y no eliminarlas. Cuando se edita la campaña en vivo, la versión anterior no editada de la tarjeta de campaña seguirá en vivo, y sólo los usuarios que cumplan los criterios tras las ediciones verán la nueva versión. Sin embargo, los usuarios ya expuestos a la campaña pueden ver dos versiones de la tarjeta.
+Si lo deseas, puedes mantener una campaña de tarjeta de contenido activa en las fuentes de los usuarios y no eliminarla. Cuando se edita la campaña en vivo, la versión anterior no editada de la tarjeta de campaña seguirá en vivo, y sólo los usuarios que cumplan los criterios tras las ediciones verán la nueva versión. Sin embargo, los usuarios ya expuestos a la campaña pueden ver dos versiones de la tarjeta.
 
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/content_card_compose.png %}
-[25]: {% image_buster /assets/img/cc_remove.png %}
-[1]: {% image_buster /assets/img/cc_pin_to_top.png %}
-[2]: {% image_buster /assets/img/add_languages.png %}

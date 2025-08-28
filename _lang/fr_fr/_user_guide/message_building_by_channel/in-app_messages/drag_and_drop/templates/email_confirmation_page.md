@@ -18,7 +18,7 @@ description: "Cette page explique comment utiliser l'éditeur glisser-déposer d
 
 Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Inscription par e-mail avec page de confirmation** pour votre modèle, puis sélectionnez **Créer un message.** Ce modèle est pris en charge à la fois pour les applications mobiles et les navigateurs web.
 
-![L'éditeur de messages in-app avec le modèle de formulaire d'inscription par e-mail et la page de confirmation.][img1]
+![L'éditeur de messages in-app avec le modèle de formulaire d'inscription par e-mail et la page de confirmation.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %})
 
 ### Étape 2 : Définissez les styles de vos messages
 
@@ -30,7 +30,7 @@ Pour commencer à créer votre formulaire d'inscription par e-mail, sélectionne
 
 Vous pouvez personnaliser le texte substitutif et le texte de l'étiquette de l'élément de capture d'e-mail.
 
-![L'éditeur de messages in-app avec un menu latéral pour personnaliser l'élément de capture d'e-mail.][img2]
+![L'éditeur de messages in-app avec un menu latéral pour personnaliser l'élément de capture d'e-mail.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %})
 
 #### Validation de l’e-mail
 
@@ -42,7 +42,7 @@ Vous pouvez personnaliser le texte substitutif et le texte de l'étiquette de l'
 
 ### Étape 5 : Donnez du style à votre message
 
-Personnalisez l'aspect et la convivialité de votre formulaire d'inscription par e-mail et de votre page de confirmation à l'aide des [composants de message in-app à][3] glisser-déposer.
+Personnalisez l'aspect et la convivialité de votre formulaire d'inscription par e-mail et de votre page de confirmation à l'aide des [composants de message in-app à]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) glisser-déposer.
 
 ## Analyse des résultats
 
@@ -52,7 +52,4 @@ Personnalisez l'aspect et la convivialité de votre formulaire d'inscription par
 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

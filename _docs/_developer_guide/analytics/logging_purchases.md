@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Purchases
+nav_title: Logging purchases
 article_title: Logging purchases through the Braze SDK
 page_order: 3.2
 description: "Learn how to log purchases through the Braze SDK."

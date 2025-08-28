@@ -989,8 +989,8 @@ $( document ).ready(function() {
       else {
         subtype_menu.append($('<option>',{value: ''}).html('Select a type...'));
       }
-      $.each(subtype_options['SelectOption'],function(subtype)  {
-        subtype_menu.append($('<option>',{value: subtype}).html(subtype));
+      $.each(subtype_options['SelectOption'],function(subtype, val)  {
+        subtype_menu.append($('<option>',{value: subtype}).html(val.SelText || subtype));
       });
     }
     else {
@@ -1016,8 +1016,8 @@ $( document ).ready(function() {
       else {
         type_menu.append($('<option>',{value: ''}).html('Select a subcategory...'));
       }
-      $.each(type_options['SelectOption'],function(type)  {
-        type_menu.append($('<option>',{value: type}).html(type));
+      $.each(type_options['SelectOption'],function(type, val)  {
+        type_menu.append($('<option>',{value: type}).html(val.SelText || type));
       });
 
     }
@@ -1039,10 +1039,9 @@ $( document ).ready(function() {
       else {
         category_menu.append($('<option>',{value: ''}).html('Select a category...'));
       }
-      $.each(category_options['SelectOption'],function(category) {
-        category_menu.append($('<option>',{value: category}).html(category));
+      $.each(category_options['SelectOption'],function(category, val) {
+        category_menu.append($('<option>',{value: category}).html( val.SelText || category));
       });
-      // showlinks(category_options);
     }
     else {
       hide_page(1);
@@ -1069,8 +1068,8 @@ $( document ).ready(function() {
       topic_menu.append($('<option>',{value: ''}).html('Select a topic...'));
     }
     /* Generate Initial Menu */
-    $.each(ticket_options,function(topic)  {
-      topic_menu.append($('<option>',{value: topic}).html(topic));
+    $.each(ticket_options,function(topic, val)  {
+      topic_menu.append($('<option>',{value: topic}).html(val.SelText || topic));
     });
 
   };
@@ -1456,7 +1455,7 @@ $( document ).ready(function() {
                          In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data.
                           </label>
                           <label style="font-size: 12px;">
-                          Braze technical support hours of operation are from 9:00 am–5:00 pm GMT and 8:00 am–8:00 pm ET, Monday - Friday, excluding Braze recognized holidays. For issues logged outside of these hours, you should anticipate a response on the next business day.
+                          Braze technical support operates during standard business hours across multiple time zones to serve our global customer base. For specific support hours in your region or for issues logged outside of business hours, please refer to the support handbook. Response times may vary based on when your request is submitted, your support tier, and the severity of the issue.
                           </label>
                       </div>
                       <button type="submit" name="Submit Ticket" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT TICKET </button>

@@ -88,11 +88,11 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
 {: start="4" }
 4\. **템플릿 저장을** 선택합니다.
 
-![리드를 생성하기 위해 작성된 웹훅 템플릿입니다.][6]{: style="max-width:70%;"}
+![A filled-out webhook template to create a lead.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Salesforce Sales Cloud에서 리드 업데이트하기 {#updating-lead}
 
-세일즈포스에서 리드를 업데이트하는 Braze 세일즈포스 세일즈 클라우드 웹훅을 설정하려면 세일즈포스 세일즈 클라우드와 브레이즈 간의 공통 식별자가 필요합니다. 아래 예제에서는 Salesforce `lead_id` 를 Braze `external_id` 로 사용하지만 `user_alias` 를 사용하여 이 작업을 수행할 수도 있습니다. 이에 대한 자세한 내용은 [B2B 데이터를](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models) 참조하세요.
+세일즈포스에서 리드를 업데이트하는 Braze 세일즈포스 세일즈 클라우드 웹훅을 설정하려면 세일즈포스 세일즈 클라우드와 브레이즈 간의 공통 식별자가 필요합니다. 아래 예제에서는 Salesforce `lead_id` 를 Braze `external_id` 로 사용하지만 `user_alias` 를 사용하여 이 작업을 수행할 수도 있습니다. 이에 대한 자세한 내용은 [B2B 데이터를]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models) 참조하세요.
 
 이 예에서는 리드가 특정 리드 임계값을 넘은 후 리드의 리드 단계를 'MQL(마케팅 적격 리드)'로 업데이트하는 방법을 구체적으로 보여 줍니다. 이는 [B2B 리드 스코어링 워크플로]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/) 사용 사례의 핵심 부분입니다.
 
@@ -141,7 +141,7 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
 {: start="4"}
 4\. **템플릿 저장을** 선택합니다.
 
-![리드를 업데이트하기 위해 작성된 웹훅 템플릿입니다.][7]{: style="max-width:70%;"}
+![A filled-out webhook template to update a lead.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## 운영 워크플로우에서 이러한 웹훅 사용
 
@@ -154,11 +154,11 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
 
 사용자가 이메일 주소를 제공할 때 Salesforce에서 리드를 생성하려면 '리드 업데이트' 웹훅 템플릿을 사용하여 사용자가 이메일 주소를 추가할 때(예: 웹 양식 작성) 트리거되는 캠페인을 만들 수 있습니다.
 
-![액션 기반이며 트리거 액션이 '이메일 주소 추가'인 캠페인을 만드는 2단계입니다.][1]{: style="max-width:70%;"}
+![Step 2 of creating a campaign that is action-based and has the trigger action of “Add an Email Address”.]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### MQL(마케팅 적격 리드) 임계값을 넘기 위한 리드 스코어링 캔버스 {#lead-scoring}
 
-이 웹후크는 [리드 스코어링]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) 사용 사례에서 다루고 있지만, 별도의 웹후크 캠페인을 만드는 대신 리드 스코어링 캔버스 내에서 MQL을 확인하고 Salesforce를 직접 업데이트할 수도 있습니다(별도의 웹후크 캠페인을 만들지 않고): 
+이 웹후크는 [리드 스코어링]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) 사용 사례에서 다루고 있지만, 별도의 웹후크 캠페인을 만드는 대신 리드 스코어링 캔버스 내에서 MQL을 확인하고 Salesforce를 직접 업데이트할 수도 있습니다(별도의 웹후크 캠페인을 만들지 않고): 
 
 사용자 업데이트에 후속 단계를 추가하여 사용자가 정의한 MQL 임계값을 넘었는지 확인하세요. 교차된 경우 사용자의 상태를 "MQL"로 업데이트한 다음 이 웹훅 템플릿을 사용하여 동일한 "MQL" 상태로 Salesforce를 업데이트하세요. Salesforce는 정의된 리드 라우팅 규칙에 따라 이 리드를 적절한 영업 팀으로 라우팅하여 나머지 작업을 처리합니다.  
 
@@ -167,21 +167,21 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
 1. 두 그룹으로 **대상 경로** 단계를 추가합니다: "MQL 임계값" 및 "기타 모든 사용자".
 2. 'MQL 임계값' 그룹에서 현재 'MQL' 상태(예: `lead_stage` = '리드')는 아니지만 리드 점수가 정의한 임계값(예: `lead_score` = 50 이상)을 초과하는 사용자를 찾습니다. 그렇다면 다음 단계로 이동하고, 그렇지 않으면 종료합니다.
 
-![`lead_stage` 은 "리드"와 같고 `lead_score` 은 "50"보다 큰 필터가 있는 "MQL 임계값" 대상 경로 그룹입니다.][2]{: style="max-width:70%;"}
+![The “MQL Threshold” Audience Path group with filters for a `lead_stage` equalling “Lead” and a `lead_score` being more than “50”.]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. 사용자의 `lead_stage` 속성 값을 "MQL"로 업데이트하는 **사용자 업데이트** 단계를 추가합니다.
 
-![`lead_stage` 속성이 "MQL" 값을 갖도록 업데이트하는 "MQL로 업데이트" 사용자 업데이트 단계입니다.][3]{: style="max-width:70%;"}
+![The “Update to MQL” User Update step that updates the `lead_stage` attribute to have a value of “MQL”.]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. 새 MQL 단계로 Salesforce를 업데이트하는 웹후크 단계를 추가합니다.
 
-![완료된 세부 정보가 포함된 'Salesforce 업데이트' 웹훅 단계입니다.][4]{: style="max-width:70%;"}
+![The “Update Salesforce” webhook step with completed details.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 이제 캔버스 흐름이 MQL 임계값을 넘은 사용자를 업데이트합니다!
 
-![사용자가 MQL 임계값을 통과하는지 확인하고, 통과할 경우 Salesforce를 업데이트하는 Canvas 사용자 업데이트 단계입니다.][5]{: style="max-width:50%;"}
+![A Canvas user update step that checks if a user crosses the MQL threshold and, if the user does pass, updates Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## 문제 해결
 
@@ -189,13 +189,5 @@ Braze에서 Salesforce로 매핑하려는 각 키/값 쌍에 대해 **\+ 새 본
 
 예를 들어, oAuth 토큰 검색에 사용된 잘못된 URL로 인해 발생한 오류는 `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL` 로 표시됩니다.
 
-![URL이 유효한 URL이 아님을 나타내는 오류 응답 본문입니다.][8]
+![An error response body stating that the URL isn't a valid URL.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
-[1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
-[2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
-[3]: {% image_buster /assets/img/b2b/salesforce_update_mql.png %}
-[4]: {% image_buster /assets/img/b2b/salesforce_webhook.png %}
-[5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
-[6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
-[7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
-[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}

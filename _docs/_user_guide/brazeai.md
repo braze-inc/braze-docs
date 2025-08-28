@@ -24,10 +24,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/calendar-check-01.svg
 - name: Recommendations
   link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/user-check-01.svg
+  image: /assets/img/braze_icons/hearts.svg
 - name: Generative AI
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Braze MCP Server
+  link: /docs/mcp/
+  image: /assets/img/braze_icons/dataflow-01.svg
 - name: Winning Variant and Personalized Variant
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg
@@ -37,9 +40,6 @@ guide_featured_list:
 - name: Personalized Paths
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
   image: /assets/img/braze_icons/chevron-up-double.svg
-- name: Recommendations
-  link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/hearts.svg
 ---
 
 <br>
