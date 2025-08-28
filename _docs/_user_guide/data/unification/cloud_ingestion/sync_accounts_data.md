@@ -28,7 +28,7 @@ Only make updates to your account schema when the sync is paused or not schedule
 - Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp.
 - Data from the integration creates or updates accounts based on the provided `id`.
 - If `DELETED` is `true`, the account is deleted.
-- Syncing doesn’t consume data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
+- Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
 - Fields not in your accounts schema are dropped; update the schema before syncing new fields.
 
 ## Syncing your account data

@@ -1,7 +1,7 @@
 ---
 nav_title: Data points
 article_title: Data Points Overview
-page_order: 0
+page_order: 10
 page_type: reference
 description: "This reference article outlines what data points are at Braze and how you can be aware of their usage."
 search_rank: 6
@@ -11,7 +11,7 @@ search_rank: 6
 
 > At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. Data points help you define the most impactful information for your business. By thoughtfully considering what information to track, you ensure that you're targeting the highest-impact data for your users' experience.
 
-Data points define a billing and pricing structure based on information logged against user profiles. Our Customer Success team can help recommend data best practices to fit your needs. You can find a more detailed breakdown of this definition in your Braze contract. 
+Data points are based on information logged against user profiles. You can find a more detailed breakdown of this definition in your Braze contract. Our Customer Success team can help recommend data best practices to fit your needs. 
 
 ## Definition
 
@@ -29,7 +29,7 @@ For more information on the data point dashboard components, refer to [Billing](
 
 {% alert tip %}
 **Don't waste data points. Only update changing data!**<br><br>
-To minimize data point consumption, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
+To minimize data point usage, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
 {% endalert %}
 
 ## Consumption count
@@ -38,7 +38,7 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 
 You can find a breakdown of how Braze accumulates data points in the following sections. If you ever have any questions about the nuances of Braze data points, your Braze account manager can answer them.
 
-The following actions do not consume data points:
+The following actions do not log data points:
 - Deleting users from Braze
 - Using Connected Content in messaging
 - Subscription state changes globally and around subscription groups
@@ -65,9 +65,9 @@ Updating a custom attribute object to `null` also consumes a data point.
 
 #### CSV
 
-Custom attributes uploaded through CSV import count toward your data points. However, CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not consume data points.
+Custom attributes uploaded through CSV import count toward your data points. However, CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not log data points.
 
-Also, as subscription state changes do not consume data points, updating the `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` fields in your CSV file will not incur charges.
+Also, as subscription state changes do not log data points, updating the `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` fields in your CSV file will not incur charges.
 
 ## Data points
 
@@ -161,7 +161,7 @@ table td {
 | Mixpanel cohort assignment | All assignments | |
 | Hightouch cohort assignment | All assignments | |
 | Appsflyer cohort assignment | All assignments | |
-| Most recent location | All most recent locations | Entering or exiting geofences doesn't consume data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
+| Most recent location | All most recent locations | Entering or exiting geofences doesn't log data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
 | Twitter | Username | |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
