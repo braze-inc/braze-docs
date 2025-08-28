@@ -1,5 +1,5 @@
 ---
-nav_title: "Purchase Object"
+nav_title: "Purchase object"
 article_title: API Purchase Object
 page_order: 8
 page_type: reference

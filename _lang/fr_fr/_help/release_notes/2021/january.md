@@ -17,7 +17,7 @@ Ce guide détaillé explique comment tirer parti du subclassing pour créer des 
 
 ## Catégories de mots-clés et options de reciblage personnalisées pour le SMS
 
-Braze a étendu ses capacités SMS natives pour inclure la possibilité d’ajouter des mots-clés personnalisés pour les communications bidirectionnelles, des catégories personnalisées pour les mots-clés, la prise en charge de plusieurs langues, et des options de reciblage et de filtrage par mots-clés. Pour en savoir plus sur le traitement des mots-clés par SMS, consultez notre [documentation sur les SMS.]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) 
+Braze a étendu ses capacités SMS natives pour inclure la possibilité d’ajouter des mots-clés personnalisés pour les communications bidirectionnelles, des catégories personnalisées pour les mots-clés, la prise en charge de plusieurs langues, et des options de reciblage et de filtrage par mots-clés. Pour en savoir plus sur le traitement des mots-clés par SMS, consultez notre [documentation sur les SMS.]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/) 
 
 ## Notre partenariat avec Playable est opérationnel.
 

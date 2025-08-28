@@ -27,7 +27,7 @@ description: "この参考記事では、Braze メールオブジェクトのさ
   "email_template_id": (optional, string) if provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "extras": (optional, valid Key-Value Hash) extra hash - for SendGrid users, this will be passed to SendGrid as Unique Arguments,
-  "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost and SendGrid),
+  "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost, SendGrid, or Amazon SES),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
@@ -36,7 +36,8 @@ description: "この参考記事では、Braze メールオブジェクトのさ
 ```
 
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
-- プレヘッダーに関する詳細とベストプラクティスについては、[email body styling][46] のヘルプ記事を参照してください。
+  - ワークスペースに設定されたアプリの有効な`app_id` は、ユーザーがプロファイルに特定のアプリを持っているかどうかに関係なく、ワークスペース内のすべてのユーザーに対して動作します。
+- プリヘッダーの詳細とベストプラクティスについては、[メール本文のスタイル]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling)に関するヘルプ記事を参照してください。
 
 {% alert warning %}
 Braze では、添付ファイルの `url` に Google Drive のリンクを使用しないことを推奨しています。これにより、ファイルを取得するためのサーバー呼び出しがブロックされる可能性があり、それによってメールメッセージが送信されなくなる可能性があるからです。
@@ -46,7 +47,7 @@ Braze では、添付ファイルの `url` に Google Drive のリンクを使�
 
 `email_template_id` は、HTML エディターで作成されたメールテンプレートの下部から取得できます。以下は、このIDがどのように見えるかの例である：
 
-![HTMLメールテンプレートのAPI Identifierセクション][31]
+![HTML メールテンプレートの API 識別子セクション。]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"} 
 
 ## 添付ファイル付き電子メールオブジェクトの例
 
@@ -94,5 +95,3 @@ Braze では、添付ファイルの `url` に Google Drive のリンクを使�
 }
 ```
 
-[31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling

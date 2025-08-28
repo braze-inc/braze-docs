@@ -18,10 +18,10 @@ Para preencher previamente eventos e atributos personalizados, faça o seguinte:
 
 1. Acesse **Configurações de dados** > **Eventos personalizados** ou **Atributos personalizados** ou **Produtos**.
 
-![Navegue até Atributos personalizados, Eventos personalizados ou Produtos.][21]{: style="max-width:90%;" }
+![Navegue até Atributos personalizados, Eventos personalizados ou Produtos.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\. Para adicionar um atributo personalizado, evento ou produto, acesse a respectiva página e selecione **Add Custom Attributes (Adicionar atributos personalizados)** ou **Add Custom Events (Adicionar eventos personalizados)** ou **Add Products (Adicionar produtos)**.<br><br>Para atributos personalizados, selecione um [tipo de dados][20] para esse atributo (por exemplo, booleano ou string). O tipo de dados de uma atribuição determinará os filtros de segmentação disponíveis para esse atributo. <br><br>![Adicionar nova atribuição ou evento][22]{: style="max-width:80%;" }
+2\. Para adicionar um atributo personalizado, evento ou produto, acesse a respectiva página e selecione **Add Custom Attributes (Adicionar atributos personalizados)** ou **Add Custom Events (Adicionar eventos personalizados)** ou **Add Products (Adicionar produtos)**.<br><br>Para atributos personalizados, selecione um [tipo de dados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para esse atributo (por exemplo, booleano ou string). O tipo de dados de uma atribuição determinará os filtros de segmentação disponíveis para esse atributo. <br><br>![Adicionar nova atribuição ou evento]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3\. Selecione **Salvar**.
 
 ### Nomeação de eventos personalizados e atributos personalizados
@@ -32,7 +32,7 @@ Os eventos personalizados e os atributos personalizados diferenciam maiúsculas 
 
 Depois de criar um evento personalizado ou produto, selecione **Gerenciar propriedades** desse evento ou produto para adicionar novas propriedades, colocar em lista de bloqueio as propriedades existentes e visualizar quais campanhas ou Canvas usam essa propriedade em um [evento disparado]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
-![Propriedades personalizadas para um evento personalizado.][73]{: style="max-width:80%"}
+![Propriedades personalizadas para um evento personalizado.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
 Para tornar rastreáveis esses atributos personalizados, eventos, produtos ou propriedades de eventos adicionados, é necessário pedir à equipe de desenvolvimento que os crie no SDK usando o nome exato que você usou para adicioná-los anteriormente. Ou você pode usar a [API]({{site.baseurl}}/api/basics/) do Braze para importar dados sobre essa atribuição. Depois disso, o atributo personalizado, evento ou outro será acionável e se aplicará aos seus usuários.
 
@@ -66,7 +66,11 @@ Para interromper o rastreamento de um atributo personalizado, evento ou produto 
 
 ![Vários atributos personalizados selecionados que estão em uma lista de bloqueio na página Atributos personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-Você pode colocar em uma lista de bloqueio até 300 atributos personalizados e 300 eventos personalizados. Para evitar a coleta de determinadas atribuições do dispositivo, consulte nosso [guia de SDK][88].
+Você pode colocar em uma lista de bloqueio até 300 atributos personalizados e 300 eventos personalizados. Para evitar a coleta de determinadas atribuições do dispositivo, consulte nosso [guia SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
+
+{% alert important %}
+Atributos personalizados ou eventos personalizados com status de **Lixeira** contarão para o limite da lista de bloqueio até que sejam excluídos.
+{% endalert %}
 
 Quando um evento personalizado ou atributo é colocado em uma lista de bloqueio, aplica-se o seguinte:
 
@@ -127,7 +131,7 @@ A Braze reconhece automaticamente os tipos de dados para os dados de atribuiçã
 Forçar tipos de dados não se aplica a propriedades de eventos ou propriedades de compra.
 {% endalert %}
 
-![Menu suspenso de tipo de dados de atributos personalizados][75]
+![Menu suspenso do tipo de dados de atributos personalizados]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
 Se você optar por forçar o tipo de dados de uma atribuição, todos os dados recebidos que não forem do tipo especificado serão coagidos a esse tipo. Se essa coerção for impossível (por exemplo, uma string contendo letras sendo coerciva em um número), os dados serão ignorados. Todos os dados ingeridos antes da alteração do tipo continuarão a ser armazenados como o tipo antigo (e, portanto, podem não ser segmentáveis), e um aviso aparecerá ao lado da atribuição nos perfis dos usuários afetados.
@@ -142,19 +146,10 @@ Se você optar por forçar o tipo de dados de uma atribuição, todos os dados r
 | Número | Os números inteiros ou flutuantes (como `1`, `1.5`) serão armazenados como números |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para saber mais sobre as opções de filtro específicas expostas por diferentes comparações de tipos de dados, consulte [Configuração de relatórios][43]. Para saber mais sobre os diferentes tipos de dados disponíveis, consulte [Tipos de dados de atributos personalizados][44].
+Para saber mais sobre as opções de filtro específicas expostas por diferentes comparações de tipos de dados, consulte [Configuração de relatórios]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). Para saber mais sobre os diferentes tipos de dados disponíveis, consulte [Tipos de dados de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
 Os dados enviados ao Braze são imutáveis e não podem ser excluídos ou modificados depois que os recebemos. No entanto, é possível usar qualquer uma das etapas listadas nas seções anteriores para exercer controle sobre o que está sendo rastreado no dashboard.
 {% endalert %}
 
 
-[1]: {% image_buster/assets/img_archive/blocklist_warning.png %}
-[20]: {{site.baseurl}}/user_guide/data_e_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[21]: {% image_buster /assets/img_archive/prepopulate_page.png %}
-[22]: {% image_buster /assets/img_archive/prepopulate_add.png %}
-[43]: {{site.baseurl}}/user_guide/data_e_analytics/configuring_reporting/#configuring-reporting
-[44]: {{site.baseurl}}/user_guide/data_e_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[75]: {% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %}
-[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

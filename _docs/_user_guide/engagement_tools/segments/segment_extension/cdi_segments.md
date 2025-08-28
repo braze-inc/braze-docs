@@ -1,8 +1,9 @@
 ---
-nav_title: CDI Segment Extensions
+nav_title: CDI segment extensions
 article_title: CDI Segment Extensions
 page_order: 0
 page_type: reference
+alias: /cdi_segment_extensions/
 tool: 
 - Segments
 description: "This how-to article will walk you through how to set up Location targeting, allowing you to segment users by location."
@@ -14,7 +15,7 @@ description: "This how-to article will walk you through how to set up Location t
 > With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert warning %}
-CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not consume data points.
+CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not log data points.
 {% endalert %}
 
 ## Prerequisites

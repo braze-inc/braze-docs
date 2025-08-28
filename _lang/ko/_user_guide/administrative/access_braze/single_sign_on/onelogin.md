@@ -29,7 +29,7 @@ description: "이 문서에서는 SSO에 OneLogin을 사용하도록 Braze를 �
 2. 상단 탐색 모음에서 **앱** > **앱 추가로** 이동합니다. "Braze"를 검색하고 Braze 앱을 선택합니다. ![OneLogin에서 Braze에 대한 결과를 검색합니다. ]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Braze 앱을 회사에 저장하세요.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. 저장되면 **구성**으로 이동하여 **Braze 도메인** 및 **릴레이스테이트** API 키를 추가합니다. ![Braze 앱의 OneLogin 구성 탭.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze는 [특정 형식의][1] SAML 어설션을 기대합니다. **매개변수** 아래에는 Braze가 지원하는 속성이 미리 입력되어 있어야 합니다. 올바른지 확인합니다.![OneLogin의 Braze SAML 매개변수.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+5. Braze expects the SAML assertions in a [specific format]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). **매개변수** 아래에는 Braze가 지원하는 속성이 미리 입력되어 있어야 합니다. 올바른지 확인합니다.![OneLogin의 Braze SAML 매개변수.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
 6. Braze 대시보드 설정에 필요한 **인증서** 및 **SAML 2.0 엔드포인트(HTTP)** 를 **SSO** 탭 아래에서 복사합니다.![인증서는 OneLogin의 Braze 앱 SSO 탭에서 복사합니다.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### 2단계: Braze 내에서 OneLogin 구성
@@ -47,10 +47,9 @@ OneLogin 내에서 Braze를 설정하면 대상 URL(`SAML 2.0 Endpoint (HTTP)`)�
 | `Certificate` | `x.509` PEM 인코딩된 인증서는 OneLogin에서 제공합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Braze에서 보안 설정을 열고 SAML SSO 세부 정보를 추가합니다.]({% image_buster /assets/img/samlsso.gif %})
+![SAML SSO settings with the toggle selected.]({% image_buster /assets/img/samlsso.png %})
 
 {% alert tip %}
 Braze 계정 사용자가 SAML SSO로만 로그인하도록 하려면 **회사 설정** 페이지에서 [SSO 인증을 제한할]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) 수 있습니다.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider

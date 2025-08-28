@@ -1,5 +1,5 @@
 ---
-nav_title: Landing Pages
+nav_title: Landing pages
 article_title: Landing Pages
 page_order: 31
 guide_top_header: "Landing Pages"
@@ -39,7 +39,7 @@ The number of published landing pages and custom domains you can use depends on 
 
 ### What's the maximum size for landing pages?
 
-The landing page body size can be up to 1 MB.
+The landing page body size can be up to 500 KB.
 
 ### Are there any technical requirements to publish a landing page?
 

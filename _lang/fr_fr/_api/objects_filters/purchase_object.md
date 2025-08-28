@@ -43,8 +43,8 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
 
 - [ID utilisateur externe]({{site.baseurl}}/api/basics/#user-ids)
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
-- [ISO 4217 Code des devises Wiki][20]
-- [ISO 8601 Time Code Wiki][22]
+- [ISO 4217 Code des devises Wiki](http://en.wikipedia.org/wiki/ISO_4217)
+- [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
 ## ID du produit d'achat
 
@@ -114,7 +114,7 @@ Les [propriétés d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom
 
 Il est important de noter que cette fonctionnalité est activée **par produit**, et non par achat. Par exemple, si vous avez un volume élevé de produits distincts, mais que chacun d'entre eux possède les mêmes propriétés, la segmentation peut s'avérer plus inutile.
 
-Dans cette instance, nous vous recommandons d'utiliser des noms de produits au "niveau du groupe" plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Autre exemple : pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
+Dans cette instance, nous vous recommandons d'utiliser des noms de produits au "niveau du groupe" plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Autre exemple, pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
 
 {% alert important %}
 Notez que les produits peuvent être ajoutés via l'API REST de Braze. Par exemple, si vous envoyez un appel à l'endpoint `/users/track` et que vous incluez un nouvel ID d'achat, un produit sera automatiquement créé dans la section **Paramètres des données** > **Produits** du tableau de bord.
@@ -177,5 +177,3 @@ Authorization: Bearer YOUR-REST-API-KEY
 Si vous souhaitez enregistrer, stocker et suivre les propriétés avec lesquelles segmenter, vous devez les configurer comme attributs personnalisés. Pour ce faire, vous pouvez utiliser les [extensions de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), qui vous permettent de cibler les utilisateurs en fonction d'un événement personnalisé ou d'un comportement d'achat stocké pendant toute la durée de vie de ce profil utilisateur.
 
 
-[20]: http://en.wikipedia.org/wiki/ISO_4217 "Code devise ISO 4217"
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "Code temporel ISO 8601"

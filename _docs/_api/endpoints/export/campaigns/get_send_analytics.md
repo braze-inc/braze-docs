@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Send Analytics"
+nav_title: "GET: Export send analytics"
 article_title: "GET: Export Send Analytics"
 search_tag: Endpoint
 page_order: 4

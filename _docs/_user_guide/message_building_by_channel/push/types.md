@@ -1,5 +1,5 @@
 ---
-nav_title: "Types of Push Notifications"
+nav_title: "Types of push notifications"
 article_title: Types of Push Notifications
 page_order: 1
 page_type: glossary

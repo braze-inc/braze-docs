@@ -12,7 +12,7 @@ page_type: update
 Grouparoo のサポートは、2022年4月に終了しました。
 {% endalert %}
 
-> [Grouparoo][1]は、開封ソースのリバースETLツールで、倉庫内のデータを使用してマーケティング、販売、サポートツールに簡単に電力を供給します。設定はモデル中心のUIで行われるため、技術者でないチームメンバーでも、運用をサポートするためのデータ同期の設定やスケジュールを立てることができる。
+> [Grouparoo](https://www.grouparoo.com/)は、開封ソースのリバースETLツールで、倉庫内のデータを使用してマーケティング、販売、サポートツールに簡単に電力を供給します。設定はモデル中心のUIで行われるため、技術者でないチームメンバーでも、運用をサポートするためのデータ同期の設定やスケジュールを立てることができる。
 
 BrazeとGrouparooの統合により、倉庫に保存されているデータをBrazeに送信することで、簡単に運用することができる。自動同期スケジュールを設定すると、最新の情報により顧客とのコミュニケーションを一貫して強化できます。
 
@@ -22,7 +22,7 @@ BrazeとGrouparooの統合により、倉庫に保存されているデータを
 | ----------- | ----------- |
 | Grouparooのアカウントとプロジェクト | このパートナーシップを利用するには、Grouparooアカウントとプロジェクトが必要である。<br><br>この統合は、Grouparooが提供する無料のコミュニティーエディションおよびエンタープライズソリューションで使用できます。セットアップはGrouparooコンフィギュレーション・ユーザーインターフェイスで行われる。 |
 | Braze REST API キー | ユーザーとトラック権限を持つBraze REST APIキー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze REST エンドポイント | [あなたのRESTエンドポイントURL][1]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
+| Braze REST エンドポイント | [あなたのRESTエンドポイントURL](https://www.grouparoo.com/)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
@@ -31,7 +31,7 @@ BrazeとGrouparooの統合により、倉庫に保存されているデータを
 
 Grouparoo で、[**Apps**] に移動し、[**Braze**] を選択して新しいBraze アプリを作成します。表示されたモーダルで、Braze APIキーとRESTエンドポイントを入力する。
 
-![][2]
+![]({% image_buster /assets/img/grouparoo/add-app.png %})
 
 ### ステップ2:モデルとデータソースをセットアップする
 
@@ -52,7 +52,7 @@ Grouparooで、ナビゲーションバーからモデルを選択する。次�
 
 次に、Grouparooのプロパティ・フィールドをBrazeのプロパティ・フィールドにマッピングする必要がある。 
 
-![プロパティのマッピングフィールドの例。Grouparoo userID は、external_id にマップするように設定されます。email、firstName、lastName は、対応する「email」、「first_name」、および「last_name」 Grouparoo フィールドとして設定されます。][3]{: style="max-width:80%;"}
+![プロパティのマッピングフィールドの例。Grouparoo の userID は external_id にマッピングされるように設定されます。email、firstName、lastName は対応する grouparoo フィールドである「email」、「first_name」、「last_name」として設定されます。]({% image_buster /assets/img/grouparoo/mapping.png %}){: style="max-width:80%;"}
 
 Braze`external_id` フィールドがソーステーブルの主キーにマッピングされていることを確認する。ユースケースでの必要に応じて、残りのフィールドをマッピングします。
 
@@ -64,13 +64,9 @@ Braze`external_id` フィールドがソーステーブルの主キーにマッ�
 
 マッピングに加えて、Grouparoo グループを Braze 購読グループに追加することもできます。 
 
-![Grouparoo宛先設定ウィンドウの "Braze Subscription Groups "で、"High value with recent automotive purchase "Grouparooグループが "High value with recent automotive purchase "Brazeサブスクリプショングループに追加される。][4]{: style="max-width:80%;"}
+![Grouparoo の送信先設定ウィンドウの「Braze 購読グループ」で、「High value with recent automotive purchase (最近の自動車購入による高価値)」Grouparoo グループが「High value with recent automotive purchase (最近の自動車購入による高価値)」Braze 購読グループに追加されます。]({% image_buster /assets/img/grouparoo/lists.png %}){: style="max-width:80%;"}
 
 {% alert important %}
 この統合に関する詳細および更新は、[Grouparooのドキュメント](https://www.grouparoo.com/docs/integrations/grouparoo-braze)にあります。
 {% endalert %}
 
-[1]: https://www.grouparoo.com/
-[2]: {% image_buster /assets/img/grouparoo/add-app.png %}
-[3]: {% image_buster /assets/img/grouparoo/mapping.png %}
-[4]: {% image_buster /assets/img/grouparoo/lists.png %}

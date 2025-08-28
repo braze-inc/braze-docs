@@ -19,7 +19,7 @@ description: "이 문서에는 2018년 10월의 릴리스 노트가 포함되어
 
 ## 캠페인의 정확한 잠재고객 통계 계산하기
 
-이제 **캠페인 분석으로** 이동하여 오디언스에 대한 정확한 통계를 계산할 수 있습니다. **타겟 사용자** 섹션의 바닥글에서 정확한 **통계 계산**을 클릭하면 정확한 오디언스 통계가 채워집니다. 계산하기 전에 캠페인을 저장해야 합니다(초안 캠페인은 초안으로 저장됩니다).
+이제 **캠페인 분석으로** 이동하여 오디언스에 대한 정확한 통계를 계산할 수 있습니다. **타겟 오디언스** 섹션의 바닥글에서 정확한 **통계 계산을** 클릭하면 정확한 오디언스 통계가 채워집니다. 계산하기 전에 캠페인을 저장해야 합니다(초안 캠페인은 초안으로 저장됩니다).
 
 ## Windows 8 지원 중단
 
@@ -43,7 +43,7 @@ Braze는 이제 이메일 분석의 정확도를 크게 향상시키기 위해 �
 
 ## 커런츠용 Azure
 
-이제 커런츠를 사용하는 Braze 고객은 [Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/)를 잠재적인 통합 대상으로 볼 수 있습니다.
+이제 커런츠를 사용하는 Braze 고객은 [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents#microsoft-azure-blob-storage)를 잠재적인 통합 대상으로 볼 수 있습니다.
 
 ## 입력 필드 확장
 

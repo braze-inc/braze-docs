@@ -159,7 +159,7 @@ Après avoir créé votre segment, ajoutez un filtre `Most Recent Location` pour
 - Avec les régions polygonales, vous pouvez désigner les zones que vous souhaitez inclure dans votre segment de manière plus précise.
 
 {% alert tip %}
-Vous souhaitez tirer parti du ciblage de localisation avec l’aide d’un partenaire Braze ? Consultez nos [partenaires d'emplacement/localisation contextuelle]({{site.baseurl}}/partners/message_personalization/location) Braze disponibles.
+Vous souhaitez tirer parti du ciblage de localisation avec l’aide d’un partenaire Braze ? Consultez nos [partenaires d'emplacement/localisation contextuelle]({{site.baseurl}}/partners/message_personalization/) Braze disponibles.
 {% endalert %}
 
 {% endapi %}

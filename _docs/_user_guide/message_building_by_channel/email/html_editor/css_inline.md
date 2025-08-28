@@ -1,5 +1,5 @@
 ---
-nav_title: CSS Inlining
+nav_title: CSS inlining
 article_title: CSS Inlining
 page_order: 5.1
 description: "This reference article covers how to enable CSS inlining and some best practices."

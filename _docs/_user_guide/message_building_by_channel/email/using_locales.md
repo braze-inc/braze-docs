@@ -1,5 +1,5 @@
 ---
-nav_title: Locales in Messages
+nav_title: Locales in messages
 article_title: Locales in Messages
 page_order: 6.3
 description: "This article provides steps on how to use locales in your messaging."

@@ -159,7 +159,7 @@ Una vez que haya creado su segmento, añada un filtro `Most Recent Location` par
 - Para las regiones poligonales, puede designar más específicamente qué áreas desea incluir en su segmento.
 
 {% alert tip %}
-¿Le interesa aprovechar las ventajas de la orientación por localización con la ayuda de un socio de Braze? Consulta nuestros [socios de ubicación contextual]({{site.baseurl}}/partners/message_personalization/location) Braze disponibles.
+¿Le interesa aprovechar las ventajas de la orientación por localización con la ayuda de un socio de Braze? Consulta nuestros [socios de ubicación contextual]({{site.baseurl}}/partners/message_personalization/) Braze disponibles.
 {% endalert %}
 
 {% endapi %}

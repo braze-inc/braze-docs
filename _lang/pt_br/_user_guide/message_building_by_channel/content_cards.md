@@ -1,7 +1,7 @@
 ---
 nav_title: Cartões de conteúdo
 article_title: Cartões de conteúdo
-page_order: 0
+page_order: 1
 layout: dev_guide
 guide_top_header: "Cartões de conteúdo"
 guide_top_text: "Com os cartões de conteúdo, você pode enviar um fluxo dinâmico e altamente direcionado de conteúdo avançado para seus clientes nos apps que eles adoram, sem interromper a experiência deles. Além disso, os cartões de conteúdo são compatíveis com recursos mais personalizados, como cartão fixado, descarte de cartão, entrega baseada em API, conteúdo conectado, tempos de expiração de cartão personalizados, análise de dados do cartão e fácil coordenação com notificações por push. <br><br>Os cartões de conteúdo estão disponíveis como um recurso complementar. Para começar a usar os cartões de conteúdo, entre em contato com o gerente de sucesso do cliente do Braze."
@@ -29,9 +29,6 @@ guide_featured_list:
 - name: Relatórios
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   image: /assets/img/braze_icons/pie-chart-01.svg
-- name: Migrando do feed de notícias
-  link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
-  image: /assets/img/braze_icons/briefcase-01.svg
 - name: Práticas recomendadas
   link: /docs/user_guide/message_building_by_channel/content_cards/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

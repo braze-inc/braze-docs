@@ -58,7 +58,7 @@ tool:
 
 Braze 플랫폼에서 전체 화면 인앱 메시지를 미리 볼 때, 여러 기기에 표시될 때 잘리지 않도록 메시지 영역에 이미지 안전지대를 활성화할 수 있습니다. 미리보기 창에서 이미지 안전 영역을 테스트하는 것 외에도 항상 [메시지를 테스트]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)하는 것이 좋습니다.
 
-!["이미지 안전 영역 표시"를 활성화한 상태에서 Braze에서 인앱 메시지 미리보기. 이미지 안전 영역은 이미지의 어느 부분이 자르지 않아도 안전한지 시각화하는 이미지 오버레이입니다.][3c]
+!["이미지 안전 영역 표시"를 활성화한 상태에서 Braze에서 인앱 메시지 미리보기. The image safe zone is an overlay over the image that visualizes what parts of the image will be safe from cropping.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## 더 큰 화면
 
@@ -77,5 +77,3 @@ Braze 플랫폼에서 전체 화면 인앱 메시지를 미리 볼 때, 여러 �
 {% endtab %}
 {% endtabs %}
 
-[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

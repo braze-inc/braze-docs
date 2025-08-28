@@ -28,6 +28,8 @@ Para utilizar este punto final, tendrás que completar lo siguiente:
 - Genera una clave de API con el permiso `messages.live_activity.start`.
 - [Crear una actividad en vivo]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity) utilizando el SDK Swift de Braze.
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## Límite de velocidad
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

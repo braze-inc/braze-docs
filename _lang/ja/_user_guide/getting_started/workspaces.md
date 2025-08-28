@@ -77,15 +77,15 @@ Braze プラットフォームでの操作はすべて、ワークスペース�
 
 #### チーム
 
-[チーム][1]は、顧客ベースの場所、言語、およびカスタム属性にわたって設定できます。これにより、チームメンバーと非チームメンバーは、メッセージング機能および顧客データについてアクセス権が異なります。
+[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)は、顧客ベースの場所、言語、およびカスタム属性にわたって設定できます。これにより、チームメンバーと非チームメンバーは、メッセージング機能および顧客データについてアクセス権が異なります。
 
 #### Braze のユーザー権限
 
-ワークスペースには、独立したアクセスとユーザー権限の定義があります。[ユーザー権限を][2]使用すると、個々のダッシュボードユーザーまたはチームが 1 つのワークスペース内でアクセスできるコンテンツに関する詳細なコントロールを作成できます。
+ワークスペースには、独立したアクセスとユーザー権限の定義があります。[ユーザー権限を]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)使用すると、個々のダッシュボードユーザーまたはチームが 1 つのワークスペース内でアクセスできるコンテンツに関する詳細なコントロールを作成できます。
 
 #### Currents コネクター
 
-[Currents][3] ツールは、エンゲージメントイベントのリアルタイムデータストリームで、Braze プラットフォームから最も堅牢でありながらきめ細かいエクスポートが可能です。Currents コネクターは特定の Braze パッケージに同梱されており、当初はワークスペースが 1 つであることを前提として付属している場合もあります。
+[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) ツールは、エンゲージメントイベントのリアルタイムデータストリームで、Braze プラットフォームから最も堅牢でありながらきめ細かいエクスポートが可能です。Currents コネクターは特定の Braze パッケージに同梱されており、当初はワークスペースが 1 つであることを前提として付属している場合もあります。
 
 Currents コネクターはワークスペース間で共有されないため、個別のワークスペースを作成するか、組み合わせてワークスペースを作成するかを決める際には、使用するCurrents コネクターの数を考慮することが重要です。 
 
@@ -93,7 +93,7 @@ Currents コネクターはワークスペース間で共有されないため�
 
 #### ユーザープロファイル
 
-ユーザーに関連するすべての永続データは、その[ユーザープロファイル][4]に格納されます。しかし、ユーザープロファイルは、ユーザーのエンゲージメント履歴、セグメントメンバーシップ、デバイス、オペレーティングシステムに関する情報に簡単にアクセスできるため、トラブルシューティングやテストに最適なリソースでもあります。
+ユーザーに関連するすべての永続データは、その[ユーザープロファイル]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)に格納されます。しかし、ユーザープロファイルは、ユーザーのエンゲージメント履歴、セグメントメンバーシップ、デバイス、オペレーティングシステムに関する情報に簡単にアクセスできるため、トラブルシューティングやテストに最適なリソースでもあります。
 
 #### セグメント、キャンペーン、キャンバス
 
@@ -205,7 +205,7 @@ Currents コネクターはワークスペース間で共有されないため�
         <td>コンテンツの複製</td>
         <td>該当なし</td>
         <td>セグメンテーション、プッシュキャンペーン、コンテンツカードキャンペーン、キャンバスをワークスペース間で重複させることはできない。</td>
-        <td>次のサポートされているチャネルの [ワークスペース]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/)間でキャンペーンを複製] が可能です。SMS、アプリ内メッセージ、メール、メールテンプレート、およびコンテンツブロック。<br><br>セグメント、キャンペーン、キャンバスを複製して、アプリインスタンス間でコンテンツを再利用できる。</td>
+        <td>次のサポートされているチャネルの [ワークスペース]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/)間でキャンペーンを複製] が可能です。SMS、アプリ内メッセージ、メール、メールテンプレート、およびコンテンツブロック。<br><br>セグメント、キャンペーン、キャンバスを複製して、アプリインスタンス間でコンテンツを再利用できる。</td>
         <td>該当なし</td>
     </tr>
     <tr>
@@ -240,10 +240,5 @@ Currents コネクターはワークスペース間で共有されないため�
 
 ## 次のステップ
 
-ワークスペースプランを決定したら、ワークスペースを作成し、アプリインスタンスを追加します。手順については、「ワークスペースの[作成と管理][5]」を参照してください。
+ワークスペースプランを決定したら、ワークスペースを作成し、アプリインスタンスを追加します。手順については、「ワークスペースの[作成と管理]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)」を参照してください。
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/workspaces/

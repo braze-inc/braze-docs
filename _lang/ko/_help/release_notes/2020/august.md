@@ -23,11 +23,11 @@ Braze의 Predictive Suite은 머신 러닝을 직접 손에 넣을 수 있습니
 
 ## Amazon 개인화 파트너십
 
-Amazon Personalize는 머신 러닝을 사용하여 웹사이트와 애플리케이션에 대한 고품질 추천을 생성합니다. Amazon 개인화를 사용하면 실시간 개인화된 상품 및 콘텐츠 추천과 타겟 마케팅 프로모션을 통해 고객 참여를 향상시킬 수 있습니다. 자세한 내용은 [Amazon 개인화]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/) 문서를 참조하세요.
+Amazon Personalize는 머신 러닝을 사용하여 웹사이트와 애플리케이션에 대한 고품질 추천을 생성합니다. Amazon 개인화를 사용하면 실시간 개인화된 상품 및 콘텐츠 추천과 타겟 마케팅 프로모션을 통해 고객 참여를 향상시킬 수 있습니다. 자세한 내용은 [Amazon 개인화]({{site.baseurl}}/partners/amazon_personalize/) 문서를 참조하세요.
 
 ## Vizbee 파트너십
 
-Vizbee를 사용하면 집에 있는 모든 스마트폰과 스마트 TV를 하나의 원활한 기기로 통합하여 뛰어난 사용자 경험을 제공할 수 있습니다. Vizbee는 알림, 딥링크, 이메일과 같은 기존 모바일 앱 마케팅 채널을 활용하여 모든 CTV 기기(예: Roku, FireTV, 삼성 TV, LG TV 등)에서 시청자를 확보하고 참여를 유도할 수 있도록 지원합니다. 자세한 내용은 [Vizbee]({{site.baseurl}}/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/) 설명서를 참조하십시오. 
+Vizbee를 사용하면 집에 있는 모든 스마트폰과 스마트 TV를 하나의 원활한 기기로 통합하여 뛰어난 사용자 경험을 제공할 수 있습니다. Vizbee는 알림, 딥링크, 이메일과 같은 기존 모바일 앱 마케팅 채널을 활용하여 모든 CTV 기기(예: Roku, FireTV, 삼성 TV, LG TV 등)에서 시청자를 확보하고 참여를 유도할 수 있도록 지원합니다. 자세한 내용은 [Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/) 설명서를 참조하십시오. 
 
 ## Bluedot 파트너십
 
@@ -35,4 +35,4 @@ Bluedot은 앱에 정확하고 간단한 지오펜싱을 제공하는 위치 플
 
 ## 파트너십 반복
 
-Iterate는 브랜드와 같은 모양과 느낌의 스마트하고 사용자 친화적인 설문조사 도구를 제공하여 고객으로부터 쉽게 학습할 수 있도록 도와줍니다. 자세한 내용은 [반복하기]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) 문서를 참조하세요. 
+Iterate는 브랜드와 같은 모양과 느낌의 스마트하고 사용자 친화적인 설문조사 도구를 제공하여 고객으로부터 쉽게 학습할 수 있도록 도와줍니다. 자세한 내용은 [반복하기]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/) 문서를 참조하세요. 

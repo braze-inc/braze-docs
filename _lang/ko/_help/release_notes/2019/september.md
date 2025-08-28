@@ -14,14 +14,14 @@ description: "이 문서에는 2019년 9월의 릴리스 노트가 포함되어 
 
 ## Rokt 캘린더 파트너십
 
-[Rokt 캘린더는]({{site.baseurl}}/partners/additional_channels/calendar/rokt_calendar/) Braze 고객에게 개인화된 마케팅 이니셔티브를 조정하고 개인화된 콘텐츠를 최종 사용자의 캘린더로 확장할 수 있는 기능을 제공합니다. 이를 통해 최종 사용자에게 보다 원활한 경험을 제공하고 고객 서비스와의 밀착도를 더욱 높일 수 있습니다. 고객은 다음을 수행할 수 있습니다.
+[Rokt 캘린더는]({{site.baseurl}}/partners/home/) Braze 고객에게 개인화된 마케팅 이니셔티브를 조정하고 개인화된 콘텐츠를 최종 사용자의 캘린더로 확장할 수 있는 기능을 제공합니다. 이를 통해 최종 사용자에게 보다 원활한 경험을 제공하고 고객 서비스와의 밀착도를 더욱 높일 수 있습니다. 고객은 다음을 수행할 수 있습니다.
 
 - Braze 플랫폼을 통해 캘린더 초대를 보내 "날짜 저장"을 하고 커뮤니케이션을 확장하세요
 - 이벤트 내용이 변경된 경우 기존 초대를 업데이트합니다.
 
 ## Passkit 파트너십
 
-Braze 고객은 [Passkit]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/)을 통해 모바일 지갑으로 고객 참여를 확대할 수 있습니다. Braze의 강력한 세분화 기능을 사용하여 개인화된 지갑 캠페인을 진행하고 푸시, 인앱 메시지 등의 채널과 함께 오케스트레이션할 수 있습니다.
+Braze 고객은 [Passkit]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/mobile_wallet/passkit/)을 통해 모바일 지갑으로 고객 참여를 확대할 수 있습니다. Braze의 강력한 세분화 기능을 사용하여 개인화된 지갑 캠페인을 진행하고 푸시, 인앱 메시지 등의 채널과 함께 오케스트레이션할 수 있습니다.
 
 ## 메시징 엔드포인트를 통한 디스패치 ID 값 반환
 
