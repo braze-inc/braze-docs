@@ -177,6 +177,10 @@ For information on how to check push registration state, visit [push registratio
 {% tabs %}
 {% tab Android %}
 
+{% alert note %}
+For Android, you can only intercept a push notification when the app is in the foreground or background (but still running). You cannot intercept notifications when the app is terminated or completely killed.
+{% endalert %}
+
 If a foreground push enabled user disables push in their OS settings, then at the start of the next session:
 - Braze marks them as foreground push disabled and no longer attempts to send them push messages.
 - The `Foreground Push Enabled for App (Android)` filter and the `Foreground Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
