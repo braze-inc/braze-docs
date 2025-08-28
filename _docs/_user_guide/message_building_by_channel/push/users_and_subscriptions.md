@@ -193,8 +193,6 @@ For Android, Braze will consider a user push disabled if:
 {% endtab %}
 {% tab iOS %}
 
-The iOS operating system doesn't allow any application to intercept a push notification prior to it being displayed. This means the apps (and Braze) have no control over whether or not you can display or hide the notification. An end user can opt out of notifications for that application, and that isn't controlled by the app.
-
 Regardless of if a user accepts the foreground push opt-in prompt, you will still be able to send a background push if you have remote notifications enabled in Xcode and your app calls [`registerForRemoteNotifications()`](https://developer.apple.com/documentation/uikit/uiapplication/1623078-registerforremotenotifications).
 
 If your app is provisionally authorized or the user has opted into push, they receive a foreground push token, allowing you to send them all types of push. Within Braze, we consider a user on iOS who is foreground push enabled to be push enabled, either explicitly (app-level) or provisionally (device-level).
@@ -206,6 +204,10 @@ In the scenario that a user, who initially opted-in on the OS level disables pus
 - The `Foreground Push Enabled for App (iOS)` filter and the `Foreground Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
 
 In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background or Foreground Push Enabled = true`.
+
+{% alert note %}
+The iOS operating system doesn't allow apps to intercept a push notification prior to the push notification displaying. This means the apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for that app, but that isn't controlled by the app itself.
+{% endalert %}
 
 {% endtab %}
 {% tab Web %}
