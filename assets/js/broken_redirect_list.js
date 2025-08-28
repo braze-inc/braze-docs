@@ -2716,7 +2716,7 @@ validurls['/docs/user_guide/data/braze_currents/transferring_data_to_redshift'] 
 validurls['/docs/user_guide/data/braze_currents/faq'] = '/docs/user_guide/data/distribution/braze_currents/faq';
 validurls['/docs/user_guide/data/user_data_collection'] = '/docs/user_guide/data/unification/user_data_collection';
 validurls['/docs/user_guide/data/user_data_collection/sdk_data_collection'] = '/docs/user_guide/data/unification/user_data_collection/sdk_data_collection';
-validurls['/docs/user_guide/data/user_data_collection/user_profile_lifecycle/'] = '/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle';
+validurls['/docs/user_guide/data/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle';
 validurls['/docs/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users'] = '/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle/anonymous_users';
 validurls['/docs/user_guide/data/user_data_collection/collection_use_case'] = '/docs/user_guide/data/unification/user_data_collection/collection_use_case';
 validurls['/docs/user_guide/data/user_data_collection/best_practices'] = '/docs/user_guide/data/unification/user_data_collection/best_practices';
@@ -2735,8 +2735,8 @@ validurls['/docs/user_guide/data/custom_data/event_naming_conventions'] = '/docs
 validurls['/docs/user_guide/data/custom_data/managing_custom_data'] = '/docs/user_guide/data/activation/custom_data/managing_custom_data';
 validurls['/docs/user_guide/data/custom_data/recommended_events'] = '/docs/user_guide/data/activation/custom_data/recommended_events';
 validurls['/docs/user_guide/data/custom_data/recommended_events/ecommerce_events'] = '/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events';
-validurls['/docs/user_guide/data/custom_data/recommended_events/product_blocks/'] = '/docs/user_guide/data/activation/custom_data/recommended_events/product_blocks';
-validurls['/docs/user_guide/data/export_braze_data/'] = '/docs/user_guide/data/distribution/export_braze_data/';
+validurls['/docs/user_guide/data/custom_data/recommended_events/product_blocks'] = '/docs/user_guide/data/activation/custom_data/recommended_events/product_blocks';
+validurls['/docs/user_guide/data/export_braze_data'] = '/docs/user_guide/data/distribution/export_braze_data';
 validurls['/docs/user_guide/data/export_braze_data/export_campaign_results_data'] = '/docs/user_guide/data/distribution/export_braze_data/export_campaign_results_data';
 validurls['/docs/user_guide/data/export_braze_data/message_archiving'] = '/docs/user_guide/data/distribution/export_braze_data/message_archiving';
 validurls['/docs/user_guide/data/export_braze_data/export_canvas_data'] = '/docs/user_guide/data/distribution/export_braze_data/export_canvas_data';
@@ -2749,6 +2749,8 @@ validurls['/docs/user_guide/data/export_braze_data/opening_csv_reports_in_excel'
 validurls['/docs/user_guide/data/export_braze_data/export_troubleshooting'] = '/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting';
 validurls['/docs/user_guide/data/export_braze_data/faqs'] = '/docs/user_guide/data/distribution/export_braze_data/faqs';
 validurls['/docs/user_guide/data/field_level_encryption'] = '/docs/user_guide/data/infrastructure/field_level_encryption';
+validurls['/docs/user_guide/data/braze_currents/event_glossary'] = '/docs/user_guide/data/distribution/braze_currents/event_glossary';
+validurls['/docs/user_guide/data/cloud_ingestion/sync_accounts_data'] = '/docs/user_guide/data/unification/cloud_ingestion/sync_accounts_data';
 
 validurls['/docs/user_guide/engagement_tools/segments/sql_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/';
 validurls['/docs/user_guide/engagement_tools/segments/sql_segments/catalog_segments/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments/';
