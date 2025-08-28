@@ -23,33 +23,31 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             const prTitle = pr.title;
-
+            
             const match = prTitle.match(/\[BD-(\d+)\]/);
             const bdNumber = match ? match[1] : null;
             const fullTag = `[BD-${bdNumber}]`;
-
+            
             core.info(`issue in title: ${fullTag || "None"}`);
             if (!bdNumber) return;
-
+            
             const labels = pr.labels.map(label => label.name);
             const tagExists = labels.includes("fixes an issue");
             core.info(`tag already exists? ${tagExists ? "yes" : "no"}`);
             if (tagExists) return;
-
-            const { data: issues } = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: "open"
+            
+            const { data } = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${fullTag}"`
             });
-
-            const matchedIssue = issues.find(issue =>
+            
+            const matchedIssue = data.items.find(issue =>
               issue.title.includes(fullTag)
             );
-
+            
             const issueFound = !!matchedIssue;
             core.info(`matching issue found? ${issueFound ? "yes" : "no"}`);
             if (!issueFound) return;
-
+            
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -57,7 +55,7 @@ jobs:
               body: `Fixes #${matchedIssue.number}`
             });
             core.info("comment posted? yes");
-
+            
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
