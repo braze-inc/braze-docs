@@ -25,22 +25,29 @@ platform:
 
 These are the minimum SDK versions needed to create Banner placements:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% sdk_min_versions web:5.8.1 swift:11.3.0 android:33.1.0 reactnative:14.0.0 flutter:13.0.0 %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-How often placements can be refreshed depends on the SDK version:
+Placements are cached automatically when a user's session expires or when you change identified users using the `changeUser` method. The refresh limit depends on your SDK version.
 
-- For SDK versions Android 38.0.0, Swift 13.1.0 and Web 6.1.0, placements refreshes use a token bucket algorithm. This allows multiple refreshes in a session within the defined limits (a bucket size of 5 requests with a refill rate of one per 180 seconds).
-- For older SDK versions, placement refreshes are limited to once per session. Additional refresh calls in the same session are ignored.
+{% tabs local %}
+{% tab multiple refreshes %}
+These minimum SDK versions use a token bucket system for refreshing placements: up to 5 requests per session, with 1 request refilled every 180 seconds.
 
-Placements are cached automatically when a user's session expires or when you change identified users using the `changeUser` method. 
+{% sdk_min_versions web:6.1.0 swift:13.1.0 android:38.0.0 %}
+{% endtab %}
 
-{% alert tip %}
-Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
-{% endalert %}
+{% tab one refresh %}
+Older SDK versions allow only one refresh per session; additional calls are ignored.
+
+{% sdk_min_versions web:5.8.1 swift:11.3.0 android:33.1.0 reactnative:14.0.0 flutter:13.0.0 %}
+{% endtab %}
+{% endtabs %}
+
+Use `requestBannersRefresh` to fetch Banner content for one or more placements. Call it early in the session to avoid delays in downloading or displaying Banners.
 
 {% tabs %}
 {% tab Web %}
@@ -89,16 +96,16 @@ Braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endtab %}
 {% tab Unity %}
 
-```csharp
+{% alert note %}
 This feature is not currently supported on Unity.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Cordova %}
 
-```javascript
+{% alert note %}
 This feature is not currently supported on Cordova.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Flutter %}
@@ -110,9 +117,9 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endtab %}
 {% tab Roku %}
 
-```brightscript
+{% alert note %}
 This feature is not currently supported on Roku.
-```
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -193,16 +200,16 @@ const bannerCardsSubscription = Braze.addListener(
 {% endtab %}
 {% tab Unity %}
 
-```csharp
+{% alert note %}
 This feature is not currently supported on Unity.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Cordova %}
 
-```javascript
+{% alert note %}
 This feature is not currently supported on Cordova.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Flutter %}
@@ -218,9 +225,9 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 {% endtab %}
 {% tab Roku %}
 
-```brightscript
+{% alert note %}
 This feature is not currently supported on Roku.
-```
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -432,16 +439,16 @@ const banner = await Braze.getBanner("global_banner");
 {% endtab %}
 {% tab Unity %}
 
-```csharp
+{% alert note %}
 This feature is not currently supported on Unity.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Cordova %}
 
-```javascript
+{% alert note %}
 This feature is not currently supported on Cordova.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Flutter %}
@@ -469,9 +476,9 @@ braze.getBanner("global_banner").then((banner) {
 {% endtab %}
 {% tab Roku %}
 
-```brightscript
+{% alert note %}
 This feature is not currently supported on Roku.
-```
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
