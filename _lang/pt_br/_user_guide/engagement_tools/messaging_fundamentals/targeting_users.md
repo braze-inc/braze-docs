@@ -31,13 +31,38 @@ Para direcionar usuários que se enquadram em vários segmentos criados anterior
 {% tab vários filtros %}
 Para direcionar usuários sem adicionar um segmento, é possível usar diversos filtros. Esse é um público improvisado durante a criação da mensagem e permite que você ignore a criação de segmentos ao enviar para públicos únicos.
 
-![Filtros adicionais para uma mensagem direcionada a usuários que abriram um app pela última vez em um dia, que nunca receberam uma campanha ou etapa do Canva e que fizeram uma compra há menos de 30 dias.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:70%;"}
+![Filtros adicionais para uma mensagem direcionada a usuários que abriram um app pela última vez em um dia, que nunca receberam uma campanha ou etapa do Canva e que fizeram uma compra há menos de 30 dias.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segmentos e filtros %}
 Também é possível direcionar usuários de um ou mais segmentos criados anteriormente que também se enquadram em filtros adicionais. Depois de selecionar seus segmentos, você pode refinar ainda mais seu público na seção **Additional Filters (Filtros adicionais** ). Isso é demonstrado na captura de tela a seguir, que direciona os usuários que estão no segmento "Usuários ativos diários", no segmento "Nunca abri e-mail" e que fizeram uma compra há mais de 30 dias.
 
-![Opções de direcionamento para uma mensagem que inclui dois segmentos e tem um filtro adicional para uma última compra feita há menos de 30 dias.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:70%;"}
+![Opções de direcionamento para uma mensagem que inclui dois segmentos e tem um filtro adicional para uma última compra feita há menos de 30 dias.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
+{% endtab %}
+
+{% tab Aplicativos específicos %}
+
+Você pode enviar uma mensagem de campanha ou uma etapa do Canva para aplicativos específicos, como enviar uma mensagem no app ou uma notificação por push somente para aplicativos Android ou iOS.
+
+No entanto, lembre-se de que é possível que um usuário use vários apps. O filtro "Has app" identifica todos os usuários que têm o aplicativo selecionado, mas não controla quais aplicativos recebem mensagens. Por exemplo, se você aplicar um filtro de segmento em que "Has app" esteja definido como Android, todos os usuários que também tiverem o aplicativo iOS também receberão a mensagem no app iOS.
+
+![Um filtro para usuários que têm o app "Hello, World (Android)".]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+
+Digamos que você queira enviar uma mensagem no app somente para aplicativos Android.
+
+1. Crie um segmento e defina **aplicativos e sites direcionados** a **usuários de aplicativos específicos** e, em seguida, selecione seu aplicativo Android.
+
+![Um segmento direcionado a usuários de um app específico, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+
+{: start="2"}
+2\. Em sua campanha ou Canva, vá para a etapa de **públicos-alvo** e confirme se o seu segmento foi adicionado na seção **Usuários-alvo por segmento**. 
+
+![A etapa "Direcionamento ao público" com um exemplo de segmento selecionado.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+
+{% alert note %}
+Isso não funcionará se você adicionar seu segmento na seção **Additional Filters (Filtros adicionais** ) por meio de um filtro de associação de segmento. Você deve fazer referência direta ao seu segmento em **Target Users By Segment** para entregar sua mensagem somente a esse app.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -49,7 +74,7 @@ Para campanhas de e-mail, é possível direcionar os grupos de teste na seção 
 
 Depois de adicionar segmentos e filtros ao seu público, é possível testar se o público está configurado conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se ele corresponde aos critérios do público.
 
-![A seção "User Lookup" com um botão "Lookup User".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%"}
+![A seção "User Lookup" com um botão "Lookup User".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Resumo do público
 
@@ -70,6 +95,10 @@ O Braze fornece estatísticas detalhadas do público dos canais direcionados no 
 - Para determinar um número exato de usuários acessíveis, selecione [Calculate exact statistics (Calcular estatísticas exatas]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics)), pois isso pesquisará todos os usuários da sua base de usuários.
 - Para ver qual porcentagem da sua base de usuários está sendo direcionada ou o valor do tempo de vida (LTV) desse segmento, selecione **Show Additional Statistics (Mostrar estatísticas adicionais)**.
 - Para ver qual porcentagem da sua base de usuários está sendo direcionada ou o valor do tempo de vida (LTV) desse segmento, selecione **Show Additional Statistics (Mostrar estatísticas adicionais)**.
+
+##### Por que a contagem do público-alvo pode ser diferente da contagem de usuários alcançáveis
+
+{% multi_lang_include segments.md section='Diferentes tamanhos de público' %}
 
 ![A seção "Total Population" (População total) com contagens estimadas de usuários alcançáveis em cada canal direcionado.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 

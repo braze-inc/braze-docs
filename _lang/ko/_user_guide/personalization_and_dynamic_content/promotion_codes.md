@@ -15,17 +15,17 @@ description: "이 참조 문서에서는 프로모션 코드 목록을 생성하
 
 프로모션 코드라고도 하는 프로모션 코드는 구매에 중점을 둔 상호 작용을 유도하여 사용자의 참여를 유지하는 좋은 방법입니다. 프로모션 코드 목록에서 가져오는 메시지를 만들 수 있습니다. 
 
-각 프로모션 코드의 유효 기간은 최대 6개월입니다. 목록당 최대 2천만 개의 코드를 저장하고 관리할 수 있습니다. 프로모션 코드의 성과를 관리하고 분석하여 프로모션 전략과 메시지에 대한 타겟팅된 결정을 내릴 수 있습니다.
+Each promotion code has an expiration date of up to six months, and can be deleted before expiry by contacting [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/). 목록당 최대 2천만 개의 코드를 저장하고 관리할 수 있습니다. 프로모션 코드의 성과를 관리하고 분석하여 프로모션 전략과 메시지에 대한 타겟팅된 결정을 내릴 수 있습니다.
 
 {% alert important %}
-프로모션 코드는 인앱 메시지로 전송할 수 없습니다.
+Promotion codes can't be sent in in-app messages in Canvas. If you're participarting in the [early access](#promotion-codes-iam-campaigns), promotion codes can be sent in in-app message campaigns.
 {% endalert %}
 
 ## 프로모션 코드 목록 만들기
 
 ### 1단계: 프로모션 코드 섹션으로 이동
 
-![버튼을 클릭하여 프로모션 코드를 생성합니다.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Button to create a promotion code.]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 1. 대시보드에서 **데이터 설정** > **프로모션 코드로** 이동합니다.
 2. **프로모션 코드 목록 생성을** 선택합니다.
@@ -42,7 +42,7 @@ description: "이 참조 문서에서는 프로모션 코드 목록을 생성하
 - Liquid에서 스니펫 이름을 사용하여 이 프로모션 코드 세트를 참조하세요.
 - 코드 스니펫이 다른 목록에서 이미 사용되고 있지 않은지 확인하세요.
 
-![코드 스니펫 "spring25"가 포함된 "SpringSale2025"라는 프로모션 코드 목록입니다.][3]{: style="max-width:80%"}
+![A promotion code list named "SpringSale2025" with the code snippet "spring25".]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:80%"}
 
 ### 3단계: 프로모션 코드 옵션 선택
 
@@ -50,11 +50,11 @@ description: "이 참조 문서에서는 프로모션 코드 목록을 생성하
 
 해당 기간 내에 만료일을 반복해서 변경하고 업데이트할 수 있습니다. 이 만료 날짜는 이 목록에 추가된 모든 코드에 적용됩니다. 만료되면 해당 코드는 Braze 시스템에서 삭제되며 해당 목록의 코드 조각을 호출하는 모든 메시지는 전송되지 않습니다.
 
-![남은 모든 코드가 2025년 4월 30일 오전 12시에 만료되도록 만료 설정을 나열합니다.][4]{: style="max-width:80%"}
+![List expiration settings that all remaining codes will expire on April 30, 2025 at 12 am.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
 임계값 알림을 선택 사항으로 설정하고 사용자 지정할 수도 있습니다. 이 알림을 설정하면 목록에 사용 가능한 프로모션 코드가 부족하거나 프로모션 코드 목록의 만료가 임박했을 때 지정된 수신자에게 이메일이 전송됩니다. 수신자에게는 하루에 한 번 알림이 전송됩니다.
 
-![프로모션 코드 목록이 5일 후에 만료되면 "마케팅@abc.com"에게 알리는 임계값 알림의 예입니다.][5]{: style="max-width:80%"}
+![An example of a threshold alert to notify "marketing@abc.com" when the promotion code list expires in 5 days.]({% image_buster /assets/img/promocodes/promocode5.png %}){: style="max-width:80%"}
 
 ### 4단계: 프로모션 코드 업로드
 
@@ -65,7 +65,7 @@ CSV 파일이 다음 가이드라인을 따르고 있는지 확인하세요:
 - 프로모션 코드 열을 포함합니다.
 - 행당 하나의 프로모션 코드가 있습니다.
 
-기본으로 제공되는 [Voucherify와의]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) 통합을 사용하거나 [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) 를 사용하여 프로모션 코드를 생성하고 내보낼 수 있습니다.
+You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) to create and export promotion codes.
 
 {% alert important %}
 최대 파일 크기는 100MB, 최대 목록 크기는 사용하지 않은 코드의 20밀리미터입니다. 잘못된 파일이 업로드된 경우 새 파일을 업로드하면 이전 파일이 대체됩니다.
@@ -73,13 +73,13 @@ CSV 파일이 다음 가이드라인을 따르고 있는지 확인하세요:
 
 1. 업로드가 완료되면 **목록 저장을** 선택하여 방금 입력한 모든 세부 정보와 코드를 저장합니다.
 
-!["springsale"이라는 이름의 CSV 파일이 성공적으로 업로드되었습니다.][7]
+![CSV file named "springsale" that was successfully uploaded.]({% image_buster /assets/img/promocodes/promocode7.png %})
 
 {:start="2"}
 2\. 저장을 선택하면 **가져오기 기록**에 새 행이 나타납니다.
 3\. 가져오기가 완료되었는지 확인하기 위해 표를 새로 고치려면 표 상단에서 <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **동기화를** 선택합니다.
 
-![프로모션 코드가 업로드되는 중입니다.][8]
+![Promotion codes in the process of being uploaded.]({% image_buster /assets/img/promocodes/promocode8.png %})
 
 {% alert note %}
 대용량 파일은 가져오는 데 몇 분 정도 걸립니다. 기다리는 동안 페이지에서 나가서 가져오기가 진행되는 동안 다른 작업을 할 수 있습니다. When the import finishes, the status will change to **Complete** in the table.
@@ -97,12 +97,12 @@ CSV 파일이 다음 가이드라인을 따르고 있는지 확인하세요:
 
 1. 코드 조각 **복사를** 선택하여 프로모션 코드 목록을 생성할 때 설정한 코드 조각을 복사합니다.
 
-![스니펫을 복사하여 메시지에 붙여넣을 수 있는 옵션입니다.][9]{: style="max-width:70%"}
+![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
 {:start="2"}
 2\. 거기에서 이 코드를 대시보드 내의 메시지에 붙여넣을 수 있습니다.
 
-!["이번 봄에는 특별 혜택으로 멋진 선물을 받아보세요"라는 메시지와 코드 스니펫을 예로 들어보겠습니다.][10]{: style="max-width:70%"}
+![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
 [Liquid를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 사용하면 업로드한 CSV 파일의 고유 프로모션 코드 중 하나를 메시지에 삽입할 수 있습니다. 해당 코드는 다른 메시지에서 동일한 코드를 보내지 않도록 Braze 백엔드에 전송된 것으로 표시됩니다.
 
@@ -124,11 +124,21 @@ CSV 파일이 다음 가이드라인을 따르고 있는지 확인하세요:
 
 **프로모션 코드** 페이지의 프로모션 코드 목록의 **남은** 열에서 남은 코드 수를 확인할 수 있습니다.
 
-![사용하지 않은 코드가 있는 프로모션 코드의 예입니다.][12]
+![An example of a promotion code with unused codes.]({% image_buster /assets/img/promocodes/promocode11.png %})
 
 이 코드 수는 기존 프로모션 코드 목록 페이지를 다시 방문할 때도 확인할 수 있습니다. 사용하지 않는 코드를 CSV 파일로 내보낼 수도 있습니다. 
 
-!["블랙 프라이데이 세일"이라는 프로모션 코드가 992개 남아 있습니다.][13]{: style="max-width:70%"}
+![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+
+### Using promotion codes in in-app message campaigns {#promotion-codes-iam-campaigns}
+
+{% alert important %}
+Using promotion codes in in-app message campaigns is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
+{% endalert %}
+
+After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. 
+
+Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
 
 ## 멀티채널 및 단일 채널 전송
 
@@ -191,13 +201,3 @@ Braze는 예상 사용량보다 더 많은 프로모션 코드를 업로드할 �
 
 이후 메시지에서 동일한 프로모션 코드를 참조하려면 코드를 사용자 프로필에 사용자 지정 속성으로 저장해야 합니다. 이는 동일한 캠페인 또는 캔버스 메시지 단계에 [Braze-to-Braze 웹훅을]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) 연결하여 수행할 수 있습니다.
 
-[1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[3]:{% image_buster /assets/img/promocodes/promocode3.png %}
-[4]:{% image_buster /assets/img/promocodes/promocode4.png %}
-[5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[7]:{% image_buster /assets/img/promocodes/promocode7.png %}
-[8]:{% image_buster /assets/img/promocodes/promocode8.png %}
-[9]:{% image_buster /assets/img/promocodes/promocode9.png %}
-[10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[12]: {% image_buster /assets/img/promocodes/promocode11.png %}
-[13]: {% image_buster /assets/img/promocodes/promocode12.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Email Sign-up with Image
+nav_title: Email sign-up with image
 article_title: Email Sign-up with Background Image
 alias: "/email_image/"
 page_order: 4

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Webhook
+nav_title: Creating a webhook
 article_title: Creating a Webhook
 page_order: 1
 channel:

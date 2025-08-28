@@ -27,7 +27,7 @@ description: "Cet article de référence explique les différents composants de 
   "email_template_id": (optional, string) if provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "extras": (optional, valid Key-Value Hash) extra hash - for SendGrid users, this will be passed to SendGrid as Unique Arguments,
-  "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost and SendGrid),
+  "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost, SendGrid, or Amazon SES),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
@@ -36,7 +36,8 @@ description: "Cet article de référence explique les différents composants de 
 ```
 
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
-- Pour plus d'informations et de bonnes pratiques sur les accroches, consultez notre article d'aide sur [email body styling][46].
+  - Toute adresse `app_id` valide provenant d'une application configurée dans votre espace de travail fonctionnera pour tous les utilisateurs de votre espace de travail, que l'utilisateur ait ou non l'application spécifique sur son profil.
+- Pour plus d'informations et de bonnes pratiques sur les accroches, consultez notre article d'aide sur le [style du corps de l'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling)
 
 {% alert warning %}
 Braze recommande d’éviter d’utiliser les liens Google Drive pour les `url` de pièces jointes, car cela peut bloquer les appels de nos serveurs pour obtenir le fichier ce qui empêche l’envoi d’e-mails.
@@ -46,7 +47,7 @@ Les types de fichiers joints valides comprennent : `txt`, `csv`, `log`, `css`, 
 
 Un `email_template_id` peut être récupéré au bas des modèles d’e-mail créés avec l’éditeur HTML. Voici un exemple de ce à quoi ressemble cet ID :
 
-![Section Identifiant API d’un modèle d’e-mail HTML][31]
+![Section de l'identifiant API d'un modèle d'e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"} 
 
 ## Exemple d’objet d’e-mail avec pièce jointe
 
@@ -94,5 +95,3 @@ L'authentification des pièces jointes aux e-mails dans cet endpoint est actuell
 }
 ```
 
-[31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling

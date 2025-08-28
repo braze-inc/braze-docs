@@ -13,11 +13,11 @@ description: "このリファレンス記事では、セグメントデータを
 
 セグメントデータをCSV にエクスポートするには、セグメントの編集中に**User Data** ドロップダウンを選択し、そのセグメントのユーザーデータまたは電子メールアドレスのいずれかをエクスポートするように選択します。
 
-![「ユーザーデータ」ドロップダウンにエクスポートオプションが表示されている「セグメントの詳細」セクション。][1]
+![ユーザーデータのドロップダウンにエクスポートオプションが表示されたセグメンテーションの詳細セクション]({% image_buster /assets/img_archive/csvexport.png %})
 
 メイン**Segments**ページから、セグメントの<i class="fas fa-gear"></i>**設定**ドロップダウンを選択して、CSVエクスポートをリクエストすることもできます。
 
-![メインのセグメントページの「設定」ドロップダウン。][2]
+![メインのセグメントページの [設定] ドロップダウン。]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 すべてのユーザープロファイルからデータをエクスポートするには、フィルタなしでセグメントを作成し、CSVエクスポートをリクエストする。
@@ -29,7 +29,7 @@ CSV 出力には、エクスポート時にセグメントに収集済みの各�
 ファイルサイズの制限により、セグメントの推定サイズがユーザー数 500,000 人を超える場合、エクスポートに失敗する可能性があります。この制限は、セグメントの正確な計算ではなく推定サイズを使用することに注意してください。詳細については、「[大規模なセグメントのエクスポート]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/)」を参照してください。
 {% endalert %}
 
-[Amazon S3 の認証情報][26] を Braze にリンクしている場合、CSV は代わりに S3 バケットのキー `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip` の下にアップロードされます。メールで送信されたリンクは、エクスポートの1 日後に期限切れになり、アクセスのためにダッシュボードにログインする必要があります。
+[Amazon S3 の認証情報]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration)を Braze にリンクしている場合、CSV は代わりに S3 バケットのキー `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip` の下にアップロードされます。メールで送信されたリンクは、エクスポートの1 日後に期限切れになり、アクセスのためにダッシュボードにログインする必要があります。
 
 ## エクスポートに含まれるデータ
 
@@ -95,6 +95,3 @@ CSV 出力には、エクスポート時にセグメントに収集済みの各�
 CSV と API のエクスポートについては、[トラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)の記事を参照してください。
 {% endalert %} 
 
-[1]: {% image_buster /assets/img_archive/csvexport.png %}
-[2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

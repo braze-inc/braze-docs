@@ -26,15 +26,15 @@ description: "この記事には、2021年10月のリリースノートが含ま
 
 ### コンテンツカードによって促進された
 
-このオプショナルで高度な[実装ガイドでは]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/)、Content Cardコードの検討事項、当社チームが構築した3つのカスタムユースケース、付随するコードスニペット、インプレッション、クリック、および却下のログに関するガイダンスについて説明する。
+このオプショナルで高度な[実装ガイドでは]({{site.baseurl}}/developer_guide/content_cards/)、Content Cardコードの検討事項、当社チームが構築した3つのカスタムユースケース、付随するコードスニペット、インプレッション、クリック、および却下のログに関するガイダンスについて説明する。
 
 ### アプリ内メッセージング
 
-このオプショナルで高度な[実装ガイドでは]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/)、アプリ内メッセージコードの考慮事項、我々のチームによって構築された3つのカスタムユースケース、付随するコードスニペットについて説明する。
+このオプショナルで高度な[実装ガイドでは]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android)、アプリ内メッセージコードの考慮事項、我々のチームによって構築された3つのカスタムユースケース、付随するコードスニペットについて説明する。
 
 ### プッシュ通知
 
-このオプショナルで高度な[実装ガイドでは]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/)、カスタム`FirebaseMessagingService` サブクラスを活用してプッシュ・メッセージを最大限に活用する方法について説明する。Braze チームが作成したカスタムのユースケース、付属のコードスニペット、ロギング分析に関するガイダンスも含まれています。
+このオプショナルで高度な[実装ガイドでは]({{site.baseurl}}/developer_guide/push_notifications/examples/?sdktab=android)、カスタム`FirebaseMessagingService` サブクラスを活用してプッシュ・メッセージを最大限に活用する方法について説明する。Braze チームが作成したカスタムのユースケース、付属のコードスニペット、ロギング分析に関するガイダンスも含まれています。
 
 ## Braze の新しいパートナーシップ
 
@@ -42,8 +42,8 @@ description: "この記事には、2021年10月のリリースノートが含ま
 
 Adobe Experience Platform 上に構築された Adob​​e のリアルタイム顧客データプラットフォーム (リアルタイム CDP) は、企業が複数のエンタープライズソースからの既知のデータと匿名データを統合し、すべてのチャネルとデバイスでパーソナライズされた顧客体験をリアルタイムで提供するために使用できる顧客プロファイルを作成するのに役立ちます。
 
-Brazeと[Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/)CDPの統合により、ブランドはAdobeデータ（カスタム属性とセグメント）をリアルタイムでBrazeに接続し、マッピングすることができる。ブランドはこのデータに基づいて行動し、パーソナライズされ、ターゲットに応じた体験をユーザーに提供できます。 
+Brazeと[Adobe]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/adobe/)CDPの統合により、ブランドはAdobeデータ（カスタム属性とセグメント）をリアルタイムでBrazeに接続し、マッピングすることができる。ブランドはこのデータに基づいて行動し、パーソナライズされ、ターゲットに応じた体験をユーザーに提供できます。 
 
-### Shopify - Eコマース
+### Shopify - eコマース
 
-[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/)は、あらゆる規模の小売 (店)事業を始め、成長し、販売し、管理するための信頼できる道具を提供する世界的な大手商業企業です。Braze と Shopify の統合により、ブランドは Shopify ストアを Braze とシームレスに接続し、選択した Shopify Webhook を Braze に渡すことができます。Braze のクロスチャネル戦略とキャンバスを活用して、購入手続き放棄のメッセージングでユーザーをリターゲティングし、顧客に購入を完了するよう促したり、以前の購入に基づいてユーザーをリターゲティングしたりできます。
+[Shopify]({{site.baseurl}}/partners/shopify/) は、あらゆる規模の小売 (店) ビジネスの開始、拡大、マーケティング、および管理のための信頼できるツールを提供する、世界をリードするコマース企業です。Braze と Shopify の統合により、ブランドは Shopify ストアを Braze とシームレスに接続し、選択した Shopify Webhook を Braze に渡すことができます。Braze のクロスチャネル戦略とキャンバスを活用して、購入手続き放棄のメッセージングでユーザーをリターゲティングし、顧客に購入を完了するよう促したり、以前の購入に基づいてユーザーをリターゲティングしたりできます。

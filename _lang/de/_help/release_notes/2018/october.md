@@ -19,7 +19,7 @@ description: "Dieser Artikel enthält Versionshinweise für Oktober 2018."
 
 ## Berechnen Sie genaue Statistiken über Zielgruppen für Kampagnen
 
-Sie können jetzt zu **Campaign Analytics** gehen und die genauen Statistiken für Ihre Zielgruppe berechnen. Klicken Sie in der Fußzeile des Bereichs **Targeting Nutzer:innen** auf **Exakte Statistiken berechnen**, und die exakten Statistiken für die Nutzer:innen werden angezeigt. Sie müssen die Kampagne vor dem Berechnen speichern (Kampagnenentwürfe werden als Entwürfe gespeichert).
+Sie können jetzt zu **Campaign Analytics** gehen und die genauen Statistiken für Ihre Zielgruppe berechnen. Klicken Sie in der Fußzeile des Abschnitts **Targeting** auf **Exakte Statistiken berechnen**, und die genauen Statistiken für die Zielgruppe werden angezeigt. Sie müssen die Kampagne vor dem Berechnen speichern (Kampagnenentwürfe werden als Entwürfe gespeichert).
 
 ## Veraltung von Windows 8
 

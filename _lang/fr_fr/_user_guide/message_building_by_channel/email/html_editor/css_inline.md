@@ -16,15 +16,13 @@ Pour certains clients d'e-mail, l'insertion CSS peut améliorer le rendu des e-m
 
 ## Utilisation de l’inclusion CSS 
 
-Vous pouvez contrôler si l'insertion CSS est activée ou désactivée pour tout message e-mail en sélectionnant une case à cocher dans l'onglet **Informations d'envoi de** l'éditeur HTML.
+Vous pouvez contrôler si l'insertion CSS est activée ou désactivée pour n'importe quel message e-mail en utilisant la bascule **Activer l'insertion CSS dans l'** onglet **Informations d'envoi de** l'éditeur HTML.
 
-![Case à cocher pour gérer l'insertion CSS dans le compositeur HTML.][2]{: style="max-width:80%;"}
+![Case à cocher pour gérer l'insertion CSS dans le compositeur HTML.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
 
 ### État d’insertion par défaut
 
 Vous pouvez définir un état activé ou désactivé par défaut de manière globale à partir de **Paramètres** > **Préférences d'e-mail.** Recherchez le paramètre pour l'**insertion CSS**. Ce paramètre détermine la valeur par défaut souhaitée par laquelle commencent tous les nouveaux messages e-mail. Notez que la modification de ce paramètre n’affectera pas vos e-mails existants. Vous pouvez également remplacer cette valeur par défaut à tout moment au moment de composer vos e-mails.
 
-![L'option par défaut de l'inclusion CSS des nouveaux e-mails figure dans les paramètres de messagerie.][1]
+![Option d'insertion CSS par défaut dans les nouveaux e-mails, située dans les emplacements des e-mails.]({% image_buster /assets/img_archive/css-inline1.png %})
 
-[1]:{% image_buster /assets/img_archive/css-inline1.png %}
-[2]:{% image_buster /assets/img_archive/css-inline2.png %}

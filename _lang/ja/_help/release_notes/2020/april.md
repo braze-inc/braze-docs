@@ -11,7 +11,7 @@ description: "この記事には、2020年4月のリリースノートが含ま�
 
 Movable Ink は、プッシュ、アプリ内メッセージ、およびコンテンツカードキャンペーンでカウントダウンタイマー、投票、スクラッチオフなどのインテリジェントクリエイティブ機能を使用するための機能を Braze のお客様に提供します。Movable Ink と Braze は、ダイナミックなデータドリブン型のメッセージに対するより包括的なアプローチを実現し、重要事項に関するリアルタイムのエレメントをユーザーに提供します。
 
-キャンペーンに[ Movable Ink を統合]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/)しましょう。
+キャンペーンに[ Movable Ink を統合]({{site.baseurl}}/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink/)しましょう。
 
 ## インテリジェントタイミング
 
@@ -41,6 +41,5 @@ Braze では、Braze セグメントページからユーザーを手動でエ�
 
 メール メッセージをBraze 内で作成するときに、メール構成の**送信情報** セクションでメッセージのFrom Address をパーソナライズできるようになりました。サポートされている任意の[パーソナライゼーション タグs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用できます。
 
-![パーソナライズされた差出人アドレス][0]{: style="max-width:80%"}
+![パーソナライズされた差出人アドレス]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}

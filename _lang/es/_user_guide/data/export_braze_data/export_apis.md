@@ -10,7 +10,7 @@ platform: API
 
 # API de exportación
 
-> Esta página cubre las API de exportación de Braze, que te permiten exportar mediante programación un archivo JSON de datos del panel. Consulta [Puntos finales de exportación][24] para ver una lista de los datos a los que puedes acceder, incluidas las instrucciones y el código de muestra para la exportación.
+> Esta página cubre las API de exportación de Braze, que te permiten exportar mediante programación un archivo JSON de datos del panel. Consulta [Puntos finales de exportación]({{site.baseurl}}/api/endpoints/export/) para ver una lista de los datos a los que puedes acceder, incluidas las instrucciones y el código de muestra para la exportación.
 
 ## Cuándo utilizar API de exportación en lugar de descargas CVS
 
@@ -23,4 +23,3 @@ Hay algunas razones por las que preferirías este método a exportar un CSV dire
 Para obtener ayuda con las exportaciones CSV y API, consulta [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-[24]: {{site.baseurl}}/api/endpoints/export/

@@ -1,5 +1,5 @@
 ---
-nav_title: Content Cards
+nav_title: Content cards
 article_title: Logging Content Card data through the Braze SDK
 page_order: 7.0
 description: "Learn how to log Content Card data through the Braze SDK."

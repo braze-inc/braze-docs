@@ -22,11 +22,9 @@ description: "이 문서에는 2016년 6월의 릴리스 노트가 포함되어 
 
 ## 데이터 API 엔드포인트 제거
 
-이제 고객은 내보내기 API에서 직접 제거 추적 데이터를 가져올 수 있습니다. 자세한 내용은 [내보내기 엔드포인트에서][4] 확인하세요.
+이제 고객은 내보내기 API에서 직접 제거 추적 데이터를 가져올 수 있습니다. 자세한 내용은 [내보내기 엔드포인트에서]({{site.baseurl}}/developer_guide/rest_api/export/#kpi-export) 확인하세요.
 
 ## 오류 로그 개선
 
-[메시지 오류 로그][5]에서 오류 유형별로 정렬하는 기능을 개선했습니다!
+메시지 오류 로그]({% image_buster /assets/img_archive/improved_error_log.png %})]에서 오류 유형별로 정렬하는 기능을 개선했습니다!
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
-[5]: {% image_buster /assets/img_archive/improved_error_log.png %}

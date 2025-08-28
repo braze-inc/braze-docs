@@ -21,6 +21,9 @@ platform:
 
 フィーチャーフラグのインプレッションを記録する方法については、[フィーチャーフラグを作成する]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions)を参照してください。
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,36 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## フィーチャー・フラッグ実験を行う
 
@@ -56,7 +87,7 @@ if (featureFlag?.enabled) {
 
 ### ステップ 4:ターゲットとするユーザーを選択する
 
-セグメントまたはフィルターのいずれかを使用して、[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)を選択します。例えば、**Received Feature Flag Variant**フィルターを使用して、すでにA/Bテストを受けたユーザーをリターゲティングすることができる。
+セグメントまたはフィルターのいずれかを使用して、[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)を選択します。例えば、**Received Feature Flag Variant**フィルターを使用して、すでにA/Bテストを受けたユーザーをリターゲティングすることができる。
 
 ![]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}) フィルターグループの検索バーで [受信した機能フラグバリアント] が強調表示された機能フラグ実験の [ターゲット] ページ。{: style="max-width:70%"}
 

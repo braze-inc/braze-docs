@@ -1,5 +1,5 @@
 ---
-nav_title: Missing Users in Segment
+nav_title: Missing users in segment
 article_title: Missing Users in Segment
 page_order: 1
 
