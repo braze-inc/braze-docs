@@ -18,7 +18,7 @@ description: "이 문서에는 2021년 5월의 릴리스 노트가 포함되어 
 
 ## 보고서 개요
 
-캠페인 또는 캔버스 분석을 어디서부터 시작해야 할지 모르시겠어요? [보고서 개요]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/)에서는 일반적인 마케팅 전략 질문에 답하는 데 사용할 수 있는 보고서 및 분석에 대한 지침을 제공합니다.
+캠페인 또는 캔버스 분석을 어디서부터 시작해야 할지 모르시겠어요? [보고서 개요]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/)에서는 일반적인 마케팅 전략 질문에 답하는 데 사용할 수 있는 보고서 및 분석에 대한 지침을 제공합니다.
 
 ## 새로운 US-05 클러스터
 

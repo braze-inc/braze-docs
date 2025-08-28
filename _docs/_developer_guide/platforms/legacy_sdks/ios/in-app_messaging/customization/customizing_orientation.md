@@ -1,5 +1,5 @@
 ---
-nav_title: Customizing Orientation
+nav_title: Customizing orientation
 article_title: Customizing In-App Message Orientation for iOS
 platform: iOS
 page_order: 3

@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Enablement and Subscription"
+nav_title: "Push enablement and subscription"
 article_title: Push Enablement and Subscription
 page_order: 3
 page_type: reference
@@ -79,9 +79,8 @@ You can update a user's subscription state with the Braze REST API using the [`/
 
 There are two ways you can check a user's push subscription state with Braze:
 
-1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
-<br><br>
-2. **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
+1. **User Profile** You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+2. **REST API Export:** You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
 ## Push permission
 

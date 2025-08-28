@@ -59,7 +59,7 @@ Los siguientes filtros de segmentación están disponibles a la hora de segmenta
 
 Para más detalles sobre cada filtro, consulte el glosario de [filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) y filtre por "Comportamiento de compra".
 
-![Filtrado de usuarios que han realizado exactamente tres compras][1]{: style="max-width:80%;"}
+![Filtrar por usuarios que hicieron exactamente tres compras]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Para segmentar en función del número de veces que se ha producido una compra concreta, registra esa compra individualmente como un [atributo personalizado incremental]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -179,7 +179,7 @@ Por ejemplo, si tienes una aplicación de comercio electrónico y quieres enviar
 
 **Ejemplo de activación basada en las propiedades del evento de compra:**
 
-![Ajustes de envío basados en acciones para enviar una campaña a los usuarios que compren auriculares con una marca igual a HeadphoneMart.][2]{: style="max-width:80%;margin-left:15px;"}
+![Configuración de entrega basada en acciones para enviar una campaña a los usuarios que compren auriculares con una marca igual a HeadphoneMart]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Consulte el [objeto de propiedades de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) para obtener más información.
 
@@ -187,12 +187,12 @@ Consulte el [objeto de propiedades de compra]({{site.baseurl}}/api/objects_filte
 
 La segmentación de las propiedades de los eventos te permite dirigirte a los usuarios basándote no sólo en los eventos personalizados realizados, sino también en las propiedades asociadas a esos eventos. Esta función añade opciones de filtrado adicionales al segmentar los eventos de compra y personalizados.
 
-![][6]{: style="max-width:80%;margin-left:15px;"}
+![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Estos filtros de segmentación incluyen:
 - Ha realizado el evento personalizado con la propiedad Y con valor V X veces en los últimos Y días
 - Ha realizado alguna compra con la propiedad Y con valor V X veces en los últimos Y días
-- Añade la posibilidad de segmentar en 1, 3, 7, 14, 21 y 30 días
+- Añade segmentación de 1 a 30 días en todas las compras, eventos y propiedades dentro de compras y eventos.
 
 A diferencia de las [extensiones de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), los segmentos utilizados se actualizan en tiempo real, admiten una cantidad ilimitada de segmentos, ofrecen un historial retrospectivo de 30 días como máximo e incurren en puntos de datos. Debido al cargo adicional por punto de datos, debe ponerse en contacto con su gestor de éxito de clientes de Braze para activar las propiedades de eventos para sus eventos personalizados.
 
@@ -200,46 +200,7 @@ Cuando se apruebe, se podrán añadir propiedades adicionales en el panel, en **
 
 ### Propiedades de entrada en el lienzo y propiedades de eventos
 
-{% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible como referencia cuando se utiliza `canvas_entry_properties` y `event_properties` para el flujo de trabajo original de Canvas.
-{% endalert %}
-
-Puedes utilizar `canvas_entry_properties` y `event_properties` en tus recorridos de usuario de Canvas. Consulta [las propiedades de entrada y las propiedades de evento de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para obtener más información y ejemplos.
-
-{% alert important %}
-No puedes utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente **antes** del paso Mensaje que incluye `event_properties`.
-{% endalert %}
-
-{% tabs local %}
-{% tab Propiedades de entrada del lienzo %}
-
-[Las propiedades de entrada del lienzo]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) son las propiedades que se asignan a los lienzos basados en acciones o activados por la API. El objeto `canvas_entry_properties` tiene un límite de tamaño máximo de 50 KB.
-
-{% alert important %}
-En el caso concreto de los canales de mensajes integrados en la aplicación, sólo se puede hacer referencia a `canvas_entry_properties` en Canvas Flow y en el editor Canvas original si tienes activadas las propiedades de entrada persistente en el editor original como parte del acceso anticipado anterior.
-{% endalert %}
-
-Para la mensajería de Canvas Flow, `canvas_entry_properties` puede utilizarse en Liquid en cualquier paso Mensaje. Utilice este Líquido cuando haga referencia a estas propiedades: ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Tenga en cuenta que los eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta manera. 
-
-{% raw %}
-Por ejemplo, considere la siguiente petición: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Podrías añadir la palabra "zapatos" a un mensaje con el `{{canvas_entry_properties.${product_name}}}` de Liquid.
-{% endraw %}
-
-Para los lienzos construidos con el editor original, `canvas_entry_properties` sólo puede referenciarse en el primer paso completo de un lienzo.
-
-{% endtab %}
-
-{% tab Propiedades de los eventos %}
-Las propiedades de eventos se refieren a las propiedades que usted establece para los eventos y compras personalizados. Estos `event_properties` se pueden utilizar en campañas con entrega basada en acciones y Lienzos.
-
-En el Flujo del lienzo, las propiedades de eventos personalizados y eventos de compra se pueden utilizar en Liquid en cualquier paso de Mensaje que siga a un paso de Rutas de acción. Para Canvas Flow, asegúrate de utilizar {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} si haces referencia a estos `event_properties`. Estos eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta forma en el componente Mensaje.
-
-En el editor Canvas original, `event_properties` no puede utilizarse en pasos completos programados. Sin embargo, puede utilizar `event_properties` en el primer paso completo de un Canvas basado en acciones, incluso si el paso completo está programado.
-
-En el primer paso de Mensaje que sigue a una Ruta de Acción, puede utilizar `event_properties` relacionado con el evento al que se hace referencia en esa Ruta de Acción. Estos `event_properties` sólo se pueden utilizar si el usuario realmente realizó la acción (no fue al grupo Todos los demás). Puede tener otros pasos (que no sean otra Ruta de Acción o paso de Mensaje) entre esta Ruta de Acción y el paso de Mensaje.
-
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include canvas_entry_event_properties.md %}
 
 ### Registrar las compras a nivel de pedido
 
@@ -257,7 +218,3 @@ Es posible que en ocasiones identifique eventos de compra que consumen demasiado
 
 En el panel de control de Braze, puede gestionar las listas de bloqueo desde **Configuración de datos** > **Productos**. Consulte la sección [Gestión de datos personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) para obtener más información.
 
-[1]: {% image_buster /assets/img/purchase_filter_example.gif %}
-[2]: {% image_buster /assets/img/purchase2.png %}
-[5]: {% image_buster /assets/img/purchase5.png %}
-[6]: {% image_buster /assets/img/nested_object3.png %}

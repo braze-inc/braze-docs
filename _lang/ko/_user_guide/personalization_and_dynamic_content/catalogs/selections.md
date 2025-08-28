@@ -11,13 +11,13 @@ description: "이 참조 문서에서는 카탈로그를 사용하여 Braze 캠�
 
 After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/), you can further reference your catalog data by incorporating selections in your Braze campaigns or recommendations.
 
-![예제 카탈로그의 선택 섹션입니다.][1]
+![예제 카탈로그의 선택 섹션.]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## 알아야 할 사항
 
 - 카탈로그당 최대 30개의 선택 항목을 만들 수 있습니다.
-- 선택당 최대 네 개의 필터를 추가할 수 있습니다.
-- 선택은 Braze 카탈로그 데이터에서 추천을 세분화하는 데 좋습니다. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/) for example use cases.
+- 선택당 최대 10개의 필터를 추가할 수 있습니다.
+- 선택은 Braze 카탈로그 데이터에서 추천을 세분화하는 데 좋습니다. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/) for example use cases.
 
 ## 선택 만들기
 
@@ -38,9 +38,13 @@ After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynam
 
 ### Liquid 선택 결과
 
-카탈로그에서 커스텀 속성 및 커스텀 이벤트와 같은 Liquid을(를) 사용하는 경우 선택한 각 사용자에 대해 반환되는 결과가 다를 수 있습니다.
+카탈로그에서 커스텀 속성 및 커스텀 이벤트와 같은 Liquid을(를) 사용하는 경우 선택한 각 사용자에 대해 반환되는 결과가 다를 수 있습니다. 
 
-![필터 설정에서 속성이 Liquid 커스텀 속성으로 설정된 카탈로그 선택입니다.][7]
+{% alert note %}
+연결된 콘텐츠 Liquid는 이러한 필터 설정에서 지원되지 않습니다.
+{% endalert %}
+
+![속성이 Liquid 커스텀 속성으로 설정된 카탈로그 선택을 위한 필터 설정.]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## 메시징에서 선택 사용
 
@@ -54,7 +58,7 @@ After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynam
 5. **표시할 정보**에 대해 카탈로그에서 각 항목에 포함할 필드를 선택하십시오.
 6. Select the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-![다음 선택 항목이 있는 개인화 모달 추가: "카탈로그 항목"은 "개인화 유형", "게임"은 "카탈로그 이름", "선택"은 "선택 유형", "game_selection"은 "선택", 그리고 "title"과 "description_en"은 "표시할 정보"입니다.][6]{: style="max-width:70%;"}
+![다음 선택 항목이 있는 개인화 모달 추가: "개인화 유형"에 대한 "카탈로그 항목", "카탈로그 이름"에 대한 "게임", "선택 유형"에 대한 "선택", "선택"에 대한 "game_selection", "표시할 정보"에 대한 "title" 및 "description_en".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## 사용 사례
 
@@ -62,25 +66,18 @@ After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynam
 
 식사 이름, 가격, 이미지 및 식사 카테고리에 대한 식사 배달 서비스의 정보를 포함한 카탈로그를 사용하여 사용자가 가장 최근에 본 카테고리를 기반으로 세 가지 식사를 추천하는 선택을 만들 수 있습니다.
 
-![식사 전달 서비스에 대한 선택의 예는 두 가지 필터가 있습니다. 하나는 제품 유형을 식사로 식별하고, 다른 하나는 카테고리를 가장 최근에 본 것으로 식별합니다. 선택은 세 가지 결과가 반환되는 순서를 무작위로 설정합니다.][2]{: style="max-width:90%;"}
+![식사 전달 서비스에 대한 선택의 예는 두 가지 필터가 있습니다. 하나는 제품 유형을 식사로 식별하고, 다른 하나는 카테고리를 가장 최근에 본 것으로 식별합니다. 선택은 세 가지 결과가 반환되는 순서를 무작위로 설정합니다.]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 캠페인에서 이 카탈로그와 선택 항목을 사용하려면 캠페인 작성의 메시지 구성 섹션에서 **개인화 추가** 모달을 사용하십시오. 이 예에서 식사 전달 서비스 정보가 포함된 카탈로그와 가장 최근에 본 카테고리를 기반으로 한 식사 추천 선택을 선택했습니다. 이를 통해 식사 이름과 가격을 표시할 수 있습니다. 메시지를 더욱 구축하려면 선택 항목을 사용하여 첫 번째 추천 식사의 이미지를 추가할 수도 있습니다.
 
-![헤더가 "이 고평가된 식사를 좋아할 것입니다!"이며 메시지 구성 섹션에서 recommendations_be_recent_category"가 선택된 콘텐츠 카드입니다.][3]{: style="max-width:90%;"}
+!["이 고평가된 식사를 사랑하게 될 것입니다!"라는 헤더가 있는 콘텐츠 카드와 메시지 구성 섹션에서 "recommendations_be_recent_category" 선택.]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 예를 들어, 사용자가 최근에 본 카테고리가 "치킨"인 경우입니다. 설정된 개인화 및 콘텐츠 카드 캠페인을 사용하여 이 사용자에게 닭고기가 포함된 세 가지 식사 추천을 보낼 수 있습니다.
 
-![사용자가 가장 최근에 본 카테고리를 기반으로 한 세 가지 치킨 추천 요리 목록과 숯불에 구운 레몬 치킨 이미지가 포함된 콘텐츠 카드입니다.][4]{: style="max-width:90%;"}
+![숯불에 구운 레몬 치킨 이미지와 사용자가 가장 최근에 본 카테고리를 기반으로 한 세 가지 식사 추천 목록이 있는 콘텐츠 카드.]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 동일한 개인화를 사용하여 가장 최근에 본 카테고리가 "소고기"인 사용자에게 세 가지 식사 추천을 보낼 수도 있습니다.
 
-![사용자가 가장 최근에 본 카테고리를 기반으로 소고기가 포함된 두 가지 식사 추천 목록과 소고기 스트로가노프 이미지가 포함된 콘텐츠 카드입니다.][5]{: style="max-width:90%;"}
+![소고기 스트로가노프 이미지와 사용자가 가장 최근에 본 카테고리를 기반으로 한 두 가지 식사 추천 목록이 있는 콘텐츠 카드.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
-[6]: {% image_buster /assets/img_archive/catalog_selections6.png %}
-[7]: {% image_buster /assets/img_archive/catalog_selections7.png %}

@@ -22,7 +22,7 @@ tool:
 
 캔버스가 목표에 비해 어떤 성과를 거두고 있는지 개략적인 개요를 확인할 수 있는 좋은 곳입니다.
 
-![][24]
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### 마지막 확인 이후 변경 사항
 
@@ -38,7 +38,7 @@ tool:
 
 측정기준에는 노출 수, 고유 수신자 수, 전환 수 및 발생한 매출도 포함됩니다. 컴포넌트를 클릭하면 데이터를 자세히 분석하고 채널별 실적을 확인할 수 있습니다.
 
-![캔버스 쿠성요소의 성능 세부 정보에 대한 두 가지 예시입니다. 왼쪽에는 하나의 캔버스 구성요소가 있는 사용자 경로에 대한 성능 세부 정보가 표시됩니다. 오른쪽에는 확장된 캔버스 구성요소의 실적 세부 정보와 인앱 메시지 노출 수를 표시하는 중첩 단계가 표시됩니다.][25]
+![캔버스 쿠성요소의 성능 세부 정보에 대한 두 가지 예시입니다. 왼쪽에는 하나의 캔버스 구성요소가 있는 사용자 경로에 대한 성능 세부 정보가 표시됩니다. On the right shows performance details for an expanded Canvas component and a nested step that shows the in-app message impression count.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## 변형별 성능 분석
 
@@ -54,7 +54,7 @@ tool:
 
 효과적인 배리언트를 빠르게 추론하고 적절한 케이던스, 콘텐츠, 트리거, 타이밍 등을 식별할 수 있습니다.
 
-![][26]
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 기본 지표에는 다음이 포함됩니다:  
 
@@ -69,7 +69,7 @@ tool:
 예를 들어 사용자가 두 단계를 완료한 후 구매를 하는 경우 해당 수익은 두 번째 구성 요소와 사용자가 입력한 이형 상품에 귀속됩니다. 캔버스에 들어왔지만 첫 번째 캔버스 구성 요소를 받기 전에 구매를 한 경우 해당 매출은 입력한 배리언트에 귀속되며, 어떤 구성 요소에도 귀속되지 않습니다.
 {% endalert %}
 
-그 외에도 다음과 같은 [전환 이벤트에]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) 대한 보다 명확한 분석을 확인할 수 있습니다:
+그 외에도 다음과 같은 [전환 이벤트에]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) 대한 보다 명확한 분석을 확인할 수 있습니다:
 
 - 각 전환 이벤트의 전환 총계 및 전환율
 - 제어 배리언트에 대한 업리프트
@@ -77,14 +77,9 @@ tool:
 
 ### 퍼널 보고서
 
-퍼널 리포팅은 캔버스를 받은 후 고객이 어떤 여정을 거치는지 분석할 수 있는 시각적 보고서를 제공합니다. 캔버스에서 대조군 또는 여러 이형 상품을 사용하는 경우, 다양한 이형 상품이 전환 퍼널에 미치는 영향을 보다 세분화된 수준에서 파악하고 이 데이터를 기반으로 최적화할 수 있습니다. 퍼널 보고서에 대한 자세한 내용은 [퍼널 보고서를][2] 참조하세요.
+퍼널 리포팅은 캔버스를 받은 후 고객이 어떤 여정을 거치는지 분석할 수 있는 시각적 보고서를 제공합니다. 캔버스에서 대조군 또는 여러 이형 상품을 사용하는 경우, 다양한 이형 상품이 전환 퍼널에 미치는 영향을 보다 세분화된 수준에서 파악하고 이 데이터를 기반으로 최적화할 수 있습니다. For more information on funnel reports, see [Funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ### 리텐션 보고서
 
-사용자 리텐션은 모든 마케터에게 가장 중요한 지표 중 하나입니다. 인게이지먼트가 높은 사용자가 계속 재방문한다는 것은 비즈니스가 건강하다는 것을 의미합니다. 이제 Braze를 통해 **캔버스 애널리틱스** 페이지에서 바로 사용자 리텐션을 측정할 수 있습니다. 리텐션 보고서를 읽고 해석하는 방법에 대한 자세한 내용은 [리텐션 보고서에서][1] 확인하세요.
+사용자 리텐션은 모든 마케터에게 가장 중요한 지표 중 하나입니다. 인게이지먼트가 높은 사용자가 계속 재방문한다는 것은 비즈니스가 건강하다는 것을 의미합니다. 이제 Braze를 통해 **캔버스 애널리틱스** 페이지에서 바로 사용자 리텐션을 측정할 수 있습니다. For more information on how to read and interpret your retention report, check out [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
-[24]:{% image_buster /assets/img_archive/Journey_5.png %}
-[25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[26]:{% image_buster /assets/img_archive/analyze_variants.png %}

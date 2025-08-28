@@ -9,11 +9,11 @@ description: "이 문서에는 2020년 7월 릴리스 노트가 포함되어 있
 
 ## 프로모션 코드
 
-Liquid을 사용하면 업로드한 [프로모션 코드][1] 목록에서 메시지를 가져올 수 있습니다. 이 기능은 최대 6개월의 만료 날짜를 제공하며 목록당 최대 20MM의 개별 코드를 지원합니다.
+Liquid을 사용하면 업로드한 [프로모션 코드]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes) 목록에서 메시지를 가져올 수 있습니다. 이 기능은 최대 6개월의 만료 날짜를 제공하며 목록당 최대 20MM의 개별 코드를 지원합니다.
 
 ## 배리언트 유지 보고서
 
-[캠페인][2] 또는 [캔버스][3]에 대한 유지 보고서를 볼 때 이제 결과를 배리언트별로 나누어 볼 수 있습니다. 
+[캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) 또는 [캔버스]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/)에 대한 유지 보고서를 볼 때 이제 결과를 배리언트별로 나누어 볼 수 있습니다. 
 
 ## '필터' 옵션 캠페인 및 캔버스용
 
@@ -21,14 +21,9 @@ Liquid을 사용하면 업로드한 [프로모션 코드][1] 목록에서 메시
 
 ## 커런츠 `ad-id`
 
-새로운 `ad-id` (광고주 ID) 필드를 커런츠에 반영하기 위해 [스토리지 연결 설명서][4]를 업데이트했습니다.
+새로운 `ad-id` (광고주 ID) 필드를 커런츠에 반영하기 위해 [스토리지 연결 설명서]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#content-card-click-events)를 업데이트했습니다.
 
 ## BCC 기능
 
-[BCC 주소 설정][5]을 사용하면 Braze에서 발송되는 아웃바운드 이메일 메시지에 추가할 수 있는 BCC 주소를 추가하고 관리할 수 있습니다.	
+[BCC 주소 설정]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/)을 사용하면 Braze에서 발송되는 아웃바운드 이메일 메시지에 추가할 수 있는 BCC 주소를 추가하고 관리할 수 있습니다.	
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#content-card-click-events
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/

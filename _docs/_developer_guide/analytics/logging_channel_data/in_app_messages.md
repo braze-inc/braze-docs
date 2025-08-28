@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Messages
+nav_title: In-app messages
 article_title: Logging in-app message data through the Braze SDK
 page_order: 7.1
 description: "Learn how to log in-app message (IAM) data through the Braze SDK."

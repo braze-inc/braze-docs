@@ -47,10 +47,6 @@ For a full breakdown of different methods for collecting new and existing user d
 
 **오디언스** > **사용자 가져오기**에서 CSV 파일을 통해 고객 프로필을 업로드하고 업데이트할 수 있습니다. 고객 데이터를 가져올 때 각 고객의 고유 식별자(`external_id`)를 지정해야 합니다.
 
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **사용자** > **사용자 가져오기에서** 찾을 수 있습니다.
-{% endalert %}
-
 CSV 가져오기를 시작하기 전에 엔지니어링 팀으로부터 Braze에서 사용자를 식별하는 방법을 이해하는 것이 중요합니다. 일반적으로 내부에서 사용하는 데이터베이스 ID입니다. 이는 모바일과 웹에서 Braze SDK가 사용자를 식별하는 방식과 일치해야 하며, 각 고객은 여러 기기에서 Braze 내에서 단일 고객 프로필을 갖게 됩니다. Learn more about the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 가져오기에 `external_id` 을 입력하면 Braze는 기존 사용자를 동일한 `external_id` 으로 업데이트하거나, 사용자를 찾을 수 없는 경우 해당 `external_id` 설정으로 새로 식별된 사용자를 생성합니다.
@@ -163,7 +159,7 @@ Braze SDK는 특정 기능 및 속성을 기반으로 사용자를 세분화하�
 - 다각형 지역의 경우 세그먼트에 포함할 영역을 보다 구체적으로 지정할 수 있습니다.
 
 {% alert tip %}
-Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신가요? 사용 가능한 Braze [컨텍스트 기반 위치 파트너를]({{site.baseurl}}/partners/message_personalization/location) 확인하세요.
+Braze 파트너의 도움을 받아 위치 타겟팅을 활용하고 싶으신가요? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/).
 {% endalert %}
 
 {% endapi %}
@@ -440,7 +436,7 @@ Braze는 모든 현지 시간대 캠페인을 24시간 전에 예약할 것을 �
 캔버스
 {% endapitags %}
 
-[예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)는 사용자가 연결된 캔버스 구성 요소를 수신하기 위해 대기하는 동안에만 트리거됩니다. 사용자가 미리 작업을 수행하면 예외 이벤트가 트리거되지 않습니다.
+예외 이벤트는 사용자가 연결된 캔버스 컴포넌트를 수신하기 위해 대기하는 동안에만 트리거됩니다. 사용자가 미리 작업을 수행하면 예외 이벤트가 트리거되지 않습니다.
 
 특정 이벤트를 미리 수행한 사용자를 제외하려면 대신 [필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하세요.
 
@@ -573,13 +569,13 @@ Braze는 채널에 따라 다양한 측정기준을 측정하여 캠페인의 �
 
 1. 대시보드 계정에서 **데이터** 아래의 **참여 보고서로** 이동합니다.
 2. **새 보고서 만들기**를 클릭합니다.
-3. 보고서에 컴파일하려는 [캠페인과 캔버스 메시지]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases)를 개별적으로 또는 [태그별]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)로 추가합니다.
-4. 보고서에 [통계를 추가합니다]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
+3. 보고서에 컴파일하려는 [캠페인과 캔버스 메시지]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases)를 개별적으로 또는 [태그별]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)로 추가합니다.
+4. 보고서에 [통계를 추가합니다]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
 5. 보고서의 압축 및 구분 기호를 선택합니다.
 6. 이 보고서를 받아야 하는 Braze 사용자의 이메일 주소를 입력합니다.
-7. 보고서에서 데이터를 실행할 [기간]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame)을 선택합니다.
-8. 데이터 분석을 보고 싶은 [간격(일별, 주별 등)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display)을 선택합니다.
-9. 보고서를 [즉시]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) 또는 [나중에 지정된 시간에]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) 전송하도록 예약하세요.
+7. 보고서에서 데이터를 실행할 [기간]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame)을 선택합니다.
+8. 데이터 분석을 보고 싶은 [간격(일별, 주별 등)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display)을 선택합니다.
+9. 보고서를 [즉시]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) 또는 [나중에 지정된 시간에]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) 전송하도록 예약하세요.
 10. 보고서를 실행한 다음 이메일이 도착하면 열어보세요!
 
 {% endapi %}

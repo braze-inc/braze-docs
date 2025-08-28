@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Triggering
+nav_title: Custom triggering
 article_title: Customizing In-App Message Triggering for iOS
 platform: iOS
 page_order: 7

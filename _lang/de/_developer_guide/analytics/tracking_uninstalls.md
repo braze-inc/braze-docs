@@ -8,7 +8,7 @@ description: "Lernen Sie, wie Sie Deinstallationen über das Braze SDK verfolgen
 
 # Tracking-Deinstallationen
 
-> Erfahren Sie, wie Sie das Tracking von Deinstallationen über das Braze SDK einrichten. Allgemeine Informationen finden Sie unter [Benutzer:innen: Tracking deinstallieren]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
+> Erfahren Sie, wie Sie das Tracking von Deinstallationen über das Braze SDK einrichten. Allgemeine Informationen finden Sie unter [Benutzer:in: Tracking deinstallieren]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
 {% sdktabs %}
 {% sdktab android %}

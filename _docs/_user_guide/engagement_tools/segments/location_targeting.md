@@ -1,5 +1,5 @@
 ---
-nav_title: Location Targeting
+nav_title: Location targeting
 article_title: Location Targeting
 page_order: 10
 page_type: tutorial

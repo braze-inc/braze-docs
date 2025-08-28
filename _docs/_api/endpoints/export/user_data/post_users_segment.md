@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Export User Profile by Segment"
+nav_title: "POST: Export user profile by segment"
 article_title: "POST: Export User Profile by Segment"
 search_tag: Endpoint
 page_order: 4

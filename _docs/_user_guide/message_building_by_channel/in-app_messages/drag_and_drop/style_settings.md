@@ -1,5 +1,5 @@
 ---
-nav_title: Style Settings
+nav_title: Style settings
 article_title: "In-App Message Style Settings"
 description: "This reference article covers the styling options available when creating an in-app message with the drag-and-drop editor."
 page_order: 3
@@ -48,9 +48,17 @@ The drag-and-drop editor uses two key components for composing in-app messages: 
 
 ### Close x button
 
-For Modal and Fullscreen in-app messages, you can customize the close button displayed as <i class="fa-solid fa-xmark"></i> in the top-right corner of your message. Customization options include button size, fill color, background color, border style, and border radius.
+For Modal and Fullscreen in-app messages, you can customize the close button displayed as <i class="fa-solid fa-xmark"></i> in the top-right corner of your message. Customization options include button position, size, fill color, background color, border style, and border radius.
 
 ![Options to customize the close x button in in-app messages including button size, fill color, background color, border style, and border radius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+
+### Span styling
+
+Adding span styling to text within in-app messages allows for enhanced customization of message appearance, enabling the use of different text colors, fonts, and sizes. Span styling gives your users a more engaging and visually appealing experience by drawing their attention to key information and improving overall message clarity.
+
+![Option shown when highlighting text in an in-app message. A small paintbrush icon shows that you can wrap with span for style.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+
+![Side panel for "Span Properties" that allows the end user to customize font family, font weight, font size, letter spacing, and text color.]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
 
 ### Rows
 

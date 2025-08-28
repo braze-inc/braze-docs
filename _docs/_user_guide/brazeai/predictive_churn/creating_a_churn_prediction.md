@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Churn Prediction
+nav_title: Creating a churn prediction
 article_title: Creating a Churn Prediction
 description: "This article covers how to create a churn prediction within the Braze dashboard."
 page_order: 1.1
@@ -24,7 +24,7 @@ There is a limit of five concurrently active churn predictions. Prior to purchas
 
 On the **Basics** page, give your new prediction a unique name. You can also provide an optional description to take any notes on this particular prediction.
 
-Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker on the top.
+Select **Forward** to move to the next step. Optionally, you can select **Build Now** to use all the default settings and skip to the last step of creation. You'll have an opportunity to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker.
 
 ## Step 2: Define churn
 
@@ -34,7 +34,9 @@ Remember, you don't need to explain what behaviors might precede churn—only wh
 
 #### Churn window
 
-Churn window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the prediction. Additionally, after the prediction is created and users receive scores, the _Churn Risk Score_ indicates how likely a user is to churn within the number of days specified by the churn window. 
+The churn window is the period when a user’s activity meets the criteria for churning. You can set it for up to 60 days, depending on the available data. This window is used to pull historical data to train your prediction. Once the prediction is built, you’ll see if there was enough data for accurate results.
+
+After the prediction builds and users receive scores, the _Churn Risk Score_ shows how likely a user is to churn within the time frame you set in the churn window. 
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
@@ -43,14 +45,16 @@ Here's an example of a simple definition based on lapsing sessions in the last 7
 For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the following section on [Sample churn definitions](#sample-definitions).
 
 {% alert note %}
-For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped.
+For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped. <br><br>**Example:** If churn is defined as "has not purchased in the past 60 days", we consider active users those who did purchase in the past 60 days. As a result, anybody who didn't make a purchase in the last 60 days is not considered an active user. This means a churn audience created from this churn definition would only include users who have purchased in the past 60 days. This may make the resulting predictive churn audience look significantly smaller than the original population—most users in a workspace might already meet the definition of churned and therefore not be active in the churn prediction.
 {% endalert %}
 
 Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the prediction has enough data to learn from.
 
 ## Step 3: Filter your prediction audience
 
-Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you'd like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
+Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the previous note for who is considered active for a churn model).
+
+The model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who are relevant for this use case. As an example, if you're a ride-sharing app with drivers and riders in your user base, and you're building a churn model for drivers that may stop driving for you, you'll want to filter your prediction audience to just drivers so that riders don't enter the model.
 
 {% alert note %}
 The prediction audience cannot exceed 100 million users.
@@ -80,7 +84,7 @@ Preview and demo prediction will never update users' risk of churn. Additionally
 
 ## Step 5: Build prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you select **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 

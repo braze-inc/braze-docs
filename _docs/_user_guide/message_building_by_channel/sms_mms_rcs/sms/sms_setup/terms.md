@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Terms to Know
+nav_title: Terms to know
 article_title: SMS Terms to Know
 alias: /sms_terms_to_know/
 

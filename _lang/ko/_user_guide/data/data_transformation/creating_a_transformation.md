@@ -24,7 +24,7 @@ Braze에 연결하려는 외부 플랫폼을 식별하고 해당 플랫폼이 �
 
 다음은 해당 플랫폼에 로그인하여 구성할 수 있는 [Typeform 웹훅의](https://www.typeform.com/help/a/webhooks-360029573471/) 예시입니다:
 
-![][9]
+![]({% image_buster /assets/img/data_transformation/data_transformation8.png %})
 
 ## 2단계: 변환 만들기
 
@@ -43,7 +43,7 @@ Braze에 연결하려는 외부 플랫폼을 식별하고 해당 플랫폼이 �
 
 Typeform의 모습은 다음과 같습니다:
 
-![웹훅을 Braze 고객 프로필에 매핑하는 데이터 변환 코드의 예시입니다.][12]
+![Example Data Transformation code that maps the webhook to Braze user profiles.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
 Braze 데이터 트랜스포메이션은 아직 웹훅에 대한 특별한 확인이나 인증이 필요한 외부 플랫폼을 지원하지 않을 수 있습니다. Braze 데이터 트랜스포메이션에 이러한 유형의 플랫폼을 사용하는 데 관심이 있다면 [제품 피드백]({{site.baseurl}}/user_guide/administrative/access_braze/portal/)을 남겨 주세요.
@@ -235,11 +235,3 @@ return brazecall;
 수신 요청 수보다 적은 전송은 적어도 일부 웹훅이 성공적으로 전송되었음을 의미합니다. 예를 들어 오류는 변환 로그를 참조하여 예상되는 변환 출력이 있는지 확인하세요. 변환 코드가 수신된 웹훅의 모든 배리언트를 설명하지 못할 수 있습니다.
 
 
-[4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
-[5]: {% image_buster /assets/img/data_transformation/data_transformation4.png %}
-[6]: {% image_buster /assets/img/data_transformation/data_transformation5.png %}
-[7]: {% image_buster /assets/img/data_transformation/data_transformation6.jpg %}
-[8]: {% image_buster /assets/img/data_transformation/data_transformation7.png %}
-[9]: {% image_buster /assets/img/data_transformation/data_transformation8.png %}
-[10]: {% image_buster /assets/img/data_transformation/data_transformation9.png %}
-[12]: {% image_buster /assets/img/data_transformation/data_transformation11.png %}

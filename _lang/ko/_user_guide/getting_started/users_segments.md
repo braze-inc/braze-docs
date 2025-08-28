@@ -19,7 +19,7 @@ Braze에서는 오디언스에 대한 정보가 고객 프로필에 저장됩니
 
 사용자 프로필을 이해하면 오디언스에 대한 인사이트를 확보하고 개인화된 타겟팅 수준으로 오디언스와 소통할 수 있습니다. 사용자 프로필에는 많은 정보가 포함되어 있지만 주요 내용은 다음과 같습니다:
 
-- **사용자 식별자:** 각 고객 프로필은 `external_id`라는 사용자 ID로 고유하게 식별됩니다. 이 식별자를 통해 Braze는 다양한 채널과 디바이스에서 사용자 데이터를 추적하고 연결하여 브랜드와 각 사용자의 상호 작용을 통합적으로 파악할 수 있습니다. [Anonymous user profiles]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) as an alternative identifier.
+- **사용자 식별자:** 각 고객 프로필은 `external_id`라는 사용자 ID로 고유하게 식별됩니다. 이 식별자를 통해 Braze는 다양한 채널과 디바이스에서 사용자 데이터를 추적하고 연결하여 브랜드와 각 사용자의 상호 작용을 통합적으로 파악할 수 있습니다. [Anonymous user profiles]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) as an alternative identifier.
 - [속성](#attributes)**:** 이는 사용자의 이름, 나이, 위치 또는 기타 인구통계학적 정보와 같은 사용자에 대한 특정 정보입니다. 이러한 속성을 사용하여 오디언스를 세분화하고 메시징을 개인화할 수 있습니다.
 - [이벤트](#events)**:** 이는 구매, 링크 클릭, 앱 열기 등 사용자가 취하는 행동입니다. Braze는 이러한 이벤트를 추적하여 사용자의 행동과 참여를 이해하는 데 도움을 줍니다. 속성과 마찬가지로 이벤트를 사용하여 세분화하고 개인화할 수도 있습니다.
 - **구매:** 이 섹션에는 사용자의 구매 내역이 기록됩니다. 이는 사용자의 구매 습관과 선호도를 이해하는 데 매우 중요합니다.
@@ -126,15 +126,13 @@ Visit our dedicated article to learn more about [data points]({{site.baseurl}}/u
 
 온라인 의류 스토어를 운영하면서 장바구니에 상품을 추가했지만 구매를 완료하지 않은 사용자에게 일련의 이메일을 보내는 메시징 플로우를 설정했다고 가정해 보겠습니다. 이 유기한 장바구니 흐름에는 초기 알림 이메일, 할인을 제공하는 후속 이메일, 최종 알림 이메일이 포함될 수 있습니다.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 커스텀 이벤트 "장바구니에 품목 추가됨"은 트리거했지만 커스텀 이벤트 "구매 완료"는 트리거하지 않은 사용자 세그먼트를 만들 수 있습니다. 그런 다음 이 세그먼트 내에서 초기 알림 이메일을 열었지만(특정 메시지에 인게이지먼트) 구매를 하지 않은 사용자를 추가로 식별할 수 있습니다.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 이 세그먼트는 보다 공격적인 캠페인으로 타겟팅하여 이러한 사용자를 구매자로 전환할 수 있습니다. 예를 들어, 장바구니에 있는 품목을 기반으로 특별 혜택이나 개인화된 추천을 보낼 수 있습니다.
 
 이는 사용자 행동 및 비활동, 사용자 지정 이벤트, 참여 데이터를 사용하여 Braze에서 세그먼트를 생성하고 마케팅 전략을 맞춤화하는 방법의 한 예에 불과합니다.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

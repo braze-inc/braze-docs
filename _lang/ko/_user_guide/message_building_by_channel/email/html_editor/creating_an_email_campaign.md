@@ -30,15 +30,9 @@ search_rank: 1
 {% tab 캠페인 %}
 
 1. **메시징** > **캠페인**으로 이동하여 **캠페인 만들기**를 선택합니다.
-
-{% alert note %}
-[이전 탐색을]({{site.baseurl}}/navigation) 사용하는 경우 **참여** 아래에서 **캠페인을** 찾을 수 있습니다.
-{% endalert %}
-
-{:start=“2"}
-2\. **이메일을** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
-3\. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
-4\. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
+2. **이메일을** 선택하거나 여러 채널을 타겟팅하는 캠페인의 경우 **멀티채널을** 선택합니다.
+3. 캠페인의 이름을 명확하고 의미 있는 것으로 정하세요.
+4. 필요에 따라 [팀과]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) [태그를]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) 추가하세요.
    * 태그를 사용하면 캠페인을 더 쉽게 찾고 보고서를 작성할 수 있습니다. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
 5. 캠페인에 필요한 만큼 이형 상품을 추가하고 이름을 지정하세요. 이 주제에 대한 자세한 내용은 [다변량 및 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 참조하세요.
 
@@ -57,13 +51,15 @@ search_rank: 1
 {% endtab %}
 {% endtabs %}
 
+{% multi_lang_include drag_and_drop_access.md variable_name='email html editor' %}
+
 ## 2단계: 원하는 편집 경험을 선택하세요 {#step-2-choose-your-template-and-compose-your-email}
 
 Braze는 이메일 캠페인을 만들 때 [드래그 앤 드롭 편집기와]({{site.baseurl}}/dnd/) 표준 HTML 편집기 등 두 가지 편집 환경을 제공합니다. 원하는 편집 환경에 적합한 타일을 선택합니다. 
 
-![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-그런 다음 기존 [이메일 템플릿][10], 파일에서 템플릿 업로드][18]를 선택하거나(HTML 편집기만 해당) 빈 템플릿을 사용할 수 있습니다. 
+Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
 이메일 캠페인당 하나의 편집 환경을 선택하는 것이 좋습니다. 예를 들어, 편집기 간에 전환하지 않고 단일 이메일 캠페인에서 **HTML 클래식** 또는 **블록 편집기** 중 하나를 선택합니다.
@@ -73,7 +69,7 @@ Braze는 이메일 캠페인을 만들 때 [드래그 앤 드롭 편집기와]({
 
 템플릿을 선택하면 전체 화면 편집기로 바로 이동하여 이메일 초안을 작성하고, 전송 정보를 변경하고, 전달 가능성 또는 법규 준수에 대한 경고를 확인할 수 있는 이메일 개요가 표시됩니다. You can switch among HTML, classic, plaintext, and [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) tabs while you compose. 
 
-![The "Regenerate from HTML" button.][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+![The "Regenerate from HTML" button.]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
 
@@ -81,19 +77,19 @@ The plaintext version of your email will always update automatically from the HT
 대부분의 받은편지함에서 JavaScript를 지원하지 않으므로 이메일에 정확한 미리보기로 모션을 추가하려면 자바스크립트가 필요한 요소 대신 GIF를 사용하세요.
 {% endalert %}
 
-![이메일 배리언트 패널에서 이메일을 작성할 수 있습니다.][14]{: style="max-width:75%" }
+![Email Variants panel for composing your email.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 Braze는 어트리뷰트로 참조된 HTML 이벤트 핸들러를 자동으로 제거합니다. 이렇게 하면 HTML이 수정되므로 이메일이 완료된 후 다시 확인하는 것이 좋습니다. [HTML 핸들러](https://www.w3schools.com/tags/ref_eventattributes.asp)에 대해 자세히 알아보세요.
 {% endalert %}
 
 {% alert tip %}
-멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
 ![이메일 작성기의 본문 탭에 있는 AI 카피라이터 실행 버튼을 누릅니다.(]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### 3a단계: 전송 정보 추가
 
@@ -178,7 +174,9 @@ Braze를 사용하면 고급 사용 사례를 위해 필요에 따라 이메일 
 
 완벽한 이메일 작성을 완료한 후에는 보내기 전에 테스트해야 합니다. 개요 화면 하단에서 **미리보기 및 테스트를** 선택합니다. 
 
-여기에서 이메일이 고객의 받은 편지함에 어떻게 표시되는지 미리 볼 수 있습니다. **사용자로 미리 보기를** 선택하면 임의의 사용자로 이메일을 미리 보거나 특정 사용자를 선택하거나 사용자 지정 사용자를 만들 수 있습니다. 이를 통해 연결된 콘텐츠 및 개인화 호출이 정상적으로 작동하는지 테스트할 수 있습니다.
+여기에서 이메일이 고객의 받은 편지함에 어떻게 표시되는지 미리 볼 수 있습니다. **사용자로 미리 보기를** 선택하면 임의의 사용자로 이메일을 미리 보거나 특정 사용자를 선택하거나 사용자 지정 사용자를 만들 수 있습니다. 이를 통해 연결된 콘텐츠 및 개인화 호출이 정상적으로 작동하는지 테스트할 수 있습니다. 
+
+Then, you can **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
 
 또한 데스크톱, 모바일 및 일반 텍스트 보기 간에 전환하여 메시지가 다양한 상황에서 어떻게 표시되는지 파악할 수 있습니다.
 
@@ -188,7 +186,7 @@ Braze를 사용하면 고급 사용 사례를 위해 필요에 따라 이메일 
 
 최종 확인이 완료되면 **테스트 전송을** 선택하고 본인 또는 콘텐츠 테스터 그룹에게 테스트 메시지를 전송하여 다양한 장치와 이메일 클라이언트에서 이메일이 제대로 표시되는지 확인합니다.
 
-![이메일 작성 시 테스트 보내기 옵션과 이메일 미리보기 예시를 확인하세요.][15]
+![Test Send option and example email preview when composing your email.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 이메일에 문제가 있거나 변경하려는 사항이 있으면 **이메일 편집을** 선택하여 편집기로 돌아갑니다.
 
@@ -211,7 +209,7 @@ Braze를 사용하면 고급 사용 사례를 위해 필요에 따라 이메일 
 - **보낸** 사람 및 **받는 사람** 주소가 잘못되었습니다.
 - 중복 **헤더** 키
 - Liquid 구문 문제
-- 이메일 본문이 400KB를 초과하는 경우(본문은 [102KB 미만][16])을 적극 권장합니다.
+- Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size))
 - **본문** 또는 **제목이** 비어 있는 이메일
 - 수신 거부 링크가 없는 이메일
 - 보내는 이메일이 허용 목록에 없습니다(전달 가능성을 보장하기 위해 전송이 매우 제한됩니다).
@@ -234,7 +232,7 @@ API 트리거 캠페인의 경우 트리거 동작이 **캠페인과 상호작�
 
 #### 타겟팅할 사용자 선택
 
-다음으로 세그먼트 또는 필터를 선택하여 [사용자를 타겟팅하여]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 오디언스의 범위를 좁혀야 합니다. 이메일을 통해 도달할 수 있는 세그먼트 내 사용자 수를 포함하여 해당 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. 이메일을 통해 도달할 수 있는 세그먼트 내 사용자 수를 포함하여 해당 세그먼트 인구가 현재 어떤 모습인지에 대한 스냅샷이 자동으로 제공됩니다. 정확한 세그먼트 멤버십은 항상 메시지가 전송되기 직전에 계산된다는 점에 유의하세요.
 
 또한 이메일을 구독하고 수신 동의한 사용자와 같이 특정 [구독 상태를]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) 가진 사용자에게만 캠페인을 보내도록 선택할 수도 있습니다.
 
@@ -251,12 +249,12 @@ API 트리거 캠페인의 경우 트리거 동작이 **캠페인과 상호작�
 이렇게 하려면 **오디언스 요약**에서 "옵트인한 사용자에게만" 이 캠페인을 보내도록 선택합니다. 이 옵션을 선택하면 옵트인한 사용자만 이메일을 수신하도록 설정되며, Braze는 기본적으로 푸시를 사용하도록 설정된 사용자에게만 푸시를 보냅니다.
 
 {% alert important %}
-이 구성에서는 **대상 사용자** 단계에 대상을 단일 채널로 제한하는 필터(예: `Push Enabled = True` 또는 `Email Subscription = Opted-In`)를 포함하지 마세요.
+With this configuration, don't include any filters in the **Target Audiences** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### 전환 이벤트 선택
 
-Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 다음 작업 중 하나를 전환 이벤트로 지정할 수 있습니다:
+Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)를 얼마나 자주 수행하는지 추적할 수 있습니다. 다음 작업 중 하나를 전환 이벤트로 지정할 수 있습니다:
 
 - 앱 열기
 - 구매(일반 구매 또는 특정 품목일 수 있음)
@@ -277,17 +275,3 @@ Braze를 사용하면 사용자가 캠페인을 수신한 후 특정 행동, [�
 
 이메일 캠페인의 결과에 액세스하는 방법을 알아보려면 [이메일 보고를]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) 확인하세요.
 
-[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
-[3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
-[5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
-[6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[14]: {% image_buster /assets/img/email.png %}
-[15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
-[19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
-[20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

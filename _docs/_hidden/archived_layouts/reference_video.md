@@ -1,5 +1,5 @@
 ---
-nav_title: "Reference with Video"
+nav_title: "Reference with video"
 
 page_order: 5
 

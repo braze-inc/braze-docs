@@ -21,7 +21,7 @@ tool: Canvas
 
 [エントリ設定]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas)は、キャンバスの送信方法を理解するために重要です。キャンバスにエントリする可能性のある人数を制限しているかどうかを確認してください。
 
-メッセージを受信する資格がなくなったユーザーは、キャンバスを終了することもできます。例えば、キャンバスにプッシュ通知のみが含まれている場合、最初のステップを受信した後にプッシュ通知をオプトアウトしたユーザーはキャンバスから離脱します。[異なるキャンバスステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)を使用して、代わりのユーザー ジャーニーを追加することを検討してください。
+メッセージを受信する資格がなくなったユーザーは、キャンバスを終了することもできます。例えば、キャンバスにプッシュ通知のみが含まれている場合、最初のステップを受信した後にプッシュ通知をオプトアウトしたユーザーはキャンバスから離脱します。[異なるキャンバスステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を使用して、代わりのユーザー ジャーニーを追加することを検討してください。
 
 ## オーディエンスをセグメント化する
 

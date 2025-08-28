@@ -30,9 +30,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 ## 調査の作成{#create}
 
-[アプリ内メッセージ][1]を作成する際は、**シンプル調査**を**メッセージタイプ**として選択してください。
-
-![]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:80%"}
+[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)を作成する際は、**シンプル調査**を**メッセージタイプ**として選択してください。
 
 この調査テンプレートは、モバイルアプリと Web ブラウザーの両方でサポートされています。必ず、使用している SDK が、この機能に必要な[SDK の最小バージョン](#supported-sdk-versions)以降であることを確認してください。
 
@@ -40,48 +38,44 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 調査の作成を開始するには、質問を調査の [**ヘッダー**] フィールドに追加します。必要に応じて、調査の質問の下に表示されるオプションの**本文**メッセージを追加できます。
 
-![シンプルな調査エディターの [作成] タブ。ヘッダー、オプションの本文、およびオプションのヘルパーテキストのフィールドがあります。]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
+![シンプルな調査エディターの [作成] タブ。ヘッダー、オプションの本文、およびオプションのヘルパーテキストのフィールドがあります。]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 これらのフィールドには Liquid と絵文字の両方を含めることができるため、内容を工夫できます。
 {% endalert %}
 
-### ステップ 2:単一選択または複数選択{#single-multiple-choice}のいずれかを選択してください
+### ステップ 2:選択肢の設定 {#single-multiple-choice}
 
-**単一選択**または**複数選択**を使用して、ユーザーが1つの選択肢のみを選択するか、複数の選択肢を選択できるようにコントロールします。調査には最大 12 個の選択肢を追加できます。
+調査には最大 12 個の選択肢を追加できます。
 
-![「複数選択肢の選択」が選択された選択肢のドロップダウン。]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
+**単一選択**または**複数選択**のいずれかを選択します。**Helper text**は、2つのオプションを切り替えると自動的に更新され、ユーザーが選択できる選択肢の数を知らせます。 
 
-{% alert tip %}
-あなたの**ヘルパーテキスト**は、**単一選択**と**複数選択**を切り替えると、自動的に更新され、ユーザーが選択できる選択肢の数を知らせます。
-{% endalert %}
-
-### ステップ 3:カスタム属性の収集{#custom-attributes}
-
-[**送信時に属性をログに記録する**] を選択し、ユーザーの送信内容に基づいて属性を収集します。このオプションを使用して、新しいセグメントとリターゲティングキャンペーンを作成できます。例えば、満足度調査では、満足していなかったすべてのユーザーにフォローアップのメールを送ることができます。
+次に、[カスタム属性を収集する](#custom-attributes)か、[応答のみをログに記録する](#no-attributes)かを決定します。
 
 ![[送信時に属性をログに記録する] を選択した選択肢のドロップダウン。]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
-各選択肢にカスタム属性を追加するには、ドロップダウンメニューからカスタム属性名を選択（または新しいものを作成）し、この選択肢が送信されたときに設定する値を入力します。[設定ページ][5]で新しいカスタム属性を作成できます。
+#### カスタム属性の収集{#custom-attributes}
 
-例えば、通知設定の調査では、各選択肢をブール値（true/false）の属性にして、ユーザーが興味のあるトピックを選択できるようにすることができます。ユーザーが「プロモーション」を選択すると、カスタム属性`Promotions Topic`が`true`に設定された[ユーザープロファイル][3]が更新されます。ユーザーが選択肢をオンにしない場合、その同じ属性は変更されません。
+[**送信時に属性をログに記録する**] を選択し、ユーザーの送信内容に基づいて属性を収集します。このオプションを使用して、新しいセグメントとリターゲティングキャンペーンを作成できます。たとえば、[満足度調査](#user-satisfaction)では、満足していないすべてのユーザーにフォローアップメールを送信することができます。
 
-![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
-
-その後、`Promotions Topic = true`を持つユーザーのためにセグメントを作成して、プロモーションに興味のあるユーザーだけが関連するキャンペーンを受け取るようにすることができます。
-
-{% alert important %}
-カスタム属性の収集が有効になっている場合、同じカスタム属性名を共有する選択肢は配列に結合されます。
-{% endalert %}
-
-#### カスタム属性のデータ型
+各選択肢にカスタム属性を追加するには、ドロップダウンメニューからカスタム属性名を選択（または新しいものを作成）し、この選択肢が送信されたときに設定する値を入力します。[設定ページ]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/)で新しいカスタム属性を作成できます。
 
 カスタム属性のデータ型は、調査の設定方法に応じて重要です。
 
 - **多岐選択:**カスタム属性のデータ型は配列でなければなりません。カスタム属性が異なるデータ型に設定されている場合、応答は記録されません。
 - **単一選択:**カスタム属性のデータ型_は_配列であってはなりません。属性が配列の場合、応答は記録されません。
 
-#### 応答のみの記録
+{% alert important %}
+カスタム属性の収集が有効になっている場合、同じカスタム属性名を共有する選択肢は配列に結合されます。
+{% endalert %}
+
+##### 例 
+
+例えば、[通知設定の調査](#notification-preferences)では、各選択肢をブール値（true/false）の属性にして、ユーザーが興味のあるトピックを選択できるようにすることができます。ユーザーが「プロモーション」を選択すると、カスタム属性`Promotions Topic`が`true`に設定された[ユーザープロファイル]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)が更新されます。ユーザーが選択肢をオンにしない場合、その同じ属性は変更されません。
+
+次に `Custom Attribute` フィルターを使用して、カスタム属性`Promotions Topic` `is` `true` を含むユーザーのセグメントを作成し、プロモーションに関心のあるユーザーのみが関連するキャンペーンを受信できるようにします。
+
+#### 応答のみの記録 {#no-attributes}
 
 あるいは、**応答のみを記録することを選択できます（属性なし）**。このオプションを選択すると、調査の回答はボタンクリックとして記録されますが、カスタム属性はユーザープロファイルに記録されません。つまり、各調査オプションのクリック指標を表示できますが ([分析](#analytics)を参照)、その選択はユーザープロファイルに反映されません。
 
@@ -99,7 +93,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 確認ページを追加する場合は、メッセージをカスタマイズするために**確認ページ**タブに切り替える:
 
-![シンプルな調査エディターの [確認ページ] タブ。利用可能なフィールドは、ヘッダー、オプションの本文、ボタンテキスト、およびボタンのクリック動作です。]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
+![シンプルな調査エディターの [確認ページ] タブ。利用可能なフィールドは、ヘッダー、オプションの本文、ボタンテキスト、およびボタンのクリック動作です。]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 アプリやWeb サイトの別のページにユーザーを誘導したい場合は、ボタンの**クリック時の動作**を変更してください。
 
@@ -117,15 +111,19 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 削除された調査の選択肢は分析に表示されますが、新しいユーザーには選択肢として表示されません。
 {% endalert %}
 
-調査指標の定義については、[レポート指標用語集][11]を参照し、「アプリ内メッセージ」でフィルターしてください。
+アンケートのパフォーマンスメトリクスは、アナリティクスの**In-App Message Performance** セクションで特定のバリアントの**Results** ドロップダウンを展開することで確認できます。ここに、表示される内容の内訳を示します。
 
-![調査の各選択肢およびボタンのクリック分析を含む [アプリ内メッセージのパフォーマンス] パネル。]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:95%"}
+- [**アンケートへのエンゲージメント**] は、メッセージ本文内での送信、却下、クリックの合計数など、アンケート全体でのユーザーの動作を示します。
+- [**アンケート結果**] には、各応答オプションを選択したユーザー数の内訳と、各選択肢の送信合計数に対する割合が表示されます。
+- **確認ページのメトリクス** (有効な場合) には、確認画面を表示したユーザーの数、ボタンをクリックしたユーザーの数、インタラクションなしで却下したユーザーの数などが含まれます。
 
-[アプリ内メッセージ][4]レポートをチェックして、キャンペーンの指標を確認してください。
+調査指標の定義については、[レポート指標用語集]({{site.baseurl}}/user_guide/data/report_metrics/)を参照し、「アプリ内メッセージ」でフィルターしてください。
+
+[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/)レポートをチェックして、キャンペーンの指標を確認してください。
 
 ### Currents{#currents}
 
-選択したオプションは、[**アプリ内メッセージクリックイベント**][6] `button_id`フィールドの下で自動的にCurrentsに流れます。各選択肢は、その普遍的に一意の識別子（UUID）と共に送信されます。
+選択したオプションは、[**アプリ内メッセージクリックイベント**]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id`フィールドの下で自動的にCurrentsに流れます。各選択肢は、その普遍的に一意の識別子（UUID）と共に送信されます。
 
 ## ユースケース
 
@@ -133,50 +131,86 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 **目的:**顧客満足度を測定し、低評価を残したユーザーにウィンバックキャンペーンを送信します。
 
-このユースケースでは、「非常に不満」から「非常に満足」までの選択肢を持つ単一選択を使用します。各選択肢にはカスタム属性`customer_satisfaction`が1から5の数字に設定されており、1が最も満足していない状態で、5が最も満足している状態です。
+これを設定するには、「非常に不満足な😡」から「非常に満足した😍」までの5つの選択肢がある、単一の選択肢の調査を使用します。各選択肢は、カスタム属性 `customer_satisfaction` にマッピングされ、1 ～5 の数値が割り当てられています。1 は満足度が最も低い値であり、5 は満足度が最も高い値です。
 
-調査の開始後、「非常に不満」または「不満」と報告したユーザー、つまり`customer_satisfaction`が 1 または 2 に設定されているユーザーを、奪還キャンペーンのターゲットにすることができます。
+| 選択肢                                | 属性              | 値 |
+|---------------------------------------|------------------------|-------|
+| 😡 非常に不満足                  | `customer_satisfaction` | 1     |
+| 😟 不満                       | `customer_satisfaction` | 2     |
+| 🙂 不満でも満足でもない | `customer_satisfaction` | 3     |
+| 😊 満足                          | `customer_satisfaction` | 4     |
+| 😍 非常に満足                     | `customer_satisfaction` | 5     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][7]
+ユーザがアンケートを送信すると、選択した値がカスタム属性としてログに記録されます。その後、オーディエンスフィルターを使用してフォローアップキャンペーンを作成できます。たとえば、`customer_satisfaction` 属性が1 または2 のユーザーを奪還メッセージのターゲットに設定します。
+
+### 通知設定
+
+**目的:**ユーザーが特定のタイプの通知を選択できるようにします。
+
+これを設定するには、各選択肢が通知トピックを表す多岐選択アンケートを使用します。異なる値を持つ同じ属性を割り当てる代わりに、各選択肢は、そのトピックに対するユーザーの関心を反映する個別のブール属性にマップします。ユーザが選択肢を選択した場合、対応する属性は`true` に設定されます。選択しない場合、属性は変更されません。
+
+| 選択肢             | 属性              | 値  |
+|--------------------|------------------------|--------|
+| 製品アップデート    | `wants_product_updates`| `true` |
+| プロモーション         | `wants_promotions`     | `true` |
+| イベント招待      | `wants_event_invites`  | `true` |
+| アンケートとフィードバック | `wants_surveys`        | `true` |
+| ヒントとチュートリアル   | `wants_tips`           | `true` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### 顧客の目的の特定
 
 **目的:**ユーザーがアプリにアクセスする上位の理由を特定します。
 
-このユースケースでは、単一選択を使用します。各選択肢は、ユーザーがアプリを訪れる一般的な理由です。各選択肢には、カスタム属性`product_goal`がユースケースのトピックに設定されています。 
+これを設定するには、各選択肢が一般的な目標または意図を表す単一選択アンケートを使用します。各選択肢は、選択したユーザーの意図に対応する値によってカスタム属性`product_goal` にマップされます。
 
-例えば、ユーザーが「アカウントのアップグレード」を選択すると、それがユーザーのプロファイルに`product_goal = upgrade`を設定します。
+| 選択肢                     | 属性       | 値     |
+|----------------------------|------------------|-----------|
+| ステータスの確認            | `product_goal`   | `status`  |
+| アカウントのアップグレード       | `product_goal`   | `upgrade` |
+| 予約のスケジュール  | `product_goal`   | `schedule`|
+| カスタマーサポート           | `product_goal`   | `support` |
+| 閲覧のみ              | `product_goal`   | `browse`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][8]
+ユーザーがアンケートを送信すると、選択した値がプロファイルのカスタム属性としてログに記録されます。その後、このデータを使用して、主な目標に基づいて将来の経験をパーソナライズしたり、ユーザーをセグメント化したりできます。
 
 ### コンバージョン率を向上させる
 
 **目的:**顧客がアップグレードや購入をしない理由を理解します。
 
-このユースケースでは単一選択を使用し、各選択肢にユーザーがプレミアムアカウントにアップグレードしない一般的な理由を提示します。各選択肢には、ユーザーの選択に設定されたカスタム属性`upgrade_reason`があります。 
+これを設定するには、1 つの選択肢のサーベイを使用します。それぞれのオプションは、アップグレードの一般的な障壁を表します。各選択肢は、ユーザーの選択内容を反映している対応する値によってカスタム属性 `upgrade_reason` にマップされます。
 
-例えば、ユーザーが「高すぎる」を選択すると、それがユーザーのプロファイルに`upgrade_reason = expensive`を設定します。これらのユーザーを割引や無料トライアルなどのプロモーションキャンペーンの対象にすることができます。
+| 選択肢              | 属性        | 値       |
+|---------------------|------------------|-------------|
+| 高すぎる       | `upgrade_reason` | `expensive` |
+| 評価不能        | `upgrade_reason` | `value`     |
+| 使いにくい    | `upgrade_reason` | `difficult` |
+| 競合他社を使用する  | `upgrade_reason` | `competitor`|
+| その他の理由        | `upgrade_reason` | `other`     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][9]
+ユーザーがアンケートを送信すると、選択した値がプロファイルに保存されます。その後、割引オファーやユーザビリティの向上など、特定の反論に合わせたキャンペーンを使用して、これらのユーザをターゲットにすることができます。
 
 ### お気に入りの機能
 
 **目的:**顧客がどの機能を楽しく使用しているかを理解します。
 
-このユースケースでは、各選択肢がアプリの機能である複数選択を使用します。各選択肢には、ユーザーの選択に設定されたカスタム属性`favorite_features`があります。このユースケースでは多岐選択を使用するため、ユーザーが調査を完了すると、ユーザープロファイルの `favorite_features` 属性が、選択されたすべてのオプションからなる配列に設定されて更新されます。
+これを設定するには、各オプションがアプリの機能を表す複数選択の選択調査を使用します。各選択肢はカスタム属性`favorite_features` にマッピングされ、ユーザがアンケートを送信すると、その属性は選択された値の配列に設定されます。
 
-![][10]
+| 選択肢            | 属性          | 値        |
+|-------------------|--------------------|--------------|
+| ブックマーク         | `favorite_features`| `bookmarks`  |
+| モバイルアプリ        | `favorite_features`| `mobile`     |
+| 投稿の共有     | `favorite_features`| `sharing`    |
+| カスタマーサポート  | `favorite_features`| `support`    |
+| カスタマイズ     | `favorite_features`| `custom`     |
+| 価格 / 価値     | `favorite_features`| `value`      |
+| コミュニティ         | `favorite_features`| `community`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe
+このアンケートでは多岐選択が使用されているため、選択したすべての機能の値でユーザーのプロファイルが更新されます。
 
-[7]: {% image_buster /assets/img_archive/simple_survey_use_case_1.png %}
-[8]: {% image_buster /assets/img_archive/simple_survey_use_case_2.png %}
-[9]: {% image_buster /assets/img_archive/simple_survey_use_case_3.png %}
-[10]: {% image_buster /assets/img_archive/simple_survey_use_case_4.png %}
 
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+

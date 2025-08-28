@@ -25,9 +25,9 @@ Voici quelques exemples de types de comportements qui peuvent être détectés g
 
 ## Création de formules
 
-Les formules sont accessibles dans les panneaux de statistiques des pages [Accueil][9], [Rapport sur les chiffres d'affaires][10] et [Rapport sur les événements personnalisés][11] du tableau de bord. Pour afficher ce panneau, allez dans le graphique **Performance au fil du temps**, changez le menu déroulant **Statistiques pour** en **Formules d'indicateurs clés de performance**, puis sélectionnez au moins une formule d'indicateur clé de performance pour remplir le graphique.
+Les formules sont accessibles dans les panneaux de statistiques des pages [Accueil]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/), [Rapport sur les chiffres d'affaires]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/) et [Rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) du tableau de bord. Pour afficher ce panneau, allez dans le graphique **Performance au fil du temps**, changez le menu déroulant **Statistiques pour** en **Formules d'indicateurs clés de performance**, puis sélectionnez au moins une formule d'indicateur clé de performance pour remplir le graphique.
 
-![Afficher les statistiques des formules d’indicateurs clés de performance sur le tableau de bord de Braze][16]
+![Consultez les statistiques des indicateurs clés de performance dans le tableau de bord de Braze]({% image_buster /assets/img_archive/kpi_forms.png %}).
 
 Pour créer une nouvelle formule :
 
@@ -84,11 +84,6 @@ table td {
 | --- | --- |
 | Nombre d’événements personnalisés | MAU |
 |  | Utilisateurs actifs quotidiens (DAU) |
-|  | Taille du segment (seuls les segments pour lesquels l'option [analytics tracking][17] ] est activée peuvent être utilisés) |
+|  | Taille du segment (seuls les segments pour lesquels le [suivi analytique]({{site.baseurl}}/viewing_and_understanding_segment_data/) est activé peuvent être utilisés). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[16]: {% image_buster /assets/img_archive/kpi_forms.png %}
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/

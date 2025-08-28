@@ -45,7 +45,7 @@ Cependant, un taux peut être supérieur à 98 % et présenter encore certains 
 
 De plus, les messages peuvent être livrés et terminer dans les courriers indésirables, ce qui indique des problèmes de réputation potentiellement graves. Il est important de surveiller non seulement le nombre de messages livrés, mais aussi les taux d’ouverture et de clics pour déterminer si les utilisateurs voient effectivement les messages dans leurs boîtes de réception. Comme les fournisseurs ne signalent généralement pas toutes les instances de spam, un taux de spam de même 1 % pourrait être source de préoccupation et d’analyse approfondie.
 
-Enfin, votre entreprise et les types d'e-mails que vous envoyez peuvent également affecter la livraison. Par exemple, une personne envoyant principalement des [emails transactionnels][1] devrait s'attendre à voir un meilleur taux qu'une personne envoyant de nombreux messages marketing.
+Enfin, votre entreprise et les types d'e-mails que vous envoyez peuvent également affecter la livraison. Par exemple, une personne envoyant principalement des [emails transactionnels]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) devrait s'attendre à voir un meilleur taux qu'une personne envoyant de nombreux messages marketing.
 
 ### Pourquoi est-ce que mes indicateurs de livrabilité d’e-mails n’atteignent pas 100 % quand je les additionne ?
 
@@ -89,7 +89,7 @@ Vous pouvez supprimer les e-mails renvoyés et les e-mails figurant sur la liste
 ### Comment vérifier le groupe d’abonnement e-mail d’un utilisateur ?
 
 - **Profil de l'utilisateur :** Les profils d'utilisateurs individuels peuvent être consultés via le tableau de bord Braze depuis la page [Rechercher des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles). Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Lorsqu'on est dans un profil utilisateur, sous l'onglet Engagement, on peut voir les groupes d'abonnement par e-mail d'un utilisateur.
-- **API REST :** Les profils d'utilisateurs individuels du groupe d'abonnement peuvent être consultés par l'[endpoint de liste des groupes d'abonnement des utilisateurs][9] ou l'[endpoint de liste du statut du groupe d'abonnement des utilisateurs][8] en utilisant l'API REST de Braze. 
+- **API REST :** Les profils d'utilisateurs individuels du groupe d'abonnement peuvent être consultés par l'[endpoint de liste des groupes d'abonnement des utilisateurs]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) ou l'[endpoint de liste du statut du groupe d'abonnement des utilisateurs]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) en utilisant l'API REST de Braze. 
 
 ### Comment puis-je mettre à jour le groupe d'abonnement par e-mail d'un utilisateur ?
 
@@ -105,6 +105,3 @@ Non, Braze n’offre pas cette fonctionnalité. C’est parce qu’une majorité
 
 **Contournement :** Pour obtenir le même résultat, vous pouvez héberger le contenu de votre e-mail sur une page de destination externe (comme votre site Web), qui peut ensuite être liée à partir de la campagne d'e-mail que vous construisez en utilisant l'outil **Link** lors de l'édition du corps de l'e-mail.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

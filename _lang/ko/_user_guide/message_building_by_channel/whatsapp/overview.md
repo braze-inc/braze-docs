@@ -24,7 +24,6 @@ search_rank: 2
 - **규정 준수:** 모든 해당 Braze 및 메타 설명서와 해당 [메타 정책](https://www.whatsapp.com/legal/?lang=en)을 준수하세요.
 - **24시간 대화 제한:** 비즈니스가 초기 템플릿 메시지를 보내거나 사용자가 메시지를 보내면 24시간 동안 두 당사자가 메시지를 주고받을 수 있는 창이 열립니다. 
 - **대화 시작하기:** 사용자는 언제든지 대화를 시작할 수 있습니다. 기업은 승인된 메시지 템플릿을 통해서만 대화를 시작할 수 있습니다.
-- **계정 제한:** 각 Braze 워크스페이스에는 하나의 WhatsApp 비즈니스 계정, 구독 그룹 및 전화번호를 보유할 수 있습니다. 또한, 각 WhatsApp 비즈니스 계정에는 [하나의 타사 연동](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047) 기능만 보유할 수 있습니다. WhatsApp 비즈니스 계정은 하나의 작업 공간에서만 존재할 수 있으며 작업 공간 간에 공유할 수 없습니다.
 <br><br>
 
 | 요구 사항| 설명|
@@ -40,17 +39,13 @@ search_rank: 2
 
 Braze에서 **파트너 통합** > **기술 파트너**로 이동하여 **WhatsApp**을 검색합니다.
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **통합**에서 **기술 파트너**를 찾을 수 있습니다.
-{% endalert %}
-
 WhatsApp 파트너 페이지에서 **연동 시작**을 선택합니다.
 
-![][1]
+![WhatsApp 파트너 페이지에 통합을 시작하는 버튼이 있습니다.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 열린 창에서 **통합 시작** 버튼이 나타날 때까지 **다음**을 선택합니다. 버튼을 선택하여 통합 프로세스를 시작합니다.
 
-![Braze를 WhatsApp에 연결하는 방법에 대한 안내입니다.][7]
+![Braze를 WhatsApp에 연결하는 방법.]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
 ### 2단계: WhatsApp 설정
 
@@ -69,16 +64,16 @@ WhatsApp 파트너 페이지에서 **연동 시작**을 선택합니다.
 
 1. **[템플릿 관리자로](https://business.facebook.com/wa/manage/message-templates) 이동합니다.**<br>
 메타 비즈니스 매니저의 **계정 도구**에서 **메시지 템플릿**을 선택합니다.
-다음으로 **템플릿 만들기**를 선택합니다.<br><br>![][3]{: style="max-width:100%;"}<br><br>
+다음으로 **템플릿 만들기**를 선택합니다.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **메시지 설정**<br>
 새 메시지 템플릿 작성기에서 메시지의 카테고리를 선택하고 템플릿 이름을 지정한 다음 지원할 언어를 선택합니다. 나중에 언어를 삭제하거나 추가할 수 있습니다.<br><br> 
 	사용 가능한 메시지 템플릿 카테고리는 다음과 같습니다:
 	- 마케팅: 프로모션 혜택, 제품 공지 등을 전송하여 인지도와 인게이지먼트를 높이세요.
 	- 유틸리티: 계정 업데이트, 주문 업데이트, 알림 등을 전송하여 중요한 정보를 공유하세요.
 	- 인증: 고객이 계정에 액세스할 수 있는 코드를 보내세요.<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **템플릿 편집**<br>
-다음으로 메시지 템플릿을 만들라는 메시지가 표시됩니다. <br><br>여기에서 텍스트 또는 미디어 헤더, 텍스트 본문, 메시지 바닥글 및 버튼을 제공할 수 있습니다. 현재 동영상 및 문서 헤더는 사용할 수 없으며, 헤더는 텍스트 또는 이미지 유형이어야 합니다. 오른쪽에 메시지 미리보기가 표시됩니다. <br><br>메타는 Liquid를 지원하지 않지만, 나중에 Braze에서 Liquid 변수로 대체할 수 있는 변수를 템플릿에 넣을 수 있습니다. **변수 추가** 버튼을 선택하면 됩니다.<br><br>![][5]{: style="max-width:100%;"}<br><br>템플릿을 완성했으면 **제출을** 누릅니다. 
+다음으로 메시지 템플릿을 만들라는 메시지가 표시됩니다. <br><br>여기에서 텍스트 또는 미디어 헤더, 텍스트 본문, 메시지 바닥글 및 버튼을 제공할 수 있습니다. 현재 동영상 및 문서 헤더는 사용할 수 없으며, 헤더는 텍스트 또는 이미지 유형이어야 합니다. 오른쪽에 메시지 미리보기가 표시됩니다. <br><br>메타는 Liquid를 지원하지 않지만, 나중에 Braze에서 Liquid 변수로 대체할 수 있는 변수를 템플릿에 넣을 수 있습니다. **변수 추가** 버튼을 선택하면 됩니다.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>템플릿을 완성했으면 **제출을** 누릅니다. 
 
 #### 템플릿 승인 시간
 
@@ -109,10 +104,3 @@ WhatsApp 비즈니스 계정이 생성되면 메타에서 시작 메시징 한�
 
 Braze는 WhatsApp의 [클라우드 API 로컬 스토리지를](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5) 지원합니다. 이 기능을 사용하려면 Braze 고객 지원 관리자에게 문의하세요.
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %}
-[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

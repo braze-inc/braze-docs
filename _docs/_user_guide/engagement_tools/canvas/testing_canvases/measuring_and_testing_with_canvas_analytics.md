@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Analytics
+nav_title: Canvas analytics
 article_title: Canvas Analytics
 page_order: 2
 page_type: reference
@@ -74,6 +74,26 @@ Beyond that, you can see a more explicit breakdown of [conversion events]({{site
 - Conversion totals and conversion rates for each conversion event
 - Uplift against the control variant
 - Statistical confidence for each conversion event
+
+### How conversions are tracked 
+
+A user can only convert once per conversion event per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The Canvas summary reflects all conversions performed by users in that path and whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received. 
+
+Consider the following example: a Canvas has 10 push notifications and the conversion event is "Opens App" (or "Session Start").
+- User A opens the app after entering but before receiving the first message.
+- User B opens the app after each push notification.
+
+The Canvas summary will show two conversions while the individual steps will show one conversion on the first step and none for all subsequent steps. If Quiet Hours are active when the conversion event happens, the same rules will apply. 
+
+Now, let's say we have a Canvas with Quiet Hours and the following events occur:
+
+1. User A enters a Canvas.
+2. The first step is a Delay step within the set Quiet Hours, so the message is supressed.
+3. User A performs the conversion event.
+
+User A will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+
+For our last example, let's say we have a Canvas with re-eligiblity turned on. If a re-eligible user performs the conversion event on the first entry and second entry, two conversions will be counted.
 
 ### Funnel report
 

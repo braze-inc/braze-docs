@@ -16,11 +16,11 @@ search_rank: 1
 Ya no puedes crear o duplicar Lienzos utilizando la experiencia original de Canvas. Braze recomienda [clonar tus Lienzos en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% enddetails %}
 
-## Paso 1: Crear un nuevo lienzo 
+## Crear un lienzo
 
-Vaya a **Mensajería** > **Lienzo** y seleccione **Crear lienzo**.
+### Paso 1: Configurar un nuevo Canvas 
 
-## Paso 2: Configura tu Canvas
+Primero, ve a **Mensajería** > **Canvas** y, a continuación, selecciona **Crear Canvas**.
 
 El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desde la asignación de un nombre hasta la configuración de eventos de conversión y la introducción de los usuarios adecuados en el recorrido del cliente. Seleccione cada una de las pestañas siguientes para ver los ajustes que puede realizar en cada paso de la construcción.
 
@@ -64,12 +64,12 @@ El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desd
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Resumen %}
-    Aquí encontrarás el resumen de los datos de tu Canvas. Si tienes activado el [flujo de trabajo de aprobación de Canvas]({{site.baseurl}}/canvas_approval/), puedes aprobar los detalles de Canvas listados antes de lanzarlo.
+    Aquí encontrarás el resumen de los datos de tu Canvas. Si tienes activado el [flujo de trabajo de aprobación de Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/), puedes aprobar los detalles de Canvas listados antes de lanzarlo.
 
   {% endtab %}
 {% endtabs %}
 
-### Paso 2a: Empieza con lo básico de Canvas
+#### Paso 1.1: Empieza con lo básico de Canvas
 
 Aquí, nombrará su Lienzo, asignará [Equipos]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) y creará o añadirá [Etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). También puede asignar eventos de conversión para el lienzo.
 
@@ -77,21 +77,21 @@ Aquí, nombrará su Lienzo, asignará [Equipos]({{site.baseurl}}/user_guide/admi
 Etiqueta tus lienzos para que sea fácil encontrarlos y crear informes a partir de ellos. Por ejemplo, al utilizar [el Generador de informes]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), puede filtrar por determinadas etiquetas.
 {% endalert %}
 
-![La página de detalles del Canvas, con campos para el nombre, descripción, ubicación y etiquetas del Canvas.][53]{: style="max-width:70%;"}
+![La página de detalles del Canvas, con campos para el nombre, descripción, ubicación y etiquetas del Canvas.]({% image_buster /assets/img/canvas_details.png %}){: style="max-width:70%;"}
 
-#### Elegir eventos de conversión
+##### Elegir eventos de conversión
 
 Elija el tipo de evento de conversión y, a continuación, seleccione las conversiones que desea registrar. Estos [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) medirán la eficacia de tu Canvas. 
 
-![Evento de Conversión Principal A con el tipo de evento de conversión Realiza Compra para registrar las conversaciones de los usuarios que realizan cualquier compra dentro de un plazo de conversión de tres días.][52]
+![Evento de conversión primaria A con el tipo de evento de conversión Realiza una compra para registrar las conversaciones de los usuarios que realizan cualquier compra dentro de un plazo de conversión de tres días.]({% image_buster /assets/img/add_canvas_conversions.png %})
 
 Si su Canvas tiene múltiples variantes o un grupo de control, Braze utilizará este evento de conversión para determinar la mejor variación para alcanzar este objetivo de conversión. Utilizando la misma lógica, puede crear varios eventos de conversión.
 
-### Paso 2b: Determina tu horario de entrada en Canvas
+#### Paso 1.2: Determina tu horario de entrada en Canvas
 
 Puedes elegir una de las tres formas en que los usuarios pueden entrar en tu Canvas. 
 
-#### Tipos de horarios de entrada
+##### Tipos de horarios de entrada
 
 {% tabs local %}
   {% tab Entrega programada %}
@@ -130,7 +130,7 @@ En caso de que la ventana de reelegibilidad sea inferior a la duración máxima 
 Si un usuario vuelve a entrar en el Canvas, llega al mismo componente que su entrada anterior y puede recibir un mensaje in-app por cada entrada, el usuario recibirá el mensaje dos veces (dependiendo de la prioridad de los mensajes in-app) siempre que vuelva a abrir una sesión dos veces.
 {% enddetails %}
 
-### Paso 2c: Configura tu audiencia objetivo de entrada
+#### Paso 1.3: Configura tu audiencia objetivo de entrada
 
 Puede establecer el público objetivo de su lienzo en el paso **Público objetivo**. Sólo los usuarios que cumplen los criterios definidos pueden entrar en el recorrido, lo que significa que Braze evalúa primero la elegibilidad del público objetivo antes de que los usuarios entren en el recorrido de Canvas. Por ejemplo, si desea dirigirse a nuevos usuarios, puede seleccionar un segmento de usuarios que utilizaron su aplicación por primera vez hace menos de una semana.
 
@@ -140,13 +140,13 @@ En **Controles de entrada**, puede limitar el número de usuarios cada vez que s
 Evite configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede producirse una condición de carrera en la que el usuario no se encuentre entre el público en el momento de realizar el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.  
 {% endalert %}
 
-#### Prueba tu audiencia
+##### Prueba tu audiencia
 
 Después de añadir segmentos y filtros a su público objetivo, puede comprobar si su público está configurado según lo esperado [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar si coincide con los criterios del público.
 
 ![El campo "Búsqueda de usuarios", que te permite buscar por ID de usuario externo o ID de Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
-#### Seleccionar controles de entrada
+##### Seleccionar controles de entrada
 
 Los controles de entrada determinan si se permite a los usuarios volver a entrar en un lienzo. También puedes limitar el número de personas que potencialmente entrarían en este Canvas según una cadencia seleccionada (diariamente, durante toda la vida del Canvas o cada vez que se programe el Canvas). 
 
@@ -158,11 +158,11 @@ Por ejemplo, si seleccionas **Limitar volumen de entradas** y estableces el camp
 Braze no recomienda utilizar la característica **Cada vez que se programa el Canvas** para el calentamiento de IP, ya que puede provocar un aumento del volumen de envíos.
 {% endalert %}
 
-#### Establecer criterios de salida
+##### Establecer criterios de salida
 
 La configuración de los [criterios de salida]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) determina qué usuarios desea que salgan de un lienzo. Si un usuario realiza el evento de excepción o coincide con los segmentos y filtros, no recibirá más mensajes.
 
-#### Cálculo de la población objetivo
+##### Cálculo de la población objetivo
 
 En la sección **Población objetivo**, puedes ver un resumen de tu audiencia, como los segmentos seleccionados y los filtros adicionales, y un desglose de cuántos usuarios son alcanzables por canal de mensajería. Para calcular el número exacto de usuarios alcanzables de tu audiencia objetivo en lugar de la estimación predeterminada, selecciona [Calcular estadísticas exactas]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
 
@@ -173,11 +173,15 @@ Toma nota:
 
 Para ver estadísticas adicionales, como los ingresos medios durante la vida útil de los usuarios objetivo, selecciona **Mostrar estadísticas adicionales**.
 
-![Desglose de la población objetivo con opción de calcular estadísticas exactas.][2]
+![Desglose de la población objetivo con opción de calcular estadísticas exactas.]({% image_buster /assets/img_archive/canvas_exact_stats.png %})
 
-### Paso 2d: Selecciona tu configuración de envío
+##### Por qué el recuento de la audiencia objetivo puede diferir del recuento de usuarios alcanzables
 
-Seleccione **Configuración de envío** para editar los ajustes de suscripción, activar la limitación de velocidad y activar las horas de silencio. Activando [limitación de velocidad][6b] o [limitación de frecuencia][6c], puedes aliviar la presión comercial sobre tus usuarios y asegurarte de que no les envías mensajes excesivos.
+{% multi_lang_include segments.md section='Diferentes tamaños de audiencia' %}
+
+#### Paso 1.4: Selecciona tu configuración de envío
+
+Seleccione **Configuración de envío** para editar los ajustes de suscripción, activar la limitación de velocidad y activar las horas de silencio. Activando [la limitación de tasa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components) o la [limitación de frecuencia]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping), puedes aliviar la presión de marketing sobre tus usuarios y asegurarte de que no les envías demasiados mensajes.
 
 En el caso de los lienzos dirigidos a los canales de correo electrónico y push, es posible que desee limitar su lienzo para que sólo los usuarios que hayan optado explícitamente por recibir el mensaje (excluyendo a los usuarios suscritos o dados de baja). Por ejemplo, supongamos que tiene tres usuarios con diferentes estados de suscripción:
 
@@ -190,28 +194,28 @@ Para ello, configure **los Ajustes de suscripción** para enviar este lienzo "s�
 Estos ajustes de suscripción se aplican en cada paso, lo que significa que no hay ningún efecto sobre el público de entrada. Por lo tanto, esta configuración se utiliza para evaluar la elegibilidad de un usuario para recibir cada paso de Canvas.
 
 {% alert important %}
-Con esta configuración, no incluya ningún filtro en el paso **Usuarios objetivo** que limite la audiencia a un único canal (por ejemplo, `Push Enabled = True` o `Email Subscription = Opted-In`).
+Con esta configuración, no incluyas ningún filtro en el paso **Audiencia objetivo** que limite la audiencia a un único canal (por ejemplo, `Push Enabled = True` o `Email Subscription = Opted-In`).
 {% endalert %}
 
 Si lo desea, especifique Horas de silencio (el tiempo durante el cual no se enviarán sus mensajes) para su Lienzo. Marque **Activar horas de silencio** en la **Configuración de envío**. A continuación, seleccione sus Horas de Silencio en la hora local de su usuario y la acción que seguirá si el mensaje se activa dentro de esas Horas de Silencio.
 
-![La página "Horas tranquilas" muestra una casilla para habilitar las horas tranquilas. Si se habilita, se puede establecer la hora de inicio, la hora de finalización y el comportamiento de alternativa.][50]
+![La página "Horas tranquilas" muestra una casilla para habilitar las horas tranquilas. Si se habilita, se puede establecer la hora de inicio, la hora de finalización y el comportamiento de alternativa.]({% image_buster /assets/img/quiet_hours.png %})
 
-## Paso 3: Construye tu Canvas
+### Paso 2: Construye tu Canvas
 
 {% alert tip %}
 ¡Ahorra tiempo y agiliza tu creación de Canvas utilizando [las plantillas de Braze]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates) Canvas! Navega por nuestra biblioteca de plantillas prediseñadas para encontrar una que se adapte a tu caso de uso y personalízala para satisfacer tus necesidades específicas.
 {% endalert %}
 
-### Añadir una variante
+#### Paso 2.1: Añadir una variante
 
-![Selecciona el botón "Añadir variante" para mostrar un menú contextual con la opción "Añadir variante".][11]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Selecciona el botón "Añadir variante" para mostrar un menú contextual con la opción "Añadir variante".]({% image_buster /assets/img_archive/canvas_add_variant.gif %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Seleccione **Añadir variante** y añada una nueva variante a su lienzo. Las variantes representan un viaje que realizarán sus usuarios y pueden contener múltiples pasos y ramificaciones.
 
 Puede añadir variantes adicionales seleccionando el botón <i class="fas fa-plus-circle"></i> más. Cuando añada nuevas variantes, podrá ajustar cómo se distribuirán sus usuarios entre ellas para poder comparar y analizar la eficacia de las distintas estrategias de captación.
 
-![Dos variantes de ejemplo en un Canvas de Braze.][12]
+![Dos variantes de ejemplo en un Canvas de Braze.]({% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %})
 
 {% alert tip %}
 Por defecto, la asignación de variantes del lienzo se bloquea cuando los usuarios entran en el lienzo, lo que significa que si un usuario introduce por primera vez una variante, esa será su variante cada vez que vuelva a entrar en el lienzo. Sin embargo, hay formas de eludir este comportamiento. <br><br>Para ello, puede crear un generador de números aleatorios utilizando Liquid, ejecutarlo al principio de la entrada Canvas de cada usuario, almacenar el valor como un atributo personalizado y, a continuación, utilizar ese atributo para dividir aleatoriamente a los usuarios.
@@ -220,14 +224,14 @@ Por defecto, la asignación de variantes del lienzo se bloquea cuando los usuari
 
 1. Crea un atributo personalizado para almacenar tu número aleatorio. Ponle un nombre fácil de localizar, como "número_lotería" o "asignación_aleatoria". Puedes crear el atributo [en tu panel]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) o a través de llamadas API a nuestro [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
 2. Crea una campaña webhook al principio de tu Canvas. Esta campaña será el medio en el que creará su número aleatorio y lo almacenará como atributo personalizado. Consulte [Crear un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) para obtener más información. Establezca la URL de nuestro punto final `/users/track`.<br><br>
-3. Crea el generador de números aleatorios. Puede hacerlo con el código [ que se describe aquí](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aprovecha la hora de entrada única de cada usuario para crear un número aleatorio. Establezca el número resultante como una variable Liquid dentro de su campaña webhook.<br><br>
+3. Crea el generador de números aleatorios. Puedes hacerlo con el código que [se indica aquí](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aprovecha la hora única de entrada de cada usuario para crear un número aleatorio. Establezca el número resultante como una variable Liquid dentro de su campaña webhook.<br><br>
 4. Formatea la llamada `/users/track` en tu campaña webhook para que establezca el atributo personalizado que creaste en el paso 1 en el número aleatorio que has generado en el perfil de tu usuario actual. Cuando este paso se ejecute, habrá conseguido crear un número aleatorio que cambiará cada vez que un usuario entre en su campaña.<br><br>
 5. Ajuste las ramas de su lienzo para que, en lugar de estar divididas por variantes elegidas al azar, se dividan en función de las reglas de audiencia. En las reglas de audiencia de cada rama, establezca el filtro de audiencia según su atributo personalizado. <br><br>Por ejemplo, una rama puede tener "número_lotería es menor que 3" como filtro de audiencia, mientras que otra rama puede tener "número_lotería es mayor que 3 y menor que 6" como filtro de audiencia.
 
 {% enddetails %}
 {% endalert %}
 
-### Añadir pasos
+#### Paso 2.2: Añadir pasos en Canvas
 
 Puede añadir más pasos a su flujo de trabajo Canvas arrastrando y soltando componentes desde la barra lateral **Componentes**. O bien, seleccione el botón más <i class="fas fa-plus-circle"></i> para añadir un componente con el menú desplegable.
 
@@ -241,11 +245,11 @@ Cuando empiece a añadir más pasos, puede cambiar el nivel de zoom para centrar
 Un lienzo creado con el flujo del lienzo puede contener hasta 200 pasos. Si su lienzo supera los 200 pasos, se producirán problemas de carga.
 {% endalert %}
 
-#### Duración máxima
+##### Duración máxima
 
 A medida que el recorrido de tu Canvas aumenta en pasos, la duración máxima es el mayor tiempo posible que un usuario puede tardar en completar este Canvas. Se calcula sumando los retrasos y las ventanas de activación de cada paso de cada variante para el camino más largo. Por ejemplo, si su Canvas tiene un paso de Retraso con un retraso de 3 días y un paso de Mensaje, la duración máxima de tu Canvas será de 3 días.
 
-### Editar un paso
+##### Editar un paso
 
 ¿Quieres editar un paso de tu recorrido de usuario? Comprueba cómo hacerlo en función de tu flujo de trabajo en Canvas.
 
@@ -259,7 +263,7 @@ También puede editar y ajustar rápidamente la **Configuración de acción** de
 
 Los componentes ligeros de Canvas permiten una experiencia de edición sencilla, por lo que ajustar los detalles más sutiles de tu Canvas es más fácil. 
 
-#### Mensajes en Canvas
+##### Mensajes en Canvas
 
 Edite los mensajes de un componente del lienzo para controlar los mensajes que enviará un paso concreto. Canvas puede enviar mensajes push por correo electrónico, móvil y web, así como webhooks para integrarse con otros sistemas. De forma similar a las campañas, puede utilizar determinadas plantillas de [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) para personalizar sus mensajes.
 
@@ -297,11 +301,11 @@ En el primer paso de Mensaje que sigue a una Ruta de Acción, puede utilizar `ev
 {% endtab %}
 {% endtabs %}
 
-### Edición de conexiones
+#### Paso 2.3: Editar conexiones
 
 Para mover una conexión entre pasos, seleccione la flecha que conecta los dos componentes y seleccione un componente diferente. Para eliminar la conexión, seleccione la flecha seguida de **Cancelar conexión** en el pie de página del compositor Canvas.
 
-## Paso 4: Utilizar pruebas multivariantes con Canvas
+### Paso 3: Añadir un grupo de control
 
 Puede añadir un grupo de control a su lienzo seleccionando el botón <i class="fas fa-plus-circle"></i> más para añadir una nueva variante. 
 
@@ -313,45 +317,27 @@ En este ejemplo, tenemos nuestro Canvas dividido en dos variantes. La variante 1
 
 ![Una variante de ejemplo en un Canvas de Braze, donde el 70% va a la "Variante 1", que retrasa 1 día el primer paso, y luego envía un mensaje en el segundo paso. El otro 30% va a un "Control" que no tiene ningún paso de seguimiento.]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
-### Selección inteligente para Canvas
+#### Selección inteligente para Canvas
 
-Las funciones de selección inteligente ya están disponibles en los lienzos multivariantes. De forma similar a la función [Selección Inteligente][18a] para Campañas multivariantes, la Selección Inteligente para Canvas analiza el rendimiento de cada variante de Canvas y ajusta el porcentaje de usuarios que se canaliza a través de cada variante. Esta distribución se basa en las métricas de rendimiento de cada variante para maximizar el número total esperado de conversiones.
+Las funciones de selección inteligente ya están disponibles en los lienzos multivariantes. De forma similar a la característica Intelligent [Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) para Campañas multivariantes, Intelligent Selection para Canvas analiza el rendimiento de cada variante de Canvas y ajusta el porcentaje de usuarios que se embudan a través de cada variante. Esta distribución se basa en las métricas de rendimiento de cada variante para maximizar el número total esperado de conversiones.
 
 Tenga en cuenta que los lienzos multivariantes no sólo le permiten probar el texto, sino también el momento y los canales. Gracias a la selección inteligente, puede probar los lienzos de forma más eficaz y confiar en que sus usuarios realizarán el mejor recorrido posible por el lienzo.
 
-![La opción "Intelligent Selection" está habilitada en la página "Editar distribución de variantes". A medida que analiza y optimiza el Canvas, muestra una barra horizontal a través de la página dividida en varias secciones, cada una de las cuales varía en color y tamaño. Esto es sólo una representación visual y no se correlaciona con ningún análisis específico.][18b]
+![La opción "Intelligent Selection" está habilitada en la página "Editar distribución de variantes". A medida que analiza y optimiza el Canvas, muestra una barra horizontal a través de la página dividida en varias secciones, cada una de las cuales varía en color y tamaño. Esto es sólo una representación visual y no se correlaciona con ningún análisis específico.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 La Selección Inteligente para Canvas optimiza sus resultados de Canvas realizando ajustes graduales en tiempo real de la distribución de usuarios clasificados en cada variante. Cuando el algoritmo estadístico determine un ganador decisivo entre tus variantes, descartará las variantes de menor rendimiento y clasificará a todos los futuros destinatarios elegibles del Canvas en las Variantes Ganadoras. 
 
 Por esta razón, la Selección Inteligente funciona mejor en Lienzos en los que entran nuevos usuarios con frecuencia.
 
-## Paso 5: Guarda e inicia tu Canvas
+### Paso 4: Guardar y lanzar
 
 Cuando hayas terminado de crear tu Canvas, selecciona **Lanzar Canvas** para guardarlo y lanzarlo. Una vez que haya lanzado su lienzo, podrá ver los análisis de su trayecto a medida que vayan llegando en la página **de detalles del lienzo**. 
 
 También puedes guardar tu lienzo como borrador por si necesitas volver a él.
 
-![Un ejemplo de Canvas en Braze.][19]
+![Un ejemplo de Canvas en Braze.]({% image_buster /assets/img_archive/Canvas_Analytics.png %})
 
 {% alert tip %}
 ¿Necesita modificar su lienzo después del lanzamiento? ¡Pues sí que puedes! Para más información, consulte [Editar lienzos después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
-
-[1]: {% image_buster /assets/img_archive/canvas_dropdown.png %}
-[2]: {% image_buster /assets/img_archive/canvas_exact_stats.png %}
-[3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
-[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
-[11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
-[12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
-[13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
-[14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
-[15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
-[17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
-[19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
-[50]: {% image_buster /assets/img/quiet_hours.png %}
-[52]: {% image_buster /assets/img/add_canvas_conversions.png %}
-[53]: {% image_buster /assets/img/canvas_details.png %}

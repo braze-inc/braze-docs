@@ -27,7 +27,7 @@ Braze SDK(소프트웨어 개발 키트)는 Braze가 귀사의 앱 또는 사이
 
 * [API 키]({{site.baseurl}}/api/api_key/)
 * [SDK 엔드포인트]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze는 더 이상 커스텀 엔드포인트를 제공하지 않으므로 미리 정의된 SDK 엔드포인트를 사용하세요. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+  * Braze는 더 이상 커스텀 엔드포인트를 제공하지 않으므로 미리 정의된 SDK 엔드포인트를 사용하세요. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 이 정보를 자녀에게 직접 제공하거나 자녀를 위한 계정을 생성하여 자녀에게 Braze에 대한 액세스 권한을 부여할 수 있습니다. 
 
@@ -47,7 +47,7 @@ Braze에는 사용자와 소통할 수 있는 다양한 옵션이 있으며, 각
 | 푸시 | 메시징 자격 증명 및 푸시 토큰에 대한 적절한 처리를 제공하려면 SDK 구현이 필요합니다. |
 | 이메일 | 이것은 완전히 다른 프로세스입니다. Check out the [Email Setup]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) section for more details on integration. |
 | 콘텐츠 카드 | [콘텐츠 카드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)를 시작하려면 Braze 고객 성공 매니저에게 문의하세요. |
-| SMS 및 MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) section for more details on integration. |
+| SMS 및 MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) section for more details on integration. |
 | 웹훅 | 채널별 단계뿐만 아니라 SDK 구현이 필요합니다. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -74,7 +74,7 @@ API 트리거 실행 및 연결된 콘텐츠와 같은 기능을 원하는 경�
 
 ### 5단계: 둘 다 구현에 대한 QA를 수행합니다
 
-엔지니어와 협력하여 모든 것이 제대로 작동하는지 확인하세요. Send [test messages]({{site.baseurl}}/developer_guide/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/), check every box before you start sending!
+엔지니어와 협력하여 모든 것이 제대로 작동하는지 확인하세요. Send [test messages]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/references/?tab=android) and [test apps for iOS]({{site.baseurl}}/developer_guide/references/?tab=swift), check every box before you start sending!
 
 We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 

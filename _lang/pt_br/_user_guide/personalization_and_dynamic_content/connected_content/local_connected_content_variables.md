@@ -12,7 +12,7 @@ search_rank: 1
 
 A Braze faz uma solicitação GET padrão no momento do envio para o endpoint especificado na tag `connected_content`. Se o endpoint retornar JSON, ele será automaticamente analisado e armazenado em uma variável chamada `connected`. Se o endpoint retornar texto, ele será inserido diretamente na mensagem no lugar da tag `connected_content`.
 
-Se você deseja salvar sua resposta em uma variável, é recomendável retornar objetos JSON. E se você quiser que a resposta do Connected Content substitua a tag pelo texto, certifique-se de que a resposta não seja um JSON válido (conforme definido por [json.org][46])
+Se você deseja salvar sua resposta em uma variável, é recomendável retornar objetos JSON. E se você quiser que a resposta do Connected Content substitua a tag pelo texto, certifique-se de que a resposta não seja um JSON válido (conforme definido por [json.org](http://www.json.org))
 
 Você também pode especificar `:save your_variable_name` após o URL para salvar os dados como outra coisa. Por exemplo, a seguinte tag `connected_content` armazenará a resposta em uma variável local chamada `localweather` (você pode salvar várias variáveis JSON `connected_content`):
 
@@ -84,7 +84,7 @@ Enjoy the weather!
 
 Se a API respondesse com {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} retornando `Rain`, o usuário receberia este push.
 
-![Notificação por push com a mensagem "Está chovendo!" Leve um guarda-chuva!"][17]{:style="max-width:50%" }
+![Notificação por push com a mensagem "Está chovendo!" Pegue um guarda-chuva!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
 Por padrão, o conteúdo conectado definirá um `Content-Type` cabeçalho em uma solicitação HTTP GET que ele faz para `application/json` com `Accept: */*`. Se precisar de outro tipo de conteúdo, especifique-o explicitamente adicionando `:content_type your/content-type` à tag. A Braze definirá então tanto o cabeçalho Content-Type quanto o cabeçalho Accept para o tipo que você especificar.
 
@@ -184,5 +184,3 @@ Esta chave só será adicionada automaticamente ao objeto de conteúdo conectado
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Exemplo de Uso de Push de Conteúdo Conectado"
-Daqui a [46]: http://www.json.org

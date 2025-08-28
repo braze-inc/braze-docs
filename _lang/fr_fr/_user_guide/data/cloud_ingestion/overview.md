@@ -359,7 +359,7 @@ La colonne `UPDATED_AT` devrait être en UTC pour éviter les problèmes liés a
 
 ### Assurez-vous que l'heure de `UPDATED_AT` n'est pas la même que celle de votre synchronisation.
 
-Votre synchronisation CDI peut contenir des données en double si l'un des champs `UPDATED_AT` se trouve exactement à la même heure que votre synchronisation précédente. En effet, l'IDC choisira une "limite inclusive" lorsqu'il repérera une ligne qui se situe à la même heure que la synchronisation précédente, et rendra les lignes viables à synchroniser. Le CDI réintéressera ces lignes et créera des données en double. 
+Votre synchronisation CDI peut contenir des données en double si l'un des champs `UPDATED_AT` se trouve exactement à la même heure que votre synchronisation précédente. En effet, CDI choisira une "limite inclusive" lorsqu'il identifiera une ligne qui se situe à la même heure que la synchronisation précédente, et fera en sorte que les lignes puissent se synchroniser. CDI ré-ingère ces lignes et crée des données en double.
 
 ### Séparer la colonne `EXTERNAL_ID` de la colonne `PAYLOAD` 
 
@@ -386,7 +386,7 @@ Comme la demande 1 survient en premier, les attributs de l'utilisateur sont mis 
 - Taille : "Grand"
 
 Cependant, lorsque la demande 2 se produit, Braze commence par les valeurs d'attribut originales ("Vert" et "Grand"), puis met à jour les attributs de l'utilisateur de la manière suivante :
-- Couleur : "Rouge"
+- Couleur : "Vert"
 - Taille : "Moyen"
 
 Lorsque les demandes sont terminées, la demande 2 écrase la mise à jour de la demande 1\. Il est donc préférable d'échelonner vos mises à jour afin d'éviter que les demandes ne soient écrasées.
@@ -617,12 +617,12 @@ Nous vous recommandons d'effectuer les requêtes dans un délai d'une heure afin
 
 ## Limites du produit
 
-| Limitations            | Description                                                                                                                                                                        |
+| Limitation            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nombre d’intégrations | Le nombre d’intégrations que vous pouvez définir n’est pas limité. Cependant, vous ne pourrez définir qu’une seule intégration par table ou par affichage.                                             |
-| Nombre de lignes         | Le nombre de lignes que vous pouvez synchroniser n’est pas limité. Chaque ligne ne sera synchronisée qu’une fois selon la colonne `UPDATED`.                                                            |
+| Nombre de lignes         | Par défaut, chaque exécution peut synchroniser jusqu'à 500 millions de lignes. Toute synchronisation comportant plus de 500 millions de nouvelles lignes sera interrompue. Si vous avez besoin d'une limite plus élevée, contactez votre gestionnaire satisfaction client Braze ou l'assistance Braze. |
 | Attributs par rangée     | Chaque ligne doit contenir un seul ID d'utilisateur et un objet JSON comportant jusqu'à 250 attributs. Chaque clé de l'objet JSON compte pour un attribut (c'est-à-dire qu'un tableau d'objets compte pour un attribut). |
-| Taille de la charge utile           | Chaque ligne peut contenir une charge utile allant jusqu'à 1 Mo. Les charges utiles supérieures à 1 Mo seront rejetées et l'erreur « La charge utile était supérieure à 1 Mo » sera consignée dans le journal de synchronisation avec l'ID externe associé et la charge utile tronquée. |
+| Taille de la charge utile           | Chaque ligne peut contenir une charge utile allant jusqu'à 1 Mo. Les données utiles supérieures à 1 Mo seront rejetées et l'erreur "Payload was greater than 1MB" sera consignée dans le journal de synchronisation avec l'ID externe associé et les données utiles tronquées. |
 | Type de données              | Vous pouvez synchroniser les attributs utilisateurs via l’ingestion de données cloud.                                                                                                  |
 | Région Braze           | Ce produit est disponible dans toutes les régions Braze. Toute région Braze peut se connecter à n'importe quelle région de données source.                                                                              |
 | Région source       | Braze se connectera à votre entrepôt de données ou à votre environnement Cloud dans n'importe quelle région ou chez n’importe quel fournisseur Cloud.                                                                                        |

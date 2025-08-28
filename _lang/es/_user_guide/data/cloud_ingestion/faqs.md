@@ -41,7 +41,7 @@ Test Connection se ejecuta en su almacén de datos, por lo que aumentar la capac
 
 ### Error al conectar con la instancia Snowflake: Solicitud entrante con IP no autorizada para acceder a Snowflake
 
-Intenta añadir las IPs oficiales de Braze a tu lista de IPs permitidas. veloperPara más información, consulta [Integraciones de almacenes de datos]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), o permite las IP correspondientes:
+Intenta añadir las IPs oficiales de Braze a tu lista de IPs permitidas. Para más información, consulta [Integraciones de almacenes de datos]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), o permite las IP correspondientes:
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
