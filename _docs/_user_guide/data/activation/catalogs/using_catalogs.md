@@ -74,7 +74,7 @@ This returns as the following:
 ```Get the ultimate trio Tales, Teslagrad, and Acaratus today!```
 
 {% alert tip %}
-Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!
+Check out [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to create groups of data for more personalized messaging!
 {% endalert %}
 
 ### Using Liquid `if` statements

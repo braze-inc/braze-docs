@@ -2689,7 +2689,7 @@ validurls['/docs/auto_advance/'] = '/docs/user_guide/engagement_tools/canvas/man
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases';
 
 validurls['/docs/user_guide/data/data_points'] = '/docs/user_guide/data/infrastructure/data_points';
-validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/data/activation/report_metrics';
+validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics/';
 validurls['/docs/user_guide/data/cloud_ingestion'] = '/docs/user_guide/data/unification/cloud_ingestion';
 validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/overview';
 validurls['/docs/user_guide/data/cloud_ingestion/connected_sources'] = '/docs/user_guide/data/unification/cloud_ingestion/connected_sources';
@@ -2762,5 +2762,13 @@ validurls['/docs/partners/additional_channels_and_extensions/extensions/landing_
 validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/developer_guide/banners/placements/';
 
 validurls['/docs/partners/data_and_analytics/business_intelligence/sisu_data/'] = '/docs/partners/';
+
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs/catalog/';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/catalog';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/using_catalogs';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/selections'] = '/docs/user_guide/data/activation/catalogs/selections';
+validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/catalog/';
 
 // validurls['OLD'] = 'NEW';

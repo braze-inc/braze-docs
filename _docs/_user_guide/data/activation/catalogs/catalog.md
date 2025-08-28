@@ -149,7 +149,7 @@ Next, we'll name this catalog "games_catalog" and select the **Process Catalog**
 
 Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
-After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/).
+After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/).
 
 ## Managing catalogs through API
 

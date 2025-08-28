@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Reports Overview
     link: /docs/user_guide/analytics/reporting/reports_overview/
     image: /assets/img/braze_icons/list.svg
+  - name: Report Metrics Glossary
+    link: /docs/user_guide/analytics/reporting/report_metrics/
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Segment Data
     link: /docs/viewing_and_understanding_segment_data/
     image: /assets/img/braze_icons/pie-chart-01.svg
