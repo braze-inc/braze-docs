@@ -201,7 +201,6 @@ Avoid relying solely on green and red for “good” and “bad” (or, more oft
 
 ### Condescending Language
 When writing instructions or detailing steps for a reader to follow, avoid using words or phrases such as:
-
 - simple, like “Creating a campaign is simple.”
 - simply, like “...simply add X into Y”
 - just, like “...just install X”
@@ -247,237 +246,123 @@ When it comes to job titles, we veer off-course from AP Style. In all cases, we 
 #### Job Title with Company Name
 Capitalize formal job titles when they come before or after a person’s name. We format them three ways:
 
-[Formal Title] at [Company Name] + [Full Name]
-Creative Director at PantsLabyrinth David Bowie
+- ✅ Correct: [Formal Title] at [Company Name] + [Full Name]
+- ✅ Correct: Creative Director at PantsLabyrinth David Bowie
+- ❌ Incorrect: creative director at PantsLabyrinth David Bowie
 
-Do
+- ✅ Correct: [Full Name] + comma + [Formal Title] at [Company Name] 
+- ✅ Correct: David Bowie, Creative Director at PantsLabyrinth
 
+- ❌ Incorrect: David Bowie, creative director at PantsLabyrinth
 
-creative director at PantsLabyrinth David Bowie
+- ✅ Correct: [Company Name] + [Formal Title] + [Full Name] 
+- ✅ Correct: PantsLabyrinth Creative Director David Bowie
+- ❌ Incorrect: PantsLabyrinth creative director David Bowie
 
-Don’t
-
-
-[Full Name] + comma + [Formal Title] at [Company Name] 
-David Bowie, Creative Director at PantsLabyrinth
-
-Do
-
-
-David Bowie, creative director at PantsLabyrinth
-
-Don’t
-
-
-[Company Name] + [Formal Title] + [Full Name] 
-PantsLabyrinth Creative Director David Bowie
-
-Do
-
-
-PantsLabyrinth creative director David Bowie
-
-Don’t
-
-
-Job Title without Company Name
+#### Job Title without Company Name
 When referring to a specific person by formal title, capitalize their formal title and name like so:
 
-[Formal Title] + [Full Name]
-CEO Robin Fenty
+- ✅ Correct: [Formal Title] + [Full Name]
+- ✅ Correct: CEO Robin Fenty
+- ❌ Incorrect: Chief executive officer Robyn Fenty
 
-Do
+- ✅ Correct: [Formal Title] + comma + [Full Name]
+- ✅ Correct: SVP, Product, Robin Fenty
+- ❌ Incorrect: senior vice president, product, Robyn Fenty
 
-
-Chief executive officer Robyn Fenty
-
-Don’t
-
-
-[Formal Title] + comma + [Full Name]
-
-SVP, Product, Robin Fenty
-
-Do
-
-
-senior vice president, product, Robyn Fenty
-
-Don’t
-
-
-Other
+#### Other
 Formal titles are “at [COMPANY].” Founders and Cofounders are “of [COMPANY].” Formal titles and occupations on their own do not need to be capitalized.
 
+- ✅ Correct: I wrote to their chief data officer.
+- ✅ Correct: We spoke with several business intelligence analysts.
+- ✅ Correct: Contact your Braze account manager.
+- ❌ Incorrect: I wrote to their Chief Data Officer
+- ❌ Incorrect: We spoke with several Business Intelligence Analysts.
+- ❌ Incorrect: Contact your Braze Account Manager.
 
-I wrote to their chief data officer.
-
-We spoke with several business intelligence analysts.
-
-Contact your Braze account manager.
-
-
-Do
-
-
-
-I wrote to their Chief Data Officer
-
-We spoke with several Business Intelligence Analysts.
-
-Contact your Braze Account Manager.
-
-
-Don’t
-
-
-Adhere to gender-neutral job titles unless gender has been already established.
-
-salesperson
-
-Do
-
-
-salesman/saleswoman
-
-Don’t
-
+- ✅ Correct: Adhere to gender-neutral job titles unless gender has been already established.
+- ✅ Correct: salesperson
+- ❌ Incorrect: salesman/saleswoman
 
 Abbreviate titles where appropriate, such as VP or SVP, if this is how the person refers to their title. In the event of limited text space, standard abbreviations (VP, SVP, Sr., or Jr.) are acceptable.
 
-Gender
-Don’t make assumptions about people’s gender. Ask subjects who will appear in your content how they self-identify.
+### Gender
+- Don’t make assumptions about people’s gender. Ask subjects who will appear in your content how they self-identify.
+- When referring to members of the community, “queer” is acceptable. “Gay” is not. You may refer to a group of people as “LGBTQ.” Do not use this for describing an individual.
+- When addressing groups of people in your content, avoid gendering your audience (example: “OK, ladies!”). Use gender-neutral expressions instead (example: “Let’s dig in, everyone!”).
+- “They/them/theirs” is always acceptable to use as a single or plural pronoun in all of our content.
 
-
-When referring to members of the community, “queer” is acceptable. “Gay” is not. You may refer to a group of people as “LGBTQ.” Do not use this for describing an individual.
-
-
-When addressing groups of people in your content, avoid gendering your audience (example: “OK, ladies!”). Use gender-neutral expressions instead (example: “Let’s dig in, everyone!”).
-
-
-“They/them/theirs” is always acceptable to use as a single or plural pronoun in all of our content.
-
-Mental Health
+### Mental Health
 Mental health and illness cover a broad range of conditions. Unless it’s relevant to what you are writing, don’t refer to a person’s mental health. Avoid stigmatizing words and phrases. Don’t use medical terms colloquially (example: “The depressing state of things...”).
 
-Names
+### Names
 The first time you mention a person, use their first and full name. From there on, use either their first or last name when referring to them.
 
-Pronouns
+### Pronouns
 For information on appropriate use of pronouns, refer to the Language and Grammar section on Pronouns.
 
-Race, Religion, and Ethnicity
+### Race, Religion, and Ethnicity
 Don’t refer to a person’s race, religion, or ethnicity unless it’s relevant to what you are writing. In writing where race or ethnicity factors in, ask your subject how they self-identify.
-
 
 Don’t use a hyphen to indicate dual heritage or religion. Instead, use a space.
 
-Muslim American
-Cuban American
-
-Do
-
-
-Muslim-American
-Cuban-american
-
-Don’t
-
+- ✅ Correct: Muslim American
+- ✅ Correct: Cuban American
+- ❌ Incorrect: Muslim-American
+- ❌ Incorrect: Cuban-american
 
 Capitalize the proper names of ethnicities, nationalities, peoples, and tribes.
 
-Cambodian
-Black Americans
-
-Do
-
-
-cambodian
-black Americans
-
-Don’t
-
+- ✅ Correct: Cambodian
+- ✅ Correct: Black Americans
+- ❌ Incorrect: cambodian
+- ❌ Incorrect: black Americans
 
 Capitalize the names of religions or religious terms.
 
-Bahá’í Faith
-Buddhist
-
-Do
-
-
-bahá’í faith
-buddhist
-
-Don’t
-
+- ✅ Correct: Bahá’í Faith
+- ✅ Correct: Buddhist
+- ❌ Incorrect: bahá’í faith
+- ❌ Incorrect: buddhist
 
 Don’t co-opt words or turns of phrases that belong to African American Vernacular English (on fleek, bae, lit, woke).
 
-
 Don’t co-opt words or turns of phrases specific to indigenous peoples (example: spirit animal, powwow).
 
-Third-Party Sources
+### Third-Party Sources
 Never copy content from other sites, as it may violate copyright. Content can be both text and images.
-
 
 Instead of copying or quoting third-party sites, paraphrase the content or provide a link to the third-party site for more information.  For more information, refer to Links to Other Sites.
 
 
-LANGUAGE AND GRAMMAR
+# LANGUAGE AND GRAMMAR
 Keeping in line with agreed-upon grammar and mechanics helps us keep our writing clear and consistent. This section covers what we try to follow in our technical documentation unless specified otherwise.
 
-Abbreviations
+## Abbreviations
 Abbreviations, such as acronyms, initialisms, and shortened words, can hurt our clarity, voice, and SEO.
-
 
 Although some abbreviations are widely understood, others aren't well known or are familiar only to a specific group of customers. Use your best judgment, and as a general rule, it’s OK not to spell out an abbreviation if it’s listed in the American Heritage Dictionary.
 
-
 If an abbreviation isn’t well known, spell it out on the first mention, followed by the abbreviation in parentheses. For all subsequent mentions of the term, use the abbreviation.
 
-
-Top-level domain (TLD)
-
-Universally unique identifier (UUID)
-
- 
-
-Do
-
-Spell out uncommon abbreviations at the first mention.
-
-
-
-Portable Document Format (PDF)
-
-Universal Serial Bus (USB)
-
- 
-
-Don’t
-
-Spell out common abbreviations.
+- ✅ Do: Spell out uncommon abbreviations at the first mention.
+- ✅ Correct: Top-level domain (TLD)
+- ✅ Correct: Universally unique identifier (UUID)
+- ❌ Don't: Spell out common abbreviations.
+- ❌ Incorrect: Portable Document Format (PDF)
+- ❌ Incorrect: Universal Serial Bus (USB)
 
 Treat abbreviations as regular words when making them plural, and don't add an apostrophe—for example, APIs and SDKs. The same goes for which article (a or an) you use—look at how you pronounce the abbreviation. When an abbreviation begins with a vowel sound, use “an”; for consonant sounds, use “a”.
 
+- ✅ Correct: an ISP
+- ✅ Correct: a DLL
+- ✅ Correct: an HTML site
+- ✅ Correct: a CSV file
 
-an ISP
-
-a DLL
-
-an HTML site
-
-a CSV file
-
- 
-
-Do
-
-Use articles depending on how the abbreviation is pronounced, not spelled.
+Do use articles depending on how the abbreviation is pronounced, not spelled.
 
 
-Active Voice
+## Active Voice
 We use the active voice at Braze when possible. Active voice is our gold standard. Avoid passive voice, in which it can be difficult to determine who or what is performing a particular action.
 
 
