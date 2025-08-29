@@ -85,11 +85,20 @@ The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused
 Larger files will take a few minutes to import. While you wait, you can leave the page and work on something while the import is in progress. When the import finishes, the status will change to **Complete** in the table.
 {% endalert %}
 
-#### Updating a promotion code list
+## Updating a promotion code list
 
-To update a list, select one of your existing lists. You can change the name, description, list expiration, and threshold alerts. You can also add more codes to the list by uploading new files and selecting **Update List**.
+To update a list, select one of your existing lists. You can change the name, description, list expiration, and threshold alerts. You can also add more codes to the list by uploading new files and selecting **Update List**. All codes in the list will have the same expiration, regardless of the date of import.
 
-All codes in the list will have the same expiration, regardless of the date of import.
+{% alert important %}
+Promotion codes can't be deleted.
+{% endalert %}
+
+### Modifying incorrect promotion code list 
+
+If you've uploaded a CSV file with the incorrect promotion codes and selected **Save list**, you can resolve this by either method:
+
+- Deprecate the entire list: Stop using the current promotion code list in any campaigns, Canvases, or templates. Then, upload the CSV file with the correct codes and use them in your messaging.
+- Use the incorrect codes: Create a campaign that sends promotion codes from the incorrect promotion code list to a placeholder until all of the incorrect codes are used. Then, upload the correct promotion codes to the same list.
 
 ## Using promotion codes
 
