@@ -130,7 +130,7 @@ Promotion codes in in-app messages will be deducted and used only when a user tr
 
 Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
 
-## Viewing code usage
+## Viewing promotion code usage
 
 You can find the remaining code count in the **Remaining** column of the promotion code list on the **Promotion Codes** page.
 
