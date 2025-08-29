@@ -365,173 +365,91 @@ Do use articles depending on how the abbreviation is pronounced, not spelled.
 ## Active Voice
 We use the active voice at Braze when possible. Active voice is our gold standard. Avoid passive voice, in which it can be difficult to determine who or what is performing a particular action.
 
-
 To see if your sentence is in a passive voice, insert “by somebody” after the verb. If the sentence makes sense—it’s most likely in the passive voice.
 
+- ✅ Do: Use active voice.
+- ✅ Correct: Braze connects consumers to the brands they love.
+- ✅ Correct: Braze requires employees to keep their addresses up to date.
+- ✅ Correct: Company administrators can configure authentication requirements for signing into Braze.
+- ❌ Don't: Use passive voice, if possible.
+- ❌ Incorrect: Consumers are connected to the brands they love.
+- ❌ Incorrect: Employees are required to keep their addresses up to date.
+- ❌ Incorrect: Authentication requirements for signing into Braze can be configured by company administrators.
 
-Braze connects consumers to the brands they love.
-
-Braze requires employees to keep their addresses up to date.
-
-Company administrators can configure authentication requirements for signing into Braze.
-
- 
-
-Do
-
-Use active voice.
-
-
-
-Consumers are connected to the brands they love.
-
-Employees are required to keep their addresses up to date.
-
-Authentication requirements for signing into Braze can be configured by company administrators.
-
- 
-
-Don’t
-
-Use passive voice, if possible.
-
-Exceptions
+### Exceptions
 It’s OK to use passive voice in the following cases:
 
-To de-emphasize a subject, generally to avoid blaming the reader:
-Do: Two errors were found in the email.
-Don’t: You created two errors in the email.
-If knowing who is responsible for the action isn’t important:
-Do: This article was last updated in December 2020.
-Articles
+- To de-emphasize a subject, generally to avoid blaming the reader:
+   - Do: Two errors were found in the email.
+   - Don’t: You created two errors in the email.
+- If knowing who is responsible for the action isn’t important:
+   - Do: This article was last updated in December 2020.
+
+## Articles
 Use the articles “a”, “an”, and “the” to make your writing clear and to aid in translation. Use “the” before a specific singular or plural noun, and “a” or “an” before a non-specific singular noun.
 
 
 To determine if you should use “a” or “an”, look at the pronunciation of the word that follows it. Use “a” before a consonant sound, and use “an” before a vowel sound. The same guidelines apply to Abbreviations.
 
-
-an hour
-
-a minute
-
-an FAQ article
-
-a LAB course
-
- 
-
-Do
-
-Use articles depending on how the anteceding word is pronounced.
+- ✅ Do: Use articles depending on how the anteceding word is pronounced.
+- ✅ Correct: an hour
+- ✅ Correct: a minute
+- ✅ Correct: an FAQ article
+- ✅ Correct: a LAB course
 
 
-Pronouns
-Personal Pronouns
+## Pronouns
+### Personal Pronouns
 Use second-person pronouns (you) whenever possible.
-
 
 Don’t refer to Braze customers as the “user” in external-facing writing, instead speak directly to the reader using “you”. To refer to our customers’ customers, use “your consumers” or, if the situation relates to user statistics, “your users”.
 
 
 Avoid first-person pronouns (I, we, us, our) except in the following cases:
 
-Entries in FAQs. For example, “How do I reset my password?”.
-Using “we” to refer to Braze as an organization.
-If it may be unclear who “we” is referring to, first refer to Braze by name, then use “we” in subsequent mentions.
-Gender-Neutral Pronouns
+- Entries in FAQs. For example, “How do I reset my password?”.
+- Using “we” to refer to Braze as an organization.
+   - If it may be unclear who “we” is referring to, first refer to Braze by name, then use “we” in subsequent mentions.
+
+### Gender-Neutral Pronouns
 Use the pronouns your subjects use. If there is any uncertainty, use “they,” “them,” and “their” for singular pronouns. Don’t use “he/she” or “(s)he” as an alternative to the singular “they”.  
 
 
 Only use gendered pronouns (he/she, him/her, his/hers) if the person you’re referring to is actually that gender.  
 
-Ambiguous Pronouns
+### Ambiguous Pronouns
 Pronouns substitute for nouns. The word a pronoun refers to is called its antecedent. When writing instructions or learning material, be sure to make clear references between a pronoun and its antecedent. This may require repeating subjects to make the meaning clear.
 
+- ✅ Do: Make sure a pronoun clearly references its antecedent.
+- ✅ Correct: If you type text in the field, the text doesn’t change.
+- ✅ Correct: She told Sarah that Sarah’s answer was incorrect.
+- ✅ Correct: You can’t edit an archived campaign. Unarchive a campaign to edit it.
+- ❌ Don't: Use ambiguous pronoun references.
+- ❌ Incorrect: If you type text in the field, it doesn’t change.
+- ❌ Incorrect: She told Sarah that her answer was incorrect.
+- ❌ Incorrect: You can’t edit an archived campaign. Unarchive it to edit it.
 
-If you type text in the field, the text doesn’t change.
-
-She told Sarah that Sarah’s answer was incorrect.
-
-You can’t edit an archived campaign. Unarchive a campaign to edit it.
-
- 
-
-Do
-
-Make sure a pronoun clearly references its antecedent.
-
-
-If you type text in the field, it doesn’t change.
-
-She told Sarah that her answer was incorrect.
-
-You can’t edit an archived campaign. Unarchive it to edit it.
-
-
-Don’t
-
-Use ambiguous pronoun references.
-
-Optional Pronouns
+### Optional Pronouns
 To add additional clarity to your writing and to aid in localization, use pronouns such as “that”, “which”, and “who”.
 
+- ✅ Do: Use “that”, “which”, and “who” to add additional clarity.
+- ✅ Correct: Right-click the link that you want to open.
+- ✅ Correct: From here, you can choose which Tinyclues cohort that you want to include.
+- ❌ Incorrect: Right-click the link you want to open.
+- ❌ Incorrect: From here, you can choose a Tinyclues cohort you want to include.
 
-Right-click the link that you want to open.
-
-From here, you can choose which Tinyclues cohort that you want to include.
-
- 
-
-Do
-
-Use “that”, “which”, and “who” to add additional clarity.
-
-
-Right-click the link you want to open.
-
-From here, you can choose a Tinyclues cohort you want to include.
-
-
-Don’t
-
-
-Capitalization
+## Capitalization
 Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names (unless otherwise specified, see Glossary).
 
+- ✅ Do: Use lowercase for writing out website URLs and email addresses.
+- ✅ Correct: www.braze.com/docs 
+- ✅ Correct: sample@email.com
+- ❌ Incorrect: www.Braze.com/docs 
+- ❌ Incorrect: SAMPLE@EMAIL.COM
 
-www.braze.com/docs 
-
-sample@email.com
-
- 
-
-Do
-
-Use lowercase for writing out website URLs and email addresses.
-
-
-www.Braze.com/docs 
-
-SAMPLE@EMAIL.COM
-
-
-Don’t
-
-
-
-north, south, east, west
-
-
-Do
-
-Use lowercase for directionals.
-
-
-North, South, East, West
-
-
-Don’t
-
+- ✅ Do: Use lowercase for directionals.
+- ✅ Correct: north, south, east, west
+- ❌ Incorrect: North, South, East, West
 
 
 the Northwest
