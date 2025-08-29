@@ -11,7 +11,7 @@ page_order: 1
 
 ## About AI item recommendations
 
-Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
+Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
 
 {% alert tip %}
 [AI Personalized recommendations](#recommendation-types) work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
@@ -23,7 +23,7 @@ Use AI item recommendations to calculate the most popular products or create per
 
 Before you start, you'll need to complete the following:
 
-- You must have at least one [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) to use any of the recommendation types described below.
+- You must have at least one [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Step 1: Create a new recommendation
@@ -67,11 +67,11 @@ For example, when using the pro version of AI item recommendations, if a user pu
 
 #### Step 3.2: Select a catalog
 
-If not already populated, select the [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) that this recommendation will pull items from.
+If not already populated, select the [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) that this recommendation will pull items from.
 
 #### Step 3.3: Add a selection (optional)
 
-If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
+If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
 ![An example of the "in-stock" selection selected for the recommendation.]({% image_buster /assets/img/item_recs_2-2.png %})
 

@@ -52,17 +52,13 @@ For example, in the following conditional Liquid, codes from both lists (`vip-de
 
 Promotion codes are currently supported for email, mobile push, web push, Content Cards, webhook, SMS, and WhatsApp. Braze Transactional Email campaigns and in-app messages do not currently support promotion codes.
 
-### Will test sends and seed sends use up my promotion codes?
+### Do test and seed sends count towards usage?
 
 By default, test sends and seed group email sends will use promotion codes per user, per test send. However, you can reach out to your Braze account manager to update this behavior to not use promotion codes during testing.
 
-### How do promotion codes work in a multichannel campaign or Canvas step?
+### Can I use multiple Liquid snippets to reference the same promotion code list in one message?
 
-Promotion codes are deducted before the message is sent. If the messaging channels in the campaign or Canvas send, this may cause the promotion code to be used for reasons including Quiet Hours, rate limits, frequency capping, exit criteria, and more. However, if any of the message channels are sent, one promotion code will be used.
-
-### What happens if I have multiple Liquid snippets that reference the same promotion code list in my message?
-
-The same promotion code will be templated for all instances of the Liquid snippet in your message.
+Yes. Braze will apply the same promotion code across all instances of that snippet in the message, ensuring the user only receives one unique code.
 
 ### What happens when a promotion code list is expired or empty?
 
@@ -81,9 +77,9 @@ If you've uploaded a CSV file with the incorrect promotion codes and selected **
 
 ### How do I save a promotion code to a user's profile so it can be used in subsequent messages?
 
-To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
+Yes. You can resolve this by deprecating the entire list or using a placeholder to delete the list. For more information, see [Updating promotion codes](#update).
 
-First, select the following for each field in the User Update step:
+### Can I save a promotion code to a user's profile for future messages?
 
 - **Attribute Name:** Promo Code
 - **Action:** Update
