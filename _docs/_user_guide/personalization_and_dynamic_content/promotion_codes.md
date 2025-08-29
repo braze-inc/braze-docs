@@ -13,9 +13,9 @@ description: "This reference article covers how to create promotion code lists a
 
 ## How it works
 
-Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. You can create messages that pull from your list of promotion codes. 
+Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a strong emphasis on purchases. You can create messages that pull from your list of promotion codes. 
 
-Each promotion code has an expiration date of up to six months and can be deleted before expiry by contacting [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can store and manage up to 20 million codes per list. By managing and analyzing the performance of your promotion codes, you can make targeted decisions for your promotional strategies and messaging.
+Each promotion code has an expiration date of up to six months. You can store and manage up to 20 million codes per list. By managing and analyzing the performance of your promotion codes, you can make targeted decisions for your promotional strategies and messaging.
 
 {% alert important %}
 Promotion codes can't be sent in in-app messages in Canvas. If you're participating in the [early access](#promotion-codes-iam-campaigns), promotion codes can be sent in in-app message campaigns.
@@ -171,7 +171,7 @@ For the following example, both promotion code lists `vip-deal` and `regular-dea
 Braze recommends uploading more promotion codes than what you estimate will be used. If a promotion code list expires or runs out of promotion codes, the subsequent messages will be aborted.
 
 {% alert tip %}
-**Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason, the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk, and your promotion code is the coupon. We can't get it back after it's been pulled from the stack of promotion codes, regardless of the webhook result.
+**Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason, the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk, and your promotion code is the coupon. We cannot retrieve it after it has been pulled from the stack of promotion codes, regardless of the webhook result.
 {% endalert %}
 
 ## Frequently asked questions
@@ -199,6 +199,13 @@ Expired codes are deleted after six months.
 If the message should have contained a promotion code from an empty or expired list, the message will be canceled. 
 
 If the message contains Liquid logic that conditionally inserts a promotion code, the message will only be canceled if it should have contained a promotion code. If the message shouldn't have contained a promotion code, the message will send normally.
+
+### I uploaded and saved the wrong promotion codes. How can I update my promotion codes?
+
+If you've uploaded a CSV file with the incorrect promotion codes and selected **Save list**, you can resolve this by either method:
+
+- Deprecate the entire list: Stop using the current promotion code list in any campaigns, Canvases, or templates. Then, upload the CSV file with the correct codes and use them in your messaging.
+- Use the incorrect codes: Create a campaign that sends promotion codes from the incorrect promotion code list to a placeholder until all of the incorrect codes are used. Then, upload the correct promotion codes to the same list.
 
 ### How do I save a promotion code to a user's profile so it can be used in subsequent messages?
 
