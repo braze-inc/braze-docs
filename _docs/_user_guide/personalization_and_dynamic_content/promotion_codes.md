@@ -116,21 +116,7 @@ When a user qualifies for a code across multiple channels, they receive the same
 If no promotion codes are available, test or live messages that rely on codes will not send.
 {% endalert %}
 
-### Using promotion codes in test messages
-
-Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
-
-## Determining how many codes have been used
-
-You can find the remaining code count in the **Remaining** column of the promotion code list on the **Promotion Codes** page.
-
-![An example of a promotion code with unused codes.]({% image_buster /assets/img/promocodes/promocode11.png %})
-
-This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
-
-![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
-
-### Using promotion codes in in-app message campaigns {#promotion-codes-iam-campaigns}
+### Using promotion codes with in-app message campaigns {#promotion-codes-iam-campaigns}
 
 {% alert important %}
 Using promotion codes in in-app message campaigns is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
@@ -139,6 +125,20 @@ Using promotion codes in in-app message campaigns is currently in early access. 
 After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. 
 
 Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
+
+### Using promotion codes in test messages
+
+Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
+
+## Viewing code usage
+
+You can find the remaining code count in the **Remaining** column of the promotion code list on the **Promotion Codes** page.
+
+![An example of a promotion code with unused codes.]({% image_buster /assets/img/promocodes/promocode11.png %})
+
+This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
+
+![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
 
 ## Multichannel and single-channel sends
 
@@ -151,9 +151,9 @@ If a user has two promotion code lists referenced in one message that is split b
 
 If a user enters a new Canvas step or re-enters a Canvas, and the promotion code Liquid snippet is applied again for a message to that user, a new promotion code will be used.
 
-### Use case
+### Example
 
-For the following example, both promotion code lists `vip-deal` and `regular-deal` will be deducted. Here's the Liquid:
+In the following example, both promotion code lists `vip-deal` and `regular-deal` will be deducted. Here's the Liquid:
 
 {% raw %}
 ```
