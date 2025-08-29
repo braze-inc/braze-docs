@@ -2,12 +2,12 @@
 nav_title: Managing codes
 article_title: Managing promotion codes
 page_order: 0.1
-description: "This reference article covers how to create promotion code lists and add them to your campaigns and Canvases."
+description: "Learn how to create, update, and use promotion codes in your campaigns and Canvases."
 ---
 
 # Managing promotion codes
 
-> Learn how to...
+> Learn how to create, update, and use promotion codes in your campaigns and Canvases.
 
 ## Creating a promotion code list {#create}
 

@@ -4,12 +4,12 @@ article_title: Promotion Codes
 page_order: 5
 toc_headers: h2
 alias: "/promotion_codes/"
-description: "This reference article covers how to create promotion code lists and add them to your campaigns and Canvases."
+description: "Learn about promotion code lists, so you can add them to your campaigns and Canvases."
 ---
 
 # Promotion codes
 
-> This page covers how to create promotion code lists and add them to your campaigns and Canvases.
+> Learn about promotion code lists, so you can add them to your campaigns and Canvases.
 
 ## About promotion codes
 
@@ -44,9 +44,13 @@ For example, in the following conditional Liquid, codes from both lists (`vip-de
 
 ## Next steps
 
+Looking for next steps? Start here:
 
+- [Creating a promotion code list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#create)
+- [Using promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#using-promotion-codes)
+- [Viewing promotion code usage]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#viewing-promotion-code-usage)
 
-## Frequently asked questions (FAQ) {#faq}
+## Frequently asked questions
 
 ### Which messaging channels can I use with promotion codes?
 
@@ -68,21 +72,10 @@ If the message should have contained a promotion code from an empty or expired l
 
 If the message contains Liquid logic that conditionally inserts a promotion code, the message will only be canceled if it should have contained a promotion code. If the message shouldn't have contained a promotion code, the message will send normally.
 
-### I uploaded and saved the wrong promotion codes. How can I update my promotion codes?
+### If I uploaded the wrong promotion codes, can I update them?
 
-If you've uploaded a CSV file with the incorrect promotion codes and selected **Save list**, you can resolve this by either method:
-
-- Deprecate the entire list: Stop using the current promotion code list in any campaigns, Canvases, or templates. Then, upload the CSV file with the correct codes and use them in your messaging.
-- Use the incorrect codes: Create a campaign that sends promotion codes from the incorrect promotion code list to a placeholder until all of the incorrect codes are used. Then, upload the correct promotion codes to the same list.
-
-### How do I save a promotion code to a user's profile so it can be used in subsequent messages?
-
-Yes. You can resolve this by deprecating the entire list or using a placeholder to delete the list. For more information, see [Updating promotion codes](#update).
+Yes. You can resolve this by deprecating the entire list or using a placeholder to delete the list. For more information, see [Updating promotion codes]({[site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#update).
 
 ### Can I save a promotion code to a user's profile for future messages?
 
-- **Attribute Name:** Promo Code
-- **Action:** Update
-- **Key Value:** The promotion code's Liquid code snippet, such as {% raw %}`{% promotion('spring25') %}`{% endraw %}
-
-Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) to a message. The discount code will be templated in.
+Yes. You can save promotion codes to a user's profile through a User Update step. For more information, see [Saving promotion codes to user profiles]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#save-to-profile).
