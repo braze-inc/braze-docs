@@ -5,11 +5,13 @@ page_order: 1.5
 description: "This reference article covers how to use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
 
-# Using catalogs in a message
+# Using catalogs
 
 > After creating a catalog, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). You can use catalogs in all of your messaging channels, including anywhere in the drag-and-drop editor where Liquid is supported.
 
-## Step 1: Add personalization type {#step-one-personalization}
+## Using catalogs in a message
+
+### Step 1: Add personalization type {#step-one-personalization}
 
 In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
 
@@ -23,7 +25,7 @@ We can immediately see the following Liquid preview:
 ```
 {% endraw %}
 
-## Step 2: Select catalog items
+### Step 2: Select catalog items
 
 Next, it's time to add your catalog items! Using the dropdown, select the catalog items and the information to display. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
 
