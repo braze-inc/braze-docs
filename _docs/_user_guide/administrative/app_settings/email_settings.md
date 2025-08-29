@@ -151,7 +151,7 @@ Displaying the header is ultimately determined by the mailbox provider. To check
 1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
 2. Search for "List-Unsubscribe".
 
-If the header is in the raw version of the email but is not displayed, the mailbox provider has determined not to show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
+If the header is in the raw version of the email but is not displayed, the mailbox provider has determined not to show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the mailbox provider, the more likely the list-unsubscribe header will appear.
 
 ### Email unsubscribe header in workspaces
 
