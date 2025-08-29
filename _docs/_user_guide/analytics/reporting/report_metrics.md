@@ -2,7 +2,7 @@
 nav_title: Report metrics glossary
 article_title: Report Metrics Glossary
 layout: report_metrics
-page_order: 1
+page_order: 0.5
 excerpt_separator: ""
 page_type: glossary
 description: "This glossary defines terms you'll find in your reports in your Braze account."
