@@ -21,7 +21,7 @@ Each promotion code has an expiration date of up to six months. You can store an
 Promotion codes can't be sent in in-app messages in Canvas. If you're participating in the [early access](#promotion-codes-iam-campaigns), promotion codes can be sent in in-app message campaigns.
 {% endalert %}
 
-## Creating a promotion code list
+## Creating a promotion code list {#create}
 
 ### Step 1: Go to the Promotion Code section
 
@@ -91,35 +91,32 @@ To update a list, select one of your existing lists. You can change the name, de
 
 All codes in the list will have the same expiration, regardless of the date of import.
 
-### Step 5: Use promotion codes
+## Using promotion codes
 
-To send promotion codes in messages:
-
-1. Select **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
+To send a promotion code in a message, select **Copy Snippet** next to the promotion code list [you previously created](#create).
 
 ![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
-{:start="2"}
-2. From there, you can paste this code into a message within the dashboard.
+Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code will be marked as sent, ensuring no other message sends the same code.
 
 ![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
-Using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
+### Reusing codes across canvas steps
 
-#### Sending promotion codes to users
+When a code snippet is used in a campaign or Canvas with multichannel messages, each user receives a unique code. In a Canvas with multiple steps that reference promotion codes, a user gets a new code for every step they enter.
 
-When a code snippet is used in a campaign or Canvas with multichannel messages, each user always receives a unique code. If a Canvas has multiple different steps that reference a promotion code, a user will always receive a new code for each step that they enter. If you want to assign one promotion code in a Canvas and reference the assigned value in multiple steps, we recommend doing the following:
+To assign one promotion code in a Canvas and reuse it across steps:
 
-- Assign the promotion code as a custom attribute as a first step (User Update step)
-- Use Liquid in the subsequent steps to refer to the value of that custom attribute (not the promotion code)
+1. Assign the promotion code as a custom attribute in the first step (User Update).
+2. Use Liquid in later steps to reference that custom attribute instead of generating a new code.
 
-If a user is eligible to receive a code through more than one channel, they'll receive the same code for each channel. For example, if a user receives two messages through email and push notifications, they'll receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels.
+When a user qualifies for a code across multiple channels, they receive the same code in each channel. For example, if they get messages by email and push, the same code is sent to both. Reporting also reflects a single code.
 
 {% alert important %}
-If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promotion codes, the message will not be sent.
+If no promotion codes are available, test or live messages that rely on codes will not send.
 {% endalert %}
 
-#### Sending test messages with promotion codes
+### Using promotion codes in test messages
 
 Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
 
