@@ -1469,10 +1469,14 @@ $( document ).ready(function() {
          </div>
 
            <div id="support-search-panel"></div>
-
             <legend>Useful Resources</legend>
 
             <div id="ticket_usefulresources">
+              <div id="support-portal-banner" style="background-color: #f4f4f7; padding: 10px; text-align: center; border-bottom: 1px solid #dfdfe3;">
+                <p style="margin: 0; font-size: 16px;">
+                Designated Support Contacts can use the  <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Braze Support Portal</a> to submit and track support cases.
+                </p>
+              </div>
               <a target="" href="{{site.baseurl}}/user_guide/introduction/">User Guide</a><br />
               <a target="" href="{{site.baseurl}}/developer_guide/platform_wide/platform_features/">Developer Guide</a><br />
               <a target="" href="{{site.baseurl}}/help/home/">Help & Troubleshooting Guides</a><br />
@@ -1480,6 +1484,7 @@ $( document ).ready(function() {
               <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
             </div>
+
 
         </div>
     </div>
