@@ -2,7 +2,7 @@
 nav_title: Unique Discount Codes 
 article_title: Sending Unique Discount Codes
 alias: /shopify_discount_codes/
-page_order: 6
+page_order: 7
 description: "This reference article covers a community-submitted use case of using Braze promotion codes with the Shopify Bulk Discount Code Bot to send unique discount codes through your campaigns and Canvases."
 ---
 

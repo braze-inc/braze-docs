@@ -5,7 +5,7 @@ description: "This reference article covers how to connect with a Shopify Hydrog
 page_type: partner
 search_tag: Partner
 alias: /shopify_custom_integration/
-page_order: 2
+page_order: 3
 ---
 
 # Shopify custom integration setup

@@ -2,7 +2,7 @@
 nav_title: Shopify Product Sync
 article_title: Shopify Product Sync
 alias: /shopify_catalogs/
-page_order: 4
+page_order: 5
 description: "This reference article covers how to import your products from Shopify into Braze catalogs."
 ---
 
