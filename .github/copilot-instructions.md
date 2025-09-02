@@ -2,7 +2,7 @@
 Style Guide: https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.uxt7nb8nvq43
 -->
 
-# General Instructions
+# General instructions
 
 These instructions are for contributors using GitHub Copilot to draft or edit documentation for Braze.
 
@@ -21,7 +21,7 @@ The pull request body should always use the [PULL_REQUEST_TEMPLATE](./PULL_REQUE
 - [BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
 ```
 
-## What Not To Do
+## What not to do
 
 When describing Braze products and features, avoid the following:
 
@@ -178,7 +178,7 @@ We write our learning content in American English. However, Braze is a global br
    - Use diverse example names.
    - Avoid culturally specific humor.
 
-## Inclusive Language
+## Inclusive language
 
 We may be a B2B company, but people are at the center of what we do, and ours is a global brand. Whenever we refer to a person in our content, we are mindful of being inclusive and considerate. When in doubt, consult this section or The Diversity Style Guide.
 
