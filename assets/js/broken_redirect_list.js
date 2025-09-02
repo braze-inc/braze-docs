@@ -2753,11 +2753,11 @@ validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/develop
 
 validurls['/docs/partners/data_and_analytics/business_intelligence/sisu_data/'] = '/docs/partners/';
 
-validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs/catalog/';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/selections'] = '/docs/user_guide/data/activation/catalogs/selections';
-validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/catalog/';
+validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/';
 validurls['/docs/user_guide/data/activation/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers';
