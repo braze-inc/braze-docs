@@ -163,7 +163,7 @@ class BrazeInboxViewController: UITableViewController {
                             willDisplay cell: UITableViewCell,
                             forRowAt indexPath: IndexPath) {
         let card = cards[indexPath.row]
-        if loggedImpressions.insert(card.id).inserted {
+        if !loggedImpressions.contains(card.id) {
             card.logImpression(using: AppDelegate.braze)
         }
     }
@@ -171,46 +171,41 @@ class BrazeInboxViewController: UITableViewController {
 ```
 
 !!step
-lines-AppDelegate.swift=5
-
-#### 1. Implement the `BrazeInAppMessageUIDelegate`
-
-In your AppDelegate class, implement the [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/delegate) so you can override its `inAppMessage` method later.
-
-!!step
 lines-AppDelegate.swift=15
 
-#### 2. Enable debugging (optional)
+#### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-BrazeInboxView.swift=5
 
-#### 3. Create the UI View
+#### 2. Create the UI View
 
 We're using Swift's [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller) in this tutorial, but we recommend building a UI with classes and components that suit your use case(s).
 
 !!step
 lines-BrazeInboxView.swift=15-20
 
-#### 4. Subscribe to & refresh Content Cards
+#### 3. Subscribe to & refresh Content Cards
 
 Subscribe to the content cards listener to receive the latest updates, and then call `requestRefresh()` to request the latest content cards for that user.
 
 !!step
 lines-BrazeInboxView.swift=34-35
 
-#### 5. Build a custom inbox UI
+#### 4. Build a custom inbox UI
 
 Using the content card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build content cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
 
 !!step
 lines-BrazeInboxView.swift=8,43,49-56
 
-#### 6. Track impressions and clicks
+#### 5. Track impressions and clicks
 
 You can log impressions and clicks using the [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>) and [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>) methods available for a content card.
+
+Additionally, you can use [`LogDimissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>) for dimissals.
 
 Impressions should only be logged once when viewed by the user. Here, a naive mechanism using a `Set` and `willDisplay` is used to achieve this. Note that you may need to think through the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
