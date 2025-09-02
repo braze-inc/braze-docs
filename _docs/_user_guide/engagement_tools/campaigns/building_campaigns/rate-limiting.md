@@ -97,6 +97,10 @@ Be wary of delaying time-sensitive messages with this form of rate limiting in r
 
 When sending a single-channel campaign with a speed rate limit, the rate limit is applied for all messages together.
 
+##### Email rate limits
+
+You may observe discrepancies where the number of emails sent in a single minute exceeds the rate limit defined in campaign settings. For example, when setting a campaign-level rate limit to 2,500 messages per minute, the analytics dashboard may reflect spikes above this threshold, such as 3,000 or even 4,000 messages in a single minute. Braze applies the rate limit at the start of the send attempt before Liquid rendering begins. This is intentional and allows rate limiting to occur before evaluating Connected Content and other message personalization logic. Liquid rendering time can vary, so these fluctuations may cause temporary deviations in the number of messages processed in any given minute. However, the average number of messages sent per minute won't exceed the configured rate limit. The configured rate limit is respected as an average cap over time.
+
 #### Multichannel campaigns
 
 When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. As a result, the following may occur:
