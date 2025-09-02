@@ -25,21 +25,189 @@ import android.app.Application
 import com.braze.Braze
 import com.braze.support.BrazeLogger
 import com.braze.configuration.BrazeConfig
-import com.braze.ui.inappmessage.BrazeInAppMessageManager
-import com.braze.BrazeActivityLifecycleCallbackListener
-import com.braze.ui.inappmessage.listeners.IInAppMessageManagerListener
-import com.braze.models.inappmessage.IInAppMessage
-import com.braze.ui.inappmessage.InAppMessageOperation
 import android.util.Log
+
+class ContentCardsApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        // Turn on verbose Braze logging
+        BrazeLogger.logLevel = Log.VERBOSE
+
+        // Configure Braze with your SDK key & endpoint
+        val config = BrazeConfig.Builder()
+            .setApiKey("1ff5603a-4c31-40c3-bb84-e2f56d414ae9")
+            .setCustomEndpoint("sondheim.braze.com")
+            .build()
+        Braze.configure(this, config)
+    }
+}
+```
+
+```kotlin file=ContentCardInboxActivity.kt
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import android.view.*
+import android.widget.TextView
+import com.braze.Braze
+import com.braze.events.ContentCardsUpdatedEvent
+import com.braze.events.IEventSubscriber
+import com.braze.models.cards.*
+
+class ContentCardsActivity : ComponentActivity() {
+    private val cards = mutableListOf<Card>()
+    private var subscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+    private lateinit var recyclerView: RecyclerView
+    private val adapter = ContentCardAdapter()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.content_card_inbox)
+
+        recyclerView = findViewById(R.id.contentCardsRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+
+        // Prepare the subscriber (attach/detach in onStart/onStop)
+        subscriber = IEventSubscriber { event ->
+            runOnUiThread {
+                cards.clear()
+                cards.addAll(event.allCards.filter { !it.isControl })
+                adapter.notifyDataSetChanged()
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        subscriber?.let {
+            Braze.getInstance(this).subscribeToContentCardsUpdates(it)
+        }
+        // Fetch fresh cards
+        Braze.getInstance(this).requestContentCardsRefresh(false)
+    }
+
+    override fun onStop() {
+        // Avoid leaks by removing the subscription when not visible
+        Braze.getInstance(this)
+            .removeSingleSubscription(subscriber, ContentCardsUpdatedEvent::class.java)
+        super.onStop()
+    }
+
+    inner class ContentCardAdapter :
+        RecyclerView.Adapter<ContentCardAdapter.CardViewHolder>() {
+
+        inner class CardViewHolder(v: View) : RecyclerView.ViewHolder(v) {
+            val title: TextView = v.findViewById(android.R.id.text1)
+            val description: TextView = v.findViewById(android.R.id.text2)
+        }
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
+            val view = LayoutInflater.from(parent.context)
+                .inflate(android.R.layout.simple_list_item_2, parent, false)
+            return CardViewHolder(view)
+        }
+
+        override fun getItemCount() = cards.size
+
+        override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
+            val card = cards[position]
+
+            val title = when (card) {
+                is CaptionedImageCard -> card.title
+                is ShortNewsCard -> card.title
+                is TextAnnouncementCard -> card.title
+                else -> null
+            }
+            val description = when (card) {
+                is CaptionedImageCard -> card.description
+                is ShortNewsCard -> card.description
+                is TextAnnouncementCard -> card.description
+                else -> null
+            }
+
+            holder.title.text = title.orEmpty()
+            holder.description.text = description.orEmpty()
+
+            // Naive impression guard: only log the first time we bind a not-yet-viewed card.
+            if (!card.viewed) card.logImpression()
+
+            holder.itemView.setOnClickListener {
+                card.logClick()
+                card.url?.let { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it))) }
+            }
+        }
+    }
+}
+```
+
+```xml file=content_card_inbox.xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/inboxHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message Inbox"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contentCardsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
 
 ```
 
 !!step
-lines-MainApplication.kt=17
+lines-MainApplication.kt=12
 
 #### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
+
+!!step
+lines-content_card_inbox.xml=1-24
+
+#### 2. Create the UI View
+
+We're using Android's `RecyclerView` to display Content Cards in this tutorial, but we recommend build a UI with calsses and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
+
+!!step
+lines-ContentCardInboxActivity.kt=29-35,40-42,44
+
+#### 3. Subscribe to & Refresh Content Cards
+
+Use [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)/>) to allow your UI to respond when new content cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
+
+!!step
+lines-ContentCardInboxActivity.kt=73-84
+#### 4. Build a Custom Inbox UI
+
+Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html/>) such as `title`, `description`, and `url` allows you to build content cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
+
+!!step
+lines-ContentCardInboxActivity.kt=90,93
+#### 5. Track Impressions & Clicks
+
+You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html/>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html/>) methods available for content cards.
+
+Impressions should only be logged once when a card is viewed by the user. Here, we use a naive machanism to guard agaisnt duplicate logs with a per-card flag. Note that you may need to think through the view lifecycle of your app, as well as use case, so ensure impressions are logged correctly.
+
 
 {% endscrolly %}
 {% endsdktab %}
