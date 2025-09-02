@@ -117,7 +117,7 @@ When a code snippet is used in a campaign or Canvas with multichannel messages, 
 To assign one promotion code in a Canvas and reuse it across steps:
 
 1. Assign the promotion code as a custom attribute in the first step (User Update).
-2. Use Liquid in later steps to reference that custom attribute instead of generating new code.
+2. Use Liquid in later steps to reference that custom attribute instead of generating a new code.
 
 When a user qualifies for a code across multiple channels, they receive the same code in each channel. For example, if they get messages by email and push, the same code is sent to both. Reporting also reflects a single code.
 
