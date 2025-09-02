@@ -110,14 +110,14 @@ Paste the code snippets into one of your messages in Braze, then use [Liquid]({{
 
 ![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
-### Across canvas steps
+### Across Canvas steps
 
 When a code snippet is used in a campaign or Canvas with multichannel messages, each user receives a unique code. In a Canvas with multiple steps that reference promotion codes, a user gets a new code for every step they enter.
 
 To assign one promotion code in a Canvas and reuse it across steps:
 
 1. Assign the promotion code as a custom attribute in the first step (User Update).
-2. Use Liquid in later steps to reference that custom attribute instead of generating a new code.
+2. Use Liquid in later steps to reference that custom attribute instead of generating new code.
 
 When a user qualifies for a code across multiple channels, they receive the same code in each channel. For example, if they get messages by email and push, the same code is sent to both. Reporting also reflects a single code.
 
@@ -201,6 +201,10 @@ Promotion codes are currently supported for email, mobile push, web push, Conten
 ### Do test and seed sends count towards usage?
 
 By default, test sends and seed group email sends will use promotion codes per user, per test send. However, you can reach out to your Braze account manager to update this behavior to not use promotion codes during testing.
+
+### What happens when multiple messaging channels use the same promotion code snippet?
+
+If a particular user is eligible to receive a code through multiple channels, they will receive the same code through each channel. Only one promo code will be used regardless of the channels received.
 
 ### Can I use multiple Liquid snippets to reference the same promotion code list in one message?
 
