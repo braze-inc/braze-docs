@@ -44,7 +44,7 @@ The simpler the messaging in your Banner, the faster it will render. It’s best
 
 ## Are all Liquid tags supported?
 
-No. However, most Liquid tags are supported for Banner messages, except for `catalog_items` that are re-rendered using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+No. However, most Liquid tags are supported for Banner messages, except for `catalog_items` that are re-rendered using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 
 ## Can I capture click events?
 

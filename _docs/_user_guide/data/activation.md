@@ -13,8 +13,14 @@ guide_featured_list:
   - name: Custom Data
     link: /docs/user_guide/data/activation/custom_data/
     image: /assets/img/braze_icons/tool-01.svg
-  - name: Report Metrics Glossary
-    link: /docs/user_guide/data/activation/report_metrics/
+  - name: Catalogs
+    link: /docs/user_guide/data/activation/catalogs/
+    image: /assets/img/braze_icons/users-01.svg
+
+guide_menu_title: "More articles"
+guide_menu_list:
+  - name: Analytics
+    link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Braze AI
     link: /docs/user_guide/brazeai/
