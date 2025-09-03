@@ -43,6 +43,6 @@ As long as the Web SDK is accessible on the front-end of your Shopify site throu
 ## Considerations and disclaimers
 
 - **Initialization settings:** If you modify your initialization settings through your third-party tool, user and data syncing may be impacted. For example, if you choose to initialize your SDK when a cookie consent form is accepted, Braze won't receive tracking for anonymous users or data until the user consents. 
-- **`dataLayer.<attribute>` isn't supported:** Use `window.braze` instead of `dataLayer.<attribute>` for attribute calls.
+- **Setting attributes directly through `dataLayer` isn't supported:** Use `window.braze` instead of `dataLayer` to set attributes.
 - **Potential duplicate users:** If the API key doesn't match across Braze and your third-party tool, duplicate users may be created.
 - **SDK incompatibility:** Using an incorrect version number can cause issues with SDK methods.
