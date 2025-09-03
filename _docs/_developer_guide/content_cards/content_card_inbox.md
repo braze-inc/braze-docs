@@ -36,8 +36,8 @@ class ContentCardsApplication : Application() {
 
         // Configure Braze with your SDK key & endpoint
         val config = BrazeConfig.Builder()
-            .setApiKey("1ff5603a-4c31-40c3-bb84-e2f56d414ae9")
-            .setCustomEndpoint("sondheim.braze.com")
+            .setApiKey("YOUR_API_KEY")
+            .setCustomEndpoint("YOUR_API_ENDPOINT")
             .build()
         Braze.configure(this, config)
     }
