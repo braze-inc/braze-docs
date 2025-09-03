@@ -1,19 +1,16 @@
----
-nav_title: Accounts
-article_title: Syncing account data using CDI
-page_order: 4
-page_type: reference
-description: "Learn how to sync your Braze account data using CDI."
-
----
-
-# Syncing account data using CDI
-
-> Learn how to sync your Braze account data using CDI.
-
 {% alert important %}
 [Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, which is required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
 {% endalert %}
+
+{% multi_lang_include cdi/data/prerequisites.md %}
+
+## About account syncing with CDI
+
+- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp.
+- Data from the integration creates or updates accounts based on the provided `id`.
+- If `DELETED` is `true`, the account is deleted.
+- Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
+- Fields not in your accounts schema are dropped; update the schema before syncing new fields.
 
 ## Prerequisites
 
@@ -22,14 +19,6 @@ Before you can sync your account data using CDI, you'll need to [configure your 
 {% alert note %}
 Only make updates to your account schema when the sync is paused or not scheduled to avoid conflicts between your data warehouse data and the schema in Braze.
 {% endalert %}
-
-## How syncing works
-
-- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp.
-- Data from the integration creates or updates accounts based on the provided `id`.
-- If `DELETED` is `true`, the account is deleted.
-- Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
-- Fields not in your accounts schema are dropped; update the schema before syncing new fields.
 
 ## Syncing your account data
 
@@ -362,3 +351,5 @@ FROM [braze].[account_details_1] ;
 ```
 {% endtab %}
 {% endtabs %}
+
+{% multi_lang_include cdi/data/sync_patterns.md %}

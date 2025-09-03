@@ -1,17 +1,96 @@
----
-nav_title: Catalogs
-article_title: Sync and Delete Catalog Data
-page_order: 4
-page_type: reference
-description: "This page provides an overview of how to sync catalog data."
+{% multi_lang_include cdi/data/prerequisites.md %}
 
----
+## About catalog syncing with CDI
 
-# Sync and delete catalog data
+Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is equal to or after the last timestamp synced. We recommend creating a view in your data warehouse from your catalog data to set up a source table that will fully refresh each time a sync runs. With views, you won't need to rewrite the query each time.
 
-> This page discusses how to sync catalog data.
- 
-## Step 1: Create a new catalog
+For example, if you have a table of product data (`product_catalog_1`) with `product_id` and three additional attributes, you could sync the below view:
+
+{% tabs %}
+{% tab Snowflake %}
+```json
+CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS 
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    product_id as id,
+    TO_JSON(
+        OBJECT_CONSTRUCT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'attribute_3',
+            attribute_3)
+    )as PAYLOAD FROM "product_catalog_1";
+```
+{% endtab %}
+{% tab Redshift %}
+```json
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    Product_id as id,
+    JSON_SERIALIZE(
+        OBJECT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'attribute_3',
+            attribute_3)
+    ) as PAYLOAD FROM "product_catalog_1";
+```
+{% endtab %}
+{% tab BigQuery %}
+```json
+CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
+    last_updated as UPDATED_AT,
+    product_id as ID,
+    TO_JSON(
+      STRUCT(
+      attribute_1,
+      attribute_2,
+      attribute_3,
+      )
+    ) as PAYLOAD 
+  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Databricks %}
+```json
+CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
+    last_updated as UPDATED_AT,
+    product_id as ID,
+    TO_JSON(
+      STRUCT(
+      attribute_1,
+      attribute_2,
+      attribute_3,
+      )
+    ) as PAYLOAD 
+  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```json
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
+```
+{% endtab %}
+{% endtabs %}
+
+- The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided.
+- If DELETED is set to `true`, the corresponding catalog item will be deleted.
+- The sync won't log data points, but all data synced will count toward your total catalog usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
+
+## Setting up catalog syncing
+
+### Step 1: Create a new catalog
 
 Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/), you need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
 - Upload a [CSV]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-1-upload-csv)
@@ -20,7 +99,8 @@ Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{si
 
 Any changes to the catalog schema (for example, adding new fields or changing field type) must be made through the catalog dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
-## Step 2: Integrate Cloud Data Ingestion with catalog data
+### Step 2: Integrate CDI with catalog data
+
 The setup for a catalog sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
 
 {% tabs %}
@@ -195,90 +275,4 @@ GO
 {% endtab %}
 {% endtabs %}
 
-## How the integration works
-
-Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is equal to or after the last timestamp synced. We recommend creating a view in your data warehouse from your catalog data to set up a source table that will fully refresh each time a sync runs. With views, you won't need to rewrite the query each time.
-
-For example, if you have a table of product data (`product_catalog_1`) with `product_id` and three additional attributes, you could sync the below view:
-
-{% tabs %}
-{% tab Snowflake %}
-```json
-CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS 
-SELECT
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    product_id as id,
-    TO_JSON(
-        OBJECT_CONSTRUCT (
-            'attribute_1',
-            attribute_1,
-            'attribute_2',
-            attribute_2,
-            'attribute_3',
-            attribute_3)
-    )as PAYLOAD FROM "product_catalog_1";
-```
-{% endtab %}
-{% tab Redshift %}
-```json
-CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS
-SELECT
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    Product_id as id,
-    JSON_SERIALIZE(
-        OBJECT (
-            'attribute_1',
-            attribute_1,
-            'attribute_2',
-            attribute_2,
-            'attribute_3',
-            attribute_3)
-    ) as PAYLOAD FROM "product_catalog_1";
-```
-{% endtab %}
-{% tab BigQuery %}
-```json
-CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
-    last_updated as UPDATED_AT,
-    product_id as ID,
-    TO_JSON(
-      STRUCT(
-      attribute_1,
-      attribute_2,
-      attribute_3,
-      )
-    ) as PAYLOAD 
-  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
-```
-{% endtab %}
-{% tab Databricks %}
-```json
-CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
-    last_updated as UPDATED_AT,
-    product_id as ID,
-    TO_JSON(
-      STRUCT(
-      attribute_1,
-      attribute_2,
-      attribute_3,
-      )
-    ) as PAYLOAD 
-  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
-```
-{% endtab %}
-{% tab Microsoft Fabric %}
-```json
-CREATE VIEW [braze].[user_update_example]
-AS SELECT 
-    id as ID,
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
-
-FROM [braze].[product_catalog] ;
-```
-{% endtab %}
-{% endtabs %}
-
-- The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided.
-- If DELETED is set to `true`, the corresponding catalog item will be deleted.
-- The sync won't log data points, but all data synced will count toward your total catalog usage; this usage is measured based on the total data stored, so you don’t need to worry about only syncing changed data.
+{% multi_lang_include cdi/data/sync_patterns.md %}

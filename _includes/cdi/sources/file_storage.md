@@ -1,16 +1,3 @@
----
-nav_title: File storage integrations
-article_title: File Storage Integrations
-description: "This page covers Braze Cloud Data Ingestion and how to sync relevant data from S3 to Braze."
-page_order: 3
-page_type: reference
-
----
-
-# File storage integrations
-
-> This page covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
-
 ## How it works
 
 You can use Cloud Data Ingestion (CDI) for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. 

@@ -1,39 +1,32 @@
----
-nav_title: Users
-article_title: User data
-page_order: 30
-page_type: reference
-description: "This pgae provides an overview of the process for deleting users with Cloud Data Ingestion."
+{% alert note %}
+User delete syncs are supported for all available Cloud Data Ingestion data sources.
+{% endalert %}
 
----
+{% multi_lang_include cdi/data/prerequisites.md %}
 
-# Deleting users
+## About user syncing with CDI
 
-> This page discusses the process for deleting users with Cloud Data Ingestion.
+With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
-{% pagetabs %}
-{% pagetab Dashboard %}
-CONTENT
-{% endpagetab %}
+When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and delete the corresponding user profiles on your Braze dashboard. 
 
-{% pagetab CDI %}
-User delete syncs are supported for all available Cloud Data Ingestion data sources. 
+{% alert note %}
+User data can be updated by external ID, user alias, Braze ID, email, or phone number. Users can be deleted by external ID, user alias, or Braze ID.
+{% endalert %}
 
-## Configuring the integration 
+{% alert warning %}
+Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Refer to [delete a user profile]({{site.baseurl}}/help/help_articles/api/delete_user/) for more information.
+{% endalert %}
 
-Follow the standard process to [create a new integration in the Braze dashboard]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) for the data warehouse you want to connect to. Ensure that you include a role that can access the delete table. On the **Create import sync** page, set the **Data Type** to **Delete Users** so that the proper actions are taken during the integration run to delete users.
-
-![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
-
-## Configuring source data
+## Setting up user sync
 
 Source tables for user deletes should include one or more user identifier types and an `UPDATED_AT` timestamp. Payload columns aren't supported for user delete data.
 
-### `UPDATED_AT`
+#### Step 1: Add `UPDATED_AT` timestamp
 
 Add an `UPDATED_AT` timestamp to your source table. This timestamp indicates the time that this row was updated or added to the table. Braze will only sync rows that have been added or updated since the last sync.
 
-### User identifier columns
+#### Step 2: Add user identifier columns
 
 Your table may contain one or more user identifier columns. Each row should only contain one identifier: either `external_id`, the combination of `alias_name` and `alias_label`, or `braze_id`. A source table may contain columns for one, two, or all three identifier types.
 - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
@@ -114,17 +107,6 @@ CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes]
 GO
 ```
 {% endtab %}
-
 {% endtabs %}
 
-### How it works
-
-With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
-
-When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and delete the corresponding user profiles on your Braze dashboard. 
-
-{% alert warning %}
-Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Refer to [delete a user profile]({{site.baseurl}}/help/help_articles/api/delete_user/) for more information.
-{% endalert %}
-{% endpagetab %}
-{% endpagetabs %}
+{% multi_lang_include cdi/data/sync_patterns.md %}
