@@ -2759,10 +2759,13 @@ validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/selections'] = '/docs/user_guide/data/activation/catalogs/selections';
 validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/';
 validurls['/docs/user_guide/data/activation/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics';
-validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/product_blocks'] = '/docs/user_guide/data/activation/catalogs/product_blocks';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
+
+validurls['/docs/user_guide/data/unification/cloud_ingestion/sync_accounts_data'] = '/docs/user_guide/data/unification/manage_data/accounts';
+validurls['/docs/user_guide/data/unification/cloud_ingestion/sync_catalogs_data'] = '/docs/user_guide/data/unification/manage_data/catalogs';
+validurls['/docs/user_guide/data/unification/cloud_ingestion/delete_users'] = '/docs/user_guide/data/unification/manage_data/users';
 
 // validurls['OLD'] = 'NEW';
