@@ -116,7 +116,7 @@ You can then use this credential in your API calls by referencing the credential
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
-     https://api.endpoint.com/some_path
+     https://api.endpoint.com/your_path
      :method post
      :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
