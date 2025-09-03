@@ -28,9 +28,9 @@ We recommend using the standard integration method exclusively rather than using
 
 Straying from the provided steps may lead to unexpected issues, so be sure to follow them closely.
 
-1. Follow the provided steps in [Shopify standard integration setup]({{site.baseurl}}/shopify_standard_integration/). During [Step 2: Enable Braze Web SDKs]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-2-enable-braze-web-sdks), check the box indicating that you're using a third-party tool to add the Braze Web SDK to your Shopify site.
+1. Follow the provided steps in [Shopify standard integration setup]({{site.baseurl}}/shopify_standard_integration/). While [enabling Braze Web SDKs]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-2-enable-braze-web-sdks), check the box indicating that you're using a third-party tool to add the Braze Web SDK to your Shopify site.
 
-!["Braze SDK settings" section with a checkbox to indicate that you'll use a third-party tool to add the Braze Web SDK.]({% image_buster /assets/img/Shopify/third_party_enable.png %})
+!["Braze SDK settings" section with a checkbox to indicate that you'll use a third-party tool to add the Braze Web SDK.]({% image_buster /assets/img/Shopify/third_party_enable.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2. Go to **Settings** > **App Settings**, select the **Shopify** web app, and then copy the **API key for Shopify on Web**.
@@ -38,11 +38,11 @@ Straying from the provided steps may lead to unexpected issues, so be sure to fo
 
 ## Capturing Shopify data and syncing users
 
-As long as the Web SDK is accessible on the frontend of the store front through a third-party tool, the standard integration will capture Shopify data and sync users as expected.
+As long as the Web SDK is accessible on the front-end of your Shopify site through a third-party tool, the standard integration will capture Shopify data and sync users as expected.
 
 ## Considerations and disclaimers
 
-- **Initialization settings:** Additional settings from a third-party tool may be overridden by the Braze standard integration.
+- **Initialization settings:** If you modify your initialization settings through your third-party tool, user and data syncing may be impacted. For example, if you choose to initialize your SDK when a cookie consent form is accepted, Braze won't receive tracking for anonymous users or data until the user consents. 
 - **`dataLayer.<attribute>` isn't supported:** Use `window.braze` instead of `dataLayer.<attribute>` for attribute calls.
 - **Potential duplicate users:** If the API key doesn't match across Braze and your third-party tool, duplicate users may be created.
 - **SDK incompatibility:** Using an incorrect version number can cause issues with SDK methods.
