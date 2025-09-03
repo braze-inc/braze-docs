@@ -1,8 +1,19 @@
-# Blings.io Integration with Braze  
+---
+nav_title: Blings
+article_title: Blings
+description: "This reference article outlines the integration between Braze and Blings."
+alias: /partners/blings/
+page_type: partner
+search_tag: Partner
+layout: dev_guide
 
-Blings.io is a next-generation personalized video platform that enables brands to deliver real-time, interactive, and data-driven video experiences across channels at scale.  
+---
 
-This integration is maintained by Blings.  
+# Blings
+
+> [Blings](https://www.blings.io/) is a next-generation personalized video platform that enables brands to deliver real-time, interactive, and data-driven video experiences across channels at scale.  
+
+_This integration is maintained by Blings._
 
 ## Prerequisites  
 
