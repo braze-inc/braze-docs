@@ -1,13 +1,13 @@
 ---
-nav_title: Delete users with CDI
-article_title: Delete Users with Cloud Data Ingestion
+nav_title: User data
+article_title: User data
 page_order: 30
 page_type: reference
 description: "This pgae provides an overview of the process for deleting users with Cloud Data Ingestion."
 
 ---
 
-# Delete users with Cloud Data Ingestion
+# Deleting users
 
 > This page discusses the process for deleting users with Cloud Data Ingestion.
 
