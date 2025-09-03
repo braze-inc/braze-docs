@@ -1,5 +1,5 @@
 ---
-nav_title: Account data
+nav_title: Accounts
 article_title: Syncing account data using CDI
 page_order: 4
 page_type: reference

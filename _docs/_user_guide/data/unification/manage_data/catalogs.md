@@ -1,5 +1,5 @@
 ---
-nav_title: Catalog data
+nav_title: Catalogs
 article_title: Sync and Delete Catalog Data
 page_order: 4
 page_type: reference

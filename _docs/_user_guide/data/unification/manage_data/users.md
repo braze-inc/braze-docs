@@ -1,5 +1,5 @@
 ---
-nav_title: User data
+nav_title: Users
 article_title: User data
 page_order: 30
 page_type: reference
@@ -11,6 +11,12 @@ description: "This pgae provides an overview of the process for deleting users w
 
 > This page discusses the process for deleting users with Cloud Data Ingestion.
 
+{% pagetabs %}
+{% pagetab Dashboard %}
+CONTENT
+{% endpagetab %}
+
+{% pagetab CDI %}
 User delete syncs are supported for all available Cloud Data Ingestion data sources. 
 
 ## Configuring the integration 
@@ -120,5 +126,5 @@ When a sync runs, Braze will directly connect to your data warehouse instance, r
 {% alert warning %}
 Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Refer to [delete a user profile]({{site.baseurl}}/help/help_articles/api/delete_user/) for more information.
 {% endalert %}
-
-<br><br>
+{% endpagetab %}
+{% endpagetabs %}
