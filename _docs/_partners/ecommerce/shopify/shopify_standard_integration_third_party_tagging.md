@@ -18,8 +18,8 @@ For Shopify online stores, we recommend using Braze's standard integration metho
 
 - **Consistent API key between your third-party tool and the Shopify connector:** The API key must be consistent across both Braze and your third-party tool. This prevents the creation of duplicate users and maintain compatibility across SDKs. 
   - **API key location:** After onboarding the standard integration path, the integration will automatically create a Braze web app named “Shopify”. Retrieve the API key within the integration that is used with your third-party tool configuration. 
-  - **Selecting SDKs:** Within your Shopify standard integration settings, you can select the SDKs to initialize upon either session start or when an account login occurs. This setting should be consistent between your third party tool and Braze. Inconsistencies could lead to downstream issues for user and data syncing. 
 - **Consistent SDK versions between your third-party tool and the Shopify connector:** The SDK version must be `5.4` within your third-party tool. Using an incorrect version number can cause incompatibility issues, as some SDK methods may not exist in older versions.
+- **Consistent SDK initialization timing:** Within your Shopify standard integration settings, you can select the SDKs to initialize upon either session start or when an account login occurs. This setting should be consistent between your third party tool and Braze. Inconsistencies could lead to downstream issues for user and data syncing. 
 
 {% alert note %}
 We recommend using the standard integration method exclusively rather than using it in tandem with third-party tag managers, which may cause conflicts between the Braze SDK and third-party tool. If you do use a third-party tool, test to confirm that everything works as expected. 
