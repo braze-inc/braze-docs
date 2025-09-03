@@ -48,7 +48,7 @@ Updated with Braze tokens:
 https://blings.mp5.live/timhortons?&user_points={{custom_attribute.${points}}}&Name={{${first_name}}}
 ```  
 
-![Example Image](images/image1.png)  
+![Blings gif in Braze Campaign]({% image_buster assets/img/blings/blings_braze_campaign.png %})  
 
 ### Step 4: Test and Launch  
 Preview the campaign in Braze to confirm the personalized fields are populating correctly. Once validated, deploy your personalized interactive video campaign at scale.  
