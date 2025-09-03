@@ -4,6 +4,7 @@ article_title: Context
 alias: /context/
 page_order: 1.5
 page_type: reference
+toc_headers: "h2"
 description: "This reference article covers how to create and use Context steps in your Canvas."
 tool: Canvas
 
@@ -44,63 +45,6 @@ For example,
 {% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
-
-## Time zone consistency standardization
-
-With the addition of Canvas Context, all timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). Previously, timestamps for event properties were normalized to UTC with [some exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know). Now, this will provide a more consistent experience for editing Canvas steps and messages.
-
-Consider this example of how this change might affect a timestamp in Canvas. Let's say we have an action-based Canvas that uses an event property in the first step of the Canvas with the following Message step: 
-
-{% raw %}
-`Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
-{% endraw %}
-
-![Context journey with a Message step as the first step.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
-
-The step will also have an event payload like: 
-
-```
-{
-  "appointment_time": "2025-08-05T08:15:30:250-0800"
-}
-```
-
-Historically, the message would be: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
-
-With the Canvas Context early access, the message will now be: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` This is due to the timestamp being in UTC, which is 8 hours ahead of Pacific Time (the time zone specified in the original payload with `-08:00`).
-
-{% alert important %}
-To account for this timestamp change, in all circumstances, we strongly recommend [using Liquid filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps are represented in the desired time zone.
-{% endalert %}
-
-### Using Liquid to denote a timestamp in your preferred time zone
-
-Consider the following Liquid snippet:
-
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
-
-This logic results in the following output: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
-
-The preferred time zone can also be sent in the event properties payload and used in Liquid logic: 
-
-```
-{
-  "appointment_time": "2025-08-05T08:15:30:250-0800"
-  "user_timezone": "America/Los_Angeles"
-}
-```
-
-This is an example of the Liquid snippet:
-
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
 
 ## Creating a Context step
 
@@ -168,6 +112,69 @@ Next, we'll create a Message step to target users where {% raw %}`{{context.${lo
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 {% endalert %}
 
+### For Action Paths and exit criteria
+
+You can leverage comparing property filters with either context variables or custom attributes in these trigger actions: **Perform Custom Event** and **Make Purchase**. These action triggers also support property filters for both basic and nested properties. 
+
+- When comparing against basic properties, the available comparisons will match the type of the property defined by the custom event. For example, string properties will have exactly equal, regex matches. Boolean properties will be true or false. 
+- When comparing against nested properties, types are not pre-defined, so you can select comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for nested custom attributes. If you select a data type that doesn't match the actual data type of the nested property at the time of comparison, the user will not match the Action Path or exit criteria.
+
+#### Action Path examples
+
+{% alert important %}
+For custom attribute comparisons, we'll use the custom attribute value at the time the action is performed. This means a user won't match the Action Path group if a user doesn't have this custom attribute populated at the time of comparison, or if the custom attribute value doesn't match the defined property comparisons. This is the case even if the user would have matched when they entered the Action Path step.
+{% endalert %}
+
+{% tabs %}
+{% tab Perform custom event %}
+
+The following Action Path is set up to sort users who performed the custom event `Account_Created` with the basic property `source` to the context variable `app_source_variable`.
+
+![An example Action Path that references a context variable when performing a custom event.]({% image_buster /assets/img/context_action_path1.png %})
+
+{% endtab %}
+{% tab Make purchase %}
+
+The following Action Path is set up to match the basic property `brand` for the specific product name `shoes` to a context variable `promoted_shoe_brand`.
+
+![An example Action Path that references a context variable when making a purchase.]({% image_buster /assets/img/context_action_path2.png %})
+
+{% endtab %}
+{% endtabs %}
+
+#### Exit criteria examples
+
+{% tabs %}
+{% tab Perform custom event %}
+
+The exit criteria states that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
+
+- They perform the custom event **Abandon Cart**, and
+- The basic property **Item in Cart** matches the string value of the context variable `cart_item_threshold`.
+
+![Exit criteria set up to exit a user if they perform a custom event based on the context variable.]({% image_buster /assets/img/context_exit_criteria1.png %})
+
+{% endtab %}
+{% tab Make purchase %}
+
+The exit criteria states that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
+
+- They make a specific purchase for the "book" product name, and
+- That purchase's nested property "loyalty_program" is equal to the user's custom attribute "VIP".
+
+![Exit criteria set up to exit a user if they make a purchase.]({% image_buster /assets/img/context_exit_criteria2.png %})
+
+{% endtab %}
+{% endtabs %}
+
+## Previewing user paths
+
+We recommend testing and previewing your user paths to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+
+Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
+
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent. 
+
 ## Converting Connected Content strings to JSON
 
 When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call will be evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
@@ -178,6 +185,63 @@ When making a [Connected Content call]({{site.baseurl}}/user_guide/personalizati
 {{ product | as_json_string }}
 ```
 {%endraw%}
+
+## Time zone consistency standardization
+
+With the addition of Canvas Context, all timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). Previously, timestamps for event properties were normalized to UTC with [some exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know). Now, this will provide a more consistent experience for editing Canvas steps and messages.
+
+Consider this example of how this change might affect a timestamp in Canvas. Let's say we have an action-based Canvas that uses an event property in the first step of the Canvas with the following Message step: 
+
+{% raw %}
+`Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
+{% endraw %}
+
+![Context journey with a Message step as the first step.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
+
+The step will also have an event payload like: 
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+}
+```
+
+Historically, the message would be: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
+
+With the Canvas Context early access, the message will now be: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` This is due to the timestamp being in UTC, which is 8 hours ahead of Pacific Time (the time zone specified in the original payload with `-08:00`).
+
+{% alert important %}
+To account for this timestamp change, in all circumstances, we strongly recommend [using Liquid filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps are represented in the desired time zone.
+{% endalert %}
+
+### Using Liquid to denote a timestamp in your preferred time zone
+
+Consider the following Liquid snippet:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+This logic results in the following output: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
+
+The preferred time zone can also be sent in the event properties payload and used in Liquid logic: 
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+  "user_timezone": "America/Los_Angeles"
+}
+```
+
+This is an example of the Liquid snippet:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
 
 ## Troubleshooting {#troubleshooting}
 
