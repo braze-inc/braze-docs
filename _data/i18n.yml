@@ -7,7 +7,7 @@ en:
   braze_status_check: Checking Braze Status
   edit_github: Edit this page on GitHub
   page_nav_title: On this page
-  helpful: "HOW HELPFUL WAS THIS PAGE?"
+  helpful: "WAS THIS PAGE HELPFUL?"
 fr:
   next: SUIVANTE
   previous: PRÉCÉDENTE
@@ -27,7 +27,7 @@ ja:
   braze_status_check: Braze ステータスの確認
   edit_github: GitHub でこのページを編集
   page_nav_title: このページについて
-  helpful: 「このページはどの程度役に立ちましたか?」
+  helpful: "このページは役に立ちましたか?"
 ko:
   next: 다음
   previous: 이전
@@ -37,7 +37,7 @@ ko:
   braze_status_check: 브레이즈 상태 확인
   edit_github: GitHub 에서 이 페이지를 편집합니다.
   page_nav_title: 이 페이지에
-  helpful: "이 페이지가 얼마나 도움이 되었나요?"
+  helpful: "이 페이지가 도움이 되었나요?"
 pt-br:
   next: PRÓXIMO
   previous: ANTERIOR
@@ -47,7 +47,7 @@ pt-br:
   braze_status_check: Verificando o status do Braze
   edit_github: Editar esta página no GitHub
   page_nav_title: Nesta página
-  helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
+  helpful: "ESTA PÁGINA FOI ÚTIL?"
 es:
   next: SIGUIENTE
   previous: ANTERIOR
@@ -57,7 +57,7 @@ es:
   braze_status_check: Verificación del estado de Braze
   edit_github: Editar esta página en GitHub
   page_nav_title: En esta página
-  helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
+  helpful: "¿FUE ÚTIL ESTA PÁGINA?"
 de:
   next: NÄCHSTES
   previous: VORHERIGES
@@ -67,4 +67,4 @@ de:
   braze_status_check: Braze-Status wird geprüft
   edit_github: Diese Seite auf GitHub bearbeiten
   page_nav_title: Auf dieser Seite
-  useful: "WIE HILFREICH WAR DIESE SEITE?"
+  useful: "WAR DIESE SEITE HILFREICH?"
