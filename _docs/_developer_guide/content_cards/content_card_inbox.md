@@ -183,26 +183,26 @@ To make troubleshooting easier while developing, consider enabling debugging.
 !!step
 lines-content_card_inbox.xml=1-24
 
-#### 2. Create the UI View
+#### 2. Create the UI view
 
 We're using Android's `RecyclerView` to display Content Cards in this tutorial, but we recommend building a UI with classes and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
 
 !!step
 lines-ContentCardInboxActivity.kt=29-35,40-42,44
 
-#### 3. Subscribe to & Refresh Content Cards
+#### 3. Subscribe to & refresh Content Cards
 
 Use [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) to allow your UI to respond when new content cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
 
 !!step
 lines-ContentCardInboxActivity.kt=73-84
-#### 4. Build a Custom Inbox UI
+#### 4. Build a custom inbox UI
 
 Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build content cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
 
 !!step
 lines-ContentCardInboxActivity.kt=90,93
-#### 5. Track Impressions & Clicks
+#### 5. Track impressions & clicks
 
 You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for content cards.
 
@@ -388,16 +388,181 @@ Impressions should only be logged once when viewed by the user. Here, a naive me
 
 {% scrolly %}
 
-```js file=index.js
+```js file=main.js
 import * as braze from "@braze/web-sdk";
+
+// initialize the Braze SDK
+braze.initialize("YOUR_API_KEY", {
+  baseUrl: "YOUR_API_ENDPOINT",
+  enableLogging: true,
+});
+braze.openSession();
+
+// --- DOM refs ---
+const listEl = document.getElementById("cards-list");
+
+// --- State for impression de-duping & lookup ---
+const loggedImpressions = new Set();
+const idToCard = new Map();
+let observer = null;
+
+// Utility: clean observer between renders
+function resetObserver() {
+  if (observer) observer.disconnect();
+  observer = new IntersectionObserver(onIntersect, { threshold: 0.6 });
+}
+
+// Intersection callback: logs impression once when ≥60% visible
+function onIntersect(entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    const id = entry.target.dataset.cardId;
+    if (!id || loggedImpressions.has(id)) return;
+
+    const card = idToCard.get(id);
+    if (!card) return;
+
+    // Log a single-card impression and stop observing this element
+    braze.logContentCardImpressions([card]);
+    loggedImpressions.add(id);
+    observer.unobserve(entry.target);
+  });
+}
+
+// Renders cards into the DOM, sets up click + visibility tracking
+function renderCards(cards) {
+  // Rebuild lookup and observer each render
+  idToCard.clear();
+  resetObserver();
+
+  listEl.textContent = ""; // clear list
+
+  cards.forEach((card) => {
+    // Skip control-group cards in UI; (optional) you could log impressions for them elsewhere
+    if (card.isControl) return;
+
+    idToCard.set(card.id, card);
+
+    const item = document.createElement("article");
+    item.className = "card-item";
+    item.dataset.cardId = card.id;
+
+    const h3 = document.createElement("h3");
+    h3.textContent = card.title || "";
+
+    const p = document.createElement("p");
+    p.textContent = card.description || "";
+
+    item.append(h3, p);
+
+    // Click tracking + action
+    item.addEventListener("click", (e) => {
+      braze.logContentCardClick(card);
+      if (card.url) {
+        // any url-handling logic for your use case
+      }
+    });
+
+    listEl.appendChild(item);
+    observer.observe(item);
+  });
+}
+
+// Subscribe to updates *then* ask for a refresh
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards || [];
+  renderCards(cards);
+});
+
+braze.requestContentCardsRefresh();
+```
+
+```html file=index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        margin: 0;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 24px;
+      }
+      .card-item {
+        border-bottom: 1px solid #eee;
+        padding: 12px 0;
+        cursor: pointer;
+      }
+      .card-item h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+      .card-item p {
+        margin: 0;
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="app">
+      <h1>Message Inbox</h1>
+      <div id="cards-list" aria-live="polite"></div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
 ```
 
 !!step
-lines-index.js=6
+lines-main.js=6
 
 #### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
+
+!!step
+lines-index.html=1-44
+
+#### 2. Create the UI
+
+Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This will be used as the target container for rendering content cards.
+
+!!step
+lines-main.js=82-85,87
+
+#### 3. Subscribe to and refresh Content Cards
+
+Subscribe to the content cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest content cards for that user.
+
+!!step
+lines-main.js=61,64,71
+
+#### 4. Build the inbox elements
+
+Using the content card [attributes](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) such as `title`, `description`, and `url` allows you to display content cards to match your specific UI requirements.
+
+!!step
+lines-main.js=19-22,25-40,70,77
+
+#### 5. Track impressions & clicks
+
+You can log impressions and clicks using the [`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>) and [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>) methods available for content cards.
+
+Additionally, you can use [`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>) for dismissals.
+
+Impressions should only be logged once when viewed by the user. Here, an `IntersectionObserver` plus a `Set` keyed by `card.id` prevents duplicate logs. Note that you may need to think through the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
 {% endscrolly %}
 {% endsdktab %}
