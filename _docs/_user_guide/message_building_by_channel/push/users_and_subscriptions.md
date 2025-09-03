@@ -210,7 +210,7 @@ In the scenario that a user, who initially opted-in on the OS level disables pus
 In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background or Foreground Push Enabled = true`.
 
 {% alert note %}
-iOS doesn't allow apps to intercept a push notification prior to the push notification displaying. This means that apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for an app, but that isn't controlled by the app itself.
+iOS doesn't allow apps to intercept a push notification prior to the push notification displaying. This means that apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for an app under the device settings, but that is controlled by the operating system.
 {% endalert %}
 
 {% endtab %}
