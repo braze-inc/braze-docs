@@ -12,12 +12,13 @@ page_order: 2
 
 > This page guides you through using third-party tools, like Google Tag Manager, with the [Shopify standard integration]({{site.baseurl}}/shopify_standard_integration/) to initialize and load the Braze Web SDK.
 
-For Shopify online stores, we recommend using Braze's standard integration method to support the Braze SDKs on your site. However, we understand that you may prefer to use a third-party tool, Google Tag Manager. If you choose to use a third-party tool with Braze's Shopify connector, keep in mind that the Braze integration and app embed will manage the SDK during the checkout process.
+For Shopify online stores, we recommend using Braze's standard integration method to support the Braze SDKs on your site. However, we understand that you may prefer to use a third-party tool, like Google Tag Manager. If you choose to use a third-party tool with Braze's Shopify connector, keep in mind that the Braze integration and app embed will manage the SDK during the checkout process.
 
 ## Requirements
 
 - **Consistent API key between your third-party tool and the Shopify connector:** The API key must be consistent across both Braze and your third-party tool. This prevents the creation of duplicate users and maintain compatibility across SDKs. 
-  - **API key location:** After onboarding the standard integration path, the integration will automatically create a Braze web app named “Shopify”. Retrieve the API key within the integration that is used with your third-party tool configuration.  
+  - **API key location:** After onboarding the standard integration path, the integration will automatically create a Braze web app named “Shopify”. Retrieve the API key within the integration that is used with your third-party tool configuration. 
+  - **Selecting SDKs:** Within your Shopify standard integration settings, you can select the SDKs to initialize upon either session start or when an account login occurs. This setting should be consistent between your third party tool and Braze. Inconsistencies could lead to downstream issues for user and data syncing. 
 - **Consistent SDK versions between your third-party tool and the Shopify connector:** The SDK version must be `5.4` within your third-party tool. Using an incorrect version number can cause incompatibility issues, as some SDK methods may not exist in older versions.
 
 {% alert note %}
