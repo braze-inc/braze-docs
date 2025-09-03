@@ -69,7 +69,7 @@ Braze systems may make the same Connected Content API call more than once per re
 
 ## Things to know
 
-* Braze does not charge for API calls and will not count toward your given data point usage.
+* Braze does not charge for API calls and will not count toward your given data point allotment.
 * There is a 1 MB limit for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.
@@ -78,19 +78,23 @@ Braze systems may make the same Connected Content API call more than once per re
 
 ### Using basic authentication
 
-If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones from **Settings** > **Connected Content**.
+If the URL requires basic authentication, Braze can store a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones at **Settings** > **Connected Content**.
 
-![The 'Connected Content' settings in the Braze dashboard.]({% image_buster /assets/img_archive/basic_auth_mgmt.png %})
+![The Connected Content settings in the Braze dashboard.]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
-To add a new credential, select **Add Credential**. Give your credential a name and enter the username and password.
+To add a new credential, select **Add credential** > **Basic authentication**. 
 
-![The 'Create New Credential' window with the option to enter a name, username, and password.]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:30%" }
+!["Add credential" dropdown with the option to use basic authentication or token authentication.]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+
+Give your credential a name and enter the username and password.
+
+![The "Create New Credential" window with the option to enter a name, username, and password.]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
 {% raw %}
 ```
-Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
+Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :auth_credential credential_name %}
 ```
 {% endraw %}
 
@@ -100,18 +104,21 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 ### Using token authentication
 
-When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. For those APIs, you can reference the code snippet in the following call as a model for your message.
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
+
+To add a credential that holds token values, select **Add credential** > **Token authentication**. Then, add the key-value pairs for your API call headers and the allowed domain.
+
+![An example token "token_credential_abc" with token authentication details.]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+
+You can then use this credential in your API calls by referencing the credential name:
 
 {% raw %}
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
-     https://your_API_link_here/
+     https://api.endpoint.com/some_path
      :method post
-     :headers {
-       "X-App-Id": "YOUR-APP-ID",
-       "X-App-Token": "YOUR-APP-TOKEN"
-     }
+     :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -134,7 +141,6 @@ The following example illustrates retrieving and saving an access token to a loc
      :method post
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
-       "Authorization": "Bearer YOUR-APP-TOKEN"
      }
      :cache_max_age 900
      :save token_response
@@ -168,7 +174,77 @@ Braze will send Connected Content requests from the following IP ranges. The lis
 
 Braze has a reserved set of IPs used for all services, not all of which are active at a given time. This is designed for Braze to send from a different data center or do maintenance, if necessary, without impacting customers. Braze may use one, a subset, or all of the following IPs listed when making Connected Content requests.
 
-{% multi_lang_include data_centers.md datacenters='ips' %}
+{% subtabs %}
+{% subtab United States (US) %}
+For instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, these are the relevant IP addresses:
+- `23.21.118.191`
+- `34.206.23.173`
+- `50.16.249.9`
+- `52.4.160.214`
+- `54.87.8.34`
+- `54.156.35.251`
+- `52.54.89.238`
+- `18.205.178.15`
+
+For instance `US-08`, these are the relevant IP addresses:
+- `52.151.246.51`
+- `52.170.163.182`
+- `40.76.166.157`
+- `40.76.166.170`
+- `40.76.166.167`
+- `40.76.166.161`
+- `40.76.166.156`
+- `40.76.166.166`
+- `40.76.166.160`
+- `40.88.51.74`
+- `52.154.67.17`
+- `40.76.166.80`
+- `40.76.166.84`
+- `40.76.166.85`
+- `40.76.166.81`
+- `40.76.166.71`
+- `40.76.166.144`
+- `40.76.166.145`
+
+For instance `US-10`, these are the relevant IP addresses:
+- `100.25.232.164`
+- `35.168.86.179`
+- `52.7.44.117`
+- `3.92.153.18`
+- `35.172.3.129`
+- `50.19.162.19`
+{% endsubtab %}
+{% subtab European Union (EU) %}
+For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
+- `52.58.142.242`
+- `52.29.193.121`
+- `35.158.29.228`
+- `18.157.135.97`
+- `3.123.166.46`
+- `3.64.27.36`
+- `3.65.88.25`
+- `3.68.144.188`
+- `3.70.107.88`
+{% endsubtab %}
+{% subtab Australia (AU) %}
+For instance `AU-01`, these are the relevant IP addresses:
+- `13.210.1.145`
+- `13.211.70.159`
+- `13.238.45.54`
+- `52.65.73.167`
+- `54.153.242.239`
+- `54.206.45.213`
+{% endsubtab %}
+{% subtab Indonesia (ID) %}
+For instance `ID-01`, these are the relevant IP addresses:
+- `108.136.157.246`
+- `108.137.30.207`
+- `16.78.128.71`
+- `16.78.14.134`
+- `16.78.162.208`
+- `43.218.73.35`
+{% endsubtab %}
+{% endsubtabs %}
 
 ### `User-Agent` header
 
@@ -207,6 +283,3 @@ Connected Content doesn’t have its own rate limit. Instead, the rate limit is 
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
-
-
-[16]: [success@braze.com](mailto:success@braze.com)
