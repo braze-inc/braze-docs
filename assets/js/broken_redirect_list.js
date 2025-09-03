@@ -2767,4 +2767,10 @@ validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/product
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill'] = '/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_backfill';
+validurls['/docs/user_guide/data/activation/catalogs/back_in_stock_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications';
+validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
+validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
+validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
+
 // validurls['OLD'] = 'NEW';
