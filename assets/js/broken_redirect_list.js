@@ -2332,6 +2332,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/analytics/datadog'] = 
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/looker'] = '/docs/partners/data_and_analytics/business_intelligence/looker';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/scuba'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_analytics/business_intelligence/scuba'] = '/docs/partners/data_and_analytics';
+validurls['/docs/partners/scuba/'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data'] = '/docs/partners/data_and_analytics/business_intelligence/sisu_data';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/tellius'] = '/docs/partners/data_and_analytics/business_intelligence/tellius';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/thoughtspot'] = '/docs/partners/data_and_analytics/business_intelligence/thoughtspot';
