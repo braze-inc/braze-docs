@@ -29,7 +29,7 @@ Locate and copy your HTML snippet directly in the Blings app.
 - Visit the ‘Connect’ tab of the selected MP5 Project.
 - Add Braze liquid tags to the relevant variable in the Blings Connect page. This will populate the HTML snippet for you. 
 
-![Blings link.]({% image_buster /assets/img/blings/blings_braze_campaign.png %})  
+![Blings HTML snippet.]({% image_buster /assets/img/blings/blings.png %})  
 
 
 #### Blings Enterprise plan
