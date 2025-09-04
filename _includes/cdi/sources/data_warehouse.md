@@ -1,16 +1,3 @@
----
-nav_title: Data warehouse integrations
-article_title: Data Warehouse Integrations
-description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
-page_order: 2
-page_type: reference
-
----
-
-# Data warehouse storage integrations
-
-> This page covers how to use Braze Cloud Data Ingestion (CDI) to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration.
-
 ## Setting up data warehouse integrations
 
 Cloud Data Ingestion integrations require some setup on the Braze side and in your data warehouse instance. Follow these steps to set up the integration:
@@ -720,4 +707,3 @@ When activated, your sync will run on the schedule configured during setup. If y
 {% endtab %}
 
 {% endtabs %}
-
