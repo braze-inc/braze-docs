@@ -26,8 +26,8 @@ _This integration is maintained by Blings._
 #### Blings Business and Free plans
 Locate and copy your HTML snippet directly in the Blings app.
 
-- Visit the ‘Connect’ tab of the selected MP5 Project.
-- Add Braze liquid tags to the relevant variable in the Blings Connect page. This will populate the HTML snippet for you. 
+- Visit the **Connect** tab of the selected MP5 Project.
+- Add Braze liquid tags to the corresponding variables in the Blings Connect page. The tags will dynamically populate values in the HTML snippet. 
 
 ![Blings HTML snippet.]({% image_buster /assets/img/blings/blings.png %})  
 
@@ -40,9 +40,13 @@ Request the HTML snippet from your Blings representative.
 
 In Braze, create a new email or in-app message campaign and insert the Blings HTML snippet.
 
+![Blings Braze Campaign.]({% image_buster /assets/img/blings/blings_braze_campaign.png %})  
+
 ### Step 3: Test and launch  
 
 Preview the campaign in Braze to confirm the personalized fields are populating correctly. Once validated, deploy your MP5 campaign at scale.
+
+![Blings Braze Preview.]({% image_buster /assets/img/blings/blings_braze_preview.png %})  
   
 
 ## Getting support  
