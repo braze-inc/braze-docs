@@ -185,7 +185,7 @@ lines-content_card_inbox.xml=1-24
 
 #### 2. Create the UI view
 
-We're using Android's `RecyclerView` to display Content Cards in this tutorial, but we recommend building a UI with classes and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
+We're using Android's [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) to display Content Cards in this tutorial, but we recommend building a UI with classes and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
 
 !!step
 lines-ContentCardInboxActivity.kt=29-35,40-42,44
@@ -544,11 +544,11 @@ braze.requestContentCardsRefresh();
 ```
 
 !!step
-lines-main.js=6
+lines-main.js=3-4,9
 
 #### 1. Enable debugging (optional)
 
-To make troubleshooting easier while developing, consider enabling debugging.
+To make troubleshooting easier while developing, consider enabling debugging. You can also run braze web SDK methods in the console if you wish.
 
 !!step
 lines-index.html=1-44
@@ -558,21 +558,21 @@ lines-index.html=1-44
 Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This will be used as the target container for rendering content cards.
 
 !!step
-lines-main.js=82-85,87
+lines-main.js=96-99,101
 
 #### 3. Subscribe to and refresh Content Cards
 
 Subscribe to the content cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest content cards for that user.
 
 !!step
-lines-main.js=61,64,71
+lines-main.js=64,67,70-74
 
 #### 4. Build the inbox elements
 
 Using the content card [attributes](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) such as `title`, `description`, and `url` allows you to display content cards to match your specific UI requirements.
 
 !!step
-lines-main.js=19-22,25-40,70,77
+lines-main.js=22-25,28-43,84,91
 
 #### 5. Track impressions & clicks
 
