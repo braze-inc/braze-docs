@@ -21,11 +21,10 @@ _This integration is maintained by Blings._
 
 ## Integration  
 
-If you are interested in activating the Blings and Braze integration, contact Blings support to receive your personalized HTML snippet.  
+### Step 1: Obtain Your Blings HTML Snippet
 
-### Step 1: Request your snippet
-
-Contact Blings for the HTML snippet that corresponds to your campaign use case.  
+- **Blings Business and Free plans**: Locate and copy your HTML snippet directly in the Blings app.
+- **Blings Enterprise plan**: Request the HTML snippet from your Blings representative.
 
 ### Step 2: Create a Braze campaign  
 
