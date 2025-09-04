@@ -206,7 +206,7 @@ lines-ContentCardInboxActivity.kt=90,93
 
 You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for content cards.
 
-Impressions should only be logged once when a card is viewed by the user. Here, we use a naive machanism to guard agaisnt duplicate logs with a per-card flag. Note that you may need to think through the view lifecycle of your app, as well as use case, so ensure impressions are logged correctly.
+Impressions should only be logged once when a card is viewed by the user. Here, we use a naive mechanism to guard against duplicate logs with a per-card flag. Note that you may need to think through the view lifecycle of your app, as well as use case, so ensure impressions are logged correctly.
 
 
 {% endscrolly %}
@@ -391,6 +391,9 @@ Impressions should only be logged once when viewed by the user. Here, a naive me
 ```js file=main.js
 import * as braze from "@braze/web-sdk";
 
+// Uncomment this if you'd like to run braze web SDK methods in the console
+// window.braze = braze;
+
 // initialize the Braze SDK
 braze.initialize("YOUR_API_KEY", {
   baseUrl: "YOUR_API_ENDPOINT",
@@ -454,7 +457,18 @@ function renderCards(cards) {
     const p = document.createElement("p");
     p.textContent = card.description || "";
 
-    item.append(h3, p);
+    let img = undefined;
+    if (card.imageUrl) {
+      img = document.createElement("img");
+      img.src = card.imageUrl;
+      item.append(img);
+    }
+
+    const children = [h3, p];
+    if (img) {
+      children.push(img);
+    }
+    item.append(...children);
 
     // Click tracking + action
     item.addEventListener("click", (e) => {
@@ -511,6 +525,10 @@ braze.requestContentCardsRefresh();
       .card-item p {
         margin: 0;
         color: #444;
+      }
+      .card-item img {
+        max-width: 100%;
+        height: auto;
       }
     </style>
   </head>
