@@ -11,6 +11,8 @@ description: "This reference article explains the different components of a purc
 
 > This article explains the different components of a purchase object, how to use it correctly, best practices, and examples to draw from.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 ## What is a purchase object?
 
 A purchase object is an object that gets passed through the API when a purchase has been made. Each purchase object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow the Braze backend to store and use this information for customization, data collection, and personalization.

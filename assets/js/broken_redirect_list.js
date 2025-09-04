@@ -2330,7 +2330,9 @@ validurls['/docs/partners/data_and_infrastructure_agility/analytics/saleswings']
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/clarisights'] = '/docs/partners/data_and_analytics/business_intelligence/clarisights';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/datadog'] = '/docs/partners/data_and_analytics/business_intelligence/datadog';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/looker'] = '/docs/partners/data_and_analytics/business_intelligence/looker';
-validurls['/docs/partners/data_and_infrastructure_agility/analytics/scuba'] = '/docs/partners/data_and_analytics/business_intelligence/scuba';
+validurls['/docs/partners/data_and_infrastructure_agility/analytics/scuba'] = '/docs/partners/data_and_analytics';
+validurls['/docs/partners/data_and_analytics/business_intelligence/scuba'] = '/docs/partners/data_and_analytics';
+validurls['/docs/partners/scuba/'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data'] = '/docs/partners/data_and_analytics/business_intelligence/sisu_data';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/tellius'] = '/docs/partners/data_and_analytics/business_intelligence/tellius';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/thoughtspot'] = '/docs/partners/data_and_analytics/business_intelligence/thoughtspot';
@@ -2764,5 +2766,11 @@ validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/product_blocks'] = '/docs/user_guide/data/activation/catalogs/product_blocks';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
+
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill'] = '/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_backfill';
+validurls['/docs/user_guide/data/activation/catalogs/back_in_stock_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications';
+validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
+validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
+validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
 
 // validurls['OLD'] = 'NEW';

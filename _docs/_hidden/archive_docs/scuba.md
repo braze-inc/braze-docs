@@ -2,9 +2,10 @@
 nav_title: Scuba
 article_title: Scuba Analytics
 description: "This Scuba and Braze technical reference describes how to activate Scuba's real-time data insight using Braze Segments."
-alias: /partners/scuba/
 page_type: partner
 search_tag: Partner
+noindex: true
+hidden: true
 ---
 
 # Scuba Analytics

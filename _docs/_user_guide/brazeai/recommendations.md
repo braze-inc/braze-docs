@@ -12,7 +12,7 @@ description: "Learn all about item recommendation engines in Braze."
 
 ## Prerequisites
 
-Before you can create or use item recommendations in Braze, you'll need to [create at least one catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/)&#8212;only items from that catalog will be recommended to users.
+Before you can create or use item recommendations in Braze, you'll need to [create at least one catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create/)&#8212;only items from that catalog will be recommended to users.
 
 ## Types and use cases
 
