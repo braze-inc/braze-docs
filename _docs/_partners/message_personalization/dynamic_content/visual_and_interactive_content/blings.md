@@ -23,36 +23,27 @@ _This integration is maintained by Blings._
 
 ### Step 1: Obtain Your Blings HTML Snippet
 
-- **Blings Business and Free plans**: Locate and copy your HTML snippet directly in the Blings app.
-- **Blings Enterprise plan**: Request the HTML snippet from your Blings representative.
+#### Blings Business and Free plans
+Locate and copy your HTML snippet directly in the Blings app.
+
+- Visit the ‘Connect’ tab of the selected MP5 Project.
+- Add Braze liquid tags to the relevant variable in the Blings Connect page. This will populate the HTML snippet for you. 
+
+![Blings link.]({% image_buster /assets/img/blings/blings_braze_campaign.png %})  
+
+
+#### Blings Enterprise plan
+Request the HTML snippet from your Blings representative. 
+
 
 ### Step 2: Create a Braze campaign  
 
-In Braze, create a new email or in-app message campaign and insert the HTML snippet provided by Blings.  
+In Braze, create a new email or in-app message campaign and insert the Blings HTML snippet.
 
-### Step 3: Replace the default Blings parameters with Braze personalization Liquid tags  
+### Step 3: Test and launch  
 
-Swap the placeholders in the snippet provided by Blings with Braze Liquid personalization tags so that user data is dynamically pulled.  
-
-For example, let's consider this snippet: 
-
-{% raw %}
-```liquid
-https://blings.mp5.live/timhortons?&user_points={Points}&Name={First_Name}
-```  
-
-After being updated with Braze tokens, the snippet would become:  
-
-```liquid
-https://blings.mp5.live/timhortons?&user_points={{custom_attribute.${points}}}&Name={{${first_name}}}
-```  
-{% endraw %}
-
-![Blings gif in Braze campaign.]({% image_buster /assets/img/blings/blings_braze_campaign.png %})  
-
-### Step 4: Test and launch  
-
-Preview the campaign in Braze to confirm the personalized fields are populating correctly. After validating, deploy your personalized interactive video campaign at scale.  
+Preview the campaign in Braze to confirm the personalized fields are populating correctly. Once validated, deploy your MP5 campaign at scale.
+  
 
 ## Getting support  
 
