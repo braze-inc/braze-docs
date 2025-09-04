@@ -146,13 +146,13 @@ Testing campaigns personalized with [custom event properties]({{site.baseurl}}/u
 
 #### Method 1: Triggering campaign manually
 
-You can also trigger the campaign yourself as a robust way to test campaigns personalized using custom event properties:
+You can trigger the campaign yourself as a robust way to test campaigns personalized using custom event properties:
 
 1. Write up the copy involving the event property. ![Composing Test Message with Properties]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
 2. Use [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to deliver the campaign when the event occurs.
 
 {% alert note %}
-If you're testing an iOS push campaign, you must set the delay to one minute to allow yourself time to exit the app since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
+If you're testing an iOS push campaign, you must set the delay to one minute to allow yourself time to exit the app because iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
 {% endalert %}
 
 ![Test Message Delivery]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
