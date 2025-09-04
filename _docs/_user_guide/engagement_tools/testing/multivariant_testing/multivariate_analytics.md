@@ -159,6 +159,10 @@ The 100 users in the variant receive the in-app message payload, and 50 of them 
 
 Despite the initial 50/50 split, the unique impressions logged aren't balanced. The variant group has 50 impressions, while the control group has 75 impressions.
 
+### In-app Message Delays 
+
+In triggered in-app message campaigns that include delayed displays, control group impressions will be recorded at the point in time when the end user would have originally received the in-app message. For instance, if a campaign is set to delay the display by one hour, control group impressions will not be logged until the one-hour delay has passed. This ensures accurate tracking of impressions in relation to the intended timing of the message delivery.
+
 ## Recommended follow-ups {#recommended-follow-ups}
 
 One multivariate and A/B test can (and should!) inspire ideas for future tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include the following:
