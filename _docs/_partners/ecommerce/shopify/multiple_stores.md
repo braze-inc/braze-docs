@@ -2,7 +2,7 @@
 nav_title: Connecting Multiple Stores
 article_title: Shopify Multiple Store Support
 alias: /shopify_connecting_multiple_stores/
-page_order: 5
+page_order: 6
 description: "This reference article covers how to connect and configure multiple Shopify stores to a single workspace."
 ---
 
