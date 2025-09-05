@@ -2773,4 +2773,11 @@ validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_gui
 validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
 
+validurls['/docs/user_guide/getting_started/braze_pilot/overview/'] = '/docs/user_guide/getting_started/braze_pilot/';
+validurls['/docs/user_guide/analytics/reporting/reports_overview/'] = '/docs/user_guide/analytics/reporting';
+validurls['/docs/user_guide/data/unification/data_transformation/overview/'] = '/docs/user_guide/data/unification/data_transformation/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/about/'] = '/docs/user_guide/message_building_by_channel/content_cards';
+validurls['/docs/user_guide/message_building_by_channel/email/about/'] = '/docs/user_guide/message_building_by_channel/email/';
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/overview/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/';
+
 // validurls['OLD'] = 'NEW';
