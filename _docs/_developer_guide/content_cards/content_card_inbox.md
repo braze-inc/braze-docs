@@ -8,7 +8,7 @@ layout: scrolly
 
 # Tutorial: Making an Inbox with Content Cards
 
-> Follow along with the sample code in this tutorial to build an inbox with Braze content cards.
+> Follow along with the sample code in this tutorial to build an inbox with Braze Content Cards.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -183,28 +183,28 @@ To make troubleshooting easier while developing, consider enabling debugging.
 !!step
 lines-content_card_inbox.xml=1-24
 
-#### 2. Create the UI view
+#### 2. Build a UI view
 
 We're using Android's [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) to display Content Cards in this tutorial, but we recommend building a UI with classes and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
 
 !!step
 lines-ContentCardInboxActivity.kt=29-35,40-42,44
 
-#### 3. Subscribe to & refresh Content Cards
+#### 3. Subscribe to Content Card updates
 
-Use [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) to allow your UI to respond when new content cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
+Use [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) to allow your UI to respond when new Content Cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
 
 !!step
 lines-ContentCardInboxActivity.kt=73-84
 #### 4. Build a custom inbox UI
 
-Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build content cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
+Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
 
 !!step
 lines-ContentCardInboxActivity.kt=90,93
-#### 5. Track impressions & clicks
+#### 5. Track impressions and clicks
 
-You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for content cards.
+You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for Content Cards.
 
 Impressions should only be logged once when a card is viewed by the user. Here, we use a naive mechanism to guard against duplicate logs with a per-card flag. Note that you may need to think through the view lifecycle of your app, as well as use case, so ensure impressions are logged correctly.
 
@@ -348,23 +348,23 @@ To make troubleshooting easier while developing, consider enabling debugging.
 !!step
 lines-BrazeInboxView.swift=5
 
-#### 2. Create the UI View
+#### 2. Build a UI View
 
 We're using Swift's [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller) in this tutorial, but we recommend building a UI with classes and components that suit your use case(s).
 
 !!step
 lines-BrazeInboxView.swift=15-20
 
-#### 3. Subscribe to & refresh Content Cards
+#### 3. Subscribe to Content Card updates
 
-Subscribe to the content cards listener to receive the latest updates, and then call `requestRefresh()` to request the latest content cards for that user.
+Subscribe to the Content Cards listener to receive the latest updates, and then call `requestRefresh()` to request the latest Content Cards for that user.
 
 !!step
 lines-BrazeInboxView.swift=34-35
 
 #### 4. Build a custom inbox UI
 
-Using the content card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build content cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
+Using the content card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
 
 !!step
 lines-BrazeInboxView.swift=8,43,49-56
@@ -553,30 +553,30 @@ To make troubleshooting easier while developing, consider enabling debugging. Yo
 !!step
 lines-index.html=1-44
 
-#### 2. Create the UI
+#### 2. Build the UI
 
-Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This will be used as the target container for rendering content cards.
+Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This will be used as the target container for rendering Content Cards.
 
 !!step
 lines-main.js=96-99,101
 
-#### 3. Subscribe to and refresh Content Cards
+#### 3. Subscribe to Content Card updates
 
-Subscribe to the content cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest content cards for that user.
+Subscribe to the Content Cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user.
 
 !!step
 lines-main.js=64,67,70-74
 
 #### 4. Build the inbox elements
 
-Using the content card [attributes](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) such as `title`, `description`, and `url` allows you to display content cards to match your specific UI requirements.
+Using the content card [attributes](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) such as `title`, `description`, and `url` allows you to display Content Cards to match your specific UI requirements.
 
 !!step
 lines-main.js=22-25,28-43,84,91
 
-#### 5. Track impressions & clicks
+#### 5. Track impressions and clicks
 
-You can log impressions and clicks using the [`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>) and [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>) methods available for content cards.
+You can log impressions and clicks using the [`logContentCardImpressions`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions>) and [`logContentCardClick`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick>) methods available for Content Cards.
 
 Additionally, you can use [`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>) for dismissals.
 
