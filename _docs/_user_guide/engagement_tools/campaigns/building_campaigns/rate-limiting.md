@@ -83,11 +83,15 @@ Note that non-rate-limited campaigns may exceed these delivery limits. However, 
 
 ![Audience Summary with a selected checkbox for limiting the rate at which the campaign will end, and rate being 500,000 per minute.]({% image_buster /assets/img_archive/per_minute_rate_limit.png %})
 
-As another example, if you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute.
+#### Example
 
-Note that rate-limited messages may not be sent evenly over the course of each minute. Using the example of a 10,000-per-minute rate limit, this means Braze makes sure no more than 10,000 messages are sent per minute. This could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute. 
+If you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute.
 
-Also, note that the rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
+#### Number of sends
+
+Note that rate-limited messages may not be sent evenly over the course of each minute. Using the example of a 10,000-per-minute rate limit, this means Braze makes sure no more than 10,000 messages are sent per minute. This could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute.
+
+The rate limit is applied at the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
 
 {% alert important %}
 Be wary of delaying time-sensitive messages with this form of rate limiting in relation to the total number of users in a segment. For example, if the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
@@ -96,10 +100,6 @@ Be wary of delaying time-sensitive messages with this form of rate limiting in r
 #### Single-channel campaigns
 
 When sending a single-channel campaign with a speed rate limit, the rate limit is applied for all messages together.
-
-##### Email rate limits
-
-You may notice discrepancies where the number of emails sent in a single minute exceeds the rate limit defined in campaign settings. For example, when setting a campaign-level rate limit to 2,500 messages per minute, the analytics dashboard may reflect spikes above this threshold, such as 3,000 or even 4,000 messages in a single minute. Braze applies the rate limit at the start of the send attempt before Liquid rendering begins. This is intentional and allows rate limiting to occur before evaluating Connected Content and other message personalization logic. Liquid rendering time can vary, so these fluctuations may cause temporary deviations in the number of messages processed in any given minute. However, the average number of messages sent per minute won't exceed the configured rate limit. The configured rate limit is respected as an average cap over time.
 
 #### Multichannel campaigns
 
