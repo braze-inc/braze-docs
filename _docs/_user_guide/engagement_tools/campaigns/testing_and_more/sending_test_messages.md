@@ -34,7 +34,7 @@ For steps to send test messages, refer to the following section for your respect
 
 1. Draft your email message.
 2. Select **Preview and Test**.
-3. Select the **Test Send** tab and add your email address or user ID in the **Add Individual Users** field. 
+3. Select the **Test Send** tab and add your email address or user ID in the **Add individual users** field. 
 4. Select **Send Test** to send your drafted email to your inbox.
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
@@ -75,14 +75,6 @@ A test push message will appear at the top of your device screen.
 ![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
 
 Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification to trigger the in-app message. As such, the user must be eligible to receive push notifications in the relevant app for the successful delivery of the test push notification.
-
-#### Troubleshooting
-
-* If your in-app message campaign is not triggered by a push campaign, check the in-app campaign segmentation to confirm the user meets the target audience **before** receiving the push message.
-* For test sends on Android and iOS, the in-app messages that use the **Request push permission** on-click behavior may not display on some devices. As a workaround:
-  * **Android:** Devices must be on Android 13 and our Android SDK version 21.0.0. Another reason may be that the device on which the in-app message is displayed already has a system-level prompt. You may have selected **Do not ask again**, so you may need to reinstall the app to reset the notification permissions before testing again.
-  * **iOS:** We recommend your developer team review the implementation of push notifications for your app and manually remove any code that would request push permissions. For more information, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
-* For an action-based in-app message campaign to deliver, custom events must be logged through the Braze SDK, not REST APIs, so the user can receive eligible in-app messages directly to their device. Users can receive the in-app message if they perform the event during the session.
 
 {% endtab %}
 {% tab Content Card %}
@@ -148,7 +140,11 @@ Testing campaigns personalized with [custom event properties]({{site.baseurl}}/u
 
 You can trigger the campaign yourself as a robust way to test campaigns personalized using custom event properties:
 
-1. Write up the copy involving the event property. ![Composing Test Message with Properties]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+1. Write up the copy involving the event property. 
+
+![Composing Test Message with Properties]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+
+{: start="2"}
 2. Use [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to deliver the campaign when the event occurs.
 
 {% alert note %}
@@ -186,3 +182,15 @@ You can test custom event properties by manually inputting values with Liquid.
 
 1. In the message editor, input values for your custom event properties.
 2. Select the **Preview as a User** tab to check that the correct message displays.
+
+## Troubleshooting
+
+### In-app messages
+
+If your in-app message campaign is not triggered by a push campaign, check the in-app campaign segmentation to confirm the user meets the target audience **before** receiving the push message.
+
+For test sends on Android and iOS, the in-app messages that use the **Request push permission** on-click behavior may not display on some devices. As a workaround:
+- **Android:** Devices must be on Android 13 and our Android SDK version 21.0.0. Another reason may be that the device on which the in-app message is displayed already has a system-level prompt. You may have selected **Do not ask again**, so you may need to reinstall the app to reset the notification permissions before testing again.
+- **iOS:** We recommend your developer team review the implementation of push notifications for your app and manually remove any code that would request push permissions. For more information, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+
+For an action-based in-app message campaign to deliver, custom events must be logged through the Braze SDK, not REST APIs, so the user can receive eligible in-app messages directly to their device. Users can receive the in-app message if they perform the event during the session.
