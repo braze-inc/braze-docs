@@ -32,7 +32,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze (under **Technology Partners**), then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. 
+If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze through the respective **Technology Partners** page, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. 
 
 Generally, we will create one file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
@@ -56,7 +56,7 @@ Generally, we will create one file per 5,000 users to optimize processing. Expor
 
 {% enddetails %}
 
-We strongly suggest setting up your own S3 or Azure credentials (under **Technology Partners**) when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP containing all the user files can be downloaded. The URL will only become a valid location after the export is ready.
+We strongly suggest setting up your own S3 or Azure credentials (through the **Technology Partners** page) when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP containing all the user files can be downloaded. The URL will only become a valid location after the export is ready.
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (for example, create a segment where random bucket number is less than 1,000 or between 1,000 and 2,000).
 
