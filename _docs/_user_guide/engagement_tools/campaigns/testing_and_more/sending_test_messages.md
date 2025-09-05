@@ -163,7 +163,7 @@ If you're testing an iOS push campaign, you must set the delay to one minute to 
 
 The campaign will trigger and show the message customized with the event property.
 
-![Test Message Example]({% image_buster /assets/img_archive/testeventproperties-message.png %})
+![Test Message Example]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
 
 #### Method 2: Sending yourself a test message
 
