@@ -119,9 +119,7 @@ While the ideal time will vary, Braze suggests waiting until a user completes so
 
 ## Step 5: Target users
 
-Since the goal of a push primer campaign is to prompt users to opt in to push messaging, the default recommendation is to add a segment or filter where `Push Subscription Status is not Opted In`. However, there are situations where you may want to include opted-in users as well.
-
-For example, when a user logs in on a new device, they may be opted in for push on their previous device but not on the new one. In these scenarios, it's appropriate to target opted-in users since the SDK automatically prevents showing the in-app message if the user is already authorized for push notifications on that specific device.
+Though the goal of a push primer campaign is to prompt users to opt in to push messaging, you may still want to target opted-in users to capture those who log in on a new device. Those users may be opted in for push on their previous device, but not on their new one. The SDK automatically prevents showing the in-app message if the user is already opted in for push notifications on that specific device, so those users won't receive a push primer even if they're targeted.
 
 Beyond targeting considerations, you can decide what additional segments you feel are most appropriate. For example, you might target users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
 
