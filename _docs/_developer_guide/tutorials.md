@@ -12,6 +12,12 @@ guide_featured_list:
     link: /docs/developer_guide/banners/tutorial_displaying_banners
     image: /assets/img/braze_icons/brush-02.svg
 
+guide_menu_title: "Content Cards"
+guide_menu_list:
+  - name: Making an Inbox with Content Cards
+    link: docs/developer_guide/content_cards/content_card_inbox/
+    image: /assets/img/braze_icons/brush-02.svg
+
 guide_menu_title: "In-App Messages"
 guide_menu_list:
   - name: Customizing Message Styling
