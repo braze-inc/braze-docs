@@ -21,7 +21,7 @@ _This integration is maintained by Blings._
 
 ## Integration  
 
-### Step 1: Obtain Your Blings HTML snippet
+### Step 1: Obtain your Blings HTML snippet
 
 {% tabs %}
 {% tab Blings business and free plans %}
@@ -30,8 +30,8 @@ _This integration is maintained by Blings._
 
 Locate and copy your HTML snippet directly in the Blings app.
 
-- Go to the **Connect** tab of the selected MP5 Project.
-- Add Braze Liquid tags to the corresponding variables in the Blings **Connect** page. The tags will dynamically populate values in the HTML snippet. 
+1. Go to the **Connect** tab of the selected MP5 Project.
+2. Add Braze Liquid tags to the corresponding variables in the Blings **Connect** page. The tags will dynamically populate values in the HTML snippet. 
 
 ![Blings HTML snippet.]({% image_buster /assets/img/blings/blings_connect_audience.png %}){: style="max-width:70%;"}  
 
