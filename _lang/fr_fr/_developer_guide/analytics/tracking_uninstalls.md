@@ -16,6 +16,6 @@ description: "Découvrez comment suivre les désinstallations grâce au SDK de B
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/tracking_uninstalls.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/tracking_uninstalls.md %}
 {% endsdktab %}
 {% endsdktabs %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Lead Scoring
+nav_title: Lead scoring
 article_title: Creating a Lead-Scoring Workflow
 page_order: 1
 page_type: reference

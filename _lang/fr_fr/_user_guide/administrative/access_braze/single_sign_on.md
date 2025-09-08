@@ -4,7 +4,7 @@ article_title: SAML et authentification unique
 page_order: 5
 layout: dev_guide
 guide_top_header: "SAML et authentification unique"
-guide_top_text: "L’authentification unique (Single Sign-On, SSO) offre aux entreprises une façon sécurisée et centralisée de contrôler l’accès au tableau de bord de Braze. En bref, un seul ensemble d’informations d’identification peut être utilisé pour accéder à différentes applications, y compris Braze. <br> <br> Braze prend en charge l'authentification unique (SSO) SAML, qui respecte les normes sectorielles les plus récentes (SAML 2.0) et prend également en charge Azure Active Directory, Okta et OneLogin."
+guide_top_text: "L’authentification unique (Single Sign-On, SSO) offre aux entreprises une façon sécurisée et centralisée de contrôler l’accès au tableau de bord de Braze. En bref, un seul ensemble d’informations d’identification peut être utilisé pour accéder à différentes applications, y compris Braze. <br> <br> Braze prend en charge l'authentification unique SAML, qui répond aux dernières normes industrielles Security Assertion Markup Language (SAML 2.0), et prend également en charge Microsoft Entra ID (anciennement Azure Active Directory), Okta et OneLogin."
 
 page_type: landing
 description: "Cette page d’accueil contient des articles sur une authentification unique (SSO). Ici, vous pouvez trouver de l’aide pour configurer des fournisseurs d’identité pris en charge ou effectuer une configuration personnalisée."

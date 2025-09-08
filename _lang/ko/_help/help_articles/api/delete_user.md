@@ -11,7 +11,7 @@ platform: API
 
 # API를 통해 사용자 제거하기
 
-[Braze REST API를 통해 사용자를 제거하면][1] 다음 데이터가 삭제(무효화)됩니다.
+[Braze REST API를 통해 사용자를 제거하면]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/) 다음 데이터가 삭제(무효화)됩니다.
 - 사용자가 보유한 모든 속성
 - 이메일 주소
 - 전화번호
@@ -20,9 +20,9 @@ platform: API
 - 국가
 - 언어
 
-[Braze REST API를 통해 사용자를 제거하면][1] 다음 이벤트가 발생합니다:
+[Braze REST API를 통해 사용자를 제거하면]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/) 다음 이벤트가 발생합니다:
 - 사용자 프로필이 삭제(무효화)됩니다.
-- [평생 사용자][2] 수는 새로 제거된 사용자를 고려하여 업데이트됩니다.	
+- [평생 사용자]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) 수는 새로 제거된 사용자를 고려하여 업데이트됩니다.	
 - 제거된 사용자도 여전히 집계된 전환율에 포함됩니다. 삭제된 사용자에 대해서는 사용자 지정 이벤트 횟수 및 구매 횟수가 업데이트되지 않습니다.
 
 ## 공유 이메일 주소가 있는 여러 프로필
@@ -38,5 +38,3 @@ platform: API
 
 _마지막 업데이트 2023년 9월 13일_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

@@ -1,6 +1,6 @@
 ## Aufzeichnung des aktuellen Standorts
 
-Um den aktuellen Standort eines Nutzers:innen zu ermitteln, verwenden Sie die Geolocation APIs [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) Methode. Der Nutzer:in wird sofort aufgefordert, das Tracking zuzulassen oder zu verbieten (sofern er dies nicht bereits getan hat).
+Um den aktuellen Standort eines Nutzers:innen zu ermitteln, verwenden Sie die Geolocation APIs [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) Methode. Dadurch wird der Nutzer:in sofort aufgefordert, Tracking zuzulassen oder zu verbieten (sofern er dies nicht bereits getan hat).
 
 ```javascript
 import * as braze from "@braze/web-sdk";

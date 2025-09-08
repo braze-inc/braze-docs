@@ -19,7 +19,7 @@ description: "이 문서에는 2018년 9월 릴리스 노트가 포함되어 있
 
 ## 고객 조정
 
-Braze 고객은 이제 [Adjust]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/)를 사용하여 Braze API 키와 Braze 인스턴스 URL을 확인할 수 있으며, 이를 Adjust 플랫폼에서 통합하는 데 사용할 수 있습니다.
+Braze 고객은 이제 [Adjust]({{site.baseurl}}/partners/message_orchestration/attribution/adjust/)를 사용하여 Braze API 키와 Braze 인스턴스 URL을 확인할 수 있으며, 이를 Adjust 플랫폼에서 통합하는 데 사용할 수 있습니다.
 
 ## 세그먼트 필터에 없음
 
@@ -27,7 +27,7 @@ Braze 고객은 이제 [Adjust]({{site.baseurl}}/partners/advertising_technologi
 
 ## 캔버스 수신자 CSV 내보내기
 
-고객은 이제 캔버스에 들어간 사용자에 대한 [데이터]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/)를 내보낼 수 있습니다. 생성된 CSV는 캠페인 CSV와 유사할 것입니다.
+고객은 이제 캔버스에 들어간 사용자에 대한 [데이터]({{site.baseurl}}/user_guide/data/export_braze_data/export_canvas_data/)를 내보낼 수 있습니다. 생성된 CSV는 캠페인 CSV와 유사할 것입니다.
 
 ## 임시로 승인된 iOS 12 세그먼트 필터
 

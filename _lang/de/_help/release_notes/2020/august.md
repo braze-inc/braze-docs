@@ -23,11 +23,11 @@ Bei bestimmten Messaging-Ereignissen von Currents wurden die Tracking-Eigenschaf
 
 ## Amazon Personalize Partnerschaft
 
-Amazon Personalize nutzt maschinelles Lernen, um hochwertige Empfehlungen für Ihre Website und Anwendungen zu erstellen. Mit Amazon Personalize können Sie das Customer-Engagement verbessern, indem Sie personalisierte Produkt- und Inhaltsempfehlungen in Realtime sowie gezielte Marketing-Aktionen ermöglichen. Weitere Informationen finden Sie in unserer [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/) Dokumentation.
+Amazon Personalize nutzt maschinelles Lernen, um hochwertige Empfehlungen für Ihre Website und Anwendungen zu erstellen. Mit Amazon Personalize können Sie das Customer-Engagement verbessern, indem Sie personalisierte Produkt- und Inhaltsempfehlungen in Realtime sowie gezielte Marketing-Aktionen ermöglichen. Weitere Informationen finden Sie in unserer [Amazon Personalize]({{site.baseurl}}/partners/amazon_personalize/) Dokumentation.
 
 ## Vizbee Partnerschaft
 
-Vizbee ermöglicht es allen Smartphones und Smart-TVs in Ihrem Haus, als ein nahtloses Gerät zusammenzuarbeiten und so ein großartiges Nutzer:innen-Erlebnis zu schaffen. Vizbee hilft dabei, bestehende Kanäle für das Marketing von Apps wie Benachrichtigungen, Deeplinks und E-Mails zu nutzen, um Zuschauer auf allen CTV-Geräten (wie Roku, FireTV, Samsung TV, LG TV, etc.) zu gewinnen und zu engagieren. Weitere Informationen finden Sie in unserer [Vizbee]({{site.baseurl}}/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/) Dokumentation. 
+Vizbee ermöglicht es allen Smartphones und Smart-TVs in Ihrem Haus, als ein nahtloses Gerät zusammenzuarbeiten und so ein großartiges Nutzer:innen-Erlebnis zu schaffen. Vizbee hilft dabei, bestehende Kanäle für das Marketing von Apps wie Benachrichtigungen, Deeplinks und E-Mails zu nutzen, um Zuschauer auf allen CTV-Geräten (wie Roku, FireTV, Samsung TV, LG TV, etc.) zu gewinnen und zu engagieren. Weitere Informationen finden Sie in unserer [Vizbee]({{site.baseurl}}/partners/message_orchestration/deeplinking/vizbee_for_tv_deeplinking/) Dokumentation. 
 
 ## Bluedot Partnerschaft
 
@@ -35,4 +35,4 @@ Bluedot ist eine Standort-Plattform, die ein genaues und unkompliziertes Geofenc
 
 ## Iterate Partnerschaft
 
-Iterate macht es Ihnen leicht, von Ihren Kund:innen zu lernen und bietet intelligente, benutzerfreundliche Umfrage-Tools, die wie Ihre Marke aussehen und sich auch so anfühlen. Weitere Informationen finden Sie in unserer [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) Dokumentation. 
+Iterate macht es Ihnen leicht, von Ihren Kund:innen zu lernen und bietet intelligente, benutzerfreundliche Umfrage-Tools, die wie Ihre Marke aussehen und sich auch so anfühlen. Weitere Informationen finden Sie in unserer [Iterate]({{site.baseurl}}/partners/additional_channels_and_extensions/extensions/surveys/iterate/) Dokumentation. 

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: View All Translations for a Campaign"
+nav_title: "GET: View all translations for a campaign"
 article_title: "GET: View All Translations for a Campaign"
 search_tag: Endpoint
 page_order: 1

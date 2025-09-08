@@ -22,7 +22,7 @@ If a user qualifies for multiple Banner campaigns that share the same placement,
 
 ## Can I use Banners in my existing Content Card feed?
 
-Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/).
+Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/).
 
 ## Can users manually dismiss a Banner?
 
@@ -44,7 +44,7 @@ The simpler the messaging in your Banner, the faster it will render. It’s best
 
 ## Are all Liquid tags supported?
 
-No. However, most Liquid tags are supported for Banner messages, except for `catalog_items` that are re-rendered using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+No. However, most Liquid tags are supported for Banner messages, except for `catalog_items` that are re-rendered using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 
 ## Can I capture click events?
 

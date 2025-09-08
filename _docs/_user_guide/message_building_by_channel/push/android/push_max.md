@@ -72,7 +72,7 @@ Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/brazea
 
 Time to Live (TTL) can track failed push notifications to Firebase Cloud Messaging (FCM) and retry the notification when the user is likely to receive it.
 
-By default, Time to Live is set to 28 days, which is the maximum. You can decrease the default TTL for all new Android push messages from **Settings** > **Workspace Settings** > **Push Time to Live (TTL)**, or you can configure the number of days on a per message basis in the **Settings** tab when composing an Android push notification.
+By default, Time to Live is set to 28 days, which is the maximum. You can decrease the default TTL for all new Android push messages from **Settings** > **Workspace Settings** > **Push Settings**, or you can configure the number of days on a per message basis in the **Settings** tab when composing an Android push notification.
 
 ![Time to Live field set to 28 days.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 

@@ -10,7 +10,7 @@ guide_top_text: |
 
     Shopify is a leading global commerce company, providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services that are engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
-    This landing page is home to all things for the <b>legacy</b> Shopify integation. For information on the current Shopify integration, refer to <a href="/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/">Shopify</a>.
+    This landing page is home to all things for the <b>legacy</b> Shopify integation. For information on the current Shopify integration, refer to <a href="/docs/partners/ecommerce/shopify/">Shopify</a>.
 description: "This landing page is home to all things for the legacy Shopify integation, including an overview, setup guide, Shopify data processing, and more."
 
 guide_featured_title: "Featured articles"

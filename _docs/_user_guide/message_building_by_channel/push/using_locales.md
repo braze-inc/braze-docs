@@ -1,5 +1,5 @@
 ---
-nav_title: Locales in Messages
+nav_title: Locales in messages
 article_title: Locales in Messages
 page_order: 9
 description: "This article provides steps on how to use locales in your push notifications."
@@ -19,7 +19,7 @@ Multi-language support and locales in messages are currently in early access. Co
 
 To use locales in your messaging, compose a push campaign or Canvas, then complete the following:
 
-1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated.
+1. Add translation tags {% raw %}`{% translation id1%}` and `{% endtranslation %}`{% endraw %} to wrap all text, image, or link URLs to be translated. Each translation ID (`id1`) must be unique.
 
 ![Push notification composer with translation tags added to the title and message fields.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})
 

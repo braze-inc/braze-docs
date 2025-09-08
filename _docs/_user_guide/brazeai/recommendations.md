@@ -1,5 +1,5 @@
 ---
-nav_title: Item Recommendations
+nav_title: Item recommendations
 article_title: Item recommendations in Braze
 page_order: 15
 search_rank: 1
@@ -12,7 +12,7 @@ description: "Learn all about item recommendation engines in Braze."
 
 ## Prerequisites
 
-Before you can create or use item recommendations in Braze, you'll need to [create at least one catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/)&#8212;only items from that catalog will be recommended to users.
+Before you can create or use item recommendations in Braze, you'll need to [create at least one catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create/)&#8212;only items from that catalog will be recommended to users.
 
 ## Types and use cases
 
@@ -23,7 +23,7 @@ As part of the [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/rec
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
 With AI item recommendations, you can also further filter the items available with 
-[selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
+[selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
 
 {% alert tip %}
 AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
@@ -298,7 +298,7 @@ Highlight items that your users have recently liked with increased frequency. Fo
 
 ### Selections-based {#selections-based}
 
-[Selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
+[Selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
 
 The previous three types all involve setting up and training a recommendation model in Braze. While you can use selections in those models as well, you can also accomplish some recommendation use cases with just catalog selections and Liquid personalization.
 
@@ -322,7 +322,7 @@ For example, a tech eCommerce platform could alert tech enthusiasts about the la
 3. Make sure **Randomize Sort Order** is turned off.
 4. For **Sort Field**, select your date added field.
 5. Set **Sort Order** to descending.
-6. [Use the selection in messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
+6. [Use the selection in messaging]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/#using-selections-in-messaging).
 {% enddetails %}
 {% endtab %}
 
@@ -337,10 +337,10 @@ For example, an online bookstore could offer a "Surprise Me" feature, recommendi
 {% enddetails %}
 
 {% details Setting it up %}
-1. [Create a selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#creating-a-selection) based on your catalog.
+1. [Create a selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/#creating-a-selection) based on your catalog.
 2. (Optional) Add any filters if desired.
 3. Turn on **Randomize Sort Order**.
-4. [Use the selection in messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
+4. [Use the selection in messaging]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/#using-selections-in-messaging).
 {% enddetails %}
 {% endtab %}
 {% endtabs %}

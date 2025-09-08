@@ -64,7 +64,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
 
-![LINE avec un message affiché dans l'aperçu.][1]
+![Composez LINE avec un message affiché dans l'aperçu.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Conseils
 
@@ -80,7 +80,7 @@ L'aspect final des messages de droite à gauche dépend largement de la manière
 
 Passez à l'onglet **Test** pour envoyer un message LINE de test aux groupes de test de contenu ou aux utilisateurs individuels, ou prévisualisez le message en tant qu'utilisateur directement dans Braze.
 
-![L'onglet "Tests" affichant un aperçu d'un message de test.][2]
+![L'onglet "Tests" affiche un aperçu d'un message de test.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Étape 4 : Créer le reste de votre campagne ou de votre Canvas
 
@@ -97,7 +97,7 @@ Vous pouvez spécifier des contrôles de livraison, tels que permettre aux utili
 
 ### Choisir les utilisateurs à cibler
 
-[Utilisez des segments ou des filtres pour cibler vos utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/). Vous devriez déjà avoir choisi le groupe d'abonnement, ce qui restreint les utilisateurs par le niveau ou la catégorie de communication qu'ils souhaitent avoir avec vous. 
+[Utilisez des segments ou des filtres pour cibler vos utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Vous devriez déjà avoir choisi le groupe d'abonnement, ce qui restreint les utilisateurs par le niveau ou la catégorie de communication qu'ils souhaitent avoir avec vous. 
 
 Sélectionnez le plus grand public parmi vos segments, et réduisez éventuellement ce segment davantage avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
 
@@ -127,5 +127,3 @@ Lorsque vous avez terminé de concevoir votre campagne ou votre canvas, vérifie
 Ensuite, consultez [le reporting LINE]({{site.baseurl}}/line/reporting/) pour savoir comment vous pouvez accéder aux résultats de vos campagnes LINE.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

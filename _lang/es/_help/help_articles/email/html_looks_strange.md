@@ -10,14 +10,14 @@ channel: email
 
 # Solución de problemas de representación HTML en correos electrónicos de prueba
 
-Si tu [correo electrónico de prueba][37] no parece correcto, te recomendamos que compruebes primero tu configuración HTML. A continuación, puedes comprobar si existen estos problemas:
+Si tu [correo electrónico de prueba]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa) no parece correcto, te recomendamos que compruebes primero tu configuración HTML. A continuación, puedes comprobar si existen estos problemas:
 * [Conflictos de prórroga](#check-conflicts)
 * [Representación del correo electrónico](#check-rendering)
 * [Inserción de CSS](#switch-css-inlining)
 
 ### Conflictos de prórroga
 
-Algunas extensiones de navegador pueden causar problemas con nuestro editor de correo electrónico. Un ejemplo es [Grammarly][38]) cuando se utiliza con Google Chrome. Si utilizas una de estas extensiones, deberías: 
+Algunas extensiones de navegador pueden causar problemas con nuestro editor de correo electrónico. Un ejemplo es [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)) cuando se utiliza con Google Chrome. Si utilizas una de estas extensiones, deberías: 
 - Editar correos electrónicos Braze en un navegador que no tenga Grammarly como extensión del navegador
 - Ponte en contacto con tu director de cuentas Braze y pídele que cambie tus editores de correo electrónico a sólo HTML o a texto sin formato. 
 
@@ -38,7 +38,3 @@ Hay veces que las vistas previas de Inbox Vision siguen sin coincidir con lo que
 
 _Última actualización: 21 de diciembre de 2021_
 
-[37]: {{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa
-[38]: https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
-[39]: https://www.emailonacid.com/
-[40]: https://litmus.com/

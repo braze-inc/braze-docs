@@ -4,6 +4,7 @@ article_title: Context
 alias: /context/
 page_order: 1.5
 page_type: reference
+toc_headers: "h2"
 description: "This reference article covers how to create and use Context steps in your Canvas."
 tool: Canvas
 
@@ -44,6 +45,146 @@ For example,
 {% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
+
+## Creating a Context step
+
+### Step 1: Add a step
+
+Add a step to your Canvas, then drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button and select **Context**.
+
+### Step 2: Define the variables
+
+{% alert note %}
+You can define up to 10 context variables for each Context step.
+{% endalert %}
+
+To define a context variable:
+
+1. Give your context variable a **name**.
+2. Select a [data type](#context-variable-types).
+3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
+4. Select **Preview** to check the value of your context variable.
+5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
+6. When you're finished, select **Done**.
+
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
+
+## Context variable data types {#context-variable-types}
+
+Context variables that are created or updated in the step can be assigned the following data types.
+
+{% alert note %}
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format), but context variables do not support nested objects.
+{% endalert %}
+
+| Data type | Example variable name | Example value |
+|---|---|---|
+|Boolean| loyalty_program |{% raw %}<code>true</code>{% endraw %}| 
+|Number| credit_score |{% raw %}<code>740{% endraw %}|
+|String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
+|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
+|Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
+|Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+By default, the time data type is in UTC. If you use a string data type to store a time value, you can define the time as a different time zone like PST. 
+
+For example, if you're sending a message to a user the day before their birthday, you would save the context variable as a time data type because there's Liquid logic associated with sending the day before. However, if you're sending a holiday message on Christmas Day (December 25), you wouldn't need to reference the time as a dynamic variable, so using a string data type would be preferable.
+
+## Using context variables {#using-context-variables}
+
+For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
+
+Users will enter the Canvas when they purchase a plane ticket. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
+
+![Context variable set up to track if a passenger qualifies for VIP lounge access.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
+
+In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is `first_class`.
+
+Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
+
+- First-class ticket passengers will receive: "Enjoy exclusive VIP lounge access!"
+- Business and economy ticket passengers will receive: "Upgrade your flight for exclusive VIP lounge access."
+
+![A Message step with different messages to send, depending on the type of plane ticket purchased.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
+
+{% alert tip %}
+You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
+{% endalert %}
+
+### For Action Paths and exit criteria
+
+You can leverage comparing property filters with either context variables or custom attributes in these trigger actions: **Perform Custom Event** and **Make Purchase**. These action triggers also support property filters for both basic and nested properties. 
+
+- When comparing against basic properties, the available comparisons will match the type of the property defined by the custom event. For example, string properties will have exactly equal, regex matches. Boolean properties will be true or false. 
+- When comparing against nested properties, types are not pre-defined, so you can select comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for nested custom attributes. If you select a data type that doesn't match the actual data type of the nested property at the time of comparison, the user will not match the Action Path or exit criteria.
+
+#### Action Path examples
+
+{% alert important %}
+For custom attribute comparisons, we'll use the custom attribute value at the time the action is performed. This means a user won't match the Action Path group if a user doesn't have this custom attribute populated at the time of comparison, or if the custom attribute value doesn't match the defined property comparisons. This is the case even if the user would have matched when they entered the Action Path step.
+{% endalert %}
+
+{% tabs %}
+{% tab Perform custom event %}
+
+The following Action Path is set up to sort users who performed the custom event `Account_Created` with the basic property `source` to the context variable `app_source_variable`.
+
+![An example Action Path that references a context variable when performing a custom event.]({% image_buster /assets/img/context_action_path1.png %})
+
+{% endtab %}
+{% tab Make purchase %}
+
+The following Action Path is set up to match the basic property `brand` for the specific product name `shoes` to a context variable `promoted_shoe_brand`.
+
+![An example Action Path that references a context variable when making a purchase.]({% image_buster /assets/img/context_action_path2.png %})
+
+{% endtab %}
+{% endtabs %}
+
+#### Exit criteria examples
+
+{% tabs %}
+{% tab Perform custom event %}
+
+The exit criteria states that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
+
+- They perform the custom event **Abandon Cart**, and
+- The basic property **Item in Cart** matches the string value of the context variable `cart_item_threshold`.
+
+![Exit criteria set up to exit a user if they perform a custom event based on the context variable.]({% image_buster /assets/img/context_exit_criteria1.png %})
+
+{% endtab %}
+{% tab Make purchase %}
+
+The exit criteria states that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
+
+- They make a specific purchase for the "book" product name, and
+- That purchase's nested property "loyalty_program" is equal to the user's custom attribute "VIP".
+
+![Exit criteria set up to exit a user if they make a purchase.]({% image_buster /assets/img/context_exit_criteria2.png %})
+
+{% endtab %}
+{% endtabs %}
+
+## Previewing user paths
+
+We recommend testing and previewing your user paths to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+
+Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
+
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent. 
+
+## Converting Connected Content strings to JSON
+
+When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call will be evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
+
+{%raw%}
+```liquid
+{% connected_content http://example.com :save product %}
+{{ product | as_json_string }}
+```
+{%endraw%}
 
 ## Time zone consistency standardization
 
@@ -101,89 +242,6 @@ This is an example of the Liquid snippet:
 Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
 ```
 {% endraw %}
-
-## Creating a Context step
-
-### Step 1: Add a step
-
-Add a step to your Canvas, then drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button and select **Context**.
-
-### Step 2: Define the variables
-
-{% alert note %}
-You can define up to 10 context variables for each Context step.
-{% endalert %}
-
-To define a context variable:
-
-1. Give your context variable a **name**.
-2. Select a [data type](#context-variable-types).
-3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
-4. Select **Preview** to check the value of your context variable.
-5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
-6. When you're finished, select **Done**.
-
-Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
-
-### Step 3: Test user paths (optional)
-
-If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience. Look out for common scenarios that create [invalid context variables](#troubleshooting).
-
-For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
-
-## Context variable data types {#context-variable-types}
-
-Context variables that are created or updated in the step can be assigned the following data types.
-
-{% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format), but context variables do not support nested objects.
-{% endalert %}
-
-| Data type | Example variable name | Example value |
-|---|---|---|
-|Boolean| loyalty_program |{% raw %}<code>true</code>{% endraw %}| 
-|Number| credit_score |{% raw %}<code>740{% endraw %}|
-|String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
-|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
-|Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
-|Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-By default, the time data type is in UTC. If you use a string data type to store a time value, you can define the time as a different time zone like PST. 
-
-For example, if you're sending a message to a user the day before their birthday, you would save the context variable as a time data type because there's Liquid logic associated with sending the day before. However, if you're sending a holiday message on Christmas Day (December 25), you wouldn't need to reference the time as a dynamic variable, so using a string data type would be preferable.
-
-## Using context variables {#using-context-variables}
-
-For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
-
-Users will enter the Canvas when they purchase a plane ticket. To determine lounge access eligibility, we'll create a context variable called `lounge_access_granted` in a Context step, then reference that context variable in subsequent steps of the user journey.
-
-![Context variable set up to track if a passenger qualifies for VIP lounge access.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
-
-In this Context step, we'll use {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} to determine if the type of flight they've purchased is `first_class`.
-
-Next, we'll create a Message step to target users where {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} is `true`. This message will be a a push notification that includes personalized lounge information. Based on this context variable, the eligible passengers will receive the relevant messages before their flight.
-
-- First-class ticket passengers will receive: "Enjoy exclusive VIP lounge access!"
-- Business and economy ticket passengers will receive: "Upgrade your flight for exclusive VIP lounge access."
-
-![A Message step with different messages to send, depending on the type of plane ticket purchased.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
-
-{% alert tip %}
-You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
-{% endalert %}
-
-## Converting Connected Content strings to JSON
-
-When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call will be evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
-
-{%raw%}
-```liquid
-{% connected_content http://example.com :save product %}
-{{ product | as_json_string }}
-```
-{%endraw%}
 
 ## Troubleshooting {#troubleshooting}
 

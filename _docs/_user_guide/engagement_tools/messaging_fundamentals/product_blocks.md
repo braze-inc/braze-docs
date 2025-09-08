@@ -1,5 +1,5 @@
 ---
-nav_title: Product Blocks
+nav_title: Product blocks
 article_title: Drag-and-Drop Product Blocks
 page_order: 7
 description: "This reference article covers drag-and-drop product blocks, which allow users to quickly add and configure dynamic or static showcases of catalog items."
@@ -31,7 +31,7 @@ The drag-and-drop product block feature is in early access and is currently only
 | Product block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
 | Dynamic | Personalize your messaging with a showcase of products based on customer interactions by using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
-| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | Perfect for showcasing new product launches or category-specific offerings.| |
+| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). | Perfect for showcasing new product launches or category-specific offerings.| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Product block content configuration
