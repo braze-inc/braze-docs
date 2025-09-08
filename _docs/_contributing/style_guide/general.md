@@ -1,8 +1,8 @@
 ---
 nav_title: General guidelines
-article: General guidelines
+article_title: General guidelines
 description: "These are the general guidelines for Braze documentation."
-page_order: 1
+page_order: 2
 noindex: true
 ---
 
