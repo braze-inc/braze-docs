@@ -2773,4 +2773,6 @@ validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_gui
 validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
 
+validurls['/docs/handbooks/'] = '/docs/';
+
 // validurls['OLD'] = 'NEW';
