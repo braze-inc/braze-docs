@@ -86,5 +86,5 @@ Experiment Paths will record users who enter each step and convert while in the 
 
 Experiment Paths have their own conversion windows, rather than inheriting the same duration set at the Canvas level. These metrics are separated at a Canvas level.
 
-- If a conversion (configured in the Experiement Paths step) happens in the conversion window set on the step, it will be attributed to the step. 
-- If a conversion occurs outside of the conversion window, it'll be attributed to the Canvas. 
+- If a conversion (configured in the Experiment Paths step) happens in the conversion window set on the step, it will be attributed to the step. 
+- If a conversion occurs outside of the conversion window, it will be attributed to the Canvas. 
