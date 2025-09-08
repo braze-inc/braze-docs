@@ -1,6 +1,6 @@
 ---
 nav_title: Reusing content
-article: Reusing content
+article_title: Reusing content
 description: "Learn how to reuse content across Braze Docs, so you can improve content consistency and reduce the time for content creation."
 page_order: 4
 noindex: true
