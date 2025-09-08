@@ -749,6 +749,14 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtab %}
 {% endtabs %}
 
+## Customer creation behavior
+
+The Shopify integration includes a `shopify_customer_create` event that appears in the integration settings UI. However, this event behaves differently from other custom events tracked by the integration.
+
+{% alert important %}
+The `shopify_customer_create` event is not logged in the same way as other custom events. When a customer is created in Shopify, the customer profile will be created in Braze, but the creation event will not appear in the custom event log for that user. This behavior is similar to customer updates, where the data sync occurs without generating a trackable event entry.
+{% endalert %}
+
 ## Supported Shopify custom attributes
 {% tabs local %}
 {% tab Example Payload %}

@@ -64,6 +64,10 @@ The following events will be enabled by default in the standard integration.
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/).
 
+{% alert important %}
+The Shopify integration includes a `shopify_customer_create` event that appears in the integration settings UI. However, this event behaves differently from other custom events. When a customer is created in Shopify, the customer profile will be created in Braze, but the creation event will not appear in the custom event log for that user. This is similar to customer updates, where the data sync occurs without generating a trackable event entry.
+{% endalert %}
+
 ### Historical backfill setup
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
