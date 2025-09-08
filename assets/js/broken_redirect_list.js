@@ -2773,6 +2773,9 @@ validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_gui
 validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
 
+
+validurls['/docs/handbooks/'] = '/docs/';
+
 validurls['/docs/user_guide/getting_started/braze_pilot/overview/'] = '/docs/user_guide/getting_started/braze_pilot/';
 validurls['/docs/user_guide/analytics/reporting/reports_overview/'] = '/docs/user_guide/analytics/reporting';
 validurls['/docs/user_guide/data/unification/data_transformation/overview/'] = '/docs/user_guide/data/unification/data_transformation/';
