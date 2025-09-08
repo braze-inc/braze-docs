@@ -315,7 +315,11 @@ A notification will inform you whether your credentials have been successfully v
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
+- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage.
+
+{% alert important %}
+**File retention and cleanup**: Export files stored in S3 buckets are automatically deleted after the download link expires (4 hours from when the export email is sent). This means that segment export files and other exported data will not be permanently stored in your S3 bucket—they are temporarily available for download only. If you need to retain the export data beyond the 4-hour window, download the files before the link expires.
+{% endalert %} 
 
 ## Multiple connectors
 

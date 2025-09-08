@@ -1,5 +1,7 @@
 _algolia_api_key
 .gem/
+.bundle/
+vendor/bundle/
 /_site
 .sass-cache
 .DS_Store

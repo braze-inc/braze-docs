@@ -29,7 +29,11 @@ The CSV output contains the data from each user profile captured in the segment 
 Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, see [Exporting large segments]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).
 {% endalert %}
 
-If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting, and requires you to be logged into the dashboard for access.
+If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after 4 hours of exporting, and requires you to be logged into the dashboard for access.
+
+{% alert important %}
+**File retention**: Files exported to S3 buckets are automatically deleted when the download link expires (4 hours from when the export email is sent). If you need to retain the exported data beyond this 4-hour window, make sure to download the files before the link expires.
+{% endalert %}
 
 ## Data included in export
 
