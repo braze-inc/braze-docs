@@ -64,9 +64,7 @@ The following events will be enabled by default in the standard integration.
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/).
 
-{% alert important %}
-The Shopify integration includes a `shopify_customer_create` event that appears in the integration settings UI. However, this event behaves differently from other custom events. When a customer is created in Shopify, the customer profile will be created in Braze, but the creation event will not appear in the custom event log for that user. This is similar to customer updates, where the data sync occurs without generating a trackable event entry.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 ### Historical backfill setup
 
