@@ -26,13 +26,13 @@ If you're using **your own S3 bucket**, this could happen because:
 
 If you're using a **Braze S3 bucket**, this could happen because:
 
-- The object is no longer there. This could occur if you clicked on a link for an export that ran over 4 hours ago, as files are automatically deleted from S3 when the download link expires. If this is the case, re-run your export.
+- The object is no longer there. This could occur if you clicked on a link for an export that ran over four hours ago, as files are automatically deleted from S3 when the download link expires. If this is the case, re-run your export.
 - You selected the download link right away, before the S3 was ready to serve the object. Wait a few minutes and try again. Larger reports will generally take longer. 
 - The export is too big, so our server ran out of memory trying to create this zip file. We'll automatically email the user attempting this export if this occurs. If you consistently run into this issue, we recommend that you use your own S3 buckets in the future.
 
 ### 'ExpiredToken'
 
-This happens if the email was sent over 4 hours ago. Re-run the export and download it within 4 hours.
+This happens if the email was sent over four hours ago. Re-run the export and download it within four hours.
 
 This could also be caused by Braze no longer having access to the S3 bucket you are downloading the data to. Make sure you've updated your S3 credentials using these steps.
 
