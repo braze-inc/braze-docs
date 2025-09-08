@@ -21,39 +21,41 @@ _This integration is maintained by Blings._
 
 ## Integration  
 
-If you are interested in activating the Blings and Braze integration, contact Blings support to receive your personalized HTML snippet.  
+### Step 1: Obtain your Blings HTML snippet
 
-### Step 1: Request your snippet
+{% tabs %}
+{% tab Blings business and free plans %}
 
-Contact Blings for the HTML snippet that corresponds to your campaign use case.  
+#### Blings business and free plans
+
+Locate and copy your HTML snippet directly in the Blings app.
+
+1. Go to the **Connect** tab of the selected MP5 Project.
+2. Add Braze Liquid tags to the corresponding variables in the Blings **Connect** page. The tags will dynamically populate values in the HTML snippet. 
+
+![Blings HTML snippet.]({% image_buster /assets/img/blings/blings_connect_audience.png %}){: style="max-width:70%;"}  
+
+{% endtab %}
+{% tab Blings Enterprise plan %}
+
+#### Blings Enterprise plan
+
+Request the HTML snippet from your Blings representative. 
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Create a Braze campaign  
 
-In Braze, create a new email or in-app message campaign and insert the HTML snippet provided by Blings.  
+In Braze, create a new email or in-app message campaign and insert the Blings HTML snippet.
 
-### Step 3: Replace the default Blings parameters with Braze personalization Liquid tags  
+![Blings Braze Campaign.]({% image_buster /assets/img/blings/blings_braze_campaign.png %})  
 
-Swap the placeholders in the snippet provided by Blings with Braze Liquid personalization tags so that user data is dynamically pulled.  
+### Step 3: Test and launch  
 
-For example, let's consider this snippet: 
+Preview the campaign in Braze to confirm the personalized fields are populating correctly. Then, deploy your MP5 campaign at scale.
 
-{% raw %}
-```liquid
-https://blings.mp5.live/timhortons?&user_points={Points}&Name={First_Name}
-```  
-
-After being updated with Braze tokens, the snippet would become:  
-
-```liquid
-https://blings.mp5.live/timhortons?&user_points={{custom_attribute.${points}}}&Name={{${first_name}}}
-```  
-{% endraw %}
-
-![Blings gif in Braze campaign.]({% image_buster /assets/img/blings/blings_braze_campaign.png %})  
-
-### Step 4: Test and launch  
-
-Preview the campaign in Braze to confirm the personalized fields are populating correctly. After validating, deploy your personalized interactive video campaign at scale.  
+![Blings Braze preview.]({% image_buster /assets/img/blings/blings_braze_preview.png %}){: style="max-width:70%;"}  
 
 ## Getting support  
 
