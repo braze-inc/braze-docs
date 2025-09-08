@@ -85,7 +85,7 @@ Note that non-rate-limited campaigns may exceed these delivery limits. However, 
 
 #### Example
 
-If you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute.
+If you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over eight minutes. Your campaign will deliver no more than 10,000 messages for each of the first seven minutes, and 5,000 over the last minute.
 
 #### Number of sends
 
