@@ -16,6 +16,8 @@ page_order: 4
 
 The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) to capture key shopping behaviors. For implementation examples and marketing strategies using these events, refer to [eCommerce use cases]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
 
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
+
 {% tabs %}
 {% tab Example Payload %}
 {% subtabs global %}
