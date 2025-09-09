@@ -10,6 +10,11 @@ description: "Learn how to log purchases through the Braze SDK."
 
 > Learn how to log in-app purchases through the Braze SDK, so you can determine your revenue over-time and across sources. This will let you segment users [based on their lifetime value]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) using custom events, custom attributes, and purchase events.
 
+{% alert important %}
+**Currency conversion behavior**<br>
+Be aware that any currency reported other than USD displays in the Braze UI in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
+{% endalert %}
+
 {% alert note %}
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
 {% endalert %}
