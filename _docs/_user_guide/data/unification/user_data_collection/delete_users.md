@@ -1,11 +1,11 @@
 ---
-nav_title: User Delete
-article_title: User Delete
-page_order: 0
+nav_title: Deleting users
+article_title: Deleting users
+page_order: 4.2
 description: "TODO" 
 ---
 
-# User Delete
+# Deleting users
 
 > User deletion is a tool that Braze customers can use to manage their user base.  Customers who have proper user permissions can perform deletion of user profiles that are no longer needed, created in error, or are undergoing a deletion request for regulatory reasons.
 
