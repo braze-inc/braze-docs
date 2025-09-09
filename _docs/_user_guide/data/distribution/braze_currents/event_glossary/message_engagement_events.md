@@ -1962,6 +1962,13 @@ Canvas, Progression
 
 This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
 
+{% alert note %}
+For Canvas Step Progression events, note the current state of these fields:
+- `exit_reason`: This field is not currently being populated.
+- `is_canvas_entry`: This field is not currently being populated.
+- `progression_type`: This field is currently only populated with "Advanced to next step".
+{% endalert %}
+
 {% tabs %}
 {% tab Amplitude %}
 ```json
