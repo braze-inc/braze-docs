@@ -56,7 +56,11 @@ Generally, we will create one file per 5,000 users to optimize processing. Expor
 
 {% enddetails %}
 
-We strongly suggest setting up your own S3 or Azure credentials (through the **Technology Partners** page) when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP containing all the user files can be downloaded. The URL will only become a valid location after the export is ready.
+We strongly suggest setting up your own S3 or Azure credentials (by going to **Partner Integrations** > **Technology Partners** > partner page) when using this endpoint to enforce your own bucket policies on the export. 
+
+![The Technology Partners page for Azure, with a tab for Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
+
+If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP containing all the user files can be downloaded. The URL will only become a valid location after the export is ready.
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (for example, create a segment where random bucket number is less than 1,000 or between 1,000 and 2,000).
 
