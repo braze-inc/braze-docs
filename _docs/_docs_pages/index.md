@@ -67,8 +67,6 @@ popular_topic_list:
 helpful_resources_list:
   - name: Innovation Statement
     link: /docs/innovation_statement/
-  - name: Entitlements, Support & Success Services Handbooks
-    link: /docs/handbooks/
   - name: Data Retention
     link: /docs/api/data_retention/
   - name: Data Protection Technical Assistance

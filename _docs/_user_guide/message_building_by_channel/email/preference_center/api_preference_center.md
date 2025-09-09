@@ -1,13 +1,13 @@
 ---
-nav_title: Overview
-article_title: Preference Center Overview
+nav_title: API email preference center
+article_title: API email preference center
 page_order: 1
-description: "This article describes the email preference center and how to customize it."
+description: "This article describes the API email preference center and how to customize it."
 channel:
   - email
 ---
 
-# Preference center overview
+# API email preference center
 
 > Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/). This article includes steps for building an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
