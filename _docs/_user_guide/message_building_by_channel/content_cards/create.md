@@ -193,7 +193,7 @@ If you want to remove the Content Card from your users' feeds, select **Remove c
 ![Dialog for confirming Content Card deactivation]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
-Do you want your content to last longer than 30 days? Try Banners.
+Do you want your content to last longer than 30 days? Try [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
 ### Card removal events {#action-based-card-removal}
