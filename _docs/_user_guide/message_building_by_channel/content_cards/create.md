@@ -193,11 +193,7 @@ If you want to remove the Content Card from your users' feeds, select **Remove c
 ![Dialog for confirming Content Card deactivation]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
-Do you want your Content Cards to seem like they're lasting longer than the 30-day max? One way to accomplish this is to do the following:<br><br>
-
-1. Set the duration of the Content Card for 30 days.
-2. Set the campaign re-eligibility to 30 days.
-3. Set the campaign to trigger on "Session Start."
+Do you want your content to last longer than 30 days? Try Banners.
 {% endalert %}
 
 ### Card removal events {#action-based-card-removal}
