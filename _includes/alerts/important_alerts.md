@@ -45,7 +45,7 @@ The plans to phase out the purchase event will be announced in late 2025. In the
 {% if include.alert == 'S3 file bucket export' %}
 
 {% alert important %}
-Export files stored in S3 buckets are automatically deleted after the download link expires (four hours from when the export email is sent).
+Export files stored in S3 buckets are automatically deleted after the download link expires (four hours from when the export email is sent, unless otherwise noted).
 {% endalert %} 
 
 {% endif %}
