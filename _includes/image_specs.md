@@ -61,7 +61,7 @@ All in-app messages have a recommended image size of 500 KB, maximum image size 
 
 | Type | Aspect ratio | Image quality | Notes |
 | --- | --- | --- | --- |
-| Modal (image only) | 1:1 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 600 px | The message will resize to fit images of most aspect ratios. |
+| Modal (image only) | 1:1 | Maximum Recommended Resolution: 1200 x 2000 px <br> Minimum resolution: 600 x 600 px | The message will resize to fit images of most aspect ratios. The recommended maximum resolution has a 3:5 aspect ratio, which may not provide optimal results - while larger images are usable, they may lead to longer load times. <br> The ideal aspect ratio for images is 1:1 and not meeting this ratio may trigger a warning during upload. This warning is a suggestion for best results and does not prevent the upload of larger images. |
 | Modal with text | 29:10 | High resolution 1450 x 500 px <br> Minimum resolution 600 x 205 px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
