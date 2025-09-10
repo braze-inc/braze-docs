@@ -2789,4 +2789,11 @@ validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_mm
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_rcs/'] = '/docs/about_rcs';
 validurls['/docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/'] = '/docs/about_webhooks/';
 
+validurls['/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
+validurls['/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
+validurls['/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_23v17.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_23v17.pdf';
+validurls['/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_24_2.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_24_2.pdf';
+validurls['/docs/assets/download_file/Braze_Entitlements_Handbook_25.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Entitlements_Handbook_25.pdf';
+validurls['/docs/handbooks/'] = 'https://braze.com/unlisted_docs/handbooks/';
+
 // validurls['OLD'] = 'NEW';
