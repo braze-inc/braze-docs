@@ -12,11 +12,6 @@ description: "This reference article describes eCommerce recommended events and 
 > This page covers eCommerce recommended events and properties. These events are created to capture key shopping behaviors that marketers need to trigger effective messaging, such as targeting abandoned carts.
 
 {% alert important %}
-**Currency conversion behavior**<br>
-Be aware that any currency reported other than USD displays in the Braze UI in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
-{% endalert %}
-
-{% alert important %}
 eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're using the new [Shopify connector]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), these recommended events will be automatically available through the integration.
 {% endalert %}
 
@@ -25,6 +20,8 @@ Braze recognizes that data planning takes time. We encourage our customers to fa
 ## Types of eCommerce recommended events
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
+Any non-USD currency reported will display in Braze in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
