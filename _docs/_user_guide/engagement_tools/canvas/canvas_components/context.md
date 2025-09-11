@@ -74,7 +74,7 @@ Now you can use your context variable anywhere you use Liquid, such as in Messag
 Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_strong`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
