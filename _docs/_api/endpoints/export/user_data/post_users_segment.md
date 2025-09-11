@@ -171,10 +171,6 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 
 ## Response
 
-{% alert note %}
-If you see `object_prefix` in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint. Any data exported using this endpoint will go directly to your S3 bucket.
-{% endalert %}
-
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -186,6 +182,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 After the URL is made available, it will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+
+If you see `object_prefix` in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint. Any data exported using this endpoint will go directly to your S3 bucket.
 
 ## Example user export file output
 
