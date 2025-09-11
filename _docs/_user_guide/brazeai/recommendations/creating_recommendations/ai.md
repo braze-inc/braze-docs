@@ -296,32 +296,3 @@ This event has a property of `"sku": "ADI-RD-8"`, which maps to the second item 
 When you're ready, select **Create Recommendation**. This process can take anywhere from 10 minutes to 36 hours to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
 You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every week (paid) or month (free).
-
-## Plan-specific features
-
-The following table describes the differences between the free and pro version of the AI Personalized, Popular, and Trending recommendation types:
-
-| Area                   | Free version                          | Pro version            |
-| :---------------------- | ------------------------------------- | :--------------------------------------- |
-| User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
-| Model retraining frequency  | Monthly                               | Weekly                                   |
-| Maximum recommendation models | 1 model per type<sup>2</sup> | 100 models per type<sup>2</sup> |
-
-<sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup><br>
-<sup>2. Available recommendation types are AI Personalized, Most recent, Most popular, and Trending.</sup>
-
-## Frequently asked questions (FAQ) {#faq}
-
-### What causes "Most popular" items to be mixed into other models' recommendations?
-
-When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
-
-This happens under a few specific conditions:
-
-- The model finds fewer than 30 items that match your criteria.
-- Relevant items are no longer available or in stock.
-- Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
-
-### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
-
-Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
