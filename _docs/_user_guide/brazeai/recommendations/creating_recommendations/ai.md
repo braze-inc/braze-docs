@@ -17,6 +17,8 @@ Use AI item recommendations to calculate the most popular products or create per
 [AI Personalized recommendations](#recommendation-types) work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 {% endalert %}
 
+{% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
+
 ## Creating an AI item recommendation
 
 ### Prerequisites
