@@ -20,7 +20,7 @@ description: "This article outlines details about the Export users by segment Br
 When using this endpoint, note the following:<br><br>1. The `fields_to_export` field in this API request is **required**.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL or to an S3 bucket if this integration is already set up.
 
 Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
 
@@ -164,12 +164,16 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 
 ## Important reminders
 
-- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only contain data from the last 90 days.
+- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only data from the last 90 days.
 - Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
 - The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
 - Attempting to export a segment a second time while the first export job is still running will result in a 429 error.
 
 ## Response
+
+{% alert note %}
+If you see `object_prefix` in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint.  Any data exported using this endpoint will go directly to your S3 bucket.
+{% endalert %}
 
 ```json
 Content-Type: application/json
