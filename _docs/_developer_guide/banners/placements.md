@@ -575,23 +575,26 @@ AppDelegate.braze?.banners.getBanner(for: "placement_id_homepage_top") { banner 
 // Returns the Banner instance
 Banner banner = Braze.getInstance(context).getBanner("placement_id_homepage_top");
 
-// Returns the string property
-String stringProperty = banner.getStringProperty("color");
-
-// Returns the boolean property
-Boolean booleanProperty = banner.getBooleanProperty("expanded");
-
-// Returns the number property
-Number numberProperty = banner.getNumberProperty("height");
-
-// Returns the timestamp property (as a Long)
-Long timestampProperty = banner.getTimestampProperty("account_start");
-
-// Returns the image URL property as a String of the URL
-String imageProperty = banner.getImageProperty("homepage_icon");
-
-// Returns the JSON object property as a JSONObject
-JSONObject jsonObjectProperty = banner.getJSONProperty("footer_settings");
+// banner may be undefined or null
+if (banner != null) {
+  // Returns the string property
+  String stringProperty = banner.getStringProperty("color");
+  
+  // Returns the boolean property
+  Boolean booleanProperty = banner.getBooleanProperty("expanded");
+  
+  // Returns the number property
+  Number numberProperty = banner.getNumberProperty("height");
+  
+  // Returns the timestamp property (as a Long)
+  Long timestampProperty = banner.getTimestampProperty("account_start");
+  
+  // Returns the image URL property as a String of the URL
+  String imageProperty = banner.getImageProperty("homepage_icon");
+  
+  // Returns the JSON object property as a JSONObject
+  JSONObject jsonObjectProperty = banner.getJSONProperty("footer_settings");
+}
 ```
 {% endsubtab %}
 
