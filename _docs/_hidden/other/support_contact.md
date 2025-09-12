@@ -317,6 +317,12 @@ a:hover {
 #support-search-div .aa-Form button {
   padding-top: 10px;
 }
+#support-portal-banner p {
+  line-height: 30px;
+}
+#support-portal-banner p a {
+  line-height: 30px;
+}
 </style>
 
 
