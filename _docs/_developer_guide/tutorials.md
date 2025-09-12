@@ -15,11 +15,11 @@ guide_featured_list:
 guide_menu_title: "Content Cards"
 guide_menu_list:
   - name: Making an Inbox with Content Cards
-    link: docs/developer_guide/content_cards/content_card_inbox/
+    link: /docs/developer_guide/content_cards/content_card_inbox
     image: /assets/img/braze_icons/brush-02.svg
 
-guide_menu_title: "In-App Messages"
-guide_menu_list:
+guide_menu_title2: "In-App Messages"
+guide_menu_list2:
   - name: Customizing Message Styling
     link: /docs/developer_guide/in_app_messages/tutorials/customizing_message_styling
     image: /assets/img/braze_icons/brush-02.svg
