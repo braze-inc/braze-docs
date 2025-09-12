@@ -36,11 +36,11 @@ guide_menu_list:
 - name: "App Store Rating Prompt"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
   image: /assets/img/braze_icons/star-01.svg
-- name: "Simple Survey"
+- name: "Simple survey"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   image: /assets/img/braze_icons/bar-chart-07.svg
-- name: "Using Locales"
-  link: /docs/iam_locales/
+- name: "Locales in Messages"
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/translate-01.svg
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices

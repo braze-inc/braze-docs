@@ -2796,4 +2796,8 @@ validurls['/docs/assets/download_file/braze_success_and_support_services_handboo
 validurls['/docs/assets/download_file/braze_entitlements_handbook_25.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Entitlements_Handbook_25.pdf';
 validurls['/docs/handbooks/'] = 'https://braze.com/unlisted_docs/handbooks/';
 
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/user_guide/message_building_by_channel/push/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/user_guide/message_building_by_channel/email/using_locales/'] = '/docs/locales_in_messages/';
+
 // validurls['OLD'] = 'NEW';
