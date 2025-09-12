@@ -78,13 +78,17 @@ Braze systems may make the same Connected Content API call more than once per re
 
 ### Using basic authentication
 
-If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones from **Settings** > **Connected Content**.
+If the URL requires basic authentication, Braze can store a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones at **Settings** > **Connected Content**.
 
-![The 'Connected Content' settings in the Braze dashboard.]({% image_buster /assets/img_archive/basic_auth_mgmt.png %})
+![The Connected Content settings in the Braze dashboard.]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
-To add a new credential, select **Add Credential**. Give your credential a name and enter the username and password.
+To add a new credential, select **Add credential** > **Basic authentication**. 
 
-![The 'Create New Credential' window with the option to enter a name, username, and password.]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:30%" }
+!["Add credential" dropdown with the option to use basic authentication or token authentication.]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+
+Give your credential a name and enter the username and password.
+
+![The "Create New Credential" window with the option to enter a name, username, and password.]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
@@ -100,18 +104,25 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 ### Using token authentication
 
-When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. For those APIs, you can reference the code snippet in the following call as a model for your message.
+{% alert important %} 
+The token authentication credential type is currently in early access. Contact your Braze account manager if you're interested in participating in this early access. 
+{% endalert %}
+
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
+
+To add a credential that holds token values, select **Add credential** > **Token authentication**. Then, add the key-value pairs for your API call headers and the allowed domain.
+
+![An example token "token_credential_abc" with token authentication details.]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+
+You can then use this credential in your API calls by referencing the credential name:
 
 {% raw %}
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
-     https://your_API_link_here/
+     https://api.endpoint.com/your_path
      :method post
-     :headers {
-       "X-App-Id": "YOUR-APP-ID",
-       "X-App-Token": "YOUR-APP-TOKEN"
-     }
+     :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -132,9 +143,9 @@ The following example illustrates retrieving and saving an access token to a loc
 {% connected_content
      https://your_API_access_token_endpoint_here/
      :method post
+     :auth_credentials access_token_credential_abc
      :headers {
-       "Content-Type": "YOUR-CONTENT-TYPE",
-       "Authorization": "Bearer YOUR-APP-TOKEN"
+       "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
      :save token_response
@@ -206,7 +217,5 @@ Connected Content doesn’t have its own rate limit. Instead, the rate limit is 
 ### What’s caching behavior?
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
+
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
-
-
-[16]: [success@braze.com](mailto:success@braze.com)
