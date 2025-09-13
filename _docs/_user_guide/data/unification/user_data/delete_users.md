@@ -31,9 +31,9 @@ If you're on the FY26 pricing plan, be sure to regularly delete inactive user pr
 
 ## Deleting users
 
-### Single user
+### Individual
 
-In Braze, go to **Audience** > **Search Users**, then search for and select a user. If you're deleting a duplicate user profile, verify that you've selected the right one.
+To delete an individual user from Braze, go to **Audience** > **Search Users**, then search for and select a user. If you're deleting a duplicate user profile, verify that you've selected the right one.
 
 ![ALT_TEXT]()
 
@@ -45,7 +45,7 @@ On their profile page, select **More Actions** > **Delete User**. Keep in mind, 
 
 ![ALT_TEXT]()
 
-### Multiple users
+### Bulk
 
 If you haven't already, [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) containing the user profiles you want to delete. Be sure to include all user profiles if you're deleting duplicate users.
 
