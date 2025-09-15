@@ -8,7 +8,11 @@ description: "TODO"
 
 # Deleting users
 
-> Learn how to delete one or more user profiles directly through the Braze dashboard, without relying on calls to the `/users/delete` endpoint.
+> Learn how to delete one or more user profiles directly through the Braze dashboard.
+
+{% alert important %}
+This feature is currently in early access. Contact your customer success manager if you're interested in participating.
+{% endalert %}
 
 ## Prerequisites
 
@@ -24,10 +28,6 @@ User deletion lets you manage your database by removing profiles that are no lon
 | Processing time | All bulk deletions require a 7-day waiting period plus the time it takes to process deletions. |
 | Job limits | Only one bulk deletion can run at a time, which also includes the 7-day waiting period. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-{% alert tip %}
-If you're on the FY26 pricing plan, be sure to regularly delete inactive user profiles to avoid additional charges.
-{% endalert %}
 
 ## Deleting users
 
@@ -60,7 +60,7 @@ When the segment is deleted, we'll email you to let you know.
 ![ALT_TEXT]()
 
 {% alert note %}
-To ensure that these exact users are deleted regardless of segment changes, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) is applied to this group of users called **Pending Deletion**.
+To ensure that these exact users are deleted regardless of segment changes, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created.
 {% endalert %}
 
 ## Canceling bulk deletions
@@ -83,7 +83,7 @@ To check the status of a deletion, use one of the following methods:
 
 ### Segment filters
 
-When you delete a segment of users, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically applied to your segment. You can use it to:
+When you delete a segment of users, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use it to:
 
 - See the exact set of users tied to a specific deletion run date.
 - Exclude those users from campaigns so they don’t receive messages before removal.
@@ -131,6 +131,6 @@ Yes. However, you can add a segment inclusion filter to exclude all users with t
 
 ### Can I recover deleted user profiles?
 
-For bulk deletions, you have 7 days to [cancel a pending deletion](#canceling-bulk-deletions).
+Deleting a single user is permanent.
 
-However, deleting a single user is permanent.
+You can [cancel pending bulk deletions](#canceling-bulk-deletions) up to 7 days after starting the request. However, any users already deleted before cancelling cannot be restored.
