@@ -187,7 +187,7 @@ Below is an example of a context variable filter comparing the context variable 
 
 #### Personalize value
 
-By selecting the **Personalize value** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context_properties`, or to condense complex comparison logic defined across context variables.
+By selecting the **Personalize value** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context`, or to condense complex comparison logic defined across context variables.
 
 {% tabs %}
 {% tab Example 1 %}
