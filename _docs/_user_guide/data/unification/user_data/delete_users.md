@@ -71,7 +71,7 @@ To ensure that these exact users are deleted regardless of segment changes, a se
 
 ## Canceling segment deletions {#cancel}
 
-You have 7 days to cancel segment deletions. To cancel, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
+You have 7 days to cancel pending segment deletions. To cancel, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
 
 ![The 'Delete Users' tab in the 'Manage Audience' section of the Braze dashboard.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
