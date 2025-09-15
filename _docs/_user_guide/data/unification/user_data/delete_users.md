@@ -26,7 +26,7 @@ User deletion lets you manage your database by removing profiles that are no lon
 |---------------|---------|
 | Maximum size | You can delete up to 100 million user profiles when deleting a segment. |
 | Waiting period | All segment deletions require a 7-day waiting period plus the time it takes to process deletions. |
-| Job limits | You can only segment can be deleted at a single time, which includes the 7-day waiting period. |
+| Job limits | Only one segment can be deleted at a single time, which includes the 7-day waiting period. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Deleting users
