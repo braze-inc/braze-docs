@@ -16,7 +16,7 @@ This feature is currently in early access. Contact your customer success manager
 
 ## Prerequisites
 
-Before you can delete users, you'll need to be an admin or have **Delete User** permissions.
+To delete users, you'll need to be an admin or have **Delete User** permissions.
 
 ## About user deletion
 
