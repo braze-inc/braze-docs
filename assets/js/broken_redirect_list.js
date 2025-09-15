@@ -2773,7 +2773,7 @@ validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_gui
 validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
 
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/'] = '/dnd/editor_blocks/';
-validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/'] = '/dnd/editor_blocks/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/'] = '/docs/dnd/editor_blocks/';
+validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/'] = '/docs/dnd/editor_blocks/';
 
 // validurls['OLD'] = 'NEW';
