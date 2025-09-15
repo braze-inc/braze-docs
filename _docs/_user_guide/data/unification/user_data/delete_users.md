@@ -102,7 +102,7 @@ When you delete a segment of users, a [segment filter]({{site.baseurl}}/user_gui
 ### Manage audience
 
 {% alert note %}
-If your segment is dynamic, use the [Pending Deletion segment filter](#segment-filters) instead.
+To get the list of exact users that will be deleted, use the [Pending Deletion segment filter](#segment-filters) instead.
 {% endalert %}
 
 Go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
