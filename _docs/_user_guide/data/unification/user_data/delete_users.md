@@ -24,18 +24,20 @@ User deletion lets you manage your database by removing profiles that are no lon
 
 | Consideration | Details |
 |---------------|---------|
-| Maximum size | You can delete up to 100 million user profiles in a bulk deletion. |
-| Processing time | All bulk deletions require a 7-day waiting period plus the time it takes to process deletions. |
-| Job limits | Only one bulk deletion can run at a time, which also includes the 7-day waiting period. |
+| Maximum size | You can delete up to 100 million user profiles when deleting a segment. |
+| Waiting period | All segment deletions require a 7-day waiting period plus the time it takes to process deletions. |
+| Job limits | You can only segment can be deleted at a single time, which includes the 7-day waiting period. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Deleting users
 
-### Individual
+You can an [individual user](#delete-individual) or [segment of users](#delete-segment) through the Braze dashboard:
+
+### Individual {#delete-individual}
 
 To delete an individual user from Braze, go to **Audience** > **Search Users**, then search for and select a user. If you're deleting a duplicate user profile, verify that you've selected the right one.
 
-![ALT_TEXT]()
+![The 'Search Users' page in Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
 {% alert warning %}
 Single-user deletions are permanent—profiles cannot be recovered after they're deleted.  
@@ -43,35 +45,43 @@ Single-user deletions are permanent—profiles cannot be recovered after they're
 
 On their profile page, select **More Actions** > **Delete User**. Keep in mind, it may take a few minutes for the user to be fully deleted in Braze.
 
-![ALT_TEXT]()
+![A user in Braze with the vertical-ellipses menu open, showing the option to delete the user.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
-### Bulk
+### Segment {#delete-segment}
 
 If you haven't already, [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) containing the user profiles you want to delete. Be sure to include all user profiles if you're deleting duplicate users.
 
 Next, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
 
-![ALT_TEXT]()
+![The 'Delete Users' tab in the 'Manage Audience' section of the Braze dashboard.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Choose the segment you want to delete, then select **Delete users**. Note that bulk user deletion may take a while&#8212;come back here to [check the status](#status).
+Select **Delete users**, choose the segment you want to delete, then select **Next**.
 
-When the segment is deleted, we'll email you to let you know.
+![A pop-up window with a segment chosen for deletion.]({% image_buster /assets/img/audience_management/deleting_users/choose_segment_to_delete.png %}){: style="max-width:75%;"}
 
-![ALT_TEXT]()
+Type **DELETE** to confirm your request, then select **Delete users**.
 
-{% alert note %}
-To ensure that these exact users are deleted regardless of segment changes, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created.
+![The confirmation page with 'DELETE' typed in the confirmation box.]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
+
+Your segment won't be deleted immediately. Instead, it will marked as pending deletion for 7 days. After this time, your segment will be deleted and we'll email you to let you know.
+
+{% alert tip %}
+To ensure that these exact users are deleted regardless of segment changes, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use this to check the status of pending deletions.
 {% endalert %}
 
-## Canceling bulk deletions
+## Canceling segment deletions {#cancel}
 
-You have 7 days to cancel bulk deletion requests. To cancel, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
+You have 7 days to cancel segment deletions. To cancel, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
 
-![ALT_TEXT]()
+![The 'Delete Users' tab in the 'Manage Audience' section of the Braze dashboard.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Next to a pending bulk deletion, select **Cancel**.
+Next to a pending segment deletion, select <i class="fa-solid fa-eye"></i> to open the deletion record details.
 
-![ALT_TEXT]()
+![A pending segment deletion on the 'Delete Users' tab.]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+
+In the deletion record details, select **Cancel deletion**.
+
+![The 'Deletion Record Details' window on the 'Delete Users' tab.]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
 When bulk user deletion is in progress, you can cancel it at any time. However, any users already deleted before the cancellation cannot be restored.
@@ -97,15 +107,21 @@ If your segment is dynamic, use the [Pending Deletion segment filter](#segment-f
 
 Go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
 
-![ALT_TEXT]()
+![The 'Delete Users' tab in the 'Manage Audience' section of the Braze dashboard.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-For each deletion request, you can check who initiated the deletion, the current status, and how many user profiles were deleted. Refer to the following table for more details:
+On this page, you can find the following general information for all current and pending deletions:
 
 | Field | Description |
 |-------|-------------|
-| Run Date | Shows the scheduled deletion date. Use it with the **Pending Deletion** filter to find all profiles marked for that run. |
-| Segment Name | Shows the original segment used to generate the set of profiles marked for deletion. |
+| Request Date | The date the request was originally made. Use it with the **Pending Deletion** filter to get the list of profiles pending deletion. |
+| Requester | The user who initiated the deletion request. |
+| Segment Name | The segment that will be deleted. |
+| Status | Shows whether the deletion request is pending, in progress, or complete. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+For more details about a specific request, select <i class="fa-solid fa-eye"></i> to show the deletion record details. Here you can also [cancel pending segment deletions](#cancel).
+
+![A pending segment deletion on the 'Delete Users' tab.]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 ### Security event report
 
@@ -131,6 +147,6 @@ Yes. However, you can add a segment inclusion filter to exclude all users with t
 
 ### Can I recover deleted user profiles?
 
-Deleting a single user is permanent.
+Deleting individual users are permanent.
 
-You can [cancel pending bulk deletions](#canceling-bulk-deletions) up to 7 days after starting the request. However, any users already deleted before cancelling cannot be restored.
+You can [cancel segment deletions](#cancel) within the first 7 days after. However, any users already deleted before cancelling cannot be restored.
