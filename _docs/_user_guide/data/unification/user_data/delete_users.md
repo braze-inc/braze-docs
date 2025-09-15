@@ -33,7 +33,7 @@ User deletion lets you manage your database by removing profiles that are no lon
 
 You can an [individual user](#delete-individual) or [segment of users](#delete-segment) through the Braze dashboard:
 
-### Individual {#delete-individual}
+### Deleting an individual {#delete-individual}
 
 To delete an individual user from Braze, go to **Audience** > **Search Users**, then search for and select a user. If you're deleting a duplicate user profile, verify that you've selected the right one.
 
@@ -47,11 +47,11 @@ On their profile page, select **More Actions** > **Delete User**. Keep in mind, 
 
 ![A user in Braze with the vertical-ellipses menu open, showing the option to delete the user.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
-### Segment {#delete-segment}
+### Deleting a segment {#delete-segment}
 
 If you haven't already, [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) containing the user profiles you want to delete. Be sure to include all user profiles if you're deleting duplicate users.
 
-Next, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
+In Braze, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
 
 ![The 'Delete Users' tab in the 'Manage Audience' section of the Braze dashboard.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
