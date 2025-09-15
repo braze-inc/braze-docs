@@ -63,7 +63,7 @@ Type **DELETE** to confirm your request, then select **Delete users**.
 
 ![The confirmation page with 'DELETE' typed in the confirmation box.]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
 
-The users in this segment won't be deleted immediately. Instead, they'll be marked as pending deletion for the next 7 days. After this time, these users will be deleted and we'll email you to let you know.
+The users in this segment won't be deleted immediately. Instead, they'll be marked as pending deletion for the next 7 days. After this time, these users will be deleted&#8212;we'll email you to let you know.
 
 {% alert tip %}
 To ensure that these exact users are deleted regardless of segment changes, a segment filter called **Pending Deletion** is automatically created. You can [use this filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) to check the status of pending deletions.
