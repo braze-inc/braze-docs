@@ -93,7 +93,7 @@ You can check the status of a deletion using [segment filters](#segment-filters)
 
 ### Segment filters
 
-When you delete a segment of users, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use it to:
+When you request a segment of users to be deleted, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use it to:
 
 - See the exact set of users tied to a specific deletion run date.
 - Exclude those users from campaigns so they don’t receive messages before removal.
