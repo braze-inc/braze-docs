@@ -31,7 +31,7 @@ User deletion lets you manage your database by removing profiles that are no lon
 
 ## Deleting users
 
-You can an [individual user](#delete-individual) or [segment of users](#delete-segment) through the Braze dashboard:
+You can an [individual user](#delete-individual) or a [segment of users](#delete-segment) through the Braze dashboard:
 
 ### Deleting an individual {#delete-individual}
 
