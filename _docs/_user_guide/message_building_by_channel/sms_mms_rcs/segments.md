@@ -461,17 +461,56 @@ $('#sms_split input[name=sms_type]').change(function(e){
 
 {% endalert %}
 
-## RCS message calculator
+## RCS message billing
 
-RCS messages are charged per message. Understanding the types of billable RCS messages is key to understanding your billing.
+RCS messages are billed based on their content and the country the message is delivered in. To accurately estimate costs, it's essential to understand the different message types and how they are billed.
 
-### RCS billable message types
+### RCS billing types
 
-RCS messages are billed in a few different ways. Braze currently supports two types of billing: Basic RCS and Single RCS. 
+Our platform supports two primary billing models: a global model and a United States model.
 
-- **Basic RCS messages**: Messages that are text-only and up to 160 characters in length. 
-- **Single RCS messages:** Messages that are text-only and greater than 160 characters in length OR messages with any rich element. Rich elements include images and buttons (such as suggested replies or suggested actions).
+#### Global model (non-US markets)
 
-The corresponding billing type will display within the RCS message composer in a label that has one of two values: **Text-only RCS** (Basic RCS) and **RCS** (Single RCS).
+Messages are billed per message and classified as either Basic or Single.
 
-You RCS billing type data will populate in your [Message Usage dashboard]({{site.baseurl}}/message_usage_dashboard/), which displays your message credit consumption by specifying your credit ratio and number of message credits used. 
+##### Basic RCS messages
+
+| Content| Text-only messages up to 160 characters.|
+| Billing| Billed as a single message.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert note %}
+Adding buttons or any rich elements will change the message type to a Single RCS message.
+{% endalert %}
+
+##### Single RCS messages
+
+| Content| Messages that are over 160 characters OR include any rich elements like buttons or media.|
+| Billing| Billed as a single message, regardless of message length.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert note %}
+Sending a text message and a separate media file is still billed as two distinct messages.
+{% endalert %}
+
+#### United states model
+
+Messages are categorized as either Rich or Rich Media.
+
+##### Rich messages
+
+| Content| Text-only messages with or without buttons.|
+| Billing| Billed per segment, with each segment limited to 160 UTF-8 bytes, which means **the number of characters per segment is not fixed**. A message with only 160 plain English characters is one segment, but a message with longer text and emojis could be multiple segments. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+##### Rich media messages
+
+| Content| Messages that include a media file (image, video) or a Rich Card.|
+| Billing| Billed as a single message.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+### Message composer and Message Usage dashboard
+
+As you create your message, the message composer will display the billing type in real-time through a label (Basic RCS, Single RCS, Rich, or Rich Media), helping you track costs before you send.
+
+Your [Message Usage dashboard]({{site.baseurl}}/message_usage_dashboard/) will reflect these billing types and will provide the number of segments used for US messages, providing a transparent view of your message credit consumption.
