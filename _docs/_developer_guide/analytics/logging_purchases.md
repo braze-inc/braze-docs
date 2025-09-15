@@ -14,6 +14,8 @@ description: "Learn how to log purchases through the Braze SDK."
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
 {% endalert %}
 
+Any non-USD currency reported will display in Braze in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
+
 ## Logging purchases and revenue
 
 To log purchases and revenue, call `logPurchase()` after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.
