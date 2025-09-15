@@ -115,7 +115,7 @@ On this page, you can find the following general information for all current and
 |-------|-------------|
 | Request Date | The date the request was originally made. Use it with the **Pending Deletion** filter to get the list of profiles pending deletion. |
 | Requester | The user who initiated the deletion request. |
-| Segment Name | The segment that will be deleted. |
+| Segment Name | The name of the segment used to select the users pending deletion. |
 | Status | Shows whether the deletion request is pending, in progress, or complete. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
