@@ -1,6 +1,6 @@
 ---
 nav_title: Editor blocks
-article_title: Drag-and-drop editor blocks
+article_title: Drag-and-Drop editor blocks
 alias: "/dnd/editor_blocks/"
 channel: 
 - email
@@ -10,7 +10,7 @@ description: "This reference article covers the different editor blocks that are
 tool: Media
 ---
 
-# Drag-and-drop editor blocks
+# Drag-and-Drop Editor blocks
 
 > Editor blocks are the various blocks available in the **Drag-And-Drop Editor**. This reference article includes a series of tiles that represent the different kinds of content you can use in your messages.
 
