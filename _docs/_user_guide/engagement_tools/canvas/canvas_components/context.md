@@ -167,6 +167,45 @@ The exit criteria states that at any point in a user’s journey in the Canvas, 
 {% endtab %}
 {% endtabs %}
 
+### Canvas variable filters
+
+You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
+
+{% alert important %}
+Canvas variable filters are only available for Audience Paths and Decision Split steps. 
+{% endalert %}
+
+Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
+
+![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %})
+
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have matching data types. The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/#limitations).
+
+Below is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
+
+![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %})
+
+#### Personalize value
+
+By selecting the **Personalize value** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context_properties`, or to condense complex comparison logic defined across context variables.
+
+{% tabs %}
+{% tab Example 1 %}
+
+The following context variable filter compares the context variable `birthday_date` to the user’s custom attribute `birthday`:
+
+![A filter setup with custom attributes as the personalization type for the context variable "birthday_date" on the attribute "birthday".]({% image_buster /assets/img/context_variable_filter2.png %})
+
+{% endtab %}
+{% tab Example 2 %}
+
+The following filter compares the context variable `reminder_date` to be before the context variable `appointment_deadline`:
+
+![A filter setup with context variables as the personalization type for the context variable "reminder_date" on the context variable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
+
+{% endtab %}
+{% endtabs %}
+
 ## Previewing user paths
 
 We recommend testing and previewing your user paths to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
