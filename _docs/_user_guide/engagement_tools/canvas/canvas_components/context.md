@@ -185,9 +185,9 @@ Below is an example of a context variable filter comparing the context variable 
 
 ![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %})
 
-#### Personalize value
+#### Comparing to context variables or custom attributes
 
-By selecting the **Personalize value** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context`, or to condense complex comparison logic defined across context variables.
+By selecting the **Compare to a context variable or custom attribute** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context`, or to condense complex comparison logic defined across context variables.
 
 {% tabs %}
 {% tab Example 1 %}
