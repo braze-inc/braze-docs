@@ -43,7 +43,7 @@ To delete an individual user from Braze, go to **Audience** > **Search Users**, 
 Single-user deletions are permanent—profiles cannot be recovered after they're deleted.  
 {% endalert %}
 
-On their profile page, select select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Delete User**. Keep in mind, it may take a few minutes for the user to be fully deleted in Braze.
+On their profile page, select select <i class="fa-solid fa-ellipsis-vertical"></i> **Show options** > **Delete User**. Keep in mind, it may take a few minutes for the user to be fully deleted in Braze.
 
 ![A user in Braze with the vertical-ellipses menu open, showing the option to delete the user.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
