@@ -89,7 +89,7 @@ When bulk user deletion is in progress, you can cancel it at any time. However, 
 
 ## Checking deletion status {#status}
 
-You can check the status of a deletion using [segment filters](#segment-filters), the [manage audience](manage-audience) page, or [security event reports](#security-event-report).
+You can check the status of a deletion using [segment filters](#segment-filters), the [manage audience](#manage-audience) page, or [security event reports](#security-event-report).
 
 ### Segment filters
 
