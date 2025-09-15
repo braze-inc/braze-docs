@@ -1,6 +1,6 @@
 ---
 nav_title: Heap
-article: Heap
+article_title: Heap
 layout: redirect
 redirect_to: /docs/partners/heap/
 ---

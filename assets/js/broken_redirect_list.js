@@ -2772,8 +2772,28 @@ validurls['/docs/user_guide/data/activation/catalogs/back_in_stock_notifications
 validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
 validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
-
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/'] = '/docs/dnd/editor_blocks/';
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/'] = '/docs/dnd/editor_blocks/';
+validurls['/docs/handbooks/'] = '/docs/';
+
+validurls['/docs/user_guide/getting_started/braze_pilot/overview/'] = '/docs/user_guide/getting_started/braze_pilot/';
+validurls['/docs/user_guide/analytics/reporting/reports_overview/'] = '/docs/user_guide/analytics/reporting';
+validurls['/docs/user_guide/data/unification/data_transformation/overview/'] = '/docs/user_guide/data/unification/data_transformation/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/about/'] = '/docs/user_guide/message_building_by_channel/content_cards';
+validurls['/docs/user_guide/message_building_by_channel/email/about/'] = '/docs/user_guide/message_building_by_channel/email/';
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/overview/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/about/'] = '/docs/in-app_messages/';
+validurls['/docs/user_guide/message_building_by_channel/push/about/'] = '/docs/user_guide/message_building_by_channel/push';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_sms/'] = '/docs/about_sms/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_mms/'] = '/docs/about_mms';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_rcs/'] = '/docs/about_rcs';
+validurls['/docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/'] = '/docs/about_webhooks/';
+
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_21.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_22.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_23v17.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_23v17.pdf';
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_24_2.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_24_2.pdf';
+validurls['/docs/assets/download_file/braze_entitlements_handbook_25.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Entitlements_Handbook_25.pdf';
+validurls['/docs/handbooks/'] = 'https://braze.com/unlisted_docs/handbooks/';
 
 // validurls['OLD'] = 'NEW';
