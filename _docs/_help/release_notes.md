@@ -3,13 +3,13 @@ nav_title: Release notes
 article_title: Release Notes
 page_order: 4
 layout: dev_guide
-guide_top_header: "Release Notes"
-guide_top_text: "This is where you can find all updates to the Braze platform, with the following <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>."
+guide_top_header: "Release notes"
+guide_top_text: "
+  > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week."
 page_type: landing
 search_rank: 1
 description: "This landing page is home to Braze release notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
 
-guide_featured_title: "Release notes"
 guide_featured_list:
   - name: 2025
     link: /docs/help/release_notes/2025/
@@ -50,9 +50,9 @@ guide_featured_list:
 
 ---
 
-# Most recent Braze release notes {#most-recent}
-
-> Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.<br><br>For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
+{% alert tip %}
+For more information on any of the updates listed on this page, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
+{% endalert %}
 
 ## September 16, 2025 release
 
