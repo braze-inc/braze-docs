@@ -44,7 +44,6 @@ main() {
         echo "- [#$PR_NUMBER](https://github.com/braze-inc/braze-docs/pull/$PR_NUMBER) - $PR_TITLE" >> "$TEMP_FILE"
     done
 
-
     # Returns the results in reverse order and clean up files.
     if command -v tac &> /dev/null
     then

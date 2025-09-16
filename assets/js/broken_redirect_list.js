@@ -2803,5 +2803,8 @@ validurls['/docs/user_guide/data/unification/user_data_collection/language_codes
 validurls['/docs/user_guide/data/unification/user_data_collection/sdk_data_collection'] = '/docs/user_guide/data/unification/user_data/sdk_data_collection';
 validurls['/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/unification/user_data/user_profile_lifecycle';
 validurls['/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle/anonymous_users'] = '/docs/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/user_guide/message_building_by_channel/push/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/user_guide/message_building_by_channel/email/using_locales/'] = '/docs/locales_in_messages/';
 
 // validurls['OLD'] = 'NEW';
