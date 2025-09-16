@@ -2945,4 +2945,6 @@ validurls['/docs/help/release_notes/deprecations/twilio'] = '/docs/releases/depr
 validurls['/docs/help/release_notes'] = '/docs/releases/release_notes';
 validurls['/docs/help/release_notes/sdk_changelogs'] = '/docs/releases/sdk_changelogs';
 
+validurls['/docs/help/release_notes'] = '/docs/releases/home';
+
 // validurls['OLD'] = 'NEW';
