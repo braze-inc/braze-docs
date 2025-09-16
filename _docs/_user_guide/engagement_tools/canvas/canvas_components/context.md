@@ -177,7 +177,7 @@ Context variable filters are only available for Audience Paths and Decision Spli
 
 Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
 
-![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %})
+![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
 Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
 
