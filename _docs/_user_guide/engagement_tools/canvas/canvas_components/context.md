@@ -199,7 +199,7 @@ The following context variable filter compares the context variable `birthday_da
 {% endtab %}
 {% tab Example 2 %}
 
-The following filter compares the context variable `reminder_date` to be before the context variable `appointment_deadline`:
+The following filter compares the context variable `reminder_date` to be before the context variable `appointment_deadline`. This can help group users in an Audience Paths step to determine whether they should receive additional reminders before their appointment deadline.
 
 ![A filter setup with context variables as the personalization type for the context variable "reminder_date" on the context variable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
 
