@@ -148,6 +148,11 @@ defaults:
       nav_level: 1
   - scope:
       path: ""
+      type: "releases"
+    values:
+      nav_level: 1
+  - scope:
+      path: ""
       type: "help"
     values:
       nav_level: 1

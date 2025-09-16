@@ -1,7 +1,7 @@
 ---
-nav_title: Release notes
+nav_title: Home
 article_title: Release Notes
-page_order: 4
+page_order: 0
 layout: dev_guide
 guide_top_header: "Release notes"
 guide_top_text: "
