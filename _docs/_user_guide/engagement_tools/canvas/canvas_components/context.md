@@ -172,7 +172,7 @@ The exit criteria states that at any point in a user’s journey in the Canvas, 
 You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
 
 {% alert important %}
-Canvas variable filters are only available for Audience Paths and Decision Split steps. 
+Context variable filters are only available for Audience Paths and Decision Split steps. 
 {% endalert %}
 
 Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
