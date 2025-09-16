@@ -89,11 +89,14 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 5
-  help:
-    title: Help
+  releases:
+    title: Release notes
     output: true
     default_nav_url: home/
     page_order: 6
+  help:
+    output: true
+    default_nav_url: home/
   contributing:
     output: true
     default_nav_url: contributing/
