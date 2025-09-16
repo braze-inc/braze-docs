@@ -90,7 +90,7 @@ collections:
     default_nav_url: home/
     page_order: 5
   releases:
-    title: Release notes
+    title: Release Notes
     output: true
     default_nav_url: home/
     page_order: 6
