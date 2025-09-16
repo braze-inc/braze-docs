@@ -21,6 +21,8 @@ Braze recognizes that data planning takes time. We encourage our customers to fa
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
+Any non-USD currency reported will display in Braze in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
+
 {% tabs %}
 {% tab ecommerce.product_viewed %}
 

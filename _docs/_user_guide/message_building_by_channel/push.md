@@ -47,8 +47,8 @@ guide_menu_list:
 - name: Best Practices
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: Locales in Messaging
-  link: /docs/user_guide/message_building_by_channel/push/using_locales/
+- name: Locales in Messages
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/translate-01.svg
 - name: Common Push Error Messages
   link: /docs/user_guide/message_building_by_channel/push/push_error_codes/
@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;" class="noimgborder"}Use cases
+## [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}Use cases
 
 ![Push message example across Apple products.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Push message example from Stopwatch on an iPhone home screen that reads: "Hello! This is an iOS Push".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
