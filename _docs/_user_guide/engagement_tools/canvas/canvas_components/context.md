@@ -183,7 +183,7 @@ Similar to how Canvas context variables have pre-defined types, the comparisons 
 
 Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
 
-![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %})
+![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
 
 #### Comparing to context variables or custom attributes
 
