@@ -181,7 +181,7 @@ Context variables are declared and only accessible in the scope of a Canvas, mea
 
 Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have matching data types. The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/#limitations).
 
-Below is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
+Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
 
 ![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %})
 
