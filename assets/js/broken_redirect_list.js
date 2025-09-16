@@ -2761,7 +2761,6 @@ validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/selections'] = '/docs/user_guide/data/activation/catalogs/selections';
 validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/';
 validurls['/docs/user_guide/data/activation/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics';
-validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/product_blocks'] = '/docs/user_guide/data/activation/catalogs/product_blocks';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
@@ -2772,7 +2771,6 @@ validurls['/docs/user_guide/data/activation/catalogs/back_in_stock_notifications
 validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
 validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
 validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
-
 
 validurls['/docs/handbooks/'] = '/docs/';
 
@@ -2796,6 +2794,15 @@ validurls['/docs/assets/download_file/braze_success_and_support_services_handboo
 validurls['/docs/assets/download_file/braze_entitlements_handbook_25.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Entitlements_Handbook_25.pdf';
 validurls['/docs/handbooks/'] = 'https://braze.com/unlisted_docs/handbooks/';
 
+validurls['/docs/user_guide/data/unification/user_data_collection'] = '/docs/user_guide/data/unification/user_data';
+validurls['/docs/user_guide/data/unification/user_data_collection/best_practices'] = '/docs/user_guide/data/unification/user_data/best_practices';
+validurls['/docs/user_guide/data/unification/user_data_collection/collection_use_case'] = '/docs/user_guide/data/unification/user_data/collection_use_case';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_import'] = '/docs/user_guide/data/unification/user_data/import_users';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_import/csv_import'] = '/docs/user_guide/data/unification/user_data/import_users/csv';
+validurls['/docs/user_guide/data/unification/user_data_collection/language_codes'] = '/docs/user_guide/data/unification/user_data/language_codes';
+validurls['/docs/user_guide/data/unification/user_data_collection/sdk_data_collection'] = '/docs/user_guide/data/unification/user_data/sdk_data_collection';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/unification/user_data/user_profile_lifecycle';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle/anonymous_users'] = '/docs/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/using_locales/'] = '/docs/locales_in_messages/';
 validurls['/docs/user_guide/message_building_by_channel/push/using_locales/'] = '/docs/locales_in_messages/';
 validurls['/docs/user_guide/message_building_by_channel/email/using_locales/'] = '/docs/locales_in_messages/';
