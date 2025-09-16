@@ -167,7 +167,7 @@ The exit criteria states that at any point in a user’s journey in the Canvas, 
 {% endtab %}
 {% endtabs %}
 
-### Canvas variable filters
+### Context variable filters
 
 You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
 
