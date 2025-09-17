@@ -80,10 +80,6 @@ Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/data/activa
 Modifying the Shopify catalog in any way may unintentionally interfere with real-time product syncs. Do not make any edits to the Shopify catalog, as these have the potential to be overridden by Shopify. Instead, make the necessary product updates in your Shopify instance.<br><br>To delete your Shopify catalog, go to the Shopify page and deactivate sync. Do not delete the Shopify catalog directly on the catalogs page. 
 {% endalert %}
 
-##### Using `product_handle` or `product_url`
-
-The `product_handle` and `product_url` fields are available in your Shopify catalog data.
-
 ## Back-in-stock and price-drop use cases
 
 To set up back-in-stock notifications, follow the steps [here]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/).
