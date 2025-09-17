@@ -206,9 +206,9 @@ JSON Example:
 
 CSV Example:
 ```plaintext
-ID,PAYLOAD
-85,"{""product_name"": ""Product 85"", ""price"": 85.85}"
-1,"{""product_name"": ""Product 1"", ""price"": 1.01}"
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
 
 For S3 setup details, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
