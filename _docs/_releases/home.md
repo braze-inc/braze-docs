@@ -1,14 +1,14 @@
 ---
 nav_title: Home
 article_title: Release Notes
+description: "Stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
 page_order: 0
-layout: dev_guide
-guide_top_header: "Release notes"
-guide_top_text: "
-  > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week."
-page_type: landing
 search_rank: 1
-description: "This landing page is home to Braze release notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
+page_type: landing
+layout: dev_guide
+
+guide_top_header: "Release notes"
+guide_top_text: "> Braze release notes are published monthly so you can stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
 
 guide_featured_list:
   - name: 2025
