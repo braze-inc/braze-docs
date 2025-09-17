@@ -82,17 +82,7 @@ Modifying the Shopify catalog in any way may unintentionally interfere with real
 
 ##### Using `product_handle` or `product_url`
 
-To access and use `product_handle` and `product_url`, disconnect and reconnect your Shopify catalog by doing the following.
-
-1. Go to the Shopify integration page and select **Edit configuration**.
-
-![Shopify integration page.]({% image_buster /assets/img/Shopify/edit_config.png %})
-
-{: start="2"}
-2. In the **Sync catalog** step, toggle off the catalog and then update the settings.
-3. Toggle on the catalog and update the settings.
-
-![Shopify "Sync catalog" step with catalog toggle.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+The `product_handle` and `product_url` fields are available in your Shopify catalog data.
 
 ## Back-in-stock and price-drop use cases
 

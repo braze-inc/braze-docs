@@ -82,17 +82,7 @@ Shopify カタログを任意の方法で変更すると、意図せずにリア
 
 ##### `product_handle` または `product_url`
 
-`product_handle` と`product_url` にアクセスして使用するには、以下の方法で Shopify カタログを切断し、再接続します。
-
-1. Shopify の統合ページに行き、[**構成を編集**] を選択します。
-
-![Shopifyの統合ページ。]({% image_buster /assets/img/Shopify/edit_config.png %})
-
-{: start="2"}
-2\.**カタログを同期する**ステップで、カタログをオフに切り替えてから設定を更新する。
-3\.カタログを切り替え、設定を更新する。
-
-![Shopify「カタログを同期」ステップをカタログトグルで切り替える]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+`product_handle` と `product_url` フィールドは、Shopify カタログデータで利用できます。
 
 ## 再入荷と値下げのユースケース
 

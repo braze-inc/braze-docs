@@ -82,17 +82,7 @@ Modificar el catálogo de Shopify de cualquier forma puede interferir involuntar
 
 ##### Utilizando `product_handle` o `product_url`
 
-Para acceder y utilizar `product_handle` y `product_url`, desconecta y vuelve a conectar tu catálogo de Shopify haciendo lo siguiente.
-
-1. Ve a la página de integración de Shopify y selecciona **Editar configuración**.
-
-![Página de integración de Shopify.]({% image_buster /assets/img/Shopify/edit_config.png %})
-
-{: start="2"}
-2\. En el paso **Sincronizar catálogo**, alterna entre desactivar el catálogo y actualizar la configuración.
-3\. Alterna el catálogo y actualiza la configuración.
-
-![Paso "Sincronizar catálogo" de Shopify con alternar catálogo.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
+Los campos `product_handle` y `product_url` están disponibles en los datos de tu catálogo de Shopify.
 
 ## Casos de uso de existencias remanentes y bajada de precios
 
