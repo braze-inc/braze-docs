@@ -194,7 +194,7 @@ By selecting the **Compare to a context variable or custom attribute** toggle, y
 
 Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days should get a message.
 
-You have a context variable `re_engagement_date` that is defined as `{{now | minus: 3 | append: ' days'}}`. Note that `3 days` can be a variable amount that is also stored as a user's custom attribute. So if the `re_engagement_date` is after the `last_login_date` (stored as a custom attribute on the user profile), they'll be sent a message.
+You have a context variable `re_engagement_date` that is defined as {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Note that `3 days` can be a variable amount that is also stored as a user's custom attribute. So if the `re_engagement_date` is after the `last_login_date` (stored as a custom attribute on the user profile), they'll be sent a message.
 
 ![A filter setup with custom attributes as the personalization type for the context variable "re_engagement_date" after the custom attribute "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
 
