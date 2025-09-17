@@ -82,7 +82,17 @@ Wenn Sie den Shopify-Katalog in irgendeiner Weise ändern, kann dies die Realtim
 
 ##### Verwenden Sie `product_handle` oder `product_url`
 
-Die Felder `product_handle` und `product_url` sind in Ihren Shopify-Katalogdaten verfügbar.
+Um auf `product_handle` und `product_url` zuzugreifen und diese zu nutzen, trennen Sie Ihren Shopify-Katalog und verbinden Sie ihn erneut, indem Sie wie folgt vorgehen.
+
+1. Gehen Sie zur Shopify Integration Seite und wählen Sie **Konfiguration bearbeiten**.
+
+![Shopify Integrationsseite.]({% image_buster /assets/img/Shopify/edit_config.png %})
+
+{: start="2"}
+2\. Schalten Sie im Schritt **Katalog synchronisieren** den Katalog um und aktualisieren Sie dann die Einstellungen.
+3\. Schalten Sie den Katalog um und aktualisieren Sie die Einstellungen.
+
+![Shopify Schritt "Katalog synchronisieren" mit Katalog umschalten.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
 
 ## Anwendungsfälle für Back-in-Stock und Preisreduzierung
 
