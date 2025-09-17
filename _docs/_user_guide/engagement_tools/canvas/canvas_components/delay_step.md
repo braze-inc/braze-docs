@@ -112,6 +112,8 @@ Select the **Personalize delay** toggle to set up a personalized delay for your 
 
 Note that it's possible for a custom attribute or context variable to have neither a specific time nor a time zone if it's a string data type. If it's a time data type, you'll need to specify the time and time zone. However, if the custom attribute or context variable is an "irrelevant" string (such as "product_name"), the user will exit the Canvas.
 
+#### Use case
+
 Let's say you want to remind your customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, you can select this context variable to delay by. In this case, your Context step would have the following fields:
 
 - **Context variable name:** product_reminder_interval
