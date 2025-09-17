@@ -45,7 +45,7 @@ The plans to phase out the purchase event will be announced in late 2025. In the
 {% if include.alert == 'Shopify customer create' %}
 
 {% alert important %}
-The Shopify integration settings include a `shopify_customer_create` event, which is not logged in the same way as other custom events. When a customer is created in Shopify, the user profile will be created in Braze, but the creation event won't appear in the custom event log for that user. This behavior is similar to user updates, where the data sync occurs without generating a trackable event entry.
+The Shopify integration supports both Shopify customer create and customer update webhooks, which are located within your data configuration settings. When a customer profile is created or updated in Shopify, the corresponding user profile in Braze will also be created or updated. These actions do not trigger custom events in Braze and are solely used to [sync Shopify user data with Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works).
 {% endalert %}
 
 {% endif %}
