@@ -1,5 +1,5 @@
 ---
-nav_title: Back In Stock
+nav_title: Back in stock
 article_title: Back In Stock
 page_order: 2
 page_type: reference
@@ -17,14 +17,14 @@ This article will walk you through a use case for the **Back In Stock** template
 
 To successfully use this template, you'll need the following:
 
-- A [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) containing information about your item
-- [Back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/#how-back-in-stock-notifications-work) must be set up for the item you want to message users about
+- A [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) containing information about your item
+- [Back-in-stock notifications]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/#how-back-in-stock-notifications-work) must be set up for the item you want to message users about
 
 ## Tailoring the template to your needs
 
 Let’s say we’re working for PantsLabyrinth, a direct-to-consumer clothing retailer that specializes in slacks, jeans, culottes, and many other types of pants. We can use the back in stock template to notify customers on various channels when a popular pair of jeans, the Classic Straight Leg, is back in stock.
 
-Before creating the Canvas, we [set up a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) that contains information about our straight leg pants inventory and [set up back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/#setting-up-back-in-stock-notifications) for the Classic Straight Leg jeans. We made it so that users will subscribe to notifications after they perform the custom event of favoriting the Classic Straight Leg jeans on the app.
+Before creating the Canvas, we [set up a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) that contains information about our straight leg pants inventory and [set up back-in-stock notifications]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/#setting-up-back-in-stock-notifications) for the Classic Straight Leg jeans. We made it so that users will subscribe to notifications after they perform the custom event of favoriting the Classic Straight Leg jeans on the app.
 
 To access the back-in-stock template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Back in Stock**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article: Troubleshooting
+article_title: Troubleshooting
 description: "Troubleshooting steps for common issues you may experience while contributing to Braze Docs."
 page_order: 9
 noindex: true

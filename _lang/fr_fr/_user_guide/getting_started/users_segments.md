@@ -126,15 +126,13 @@ Conseils pour travailler avec des segments :
 
 Supposons que vous dirigiez un magasin de vêtements en ligne et que vous ayez mis en place un flux d'envoi de messages pour envoyer une série d'e-mails aux utilisateurs qui ont ajouté un article à leur panier mais n'ont pas terminé leur achat. Ce flux de panier abandonné pourrait inclure un e-mail de rappel initial, un e-mail de suivi offrant une réduction et un e-mail de rappel final.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 Vous pouvez créer un segment d'utilisateurs qui ont déclenché l'événement personnalisé "Ajout d'un article au panier" mais qui n'ont pas déclenché l'événement personnalisé "Achats effectués". Ensuite, dans ce segment, vous pourriez identifier davantage les utilisateurs qui ont ouvert l'e-mail de rappel initial (engagement avec un message spécifique) mais qui n'ont pas effectué d'achat.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 Ce segment pourrait être ciblé par une campagne plus agressive pour tenter de convertir ces utilisateurs en acheteurs. Par exemple, vous pouvez leur envoyer une offre spéciale ou une recommandation personnalisée en fonction des articles de leur panier.
 
 Ce n'est qu'un exemple de la façon dont vous pouvez utiliser les actions et inactions des utilisateurs, les événements personnalisés et les données d'engagement pour créer des segments et adapter vos stratégies marketing dans Braze.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

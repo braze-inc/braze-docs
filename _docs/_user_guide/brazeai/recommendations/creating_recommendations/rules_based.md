@@ -1,5 +1,5 @@
 ---
-nav_title: Rules-Based Recommendations
+nav_title: Rules-based recommendations
 article_title: Creating Rules-Based Item Recommendations
 description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 page_order: 2
@@ -11,7 +11,7 @@ page_order: 2
 
 ## About rules-based item recommendations
 
-A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) and either Braze [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to dynamically personalize content based on user behavior and attributes.
+A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) and either Braze [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to dynamically personalize content based on user behavior and attributes.
 
 {% alert important %}
 Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
@@ -25,7 +25,7 @@ When deciding which recommendation engine suits your available resources and use
   <thead>
     <tr>
       <th>Recommendation Engine</th>
-      <th>No data points consumed</th>
+      <th>No data points logged</th>
       <th>No-code solution</th>
       <th>No advanced Liquid</th>
       <th>Automatically updates product feed</th>
@@ -82,7 +82,7 @@ Create your recommendation engine using either a catalog or Connected Content:
 {% tab using a catalog %}
 To create your recommendation engine using a catalog:
 
-1. [Create a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/) of products.
+1. [Create a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) of products.
 2. For each product, add a list of recommended products as a string separated by a delimiter (like a pipe `|`) in a column named “product_recommendations”.
 3. Pass the product ID that you want to find recommendations for to the catalog.
 4. Get the `product_recommendations` value for that catalog item and split it by the delimiter with a Liquid split filter.

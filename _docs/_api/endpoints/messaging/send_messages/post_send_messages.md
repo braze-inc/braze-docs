@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Messages Immediately Using the API Only"
+nav_title: "POST: Send messages immediately using the API only"
 article_title: "POST: Send Messages Immediately Using the API Only"
 search_tag: Endpoint
 page_order: 4
@@ -77,10 +77,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 |`external_user_ids` | Optional | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (for example, sends, clicks, bounces, etc) on the Braze dashboard. |
-|`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/) |
+|`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) for more information. <br><br>*Required if you wish to track campaign metrics (such as _Sends_, _Clicks_, or _Bounces_) on the Braze dashboard. |
+|`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Optional | Boolean | Ignore `frequency_capping` for campaigns, defaults to `false`. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 |`messages`| Optional | Messaging objects | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

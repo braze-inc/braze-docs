@@ -71,52 +71,52 @@ AppDelegate.braze = braze
 
 #### REST API
 
-`/users/track` 엔드포인트][users-track]을 사용하여 사용자의 [`push_subscribe`][user_attributes_object] 속성을 업데이트하여 사용자의 구독 상태를 Braze REST API로 업데이트할 수 있습니다.
+You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update their [`push_subscribe`]({{site.baseurl}}/api/objects_filters/user_attributes_object) attribute.
 
 ### 푸시 구독 상태 확인
 
-![푸시 구독 상태가 구독됨으로 설정된 신원 미상의 고객 프로필입니다.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![User profile for John Doe with their push subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze에서 사용자의 푸시 구독 상태를 확인할 수 있는 방법은 두 가지가 있습니다:
 
-1. **사용자 프로필**: **사용자 검색][5]** 페이지]의 Braze 대시보드를 통해 개별 사용자 프로필에 액세스할 수 있습니다. 이메일 주소, 전화번호 또는 외부 사용자 ID를 통해 사용자의 프로필을 찾은 후 **참여** 탭을 선택하여 사용자의 가입 상태를 확인하고 수동으로 조정할 수 있습니다.
+1. **사용자 프로필**: You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** page. 이메일 주소, 전화번호 또는 외부 사용자 ID를 통해 사용자의 프로필을 찾은 후 **참여** 탭을 선택하여 사용자의 가입 상태를 확인하고 수동으로 조정할 수 있습니다.
 <br><br>
-2. **나머지 API 내보내기**: 세그먼트별 사용자][세그먼트] 또는 [식별자별 사용자][식별자] 엔드포인트] 내보내기를 사용하여 개별 고객 프로필을 JSON 형식으로 내보낼 수 있습니다. Braze는 디바이스별 푸시 활성화 정보가 포함된 푸시 토큰 객체를 반환합니다.
+2. **나머지 API 내보내기**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze는 디바이스별 푸시 활성화 정보가 포함된 푸시 토큰 객체를 반환합니다.
 
 ## 푸시 권한
 
 iOS, 웹, Android 등 모든 푸시 지원 플랫폼에서는 OS 수준의 시스템 프롬프트를 통해 명시적으로 옵트인해야 하며, 아래에 설명된 몇 가지 차이점이 있습니다.
 
-사용자의 결정은 최종적이며 사용자가 거부한 후에는 다시 물어볼 수 없으므로 [푸시 프라이머][[push-primers] 인앱 메시지를 사용하는 것은 옵트인 비율을 높이는 데 중요한 전략입니다.
+Because a user's decision is final and you can't ask again after they decline, using [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) in-app messages is an important strategy for increasing your opt-in rates.
 
 **기본 OS 푸시 권한 프롬프트**
 
 |플랫폼|스크린샷|설명|
 |--|--|--|
-|iOS| ![메시지 하단에 "허용 안 함" 및 "허용" 버튼이 있는 "내 앱에서 알림을 보내려고 합니다"라는 iOS 기본 푸시 프롬프트가 표시됩니다.][ios-push-prompt]{: style="max-width:410px;"} | [임시 푸시](#provisional-push) 권한을 요청하는 경우에는 적용되지 않습니다.|
-|Android| ![메시지 하단에 "허용" 및 "허용 안 함" 버튼이 두 개 있는 "Kitchenerie에서 알림을 보내도록 허용하시겠습니까?"라는 Android 푸시 메시지.][android-push-prompt]{: style="max-width:410px;"} | 이 푸시 권한은 Android 13에 도입되었습니다. Android 13 이전에는 푸시 전송에 권한이 필요하지 않았습니다.|
-|웹| ![메시지 하단에 "차단" 및 "허용" 버튼 두 개가 있는 "Braze.com 알림을 표시하려고 합니다"라는 웹 브라우저의 기본 푸시 프롬프트.][web-push-promp]{: style="max-width:410px;"} | |
+|iOS| ![An iOS native push prompt asking "My App would like to send you notifications" with two buttons, "Don't Allow" and "Allow" at the bottom of the message.]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | [임시 푸시](#provisional-push) 권한을 요청하는 경우에는 적용되지 않습니다.|
+|Android| ![An Android push message asking "Allow Kitchenerie to send you notifications?" with two buttons, "Allow" and "Don't allow" at the bottom of the message.]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | 이 푸시 권한은 Android 13에 도입되었습니다. Android 13 이전에는 푸시 전송에 권한이 필요하지 않았습니다.|
+|웹| ![A web browser's native push prompt asking "Braze.com wants to show notification" with two buttons, "Block" and "Allow" at the bottom of the message.]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Android
 
 Android 13 이전에는 푸시 알림을 보내는 데 권한이 필요하지 않았습니다. Android 12 이하에서는 모든 사용자가 첫 번째 세션에서 Braze가 자동으로 푸시 토큰을 요청할 때 `Subscribed`로 간주됩니다. 이 시점에서 사용자는 해당 기기에 대해 유효한 푸시 토큰과 기본 구독 상태인 `Subscribed`로 **푸시가 활성화됩니다**.
 
-Android 13][Android 13], 푸시 권한은 사용자에게 요청하여 부여받아야 합니다. 앱은 적절한 시기에 사용자에게 수동으로 권한을 요청할 수 있지만, 그렇지 않은 경우 앱이 [알림 채널](https://developer.android.com/reference/android/app/NotificationChannel)을 생성할 때 자동으로 사용자에게 메시지를 표시합니다.
+Starting with [Android 13]({{site.baseurl}}/developer_guide/platforms/android/android_13/), push permission must be asked of and granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically when your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
 
 ### iOS
 
-![시스템 알림 센터의 알림 하단에 "Yachtr 앱에서 알림을 계속 수신하시겠습니까?"라는 메시지와 함께 "유지" 또는 "끄기" 버튼 두 개가 표시되는 알림][ios-provisional-push]{: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+![A notification in the system Notification Center with a message at the bottom asking, "Keep receiving notifications from the Yachtr app?" with two buttons below to "Keep" or "Turn Off"]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
 
 앱에서 임시 푸시 또는 승인된 푸시를 요청할 수 있습니다. 
 
-승인된 푸시는 알림을 보내기 전에 사용자의 명시적인 허락이 필요한 반면, [임시 푸시][provisional-blog]를 사용하면 소리나 경고 없이 알림 센터로 바로 __조용히__ 알림을 보낼 수 있습니다.
+Authorized push requires explicit permission from a user before sending any notifications, whereas [provisional push](https://www.braze.com/resources/articles/mastering-provisional-push) lets you send notifications __quietly__, directly to the notification center without any sound or alert.
 
 #### 임시 승인 및 조용한 푸시 {#provisional-push}
 
 iOS 12(2018년 출시) 이전 버전에서는 모든 사용자가 푸시 알림을 받으려면 명시적으로 동의해야 합니다.
 
-iOS 12에서 Apple은 [임시 승인][provisional-blog]를 도입하여 브랜드가 명시적으로 옵트인하기 전에 사용자의 알림 센터에 조용한 푸시 알림을 보내 메시지의 가치를 조기에 입증할 수 있는 기회를 제공했습니다. 자세히 알아보려면 [임시 인증을]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) 참조하세요.
+In iOS 12, Apple introduced [provisional authorization](https://www.braze.com/resources/articles/mastering-provisional-push), allowing brands to send quiet push notifications to their users' notification center before they explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Refer to [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) to learn more.
 
 ### 웹
 
@@ -128,9 +128,9 @@ iOS 12에서 Apple은 [임시 승인][provisional-blog]를 도입하여 브랜�
 
 ## 푸시 토큰
 
-[푸시 토큰][push-tokens]은 사용자의 기기에서 생성되어 각 수신자의 알림을 보낼 위치를 식별하기 위해 Braze로 전송되는 고유한 익명 식별자입니다.
+[Push tokens]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) are a unique anonymous identifier generated by a user's device and sent to Braze to identify where to send each recipient's notification.
 
-푸시 알림을 사용자에게 보내는 방법을 이해하는 데 필수적인 [푸시 토큰]][push-tokens]은 두 가지 방법으로 분류할 수 있습니다.
+There are two ways a [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) can be classified that are essential to understanding how a push notification can be sent to your users.
 
 1. **포그라운드 푸시**는 사용자 기기의 포그라운드로 정기적으로 눈에 보이는 푸시 알림을 보내는 기능을 제공합니다.
 2. **백그라운드 푸시**는 특정 기기가 해당 브랜드의 푸시 알림을 수신하도록 옵트인했는지 여부와 관계없이 사용할 수 있습니다. Background push allows brands to send silent push notifications - notifications that intentionally aren't displayed - to devices to support key functionalities like [uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
@@ -149,7 +149,7 @@ iOS 12에서 Apple은 [임시 승인][provisional-blog]를 도입하여 브랜�
 
 앱 또는 웹사이트는 기기당 하나의 푸시 구독만 허용됩니다. 따라서 사용자가 디바이스나 웹사이트에서 로그아웃하고 새 사용자가 로그인하면 푸시 토큰이 새 사용자에게 다시 할당됩니다. 이는 **참여** 탭의 **연락처 설정** 섹션에 있는 사용자 프로필에 반영됩니다:
 
-![고객 프로필의 \*\*인게이지먼트* 탭에 있는 푸시 토큰 체인지로그에는 푸시 토큰이 다른 사용자에게 이동된 시점과 토큰이 무엇인지 나열되어 있습니다.][4]
+![Push token changelog on the \*\*Engagement** tab of a user's profile, which lists when the push token was moved to another user, and what the token was.]({% image_buster /assets/img/push_token_changelog.png %})
 
 푸시 공급자(APN/FCM)가 한 기기에 있는 여러 사용자를 구분할 수 있는 방법이 없으므로, 푸시 토큰을 마지막으로 로그인한 사용자에게 전달하여 기기에서 푸시 타겟팅할 사용자를 결정합니다.
 
@@ -165,7 +165,7 @@ iOS 12에서 Apple은 [임시 승인][provisional-blog]를 도입하여 브랜�
 - Braze가 푸시 알림(포그라운드 푸시 토큰)을 보내는 기능
 - 사용자의 모든 디바이스에서 푸시 수신에 대한 전반적인 선호도(푸시 구독 상태)
 
-![사용자가 "마케팅에 푸시 등록됨(iOS)"으로 표시된 대시보드 스크린샷][1]{: style="float:right;max-width:50%;margin-left:15px;"}
+![A screenshot of the dashboard showing a user is "Push Registered for Marketing (iOS)"]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 사용자가 워크스페이스 내 앱에 대해 활성 포그라운드 푸시 토큰을 가지고 있으면 "푸시 사용" 또는 "푸시 등록"으로 간주되며, 이는 푸시 인에이블먼트 상태가 앱별로 다르다는 의미입니다. 
 
@@ -225,20 +225,3 @@ Android의 경우 Braze는 다음과 같은 경우 사용자 푸시가 비활성
 
 Braze에서 푸시 사용을 최적화하는 방법에 대한 자세한 지침은 [푸시 모범 사례]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices)에 대한 전용 문서를 참조하세요.
 
-[1]: {% image_buster /assets/img/push_enablement.png %}
-[2]: {% image_buster /assets/img/push_changelog.png %}
-[3]: {% image_buster /assets/img/push_example.png %}
-[4]: {% image_buster /assets/img/push_token_changelog.png %}
-[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[ios-push-prompt]: {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
-[android-push-prompt]: {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
-[web-push-prompt]: {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
-[ios-provisional-push]: {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
-[push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[android-13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
-[provisional-blog]: https://www.braze.com/resources/articles/mastering-provisional-push
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

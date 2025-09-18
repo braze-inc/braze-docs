@@ -1,5 +1,5 @@
 ---
-nav_title: Race Conditions
+nav_title: Race conditions
 article_title: Race Conditions
 alias: /race_conditions/
 page_order: 9

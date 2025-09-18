@@ -34,7 +34,7 @@ O suporte para o `checkout.liquid` Shopify começará a ser descontinuado em ago
 
 **Suporte retirado**: Outubro de 2022
 
-O uso de um `BroadcastReceiver` personalizado para notificações por push foi descontinuado. Use [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) em vez disso.
+O uso de um `BroadcastReceiver` personalizado para notificações por push foi descontinuado. Use [` subscribeToPushNotificationEvents()`]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_using-a-callback-for-push-events) em vez disso.
 
 ### Parceria com o Grouparoo
 
@@ -88,7 +88,7 @@ Se estiver usando atualmente o [Apptimize com o Braze]({{site.baseurl}}/help/rel
 ### Mensagens originais no app
 
 **Suporte retirado:** Fevereiro de 2019<br>
-**Substituído por**: [Mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**Substituído por**: [Mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
 
 O Braze aprimorou a aparência das mensagens no app para aderir às práticas recomendadas de UX e UI mais recentes e não oferece mais suporte às mensagens originais no app.
 
@@ -128,9 +128,9 @@ Se precisar de ajuda com a integração do Eclipse antes da migração, entre em
 ### A transmissão do evento Raw (RES)
 
 **Suporte retirado**: Julho de 2018<br>
-**Substituído por**: [Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**Substituído por**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
 
-O Raw Event Stream foi o predecessor do [Currents]({{site.baseurl}}/partners/braze_currents/about/) e foi descontinuado para dar lugar ao futuro dos dados do Braze.
+O Raw Event Stream foi o predecessor do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) e foi descontinuado para dar lugar ao futuro dos dados do Braze.
 
 ### Postergação enquanto sem atividades - recurso GCM
 
@@ -145,4 +145,3 @@ O parâmetro Postergação enquanto sem atividades fazia parte anteriormente das
 Remoção de pontos de extremidade personalizados. Se você tiver um endpoint personalizado, poderá continuar a usá-lo, mas a Braze não o fornecerá mais.
 
 
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

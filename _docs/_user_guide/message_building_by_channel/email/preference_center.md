@@ -1,5 +1,5 @@
 ---
-nav_title: Preference Center
+nav_title: Preference center
 article_title: Preference Center
 page_order: 8
 layout: dev_guide
@@ -11,8 +11,8 @@ channel:
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Overview
-  link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
+- name: API email preference center
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/
   image: /assets/img/braze_icons/list.svg
 - name: Drag-And-Drop Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/

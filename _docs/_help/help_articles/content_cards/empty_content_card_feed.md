@@ -1,5 +1,5 @@
 ---
-nav_title: Empty Content Card Feed
+nav_title: Empty content card feed
 article_title: Empty Content Card Feed
 page_order: 0
 

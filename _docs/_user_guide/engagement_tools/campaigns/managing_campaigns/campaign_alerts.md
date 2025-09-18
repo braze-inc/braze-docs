@@ -1,5 +1,5 @@
 ---
-nav_title: Campaign Alerts
+nav_title: Campaign alerts
 article_title: Campaign Alerts
 page_order: 6
 

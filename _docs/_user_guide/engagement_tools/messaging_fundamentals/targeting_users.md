@@ -1,5 +1,5 @@
 ---
-nav_title: Targeting Users
+nav_title: Targeting users
 article_title: Targeting Users
 page_order: 9
 page_type: reference
@@ -93,7 +93,6 @@ For more information and best practices, refer to [Multivariate & A/B Testing]({
 Braze provides detailed audience statistics of the targeted channels in the footer. The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. The number of reachable users may decrease if you use a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or set up message eligibility. 
 
 - To determine an accurate number for your reachable users, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics), as this will search through every user in your user base.
-- To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
 - To see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, select **Show Additional Statistics**.
 
 ##### Why the target audience count could differ from the reachable users count

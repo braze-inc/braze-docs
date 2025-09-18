@@ -12,7 +12,7 @@ page_type: update
 Grouparoo에 대한 지원은 2022년 4월부터 중단되었습니다.
 {% endalert %}
 
-> [Grouparoo][1]는 창고에 있는 데이터를 사용하여 마케팅, 영업 및 지원 도구를 쉽게 사용할 수 있게 해주는 오픈 소스 리버스 ETL 도구입니다. 구성은 모델 중심 UI에서 수행되므로 비기술 팀 구성원도 운영을 지원하기 위해 데이터 동기화를 구성하고 예약할 수 있습니다.
+> [Grouparoo](https://www.grouparoo.com/)는 창고에 있는 데이터를 사용하여 마케팅, 영업 및 지원 도구를 쉽게 사용할 수 있게 해주는 오픈 소스 리버스 ETL 도구입니다. 구성은 모델 중심 UI에서 수행되므로 비기술 팀 구성원도 운영을 지원하기 위해 데이터 동기화를 구성하고 예약할 수 있습니다.
 
 Braze와 Grouparoo 통합은 데이터를 Braze로 전송하여 창고에 저장된 데이터를 운영하기 쉽게 만듭니다. 자동 동기화 일정을 설정하면 최신 정보로 고객 커뮤니케이션을 일관성 있게 강화할 수 있습니다.
 
@@ -22,7 +22,7 @@ Braze와 Grouparoo 통합은 데이터를 Braze로 전송하여 창고에 저장
 | ----------- | ----------- |
 | Grouparoo 계정 및 프로젝트 | Grouparoo 계정과 프로젝트가 이 파트너십을 활용하는 데 필요합니다.<br><br>이 통합은 Grouparoo에서 제공하는 무료 커뮤니티 에디션 및 엔터프라이즈 솔루션과 함께 사용할 수 있습니다. 설정은 Grouparoo 구성 사용자 인터페이스에서 이루어집니다. |
 | Braze REST API 키 | 사용자 및 추적 권한이 있는 Braze REST API 키. <br><br> 이는 **설정** > **API 키**에서 Braze 대시보드에서 생성할 수 있습니다. |
-| Braze REST 엔드포인트 | [당신의 REST 엔드포인트 URL][1]. 사용자의 엔드포인트는 인스턴스를 위한 Braze URL에 따라 달라집니다. |
+| Braze REST 엔드포인트 | [당신의 REST 엔드포인트 URL](https://www.grouparoo.com/). 사용자의 엔드포인트는 인스턴스를 위한 Braze URL에 따라 달라집니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 통합
@@ -31,7 +31,7 @@ Braze와 Grouparoo 통합은 데이터를 Braze로 전송하여 창고에 저장
 
 Grouparoo에서 **앱**으로 이동하여 **Braze**를 선택하여 새 Braze 앱을 만드세요. 표시되는 모달에서 Braze API 키 및 REST 엔드포인트를 제공하십시오.
 
-![][2]
+![]({% image_buster /assets/img/grouparoo/add-app.png %})
 
 ### 2단계: 모델 및 데이터 소스를 설정
 
@@ -52,7 +52,7 @@ Grouparoo에서 탐색 모음에서 모델을 선택하세요. 다음으로, **�
 
 다음으로, Grouparoo 속성 필드를 Braze 속성 필드에 매핑해야 합니다. 
 
-![예제 속성 매핑 필드. Grouparoo userID는 external_id에 매핑되도록 설정됩니다. 이메일, firstName, lastName은 각각 "이메일", "first_name", "last_name" grouparoo 필드로 설정됩니다.][3]{: style="max-width:80%;"}
+![예제 속성 매핑 필드. 이메일, 이름, 성은 동등한 "이메일", "이름", "성" 그룹아루 필드로 설정됩니다.]({% image_buster /assets/img/grouparoo/mapping.png %}){: style="max-width:80%;"}
 
 Braze `external_id` 필드가 소스 테이블의 기본 키에 매핑되었는지 확인하세요. 필요한 사용 사례에 따라 나머지 필드를 매핑합니다.
 
@@ -64,13 +64,9 @@ Braze `external_id` 필드가 소스 테이블의 기본 키에 매핑되었는�
 
 매핑 외에도 Grouparoo 그룹을 Braze 구독 그룹에 추가할 수도 있습니다. 
 
-![Grouparoo 대상 구성 창의 "Braze 구독 그룹"에서 "최근 자동차 구매와 함께 높은 가치" Grouparoo 그룹이 "최근 자동차 구매와 함께 높은 가치" Braze 구독 그룹에 추가됩니다.][4]{: style="max-width:80%;"}
+![Grouparoo 대상 구성 창의 "Braze 구독 그룹"에서 "최근 자동차 구매로 높은 가치를 지닌" Grouparoo 그룹이 "최근 자동차 구매로 높은 가치를 지닌" Braze 구독 그룹에 추가됩니다.]({% image_buster /assets/img/grouparoo/lists.png %}){: style="max-width:80%;"}
 
 {% alert important %}
 이 통합에 대한 추가 세부 정보 및 업데이트는 [Grouparoo의 설명서](https://www.grouparoo.com/docs/integrations/grouparoo-braze)에서 찾을 수 있습니다.
 {% endalert %}
 
-[1]: https://www.grouparoo.com/
-[2]: {% image_buster /assets/img/grouparoo/add-app.png %}
-[3]: {% image_buster /assets/img/grouparoo/mapping.png %}
-[4]: {% image_buster /assets/img/grouparoo/lists.png %}

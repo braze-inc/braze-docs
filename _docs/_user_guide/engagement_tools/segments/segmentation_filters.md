@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: Segmentation Filters
+nav_title: Segmentation filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
@@ -47,7 +47,7 @@ glossaries:
     tags:
       - Segment or CSV membership
   - name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
+    description: Determines whether or not a user matches a custom recorded attribute value. <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom attributes
   - name: Created At

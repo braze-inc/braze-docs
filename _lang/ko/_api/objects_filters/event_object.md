@@ -15,11 +15,11 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 
 이벤트 객체는 특정 이벤트가 발생할 때 API를 통해 전달되는 객체입니다. 이벤트 객체는 이벤트 배열에 보관됩니다. 이벤트 배열의 각 이벤트 개체는 지정된 시간 값에 특정 사용자가 사용자 지정 이벤트의 단일 발생을 나타냅니다. 이벤트 객체에는 메시지, 데이터 수집 및 개인화에서 이벤트 속성을 설정하고 사용하여 사용자 지정할 수 있는 다양한 필드가 있습니다.
 
-특정 플랫폼에 대한 사용자 지정 이벤트를 설정하는 방법에 대한 단계는 [개발자 가이드의][1] 플랫폼 통합 가이드를 참조하세요. 사용 중인 플랫폼에 따라 관련 문서를 참조하세요:
+특정 플랫폼에 대한 사용자 지정 이벤트를 설정하는 방법에 대한 단계는 [개발자 가이드의]({{site.baseurl}}/developer_guide/home/) 플랫폼 통합 가이드를 참조하세요. 사용 중인 플랫폼에 따라 관련 문서를 참조하세요:
 
-- [Android][2]
-- [iOS][3]
-- [웹][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [웹]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### 개체 본문
 
@@ -44,7 +44,7 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 
 - [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
 - [앱 식별자]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 시간 코드][22]
+- [ISO 8601 시간 코드](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### 기존 프로필만 업데이트
 
@@ -74,7 +74,7 @@ Braze에서 기존 사용자 프로필만 업데이트하려면 요청 본문에
 
 ### 이벤트 속성 지속성
 
-이벤트 속성은 상위 이벤트에 의해 트리거된 메시지를 필터링하고 리퀴드 개인화할 수 있도록 설계되었습니다. 기본적으로 이러한 정보는 Braze 사용자 프로필에 유지되지 않습니다. 세분화에서 이벤트 속성 값을 사용하려면 이벤트 속성 값을 장기 저장하는 다양한 접근 방식에 대해 자세히 설명하는 [사용자 지정 이벤트를][5] 참조하세요.
+이벤트 속성은 상위 이벤트에 의해 트리거된 메시지를 필터링하고 리퀴드 개인화할 수 있도록 설계되었습니다. 기본적으로 이러한 정보는 Braze 사용자 프로필에 유지되지 않습니다. 세분화에서 이벤트 속성 값을 사용하려면 이벤트 속성 값을 장기 저장하는 다양한 접근 방식에 대해 자세히 설명하는 [사용자 지정 이벤트를]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) 참조하세요.
 
 #### 이벤트 예제 요청
 
@@ -109,19 +109,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 타임 코드 위키][19]
+- [ISO 8601 타임 코드 위키](http://en.wikipedia.org/wiki/ISO_8601)
 
 ## 이벤트 개체
 
 제공된 예시를 사용하면 누군가 최근에 예고편을 시청한 후 영화를 대여한 것을 확인할 수 있습니다. 캠페인에 들어가서 이러한 속성을 기반으로 사용자를 세분화할 수는 없지만, 이러한 속성을 영수증 형태로 사용하여 Liquid를 사용하는 채널을 통해 사용자 지정 메시지를 보내는 데 전략적으로 사용할 수 있습니다. 예를 들어, "안녕하세요 **베스**, **댄 알렉산더의** **슬픈 달걀을** 대여해 주셔서 감사합니다. 대여하신 영화를 기반으로 추천 영화를 몇 가지 알려드립니다..."와 같은 예시입니다.
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 타임 코드 위키"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 시간 코드"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

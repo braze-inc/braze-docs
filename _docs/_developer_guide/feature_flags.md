@@ -1,6 +1,6 @@
 ---
 page_order: 2.5
-nav_title: Feature Flags
+nav_title: Feature flags
 article_title: Feature flags for the Braze SDK
 description: "This reference article covers an overview of feature flags including prerequisites and use cases."
 tool: Feature Flags
@@ -128,6 +128,24 @@ if (liveChatEnabled) {
 ```
 
 {% endtab %}
+{% tab Swift %}
+
+```swift
+// Get the initial value from the Braze SDK
+let featureFlag = braze.featureFlags.featureFlag(id: "enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled ?? false
+
+// Listen for updates from the Braze SDK
+braze.featureFlags.subscribeToUpdates() { _ in  
+  let newValue = braze.featureFlags.featureFlag(id: "enable_live_chat")?.enabled ?? false
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+liveChatView.isHidden = !liveChatEnabled
+```
+
+{% endtab %}
 {% endtabs %}
 
 ### Remotely control app variables
@@ -198,6 +216,20 @@ if (featureFlag?.enabled == true) {
 }
 liveChatView.promoLink = featureFlag?.getStringProperty("link")
 liveChatView.promoText = featureFlag?.getStringProperty("text")
+```
+
+{% endtab %}
+{% tab Swift %}
+
+```swift
+let featureFlag = braze.featureFlags.featureFlag(id: "navigation_promo_link")
+if let featureFlag {
+  liveChatView.isHidden = !featureFlag.enabled
+} else {
+  liveChatView.isHidden = true
+}
+liveChatView.promoLink = featureFlag?.stringProperty("link")
+liveChatView.promoText = featureFlag?.stringProperty("text")
 ```
 
 {% endtab %}
@@ -272,6 +304,19 @@ if (featureFlag != null && featureFlag.getEnabled()) {
 val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
 braze.logFeatureFlagImpression("enable_checkout_v2")
 if (featureFlag?.enabled == true) {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
+{% tab Swift %}
+
+```swift
+let featureFlag = braze.featureFlags.featureFlag(id: "enable_checkout_v2")
+braze.featureFlags.logFeatureFlagImpression(id: "enable_checkout_v2")
+if let featureFlag, featureFlag.enabled {
   return NewCheckoutFlow()
 } else {
   return OldCheckoutFlow()

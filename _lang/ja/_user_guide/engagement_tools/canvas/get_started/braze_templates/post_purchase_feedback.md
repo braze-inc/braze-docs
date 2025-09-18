@@ -18,13 +18,13 @@ tool: Canvas
 このテンプレートをうまく使うには、以下のものが必要だ：
 
 - フィードバックアンケートの結果を参照するための[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)。
-- 利用しているパートナーとオーディエンスを使用して設定された [Braze オーディエンス同期]({{site.baseurl}}/partners/canvas_steps)。
+- 利用しているパートナーとオーディエンスを使用して設定された [Braze オーディエンス同期]({{site.baseurl}}/partners/canvas_audience_sync/)。
 
 ## テンプレートをニーズに合わせる
 
 例えば、モバイルビデオゲームデベロッパーの Decorumsoft 社で働いているとします。購入後のフィードバック・テンプレートを使って、最新発売の動画ゲーム『Proxy War 3: War of Thirst』のフィードバックを測定する。このフィードバックをもとに、拡張パック『Liquid Mirage』の開発計画に情報を提供します。
 
-キャンバスを作成する前に、[Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)インテグレーションを設定し、BrazeのユーザーデータをGoogle Audiencesに追加して、行動トリガーやセグメンテーションなどに基づいて広告を送信できるようにした。
+キャンバスを作成する前に、[Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/)インテグレーションを設定し、BrazeのユーザーデータをGoogle Audiencesに追加して、行動トリガーやセグメンテーションなどに基づいて広告を送信できるようにした。
 
 購入後のフィードバックテンプレートにアクセスするには、新しいキャンバスを作成する際に、「**キャンバステンプレートを使用する**」＞「**Brazeテンプレート**」を選択する。次に、「**購入後フィードバック**」の横にある「**テンプレートを適用**」を選択する。あとは、テンプレートを見ながら、自分たちのニーズに合わせていくだけだ。
 

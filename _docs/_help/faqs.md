@@ -1,5 +1,5 @@
 ---
-nav_title: Best Practices and FAQs
+nav_title: Best practices and FAQs
 article_title: Frequently Asked Questions
 page_order: 3
 hide_toc: true

@@ -17,20 +17,14 @@ Braze APIエンドポイントは、DNS情報に基づいて最も近いPOPに�
 
 時折、SYN/ACK/RST のパケットをフィルタリングする iptables のセットアップも問題を引き起こすことがあるため、ホストに iptables を使用している場合は、当社の CDN プロバイダー (Fastly.com) へのアウトバウンドトラフィックを許可リストに登録し、問題が解決するかどうかを確認することもできます。
 
-それでもBraze APIエンドポイントへの接続にネットワークの問題がある場合は、問題が発生している間の[MTRテストと][1] [Fastly Debugの][2]結果を提供し、それをサポートリクエストと一緒に提出する。テスト結果は、開発マシンからではなく、Braze API エンドポイントへの接続に問題があるサーバーから取得しなければならないことに注意してください。ネットワークキャプチャ（tcpdumpまたは.pcapファイル）も入手できれば役に立つだろう。
+それでもBraze APIエンドポイントへの接続にネットワークの問題がある場合は、問題が発生している間の[MTRテストと](https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2) [Fastly Debugの](http://www.fastly-debug.com/)結果を提供し、それをサポートリクエストと一緒に提出してください。テスト結果は、開発マシンからではなく、Braze API エンドポイントへの接続に問題があるサーバーから取得しなければならないことに注意してください。ネットワークキャプチャ（tcpdumpまたは.pcapファイル）も入手できれば役に立つだろう。
 
 MTRの詳細については、お使いのオペレーティング・システムに応じて、以下のリソースをチェックしてほしい：
 
-- [GNU/Linux][4]
-- [macOS][5]
+- [GNU/Linux](https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues)
+- [macOS](https://formulae.brew.sh/formula/mtr)
 
 ## Braze API エンドポイントの IP 範囲の許可リスト登録
 
-ファイアウォールを通して Braze API エンドポイントを許可リストに登録するために、当社の CDN は、JSON ダンプを介して割り当てられた IP 範囲のリストへのアクセスを提供しています。Braze API の IP範囲のリストについては、[Fastly の公開 IP リスト][3]と [Cloudflare の公開 IP リスト][6]の両方を参照してください。これらのIPは変更される可能性がある。
+ファイアウォールを通して Braze API エンドポイントを許可リストに登録するために、当社の CDN は、JSON ダンプを介して割り当てられた IP 範囲のリストへのアクセスを提供しています。Braze API の IP範囲のリストについては、[Fastly の公開 IP リスト](https://api.fastly.com/public-ip-list)と [Cloudflare の公開 IP リスト](https://api.cloudflare.com/client/v4/ips)の両方を参照してください。これらのIPは変更される可能性がある。
 
-[1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2
-[2]: http://www.fastly-debug.com/
-[3]: https://api.fastly.com/public-ip-list
-[4]: https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues
-[5]: https://formulae.brew.sh/formula/mtr
-[6]: https://api.cloudflare.com/client/v4/ips

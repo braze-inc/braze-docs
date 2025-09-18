@@ -28,7 +28,7 @@ Recibir respuestas fuera de la oficina puede proporcionar información valiosa, 
 
 El texto del preencabezado de un correo electrónico comunica el punto principal del mensaje de forma eficaz para captar el interés del lector y fomentar la apertura. Los responsables de marketing por correo electrónico también suelen utilizar el texto del preencabezado para proporcionar información adicional sobre el contenido de un mensaje. Un preencabezado es el texto de previsualización que aparece inmediatamente después del asunto de un correo electrónico. En el siguiente ejemplo, el preencabezado es `- Brand. New. Lounge Shorts`.
 
-![Texto preencabezado en un buzón de entrada de Gmail con el texto "Marca. Novedad. Pantalones cortos de salón".][61]
+![Texto preencabezado en un buzón de entrada de Gmail con el texto "Marca. Novedad. Pantalones cortos de salón".]({% image_buster /assets/img_archive/preheader_example.png %})
 
 La cantidad de texto visible en el preencabezado depende del cliente de correo electrónico del usuario y de la longitud del asunto del mensaje. Por lo general, sugerimos que los encabezados de los correos electrónicos tengan entre 50 y 100 caracteres.
 
@@ -79,7 +79,7 @@ Estas son algunas de las mejores prácticas que debe tener en cuenta a la hora d
 
 ## Tamaño del correo electrónico
 
-Asegúrese de limitar el tamaño de su correo electrónico. Los cuerpos de correo electrónico de más de 102 KB no solo suponen una gran carga para los servidores de Braze y SendGrid, sino que también son recortados por Gmail y otros clientes de correo electrónico. Intente que el tamaño de su correo electrónico no supere los 25 KB sólo de texto o 60 KB con imágenes. Te recomendamos encarecidamente que utilices nuestro cargador de imágenes para alojarlas y que hagas referencia a ellas en `href`.
+Asegúrese de limitar el tamaño de su correo electrónico. Los cuerpos de correo electrónico de más de 102 KB no sólo son extremadamente gravosos para los servidores Braze, sino que también son recortados por Gmail y otros clientes de correo electrónico. Intente que el tamaño de su correo electrónico no supere los 25 KB sólo de texto o 60 KB con imágenes. Te recomendamos encarecidamente que utilices nuestro cargador de imágenes para alojarlas y que hagas referencia a ellas en `href`.
 
 |   Solo texto   | Texto con imágenes |     Anchura del correo electrónico    |
 |:-------------:|:----------------:|:------------------:|
@@ -112,4 +112,3 @@ Un alto porcentaje de correos electrónicos se leen en dispositivos móviles. Ut
 
 Sin embargo, los correos electrónicos no ofrecen la claridad de saber si los destinatarios tienen instalada la aplicación. Por lo tanto, evitar los enlaces profundos ayuda a prevenir los mensajes de error para estos destinatarios de correo electrónico que no tienen la aplicación.
 
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}

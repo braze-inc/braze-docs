@@ -23,13 +23,13 @@ Vous pouvez créer des campagnes et des canevas qui démarrent, se ramifient et 
 
 Définissez vos mots déclencheurs lors de la planification d'une campagne de réception/distribution basée sur des actions.
 
-![Déclencheur basé sur l'action "Envoyer cette campagne aux utilisateurs qui ont envoyé une LINE entrante au groupe d'abonnement où se trouve le corps du message" et un champ vide.][1]
+![Déclencheur basé sur l'action "Envoyer cette campagne aux utilisateurs qui ont envoyé un message entrant LINE au groupe d'abonnement dans lequel se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Placez vos mots déclencheurs dans les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) de votre canvas.
 
-![Parcours d'action avec un déclencheur de "Envoyer cette campagne aux utilisateurs qui ont envoyé une LINE entrante au groupe d'abonnement où se trouve le corps du message" et un champ vide.][2]
+![Parcours d'action dont le déclencheur est "Envoyer cette campagne aux utilisateurs qui ont envoyé un message LINE au groupe d'abonnement où se trouve le corps du message" et dont le champ est vide.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Conditions
 
@@ -47,5 +47,3 @@ Après avoir créé des groupes d'action pour les phrases de filtrage personnali
 
 Pour ce message, vous devez envoyer un message LINE informant l'utilisateur que ce canal n'est pas surveillé par un humain et, si nécessaire, le guider vers un canal d'assistance.
 
-[1]: {% image_buster /assets/img/line/trigger_word_campaign.png %}
-[2]: {% image_buster /assets/img/line/trigger_word_canvas.png %}

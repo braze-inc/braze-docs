@@ -1,5 +1,5 @@
 ---
-nav_title: "Event Object"
+nav_title: "Event object"
 article_title: API Event Object
 page_order: 6
 page_type: reference
@@ -71,6 +71,17 @@ Property values can be any of the following data types:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Event property objects that contain array or object values can have an event property payload of up to 100&nbsp;KB.
+
+### Reserved keys
+
+The following keys are reserved and cannot be used as custom event properties:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+Using reserved keys as custom event property names will result in API errors when sending requests to the `/users/track` endpoint.
+{% endalert %}
 
 ### Event property persistence
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Onboarding with Preferences Survey
+nav_title: Onboarding with preferences survey
 article_title: Onboarding with Preferences Survey
 page_order: 5.5
 page_type: reference
@@ -24,7 +24,7 @@ To successfully use this template, you'll need the following:
 
 ## Tailoring the template to your needs
 
-Let’s say we’re working for StyleRyde, an on-demand ridesharing app that gets people where they need to go. Before creating the Canvas, we [set up a simple survey]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) that includes a series of engaging questions to determine the experience and impression of a user's first ride with the app.
+Let’s say we’re working for StyleRyde, an on-demand ridesharing app that gets people where they need to go. Before creating the Canvas, we [set up a simple survey]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) that includes a series of engaging questions to determine the experience and impression of a user's first ride with the app.
 
 To access the template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Onboarding with preferences survey**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 

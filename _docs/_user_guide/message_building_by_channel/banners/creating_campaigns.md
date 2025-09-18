@@ -42,15 +42,44 @@ To customize your message's background properties, border settings, and more, se
 
 ![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
-#### Step 3.2: Define on-click behavior
+#### Step 3.2: Define on-click behavior (optional)
 
 When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your user's profile with custom data when they click the Banner.
 
 {% alert important %}
 {::nomarkdown}
-On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
+On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
 {:/}
 {% endalert %}
+
+#### Step 3.3: Add custom properties (optional) {#custom-properties}
+
+{% alert important %}
+Custom properties for Banners are currently in early access. Contact your Braze account manager if you're interested in participating
+{% endalert %}
+
+You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) to modify your app’s behavior or appearance. For example, you could:
+
+- Send metadata for your third-party analytics or integrations.
+- Use metadata such as a `timestamp` or JSON object to trigger conditional logic.
+- Control the behavior of a banner based on included metadata like `ratio` or `format`.
+
+To add a custom property, select **Settings** > **Properties** > **Add property**.
+
+![The properties page showing the option to add the first custom property to a Banner campaign.]({% image_buster /assets/img/banners/add_property.png %})
+
+For each property you'd like to add, fill out the following:
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| Property type | The data type for the property. Supported types include string, boolean, number, timestamp, image URL, and JSON object. | String |
+| Property key | The unique identifier for the property. This key is used in the SDK to access the property. | `color` |
+| Value | The value assigned to the property. Must match the selected property type. | `#FF0000` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+When you're finished, select **Done**.
+
+![The properties page with a string property with a key of color and value of #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
 ### Step 4: Set campaign duration
 

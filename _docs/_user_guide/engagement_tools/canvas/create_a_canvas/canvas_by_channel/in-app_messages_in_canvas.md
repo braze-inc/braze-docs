@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Messages
+nav_title: In-app messages
 article_title: In-App Messages in Canvas
 alias: "/canvas_in-app_messages/"
 page_order: 2
@@ -34,7 +34,7 @@ You can select a trigger for your in-app messages to be triggered on session sta
 
 After any delays pass and the audience options are checked, in-app messages are set to live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
 
-For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. In-app messages aren't set to live until a session starts, so if a user is in the middle of the session when they reach the Message step, they won't receive the in-app message until they start another session and perform the relevant trigger.
+For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. In-app messages aren't set to live until a session starts, so if a user is in the middle of a session when they reach the Message step, they won't receive the in-app message until they start another session and perform the relevant trigger.
 
 ## In-app message expiration
 
@@ -44,7 +44,7 @@ You can choose when the in-app message will expire. During this time, the in-app
 
 | Option | Description | Example |
 |---|---|---|
-| **A duration after the step is available** | Sets the in-app message to expire relative to when the step becomes available to the user. | An in-app message with a two-day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days, users may see the in-app message if they open the app. |
+| **A duration after the step is available** | Sets the in-app message to expire relative to when the step becomes available to the user. | An in-app message with a two-day expiration would become available when the user enters the Message step and audience options are checked. Any delays before reaching this step would come from preceding Delay steps in your Canvas. The in-app message would then be available for 2 days (48 hours) from when the user enters the step, and during those two days, users may see the in-app message if they open the app. |
 | **On a specific date and time** | Select a specific date and time when the in-app message will be no longer available. | If you have a sale that ends on November 30, 2024, select this option so that users no longer see the associated in-app message when the sale ends. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -179,7 +179,7 @@ Message steps automatically advance all users who enter the step. Note that it d
 
 When a user enters an in-app message step, they advance out of it immediately instead of being held for the expiration window. In this case, having a Delay step in your user journey can be helpful.
 
-To use the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+To use the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users who didn't receive the previous step.
 
 {% details Original Canvas editor %}
 
@@ -217,7 +217,7 @@ You can choose from the following trigger actions to target your users:
 
 - **Make Purchase:** Target users who make any purchase or a specific purchase
 - **Start Session:** Target users who start a session in any app or a specific app
-- **Perform Custom Event:** Target users who perform the selected custom event
+- **Perform Custom Event:** Target users who perform the selected custom event (the custom event must be sent using the SDK).
 
 A user has to enter the Canvas step, start a session, and then perform the trigger to receive an in-app message. This means mid-session updates aren't supported. For example, if the trigger is to start a session, the user only needs to enter the Canvas step and start a session to receive the in-app message. If the trigger is not to start a session, the user has to enter the Canvas step, start a session, and then perform the trigger to receive the in-app message.
 

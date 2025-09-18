@@ -17,25 +17,21 @@ Braze a mis à jour le filtre CSV X pour inclure les 100 CSV les plus récents,
 
 ## Suivi des désinstallations activé par défaut pour les applications Android
 
-La fonction de [désinstallation du suivi pour][94] toutes les nouvelles applications Android sera activée par défaut. Toutes les applications Android existantes avec suivi des désinstallations désactivé auront désormais ce paramètre sur « Activé ». Le suivi des désinstallations sur Android n’envoie plus de push vers l’appareil, et aucune autre mise à jour ou action n’est requise de votre part.
+La fonction de [désinstallation du suivi pour]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/) toutes les nouvelles applications Android sera activée par défaut. Toutes les applications Android existantes avec suivi des désinstallations désactivé auront désormais ce paramètre sur « Activé ». Le suivi des désinstallations sur Android n’envoie plus de push vers l’appareil, et aucune autre mise à jour ou action n’est requise de votre part.
 
 ## Fonctions de recherche modifiées et améliorées
 
-Braze a ajouté l'étiquetage et une meilleure fonctionnalité de recherche à Braze afin d'améliorer votre expérience de gestion des déploiements à grande échelle de Braze pendant que vous recherchez des [événements et attributs personnalisés][92], des tags, etc.
+Braze a ajouté l'étiquetage et une meilleure fonctionnalité de recherche à Braze afin d'améliorer votre expérience de gestion des déploiements à grande échelle de Braze pendant que vous recherchez des [événements et attributs personnalisés]({{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management), des tags, etc.
 
 ## Contenu push
 
-[Créez des notifications][95] avec plusieurs pages, une image, un comportement de clic, un titre et un sous-titre facultatifs. Il suffit de créer un message push et de sélectionner **Push Story** dans le menu déroulant.
+[Créez des notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories) avec plusieurs pages, une image, un comportement de clic, un titre et un sous-titre facultatifs. Il suffit de créer un message push et de sélectionner **Push Story** dans le menu déroulant.
 
 Notez que vous devez avoir la dernière version d’Android (version 2.2.0+) ou iOS (version 3.2.0+) pour utiliser cette fonctionnalité.
 
 
 ## Inbox vision
 
-Vous pouvez désormais [prévisualiser vos e-mails][96] en fonction de la plateforme de votre client, soit via une page d'aperçu de vignettes, soit via une vue de liste comprenant une grande capture d'écran et une analyse plus spécifique des éventuels problèmes de rendu HTML pour chaque client. Contactez votre gestionnaire du succès des clients  ou votre gestionnaire de compte pour plus d’informations.
+Vous pouvez désormais [prévisualiser vos e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision) en fonction de la plateforme de votre client, soit via une page d'aperçu de vignettes, soit via une vue de liste comprenant une grande capture d'écran et une analyse plus spécifique des éventuels problèmes de rendu HTML pour chaque client. Contactez votre gestionnaire du succès des clients  ou votre gestionnaire de compte pour plus d’informations.
 
 
-[92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management
-[94]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking-for-campaigns
-[95]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories
-[96]: {{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision

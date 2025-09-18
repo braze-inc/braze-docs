@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Basics
+nav_title: Canvas basics
 article_title: Canvas Basics
 page_order: 1
 page_type: reference
