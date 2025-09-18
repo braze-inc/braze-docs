@@ -3,7 +3,7 @@ name: Request a feature
 about: Help improve Braze Docs.
 title: ''
 labels: Feature
-assignees: internetisaiah, josh-mccrowell-braze
+assignees: braze-inc/braze-docs
 
 ---
 
