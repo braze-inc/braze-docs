@@ -8,6 +8,7 @@ platform: iOS
 channel:
   - push
 noindex: true
+alias: /push_primer/
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}
