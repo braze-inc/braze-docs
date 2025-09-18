@@ -16,13 +16,25 @@ Before you can view OfferFit reports in the Braze, you'll need to:
 - Have an active contract for Braze and OfferFit. 
 - Contact your CSM to enable OfferFit for you on your behalf.
 
-## Viewing reports
+## Viewing reports {#view}
 
 To view metrics for an OfferFit use cases in Braze, go to **AI Decisioning** > **OfferFit by Braze**, then select a use case.
 
 ![ALT_TEXT]()
 
 Here, you can view reports like performance, insights, diagnostics, and timelines. For more details, see [Available reports](#reports).
+
+![ALT_TEXT]()
+
+## Changing report dates
+
+After [opening a report](#view), you can change the date range by selecting a new start and end date from the calendar dropdown.
+
+![ALT_TEXT]()
+
+You can also set a default start date or choose dates to always exclude. Excluded dates will be filtered out of all reports for that use case.
+
+To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, then change your default date or exclude dates as needed.
 
 ![ALT_TEXT]()
 
