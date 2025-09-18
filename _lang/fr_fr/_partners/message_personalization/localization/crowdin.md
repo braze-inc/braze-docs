@@ -60,15 +60,12 @@ Une fois que vous avez fourni vos informations d'identification Braze, deux pann
 
 En mode éditeur dans Crowdin, le contenu synchronisé depuis votre compte Braze peut être affiché à vos traducteurs sous la forme d'une liste de caractères ou d'un aperçu de fichier.
 
-![Une image de ce à quoi ressemble le compositeur d'e-mail Crowdin Editor avec quelques traductions de base ajoutées.][2]
+
 
 ### Étape 3 : Ajouter des traductions à Braze
 
 Dès que les traductions sont terminées, ouvrez l'appli Braze dans Crowdin, sélectionnez les fichiers traduits (pour chaque fichier, vous pouvez choisir toutes les langues cibles ou seulement certaines) dans le panneau de gauche, et cliquez sur **Synchroniser avec Braze**.
 
-![Une image d'un utilisateur sélectionnant ses fichiers de traduction et les synchronisant avec Braze.][3]
 
 
-[1]: {% image_buster /assets/img/crowdin/copy_api_key_identifier.png %}
-[2]: {% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %}
-[3]: {% image_buster /assets/img/crowdin/sync_translations.png %}
+
