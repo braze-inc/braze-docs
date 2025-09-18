@@ -89,11 +89,14 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 5
-  help:
-    title: Help
+  releases:
+    title: Release Notes
     output: true
     default_nav_url: home/
     page_order: 6
+  help:
+    output: true
+    default_nav_url: home/
   contributing:
     output: true
     default_nav_url: contributing/
@@ -141,6 +144,11 @@ defaults:
   - scope:
       path: ""
       type: "partners"
+    values:
+      nav_level: 1
+  - scope:
+      path: ""
+      type: "releases"
     values:
       nav_level: 1
   - scope:

@@ -147,7 +147,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Create send ID for message blast tracking. |
 | `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Query for URL details of a specific message variation within a campaign. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Canvas %}

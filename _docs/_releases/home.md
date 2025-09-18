@@ -1,15 +1,15 @@
 ---
-nav_title: Release notes
+nav_title: Home
 article_title: Release Notes
-page_order: 4
-layout: dev_guide
-guide_top_header: "Release Notes"
-guide_top_text: "This is where you can find all updates to the Braze platform, with the following <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>."
-page_type: landing
+description: "Stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
+page_order: 0
 search_rank: 1
-description: "This landing page is home to Braze release notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
+page_type: landing
+layout: dev_guide
 
-guide_featured_title: "Release notes"
+guide_top_header: "Release notes"
+guide_top_text: "> Braze release notes are published monthly so you can stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
+
 guide_featured_list:
   - name: 2025
     link: /docs/help/release_notes/2025/
@@ -50,9 +50,72 @@ guide_featured_list:
 
 ---
 
-# Most recent Braze release notes {#most-recent}
+{% alert tip %}
+For more information on any of the updates listed on this page, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
+{% endalert %}
 
-> Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.<br><br>For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) to see more information on our monthly SDK releases, updates, and improvements.
+## September 16, 2025 release
+
+### Data flexibility
+
+#### Braze Data Platform
+
+Braze Data Platform is a set of comprehensive, composable set of data capabilities and partner integrations that empowers you to create personalized, impactful experiences across the customer lifecycle. Learn more about the three data related jobs to be done: 
+
+- [Data unification]({{site.baseurl}}/user_guide/data/unification)
+- [Data activation]({{site.baseurl}}/user_guide/data/activation)
+- [Data distribution]({{site.baseurl}}/user_guide/data/distribution)
+
+#### Deleting user profiles
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+Now you can delete individual users or a segment of users directly through the Braze dashboard&#8212;instead of only relying on the Braze REST API.  You'll need to contact your customer success manager if you'd like to participate in the early access. To get started, see [Deleting users]({{site.baseurl}}/user_guide/data/unification/user_data/delete_users/).
+
+#### Custom Banner properties
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+You can use custom properties from your Banner campaign to retrieve key–value data through the SDK and modify your app’s behavior or appearance. To learn more, see [Custom Banner properties]({{site.baseurl}}/developer_guide/banners/placements/#custom-properties).
+
+#### Token authentication
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can store credentials that hold [token authentication header values]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call#using-token-authentication).
+
+#### Promotion codes
+
+You can save promotion codes to a user’s profile through a User Update step. For more information, refer to [Saving promotion codes to user profiles]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#save-to-profile).
+
+### Unlocking creativity
+
+#### Braze Pilot
+
+[Braze Pilot]({{site.baseurl}}/user_guide/getting_started/braze_pilot) is a publicly available app for Android and iOS that allows you to launch messages from your Braze dashboard to your phone. Check out [Getting started with Braze Pilot]({{site.baseurl}}/user_guide/getting_started/braze_pilot/getting_started) for a walkthrough of downloading the app, initializing the connection to your Braze dashboard, and completing the setup.
+
+### New Braze partnerships
+
+#### Blings - Visual and interactive content
+
+[Blings]({{site.baseurl}}/partners/blings/) is a next-generation personalized video platform that enables you to deliver real-time, interactive, and data-driven video experiences across channels at scale.
+
+#### Shopify standard integration with third-party tool
+
+For Shopify online stores, we recommend using Braze’s standard integration method to support the Braze SDKs on your site.
+
+However, we understand that you may prefer using a third-party tool, like Google Tag Manager, so we put together a guide on how you can. To get started, see [Shopify: Third-party tagging]({{site.baseurl}}/shopify_standard_integration_third_party_tagging/).
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Braze Flutter SDK 15.0.0](https://github.com/braze-inc/braze-flutter-sdk/blob/main/CHANGELOG.md#1500)
+    - Updates the native Android bridge from Braze Android SDK `36.0.0` to `39.0.0`.
+    - Updates the native iOS bridge from Braze Swift SDK `12.0.0` to `13.2.0`. This includes Xcode 26 support.
+
+- [Braze Swift SDK 7.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1300)
+  - Updates the Braze Swift SDK bindings to require releases from the `13.0.0+` SemVer denomination. This allows compatibility with any version of the Braze SDK from `13.0.0` up to, but not including, `14.0.0`.
 
 ## August 19, 2025 release
 
@@ -890,115 +953,3 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Bumps the minimum required iOS version to 12.0.
     - Updates the native iOS version bindings from [Braze Swift SDK 7.5.0 to 8.1.0](https://github.com/braze-inc/braze-swift-sdk/compare/7.5.0...8.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
     - Updates the native Android version bindings from [Braze Android SDK 29.0.1 to 30.1.1](https://github.com/braze-inc/braze-android-sdk/compare/v29.0.1...v30.1.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-
-## February 4, 2025 release
-
-### Braze Docs improvements
-
-#### Contributing Guide
-Our recent updates to the [Contributing Guide]({{site.baseurl}}/contributing/your_first_contribution) makes it easier for non-technical users to contribute to Braze Docs.
-
-#### Data and Analytics revamp
-To make it easier for you to find what you're looking for, we separated the articles formerly nested under "Data & Analytics" into [Data]({{site.baseurl}}/user_guide/data) and [Analytics]({{site.baseurl}}/user_guide/analytics). 
-
-#### Developer Guide
-We've done a huge cleanup of all docs across the [Braze Developer Guide]({{site.baseurl}}/developer_guide/home), which included merging "how-to's" split across multiple pages into a single page.
-
-There's also a new [SDK reference page]({{site.baseurl}}/developer_guide/references) that lists all of the reference documentation and repositories for each Braze SDK.
-
-##### Unreal Engine Braze SDK
-We migrated and rewrote all content from the Unreal Engine Braze SDK GitHub repository README into its [dedicated section on Braze Docs]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=unreal%20engine).
-
-### Data flexibility
-
-#### API usage dashboard
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-The [API usage dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard) lets you monitor your incoming REST API traffic into Braze to understand your trends within your usage of our REST APIs and to troubleshoot any potential issues.
-
-#### Adding tags to custom attributes
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can [add tags to a custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes#adding-tags) after it's created if you have the "Manage Events, Attributes, Purchases" permission. The tags can then be used to filter the list of attributes.
-
-#### Catalog selections and async catalog fields endpoints 
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-The following endpoints are now generally available:
-* [POST: Create Catalog Fields]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields)
-* [DELETE: Delete Catalog Field]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field)
-* [DELETE: Delete Catalog Selection]({{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection)
-* [POST: Create Catalog Selection]({{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections)
-
-#### Using an email address to trigger campaigns or Canvases
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can now specify a recipient by email address to trigger your [campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=target%20audience#step-2c-set-your-target-entry-audience).
-
-#### Using a phone number to identify a user via the API
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can now use a phone number, in addition to an alias and email address, to identify a user through the [`/users/identify` API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify)
-
-#### Getting a SAML trace
-We added [steps on how to obtain a SAML trace]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up#obtaining-a-saml-trace), which helps you resolve issues about SAML SSO with Support more efficiently.
- 
-#### Region-specific data centers
-As Braze is growing to serve new areas, we've added an [article about Braze data centers]({{site.baseurl}}/user_guide/data/data_centers) to clarify our operational approach.
- 
-### Unlocking creativity
- 
-#### Price drop notifications and back-in-stock notifications
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can now notify customers when an item is back-in-stock by setting up [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications) through a Canvas and catalog.
-
-You can also create [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications) to notify customers when an item's price has decreased by setting up price drop notifications in a catalog and Canvas.
-
-#### Preview for selection 
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-After creating a selection, you can [view what a selection would return]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#test-and-preview) for either a random user or a specific user.
-
-#### Templating catalog items including Liquid 
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can [template catalog items that include Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
-
-#### Canvas templates
-We added new Canvas templates for [onboarding users with a preferences survey]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/preference_survey) and [creating an email sign-up with double opt-in]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates/email_signup).
-
-#### Managing leads with Salesforce Sales Cloud for B2B
-One way B2B marketers can use Braze is through an integration with the Salesforce Sales Cloud. Read more about how to implement this [use case]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_salesforce_sales_cloud).
- 
-### Robust channels
-
-#### Suppression lists
-
-{% multi_lang_include release_type.md release="Beta" %}
- 
-[Suppression lists]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists) specify groups of users who will never receive messages. Admins can create suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
-
-### New Braze partnerships
-
-#### Constructor - Dynamic content
-[Constructor]({{site.baseurl}}/partners/ecommerce/product_search_recommendations/constructor/) is a search and product discovery platform that uses AI and machine learning to deliver personalized search, recommendations, and browsing experiences for ecommerce and retail websites.
- 
-#### Trustpilot - Dynamic content
-[Trustpilot]({{site.baseurl}}/partners/trustpilot/) is an online review platform that enables your customers to share feedback and allows you to manage and respond to reviews.
-
-### SDK updates
- 
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
- 
-- [Braze Android SDK 34.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#3400)
-    - Updated the minimum SDK version from 21 (Lollipop) to 25 (Nougat).
-

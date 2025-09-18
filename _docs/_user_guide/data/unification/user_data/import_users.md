@@ -1,11 +1,11 @@
 ---
-nav_title: User import
-article_title: User Import
-page_order: 4
+nav_title: Importing users
+article_title: Importing users
+page_order: 4.1
 description: "Learn about Braze's various user import options, like CSV import, REST API, Cloud Data Ingestion, and more."
 
 ---
-# User import
+# Importing users
 
 > Learn about Braze's various user import options, like CSV import, REST API, Cloud Data Ingestion, and more.
 

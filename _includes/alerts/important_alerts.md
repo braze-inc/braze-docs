@@ -41,3 +41,11 @@ The plans to phase out the purchase event will be announced in late 2025. In the
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'Shopify customer create' %}
+
+{% alert important %}
+The Shopify integration supports Shopify customer create and customer update webhooks, which are located in your data configuration settings. When a user profile is created or updated in Shopify, a corresponding user profile in Braze will be created or updated. <br><br>These actions don't trigger custom events in Braze and are solely used to [sync Shopify user data with Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works). The data synced includes [custom attributes]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes), [standard attributes]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes), and, if enabled within your configuration, [subscription group states]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins).
+{% endalert %}
+
+{% endif %}
