@@ -77,7 +77,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 |`external_user_ids` | Optional | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (for example, sends, clicks, bounces, etc) on the Braze dashboard. |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/) |
