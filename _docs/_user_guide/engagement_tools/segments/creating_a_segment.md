@@ -63,6 +63,25 @@ Selecting "OR" for your filters means that your segment will contain users satis
 When selecting "OR" for filters that include a negative filter (such as "is not" in a subscription group), remember that users only need to fulfill one of the "OR" filters to be included in the segment. To apply the negative filter regardless of the other filters, use an [exclusion group](#exclusion).
 {% endalert %}
 
+{% details When to avoid the OR operator %}
+
+There can be user targeting situations where using the `OR` operator should be avoided. The `OR` operator creates a statement that evaluates to true if a user meets the criteria for one or more of the filters in a statement. For example, if you want to create a segment of users who belong to "Foodies" but don't belong to either "Non-foodies" or "Candy-lovers", then using the `OR` operator would work here.
+
+![Filter group for users in segment "foodies" and not in segments "non-foodies" or "candy-lovers".]({% image_buster /assets/img_archive/or_operator_segment.png %})
+
+However, if your goal is to segment users who belong to the "Foodies" segment and aren't in either of the "Non-foodies" and "Candy-lovers" segments, then use the `AND` operator. This way, users who receive the campaign or Canvas are in the intended segment ("foodies") and not in the other segments ("Non-foodies" and "Candy-lovers") at the same time. 
+
+The following negative targeting criteria should not be used with the `OR` operator when two or more filters are referencing the same attribute:
+
+- `not included`
+- `is not`
+- `does not equal`
+- `does not match regex`
+
+If `not included`, `is not`, `does not equal`, or `does not match regex` are used with the `OR` operator two or more times in a statement, users with all values for the relevant attribute will be targeted.
+
+{% enddetails %}
+
 #### Filter operators
 
 Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.

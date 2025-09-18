@@ -2946,6 +2946,20 @@ validurls['/docs/help/release_notes/deprecations/twilio'] = '/docs/releases/depr
 validurls['/docs/help/release_notes'] = '/docs/releases/release_notes';
 validurls['/docs/help/release_notes/sdk_changelogs'] = '/docs/releases/sdk_changelogs';
 
-validurls['/docs/help/release_notes'] = '/docs/releases/home';
+validurls['/docs/help/release_notes/'] = '/docs/releases/home';
+validurls['/docs/help/help_articles/content_cards/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
+validurls['/docs/help/help_articles/content_cards/empty_content_card_feed/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
+validurls['/docs/help/help_articles/email/'] = '/docs/user_guide/message_building_by_channel/email/';
+validurls['/docs/help/help_articles/email/open_rates/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
+validurls['/docs/help/help_articles/email/html_looks_strange/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/';
+validurls['/docs/help/help_articles/segments/'] = '/docs/user_guide/engagement_tools/segments/';
+validurls['/docs/help/help_articles/segments/my_filter_options_have_changed/'] = '/docs/user_guide/engagement_tools/segments/troubleshooting/';
+validurls['/docs/help/help_articles/segments/segment_showing_0_users/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
+validurls['/docs/help/help_articles/segments/segmentation_logic_with_and_or/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/#segmentation-logic-using-and-and-or';
+validurls['/docs/help/help_articles/segments/exporting_large_segments/'] = '/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv#exporting-segment-data-to-csv';
+validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_guide/engagement_tools/segments/managing_segments/#searching-for-segments';
+validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
+validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
+validurls['/docs/help/faqs/'] = '/docs/';
 
 // validurls['OLD'] = 'NEW';
