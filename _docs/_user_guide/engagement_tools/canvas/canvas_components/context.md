@@ -167,6 +167,47 @@ The exit criteria states that at any point in a user’s journey in the Canvas, 
 {% endtab %}
 {% endtabs %}
 
+### Context variable filters
+
+You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
+
+{% alert important %}
+Context variable filters are only available for Audience Paths and Decision Split steps. 
+{% endalert %}
+
+Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
+
+![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
+
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
+
+Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
+
+![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
+
+#### Comparing to context variables or custom attributes
+
+By selecting the **Compare to a context variable or custom attribute** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context`, or to condense complex comparison logic defined across context variables.
+
+{% tabs %}
+{% tab Example 1 %}
+
+Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days should get a message.
+
+You have a context variable `re_engagement_date` that is defined as {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Note that `3 days` can be a variable amount that is also stored as a user's custom attribute. So if the `re_engagement_date` is after the `last_login_date` (stored as a custom attribute on the user profile), they'll be sent a message.
+
+![A filter setup with custom attributes as the personalization type for the context variable "re_engagement_date" after the custom attribute "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
+
+{% endtab %}
+{% tab Example 2 %}
+
+The following filter compares the context variable `reminder_date` to be before the context variable `appointment_deadline`. This can help group users in an Audience Paths step to determine whether they should receive additional reminders before their appointment deadline.
+
+![A filter setup with context variables as the personalization type for the context variable "reminder_date" on the context variable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
+
+{% endtab %}
+{% endtabs %}
+
 ## Previewing user paths
 
 We recommend testing and previewing your user paths to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
