@@ -3,7 +3,7 @@ name: Report an issue
 about: Report an issue for Braze Docs.
 title: ''
 labels: Issue
-assignees: braze-inc/braze-docs
+assignees: bre-fitzgerald, lydia-xie, rachel-feinberg
 
 ---
 

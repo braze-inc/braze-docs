@@ -3,7 +3,7 @@ name: Request a feature
 about: Help improve Braze Docs.
 title: ''
 labels: Feature
-assignees: braze-inc/braze-docs
+assignees: bre-fitzgerald, lydia-xie, rachel-feinberg
 
 ---
 
