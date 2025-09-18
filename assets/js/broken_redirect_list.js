@@ -2807,4 +2807,18 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/using_lo
 validurls['/docs/user_guide/message_building_by_channel/push/using_locales/'] = '/docs/locales_in_messages/';
 validurls['/docs/user_guide/message_building_by_channel/email/using_locales/'] = '/docs/locales_in_messages/';
 
+validurls['/docs/partners/shopify_legacy/'] = '/docs/partners/shopify/';
+validurls['/docs/partners/ecommerce/shopify_legacy/'] = '/docs/partners/shopify/';
+validurls['/docs/shopify_historical_backfill_legacy/'] = '/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill';
+validurls['/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_backfill/'] = '/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill';
+validurls['/docs/shopify_user_identity/'] = '/docs/shopify_overview/';
+validurls['/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_user_identity/'] = '/docs/shopify_overview/';
+validurls['/docs/shopify_data_legacy/'] = '/docs/shopify_data_features/';
+validurls['/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze/'] = '/docs/shopify_data_features/';
+validurls['/docs/shopify_use_cases_legacy/'] = '/docs/shopify_overview/';
+validurls['/docs/shopify_overview_legacy/'] = '/docs/shopify_overview/';
+validurls['/docs/partners/ecommerce/shopify_legacy/shopify_overview/'] = '/docs/shopify_overview/';
+validurls['/docs/setting_up_shopify_legacy/'] = '/docs/shopify_overview/';
+validurls['/docs/partners/ecommerce/shopify_legacy/setting_up_shopify/'] = '/docs/shopify_overview/';
+
 // validurls['OLD'] = 'NEW';
