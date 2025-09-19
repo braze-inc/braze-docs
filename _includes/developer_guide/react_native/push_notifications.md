@@ -305,3 +305,15 @@ If you want to use an additional Firebase Messaging Service (FMS), you can speci
 If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
 
 One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
+
+### Troubleshooting
+
+> These are common troubleshooting steps for push notification integrations with the Braze React Native SDK and Expo plugin.
+
+#### My push notifications have stopped working with newer versions of Expo/React Native
+Because push notification configurations are abstracted in Expo integrations, Braze's implementations can sometimes conflict with other libraries. Be sure to check if your project imports other dependencies that may be manually overriding existing push notification delegate methods.
+
+For iOS integrations, review the methods described in option 2 of the [push notification setup tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) and verify in your project that there are no other libraries that could be interfering with the execution of those methods.
+
+#### My device token is being registered to Braze
+First, review the troubleshooting step above. If you have a separate dependency that is interfering with Braze's push notification configurations, you may need to remove it or alternatively call `Braze.registerPushToken` as a manual step.
