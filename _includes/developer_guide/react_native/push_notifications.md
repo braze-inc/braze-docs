@@ -315,5 +315,5 @@ Because push notification configurations are abstracted in Expo integrations, Br
 
 For iOS integrations, review the methods described in option 2 of the [push notification setup tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) and verify in your project that there are no other libraries that could be interfering with the execution of those methods.
 
-#### My device token is being registered to Braze
+#### My device token is not being registered to Braze
 First, review the troubleshooting step above. If you have a separate dependency that is interfering with Braze's push notification configurations, you may need to remove it or alternatively call `Braze.registerPushToken` as a manual step.
