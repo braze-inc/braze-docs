@@ -13,17 +13,13 @@ description: "Braze Agents can generate content, make intelligent decisions, and
 Braze Agents are currently in beta. For help getting started, contact your customer success manager.
 {% endalert %}
 
-image
-
 ## Why use Braze Agents?
 
 Braze Agents help your team deliver smarter, more personalized experiences—without adding extra work. They act as intelligent assistants that don’t just respond to prompts, but understand context, make decisions, and take action toward a goal.
 
-In practice, Agents can automatically create message copy—like subject lines or in-product text—so every customer gets communication that feels tailored to them. They can also adapt in real time, routing people through different Canvas paths based on preferences, behaviors, or other data.
+In practice, agents can automatically create message copy—like subject lines or in-product text—so every customer gets communication that feels tailored to them. They can also adapt in real time, routing people through different Canvas paths based on preferences, behaviors, or other data.
 
-Beyond messaging, Agents can enrich your catalogs by calculating or generating product and profile field values, keeping your data fresh and dynamic. By taking on repetitive or complex tasks, they free your team to focus on strategy and creativity instead of manual setup.
-
-With a combination of reasoning, context, and tools, Braze Agents act more like collaborators than background processes—helping you solve problems and deliver impact at scale.
+Beyond messaging, agents can enrich your catalogs by calculating or generating product and profile field values, keeping your data fresh and dynamic. By taking on repetitive or complex tasks, they free your team to focus on strategy and creativity instead of manual setup. Braze Agents act more like collaborators than background processes—helping you solve problems and deliver impact at scale.
 
 ## Features
 
@@ -31,22 +27,21 @@ Features for Braze Agents include:
 
 - **Flexible setup:** Use a Braze-provided LLM or connect your own model provider (such as OpenAI, Anthropic, Google Gemini, or AWS Bedrock).
 - **Seamless integration:** Deploy agents directly in Canvas steps or catalog fields.
-- **Testing tools:** Preview outputs with sample inputs before you launch.
-- **Usage controls:** Built-in execution and size limits to manage performance and costs.
+- **Testing and logging tools:** Preview your agent's output by testing with sample inputs before you launch. View logs for each time the agent runs, including the input and output for that run.
+- **Usage controls:** Built-in execution and size limits help manage performance and costs.
 
 ## About Braze Agents
 
-Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in (like a consumer’s profile details or catalog fields) to generate a response.
+Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response. 
 
 ### Key concepts
 
 | Term | Definition |
 | --- | --- |
-| Model | The agent’s “brain,” in this case a large language model (LLM). It interprets inputs, generates responses, and performs reasoning. A stronger model (trained on more relevant data) makes the agent more capable and versatile.
-| Context | Data passed into the agent at runtime, such as profile fields or catalog rows. This provides the information the agent uses to generate outputs. |
-| Tools *(Coming soon)* | External services the agent can use (like APIs, databases, or search). They extend the agent’s abilities beyond its training—for example, fetching real-time data or running specialized tasks. Tools help the agent bridge gaps in its native capabilities, much like a human looking something up.
-| Instructions | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
-| Response variable | The output the agent produces (string, number, Boolean). Response variables store the agent’s result to personalize content or guide workflow paths. |
+| [Model](({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#models)) | The agent’s “brain,” in this case a large language model (LLM). It interprets inputs, generates responses, and performs reasoning. A stronger model (trained on more relevant data) makes the agent more capable and versatile. |
+| [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
+| Context | Data passed into the agent at runtime wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
+| Response variable | The output the agent produces when used in Canvas steps. Response variables store the agent’s result to personalize content or guide workflow paths. Reponse variables can be a string, number, or boolean data type.  |
 | Execution | A single run of the agent. This counts against your daily and total limits. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -63,3 +58,7 @@ Additionally, during the beta period:
 
 ## Next steps
 
+Now that you know about Braze Agents, you’re ready for the next steps:
+
+- [Creating custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
+- [Deploying custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
