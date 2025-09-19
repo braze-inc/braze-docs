@@ -362,7 +362,7 @@ Loyalty programs: Highlight products that would maximize a customer’s loyalty 
 
 {% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
 
-## Frequently asked questions (FAQ) {#faq}
+## Frequently asked questions {#faq}
 
 ### What causes "Most popular" items to be mixed into other models' recommendations?
 
