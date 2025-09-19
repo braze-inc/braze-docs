@@ -272,3 +272,37 @@ UBraze->LogCustomEventWithProperties(TEXT("YOUR_EVENT_NAME"), Properties);
 {% alert important %}
 The `time` and `event_name` keys are reserved and cannot be used as custom event properties.
 {% endalert %}
+
+## Best practices
+
+There are three important checks to carry out so that your custom event properties log as expected:
+
+* [Establish which events are logged](#verify-events)
+* [Verify log](#verify-log)
+* [Verify values](#verify-values)
+
+Multiple properties may be logged each time a custom event is logged.
+
+### Verify events
+
+Check with your developers which event properties are being tracked. Keep in mind that all event properties are case-sensitive. For additional information on tracking custom events, check out these articles based on your platform:
+
+* [Android]({{site.baseurl}}/developer_guide/analytics/logging_events?tab=android)
+* [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events?tab=swift)
+* [Web]({{site.baseurl}}/developer_guide/analytics/logging_events?tab=web)
+
+### Verify log
+
+To confirm that the event properties are successfully tracked, you can view all event properties from the **Custom Events** page.
+
+1. Navigating to **Data Settings** > **Custom Events**.
+2. Locate your custom event from the list.
+3. For your event, select **Manage Properties** to view the names of the properties associated with an event.
+
+### Verify values
+
+After adding your user as a test user, follow these steps to verify your values: 
+
+1. Perform the custom event within the app.
+2. Wait for roughly 10 seconds for the data to flush.
+3. Refresh the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) to view the custom event and the event property value that was passed with it.

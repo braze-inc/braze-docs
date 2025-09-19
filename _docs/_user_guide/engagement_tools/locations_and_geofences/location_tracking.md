@@ -83,3 +83,28 @@ The `Most Recent Location` is the last known GPS location of the device. This is
 
 No. If a user has ever had a location stored on their profile, that data will not be automatically removed if they later opt out of location tracking.
 
+## Troubleshooting
+
+### No users have available locations
+
+Braze captures a user's most recent location by default through the SDK. This typically means that the "recent location" is the location from which your user most recently used your app. If you send Braze background location data, you may have more granular data available.
+
+If no users have available locations, two quick checks can help you confirm data collection and date transfer.
+
+#### Data collection
+
+Confirm that your app is collecting location data:
+
+- For iOS, this means that users opt-in to share their location data via a prompt at some point in the user journey. 
+- For Android, confirm that your app asks for fine or coarse location permissions at installation.
+
+To see whether user location data is being sent to Braze, use the **Location Available** filter. This filter allows you to see the percentage of users with a "most recent location".
+
+![A "Test Location" segment that uses the "Location Available" filter.]({% image_buster /assets/img_archive/trouble7.png %})
+
+#### Data transfer
+
+Confirm that your developers are passing location data to Braze. Normally, the passing of location data is handled automatically by the SDK after the user gives permissions, but your developers may have disabled location tracking in Braze. More information on location tracking can be found for:
+- [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location?sdktab=android)
+- [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_location?sdktab=swift)
+- [Web]({{site.baseurl}}/developer_guide/analytics/tracking_location?sdktab=web)
