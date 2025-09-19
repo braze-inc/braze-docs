@@ -1,8 +1,9 @@
 ---
-nav_title: "Canvas entry properties object"
-article_title: API Canvas Entry Properties Object
+nav_title: "Canvas context object"
+article_title: API Canvas Context Object
 page_order: 2
 page_type: reference
+alias: /api/objects_filters/canvas_entry_properties_object/
 tool:
   - Canvas
 description: "This article explains the Braze Canvas entry properties object."
