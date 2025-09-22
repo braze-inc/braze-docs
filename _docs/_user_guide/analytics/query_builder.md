@@ -66,7 +66,7 @@ send_date_sydney;
 ```
 {% endraw %}
 
-### Query History
+### Query history
 
 The Query History section in Query Builder displays your previously run queries to help you track and reuse your work. Query history is retained for 7 days, after which queries are automatically removed from the history.
 
