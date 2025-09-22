@@ -68,9 +68,9 @@ send_date_sydney;
 
 ### Query history
 
-The Query History section in Query Builder displays your previously run queries to help you track and reuse your work. Query history is retained for 7 days, after which queries are automatically removed from the history.
+The **Query history** section in Query Builder displays your previously run queries to help you track and reuse your work. Query history is retained for seven days, then queries are automatically removed from the history.
 
-If you need to audit query usage for longer periods or maintain records beyond 7 days, make sure to export or save important query results before they expire from the history.
+If you need to audit query usage for longer periods or maintain records beyond seven days, we recommend exporting or saving important query results before they expire.
 
 ## Generating SQL with the AI Query Builder
 
