@@ -356,4 +356,6 @@ valid_partner_list:
   url: /docs/partners/okendo/
 - name: Lemnisk
   url: /docs/partners/lemnisk/
+- name: Jasper
+  url: /docs/partners/jasper/
 ---

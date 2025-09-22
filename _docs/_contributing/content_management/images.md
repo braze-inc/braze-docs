@@ -1,6 +1,6 @@
 ---
 nav_title: Images
-article: Managing Images
+article_title: Managing Images
 description: "Learn how to add, modify, and remove images on Braze Docs."
 page_order: 1
 noindex: true

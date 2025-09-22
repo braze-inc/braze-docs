@@ -1,6 +1,6 @@
 ---
 nav_title: Compliance documentation for Shopify integration
-article: Compliance Documentation for Shopify Integration
+article_title: Compliance Documentation for Shopify Integration
 permalink: /compliance_documentation_shopify/
 description: "Compliance documentation relating to Shopify Integration."
 page_order: 6

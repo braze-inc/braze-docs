@@ -94,7 +94,7 @@ You can then use this basic authentication credential in your API calls by refer
 
 {% raw %}
 ```
-Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :auth_credential credential_name %}
+Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
 {% endraw %}
 
@@ -103,6 +103,10 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 {% endalert %}
 
 ### Using token authentication
+
+{% alert important %} 
+The token authentication credential type is currently in early access. Contact your Braze account manager if you're interested in participating in this early access. 
+{% endalert %}
 
 When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
 
@@ -139,8 +143,9 @@ The following example illustrates retrieving and saving an access token to a loc
 {% connected_content
      https://your_API_access_token_endpoint_here/
      :method post
+     :auth_credentials access_token_credential_abc
      :headers {
-       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
      :save token_response
@@ -212,4 +217,5 @@ Connected Content doesn’t have its own rate limit. Instead, the rate limit is 
 ### What’s caching behavior?
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
+
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
