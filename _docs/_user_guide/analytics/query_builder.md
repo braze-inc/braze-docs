@@ -66,6 +66,12 @@ send_date_sydney;
 ```
 {% endraw %}
 
+### Query History
+
+The Query History section in Query Builder displays your previously run queries to help you track and reuse your work. Query history is retained for 7 days, after which queries are automatically removed from the history.
+
+If you need to audit query usage for longer periods or maintain records beyond 7 days, make sure to export or save important query results before they expire from the history.
+
 ## Generating SQL with the AI Query Builder
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
@@ -274,9 +280,3 @@ For selecting Canvas steps that belong to chosen Canvases. It must be used with 
 
 - **Replacement value:** Canvas steps API IDs
 - **Usage example:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-
-## Query History
-
-The Query History section in Query Builder displays your previously run queries to help you track and reuse your work. Query history is retained for 7 days, after which queries are automatically removed from the history.
-
-If you need to audit query usage for longer periods or maintain records beyond 7 days, make sure to export or save important query results before they expire from the history.
