@@ -2974,4 +2974,8 @@ validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
 
+validurls['/docs/help/help_articles/api/delete_user/'] = '/docs/api/endpoints/user_data/post_user_delete/#data-deleted';
+validurls['/docs/help/help_articles/api/attribute_name_id_across_sources/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-attributes';
+
+
 // validurls['OLD'] = 'NEW';
