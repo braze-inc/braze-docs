@@ -2974,4 +2974,11 @@ validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
 
+validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
+validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
+validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
+validurls['/docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/help/help_articles/push/push_unsubscribes/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting#push-performance';
+validurls['/docs/help/help_articles/push/reducing_payload_size/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
+
 // validurls['OLD'] = 'NEW';
