@@ -16,7 +16,7 @@ tool: Canvas
 
 ## How it works
 
-When a user reaches an Agent step in a Canvas, Braze sends the input data you’ve configured (full context or selected fields) to your chosen agent. The agent then processes the input using its model and instructions, and returns an output. That output is stored in the response variable you defined in the step.
+When a user reaches an Agent step in a Canvas, Braze sends the input data you’ve configured (full context or selected fields) to your chosen agent. The agent then processes the input using its model and instructions, and returns an output. That output is stored in the output variable you defined in the step.
 
 You can then use this variable in two main ways:
 
@@ -33,9 +33,9 @@ Drag and drop the **Agent** component from the sidebar, or select the <i class="
 
 Select the agent that will process data in this step. Choose an existing agent, or create a new one directly from this step. For setup guidance, see [Creating custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/).
 
-### Step 3: Define the response variable
+### Step 3: Define the output variable
 
-Agent outputs are called "response variables", and are stored in a [context variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-types) for easy access. To define the response variable:
+Agent outputs are called "output variables", and are stored in a [context variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-types) for easy access. To define the output variable:
 
 1. Give the variable a name.
 2. Select a data type. 
@@ -49,7 +49,7 @@ Agent responses can be saved as strings, numbers, or booleans. This makes them f
 | Boolean | Yes/No branching in [Decision Splits]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-When defined, you can use a response variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
+When defined, you can use a output variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
 
 ### Step 4: Decide what context to provide the agent  
 
@@ -65,7 +65,7 @@ Braze will only pass the first 10 KB of content to the agent. Providing values t
 ## Error handling  
 
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
-- If the agent fails for any other reason (such as invalid API key), the response variable is set to `null`.  
+- If the agent fails for any other reason (such as invalid API key), the output variable is set to `null`.  
 - Responses are cached for identical inputs to reduce repeated executions.  
 
 ## Analytics  
