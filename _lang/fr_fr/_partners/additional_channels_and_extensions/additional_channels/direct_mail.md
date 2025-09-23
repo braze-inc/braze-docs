@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Publipostage
 config_only: true
 ---
