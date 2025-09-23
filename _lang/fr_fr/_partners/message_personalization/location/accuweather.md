@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévisions météorologiques dans le monde entier.  
+> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévisions météorologiques dans le monde entier. Avec Accuweather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi qu'automatiser les traductions grâce à l'utilisation du [contenu connecté de]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) Braze. 
 
 _Cette intégration est maintenue par Accuweather._
 
@@ -18,7 +18,7 @@ _Cette intégration est maintenue par Accuweather._
 
 | Condition | Description |
 |---|---|
-| Clé d'API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour obtenir des clés d'API compatibles à utiliser dans les URL de vos requêtes.<br><br> |
+| Clé d'API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour obtenir des clés d'API compatibles à utiliser dans les URL de vos requêtes.<br><br>Vous trouverez des instructions supplémentaires sur la page [Accuweather Enterprise API.](https://apidev.accuweather.com/developers/)  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## API AccuWeather disponibles
@@ -27,15 +27,15 @@ Voici les API AccuWeather que vous pouvez référencer dans vos campagnes et Can
 
 | API | Description |
 |---|---|
-| | Obtenez une clé d'emplacement pour la localisation souhaitée. Utilisez la clé d’une localisation pour récupérer les données météorologiques à partir de l'API des prévisions ou des conditions actuelles. |
-|  | Obtenez des informations sur les prévisions pour une localisation spécifique. |
-|  | Obtenez les données relatives aux conditions actuelles d’une localisation spécifique. |
-|  | Obtenez les valeurs d'indice quotidiennes pour une localisation spécifique. La disponibilité des indices varie en fonction de la localisation. |
-|  | Recevez des alarmes météorologiques pour une localisation spécifique. Les alarmes météo AccuWeather sont déterminées à l'aide des prévisions quotidiennes pour une localisation.  |
-|  | Recevez des alertes météorologiques extrêmes de la part des agences météorologiques gouvernementales officielles et des principaux fournisseurs mondiaux d'alertes météorologiques. |
-|  | Obtenez des images radar et satellites. |
-|  | Obtenez la position actuelle, les positions passées et les prévisions des cyclones tropicaux dans le monde entier. |
-|  | Consultez la liste des langues disponibles. Obtenez des traductions pour des groupes de phrases spécifiques. |
+|[Localisations](https://apidev.accuweather.com/developers/locationsAPIguide) | Obtenez une clé d'emplacement pour la localisation souhaitée. Utilisez la clé d’une localisation pour récupérer les données météorologiques à partir de l'API des prévisions ou des conditions actuelles. |
+| [Prévisions](https://apidev.accuweather.com/developers/forecastsAPIguide) | Obtenez des informations sur les prévisions pour une localisation spécifique. |
+| [Conditions actuelles](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) | Obtenez les données relatives aux conditions actuelles d’une localisation spécifique. |
+| [Indices](https://apidev.accuweather.com/developers/indicesApiGuide) | Obtenez les valeurs d'indice quotidiennes pour une localisation spécifique. La disponibilité des indices varie en fonction de la localisation. |
+| [Alarmes météo](https://apidev.accuweather.com/developers/weatheralarmsAPIguide) | Recevez des alarmes météorologiques pour une localisation spécifique. Les alarmes météo AccuWeather sont déterminées à l'aide des prévisions quotidiennes pour une localisation. Une alarme est déclenchée pour un emplacement/localisation si les prévisions météorologiques atteignent ou dépassent des [seuils spécifiques](https://apidev.accuweather.com/developers/weatheralarms). |
+| [Alertes](https://apidev.accuweather.com/developers/alertsApiGuide) | Recevez des alertes météorologiques extrêmes de la part des agences météorologiques gouvernementales officielles et des principaux fournisseurs mondiaux d'alertes météorologiques. |
+| [L'imagerie](https://apidev.accuweather.com/developers/imageryAPIguide) | Obtenez des images radar et satellites. |
+| [Tropical](https://apidev.accuweather.com/developers/tropicalAPIGuide) | Obtenez la position actuelle, les positions passées et les prévisions des cyclones tropicaux dans le monde entier. |
+| [Traductions](https://apidev.accuweather.com/developers/translationsApiGuide) | Consultez la liste des langues disponibles. Obtenez des traductions pour des groupes de phrases spécifiques. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Exemple de contenu connecté
@@ -58,7 +58,7 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![Un message push de contenu connecté qui dit « Il pleut ! 
+![Un message push de contenu connecté qui dit « Il pleut ! Grab an Umbrella !" sur un appareil Android]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
 
 Vous trouverez une ventilation des deux appels relatifs au contenu connecté dans les exemples suivants.
 
