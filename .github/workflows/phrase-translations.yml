@@ -1,0 +1,74 @@
+name: Phrase translation PR triage
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, edited]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update title and label for Phrase PRs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const branch = pr.head.ref;
+
+            // 1) Skip if branch does not start with i18n_phrase-
+            if (!branch.startsWith('i18n_phrase-')) {
+              core.info('Non-Phrase branch. Passing.');
+              return;
+            }
+
+            // 2) Skip if label already present
+            const alreadyLabeled = pr.labels?.some(l => l.name === 'phrase-translation');
+            if (alreadyLabeled) {
+              core.info('Label present. Passing.');
+              return;
+            }
+
+            // 3) Parse "i18n_phrase-<lang>-<YYYYMMDD>"
+            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/i);
+            if (!m) {
+              core.info(`Branch pattern not matched: ${branch}. Passing.`);
+              return;
+            }
+            const lang = m[1];
+            const y = m[2].slice(0,4);
+            const mo = m[2].slice(4,6);
+            const d = m[2].slice(6,8);
+
+            // Build "Month D, YYYY" in UTC to avoid TZ drift
+            const date = new Date(Date.UTC(Number(y), Number(mo) - 1, Number(d)));
+            const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            const pretty = `${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+
+            const newTitle = `Phrase translations for '${lang}' ${pretty}`;
+
+            // Update PR title if needed
+            if (pr.title !== newTitle) {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                title: newTitle
+              });
+              core.info(`Title set: ${newTitle}`);
+            } else {
+              core.info('Title already correct.');
+            }
+
+            // Add label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              labels: ['phrase-translation']
+            });
+            core.info('Label added.');
