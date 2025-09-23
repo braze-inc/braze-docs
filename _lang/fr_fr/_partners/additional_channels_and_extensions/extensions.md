@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Extensions
 config_only: true
 ---
