@@ -39,9 +39,36 @@ As a convenience, a summary of supported personalization tags are provided. For 
 
 ### Supported attributes
 
-Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` isn't available in in-app message campaigns).
+Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` isn't available in in-app message campaigns). You can use Liquid to pass these attributes in the message itself, in a Connected Content call, or as key-value pairs. This is usually done for tracking purposes.
 
-Refer to this help article to learn more about [how some of these attributes differ across sources in Braze]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/).
+{% tabs %}
+{% tab Campaign attributes %}
+
+| Attribute | Liquid | REST API | Currents |
+| --- | --- | --- | --- |
+| Campaign name | {% raw %}`{{campaign.${name}}}`{% endraw %} | `name` | `campaign_name` |
+| Campaign ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | N/A (used as an input for the API call itself) | campaign_id |
+| Variant name | {% raw %}`{{campaign.${message_name}}}`{% endraw %} | `messages.message_variation_id.name` | N/A (map variant name to variant ID using the Export campaign details endpoint) |
+| Variant ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `messages.message_variation_id` | `message_variation_api_id` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% endtab %}
+{% tab Canvas attributes %}
+
+| Attribute | Liquid | REST API | Currents |
+| --- | --- | --- | --- |
+| Canvas name | {% raw %}`{{canvas.${name}}}`{% endraw %} | `name` | `canvas_name` |
+| Canvas ID | {% raw %}`{{canvas.${api_id}}}`{% endraw %} | N/A (used as an input for the API call itself) | canvas_id |
+| Variant name | {% raw %}`{{canvas.${variant_name}}}`{% endraw %} | `variants.name` | `canvas_variation_name` |
+| Variant ID | {% raw %}`{{canvas.${variant_api_id}}}`{% endraw %} | `variants.name.id` | `canvas_variation_id` |
+| Step name | {% raw %}`{{campaign.${name}}}`{% endraw %} | `steps.name` | `canvas_step_name` |
+| Step ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | `steps.id` | `canvas_step_id` |
+| Message channel | N/A | `steps.messages.message_variation_id.channel` | N/A (inherent from event type, such as push send or email open) |
+| Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `steps.message.message_variation_id` | `canvas_step_message_variation_api_id` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% endtab %}
+{% endtabs %}
 
 ### Canvas and campaign tag differences 
 
