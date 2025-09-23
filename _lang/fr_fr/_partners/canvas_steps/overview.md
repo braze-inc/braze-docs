@@ -38,7 +38,7 @@ table td {
 | [Google Ads ou YouTube]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) | Entre 6 et 12 heures | Les données sont regroupées toutes les 5 secondes, avec une relance automatique basée sur les commentaires de Google. | Non | {::nomarkdown}<ul><li><b>Match des clients :</b> Utilisez soit l'annonce mobile, soit l'adresse e-mail ou le numéro de téléphone.</li><li>Google Audiences nécessite au moins 5 000 utilisateurs pour commencer à diffuser des annonces.</li><li>La taille de l'audience sera nulle jusqu'à ce qu'il y ait au moins 1 000 utilisateurs.</li></ul>{:/} |
 | [LinkedIn]({{site.baseurl}}/partners/canvas_steps/linkedin_audience_sync) | 48 heures | LinkedIn traite 10 requêtes par seconde et 100 000 utilisateurs par demande. Les utilisateurs des lots de Braze se succèdent toutes les 5 secondes. | L'intelligence artificielle au service des prédictions d'audience | {::nomarkdown}<ul><li>La taille minimale de l'audience est de 300 membres, le ciblage de l'emplacement/localisation étant pris en considération.</li><li>LinkedIn affiche le taux correspondant dans le tableau de bord de Braze.</li></ul>{:/} |
 | [Pinterest]({{site.baseurl}}/partners/canvas_steps/pinterest_audience_sync/) | Entre 24 et 48 heures | Pinterest traite 7 requêtes par seconde et 100 000 utilisateurs par demande. Les utilisateurs des lots de Braze se succèdent toutes les 5 secondes. | Oui | Les audiences Pinterest nécessitent au moins 100 utilisateurs. |
-| [Snapchat]({{site.baseurl}}/partners/canvas_steps/snapchat_audience_sync/) | N/A | Snapchat traite 10 requêtes par seconde et 100 000 utilisateurs par requête. Les utilisateurs des lots de Braze se succèdent toutes les 5 secondes. | Oui | Snapchat prend en charge jusqu'à 1 000 audiences publicitaires. |
+| [Snapchat]({{site.baseurl}}/partners/canvas_steps/snapchat_audience_sync/) | S.O. | Snapchat traite 10 requêtes par seconde et 100 000 utilisateurs par requête. Les utilisateurs des lots de Braze se succèdent toutes les 5 secondes. | Oui | Snapchat prend en charge jusqu'à 1 000 audiences publicitaires. |
 | [TikTok]({{site.baseurl}}/partners/canvas_steps/tiktok_audience_sync/) | Entre 24 et 48 heures | TikTok traite 50 requêtes par seconde et 10 000 utilisateurs par demande. Les utilisateurs des lots de Braze se succèdent toutes les 5 secondes. | Oui | {::nomarkdown}<ul><li>TikTok prend en charge jusqu'à 400 audiences publicitaires.</li><li>Les audiences de TikTok nécessitent au moins 1 000 utilisateurs pour commencer à diffuser des publicités.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
 <sup>Lorsque la limite de débit est atteinte, Braze effectue une nouvelle tentative de synchronisation pendant 13 heures.</sup>
@@ -72,7 +72,7 @@ Pour chaque destination de la fonction de synchronisation, le partenaire peut av
 
 Pour utiliser un partenaire de synchronisation d’audience professionnelle, notamment TikTok, Pinterest, Snapchat ou Criteo, vous pourrez sélectionner vos partenaires en fonction de vos attributions d'achats de synchronisation d’audiences professionnelle dans la section **Audience Sync Pro** de la page **Partenaires technologiques**.
 
-![Audience Sync Pro sans partenaires sélectionnés pour l'instant.][5]{: style="max-width:75%;"}
+![Audience Sync Pro sans partenaire sélectionné pour l'instant.][5]{: style="max-width:75%;"}
 
 Tout d'abord, sélectionnez les partenaires que vous voulez utiliser en choisissant Sélectionner des partenaires. Chaque achat d'Audience Sync Pro vous permettra d'obtenir 3 destinations d’Audience Sync Pro, qui seront disponibles dans chacun de vos espaces de travail au sein de votre tableau de bord.
 
@@ -82,7 +82,7 @@ Après avoir sélectionné vos destinations Audience Sync Pro, connectez votre c
 
 ![Un exemple de Snapchat et TikTok sélectionnés comme partenaires pour Audience Sync.][7]{: style="max-width:70%;"}
 
-![Audience Snapchat Synchronisez les paramètres avec le message : "Vous avez connecté avec succès 1 compte Snapchat".][9]{: style="max-width:70%;"}
+![Audience Snapchat Synchronisez les paramètres avec le message : "Vous avez réussi à connecter 1 compte Snapchat".][9]{: style="max-width:70%;"}
 
 Enfin, créez votre étape de canvas pour la synchronisation de l’audience en utilisant cette destination Audience Sync Pro.
 
@@ -90,7 +90,7 @@ Enfin, créez votre étape de canvas pour la synchronisation de l’audience en 
 
 Si l'erreur est liée à l'intégration globale du partenaire (comme un problème d'autorisation), un e-mail est envoyé à l'utilisateur qui a connecté l'intégration. Si cet utilisateur n'existe plus, ce sont les administrateurs qui recevront les e-mails. 
 
-Si l'erreur est liée à des problèmes avec le composant Audience Sync (tel que "Audience Does Not Exist") dans Canvas, un e-mail est envoyé à l'utilisateur qui a configuré le Canvas. Si cet utilisateur n'existe plus, il revient à l'administrateur de l'entreprise.
+Si l'erreur est liée à des problèmes avec le composant Audience Sync (tel que "Audience Does Not Exist") dans Canvas, un e-mail est envoyé à l'utilisateur qui a configuré Canvas. Si cet utilisateur n'existe plus, il revient à l'administrateur de l'entreprise.
 
 Pour configurer les destinataires de ces e-mails, contactez votre gestionnaire de satisfaction client pour ajouter des destinataires sous **Préférences de notification.** Comme cette fonctionnalité modifie le comportement actuel, vous devrez immédiatement ajouter des destinataires à cette nouvelle préférence de notification, car Braze ne propose pas d'abonnement par défaut, et vous assurer qu'aucun e-mail d'erreur n'est manqué.
 
