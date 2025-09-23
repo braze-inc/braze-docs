@@ -46,6 +46,14 @@ For example,
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
 
+## Considerations
+
+- You can have up to 10 context variables per Context step.
+- You can store up to 50&nbsp;KB per context variable. For example, if you store an HTML and Liquid snippet in a context variable that exceeds this, the context variable won't be evaluated or stored for the user.
+- Each context variable name can be up to 100 characters.
+- Context variable names must be valid identifiers (letters, numbers, underscores only).
+- Context variable definitions can be up to 10,240 characters. 
+
 ## Creating a Context step
 
 ### Step 1: Add a step
@@ -210,11 +218,15 @@ The following filter compares the context variable `reminder_date` to be before 
 
 ## Previewing user paths
 
-We recommend testing and previewing your user paths to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+
+{% alert note %}
+If you're previewing your Canvas in the **Preview & Test Send** section of the editor, the timestamp in the test message preview **will not** be standardized to UTC because this panel generates previews as strings. This means if a Canvas is set up to accept a `time` object, the message preview won't accurately preview what occurs when the Canvas is live. To test your Canvas most accurately, we recommend previewing user paths instead.
+{% endalert %}
 
 Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
 
-If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent. 
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent.
 
 ## Converting Connected Content strings to JSON
 
