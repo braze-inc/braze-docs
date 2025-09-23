@@ -36,7 +36,7 @@ jobs:
             }
 
             // 3) Parse i18n_phrase-<lang>-<YYYYMMDD>
-            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/i);
+            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/);
             if (!m) {
               core.info(`Pass: branch pattern not matched: ${branch}`);
               return;
