@@ -1,7 +1,9 @@
+# Renames PRs starting with 'i18n_phrase-' and adds 'phrase-translation' label.
 name: Translation tasks
 
 on:
   pull_request:
+    # add more types if needed, but only the minimum required for each job in the workflow.
     types: [opened, reopened, synchronize, edited]
 
 permissions:
