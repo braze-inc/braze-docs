@@ -155,7 +155,7 @@ En début d'année, nous avons créé des tables de relations d'entités pour le
 
 #### Événements recommandés
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Les [événements recommandés]({{site.baseurl}}/user_guide/data/custom_data/recommended_events) mappent les cas d'utilisation les plus courants du commerce électronique. En utilisant les événements personnalisés, vous pouvez débloquer des modèles de canvas pré-créés, des tableaux de bord de reporting qui mappent le cycle de vie du client, et plus encore.
 
@@ -181,7 +181,7 @@ Utilisez la [page**Paramètres de push**]({{site.baseurl}}/user_guide/administra
 
 #### Codes de promotion pour les campagnes de messages in-app.
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Vous pouvez utiliser des [codes promotionnels]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) dans les campagnes de messages in-app en insérant un [extrait de liste de codes promotionnels]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) dans le corps du message de votre campagne de messages in-app.
 
@@ -305,7 +305,7 @@ Braze Canvas propose plusieurs [modèles préconstruits]({{site.baseurl}}/user_g
 
 #### Vidéos WhatsApp
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Les [fichiers vidéo WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#outbound-messages) peuvent désormais être hébergés via une URL ou dans la bibliothèque multimédia de Braze.
 
@@ -444,7 +444,7 @@ Consultez notre [foire aux questions]({{site.baseurl}}/user_guide/engagement_too
 
 #### Délais personnalisés et prolongés
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Vous pouvez définir un [délai personnalisé]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step#personalized-delays) pour vos utilisateurs et l'utiliser avec une étape Contexte pour sélectionner la variable contextuelle à retarder.
 
@@ -488,7 +488,7 @@ La [gestion dynamique des passerelles APN]({{site.baseurl}}/developer_guide/push
 
 #### Support de Flutter pour les bannières
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Les bannières sont désormais compatibles avec Flutter. En outre, toute la documentation de Banner a été revue pour en faciliter l'utilisation. Consultez les articles suivants pour commencer :
 
@@ -498,7 +498,7 @@ Les bannières sont désormais compatibles avec Flutter. En outre, toute la docu
 
 #### Suivi des clics sur WhatsApp
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Le [suivi des clics]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/) vous permet de savoir quand quelqu'un clique sur un lien dans votre message WhatsApp, ce qui vous donne une vision claire du contenu qui suscite l'engagement. Braze raccourcit vos URL, ajoute un suivi en coulisses et enregistre les clics au fur et à mesure qu'ils se produisent.
 
@@ -599,13 +599,13 @@ Ajout de trois [didacticiels Liquid]({{site.baseurl}}/user_guide/personalization
 
 #### Étapes du contexte pour Canvas
  
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
  
 Utilisez les [étapes Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) pour créer ou mettre à jour un ensemble de variables qui conseillent le contexte d'un utilisateur (ou des informations sur le comportement de cet utilisateur) au fur et à mesure qu'il se déplace dans un Canvas.
 
 #### Délai personnalisé
 
-{% multi_lang_include release_type.md release="Accès anticipé" %}
+{% multi_lang_include release_type.md release="Early access" %}
 
 Vous pouvez définir un [délai personnalisé]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) pour vos utilisateurs en basculant la case Délai **personnalisé** dans votre étape Délai. Vous pouvez l'utiliser avec une étape Contexte pour sélectionner une variable contextuelle à retarder.
 
