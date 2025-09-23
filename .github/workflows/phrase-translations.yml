@@ -2,7 +2,6 @@ name: Translation tasks
 
 on:
   pull_request_target:
-    # add more types if needed, but only the minimum required for each job in the workflow. 
     types: [opened, reopened, synchronize, edited]
 
 permissions:
@@ -17,27 +16,26 @@ jobs:
       - name: Rename title and add label
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr = context.payload.pull_request;
             const branch = pr.head.ref;
 
-            // 1) Skip if branch does not start with i18n_phrase-
             if (!branch.startsWith('i18n_phrase-')) {
-              core.info('Non-Phrase branch. Passing.');
+              core.info(`Skip: non-Phrase branch (${branch}).`);
               return;
             }
 
-            // 2) Skip if label already present
-            const alreadyLabeled = pr.labels?.some(l => l.name === 'phrase-translation');
-            if (alreadyLabeled) {
-              core.info('Label present. Passing.');
+            const hasLabel = (pr.labels || []).some(l => l.name === 'phrase-translation');
+            if (hasLabel) {
+              core.info('Skip: label already present.');
               return;
             }
 
-            // 3) Parse "i18n_phrase-<lang>-<YYYYMMDD>"
+            // Expect: i18n_phrase-<lang>-<YYYYMMDD>
             const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/i);
             if (!m) {
-              core.info(`Branch pattern not matched: ${branch}. Passing.`);
+              core.info(`Skip: branch pattern not matched: ${branch}`);
               return;
             }
             const lang = m[1];
@@ -45,14 +43,11 @@ jobs:
             const mo = m[2].slice(4,6);
             const d = m[2].slice(6,8);
 
-            // Build "Month D, YYYY" in UTC to avoid TZ drift
             const date = new Date(Date.UTC(Number(y), Number(mo) - 1, Number(d)));
             const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
             const pretty = `${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
-
             const newTitle = `Phrase translations for '${lang}' ${pretty}`;
 
-            // Update PR title if needed
             if (pr.title !== newTitle) {
               await github.rest.pulls.update({
                 owner: context.repo.owner,
@@ -65,7 +60,6 @@ jobs:
               core.info('Title already correct.');
             }
 
-            // Add label
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
