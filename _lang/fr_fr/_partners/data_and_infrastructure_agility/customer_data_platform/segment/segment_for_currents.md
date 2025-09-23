@@ -47,7 +47,7 @@ Il est important de maintenir à jour la clé de rédaction de votre segment. Si
 
 Sélectionnez ensuite les événements d'engagement des messages que vous souhaitez exporter. Consultez le tableau des propriétés et des événements d'exportation ci-dessous. Tous les événements envoyés au segment comprendront le site `external_user_id` de l'utilisateur en tant que `userId` et le site `braze_id` de l'utilisateur en tant que `anonymousId`.
 
-Gardez à l'esprit que Braze n'envoie les données d'événement que pour les utilisateurs sans `external_user_id` si l'option **Inclure les événements des utilisateurs anonymes** est cochée.
+N'oubliez pas que Braze n'envoie les données d'événements que pour les utilisateurs sans `external_user_id` si l'option **Inclure les événements des utilisateurs anonymes** est cochée.
 
 {% alert important %}
 L'exportation d'utilisateurs anonymes est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
