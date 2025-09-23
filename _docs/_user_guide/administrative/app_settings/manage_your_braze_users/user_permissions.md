@@ -80,9 +80,12 @@ It isn't possible to merge or import user permissions from one dashboard user to
 
 ## Editing a user's permissions
 
-To edit a user's current [admin](#admin), [company](#company), or [workspace](#workspace) permissions, go to **Settings** > **Company Users**, then select their name.
+To edit a user's current admin, company, or workspace permissions, go to **Settings** > **Company Users**, then select their name.
 
 ![The "Company Users" page in Braze with one user listed in the results.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %}){: style="max-width:80%;"}
+
+{% tabs local %}
+{% tab Admin %}
 
 ### Admin
 
@@ -100,6 +103,9 @@ To grant or remove admin privileges, select **This user is an admin**, then sele
 If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level](#company) or [workspace-level](#workspace) permission.
 {% endalert %}
 
+{% endtab %}
+{% tab Company %}
+
 ### Company
 
 To manage the following company-level permissions for a user, check or uncheck the box next to that permission. When you're finished, select **Update user**.
@@ -110,27 +116,35 @@ To manage the following company-level permissions for a user, check or uncheck t
 |Create and delete workspaces|Allows users to create and delete workspaces.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% endtab %}
+{% tab Workspace %}
+
 ### Workspace
 
 You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually to select or assign a permission set [you previously created](#creating-a-permission-set).
 
 If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](#list-of-permissions).
 
-{% tabs local %}
-{% tab select manually %}
+{% subtabs %}
+{% subtab Select manually %}
+
 Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
 
 When you're finished, select **Update user**.
 
 ![Workspace-level permissions being manually selected in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_individual.png %})
-{% endtab %}
 
-{% tab assign permission set %}
+{% endsubtab %}
+{% subtab Assign permission set %}
+
 Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permission Sets**, choose one permission set. They will be assigned these permissions only for the workspaces you have selected.
 
 When you're finished, select **Update user**.
 
 ![Workspace-level permissions being assigned through a permission set in Braze.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_set.png %})
+
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 

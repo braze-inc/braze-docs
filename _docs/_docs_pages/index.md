@@ -71,8 +71,6 @@ helpful_resources_list:
     link: /docs/api/data_retention/
   - name: Data Protection Technical Assistance
     link: /docs/dp-technical-assistance/
-  - name: Release Notes
-    link: /docs/help/release_notes/
   - name: Contributing to Braze Docs
     link: /docs/contributing/home/
 ---
