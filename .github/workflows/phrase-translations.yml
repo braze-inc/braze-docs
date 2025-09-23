@@ -1,7 +1,7 @@
 name: Translation tasks
 
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, reopened, synchronize, edited]
 
 permissions:
@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   translation-tasks:
+    # Run only for i18n branches to save minutes
+    if: startsWith(github.head_ref, 'i18n_phrase-')
     runs-on: ubuntu-latest
     steps:
       - name: Rename title and add label
@@ -20,19 +22,16 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             const branch = pr.head.ref;
+            core.info(`Branch: ${branch}`);
 
-            if (!branch.startsWith('i18n_phrase-')) {
-              core.info(`Skip: non-Phrase branch (${branch}).`);
-              return;
-            }
-
+            // 1) Guard label
             const hasLabel = (pr.labels || []).some(l => l.name === 'phrase-translation');
             if (hasLabel) {
               core.info('Skip: label already present.');
               return;
             }
 
-            // Expect: i18n_phrase-<lang>-<YYYYMMDD>
+            // 2) Parse i18n_phrase-<lang>-<YYYYMMDD>
             const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/i);
             if (!m) {
               core.info(`Skip: branch pattern not matched: ${branch}`);
@@ -43,11 +42,12 @@ jobs:
             const mo = m[2].slice(4,6);
             const d = m[2].slice(6,8);
 
-            const date = new Date(Date.UTC(Number(y), Number(mo) - 1, Number(d)));
+            const date = new Date(Date.UTC(+y, +mo - 1, +d));
             const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
             const pretty = `${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
             const newTitle = `Phrase translations for '${lang}' ${pretty}`;
 
+            // 3) Update title
             if (pr.title !== newTitle) {
               await github.rest.pulls.update({
                 owner: context.repo.owner,
@@ -60,6 +60,7 @@ jobs:
               core.info('Title already correct.');
             }
 
+            // 4) Add label
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
