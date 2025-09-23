@@ -157,7 +157,7 @@ Braze offre également la possibilité d'ajouter ou de supprimer des utilisateur
 
 1. Sélectionnez une audience personnalisée existante à synchroniser.
 2. Choisissez si vous voulez **ajouter à l'audience** ou **retirer de l'audience**.
-3. Braze ajoutera ou supprimera des utilisateurs en temps quasi réel lorsqu'ils entreront dans l'étape Google Audience. 
+3. Braze ajoutera ou supprimera des utilisateurs quasiment en temps réel lorsqu'ils entreront dans l'étape Google Audience. 
 4. Après avoir configuré votre étape Google Audience, sélectionnez **Terminé**. Votre étape d’audience Google contiendra des détails sur la nouvelle audience.
 
 ![Vue élargie du composant d’audience personnalisée. Ici, le compte publicitaire souhaité et l'audience existante sont sélectionnés, ainsi que le bouton radio "Ajouter l'utilisateur à l'audience".]({% image_buster /assets/img/audience_sync/g_sync2.png %})
