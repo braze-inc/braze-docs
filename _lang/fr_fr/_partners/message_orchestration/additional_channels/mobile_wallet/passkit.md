@@ -66,7 +66,7 @@ Vous pouvez inclure de nombreux composants dans votre charge utile, mais voici d
 
 | Composant | Nécessaire | Type | Description |
 | --------- | -------- | ---- | ----------- |
-|`person.externalId` | Nécessaire | Chaîne de caractères | Défini comme l'ID externe de Braze, il est crucial pour que les rappels de PassKit à Braze fonctionnent, car il permet aux utilisateurs de Braze d'obtenir des coupons pour plusieurs offres au cours d'une seule campagne. Non imposé car unique. |
+|`person.externalId` | Requis | Chaîne de caractères | Défini comme l'ID externe de Braze, il est crucial pour que les rappels de PassKit à Braze fonctionnent, car il permet aux utilisateurs de Braze d'obtenir des coupons pour plusieurs offres au cours d'une seule campagne. Non imposé car unique. |
 | `members.member.externalId` | Facultatif | Chaîne de caractères | Défini comme identifiant externe Braze, vous pouvez utiliser votre identifiant externe pour mettre à jour le pass de membre. La définition de ce champ permet de définir l'utilisateur comme étant unique au sein du programme d'adhésion.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
