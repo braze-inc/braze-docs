@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Recommandations
 config_only: true
 ---
