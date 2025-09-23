@@ -12,37 +12,37 @@ guide_top_text: "> Braze release notes are published monthly so you can stay up-
 
 guide_featured_list:
   - name: 2025
-    link: /docs/help/release_notes/2025/
+    link: /docs/releases/2025/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2024
-    link: /docs/help/release_notes/2024/
+    link: /docs/releases/2024/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2023
-    link: /docs/help/release_notes/2023/
+    link: /docs/releases/2023/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2022
-    link: /docs/help/release_notes/2022/
+    link: /docs/releases/2022/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2021
-    link: /docs/help/release_notes/2021/
+    link: /docs/releases/2021/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2020
-    link: /docs/help/release_notes/2020/
+    link: /docs/releases/2020/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2019
-    link: /docs/help/release_notes/2019/
+    link: /docs/releases/2019/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2018
-    link: /docs/help/release_notes/2018/
+    link: /docs/releases/2018/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2017
-    link: /docs/help/release_notes/2017/
+    link: /docs/releases/2017/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2016
-    link: /docs/help/release_notes/2016/
+    link: /docs/releases/2016/
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Deprecations
-    link: /docs/help/release_notes/deprecations/
+    link: /docs/releases/deprecations/
     image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: SDK Changelogs
     link: /docs/developer_guide/changelogs/
