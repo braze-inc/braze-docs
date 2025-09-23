@@ -29,7 +29,7 @@ A convenient way to organize your test users is by creating a [Content Test Grou
 
 For steps to send test messages, refer to the following section for your respective channel.
 
-{% tabs %}
+{% tabs local %}
 {% tab Email %}
 
 1. Draft your email message.
@@ -136,6 +136,9 @@ If previewing as a custom user, enter text for various fields available for pers
 
 Testing campaigns personalized with [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) differs slightly from testing other types of campaigns outlined. 
 
+{% tabs local %}
+{% tab Trigger manually %}
+
 #### Method 1: Triggering campaign manually
 
 You can trigger the campaign yourself as a robust way to test campaigns personalized using custom event properties:
@@ -165,6 +168,9 @@ The campaign will trigger and show the message customized with the event propert
 
 ![Test Message Example]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
 
+{% endtab %}
+{% tab Test message %}
+
 #### Method 2: Sending yourself a test message
 
 Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself.
@@ -176,12 +182,18 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 
 ![Testing Using Customized User]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
+{% endtab %}
+{% tab Liquid %}
+
 #### Method 3: Using Liquid
 
 You can test custom event properties by manually inputting values with Liquid. 
 
 1. In the message editor, input values for your custom event properties.
 2. Select the **Preview as a User** tab to check that the correct message displays.
+
+{% endtab %}
+{% endtabs %}
 
 ## Troubleshooting
 
