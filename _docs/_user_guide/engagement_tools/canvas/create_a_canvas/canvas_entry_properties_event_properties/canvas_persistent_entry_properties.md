@@ -8,6 +8,8 @@ tool: Canvas
 page_order: 5
 ---
 
+Note that persistent entry properties are an artifact of the Original Canvas editor. So there are deprecated references to terms like canvas entry properties that remain for historical reference. For Canvas flow, please reference the parent page for Context properties and event properties
+
 # Persistent entry properties
 
 > When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step in your Canvas workflow. 
