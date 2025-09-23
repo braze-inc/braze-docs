@@ -34,7 +34,7 @@ When users add items to their cart through catalog messages, Braze receives webh
 | Term compliance | Comply with the [Meta Commerce Terms and Policies](https://www.facebook.com/policies_center/commerce). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Product message templates
+## Product message types
 
 {% alert note %}
 Enhance your product message experience with the integrated product selector, which is accessed during step 4 of [Setting up product messages](#setting-up-product-messages).
@@ -43,7 +43,7 @@ Enhance your product message experience with the integrated product selector, wh
 {% tabs local %}
 {% tab Catalog messages %}
 
-Catalog messages display your entire product catalog in an interactive format. 
+Catalog messages display your entire product catalog in an interactive format. They are available as [template and response messages](#building-a-product-message).
 
 If you've enabled catalog permissions to Braze during [setup](#setting-up-product-messages), you can select which thumbnail is visible to users. 
 
@@ -55,7 +55,7 @@ You don't need to make additional product selections in Braze, as the catalog co
 {% endtab %}
 {% tab Multi-product messages %}
 
-Multi-product messages highlight specific products from your catalog, with up to 30 highlighted items per message. 
+Multi-product messages highlight specific products from your catalog, with up to 30 highlighted items per message. They are available as [template and response messages](#building-a-product-message).
 
 You can either select the products manually with IDs or, if you’ve enabled catalog permissions during [setup](#setting-up-product-messages), use the dropdown product selector.
 
@@ -63,6 +63,10 @@ You can either select the products manually with IDs or, if you’ve enabled cat
 There’s a known header display issue with multi-product message templates on Meta. Meta is aware of the issue and working on a fix.
 {% endalert %}
 
+{% endtab %}
+{% tab Single product %}
+
+Single product messages highlight one specific product from your product catalog. They are available as [response messages](#building-a-product-message).
 
 {% endtab %}
 {% endtabs %}
@@ -118,21 +122,14 @@ You can build a product message by using a WhatsApp template message or response
 {% tab Response message %}
 
 1. In Braze, create a WhatsApp campaign or Canvas Message step.
-2. Select the subscription group that matches where you submitted the template.
+2. Select a subscription group.
 3. Select **Response Message**.
 4. Select **Meta Product Messages**.
 
 ![Options to select a message type and response message layout, with "Response Message" and "Meta Product Messages" highlighted.]({% image_buster /assets/img/whatsapp/response_message_layouts.png %}){: style="max-width:90%;"}
 
 {: start="5"}
-5. Select the message layout you'd like to use.
-
-| Message layout | Description |
-| --- | --- |
-| Catalog| Displays your full catalog |
-| Multi-product| Highlights specific selected items |
-| Single-product| Features one specific product |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+5. Select the [message type](#product-message-types) you'd like to use.
 
 ![Mesage layout selection of "Multi-product".]({% image_buster /assets/img/whatsapp/multi-product_message_layout.png %}){: style="max-width:90%;"}
 
