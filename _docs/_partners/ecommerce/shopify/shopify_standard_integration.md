@@ -64,6 +64,8 @@ The following events will be enabled by default in the standard integration.
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/).
 
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
+
 ### Historical backfill setup
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 

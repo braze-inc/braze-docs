@@ -1,6 +1,6 @@
 ---
 nav_title: Metadata
-article: Metadata
+article_title: Metadata
 description: "These are the metadata keys that can be added to a page's YAML front matter."
 page_order: 0
 noindex: true

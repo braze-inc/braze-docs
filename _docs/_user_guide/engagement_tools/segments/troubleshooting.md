@@ -20,6 +20,16 @@ If a user isn’t available while creating a segment, their user data that deter
 
 Users can have multiple apps, so selecting a specific app in the **Apps Used** section of the segmentation page will yield results for users who at least have that app. The filter does not yield results for the users who exclusively have that app.
 
+## Filtering
+
+### Filter options changed
+
+Your filter options are related to the format (data type) that you're passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Data Settings** > **Custom Attributes**.
+
+If your filter options have changed, this is an indication that your data is being passed to Braze in a different format (data type) than before. For detailed descriptions of different data types and their filtering options, refer to [custom attribute data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes#custom-attribute-data-types).
+
+Keep in mind that changing the data type of a custom attribute in the dashboard will reject data that is sent to Braze in a different format.
+
 ## Analytics and reporting
 
 ### *Message Sent* or *Unique Recipients* in Campaign Analytics doesn't match segment count 

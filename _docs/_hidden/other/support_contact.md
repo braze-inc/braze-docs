@@ -317,6 +317,12 @@ a:hover {
 #support-search-div .aa-Form button {
   padding-top: 10px;
 }
+#support-portal-banner p {
+  line-height: 30px;
+}
+#support-portal-banner p a {
+  line-height: 30px;
+}
 </style>
 
 
@@ -1465,12 +1471,18 @@ $( document ).ready(function() {
               </form>
         </div>
         <div class="col-sm-5" id="ticket_resources">
+
+        <div id="support-portal-banner" style="background-color: #f4f4f7; padding: 10px; text-align: left; border-bottom: 1px solid #dfdfe3;">
+          <p style="margin: 0; font-size: 16px;">
+              Designated support contacts can use the Braze Support Portal to track all your company's cases. Learn how to activate the portal in our <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Braze support</a> documentation, and explore the portal's features in our <a target="" href="https://learning.braze.com/the-braze-support-portal">learning course</a>.
+          </p>
+        </div>
+        
         <div id="support-search-div">
          </div>
 
            <div id="support-search-panel"></div>
-
-            <legend>Useful Resources</legend>
+            <legend>Additional resources</legend>
 
             <div id="ticket_usefulresources">
               <a target="" href="{{site.baseurl}}/user_guide/introduction/">User Guide</a><br />
@@ -1480,6 +1492,7 @@ $( document ).ready(function() {
               <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
             </div>
+
 
         </div>
     </div>

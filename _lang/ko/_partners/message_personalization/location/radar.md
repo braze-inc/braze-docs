@@ -10,11 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/)는 선도적인 지오펜싱 및 위치 추적 플랫폼입니다. Radar 플랫폼에는 세 가지 핵심 제품이 있습니다. [지오펜스](https://radar.io/product/geofencing), [여행 추적](https://radar.io/product/trip-tracking) 및 [지리적 API](https://radar.io/product/api)가 이에 해당합니다. 업계를 선도하는 Braze의 인게이지먼트 플랫폼과 업계 최고의 지오펜싱 기능을 갖춘 Radar를 결합하면 광범위한 위치 기반 제품 및 서비스 경험을 통해 매출과 로열티를 높일 수 있습니다. 여기에는 픽업 및 배송 추적, 위치 트리거 알림, 상황에 맞는 개인화, 위치 확인, 매장 찾기, 주소 자동 완성 등이 포함됩니다.
+> [Radar](https://www.onradar.com/)는 선도적인 지오펜싱 및 위치 추적 플랫폼입니다. Radar 플랫폼에는 세 가지 핵심 제품이 있습니다. [지오펜스](https://radar.io/product/geofencing), [여행 추적](https://radar.io/product/trip-tracking) 및 [지리적 API](https://radar.io/product/api)가 이에 해당합니다. Combining the Braze industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences. 여기에는 픽업 및 배송 추적, 위치 트리거 알림, 상황에 맞는 개인화, 위치 확인, 매장 찾기, 주소 자동 완성 등이 포함됩니다.
+
+_This integration is maintained by Radar._
+
+## 통합 정보
 
 Braze와 Radar의 통합을 통해 풍부한 퍼스트파티 위치 데이터로 정교한 위치 기반 캠페인 트리거를 활용하고 고객 프로필을 보강할 수 있습니다. 레이더 지오펜스 또는 여행 추적 이벤트가 생성되면 사용자 지정 이벤트와 사용자 속성이 실시간으로 Braze로 전송됩니다. 이러한 이벤트와 속성을 사용하여 위치 기반 캠페인을 트리거하고, 라스트 마일 픽업 및 배송 작업을 강화하고, 차량 및 배송 물류를 모니터링하거나, 위치 패턴을 기반으로 사용자 세그먼트를 구축할 수 있습니다. 
 
-또한, Radar 지리적 API를 활용하여 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/)를 통해 마케팅 캠페인을 강화하거나 개인화할 수 있습니다. 
+또한, Radar 지리적 API를 활용하여 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)를 통해 마케팅 캠페인을 강화하거나 개인화할 수 있습니다. 
 
 ## 필수 조건
 
@@ -68,7 +72,7 @@ Braze와 Radar SDK 간에 데이터를 매핑하려면 두 시스템에서 동�
 
 다음 예는 디지털 오퍼로 주변 사용자를 매장으로 유도하는 프로모션을 실행하는 방법을 보여줍니다. 
 
-!['새로운 스토어 내 할인, Walmart 및 가까운 타겟'을 표시하는 연결된 콘텐츠 푸시 메시지의 Android 이미지.][1]{: style="float:right;max-width:30%;border:0;"}
+![An Android image of a Connected Content push message that displays "New In Store Deals, Walmart and target near you".]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 시작하려면 요청 URL 내에서 사용할 수 있는 Radar의 게시 가능한 API 키가 준비되어 있어야 합니다.
 
@@ -179,4 +183,4 @@ near you!
 연결된 콘텐츠에서 활용할 수 있는 모든 Radar API는 [Radar 설명서](https://radar.io/documentation/api)를 참조하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/radar_example.png %}
+

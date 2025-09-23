@@ -11,11 +11,13 @@ page_order: 1
 
 ## About AI item recommendations
 
-Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
+Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
 
 {% alert tip %}
 [AI Personalized recommendations](#recommendation-types) work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 {% endalert %}
+
+{% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
 
 ## Creating an AI item recommendation
 
@@ -23,7 +25,7 @@ Use AI item recommendations to calculate the most popular products or create per
 
 Before you start, you'll need to complete the following:
 
-- You must have at least one [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) to use any of the recommendation types described below.
+- You must have at least one [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Step 1: Create a new recommendation
@@ -67,11 +69,11 @@ For example, when using the pro version of AI item recommendations, if a user pu
 
 #### Step 3.2: Select a catalog
 
-If not already populated, select the [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) that this recommendation will pull items from.
+If not already populated, select the [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) that this recommendation will pull items from.
 
 #### Step 3.3: Add a selection (optional)
 
-If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
+If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
 ![An example of the "in-stock" selection selected for the recommendation.]({% image_buster /assets/img/item_recs_2-2.png %})
 
@@ -296,32 +298,3 @@ This event has a property of `"sku": "ADI-RD-8"`, which maps to the second item 
 When you're ready, select **Create Recommendation**. This process can take anywhere from 10 minutes to 36 hours to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
 You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every week (paid) or month (free).
-
-## Plan-specific features
-
-The following table describes the differences between the free and pro version of the AI Personalized, Popular, and Trending recommendation types:
-
-| Area                   | Free version                          | Pro version            |
-| :---------------------- | ------------------------------------- | :--------------------------------------- |
-| User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
-| Model retraining frequency  | Monthly                               | Weekly                                   |
-| Maximum recommendation models | 1 model per type<sup>2</sup> | 100 models per type<sup>2</sup> |
-
-<sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup><br>
-<sup>2. Available recommendation types are AI Personalized, Most recent, Most popular, and Trending.</sup>
-
-## Frequently asked questions (FAQ) {#faq}
-
-### What causes "Most popular" items to be mixed into other models' recommendations?
-
-When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
-
-This happens under a few specific conditions:
-
-- The model finds fewer than 30 items that match your criteria.
-- Relevant items are no longer available or in stock.
-- Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
-
-### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
-
-Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.

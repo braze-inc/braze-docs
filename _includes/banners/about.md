@@ -81,7 +81,7 @@ Additionally, Banner messages do not support the following features:
 - Connected Content
 - Promotional codes
 - User-controlled dismissals
-- `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid)
+- `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
 
 {% alert tip %}
 Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto:banners-feedback@braze.com).

@@ -169,6 +169,6 @@ API-triggered and server-triggered campaigns are ideal for handling more advance
 
 | Benefits | Considerations | 
 | ---- | ---- |
-| • Does not consume data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
+| • Does not log data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

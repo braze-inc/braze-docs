@@ -42,7 +42,7 @@ There are two methods to create and manage your business objects in Braze, catal
 
 | Method | Description |
 | --- | --- |
-| [Catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | These are independent data objects (supplemental data objects) on the primary user profile in Braze. In a B2B context, you would likely have catalogs for your accounts and opportunities. |
+| [Catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs) | These are independent data objects (supplemental data objects) on the primary user profile in Braze. In a B2B context, you would likely have catalogs for your accounts and opportunities. |
 | [Connected sources]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | These allow Braze to directly query your data warehouse. You're likely already syncing your lead, contact, opportunity, and account objects to your data warehouse on a regular basis, so you can point Braze segmentation directly to that warehouse and activate it in a zero-copy environment. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
