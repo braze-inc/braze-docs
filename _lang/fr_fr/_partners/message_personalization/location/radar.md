@@ -72,7 +72,7 @@ Par exemple, ciblez tous les utilisateurs qui ont visité votre magasin au cours
 
 L'exemple suivant montre comment configurer une promotion pour inciter les utilisateurs se trouvant à proximité à se rendre en magasin avec une offre numérique. 
 
-
+![Image Android d'un message push de contenu connecté affichant "New In Store Deals, Walmart and target near you".]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 Pour commencer, vous devez disposer de votre clé API publiable Radar, que vous utiliserez dans vos URL de requête.
 
