@@ -310,8 +310,10 @@ One approach is to use the `appExtensions` configuration in your `app.json` file
 
 > These are common troubleshooting steps for push notification integrations with the Braze React Native SDK and Expo plugin.
 
-#### My push notifications have stopped working with newer versions of Expo/React Native
-Because push notification configurations are abstracted in Expo integrations, Braze's implementations can sometimes conflict with other libraries. Be sure to check if your project imports other dependencies that may be manually overriding existing push notification delegate methods.
+#### My push notifications have stopped working
+First, check that the Braze SDK is still tracking sessions and that the SDK has not been disabled explicitly, or implicitly via a call to `wipeData`.
+
+Next, verify what might have changed recently in your project. Because push notification configurations are abstracted in Expo integrations, Braze's implementations can sometimes conflict with other libraries, which can often surface with an upgrade to Expo versions or the versions of such libraries. Be sure to check if your project imports other dependencies that may be manually overriding existing push notification delegate methods.
 
 For iOS integrations, review the methods described in option 2 of the [push notification setup tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) and verify in your project that there are no other libraries that could be interfering with the execution of those methods.
 
