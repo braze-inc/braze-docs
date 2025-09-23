@@ -183,7 +183,7 @@ A savoir :
 - Les systèmes de Braze peuvent effectuer le même appel API de contenu connecté plus d'une fois par destinataire. Cela est dû au fait que Braze peut avoir besoin d'effectuer un appel API de contenu connecté pour générer un message, et les contenus de message peuvent être générés plusieurs fois par destinataire pour des raisons de validation, de logique de nouvelle tentative ou d'autres besoins internes. 
 
 Consultez ces articles pour en savoir plus sur le contenu connecté :
-- 
-- 
-- 
+- [Faire un appel au contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)
+- [Abandon d'un contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content)
+- [Nouvelles tentatives de contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)
 
