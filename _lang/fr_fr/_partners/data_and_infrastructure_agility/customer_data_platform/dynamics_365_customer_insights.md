@@ -40,9 +40,9 @@ Dans Customer Insights, accédez à **Admin > Connexions**. Ensuite, sélectionn
 6. Sélectionnez **S'ajouter en tant qu'utilisateur d'exportation** et fournissez vos informations d'identification Customer Insights.
 7. Sélectionnez **Enregistrer** pour terminer la connexion.
 
-### Étape 2 : Créer un segment Braze
+### Étape 2 : Créer un segment de Braze
 
-1. Dans Braze, allez dans **Audience** > Segments.
+1. Dans Braze, allez dans **Audience** > **Segments**.
 2. Créez un segment des utilisateurs que vous souhaitez que Microsoft mette à jour via Dynamics 365 Customer Insights.
 3. Saisir l' **identifiant API** du segment
 
