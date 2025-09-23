@@ -342,14 +342,14 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
-- name: ""
+- name: Mentionnez-moi
   url: /docs/partners/mention_me/
-- name: ""
+- name: Des mots justes
   url: /docs/partners/just_words/
-- name: ""
+- name: "Œil d'aigle"
   url: /docs/partners/eagle_eye/
-- name: ""
+- name: Eppo
   url: /docs/partners/eppo/
-- name: ""
+- name: Rayure
   url: /docs/partners/stripe/
 ---
