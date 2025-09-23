@@ -25,21 +25,21 @@ jobs:
             // 1) If branch does not start with i18n_phrase-, mark as passed
             if (!branch.startsWith('i18n_phrase-')) {
               core.info(`Pass: non-Phrase branch (${branch}).`);
-              return 0;
+              return;
             }
 
             // 2) Skip if label already present (but still pass)
             const hasLabel = (pr.labels || []).some(l => l.name === 'phrase-translation');
             if (hasLabel) {
               core.info('Pass: label already present.');
-              return 0;
+              return;
             }
 
             // 3) Parse i18n_phrase-<lang>-<YYYYMMDD>
             const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/i);
             if (!m) {
               core.info(`Pass: branch pattern not matched: ${branch}`);
-              return 0;
+              return;
             }
             const lang = m[1];
             const y = m[2].slice(0,4);
