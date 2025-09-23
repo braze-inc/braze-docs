@@ -1,4 +1,4 @@
 ---
-nav_title: ""
+nav_title: Récompenses
 config_only: true
 ---
