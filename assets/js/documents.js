@@ -311,17 +311,14 @@ $(document).ready(function() {
     let query_str = replaceParams(window.location.search, tab_replace, true);
     if (window.location.pathname.substr(-1) != '/')  {
       window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
-    }
-    else {
+    } else {
       window.history.replaceState(null, null,  window.location.pathname + query_str);
     }
     switch(query_name) {
-      case 'sdktab': {
-        Cookies.set('sdktab',tab_norm, { expires: 365 });
-      }
-      case 'sdksubtab': {
-        Cookies.set('sdksubtab',tab_norm, { expires: 365 });
-      }
+      case 'sdktab':     { Cookies.set('sdktab',tab_norm, { expires: 365 }); }
+      case 'sdksubtab':  { Cookies.set('sdksubtab',tab_norm, { expires: 365 }); }
+      case 'pagetab':    { Cookies.set('pagetab',tab_norm, { expires: 365 }); }
+      case 'pagesubtab': { Cookies.set('pagesubtab',tab_norm, { expires: 365 }); }
       default: {
         if (tab_track[tab_norm]){
           Cookies.set(tab_track[tab_norm],tab_norm, { expires: 365 });
@@ -547,179 +544,124 @@ $(document).ready(function() {
     $('#' + partab + ' div.' + curtab + postfix).addClass(prefix + 'active');
   }
 
-  // Updated Tab switcher
-  $('.tab_toggle, .sdk-tab_toggle').click(function(e){
+  // === unified tabs for sdktab + pagetab ===
+
+  // normalize hash -> query for either family
+  (function normalizeHashToQuery(){
+    const $hash = $(window.location.hash);
+    if (!$hash.length || !$hash.is(':header')) return;
+    const carriers = [
+      { attr: 'data-sdk-tab',  key: 'sdktab',  strip: /^sdk-/ },
+      { attr: 'data-page-tab', key: 'pagetab', strip: /^page-/ },
+    ];
+    for (const c of carriers) {
+      const $el = $hash.closest(`[${c.attr}]`);
+      if ($el.length) {
+        let v = $el.attr(c.attr) || '';
+        v = v.replace(c.strip,'');
+        const qp = replaceParams(window.location.search, { [c.key]: v }, true) + '#' + $hash.attr('id');
+        const base = window.location.pathname.substr(-1) != '/' ? window.location.pathname + '/' : window.location.pathname;
+        window.history.replaceState(null, null, base + qp);
+        break;
+      }
+    }
+  })();
+
+  // read unified query params
+  const _q = new URLSearchParams(window.location.search);
+  const q_tab     = (_q.get('pagetab')    || _q.get('sdktab')    || _q.get('tab')    || '').replace('_sub_tab','');
+  const q_subtab  = (_q.get('pagesubtab') || _q.get('sdksubtab') || _q.get('subtab') || '').replace('_sub_tab','');
+
+  // ensure first panes active
+  $('.sdk-tab-content .sdk-ab-tab-pane:first-child, .page-tab-content .page-ab-tab-pane:first-child').addClass('active');
+  $('.sdk-ab-sub_tab-content .sdk-ab-sub_tab-pane:first-child, .page-ab-sub_tab-content .page-ab-sub_tab-pane:first-child').addClass('sub_active');
+
+  // main-tab clicks (global + local)
+  $('.tab_toggle, .sdk-tab_toggle, .page-tab_toggle').off('click.unified').on('click.unified', function(e){
     e.preventDefault();
-    var $this = $(this);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
-    var curtab = $this.attr('data-' + tabtype  + 'tab');
-    var tabstate = $this.attr("class").includes('sdk-') ? 'sdktab' : 'tab';
-    setTabClass(tabtype,'', '_tab', curtab)
-    setTabState($this.text(), tabstate);
+    const $t = $(this);
+    const isSdk  = $t.hasClass('sdk-tab_toggle');
+    const isPage = $t.hasClass('page-tab_toggle');
+    const prefix = isSdk ? 'sdk-' : (isPage ? 'page-' : '');
+    const qname  = isSdk ? 'sdktab' : (isPage ? 'pagetab' : 'tab');
+    const curtab = $t.attr(`data-${prefix}tab`);
+    setTabClass(prefix,'','_tab', curtab);
+    setTabState($t.text(), qname);
   });
 
-  $('.tab_toggle_only, .sdk-tab_toggle_only').click(function(e){
+  $('.tab_toggle_only, .sdk-tab_toggle_only, .page-tab_toggle_only').off('click.unified').on('click.unified', function(e){
     e.preventDefault();
-
-    var $this = $(this);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
-    var curtab = $this.attr('data-' + tabtype + 'tab');
-    var partab = $this.attr('data-' + tabtype + 'tab-target');
-    var tabstate = $this.attr("class").includes('sdk-') ? 'sdktab' : 'tab';
-    setTabOnlyClass(tabtype,'','_tab', partab, curtab)
-    setTabState($this.text(), tabstate);
+    const $t = $(this);
+    const isSdk  = $t.hasClass('sdk-tab_toggle_only');
+    const isPage = $t.hasClass('page-tab_toggle_only');
+    const prefix = isSdk ? 'sdk-' : (isPage ? 'page-' : '');
+    const qname  = isSdk ? 'sdktab' : (isPage ? 'pagetab' : 'tab');
+    const curtab = $t.attr(`data-${prefix}tab`);
+    const partab = $t.attr(`data-${prefix}tab-target`);
+    setTabOnlyClass(prefix,'','_tab', partab, curtab);
+    setTabState($t.text(), qname);
   });
 
-  $('.ab-tab-content .ab-tab-pane:first-child, .sdk-tab-content .sdk-ab-tab-pane:first-child').addClass('active');
-
-  $('.sub_tab_toggle, sub_sdk-tab_toggle').click(function(e){
+  // sub-tab clicks (global + local)
+  $('.sub_tab_toggle, .sub_sdk-tab_toggle, .sub_page-tab_toggle').off('click.unified').on('click.unified', function(e){
     e.preventDefault();
-    var $this = $(this);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
-    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
-    var tabstate = $this.attr("class").includes('sdk-') ? 'sdksubtab' : 'subtab';
-
-    setTabClass('','sub_', '', curtab)
-    setTabState($this.text(), tabstate);
+    const $t = $(this);
+    const isSdk  = $t.hasClass('sub_sdk-tab_toggle');
+    const isPage = $t.hasClass('sub_page-tab_toggle');
+    const datakey = isSdk ? 'sdk' : (isPage ? 'page' : '');
+    const qname   = isSdk ? 'sdksubtab' : (isPage ? 'pagesubtab' : 'subtab');
+    const curtab  = $t.attr(`data-${datakey}sub_tab`);
+    setTabClass('', 'sub_', '', curtab);
+    setTabState($t.text(), qname);
   });
 
-  $('.sub_tab_toggle_only, .sub_sdk-tab_toggle_only').click(function(e){
+  $('.sub_tab_toggle_only, .sub_sdk-tab_toggle_only, .sub_page-tab_toggle_only').off('click.unified').on('click.unified', function(e){
     e.preventDefault();
-
-    var $this = $(this);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
-    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
-    var partab = $this.attr('data-' + tabtype + 'sub_tab-target');
-    var tabstate = $this.attr("class").includes('sdk-') ? 'sdksubtab' : 'subtab';
-
-    setTabOnlyClass(tabtype,'sub_','', partab, curtab)
-    setTabState($this.text(), tabstate);
-  });
-  $('.ab-sub_tab-content .ab-sub_tab-pane:first-child, .sdk-ab-sub_tab-content .sdk-ab-sub_tab-pane:first-child').addClass('sub_active');
-
-
-  let tab_query = (new URLSearchParams(window.location.search).get('tab') || '').replace('_sub_tab','');
-  let sub_tab_query = (new URLSearchParams(window.location.search).get('subtab') || '').replace('_sub_tab','');
-  let sdk_tab_query = (new URLSearchParams(window.location.search).get('sdktab') || '').replace('_sub_tab','');
-  let sdk_sub_tab_query = (new URLSearchParams(window.location.search).get('sdksubtab') || '').replace('_sub_tab','');
-
-  // if tab is set via param or cookied, activate tab
-  $('.tab_toggle, .sdk-tab_toggle').each(function(e,v){
-    var $this = $(v);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
-    var curtab = $this.attr('data-' + tabtype + 'tab');
-    var curtab_name = $this.text().toLowerCase();
-
-    if ((tab_query && (tab_query == curtab_name)) || (sdk_tab_query && (sdk_tab_query == curtab_name))){
-      setTabClass(tabtype,'', '_tab', curtab)
-    }
-    else if (tab_track[curtab_name]){
-      if (tabtype == 'sdk-') {
-        let tab_cookie = Cookies.get('sdktab') || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'', '_tab', curtab)
-        }
-      }
-      else {
-        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'', '_tab', curtab)
-        }
-        else {
-          $('#toc').toc({
-            headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
-            minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
-          });
-        }
-      }
-    }
-
+    const $t = $(this);
+    const isSdk  = $t.hasClass('sub_sdk-tab_toggle_only');
+    const isPage = $t.hasClass('sub_page-tab_toggle_only');
+    const datakey = isSdk ? 'sdk' : (isPage ? 'page' : '');
+    const qname   = isSdk ? 'sdksubtab' : (isPage ? 'pagesubtab' : 'subtab');
+    const curtab  = $t.attr(`data-${datakey}sub_tab`);
+    const partab  = $t.attr(`data-${datakey}sub_tab-target`);
+    setTabOnlyClass('', 'sub_', '', partab, curtab);
+    setTabState($t.text(), qname);
   });
 
-  $('.tab_toggle_only, .sdk-tab_toggle_only').each(function(e,v){
-    var $this = $(v);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk-' : '';
-    var curtab = $this.attr('data-' + tabtype + 'tab');
-    var partab = $this.attr('data-' + tabtype + 'tab-target');
-    var curtab_name = $this.text().toLowerCase();
-    if ((tab_query && (tab_query == curtab_name)) || (sdk_tab_query && (sdk_tab_query == curtab_name))){
-      setTabOnlyClass(tabtype,'', '_tab', partab, curtab)
-    }
-    if (tab_track[curtab_name]){
-      if (tabtype == 'sdk-') {
-        let tab_cookie = Cookies.get('sdktab') || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'', '_tab', partab, curtab)
-        }
-      }
-      else {
-        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'', '_tab', partab,  curtab)
-        }
-        else {
-          $('#toc').toc({
-            headers:  ((typeof toc_headers != 'undefined') ? toc_headers : "h2,h3"),
-            minimumHeaders: ((typeof toc_minheaders != 'undefined') ? toc_minheaders : 2),
-          });
-        }
-      }
-    }
+  // initial activation honoring params or cookies
+  $('.tab_toggle, .sdk-tab_toggle, .page-tab_toggle').each(function(_, v){
+    const $t = $(v);
+    const isSdk  = $t.hasClass('sdk-tab_toggle');
+    const isPage = $t.hasClass('page-tab_toggle');
+    const prefix = isSdk ? 'sdk-' : (isPage ? 'page-' : '');
+    const curtab = $t.attr(`data-${prefix}tab`);
+    const name   = $t.text().toLowerCase();
+
+    if (q_tab && q_tab === name) return setTabClass(prefix,'','_tab', curtab);
+
+    const cookie =
+      (isSdk  && Cookies.get('sdktab'))  ||
+      (isPage && Cookies.get('pagetab')) ||
+      ((!isSdk && !isPage && tab_track[name]) ? Cookies.get(tab_track[name]) : '');
+
+    if (cookie && cookie === name) setTabClass(prefix,'','_tab', curtab);
   });
 
-  $('.sub_tab_toggle, .sub_sdk-tab_toggle').each(function(e,v){
-    var $this = $(v);
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk' : '';
-    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
-    var curtab_name = $this.text().toLowerCase();
-    if ((tab_query && (tab_query == curtab_name)) ||
-      (sub_tab_query && (sub_tab_query == curtab_name))
-      ){
-      setTabClass(tabtype,'sub_','', curtab)
-    }
-    else if (tab_track[curtab_name]){
-      if (tabtype == 'sdk-') {
-        let tab_cookie = Cookies.get('sdksubtab') || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'sub_','', curtab)
-        }
-      }
-      else {
-        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'sub_','', curtab)
-        }
-      }
-    }
-  });
+  $('.sub_tab_toggle, .sub_sdk-tab_toggle, .sub_page-tab_toggle').each(function(_, v){
+    const $t = $(v);
+    const isSdk  = $t.hasClass('sub_sdk-tab_toggle');
+    const isPage = $t.hasClass('sub_page-tab_toggle');
+    const curtab = $t.attr(`data-${isSdk ? 'sdk' : (isPage ? 'page' : '')}sub_tab`);
+    const name   = $t.text().toLowerCase();
 
-  $('.sub_tab_toggle_only, .sub_sdk-tab_toggle_only').each(function(e,v){
-    var $this = $(v);
-    var curtab_name = $this.text().toLowerCase();
-    var tabtype = $this.attr("class").includes('sdk-') ? 'sdk' : '';
+    if ((q_tab && q_tab === name) || (q_subtab && q_subtab === name)) return setTabClass('', 'sub_', '', curtab);
 
-    var curtab = $this.attr('data-' + tabtype + 'sub_tab');
-    var partab = $this.attr('data-' + tabtype + 'sub_tab-target');
+    const cookie =
+      (isSdk  && Cookies.get('sdksubtab')) ||
+      (isPage && Cookies.get('pagesubtab')) ||
+      ((!isSdk && !isPage && tab_track[name]) ? Cookies.get(tab_track[name]) : '');
 
-    if ((tab_query && (tab_query == curtab_name)) ||
-      (sub_tab_query && (sub_tab_query == curtab_name))
-      ){
-      setTabOnlyClass(tabtype,'sub_','', partab, curtab)
-    }
-    else if (tab_track[curtab_name]){
-      if (tabtype == 'sdk-') {
-        let tab_cookie = Cookies.get('sdksubtab') || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'sub_','',partab, curtab)
-        }
-      }
-      else {
-        let tab_cookie = Cookies.get(tab_track[curtab_name]) || '';
-        if (tab_cookie && (curtab_name == tab_cookie)) {
-          setTabClass(tabtype,'sub_','',partab, curtab)
-        }
-      }
-    }
+    if (cookie && cookie === name) setTabClass('', 'sub_', '', curtab);
   });
 
 
