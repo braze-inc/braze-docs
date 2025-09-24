@@ -31,30 +31,42 @@ channel:
 
 ## Configuring WhatsApp Flow messages and responses
 
-1. In a Braze Canvas, create a WhatsApp message step that uses the template message containing the Flow you created.
+{% tabs local %}
+{% tab Template message %}
+
+1. In a Braze Canvas, create a WhatsApp message step that uses the template message containing the respective Flow.
 2. Continue creating your template. If necessary, add media, variable content, or both to your message. Your Flow selection is chosen when the template was made, so additional information for the flow experience is not required.
 
 ![WhatsApp message composer using a WhatsApp Flow template.]({% image_buster /assets/img/whatsapp/flows/composer_flow_template.png %}){: style="max-width:80%;"}
 
-## Previewing Flows
+{% endtab %}
+{% tab Response message %}
 
-Before launching a Canvas with a Flow, you can preview the Flow directly in Braze to confirm it behaves as expected. You can also interact with the Flow in the preview to experience how a user would navigate the Flow, and then make real-time adjustments.
+1. In a Braze Canvas, create a WhatsApp message step that uses a response message and flow message.
 
+![A message step for a WhatsApp response message type and Flow message layout.]({% image_buster /assets/img/whatsapp/flows/message_step_flow_message.png %}){: style="max-width:80%;"}
 
-Multi-Page Support: If a flow consists of multiple pages, users can interact with each page to fully understand the flow's structure and user journey.
-Use Case
-Before launching a new WhatsApp flow, users can utilize the preview feature to test and refine the flow, ensuring that all elements function correctly and provide a positive user experience.
+{: start="2"}
+2. Select the respective Flow, then continue creating your message. 
 
+![A Flow message response composer with an extended dropdown for selecting a Flow.]({% image_buster /assets/img/whatsapp/flows/flow_message_composer.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% endtabs %}
+
+### Preview Flow
+
+Before launching a Canvas with a Flow, you can select **Preview Flow** to preview the Flow directly in Braze to confirm it behaves as expected. You can also interact with the Flow in the preview to experience how a user would navigate the Flow, and then make real-time adjustments. If a Flow contains multiple pages, you can interact with each page.
+
+![Preview window displaying a form for a user to finish sign up.]({% image_buster /assets/img/whatsapp/flows/flow_preview.png %}){: style="max-width:50%;"}
 
 ## Saving the full Flow response {#full-flow}
 
 ### Step 1: Create an Action Path
 
-Create an [Action Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) with **Send a WhatsApp inbound message** trigger to process the Flow information.
+Create an [Action Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) Canvas step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
 
-{% alert note %}
-You'll be able to specify the Flow when additional features are released during early access. 
-{% endalert %}
+![A trigger for users who sent an inbound WhatsApp message and responded to any Flow.]({% image_buster /assets/img/whatsapp/flows/trigger_responded_flow.png %})
 
 ### Step 2: Compose your WhatsApp message
 
