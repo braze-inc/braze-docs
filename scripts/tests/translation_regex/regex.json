@@ -60,7 +60,7 @@
     "name": "liquid_tags",
     "description": "Match Liquid tags {%...%} including optional trim hyphens",
     "type": "liquid",
-    "regex": "\\{%-?\\s*[\\w-]+(?:[^%}]|}(?!}))*?-?%}"
+    "regex": "\\{%-?\\s*[\\w-]+(?:%(?!})|[^%])*?-?%}"
   },
   {
     "order": 10,
