@@ -26,17 +26,26 @@ After you have created your segment, add a **Most Recent Location** filter to ta
 
 ![Filter for a most recent location within a circle.]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
+{% tabs %}
+{% tab Circular %}
+
 ### Circular regions
 
 For circular regions, you can move the origin and adjust the location radius for your segmentation.
 
 ![A circular outline of cities between New Jersey and New York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
+{% endtab %}
+{% tab Polygonal %}
+
 ### Polygonal regions
 
 For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
 ![An outline of New York state as the selected polygonal region.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Partnership support for beacon and geofence
 
