@@ -214,7 +214,7 @@ It’s expected that a Connected Content API call can be made more than once per
 
 Connected Content doesn’t have its own rate limit. Instead, the rate limit is based on the message-sending rate. We recommend setting the messaging rate limit below your intended Connected Content rate limit if there are more Connected Content calls than messages sent.  
 
-### What is the caching behavior?
+### What is caching behavior?
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
 
