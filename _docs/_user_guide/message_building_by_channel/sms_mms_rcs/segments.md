@@ -475,9 +475,7 @@ Messages are billed per message and classified as either Basic or Single.
 
 ##### Basic RCS messages
 
-| Content| Text-only messages up to 160 characters.|
-| Billing| Billed as a single message.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Text-only messages up to 160 characters are billed as a single message.
 
 {% alert note %}
 Adding buttons or any rich elements will change the message type to a Single RCS message.
@@ -485,9 +483,7 @@ Adding buttons or any rich elements will change the message type to a Single RCS
 
 ##### Single RCS messages
 
-| Content| Messages that are over 160 characters OR include any rich elements like buttons or media.|
-| Billing| Billed as a single message, regardless of message length.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Single RCS messages are messages that are over 160 characters OR include any rich elements like buttons or media. These are billed as a single message, regardless of message length.
 
 {% alert note %}
 Sending a text message and a separate media file is still billed as two distinct messages.
