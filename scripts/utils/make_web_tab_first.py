@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
-Reorder `{% tab web %}` to be the first tab inside each `{% tabs ... %} ... {% endtabs %}` block.
+Reorder `web` to be the first entry in both tabs and subtabs blocks.
 
-Changes:
-- No backups. Writes in place.
+Behaviors:
 - Recursively scans ./_docs and ./_includes.
-- Detects any `{% tabs ... %}` block (e.g., `{% tabs %}`, `{% tabs local %}`).
-- If a `{% tab web %}` (any case) exists and is not already first, move that entire tab section to the top.
-- Case-insensitive for tags (`tabs`, `tab`, `endtabs`, `endtab`) and the tab name `web`.
-- Dry-run via `--check` to preview changes.
+- Tabs: `{% tabs ... %} ... {% endtabs %}` containing `{% tab NAME %} ... {% endtab %}`
+- Subtabs: `{% subtabs ... %} ... {% endsubtabs %}` containing `{% subtab NAME %} ... {% endsubtab %}`
+- If a `web` tab/subtab (any case) exists and is not already first, move its entire section(s) to the top.
+- Case-insensitive for all tag names and for the `web` label.
+- Writes in place. No backups.
+- `--check` to preview changes.
 
 Usage:
-  python reorder_web_tab.py            # modify files in place
-  python reorder_web_tab.py --check    # list files that would change
-  python reorder_web_tab.py --ext .md .html .liquid .mdx  # limit to specific extensions
+  python reorder_web_tab.py
+  python reorder_web_tab.py --check
+  python reorder_web_tab.py --ext .md .html .liquid .mdx
 """
 
 import argparse
@@ -22,46 +23,50 @@ import re
 import sys
 from typing import List, Tuple
 
+# ----- Block regexes -----
 RE_TABS_BLOCK = re.compile(
     r"(?P<open>\{%\s*tabs(?:\s+[^%}]*)?\s*%})(?P<body>.*?)(?P<close>\{%\s*endtabs\s*%})",
     re.IGNORECASE | re.DOTALL,
 )
-
-RE_SINGLE_TAB = re.compile(
-    r"(?P<full>\{%\s*tab\s+(?P<name>.+?)\s*%}(?P<content>.*?)(?:\{%\s*endtab\s*%}))",
+RE_SUBTABS_BLOCK = re.compile(
+    r"(?P<open>\{%\s*subtabs(?:\s+[^%}]*)?\s*%})(?P<body>.*?)(?P<close>\{%\s*endsubtabs\s*%})",
     re.IGNORECASE | re.DOTALL,
 )
 
-def normalize_tab_name(raw: str) -> str:
+# ----- Entry regexes -----
+RE_TAB_ENTRY = re.compile(
+    r"(?P<full>\{%\s*tab\s+(?P<name>.+?)\s*%}(?P<content>.*?)(?:\{%\s*endtab\s*%}))",
+    re.IGNORECASE | re.DOTALL,
+)
+RE_SUBTAB_ENTRY = re.compile(
+    r"(?P<full>\{%\s*subtab\s+(?P<name>.+?)\s*%}(?P<content>.*?)(?:\{%\s*endsubtab\s*%}))",
+    re.IGNORECASE | re.DOTALL,
+)
+
+def normalize_label(raw: str) -> str:
     s = raw.strip().strip('"\''"`")
     s = re.sub(r"\s+", " ", s)
     return s.lower()
 
-def reorder_web_first_in_tabs_block(block_open: str, block_body: str, block_close: str) -> Tuple[str, bool]:
-    parts: List[Tuple[str, str]] = []
-    order: List[str] = []
-
-    matches = list(RE_SINGLE_TAB.finditer(block_body))
+def reorder_first_in_block(block_open: str, block_body: str, block_close: str, entry_re: re.Pattern) -> Tuple[str, bool]:
+    """
+    Generic reordering for tabs-like blocks.
+    - entry_re must capture groups: 'full', 'name'
+    """
+    matches = list(entry_re.finditer(block_body))
     if not matches:
         return block_open + block_body + block_close, False
 
-    for m in matches:
-        full = m.group("full")
-        name_raw = m.group("name")
-        name_norm = normalize_tab_name(name_raw)
-        parts.append((name_norm, full))
-        order.append(name_norm)
-
-    if "web" not in order:
-        return block_open + block_body + block_close, False
-    if order[0] == "web":
+    names = [normalize_label(m.group("name")) for m in matches]
+    if "web" not in names or names[0] == "web":
         return block_open + block_body + block_close, False
 
+    parts = [(normalize_label(m.group("name")), m.group("full")) for m in matches]
     web_sections = [full for (n, full) in parts if n == "web"]
     other_sections = [full for (n, full) in parts if n != "web"]
 
-    placeholder = "\u0000TAB\u0000"
-    body_with_placeholders = RE_SINGLE_TAB.sub(placeholder, block_body)
+    placeholder = "\u0000ENTRY\u0000"
+    body_with_placeholders = entry_re.sub(placeholder, block_body)
 
     reordered_sections = web_sections + other_sections
     out_body = body_with_placeholders
@@ -70,24 +75,25 @@ def reorder_web_first_in_tabs_block(block_open: str, block_body: str, block_clos
 
     return block_open + out_body + block_close, True
 
-def process_text(text: str) -> Tuple[str, bool]:
+def process_with_block_regex(text: str, block_re: re.Pattern, entry_re: re.Pattern) -> Tuple[str, bool]:
     out = []
-    last_idx = 0
+    last = 0
     changed_any = False
-
-    for m in RE_TABS_BLOCK.finditer(text):
-        out.append(text[last_idx:m.start()])
-        open_tag = m.group("open")
-        body = m.group("body")
-        close_tag = m.group("close")
-
-        new_block, changed = reorder_web_first_in_tabs_block(open_tag, body, close_tag)
+    for m in block_re.finditer(text):
+        out.append(text[last:m.start()])
+        open_tag, body, close_tag = m.group("open"), m.group("body"), m.group("close")
+        new_block, changed = reorder_first_in_block(open_tag, body, close_tag, entry_re)
         out.append(new_block)
         changed_any = changed_any or changed
-        last_idx = m.end()
+        last = m.end()
+    out.append(text[last:])
+    return "".join(out), changed_any
 
-    out.append(text[last_idx:])
-    return ("".join(out), changed_any)
+def process_text(text: str) -> Tuple[str, bool]:
+    # Process subtabs first, then tabs. Order is independent but stable.
+    t1, c1 = process_with_block_regex(text, RE_SUBTABS_BLOCK, RE_SUBTAB_ENTRY)
+    t2, c2 = process_with_block_regex(t1, RE_TABS_BLOCK, RE_TAB_ENTRY)
+    return t2, (c1 or c2)
 
 def should_process_file(path: str, allowed_exts: List[str]) -> bool:
     if not allowed_exts:
@@ -108,7 +114,7 @@ def iter_target_files(root_dirs: List[str], allowed_exts: List[str]) -> List[str
     return files
 
 def main():
-    parser = argparse.ArgumentParser(description="Move `{% tab web %}` to first within each `{% tabs %}` block. No backups.")
+    parser = argparse.ArgumentParser(description="Move `web` to first in tabs and subtabs blocks. No backups.")
     parser.add_argument("--check", action="store_true", help="Dry run. Print files that would change.")
     parser.add_argument("--ext", nargs="*", default=[".md", ".markdown", ".mdx", ".html", ".liquid"],
                         help="File extensions to include. Empty list = all files.")
