@@ -308,14 +308,23 @@ One approach is to use the `appExtensions` configuration in your `app.json` file
 
 ### Troubleshooting
 
-> These are common troubleshooting steps for push notification integrations with the Braze React Native SDK and Expo plugin.
+These are common troubleshooting steps for push notification integrations with the Braze React Native SDK and Expo plugin.
 
-#### My push notifications have stopped working
-First, check that the Braze SDK is still tracking sessions and that the SDK has not been disabled explicitly, or implicitly via a call to `wipeData`.
+#### Push notifications stopped working {#troubleshooting-stopped-working}
 
-Next, verify what might have changed recently in your project. Because push notification configurations are abstracted in Expo integrations, Braze's implementations can sometimes conflict with other libraries, which can often surface with an upgrade to Expo versions or the versions of such libraries. Be sure to check if your project imports other dependencies that may be manually overriding existing push notification delegate methods.
+If push notifications through the Expo plugin have stopped working:
 
-For iOS integrations, review the methods described in option 2 of the [push notification setup tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) and verify in your project that there are no other libraries that could be interfering with the execution of those methods.
+1. Check that the Braze SDK is still tracking sessions.
+2. Check that the SDK wasn't disabled by an explicit or implicit call to `wipeData`.
+3. Review any recent upgrades to Expo or it's related libraries, as there may be conflicts with your Braze configuration.
+4. Review recently added project dependencies and check if they are manually overriding your existing push notification delegate methods.
 
-#### My device token is not being registered to Braze
-First, review the troubleshooting step above. If you have a separate dependency that is interfering with Braze's push notification configurations, you may need to remove it or alternatively call `Braze.registerPushToken` as a manual step.
+{% alert tip %}
+For iOS integrations, you can also reference our [push notification setup tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) to help you identify potential conflicts with your project dependencies.
+{% endalert %}
+
+#### Device token won't register with Braze {#troubleshooting-token-registration}
+
+If your device token won't register with Braze, first review [Push notifications stopped working](#troubleshooting-stopped-working).
+
+If your issue persists, there may be a separate dependency interfering with your Braze push notification configuration. You can try removing it or manually call `Braze.registerPushToken` instead.
