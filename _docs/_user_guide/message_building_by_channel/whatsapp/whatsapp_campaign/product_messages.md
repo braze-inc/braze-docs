@@ -68,6 +68,8 @@ There’s a known header display issue with multi-product message templates on M
 
 Single product messages highlight one specific product from your product catalog. They are available as [response messages](#building-a-product-message).
 
+You can either select the products manually with IDs or, if you’ve enabled catalog permissions during [setup](#setting-up-product-messages), use the dropdown product selector.
+
 {% endtab %}
 {% endtabs %}
 
