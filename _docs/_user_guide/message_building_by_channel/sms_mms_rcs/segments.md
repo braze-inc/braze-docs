@@ -473,15 +473,17 @@ Our platform supports two primary billing models: a global model and a United St
 
 Messages are billed per message and classified as either Basic or Single.
 
-##### Basic RCS messages
+{% tabs local %}
+{% tab Basic %}
 
-Text-only messages up to 160 characters are billed as a single message.
+Basic RCS messages are text-only messages up to 160 characters and are billed as a single message.
 
 {% alert note %}
 Adding buttons or any rich elements will change the message type to a Single RCS message.
 {% endalert %}
 
-##### Single RCS messages
+{% endtab %}
+{% tab Single %}
 
 Single RCS messages are messages that are over 160 characters OR include any rich elements like buttons or media. These are billed as a single message, regardless of message length.
 
@@ -489,21 +491,25 @@ Single RCS messages are messages that are over 160 characters OR include any ric
 Sending a text message and a separate media file is still billed as two distinct messages.
 {% endalert %}
 
-#### United states model
+{% endtab %}
+{% endtabs %}
+
+#### United States model
 
 Messages are categorized as either Rich or Rich Media.
 
-##### Rich messages
+{% tabs local %}
+{% tab Rich messages %}
 
-| Content| Text-only messages with or without buttons.|
-| Billing| Billed per segment, with each segment limited to 160 UTF-8 bytes, which means **the number of characters per segment is not fixed**. A message with only 160 plain English characters is one segment, but a message with longer text and emojis could be multiple segments. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Rich messages are text-only messages with or without buttons. They are billed per segment, with each segment limited to 160 UTF-8 bytes, which means **the number of characters per segment is not fixed**. A message with only 160 plain English characters is one segment, but a message with longer text and emojis could be multiple segments.
 
-##### Rich media messages
+{% endtab %}
+{% tab Rich media messages %}
 
-| Content| Messages that include a media file (image, video) or a Rich Card.|
-| Billing| Billed as a single message.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Rich media messages include a media file (image, video) or a Rich Card and are billed as a single message.
+
+{% endtab %}
+{% endtabs %}
 
 ### Message composer and Message Usage dashboard
 
