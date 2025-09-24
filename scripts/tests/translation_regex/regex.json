@@ -68,5 +68,12 @@
     "description": "Match Liquid outputs {{...}} including optional trim hyphens",
     "type": "liquid",
     "regex": "\\{\\{-?\\s*[^}]*?-?}}"
+  },
+  {
+    "order": 11,
+    "name": "underscore_tokens",
+    "description": "Match any contiguous token that contains at least one underscore and no spaces",
+    "type": "text",
+    "regex": "(?<!\\S)\\S*_\\S*(?!\\S)"
   }
 ]
