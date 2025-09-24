@@ -18,7 +18,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 Before you start, you'll need the following:
 
 - Access to the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
-- Permission to create and edit Custom AI Agents. 
+- Permission to create and edit custom AI Agents. 
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  
@@ -26,7 +26,7 @@ Before you start, you'll need the following:
 
 ## How it works
 
-When you create an agent, you define its purpose and set guardrails for how it should behave. Once live, the agent can be deployed in Braze to generate personalized copy, make real-time decisions, or update catalog fields. You can pause or update an agent anytime from the dashboard.
+When you create an agent, you define its purpose and set guardrails for how it should behave. After it's live, the agent can be deployed in Braze to generate personalized copy, make real-time decisions, or update catalog fields. You can pause or update an agent anytime from the dashboard.
 
 ## Create an agent
 
@@ -38,7 +38,7 @@ To create your custom agent:
 4. Choose the [model](#models) your agent will use.  
 5. Give the agent instructions. Refer to [Writing instructions](#writing-instructions) for guidance.
 6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
-7. Once you’re satisfied, select **Create Agent** to activate the agent. 
+7. When you’re ready, select **Create Agent** to activate the agent. 
 
 ## Next step
 
@@ -71,7 +71,7 @@ Then, you can return to your agent and select your model.
 
 ### Writing instructions
 
-Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. There is a max length of 10 KB for system instructions.
+Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 10 KB.
 
 {% tabs %}
 {% tab Best practices %}
@@ -79,15 +79,15 @@ Instructions are the rules or guidelines you give the agent (system prompt). The
 Here are some general best practices to get you started with prompting:
 
 1. Start with the end in mind. State the goal first.
-2. Give the model a role or persona ("You are a ...")
-3. Set clear context and constraints (audience, length, tone, format)
-4. Ask for structure ("Return JSON / bullet list / table...")
+2. Give the model a role or persona ("You are a ...").
+3. Set clear context and constraints (audience, length, tone, format).
+4. Ask for structure ("Return JSON/bullet list/table...").
 5. Show, don't tell. Include a few high-quality examples.
-6. Break complex tasks into ordered steps ("Step 1... Step 2...")
-7. Encourage reasoning ("Think aloud, then answer")
+6. Break complex tasks into ordered steps ("Step 1... Step 2...").
+7. Encourage reasoning ("Think aloud, then answer").
 8. Pilot, inspect, and iterate. Small tweaks can lead to big quality gains.
-9. Handle the edge cases, add guardrails and refusal instructions
-10. Measure and document what works internally for re-use and scaling
+9. Handle the edge cases, add guardrails, and add refusal instructions.
+10. Measure and document what works internally for re-use and scaling.
 
 For more details on prompting best practices, refer to guides from the following model providers:
 
@@ -160,5 +160,11 @@ The **Live preview** pane is an instance of the agent that shows up as a side-by
 1. In the **Sample inputs** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle. 
 2. Select **Run test**. The agent will execute based on your configuration and display its response. Test runs count toward your daily and total invocation limit.
 
-Review the output with a critical eye. Does the copy feel on brand? Does the decision logic route customers as intended? Are the calculated values accurate? If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
+Review the output with a critical eye. Consider the following questions:
+
+- Does the copy feel on brand? 
+- Does the decision logic route customers as intended? 
+- Are the calculated values accurate? 
+
+If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
