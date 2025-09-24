@@ -178,7 +178,7 @@ The iOS operating system only generates push-to-start tokens during the first ap
 
 ###### Example
 
-In the following example, the `LiveActivityManager` class handles Live Activity objects. Then, the `registerPushToStart` method registers `SportActivityAttributes`:
+In the following example, the `LiveActivityManager` class handles Live Activity objects. Then, the `registerPushToStart` method registers `SportsActivityAttributes`:
 
 ```swift
 import BrazeKit
