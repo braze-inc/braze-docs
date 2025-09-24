@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
-Reorder `web` to be the first entry in both tabs and subtabs blocks.
+Reorder `web` to be the first entry in tabs-like blocks.
 
-Behaviors:
+Supported containers and entries:
+- Tabs:    `{% tabs ... %}`     ... `{% endtabs %}`     with `{% tab NAME %}`     ... `{% endtab %}`
+- Subtabs: `{% subtabs ... %}`  ... `{% endsubtabs %}`  with `{% subtab NAME %}`  ... `{% endsubtab %}`
+- SDKTabs: `{% sdktabs ... %}`  ... `{% endsdktabs %}`  with `{% sdktab NAME %}`  ... `{% endsdktab %}`
+
+Rules:
+- If a `web` entry (any case) exists and is not already first, move that whole section to the top.
+- Case-insensitive for tag names and the `web` label.
 - Recursively scans ./_docs and ./_includes.
-- Tabs: `{% tabs ... %} ... {% endtabs %}` containing `{% tab NAME %} ... {% endtab %}`
-- Subtabs: `{% subtabs ... %} ... {% endsubtabs %}` containing `{% subtab NAME %} ... {% endsubtab %}`
-- If a `web` tab/subtab (any case) exists and is not already first, move its entire section(s) to the top.
-- Case-insensitive for all tag names and for the `web` label.
 - Writes in place. No backups.
-- `--check` to preview changes.
+- `--check` to preview.
 
 Usage:
   python reorder_web_tab.py
@@ -32,6 +35,10 @@ RE_SUBTABS_BLOCK = re.compile(
     r"(?P<open>\{%\s*subtabs(?:\s+[^%}]*)?\s*%})(?P<body>.*?)(?P<close>\{%\s*endsubtabs\s*%})",
     re.IGNORECASE | re.DOTALL,
 )
+RE_SDKTABS_BLOCK = re.compile(
+    r"(?P<open>\{%\s*sdktabs(?:\s+[^%}]*)?\s*%})(?P<body>.*?)(?P<close>\{%\s*endsdktabs\s*%})",
+    re.IGNORECASE | re.DOTALL,
+)
 
 # ----- Entry regexes -----
 RE_TAB_ENTRY = re.compile(
@@ -42,6 +49,10 @@ RE_SUBTAB_ENTRY = re.compile(
     r"(?P<full>\{%\s*subtab\s+(?P<name>.+?)\s*%}(?P<content>.*?)(?:\{%\s*endsubtab\s*%}))",
     re.IGNORECASE | re.DOTALL,
 )
+RE_SDKTAB_ENTRY = re.compile(
+    r"(?P<full>\{%\s*sdktab\s+(?P<name>.+?)\s*%}(?P<content>.*?)(?:\{%\s*endsdktab\s*%}))",
+    re.IGNORECASE | re.DOTALL,
+)
 
 def normalize_label(raw: str) -> str:
     s = raw.strip().strip('"\''"`")
@@ -49,10 +60,6 @@ def normalize_label(raw: str) -> str:
     return s.lower()
 
 def reorder_first_in_block(block_open: str, block_body: str, block_close: str, entry_re: re.Pattern) -> Tuple[str, bool]:
-    """
-    Generic reordering for tabs-like blocks.
-    - entry_re must capture groups: 'full', 'name'
-    """
     matches = list(entry_re.finditer(block_body))
     if not matches:
         return block_open + block_body + block_close, False
@@ -90,10 +97,11 @@ def process_with_block_regex(text: str, block_re: re.Pattern, entry_re: re.Patte
     return "".join(out), changed_any
 
 def process_text(text: str) -> Tuple[str, bool]:
-    # Process subtabs first, then tabs. Order is independent but stable.
+    # Order: innermost styles first, but they are independent. This order is stable.
     t1, c1 = process_with_block_regex(text, RE_SUBTABS_BLOCK, RE_SUBTAB_ENTRY)
-    t2, c2 = process_with_block_regex(t1, RE_TABS_BLOCK, RE_TAB_ENTRY)
-    return t2, (c1 or c2)
+    t2, c2 = process_with_block_regex(t1,   RE_TABS_BLOCK,    RE_TAB_ENTRY)
+    t3, c3 = process_with_block_regex(t2,   RE_SDKTABS_BLOCK, RE_SDKTAB_ENTRY)
+    return t3, (c1 or c2 or c3)
 
 def should_process_file(path: str, allowed_exts: List[str]) -> bool:
     if not allowed_exts:
@@ -114,7 +122,7 @@ def iter_target_files(root_dirs: List[str], allowed_exts: List[str]) -> List[str
     return files
 
 def main():
-    parser = argparse.ArgumentParser(description="Move `web` to first in tabs and subtabs blocks. No backups.")
+    parser = argparse.ArgumentParser(description="Move `web` to first in tabs, subtabs, and sdktabs blocks. No backups.")
     parser.add_argument("--check", action="store_true", help="Dry run. Print files that would change.")
     parser.add_argument("--ext", nargs="*", default=[".md", ".markdown", ".mdx", ".html", ".liquid"],
                         help="File extensions to include. Empty list = all files.")
