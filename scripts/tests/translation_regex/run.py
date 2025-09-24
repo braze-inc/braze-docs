@@ -115,6 +115,11 @@ def main():
 
     # Compare
     expected = PASS_FILE.read_text(encoding="utf-8")
+    regex_data = json.loads(REGEX_FILE.read_text(encoding="utf-8"))
+    ordered = sorted(regex_data, key=lambda x: x.get("order", 10**9))
+    regex_line = "|".join(item["regex"] for item in ordered if "regex" in item)
+    print("\n" + regex_line + "\n")
+
     if out_text == expected:
         print("test pass")
         sys.exit(0)

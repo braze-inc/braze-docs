@@ -4,14 +4,14 @@
     "name": "fenced_code_blocks",
     "description": "Match fenced code blocks ```...``` or ~~~...~~~",
     "type": "markdown",
-    "regex": "(?ms)^[ \\t]*([`~]{3,})[^\\n]*\\n[\\s\\S]*?\\n^[ \\t]*\\1[ \\t]*$"
+    "regex": "(?:^|\\n)[ \\t]*([`~]{3,})[^\\n]*\\n[\\s\\S]*?\\n(?:^|\\n)[ \\t]*\\1[ \\t]*(?=\\n|$)"
   },
   {
     "order": 2,
     "name": "inline_code",
     "description": "Match inline code enclosed in backticks `...`",
     "type": "markdown",
-    "regex": "(?m)(?<!\\\\)(`+)[^\\r\\n]*?\\1"
+    "regex": "(?<!\\\\)(`+)[^\\r\\n]*?\\1"
   },
   {
     "order": 3,
@@ -32,14 +32,14 @@
     "name": "hex_colors",
     "description": "Match hex color codes like #FFFFFF",
     "type": "markdown",
-    "regex": "#([A-Fa-f0-9]{6})"
+    "regex": "#(?:[A-Fa-f0-9]{6})"
   },
   {
     "order": 6,
     "name": "dotted_identifiers",
     "description": "Match dotted identifiers like Braze.iOS.BrazeLocation",
     "type": "markdown",
-    "regex": "\\b[A-Za-z]+(?:\\.[A-Za-z0-9]+)+\\b"
+    "regex": "\\b[A-Za-z]++(?:\\.[A-Za-z0-9]++)++\\b"
   },
   {
     "order": 7,
