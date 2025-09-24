@@ -66,7 +66,7 @@ Braze will only pass the first 10 KB of content to the agent. Providing values t
 
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
 - If the agent fails for any other reason (such as invalid API key), the output variable is set to `null`.  
-- Responses are cached for identical inputs to reduce repeated executions.  
+- Responses are cached for identical inputs to reduce repeated invocations.  
 
 ## Analytics  
 
@@ -74,10 +74,9 @@ Refer to the following metrics to track how your Agent steps perform:
 
 | Metric | Description |
 | --- | --- |
-| _Entries_ | The number of times users entered the Agent step. |
-| _Executions_ | The total number of times the agent was called from this step. |
-| _Succeeded_ | The number of successful executions that returned a valid response. |
-| _Failed_ | The number of executions that resulted in an error or `null` response. |
+| _Entered_ | The number of times users entered the Agent step. |
+| _Proceeded to Next Step_ | The number of users that proceeded to the next step in the flow after passing through the Agent step. |
+| _Exited Canvas_ | The number of users that exited the Canvas after passing through the Agent step. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Related articles  

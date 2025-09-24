@@ -28,7 +28,7 @@ Features for Braze Agents include:
 - **Flexible setup:** Use a Braze-provided LLM or connect your own model provider (such as OpenAI, Anthropic, Google Gemini, or AWS Bedrock).
 - **Seamless integration:** Deploy agents directly in Canvas steps or catalog fields.
 - **Testing and logging tools:** Preview your agent's output by testing with sample inputs before you launch. View logs for each time the agent runs, including the input and output for that run.
-- **Usage controls:** Built-in execution and size limits help manage performance and costs.
+- **Usage controls:** Built-in invocation and size limits help manage performance and costs.
 
 ## About Braze Agents
 
@@ -42,16 +42,16 @@ Agents are configured with instructions (system prompts) that define how they be
 | [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
 | Context | Data passed into the agent at runtime wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
 | [Output variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#step-3-define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, number, or boolean data type.  |
-| Execution | A single run of the agent. This counts against your daily and total limits. |
+| Invocation | A single run of the agent. This counts against your daily and total limits. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
 
-Agents process requests at roughly 1,000 executions per minute. Each workspace can support up to 1,000 agents. If this limit is reached, you'll need to remove an existing agent before creating a new one. 
+Agents process requests at roughly 1,000 invocations per minute. Each workspace can support up to 1,000 agents. If this limit is reached, you'll need to remove an existing agent before creating a new one. 
 
 Additionally, during the beta period:
 
-- Execution is limited to 50,000 runs per day and 500,000 runs in total.
+- Invocation is limited to 50,000 runs per day and 500,000 runs in total.
 - Each run must complete within 30 seconds. After 30 seconds, the agent will return a null response where it is used.
 - Input data is limited to 10 KB per request. Longer inputs are truncated.
 - For catalogs, agentic fields update only the first 10,000 rows.

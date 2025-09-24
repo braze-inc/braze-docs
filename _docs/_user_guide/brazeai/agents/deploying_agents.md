@@ -7,7 +7,7 @@ alias: /deploying-agents/
 
 # Deploying custom agents
 
-> Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents). 
+> Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
 {% alert important %}
 Braze Agents are currently in beta. For help getting started, contact your customer success manager.
@@ -15,7 +15,7 @@ Braze Agents are currently in beta. For help getting started, contact your custo
 
 ## Agents in Canvas  
 
-You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step).
+You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Use cases
 
@@ -68,6 +68,6 @@ During the beta period, catalog agents are limited to processing input values up
 
 ### Error handling in catalogs  
 
-- Failed catalog executions do not retry.
+- Failed catalog invocations do not retry.
 - If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value will not be updated.   
 - You can review the agent's logs for details on failed runs.  
