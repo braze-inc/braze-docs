@@ -36,6 +36,9 @@ To create your custom agent:
 2. Select **Create agent**.  
 3. Enter a name and description to help your team understand its purpose.  
 4. Choose the [model](#models) your agent will use.  
+
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]( {% image_buster /assets/img/ai_agent/create_custom_agent.png %} )
+
 5. Give the agent instructions. Refer to [Writing instructions](#writing-instructions) for guidance.
 6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
 7. When you’re ready, select **Create Agent** to activate the agent. 
