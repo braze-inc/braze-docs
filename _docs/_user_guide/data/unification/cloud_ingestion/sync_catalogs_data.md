@@ -194,24 +194,29 @@ GO
 
 {% endtab %}
 {% tab S3 %}
+Set up your source files in S3 by providing JSON or CSV files. Keep in mind:
 
-- No `UPDATED_AT` column for S3 files
-- Optional `DELETED` boolean to delete items
+- Files cannot include an `UPDATED_AT` column  
+- You can include an optional `DELETED` field to mark items for removal 
 
-JSON Example:
+{% subtabs %}
+{% subtab JSON %}
 ```json
 {"id":"85","payload":"{\"product_name\":\"Product 85\",\"price\":85.85}"}
 {"id":"1","payload":"{\"product_name\":\"Product 1\",\"price\":1.01}","deleted":true}
 ```
+{% endsubtab %}
 
-CSV Example:
+{% subtab CSV %}
 ```plaintext
 ID,PAYLOAD,DELETED
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
+{% endsubtab %}
+{% endsubtabs %}
 
-For S3 setup details, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+For setup details, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
