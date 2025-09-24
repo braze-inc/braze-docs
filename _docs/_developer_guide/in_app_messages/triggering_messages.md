@@ -29,6 +29,31 @@ In-app messages can't be triggered through the API or by API events&#8212;only c
 When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app.
 
 {% tabs %}
+{% tab web %}
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToInAppMessage(function(inAppMessage) {
+  // control group messages should always be "shown"
+  // this will log an impression and not show a visible message
+  if (inAppMessage instanceof braze.ControlMessage) {
+    return braze.showInAppMessage(inAppMessage);
+  }
+
+
+  if (inAppMessage instanceof braze.InAppMessage) {
+    const extras = inAppMessage.extras;
+    if (extras) {
+      for (const key in extras) {
+        console.log("key: " + key + ", value: " + extras[key]);
+      }
+    }
+  }
+  braze.showInAppMessage(inAppMessage);
+});
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -74,31 +99,6 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab web %}
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.subscribeToInAppMessage(function(inAppMessage) {
-  // control group messages should always be "shown"
-  // this will log an impression and not show a visible message
-  if (inAppMessage instanceof braze.ControlMessage) {
-    return braze.showInAppMessage(inAppMessage);
-  }
-
-
-  if (inAppMessage instanceof braze.InAppMessage) {
-    const extras = inAppMessage.extras;
-    if (extras) {
-      for (const key in extras) {
-        console.log("key: " + key + ", value: " + extras[key]);
-      }
-    }
-  }
-  braze.showInAppMessage(inAppMessage);
-});
-```
-{% endtab %}
 {% endtabs %}
 
 ## Disabling automatic triggers
@@ -106,20 +106,6 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 By default, in-app messages are triggered automatically. To disable this:
 
 {% tabs %}
-
-{% tab android %}
-1. Implement the [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) to set a custom listener.
-2. Update your [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) method to return [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
-
-For more advanced control over message timing, including displaying later and re-enqueuing, refer to our [Customizing Messages](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener) page.
-{% endtab %}
-
-{% tab swift %}
-1. Implement the `BrazeInAppMessageUIDelegate` delegate in your app. For a full walkthrough, refer to [Tutorial: In-App Message UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
-2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
-
-For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
-{% endtab %}
 
 {% tab web %}
 Remove the call to `braze.automaticallyShowInAppMessages()` within your loading snippet, then create custom logic to handle showing or not showing an in-app message.
@@ -147,6 +133,20 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 {% alert important %}
 If you call `braze.showInAppMessage` without removing `braze.automaticallyShowInAppMessages()`, messages may display twice.
 {% endalert %}
+
+For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+{% endtab %}
+
+{% tab android %}
+1. Implement the [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) to set a custom listener.
+2. Update your [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) method to return [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
+
+For more advanced control over message timing, including displaying later and re-enqueuing, refer to our [Customizing Messages](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener) page.
+{% endtab %}
+
+{% tab swift %}
+1. Implement the `BrazeInAppMessageUIDelegate` delegate in your app. For a full walkthrough, refer to [Tutorial: In-App Message UI](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
 
 For more advanced control over message timing, including deferring and restoring triggered messages, refer to our [Tutorial: Deferring and restoring triggered messages]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
@@ -181,6 +181,13 @@ The initial in-app message display operation can be set in Braze config using th
 By default, you can send an in-app message once every 30 seconds. To override this, add the following property to your configuration file before the Braze instance is initialized. This value will be used as the new rate limit in seconds.
 
 {% tabs %}
+{% tab web %}
+```javascript
+// Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
+braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
+```
+{% endtab %}
+
 {% tab android %}
 ```xml
 <integer name="com_braze_trigger_action_minimum_time_interval_seconds">5</integer>
@@ -214,13 +221,6 @@ AppDelegate.braze = braze;
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab web %}
-```javascript
-// Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
-braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
-```
-{% endtab %}
 {% endtabs %}
 
 ## Manually triggering messages
@@ -230,6 +230,10 @@ By default, in-app messages are automatically triggered when the SDK logs a cust
 ### Using a server-side event
 
 {% tabs %}
+{% tab web %}
+At this time, the Web Braze SDK does not support manually triggering messages using server-side events.
+{% endtab %}
+
 {% tab android %}
 To trigger an in-app message using a server-sent event, send a silent push notification to the device, which allows a custom push callback to log an SDK-based event. This event will then trigger the user-facing in-app message.
 
@@ -365,10 +369,6 @@ In the following example, the specific in-app message to be triggered has been c
 Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
 {% endalert %}
 {% endtab %}
-
-{% tab web %}
-At this time, the Web Braze SDK does not support manually triggering messages using server-side events.
-{% endtab %}
 {% endtabs %}
 
 ### Displaying a pre-defined message
@@ -376,6 +376,12 @@ At this time, the Web Braze SDK does not support manually triggering messages us
 To manually display a pre-defined in-app message, use the following method:
 
 {% tabs %}
+{% tab web %}
+```javascript
+braze.requestInAppMessageDisplay();
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -402,12 +408,6 @@ if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMes
 }
 ```
 {% endtab %}
-
-{% tab web %}
-```javascript
-braze.requestInAppMessageDisplay();
-```
-{% endtab %}
 {% endtabs %}
 
 ### Displaying a message in real-time 
@@ -415,6 +415,15 @@ braze.requestInAppMessageDisplay();
 You can also create and display local in-app messages in real-time, using the same customization options available on the dashboard. To do so:
 
 {% tabs %}
+{% tab web %}
+```javascript
+  // Displays a slideup type in-app message.
+  var message = new braze.SlideUpMessage("Welcome to Braze! This is an in-app message.");
+  message.slideFrom = braze.InAppMessage.SlideFrom.TOP;
+  braze.showInAppMessage(message);
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -476,15 +485,6 @@ customInAppMessage.themes = @{
 {% alert note %}
 Creating your own in-app message, you opt out of any analytics tracking and will have to manually handle click and impression logging using your `message.context`.
 {% endalert %}
-{% endtab %}
-
-{% tab web %}
-```javascript
-  // Displays a slideup type in-app message.
-  var message = new braze.SlideUpMessage("Welcome to Braze! This is an in-app message.");
-  message.slideFrom = braze.InAppMessage.SlideFrom.TOP;
-  braze.showInAppMessage(message);
-```
 {% endtab %}
 
 {% tab unity %}

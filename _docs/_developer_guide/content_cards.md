@@ -18,16 +18,16 @@ platform:
 {% multi_lang_include banners/content_card_alert.md %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/content_cards.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
