@@ -8,22 +8,24 @@ channel:
   - WhatsApp
 ---
 
-# Transfer phone numbers and subscription groups between workspaces
+# Transfer WhatsApp phone numbers and subscription groups between workspaces
 
 > This page covers how you can move a WhatsApp Business Account (WABA) phone number and its associated subscription group from one workspace to another within Braze. This process streamlines your experience using WhatsApp with Braze, and reduce the need for engineering help.
 
 ## Prerequisites
 
 - Confirm you have the [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) "Manage Subscription Groups" in both the original and new workspaces.
-- The WABA can't cross multiple Braze clusters. This is unlikely to happen if you’re working within one company. 
+- The WABA can't cross multiple [Braze clusters]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). This is unlikely to happen if you’re working within one company. 
 
-## Transferring a WhatsApp phone number and subscription group
+## Transferring a phone number and subscription group
 
 ### Step 1: Archive the subscription group
 
+To archive a WhatsApp subscription group, follow these steps:
+
 1. Go to the workspace where the subscription group currently exists.
 2. Go to **Audience** > **Subscription Group Management** and find the subscription group associated with the WhatsApp phone number you want to move.
-3. Hover over the status for the subscription group and select **Archive**, which will mark the subscription group as inactive but won't delete it.
+3. Hover over the status for the subscription group and select <i class="fa-solid fa-box-archive"></i> **Archive**, which will mark the subscription group as inactive but won't delete it.
 
 !["Archive" button appearing while hovering over a subscription group's "Active" status.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
 
