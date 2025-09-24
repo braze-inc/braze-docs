@@ -36,9 +36,15 @@ channel:
 
 ![WhatsApp message composer using a WhatsApp Flow template.]({% image_buster /assets/img/whatsapp/flows/composer_flow_template.png %}){: style="max-width:80%;"}
 
-{% alert important %}
-Flow preview is not yet available in the early access, but you can preview the Flow by sending yourself a test message. 
-{% endalert %}
+## Previewing Flows
+
+Before launching a Canvas with a Flow, you can preview the Flow directly in Braze to confirm it behaves as expected. You can also interact with the Flow in the preview to experience how a user would navigate the Flow, and then make real-time adjustments.
+
+
+Multi-Page Support: If a flow consists of multiple pages, users can interact with each page to fully understand the flow's structure and user journey.
+Use Case
+Before launching a new WhatsApp flow, users can utilize the preview feature to test and refine the flow, ensuring that all elements function correctly and provide a positive user experience.
+
 
 ## Saving the full Flow response {#full-flow}
 
