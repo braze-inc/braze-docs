@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Crowdin
 
-> Crowdin is a cloud-based software for localization management. Using Crowdin, you can translate your Android and iOS apps, website, store screenshots, and other content. Translation can be done through your in-house team, a translation agency, or using machine translation engines.
+> Crowdin is a localization software for translation management. Using Crowdin, you can translate your Android and iOS apps, website, store screenshots, and other content. Translation can be done through your in-house team, a translation agency, or using machine translation engines.
 
 _This integration is maintained by Crowdin._
 
