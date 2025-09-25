@@ -20,7 +20,7 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
-### Step 1: Build an email campaign
+### Step 1: Create an email campaign
 
 1. [Create your email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), and select the **HTML code editor** as your editing experience.
 2. In the **Content** section of the HTML editor, select the **Gmail Promotion** tab.
