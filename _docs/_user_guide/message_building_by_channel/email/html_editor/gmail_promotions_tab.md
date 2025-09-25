@@ -98,11 +98,11 @@ In general, adhere to these [best practices recommended by Gmail](https://develo
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
 
-### Incorporating images
+### Incorporate images
 
 Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring visual language, which is vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
-### Describing offers
+### Describe offers
 
 Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
 
