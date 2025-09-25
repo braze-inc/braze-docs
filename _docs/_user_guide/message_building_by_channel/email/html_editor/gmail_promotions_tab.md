@@ -31,9 +31,10 @@ Follow these steps to build a Gmail promotion card for an email campaign. Note t
 Setting up a discount offer allows you to specify the valid dates for a discount. 
 
 1. Select the **Discount Offer** toggle.
-2. Enter an offer and discount code.
-3. Select the start date and time for the discount offer.
-4. Determine if the discount offer should end at a specific time or never end.
+2. For **Offer**, enter a short summary for the discount. An example is "20% off".
+3. For **Code**, add the promotion code that a user needs to apply at checkout.
+4. Then, select the start date and time for the discount offer.
+5. Determine if the discount offer should end at a specific time or never end.
 
 After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
 
@@ -45,12 +46,15 @@ After determining your discount offer, select a start date and time. You have th
 Use Deal Cards to provide key deal information directly at the top of email bodies. This allows recipients to quickly understand the offer details and take action. For example, you can use Deal Cards to promote limited time offers and reduce the need for users to search for details within emails.
 
 1. Select the **Deal Card** toggle.
-2. Enter an offer and discount code.
-3. For **Offer Page URL**, enter the URL for the specific offer landing page. This creates a "Shop now" (or similar) button.
-4. For **Merchant Homepage URL**, include your main homepage URL only if a specific offer page URL isn't available.
-5. Determine if the deal should end at a specific time or never end.
+2. For **Offer**, enter a short summary for the discount. An example is "20% off all shoes".
+3. (optional) For **Code**, add the promotion code that a user needs to apply at checkout.
+4. Enter at least one of the following URLs. 
+-  **Offer Page URL:** The URL for the specific offer landing page. This creates a "Shop now" (or similar) button. We recommend providing this URL for your Deal Card. 
+- **Merchant Homepage URL:** The URL for your main homepage. Use this field only if a specific offer page URL isn't available.
+5. (optional) Add a start date for the offer.
+6. Determine if the offer should end at a specific time or never end.
 
-![Options to specify the offer value, code, and start date and time for a deal card.]({% image_buster /assets/img/gmail_promo_deal_cards.png %}){: style="max-width:70%;"}
+![Options to specify the offer value, code, and start date and time for a Deal Card.]({% image_buster /assets/img/gmail_promo_deal_cards.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% tab Promotion cards %}
@@ -69,7 +73,7 @@ We recommend uploading your product images to the media library, then copy and p
 {: start="5"}
 5. Customize your promotion card by adding a headline, currency, price, and discount value.
 
-| Customizable variable | Description |
+| Customizable property | Description |
 |---|---|
 | Headline | (optional) One or two sentence description for the promotion. Displays under the preview image. |
 | Currency | (optional) The currency of the price. |
