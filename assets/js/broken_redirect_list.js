@@ -2974,4 +2974,8 @@ validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
 
+validurls['/docs/user_guide/offerfit/integration'] = '/docs/user_guide/brazeai/decisioning_studio/integration';
+validurls['/docs/user_guide/offerfit/building_use_cases'] = '/docs/user_guide/brazeai/decisioning_studio/building_use_cases';
+
+
 // validurls['OLD'] = 'NEW';

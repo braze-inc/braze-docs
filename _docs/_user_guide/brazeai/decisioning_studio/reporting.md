@@ -107,11 +107,11 @@ The outbound diagnostics report shows the daily volume of recommendations genera
 
 {% tab inbound %}
 
-The inbound diagnostics report monitors the health of your data feeds into OfferFit. It tracks details like file counts, sizes, and row volumes for each asset, helping you confirm that data is flowing in as expected and troubleshoot issues before they affect your models or campaigns.
+The inbound diagnostics report monitors the health of your data feeds into BrazeAI™. It tracks details like file counts, sizes, and row volumes for each asset, helping you confirm that data is flowing in as expected and troubleshoot issues before they affect your models or campaigns.
 
 You can use the dropdown to select different chart metrics, like average file size or file count.
 
-![Inbound diagnostics report showing a line chart tracking the daily file count and average file size for data assets delivered to OfferFit. The chart displays two lines labeled File count and Average file size MBs with the y-axis representing values and the x-axis showing dates. Above the chart are dropdown filters for date range and data asset selection.]( {% image_buster /assets/img/decisioning_studio/reporting_diagnostics_inbound.png %} )
+![Inbound diagnostics report showing a line chart tracking the daily file count and average file size for data assets delivered to BrazeAI™. The chart displays two lines labeled File count and Average file size MBs with the y-axis representing values and the x-axis showing dates. Above the chart are dropdown filters for date range and data asset selection.]( {% image_buster /assets/img/decisioning_studio/reporting_diagnostics_inbound.png %} )
 
 Refer to the following table for more details about each metric in the inbound report:
 

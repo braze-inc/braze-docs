@@ -1,6 +1,6 @@
 # Integrating BrazeAI Decisioning Studio™
 
-> Learn how to integrate BrazeAI Decisioning Studio™ into Braze, so you can work with the AI Expert Services team to [build uses cases]({{site.baseurl}}/developer_guide/offerfit/building_use_cases) that leverage AI to make 1:1 decisions that maximize any business metric.
+> Learn how to integrate BrazeAI Decisioning Studio™ into Braze and partner with the AI Expert Services team to [build uses cases]({{site.baseurl}}/developer_guide/offerfit/building_use_cases) that apply AI for 1:1 decision-making to improve your key business metrics.
 
 {% multi_lang_include offerfit/alert_multi_platform_support.md %}
 
