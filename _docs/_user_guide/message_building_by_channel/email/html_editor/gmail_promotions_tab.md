@@ -20,10 +20,20 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
+### Step 1: Build an email campaign
+
 1. [Create your email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), and select the **HTML code editor** as your editing experience.
 2. In the **Content** section of the HTML editor, select the **Gmail Promotion** tab.
-3. Fill out the fields under **Basic Information**, then select **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})
-4. Choose whether to include a discount offer, deal card, promotion cards, or all options for your Gmail Promotion card.
+
+### Step 2: Add details to Gmail Promotion card
+
+Fill out the fields under **Basic Information**, then select **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
+
+![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})
+
+### Step 3: Customize your Gmail Promotion card
+
+Choose whether to include a discount offer, deal card, promotion cards, or all options for your Gmail Promotion card.
 
 {% tabs %}
 {% tab Discount offer %}
@@ -86,9 +96,9 @@ We recommend uploading your product images to the media library, then copy and p
 {% endtab %}
 {% endtabs %}
 
-{: start="5"}
-5. Select **Generate HTML code**.
-6. Copy and paste the script into the `<head>` element of your email's HTML.
+### Step 4: Generate and paste HTML code
+
+After building yur Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
 The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
