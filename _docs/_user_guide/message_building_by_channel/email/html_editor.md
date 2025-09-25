@@ -21,5 +21,8 @@ guide_featured_list:
   - name: "Gmail Promotions Tab"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg
+  - name: Troubleshooting
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

@@ -359,3 +359,21 @@ Based on the interaction data being tracked, use cases for this model could incl
 - **First-time buyers:** Recommend starter kits or introductory offers to first-time buyers to encourage a second purchase.
 Loyalty programs: Highlight products that would maximize a customer’s loyalty points or rewards based on their current points balance.
 - **Educational content:** Suggest new courses or content based on the topics of previously consumed or purchased materials.
+
+{% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
+
+## Frequently asked questions {#faq}
+
+### What causes "Most popular" items to be mixed into other models' recommendations?
+
+When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
+
+This happens under a few specific conditions:
+
+- The model finds fewer than 30 items that match your criteria.
+- Relevant items are no longer available or in stock.
+- Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
+
+### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
+
+Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.

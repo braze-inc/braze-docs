@@ -23,9 +23,6 @@ Generally, all events and attributes are prefixed with a short code that corresp
 
 The following table lists the events and attributes logged by Braze Pilot.
 
-Update the following table styling to make the first column 30%, the second column 15%, the third column 15%, the fourth column 20%, and the last column 20%.
-Here is the updated HTML table with the specified column widths:
-
 <style>
 table td {
     word-break: break-word;
