@@ -28,25 +28,38 @@ Follow these steps to build a Gmail promotion card for an email campaign. Note t
 {% tabs %}
 {% tab Discount offer %}
 
-Setting up a discount offer allows you to specify the valid dates for a discount. After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
+Setting up a discount offer allows you to specify the valid dates for a discount. 
+
+1. Select the **Discount Offer** toggle.
+2. Enter an offer and discount code.
+3. Select the start date and time for the discount offer.
+4. Determine if the discount offer should end at a specific time or never end.
+
+After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
 
 ![Options to specify the offer value, code, and start date and time for a discount offer.]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% tab Deal Cards %}
 
-Use Deal Cards to provide key deal information directly at the top of email bodies. For example, you can use Deal Cards to promote limited time offers. This allows recipients to quickly understand offers and take action. 
+Use Deal Cards to provide key deal information directly at the top of email bodies. For example, you can use Deal Cards to promote limited time offers. This allows recipients to quickly understand the offer details and take action.
+
+1. Select the **Deal Card** toggle.
+2. Enter an offer and discount code.
+3. For **Offer Page URL**, enter the URL for the specific offer landing page. This creates a "Shop now" (or similar) button.
+4. For **Merchant Homepage URL**, include your main homepage URL only if a specific offer page URL isn't available.
+5. Determine if the deal should end at a specific time or never end.
 
 ![Options to specify the offer value, code, and start date and time for a deal card.]({% image_buster /assets/img/gmail_promo_deal_cards.png %}){: style="max-width:70%;"}
 
 {% endtab %}
-{% tab Product carousel %}
+{% tab Promotion cards %}
 
 Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to ten image previews, where each image is unique.
 
 ![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
-| Customizable Variable | Description |
+| Customizable variable | Description |
 |---|---|
 | Image URL | The URL to your image. Each image in your product carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1). |
 | Target URL | The link for your promotion. |
@@ -64,7 +77,8 @@ We recommend uploading your product images to the media library, then copy and p
 {% endtabs %}
 
 {: start="5"}
-5. Copy and paste the script into the `<head>` element of your email's HTML.
+5. Select **Generate HTML code**.
+6. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
 The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
