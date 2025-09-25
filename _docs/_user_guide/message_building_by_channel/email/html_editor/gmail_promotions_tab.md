@@ -20,23 +20,27 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
-1. [Create your email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), and select the **HTML Editor** as your editing experience.
-2. Go to the **Content** section in the HTML editor, and select the **Gmail Promotion** tab.
-3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})
-4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.]({% image_buster /assets/img_archive/gmail_promo_discount.png %}){: style="max-width:70%;"}
-5. Copy and paste the script into the `<head>` element of your email's HTML.
+1. [Create your email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), and select the **HTML code editor** as your editing experience.
+2. In the **Content** section of the HTML editor, select the **Gmail Promotion** tab.
+3. Fill out the fields under **Basic Information**, then select **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})<br>
+4. Choose whether to include a discount offer, deal card, promotion cards, or all options for your Gmail Promotion card.
 
-{% alert warning %}
-The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
-{% endalert %}
-
-### Including a discount offer
+{% tabs %}
+{% tab Discount offer %}
 
 Setting up a discount offer allows you to specify the valid dates for a discount. After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
 
 ![Options to specify the offer value, code, and start date and time for a discount offer.]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
-### Customizing your product carousel
+{% endtab %}
+{% tab Deal Cards %}
+
+Use Deal Cards to provide key deal information directly at the top of email bodies. For example, you can use Deal Cards to promote limited time offers. This allows recipients to quickly understand offers and take action. 
+
+![Options to specify the offer value, code, and start date and time for a deal card.]({% image_buster /assets/img/gmail_promo_deal_cards.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% tab Product carousel %}
 
 Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to ten image previews, where each image is unique.
 
@@ -56,7 +60,17 @@ Promotion cards in your product carousel are helpful to provide images to your o
 We recommend uploading your product images to the media library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
 {% endalert %}
 
-### Best practices
+{% endtab %}
+{% endtabs %}
+
+{: start="5"}
+5. Copy and paste the script into the `<head>` element of your email's HTML.
+
+{% alert warning %}
+The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
+{% endalert %}
+
+## Best practices
 
 In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
 
@@ -64,11 +78,11 @@ In general, adhere to these [best practices recommended by Gmail](https://develo
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
 
-#### Incorporating images
+### Incorporating images
 
 Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring visual language, which is vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
-#### Describing offers
+### Describing offers
 
 Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
 
