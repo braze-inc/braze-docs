@@ -139,6 +139,31 @@ Promotion codes in in-app messages will be deducted and used only when a user tr
 
 Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
 
+### With message extras for Currents
+
+You can combine promotion codes with [message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) to send promotion code information to Currents or Snowflake Data Sharing. This allows you to track and analyze promotion code usage in your downstream systems.
+
+To capture a promotion code and send it via message extras, use the following Liquid pattern:
+
+{% raw %}
+```liquid
+{% capture code %}
+{% promotion('your_promotion_list_name') %}
+{% endcapture %}
+
+Your message content with the code: {{code}}
+
+{% message_extras :key promo_code :value {{code}} %}
+```
+{% endraw %}
+
+This approach:
+1. Uses `capture` to store the promotion code in a variable
+2. Displays the code in your message content
+3. Sends the code value to Currents via message extras
+
+The promotion code will appear in the `message_extras` field of your send events in Currents or Snowflake Data Sharing, making it available for downstream analytics and tracking.
+
 ## Saving promotion codes to user profiles {#save-to-profile}
 
 To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.

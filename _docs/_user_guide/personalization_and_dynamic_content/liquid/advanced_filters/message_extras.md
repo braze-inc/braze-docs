@@ -62,6 +62,21 @@ Any other input that doesn't match the tag standard discussed above may fail to 
 - You can include Liquid variables as a key or value, but you can't use other Liquid tags within `message_extras`.
   - For example, you could use the following Liquid: {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
 
+### Using with promotion codes
+
+You can combine `message_extras` with [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) to send promotion code information to Currents. Use the `capture` tag to store the promotion code in a variable, then reference that variable in `message_extras`:
+
+{% raw %}
+```liquid
+{% capture promo_code %}
+{% promotion('your_promotion_list_name') %}
+{% endcapture %}
+{% message_extras :key promotion_code :value {{promo_code}} %}
+```
+{% endraw %}
+
+For detailed examples, see [promotion codes with message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#with-message-extras-for-currents).
+
 ## Frequently asked questions
 
 #### How can I associate the message_extras field in the send events to my engagement events like opens and clicks? 
