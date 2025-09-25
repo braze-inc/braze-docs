@@ -13,11 +13,10 @@ description: "This article will walk you through how to set up Microsoft Entra s
 
 ## Requirements
 
-Upon setup, you will be asked to provide an Assertion Consumer Service (ACS) URL, and optionally a sign-on URL (only if configuring SP-initiated login).  
+Upon setup, you will be asked to provide an Assertion Consumer Service (ACS) URL.  
 
 | Requirement | Details |
 |---|---|
-| Sign-On URL (SP-initiated mode only) | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> For the subdomain, use the coordinating subdomain listed in your [Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. <br><br> **Note:** Only set this if you need SP-initiated login. Leave blank for IdP-initiated only. |
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> For some identity providers, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard`|
 | RelayState API key | To enable identity provider login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
@@ -39,12 +38,11 @@ Upon setup, you will be asked to provide an Assertion Consumer Service (ACS) URL
 5. Optionally configure RelayState by entering your Relay State generated API key into the **Relay State (Optional)** field.
 
 {% alert important %}
-For IdP-initiated SSO only, **do not** set the **Sign on URL (Optional)** field. Leave this field blank to prevent issues with IdP-initiated login. Setting this field when not needed can break your SSO configuration.
+**Do not** set the **Sign-On URL** field. Leave this field blank to prevent issues with your IdP-initiated SAML SSO.
 {% endalert %}
 
 {: start="6"}
-6. If you want to configure the application in SP-initiated mode, select **Set additional URLs** and enter a sign on URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
-7. Format SAML assertions in the specific format expected by Braze. Refer to the following tabs on user attributes and user claims to understand how these attributes and values must be formatted.
+6. Format SAML assertions in the specific format expected by Braze. Refer to the following tabs on user attributes and user claims to understand how these attributes and values must be formatted.
 
 {% tabs %}
 {% tab User Attributes %}
