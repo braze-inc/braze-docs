@@ -1,7 +1,7 @@
 | Permission | Purpose | Required? |
 | :--- | ----- | :---: |
-| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) | Updates custom attributes on user profiles, in addition to creating temporary user profiles when using [test sends]({{site.baseurl}}/developer_guide/offerfit/test_sends). | &#10003; |
-| [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) | Deletes temporary user profiles that were created while using [test sends]({{site.baseurl}}/developer_guide/offerfit/test_sends). | Only for [test sends]({{site.baseurl}}/developer_guide/offerfit/test_sends) |
+| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) | Updates custom attributes on user profiles, in addition to creating temporary user profiles when using test sends. | &#10003; |
+| [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) | Deletes temporary user profiles that were created while using test sends. | Only for test sends |
 | [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment) | Updates the available audience communications every morning by exporting the list of users from each selected segment. | &#10003; |
 | [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) | Retrieves a list of identifiers when targeting users using an `external_id` instead of a segment. Since decisioning studio doesn’t accept Personally Identifiable Information (PII), you'll need to ensure your `fields_to_export` parameter returns only non-PII fields.
  | Only if using `external_ids` |
