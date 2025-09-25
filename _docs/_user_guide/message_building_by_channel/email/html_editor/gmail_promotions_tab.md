@@ -46,8 +46,6 @@ Setting up a discount offer allows you to specify the valid dates for a discount
 4. Then, select the start date and time for the discount offer.
 5. Determine if the discount offer should end at a specific time or never end.
 
-After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
-
 ![Options to specify the offer value, code, and start date and time for a discount offer.]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
 {% endtab %}
