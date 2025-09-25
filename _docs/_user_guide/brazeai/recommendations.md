@@ -246,7 +246,7 @@ Remind users of their interest in items that they recently added to their cart, 
 
 ### Trending item {#trending}
 
-The "Trending" recommendation model features items that had the most positive momentum when it comes to recent user interactions. 
+The "Trending" recommendation model features items that have shown the most positive momentum in recent user interactions. We calculate this using a weighted analysis of approximately 10 weeks of event history, with the heaviest weighting applied to the most recent approximate 2 weeks. To prevent small fluctuations from affecting the recommendation quality, we apply an activity threshold and statistical smoothing techniques.
 
 Unlike the "Most Popular" model, which features items with consistently high interaction, this model features items that have experienced an uptick in interactions. You can use it to recommend products that are up-and-coming, and currently seeing increased traction.
 
