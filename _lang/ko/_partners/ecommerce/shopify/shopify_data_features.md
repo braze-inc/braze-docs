@@ -465,7 +465,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 {% subtab Checkout started %}
 **Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
-**Triggered**: When the user navigates to and lands on checkout page<br>
+**Triggered**: When a customer adds, removes, or updates their shopping cart<br>
 **Use Case**: Checkout abandonment
 
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:

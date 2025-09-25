@@ -465,7 +465,7 @@ Pour plus d'informations sur la façon de créer une boucle Liquid `for` pour aj
 {% subtab Checkout started %}
 **Événement**: `ecommerce.checkout_started`<br>
 **Type** : Événement recommandé<br>
-**Déclenché**: Lorsque l'utilisateur navigue vers et arrive sur la page de checkout<br>
+**Déclenché**: Lorsqu'un client ajoute, supprime ou met à jour son panier d'achat<br>
 **Cas d'utilisation**: Abandon du paiement
 
 Pour les toiles Abandoned Checkout, vous devez d'abord utiliser l'étiquette Liquid suivante :

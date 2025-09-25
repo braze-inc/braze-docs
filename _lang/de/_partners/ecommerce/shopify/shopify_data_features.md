@@ -465,7 +465,7 @@ Weitere Informationen darüber, wie Sie eine Liquid `for` -Schleife einrichten, 
 {% subtab Checkout started %}
 **Veranstaltung**: `ecommerce.checkout_started`<br>
 **Typ**: Empfohlene Veranstaltung<br>
-**Ausgelöst**: Wenn der Benutzer zur Checkout-Seite navigiert und auf dieser landet<br>
+**Ausgelöst**: Wenn eine Kund:in ihren Warenkorb hinzufügt, entfernt oder aktualisiert<br>
 **Anwendungsfälle**: Abbruch der Kaufabwicklung
 
 Für Abandoned Checkout Canvase müssen Sie zunächst den folgenden Liquid-Tag verwenden:

@@ -465,7 +465,7 @@ Para saber mais sobre como construir um loop Liquid `for` para adicionar dinamic
 {% subtab Checkout started %}
 **Evento**: `ecommerce.checkout_started`<br>
 **Tipo**: Evento recomendado<br>
-**Acionado**: Quando o usuário navega para e chega na página de checkout<br>
+**Acionado**: Quando um cliente adiciona, remove ou atualiza seu carrinho de compras<br>
 **Caso de Uso**: Abandono de checkout
 
 Para Canvases de Checkout Abandonado, você primeiro precisa usar a seguinte tag Liquid:
