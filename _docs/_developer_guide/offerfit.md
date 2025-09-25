@@ -1,8 +1,8 @@
 ---
 page_order: 2.9
-nav_title: OfferFit by Braze
-article_title: Getting started with OfferFit by Braze
-description: "Get started with OfferFit by Braze to make 1:1 AI decisions that maximize any business metric!"
+nav_title: BrazeAI Decisioning Studio™
+article_title: Getting started with BrazeAI Decisioning Studio™
+description: "Get started with BrazeAI Decisioning Studio™ to make 1:1 AI decisions that maximize any business metric!"
 
 noindex: true
 ---
