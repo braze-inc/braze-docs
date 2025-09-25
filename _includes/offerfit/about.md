@@ -43,7 +43,7 @@ Here are some examples of use cases that you can build with BrazeAI Decisioning 
 During your BrazeAI Decisioning Studio™ integration, you'll create a Braze API key with specific permissions that will define your integration's capabilities. Refer to the following table to learn more about each permission.
 
 {% alert tip %}
-This information can also be found on the [BrazeAI Decisioning Studio™ integration]({{site.baseurl}}/developer_guide/offerfit/integration) page.
+This information can also be found on the [BrazeAI Decisioning Studio™ integration]({{site.baseurl}}/developer_guide/decisioning_studio/integration) page.
 {% endalert %}
 
 {% multi_lang_include offerfit/api_key_permissions.md %}
