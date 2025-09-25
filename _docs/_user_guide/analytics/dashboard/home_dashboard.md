@@ -26,7 +26,7 @@ You can pick up where you left off in the Braze dashboard with direct access to 
 You can revisit recently edited or created campaigns, Canvases, and segments. Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
 
 {% alert note %}
-This section will not appear if you have yet to edit or create a campaign, Canvas, or segment.
+The **Pickup where you left off** section appears after you have edited or created a campaign, Canvas, or segment.
 {% endalert %}
 
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
