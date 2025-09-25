@@ -104,11 +104,11 @@ If you've uploaded a CSV file with the incorrect promotion codes and selected **
 
 To send a promotion code in a message, select **Copy Snippet** next to the promotion code list [you previously created](#create).
 
-![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
+![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:50%"}
 
 Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code will be marked as sent, ensuring no other message sends the same code.
 
-![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
+![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:50%"}
 
 ### Across Canvas steps
 
@@ -141,28 +141,7 @@ Test sends and seed group email sends will use up promotion codes unless request
 
 ### With message extras for Currents
 
-You can combine promotion codes with [message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) to send promotion code information to Currents or Snowflake Data Sharing. This allows you to track and analyze promotion code usage in your downstream systems.
-
-To capture a promotion code and send it via message extras, use the following Liquid pattern:
-
-{% raw %}
-```liquid
-{% capture code %}
-{% promotion('your_promotion_list_name') %}
-{% endcapture %}
-
-Your message content with the code: {{code}}
-
-{% message_extras :key promo_code :value {{code}} %}
-```
-{% endraw %}
-
-This approach:
-1. Uses `capture` to store the promotion code in a variable
-2. Displays the code in your message content
-3. Sends the code value to Currents via message extras
-
-The promotion code will appear in the `message_extras` field of your send events in Currents or Snowflake Data Sharing, making it available for downstream analytics and tracking.
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
 
 ## Saving promotion codes to user profiles {#save-to-profile}
 
@@ -184,7 +163,7 @@ You can find the remaining code count in the **Remaining** column of the promoti
 
 This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
 
-![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:50%"}
 
 ## Multichannel and single-channel sends
 
