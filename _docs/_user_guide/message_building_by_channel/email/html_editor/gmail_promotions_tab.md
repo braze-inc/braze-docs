@@ -42,7 +42,7 @@ After determining your discount offer, select a start date and time. You have th
 {% endtab %}
 {% tab Deal Cards %}
 
-Use Deal Cards to provide key deal information directly at the top of email bodies. For example, you can use Deal Cards to promote limited time offers. This allows recipients to quickly understand the offer details and take action.
+Use Deal Cards to provide key deal information directly at the top of email bodies. This allows recipients to quickly understand the offer details and take action. For example, you can use Deal Cards to promote limited time offers and reduce the need for users to search for details within emails.
 
 1. Select the **Deal Card** toggle.
 2. Enter an offer and discount code.
@@ -57,21 +57,27 @@ Use Deal Cards to provide key deal information directly at the top of email bodi
 
 Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to ten image previews, where each image is unique.
 
-![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
+1. Select the **Promotion Cards** toggle.
+2. Select **Add promotion card**. Each image in your product carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1).
+3. Include an image URL.
+4. For **Target URL**, add the link for your promotion.
+
+{% alert tip %}
+We recommend uploading your product images to the media library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
+{% endalert %}
+
+{: start="5"}
+5. Customize your promotion card by adding a headline, currency, price, and discount value.
 
 | Customizable variable | Description |
 |---|---|
-| Image URL | The URL to your image. Each image in your product carousel must have a unique URL and use the same aspect ratio (4:5, 1:1, 1.91:1). |
-| Target URL | The link for your promotion. |
 | Headline | (optional) One or two sentence description for the promotion. Displays under the preview image. |
 | Currency | (optional) The currency of the price. |
 | Price | The price of the promotion. |
 | Discount Value | The amount discounted from the original price. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert tip %}
-We recommend uploading your product images to the media library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
-{% endalert %}
+![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% endtabs %}
