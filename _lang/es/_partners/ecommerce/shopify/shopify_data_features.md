@@ -465,7 +465,7 @@ Para más información sobre cómo crear un bucle Liquid `for` para añadir din�
 {% subtab Checkout started %}
 **Evento**: `ecommerce.checkout_started`<br>
 **Tipo**: Evento recomendado<br>
-**Desencadenado**: Cuando un cliente añade, elimina o actualiza su cesta de la compra<br>
+**Desencadenado**: Cuando el usuario navega hacia y llega a la página de checkout<br>
 **Casos de uso**: Abandono de la compra
 
 Para los Lienzos de Pago Abandonado, primero tienes que utilizar la siguiente etiqueta de Liquid:
