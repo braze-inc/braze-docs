@@ -32,7 +32,7 @@ Next, go to the **Content** section of the HTML editor, and select the **Gmail P
 
 ### Step 3: Customize your Gmail Promotion card
 
-Choose whether to include a discount offer, deal card, promotion cards, or all options for your Gmail Promotion card.
+Choose whether to include a discount offer, deal card, promotion card, or all options for your Gmail Promotion card.
 
 {% tabs %}
 {% tab Discount offer %}
