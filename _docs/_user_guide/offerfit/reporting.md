@@ -42,47 +42,57 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 ### Performance
 
-The performance report... (high-level overview). It supports two different views: **Trending** and **Driver Tree**.
+The performance report offers high-level use case metrics that compare treatment groups (from Braze) to one or more control groups, (like revenue). It supports two different views: **Trending** and **Driver Tree**.
 
-By default, the report uses the **Trending** view, which shows...
-
-![ALT_TEXT]()
-
-Alternatively, you can select **Driver Tree** to show...
+By default, the report uses the **Trending** view, which compares how OfferFit performs over time compared to your control groups, and tracks the uplift evolution.
 
 ![ALT_TEXT]()
 
-To compare performance between two groups, use the dropdowns to select your desired comparison criteria. Refer to the following table for more details:  
+Alternatively, you can select **Driver Tree** to view how key value drivers are linked to target metrics, helping you better understand the relationship between them.
+
+![ALT_TEXT]()
+
+To compare performance between two groups, use the dropdowns to select your desired comparison criteria. Refer to the following table for more details:
 
 | Field | Description |
 |-------|-------------|
-| Comparison groups | DESCRIPTION |
-| Aggregation | DESCRIPTION |
-| Segments | DESCRIPTION |
-| Timeline events | DESCRIPTION |
+| Comparison groups | The groups that you want to compare in your report. |
+| Aggregation | The way the report groups data, such as totals, averages, or percentages. |
+| Segments | The [audience segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) that you created in Braze. |
+| Timeline events | The specific events shown over time, such as message sends, opens, or conversions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Insights
 
-The insights report... (high-level overview). It supports two different views: **THIS** and **THIS**.
+Insights show you how the various recommendation options in your action bank are generated, like SL or block selection. There's two different insights reports: **Agent preferences** and **SHAPs**.
 
-By default, the report uses the **THIS** view, which shows...
-
-![ALT_TEXT]()
-
-Alternatively, you can select **THIS** to show...
+{% tabs local %}
+{% tab agent preferences %}
+The **Agent preferences** report helps you identify seasonal trends and assess the relevance of the choices in the action bank, guiding informed decisions for updates.
 
 ![ALT_TEXT]()
 
-To compare performance between two groups, use the dropdowns to select your desired comparison criteria. Refer to the following table for more details:  
+Refer to the following table for more details about this report:
 
 | Field | Description |
 |-------|-------------|
-| Dimension | DESCRIPTION |
-| Comparison group | DESCRIPTION. You can select multiple comparison groups, up to NUM. |
-| Parameter | DESCRIPTION |
-| Segment | DESCRIPTION |
+| Dimension | The attribute used to organize results, such as channel, campaign, or platform. |
+| Comparison group | The groups that you want to compare in your report. You can select multiple comparison groups, up to NUM. |
+| Parameter | The metric applied to that attribute, such as opens, clicks, or conversion rate. |
+| Segment | The [audience segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that you created in Braze. |
+| Option             | The specific recommendation option selected from the action bank. |
+| Description        | A short explanation of what the option represents.            |
+| # of times chosen  | The total count of how often the option was selected.         |
+| % of time chosen   | The percentage of total selections where this option was chosen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{% endtab %}
+
+{% tab shaps %}
+The **SHAPs** report uses the SHapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation model. Each point on the chart represents one SHAP and the distribution of the points represent a general sense of a feature's directional impact.
+
+![ALT_TEXT]()
+{% endtab %}
+{% endtabs %}
 
 ### Diagnostics
 
@@ -104,13 +114,13 @@ Refer to the following table for more details about each metric in the inbound r
 
 | Field | Description |
 |-------|-------------|
-| Data asset | DESCRIPTION |
-| Date | DESCRIPTION |
-| Last delivery time | DESCRIPTION |
-| File count | DESCRIPTION |
-| Max file size (MBs) | DESCRIPTION |
-| Average file size (MBs) | DESCRIPTION |
-| File row count | DESCRIPTION |
+| Data asset | The name of the dataset or file delivered. |
+| Date | The date when the data was received. |
+| Last delivery time | The most recent time the data was delivered. |
+| File count | The total number of files received. |
+| Max file size (MBs) | The size of the largest file received, in megabytes. |
+| Average file size (MBs) | The average size of all files received, in megabytes. |
+| File row count | The total number of rows contained in the delivered files. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
@@ -121,13 +131,13 @@ The timeline report... (high-level overview).
 
 ![ALT_TEXT]()
 
-To compare performance between two groups, use the dropdowns to select your desired comparison criteria. Refer to the following table for more details:  
+To compare performance between two groups, use the dropdowns to select your desired comparison criteria. Refer to the following table for more details:
 
 | Field | Description |
 |-------|-------------|
-| Date | DESCRIPTION |
-| Type | DESCRIPTION |
-| Label | DESCRIPTION |
-| Details | DESCRIPTION |
-| Visible in Charts | DESCRIPTION |
+| Date | The date when the event occurred. |
+| Type | The category of event, such as system update, model run, or configuration change. |
+| Label | The name or identifier given to the event. |
+| Details | Additional information that describes the event. |
+| Visible in Charts | Indicates whether the event is displayed in related charts. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
