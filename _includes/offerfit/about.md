@@ -52,5 +52,5 @@ This information can also be found on the [BrazeAI Decisioning Studio™ integra
 
 Now that you know more about BrazeAI Decisioning Studio™, you're ready for the next steps:
 
-1. [Integrating decisioning studio]({{site.baseurl}}/developer_guide/offerfit/integration)
-2. [Building a use case]({{site.baseurl}}/developer_guide/offerfit/building_use_cases)
+1. [Integrating decisioning studio]({{site.baseurl}}/developer_guide/decisioning_studio/integration)
+2. [Building a use case]({{site.baseurl}}/developer_guide/decisioning_studio/building_use_cases)
