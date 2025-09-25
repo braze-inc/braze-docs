@@ -11,14 +11,14 @@ description: "Learn how to view BrazeAI Decisioning Studio™ reports in Braze, 
 
 ## Prerequisites
 
-Before you can view OfferFit reports in the Braze, you'll need to:
+Before you can view decisioning studio reports in the Braze, you'll need to:
 
-- Have an active contract for Braze and OfferFit. 
-- Contact your CSM to enable OfferFit for you on your behalf.
+- Have an active contract for Braze and BrazeAI Decisioning Studio™. 
+- Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
 
 ## Viewing reports {#view}
 
-To view metrics for an OfferFit use cases in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select a use case.
+To view metrics for a decisioning studio use cases in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select a use case.
 
 ![BrazeAI Decisioning Studio™ reporting home screen showing a dashboard with multiple report cards. Each card displays a report type such as Performance, Insights, Diagnostics, and Timeline, with brief descriptions and icons for each.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
