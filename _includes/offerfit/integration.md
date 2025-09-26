@@ -8,7 +8,7 @@
 
 Before you can integrate, you'll need an active BrazeAI Decisioning Studio™ license. Interested in learning more? [Book a call](https://offerfit.ai/book-now)
 
-## Integrating OfferFit
+## Integrating decision studio
 
 ### Step 1: Get your endpoint URL
 
@@ -20,8 +20,8 @@ In Braze, go to **Settings** > **API Keys**, then create a new key with the foll
 
 {% multi_lang_include offerfit/api_key_permissions.md %}
 
-### Step 3: Contact OfferFit
+### Step 3: Contact your BrazeAI Decisioning Studio™ customer success manager
 
-Reach out to your OfferFit customer success manager and ask them to enable BrazeAI Decisioning Studio™. They'll use your Braze API key and endpoint URL to finish setting up your integration.
+Reach out to your BrazeAI Decisioning Studio™ customer success manager and ask them to enable BrazeAI Decisioning Studio™. They'll use your Braze API key and endpoint URL to finish setting up your integration.
 
 When it's complete, you'll work alongside the AI Expert Services team to [start building uses cases for your product]({{site.baseurl}}/developer_guide/decisioning_studio/building_use_cases). Each use case is tailor-made to a specific business goal, so you'll work together to design an implementation that's right for you.

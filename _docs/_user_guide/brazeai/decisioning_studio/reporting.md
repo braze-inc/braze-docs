@@ -42,9 +42,9 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 The performance report offers high-level use case metrics that compare treatment groups (from Braze) to one or more control groups, (like revenue). It supports two different views: **Trending** and **Driver Tree**.
 
-By default, the report uses the **Trending** view, which compares how OfferFit performs over time compared to your control groups, and tracks the uplift evolution.
+By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups, and tracks the uplift evolution.
 
-![Performance report trending view showing a line chart comparing OfferFit and control group performance over time. The chart displays two lines labeled OfferFit and Control, with the y-axis labeled Uplift and the x-axis showing dates. A legend identifies each group by color.]({% image_buster /assets/img/decisioning_studio/reporting_agent_performance_trending.png %})
+![Performance report trending view showing a line chart comparing BrazeAI™ and control group performance over time. The chart displays two lines labeled BrazeAI™ and Control, with the y-axis labeled Uplift and the x-axis showing dates. A legend identifies each group by color.]({% image_buster /assets/img/decisioning_studio/reporting_agent_performance_trending.png %})
 
 Alternatively, you can select **Driver Tree** to view how key value drivers are linked to target metrics, helping you better understand the relationship between them.
 

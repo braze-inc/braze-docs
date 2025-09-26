@@ -30,15 +30,15 @@ Here are some examples of use cases that you can build with BrazeAI Decisioning 
 
 Before you can build a use case, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/developer_guide/decisioning_studio/integration).
 
-### Step 1: Contact OfferFit
+### Step 1: Contact AI Expert Services
 
-OfferFit's AI Expert Services team will work closely with you to scope, design, and build your decisioning use case. If you haven't already, [reach out](https://offerfit.ai/book-now) to get started.
+The AI Expert Services team will work closely with you to scope, design, and build your decisioning use case. If you haven't already, [reach out](https://offerfit.ai/book-now) to get started.
 
 You'll complete the following steps together to build a custom use case that's right for you.
 
 ### Step 2: Design your use case
 
-Alongside OfferFit's AI Expert Services team, you'll define:
+Alongside the AI Expert Services team, you'll define:
 
 - a target audience, 
 - the business metric to optimize, 
