@@ -62,7 +62,7 @@ When setting up your webhook, use the following settings and provide your Braze 
   "recipients": [
     {
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties":{
+      "context":{
         "string_property": "Your example string",
         "example_integer_property": 1
       }

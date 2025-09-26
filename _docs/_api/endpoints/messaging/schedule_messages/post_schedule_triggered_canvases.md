@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
+  "context": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
@@ -81,7 +81,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     {
       "user_alias": "example_alias",
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties": {}
+      "context": {}
     }
   ],
   "audience": {
@@ -132,7 +132,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": {},
+  "context": {},
   "schedule": {
     "time": "",
     "in_local_time": false,
