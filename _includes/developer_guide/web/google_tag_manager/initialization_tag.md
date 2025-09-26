@@ -43,7 +43,7 @@ For additional initialization settings, select **Braze Initialization Options** 
 
 ### Step 4: Set to Trigger on *all pages*
 
-The initialization tag should be run on all pages of your site. This ensures you can use Braze SDK methods and record web push analytics.
+The initialization tag should be run on all pages of your site. This allows you to use Braze SDK methods and record web push analytics.
 
 ### Step 5: Verify your integration
 
