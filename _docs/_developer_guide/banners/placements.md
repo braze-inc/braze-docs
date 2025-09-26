@@ -31,7 +31,7 @@ These are the minimum SDK versions needed to create Banner placements:
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements can be requested once per session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method. The SDK will not re-fetch placements if you call the refresh method again during the same session. Instead, it will log an error and return an error message to the caller.
+Placements can be refreshed by calling the refresh methods described below. These placements will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
 {% alert tip %}
 Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
@@ -481,7 +481,7 @@ Test Banners are like any other banners, except they're removed at the next app 
 
 ## Logging impressions
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. 
+Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
 
 ## Dimensions and sizing
 
