@@ -152,7 +152,11 @@ Die Verwendung einer E-Mail-Adresse oder einer gehashten E-Mail-Adresse als exte
 - **Risiko der Ausbeutung:** Wenn ein böswilliger Nutzer:innen seinen Webbrowser so verändert, dass er die E-Mail-Adresse einer anderen Person als externe ID verwendet, kann er möglicherweise auf sensible Nachrichten oder Kontoinformationen zugreifen.
 {% endalert %}
 
-Wenn Sie einen angepassten externen ID-Typ ausgewählt haben, fahren Sie mit den Schritten 4.1 und 4.2 fort. Andernfalls fahren Sie mit Schritt 4.3 fort.
+{% alert note %}
+**Die nächsten Schritte hängen von Ihrer externen ID-Auswahl ab:**
+- **Wenn Sie einen angepassten externen ID-Typ ausgewählt haben:** Führen Sie die Schritte 4.1 und 4.2 unten aus, um Ihre angepasste externe ID-Konfiguration einzurichten.
+- **Wenn Sie Shopify-Kunden-ID, E-Mail oder gehashte E-Mail ausgewählt haben:** Überspringen Sie die Schritte 4.1 und 4.2 und fahren Sie direkt mit [Schritt 4.3](#schritt-43-sammeln-sie-ihre-e-mail--oder-sms-opt-ins-von-shopify-optional) fort.
+{% endalert %}
 
 ### Schritt 4.1: Erstellen Sie eine angepasste `external_id`
 
