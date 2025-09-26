@@ -18,25 +18,25 @@ The AI Expert Services team will tailor BrazeAI Decisioning Studio™ to the spe
 - **Maximize any metric:** Clicks aren’t dollars. Use BrazeAI™ to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
 - **Open the black box:** See how AI decisioning agents personalize for deep insights into the drivers of customer behavior
 
-## About use cases
+## About agents
 
 ### How it works
 
-A use case is a custom configuration for BrazeAI Decisioning Studio™ that's tailor-made to meet a specific business goal.
+An agent is a custom configuration for BrazeAI Decisioning Studio™ that's tailor-made to meet a specific business goal.
 
-For example, you could build a repeat purchase use case to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while the decisioning studio runs daily experiments, automatically testing different combinations of product offers, message timing, and frequency for each customer. Over time, BrazeAI™ learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
+For example, you could build a repeat purchase agent to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while the decisioning studio runs daily experiments, automatically testing different combinations of product offers, message timing, and frequency for each customer. Over time, BrazeAI™ learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
 
-Building a good use case consists of:
+Building a good agent consists of:
 
 - Choosing a success metric for BrazeAI™ to optimize for, such as revenue, conversions, or ARPU.
 - Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Selecting the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
-### Sample use cases
+### Sample agents
 
-Here are some examples of use cases that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
+Here are some examples of agents that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
-{% multi_lang_include decisioning_studio/sample_use_cases.md %}
+{% multi_lang_include decisioning_studio/sample_agents.md %}
 
 ## About API key permissions
 

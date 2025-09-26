@@ -5,4 +5,4 @@ article_title: Getting started with BrazeAI Decisioning Studio
 description: "Get started with BrazeAI Decisioning Studio<sup>TM</sup> to make 1:1 AI decisions that maximize any business metric"
 ---
 
-{% multi_lang_include offerfit/about.md %}
+{% multi_lang_include decisioning_studio/about.md %}

@@ -16,7 +16,7 @@ To build a good agent, you'll:
 - Define which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Select the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
-![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/decisioning_studio/example_use_cases_referral_email.png %})
+![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Sample agents
 

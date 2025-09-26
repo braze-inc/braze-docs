@@ -7,4 +7,4 @@ description: "Learn how to build an agent for BrazeAI Decisioning Studio™, so 
 noindex: true
 ---
 
-{% multi_lang_include decisioning_studio/building_use_cases.md %}
+{% multi_lang_include decisioning_studio/building_agents.md %}

@@ -7,4 +7,4 @@ description: "Get started with BrazeAI Decisioning Studio™ to make 1:1 AI deci
 noindex: true
 ---
 
-{% multi_lang_include offerfit/about.md %}
+{% multi_lang_include decisioning_studio/about.md %}
