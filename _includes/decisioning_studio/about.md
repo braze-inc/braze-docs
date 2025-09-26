@@ -43,7 +43,7 @@ Here are some examples of agents that you can build with BrazeAI Decisioning Stu
 During your BrazeAI Decisioning Studio™ integration, you'll create a Braze API key with specific permissions that will define your integration's capabilities. Refer to the following table to learn more about each permission.
 
 {% alert tip %}
-This information can also be found on the [BrazeAI Decisioning Studio™ integration]({{site.baseurl}}/developer_guide/decisioning_studio/integration) page.
+This information can also be found on the [BrazeAI Decisioning Studio™ integration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration) page.
 {% endalert %}
 
 {% multi_lang_include decisioning_studio/api_key_permissions.md %}
@@ -52,5 +52,5 @@ This information can also be found on the [BrazeAI Decisioning Studio™ integra
 
 Now that you know more about BrazeAI Decisioning Studio™, you're ready for the next steps:
 
-1. [Integrating decisioning studio]({{site.baseurl}}/developer_guide/decisioning_studio/integration)
-2. [Building agents]({{site.baseurl}}/developer_guide/decisioning_studio/building_agents)
+1. [Integrating decisioning studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration/)
+2. [Building agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents/)

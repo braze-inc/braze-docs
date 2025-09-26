@@ -28,7 +28,7 @@ Here are some examples of agents that you can build with BrazeAI Decisioning Stu
 
 ### Prerequisites
 
-Before you can build an agent, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/developer_guide/decisioning_studio/integration).
+Before you can build an agent, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration).
 
 ### Step 1: Contact AI Expert Services
 
