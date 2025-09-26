@@ -152,7 +152,11 @@ Using an email address or a hashed email address as your Braze external ID can h
 - **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
 {% endalert %}
 
-If you selected a custom external ID type, proceed to steps 4.1 and 4.2. Otherwise, continue to step 4.3.
+{% alert note %}
+**Next steps depend on your external ID selection:**
+- **If you selected a custom external ID type:** Complete steps 4.1 and 4.2 below to set up your custom external ID configuration.
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1 and 4.2 and continue directly to [step 4.3](#step-43-collect-your-email-or-sms-opt-ins-from-shopify-optional).
+{% endalert %}
 
 ### Step 4.1: Create a custom `external_id`
 
