@@ -38,7 +38,7 @@ To compose your Banner, you can choose to:
 - Use a Braze banner template
 - Select a saved banner template
 
-// hold -- waiting until we have a picture
+![Option to choose a blank Banner or a template.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
 #### Step 3.1: Style the Banner
 
